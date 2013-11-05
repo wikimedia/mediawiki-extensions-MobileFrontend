@@ -600,7 +600,8 @@ Parameters:
 * {{msg-mw|Copyright}}",
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
-	'mobile-frontend-terms-text' => '"Terms of use" link text at the bottom of every page',
+	'mobile-frontend-terms-text' => '"Terms of use" link text at the bottom of every page.
+{{Identical|Terms of use}}',
 	'mobile-frontend-terms-url' => 'Terms of use URL. Do not localise',
 	'mobile-frontend-main-menu-button-tooltip' => 'Tooltip for menu button',
 	'mobile-frontend-main-menu-page-title' => '{{doc-special|MobileMenu|unlisted=1}}',
@@ -1093,6 +1094,7 @@ $messages['anp'] = array(
  * @author Abanima
  * @author AwamerT
  * @author Bassem JARKAS
+ * @author Claw eg
  * @author Kuwaity26
  * @author Meno25
  * @author Mido
@@ -1172,9 +1174,9 @@ $messages['ar'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'النص مُرخّص برخصة [//ar.m.wikipedia.org/wiki/%D9%88%D9%8A%D9%83%D9%8A%D8%A8%D9%8A%D8%AF%D9%8A%D8%A7:%D9%86%D8%B5_%D8%B1%D8%AE%D8%B5%D8%A9_%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B9_%D8%A7%D9%84%D8%A5%D8%A8%D8%AF%D8%A7%D8%B9%D9%8A:_%D8%A7%D9%84%D9%86%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5_%D8%A8%D8%A7%D9%84%D9%85%D8%AB%D9%84_3.0?useformat=mobile CC BY-SA 3.0]؛ قد تنطبق بنود أخرى.',
 	'mobile-frontend-copyright' => "النصوص كلها منشورة تحت <a href='http://ar.wikipedia.org/wiki/%D9%88%D9%8A%D9%83%D9%8A%D8%A8%D9%8A%D8%AF%D9%8A%D8%A7:%D9%86%D8%B5_%D8%B1%D8%AE%D8%B5%D8%A9_%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B9_%D8%A7%D9%84%D8%A5%D8%A8%D8%AF%D8%A7%D8%B9%D9%8A:_%D8%A7%D9%84%D9%86%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5_%D8%A8%D8%A7%D9%84%D9%85%D8%AB%D9%84_3.0'>رخصة المشاع الإبداعي: النسبة-الترخيص بالمثل</a>؛ قد تنطبق بنود أخرى أيضًا. راجع <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>شروط الاستخدام</a> للتفاصيل. ويكيبيديا علامة تجارية مسجلة <a href='http://wikimediafoundation.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9'>لمؤسسة ويكيميديا المحدودة</a>، المنظمة غير الهادفة للربح.", # Fuzzy
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile شروط الاستخدام]',
 	'mobile-frontend-footer-contact' => 'اتصل',
 	'mobile-frontend-search-noresults' => 'لا عنوان يطابق بحثك. غيّر بحثك أو اضغط زر لوحة المفاتيح لتبحث داخل الصفحات.',
+	'mobile-frontend-terms-text' => 'شروط الاستخدام',
 	'mobile-frontend-main-menu-button-tooltip' => 'افتح القائمة الرئيسية',
 	'mobile-frontend-main-menu-page-title' => 'تصفح الموقع',
 	'mobile-frontend-main-menu-featured' => 'مميزة',
@@ -1563,7 +1565,6 @@ $messages['ast'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Conteníu disponible baxo llicencia [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; puen aplicase más condiciones.',
 	'mobile-frontend-copyright' => "El conteníu ta disponible baxo los términos de la $1 si nun s'indica otra cosa.",
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile" Condiciones d\'usu]',
 	'mobile-frontend-footer-contact' => 'Contautu',
 	'mobile-frontend-search-noresults' => 'Dengún títulu de páxina casa cola to gueta. Camuda la gueta o calca nel botón de gueta del tecláu pa guetar dientro de les páxines.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Abrir el menú principal',
@@ -2955,6 +2956,7 @@ $messages['ce'] = array(
 	'mobile-frontend-username' => 'Декъашхочун цӀе:',
 	'mobile-frontend-username-placeholder' => 'Декъашхочун цӀе',
 	'mobile-frontend-last-modified-hours' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 сахьат}} хьалха',
+	'mobile-frontend-last-modified-days' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 де}} хьалха',
 	'mobile-frontend-last-modified-months' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 бутт}} хьалха',
 	'mobile-frontend-placeholder-beta' => 'Лаха translatewiki.net чухула (бета-верси)',
 	'mobile-frontend-clear-search' => 'ЦӀанъян',
@@ -3113,7 +3115,6 @@ $messages['cs'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text je dostupný pod [//cs.m.wikipedia.org/wiki/Wikipedie:Text_licence_Creative_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC BY-SA 3.0]; případně za dalších podmínek.',
 	'mobile-frontend-copyright' => 'Text je dostupný pod <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.cs">licencí Creative Commons Uveďte autora&nbsp;– Zachovejte licenci</a>, případně za dalších podmínek. Podrobnosti naleznete na stránce <a href="http://wikimediafoundation.org/wiki/Podmínky_užití">Podmínky užití</a>. {{SITENAME}} je registrovaná ochranná známka neziskové organizace <a href=\'http://www.wikimediafoundation.org/\'>Wikimedia Foundation, Inc.</a>', # Fuzzy
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/cs?useformat=mobile Podmínky užití]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Vašemu hledání neodpovídají žádné názvy stránek. Změňte zadání nebo stiskněte tlačítko hledání pro hledání ve stránkách.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Otevřít hlavní menu',
@@ -3317,6 +3318,7 @@ $messages['cu'] = array(
 
 /** Welsh (Cymraeg)
  * @author Lloffiwr
+ * @author MaxSem
  * @author Robin Owain
  * @author Xxglennxx
  */
@@ -3378,7 +3380,7 @@ $messages['cy'] = array(
 	'mobile-frontend-history' => "Gweld hanes golygu'r dudalen hon.",
 	'mobile-frontend-history-404-title' => 'Rhoddwyd teitl gwallus',
 	'mobile-frontend-history-404-desc' => "Ni ellir gweld hanes tudalen nad yw'n bod. Efallai iddi gael ei dileu, neu i chi ddilyn cyswllt gwallus.",
-	'mobile-frontend-history-summary' => 'Hanes y dudalen [[$1]]',
+	'mobile-frontend-history-summary' => 'Hanes y dudalen [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Newidiwyd ddiwethaf ar $1 am $2',
 	'mobile-frontend-last-modified-seconds' => 'Newidwyd ddiwethaf {{PLURAL:$1|$1 eiliad}} yn ôl',
 	'mobile-frontend-last-modified-minutes' => 'Newidwyd ddiwethaf $1 {{PLURAL:$1|munud|munud|funud|munud}} yn ôl',
@@ -3410,7 +3412,6 @@ $messages['cy'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => "Darperir y testun hwn yn ôl termau'r drwydded [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; hwyrach bod termau ychwanegol yn weithredol.",
 	'mobile-frontend-copyright' => "Rhoddir testun y dudalen ar gael ar delerau'r drwydded $1, heblaw ei fod wedi nodi'n wahanol.",
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termau Defnydd]',
 	'mobile-frontend-footer-contact' => 'Cysylltu',
 	'mobile-frontend-search-noresults' => "Nid oes unrhyw deitlau tudalennau yn cyfateb i'r chwiliad. Newidiwch y chwiliad, neu pwyswch y botwm chwilio ar eich bysellfwrdd er mwyn chwilio oddi mewn i'r tudalennau.",
 	'mobile-frontend-main-menu-button-tooltip' => 'Agor y brif ddewislen',
@@ -3993,9 +3994,9 @@ $messages['de'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Der Text ist verfügbar unter [//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC-BY-SA 3.0]; zusätzliche Bedingungen können anwendbar sein.',
 	'mobile-frontend-copyright' => 'Der Inhalt ist verfügbar unter $1, sofern nicht anders angegeben.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/de?useformat=mobile Nutzungsbedingungen]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Kein Seitentitel entspricht deiner Suche. Ändere deine Suche oder drücke die Suchschaltfläche deiner Tastatur, um die Suche auf den Inhalt der Seiten auszuweiten.',
+	'mobile-frontend-terms-text' => 'Nutzungsbedingungen',
 	'mobile-frontend-main-menu-button-tooltip' => 'Hauptmenü öffnen',
 	'mobile-frontend-main-menu-page-title' => 'Websitenavigation',
 	'mobile-frontend-main-menu-featured' => 'Exzellent',
@@ -4506,6 +4507,7 @@ $messages['ee'] = array(
 
 /** Greek (Ελληνικά)
  * @author AK
+ * @author Evropi
  * @author Geraki
  * @author Glavkos
  * @author Protnet
@@ -4556,6 +4558,7 @@ $messages['el'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-copyright' => "Τα κείμενα είναι διαθέσιμα υπό την άδεια <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.el\">Creative Commons Attribution/Share-Alike</a>, μπορεί να ισχύουν πρόσθετοι όροι. Δείτε τους <a href='http://wikimediafoundation.org/wiki/%CE%8C%CF%81%CE%BF%CE%B9_%CE%A7%CF%81%CE%AE%CF%83%CE%B7%CF%82'>Όρους Χρήσης</a> για λεπτομέρειες. Το όνομα «{{SITENAME}}» είναι κατοχυρωμένο σήμα του <a href='http://www.wikimediafoundation.org/'>Ιδρύματος Wikimedia, Inc.</a>, ενός μη κερδοσκοπικού οργανισμού.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Επικοινωνία',
+	'mobile-frontend-terms-text' => 'Όροι χρήσης',
 	'mobile-frontend-main-menu-button-tooltip' => 'Άνοιγμα κυρίως μενού',
 	'mobile-frontend-main-menu-featured' => 'Επιλεγμένο',
 	'mobile-frontend-main-menu-nearby' => 'Κοντά',
@@ -4840,7 +4843,6 @@ $messages['es'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Contenidos disponibles bajo licencia [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-copyright' => "El texto está disponible bajo la <a href='http://es.wikipedia.org/wiki/{{SITENAME}}:Texto de la Licencia Creative Commons Atribución/Compartir-Igual 3.0'>Licencia Creative Commons Atribución/Compartir-Igual</a>; cláusulas adicionales pueden aplicar. Véase <a href='http://wikimediafoundation.org/wiki/Términos_de_Uso'>los términos de uso</a> para más detalles. {{SITENAME}} es una marca registrada de la <a href='http://wikimediafoundation.org/'>Fundación Wikimedia, Inc.</a>, una organización sin ánimo de lucro.", # Fuzzy
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Términos_de_uso?useformat=mobile Términos de uso]',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'No hay ningún título de página que coincida con tu búsqueda. Cambia tu búsqueda, o pulsa el botón de búsqueda del teclado para buscar dentro de las páginas.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Abrir el menú principal',
@@ -5246,6 +5248,7 @@ $messages['ext'] = array(
  * @author Ladsgroup
  * @author Leyth
  * @author Mahdiz
+ * @author MaxSem
  * @author Mjbmr
  * @author Omidh
  * @author Pouyana
@@ -5312,7 +5315,7 @@ $messages['fa'] = array(
 	'mobile-frontend-history' => 'دیدن تاریخچهٔ ویرایش این صفحه',
 	'mobile-frontend-history-404-title' => 'عنوان بد داده‌شده',
 	'mobile-frontend-history-404-desc' => 'نمی‌توان به تاریخچهٔ صفحه‌ای که وجود ندارد نگاه کرد. ممکن است پاک شده باشد یا شما یک پیوند را دنبال کرده باشید.',
-	'mobile-frontend-history-summary' => 'تاریخچهٔ صفحهٔ [[$1]]',
+	'mobile-frontend-history-summary' => 'تاریخچهٔ صفحهٔ [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'آخرین تغییر $1، در $2',
 	'mobile-frontend-last-modified-seconds' => 'آخرین بار {{PLURAL:$1|$1 ثانیهٔ|$1 ثانیهٔ}} پیش تغییر یافته‌است',
 	'mobile-frontend-last-modified-minutes' => 'آخرین بار {{PLURAL:$1|$1 دقیقهٔ|$1 دقیقهٔ}} پیش تغییر یافته‌است',
@@ -5344,7 +5347,6 @@ $messages['fa'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'محتوی تحت مجوز [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] در دسترس است.',
 	'mobile-frontend-copyright' => 'محتوا تحت $1 در دسترس است، مگر اینکه خلافش ذکر شده باشد.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile شرایط استفاده]',
 	'mobile-frontend-footer-contact' => 'تماس',
 	'mobile-frontend-search-noresults' => 'هیچ عنوان مقاله‌ای مطابق با کلیدواژه نیست. کلیدواژهٔ جستجو را تغییر دهید یا برای جستجو درون متن مقاله‌ها دکمه جستجوی کیبرد را بفشارید.',
 	'mobile-frontend-main-menu-button-tooltip' => 'باز کردن منو اصلی',
@@ -5624,7 +5626,6 @@ $messages['fi'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Sisältö on saatavissa lisenssillä [//fi.m.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot?useformat=mobile CC BY-SA 3.0]. Lisäehtoja voi sisältyä.',
 	'mobile-frontend-copyright' => 'Sisältö on käytettävissä lisenssillä $1 ellei toisin mainita.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Käyttöehdot]',
 	'mobile-frontend-footer-contact' => 'Yhteystiedot',
 	'mobile-frontend-search-noresults' => 'Hakuasi vastavaa artikkelin nimeä ei löytynyt. Muuta hakua tai käytä näppäimistön hakupainiketta etsiäksesi artikkelien sisältä.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Avaa päävalikko',
@@ -6040,9 +6041,9 @@ $messages['fr'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Contenu disponible sous [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
 	'mobile-frontend-copyright' => 'Le contenu est disponible sous licence$1 sauf mention contraire.',
-	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Conditions d'utilisation]",
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => "Aucun titre de page ne correspond à votre recherche. Modifiez-la, ou appuyez sur le bouton de recherche du clavier pour chercher à l'intérieur des pages.",
+	'mobile-frontend-terms-text' => 'Conditions d’utilisation',
 	'mobile-frontend-main-menu-button-tooltip' => 'Ouvrir le menu principal',
 	'mobile-frontend-main-menu-page-title' => 'Navigation dans le site',
 	'mobile-frontend-main-menu-featured' => 'En vedette',
@@ -6339,6 +6340,7 @@ $messages['frp'] = array(
 );
 
 /** Northern Frisian (Nordfriisk)
+ * @author MaxSem
  * @author Murma174
  */
 $messages['frr'] = array(
@@ -6399,7 +6401,7 @@ $messages['frr'] = array(
 	'mobile-frontend-history' => 'Ferluup faan detdiar sidj uunluke.',
 	'mobile-frontend-history-404-title' => 'Son sidjennööm as ei tuläät',
 	'mobile-frontend-history-404-desc' => "För en sidj, diar't ei jaft, könst dü nään ferluup uunluke. Ferlicht as det sidj stregen wurden, of dü beest en faalsk ferwisang fulagt.",
-	'mobile-frontend-history-summary' => 'Sidjenferluup faan [[$1]]',
+	'mobile-frontend-history-summary' => 'Sidjenferluup faan [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Tuleetst feranert di $1 am a klook $2',
 	'mobile-frontend-last-modified-seconds' => 'Tuleetst feranert föör {{PLURAL:$1|ian sekund|$1 sekunden}}',
 	'mobile-frontend-last-modified-minutes' => 'Tuleetst feranert föör {{PLURAL:$1|ian minüüt|$1 minüüten}}',
@@ -6431,7 +6433,6 @@ $messages['frr'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Di tekst as tu sen oner[//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC BY-SA 3.0]; diar kön uk noch ööder reegeln tääl.',
 	'mobile-frontend-copyright' => 'Det sidj as tu fun oner $1 , wan diar niks ööders stäänt.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Brüker reegeln]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => "So'n sidj jaft at ei. Schük en ööder sidj of trak üüb di schük-knoop faan din tastatuur, am det wurd uk banen uun en sidj tu schüken.",
 	'mobile-frontend-main-menu-button-tooltip' => 'Hoodütjwool eeben maage',
@@ -6668,6 +6669,7 @@ $messages['gd'] = array(
 
 /** Galician (galego)
  * @author Elisardojm
+ * @author MaxSem
  * @author MetalBrasil
  * @author Toliño
  */
@@ -6731,7 +6733,7 @@ $messages['gl'] = array(
 	'mobile-frontend-history' => 'Mostrar o historial de edicións desta páxina.',
 	'mobile-frontend-history-404-title' => 'O título especificado é incorrecto',
 	'mobile-frontend-history-404-desc' => 'Non se pode buscar o historial dunha páxina que non existe. Se cadra, foi borrada ou seguiu unha ligazón incorrecta.',
-	'mobile-frontend-history-summary' => 'Historial da páxina "[[$1]]"',
+	'mobile-frontend-history-summary' => 'Historial da páxina "[[:$1]]"',
 	'mobile-frontend-last-modified-date' => 'Última modificación o $1 ás $2',
 	'mobile-frontend-last-modified-seconds' => 'Última modificación hai {{PLURAL:$1|$1 segundo|$1 segundos}}',
 	'mobile-frontend-last-modified-minutes' => 'Última modificación hai {{PLURAL:$1|$1 minuto|$1 minutos}}',
@@ -6756,7 +6758,6 @@ $messages['gl'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'O texto está dispoñible baixo a licenza [//gl.m.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0?useformat=mobile CC BY-SA 3.0]; pódense aplicar termos adicionais.',
 	'mobile-frontend-copyright' => 'Todo o contido está dispoñible baixo a licenza $1, agás que se indique o contrario.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/gl?useformat=mobile Termos de uso]',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'Non hai ningún título que coincida coa súa procura. Probe con outras palabras ou prema no botón de procuras do teclado para pescudar dentro das páxinas.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Abrir o menú principal',
@@ -7224,9 +7225,9 @@ $messages['he'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'התוכן זמין לפי תנאי רישיון [//he.m.wikipedia.org/wiki/ויקיפדיה:רישיון_Creative_Commons_ייחוס-שיתוף_זהה_3.0_לא_מותאם?useformat=mobile CC BY-SA 3.0]; ייתכן שחלים תנאים נוספים.',
 	'mobile-frontend-copyright' => 'התוכן זמין לפי תנאי $1 אלא אם כן נאמר אחרת.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile תנאי השימוש]',
 	'mobile-frontend-footer-contact' => 'יצירת קשר',
 	'mobile-frontend-search-noresults' => 'שום כותרת של דף לא תאמה לחיפוש שלך. יש לשנות את החיפוש או ללחוץ על מקש החיפוש במקלדת כדי לחפש בתוך עמודים.',
+	'mobile-frontend-terms-text' => 'תנאי שימוש',
 	'mobile-frontend-main-menu-button-tooltip' => 'פתיחת התפריט הראשי',
 	'mobile-frontend-main-menu-page-title' => 'ניווט באתר',
 	'mobile-frontend-main-menu-featured' => 'מומלץ',
@@ -8796,9 +8797,9 @@ $messages['it'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Contenuti disponibili secondo la licenza [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; possono applicarsi ulteriori condizioni.',
 	'mobile-frontend-copyright' => 'Il contenuto è disponibile in base alla licenza $1, se non diversamente specificato.',
-	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condizioni d'uso]",
 	'mobile-frontend-footer-contact' => 'Contatti',
 	'mobile-frontend-search-noresults' => 'Nessuna pagina ha un titolo che corrisponde alla tua ricerca. Modifica la tua ricerca, oppure premi il pulsante della tastiera "Cerca" per la ricerca nel testo delle pagine.',
+	'mobile-frontend-terms-text' => "Condizioni d'uso",
 	'mobile-frontend-main-menu-button-tooltip' => 'Apri il menu principale',
 	'mobile-frontend-main-menu-page-title' => 'Navigazione sul sito',
 	'mobile-frontend-main-menu-featured' => 'In primo piano',
@@ -9090,9 +9091,9 @@ $messages['ja'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => '本文は [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] で提供されています。追加の規約が適用される場合があります。',
 	'mobile-frontend-copyright' => 'コンテンツは、特に記載されていない限り、$1のもとで利用可能です。',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ja?useformat=mobile 利用規約]',
 	'mobile-frontend-footer-contact' => '連絡先',
 	'mobile-frontend-search-noresults' => '検索語句に該当する項目名はありませんでした。別の語句をお試しください。また、キーボードの検索ボタンを押すと、ページ内検索を行うこともできます。',
+	'mobile-frontend-terms-text' => '利用規約',
 	'mobile-frontend-main-menu-button-tooltip' => 'メインメニューを開く',
 	'mobile-frontend-main-menu-page-title' => 'サイトナビゲーション',
 	'mobile-frontend-main-menu-featured' => '秀逸',
@@ -9600,7 +9601,6 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-clear-search' => 'Тазарту',
 	'mobile-frontend-privacy-link-text' => 'Жеке меншік',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Қолдану шарты]',
 	'mobile-frontend-footer-contact' => 'Байланыс',
 	'mobile-frontend-main-menu-button-tooltip' => 'Басты менюді ашу',
 	'mobile-frontend-main-menu-page-title' => 'Сайт навигациясы',
@@ -10509,8 +10509,7 @@ $messages['la'] = array(
 	'mobile-frontend-privacy-link-text' => 'Res privatae',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Textus sub licentia [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] praebetur.',
-	'mobile-frontend-copyright' => 'Textus sub $1 praebetur nisi aliter indicatus',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Conventio utendi]',
+	'mobile-frontend-copyright' => 'Textus sub $1 praebetur nisi aliter indicatus.',
 	'mobile-frontend-footer-contact' => 'Nexus',
 	'mobile-frontend-search-noresults' => 'Nulli paginarum tituli quaestionem tuam adaequant. Quaestionem modifica.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Aperire sectionem principem',
@@ -10686,7 +10685,7 @@ $messages['la'] = array(
 	'mobile-frontend-media-details' => 'Indicia',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Recensionem plenone an mobili pagina utens factam esse indicat',
 	'mobile-frontend-profile-title' => 'Minutiae rationis',
-	'mobile-frontend-profile-usertalk' => 'Paginam disputatoriam spectare.',
+	'mobile-frontend-profile-usertalk' => 'Paginam disputationis spectare.',
 	'mobile-frontend-profile-nouser' => 'Nomen usoris non exstat',
 	'mobile-frontend-profile-yours' => 'Paginam tuam spectare.',
 	'mobile-frontend-profile-userpage-link' => 'Paginam usoris spectare.',
@@ -10695,6 +10694,7 @@ $messages['la'] = array(
 );
 
 /** Luxembourgish (Lëtzebuergesch)
+ * @author MaxSem
  * @author Robby
  * @author Soued031
  */
@@ -10752,7 +10752,7 @@ $messages['lb'] = array(
 	'mobile-frontend-password-placeholder' => 'Passwuert',
 	'mobile-frontend-login' => 'Aloggen',
 	'mobile-frontend-history' => "D'Lëscht vun de Versioune vun dëser Säit weisen.",
-	'mobile-frontend-history-summary' => 'Versioune vun der Säit [[$1]]',
+	'mobile-frontend-history-summary' => 'Versioune vun der Säit [[:$1]]',
 	'mobile-frontend-last-modified-date' => "Fir d'lescht geännert den $1 ëm $2",
 	'mobile-frontend-last-modified-seconds' => "Fir d'lescht geännert {{PLURAL:$1|virun 1 Sekonn|viru(n) $1 Sekonnen}}",
 	'mobile-frontend-last-modified-minutes' => "Fir d'lescht geännert {{PLURAL:$1|virun 1 Minutt|viru(n) $1 Minutten}}",
@@ -10777,7 +10777,6 @@ $messages['lb'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text disponibel ënner [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; zousätzlech Konditioune kënnen applicabel sinn.',
 	'mobile-frontend-copyright' => 'Den Text ass ënner der $1 disponibel wann et net anescht uginn ass.',
-	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=Bedingunge fir d'mobilt Benotzen]",
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => "Keng Säit gouf beim siche fonnt. Ännert d'Critèren oder dréckt de Sichknäppchen op Ärer Tastatur fir bannen an de Säiten ze sichen.",
 	'mobile-frontend-main-menu-button-tooltip' => 'Haaptmenü opmaachen',
@@ -11239,7 +11238,6 @@ $messages['lv'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Saturs pieejams saskaņā ar [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] licenci; var tikt piemēroti papildus ierobežojumi.',
 	'mobile-frontend-copyright' => 'Saturs ir pieejams saskaņā ar $1, ja vien nav norādīts citādi.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Izmantošanas noteikumi]',
 	'mobile-frontend-footer-contact' => 'Kontakti',
 	'mobile-frontend-main-menu-button-tooltip' => 'Atvērt galveno izvēlni',
 	'mobile-frontend-main-menu-page-title' => 'Vietnes navigācija',
@@ -11446,9 +11444,9 @@ $messages['mk'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Содржините се достапни под лиценцата [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; може да важат дополнителни услови',
 	'mobile-frontend-copyright' => 'Содржината е достапна под $1 освен ако не е поинаку наведено.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/mk?useformat=mobile Услови на употреба]',
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-search-noresults' => 'Нема наслови што одговараат на бараното. Изменете го она што го барате или пребарувајте по текстот на самите страници.',
+	'mobile-frontend-terms-text' => 'Услови на употреба',
 	'mobile-frontend-main-menu-button-tooltip' => 'Отвори го главното мени',
 	'mobile-frontend-main-menu-page-title' => 'Навигација',
 	'mobile-frontend-main-menu-featured' => 'Избрано',
@@ -12951,7 +12949,6 @@ $messages['nl'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'De inhoud is beschikbaar onder de licentie [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; er zijn mogelijk extra voorwaarden van toepassing.',
 	'mobile-frontend-copyright' => 'De inhoud is beschikbaar onder de $1 tenzij anders aangegeven.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/nl?useformat=mobile Gebruiksvoorwaarden]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => "Er zijn geen resultaten voor uw zoekopdracht. Wijzig uw zoekopdracht of klik op de zoekknop op het toetsenbord om binnen pagina's te zoeken.",
 	'mobile-frontend-main-menu-button-tooltip' => 'Hoofdmenu openen',
@@ -13962,9 +13959,9 @@ $messages['pms'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => "Ël test a l'é disponìbil sota [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; d'àutre condission a podrìo aplichesse.",
 	'mobile-frontend-copyright' => "Ël contnù a resta disponìbil sota $1 gavà ch'a sia marcà an n'àutra manera.",
-	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condission d'utilisassion]",
 	'mobile-frontend-footer-contact' => 'Contat',
 	'mobile-frontend-search-noresults' => "A-i é gnun-a pàgina ch'a corëspond a soa arserca. Ch'a modìfica soa arserca, o ch'a gnaca ël boton d'arserca dla tastadura për serché andrinta a le pàgine.",
+	'mobile-frontend-terms-text' => "Condission d'usagi",
 	'mobile-frontend-main-menu-button-tooltip' => 'Duverté lë mnù prinsipal',
 	'mobile-frontend-main-menu-page-title' => 'Navigassion dël sit',
 	'mobile-frontend-main-menu-featured' => 'Premià',
@@ -14443,6 +14440,7 @@ $messages['rm'] = array(
 
 /** Romanian (română)
  * @author Firilacroco
+ * @author MaxSem
  * @author Minisarm
  */
 $messages['ro'] = array(
@@ -14503,7 +14501,7 @@ $messages['ro'] = array(
 	'mobile-frontend-history' => 'Vizualizează istoricul modificărilor pentru această pagină.',
 	'mobile-frontend-history-404-title' => 'Titlu greșit furnizat',
 	'mobile-frontend-history-404-desc' => 'Nu se poate accesa istoricul unei pagini care nu există. Este posibil ca aceasta să fi fost ștearsă sau ca dumneavoastră să fi accesat o legătură greșită.',
-	'mobile-frontend-history-summary' => 'Istoricul paginii pentru [[$1]]',
+	'mobile-frontend-history-summary' => 'Istoricul paginii pentru [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Ultima modificare pe $1, la $2',
 	'mobile-frontend-last-modified-seconds' => 'Ultima modificare acum {{PLURAL:$1|o secundă|$1 secunde|$1 de secunde}}',
 	'mobile-frontend-last-modified-minutes' => 'Ultima modificare acum {{PLURAL:$1|un minut|$1 minute|$1 de minute}}',
@@ -14535,7 +14533,6 @@ $messages['ro'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text disponibil sub licența [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; pot exista și clauze suplimentare.',
 	'mobile-frontend-copyright' => 'Conținutul este disponibil sub $1, exceptând cazurile în care se specifică altfel.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termeni de utilizare]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'Niciun titlu de pagină nu corespunde căutării dumneavoastră. Căutați altceva sau apăsați butonul de căutare de pe tastatură pentru a căuta în interiorul paginilor.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Deschide meniul principal',
@@ -14934,7 +14931,8 @@ $messages['ru'] = array(
 	'mobile-frontend-login' => 'Войти',
 	'mobile-frontend-history' => 'Посмотреть историю изменений этой страницы.',
 	'mobile-frontend-history-404-title' => 'Указано неправильное название',
-	'mobile-frontend-history-summary' => 'История изменений страницы [[$1]]',
+	'mobile-frontend-history-404-desc' => 'Невозможно посмотреть историю страницы, которая не существует. Она может быть удалена или вы могли пройти по неверной ссылке.',
+	'mobile-frontend-history-summary' => 'История изменений страницы [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Последние изменения на $2 $1',
 	'mobile-frontend-last-modified-seconds' => 'Последние изменения были сделаны {{PLURAL:$1|$1 секунду|$1 секунды|$1 секунд}} назад',
 	'mobile-frontend-last-modified-minutes' => 'Последние изменения были сделаны {{PLURAL:$1|$1 минуту|$1 минуты|$1 минут}} назад',
@@ -14943,6 +14941,13 @@ $messages['ru'] = array(
 	'mobile-frontend-last-modified-months' => 'Последние изменения были сделаны {{PLURAL:$1|$1 месяц|$1 месяца|$1 месяцев}} назад',
 	'mobile-frontend-last-modified-years' => 'Последние изменения были сделаны {{PLURAL:$1|$1 год|$1 года|$1 лет}} назад',
 	'mobile-frontend-last-modified-just-now' => 'Последнее изменение внесено прямо сейчас',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 секунду|$3 секунды|$3 секунд}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 минуту|$3 минуты|$3 минут}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 час|$3 часа|$3 часов}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 день|$3 дня|$3 дней}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 месяц|$3 месяца|$3 месяцев}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 год|$3 года|$3 лет}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Последняя {{GENDER:$1|правка}}] сделана только что {{PLURAL:$4|участником [$5 $2]|0=анонимным участником}}',
 	'mobile-frontend-learn-more' => 'Узнать больше',
 	'mobile-frontend-account-create-submit' => 'Зарегистрироваться',
 	'mobile-frontend-password-confirm-placeholder' => 'Подтвердите пароль',
@@ -14959,9 +14964,9 @@ $messages['ru'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Содержание доступно по лицензии [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0], могут применяться дополнительные условия.',
 	'mobile-frontend-copyright' => 'Содержимое доступно в соответствии с $1, если не указано иное.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ru?useformat=mobile Условия использования]',
 	'mobile-frontend-footer-contact' => 'Контактная информация',
 	'mobile-frontend-search-noresults' => 'Нет страниц, названия которых соответствуют вашему запросу. Измените свой запрос, или нажмите на клавиатуре кнопку для поиска внутри страниц.',
+	'mobile-frontend-terms-text' => 'Условия использования',
 	'mobile-frontend-main-menu-button-tooltip' => 'Открыть главное меню',
 	'mobile-frontend-main-menu-page-title' => 'Навигация по сайту',
 	'mobile-frontend-main-menu-featured' => 'Избранное',
@@ -14980,6 +14985,7 @@ $messages['ru'] = array(
 	'mobile-frontend-meta-data-issues-header' => 'Вопросы',
 	'mobile-frontend-meta-data-issues' => 'Насчёт данной страницы имеются вопросы.',
 	'mobile-frontend-page-saving' => 'Сохранение $1',
+	'mobile-frontend-user-cta' => 'Пожалуйста, войдите или зарегистрируйтесь, чтобы увидеть ваши уведомления.',
 	'mobile-frontend-user-button-tooltip' => 'Показать мои уведомления',
 	'mobile-frontend-nearby-to-page' => 'Эти страницы связаны с $1 своим географическим расположением',
 	'mobile-frontend-nearby-title' => 'Рядом',
@@ -14994,6 +15000,7 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-refresh' => 'Мы определили ваше местоположение точнее. Нажмите здесь, чтобы обновить список ближайших страниц',
 	'mobile-frontend-nearby-error' => 'У {{SITENAME}} возникли некоторые проблемы.',
 	'mobile-frontend-nearby-error-guidance' => 'Попробуйте обновить ваше местоположение.',
+	'mobile-frontend-nearby-link' => 'Прочитайте эту страницу целиком',
 	'mobile-frontend-nearby-directions' => 'Перейдите сюда',
 	'mobile-frontend-donate-image-nouploads' => 'Нет загрузок.',
 	'mobile-frontend-donate-image-login' => 'Вы должны авторизоваться для просмотра своих загрузок.',
@@ -15009,6 +15016,8 @@ $messages['ru'] = array(
 	'mobile-frontend-listed-image-no-description' => 'Нет описания',
 	'mobile-frontend-donate-photo-upload-success' => 'Получилось! Ваше изображние может быть использован на сайте {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Получилось! Спасибо за ваш вклад!',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Присылайте ваши изображения. Помогите оживить сайт {{SITENAME}}!',
+	'mobile-frontend-first-upload-wizard-new-page-1' => 'Изображения для сайта {{SITENAME}} располагаются на Wikimedia Commons',
 	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'Ваши изображения помогают образованию людей во всём мире.',
 	'mobile-frontend-first-upload-wizard-new-page-2' => 'Избегайте материалов, найденных в интернете и защищённых авторским правом, а также изображений плакатов, книжных обложек и т.п.',
 	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Понятно?',
@@ -15079,6 +15088,7 @@ $messages['ru'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ загрузок',
 	'mobile-frontend-photo-upload-cta' => 'Пожалуйста, авторизуйтесь или зарегистрируйтесь, чтобы добавить изображение.',
 	'mobile-frontend-photo-upload-login' => 'Для добавления изображения вы должны авторизоваться.',
+	'mobile-frontend-editor-undo-unsupported' => 'Отмена в настоящее время не поддерживается на мобильных устройствах.',
 	'mobile-frontend-editor-newpage-prompt' => 'Эта страница не существует. Почему бы не набраться смелости и создать её?',
 	'mobile-frontend-editor-disabled' => 'Вам не разрешено редактировать эту страницу.',
 	'mobile-frontend-editor-unavailable' => 'Мобильное редактирование недоступно в настоящее время в вашем браузере. Пожалуйста, попробуйте другой браузер.',
@@ -15088,6 +15098,7 @@ $messages['ru'] = array(
 	'mobile-frontend-editor-save' => 'Сохранить',
 	'mobile-frontend-editor-cancel' => 'Отмена',
 	'mobile-frontend-editor-keep-editing' => 'Продолжить редактирование',
+	'mobile-frontend-editor-placeholder' => 'Этот раздел пуст. Будьте первым, кто заполнит его!',
 	'mobile-frontend-editor-summary-placeholder' => 'Расскажите нам, что вы изменили (не обязательно)',
 	'mobile-frontend-editor-cancel-confirm' => 'Вы действительно хотите отказаться от ваши изменений?',
 	'mobile-frontend-editor-wait' => 'Сохранение правки, пожалуйста, подождите.',
@@ -15095,19 +15106,35 @@ $messages['ru'] = array(
 	'mobile-frontend-editor-success' => 'Успешно! Ваша правка была сохранена.',
 	'mobile-frontend-editor-success-landmark-1' => 'Поздравляем, теперь вы — редактор сайта {{SITENAME}}!',
 	'mobile-frontend-editor-error' => 'Ошибка, правка не была сохранена.',
+	'mobile-frontend-editor-error-conflict' => 'Ошибка, другой пользователь отредактировал эту страницу.',
+	'mobile-frontend-editor-error-loading' => 'Ошибка, не удаётся загрузить раздел.',
 	'mobile-frontend-editor-preview-header' => 'Предпросмотр',
+	'mobile-frontend-editor-tutorial-summary' => 'Не пугайтесь разметки. Попробуйте улучшить страницу $1.',
+	'mobile-frontend-editor-tutorial-confirm' => 'Начать редактирование',
+	'mobile-frontend-editor-captcha-try-again' => 'Неверный код, попробуйте еще раз.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Эта правка не может быть сохранена, поскольку мы обнаружили проблему.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Читать подробнее',
 	'tag-mobile_edit' => 'Правка с моб. устройства',
 	'tag-mobile_edit-description' => 'Правки, сделанные через мобильную версию сайта',
 	'mobile-frontend-drawer-cancel' => 'Отмена',
+	'mobile-frontend-talk-explained' => 'Эти обсуждения являются активными',
+	'mobile-frontend-talk-explained-empty' => 'На этой странице нет обсуждений.',
+	'mobile-frontend-talk-overlay-header' => 'Обсуждение',
 	'mobile-frontend-talk-back-to-page' => 'Вернуться на страницу «$1».',
 	'mobile-frontend-talk-overlay-lead-header' => 'Безымянное обсуждение',
 	'mobile-frontend-talk-add-overlay-submit' => 'Добавить обсуждение',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Заголовок темы',
+	'mobile-frontend-talk-edit-summary' => 'Новый раздел обсуждения: $1',
 	'mobile-frontend-talk-reply-success' => 'Ваш ответ был успешно сохранён на странице обсуждения.',
 	'mobile-frontend-talk-reply' => 'Ответить',
 	'mobile-frontend-media-details' => 'Подробности',
+	'mobile-frontend-profile-title' => 'Профиль участника',
 	'mobile-frontend-profile-usertalk' => 'Просмотр страницы обсуждения.',
 	'mobile-frontend-profile-nouser' => 'Несуществующее или неверное имя участника',
+	'mobile-frontend-profile-yours' => 'Перейдите на страницу своего профиля.',
+	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Этот пользователь}} — новый редактор.',
+	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|Этот пользователь}} — это довольно опытный редактор.',
+	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Этот пользователь}} — активный редактор.',
 );
 
 /** Rusyn (русиньскый)
@@ -15864,7 +15891,6 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Садржај је доступан под [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] додатни услови су можда примењиви.',
 	'mobile-frontend-copyright' => 'Садржај је доступан под лиценцом $1 осим ако је другачије наведено.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Услови коришћења]',
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-search-noresults' => 'Нема чланка који одговара претрази. Промените услове претраге, или притисните дугме за претрагу да бисте је проширили на садржај чланака.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Отвори главни мени',
@@ -16002,6 +16028,7 @@ $messages['sr-el'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Podešavanja mobilnog sajta', # Fuzzy
 	'mobile-frontend-page-menu-contents' => 'sadržaj',
 	'mobile-frontend-page-menu-history' => 'Istorija',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Da!',
 );
 
 /** Sundanese (Basa Sunda)
@@ -16023,6 +16050,7 @@ $messages['su'] = array(
  * @author JoolzWiki
  * @author Jopparn
  * @author Lokal Profil
+ * @author MaxSem
  * @author Skalman
  * @author WikiPhoenix
  */
@@ -16082,7 +16110,7 @@ $messages['sv'] = array(
 	'mobile-frontend-password-placeholder' => 'Lösenord',
 	'mobile-frontend-login' => 'Logga in',
 	'mobile-frontend-history' => 'Visa redigeringshistorik för denna sida.',
-	'mobile-frontend-history-summary' => 'Sidhistorik för [[$1]]',
+	'mobile-frontend-history-summary' => 'Sidhistorik för [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Senast redigerad den $1, kl $2',
 	'mobile-frontend-last-modified-seconds' => 'Senast redigerad {{PLURAL:$1|$1 sekund|$1 sekunder}} sedan',
 	'mobile-frontend-last-modified-minutes' => 'Senast redigerad {{PLURAL:$1|$1 minut|$1 minuter}} sedan',
@@ -16114,7 +16142,6 @@ $messages['sv'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text är tillgängligt under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; fler villkor kan gälla.',
 	'mobile-frontend-copyright' => 'Innehållet är tillgängligt under $1 om ingenting annat anges.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Användarvillkor]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Inga sidor matchar din sökning. Ändra sökningen eller tryck på tangentbordets sökknapp för att söka inuti sidor.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Öppna huvudmenyn',
@@ -16752,6 +16779,7 @@ $messages['tpi'] = array(
  * @author Erdemaslancan
  * @author Hcagri
  * @author Incelemeelemani
+ * @author MaxSem
  * @author Meelo
  * @author Nazif İLBEK
  * @author Rapsar
@@ -16809,7 +16837,7 @@ $messages['tr'] = array(
 	'mobile-frontend-password-placeholder' => 'Parola',
 	'mobile-frontend-login' => 'Oturum aç',
 	'mobile-frontend-history' => 'Bu sayfanın düzenleme geçmişini göster.',
-	'mobile-frontend-history-summary' => '[[$1]] için sayfa geçmişi',
+	'mobile-frontend-history-summary' => '[[:$1]] için sayfa geçmişi',
 	'mobile-frontend-last-modified-date' => 'Son değişiklik $1, $2 tarihinde yapıldı',
 	'mobile-frontend-last-modified-seconds' => 'Son değişiklik {{PLURAL:$1|$1 saniye|$1 saniye}} önce yapıldı',
 	'mobile-frontend-last-modified-minutes' => 'Son değişiklik {{PLURAL:$1|$1 dakika|$1 dakika}} önce yapıldı',
@@ -16840,7 +16868,6 @@ $messages['tr'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Metin [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] Lisansı altındadır; ek koşullar uygulanabilir.',
 	'mobile-frontend-copyright' => 'Aksi belirtilmedikçe içerik $1 lisansı altındadır.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Kullanım Şartları]',
 	'mobile-frontend-footer-contact' => 'İletişim',
 	'mobile-frontend-search-noresults' => 'Arama kriterinize uygun sayfa başlıkları bulunamadı. Aramanızı değiştirin veya sayfada arama yapmak için klavyenizdeki arama butonuna basın.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Ana menüyü aç',
@@ -16951,13 +16978,20 @@ $messages['tr'] = array(
 	'mobile-frontend-photo-nag-learn-more-heading' => 'Ne yüklüyorsunuz?',
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Hayır.''' Film afişleri, kitap kapakları ve diğer telif hakkı saklı malzemeden fotoğraflar. Bunlar silinecektir.",
 	'mobile-frontend-photo-upload-error-filename' => 'Hata, lütfen daha açıklayıcı bir özet giriniz.',
+	'mobile-frontend-photo-cancel' => 'İptal',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> yükleme|<span>$1</span> yükleme}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '+500 yükleme',
 	'mobile-frontend-photo-upload-cta' => 'Resim eklemek için oturum ya da hesap açın.',
 	'mobile-frontend-photo-upload-login' => 'Resim eklemek için oturum açmalısınız.',
+	'mobile-frontend-editor-undo-unsupported' => 'Geri alma şu anda mobil cihazlarda desteklenmiyor.',
 	'mobile-frontend-editor-newpage-prompt' => 'Bu sayfa mevcut değil. Neden cesur olup bu sayfayı açmıyorsun?',
 	'mobile-frontend-editor-disabled' => 'Bu sayfayı düzenlemeye izniniz yok.',
+	'mobile-frontend-editor-unavailable' => 'Mobil düzenleme şu anda tarayıcınızda kullanılabilir değil. Lütfen farklı bir tarayıcıda deneyiniz.',
 	'mobile-frontend-editor-cta' => 'Sayfaları mobilden düzenleyebilmek için oturum açmanız gerekmektedir.',
+	'mobile-frontend-editor-edit' => 'Düzenle',
 	'mobile-frontend-editor-continue' => 'Devam',
+	'mobile-frontend-editor-save' => 'Kaydet',
+	'mobile-frontend-editor-cancel' => 'İptal',
 	'mobile-frontend-editor-wait' => 'Düzenleme kaydediliyor, lütfen bekleyin.',
 	'mobile-frontend-editor-success' => 'Başarı! Düzenlemeniz kaydedildi.',
 	'mobile-frontend-editor-success-landmark-1' => 'Tebrikler, {{SITENAME}} editörü oldunuz!',
@@ -17201,9 +17235,9 @@ $messages['uk'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Вміст доступний під ліцензією [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; можуть діяти додаткові умови.',
 	'mobile-frontend-copyright' => 'Вміст доступний на умовах $1, якщо не вказано інше.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile&uselang=uk Умови використання]',
 	'mobile-frontend-footer-contact' => "Зв'язок",
 	'mobile-frontend-search-noresults' => 'Немає заголовків сторінок, які відповідають критеріям пошуку. Змініть параметри пошуку, або натисніть кнопку пошуку, щоб знайти всередині сторінок.',
+	'mobile-frontend-terms-text' => 'Умови використання',
 	'mobile-frontend-main-menu-button-tooltip' => 'Відкрити головне меню',
 	'mobile-frontend-main-menu-page-title' => 'Навігація по сайту',
 	'mobile-frontend-main-menu-featured' => 'Вибране',
@@ -18197,6 +18231,7 @@ $messages['yue'] = array(
  * @author Liangent
  * @author Linforest
  * @author Liuxinyu970226
+ * @author MaxSem
  * @author Mys 721tx
  * @author PhiLiP
  * @author Qiyue2001
@@ -18267,7 +18302,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-history' => '查看本页面的编辑历史。',
 	'mobile-frontend-history-404-title' => '提供了错误的标题',
 	'mobile-frontend-history-404-desc' => '无法查看不存在页面的历史。它可能被删除或者您点击了一个死链。',
-	'mobile-frontend-history-summary' => '[[$1]]的页面历史',
+	'mobile-frontend-history-summary' => '[[:$1]]的页面历史',
 	'mobile-frontend-last-modified-date' => '最后修改于$1 $2',
 	'mobile-frontend-last-modified-seconds' => '最后修改于{{PLURAL:$1|$1秒}}前',
 	'mobile-frontend-last-modified-minutes' => '最后修改于{{PLURAL:$1|$1分}}前',
@@ -18299,7 +18334,6 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => '文字内容采用[//zh.m.wikipedia.org/wiki/Wikipedia:CC-BY-SA-3.0协议文本?useformat=mobile CC BY-SA 3.0]授权，附加条款可能应用。',
 	'mobile-frontend-copyright' => '本站内容依$1授权，特殊条款亦可能使用。',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile 使用条款]',
 	'mobile-frontend-footer-contact' => '联系',
 	'mobile-frontend-search-noresults' => '无页面标题匹配你的搜索。请更换关键词，或按键盘搜索键在页面中搜索。',
 	'mobile-frontend-main-menu-button-tooltip' => '打开主菜单',
@@ -18592,7 +18626,6 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => '內容在[//zh.m.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC?useformat=mobile CC BY-SA 3.0]協議下提供；附加條款可能適用。',
 	'mobile-frontend-copyright' => '本頁內容依$1授權，其他條款亦可能適用。',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile 使用條款]',
 	'mobile-frontend-footer-contact' => '聯繫',
 	'mobile-frontend-search-noresults' => '沒有頁面標題匹配您的搜尋字詞。更改您的搜索，或按鍵盤搜尋鍵進行全文搜索。',
 	'mobile-frontend-main-menu-button-tooltip' => '開啟主目錄',
