@@ -323,9 +323,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta.common',
 		),
 		'styles' => array(
+			'less/common/OverlayNew.less',
 			'less/modules/talk.less',
 		),
 		'scripts' => array(
+			'javascripts/common/OverlayNew.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/search/pageImages.js',
@@ -334,6 +336,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/keepgoing/keepgoing.js',
 			'javascripts/modules/tutorials/LeadPhotoTutorialOverlay.js',
 			'javascripts/modules/tutorials/newbieUploads.js',
+		),
+		'templates' => array(
+			'OverlayNew',
 		),
 		'position' => 'bottom',
 		'messages' => array(
