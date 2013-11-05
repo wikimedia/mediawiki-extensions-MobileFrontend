@@ -117,9 +117,10 @@ $messages['en'] = array (
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text is available under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional terms may apply.',
 	'mobile-frontend-copyright' => 'Content is available under $1 unless otherwise noted.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Terms of Use]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'No page titles match your search. Change your search, or press the keyboard search button to search inside pages.',
+	'mobile-frontend-terms-text' => 'Terms of use',
+	'mobile-frontend-terms-url' => '',
 
 	// Site navigation menu
 	'mobile-frontend-main-menu-button-tooltip' => 'Open main menu',
@@ -597,9 +598,10 @@ Parameters:
 * $1 - license name
 '''See also'''
 * {{msg-mw|Copyright}}",
-	'mobile-frontend-terms-use-text' => 'Label for terms of use link',
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
+	'mobile-frontend-terms-text' => '"Terms of use" link text at the bottom of every page',
+	'mobile-frontend-terms-url' => 'Terms of use URL. Do not localise',
 	'mobile-frontend-main-menu-button-tooltip' => 'Tooltip for menu button',
 	'mobile-frontend-main-menu-page-title' => '{{doc-special|MobileMenu|unlisted=1}}',
 	'mobile-frontend-main-menu-featured' => 'Featured link text in main menu

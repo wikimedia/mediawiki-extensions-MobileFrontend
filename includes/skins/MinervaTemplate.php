@@ -88,7 +88,7 @@ class MinervaTemplate extends BaseTemplate {
 				foreach( $this->getFooterLinks() as $category => $links ):
 			?>
 				<ul class="footer-<?php echo $category; ?>">
-					<?php foreach( $links as $link ): ?><li><?php $this->html( $link ) ?></li><?php endforeach; ?>
+					<?php foreach( $links as $link ): if ( isset( $this->data[$link] ) ): ?><li><?php $this->html( $link ) ?></li><?php endif; endforeach; ?>
 				</ul>
 			<?php endforeach; ?>
 		</div>

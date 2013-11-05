@@ -374,7 +374,35 @@ HTML;
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'mobile-license', $licenseText );
 		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
-		$tpl->set( 'terms-use', wfMessage( 'mobile-frontend-terms-use-text' )->parse() );
+		$tpl->set( 'terms-use', $this->getTermsLink( 'mobile-frontend-terms-url' ) );
+	}
+
+	/**
+	 * Returns HTML of terms of use link or null if it shouldn't be displayed
+	 *
+	 * @param $messageKey
+	 *
+	 * @return null|string
+	 */
+	public function getTermsLink( $messageKey ) {
+		$urlMsg = $this->msg( $messageKey )->inContentLanguage();
+		if ( $urlMsg->isDisabled() ) {
+			return null;
+		}
+		$url = $urlMsg->plain();
+		// Support both page titles and URLs
+		if ( preg_match( '#^(https?:)?//#', $url ) === 0 ) {
+			$title = Title::newFromText( $url );
+			if ( !$title ) {
+				return null;
+			}
+			$url = $title->getLocalURL();
+		}
+		return Html::element(
+			'a',
+			array( 'href' => $url ),
+			$this->msg( 'mobile-frontend-terms-text' )->text()
+		);
 	}
 
 	/**
