@@ -116,6 +116,33 @@ class MobileUserInfo {
 	}
 
 	/**
+	 * Returns the last edit of the user
+	 *
+	 * @return Revision|false
+	 */
+	public function getLastEdit() {
+		wfProfileIn( __METHOD__ );
+		$conds = array(
+			'rev_user' => $this->user->getId(),
+		);
+		$options = array(
+			'LIMIT' => 1,
+			'ORDER BY' => 'rev_timestamp DESC',
+		);
+
+		$dbr = wfGetDB( DB_SLAVE, 'revision' );
+		$res = $dbr->select( 'revision', 'rev_id', $conds, __METHOD__, $options );
+		$row = $res->fetchObject();
+		if ( $row ) {
+			$rev = Revision::newFromId( $row->rev_id );
+		} else {
+			$rev = false;
+		}
+		wfProfileOut( __METHOD__ );
+		return $rev;
+	}
+
+	/**
 	 * Returns user who last thanked current user. Requires Extension:Echo
 	 *
 	 * @return array|null

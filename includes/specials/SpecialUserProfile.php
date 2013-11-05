@@ -85,6 +85,27 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return $html;
 	}
 
+	protected function getLastEdit() {
+		wfProfileIn( __METHOD__ );
+		$rev = $this->userInfo->getLastEdit();
+		if ( $rev ) {
+			$daysAgo = $this->getDaysAgo( new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) ) );
+			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
+				. Html::openElement( 'div', array( 'class' => 'container caption' ) )
+				. $this->msg( 'mobile-frontend-profile-last-edit',
+					$rev->getTitle(),
+					$daysAgo
+				)->parse()
+				. '</div>'
+				. '</div>';
+		} else {
+			$html = '';
+		}
+
+		wfProfileOut( __METHOD__ );
+		return $html;
+	}
+
 	protected function getTalkLink() {
 		// replace secondary icon
 		$attrs = array(
@@ -165,7 +186,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 			if ( $this->targetUser->getId() ) {
 				// prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
-				$activityHtml = $this->getLastUpload() . $this->getLastThanks();
+				$activityHtml = $this->getLastUpload() . $this->getLastThanks()
+					. $this->getLastEdit();
 				$html = Html::openElement( 'div', array( 'class' => 'profile' ) )
 					. Html::element( 'h1', array(), $this->targetUser->getName() )
 					. $this->getUserSummary()
