@@ -10,6 +10,11 @@ class MobileSpecialPage extends SpecialPage {
 	 * @var bool: Whether the special page's content should be wrapped in div.content
 	 */
 	protected $unstyledContent = true;
+	/**
+	 * FIXME: Remove need for this alternative chrome for certain Special Pages
+	 * @var bool: Whether the page has an alternative header and a footer
+	 */
+	protected $disableSearchAndFooter = true;
 
 	/* Executes the page when available in the current $mode */
 	public function executeWhenAvailable( $subPage ) {}
@@ -27,6 +32,7 @@ class MobileSpecialPage extends SpecialPage {
 		} else {
 			$this->executeWhenAvailable( $subPage );
 		}
+		$this->getOutput()->setProperty( 'disableSearchAndFooter', $this->disableSearchAndFooter );
 	}
 
 	public function setHeaders() {

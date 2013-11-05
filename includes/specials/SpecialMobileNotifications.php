@@ -17,6 +17,7 @@ class SpecialMobileNotifications extends SpecialNotifications {
 		}
 		parent::execute( $par );
 		$out->addModules( 'mobile.notifications.special.scripts' );
+		$this->getOutput()->setProperty( 'disableSearchAndFooter', true );
 	}
 
 	/**
