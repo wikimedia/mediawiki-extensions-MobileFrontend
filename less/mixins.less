@@ -26,11 +26,6 @@
 	background-size: @width @height;
 }
 
-.text-with-shadow( @color:white ){
-  color: @color;
-  text-shadow:  0 -1px 0 fade( black, 25% );
-}
-
 .vertical-gradient ( @startColor: gray, @endColor: white, @startPos: 0, @endPos: 100% ) {
 	background-color: @endColor;
 	background-image: -moz-linear-gradient( top, @startColor @startPos, @endColor @endPos ); // Firefox 3.6+
