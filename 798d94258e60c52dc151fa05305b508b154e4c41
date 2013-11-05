@@ -52,6 +52,24 @@
       "revId": "798d94258e60c52dc151fa05305b508b154e4c41",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_5cda8a76",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-05T23:11:26Z",
+      "side": 1,
+      "message": "Raised a bug about this, but it should be fixed in a separate patch:\nhttps://bugzilla.wikimedia.org/show_bug.cgi?id\u003d56639",
+      "parentUuid": "291c1151_3cadceeb",
+      "revId": "798d94258e60c52dc151fa05305b508b154e4c41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
