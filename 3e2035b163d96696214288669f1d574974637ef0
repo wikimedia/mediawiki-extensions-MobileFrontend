@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_a967c2b8",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-05T21:27:49Z",
+      "side": 1,
+      "message": "I\u0027ll make this clearer but basically the hijack below expects a deferred object. We don\u0027t want to log twice as the first one is more important.\n\nIf you click a link in the infobox then click another then no deferred object will fire and thus the always handler will not fire thus the link cannot be navigated to...",
+      "parentUuid": "291c1151_65b4227f",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_e5ed7290",
         "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-11-01T21:52:36Z",
       "side": 1,
       "message": "Any reason we\u0027re not using jQuery?",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e9ed3a27",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-05T21:27:49Z",
+      "side": 1,
+      "message": "Any reason I should?",
+      "parentUuid": "291c1151_e5ed7290",
       "revId": "3e2035b163d96696214288669f1d574974637ef0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_c9fcfe0b",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-05T21:27:49Z",
+      "side": 1,
+      "message": "whoops should be start",
+      "parentUuid": "291c1151_a5fc5a3c",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_25a14a4b",
         "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-11-01T21:52:36Z",
       "side": 1,
       "message": "If I understand correctly, this will also return true if someone scrolls past the infobox and the infobox is no longer in the viewport...\n\nI also don\u0027t like how logData is used. Let\u0027s make it an object that contains only logData and use local variables for other things. This is just confusing.",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e97a9a84",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-05T21:27:49Z",
+      "side": 1,
+      "message": "OK i\u0027ll clean this up.",
+      "parentUuid": "291c1151_25a14a4b",
       "revId": "3e2035b163d96696214288669f1d574974637ef0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_894da66f",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-05T21:27:49Z",
+      "side": 1,
+      "message": "I thought this was just common sense and a citation was unnecessary (just google it) but if you really want one:\nhttp://ejohn.org/blog/learning-from-twitter/\n\"It’s a very, very, bad idea to attach handlers to the window scroll event.\"",
+      "parentUuid": "291c1151_05c36ef1",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_e5c49212",
         "filename": "javascripts/specials/uploads.js",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2013-11-01T21:52:36Z",
       "side": 1,
       "message": "?",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_09db764d",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-05T21:27:49Z",
+      "side": 1,
+      "message": "I\u0027ll make this clearer and add a FIXME, but I realised we used scroll in the uploads page and that we would be better off using a setInterval or at the very least use a debounce\n\nSee this to understand it more.\nhttp://benalman.com/projects/jquery-throttle-debounce-plugin/\n\n// FIXME: Add debouncing to avoid performance degradation\nDoes this suffice?",
+      "parentUuid": "291c1151_e5c49212",
       "revId": "3e2035b163d96696214288669f1d574974637ef0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
