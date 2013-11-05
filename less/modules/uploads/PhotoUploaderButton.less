@@ -1,0 +1,37 @@
+@import "../../mixins.less";
+
+.button.photo {
+	position: relative;
+	display: table;
+	margin: 0 auto;
+	padding-left: 44px;
+	text-align: left; /* override text-align center - chrome not clickable */
+
+	// separate <div> to avoid overriding button's gradient
+	div {
+		// Note: Use left to ensure it flips in RTL mode
+		background: url(../images/camera.png) left 45% no-repeat;
+		margin: 0 10px;
+		.background-size( 24px, auto );
+	}
+
+	input {
+		opacity: 0;
+		z-index: 2;
+	}
+
+	input, div {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#content > .button.photo {
+	display: block;
+	margin-bottom: 10px;
+}
+
