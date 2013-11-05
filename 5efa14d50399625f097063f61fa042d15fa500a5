@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_3ce5ce0c",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-05T23:32:06Z",
+      "side": 1,
+      "message": "Could this be abstracted as well? e.g. getPageImageHtml ?",
+      "revId": "5efa14d50399625f097063f61fa042d15fa500a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
