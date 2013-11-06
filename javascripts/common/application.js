@@ -242,7 +242,7 @@
 			$( 'body' ).removeClass( 'page-Main_Page' );
 		}
 
-		mw.config.set( 'wgArticleId', page.id );
+		mw.config.set( 'wgArticleId', page.getId() );
 		M.emit( 'page-loaded', page );
 		// Update page title
 		document.title = page.title;
