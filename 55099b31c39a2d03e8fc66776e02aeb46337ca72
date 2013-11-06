@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_cfecf9ca",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-06T23:02:35Z",
+      "side": 1,
+      "message": "You could just make this !isCollapsed",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_50442b1b",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-06T23:02:35Z",
+      "side": 1,
+      "message": "Also no need to wrap id in a string\nid: \u0027content_block_\u0027 + i would suffice\n\nAlso construct once and store in a variable so it\u0027s clearer it is also used below and these two elements are tied by it.",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_7053e7e1",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-06T23:02:35Z",
+      "side": 1,
+      "message": "The quotes around the false are not necessary when using attr",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_904ea337",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-06T23:02:35Z",
+      "side": 1,
+      "message": "I\u0027m not sure about this. This is very desktop specific. Forgive my ignorance but do ARIA extensions not add shortcuts like this? What would the mobile equivalents be?\n\nAlso why can\u0027t we just turn the heading into a link so that pressing enter has the same effect as a normal link and triggers the toggle?",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_afe97dbb",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-06T23:02:35Z",
+      "side": 1,
+      "message": "I\u0027m not sure what\u0027s going on here. I understand you are accounting for when you press enter on a link so that it doesn\u0027t toggle open the section but this makes me wonder a few thing\n1) Why the mouseup stopPropogation?\n2) Wouldn\u0027t it be better to make the heading a link so that we avoid this all together\n3) The comment should be a little clearer as I\u0027m not 100% sure I understand\n\nAlso we use ev rather than e [1]\n[1] https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions#Naming_conventions",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
