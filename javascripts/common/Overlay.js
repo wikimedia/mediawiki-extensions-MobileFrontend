@@ -8,6 +8,7 @@ var View = M.require( 'view' ),
 		template: M.template.get( 'overlay' ),
 		className: 'mw-mf-overlay',
 		closeOnBack: false,
+		closeOnContentTap: false,
 		fullScreen: true,
 		// use '#mw-mf-viewport' rather than 'body' - for some reasons this has
 		// odd consequences on Opera Mobile (see bug 52361)
@@ -60,13 +61,17 @@ var View = M.require( 'view' ),
 
 			this.$el.appendTo( this.appendTo );
 			this.scrollTop = document.body.scrollTop;
+
 			if ( this.fullScreen ) {
 				$( 'html' ).addClass( 'overlay-enabled' );
 				// skip the URL bar if possible
 				window.scrollTo( 0, 1 );
-			} else {
+			}
+
+			if ( this.closeOnContentTap ) {
 				$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ), $.proxy( this, 'hide' ) );
 			}
+
 			$( 'body' ).removeClass( 'navigation-enabled' );
 		},
 		hide: function() {

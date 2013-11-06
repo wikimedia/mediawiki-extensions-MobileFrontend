@@ -265,13 +265,18 @@ $messages['en'] = array (
 	'mobile-frontend-photo-upload-error-file-type' => 'Please only upload images.',
 	'mobile-frontend-photo-upload-error-filename' => 'Error, please provide a more descriptive summary.',
 	'mobile-frontend-photo-upload-success-article' => 'Success! Your image is now live on this page.',
-	'mobile-frontend-photo-license' => 'By clicking "Submit", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your image under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
+	'mobile-frontend-photo-license' => 'By uploading this image, you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your image under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
 	'mobile-frontend-photo-submit' => 'Submit',
 	'mobile-frontend-photo-cancel' => 'Cancel',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
 	'mobile-frontend-photo-upload-cta' => 'Please login or sign up to add an image.',
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
+	'mobile-frontend-image-heading-describe' => "'''Describe''' image",
+	'mobile-frontend-image-uploading' => "'''Uploading''' image...",
+	'mobile-frontend-image-cancel-confirm' => "'''Cancel''' upload?",
+	'mobile-frontend-image-cancel-yes' => 'Yes',
+	'mobile-frontend-image-cancel-no' => 'No',
 
 	// edit
 	'mobile-frontend-editor-undo-unsupported' => 'Undo is not currently supported on mobile devices.',
@@ -818,6 +823,11 @@ Parameters:
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-image-heading-describe' => 'A heading instructing the user to describe uploaded image.',
+	'mobile-frontend-image-uploading' => 'A message telling the user that an image is being uploaded.',
+	'mobile-frontend-image-cancel-confirm' => 'A question asking if the user wants to cancel an upload.',
+	'mobile-frontend-image-cancel-yes' => '"Yes" answer to confirmation question in {{msg-mw|mobile-frontend-image-cancel-confirm}}.',
+	'mobile-frontend-image-cancel-no' => '"No" answer to confirmation question in {{msg-mw|mobile-frontend-image-cancel-confirm}}.',
 	'mobile-frontend-editor-undo-unsupported' => 'Shown when user attempts to do an undo which is currently not supported.',
 	'mobile-frontend-editor-newpage-prompt' => "Message shown when a page doesn't exist.",
 	'mobile-frontend-editor-disabled' => 'Toast message that appears when a user is unable to edit a page and clicks edit icon',

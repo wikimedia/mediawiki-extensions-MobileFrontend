@@ -1,6 +1,6 @@
 ( function( M ) {
-	var Overlay = M.require( 'Overlay' ), LearnMoreOverlay;
-	LearnMoreOverlay = Overlay.extend( {
+	var OverlayNew = M.require( 'OverlayNew' ), LearnMoreOverlay;
+	LearnMoreOverlay = OverlayNew.extend( {
 		defaults: {
 			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
 		},
