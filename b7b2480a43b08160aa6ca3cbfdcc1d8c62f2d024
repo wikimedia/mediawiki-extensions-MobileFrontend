@@ -34,6 +34,24 @@
       "revId": "b7b2480a43b08160aa6ca3cbfdcc1d8c62f2d024",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_9af16296",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-11-06T15:07:17Z",
+      "side": 1,
+      "message": "Manual date manipulations are not trolling, they\u0027re a way to get a honorary mention at TheDailyWTF.com;)",
+      "parentUuid": "291c1151_7ac4a642",
+      "revId": "b7b2480a43b08160aa6ca3cbfdcc1d8c62f2d024",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
