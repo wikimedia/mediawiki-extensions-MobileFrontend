@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_8f0be18e",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2013-11-06T23:18:46Z",
+      "side": 1,
+      "message": "I\u0027m not much of a fan of implicit type conversion, but I\u0027m ok with it if you like it better",
+      "parentUuid": "291c1151_cfecf9ca",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_50442b1b",
         "filename": "javascripts/modules/mf-toggle.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-11-06T23:02:35Z",
       "side": 1,
       "message": "Also no need to wrap id in a string\nid: \u0027content_block_\u0027 + i would suffice\n\nAlso construct once and store in a variable so it\u0027s clearer it is also used below and these two elements are tied by it.",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_cf05d97a",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2013-11-06T23:18:46Z",
+      "side": 1,
+      "message": "Will do",
+      "parentUuid": "291c1151_50442b1b",
       "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_af025d71",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2013-11-06T23:18:46Z",
+      "side": 1,
+      "message": "I\u0027m not much of a fan of implicit type conversion, but I\u0027m ok with it if you like it better",
+      "parentUuid": "291c1151_7053e7e1",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_904ea337",
         "filename": "javascripts/modules/mf-toggle.js",
         "patchSetId": 3
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_4f43a9b2",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2013-11-06T23:18:46Z",
+      "side": 1,
+      "message": "Yes, aria is (should) make this unnecessary in theory, but I really want this to also work without these additions (with plain browsers). If you think this is bloat we may can agree on removing it, but I would rather leave it in (there are also sighted users with keyboard only navigation, but I don\u0027t know whether they often use mobile sites, I doubt it).\n\nAbout changing h2 to a, I wanted to keep the changes here as small as possible. That change would require changing the server output, which would make a lot of things more complicated (different cached versions, ...)",
+      "parentUuid": "291c1151_904ea337",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_afe97dbb",
         "filename": "javascripts/modules/mf-toggle.js",
         "patchSetId": 3
@@ -81,6 +153,24 @@
       "writtenOn": "2013-11-06T23:02:35Z",
       "side": 1,
       "message": "I\u0027m not sure what\u0027s going on here. I understand you are accounting for when you press enter on a link so that it doesn\u0027t toggle open the section but this makes me wonder a few thing\n1) Why the mouseup stopPropogation?\n2) Wouldn\u0027t it be better to make the heading a link so that we avoid this all together\n3) The comment should be a little clearer as I\u0027m not 100% sure I understand\n\nAlso we use ev rather than e [1]\n[1] https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions#Naming_conventions",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_ef261518",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2013-11-06T23:18:46Z",
+      "side": 1,
+      "message": "1) Because this is broken right now (at least on master). Go on any page with a link in a section heading (eg. any commons file) and click on the link. You will follow the link AND toggle the section, which clearly is not wanted.\n2) See above\n3) Ok, I guess I can improve that, yes\n\nwill s/e/ev/",
+      "parentUuid": "291c1151_afe97dbb",
       "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
