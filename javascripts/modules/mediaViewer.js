@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	M.assertMode( [ 'alpha' ] );
+	M.assertMode( [ 'alpha', 'beta' ] );
 
 	var Overlay = M.require( 'Overlay' ),
 		Api = M.require( 'api' ).Api,
@@ -21,7 +21,7 @@
 					action: 'query',
 					prop: 'imageinfo',
 					titles: title,
-					iiprop: 'url',
+					iiprop: ['url', 'extmetadata'],
 					// request an image two times bigger than the reported screen size
 					// for retina displays and zooming
 					iiurlwidth: $( window ).width() * 2,
@@ -47,7 +47,8 @@
 		closeOnBack: true,
 
 		defaults: {
-			detailsMsg: mw.msg( 'mobile-frontend-media-details' )
+			detailsMsg: mw.msg( 'mobile-frontend-media-details' ),
+			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' )
 		},
 
 		postRender: function( options ) {
@@ -62,6 +63,9 @@
 				self.$( '.container div' ).append( $img );
 				self._positionImage();
 				self.$( '.details a' ).attr( 'href', data.descriptionurl );
+				if ( data.extmetadata && data.extmetadata.LicenseShortName ) {
+					self.$( '.license a' ).text( data.extmetadata.LicenseShortName.value );
+				}
 
 				self.$el.on( M.tapEvent( 'click' ), function() {
 					self.$( '.details' ).toggleClass( 'visible' );

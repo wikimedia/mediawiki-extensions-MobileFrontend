@@ -331,6 +331,7 @@ $messages['en'] = array (
 
 	// media viewer
 	'mobile-frontend-media-details' => 'Details',
+	'mobile-frontend-media-license-link' => 'License information',
 
 	// AbuseFilter variable
 	'abusefilter-edit-builder-vars-user-mobile' => 'Whether or not a user is editing through the mobile interface',
@@ -914,6 +915,7 @@ See also:
 {{Identical|Reply}}',
 	'mobile-frontend-media-details' => 'Caption for a button leading to the details of a media file (e.g. an image) in a preview.
 {{Identical|Detail}}',
+	'mobile-frontend-media-license-link' => 'Link to license information in media viewer.',
 	'abusefilter-edit-builder-vars-user-mobile' => 'See {{msg-mw|Abusefilter-edit-builder-vars-user-name}} (from AbuseFilter extension), for example.',
 	'mobile-frontend-profile-title' => 'Title of the [[Special:UserProfile]] page.
 {{Identical|User profile}}',

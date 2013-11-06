@@ -420,12 +420,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'less/common/OverlayNew.less',
 			'less/modules/talk.less',
+			'less/modules/mediaViewer.less',
 		),
 		'scripts' => array(
 			'javascripts/common/OverlayNew.js',
 			'javascripts/common/LoadingOverlayNew.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/talk.js',
+			'javascripts/modules/mediaViewer.js',
 			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/lastEdited/lastEditedBeta.js',
@@ -433,6 +435,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'OverlayNew',
+			'modules/ImageOverlay',
 		),
 		'position' => 'bottom',
 		'messages' => array(
@@ -451,6 +454,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-with-user-months',
 			'mobile-frontend-last-modified-with-user-years',
 			'mobile-frontend-last-modified-with-user-just-now',
+
+			// mediaViewer.js
+			'mobile-frontend-media-details',
+			'mobile-frontend-media-license-link',
 		),
 	),
 
@@ -486,9 +493,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
-		'templates' => array(
-			'modules/ImageOverlay',
-		),
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta',
@@ -501,13 +505,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// for mf-table.js
 			'mobile-frontend-table',
-
-			// mediaViewer.js
-			'mobile-frontend-media-details',
 		),
 		'styles' => array(
 			'less/common/mainmenuAnimation.less',
-			'less/modules/mediaViewer.less',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
@@ -515,7 +515,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-translator.js',
 			'javascripts/modules/lazyload.js',
-			'javascripts/modules/mediaViewer.js',
 			'javascripts/modules/random/random.js',
 		),
 	),
