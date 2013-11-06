@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_9a75e231",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-06T14:44:42Z",
+      "side": 1,
+      "message": "[[$1]] may have to be [[:$1]], to ensure no image is displayed but only a link to an image page. For NS_CATEGORY members, the same applies with a different result.",
+      "revId": "6ef4d36b04ec90bae0b285e5df8b4c044a00f24a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
