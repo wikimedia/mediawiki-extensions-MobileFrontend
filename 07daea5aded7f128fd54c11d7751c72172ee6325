@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_6f1225b5",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-11-06T23:18:32Z",
+      "side": 1,
+      "message": "Instead of creating two fields in two classes, just set template\u0027s data here.",
+      "revId": "07daea5aded7f128fd54c11d7751c72172ee6325",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
