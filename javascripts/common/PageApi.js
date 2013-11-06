@@ -40,7 +40,7 @@
 		 * @return {jQuery.Deferred} with parameter page data that can be passed to a Page view
 		 */
 		getPage: function( title, endpoint, leadOnly ) {
-			var options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {}, page;
+			var options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {}, page, timestamp;
 
 			if ( !this.cache[title] ) {
 				page = this.cache[title] = $.Deferred();
@@ -49,13 +49,13 @@
 					page: title,
 					variant: mw.config.get( 'wgPreferredVariant' ),
 					redirect: 'yes',
-					prop: 'sections|text',
+					prop: 'id|sections|text|lastmodified|lastmodifiedby',
 					noheadings: 'yes',
 					noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 					sectionprop: 'level|line|anchor',
 					sections: leadOnly ? 0 : 'all'
 				}, options ).done( function( resp ) {
-					var sections;
+					var sections, lastModified, resolveObj;
 
 					if ( resp.error || !resp.mobileview.sections ) {
 						page.reject( resp );
@@ -64,22 +64,27 @@
 						page.reject( { error: { code: 'lqt' } } );
 					} else {
 						sections = transformSections( resp.mobileview.sections );
-						page.resolve( {
+						// Assume the timestamp is in the form TS_ISO_8601 and we don't care about old browsers
+						// change to seconds to be consistent with PHP
+						timestamp = new Date( resp.mobileview.lastmodified ).getTime() / 1000;
+						lastModified = resp.mobileview.lastmodifiedby;
+						resolveObj = {
 							title: title,
-							// FIXME [api] should return the page id - this is needed to tell if a page is new or not
-							id: -1,
+							id: resp.mobileview.id,
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
 							isMainPage: resp.mobileview.hasOwnProperty( 'mainpage' ) ? true : false,
 							historyUrl: mw.util.wikiGetlink( title, { action: 'history' } ),
-							// FIXME: [API] This is incorrect in alpha where lazy loading is possible. Should come from API
-							// Note: In stable/beta only time this happens is on an edit so this is accurate there.
-							lastModifiedUserName: mw.config.get( 'wgUserName' ),
-							// FIXME: [API] This should come from the API
-							lastModifiedUserGender: mw.config.get( 'wgMFUserGender' ),
-							// FIXME [API] Only valid on a recently edited page (not true in alpha)
-							lastModifiedTimestamp: ( "" + new Date().getTime() ).substr( 0,10 ) // Default to current timestamp
-						} );
+							lastModifiedTimestamp: timestamp
+						};
+						// Add non-anonymous user information
+						if ( lastModified ) {
+							$.extend( resolveObj, {
+								lastModifiedUserName: lastModified.name,
+								lastModifiedUserGender: lastModified.gender
+							} );
+						}
+						page.resolve( resolveObj );
 					}
 				} ).fail( $.proxy( page, 'reject' ) );
 			}
