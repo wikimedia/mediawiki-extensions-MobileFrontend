@@ -411,7 +411,7 @@ $wgMFNoMobilePages = array();
  * FIXME: This should be set to true by default (see bug 41731)
  * @var bool
  */
-$wgMFAjaxUploadProgressSupport = false;
+$wgMFAjaxUploadProgressSupport = true;
 
 /**
  * Minimum available screen width at which a device can be considered a tablet/desktop
