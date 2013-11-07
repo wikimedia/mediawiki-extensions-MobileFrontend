@@ -27,7 +27,7 @@ When /^I click on the Terms of Use link$/ do
 end
 
 Then /^I go to the Terms of Use page$/ do
-  @browser.url.should match Regexp.escape('Terms_of_use?useformat=mobile')
+  @browser.url.should match Regexp.escape('Terms_of_use')
 end
 
 When /^I click on the Privacy link$/ do
