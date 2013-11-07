@@ -129,11 +129,6 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 		return $this->messages;
 	}
 
-	public function supportsURLLoading() {
-		// When templates or parsed messages are present in the module force load.php urls
-		return $this->hasTemplates || $this->hasParsedMessages ? false : true;
-	}
-
 	/**
 	 * Gets all scripts for a given context concatenated together including processed messages
 	 *
@@ -143,6 +138,33 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	public function getScript( ResourceLoaderContext $context ) {
 		$script = parent::getScript( $context );
 		return $this->addParsedMessages() . $this->getTemplateScript() . $script;
+	}
+
+	/**
+	 * @param ResourceLoaderContext $context
+	 * @return array
+	 */
+	public function getScriptURLsForDebug( ResourceLoaderContext $context ) {
+		if ( $this->hasParsedMessages || $this->hasTemplates ) {
+			$urls = array(
+				ResourceLoader::makeLoaderURL(
+					array( $this->getName() ),
+					$context->getLanguage(),
+					$context->getSkin(),
+					$context->getUser(),
+					$context->getVersion(),
+					true, // debug
+					// FIXME: Make this templates and update makeModuleResponse so that it only outputs template code
+					// When this is done you can merge with parent array and retain file names
+					'scripts', // only
+					$context->getRequest()->getBool( 'printable' ),
+					$context->getRequest()->getBool( 'handheld' )
+				),
+			);
+		} else {
+			$urls = parent::getScriptURLsForDebug( $context );
+		}
+		return $urls;
 	}
 
 	/**
