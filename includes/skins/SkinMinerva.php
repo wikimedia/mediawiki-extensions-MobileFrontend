@@ -9,6 +9,53 @@ class SkinMinerva extends SkinTemplate {
 	public $skinname = 'minerva';
 	public $template = 'MinervaTemplate';
 	public $useHeadElement = true;
+	/* @var string  describing the current stability of the skin, can be overriden by derivative experimental skins */
+	protected $mode = 'stable';
+	/** @var array of classes that should be present on the body tag */
+	private $pageClassNames = array();
+
+	/**
+	 * @param string $className: valid class name
+	 */
+	protected function addPageClass( $className ) {
+		$this->pageClassNames[ $className ] = true;
+	}
+
+	/**
+	 * Overrides Skin::doEditSectionLink
+	 */
+	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
+		$lang = wfGetLangObj( $lang );
+		$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
+		return Html::element( 'a', array(
+			'href' => '#editor/' . $section,
+			'data-section' => $section,
+			'class' => 'edit-page'
+		), $message );
+	}
+
+	/**
+	 * Takes a title and returns classes to apply to the body tag
+	 * @param $title Title
+	 * @return String
+	 */
+	public function getPageClasses( $title ) {
+		if ( $title->isMainPage() ) {
+			$className = 'page-Main_Page ';
+		} else if ( $title->isSpecialPage() ) {
+			$className = 'mw-mf-special ';
+		} else {
+			$className = '';
+		}
+		return $className . implode( ' ', array_keys( $this->pageClassNames ) );
+	}
+
+	/**
+	 * @return string: The current mode of the skin [stable|beta|alpha] that is running
+	 */
+	protected function getMode() {
+		return $this->mode;
+	}
 
 	/**
 	 * @var MobileContext
@@ -17,6 +64,10 @@ class SkinMinerva extends SkinTemplate {
 
 	public function __construct() {
 		$this->mobileContext = MobileContext::singleton();
+		$this->addPageClass( $this->getMode() );
+		if ( !$this->getUser()->isAnon() ) {
+			$this->addPageClass( 'is-authenticated' );
+		}
 	}
 
 	/**
@@ -238,6 +289,10 @@ class SkinMinerva extends SkinTemplate {
 		return $link;
 	}
 
+	protected function getSearchPlaceHolderText() {
+		return wfMessage( 'mobile-frontend-placeholder' )->text();
+	}
+
 	public function prepareData( BaseTemplate $tpl ) {
 		global $wgMFEnableSiteNotice;
 		$title = $this->getTitle();
@@ -280,7 +335,7 @@ class SkinMinerva extends SkinTemplate {
 			'autocomplete' => 'off',
 			// The placeholder gets fed to HTML::element later which escapes all
 			// attribute values, so no need to escape the string here.
-			'placeholder' =>  wfMessage( 'mobile-frontend-placeholder' )->text(),
+			'placeholder' =>  $this->getSearchPlaceHolderText(),
 		);
 		$tpl->set( 'searchBox', $searchBox );
 
@@ -403,6 +458,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
 			'wgIsPageEditable' => $title->quickUserCan( 'edit', $user ) || $userCanCreatePage,
 			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
+			'wgMFMode' => $this->getMode(),
 		);
 		if ( !$user->isAnon() ) {
 			$vars['wgWatchedPageCache'] = array(
@@ -418,6 +474,9 @@ class SkinMinerva extends SkinTemplate {
 
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
+		// flush unnecessary modules
+		$modules['content'] = array();
+		$modules['legacy'] = array();
 
 		$modules['mobile'] = array(
 			'mobile.head',
