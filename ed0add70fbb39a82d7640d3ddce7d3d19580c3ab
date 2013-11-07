@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_52018eb0",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-07T01:36:56Z",
+      "side": 1,
+      "message": "I do not like this method name, it is very confusing - especially since you do $this-\u003euserInfo-\u003egetLastEdit() which does something totally differently! A clearer, more descriptive method name would be better.",
+      "revId": "ed0add70fbb39a82d7640d3ddce7d3d19580c3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
