@@ -16,6 +16,24 @@
       "revId": "ed0add70fbb39a82d7640d3ddce7d3d19580c3ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_321fb205",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T01:46:52Z",
+      "side": 1,
+      "message": "The same also applies to getLastUpload and getLastThanks\nI\u0027ve done a follow up to clean this up https://gerrit.wikimedia.org/r/94085",
+      "parentUuid": "291c1151_52018eb0",
+      "revId": "ed0add70fbb39a82d7640d3ddce7d3d19580c3ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
