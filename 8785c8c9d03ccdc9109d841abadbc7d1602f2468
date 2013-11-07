@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_cf40795c",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-07T00:17:50Z",
+      "side": 1,
+      "message": "Please use a more descriptive and less ambiguous var name + description.",
+      "revId": "8785c8c9d03ccdc9109d841abadbc7d1602f2468",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
