@@ -74,6 +74,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	// EventLogging
+	'mobile.infoboxTracking' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/loggingSchemas/MobileWebInfobox.js',
+		),
+	),
+
 	'mobile.loggingSchemas' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
