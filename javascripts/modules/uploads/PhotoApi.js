@@ -124,6 +124,7 @@
 
 			function doUpload( token, caToken ) {
 				var formData = new FormData(),
+					uploadUrl = apiUrl + '?useformat=mobile&r=' + Math.random(),
 					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 ),
 					request;
 
@@ -133,7 +134,7 @@
 				formData.append( 'format', 'json' );
 				// add origin only when doing CORS
 				if ( endpoint ) {
-					formData.append( 'origin', M.getOrigin() );
+					uploadUrl += '&origin=' + M.getOrigin();
 					if ( caToken ) {
 						formData.append( 'centralauthtoken', caToken );
 					}
@@ -153,7 +154,7 @@
 				request = self.post( formData, {
 					// iOS seems to ignore the cache parameter so sending r parameter
 					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
-					url: apiUrl + '?useformat=mobile&r=' + Math.random(),
+					url: uploadUrl,
 					xhrFields: { 'withCredentials': true },
 					cache: false,
 					contentType: false,
