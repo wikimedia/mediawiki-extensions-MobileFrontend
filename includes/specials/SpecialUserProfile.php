@@ -1,6 +1,8 @@
 <?php
 
 class SpecialUserProfile extends MobileSpecialPage {
+	const IMAGE_WIDTH = 320;
+
 	protected $mode = 'beta';
 	protected $disableSearchAndFooter = false;
 
@@ -46,7 +48,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				// uset MediaTransformOutput::getUrl, unfortunately MediaTransformOutput::toHtml
 				// returns <img> tag with fixed height which causes the image to be deformed when
 				// used with max-width
-				'src' => $file->transform( array( 'width' => 320 ) )->getUrl(),
+				'src' => $file->transform( array( 'width' => self::IMAGE_WIDTH ) )->getUrl(),
 				// FIXME: Add more meaningful alt text
 				'alt' => $title->getText(),
 			) ) .
@@ -100,12 +102,28 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$rev = $this->userInfo->getLastEdit();
 		if ( $rev ) {
 			$daysAgo = $this->getDaysAgo( new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) ) );
+			$imageHtml = '';
+			if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
+				$title = $rev->getTitle();
+				$file = PageImages::getPageImage( $title );
+				if ( $file ) {
+					$thumb = $file->transform( array( 'width' => self::IMAGE_WIDTH ) );
+					if ( $thumb && $thumb->getUrl() ) {
+						$imageHtml = Html::element( 'img',
+							array( 'src' => wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) )
+						);
+					}
+				}
+			}
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
-				. Html::openElement( 'div', array( 'class' => 'container caption' ) )
+				. Html::openElement( 'div', array( 'class' => 'container' ) )
+				. $imageHtml
+				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-edit',
 					$rev->getTitle(),
 					$daysAgo
 				)->parse()
+				. '</div>'
 				. '</div>'
 				. '</div>';
 		} else {
