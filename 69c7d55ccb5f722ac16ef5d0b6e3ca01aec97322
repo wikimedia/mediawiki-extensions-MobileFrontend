@@ -16,6 +16,24 @@
       "revId": "69c7d55ccb5f722ac16ef5d0b6e3ca01aec97322",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_9529308d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2013-11-07T07:00:05Z",
+      "side": 1,
+      "message": "Nope, because the code that checks these checks if it is *set*. So range( 1, ... ) will return true for isset($array[0]), and hence not work. range( 1, ... ) was what I first had, and then debugged to figure that that won\u0027t work.",
+      "parentUuid": "291c1151_32f7b28a",
+      "revId": "69c7d55ccb5f722ac16ef5d0b6e3ca01aec97322",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
