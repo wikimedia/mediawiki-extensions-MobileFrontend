@@ -576,6 +576,7 @@ class MobileFrontendHooks {
 	public static function onUnitTestsList( &$files ) {
 		$dir = dirname( dirname( __FILE__ ) ) . '/tests';
 
+		$files[] = "$dir/ApiMobileViewTest.php";
 		$files[] = "$dir/ApiParseExtenderTest.php";
 		$files[] = "$dir/DeviceDetectionTest.php";
 		$files[] = "$dir/ExtractFormatterTest.php";

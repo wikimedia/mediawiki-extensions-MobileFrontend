@@ -83,14 +83,15 @@ class ApiMobileView extends ApiBase {
 		}
 		$result = array();
 		$missingSections = array();
-		$requestedSections = isset( $params['sections'] )
-			? $this->parseSections( $params['sections'], $data )
-			: array();
 		if ( $this->mainPage ) {
 			$requestedSections = array( 0 );
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'mainpage' => '' )
 			);
+		} elseif ( isset( $params['sections'] ) ) {
+			$requestedSections = self::parseSections( $params['sections'], $data, $missingSections );
+		} else {
+			$requestedSections = array();
 		}
 		if ( isset( $prop['sections'] ) ) {
 			for ( $i = 0; $i <= count( $data['sections'] ); $i++ ) {
@@ -108,7 +109,7 @@ class ApiMobileView extends ApiBase {
 				}
 				$result[] = $section;
 			}
-			$missingSections = $requestedSections;
+			$missingSections = array_keys( $requestedSections );
 		} else {
 			foreach ( array_keys( $requestedSections ) as $index ) {
 				$section = array( 'id' => $index );
@@ -173,16 +174,50 @@ class ApiMobileView extends ApiBase {
 		return trim( $html );
 	}
 
-	private function parseSections( $str, $data ) {
-		if ( trim( $str ) == 'all' ) {
-			return range( 0, count( $data['sections'] ) );
+	public static function parseSections( $str, $data, &$missingSections ) {
+		$str = trim( $str );
+		$sectionCount = count( $data['sections'] );
+		if ( $str === 'all' ) {
+			return range( 0, $sectionCount );
 		}
-		$sections = array_flip( array_map( 'trim', explode( '|', $str ) ) );
-		if ( isset( $sections['references'] ) ) {
-			unset( $sections['references'] );
-			$sections += $data['refsections'];
+		$sections = array_map( 'trim', explode( '|', $str ) );
+		$ret = array();
+		foreach ( $sections as $sec ) {
+			if ( $sec === '' ) {
+				continue;
+			}
+			if ( $sec === 'references' ) {
+				$ret = array_merge( $ret, array_keys( $data['refsections'] ) );
+				continue;
+			}
+			$val = intval( $sec );
+			if ( strval( $val ) === $sec ) {
+				if ( $val >= 0 && $val <= $sectionCount ) {
+					$ret[] = $val;
+					continue;
+				}
+			} else {
+				$parts = explode( '-', $sec );
+				if ( count( $parts ) === 2 ) {
+					$from = intval( $parts[0] );
+					if ( strval( $from ) === $parts[0] ) {
+						if ( $parts[1] === '' ) {
+							$ret = array_merge( $ret, range( $from, $sectionCount ) );
+							continue;
+						}
+						$to = intval( $parts[1] );
+						if ( strval( $to ) === $parts[1] ) {
+							$ret = array_merge( $ret, range( $from, $to ) );
+							continue;
+						}
+					}
+				}
+			}
+			$missingSections[] = $sec;
 		}
-		return $sections;
+		$ret = array_unique( $ret );
+		sort( $ret );
+		return array_flip( $ret );
 	}
 
 	private function getData( Title $title, $noImages ) {
@@ -380,7 +415,9 @@ class ApiMobileView extends ApiBase {
 			'id' => 'Id of the page',
 			'page' => 'Title of page to process',
 			'redirect' => 'Whether redirects should be followed',
-			'sections' => "Pipe-separated list of section numbers for which to return text or `all' to return for all. "
+			'sections' => "Pipe-separated list of section numbers for which to return text. "
+				. "`all' can be used to return for all. Ranges in format '1-4' mean get sections 1,2,3,4. "
+				. "Ranges without second number, e.g. '1-' means get all until the end. "
 				. "`references' can be used to specify that all sections containing references should be returned.",
 			'prop' => array(
 				'Which information to get',
@@ -408,6 +445,7 @@ class ApiMobileView extends ApiBase {
 		return array(
 			'api.php?action=mobileview&page=Doom_metal&sections=0',
 			'api.php?action=mobileview&page=Candlemass&sections=0|references',
+			'api.php?action=mobileview&page=Candlemass&sections=1-|references',
 		);
 	}
 
