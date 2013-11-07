@@ -37,10 +37,9 @@
 				return result;
 			}
 		} ),
-		piApi = new PageImageApi(),
-		overlay = M.require( 'search' ).overlay;
+		piApi = new PageImageApi();
 
-	function renderPageImages( results ) {
+	function renderPageImages( overlay, results ) {
 		var titles = $.map( results, function( r ) { return r.title; } );
 
 		piApi.getPageImages( titles ).done( function( pages ) {
@@ -61,9 +60,9 @@
 
 	// Add event to retrieve page images when images not disabled
 	if ( !mw.config.get( 'wgImagesDisabled' ) ) {
-		overlay.on( 'write-results', function( results ) {
+		M.on( 'search-results', function( overlay, results ) {
 			window.setTimeout( function() {
-				renderPageImages( results );
+				renderPageImages( overlay, results );
 			}, delay );
 		} );
 	}

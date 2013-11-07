@@ -55,6 +55,7 @@ class SkinMobileBeta extends SkinMobile {
 		$modules = parent::getDefaultModules();
 		$modules['beta'] = array( 'mobile.beta' );
 		$modules['beta'][] = 'mobile.geonotahack';
+		$modules['search'] = array( 'mobile.search.beta' );
 		// turn off stable only modules
 		$modules['stableonly'] = array();
 		return $modules;

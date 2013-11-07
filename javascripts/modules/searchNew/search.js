@@ -84,7 +84,7 @@ SearchOverlay = Overlay.extend( {
 				return {
 					heading: highlightSearchTerm( item, term ),
 					title: item,
-					url: mw.util.getUrl( item )
+					url: mw.util.wikiGetlink( item )
 				};
 			} );
 
@@ -122,10 +122,5 @@ function init() {
 	} );
 }
 init();
-
-M.define( 'search', {
-	SearchOverlay: SearchOverlay,
-	highlightSearchTerm: highlightSearchTerm
-} );
 
 }( mw.mobileFrontend, jQuery ));

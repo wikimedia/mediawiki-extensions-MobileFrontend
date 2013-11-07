@@ -28,6 +28,7 @@
 				M.pageApi.getPage( options.title, options.endpoint, true ).done( function( page ) {
 					options.page = new Page( page );
 					// FIXME [API]: This additional ajax request should be unnecessary.
+					// FIXME: and if necessary, reuse PageImageApi that search uses
 					api.get( {
 							action : 'query',
 							prop: 'pageimages',

@@ -3,7 +3,6 @@
 
 var api = M.require( 'api' ), w = ( function() {
 	var popup = M.require( 'notifications' ),
-		searchOverlay = M.require( 'search' ).overlay,
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			content: mw.msg( 'mobile-frontend-watchlist-cta' ),
@@ -217,8 +216,8 @@ var api = M.require( 'api' ), w = ( function() {
 	}
 
 	function upgradeUI() {
-		searchOverlay.on( 'write-results', function() {
-			initWatchListIconList( searchOverlay.$( 'ul' ) );
+		M.on( 'search-results', function( overlay ) {
+			initWatchListIconList( overlay.$( 'ul' ) );
 		} );
 	}
 

@@ -437,7 +437,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
-			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/lastEdited/lastEditedBeta.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
@@ -467,6 +466,27 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// mediaViewer.js
 			'mobile-frontend-media-details',
 			'mobile-frontend-media-license-link',
+		),
+	),
+
+	'mobile.search.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.beta'
+		),
+		'styles' => array(
+			'less/modules/search.less',
+		),
+		'scripts' => array(
+			'javascripts/modules/searchNew/search.js',
+			'javascripts/modules/searchNew/pageImages.js',
+		),
+		'templates' => array(
+			'overlays/search/search',
+		),
+		'messages' => array(
+			// for search.js
+			'mobile-frontend-search-help',
+			'mobile-frontend-search-noresults',
 		),
 	),
 
@@ -539,7 +559,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'less/common/common-js.less',
 			'less/modules/languages.less',
-			'less/modules/search.less',
 			'less/modules/issues.less',
 			'less/modules/watchstar.less',
 			'less/modules/tutorials.less',
@@ -585,9 +604,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// LanguageOverlay.js
 			'overlays/languages',
 			'overlays/cleanup',
-			// search-2.js
+			// search.js and Nearby.js
 			'articleList',
-			'overlays/search/search',
 			// page.js
 			'page',
 			'languageSection',
@@ -669,7 +687,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
-			'javascripts/modules/search/search.js',
 			'javascripts/modules/mf-watchstar.js',
 			'javascripts/modules/mf-references.js',
 			'javascripts/common/ContentOverlay.js',
@@ -709,13 +726,31 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-watchlist-removed',
 			'mobile-frontend-watchlist-cta',
 
-			// for search.js
-			'mobile-frontend-search-help',
-			'mobile-frontend-search-noresults',
-
 			// newbieEditor.js
 			'mobile-frontend-editor-tutorial-summary',
 			'mobile-frontend-editor-tutorial-confirm',
+		),
+	),
+
+	// FIXME: remove when new search overlay in stable
+	'mobile.search.stable' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			'mobile.templates',
+		),
+		'scripts' => array(
+			'javascripts/modules/search/search.js',
+		),
+		'styles' => array(
+			'less/modules/search.less',
+		),
+		'templates' => array(
+			'overlays/search/search',
+		),
+		'messages' => array(
+			// for search.js
+			'mobile-frontend-search-help',
+			'mobile-frontend-search-noresults',
 		),
 	),
 

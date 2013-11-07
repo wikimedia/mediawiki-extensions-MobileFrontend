@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 
-	var searchOverlay = M.require( 'search' ).overlay,
-		history = M.history,
+	var history = M.history,
 		// FIXME: use fuzzy link hijacking in the main namespace - core should be updated to make links more explicit
 		useFuzzyLinkHijacking = M.inNamespace( '' );
 
@@ -23,11 +22,11 @@
 			history.hijackLinks( M.getLeadSection(), useFuzzyLinkHijacking );
 		} );
 
-		searchOverlay.on( 'write-results', function() {
-			var $results = searchOverlay.$( 'ul' );
+		M.on( 'search-results', function( overlay ) {
+			var $results = overlay.$( 'ul' );
 			history.hijackLinks( $results );
 			$results.find( 'a' ).on( 'click', function() {
-				searchOverlay.hide();
+				overlay.hide();
 			} );
 		} );
 	}
