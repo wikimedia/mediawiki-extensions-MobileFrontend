@@ -123,7 +123,7 @@ class SkinMinerva extends SkinTemplate {
 			),
 			'random' => array(
 				'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl(),
+				'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl( array( 'campaign' => 'random' ) ),
 				'class' => 'icon-random',
 				'id' => 'randomButton',
 			),
