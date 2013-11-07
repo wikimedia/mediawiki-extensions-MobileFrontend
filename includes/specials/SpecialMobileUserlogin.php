@@ -3,6 +3,7 @@
 class SpecialMobileUserlogin extends LoginForm {
 
 	function execute( $par ) {
+		$this->getOutput()->setProperty( 'disableSearchAndFooter', true );
 		if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
 			$key = 'mobile-frontend-sign-up-heading';
 		} else {

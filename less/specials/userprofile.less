@@ -3,8 +3,23 @@
 .profile {
 	text-align: center;
 	color: @grayMid;
-	// FIXME: reconsider top margin for all pages?
-	margin-top: 1.5em;
+
+	h1 {
+		color: @grayDark;
+		text-transform: uppercase;
+		border-bottom: dotted 1px @grayLight;
+		margin-bottom: 1em;
+	}
+
+	.talk {
+		color: @blueBase;
+		background-position: left;
+		display: inline-block;
+		padding: 14px 0 14px 30px;
+		border-top: solid 2px @blueBase;
+		border-bottom: solid 2px @blueBase;
+		.background-size( auto, 24px );
+	}
 
 	a {
 		color: @grayDark;
@@ -36,6 +51,6 @@
 
 	.footer {
 		clear: both;
-		padding: 2em 0;
+		padding: 0 0 2em;
 	}
 }

@@ -243,18 +243,22 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$out = $this->getOutput();
+		$disableSearchAndFooter = $out->getProperty( 'disableSearchAndFooter' );
+		$tpl->set( 'disableSearchAndFooter', $disableSearchAndFooter );
 		if ( $title->isMainPage() ) {
 			$out->setPageTitle( $user->isLoggedIn() ?
 				wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() : '' );
 		}
 		$pageHeading = $out->getPageTitle();
 
-		$htmlHeader = $out->getProperty( 'mobile.htmlHeader' );
 		if ( $title->isSpecialPage() ) {
-			if ( !$htmlHeader ) {
-				$htmlHeader = Html::element( 'h1', array(), $pageHeading );
+			if ( $disableSearchAndFooter ) {
+				$htmlHeader = $out->getProperty( 'mobile.htmlHeader' );
+				if ( !$htmlHeader ) {
+					$htmlHeader = Html::element( 'h1', array(), $pageHeading );
+				}
+				$tpl->set( 'specialPageHeader', $htmlHeader );
 			}
-			$tpl->set( 'specialPageHeader', $htmlHeader );
 		} else {
 			$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading );
 			$tpl->set( 'prebodytext', $preBodyText );

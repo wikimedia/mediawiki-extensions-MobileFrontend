@@ -16,6 +16,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	public function execute( $par = '' ) {
+		parent::execute( $par );
 		$context = MobileContext::singleton();
 
 		wfIncrStats( 'mobile.options.views' );

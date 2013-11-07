@@ -10,9 +10,10 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	public function execute() {
-		$title = $this->getSkin()->getTitle();
+		$skin = $this->getSkin();
+		$title = $skin->getTitle();
 		$this->isSpecialPage = $title->isSpecialPage();
-		$this->getSkin()->prepareData( $this );
+		$skin->prepareData( $this );
 		wfRunHooks( 'MinervaPreRender', array( $this ) );
 		$this->render( $this->data );
 	}
@@ -81,7 +82,7 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	protected function renderFooter( $data ) {
-		if ( !$this->isSpecialPage ) {
+		if ( !$data['disableSearchAndFooter'] ) {
 		?>
 		<div id="footer">
 			<?php
@@ -213,7 +214,7 @@ class MinervaTemplate extends BaseTemplate {
 				<div class="header">
 					<?php
 						$this->html( 'menuButton' );
-						if ( $this->isSpecialPage ) {
+						if ( $data['disableSearchAndFooter'] ) {
 							echo $data['specialPageHeader'];
 						} else {
 							?>

@@ -2,6 +2,7 @@
 
 class SpecialUserProfile extends MobileSpecialPage {
 	protected $mode = 'beta';
+	protected $disableSearchAndFooter = false;
 
 	/**
 	 * @var User
@@ -84,23 +85,13 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return $html;
 	}
 
-	protected function setUserProfileUIElements() {
+	protected function getTalkLink() {
 		// replace secondary icon
 		$attrs = array(
 			'class' => 'talk',
-			'id' => 'secondary-button',
 			'href' => $this->targetUser->getTalkPage()->getLocalUrl(),
 		);
-		$secondaryButton = Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk' ) );
-
-		// define heading
-		$heading = Html::element( 'h1', array(), $this->targetUser->getName() );
-
-		// set values
-		/** @var SkinMobile $skin */
-		$skin = $this->getSkin();
-		$skin->setTemplateVariable( 'secondaryButton', $secondaryButton );
-		$skin->setTemplateVariable( 'specialPageHeader', $heading );
+		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk' ) );
 	}
 
 	// FIXME: Change this into 404 error
@@ -174,10 +165,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 			if ( $this->targetUser->getId() ) {
 				// prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
-				$this->setUserProfileUIElements();
 				$activityHtml = $this->getLastUpload() . $this->getLastThanks();
 				$html = Html::openElement( 'div', array( 'class' => 'profile' ) )
-					. $this->getUserSummary();
+					. Html::element( 'h1', array(), $this->targetUser->getName() )
+					. $this->getUserSummary()
+					. $this->getTalkLink();
 				if ( $activityHtml ) {
 					$html .= Html::openElement( 'h2' )
 						. $this->msg( 'mobile-frontend-profile-activity-heading' )
