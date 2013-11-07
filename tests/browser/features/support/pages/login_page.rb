@@ -19,8 +19,8 @@ class LoginPage
     @browser.div(id: 'mw-content-text').p.b
   end
   def login_with(username, password)
-    self.username = username
-    self.password = password
+    self.username_element.when_present.send_keys(username)
+    self.password_element.when_present.send_keys(password)
     login
   end
 end
