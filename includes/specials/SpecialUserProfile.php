@@ -24,11 +24,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 	}
 
 	/**
-	 * Returns HTML to show the last upload or a message where there is no last upload
+	 * Returns HTML to show the last upload or an empty string when there has been no last upload
 	 *
 	 * @return String HTML string representing the last upload by the user
 	 */
-	protected function getLastUpload() {
+	protected function getLastUploadHtml() {
 		wfProfileIn( __METHOD__ );
 
 		$file = $this->userInfo->getLastUpload();
@@ -64,7 +64,12 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return '';
 	}
 
-	protected function getLastThanks() {
+	/**
+	 * Returns HTML to show the last thanking or an empty string if the user has never been thanked
+	 *
+	 * @return String HTML string representing the last thank by the user
+	 */
+	protected function getLastThanksHtml() {
 		wfProfileIn( __METHOD__ );
 		$html = '';
 		$thank = $this->userInfo->getLastThanking();
@@ -85,7 +90,12 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return $html;
 	}
 
-	protected function getLastEdit() {
+	/**
+	 * Returns HTML to show the last edit or an empty string when the user has not edited
+	 *
+	 * @return String HTML string representing the last edit by the user
+	 */
+	protected function getLastEditHtml() {
 		wfProfileIn( __METHOD__ );
 		$rev = $this->userInfo->getLastEdit();
 		if ( $rev ) {
@@ -186,8 +196,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 			if ( $this->targetUser->getId() ) {
 				// prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
-				$activityHtml = $this->getLastUpload() . $this->getLastThanks()
-					. $this->getLastEdit();
+				$activityHtml = $this->getLastUploadHtml() . $this->getLastThanksHtml()
+					. $this->getLastEditHtml();
 				$html = Html::openElement( 'div', array( 'class' => 'profile' ) )
 					. Html::element( 'h1', array(), $this->targetUser->getName() )
 					. $this->getUserSummary()
