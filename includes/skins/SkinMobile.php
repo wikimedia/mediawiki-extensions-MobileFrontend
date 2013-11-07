@@ -172,7 +172,6 @@ class SkinMobile extends SkinMinerva {
 		$tpl->set( 'wgScript', wfScript() );
 
 		$this->initPage( $this->getOutput() );
-		$tpl->set( 'searchField', $this->getRequest()->getText( 'search', '' ) );
 		$this->loggedin = $this->getUser()->isLoggedIn();
 		$content_navigation = $this->buildContentNavigationUrls();
 		$tpl->setRef( 'content_navigation', $content_navigation );
