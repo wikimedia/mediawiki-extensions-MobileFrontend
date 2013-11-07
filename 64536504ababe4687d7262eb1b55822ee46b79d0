@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_d51488f5",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-11-07T09:50:41Z",
+      "side": 1,
+      "message": "trim it once, not 3 times :)",
+      "revId": "64536504ababe4687d7262eb1b55822ee46b79d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_9533f0a9",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-11-07T09:50:41Z",
+      "side": 1,
+      "message": "range() is inclusive, does data[\u0027sections\u0027] include header section? If yes, there might be a bug here.",
+      "revId": "64536504ababe4687d7262eb1b55822ee46b79d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_7530349f",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-11-07T09:50:41Z",
+      "side": 1,
+      "message": "What would happen if you have range( 1, ... ), and the count is 0 ? regardless, I think it would be better to do this mathematically rather than via creating an array and unsetting its elements.",
+      "revId": "64536504ababe4687d7262eb1b55822ee46b79d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
