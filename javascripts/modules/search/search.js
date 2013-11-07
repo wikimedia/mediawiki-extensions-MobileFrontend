@@ -84,7 +84,7 @@ SearchOverlay = Overlay.extend( {
 				return {
 					heading: highlightSearchTerm( item, term ),
 					title: item,
-					url: mw.util.wikiGetlink( item )
+					url: mw.util.getUrl( item )
 				};
 			} );
 

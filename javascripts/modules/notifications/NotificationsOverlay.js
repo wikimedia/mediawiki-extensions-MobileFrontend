@@ -11,7 +11,7 @@
 			},
 			defaults: {
 				heading: mw.msg( 'notifications' ),
-				archiveLink: mw.util.wikiGetlink( 'Special:Notifications' ),
+				archiveLink: mw.util.getUrl( 'Special:Notifications' ),
 				archiveLinkMsg: mw.msg( 'echo-overlay-link' )
 			},
 			onError: function() {
