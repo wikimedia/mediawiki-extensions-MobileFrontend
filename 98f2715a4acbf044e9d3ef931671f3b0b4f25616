@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_04e6f018",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "ergg. Use a css class kaldari! This will not stay in sync :P",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_44f0e8c8",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "Merge this and the line below also limit the search space so there is no chance it can run anywhere else.\n$( \u0027#user-description-form\u0027 ).find( \u0027.user-description,.edit-button\u0027 ).hide();",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e4b714f2",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "I suspect Juliusz might want to rewrite this as a view. I\u0027m personally fine with it being like this in beta though for the time being since we are not 100% sure this is what we want.",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_04cfd080",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "limit the scope of this selector and the one below it..",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_84bae0dc",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "you can just do $( initialize ) here. Means the same thing.",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_44a2a8ac",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "We should be able to reuse the edit icon css here? Seems like reinventing the wheel.",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_048190fc",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "just use form no need for an id here",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_c4869816",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "Just use textarea - no need for a class here.",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_848d802d",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-07T22:24:06Z",
+      "side": 1,
+      "message": "$( \u0027.secondary-statement\u0027 ).length \u003d\u003d\u003d 0\nremove these rules your rebase belongs are belong to us",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
