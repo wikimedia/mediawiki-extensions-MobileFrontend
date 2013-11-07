@@ -14,6 +14,62 @@ class SkinMinerva extends SkinTemplate {
 	/** @var array of classes that should be present on the body tag */
 	private $pageClassNames = array();
 
+	protected function prepareQuickTemplate( OutputPage $out = null ) {
+		global $wgAppleTouchIcon;
+		wfProfileIn( __METHOD__ );
+		$tpl = parent::prepareQuickTemplate( $out );
+		// add head items
+		if ( $wgAppleTouchIcon !== false ) {
+			$out->addHeadItem( 'touchicon',
+				Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $wgAppleTouchIcon ) )
+			);
+		}
+		$out->addHeadItem( 'viewport',
+			Html::element( 'meta', array( 'name' => 'viewport', 'content' => 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=1.6' ) )
+		);
+		// hide chrome on bookmarked sites
+		$out->addHeadItem( 'apple-mobile-web-app-capable',
+			Html::element( 'meta', array( 'name' => 'apple-mobile-web-app-capable', 'content' => 'yes' ) )
+		);
+		$out->addHeadItem( 'loadingscript', Html::inlineScript(
+			"document.documentElement.className += ' page-loading';"
+		) );
+
+		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
+
+		$this->preparePageContent( $tpl );
+		$this->prepareHeaderAndFooter( $tpl );
+		$this->prepareSearch( $tpl );
+		$this->prepareMenuButton( $tpl );
+		$this->prepareBanners( $tpl );
+		$this->prepareSiteLinks( $tpl );
+		$this->prepareWarnings( $tpl );
+		$this->preparePageActions( $tpl );
+		$this->prepareUserButton( $tpl );
+		$this->prepareDiscoveryTools( $tpl );
+		$this->preparePersonalTools( $tpl );
+		wfProfileOut( __METHOD__ );
+		return $tpl;
+	}
+
+	/**
+	 * Prepares the header and the content of a page
+	 * Stores in QuickTemplate prebodytext, postbodytext keys
+	 * @param QuickTemplate
+	 */
+	protected function preparePageContent( QuickTemplate $tpl ) {
+		$title = $this->getTitle();
+
+		// If it's a talk page, add a link to the main namespace page
+		if ( $title->isTalkPage() ) {
+			$tpl->set( 'subject-page', Linker::link(
+				$title->getSubjectPage(),
+				wfMessage( 'mobile-frontend-talk-back-to-page', $title->getText() ),
+				array( 'class' => 'return-link' )
+			) );
+		}
+	}
+
 	/**
 	 * @param string $className: valid class name
 	 */
@@ -293,8 +349,7 @@ class SkinMinerva extends SkinTemplate {
 		return wfMessage( 'mobile-frontend-placeholder' )->text();
 	}
 
-	public function prepareData( BaseTemplate $tpl ) {
-		global $wgMFEnableSiteNotice;
+	protected function prepareHeaderAndFooter( BaseTemplate $tpl ) {
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$out = $this->getOutput();
@@ -328,7 +383,9 @@ class SkinMinerva extends SkinTemplate {
 		if ( !isset( $tpl->data['postbodytext'] ) ) {
 			$tpl->set( 'postbodytext', '' ); // not currently set in desktop skin
 		}
+	}
 
+	protected function prepareSearch( BaseTemplate $tpl ) {
 		$searchBox = array(
 			'id' => 'searchInput',
 			'class' => 'search',
@@ -338,7 +395,9 @@ class SkinMinerva extends SkinTemplate {
 			'placeholder' =>  $this->getSearchPlaceHolderText(),
 		);
 		$tpl->set( 'searchBox', $searchBox );
+	}
 
+	protected function prepareMenuButton( BaseTemplate $tpl ) {
 		// menu button
 		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
 		$tpl->set( 'menuButton',
@@ -348,12 +407,18 @@ class SkinMinerva extends SkinTemplate {
 			'id'=> 'mw-mf-main-menu-button',
 			) )
 		);
+	}
 
+	protected function prepareBanners( BaseTemplate $tpl ) {
+		global $wgMFEnableSiteNotice;
 		$banners = array();
 		if ( $wgMFEnableSiteNotice ) {
 			$banners[] = '<div id="siteNotice"></div>';
 		}
 		$tpl->set( 'banners', $banners );
+	}
+
+	protected function prepareSiteLinks( BaseTemplate $tpl ) {
 		$aboutPageTitleText = $this->msg( 'aboutpage' )->inContentLanguage()->text();
 		$disclaimerPageTitleText = $this->msg( 'disclaimerpage' )->inContentLanguage()->text();
 		$urls = array();
@@ -372,12 +437,19 @@ class SkinMinerva extends SkinTemplate {
 			);
 		}
 		$tpl->set( 'site_urls', $urls );
-		$tpl->set( 'page_actions', array() );
+	}
+
+	protected function prepareWarnings( BaseTemplate $tpl ) {
+		$out = $this->getOutput();
 		if ( $out->getRequest()->getText( 'oldid' ) ) {
 			$subtitle = $out->getSubtitle();
 			$tpl->set( '_old_revision_warning',
 				Html::openElement( 'div', array( 'class' => 'alert warning' ) ) . $subtitle . Html::closeElement( 'div' ) );
 		}
+	}
+
+	protected function preparePageActions( BaseTemplate $tpl ) {
+		$title = $this->getTitle();
 		// Reuse template data variable from SkinTemplate to construct page menu
 		$menu = array();
 		$namespaces = $tpl->data['content_navigation']['namespaces'];
@@ -423,11 +495,6 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		$tpl->set( 'page_actions', $menu );
-		$this->prepareUserButton( $tpl );
-
-		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
-		$this->prepareDiscoveryTools( $tpl );
-		$this->preparePersonalTools( $tpl );
 	}
 
 	/**

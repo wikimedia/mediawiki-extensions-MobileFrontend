@@ -10,10 +10,7 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	public function execute() {
-		$skin = $this->getSkin();
-		$title = $skin->getTitle();
-		$this->isSpecialPage = $title->isSpecialPage();
-		$skin->prepareData( $this );
+		$this->isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		wfRunHooks( 'MinervaPreRender', array( $this ) );
 		$this->render( $this->data );
 	}
@@ -41,8 +38,9 @@ class MinervaTemplate extends BaseTemplate {
 	protected function renderLanguages() {
 		$languages = $this->getLanguages();
 		$variants = $this->getLanguageVariants();
-		$languagesCount = count( $languages );
-		$variantsCount = count( $variants );
+		// stupid php: count( false ) returns 1
+		$languagesCount = is_array( $languages ) ? count( $languages ) : 0;
+		$variantsCount = is_array( $variants ) ? count( $variants ) : 0;
 
 		if ( $languagesCount > 0 || $variantsCount > 1 ) {
 			$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();

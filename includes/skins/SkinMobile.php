@@ -1,7 +1,7 @@
 <?php
 // FIXME: kill the need for this file (SkinMinerva instead)
 /**
- * SkinMobile: Extends Minerva with mobile specific code
+ * SkinMobile: Extends Minerva with mobile specific code that constructs the footer and 'mobilizes' urls
  */
 
 class SkinMobile extends SkinMinerva {
@@ -33,7 +33,7 @@ class SkinMobile extends SkinMinerva {
 		if ( !$out ) {
 			$out = $this->getOutput();
 		}
-		if ( $wgMFNoindexPages ) {
+		if ( $out && $wgMFNoindexPages ) {
 			$out->setRobotPolicy( 'noindex,nofollow' );
 		}
 
@@ -43,22 +43,7 @@ class SkinMobile extends SkinMinerva {
 				$this->hookOptions = $options;
 			}
 		}
-		$html = ExtMobileFrontend::DOMParse( $out );
-
-		wfProfileIn( __METHOD__  . '-tpl' );
-		$tpl = $this->prepareTemplate();
-		$tpl->set( 'headelement', $out->headElement( $this ) );
-		$tpl->set( 'bodytext', $html );
-		$tpl->set( 'reporttime', wfReportTime() );
-		$tpl->execute();
-		wfProfileOut( __METHOD__  . '-tpl' );
-
-		wfProfileOut( __METHOD__ );
-	}
-
-	public function prepareData( BaseTemplate $tpl ) {
-		parent::prepareData( $tpl );
-		$this->applyCustomisations( $tpl );
+		parent::outputPage( $out );
 	}
 
 	public function getSkinConfigVariables() {
@@ -101,55 +86,14 @@ class SkinMobile extends SkinMinerva {
 		wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
 	}
 
-	protected function prepareTemplate() {
-		global $wgAppleTouchIcon;
-
+	protected function prepareQuickTemplate( OutputPage $out = null ) {
 		wfProfileIn( __METHOD__ );
-		$tpl = $this->setupTemplate( $this->template );
-		$out = $this->getOutput();
-
-		$tpl->setRef( 'skin', $this );
-		$tpl->set( 'wgScript', wfScript() );
-
-		$this->initPage( $this->getOutput() );
-		$this->loggedin = $this->getUser()->isLoggedIn();
-		$content_navigation = $this->buildContentNavigationUrls();
-		$tpl->setRef( 'content_navigation', $content_navigation );
-		$tpl->set( 'language_urls', $this->mobilizeUrls( $this->getLanguages() ) );
-
-		// add head items
-		if ( $wgAppleTouchIcon !== false ) {
-			$out->addHeadItem( 'touchicon',
-				Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $wgAppleTouchIcon ) )
-			);
-		}
-		$out->addHeadItem( 'canonical',
-			Html::element( 'link', array( 'href' => $this->getTitle()->getCanonicalURL(), 'rel' => 'canonical' ) )
-		);
-		$out->addHeadItem( 'viewport',
-			Html::element( 'meta', array( 'name' => 'viewport', 'content' => 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=1.6' ) )
-		);
-		// hide chrome on bookmarked sites
-		$out->addHeadItem( 'apple-mobile-web-app-capable',
-			Html::element( 'meta', array( 'name' => 'apple-mobile-web-app-capable', 'content' => 'yes' ) )
-		);
-		$out->addHeadItem( 'loadingscript', Html::inlineScript(
-			"document.documentElement.className += ' page-loading';"
-		) );
-
-		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
-
-		$this->prepareTemplatePageContent( $tpl );
-		$this->prepareFooterLinks( $tpl );
-
 		$out->setTarget( 'mobile' );
-
-		$bottomScripts = Html::inlineScript(
-			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
-		);
-		$bottomScripts .= $out->getBottomScripts();
-		$tpl->set( 'bottomscripts', $bottomScripts );
-
+		$html = ExtMobileFrontend::DOMParse( $out );
+		$tpl = parent::prepareQuickTemplate( $out );
+		$tpl->set( 'bodytext', $html );
+		$this->applyCustomisations( $tpl );
+		$this->prepareFooterLinks( $tpl );
 		wfProfileOut( __METHOD__ );
 		return $tpl;
 	}
@@ -288,24 +232,6 @@ HTML;
 			return $this->mobileContext->getMobileUrl( $loginUrl, $wgSecureLogin );
 		}
 		return SpecialPage::getTitleFor( 'Userlogin' )->getLocalURL( $query );
-	}
-
-	/**
-	 * Prepares the header and the content of a page
-	 * Stores in QuickTemplate prebodytext, postbodytext keys
-	 * @param QuickTemplate
-	 */
-	function prepareTemplatePageContent( QuickTemplate $tpl ) {
-		$title = $this->getTitle();
-
-		// If it's a talk page, add a link to the main namespace page
-		if ( $title->isTalkPage() ) {
-			$tpl->set( 'subject-page', Linker::link(
-				$title->getSubjectPage(),
-				wfMessage( 'mobile-frontend-talk-back-to-page', $title->getText() ),
-				array( 'class' => 'return-link' )
-			) );
-		}
 	}
 
 	/**

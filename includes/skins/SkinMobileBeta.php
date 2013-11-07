@@ -24,10 +24,11 @@ class SkinMobileBeta extends SkinMobile {
 		return $styles;
 	}
 
-	public function prepareData( BaseTemplate $tpl ) {
-		parent::prepareData( $tpl );
+	protected function prepareQuickTemplate( OutputPage $out = null ) {
+		$tpl = parent::prepareQuickTemplate( $out );
 		// Move last modified link to top as long as it is not the main page
 		$tpl->set( '_lastModifiedAbove', !$this->getTitle()->isMainPage() );
+		return $tpl;
 	}
 
 	protected function getHistoryLink( Title $title ) {
