@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_a40b5c8e",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-07T22:32:19Z",
+      "side": 1,
+      "message": "Yeah, not sure what I was thinking here. This makes no sense at all :P",
+      "parentUuid": "291c1151_04e6f018",
+      "revId": "98f2715a4acbf044e9d3ef931671f3b0b4f25616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_44f0e8c8",
         "filename": "javascripts/specials/userprofile.js",
         "patchSetId": 11
