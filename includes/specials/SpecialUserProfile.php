@@ -43,7 +43,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$ts = new MWTimestamp( $file->getTimestamp() );
 		$daysAgo = $this->getDaysAgo( $ts );
 		$img = Html::openElement( 'div', array( 'class' => 'card' ) ) .
-			Html::openElement( 'a', array( 'class' => 'container', 'href' => $title->getLocalUrl() ) ) .
+			Html::openElement( 'a', array( 'class' => 'container image', 'href' => $title->getLocalUrl() ) ) .
 			Html::element( 'img', array(
 				// uset MediaTransformOutput::getUrl, unfortunately MediaTransformOutput::toHtml
 				// returns <img> tag with fixed height which causes the image to be deformed when
@@ -53,7 +53,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				'alt' => $title->getText(),
 			) ) .
 			Html::openElement( 'div', array( 'class' => 'caption' ) ) .
-			$this->msg( 'mobile-frontend-profile-last-upload-caption', $this->targetUser->getName() )->numParams( $daysAgo )->parse() .
+			$this->msg( 'mobile-frontend-profile-last-upload-caption' )->numParams( $daysAgo )->parse() .
 			Html::closeElement( 'div' ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'div' );
@@ -78,13 +78,28 @@ class SpecialUserProfile extends MobileSpecialPage {
 		if ( $thank ) {
 			$user = $thank['user'];
 			$title = $thank['title'];
+			$imageHtml = '';
+			if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
+				$file = PageImages::getPageImage( $title );
+				if ( $file ) {
+					$thumb = $file->transform( array( 'width' => self::IMAGE_WIDTH ) );
+					if ( $thumb && $thumb->getUrl() ) {
+						$imageHtml = Html::element( 'img',
+							array( 'src' => wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) )
+						);
+					}
+				}
+			}
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
-				. Html::openElement( 'div', array( 'class' => 'container caption' ) )
+				. Html::openElement( 'div', array( 'class' => 'container' ) )
+				. $imageHtml
+				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-thanked',
 					$user,
 					$title->getFullText(),
 					$this->targetUser
 				)->parse()
+				. '</div>'
 				. '</div>'
 				. '</div>';
 		}
@@ -116,7 +131,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				}
 			}
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
-				. Html::openElement( 'div', array( 'class' => 'container' ) )
+				. Html::openElement( 'div', array( 'class' => 'container image' ) )
 				. $imageHtml
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-edit',
@@ -141,7 +156,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 			'class' => 'talk',
 			'href' => $this->targetUser->getTalkPage()->getLocalUrl(),
 		);
-		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk' ) );
+		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk', $this->targetUser->getName(),
+			$this->targetUser->getOption( 'gender' ) ) );
 	}
 
 	// FIXME: Change this into 404 error
@@ -208,6 +224,9 @@ class SpecialUserProfile extends MobileSpecialPage {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		$this->addModules();
+		$out->addModuleStyles( 'mobile.special.styles' );
+
+		$out->setProperty( 'unstyledContent', true );
 		$out->setPageTitle( $this->msg( 'mobile-frontend-profile-title' ) );
 		if ( $par ) {
 			$this->targetUser = User::newFromName( $par );
@@ -215,16 +234,20 @@ class SpecialUserProfile extends MobileSpecialPage {
 			if ( $this->targetUser && $this->targetUser->getId() ) {
 				// prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
-				$activityHtml = $this->getLastUploadHtml() . $this->getLastThanksHtml()
-					. $this->getLastEditHtml();
-				$html = Html::openElement( 'div', array( 'class' => 'profile' ) )
-					. Html::element( 'h1', array(), $this->targetUser->getName() )
+				$activityHtml = $this->getLastEditHtml() . $this->getLastUploadHtml()
+					. $this->getLastThanksHtml();
+				// FIXME: Talk link should go below activity if no summary.
+				$html = Html::element( 'h1', array(), $this->targetUser->getName() )
+					. Html::openElement( 'div', array( 'class' => 'profile content' ) )
 					. $this->getUserSummary()
 					. $this->getTalkLink();
 				if ( $activityHtml ) {
 					$html .= Html::openElement( 'h2' )
 						. $this->msg( 'mobile-frontend-profile-activity-heading' )
-						. Html::closeElement( 'h2' ) . $activityHtml;
+						. Html::closeElement( 'h2' )
+						. Html::openElement( 'div', array( 'class' => 'card-container' ) )
+						. $activityHtml
+						. Html::closeElement( 'div' );
 				}
 				$html .= $this->getUserFooterHtml()
 					. Html::closeElement( 'div' );

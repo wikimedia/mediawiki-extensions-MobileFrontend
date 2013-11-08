@@ -715,6 +715,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		* Name must be the name of the special page lowercased prefixed by 'mobile.'
 		* suffixed by '.styles' or '.scripts'
 		*/
+	// Special:UserProfile
+	'mobile.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
+			'less/specials/common.less',
+		),
+	),
+
 	'mobile.mobilemenu.styles' => $wgMFMobileSpecialPageResourceStyleBoilerplate + array(
 		'styles' => array(
 			'less/specials/mobilemenu.less',

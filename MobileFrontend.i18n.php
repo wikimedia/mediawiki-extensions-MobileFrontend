@@ -336,19 +336,19 @@ $messages['en'] = array (
 
 	// Special:UserProfile
 	'mobile-frontend-profile-title' => 'User profile',
-	'mobile-frontend-profile-last-upload-caption' => 'Last upload by {{GENDER:$1|$1}}, {{PLURAL:$2|yesterday|$2 days ago|0=today}}.',
-	'mobile-frontend-profile-usertalk' => 'View talk page.',
+	'mobile-frontend-profile-last-upload-caption' => 'Uploaded {{PLURAL:$1|yesterday|$1 days ago|0=today}}.',
+	'mobile-frontend-profile-usertalk' => 'Talk to $1',
 	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
 	'mobile-frontend-profile-nouser' => 'Non-existent or invalid username',
-	'mobile-frontend-profile-activity-heading' => 'Activity and contributions',
+	'mobile-frontend-profile-activity-heading' => 'Activity & contributions',
 	'mobile-frontend-profile-yours' => 'Visit your profile page.',
 	'mobile-frontend-profile-userpage-link' => 'Visit user page.',
 	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.',
-	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Last thanked}} by [[Special:UserProfile/$1|$1]] for an edit to [[$2]].',
-	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Edited}} the page [[$1]], {{PLURAL:$2|yesterday|$2 days ago|0=earlier today}}.',
-	'mobile-frontend-profile-footer-days' => 'Registered for {{PLURAL:$2|1 day|$2 days}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
-	'mobile-frontend-profile-footer-months' => 'Registered for over {{PLURAL:$2|1 month|$2 months}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
-	'mobile-frontend-profile-footer-years' => 'Registered for over {{PLURAL:$2|1 year|$2 years}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Thanked}} by [[Special:UserProfile/$1|$1]] for an edit to [[$2]].',
+	'mobile-frontend-profile-last-edit' => 'Edited the page [[$1]], {{PLURAL:$2|yesterday|$2 days ago|0=earlier today}}.',
+	'mobile-frontend-profile-footer-days' => 'Joined {{PLURAL:$2|1 day|$2 days}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
+	'mobile-frontend-profile-footer-months' => 'Joined over {{PLURAL:$2|1 month|$2 months}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
+	'mobile-frontend-profile-footer-years' => 'Joined over {{PLURAL:$2|1 year|$2 years}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 
 	// geo not a hack
 	'mobile-frontend-geonotahack' => 'Near this page',
@@ -915,10 +915,20 @@ See also:
 	'abusefilter-edit-builder-vars-user-mobile' => 'See {{msg-mw|Abusefilter-edit-builder-vars-user-name}} (from AbuseFilter extension), for example.',
 	'mobile-frontend-profile-title' => 'Title of the [[Special:UserProfile]] page.
 {{Identical|User profile}}',
-	'mobile-frontend-profile-last-upload-caption' => 'Parameters:
-* $1 - the username
-* $2 - the amount of days ago the image was uploaded',
-	'mobile-frontend-profile-usertalk' => 'Link label to user talk page.',
+	'mobile-frontend-profile-last-upload-caption' => 'Details when an image was uploaded.
+	Parameters:
+* $1 - the amount of days ago the image was uploaded',
+	'mobile-frontend-profile-registration' => 'Summary saying how many days the user ($1) has been a member ($2) and how many total edits they have made ($3).
+
+Parameters:
+* $1 - username
+* $2 - number of days
+* $3 - number of edits the user has made',
+	'mobile-frontend-profile-usertalk' => 'Link label to user talk page.
+
+Parameters:
+* $1 - username of user who talk page belongs to
+* $2 - the gender of that user',
 	'mobile-frontend-profile-noargs' => 'Message shown when no user profile URL is specified.
 
 If the user is logged in, this message is followed by:
@@ -927,7 +937,7 @@ If the user is logged in, this message is followed by:
 
 If the user is logged in, this message is followed by:
 * {{msg-mw|Mobile-frontend-profile-yours}}',
-	'mobile-frontend-profile-activity-heading' => 'Heading for recent contributions section.',
+	'mobile-frontend-profile-activity-heading' => 'Heading for recent contributions section. The ampersand can be swapped out for the word "and" if it makes sense in your language.',
 	'mobile-frontend-profile-yours' => 'Label pointing user to their profile.
 
 Used if the user is logged in.

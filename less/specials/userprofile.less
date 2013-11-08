@@ -1,56 +1,75 @@
 @import "../mixins.less";
 
 .profile {
+	margin: 1em 0 0 0;
 	text-align: center;
-	color: @grayMid;
-
-	h1 {
-		color: @grayDark;
-		text-transform: uppercase;
-		border-bottom: dotted 1px @grayLight;
-		margin-bottom: 1em;
-	}
+	color: @grayMedium;
 
 	.talk {
 		color: @blueBase;
 		background-position: left;
 		display: inline-block;
-		padding: 14px 0 14px 30px;
-		border-top: solid 2px @blueBase;
-		border-bottom: solid 2px @blueBase;
+		padding: 8px 0 8px 30px;
+		border-top: solid 1px @blueBase;
+		border-bottom: solid 1px @blueBase;
+		background-image: url(images/profile/talk.png);
 		.background-size( auto, 24px );
+		font-size: 0.9em;
 	}
 
 	a {
-		color: @grayDark;
+		color: @grayMediumDark;
 		font-weight: bold;
 	}
 
-	h2 {
-		color: @grayLight;
-		text-transform: uppercase;
+	// TODO: make centering work
+	.card-container,
+	.footer {
+		font-size: 0.9em;
+	}
+
+	@margin: 4px;
+	.card-container {
+		text-align: center;
+		margin-right: @margin;
+		margin-bottom: @margin;
+		display: table;
 	}
 
 	.card {
-		min-height: 240px;
-		width: 160px;
-		border: solid 1px @grayLight;
-		display: table;
+		color: @grayMediumDark;
+		// optimised to show 2 cards on 320px
+		width: 160px - (@margin * 2);
 		float: left;
-		margin: 4px;
-
-		.container {
-			display: table-cell;
-			vertical-align: middle;
-		}
+		border: solid 1px @grayLight;
+		display: inline-block;
+		margin: 0 0 @margin @margin;
+		display: table-cell;
 
 		.caption {
+			text-align: left;
 			padding: 8px;
 		}
 	}
 
 	.footer {
+		color: @grayMediumDark;
 		clear: both;
-		padding: 0 0 2em;
+		padding: 2em 0 0;
+	}
+}
+
+// Tablet styling
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.profile {
+		.card-container {
+			display: block;
+		}
+
+		.card {
+			display: inline-block;
+			float: none;
+			width: round( @wgMFDeviceWidthTablet / 3 );
+		}
 	}
 }
