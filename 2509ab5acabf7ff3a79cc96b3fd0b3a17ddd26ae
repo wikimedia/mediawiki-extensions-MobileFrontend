@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_27c3e98c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 882,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-08T22:35:14Z",
+      "side": 1,
+      "message": "Unnecessary. addModuleStyles always adds to the top..",
+      "revId": "2509ab5acabf7ff3a79cc96b3fd0b3a17ddd26ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_87381d9e",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-08T22:35:14Z",
+      "side": 1,
+      "message": "$( \u0027.profile\u0027 ).find( \u0027.edit-button,.user-description\u0027 ).hide() would be cleaner.",
+      "revId": "2509ab5acabf7ff3a79cc96b3fd0b3a17ddd26ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_8761fdad",
+        "filename": "less/variables.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-08T22:35:14Z",
+      "side": 1,
+      "message": "This is not used anywhere. Also this is @redBase...",
+      "revId": "2509ab5acabf7ff3a79cc96b3fd0b3a17ddd26ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
