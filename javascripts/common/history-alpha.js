@@ -67,7 +67,8 @@
 				$a.on( 'click', lazyLoad );
 			}
 
-			$container.find( 'a' ).each( function() {
+			// do not hijack image links, media viewer does it
+			$container.find( 'a:not([class="image"])' ).each( function() {
 				var $a = $( this ), title = $a.data( 'title' ),
 					tooltip = $a.attr( 'title' ), namespaced, canHijack;
 
