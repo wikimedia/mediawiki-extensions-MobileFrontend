@@ -71,7 +71,7 @@
 				progressPopup = new PhotoUploadProgress();
 
 			this.parent.emit( 'start' );
-			this.preview.hide();
+			this.preview.hide( true );
 			progressPopup.show();
 			progressPopup.on( 'cancel', function() {
 				api.abort();

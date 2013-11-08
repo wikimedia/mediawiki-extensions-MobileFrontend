@@ -273,9 +273,7 @@ $messages['en'] = array (
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 	'mobile-frontend-image-heading-describe' => "'''Describe''' image",
 	'mobile-frontend-image-uploading' => "'''Uploading''' image...",
-	'mobile-frontend-image-cancel-confirm' => "'''Cancel''' upload?",
-	'mobile-frontend-image-cancel-yes' => 'Yes',
-	'mobile-frontend-image-cancel-no' => 'No',
+	'mobile-frontend-image-cancel-confirm' => "Cancel upload?",
 
 	// edit
 	'mobile-frontend-editor-undo-unsupported' => 'Undo is not currently supported on mobile devices.',

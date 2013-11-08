@@ -2,17 +2,8 @@
   <div>
 		<button class="cancel icon">{{closeMsg}}</button>
 	</div>
-	{{^showCancel}}
   <h2 class="uploading">{{{uploadingMsg}}}</h2>
-	<div>
+	<div class="right">
 		<button class="loading icon">{{{uploadingMsg}}}</button>
 	</div>
-	{{/showCancel}}
-	{{#showCancel}}
-  <h2>{{{cancelMsg}}}</h2>
-	<div>
-		<button class="cancel">{{yesMsg}}</button>
-		<button class="continue">{{noMsg}}</button>
-	</div>
-	{{/showCancel}}
 </div>

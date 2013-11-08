@@ -356,8 +356,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// PhotoUploadProgress.js
 			'mobile-frontend-image-uploading' => array( 'parse' ),
 			'mobile-frontend-image-cancel-confirm' => array( 'parse' ),
-			'mobile-frontend-image-cancel-yes',
-			'mobile-frontend-image-cancel-no',
 		),
 	),
 

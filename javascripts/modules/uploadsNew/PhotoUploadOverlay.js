@@ -45,12 +45,20 @@
 				on( 'keyup input', function() {
 					$submitButton.prop( 'disabled', self.$description.val() === '' );
 				} );
-			this.$( '.cancel' ).on( 'click', function() {
-				self.emit( 'cancel' );
-			} );
 
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
+		},
+
+		hide: function( force ) {
+			if ( force ) {
+				return this._super();
+			} else if ( window.confirm( mw.msg( 'mobile-frontend-image-cancel-confirm' ) ) ) {
+				this.emit( 'cancel' );
+				return this._super();
+			} else {
+				return false;
+			}
 		},
 
 		getDescription: function() {
