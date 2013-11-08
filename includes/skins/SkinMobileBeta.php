@@ -88,9 +88,11 @@ class SkinMobileBeta extends SkinMobile {
 
 	protected function handleNewPages( OutputPage $out ) {
 		# Show error message
-		# @todo: What if user can't create new pages here?
 		$title = $this->getTitle();
-		if ( !$title->exists() && !$title->isSpecialPage() ) {
+		if ( !$title->exists()
+			&& !$title->isSpecialPage()
+			&& $title->userCan( 'create', $this->getUser() )
+		) {
 			$out->clearHTML();
 			$out->addHTML(
 				Html::openElement( 'div', array( 'id' => 'mw-mf-newpage' ) )
