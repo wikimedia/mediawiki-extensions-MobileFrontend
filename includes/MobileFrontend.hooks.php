@@ -375,37 +375,29 @@ class MobileFrontendHooks {
 
 		$out->setProperty( 'disableSearchAndFooter', true );
 
-		if ( $special->getName() != 'Userlogin' || !$isMobileView ) {
-			// no further processing necessary
-			return true;
-		}
-
-		if ( $special->getName() === 'Search' ) {
-			$out->addModuleStyles( 'mobile.search.styles' );
-		}
-
-		// go no further if we're not dealing with the login page
-		if ( $special->getName() != 'Userlogin' ) {
-			return true;
-		}
-
-		$out->addModuleStyles( 'mobile.userlogin.styles' );
-
-		// make sure we're on https if we're supposed to be and currently aren't.
-		// most of this is lifted from https redirect code in SpecialUserlogin::execute()
-		// also, checking for 'https' in $wgServer is a little funky, but this is what
-		// is done on the WMF cluster (see config in CommonSettings.php)
-		if ( $wgSecureLogin && WebRequest::detectProtocol() != 'https' ) {
-			// get the https url and redirect
-			$query = $special->getContext()->getRequest()->getQueryValues();
-			if ( isset( $query['title'] ) )  {
-				unset( $query['title'] );
+		if ( $isMobileView ) {
+			$name = $special->getName();
+			if ( $name === 'Search' ) {
+				$out->addModuleStyles( 'mobile.search.styles' );
+			} else if ( $name === 'Userlogin' ) {
+				$out->addModuleStyles( 'mobile.userlogin.styles' );
+				// make sure we're on https if we're supposed to be and currently aren't.
+				// most of this is lifted from https redirect code in SpecialUserlogin::execute()
+				// also, checking for 'https' in $wgServer is a little funky, but this is what
+				// is done on the WMF cluster (see config in CommonSettings.php)
+				if ( $wgSecureLogin && WebRequest::detectProtocol() != 'https' ) {
+					// get the https url and redirect
+					$query = $special->getContext()->getRequest()->getQueryValues();
+					if ( isset( $query['title'] ) )  {
+						unset( $query['title'] );
+					}
+					$url = $mobileContext->getMobileUrl(
+						$special->getFullTitle()->getFullURL( $query ),
+						true
+					);
+					$special->getContext()->getOutput()->redirect( $url );
+				}
 			}
-			$url = $mobileContext->getMobileUrl(
-				$special->getFullTitle()->getFullURL( $query ),
-				true
-			);
-			$special->getContext()->getOutput()->redirect( $url );
 		}
 
 		return true;
