@@ -9,37 +9,12 @@ class SkinMobile extends SkinMinerva {
 	public $template = 'MobileTemplate';
 
 	protected $hookOptions;
-	protected $mode = 'stable';
 	protected $customisations = array();
-
-	/** @var array of classes that should be present on the body tag */
-	private $pageClassNames = array();
-
-	protected function getMode() {
-		return $this->mode;
-	}
 
 	public function __construct( IContextSource $context ) {
 		parent::__construct();
 		$this->setContext( $context );
 		$this->addPageClass( 'mobile' );
-		$this->addPageClass( $this->getMode() );
-		if ( !$this->getUser()->isAnon() ) {
-			$this->addPageClass( 'is-authenticated' );
-		}
-	}
-
-	/**
-	 * Overrides Skin::doEditSectionLink
-	 */
-	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
-		$lang = wfGetLangObj( $lang );
-		$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
-		return Html::element( 'a', array(
-			'href' => '#editor/' . $section,
-			'data-section' => $section,
-			'class' => 'edit-page'
-		), $message );
 	}
 
 	public function setTemplateVariable( $key, $val ) {
@@ -81,38 +56,8 @@ class SkinMobile extends SkinMinerva {
 		wfProfileOut( __METHOD__ );
 	}
 
-	/**
-	 * @param string $className: valid class name
-	 */
-	private function addPageClass( $className ) {
-		$this->pageClassNames[ $className ] = true;
-	}
-
-	/**
-	 * Takes a title and returns classes to apply to the body tag
-	 * @param $title Title
-	 * @return String
-	 */
-	public function getPageClasses( $title ) {
-		if ( $title->isMainPage() ) {
-			$className = 'page-Main_Page ';
-		} else if ( $title->isSpecialPage() ) {
-			$className = 'mw-mf-special ';
-		} else {
-			$className = '';
-		}
-		return $className . implode( ' ', array_keys( $this->pageClassNames ) );
-	}
-
-	protected function getSearchPlaceHolderText() {
-		return wfMessage( 'mobile-frontend-placeholder' )->text();
-	}
-
 	public function prepareData( BaseTemplate $tpl ) {
 		parent::prepareData( $tpl );
-		$search = $tpl->data['searchBox'];
-		$search['placeholder'] = $this->getSearchPlaceHolderText();
-		$tpl->set( 'searchBox', $search );
 		$this->applyCustomisations( $tpl );
 	}
 
@@ -126,7 +71,6 @@ class SkinMobile extends SkinMinerva {
 		);
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgUseFormatCookie'] = $wgUseFormatCookie;
-		$vars['wgMFMode'] = $this->getMode();
 		return $vars;
 	}
 
@@ -134,10 +78,6 @@ class SkinMobile extends SkinMinerva {
 		global $wgMFInfoboxLogging;
 		$out = $this->getOutput();
 		$modules = parent::getDefaultModules();
-
-		// flush unnecessary modules
-		$modules['content'] = array();
-		$modules['legacy'] = array();
 
 		$this->addExternalModules( $out );
 		// FIXME: This is duplicate code of that in MobileFrontend.hooks.php. Please apply hygiene.
