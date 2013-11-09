@@ -29,15 +29,21 @@
 		},
 
 		postRender: function() {
-			var self = this, $description, $submitButton;
+			var self = this, $submitButton;
 
 			this._super();
 
-			this.$description = $description = this.$( 'textarea' );
 			$submitButton = this.$( '.submit' ).
 				prop( 'disabled', true ).
 				on( 'click', function() {
 					self.emit( 'submit' );
+				} );
+			this.$description = this.$( 'textarea' ).
+				microAutosize().
+				// use input event too, Firefox doesn't fire keyup on many devices:
+				// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
+				on( 'keyup input', function() {
+					$submitButton.prop( 'disabled', self.$description.val() === '' );
 				} );
 			this.$( '.cancel' ).on( 'click', function() {
 				self.emit( 'cancel' );
@@ -45,11 +51,6 @@
 
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
-			// use input event too, Firefox doesn't fire keyup on many devices:
-			// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
-			$description.on( 'keyup input', function() {
-				$submitButton.prop( 'disabled', $description.val() === '' );
-			} );
 		},
 
 		getDescription: function() {

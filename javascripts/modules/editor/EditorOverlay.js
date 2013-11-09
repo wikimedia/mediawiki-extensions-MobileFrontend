@@ -78,10 +78,10 @@
 			this.$spinner = this.$( '.spinner' );
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( 'textarea' ).
+				microAutosize().
 				on( 'input', function() {
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .save' ).prop( 'disabled', false );
-					self._resizeContent();
 				} );
 			this.$( '.continue' ).on( 'click', $.proxy( this, '_showPreview' ) );
 			this.$( '.back' ).on( 'click', $.proxy( this, '_hidePreview' ) );
@@ -189,12 +189,6 @@
 			this._showBar( '.initial-bar' );
 		},
 
-		_resizeContent: function() {
-			if ( this.$content.prop( 'scrollHeight' ) ) {
-				this.$content.css( 'height', this.$content.prop( 'scrollHeight' ) + 'px' );
-			}
-		},
-
 		_loadContent: function() {
 			var self = this;
 
@@ -205,8 +199,8 @@
 				done( function( content ) {
 					self.$content.
 						show().
-						val( content );
-					self._resizeContent();
+						val( content ).
+						trigger( 'input' );
 					self.$spinner.hide();
 				} ).
 				fail( function( error ) {

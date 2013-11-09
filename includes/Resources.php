@@ -636,6 +636,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.language',
 		),
 		'scripts' => array(
+			'javascripts/externals/micro.autosize.js',
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/issues/issues.js',
