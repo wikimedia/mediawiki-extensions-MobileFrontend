@@ -371,12 +371,15 @@ class MobileFrontendHooks {
 		global $wgSecureLogin;
 		$mobileContext = MobileContext::singleton();
 		$isMobileView = $mobileContext->shouldDisplayMobileView();
+		$out = $special->getContext()->getOutput();
+
+		$out->setProperty( 'disableSearchAndFooter', true );
+
 		if ( $special->getName() != 'Userlogin' || !$isMobileView ) {
 			// no further processing necessary
 			return true;
 		}
 
-		$out = $special->getContext()->getOutput();
 		if ( $special->getName() === 'Search' ) {
 			$out->addModuleStyles( 'mobile.search.styles' );
 		}
