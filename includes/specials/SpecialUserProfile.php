@@ -121,7 +121,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-edit',
 					$rev->getTitle(),
-					$daysAgo
+					$daysAgo,
+					$this->targetUser->getName()
 				)->parse()
 				. '</div>'
 				. '</div>'

@@ -345,7 +345,7 @@ $messages['en'] = array (
 	'mobile-frontend-profile-userpage-link' => 'Visit user page.',
 	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Last thanked}} by [[Special:UserProfile/$1|$1]] for an edit to [[$2]].',
-	'mobile-frontend-profile-last-edit' => 'Edited [[$1]], {{PLURAL:$2|yesterday|$2 days ago|0=earlier today}}.',
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Edited}} the page [[$1]], {{PLURAL:$2|yesterday|$2 days ago|0=earlier today}}.',
 	'mobile-frontend-profile-footer-days' => 'Registered for {{PLURAL:$2|1 day|$2 days}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 	'mobile-frontend-profile-footer-months' => 'Registered for over {{PLURAL:$2|1 month|$2 months}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 	'mobile-frontend-profile-footer-years' => 'Registered for over {{PLURAL:$2|1 year|$2 years}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
@@ -945,7 +945,8 @@ Parameters:
 
 Parameters:
 * $1 - Name of the page that was edited
-* $2 - How many days ago it was edited.',
+* $2 - How many days ago it was edited
+* $3 - The username, for GENDER',
 	'mobile-frontend-profile-footer-days' => 'Generates the informative footer on Special:UserProfile
 
 Parameters:
