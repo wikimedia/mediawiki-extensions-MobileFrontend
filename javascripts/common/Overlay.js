@@ -1,3 +1,4 @@
+/*jshint unused:vars */
 ( function( M, $ ) {
 
 var View = M.require( 'view' ),
@@ -56,7 +57,7 @@ var View = M.require( 'view' ),
 			// FIXME: prevent zooming within overlays but don't break the rendering!
 			// M.lockViewport();
 			if ( this.parent ) {
-				this.parent.hide();
+				this.parent.hide( true );
 			}
 
 			this.$el.appendTo( this.appendTo );
@@ -74,7 +75,13 @@ var View = M.require( 'view' ),
 
 			$( 'body' ).removeClass( 'navigation-enabled' );
 		},
-		hide: function() {
+		/**
+		 * Detach the overlay from the current view
+		 *
+		 * @param {boolean} force: Whether the overlay should be closed regardless of state (see PhotoUploadProgress)
+		 * @return {boolean}: Whether the overlay was successfully hidden or not
+		 */
+		hide: function( force ) {
 			// FIXME: allow zooming outside the overlay again
 			// M.unlockViewport();
 			this.$el.detach();
