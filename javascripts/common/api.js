@@ -139,7 +139,7 @@
 			if ( !this.tokenCache[ endpoint ] ) {
 				this.tokenCache[ endpoint ] = {};
 			}
-			if ( !M.isLoggedIn() ) {
+			if ( !M.isLoggedIn() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
 				return d.reject( 'Token requested when not logged in.' );
 			} else if ( isCacheable && this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
 				return this.tokenCache[ endpoint ][ tokenType ];
@@ -161,7 +161,7 @@
 					var token;
 					if ( tokenData && tokenData.tokens && !tokenData.warnings ) {
 						token = tokenData.tokens[ tokenType + 'token' ];
-						if ( token && token !== '+\\' ) {
+						if ( token && ( token !== '+\\' || mw.config.get( 'wgMFAnonymousEditing' ) ) ) {
 							d.resolve( token );
 						} else {
 							d.reject( 'Anonymous token.' );
