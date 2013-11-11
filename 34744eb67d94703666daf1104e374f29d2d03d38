@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_965be4f2",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-11T20:05:44Z",
+      "side": 1,
+      "message": "Please add explicit GENDER support.",
+      "revId": "34744eb67d94703666daf1104e374f29d2d03d38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
