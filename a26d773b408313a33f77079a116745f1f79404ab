@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_4aee2024",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 341,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-11T21:40:09Z",
+      "side": 1,
+      "message": "Please add explicit GENDER Support.",
+      "revId": "a26d773b408313a33f77079a116745f1f79404ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_6af59ceb",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-11T21:40:09Z",
+      "side": 1,
+      "message": "Why use \"\u0026\" over \"and\"?",
+      "revId": "a26d773b408313a33f77079a116745f1f79404ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
