@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_79de543c",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-12T18:08:36Z",
+      "side": 1,
+      "message": "I just think in this case it is easier to read.",
+      "parentUuid": "291c1151_8f0be18e",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_50442b1b",
         "filename": "javascripts/modules/mf-toggle.js",
         "patchSetId": 3
@@ -142,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_f9c32458",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-12T18:08:36Z",
+      "side": 1,
+      "message": "Mm. I feel like it would be good to research how this should behave a little more. If ARIA makes this unnecessary, will this interfere with that for example?\n\nI\u0027d rather we didn\u0027t guess on things like this. Could you at least separate this into a separate patchset so we can merge the aria attributes and allow us more time to get opinions and take a closer look at what other sites do?",
+      "parentUuid": "291c1151_4f43a9b2",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_afe97dbb",
         "filename": "javascripts/modules/mf-toggle.js",
         "patchSetId": 3
@@ -171,6 +207,24 @@
       "side": 1,
       "message": "1) Because this is broken right now (at least on master). Go on any page with a link in a section heading (eg. any commons file) and click on the link. You will follow the link AND toggle the section, which clearly is not wanted.\n2) See above\n3) Ok, I guess I can improve that, yes\n\nwill s/e/ev/",
       "parentUuid": "291c1151_afe97dbb",
+      "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_67d4fc1d",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-12T18:08:36Z",
+      "side": 1,
+      "message": "Oh I see. \nIt would be better if you separate this change to stopPropagation for links from this patchset (preferably open a bug that points to it as well). This will help with understanding the reasoning for this code and make code review smoother and help in future by supporting git blame (for code history).",
+      "parentUuid": "291c1151_ef261518",
       "revId": "55099b31c39a2d03e8fc66776e02aeb46337ca72",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
