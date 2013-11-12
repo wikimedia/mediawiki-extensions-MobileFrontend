@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_79b014f4",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-12T18:21:02Z",
+      "side": 1,
+      "message": "This will still throw a validation error:\nThe existing schema REQUIRES a username and user edit count\n\nhttps://meta.wikimedia.org/wiki/Schema:MobileWebEditing\nby omitting these you will still get a validation error.",
+      "revId": "52fc047e8639b0090a5d0cd433234146ade1021d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
