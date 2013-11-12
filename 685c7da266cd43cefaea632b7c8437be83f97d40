@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_1478c78c",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-12T19:49:36Z",
+      "side": 1,
+      "message": "Parent is an Overlay... hide doesn\u0027t take any parameters...",
+      "revId": "685c7da266cd43cefaea632b7c8437be83f97d40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
