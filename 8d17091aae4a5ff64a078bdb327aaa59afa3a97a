@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_19d1e02e",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-12T18:00:42Z",
+      "side": 1,
+      "message": "This is hacky. Should set an explicit message key if this approach is deemed to be better...",
+      "revId": "8d17091aae4a5ff64a078bdb327aaa59afa3a97a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
