@@ -211,8 +211,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$out->setPageTitle( $this->msg( 'mobile-frontend-profile-title' ) );
 		if ( $par ) {
 			$this->targetUser = User::newFromName( $par );
-			// Make sure this is a valid registered user
-			if ( $this->targetUser->getId() ) {
+			// Make sure this is a valid registered user and not an invalid username (e.g. ip see bug 56822)
+			if ( $this->targetUser && $this->targetUser->getId() ) {
 				// prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$activityHtml = $this->getLastUploadHtml() . $this->getLastThanksHtml()
