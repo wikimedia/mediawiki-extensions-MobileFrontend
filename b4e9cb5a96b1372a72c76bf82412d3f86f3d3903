@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_96975a8e",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 918,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-13T00:16:28Z",
+      "side": 1,
+      "message": "These parameters need to be updated.",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_b6c6169a",
+        "filename": "less/specials/common.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-13T00:16:28Z",
+      "side": 1,
+      "message": "12 custom styles for special H1s? This makes me cry inside :( Oh well.",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_964afa26",
+        "filename": "less/specials/common.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-13T00:16:28Z",
+      "side": 1,
+      "message": "Please consolidate this with the padding declaration above.",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_765adef0",
+        "filename": "less/specials/common.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-13T00:16:28Z",
+      "side": 1,
+      "message": "Why is this necessary? It goes against the style convention of Wikipedia which is to use sentence case for headers, not title case.",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
