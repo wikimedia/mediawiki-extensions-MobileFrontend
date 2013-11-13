@@ -6678,8 +6678,8 @@ $messages['gd'] = array(
 	'mobile-frontend-random-button' => 'Air thuaiream',
 	'mobile-frontend-back-to-top-of-section' => 'Leum earrann air ais',
 	'mobile-frontend-regular-site' => 'Sealladh desktop',
-	'mobile-frontend-featured-article' => 'Artaigil taghta an-diugh', # Fuzzy
-	'mobile-frontend-copyright' => "Tha an teacsa seo ri fhaighinn fo <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'Cheadachas Creative Commons Attribution/Share-Alike</a>; faodaidh gu bheil teirmichean a bharrachd buailteach. Faic <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Teirmichean a' Chleachdaicd</a> airson mion-fhiosrachadh. Tha Uicipeid 'na chomharra-malairt clàraichte aig <a href='http://www.wikimediafoundation.org/'>Fonndas Meadhanan nan Uici, Earr.</a>, buidheann neo-phrothaideach.", # Fuzzy
+	'mobile-frontend-featured-article' => 'Susbaint bhrosnaichte an latha an-diugh',
+	'mobile-frontend-copyright' => "Tha an t-susbaint seo ri fhaighinn fo $1 mur eil an caochladh 'ga innse.",
 );
 
 /** Galician (galego)
@@ -8999,6 +8999,7 @@ in tutto il mondo',
 	'mobile-frontend-profile-userpage-link' => 'Visita la pagina utente.',
 	'mobile-frontend-requires-optin' => 'Questa pagina non è disponibile se non si opta per la modalità beta. Visita la [[Special:MobileOptions|pagina delle impostazioni]] per scegliere.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Ultimo ringraziamento}} di [[Special:UserProfile/$1|$1]] per una modifica a [[$2]].',
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Ha modificato}} la pagina [[$1]], {{PLURAL:$2|ieri|$2 giorni fa|0=oggi}}.',
 	'mobile-frontend-profile-footer-days' => 'Registrato da {{PLURAL:$2|1 giorno|$2 giorni}} con [[Special:Contributions/$1|{{PLURAL:$3|1 modifica|$3 modifiche}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 caricamento|$4 caricamenti|500=più di 500 caricamenti}}]].',
 	'mobile-frontend-profile-footer-months' => 'Registrato da più di {{PLURAL:$2|1 mese|$2 mesi}} con [[Special:Contributions/$1|{{PLURAL:$3|1 modifica|$3 modifiche}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 caricamento|$4 caricamenti|500=più di 500 caricamenti}}]].',
 	'mobile-frontend-profile-footer-years' => 'Registrato da più di {{PLURAL:$2|1 anno|$2 anni}} con [[Special:Contributions/$1|{{PLURAL:$3|1 modifica|$3 modifiche}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 caricamento|$4 caricamenti|500=più di 500 caricamenti}}]].',
@@ -12843,7 +12844,7 @@ $messages['nds-nl'] = array(
 	'mobile-frontend-account-create-submit' => 'Inschrieven',
 	'mobile-frontend-password-confirm-placeholder' => 'Wachtwoord bevestigen',
 	'mobile-frontend-account-create-email-placeholder' => 'Netpostadres (niet verplicht)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'Voer de veiligheidstekste in',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Vul de bevestigingskode in',
 	'mobile-frontend-overlay-escape' => 'Gao weerumme',
 	'mobile-frontend-placeholder' => '{{SITENAME}} duurzeukn',
 	'mobile-frontend-clear-search' => 'Wissen',
@@ -15208,7 +15209,7 @@ $messages['ru'] = array(
 	'mobile-frontend-profile-userpage-link' => 'Посетить страницу участника.',
 	'mobile-frontend-requires-optin' => 'Эта страница будет недоступна, пока вы не перейдёте в бета-режим. Зайдите для этого на страницу [[Special:MobileOptions|настроек]].',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Последняя благодарность}} от участника [[Special:UserProfile/$1|$1]] за правку страницы [[$2]].',
-	'mobile-frontend-profile-last-edit' => 'Отредактирована [[$1]], {{PLURAL:$2|вчера|$2 дня назад|$2 дней назад|0=сегодня}}.', # Fuzzy
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Отредактировал|Отредактировала}} страницу [[$1]], {{PLURAL:$2|вчера|$2 дня назад|$2 дней назад|0=сегодня}}.',
 	'mobile-frontend-profile-footer-days' => 'Зарегистрирован в течение {{PLURAL:$2|1 дня|$2 дней}} с [[Special:Contributions/$1|{{PLURAL:$3|1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].',
 	'mobile-frontend-profile-footer-months' => 'Зарегистрирован в течение {{PLURAL:$2|1 месяца|$2 месяцев}} с [[Special:Contributions/$1|{{PLURAL:$3|1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].',
 	'mobile-frontend-profile-footer-years' => 'Зарегистрирован в течение {{PLURAL:$2|1 года|$2 лет}} с [[Special:Contributions/$1|{{PLURAL:$3|1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].',
@@ -17221,6 +17222,7 @@ $messages['tzm'] = array(
 
 /** Uyghur (Arabic script) (ئۇيغۇرچە)
  * @author Sahran
+ * @author Tel'et
  */
 $messages['ug-arab'] = array(
 	'mobile-frontend-search-submit' => 'يۆتكەل',
@@ -17238,11 +17240,11 @@ $messages['ug-arab'] = array(
 	'mobile-frontend-featured-article' => 'بۈگۈنكى ئالاھىدە ماقالە', # Fuzzy
 	'mobile-frontend-language' => 'تىل:',
 	'mobile-frontend-username' => 'ئىشلەتكۈچى ئاتى:',
-	'mobile-frontend-password' => 'ئىم:',
+	'mobile-frontend-password' => 'پارول:',
 	'mobile-frontend-username-placeholder' => 'ئىشلەتكۈچى ئاتى',
-	'mobile-frontend-password-placeholder' => 'ئىم',
+	'mobile-frontend-password-placeholder' => 'پارول',
 	'mobile-frontend-account-create-submit' => 'خەتلىتىش',
-	'mobile-frontend-password-confirm-placeholder' => 'ئىم جەزملە',
+	'mobile-frontend-password-confirm-placeholder' => 'پارولنى مۇقىملاشتۇرۇڭ',
 	'mobile-frontend-overlay-escape' => 'كەينىگە',
 	'mobile-frontend-placeholder' => '{{SITENAME}} ئىزدە',
 	'mobile-frontend-clear-search' => 'تازىلا',
@@ -17982,6 +17984,9 @@ $messages['vi'] = array(
 	'mobile-frontend-password-placeholder' => 'Mật khẩu',
 	'mobile-frontend-login' => 'Đăng nhập',
 	'mobile-frontend-history' => 'Xem lịch sử sửa đổi của trang này.',
+	'mobile-frontend-history-404-title' => 'Tên trang sai',
+	'mobile-frontend-history-404-desc' => 'Không thể xem lịch sử của một trang chưa tồn tại. Nó có thể đã bị xóa hoặc bạn có thể đã theo một liên kết hỏng.',
+	'mobile-frontend-history-summary' => 'Lịch sử Trang [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Sửa đổi lần cuối lúc $2 vào $1',
 	'mobile-frontend-last-modified-seconds' => 'Sửa đổi lần cuối cách đây $1 giây',
 	'mobile-frontend-last-modified-minutes' => 'Sửa đổi lần cuối cách đây $1 phút',
@@ -18013,9 +18018,9 @@ $messages['vi'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Văn bản có sẵn theo [//vi.m.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi?useformat=mobile CC BY-SA 3.0]; có thể áp dụng điều khoản bổ sung.',
 	'mobile-frontend-copyright' => 'Nội dung được phát hành theo $1, ngoại trừ khi có ghi chú khác.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Điều_khoản_Sử_dụng?useformat=mobile&uselang=vi Các Điều khoản Sử dụng]',
 	'mobile-frontend-footer-contact' => 'Liên lạc',
 	'mobile-frontend-search-noresults' => 'Không tìm thấy trang trùng tên. Hãy thay đổi truy vấn hoặc bấm phím tìm kiếm để tìm kiếm trong trang.',
+	'mobile-frontend-terms-text' => 'Điều khoản Sử dụng',
 	'mobile-frontend-main-menu-button-tooltip' => 'Mở trình đơn chính',
 	'mobile-frontend-main-menu-page-title' => 'Điều hướng các trang',
 	'mobile-frontend-main-menu-featured' => 'Chọn lọc',
@@ -18110,7 +18115,7 @@ $messages['vi'] = array(
 	'mobile-frontend-photo-article-edit-comment' => 'Đã thêm hình để sử dụng trong trang',
 	'mobile-frontend-photo-article-donate-comment' => 'Đã đóng góp hình ảnh từ Đặc biệt:Tập tin tải lên',
 	'mobile-frontend-photo-upload-comment' => 'Đã thêm hình vào trang',
-	'mobile-frontend-photo-caption-placeholder' => 'Thêm miêu tả (bắt buộc)',
+	'mobile-frontend-photo-caption-placeholder' => 'Miêu tả hình này (bắt buộc)',
 	'mobile-frontend-image-loading' => 'Đang tải hình',
 	'mobile-frontend-photo-ownership' => 'Tôi, $1, tạo ra hình ảnh này.',
 	'mobile-frontend-photo-ownership-help' => 'Điều này có nghĩa là gì?',
@@ -18137,13 +18142,15 @@ $messages['vi'] = array(
 	'mobile-frontend-photo-upload-error-file-type' => 'Xin vui lòng chỉ tải lên hình ảnh.',
 	'mobile-frontend-photo-upload-error-filename' => 'Lỗi: Xin vui lòng tóm tắt một cách rõ hơn.',
 	'mobile-frontend-photo-upload-success-article' => 'Xong rồi, trang này hiện có hình ảnh của bạn.',
-	'mobile-frontend-photo-license' => 'Với việc bấm “Tải lên”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng], và bạn đồng ý phát hành hình ảnh của mình theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
+	'mobile-frontend-photo-license' => 'Với việc tải lên hình này, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng], và bạn đồng ý phát hành hình ảnh của mình theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
 	'mobile-frontend-photo-submit' => 'Tải lên',
 	'mobile-frontend-photo-cancel' => 'Hủy bỏ',
 	'mobile-frontend-photo-upload-user-count' => '<span>$1</span> tải lên',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ tải lên',
-	'mobile-frontend-photo-upload-cta' => 'Xin vui lòng đăng nhập hay mở tài khoản để thêm hình ảnh.',
 	'mobile-frontend-photo-upload-login' => 'Bạn phải đăng nhập để thêm hình ảnh.',
+	'mobile-frontend-image-heading-describe' => "'''Miêu tả''' hình",
+	'mobile-frontend-image-uploading' => "Đang '''tải lên''' hình…",
+	'mobile-frontend-image-cancel-confirm' => 'Hủy bỏ tải lên?',
 	'mobile-frontend-editor-undo-unsupported' => 'Chưa hỗ trợ hoàn tác trên các thiết bị di động.',
 	'mobile-frontend-editor-newpage-prompt' => 'Trang này chưa tồn tại. Hãy can đảm tạo ra nó!',
 	'mobile-frontend-editor-disabled' => 'Bạn không có quyền sửa đổi trang này.',
@@ -18189,22 +18196,22 @@ $messages['vi'] = array(
 	'mobile-frontend-talk-reply-info' => 'Lưu ý rằng lời đáp sẽ được tự động ký tên dùng tên người dùng của bạn.',
 	'mobile-frontend-talk-reply' => 'Trả lời',
 	'mobile-frontend-media-details' => 'Chi tiết',
+	'mobile-frontend-media-license-link' => 'Thông tin giấy phép',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Người dùng có sửa đổi qua giao diện di động hay không',
 	'mobile-frontend-profile-title' => 'Thông tin cá nhân',
-	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|Đã sửa đổi 1 lần|Đã sửa đổi $2 lần|0=Chưa có sửa đổi|501=Đã sửa đổi hơn 500 lần}}]] và
-[[Special:Uploads/$1|{{PLURAL:$3|đã tải lên 1 tập tin|đã tải lên $3 tập tin|0=chưa tải lên tập tin nào|501=đã tải lên hơn 500 tập tin}}]] vào 30 ngày qua.',
 	'mobile-frontend-profile-last-upload-caption' => 'Tập tin mới nhất do $1 tải lên {{PLURAL:$2|hôm qua|$2 ngày trước|0=hôm nay}}.',
-	'mobile-frontend-profile-registration' => '$1 đã đóng góp vào {{SITENAME}} trong thời gian $2 ngày và đã sửa đổi $3 lần.',
 	'mobile-frontend-profile-usertalk' => 'Xem trang tin nhắn.',
 	'mobile-frontend-profile-noargs' => 'Xin vui lòng nhập tên người dùng để xem trang thành viên.',
 	'mobile-frontend-profile-nouser' => 'Tên người dùng không tồn tại hoặc không hợp lệ.',
+	'mobile-frontend-profile-activity-heading' => 'Hoạt động và đóng góp',
 	'mobile-frontend-profile-yours' => 'Xem trang cá nhân của bạn.',
 	'mobile-frontend-profile-userpage-link' => 'Xem trang thành viên.',
-	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1}}Người dùng này mới bắt đầu sửa đổi.',
-	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1}}Người dùng này có vẻ có kinh nghiệm sửa đổi.',
-	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1}}Người dùng này sửa đổi rất nhiều.',
 	'mobile-frontend-requires-optin' => 'Để xem trang này, hãy quyết định kích hoạt chế độ beta. Mở [[Special:MobileOptions|trang tùy chọn]] để kích hoạt.',
 	'mobile-frontend-profile-last-thanked' => 'Đã nhận lời cảm ơn lần cuối cùng từ [[Special:UserProfile/$1|$1]] vì một sửa đổi tại [[$2]].',
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3}}Đã sửa đổi trang [[$1]] {{PLURAL:$2|hôm qua|cách đây $2 ngày|0=hôm nay}}.',
+	'mobile-frontend-profile-footer-days' => 'Có tài khoản $2 ngày nay, trong thời gian đó có [[Special:Contributions/$1|1 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].', # Fuzzy
+	'mobile-frontend-profile-footer-months' => 'Có tài khoản hơn $2 tháng nay, trong thời gian đó có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
+	'mobile-frontend-profile-footer-years' => 'Có tài khoản hơn $2 năm nay, trong thời gian đó có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
 	'mobile-frontend-geonotahack' => 'Lân cận trang này',
 );
 
