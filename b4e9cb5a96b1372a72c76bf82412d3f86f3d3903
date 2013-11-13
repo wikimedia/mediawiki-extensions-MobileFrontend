@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_e231a8ed",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 918,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T18:17:32Z",
+      "side": 1,
+      "message": "Thanks.",
+      "parentUuid": "291c1151_96975a8e",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_b6c6169a",
         "filename": "less/specials/common.less",
         "patchSetId": 6
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_8222b4a4",
+        "filename": "less/specials/common.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T18:17:32Z",
+      "side": 1,
+      "message": "I think the idea is to have all special pages have different typography. I\u0027m not sure how I feel about this yet but since it is only beta I\u0027m willing to roll with it.",
+      "parentUuid": "291c1151_b6c6169a",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_964afa26",
         "filename": "less/specials/common.less",
         "patchSetId": 6
@@ -47,6 +83,24 @@
       "writtenOn": "2013-11-13T00:16:28Z",
       "side": 1,
       "message": "Please consolidate this with the padding declaration above.",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_a23b30cd",
+        "filename": "less/specials/common.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T18:17:32Z",
+      "side": 1,
+      "message": "will do.",
+      "parentUuid": "291c1151_964afa26",
       "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -82,6 +136,24 @@
       "side": 1,
       "message": "I imagine the answer is \"Because that\u0027s what the designers want\". I guess that\u0027s fine, but it seems like it would make more sense to just adjust the capitalization in the i18n string. This will also give translators more flexibility to do what makes sense for them in their language (rather than forcing the capitalization for every language). I\u0027m more sympathetic to using text-transform: uppercase (but only slightly) since it\u0027s more of a pure style treatment (but may potentially have similar issues).",
       "parentUuid": "291c1151_765adef0",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_c2382cd3",
+        "filename": "less/specials/common.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T18:17:32Z",
+      "side": 1,
+      "message": "See the mail on the design-l mailing list \"Uppercase usage by design team\"",
+      "parentUuid": "291c1151_96e67a17",
       "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
