@@ -70,9 +70,6 @@
 			} );
 		}
 
-		// FIXME: remove when this class is no longer in cached pages
-		$( '.section_anchors' ).remove();
-
 		function checkHash() {
 			var hash = window.location.hash;
 			if ( hash.indexOf( '#' ) === 0 ) {
