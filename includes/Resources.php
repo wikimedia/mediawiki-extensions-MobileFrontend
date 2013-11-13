@@ -474,19 +474,23 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta'
 		),
 		'styles' => array(
-			'less/modules/search.less',
+			'less/modules/searchNew/SearchOverlay.less',
 		),
 		'scripts' => array(
+			'javascripts/modules/searchNew/SearchApi.js',
+			'javascripts/modules/searchNew/SearchOverlay.js',
 			'javascripts/modules/searchNew/search.js',
 			'javascripts/modules/searchNew/pageImages.js',
 		),
 		'templates' => array(
-			'overlays/search/search',
+			'modules/searchNew/SearchOverlay',
 		),
 		'messages' => array(
 			// for search.js
-			'mobile-frontend-search-help',
-			'mobile-frontend-search-noresults',
+			'mobile-frontend-clear-search',
+			'mobile-frontend-search-content',
+			'mobile-frontend-search-no-results',
+			'mobile-frontend-search-content-no-results' => array( 'parse' ),
 		),
 	),
 

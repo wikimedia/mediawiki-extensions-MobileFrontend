@@ -23,8 +23,8 @@
 		} );
 
 		M.on( 'search-results', function( overlay ) {
-			var $results = overlay.$( 'ul' );
-			history.hijackLinks( $results );
+			var $results = overlay.$( '.results' );
+			history.hijackLinks( $results, false, true );
 			$results.find( 'a' ).on( 'click', function() {
 				overlay.hide();
 			} );

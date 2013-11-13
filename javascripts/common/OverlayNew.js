@@ -4,7 +4,10 @@
 	var Overlay = M.require( 'Overlay' ),
 	OverlayNew = Overlay.extend( {
 		className: 'overlay',
-		template: M.template.get( 'OverlayNew' )
+		template: M.template.get( 'OverlayNew' ),
+		defaults: {
+			headerButtonsListClassName: 'v-border bottom-border'
+		}
 	} );
 
 	M.define( 'OverlayNew', OverlayNew );

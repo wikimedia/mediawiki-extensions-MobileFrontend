@@ -1,9 +1,11 @@
-<div class="overlay-header">
-	<ul>
+<div class="overlay-header with-margins">
+	<ul class="v-border bottom-border">
 		<li><button class="cancel icon">{{closeMsg}}</button></li>
 	</ul>
-	<h2>{{{heading}}}</h2>
-	<ul>
+	<div class="bottom-border">
+		<h2>{{{heading}}}</h2>
+	</div>
+	<ul class="{{headerButtonsListClassName}}">
 		{{#headerButtons}}
 		<li><button class="{{className}}">{{msg}}</button></li>
 		{{/headerButtons}}

@@ -45,9 +45,11 @@
 		 * Trigger navigation to a page via javascript
 		 *
 		 * @param {String} pageTitle String representing the title of a page that should be loaded in the browser
+		 * @param {Boolean} replaceState Replace current state instead of pushing
+		 * a new one.
 		 */
-		function navigateToPage( title ) {
-			History.pushState( null, title, mw.util.getUrl( title ) );
+		function navigateToPage( title, replaceState ) {
+			History[replaceState ? 'replaceState' : 'pushState']( null, title, mw.util.getUrl( title ) );
 		}
 
 		/**
@@ -56,11 +58,13 @@
 		 *
 		 * @param {jQuery.object} $container A container to hijack links
 		 * @param {Boolean} useFuzzyHijacking When set any link any links missing a data-title attribute are hijacked if they might be links
+		 * @param {Boolean} replaceState Replace current state instead of pushing
+		 * a new one.
 		 */
-		function hijackLinks( $container, useFuzzyHijacking ) {
+		function hijackLinks( $container, useFuzzyHijacking, replaceState ) {
 			function lazyLoad( ev ) {
 				ev.preventDefault();
-				navigateToPage( $( this ).data( 'title' ) );
+				navigateToPage( $( this ).data( 'title' ), replaceState );
 			}
 
 			function hijackLink( $a ) {

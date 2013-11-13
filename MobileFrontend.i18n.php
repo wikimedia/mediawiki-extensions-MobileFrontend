@@ -113,6 +113,10 @@ $messages['en'] = array (
 	'mobile-frontend-search-help' => 'Type search term above and matching page titles will appear here.',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 	'mobile-frontend-clear-search' => 'Clear',
+	'mobile-frontend-search-content' => 'Search within articles',
+	'mobile-frontend-search-no-results' => "No article with this title.",
+	'mobile-frontend-search-content-no-results' => "'''Search within articles''' to see if this phrase appears anywhere.",
+
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text is available under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional terms may apply.',
@@ -599,6 +603,9 @@ Parameters:
 	'mobile-frontend-dismiss-notification' => 'Phrase used to dismiss the top banner notification',
 	'mobile-frontend-clear-search' => 'Tooltip for clear button that appears when you type into search box.
 {{Identical|Clear}}',
+	'mobile-frontend-search-content' => 'Caption for a button performing full text search of a given search query.',
+	'mobile-frontend-search-no-results' => 'Message informing user that no articles were found for a given query.',
+	'mobile-frontend-search-content-no-results' => 'Caption for a button performing full text search of a given search query when no pages with matching titles were found.',
 	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
 {{Identical|Privacy}}',
 	'mobile-frontend-footer-sitename' => 'Name of site',

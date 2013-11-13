@@ -109,7 +109,6 @@ body {
 input.search {
 	outline: none;
 	width: 100%;
-	height: @headerElementHeight;
 	// FIXME: unable to check but the important may not be needed for Nokia S60;
 	background-color: #fff !important; /* remove fennec default background also see bug 36490 */
 	.box-sizing( border-box );
@@ -119,6 +118,11 @@ input.search {
 	&::-webkit-search-cancel-button {
 		-webkit-appearance: none;
 	}
+}
+
+// FIXME: why is this needed?
+.stable input.search {
+	height: @headerElementHeight;
 }
 
 .searchSubmit {

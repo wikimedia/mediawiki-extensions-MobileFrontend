@@ -26,6 +26,8 @@
 
 .page-list {
 	cursor: pointer;
+	// needed for rotated watchstars to avoid horizontal scrollbar
+	overflow: hidden;
 
 	li {
 		color: #666;
@@ -103,6 +105,7 @@
 }
 
 // FIXME: there is no reason for styling in overlays to be different!
+// FIXME: remove when new overlays in stable
 .mw-mf-overlay {
 	.page-list {
 		font-size: .9em;
@@ -111,32 +114,14 @@
 			padding-left: @searchBarPaddingLeft;
 		}
 
-		&.thumbs li {
-			padding-left: @thumbOverlaySpace;
-		}
-
 		h2 {
 			font: inherit;
-		}
-
-		.listThumb {
-			width: @thumbOverlayWidth;
 		}
 	}
 
 	.actionable {
 		li:hover {
 			background-color: #ACD1E9;
-		}
-	}
-}
-
-// search without page images
-// FIXME: remove when page images are in stable
-.stable {
-	.suggestions-results {
-		li {
-			padding-left: @searchBarPaddingLeft !important;
 		}
 	}
 }
