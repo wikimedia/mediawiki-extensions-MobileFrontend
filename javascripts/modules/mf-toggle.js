@@ -19,8 +19,16 @@
 	 * @param {jQuery object} $heading A heading belonging to a section
 	 */
 	function toggle( $heading ) {
+		var isCollapsed = $heading.is( '.openSection' );
+
 		$heading.toggleClass( 'openSection' );
-		$heading.next().toggleClass( 'openSection' );
+		$heading.next()
+			.toggleClass( 'openSection' )
+			.attr( {
+				'aria-pressed': !isCollapsed,
+				'aria-expanded': !isCollapsed
+			} );
+
 		M.emit( 'section-toggle', $heading );
 	}
 
@@ -56,19 +64,36 @@
 		$headings = $page.find( '.section_heading' );
 		$headings.next( 'div' ).addClass( 'content_block' );
 
-		// use mouseup because mousedown blocks the click event and links
-		// in headings won't work
-		// FIXME change when micro.tap.js in stable
-		$headings.on( M.tapEvent( 'mouseup' ), function() {
-			toggle( $( this ) );
-		} );
+		$headings.each( function ( i ) {
+			var $elem = $( this ),
+				id = 'content_block_' + i;
 
-		// in beta expand all sections by default on wide screen devices (in beta and alpha)
-		if ( M.isWideScreen() && mw.config.get( 'wgMFMode' ) !== 'stable' ) {
-			$headings.each( function() {
+			$elem.next( '.content_block' ).eq(0)
+				.attr( {
+					// We need to give each content block a unique id as that's
+					// the only way we can tell screen readers what element we're
+					// referring to (aria-controls)
+					id: id,
+					'aria-pressed': 'false',
+					'aria-expanded': 'false'
+				} );
+
+			$elem.attr( {
+				role: 'button',
+				tabindex: 0,
+				'aria-haspopup': 'true',
+				'aria-controls': id
+			} )
+			// FIXME change when micro.tap.js in stable
+			.on( M.tapEvent( 'mouseup' ), function() {
 				toggle( $( this ) );
 			} );
-		}
+
+			// In beta expand sections by default on wide screen devices (in beta and alpha)
+			if ( M.isWideScreen() && mw.config.get( 'wgMFMode' ) !== 'stable' ) {
+				toggle( $elem );
+			}
+		} );
 
 		function checkHash() {
 			var hash = window.location.hash;
