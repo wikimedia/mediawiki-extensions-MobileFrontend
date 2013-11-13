@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_1c4d44c4",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-13T23:19:28Z",
+      "side": 1,
+      "message": "this looks dangerous to me and like a potential security problem. i have no idea what is inside of this variable, and userDescription is a public property. even if you presume its contents are safe because they may be esacped/validated typically, the value could be overloaded by some malicious invoker prior to this method being called. as a general rule, best to \"Escape as close to the output as possible, so that the reviewer can easily verify that it was done. It helps you to verify your own code as well.\" (https://www.mediawiki.org/wiki/Cross-site_scripting) and it doesn\u0027t appear that this is escaped directly at output.\n\nperhaps making userDescription a protected property and using a getter/setter that incorporates vlidation/sanitization would be a safer approach.",
+      "revId": "ad07ce89614fe1095189c67b0fda0f9e180dd8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_7c30f854",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-13T23:19:28Z",
+      "side": 1,
+      "message": "i realize that you should always have an opening p tag due to the outter ifblock, however this seems to be a potential vector for a bug in the future. while it adds an extra line of code, i think it would be safer and clearer to just close the p tag within the same block it was opened.",
+      "revId": "ad07ce89614fe1095189c67b0fda0f9e180dd8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
