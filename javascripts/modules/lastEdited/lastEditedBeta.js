@@ -43,7 +43,7 @@ var module = ( function() {
 					// Abuse PLURAL support to determine if the user is anonymous or not
 					mw.language.convertNumber( username ? 1 : 0 ),
 					// I'll abuse of PLURAL support means we have to pass the relative URL rather than construct it from a wikilink
-					username ? mw.util.wikiGetlink( 'Special:UserProfile/' + username ) : '' ] );
+					username ? mw.util.getUrl( 'Special:UserProfile/' + username ) : '' ] );
 
 			$( '<div>' ).attr( 'id', 'mw-mf-last-modified' ).
 				attr( 'class', $lastModified.attr( 'class' ) ).

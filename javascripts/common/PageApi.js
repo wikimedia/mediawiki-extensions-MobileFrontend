@@ -74,7 +74,7 @@
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
 							isMainPage: resp.mobileview.hasOwnProperty( 'mainpage' ) ? true : false,
-							historyUrl: mw.util.wikiGetlink( title, { action: 'history' } ),
+							historyUrl: mw.util.getUrl( title, { action: 'history' } ),
 							lastModifiedTimestamp: timestamp
 						};
 						// Add non-anonymous user information

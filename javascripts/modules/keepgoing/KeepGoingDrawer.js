@@ -44,7 +44,7 @@
 			options = options || {};
 			api.get( { action: 'query', list: 'random', rnnamespace: '0', rnlimit: 1 } ).done( function( resp ) {
 				var page = resp.query.random[0],
-					url = mw.util.wikiGetlink( page.title, { campaign: options.campaign, campaign_step: nextStep } );
+					url = mw.util.getUrl( page.title, { campaign: options.campaign, campaign_step: nextStep } );
 
 				options.nextUrl = url;
 				_super.call( self, options );

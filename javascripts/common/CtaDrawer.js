@@ -19,8 +19,8 @@ var Drawer = M.require( 'Drawer' ),
 			}, options.queryParams ),
 				signupParams = $.extend( { type: 'signup' }, options.signupQueryParams );
 
-			options.loginUrl = mw.util.wikiGetlink( 'Special:UserLogin', params );
-			options.signupUrl = mw.util.wikiGetlink( 'Special:UserLogin', $.extend( params, signupParams ) );
+			options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
+			options.signupUrl = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
 		}
 	} );
 

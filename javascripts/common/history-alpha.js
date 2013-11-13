@@ -25,7 +25,7 @@
 	function init() {
 		// use wgPageName to ensure we keep the namespace prefix
 		var title = mw.config.get( 'wgPageName' ),
-			currentUrl = mw.util.wikiGetlink( title, M.query );
+			currentUrl = mw.util.getUrl( title, M.query );
 		// initial history state does not contain title
 		// run before binding to avoid nasty surprises
 		History.replaceState( null, title, currentUrl );
@@ -47,7 +47,7 @@
 		 * @param {String} pageTitle String representing the title of a page that should be loaded in the browser
 		 */
 		function navigateToPage( title ) {
-			History.pushState( null, title, mw.util.wikiGetlink( title ) );
+			History.pushState( null, title, mw.util.getUrl( title ) );
 		}
 
 		/**

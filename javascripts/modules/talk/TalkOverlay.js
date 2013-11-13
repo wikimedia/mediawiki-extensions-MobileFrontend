@@ -92,7 +92,7 @@
 						// FIXME: [LQT] remove when liquid threads is dead (see Bug 51586)
 						} else if ( code === 'lqt' ) {
 							// Force a visit to the page
-							window.location = mw.util.wikiGetlink( options.title );
+							window.location = mw.util.getUrl( options.title );
 						}
 					}
 				} ).done( function( pageData ) {

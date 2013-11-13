@@ -27,7 +27,7 @@
 
 		pageApi.getPage( 'Test' ).done( function( resp ) {
 			assert.deepEqual( resp, {
-				historyUrl: mw.util.wikiGetlink( 'Test', { action: 'history' } ),
+				historyUrl: mw.util.getUrl( 'Test', { action: 'history' } ),
 				lastModifiedUserName: 'bob',
 				lastModifiedUserGender: 'unknown',
 				lastModifiedTimestamp: 1382986196,
@@ -102,7 +102,7 @@
 
 		pageApi.getPage( 'Test' ).done( function( resp ) {
 			assert.deepEqual( resp, {
-				historyUrl: mw.util.wikiGetlink( 'Test', { action: 'history' } ),
+				historyUrl: mw.util.getUrl( 'Test', { action: 'history' } ),
 				lastModifiedUserName: 'Melissa',
 				lastModifiedUserGender: 'female',
 				lastModifiedTimestamp: 1382986196,
