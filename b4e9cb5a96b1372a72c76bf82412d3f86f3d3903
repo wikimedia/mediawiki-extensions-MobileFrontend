@@ -67,6 +67,24 @@
       "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_96e67a17",
+        "filename": "less/specials/common.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-13T00:29:44Z",
+      "side": 1,
+      "message": "I imagine the answer is \"Because that\u0027s what the designers want\". I guess that\u0027s fine, but it seems like it would make more sense to just adjust the capitalization in the i18n string. This will also give translators more flexibility to do what makes sense for them in their language (rather than forcing the capitalization for every language). I\u0027m more sympathetic to using text-transform: uppercase (but only slightly) since it\u0027s more of a pure style treatment (but may potentially have similar issues).",
+      "parentUuid": "291c1151_765adef0",
+      "revId": "b4e9cb5a96b1372a72c76bf82412d3f86f3d3903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
