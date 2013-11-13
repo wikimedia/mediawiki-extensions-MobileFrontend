@@ -121,7 +121,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/common/typography.less',
 			'less/common/footer.less',
 			'less/modules/toggle.less',
-			'less/common/overlays.less',
 			'less/common/drawer.less',
 			'less/common/hacks.less',
 			'less/common/pageactions.less',
@@ -158,6 +157,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/api.js',
 			'javascripts/common/PageApi.js',
 			'javascripts/common/application.js',
+			'javascripts/common/View.js',
 			'javascripts/common/settings.js',
 			'javascripts/modules/mf-stop-mobile-redirect.js',
 		),
@@ -537,6 +537,27 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	'mobile.overlays' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.templates',
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/common/Overlay.js',
+			'javascripts/common/LoadingOverlay.js',
+		),
+		'messages' => array(
+			'mobile-frontend-overlay-escape',
+		),
+		'templates' => array(
+			'LoadingOverlay',
+			'overlay',
+		),
+		'styles' => array(
+			'less/common/overlays.less',
+		)
+	),
+
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.stable.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
@@ -545,14 +566,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.jqueryMsg',
 			'mediawiki.util',
 			'mobile.templates',
+			'mobile.overlays',
 		),
 		'templates' => array(
-			'LoadingOverlay',
 			'section',
 			'wikitext/commons-upload',
 			// LanguageOverlay.js
 			'overlays/languages',
-			'overlay',
 			'overlays/cleanup',
 			// search-2.js
 			'articleList',
@@ -573,11 +593,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'modules/tutorials/PageActionOverlay',
 		),
 		'scripts' => array(
-			'javascripts/common/View.js',
 			'javascripts/common/Drawer.js',
 			'javascripts/common/CtaDrawer.js',
-			'javascripts/common/Overlay.js',
-			'javascripts/common/LoadingOverlay.js',
 			'javascripts/widgets/progress-bar.js',
 			'javascripts/common/notification.js',
 			'javascripts/common/Page.js',
@@ -590,7 +607,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-watchlist-cta-button-signup',
 			'mobile-frontend-watchlist-cta-button-login',
 			'mobile-frontend-drawer-cancel',
-			'mobile-frontend-overlay-escape',
 
 			// LearnMoreOverlay.js, newbie.js
 			'cancel',
