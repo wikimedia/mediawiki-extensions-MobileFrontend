@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_9c35b445",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T23:11:52Z",
+      "side": 0,
+      "message": "See I1ed06c9b60822769659944e44f65277d4e86c485 this should be addressed separately in case it needs to be reverted for some caching related reason.",
+      "revId": "404755738864f6030433f4dbc7682d2540fb620b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
