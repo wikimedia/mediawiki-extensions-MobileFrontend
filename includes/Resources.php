@@ -901,6 +901,22 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/specials/userprofile.less',
 		),
 	),
+	'mobile.userprofile.scripts' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable.common',
+		),
+		'messages' => array(
+			'mobile-frontend-editor-edit',
+			'mobile-frontend-profile-description-placeholder',
+			'htmlform-submit',
+		),
+		'templates' => array(
+			'EditBox',
+		),
+		'scripts' => array(
+			'javascripts/specials/userprofile.js',
+		),
+	),
 	'mobile.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable.styles',
