@@ -83,7 +83,8 @@ class MobileFrontendHooks {
 			$betaSkinName = $skinName . 'Beta';
 			$alphaSkinName = $skinName . 'Alpha';
 			// Force alpha for test mode to sure all modules can run
-			$inTestMode = $context->getTitle()->getDBkey() === 'JavaScriptTest/qunit';
+			$inTestMode =
+				$context->getTitle()->getDBkey() === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
 			if ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) && class_exists( $alphaSkinName ) ) {
 				$skinName = $alphaSkinName;
 			} else if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
