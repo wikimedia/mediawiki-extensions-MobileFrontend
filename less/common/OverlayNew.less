@@ -4,7 +4,7 @@
 @headerMargin: .4em;
 @headingMarginV: 1em;
 @headingFontSize: 1em;
-@buttonSize: @headingFontSize + @headingMarginV * 2;
+@buttonSize: @headingFontSize + @headingMarginV * 2 + @headerMargin;
 
 .overlay-enabled {
 	.overlay {
@@ -29,8 +29,9 @@
 		width: 100%;
 		.box-sizing(border-box);
 
-		> div, h2 {
+		> ul, h2 {
 			display: table-cell;
+			vertical-align: bottom;
 			border-bottom: 1px solid #cacaca;
 		}
 
@@ -41,32 +42,42 @@
 			font-size: @headingFontSize;
 		}
 
-		> div, button {
-			width: @buttonSize;
+		> ul, button {
+			width: @buttonSize - @headerMargin;
 			white-space: nowrap;
 		}
 
 		button {
+			width: @buttonSize;
 			border-radius: 0;
 			min-height: @buttonSize;
 			font-weight: bold;
+			margin-top: -@headerMargin;
 
 			&.cancel {
 				color: #d11d13;
 			}
 		}
 
-		> div:first-child button {
+		> ul:first-child li:first-child {
 			border-right: 1px solid #cacaca;
+
+			button {
+				margin-left: -@headerMargin;
+			}
 		}
 
-		> div:last-child button:last-child {
+		> ul:last-child li:last-child {
 			border-left: 1px solid #cacaca;
+
+			button {
+				margin-right: -@headerMargin;
+			}
 		}
 
 		.icon {
 			text-indent: -9999px;
-			background-position: 50% .5em;
+			background-position: 50%;
 			background-repeat: no-repeat;
 			.background-size( 24px, auto );
 
@@ -76,6 +87,14 @@
 
 			&.cancel {
 				background-image: url(images/cancel.png);
+			}
+
+			&.submit {
+				// following 2 rules to hide the border
+				margin-left: -1px;
+				margin-bottom: -1px;
+				background-image: url(images/check.png);
+				background-color: #00af8b;
 			}
 		}
 	}

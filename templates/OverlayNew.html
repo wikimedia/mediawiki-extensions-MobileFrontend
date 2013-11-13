@@ -1,12 +1,12 @@
 <div class="overlay-header">
-	<div>
-		<button class="cancel icon">{{closeMsg}}</button>
-	</div>
+	<ul>
+		<li><button class="cancel icon">{{closeMsg}}</button></li>
+	</ul>
 	<h2>{{{heading}}}</h2>
-	<div>
+	<ul>
 		{{#headerButtons}}
-		<button class="{{className}}">{{msg}}</button>
+		<li><button class="{{className}}">{{msg}}</button></li>
 		{{/headerButtons}}
-	</div>
+	</ul>
 </div>
 {{>content}}
