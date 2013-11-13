@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_8213940b",
+        "filename": "tests/javascripts/modules/test_mf-toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T18:31:34Z",
+      "side": 1,
+      "message": "please put the . on the end of the line (coding convention)",
+      "revId": "92265e5145dba5e905542f504cd88722e14f8b40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_c2702c74",
+        "filename": "tests/javascripts/modules/test_mf-toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T18:31:34Z",
+      "side": 1,
+      "message": "another indent needed.",
+      "revId": "92265e5145dba5e905542f504cd88722e14f8b40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_223100a3",
+        "filename": "tests/javascripts/modules/test_mf-toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T18:31:34Z",
+      "side": 1,
+      "message": "I  wonder if there is any advantage over doing this instead of using .html( ...",
+      "revId": "92265e5145dba5e905542f504cd88722e14f8b40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_020084ac",
+        "filename": "tests/javascripts/modules/test_mf-toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-13T18:31:34Z",
+      "side": 1,
+      "message": "I don\u0027t understand - why is this needed all of a sudden? All tests should be forced to run in alpha mode already....\nHow are you managing to run the tests in stable mode?\n(onRequestContextCreateSkin should force the alpha mode of the skin)",
+      "revId": "92265e5145dba5e905542f504cd88722e14f8b40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
