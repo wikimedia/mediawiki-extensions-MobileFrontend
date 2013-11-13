@@ -4,7 +4,7 @@ class SpecialHistory extends MobileSpecialPageFeed {
 	const LIMIT = 50;
 	protected $mode = 'beta';
 
-	/**  @var Title */
+	/**  @var Title|null if no title passed */
 	protected $title;
 
 	public function __construct() {
@@ -91,7 +91,7 @@ class SpecialHistory extends MobileSpecialPageFeed {
 		if ( $canSeeText && $prev && $prev->userCan( Revision::DELETED_TEXT, $user ) ) {
 			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )->getLocalUrl();
 		} elseif ( $canSeeText ) {
-			$diffLink = $this->title->getLocalUrl( array( 'oldid' => $rev->getId() ) );
+			$diffLink = $rev->getTitle()->getLocalUrl( array( 'oldid' => $rev->getId() ) );
 		} else {
 			$diffLink = false;
 		}
