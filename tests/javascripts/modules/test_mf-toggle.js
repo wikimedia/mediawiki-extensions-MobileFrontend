@@ -4,20 +4,21 @@ var $container,
 	toggle = M.require( 'toggle' );
 
 function makeSections() {
-	$container = $( '<div>' ).appendTo( '#content' );
-	$( '<h2 class="section_heading" id="section_1"><span id="First_Section">First Section</span></h2>' ).appendTo( $container );
-	$( '<div class="content_block" id="content_1"><p>Text</p></div>' ).appendTo( $container );
+	return $( '<div>' ).appendTo( '#content' ).html(
+			'<h2 id="section_0"><span id="First_Section">First Section</span></h2>' +
+			'<div id="content_block_0"><p>Text</p></div>' +
 
-	$( '<h2 class="section_heading" id="section_2">' ).appendTo( $container );
-	$( '<div class="content_block" id="content_2">' ).appendTo( $container );
-	return $container;
+			'<h2 id="section_1"><a href="#foo">Dummy Link</a></h2>' +
+			'<div id="content_block_1"></div>'
+		);
 }
+
 QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	setup: function() {
 		$container = makeSections();
 		sinon.stub( M, 'isWideScreen' ).returns( false );
 		toggle.enable();
-		$("#section_1,#content_1,#anchor_1").addClass("openSection");
+		toggle.toggle( $( '#section_0' ) );
 	},
 	teardown: function() {
 		window.location.hash = "#";
@@ -26,42 +27,50 @@ QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	}
 });
 
-QUnit.test( 'wm_toggle_section', 5, function() {
-	strictEqual($("#section_1").hasClass("openSection"), true, "openSection class present");
-	toggle.toggle( $( '#section_1' ) );
-	strictEqual($("#content_1").hasClass("openSection"), false, "check content is closed on a toggle");
-	strictEqual($("#section_1").hasClass("openSection"), false, "check section is closed");
+QUnit.test( 'Toggle section', 5, function() {
+	var $section = $( '#section_0' ),
+		$content = $( '#content_block_0' );
 
-	// perform second toggle
-	toggle.toggle( $( '#section_1' ) );
-	strictEqual($("#content_1").hasClass("openSection"), true, "check content reopened");
-	strictEqual($("#section_1").hasClass("openSection"), true, "check section has reopened");
-});
+	strictEqual( $section.hasClass( 'openSection' ), true, 'openSection class present' );
+	toggle.toggle( $section );
+	strictEqual( $content.hasClass( 'openSection' ), false, 'check content gets closed on a toggle' );
+	strictEqual( $section.hasClass( 'openSection' ), false, 'check section is closed' );
 
-QUnit.test( 'clicking a hash link to reveal an already open section', 2, function() {
-	strictEqual($("#section_1").hasClass("openSection"), true, "check section is open");
+	// Perform second toggle
+	toggle.toggle( $section );
+	strictEqual( $content.hasClass( 'openSection' ), true, 'check content reopened' );
+	strictEqual( $section.hasClass( 'openSection' ), true, 'check section has reopened' );
+} );
+
+QUnit.test( 'Clicking a hash link to reveal an already open section', 2, function() {
+	var $section = $( '#section_0' );
+
+	strictEqual( $section.hasClass( 'openSection' ), true, 'check section is open' );
 	toggle.reveal( 'First_Section' );
-	strictEqual($("#section_1").hasClass("openSection"), true, "check section is still open");
-});
+	strictEqual( $section.hasClass( 'openSection' ), true, 'check section is still open' );
+} );
 
-QUnit.test( 'reveal', 2, function() {
-	toggle.reveal( '#First_Section_2' );
-	strictEqual($("#content_1").hasClass("openSection"), true, "check content is visible on a toggle");
-	strictEqual($("#section_1").hasClass("openSection"), true, "check section is marked as open");
-});
+QUnit.test( 'Reveal element', 2, function() {
+	toggle.reveal( 'First_Section' );
+	strictEqual( $( '#content_block_0' ).hasClass( 'openSection' ), true, 'check content is visible' );
+	strictEqual( $( '#section_0' ).hasClass( 'openSection' ), true, 'check section is open' );
+} );
 
-QUnit.test( 'clicking hash links', 2, function() {
-	$( '[href=#First_Section_2]' ).trigger( 'click' );
-	strictEqual($("#content_1").hasClass("openSection"), true, "check content is visible on a toggle");
-	strictEqual($("#section_1").hasClass("openSection"), true, "check section marked as open");
-});
+QUnit.test( 'Clicking hash links', 2, function() {
+	$( '[href=#First_Section]' ).trigger( 'click' );
+	strictEqual( $( '#content_block_0' ).hasClass( 'openSection' ), true, 'check content is visible' );
+	strictEqual( $( '#section_0' ).hasClass( 'openSection' ), true, 'check section is open' );
+} );
 
-QUnit.test( 'clicking a heading toggles it', 2, function() {
-	var visibilityStart = $("#content_2").hasClass("openSection");
-	$( '#section_2' ).trigger( M.tapEvent( 'mouseup' ) );
-	strictEqual(visibilityStart, false, "check content is hidden at start");
-	strictEqual($("#content_2").hasClass("openSection"), true, "check content is shown on a toggle");
-});
+QUnit.test( 'Mouseup on a heading toggles it', 2, function() {
+	var $content = $( '#content_block_1' );
+
+	strictEqual( $content.hasClass( 'openSection' ), false, 'check content is hidden at start' );
+
+	$( '#section_1' ).trigger( M.tapEvent( 'mouseup' ) );
+
+	strictEqual( $content.hasClass( 'openSection' ), true, 'check content is shown on a toggle' );
+} );
 
 QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	setup: function() {
@@ -76,8 +85,8 @@ QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	}
 } );
 
-QUnit.test( 'open by default', 1, function() {
-	strictEqual( $( '#content_1' ).hasClass( 'openSection' ), true, 'check section is visible at start' );
+QUnit.test( 'Open by default', 1, function() {
+	strictEqual( $( '#content_block_1' ).hasClass( 'openSection' ), true, 'check section is visible at start' );
 } );
 
 }( mw.mobileFrontend, jQuery ) );
