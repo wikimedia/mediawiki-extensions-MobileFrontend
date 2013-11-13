@@ -150,7 +150,8 @@ class MobileUserInfo {
 	public function getLastThanking() {
 		wfProfileIn( __METHOD__ );
 		$thank = false;
-		if ( class_exists( 'MWEchoDbFactory' ) ) {
+		// Check that the Thank Extension and Echo extension are both installed before doing this (bug 56825)
+		if ( class_exists( 'MWEchoDbFactory' ) && class_exists( 'ApiThank' ) ) {
 			$dbr = MWEchoDbFactory::getDB( DB_SLAVE );
 			$rows = $dbr->select(
 				array( 'echo_event', 'echo_notification' ),
