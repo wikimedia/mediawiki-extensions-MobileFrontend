@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_a86f85c4",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-14T23:59:33Z",
+      "side": 1,
+      "message": "That\u0027s from before we talked. I\u0027ll change it.",
+      "parentUuid": "291c1151_0b9fb85c",
+      "revId": "d9cec3a2e834a847132325673577e6a83b41ca78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_4b8d3032",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-11-14T17:44:53Z",
       "side": 1,
       "message": "The line above has $modules[\u0027search\u0027] - use that! :) (SkinMobileBeta can easily swap it out)",
+      "revId": "d9cec3a2e834a847132325673577e6a83b41ca78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_08ac19ed",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-14T23:59:33Z",
+      "side": 1,
+      "message": "Instead of having to add modules in here manually I\u0027d propose a different thing. Have modules which list other modules as their dependencies, e.g.:\n\nmobile.beta.bundle \u003d\u003e depends on mobile.beta, mobile.search.beta, etc.\nmobile.stable.only.bundle \u003d\u003e depends on mobile.stable, mobile.lastEdited.stable, etc.\n\nThis way we wouldn\u0027t have to edit multiple files to sort out dependencies, everything would be in Resources.php.",
+      "parentUuid": "291c1151_4b8d3032",
       "revId": "d9cec3a2e834a847132325673577e6a83b41ca78",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
