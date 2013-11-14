@@ -482,16 +482,15 @@ class MobileFrontendHooks {
 		global $wgMFEnableXAnalyticsLogging;
 		wfProfileIn( __METHOD__ );
 
-		if ( class_exists( 'BetaFeatures' ) &&
-			BetaFeatures::isFeatureEnabled( $out->getSkin()->getUser(), 'betafeatures-geonotahack' ) ) {
-			// FIXME: Remove need for this module
-			$out->addModules( array( 'mobile.bridge' ) );
-			// FIXME: Find better way to deal with wgMFMode in desktop (maybe standardise BetaFeatures to use the same variable)
-			$out->addJsConfigVars( 'wgMFMode', 'desktop-beta' );
-		}
-
 		$context = MobileContext::singleton();
 		if ( !$context->shouldDisplayMobileView() ) {
+			if ( class_exists( 'BetaFeatures' ) &&
+				BetaFeatures::isFeatureEnabled( $out->getSkin()->getUser(), 'betafeatures-geonotahack' ) ) {
+				// FIXME: Remove need for this module
+				$out->addModules( array( 'mobile.bridge' ) );
+				// FIXME: Find better way to deal with wgMFMode in desktop (maybe standardise BetaFeatures to use the same variable)
+				$out->addJsConfigVars( 'wgMFMode', 'desktop-beta' );
+			}
 			wfProfileOut( __METHOD__);
 			return true;
 		}
