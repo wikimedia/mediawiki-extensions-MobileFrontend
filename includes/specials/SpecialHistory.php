@@ -3,6 +3,8 @@
 class SpecialHistory extends MobileSpecialPageFeed {
 	const LIMIT = 50;
 	protected $mode = 'beta';
+	/**  @var String|null timestamp to offset results from */
+	protected $offset;
 
 	/**  @var Title|null if no title passed */
 	protected $title;
@@ -16,6 +18,7 @@ class SpecialHistory extends MobileSpecialPageFeed {
 
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'history' ) );
+		$this->offset = $this->getRequest()->getVal( 'offset', false );
 		if ( $par ) {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
@@ -41,12 +44,13 @@ class SpecialHistory extends MobileSpecialPageFeed {
 	protected function doQuery() {
 		wfProfileIn( __METHOD__ );
 		$table = 'revision';
+		$dbr = wfGetDB( DB_SLAVE, $table );
+		$conds = array();
+		if ( $this->offset ) {
+			$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
+		}
 		if ( $this->title ) {
-			$conds = array(
-				'rev_page' => $this->title->getArticleID(),
-			);
-		} else {
-			$conds = array();
+			$conds['rev_page'] = $this->title->getArticleID();
 		}
 		$options = array(
 			'ORDER BY' => 'rev_timestamp DESC',
@@ -56,7 +60,6 @@ class SpecialHistory extends MobileSpecialPageFeed {
 		$options['LIMIT'] = self::LIMIT + 1;
 
 		$tables = array( $table );
-		$dbr = wfGetDB( DB_SLAVE, $table );
 		$fields = array( '*' );
 
 		wfProfileIn( __METHOD__ . '-query' );
@@ -112,28 +115,50 @@ class SpecialHistory extends MobileSpecialPageFeed {
 		wfProfileOut( __METHOD__ );
 	}
 
+	protected function getMoreButton( $ts ) {
+		$attrs = array(
+			'href' => $this->getContext()->getTitle()->
+				getLocalUrl(
+					array(
+						'offset' => $ts,
+					)
+				),
+			'class' => 'more',
+		);
+		return Html::element( 'a', $attrs, 'more' );
+	}
+
 	protected function showHistory( ResultWrapper $res ) {
+		$numRows = $res->numRows();
 		$rev1 = $rev2 = null;
 		$out = $this->getOutput();
-		$out->addHtml(
-			Html::openElement( 'ul',
-				array(
-					'class' => 'page-list'
+		if ( $numRows > 0 ) {
+			$out->addHtml(
+				Html::openElement( 'ul',
+					array(
+						'class' => 'page-list'
+					)
 				)
-			)
-		);
+			);
 
-		foreach ( $res as $row ) {
-			$rev1 = new Revision( $row );
-			if ( $rev2 ) {
-				$this->showRow( $rev2, $rev1 );
+			foreach ( $res as $row ) {
+				$rev1 = new Revision( $row );
+				if ( $rev2 ) {
+					$this->showRow( $rev2, $rev1 );
+				}
+				$rev2 = $rev1;
 			}
-			$rev2 = $rev1;
+			if ( $rev1 && $numRows < self::LIMIT + 1 ) {
+				$this->showRow( $rev1, null );
+			}
+			$out->addHtml( '</ul>' );
+			// Captured 1 more than we should have done so if the number of results is greater than the limit there are more to show
+			if ( $numRows > self::LIMIT ) {
+				$out->addHtml( $this->getMoreButton( $rev1->getTimestamp() ) );
+			}
+		} else {
+			$out->addHtml( Html::element( 'div', array( 'class' => 'error alert' ),
+				$this->msg( 'mobile-frontend-history-no-results' ) ) );
 		}
-		if ( $rev1 && $res->numRows() < self::LIMIT + 1 ) {
-			$this->showRow( $rev1, null );
-		}
-		$out->addHtml( '</ul>' );
-		// @todo: paging
 	}
 }

@@ -83,6 +83,7 @@ $messages['en'] = array (
 	'mobile-frontend-history' => 'View edit history of this page.',
 	'mobile-frontend-history-404-title' => 'Bad title given',
 	'mobile-frontend-history-404-desc' => "Cannot look at history for a page that doesn't exist. It may have been deleted or you may have followed a bad link.",
+	'mobile-frontend-history-no-results' => 'No history matches the filter provided.',
 	'mobile-frontend-history-summary' => 'Page history for [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Last modified on $1, at $2',
 	'mobile-frontend-last-modified-seconds' => 'Last modified {{PLURAL:$1|$1 second|$1 seconds}} ago',
@@ -501,6 +502,7 @@ This is shown on the Main Page in place of a last modified label to avoid confus
 
 If not the Main Page, the following message is used:
 * {{msg-mw|Mobile-frontend-last-modified-date}}',
+	'mobile-frontend-history-no-results' => 'Error shown when there are no history entires for a given/invalid filter.',
 	'mobile-frontend-history-404-title' => 'Title of the 404 error page shown when navigate to [[Special:History/Title of page that does not exist]]',
 	'mobile-frontend-history-404-desc' => 'Explain the reasons why the user may have arrived on {{msg-mw|mobile-frontend-history-404-title}}',
 	'mobile-frontend-history-summary' => 'Summary text that appears at the top of the mobile history page for a given page.

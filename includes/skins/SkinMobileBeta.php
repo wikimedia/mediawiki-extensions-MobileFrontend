@@ -36,6 +36,7 @@ class SkinMobileBeta extends SkinMobile {
 		if ( !$title->isMainPage() ) {
 			$link['class'] = 'top-bar';
 		}
+		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
 		return $link;
 	}
 
