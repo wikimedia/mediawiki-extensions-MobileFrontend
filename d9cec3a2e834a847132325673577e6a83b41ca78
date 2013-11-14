@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_0b9fb85c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-14T17:44:53Z",
+      "side": 1,
+      "message": "Why not mobile.search.beta which has a dependency of mobile.search.stable?\n\nLet\u0027s try and get out of the habit of using mobile.beta and mobile.alpha to describe in which mode features live and instead describe what they are as discussed on IRC.\n\n(This would also lead to less merge conflicts)",
+      "revId": "d9cec3a2e834a847132325673577e6a83b41ca78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_4b8d3032",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-14T17:44:53Z",
+      "side": 1,
+      "message": "The line above has $modules[\u0027search\u0027] - use that! :) (SkinMobileBeta can easily swap it out)",
+      "revId": "d9cec3a2e834a847132325673577e6a83b41ca78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
