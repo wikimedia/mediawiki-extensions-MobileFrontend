@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_bfe0a22d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 577,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-14T00:21:39Z",
+      "side": 1,
+      "message": "This should probably be a protocol-relative URL",
+      "revId": "f1342d4cf4c75b7246c7f98b2f60ebea33ee4325",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_dfdd5e6d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 578,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-14T00:21:39Z",
+      "side": 1,
+      "message": "This should probably be a protocol-relative URL",
+      "revId": "f1342d4cf4c75b7246c7f98b2f60ebea33ee4325",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_3f3112a3",
+        "filename": "javascripts/desktop/mobileBridge.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-11-14T00:21:39Z",
+      "side": 1,
+      "message": "Let\u0027s add a FIXME to not use this hack at some point.",
+      "revId": "f1342d4cf4c75b7246c7f98b2f60ebea33ee4325",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
