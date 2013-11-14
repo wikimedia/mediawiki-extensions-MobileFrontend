@@ -17,8 +17,17 @@ a.mw-mf-cleanup {
 	}
 }
 
-ul.cleanup img {
-	display: block;
-	margin: 0 auto 1em auto;
+.overlay,
+.mw-mf-overlay {
+	.cleanup {
+		margin: @contentMargin @contentMargin 0 @contentMargin;
+	}
+}
+
+.mw-mf-overlay .cleanup {
+	img {
+		display: block;
+		margin: 0 auto 1em auto;
+	}
 }
 

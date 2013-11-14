@@ -425,15 +425,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta.common',
+			'mobile.overlays.beta',
 		),
 		'styles' => array(
-			'less/common/OverlayNew.less',
 			'less/modules/talk.less',
 			'less/modules/mediaViewer.less',
 		),
 		'scripts' => array(
-			'javascripts/common/OverlayNew.js',
-			'javascripts/common/LoadingOverlayNew.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
@@ -442,7 +440,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/keepgoing/keepgoing.js',
 		),
 		'templates' => array(
-			'OverlayNew',
 			'modules/ImageOverlay',
 		),
 		'position' => 'bottom',
@@ -563,7 +560,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'less/common/common-js.less',
 			'less/modules/languages.less',
-			'less/modules/issues.less',
 			'less/modules/watchstar.less',
 			'less/modules/tutorials.less',
 			'less/modules/editor.less',
@@ -590,6 +586,22 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'less/common/overlays.less',
 		)
+	),
+
+	'mobile.overlays.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+		),
+		'scripts' => array(
+			'javascripts/common/OverlayNew.js',
+			'javascripts/common/LoadingOverlayNew.js',
+		),
+		'styles' => array(
+			'less/common/OverlayNew.less',
+		),
+		'templates' => array(
+			'OverlayNew',
+		),
 	),
 
 	// Important: This module is loaded on both mobile and desktop skin
@@ -686,7 +698,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/externals/micro.autosize.js',
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle.js',
-			'javascripts/modules/issues/issues.js',
 			'javascripts/modules/languages/languages.js',
 			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
@@ -703,10 +714,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-close-section',
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
-
-			// issues.js
-			'mobile-frontend-meta-data-issues',
-			'mobile-frontend-meta-data-issues-header',
 
 			// lastEdited.js
 			'mobile-frontend-last-modified-seconds',
@@ -736,6 +743,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+
 	// FIXME: remove when new search overlay in stable
 	'mobile.search.stable' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
@@ -755,6 +763,40 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for search.js
 			'mobile-frontend-search-help',
 			'mobile-frontend-search-noresults',
+		),
+	),
+
+	'mobile.issues' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+		),
+		'styles' => array(
+			'less/modules/issues.less',
+		),
+		'scripts' => array(
+			'javascripts/modules/issues/issues.js',
+		),
+		'messages' => array(
+			// issues.js
+			'mobile-frontend-meta-data-issues',
+			'mobile-frontend-meta-data-issues-header',
+		),
+	),
+
+	'mobile.issues.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays.beta',
+		),
+		'styles' => array(
+			'less/modules/issues.less',
+		),
+		'scripts' => array(
+			'javascripts/modules/issues/issues.js',
+		),
+		'messages' => array(
+			// issues.js
+			'mobile-frontend-meta-data-issues',
+			'mobile-frontend-meta-data-issues-header',
 		),
 	),
 

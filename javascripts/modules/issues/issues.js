@@ -3,7 +3,11 @@
 var module = (function() {
 	var
 		issues = [],
-		Overlay = M.require( 'Overlay' ),
+		$link,
+		useNewOverlays = mw.config.get( 'wgMFMode' ) !== 'stable',
+		// FIXME: Promote to stable
+		Overlay = M.require( useNewOverlays ? 'OverlayNew' : 'Overlay' ),
+		// FIXME: Separate into separate file
 		CleanupOverlay = Overlay.extend( {
 			defaults: $.extend( {}, Overlay.prototype.defaults, {
 				heading: mw.msg( 'mobile-frontend-meta-data-issues-header' )
@@ -11,7 +15,12 @@ var module = (function() {
 			templatePartials: {
 				content: M.template.get( 'overlays/cleanup' )
 			}
+		} ),
+		// FIXME: Merge into CleanupOverlay
+		CleanupOverlayNew = CleanupOverlay.extend( {
+			closeOnBack: true
 		} );
+
 
 	function run( $container, parentOverlay ) {
 		$container = $container || M.getLeadSection();
@@ -33,14 +42,25 @@ var module = (function() {
 			}
 		} );
 
-		overlay = new CleanupOverlay( {
-			parent: parentOverlay,
-			issues: issues
-		} );
+		$link = $( '<a class="mw-mf-cleanup">' );
+		if ( useNewOverlays ) {
+			overlay = new CleanupOverlayNew( {
+				parent: parentOverlay,
+				issues: issues
+			} );
+			$link.attr( 'href', '#issues' );
+			M.router.route( /^issues$/, function() {
+				overlay.show();
+			} );
+		} else {
+			overlay = new CleanupOverlay( {
+				parent: parentOverlay,
+				issues: issues
+			} );
+			$link.on( 'click', $.proxy( overlay, 'show' ) );
+		}
 
-		$( '<a class="mw-mf-cleanup">' ).click( function() {
-			overlay.show();
-		} ).text( mw.msg( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
+		$link.text( mw.msg( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
 	}
 

@@ -56,6 +56,7 @@ class SkinMobileBeta extends SkinMobile {
 		$modules['beta'] = array( 'mobile.beta' );
 		$modules['beta'][] = 'mobile.geonotahack';
 		$modules['search'] = array( 'mobile.search.beta' );
+		$modules['issues'] = array( 'mobile.issues.beta' );
 		// turn off stable only modules
 		$modules['stableonly'] = array();
 		return $modules;

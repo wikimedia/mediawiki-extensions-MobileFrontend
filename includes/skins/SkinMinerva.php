@@ -563,6 +563,7 @@ class SkinMinerva extends SkinTemplate {
 		$modules['watch'] = array();
 		$modules['search'] = array( 'mobile.search.stable' );
 		$modules['stableonly'] = array( 'mobile.lastEdited.stable' );
+		$modules['issues'] = array( 'mobile.issues' );
 
 		$title = $this->getTitle();
 
