@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	M.assertMode( [ 'beta', 'alpha' ] );
+	M.assertMode( [ 'beta', 'alpha', 'desktop-beta' ] );
 	var Overlay = M.require( 'Overlay' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		api = M.require( 'api' ),

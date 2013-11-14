@@ -479,6 +479,14 @@ class MobileFrontendHooks {
 		global $wgMFEnableXAnalyticsLogging;
 		wfProfileIn( __METHOD__ );
 
+		if ( class_exists( 'BetaFeatures' ) &&
+			BetaFeatures::isFeatureEnabled( $out->getSkin()->getUser(), 'betafeatures-geonotahack' ) ) {
+			// FIXME: Remove need for this module
+			$out->addModules( array( 'mobile.bridge' ) );
+			// FIXME: Find better way to deal with wgMFMode in desktop (maybe standardise BetaFeatures to use the same variable)
+			$out->addJsConfigVars( 'wgMFMode', 'desktop-beta' );
+		}
+
 		$context = MobileContext::singleton();
 		if ( !$context->shouldDisplayMobileView() ) {
 			wfProfileOut( __METHOD__);
@@ -549,6 +557,28 @@ class MobileFrontendHooks {
 		);
 		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
+
+		return true;
+	}
+
+	/**
+	 * GetBetaFeaturePreferences hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetPreferences
+	 *
+	 * @param User $user
+	 * @param array $preferences
+	 *
+	 * @return bool
+	 */
+	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
+		global $wgExtensionAssetsPath;
+		$preferences['betafeatures-geonotahack'] = array(
+			'label-message' => 'beta-feature-geonotahack',
+			'desc-message' => 'beta-feature-geonotahack-description',
+			'info-link' => '//www.mediawiki.org/wiki/Beta Features/Nearby Pages',
+			'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta Features/Nearby Pages',
+			'screenshot' => $wgExtensionAssetsPath . '/MobileFrontend/images/BetaFeatures/nearby.svg',
+		);
 
 		return true;
 	}

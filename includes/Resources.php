@@ -73,6 +73,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'targets' => array( 'mobile', 'desktop' ),
 	),
 
+	// FIXME: Remove need for this module
+	// Mobile Bridge - Tweaks the desktop UI so mobile code can run on it
+	'mobile.bridge' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/desktop/mobileBridge.less',
+		),
+		'scripts' => array(
+			'javascripts/desktop/mobileBridge.js',
+		),
+	),
+
 	// EventLogging
 	'mobile.infoboxTracking' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(

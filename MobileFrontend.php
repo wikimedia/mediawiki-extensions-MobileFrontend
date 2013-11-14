@@ -125,6 +125,7 @@ $wgHooks['UserCreateForm'][] = 'MobileFrontendHooks::onUserCreateForm';
 $wgHooks['BeforePageDisplay'][] = 'MobileFrontendHooks::onBeforePageDisplay';
 $wgHooks['CustomEditor'][] = 'MobileFrontendHooks::onCustomEditor';
 $wgHooks['GetPreferences'][] = 'MobileFrontendHooks::onGetPreferences';
+$wgHooks['GetBetaFeaturePreferences'][] = 'MobileFrontendHooks::onGetBetaFeaturePreferences';
 $wgHooks['Gadgets::allowLegacy'][] = 'MobileFrontendHooks::onAllowLegacyGadgets';
 $wgHooks['UnitTestsList'][] = 'MobileFrontendHooks::onUnitTestsList';
 $wgHooks['CentralAuthLoginRedirectData'][] = 'MobileFrontendHooks::onCentralAuthLoginRedirectData';
