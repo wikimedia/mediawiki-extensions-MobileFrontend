@@ -3,13 +3,9 @@ and MediaWiki:Common.css definitions that are specific to English Wikipedia (and
 This file should not need to exist
 IMPORTANT: do not use selectors containing attribute notation e.g. [style] [colspan]
         as they are known to damage the ios app
+FIXME: Kill this file
 */
 @import "../variables.less";
-
-// Hide cleanup templates by default to non-javascript users as these stop them from reading the article itself
-#content table.ambox {
-	display: none;
-}
 
 code,
 pre {
@@ -22,40 +18,8 @@ pre {
 	padding: 1em;
 }
 
-.mobile #coordinates {
-	display: none; /* TODO: style for mobile */
-}
-
 .dablink {
 	margin-bottom: 10px;
-}
-
-table.navbox td.navbox-group {
-	background: #ddddff;
-	width: 25%;
-	padding: 3px;
-}
-
-table.navbox th.navbox-title {
-	background: #ccccff;
-	padding: 5px;
-}
-
-table.navbox td.navbox-abovebelow {
-	padding: 3px;
-}
-
-table.navbox td.navbox-group + td {
-	padding: 3px;
-}
-
-table.navbox td,
-table.navbox th {
-	padding: 0;
-}
-
-table.navbox table {
-	margin-bottom: 0;
 }
 
 table.infobox {
@@ -71,13 +35,6 @@ table.infobox td {
 	border: 0;
 }
 
-.navbox .hlist dd,
-.navbox .hlist dt,
-.navbox .hlist li {
-	white-space: pre-wrap !important;
-	word-wrap: break-word;
-}
-
 /* force portals to use a one column layout on mobile */
 .mobile .portal-column-left-wide,
 .mobile .portal-column-left,
@@ -89,21 +46,6 @@ table.infobox td {
 
 .collapsible td {
 	width: auto !important;
-}
-
-table.navbox {
-	font-size: 0.9em;
-	width: 100% !important;
-}
-
-table.navbox div {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-}
-
-table.navbox div a,
-table.navbox span {
-	white-space: pre-wrap !important;
 }
 
 table.infobox {
