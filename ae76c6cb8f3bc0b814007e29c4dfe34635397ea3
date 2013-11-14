@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_52f16500",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-14T07:45:27Z",
+      "side": 1,
+      "message": "Preferred is to add GENDER explicitly. It\u0027s our experience this prevents multiple translators asking questions or making unneeded mistakes.",
+      "parentUuid": "291c1151_fff3fa9a",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_9f04c67e",
         "filename": "includes/specials/SpecialHistory.php",
         "patchSetId": 2
