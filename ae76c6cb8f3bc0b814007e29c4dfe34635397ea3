@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_dfd1defa",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-14T01:05:13Z",
+      "side": 1,
+      "message": "you added the $2 param in the documentation for this message, but looks like you forgot to actually add gender support - although I\u0027m not entirely clear on where you\u0027d put {{GENDER}} here?",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_9f04c67e",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-14T01:05:13Z",
+      "side": 1,
+      "message": "it would be best to escape the value of $msg here (best to escape as close to output as possible)",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
