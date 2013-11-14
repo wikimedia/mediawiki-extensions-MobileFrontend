@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_fff3fa9a",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-14T01:10:31Z",
+      "side": 1,
+      "message": "This is why I documented it. It\u0027s optional. It can be used if necessary but English has no need for it. I\u0027m not sure what\u0027s the preferred method for doing this?",
+      "parentUuid": "291c1151_dfd1defa",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_9f04c67e",
         "filename": "includes/specials/SpecialHistory.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-11-14T01:05:13Z",
       "side": 1,
       "message": "it would be best to escape the value of $msg here (best to escape as close to output as possible)",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_1ff1b693",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-14T01:10:31Z",
+      "side": 1,
+      "message": "k",
+      "parentUuid": "291c1151_9f04c67e",
       "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
