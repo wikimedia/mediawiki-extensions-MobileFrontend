@@ -7,6 +7,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 	protected $disableSearchAndFooter = false;
 
 	/**
+	 * Maximum number of characters to display as the user description
+	 */
+	const MAX_DESCRIPTION_CHARS = 255;
+
+	/**
 	 * @var User
 	 */
 	private $targetUser;
@@ -14,6 +19,16 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 * @var MobileUserInfo
 	 */
 	private $userInfo;
+	/**
+	 * The user's description of himself or herself
+	 * @var String
+	 */
+	public $userDescription;
+	/**
+	 * Whether or not the page is editable by the current user
+	 * @var Boolean
+	 */
+	private $editable = false;
 
 	public function __construct() {
 		parent::__construct( 'UserProfile' );
@@ -61,9 +76,34 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return $img;
 	}
 
+	/**
+	 * Returns HTML to show the user's description as well as a hidden form for editing
+	 * the description.
+	 *
+	 * @return String HTML
+	 *
+	 */
 	protected function getUserSummary() {
-		// @todo: Story 1218
-		return '';
+		$user = $this->getUser();
+		$out = '';
+		if ( $this->editable || $this->userDescription ) {
+			$out = Html::openElement( 'div', array( 'class' => 'user-description-container' ) );
+				if ( $this->userDescription ) {
+					$out .= Html::openElement( 'p', array( 'class' => 'user-description' ) );
+					// FIXME: Use quotation-marks message
+					// NOTE: This outputs WikiText as raw text (not parsed). This is on
+					// purpose, but may be changed in the future.
+					$out .= htmlspecialchars( $this->userDescription );
+					$out .= Html::closeElement( 'p' );
+				} else if ( $this->editable ) {
+					$out .= Html::openElement( 'p', array( 'class' => 'user-description-placeholder' ) );
+					$out .= $this->msg( 'mobile-frontend-profile-description-placeholder',
+						$this->targetUser );
+					$out .= Html::closeElement( 'p' );
+				}
+			$out .= Html::closeElement( 'div' );
+		}
+		return $out;
 	}
 
 	/**
@@ -156,8 +196,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 			'class' => 'talk',
 			'href' => $this->targetUser->getTalkPage()->getLocalUrl(),
 		);
-		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk', $this->targetUser->getName(),
-			$this->targetUser->getOption( 'gender' ) ) );
+		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk', $this->targetUser->getName() ) );
 	}
 
 	// FIXME: Change this into 404 error
@@ -223,24 +262,67 @@ class SpecialUserProfile extends MobileSpecialPage {
 	public function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
+		$request = $this->getRequest();
 		$this->addModules();
 		$out->addModuleStyles( 'mobile.special.styles' );
-
 		$out->setProperty( 'unstyledContent', true );
+		$out->addJsConfigVars( array( 'wgMFMaxDescriptionChars' => self::MAX_DESCRIPTION_CHARS ) );
 		$out->setPageTitle( $this->msg( 'mobile-frontend-profile-title' ) );
 		if ( $par ) {
 			$this->targetUser = User::newFromName( $par );
 			// Make sure this is a valid registered user and not an invalid username (e.g. ip see bug 56822)
 			if ( $this->targetUser && $this->targetUser->getId() ) {
-				// prepare content
+
+				// See if user is allowed to edit this user profile
+				$user = $this->getUser();
+				if ( $user->isLoggedIn() &&
+					$user->isAllowed( 'edit' ) &&
+					$user->getId() === $this->targetUser->getId()
+				) {
+					$this->editable = true;
+				}
+
+				// If the editing form was submitted, process that first.
+				if ( $this->editable && $request->wasPosted() ) {
+					// Check authentication token
+					if ( $user->matchEditToken( $request->getVal( 'authtoken' ) ) ) {
+						$title = Title::newFromText(
+							$this->targetUser->getName() . '/UserProfileIntro',
+							NS_USER
+						);
+						$article = new Article( $title );
+						$description = $request->getVal( 'description' );
+						$content = ContentHandler::makeContent( $description, $title );
+						// Save the edit
+						$article->doEditContent( $content, $this->msg( 'mobile-frontend-profile-edit-summary' ) );
+					} else {
+						// Show error about bad session.
+						$this->showError( 'sessionfailure' );
+					}
+				}
+
+				// Prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$activityHtml = $this->getLastEditHtml() . $this->getLastUploadHtml()
 					. $this->getLastThanksHtml();
-				// FIXME: Talk link should go below activity if no summary.
+
+				// FIXME: There's probably a cleaner way to do this.
+				$userDescPageName = $this->targetUser->getUserPage()->getPrefixedText() . '/UserProfileIntro';
+				$this->userDescription = $this->getLang()->truncate( $this->getWikiPageText( $userDescPageName ),
+					self::MAX_DESCRIPTION_CHARS );
+
+				$summary = $this->getUserSummary();
+				$talkLink = $this->getTalkLink();
+				if ( $summary ) {
+					$lead = $summary . $talkLink;
+				} else {
+					$lead = '';
+				}
+
 				$html = Html::element( 'h1', array(), $this->targetUser->getName() )
 					. Html::openElement( 'div', array( 'class' => 'profile content' ) )
-					. $this->getUserSummary()
-					. $this->getTalkLink();
+					. $lead;
+
 				if ( $activityHtml ) {
 					$html .= Html::openElement( 'h2' )
 						. $this->msg( 'mobile-frontend-profile-activity-heading' )
@@ -249,8 +331,12 @@ class SpecialUserProfile extends MobileSpecialPage {
 						. $activityHtml
 						. Html::closeElement( 'div' );
 				}
+				if ( !$summary ) {
+					$html .= $talkLink;
+				}
 				$html .= $this->getUserFooterHtml()
 					. Html::closeElement( 'div' );
+
 			} else {
 				$html = $this->getHtmlNoUser();
 			}
@@ -259,5 +345,33 @@ class SpecialUserProfile extends MobileSpecialPage {
 		}
 		wfProfileOut( __METHOD__ );
 		$out->addHtml( $html );
+	}
+
+	/**
+	 * Retrieve the text of a WikiPage
+	 * @param string $wikiPageTitle The title of the WikiPage
+	 * @return string The text of the page
+	 */
+	protected function getWikiPageText( $wikiPageTitle ) {
+		$text = '';
+		$title = Title::newFromText( $wikiPageTitle );
+		if ( $title ) {
+			$wikiPage = WikiPage::newFromID( $title->getArticleID() );
+			if ( $wikiPage ) {
+				$content = $wikiPage->getContent();
+				if ( $content ) {
+					$text = ContentHandler::getContentText( $content );
+				}
+			}
+		}
+		return $text;
+	}
+
+	/**
+	 * Output an error
+	 * @param string $message Key for error message
+	 */
+	protected function showError( $message ) {
+		$this->getOutput()->wrapWikiMsg( '<div class="error">$1</div>', $message );
 	}
 }
