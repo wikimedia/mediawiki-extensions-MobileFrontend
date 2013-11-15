@@ -158,7 +158,7 @@ class MinervaTemplate extends BaseTemplate {
 		$isSpecialPage = $this->isSpecialPage;
 		$preBodyText = isset( $data['prebodytext'] ) ? $data['prebodytext'] : '';
 
-		if ( ( $internalBanner || $preBodyText ) && !$isSpecialPage ) {
+		if ( $internalBanner || $preBodyText ) {
 		?>
 		<div class="pre-content">
 			<?php
@@ -166,7 +166,7 @@ class MinervaTemplate extends BaseTemplate {
 				// FIXME: Temporary solution until we have design
 				if ( isset( $data['_old_revision_warning'] ) ) {
 					echo $data['_old_revision_warning'];
-				} else {
+				} else if ( !$isSpecialPage ){
 					$this->renderPageActions( $data );
 				}
 				echo $internalBanner;

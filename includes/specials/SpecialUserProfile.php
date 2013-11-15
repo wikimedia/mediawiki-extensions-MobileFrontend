@@ -227,18 +227,19 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$out->addModuleStyles( 'mobile.special.styles' );
 		$out->setProperty( 'unstyledContent', true );
 		$out->addJsConfigVars( array( 'wgMFMaxDescriptionChars' => self::MAX_DESCRIPTION_CHARS ) );
-		$out->setPageTitle( $this->msg( 'mobile-frontend-profile-title' ) );
 		if ( $par ) {
 			$this->targetUser = User::newFromName( $par );
+			$pageTitle = $this->targetUser->getName();
+			$out->setPageTitle( $pageTitle );
 			// Make sure this is a valid registered user and not an invalid username (e.g. ip see bug 56822)
 			if ( $this->targetUser && $this->targetUser->getId() ) {
+
 				// Prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$activityHtml = $this->getLastEditHtml() . $this->getLastUploadHtml()
 					. $this->getLastThanksHtml();
 
-				$html = Html::element( 'h1', array(), $this->targetUser->getName() )
-					. Html::openElement( 'div', array( 'class' => 'profile content' ) );
+				$html = Html::openElement( 'div', array( 'class' => 'profile content' ) );
 
 				if ( $activityHtml ) {
 					$html .= Html::openElement( 'div', array( 'class' => 'card-container' ) )

@@ -4,18 +4,29 @@
 
 // FIXME: Apply these styles to all special pages
 .mw-mf-special #content_wrapper {
-	h1 {
-		text-align: center;
-		font-size: 1.4em;
-		font-weight: bold;
-		margin-top: 1em;
+	.content-header {
+		padding: 20px @contentMargin;
+		border-bottom: 1px solid @headerBorderBottom;
 	}
 
-	h2 {
+	#section_0 {
+		padding: .5em 0;
 		text-align: center;
-		margin: .7em 0;
-		font-size: 1.1em;
-		color: @grayMedium;
+		font-size: 1.25em;
+		font-weight: bold;
+	}
+
+	.pre-content {
+		border-bottom: none;
+	}
+
+	.content {
+		h2 {
+			text-align: center;
+			margin: .7em 0;
+			font-size: 1.1em;
+			color: @grayMedium;
+		}
 	}
 
 	h1,

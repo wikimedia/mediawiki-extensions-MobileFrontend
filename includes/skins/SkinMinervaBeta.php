@@ -177,4 +177,11 @@ class SkinMinervaBeta extends SkinMinerva {
 				Html::closeElement( 'div' ) );
 		}
 	}
+
+	protected function prepareHeaderAndFooter( BaseTemplate $tpl ) {
+		parent::prepareHeaderAndFooter( $tpl );
+		$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ),
+			$this->getOutput()->getPageTitle() );
+		$tpl->set( 'prebodytext', $preBodyText );
+	}
 }

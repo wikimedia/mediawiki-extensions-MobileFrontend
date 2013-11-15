@@ -137,11 +137,11 @@ input[type=submit] {
 
 	// Button bars
 	//
-	// The button-bar class only applies inside a header.
+	// The button-bar class only applies inside a content-header or header.
 	// The button-bar class must be used to center buttons.
 	//
 	// Markup:
-	// <div class="header">
+	// <div class="content-header">
 	//  <ul class="button-bar">
 	//    <li><button>button 1</button></li><li>
 	//      <button>button 2</button></li><li>
@@ -155,6 +155,8 @@ input[type=submit] {
 
 		li {
 			display: inline-block;
+			// When the label is bold e.g. active, we need to ensure they still line up
+			vertical-align: middle;
 
 			.button, button {
 				border-radius: 0;

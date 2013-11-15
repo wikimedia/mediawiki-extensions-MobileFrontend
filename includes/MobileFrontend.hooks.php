@@ -396,7 +396,6 @@ class MobileFrontendHooks {
 		$out = $special->getContext()->getOutput();
 		$skin = $out->getSkin()->getSkinName();
 
-		$out->setProperty( 'disableSearchAndFooter', true );
 		$name = $special->getName();
 
 		// Ensure desktop version of Special:Preferences page gets mobile targeted modules
@@ -406,6 +405,13 @@ class MobileFrontendHooks {
 		}
 
 		if ( $isMobileView ) {
+			// Enable search header in beta
+			if ( $mobileContext->isBetaGroupMember() ) {
+				$out->addModuleStyles( 'mobile.special.styles' );
+			} else {
+				$out->setProperty( 'disableSearchAndFooter', true );
+			}
+
 			if ( $name === 'Search' ) {
 				$out->addModuleStyles( 'mobile.search.styles' );
 			} else if ( $name === 'Userlogin' ) {

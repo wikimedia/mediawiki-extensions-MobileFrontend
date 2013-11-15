@@ -32,7 +32,6 @@ class MobileSpecialPage extends SpecialPage {
 		} else {
 			$this->executeWhenAvailable( $subPage );
 		}
-		$this->getOutput()->setProperty( 'disableSearchAndFooter', $this->disableSearchAndFooter );
 	}
 
 	public function setHeaders() {

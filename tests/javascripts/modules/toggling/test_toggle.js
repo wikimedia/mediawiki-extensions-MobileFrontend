@@ -5,7 +5,7 @@ var $container,
 
 function makeSections() {
 	return $( '<div>' ).appendTo( '#content' ).html(
-			'<h2 id="section_0"><span id="First_Section">First Section</span></h2>' +
+			'<h2><span id="First_Section">First Section</span></h2>' +
 			'<div><p>Text</p></div>' +
 
 			'<h2 id="section_1"><a href="#foo">Dummy Link</a></h2>' +
@@ -16,9 +16,10 @@ function makeSections() {
 QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	setup: function() {
 		$container = makeSections();
+		this.$section0 = $container.find( 'h2' ).eq( 0 );
 		sinon.stub( M, 'isWideScreen' ).returns( false );
 		toggle.enable();
-		toggle.toggle( $( '#section_0' ) );
+		toggle.toggle( this.$section0 );
 	},
 	teardown: function() {
 		window.location.hash = "#";
@@ -28,7 +29,7 @@ QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 });
 
 QUnit.test( 'Toggle section', 5, function() {
-	var $section = $( '#section_0' ),
+	var $section = this.$section0,
 		$content = $( '#content_block_0' );
 
 	strictEqual( $section.hasClass( 'openSection' ), true, 'openSection class present' );
@@ -43,23 +44,21 @@ QUnit.test( 'Toggle section', 5, function() {
 } );
 
 QUnit.test( 'Clicking a hash link to reveal an already open section', 2, function() {
-	var $section = $( '#section_0' );
-
-	strictEqual( $section.hasClass( 'openSection' ), true, 'check section is open' );
+	strictEqual( this.$section0.hasClass( 'openSection' ), true, 'check section is open' );
 	toggle.reveal( 'First_Section' );
-	strictEqual( $section.hasClass( 'openSection' ), true, 'check section is still open' );
+	strictEqual( this.$section0.hasClass( 'openSection' ), true, 'check section is still open' );
 } );
 
 QUnit.test( 'Reveal element', 2, function() {
 	toggle.reveal( 'First_Section' );
 	strictEqual( $( '#content_block_0' ).hasClass( 'openSection' ), true, 'check content is visible' );
-	strictEqual( $( '#section_0' ).hasClass( 'openSection' ), true, 'check section is open' );
+	strictEqual( this.$section0.hasClass( 'openSection' ), true, 'check section is open' );
 } );
 
 QUnit.test( 'Clicking hash links', 2, function() {
 	$( '[href=#First_Section]' ).trigger( 'click' );
 	strictEqual( $( '#content_block_0' ).hasClass( 'openSection' ), true, 'check content is visible' );
-	strictEqual( $( '#section_0' ).hasClass( 'openSection' ), true, 'check section is open' );
+	strictEqual( this.$section0.hasClass( 'openSection' ), true, 'check section is open' );
 } );
 
 QUnit.test( 'Mouseup on a heading toggles it', 2, function() {

@@ -18,7 +18,7 @@
 		}
 
 		// Register EventLogging events
-		schema.hijackLink( '.header .button-bar a', actionNamePrefix + 'switch' );
+		schema.hijackLink( '.button-bar a', actionNamePrefix + 'switch' );
 		schema.hijackLink( '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
 		schema.hijackLink( '.page-list .title', actionNamePrefix + 'view' );
 		schema.hijackLink( '.more', actionNamePrefix + 'more' );
