@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_0e48a12d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-15T17:11:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_b2e0d92d",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_f2e6d145",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 2
@@ -84,6 +102,24 @@
       "writtenOn": "2013-11-14T07:50:56Z",
       "side": 1,
       "message": "$2 is wrong and should be removed. See above.",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_2e51ddd8",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 500,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-15T17:11:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_f2e6d145",
       "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -125,6 +161,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_0e718175",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-15T17:11:02Z",
+      "side": 1,
+      "message": "Actually wait.. this /IS/ an HTML string. I can\u0027t escape it here. Would welcome any better ways to do this but I don\u0027t see any.",
+      "parentUuid": "291c1151_1ff1b693",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_d2dd556d",
         "filename": "includes/specials/SpecialMobileContributions.php",
         "patchSetId": 2
@@ -136,6 +190,24 @@
       "writtenOn": "2013-11-14T07:50:56Z",
       "side": 1,
       "message": "$2 to \u0027mobile-frontend-contribution-summary\u0027 is wrong here. See comment on i18n file.",
+      "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_4e67f9b9",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-15T17:11:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_d2dd556d",
       "revId": "ae76c6cb8f3bc0b814007e29c4dfe34635397ea3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
