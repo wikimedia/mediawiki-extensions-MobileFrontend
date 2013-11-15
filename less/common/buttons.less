@@ -13,6 +13,10 @@ input[type=submit] {
 }
 
 .content,
+// FIXME: buttons need a clean up, probably we should have more than one class
+// for them, .panel is here only for .inline styling, remove if cleaned up
+.panel,
+// FIXME: deprecate .buttonBar when new overlays in stable
 .buttonBar {
 	.button,
 	button,
@@ -40,11 +44,6 @@ input[type=submit] {
 			color: lighten( #3f77d7, 30% );;
 			.vertical-gradient( @disabledColor,@disabledColor );
 			border-color: darken( @disabledColor, 5% );
-		}
-
-		&.cancel {
-			background: #777;
-			border: 1px #666 solid;
 		}
 
 		&.inline {

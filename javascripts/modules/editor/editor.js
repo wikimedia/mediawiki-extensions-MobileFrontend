@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
-	var LoadingOverlay = M.require( 'LoadingOverlay' ),
+	var
+		inStable = mw.config.get( 'wgMFMode' ) === 'stable',
 		popup = M.require( 'notifications' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
@@ -42,11 +43,15 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 		M.router.route( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
-			var loadingOverlay = new LoadingOverlay();
+			// FIXME: clean up when new overlays in stable
+			var
+				LoadingOverlay = M.require( inStable ? 'LoadingOverlay' : 'LoadingOverlayNew' ),
+				loadingOverlay = new LoadingOverlay();
 			loadingOverlay.show();
 
-			mw.loader.using( 'mobile.editor', function() {
-				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
+			// FIXME: clean up when new overlays in stable
+			mw.loader.using( inStable ? 'mobile.editor.overlay.stable' : 'mobile.editor.overlay.beta', function() {
+				var EditorOverlay = M.require( inStable ? 'modules/editor/EditorOverlay' : 'modules/editorNew/EditorOverlay' ),
 					title = page ? page.title : mw.config.get( 'wgTitle' ),
 					// Note in current implementation Page title is prefixed with namespace
 					ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );

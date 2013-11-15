@@ -4,7 +4,7 @@
 	textarea {
 		width: 100%;
 		min-height: 50%;
-		padding: 10px 16px 8em;
+		padding: 10px @contentMargin;
 		line-height: 1.5;
 		border: none;
 		resize: none;
@@ -23,24 +23,9 @@
 
 	.preview {
 		display: none;
-		padding-bottom: 15em;
-
-		> h2 {
-			font: bold .75em @fontFamily;
-			color: #707070;
-			text-align: center;
-			background: #f3f3f3 url('images/preview-bg.png') 50% 50% repeat-x;
-			.background-size( auto, .8em );
-			line-height: 1.7;
-			text-transform: uppercase;
-		}
 	}
 
 	.buttonBar {
-		// hide button bars by default
-		display: none;
-		box-shadow: 0 -10px 10px 0 #fff;
-
 		.message {
 			margin: 0 0 .7em;
 			padding: 0 0 .3em;
@@ -54,28 +39,12 @@
 			}
 		}
 	}
-
-	.initial-bar {
-		display: block;
-	}
 }
 
 .abusefilter-overlay {
 	// FIXME: enwiki only?
 	.mbox-image {
 		min-width: 30px;
-	}
-}
-
-/*
-hide the bar (and give more editing space) when the keyboard is visible
-Note: Although an iPhone in portrait mode has a height of 480px, when you take into account
-the navigation bar which has height of about 124px the screen shrinks to 356px
-http://www.zingdesign.com/responsive-website-design-cheatsheet1/
-*/
-@media (max-height: 355px) {
-	.editor-overlay .initial-bar {
-		position: static;
 	}
 }
 

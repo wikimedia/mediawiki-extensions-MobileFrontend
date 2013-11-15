@@ -177,17 +177,34 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.editor' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
+			'mobile.stable.common',
+			'mobile.overlays',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/editor.js',
+		),
+	),
+
+	'mobile.editor.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable.common',
+			'mobile.overlays.beta',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/editor.js',
+		),
+	),
+
+	'mobile.editor.common' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
 			'jquery.cookie',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
-			'javascripts/modules/editor/AbuseFilterOverlay.js',
-			'javascripts/modules/editor/EditorOverlay.js',
 		),
 		'templates' => array(
-			'modules/editor/EditorOverlay',
 			'modules/editor/AbuseFilterOverlay',
 		),
 		'messages' => array(
@@ -200,14 +217,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-summary-placeholder',
 			'mobile-frontend-editor-cancel-confirm',
 			'mobile-frontend-editor-wait',
-			'mobile-frontend-editor-guider',
 			'mobile-frontend-editor-success',
 			'mobile-frontend-editor-success-landmark-1' => array( 'parse' ),
 			'mobile-frontend-editor-refresh',
 			'mobile-frontend-editor-error',
 			'mobile-frontend-editor-error-conflict',
 			'mobile-frontend-editor-error-loading',
-			'mobile-frontend-editor-preview-header',
 			'mobile-frontend-editor-error-preview',
 			'mobile-frontend-account-create-captcha-placeholder',
 			'mobile-frontend-editor-captcha-try-again',
@@ -215,6 +230,48 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-abusefilter-warning',
 			'mobile-frontend-editor-abusefilter-disallow',
 			'mobile-frontend-editor-abusefilter-read-more',
+		),
+	),
+
+	// FIXME: clean up when new overlays in stable (use single mobile.edit as before)
+	'mobile.editor.overlay.stable' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.editor.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/AbuseFilterOverlay.js',
+			'javascripts/modules/editor/EditorOverlay.js',
+		),
+		'styles' => array(
+			'less/modules/editor.less',
+		),
+		'templates' => array(
+			'modules/editor/EditorOverlay',
+		),
+		'messages' => array(
+			'mobile-frontend-editor-guider',
+			'mobile-frontend-editor-preview-header',
+		),
+	),
+
+	// FIXME: clean up when new overlays in stable (use single mobile.edit as before)
+	'mobile.editor.overlay.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.editor.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/editorNew/AbuseFilterOverlay.js',
+			'javascripts/modules/editorNew/EditorOverlay.js',
+		),
+		'styles' => array(
+			'less/modules/editorNew.less',
+		),
+		'templates' => array(
+			'modules/editorNew/EditorOverlay',
+		),
+		'messages' => array(
+			'mobile-frontend-editor-editing' => array( 'parse' ),
+			'mobile-frontend-editor-previewing' => array( 'parse' ),
 		),
 	),
 
@@ -562,7 +619,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/languages.less',
 			'less/modules/watchstar.less',
 			'less/modules/tutorials.less',
-			'less/modules/editor.less',
 		),
 		'position' => 'top',
 	),
@@ -696,7 +752,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
-			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/languages/languages.js',
 			'javascripts/modules/lastEdited/time.js',

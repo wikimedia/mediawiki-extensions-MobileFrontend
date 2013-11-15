@@ -141,8 +141,31 @@ input.search {
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
-.content .edit-page {
-	display: none;
+.content {
+	.edit-page {
+		display: none;
+		position: absolute;
+		background: url(../common/images/pagemenu/edit.png) 100% @headingMargin no-repeat;
+		.background-size( auto, 30px );
+		text-indent: -9999px;
+		border-left: solid 1px @sectionBorderColor;
+		width: @sectionIconWidth + 5px;
+		top: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	h1.openSection,
+	h2.openSection {
+		.edit-page {
+			display: block;
+		}
+	}
+}
+
+.stub .edit-page {
+	margin: 0;
+	display: block;
 }
 
 // FIXME: this is here only because non-JS version doesn't load watchstar.less

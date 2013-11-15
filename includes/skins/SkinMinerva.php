@@ -565,6 +565,7 @@ class SkinMinerva extends SkinTemplate {
 		$modules['search'] = array( 'mobile.search.stable' );
 		$modules['stableonly'] = array( 'mobile.lastEdited.stable' );
 		$modules['issues'] = array( 'mobile.issues' );
+		$modules['editor'] = array( 'mobile.editor' );
 
 		$title = $this->getTitle();
 
