@@ -16,6 +16,24 @@
       "revId": "7c7ff4eafa768295561f2a459a1086a286779f81",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_144510b6",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-15T21:28:45Z",
+      "side": 1,
+      "message": "lolz",
+      "parentUuid": "291c1151_bf76e2d4",
+      "revId": "7c7ff4eafa768295561f2a459a1086a286779f81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
