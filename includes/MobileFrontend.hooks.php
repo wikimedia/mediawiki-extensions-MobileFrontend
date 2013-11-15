@@ -41,7 +41,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass;
+		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition;
 
 		// check whether or not the user has requested to toggle their view
 		$mobileContext = MobileContext::singleton();
@@ -57,6 +57,9 @@ class MobileFrontendHooks {
 			}
 			return true;
 		}
+
+		// FIXME: Remove hack around Universal Language selector bug 57091
+		$wgULSPosition = 'none';
 
 		// Handle any X-Analytics header values in the request by adding them
 		// as log items. X-Analytics header values are serialized key=value
