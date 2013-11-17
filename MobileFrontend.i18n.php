@@ -5030,6 +5030,9 @@ $messages['es'] = array(
  * @author Pikne
  */
 $messages['et'] = array(
+	'mobilefrontend-random-explain' => 'Kas see juhuslik lehekülg huvitab sind?',
+	'mobilefrontend-random-cancel' => 'Las ma loen!',
+	'mobilefrontend-keepgoing-suggest-again' => 'Proovi teist',
 	'nearby' => 'Leheküljed sinu lähedal',
 	'mobile-frontend-desc' => 'Mobiili eeskomponent',
 	'mobile-frontend-search-submit' => 'Mine',
@@ -5189,6 +5192,8 @@ $messages['et'] = array(
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>Üks</span> üleslaadimine|<span>$1</span> üleslaadimist}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'Üle 500 üleslaadimise',
 	'mobile-frontend-photo-upload-login' => 'Pildi lisamiseks pead olema sisse logitud.',
+	'mobile-frontend-image-heading-describe' => "Pildi '''kirjeldamine'''",
+	'mobile-frontend-image-uploading' => "Pildi '''üleslaadimine'''...",
 	'mobile-frontend-editor-newpage-prompt' => 'Sellist lehekülge pole. Miks mitte hakkajalt seda alustada?',
 	'mobile-frontend-editor-disabled' => 'Sul pole lubatud seda lehekülge redigeerida.',
 	'mobile-frontend-editor-cta' => 'Mobiilis lehekülgede redigeerimiseks pead olema sisse logitud.',
@@ -5222,10 +5227,17 @@ $messages['et'] = array(
 	'mobile-frontend-media-details' => 'Üksikasjad',
 	'mobile-frontend-profile-title' => 'Kasutajaprofiil',
 	'mobile-frontend-profile-last-upload-caption' => 'Üles laaditud {{PLURAL:$1|eile|$1 päeva tagasi|0=täna}}.',
+	'mobile-frontend-profile-usertalk' => 'Arutelu kasutajaga $1',
 	'mobile-frontend-profile-noargs' => 'Palun määra profiili vaatamiseks kasutajanimi.',
+	'mobile-frontend-profile-nouser' => 'Puuduv või vigane kasutajanimi',
+	'mobile-frontend-profile-activity-heading' => 'Aktiivsus ja kaastöö',
 	'mobile-frontend-profile-yours' => 'Vaata oma profiili lehekülge.',
 	'mobile-frontend-profile-userpage-link' => 'Vaata kasutajalehekülge.',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] tänas muudatuse eest leheküljel [[$2]].',
+	'mobile-frontend-profile-last-edit' => 'Redigeeris {{PLURAL:$2|eile|$2 päeva tagasi|0=täna}} lehekülge [[$1]].',
+	'mobile-frontend-profile-footer-days' => 'Ühines {{PLURAL:$2|ühe|$2}} päeva eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
+	'mobile-frontend-profile-footer-months' => 'Ühines enam kui {{PLURAL:$2|ühe|$2}} kuu eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
+	'mobile-frontend-profile-footer-years' => 'Ühines enam kui {{PLURAL:$2|ühe|$2}} aasta eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
 );
 
 /** Basque (euskara)
@@ -11018,14 +11030,16 @@ Déi gi geläscht.",
 	'mobile-frontend-media-license-link' => 'Lizenzinformatioun',
 	'abusefilter-edit-builder-vars-user-mobile' => "Ob e Benotzer de mobilen Interface benotzt fir z'änneren",
 	'mobile-frontend-profile-title' => 'Benotzerprofil',
-	'mobile-frontend-profile-usertalk' => 'Diskussiounssäit kucken.', # Fuzzy
+	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|Gëschter|Viru(n) $1 Deeg|0=Haut}} eropgelueden.',
+	'mobile-frontend-profile-usertalk' => 'Mam $1 schwätzen',
 	'mobile-frontend-profile-noargs' => 'Gitt w.e.g. e Benotzernumm u fir ee Profil ze gesinn.',
 	'mobile-frontend-profile-nouser' => 'Benotzernumm gëtt et net oder en ass net valabel',
 	'mobile-frontend-profile-activity-heading' => 'Aktivitéit a Kontributiounen',
 	'mobile-frontend-profile-yours' => 'Besicht Är Profilsäit.',
 	'mobile-frontend-profile-userpage-link' => 'Benotzersäit besichen.',
-	'mobile-frontend-profile-last-edit' => "{{GENDER:$3|huet}} d'Säit [[$1]]{{PLURAL:$2|gëschter|viru(n) $2 Deeg|0=méi fréi haut am Laf vum Dag}} geännert.", # Fuzzy
+	'mobile-frontend-profile-last-edit' => "Huet d'Säit [[$1]]{{PLURAL:$2|gëschter|viru(n) $2 Deeg|0=méi fréi haut am Laf vum Dag}} geännert.",
 	'mobile-frontend-geonotahack' => 'No bei dëser Säit',
+	'beta-feature-geonotahack' => 'No bei dëser Säit',
 );
 
 /** Lezghian (лезги)
@@ -11726,6 +11740,7 @@ $messages['mk'] = array(
  * @author Praveenp
  * @author Raghith
  * @author Santhosh.thottingal
+ * @author Suresh.balasubra
  * @author Vssun
  */
 $messages['ml'] = array(
@@ -12012,6 +12027,7 @@ $messages['ml'] = array(
 	'mobile-frontend-profile-footer-months' => '{{PLURAL:$2|ഒരു മാസം|$2 മാസം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]]', # Fuzzy
 	'mobile-frontend-profile-footer-years' => '{{PLURAL:$2|ഒരു വർഷം|$2 വർഷം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]]', # Fuzzy
 	'mobile-frontend-geonotahack' => 'ഈ താളിന്റെ സമീപസ്ഥം',
+	'beta-feature-geonotahack' => 'ഈ താളിനു സമീപം',
 );
 
 /** Mongolian (монгол)
@@ -12951,6 +12967,7 @@ $messages['ne'] = array(
 /** Dutch (Nederlands)
  * @author Akoopal
  * @author AvatarTeam
+ * @author Breghtje
  * @author Hansmuller
  * @author JurgenNL
  * @author Konovalov
@@ -13215,10 +13232,14 @@ $messages['nl'] = array(
 	'mobile-frontend-profile-title' => 'Gebruikersprofiel',
 	'mobile-frontend-profile-last-upload-caption' => 'Meest recente upload door {{GENDER:$1|$1}}: {{PLURAL:$2|gisteren|$2 dagen geleden|0=vandaag}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Overlegpagina weergeven.', # Fuzzy
+	'mobile-frontend-profile-activity-heading' => 'Activiteiten & bijdragen',
 	'mobile-frontend-profile-yours' => 'Je profielpagina bezoeken.',
 	'mobile-frontend-profile-userpage-link' => 'Gebruikerspagina bekijken.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Voor het laatst bedankt}} door [[Special:UserProfile/$1|$1]] voor een bewerking aan [[$2]].', # Fuzzy
+	'mobile-frontend-profile-edit-summary' => 'Gebruikersprofiel introductie bijwerken',
 	'mobile-frontend-geonotahack' => 'In de buurt van deze pagina',
+	'beta-feature-geonotahack' => 'In de buurt van deze pagina',
+	'beta-feature-geonotahack-description' => "Staat u toe om andere verwante pagina's tezien voor pagina's die u bezocht die lengte- en breedtegraad informatie bevatten.",
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -14239,7 +14260,7 @@ Për piasì, ch'a sara e ch'a preuva torna.",
 	'mobile-frontend-media-license-link' => 'Anformassion an sla licensa',
 	'abusefilter-edit-builder-vars-user-mobile' => "Se n'utent a l'é an camin ch'a modìfica për mojen dl'antërfassa dël sacociàbil o nò",
 	'mobile-frontend-profile-title' => 'Profil utent',
-	'mobile-frontend-profile-last-upload-caption' => 'Carià {{PLURAL:$2|jer|$2 di fa|0=ancheuj}}.', # Fuzzy
+	'mobile-frontend-profile-last-upload-caption' => 'Carià {{PLURAL:$1|jer|$1 di fa|0=ancheuj}}.',
 	'mobile-frontend-profile-usertalk' => 'Parlé a $1.',
 	'mobile-frontend-profile-noargs' => "Për piasì, ch'a fornissa në stranòm për vëdde un profil.",
 	'mobile-frontend-profile-nouser' => 'Stranòm inesistent o nen bon',
@@ -14820,20 +14841,24 @@ din întreaga lume',
 	'mobile-frontend-media-license-link' => 'Informații despre licențiere',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Dacă un utilizator modifică sau nu prin intermediul interfeței mobile',
 	'mobile-frontend-profile-title' => 'Profil utilizator',
-	'mobile-frontend-profile-last-upload-caption' => 'Ultima încărcare de către {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=astăzi}}.', # Fuzzy
-	'mobile-frontend-profile-usertalk' => 'Vezi pagina de discuții.', # Fuzzy
+	'mobile-frontend-profile-last-upload-caption' => 'Încărcată {{PLURAL:$1|ieri|acum $1 zile|acum $1 de zile|0=astăzi}}.',
+	'mobile-frontend-profile-usertalk' => 'Discutați cu $1',
 	'mobile-frontend-profile-noargs' => 'Furnizați un nume de utilizator pentru a vizualiza un profil.',
 	'mobile-frontend-profile-nouser' => 'Nume de utilizator inexistent sau incorect',
 	'mobile-frontend-profile-activity-heading' => 'Activitate și contribuții',
 	'mobile-frontend-profile-yours' => 'Vizitați-vă pagina de profil.',
 	'mobile-frontend-profile-userpage-link' => 'Vizitează pagina de utilizator.',
 	'mobile-frontend-requires-optin' => 'Această pagină este disponibilă doar dacă alegeți modul beta. Accesați [[Special:MobileOptions|pagina cu setări]] pentru a comuta la beta.',
-	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Ultima mulțumire}} de către [[Special:UserProfile/$1|$1]] pentru o modificare asupra paginii [[$2]].', # Fuzzy
-	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|A modificat}} pagina [[$1]] {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=în cursul zilei de astăzi}}.', # Fuzzy
-	'mobile-frontend-profile-footer-days' => 'Înregistrat de {{PLURAL:$2|o zi|$2 zile|$2 de zile}} cu [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.', # Fuzzy
-	'mobile-frontend-profile-footer-months' => 'Înregistrat de peste {{PLURAL:$2|o lună|$2 luni|$2 de luni}} cu [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.', # Fuzzy
-	'mobile-frontend-profile-footer-years' => 'Înregistrat de peste {{PLURAL:$2|un an|$2 ani|$2 de ani}} cu [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.', # Fuzzy
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Mulțumit}} de către [[Special:UserProfile/$1|$1]] pentru o modificare asupra paginii [[$2]].',
+	'mobile-frontend-profile-last-edit' => 'A modificat pagina [[$1]] {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=în cursul zilei de astăzi}}.',
+	'mobile-frontend-profile-footer-days' => 'S-a alăturat acum {{PLURAL:$2|o zi|$2 zile|$2 de zile}}, având [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.',
+	'mobile-frontend-profile-footer-months' => 'S-a alăturat cu mai mult de {{PLURAL:$2|o lună|$2 luni|$2 de luni}} în urmă, având [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.',
+	'mobile-frontend-profile-footer-years' => 'S-a alăturat cu mai mult de {{PLURAL:$2|un an|$2 ani|$2 de ani}} în urmă, având [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.',
+	'mobile-frontend-profile-description-placeholder' => 'De ce {{GENDER:$1|contribuiți}}? Ce ați {{GENDER:$1|dori}} să îmbunătățiți? {{GENDER:$1|Împărtășiți-vă}} interesele și pasiunile cu ceilalți.',
+	'mobile-frontend-profile-edit-summary' => 'Actualizat introducerea profilului de utilizator',
 	'mobile-frontend-geonotahack' => 'În apropierea acestei pagini',
+	'beta-feature-geonotahack' => 'În apropierea acestei pagini',
+	'beta-feature-geonotahack-description' => 'Vă permite să descoperiți alte pagini asociate paginilor pe care le vizualizați și care conțin informații despre latitudine și longitudine.',
 );
 
 /** tarandíne (tarandíne)
@@ -18530,10 +18555,10 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-last-modified-just-now' => '最后编辑时间：刚才',
 	'mobile-frontend-last-modified-with-user-seconds' => '[$4 最后一次{{GENDER:$1|编辑}}：$3秒前] 由{{PLURAL:$5|[$6 $2]|0=匿名用户}}',
 	'mobile-frontend-last-modified-with-user-minutes' => '[$4 最后一次{{GENDER:$1|编辑}}  $3 分钟前] 由 {{PLURAL:$5|[$6 $2]|0=匿名用户}}。',
-	'mobile-frontend-last-modified-with-user-hours' => '[$4的上次{{GENDER:$1|编辑}}是在$3小时前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
-	'mobile-frontend-last-modified-with-user-days' => '[$4的上次{{GENDER:$1|编辑}}是在$3天前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 的上次{{GENDER:$1|编辑}}是在$3小时前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 的上次{{GENDER:$1|编辑}}是在$3天前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
 	'mobile-frontend-last-modified-with-user-months' => '{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于$3月前]',
-	'mobile-frontend-last-modified-with-user-years' => '[$4的上次{{GENDER:$1|编辑}}是在$3年前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 的上次{{GENDER:$1|编辑}}是在$3年前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 上次{{GENDER:$1|编辑}}]是刚由{{PLURAL:$4|[$5 $2]|0=某匿名用户}}做出的。',
 	'mobile-frontend-learn-more' => '了解更多',
 	'mobile-frontend-account-create-submit' => '注册',
@@ -18834,10 +18859,10 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-last-modified-just-now' => '新近編輯剛剛作出',
 	'mobile-frontend-last-modified-with-user-seconds' => '[$4最近一次{{GENDER:$1|編輯}}于$3秒前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出',
 	'mobile-frontend-last-modified-with-user-minutes' => '[$4最近一次{{GENDER:$1|編輯}}于$3分鐘前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出。',
-	'mobile-frontend-last-modified-with-user-hours' => '[$4最近一次{{GENDER:$1|編輯}}于$3小時前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出',
-	'mobile-frontend-last-modified-with-user-days' => '[$4最近一次{{GENDER:$1|編輯}}于$3天前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 最近一次{{GENDER:$1|編輯}}于$3小時前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 最近一次{{GENDER:$1|編輯}}于$3天前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出',
 	'mobile-frontend-last-modified-with-user-months' => '[$4 最近一次{{GENDER:$1|編輯}}于$3月前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出',
-	'mobile-frontend-last-modified-with-user-years' => '[$4最近一次{{GENDER:$1|編輯}}于$3年前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 最近一次{{GENDER:$1|編輯}}于$3年前]由{{PLURAL:$5|[$6 $2]|0=匿名用戶}}做出',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 最近一次{{GENDER:$1|編輯}}]剛剛由{{PLURAL:$4|[$5 $2]|0=匿名用戶}}做出。',
 	'mobile-frontend-learn-more' => '了解更多',
 	'mobile-frontend-account-create-submit' => '註冊',
