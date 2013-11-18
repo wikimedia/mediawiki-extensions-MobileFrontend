@@ -1,4 +1,4 @@
-@user_agent
+@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org @user_agent
 Feature: Login required for Uploads
 
   Scenario: Login for uploads

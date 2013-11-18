@@ -1,3 +1,4 @@
+@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @login @test2.m.wikipedia.org
 Feature: Feature: Footer links resolve - Logged In
 
   Background:

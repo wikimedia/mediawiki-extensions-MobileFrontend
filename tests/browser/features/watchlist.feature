@@ -1,3 +1,4 @@
+@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org
 Feature: Manage Watchlist
 
   Scenario: I receive notification that I need to log in to use the watchlist functionality

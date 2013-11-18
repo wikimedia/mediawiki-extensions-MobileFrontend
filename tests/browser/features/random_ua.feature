@@ -1,4 +1,4 @@
-@user_agent
+@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org @user_agent
 Feature: Setting User Agents
 
   Scenario: Opera Mini

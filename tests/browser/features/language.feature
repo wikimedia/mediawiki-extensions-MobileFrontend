@@ -1,3 +1,4 @@
+@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org
 Feature: Language Validation
 
   Scenario: Validate Language selection availability
