@@ -2,7 +2,7 @@
 
 M.assertMode( [ 'beta', 'alpha' ] );
 
-var module = ( function() {
+( function() {
 	var time = M.require( 'modules/lastEdited/time' );
 
 	/**
@@ -53,12 +53,7 @@ var module = ( function() {
 		}
 	}
 	M.on( 'page-loaded', init );
-
-	return {
-		init: init
-	};
+	M.on( 'header-loaded', init );
 }() );
-
-M.define( 'last-modified-beta', module );
 
 }( mw.mobileFrontend, jQuery ) );
