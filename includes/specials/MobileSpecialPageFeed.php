@@ -62,7 +62,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 				Html::closeElement( 'h2' );
 		}
 
-		$html .= Html::element( 'p', array( 'class' => 'mw-mf-comment' ), $comment ) .
+		$html .= Html::element( 'p', array( 'class' => 'mw-mf-comment truncated-text' ), $comment ) .
 			Html::element( 'div', array( 'class' => 'info' ), $ts->getHumanTimestamp() );
 
 		if ( $diffLink ) {

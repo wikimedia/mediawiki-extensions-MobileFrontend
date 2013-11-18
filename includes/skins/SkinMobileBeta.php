@@ -34,7 +34,7 @@ class SkinMobileBeta extends SkinMobile {
 	protected function getHistoryLink( Title $title ) {
 		$link = parent::getHistoryLink( $title );
 		if ( !$title->isMainPage() ) {
-			$link['class'] = 'top-bar';
+			$link['class'] = 'top-bar truncated-text';
 		}
 		return $link;
 	}
@@ -75,7 +75,7 @@ class SkinMobileBeta extends SkinMobile {
 					array(
 						'text' => $name,
 						'href' => SpecialPage::getTitleFor( 'UserProfile', $name )->getLocalUrl(),
-						'class' => 'icon-profile',
+						'class' => 'icon-profile truncated-text',
 					),
 					$loginLogoutLink
 				),

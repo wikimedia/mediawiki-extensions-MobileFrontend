@@ -151,12 +151,19 @@ input.search {
 	}
 }
 
+.truncated-text {
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+
 // FIXME: Move to beta/alpha only place?
 .alpha,
 .beta {
 	.top-bar {
 		background-color: #F3F3F3;
-		padding: 8px @contentMargin;
+		padding: 5px @contentMargin;
 		display: block;
 		color: #666;
 		a {
