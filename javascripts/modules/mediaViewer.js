@@ -96,20 +96,20 @@
 		}
 	} );
 
-	M.router.route( /^image\/(.+)$/, function( hrefPart ) {
-		// FIXME: replace hrefPart with title when we get rid of History.js
-		// (which apart from slashes doesn't like dots...)
-		var $a = $( 'a[href*="' + hrefPart + '"]' ), title = $a.data( 'title' );
-
-		if ( title ) {
-			new ImageOverlay( {
-				title: $a.data( 'title' ),
-				caption: $a.siblings( '.thumbcaption' ).text()
-			} ).show();
-		}
-	} );
-
 	function init( $el ) {
+		M.router.route( /^image\/(.+)$/, function( hrefPart ) {
+			// FIXME: replace hrefPart with title when we get rid of History.js
+			// (which apart from slashes doesn't like dots...)
+			var $a = $( 'a[href*="' + hrefPart + '"]' ), title = $a.data( 'title' );
+
+			if ( title ) {
+				new ImageOverlay( {
+					title: $a.data( 'title' ),
+					caption: $a.siblings( '.thumbcaption' ).text()
+				} ).show();
+			}
+		} );
+
 		$el.find( 'a.image, a.thumbimage' ).each( function() {
 			var $a = $( this ),
 				// FIXME: change to /[^\/]+$/ when we get rid of History.js
@@ -120,8 +120,6 @@
 				$a.attr( 'href', '#image/' + match[2] );
 			}
 		} );
-
-		M.router.checkRoute();
 	}
 
 	// FIXME: this should bind to only 1-2 events
