@@ -343,10 +343,10 @@ $messages['en'] = array (
 	'mobile-frontend-profile-title' => 'User profile',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Uploaded}} {{PLURAL:$1|yesterday|$1 days ago|0=today}}.',
 	'mobile-frontend-profile-usertalk' => 'Talk to $1',
-	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
-	'mobile-frontend-profile-nouser' => 'Non-existent or invalid username',
+	'mobile-frontend-profile-error' => "Oh no!",
+	'mobile-frontend-profile-noargs' => 'No username was given. Please provide a username to view a profile.',
+	'mobile-frontend-profile-nouser' => 'No user with this name exists. Usernames are case sensitive so please check if it has been typed correctly.',
 	'mobile-frontend-profile-activity-heading' => 'Activity & contributions',
-	'mobile-frontend-profile-yours' => 'Visit your profile page.',
 	'mobile-frontend-profile-userpage-link' => 'Visit user page.',
 	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Thanked}} by [[Special:UserProfile/$1|$1]] for an edit to [[$2]].',
@@ -956,6 +956,7 @@ Parameters:
 
 If the user is logged in, this message is followed by:
 * {{msg-mw|Mobile-frontend-profile-yours}}',
+	'mobile-frontend-profile-error' => 'Heading for errors on the profile page.',
 	'mobile-frontend-profile-nouser' => 'Message shown when the username requested is non-existent or invalid.
 
 If the user is logged in, this message is followed by:
