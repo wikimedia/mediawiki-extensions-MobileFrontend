@@ -93,7 +93,7 @@ $messages['en'] = array (
 	'mobile-frontend-last-modified-years' => 'Last modified {{PLURAL:$1|$1 year|$1 years}} ago',
 	'mobile-frontend-last-modified-just-now' => 'Last modified just now',
 	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 second|$3 seconds}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
-	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 minute|$3 minutes}} ago] by  {{PLURAL:$5|[$6 $2]|0=an anonymous user}}.',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 minute|$3 minutes}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}.',
 	'mobile-frontend-last-modified-with-user-hours' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 hour|$3 hours}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
 	'mobile-frontend-last-modified-with-user-days' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 day|$3 days}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
 	'mobile-frontend-last-modified-with-user-months' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 month|$3 months}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
