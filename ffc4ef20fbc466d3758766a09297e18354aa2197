@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_1326fdcf",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-18T18:20:10Z",
+      "side": 1,
+      "message": "Siebrand I\u0027m so confused now with respect to the last 4 patchsets and your comments. Please clarify what is being asked!!",
+      "parentUuid": "291c1151_38b59630",
+      "revId": "ffc4ef20fbc466d3758766a09297e18354aa2197",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_98884a74",
         "filename": "includes/specials/SpecialMobileContributions.php",
         "patchSetId": 4
