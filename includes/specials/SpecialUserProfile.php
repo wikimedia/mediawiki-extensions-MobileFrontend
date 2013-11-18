@@ -68,7 +68,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 				'alt' => $title->getText(),
 			) ) .
 			Html::openElement( 'div', array( 'class' => 'caption' ) ) .
-			$this->msg( 'mobile-frontend-profile-last-upload-caption' )->numParams( $daysAgo )->parse() .
+			$this->msg( 'mobile-frontend-profile-last-upload-caption' )
+				->numParams( $daysAgo ) // $1
+				->params( $this->targetUser->getName() ) // $2
+				->parse() .
 			Html::closeElement( 'div' ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'div' );

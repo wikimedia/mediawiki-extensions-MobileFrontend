@@ -336,7 +336,7 @@ $messages['en'] = array (
 
 	// Special:UserProfile
 	'mobile-frontend-profile-title' => 'User profile',
-	'mobile-frontend-profile-last-upload-caption' => 'Uploaded {{PLURAL:$1|yesterday|$1 days ago|0=today}}.',
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Uploaded}} {{PLURAL:$1|yesterday|$1 days ago|0=today}}.',
 	'mobile-frontend-profile-usertalk' => 'Talk to $1',
 	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
 	'mobile-frontend-profile-nouser' => 'Non-existent or invalid username',
@@ -345,7 +345,7 @@ $messages['en'] = array (
 	'mobile-frontend-profile-userpage-link' => 'Visit user page.',
 	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Thanked}} by [[Special:UserProfile/$1|$1]] for an edit to [[$2]].',
-	'mobile-frontend-profile-last-edit' => 'Edited the page [[$1]], {{PLURAL:$2|yesterday|$2 days ago|0=earlier today}}.',
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Edited}} the page [[$1]], {{PLURAL:$2|yesterday|$2 days ago|0=earlier today}}.',
 	'mobile-frontend-profile-footer-days' => 'Joined {{PLURAL:$2|1 day|$2 days}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 	'mobile-frontend-profile-footer-months' => 'Joined over {{PLURAL:$2|1 month|$2 months}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 	'mobile-frontend-profile-footer-years' => 'Joined over {{PLURAL:$2|1 year|$2 years}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
@@ -923,7 +923,8 @@ See also:
 {{Identical|User profile}}',
 	'mobile-frontend-profile-last-upload-caption' => 'Details when an image was uploaded.
 	Parameters:
-* $1 - the amount of days ago the image was uploaded',
+* $1 - the amount of days ago the image was uploaded
+* $2 - the user name for GENDER',
 	'mobile-frontend-profile-usertalk' => 'Link label to user talk page.
 
 Parameters:
