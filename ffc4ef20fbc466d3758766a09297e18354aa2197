@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_38b59630",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-18T11:49:24Z",
+      "side": 1,
+      "message": "Please add explicit GENDER support:\n\n by {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}",
+      "revId": "ffc4ef20fbc466d3758766a09297e18354aa2197",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_98884a74",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-18T11:49:24Z",
+      "side": 1,
+      "message": "msg() call does not specify an output format. See https://www.mediawiki.org/wiki/Manual:Messages_API#Using_messages_in_PHP for details.",
+      "revId": "ffc4ef20fbc466d3758766a09297e18354aa2197",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
