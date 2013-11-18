@@ -32,11 +32,13 @@ M.assertMode( [ 'beta', 'alpha' ] );
 		if ( ts ) {
 			delta = time.getTimeAgoDelta( parseInt( ts, 10 ) );
 			if ( time.isNow( delta ) ) {
-				$lastModified.addClass( 'active' );
 				args = args.concat( [ 'mobile-frontend-last-modified-with-user-just-now', gender, username ] );
 			} else {
 				args = args.concat( [ keys[ delta.unit ], gender, username,
 						mw.language.convertNumber( delta.value ) ] );
+			}
+			if ( time.isRecent( delta ) ) {
+				$lastModified.addClass( 'active' );
 			}
 
 			args = args.concat( [ historyUrl,
