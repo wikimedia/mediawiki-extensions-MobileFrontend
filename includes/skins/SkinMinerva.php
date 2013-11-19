@@ -17,7 +17,6 @@ class SkinMinerva extends SkinTemplate {
 	protected function prepareQuickTemplate( OutputPage $out = null ) {
 		global $wgAppleTouchIcon;
 		wfProfileIn( __METHOD__ );
-		$tpl = parent::prepareQuickTemplate( $out );
 		// add head items
 		if ( $wgAppleTouchIcon !== false ) {
 			$out->addHeadItem( 'touchicon',
@@ -35,6 +34,8 @@ class SkinMinerva extends SkinTemplate {
 			"document.documentElement.className += ' page-loading';"
 		) );
 
+		// Generate template after doing the above...
+		$tpl = parent::prepareQuickTemplate( $out );
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 
 		$this->preparePageContent( $tpl );
@@ -48,6 +49,12 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareUserButton( $tpl );
 		$this->prepareDiscoveryTools( $tpl );
 		$this->preparePersonalTools( $tpl );
+		// FIXME: Remove need for a page-loading class
+		$bottomScripts = Html::inlineScript(
+			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
+		);
+		$bottomScripts .= $out->getBottomScripts();
+		$tpl->set( 'bottomscripts', $bottomScripts );
 		wfProfileOut( __METHOD__ );
 		return $tpl;
 	}
