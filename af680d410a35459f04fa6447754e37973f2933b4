@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_968c9138",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 82
+      },
+      "writtenOn": "2013-11-19T22:24:00Z",
+      "side": 1,
+      "message": "Grammatically I\u0027m not sure this makes sense - you should use a pronoun (\u0027this feature\u0027) or quotes (\u0027\"Near this page\"\u0027) to separate the name of the feature from the rest of the sentence.",
+      "revId": "af680d410a35459f04fa6447754e37973f2933b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
