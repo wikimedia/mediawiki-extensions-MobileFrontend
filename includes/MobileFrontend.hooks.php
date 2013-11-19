@@ -707,10 +707,6 @@ class MobileFrontendHooks {
 				'schema' => 'MobileWebClickTracking',
 				'revision' => 5929948,
 			),
-			'schema.MobileWebInfobox' => array(
-				'schema' => 'MobileWebInfobox',
-				'revision' => 6221064,
-			),
 		);
 
 		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {

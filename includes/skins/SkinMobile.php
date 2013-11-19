@@ -60,7 +60,6 @@ class SkinMobile extends SkinMinerva {
 	}
 
 	public function getDefaultModules() {
-		global $wgMFInfoboxLogging;
 		$out = $this->getOutput();
 		$modules = parent::getDefaultModules();
 
@@ -74,10 +73,6 @@ class SkinMobile extends SkinMinerva {
 				'schema.MobileWebCta',
 				'schema.MobileWebClickTracking',
 			);
-			if ( $wgMFInfoboxLogging ) {
-				$modules['eventlogging'][] = 'schema.MobileWebInfobox';
-				$modules['eventlogging'][] = 'mobile.infoboxTracking';
-			}
 		}
 		return $modules;
 	}
