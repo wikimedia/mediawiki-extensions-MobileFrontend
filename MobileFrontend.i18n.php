@@ -357,7 +357,7 @@ $messages['en'] = array (
 
 	// Messages to support beta features provided by MobileFrontend
 	'beta-feature-geonotahack' => 'Near this page',
-	'beta-feature-geonotahack-description' => 'Allows you to see other related pages to pages you view which contain longitude and latitude information.',
+	'beta-feature-geonotahack-description' => 'Discover pages which are geographically nearby to the content page you are currently reading.',
 );
 
 /** Message documentation (Message documentation)
