@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_c612e0b2",
+        "filename": "includes/Resources.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-19T10:53:23Z",
+      "side": 1,
+      "message": "This is in mobile.editor.common in https://gerrit.wikimedia.org/r/#/c/96209/ and could be reused.",
+      "revId": "56a756a57ce69b1096913f08ba04e6ed1cd0755d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_c67bc0f0",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-19T10:53:23Z",
+      "side": 1,
+      "message": "Don\u0027t set it here or it will be shared by every instance of VisualEditorOverlay. That means that if you open editor, change something, close editor and open a new one, this will be true.\n\nInstead do this.hasChanged \u003d false; in initialize()",
+      "revId": "56a756a57ce69b1096913f08ba04e6ed1cd0755d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_068238cb",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-19T10:53:23Z",
+      "side": 1,
+      "message": "Icons in https://gerrit.wikimedia.org/r/#/c/96209/",
+      "revId": "56a756a57ce69b1096913f08ba04e6ed1cd0755d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_a6732413",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-19T10:53:23Z",
+      "side": 1,
+      "message": "I still haven\u0027t done this in https://gerrit.wikimedia.org/r/#/c/96209/ because editor.js is in mobile.stable module while LoadingOverlayNew is in mobile.beta, which means that editor.js gets loaded before LoadingOverlayNew is available... Not sure how to do it. Maybe we can just require() it later and hope that it\u0027s available by then (and change it before we move it to stable).",
+      "revId": "56a756a57ce69b1096913f08ba04e6ed1cd0755d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e6699c23",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-19T10:53:23Z",
+      "side": 1,
+      "message": "I know I\u0027m pedantic but let\u0027s call it VisualEditorOverlay.",
+      "revId": "56a756a57ce69b1096913f08ba04e6ed1cd0755d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_065b1885",
+        "filename": "templates/modules/editor/VisualEditorOverlay.html",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-19T10:53:23Z",
+      "side": 1,
+      "message": "Use the license message from i18n and styling from https://gerrit.wikimedia.org/r/#/c/96209/",
+      "revId": "56a756a57ce69b1096913f08ba04e6ed1cd0755d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
