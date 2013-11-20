@@ -34,6 +34,24 @@
       "revId": "af680d410a35459f04fa6447754e37973f2933b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_a2b95e2b",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 54
+      },
+      "writtenOn": "2013-11-20T18:18:51Z",
+      "side": 1,
+      "message": "Put it in quotes maybe. Or make it all initial-capitals.",
+      "parentUuid": "0ee75395_82fbfa10",
+      "revId": "af680d410a35459f04fa6447754e37973f2933b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
