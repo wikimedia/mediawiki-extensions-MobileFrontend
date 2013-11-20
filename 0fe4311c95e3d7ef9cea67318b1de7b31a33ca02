@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_4295f234",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2013-11-20T19:12:05Z",
+      "side": 1,
+      "message": "I suggest to change \"article\" -\u003e \"page\" for consistency within this extensions as with core and other extensions too.",
+      "revId": "0fe4311c95e3d7ef9cea67318b1de7b31a33ca02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_229aee66",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2013-11-20T19:12:05Z",
+      "side": 1,
+      "message": "\"article\" -\u003e \"page\"",
+      "revId": "0fe4311c95e3d7ef9cea67318b1de7b31a33ca02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_029fea56",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2013-11-20T19:12:05Z",
+      "side": 1,
+      "message": "\"article\" -\u003e \"page\"",
+      "revId": "0fe4311c95e3d7ef9cea67318b1de7b31a33ca02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
