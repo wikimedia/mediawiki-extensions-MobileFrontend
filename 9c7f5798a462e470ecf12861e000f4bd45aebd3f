@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_221b0e84",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-20T19:57:24Z",
+      "side": 1,
+      "message": "do you really mean to rename this message? the original key is still in use in Special:History.",
+      "revId": "9c7f5798a462e470ecf12861e000f4bd45aebd3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e22526be",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 505,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-20T19:57:24Z",
+      "side": 1,
+      "message": "since this msg no longer exists, this qqq message should be gotten rid of",
+      "revId": "9c7f5798a462e470ecf12861e000f4bd45aebd3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_622116ac",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-20T19:57:24Z",
+      "side": 1,
+      "message": "this patchset removes this message from the i18n file.",
+      "revId": "9c7f5798a462e470ecf12861e000f4bd45aebd3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
