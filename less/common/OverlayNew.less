@@ -1,13 +1,14 @@
 // FIXME: merge with overlays.less when OverlayNew gets to stable
 @import "../mixins.less";
 
-@headerMargin: .4em;
-@headingMarginV: 1em;
-@headingFontSize: 1em;
-@buttonSize: @headingFontSize + @headingMarginV * 2 + @headerMargin;
-
 .overlay-enabled {
-	.overlay {
+	#mw-mf-page-center {
+		overflow: hidden;
+		// FIXME: override old overlay styles, remove when old overlays gone
+		display: block;
+	}
+
+	.overlay, #mw-mf-page-center {
 		// use height instead of bottom 0 so that overlay expands when there's
 		// more content, don't use min-height because of
 		// http://stackoverflow.com/questions/3808512/the-inherited-height-of-a-child-div-from-a-parent-with-a-min-height-attribute
@@ -24,54 +25,69 @@
 	z-index: 4;
 
 	.overlay-header {
-		padding: @headerMargin @headerMargin 0;
 		display: table;
 		width: 100%;
 		.box-sizing(border-box);
 
-		> ul, h2 {
+		> ul, > div {
 			display: table-cell;
-			vertical-align: bottom;
+			vertical-align: middle;
+		}
+
+		.bottom-border {
 			border-bottom: 1px solid #cacaca;
 		}
 
-		button, h2 {
-			line-height: 1;
-			padding: @headingMarginV .6em;
+		> div {
+			padding: @overlayHeadingMarginV @overlayHeadingMarginH;
+		}
+
+		h2 {
 			// FIXME: should not be necessary, scope other h2s to .content
-			font-size: @headingFontSize;
+			font-size: @overlayHeadingFontSize;
 		}
 
 		> ul, button {
-			width: @buttonSize - @headerMargin;
+			width: @overlayButtonSize - @overlayHeaderMargin;
 			white-space: nowrap;
 		}
 
 		button {
-			width: @buttonSize;
+			padding: @overlayHeadingMarginV @overlayHeadingMarginH;
+			width: @overlayButtonSize;
 			border-radius: 0;
-			min-height: @buttonSize;
-			font-weight: bold;
-			margin-top: -@headerMargin;
+			min-height: @overlayButtonSize;
 
 			&.cancel {
 				color: #d11d13;
 			}
 		}
 
-		> ul:first-child li:first-child {
+		.v-border:first-child {
 			border-right: 1px solid #cacaca;
-
-			button {
-				margin-left: -@headerMargin;
-			}
 		}
 
-		> ul:last-child li:last-child {
+		.v-border:last-child li:last-child {
 			border-left: 1px solid #cacaca;
+		}
+
+		&.with-margins {
+			padding: @overlayHeaderMargin @overlayHeaderMargin 0;
+
+			> div {
+				padding: (@overlayHeadingMarginV - @overlayHeaderMargin) @overlayHeadingMarginH;
+			}
 
 			button {
-				margin-right: -@headerMargin;
+				margin-top: -@overlayHeaderMargin;
+			}
+
+			> ul:first-child li:first-child button {
+				margin-left: -@overlayHeaderMargin;
+			}
+
+			> ul:last-child li:last-child button {
+				margin-right: -@overlayHeaderMargin;
 			}
 		}
 
@@ -89,10 +105,11 @@
 				background-image: url(images/cancel.png);
 			}
 
+			&.clear {
+				background-image: url(images/clear.png);
+			}
+
 			&.submit {
-				// following 2 rules to hide the border
-				margin-left: -1px;
-				margin-bottom: -1px;
 				background-image: url(images/check.png);
 				background-color: #00af8b;
 			}

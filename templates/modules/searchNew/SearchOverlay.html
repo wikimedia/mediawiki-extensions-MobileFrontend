@@ -1,0 +1,24 @@
+<div class="overlay-header with-margins">
+	<ul class="v-border bottom-border">
+		<li><button class="cancel icon">{{closeMsg}}</button></li>
+	</ul>
+	<div class="bottom-border">
+		<form method="get" action="{{action}}">
+			<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}">
+		</form>
+	</div>
+	<ul class="bottom-border">
+		<li><button class="clear icon">{{clearMsg}}</button></li>
+	</ul>
+</div>
+<div class="search-content overlay-header">
+	<ul class="v-border bottom-border">
+		<li><button class="icon">{{searchContentMsg}}</button></li>
+	</ul>
+	<div class="caption bottom-border">
+		<p class="with-results">{{searchContentMsg}}</p>
+		<p class="without-results">{{noResultsMsg}}</p>
+		<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
+	</div>
+</div>
+<div class="results spinner"></div>

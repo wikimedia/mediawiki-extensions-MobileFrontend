@@ -1,16 +1,16 @@
 @import "../mixins.less";
 
-@watchThisArticleSize: 22px;
+@watchThisArticleSize: 48px;
 
 // watchlist and search results
 .page-list .watch-this-article {
 	position: absolute;
-	right: 8px;
+	right: 0;
 	top: 50%;
 	margin-top: -(@watchThisArticleSize / 2);
 	width: @watchThisArticleSize;
 	height: @watchThisArticleSize;
-	.background-size( auto, @watchThisArticleSize );
+	.background-size( auto, (@watchThisArticleSize / 2) );
 }
 
 .animations {
