@@ -3,7 +3,7 @@
 		<li><button class="cancel icon">{{closeMsg}}</button></li>
 	</ul>
 	<div class="bottom-border">
-		<h2>{{{heading}}}</h2>
+		<h2>{{{heading}}} {{#headerContext}}<span>{{headerContext}}</span>{{/headerContext}}</h2>
 	</div>
 	<ul class="{{headerButtonsListClassName}}">
 		{{#headerButtons}}

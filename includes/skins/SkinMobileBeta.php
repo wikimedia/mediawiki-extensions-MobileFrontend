@@ -54,6 +54,7 @@ class SkinMobileBeta extends SkinMobile {
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['beta'] = array( 'mobile.beta' );
+		$modules['notifications'] = array( 'mobile.notifications.beta' );
 		$modules['beta'][] = 'mobile.geonotahack';
 		$modules['search'] = array( 'mobile.search.beta' );
 		$modules['issues'] = array( 'mobile.issues.beta' );

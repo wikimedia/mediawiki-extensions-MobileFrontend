@@ -560,6 +560,7 @@ class SkinMinerva extends SkinTemplate {
 			'mobile.stable',
 		);
 
+		$modules['notifications'] = array( 'mobile.notifications' );
 		$modules['watch'] = array();
 		$modules['search'] = array( 'mobile.search.stable' );
 		$modules['stableonly'] = array( 'mobile.lastEdited.stable' );

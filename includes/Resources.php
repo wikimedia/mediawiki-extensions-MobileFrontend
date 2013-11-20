@@ -707,7 +707,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/ContentOverlay.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbieEditor.js',
-			'javascripts/modules/notifications/notifications.js',
 		),
 		'messages' => array(
 			// for mf-toggle.js
@@ -942,6 +941,25 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'echo-load-more-error',
 		),
 	),
+
+	'mobile.notifications' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+		),
+		'scripts' => array(
+			'javascripts/modules/notifications/notifications.js',
+		),
+	),
+
+	'mobile.notifications.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays.beta',
+		),
+		'scripts' => array(
+			'javascripts/modules/notifications/notifications.js',
+		),
+	),
+
 	'mobile.notifications.overlay' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
@@ -963,6 +981,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'echo-overlay-link',
 		),
 	),
+
+	'mobile.notifications.overlay.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays.beta',
+			'mobile.notifications.overlay',
+		),
+		'scripts' => array(
+			'javascripts/modules/notifications/NotificationsOverlayNew.js',
+		),
+	),
+
 	'mobile.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/search.less',
