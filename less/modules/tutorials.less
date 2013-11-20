@@ -1,7 +1,9 @@
 @import "../mixins.less";
 /* Tutorial overlay styling */
 
-.tutorial {
+.tutorial,
+// Use two selectors to ensure this is more specific then .mw-mf-overlay in cases of load order differences
+.mw-mf-overlay.tutorial {
 	padding: 1em @contentMargin;
 	line-height: 1.4;
 	font-size: .9em;
@@ -15,7 +17,6 @@
 		margin: 0 0 1em;
 	}
 
-	button,
 	.button {
 		// FIXME: without this the cloaked input seems to interfere making cancel button start upload
 		position: relative;
