@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_e2dd2675",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-20T18:42:51Z",
+      "side": 1,
+      "message": "imo being explicit about this being in alpha or beta is preferable to !\u003d\u003d \u0027stable\u0027. what happens if something overrides wgMFMode to be foo?",
+      "revId": "e1c0e1e4436e6f877a978c64c31237d7379dc1c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
