@@ -293,10 +293,10 @@ class MobileContext extends ContextSource {
 	 */
 	private function shouldDisplayMobileViewInternal() {
 		global $wgMobileUrlTemplate;
-		// always display non-mobile view for edit/history/diff
+		$ctx = MobileContext::singleton();
 		$action = $this->getAction();
 
-		if ( $action === 'history' ) {
+		if ( $action === 'history' && !$ctx->isBetaGroupMember() ) {
 			return false;
 		}
 
