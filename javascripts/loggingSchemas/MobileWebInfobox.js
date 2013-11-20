@@ -5,20 +5,10 @@ var $infobox = $( '.infobox' ).eq( 0 ),
 	viewportHeight = $( window ).height(),
 	scrollingHasCommenced = false,
 	userScrolledToInfobox = false,
-	userScrolledPastInfobox = false,
-	recorded = false;
+	userScrolledPastInfobox = false;
 
 function attemptLogEvent() {
-	if ( logData['in'] && logData.out && !recorded ) {
-		recorded = true;
-		clearInterval( interval );
-		return M.log( 'MobileWebInfobox', logData );
-	} else {
-		/* Hijack below expects a deferred object. We should only log on the first click to MobileWebInfobox
-		In the situation where you click a link in the infobox then click another the always handler should
-		still be able to fire so that the link can be navigated to.*/
-		return $.Deferred().resolve();
-	}
+	return $.Deferred().resolve();
 }
 
 function detectInfobox() {
