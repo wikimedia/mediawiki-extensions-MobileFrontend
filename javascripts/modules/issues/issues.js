@@ -30,19 +30,23 @@ var module = (function() {
 		// clean it up a little
 		$metadata.find( '.NavFrame' ).remove();
 		$metadata.each( function() {
-			var $this = $( this );
+			var $this = $( this ), issue;
 
 			if ( $( this ).find( 'table.ambox' ).length === 0 ) {
-				issues.push( {
-					// FIXME: [templates] might be inconsistent
+				// FIXME: [templates] might be inconsistent
+				issue = {
 					// .ambox- is used e.g. on eswiki
-					icon: $this.find( '.mbox-image img, .ambox-image img' ).attr( 'src' ),
 					text: $this.find( '.mbox-text, .ambox-text' ).html()
-				} );
+				};
+				// new overlays have same icon for all issues
+				if ( !useNewOverlays ) {
+					issue.icon = $this.find( '.mbox-image img, .ambox-image img' ).attr( 'src' );
+				}
+				issues.push( issue );
 			}
 		} );
 
-		$link = $( '<a class="mw-mf-cleanup">' );
+		$link = $( '<a class="mw-mf-cleanup icon-24px">' );
 		if ( useNewOverlays ) {
 			overlay = new CleanupOverlayNew( {
 				parent: parentOverlay,

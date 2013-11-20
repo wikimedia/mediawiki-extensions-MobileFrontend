@@ -1,23 +1,30 @@
 @import "../mixins.less";
 
-a.mw-mf-cleanup {
+@iconSize: 24px;
+.icon-24px {
+	.background-size( @iconSize, @iconSize );
+	background-repeat: no-repeat;
+}
+
+.mw-mf-cleanup {
 	display: block;
 	padding: 10px 15px 10px 44px;
-	background-image: url(images/issues-blue.png);
-	background-repeat: no-repeat;
+	background-image: url(images/issues/blue.png);
 	margin-bottom: 4px;
-	.background-size( 24px, 24px );
 	background-position: 10px center;
+}
 
-	&:hover {
-		background-image: url(images/issues-gray.png);
-		text-decoration: none;
-		color: #565656;
-		background-color: #f0f0f0;
+.stable {
+	.mw-mf-cleanup {
+		&:hover {
+			background-image: url(images/issues/gray.png);
+			text-decoration: none;
+			color: #565656;
+			background-color: #f0f0f0;
+		}
 	}
 }
 
-.overlay,
 .mw-mf-overlay {
 	.cleanup {
 		margin: @contentMargin @contentMargin 0 @contentMargin;
@@ -31,3 +38,22 @@ a.mw-mf-cleanup {
 	}
 }
 
+.alpha,
+.beta {
+	.mw-mf-cleanup {
+		background-image: url(images/issues/blue-triangle.png);
+	}
+
+	// overlay styles
+	.overlay {
+		.cleanup {
+			margin: 0 @headerMargin;
+			li {
+				padding: @iconSize * 2.5 @headerMargin @iconSize @headerMargin;
+				background-position: center @iconSize;
+				background-image: url(images/issues/gray-triangle.png);
+				border-bottom: solid 1px @grayLight;
+			}
+		}
+	}
+}

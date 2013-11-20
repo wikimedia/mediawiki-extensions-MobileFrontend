@@ -1,5 +1,8 @@
 <ul class="cleanup">
 	{{#issues}}
-	<li><img src="{{icon}}"> {{{text}}}</li>
+	<li class="icon-24px">
+		{{#icon}}<img src="{{icon}}"> {{/icon}}
+		{{{text}}}
+	</li>
 	{{/issues}}
 </ul>
