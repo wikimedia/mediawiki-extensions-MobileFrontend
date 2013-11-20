@@ -16,6 +16,24 @@
       "revId": "af680d410a35459f04fa6447754e37973f2933b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_82fbfa10",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-20T17:54:19Z",
+      "side": 1,
+      "message": "It\u0027s a name - I can say \"Jon Robson shows you how to comment on Gerrit\" and I can say \"Google Plus allows you to talk to people\"",
+      "parentUuid": "291c1151_968c9138",
+      "revId": "af680d410a35459f04fa6447754e37973f2933b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
