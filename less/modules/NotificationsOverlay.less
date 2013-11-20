@@ -1,6 +1,7 @@
 // FIXME: some of this could be removed if we reused .page-list styling
 @import "../mixins.less";
 
+.overlay,
 .mw-mf-overlay {
 	.mw-mf-notifications {
 		padding-bottom: 0;
@@ -36,5 +37,15 @@
 		// it otherwise. The 10px padding corresponds with the icon margin.
 		margin: 1em 1em 0 1em;
 		padding: 0 0 1em 10px;
+	}
+}
+
+// FIXME: Merge both of these rules with above padding definitions when goes to stable
+.overlay {
+	.mw-echo-notification {
+		padding-right: @overlayHeaderMargin;
+	}
+	.notifications-archive-link {
+		padding-left: @overlayHeaderMargin;
 	}
 }

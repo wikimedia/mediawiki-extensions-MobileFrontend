@@ -1,11 +1,11 @@
 ( function( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
+		prototype,
 		NotificationsOverlay;
 
-	NotificationsOverlay = Overlay.extend( {
+	prototype = {
 			active: false,
-			className: 'mw-mf-overlay',
 			templatePartials: {
 				content: M.template.get( 'modules/notifications/NotificationsOverlay' )
 			},
@@ -96,8 +96,10 @@
 					this.updateCount( 0 );
 				}
 			}
-	} );
+	};
+	NotificationsOverlay = Overlay.extend( prototype );
 
 	M.define( 'modules/notifications/NotificationsOverlay', NotificationsOverlay );
+	M.define( 'modules/notifications/prototype', prototype );
 
 }( mw.mobileFrontend, jQuery ) );
