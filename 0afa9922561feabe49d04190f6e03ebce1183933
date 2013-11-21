@@ -16,6 +16,24 @@
       "revId": "0afa9922561feabe49d04190f6e03ebce1183933",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_b14e4ac3",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-21T11:19:11Z",
+      "side": 1,
+      "message": "This should be the following according to Jon:\n\n Use \u0027\u0027\u0027{{int:mobile-frontend-search-content}}\u0027\u0027\u0027 to see if this phrase appears anywhere.\n\nThe convention that we use is that references to messages elsewhere in the UI are put in quotes (\"...\"). If the mobile convention is to make them bold, I\u0027d suggest to do both, which would mean the message content looks like this:\n\n  Use \"\u0027\u0027\u0027{{int:mobile-frontend-search-content}}\u0027\u0027\u0027\" to see if this phrase appears anywhere.\n\nWhat are your visual requirements, Jon?",
+      "parentUuid": "0ee75395_6bc33162",
+      "revId": "0afa9922561feabe49d04190f6e03ebce1183933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
