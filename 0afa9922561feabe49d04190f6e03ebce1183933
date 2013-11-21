@@ -34,6 +34,24 @@
       "revId": "0afa9922561feabe49d04190f6e03ebce1183933",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_29b3ee4d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-21T18:33:13Z",
+      "side": 1,
+      "message": "It should be bold according to the design spec. I\u0027m happy to quote it as well if this is convention. PS: where are these conventions documented? Can you link me up?",
+      "parentUuid": "0ee75395_b14e4ac3",
+      "revId": "0afa9922561feabe49d04190f6e03ebce1183933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
