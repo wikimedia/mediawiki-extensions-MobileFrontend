@@ -242,6 +242,9 @@
 			$( 'body' ).removeClass( 'page-Main_Page' );
 		}
 
+		// VisualEditor amongst other things relies on these variables to reflect current state of document
+		mw.config.set( 'wgTitle', page.title );
+		mw.config.set( 'wgRelevantPageName', page.title );
 		mw.config.set( 'wgArticleId', page.getId() );
 		M.emit( 'page-loaded', page );
 		// Update page title

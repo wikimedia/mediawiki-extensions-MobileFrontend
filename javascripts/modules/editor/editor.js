@@ -6,6 +6,8 @@
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
+		// FIXME: Should we consider default site options and user prefs?
+		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha',
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			queryParams: {
@@ -42,31 +44,44 @@
 		if ( M.query.undo ) {
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
+
 		M.router.route( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
 			// FIXME: clean up when new overlays in stable
 			var
 				LoadingOverlay = M.require( inStable ? 'LoadingOverlay' : 'LoadingOverlayNew' ),
 				loadingOverlay = new LoadingOverlay();
 			loadingOverlay.show();
+			sectionId = mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? parseInt( sectionId, 10 ) : null;
 
 			// FIXME: clean up when new overlays in stable
-			mw.loader.using( inStable ? 'mobile.editor.overlay.stable' : 'mobile.editor.overlay.beta', function() {
-				var EditorOverlay = M.require( inStable ? 'modules/editor/EditorOverlay' : 'modules/editorNew/EditorOverlay' ),
-					title = page ? page.title : mw.config.get( 'wgTitle' ),
-					// Note in current implementation Page title is prefixed with namespace
-					ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
+			if ( isVisualEditorEnabled ) {
+				// Load VE init module
+				mw.loader.using( 'mobile.editor.ve', function () {
+					var VeOverlay = M.require( 'modules/editor/VisualEditorOverlay' ),
+						ve = new VeOverlay( {
+							sectionId: sectionId
+						} );
+					loadingOverlay.hide();
+					ve.show();
+				} );
+			} else {
+				mw.loader.using( inStable ? 'mobile.editor.overlay.stable' : 'mobile.editor.overlay.beta', function() {
+					var EditorOverlay = M.require( inStable ? 'modules/editor/EditorOverlay' : 'modules/editorNew/EditorOverlay' ),
+						title = page ? page.title : mw.config.get( 'wgTitle' ),
+						// Note in current implementation Page title is prefixed with namespace
+						ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
 
-				sectionId = parseInt( sectionId, 10 );
-				loadingOverlay.hide();
-				new EditorOverlay( {
-					title: ns ? ns + ':' + title : title,
-					isNew: isNew,
-					isNewEditor: mw.config.get( 'wgUserEditCount' ) === 0,
-					sectionId: mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? sectionId : null,
-					funnel: funnel || 'article'
-				} ).show();
+						loadingOverlay.hide();
+						new EditorOverlay( {
+							title: ns ? ns + ':' + title : title,
+							isNew: isNew,
+							isNewEditor: mw.config.get( 'wgUserEditCount' ) === 0,
+							sectionId: sectionId,
+							funnel: funnel || 'article'
+						} ).show();
+					} );
+				}
 			} );
-		} );
 		$( '#ca-edit' ).addClass( 'enabled' );
 
 		// FIXME: unfortunately the main page is special cased.
