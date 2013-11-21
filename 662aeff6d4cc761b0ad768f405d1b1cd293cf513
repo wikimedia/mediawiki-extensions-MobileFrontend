@@ -34,6 +34,24 @@
       "revId": "662aeff6d4cc761b0ad768f405d1b1cd293cf513",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_42d3a761",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-21T22:53:42Z",
+      "side": 1,
+      "message": "Or maybe it does - it\u0027s not clear from the bug report what is being asked for.",
+      "parentUuid": "0ee75395_e2eabb04",
+      "revId": "662aeff6d4cc761b0ad768f405d1b1cd293cf513",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
