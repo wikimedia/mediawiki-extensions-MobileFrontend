@@ -52,6 +52,23 @@
       "revId": "af680d410a35459f04fa6447754e37973f2933b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_513ffed3",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-21T12:06:39Z",
+      "side": 1,
+      "message": "Please don\u0027t use article. Use \"page\" or \"content page\" if you have to be really specific.",
+      "revId": "af680d410a35459f04fa6447754e37973f2933b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
