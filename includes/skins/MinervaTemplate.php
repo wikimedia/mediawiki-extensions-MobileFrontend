@@ -20,7 +20,16 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	public function getLanguages() {
-		return $this->data['language_urls'];
+		$langs = array();
+		// FIXME: Hack to workaround bug 57094
+		if ( $this->data['language_urls'] ) {
+			foreach( $this->data['language_urls'] as $lang ) {
+				if ( !isset( $lang['id'] ) || $lang['id'] !== 'wbc-linkToItem' ) {
+					$langs[] = $lang;
+				}
+			}
+		}
+		return $langs;
 	}
 
 	public function getDiscoveryTools() {
