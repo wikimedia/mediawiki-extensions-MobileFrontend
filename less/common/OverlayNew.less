@@ -47,7 +47,7 @@
 		}
 
 		.bottom-border {
-			border-bottom: 1px solid #cacaca;
+			border-bottom: 1px solid @grayLight;
 		}
 
 		> div {
@@ -125,7 +125,21 @@
 				background-image: url(images/check.png);
 				background-color: #00af8b;
 			}
+
+			&.continue {
+				background-image: url(images/continue.png);
+				background-color: #2f81f0;
+			}
+
+			&.back {
+				background-image: url(images/back.png);
+			}
 		}
+	}
+
+	.panel {
+		padding: @contentMargin;
+		border-bottom: 1px solid @grayLight;
 	}
 
 	.license {
@@ -138,5 +152,13 @@
 		min-height: 18px;
 		margin-top: .5em;
 		line-height: 1.4;
+	}
+
+	// AbuseFilterOverlay
+	.content {
+		.cancel {
+			display: block;
+			margin: 1em auto;
+		}
 	}
 }

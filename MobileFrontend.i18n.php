@@ -291,7 +291,7 @@ $messages['en'] = array (
 	'mobile-frontend-editor-save' => 'Save',
 	'mobile-frontend-editor-cancel' => 'Cancel',
 	'mobile-frontend-editor-keep-editing' => 'Keep editing',
-	'mobile-frontend-editor-license' => 'By clicking "Save", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 License] and [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
+	'mobile-frontend-editor-license' => 'By saving changes, you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 License] and [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
 	'mobile-frontend-editor-placeholder' => 'This section is empty. Be the first to expand it!',
 	'mobile-frontend-editor-summary-placeholder' => 'Tell us what you changed (optional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Do you really want to abandon your edit?',
@@ -310,6 +310,8 @@ $messages['en'] = array (
 	'mobile-frontend-editor-abusefilter-warning' => 'Warning: Are you sure you want to save this edit? There may be an issue with it.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'This edit cannot be saved because we have detected an issue.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Read more',
+	'mobile-frontend-editor-editing' => "'''Editing''' $1",
+	'mobile-frontend-editor-previewing' => "'''Previewing''' $1",
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -901,6 +903,14 @@ See also:
 	'mobile-frontend-editor-abusefilter-disallow' => 'A message telling their user that their edit has been disallowed by AbuseFilter.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'A caption for the button allowing the user to read more about the problems with their edit.
 {{Identical|Read more}}',
+	'mobile-frontend-editor-editing' => 'A heading saying what page is being edited.
+
+Parameters:
+* $1 - page title',
+	'mobile-frontend-editor-previewing' => 'A heading saying what page is being previewed after editing.
+
+Parameters:
+* $1 - page title',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:

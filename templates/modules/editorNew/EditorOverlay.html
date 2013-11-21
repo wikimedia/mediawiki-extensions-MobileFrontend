@@ -1,0 +1,53 @@
+<div class="overlay-header with-margins initial-header hideable hidden">
+	<ul class="v-border bottom-border">
+		<li><button class="cancel icon">{{closeMsg}}</button></li>
+	</ul>
+	<div class="bottom-border">
+		<h2>{{{editingMsg}}}</h2>
+	</div>
+	<ul>
+		<li><button class="continue icon" disabled>{{continueMsg}}</button></li>
+	</ul>
+</div>
+<div class="overlay-header with-margins save-header hideable hidden">
+	<ul class="v-border bottom-border">
+		<li><button class="back icon">{{keepEditingMsg}}</button></li>
+	</ul>
+	<div class="bottom-border">
+		<h2>{{{previewingMsg}}}</h2>
+	</div>
+	<ul>
+		<li><button class="submit icon">{{saveMsg}}</button></li>
+	</ul>
+</div>
+<div class="overlay-header with-margins saving-header hideable hidden">
+	<ul class="v-border bottom-border">
+		<li><button class="cancel icon" disabled>{{closeMsg}}</button></li>
+	</ul>
+	<div class="bottom-border">
+		<h2>{{{waitMsg}}}</h2>
+	</div>
+	<ul class="v-border bottom-border">
+		<li><button class="loading icon">{{waitMsg}}</button></li>
+	</ul>
+</div>
+
+<div class="save-panel panel hideable hidden">
+	<input class="summary" placeholder="{{summaryMsg}}" />
+	<p class="license">{{{licenseMsg}}}</p>
+</div>
+<div class="captcha-panel panel hideable hidden">
+	<div class="inputs-box">
+		<img src="">
+		<input class="captcha-word" placeholder="{{captchaMsg}}" />
+	</div>
+</div>
+<div class="abusefilter-panel panel hideable hidden">
+	<div class="message">
+		<p></p><button class="readmore inline">{{abusefilterReadMoreMsg}}</button>
+	</div>
+</div>
+
+<div class="spinner loading"></div>
+<textarea cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
+<div class="preview content"></div>
