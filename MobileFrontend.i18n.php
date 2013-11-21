@@ -114,9 +114,9 @@ $messages['en'] = array (
 	'mobile-frontend-search-help' => 'Type search term above and matching page titles will appear here.',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 	'mobile-frontend-clear-search' => 'Clear',
-	'mobile-frontend-search-content' => 'Search within articles',
-	'mobile-frontend-search-no-results' => "No article with this title.",
-	'mobile-frontend-search-content-no-results' => "'''Search within articles''' to see if this phrase appears anywhere.",
+	'mobile-frontend-search-content' => 'Search within pages',
+	'mobile-frontend-search-no-results' => "No page with this title.",
+	'mobile-frontend-search-content-no-results' => "'''{{int:mobile-frontend-search-content}}''' to see if this phrase appears anywhere.",
 
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
@@ -217,7 +217,7 @@ $messages['en'] = array (
 	'mobile-frontend-changeslist-ip' => 'Anonymous user',
 	'mobile-frontend-changeslist-nocomment' => 'no edit summary',
 	'mobile-frontend-watchlist-filter-all' => 'All',
-	'mobile-frontend-watchlist-filter-articles' => 'Articles',
+	'mobile-frontend-watchlist-filter-articles' => 'Content pages',
 	'mobile-frontend-watchlist-filter-talk' => 'Talk',
 	'mobile-frontend-watchlist-filter-other' => 'Other',
 	'mobile-frontend-watchlist-modified' => 'Modified $1',
@@ -395,7 +395,7 @@ $messages['qqq'] = array(
 
 See also:
 * {{msg-mw|Mobilefrontend-random-cancel}}',
-	'mobilefrontend-random-cancel' => 'Allows the reader to start reading the current article.
+	'mobilefrontend-random-cancel' => 'Allows the reader to start reading the current page.
 
 See also:
 * {{msg-mw|Mobilefrontend-random-explain}}',
@@ -478,9 +478,9 @@ See also:
 	'mobile-frontend-featured-article' => 'The title that will appear before the element with the mf-tfa selector.',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
 	'mobile-frontend-language' => '{{Identical|Language}}',
-	'mobile-frontend-language-article-heading' => 'A heading within the page the content of which lists the other languages available for this article: translate the message considering the list to have an undetermined number of items.',
+	'mobile-frontend-language-article-heading' => 'A heading within the page the content of which lists the other languages available for this page: translate the message considering the list to have an undetermined number of items.',
 	'mobile-frontend-current-language' => '{{optional}}',
-	'mobile-frontend-language-header' => 'Header at top of language selection overlay describing number of languages that it is possible to read the article in
+	'mobile-frontend-language-header' => 'Header at top of language selection overlay describing number of languages that it is possible to read the page in
 * $1 - number of languages',
 	'mobile-frontend-language-variant-header' => 'Header at top of language selection overlay prompting a user to select variant of the current language',
 	'mobile-frontend-language-footer' => 'Footer at bottom of language selection overlay. This informs a user that if they cannot see a certain language in the list that there are other language versions of the current site that can be viewed by clicking on this link.',
@@ -606,7 +606,7 @@ Parameters:
 	'mobile-frontend-clear-search' => 'Tooltip for clear button that appears when you type into search box.
 {{Identical|Clear}}',
 	'mobile-frontend-search-content' => 'Caption for a button performing full text search of a given search query.',
-	'mobile-frontend-search-no-results' => 'Message informing user that no articles were found for a given query.',
+	'mobile-frontend-search-no-results' => 'Message informing user that no pages were found for a given query.',
 	'mobile-frontend-search-content-no-results' => 'Caption for a button performing full text search of a given search query when no pages with matching titles were found.',
 	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
 {{Identical|Privacy}}',
@@ -645,13 +645,13 @@ Parameters:
 {{Identical|Create account}}',
 	'mobile-frontend-page-menu-contents' => 'table of contents link text in secondary menu.
 {{Identical|Content}}',
-	'mobile-frontend-page-menu-language-current' => 'the text of the language link text in secondary menu which when clicked allows the user to change the content language of an article
+	'mobile-frontend-page-menu-language-current' => 'the text of the language link text in secondary menu which when clicked allows the user to change the content language of a page
 
 {{optional}}',
 	'mobile-frontend-page-menu-history' => 'history link text in secondary menu.
 {{Identical|History}}',
 	'mobile-frontend-meta-data-issues-header' => 'Heading for overlay listing all cleanup templates',
-	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
+	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that a page has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
 	'mobile-frontend-page-saving' => 'Unused at this time.
 
 Text shown whilst a page is being saved. Parameters:
@@ -719,9 +719,9 @@ Parameters:
 	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Question asking user if they understood the tutorial',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Label for button which escapes overlay and starts upload.
 {{Identical|Yes}}',
-	'mobile-frontend-watchlist-add' => 'Notification message when you add an article to your watchlist
+	'mobile-frontend-watchlist-add' => 'Notification message when you add a page to your watchlist
 *$1 - the title of the article',
-	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist
+	'mobile-frontend-watchlist-removed' => 'Notification message when you remove a age from your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist.
 {{Identical|View your watchlist}}',
@@ -738,9 +738,9 @@ Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
 	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist.
 {{Identical|List}}',
-	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes.
+	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of pages you watch that have changes.
 {{Identical|Modified}}',
-	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Alt text for image explaining how to watch articles',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Alt text for image explaining how to watch pages',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'Message to accompany image',
 	'mobile-frontend-watchlist-feed-empty' => 'Message to show when watchlist feed is empty',
 	'mobile-frontend-watchlist-back-home' => 'Label for button that takes you back to main page from empty watchlist',
@@ -749,10 +749,10 @@ Used when the user is not logged in.
 	'mobile-frontend-changeslist-nocomment' => 'Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.',
 	'mobile-frontend-watchlist-filter-all' => 'Label on filter selector for mobile watchlist: all pages.
 {{Identical|All}}',
-	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: article pages only',
+	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: content pages only',
 	'mobile-frontend-watchlist-filter-talk' => 'Label on filter selector for mobile watchlist: talk pages.
 {{Identical|Talk}}',
-	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or article).
+	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or content page).
 {{Identical|Other}}',
 	'mobile-frontend-watchlist-modified' => 'Text saying how long ago a page in watchlist was updated.
 * $1 - output of {{msg-mw|ago}} (e.g. "15 days ago", "7 hours ago").',
@@ -782,11 +782,11 @@ Parameters:
 * $1 - the username of the user that was thanked
 * $2 - the gender of the user that was thanked',
 	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. Parameters:
-* $1 - a unique table number for the article',
+* $1 - a unique table number for the page',
 	'mobile-frontend-saving-exit-page' => 'When a user makes an edit in the page which is happening in the background
 and then tries to leave the page this message is shown to check that they are happy that they will lose their changes.
 They can either exit the page and lose them or stay on the page until they are complete',
-	'mobile-frontend-photo-upload' => 'This appears on articles which have no photos and is a call to action to add the first image',
+	'mobile-frontend-photo-upload' => 'This appears on pages which have no photos and is a call to action to add the first image',
 	'mobile-frontend-photo-article-edit-comment' => 'Comment associated with edit to page that inserts the image wikitext',
 	'mobile-frontend-photo-article-donate-comment' => 'Edit summary associated with uploading an image from mobile',
 	'mobile-frontend-photo-upload-comment' => 'Comment associated with the upload of an image',
@@ -808,7 +808,7 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-nag-3-bullet-1-heading' => "A confirmation that the user understands what they are allowed to upload (user's third upload).",
 	'mobile-frontend-photo-nag-learn-more-heading' => 'A heading for a text describing good image contribution practices.',
 	'mobile-frontend-photo-nag-learn-more-1' => 'Explain to users what is allowed on the image they upload.',
-	'mobile-frontend-photo-nag-learn-more-2' => 'Explain to users that the image they upload should be a good illustration for an article.',
+	'mobile-frontend-photo-nag-learn-more-2' => 'Explain to users that the image they upload should be a good illustration for a page.',
 	'mobile-frontend-photo-nag-learn-more-3' => "Explain to users that the image can't violate copyrights or else it will be deleted.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Briefly summarise that a lead image should illustrate the page whilst not violating copyright. Shown to new users after logging in',
 	'mobile-frontend-lead-image-tutorial-confirm' => 'Call to action that when clicked starts uploading an image to a page from tutorial.',
