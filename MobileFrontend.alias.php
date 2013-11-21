@@ -108,6 +108,7 @@ $specialPageAliases['hi'] = array(
 /** Italian (italiano) */
 $specialPageAliases['it'] = array(
 	'MobileOptions' => array( 'OpzioniMobile' ),
+	'UserProfile' => array( 'ProfiloUtente' ),
 );
 
 /** Japanese (日本語) */

@@ -504,9 +504,9 @@ This is shown on the Main Page in place of a last modified label to avoid confus
 
 If not the Main Page, the following message is used:
 * {{msg-mw|Mobile-frontend-last-modified-date}}',
-	'mobile-frontend-history-no-results' => 'Error shown when there are no history entires for a given/invalid filter.',
 	'mobile-frontend-history-404-title' => 'Title of the 404 error page shown when navigate to [[Special:History/Title of page that does not exist]]',
 	'mobile-frontend-history-404-desc' => 'Explain the reasons why the user may have arrived on {{msg-mw|mobile-frontend-history-404-title}}',
+	'mobile-frontend-history-no-results' => 'Error shown when there are no history entires for a given/invalid filter.',
 	'mobile-frontend-history-summary' => 'Summary text that appears at the top of the mobile history page for a given page.
 
 Parameters:
@@ -609,7 +609,14 @@ Parameters:
 {{Identical|Clear}}',
 	'mobile-frontend-search-content' => 'Caption for a button performing full text search of a given search query.',
 	'mobile-frontend-search-no-results' => 'Message informing user that no pages were found for a given query.',
-	'mobile-frontend-search-content-no-results' => 'Caption for a button performing full text search of a given search query when no pages with matching titles were found.',
+	'mobile-frontend-search-content-no-results' => 'Used when no pages with matching titles were found.
+
+"Search within articles" is button caption.
+
+Preceded by {{msg-mw|mobile-frontend-search-no-results}}.
+
+See also:
+* {{msg-mw|Mobile-frontend-search-content}}',
 	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
 {{Identical|Privacy}}',
 	'mobile-frontend-footer-sitename' => 'Name of site',
@@ -1130,8 +1137,17 @@ $messages['ang'] = array(
 	'mobile-frontend-save-settings' => 'Hordian',
 	'mobile-frontend-language' => 'Sprǣc:',
 	'mobile-frontend-username' => 'Brūcendnama:',
+	'mobile-frontend-password' => 'Þafungword:',
+	'mobile-frontend-username-placeholder' => 'Brūcendnama',
+	'mobile-frontend-password-placeholder' => 'Þafungword',
+	'mobile-frontend-login' => 'Inmeldian',
 	'mobile-frontend-main-menu-login' => 'Inmeldian',
 	'mobile-frontend-main-menu-logout' => 'Ūtmeldian',
+	'mobile-frontend-page-menu-history' => 'Stǣr',
+	'mobile-frontend-watchlist-cta-button-login' => 'Inmeldian',
+	'mobile-frontend-diffview-anonymous' => 'Uncūþ brūcend',
+	'mobile-frontend-editor-edit' => 'Adihtan',
+	'mobile-frontend-editor-save' => 'Hordian',
 	'mobile-frontend-talk-overlay-header' => 'Mōtung',
 );
 
@@ -1699,7 +1715,7 @@ $messages['ast'] = array(
 	'mobile-frontend-changeslist-ip' => 'Usuariu anónimu',
 	'mobile-frontend-changeslist-nocomment' => "ensin resume d'edición",
 	'mobile-frontend-watchlist-filter-all' => 'Toes',
-	'mobile-frontend-watchlist-filter-articles' => 'Artículos',
+	'mobile-frontend-watchlist-filter-articles' => 'Artículos', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Alderique',
 	'mobile-frontend-watchlist-filter-other' => 'Otres',
 	'mobile-frontend-watchlist-modified' => 'Camudose $1',
@@ -1764,7 +1780,7 @@ $messages['ast'] = array(
 	'mobile-frontend-editor-save' => 'Guardar',
 	'mobile-frontend-editor-cancel' => 'Encaboxar',
 	'mobile-frontend-editor-keep-editing' => 'Siguir editando',
-	'mobile-frontend-editor-license' => "Al calcar «Guardar», aceuta les nueses [//wikimediafoundation.org/wiki/Terms_of_use Condiciones d'usu] y ta d'alcuerdu con distribuir el so testu baxo la [//creativecommons.org/licenses/by-sa/3.0/ Llicencia CC-BY-SA 3.0] y la [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].",
+	'mobile-frontend-editor-license' => "Al calcar «Guardar», aceuta les nueses [//wikimediafoundation.org/wiki/Terms_of_use Condiciones d'usu] y ta d'alcuerdu con distribuir el so testu baxo la [//creativecommons.org/licenses/by-sa/3.0/ Llicencia CC-BY-SA 3.0] y la [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].", # Fuzzy
 	'mobile-frontend-editor-placeholder' => "Esta seición ta balera. ¡Seya'l primeru n'espandela!",
 	'mobile-frontend-editor-summary-placeholder' => 'Diganos lo que camudó (opcional)',
 	'mobile-frontend-editor-cancel-confirm' => '¿Realmente quier abandonar la edición?',
@@ -1819,7 +1835,7 @@ $messages['ast'] = array(
 	'mobile-frontend-profile-edit-summary' => "Anovando l'entamu del perfil d'usuariu",
 	'mobile-frontend-geonotahack' => "Cerca d'esta páxina",
 	'beta-feature-geonotahack' => "Cerca d'esta páxina",
-	'beta-feature-geonotahack-description' => 'Permite-y ver otres páxines rellacionaes con páxines que visite y que contienen información de llatitú y llonxitú.',
+	'beta-feature-geonotahack-description' => 'Permite-y ver otres páxines rellacionaes con páxines que visite y que contienen información de llatitú y llonxitú.', # Fuzzy
 );
 
 /** Azerbaijani (azərbaycanca)
@@ -3254,7 +3270,7 @@ $messages['cs'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonymní uživatel',
 	'mobile-frontend-changeslist-nocomment' => 'bez shrnutí editace',
 	'mobile-frontend-watchlist-filter-all' => 'Všechno',
-	'mobile-frontend-watchlist-filter-articles' => 'Články',
+	'mobile-frontend-watchlist-filter-articles' => 'Články', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskuse',
 	'mobile-frontend-watchlist-filter-other' => 'Jiné',
 	'mobile-frontend-watchlist-modified' => 'Změněno $1',
@@ -3292,7 +3308,7 @@ $messages['cs'] = array(
 	'mobile-frontend-editor-save' => 'Uložit',
 	'mobile-frontend-editor-cancel' => 'Storno',
 	'mobile-frontend-editor-keep-editing' => 'Pokračovat v editaci',
-	'mobile-frontend-editor-license' => 'Kliknutím na „Uložit“ souhlasíte s našimi [//wikimediafoundation.org/wiki/Terms_of_Use/cs Podmínkami užití] a souhlasíte se zveřejněním svého textu za podmínek licencí [//creativecommons.org/licenses/by-sa/3.0/deed.cs CC-BY-SA 3.0] a [//cs.wikipedia.org/wiki/Wikipedie:GNU_Free_Documentation_License GFDL].',
+	'mobile-frontend-editor-license' => 'Kliknutím na „Uložit“ souhlasíte s našimi [//wikimediafoundation.org/wiki/Terms_of_Use/cs Podmínkami užití] a souhlasíte se zveřejněním svého textu za podmínek licencí [//creativecommons.org/licenses/by-sa/3.0/deed.cs CC-BY-SA 3.0] a [//cs.wikipedia.org/wiki/Wikipedie:GNU_Free_Documentation_License GFDL].', # Fuzzy
 	'mobile-frontend-editor-cancel-confirm' => 'Určitě chcete zahodit své úpravy?',
 	'mobile-frontend-editor-wait' => 'Editace se ukládá, prosím čekejte.',
 	'mobile-frontend-editor-success' => 'Úspěch! Vaše editace byla uložena.',
@@ -3570,7 +3586,7 @@ $messages['cy'] = array(
 	'mobile-frontend-changeslist-ip' => 'Defnyddiwr anhysbys',
 	'mobile-frontend-changeslist-nocomment' => 'dim crynodeb golygu',
 	'mobile-frontend-watchlist-filter-all' => 'Pob un',
-	'mobile-frontend-watchlist-filter-articles' => 'Erthyglau',
+	'mobile-frontend-watchlist-filter-articles' => 'Erthyglau', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Sgwrs',
 	'mobile-frontend-watchlist-filter-other' => 'Arall',
 	'mobile-frontend-watchlist-modified' => 'Addaswyd $1',
@@ -3635,7 +3651,7 @@ $messages['cy'] = array(
 	'mobile-frontend-editor-save' => 'Cadwer',
 	'mobile-frontend-editor-cancel' => 'Diddymer',
 	'mobile-frontend-editor-keep-editing' => 'Parhau i olygu',
-	'mobile-frontend-editor-license' => 'Wrth bwyso ar "Cadwer", rydych yn ymrwymo wrth ein [//wikimediafoundation.org/wiki/Terms_of_use Telerau Defnyddio] ac yn cytuno i ryddhau eich testun â thrwyddedi [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] a [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] arno.',
+	'mobile-frontend-editor-license' => 'Wrth bwyso ar "Cadwer", rydych yn ymrwymo wrth ein [//wikimediafoundation.org/wiki/Terms_of_use Telerau Defnyddio] ac yn cytuno i ryddhau eich testun â thrwyddedi [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] a [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] arno.', # Fuzzy
 	'mobile-frontend-editor-placeholder' => "Mae'r adran hon yn wag. Byddwch ar flaen y gad i'w hehangu!",
 	'mobile-frontend-editor-summary-placeholder' => 'Disgrifiwch yr hyn a newidioch (dewisol)',
 	'mobile-frontend-editor-cancel-confirm' => "Ydych chi wir am roi'r gorau i'ch golygiad?",
@@ -4040,6 +4056,7 @@ $messages['de'] = array(
 	'mobile-frontend-history' => 'Die Versionsgeschichte dieser Seite ansehen.',
 	'mobile-frontend-history-404-title' => 'Ungültigen Titel angegeben',
 	'mobile-frontend-history-404-desc' => 'Für eine nicht vorhandene Seite kann keine Versionsgeschichte angezeigt werden. Entweder wurde die Seite gelöscht oder du bist einem ungültigen Link gefolgt.',
+	'mobile-frontend-history-no-results' => 'Keine Versionsgeschichteneinträge entsprechen dem angegebenen Filter.',
 	'mobile-frontend-history-summary' => 'Versionsgeschichte für [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Zuletzt geändert am $1 um $2',
 	'mobile-frontend-last-modified-seconds' => 'Zuletzt geändert vor {{PLURAL:$1|einer Sekunde|$1 Sekunden}}',
@@ -4068,6 +4085,9 @@ $messages['de'] = array(
 	'mobile-frontend-search-help' => 'Gib oben den Suchbegriff ein. Passende Seitennamen werden dann hier angezeigt.',
 	'mobile-frontend-dismiss-notification' => 'diese Benachrichtigung schließen',
 	'mobile-frontend-clear-search' => 'Leeren',
+	'mobile-frontend-search-content' => 'Suche in Seiten',
+	'mobile-frontend-search-no-results' => 'Keine Seite mit diesem Titel.',
+	'mobile-frontend-search-content-no-results' => '„{{int:mobile-frontend-search-content}}“, um zu sehen, ob der Suchbegriff irgendwo auftaucht.',
 	'mobile-frontend-privacy-link-text' => 'Datenschutz',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Der Text ist verfügbar unter [//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC-BY-SA 3.0]; zusätzliche Bedingungen können anwendbar sein.',
@@ -4151,7 +4171,7 @@ $messages['de'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonymer Benutzer',
 	'mobile-frontend-changeslist-nocomment' => 'keine Bearbeitungszusammenfassung',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
-	'mobile-frontend-watchlist-filter-articles' => 'Artikel',
+	'mobile-frontend-watchlist-filter-articles' => 'Inhaltsseiten',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Andere',
 	'mobile-frontend-watchlist-modified' => 'Geändert $1',
@@ -4216,7 +4236,7 @@ $messages['de'] = array(
 	'mobile-frontend-editor-save' => 'Speichern',
 	'mobile-frontend-editor-cancel' => 'Abbrechen',
 	'mobile-frontend-editor-keep-editing' => 'Weiter bearbeiten',
-	'mobile-frontend-editor-license' => 'Mit dem Klick auf „Speichern“ stimmst du unseren [//wikimediafoundation.org/wiki/Terms_of_Use/de Nutzungsbedingungen] und der Veröffentlichung deines Textes unter der [//creativecommons.org/licenses/by-sa/3.0/deed.de CC-BY-SA-3.0-Lizenz] und der [//de.wikipedia.org/wiki/Wikipedia:GNU_Free_Documentation_License GFDL] zu.',
+	'mobile-frontend-editor-license' => 'Mit dem Klick auf „Speichern“ stimmst du unseren [//wikimediafoundation.org/wiki/Terms_of_Use/de Nutzungsbedingungen] und der Veröffentlichung deines Textes unter der [//creativecommons.org/licenses/by-sa/3.0/deed.de CC-BY-SA-3.0-Lizenz] und der [//de.wikipedia.org/wiki/Wikipedia:GNU_Free_Documentation_License GFDL] zu.', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Dieser Abschnitt ist leer. Sei der Erste, der ihn erweitert!',
 	'mobile-frontend-editor-summary-placeholder' => 'Teil uns mit, was du geändert hast (optional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Willst du wirklich deine Bearbeitung verwerfen?',
@@ -4271,7 +4291,7 @@ $messages['de'] = array(
 	'mobile-frontend-profile-edit-summary' => 'Benutzerprofileinführung aktualisiert',
 	'mobile-frontend-geonotahack' => 'In der Nähe dieser Seite',
 	'beta-feature-geonotahack' => 'In der Nähe dieser Seite',
-	'beta-feature-geonotahack-description' => 'Ermöglicht das Ansehen anderer verwandter Seiten, die Koordinateninformationen enthalten.',
+	'beta-feature-geonotahack-description' => 'Ermöglicht das Ansehen anderer verwandter Seiten, die Koordinateninformationen enthalten.', # Fuzzy
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -4398,7 +4418,7 @@ $messages['diq'] = array(
 	'mobile-frontend-changeslist-ip' => 'Karbero bêname',
 	'mobile-frontend-changeslist-nocomment' => 'nê vurnaye xulasa',
 	'mobile-frontend-watchlist-filter-all' => 'Pêro',
-	'mobile-frontend-watchlist-filter-articles' => 'Wesiqey',
+	'mobile-frontend-watchlist-filter-articles' => 'Wesiqey', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Werênayış',
 	'mobile-frontend-watchlist-filter-other' => 'Zewmi',
 	'mobile-frontend-watchlist-modified' => '$1 timariya yo',
@@ -5216,7 +5236,7 @@ $messages['et'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonüümne kasutaja',
 	'mobile-frontend-changeslist-nocomment' => 'resümee puudub',
 	'mobile-frontend-watchlist-filter-all' => 'Kõik',
-	'mobile-frontend-watchlist-filter-articles' => 'Artiklid',
+	'mobile-frontend-watchlist-filter-articles' => 'Artiklid', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Arutelu',
 	'mobile-frontend-watchlist-filter-other' => 'Muu',
 	'mobile-frontend-watchlist-modified' => 'Muudetud $1',
@@ -5256,7 +5276,7 @@ $messages['et'] = array(
 	'mobile-frontend-editor-save' => 'Salvesta',
 	'mobile-frontend-editor-cancel' => 'Loobu',
 	'mobile-frontend-editor-keep-editing' => 'Jätka redigeerimist',
-	'mobile-frontend-editor-license' => 'Kui klõpsad "Salvesta", nõustud [//wikimediafoundation.org/wiki/Terms_of_use kasutustingimustega] ja oma teksti avaldamisega litsentside [//creativecommons.org/licenses/by-sa/3.0/deed.et CC BY-SA 3.0] ja [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] all.',
+	'mobile-frontend-editor-license' => 'Kui klõpsad "Salvesta", nõustud [//wikimediafoundation.org/wiki/Terms_of_use kasutustingimustega] ja oma teksti avaldamisega litsentside [//creativecommons.org/licenses/by-sa/3.0/deed.et CC BY-SA 3.0] ja [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] all.', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'See alaosa on tühi. Ole esimene, kes siia kirjutab!',
 	'mobile-frontend-editor-summary-placeholder' => 'Kirjuta, mida muutsid (valikuline)',
 	'mobile-frontend-editor-cancel-confirm' => 'Kas soovid tõesti oma muudatusest loobuda?',
@@ -6113,6 +6133,7 @@ $messages['fr'] = array(
 	'mobile-frontend-history' => 'Afficher l’historique des modifications de cette page.',
 	'mobile-frontend-history-404-title' => 'Mauvais titre fourni',
 	'mobile-frontend-history-404-desc' => 'Impossible de regarder l’historique d’une page qui n’existe pas. Elle peut avoir été supprimée ou vous pouvez avoir suivi un mauvais lien.',
+	'mobile-frontend-history-no-results' => 'Aucun historique ne correspond au filtre fourni.',
 	'mobile-frontend-history-summary' => 'Historique de la page [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Dernière modification le $1, à $2',
 	'mobile-frontend-last-modified-seconds' => 'Dernière modification il y a {{PLURAL:$1|$1 seconde|$1 secondes}}',
@@ -6141,6 +6162,9 @@ $messages['fr'] = array(
 	'mobile-frontend-search-help' => "Tapez les critères de recherches ci-dessus et les titres de page correspondant s'afficheront ici.",
 	'mobile-frontend-dismiss-notification' => 'rejeter cette notification',
 	'mobile-frontend-clear-search' => 'Effacer',
+	'mobile-frontend-search-content' => 'Rechercher dans les pages',
+	'mobile-frontend-search-no-results' => 'Aucune page avec ce titre.',
+	'mobile-frontend-search-content-no-results' => "'''{{int:mobile-frontend-search-content}}''' pour voir si cette phrase apparaît quelque part.",
 	'mobile-frontend-privacy-link-text' => 'Confidentialité',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Contenu disponible sous [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
@@ -6223,7 +6247,7 @@ $messages['fr'] = array(
 	'mobile-frontend-changeslist-ip' => 'Utilisateur anonyme',
 	'mobile-frontend-changeslist-nocomment' => 'aucun résumé de modification',
 	'mobile-frontend-watchlist-filter-all' => 'Tous',
-	'mobile-frontend-watchlist-filter-articles' => 'Articles',
+	'mobile-frontend-watchlist-filter-articles' => 'Pages de contenu',
 	'mobile-frontend-watchlist-filter-talk' => 'Discussion',
 	'mobile-frontend-watchlist-filter-other' => 'Autres',
 	'mobile-frontend-watchlist-modified' => 'Modifié $1',
@@ -6288,7 +6312,7 @@ $messages['fr'] = array(
 	'mobile-frontend-editor-save' => 'Sauvegarder',
 	'mobile-frontend-editor-cancel' => 'Annuler',
 	'mobile-frontend-editor-keep-editing' => 'Rester en modification',
-	'mobile-frontend-editor-license' => 'En cliquant sur « Enregistrer », vous acceptez nos [//wikimediafoundation.org/wiki/Terms_of_use conditions d’utilisation] et le placement de votre texte sous les licences [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] et [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
+	'mobile-frontend-editor-license' => 'En cliquant sur « Enregistrer », vous acceptez nos [//wikimediafoundation.org/wiki/Terms_of_use conditions d’utilisation] et le placement de votre texte sous les licences [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] et [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Cette section est vide. Soyez le premier  à la compléter !',
 	'mobile-frontend-editor-summary-placeholder' => 'Nous dire ce que vous avez modifié (facultatif)',
 	'mobile-frontend-editor-cancel-confirm' => 'Voulez-vous vraiment abandonner votre modification ?',
@@ -6343,7 +6367,7 @@ $messages['fr'] = array(
 	'mobile-frontend-profile-edit-summary' => 'Mise à jour de l’introduction du profil utilisateur',
 	'mobile-frontend-geonotahack' => 'Proche de cette page',
 	'beta-feature-geonotahack' => 'Proche de cette page',
-	'beta-feature-geonotahack-description' => 'Vous permet de voir d’autres pages connexes aux  pages que vous regardez, qui contiennent des informations de latitude et longitude.',
+	'beta-feature-geonotahack-description' => 'Vous permet de voir d’autres pages connexes aux  pages que vous regardez, qui contiennent des informations de latitude et longitude.', # Fuzzy
 );
 
 /** Franco-Provençal (arpetan)
@@ -6621,7 +6645,7 @@ $messages['frr'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonüüm brüker',
 	'mobile-frontend-changeslist-nocomment' => 'nian tuupfaadang',
 	'mobile-frontend-watchlist-filter-all' => 'Aaltumaal',
-	'mobile-frontend-watchlist-filter-articles' => 'Artiikler',
+	'mobile-frontend-watchlist-filter-articles' => 'Artiikler', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskusjuun',
 	'mobile-frontend-watchlist-filter-other' => 'Ööders wat',
 	'mobile-frontend-watchlist-modified' => 'Feranert $1',
@@ -6687,7 +6711,7 @@ Ferschük det mä en öödern browser.',
 	'mobile-frontend-editor-save' => 'Seekre',
 	'mobile-frontend-editor-cancel' => 'Ufbreeg',
 	'mobile-frontend-editor-keep-editing' => 'Widjer bewerke',
-	'mobile-frontend-editor-license' => 'Wan dü üüb "Seekre" trakst, stemest dü a [//wikimediafoundation.org/wiki/Terms_of_use brükerreegeln] tu an dat dan tekst oner det lisens [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] an [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] uun\'t näät steld woort.',
+	'mobile-frontend-editor-license' => 'Wan dü üüb "Seekre" trakst, stemest dü a [//wikimediafoundation.org/wiki/Terms_of_use brükerreegeln] tu an dat dan tekst oner det lisens [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] an [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] uun\'t näät steld woort.', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Didiar kirew as leesag. Wees di iarst, di ham ütjwidjet!',
 	'mobile-frontend-editor-summary-placeholder' => 'Fertel üs, wat dü feranert heest (freiwalag)',
 	'mobile-frontend-editor-cancel-confirm' => 'Wel dü det bewerkin würelk ufbreeg?',
@@ -7302,6 +7326,7 @@ $messages['he'] = array(
 	'mobile-frontend-history' => 'הצגת היסטוריית העריכה של הדף הזה.',
 	'mobile-frontend-history-404-title' => 'ניתנה כותרת גרועה',
 	'mobile-frontend-history-404-desc' => 'לא ניתן לצפות בהיסטוריה של דף שאינו קיים. ייתכן שהוא נמחק או שלחצת על קישור גרוע.',
+	'mobile-frontend-history-no-results' => 'אין שום דבר בהיסטוריה שמתאים למסנן שהוגדר.',
 	'mobile-frontend-history-summary' => 'היסטוריית הדף [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'השינוי האחרון נעשה בֹ־$1 ב־$2',
 	'mobile-frontend-last-modified-seconds' => 'עודכן לאחרונה לפני {{PLURAL:$1|שנייה אחת|$1 שניות}}',
@@ -7330,6 +7355,9 @@ $messages['he'] = array(
 	'mobile-frontend-search-help' => 'נא להקליד את מילות החיפוש למעלה. כותרות דפים תואמים יופיעו כאן.',
 	'mobile-frontend-dismiss-notification' => 'הסתרת ההודעה הזאת',
 	'mobile-frontend-clear-search' => 'ניקוי',
+	'mobile-frontend-search-content' => 'לחפש בדפים',
+	'mobile-frontend-search-no-results' => 'אין דף עם השם הזה.',
+	'mobile-frontend-search-content-no-results' => "יש '''{{int:mobile-frontend-search-content}}''' כדי לראות אם הביטוי הזה מופיע במקום כלשהו.",
 	'mobile-frontend-privacy-link-text' => 'פרטיות',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'התוכן זמין לפי תנאי רישיון [//he.m.wikipedia.org/wiki/ויקיפדיה:רישיון_Creative_Commons_ייחוס-שיתוף_זהה_3.0_לא_מותאם?useformat=mobile CC BY-SA 3.0]; ייתכן שחלים תנאים נוספים.',
@@ -7412,7 +7440,7 @@ $messages['he'] = array(
 	'mobile-frontend-changeslist-ip' => 'משתמש אלמוני',
 	'mobile-frontend-changeslist-nocomment' => 'אין תקציר עריכה',
 	'mobile-frontend-watchlist-filter-all' => 'הכול',
-	'mobile-frontend-watchlist-filter-articles' => 'ערכים',
+	'mobile-frontend-watchlist-filter-articles' => 'דפי תוכן',
 	'mobile-frontend-watchlist-filter-talk' => 'שיחה',
 	'mobile-frontend-watchlist-filter-other' => 'אחר',
 	'mobile-frontend-watchlist-modified' => 'השתנה $1',
@@ -7477,7 +7505,7 @@ $messages['he'] = array(
 	'mobile-frontend-editor-save' => 'שמירה',
 	'mobile-frontend-editor-cancel' => 'ביטול',
 	'mobile-frontend-editor-keep-editing' => 'המשך עריכה',
-	'mobile-frontend-editor-license' => 'לחיצה על "שמירה" מהווה את הסכמתך ל[//wikimediafoundation.org/wiki/Terms_of_use תנאי השימוש] ולפרסום הטקסט שלך לפי [//creativecommons.org/licenses/by-sa/3.0/ רישיון Creative Commons Attribution-ShareAlike] ו־[//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
+	'mobile-frontend-editor-license' => 'לחיצה על "שמירה" מהווה את הסכמתך ל[//wikimediafoundation.org/wiki/Terms_of_use תנאי השימוש] ולפרסום הטקסט שלך לפי [//creativecommons.org/licenses/by-sa/3.0/ רישיון Creative Commons Attribution-ShareAlike] ו־[//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'הפסקה הזאת ריקה. רוצה להתחיל לכתוב אותה?',
 	'mobile-frontend-editor-summary-placeholder' => 'נא לרשום כאן מה שינית (לא חובה)',
 	'mobile-frontend-editor-cancel-confirm' => 'האם באמת לנטוש את העריכה שלך?',
@@ -7532,7 +7560,7 @@ $messages['he'] = array(
 	'mobile-frontend-profile-edit-summary' => 'עדכון היכרות בדף המשתמש',
 	'mobile-frontend-geonotahack' => 'ליד הדף הזה',
 	'beta-feature-geonotahack' => 'בסביבות הדף הזה',
-	'beta-feature-geonotahack-description' => 'מאפשר לך לראות דפים שקשורים לדפים שקראת ושמכילים מידע על קווי אורך וקווי רוחב.',
+	'beta-feature-geonotahack-description' => 'מאפשר לך לראות דפים שקשורים לדפים שקראת ושמכילים מידע על קווי אורך וקווי רוחב.', # Fuzzy
 );
 
 /** Hindi (हिन्दी)
@@ -8905,6 +8933,7 @@ $messages['it'] = array(
 	'mobile-frontend-search-help' => 'Digita le parole da ricercare ed i titoli delle pagine trovate appariranno qui.',
 	'mobile-frontend-dismiss-notification' => 'ignora questa notifica',
 	'mobile-frontend-clear-search' => 'Pulisci',
+	'mobile-frontend-search-no-results' => 'Nessuna voce con questo titolo.', # Fuzzy
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Contenuti disponibili secondo la licenza [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; possono applicarsi ulteriori condizioni.',
@@ -8989,7 +9018,7 @@ in tutto il mondo',
 	'mobile-frontend-changeslist-ip' => 'Utente anonimo',
 	'mobile-frontend-changeslist-nocomment' => 'nessun oggetto della modifica',
 	'mobile-frontend-watchlist-filter-all' => 'Tutte',
-	'mobile-frontend-watchlist-filter-articles' => 'Voci',
+	'mobile-frontend-watchlist-filter-articles' => 'Voci', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Discussioni',
 	'mobile-frontend-watchlist-filter-other' => 'Altro',
 	'mobile-frontend-watchlist-modified' => 'Modificata $1',
@@ -9054,7 +9083,7 @@ in tutto il mondo',
 	'mobile-frontend-editor-save' => 'Salva',
 	'mobile-frontend-editor-cancel' => 'Annulla',
 	'mobile-frontend-editor-keep-editing' => 'Continua a modificare',
-	'mobile-frontend-editor-license' => 'Cliccando sul pulsante "Salva", accetti le nostre [//wikimediafoundation.org/wiki/Terms_of_use/it condizioni d\'uso] e accetti di rilasciare il tuo testo in base alle licenze [//creativecommons.org/licenses/by-sa/3.0/deed.it CC-BY-SA 3.0] e [//it.wikipedia.org/wiki/Wikipedia:Testo_della_GNU_Free_Documentation_License GDFL].',
+	'mobile-frontend-editor-license' => 'Cliccando sul pulsante "Salva", accetti le nostre [//wikimediafoundation.org/wiki/Terms_of_use/it condizioni d\'uso] e accetti di rilasciare il tuo testo in base alle licenze [//creativecommons.org/licenses/by-sa/3.0/deed.it CC-BY-SA 3.0] e [//it.wikipedia.org/wiki/Wikipedia:Testo_della_GNU_Free_Documentation_License GDFL].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Questa sezione è vuota. Scrivila tu per primo!',
 	'mobile-frontend-editor-summary-placeholder' => 'Dicci cosa hai cambiato (opzionale)',
 	'mobile-frontend-editor-cancel-confirm' => 'Vuoi davvero abbandonare la tua modifica?',
@@ -9109,7 +9138,7 @@ in tutto il mondo',
 	'mobile-frontend-profile-edit-summary' => "Aggiornata l'introduzione del profilo utente",
 	'mobile-frontend-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack' => 'Vicino a questa pagina',
-	'beta-feature-geonotahack-description' => 'Ti consente di vedere altre pagine correlate alla pagina che stai leggendo che contengono le informazioni sulla longitudine e la latitudine.',
+	'beta-feature-geonotahack-description' => 'Ti consente di vedere altre pagine correlate alla pagina che stai leggendo che contengono le informazioni sulla longitudine e la latitudine.', # Fuzzy
 );
 
 /** Japanese (日本語)
@@ -9205,6 +9234,9 @@ $messages['ja'] = array(
 	'mobile-frontend-search-help' => '検索したい語句を上の欄に入力すると、該当するページの名前がここに表示されます。',
 	'mobile-frontend-dismiss-notification' => 'この通知を消す',
 	'mobile-frontend-clear-search' => '消去',
+	'mobile-frontend-search-content' => '記事内を検索', # Fuzzy
+	'mobile-frontend-search-no-results' => 'この名前の記事はありません。', # Fuzzy
+	'mobile-frontend-search-content-no-results' => "すべての記事内でこの語句を検索するには'''記事内を検索'''を使用してください。", # Fuzzy
 	'mobile-frontend-privacy-link-text' => 'プライバシー',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => '本文は [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] で提供されています。追加の規約が適用される場合があります。',
@@ -9278,7 +9310,7 @@ $messages['ja'] = array(
 	'mobile-frontend-changeslist-ip' => '匿名利用者',
 	'mobile-frontend-changeslist-nocomment' => '編集の要約なし',
 	'mobile-frontend-watchlist-filter-all' => 'すべて',
-	'mobile-frontend-watchlist-filter-articles' => '記事',
+	'mobile-frontend-watchlist-filter-articles' => '記事', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'トーク',
 	'mobile-frontend-watchlist-filter-other' => 'その他',
 	'mobile-frontend-watchlist-modified' => '$1に変更',
@@ -9340,7 +9372,7 @@ $messages['ja'] = array(
 	'mobile-frontend-editor-save' => '保存',
 	'mobile-frontend-editor-cancel' => 'キャンセル',
 	'mobile-frontend-editor-keep-editing' => '編集を続行',
-	'mobile-frontend-editor-license' => '「保存」をクリックすると、あなたは[//wikimediafoundation.org/wiki/Terms_of_use/ja 利用規約]に同意し、この文章を [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 ライセンス]および [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] で公開することに同意したと見なされます。',
+	'mobile-frontend-editor-license' => '「保存」をクリックすると、あなたは[//wikimediafoundation.org/wiki/Terms_of_use/ja 利用規約]に同意し、この文章を [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 ライセンス]および [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] で公開することに同意したと見なされます。', # Fuzzy
 	'mobile-frontend-editor-summary-placeholder' => '変更点を入力 (省略可能)',
 	'mobile-frontend-editor-cancel-confirm' => '編集内容を本当に破棄しますか?',
 	'mobile-frontend-editor-wait' => '編集内容を保存しています。お待ちください。',
@@ -9387,7 +9419,7 @@ $messages['ja'] = array(
 	'mobile-frontend-profile-edit-summary' => '利用者プロフィールの導入文を更新',
 	'mobile-frontend-geonotahack' => 'このページの近辺',
 	'beta-feature-geonotahack' => 'このページの近辺',
-	'beta-feature-geonotahack-description' => '緯度経度情報を含むページについて、そのページに関連する他のページを閲覧できるようにする',
+	'beta-feature-geonotahack-description' => '緯度経度情報を含むページについて、そのページに関連する他のページを閲覧できるようにする', # Fuzzy
 );
 
 /** Javanese (Basa Jawa)
@@ -9820,7 +9852,7 @@ $messages['km'] = array(
 	'mobile-frontend-sign-in-why' => 'បើ​អ្នក​មាន​គណនី {{SITENAME}} អ្នក​អាច​ចូល​នៅ​ខាងក្រោម ។',
 	'mobile-frontend-sign-in-error-heading' => 'អូ',
 	'mobile-frontend-settings-beta' => 'បេតា',
-	'mobile-frontend-save-settings' => 'រក្សា​ទុក​ការ​កំណត់', # Fuzzy
+	'mobile-frontend-save-settings' => 'រក្សា​ទុក​',
 	'mobile-frontend-random-button' => 'ចៃដន្យ',
 	'mobile-frontend-back-to-top-of-section' => 'លោតត្រលប់ទៅផ្នែកខាងលើរបស់ផ្នែកនេះ',
 	'mobile-frontend-close-section' => 'បិទ​ផ្នែក​នេះ',
@@ -9837,7 +9869,7 @@ $messages['km'] = array(
 	'mobile-frontend-missing-image' => 'រូបភាព',
 	'mobile-frontend-off' => 'បិទ',
 	'mobile-frontend-on' => 'បើក',
-	'mobile-frontend-featured-article' => 'អត្ថបទពិសេសសំរាប់ថ្ងៃនេះ', # Fuzzy
+	'mobile-frontend-featured-article' => 'ខ្លឹមសារពិសេសសម្រាប់ថ្ងៃនេះ',
 	'mobile-frontend-news-items' => 'នៅក្នុងសារព័ត៌មាន',
 	'mobile-frontend-language' => 'ភាសា៖',
 	'mobile-frontend-language-article-heading' => 'អាន​ជា​ភាសា​ផ្សេង​ទៀត',
@@ -9851,11 +9883,11 @@ $messages['km'] = array(
 	'mobile-frontend-account-create-submit' => 'ចុះ​ឈ្មោះ',
 	'mobile-frontend-password-confirm-placeholder' => 'អះអាង​ពាក្យ​សម្ងាត់',
 	'mobile-frontend-account-create-email-placeholder' => 'អាសយដ្ឋានអ៊ីមែល (ដាក់ក៏បានមិនដាក់ក៏បាន)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'បញ្ចូល​អត្ថបទ​សុវត្ថិភាព',
+	'mobile-frontend-account-create-captcha-placeholder' => 'បញ្ចូល​លេខកូដបញ្ជាក់',
 	'mobile-frontend-overlay-escape' => 'ត្រឡប់​ក្រោយ',
 	'mobile-frontend-placeholder' => 'ស្វែងរកក្នុង{{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'ស្វែងរកក្នុង{{SITENAME}} (បេតា)',
-	'mobile-frontend-placeholder-alpha' => 'ស្វែងរកក្នុង{{SITENAME}} (ម៉ូដនាគរាជ)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'ស្វែងរកក្នុង{{SITENAME}} (ក្រោមការពិសោធន៍)',
 	'mobile-frontend-search-help' => 'វាយបញ្ចូលពាក្យដែលចង់ស្វែងរកខាងលើ នោះចំណងជើងទំព័រដែលត្រូ​វនឹងវានឹងបង្ហាញនៅទីនេះ។',
 	'mobile-frontend-dismiss-notification' => 'បិទការផ្ដល់ដំណឹងនេះ',
 	'mobile-frontend-clear-search' => 'ជំរះ',
@@ -9871,21 +9903,21 @@ $messages['km'] = array(
 	'mobile-frontend-main-menu-logout' => 'ចេញ',
 	'mobile-frontend-main-menu-watchlist' => 'បញ្ជី​តាមដាន',
 	'mobile-frontend-main-menu-settings' => 'ការ​កំណត់',
-	'mobile-frontend-main-menu-upload' => 'ផ្ទុកឡើង', # Fuzzy
-	'mobile-frontend-main-menu-settings-heading' => 'ការ​កំណត់​សម្រាប់​តំបន់​បណ្ដាញ​ទូរស័ព្ទ', # Fuzzy
+	'mobile-frontend-main-menu-upload' => 'ផ្ទុកឡើង',
+	'mobile-frontend-main-menu-settings-heading' => 'ការកំណត់​នានា',
 	'mobile-frontend-settings-site-header' => 'ភាសារបស់ {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} អាចអានបានជាំ $1 {{PLURAL:$1|ភាសា|ភាសា}} ដូចខាងក្រោម',
 	'mobile-frontend-main-menu-account-create' => 'បង្កើតគណនី',
 	'mobile-frontend-page-menu-contents' => 'មាតិកា',
 	'mobile-frontend-page-menu-history' => 'ប្រវត្តិ',
 	'mobile-frontend-meta-data-issues-header' => 'បញ្ហា',
-	'mobile-frontend-meta-data-issues' => 'អត្ថបទ​នេះ​មាន​បញ្ហា​មួយ​ចំនួន', # Fuzzy
+	'mobile-frontend-meta-data-issues' => 'ទំព័រនេះ​មាន​បញ្ហា​មួយ​ចំនួន',
 	'mobile-frontend-page-saving' => 'កំពុង​រក្សា​ទុក $1',
 	'mobile-frontend-nearby-title' => 'ជិតខាង',
 	'mobile-frontend-nearby-loading' => 'ផ្ទុក​ប្រធាន​បទ​ដែល​នៅ​ទីតាំង​បច្ចុប្បន្ន​របស់​អ្នក',
-	'mobile-frontend-donate-image-login' => 'ចូល​ដើម្បី​មើល​ការ​ផ្ទុក​របស់​អ្នក', # Fuzzy
-	'mobile-frontend-photo-upload-generic' => 'បរិច្ចាគ​រូបភាព', # Fuzzy
-	'mobile-frontend-donate-image-title' => 'បរិច្ចាក​រូបភាព', # Fuzzy
+	'mobile-frontend-donate-image-login' => 'អ្នកត្រូវតែកត់ឈ្មោះចូល​ដើម្បី​មើល​ការ​ផ្ទុក​របស់​អ្នក។',
+	'mobile-frontend-photo-upload-generic' => 'ចែករំលែក​រូបភាពមួយសន្លឹក',
+	'mobile-frontend-donate-image-title' => 'ផ្ទុកឡើង',
 	'mobile-frontend-listed-image-no-description' => 'គ្មាន​ការ​ពណ៌នា',
 	'mobile-frontend-watchlist-add' => 'បន្ថែម $1 ទៅ​បញ្ជី​មើល​របស់​អ្នក',
 	'mobile-frontend-watchlist-removed' => 'បាន​យក $1 ចេញ​ពី​បញ្ជី​មើល​របស់​អ្នក',
@@ -9894,13 +9926,13 @@ $messages['km'] = array(
 	'mobile-frontend-watchlist-cta' => 'សូមកត់ឈ្មោះចូលឬចុះឈ្មោះថ្មីដើម្បីមើលទំព័រនេះ។',
 	'mobile-frontend-watchlist-cta-button-login' => 'កត់ឈ្មោះចូល',
 	'mobile-frontend-watchlist-cta-button-signup' => 'ចុះ​ឈ្មោះ',
-	'mobile-frontend-watchlist-a-z' => 'ទំព័រ​ដែល​តាមដាន', # Fuzzy
-	'mobile-frontend-watchlist-feed' => 'ទំព័រ​ដែល​មាន​ការ​ផ្លាស់ប្ដូរ', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'បញ្ជី',
+	'mobile-frontend-watchlist-feed' => 'ត្រូវបានកែប្រែ',
 	'mobile-frontend-watchlist-back-home' => 'ត្រឡប់​ទៅ​ដើម',
 	'mobile-frontend-changeslist-ip' => 'អ្នក​ប្រើ​អនាមិក',
 	'mobile-frontend-changeslist-nocomment' => 'គ្មាន​ការ​សង្ខេប​កែ​សម្រួល',
 	'mobile-frontend-watchlist-filter-all' => 'ទាំងអស់',
-	'mobile-frontend-watchlist-filter-articles' => 'អត្ថបទ',
+	'mobile-frontend-watchlist-filter-articles' => 'អត្ថបទ', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'ការ​ពិភាក្សា',
 	'mobile-frontend-watchlist-filter-other' => 'ផ្សេង​ទៀត',
 	'mobile-frontend-watchlist-modified' => 'បាន​កែប្រែ​នៅ $1 មុន',
@@ -9910,13 +9942,13 @@ $messages['km'] = array(
 	'mobile-frontend-diffview-bytesremoved' => 'យក $1 {{PLURAL:$1|byte|bytes}} ចេញ',
 	'mobile-frontend-diffview-explained' => 'បន្ទាត់​ខាងក្រោម​ត្រូវ​បាន​បន្ថែម (+) និង​យក​ចេញ (-)៖',
 	'mobile-frontend-table' => 'តារាង $1',
-	'mobile-frontend-photo-upload' => 'បន្ថែម​រូបភាព​ដំបូង​ទៅ​ទំព័រ​នេះ', # Fuzzy
-	'mobile-frontend-photo-article-edit-comment' => 'បាន​បន្ថែម​រូបថត​សម្រាប់​ប្រើ​លើ​ទំព័រ', # Fuzzy
-	'mobile-frontend-photo-upload-comment' => 'បាន​បន្ថែម​រូបភាព​ទៅ​ទំព័រ', # Fuzzy
-	'mobile-frontend-photo-caption-placeholder' => 'បន្ថែម​ចំណង​ជើង​សម្រាប់​រូបភាព​នេះ', # Fuzzy
+	'mobile-frontend-photo-upload' => 'បន្ថែម​រូបភាពមួយ​ទៅ​ក្នុងទំព័រ​នេះ',
+	'mobile-frontend-photo-article-edit-comment' => 'បាន​បន្ថែម​រូបភាព​សម្រាប់​ប្រើ​លើ​ទំព័រ',
+	'mobile-frontend-photo-upload-comment' => 'បាន​បន្ថែម​រូបភាព​ទៅ​ទំព័រ',
+	'mobile-frontend-photo-caption-placeholder' => 'ពណ៌នាពីរូបភាពនេះ (ចាំបាច់)',
 	'mobile-frontend-image-loading' => 'កំពុង​ផ្ទុក​រូបភាព',
-	'mobile-frontend-image-uploading-wait' => 'មាន​កំហុស​កើត​ឡើង ខណៈ​ពេល​ផ្ទុក​រូបភាព​នេះ​ឡើង', # Fuzzy
-	'mobile-frontend-photo-upload-error' => 'មាន​កំហុស​កើត​ឡើង ខណៈ​កំពុង​ផ្ទុក​រូបភាព ។ សូម​សាកល្បង​រូបភាព​ផ្សេង​ទៀត ។', # Fuzzy
+	'mobile-frontend-image-uploading-wait' => 'កំពុងផ្ទុកឡើង។ សូមរង់ចាំបន្តិច។',
+	'mobile-frontend-photo-upload-error' => 'មាន​កំហុស​កើត​ឡើង។ សូម​សាកល្បងម្ដង​ទៀត។',
 	'mobile-frontend-photo-submit' => 'ដាក់​ស្នើ',
 	'mobile-frontend-photo-cancel' => 'បោះបង់',
 	'tag-mobile_edit' => 'កែ​សម្រួល​តាម​ទូរស័ព្ទ',
@@ -10133,7 +10165,7 @@ $messages['ko'] = array(
 	'mobile-frontend-changeslist-ip' => '익명 사용자',
 	'mobile-frontend-changeslist-nocomment' => '편집 요약 없음',
 	'mobile-frontend-watchlist-filter-all' => '모두',
-	'mobile-frontend-watchlist-filter-articles' => '문서',
+	'mobile-frontend-watchlist-filter-articles' => '문서', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => '토론',
 	'mobile-frontend-watchlist-filter-other' => '기타',
 	'mobile-frontend-watchlist-modified' => '$1에 수정됨',
@@ -10198,7 +10230,7 @@ $messages['ko'] = array(
 	'mobile-frontend-editor-save' => '저장',
 	'mobile-frontend-editor-cancel' => '취소',
 	'mobile-frontend-editor-keep-editing' => '편집 계속',
-	'mobile-frontend-editor-license' => '"저장"을 클릭하면 [//wikimediafoundation.org/wiki/Terms_of_use/ko 이용 약관]에 동의하고 [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0 라이선스]와 [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL]에 따라 텍스트를 공개하는 데 동의합니다.',
+	'mobile-frontend-editor-license' => '"저장"을 클릭하면 [//wikimediafoundation.org/wiki/Terms_of_use/ko 이용 약관]에 동의하고 [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0 라이선스]와 [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL]에 따라 텍스트를 공개하는 데 동의합니다.', # Fuzzy
 	'mobile-frontend-editor-placeholder' => '이 문단은 비어 있습니다. 문단을 확장하는 첫번째 사용자가 되어보세요!',
 	'mobile-frontend-editor-summary-placeholder' => '편집하신 내용을 간략히 적어주세요 (선택 사항)',
 	'mobile-frontend-editor-cancel-confirm' => '편집을 포기하겠습니까?',
@@ -10250,7 +10282,7 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-edit-summary' => '사용자 프로필 소개 업데이트',
 	'mobile-frontend-geonotahack' => '이 문서 근처',
 	'beta-feature-geonotahack' => '근처 문서',
-	'beta-feature-geonotahack-description' => '지리 좌표 정보를 포함한 문서의 근처의 관련된 문서를 볼 수 있게 합니다.',
+	'beta-feature-geonotahack-description' => '지리 좌표 정보를 포함한 문서의 근처의 관련된 문서를 볼 수 있게 합니다.', # Fuzzy
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -10992,7 +11024,7 @@ $messages['lb'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonyme Benotzer',
 	'mobile-frontend-changeslist-nocomment' => 'kee Resumé vun der Ännerung',
 	'mobile-frontend-watchlist-filter-all' => 'All',
-	'mobile-frontend-watchlist-filter-articles' => 'Artikelen',
+	'mobile-frontend-watchlist-filter-articles' => 'Artikelen', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussioun',
 	'mobile-frontend-watchlist-filter-other' => 'Anerer',
 	'mobile-frontend-watchlist-modified' => '$1 geännert',
@@ -11053,7 +11085,7 @@ Déi gi geläscht.",
 	'mobile-frontend-editor-save' => 'Späicheren',
 	'mobile-frontend-editor-cancel' => 'Ofbriechen',
 	'mobile-frontend-editor-keep-editing' => 'Virufuere mat Änneren',
-	'mobile-frontend-editor-license' => 'Duerch Klicken op "Späicheren" stëmmt Dir eisen [//wikimediafoundation.org/wiki/Terms_of_Use/de Notzungsbedingungen] an der Verëffentlechung vun Ärem Text ënner der [//creativecommons.org/licenses/by-sa/3.0/deed.de CC-BY-SA-3.0-Lizenz] an der [//de.wikipedia.org/wiki/Wikipedia:GNU_Free_Documentation_License GFDL] zou.',
+	'mobile-frontend-editor-license' => 'Duerch Klicken op "Späicheren" stëmmt Dir eisen [//wikimediafoundation.org/wiki/Terms_of_Use/de Notzungsbedingungen] an der Verëffentlechung vun Ärem Text ënner der [//creativecommons.org/licenses/by-sa/3.0/deed.de CC-BY-SA-3.0-Lizenz] an der [//de.wikipedia.org/wiki/Wikipedia:GNU_Free_Documentation_License GFDL] zou.', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Dësen Abschnitt ass eidel. Sidd deen Éischte fir en ze erweideren!',
 	'mobile-frontend-editor-summary-placeholder' => 'Sot eis wat Dir geännert hutt (fakultativ)',
 	'mobile-frontend-editor-cancel-confirm' => 'Wëllt dir Är Ännerung wierklech opginn?',
@@ -11671,7 +11703,7 @@ $messages['mk'] = array(
 	'mobile-frontend-changeslist-ip' => 'Анонимен корисник',
 	'mobile-frontend-changeslist-nocomment' => 'нема опис на уредувањето',
 	'mobile-frontend-watchlist-filter-all' => 'Сите',
-	'mobile-frontend-watchlist-filter-articles' => 'Статии',
+	'mobile-frontend-watchlist-filter-articles' => 'Статии', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Разговор',
 	'mobile-frontend-watchlist-filter-other' => 'Други',
 	'mobile-frontend-watchlist-modified' => 'Изменето $1',
@@ -11736,7 +11768,7 @@ $messages['mk'] = array(
 	'mobile-frontend-editor-save' => 'Зачувај',
 	'mobile-frontend-editor-cancel' => 'Откажи',
 	'mobile-frontend-editor-keep-editing' => 'Назад на уредувањето',
-	'mobile-frontend-editor-license' => 'Стискајќи на „Зачувај“ се согласувате со нашите [//wikimediafoundation.org/wiki/Terms_of_use/mk?uselang=mk Услови на употреба] и се сложувате вашиот текст да се објавува под лиценците [//creativecommons.org/licenses/by-sa/3.0/deed.mk CC-BY-SA 3.0] и [//mk.wikipedia.org/wiki/Википедија:ГНУ-ова_лиценца_за_слободна_документација ГЛСД].',
+	'mobile-frontend-editor-license' => 'Стискајќи на „Зачувај“ се согласувате со нашите [//wikimediafoundation.org/wiki/Terms_of_use/mk?uselang=mk Услови на употреба] и се сложувате вашиот текст да се објавува под лиценците [//creativecommons.org/licenses/by-sa/3.0/deed.mk CC-BY-SA 3.0] и [//mk.wikipedia.org/wiki/Википедија:ГНУ-ова_лиценца_за_слободна_документација ГЛСД].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Овој дел е празен. Слободно исполнете го со содржини.',
 	'mobile-frontend-editor-summary-placeholder' => 'Кажете какви измени направивте (незадолжително)',
 	'mobile-frontend-editor-cancel-confirm' => 'Навистина сакате да го напуштите уредувањето?',
@@ -11791,7 +11823,7 @@ $messages['mk'] = array(
 	'mobile-frontend-profile-edit-summary' => 'Измена на претставувањето во корисничкиот профил',
 	'mobile-frontend-geonotahack' => 'Во околина на страницава',
 	'beta-feature-geonotahack' => 'Во околина на страницава',
-	'beta-feature-geonotahack-description' => 'Овозможува преглед на други поврзани страници со слични координатни податоци како оние што ги гледате',
+	'beta-feature-geonotahack-description' => 'Овозможува преглед на други поврзани страници со слични координатни податоци како оние што ги гледате', # Fuzzy
 );
 
 /** Malayalam (മലയാളം)
@@ -11970,7 +12002,7 @@ $messages['ml'] = array(
 	'mobile-frontend-changeslist-ip' => 'അജ്ഞാത ഉപയോക്താവ്',
 	'mobile-frontend-changeslist-nocomment' => 'തിരുത്തലിനു സംഗ്രഹമില്ല',
 	'mobile-frontend-watchlist-filter-all' => 'എല്ലാം',
-	'mobile-frontend-watchlist-filter-articles' => 'ലേഖനങ്ങൾ',
+	'mobile-frontend-watchlist-filter-articles' => 'ലേഖനങ്ങൾ', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'സംവാദം',
 	'mobile-frontend-watchlist-filter-other' => 'മറ്റുള്ളവ',
 	'mobile-frontend-watchlist-modified' => 'പുതുക്കപ്പെട്ടത് $1',
@@ -12035,7 +12067,7 @@ $messages['ml'] = array(
 	'mobile-frontend-editor-save' => 'സേവ് ചെയ്യുക',
 	'mobile-frontend-editor-cancel' => 'റദ്ദാക്കുക',
 	'mobile-frontend-editor-keep-editing' => 'തിരുത്തൽ തുടരുക',
-	'mobile-frontend-editor-license' => '"സേവ് ചെയ്യുക" എന്നത് അമർത്തുമ്പോൾ, താങ്കൾ ഞങ്ങളുടെ [//wikimediafoundation.org/wiki/Terms_of_Use/ml ഉപയോഗനിബന്ധനകൾ] അംഗീകരിക്കുന്നുവെന്നും, താങ്കൾ എഴുതി നൽകിയത് [//creativecommons.org/licenses/by-sa/3.0/ സി.സി. ബൈ-എസ്.എ. 3.0 അനുവാദപത്രം] ഒപ്പം [//ml.wikipedia.org/wiki/WP:GFDL-ml ജി.എഫ്.ഡി.എൽ.] പ്രകാരം പ്രസിദ്ധീകരിക്കുന്നുവെന്നും അംഗീകരിക്കുന്നുണ്ട്.',
+	'mobile-frontend-editor-license' => '"സേവ് ചെയ്യുക" എന്നത് അമർത്തുമ്പോൾ, താങ്കൾ ഞങ്ങളുടെ [//wikimediafoundation.org/wiki/Terms_of_Use/ml ഉപയോഗനിബന്ധനകൾ] അംഗീകരിക്കുന്നുവെന്നും, താങ്കൾ എഴുതി നൽകിയത് [//creativecommons.org/licenses/by-sa/3.0/ സി.സി. ബൈ-എസ്.എ. 3.0 അനുവാദപത്രം] ഒപ്പം [//ml.wikipedia.org/wiki/WP:GFDL-ml ജി.എഫ്.ഡി.എൽ.] പ്രകാരം പ്രസിദ്ധീകരിക്കുന്നുവെന്നും അംഗീകരിക്കുന്നുണ്ട്.', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'ഈ ഭാഗം ശൂന്യമാണ്. ഇത് വികസിപ്പിക്കുന്ന ആദ്യത്തെയാളാവുക!',
 	'mobile-frontend-editor-summary-placeholder' => 'താങ്കളെന്താണ് മാറ്റം വരുത്തിയതെന്ന് പറയുക (നിർബന്ധമില്ല)',
 	'mobile-frontend-editor-cancel-confirm' => 'താങ്കളുടെ തിരുത്ത് ഉപേക്ഷിക്കണം എന്നുറപ്പാണോ?',
@@ -13195,7 +13227,7 @@ $messages['nl'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonieme gebruiker',
 	'mobile-frontend-changeslist-nocomment' => 'geen bewerkingssamenvatting',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
-	'mobile-frontend-watchlist-filter-articles' => "Pagina's",
+	'mobile-frontend-watchlist-filter-articles' => "Pagina's", # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Overleg',
 	'mobile-frontend-watchlist-filter-other' => 'Overige',
 	'mobile-frontend-watchlist-modified' => '$1 gewijzigd',
@@ -13257,7 +13289,7 @@ $messages['nl'] = array(
 	'mobile-frontend-editor-save' => 'Opslaan',
 	'mobile-frontend-editor-cancel' => 'Annuleren',
 	'mobile-frontend-editor-keep-editing' => 'Doorgaan met bewerken',
-	'mobile-frontend-editor-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0] en [//nl.wikipedia.org/wiki/GNU-licentie_voor_vrije_documentatie GFDL].',
+	'mobile-frontend-editor-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0] en [//nl.wikipedia.org/wiki/GNU-licentie_voor_vrije_documentatie GFDL].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Deze paragraaf bevat geen tekst. U kunt de eerste zijn die hem schrijft!',
 	'mobile-frontend-editor-summary-placeholder' => 'Geef aan wat u hebt gewijzigd (optioneel)',
 	'mobile-frontend-editor-cancel-confirm' => 'Wilt u uw bewerking echt niet opslaan?',
@@ -13299,7 +13331,7 @@ $messages['nl'] = array(
 	'mobile-frontend-profile-edit-summary' => 'Inleiding gebruikersprofiel bijwerken',
 	'mobile-frontend-geonotahack' => 'In de buurt van deze pagina',
 	'beta-feature-geonotahack' => 'In de buurt van deze pagina',
-	'beta-feature-geonotahack-description' => "Staat u toe om andere verwante pagina's te zien voor pagina's die u bezocht die lengte- en breedtegraad informatie bevatten.",
+	'beta-feature-geonotahack-description' => "Staat u toe om andere verwante pagina's te zien voor pagina's die u bezocht die lengte- en breedtegraad informatie bevatten.", # Fuzzy
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -14134,6 +14166,9 @@ $messages['pms'] = array(
 	'mobile-frontend-search-help' => "Ch'a scriva le paròle d'arserca sì-dzora e ij tìtoj dle pàgine corispondente a compariran ambelessì.",
 	'mobile-frontend-dismiss-notification' => 'arfuda sta notìfica',
 	'mobile-frontend-clear-search' => 'Scancela',
+	'mobile-frontend-search-content' => "Sërché ant j'artìcoj", # Fuzzy
+	'mobile-frontend-search-no-results' => 'Gnun artìcol con ës tìtol.', # Fuzzy
+	'mobile-frontend-search-content-no-results' => "«Sërché ant j'artìcoj» për vëdde se costa fras a compariss da chèich part.", # Fuzzy
 	'mobile-frontend-privacy-link-text' => 'Confidensialità',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => "Ël test a l'é disponìbil sota [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; d'àutre condission a podrìo aplichesse.",
@@ -14216,7 +14251,7 @@ $messages['pms'] = array(
 	'mobile-frontend-changeslist-ip' => 'Utent anònim',
 	'mobile-frontend-changeslist-nocomment' => 'gnun resumé ëd modìfica',
 	'mobile-frontend-watchlist-filter-all' => 'Tùit',
-	'mobile-frontend-watchlist-filter-articles' => 'Artìcoj',
+	'mobile-frontend-watchlist-filter-articles' => 'Artìcoj', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Ciaciarade',
 	'mobile-frontend-watchlist-filter-other' => 'Àutr',
 	'mobile-frontend-watchlist-modified' => 'Modificà $1',
@@ -14281,7 +14316,7 @@ $messages['pms'] = array(
 	'mobile-frontend-editor-save' => 'Salvé',
 	'mobile-frontend-editor-cancel' => 'Anulé',
 	'mobile-frontend-editor-keep-editing' => 'Continué a modifiché',
-	'mobile-frontend-editor-license' => "An sgnacand su «Argistré», chiel a aceta nòstre [//wikimediafoundation.org/wiki/Terms_of_use condission d'utilisassion] e a l'é d'acòrd a buté sò test sota la [//creativecommons.org/licenses/by-sa/3.0/ licensa CC BY-SA 3.0] e la [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].",
+	'mobile-frontend-editor-license' => "An sgnacand su «Argistré», chiel a aceta nòstre [//wikimediafoundation.org/wiki/Terms_of_use condission d'utilisassion] e a l'é d'acòrd a buté sò test sota la [//creativecommons.org/licenses/by-sa/3.0/ licensa CC BY-SA 3.0] e la [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].", # Fuzzy
 	'mobile-frontend-editor-placeholder' => "Costa session a l'é veuida. Ch'a la spantia për prim!",
 	'mobile-frontend-editor-summary-placeholder' => "Dine lòn ch'a l'ha modificà (facoltativ)",
 	'mobile-frontend-editor-cancel-confirm' => 'Veul-lo për da bon lassé perde soa modìfica?',
@@ -14337,7 +14372,7 @@ Për piasì, ch'a sara e ch'a preuva torna.",
 	'mobile-frontend-profile-edit-summary' => "Agiornament ëd l'antrodussion dël profil utent",
 	'mobile-frontend-geonotahack' => 'Davzin a costa pàgina',
 	'beta-feature-geonotahack' => 'Davzin a costa pàgina',
-	'beta-feature-geonotahack-description' => "A-j përmet ëd vëdde d'àutre pàgine colegà a le pàgine ch'a les, ch'a conten-o d'anformassion ëd longitùdin e latitùdin.",
+	'beta-feature-geonotahack-description' => "A-j përmet ëd vëdde d'àutre pàgine colegà a le pàgine ch'a les, ch'a conten-o d'anformassion ëd longitùdin e latitùdin.", # Fuzzy
 );
 
 /** Western Punjabi (پنجابی)
@@ -14714,6 +14749,9 @@ $messages['ro'] = array(
 	'mobile-frontend-search-help' => 'Introduceți deasupra termenii de căutat, iar titlurile paginilor ce corespund vor apărea aici.',
 	'mobile-frontend-dismiss-notification' => 'respinge această notificare',
 	'mobile-frontend-clear-search' => 'Curăță',
+	'mobile-frontend-search-content' => 'Căutare în corpul articolelor', # Fuzzy
+	'mobile-frontend-search-no-results' => 'Niciun articol cu acest titlu.', # Fuzzy
+	'mobile-frontend-search-content-no-results' => "'''Căutați în corpul articolelor''' pentru a vedea dacă această expresie apare undeva.", # Fuzzy
 	'mobile-frontend-privacy-link-text' => 'Confidențialitate',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text disponibil sub licența [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; pot exista și clauze suplimentare.',
@@ -14798,7 +14836,7 @@ din întreaga lume',
 	'mobile-frontend-changeslist-ip' => 'Utilizator anonim',
 	'mobile-frontend-changeslist-nocomment' => 'fără descrierea modificării',
 	'mobile-frontend-watchlist-filter-all' => 'Toate',
-	'mobile-frontend-watchlist-filter-articles' => 'Articole',
+	'mobile-frontend-watchlist-filter-articles' => 'Articole', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Discuție',
 	'mobile-frontend-watchlist-filter-other' => 'Altele',
 	'mobile-frontend-watchlist-modified' => 'Modificată cu $1',
@@ -14863,7 +14901,7 @@ din întreaga lume',
 	'mobile-frontend-editor-save' => 'Salvare',
 	'mobile-frontend-editor-cancel' => 'Revocare',
 	'mobile-frontend-editor-keep-editing' => 'Rămâi la editare',
-	'mobile-frontend-editor-license' => 'Apăsând „Salvare” sunteți de acord cu [//wikimediafoundation.org/wiki/Terms_of_use Termenii noștri de utilizare] și acceptați să vă eliberați textul sub licența [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] și [//ro.wikipedia.org/wiki/Wikipedia:GNU_FDL GFDL].',
+	'mobile-frontend-editor-license' => 'Apăsând „Salvare” sunteți de acord cu [//wikimediafoundation.org/wiki/Terms_of_use Termenii noștri de utilizare] și acceptați să vă eliberați textul sub licența [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] și [//ro.wikipedia.org/wiki/Wikipedia:GNU_FDL GFDL].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Această secțiune este necompletată. Fiți primul care o extinde!',
 	'mobile-frontend-editor-summary-placeholder' => 'Spuneți-ne ce anume ați modificat (opțional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Doriți, într-adevăr, să vă abandonați modificarea?',
@@ -14901,7 +14939,7 @@ din întreaga lume',
 	'mobile-frontend-media-license-link' => 'Informații despre licențiere',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Dacă un utilizator modifică sau nu prin intermediul interfeței mobile',
 	'mobile-frontend-profile-title' => 'Profil utilizator',
-	'mobile-frontend-profile-last-upload-caption' => 'Încărcată {{PLURAL:$1|ieri|acum $1 zile|acum $1 de zile|0=astăzi}}.', # Fuzzy
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Încărcată}} {{PLURAL:$1|ieri|acum $1 zile|acum $1 de zile|0=astăzi}}.',
 	'mobile-frontend-profile-usertalk' => 'Discutați cu $1',
 	'mobile-frontend-profile-noargs' => 'Furnizați un nume de utilizator pentru a vizualiza un profil.',
 	'mobile-frontend-profile-nouser' => 'Nume de utilizator inexistent sau incorect',
@@ -14910,7 +14948,7 @@ din întreaga lume',
 	'mobile-frontend-profile-userpage-link' => 'Vizitează pagina de utilizator.',
 	'mobile-frontend-requires-optin' => 'Această pagină este disponibilă doar dacă alegeți modul beta. Accesați [[Special:MobileOptions|pagina cu setări]] pentru a comuta la beta.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Mulțumit}} de către [[Special:UserProfile/$1|$1]] pentru o modificare asupra paginii [[$2]].',
-	'mobile-frontend-profile-last-edit' => 'A modificat pagina [[$1]] {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=în cursul zilei de astăzi}}.', # Fuzzy
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|A modificat}} pagina [[$1]] {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=în cursul zilei de astăzi}}.',
 	'mobile-frontend-profile-footer-days' => 'S-a alăturat acum {{PLURAL:$2|o zi|$2 zile|$2 de zile}}, având [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.',
 	'mobile-frontend-profile-footer-months' => 'S-a alăturat cu mai mult de {{PLURAL:$2|o lună|$2 luni|$2 de luni}} în urmă, având [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.',
 	'mobile-frontend-profile-footer-years' => 'S-a alăturat cu mai mult de {{PLURAL:$2|un an|$2 ani|$2 de ani}} în urmă, având [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.',
@@ -14918,7 +14956,7 @@ din întreaga lume',
 	'mobile-frontend-profile-edit-summary' => 'Actualizat introducerea profilului de utilizator',
 	'mobile-frontend-geonotahack' => 'În apropierea acestei pagini',
 	'beta-feature-geonotahack' => 'În apropierea acestei pagini',
-	'beta-feature-geonotahack-description' => 'Vă permite să descoperiți alte pagini asociate paginilor pe care le vizualizați și care conțin informații despre latitudine și longitudine.',
+	'beta-feature-geonotahack-description' => 'Vă permite să descoperiți alte pagini asociate paginilor pe care le vizualizați și care conțin informații despre latitudine și longitudine.', # Fuzzy
 );
 
 /** tarandíne (tarandíne)
@@ -15124,6 +15162,7 @@ $messages['ru'] = array(
 	'mobile-frontend-history' => 'Посмотреть историю изменений этой страницы.',
 	'mobile-frontend-history-404-title' => 'Указано неправильное название',
 	'mobile-frontend-history-404-desc' => 'Невозможно посмотреть историю страницы, которая не существует. Она может быть удалена или вы могли пройти по неверной ссылке.',
+	'mobile-frontend-history-no-results' => 'По заданному фильтру в истории ничего не найдено.',
 	'mobile-frontend-history-summary' => 'История изменений страницы [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Последние изменения на $2 $1',
 	'mobile-frontend-last-modified-seconds' => 'Последние изменения были сделаны {{PLURAL:$1|$1 секунду|$1 секунды|$1 секунд}} назад',
@@ -15152,6 +15191,9 @@ $messages['ru'] = array(
 	'mobile-frontend-search-help' => 'Введите выше искомый термин, и здесь отобразятся совпадающие с ним заголовки страниц.',
 	'mobile-frontend-dismiss-notification' => 'скрыть это уведомление',
 	'mobile-frontend-clear-search' => 'Очистить',
+	'mobile-frontend-search-content' => 'Искать на страницах',
+	'mobile-frontend-search-no-results' => 'Нет страниц с таким названием.',
+	'mobile-frontend-search-content-no-results' => "'''{{int:mobile-frontend-search-content}}''', чтобы увидеть, встречается ли где-то эта фраза.",
 	'mobile-frontend-privacy-link-text' => 'Конфиденциальность',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Содержание доступно по лицензии [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0], могут применяться дополнительные условия.',
@@ -15234,7 +15276,7 @@ $messages['ru'] = array(
 	'mobile-frontend-changeslist-ip' => 'Анонимный участник',
 	'mobile-frontend-changeslist-nocomment' => 'Нет описания правки',
 	'mobile-frontend-watchlist-filter-all' => 'Всё',
-	'mobile-frontend-watchlist-filter-articles' => 'Статьи',
+	'mobile-frontend-watchlist-filter-articles' => 'Статьи', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Обсуждения',
 	'mobile-frontend-watchlist-filter-other' => 'Прочее',
 	'mobile-frontend-watchlist-modified' => 'Изменено $1',
@@ -15299,7 +15341,7 @@ $messages['ru'] = array(
 	'mobile-frontend-editor-save' => 'Сохранить',
 	'mobile-frontend-editor-cancel' => 'Отмена',
 	'mobile-frontend-editor-keep-editing' => 'Продолжить редактирование',
-	'mobile-frontend-editor-license' => 'Нажав кнопку «Сохранить», вы соглашаетесь с нашими [//wikimediafoundation.org/wiki/Terms_of_use условиями использования] и соглашаетесь разместить текст под лицензиям [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0] и [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
+	'mobile-frontend-editor-license' => 'Сохраняя изменения, вы соглашаетесь с нашими [//wikimediafoundation.org/wiki/Terms_of_use/ru условиями использования] и соглашаетесь разместить текст под лицензиям [//creativecommons.org/licenses/by-sa/3.0/3.0/deed.ru CC BY-SA 3.0] и [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
 	'mobile-frontend-editor-placeholder' => 'Этот раздел пуст. Будьте первым, кто заполнит его!',
 	'mobile-frontend-editor-summary-placeholder' => 'Расскажите нам, что вы изменили (не обязательно)',
 	'mobile-frontend-editor-cancel-confirm' => 'Вы действительно хотите отказаться от ваши изменений?',
@@ -15318,6 +15360,8 @@ $messages['ru'] = array(
 	'mobile-frontend-editor-abusefilter-warning' => 'Предупреждение: Вы уверены, что вы хотите сохранить эту правку? С этим могут возникнуть проблемы.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Эта правка не может быть сохранена, поскольку мы обнаружили проблему.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Читать подробнее',
+	'mobile-frontend-editor-editing' => "'''Редактирование''' $1",
+	'mobile-frontend-editor-previewing' => "'''Предварительный просмотр''' $1",
 	'tag-mobile_edit' => 'Правка с моб. устройства',
 	'tag-mobile_edit-description' => 'Правки, сделанные через мобильную версию сайта',
 	'mobile-frontend-drawer-cancel' => 'Отмена',
@@ -15354,7 +15398,7 @@ $messages['ru'] = array(
 	'mobile-frontend-profile-edit-summary' => 'Обновление введения профиля участника',
 	'mobile-frontend-geonotahack' => 'Места поблизости',
 	'beta-feature-geonotahack' => 'Места поблизости',
-	'beta-feature-geonotahack-description' => 'Позволяет вам видеть другие страницы, связанные с просматриваемыми страницами, у которых есть данные по широте и долготе.',
+	'beta-feature-geonotahack-description' => 'Позволяет вам видеть другие страницы, связанные с просматриваемыми страницами, у которых есть данные по широте и долготе.', # Fuzzy
 );
 
 /** Rusyn (русиньскый)
@@ -16472,7 +16516,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-changeslist-ip' => 'Anonym användare',
 	'mobile-frontend-changeslist-nocomment' => 'ingen redigeringssammanfattning',
 	'mobile-frontend-watchlist-filter-all' => 'Alla',
-	'mobile-frontend-watchlist-filter-articles' => 'Artiklar',
+	'mobile-frontend-watchlist-filter-articles' => 'Artiklar', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Andra',
 	'mobile-frontend-watchlist-modified' => 'Redigerades för $1',
@@ -16537,7 +16581,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-editor-save' => 'Spara',
 	'mobile-frontend-editor-cancel' => 'Avbryt',
 	'mobile-frontend-editor-keep-editing' => 'Fortsätt redigera',
-	'mobile-frontend-editor-license' => 'Genom att trycka på "Spara" godkänner du våra [//wikimediafoundation.org/wiki/Terms_of_use användarvillkor] och samtycker till att släppa din text under [//creativecommons.org/licenses/by-sa/3.0/ licensen Creative Commons Attribution-ShareAlike 3.0] och [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
+	'mobile-frontend-editor-license' => 'Genom att trycka på "Spara" godkänner du våra [//wikimediafoundation.org/wiki/Terms_of_use användarvillkor] och samtycker till att släppa din text under [//creativecommons.org/licenses/by-sa/3.0/ licensen Creative Commons Attribution-ShareAlike 3.0] och [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Detta avsnitt är tomt. Bli den första att bygga ut det!',
 	'mobile-frontend-editor-summary-placeholder' => 'Berätta för oss vad du ändrat (frivilligt)',
 	'mobile-frontend-editor-cancel-confirm' => 'Är du säker på att du vill avbryta din redigering?',
@@ -16590,7 +16634,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-footer-years' => 'Registrerades för över {{PLURAL:$2|1 år|$2 år}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].', # Fuzzy
 	'mobile-frontend-geonotahack' => 'Nära denna sida',
 	'beta-feature-geonotahack' => 'Nära denna sida',
-	'beta-feature-geonotahack-description' => 'Låter dig se sidor relaterade till sidor du tittar på som innehåller information om longitud och latitud.',
+	'beta-feature-geonotahack-description' => 'Låter dig se sidor relaterade till sidor du tittar på som innehåller information om longitud och latitud.', # Fuzzy
 );
 
 /** Swahili (Kiswahili)
@@ -17207,7 +17251,7 @@ $messages['tr'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonim kullanıcı',
 	'mobile-frontend-changeslist-nocomment' => 'değişiklik özeti yok',
 	'mobile-frontend-watchlist-filter-all' => 'Hepsi',
-	'mobile-frontend-watchlist-filter-articles' => 'Maddeler',
+	'mobile-frontend-watchlist-filter-articles' => 'Maddeler', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Tartışma',
 	'mobile-frontend-watchlist-filter-other' => 'Diğer',
 	'mobile-frontend-watchlist-modified' => '$1 değiştirildi',
@@ -17267,7 +17311,7 @@ $messages['tr'] = array(
 	'mobile-frontend-editor-save' => 'Kaydet',
 	'mobile-frontend-editor-cancel' => 'İptal',
 	'mobile-frontend-editor-keep-editing' => 'Düzenlemeyi koru',
-	'mobile-frontend-editor-license' => '"Kaydet" tuşuna tıklayarak; [//wikimediafoundation.org/wiki/Terms_of_use Kullanım Koşullarımızı], metninizin  [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 Lisansı] ve [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] altında yayınlanacağını  kabul etmiş olursunuz.',
+	'mobile-frontend-editor-license' => '"Kaydet" tuşuna tıklayarak; [//wikimediafoundation.org/wiki/Terms_of_use Kullanım Koşullarımızı], metninizin  [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 Lisansı] ve [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] altında yayınlanacağını  kabul etmiş olursunuz.', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Bu bölüm boş. Geliştiren ilk siz olun!',
 	'mobile-frontend-editor-summary-placeholder' => 'Neyi değiştirdiğinizi söyleyin (isteğe bağlı)',
 	'mobile-frontend-editor-cancel-confirm' => 'Düzenlemelerinizi bırakmak gerçekten istiyor musunuz?',
@@ -17406,7 +17450,7 @@ $messages['ug-arab'] = array(
 	'mobile-frontend-page-menu-history' => 'تارىخ',
 	'mobile-frontend-changeslist-ip' => 'ئاتسىز ئىشلەتكۈچى',
 	'mobile-frontend-watchlist-filter-all' => 'ھەممىسى',
-	'mobile-frontend-watchlist-filter-articles' => 'ماقالىلەر',
+	'mobile-frontend-watchlist-filter-articles' => 'ماقالىلەر', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'مۇنازىرە',
 	'mobile-frontend-watchlist-filter-other' => 'باشقا',
 	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|قېتىم|قېتىم}} تەھرىرلەنگەن', # Fuzzy
@@ -17490,6 +17534,7 @@ $messages['uk'] = array(
 	'mobile-frontend-history' => 'Переглянути історію редагувань цієї сторінки.',
 	'mobile-frontend-history-404-title' => 'Погану назву дано',
 	'mobile-frontend-history-404-desc' => 'Не можна переглянути історію для сторінки, яка не існує. Це було видалено або ви може маєте підписку з поганим посиланням.',
+	'mobile-frontend-history-no-results' => 'Жодних збігів у історії для фільтру немає.',
 	'mobile-frontend-history-summary' => 'Сторінка історії для [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Останні зміни: $1, $2',
 	'mobile-frontend-last-modified-seconds' => 'Остання зміна була $1 {{PLURAL:$1|секунду|секунди|секунд}} тому',
@@ -17518,6 +17563,9 @@ $messages['uk'] = array(
 	'mobile-frontend-search-help' => 'Введіть вище термін, що шукаєте, і тут буде показано заголовки сторінок, що співпадають.',
 	'mobile-frontend-dismiss-notification' => 'приховати це сповіщення',
 	'mobile-frontend-clear-search' => 'Очистити',
+	'mobile-frontend-search-content' => 'Пошук серед сторінок',
+	'mobile-frontend-search-no-results' => 'Немає сторінки з цією назвою.',
+	'mobile-frontend-search-content-no-results' => "'''{{int:mobile-frontend-search-content}}''' щоб побачити, чи ця фраза з'являється в будь-якому місці.",
 	'mobile-frontend-privacy-link-text' => 'Конфіденційність',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Вміст доступний під ліцензією [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; можуть діяти додаткові умови.',
@@ -17665,7 +17713,7 @@ $messages['uk'] = array(
 	'mobile-frontend-editor-save' => 'Зберегти',
 	'mobile-frontend-editor-cancel' => 'Скасувати',
 	'mobile-frontend-editor-keep-editing' => 'Зберегти редагування',
-	'mobile-frontend-editor-license' => 'Натиснувши кнопку "Зберегти", ви погоджуєтеся з нашими [//wikimediafoundation.org/wiki/Terms_of_use/uk умовами використання] та погоджуєтесь з поширенням вашого тексту під [//http://creativecommons.org/licenses/by-sa/3.0/deed.uk ліцензією CC-BY-SA 3.0] та [//http://uk.wikipedia.org/wiki/Вікіпедія:Текст_GNU_Free_Documentation_License].',
+	'mobile-frontend-editor-license' => 'Натиснувши кнопку "Зберегти", ви погоджуєтеся з нашими [//wikimediafoundation.org/wiki/Terms_of_use/uk умовами використання] та погоджуєтесь з поширенням вашого тексту під [//http://creativecommons.org/licenses/by-sa/3.0/deed.uk ліцензією CC-BY-SA 3.0] та [//http://uk.wikipedia.org/wiki/Вікіпедія:Текст_GNU_Free_Documentation_License].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Цей розділ порожній. Будьте першим, хто розширить його!',
 	'mobile-frontend-editor-summary-placeholder' => "Повідомити нас, що ви змінили (необов'язково)",
 	'mobile-frontend-editor-cancel-confirm' => 'Ви дійсно хочете відмовитися від вашого редагування?',
@@ -17720,7 +17768,7 @@ $messages['uk'] = array(
 	'mobile-frontend-profile-edit-summary' => 'Оновлення вступу профілю користувача',
 	'mobile-frontend-geonotahack' => 'Поблизу цієї сторінки',
 	'beta-feature-geonotahack' => 'Поблизу цієї сторінки',
-	'beta-feature-geonotahack-description' => 'Дає змогу бачити інші схожі сторінки до сторінки, які містять інформацію про довготу та широту.',
+	'beta-feature-geonotahack-description' => 'Дає змогу бачити інші схожі сторінки до сторінки, які містять інформацію про довготу та широту.', # Fuzzy
 );
 
 /** Urdu (اردو)
@@ -18163,6 +18211,9 @@ $messages['vi'] = array(
 	'mobile-frontend-search-help' => 'Nhập từ khóa tìm kiếm ở trên để xem các trang trùng tên ở đây.',
 	'mobile-frontend-dismiss-notification' => 'bỏ qua thông báo này',
 	'mobile-frontend-clear-search' => 'Tẩy trống',
+	'mobile-frontend-search-content' => 'Tìm trong bài', # Fuzzy
+	'mobile-frontend-search-no-results' => 'Không tìm thấy bài với tên này.', # Fuzzy
+	'mobile-frontend-search-content-no-results' => "'''Tìm cụm từ''' này trong các bài.", # Fuzzy
 	'mobile-frontend-privacy-link-text' => 'Riêng tư',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Văn bản có sẵn theo [//vi.m.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi?useformat=mobile CC BY-SA 3.0]; có thể áp dụng điều khoản bổ sung.',
@@ -18245,7 +18296,7 @@ $messages['vi'] = array(
 	'mobile-frontend-changeslist-ip' => 'Người dùng vô danh',
 	'mobile-frontend-changeslist-nocomment' => 'không có tóm lược sửa đổi',
 	'mobile-frontend-watchlist-filter-all' => 'Tất cả',
-	'mobile-frontend-watchlist-filter-articles' => 'Bài viết',
+	'mobile-frontend-watchlist-filter-articles' => 'Bài viết', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Thảo luận',
 	'mobile-frontend-watchlist-filter-other' => 'Khác',
 	'mobile-frontend-watchlist-modified' => 'Được sửa đổi $1',
@@ -18310,7 +18361,7 @@ $messages['vi'] = array(
 	'mobile-frontend-editor-save' => 'Lưu',
 	'mobile-frontend-editor-cancel' => 'Hủy bỏ',
 	'mobile-frontend-editor-keep-editing' => 'Sửa tiếp',
-	'mobile-frontend-editor-license' => 'Với việc bấm nút “Lưu”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng] của chúng tôi và đồng ý phát hành văn bản của bạn theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
+	'mobile-frontend-editor-license' => 'Với việc bấm nút “Lưu”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng] của chúng tôi và đồng ý phát hành văn bản của bạn theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Phần này còn trống. Hãy Be the first to expand it! Hãy là người đầu tiên mở rộng nó!',
 	'mobile-frontend-editor-summary-placeholder' => 'Cho chúng tôi biết bạn đã thay đổi những gì (tùy chọn)',
 	'mobile-frontend-editor-cancel-confirm' => 'Bạn có thực sự muốn từ bỏ sửa đổi của bạn?',
@@ -18348,7 +18399,7 @@ $messages['vi'] = array(
 	'mobile-frontend-media-license-link' => 'Thông tin giấy phép',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Người dùng có sửa đổi qua giao diện di động hay không',
 	'mobile-frontend-profile-title' => 'Thông tin cá nhân',
-	'mobile-frontend-profile-last-upload-caption' => 'Được tải lên {{PLURAL:$1|ngày hôm qua|$1 ngày trước|0=hôm nay}}.', # Fuzzy
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2}}Được tải lên {{PLURAL:$1|ngày hôm qua|$1 ngày trước|0=hôm nay}}.',
 	'mobile-frontend-profile-usertalk' => 'Thảo luận với $1',
 	'mobile-frontend-profile-noargs' => 'Xin vui lòng nhập tên người dùng để xem trang thành viên.',
 	'mobile-frontend-profile-nouser' => 'Tên người dùng không tồn tại hoặc không hợp lệ.',
@@ -18357,7 +18408,7 @@ $messages['vi'] = array(
 	'mobile-frontend-profile-userpage-link' => 'Xem trang thành viên.',
 	'mobile-frontend-requires-optin' => 'Để xem trang này, hãy quyết định kích hoạt chế độ beta. Mở [[Special:MobileOptions|trang tùy chọn]] để kích hoạt.',
 	'mobile-frontend-profile-last-thanked' => 'Đã nhận lời cảm ơn từ [[Special:UserProfile/$1|$1]] vì một sửa đổi tại [[$2]].',
-	'mobile-frontend-profile-last-edit' => 'Đã sửa đổi trang [[$1]] {{PLURAL:$2|hôm qua|cách đây $2 ngày|0=hôm nay}}.', # Fuzzy
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3}}Đã sửa đổi trang [[$1]] {{PLURAL:$2|hôm qua|cách đây $2 ngày|0=hôm nay}}.',
 	'mobile-frontend-profile-footer-days' => 'Đã mở tài khoản cách đây $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
 	'mobile-frontend-profile-footer-months' => 'Đã mở tài khoản cách đây hơn $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
 	'mobile-frontend-profile-footer-years' => 'Đã mở tài khoản cách đây $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
@@ -18365,7 +18416,7 @@ $messages['vi'] = array(
 	'mobile-frontend-profile-edit-summary' => 'Đang cập nhật lời tự giới thiệu',
 	'mobile-frontend-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack' => 'Lân cận trang này',
-	'beta-feature-geonotahack-description' => 'Cho phép bạn xem các trang lân cận theo thông tin tọa độ trên trang hiện tại.',
+	'beta-feature-geonotahack-description' => 'Cho phép bạn xem các trang lân cận theo thông tin tọa độ trên trang hiện tại.', # Fuzzy
 );
 
 /** Volapük (Volapük)
@@ -18714,7 +18765,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-changeslist-ip' => '匿名用户',
 	'mobile-frontend-changeslist-nocomment' => '无编辑摘要',
 	'mobile-frontend-watchlist-filter-all' => '全部',
-	'mobile-frontend-watchlist-filter-articles' => '条目',
+	'mobile-frontend-watchlist-filter-articles' => '条目', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => '讨论',
 	'mobile-frontend-watchlist-filter-other' => '其他',
 	'mobile-frontend-watchlist-modified' => '修改于$1',
@@ -18779,7 +18830,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-editor-save' => '保存',
 	'mobile-frontend-editor-cancel' => '取消',
 	'mobile-frontend-editor-keep-editing' => '继续编辑',
-	'mobile-frontend-editor-license' => '点击“保存”，即表示你认同我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意采用[//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0许可协议]和[//zh.wikipedia.org/wiki/Wikipedia:GNU%E8%87%AA%E7%94%B1%E6%96%87%E6%A1%A3%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%96%87%E6%9C%AC GFDL]发表你的文字。',
+	'mobile-frontend-editor-license' => '点击“保存”，即表示你认同我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意采用[//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0许可协议]和[//zh.wikipedia.org/wiki/Wikipedia:GNU%E8%87%AA%E7%94%B1%E6%96%87%E6%A1%A3%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%96%87%E6%9C%AC GFDL]发表你的文字。', # Fuzzy
 	'mobile-frontend-editor-placeholder' => '这个章节还是空的。成为第一个充实它的人吧！',
 	'mobile-frontend-editor-summary-placeholder' => '告诉我们你更改了什么（可选）',
 	'mobile-frontend-editor-cancel-confirm' => '你真的想要放弃你的编辑？',
@@ -19018,7 +19069,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-changeslist-ip' => '匿名用戶',
 	'mobile-frontend-changeslist-nocomment' => '沒有編輯摘要',
 	'mobile-frontend-watchlist-filter-all' => '全部',
-	'mobile-frontend-watchlist-filter-articles' => '條目',
+	'mobile-frontend-watchlist-filter-articles' => '條目', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => '討論',
 	'mobile-frontend-watchlist-filter-other' => '其他',
 	'mobile-frontend-watchlist-modified' => '$1前修改',
@@ -19083,7 +19134,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-editor-save' => '儲存',
 	'mobile-frontend-editor-cancel' => '取消',
 	'mobile-frontend-editor-keep-editing' => '繼續編輯',
-	'mobile-frontend-editor-license' => '點擊「保存編輯」按鈕表示您同意我們的[//wikimediafoundation.org/wiki/Terms_of_use 使用條款]並同意通過[//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0協議]和[//zh.wikipedia.org/wiki/Wikipedia:GFDL GFDL協議]發表您的貢獻。',
+	'mobile-frontend-editor-license' => '點擊「保存編輯」按鈕表示您同意我們的[//wikimediafoundation.org/wiki/Terms_of_use 使用條款]並同意通過[//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0協議]和[//zh.wikipedia.org/wiki/Wikipedia:GFDL GFDL協議]發表您的貢獻。', # Fuzzy
 	'mobile-frontend-editor-placeholder' => '這一部分是空的。成為第一個編輯它的人吧！',
 	'mobile-frontend-editor-summary-placeholder' => '告訴我們您做了哪些修改 （可選）',
 	'mobile-frontend-editor-cancel-confirm' => '你確認要放棄你的編輯？',
