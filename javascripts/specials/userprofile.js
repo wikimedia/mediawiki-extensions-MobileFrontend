@@ -1,6 +1,5 @@
 ( function( M, $ ) {
 	var View = M.require( 'view' ),
-		api = M.require( 'api' ),
 		limit = mw.config.get( 'wgMFMaxDescriptionChars' ),
 		EditBox;
 
@@ -14,22 +13,39 @@
 		},
 		initialize: function( options ) {
 			var self = this, _super = self._super;
-			api.getToken().done( function( token ) {
-				options.token = token;
+			mw.loader.using( 'mobile.editor', function() {
+				var EditorApi = M.require( 'modules/editor/EditorApi' );
+				self.api = new EditorApi( { title: options.title, sectionId: 0, content: options.description } );
 				_super.call( self, options );
 			} );
 		},
+		switchToEditMode: function() {
+			this.$( '.editor' ).show();
+			this.$( '.edit-button, .user-description' ).hide();
+		},
+		switchToViewMode: function() {
+			this.$( '.editor' ).hide();
+			this.$( '.edit-button,.user-description' ).show();
+		},
 		postRender: function( options ) {
-			var self = this, $form = this.$( 'form' );
+			var self = this, $form = this.$( '.editor' ),
+				$loader = this.$( '.loading' ).hide();
 			$form.hide();
 			this.$( 'textarea' ).on( 'keyup focus', $.proxy( this, 'setCount' )  );
 			// Initialize the character count
 			this.setCount();
 			// Initialize the edit button
-			this.$( '.edit-button' ).on( 'click', function() {
-				$form.show();
-				$( this ).hide();
-				self.$( '.user-description' ).hide();
+			this.$( '.edit-button' ).on( 'click', $.proxy( self, 'switchToEditMode' ) );
+			this.$( '.editor button' ).on( 'click', function() {
+				var val = self.$( 'textarea' ).val();
+				$loader.show();
+				$form.hide();
+				self.api.setContent( val );
+				self.api.save( { summary: mw.msg( 'mobile-frontend-profile-edit-summary' ) } ).done( function() {
+					$loader.hide();
+					self.$( '.user-description' ).text( val || options.placeholder );
+					self.switchToViewMode();
+				} );
 			} );
 			this._super( options );
 		},
@@ -53,11 +69,12 @@
 
 	function initialize() {
 		var $container = $( '.user-description-container' ),
+			username = mw.config.get( 'wgUserName' ),
 			text = $container.find( '.user-description' ).text() || undefined;
 
 		// If current user is this person make it editable
-		if ( $( 'h1' ).text() === mw.config.get( 'wgUserName' ) ) {
-			new EditBox( { el: $container, description: text } );
+		if ( $( 'h1' ).text() === username ) {
+			new EditBox( { el: $container, description: text, title: 'User:' + username + '/UserProfileIntro' } );
 		}
 	}
 
