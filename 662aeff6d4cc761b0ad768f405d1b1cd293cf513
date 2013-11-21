@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_22e1c329",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2013-11-21T22:47:07Z",
+      "side": 1,
+      "message": "User::isEveryoneAllowed(\u0027edit\u0027) is probably what you want.",
+      "revId": "662aeff6d4cc761b0ad768f405d1b1cd293cf513",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
