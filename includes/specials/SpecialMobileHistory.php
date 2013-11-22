@@ -1,6 +1,6 @@
 <?php
 
-class SpecialHistory extends MobileSpecialPageFeed {
+class SpecialMobileHistory extends MobileSpecialPageFeed {
 	const LIMIT = 50;
 	protected $mode = 'beta';
 	/**  @var String|null timestamp to offset results from */

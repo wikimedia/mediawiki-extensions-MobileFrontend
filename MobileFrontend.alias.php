@@ -17,6 +17,7 @@ $specialPageAliases['en'] = array(
 	'MobileMenu' => array( 'MobileMenu' ),
 	'Nearby' => array( 'Nearby' ),
 	'UserProfile' => array( 'UserProfile' ),
+	'MobileHistory' => array( 'MobileHistory' ),
 );
 
 /** Arabic (العربية) */

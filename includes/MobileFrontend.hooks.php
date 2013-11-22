@@ -290,7 +290,7 @@ class MobileFrontendHooks {
 			}
 
 			$list['UserProfile'] = 'SpecialUserProfile';
-			$list['History'] = 'SpecialHistory';
+			$list['History'] = 'SpecialMobileHistory';
 		}
 		return true;
 	}

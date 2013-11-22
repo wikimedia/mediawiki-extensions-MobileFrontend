@@ -64,7 +64,7 @@ $autoloadClasses = array (
 
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialUserProfile' => 'specials/SpecialUserProfile',
-	'SpecialHistory' => 'specials/SpecialHistory',
+	'SpecialMobileHistory' => 'specials/SpecialMobileHistory',
 	'SpecialMobileUserlogin' => 'specials/SpecialMobileUserlogin',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
