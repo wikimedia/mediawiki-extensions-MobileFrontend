@@ -5,14 +5,12 @@
 		<strong>{{caption}}</strong>
 		<p>{{text}}</p>
 		{{#button}}
-		{{#fileButton}}
-		<div class="button cloaked">
-			{{button}}<input name="file" type="file">
-		</div>
-		{{/fileButton}}
-		{{^fileButton}}
+		{{#funnel}}
+		<div class="button cloaked"></div>
+		{{/funnel}}
+		{{^funnel}}
 		<button class="cancel button">{{button}}</button>
-		{{/fileButton}}
+		{{/funnel}}
 		{{/button}}
 	</li>
 	{{/pages}}

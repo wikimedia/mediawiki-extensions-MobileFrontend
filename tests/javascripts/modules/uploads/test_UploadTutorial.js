@@ -14,8 +14,8 @@
 	} );
 
 	QUnit.test( '#initialize, with file button', 2, function( assert ) {
-		uploadTutorial = new UploadTutorial( { fileButton: true } );
-		assert.ok( uploadTutorial.$( 'input' ).length, 'Has file button' );
+		uploadTutorial = new UploadTutorial( { funnel: 'article' } );
+		assert.ok( uploadTutorial.$( 'div.button' ).length, 'Has file button' );
 		assert.ok( !uploadTutorial.$( '.cancel' ).length, 'Has no cancel button' );
 	} );
 

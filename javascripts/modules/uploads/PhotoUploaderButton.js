@@ -1,9 +1,6 @@
 ( function( M, $ ) {
 	var View = M.require( 'view' ),
-		popup = M.require( 'toast' ),
-		user = M.require( 'user' ),
-		PhotoUploaderButton,
-		LeadPhotoUploaderButton;
+		PhotoUploaderButton;
 
 	function isSupported() {
 		// FIXME: create a module for browser detection stuff
@@ -83,13 +80,14 @@
 
 			function handleFile( file ) {
 				var options = $.extend( {}, self.options, {
-					file: file,
-					parent: self
+					// FIXME: No need to reference parent when new uploads move to stable
+					parent: self,
+					file: file
 				} ),
 					LoadingOverlay, loadingOverlay;
 
 				// FIXME: remove when new uploads overlay in stable
-				if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+				if ( !M.isBetaGroupMember() ) {
 					LoadingOverlay = M.require( 'LoadingOverlay' );
 					loadingOverlay = new LoadingOverlay();
 					loadingOverlay.show();
@@ -107,22 +105,13 @@
 						loadingOverlay.show();
 
 						mw.loader.using( 'mobile.uploadsNew', function() {
-							var PhotoUploader = M.require( 'modules/uploadsNew/PhotoUploader' );
 							loadingOverlay.hide();
-							new PhotoUploader( options );
+							// FIXME: this is hacky but it would be hard to pass a file in a route
+							M.emit( '_upload-preview', options.file );
+							M.router.navigate( '#/upload-preview/' + options.funnel );
 						} );
 					} );
 				}
-			}
-
-			if ( M.isBetaGroupMember() && user.getEditCount() === 0 ) {
-				this.$el.on( M.tapEvent( 'click' ), function( ev ) {
-					ev.preventDefault();
-					mw.loader.using( 'mobile.uploads.common', function() {
-						var UploadTutorial = M.require( 'modules/uploads/UploadTutorial' );
-						new UploadTutorial( { fileButton: true } ).on( 'file', handleFile ).show();
-					} );
-				} );
 			}
 
 			$input.
@@ -136,40 +125,8 @@
 		}
 	} );
 
-	LeadPhotoUploaderButton = PhotoUploaderButton.extend( {
-		template: M.template.get( 'uploads/LeadPhotoUploaderButton' ),
-		className: 'enabled',
+	PhotoUploaderButton.isSupported = isSupported();
 
-		initialize: function( options ) {
-			var self = this;
-			this._super( options );
-			this.on( 'start', function() {
-					self.$el.removeClass( 'enabled' );
-				} ).
-				on( 'success', function( data ) {
-					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
-
-					// just in case, LeadPhoto should be loaded by now anyway
-					mw.loader.using( 'mobile.uploads.common', function() {
-						var LeadPhoto = M.require( 'modules/uploads/LeadPhoto' );
-
-						new LeadPhoto( {
-							url: data.url,
-							pageUrl: data.descriptionUrl,
-							caption: data.description
-						} ).prependTo( M.getLeadSection() );
-					} );
-				} ).
-				on( 'error cancel', function() {
-					self.$el.addClass( 'enabled' );
-				} );
-		}
-	} );
-
-	PhotoUploaderButton.isSupported = LeadPhotoUploaderButton.isSupported = isSupported();
-
-	// FIXME: should we allow more than one define() per file?
 	M.define( 'modules/uploads/PhotoUploaderButton', PhotoUploaderButton );
-	M.define( 'modules/uploads/LeadPhotoUploaderButton', LeadPhotoUploaderButton );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -160,7 +160,7 @@ var
 	}
 
 	function init() {
-		var $container, userGallery;
+		var $container, userGallery, $a;
 
 		userGallery = new PhotoList().appendTo( '#content_wrapper' );
 
@@ -168,37 +168,47 @@ var
 			$container = $( '.ctaUploadPhoto' );
 
 			// FIXME: remove when new uploads overlay in stable
-			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+			if ( !M.isBetaGroupMember() ) {
 				userGallery.on( 'empty', function() {
 					var UploadTutorial = M.require( 'modules/uploads/UploadTutorial' );
 					new UploadTutorial().show();
 				} );
+			} else {
+				if ( user.getEditCount() === 0 ) {
+					$a = $( '<a class="button photo">' ).
+						text( mw.msg( 'mobile-frontend-photo-upload-generic' ) ).
+						attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $container );
+					// FIXME: This is needed so the camera shows. Eww.
+					$( '<div>' ).appendTo( $a );
+				} else {
+					new PhotoUploaderButton( {
+						buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
+						pageTitle: mw.config.get( 'wgTitle' ),
+						funnel: 'uploads'
+					} ).
+						appendTo( $container );
+				}
 			}
 
-			new PhotoUploaderButton( {
-				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
-				pageTitle: mw.config.get( 'wgTitle' ),
-				funnel: 'uploads'
-			} ).
-				appendTo( $container ).
-				on( 'success', function( image ) {
-					var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount, msgKey;
+			// FIXME: Please find a way to do this without a global event.
+			M.on( '_file-upload', function( image ) {
+				var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount, msgKey;
 
-					if ( userGallery.isEmpty() ) {
-						msgKey = 'mobile-frontend-donate-photo-first-upload-success';
-					} else {
-						msgKey = 'mobile-frontend-donate-photo-upload-success';
-					}
-					popup.show( mw.msg( msgKey ), 'toast' );
+				if ( userGallery.isEmpty() ) {
+					msgKey = 'mobile-frontend-donate-photo-first-upload-success';
+				} else {
+					msgKey = 'mobile-frontend-donate-photo-upload-success';
+				}
+				popup.show( mw.msg( msgKey ), 'toast' );
 
-					image.width = IMAGE_WIDTH;
-					userGallery.prependPhoto( image );
+				image.width = IMAGE_WIDTH;
+				userGallery.prependPhoto( image );
 
-					if ( $counter.length ) {
-						newCount = parseInt( $counter.text(), 10 ) + 1;
-						$counter.parent().html( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) ).show();
-					}
-				} );
+				if ( $counter.length ) {
+					newCount = parseInt( $counter.text(), 10 ) + 1;
+					$counter.parent().html( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) ).show();
+				}
+			} );
 		}
 	}
 

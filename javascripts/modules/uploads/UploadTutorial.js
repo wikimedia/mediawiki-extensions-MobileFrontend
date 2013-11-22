@@ -1,6 +1,10 @@
 ( function( M, $ ) {
 
-	var Overlay = M.require( 'Overlay' ), UploadTutorial;
+	var
+		Overlay = M.require( 'Overlay' ),
+		LeadPhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
+		buttonMsg = mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
+		UploadTutorial;
 
 	UploadTutorial = Overlay.extend( {
 		template: M.template.get( 'uploads/UploadTutorial' ),
@@ -18,27 +22,32 @@
 				},
 				{
 					caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-header' ),
-					button: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' )
+					button: buttonMsg
 				}
-			],
-			fileButton: false
+			]
 		},
 
 		postRender: function( options ) {
-			var self = this, $input = this.$( 'input' );
+			var self = this, $button = this.$( '.button' );
+
+			if ( options.funnel ) {
+				new LeadPhotoUploaderButton( {
+					el: $button,
+					buttonCaption: buttonMsg,
+					funnel: options.funnel
+				} );
+				$button.on( 'click', function() {
+					// need timeout for the file dialog to open
+					setTimeout( $.proxy( self, 'hide' ), 0 );
+					setTimeout( $.proxy( self, 'emit', 'hide' ), 0 );
+				} );
+			}
 
 			this.page = 0;
 			this.totalPages = options.pages.length;
 			this.$( '.prev' ).on( M.tapEvent( 'click' ), $.proxy( this, 'previous' ) );
 			this.$( '.next' ).on( M.tapEvent( 'click' ), $.proxy( this, 'next' ) );
-			$input.
-				on( 'change', function() {
-					self.emit( 'file', $input[0].files[0] );
-				} ).
-				on( 'click', function() {
-					// need timeout for the file dialog to open
-					setTimeout( $.proxy( self, 'hide' ), 0 );
-				} );
+
 			this._showCurrentPage();
 
 			this._super( options );

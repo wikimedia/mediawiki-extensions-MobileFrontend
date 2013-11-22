@@ -38,13 +38,12 @@
 			return makeDisabledButton();
 		}
 
-		new LeadPhotoUploaderButton( {
-			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
-			insertInPage: true,
-			el: '#ca-upload',
-			pageTitle: mw.config.get( 'wgPageName' ),
-			funnel: funnel
-		} );
+		if ( M.isBetaGroupMember() && user.getEditCount() === 0 ) {
+			$( '#ca-upload' ).addClass( 'enabled' );
+			$( '<a>' ).attr( 'href', '#/upload-tutorial/' + funnel ).appendTo( '#ca-upload' );
+		} else {
+			new LeadPhotoUploaderButton( { funnel: funnel } );
+		}
 	}
 
 	if ( isSupported ) {
