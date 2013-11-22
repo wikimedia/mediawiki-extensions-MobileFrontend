@@ -106,7 +106,7 @@ class ApiMobileView extends ApiBase {
 			foreach ( array_keys( $requestedSections ) as $index ) {
 				$section = array( 'id' => $index );
 				if ( isset( $data['text'][$index] ) ) {
-					$section[$textElement] = $this->stringSplitter( $data['text'][$index] );
+					$section[$textElement] = $this->stringSplitter( $this->prepareSection( $data['text'][$index] ) );
 				} else {
 					$missingSections[] = $index;
 				}

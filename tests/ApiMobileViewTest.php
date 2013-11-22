@@ -102,7 +102,9 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 		$context->setRequest( $request );
 		$api = new MockApiMobileView( new ApiMain( $context ), 'mobileview' );
 		$api->execute();
-		$this->assertArrayEquals( $expected, $api->getResultData() );
+		$result = $api->getResultData();
+		$this->assertTrue( isset( $result['mobileview'] ), 'API output should be encloded in mobileview element' );
+		$this->assertArrayEquals( $expected, $result['mobileview'] );
 	}
 
 	public function provideView() {
@@ -118,25 +120,39 @@ Text 1
 Text 2
 ',
 		);
+		$baseOut = array(
+			'sections' => array(
+				0 => array( 'id' => 0 ),
+				1 => array(
+					'toclevel' => 1,
+					'line' => 'Section 1',
+					'id' => 1,
+					'*' => '<p>Text 1</p>'
+				),
+				2 => array(
+					'toclevel' => 1,
+					'line' => 'Section 2',
+					'id' => 2,
+					'*' => '<p>Text 2</p>'
+				),
+			),
+		);
 		return array(
 			array(
 				$baseIn,
+				$baseOut,
+			),
+			array(
+				$baseIn + array( 'prop' => 'text' ),
 				array(
-					'mobileview' => array(
-						'sections' => array(
-							array( 'id' => 0 ),
-							array(
-								'toclevel' => 1,
-								'line' => 'Section 1',
-								'id' => 1,
-								'*' => '<p>Text 1</p>'
-							),
-							array(
-								'toclevel' => 1,
-								'line' => 'Section 2',
-								'id' => 2,
-								'*' => '<p>Text 2</p>'
-							),
+					'sections' => array(
+						array(
+							'id' => 1,
+							'*' => '<p>Text 1</p>'
+						),
+						array(
+							'id' => 2,
+							'*' => '<p>Text 2</p>'
 						),
 					),
 				),
