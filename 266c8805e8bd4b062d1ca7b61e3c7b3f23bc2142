@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_380fb635",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-22T06:24:40Z",
+      "side": 1,
+      "message": "It looks like an entry in MobileFrontend.alias.php is missing.\n\nI accidentally found this out, as I was triggered by this patch set in the context of https://gerrit.wikimedia.org/r/#/c/96170/",
+      "revId": "266c8805e8bd4b062d1ca7b61e3c7b3f23bc2142",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
