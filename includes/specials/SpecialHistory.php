@@ -22,18 +22,13 @@ class SpecialHistory extends MobileSpecialPageFeed {
 		if ( $par ) {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
-			if ( $this->title && $this->title->exists() ) {
-				$out->addHtml(
-					Html::openElement( 'div', array( 'class' => 'page-header-bar' ) ) .
-					Html::openElement( 'div' ) .
-					$this->msg( 'mobile-frontend-history-summary', $this->title->getPrefixedText() )->parse() .
-					Html::closeElement( 'div' ) .
-					Html::closeElement( 'div' )
-				);
-			} else {
-				wfHttpError( 404, $this->msg( 'mobile-frontend-history-404-title' )->text(),
-					$this->msg( 'mobile-frontend-history-404-desc' )->text() );
-			}
+			$out->addHtml(
+				Html::openElement( 'div', array( 'class' => 'page-header-bar' ) ) .
+				Html::openElement( 'div' ) .
+				$this->msg( 'mobile-frontend-history-summary', $this->title->getPrefixedText() )->parse() .
+				Html::closeElement( 'div' ) .
+				Html::closeElement( 'div' )
+			);
 		}
 		$res = $this->doQuery();
 		$this->showHistory( $res );
