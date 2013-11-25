@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ee75395_21c08f2e",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-25T17:56:31Z",
+      "side": 1,
+      "message": "Turns out this is not a button - just an alt text for an image...",
+      "revId": "02b45d1ac954d1b59d005e9c658cc4590786d5ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_61c69750",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 2
