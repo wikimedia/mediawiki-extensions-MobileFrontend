@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_61c69750",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-25T17:56:04Z",
+      "side": 1,
+      "message": "Technically this is not true - confusingly clicking this message itself performs the search. (This confused me as well).\n\nI think the qqq codes should be improved instead.",
+      "revId": "02b45d1ac954d1b59d005e9c658cc4590786d5ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
