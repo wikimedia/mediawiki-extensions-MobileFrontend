@@ -6,10 +6,10 @@ var $container,
 function makeSections() {
 	return $( '<div>' ).appendTo( '#content' ).html(
 			'<h2 id="section_0"><span id="First_Section">First Section</span></h2>' +
-			'<div id="content_block_0"><p>Text</p></div>' +
+			'<div><p>Text</p></div>' +
 
 			'<h2 id="section_1"><a href="#foo">Dummy Link</a></h2>' +
-			'<div id="content_block_1"></div>'
+			'<div></div>'
 		);
 }
 
@@ -70,6 +70,28 @@ QUnit.test( 'Mouseup on a heading toggles it', 2, function() {
 	$( '#section_1' ).trigger( M.tapEvent( 'mouseup' ) );
 
 	strictEqual( $content.hasClass( 'openSection' ), true, 'check content is shown on a toggle' );
+} );
+
+QUnit.test( 'Verify aria attributes', 9, function () {
+	var $section = $( '#section_1' ),
+		$content = $( '#content_block_1' );
+
+	// Test the initial state produced by the init function
+	strictEqual( $content.hasClass( 'openSection' ), false, 'check content is hidden at start' );
+	strictEqual( $content.attr( 'aria-pressed' ), 'false', 'check aria-pressed is false at start' );
+	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start' );
+
+	// Test what the toggle() function gives us when hiding the section
+	$section.trigger( M.tapEvent( 'mouseup' ) );
+	strictEqual( $content.hasClass( 'openSection' ), true, 'check content is visible after toggling' );
+	strictEqual( $content.attr( 'aria-pressed' ), 'true', 'check aria-pressed is true after toggling' );
+	strictEqual( $content.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling' );
+
+	// Test what the toggle() function gives us when showing the section
+	$section.trigger( M.tapEvent( 'mouseup' ) );
+	strictEqual( $content.hasClass( 'openSection' ), false, 'check content is hidden after toggling' );
+	strictEqual( $content.attr( 'aria-pressed' ), 'false', 'check aria-pressed is false after toggling' );
+	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );
 } );
 
 QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
