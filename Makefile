@@ -12,6 +12,9 @@ jshint: nodecheck jshinttests
 checkless:
 	@php ../../maintenance/checkLess.php
 
+phplint:
+	@scripts/phpcheck.sh
+
 phpunit:
 	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --configuration ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/mfe.suite.xml --group=MobileFrontend
 
