@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_c1bd6365",
+        "filename": "less/common/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-25T18:21:34Z",
+      "side": 1,
+      "message": "Can we make these rules more generic? e.g. default table styling? so we can kill https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d49959\n\nThis is common.less so we should keep as generic as possible :D",
+      "revId": "6c2d846ba7f5e099312f34391dfd5d0ef98d38bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
