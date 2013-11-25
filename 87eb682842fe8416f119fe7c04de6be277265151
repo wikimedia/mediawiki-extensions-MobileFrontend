@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_e18bc719",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-25T17:52:54Z",
+      "side": 1,
+      "message": "This should remain \u0027History\u0027\nSee SpecialMobileWatchlist as an example.\n\nOtherwise navigating to Special:History on mobile will redirect to an invalid special page.",
+      "revId": "87eb682842fe8416f119fe7c04de6be277265151",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
