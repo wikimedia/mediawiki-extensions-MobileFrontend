@@ -3592,6 +3592,7 @@ $messages['cy'] = array(
 	'mobile-frontend-search-help' => 'Teipiwch y term chwilio uchod a bydd teitlau tudalennau cyfatebol yn cael eu dangos fan hyn.',
 	'mobile-frontend-dismiss-notification' => "cau'r hysbysiad hwn",
 	'mobile-frontend-clear-search' => 'Clirio',
+	'mobile-frontend-search-content' => 'Chwilier drwy gynnwys y tudalennau',
 	'mobile-frontend-search-no-results' => "Does dim tudalen gyda'r teitl hwn i gael.",
 	'mobile-frontend-privacy-link-text' => 'Preifatrwydd',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
@@ -3759,6 +3760,8 @@ $messages['cy'] = array(
 	'mobile-frontend-editor-abusefilter-warning' => "Rhybudd: Ydych chi wir am roi'r golygiad hwn ar gadw? Efallai bod problem gan y golygiad.",
 	'mobile-frontend-editor-abusefilter-disallow' => "Ni ellir rhoi'r golgyiad ar gadw oherwydd bod problem i gael.",
 	'mobile-frontend-editor-abusefilter-read-more' => 'Darllen mwy',
+	'mobile-frontend-editor-editing' => "'''Wrthi'n golygu''' $1",
+	'mobile-frontend-editor-previewing' => "'''Wrthi'n dangos rhagolwg''' $1",
 	'tag-mobile_edit' => 'Golygiad drwy declyn symudol',
 	'tag-mobile_edit-description' => 'Newidiwyd gyda theclyn symudol',
 	'mobile-frontend-drawer-cancel' => 'Diddymu',
@@ -3882,9 +3885,8 @@ $messages['da'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Tekst er tilgængelig under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; yderligere betingelser kan være gældende.',
 	'mobile-frontend-copyright' => 'Indholdet er udgivet under $1 medmindre andet er angivet.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Brugsbetingelser]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
-	'mobile-frontend-search-noresults' => 'Ingen sidetitler svarer til din søgning. Ændre søgningen, eller tryk på søgeknappen på tastaturet for at søge inde i sider.',
+	'mobile-frontend-search-noresults' => 'Ingen sidetitler svarer til din søgning. Lav en ændring i søgningen, eller tryk på søgeknappen på tastaturet for at søge inde i sider.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Åbn hovedmenuen',
 	'mobile-frontend-main-menu-page-title' => 'Navigering',
 	'mobile-frontend-main-menu-featured' => 'Fremhævet',
@@ -3960,7 +3962,7 @@ $messages['da'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonym bruger',
 	'mobile-frontend-changeslist-nocomment' => 'ingen ændringskommentar',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
-	'mobile-frontend-watchlist-filter-articles' => 'Artikler',
+	'mobile-frontend-watchlist-filter-articles' => 'Artikler', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Øvrige',
 	'mobile-frontend-watchlist-modified' => 'Ændret $1',
@@ -3979,7 +3981,7 @@ $messages['da'] = array(
 	'mobile-frontend-photo-article-edit-comment' => 'Tilføjet billede til brug på siden',
 	'mobile-frontend-photo-article-donate-comment' => 'Bidrog billede fra Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => 'Tilføjet billede til siden',
-	'mobile-frontend-photo-caption-placeholder' => 'Tilføj en beskrivelse (påkrævet)',
+	'mobile-frontend-photo-caption-placeholder' => 'Tilføj en beskrivelse (påkrævet)', # Fuzzy
 	'mobile-frontend-image-loading' => 'Indlæser billede',
 	'mobile-frontend-photo-ownership' => 'Jeg, $1, oprettede dette billede.',
 	'mobile-frontend-photo-ownership-help' => 'Hvad betyder dette?',
@@ -4006,12 +4008,11 @@ $messages['da'] = array(
 	'mobile-frontend-photo-upload-error-file-type' => 'Venligst upload kun billeder.',
 	'mobile-frontend-photo-upload-error-filename' => 'Fejl, vær venlig at angive en mere fyldestgørende beskrivelse.',
 	'mobile-frontend-photo-upload-success-article' => 'Succes! Dit billede er nu live på denne side.',
-	'mobile-frontend-photo-license' => 'Ved at trykke på "Send" accepterer du [//wikimediafoundation.org/wiki/Terms_of_use vilkår for anvendelse] og accepterer at alle billeder, du udgiver vil blive offentliggjort under en [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 licens]',
+	'mobile-frontend-photo-license' => 'Ved at trykke på "Send" accepterer du [//wikimediafoundation.org/wiki/Terms_of_use vilkår for anvendelse] og accepterer at alle billeder, du udgiver vil blive offentliggjort under en [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 licens]', # Fuzzy
 	'mobile-frontend-photo-submit' => 'Send',
 	'mobile-frontend-photo-cancel' => 'Afbryd',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> filoplægning|<span>$1</span> filoplægninger}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
-	'mobile-frontend-photo-upload-cta' => 'Log på, eller tilmeld dig, for at tilføje et billede.',
 	'mobile-frontend-photo-upload-login' => 'Du skal være logget på for at tilføje et billede.',
 	'mobile-frontend-editor-undo-unsupported' => 'Fortryd er i øjeblikket ikke understøttet på mobile enheder.',
 	'mobile-frontend-editor-newpage-prompt' => 'Denne side eksisterer ikke. Hvorfor ikke være modig og oprette den?',
@@ -4023,7 +4024,7 @@ $messages['da'] = array(
 	'mobile-frontend-editor-save' => 'Gem',
 	'mobile-frontend-editor-cancel' => 'Annuller',
 	'mobile-frontend-editor-keep-editing' => 'Fortsæt med at redigere',
-	'mobile-frontend-editor-license' => 'Ved at trykke på "Gem" accepterer du [//wikimediafoundation.org/wiki/Terms_of_use vilkår for anvendelse] og er enige i at frigive din tekst under [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0 Licensen] og [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
+	'mobile-frontend-editor-license' => 'Ved at trykke på "Gem" accepterer du [//wikimediafoundation.org/wiki/Terms_of_use vilkår for anvendelse] og er enige i at frigive din tekst under [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0 Licensen] og [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].', # Fuzzy
 	'mobile-frontend-editor-placeholder' => 'Dette afsnit er tomt. Vær den første til at udvide det!',
 	'mobile-frontend-editor-summary-placeholder' => 'Fortæl os, hvad du har ændret (valgfrit)',
 	'mobile-frontend-editor-cancel-confirm' => 'Har du virkelig lyst til at opgive din redigering?',
@@ -4060,20 +4061,14 @@ $messages['da'] = array(
 	'mobile-frontend-media-details' => 'Detaljer',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Hvorvidt en bruger redigerer via mobil-grænsefladen',
 	'mobile-frontend-profile-title' => 'Brugerdata',
-	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 redigering|$2 redigeringer|0=Ingen redigeringer}}]] og
-[[Special:Uploads/$1|{{PLURAL:$3|1 oplægning|$3 oplægninger|0=ingen oplægninger}}]] i løbet af de sidste 30 dage.',
-	'mobile-frontend-profile-last-upload-caption' => 'Seneste upload af {{GENDER:$1|$1}}, {{PLURAL:$2|i går|for $2 dage siden|0=i dag}}.',
-	'mobile-frontend-profile-registration' => '$1 har bidraget til {{SITENAME}} i {{PLURAL:$2|en dag|$2 dage}} og {{GENDER:$1|har lavet}} {{PLURAL:$3|en redigering|$3 redigeringer}}.',
-	'mobile-frontend-profile-usertalk' => 'Se diskussionssiden.',
+	'mobile-frontend-profile-last-upload-caption' => 'Seneste upload af {{GENDER:$1|$1}}, {{PLURAL:$2|i går|for $2 dage siden|0=i dag}}.', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'Se diskussionssiden.', # Fuzzy
 	'mobile-frontend-profile-noargs' => 'Angiv et brugernavn for at se en profil.',
 	'mobile-frontend-profile-nouser' => 'Brugernavnet er ugyldigt eller eksistere ikke',
 	'mobile-frontend-profile-yours' => 'Besøg din profilside.',
 	'mobile-frontend-profile-userpage-link' => 'Besøg brugerside.',
-	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Denne bruger}} er en ny redaktør.',
-	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|Denne bruger}} er en lidt erfaren redaktør.',
-	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Denne bruger}} er en produktiv redaktør.',
 	'mobile-frontend-requires-optin' => 'Denne side er ikke tilgængelig, medmindre du tilmelder dig vores beta-tilstand. Besøg [[Special:MobileOptions|indstillinger]] for at tilmelde dig.',
-	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Sidst takket}} af [[Special:UserProfile/$1|$1]] for en redigering af [[$2]].',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Sidst takket}} af [[Special:UserProfile/$1|$1]] for en redigering af [[$2]].', # Fuzzy
 	'mobile-frontend-geonotahack' => 'I nærheden af denne side',
 );
 
@@ -5471,6 +5466,8 @@ $messages['et'] = array(
 	'mobile-frontend-profile-footer-days' => 'Ühines {{PLURAL:$2|ühe|$2}} päeva eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
 	'mobile-frontend-profile-footer-months' => 'Ühines enam kui {{PLURAL:$2|ühe|$2}} kuu eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
 	'mobile-frontend-profile-footer-years' => 'Ühines enam kui {{PLURAL:$2|ühe|$2}} aasta eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
+	'mobile-frontend-profile-description-placeholder' => 'Miks {{GENDER:$1|teed}} kaastööd? Mida tahad paremaks teha? Jaga oma huvisid teistega.',
+	'beta-feature-geonotahack' => 'Selle lehekülje lähikond',
 );
 
 /** Basque (euskara)
@@ -8599,6 +8596,7 @@ $messages['id'] = array(
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Terakhir diberi ucapan terima kasih}} oleh [[Special:UserProfile/$1|$1]] untuk suntingan pada [[$2]].', # Fuzzy
 	'mobile-frontend-geonotahack' => 'Dekat halaman ini',
 	'beta-feature-geonotahack' => 'Dekat halaman ini',
+	'beta-feature-geonotahack-description' => 'Temukan halaman yang dekat secara geografis dari halaman konten yang sedang Anda baca.',
 );
 
 /** Igbo (Igbo)
@@ -11292,6 +11290,7 @@ Déi gi geläscht.",
 	'mobile-frontend-editor-abusefilter-disallow' => 'Dës Ännerung kann net gespäichert gi well mir e Problem fonnt hunn.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Liest méi',
 	'mobile-frontend-editor-editing' => "'''Ännere''' vu(n) $1",
+	'mobile-frontend-editor-previewing' => "$1 '''weisen ouni ze späicheren'''",
 	'tag-mobile_edit' => 'Mobil Ännerung',
 	'tag-mobile_edit-description' => 'Ännerung déi vun engem mobile Site gemaach gouf',
 	'mobile-frontend-drawer-cancel' => 'Ofbriechen',
@@ -13335,6 +13334,7 @@ $messages['nl'] = array(
 	'mobile-frontend-password-placeholder' => 'Wachtwoord',
 	'mobile-frontend-login' => 'Aanmelden',
 	'mobile-frontend-history' => 'Bekijk bewerkingsgeschiedenis van deze pagina.',
+	'mobile-frontend-history-summary' => 'Paginageschiedenis voor [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Gewijzigd op $1 om $2',
 	'mobile-frontend-last-modified-seconds' => '{{PLURAL:$1|Eén seconde|$1 seconden}} geleden gewijzigd',
 	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|Eén minuut|$1 minuten}} geleden gewijzigd',
@@ -19069,7 +19069,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-editor-save' => '保存',
 	'mobile-frontend-editor-cancel' => '取消',
 	'mobile-frontend-editor-keep-editing' => '继续编辑',
-	'mobile-frontend-editor-license' => '通过保存更改，表明您同意我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意采用[//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0许可协议]和[//zh.wikipedia.org/wiki/Wikipedia:GNU自由文档许可证文本 GFDL]发表您的文字。',
+	'mobile-frontend-editor-license' => '保存更改，即表示你认同我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意采用[//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0许可协议]和[//zh.wikipedia.org/wiki/Wikipedia:GNU%E8%87%AA%E7%94%B1%E6%96%87%E6%A1%A3%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%96%87%E6%9C%AC GFDL]发表你的文字。',
 	'mobile-frontend-editor-placeholder' => '这个章节还是空的。成为第一个充实它的人吧！',
 	'mobile-frontend-editor-summary-placeholder' => '告诉我们你更改了什么（可选）',
 	'mobile-frontend-editor-cancel-confirm' => '你真的想要放弃你的编辑？',

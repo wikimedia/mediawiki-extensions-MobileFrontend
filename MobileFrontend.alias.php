@@ -168,6 +168,7 @@ $specialPageAliases['nl'] = array(
 
 /** Norwegian Nynorsk (norsk nynorsk) */
 $specialPageAliases['nn'] = array(
+	'MobileOptions' => array( 'Mobilval' ),
 	'Uploads' => array( 'Opplastingar' ),
 	'Nearby' => array( 'Nær_her' ),
 );
