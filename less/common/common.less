@@ -187,10 +187,8 @@ ul.hlist {
 	}
 
 	table {
-		caption {
-			display: block;
-			text-align: left;
-		}
+		margin: 1em 0;
+		border: 1px @grayLight solid;
 
 		/* following 4 rules are needed for scrolling */
 		overflow: auto; /* for browsers that don't support overflow-y */
@@ -200,7 +198,18 @@ ul.hlist {
 
 		td,
 		th {
-		 padding: 3px;
+			padding: 3px;
+			border: 1px @grayLight solid;
+		}
+
+		th {
+			background-color: #f2f2f2;
+			text-align: center;
+		}
+
+		caption {
+			display: block;
+			text-align: left;
 		}
 	}
 
