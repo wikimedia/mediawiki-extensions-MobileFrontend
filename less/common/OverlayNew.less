@@ -92,6 +92,8 @@
 
 			button {
 				margin-top: -@overlayHeaderMargin;
+				// Line up with rest of header that has 1px bottom-border
+				margin-bottom: -1px;
 			}
 
 			> ul:first-child li:first-child button {
@@ -127,7 +129,7 @@
 			}
 
 			&.continue {
-				background-image: url(images/continue.png);
+				background-image: url(images/continue-ltr.png);
 				background-color: #2f81f0;
 			}
 
@@ -143,8 +145,8 @@
 	}
 
 	.license {
-		// FIXME: move this image?
-		background: url('../modules/images/cc-by-sa.png') left 4px no-repeat;
+		// FIXME: image should not be hard-coded
+		background: url('../modules/images/cc-by-sa.png') left 2px no-repeat;
 		.background-size( auto, 16px );
 		padding-left: 55px;
 		font-size: .9em;
