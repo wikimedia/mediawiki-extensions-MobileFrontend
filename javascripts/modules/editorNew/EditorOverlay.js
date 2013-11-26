@@ -78,7 +78,6 @@
 			this.$spinner = this.$( '.spinner' );
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( 'textarea' ).
-				microAutosize().
 				on( 'input', function() {
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .submit' ).prop( 'disabled', false );
@@ -184,8 +183,7 @@
 					self.$content.
 						show().
 						val( content ).
-						trigger( 'input' );
-					self.$( '.continue, .submit' ).prop( 'disabled', true );
+						microAutosize();
 					self.$spinner.hide();
 				} ).
 				fail( function( error ) {
