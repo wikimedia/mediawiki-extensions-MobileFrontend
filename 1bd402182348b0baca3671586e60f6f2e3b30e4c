@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_8d82e9a7",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-11-26T17:32:35Z",
+      "side": 1,
+      "message": "Can you make this a one-liner?\n\non(LoginPage).login_with(\"Selenium_newuser\", ENV[\u0027MEDIAWIKI_PASSWORD\u0027])",
+      "revId": "1bd402182348b0baca3671586e60f6f2e3b30e4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
