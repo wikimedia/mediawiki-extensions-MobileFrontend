@@ -97,27 +97,20 @@
 	} );
 
 	function init( $el ) {
-		M.router.route( /^image\/(.+)$/, function( hrefPart ) {
-			// FIXME: replace hrefPart with title when we get rid of History.js
-			// (which apart from slashes doesn't like dots...)
-			var $a = $( 'a[href*="' + hrefPart + '"]' ), title = $a.data( 'title' );
+		M.router.route( /^image\/(.+)$/, function( title ) {
+			var caption = $( 'a[href*="' + title + '"]' ).siblings( '.thumbcaption' ).text();
 
-			if ( title ) {
-				new ImageOverlay( {
-					title: $a.data( 'title' ),
-					caption: $a.siblings( '.thumbcaption' ).text()
-				} ).show();
-			}
+			new ImageOverlay( {
+				title: decodeURIComponent( title ),
+				caption: caption
+			} ).show();
 		} );
 
 		$el.find( 'a.image, a.thumbimage' ).each( function() {
-			var $a = $( this ),
-				// FIXME: change to /[^\/]+$/ when we get rid of History.js
-				match = $a.attr( 'href' ).match( /.*\/(([^\/]+)\..+)$/ );
+			var $a = $( this ), match = $a.attr( 'href' ).match( /[^\/]+$/ );
 
 			if ( match ) {
-				$a.data( 'title', match[1] );
-				$a.attr( 'href', '#image/' + match[2] );
+				$a.attr( 'href', '#image/' + match[0] );
 			}
 		} );
 	}
