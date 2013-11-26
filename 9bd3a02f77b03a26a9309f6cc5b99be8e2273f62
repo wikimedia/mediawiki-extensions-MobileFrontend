@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_852abdd5",
+        "filename": "javascripts/modules/mediaViewer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T22:10:02Z",
+      "side": 1,
+      "message": "I\u0027m not sure about this - surely what ever is creating ImageOverlay and thus getThumb should do this beforehand?\n\nPlease add a function signature to getThumb to clarify this.",
+      "revId": "9bd3a02f77b03a26a9309f6cc5b99be8e2273f62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
