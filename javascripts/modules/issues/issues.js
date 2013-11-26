@@ -68,19 +68,21 @@ var module = (function() {
 		$metadata.remove();
 	}
 
-	function init() {
-		run();
-		M.on( 'page-loaded', function() {
-			// don't page the page-loaded parameter to run.
-			run();
-		} );
-		M.on( 'edit-preview', function( overlay ) {
-			run( overlay.$el, overlay );
-		} );
+	function initPageIssues( $container, parentOverlay ) {
+		if ( mw.config.get( 'wgNamespaceNumber' ) === 0 ) {
+			run( $container, parentOverlay );
+		}
 	}
 
+	initPageIssues();
+	M.on( 'page-loaded', function() {
+		initPageIssues();
+	} );
+	M.on( 'edit-preview', function( overlay ) {
+		initPageIssues( overlay.$el, overlay );
+	} );
+
 	return {
-		init: init,
 		run: run
 	};
 }() );
