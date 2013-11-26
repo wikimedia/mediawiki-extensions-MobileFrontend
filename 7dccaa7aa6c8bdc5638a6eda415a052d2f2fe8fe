@@ -16,6 +16,24 @@
       "revId": "7dccaa7aa6c8bdc5638a6eda415a052d2f2fe8fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_24a09af0",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T01:23:19Z",
+      "side": 1,
+      "message": "We went through this in the last patchset...",
+      "parentUuid": "0ee75395_6133340b",
+      "revId": "7dccaa7aa6c8bdc5638a6eda415a052d2f2fe8fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
