@@ -613,10 +613,6 @@ Used in {{msg-mw|Mobile-frontend-search-content-no-results}}.',
 	'mobile-frontend-search-no-results' => 'Message informing user that no pages were found for a given query.',
 	'mobile-frontend-search-content-no-results' => 'Used when no pages with matching titles were found.
 
-"Search within articles" is button caption.
-
-Preceded by {{msg-mw|Mobile-frontend-search-no-results}}.
-
 Refers to {{msg-mw|Mobile-frontend-search-content}}.',
 	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
 {{Identical|Privacy}}',
@@ -4474,7 +4470,7 @@ $messages['diq'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Lista seyri',
 	'mobile-frontend-main-menu-settings' => 'Eyari',
 	'mobile-frontend-main-menu-upload' => 'Barkerdışi',
-	'mobile-frontend-main-menu-settings-heading' => 'Sazi',
+	'mobile-frontend-main-menu-settings-heading' => 'Eyari',
 	'mobile-frontend-settings-site-header' => 'Zıwanê {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} de $1 {{PLURAL:$1|zıwan mewcudo|zıwani mewcudê}}. Versiyonê cıyê bini lista cêrêne de estê.',
 	'mobile-frontend-main-menu-account-create' => 'Hesab vıraze',
@@ -4488,12 +4484,12 @@ $messages['diq'] = array(
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-directions' => 'Şo tiya',
-	'mobile-frontend-donate-image-nouploads' => 'Bar kerdışi çıni',
+	'mobile-frontend-donate-image-nouploads' => 'Barkerdışi çıniyê.',
 	'mobile-frontend-donate-image-title' => 'Barkerdışi',
-	'mobile-frontend-user-account' => 'Hesaba karberi',
-	'mobile-frontend-listed-image-no-description' => 'Şılasnayış çıniyo',
-	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Fahm ke?',
-	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'E!',
+	'mobile-frontend-user-account' => 'hesabê karberi',
+	'mobile-frontend-listed-image-no-description' => 'Şınasnayış çıniyo',
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Fehm kerd?',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Eya!',
 	'mobile-frontend-watchlist-add' => '$1 bi zerreyê lista seyrkerdışê şıma',
 	'mobile-frontend-watchlist-removed' => 'Lista şımaya serykerdışi ra $1 wedariya.',
 	'mobile-frontend-watchlist-view' => 'Lista serykerdışê xo bıvêne',
@@ -4502,7 +4498,7 @@ $messages['diq'] = array(
 	'mobile-frontend-watchlist-cta-button-signup' => 'Qeyd be',
 	'mobile-frontend-watchlist-a-z' => 'Liste',
 	'mobile-frontend-watchlist-feed' => 'Vırneya',
-	'mobile-frontend-watchlist-back-home' => 'Şo pera seri',
+	'mobile-frontend-watchlist-back-home' => 'Peyser şo',
 	'mobile-frontend-changeslist-ip' => 'Karbero bêname',
 	'mobile-frontend-changeslist-nocomment' => 'nê vurnaye xulasa',
 	'mobile-frontend-watchlist-filter-all' => 'Pêro',
@@ -4517,8 +4513,8 @@ $messages['diq'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bayt|bayti}} debiyay de',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bayt|bayti}} wedariyay',
 	'mobile-frontend-table' => 'Tabloye $1',
-	'mobile-frontend-photo-upload' => 'Resim barê na perer keri',
-	'mobile-frontend-photo-article-edit-comment' => 'Perde kar kerdışi re resim bar bı',
+	'mobile-frontend-photo-upload' => 'Yew resım na pele ke',
+	'mobile-frontend-photo-article-edit-comment' => 'Pele de seba gurenayışi ra resımo barkerde',
 	'mobile-frontend-photo-upload-comment' => 'Resim debya per miyan',
 	'mobile-frontend-photo-caption-placeholder' => 'Akereka na resimer (lazımo)',
 	'mobile-frontend-image-loading' => 'Barkerdışê resımi',
@@ -7428,6 +7424,7 @@ $messages['haw'] = array(
  * @author Amire80
  * @author Deror avi
  * @author Guycn1
+ * @author Guycn2
  * @author Inkbug
  * @author Michagogo
  * @author Orsa
@@ -19232,6 +19229,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-clear-search' => '清除',
 	'mobile-frontend-search-content' => '於頁面內搜尋',
 	'mobile-frontend-search-no-results' => '並無頁面使用此標題。',
+	'mobile-frontend-search-content-no-results' => "'''{{int:mobile-frontend-search-content}}'''以顯示此內容於任何地方之出現狀態。",
 	'mobile-frontend-privacy-link-text' => '隱私',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => '內容在[//zh.m.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC?useformat=mobile CC BY-SA 3.0]協議下提供；附加條款可能適用。',
