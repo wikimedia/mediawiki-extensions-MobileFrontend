@@ -1,9 +1,11 @@
-<div class="overlay-header">
-  <div>
-		<button class="cancel icon">{{closeMsg}}</button>
+<div class="overlay-header with-margins">
+  <ul class="v-border bottom-border">
+		<li><button class="cancel icon">{{closeMsg}}</button></li>
+	</ul>
+	<div class="bottom-border">
+	  <h2 class="uploading">{{{uploadingMsg}}}</h2>
 	</div>
-  <h2 class="uploading">{{{uploadingMsg}}}</h2>
-	<div class="right">
-		<button class="loading icon">{{{uploadingMsg}}}</button>
-	</div>
+	<ul class="{{headerButtonsListClassName}}">
+		<li><button class="loading icon">{{{uploadingMsg}}}</button></li>
+	</ul>
 </div>
