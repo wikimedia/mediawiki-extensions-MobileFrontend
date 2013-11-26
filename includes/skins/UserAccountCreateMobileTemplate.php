@@ -131,15 +131,37 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		// generate src for captcha img
 		$captchaSrc = SpecialPage::getTitleFor( 'Captcha', 'image' )->getLocalUrl( array( 'wpCaptchaId' => $captchaId ) );
 
+		// add reload if fancyCaptcha and has reload
+		if ( MobileContext::singleton()->isBetaGroupMember() ) {
+			if ( stristr( $header, 'fancycaptcha-reload' ) ) {
+				$output = $this->getSkin()->getOutput();
+				$output->addModuleStyles( 'ext.confirmEdit.fancyCaptcha.styles' );
+				$output->addModules( 'ext.confirmEdit.fancyCaptchaMobile' );
+				$captchaReload = Html::element( 'br' ) .
+					Html::element(
+						'span',
+						array(
+							'class' => 'confirmedit-captcha-reload fancycaptcha-reload'
+						),
+						wfMessage( 'fancycaptcha-reload-text' )->text()
+					);
+			}
+		}
+		else {
+			$captchaReload = '';
+		}
+
 		// captcha output html
 		$captchaHtml =
 			Html::openElement( 'div',
 				array( 'class' => 'inputs-box' ) ) .
 			Html::element( 'img',
 				array(
+					'class' => 'fancycaptcha-image',
 					'src' => $captchaSrc,
 				)
 			) .
+			$captchaReload .
 			Html::input( 'wpCaptchaWord', null, 'text',
 				array(
 					'placeholder' => wfMessage( 'mobile-frontend-account-create-captcha-placeholder' )->text(),
