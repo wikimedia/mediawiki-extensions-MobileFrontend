@@ -20,17 +20,14 @@ QUnit.test( 'default instance', 1, function() {
 	ok( M.require( 'api' ) instanceof Api, 'return default instance' );
 } );
 
-// FIXME: uncomment when https://bugzilla.wikimedia.org/show_bug.cgi?id=44921 is resolved
-/*
 QUnit.test( 'progress event', 1, function() {
-	var spy = sinon.spy(),
-		api = new Api();
-	api.post().on( 'progress', spy );
-	this.lastXhr.upload.dispatchEvent( { type: 'progress' } );
-	ok( spy.calledWith( { type: 'progress' } ), 'forward progress event from xhr' );
-} );
-*/
+	var spy = sinon.spy(), api = new Api(), request;
 
+	api.on( 'progress', spy );
+	request = api.post();
+	this.lastXhr.upload.dispatchEvent( { type: 'progress', lengthComputable: true, loaded: 1, total: 2 } );
+	ok( spy.calledWith( request, 0.5 ),  'emit progress event' );
+} );
 
 QUnit.module( 'MobileFrontend api.Api', {
 	setup: function() {
