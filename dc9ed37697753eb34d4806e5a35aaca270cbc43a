@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_85107d5c",
+        "filename": "javascripts/externals/micro.autosize.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T22:45:02Z",
+      "side": 1,
+      "message": "This reminds me - we should update the MakeFile to have a make remotes so it pulls directly from this url.",
+      "revId": "dc9ed37697753eb34d4806e5a35aaca270cbc43a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
