@@ -169,7 +169,6 @@ var
 			// FIXME: remove when new uploads overlay in stable
 			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
 				userGallery.on( 'empty', function() {
-					console.log(111);
 					var UploadTutorial = M.require( 'modules/uploads/UploadTutorial' );
 					new UploadTutorial().show();
 				} );
