@@ -1,6 +1,5 @@
-@import '../common/common-js.less';
+@import '../mixins.less';
 @import '../common/pagelist.less';
-@import '../common/buttons.less';
 
 .overlay-enabled {
 	.skin-vector {
@@ -37,6 +36,24 @@
 				}
 			}
 
+			.loading {
+
+				&.spinner {
+					height: 100px;
+				}
+
+				background-image: @ajaxLoadingImage;
+				background-repeat: no-repeat;
+				background-position: center;
+				.background-size( 32px, auto );
+
+				&.content {
+					padding-top: 48px;
+					text-align: center;
+					background-position: 50% 0;
+				}
+			}
+
 			// Override Vector's default
 			p {
 				margin: 0;
@@ -44,7 +61,17 @@
 
 			.page-list {
 				margin: 0;
+				font-size: .9em;
 				line-height: inherit;
+				&.thumbs {
+					li {
+						padding-left: 55px;
+					}
+				}
+
+				.listThumb {
+					width: 40px;
+				}
 			}
 
 			.content {
@@ -66,7 +93,8 @@
 		right: 22px;
 
 		.button.nearby {
-			background-image: url(images/geo.png);
+			display: inline-block;
+			border-radius: 3px;
 			text-indent: -9999px;
 			.box-sizing(border-box);
 			vertical-align: top;
@@ -74,7 +102,20 @@
 			background-repeat: no-repeat;
 			background-position: center center;
 			height: 40px;
-			height: 40px;
+			width: 40px;
+			border: 1px #33589f solid;
+			color: white;
+			background-color: @blueBase;
+
+			&:hover {
+				background-color: #3f77d7;
+			}
+
+			&:active {
+				background-color: #2a549c;
+			}
+
+			background-image: url(images/geo.png);
 		}
 	}
 }
