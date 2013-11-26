@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_48ebac09",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T23:12:35Z",
+      "side": 1,
+      "message": "Small tag - I would suggest using a div here.",
+      "revId": "6aec553f377ef8aacbb98b108f1e87e6de12f59f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
