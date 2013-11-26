@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_e5bd0965",
+        "filename": "tests/browser/features/external_links.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-26T22:27:04Z",
+      "side": 1,
+      "message": "I think this should begin with #",
+      "revId": "95699db69a81b3345c068ee39ebd088fb051f578",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
