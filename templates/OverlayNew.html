@@ -5,10 +5,12 @@
 	<div class="bottom-border">
 		<h2>{{{heading}}} {{#headerContext}}<span>{{headerContext}}</span>{{/headerContext}}</h2>
 	</div>
+	{{#headerButtons}}
 	<ul class="{{headerButtonsListClassName}}">
 		{{#headerButtons}}
 		<li><button class="{{className}}">{{msg}}</button></li>
 		{{/headerButtons}}
 	</ul>
+	{{/headerButtons}}
 </div>
 {{>content}}
