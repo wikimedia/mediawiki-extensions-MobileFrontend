@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a41caa19",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-26T01:54:24Z",
+      "side": 1,
+      "message": "er.. this will cause an infinite redirect loop! you need to remove the aciton\u003dhistory from the query params before redirecting for this to work.",
+      "revId": "03d1ebb00f605404c42e0cb0b29b23e287b63703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
