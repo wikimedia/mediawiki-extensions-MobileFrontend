@@ -16,6 +16,24 @@
       "revId": "b43d847209a2148fa382406594be0c0c2dec3f0c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e53aa9e3",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T22:35:36Z",
+      "side": 1,
+      "message": "https://en.wikipedia.org/w/index.php?title\u003dMain_Page\u0026offset\u003d\u0026limit\u003d50\u0026action\u003dhistory\n\nlimit... offset.. the history page can take various parameters.\nOur interest is in offset. This will work in mobile.",
+      "parentUuid": "0ee75395_c59b251a",
+      "revId": "b43d847209a2148fa382406594be0c0c2dec3f0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
