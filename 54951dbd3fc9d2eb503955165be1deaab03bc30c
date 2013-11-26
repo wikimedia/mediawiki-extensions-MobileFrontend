@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a17b7cbc",
+        "filename": "javascripts/modules/nearbypages.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-26T00:52:36Z",
+      "side": 1,
+      "message": "so this regex now supports 0 or more spaces? should probably update the associated comment so it\u0027s clear in english as well as the regex :)",
+      "revId": "54951dbd3fc9d2eb503955165be1deaab03bc30c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
