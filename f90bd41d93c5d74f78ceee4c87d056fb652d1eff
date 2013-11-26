@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a54dc19d",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T22:32:18Z",
+      "side": 1,
+      "message": "If you wrap this all in  MobileContext::singleton()-\u003eisBetaGroupMember() it will restrict it to the beta mode of our site - this will allow time for design input. :)\n\nif (  MobileContext::singleton()-\u003eisBetaGroupMember() ) {\naddModules\ncaptchaReload \u003d ..\n} else {\ncaptchaReload \u003d \u0027\u0027;\n}",
+      "revId": "f90bd41d93c5d74f78ceee4c87d056fb652d1eff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_054fcd98",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T22:32:18Z",
+      "side": 1,
+      "message": "instead of using wgOut use $this-\u003egetSkin()-\u003egetOutput()\nhttps://www.mediawiki.org/wiki/Manual:$wgOut#Deprecation\nside note: would be good to deprecate use of wgOut in the ConfirmEdit extension :)",
+      "revId": "f90bd41d93c5d74f78ceee4c87d056fb652d1eff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_c5b20592",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T22:32:18Z",
+      "side": 1,
+      "message": "Please push this to the line above and indent the lines below.",
+      "revId": "f90bd41d93c5d74f78ceee4c87d056fb652d1eff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_05b90d78",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-26T22:32:18Z",
+      "side": 1,
+      "message": "I wouldn\u0027t use the small tag here - it seems semantically incorrect in this context.",
+      "revId": "f90bd41d93c5d74f78ceee4c87d056fb652d1eff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
