@@ -26,7 +26,7 @@ class SpecialHistory extends MobileSpecialPageFeed {
 				$out->addHtml(
 					Html::openElement( 'div', array( 'class' => 'page-header-bar' ) ) .
 					Html::openElement( 'div' ) .
-					$this->msg( 'mobile-frontend-history-summary', $this->title->getText() )->parse() .
+					$this->msg( 'mobile-frontend-history-summary', $this->title->getPrefixedText() )->parse() .
 					Html::closeElement( 'div' ) .
 					Html::closeElement( 'div' )
 				);
