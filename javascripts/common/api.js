@@ -4,16 +4,6 @@
 		apiUrl = mw.config.get( 'wgScriptPath', '' ) + '/api.php',
 		Api, api;
 
-	// TODO: this might be dangerous and cause conflicts with other code
-	// should we move it to Api#ajax?
-	$.ajaxSetup( {
-		url: apiUrl,
-		dataType: 'json',
-		data: {
-			format: 'json'
-		}
-	} );
-
 	Api = EventEmitter.extend( {
 		apiUrl: apiUrl,
 
@@ -29,6 +19,7 @@
 
 		/**
 		 * A wrapper for $.ajax() to be used when calling server APIs.
+		 * Sets URL to API URL and default data type to JSON.
 		 * Preprocesses data argument in the following way:
 		 * - removes boolean values equal to false
 		 * - concatenates Array values with '|'
@@ -49,7 +40,7 @@
 		 */
 		ajax: function( data, options ) {
 			var key, request, self = this;
-			options = $.extend( {}, options );
+			options = $.extend( { url: apiUrl, dataType: 'json' }, options );
 
 			if (
 				typeof data !== 'string' &&
@@ -63,7 +54,7 @@
 					}
 				}
 			}
-			options.data = data;
+			options.data = $.extend( { format: 'json' }, data );
 
 			options.xhr = function() {
 				var xhr = $.ajaxSettings.xhr();

@@ -16,13 +16,6 @@ QUnit.module( 'MobileFrontend api', {
 	}
 } );
 
-QUnit.test( '$.ajaxSetup()', 1, function() {
-	$.ajax( {
-		data: { test: 'test' }
-	} );
-	strictEqual( this.lastXhr.url.indexOf( Api.prototype.apiUrl ), 0, 'set default API URL' );
-} );
-
 QUnit.test( 'default instance', 1, function() {
 	ok( M.require( 'api' ) instanceof Api, 'return default instance' );
 } );
@@ -63,13 +56,16 @@ QUnit.test( '#ajax', 1, function() {
 	} );
 	ok(
 		$.ajax.calledWithMatch( {
-		data: {
-			trueBool: true,
-			list: 'one|2|three',
-			normal: 'test'
-		}
-	} ),
-		'transform boolean and array data'
+			url: Api.prototype.apiUrl,
+			dataType: 'json',
+			data: {
+				format: 'json',
+				trueBool: true,
+				list: 'one|2|three',
+				normal: 'test'
+			}
+		} ),
+		'set defaults and transform boolean and array data'
 	);
 } );
 
