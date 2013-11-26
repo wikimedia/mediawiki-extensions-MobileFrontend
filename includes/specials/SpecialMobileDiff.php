@@ -115,10 +115,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 		if ( $bytesChanged >= 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
-			$sizeClass = 'mw-mf-bytesadded';
+			$sizeClass = 'mw-mf-bytesadded meta';
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
-			$sizeClass = 'mw-mf-bytesremoved';
+			$sizeClass = 'mw-mf-bytesremoved meta';
 			$bytesChanged = abs( $bytesChanged );
 		}
 
@@ -135,7 +135,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				Html::closeElement( 'h2' ) .
 				Html::element( 'span', array( 'class' => $sizeClass ), $this->msg( $changeMsg )->numParams( $bytesChanged )->text() ) .
 				$this->msg( 'comma-separator' )->text() .
-				Html::element( 'span', array( 'class' => 'mw-mf-diff-date' ), $ts->getHumanTimestamp() ) .
+				Html::element( 'span', array( 'class' => 'mw-mf-diff-date meta' ), $ts->getHumanTimestamp() ) .
 			Html::closeElement( 'div' ) .
 			Html::element( 'div', array( 'id' => 'mw-mf-diff-comment' ), $this->rev->getComment() )
 		);
@@ -229,10 +229,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					array( 'class' => 'mw-mf-user-link' )
 				) .
 				'</div>' .
-				'<div class="mw-mf-roles">' .
+				'<div class="mw-mf-roles meta">' .
 					$this->listGroups( $user ) .
 				'</div>' .
-				'<div class="mw-mf-edit-count">' .
+				'<div class="mw-mf-edit-count meta">' .
 					$this->msg( 'mobile-frontend-diffview-editcount', $this->getLanguage()->formatNum( $edits ) )->parse() .
 				'</div>'
 			);
