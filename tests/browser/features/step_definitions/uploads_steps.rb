@@ -3,7 +3,7 @@ Given /^I am logged in as a new user$/ do
     page.mainmenu_button_element.when_present.click
     page.login_button
   end
-  on(LoginPage).login_with("Selenium_newuser", ENV['MEDIAWIKI_PASSWORD'])
+  on(LoginPage).login_with("Selenium_newuser", ENV["MEDIAWIKI_PASSWORD"])
 end
 
 When(/^I go to uploads page$/) do

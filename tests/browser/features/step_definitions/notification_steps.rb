@@ -8,7 +8,7 @@ end
 
 Then /^I go to the notifications page$/ do
   begin
-    @browser.text.should include 'Notifications'
+    @browser.text.should include "Notifications"
   rescue
     puts "Unable to validate Notifications Page"
   end
@@ -16,7 +16,7 @@ end
 
 Then /^the notifications overlay appears$/ do
   begin
-    if @browser.url.match Regexp.escape('Special:Notifications')
+    if @browser.url.match Regexp.escape("Special:Notifications")
       on(HomePage).notifications_archive_link_element.should_not exist
     else
       on(HomePage).notifications_archive_link_element.should exist

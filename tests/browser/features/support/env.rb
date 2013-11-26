@@ -1,19 +1,19 @@
-require_relative 'hooks'
-require 'mediawiki/selenium'
+require_relative "hooks"
+require "mediawiki/selenium"
 
 def local_browser(user_agent)
-  if ENV['BROWSER_LABEL']
-    browser_label = ENV['BROWSER_LABEL'].to_sym
+  if ENV["BROWSER_LABEL"]
+    browser_label = ENV["BROWSER_LABEL"].to_sym
   else
     browser_label = :firefox
   end
 
-  if user_agent =='default'
+  if user_agent =="default"
     browser = Watir::Browser.new browser_label
   else
     if browser_label == :firefox
       profile = Selenium::WebDriver::Firefox::Profile.new
-      profile['general.useragent.override'] = user_agent
+      profile["general.useragent.override"] = user_agent
       browser = Watir::Browser.new browser_label, :profile => profile
     else
       raise "Changing user agent is currently supported only for Firefox!"
@@ -24,26 +24,26 @@ def local_browser(user_agent)
   # see http://code.google.com/p/selenium/issues/detail?id=1953
   browser.goto HomePage.url
   # set a cookie forcing mobile mode
-  browser.cookies.add 'mf_useformat', 'true'
+  browser.cookies.add "mf_useformat", "true"
   browser
 end
 def sauce_browser(test_name, user_agent)
-  config = YAML.load_file('config/config.yml')
-  browser_label = config[ENV['BROWSER_LABEL']]
+  config = YAML.load_file("config/config.yml")
+  browser_label = config[ENV["BROWSER_LABEL"]]
 
-  if user_agent == 'default'
-    caps = Selenium::WebDriver::Remote::Capabilities.send(browser_label['name'])
-  else browser_label['name'] == 'firefox'
+  if user_agent == "default"
+    caps = Selenium::WebDriver::Remote::Capabilities.send(browser_label["name"])
+  else browser_label["name"] == "firefox"
     profile = Selenium::WebDriver::Firefox::Profile.new
-    profile['general.useragent.override'] = user_agent
+    profile["general.useragent.override"] = user_agent
     caps = Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_profile => profile)
   end
 
-  caps.platform = browser_label['platform']
-  caps.version = browser_label['version']
+  caps.platform = browser_label["platform"]
+  caps.version = browser_label["version"]
   caps[:name] = "#{test_name} #{ENV['JOB_NAME']}##{ENV['BUILD_NUMBER']}"
 
-  require 'selenium/webdriver/remote/http/persistent' # http_client
+  require "selenium/webdriver/remote/http/persistent" # http_client
   browser = Watir::Browser.new(
     :remote,
     http_client: Selenium::WebDriver::Remote::Http::Persistent.new,
@@ -51,7 +51,7 @@ def sauce_browser(test_name, user_agent)
     desired_capabilities: caps)
 
   browser.wd.file_detector = lambda do |args|
-    # args => ['/path/to/file']
+    # args => ["/path/to/file"]
     str = args.first.to_s
     str if File.exist?(str)
   end

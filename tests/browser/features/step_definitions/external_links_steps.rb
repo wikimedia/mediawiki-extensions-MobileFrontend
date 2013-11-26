@@ -11,5 +11,5 @@ When /^I click on the White House official website link$/ do
 end
 
 Then /^I receive White House official website page$/ do
-  @browser.url.should match Regexp.escape('whitehouse.gov')
+  @browser.url.should match Regexp.escape("whitehouse.gov")
 end

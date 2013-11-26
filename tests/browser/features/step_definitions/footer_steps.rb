@@ -3,7 +3,7 @@ When(/^I click on the view edit history link$/) do
 end
 
 Then(/^I go to the edit history page$/) do
-  @browser.url.should match Regexp.escape('Main_Page&action=history')
+  @browser.url.should match Regexp.escape("Main_Page&action=history")
 end
 
 When /^I click on the desktop link$/ do
@@ -19,7 +19,7 @@ When /^I click on the Content license link$/ do
 end
 
 Then /^I go to the Content license page$/ do
-  @browser.url.should match Regexp.escape('creativecommons.org')
+  @browser.url.should match Regexp.escape("creativecommons.org")
 end
 
 When /^I click on the Terms of Use link$/ do
@@ -27,7 +27,7 @@ When /^I click on the Terms of Use link$/ do
 end
 
 Then /^I go to the Terms of Use page$/ do
-  @browser.url.should match Regexp.escape('Terms_of_use')
+  @browser.url.should match Regexp.escape("Terms_of_use")
 end
 
 When /^I click on the Privacy link$/ do
@@ -35,5 +35,5 @@ When /^I click on the Privacy link$/ do
 end
 
 Then(/^I go to the Privacy page$/) do
-  @browser.url.should match Regexp.escape('Privacy_policy')
+  @browser.url.should match Regexp.escape("Privacy_policy")
 end

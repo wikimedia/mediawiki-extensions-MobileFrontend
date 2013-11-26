@@ -44,38 +44,38 @@ When /^I click on the Disclaimer link on the left Nav$/ do
 end
 
 Then /^my URL should be set to the Watchlist Page$/ do
-  @browser.url.should match Regexp.escape('Special%3AWatchlist')
+  @browser.url.should match Regexp.escape("Special%3AWatchlist")
 end
 
 Then /^my URL should be set to the Home Page$/ do
-  @browser.url.should match Regexp.escape('Main_Page')
+  @browser.url.should match Regexp.escape("Main_Page")
 end
 
 Then /^my URL should be set to the Random Page$/  do
-  @browser.url.should_not match Regexp.escape('Main_Page')
+  @browser.url.should_not match Regexp.escape("Main_Page")
 end
 
 Then /^my URL should be set to the Nearby Page$/  do
-  @browser.url.should match Regexp.escape('Special:Nearby')
+  @browser.url.should match Regexp.escape("Special:Nearby")
 end
 
 Then /^my URL should be set to the Uploads Page$/  do
-  @browser.url.should match Regexp.escape('Special%3AUploads')
+  @browser.url.should match Regexp.escape("Special%3AUploads")
 end
 
 Then /^my URL should be set to the Settings Page$/  do
-  @browser.url.should match Regexp.escape('Special:MobileOptions')
+  @browser.url.should match Regexp.escape("Special:MobileOptions")
 end
 
 Then /^my URL should be set to the Log In Page$/ do
-  @browser.url.should match Regexp.escape('Special:UserLogin')
+  @browser.url.should match Regexp.escape("Special:UserLogin")
 end
 
 Then /^my URL should be set to the About Wikipedia Page$/ do
-  @browser.url.should match Regexp.escape('Wikipedia:About')
+  @browser.url.should match Regexp.escape("Wikipedia:About")
 end
 
 
 Then /^my URL should be set to the Disclaimer Page$/ do
-  @browser.url.should match Regexp.escape('Wikipedia:General_disclaimer')
+  @browser.url.should match Regexp.escape("Wikipedia:General_disclaimer")
 end

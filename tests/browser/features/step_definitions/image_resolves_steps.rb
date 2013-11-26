@@ -7,5 +7,5 @@ When /^I expand Presidential Campaign Section$/ do
 end
 
 Then /^I go to the image's page$/ do
-  @browser.url.should match Regexp.escape('File:Flickr_Obama_Springfield_01.jpg')
+  @browser.url.should match Regexp.escape("File:Flickr_Obama_Springfield_01.jpg")
 end
