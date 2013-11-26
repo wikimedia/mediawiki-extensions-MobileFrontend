@@ -34,8 +34,8 @@
 		overlay = null;
 		// in form 37.783; -122.417 - take the first one
 		latLng = $( '.geo' ).eq( 0 ).text();
-		// Matches <number>;<spaces><number> where number can be negative or positive and a float or integer
-		latLng = latLng.match( /([\-]?[\-0-9]+[\.]?[0-9]*);[ ]+([\-]?[0-9]+[\.]?[0-9]*)/ );
+		// Matches <number>;<optional space(s)}><number> where number can be negative or positive and a float or integer
+		latLng = latLng.match( /([\-]?[\-0-9]+[\.]?[0-9]*);[ ]*([\-]?[0-9]+[\.]?[0-9]*)/ );
 		if ( latLng ) {
 			lat = latLng[1];
 			lng = latLng[2];
