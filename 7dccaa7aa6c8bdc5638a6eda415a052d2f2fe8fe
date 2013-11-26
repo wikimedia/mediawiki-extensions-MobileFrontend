@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_6133340b",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-26T01:08:15Z",
+      "side": 1,
+      "message": "what if instead the parameter was the message key, or message object, rather than an arbitrary string? quietly expecting that the string has already been sanitized is dangerous. escape as close to output as possible.",
+      "revId": "7dccaa7aa6c8bdc5638a6eda415a052d2f2fe8fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
