@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_88c6544d",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-26T23:42:22Z",
+      "side": 1,
+      "message": "Use .spinner instead in HTML.",
+      "revId": "7d1d0c405cad74fbfed7f9ec18cddb0a410e27a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
