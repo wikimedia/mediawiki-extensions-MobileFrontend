@@ -16,6 +16,24 @@
       "revId": "6aec553f377ef8aacbb98b108f1e87e6de12f59f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_68f2f0e0",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1231
+      },
+      "writtenOn": "2013-11-26T23:17:03Z",
+      "side": 1,
+      "message": "I\u0027ll look into it.  I might just have to change the style sheet for fancyCaptcha.",
+      "parentUuid": "0ee75395_48ebac09",
+      "revId": "6aec553f377ef8aacbb98b108f1e87e6de12f59f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
