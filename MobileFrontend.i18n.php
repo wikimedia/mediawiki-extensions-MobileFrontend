@@ -215,7 +215,7 @@ $messages['en'] = array (
 	'mobile-frontend-changeslist-ip' => 'Anonymous user',
 	'mobile-frontend-changeslist-nocomment' => 'no edit summary',
 	'mobile-frontend-watchlist-filter-all' => 'All',
-	'mobile-frontend-watchlist-filter-articles' => 'Content pages',
+	'mobile-frontend-watchlist-filter-articles' => 'Articles',
 	'mobile-frontend-watchlist-filter-talk' => 'Talk',
 	'mobile-frontend-watchlist-filter-other' => 'Other',
 	'mobile-frontend-watchlist-modified' => 'Modified $1',
@@ -750,13 +750,12 @@ Used when the user is not logged in.
 {{Identical|Anonymous user}}',
 	'mobile-frontend-changeslist-nocomment' => 'Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.',
 	'mobile-frontend-watchlist-filter-all' => 'Label on filter selector for mobile watchlist: all pages.
-{{Identical|All}}',
-	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: content pages only.
-{{Identical|Content page}}',
+{{Identical|All}}. This must be a single word for layout reasons.',
+	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: content pages only. This must be a single word for layout reasons.',
 	'mobile-frontend-watchlist-filter-talk' => 'Label on filter selector for mobile watchlist: talk pages.
-{{Identical|Talk}}',
+{{Identical|Talk}}. This must be a single word for layout reasons.',
 	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or content page).
-{{Identical|Other}}',
+{{Identical|Other}}. This must be a single word for layout reasons.',
 	'mobile-frontend-watchlist-modified' => 'Text saying how long ago a page in watchlist was updated.
 * $1 - output of {{msg-mw|ago}} (e.g. "15 days ago", "7 hours ago").',
 	'mobile-frontend-diffview-404-title' => 'Heading on 404 page when bad revision id parameter is passed',
