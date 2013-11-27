@@ -16,6 +16,24 @@
       "revId": "9bd3a02f77b03a26a9309f6cc5b99be8e2273f62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_8829b49c",
+        "filename": "javascripts/modules/mediaViewer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-27T00:36:16Z",
+      "side": 1,
+      "message": "jdlrobson: jgonera: I think it should be moved into the route\n[4:32pm] jdlrobson: e.g. M.router.route( /^image\\/(.+)$/, function( hrefPart ) {\n[4:32pm] violetto joined the chat room.\n[4:33pm] jdlrobson: new ImageOverlay({ title: decodeURIComponent\n[4:33pm] jdlrobson: as that\u0027s /why/ you need to decode it..",
+      "parentUuid": "0ee75395_852abdd5",
+      "revId": "9bd3a02f77b03a26a9309f6cc5b99be8e2273f62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
