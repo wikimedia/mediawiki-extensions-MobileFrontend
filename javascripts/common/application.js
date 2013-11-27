@@ -233,11 +233,6 @@
 	 */
 	function reloadPage( page ) {
 		currentPage = page;
-		if ( page.isMainPage() ) {
-			$( 'body' ).addClass( 'page-Main_Page' );
-		} else {
-			$( 'body' ).removeClass( 'page-Main_Page' );
-		}
 
 		// VisualEditor amongst other things relies on these variables to reflect current state of document
 		mw.config.set( 'wgTitle', page.title );

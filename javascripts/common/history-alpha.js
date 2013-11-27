@@ -32,9 +32,12 @@
 
 		// Bind to future StateChange Events
 		History.Adapter.bind( window, 'statechange', function(){
-			var s = History.getState();
-			if ( currentUrl !== s.url ) {
-				new Page( { title: s.title, el: $( '#content_wrapper' ) } ).on( 'error', function() {
+			var s = History.getState(), title = s.title;
+			if ( mw.config.get( 'wgMainPageTitle' ) === title ) {
+				// The main page has various special cases so force a reload
+				window.location = mw.util.getUrl( title );
+			} else if ( currentUrl !== s.url ) {
+				new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'error', function() {
 					window.location.reload(); // the page either doesn't exist or was a Special:Page so force a refresh
 				} ).on( 'ready', M.reloadPage );
 			}
