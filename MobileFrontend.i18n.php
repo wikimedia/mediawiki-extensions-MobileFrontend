@@ -82,6 +82,7 @@ $messages['en'] = array (
 	'mobile-frontend-login' => 'Sign in',
 	'mobile-frontend-history' => 'View edit history of this page.',
 	'mobile-frontend-history-no-results' => 'No history matches the filter provided.',
+	'mobile-frontend-contribution-summary' => 'All edits made by {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}',
 	'mobile-frontend-history-summary' => 'Page history for [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Last modified on $1, at $2',
 	'mobile-frontend-last-modified-seconds' => 'Last modified {{PLURAL:$1|$1 second|$1 seconds}} ago',
@@ -503,6 +504,10 @@ This is shown on the Main Page in place of a last modified label to avoid confus
 If not the Main Page, the following message is used:
 * {{msg-mw|Mobile-frontend-last-modified-date}}',
 	'mobile-frontend-history-no-results' => 'Error shown when there are no history entires for a given/invalid filter.',
+	 'mobile-frontend-contribution-summary' => 'Summary text that appears at the top of the Special:Contributions page for a given username.
+
+Parameters:
+* $1 - username',
 	'mobile-frontend-history-summary' => 'Summary text that appears at the top of the mobile history page for a given page.
 
 Parameters:
