@@ -160,6 +160,9 @@ class MinervaTemplate extends BaseTemplate {
 
 	protected function renderContentWrapper( $data ) {
 		?>
+		<script>
+			mw.mobileFrontend.emit( 'header-loaded' );
+		</script>
 			<?php
 				if ( !$this->isSpecialPage ) {
 					echo $data['prebodytext'];
@@ -236,9 +239,6 @@ class MinervaTemplate extends BaseTemplate {
 						echo $data['secondaryButton'];
 					?>
 				</div>
-				<script>
-					mw.mobileFrontend.emit( 'header-loaded' );
-				</script>
 				<div id="content_wrapper">
 				<?php
 					$this->renderContentWrapper( $data );

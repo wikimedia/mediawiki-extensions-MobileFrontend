@@ -154,6 +154,29 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/Class.js',
 			'javascripts/common/eventemitter.js',
 			'javascripts/common/navigation.js',
+			'javascripts/modules/lastEdited/time.js',
+		),
+		'position' => 'top',
+	),
+
+	'mobile.head.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.head',
+			'mediawiki.language',
+			'mediawiki.jqueryMsg',
+		),
+		'scripts' => array(
+			'javascripts/modules/lastEdited/lastEditedBeta.js',
+		),
+		'messages' => array(
+			// LastEditedBeta.js
+			'mobile-frontend-last-modified-with-user-seconds',
+			'mobile-frontend-last-modified-with-user-minutes',
+			'mobile-frontend-last-modified-with-user-hours',
+			'mobile-frontend-last-modified-with-user-days',
+			'mobile-frontend-last-modified-with-user-months',
+			'mobile-frontend-last-modified-with-user-years',
+			'mobile-frontend-last-modified-with-user-just-now',
 		),
 		'position' => 'top',
 	),
@@ -493,7 +516,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
 			'javascripts/modules/languages/preferred.js',
-			'javascripts/modules/lastEdited/lastEditedBeta.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
 		),
 		'templates' => array(
@@ -507,15 +529,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// for talk.js
 			'mobile-frontend-talk-overlay-header',
-
-			// LastEditedBeta.js
-			'mobile-frontend-last-modified-with-user-seconds',
-			'mobile-frontend-last-modified-with-user-minutes',
-			'mobile-frontend-last-modified-with-user-hours',
-			'mobile-frontend-last-modified-with-user-days',
-			'mobile-frontend-last-modified-with-user-months',
-			'mobile-frontend-last-modified-with-user-years',
-			'mobile-frontend-last-modified-with-user-just-now',
 
 			// mediaViewer.js
 			'mobile-frontend-media-details',
@@ -771,7 +784,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/externals/micro.autosize.js',
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/languages/languages.js',
-			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/mf-watchstar.js',
