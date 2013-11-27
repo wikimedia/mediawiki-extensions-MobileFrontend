@@ -16,13 +16,19 @@
 		return delta;
 	}
 
+	function isRecent( delta ) {
+		var u = delta.unit;
+		return [ 'seconds', 'minutes', 'hours' ].indexOf( u ) > -1;
+	}
+
 	function isNow( delta ) {
 		return delta.unit === 'seconds' && delta.value < 10;
 	}
 
 	M.define( 'modules/lastEdited/time', {
 		getTimeAgoDelta: getTimeAgoDelta,
-		isNow: isNow
+		isNow: isNow,
+		isRecent: isRecent
 	} );
 
 }( mw.mobileFrontend ) );
