@@ -59,6 +59,9 @@ $autoloadClasses = array (
 	'ApiParseExtender' => 'api/ApiParseExtender',
 	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
+	'InlineDiffFormatter' => 'diff/InlineDiffFormatter',
+	'InlineDifferenceEngine' => 'diff/InlineDifferenceEngine',
+
 	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
 	'MobileSiteModule' => 'modules/MobileSiteModule',
 
@@ -423,3 +426,7 @@ $wgMFDeviceWidthMobileSmall = 280;
  */
 $wgMFKeepGoing = false;
 
+/**
+ * Controls whether new 1-column diffs should be used
+ */
+$wgMFEnableBetaDiff = false;

@@ -1242,18 +1242,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/specials/mobilediff.js',
 		),
 	),
-
-	'mobile.mobilediff.scripts.beta.head' => $wgMFMobileResourceBoilerplate + array(
-		// should be no dependencies except mobile.head and position to top to avoid flash of unstyled content
-		'dependencies' => array(
-			'mobile.head',
-		),
-		'position' => 'top',
-		'scripts' => array(
-			'javascripts/externals/jsdiff.js',
-			'javascripts/specials/mobilediffBeta.js',
-		),
-	),
 ) );
 
 unset( $localBasePath );

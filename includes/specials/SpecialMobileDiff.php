@@ -65,13 +65,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	}
 
 	function execute( $par ) {
+		wfProfileIn( __METHOD__ );
 		$ctx = MobileContext::singleton();
 		$this->setHeaders();
 		$output = $this->getOutput();
-		if ( $ctx->isBetaGroupMember() ) {
-			$output->addModules( 'mobile.mobilediff.scripts.beta.head' );
-			$output->addModules( 'mobile.mobilediff.scripts.beta' );
-		}
 
 		// @FIXME add full support for git-style notation (eg ...123, 123...)
 		$revisions = $this->getRevisionsToCompare( explode( '...', $par ) );
@@ -79,7 +76,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$prev = $revisions[0];
 
 		if ( is_null( $rev ) ) {
-			return $this->executeBadQuery();
+			$this->executeBadQuery();
+			wfProfileOut( __METHOD__ );
+			return false;
 		}
 		$this->revId = $rev->getId();
 		$this->rev = $rev;
@@ -102,6 +101,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$this->showFooter();
 
 		$output->addHtml( '</div>' );
+		wfProfileOut( __METHOD__ );
 		return true;
 	}
 
@@ -142,19 +142,28 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	}
 
 	function showDiff() {
+		global $wgMFEnableBetaDiff;
 		$ctx = MobileContext::singleton();
+		$newDiff = $wgMFEnableBetaDiff && $ctx->isBetaGroupMember();
 		if ( $this->prevRev ) {
 			$prevId = $this->prevRev->getId();
 			$contentHandler = $this->rev->getContentHandler();
 			$de = $contentHandler->createDifferenceEngine( $this->getContext(), $prevId, $this->revId );
+			$newDiff &= get_class( $de ) == 'DifferenceEngine';
+			// HACK:
+			if ( $newDiff ) {
+				$de = new InlineDifferenceEngine( $this->getContext(), $prevId, $this->revId );
+			}
 			$diff = $de->getDiffBody();
-			$processedDiff = $this->processDiff( $diff );
+			if ( !$newDiff ) {
+				$diff = $this->processDiff( $diff );
+			}
 		} else {
-			$processedDiff = '<ins>' . htmlspecialchars( $this->rev->getText() ) . '</ins>';
+			$diff = '<ins>' . htmlspecialchars( $this->rev->getText() ) . '</ins>';
 		}
 		$this->getOutput()->addHtml(
 			'<div id="mw-mf-minidiff">' .
-			$processedDiff .
+			$diff .
 			'</div>'
 		);
 		$prev = $this->rev->getPrevious();
@@ -192,10 +201,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		foreach( $els as $el ) {
 			$class = $el->getAttribute( 'class' );
 			if ( $class === 'diff-deletedline' ) {
-				$out .= Html::element( 'del', array(), $el->nodeValue );
+				$tag = Html::element( 'del', array(), $el->nodeValue );
 			} else {
-				$out .= Html::element( 'ins', array(), $el->nodeValue );
+				$tag = Html::element( 'ins', array(), $el->nodeValue );
 			}
+			$out = "<div>$tag</div>";
 		}
 
 		return $out;
