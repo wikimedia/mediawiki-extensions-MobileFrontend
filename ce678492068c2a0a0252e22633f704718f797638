@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_6f3af2c1",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-27T18:45:58Z",
+      "side": 1,
+      "message": "Sure but content pages is a weird word also which means absolutely nothing to me... especially in the context of Wikipedia. \u0027Pages\u0027 although slightly ambiguous would be clearer.\n\nGoing forward I actually think being able to customisation this message might be better.\n\nFor example\nIn Wikipedia - \u0027Articles\u0027 would make sense\nIn Wiktionary - \u0027Words\u0027 would make sense,\nIn Wikivoyage - \u0027Destinations\u0027\netc. etc..",
+      "parentUuid": "0ee75395_2f162a4e",
+      "revId": "ce678492068c2a0a0252e22633f704718f797638",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_af211a9c",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-11-27T18:43:05Z",
       "side": 1,
       "message": "I think this requirement driven by design doesn\u0027t take our localisation needs into account. I recommend to reassess the current designs as they appear to not be properly internationalised.",
+      "revId": "ce678492068c2a0a0252e22633f704718f797638",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_2f44ea49",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 756,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-27T18:45:58Z",
+      "side": 1,
+      "message": "I think we need to rethink this - the amount of language used on a small screen is very very important. Sometimes we are simply constrained to one word.",
+      "parentUuid": "0ee75395_af211a9c",
       "revId": "ce678492068c2a0a0252e22633f704718f797638",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
