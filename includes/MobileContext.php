@@ -283,6 +283,16 @@ class MobileContext extends ContextSource {
 			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop();
 		}
 
+		if ( $this->getRequest()->getVal( 'action' ) === 'history' ) {
+			$values = $this->getRequest()->getValues();
+			// avoid infinite redirect loops
+			unset( $values['action'] );
+			// Avoid multiple history parameters
+			unset( $values['title'] );
+			$redirectUrl = SpecialPage::getTitleFor( 'History', $this->getTitle() )->
+				getLocalURL( $values );
+		}
+
 		if ( $redirectUrl ) {
 			$this->getOutput()->redirect( $redirectUrl );
 		}
