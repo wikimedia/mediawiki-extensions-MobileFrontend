@@ -933,6 +933,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'less/specials/nearby.less',
 		),
+		'skinStyles' => array(
+			'vector' => 'less/desktop/special/nearby.less',
+		),
 	),
 
 	// FIXME: Merge with mobile.nearby when geonotahack moves to  stable
