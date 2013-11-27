@@ -14,26 +14,20 @@
 
 	// Note if the element was changed since it might not exist.
 	if ( M.isLoggedIn() && shouldShowEditTutorial && $( target ).length > 0 ) {
-
-		if ( M.isTestA ) {
-			// go straight to the editor if in bucket A
+		editOverlay = new PageActionOverlay( {
+			target: target,
+			className: 'slide active editing',
+			summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
+			confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' )
+		} );
+		editOverlay.show();
+		$( '#ca-edit' ).on( 'mousedown', $.proxy( editOverlay, 'hide' ) );
+		editOverlay.$( '.actionable' ).on( M.tapEvent( 'click' ), function() {
+			// Hide the tutorial
+			editOverlay.hide();
+			// Load the editing interface
 			window.location.href = $( target ).attr( 'href' );
-		} else {
-			editOverlay = new PageActionOverlay( {
-				target: target,
-				className: 'slide active editing',
-				summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
-				confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' )
-			} );
-			editOverlay.show();
-			$( '#ca-edit' ).on( 'mousedown', $.proxy( editOverlay, 'hide' ) );
-			editOverlay.$( '.actionable' ).on( M.tapEvent( 'click' ), function() {
-				// Hide the tutorial
-				editOverlay.hide();
-				// Load the editing interface
-				window.location.href = $( target ).attr( 'href' );
-			} );
-		}
+		} );
 	}
 
 }( mw.mobileFrontend, jQuery ) );
