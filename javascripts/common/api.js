@@ -170,7 +170,10 @@
 	api = new Api();
 	api.Api = Api;
 	// FIXME: Hack until bug 57629 is resolved.
-	mw.Api = Api;
+	// Substitute if absent
+	if ( typeof mw.Api === 'undefined' ) {
+		mw.Api = Api;
+	}
 
 	M.define( 'api', api );
 
