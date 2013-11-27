@@ -27,7 +27,8 @@ class ApiMobileView extends ApiBase {
 		$this->getMain()->setCacheMode( 'anon-public-user-private' );
 
 		// Enough '*' keys in JSON!!!
-		$textElement = $this->getMain()->getPrinter()->getFormat() == 'XML' ? '*' : 'text';
+		$isXml = $this->getMain()->isInternalMode() || $this->getMain()->getPrinter()->getFormat() == 'XML';
+		$textElement = $isXml ? '*' : 'text';
 		$params = $this->extractRequestParams();
 
 		$prop = array_flip( $params['prop'] );
@@ -45,16 +46,7 @@ class ApiMobileView extends ApiBase {
 			$this->maxlen = PHP_INT_MAX;
 		}
 
-		$title = Title::newFromText( $params['page'] );
-		if ( !$title ) {
-			$this->dieUsageMsg( array( 'invalidtitle', $params['page'] ) );
-		}
-		if ( $title->inNamespace( NS_FILE ) ) {
-			$this->file = wfFindFile( $title );
-		}
-		if ( !$title->exists() && !$this->file ) {
-			$this->dieUsageMsg( array( 'notanarticle', $params['page'] ) );
-		}
+		$title = $this->makeTitle( $params['page'] );
 		$this->mainPage = $title->isMainPage();
 		if ( $this->mainPage && $this->noHeadings ) {
 			$this->noHeadings = false;
@@ -143,6 +135,26 @@ class ApiMobileView extends ApiBase {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Creates and validates a title
+	 *
+	 * @param string$name
+	 * @return Title
+	 */
+	protected function makeTitle( $name ) {
+		$title = Title::newFromText( $name );
+		if ( !$title ) {
+			$this->dieUsageMsg( array( 'invalidtitle', $name ) );
+		}
+		if ( $title->inNamespace( NS_FILE ) ) {
+			$this->file = wfFindFile( $title );
+		}
+		if ( !$title->exists() && !$this->file ) {
+			$this->dieUsageMsg( array( 'notanarticle', $name ) );
+		}
+		return $title;
+	}
+
 	private function stringSplitter( $text ) {
 		if ( $this->offset < 0  ) {
 			return $text; // NOOP - string splitting mode is off
@@ -220,15 +232,46 @@ class ApiMobileView extends ApiBase {
 		return array_flip( $ret );
 	}
 
+	/**
+	 * Performs a page parse
+	 *
+	 * @param WikiPage $wp
+	 * @param ParserOptions $parserOptions
+	 * @return ParserOutput
+	 */
+	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions ) {
+		wfProfileIn( __METHOD__ );
+		$time = microtime( true );
+		$parserOutput = $wp->getParserOutput( $parserOptions );
+		$time = microtime( true ) - $time;
+		if ( !$parserOutput ) {
+			wfDebugLog( 'mobile', "Empty parser output on '{$wp->getTitle()->getPrefixedText()}': rev {$wp->getId()}, time $time" );
+			throw new MWException( __METHOD__ . ": PoolCounter didn't return parser output" );
+		}
+		$parserOutput->setTOCEnabled( false );
+		wfProfileOut( __METHOD__ );
+		return $parserOutput;
+	}
+
+	/**
+	 * Creates a WikiPage from title
+	 *
+	 * @param Title $title
+	 * @return WikiPage
+	 */
+	protected function makeWikiPage( Title $title ) {
+		return WikiPage::factory( $title );
+	}
+
 	private function getData( Title $title, $noImages ) {
 		global $wgMemc, $wgUseTidy, $wgMFMinCachedPageSize;
 
 		wfProfileIn( __METHOD__ );
-		$wp = WikiPage::factory( $title );
+		$wp = $this->makeWikiPage( $title );
 		if ( $this->followRedirects && $wp->isRedirect() ) {
 			$newTitle = $wp->getRedirectTarget();
 			if ( $newTitle ) {
-				$wp = WikiPage::factory( $newTitle );
+				$wp = $this->makeWikiPage( $newTitle );
 				$this->getResult()->addValue( null, $this->getModuleName(),
 					array( 'redirected' => $newTitle->getPrefixedText() )
 				);
@@ -260,18 +303,9 @@ class ApiMobileView extends ApiBase {
 		if ( $this->file ) {
 			$html = $this->getFilePage( $title );
 		} else {
-			wfProfileIn( __METHOD__ . '-parserOutput' );
-			$time = microtime( true );
-			$parserOutput = $wp->getParserOutput( $parserOptions );
-			$time = microtime( true ) - $time;
-			if ( !$parserOutput ) {
-				wfDebugLog( 'mobile', "Empty parser output on '{$title->getPrefixedText()}': rev $latest, time $time, cache key $key" );
-				throw new MWException( __METHOD__ . ": PoolCounter didn't return parser output" );
-			}
-			$parserOutput->setTOCEnabled( false );
+			$parserOutput = $this->getParserOutput( $wp, $parserOptions );
 			$html = $parserOutput->getText();
 			$cacheExpiry = $parserOutput->getCacheExpiry();
-			wfProfileOut( __METHOD__ . '-parserOutput' );
 		}
 
 		wfProfileIn( __METHOD__ . '-MobileFormatter' );
