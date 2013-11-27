@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_6cd55d47",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-27T22:06:13Z",
+      "side": 1,
+      "message": "It would be preferable if the output is not rendered as a table.",
+      "revId": "7c39ccfb640adcdcd5a155d3386a3558c0faba35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_aceb6508",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-27T22:06:13Z",
+      "side": 1,
+      "message": "These obviously could do with more clarification :)",
+      "revId": "7c39ccfb640adcdcd5a155d3386a3558c0faba35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
