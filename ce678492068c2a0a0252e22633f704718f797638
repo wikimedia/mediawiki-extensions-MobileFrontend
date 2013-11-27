@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_2f162a4e",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-27T18:43:05Z",
+      "side": 1,
+      "message": "The word \"Articles\" is not correct in many non-encyclopaedic contexts, which is why it was changed in the first place. Also see comments on the restrictions below.",
+      "revId": "ce678492068c2a0a0252e22633f704718f797638",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_af211a9c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 756,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-27T18:43:05Z",
+      "side": 1,
+      "message": "I think this requirement driven by design doesn\u0027t take our localisation needs into account. I recommend to reassess the current designs as they appear to not be properly internationalised.",
+      "revId": "ce678492068c2a0a0252e22633f704718f797638",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_8f3656e3",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 758,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-27T18:43:05Z",
+      "side": 1,
+      "message": "I think this requirement driven by design doesn\u0027t take our localisation needs into account. I recommend to reassess the current designs as they appear to not be properly internationalised.",
+      "revId": "ce678492068c2a0a0252e22633f704718f797638",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_6f3312f4",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 760,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-27T18:43:05Z",
+      "side": 1,
+      "message": "I think this requirement driven by design doesn\u0027t take our localisation needs into account. I recommend to reassess the current designs as they appear to not be properly internationalised.",
+      "revId": "ce678492068c2a0a0252e22633f704718f797638",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
