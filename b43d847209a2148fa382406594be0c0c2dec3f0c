@@ -70,6 +70,24 @@
       "revId": "b43d847209a2148fa382406594be0c0c2dec3f0c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_c848dc8e",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-27T00:29:47Z",
+      "side": 1,
+      "message": "I just figured future proofing it would be good and that we could get an idea of what features are missed from desktop by looking at access logs for mobile on Special:History... also what about debug\u003dtrue and other values.. it seems error prone?\n\nHappy to just use offset if we want but I feel like we\u0027ll end up fixing this up later.",
+      "parentUuid": "0ee75395_08300452",
+      "revId": "b43d847209a2148fa382406594be0c0c2dec3f0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
