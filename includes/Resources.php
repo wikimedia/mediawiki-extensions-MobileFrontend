@@ -689,8 +689,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'uploads/PhotoUploaderButton',
 
 			'ctaDrawer',
-			// mf-references.js
-			'ReferencesDrawer',
 			'modules/tutorials/PageActionOverlay',
 		),
 		'scripts' => array(
@@ -741,6 +739,24 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.references' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.templates',
+			'mobile.startup',
+			'mobile.stable.common',
+		),
+		'styles' => array(
+			'less/modules/references.less',
+		),
+		'templates' => array(
+			// references.js
+			'ReferencesDrawer',
+		),
+		'scripts' => array(
+			'javascripts/modules/references/references.js',
+		),
+	),
+
 	'mobile.stable' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -748,6 +764,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.util',
 			'mobile.stable.styles',
 			'mobile.templates',
+			'mobile.references',
 			'mediawiki.language',
 		),
 		'scripts' => array(
@@ -758,7 +775,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/mf-watchstar.js',
-			'javascripts/modules/mf-references.js',
 			'javascripts/common/ContentOverlay.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbieEditor.js',
