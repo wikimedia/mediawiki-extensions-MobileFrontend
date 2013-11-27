@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_ec472d21",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-11-27T22:11:29Z",
+      "side": 1,
+      "message": "This is a minimal modification of original diff builder. Yes, lack of a need in two columns somewhat allows us to get rid of tables, but my goal here is a quickly working diff as similar to existing one as possible, including reusing of most of its styles.",
+      "parentUuid": "0ee75395_6cd55d47",
+      "revId": "7c39ccfb640adcdcd5a155d3386a3558c0faba35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_aceb6508",
         "filename": "includes/diff/InlineDiffFormatter.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-11-27T22:06:13Z",
       "side": 1,
       "message": "These obviously could do with more clarification :)",
+      "revId": "7c39ccfb640adcdcd5a155d3386a3558c0faba35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_ccc58992",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-11-27T22:11:29Z",
+      "side": 1,
+      "message": "As commented as the function it overrides.",
+      "parentUuid": "0ee75395_aceb6508",
       "revId": "7c39ccfb640adcdcd5a155d3386a3558c0faba35",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
