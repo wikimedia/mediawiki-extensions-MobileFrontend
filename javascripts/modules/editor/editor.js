@@ -83,13 +83,6 @@
 			// prevent folding section when clicking Edit
 			ev.stopPropagation();
 		} );
-
-		// FIXME: remove when edit AB test is done
-		if ( M.query.article_action === 'signup-edit' ) {
-			$( '.edit-page' ).each( function() {
-				$( this ).attr( 'href', $( this ).attr( 'href' ) + '/ctaSignup' );
-			} );
-		}
 	}
 
 	function initCta() {
