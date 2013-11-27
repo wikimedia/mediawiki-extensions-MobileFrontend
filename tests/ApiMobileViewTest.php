@@ -157,6 +157,14 @@ Text 2
 					),
 				),
 			),
+			array(
+				array( 'sections' => 1, 'onlyrequestedsections' => '' ) + $baseIn,
+				array(
+					'sections' => array(
+						$baseOut['sections'][1],
+					),
+				),
+			),
 		);
 	}
 }

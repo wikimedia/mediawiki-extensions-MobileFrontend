@@ -37,6 +37,7 @@ class ApiMobileView extends ApiBase {
 		$this->followRedirects = $params['redirect'] == 'yes';
 		$this->noHeadings = $params['noheadings'];
 		$this->noTransform = $params['notransform'];
+		$onlyRequestedSections = $params['onlyrequestedsections'];
 		$this->offset = $params['offset'];
 		$this->maxlen = $params['maxlen'];
 
@@ -87,6 +88,9 @@ class ApiMobileView extends ApiBase {
 		}
 		if ( isset( $prop['sections'] ) ) {
 			for ( $i = 0; $i <= count( $data['sections'] ); $i++ ) {
+				if ( !isset( $requestedSections[$i] ) && $onlyRequestedSections ) {
+					continue;
+				}
 				$section = array();
 				if ( $i > 0 ) {
 					$section = array_intersect_key( $data['sections'][$i - 1], $sectionProp );
@@ -431,6 +435,7 @@ class ApiMobileView extends ApiBase {
 			'noimages' => false,
 			'noheadings' => false,
 			'notransform' => false,
+			'onlyrequestedsections' => false,
 			'offset' => array(
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
@@ -466,6 +471,7 @@ class ApiMobileView extends ApiBase {
 			'noimages' => 'Return HTML without images',
 			'noheadings' => "Don't include headings in output",
 			'notransform' => "Don't transform HTML into mobile-specific version",
+			'onlyrequestedsections' => 'Return only requested sections even with prop=sections',
 			'offset' => 'Pretend all text result is one string, and return the substring starting at this point',
 			'maxlen' => 'Pretend all text result is one string, and limit result to this length',
 		);
