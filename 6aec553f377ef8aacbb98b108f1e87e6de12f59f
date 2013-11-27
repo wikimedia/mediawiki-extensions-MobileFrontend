@@ -34,6 +34,24 @@
       "revId": "6aec553f377ef8aacbb98b108f1e87e6de12f59f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_3b7af41f",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1231
+      },
+      "writtenOn": "2013-11-27T03:37:14Z",
+      "side": 1,
+      "message": "I tried using a div but that makes the div take up the whole line and the way the reload thumbnail is styled, it is justified all the way to the left so when I used the div the words \"refresh\" would be centered but the reload icon would be justified all the way to the left making it look strange.  I think if not small the span tag would work just fine.",
+      "parentUuid": "0ee75395_48ebac09",
+      "revId": "6aec553f377ef8aacbb98b108f1e87e6de12f59f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
