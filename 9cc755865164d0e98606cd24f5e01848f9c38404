@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_de5f76e7",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-11-27T10:42:24Z",
+      "side": 1,
+      "message": "Please revert double quotes back to single quotes here.",
+      "revId": "9cc755865164d0e98606cd24f5e01848f9c38404",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_be54b2ca",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-11-27T10:42:24Z",
+      "side": 1,
+      "message": "Please revert double quotes back to single quotes here.",
+      "revId": "9cc755865164d0e98606cd24f5e01848f9c38404",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
