@@ -90,7 +90,7 @@
 				this.$( '.loading' ).show();
 			} else if ( !options.pages && !options.error && options.location ) {
 				this.$( '.loading' ).show();
-				this.api.getPages( options.location, this.range ).done( function( pages ) {
+				this.api.getPages( options.location, this.range, options.exclude ).done( function( pages ) {
 					self.emit( 'searchResult', pages );
 					if ( pages.length > 0 ) {
 						self.render( { pages: pages } );
