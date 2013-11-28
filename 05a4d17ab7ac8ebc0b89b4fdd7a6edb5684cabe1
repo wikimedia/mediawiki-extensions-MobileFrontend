@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_ef471f21",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-28T01:40:34Z",
+      "side": 1,
+      "message": "This runs only in alpha, right?",
+      "revId": "05a4d17ab7ac8ebc0b89b4fdd7a6edb5684cabe1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_af5117df",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-28T01:40:34Z",
+      "side": 1,
+      "message": "This and the previous line can be in a single if/else clause.",
+      "revId": "05a4d17ab7ac8ebc0b89b4fdd7a6edb5684cabe1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_0f5a43f6",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-28T01:40:34Z",
+      "side": 1,
+      "message": "What is node type 1? What about HTML comments?",
+      "revId": "05a4d17ab7ac8ebc0b89b4fdd7a6edb5684cabe1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_0f436318",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-28T01:40:34Z",
+      "side": 1,
+      "message": "Can we keep it shorter? inBeta maybe?",
+      "revId": "05a4d17ab7ac8ebc0b89b4fdd7a6edb5684cabe1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
