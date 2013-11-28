@@ -1,10 +1,9 @@
-<div class="user-description">{{description}}</div>
-{{^description}}<div class="user-description">{{placeholder}}</div>{{/description}}
-<form method="post">
-	<input type="hidden" value="{{token}}" name="authtoken">
+<div class="user-description">{{^description}}{{placeholder}}{{/description}}{{description}}</div>
+<div class="loading spinner"></div>
+<div class="editor">
 	<textarea name="description"
 		placeholder="{{placeholder}}">{{description}}</textarea><br>
 	<span class="character-counter">{{limit}}</span>
-	<button type="submit">{{submit}}</button>
-</form>
+	<button>{{submit}}</button>
+</div>
 <div class="edit-button">{{label}}</div>

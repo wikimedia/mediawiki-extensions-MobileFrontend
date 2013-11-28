@@ -285,25 +285,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 					$this->editable = true;
 				}
 
-				// If the editing form was submitted, process that first.
-				if ( $this->editable && $request->wasPosted() ) {
-					// Check authentication token
-					if ( $user->matchEditToken( $request->getVal( 'authtoken' ) ) ) {
-						$title = Title::newFromText(
-							$this->targetUser->getName() . '/UserProfileIntro',
-							NS_USER
-						);
-						$article = new Article( $title );
-						$description = $request->getVal( 'description' );
-						$content = ContentHandler::makeContent( $description, $title );
-						// Save the edit
-						$article->doEditContent( $content, $this->msg( 'mobile-frontend-profile-edit-summary' ) );
-					} else {
-						// Show error about bad session.
-						$this->showError( 'sessionfailure' );
-					}
-				}
-
 				// Prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$activityHtml = $this->getLastEditHtml() . $this->getLastUploadHtml()
@@ -368,13 +349,5 @@ class SpecialUserProfile extends MobileSpecialPage {
 			}
 		}
 		return $text;
-	}
-
-	/**
-	 * Output an error
-	 * @param string $message Key for error message
-	 */
-	protected function showError( $message ) {
-		$this->getOutput()->wrapWikiMsg( '<div class="error">$1</div>', $message );
 	}
 }

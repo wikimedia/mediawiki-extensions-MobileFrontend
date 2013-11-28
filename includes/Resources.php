@@ -1101,11 +1101,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.userprofile.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable.common',
+			'mobile.editor.common',
 		),
 		'messages' => array(
 			'mobile-frontend-editor-edit',
 			'mobile-frontend-profile-description-placeholder',
 			'htmlform-submit',
+			'mobile-frontend-profile-edit-summary',
 		),
 		'templates' => array(
 			'EditBox',
