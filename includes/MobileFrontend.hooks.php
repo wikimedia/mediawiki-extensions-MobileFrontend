@@ -584,14 +584,17 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
-		global $wgExtensionAssetsPath, $wgMFNearby;
+		global $wgExtensionAssetsPath, $wgMFNearby, $wgLang;
+
+		$dir = $wgLang->getDir();
+
 		if ( $wgMFNearby ) {
 			$preferences['betafeatures-geonotahack'] = array(
 				'label-message' => 'beta-feature-geonotahack',
 				'desc-message' => 'beta-feature-geonotahack-description',
 				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Nearby_Pages',
 				'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Nearby_Pages',
-				'screenshot' => $wgExtensionAssetsPath . '/MobileFrontend/images/BetaFeatures/nearby.svg',
+				'screenshot' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/nearby-$dir.svg",
 			);
 		}
 
