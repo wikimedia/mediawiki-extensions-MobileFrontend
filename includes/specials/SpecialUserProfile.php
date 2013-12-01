@@ -202,29 +202,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk', $this->targetUser->getName() ) );
 	}
 
-	// FIXME: Change this into 404 error
-	protected function getHtmlNoArg() {
-		$html = Html::element( 'p', array(), $this->msg( 'mobile-frontend-profile-noargs' ) );
-		$user = $this->getUser();
-		if ( $user->isLoggedIn() ) {
-			$profileUrl = SpecialPage::getTitleFor( $this->getName(), $user->getName() )->getLocalURL();
-			$html .= Html::openElement( 'p', array() );
-			$html .= Html::element( 'a', array( 'href' => $profileUrl ), $this->msg( 'mobile-frontend-profile-yours' )->plain() );
-			$html .= Html::closeElement( 'p', array() );
-		}
-		return $html;
-	}
-
-	// FIXME: Change this into 404 error (and possibly merge with getHtmlNoArg)
 	protected function getHtmlNoUser() {
-		$html = Html::element( 'p', array(), $this->msg( 'mobile-frontend-profile-nouser' ) );
-		$user = $this->getUser();
-		if ( $user->isLoggedIn() ) {
-			$profileUrl = SpecialPage::getTitleFor( $this->getName(), $user->getName() )->getLocalURL();
-			$html .= Html::openElement( 'p', array() );
-			$html .= Html::element( 'a', array( 'href' => $profileUrl ), $this->msg( 'mobile-frontend-profile-yours' )->plain() );
-			$html .= Html::closeElement( 'p', array() );
-		}
+		$html = Html::openElement( 'div', array( 'class' => 'alert error' ) );
+		$html .= Html::element( 'h2', array(), $this->msg( 'mobile-frontend-profile-error' ) );
+		$html .= Html::element( 'p', array(), $this->msg( 'mobile-frontend-profile-nouser' ) );
+		$html .= Html::closeElement( 'div' );
 		return $html;
 	}
 
@@ -324,11 +306,12 @@ class SpecialUserProfile extends MobileSpecialPage {
 			} else {
 				$html = $this->getHtmlNoUser();
 			}
+			$out->addHtml( $html );
 		} else {
-			$html = $this->getHtmlNoArg();
+			wfHttpError( 404, $this->msg( 'mobile-frontend-profile-error' )->text(),
+				$this->msg( 'mobile-frontend-profile-noargs' )->text() );
 		}
 		wfProfileOut( __METHOD__ );
-		$out->addHtml( $html );
 	}
 
 	/**
