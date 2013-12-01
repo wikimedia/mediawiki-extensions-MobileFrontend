@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_021d6d66",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-01T23:54:10Z",
+      "side": 1,
+      "message": "The name of this variable is confusing. It sounds to me like \"Anonymous users cannot edit, but this user might be logged in\" rather than \"Anonymous users cannot edit, but logged in users might be able to edit\". Rather than renaming it $anonUsersCannotEditButLoggedInUsersMightBeAbleToEdit, let\u0027s rename it to just $anonUsersCannotEdit and explain the logic for why we are checking this in a comment (rather than as part of the variable name).",
+      "revId": "df175d08ff4b7823ff6cba8151b0d421a05da791",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_c23665e4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-01T23:54:10Z",
+      "side": 1,
+      "message": "This introduces a new bug on fishbowl wikis since it shows the page as editable to logged in editors regardless of whether the page is actually editable or not.\n\nIt should only check the $anonUsersCannotEdit state if the user is not logged in.\n\nSince the logic here is already rather complicated, I would suggest setting this variable in its own chunk of code or even a dedicated function rather than within the $vars assignment.",
+      "revId": "df175d08ff4b7823ff6cba8151b0d421a05da791",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
