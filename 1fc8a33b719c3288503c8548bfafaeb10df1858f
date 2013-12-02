@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_69b65987",
+        "filename": "includes/modules/MFResourceLoaderUserModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-02T23:49:24Z",
+      "side": 1,
+      "message": "No.. this is consistent with $userpage/common.js (lowercase c) see includes/resourceloader/ResourceLoaderUserModule.php",
+      "parentUuid": "0ee75395_8fbf73f6",
+      "revId": "1fc8a33b719c3288503c8548bfafaeb10df1858f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_6f342fa8",
         "filename": "includes/modules/MFResourceLoaderUserModule.php",
         "patchSetId": 1
