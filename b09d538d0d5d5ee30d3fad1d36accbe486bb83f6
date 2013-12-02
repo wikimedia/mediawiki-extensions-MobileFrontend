@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_38fc2408",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 25
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-02T12:29:36Z",
+      "side": 1,
+      "message": "Just FYI: The purpose for the use of explicit GENDER is to show it can be used. Using it once illustrates that clearly enough, so the subsequence two uses could be removed without consequence.",
+      "revId": "b09d538d0d5d5ee30d3fad1d36accbe486bb83f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
