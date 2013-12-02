@@ -950,21 +950,16 @@ See also:
 Parameters:
 * $1 - username of user who talk page belongs to
 * $2 - the gender of that user',
+	'mobile-frontend-profile-error' => 'Heading for errors on the profile page.',
 	'mobile-frontend-profile-noargs' => 'Message shown when no user profile URL is specified.
 
 If the user is logged in, this message is followed by:
 * {{msg-mw|Mobile-frontend-profile-yours}}',
-	'mobile-frontend-profile-error' => 'Heading for errors on the profile page.',
 	'mobile-frontend-profile-nouser' => 'Message shown when the username requested is non-existent or invalid.
 
 If the user is logged in, this message is followed by:
 * {{msg-mw|Mobile-frontend-profile-yours}}',
 	'mobile-frontend-profile-activity-heading' => 'Heading for recent contributions section. The ampersand can be swapped out for the word "and" if it makes sense in your language.',
-	'mobile-frontend-profile-yours' => 'Label pointing user to their profile.
-
-Used if the user is logged in.
-
-Preceded by {{msg-mw|Mobile-frontend-profile-noargs}}.',
 	'mobile-frontend-profile-userpage-link' => 'Label for a link to user page that shows on [[Special:UserProfile]].',
 	'mobile-frontend-requires-optin' => 'Message that shows when a page requires beta mode to work. Wikitext that links to [[Special:MobileOptions]] page.',
 	'mobile-frontend-profile-last-thanked' => 'Informs about person who last thanked a user on [[Special:UserProfile]].
@@ -1819,10 +1814,9 @@ $messages['ast'] = array(
 	'mobile-frontend-profile-title' => 'Perfil del usuariu',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Xubió}} {{PLURAL:$1|ayeri|hai $1 díes|0=güei}}.',
 	'mobile-frontend-profile-usertalk' => 'Alderique con $1',
-	'mobile-frontend-profile-noargs' => "Por favor, indique un nome d'usuariu pa ver un perfil.",
-	'mobile-frontend-profile-nouser' => "Nome d'usuariu inesistente o inválidu",
+	'mobile-frontend-profile-noargs' => "Por favor, indique un nome d'usuariu pa ver un perfil.", # Fuzzy
+	'mobile-frontend-profile-nouser' => "Nome d'usuariu inesistente o inválidu", # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Actividá y collaboraciones',
-	'mobile-frontend-profile-yours' => 'Visite la so páxina de perfil.',
 	'mobile-frontend-profile-userpage-link' => "Visitar la páxina d'usuariu.",
 	'mobile-frontend-requires-optin' => "Esta páxina nun ta disponible si nun activa'l nuesu mou beta. Visite la [[Special:MobileOptions|páxina de configuración]] p'activalu.",
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] {{GENDER:$1|agradeció-y}} una edición fecha en [[$2]].',
@@ -3408,10 +3402,9 @@ $messages['cs'] = array(
 	'mobile-frontend-profile-title' => 'Uživatelský profil',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Načetl|Načetla}} {{PLURAL:$1|včera|před $1 dny|0=dnes}}.',
 	'mobile-frontend-profile-usertalk' => 'Komunikovat s {{GENDER:$1|uživatelem|uživatelkou}} $1',
-	'mobile-frontend-profile-noargs' => 'Pokud si chcete prohlédnout profil uživatele, musíte zadat uživatelské jméno.',
-	'mobile-frontend-profile-nouser' => 'Neexistující nebo neplatné uživatelské jméno',
+	'mobile-frontend-profile-noargs' => 'Pokud si chcete prohlédnout profil uživatele, musíte zadat uživatelské jméno.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Neexistující nebo neplatné uživatelské jméno', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktivita a příspěvky',
-	'mobile-frontend-profile-yours' => 'Navštívit stránku s mým profilem.',
 	'mobile-frontend-profile-userpage-link' => 'Navštívit uživatelskou stránku.',
 	'mobile-frontend-requires-optin' => 'Tato stránka není k dispozici, pokud se nepřihlásíte k betaverzi. Připojit se můžete na stránce [[Special:MobileOptions|nastavení]].',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] {{GENDER:$3|mu|jí}} {{GENDER:$1|poděkoval|poděkovala}} za editaci stránky [[$2]].', # Fuzzy
@@ -3782,10 +3775,9 @@ $messages['cy'] = array(
 	'mobile-frontend-profile-title' => 'Data personol',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Uwchlwythwyd}} {{PLURAL:$1|heddiw|ddoe|deuddydd yn ôl|tridiau yn ôl|$2 diwrnod yn ôl}}.',
 	'mobile-frontend-profile-usertalk' => 'Sgwrsio gyda $1',
-	'mobile-frontend-profile-noargs' => 'Rhowch enw defnyddiwr i weld y data personol.',
-	'mobile-frontend-profile-nouser' => "Enw nad yw'n bod neu sy'n annilys",
+	'mobile-frontend-profile-noargs' => 'Rhowch enw defnyddiwr i weld y data personol.', # Fuzzy
+	'mobile-frontend-profile-nouser' => "Enw nad yw'n bod neu sy'n annilys", # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Gweithgarwch a chyfraniadau',
-	'mobile-frontend-profile-yours' => 'Ymweld â thudalen eich data personol.',
 	'mobile-frontend-profile-userpage-link' => 'Ymweld â thudalen y defnyddiwr.',
 	'mobile-frontend-requires-optin' => "Rhaid dewis y modd beta er mwyn cael mynediad i'r dudalen hon. Ewch i [[Special:MobileOptions|dudalen y dewisiadau]] i ddewis y modd beta.",
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Cafodd ei ddiolch}} gan [[Special:UserProfile/$1|$1]] am olygiad i [[$2]].',
@@ -4084,10 +4076,9 @@ $messages['da'] = array(
 	'mobile-frontend-profile-title' => 'Brugerdata',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Uploaded}} {{PLURAL:$1|i går|for $1 dage siden|0=i dag}}.',
 	'mobile-frontend-profile-usertalk' => 'Diskutér med $1',
-	'mobile-frontend-profile-noargs' => 'Angiv et brugernavn for at se en profil.',
-	'mobile-frontend-profile-nouser' => 'Brugernavnet er ugyldigt eller eksistere ikke',
+	'mobile-frontend-profile-noargs' => 'Angiv et brugernavn for at se en profil.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Brugernavnet er ugyldigt eller eksistere ikke', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktivitet og bidrag',
-	'mobile-frontend-profile-yours' => 'Besøg din profilside.',
 	'mobile-frontend-profile-userpage-link' => 'Besøg brugerside.',
 	'mobile-frontend-requires-optin' => 'Denne side er ikke tilgængelig, medmindre du tilmelder dig vores beta-tilstand. Besøg [[Special:MobileOptions|indstillinger]] for at tilmelde dig.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Takket}} af [[Special:UserProfile/$1|$1]] for en redigering af [[$2]].',
@@ -4384,10 +4375,10 @@ $messages['de'] = array(
 	'mobile-frontend-profile-title' => 'Benutzerprofil',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|Gestern|Vor $1 Tagen|0=Heute}} {{GENDER:$2|hochgeladen}}.',
 	'mobile-frontend-profile-usertalk' => 'Mit $1 diskutieren',
-	'mobile-frontend-profile-noargs' => 'Bitte gib einen Benutzernamen an, um ein Profil anzusehen.',
-	'mobile-frontend-profile-nouser' => 'Nicht vorhandener oder ungültiger Benutzername',
+	'mobile-frontend-profile-error' => 'Oh nein!',
+	'mobile-frontend-profile-noargs' => 'Es wurde kein Benutzername angegeben. Bitte gib einen Benutzernamen an, um ein Profil anzusehen.',
+	'mobile-frontend-profile-nouser' => 'Es ist kein Benutzer mit diesem Namen vorhanden. Bei Benutzernamen wird zwischen Groß- und Kleinschreibung unterschieden. Überprüfe bitte, ob er korrekt eingegeben wurde.',
 	'mobile-frontend-profile-activity-heading' => 'Aktivität und Beiträge',
-	'mobile-frontend-profile-yours' => 'Besuche deine Profilseite.',
 	'mobile-frontend-profile-userpage-link' => 'Benutzerseite besuchen.',
 	'mobile-frontend-requires-optin' => 'Diese Seite ist nicht verfügbar, bis du dich für unseren Beta-Modus angemeldet hast. Besuche zur Anmeldung die [[Special:MobileOptions|Einstellungsseite]].',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Gedankt}} durch [[Special:UserProfile/$1|$1]] für eine Bearbeitung an [[$2]].',
@@ -4890,6 +4881,9 @@ $messages['el'] = array(
 $messages['en-gb'] = array(
 	'mobile-frontend-settings-description' => 'Customise your experience on your mobile device with these mobile specific site settings.',
 	'mobile-frontend-copyright' => 'Content is available under $1 unless otherwise noted.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Your uploads are released under a licence that allows anyone to reuse them for free.',
+	'mobile-frontend-photo-license' => 'By uploading this image, you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your image under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 Licence].',
+	'mobile-frontend-editor-license' => 'By saving changes, you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 Licence] and [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
 	'mobile-frontend-media-license-link' => 'Licence information',
 );
 
@@ -5478,10 +5472,9 @@ $messages['et'] = array(
 	'mobile-frontend-profile-title' => 'Kasutajaprofiil',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Laadis}} faili üles {{PLURAL:$1|eile|$1 päeva tagasi|0=täna}}.',
 	'mobile-frontend-profile-usertalk' => 'Arutelu kasutajaga $1',
-	'mobile-frontend-profile-noargs' => 'Palun määra profiili vaatamiseks kasutajanimi.',
-	'mobile-frontend-profile-nouser' => 'Puuduv või vigane kasutajanimi',
+	'mobile-frontend-profile-noargs' => 'Palun määra profiili vaatamiseks kasutajanimi.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Puuduv või vigane kasutajanimi', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktiivsus ja kaastöö',
-	'mobile-frontend-profile-yours' => 'Vaata oma profiili lehekülge.',
 	'mobile-frontend-profile-userpage-link' => 'Vaata kasutajalehekülge.',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] tänas muudatuse eest leheküljel [[$2]].',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Redigeeris}} {{PLURAL:$2|eile|$2 päeva tagasi|0=täna}} lehekülge [[$1]].',
@@ -5845,10 +5838,9 @@ $messages['fa'] = array(
 	'mobile-frontend-profile-title' => 'مشخصات کاربر',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|بارگذاری}}  {{PLURAL:$1| دیروز| $1  روز پیش|0 امروز =}}.',
 	'mobile-frontend-profile-usertalk' => 'بحث با $1',
-	'mobile-frontend-profile-noargs' => 'لطفاً یک نام کاربری برای نمایش مشخصات بدهید.',
-	'mobile-frontend-profile-nouser' => 'ناموجود یا نام کاربری ناموجود',
+	'mobile-frontend-profile-noargs' => 'لطفاً یک نام کاربری برای نمایش مشخصات بدهید.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'ناموجود یا نام کاربری ناموجود', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'فعالیت و مشارکت‌ها',
-	'mobile-frontend-profile-yours' => 'نمایش صفحهٔ مشحصات شما.',
 	'mobile-frontend-profile-userpage-link' => 'نمایش صفحه کاربری.',
 	'mobile-frontend-requires-optin' => 'این صفحه موجود نخواهد بود مگر اینکه شما واردشده حالت آزمایشی ما باشید. [[Special:MobileOptions|صفحهٔ تنظیمات]] را برای واردشدن مشاهده کنید.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|تشکر}} توسط [[Special:UserProfile/$1|$1]] برای ویرایشی در [[$2]].',
@@ -6548,10 +6540,9 @@ $messages['fr'] = array(
 	'mobile-frontend-profile-title' => 'Profil utilisateur',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Téléchargé}} {{PLURAL:$1|hier|il y a $1 jours|0=aujourd’hui}}.',
 	'mobile-frontend-profile-usertalk' => 'Parler à $1',
-	'mobile-frontend-profile-noargs' => 'Veuillez indiquer un nom d’utilisateur pour afficher un profil.',
-	'mobile-frontend-profile-nouser' => 'Nom d’utilisateur inexistant ou non valide',
+	'mobile-frontend-profile-noargs' => 'Veuillez indiquer un nom d’utilisateur pour afficher un profil.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Nom d’utilisateur inexistant ou non valide', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Activité et contributions',
-	'mobile-frontend-profile-yours' => 'Visiter votre page de profil.',
 	'mobile-frontend-profile-userpage-link' => 'Visiter la page de l’utilisateur.',
 	'mobile-frontend-requires-optin' => 'Cette page n’est pas accessible sauf si vous avez choisi notre mode bêta. Allez sur la [[Special:MobileOptions|page de paramètres]] pour le choisir.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Remercié}} par [[Special:UserProfile/$1|$1]] pour une modification sur [[$2]].',
@@ -6952,10 +6943,9 @@ Ferschük, det sidj "$1" beeder tu maagin.',
 	'mobile-frontend-profile-title' => 'Brüker dooten',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|Jister|Föör $1 daar|0=Daalang}} {{GENDER:$2|huuchschüürd}}.',
 	'mobile-frontend-profile-usertalk' => 'Mä $1 diskutiare',
-	'mobile-frontend-profile-noargs' => 'Wees so gud an du en brükernööm uun, am a brükerdooten uuntulukin.',
-	'mobile-frontend-profile-nouser' => 'Son brükernööm jaft at ei.',
+	'mobile-frontend-profile-noargs' => 'Wees so gud an du en brükernööm uun, am a brükerdooten uuntulukin.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Son brükernööm jaft at ei.', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktiwiteet an bidracher',
-	'mobile-frontend-profile-yours' => 'Beschük din sidj mä brükerdooten.',
 	'mobile-frontend-profile-userpage-link' => 'Brükersidj uunwise.',
 	'mobile-frontend-requires-optin' => "Detdiar sidj as ei tu sen, wan dü di ei för't beta-muude uunmeldest. Gung diarför tu det sidj mä [[Special:MobileOptions|iinstelangen]].",
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Di soonk}} kaam faan [[Special:UserProfile/$1|$1]] för en bidrach tu [[$2]].',
@@ -7376,7 +7366,7 @@ $messages['gu'] = array(
 	'mobile-frontend-home-button' => 'ઘર',
 	'mobile-frontend-logged-out' => 'પ્રવેશ કરેલ નથી',
 	'mobile-frontend-settings-beta' => 'બીટા',
-	'mobile-frontend-save-settings' => 'ગોઠવણીઓ સંગ્રહો', # Fuzzy
+	'mobile-frontend-save-settings' => 'સાચવો',
 	'mobile-frontend-random-button' => 'ગમે તે',
 	'mobile-frontend-back-to-top-of-section' => 'વિભાગ પર પાછાં જાઓ',
 	'mobile-frontend-close-section' => 'આ સત્ર બંધ કરો',
@@ -7392,7 +7382,7 @@ $messages['gu'] = array(
 	'mobile-frontend-enable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો સક્રિય કરો',
 	'mobile-frontend-off' => 'બંધ',
 	'mobile-frontend-on' => 'ચાલુ',
-	'mobile-frontend-featured-article' => 'આજનો વિશેષ લેખ', # Fuzzy
+	'mobile-frontend-featured-article' => 'આજનો ઉમદા વિષય',
 	'mobile-frontend-news-items' => 'સમાચારમાં',
 	'mobile-frontend-language' => 'ભાષા:',
 	'mobile-frontend-language-footer' => 'નોંધ: કદાચ આ પાનું આપની પસંદગીની ભાષામાં લખાયેલું નથી. તમે અહીં ક્લિક કરીને જોઈ શકો છો કે {{SITENAME}} કઈ ભાષાઓમાં પ્રાપ્ત છે.',
@@ -7407,12 +7397,11 @@ $messages['gu'] = array(
 	'mobile-frontend-privacy-link-text' => 'ખાનગીપણું',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'આ લેખન  [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] હેઠળ ઉપલબ્ધ છે; વધારાની શરતો લાગુ છે.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile વપરાશની શરતો]',
 	'mobile-frontend-footer-contact' => 'સંપર્ક',
 	'mobile-frontend-main-menu-featured' => 'રુપક',
 	'mobile-frontend-main-menu-nearby' => 'નજીકમાં',
 	'mobile-frontend-main-menu-settings' => 'ગોઠવણીઓ',
-	'mobile-frontend-main-menu-settings-heading' => 'મોબાઇલ સાઇટ ગોઠવણીઓ', # Fuzzy
+	'mobile-frontend-main-menu-settings-heading' => 'ગોઠવણીઓ',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ભાષાઓ',
 	'mobile-frontend-page-menu-contents' => 'વિષયસૂચિ',
 	'mobile-frontend-page-menu-history' => 'ઇતિહાસ',
@@ -7750,10 +7739,10 @@ $messages['he'] = array(
 	'mobile-frontend-profile-title' => 'פרופיל משתמש',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|העלה|העלתה}} {{PLURAL:$1|אתמול|לפני יומיים|לפני $1 ימים|0=היום}}.',
 	'mobile-frontend-profile-usertalk' => 'לדבר עם $1',
-	'mobile-frontend-profile-noargs' => 'נא לספק שם משתמש כדי לראות את הפרופיל.',
-	'mobile-frontend-profile-nouser' => 'שם המשתמש אינו קיים או אינו תקין',
+	'mobile-frontend-profile-error' => 'אבוי!',
+	'mobile-frontend-profile-noargs' => 'לא ניתן שם משתמש. נא לתת שם משתמש כדי להציג פרופיל.',
+	'mobile-frontend-profile-nouser' => 'לא קיים משתמש עם שם כזה. שמות המשתמשים הם תלויי רישיות, אז נא לבדוק שהם הוקלדו נכון.',
 	'mobile-frontend-profile-activity-heading' => 'פעילות ותרומות',
-	'mobile-frontend-profile-yours' => 'ביקור בדף המשתמש שלך.',
 	'mobile-frontend-profile-userpage-link' => 'לבקר בדף המשתמש.',
 	'mobile-frontend-requires-optin' => 'הדף הזה זמין רק למי שבחר להירשם לתכנית הבטא שלנו. נא לבקר [[Special:MobileOptions|בדף ההגדרות]] כדי להירשם.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|קיבל|קיבלה}} הודעת תודה מ[[Special:UserProfile/$1|$1]] מאת [[Special:UserProfile/$1|$1]] עבור עריכה לדף [[$2]].',
@@ -8623,9 +8612,8 @@ $messages['id'] = array(
 	'mobile-frontend-profile-title' => 'Profil pengguna',
 	'mobile-frontend-profile-last-upload-caption' => 'Unggahan terakhir oleh {{GENDER:$1|$1}}, {{PLURAL:$2|kemarin|$2 hari yang lalu|0=hari ini}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Lihat halaman pembicaraan', # Fuzzy
-	'mobile-frontend-profile-noargs' => 'Harap masukkan nama pengguna untuk melihat profil.',
-	'mobile-frontend-profile-nouser' => 'Nama pengguna tidak ada atau salah',
-	'mobile-frontend-profile-yours' => 'Kunjungi halaman profil Anda.',
+	'mobile-frontend-profile-noargs' => 'Harap masukkan nama pengguna untuk melihat profil.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Nama pengguna tidak ada atau salah', # Fuzzy
 	'mobile-frontend-profile-userpage-link' => 'Kunjungi halaman pengguna.',
 	'mobile-frontend-requires-optin' => 'Halaman ini tidak tersedia kecuali Anda ikut serta ke dalam mode beta kami. Kunjungi [[Special:MobileOptions|halaman pengaturan]] untuk ikut mode beta.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Terakhir diberi ucapan terima kasih}} oleh [[Special:UserProfile/$1|$1]] untuk suntingan pada [[$2]].', # Fuzzy
@@ -9229,7 +9217,7 @@ in tutto il mondo',
 	'mobile-frontend-changeslist-ip' => 'Utente anonimo',
 	'mobile-frontend-changeslist-nocomment' => 'nessun oggetto della modifica',
 	'mobile-frontend-watchlist-filter-all' => 'Tutte',
-	'mobile-frontend-watchlist-filter-articles' => 'Pagine di contenuti', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Voci',
 	'mobile-frontend-watchlist-filter-talk' => 'Discussioni',
 	'mobile-frontend-watchlist-filter-other' => 'Altro',
 	'mobile-frontend-watchlist-modified' => 'Modificata $1',
@@ -9336,10 +9324,10 @@ in tutto il mondo',
 	'mobile-frontend-profile-title' => 'Profilo utente',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Caricato}} {{PLURAL:$1|ieri|$1 giorni fa|0=oggi}}.',
 	'mobile-frontend-profile-usertalk' => 'Pagina di discussione di $1',
-	'mobile-frontend-profile-noargs' => 'Inserisci un nome utente per vedere un profilo.',
-	'mobile-frontend-profile-nouser' => 'Nome utente inesistente o non valido',
+	'mobile-frontend-profile-error' => 'Oh no!',
+	'mobile-frontend-profile-noargs' => 'Non è stato indicato alcun nome utente. Inserisci un nome utente per vedere un profilo.',
+	'mobile-frontend-profile-nouser' => 'Non esiste alcun utente con questo nome. I nomi utente tengono conto delle maiuscole\\minuscole, controlla se è stato digitato correttamente.',
 	'mobile-frontend-profile-activity-heading' => 'Attività e contributi',
-	'mobile-frontend-profile-yours' => 'Vedi la pagina del tuo profilo.',
 	'mobile-frontend-profile-userpage-link' => 'Visita la pagina utente.',
 	'mobile-frontend-requires-optin' => 'Questa pagina non è disponibile se non si opta per la modalità beta. Visita la [[Special:MobileOptions|pagina delle impostazioni]] per scegliere.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Ringraziato}} da [[Special:UserProfile/$1|$1]] per una modifica a [[$2]].',
@@ -9622,10 +9610,10 @@ $messages['ja'] = array(
 	'mobile-frontend-profile-title' => '利用者情報',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|昨日|$1 日前に|0=今日}}{{GENDER:$2|アップロードされました}}。',
 	'mobile-frontend-profile-usertalk' => '$1 のトークページ',
-	'mobile-frontend-profile-noargs' => 'プロフィールを表示する利用者名を指定してください。',
-	'mobile-frontend-profile-nouser' => '存在しない、または無効な利用者名です',
+	'mobile-frontend-profile-error' => 'エラー!',
+	'mobile-frontend-profile-noargs' => '利用者名を入力していません。プロフィールを表示する利用者名を指定してください。',
+	'mobile-frontend-profile-nouser' => 'この利用者名の利用者は存在しません。利用者名の大文字小文字は区別されます。正しく入力したか確認してください。',
 	'mobile-frontend-profile-activity-heading' => '活動と投稿記録',
-	'mobile-frontend-profile-yours' => '自分のプロフィール ページに戻る',
 	'mobile-frontend-profile-userpage-link' => '利用者ページを閲覧',
 	'mobile-frontend-requires-optin' => 'ベータ版モードを有効にしていないため、このページを利用できません。有効にするには[[Special:MobileOptions|設定ページ]]を参照してください。',
 	'mobile-frontend-profile-description-placeholder' => '{{GENDER:$1|}}編集する理由は? {{GENDER:$1|}}改善したい点は? {{GENDER:$1|あなたの}}興味を他の人と共有しましょう。',
@@ -10487,10 +10475,9 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-title' => '사용자 프로필',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$2|어제|$2일 전에|0=오늘}} {{GENDER:$1|$1}} 사용자가 마지막으로 올렸습니다.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => '$1과 대화하기',
-	'mobile-frontend-profile-noargs' => '프로필을 보려면 사용자 이름을 제공하세요.',
-	'mobile-frontend-profile-nouser' => '존재하지 않거나 잘못된 사용자명',
+	'mobile-frontend-profile-noargs' => '프로필을 보려면 사용자 이름을 제공하세요.', # Fuzzy
+	'mobile-frontend-profile-nouser' => '존재하지 않거나 잘못된 사용자명', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => '활동과 기여',
-	'mobile-frontend-profile-yours' => '내 프로필 페이지를 방문합니다.',
 	'mobile-frontend-profile-userpage-link' => '사용자 문서를 방문합니다.',
 	'mobile-frontend-requires-optin' => '우리의 베타 모드로 선택하지 않으면 이 페이지를 사용할 수 없습니다. 선택하려면 [[Special:MobileOptions|설정 문서]]를 방문하세요.',
 	'mobile-frontend-profile-last-thanked' => '[[$2]] 문서로의 편집에 대해 [[Special:UserProfile/$1|$1]]님이 {{GENDER:$1|마지막으로 감사를 표했습니다}}.', # Fuzzy
@@ -11343,10 +11330,9 @@ Déi gi geläscht.",
 	'mobile-frontend-profile-title' => 'Benotzerprofil',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|Gëschter|Viru(n) $1 Deeg|0=Haut}} {{GENDER:$2|eropgelueden}}.',
 	'mobile-frontend-profile-usertalk' => 'Mam $1 schwätzen',
-	'mobile-frontend-profile-noargs' => 'Gitt w.e.g. e Benotzernumm u fir ee Profil ze gesinn.',
-	'mobile-frontend-profile-nouser' => 'Benotzernumm gëtt et net oder en ass net valabel',
+	'mobile-frontend-profile-noargs' => 'Gitt w.e.g. e Benotzernumm u fir ee Profil ze gesinn.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Benotzernumm gëtt et net oder en ass net valabel', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktivitéit a Kontributiounen',
-	'mobile-frontend-profile-yours' => 'Besicht Är Profilsäit.',
 	'mobile-frontend-profile-userpage-link' => 'Benotzersäit besichen.',
 	'mobile-frontend-profile-last-edit' => "{{GENDER:$3|Huet}} d'Säit [[$1]]{{PLURAL:$2|gëschter|viru(n) $2 Deeg|0=méi fréi haut am Laf vum Dag}} geännert.",
 	'mobile-frontend-geonotahack' => 'No bei dëser Säit',
@@ -12066,10 +12052,9 @@ $messages['mk'] = array(
 	'mobile-frontend-profile-title' => 'Кориснички профил',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Подигнато}} {{PLURAL:$1|вчера|пред $1 дена|0=денес}}.',
 	'mobile-frontend-profile-usertalk' => 'Разговарајте со $1',
-	'mobile-frontend-profile-noargs' => 'Наведете корисничко име за да го погледате профилот.',
-	'mobile-frontend-profile-nouser' => 'Непостоечко или неважечко корисничко име',
+	'mobile-frontend-profile-noargs' => 'Наведете корисничко име за да го погледате профилот.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Непостоечко или неважечко корисничко име', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Активности и придонеси',
-	'mobile-frontend-profile-yours' => 'Посетете ја вашата профилна страница.',
 	'mobile-frontend-profile-userpage-link' => 'Посетете ја корисничката страница',
 	'mobile-frontend-requires-optin' => 'Страницава не е достапна доколку не изберете да ги користите бета-можностите. Ова можете да го направите во [[Special:MobileOptions|поставките]].',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] се {{GENDER:$1|заблагодарил|заблагодарила}} за уредувањето на [[$2]].',
@@ -13168,10 +13153,9 @@ $messages['nb'] = array(
 	'mobile-frontend-profile-title' => 'Brukerprofil',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Lastet opp}} {{PLURAL:$1|i går|for $1 dager siden|0=i dag}}.',
 	'mobile-frontend-profile-usertalk' => 'Diskutér med $1',
-	'mobile-frontend-profile-noargs' => 'Oppgi et brukernavn for å vise en profil.',
-	'mobile-frontend-profile-nouser' => 'Ikke-eksisterende eller ugyldig brukernavn',
+	'mobile-frontend-profile-noargs' => 'Oppgi et brukernavn for å vise en profil.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Ikke-eksisterende eller ugyldig brukernavn', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktivitet og bidrag',
-	'mobile-frontend-profile-yours' => 'Besøk profilsiden din.',
 	'mobile-frontend-profile-userpage-link' => 'Besøk brukerside.',
 	'mobile-frontend-requires-optin' => 'Denne siden er ikke tilgjengelig hvis du ikke melder deg på betatestingen vår. Besøk [[Special:MobileOptions|innstillingssiden]] for å melde deg på.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Takket}} av [[Special:UserProfile/$1|$1]] for en redigering på [[$2]].',
@@ -13496,7 +13480,7 @@ $messages['nl'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonieme gebruiker',
 	'mobile-frontend-changeslist-nocomment' => 'geen bewerkingssamenvatting',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
-	'mobile-frontend-watchlist-filter-articles' => "Pagina's", # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => "Pagina's",
 	'mobile-frontend-watchlist-filter-talk' => 'Overleg',
 	'mobile-frontend-watchlist-filter-other' => 'Overige',
 	'mobile-frontend-watchlist-modified' => '$1 gewijzigd',
@@ -13515,7 +13499,7 @@ $messages['nl'] = array(
 	'mobile-frontend-photo-article-edit-comment' => 'De afbeelding voor gebruik op de pagina is toegevoegd',
 	'mobile-frontend-photo-article-donate-comment' => 'Bijgedragen van Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => 'De afbeelding is toegevoegd aan de pagina',
-	'mobile-frontend-photo-caption-placeholder' => 'Voeg een beschrijving toe (verplicht)', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Beschrijf deze afbeelding (verplicht)',
 	'mobile-frontend-image-loading' => 'Bezig met het laden van de afbeelding',
 	'mobile-frontend-photo-ownership' => 'Ik, $1 heb deze afbeelding gemaakt.',
 	'mobile-frontend-photo-ownership-help' => 'Wat betekent dit?',
@@ -13542,12 +13526,15 @@ $messages['nl'] = array(
 	'mobile-frontend-photo-upload-error-file-type' => 'Upload alstublieft alleen afbeeldingen.',
 	'mobile-frontend-photo-upload-error-filename' => 'Fout. Geef een meer beschrijvende samenvatting op.',
 	'mobile-frontend-photo-upload-success-article' => 'Uw afbeelding is nu zichtbaar op deze pagina.',
-	'mobile-frontend-photo-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0].', # Fuzzy
+	'mobile-frontend-photo-license' => 'Door deze afbeelding te uploaden, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use/nl Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-Gelijk delen 3.0].',
 	'mobile-frontend-photo-submit' => 'Opslaan',
 	'mobile-frontend-photo-cancel' => 'Annuleren',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
 	'mobile-frontend-photo-upload-login' => 'U moet aangemeld zijn om een afbeelding te kunnen toevoegen.',
+	'mobile-frontend-image-heading-describe' => "'''Beschrijf''' de afbeelding",
+	'mobile-frontend-image-uploading' => "'''Uploaden'''...",
+	'mobile-frontend-image-cancel-confirm' => 'Upload annuleren?',
 	'mobile-frontend-editor-undo-unsupported' => 'Ongedaan maken is op het moment niet mogelijk op mobiele apparaten.',
 	'mobile-frontend-editor-newpage-prompt' => 'Deze pagina bestaat niet. Waarom maak je hem niet aan?',
 	'mobile-frontend-editor-disabled' => 'U mag deze pagina niet bewerken.',
@@ -13558,7 +13545,7 @@ $messages['nl'] = array(
 	'mobile-frontend-editor-save' => 'Opslaan',
 	'mobile-frontend-editor-cancel' => 'Annuleren',
 	'mobile-frontend-editor-keep-editing' => 'Doorgaan met bewerken',
-	'mobile-frontend-editor-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0] en [//nl.wikipedia.org/wiki/GNU-licentie_voor_vrije_documentatie GFDL].', # Fuzzy
+	'mobile-frontend-editor-license' => 'Door wijzigingen op te slaan, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use/nl Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-Gelijk delen 3.0] en [//nl.wikipedia.org/wiki/GNU-licentie_voor_vrije_documentatie GFDL].',
 	'mobile-frontend-editor-placeholder' => 'Deze paragraaf bevat geen tekst. U kunt de eerste zijn die hem schrijft!',
 	'mobile-frontend-editor-summary-placeholder' => 'Geef aan wat u hebt gewijzigd (optioneel)',
 	'mobile-frontend-editor-cancel-confirm' => 'Wilt u uw bewerking echt niet opslaan?',
@@ -13571,9 +13558,14 @@ $messages['nl'] = array(
 	'mobile-frontend-editor-error-loading' => 'Er is een fout opgetreden. De paragraaf kan niet geladen worden.',
 	'mobile-frontend-editor-preview-header' => 'Voorvertoning',
 	'mobile-frontend-editor-error-preview' => 'Fout. Er is iets onverwachts gebeurd tijdens het laden van de voorvertoning. Sluit dit venster en probeer het opnieuw.',
+	'mobile-frontend-editor-tutorial-summary' => 'Wikitekst bijt niet. Probeer de pagina $1 beter te maken.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Begin met bewerken',
 	'mobile-frontend-editor-captcha-try-again' => 'Verkeerde code, probeer het opnieuw.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Waarschuwing: weet u zeker dat u deze bewerking wilt opslaan? Er is wellicht iets mee mis.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Deze bewerking kan niet worden opgeslagen omdat er een probleem is ontdekt.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Meer lezen',
+	'mobile-frontend-editor-editing' => "$1 '''bewerken'''",
+	'mobile-frontend-editor-previewing' => "'''Voorvertoning ''' van $1",
 	'tag-mobile_edit' => 'Bewerking via mobiel',
 	'tag-mobile_edit-description' => 'Bewerking gemaakt via mobiele site',
 	'mobile-frontend-drawer-cancel' => 'Annuleren',
@@ -13590,17 +13582,22 @@ $messages['nl'] = array(
 	'mobile-frontend-talk-reply-info' => 'Uw antwoord wordt automatisch ondertekend met uw gebruikersnaam.',
 	'mobile-frontend-talk-reply' => 'Antwoorden',
 	'mobile-frontend-media-details' => 'Details',
+	'mobile-frontend-media-license-link' => 'Licentiegegevens',
+	'abusefilter-edit-builder-vars-user-mobile' => 'Of een gebruiker wel of niet via de mobiele interface bewerkt',
 	'mobile-frontend-profile-title' => 'Gebruikersprofiel',
-	'mobile-frontend-profile-last-upload-caption' => 'Meest recente upload door {{GENDER:$1|$1}}: {{PLURAL:$2|gisteren|$2 dagen geleden|0=vandaag}}.', # Fuzzy
-	'mobile-frontend-profile-usertalk' => 'Overlegpagina weergeven.', # Fuzzy
+	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|Gisteren|$1 dagen geleden|0=Vandaag|2=Eergisteren}} {{GENDER:$2|geüpload}}.',
+	'mobile-frontend-profile-usertalk' => 'In contact treden met {{GENDER:$1}}',
+	'mobile-frontend-profile-error' => 'Fout',
+	'mobile-frontend-profile-noargs' => 'Er is geen gebruikersnaam opgegeven. Geef een gebruikernaam op om een profiel te bekijken.',
+	'mobile-frontend-profile-nouser' => 'Er bestaat geen gebruiker met deze naam. Gebruikersnamen zijn hoofdlettergevoelig. Controleer uw invoer.',
 	'mobile-frontend-profile-activity-heading' => 'Activiteit en bijdragen',
-	'mobile-frontend-profile-yours' => 'Je profielpagina bezoeken.',
 	'mobile-frontend-profile-userpage-link' => 'Gebruikerspagina bekijken.',
-	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Voor het laatst bedankt}} door [[Special:UserProfile/$1|$1]] voor een bewerking aan [[$2]].', # Fuzzy
+	'mobile-frontend-requires-optin' => 'Deze pagina is niet beschikbaar tenzij u [[Special:MobileOptions|betamodus]] heeft ingeschakeld.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Bedankt}} door [[Special:UserProfile/$1|$1]] voor een bewerking aan [[$2]].',
 	'mobile-frontend-profile-edit-summary' => 'Inleiding gebruikersprofiel bijwerken',
 	'mobile-frontend-geonotahack' => 'In de buurt van deze pagina',
 	'beta-feature-geonotahack' => 'In de buurt van deze pagina',
-	'beta-feature-geonotahack-description' => "Staat u toe om andere verwante pagina's te zien voor pagina's die u bezocht die lengte- en breedtegraad informatie bevatten.", # Fuzzy
+	'beta-feature-geonotahack-description' => "Ontdek pagina's die geografisch in de buurt liggen van deze pagina.",
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -14652,10 +14649,9 @@ Për piasì, ch'a sara e ch'a preuva torna.",
 	'mobile-frontend-profile-title' => 'Profil utent',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Carià}} {{PLURAL:$1|jer|$1 di fa|0=ancheuj}}.',
 	'mobile-frontend-profile-usertalk' => 'Parlé a $1.',
-	'mobile-frontend-profile-noargs' => "Për piasì, ch'a fornissa në stranòm për vëdde un profil.",
-	'mobile-frontend-profile-nouser' => 'Stranòm inesistent o nen bon',
+	'mobile-frontend-profile-noargs' => "Për piasì, ch'a fornissa në stranòm për vëdde un profil.", # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Stranòm inesistent o nen bon', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Atività e contribussion',
-	'mobile-frontend-profile-yours' => 'Visité soa pàgina ëd profil.',
 	'mobile-frontend-profile-userpage-link' => "Visité la pàgina dl'utent.",
 	'mobile-frontend-requires-optin' => "Costa pàgina-sì a l'é nen disponìbil gavà s'a l'ha sernù nòstra manera beta. Ch'a vada an sla [[Special:MobileOptions|pàgina dij sò gust]] për sern-la.",
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Ringrassià}} da [[Special:UserProfile/$1|$1]] për na modìfica a [[$2]].',
@@ -15090,10 +15086,9 @@ $messages['pt-br'] = array(
 	'mobile-frontend-profile-title' => 'Perfil de usuário',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Enviada}} {{PLURAL:$1|ontem|$1 dias atrás|0=hoje}}.',
 	'mobile-frontend-profile-usertalk' => 'Falar com $1',
-	'mobile-frontend-profile-noargs' => 'Por favor informe um nome de usuário para ver o perfil.',
-	'mobile-frontend-profile-nouser' => 'Nome de usuário inválido ou inexistente',
+	'mobile-frontend-profile-noargs' => 'Por favor informe um nome de usuário para ver o perfil.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Nome de usuário inválido ou inexistente', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Atividades & contribuições',
-	'mobile-frontend-profile-yours' => 'Ver página de perfil.',
 	'mobile-frontend-profile-userpage-link' => 'Ver página de usuário.',
 	'mobile-frontend-requires-optin' => 'Essa página não está disponível fora do modo beta. Acesse a [[Special:MobileOptions|página de configurações]] para ativiar o modo beta.',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] {{GENDER:$1|agradeceu-lhe}} pela sua edição em [[$2]].',
@@ -15416,10 +15411,10 @@ din întreaga lume',
 	'mobile-frontend-profile-title' => 'Profil utilizator',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Încărcată}} {{PLURAL:$1|ieri|acum $1 zile|acum $1 de zile|0=astăzi}}.',
 	'mobile-frontend-profile-usertalk' => 'Discutați cu $1',
-	'mobile-frontend-profile-noargs' => 'Furnizați un nume de utilizator pentru a vizualiza un profil.',
-	'mobile-frontend-profile-nouser' => 'Nume de utilizator inexistent sau incorect',
+	'mobile-frontend-profile-error' => 'Oh, nu!',
+	'mobile-frontend-profile-noargs' => 'Nu s-a specificat niciun nume de utilizator. Furnizați un nume de utilizator pentru a vizualiza un profil.',
+	'mobile-frontend-profile-nouser' => 'Nu există niciun utilizator cu acest nume. Numele de utilizator sunt sensibile la majuscule, drept pentru care verificați dacă ați tastat corect.',
 	'mobile-frontend-profile-activity-heading' => 'Activitate și contribuții',
-	'mobile-frontend-profile-yours' => 'Vizitați-vă pagina de profil.',
 	'mobile-frontend-profile-userpage-link' => 'Vizitează pagina de utilizator.',
 	'mobile-frontend-requires-optin' => 'Această pagină este disponibilă doar dacă alegeți modul beta. Accesați [[Special:MobileOptions|pagina cu setări]] pentru a comuta la beta.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Mulțumit}} de către [[Special:UserProfile/$1|$1]] pentru o modificare asupra paginii [[$2]].',
@@ -15856,10 +15851,9 @@ $messages['ru'] = array(
 	'mobile-frontend-profile-title' => 'Профиль участника',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Загружено}} {{PLURAL:$1|вчера|$1 дня назад|$1 дней назад|0=сегодня}}.',
 	'mobile-frontend-profile-usertalk' => 'Написать участнику $1',
-	'mobile-frontend-profile-noargs' => 'Пожалуйста, укажите имя участника, чтобы просмотреть профиль.',
-	'mobile-frontend-profile-nouser' => 'Несуществующее или неверное имя участника',
+	'mobile-frontend-profile-noargs' => 'Имя не задано. Пожалуйста, укажите имя участника, чтобы просмотреть профиль.',
+	'mobile-frontend-profile-nouser' => 'Участника с таким именем не существует. Имена чувствительны к регистру, так что, пожалуйста, проверьте, набрано ли оно правильно.',
 	'mobile-frontend-profile-activity-heading' => 'Деятельность и вклад',
-	'mobile-frontend-profile-yours' => 'Перейдите на страницу своего профиля.',
 	'mobile-frontend-profile-userpage-link' => 'Посетить страницу участника.',
 	'mobile-frontend-requires-optin' => 'Эта страница будет недоступна, пока вы не перейдёте в бета-режим. Зайдите для этого на страницу [[Special:MobileOptions|настроек]].',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] {{GENDER:$1|поблагодарил|поблагодарила}} за правку страницы [[$2]].',
@@ -16987,7 +16981,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-changeslist-ip' => 'Anonym användare',
 	'mobile-frontend-changeslist-nocomment' => 'ingen redigeringssammanfattning',
 	'mobile-frontend-watchlist-filter-all' => 'Alla',
-	'mobile-frontend-watchlist-filter-articles' => 'Innehållssidor', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Artiklar',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Andra',
 	'mobile-frontend-watchlist-modified' => 'Redigerades för $1',
@@ -17052,7 +17046,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-editor-save' => 'Spara',
 	'mobile-frontend-editor-cancel' => 'Avbryt',
 	'mobile-frontend-editor-keep-editing' => 'Fortsätt redigera',
-	'mobile-frontend-editor-license' => 'Genom att trycka på "Spara" godkänner du våra [//wikimediafoundation.org/wiki/Terms_of_use användarvillkor] och samtycker till att släppa din text under [//creativecommons.org/licenses/by-sa/3.0/ licensen Creative Commons Attribution-ShareAlike 3.0] och [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].', # Fuzzy
+	'mobile-frontend-editor-license' => 'Genom att spara ändringar godkänner du våra [//wikimediafoundation.org/wiki/Terms_of_use användarvillkor] och samtycker till att släppa din text under [//creativecommons.org/licenses/by-sa/3.0/ licensen Creative Commons Attribution-ShareAlike 3.0] och [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
 	'mobile-frontend-editor-placeholder' => 'Detta avsnitt är tomt. Bli den första att bygga ut det!',
 	'mobile-frontend-editor-summary-placeholder' => 'Berätta för oss vad du ändrat (frivilligt)',
 	'mobile-frontend-editor-cancel-confirm' => 'Är du säker på att du vill avbryta din redigering?',
@@ -17092,10 +17086,9 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-title' => 'Användarprofil',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Laddades upp}} {{PLURAL:$2|igår|$1 dagar sedan|0=idag}}.',
 	'mobile-frontend-profile-usertalk' => 'Prata med $1',
-	'mobile-frontend-profile-noargs' => 'Var god ange ett användarnamn för att visa en profil.',
-	'mobile-frontend-profile-nouser' => 'Obefintligt eller ogiltigt användarnamn',
+	'mobile-frontend-profile-noargs' => 'Var god ange ett användarnamn för att visa en profil.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Obefintligt eller ogiltigt användarnamn', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktivitet och bidrag',
-	'mobile-frontend-profile-yours' => 'Besök din profilsida.',
 	'mobile-frontend-profile-userpage-link' => 'Besök användarsidan.',
 	'mobile-frontend-requires-optin' => 'Denna sida är inte tillgänglig om du inte väljer att vara i vårt betaläge. Besök [[Special:MobileOptions|inställningssidan]] för att ställa in det.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Tackades}} av [[Special:UserProfile/$1|$1]] för en redigering på [[$2]].',
@@ -17105,7 +17098,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-footer-years' => 'Gick med för över {{PLURAL:$2|1 år|$2 år}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',
 	'mobile-frontend-geonotahack' => 'Nära denna sida',
 	'beta-feature-geonotahack' => 'Nära denna sida',
-	'beta-feature-geonotahack-description' => 'Låter dig se sidor relaterade till sidor du tittar på som innehåller information om longitud och latitud.', # Fuzzy
+	'beta-feature-geonotahack-description' => 'Upptäck sidor som är geografiskt närliggande till innehållssidan du för tillfället läser.',
 );
 
 /** Swahili (Kiswahili)
@@ -17818,10 +17811,9 @@ $messages['tr'] = array(
 	'mobile-frontend-profile-title' => 'Kullanıcı bilgileri',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|Dün|$1 gün önce|0=Bugün}} yüklendi.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => '$1 ile konuş',
-	'mobile-frontend-profile-noargs' => 'Lütfen bilgi görüntülemek için bir kullanıcı adı sağlayın.',
-	'mobile-frontend-profile-nouser' => 'Var olmayan ya da geçersiz kullanıcı adı',
+	'mobile-frontend-profile-noargs' => 'Lütfen bilgi görüntülemek için bir kullanıcı adı sağlayın.', # Fuzzy
+	'mobile-frontend-profile-nouser' => 'Var olmayan ya da geçersiz kullanıcı adı', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Etkinlik ve katkılar',
-	'mobile-frontend-profile-yours' => 'Kullanıcı bilgileri sayfanı ziyaret et.',
 	'mobile-frontend-profile-userpage-link' => 'Kullanıcı sayfasını ziyaret et.',
 	'mobile-frontend-requires-optin' => 'Deneme modunu tercih etmediğiniz sürece bu sayfayı kullanamazsınız. Tercih etmek için [[Special:MobileOptions|ayarlar sayfasını]] ziyaret edin.',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] tarafından [[$2]] sayfasına yapılan düzenlemeden dolayı {{GENDER:$1|teşekkür}} edildi.',
@@ -18223,10 +18215,10 @@ $messages['uk'] = array(
 	'mobile-frontend-profile-title' => 'Профіль користувача',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|завантажив|завантажила}} {{PLURAL:$1|вчора|$1 дні тому|$1 днів тому|0=сьогодні}}.',
 	'mobile-frontend-profile-usertalk' => 'Поговорити з $1',
-	'mobile-frontend-profile-noargs' => "Будь ласка, введіть ім'я користувача, щоб переглянути профіль.",
-	'mobile-frontend-profile-nouser' => "Ім'я користувача не існує або неприпустиме",
+	'mobile-frontend-profile-error' => 'О, ні!',
+	'mobile-frontend-profile-noargs' => "Ім'я користувача не було задано. Будь ласка, введіть ім'я користувача, щоб переглянути профіль.",
+	'mobile-frontend-profile-nouser' => 'Немає користувач з таким іменем. Імена користувачів чутливі до регістру, тому, будь ласка, перевірте, чи воно було введене правильно.',
 	'mobile-frontend-profile-activity-heading' => 'Діяльність і внесок',
-	'mobile-frontend-profile-yours' => 'Відвідайте сторінку вашого профілю.',
 	'mobile-frontend-profile-userpage-link' => 'Відвідати сторінку користувача.',
 	'mobile-frontend-requires-optin' => 'Ця сторінка недоступна, якщо ви виберете в нашому режимі бета. Відвідайте [[Special:MobileOptions|сторінку налаштувань]], щоб відмовитися.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Подякував|Подякувала}} [[Special:UserProfile/$1|$1]] за редагування на [[$2]].',
@@ -18872,10 +18864,10 @@ $messages['vi'] = array(
 	'mobile-frontend-profile-title' => 'Thông tin cá nhân',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2}}Được tải lên {{PLURAL:$1|ngày hôm qua|$1 ngày trước|0=hôm nay}}.',
 	'mobile-frontend-profile-usertalk' => 'Thảo luận với $1',
-	'mobile-frontend-profile-noargs' => 'Xin vui lòng nhập tên người dùng để xem trang thành viên.',
-	'mobile-frontend-profile-nouser' => 'Tên người dùng không tồn tại hoặc không hợp lệ.',
+	'mobile-frontend-profile-error' => 'Ôi!',
+	'mobile-frontend-profile-noargs' => 'Tên người dùng không được cung cấp. Xin vui lòng nhập tên người dùng để xem trang thành viên.',
+	'mobile-frontend-profile-nouser' => 'Không có người dùng với tên này. Vì phân biệt chữ hoa/thường trong tên người dùng, xin vui lòng kiểm tra tên người dùng có đúng không.',
 	'mobile-frontend-profile-activity-heading' => 'Hoạt động và đóng góp',
-	'mobile-frontend-profile-yours' => 'Xem trang cá nhân của bạn.',
 	'mobile-frontend-profile-userpage-link' => 'Xem trang thành viên.',
 	'mobile-frontend-requires-optin' => 'Để xem trang này, hãy quyết định kích hoạt chế độ beta. Mở [[Special:MobileOptions|trang tùy chọn]] để kích hoạt.',
 	'mobile-frontend-profile-last-thanked' => 'Đã nhận lời cảm ơn từ [[Special:UserProfile/$1|$1]] vì một sửa đổi tại [[$2]].',
@@ -19346,10 +19338,9 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-profile-title' => '用户信息',
 	'mobile-frontend-profile-last-upload-caption' => '于{{PLURAL:$1|昨天|$1天前|0=今天}}{{GENDER:$2|上传}}。',
 	'mobile-frontend-profile-usertalk' => '与$1讨论',
-	'mobile-frontend-profile-noargs' => '请指定一个用户名以查看资料。',
-	'mobile-frontend-profile-nouser' => '不存在或无效的用户名',
+	'mobile-frontend-profile-noargs' => '请指定一个用户名以查看资料。', # Fuzzy
+	'mobile-frontend-profile-nouser' => '不存在或无效的用户名', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => '活动和贡献',
-	'mobile-frontend-profile-yours' => '访问您的个人资料页。',
 	'mobile-frontend-profile-userpage-link' => '访问用户页',
 	'mobile-frontend-requires-optin' => '此页不可用，除非您选择使用我们的 beta 版。访问[[Special:MobileOptions|设置页]]进行选择。',
 	'mobile-frontend-profile-last-thanked' => '已由[[Special:UserProfile/$1|$1]]对[[$2]]的一次编辑做出感谢。',
@@ -19653,10 +19644,9 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-profile-title' => '用戶訊息',
 	'mobile-frontend-profile-last-upload-caption' => '於{{PLURAL:$1|昨日|$1日前|0=今日}}{{GENDER:$2|上載}}。',
 	'mobile-frontend-profile-usertalk' => '與$1討論',
-	'mobile-frontend-profile-noargs' => '請確認一個用戶名以查看其資料。',
-	'mobile-frontend-profile-nouser' => '不存在或無效用戶名',
+	'mobile-frontend-profile-noargs' => '請確認一個用戶名以查看其資料。', # Fuzzy
+	'mobile-frontend-profile-nouser' => '不存在或無效用戶名', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => '活動與貢獻',
-	'mobile-frontend-profile-yours' => '訪問您的個人訊息頁。',
 	'mobile-frontend-profile-userpage-link' => '檢查使用者頁面',
 	'mobile-frontend-requires-optin' => '此頁不可用，除非您選擇使用我們的Beta模式。通過[[Special:MobileOptions|個人設定]]啟用之。',
 	'mobile-frontend-profile-last-thanked' => '已由[[Special:UserProfile/$1|$1]]對[[$2]]所作出一次編輯之感謝。',
