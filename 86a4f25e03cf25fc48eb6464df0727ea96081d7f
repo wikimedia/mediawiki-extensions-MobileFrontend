@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_1d326fef",
+        "filename": "images/BetaFeatures/nearby-rtl.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-02T18:56:34Z",
+      "side": 1,
+      "message": "This is all meta information, not needed in production. Note how the RTL version of the SVG is 2x bigger than the LTR version.",
+      "revId": "86a4f25e03cf25fc48eb6464df0727ea96081d7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
