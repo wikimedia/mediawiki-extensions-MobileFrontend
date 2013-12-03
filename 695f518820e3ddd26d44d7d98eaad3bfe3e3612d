@@ -16,6 +16,24 @@
       "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_8b3d0a2c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-03T22:07:28Z",
+      "side": 1,
+      "message": "The problem is that designers want to have flexibility and sometimes make only some words in the heading bold... See mobile-frontend-image-heading-describe as an example.",
+      "parentUuid": "0ee75395_a16b55b4",
+      "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
