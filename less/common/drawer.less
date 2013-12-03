@@ -1,5 +1,24 @@
 @import "../mixins.less";
 
+// Drawers
+//
+// Drawers appear at the bottom of the page and contain CTAs
+// Drawers are hidden when overlays are opened.
+//
+// Styleguide 4.
+
+// Basic drawer styling
+//
+// The close button should appear at the top of the drawer.
+// The visible class needs to be present for the drawer to show.
+//
+// Markup:
+// <div class="drawer visible">
+//  <a class='close'>close</a>
+//  <p>hello</p>
+// </div>
+//
+// Styleguide 4.1.
 .drawer {
 	text-align: center;
 	padding: 0 @contentMargin 1em;
@@ -24,10 +43,6 @@
 		width: 100%;
 		height: 16px;
 		background: url(../modules/images/show.png) 50% 8px no-repeat;
-	}
-
-	.button.wide {
-		display: block;
 	}
 
 	a.button {

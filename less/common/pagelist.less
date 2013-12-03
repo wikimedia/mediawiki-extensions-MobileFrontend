@@ -6,6 +6,7 @@
 @thumbOverlayWidth: @searchBarPaddingLeft;
 @thumbOverlaySpace: @thumbOverlayWidth + @thumbGap;
 
+
 .listThumb {
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -24,6 +25,24 @@
 	.background-size(100%, auto);
 }
 
+// Lists of pages
+//
+// Use the page-list class when rendering a list of pages.
+// Always render a page-list outside a .content element
+//
+// Markup:
+// <ul class="page-list thumbs">
+//  <li>
+//    <div class="listThumb"></div>
+//    <div class="title"><h2>San Francisco</h2></div>
+//  </li>
+//  <li>
+//    <div class="listThumb needsPhoto"></div>
+//    <div class="title"><h2>New York</h2></div>
+//  </li>
+// </ul>
+//
+// Styleguide 5.
 .page-list {
 	cursor: pointer;
 	// needed for rotated watchstars to avoid horizontal scrollbar

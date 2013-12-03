@@ -3,6 +3,7 @@
 	"description": "Node.js dependencies used in MobileFrontend",
 	"version": "0.0.1",
 	"dependencies": {
-		"jshint": ">=1.1.0"
+		"jshint": ">=1.1.0",
+		"kss": ">=0.3.6"
 	}
 }

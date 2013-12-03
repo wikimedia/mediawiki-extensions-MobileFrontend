@@ -1,6 +1,9 @@
 @import "../mixins.less";
 
-/* reuses https://github.com/wikimedia/agora */
+// Buttons
+//
+// Styleguide 2.
+
 .button,
 button,
 input[type=submit] {
@@ -18,6 +21,17 @@ input[type=submit] {
 .panel,
 // FIXME: deprecate .buttonBar when new overlays in stable
 .buttonBar {
+
+	// Button styling within containers content, panel or buttonBar
+	//
+	// Buttons inside the main content element look like this:
+	//
+	// Markup:
+	// <div class="content panel buttonBar">
+	//  <button>button</button>
+	// </div>
+	//
+	// Styleguide 2.1.
 	.button,
 	button,
 	input[type=submit] {
@@ -46,6 +60,17 @@ input[type=submit] {
 			border-color: darken( @disabledColor, 5% );
 		}
 
+		// Inline buttons
+		//
+		// Add the inline class to buttons to push them together
+		//
+		// Markup:
+		// <div class="content">
+		//  <button class="inline button">button 1</button>
+		//  <button class="inline button">button 2</button>
+		// </div>
+		//
+		// Styleguide 2.1.1.
 		&.inline {
 			display: inline;
 			padding: 0;
@@ -59,10 +84,40 @@ input[type=submit] {
 				text-decoration: underline;
 			}
 		}
+
+		// Wide buttons
+		//
+		// Buttons inside drawer can be made to be as wide as possible by applying the wide class.
+		//
+		// Markup:
+		// <div class="content">
+		//   <div class="wide button">wide button</div>
+		// </div>
+		//
+		// Styleguide 2.1.2.
+		&.wide {
+			display: block;
+		}
 	}
 }
 
+
+// Header buttons
+//
+// Buttons inside headers look different to those inside content areas.
+//
+// Styleguide 2.2.
+
 .header {
+	// Header buttons
+	//
+	// Markup:
+	// <div class="header">
+	//  <button>button 1</button>
+	//  <button>button 2</button>
+	// </div>
+	//
+	// Styleguide 2.2.1.
 	.button,
 	button,
 	input[type=submit] {
@@ -75,6 +130,21 @@ input[type=submit] {
 		border: 1px solid #9ea0a3;
 	}
 
+	// Button bars
+	//
+	// The button-bar class only applies inside a header.
+	// The button-bar class must be used to center buttons.
+	//
+	// Markup:
+	// <div class="header">
+	//  <ul class="button-bar">
+	//    <li><button>button 1</button></li><li>
+	//      <button>button 2</button></li><li>
+	//      <button>button 3</button></li>
+	//  </ul>
+	// </div>
+	//
+	// Styleguide 2.2.2.
 	.button-bar {
 		text-align: center;
 
@@ -96,6 +166,20 @@ input[type=submit] {
 				}
 			}
 
+			// Active buttons
+			//
+			// Use the active class on a button-bar item to highlight it as active.
+			//
+			// Markup:
+			// <div class="header">
+			//  <ul class="button-bar">
+			//    <li><button>button 1</button></li><li class="active">
+			//      <button>button 2</button></li><li>
+			//      <button>button 3</button></li>
+			//  </ul>
+			// </div>
+			//
+			// Styleguide 2.3.1.
 			&.active {
 				.button, button {
 					background: #c8cacb;

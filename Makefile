@@ -1,5 +1,9 @@
 MW_INSTALL_PATH ?= ../..
 
+kss: nodecheck
+	# FIXME: Use more up to date Ruby version
+	@node_modules/.bin/kss-node less/ less/ -l less/mobile.less -t styleguide-template
+
 nodecheck:
 	@scripts/nodecheck.sh
 

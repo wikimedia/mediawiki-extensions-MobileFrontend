@@ -159,11 +159,58 @@ i {
 }
 
 .hlist > ul, // FIXME: to support hlists on enwiki projects - this should be deprecated
+
+// Horizontal Lists
+//
+// Use hlist class when dealing with lists where items should be horizontal.
+//
+// Markup:
+// <ul class="hlist">
+// <li>item 1</li>
+// <li>item 2</li>
+// </ul>
+//
+// Styleguide 1.6.
 ul.hlist {
 	li {
 		display: inline-block;
 		margin-right: 8px;
 	}
+}
+
+// Code
+//
+// Use this solely for blocks of computer code.
+//
+// Markup:
+// <code>
+// body {
+//   color:red;
+// }
+// </code>
+//
+// Styleguide 1.4.
+code,
+// Preformatted text
+//
+// Use on text where whitespace is significant and the content should not be formatted.
+//
+// Markup:
+// <pre>
+// body {
+//   color:red;
+// }
+// </pre>
+//
+// Styleguide 1.5.
+pre {
+	padding: 0.2em 0.5em;
+	font-family: monospace;
+	border: solid 1px #CCC;
+}
+
+pre {
+	padding: 1em;
 }
 
 .content {

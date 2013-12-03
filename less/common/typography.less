@@ -1,9 +1,15 @@
 @import "../variables.less";
 
+// Typography
+//
+// Our content is predominately text, hence visual hierarchy must be clear.
+//
+// Styleguide 1.
+
 html {
-	/* prevent font scaling in landscape in Safari */
+	// prevent font scaling in landscape in Safari
 	-webkit-text-size-adjust: none;
-	font-size: 100% * @fontScalingFactor; /* default browser size is 16px (12pt) */
+	font-size: 100% * @fontScalingFactor;
 }
 
 @bodyLineHeight: 1.4;
@@ -29,6 +35,27 @@ h1 {
 .content {
 	margin: .8em @contentMargin 0;
 
+	// Headings in mobile
+	//
+	// All headings styled in the content div will be styled like so.
+	//
+	// Markup:
+	// <div class="content">
+	//   <h1>Heading 1</h2>
+	//   <p>Paragraph of text</p>
+	//   <h2>Heading 2</h2>
+	//   <p>Paragraph of text</p>
+	//   <h3>Heading 3</h3>
+	//   <p>Paragraph of text</p>
+	//   <h4>Heading 4</h4>
+	//   <p>Paragraph of text</p>
+	//   <h5>Heading 2</h5>
+	//   <p>Paragraph of text</p>
+	//   <h6>Heading 2</h6>
+	//   <p>Paragraph of text</p>
+	// </div>
+	//
+	// Styleguide 1.1.
 	h1, h2, h3, h4, h5, h6 {
 		line-height: @headingLineHeight;
 		font-family: @fontFamilyHeading;
@@ -39,6 +66,16 @@ h1 {
 		margin-bottom: .7em;
 	}
 
+	// Thumbnails
+	//
+	// Thumbnail images should be rendered within a thumb class
+	//
+	// Markup:
+	// <div class="content">
+	//   <div class="thumb"><img src="common/images/arrow-left.png"></div>
+	// </div>
+	//
+	// Styleguide 1.2.
 	.thumb {
 		margin: 15px 0 15px 0;
 		border: 1px solid #ccc;
@@ -103,6 +140,14 @@ sup {
 	}
 }
 
+// Blockquotes
+//
+// Use the blockquote tag for quoted text.
+//
+// Markup:
+// <blockquote>In the end, it's not the years in your life that count. It's the life in your years.</blockquote>
+//
+// Styleguide 1.3.
 blockquote {
 	quotes: "\201C" "\201D";
 	padding: 1em 0 1em 10px;
