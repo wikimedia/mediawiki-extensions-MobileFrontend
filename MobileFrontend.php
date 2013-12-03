@@ -417,3 +417,9 @@ $wgMFDeviceWidthTablet = 768;
  */
 $wgMFDeviceWidthMobileSmall = 280;
 
+/**
+ * Whether or not to use the KeepGoing feature
+ * See https://www.mediawiki.org/wiki/Extension:MobileFrontend/KeepGoing
+ */
+$wgMFKeepGoing = false;
+

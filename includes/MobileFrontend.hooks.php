@@ -258,7 +258,7 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgCookiePath, $wgMFNearbyEndpoint, $wgMFNearbyNamespace;
+		global $wgCookiePath, $wgMFNearbyEndpoint, $wgMFNearbyNamespace, $wgMFKeepGoing;
 		$ctx = MobileContext::singleton();
 		$wgStopMobileRedirectCookie = array(
 			'name' => 'stopMobileRedirect',
@@ -269,6 +269,7 @@ class MobileFrontendHooks {
 		$vars['wgStopMobileRedirectCookie'] = $wgStopMobileRedirectCookie;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
 		$vars['wgMFNearbyNamespace'] = $wgMFNearbyNamespace;
+		$vars['wgMFKeepGoing'] = $wgMFKeepGoing;
 		return true;
 	}
 

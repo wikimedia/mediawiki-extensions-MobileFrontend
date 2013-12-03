@@ -10,7 +10,7 @@
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
-		KeepGoingDrawer,
+		KeepGoingOverlay,
 		AbuseFilterOverlay = M.require( 'modules/editorNew/AbuseFilterOverlay' ),
 		EditorOverlay;
 
@@ -60,10 +60,8 @@
 				isNew: options.isNew
 			} );
 			this.sectionId = options.sectionId;
-			// FIXME: isNewEditor and isFirstEdit are the same thing
 			this.isNewEditor = options.isNewEditor;
 			this.editCount = user.getEditCount();
-			this.isFirstEdit = this.editCount === 0;
 			this.funnel = options.funnel;
 
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing', options.title );
@@ -120,9 +118,12 @@
 			this.$spinner.show();
 
 			// pre-fetch keep going with expectation user will go on to save
-			if ( inBetaOrAlpha && ( ( this.isFirstEdit && !inCampaign ) || inKeepGoingCampaign ) ) {
+			if ( inBetaOrAlpha &&
+				mw.config.get( 'wgMFKeepGoing' ) &&
+				( ( this.editCount === 0 && !inCampaign ) || inKeepGoingCampaign )
+			) {
 				mw.loader.using( 'mobile.keepgoing', function() {
-					KeepGoingDrawer = M.require( 'modules/keepgoing/KeepGoingDrawer' );
+					KeepGoingOverlay = M.require( 'modules/keepgoing/KeepGoingOverlay' );
 				} );
 			}
 
@@ -212,7 +213,6 @@
 		},
 
 		_updateEditCount: function() {
-			this.isFirstEdit = false;
 			this.editCount += 1;
 			mw.config.set( 'wgUserEditCount', this.editCount );
 		},
@@ -272,8 +272,9 @@
 					// the mobile interface.
 					$.cookie( 'mobileEditor', 'true', { expires: 30 } );
 					// double check it was successfully pre-fetched during preview phase
-					if ( KeepGoingDrawer ) {
-						new KeepGoingDrawer( { isFirstEdit: self.isFirstEdit } );
+					if ( KeepGoingOverlay ) {
+						// Show KeepGoing overlay at step 1 (ask)
+						new KeepGoingOverlay( { step: 1 } );
 					} else {
 						// just show a toast
 						popup.show( mw.msg( msg ), className );

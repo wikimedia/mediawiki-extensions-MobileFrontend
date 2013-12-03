@@ -168,11 +168,36 @@
 		color: @grayMedium;
 	}
 
-	// AbuseFilterOverlay
 	.content {
+		// AbuseFilterOverlay
 		.cancel {
 			display: block;
 			margin: 1em auto;
 		}
+		// KeepGoingOverlay
+		&.vertical-margin {
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+		.wikitext-example {
+			background-color: white;
+			padding: 0.5em;
+			text-align: center;
+			.wikitext {
+				color: @grayMedium;
+			}
+			.fake-link {
+				color: #0645ad;
+			}
+		}
 	}
+}
+
+.overlay-bottom {
+	border-top: 1px solid #CACACA;
+	position: fixed;
+	top: auto;
+	bottom: 0;
+	height: auto !important;
+	background-color: #f2f2f2;
 }

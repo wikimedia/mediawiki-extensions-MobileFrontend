@@ -6,7 +6,9 @@
 		className: 'overlay',
 		template: M.template.get( 'OverlayNew' ),
 		defaults: {
-			headerButtonsListClassName: 'v-border bottom-border'
+			headerButtonsListClassName: 'v-border bottom-border',
+			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
+			continueMsg: mw.msg( 'mobile-frontend-overlay-continue' )
 		}
 	} );
 

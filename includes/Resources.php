@@ -489,9 +489,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.beta',
 			'mobile.templates',
+			'mobile.overlays.beta',
 		),
 		'templates' => array(
 			'keepgoing/KeepGoingDrawer',
+			'keepgoing/KeepGoingOverlay',
 		),
 		'messages' => array(
 			'mobilefrontend-keepgoing-suggest',
@@ -500,10 +502,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobilefrontend-keepgoing-ask',
 			'mobilefrontend-keepgoing-ask-first',
 			'mobilefrontend-keepgoing-explain',
+			'mobilefrontend-keepgoing-saved-title',
+			'mobilefrontend-keepgoing-links-title',
+			'mobilefrontend-keepgoing-links-ask-first',
+			'mobilefrontend-keepgoing-links-ask-again',
+			'mobilefrontend-keepgoing-links-explain',
+			'mobilefrontend-keepgoing-links-example'
 		),
 		'scripts' => array(
 			'javascripts/loggingSchemas/mobileWebCta.js',
 			'javascripts/modules/keepgoing/KeepGoingDrawer.js',
+			'javascripts/modules/keepgoing/KeepGoingOverlay.js',
 		),
 	),
 
@@ -689,6 +698,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'OverlayNew',
+		),
+		'messages' => array(
+			'mobile-frontend-overlay-close',
+			'mobile-frontend-overlay-continue',
 		),
 	),
 

@@ -23,6 +23,12 @@ $messages['en'] = array (
 	'mobilefrontend-keepgoing-cancel' => 'No, thanks',
 	'mobilefrontend-keepgoing-suggest' => 'Yes, please',
 	'mobilefrontend-keepgoing-suggest-again' => 'Try another',
+	'mobilefrontend-keepgoing-saved-title' => 'Edit saved!',
+	'mobilefrontend-keepgoing-links-title' => 'Add links',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Congratulations on making your first edit! Would you like to help add links to a recently created page?',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Fix another page?',
+	'mobilefrontend-keepgoing-links-explain' => 'Find more words that could be links. Add double brackets around the word.',
+	'mobilefrontend-keepgoing-links-example' => 'e.g. $1guitar$2 becomes $3guitar$4',
 
 	/** special pages */
 	'nearby' => 'Pages near you',
@@ -107,8 +113,11 @@ $messages['en'] = array (
 	'mobile-frontend-password-confirm-placeholder' => 'Confirm password',
 	'mobile-frontend-account-create-email-placeholder' => 'Email address (optional)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Enter confirmation code',
-	// Search
+	// Overlays
 	'mobile-frontend-overlay-escape' => 'Go back',
+	'mobile-frontend-overlay-close' => 'Close',
+	'mobile-frontend-overlay-continue' => 'Continue',
+	// Search
 	'mobile-frontend-placeholder' => 'Search {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Search {{SITENAME}} (Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Search {{SITENAME}} (Experimental)',
@@ -413,6 +422,16 @@ or {{msg-mw|Mobilefrontend-keepgoing-ask}}.',
 	'mobilefrontend-keepgoing-suggest-again' => 'Label for a button that allows user to try another page as a response to
 {{msg-mw|Mobilefrontend-keepgoing-explain}}.
 {{Identical|Try another}}',
+	'mobilefrontend-keepgoing-saved-title' => 'Title of the overlay displayed after the user successfully saves an edit. Should be short.',
+	'mobilefrontend-keepgoing-links-title' => 'Title of the overlay that instructs the user to add links to other pages.',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Message congratualting the user for making their first edit and then asking them if they would like to try fixing a page that has been identified as needing more links.',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Message asking the user if they would like to edit another page that has problems.',
+	'mobilefrontend-keepgoing-links-explain' => 'An explanation of how to add links to a page.',
+	'mobilefrontend-keepgoing-links-example' => 'This is part of an instructional message showing someone how to construct a link in wikitext. In this example, it is constructing a link to the page "guitar". "e.g." means "for example". Parameters:
+* $1 - opening wikitext syntax for links along with some html formatting
+* $2 - closing wikitext syntax for links along with some html formatting
+* $3 - opening html formatting to mimic the display of a link
+* $4 - closing html formatting to mimic the display of a link',
 	'nearby' => '{{doc-special|Nearby}}',
 	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}
@@ -607,6 +626,10 @@ Parameters:
 	'mobile-frontend-account-create-captcha-placeholder' => 'Placeholder for captcha input field',
 	'mobile-frontend-overlay-escape' => 'Text for the button to the left of search / an overlay that when clicked exits the overlay to the previous screen
 {{Identical|Go back}}',
+	'mobile-frontend-overlay-close' => 'Text for the button in an overlay that, when clicked, dismisses the overlay.
+{{Identical|Close}}',
+	'mobile-frontend-overlay-continue' => 'Text for the button in an overlay that, when clicked, continues to the next screen or step.
+{{Identical|Continue}}',
 	'mobile-frontend-placeholder' => 'Phrase used to prompt user to use search interface for mobile full screen search',
 	'mobile-frontend-placeholder-beta' => 'Phrase used to prompt user to use search interface for mobile full screen search with identifier that you are in beta mode',
 	'mobile-frontend-placeholder-alpha' => 'Phrase used to prompt user to use search interface for mobile full screen search with identifier that you are in experimental mode',
