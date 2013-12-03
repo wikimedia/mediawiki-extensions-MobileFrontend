@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a16b55b4",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-03T08:14:06Z",
+      "side": 1,
+      "message": "Given MediaWiki\u0027s problematic implementation of bold in some languages, maybe consider using \u003cstrong\u003e and adding it in the code here? See for example this post on the design mailing list: http://lists.wikimedia.org/pipermail/design/2013-November/001221.html.\n\nIn the mobile UI, we have an opportunity to do it Right. There are currently a few other cases of \"three apostrophes\" in the MobileFrontend UI that could possibly also be changed.",
+      "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
