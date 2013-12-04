@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_dde63111",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T20:27:31Z",
+      "side": 1,
+      "message": "Ok I\u0027ll rethink these comments...",
+      "parentUuid": "0ee75395_fdc8d5ab",
+      "revId": "24639fb6e41988d52204010ba2c1a29f9df4fd78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_dd95118c",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 7
@@ -47,6 +65,24 @@
       "writtenOn": "2013-12-04T20:24:39Z",
       "side": 1,
       "message": "i would enforce that $msg be a message object, otherwise line 42 will result in errors. alternatively, provide a little more flexibility on line 42 to take strings too but that will add complexity that is probably not necessary atm",
+      "revId": "24639fb6e41988d52204010ba2c1a29f9df4fd78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_1d0ff9e5",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T20:27:31Z",
+      "side": 1,
+      "message": "The function signature says it should be a Message - surely I shouldn\u0027t need to protect myself against invalid usage of this function?! This seems like overkill..",
+      "parentUuid": "0ee75395_1dadb9e7",
       "revId": "24639fb6e41988d52204010ba2c1a29f9df4fd78",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
