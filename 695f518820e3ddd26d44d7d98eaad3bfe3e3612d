@@ -52,6 +52,75 @@
       "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e2e6f010",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:07:25Z",
+      "side": 1,
+      "message": "+1 to this. I find it weird. Since in this case we are bolding the whole word let\u0027s do this in templates.",
+      "parentUuid": "0ee75395_d1bd0018",
+      "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_42e23c01",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:07:25Z",
+      "side": 1,
+      "message": "Any reason the bolding cannot happen in the template itself? Seems to be a weird thing to translate...",
+      "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_62a9c08c",
+        "filename": "less/variables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:07:25Z",
+      "side": 1,
+      "message": "Mmm not sure about this name lol.\nMaybe @grayLighest would be more applicable here.\n\nAlso when do we draw the line with introducing more grays? :)",
+      "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_42b91ce5",
+        "filename": "tests/javascripts/modules/languagesNew/test_languages.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:07:25Z",
+      "side": 1,
+      "message": "I\u0027m wondering if we should start using templates in the test folder to do this kind of thing and make our tests more readable.. what do you think?",
+      "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
