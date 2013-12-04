@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_2b995b71",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2013-12-04T03:18:09Z",
+      "side": 1,
+      "message": "Left over from debugging? :P",
+      "revId": "03ad54a637062aa456e58388e86457539de2f0e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
