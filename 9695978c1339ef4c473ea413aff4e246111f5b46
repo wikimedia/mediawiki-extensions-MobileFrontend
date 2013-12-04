@@ -69,6 +69,24 @@
       "revId": "9695978c1339ef4c473ea413aff4e246111f5b46",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_2275f8c8",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:43:53Z",
+      "side": 1,
+      "message": "No I\u0027m fine with that. I just don\u0027t like the duplication of popup.show - have a single function called reportError\n\ne.g.\nreportError: function( msg ) {\npopup.show( msg, \u0027toast error\u0027 );\n}",
+      "parentUuid": "0ee75395_e2c83053",
+      "revId": "9695978c1339ef4c473ea413aff4e246111f5b46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
