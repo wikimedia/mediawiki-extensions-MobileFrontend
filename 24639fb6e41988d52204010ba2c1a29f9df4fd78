@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_fdc8d5ab",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-04T20:24:39Z",
+      "side": 1,
+      "message": "I find this comment to be confusing. Can you explain a little more here or otherwise clarify what is happening? To me, this reads as when I go to Special:RecentChanges I will see Special:History, but it is not obvious that in our case, Special:History w/o params will show history for the whole wiki.",
+      "revId": "24639fb6e41988d52204010ba2c1a29f9df4fd78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_dd95118c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-04T20:24:39Z",
+      "side": 1,
+      "message": "this is a really confusing comment considering you\u0027re pointing $list[\u0027Contributions\u0027] to SpecialMobileContributions.",
+      "revId": "24639fb6e41988d52204010ba2c1a29f9df4fd78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_1dadb9e7",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-04T20:24:39Z",
+      "side": 1,
+      "message": "i would enforce that $msg be a message object, otherwise line 42 will result in errors. alternatively, provide a little more flexibility on line 42 to take strings too but that will add complexity that is probably not necessary atm",
+      "revId": "24639fb6e41988d52204010ba2c1a29f9df4fd78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
