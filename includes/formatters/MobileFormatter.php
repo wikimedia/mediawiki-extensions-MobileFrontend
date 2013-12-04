@@ -48,6 +48,8 @@ abstract class MobileFormatter extends HtmlFormatter {
 	 * @return MobileFormatter
 	 */
 	public static function newFromContext( $context, $html ) {
+		global $wgMFWap;
+
 		wfProfileIn( __METHOD__ );
 
 		$title = $context->getTitle();
@@ -56,7 +58,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 		$isSpecialPage = $title->isSpecialPage();
 
 		$html = self::wrapHTML( $html );
-		if ( $context->getContentFormat() === 'WML' ) {
+		if ( $context->getContentFormat() === 'WML' && $wgMFWap === 'enabled' ) {
 			$wmlContext = new WmlContext( $context );
 			$formatter = new MobileFormatterWML( $html, $title, $wmlContext );
 		} else {

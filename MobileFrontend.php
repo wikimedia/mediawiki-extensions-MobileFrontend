@@ -449,3 +449,16 @@ $wgMFEnableBetaDiff = false;
  * Controls whether API action=mobileview should have every HTML section tidied for invalid markup
  */
 $wgMFTidyMobileViewSections = true;
+
+/**
+ * Controls the use of WAP view. Possible values:
+ *   enabled      - WAP is enabled;
+ *   transitional - disabled but output still varied by X-WAP and requests with X-WAP: yes have shorter expiry time;
+ *   disabled     - WAP is disabled;
+ */
+$wgMFWap = 'enabled';
+
+/**
+ * Maximum HTTP lifetime for page views with $wgMFWap = 'transitional'
+ */
+$wgMFTransitionalWapLifetime = 3 * 86400;

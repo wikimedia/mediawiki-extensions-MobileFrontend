@@ -706,12 +706,16 @@ class SkinMinerva extends SkinTemplate {
 	//
 
 	public function outputMobilePage() {
-		global $wgMFNoindexPages;
+		global $wgMFNoindexPages, $wgMFWap, $wgMFTransitionalWapLifetime;
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		$out->setTarget( 'mobile' );
 		if ( $out && $wgMFNoindexPages ) {
 			$out->setRobotPolicy( 'noindex,nofollow' );
+		}
+		# Restrict cache lifetime for potentially WAPy requests during the transitional period
+		if ( $wgMFWap == 'transitional' && $this->getRequest()->getText( 'X-WAP' ) == 'yes' ) {
+			$out->setSquidMaxage( min( $out->mSquidMaxage, $wgMFTransitionalWapLifetime ) );
 		}
 
 		wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
