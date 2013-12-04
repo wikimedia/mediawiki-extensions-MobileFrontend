@@ -34,6 +34,24 @@
       "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_d1bd0018",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-04T11:55:19Z",
+      "side": 1,
+      "message": "I\u0027m arguing that the use of bold is a bad thing. Some scripts provide a bad rendering. This is why I referred to the mailing list post.\n\nMediaWiki makes \u0027\u0027 italic, and \u0027\u0027\u0027 bold. These elements cannot be styled with CSS based on language. If we were to use \u003cem\u003e and \u003cstrong\u003e we would be able to style based on language.\n\nSo even if you don\u0027t think it\u0027s a good idea to move the bolding out of the string and into the code, what\u0027s against using \u003cstrong\u003e and \u003cem\u003e in our UI instead of bold and italics?",
+      "parentUuid": "0ee75395_8b3d0a2c",
+      "revId": "695f518820e3ddd26d44d7d98eaad3bfe3e3612d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
