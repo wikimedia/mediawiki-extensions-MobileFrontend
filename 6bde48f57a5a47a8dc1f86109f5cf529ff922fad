@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_6239c0ee",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:46:30Z",
+      "side": 1,
+      "message": "I\u0027m not sure about this approach. Why can\u0027t we just stop it from saving when $.trim( val ).length \u003d\u003d 0? Why complicate things with yet another config variable...?",
+      "revId": "6bde48f57a5a47a8dc1f86109f5cf529ff922fad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
