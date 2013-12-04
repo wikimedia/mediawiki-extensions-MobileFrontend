@@ -1,6 +1,7 @@
 ( function( M, $, ve ) {
 	var OverlayNew = M.require( 'OverlayNew' ),
 		Page = M.require( 'Page' ),
+		popup = M.require( 'notifications' ),
 		VisualEditorOverlay;
 
 	VisualEditorOverlay = OverlayNew.extend( {
@@ -23,7 +24,24 @@
 			this.target = new ve.init.mw.MobileViewTarget( this.$( '.surface' ), options.sectionId );
 			this.target.activating = true;
 			this.target.load();
-			this.target.connect( this, { 'save': 'onSave', 'surfaceReady': 'onSurfaceReady' } );
+			this.target.connect( this, {
+				save: 'onSave',
+				saveAsyncBegin: 'showSpinner',
+				saveAsyncComplete: 'clearSpinner',
+				saveErrorEmpty: 'onSaveError',
+				// FIXME: Expand on save errors by having a method for each
+				saveErrorSpamBlacklist: 'onSaveError',
+				saveErrorAbuseFilter: 'onSaveError',
+				saveErrorBlocked: 'onSaveError',
+				saveErrorNewUser: 'onSaveError',
+				saveErrorCaptcha: 'onSaveError',
+				saveErrorUnknown: 'onSaveError',
+				surfaceReady: 'onSurfaceReady',
+				loadError: 'onLoadError',
+				conflictError: 'onConflictError',
+				showChangesError: 'onShowChangesError',
+				serializeError: 'onSerializeError'
+			} );
 		},
 		postRender: function( options ) {
 			// Save button
@@ -57,8 +75,14 @@
 			this.$( '.surface, .summary-area' ).hide();
 			this.target.save( this.docToSave, { 'summary': summary } );
 		},
+		showSpinner: function () {
+			this.$spinner.show();
+		},
 		clearSpinner: function() {
 			this.$spinner.hide();
+		},
+		reportError: function ( msg ) {
+			popup.show( msg, 'toast error' );
 		},
 		onSave: function() {
 			var title = mw.config.get( 'wgTitle' );
@@ -76,6 +100,21 @@
 		onTransact: function () {
 			this.hasChanged = true;
 			this.$continueBtn.prop( 'disabled', false );
+		},
+		onLoadError: function () {
+			this.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );
+		},
+		onSerializeError: function ( jqXHR, status ) {
+			this.reportError( mw.msg( 'visualeditor-serializeerror', status ) );
+		},
+		onConflictError: function () {
+			this.reportError( mw.msg( 'mobile-frontend-editor-error-conflict' ) );
+		},
+		onShowChangesError: function () {
+			this.reportError( mw.msg( 'visualeditor-differror' ) );
+		},
+		onSaveError: function () {
+			this.reportError( mw.msg( 'mobile-frontend-editor-error' ) );
 		},
 		// FIXME: Code duplication with EditorOverlay.js, Needs abstraction
 		hide: function() {
