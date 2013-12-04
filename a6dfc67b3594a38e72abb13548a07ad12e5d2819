@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a280e88e",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:44:44Z",
+      "side": 1,
+      "message": "See comment on patchset 1.",
+      "revId": "a6dfc67b3594a38e72abb13548a07ad12e5d2819",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_824f2497",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:44:44Z",
+      "side": 1,
+      "message": "Drop the todo note this is fine. This code is only enabled if VisualEditor is present so from my perspective we should just use the same error message.",
+      "revId": "a6dfc67b3594a38e72abb13548a07ad12e5d2819",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
