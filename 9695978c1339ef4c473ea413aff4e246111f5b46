@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_a2d228ff",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2013-12-04T19:20:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ee75395_a28fc877",
+      "revId": "9695978c1339ef4c473ea413aff4e246111f5b46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_62f1c0fd",
         "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-04T18:51:32Z",
       "side": 1,
       "message": "the repetition in all of these makes me thing a generic error handler will be useful - it will make things easier if the classes ever need to change.\ne.g. reportError: function( msg ) {},",
+      "revId": "9695978c1339ef4c473ea413aff4e246111f5b46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e2c83053",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2013-12-04T19:20:52Z",
+      "side": 1,
+      "message": "If each of the save errors have their own events, it saves on replicating the logic from VE to determine what error we are working with here.  It\u0027s either duplicate the logic or have an event for each error.",
+      "parentUuid": "0ee75395_62f1c0fd",
       "revId": "9695978c1339ef4c473ea413aff4e246111f5b46",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
