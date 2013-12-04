@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_629540e6",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:34:47Z",
+      "side": 1,
+      "message": "Address todo",
+      "revId": "c2f5d226ed25e917d5dc6dfea19c0b51d66cc8f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_c2f88c48",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T19:34:47Z",
+      "side": 1,
+      "message": "remove this line",
+      "revId": "c2f5d226ed25e917d5dc6dfea19c0b51d66cc8f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
