@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a28fc877",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T18:51:32Z",
+      "side": 1,
+      "message": "Don\u0027t quote the first parameter. I know VE\u0027s coding conventions are different but that\u0027s how things work here ;-)",
+      "revId": "9695978c1339ef4c473ea413aff4e246111f5b46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_62f1c0fd",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-04T18:51:32Z",
+      "side": 1,
+      "message": "the repetition in all of these makes me thing a generic error handler will be useful - it will make things easier if the classes ever need to change.\ne.g. reportError: function( msg ) {},",
+      "revId": "9695978c1339ef4c473ea413aff4e246111f5b46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
