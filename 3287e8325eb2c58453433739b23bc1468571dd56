@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_94299b38",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-05T18:04:57Z",
+      "side": 1,
+      "message": "Why set it at all here?",
+      "revId": "3287e8325eb2c58453433739b23bc1468571dd56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_742cd745",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-05T18:04:57Z",
+      "side": 1,
+      "message": "Setting it twice seems weird. Can\u0027t we just make one call to addJsConfigVars ?",
+      "revId": "3287e8325eb2c58453433739b23bc1468571dd56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_d4ff23a6",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-05T18:04:57Z",
+      "side": 1,
+      "message": "I wonder if we should use the existing config variable wgIsPageEditable - but I guess that would mean something slightly different in this context.",
+      "revId": "3287e8325eb2c58453433739b23bc1468571dd56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
