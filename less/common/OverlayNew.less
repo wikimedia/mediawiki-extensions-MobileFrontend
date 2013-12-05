@@ -76,11 +76,11 @@
 		}
 
 		.v-border:first-child {
-			border-right: 1px solid #cacaca;
+			border-right: 1px solid @grayLight;
 		}
 
 		.v-border:last-child li:last-child {
-			border-left: 1px solid #cacaca;
+			border-left: 1px solid @grayLight;
 		}
 
 		&.with-margins {
@@ -139,9 +139,13 @@
 		}
 	}
 
+	input, textarea {
+		padding: .5em;
+	}
+
 	.panel {
-		padding: @contentMargin;
-		border-bottom: 1px solid @grayLight;
+		padding: 12px @contentMargin;
+		border-bottom: 1px solid @grayLightest;
 	}
 
 	.license {
@@ -154,6 +158,14 @@
 		min-height: 18px;
 		margin-top: .5em;
 		line-height: 1.4;
+	}
+
+	h3 {
+		font-weight: normal;
+		font-size: .9em;
+		padding: .3em @contentMargin;
+		background-color: @grayLightest;
+		color: @grayMedium;
 	}
 
 	// AbuseFilterOverlay

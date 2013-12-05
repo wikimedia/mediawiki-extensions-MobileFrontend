@@ -68,7 +68,7 @@ $messages['en'] = array (
 	'mobile-frontend-on' => 'ON',
 	'mobile-frontend-featured-article' => 'Today\'s featured content',
 	'mobile-frontend-news-items' => 'In The News',
-	'mobile-frontend-language' => 'Language:',
+	'mobile-frontend-language-heading' => '<strong>Languages</strong>',
 	'mobile-frontend-language-article-heading' => 'Read in another language',
 	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-header' => 'This page is available in $1 {{PLURAL:$1|language|languages}}',
@@ -477,7 +477,7 @@ See also:
 {{Identical|On}}',
 	'mobile-frontend-featured-article' => 'The title that will appear before the element with the mf-tfa selector.',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
-	'mobile-frontend-language' => '{{Identical|Language}}',
+	'mobile-frontend-language-heading' => 'The title for the list of languages for a page.',
 	'mobile-frontend-language-article-heading' => 'A heading within the page the content of which lists the other languages available for this page: translate the message considering the list to have an undetermined number of items.',
 	'mobile-frontend-current-language' => '{{optional}}',
 	'mobile-frontend-language-header' => 'Header at top of language selection overlay describing number of languages that it is possible to read the page in

@@ -505,7 +505,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
-			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
 		),
 		'templates' => array(
@@ -619,7 +618,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.stable.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/common-js.less',
-			'less/modules/languages.less',
 			'less/modules/watchstar.less',
 			'less/modules/tutorials.less',
 		),
@@ -676,8 +674,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'section',
 			'wikitext/commons-upload',
-			// LanguageOverlay.js
-			'overlays/languages',
 			'overlays/cleanup',
 			// search.js and Nearby.js
 			'articleList',
@@ -701,8 +697,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/notification.js',
 			'javascripts/common/Page.js',
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
-			// Language specific code
-			'javascripts/common/languages/LanguageOverlay.js',
 		),
 		'messages' => array(
 			// mf-navigation.js
@@ -712,11 +706,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// LearnMoreOverlay.js, newbie.js
 			'cancel',
-
-			// LanguageOverlay.js
-			'mobile-frontend-language-header',
-			'mobile-frontend-language-site-choose',
-			'mobile-frontend-language-footer',
 
 			// page.js
 			'mobile-frontend-talk-overlay-header',
@@ -773,7 +762,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
 			'javascripts/modules/mf-toggle.js',
-			'javascripts/modules/languages/languages.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/mf-watchstar.js',
@@ -835,6 +823,48 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for search.js
 			'mobile-frontend-search-help',
 			'mobile-frontend-search-noresults',
+		),
+	),
+
+	// FIXME: remove when new overlays in stable
+	'mobile.languages' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+		),
+		'styles' => array(
+			'less/modules/languages.less',
+		),
+		'scripts' => array(
+			'javascripts/modules/languages/LanguageOverlay.js',
+			'javascripts/modules/languages/languages.js',
+		),
+		'templates' => array(
+			'overlays/languages',
+		),
+		'messages' => array(
+			'mobile-frontend-language-header',
+			'mobile-frontend-language-site-choose',
+			'mobile-frontend-language-footer',
+		),
+	),
+
+	'mobile.languages.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays.beta',
+		),
+		'scripts' => array(
+			'javascripts/modules/languagesNew/LanguageOverlay.js',
+			'javascripts/modules/languagesNew/languages.js',
+			'javascripts/modules/languagesNew/preferred.js',
+		),
+		'templates' => array(
+			'modules/languagesNew/LanguageOverlay',
+		),
+		'messages' => array(
+			'mobile-frontend-language-heading',
+			'mobile-frontend-language-header',
+			'mobile-frontend-language-variant-header' => array( 'parse' ),
+			'mobile-frontend-language-site-choose',
 		),
 	),
 

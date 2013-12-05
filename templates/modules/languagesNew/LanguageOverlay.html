@@ -1,0 +1,25 @@
+<div class="panel">
+	<input type="search" class="search" placeholder="{{placeholder}}">
+</div>
+{{#variantHeader}}
+<h3 class="mw-mf-overlay-header">{{{variantHeader}}}</h3>
+<ul class="page-list">
+	{{#variants}}
+		<li>
+			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langName}}</span>{{#pageName}}  ({{pageName}}){{/pageName}}</a>
+		</li>
+	{{/variants}}
+</ul>
+{{/variantHeader}}
+{{#header}}
+{{#variantHeader}}
+<h3 class="mw-mf-overlay-header">{{{header}}}</h3>
+{{/variantHeader}}
+<ul class="page-list">
+	{{#languages}}
+		<li {{#preferred}}class="preferred"{{/preferred}}>
+			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langName}}</span>{{#pageName}} ({{pageName}}){{/pageName}}</a>
+		</li>
+	{{/languages}}
+</ul>
+{{/header}}

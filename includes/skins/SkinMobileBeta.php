@@ -61,6 +61,7 @@ class SkinMobileBeta extends SkinMobile {
 		$modules['search'] = array( 'mobile.search.beta' );
 		$modules['issues'] = array( 'mobile.issues.beta' );
 		$modules['editor'] = array( 'mobile.editor.beta' );
+		$modules['languages'] = array( 'mobile.languages.beta' );
 		// turn off stable only modules
 		$modules['stableonly'] = array();
 		return $modules;
