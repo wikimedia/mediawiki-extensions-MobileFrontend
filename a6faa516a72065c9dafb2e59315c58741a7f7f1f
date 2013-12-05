@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_d494c38f",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-05T17:56:23Z",
+      "side": 1,
+      "message": "Don\u0027t make this is a local as it means you can only have one EditBox on a page. We should encourage reusability. Thus, it is probably best as a local variable on EditBox.",
+      "revId": "a6faa516a72065c9dafb2e59315c58741a7f7f1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_b48fff77",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-05T17:56:23Z",
+      "side": 1,
+      "message": "Use this.initialUserDescription",
+      "revId": "a6faa516a72065c9dafb2e59315c58741a7f7f1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
