@@ -199,6 +199,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 			'class' => 'talk',
 			'href' => $this->targetUser->getTalkPage()->getLocalUrl(),
 		);
+		// FIXME: What if this is the user's own profile? Should we change the message?
 		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk', $this->targetUser->getName() ) );
 	}
 
@@ -257,24 +258,25 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$this->targetUser = User::newFromName( $par );
 			// Make sure this is a valid registered user and not an invalid username (e.g. ip see bug 56822)
 			if ( $this->targetUser && $this->targetUser->getId() ) {
+				// FIXME: There's probably a cleaner way to do this.
+				$userDescPageName = $this->targetUser->getUserPage()->getPrefixedText() . '/UserProfileIntro';
+				$userDescPageTitle = Title::newFromText( $userDescPageName );
 
 				// See if user is allowed to edit this user profile
 				$user = $this->getUser();
 				if ( $user->isLoggedIn() &&
-					$user->isAllowed( 'edit' ) &&
-					$user->getId() === $this->targetUser->getId()
+					$user->getId() === $this->targetUser->getId() &&
+					$userDescPageTitle->quickUserCan( 'edit', $user )
 				) {
 					$this->editable = true;
+					$out->addJsConfigVars( array( 'wgMFUserCanEditProfile' => true ) );
 				}
 
 				// Prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$activityHtml = $this->getLastEditHtml() . $this->getLastUploadHtml()
 					. $this->getLastThanksHtml();
-
-				// FIXME: There's probably a cleaner way to do this.
-				$userDescPageName = $this->targetUser->getUserPage()->getPrefixedText() . '/UserProfileIntro';
-				$this->userDescription = $this->getLang()->truncate( $this->getWikiPageText( $userDescPageName ),
+				$this->userDescription = $this->getLang()->truncate( $this->getWikiPageText( $userDescPageTitle ),
 					self::MAX_DESCRIPTION_CHARS );
 
 				$summary = $this->getUserSummary();
@@ -316,19 +318,16 @@ class SpecialUserProfile extends MobileSpecialPage {
 
 	/**
 	 * Retrieve the text of a WikiPage
-	 * @param string $wikiPageTitle The title of the WikiPage
+	 * @param Title $title The title object of the WikiPage
 	 * @return string The text of the page
 	 */
-	protected function getWikiPageText( $wikiPageTitle ) {
+	protected function getWikiPageText( Title $title ) {
 		$text = '';
-		$title = Title::newFromText( $wikiPageTitle );
-		if ( $title ) {
-			$wikiPage = WikiPage::newFromID( $title->getArticleID() );
-			if ( $wikiPage ) {
-				$content = $wikiPage->getContent();
-				if ( $content ) {
-					$text = ContentHandler::getContentText( $content );
-				}
+		$wikiPage = WikiPage::newFromID( $title->getArticleID() );
+		if ( $wikiPage ) {
+			$content = $wikiPage->getContent();
+			if ( $content ) {
+				$text = ContentHandler::getContentText( $content );
 			}
 		}
 		return $text;
