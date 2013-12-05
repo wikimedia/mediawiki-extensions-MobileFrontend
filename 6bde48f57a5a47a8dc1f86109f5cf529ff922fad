@@ -16,6 +16,24 @@
       "revId": "6bde48f57a5a47a8dc1f86109f5cf529ff922fad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e55157de",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-05T00:38:14Z",
+      "side": 1,
+      "message": "Because they have to be able to blank their description if they want to.",
+      "parentUuid": "0ee75395_6239c0ee",
+      "revId": "6bde48f57a5a47a8dc1f86109f5cf529ff922fad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
