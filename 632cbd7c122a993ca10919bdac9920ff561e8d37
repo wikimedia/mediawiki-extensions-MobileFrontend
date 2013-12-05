@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_c811cafd",
+        "filename": "templates/EditBox.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-05T03:50:10Z",
+      "side": 1,
+      "message": "If you put the edit button inside the user-description, it gets wiped out when a new user description is saved. It should either be moved outside of the user-description div or recreated along with the new description.",
+      "revId": "632cbd7c122a993ca10919bdac9920ff561e8d37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
