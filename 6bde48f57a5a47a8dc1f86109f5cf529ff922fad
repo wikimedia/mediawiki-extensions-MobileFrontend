@@ -34,6 +34,24 @@
       "revId": "6bde48f57a5a47a8dc1f86109f5cf529ff922fad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_25f61fd5",
+        "filename": "javascripts/specials/userprofile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-05T00:43:59Z",
+      "side": 1,
+      "message": "Also, this config var only exists in the context of a single SpecialPage, so it\u0027s not like it\u0027s polluting the global config space.",
+      "parentUuid": "0ee75395_e55157de",
+      "revId": "6bde48f57a5a47a8dc1f86109f5cf529ff922fad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
