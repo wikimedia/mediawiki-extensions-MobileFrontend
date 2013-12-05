@@ -72,8 +72,8 @@
 			username = mw.config.get( 'wgUserName' ),
 			text = $container.find( '.user-description' ).text() || undefined;
 
-		// If current user is this person make it editable
-		if ( $( 'h1' ).text() === username ) {
+		// If current user is allowed to edit this profile, make it editable
+		if ( mw.config.get( 'wgMFUserCanEditProfile' ) ) {
 			new EditBox( { el: $container, description: text, title: 'User:' + username + '/UserProfileIntro' } );
 		}
 	}
