@@ -7,20 +7,7 @@
 
 .profile {
 	margin: 1em 0 0 0;
-	text-align: center;
 	color: @grayMedium;
-
-	.talk {
-		color: @blueBase;
-		background-position: left;
-		display: inline-block;
-		padding: 8px 0 8px 30px;
-		border-top: solid 1px @blueBase;
-		border-bottom: solid 1px @blueBase;
-		background-image: url(images/profile/talk.png);
-		.background-size( auto, 24px );
-		font-size: 0.9em;
-	}
 
 	a {
 		color: @grayMediumDark;
@@ -34,25 +21,27 @@
 	}
 
 	.user-description-container {
-		padding: 0px 35px 30px 35px;
+		padding: 0 (@contentMargin * 2) 1.5em;
 		position: relative;
 
 		.user-description-placeholder,
 		.user-description {
+			display: inline;
 			font-family: @fontFamilyHeading;
 			font-style: italic;
 			font-size: 1.2em;
+			// FIXME: clean up line-height mess
+			line-height: 1.65;
 		}
 
 		.edit-button {
-			position: absolute;
-			top: 0px;
-			right: 10px;
-			background-image: url(images/profile/edit.png);
-			.background-size( 20px, 20px );
+			display: inline-block;
+			vertical-align: middle;
+			background: url(images/profile/edit.png) 50% 30% no-repeat;
+			.background-size( 16px, auto );
 			text-indent: 9999px;
-			width: 20px;
-			height: 20px;
+			width: 32px;
+			height: 32px;
 			cursor: pointer;
 		}
 
@@ -80,34 +69,49 @@
 		text-transform: uppercase;
 	}
 
-	@margin: 4px;
+	@margin: @contentMargin / 2;
 	.card-container {
 		text-align: center;
-		margin-right: @margin;
-		margin-bottom: @margin;
-		display: table;
+		background: #eee;
+		padding: 1px;
 	}
 
 	.card {
+		background: #fff;
 		color: @grayMediumDark;
-		// optimised to show 2 cards on 320px
-		width: 160px - (@margin * 2);
-		float: left;
 		border: solid 1px @grayLight;
-		display: inline-block;
-		margin: 0 0 @margin @margin;
-		display: table-cell;
+		margin: 0 @margin @margin;
+		text-align: left;
+
+		img, .caption {
+			display: inline-block;
+		}
+
+		img {
+			width: 33%;
+		}
 
 		.caption {
-			text-align: left;
+			width: 66%;
+			vertical-align: top;
 			padding: 8px;
+			.box-sizing(border-box);
 		}
 	}
 
 	.footer {
+		text-align: center;
 		color: @grayMediumDark;
 		clear: both;
 		padding: 2em 0 0;
+
+		.talk {
+			margin-top: 1.5em;
+			color: @blueBase;
+			padding-left: 40px;
+			background: url(images/profile/talk.png) 10px 50% no-repeat;
+			.background-size( 24px, auto );
+		}
 	}
 }
 

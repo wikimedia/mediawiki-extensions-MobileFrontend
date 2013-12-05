@@ -196,7 +196,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 	protected function getTalkLink() {
 		// replace secondary icon
 		$attrs = array(
-			'class' => 'talk',
+			'class' => 'talk button',
 			'href' => $this->targetUser->getTalkPage()->getLocalUrl(),
 		);
 		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk', $this->targetUser->getName() ) );
@@ -241,7 +241,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 			. Linker::link( $this->targetUser->getUserPage(),
 				$this->msg( 'mobile-frontend-profile-userpage-link' )->escaped()
 			)
-			. Html::closeElement( 'div' );
+			. Html::closeElement( 'div' )
+			. $this->getTalkLink();
 	}
 
 	public function executeWhenAvailable( $par ) {
@@ -277,28 +278,17 @@ class SpecialUserProfile extends MobileSpecialPage {
 				$this->userDescription = $this->getLang()->truncate( $this->getWikiPageText( $userDescPageName ),
 					self::MAX_DESCRIPTION_CHARS );
 
-				$summary = $this->getUserSummary();
-				$talkLink = $this->getTalkLink();
-				if ( $summary ) {
-					$lead = $summary . $talkLink;
-				} else {
-					$lead = '';
-				}
-
 				$html = Html::element( 'h1', array(), $this->targetUser->getName() )
 					. Html::openElement( 'div', array( 'class' => 'profile content' ) )
-					. $lead;
+					. $this->getUserSummary();
 
 				if ( $activityHtml ) {
-					$html .= Html::openElement( 'h2' )
+					$html .= Html::openElement( 'div', array( 'class' => 'card-container' ) )
+						. Html::openElement( 'h2' )
 						. $this->msg( 'mobile-frontend-profile-activity-heading' )
 						. Html::closeElement( 'h2' )
-						. Html::openElement( 'div', array( 'class' => 'card-container' ) )
 						. $activityHtml
 						. Html::closeElement( 'div' );
-				}
-				if ( !$summary ) {
-					$html .= $talkLink;
 				}
 				$html .= $this->getUserFooterHtml()
 					. Html::closeElement( 'div' );
