@@ -39,13 +39,13 @@
 		 * @return {jQuery.Deferred} Object returned by $.ajax()
 		 */
 		ajax: function( data, options ) {
-			var key, request, self = this;
+			var key, request, self = this, isFormData;
 			options = $.extend( { url: apiUrl, dataType: 'json' }, options );
+			isFormData = typeof FormData !== 'undefined' && data instanceof FormData;
 
-			if (
-				typeof data !== 'string' &&
-					( typeof FormData === 'undefined' || !( data instanceof FormData ) )
-			) {
+			if ( isFormData ) {
+				data.append( 'format', 'json' );
+			} else if ( typeof data !== 'string' ) {
 				for ( key in data ) {
 					if ( data[key] === false ) {
 						delete data[key];
@@ -53,8 +53,9 @@
 						data[key] = data[key].join( '|' );
 					}
 				}
+				data = $.extend( { format: 'json' }, data );
 			}
-			options.data = $.extend( { format: 'json' }, data );
+			options.data = data;
 
 			options.xhr = function() {
 				var xhr = $.ajaxSettings.xhr();
