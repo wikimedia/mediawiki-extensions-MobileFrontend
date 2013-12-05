@@ -119,15 +119,17 @@ class MobileFrontendHooks {
 		if ( ! $isSpecial ) {
 			$footerlinks = $tpl->data['footerlinks'];
 			$args = $tpl->getSkin()->getRequest()->getValues();
+			// avoid title being set twice
+			unset( $args['title'] );
+
 			/**
 			 * Adds query string to force mobile view if we're not using $wgMobileUrlTemplate
 			 * This is to preserve pretty/canonical links for a happy cache where possible (eg WMF cluster)
 			 */
 			if ( !strlen( $wgMobileUrlTemplate ) ) {
-				// avoid title being set twice
-				unset( $args['title'] );
 				$args['mobileaction'] = 'toggle_view_mobile';
 			}
+
 			$mobileViewUrl = $title->getFullURL( $args );
 			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( $mobileViewUrl );
 
