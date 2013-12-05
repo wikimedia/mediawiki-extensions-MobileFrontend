@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_b44dbfc9",
+        "filename": "includes/modules/MFResourceLoaderUserModule.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-05T18:56:36Z",
+      "side": 1,
+      "message": "This is always getting set as null for me, even though I\u0027m logged in.",
+      "revId": "f8b77b825631af5858f9d017c59ff1232cf55910",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_b476dfff",
+        "filename": "includes/skins/SkinMobileAlpha.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-05T18:56:36Z",
+      "side": 1,
+      "message": "No Oxford English? :)",
+      "revId": "f8b77b825631af5858f9d017c59ff1232cf55910",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
