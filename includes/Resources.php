@@ -245,18 +245,37 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-abusefilter-read-more',
 		),
 	),
+	'mobile.editor.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/modules/editor.less',
+		),
+	),
+
+	'mobile.editor.ve' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'ext.visualEditor.mobileViewTarget',
+			'mobile.beta',
+			'mobile.editor.common',
+			'mobile.stable.common',
+			'mobile.editor.styles',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/VisualEditorOverlay.js',
+		),
+		'templates' => array(
+			'modules/editor/VisualEditorOverlay',
+		),
+	),
 
 	// FIXME: clean up when new overlays in stable (use single mobile.edit as before)
 	'mobile.editor.overlay.stable' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.editor.common',
+			'mobile.editor.styles',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/AbuseFilterOverlay.js',
 			'javascripts/modules/editor/EditorOverlay.js',
-		),
-		'styles' => array(
-			'less/modules/editor.less',
 		),
 		'templates' => array(
 			'modules/editor/EditorOverlay',
