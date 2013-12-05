@@ -4,6 +4,7 @@
 		EditBox;
 
 	EditBox = View.extend( {
+		initialUserDescription : '',
 		template: M.template.get( 'EditBox' ),
 		defaults: {
 			limit: limit,
@@ -20,6 +21,7 @@
 			} );
 		},
 		switchToEditMode: function() {
+			this.initialUserDescription = this.$( 'textarea' ).val();
 			this.$( '.editor' ).show();
 			this.$( '.edit-button, .user-description' ).hide();
 		},
@@ -36,16 +38,23 @@
 			this.setCount();
 			// Initialize the edit button
 			this.$( '.edit-button' ).on( 'click', $.proxy( self, 'switchToEditMode' ) );
+			// Initialize submit button for editing form
 			this.$( '.editor button' ).on( 'click', function() {
 				var val = self.$( 'textarea' ).val();
-				$loader.show();
-				$form.hide();
-				self.api.setContent( val );
-				self.api.save( { summary: mw.msg( 'mobile-frontend-profile-edit-summary' ) } ).done( function() {
-					$loader.hide();
-					self.$( '.user-description' ).text( val || options.placeholder );
+				// If the initial description and new description are both empty, just
+				// switch back to the view mode. (bug 57931)
+				if ( $.trim( val ).length === 0 && self.initialUserDescription.length === 0 ) {
 					self.switchToViewMode();
-				} );
+				} else {
+					$loader.show();
+					$form.hide();
+					self.api.setContent( val );
+					self.api.save( { summary: mw.msg( 'mobile-frontend-profile-edit-summary' ) } ).done( function() {
+						$loader.hide();
+						self.$( '.user-description' ).text( val || options.placeholder );
+						self.switchToViewMode();
+					} );
+				}
 			} );
 			this._super( options );
 		},
