@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_3441af0e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-05T17:58:39Z",
+      "side": 1,
+      "message": "I\u0027ll let this pass for the time being since it is useful but unrelated whitespace is never a good thing in diff\u0027s (especially when they get large) as it drawers attention away from the real change :)",
+      "revId": "46064865056cbde34b33707bd0fceed22f81d617",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
