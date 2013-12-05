@@ -59,36 +59,6 @@ To run only JS tests:
   make qunit
 
 ==== Selenium tests ====
-To run the Selenium tests you will have to install Ruby (for the exact
-version see tests/browser/Gemfile), the latest versions of
-RubyGems and Firefox.
 
-The easiest way to install Ruby on *nix is RVM (https://rvm.io/) and on
-Windows RubyInstaller (http://rubyinstaller.org/).
-
-Open terminal in tests/browser. Update RubyGems and install required
-gems with:
-
-  gem update --system
-  gem install bundler
-  bundle install
-
-You will need to create a user account for selenium on your local wiki with the
-username 'Selenium_user' and then store the password in /private/wmf/secret.yml
-in the following format:
-mediawiki_password: <local selenium account password>
-
-Run the tests from the MobileFrontend directory with:
-
-  make cucumber
-
-If you want to run a single set of tests, go to the MobileFrontend/tests/browser/
-directory and call 'bundle exec cucumber' with the path to the test file. For example,
-to run only the watchlist tests:
-
-  bundle exec cucumber features/watchlist.feature
-
-XML report (for Jenkins) is created at tests/browser/reports/junit.
-
-Jenkins is hosted at https://wmf.ci.cloudbees.com/ and it drives
-browsers at http://saucelabs.com/
+For information on how to run Selenium tests please see README file in
+tests/browser directory.
