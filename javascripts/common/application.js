@@ -260,6 +260,10 @@
 		return currentPage;
 	}
 
+	function isBetaGroupMember() {
+		return mw.config.get( 'wgMFMode' ) !== 'stable';
+	}
+
 	$( init );
 
 	$.extend( M, {
@@ -273,6 +277,7 @@
 			return $( '#content div' ).eq( 0 );
 		},
 		getSessionId: getSessionId,
+		isBetaGroupMember: isBetaGroupMember,
 		isLoggedIn: isLoggedIn,
 		isWideScreen: isWideScreen,
 		lockViewport: lockViewport,

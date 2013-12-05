@@ -90,6 +90,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
+			'javascripts/loggingSchemas/mobileWebEditing.js',
 		),
 	),
 
@@ -272,6 +273,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.editor.common',
 			'mobile.editor.styles',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/AbuseFilterOverlay.js',
@@ -777,6 +779,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 			'mobile.references',
 			'mediawiki.language',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
@@ -818,6 +821,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// newbieEditor.js
 			'mobile-frontend-editor-tutorial-summary',
+			'mobile-frontend-editor-tutorial-alt-summary',
 			'mobile-frontend-editor-tutorial-confirm',
 		),
 	),
