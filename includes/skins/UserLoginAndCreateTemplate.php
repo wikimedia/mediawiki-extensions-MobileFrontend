@@ -8,6 +8,20 @@
  * special mobile-specific magic.
  */
 abstract class UserLoginAndCreateTemplate extends QuickTemplate {
+	protected $pageMessageHeaders = array(
+		'Uploads' => 'mobile-frontend-donate-image-login',
+		'Watchlist' => 'mobile-frontend-watchlist-purpose',
+	);
+	protected $pageMessages = array();
+
+	protected $actionMessageHeaders = array(
+		'watch' => 'mobile-frontend-watchlist-purpose',
+		'edit' => 'mobile-frontend-edit-login',
+		'signup-edit' => 'mobile-frontend-edit-login',
+		'' => 'mobile-frontend-generic-login',
+	);
+
+	protected $actionMessages = array();
 
 	/**
 	 * Overload the parent constructor
@@ -70,24 +84,57 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		return false;
 	}
 
-	protected function getHeadMsg() {
+	/**
+	 * Gets the message that should guide a user who is creating an account or logging in to an account.
+	 * @return Array: first element is header of message and second is the content.
+	 */
+	protected function getGuiderMessage() {
 		$req = $this->getRequestContext()->getRequest();
 		if ( $req->getVal( 'returnto' ) && ( $title = Title::newFromText( $req->getVal( 'returnto' ) ) ) ) {
 			list( $returnto, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
+			$title = $title->getText();
 		} else {
 			$returnto = '';
+			$title = '';
 		}
-		$returntoQuery = $req->getVal( 'returntoquery' );
-		if ( $returnto == 'Uploads' ) {
-			$key = 'mobile-frontend-donate-image-login';
-		} elseif ( $returnto == 'Watchlist' || strstr( $returntoQuery, 'article_action=watch' ) ) {
-			$key = 'mobile-frontend-watch-login';
-		} elseif ( strstr( $returntoQuery, 'article_action=photo-upload' ) ) {
-			$key = 'mobile-frontend-photo-upload-login';
+		$returnToQuery = wfCgiToArray( $req->getVal( 'returntoquery' ) );
+		if ( isset( $returnToQuery['article_action'] ) ) {
+			$action = $returnToQuery['article_action'];
 		} else {
-			return '';
+			$action = '';
 		}
-		return wfMessage( $key )->plain();
+
+		$heading = '';
+		$content = '';
+
+		if ( isset( $this->pageMessageHeaders[$returnto] ) ) {
+			$heading = wfMessage( $this->pageMessageHeaders[$returnto] )->parse();
+			if ( isset( $this->pageMessages[$returnto] ) ) {
+				$content = wfMessage( $this->pageMessages[$returnto] )->parse();
+			}
+		} else if ( isset( $this->actionMessageHeaders[$action] ) ) {
+			$heading = wfMessage( $this->actionMessageHeaders[$action], $title )->parse();
+			if ( isset( $this->actionMessages[$action] ) ) {
+				$content = wfMessage( $this->actionMessages[$action], $title )->parse();
+			}
+		}
+		return array( $heading, $content );
+	}
+
+	/**
+	 * Renders a prompt above the login or upload screen
+	 *
+	 */
+	protected function renderGuiderMessage() {
+		$msgs = $this->getGuiderMessage();
+		if ( $msgs[0] ) {
+			echo Html::openElement( 'div', array( 'class' => 'headmsg' ) );
+			echo Html::element( 'strong', array(), $msgs[0] );
+			if ( $msgs[1] ) {
+				echo Html::element( 'div', array(), $msgs[1] );
+			}
+			echo Html::closeElement( 'div' );
+		}
 	}
 
 	protected function getLogoHtml() {

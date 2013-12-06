@@ -757,6 +757,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// editor.js
 			'mobile-frontend-editor-disabled',
 			'mobile-frontend-editor-unavailable',
+			'mobile-frontend-editor-blocked',
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-edit',
 			// modules/editor/EditorOverlay.js and modules/talk.js
