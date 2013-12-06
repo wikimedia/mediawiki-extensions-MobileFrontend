@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_33fd3b05",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-06T21:03:00Z",
+      "side": 1,
+      "message": "s/new article/recently created page/? Same below.",
+      "revId": "a0185297860088663c9b9f688bbe49aedf90cfff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
