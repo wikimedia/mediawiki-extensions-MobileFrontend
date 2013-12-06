@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_c08633be",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-06T20:46:20Z",
+      "side": 1,
+      "message": "This looks fine, but it definitely needs some explanation in the comments. To a casual observer, this would look like a mistake, i.e. reloading the languages after they have already been loaded. I would suggest mentioning bug 57094 at least.",
+      "revId": "465f2138c3c187d030e113e9aefe5ddf9edf4692",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
