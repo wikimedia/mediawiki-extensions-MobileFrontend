@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_162d8541",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1210
+      },
+      "writtenOn": "2013-12-06T22:55:37Z",
+      "side": 1,
+      "message": "I think there\u0027s a typo here - I believe the test is simply examining the page text, so the line should read:\n\npage.text.should match \"#{@random_string}\"\n\nWith that change, the test succeeds for me locally.",
+      "revId": "23acd178e71d45345748a6742714842f3d2e11b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
