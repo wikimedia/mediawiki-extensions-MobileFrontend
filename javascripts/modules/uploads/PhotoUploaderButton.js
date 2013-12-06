@@ -114,7 +114,7 @@
 				}
 			}
 
-			if ( mw.config.get( 'wgMFMode' ) !== 'stable' && mw.config.get( 'wgUserEditCount' ) === 0 ) {
+			if ( M.isBetaGroupMember() && mw.config.get( 'wgUserEditCount' ) === 0 ) {
 				this.$el.on( M.tapEvent( 'click' ), function( ev ) {
 					ev.preventDefault();
 					mw.loader.using( 'mobile.uploads.common', function() {

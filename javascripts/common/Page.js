@@ -27,7 +27,7 @@
 			// For titles from other namespaces use a prefix e.g. Talk:Foo
 			title: '',
 			lead: '',
-			inBetaOrAlpha: mw.config.get( 'wgMFMode' ) !== 'stable',
+			inBetaOrAlpha: M.isBetaGroupMember(),
 			isMainPage: false,
 			talkLabel: mw.msg( 'mobile-frontend-talk-overlay-header' ),
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' )

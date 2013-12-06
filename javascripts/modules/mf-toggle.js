@@ -90,7 +90,7 @@
 			} );
 
 			// In beta expand sections by default on wide screen devices (in beta and alpha)
-			if ( M.isWideScreen() && mw.config.get( 'wgMFMode' ) !== 'stable' ) {
+			if ( M.isWideScreen() && M.isBetaGroupMember() ) {
 				toggle( $elem );
 			}
 		} );

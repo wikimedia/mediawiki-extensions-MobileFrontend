@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	var useNewOverlays = mw.config.get( 'wgMFMode' ) !== 'stable',
+	var useNewOverlays = M.isBetaGroupMember(),
 		LoadingOverlay = useNewOverlays ? M.require( 'LoadingOverlayNew' ) : M.require( 'LoadingOverlay' );
 
 	/**

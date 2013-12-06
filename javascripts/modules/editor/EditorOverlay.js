@@ -5,7 +5,7 @@
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
-		inBetaOrAlpha = mw.config.get( 'wgMFMode' ) !== 'stable',
+		inBetaOrAlpha = M.isBetaGroupMember(),
 		inCampaign = M.query.campaign ? true : false,
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		Section = M.require( 'Section' ),
