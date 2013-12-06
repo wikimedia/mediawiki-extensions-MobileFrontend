@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_731743f3",
+        "filename": "tests/browser/features/upload_image.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T21:34:04Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be 1 level of indentation less?",
+      "revId": "fc5da29b68a491e88cdbdbfb1b1f0d1e8dac7aa1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
