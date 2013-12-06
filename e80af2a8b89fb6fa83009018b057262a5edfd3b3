@@ -16,6 +16,24 @@
       "revId": "e80af2a8b89fb6fa83009018b057262a5edfd3b3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_31009303",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-06T23:50:11Z",
+      "side": 1,
+      "message": "Agreed.\nLet\u0027s create an EditorOverlayBase class which both EditorOverlay and VisualEditorOverlay inherit from to remove this duplication.",
+      "parentUuid": "0ee75395_367f69df",
+      "revId": "e80af2a8b89fb6fa83009018b057262a5edfd3b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
