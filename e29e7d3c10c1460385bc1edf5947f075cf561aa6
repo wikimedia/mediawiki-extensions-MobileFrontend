@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_b3594b92",
+        "filename": "javascripts/loggingSchemas/mobileWebEditing.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:10:43Z",
+      "side": 1,
+      "message": "Can we change the arguments to an object with named properties?\n\nUnderstanding\n\nlog( {\n  action: \u0027tutorial\u0027,\n  sectionId: 0,\n  funnel: \u0027leftNavCta\u0027\n} )\n\nis much easier than\n\nlog( \u0027tutorial\u0027, 0, null, \u0027leftNavCta\u0027 );\n\nPlus, it will make the code shorter:\n\nreturn M.log( \u0027MobileWebEditing\u0027, $.extend( data, options ) );",
+      "revId": "e29e7d3c10c1460385bc1edf5947f075cf561aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_138237cd",
+        "filename": "javascripts/modules/tutorials/newbieEditor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:10:43Z",
+      "side": 1,
+      "message": "Why \"prompt\" and not \"tutorial\"? It\u0027s hard to guess what \"prompt\" means without reading the code.",
+      "revId": "e29e7d3c10c1460385bc1edf5947f075cf561aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
