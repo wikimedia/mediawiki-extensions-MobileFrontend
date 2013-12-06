@@ -6,11 +6,47 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/**  @var String|null timestamp to offset results from */
 	protected $offset;
 
+	/**  @var String name of the special page */
+	protected $specialPageName = 'History';
+
 	/**  @var Title|null if no title passed */
 	protected $title;
 
 	public function __construct() {
-		parent::__construct( 'History' );
+		parent::__construct( $this->specialPageName );
+	}
+
+	/**
+	 * Returns a list of query conditions that should be run against the revision table
+	 *
+	 * @return Array: List of conditions
+	 */
+	protected function getQueryConditions() {
+		$conds = array();
+		if ( $this->title ) {
+			$conds[ 'rev_page' ] = $this->title->getArticleID();
+		} else if ( $this->offset ) {
+				$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
+		}
+		return $conds;
+	}
+
+	/**
+	 * Adds HTML to render a header at the top of the feed
+	 * @param {Message} msg: A message to print in the header bar
+	 * @param {boolean} parse: Whether to parse the message or to escape it (defaults to escape)
+	 *
+	 * @return Array: List of conditions
+	 */
+	protected function renderHeaderBar( $msg, $parse=false ) {
+		$msg = $parse ? $msg->parse() : $msg->escaped();
+		$this->getOutput()->addHtml(
+			Html::openElement( 'div', array( 'class' => 'page-header-bar' ) ) .
+			Html::openElement( 'div' ) .
+			$msg .
+			Html::closeElement( 'div' ) .
+			Html::closeElement( 'div' )
+		);
 	}
 
 	public function executeWhenAvailable( $par = '' ) {
@@ -22,13 +58,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		if ( $par ) {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
-			$out->addHtml(
-				Html::openElement( 'div', array( 'class' => 'page-header-bar' ) ) .
-				Html::openElement( 'div' ) .
-				$this->msg( 'mobile-frontend-history-summary', $this->title->getPrefixedText() )->parse() .
-				Html::closeElement( 'div' ) .
-				Html::closeElement( 'div' )
-			);
+			if ( $this->title && $this->title->exists() ) {
+				$this->renderHeaderBar( $this->msg( 'mobile-frontend-history-summary', $this->title->getText() ), true );
+			}
 		}
 		$res = $this->doQuery();
 		$this->showHistory( $res );
@@ -40,13 +72,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		wfProfileIn( __METHOD__ );
 		$table = 'revision';
 		$dbr = wfGetDB( DB_SLAVE, $table );
-		$conds = array();
-		if ( $this->offset ) {
-			$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
-		}
-		if ( $this->title ) {
-			$conds['rev_page'] = $this->title->getArticleID();
-		}
+		$conds = $this->getQueryConditions();
 		$options = array(
 			'ORDER BY' => 'rev_timestamp DESC',
 			'USE INDEX' => 'page_timestamp',
@@ -73,7 +99,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		wfProfileIn( __METHOD__ );
 		$user = $this->getUser();
 		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
-		$username = $userId === 0 ? '' : $rev->getUserText( Revision::FOR_THIS_USER, $user );
+		if ( $userId === 0 ) {
+			$username = '';
+			$isAnon = true;
+		} else {
+			$username = $rev->getUserText( Revision::FOR_THIS_USER, $user );
+			$isAnon = false;
+		}
 
 		// FIXME: Style differently user comment when this is the case
 		if ( $rev->userCan( Revision::DELETED_COMMENT, $user ) ) {
@@ -105,7 +137,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		} else {
 			$title = $rev->getTitle();
 		}
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title );
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon );
 
 		wfProfileOut( __METHOD__ );
 	}

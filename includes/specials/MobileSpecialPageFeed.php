@@ -38,9 +38,11 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 *
 	 * @return String: HTML code
 	 */
-	protected function renderFeedItemHtml( $ts, $diffLink ='', $username = '', $comment = '', $title = false ) {
+	protected function renderFeedItemHtml( $ts, $diffLink ='', $username = '', $comment = '',
+		$title = false, $isAnon = false ) {
+
 		$out = $this->getOutput();
-		if ( $username === '' ) {
+		if ( $isAnon ) {
 			$username = $this->msg( 'mobile-frontend-changeslist-ip' )->plain();
 			$usernameClass = 'mw-mf-user mw-mf-anon';
 		} else {
@@ -54,8 +56,10 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$html .= Html::openElement( 'div', array( 'class' => 'title' ) );
 		}
 		if ( $title ) {
-			$html .= Html::element( 'h2', array(), $title->getPrefixedText() ) .
-				Html::element( 'div', array( 'class' => $usernameClass ), $username );
+			$html .= Html::element( 'h2', array(), $title->getPrefixedText() );
+			if ( $username ) {
+				$html .= Html::element( 'div', array( 'class' => $usernameClass ), $username );
+			}
 		} else {
 			$html .= Html::openElement( 'h2' ) .
 				Html::element( 'span', array( 'class' => $usernameClass ), $username ) .
