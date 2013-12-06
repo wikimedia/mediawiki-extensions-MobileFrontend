@@ -1,24 +1,15 @@
 ( function( M, $, ve ) {
-	var OverlayNew = M.require( 'OverlayNew' ),
+	var EditorOverlayBase = M.require( 'modules/editorNew/EditorOverlayBase' ),
 		Page = M.require( 'Page' ),
 		popup = M.require( 'notifications' ),
 		VisualEditorOverlay;
 
-	VisualEditorOverlay = OverlayNew.extend( {
-		closeOnBack: true,
-		className: 'overlay editor-overlay',
+	VisualEditorOverlay = EditorOverlayBase.extend( {
 		template: M.template.get( 'modules/editor/VisualEditorOverlay' ),
-		defaults: {
-			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
-			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
-			keepEditingMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
-			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
-			licenseMsg: mw.msg( 'mobile-frontend-editor-license' )
-		},
 		initialize: function( options ) {
 			var self = this;
-			this.hasChanged = false;
 			this._super( options );
+			this.hasChanged = false;
 			this.$spinner = self.$( '.spinner' );
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
 			this.target = new ve.init.mw.MobileViewTarget( this.$( '.surface' ), options.sectionId );
@@ -34,7 +25,7 @@
 				saveErrorAbuseFilter: 'onSaveError',
 				saveErrorBlocked: 'onSaveError',
 				saveErrorNewUser: 'onSaveError',
-				saveErrorCaptcha: 'onSaveError',
+				saveErrorCaptcha: 'onSaveErrorCaptcha',
 				saveErrorUnknown: 'onSaveError',
 				surfaceReady: 'onSurfaceReady',
 				loadError: 'onLoadError',
@@ -67,13 +58,19 @@
 			} );
 		},
 		save: function() {
-			var summary = this.$( '.save-panel input' ).val();
+			var summary = this.$( '.save-panel input' ).val(),
+				options = { summary: summary };
 
 			this.$spinner.show();
 			// Stop the confirmation message from being thrown when you hit save.
 			this.canHide = true;
 			this.$( '.surface, .summary-area' ).hide();
-			this.target.save( this.docToSave, { 'summary': summary } );
+			if ( this.captchaId ) {
+				// Intentional Lcase ve save api properties
+				options.captchaid = this.captchaId;
+				options.captchaword = this.$( '.captcha-word' ).val();
+			}
+			this.target.save( this.docToSave, options );
 		},
 		showSpinner: function () {
 			this.$spinner.show();
@@ -116,20 +113,12 @@
 		onSaveError: function () {
 			this.reportError( mw.msg( 'mobile-frontend-editor-error' ) );
 		},
-		// FIXME: Code duplication with EditorOverlay.js, Needs abstraction
-		hide: function() {
-			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
-			if ( !this.hasChanged || this.canHide || window.confirm( confirmMessage ) ) {
-				return this._super();
-			} else {
-				return false;
-			}
+		onSaveErrorCaptcha: function ( editApi ) {
+			this.captchaId = editApi.captcha.id;
+			this._showCaptcha( editApi.captcha.url );
 		},
-		_showHidden: function( className ) {
-			// can't use jQuery's hide() and show() beause show() sets display: block
-			// and we want display: table for headers
-			this.$( '.hideable' ).addClass( 'hidden' );
-			this.$( className ).removeClass( 'hidden' );
+		_hasChanged: function () {
+			return this.hasChanged;
 		}
 	} );
 

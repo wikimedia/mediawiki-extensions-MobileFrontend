@@ -227,6 +227,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
+			'javascripts/modules/editor/EditorOverlayBase.js',
 		),
 		'templates' => array(
 			'modules/editor/AbuseFilterOverlay',
