@@ -14,7 +14,6 @@
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 			licenseMsg: mw.msg( 'mobile-frontend-editor-license' )
 		},
-
 		initialize: function( options ) {
 			var self = this;
 			this.hasChanged = false;
@@ -33,20 +32,30 @@
 			this._super( options );
 		},
 		prepareForSave: function() {
-			this._showHidden( '.save-header, .save-panel' );
+			var self = this,
+				doc = this.target.surface.getModel().getDocument();
+			// Disable VE surface
+			this.target.surface.getView().disable();
+			self._showHidden( '.save-header, .save-panel' );
+			self.$( '.submit' ).prop( 'disabled', true );
+			this.$spinner.show();
+			// Preload the serialization
+			if ( !this.docToSave ) {
+				this.docToSave = ve.dm.converter.getDomFromModel( doc );
+			}
+			this.target.prepareCacheKey( this.docToSave ).done( function () {
+				self.clearSpinner();
+				self.$( '.submit' ).prop( 'disabled', false );
+			} );
 		},
 		save: function() {
-			var doc = this.target.surface.getModel().getDocument(),
-				summary = this.$( '.save-panel input' ).val();
+			var summary = this.$( '.save-panel input' ).val();
 
 			this.$spinner.show();
 			// Stop the confirmation message from being thrown when you hit save.
 			this.canHide = true;
 			this.$( '.surface, .summary-area' ).hide();
-			this.target.save(
-				ve.dm.converter.getDomFromData( doc.getFullData(), doc.getStore(), doc.getInternalList(), doc.getInnerWhitespace() ),
-				{ 'summary': summary }
-			);
+			this.target.save( this.docToSave, { 'summary': summary } );
 		},
 		clearSpinner: function() {
 			this.$spinner.hide();
