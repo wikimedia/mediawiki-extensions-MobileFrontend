@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_00f9bbe5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-12-06T19:49:00Z",
+      "side": 1,
+      "message": "This empty line means that the bugzilla-gerrit bot will not comment on the bugs about this patch. Not sure if this was intended.",
+      "revId": "94200ad3f224d1934cf00102db70bb667028ad07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
