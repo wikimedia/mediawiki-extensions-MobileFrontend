@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_d6203d98",
+        "filename": "less/common/buttons.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this go after \"\t.buttonBar {\" and then instead of having separate doc messages for inline and wide you\u0027d use KSS modifiers (like a list of variants)?",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_164ea572",
+        "filename": "less/common/common-js.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "Modifiers?",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_56430d43",
+        "filename": "less/common/common.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "Should we document those? This is CSS for article content, not UI.",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_765f3114",
+        "filename": "less/common/typography.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "I would not document that. That\u0027s not reusable CSS, that\u0027s just a rule on \u003chtml\u003e and can\u0027t be used anywhere else.",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_f6f8e1e3",
+        "filename": "less/common/typography.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "???\nDefault browser font size is 16pt (but can be something else). @fontScalingFactor: 0.9. font-size: 100% * @fontScalingFactor \u003d 90%. Where does 16px or 12pt come from?!",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_36888975",
+        "filename": "less/common/typography.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "16pt? Why? Even if we assume browser font size to be 16pt (which can be changed in browser settings), this is 16pt * 4/3.",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_d6fb9ddc",
+        "filename": "less/common/typography.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "16pt * 3/2 * 90% !\u003d 18pt",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_b6e2592c",
+        "filename": "less/common/typography.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "16pt * 7/6 * 90% !\u003d 14pt",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_76ecd120",
+        "filename": "styleguide-template/index.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "What\u0027s with all the return carriages? Does kss-node add that?",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_36d64955",
+        "filename": "styleguide-template/public/less.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T22:27:00Z",
+      "side": 1,
+      "message": "Why do we need less.js?",
+      "revId": "2d484c2f5fe64848c577b8823d0eb09eed493bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
