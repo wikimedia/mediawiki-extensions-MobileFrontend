@@ -278,6 +278,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'modules/editor/VisualEditorOverlay',
 		),
+		// FIXME: these messages should go to mobile.editor.common when new overlays go to stable.
+		'messages' => array(
+			'mobile-frontend-editor-editing-page',
+			'mobile-frontend-editor-previewing-page',
+		),
 	),
 
 	// FIXME: clean up when new overlays in stable (use single mobile.edit as before)

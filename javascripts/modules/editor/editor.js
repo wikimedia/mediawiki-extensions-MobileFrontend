@@ -52,7 +52,10 @@
 			// FIXME: clean up when new overlays in stable
 			var
 				LoadingOverlay = M.require( inStable ? 'LoadingOverlay' : 'LoadingOverlayNew' ),
-				loadingOverlay = new LoadingOverlay();
+				loadingOverlay = new LoadingOverlay(),
+				title = page ? page.title : mw.config.get( 'wgTitle' ),
+				// Note in current implementation Page title is prefixed with namespace
+				ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
 			loadingOverlay.show();
 			sectionId = mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? parseInt( sectionId, 10 ) : null;
 
@@ -60,19 +63,17 @@
 			if ( isVisualEditorEnabled ) {
 				// Load VE init module
 				mw.loader.using( 'mobile.editor.ve', function () {
-					var VeOverlay = M.require( 'modules/editor/VisualEditorOverlay' ),
-						ve = new VeOverlay( {
+					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' ),
+						visualEditorOverlay = new VisualEditorOverlay( {
+							title: ns ? ns + ':' + title : title,
 							sectionId: sectionId
 						} );
 					loadingOverlay.hide();
-					ve.show();
+					visualEditorOverlay.show();
 				} );
 			} else {
 				mw.loader.using( inStable ? 'mobile.editor.overlay.stable' : 'mobile.editor.overlay.beta', function() {
-					var EditorOverlay = M.require( inStable ? 'modules/editor/EditorOverlay' : 'modules/editorNew/EditorOverlay' ),
-						title = page ? page.title : mw.config.get( 'wgTitle' ),
-						// Note in current implementation Page title is prefixed with namespace
-						ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
+					var EditorOverlay = M.require( inStable ? 'modules/editor/EditorOverlay' : 'modules/editorNew/EditorOverlay' );
 
 						loadingOverlay.hide();
 						new EditorOverlay( {

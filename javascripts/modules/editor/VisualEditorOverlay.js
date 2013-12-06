@@ -1,5 +1,5 @@
 ( function( M, $, ve ) {
-	var EditorOverlayBase = M.require( 'modules/editorNew/EditorOverlayBase' ),
+	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		Page = M.require( 'Page' ),
 		popup = M.require( 'notifications' ),
 		VisualEditorOverlay;
