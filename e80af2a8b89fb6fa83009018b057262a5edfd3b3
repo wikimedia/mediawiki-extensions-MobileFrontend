@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_367f69df",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T23:17:41Z",
+      "side": 1,
+      "message": "This is basically a copy and paste from EditorOverlay. I\u0027d rather we tried to figure out how both editors can share some code at this point instead of duplicating it. Common parent class? A mixin?",
+      "revId": "e80af2a8b89fb6fa83009018b057262a5edfd3b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
