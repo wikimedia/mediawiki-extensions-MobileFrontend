@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a0c44f95",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-06T20:19:04Z",
+      "side": 1,
+      "message": "Nitpicky, but I don\u0027t think this method is necessary. If it is, then there should be also showSpinner() or something instead of this.$spinner.show(), for consistency.",
+      "revId": "14cae75306c62eff8449366a18eae94573275cd4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
