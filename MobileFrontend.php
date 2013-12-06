@@ -401,7 +401,6 @@ $wgMFNoMobilePages = array();
 
 /**
  * Temporary boolean variable to enable/disable progress bars in the photo uploader
- * FIXME: This should be set to true by default (see bug 41731)
  * @var bool
  */
 $wgMFAjaxUploadProgressSupport = true;
