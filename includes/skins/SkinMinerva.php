@@ -49,6 +49,7 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareUserButton( $tpl );
 		$this->prepareDiscoveryTools( $tpl );
 		$this->preparePersonalTools( $tpl );
+		$this->prepareLanguages( $tpl );
 		// FIXME: Remove need for a page-loading class
 		$bottomScripts = Html::inlineScript(
 			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
@@ -220,6 +221,20 @@ class SkinMinerva extends SkinTemplate {
 			'auth' => $this->getLogInOutLink(),
 		);
 		$tpl->set( 'personal_urls', $items );
+	}
+
+	/**
+	 * Rewrites the language list so that it cannot be contaminated by other extensions with things other than languages
+	 * See bug 57094.
+	 * @param QuickTemplate
+	 */
+	protected function prepareLanguages( $tpl ) {
+		$language_urls = $this->getLanguages();
+		if ( count( $language_urls ) ) {
+			$tpl->setRef( 'language_urls', $language_urls );
+		} else {
+			$tpl->set( 'language_urls', false );
+		}
 	}
 
 	/**
