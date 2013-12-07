@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_76c3b18c",
+        "filename": "javascripts/modules/routes.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-07T00:18:56Z",
+      "side": 1,
+      "message": "I\u0027m not sure about that. What if we want to use a given route only in alpha? routesAlpha.js? Why don\u0027t we keep it in the feature\u0027s JS? If anything, this doesn\u0027t seem to belong to modules directory.",
+      "revId": "296f3e89196c591e79fd0ce4ab933c64877fbc80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_11d0ef53",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-07T00:18:56Z",
+      "side": 1,
+      "message": "This can safely go to UploadTutorial#postRender",
+      "revId": "296f3e89196c591e79fd0ce4ab933c64877fbc80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
