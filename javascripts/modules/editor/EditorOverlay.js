@@ -2,6 +2,7 @@
 
 	var Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
+		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
 		inBetaOrAlpha = mw.config.get( 'wgMFMode' ) !== 'stable',
@@ -37,24 +38,11 @@
 		closeOnBack: true,
 
 		log: function( action, errorText ) {
-			var
-				data = {
-					token: M.getSessionId(),
-					action: action,
-					section: this.sectionId,
-					namespace: mw.config.get( 'wgNamespaceNumber' ),
-					userEditCount: mw.config.get( 'wgUserEditCount' ),
-					isTestA: M.isTestA,
-					pageId: mw.config.get( 'wgArticleId' ),
-					username: mw.config.get( 'wgUserName' ),
-					mobileMode: mw.config.get( 'wgMFMode' ),
-					userAgent: window.navigator.userAgent,
-					funnel: this.funnel
-				};
+			var data = { action: action, section: this.sectionId, funnel: this.funnel };
 			if ( errorText ) {
 				data.errorText = errorText;
 			}
-			M.log( 'MobileWebEditing', data );
+			schema.log( data );
 		},
 
 		initialize: function( options ) {

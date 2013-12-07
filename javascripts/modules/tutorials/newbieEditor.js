@@ -1,10 +1,18 @@
 ( function( M, $ ) {
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
+		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		escapeHash = M.require( 'toggle' ).escapeHash,
+		inEditor = window.location.hash.indexOf( '#editor/' ) > - 1,
+		// A/B test showing the tutorial from the left nav
+		shouldShowLeftNavEditTutorial = !inEditor && M.isBetaGroupMember() &&
+			M.query.campaign === 'leftNavSignup' && M.isTestA,
 		shouldShowEditTutorial = $( '#ca-edit' ).hasClass( 'enabled' ) &&
 			// Shouldn't run when browser refreshed
-			M.query.article_action === 'signup-edit' && window.location.hash.indexOf( '#editor/' ) === - 1,
-		editOverlay, target;
+			M.query.article_action === 'signup-edit' && !inEditor,
+			showTutorial = shouldShowEditTutorial || shouldShowLeftNavEditTutorial,
+			msg = shouldShowEditTutorial ? 'mobile-frontend-editor-tutorial-summary' :
+				'mobile-frontend-editor-tutorial-alt-summary',
+		editOverlay, target, $target, href;
 
 	if ( window.location.hash ) {
 		target = escapeHash( window.location.hash ) + ' ~ .edit-page';
@@ -12,12 +20,22 @@
 		target = '#ca-edit .edit-page';
 	}
 
-	// Note if the element was changed since it might not exist.
-	if ( M.isLoggedIn() && shouldShowEditTutorial && $( target ).length > 0 ) {
+	// Note the element might have a new ID if the wikitext was changed so check it exists
+	// Also check the page is actually editable...
+	if ( M.isLoggedIn() && $( target ).length > 0 && showTutorial && mw.config.get( 'wgIsPageEditable' ) ) {
+
+		if ( shouldShowLeftNavEditTutorial ) {
+			$target = $( target );
+			href = $target.attr( 'href' );
+			// append the funnel name to the url
+			$target.attr( 'href', href + '/leftNavSignup' );
+			schema.log( { action: 'tutorial', section: 0, funnel: 'leftNavSignup' } );
+		}
+
 		editOverlay = new PageActionOverlay( {
 			target: target,
 			className: 'slide active editing',
-			summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
+			summary: mw.msg( msg, mw.config.get( 'wgTitle' ) ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' )
 		} );
 		editOverlay.show();
