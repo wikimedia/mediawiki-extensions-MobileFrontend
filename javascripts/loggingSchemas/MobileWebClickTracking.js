@@ -2,7 +2,8 @@
 
 	function log( name, destination ) {
 		var
-			username = mw.config.get( 'wgUserName' ),
+			user = M.require( 'user' ),
+			username = user.getName(),
 			data = {
 				name: name,
 				destination: destination,

@@ -176,6 +176,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.head',
 			'mobile.templates',
+			'mobile.user',
 		),
 		'scripts' => array(
 			'javascripts/common/Router.js',
@@ -187,6 +188,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-stop-mobile-redirect.js',
 		),
 		'position' => 'bottom',
+	),
+
+	'mobile.user' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mediawiki.user',
+		),
+		'scripts' => array(
+			'javascripts/common/user.js',
+		),
 	),
 
 	'mobile.editor' => $wgMFMobileResourceBoilerplate + array(
@@ -773,6 +783,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.stable' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.user',
 			'mobile.stable.common',
 			'mediawiki.util',
 			'mobile.stable.styles',

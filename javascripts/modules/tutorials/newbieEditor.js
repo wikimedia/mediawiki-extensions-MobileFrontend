@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
+		user = M.require( 'user' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		escapeHash = M.require( 'toggle' ).escapeHash,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > - 1,
@@ -22,7 +23,7 @@
 
 	// Note the element might have a new ID if the wikitext was changed so check it exists
 	// Also check the page is actually editable...
-	if ( M.isLoggedIn() && $( target ).length > 0 && showTutorial && mw.config.get( 'wgIsPageEditable' ) ) {
+	if ( !user.isAnon() && $( target ).length > 0 && showTutorial && mw.config.get( 'wgIsPageEditable' ) ) {
 
 		if ( shouldShowLeftNavEditTutorial ) {
 			$target = $( target );

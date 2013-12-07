@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 	var View = M.require( 'view' ),
 		popup = M.require( 'notifications' ),
+		user = M.require( 'user' ),
 		PhotoUploaderButton,
 		LeadPhotoUploaderButton;
 
@@ -114,7 +115,7 @@
 				}
 			}
 
-			if ( M.isBetaGroupMember() && mw.config.get( 'wgUserEditCount' ) === 0 ) {
+			if ( M.isBetaGroupMember() && user.getEditCount() === 0 ) {
 				this.$el.on( M.tapEvent( 'click' ), function( ev ) {
 					ev.preventDefault();
 					mw.loader.using( 'mobile.uploads.common', function() {

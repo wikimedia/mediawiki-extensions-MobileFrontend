@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
 	var Overlay = M.require( 'Overlay' ),
+		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		popup = M.require( 'notifications' ),
@@ -53,7 +54,7 @@
 			} );
 			this.sectionId = options.sectionId;
 			this.isNewEditor = options.isNewEditor;
-			this.editCount = mw.config.get( 'wgUserEditCount' );
+			this.editCount = user.getEditCount();
 			this.isFirstEdit = this.editCount === 0;
 			this.funnel = options.funnel;
 			this._super( options );

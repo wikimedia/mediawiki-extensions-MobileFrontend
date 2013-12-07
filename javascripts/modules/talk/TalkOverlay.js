@@ -7,6 +7,7 @@
 		Page = M.require( 'Page' ),
 		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
 		api = M.require( 'api' ),
+		user = M.require( 'user' ),
 		TalkSectionAddOverlay = Overlay.extend( {
 			defaults: {
 				cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
@@ -118,7 +119,7 @@
 					page = options.page;
 
 				this._super( options );
-				if ( M.isLoggedIn() ) {
+				if ( !user.isAnon() ) {
 					$add.click( function() {
 						var overlay = new TalkSectionAddOverlay( {
 							parent: self,

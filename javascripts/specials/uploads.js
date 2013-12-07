@@ -1,12 +1,13 @@
 ( function( M, $ ) {
 var
 	PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
+	user = M.require( 'user' ),
 	popup = M.require( 'notifications' ),
 	Api = M.require( 'api' ).Api,
 	View = M.require( 'view' ),
 	corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 	pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
-	currentUserName = mw.config.get( 'wgUserName' ),
+	currentUserName = user.getName(),
 	userName = pageParams[1] ? pageParams[1] : currentUserName,
 	IMAGE_WIDTH = 320,
 	UserGalleryApi, PhotoItem, PhotoList;

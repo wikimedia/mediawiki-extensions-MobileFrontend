@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
 	var OverlayNew = M.require( 'OverlayNew' ),
+		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
@@ -38,10 +39,10 @@
 					action: action,
 					section: this.sectionId,
 					namespace: mw.config.get( 'wgNamespaceNumber' ),
-					userEditCount: mw.config.get( 'wgUserEditCount' ),
+					userEditCount: user.getEditCount(),
 					isTestA: M.isTestA,
 					pageId: mw.config.get( 'wgArticleId' ),
-					username: mw.config.get( 'wgUserName' ),
+					username: user.getName(),
 					mobileMode: mw.config.get( 'wgMFMode' ),
 					userAgent: window.navigator.userAgent,
 					funnel: this.funnel
@@ -61,7 +62,7 @@
 			this.sectionId = options.sectionId;
 			// FIXME: isNewEditor and isFirstEdit are the same thing
 			this.isNewEditor = options.isNewEditor;
-			this.editCount = mw.config.get( 'wgUserEditCount' );
+			this.editCount = user.getEditCount();
 			this.isFirstEdit = this.editCount === 0;
 			this.funnel = options.funnel;
 

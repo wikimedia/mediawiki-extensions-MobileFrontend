@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 	var Api = M.require( 'api' ).Api,
+		user = M.require( 'user' ),
 		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 		PhotoApi;
 
@@ -147,7 +148,7 @@
 					render( {
 						suffix: mw.config.get( 'wgMFPhotoUploadAppendToDesc' ),
 						text: options.description,
-						username: mw.config.get( 'wgUserName' )
+						username: user.getName()
 					} )
 				);
 

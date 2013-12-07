@@ -4,6 +4,7 @@ var
 	Overlay = M.require( 'Overlay' ),
 	popup = M.require( 'notifications' ),
 	api = M.require( 'api' ),
+	user = M.require( 'user' ),
 	TalkSectionOverlay = Overlay.extend( {
 		templatePartials: {
 			content: M.template.get( 'talkSection' )
@@ -19,7 +20,7 @@ var
 				$textarea = $comment.find( 'textarea' );
 			this._super( options );
 			this.$( '.loading' ).remove();
-			if ( !M.isLoggedIn() || mw.config.get( 'wgMFMode' ) !== 'alpha' ) {
+			if ( user.isAnon() || mw.config.get( 'wgMFMode' ) !== 'alpha' ) {
 				$comment.remove();
 			} else {
 				$textarea.on( 'focus', function() {
