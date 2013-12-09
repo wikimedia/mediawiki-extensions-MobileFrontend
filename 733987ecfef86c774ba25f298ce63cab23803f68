@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_df904250",
+        "filename": "javascripts/common/modules.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:33:43Z",
+      "side": 1,
+      "message": "Why not in application.js? This should be as small as possible.",
+      "revId": "733987ecfef86c774ba25f298ce63cab23803f68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
