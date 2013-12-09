@@ -147,6 +147,7 @@ $specialPageAliases['mk'] = array(
 	'MobileMenu' => array( 'МобилноМени' ),
 	'Nearby' => array( 'ВоБлизина' ),
 	'UserProfile' => array( 'КорисничкиПрофил' ),
+	'MobileHistory' => array( 'МобилнаИсторија' ),
 );
 
 /** Malayalam (മലയാളം) */
