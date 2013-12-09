@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_5f32f2ef",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:12:10Z",
+      "side": 1,
+      "message": "It\u0027s already in mobile.editor.common, shouldn\u0027t be here:\n\nError: Module already exists: modules/editorNew/EditorOverlayBase Error {}",
+      "revId": "e7e467652a3492ca489c47a74e8d67ac152fe54b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
