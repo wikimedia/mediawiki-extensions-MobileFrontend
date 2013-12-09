@@ -302,7 +302,7 @@ class SkinMinerva extends SkinTemplate {
 			if ( !empty( $returntoquery ) ) {
 				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			}
-			$url = SpecialPage::getTitleFor( 'UserLogout' )->getFullURL( $query );
+			$url = SpecialPage::getTitleFor( 'Userlogout' )->getFullURL( $query );
 			$url = $this->mobileContext->getMobileUrl( $url, $wgSecureLogin );
 			$text = wfMessage( 'mobile-frontend-main-menu-logout' )->escaped();
 		} else {
