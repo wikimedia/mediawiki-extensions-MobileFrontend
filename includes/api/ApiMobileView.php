@@ -6,7 +6,8 @@ class ApiMobileView extends ApiBase {
 	 */
 	const CACHE_VERSION = 6;
 
-	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant, $offset, $maxlen;
+	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant, $offset, $maxlen,
+		$usePageImages;
 
 	/**
 	 * @var File
@@ -14,6 +15,7 @@ class ApiMobileView extends ApiBase {
 	private $file;
 
 	public function __construct( $main, $action ) {
+		$this->usePageImages = defined( 'PAGE_IMAGES_INSTALLED' );
 		parent::__construct( $main, $action );
 	}
 
@@ -73,6 +75,9 @@ class ApiMobileView extends ApiBase {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'id' => $data['id'] )
 			);
+		}
+		if ( $this->usePageImages ) {
+			$this->addPageImage( $data, $prop, $params['thumbsize'] );
 		}
 		$result = array();
 		$missingSections = array();
@@ -358,6 +363,12 @@ class ApiMobileView extends ApiBase {
 				}
 				$data['text'][] = $chunk;
 			}
+			if ( $this->usePageImages ) {
+				$image = PageImages::getPageImage( $title );
+				if ( $image ) {
+					$data['image'] = $image->getTitle()->getText();
+				}
+			}
 			wfProfileOut( __METHOD__ . '-sections' );
 		}
 
@@ -393,8 +404,55 @@ class ApiMobileView extends ApiBase {
 		return $html;
 	}
 
+	/**
+	 * Adds PageImages information
+	 * @param array $data: whatever getData() returned
+	 * @param array $prop: prop parameter value
+	 * @param int $size: thumbnail size
+	 */
+	private function addPageImage( array $data, array $prop, $size ) {
+		if ( !isset( $prop['image'] ) && !isset( $prop['thumb'] ) ) {
+			return;
+		}
+		if ( !isset( $data['image'] ) )
+		{
+			return;
+		}
+		$file = wfFindFile( $data['image'] );
+		if ( !$file ) {
+			return;
+		}
+		$result = $this->getResult();
+		if ( isset( $prop['image'] ) ) {
+			$result->addValue( null, $this->getModuleName(),
+				array( 'image' =>
+					array(
+						'file' => $data['image'],
+						'width' => $file->getWidth(),
+						'height' => $file->getHeight(),
+					)
+				)
+			);
+		}
+		if ( isset( $prop['thumb'] ) ) {
+			$thumb = $file->transform( array( 'width' => $size, 'height' => $size ) );
+			if ( !$thumb ) {
+				return;
+			}
+			$result->addValue( null, $this->getModuleName(),
+				array( 'thumb' =>
+					array(
+						'url' => $thumb->getUrl(),
+						'width' => $thumb->getWidth(),
+						'height' => $thumb->getHeight(),
+					)
+				)
+			);
+		}
+	}
+
 	public function getAllowedParams() {
-		return array(
+		$res = array(
 			'page' => array(
 				ApiBase::PARAM_REQUIRED => true,
 			),
@@ -447,10 +505,20 @@ class ApiMobileView extends ApiBase {
 				ApiBase::PARAM_DFLT => 0,
 			),
 		);
+		if ( $this->usePageImages ) {
+			$res['prop'][ApiBase::PARAM_TYPE][] = 'image';
+			$res['prop'][ApiBase::PARAM_TYPE][] = 'thumb';
+			$res['thumbsize'] = array(
+				ApiBase::PARAM_TYPE => 'integer',
+				ApiBase::PARAM_MIN => 0,
+				ApiBase::PARAM_DFLT => 50,
+			);
+		}
+		return $res;
 	}
 
 	public function getParamDescription() {
-		return array(
+		$res = array(
 			'id' => 'Id of the page',
 			'page' => 'Title of page to process',
 			'redirect' => 'Whether redirects should be followed',
@@ -475,6 +543,12 @@ class ApiMobileView extends ApiBase {
 			'offset' => 'Pretend all text result is one string, and return the substring starting at this point',
 			'maxlen' => 'Pretend all text result is one string, and limit result to this length',
 		);
+		if ( $this->usePageImages ) {
+			$res['prop'][] = ' image           - information about an image associated with this page';
+			$res['prop'][] = ' thumb           - thumbnail of an image associated with this page';
+			$res['thumbsize'] = 'Maximum thumbnail dimensions';
+		}
+		return $res;
 	}
 
 	public function getDescription() {
