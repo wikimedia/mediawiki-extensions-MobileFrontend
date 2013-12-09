@@ -16,6 +16,40 @@
       "revId": "e7e467652a3492ca489c47a74e8d67ac152fe54b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_bf557ec7",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-09T22:22:29Z",
+      "side": 1,
+      "message": "I find something strange about the existence of hasChanged (boolean) and _hasChanged (function). I wonder if a setter and getter might be better (oohh unplanned rhyme!)\n\nAlso confusingly VisualEditorOverlay never seems to set this - is that correct?",
+      "revId": "e7e467652a3492ca489c47a74e8d67ac152fe54b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_c4063520",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-09T22:22:29Z",
+      "side": 1,
+      "message": "Since this never gets changed why have this property at all - just return true?",
+      "revId": "e7e467652a3492ca489c47a74e8d67ac152fe54b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
