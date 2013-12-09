@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_1fbc6ab0",
+        "filename": "javascripts/common/user.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:45:11Z",
+      "side": 1,
+      "message": "I feel that if we want to extend mw.user, we should make a copy of it. Potentially, we might override something in future and break core/other extension\u0027s code.\n\nvar user \u003d $.extend( {}, mw.user, { ... } );\n\nM.define( \u0027user\u0027, user );",
+      "revId": "468fcee0008f4bdb5918eaa84f0b3b01e896e666",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_7fced660",
+        "filename": "javascripts/common/user.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:45:11Z",
+      "side": 1,
+      "message": "Why do we need this? Why don\u0027t we use isAnon()?",
+      "revId": "468fcee0008f4bdb5918eaa84f0b3b01e896e666",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_9fe75adf",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:45:11Z",
+      "side": 1,
+      "message": "It\u0027s a function. I\u0027m not sure if we need it. Why not !user.getEditCount() ?",
+      "revId": "468fcee0008f4bdb5918eaa84f0b3b01e896e666",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

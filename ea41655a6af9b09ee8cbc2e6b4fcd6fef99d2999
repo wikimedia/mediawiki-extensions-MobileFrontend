@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_3fd84e21",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:45:11Z",
+      "side": 0,
+      "message": "This should probably be replaced. Let\u0027s add a FIXME.",
+      "revId": "ea41655a6af9b09ee8cbc2e6b4fcd6fef99d2999",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
