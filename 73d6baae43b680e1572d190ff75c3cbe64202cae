@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_1fbeaafa",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:21:19Z",
+      "side": 1,
+      "message": "Let\u0027s add a FIXME here saying that those messages should go to mobile.editor.common when new overlays go to stable.",
+      "revId": "73d6baae43b680e1572d190ff75c3cbe64202cae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_5f6af27e",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:21:19Z",
+      "side": 1,
+      "message": "This should be removed from editorNew/EditorOverlay.",
+      "revId": "73d6baae43b680e1572d190ff75c3cbe64202cae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_ff5b06fb",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-09T22:21:19Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be in EditorOverlayBase?",
+      "revId": "73d6baae43b680e1572d190ff75c3cbe64202cae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
