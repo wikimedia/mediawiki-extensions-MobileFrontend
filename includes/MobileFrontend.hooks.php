@@ -287,7 +287,7 @@ class MobileFrontendHooks {
 				/* In mobile the History page with no parameters provides history of all pages across the project.
 				 * This is essentially Special:RecentChanges (without the bells and whistles) so redirect people there.
 				*/
-				$list['RecentChanges'] = 'SpecialMobileHistory';
+				$list['Recentchanges'] = 'SpecialMobileHistory';
 				/* Special:MobileContributions redefines Special:History in such a way that for Special:Contributions/Foo,
 				 * Foo is a username (in Special:History/Foo, Foo is a page name)
 				 * Redirect people here as this is essential Special:Contributions without the bells and whistles.

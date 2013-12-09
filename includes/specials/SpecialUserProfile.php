@@ -277,7 +277,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$activityHtml = $this->getLastEditHtml() . $this->getLastUploadHtml()
 					. $this->getLastThanksHtml();
-				$this->userDescription = $this->getLang()->truncate( $this->getWikiPageText( $userDescPageTitle ),
+				$this->userDescription = $this->getLanguage()->truncate( $this->getWikiPageText( $userDescPageTitle ),
 					self::MAX_DESCRIPTION_CHARS );
 
 				$html = Html::element( 'h1', array(), $this->targetUser->getName() )
