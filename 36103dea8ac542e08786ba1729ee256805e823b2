@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_01ef6f1c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 591,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-09T18:22:25Z",
+      "side": 1,
+      "message": "Thanks for this.\n\nElsewhere in the code however we use $wgMFNearby which is disabled by default and I think we should be consistent with that (or at least deprecate $wgMFNearby in favour of this method?)\n\nIn addition to this SkinMobileBeta::getDefaultModules adds the module mobile.geonotahack regardless of support and should probably be fixed in the meantime.\n\nWould be great to get all these fixes in one go.",
+      "revId": "36103dea8ac542e08786ba1729ee256805e823b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
