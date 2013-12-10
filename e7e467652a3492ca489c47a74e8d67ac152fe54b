@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_0632da5b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2013-12-10T23:11:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ee75395_5f32f2ef",
+      "revId": "e7e467652a3492ca489c47a74e8d67ac152fe54b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_bf557ec7",
         "filename": "javascripts/modules/editor/EditorOverlayBase.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_0619badb",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2013-12-10T23:11:10Z",
+      "side": 1,
+      "message": "The objective of using hasChanged property and _hasChanged method is to abstract the hide method into the base class so that it can be used between both VisualEditorOverlay and new EditorOverlay.\n\nYes, VisualEditorOverlay does set hasChanged onTransact.",
+      "parentUuid": "0ee75395_bf557ec7",
+      "revId": "e7e467652a3492ca489c47a74e8d67ac152fe54b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_c4063520",
         "filename": "javascripts/modules/editor/EditorOverlayBase.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-12-09T22:22:29Z",
       "side": 1,
       "message": "Since this never gets changed why have this property at all - just return true?",
+      "revId": "e7e467652a3492ca489c47a74e8d67ac152fe54b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_c68512d5",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2013-12-10T23:11:10Z",
+      "side": 1,
+      "message": "This does get changed in VisualEditorOverlay, and in EditorOverlay, this _hasChanged method is overridden.  Perhaps _hasChanged should just live in VisualEditorOverlay then.",
+      "parentUuid": "0ee75395_c4063520",
       "revId": "e7e467652a3492ca489c47a74e8d67ac152fe54b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
