@@ -19419,7 +19419,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-profile-description-placeholder' => '{{GENDER:$1|您}}为何要做出编辑？您想提高什么？与其他人共享零的兴趣。',
 	'mobile-frontend-profile-edit-summary' => '更新用户配置文件简介',
 	'mobile-frontend-geonotahack' => '本页附近',
-	'beta-feature-geonotahack' => '本页附近',
+	'beta-feature-geonotahack' => '此页的附近',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
