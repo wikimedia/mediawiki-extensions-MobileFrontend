@@ -16,6 +16,23 @@
       "revId": "5bf9f82dfde711b7d7fdbbb22b527d59327926b6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_86c82a5b",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T22:54:42Z",
+      "side": 1,
+      "message": "jdlrobson: MaxSem: also the message is a bit weird on Special:History\n[2:54pm] jdlrobson: \"Cannot look at history for a page that doesn\u0027t exist. It may have been deleted or you may have followed a bad link.\"\n[2:54pm] jdlrobson: \"Bad title given\" (no title given would make more sense)",
+      "revId": "5bf9f82dfde711b7d7fdbbb22b527d59327926b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
