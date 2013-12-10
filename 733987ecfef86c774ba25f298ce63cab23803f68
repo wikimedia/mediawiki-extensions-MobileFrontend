@@ -16,6 +16,24 @@
       "revId": "733987ecfef86c774ba25f298ce63cab23803f68",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_b5e11acd",
+        "filename": "javascripts/common/modules.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T18:23:18Z",
+      "side": 1,
+      "message": "Why does it need to be small?\nIt seems to me more logical here since these methods are associated with modules and code is similar to assertMode.",
+      "parentUuid": "0ee75395_df904250",
+      "revId": "733987ecfef86c774ba25f298ce63cab23803f68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
