@@ -60,10 +60,15 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
 				$this->renderHeaderBar( $this->msg( 'mobile-frontend-history-summary', $this->title->getText() ), true );
+				$res = $this->doQuery();
+				$this->showHistory( $res );
+				wfProfileOut( __METHOD__ );
+				return;
 			}
 		}
-		$res = $this->doQuery();
-		$this->showHistory( $res );
+		wfHttpError( 404, $this->msg( 'mobile-frontend-history-404-title' )->text(),
+			$this->msg( 'mobile-frontend-history-404-desc' )->text()
+		);
 
 		wfProfileOut( __METHOD__ );
 	}
