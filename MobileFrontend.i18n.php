@@ -321,8 +321,8 @@ $messages['en'] = array (
 	'mobile-frontend-editor-abusefilter-warning' => 'Warning: Are you sure you want to save this edit? There may be an issue with it.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'This edit cannot be saved because we have detected an issue.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Read more',
-	'mobile-frontend-editor-editing' => "'''Editing''' $1",
-	'mobile-frontend-editor-previewing' => "'''Previewing''' $1",
+	'mobile-frontend-editor-editing-page' => '<strong>Editing</strong> <span>$1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>Previewing</strong> <span>$1</span>',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -947,11 +947,11 @@ See also:
 	'mobile-frontend-editor-abusefilter-disallow' => 'A message telling their user that their edit has been disallowed by AbuseFilter.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'A caption for the button allowing the user to read more about the problems with their edit.
 {{Identical|Read more}}',
-	'mobile-frontend-editor-editing' => 'A heading saying what page is being edited.
+	'mobile-frontend-editor-editing-page' => 'A heading saying what page is being edited.
 
 Parameters:
 * $1 - page title',
-	'mobile-frontend-editor-previewing' => 'A heading saying what page is being previewed after editing.
+	'mobile-frontend-editor-previewing-page' => 'A heading saying what page is being previewed after editing.
 
 Parameters:
 * $1 - page title',

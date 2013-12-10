@@ -1,15 +1,17 @@
-<div class="overlay-header with-margins">
-	<ul class="v-border bottom-border">
-		<li><button class="cancel icon">{{closeMsg}}</button></li>
-	</ul>
-	<div class="bottom-border">
-		<form method="get" action="{{action}}">
-			<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}">
-		</form>
+<div class="overlay-header-container position-fixed">
+	<div class="overlay-header">
+		<ul class="v-border bottom-border">
+			<li><button class="cancel icon">{{closeMsg}}</button></li>
+		</ul>
+		<div class="bottom-border">
+			<form method="get" action="{{action}}">
+				<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}">
+			</form>
+		</div>
+		<ul class="bottom-border">
+			<li><button class="clear icon">{{clearMsg}}</button></li>
+		</ul>
 	</div>
-	<ul class="bottom-border">
-		<li><button class="clear icon">{{clearMsg}}</button></li>
-	</ul>
 </div>
 <div class="search-content overlay-header">
 	<ul class="v-border bottom-border">
