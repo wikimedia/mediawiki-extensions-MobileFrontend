@@ -11,13 +11,13 @@ $specialPageAliases = array();
 
 /** English (English) */
 $specialPageAliases['en'] = array(
+	'History' => array( 'History' ),
 	'MobileOptions' => array( 'MobileOptions' ),
 	'Uploads' => array( 'Uploads' ),
 	'MobileDiff' => array( 'MobileDiff' ),
 	'MobileMenu' => array( 'MobileMenu' ),
 	'Nearby' => array( 'Nearby' ),
 	'UserProfile' => array( 'UserProfile' ),
-	'MobileHistory' => array( 'MobileHistory' ),
 );
 
 /** Arabic (العربية) */
