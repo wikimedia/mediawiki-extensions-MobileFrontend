@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_06dc1a1b",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "Use Page. i18n police won\u0027t be happy ;-)",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e6e016ca",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "This message looks horrible... surely there\u0027s a better way?! Can\u0027t we just use parse?",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_a6e68ee1",
+        "filename": "javascripts/loggingSchemas/mobileWebCta.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "I wonder if we should just use data at this point\n$el, data",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_86cf0a5b",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "Should be part of OverlayNew (it\u0027s part of mobiles.overlay module)",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_66cc0666",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "See above message",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_0603fa7a",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "See patch around mw.user would be good to get that merged in and use the user module\nsee https://gerrit.wikimedia.org/r/#/c/99799/",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e607f683",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "Personally I\u0027d use shorthand here but that\u0027s my preference..\n\noptions.msg \u003d user.getEditCount \u003d\u003d 1 ? mw.msg( \u0027\u0027mobilefrontend-keepgoing-links-ask-first\u0027 )",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_a6fd6e6b",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "noooooooo! Let\u0027s separate styling from JavaScript",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_26e95ea7",
+        "filename": "less/variables.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-10T23:48:00Z",
+      "side": 1,
+      "message": "Are we sure about this?\nThis changes colours in EditorOverlay as well - assume you ran this by a designer?\n\nIntroduced in I677aa4b79ee247c1accda67b697f1fbd9e278583 with commit ,essage\"\n\"Also, change @grayLight color to #cacaca, per Kaity\u0027s previous instructions\n    and remove .cancel for buttons (not used anymore).\n\"",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
