@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_8f871aba",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-11T21:29:28Z",
+      "side": 1,
+      "message": "no qqq code!",
+      "revId": "8b9d3cee762d4a818ce9997d28bb16fb71fab6af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
