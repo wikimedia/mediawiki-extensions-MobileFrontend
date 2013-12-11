@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_720efd37",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-11T22:08:58Z",
+      "side": 1,
+      "message": "doc block explaining params would be nice",
+      "revId": "df532de2689a5ff07afcf1742bff099a3c0acfd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_f250cd0f",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 538,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-11T22:08:58Z",
+      "side": 1,
+      "message": "i prefer to see an object property like $this-\u003epage_images_installed that gets set by checking defined( \u0027PAGE_IMAGES_INSTALLED\u0027 ) in the constructor or something. this is more extensible/flexible and i think look nicer.",
+      "revId": "df532de2689a5ff07afcf1742bff099a3c0acfd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
