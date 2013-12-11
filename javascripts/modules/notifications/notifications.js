@@ -26,8 +26,8 @@
 		var $btn = $( '#secondary-button.user-button' );
 
 		if ( useNewOverlays ) {
-			$btn.attr( 'href', '#notifications' );
-			M.router.route( /^notifications$/, function() {
+			$btn.attr( 'href', '#/notifications' );
+			M.router.route( /^\/notifications$/, function() {
 				loadModuleScript( 'mobile.notifications.overlay.beta' ).done( function() {
 					var NotificationsOverlayNew = M.require( 'modules/notifications/NotificationsOverlayNew' );
 					new NotificationsOverlayNew( { $badge: $btn, headerContext: $btn.find( 'span' ).text() } ).show();
