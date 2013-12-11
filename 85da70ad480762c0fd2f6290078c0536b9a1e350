@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_cc841312",
+        "filename": "tests/browser/features/external_links.feature",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-12-11T09:26:54Z",
+      "side": 1,
+      "message": "Barrack should be Barack.",
+      "revId": "85da70ad480762c0fd2f6290078c0536b9a1e350",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_ac89cf28",
+        "filename": "tests/browser/features/image_resolves.feature",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-12-11T09:26:54Z",
+      "side": 1,
+      "message": "Barrack should be Barack.",
+      "revId": "85da70ad480762c0fd2f6290078c0536b9a1e350",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
