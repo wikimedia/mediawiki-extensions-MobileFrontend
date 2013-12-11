@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_2f8a4ec0",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "Oops. I changed the other ones, but missed this one.",
+      "parentUuid": "0ee75395_06dc1a1b",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_e6e016ca",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 13
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-10T23:48:00Z",
       "side": 1,
       "message": "This message looks horrible... surely there\u0027s a better way?! Can\u0027t we just use parse?",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_af9e5e08",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "The problem is that if we just use parse, we introduce a minor security issue since someone could override the message locally and add a script tag for an XSS attack. And we can\u0027t escape at output since the final string includes legitimate HTML. The other option would be to break this i18n message into several separate components, but then it will be harder to translate correctly. I discussed this issue with Siebrand, and he recommended the approach above.",
+      "parentUuid": "0ee75395_e6e016ca",
       "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_6fd616c9",
+        "filename": "javascripts/loggingSchemas/mobileWebCta.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "Yes, but I would favor doing that as part of merging it with the hijackLink function in MobileWebClickTracking.js (which should be a separate change). For now, adding a new parameter avoids having to update the existing uses.",
+      "parentUuid": "0ee75395_a6e68ee1",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_86cf0a5b",
         "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
         "patchSetId": 13
@@ -64,6 +118,24 @@
       "writtenOn": "2013-12-10T23:48:00Z",
       "side": 1,
       "message": "Should be part of OverlayNew (it\u0027s part of mobiles.overlay module)",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_8faefa29",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "0ee75395_86cf0a5b",
       "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_4fa47247",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "Agree.",
+      "parentUuid": "0ee75395_66cc0666",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_0603fa7a",
         "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
         "patchSetId": 13
@@ -98,6 +188,24 @@
       "writtenOn": "2013-12-10T23:48:00Z",
       "side": 1,
       "message": "See patch around mw.user would be good to get that merged in and use the user module\nsee https://gerrit.wikimedia.org/r/#/c/99799/",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_cf6f62f8",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "If it gets merged, I\u0027d be fine with using that.",
+      "parentUuid": "0ee75395_0603fa7a",
       "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_ef6ea6fd",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "With the else included, that would be an extremely long line of code.",
+      "parentUuid": "0ee75395_e607f683",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_a6fd6e6b",
         "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
         "patchSetId": 13
@@ -138,6 +264,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_4f83529c",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "Neither of these stylings are used elsewhere (in a similar semantic context), so I don\u0027t see much point in creating CSS classes for them. While you may have the dogmatic rule of not combining code and styling, I have the dogmatic rule of not abstracting one-offs. We should put our dogmas in a thunderdome and have a dogma-fight :)",
+      "parentUuid": "0ee75395_a6fd6e6b",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_26e95ea7",
         "filename": "less/variables.less",
         "patchSetId": 13
@@ -149,6 +293,24 @@
       "writtenOn": "2013-12-10T23:48:00Z",
       "side": 1,
       "message": "Are we sure about this?\nThis changes colours in EditorOverlay as well - assume you ran this by a designer?\n\nIntroduced in I677aa4b79ee247c1accda67b697f1fbd9e278583 with commit ,essage\"\n\"Also, change @grayLight color to #cacaca, per Kaity\u0027s previous instructions\n    and remove .cancel for buttons (not used anymore).\n\"",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_0f51ca3a",
+        "filename": "less/variables.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-11T21:39:06Z",
+      "side": 1,
+      "message": "Yes, this was actually changed at the request of Kaity (not my idea).",
+      "parentUuid": "0ee75395_26e95ea7",
       "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
