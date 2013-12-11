@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_f22fad38",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-11T22:58:09Z",
+      "side": 1,
+      "message": "maybe $wgMFUseInlineDiff?\n\nIn general I think using the word \u0027new\u0027 as or in a variable name is not the best practice. It it not particularly descriptive, and it may not be \u0027new\u0027 forever :) Even if you intend to remove the variable at some point while the thing is still new, maybe you won\u0027t get around to it and it will be left there to rot for the next million years.",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_f2de8d43",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-11T22:58:09Z",
+      "side": 1,
+      "message": "i know it\u0027s not necessary, but i think it is good practice to explicitly scope methods.",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_d2df093e",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-11T22:58:09Z",
+      "side": 1,
+      "message": "should be @param array $lines",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_92ed01f1",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-11T22:58:09Z",
+      "side": 1,
+      "message": "what happens if $lines turns out to not be an array or something otherwise not iterable?\n\ni think it would be wise to be explicit - maybe even in the signature - that $lines should be an array, or otherwise more gracefully handle the possibility that it isn\u0027t. This should happen in all similar methods (eg deleted, context)",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_72ea7dd7",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-11T22:58:09Z",
+      "side": 1,
+      "message": "very nitpicky and minor stylistic point - in added() and deleted() you use both single and double quotes, and concatenate the different parts of the string. here, you do it all in one double quoted string. it would be nice to be consistent.",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_d2938950",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-12-11T22:58:09Z",
+      "side": 1,
+      "message": "what if newDiff is set but get_class( $de ) !\u003d\u003d \u0027DifferenceEngine\u0027 ?",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
