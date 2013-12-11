@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_d2aa6968",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 426,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-11T23:02:56Z",
+      "side": 1,
+      "message": "The old diff is also inline, and this var is just a rtemporary for the period of migration.",
+      "parentUuid": "0ee75395_f22fad38",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_f2de8d43",
         "filename": "includes/diff/InlineDiffFormatter.php",
         "patchSetId": 11
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-11T22:58:09Z",
       "side": 1,
       "message": "i know it\u0027s not necessary, but i think it is good practice to explicitly scope methods.",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_52be59ac",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-11T23:02:56Z",
+      "side": 1,
+      "message": "Copypasta from original",
+      "parentUuid": "0ee75395_f2de8d43",
       "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_72c5dd3f",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-11T23:02:56Z",
+      "side": 1,
+      "message": "Both are valid - I just copied from the base class.",
+      "parentUuid": "0ee75395_d2df093e",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_92ed01f1",
         "filename": "includes/diff/InlineDiffFormatter.php",
         "patchSetId": 11
@@ -64,6 +118,24 @@
       "writtenOn": "2013-12-11T22:58:09Z",
       "side": 1,
       "message": "what happens if $lines turns out to not be an array or something otherwise not iterable?\n\ni think it would be wise to be explicit - maybe even in the signature - that $lines should be an array, or otherwise more gracefully handle the possibility that it isn\u0027t. This should happen in all similar methods (eg deleted, context)",
+      "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_12dc511b",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-11T23:02:56Z",
+      "side": 1,
+      "message": "Can\u0027t do, it\u0027s an override of a core method.",
+      "parentUuid": "0ee75395_92ed01f1",
       "revId": "a7494486e0f34d2876e5bb83c34e89f51ceab396",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
