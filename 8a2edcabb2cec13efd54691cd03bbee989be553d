@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_e33c7a2f",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-12T21:48:48Z",
+      "side": 1,
+      "message": "Adam we shouldn\u0027t do caching like this. I\u0027ll handle that in another patchset but this is not the way to do it.",
+      "revId": "8a2edcabb2cec13efd54691cd03bbee989be553d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
