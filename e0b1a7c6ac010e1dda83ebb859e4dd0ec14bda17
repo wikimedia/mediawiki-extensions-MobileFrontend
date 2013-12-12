@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_8dc72299",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-12T00:42:27Z",
+      "side": 1,
+      "message": "Per https://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Equality_operators we prefer using triple equals unless there\u0027s a specific reason to use double equals. In this case it doesn\u0027t make any difference, but in other situations like...\n$title-\u003egetNamespace() !\u003d NS_MAIN\n... it could cause bugs since getNamespace() can return false.\u0027\n\nI realize that this convention isn\u0027t reflected strongly in our existing code :)",
+      "revId": "e0b1a7c6ac010e1dda83ebb859e4dd0ec14bda17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
