@@ -100,6 +100,7 @@ class SkinMobileBeta extends SkinMobile {
 		if ( !$title->exists()
 			&& !$title->isSpecialPage()
 			&& $title->userCan( 'create', $this->getUser() )
+			&& $title->getNamespace() !== NS_FILE
 		) {
 			$out->clearHTML();
 			$out->addHTML(
