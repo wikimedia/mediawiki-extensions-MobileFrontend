@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a00e6834",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-12T19:12:05Z",
+      "side": 1,
+      "message": "I need to think a bit more about how I feel about all these css rules....\nAlso why not .overlay-header-container\n\nfixed seems redundant when position-fixed class is also present.",
+      "revId": "063cb6840bde94865361db6d5e5348f918736752",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_8017e449",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-12T19:12:05Z",
+      "side": 1,
+      "message": "Not sure I like having button rules inside Overlay - can we not but these in buttons.less in a more generic form.\n\nI always find it weird finding rules for buttons outside the buttons.less file as that seems like the logical place to look for them.",
+      "revId": "063cb6840bde94865361db6d5e5348f918736752",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
