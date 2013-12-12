@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_0837804c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-12T10:11:40Z",
+      "side": 1,
+      "message": "Nice confirmation of milestone reached. Next? Badges! :)",
+      "revId": "c1dcbfc5cee9f9555e928b150860eb5d3c8254ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e837bc48",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-12T10:11:40Z",
+      "side": 1,
+      "message": "Not pretty, but effective I think (as recommended).",
+      "revId": "c1dcbfc5cee9f9555e928b150860eb5d3c8254ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
