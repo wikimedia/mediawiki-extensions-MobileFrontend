@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_091bff73",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-13T00:40:36Z",
+      "side": 1,
+      "message": "I know we don\u0027t allow anonymous editing right now, but if we did this could return null. I would prefer we use the more explicit user.getEditCount() \u003d\u003d\u003d 0 just to be safe?",
+      "revId": "e7e79580df920f2d97a1cac3c8b30d1024819023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_492587a8",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-13T00:40:36Z",
+      "side": 1,
+      "message": "user.getEditCount() \u003d\u003d\u003d 0 is safer since user.getEditCount() returns null for anon users.",
+      "revId": "e7e79580df920f2d97a1cac3c8b30d1024819023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
