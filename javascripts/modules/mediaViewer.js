@@ -97,7 +97,7 @@
 	} );
 
 	function init( $el ) {
-		M.router.route( /^image\/(.+)$/, function( title ) {
+		M.router.route( /^\/image\/(.+)$/, function( title ) {
 			var caption = $( 'a[href*="' + title + '"]' ).siblings( '.thumbcaption' ).text();
 
 			new ImageOverlay( {
@@ -110,7 +110,10 @@
 			var $a = $( this ), match = $a.attr( 'href' ).match( /[^\/]+$/ );
 
 			if ( match ) {
-				$a.attr( 'href', '#image/' + match[0] );
+				$a.on( M.tapEvent( 'click' ), function( ev ) {
+					ev.preventDefault();
+					M.router.navigate( '#/image/' + match[0] );
+				} );
 			}
 		} );
 	}
