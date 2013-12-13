@@ -71,6 +71,13 @@ $specialPageAliases['eo'] = array(
 	'Nearby' => array( 'Apude' ),
 );
 
+/** Spanish (español) */
+$specialPageAliases['es'] = array(
+	'Uploads' => array( 'Subidas' ),
+	'Nearby' => array( 'Cerca' ),
+	'UserProfile' => array( 'Perfil_de_usuario', 'Perfil_de_usuaria' ),
+);
+
 /** Estonian (eesti) */
 $specialPageAliases['et'] = array(
 	'MobileOptions' => array( 'Mobiili_suvandid' ),
@@ -92,8 +99,9 @@ $specialPageAliases['fa'] = array(
 
 /** Galician (galego) */
 $specialPageAliases['gl'] = array(
-	'Uploads' => array( 'Cargas' ),
-	'UserProfile' => array( 'Perfil_de_usuario' ),
+	'Uploads' => array( 'Subidas', 'Cargas' ),
+	'Nearby' => array( 'Preto', 'Cerca' ),
+	'UserProfile' => array( 'Perfil_de_usuario', 'Perfil_de_usuaria' ),
 );
 
 /** Hebrew (עברית) */
@@ -147,7 +155,6 @@ $specialPageAliases['mk'] = array(
 	'MobileMenu' => array( 'МобилноМени' ),
 	'Nearby' => array( 'ВоБлизина' ),
 	'UserProfile' => array( 'КорисничкиПрофил' ),
-	'MobileHistory' => array( 'МобилнаИсторија' ),
 );
 
 /** Malayalam (മലയാളം) */
