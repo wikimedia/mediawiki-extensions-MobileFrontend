@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_29a7e30a",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-13T00:46:45Z",
+      "side": 1,
+      "message": "Minor moan - this didn\u0027t need to move and confused me when reading the diff :)",
+      "revId": "f60d5fbc628e093bf41d509b7a33720eff01f806",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
