@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
 	var EventEmitter = M.require( 'eventemitter' ),
+		user = M.require( 'user' ),
 		apiUrl = mw.config.get( 'wgScriptPath', '' ) + '/api.php',
 		Api, api;
 
@@ -131,7 +132,7 @@
 			if ( !this.tokenCache[ endpoint ] ) {
 				this.tokenCache[ endpoint ] = {};
 			}
-			if ( !M.isLoggedIn() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
+			if ( user.isAnon() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
 				return d.reject( 'Token requested when not logged in.' );
 			} else if ( isCacheable && this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
 				return this.tokenCache[ endpoint ][ tokenType ];

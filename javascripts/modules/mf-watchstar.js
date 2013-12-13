@@ -4,6 +4,7 @@
 var api = M.require( 'api' ), w = ( function() {
 	var popup = M.require( 'notifications' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
+		user = M.require( 'user' ),
 		drawer = new CtaDrawer( {
 			content: mw.msg( 'mobile-frontend-watchlist-cta' ),
 			queryParams: {
@@ -25,11 +26,11 @@ var api = M.require( 'api' ), w = ( function() {
 			data = {
 				// FIXME: this gives wrong results when page loaded dynamically
 				articleID: mw.config.get( 'wgArticleId' ),
-				anon: mw.config.get( 'wgUserName' ) === null,
+				anon: user.isAnon(),
 				action: types[ eventType ],
 				isStable: mw.config.get( 'wgMFMode' ),
 				token: eventType === 2 ? '+\\' : token, // +\\ for anon
-				username: mw.config.get( 'wgUserName' ) || ''
+				username: user.getName() || ''
 			};
 
 		M.log( 'MobileBetaWatchlist', data );
@@ -165,7 +166,7 @@ var api = M.require( 'api' ), w = ( function() {
 	 * @param {String} title: The name of the article to watch
 	 */
 	function initWatchListIcon( container, title ) {
-		if ( M.isLoggedIn() ) {
+		if ( !user.isAnon() ) {
 			checkWatchStatus( [ title ], function( status ) {
 				createWatchListButton( container, title, status[ title ] );
 			} );
@@ -201,7 +202,7 @@ var api = M.require( 'api' ), w = ( function() {
 				var title = $( this ).attr( 'title' );
 				createWatchListButton( this, title, true );
 			} );
-		} else if ( M.isLoggedIn() && titles.length > 0 ) {
+		} else if ( !user.isAnon() && titles.length > 0 ) {
 			checkWatchStatus( titles, function( statuses ) {
 				$container.find( 'li' ).each( function() {
 					var title = $( this ).attr( 'title' ),

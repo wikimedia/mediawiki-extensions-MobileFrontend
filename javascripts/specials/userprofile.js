@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 	var View = M.require( 'view' ),
+		user = M.require( 'user' ),
 		limit = mw.config.get( 'wgMFMaxDescriptionChars' ),
 		EditBox;
 
@@ -78,7 +79,7 @@
 
 	function initialize() {
 		var $container = $( '.user-description-container' ),
-			username = mw.config.get( 'wgUserName' ),
+			username = user.getName(),
 			text = $container.find( '.user-description' ).text() || undefined;
 
 		// If current user is allowed to edit this profile, make it editable

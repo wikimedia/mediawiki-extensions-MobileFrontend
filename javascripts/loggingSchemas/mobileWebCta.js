@@ -2,7 +2,8 @@
 
 	function log( status, campaign, step ) {
 		var
-			username = mw.config.get( 'wgUserName' ),
+			user = M.require( 'user' ),
+			username = user.getName(),
 			data = {
 				status: status,
 				campaign: campaign || M.query.campaign,

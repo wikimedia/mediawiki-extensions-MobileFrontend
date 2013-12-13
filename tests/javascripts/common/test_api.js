@@ -119,7 +119,7 @@ QUnit.module( 'MobileFrontend api.getToken', {
 		stub.withArgs( { action: 'tokens', type: 'edit' }, params ).returns( editDeferred );
 		stub.withArgs( { action: 'tokens', type: 'upload' }, params ).returns( uploadAnonDeferred );
 		stub.withArgs( corsData, corsParams ).returns( corsDeferred );
-		this.user = mw.config.get( 'wgUserName' ) || '';
+		this.user = mw.user.getName() || '';
 		mw.config.set( 'wgUserName', 'EvilPanda' );
 	},
 	teardown: function() {

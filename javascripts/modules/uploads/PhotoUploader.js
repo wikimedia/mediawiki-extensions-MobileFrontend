@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 	var Class = M.require( 'Class' ),
+		user = M.require( 'user' ),
 		popup = M.require( 'notifications' ),
 		NagOverlay = M.require( 'modules/uploads/NagOverlay' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
@@ -16,7 +17,7 @@
 			M.log( 'MobileWebUploads', $.extend( {
 				token: M.getSessionId(),
 				funnel: funnel,
-				username: mw.config.get( 'wgUserName' ),
+				username: user.getName(),
 				isEditable: mw.config.get( 'wgIsPageEditable' ),
 				mobileMode: mw.config.get( 'wgMFMode' ),
 				userAgent: window.navigator.userAgent

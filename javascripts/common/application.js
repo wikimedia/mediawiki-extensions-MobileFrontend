@@ -166,10 +166,6 @@
 		}
 	}
 
-	function isLoggedIn() {
-		return mw.config.get( 'wgUserName' ) ? true : false;
-	}
-
 	function getOrigin() {
 		return window.location.protocol + '//' + window.location.hostname;
 	}
@@ -190,6 +186,7 @@
 	/**
 	 * Retrieve and, if not present, generate a random session ID
 	 * (32 alphanumeric characters).
+	 * FIXME: Use mw.user
 	 *
 	 * @return {string}
 	 */
@@ -278,7 +275,6 @@
 		},
 		getSessionId: getSessionId,
 		isBetaGroupMember: isBetaGroupMember,
-		isLoggedIn: isLoggedIn,
 		isWideScreen: isWideScreen,
 		lockViewport: lockViewport,
 		log: log,

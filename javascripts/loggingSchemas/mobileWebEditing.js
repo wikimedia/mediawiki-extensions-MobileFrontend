@@ -1,13 +1,14 @@
 ( function( M, $ ) {
+	var user = M.require( 'user' );
 
 	function log( data ) {
 		var options = {
 				token: M.getSessionId(),
 				namespace: mw.config.get( 'wgNamespaceNumber' ),
-				userEditCount: mw.config.get( 'wgUserEditCount' ),
+				userEditCount: user.getEditCount(),
 				isTestA: M.isTestA,
 				pageId: mw.config.get( 'wgArticleId' ),
-				username: mw.config.get( 'wgUserName' ),
+				username: user.getName(),
 				mobileMode: mw.config.get( 'wgMFMode' ),
 				userAgent: window.navigator.userAgent
 			};

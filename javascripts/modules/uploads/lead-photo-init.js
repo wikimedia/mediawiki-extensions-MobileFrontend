@@ -2,6 +2,7 @@
 
 	var
 		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
+		user = M.require( 'user' ),
 		popup = M.require( 'notifications' ),
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/LeadPhotoUploaderButton' ),
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
@@ -29,7 +30,7 @@
 			isEditable = mw.config.get( 'wgIsPageEditable' ),
 			validNamespace = ( M.inNamespace( '' ) || M.inNamespace( 'user' ) );
 
-		if ( !M.isLoggedIn() ) {
+		if ( user.isAnon() ) {
 			return makeDisabledButton( 'mobile-frontend-photo-upload-anon' );
 		} else if ( !isEditable ) {
 			return makeDisabledButton( 'mobile-frontend-photo-upload-protected' );

@@ -2,6 +2,7 @@
 
 	var
 		inStable = mw.config.get( 'wgMFMode' ) === 'stable',
+		user = M.require( 'user' ),
 		popup = M.require( 'notifications' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
@@ -75,7 +76,7 @@
 						new EditorOverlay( {
 							title: ns ? ns + ':' + title : title,
 							isNew: isNew,
-							isNewEditor: mw.config.get( 'wgUserEditCount' ) === 0,
+							isNewEditor: user.getEditCount() === 0,
 							sectionId: sectionId,
 							funnel: funnel || 'article'
 						} ).show();
@@ -113,7 +114,7 @@
 	}
 
 	if ( mw.config.get( 'wgIsPageEditable' ) && isEditingSupported ) {
-		if ( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) {
+		if ( mw.config.get( 'wgMFAnonymousEditing' ) || user.getName() ) {
 			init();
 			M.on( 'page-loaded', init );
 		} else {

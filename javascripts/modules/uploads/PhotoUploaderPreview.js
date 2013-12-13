@@ -1,8 +1,9 @@
 ( function( M, $ ) {
 	var popup = M.require( 'notifications' ),
+		user = M.require( 'user' ),
 		Overlay = M.require( 'Overlay' ),
 		LearnMoreOverlay = M.require( 'modules/uploads/LearnMoreOverlay' ),
-		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
+		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', user.getName(), user ),
 		PhotoUploaderPreview;
 
 	PhotoUploaderPreview = Overlay.extend( {
