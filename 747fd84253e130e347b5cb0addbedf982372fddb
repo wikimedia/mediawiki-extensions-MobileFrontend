@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_a670c006",
+        "filename": "javascripts/loggingSchemas/mobileWebCta.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-13T00:07:21Z",
+      "side": 1,
+      "message": "I still don\u0027t like this but I will just do a followup and merge this as long as you promptly merge that!",
+      "parentUuid": "0ee75395_6fd616c9",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_86cf0a5b",
         "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
         "patchSetId": 13
@@ -206,6 +224,24 @@
       "side": 1,
       "message": "If it gets merged, I\u0027d be fine with using that.",
       "parentUuid": "0ee75395_0603fa7a",
+      "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_c65aa484",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-13T00:07:21Z",
+      "side": 1,
+      "message": "Can you rebase this off of the mw.user patch? You can even CR the mw.user patch yourself if you want! I\u0027d rather not create more code that we have to cleanup later.",
+      "parentUuid": "0ee75395_cf6f62f8",
       "revId": "747fd84253e130e347b5cb0addbedf982372fddb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
