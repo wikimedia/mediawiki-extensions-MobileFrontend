@@ -544,6 +544,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 			// Needs LoadingOverlay
 			'mobile.stable.common',
+			'mobile.overlays.beta',
 		),
 		'messages' => array(
 			'mobile-frontend-geonotahack',

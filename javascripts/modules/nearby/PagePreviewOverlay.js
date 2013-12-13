@@ -1,18 +1,20 @@
 ( function( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha', 'desktop-beta' ] );
-	var Overlay = M.require( 'Overlay' ),
+	var Overlay = M.require( 'OverlayNew' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		api = M.require( 'api' ),
 		ua = window.navigator.userAgent,
 		device = 'unknown',
 		Page = M.require( 'Page' ),
-		LoadingOverlay = M.require( 'LoadingOverlay' ),
+		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		PagePreviewOverlay = Overlay.extend( {
 			closeOnBack: true,
 			defaults: {
 				source: 'nearby'
 			},
-			template: M.template.get( 'overlays/pagePreview' ),
+			templatePartials: {
+				content: M.template.get( 'overlays/pagePreview' )
+			},
 			initialize: function( options ) {
 				var self = this, loader = new LoadingOverlay(),
 					optionalArgs,

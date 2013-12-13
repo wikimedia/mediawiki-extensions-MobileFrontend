@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	var latLng, lat, lng,
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
-		LoadingOverlay = M.require( 'LoadingOverlay' ),
+		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		loader = new LoadingOverlay(),
 		overlay;
 

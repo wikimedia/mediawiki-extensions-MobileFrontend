@@ -1,13 +1,12 @@
 ( function( M ) {
 	M.assertMode( [ 'beta', 'alpha', 'desktop-beta' ] );
 	var Nearby = M.require( 'modules/nearby/Nearby' ),
-		Overlay = M.require( 'Overlay' ),
+		Overlay = M.require( 'OverlayNew' ),
 		NearbyOverlay;
 
 	NearbyOverlay = Overlay.extend( {
 			active: false,
 			closeOnBack: true,
-			className: 'mw-mf-overlay',
 			templatePartials: {
 				content: M.template.get( 'overlays/nearby' )
 			},
