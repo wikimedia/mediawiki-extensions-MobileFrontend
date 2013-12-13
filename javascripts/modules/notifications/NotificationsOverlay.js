@@ -46,34 +46,34 @@
 						if ( result.query && result.query.notifications ) {
 							notifications = $.map( result.query.notifications.list, function( a ) {
 								return { message: a['*'], timestamp: a.timestamp.mw };
+							} ).sort( function( a, b ) {
+								return a.timestamp < b.timestamp;
 							} );
+							if ( notifications.length ) {
+								options.notifications = notifications;
+							} else {
+								options.errorMessage = mw.msg( 'echo-none' );
+							}
+
+							self.render( options );
+							self.$( '.mw-echo-notification' ).each( function() {
+								var $notification = $( this ),
+									$primaryLink = $notification.find( '.mw-echo-notification-primary-link' );
+								// If there is a primary link, make the entire notification clickable.
+								if ( $primaryLink.length ) {
+									$notification.addClass( 'mw-echo-linked-notification' );
+									$notification.on( 'click', function() {
+										window.location.href = $primaryLink.attr( 'href' );
+									} );
+								}
+								// Set up event logging for each notification
+								mw.echo.setupNotificationLogging( $notification, 'mobile-overlay' );
+							} );
+
+							self.markAllAsRead();
 						} else {
 							self.onError();
 						}
-
-						// Add the notifications to the overlay
-						if ( notifications.length ) {
-							options.notifications = notifications.reverse();
-						} else {
-							options.errorMessage = mw.msg( 'echo-none' );
-						}
-						self.render( options );
-
-						self.$( '.mw-echo-notification' ).each( function() {
-							var $notification = $( this ),
-								$primaryLink = $notification.find( '.mw-echo-notification-primary-link' );
-							// If there is a primary link, make the entire notification clickable.
-							if ( $primaryLink.length ) {
-								$notification.addClass( 'mw-echo-linked-notification' );
-								$notification.on( 'click', function() {
-									window.location.href = $primaryLink.attr( 'href' );
-								} );
-							}
-							// Set up event logging for each notification
-							mw.echo.setupNotificationLogging( $notification, 'mobile-overlay' );
-						} );
-
-						self.markAllAsRead();
 					} ).fail( function () {
 						self.onError();
 					} );
