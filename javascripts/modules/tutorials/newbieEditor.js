@@ -4,6 +4,7 @@
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		escapeHash = M.require( 'toggle' ).escapeHash,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > - 1,
+		hash = window.location.hash,
 		// A/B test showing the tutorial from the left nav
 		shouldShowLeftNavEditTutorial = !inEditor && M.isBetaGroupMember() &&
 			M.query.campaign === 'leftNavSignup' && M.isTestA,
@@ -15,8 +16,8 @@
 				'mobile-frontend-editor-tutorial-alt-summary',
 		editOverlay, target, $target, href;
 
-	if ( window.location.hash ) {
-		target = escapeHash( window.location.hash ) + ' ~ .edit-page';
+	if ( hash && hash.indexOf( '/' ) === -1 ) {
+		target = escapeHash( hash ) + ' ~ .edit-page';
 	} else {
 		target = '#ca-edit .edit-page';
 	}
