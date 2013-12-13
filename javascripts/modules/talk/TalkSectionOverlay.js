@@ -20,7 +20,7 @@ var
 				$textarea = $comment.find( 'textarea' );
 			this._super( options );
 			this.$( '.loading' ).remove();
-			if ( user.isAnon() || mw.config.get( 'wgMFMode' ) !== 'alpha' ) {
+			if ( user.isAnon() || !M.isAlphaGroupMember() ) {
 				$comment.remove();
 			} else {
 				$textarea.on( 'focus', function() {

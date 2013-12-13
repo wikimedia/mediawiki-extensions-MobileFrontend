@@ -257,10 +257,6 @@
 		return currentPage;
 	}
 
-	function isBetaGroupMember() {
-		return mw.config.get( 'wgMFMode' ) !== 'stable';
-	}
-
 	$( init );
 
 	$.extend( M, {
@@ -274,7 +270,6 @@
 			return $( '#content div' ).eq( 0 );
 		},
 		getSessionId: getSessionId,
-		isBetaGroupMember: isBetaGroupMember,
 		isWideScreen: isWideScreen,
 		lockViewport: lockViewport,
 		log: log,
@@ -293,7 +288,7 @@
 		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0,
 		// FIXME: get rid off this (grep M.tapEvent) when micro.tap.js is in stable
 		tapEvent: function( fallbackEvent ) {
-			return mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : fallbackEvent;
+			return M.isAlphaGroupMember() ? 'tap' : fallbackEvent;
 		}
 	} );
 

@@ -118,7 +118,7 @@
 
 	// FIXME: Temporary workaround while toggle-dynamic is not in stable
 	// (needed for dynamic section loading after editing)
-	if ( mw.config.get( 'wgMFMode' ) !== 'alpha' ) {
+	if ( !M.isAlphaGroupMember() ) {
 		M.on( 'section-toggle', function( $section ) {
 			var $content = $section.next(),
 				content = $content.data( 'content' );

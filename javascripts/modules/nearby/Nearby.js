@@ -131,7 +131,7 @@
 			} );
 
 			// Load watch stars in alpha
-			if ( wgMFMode === 'alpha' ) {
+			if ( M.isAlphaGroupMember() ) {
 				mw.loader.using( 'mobile.stable', function() {
 					M.require( 'watchstar' ).initWatchListIconList( self.$( 'ul' ) );
 				} );
