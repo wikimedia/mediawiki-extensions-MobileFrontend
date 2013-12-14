@@ -28,24 +28,37 @@
 	}
 
 	SearchApi = Api.extend( {
+		initialize: function() {
+			this._super();
+			this.searchCache = {};
+		},
+
 		search: function( query ) {
-			return this.get( {
-				search: query,
-				action: 'opensearch',
-				namespace: 0,
-				limit: 15
-			} ).then( function( data ) {
-				return {
-					query: data[0],
-					results: $.map( data[1], function( title ) {
-						return {
-							heading: highlightSearchTerm( title, query ),
-							title: title,
-							url: mw.util.getUrl( title )
-						};
-					} )
-				};
-			} );
+			if ( !this.searchCache[query] ) {
+				this.searchCache[query] = this.get( {
+					search: query,
+					action: 'opensearch',
+					namespace: 0,
+					limit: 15
+				} ).then( function( data ) {
+					return {
+						query: data[0],
+						results: $.map( data[1], function( title ) {
+							return {
+								heading: highlightSearchTerm( title, query ),
+								title: title,
+								url: mw.util.getUrl( title )
+							};
+						} )
+					};
+				} );
+			}
+
+			return this.searchCache[query];
+		},
+
+		isCached: function( query ) {
+			return !!this.searchCache[query];
 		}
 	} );
 

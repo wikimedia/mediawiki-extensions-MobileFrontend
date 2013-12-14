@@ -3,9 +3,19 @@
 	var SearchOverlay = M.require( 'modules/searchNew/SearchOverlay' );
 
 	// FIXME change when micro.tap.js in stable
+	//
 	// don't use focus event (https://bugzilla.wikimedia.org/show_bug.cgi?id=47499)
+	//
+	// focus() (see SearchOverlay#show) opens virtual keyboard only if triggered
+	// from user context event, so using it in route callback won't work
+	// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
 	$( '#searchInput' ).on( M.tapEvent( 'touchend mouseup' ), function() {
-		M.router.navigate( 'search' );
+		new SearchOverlay().show();
+		// without this delay, the keyboard will not show up on Android...
+		// (tested in Chrome for Android)
+		setTimeout( function() {
+			M.router.navigate( '/search' );
+		}, 300 );
 	} );
 
 	// FIXME: ugly hack that removes search from browser history when navigating
@@ -25,9 +35,5 @@
 			} );
 		} );
 	}
-
-	M.router.route( /^search$/, function() {
-		new SearchOverlay().show();
-	} );
 
 }( mw.mobileFrontend, jQuery ));
