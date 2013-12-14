@@ -3549,6 +3549,8 @@ $messages['cy'] = array(
 	'mobilefrontend-keepgoing-cancel' => 'Dim diolch',
 	'mobilefrontend-keepgoing-suggest' => 'Ydw',
 	'mobilefrontend-keepgoing-suggest-again' => 'Ceisio tudalen arall',
+	'mobilefrontend-keepgoing-saved-title' => 'Cadwyd y golygiad!',
+	'mobilefrontend-keepgoing-links-title' => 'Ychwanegu cysylltau',
 	'nearby' => "Tudalennau yn perthyn i'r cyffiniau",
 	'mobile-frontend-desc' => 'Rhaglen pen blaen i declynnau symudol',
 	'mobile-frontend-search-submit' => 'Eler',
@@ -3584,6 +3586,7 @@ $messages['cy'] = array(
 	'mobile-frontend-on' => 'ARNO',
 	'mobile-frontend-featured-article' => 'Cynnwys Dethol y Dydd',
 	'mobile-frontend-news-items' => 'Ar y Newyddion',
+	'mobile-frontend-language-heading' => '<strong>Ieithoedd</strong>',
 	'mobile-frontend-language-article-heading' => 'Darllen mewn iaith arall',
 	'mobile-frontend-language-header' => "Mae'r dudalen hon ar gael mewn $1 {{PLURAL:$1|iaith}}",
 	'mobile-frontend-language-variant-header' => 'Dewis amrywiad ar {{#language:{{CONTENTLANG}}}}',
@@ -3595,7 +3598,7 @@ $messages['cy'] = array(
 	'mobile-frontend-password-placeholder' => 'Cyfrinair',
 	'mobile-frontend-login' => 'Mewngofnodi',
 	'mobile-frontend-history' => "Gweld hanes golygu'r dudalen hon.",
-	'mobile-frontend-history-404-title' => 'Rhoddwyd teitl gwallus', # Fuzzy
+	'mobile-frontend-history-404-title' => "Does dim tudalen o'r enw hwn",
 	'mobile-frontend-history-404-desc' => "Ni ellir gweld hanes tudalen nad yw'n bod. Efallai iddi gael ei dileu, neu i chi ddilyn cyswllt gwallus.",
 	'mobile-frontend-history-summary' => 'Hanes y dudalen [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Newidiwyd ddiwethaf ar $1 am $2',
@@ -3619,6 +3622,8 @@ $messages['cy'] = array(
 	'mobile-frontend-account-create-email-placeholder' => 'Cyfeiriad ebost (opsiynol)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Rhowch y côd cadarnhau',
 	'mobile-frontend-overlay-escape' => 'Ewch yn ol',
+	'mobile-frontend-overlay-close' => 'Caeer',
+	'mobile-frontend-overlay-continue' => 'Ymlaen',
 	'mobile-frontend-placeholder' => 'Chwilio {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Chwilio drwy {{SITENAME}} (Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Chwilio drwy {{SITENAME}} (Arbrofol)',
@@ -3816,12 +3821,13 @@ $messages['cy'] = array(
 	'mobile-frontend-profile-title' => 'Data personol',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Uwchlwythwyd}} {{PLURAL:$1|heddiw|ddoe|deuddydd yn ôl|tridiau yn ôl|$2 diwrnod yn ôl}}.',
 	'mobile-frontend-profile-usertalk' => 'Sgwrsio gyda $1',
+	'mobile-frontend-profile-error' => 'Wps!',
 	'mobile-frontend-profile-noargs' => 'Ni roddwyd enw defnyddiwr. Rhowch enw defnyddiwr i weld y data personol.',
-	'mobile-frontend-profile-nouser' => "Enw nad yw'n bod neu sy'n annilys", # Fuzzy
+	'mobile-frontend-profile-nouser' => "Does dim defnyddiwr o'r enw hwn i gael. Mae'r peiriant yn gwahaniaethu rhwng llythrennau mawr a bach, felly gwiriwch union sillafiad yr enw.",
 	'mobile-frontend-profile-activity-heading' => 'Gweithgarwch a chyfraniadau',
 	'mobile-frontend-profile-userpage-link' => 'Ymweld â thudalen y defnyddiwr.',
 	'mobile-frontend-requires-optin' => "Rhaid dewis y modd beta er mwyn cael mynediad i'r dudalen hon. Ewch i [[Special:MobileOptions|dudalen y dewisiadau]] i ddewis y modd beta.",
-	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Cafodd ei ddiolch}} gan [[Special:UserProfile/$1|$1]] am olygiad i [[$2]].', # Fuzzy
+	'mobile-frontend-profile-last-thanked' => 'Cafodd {{GENDER:$3|ei ddiolch|ei diolch|ei ddiolch}} {{GENDER:$1|gan}} [[Special:UserProfile/$1|$1]] am olygiad i [[$2]].',
 	'mobile-frontend-geonotahack' => "Yng nghyffiniau'r dudalen hon",
 	'beta-feature-geonotahack' => "Yng nghyffiniau'r dudalen hon",
 );
@@ -5388,6 +5394,7 @@ $messages['et'] = array(
 	'mobile-frontend-password-placeholder' => 'Parool',
 	'mobile-frontend-login' => 'Logi sisse',
 	'mobile-frontend-history' => 'Vaata selle lehekülje redigeerimislugu.',
+	'mobile-frontend-history-summary' => 'Lehekülje [[:$1]] ajalugu',
 	'mobile-frontend-last-modified-date' => 'Viimati muudetud kuupäeval $1, kell $2',
 	'mobile-frontend-last-modified-seconds' => 'Viimati muudetud {{PLURAL:$1|ühe|$1}} sekundi eest',
 	'mobile-frontend-last-modified-minutes' => 'Viimati muudetud {{PLURAL:$1|ühe|$1}} minuti eest',
@@ -5546,11 +5553,11 @@ $messages['et'] = array(
 	'mobile-frontend-profile-title' => 'Kasutajaprofiil',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Laadis}} faili üles {{PLURAL:$1|eile|$1 päeva tagasi|0=täna}}.',
 	'mobile-frontend-profile-usertalk' => 'Arutelu kasutajaga $1',
-	'mobile-frontend-profile-noargs' => 'Palun määra profiili vaatamiseks kasutajanimi.', # Fuzzy
-	'mobile-frontend-profile-nouser' => 'Puuduv või vigane kasutajanimi', # Fuzzy
+	'mobile-frontend-profile-noargs' => 'Kasutajanimi puudub. Palun määra profiili vaatamiseks kasutajanimi.',
+	'mobile-frontend-profile-nouser' => 'Sellise nimega kasutajat pole. Kasutajanimed on tõstutundlikud, seega kontrolli, kas see on õigesti sisestatud.',
 	'mobile-frontend-profile-activity-heading' => 'Aktiivsus ja kaastöö',
 	'mobile-frontend-profile-userpage-link' => 'Vaata kasutajalehekülge.',
-	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] tänas muudatuse eest leheküljel [[$2]].', # Fuzzy
+	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] {{GENDER:$3|tänas}} muudatuse eest leheküljel [[$2]].',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Redigeeris}} {{PLURAL:$2|eile|$2 päeva tagasi|0=täna}} lehekülge [[$1]].',
 	'mobile-frontend-profile-footer-days' => 'Ühines {{PLURAL:$2|ühe|$2}} päeva eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
 	'mobile-frontend-profile-footer-months' => 'Ühines enam kui {{PLURAL:$2|ühe|$2}} kuu eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
@@ -6326,6 +6333,7 @@ plakatum, forsíðum á bókum osfr.',
  * @author Lucky
  * @author Metroitendo
  * @author NemesisIII
+ * @author Nobody
  * @author Peter17
  * @author Sherbrooke
  * @author Tititou36
@@ -6344,6 +6352,7 @@ $messages['fr'] = array(
 	'mobilefrontend-keepgoing-suggest' => 'Oui, s’il vous plaît',
 	'mobilefrontend-keepgoing-suggest-again' => 'Essayer une autre',
 	'mobilefrontend-keepgoing-links-title' => 'Ajouter des liens',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Félicitations ! Vous avez fait votre première édition ! Voulez-vous nous aider en ajoutant des liens  vers une page récemment créée ?',
 	'nearby' => 'Pages près de vous',
 	'mobile-frontend-desc' => 'Affichage mobile',
 	'mobile-frontend-search-submit' => 'Go',
@@ -11256,6 +11265,9 @@ $messages['lb'] = array(
 	'mobilefrontend-keepgoing-cancel' => 'Nee, merci',
 	'mobilefrontend-keepgoing-suggest' => 'Jo, w.e.g.',
 	'mobilefrontend-keepgoing-suggest-again' => 'Probéiert eng Aner',
+	'mobilefrontend-keepgoing-saved-title' => 'Ännerung gespäichert!',
+	'mobilefrontend-keepgoing-links-title' => 'Link derbäisetzen',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Eng aner Säit verbesseren?',
 	'nearby' => 'Säiten no bei Iech',
 	'mobile-frontend-desc' => 'Frontend Applicatioun fir mobil Apparater',
 	'mobile-frontend-search-submit' => 'Lass',
@@ -11318,6 +11330,8 @@ $messages['lb'] = array(
 	'mobile-frontend-account-create-email-placeholder' => 'E-Mailadress (fakultativ)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Confirmatiounscode aginn',
 	'mobile-frontend-overlay-escape' => 'Zréck goen',
+	'mobile-frontend-overlay-close' => 'Zoumaachen',
+	'mobile-frontend-overlay-continue' => 'Viru fueren',
 	'mobile-frontend-placeholder' => 'Op {{SITENAME}} sichen',
 	'mobile-frontend-placeholder-beta' => 'Op {{SITENAME}} sichen (Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Op {{SITENAME}} sichen (Experimentell)',
@@ -11374,7 +11388,7 @@ $messages['lb'] = array(
 	'mobile-frontend-donate-image-login' => 'Dir musst ageloggt si fir déi Fichieren ze gesinn déi Dir eropgelueden hutt.',
 	'mobile-frontend-photo-upload-disabled' => 'Op dëser Säit gëtt kee Bild gebraucht.',
 	'mobile-frontend-photo-upload-anon' => 'Dir musst ageloggt si fir e Bild bei dës Säit derbäizesetzen.',
-	'mobile-frontend-photo-upload-protected' => 'Dir hutt net déi néideg Rechter fir op dës Säit e Bild derbäizesetzen.',
+	'mobile-frontend-photo-upload-protected' => 'Dir hutt net déi néideg Rechter fir op dës Säit e Bild dobäizesetzen.',
 	'mobile-frontend-photo-upload-unavailable' => "Äre Browser ënnerstëtzt d'Eropluede vu Biller net.",
 	'mobile-frontend-photo-upload-generic' => 'E Bild bäidroen',
 	'mobile-frontend-donate-image-title' => 'Eropgeluede Fichieren',
@@ -11390,7 +11404,7 @@ $messages['lb'] = array(
 	'mobile-frontend-first-upload-wizard-new-page-2' => 'Evitéiert Materialien déi ënner de Copyright falen an déi Dir um Internet fonnt hutt, genee sou wéi Biller vu Pousteren, Bicher, asw.',
 	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Verstan?',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Jo!',
-	'mobile-frontend-watchlist-add' => '$1 gouf op Är Iwwerwaachungslëscht derbäigesat',
+	'mobile-frontend-watchlist-add' => '$1 gouf op Är Iwwerwaachungslëscht dobäigesat',
 	'mobile-frontend-watchlist-removed' => '$1 gouf vun Ärer Iwwerwaachungslëscht erofgeholl',
 	'mobile-frontend-watchlist-view' => 'Är Iwwerwaachungslëscht weisen',
 	'mobile-frontend-watchlist-more' => 'méi',
@@ -11416,14 +11430,14 @@ $messages['lb'] = array(
 	'mobile-frontend-diffview-title' => 'Ännerungen',
 	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|Ännerung|Ännerungen}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonyme Benotzer',
-	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|Byte|Byten}} derbäigesat',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|Byte|Byten}} dobäigesat',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|Byte|Byten}} ewechgeholl',
-	'mobile-frontend-diffview-explained' => 'Dës Linne goufen derbäigesat (+) an ewechgeholl (-):',
+	'mobile-frontend-diffview-explained' => 'Dës Linne goufen dobäigesat (+) an ewechgeholl (-):',
 	'mobile-frontend-table' => 'Tabell $1',
 	'mobile-frontend-saving-exit-page' => 'Äre Beitrag gëtt nach gespäichert. Wann Dir elo ofbriecht da sinn är Beiträg verluer. Sidd Dir sécher datt Dir wëllt erausgoen?',
-	'mobile-frontend-photo-upload' => 'Setzt e Bild op dës Säit derbäi',
-	'mobile-frontend-photo-article-edit-comment' => "Bild fir d'Benotzen op der Säit gouf derbäigesat",
-	'mobile-frontend-photo-upload-comment' => "Bild op d'Säit derbäigesat",
+	'mobile-frontend-photo-upload' => 'Setzt e Bild op dës Säit dobäi',
+	'mobile-frontend-photo-article-edit-comment' => "Bild fir d'Benotzen op der Säit gouf dobäigesat",
+	'mobile-frontend-photo-upload-comment' => "Bild op d'Säit dobäigesat",
 	'mobile-frontend-photo-caption-placeholder' => 'Beschreift dëst Bild (obligatoresch)',
 	'mobile-frontend-image-loading' => 'Bild gëtt gelueden',
 	'mobile-frontend-photo-ownership' => 'Ech, $1, hunn dat Bild gemaach.',
@@ -11454,7 +11468,7 @@ Déi gi geläscht.",
 	'mobile-frontend-photo-submit' => 'Schécken',
 	'mobile-frontend-photo-cancel' => 'Ofbriechen',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ eropgeluede Fichieren',
-	'mobile-frontend-photo-upload-login' => 'Dir musst ageloggt si fir e Bild derbäizesetzen.',
+	'mobile-frontend-photo-upload-login' => 'Dir musst ageloggt si fir e Bild dobäizesetzen.',
 	'mobile-frontend-image-heading-describe' => "Bild '''beschreiwen'''",
 	'mobile-frontend-image-uploading' => "Bild '''eroplueden''' ...",
 	'mobile-frontend-image-cancel-confirm' => 'Eroplueden ofbriechen?',
@@ -11495,7 +11509,7 @@ Déi gi geläscht.",
 	'mobile-frontend-talk-overlay-header' => 'Diskussioun',
 	'mobile-frontend-talk-back-to-page' => 'Zréck op d\'Säit "$1".',
 	'mobile-frontend-talk-overlay-lead-header' => 'Diskussioun ouni Numm',
-	'mobile-frontend-talk-add-overlay-submit' => 'Diskussioun derbäisetzen',
+	'mobile-frontend-talk-add-overlay-submit' => 'Diskussioun dobäisetzen',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Thema',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Wat mengt Dir?',
 	'mobile-frontend-talk-edit-summary' => 'Neien Diskussiounsabschnitt: $1',
@@ -12677,6 +12691,12 @@ $messages['mr'] = array(
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
+	'mobilefrontend-keepgoing-saved-title' => 'Suntingan disimpan!',
+	'mobilefrontend-keepgoing-links-title' => 'Tambah pautan',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Tahniah kerana melakukan suntingan sulung anda! Adakah anda sudi menolong dengan menambah pautan kepada halaman yang baru diwujudkan?',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Baiki halaman lain?',
+	'mobilefrontend-keepgoing-links-explain' => 'Cari lebih banyak perkataan yang boleh dijadikan pautan. Bubuh tanda kurungan siku berganda di awal dan akhir perkataan.',
+	'mobilefrontend-keepgoing-links-example' => 'cth. $1gitar$2 menjadi $3gitar$4',
 	'nearby' => 'Halaman berdekatan anda',
 	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile-frontend-search-submit' => 'Pergi',
@@ -12721,6 +12741,7 @@ $messages['ms'] = array(
 	'mobile-frontend-username-placeholder' => 'Nama pengguna',
 	'mobile-frontend-password-placeholder' => 'Kata laluan',
 	'mobile-frontend-login' => 'Log masuk',
+	'mobile-frontend-history-404-title' => 'Tiada halaman sedemikian',
 	'mobile-frontend-last-modified-date' => 'Kali terakhir disunting pada $1, $2',
 	'mobile-frontend-last-modified-seconds' => 'Kali terakhir disunting $1 saat lepas',
 	'mobile-frontend-last-modified-minutes' => 'Kali terakhir disunting $1 minit lepas',
@@ -12734,6 +12755,8 @@ $messages['ms'] = array(
 	'mobile-frontend-account-create-email-placeholder' => 'Alamat e-mel (pilihan)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Taipkan teks keselamatan', # Fuzzy
 	'mobile-frontend-overlay-escape' => 'Kembali',
+	'mobile-frontend-overlay-close' => 'Tutup',
+	'mobile-frontend-overlay-continue' => 'Sambung',
 	'mobile-frontend-placeholder' => 'Cari dalam {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Cari dalam {{SITENAME}} (Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Cari dalam {{SITENAME}} (Percubaan)',
@@ -14341,6 +14364,7 @@ $messages['pfl'] = array(
  * @author Rezonansowy
  * @author Rzuwig
  * @author Sp5uhe
+ * @author Tar Lócesilion
  * @author WTM
  * @author Woytecr
  */
@@ -14595,6 +14619,7 @@ $messages['pl'] = array(
 	'mobile-frontend-profile-title' => 'Profil użytkownika',
 	'mobile-frontend-profile-noargs' => 'Proszę podać nazwę użytkownika, aby wyświetlić profil.', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktywność i wkład',
+	'beta-feature-geonotahack-description' => 'Umożliwia wyszukanie artykułów opisujących miejsca położone niedaleko miejsca, o którym czytasz.',
 );
 
 /** Piedmontese (Piemontèis)
@@ -18196,6 +18221,12 @@ $messages['uk'] = array(
 	'mobilefrontend-keepgoing-cancel' => 'Ні, дякую.',
 	'mobilefrontend-keepgoing-suggest' => 'Так, будь ласка',
 	'mobilefrontend-keepgoing-suggest-again' => 'Спробуйте іншу',
+	'mobilefrontend-keepgoing-saved-title' => 'Редагування збережено!',
+	'mobilefrontend-keepgoing-links-title' => 'Додати посилання',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Вітаємо вас з вашої першим редагуванням! Ви хотіли б допомогти, додавши посилання на нещодавно створену сторінку?',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Виправити іншу сторінку?',
+	'mobilefrontend-keepgoing-links-explain' => 'Знайдіть ще слова, які могли б бути посиланнями. Додайте подвійні дужки навколо слова.',
+	'mobilefrontend-keepgoing-links-example' => 'наприклад, $1гітара$2 стане $3гітара$4',
 	'nearby' => 'Сторінки поруч з вами',
 	'mobile-frontend-desc' => 'Мобільний інтерфейс',
 	'mobile-frontend-search-submit' => 'Перейти',
@@ -18269,6 +18300,8 @@ $messages['uk'] = array(
 	'mobile-frontend-account-create-email-placeholder' => 'E-mail адреса (за бажанням)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Введіть код підтвердження',
 	'mobile-frontend-overlay-escape' => 'Повернутися',
+	'mobile-frontend-overlay-close' => 'Закрити',
+	'mobile-frontend-overlay-continue' => 'Продовжити',
 	'mobile-frontend-placeholder' => 'Шукати у {{GRAMMAR:genitive|{{SITENAME}}}}',
 	'mobile-frontend-placeholder-beta' => 'Пошук у {{GRAMMAR:genitive|{{SITENAME}}}} (бета)',
 	'mobile-frontend-placeholder-alpha' => 'Пошук у {{grammar:genitive|{{SITENAME}}}} (Експериментально)',
@@ -18840,6 +18873,12 @@ $messages['vi'] = array(
 	'mobilefrontend-keepgoing-cancel' => 'Thôi',
 	'mobilefrontend-keepgoing-suggest' => 'Có, cảm ơn',
 	'mobilefrontend-keepgoing-suggest-again' => 'Thử cái nữa',
+	'mobilefrontend-keepgoing-saved-title' => 'Đã lưu sửa đổi!',
+	'mobilefrontend-keepgoing-links-title' => 'Thêm liên kết',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Chúc mừng bạn đã sửa đổi lần đầu tiên! Bạn có muốn giúp tạo thêm liên kết vào một trang mới được viết?',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Bạn có muốn sửa một trang nữa?',
+	'mobilefrontend-keepgoing-links-explain' => 'Tìm thêm cụm từ nên trở thành liên kết. Đưa cụm từ vào các đôi dấu ngoặc vuông.',
+	'mobilefrontend-keepgoing-links-example' => 'ví dụ $1guitar$2 sẽ trở thành $3guitar$4',
 	'nearby' => 'Trang gần bạn',
 	'mobile-frontend-desc' => 'Giao diện di động',
 	'mobile.css' => '/* Mã CSS đặt ở đây sẽ ảnh hưởng đến những người sử dụng trang di động */',
@@ -18889,7 +18928,7 @@ $messages['vi'] = array(
 	'mobile-frontend-password-placeholder' => 'Mật khẩu',
 	'mobile-frontend-login' => 'Đăng nhập',
 	'mobile-frontend-history' => 'Xem lịch sử sửa đổi của trang này.',
-	'mobile-frontend-history-404-title' => 'Tên trang sai', # Fuzzy
+	'mobile-frontend-history-404-title' => 'Không tìm thấy trang',
 	'mobile-frontend-history-404-desc' => 'Không thể xem lịch sử của một trang chưa tồn tại. Nó có thể đã bị xóa hoặc bạn có thể đã theo một liên kết hỏng.',
 	'mobile-frontend-history-no-results' => 'Bộ lọc không khớp với lịch sử nào.',
 	'mobile-frontend-contribution-summary' => 'Tất cả các sửa đổi của {{GENDER:$1}}[[Special:UserProfile/$1|$1]]',
@@ -18915,6 +18954,8 @@ $messages['vi'] = array(
 	'mobile-frontend-account-create-email-placeholder' => 'Địa chỉ thư điện tử (tùy chọn)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Nhập mã xác nhận',
 	'mobile-frontend-overlay-escape' => 'Quay lại',
+	'mobile-frontend-overlay-close' => 'Đóng',
+	'mobile-frontend-overlay-continue' => 'Tiếp',
 	'mobile-frontend-placeholder' => 'Tìm kiếm {{SITENAME}}…',
 	'mobile-frontend-placeholder-beta' => 'Tìm kiếm {{SITENAME}} (Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Tìm {{SITENAME}} (Chế độ thử nghiệm)',
