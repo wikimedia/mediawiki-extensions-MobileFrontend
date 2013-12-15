@@ -24,8 +24,8 @@ class SkinMobileBeta extends SkinMobile {
 		return $styles;
 	}
 
-	protected function prepareQuickTemplate( OutputPage $out = null ) {
-		$tpl = parent::prepareQuickTemplate( $out );
+	protected function prepareQuickTemplate() {
+		$tpl = parent::prepareQuickTemplate();
 		// Move last modified link to top as long as it is not the main page
 		$tpl->set( '_lastModifiedAbove', !$this->getTitle()->isMainPage() );
 		return $tpl;

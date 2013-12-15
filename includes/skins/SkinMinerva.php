@@ -14,9 +14,10 @@ class SkinMinerva extends SkinTemplate {
 	/** @var array of classes that should be present on the body tag */
 	private $pageClassNames = array();
 
-	protected function prepareQuickTemplate( OutputPage $out = null ) {
+	protected function prepareQuickTemplate() {
 		global $wgAppleTouchIcon;
 		wfProfileIn( __METHOD__ );
+		$out = $this->getOutput();
 		// add head items
 		if ( $wgAppleTouchIcon !== false ) {
 			$out->addHeadItem( 'touchicon',
@@ -38,7 +39,7 @@ class SkinMinerva extends SkinTemplate {
 		) );
 
 		// Generate template after doing the above...
-		$tpl = parent::prepareQuickTemplate( $out );
+		$tpl = parent::prepareQuickTemplate();
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 
 		$this->preparePageContent( $tpl );

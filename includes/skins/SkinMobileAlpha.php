@@ -14,8 +14,8 @@ class SkinMobileAlpha extends SkinMobileBeta {
 		return $modules;
 	}
 
-	protected function prepareQuickTemplate( OutputPage $out = null ) {
-		$tpl = parent::prepareQuickTemplate( $out );
+	protected function prepareQuickTemplate() {
+		$tpl = parent::prepareQuickTemplate();
 		$this->prepareTalkLabel( $tpl );
 		return $tpl;
 	}

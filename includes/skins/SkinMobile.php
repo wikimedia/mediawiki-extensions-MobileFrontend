@@ -81,11 +81,12 @@ class SkinMobile extends SkinMinerva {
 		wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
 	}
 
-	protected function prepareQuickTemplate( OutputPage $out = null ) {
+	protected function prepareQuickTemplate() {
 		wfProfileIn( __METHOD__ );
+		$out = $this->getOutput();
 		$out->setTarget( 'mobile' );
 		$html = ExtMobileFrontend::DOMParse( $out );
-		$tpl = parent::prepareQuickTemplate( $out );
+		$tpl = parent::prepareQuickTemplate();
 		$tpl->set( 'bodytext', $html );
 		$this->applyCustomisations( $tpl );
 		$this->prepareFooterLinks( $tpl );
