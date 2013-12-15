@@ -61,6 +61,7 @@ $specialPageAliases['diq'] = array(
 	'MobileDiff' => array( 'MobilVer' ),
 	'MobileMenu' => array( 'MıobilMenu' ),
 	'Nearby' => array( 'Nezdıra' ),
+	'UserProfile' => array( 'ProfilaKarberi' ),
 );
 
 /** Esperanto (Esperanto) */
@@ -106,6 +107,7 @@ $specialPageAliases['gl'] = array(
 
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = array(
+	'MobileOptions' => array( 'הגדרות_נייד', 'הגדרות_פלאפון', 'הגדרות_סלולרי' ),
 	'Nearby' => array( 'בסביבה', 'קרוב' ),
 );
 
