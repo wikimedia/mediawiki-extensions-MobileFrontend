@@ -16,6 +16,24 @@
       "revId": "5fee27ab2431c2f892ab23877d5917348dfd2a3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_62e29299",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 100
+      },
+      "writtenOn": "2013-12-16T17:49:51Z",
+      "side": 1,
+      "message": "That\u0027s the final point, but removing it right now could cause a fatal if, for whatever reason, this gets deployed before the change in core. So I want to wait a bit (one \"wmf\" branch) before removing it from that call.",
+      "parentUuid": "0ee75395_42578ecd",
+      "revId": "5fee27ab2431c2f892ab23877d5917348dfd2a3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
