@@ -12,7 +12,17 @@
 
 #section_0 {
 	padding: 12px @contentMargin 7px;
+	// FIXME: Use a gray defined in variables e.g. @grayMediumLight
 	border-bottom: dotted 1px #CACACA;
+}
+
+.pre-content {
+	// FIXME: Use a gray defined in variables e.g. @grayMediumLight
+	border-bottom: solid 1px #CACACA;
+	// FIXME: Remove when pre-content in cache
+	#page-actions {
+		border-bottom: none;
+	}
 }
 
 #page-actions {
@@ -20,7 +30,8 @@
 
 	padding: @verticalMargin @contentMargin @verticalMargin @contentMargin - 8;
 	// end hacks
-	border-bottom: solid 1px #CACACA;
+	// FIXME: Remove when pre-content in cache
+	border-bottom: solid 1px @grayMediumLight;
 
 	li,
 	.watch-this-article {

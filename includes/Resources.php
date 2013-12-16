@@ -101,6 +101,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.styles.mainpage' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/common/mainpage.less'
+		),
+		'group' => 'other',
+	),
+
 	'mobile.styles.page' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'styles' => array(

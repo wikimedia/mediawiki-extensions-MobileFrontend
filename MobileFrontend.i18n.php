@@ -17,6 +17,7 @@ $messages['en'] = array (
 	'mobilefrontend-random-cancel' => 'Let me read!',
 
 	// KeepGoingCta
+	'mobilefrontend-keepgoing-wikify-category' => '',
 	'mobilefrontend-keepgoing-ask' => "Well done! You're getting the hang of this! Do you want to try editing another page?",
 	'mobilefrontend-keepgoing-ask-first' => 'Congratulations on making your first edit! Do you want to try editing another page?',
 	'mobilefrontend-keepgoing-explain' => 'Great! Another user said this page needs help. Try this one, or try another one.',
@@ -392,6 +393,10 @@ $messages['en'] = array (
 	// Messages to support beta features provided by MobileFrontend
 	'beta-feature-geonotahack' => 'Near this page',
 	'beta-feature-geonotahack-description' => 'Discover pages which are geographically nearby to the content page you are currently reading.',
+
+	// Main Page
+	'mobile-frontend-mainpage-cta-prompt' => 'This article needs your help!',
+	'mobile-frontend-mainpage-cta-button' => 'Improve this article',
 );
 
 /** Message documentation (Message documentation)
@@ -428,6 +433,7 @@ See also:
 
 See also:
 * {{msg-mw|Mobilefrontend-random-explain}}',
+	'mobilefrontend-keepgoing-wikify-category' => '{{notranslate}}Category used for searching pages that need wikification',
 	'mobilefrontend-keepgoing-ask' => 'Congratulations message shown to a user who has completed an edit in the keepgoing campaign. Prompts them to edit again.',
 	'mobilefrontend-keepgoing-ask-first' => 'Congratulate user on first edit. Ask them if they want to edit again.',
 	'mobilefrontend-keepgoing-explain' => 'Message explaining that the page they are looking at has issues. Gives them the option to try another.',
@@ -1079,6 +1085,9 @@ Parameters:
 	'beta-feature-geonotahack' => 'Title for near this page beta feature.
 {{Identical|Near this page}}',
 	'beta-feature-geonotahack-description' => 'Description for near this page beta feature.',
+
+	'mobile-frontend-mainpage-cta-prompt' => 'Shows on main page to logged in users prompting them to edit.',
+	'mobile-frontend-mainpage-cta-button' => 'Label of button see {{msg-mw|mobile-frontend-mainpage-cta-button}}',
 );
 
 /** Achinese (Acèh)

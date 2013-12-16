@@ -27,8 +27,7 @@
 			mobileWebCta.log( status, this.options.campaign, this.options.step );
 		},
 		initialize: function( options ) {
-			var exampleMsg,
-				user = M.require( 'user' );
+			var exampleMsg;
 			options = $.extend( {}, this.defaults, options );
 			if ( !options.msg ) {
 				if ( options.step === 1 ) {
@@ -37,7 +36,7 @@
 					} else {
 						options.msg = mw.msg( 'mobilefrontend-keepgoing-links-ask-again' );
 					}
-				} else if ( options.step === 2 && user.getEditCount() === 1 ) {
+				} else if ( options.step === 2 ) {
 					options.msg = mw.msg( 'mobilefrontend-keepgoing-links-explain' );
 					options.heading = mw.msg( 'mobilefrontend-keepgoing-links-title' );
 					// Escape i18n input here, since we will be outputting unescaped HTML
@@ -51,8 +50,6 @@
 						.replace( '$4', '</span>' );
 					options.continueButton = false;
 				}
-				// Note that if we are on step 2 (explaining), but the user has more than
-				// one edit, we don't set a message and thus don't show the overlay.
 			}
 			this._super( options );
 		},
@@ -66,7 +63,6 @@
 				url = mw.util.getUrl( 'Special:RandomInCategory/All articles with too few wikilinks', { campaign: options.campaign } );
 
 				_super.call( self, options );
-				self.show();
 				mobileWebCta.hijackLink( self.$( '.continue' ), 'keepgoing-success', options.campaign, options.step, url );
 				self.$( '.close' ).on( 'click', function() {
 					self.log( 'keepgoing-exit' );
