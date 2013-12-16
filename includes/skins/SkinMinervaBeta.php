@@ -66,6 +66,7 @@ class SkinMinervaBeta extends SkinMinerva {
 		$modules['editor'] = array( 'mobile.editor.beta' );
 		$modules['languages'] = array( 'mobile.languages.beta' );
 		$modules['newusers'] = array( 'mobile.newusers.beta' );
+		$modules['toggling'] = array( 'mobile.toggling.beta' );
 		// turn off stable only modules
 		$modules['stableonly'] = array();
 		return $modules;
