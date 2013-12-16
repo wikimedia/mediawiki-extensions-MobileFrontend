@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_fd62c7d3",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-16T18:33:58Z",
+      "side": 1,
+      "message": "I wonder if this should be more flexible. The app now sets the mode to \u0027app\u0027\nand there is also desktop-beta for nearby beta feature\n\nhttps://gerrit.wikimedia.org/r/#/c/100919/\n\nEither make this an array in MobileFrontend.php of acceptable values or allow any value?",
+      "revId": "8bb48c35c94e52cd19bc3b7da25f9284bb3698cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
