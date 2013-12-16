@@ -22,7 +22,13 @@ $specialPageAliases['en'] = array(
 
 /** Arabic (العربية) */
 $specialPageAliases['ar'] = array(
+	'History' => array( 'تاريخ' ),
 	'MobileOptions' => array( 'خيارات_المحمول' ),
+	'Uploads' => array( 'مرفوعات' ),
+	'MobileDiff' => array( 'فرق_المحمول' ),
+	'MobileMenu' => array( 'قائمة_المحمول' ),
+	'Nearby' => array( 'قريب' ),
+	'UserProfile' => array( 'ملف_المستخدم' ),
 );
 
 /** Asturian (asturianu) */
@@ -128,6 +134,7 @@ $specialPageAliases['ja'] = array(
 	'MobileDiff' => array( '携帯機器差分' ),
 	'MobileMenu' => array( '携帯機器メニュー' ),
 	'Nearby' => array( '付近' ),
+	'UserProfile' => array( '利用者プロフィール' ),
 );
 
 /** Korean (한국어) */
