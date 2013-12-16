@@ -314,8 +314,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'modules/editorNew/EditorOverlay',
 		),
 		'messages' => array(
-			'mobile-frontend-editor-editing' => array( 'parse' ),
-			'mobile-frontend-editor-previewing' => array( 'parse' ),
+			'mobile-frontend-editor-editing-page',
+			'mobile-frontend-editor-previewing-page',
 		),
 	),
 

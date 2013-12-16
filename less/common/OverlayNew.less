@@ -1,10 +1,6 @@
 // FIXME: merge with overlays.less when OverlayNew gets to stable
 @import "../mixins.less";
 
-@headingMarginV: 1em;
-@headingFontSize: 1em;
-@buttonSize: @headingFontSize + @headingMarginV * 2 + @headerMargin;
-
 .overlay-enabled {
 	#mw-mf-page-center {
 		overflow: hidden;
@@ -27,17 +23,31 @@
 	width: 100%;
 	background: #fff;
 	z-index: 4;
+	.box-sizing(border-box);
+	padding-top: @overlayHeight;
 
 	.overlay-header {
 		display: table;
 		width: 100%;
-		.box-sizing(border-box);
+		white-space: nowrap;
 
 		h2 {
+			display: table;
+			width: 100%;
+
+			> * {
+				width: 1em;
+				display: table-cell;
+				// padding instead of spaces between words
+				padding-right: .4em;
+			}
+
 			span {
-				margin-left: 6px;
-				color: @grayMediumDark;
-				font-size: 0.8em;
+				width: auto;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				// required for text-overflow to work
+				max-width: 1em;
 			}
 		}
 
@@ -60,15 +70,14 @@
 		}
 
 		> ul, button {
-			width: @overlayButtonSize - @overlayHeaderMargin;
-			white-space: nowrap;
+			width: @overlayHeight - @overlayHeaderMargin;
 		}
 
 		button {
 			padding: @overlayHeadingMarginV @overlayHeadingMarginH;
-			width: @overlayButtonSize;
+			width: @overlayHeight;
 			border-radius: 0;
-			min-height: @overlayButtonSize;
+			min-height: @overlayHeight;
 		}
 
 		.v-border:first-child {
@@ -77,28 +86,6 @@
 
 		.v-border:last-child li:last-child {
 			border-left: 1px solid @grayLight;
-		}
-
-		&.with-margins {
-			padding: @overlayHeaderMargin @overlayHeaderMargin 0;
-
-			> div {
-				padding: (@overlayHeadingMarginV - @overlayHeaderMargin) @overlayHeadingMarginH;
-			}
-
-			button {
-				margin-top: -@overlayHeaderMargin;
-				// Line up with rest of header that has 1px bottom-border
-				margin-bottom: -1px;
-			}
-
-			> ul:first-child li:first-child button {
-				margin-left: -@overlayHeaderMargin;
-			}
-
-			> ul:last-child li:last-child button {
-				margin-right: -@overlayHeaderMargin;
-			}
 		}
 
 		.icon {
@@ -131,6 +118,42 @@
 
 			&.back {
 				background-image: url(images/back.png);
+			}
+		}
+	}
+
+	.overlay-header-container {
+		width: 100%;
+		padding: @overlayHeaderMargin @overlayHeaderMargin 0;
+		.box-sizing(border-box);
+		background: #fff;
+
+		&.position-fixed {
+			// both top and left required for Android 2
+			top: 0;
+			left: 0;
+
+			// prevent .page-list overlaping the header when scrolling
+			z-index: 5;
+		}
+
+		.overlay-header {
+			> div {
+				padding: (@overlayHeadingMarginV - @overlayHeaderMargin) @overlayHeadingMarginH;
+			}
+
+			button {
+				margin-top: -@overlayHeaderMargin;
+				// Line up with rest of header that has 1px bottom-border
+				margin-bottom: -1px;
+			}
+
+			> ul:first-child li:first-child button {
+				margin-left: -@overlayHeaderMargin;
+			}
+
+			> ul:last-child li:last-child button {
+				margin-right: -@overlayHeaderMargin;
 			}
 		}
 	}
