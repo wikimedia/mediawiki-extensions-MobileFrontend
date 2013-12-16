@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_bd9d5f6b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 556,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-16T19:23:50Z",
+      "side": 1,
+      "message": "Maybe, UserIsBlocked would be more English?:)",
+      "revId": "c4ecce4af4672b6ff9be4fc10bd8f6a0cdc44f56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_7d93575b",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-16T19:23:50Z",
+      "side": 1,
+      "message": "Parsing with regexes is scary, use wfCgiToArray()/wfArrayToCgi()",
+      "revId": "c4ecce4af4672b6ff9be4fc10bd8f6a0cdc44f56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
