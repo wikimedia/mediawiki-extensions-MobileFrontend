@@ -414,8 +414,7 @@ class ApiMobileView extends ApiBase {
 		if ( !isset( $prop['image'] ) && !isset( $prop['thumb'] ) ) {
 			return;
 		}
-		if ( !isset( $data['image'] ) )
-		{
+		if ( !isset( $data['image'] ) ) {
 			return;
 		}
 		$file = wfFindFile( $data['image'] );

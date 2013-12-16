@@ -79,8 +79,8 @@ class DeviceProperties implements IDeviceProperties {
 	 */
 	protected function detectFormat() {
 		if ( strpos( $this->acceptHeader, 'text/vnd.wap.wml' ) !== false
-			&& strpos( $this->acceptHeader, 'text/html' ) === false )
-		{
+			&& strpos( $this->acceptHeader, 'text/html' ) === false
+		) {
 			return 'wml';
 		}
 		return 'html';
