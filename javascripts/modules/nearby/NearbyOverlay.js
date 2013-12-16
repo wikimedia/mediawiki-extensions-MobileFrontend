@@ -12,7 +12,7 @@
 				content: M.template.get( 'overlays/nearby' )
 			},
 			defaults: {
-				heading: 'Nearby'
+				heading: mw.message( 'mobile-frontend-nearby-title' )
 			},
 			initialize: function( options ) {
 				options.pretext = mw.message( 'mobile-frontend-nearby-to-page', options.title );

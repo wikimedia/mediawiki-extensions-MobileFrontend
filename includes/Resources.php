@@ -1010,6 +1010,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// NearbyOverlay.js
 			'mobile-frontend-nearby-to-page',
+			'mobile-frontend-nearby-title',
 
 			// PagePreviewOverlay
 			'mobile-frontend-nearby-directions',
