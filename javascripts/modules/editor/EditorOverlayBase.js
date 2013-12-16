@@ -17,7 +17,6 @@
 			abusefilterReadMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
 		},
 		className: 'overlay editor-overlay',
-		closeOnBack: true,
 		initialize: function ( options ) {
 			if ( this.readOnly ) {
 				options.readOnly = true;
@@ -28,9 +27,9 @@
 			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			this._super( options );
 		},
-		hide: function() {
+		hide: function( force ) {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
-			if ( !this._hasChanged() || this.canHide || window.confirm( confirmMessage ) ) {
+			if ( force || !this._hasChanged() || this.canHide || window.confirm( confirmMessage ) ) {
 				return this._super();
 			} else {
 				return false;

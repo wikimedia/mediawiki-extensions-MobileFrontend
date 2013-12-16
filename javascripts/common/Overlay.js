@@ -8,6 +8,7 @@ var View = M.require( 'view' ),
 		},
 		template: M.template.get( 'overlay' ),
 		className: 'mw-mf-overlay',
+		// FIXME: remove when OverlayManager used everywhere
 		closeOnBack: false,
 		closeOnContentTap: false,
 		fullScreen: true,
@@ -28,8 +29,8 @@ var View = M.require( 'view' ),
 				ev.stopPropagation();
 				if ( self.closeOnBack ) {
 					window.history.back();
-				} else {
-					self.hide();
+				} else if ( self.hide() ) {
+					self.emit( 'hide' );
 				}
 			} );
 			// stop clicks in the overlay from propagating to the page
@@ -39,6 +40,7 @@ var View = M.require( 'view' ),
 			} );
 		},
 
+		// FIXME: remove when OverlayManager used everywhere
 		_hideOnRoute: function() {
 			var self = this;
 			M.router.one( 'route', function( ev ) {
@@ -50,12 +52,14 @@ var View = M.require( 'view' ),
 		},
 
 		show: function() {
+			// FIXME: remove when OverlayManager used everywhere
 			if ( this.closeOnBack ) {
 				this._hideOnRoute();
 			}
 
 			// FIXME: prevent zooming within overlays but don't break the rendering!
 			// M.lockViewport();
+			// FIXME: remove when OverlayManager used everywhere
 			if ( this.parent ) {
 				this.parent.hide( true );
 			}
@@ -85,6 +89,7 @@ var View = M.require( 'view' ),
 			// FIXME: allow zooming outside the overlay again
 			// M.unlockViewport();
 			this.$el.detach();
+			// FIXME: remove when OverlayManager used everywhere
 			if ( this.parent ) {
 				this.parent.show();
 			} else if ( this.fullScreen ) {

@@ -2,6 +2,7 @@
 
 	var EventEmitter = M.require( 'eventemitter' );
 
+	// FIXME: remove when OverlayManager used everywhere
 	function matchRoute( hash, entry ) {
 		var match = hash.match( entry.path );
 		if ( match ) {
@@ -11,23 +12,20 @@
 		return false;
 	}
 
-	function getHash() {
-		return window.location.hash.slice( 1 );
-	}
-
 	function Router() {
 		var self = this;
 		// use an object instead of an array for routes so that we don't
 		// duplicate entries that already exist
 		this.routes = {};
 		this._enabled = true;
-		this._oldHash = getHash();
+		this._oldHash = this.getPath();
 
 		$( window ).on( 'hashchange', function() {
 			// ev.originalEvent.newURL is undefined on Android 2.x
-			var routeEv = $.Event();
+			var routeEv;
 
 			if ( self._enabled ) {
+				routeEv = $.Event( 'route', { path: self.getPath() } );
 				self.emit( 'route', routeEv );
 
 				if ( !routeEv.isDefaultPrevented() ) {
@@ -42,23 +40,25 @@
 				self._enabled = true;
 			}
 
-			self._oldHash = getHash();
+			self._oldHash = self.getPath();
 		} );
 	}
 
 	Router.prototype = new EventEmitter();
 
+	// FIXME: remove when OverlayManager used everywhere
 	/**
 	 * Check the current route and run appropriate callback if it matches.
 	 */
 	Router.prototype.checkRoute = function() {
-		var hash = getHash();
+		var hash = this.getPath();
 
 		$.each( this.routes, function( id, entry ) {
 			return !matchRoute( hash, entry );
 		} );
 	};
 
+	// FIXME: remove when OverlayManager used everywhere
 	/**
 	 * Bind a specific callback to a hash-based route, e.g.
 	 *
@@ -76,7 +76,7 @@
 			callback: callback
 		};
 		this.routes[entry.path] = entry;
-		matchRoute( getHash(), entry );
+		matchRoute( this.getPath(), entry );
 	};
 
 	/**
@@ -87,6 +87,22 @@
 	 */
 	Router.prototype.navigate = function( path ) {
 		window.location.hash = path;
+	};
+
+	/**
+	 * Navigate to the previous route. This is a wrapper for window.history.back
+	 */
+	Router.prototype.back = function() {
+		window.history.back();
+	};
+
+	/**
+	 * Get current path (hash).
+	 *
+	 * @return {string} Current path.
+	 */
+	Router.prototype.getPath = function() {
+		return window.location.hash.slice( 1 );
 	};
 
 	Router.prototype.isSupported = function() {

@@ -48,14 +48,15 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
-		M.router.route( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
+		M.overlayManager.add( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
 			// FIXME: clean up when new overlays in stable
 			var
 				LoadingOverlay = M.require( inStable ? 'LoadingOverlay' : 'LoadingOverlayNew' ),
 				loadingOverlay = new LoadingOverlay(),
 				title = page ? page.title : mw.config.get( 'wgTitle' ),
 				// Note in current implementation Page title is prefixed with namespace
-				ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
+				ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' ),
+				result = $.Deferred();
 			loadingOverlay.show();
 			sectionId = mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? parseInt( sectionId, 10 ) : null;
 
@@ -63,30 +64,31 @@
 			if ( isVisualEditorEnabled ) {
 				// Load VE init module
 				mw.loader.using( 'mobile.editor.ve', function () {
-					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' ),
-						visualEditorOverlay = new VisualEditorOverlay( {
-							title: ns ? ns + ':' + title : title,
-							sectionId: sectionId
-						} );
+					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 					loadingOverlay.hide();
-					visualEditorOverlay.show();
+					result.resolve( new VisualEditorOverlay( {
+						title: ns ? ns + ':' + title : title,
+						sectionId: sectionId
+					} ) );
 				} );
 			} else {
 				mw.loader.using( inStable ? 'mobile.editor.overlay.stable' : 'mobile.editor.overlay.beta', function() {
 					var EditorOverlay = M.require( inStable ? 'modules/editor/EditorOverlay' : 'modules/editorNew/EditorOverlay' );
 
-						loadingOverlay.hide();
-						new EditorOverlay( {
-							title: ns ? ns + ':' + title : title,
-							isNew: isNew,
-							isNewEditor: user.getEditCount() === 0,
-							sectionId: sectionId,
-							oldId: M.query.oldid,
-							funnel: funnel || 'article'
-						} ).show();
-					} );
-				}
-			} );
+					loadingOverlay.hide();
+					result.resolve( new EditorOverlay( {
+						title: ns ? ns + ':' + title : title,
+						isNew: isNew,
+						isNewEditor: user.getEditCount() === 0,
+						sectionId: sectionId,
+						oldId: M.query.oldid,
+						funnel: funnel || 'article'
+					} ) );
+				} );
+			}
+
+			return result;
+		} );
 		$( '#ca-edit' ).addClass( 'enabled' );
 
 		// FIXME: unfortunately the main page is special cased.
