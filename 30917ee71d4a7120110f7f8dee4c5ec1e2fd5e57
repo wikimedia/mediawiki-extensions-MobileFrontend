@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_dc4b7b61",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-17T20:13:23Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be \"Media ... are\" instead of \"Media ... is\"?",
+      "revId": "30917ee71d4a7120110f7f8dee4c5ec1e2fd5e57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
