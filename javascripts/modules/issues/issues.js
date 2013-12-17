@@ -47,7 +47,10 @@ var module = (function() {
 		} );
 
 		$link = $( '<a class="mw-mf-cleanup icon-24px">' );
-		if ( useNewOverlays ) {
+		// If we're using the new overlays and we aren't already in the editing overlay,
+		// set-up the issues overlay using M.router for proper back button behavior.
+		// FIXME: Refactor this once the overlay manager is available
+		if ( useNewOverlays && $( '.editor-overlay' ).length === 0 ) {
 			overlay = new CleanupOverlayNew( {
 				parent: parentOverlay,
 				issues: issues
