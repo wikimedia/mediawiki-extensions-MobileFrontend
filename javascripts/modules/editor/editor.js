@@ -4,6 +4,7 @@
 		inStable = mw.config.get( 'wgMFMode' ) === 'stable',
 		user = M.require( 'user' ),
 		popup = M.require( 'notifications' ),
+		isUserBlocked = mw.config.get( 'wgMFIsUserBlocked' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
@@ -12,7 +13,8 @@
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			queryParams: {
-				campaign: 'mobile_editPageActionCta'
+				campaign: 'mobile_editPageActionCta',
+				returntoquery: 'article_action=edit'
 			},
 			signupQueryParams: { returntoquery: 'article_action=signup-edit' },
 			content: mw.msg( 'mobile-frontend-editor-cta' )
@@ -113,7 +115,7 @@
 		} );
 	}
 
-	if ( mw.config.get( 'wgIsPageEditable' ) && isEditingSupported ) {
+	if ( mw.config.get( 'wgIsPageEditable' ) && isEditingSupported && !isUserBlocked ) {
 		if ( mw.config.get( 'wgMFAnonymousEditing' ) || user.getName() ) {
 			init();
 			M.on( 'page-loaded', init );
@@ -124,7 +126,11 @@
 	} else {
 		// FIXME change when micro.tap.js in stable
 		$( '#ca-edit, .edit-page' ).on( M.tapEvent( 'click' ), function( ev ) {
-			popup.show( mw.msg( isEditingSupported ? 'mobile-frontend-editor-disabled' : 'mobile-frontend-editor-unavailable' ), 'toast' );
+			var msg = 'mobile-frontend-editor-blocked';
+			if ( !isUserBlocked ) {
+				msg = isEditingSupported ? 'mobile-frontend-editor-disabled' : 'mobile-frontend-editor-unavailable';
+			}
+			popup.show( mw.msg( msg ), 'toast' );
 			ev.preventDefault();
 		} );
 	}

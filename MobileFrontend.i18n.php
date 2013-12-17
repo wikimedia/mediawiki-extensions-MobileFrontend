@@ -187,9 +187,11 @@ $messages['en'] = array (
 
 	// image donation
 	'mobile-frontend-donate-image-nouploads' => 'No uploads.',
-	'mobile-frontend-donate-image-login' => 'You must be logged in to see your uploads.',
+	'mobile-frontend-donate-image-login' => 'Media on {{SITENAME}} is donated by people like you.',
+	'mobile-frontend-donate-image-login-action' => 'Login to share your media.',
+	'mobile-frontend-donate-image-signup-action' => 'Sign up to share your media with the world.',
 	'mobile-frontend-photo-upload-disabled' => 'No image is needed on this page.',
-	'mobile-frontend-photo-upload-anon' => 'You need to be logged in to add an image to this page.',
+	'mobile-frontend-photo-upload-anon' => 'Please login to add an image to this page.',
 	'mobile-frontend-photo-upload-protected' => 'You do not have permission to add an image to this page.',
 	'mobile-frontend-photo-upload-unavailable' => 'Your browser does not support image uploads.',
 	'mobile-frontend-photo-upload-generic' => 'Contribute an image',
@@ -212,10 +214,23 @@ $messages['en'] = array (
 	'mobile-frontend-watchlist-removed' => 'Removed $1 from your watchlist',
 	'mobile-frontend-watchlist-view' => 'View your watchlist',
 	'mobile-frontend-watchlist-more' => 'more',
-	'mobile-frontend-watchlist-cta' => 'Please login or sign up to watch this page.',
+	'mobile-frontend-watchlist-cta' => 'Keep track of this page and all changes to it.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Login',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Sign up',
-	'mobile-frontend-watch-login' => 'You must be logged in to watch pages.',
+
+	// login headers from left nav
+	'mobile-frontend-watchlist-purpose' => 'A watchlist helps you bookmark pages and keep track of changes to them.',
+	'mobile-frontend-watchlist-login-action' => 'Login to see it.',
+	'mobile-frontend-watchlist-signup-action' => 'Sign up to start one now.',
+	'mobile-frontend-generic-login' => '{{SITENAME}} is made by people like you.',
+	'mobile-frontend-generic-login-action' => 'Login to contribute.',
+	'mobile-frontend-generic-signup-action' => 'Sign up to contribute.',
+
+	// login article actions
+	'mobile-frontend-watch-login' => 'Add $1 to your watchlist.',
+	'mobile-frontend-edit-login' => 'Help improve the $1 page.',
+	'mobile-frontend-edit-login-action' => 'Login to edit.',
+	'mobile-frontend-edit-signup-action' => 'Sign up to edit.',
 
 	'mobile-frontend-watchlist-a-z' => 'List',
 	'mobile-frontend-watchlist-feed' => 'Modified',
@@ -285,7 +300,6 @@ $messages['en'] = array (
 	'mobile-frontend-photo-cancel' => 'Cancel',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
-	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 	'mobile-frontend-image-heading-describe' => "'''Describe''' image",
 	'mobile-frontend-image-uploading' => "'''Uploading''' image...",
 	'mobile-frontend-image-cancel-confirm' => "Cancel upload?",
@@ -293,9 +307,10 @@ $messages['en'] = array (
 	// edit
 	'mobile-frontend-editor-undo-unsupported' => 'Undo is not currently supported on mobile devices.',
 	'mobile-frontend-editor-newpage-prompt' => 'This page doesn\'t exist. Why not be bold and create it?',
-	'mobile-frontend-editor-disabled' => 'You are not allowed to edit this page.',
+	'mobile-frontend-editor-disabled' => 'This page is protected to prevent vandalism.',
+	'mobile-frontend-editor-blocked' => 'Your account is blocked from editing.',
 	'mobile-frontend-editor-unavailable' => 'Mobile editing is not currently available on your browser. Please try a different browser.',
-	'mobile-frontend-editor-cta' => 'You must be logged in to edit pages on mobile.',
+	'mobile-frontend-editor-cta' => 'Help improve this page!',
 	'mobile-frontend-editor-edit' => 'Edit',
 	'mobile-frontend-editor-continue' => 'Continue',
 	'mobile-frontend-editor-save' => 'Save',
@@ -731,6 +746,8 @@ See also:
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-donate-image-login-action' => 'Call to action to login to donate images.',
+	'mobile-frontend-donate-image-signup-action' => 'Call to action to signup to donate images.',
 	'mobile-frontend-photo-upload-disabled' => "Appears when the user clicks on the image upload button when the page doesn't need an image.",
 	'mobile-frontend-photo-upload-anon' => 'Appears when an anonymous user clicks on the image upload button and without CTA enabled.',
 	'mobile-frontend-photo-upload-protected' => 'Appears when the user clicks the image upload button when the page is protected.',
@@ -769,10 +786,26 @@ Parameters:
 {{Identical|Login}}',
 	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page
 {{Identical|Sign up}}',
-	'mobile-frontend-watch-login' => 'Title for [[Special:UserLogin]].
+	// login headers from left nav
+	'mobile-frontend-watchlist-purpose' => 'Shows on [[Special:UserLogin]] explains why someone would want to login to see a watchlist.',
+	'mobile-frontend-watchlist-login-action' => 'Call to action that follows {{msg-mw|mobile-frontend-watchlist-purpose}} asking them to login.',
+	'mobile-frontend-watchlist-signup-action' => 'Call to action that follows {{msg-mw|mobile-frontend-watchlist-purpose}} asking them to signup.',
+	'mobile-frontend-generic-login' => 'Shows on [[Special:UserLogin]] to remind them how {{SITENAME}} relies on contributions.',
+	'mobile-frontend-generic-login-action' => 'Call to action that follows {{msg-mw|mobile-frontend-generic-login}} asking them to login.',
+	'mobile-frontend-generic-signup-action' => 'Call to action that follows {{msg-mw|mobile-frontend-generic-login}} asking them to signup.',
 
-Used when the user is not logged in.
-{{Related|Mobile-frontend-login}}',
+	// login article actions
+	'mobile-frontend-watch-login' => 'Shows on [[Special:UserLogin]] when a user tries to watch a page whilst anonymous.
+
+Parameters:
+$1 - the page that will be watched upon logging in or signing up.
+',
+	'mobile-frontend-edit-login' => 'Shows on [[Special:UserLogin]] when a user tries to edit a page whilst anonymous.
+
+Parameters:
+$1 - the page that the user can edit upon logging in or signing up.',
+	'mobile-frontend-edit-login-action' => 'Call to action that follows {{msg-mw|mobile-frontend-edit-login}} asking them to login.',
+	'mobile-frontend-edit-signup-action' => 'Call to action that follows {{msg-mw|mobile-frontend-edit-login}} asking them to sign up.',
 	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist.
 {{Identical|List}}',
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of pages you watch that have changes.
@@ -878,7 +911,8 @@ Used when the user is not logged in.
 	'mobile-frontend-image-cancel-confirm' => 'A question asking if the user wants to cancel an upload.',
 	'mobile-frontend-editor-undo-unsupported' => 'Shown when user attempts to do an undo which is currently not supported.',
 	'mobile-frontend-editor-newpage-prompt' => "Message shown when a page doesn't exist.",
-	'mobile-frontend-editor-disabled' => 'Toast message that appears when a user is unable to edit a page and clicks edit icon',
+	'mobile-frontend-editor-disabled' => 'Toast message that appears when a user is unable to edit a page and clicks edit icon.',
+	'mobile-frontend-editor-blocked' => 'Toast message that appears when a user is unable to edit a page due to being blocked and clicks edit icon.',
 	'mobile-frontend-editor-unavailable' => 'Toast message that appears when a user has a browser incapable of editing when they click on the edit button.',
 	'mobile-frontend-editor-cta' => "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)",
 	'mobile-frontend-editor-edit' => 'Caption for the link showing edit form.

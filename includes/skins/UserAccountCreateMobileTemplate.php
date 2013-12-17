@@ -3,6 +3,16 @@
  * Provides a custom account creation form for mobile devices
  */
 class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
+	protected $actionMessages = array(
+		'watch' => 'mobile-frontend-watchlist-login',
+		'edit' => 'mobile-frontend-edit-signup-action',
+		'signup-edit' => 'mobile-frontend-edit-signup-action',
+		'' => 'mobile-frontend-generic-signup-action',
+	);
+	protected $pageMessages = array(
+		'Uploads' => 'mobile-frontend-donate-image-signup-action',
+		'Watchlist' => 'mobile-frontend-watchlist-signup-action',
+	);
 
 	/**
 	 * @TODO refactor this into parent template
@@ -18,14 +28,6 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 		// handle captcha
 		$captcha = $this->handleCaptcha( $this->data['header'] );
-		$headMsg = $this->getHeadMsg();
-
-		$accountCreation = Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate', 'class' => 'content' ) );
-
-		// @TODO refactor this into base class
-		if ( $headMsg ) {
-			$msgBox .= Html::Element( 'div', array( 'class' => 'headmsg' ), $headMsg );
-		}
 
 		if ( $message ) {
 			$heading = '';
@@ -90,9 +92,10 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::input( 'watch', $watchArticle, 'hidden' ) .
 			$stickHTTPS .
 			Html::closeElement( 'form' );
-		$accountCreation .= $msgBox . $form;
-		$accountCreation .= Html::closeElement( 'div' );
-		echo $accountCreation;
+		echo Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate', 'class' => 'content' ) );
+		$this->renderGuiderMessage();
+		echo $form;
+		echo Html::closeElement( 'div' );
 	}
 
 	/**

@@ -3,6 +3,15 @@
  * Provides a custom login form for mobile devices
  */
 class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
+	protected $actionMessages = array(
+		'watch' => 'mobile-frontend-watchlist-purpose',
+		'edit' => 'mobile-frontend-edit-login-action',
+		'' => 'mobile-frontend-generic-login-action',
+	);
+	protected $pageMessages = array(
+		'Uploads' => 'mobile-frontend-donate-image-login-action',
+		'Watchlist' => 'mobile-frontend-watchlist-login-action',
+	);
 
 	/**
 	 * @TODO refactor this into parent template
@@ -16,7 +25,6 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 		$message = $this->data['message'];
 		$messageType = $this->data['messagetype'];
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
-		$headMsg = $this->getHeadMsg();
 
 		// @TODO make sure this also includes returnto and returntoquery from the request
 		$query = array(
@@ -45,10 +53,6 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			array( 'class'=> 'mw-mf-create-account' ), $query );
 
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login', 'class' => 'content' ) );
-
-		if ( $headMsg ) {
-			$msgBox .= Html::Element( 'div', array( 'class' => 'headmsg' ), $headMsg );
-		}
 
 		if ( $message ) {
 			$heading = '';
@@ -99,9 +103,11 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			$stickHTTPS .
 			Html::closeElement( 'form' ) .
 			Html::closeElement( 'div' );
-		$login .= $msgBox . $form;
-		$login .= Html::closeElement( 'div' );
 		echo $login;
+		$this->renderGuiderMessage();
+		echo $msgBox;
+		echo $form;
+		echo Html::closeElement( 'div' );
 	}
 
 }
