@@ -11,7 +11,7 @@
 
 // Needs to be called within MediaWiki; not standalone
 if ( !defined( 'MEDIAWIKI' ) ) {
-	echo( "This is an extension to the MediaWiki package and cannot be run standalone.\n" );
+	echo( "This is a MediaWiki extension and cannot run standalone.\n" );
 	die( -1 );
 }
 
