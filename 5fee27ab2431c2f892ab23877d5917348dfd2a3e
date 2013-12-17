@@ -34,6 +34,24 @@
       "revId": "5fee27ab2431c2f892ab23877d5917348dfd2a3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_49cb2e21",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-17T16:51:17Z",
+      "side": 1,
+      "message": "We don\u0027t deploy MF separately from core anymore.",
+      "parentUuid": "0ee75395_62e29299",
+      "revId": "5fee27ab2431c2f892ab23877d5917348dfd2a3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
