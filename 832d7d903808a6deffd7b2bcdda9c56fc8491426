@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_9556ef2b",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-17T02:28:41Z",
+      "side": 1,
+      "message": "Shouldn\u0027t mobile-frontend-watch-login be mobile-frontend-watch-login-action and mobile-frontend-watch-login-action be mobile-frontend-watch-purpose (just to keep with the naming convention above)? Just a thought :)\n\nAlso, I know it\u0027s usually encouraged to create different copies of identical messages if they are in different contexts, but in this case I can\u0027t imagine the two descriptions of the purpose of the watchlist ever being different. Do we really need two copies of it?",
+      "revId": "832d7d903808a6deffd7b2bcdda9c56fc8491426",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_9504af1b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 556,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-17T02:28:41Z",
+      "side": 1,
+      "message": "I\u0027m surprised this isn\u0027t in mediawiki.user. Might be a good thing to add in the future.",
+      "revId": "832d7d903808a6deffd7b2bcdda9c56fc8491426",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_5802de0d",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-17T02:28:41Z",
+      "side": 1,
+      "message": "no need for the echo here.",
+      "revId": "832d7d903808a6deffd7b2bcdda9c56fc8491426",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_b8168a4c",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-17T02:28:41Z",
+      "side": 1,
+      "message": "No need for echo here.",
+      "revId": "832d7d903808a6deffd7b2bcdda9c56fc8491426",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
