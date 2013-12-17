@@ -38,20 +38,20 @@ var View = M.require( 'view' ),
 				ev.stopPropagation();
 			} );
 		},
-		show: function() {
+
+		_hideOnRoute: function() {
 			var self = this;
+			M.router.one( 'route', function( ev ) {
+				if ( !self.hide() ) {
+					ev.preventDefault();
+					self._hideOnRoute();
+				}
+			} );
+		},
 
-			function hideOnRoute() {
-				M.router.one( 'route', function( ev ) {
-					if ( !self.hide() ) {
-						ev.preventDefault();
-						hideOnRoute();
-					}
-				} );
-			}
-
+		show: function() {
 			if ( this.closeOnBack ) {
-				hideOnRoute();
+				this._hideOnRoute();
 			}
 
 			// FIXME: prevent zooming within overlays but don't break the rendering!
