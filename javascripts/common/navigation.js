@@ -3,7 +3,7 @@
 	var
 		// FIXME: remove when header-loaded is in all cached pages
 		initialized = false,
-		inAlpha = mw.config.get( 'wgMFMode' ) === 'alpha';
+		inAlpha = M.isAlphaGroupMember();
 
 	function initialize() {
 		var

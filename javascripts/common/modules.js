@@ -1,6 +1,14 @@
 mw.mobileFrontend = {
 	_modules: {},
 
+	isAlphaGroupMember: function() {
+		return mw.config.get( 'wgMFMode' ) === 'alpha';
+	},
+
+	isBetaGroupMember: function() {
+		return mw.config.get( 'wgMFMode' ) !== 'stable';
+	},
+
 	assertMode: function( modes ) {
 		var mode = mw.config.get( 'wgMFMode' );
 		if ( modes.indexOf( mode ) === -1 ) {
