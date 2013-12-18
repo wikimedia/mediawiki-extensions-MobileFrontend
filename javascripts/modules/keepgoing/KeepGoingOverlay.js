@@ -19,7 +19,7 @@
 			contentClass: 'content vertical-margin',
 			campaign: 'mobile-keepgoing'
 		},
-		className: 'overlay overlay-bottom',
+		className: 'overlay overlay-bottom position-fixed',
 		closeOnContentTap: true,
 		fullScreen: false,
 		template: M.template.get( 'keepgoing/KeepGoingOverlay' ),

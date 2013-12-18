@@ -153,8 +153,13 @@ function efMobileFrontend_Setup() {
 		$wgSpecialPageGroups['Nearby'] = 'pages';
 	}
 	// Set LESS global variables
-	$wgResourceLoaderLESSVars['wgMFDeviceWidthTablet'] = "{$wgMFDeviceWidthTablet}px";
-	$wgResourceLoaderLESSVars['wgMFDeviceWidthMobileSmall'] = "{$wgMFDeviceWidthMobileSmall}px";
+	$wgResourceLoaderLESSVars = array_merge( $wgResourceLoaderLESSVars,
+		array(
+			'wgMFMobileImageRootDir' => 'images',
+			'wgMFDeviceWidthTablet' => "{$wgMFDeviceWidthTablet}px",
+			'wgMFDeviceWidthMobileSmall' => "{$wgMFDeviceWidthMobileSmall}px",
+		)
+	);
 }
 
 // ResourceLoader modules
