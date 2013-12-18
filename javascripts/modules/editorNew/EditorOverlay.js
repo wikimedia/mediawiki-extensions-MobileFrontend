@@ -64,7 +64,7 @@
 			this.editCount = user.getEditCount();
 			this.funnel = options.funnel;
 
-			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing', options.title );
+			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
 			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing', options.title );
 
 			this._super( options );
