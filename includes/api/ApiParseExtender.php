@@ -74,6 +74,8 @@ class ApiParseExtender {
 				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] );
 				$mf->enableExpandableSections( !$params['mainpage'] );
+				// HACK: need a nice way to request a TOC-free HTML in the first place
+				$mf->remove( '.toc' );
 				$mf->filterContent();
 				// HACK: older version of this code had a bug that made its output incompatible
 				// with vanilla action==parse. Older callers that assume that mobileformat is a string
