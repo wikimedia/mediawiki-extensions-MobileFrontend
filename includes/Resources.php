@@ -53,13 +53,6 @@ $wgMFMobileSpecialPageResourceBoilerplate = array(
 $wgMFMobileSpecialPageResourceScriptBoilerplate = $wgMFMobileSpecialPageResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.stable' ),
 );
-/**
- * A boilerplate for RL style modules for special pages
-*/
-$wgMFMobileSpecialPageResourceStyleBoilerplate = $wgMFMobileSpecialPageResourceBoilerplate + array(
-	// ensure special css is always loaded after mobile.styles for cascading purposes (keep jgonera happy)
-	'dependencies' => array( 'mobile.styles' ),
-);
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
 	// FIXME: Upstream to core
@@ -116,15 +109,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	// FIXME: Kill module when no longer in cache.
 	'mobile.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/reset.less',
 			'less/common/common.less',
+			'less/common/buttons.less',
 			'less/common/ui.less',
 			'less/common/typography.less',
 			'less/common/footer.less',
 			'less/modules/toggle.less',
-			'less/common/drawer.less',
 			'less/common/hacks.less',
 			'less/common/pageactions.less',
 		),
@@ -160,6 +154,39 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.toc',
 		),
+	),
+
+	// FIXME: Remove in favour of mediawiki ui
+	'skins.minerva.buttons.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/common/buttons.less',
+		),
+	),
+
+	'skins.minerva.chrome.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/common/reset.less',
+			'less/common/ui.less',
+			'less/common/pageactions.less',
+			'less/common/footer.less',
+		),
+		'position' => 'top',
+	),
+
+	'skins.minerva.content.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/common/common.less',
+			'less/common/typography.less',
+			'less/modules/toggle.less',
+		),
+		'position' => 'top',
+	),
+
+	'skins.minerva.drawers.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/common/drawer.less',
+		),
+		'position' => 'top',
 	),
 
 	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
@@ -896,7 +923,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.mobilemenu.styles' => $wgMFMobileSpecialPageResourceStyleBoilerplate + array(
+	'mobile.mobilemenu.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/mobilemenu.less',
 		),

@@ -67,6 +67,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 			$captcha .
 			Html::input( 'wpCreateaccount', wfMessage( 'mobile-frontend-account-create-submit' )->text(), 'submit',
 				array( 'id' => 'wpCreateaccount',
+					'class' => 'mw-ui-button mw-ui-constructive',
 					'tabindex' => '6' ) ) .
 			Html::input( 'wpRemember', '1', 'hidden' ) .
 			Html::input( 'wpCreateaccountToken', $token, 'hidden' ) .

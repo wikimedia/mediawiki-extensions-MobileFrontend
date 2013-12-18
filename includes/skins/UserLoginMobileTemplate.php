@@ -77,6 +77,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::input( 'wpRemember', '1', 'hidden' ) .
 			Html::input( 'wpLoginAttempt', wfMessage( 'mobile-frontend-login' )->text(), 'submit',
 				array( 'id' => 'wpLoginAttempt',
+					'class' => 'mw-ui-button mw-ui-constructive',
 					'tabindex' => '3' ) ) .
 			$signupLink .
 			Html::input( 'wpLoginToken', $token, 'hidden' ) .

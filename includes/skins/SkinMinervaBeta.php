@@ -132,7 +132,7 @@ class SkinMinervaBeta extends SkinMinerva {
 					$this->msg( 'mobile-frontend-mainpage-cta-prompt' )->text() ) .
 				Html::openElement( 'p', array( 'class' => 'content component' ) ) .
 				Html::element( 'a', array(
-					'class' => 'button',
+					'class' => 'mw-ui-button mw-ui-progressive button',
 					'href' => $title->getLocalUrl(
 						array( 'campaign' => 'mobile-mainpage-keepgoing-links'  )
 					),

@@ -169,7 +169,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 	protected function getTalkLink() {
 		// replace secondary icon
 		$attrs = array(
-			'class' => 'talk button',
+			'class' => 'talk button mw-ui-button',
 			'href' => $this->targetUser->getTalkPage()->getLocalUrl(),
 		);
 		// FIXME: What if this is the user's own profile? Should we change the message?
