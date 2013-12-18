@@ -8,15 +8,19 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	public function executeWhenAvailable( $par = '' ) {
 		wfProfileIn( __METHOD__ );
-		$out = $this->getOutput();
 		if ( $par ) {
 			// enter article history view
 			$this->user = User::newFromName( $par );
-			$this->renderHeaderBar( $this->msg( 'mobile-frontend-contribution-summary',
-				$this->user->getName() ), true );
+			if ( $this->user && $this->user->idForName() ) {
+				$this->renderHeaderBar( $this->msg( 'mobile-frontend-contribution-summary',
+					$this->user->getName() ), true );
+				$res = $this->doQuery();
+				$this->showHistory( $res );
+				wfProfileOut( __METHOD__ );
+				return;
+			}
 		}
-		$res = $this->doQuery();
-		$this->showHistory( $res );
+		$this->showPageNotFound();
 		wfProfileOut( __METHOD__ );
 	}
 
