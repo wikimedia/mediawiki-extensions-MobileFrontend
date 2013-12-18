@@ -13,7 +13,6 @@ class HomePage
   a(:desktop_link, text: "Desktop")
   a(:disclaimer_link, text: "Disclaimers")
   a(:login_button, href: /Special:UserLogin/)
-  a(:login_watchlist, href: /returntoquery=article_action%3Dwatch/)
   div(:main_page, id: "mainpage")
   a(:mainmenu_button, id: "mw-mf-main-menu-button")
   span(:mobile_select, text: "Mobile")
@@ -32,7 +31,6 @@ class HomePage
   a(:search_result) do |page|
     page.search_results_element.a
   end
-  a(:sign_up_watchlist, href: /returntoquery=article_action%3Dwatch&type=signup/)
   a(:watch_link, class: "watch-this-article")
   div(:watch_note, text: "Added San Francisco Chronicle to your watchlist")
   div(:watch_note_removed, text: "Removed San Francisco Chronicle from your watchlist")
