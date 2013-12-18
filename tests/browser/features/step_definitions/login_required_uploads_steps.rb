@@ -4,6 +4,6 @@ When /^I select Uploads$/ do
 end
 
 Then /^I receive upload message (.+)$/ do |text|
-  on(RandomPage).login_text_element.when_present.text.should == text
+  on(RandomPage).login_text_element.when_present.text.should match text
 end
 
