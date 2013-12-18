@@ -254,6 +254,11 @@
 			this.api.save( options ).
 				done( function() {
 					var title = self.options.title;
+					// Special case behaviour of main page
+					if ( mw.config.get( 'wgIsMainPage' ) ) {
+						window.location = mw.util.getUrl( title );
+						return;
+					}
 
 					// log success!
 					self.log( 'success' );

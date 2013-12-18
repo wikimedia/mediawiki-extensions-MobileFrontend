@@ -110,11 +110,7 @@
 		init();
 	}
 
-	M.on( 'page-loaded', function( page ) {
-		if ( !page.isMainPage() ) {
-			init();
-		}
-	} );
+	M.on( 'page-loaded', init );
 
 	// FIXME: Temporary workaround while toggle-dynamic is not in stable
 	// (needed for dynamic section loading after editing)
