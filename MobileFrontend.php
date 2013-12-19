@@ -252,9 +252,6 @@ $wgMobileFrontendFormatCookieExpiry = null;
 $wgMFRemovableClasses = array(
 	// These rules will be used for all transformations
 	'base' => array(
-		// @todo: remove this when cache made before https://gerrit.wikimedia.org/r/91902 dies on WMF
-		// but mind that extracts and action=parse&mobileformat don't currently support it
-		'.toc',
 	),
 	// HTML view
 	'HTML' => array(),
@@ -266,7 +263,7 @@ $wgMFRemovableClasses = array(
 	),
 	// Text extracts
 	'extracts' => array(
-		'table', 'div', '.mw-editsection', 'sup.reference', 'span.coordinates',
+		'.toc', 'table', 'div', '.mw-editsection', 'sup.reference', 'span.coordinates',
 		'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error', '.nomobile'
 	),
 );
