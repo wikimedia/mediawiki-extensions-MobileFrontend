@@ -1,4 +1,9 @@
 Given /^I am on the (.+) article$/ do |article|
+  begin
+    # put the page into the Varnish cache, avoid 503 errors
+    visit(ArticlePage, :using_params => {:article_name => article})
+  rescue
+  end
   visit(ArticlePage, :using_params => {:article_name => article})
 end
 
