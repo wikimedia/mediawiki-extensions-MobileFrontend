@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_79cd4234",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-19T22:41:25Z",
+      "side": 1,
+      "message": "I was struggling to do this - but in the kss documentation the path is now invalid without this (the css file generated is in less/public... feel free to have a better go.",
+      "parentUuid": "eeebdf60_7939c23d",
+      "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_79e302d5",
         "filename": "less/common/OverlayNew.less",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-19T22:34:05Z",
       "side": 1,
       "message": "?",
+      "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b964ea46",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-19T22:41:25Z",
+      "side": 1,
+      "message": "Yeh.. I\u0027m waiting for designers to tell me what to put here.",
+      "parentUuid": "eeebdf60_79e302d5",
       "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_d977aefc",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-19T22:41:25Z",
+      "side": 1,
+      "message": "Yeh that makes sense.",
+      "parentUuid": "eeebdf60_d949eed4",
+      "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_59e83eaf",
         "filename": "less/common/OverlayNew.less",
         "patchSetId": 2
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_99692620",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-19T22:41:25Z",
+      "side": 1,
+      "message": "Yeh.. I\u0027m waiting for designers to tell me what to put here.",
+      "parentUuid": "eeebdf60_59e83eaf",
+      "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_99348648",
         "filename": "less/common/OverlayNew.less",
         "patchSetId": 2
@@ -81,6 +153,24 @@
       "writtenOn": "2013-12-19T22:34:05Z",
       "side": 1,
       "message": "This supersedes the rule from .position-fixed effectively disabling fixed header everywhere. What browsers are we aiming for here anyway?",
+      "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_99c80627",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-19T22:41:25Z",
+      "side": 1,
+      "message": "Take a look at the existing VisualEditorOverlay it doesn\u0027t declare position fixed and some overlays may not want fixed headers. Let\u0027s make that optional and provide a sensible default.\n\nIn addition to this position-fixed will not work in the style guide. They HAVE to be absolute. Remember an element cannot be position fixed relative to its parent. position:fixed is fixed with respect to the viewport.",
+      "parentUuid": "eeebdf60_99348648",
       "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
