@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_f915d2ea",
+        "filename": "javascripts/modules/issues/issues.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-19T22:22:10Z",
+      "side": 1,
+      "message": "I would fix it myself but I want to motivate you to change your editor settings ;)",
+      "revId": "d260a1328ccb5e21cebfbb48e055e095dc293229",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b9d74a28",
+        "filename": "javascripts/modules/issues/issues.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-19T22:22:10Z",
+      "side": 1,
+      "message": "Instead of doing this, I\u0027d change the scope of this var. I don\u0027t see it used anywhere outside the run() function. Same for $link if we\u0027re at it.",
+      "revId": "d260a1328ccb5e21cebfbb48e055e095dc293229",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
