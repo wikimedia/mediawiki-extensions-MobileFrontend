@@ -227,7 +227,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
-			'javascripts/modules/editor/EditorOverlayBase.js',
 		),
 		'templates' => array(
 			'modules/editor/AbuseFilterOverlay',
@@ -272,6 +271,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.editor.styles',
 		),
 		'scripts' => array(
+			// FIXME: Move to mobile.editor.common when new overlays go to stable
+			'javascripts/modules/editor/EditorOverlayBase.js',
 			'javascripts/modules/editor/VisualEditorOverlay.js',
 		),
 		'templates' => array(
@@ -306,6 +307,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editorNew/AbuseFilterOverlay.js',
+			// FIXME: Move to mobile.editor.common when new overlays go to stable
+			'javascripts/modules/editor/EditorOverlayBase.js',
 			'javascripts/modules/editorNew/EditorOverlay.js',
 		),
 		'styles' => array(
