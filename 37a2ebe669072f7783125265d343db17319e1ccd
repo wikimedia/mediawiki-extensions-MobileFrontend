@@ -16,6 +16,24 @@
       "revId": "37a2ebe669072f7783125265d343db17319e1ccd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_80276bb1",
+        "filename": "MobileFrontend.alias.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-12-19T17:55:57Z",
+      "side": 1,
+      "message": "Set it to \u0027MobileWebApp\u0027 \u003d\u003e array( \u0027MobileWebApp\u0027 )\n\nThanks!",
+      "parentUuid": "eeebdf60_6d3fc0d4",
+      "revId": "37a2ebe669072f7783125265d343db17319e1ccd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
