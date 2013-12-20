@@ -6,7 +6,7 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 
 $( function() {
 	var
-		$userBtn = $( '#user-button' ),
+		$userBtn = $( '#secondary-button' ),
 		cache = M.settings.saveUserSetting,
 		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
 		// FIXME: Adapt modules/nearby/Nearby.js and use that instead
