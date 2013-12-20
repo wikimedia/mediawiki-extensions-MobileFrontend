@@ -611,6 +611,7 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * media.org
 	 * UnitTestsList hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UnitTestsList
 	 *

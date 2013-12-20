@@ -49,6 +49,12 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		);
 	}
 
+	protected function showPageNotFound() {
+		wfHttpError( 404, $this->msg( 'mobile-frontend-history-404-title' )->text(),
+			$this->msg( 'mobile-frontend-history-404-desc' )->text()
+		);
+	}
+
 	public function executeWhenAvailable( $par = '' ) {
 		wfProfileIn( __METHOD__ );
 
@@ -66,10 +72,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				return;
 			}
 		}
-		wfHttpError( 404, $this->msg( 'mobile-frontend-history-404-title' )->text(),
-			$this->msg( 'mobile-frontend-history-404-desc' )->text()
-		);
 
+		$this->showPageNotFound();
 		wfProfileOut( __METHOD__ );
 	}
 
