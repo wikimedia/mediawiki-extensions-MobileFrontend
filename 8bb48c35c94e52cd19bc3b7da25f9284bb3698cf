@@ -16,6 +16,24 @@
       "revId": "8bb48c35c94e52cd19bc3b7da25f9284bb3698cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_23554053",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-20T22:07:05Z",
+      "side": 1,
+      "message": "I don\u0027t think that these modes are related as MobileContext doesn\u0027t know about them.",
+      "parentUuid": "0ee75395_fd62c7d3",
+      "revId": "8bb48c35c94e52cd19bc3b7da25f9284bb3698cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
