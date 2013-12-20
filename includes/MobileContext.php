@@ -189,7 +189,7 @@ class MobileContext extends ContextSource {
 	protected function getMobileMode() {
 		if ( is_null( $this->mobileMode ) ) {
 			$mobileAction = $this->getMobileAction();
-			if ( $mobileAction === 'alpha' || $mobileAction === 'beta' ) {
+			if ( $mobileAction === 'alpha' || $mobileAction === 'beta' || $mobileAction === 'stable' ) {
 				$this->mobileMode = $mobileAction;
 			} else {
 				$req = $this->getRequest();
