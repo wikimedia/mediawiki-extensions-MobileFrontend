@@ -8,22 +8,10 @@ class SkinMobile extends SkinMinerva {
 	public $skinname = 'mobile';
 	public $template = 'MobileTemplate';
 
-	protected $customisations = array();
-
 	public function __construct( IContextSource $context ) {
 		parent::__construct();
 		$this->setContext( $context );
 		$this->addPageClass( 'mobile' );
-	}
-
-	public function setTemplateVariable( $key, $val ) {
-		$this->customisations[$key] = $val;
-	}
-
-	private function applyCustomisations( $tpl ) {
-		foreach( $this->customisations as $key => $value ) {
-			$tpl->set( $key, $value );
-		}
 	}
 
 	public function outputPage( OutputPage $out = null ) {
@@ -82,7 +70,6 @@ class SkinMobile extends SkinMinerva {
 		$html = ExtMobileFrontend::DOMParse( $out );
 		$tpl = parent::prepareQuickTemplate();
 		$tpl->set( 'bodytext', $html );
-		$this->applyCustomisations( $tpl );
 		$this->prepareFooterLinks( $tpl );
 		wfProfileOut( __METHOD__ );
 		return $tpl;
