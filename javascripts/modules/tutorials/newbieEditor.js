@@ -2,7 +2,7 @@
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
 		user = M.require( 'user' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
-		escapeHash = M.require( 'toggle' ).escapeHash,
+		escapeHash = M.escapeHash,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > - 1,
 		hash = window.location.hash,
 		// A/B test showing the tutorial from the left nav

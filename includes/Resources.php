@@ -809,8 +809,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.newusers' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
-			// FIXME: toggling really should not be a dependency
-			'mobile.toggling',
 			'mobile.overlays',
 		),
 		'scripts' => array(
