@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_633ea828",
+        "filename": "includes/specials/SpecialMobileEditor.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-20T21:53:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_8fcd5337",
+      "revId": "7d2da3eae52d868f22bf9f94979d25c8a73b1aab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_8f9b131b",
         "filename": "includes/specials/SpecialMobileEditor.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-20T12:33:16Z",
       "side": 1,
       "message": "You can use $this-\u003emsg() instead of wfMesage() in a special page context. Also 3 times below.",
+      "revId": "7d2da3eae52d868f22bf9f94979d25c8a73b1aab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_4343a4b6",
+        "filename": "includes/specials/SpecialMobileEditor.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-20T21:53:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_8f9b131b",
       "revId": "7d2da3eae52d868f22bf9f94979d25c8a73b1aab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
