@@ -13,4 +13,4 @@ QUnit.test( 'timeAgo()', 8, function() {
   deepEqual( m.timeAgo( 102000000 ), { value: 3, unit: 'years' } );
 } );
 
-} )( mw.mobileFrontend.require( 'last-modified' ) );
+} )( mw.mobileFrontend.require( 'modules/lastEdited/time' ) );

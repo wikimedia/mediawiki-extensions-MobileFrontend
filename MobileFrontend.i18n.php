@@ -58,7 +58,6 @@ $messages['en'] = array (
 	'mobile-frontend-random-button' => 'Random',
 
 	'mobile-frontend-back-to-top-of-section' => 'Jump back a section',
-	'mobile-frontend-close-section' => 'Close this section',
 	'mobile-frontend-regular-site' => 'Desktop view',
 	'mobile-frontend-wml-continue' => 'Continue...',
 	'mobile-frontend-wml-back' => 'Back...',
