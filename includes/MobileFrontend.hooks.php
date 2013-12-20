@@ -105,15 +105,15 @@ class MobileFrontendHooks {
 	 *
 	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
 	 *
-	 * @param $obj Article
+	 * @param $skin SkinTemplate
 	 * @param $tpl QuickTemplate
 	 * @return bool
 	 */
-	public static function onSkinTemplateOutputPageBeforeExec( &$obj, &$tpl ) {
+	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
 		global $wgMobileUrlTemplate;
 		wfProfileIn( __METHOD__ );
 
-		$title = $obj->getTitle();
+		$title = $skin->getTitle();
 		$isSpecial = $title->isSpecialPage();
 
 		if ( ! $isSpecial ) {
