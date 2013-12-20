@@ -41,6 +41,18 @@
 		return !!navigator.geolocation;
 	}
 
+	/**
+	 * Escape dots and colons in a hash, jQuery doesn't like them beause they
+	 * look like CSS classes and pseudoclasses. See
+	 * http://bugs.jquery.com/ticket/5241
+	 * http://stackoverflow.com/questions/350292/how-do-i-get-jquery-to-select-elements-with-a-period-in-their-id
+	 *
+	 * @param {String} hash A hash to escape
+	 */
+	function escapeHash( hash ) {
+		return hash.replace( /(:|\.)/g, '\\$1' );
+	}
+
 	function lockViewport() {
 		$viewportMeta.attr( 'content', 'initial-scale=1.0, maximum-scale=1.0, user-scalable=no' );
 	}
@@ -256,6 +268,7 @@
 
 	$.extend( M, {
 		init: init,
+		escapeHash: escapeHash,
 		inNamespace: inNamespace,
 		getCurrentPage: getCurrentPage,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,

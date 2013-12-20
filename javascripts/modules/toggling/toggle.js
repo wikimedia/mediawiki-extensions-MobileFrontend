@@ -1,18 +1,6 @@
 ( function( M, $ ) {
 
 	/**
-	 * Escape dots and colons in a hash, jQuery doesn't like them beause they
-	 * look like CSS classes and pseudoclasses. See
-	 * http://bugs.jquery.com/ticket/5241
-	 * http://stackoverflow.com/questions/350292/how-do-i-get-jquery-to-select-elements-with-a-period-in-their-id
-	 *
-	 * @param {String} hash A hash to escape
-	 */
-	function escapeHash( hash ) {
-		return hash.replace( /(:|\.)/g, '\\$1' );
-	}
-
-	/**
 	 * Given a heading, toggle it and any of its children
 	 * emits a section-toggle event
 	 *
@@ -42,7 +30,7 @@
 
 		// jQuery will throw for hashes containing certain characters which can break toggling
 		try {
-			$target = $( escapeHash( selector ) );
+			$target = $( M.escapeHash( selector ) );
 			$heading = $target.closest( '.section_heading' ).eq( 0 );
 
 			if ( $heading.length > 0 && !$heading.hasClass( 'openSection' ) ) {
@@ -125,7 +113,6 @@
 	}
 
 	M.define( 'toggle', {
-		escapeHash: escapeHash,
 		reveal: reveal,
 		toggle: toggle,
 		enable: init
