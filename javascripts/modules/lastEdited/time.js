@@ -26,6 +26,7 @@
 	}
 
 	M.define( 'modules/lastEdited/time', {
+		timeAgo: timeAgo,
 		getTimeAgoDelta: getTimeAgoDelta,
 		isNow: isNow,
 		isRecent: isRecent

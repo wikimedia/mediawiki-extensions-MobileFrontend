@@ -736,7 +736,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'uploads/PhotoUploaderButton',
 
 			'ctaDrawer',
-			'modules/tutorials/PageActionOverlay',
 		),
 		'scripts' => array(
 			'javascripts/common/Drawer.js',
@@ -798,6 +797,38 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.toggling' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/modules/toggling/toggle.js',
+		),
+	),
+
+	'mobile.newusers' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.templates',
+			// FIXME: toggling really should not be a dependency
+			'mobile.toggling',
+			'mobile.overlays',
+		),
+		'scripts' => array(
+			'javascripts/common/ContentOverlay.js',
+			'javascripts/modules/tutorials/PageActionOverlay.js',
+			'javascripts/modules/tutorials/newbieEditor.js',
+		),
+		'messages' => array(
+			// newbieEditor.js
+			'mobile-frontend-editor-tutorial-summary',
+			'mobile-frontend-editor-tutorial-alt-summary',
+			'mobile-frontend-editor-tutorial-confirm',
+		),
+		'templates' => array(
+			'modules/tutorials/PageActionOverlay',
+		),
+	),
+
 	'mobile.stable' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -809,23 +840,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.references',
 			'mediawiki.language',
 			'mobile.loggingSchemas',
+			'mobile.newusers',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
-			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/mf-watchstar.js',
-			'javascripts/common/ContentOverlay.js',
-			'javascripts/modules/tutorials/PageActionOverlay.js',
-			'javascripts/modules/tutorials/newbieEditor.js',
 		),
 		'messages' => array(
-			// for mf-toggle.js
-			'mobile-frontend-close-section',
-			'mobile-frontend-show-button',
-			'mobile-frontend-hide-button',
-
 			// lastEdited.js
 			'mobile-frontend-last-modified-seconds',
 			'mobile-frontend-last-modified-hours',
@@ -847,11 +870,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-watchlist-add',
 			'mobile-frontend-watchlist-removed',
 			'mobile-frontend-watchlist-cta',
-
-			// newbieEditor.js
-			'mobile-frontend-editor-tutorial-summary',
-			'mobile-frontend-editor-tutorial-alt-summary',
-			'mobile-frontend-editor-tutorial-confirm',
 		),
 	),
 
