@@ -1021,6 +1021,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/specials/mobileoptions.js',
 		),
 	),
+	'mobile.mobileeditor.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+			'scripts' => array(
+					'javascripts/specials/redirectmobileeditor.js',
+			),
+	),
 
 	'mobile.nearby.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
