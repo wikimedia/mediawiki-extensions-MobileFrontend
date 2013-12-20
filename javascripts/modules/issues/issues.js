@@ -1,10 +1,7 @@
 ( function( M,  $ ) {
 
 var module = (function() {
-	var
-		issues = [],
-		$link,
-		useNewOverlays = mw.config.get( 'wgMFMode' ) !== 'stable',
+	var useNewOverlays = mw.config.get( 'wgMFMode' ) !== 'stable',
 		// FIXME: Promote to stable
 		Overlay = M.require( useNewOverlays ? 'OverlayNew' : 'Overlay' ),
 		// FIXME: Separate into separate file
@@ -21,14 +18,16 @@ var module = (function() {
 			closeOnBack: true
 		} );
 
-
 	function run( $container, parentOverlay ) {
 		$container = $container || M.getLeadSection();
 		var $metadata = $container.find( 'table.ambox' ),
+			issues = [],
+			$link,
 			overlay;
 
 		// clean it up a little
 		$metadata.find( '.NavFrame' ).remove();
+
 		$metadata.each( function() {
 			var $this = $( this ), issue;
 
