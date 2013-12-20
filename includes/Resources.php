@@ -1005,6 +1005,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.special.preferences' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'scripts' => array(
+			'javascripts/specials/preferences.js',
+		),
+	),
+
 	'mobile.mobilemenu.styles' => $wgMFMobileSpecialPageResourceStyleBoilerplate + array(
 		'styles' => array(
 			'less/specials/mobilemenu.less',
