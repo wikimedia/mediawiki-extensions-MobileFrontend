@@ -15,6 +15,7 @@ $specialPageAliases['en'] = array(
 	'MobileOptions' => array( 'MobileOptions' ),
 	'Uploads' => array( 'Uploads' ),
 	'MobileDiff' => array( 'MobileDiff' ),
+	'MobileEditor' => array( 'MobileEditor' ),
 	'MobileMenu' => array( 'MobileMenu' ),
 	'Nearby' => array( 'Nearby' ),
 	'UserProfile' => array( 'UserProfile' ),

@@ -70,6 +70,7 @@ $autoloadClasses = array (
 	'SpecialMobileHistory' => 'specials/SpecialMobileHistory',
 	'SpecialMobileUserlogin' => 'specials/SpecialMobileUserlogin',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
+	'SpecialMobileEditor' => 'specials/SpecialMobileEditor',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
@@ -139,6 +140,7 @@ $wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::onResourceLo
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
 
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
+$wgSpecialPages['MobileEditor'] = 'SpecialMobileEditor';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 

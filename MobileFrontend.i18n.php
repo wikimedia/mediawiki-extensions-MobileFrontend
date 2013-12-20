@@ -305,11 +305,13 @@ $messages['en'] = array (
 	'mobile-frontend-image-cancel-confirm' => "Cancel upload?",
 
 	// edit
+	'mobile-frontend-editor-redirect-title' => 'Redirecting to editor...',
+	'mobile-frontend-editor-unavailable-header' => 'Editor unavailable',
+	'mobile-frontend-editor-unavailable' => 'Mobile editing is not currently available on your browser. Please try a different browser.',
 	'mobile-frontend-editor-undo-unsupported' => 'Undo is not currently supported on mobile devices.',
 	'mobile-frontend-editor-newpage-prompt' => 'This page doesn\'t exist. Why not be bold and create it?',
 	'mobile-frontend-editor-disabled' => 'This page is protected to prevent vandalism.',
 	'mobile-frontend-editor-blocked' => 'Your account is blocked from editing.',
-	'mobile-frontend-editor-unavailable' => 'Mobile editing is not currently available on your browser. Please try a different browser.',
 	'mobile-frontend-editor-cta' => 'Help improve this page!',
 	'mobile-frontend-editor-edit' => 'Edit',
 	'mobile-frontend-editor-continue' => 'Continue',
@@ -904,11 +906,13 @@ Parameters:
 	'mobile-frontend-image-heading-describe' => 'A heading instructing the user to describe uploaded image.',
 	'mobile-frontend-image-uploading' => 'A message telling the user that an image is being uploaded.',
 	'mobile-frontend-image-cancel-confirm' => 'A question asking if the user wants to cancel an upload.',
+	'mobile-frontend-editor-redirect-title' => 'Shown as a user is redirected to the Javascript editor after browsing to a url with action=edit.',
+	'mobile-frontend-editor-unavailable-header' => 'When mobile editing is not supported, header of the warning.',
+	'mobile-frontend-editor-unavailable' => 'Message that appears when a user attempts to edit with an unsupported/incapable browser.',
 	'mobile-frontend-editor-undo-unsupported' => 'Shown when user attempts to do an undo which is currently not supported.',
 	'mobile-frontend-editor-newpage-prompt' => "Message shown when a page doesn't exist.",
 	'mobile-frontend-editor-disabled' => 'Toast message that appears when a user is unable to edit a page and clicks edit icon.',
 	'mobile-frontend-editor-blocked' => 'Toast message that appears when a user is unable to edit a page due to being blocked and clicks edit icon.',
-	'mobile-frontend-editor-unavailable' => 'Toast message that appears when a user has a browser incapable of editing when they click on the edit button.',
 	'mobile-frontend-editor-cta' => "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)
 {{Identical|Help improve this page}}",
 	'mobile-frontend-editor-edit' => 'Caption for the link showing edit form.

@@ -545,9 +545,8 @@ class MobileFrontendHooks {
 			// Unset these to avoid a redirect loop but make sure we pass other parameters to edit e.g. undo actions
 			unset( $data['action'] );
 			unset( $data['title'] );
-			$articleUrl = $context->getMobileUrl( $article->getTitle()->getFullURL( $data ) );
-			$section = (int)$output->getRequest()->getVal( 'section', 0 );
-			$output->redirect( $articleUrl . '#editor/' . $section );
+
+			$output->redirect( SpecialPage::getTitleFor( 'MobileEditor', $article->getTitle() )->getFullURL( $data ) );
 			return false;
 		}
 
