@@ -8,7 +8,6 @@ class SkinMobile extends SkinMinerva {
 	public $skinname = 'mobile';
 	public $template = 'MobileTemplate';
 
-	protected $hookOptions;
 	protected $customisations = array();
 
 	public function __construct( IContextSource $context ) {
@@ -37,12 +36,7 @@ class SkinMobile extends SkinMinerva {
 			$out->setRobotPolicy( 'noindex,nofollow' );
 		}
 
-		$options = null;
-		if ( wfRunHooks( 'BeforePageDisplayMobile', array( &$out, &$options ) ) ) {
-			if ( is_array( $options ) ) {
-				$this->hookOptions = $options;
-			}
-		}
+		wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
 		parent::outputPage( $out );
 	}
 
@@ -128,10 +122,6 @@ class SkinMobile extends SkinMinerva {
 		$url = $this->mobileContext->getDesktopUrl( wfExpandUrl(
 			$req->appendQuery( 'mobileaction=toggle_view_desktop' )
 		) );
-		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['toggle_view_desktop'] ) ) {
-			$hookQuery = $this->hookOptions['toggle_view_desktop'];
-			$url = $req->appendQuery( $hookQuery ) . urlencode( $url );
-		}
 		$url = htmlspecialchars( $url );
 
 		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
