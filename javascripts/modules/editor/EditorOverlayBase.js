@@ -18,6 +18,11 @@
 		},
 		className: 'overlay editor-overlay',
 		closeOnBack: true,
+		initialize: function ( options ) {
+			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
+			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
+			this._super( options );
+		},
 		hide: function() {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 			if ( !this._hasChanged() || this.canHide || window.confirm( confirmMessage ) ) {
@@ -50,6 +55,6 @@
 		}
 	} );
 
-	M.define( 'modules/editorNew/EditorOverlayBase', EditorOverlayBase );
+	M.define( 'modules/editor/EditorOverlayBase', EditorOverlayBase );
 
 }( mw.mobileFrontend ) );

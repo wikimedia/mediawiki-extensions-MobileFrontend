@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-	var EditorOverlayBase = M.require( 'modules/editorNew/EditorOverlayBase' ),
+	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		popup = M.require( 'notifications' ),
@@ -47,10 +47,6 @@
 			this.isNewEditor = options.isNewEditor;
 			this.editCount = user.getEditCount();
 			this.funnel = options.funnel;
-
-			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
-			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
-
 			this._super( options );
 		},
 
@@ -270,6 +266,6 @@
 		}
 	} );
 
-	M.define( 'modules/editorNew/EditorOverlay', EditorOverlay );
+	M.define( 'modules/editor/EditorOverlay', EditorOverlay );
 
 }( mw.mobileFrontend, jQuery ) );
