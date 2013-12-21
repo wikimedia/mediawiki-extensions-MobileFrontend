@@ -394,6 +394,8 @@ class MobileFrontendHooks {
 			$name = $special->getName();
 			if ( $name === 'Search' ) {
 				$out->addModuleStyles( 'mobile.search.styles' );
+			} else if ( $name === 'Preferences' ) {
+				$out->addModules( 'mobile.special.preferences' );
 			} else if ( $name === 'Userlogin' ) {
 				$out->addModuleStyles( 'mobile.userlogin.styles' );
 				// make sure we're on https if we're supposed to be and currently aren't.
