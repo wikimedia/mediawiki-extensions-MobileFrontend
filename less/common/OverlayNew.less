@@ -127,10 +127,12 @@
 		padding: @overlayHeaderMargin @overlayHeaderMargin 0;
 		.box-sizing(border-box);
 		background: #fff;
+		// For overlays that do not use position fixed headers e.g. VisualEditorOverlay and ZeroOverlay
+		position: absolute;
+		top: 0;
 
 		&.position-fixed {
 			// both top and left required for Android 2
-			top: 0;
 			left: 0;
 
 			// prevent .page-list overlaping the header when scrolling

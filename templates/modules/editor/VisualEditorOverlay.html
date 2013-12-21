@@ -1,13 +1,15 @@
-<div class="overlay-header with-margins initial-header hideable">
-	<ul class="v-border bottom-border">
-		<li><button class="cancel icon">{{closeMsg}}</button></li>
-	</ul>
-	<div class="bottom-border">
-		<h2>{{{editingMsg}}}</h2>
+<div class="overlay-header-container">
+	<div class="overlay-header with-margins initial-header hideable">
+		<ul class="v-border bottom-border">
+			<li><button class="cancel icon">{{closeMsg}}</button></li>
+		</ul>
+		<div class="bottom-border">
+			<h2>{{{editingMsg}}}</h2>
+		</div>
+		<ul>
+			<li><button class="continue icon" disabled>{{continueMsg}}</button></li>
+		</ul>
 	</div>
-	<ul>
-		<li><button class="continue icon" disabled>{{continueMsg}}</button></li>
-	</ul>
 </div>
 <div class="overlay-header with-margins save-header hideable hidden">
 	<ul class="v-border bottom-border">
