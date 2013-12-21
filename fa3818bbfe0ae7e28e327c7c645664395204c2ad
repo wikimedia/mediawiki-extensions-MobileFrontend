@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_fe4c8fe6",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-21T01:35:59Z",
+      "side": 1,
+      "message": "No.. it needs to be an absolute path.",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_1e4053a7",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-21T01:35:59Z",
+      "side": 1,
+      "message": "No.. it needs to be an absolute path.",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_de49cbd4",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-21T01:35:59Z",
+      "side": 1,
+      "message": "This will change every time. This is not going to work.  The url is tied to the time the module gets executed which you cannot predict here.\n\nWhat we need to do instead is to force the startup url somehow. e.g. Force the startup url script to enforce a version number.\n\nSomething like this:\n\nhttp://localhost.alpha/w/load.php?debug\u003dfalse\u0026lang\u003den\u0026modules\u003dstartup\u0026only\u003dscripts\u0026skin\u003dmobile\u0026target\u003dmobile\u0026version\u003d20131221T012809Z\n\ncould potentially generate JavaScript containing:\n\ndocument.write(\n\"\\u003Cscript src\u003d\\\"/w/load.php?debug\u003dfalse\\u0026amp;lang\u003den\\u0026amp;modules\u003djquery%2Cmediawiki\\u0026amp;only\u003dscripts\\u0026amp;skin\u003dvector\\u0026amp;version\u003d20131221T012809Z\\\"\\u003E\\u003C/script\\u003E\");}\n\nThis would allow us to predefine all the other urls.",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_9e690320",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-21T01:35:59Z",
+      "side": 1,
+      "message": "This won\u0027t work. The above URLs will not change ever locking you into the manifest forever.\n\nCould either refresh the manifest daily as a step 1 or explore last modified time of all the named modules.",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_3e4317b8",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-21T01:35:59Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to be working - it\u0027s reporting text/html",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
