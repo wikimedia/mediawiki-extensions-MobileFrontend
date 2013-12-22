@@ -222,11 +222,14 @@ $specialPageAliases['uk'] = array(
 
 /** Vietnamese (Tiếng Việt) */
 $specialPageAliases['vi'] = array(
+	'History' => array( 'Lịch_sử' ),
 	'MobileOptions' => array( 'Tùy_chọn_di_động' ),
 	'Uploads' => array( 'Tập_tin_tải_lên' ),
 	'MobileDiff' => array( 'So_sánh_di_động' ),
+	'MobileEditor' => array( 'Sửa_đổi_di_động' ),
 	'MobileMenu' => array( 'Trình_đơn_di_động' ),
 	'Nearby' => array( 'Kề_bên' ),
+	'UserProfile' => array( 'Hồ_sơ_cá_nhân' ),
 );
 
 /** Simplified Chinese (中文（简体）‎) */
