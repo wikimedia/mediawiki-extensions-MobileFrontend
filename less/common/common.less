@@ -287,7 +287,8 @@ pre {
 }
 
 .position-fixed {
-	position: fixed;
+	// use !important to override more specific rules (e.g. in OverlayNew.less)
+	position: fixed !important;
 }
 
 .animations .position-fixed {
@@ -303,7 +304,7 @@ pre {
 	}
 
 	.position-fixed {
-		position: absolute;
+		position: absolute !important;
 	}
 }
 

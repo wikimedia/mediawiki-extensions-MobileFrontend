@@ -24,7 +24,7 @@
 	background: #fff;
 	z-index: 4;
 	.box-sizing(border-box);
-	padding-top: @overlayHeight;
+	padding-top: @overlayHeaderHeight;
 
 	.overlay-header {
 		display: table;
@@ -70,14 +70,14 @@
 		}
 
 		> ul, button {
-			width: @overlayHeight - @overlayHeaderMargin;
+			width: @overlayHeaderHeight - @overlayHeaderMargin;
 		}
 
 		button {
 			padding: @overlayHeadingMarginV @overlayHeadingMarginH;
-			width: @overlayHeight;
+			width: @overlayHeaderHeight;
 			border-radius: 0;
-			min-height: @overlayHeight;
+			min-height: @overlayHeaderHeight;
 		}
 
 		.v-border:first-child {
@@ -127,14 +127,14 @@
 		padding: @overlayHeaderMargin @overlayHeaderMargin 0;
 		.box-sizing(border-box);
 		background: #fff;
-		// For overlays that do not use position fixed headers e.g. VisualEditorOverlay and ZeroOverlay
+		// For overlays that do not use position fixed headers e.g. ZeroOverlay
+		// FIXME: make those overlays use position fixed headers
 		position: absolute;
 		top: 0;
 
 		&.position-fixed {
 			// both top and left required for Android 2
 			left: 0;
-
 			// prevent .page-list overlaping the header when scrolling
 			z-index: 5;
 		}
