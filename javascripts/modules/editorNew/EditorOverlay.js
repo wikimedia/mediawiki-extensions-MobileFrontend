@@ -6,11 +6,9 @@
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
-		inCampaign = M.query.campaign ? true : false,
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
-		KeepGoingOverlay,
 		AbuseFilterOverlay = M.require( 'modules/editorNew/AbuseFilterOverlay' ),
 		EditorOverlay;
 
@@ -84,6 +82,16 @@
 			self.log( 'attempt' );
 		},
 
+		_shouldShowKeepGoingOverlay: function() {
+			if ( inBetaOrAlpha &&
+				mw.config.get( 'wgMFKeepGoing' ) &&
+				( this.editCount === 0  || inKeepGoingCampaign )
+			) {
+				return true;
+			} else {
+				return false;
+			}
+		},
 		_showPreview: function() {
 			var self = this;
 
@@ -96,13 +104,9 @@
 			this.$spinner.show();
 
 			// pre-fetch keep going with expectation user will go on to save
-			if ( inBetaOrAlpha &&
-				mw.config.get( 'wgMFKeepGoing' ) &&
-				( ( this.editCount === 0 && !inCampaign ) || inKeepGoingCampaign )
-			) {
-				mw.loader.using( 'mobile.keepgoing', function() {
-					KeepGoingOverlay = M.require( 'modules/keepgoing/KeepGoingOverlay' );
-				} );
+			if ( this._shouldShowKeepGoingOverlay() ) {
+				this._keepgoing = true;
+				mw.loader.using( 'mobile.keepgoing' );
 			}
 
 			api.post( {
@@ -238,13 +242,19 @@
 					// the mobile interface.
 					$.cookie( 'mobileEditor', 'true', { expires: 30 } );
 					// double check it was successfully pre-fetched during preview phase
-					if ( KeepGoingOverlay ) {
+					if ( self._keepgoing ) {
 						// Show KeepGoing overlay at step 1 (ask)
-						new KeepGoingOverlay( { step: 1 } );
+						mw.loader.using( 'mobile.keepgoing', function() {
+							var KeepGoingOverlay = M.require( 'modules/keepgoing/KeepGoingOverlay' );
+							new KeepGoingOverlay( { step: 1 } );
+						} );
+						self._keepgoing = false;
 					} else {
 						// just show a toast
 						popup.show( mw.msg( msg ), className );
 					}
+					// update after _shouldShowKeepGoingOverlay test
+					self._updateEditCount();
 				} ).
 				fail( function( data ) {
 					var msg;
