@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_4c0d0c41",
+        "filename": "javascripts/common/settings.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T16:51:16Z",
+      "side": 1,
+      "message": "That was my original plan but I wanted to keep things simple for the first patch rather than do it all in a big one and risk merge conflicts.\n\nI\u0027d also thought that this would break Zero but it turns out they don\u0027t use writeCookie directly only saveUserSetting so that\u0027s less of a problem.\n\nbut yeh.. happy to add a FIXME to make this clearer",
+      "parentUuid": "eeebdf60_ccefdc81",
+      "revId": "01abe21f73628e165761c999f3040484ecc20387",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_6cfe9037",
         "filename": "tests/javascripts/common/test_settings.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-23T16:06:26Z",
       "side": 1,
       "message": "Not sure if any of this is necessary if those functions only wrap $.cookie, which I hope has its own tests.",
+      "revId": "01abe21f73628e165761c999f3040484ecc20387",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_ec1ce07e",
+        "filename": "tests/javascripts/common/test_settings.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T16:51:16Z",
+      "side": 1,
+      "message": "Well they were sure useful when writing these tests to ensure I didn\u0027t break something.. :)",
+      "parentUuid": "eeebdf60_6cfe9037",
       "revId": "01abe21f73628e165761c999f3040484ecc20387",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
