@@ -41,11 +41,13 @@
 			this.api = new EditorApi( {
 				title: options.title,
 				sectionId: options.sectionId,
+				oldId: options.oldId,
 				isNew: options.isNew
 			} );
 			this.sectionId = options.sectionId;
 			this.isNewEditor = options.isNewEditor;
 			this.editCount = user.getEditCount();
+			this.readOnly = options.oldId ? true : false; // If old revision, readOnly mode
 			this.funnel = options.funnel;
 			this._super( options );
 		},
@@ -70,6 +72,11 @@
 			} );
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
+
+			// If in readOnly mode, make textarea readonly
+			if ( this.readOnly ) {
+				this.$content.prop( 'readonly', true );
+			}
 
 			this._showHidden( '.initial-header' );
 			this._loadContent();

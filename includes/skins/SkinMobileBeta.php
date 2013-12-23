@@ -110,4 +110,20 @@ class SkinMobileBeta extends SkinMobile {
 			);
 		}
 	}
+
+	protected function prepareWarnings( BaseTemplate $tpl ) {
+		parent::prepareWarnings( $tpl );
+		$out = $this->getOutput();
+		if ( $out->getRequest()->getText( 'oldid' ) ) {
+			$subtitle = $out->getSubtitle();
+			$tpl->set( '_old_revision_warning',
+				Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
+				Html::openElement( 'p', array() ).
+					Html::element( 'a', array( 'href' => '#editor/0' ),
+					$this->msg( 'mobile-frontend-view-source' )->text() ) .
+				Html::closeElement( 'p' ) .
+				$subtitle .
+				Html::closeElement( 'div' ) );
+		}
+	}
 }

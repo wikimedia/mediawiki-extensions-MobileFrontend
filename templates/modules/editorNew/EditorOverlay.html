@@ -6,9 +6,11 @@
 		<div class="bottom-border">
 			<h2>{{{editingMsg}}}</h2>
 		</div>
+		{{^readOnly}}
 		<ul>
 			<li><button class="continue icon" disabled>{{continueMsg}}</button></li>
 		</ul>
+		{{/readOnly}}
 	</div>
 	<div class="overlay-header save-header hideable hidden">
 		<ul class="v-border bottom-border">

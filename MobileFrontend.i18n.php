@@ -107,6 +107,7 @@ $messages['en'] = array (
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 year|$3 years}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Last {{GENDER:$1|edited}}] just now by {{PLURAL:$4|[$5 $2]|0=an anonymous user}}.',
 	'mobile-frontend-learn-more' => 'Learn more',
+	'mobile-frontend-view-source' => 'View source',
 	// account creation
 	'mobile-frontend-account-create-submit' => 'Sign up',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirm password',
@@ -339,6 +340,7 @@ $messages['en'] = array (
 	'mobile-frontend-editor-abusefilter-read-more' => 'Read more',
 	'mobile-frontend-editor-editing-page' => '<strong>Editing</strong><span> $1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>Previewing</strong><span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Viewing source of</strong><span> $1</span>',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -634,6 +636,8 @@ Parameters:
 {{Related|Mobile-frontend-last-modified-with-user}}",
 	'mobile-frontend-learn-more' => 'A caption of a button or a link leading to details about a given piece of information.
 {{Identical|Learn more}}',
+	'mobile-frontend-view-source' => 'Link displayed when viewing an old revision.
+{{Identical|View source}}',
 	'mobile-frontend-account-create-submit' => 'Text in account creation submit button.
 {{Identical|Sign up}}',
 	'mobile-frontend-password-confirm-placeholder' => 'Placeholder for confirm password field.
@@ -993,6 +997,10 @@ Parameters:
 
 Parameters:
 * $1 - page title',
+	'mobile-frontend-editor-viewing-source-page' => "A heading saying which page's source code is being viewed. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).
+
+Parameters:
+* $1 - page title",
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:

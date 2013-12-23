@@ -6,6 +6,7 @@
 			this._super( options );
 			this.title = options.title;
 			this.sectionId = options.sectionId;
+			this.oldId = options.oldId;
 			// return an empty section for new pages
 			this.content = options.isNew ? '' : null;
 			this.hasChanged = false;
@@ -23,6 +24,10 @@
 					rvprop: [ 'content', 'timestamp' ],
 					titles: this.title
 				};
+				// Load text of old revision if desired
+				if ( this.oldId ) {
+					options.rvstartid = this.oldId;
+				}
 				// See Bug 50136 - passing rvsection will fail with non wikitext
 				if ( $.isNumeric( this.sectionId ) ) {
 					options.rvsection = this.sectionId;

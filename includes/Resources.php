@@ -325,6 +325,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			'mobile-frontend-editor-editing-page',
 			'mobile-frontend-editor-previewing-page',
+			'mobile-frontend-editor-viewing-source-page',
 		),
 	),
 

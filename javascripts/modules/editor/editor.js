@@ -81,6 +81,7 @@
 							isNew: isNew,
 							isNewEditor: user.getEditCount() === 0,
 							sectionId: sectionId,
+							oldId: M.query.oldid,
 							funnel: funnel || 'article'
 						} ).show();
 					} );

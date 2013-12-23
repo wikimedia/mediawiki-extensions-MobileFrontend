@@ -19,7 +19,12 @@
 		className: 'overlay editor-overlay',
 		closeOnBack: true,
 		initialize: function ( options ) {
-			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
+			if ( this.readOnly ) {
+				options.readOnly = true;
+				options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
+			} else {
+				options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
+			}
 			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			this._super( options );
 		},
