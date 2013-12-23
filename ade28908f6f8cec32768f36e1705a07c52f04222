@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_670fcb34",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T16:54:32Z",
+      "side": 1,
+      "message": "This is not a FIXME.\noverlay-bottom has a absolutely positioned header in a fixed position overlay.\n\nVisualEditor uses fixed positioning for the toolbar (we may want to revisit this)\n\nZero doesn\u0027t really need one - the overlay is 1-2 lines long.",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2719c37e",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T16:54:32Z",
+      "side": 1,
+      "message": "The definition in common.less for position-fixed should be\n\nposition: fixed !important;\nI think this is one of the cases where if you give a class position fixed it overrides any other rules.",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
