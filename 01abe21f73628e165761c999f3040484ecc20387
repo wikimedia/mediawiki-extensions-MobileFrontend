@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_27f543b6",
+        "filename": "javascripts/common/settings.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-23T17:41:17Z",
+      "side": 1,
+      "message": "Yeah, a FIXME will do for now.",
+      "parentUuid": "eeebdf60_4c0d0c41",
+      "revId": "01abe21f73628e165761c999f3040484ecc20387",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_6cfe9037",
         "filename": "tests/javascripts/common/test_settings.js",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Well they were sure useful when writing these tests to ensure I didn\u0027t break something.. :)",
       "parentUuid": "eeebdf60_6cfe9037",
+      "revId": "01abe21f73628e165761c999f3040484ecc20387",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_07f23fcd",
+        "filename": "tests/javascripts/common/test_settings.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-23T17:41:17Z",
+      "side": 1,
+      "message": "OK, let\u0027s put a deprecation FIXME here too.",
+      "parentUuid": "eeebdf60_ec1ce07e",
       "revId": "01abe21f73628e165761c999f3040484ecc20387",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
