@@ -115,8 +115,9 @@ class MobileFrontendHooks {
 
 		$title = $skin->getTitle();
 		$isSpecial = $title->isSpecialPage();
+		$context = MobileContext::singleton();
 
-		if ( ! $isSpecial ) {
+		if ( !$isSpecial && !$context->isBlacklistedPage() ) {
 			$footerlinks = $tpl->data['footerlinks'];
 			$args = $tpl->getSkin()->getRequest()->getValues();
 			// avoid title being set twice
