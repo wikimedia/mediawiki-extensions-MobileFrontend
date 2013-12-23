@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_91b1f1de",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 473,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-23T02:05:57Z",
+      "side": 1,
+      "message": "If there are any thoughts as far as the design/placement of this link goes, I\u0027m all ears...",
+      "revId": "94efe623b56a75f2fddcd0447c1356e8361dbcdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
