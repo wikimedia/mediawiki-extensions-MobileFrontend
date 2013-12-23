@@ -16,6 +16,23 @@
       "revId": "94efe623b56a75f2fddcd0447c1356e8361dbcdf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_11bde1ad",
+        "filename": "javascripts/modules/editorNew/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-23T03:41:31Z",
+      "side": 1,
+      "message": "This is so the bottom border goes all the way to the right of the screen. Maybe a better way to do this?",
+      "revId": "94efe623b56a75f2fddcd0447c1356e8361dbcdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
