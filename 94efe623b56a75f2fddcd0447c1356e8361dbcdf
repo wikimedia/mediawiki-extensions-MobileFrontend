@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_e7863b6a",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-23T17:11:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_4c9cec5f",
+      "revId": "94efe623b56a75f2fddcd0447c1356e8361dbcdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_91b1f1de",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2013-12-23T14:15:31Z",
       "side": 1,
       "message": "Please break this long line.",
+      "revId": "94efe623b56a75f2fddcd0447c1356e8361dbcdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2794238d",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-23T17:11:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_0ca6e4a7",
       "revId": "94efe623b56a75f2fddcd0447c1356e8361dbcdf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
