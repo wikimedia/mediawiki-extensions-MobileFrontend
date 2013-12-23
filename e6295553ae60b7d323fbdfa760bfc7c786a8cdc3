@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_e20189ba",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-23T20:05:04Z",
+      "side": 1,
+      "message": "s/article/page/",
+      "revId": "e6295553ae60b7d323fbdfa760bfc7c786a8cdc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_a20b81d8",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-23T20:05:04Z",
+      "side": 1,
+      "message": "And here.",
+      "revId": "e6295553ae60b7d323fbdfa760bfc7c786a8cdc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
