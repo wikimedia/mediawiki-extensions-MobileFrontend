@@ -25,7 +25,7 @@ When(/^I upload Mobile file (.+)$/) do |file_name|
   require 'chunky_png'
   ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save path
 
-  on(UploadsPage).select_file = path
+  on(UploadsPage).select_file_element.send_keys(path)
 end
 
 Then(/^I see a blue tutorial screen$/) do
