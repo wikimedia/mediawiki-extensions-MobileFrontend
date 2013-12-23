@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_477de716",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T17:51:57Z",
+      "side": 1,
+      "message": "OK, I guess we will know the answer as we work on overlays some more - especially when we work on overlay styling for tablets. A FIXME is harmless - the FIXME can always be resolved by saying this is not a FIXME and dropping the comment :)",
+      "parentUuid": "eeebdf60_a7e153fd",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_2719c37e",
         "filename": "less/common/OverlayNew.less",
         "patchSetId": 1
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_e78cfb3c",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T17:51:57Z",
+      "side": 1,
+      "message": "Yes I think that would be better personally. I just noticed overlay-bottom is also declaring position: fixed but not using the position-fixed class which will mean it may behave weirdly on older devices. We should move that over to use position-fixed as well.",
+      "parentUuid": "eeebdf60_87e64f12",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_c727b7b0",
         "filename": "templates/modules/editor/VisualEditorOverlay.html",
         "patchSetId": 1
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "I checked. While it might look a bit weird, it doesn\u0027t \"clash\" - toolbar is visible.",
       "parentUuid": "eeebdf60_c727b7b0",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_0777df36",
+        "filename": "templates/modules/editor/VisualEditorOverlay.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T17:51:57Z",
+      "side": 1,
+      "message": "Just visible.. I\u0027m happy to merge in current state as long as we file a bug against VisualEditor..\nhttp://imgur.com/l2PyYBc",
+      "parentUuid": "eeebdf60_67eb4bdc",
       "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
