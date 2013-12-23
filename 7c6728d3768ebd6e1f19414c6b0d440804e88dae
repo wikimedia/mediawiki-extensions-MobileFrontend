@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_879acf64",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T18:21:56Z",
+      "side": 1,
+      "message": "Can you shift these functions over to SkinMobileBeta.php ? I\u0027d like us to experiment with this change in the wild first (we tend to use the beta mode of the site for big changes like this :))\nAppending \n?mobileaction\u003dbeta\nor visiting Special:MobileOptions will allow you to access the beta.",
+      "revId": "7c6728d3768ebd6e1f19414c6b0d440804e88dae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_a71033ae",
+        "filename": "javascripts/modules/editorNew/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T18:21:56Z",
+      "side": 1,
+      "message": "Yeh a better way to do this is to would be to update the template in templates/modules/editorNew/EditorOverlay.html\n\nthen you won\u0027t need tthis line :D\n\n\n{{^readOnly}}\n\t\t\u003cul\u003e\n\t\t\t\u003cli\u003e\u003cbutton class\u003d\"continue icon\" disabled\u003e{{continueMsg}}\u003c/button\u003e\u003c/li\u003e\n\t\t\u003c/ul\u003e\n{{/readOnly}}\n\nOR \n\n{{#oldid}}\n\t\t\u003cul\u003e\n\t\t\t\u003cli\u003e\u003cbutton class\u003d\"continue icon\" disabled\u003e{{continueMsg}}\u003c/button\u003e\u003c/li\u003e\n\t\t\u003c/ul\u003e\n{{/oldid}}",
+      "revId": "7c6728d3768ebd6e1f19414c6b0d440804e88dae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
