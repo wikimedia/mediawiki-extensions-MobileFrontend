@@ -33,6 +33,23 @@
       "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_c727b7b0",
+        "filename": "templates/modules/editor/VisualEditorOverlay.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-23T16:55:07Z",
+      "side": 1,
+      "message": "This will clash with the fixed position toolbar.",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
