@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_a7e153fd",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-23T17:39:50Z",
+      "side": 1,
+      "message": "I still think this is a fixme. overlay-bottom is an exception, that\u0027s fine, but I\u0027m not sure if the header has to be absolutely positioned there. Why not statically?\n\nVE should probably be revisited, but there\u0027s no harm in keeping it the way it is right now in alpha (everything works).\n\nZero doesn\u0027t need one, but there\u0027s no harm in it having one, for the sake of consistency and not having to check if two different markups work.",
+      "parentUuid": "eeebdf60_670fcb34",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_2719c37e",
         "filename": "less/common/OverlayNew.less",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_87e64f12",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-23T17:39:50Z",
+      "side": 1,
+      "message": "I thought about it. The rule in .no-position-fixed would also require !important then. Should we do it this way?",
+      "parentUuid": "eeebdf60_2719c37e",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_c727b7b0",
         "filename": "templates/modules/editor/VisualEditorOverlay.html",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2013-12-23T16:55:07Z",
       "side": 1,
       "message": "This will clash with the fixed position toolbar.",
+      "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_67eb4bdc",
+        "filename": "templates/modules/editor/VisualEditorOverlay.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-23T17:39:50Z",
+      "side": 1,
+      "message": "I checked. While it might look a bit weird, it doesn\u0027t \"clash\" - toolbar is visible.",
+      "parentUuid": "eeebdf60_c727b7b0",
       "revId": "ade28908f6f8cec32768f36e1705a07c52f04222",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
