@@ -174,6 +174,24 @@
       "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2c240807",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-23T15:46:11Z",
+      "side": 1,
+      "message": "\"some overlays may not want fixed headers\" - why would that be? I thought we agreed we\u0027d want them everywhere and later even on normal pages.\n\n\"In addition to this position-fixed will not work in the style guide. They HAVE to be absolute.\" - it\u0027s style guide\u0027s problem. This is not a good argument, it\u0027s like writing code that is only invoked in tests.\n\nIn general, the biggest problem with this is that it completely disables the fixed header _everywhere_. Just like it did in I6365e5f114e31517d55d7ee2ee9ef47eeccb40ae",
+      "parentUuid": "eeebdf60_99c80627",
+      "revId": "c6ab3ba5c53a2e3108626863721ec11479a03955",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
