@@ -266,6 +266,6 @@
 		}
 	} );
 
-	M.define( 'modules/editor/EditorOverlay', EditorOverlay );
+	M.define( 'modules/editorNew/EditorOverlay', EditorOverlay );
 
 }( mw.mobileFrontend, jQuery ) );
