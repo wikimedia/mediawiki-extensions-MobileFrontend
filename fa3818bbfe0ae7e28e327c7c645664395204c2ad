@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_40bf0cf7",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-12-24T00:45:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_fe4c8fe6",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_1e4053a7",
         "filename": "includes/specials/SpecialManifests.php",
         "patchSetId": 17
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-21T01:35:59Z",
       "side": 1,
       "message": "No.. it needs to be an absolute path.",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_203408a7",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-12-24T00:45:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_1e4053a7",
       "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_e03d008c",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-12-24T00:45:09Z",
+      "side": 1,
+      "message": "See dependency (I7250d819628dfa9ee8c41941d843e9d7bd24bf3f) added for RL dependency (I17608e3fac9f8cb5b2764d8a22aa50ff59b23d2c).",
+      "parentUuid": "eeebdf60_de49cbd4",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_9e690320",
         "filename": "includes/specials/SpecialManifests.php",
         "patchSetId": 17
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_a047f821",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-12-24T00:45:09Z",
+      "side": 1,
+      "message": "See previous dependency comment.",
+      "parentUuid": "eeebdf60_9e690320",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_3e4317b8",
         "filename": "includes/specials/SpecialManifests.php",
         "patchSetId": 17
@@ -81,6 +153,24 @@
       "writtenOn": "2013-12-21T01:35:59Z",
       "side": 1,
       "message": "This doesn\u0027t seem to be working - it\u0027s reporting text/html",
+      "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_6051f0dc",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-12-24T00:45:09Z",
+      "side": 1,
+      "message": "GET /wiki/Special:Manifests is returning the following for me:\n\nContent-Type\u003dtext/cache-manifest; charset\u003dUTF-8\n\n(starting from a completely cleared out Firefox desktop browser)",
+      "parentUuid": "eeebdf60_3e4317b8",
       "revId": "fa3818bbfe0ae7e28e327c7c645664395204c2ad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
