@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_a671500d",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-24T19:36:47Z",
+      "side": 1,
+      "message": "How will this be customised?",
+      "revId": "83871d854a1cbc712386ffb8416e96e87e445b29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_866e4c29",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-24T19:36:47Z",
+      "side": 1,
+      "message": "what does this file look like?",
+      "revId": "83871d854a1cbc712386ffb8416e96e87e445b29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
