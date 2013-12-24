@@ -16,6 +16,78 @@
 	}
 }
 
+// Overlays
+//
+// Styleguide 7.
+
+// Overlays (read only)
+//
+// TODO: Document when this should be used.
+//
+// Markup:
+// <div class="overlay-enabled">
+//   <div class="overlay">
+//     <div class="overlay-header-container">
+//       <div class="overlay-header">
+//         <ul class="v-border bottom-border">
+//          <li><button class="cancel icon">Close</button></li>
+//         </ul>
+//         <div class="bottom-border"><h2>Overlay</h2></div>
+//       </div>
+//     </div>
+//     <div class="content">Overlay with no icon.</div>
+//   </div>
+// </div>
+//
+// Styleguide 7.1.
+
+// Overlays (primary)
+//
+// TODO: Document when this should be used.
+//
+// Markup:
+// <div class="overlay-enabled">
+//   <div class="overlay">
+//     <div class="overlay-header-container">
+//       <div class="overlay-header">
+//         <ul class="v-border bottom-border">
+//          <li><button class="cancel icon">Close</button></li>
+//         </ul>
+//         <div class="bottom-border"><h2>Overlay</h2></div>
+//         <ul class="v-border bottom-border">
+//          <li><button class="continue icon">Continue</button></li>
+//         </ul>
+//       </div>
+//     </div>
+//     <div class="content">Overlay with progressive action.</div>
+//   </div>
+// </div>
+//
+// Styleguide 7.2.
+
+// Overlays (constructive)
+//
+// TODO: Document when this should be used.
+//
+// Markup:
+// <div class="overlay-enabled">
+//   <div class="overlay">
+//     <div class="overlay-header-container">
+//       <div class="overlay-header">
+//         <ul class="v-border bottom-border">
+//          <li><button class="cancel icon">Close</button></li>
+//         </ul>
+//         <div class="bottom-border"><h2>Overlay</h2></div>
+//         <ul class="v-border bottom-border">
+//          <li><button class="submit icon">Submit</button></li>
+//         </ul>
+//       </div>
+//     </div>
+//     <div class="content">Overlay with completion action.</div>
+//   </div>
+// </div>
+//
+// Styleguide 7.3.
 .overlay {
 	position: absolute;
 	top: 0;
@@ -99,25 +171,25 @@
 			}
 
 			&.cancel {
-				background-image: url(images/cancel.png);
+				background-image: url(~'@{wgMFMobileImageRootDir}/cancel.png');
 			}
 
 			&.clear {
-				background-image: url(images/clear.png);
+				background-image: url(~'@{wgMFMobileImageRootDir}/clear.png');
 			}
 
 			&.submit {
-				background-image: url(images/check.png);
+				background-image: url(~'@{wgMFMobileImageRootDir}/check.png');
 				background-color: #00af8b;
 			}
 
 			&.continue {
-				background-image: url(images/continue-ltr.png);
+				background-image: url(~'@{wgMFMobileImageRootDir}/continue-ltr.png');
 				background-color: #2f81f0;
 			}
 
 			&.back {
-				background-image: url(images/back.png);
+				background-image: url(~'@{wgMFMobileImageRootDir}/back.png');
 			}
 		}
 	}
@@ -175,7 +247,7 @@
 
 	.license {
 		// FIXME: image should not be hard-coded
-		background: url('../modules/images/cc-by-sa.png') left 2px no-repeat;
+		background: url(~'@{wgMFMobileImageRootDir}../modules/images/cc-by-sa.png') left 2px no-repeat;
 		.background-size( auto, 16px );
 		padding-left: 55px;
 		font-size: .9em;
@@ -218,9 +290,30 @@
 	}
 }
 
+// Bottom Overlays
+//
+// A overlay that is docked to the bottom of the screen.
+// All types of overlays (progressive and constructive) apply here.
+//
+// Markup:
+// <div class="overlay overlay-bottom position-fixed">
+//   <div class="overlay-header-container">
+//     <div class="overlay-header">
+//       <ul class="v-border bottom-border">
+//        <li><button class="cancel icon">Close</button></li>
+//       </ul>
+//       <div class="bottom-border"><h2>Overlay</h2></div>
+//       <ul class="v-border bottom-border">
+//        <li><button class="submit icon">Submit</button></li>
+//       </ul>
+//     </div>
+//   </div>
+//   <div class="content"></div>
+// </div>
+//
+// Styleguide 7.4.
 .overlay-bottom {
 	border-top: 1px solid #CACACA;
-	position: fixed;
 	top: auto;
 	bottom: 0;
 	height: auto !important;

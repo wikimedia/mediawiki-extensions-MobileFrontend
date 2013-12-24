@@ -6,10 +6,11 @@
 	<meta name="description" content="">
 	<meta name="generator" content="kss-node" />
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="public/kss.css">
 	<link rel="stylesheet" href="public/style.css">
+	<link rel="stylesheet" href="public/kss.css">
 </head>
-<body><div id="kss-wrapper">
+<body class="no-position-fixed">
+<div id="kss-wrapper">
 	<header id="kss-header">
 		<hgroup><h1>MediaWiki Mobile Styleguide</h1></hgroup>
 	</header>
@@ -43,7 +44,7 @@
 				{{#ifAny markup modifiers}}
 						<div>{{html description}}</div>
 						<strong>Default styling</strong><br>
-						{{modifierMarkup}}
+						<div class="kss-example">{{modifierMarkup}}</div>
 						{{#eachModifier}}
 						{{html description}}<br>
 						<p>{{name}}</p>
