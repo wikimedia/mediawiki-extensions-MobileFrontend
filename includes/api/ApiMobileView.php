@@ -272,6 +272,17 @@ class ApiMobileView extends ApiBase {
 		return WikiPage::factory( $title );
 	}
 
+	/**
+	 * Creates a ParserOptions instance
+	 *
+	 * @param WikiPage $wp
+	 *
+	 * @return ParserOptions
+	 */
+	protected function makeParserOptions( WikiPage $wp ) {
+		return $wp->makeParserOptions( $this );
+	}
+
 	private function getData( Title $title, $noImages ) {
 		global $wgMemc, $wgUseTidy, $wgMFMinCachedPageSize;
 
@@ -298,7 +309,7 @@ class ApiMobileView extends ApiBase {
 				$latest, $this->noTransform, $this->file->getSha1(), $this->variant );
 			$cacheExpiry = 3600;
 		} else {
-			$parserOptions = $wp->makeParserOptions( $this );
+			$parserOptions = $this->makeParserOptions( $wp );
 			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
 			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->noTransform, $parserCacheKey );
 		}
