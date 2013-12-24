@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_11ddd847",
+        "filename": "templates/overlays/talkSectionAdd.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-24T23:20:32Z",
+      "side": 1,
+      "message": "Either class \u0027search\u0027 should be renamed, or a separate class should be created for this. Having a class name that doesn\u0027t match its scope will lead to bugs later on. I realize this line wasn\u0027t introduced in this change, but this seems like a good opportunity to fix it.\n\nAlso, if it were me, I would add an ID to this input so that it is clear what is being selected in the JS. $( \u0027input\u0027 ) is rather mysterious. This will also prevent unintentional breakage in the event that someone adds another input, such as a checkbox, to this interface. This is just a suggestion though.",
+      "revId": "aab34eb5c485a64fb3f528fdea1af90c4f910c34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_d1bd30d3",
+        "filename": "templates/overlays/talkSectionAdd.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-24T23:20:32Z",
+      "side": 1,
+      "message": "This save button shouldn\u0027t be needed anymore.",
+      "revId": "aab34eb5c485a64fb3f528fdea1af90c4f910c34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
