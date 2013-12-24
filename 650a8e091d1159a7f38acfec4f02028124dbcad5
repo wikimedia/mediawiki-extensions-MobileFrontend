@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_a09ff854",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-24T02:23:21Z",
+      "side": 1,
+      "message": "In PHP you can just do $array +\u003d array( ... );\nBut this is purely a style suggestion and not an objection :)",
+      "revId": "650a8e091d1159a7f38acfec4f02028124dbcad5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

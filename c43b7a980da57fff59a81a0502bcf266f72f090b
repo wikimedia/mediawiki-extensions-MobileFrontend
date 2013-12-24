@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_c0b1dcdd",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-24T02:23:21Z",
+      "side": 0,
+      "message": "This breaks the KeepGoing overlay, as it is not explicitly classed as \"position-fixed\" (since I was assuming that all bottom-docked overlays would be position:fixed. Should be easy to fix though.",
+      "revId": "c43b7a980da57fff59a81a0502bcf266f72f090b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
