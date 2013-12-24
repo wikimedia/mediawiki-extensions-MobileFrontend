@@ -150,7 +150,7 @@
 				this.ajax( data, {
 					url: endpoint || this.apiUrl,
 					xhrFields: { withCredentials: true }
-				} ).then( function( tokenData ) {
+				} ).done( function( tokenData ) {
 					var token;
 					if ( tokenData && tokenData.tokens && !tokenData.warnings ) {
 						token = tokenData.tokens[ tokenType + 'token' ];
@@ -162,6 +162,8 @@
 					} else {
 						d.reject( 'Bad token name.' );
 					}
+				} ).fail( function() {
+					d.reject( 'Failed to retrieve token.' );
 				} );
 				this.tokenCache[ endpoint ][ tokenType ] = d;
 				return d;
