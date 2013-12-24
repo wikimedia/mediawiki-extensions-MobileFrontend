@@ -1,7 +1,6 @@
 <?php
 
 class SpecialUserProfile extends MobileSpecialPage {
-	const IMAGE_WIDTH = 320;
 
 	protected $mode = 'beta';
 	protected $disableSearchAndFooter = false;
@@ -57,16 +56,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$title = $file->getTitle();
 		$ts = new MWTimestamp( $file->getTimestamp() );
 		$daysAgo = $this->getDaysAgo( $ts );
+		$page = new MobilePage( $title, $file );
 		$img = Html::openElement( 'div', array( 'class' => 'card' ) ) .
 			Html::openElement( 'a', array( 'class' => 'container image', 'href' => $title->getLocalUrl() ) ) .
-			Html::element( 'img', array(
-				// uset MediaTransformOutput::getUrl, unfortunately MediaTransformOutput::toHtml
-				// returns <img> tag with fixed height which causes the image to be deformed when
-				// used with max-width
-				'src' => $file->transform( array( 'width' => self::IMAGE_WIDTH ) )->getUrl(),
-				// FIXME: Add more meaningful alt text
-				'alt' => $title->getText(),
-			) ) .
+			$page->getMediumThumbnailHtml() .
 			Html::openElement( 'div', array( 'class' => 'caption' ) ) .
 			$this->msg( 'mobile-frontend-profile-last-upload-caption' )
 				->numParams( $daysAgo ) // $1
@@ -121,21 +114,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 		if ( $thank ) {
 			$user = $thank['user'];
 			$title = $thank['title'];
-			$imageHtml = '';
-			if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
-				$file = PageImages::getPageImage( $title );
-				if ( $file ) {
-					$thumb = $file->transform( array( 'width' => self::IMAGE_WIDTH ) );
-					if ( $thumb && $thumb->getUrl() ) {
-						$imageHtml = Html::element( 'img',
-							array( 'src' => wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) )
-						);
-					}
-				}
-			}
+			$page = new MobilePage( $title );
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container' ) )
-				. $imageHtml
+				. $page->getMediumThumbnailHtml()
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-thanked',
 					$user,
@@ -161,21 +143,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 		if ( $rev ) {
 			$daysAgo = $this->getDaysAgo( new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) ) );
 			$imageHtml = '';
-			if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
-				$title = $rev->getTitle();
-				$file = PageImages::getPageImage( $title );
-				if ( $file ) {
-					$thumb = $file->transform( array( 'width' => self::IMAGE_WIDTH ) );
-					if ( $thumb && $thumb->getUrl() ) {
-						$imageHtml = Html::element( 'img',
-							array( 'src' => wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) )
-						);
-					}
-				}
-			}
+			$page = new MobilePage( $rev->getTitle() );
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container image' ) )
-				. $imageHtml
+				. $page->getMediumThumbnailHtml()
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-edit',
 					$rev->getTitle(),

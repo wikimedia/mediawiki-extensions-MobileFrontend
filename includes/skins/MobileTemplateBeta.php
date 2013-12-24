@@ -7,6 +7,12 @@ class MobileTemplateBeta extends MobileTemplate {
 		parent::execute();
 	}
 
+	public function renderPageActions( $data ) {
+		if ( !$this->isMainPage ) {
+			parent::renderPageActions( $data );
+		}
+	}
+
 	protected function renderMetaSections() {
 		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
 		parent::renderMetaSections();

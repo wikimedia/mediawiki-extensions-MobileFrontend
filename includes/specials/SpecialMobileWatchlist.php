@@ -411,6 +411,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		);
 	}
 
+	// FIXME: Refactor to use MobilePage
 	private function renderThumb( $row ) {
 		wfProfileIn( __METHOD__ );
 

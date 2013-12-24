@@ -149,13 +149,15 @@ class MinervaTemplate extends BaseTemplate {
 		}
 	}
 
-	protected function renderContentWrapper( $data ) {
+	protected function renderPreContent( $data ) {
+		$internalBanner = $data[ 'internalBanner' ];
+		$notSpecialPage = !$this->isSpecialPage;
+
+		if ( $notSpecialPage || $internalBanner ) {
 		?>
-		<script>
-			mw.mobileFrontend.emit( 'header-loaded' );
-		</script>
+		<div class="pre-content">
 			<?php
-				if ( !$this->isSpecialPage ) {
+				if ( $notSpecialPage ) {
 					echo $data['prebodytext'];
 					// FIXME: Temporary solution until we have design
 					if ( isset( $data['_old_revision_warning'] ) ) {
@@ -164,9 +166,21 @@ class MinervaTemplate extends BaseTemplate {
 						$this->renderPageActions( $data );
 					}
 				}
-				$this->renderContent( $data );
-			?>
+				echo $internalBanner;
+				?>
+		</div>
 		<?php
+		}
+	}
+
+	protected function renderContentWrapper( $data ) {
+		?>
+		<script>
+			mw.mobileFrontend.emit( 'header-loaded' );
+		</script>
+		<?php
+			$this->renderPreContent( $data );
+			$this->renderContent( $data );
 	}
 
 	protected function renderMainMenu( $data ) {
