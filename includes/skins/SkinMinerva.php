@@ -620,7 +620,6 @@ class SkinMinerva extends SkinTemplate {
 	protected function getSkinStyles() {
 		return array(
 			'mobile.styles',
-			'mobile.styles.page',
 			'mobile.pagelist.styles',
 		);
 	}

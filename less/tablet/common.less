@@ -1,0 +1,33 @@
+/*
+A file for css that optimises the Minerva skin on larger devices.
+*/
+
+@import "../variables.less";
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.beta #content_wrapper {
+		.section_heading,
+		.content_block {
+			margin-right: @infoboxWidth + 16;
+		}
+
+		.content_block {
+			width: auto;
+			clear: none;
+		}
+	}
+
+	.content {
+		// Override rules in common/common.less
+		table {
+			display: table;
+			width: auto !important;
+			caption {
+				display: table-caption;
+			}
+			tbody {
+				display: table-row-group;
+			}
+		}
+	}
+}

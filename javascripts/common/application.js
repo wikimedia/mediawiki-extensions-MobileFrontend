@@ -67,6 +67,17 @@
 		$viewportMeta.attr( 'content', viewport );
 	}
 
+	/**
+	 * Tests current window size and if suitable loads styles specific for larger devices
+	 *
+	 */
+	function loadWideScreenStyles() {
+		if ( isWideScreen() ) {
+			// Adjust screen for tablets
+			mw.loader.using( 'tablet.styles' );
+		}
+	}
+
 	// TODO: separate main menu navigation code into separate module
 	function init() {
 		var
@@ -186,6 +197,8 @@
 		if ( supportsTouchEvents() ) {
 			$doc.addClass( 'touch-events' );
 		}
+		loadWideScreenStyles();
+		$( window ).on( 'resize', loadWideScreenStyles );
 	}
 
 	function getOrigin() {

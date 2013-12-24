@@ -1,0 +1,66 @@
+/*
+A file for css that corrects known rendering issues on known Wikimedia wikis ON TABLETS
+Many of them correct hacks in place in common/hacks.less
+
+It will become redundant when the following RFC is resolved:
+https://www.mediawiki.org/wiki/Requests_for_comment/Allow_styling_in_templates
+
+FIXME: Review all of these hacks to see if they still apply.
+*/
+
+@import "../variables.less";
+
+/* Tablet specific styling */
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	/* Revert to showing nav boxes on tablet/desktop */
+	#content {
+		.navbox, .vertical-navbox {
+			display: inherit;
+		}
+	}
+
+	// classes added by thumbnails
+	// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
+	.content {
+		.tleft {
+			float: left;
+		}
+
+		.tright {
+			float: right;
+		}
+
+		.thumb {
+			margin: .5em 1.4em 1.3em 0;
+			.tleft {
+				margin-right: 0.5em;
+			}
+
+			.tright {
+				margin-left: 0.5em;
+			}
+		}
+
+		// Infobox styling
+		.infobox {
+			margin-left: 1em !important;
+			width: 23em !important;
+			float: right !important;
+			clear: right;
+		}
+	}
+
+	.beta #content_wrapper {
+
+		// Float infoboxes to the right of the page
+		table.infobox {
+			// Note this is fixed to ensure that we leave enough space for the sections to the infoboxes left
+			max-width: @infoboxWidth;
+			// FIXME [Templates]: Inline styles force us to use !important
+			width: auto !important;
+			float: right !important;
+			margin-left: @contentMargin !important;
+			clear: right !important;
+		}
+	}
+}
