@@ -2,8 +2,10 @@
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 ( function( M, $ ) {
 	var Router = M.require( 'Router' ),
+		OverlayManager = M.require( 'OverlayManager' ),
 		qs = window.location.search.split( '?' )[1],
 		PageApi = M.require( 'PageApi' ),
+		router = new Router(),
 		$viewportMeta, viewport,
 		currentPage,
 		ua = window.navigator.userAgent,
@@ -289,7 +291,8 @@
 		// FIXME: Replace all instances of M.template with mw.template
 		template: mw.template,
 		unlockViewport: unlockViewport,
-		router: new Router(),
+		router: router,
+		overlayManager: new OverlayManager( router ),
 		pageApi: new PageApi(),
 		deParam: deParam,
 		// for A/B testing (we want this to be the same everywhere)

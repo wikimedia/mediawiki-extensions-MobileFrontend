@@ -187,6 +187,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/common/Router.js',
+			'javascripts/common/OverlayManager.js',
 			'javascripts/common/api.js',
 			'javascripts/common/PageApi.js',
 			'javascripts/common/application.js',

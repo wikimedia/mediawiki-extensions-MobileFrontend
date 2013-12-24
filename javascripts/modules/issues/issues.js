@@ -12,10 +12,6 @@ var module = (function() {
 			templatePartials: {
 				content: M.template.get( 'overlays/cleanup' )
 			}
-		} ),
-		// FIXME: Merge into CleanupOverlay
-		CleanupOverlayNew = CleanupOverlay.extend( {
-			closeOnBack: true
 		} );
 
 	function run( $container, parentOverlay ) {
@@ -49,14 +45,10 @@ var module = (function() {
 		// If we're using the new overlays and we aren't already in the editing overlay,
 		// set-up the issues overlay using M.router for proper back button behavior.
 		// FIXME: Refactor this once the overlay manager is available
-		if ( useNewOverlays && $( '.editor-overlay' ).length === 0 ) {
-			overlay = new CleanupOverlayNew( {
-				parent: parentOverlay,
-				issues: issues
-			} );
+		if ( useNewOverlays ) {
 			$link.attr( 'href', '#issues' );
-			M.router.route( /^issues$/, function() {
-				overlay.show();
+			M.overlayManager.add( /^issues$/, function() {
+				return new CleanupOverlay( { issues: issues } );
 			} );
 		} else {
 			overlay = new CleanupOverlay( {
