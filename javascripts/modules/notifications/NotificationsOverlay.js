@@ -67,7 +67,7 @@
 									} );
 								}
 								// Set up event logging for each notification
-								mw.echo.setupNotificationLogging( $notification, 'mobile-overlay' );
+								mw.echo.setupNotificationLogging( $notification, 'mobile-overlay', true );
 							} );
 
 							self.markAllAsRead();

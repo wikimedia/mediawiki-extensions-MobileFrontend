@@ -20,7 +20,7 @@
 		header = mw.config.get( 'wgEchoDateHeader' );
 		mw.loader.using( 'ext.echo.base', function() {
 			$( '.mw-echo-notification' ).each( function () {
-				mw.echo.setupNotificationLogging( $( this ), 'mobile-archive' );
+				mw.echo.setupNotificationLogging( $( this ), 'mobile-archive', true );
 			} );
 		} );
 	}
@@ -67,7 +67,7 @@
 					unread.push( id );
 				}
 				mw.loader.using( 'ext.echo.base', function() {
-					mw.echo.setupNotificationLogging( $li, 'mobile-archive' );
+					mw.echo.setupNotificationLogging( $li, 'mobile-archive', true );
 				} );
 			} );
 
