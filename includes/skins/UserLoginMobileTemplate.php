@@ -22,9 +22,6 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 		$watchArticle = $this->getArticleTitleToWatch();
 		$stickHTTPS = ( $this->doStickHTTPS() ) ? Html::input( 'wpStickHTTPS', 'true', 'hidden' ) : '';
 		$username = ( strlen( $this->data['name'] ) ) ? $this->data['name'] : null;
-		$message = $this->data['message'];
-		$messageType = $this->data['messagetype'];
-		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 
 		// @TODO make sure this also includes returnto and returntoquery from the request
 		$query = array(
@@ -53,22 +50,6 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			array( 'class'=> 'mw-mf-create-account' ), $query );
 
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login', 'class' => 'content' ) );
-
-		if ( $message ) {
-			$heading = '';
-			$class = 'alert';
-			if ( $messageType == 'error' ) {
-				$heading = wfMessage( 'mobile-frontend-sign-in-error-heading' )->text();
-				$class .= ' error';
-			}
-
-			$msgBox .= Html::openElement( 'div', array( 'class' => $class ) );
-			$msgBox .= ( $heading ) ? Html::rawElement( 'h2', array(), $heading ) : '';
-			$msgBox .= $message;
-			$msgBox .= Html::closeElement( 'div' );
-		} else {
-			$msgBox .= $this->getLogoHtml();
-		}
 
 		$form = Html::openElement( 'div', array() ) .
 			Html::openElement( 'form',
@@ -105,7 +86,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::closeElement( 'div' );
 		echo $login;
 		$this->renderGuiderMessage();
-		echo $msgBox;
+		$this->renderMessageHtml();
 		echo $form;
 		echo Html::closeElement( 'div' );
 	}

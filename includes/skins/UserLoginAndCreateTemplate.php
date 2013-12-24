@@ -35,6 +35,28 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		$this->copyObjectProperties( $template );
 	}
 
+	protected function renderMessageHtml() {
+		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
+		$message = $this->data['message'];
+		$messageType = $this->data['messagetype'];
+		if ( $message ) {
+			$heading = '';
+			$class = 'alert';
+			if ( $messageType == 'error' ) {
+				$heading = wfMessage( 'mobile-frontend-sign-in-error-heading' )->text();
+				$class .= ' error';
+			}
+
+			$msgBox .= Html::openElement( 'div', array( 'class' => $class ) );
+			$msgBox .= ( $heading ) ? Html::rawElement( 'h2', array(), $heading ) : '';
+			$msgBox .= $message;
+			$msgBox .= Html::closeElement( 'div' );
+		} else {
+			$msgBox .= $this->getLogoHtml();
+		}
+		echo $msgBox;
+	}
+
 	/**
 	 * Copy public properties of one object to this one
 	 * @param object $obj: The object whose properties should be copied

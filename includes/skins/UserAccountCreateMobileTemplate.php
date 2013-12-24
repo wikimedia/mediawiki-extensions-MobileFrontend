@@ -23,27 +23,8 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		$watchArticle = $this->getArticleTitleToWatch();
 		$stickHTTPS = ( $this->doStickHTTPS() ) ? Html::input( 'wpStickHTTPS', 'true', 'hidden' ) : '';
 		$username = ( strlen( $this->data['name'] ) ) ? $this->data['name'] : null;
-		$message = $this->data['message'];
-		$messageType = $this->data['messagetype'];
-		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 		// handle captcha
 		$captcha = $this->handleCaptcha( $this->data['header'] );
-
-		if ( $message ) {
-			$heading = '';
-			$class = 'alert';
-			if ( $messageType == 'error' ) {
-				$heading = wfMessage( 'mobile-frontend-sign-in-error-heading' )->text();
-				$class .= ' error';
-			}
-
-			$msgBox .= Html::openElement( 'div', array( 'class' => $class ) );
-			$msgBox .= ( $heading ) ? Html::rawElement( 'h2', array(), $heading ) : '';
-			$msgBox .= $message;
-			$msgBox .= Html::closeElement( 'div' );
-		} else {
-			$msgBox .= $this->getLogoHtml();
-		}
 
 		$form =
 			Html::openElement( 'form',
@@ -94,6 +75,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::closeElement( 'form' );
 		echo Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate', 'class' => 'content' ) );
 		$this->renderGuiderMessage();
+		$this->renderMessageHtml();
 		echo $form;
 		echo Html::closeElement( 'div' );
 	}
