@@ -70,6 +70,8 @@ $messages['en'] = array (
 	'mobile-frontend-images-status' => 'Images',
 	'mobile-frontend-disable-images' => 'Disable images on mobile site',
 	'mobile-frontend-enable-images' => 'Enable images on mobile site',
+	'mobile-frontend-expand-sections-status' => 'Expand all sections',
+	'mobile-frontend-expand-sections-description' => 'Always expand all sections when navigating to a new page.',
 	'mobile-frontend-missing-image' => 'Image',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
@@ -520,6 +522,8 @@ This buttons takes the user to a random page.
 	'mobile-frontend-opt-in-explain' => 'Used as description for the "Beta" in [[Special:MobileOptions]], if the beta is not enabled.',
 	'mobile-frontend-images-status' => 'On settings page label for turning on/off images.
 {{Identical|Image}}',
+	'mobile-frontend-expand-sections-status' => 'On settings page label for turning on/off expansion of all sections on page load.',
+	'mobile-frontend-expand-sections-description' => 'On settings page description for turning on/off expansion of all sections on page load.',
 	'mobile-frontend-disable-images' => 'Unused at this time.
 
 See also:

@@ -111,4 +111,21 @@ QUnit.test( 'Open by default', 1, function() {
 	strictEqual( $( '#content_block_1' ).hasClass( 'openSection' ), true, 'check section is visible at start' );
 } );
 
+QUnit.module( 'MobileFrontend toggle.js: user setting', {
+	setup: function() {
+		M.settings.saveUserSetting('expandSections', 'true', true);
+		$container = makeSections();
+		toggle.enable();
+	},
+	teardown: function() {
+		window.location.hash = "#";
+		$container.remove();
+		M.settings.saveUserSetting('expandSections', '', true);
+	}
+} );
+
+QUnit.test( 'Open by default', 1, function() {
+	strictEqual( $( '#content_block_1' ).hasClass( 'openSection' ), true, 'check section is visible at start' );
+} );
+
 }( mw.mobileFrontend, jQuery ) );

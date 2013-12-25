@@ -42,7 +42,7 @@
 	}
 
 	function init() {
-		var $page = $( '#content' ), tagName = 'h2', $headings;
+		var $page = $( '#content' ), tagName = 'h2', $headings, expandSections;
 
 		$( 'html' ).removeClass( 'stub' );
 		if ( $page.find( 'h1' ).length > 0 ) {
@@ -51,6 +51,8 @@
 		$page.find( tagName ).addClass( 'section_heading' );
 		$headings = $page.find( '.section_heading' );
 		$headings.next( 'div' ).addClass( 'content_block' );
+
+		expandSections = M.isAlphaGroupMember() && M.settings.getUserSetting( 'expandSections', true ) === 'true';
 
 		$headings.each( function ( i ) {
 			var $elem = $( this ),
@@ -79,8 +81,8 @@
 				toggle( $( this ) );
 			} );
 
-			// In beta expand sections by default on wide screen devices (in beta and alpha)
-			if ( M.isWideScreen() && M.isBetaGroupMember() ) {
+			if ( ( M.isWideScreen() && M.isBetaGroupMember() ) || expandSections ) {
+				// Expand sections by default on wide screen devices (in beta and alpha), or if the expand sections setting is set (alpha only)
 				toggle( $elem );
 			}
 		} );

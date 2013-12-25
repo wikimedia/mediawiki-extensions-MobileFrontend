@@ -1,4 +1,6 @@
-( function( $ ) {
+( function( M, $ ) {
+	var View = M.require( 'view' ), Checkbox;
+
 	function supportsTouchEvents() {
 		return 'ontouchstart' in window;
 	}
@@ -28,5 +30,36 @@
 		} );
 	}
 
+	Checkbox = View.extend( {
+		template: M.template.get( 'specials/mobileoptions/checkbox' ),
+		tagName: 'li',
+		defaults: {
+			onMsg: mw.msg( 'mobile-frontend-on' ),
+			offMsg: mw.msg( 'mobile-frontend-off' ),
+		},
+		save: function() {
+			M.settings.saveUserSetting( this.options.name, this.cb.prop( 'checked' ) ? 'true' : 'false', true );
+		},
+		postRender: function() {
+			var cbview = this;
+			this.cb = this.$( 'input[type=checkbox]' );
+			this.cb.prop( 'checked', M.settings.getUserSetting( this.options.name, true ) === 'true' );
+			$( 'form.mw-mf-settings' ).on( 'submit', function() { cbview.save(); } );
+		},
+	} );
+
+	function initLocalStorageCheckboxes() {
+		var saveLI = $( '#mw-mf-settings-save' ).parent(), cb;
+		if ( M.isAlphaGroupMember() ) {
+			cb = new Checkbox( {
+				name: 'expandSections',
+				enableMsg: mw.msg( 'mobile-frontend-expand-sections-status' ),
+				descriptionMsg: mw.msg( 'mobile-frontend-expand-sections-description' ),
+			} );
+			cb.insertBefore( saveLI );
+		}
+	}
+
+	$( initLocalStorageCheckboxes );
 	$( enhanceCheckboxes );
-}( jQuery ) );
+}( mw.mobileFrontend, jQuery ) );

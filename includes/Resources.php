@@ -1074,10 +1074,23 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/specials/mobileoptions.less',
 		),
 	),
-	'mobile.mobileoptions.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'mobile.mobileoptions.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'position' => 'top',
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.templates',
+		),
 		'scripts' => array(
 			'javascripts/specials/mobileoptions.js',
+		),
+		'templates' => array(
+			'specials/mobileoptions/checkbox',
+		),
+		'messages' => array(
+			'mobile-frontend-off',
+			'mobile-frontend-on',
+			'mobile-frontend-expand-sections-description',
+			'mobile-frontend-expand-sections-status',
 		),
 	),
 	'mobile.mobileeditor.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
