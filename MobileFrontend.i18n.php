@@ -998,15 +998,18 @@ See also:
 	'mobile-frontend-editor-editing-page' => 'A heading saying what page is being edited. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).
 
 Parameters:
-* $1 - page title',
+* $1 - page title
+{{Related|Mobile-frontend-editor-page}}',
 	'mobile-frontend-editor-previewing-page' => 'A heading saying what page is being previewed after editing. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).
 
 Parameters:
-* $1 - page title',
+* $1 - page title
+{{Related|Mobile-frontend-editor-page}}',
 	'mobile-frontend-editor-viewing-source-page' => "A heading saying which page's source code is being viewed. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).
 
 Parameters:
-* $1 - page title",
+* $1 - page title
+{{Related|Mobile-frontend-editor-page}}",
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:
@@ -1093,7 +1096,6 @@ Parameters:
 	'beta-feature-geonotahack' => 'Title for near this page beta feature.
 {{Identical|Near this page}}',
 	'beta-feature-geonotahack-description' => 'Description for near this page beta feature.',
-
 	'mobile-frontend-mainpage-cta-prompt' => 'Shows on main page to logged in users prompting them to edit.',
 	'mobile-frontend-mainpage-cta-button' => 'Label of button see {{msg-mw|mobile-frontend-mainpage-cta-button}}',
 );
@@ -3137,6 +3139,7 @@ $messages['ce'] = array(
 	'mobile-frontend-language-site-choose' => 'Лаха мотт',
 	'mobile-frontend-username' => 'Декъашхочун цӀе:',
 	'mobile-frontend-username-placeholder' => 'Декъашхочун цӀе',
+	'mobile-frontend-last-modified-date' => 'ТӀехьара бина хийцам $2 $1',
 	'mobile-frontend-last-modified-minutes' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 минут}} хьалха',
 	'mobile-frontend-last-modified-hours' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 сахьт}} хьалха',
 	'mobile-frontend-last-modified-days' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 де}} хьалха',
@@ -4310,6 +4313,7 @@ $messages['de'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einem Jahr|$3 Jahren}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Zuletzt {{GENDER:$1|bearbeitet}}] gerade eben von {{PLURAL:$4|[$5 $2]|0=einem anonymen Benutzer}}',
 	'mobile-frontend-learn-more' => 'Mehr erfahren',
+	'mobile-frontend-view-source' => 'Quelltext betrachten',
 	'mobile-frontend-account-create-submit' => 'Registrieren',
 	'mobile-frontend-password-confirm-placeholder' => 'Passwort bestätigen',
 	'mobile-frontend-account-create-email-placeholder' => 'E-Mail-Adresse (optional)',
@@ -4509,6 +4513,7 @@ $messages['de'] = array(
 	'mobile-frontend-editor-abusefilter-read-more' => 'Mehr lesen',
 	'mobile-frontend-editor-editing-page' => '<strong>Bearbeiten</strong><span> von $1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>Vorschau</strong><span> von $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Quelltext betrachten von</strong><span> $1</span>',
 	'tag-mobile_edit' => 'Mobile Bearbeitung',
 	'tag-mobile_edit-description' => 'Bearbeitet von der mobilen Website',
 	'mobile-frontend-drawer-cancel' => 'Abbrechen',
@@ -4546,6 +4551,8 @@ $messages['de'] = array(
 	'mobile-frontend-geonotahack' => 'In der Nähe dieser Seite',
 	'beta-feature-geonotahack' => 'In der Nähe dieser Seite',
 	'beta-feature-geonotahack-description' => 'Entdecke Seiten mit geografischer Nachbarschaft zur aktuell gelesenen Inhaltsseite.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Dieser Artikel benötigt deine Hilfe!',
+	'mobile-frontend-mainpage-cta-button' => 'Diesen Artikel verbessern',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -4568,6 +4575,7 @@ $messages['de-formal'] = array(
 );
 
 /** Zazaki (Zazaki)
+ * @author Asmen
  * @author Erdemaslancan
  * @author Gorizon
  * @author Marmase
@@ -4687,7 +4695,7 @@ $messages['diq'] = array(
 	'mobile-frontend-changeslist-nocomment' => 'nê vurnaye xulasa',
 	'mobile-frontend-watchlist-filter-all' => 'Pêro',
 	'mobile-frontend-watchlist-filter-articles' => 'Wesiqey',
-	'mobile-frontend-watchlist-filter-talk' => 'Vatenayış',
+	'mobile-frontend-watchlist-filter-talk' => 'werênayış',
 	'mobile-frontend-watchlist-filter-other' => 'Zewmi',
 	'mobile-frontend-watchlist-modified' => '$1 timariya yo',
 	'mobile-frontend-diffview-404-title' => 'Rewizyono xırab',
@@ -5057,6 +5065,7 @@ $messages['en-gb'] = array(
 /** Esperanto (Esperanto)
  * @author ArnoLagrange
  * @author Karika
+ * @author KuboF
  * @author Objectivesea
  * @author Remux
  * @author Yekrats
@@ -5079,7 +5088,6 @@ $messages['eo'] = array(
 	'mobile-frontend-save-settings' => 'Konservi',
 	'mobile-frontend-random-button' => 'Hazarde',
 	'mobile-frontend-back-to-top-of-section' => 'Je sekcio reen',
-	'mobile-frontend-close-section' => 'Fermi ĉi tiun sekcion',
 	'mobile-frontend-regular-site' => 'Malŝalti la version mobilan',
 	'mobile-frontend-wml-continue' => 'Kontinui …',
 	'mobile-frontend-wml-back' => 'Retroiri ...',
@@ -5150,7 +5158,7 @@ $messages['eo'] = array(
 	'mobile-frontend-nearby-title' => 'Apuda',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
-	'mobile-frontend-donate-image-login' => 'Vi devas esti ensalutinta por vidi viajn alŝutojn.',
+	'mobile-frontend-donate-image-login' => 'Vi devas esti ensalutinta por vidi viajn alŝutojn.', # Fuzzy
 	'mobile-frontend-photo-upload-generic' => 'Doni bildon', # Fuzzy
 	'mobile-frontend-donate-image-title' => 'Alŝutoj',
 	'mobile-frontend-donate-image-heading' => 'Viaj lastaj kontribuoj',
@@ -5162,10 +5170,10 @@ $messages['eo'] = array(
 	'mobile-frontend-watchlist-removed' => 'Forigis $1 el via atentaro',
 	'mobile-frontend-watchlist-view' => 'Rigardi vian atentaron',
 	'mobile-frontend-watchlist-more' => 'pli',
-	'mobile-frontend-watchlist-cta' => 'Bonvole ensalutu aŭ registriĝu por vidi ĉi tiun paĝon.',
+	'mobile-frontend-watchlist-cta' => 'Bonvole ensalutu aŭ registriĝu por vidi ĉi tiun paĝon.', # Fuzzy
 	'mobile-frontend-watchlist-cta-button-login' => 'Ensaluti',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Registriĝi',
-	'mobile-frontend-watch-login' => 'Vi devas esti ensalutinta por vidi paĝoj.',
+	'mobile-frontend-watch-login' => 'Vi devas esti ensalutinta por vidi paĝoj.', # Fuzzy
 	'mobile-frontend-watchlist-a-z' => 'Ĉio', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Modifite',
 	'mobile-frontend-changeslist-ip' => 'Anonimulo',
@@ -5198,8 +5206,8 @@ $messages['eo'] = array(
 	'mobile-frontend-photo-cancel' => 'Nuligi',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> alŝuto|<span>$1</span> alŝutoj}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ alŝutoj',
-	'mobile-frontend-photo-upload-login' => 'Vi devas esti ensalutinta por aldoni bildon.',
-	'tag-mobile_edit-description' => 'Modifo farita ekde portebla retejo',
+	'tag-mobile_edit' => 'Poŝaparata redakto',
+	'tag-mobile_edit-description' => 'Redakto farita en retejo por poŝaparatoj',
 	'mobile-frontend-drawer-cancel' => 'Nuligi',
 	'mobile-frontend-talk-overlay-header' => 'Diskuto',
 );
@@ -7757,6 +7765,7 @@ $messages['he'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|שנה|שנתיים|$3 שנה|$3 שנים}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 {{GENDER:$1|נערך}}] זה עתה על־ידי {{PLURAL:$4|[$5 $2]|0=אלמוני}}',
 	'mobile-frontend-learn-more' => 'מידע נוסף',
+	'mobile-frontend-view-source' => 'הצגת מקור',
 	'mobile-frontend-account-create-submit' => 'רישום',
 	'mobile-frontend-password-confirm-placeholder' => 'אימות סיסמה',
 	'mobile-frontend-account-create-email-placeholder' => 'כתובת דוא"ל (לא חובה)',
@@ -7955,6 +7964,7 @@ $messages['he'] = array(
 	'mobile-frontend-editor-abusefilter-read-more' => 'מידע נוסף',
 	'mobile-frontend-editor-editing-page' => '<strong>עריכת</strong> <span>$1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>תצוגה מקדימה של</strong> <span>$1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>הצגת המקור</strong> של <span>$1</span>',
 	'tag-mobile_edit' => 'עריכה ממכשיר נייד',
 	'tag-mobile_edit-description' => 'העריכה בוצעה מהאתר למכשירים ניידים',
 	'mobile-frontend-drawer-cancel' => 'ביטול',
@@ -7992,6 +8002,8 @@ $messages['he'] = array(
 	'mobile-frontend-geonotahack' => 'ליד הדף הזה',
 	'beta-feature-geonotahack' => 'בסביבות הדף הזה',
 	'beta-feature-geonotahack-description' => 'זה מאפשר לך לראות דפים שקרובים גאוגרפית לדפים שקראת.',
+	'mobile-frontend-mainpage-cta-prompt' => 'הערך הזה קוק לעזרתך!',
+	'mobile-frontend-mainpage-cta-button' => 'שיפור הערך הזה',
 );
 
 /** Hindi (हिन्दी)
@@ -9775,6 +9787,7 @@ $messages['ja'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 年}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 最終{{GENDER:$1|編集}}]: たった今、{{PLURAL:$4|[$5 $2]|0=匿名利用者}}',
 	'mobile-frontend-learn-more' => '詳細',
+	'mobile-frontend-view-source' => 'ソースを閲覧',
 	'mobile-frontend-account-create-submit' => '利用者登録',
 	'mobile-frontend-password-confirm-placeholder' => 'パスワード再入力',
 	'mobile-frontend-account-create-email-placeholder' => 'メールアドレス (省略可能)',
@@ -9967,6 +9980,7 @@ $messages['ja'] = array(
 	'mobile-frontend-editor-abusefilter-disallow' => 'この編集内容で問題点が検出されたため、保存できません。',
 	'mobile-frontend-editor-editing-page' => '<span>$1</span> を<strong>編集中</strong>',
 	'mobile-frontend-editor-previewing-page' => '<span>$1</span> の<strong>プレビュー</strong>',
+	'mobile-frontend-editor-viewing-source-page' => '<span>$1</span> の<strong>ソースを閲覧中</strong>',
 	'tag-mobile_edit' => '携帯機器での編集',
 	'tag-mobile_edit-description' => '携帯機器版サイトでの編集',
 	'mobile-frontend-drawer-cancel' => 'キャンセル',
@@ -10657,6 +10671,7 @@ $messages['ko'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3년 전에 편집됨]', # Fuzzy
 	'mobile-frontend-last-modified-with-user-just-now' => '{{PLURAL:$4|[$5 $2] |0=익명 사용자}}에 의해 [$3 방금 편집됨]', # Fuzzy
 	'mobile-frontend-learn-more' => '더 알아보기',
+	'mobile-frontend-view-source' => '원본 보기',
 	'mobile-frontend-account-create-submit' => '가입하기',
 	'mobile-frontend-password-confirm-placeholder' => '비밀번호 확인',
 	'mobile-frontend-account-create-email-placeholder' => '이메일 주소 (선택 사항)',
@@ -11522,6 +11537,7 @@ $messages['lb'] = array(
 	'mobile-frontend-last-modified-years' => "Fir d'lescht geännert {{PLURAL:$1|virun 1 Joer|viru(n) $1 Joer}}",
 	'mobile-frontend-last-modified-just-now' => "Fir d'lescht geännert op dësem Ament",
 	'mobile-frontend-learn-more' => 'Méi wëssen',
+	'mobile-frontend-view-source' => 'Quellcode weisen',
 	'mobile-frontend-account-create-submit' => 'Schreift Iech an',
 	'mobile-frontend-password-confirm-placeholder' => 'Passwuert confirméieren',
 	'mobile-frontend-account-create-email-placeholder' => 'E-Mailadress (fakultativ)',
@@ -13747,7 +13763,7 @@ $messages['nl'] = array(
 	'mobilefrontend-keepgoing-suggest-again' => 'Nog één proberen',
 	'mobilefrontend-keepgoing-saved-title' => 'Bewerking opgeslagen!',
 	'mobilefrontend-keepgoing-links-title' => 'Koppelingen toevoegen',
-	'mobilefrontend-keepgoing-links-ask-again' => 'Een andere pagina repareren?',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Een andere pagina verbeteren?',
 	'mobilefrontend-keepgoing-links-example' => '$1gitaar$2 wordt bijvoorbeeld $3gitaar$4',
 	'nearby' => "Pagina's in de buurt",
 	'mobile-frontend-desc' => 'Mobiele website',
@@ -18749,6 +18765,7 @@ $messages['uk'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Остання {{GENDER:$1|зміна зроблена|зміна зроблена}} {{PLURAL:$3|$3 рік|$3 роки|$3 років}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Остання зміна зроблена {{GENDER:$1|}}] вже щойно зроблена {{PLURAL:$4|[$5 $2]|0=анонімним користувачем}}.',
 	'mobile-frontend-learn-more' => 'Дізнатися більше',
+	'mobile-frontend-view-source' => 'Перегляд джерела',
 	'mobile-frontend-account-create-submit' => 'Зареєструватися',
 	'mobile-frontend-password-confirm-placeholder' => 'Підтвердження пароля:',
 	'mobile-frontend-account-create-email-placeholder' => 'E-mail адреса (за бажанням)',
@@ -18947,6 +18964,7 @@ $messages['uk'] = array(
 	'mobile-frontend-editor-abusefilter-read-more' => 'Детальніше',
 	'mobile-frontend-editor-editing-page' => '<strong>Редагування</strong><span> $1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>Попередній перегляд</strong><span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Перегляд джерела</strong><span> $1</span>',
 	'tag-mobile_edit' => 'Редагування з мобільного пристрою',
 	'tag-mobile_edit-description' => 'Редагування, зроблені з мобільної версії сайту',
 	'mobile-frontend-drawer-cancel' => 'Скасувати',
@@ -19415,6 +19433,7 @@ $messages['vi'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 năm] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}.',
 	'mobile-frontend-last-modified-with-user-just-now' => 'Vừa được [$3 {{GENDER:$1|edited}}sửa đổi lần cuối cùng] bởi {{PLURAL:$4|[$5 $2]|0=một người dùng vô danh}}.',
 	'mobile-frontend-learn-more' => 'Tìm hiểu thêm',
+	'mobile-frontend-view-source' => 'Xem mã nguồn',
 	'mobile-frontend-account-create-submit' => 'Mở tài khoản',
 	'mobile-frontend-password-confirm-placeholder' => 'Xác nhận mật khẩu',
 	'mobile-frontend-account-create-email-placeholder' => 'Địa chỉ thư điện tử (tùy chọn)',
@@ -19613,6 +19632,7 @@ $messages['vi'] = array(
 	'mobile-frontend-editor-abusefilter-read-more' => 'Đọc tiếp',
 	'mobile-frontend-editor-editing-page' => '<strong>Sửa đổi</strong><span> $1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>Xem trước</strong><span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Xem mã nguồn</strong><span> $1</span>',
 	'tag-mobile_edit' => 'Sửa đổi di động',
 	'tag-mobile_edit-description' => 'Trang được sửa đổi dùng trang di động',
 	'mobile-frontend-drawer-cancel' => 'Hủy bỏ',
@@ -19917,6 +19937,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3年}}前]',
 	'mobile-frontend-last-modified-with-user-just-now' => '{{PLURAL:$4|[$5 $2]|0=匿名用户}}刚刚[$3 {{GENDER:$1|编辑}}]。',
 	'mobile-frontend-learn-more' => '了解更多',
+	'mobile-frontend-view-source' => '查看源代码',
 	'mobile-frontend-account-create-submit' => '注册',
 	'mobile-frontend-password-confirm-placeholder' => '确认密码',
 	'mobile-frontend-account-create-email-placeholder' => '电子邮件地址（选填）',
@@ -20116,6 +20137,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-editor-abusefilter-read-more' => '阅读更多',
 	'mobile-frontend-editor-editing-page' => '<strong>编辑</strong><span>$1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>预览</strong><span>$1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>查看<span>$1</span>的源代码</strong>',
 	'tag-mobile_edit' => '移动版编辑',
 	'tag-mobile_edit-description' => '来自移动版网站的编辑',
 	'mobile-frontend-drawer-cancel' => '取消',
