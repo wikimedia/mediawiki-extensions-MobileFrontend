@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_517800ed",
+        "filename": "javascripts/common/api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-25T00:12:10Z",
+      "side": 1,
+      "message": "Should it still cache in this case? I guess not.. do in a follow up commit?",
+      "revId": "c10c3ff9d203b7db57c874bc8239cceb269d5452",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
