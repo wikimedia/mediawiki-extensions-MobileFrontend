@@ -73,7 +73,9 @@
 				'aria-controls': id
 			} )
 			// FIXME change when micro.tap.js in stable
-			.on( M.tapEvent( 'mouseup' ), function() {
+			.on( M.tapEvent( 'mouseup' ), function( ev ) {
+				// prevent taps/clicks on edit button after toggling (bug 56209)
+				ev.preventDefault();
 				toggle( $( this ) );
 			} );
 
