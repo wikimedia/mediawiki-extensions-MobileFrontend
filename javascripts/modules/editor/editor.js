@@ -9,6 +9,7 @@
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
 		// FIXME: Should we consider default site options and user prefs?
+		// FIXME: This also needs to check that VisualEditor is actually installed.
 		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha',
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
@@ -42,6 +43,12 @@
 			on( 'click', false );
 	}
 
+	/**
+	 * Initialize the edit button so that it launches the editor interface when clicked.
+	 *
+	 * @param {object} page The page to edit (optional). If no page is specified it
+	 *  assumes the current page.
+	 */
 	function init( page ) {
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
 		if ( M.query.undo ) {
@@ -105,6 +112,9 @@
 		} );
 	}
 
+	/**
+	 * Initialize the edit button so that it launches a login call-to-action when clicked.
+	 */
 	function initCta() {
 		// FIXME change when micro.tap.js in stable
 		$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
@@ -117,24 +127,46 @@
 		} );
 	}
 
-	if ( mw.config.get( 'wgIsPageEditable' ) && isEditingSupported && !isUserBlocked ) {
-		if ( mw.config.get( 'wgMFAnonymousEditing' ) || user.getName() ) {
-			init();
-			M.on( 'page-loaded', init );
-		} else {
-			initCta();
-			M.on( 'page-loaded', initCta );
-		}
-	} else {
-		// FIXME change when micro.tap.js in stable
+	/**
+	 * Show a toast message with sincere condolences.
+	 *
+	 * @param {string} msg Message key for sorry message
+	 */
+	function showSorryToast( msg ) {
 		$( '#ca-edit, .edit-page' ).on( M.tapEvent( 'click' ), function( ev ) {
-			var msg = 'mobile-frontend-editor-blocked';
-			if ( !isUserBlocked ) {
-				msg = isEditingSupported ? 'mobile-frontend-editor-disabled' : 'mobile-frontend-editor-unavailable';
-			}
 			popup.show( mw.msg( msg ), 'toast' );
 			ev.preventDefault();
 		} );
+	}
+
+	if ( isUserBlocked ) {
+		// User is blocked. Both anonymous and logged in users can be blocked.
+		showSorryToast( 'mobile-frontend-editor-blocked' );
+	} else if ( !isEditingSupported ) {
+		// Editing is disabled (or browser is blacklisted)
+		showSorryToast( 'mobile-frontend-editor-unavailable' );
+	} else {
+		if ( user.isAnon() ) {
+			if ( mw.config.get( 'wgMFAnonymousEditing' ) && mw.config.get( 'wgIsPageEditable' ) ) {
+				// Set edit button to launch editor
+				init();
+				M.on( 'page-loaded', init );
+			} else {
+				// Set edit button to launch login CTA
+				initCta();
+				M.on( 'page-loaded', initCta );
+			}
+		} else {
+			// User is logged in
+			if ( mw.config.get( 'wgIsPageEditable' ) ) {
+				// Set edit button to launch editor
+				init();
+				M.on( 'page-loaded', init );
+			} else {
+				// Page is not editable (probably protected)
+				showSorryToast( 'mobile-frontend-editor-disabled' );
+			}
+		}
 	}
 
 }( mw.mobileFrontend, jQuery ) );

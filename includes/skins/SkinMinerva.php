@@ -552,12 +552,12 @@ class SkinMinerva extends SkinTemplate {
 			'wgIsPageEditable' => $title->quickUserCan( 'edit', $user ) || $userCanCreatePage,
 			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
 			'wgMFMode' => $this->getMode(),
+			'wgMFIsUserBlocked' => $user->isBlocked(),
 		);
 		if ( !$user->isAnon() ) {
 			$vars['wgWatchedPageCache'] = array(
 				$title->getPrefixedDBkey() => $user->isWatched( $title ),
 			);
-			$vars['wgMFIsUserBlocked'] = $user->isBlocked();
 		}
 		// mobile specific config variables
 		if ( $this->mobileContext->shouldDisplayMobileView() ) {
