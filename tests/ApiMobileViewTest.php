@@ -26,6 +26,10 @@ class MockApiMobileView extends ApiMobileView {
 		return new MockWikiPage( $title );
 	}
 
+	protected function makeParserOptions( WikiPage $wp ) {
+		return new ParserOptions( $this->getUser() );
+	}
+
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), array( 'text' => null ) );
 	}
