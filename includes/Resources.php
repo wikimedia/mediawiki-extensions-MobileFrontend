@@ -281,11 +281,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			// FIXME: Move to mobile.editor.common when new overlays go to stable
-			'javascripts/modules/editor/EditorOverlayBase.js',
-			'javascripts/modules/editor/VisualEditorOverlay.js',
+			'javascripts/modules/editorNew/EditorOverlayBase.js',
+			'javascripts/modules/editorNew/VisualEditorOverlay.js',
 		),
 		'templates' => array(
-			'modules/editor/VisualEditorOverlay',
+			'modules/editorNew/EditorOverlayBase',
+			'modules/editorNew/VisualEditorOverlay',
 		),
 		// FIXME: these messages should go to mobile.editor.common when new overlays go to stable.
 		'messages' => array(
@@ -322,13 +323,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/editorNew/AbuseFilterOverlay.js',
 			// FIXME: Move to mobile.editor.common when new overlays go to stable
-			'javascripts/modules/editor/EditorOverlayBase.js',
+			'javascripts/modules/editorNew/EditorOverlayBase.js',
 			'javascripts/modules/editorNew/EditorOverlay.js',
 		),
 		'styles' => array(
 			'less/modules/editorNew.less',
 		),
 		'templates' => array(
+			'modules/editorNew/EditorOverlayBase',
 			'modules/editorNew/EditorOverlay',
 		),
 		'messages' => array(

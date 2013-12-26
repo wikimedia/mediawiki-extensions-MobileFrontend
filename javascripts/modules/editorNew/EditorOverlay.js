@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
+	var EditorOverlayBase = M.require( 'modules/editorNew/EditorOverlayBase' ),
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		popup = M.require( 'notifications' ),
@@ -13,7 +13,9 @@
 		EditorOverlay;
 
 	EditorOverlay = EditorOverlayBase.extend( {
-		template: M.template.get( 'modules/editorNew/EditorOverlay' ),
+		templatePartials: {
+			content: M.template.get( 'modules/editorNew/EditorOverlay' )
+		},
 		log: function( action, errorText ) {
 			var
 				data = {
@@ -76,7 +78,6 @@
 				this.$content.prop( 'readonly', true );
 			}
 
-			this._showHidden( '.initial-header' );
 			this._loadContent();
 			// log section edit attempt
 			self.log( 'attempt' );
