@@ -1096,8 +1096,12 @@ Parameters:
 	'beta-feature-geonotahack' => 'Title for near this page beta feature.
 {{Identical|Near this page}}',
 	'beta-feature-geonotahack-description' => 'Description for near this page beta feature.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Shows on main page to logged in users prompting them to edit.',
-	'mobile-frontend-mainpage-cta-button' => 'Label of button see {{msg-mw|mobile-frontend-mainpage-cta-button}}',
+	'mobile-frontend-mainpage-cta-prompt' => 'Shows on main page to logged in users prompting them to edit.
+
+Followed by the button {{msg-mw|Mobile-frontend-mainpage-cta-button}}.',
+	'mobile-frontend-mainpage-cta-button' => 'Used as label for button.
+
+Preceded by {{msg-mw|Mobile-frontend-mainpage-cta-prompt}}.',
 );
 
 /** Achinese (Acèh)
@@ -3139,6 +3143,7 @@ $messages['ce'] = array(
 	'mobile-frontend-language-site-choose' => 'Лаха мотт',
 	'mobile-frontend-username' => 'Декъашхочун цӀе:',
 	'mobile-frontend-username-placeholder' => 'Декъашхочун цӀе',
+	'mobile-frontend-history-summary' => 'АгӀона [[:$1]] хийцаман истори',
 	'mobile-frontend-last-modified-date' => 'ТӀехьара бина хийцам $2 $1',
 	'mobile-frontend-last-modified-minutes' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 минут}} хьалха',
 	'mobile-frontend-last-modified-hours' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 сахьт}} хьалха',
@@ -3156,13 +3161,16 @@ $messages['ce'] = array(
 	'mobile-frontend-main-menu-upload' => 'Чуйаьхарш',
 	'mobile-frontend-settings-site-header' => '«{{SITENAME}}» проектан меттанаш',
 	'mobile-frontend-page-menu-contents' => 'чулацам',
+	'mobile-frontend-page-menu-history' => 'Истори',
 	'mobile-frontend-page-saving' => 'Ӏалашяр $1',
 	'mobile-frontend-nearby-title' => 'Уллехь',
 	'mobile-frontend-nearby-loading' => 'Чу бокхуш бу хаам, хьона уллехь хӀун ю гойтуш',
 	'mobile-frontend-donate-image-title' => 'Чуйаьхарш',
+	'mobile-frontend-donate-image-heading' => 'Хьан тӀеххьара нисдарш',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'ХӀаъ!',
 	'mobile-frontend-watchlist-view' => 'Шен тергаме могӀаме хьажар',
 	'mobile-frontend-watchlist-more' => 'кхин дӀа',
+	'mobile-frontend-changeslist-nocomment' => 'Нисдарах лаьцна яздина дац',
 	'mobile-frontend-diffview-title' => 'Хийцам',
 	'mobile-frontend-photo-submit' => 'ДӀадахьийта',
 	'mobile-frontend-photo-cancel' => 'Цаоьшу',
@@ -3982,6 +3990,7 @@ $messages['da'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 sidst {{GENDER:$1|redigeret}} for {{PLURAL:$3|$3 år}} siden] af {{PLURAL:$5|[$6 $2]|0=en anonym bruger}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 sidst {{GENDER:$1|redigeret}}] lige nu af {{PLURAL:$4|[$5 $2]|0=en anonym bruger}}.',
 	'mobile-frontend-learn-more' => 'Lær mere',
+	'mobile-frontend-view-source' => 'Se kilden',
 	'mobile-frontend-account-create-submit' => 'Opret en konto',
 	'mobile-frontend-password-confirm-placeholder' => 'Bekræft adgangskode',
 	'mobile-frontend-account-create-email-placeholder' => 'E-mailadresse (valgfrit)',
@@ -4048,7 +4057,7 @@ $messages['da'] = array(
 	'mobile-frontend-donate-image-login-action' => 'Log på for at dele dine medier.',
 	'mobile-frontend-donate-image-signup-action' => 'Tilmeld dig for at dele dine medier med verden.',
 	'mobile-frontend-photo-upload-disabled' => 'Der kræves ingen billede på denne side.',
-	'mobile-frontend-photo-upload-anon' => 'Du skal være logget på for at føje et billede til denne side.', # Fuzzy
+	'mobile-frontend-photo-upload-anon' => 'Log på for at føje et billede til denne side.',
 	'mobile-frontend-photo-upload-protected' => 'Du har ikke tilladelse til at føje et billede til denne side.',
 	'mobile-frontend-photo-upload-unavailable' => 'Din browser understøtter ikke billedoverførsler.',
 	'mobile-frontend-photo-upload-generic' => 'Bidrag med et billede',
@@ -4180,6 +4189,7 @@ $messages['da'] = array(
 	'mobile-frontend-editor-abusefilter-read-more' => 'Læs mere',
 	'mobile-frontend-editor-editing-page' => '<strong>Redigerer</strong><span> $1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>Forhåndsviser</strong><span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Viser kilden til</strong><span> $1</span>',
 	'tag-mobile_edit' => 'Mobilredigering',
 	'tag-mobile_edit-description' => 'Redigering udført fra mobilsiden',
 	'mobile-frontend-drawer-cancel' => 'Annuller',
@@ -4217,6 +4227,8 @@ $messages['da'] = array(
 	'mobile-frontend-geonotahack' => 'I nærheden af denne side',
 	'beta-feature-geonotahack' => 'I nærheden af denne side',
 	'beta-feature-geonotahack-description' => 'Find sider, der er geografisk i nærheden af indholdet på den side, du læser lige nu.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Denne artikel har brug for din hjælp!',
+	'mobile-frontend-mainpage-cta-button' => 'Forbedre denne artikel',
 );
 
 /** German (Deutsch)
@@ -5824,6 +5836,7 @@ $messages['fa'] = array(
 	'mobile-frontend-last-modified-with-user-years' => 'آخرین ویرایش {{PLURAL:$3|$3 سال}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]',
 	'mobile-frontend-last-modified-with-user-just-now' => 'آخرین ویرایش همین الآن توسط {{PLURAL:$4|[$5 $2]|0=an کاربر ناشناس}} [$3 {{GENDER:$1|انجام شده‌است}}].',
 	'mobile-frontend-learn-more' => 'اطلاعات بیشتر',
+	'mobile-frontend-view-source' => 'نمایش مبدأ',
 	'mobile-frontend-account-create-submit' => 'ثبت نام',
 	'mobile-frontend-password-confirm-placeholder' => 'تأیید گذرواژه',
 	'mobile-frontend-account-create-email-placeholder' => 'آدرس ایمیل (اختیاری)',
@@ -10018,6 +10031,8 @@ $messages['ja'] = array(
 	'mobile-frontend-geonotahack' => 'このページの近辺',
 	'beta-feature-geonotahack' => 'このページの近辺',
 	'beta-feature-geonotahack-description' => '現在閲覧している本文ページに地理的に近いページを見つけます。',
+	'mobile-frontend-mainpage-cta-prompt' => 'この記事にはあなたの助けが必要です!',
+	'mobile-frontend-mainpage-cta-button' => 'この記事を改善',
 );
 
 /** Javanese (Basa Jawa)
@@ -11624,7 +11639,9 @@ $messages['lb'] = array(
 	'mobile-frontend-watchlist-cta' => 'Dës Säit an all hir Ännerungen am A behalen.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Aloggen',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Mellt Iech un',
+	'mobile-frontend-watchlist-login-action' => 'Loggt Iech a fir se ze gesinn.',
 	'mobile-frontend-generic-login' => '{{SITENAME}} gëtt vu Leit wéi Iech gemaach.',
+	'mobile-frontend-generic-login-action' => 'Loggt Iech a fir bäizedroen',
 	'mobile-frontend-watch-login' => 'Setzt $1 op Är Iwwerwaachungslëscht derbäi.',
 	'mobile-frontend-edit-login' => "Hëlleft d'$1 Säit ze verbesseren.",
 	'mobile-frontend-edit-login-action' => "Alogge fir z'änneren.",
@@ -11746,6 +11763,8 @@ Déi gi geläscht.",
 	'mobile-frontend-profile-last-edit' => "{{GENDER:$3|Huet}} d'Säit [[:$1]] {{PLURAL:$2|gëschter|viru(n) $2 Deeg|0=méi fréi haut am Laf vum Dag}} geännert.",
 	'mobile-frontend-geonotahack' => 'No bei dëser Säit',
 	'beta-feature-geonotahack' => 'No bei dëser Säit',
+	'mobile-frontend-mainpage-cta-prompt' => 'Dësen Artikel brauch Är Hëllef!',
+	'mobile-frontend-mainpage-cta-button' => 'Dësen Artikel verbesseren',
 );
 
 /** Lezghian (лезги)
@@ -15920,6 +15939,7 @@ $messages['ro'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 un|$3 ani|$3 de ani}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Ultima {{GENDER:$1|modificare}}] efectuată chiar acum de către {{PLURAL:$4|[$5 $2]|0=un utilizator anonim}}.',
 	'mobile-frontend-learn-more' => 'Aflați mai multe',
+	'mobile-frontend-view-source' => 'Sursă pagină',
 	'mobile-frontend-account-create-submit' => 'Înregistrare',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmați parola',
 	'mobile-frontend-account-create-email-placeholder' => 'Adresă de e-mail (opțională)',
@@ -16120,6 +16140,7 @@ din întreaga lume',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Citiți mai mult',
 	'mobile-frontend-editor-editing-page' => '<strong>Se modifică</strong><span> $1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>Se previzualizează</strong><span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Se vizualizează sursa pentru</strong><span> $1</span>',
 	'tag-mobile_edit' => 'Modificare mobilă',
 	'tag-mobile_edit-description' => 'Modificare efectuată de pe site-ul mobil',
 	'mobile-frontend-drawer-cancel' => 'Revocare',
@@ -16157,6 +16178,8 @@ din întreaga lume',
 	'mobile-frontend-geonotahack' => 'În apropierea acestei pagini',
 	'beta-feature-geonotahack' => 'În apropierea acestei pagini',
 	'beta-feature-geonotahack-description' => 'Descoperă pagini care sunt, din punct de vedere geografic, în apropierea conținutului paginii pe care o lecturați acum.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Acest articol are nevoie de ajutorul dumneavoastră!',
+	'mobile-frontend-mainpage-cta-button' => 'Îmbunătățiți acest articol',
 );
 
 /** tarandíne (tarandíne)
@@ -19002,6 +19025,8 @@ $messages['uk'] = array(
 	'mobile-frontend-geonotahack' => 'Поблизу цієї сторінки',
 	'beta-feature-geonotahack' => 'Поблизу цієї сторінки',
 	'beta-feature-geonotahack-description' => 'Відкрийте для себе сторінки, що географічно за змістом близькі із сторінкою, яку ви зараз читаєте.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Ця стаття потребує вашої допомоги!',
+	'mobile-frontend-mainpage-cta-button' => 'Поліпшити цю статтю',
 );
 
 /** Urdu (اردو)

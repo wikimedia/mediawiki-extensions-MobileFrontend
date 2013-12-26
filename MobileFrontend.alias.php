@@ -53,9 +53,11 @@ $specialPageAliases['ce'] = array(
 
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
+	'History' => array( 'Versionsgeschichte' ),
 	'MobileOptions' => array( 'Mobile_Optionen' ),
 	'Uploads' => array( 'Hochgeladene_Dateien' ),
 	'MobileDiff' => array( 'Mobiler_Unterschied' ),
+	'MobileEditor' => array( 'Mobiler_Editor' ),
 	'MobileMenu' => array( 'Mobiles_Menü' ),
 	'Nearby' => array( 'In_der_Nähe' ),
 	'UserProfile' => array( 'Benutzerprofil' ),
@@ -153,8 +155,10 @@ $specialPageAliases['lb'] = array(
 	'MobileOptions' => array( 'Mobil_Optiounen' ),
 	'Uploads' => array( 'Eropgeluede_Fichieren' ),
 	'MobileDiff' => array( 'Mobilen_Ënnerscheed' ),
+	'MobileEditor' => array( 'Mobilen_Editeur' ),
 	'MobileMenu' => array( 'Mobile_Menü' ),
 	'Nearby' => array( 'Nobäi' ),
+	'UserProfile' => array( 'Benotzerprofil' ),
 );
 
 /** Macedonian (македонски) */
