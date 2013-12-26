@@ -236,6 +236,24 @@
 		padding: .5em;
 	}
 
+	// FIXME: Use generic class for these input fields - can't use .panel currently due to LanguageOverlay
+	.captcha-word,
+	.summary {
+		margin: 0 0 .7em;
+		width: 100%;
+		.box-sizing( border-box );
+	}
+
+	.wikitext-editor {
+		width: 100%;
+		min-height: 50%;
+		padding: 10px @contentMargin;
+		line-height: 1.5;
+		border: none;
+		resize: none;
+		.box-sizing( border-box );
+	}
+
 	.panel {
 		padding: 12px @contentMargin;
 		border-bottom: 1px solid @grayLightest;

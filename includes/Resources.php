@@ -621,6 +621,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/talk/TalkSectionOverlay.js',
+			'javascripts/modules/talk/TalkSectionAddOverlay.js',
 			'javascripts/modules/talk/TalkOverlay.js',
 		),
 		'templates' => array(
@@ -642,6 +643,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-reply-info',
 			// FIXME: Gets loaded twice if editor and talk both loaded.
 			'mobile-frontend-editor-cancel',
+			'mobile-frontend-editor-license' => array( 'parse' ),
 		),
 	),
 
