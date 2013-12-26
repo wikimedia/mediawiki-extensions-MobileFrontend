@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_3c30ace4",
+        "filename": "includes/specials/SpecialLanguages.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-26T20:15:41Z",
+      "side": 1,
+      "message": "Not an issue currently, but this limit is 500 by default, while we currently have ~350 languages supported. Not much room for growth:)",
+      "revId": "266ed235161689b37254947c9160997ec0811a7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_2682db97",
         "filename": "javascripts/common/Page.js",
         "patchSetId": 3
