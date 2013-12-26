@@ -17,6 +17,7 @@ $specialPageAliases['en'] = array(
 	'MobileDiff' => array( 'MobileDiff' ),
 	'MobileEditor' => array( 'MobileEditor' ),
 	'MobileMenu' => array( 'MobileMenu' ),
+	'MobileLanguages' => array( 'MobileLanguages' ),
 	'Nearby' => array( 'Nearby' ),
 	'UserProfile' => array( 'UserProfile' ),
 );

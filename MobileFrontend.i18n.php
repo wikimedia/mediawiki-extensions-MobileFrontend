@@ -73,6 +73,15 @@ $messages['en'] = array (
 	'mobile-frontend-on' => 'ON',
 	'mobile-frontend-featured-article' => 'Today\'s featured content',
 	'mobile-frontend-news-items' => 'In The News',
+
+	// languages special page
+	'mobile-frontend-languages-404-title' => 'Languages error',
+	'mobile-frontend-languages-404-desc' => 'A valid title must be specified.',
+	'mobile-frontend-languages-header' => 'Languages',
+	'mobile-frontend-languages-nonexistent-title' => 'The page "$1" does not exist.',
+	'mobile-frontend-languages-text' => '$1 is available in $2 {{PLURAL:$2|language|languages}}.',
+	'mobile-frontend-languages-variant-header' => '{{#language:{{CONTENTLANG}}}} variants',
+
 	'mobile-frontend-language-heading' => '<strong>Languages</strong>',
 	'mobile-frontend-language-article-heading' => 'Read in another language',
 	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
@@ -518,6 +527,15 @@ See also:
 {{Identical|On}}',
 	'mobile-frontend-featured-article' => 'The title that will appear before the element with the mf-tfa selector.',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
+	'mobile-frontend-languages-404-title' => 'Shown when no page is provided to Special:MobileLanguages.',
+	'mobile-frontend-languages-404-desc' => 'Error message on Special:MobileLanguages.',
+	'mobile-frontend-languages-header' => 'Header and title on the Special:MobileLanguages page.',
+	'mobile-frontend-languages-nonexistent-title' => 'Shown on Special:MobileLanguages when a nonexistent title is entered.',
+	'mobile-frontend-languages-text' => 'Introduction to the Special:Languages page.
+* $1 - page title
+* $2 - number of languages
+',
+	'mobile-frontend-languages-variant-header' => 'Header on the Special:MobileLanguages page.',
 	'mobile-frontend-language-heading' => 'The title for the list of languages for a page.
 {{Identical|Language}}',
 	'mobile-frontend-language-article-heading' => 'A heading within the page the content of which lists the other languages available for this page: translate the message considering the list to have an undetermined number of items.',
