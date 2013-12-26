@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_fc648447",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T21:45:17Z",
+      "side": 1,
+      "message": "We shouldn\u0027t remove this. We should improve the API call so that it returns variants as well.",
+      "revId": "83cac12a814661b12b634e5749934c09b514e862",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_dc69c01e",
+        "filename": "javascripts/modules/languagesNew/languages.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T21:45:17Z",
+      "side": 1,
+      "message": "This will get the entire page  (the chrome, script tags, head of the HTML document etc) which is unnecessary. Use the API instead - this is what it was designed for - the payload will be much smaller!\n\nInstead do what Page.js does here and forget about the fact it doesn\u0027t return variants for the time being.\n\ne.g. M.pageApi.getPageLanguages( pageTitle ).done( function( langlinks ) {",
+      "revId": "83cac12a814661b12b634e5749934c09b514e862",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
