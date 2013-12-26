@@ -1,19 +1,9 @@
 ( function( M, $ ) {
 
-	var
-		// FIXME: remove when header-loaded is in all cached pages
-		initialized = false;
-
 	function initialize() {
 		var
 			moved = false,
 			$body = $( 'body' );
-
-		// FIXME: remove when header-loaded is in all cached pages
-		if ( initialized ) {
-			return;
-		}
-		initialized = true;
 
 		function isOpen() {
 			return $body.hasClass( 'navigation-enabled' );
@@ -71,7 +61,5 @@
 	}
 
 	M.on( 'header-loaded', initialize );
-	// FIXME: remove when header-loaded is in all cached pages
-	$( initialize );
 
 }( mw.mobileFrontend, jQuery ));
