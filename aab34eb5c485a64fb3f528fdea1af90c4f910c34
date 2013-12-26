@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "eeebdf60_86ebe7da",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-26T18:23:24Z",
+      "side": 1,
+      "message": "So every input in \u003cbody\u003e should be styled like that when an overlay is open? Please describe in a comment where this is used.\n\nAs I can see you copied it from editor.less but I don\u0027t think this is the right place. Also, if you put such a general rule for all overlays, are you sure that it doesn\u0027t break anything?",
+      "revId": "aab34eb5c485a64fb3f528fdea1af90c4f910c34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_c6b8cfe4",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-26T18:23:24Z",
+      "side": 1,
+      "message": "Messes up the styling in the upload overlay. If you want to reuse this in editor and talk, we should add a class instead of styling all textareas.",
+      "revId": "aab34eb5c485a64fb3f528fdea1af90c4f910c34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_11ddd847",
         "filename": "templates/overlays/talkSectionAdd.html",
         "patchSetId": 5
