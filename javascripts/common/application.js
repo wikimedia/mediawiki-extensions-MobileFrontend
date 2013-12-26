@@ -43,6 +43,10 @@
 		return !!navigator.geolocation;
 	}
 
+	function supportsTouchEvents() {
+		return 'ontouchstart' in window;
+	}
+
 	/**
 	 * Escape dots and colons in a hash, jQuery doesn't like them beause they
 	 * look like CSS classes and pseudoclasses. See
@@ -177,6 +181,10 @@
 
 		if ( mw.config.get( 'wgMFEnableCssAnimations' ) && supportsAnimations() ) {
 			$doc.addClass( 'animations' );
+		}
+
+		if ( supportsTouchEvents() ) {
+			$doc.addClass( 'touch-events' );
 		}
 	}
 
