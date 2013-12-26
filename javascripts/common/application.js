@@ -273,7 +273,6 @@
 		escapeHash: escapeHash,
 		inNamespace: inNamespace,
 		getCurrentPage: getCurrentPage,
-		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getOrigin: getOrigin,
 		// FIXME: No Page object exists on initial page load but would be better to make this a function of Page object
 		getLeadSection: function() {
