@@ -16,8 +16,9 @@
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			abusefilterReadMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
 		},
+		template: M.template.get( 'modules/editorNew/EditorOverlayBase' ),
 		className: 'overlay editor-overlay',
-		initialize: function ( options ) {
+		initialize: function( options ) {
 			if ( this.readOnly ) {
 				options.readOnly = true;
 				options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
@@ -26,6 +27,10 @@
 			}
 			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			this._super( options );
+		},
+		postRender: function( options ) {
+			this._super( options );
+			this._showHidden( '.initial-header' );
 		},
 		hide: function( force ) {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
@@ -59,6 +64,6 @@
 		}
 	} );
 
-	M.define( 'modules/editor/EditorOverlayBase', EditorOverlayBase );
+	M.define( 'modules/editorNew/EditorOverlayBase', EditorOverlayBase );
 
 }( mw.mobileFrontend ) );
