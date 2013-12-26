@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_e653d341",
+        "filename": "javascripts/modules/languagesNew/languages.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T19:11:19Z",
+      "side": 0,
+      "message": "This change is unnecessary - instead rename the function to initButtonStable and only run it in stable.\n\nThen add a new function which moves the code from javascripts/common/Page.js\n\nIn beta simply do what I suggested in the other file.",
+      "revId": "afd9c3527e8dbaa5e8f9de10a39a75b59c05c7b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_e66cf307",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T19:11:19Z",
+      "side": 1,
+      "message": "Whitespace - also don\u0027t move this. The value doesn\u0027t change so I wouldn\u0027t move it!",
+      "revId": "266ed235161689b37254947c9160997ec0811a7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2682db97",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T19:11:19Z",
+      "side": 1,
+      "message": "Abstract this code somewhere! Maybe languages.js ?\n\nThen in languages.js simply do\n$( \u0027#page-secondary-actions .languageSelector\u0027 ).on( \u0027click\u0027, function() {\n //all this code.\n} );\n\nand make it run on a page-loaded event :)\n\nM.on( \u0027page-loaded\u0027, function() {",
+      "revId": "266ed235161689b37254947c9160997ec0811a7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_a64dcb9d",
+        "filename": "javascripts/modules/languagesNew/languages.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T19:11:19Z",
+      "side": 1,
+      "message": "Strengthen this selector #page-secondary-actions .languageSelector when binding to it.",
+      "revId": "266ed235161689b37254947c9160997ec0811a7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
