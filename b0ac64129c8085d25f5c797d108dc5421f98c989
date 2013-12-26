@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_9f6faac0",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-26T23:02:52Z",
+      "side": 1,
+      "message": "This is super confusing. Shouldn\u0027t the variable be called tabletStylesLoaded since we set it to true with tablet styles are loaded?",
+      "revId": "b0ac64129c8085d25f5c797d108dc5421f98c989",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
