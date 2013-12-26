@@ -56,7 +56,7 @@ class MobileSpecialPage extends SpecialPage {
 	protected function addModules() {
 		$out = $this->getOutput();
 		$rl = $out->getResourceLoader();
-		$title = $this->getTitle();
+		$title = $this->getPageTitle();
 		list( $name, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
 		$id = strtolower( $name );
 		// FIXME: These names should be more specific
