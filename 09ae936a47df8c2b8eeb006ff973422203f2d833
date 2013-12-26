@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_06eeb71f",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-26T17:47:34Z",
+      "side": 1,
+      "message": "Doesn\u0027t this kill the whole idea of responsive design?",
+      "revId": "09ae936a47df8c2b8eeb006ff973422203f2d833",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_e6f2b302",
+        "filename": "less/common/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-26T17:47:34Z",
+      "side": 1,
+      "message": "So why is this here? And where are the thumbnail rules now?",
+      "revId": "09ae936a47df8c2b8eeb006ff973422203f2d833",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
