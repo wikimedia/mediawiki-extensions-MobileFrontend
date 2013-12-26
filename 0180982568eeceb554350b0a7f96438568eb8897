@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_c63d6f8c",
+        "filename": "includes/specials/SpecialLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T18:29:55Z",
+      "side": 1,
+      "message": "I guess we could call it Special:MobileLanguages but that doesn\u0027t make as much sense as Special:Languages. Will this be an important problem?",
+      "parentUuid": "eeebdf60_52e8fe0a",
+      "revId": "0180982568eeceb554350b0a7f96438568eb8897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_12da7678",
         "filename": "includes/specials/SpecialLanguages.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-26T06:26:06Z",
       "side": 1,
       "message": "I wonder if this is the best place to do this, or whether you should do it down below where you actually need it. \n\nOr extend the API to provide this information?",
+      "revId": "0180982568eeceb554350b0a7f96438568eb8897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_a6426b11",
+        "filename": "includes/specials/SpecialLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T18:29:55Z",
+      "side": 1,
+      "message": "Hmm, I don\u0027t see why not to do it here. That way the code below is solely for assembling the links and is pretty much generalized for both langlinks and variant links.",
+      "parentUuid": "eeebdf60_12da7678",
       "revId": "0180982568eeceb554350b0a7f96438568eb8897",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_e638739d",
+        "filename": "includes/specials/SpecialLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T18:29:55Z",
+      "side": 1,
+      "message": "Done, converted to use $this-\u003etitle",
+      "parentUuid": "eeebdf60_32d57a48",
+      "revId": "0180982568eeceb554350b0a7f96438568eb8897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_f2cef2b8",
         "filename": "includes/specials/SpecialLanguages.php",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-12-26T06:26:06Z",
       "side": 1,
       "message": "They aren\u0027t globals ;)",
+      "revId": "0180982568eeceb554350b0a7f96438568eb8897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_46515fdc",
+        "filename": "includes/specials/SpecialLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T18:29:55Z",
+      "side": 1,
+      "message": "( curses, the fact that I\u0027d never written PHP before a month or two ago has been revealed :p )",
+      "parentUuid": "eeebdf60_f2cef2b8",
       "revId": "0180982568eeceb554350b0a7f96438568eb8897",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_86d2c72a",
+        "filename": "includes/specials/SpecialLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T18:29:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_d2d3ee5f",
+      "revId": "0180982568eeceb554350b0a7f96438568eb8897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_92c56693",
         "filename": "includes/specials/SpecialLanguages.php",
         "patchSetId": 1
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_c6868f18",
+        "filename": "includes/specials/SpecialLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T18:29:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_92c56693",
+      "revId": "0180982568eeceb554350b0a7f96438568eb8897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_b2c86aab",
         "filename": "includes/specials/SpecialLanguages.php",
         "patchSetId": 1
@@ -115,6 +223,24 @@
       "writtenOn": "2013-12-26T06:26:06Z",
       "side": 1,
       "message": "Missing a -\u003etext()?",
+      "revId": "0180982568eeceb554350b0a7f96438568eb8897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_264e5b3d",
+        "filename": "includes/specials/SpecialLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T18:29:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_b2c86aab",
       "revId": "0180982568eeceb554350b0a7f96438568eb8897",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
