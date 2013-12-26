@@ -37,7 +37,7 @@
 
 			$submitButton = this.$( '.submit' ).
 				prop( 'disabled', true ).
-				on( 'click', function() {
+				on( M.tapEvent( 'click' ), function() {
 					self.emit( 'submit' );
 				} );
 			this.$description = this.$( 'textarea' ).
