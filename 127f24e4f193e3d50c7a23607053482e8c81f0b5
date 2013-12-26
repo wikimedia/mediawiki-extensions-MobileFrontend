@@ -16,6 +16,24 @@
       "revId": "127f24e4f193e3d50c7a23607053482e8c81f0b5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_46a6ff51",
+        "filename": "javascripts/modules/languagesNew/languages.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T19:01:52Z",
+      "side": 1,
+      "message": "I\u0027m trying to get the raw HTML of the page; is there anything wrong with just $.get()?",
+      "parentUuid": "eeebdf60_a6ff0b62",
+      "revId": "127f24e4f193e3d50c7a23607053482e8c81f0b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
