@@ -16,6 +16,24 @@
       "revId": "c9d1d8930234762f39aa2ebb49e9920906774958",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_52eb5ea0",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-26T13:24:29Z",
+      "side": 1,
+      "message": "parse() is the default output, so this apparently uncovered a bug that was already present. Please advise on what you prefer to do here, Max.",
+      "parentUuid": "eeebdf60_ec95f736",
+      "revId": "c9d1d8930234762f39aa2ebb49e9920906774958",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
