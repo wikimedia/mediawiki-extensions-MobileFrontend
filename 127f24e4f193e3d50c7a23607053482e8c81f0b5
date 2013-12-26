@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_a6ff0b62",
+        "filename": "javascripts/modules/languagesNew/languages.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-26T18:39:43Z",
+      "side": 1,
+      "message": "Use M.require( \u0027api\u0027 ) instead.",
+      "revId": "127f24e4f193e3d50c7a23607053482e8c81f0b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
