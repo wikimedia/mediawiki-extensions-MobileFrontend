@@ -67,6 +67,23 @@
       "revId": "266ed235161689b37254947c9160997ec0811a7c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_e92724b0",
+        "filename": "javascripts/modules/languagesNew/languages.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-26T19:22:30Z",
+      "side": 1,
+      "message": "Sorry, haven\u0027t read this carefully enough. Now I think you should use an API instead (e.g. getPageLanguages() from PageApi). I don\u0027t think fetching HTML using AJAX and parsing it is the best solution.",
+      "revId": "266ed235161689b37254947c9160997ec0811a7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
