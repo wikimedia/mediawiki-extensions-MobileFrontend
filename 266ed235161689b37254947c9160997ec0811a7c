@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_0636b700",
+        "filename": "includes/skins/MobileTemplateBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T19:13:20Z",
+      "side": 1,
+      "message": "Simply rename this to renderMetaSections\n(alpha extends this to add categories)",
+      "revId": "266ed235161689b37254947c9160997ec0811a7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_2682db97",
         "filename": "javascripts/common/Page.js",
         "patchSetId": 3
