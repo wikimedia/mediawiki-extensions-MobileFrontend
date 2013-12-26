@@ -2,8 +2,7 @@
 
 	var
 		// FIXME: remove when header-loaded is in all cached pages
-		initialized = false,
-		inAlpha = M.isAlphaGroupMember();
+		initialized = false;
 
 	function initialize() {
 		var
@@ -33,7 +32,7 @@
 		} );
 
 		// FIXME change when micro.tap.js in stable
-		if ( inAlpha ) {
+		if ( M.isBetaGroupMember() ) {
 			// make the input readonly to avoid accidental focusing when closing menu
 			// (when JS is on, this input should not be used for typing anyway)
 			$( '#searchInput' ).prop( 'readonly', true );

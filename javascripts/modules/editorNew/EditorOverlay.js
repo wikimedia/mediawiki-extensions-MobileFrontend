@@ -61,10 +61,10 @@
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .submit' ).prop( 'disabled', false );
 				} );
-			this.$( '.continue' ).on( 'click', $.proxy( this, '_showPreview' ) );
-			this.$( '.back' ).on( 'click', $.proxy( this, '_hidePreview' ) );
-			this.$( '.submit' ).on( 'click', $.proxy( this, '_save' ) );
-			this.$( '.cancel' ).on( 'click', function() {
+			this.$( '.continue' ).on( M.tapEvent( 'click' ), $.proxy( this, '_showPreview' ) );
+			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( this, '_hidePreview' ) );
+			this.$( '.submit' ).on( M.tapEvent( 'click' ), $.proxy( this, '_save' ) );
+			this.$( '.cancel' ).on( M.tapEvent( 'click' ), function() {
 				// log cancel attempt
 				self.log( 'cancel' );
 			} );

@@ -560,6 +560,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/mediaViewer.less',
 		),
 		'scripts' => array(
+			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
@@ -657,7 +658,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/common/mainmenuAnimation.less',
 		),
 		'scripts' => array(
-			'javascripts/externals/micro.tap.js',
 			'javascripts/externals/epoch.js',
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-translator.js',

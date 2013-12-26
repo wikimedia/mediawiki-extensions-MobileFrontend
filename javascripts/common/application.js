@@ -299,7 +299,7 @@
 		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0,
 		// FIXME: get rid off this (grep M.tapEvent) when micro.tap.js is in stable
 		tapEvent: function( fallbackEvent ) {
-			return M.isAlphaGroupMember() ? 'tap' : fallbackEvent;
+			return M.isBetaGroupMember() ? 'tap' : fallbackEvent;
 		}
 	} );
 
