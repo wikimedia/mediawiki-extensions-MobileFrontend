@@ -84,6 +84,24 @@
       "revId": "266ed235161689b37254947c9160997ec0811a7c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_693314f4",
+        "filename": "javascripts/modules/languagesNew/languages.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-26T19:25:23Z",
+      "side": 1,
+      "message": "Well, as I said in the commit message, the problem with using the API is that it doesn\u0027t return language variants. That is something that would need to be done upstream (I believe)... :p",
+      "parentUuid": "eeebdf60_e92724b0",
+      "revId": "266ed235161689b37254947c9160997ec0811a7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
