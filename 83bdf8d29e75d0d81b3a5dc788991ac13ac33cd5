@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_46f83f46",
+        "filename": "javascripts/modules/editorNew/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T18:57:41Z",
+      "side": 1,
+      "message": "I\u0027m not too keen on the addition of all these new lines - it looks like you are enforcing a code convention which is not documented here \nhttps://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions#JavaScript\n\nPlease be careful with unrelated changes in diffs - they can cause confusion to those reading them.\n\nI\u0027m fine with imposing this convention if we think it is useful but in the context of this commit it is strange.",
+      "revId": "83bdf8d29e75d0d81b3a5dc788991ac13ac33cd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
