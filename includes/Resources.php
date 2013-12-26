@@ -184,6 +184,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.head',
 			'mobile.templates',
 			'mobile.user',
+			'jquery.cookie',
 		),
 		'scripts' => array(
 			'javascripts/common/Router.js',
