@@ -16,6 +16,24 @@
       "revId": "26c2ddfbe6c46797e2ea648dcf99d077fb0e529b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_861c071a",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 513,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-26T18:12:49Z",
+      "side": 1,
+      "message": "Special:MobileOptions. The other mobile options are like this as well so probably better to be consistent.",
+      "parentUuid": "eeebdf60_72c0a22f",
+      "revId": "26c2ddfbe6c46797e2ea648dcf99d077fb0e529b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
