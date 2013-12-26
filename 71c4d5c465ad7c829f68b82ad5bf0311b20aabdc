@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_bf802e4c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T23:24:15Z",
+      "side": 1,
+      "message": "eep whitespace!",
+      "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_9f856a5d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-26T23:24:15Z",
+      "side": 1,
+      "message": "Unrelated whitespace change.",
+      "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
