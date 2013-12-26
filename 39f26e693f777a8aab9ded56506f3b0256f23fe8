@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_097128a7",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-26T19:31:12Z",
+      "side": 1,
+      "message": "Why just for the headings? I think we\u0027ve had this highlight since I remember.\n\nIf we want to remove the blue background highlight, we should do it consistently everywhere, shouldn\u0027t we? Plus, this duplicates the rule form common-js.less in beta and alpha.",
+      "revId": "39f26e693f777a8aab9ded56506f3b0256f23fe8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
