@@ -8,7 +8,7 @@
 		defaults: {
 			headerButtonsListClassName: 'v-border bottom-border',
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
-			continueMsg: mw.msg( 'mobile-frontend-overlay-continue' )
+			fixedHeader: true
 		}
 	} );
 

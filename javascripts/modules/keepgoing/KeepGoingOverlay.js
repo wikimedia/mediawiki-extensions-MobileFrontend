@@ -17,12 +17,20 @@
 			heading: mw.msg( 'mobilefrontend-keepgoing-saved-title' ),
 			cancel: mw.msg( 'mobilefrontend-keepgoing-cancel' ),
 			contentClass: 'content vertical-margin',
-			campaign: 'mobile-keepgoing'
+			campaign: 'mobile-keepgoing',
+			fixedHeader: false,
+			headerButtonsListClassName: '',
+			headerButtons: [
+				{ className: 'continue icon', msg: mw.msg( 'mobile-frontend-overlay-continue' ) }
+			]
 		},
 		className: 'overlay overlay-bottom position-fixed',
 		closeOnContentTap: true,
 		fullScreen: false,
-		template: M.template.get( 'keepgoing/KeepGoingOverlay' ),
+		templatePartials: {
+			content: M.template.get( 'keepgoing/KeepGoingOverlay' )
+		},
+
 		log: function( status ) {
 			mobileWebCta.log( status, this.options.campaign, this.options.step );
 		},
