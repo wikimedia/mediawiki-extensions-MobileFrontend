@@ -30,7 +30,8 @@
 			inBetaOrAlpha: M.isBetaGroupMember(),
 			isMainPage: false,
 			talkLabel: mw.msg( 'mobile-frontend-talk-overlay-header' ),
-			editLabel: mw.msg( 'mobile-frontend-editor-edit' )
+			editLabel: mw.msg( 'mobile-frontend-editor-edit' ),
+			languageLabel: mw.msg( 'mobile-frontend-language-article-heading' )
 		},
 
 		isMainPage: function() {
@@ -53,18 +54,20 @@
 
 					_super.call( self, options );
 
-					// FIXME: currently wasteful due to bug 40678
-					M.pageApi.getPageLanguages( pageTitle ).done( function( langlinks ) {
-						var template = M.template.get( 'languageSection' ),
-							data = {
-								langlinks: langlinks,
-								heading: mw.msg( 'mobile-frontend-language-article-heading' ),
-								description: mw.msg( 'mobile-frontend-language-header', langlinks.length )
-							};
+					// FIXME: remove when Special:Languages link goes stable
+					if ( !M.isBetaGroupMember() ) {
+						M.pageApi.getPageLanguages( pageTitle ).done( function( langlinks ) {
+							var template = M.template.get( 'languageSection' ),
+								data = {
+									langlinks: langlinks,
+									heading: mw.msg( 'mobile-frontend-language-article-heading' ),
+									description: mw.msg( 'mobile-frontend-language-header', langlinks.length )
+								};
 
-						$el.find( '#mw-mf-language-section' ).html( template.render( data ) );
-						M.emit( 'languages-loaded' );
-					} );
+							$el.find( '#mw-mf-language-section' ).html( template.render( data ) );
+							M.emit( 'languages-loaded' );
+						} );
+					}
 
 					// reset loader
 					$el.removeClass( 'spinner loading' );

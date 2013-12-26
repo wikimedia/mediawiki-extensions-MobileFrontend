@@ -126,6 +126,8 @@
 		/**
 		 * Retrieve available languages for a given title
 		 *
+		 * FIXME: Return language variants as well. Requires an upstream change.
+		 *
 		 * @param {string} title the title of the page languages should be retrieved for
 		 * @return {jQuery.Deferred} which is called with a mapping of language codes to language names
 		 */

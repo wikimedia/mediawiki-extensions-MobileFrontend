@@ -3,48 +3,34 @@
 	var LanguageOverlay = M.require( 'languagesNew/LanguageOverlay' );
 
 	/**
-	 * Takes a list of languages and transforms them into an array for use in a LanguageOverlay
-	 *
-	 * @returns {Array}
+	 * Hijack the Special:Languages link and replace it with a trigger to a LanguageOverlay
+	 * that displays the same data
 	 */
-	function parseList( $list ) {
-		var list = [];
-		$list.find( 'li' ).each( function() {
-			var $a = $( this ).find( 'a' ), lang, pageName = $a.attr( 'title' );
-
-			lang = { lang: $a.attr( 'lang' ), langName: $a.text(), url: $a.attr( 'href' ) };
-			if ( pageName ) {
-				lang.pageName = pageName;
-			}
-			list.push( lang );
-		} );
-		return list;
-	}
-
 	function initButton() {
-		var $section = $( '#mw-mf-language-section' ),
-			$h2 = $section.find( 'h2' ),
-			languages = parseList( $section.find( '#mw-mf-language-selection' ) ),
-			variants = parseList( $section.find( '#mw-mf-language-variant-selection' ) );
+		var $langlink = $( '#page-secondary-actions .languageSelector' );
 
-		// assume the current language is not present
-		if ( languages.length > 0 || variants.length > 1 ) {
-			$( '<button>' ).text( $h2.text() ).
-				addClass( 'languageSelector' ).
-				on( 'click', function() {
-					new LanguageOverlay( {
-						variants: variants,
-						languages: languages
-					} ).show();
-				} ).insertBefore( $section );
+		if ( $langlink.length ) {
+			$langlink.on( 'click', function ( e ) {
+				e.preventDefault();
+
+				var LoadingOverlay = M.require( 'LoadingOverlayNew' ),
+					loadingOverlay = new LoadingOverlay();
+				loadingOverlay.show();
+
+				// FIXME: Once getPageLanguages() can return language variants,
+				// pass these to languageOverlay as well.
+				M.pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( langlinks ) {
+					var languageOverlay = new LanguageOverlay( {
+							languages: langlinks
+						} );
+					loadingOverlay.hide();
+					languageOverlay.show();
+				} );
+			} );
 		}
-		$section.remove();
 	}
 
 	$( initButton );
-	M.on( 'languages-loaded', initButton );
-	M.define( 'modules/languagesNew/languages', {
-		_parseList: parseList
-	} );
+	M.on( 'page-loaded', initButton );
 
 }( mw.mobileFrontend, jQuery ) );

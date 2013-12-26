@@ -9,7 +9,18 @@ class MobileTemplateBeta extends MobileTemplate {
 
 	protected function renderMetaSections() {
 		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
-		parent::renderMetaSections();
+
+		// If languages are available, render a languages link
+		if ( $this->data['language_urls'] ) {
+			$languageUrl = SpecialPage::getTitleFor( 'MobileLanguages', $this->getSkin()->getTitle() )->getLocalURL();
+			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
+
+			echo Html::element( 'a', array(
+				'class' => 'button languageSelector',
+				'href' => $languageUrl
+				), $languageLabel );
+		}
+
 		echo Html::closeElement( 'div' );
 	}
 

@@ -6,7 +6,7 @@
 <ul class="page-list">
 	{{#variants}}
 		<li>
-			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langName}}</span>{{#pageName}}  ({{pageName}}){{/pageName}}</a>
+			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langname}}</span>{{#*}} ({{*}}){{/*}}</a>
 		</li>
 	{{/variants}}
 </ul>
@@ -18,7 +18,7 @@
 <ul class="page-list">
 	{{#languages}}
 		<li {{#preferred}}class="preferred"{{/preferred}}>
-			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langName}}</span>{{#pageName}} ({{pageName}}){{/pageName}}</a>
+			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langname}}</span>{{#*}} ({{*}}){{/*}}</a>
 		</li>
 	{{/languages}}
 </ul>
