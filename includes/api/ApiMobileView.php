@@ -273,7 +273,7 @@ class ApiMobileView extends ApiBase {
 	}
 
 	private function getData( Title $title, $noImages ) {
-		global $wgMemc, $wgUseTidy, $wgMFMinCachedPageSize;
+		global $wgMemc, $wgUseTidy, $wgMFTidyMobileViewSections, $wgMFMinCachedPageSize;
 
 		wfProfileIn( __METHOD__ );
 		$wp = $this->makeWikiPage( $title );
@@ -353,7 +353,7 @@ class ApiMobileView extends ApiBase {
 				if ( count( $data['text'] ) ) {
 					$chunk = "<h$chunk";
 				}
-				if ( $wgUseTidy && count( $chunks ) > 1 ) {
+				if ( $wgUseTidy && $wgMFTidyMobileViewSections && count( $chunks ) > 1 ) {
 					wfProfileIn( __METHOD__ . '-tidy' );
 					$chunk = MWTidy::tidy( $chunk );
 					wfProfileOut( __METHOD__ . '-tidy' );
