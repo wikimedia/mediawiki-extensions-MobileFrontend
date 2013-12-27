@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_7ffe2637",
+        "filename": "less/common/beta/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:49:17Z",
+      "side": 1,
+      "message": "Fair point. The New suffix is super confusing- I\u0027d rather in future we did something different (I was editing editor.less earlier rather than editorNew.less)",
+      "parentUuid": "eeebdf60_26badb1e",
+      "revId": "d49c8ab2db9d6d982c294302d7ea4d14e5dfe2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_c680cf4d",
         "filename": "less/common/beta/ui.less",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_3ff89e45",
+        "filename": "less/common/beta/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:49:17Z",
+      "side": 1,
+      "message": "They are copied from overlayNew.less. I was getting a few headaches trying to make them consistent and use variables but will try and have another go to have some more generic rules.",
+      "parentUuid": "eeebdf60_c680cf4d",
+      "revId": "d49c8ab2db9d6d982c294302d7ea4d14e5dfe2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_0687d767",
         "filename": "less/variables.less",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-12-26T17:38:54Z",
       "side": 1,
       "message": "Why not do it now?",
+      "revId": "d49c8ab2db9d6d982c294302d7ea4d14e5dfe2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_9fa0ca3f",
+        "filename": "less/variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:49:17Z",
+      "side": 1,
+      "message": "Renames scare me. I prefer smaller commits. If you prefer when you are happy with the rest of the patch I can do a commit before this one that does the change.",
+      "parentUuid": "eeebdf60_0687d767",
       "revId": "d49c8ab2db9d6d982c294302d7ea4d14e5dfe2cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
