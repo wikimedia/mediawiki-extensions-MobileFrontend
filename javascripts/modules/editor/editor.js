@@ -74,6 +74,7 @@
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 					loadingOverlay.hide();
 					result.resolve( new VisualEditorOverlay( {
+						// FIXME: use wgPageName (?)
 						title: ns ? ns + ':' + title : title,
 						sectionId: sectionId
 					} ) );
@@ -84,6 +85,7 @@
 
 					loadingOverlay.hide();
 					result.resolve( new EditorOverlay( {
+						// FIXME: use wgPageName (?)
 						title: ns ? ns + ':' + title : title,
 						isNew: isNew,
 						isNewEditor: user.getEditCount() === 0,
