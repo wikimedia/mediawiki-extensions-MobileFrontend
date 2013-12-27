@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_f5b7f7d1",
+        "filename": "less/common/reset.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T14:09:43Z",
+      "side": 1,
+      "message": "Let\u0027s move it to line 31, there\u0027s no need to set it on anything else than body.",
+      "revId": "f2c6df9751a88cb4bf4e44624f2a65a56a9c28e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
