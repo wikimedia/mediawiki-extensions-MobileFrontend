@@ -37,6 +37,11 @@ interface IDeviceProperties {
 	 */
 	function isMobileDevice();
 
+	/**
+	 * Whether the device is tablet. If this is true, isMobileDevice() is also true
+	 * @return bool
+	 */
+	function isTablet();
 }
 
 interface IDeviceDetector {
@@ -55,6 +60,7 @@ class DeviceProperties implements IDeviceProperties {
 	private $userAgent,
 		$acceptHeader,
 		$isMobile = null,
+		$tablet = null,
 		$format = null;
 
 	public function __construct( $userAgent, $acceptHeader ) {
@@ -94,6 +100,16 @@ class DeviceProperties implements IDeviceProperties {
 			$this->isMobile = $this->detectMobileDevice();
 		}
 		return $this->isMobile;
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function isTablet() {
+		if ( is_null( $this->tablet ) ) {
+			$this->tablet = $this->detectTablet();
+		}
+		return $this->tablet;
 	}
 
 	/**
@@ -164,9 +180,29 @@ class DeviceProperties implements IDeviceProperties {
 		wfProfileOut( __METHOD__ );
 		return $isMobile;
 	}
+
+	private function detectTablet() {
+		wfProfileIn( __METHOD__ );
+
+		$pattern = '/(iPad|Android.3|Tablet|PlayBook|Wii)/i'; // @todo: Kindle?
+		$result = (bool)preg_match( $pattern, $this->userAgent );
+
+		wfProfileOut( __METHOD__ );
+		return $result;
+	}
 }
 
-class HtmlDeviceProperties implements IDeviceProperties {
+abstract class PredefinedDeviceProperties implements IDeviceProperties {
+	/**
+	 * This class's descendants should only be instantiated with $wgMFAutodetectMobileView set to true,
+	 * otherwise all attempts to check for tabletness
+	 */
+	function isTablet() {
+		throw new MWException( __METHOD__ . '() called!' );
+	}
+}
+
+class HtmlDeviceProperties extends PredefinedDeviceProperties {
 
 	/**
 	 * @return string
@@ -183,7 +219,7 @@ class HtmlDeviceProperties implements IDeviceProperties {
 	}
 }
 
-class WmlDeviceProperties implements IDeviceProperties {
+class WmlDeviceProperties extends PredefinedDeviceProperties {
 
 	/**
 	 * @return string

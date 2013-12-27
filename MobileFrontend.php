@@ -365,6 +365,11 @@ $wgMFMinCachedPageSize = 64 * 1024;
 $wgMFAutodetectMobileView = false;
 
 /**
+ * Controls whether tablets should be shown the mobile site. Works only if $wgMFAutodetectMobileView is true.
+ */
+$wgMFShowMobileViewToTablets = false;
+
+/**
  * (wiki)text to append to photo description during photo upload.
  */
 $wgMFPhotoUploadAppendToDesc = '';
