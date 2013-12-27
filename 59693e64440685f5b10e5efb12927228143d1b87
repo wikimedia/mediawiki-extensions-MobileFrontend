@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_70fbf544",
+        "filename": "javascripts/externals/epoch.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:59:15Z",
+      "side": 1,
+      "message": "Not sure what this line is doing. Also, h.state would be less confusing.",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_90d799c4",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:59:15Z",
+      "side": 1,
+      "message": "I think \"openState[id] \u003d isCollapsed\" is enough and then instead of \"if ( id in initOpenState )\" you can do \"if ( initOpenState[id] )\"",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_1065c941",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:59:15Z",
+      "side": 1,
+      "message": "I think we don\u0027t need two ifs:\n\nif ( initOpenState \u0026\u0026 initOpenState.hasOwnProperty( id ) )",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_5052316b",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:59:15Z",
+      "side": 1,
+      "message": "if can go with else:\n\nelse if ( ... ) {\n\nBut now that I look at it, the whole thing can be just a single if:\n\nif (\n  ( initOpenState \u0026\u0026 initOpenState.hasOwnProperty( id ) ) ||\n  ( M.isWideScreen() \u0026\u0026 M.isBetaGroupMember() ) ||\n  ( expandSections \u0026\u0026 M.isAlphaGroupMember() )\n) {\n  toggle( $elem );\n}",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
