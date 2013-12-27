@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_d0952137",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:31:59Z",
+      "side": 1,
+      "message": "Doesn\u0027t seem to be necessary (looks the same without it).",
+      "revId": "2437f8365387e155fc6329e3802573d9486b933c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_f0902548",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:31:59Z",
+      "side": 1,
+      "message": "I think designers said they prefer flat colors, not gradients but you can double check with them.",
+      "revId": "2437f8365387e155fc6329e3802573d9486b933c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b09a9d64",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:31:59Z",
+      "side": 1,
+      "message": "I think it should be @contentMargin instead.",
+      "revId": "2437f8365387e155fc6329e3802573d9486b933c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_3077ad37",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:31:59Z",
+      "side": 1,
+      "message": "I don\u0027t think this is desired from all the conversations I had with Kaity about new overlay designs. I remember her saying that only the line below the header should have this margin. Double check with her.",
+      "revId": "2437f8365387e155fc6329e3802573d9486b933c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
