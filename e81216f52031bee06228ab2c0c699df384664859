@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_b04dfd9d",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:01:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_bad39c60",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_104a695f",
         "filename": "scripts/gerrit.py",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-27T16:03:31Z",
       "side": 1,
       "message": "Doing stuff like this makes it incredibly difficult to figure out what call() means in context. Is it really that hard to just type subprocess.call()?",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_d048818e",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:01:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_104a695f",
       "revId": "e81216f52031bee06228ab2c0c699df384664859",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_1036e900",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:01:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_b0585d36",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_9ac8d8ab",
         "filename": "scripts/gerrit.py",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2013-12-27T05:29:39Z",
       "side": 1,
       "message": "This is simple enough that you can just use urllib2 for it.",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_d016415a",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:01:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_9ac8d8ab",
       "revId": "e81216f52031bee06228ab2c0c699df384664859",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_f02145ad",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:01:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_703ad5c1",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_903d59bb",
         "filename": "scripts/gerrit.py",
         "patchSetId": 3
@@ -98,6 +188,24 @@
       "writtenOn": "2013-12-27T16:03:31Z",
       "side": 1,
       "message": "patches.sort(operator.attrgetter(\"score\", \"age\"))\n\nThen remove that whole sorter() function. As an alternative, you could just use bisect inside the foreach loop and keep the list sorted as you add things to it.",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b01bbd81",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:01:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_903d59bb",
       "revId": "e81216f52031bee06228ab2c0c699df384664859",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
