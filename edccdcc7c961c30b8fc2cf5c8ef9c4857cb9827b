@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_7f58668c",
+        "filename": "templates/page.html",
+        "patchSetId": 13
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:32:26Z",
+      "side": 1,
+      "message": "Move this line without the conditional statement above \u003ca href\u003d\"{{historyUrl}}\"",
+      "revId": "edccdcc7c961c30b8fc2cf5c8ef9c4857cb9827b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_dfc89227",
+        "filename": "templates/page.html",
+        "patchSetId": 13
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:32:26Z",
+      "side": 1,
+      "message": "languageLabel will need to be defined as a defaults in Page.js above talkLabel: mw.msg( \u0027mobile-frontend-talk-overlay-header\u0027 ),\n\nCurrently this returns empty string.\n\nYou\u0027ll probably need to update Resources.php as well in mobile.stable.common",
+      "revId": "edccdcc7c961c30b8fc2cf5c8ef9c4857cb9827b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_df69b21e",
+        "filename": "templates/page.html",
+        "patchSetId": 13
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:32:26Z",
+      "side": 1,
+      "message": "This doesn\u0027t close anything now...",
+      "revId": "edccdcc7c961c30b8fc2cf5c8ef9c4857cb9827b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
