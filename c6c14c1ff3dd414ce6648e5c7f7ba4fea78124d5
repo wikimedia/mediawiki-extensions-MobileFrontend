@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_30bd6dae",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:39:32Z",
+      "side": 1,
+      "message": "Maybe .panel input instead? Just a thought, I\u0027m fine with the way it is now too.",
+      "revId": "c6c14c1ff3dd414ce6648e5c7f7ba4fea78124d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_90c6794d",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T17:39:32Z",
+      "side": 1,
+      "message": "Oops.",
+      "revId": "c6c14c1ff3dd414ce6648e5c7f7ba4fea78124d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
