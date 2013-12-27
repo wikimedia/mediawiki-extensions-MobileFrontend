@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_3f5c1e4e",
+        "filename": "includes/skins/MobileTemplateBeta.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:54:25Z",
+      "side": 1,
+      "message": "Oversight.. this points to Special:Languages not Special:MobileLanguages :(\n\nAlso getLocalUrl is probably suitable here!",
+      "revId": "c94b6fb9087d32a00ecbd0cf09a75df1e6255133",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
