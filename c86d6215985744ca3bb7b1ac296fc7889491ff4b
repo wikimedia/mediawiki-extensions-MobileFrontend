@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_55a90377",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T14:06:59Z",
+      "side": 1,
+      "message": "Jon, that confuses me horribly! ;)",
+      "revId": "c86d6215985744ca3bb7b1ac296fc7889491ff4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
