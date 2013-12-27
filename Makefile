@@ -1,5 +1,8 @@
 MW_INSTALL_PATH ?= ../..
 
+gerrit:
+	@scripts/gerrit.py
+
 kss: nodecheck
 	# FIXME: Use more up to date Ruby version
 	@node_modules/.bin/kss-node less/ less/ -l less/mobile.less -t styleguide-template
