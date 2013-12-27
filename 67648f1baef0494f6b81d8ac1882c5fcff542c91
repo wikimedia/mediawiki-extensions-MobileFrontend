@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_9580abfa",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T13:47:13Z",
+      "side": 1,
+      "message": "Are we sure we want to set them to the same thing? Wasn\u0027t one of them with the namespace? Do we use all 3?",
+      "revId": "67648f1baef0494f6b81d8ac1882c5fcff542c91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
