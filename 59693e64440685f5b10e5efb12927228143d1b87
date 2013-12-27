@@ -88,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_ebe1532a",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:22:20Z",
+      "side": 1,
+      "message": "history-alpha.js already does this - it would make sense to put this code there rather than have 2 replace state calls.",
+      "parentUuid": "eeebdf60_7fc866aa",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_1065c941",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 1
