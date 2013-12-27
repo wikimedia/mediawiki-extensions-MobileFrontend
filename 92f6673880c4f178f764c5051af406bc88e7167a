@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_757887bf",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-27T15:30:17Z",
+      "side": 1,
+      "message": "Message is missing output format. See https://www.mediawiki.org/wiki/Manual:Messages_API#Using_messages_in_PHP for details.",
+      "revId": "92f6673880c4f178f764c5051af406bc88e7167a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b5760fd4",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-27T15:30:17Z",
+      "side": 1,
+      "message": "Message is missing output format. See https://www.mediawiki.org/wiki/Manual:Messages_API#Using_messages_in_PHP for details.",
+      "revId": "92f6673880c4f178f764c5051af406bc88e7167a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
