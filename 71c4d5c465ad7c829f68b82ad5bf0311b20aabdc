@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_7f9f4656",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-27T00:29:01Z",
+      "side": 1,
+      "message": "These 2 messages don\u0027t have qqq messages.",
+      "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_9f856a5d",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 4
@@ -30,6 +47,91 @@
       "writtenOn": "2013-12-26T23:24:15Z",
       "side": 1,
       "message": "Unrelated whitespace change.",
+      "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_bf95ce37",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 531,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-27T00:29:01Z",
+      "side": 1,
+      "message": "This seems to not exist in the en array.",
+      "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_9f9a0a65",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-27T00:29:01Z",
+      "side": 1,
+      "message": "Try to keep the qqq message in the same order as the en messages.",
+      "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_5fcfe282",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-27T00:29:01Z",
+      "side": 1,
+      "message": "member variable definitions go above the variable. See:\nhttps://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Comments_and_documentation",
+      "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_3fa3fea9",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-27T00:29:01Z",
+      "side": 1,
+      "message": "You should check to make sure $data[\u0027query\u0027][\u0027pages\u0027] is set just to be paranoid.",
+      "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_7f8066f9",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-27T00:29:01Z",
+      "side": 1,
+      "message": "$langObject parameter needs to be documented.",
       "revId": "71c4d5c465ad7c829f68b82ad5bf0311b20aabdc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
