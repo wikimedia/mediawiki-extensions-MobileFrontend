@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_5fd482be",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:38:09Z",
+      "side": 1,
+      "message": "Do we want it to be true by default?!",
+      "revId": "62b847b1a67099721e6336e4eeb7fea7ede8a4eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_3fe1be97",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T01:38:09Z",
+      "side": 1,
+      "message": "ws",
+      "revId": "62b847b1a67099721e6336e4eeb7fea7ede8a4eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
