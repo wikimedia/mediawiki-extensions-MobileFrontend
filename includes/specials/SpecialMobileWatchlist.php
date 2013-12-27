@@ -25,7 +25,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			SpecialPage::getTitleFor( 'Userlogin' ),
 			$this->msg( 'loginreqlink' )->escaped(),
 			array(),
-			array( 'returnto' => $this->getTitle()->getPrefixedText() )
+			array( 'returnto' => $this->getPageTitle()->getPrefixedText() )
 		);
 		$out->addHTML(
 			Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
@@ -190,7 +190,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				$itemAttrs['class'] = 'selected';
 			}
 			$linkAttrs = array(
-				'href' => $this->getTitle()->getLocalUrl(
+				'href' => $this->getPageTitle()->getLocalUrl(
 					array(
 						'filter' => $filter,
 						'watchlistview' => 'feed',

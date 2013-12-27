@@ -72,7 +72,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$saveSettings = $this->msg( 'mobile-frontend-save-settings' )->escaped();
 		$onoff = '<span class="mw-mf-settings-on">' . $this->msg( 'mobile-frontend-on' )->escaped() . '</span><span class="mw-mf-settings-off">' .
 			$this->msg( 'mobile-frontend-off' )->escaped() .'</span>';
-		$action = $this->getTitle()->getLocalURL();
+		$action = $this->getPageTitle()->getLocalURL();
 		$html = Html::openElement( 'form',
 			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
 		);
@@ -219,7 +219,7 @@ HTML;
 		if ( $returnToTitle ) {
 			$url = $returnToTitle->getFullURL();
 		} else {
-			$url = $this->getTitle()->getFullURL( 'success' );
+			$url = $this->getPageTitle()->getFullURL( 'success' );
 		}
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
 	}

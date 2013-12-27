@@ -18,7 +18,7 @@ class SpecialUploads extends MobileSpecialPage {
 
 		// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
 		if( $user->isAnon() ) {
-			$returnTo = $this->getTitle()->getPrefixedText();
+			$returnTo = $this->getPageTitle()->getPrefixedText();
 			$loginLink = Linker::link(
 				SpecialPage::getTitleFor( 'UserLogin' ),
 				wfMessage( 'mobile-frontend-user-account' )->plain(),
