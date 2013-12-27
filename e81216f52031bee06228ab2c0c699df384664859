@@ -19,6 +19,40 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_104a695f",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2013-12-27T16:03:31Z",
+      "side": 1,
+      "message": "Doing stuff like this makes it incredibly difficult to figure out what call() means in context. Is it really that hard to just type subprocess.call()?",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b0585d36",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2013-12-27T16:03:31Z",
+      "side": 1,
+      "message": "Why use datetime.datetime here if you use dt everywhere else?",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_9ac8d8ab",
         "filename": "scripts/gerrit.py",
         "patchSetId": 3
@@ -30,6 +64,40 @@
       "writtenOn": "2013-12-27T05:29:39Z",
       "side": 1,
       "message": "This is simple enough that you can just use urllib2 for it.",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_703ad5c1",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2013-12-27T16:03:31Z",
+      "side": 1,
+      "message": "str(number)?",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_903d59bb",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2013-12-27T16:03:31Z",
+      "side": 1,
+      "message": "patches.sort(operator.attrgetter(\"score\", \"age\"))\n\nThen remove that whole sorter() function. As an alternative, you could just use bisect inside the foreach loop and keep the list sorted as you add things to it.",
       "revId": "e81216f52031bee06228ab2c0c699df384664859",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
