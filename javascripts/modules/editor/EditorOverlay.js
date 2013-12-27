@@ -109,7 +109,18 @@
 		},
 
 		_showPreview: function() {
-			var self = this;
+			var self = this, params = {
+				action: 'parse',
+				// Enable section preview mode to avoid errors (bug 49218)
+				sectionpreview: true,
+				// needed for pre-save transform to work (bug 53692)
+				pst: true,
+				// Output mobile HTML (bug 54243)
+				mobileformat: true,
+				title: self.options.title,
+				text: self.$content.val(),
+				prop: 'text'
+			};
 
 			// log save button click
 			this.log( 'save' );
@@ -126,18 +137,10 @@
 				} );
 			}
 
-			api.post( {
-				action: 'parse',
-				// Enable section preview mode to avoid errors (bug 49218)
-				sectionpreview: true,
-				// needed for pre-save transform to work (bug 53692)
-				pst: true,
-				// Output mobile HTML (bug 54243)
-				mobileformat: true,
-				title: self.options.title,
-				text: self.$content.val(),
-				prop: 'text'
-			} ).then( function( resp ) {
+			if ( mw.config.get( 'wgIsMainPage' ) ) {
+				params.mainpage = 1; // Setting it to 0 will have the same effect
+			}
+			api.post( params ).then( function( resp ) {
 				var html;
 				if ( resp && resp.parse && resp.parse.text ) {
 					html = resp.parse.text['*'];
