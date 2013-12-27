@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_bad39c60",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2013-12-27T05:29:39Z",
+      "side": 1,
+      "message": "No need to use simplejson, Python has had a standard library module for json (import json) since 2.6.",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_9ac8d8ab",
+        "filename": "scripts/gerrit.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2013-12-27T05:29:39Z",
+      "side": 1,
+      "message": "This is simple enough that you can just use urllib2 for it.",
+      "revId": "e81216f52031bee06228ab2c0c699df384664859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
