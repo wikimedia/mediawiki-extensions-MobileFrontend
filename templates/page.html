@@ -21,10 +21,13 @@
 		data-content="{{text}}">
 	</div>
 	{{/sections}}
-	{{#inBetaOrAlpha}}<div id="page-secondary-actions">{{/inBetaOrAlpha}}
-	<div class="section" id="mw-mf-language-section"></div>
-	{{#inBetaOrAlpha}}</div>{{/inBetaOrAlpha}}
+	{{#inBetaOrAlpha}}
+	<div id="page-secondary-actions">
+		<a class="button languageSelector">{{languageLabel}}</a>
+	</div>
+	{{/inBetaOrAlpha}}
 	{{^inBetaOrAlpha}}
+	<div class="section" id="mw-mf-language-section"></div>
 	<a href="{{historyUrl}}" id="mw-mf-last-modified" data-timestamp="{{lastModifiedTimestamp}}"
 		data-user-name="{{lastModifiedUserName}}" data-user-gender="{{lastModifiedUserGender}}"
 		></a>

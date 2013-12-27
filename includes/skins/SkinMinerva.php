@@ -230,6 +230,9 @@ class SkinMinerva extends SkinTemplate {
 	/**
 	 * Rewrites the language list so that it cannot be contaminated by other extensions with things other than languages
 	 * See bug 57094.
+	 *
+	 * FIXME: Remove when Special:Languages link goes stable
+	 *
 	 * @param QuickTemplate
 	 */
 	protected function prepareLanguages( $tpl ) {
