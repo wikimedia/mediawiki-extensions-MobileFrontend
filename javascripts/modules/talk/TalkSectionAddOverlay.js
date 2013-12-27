@@ -3,6 +3,7 @@
 	var
 		Overlay = M.require( 'OverlayNew' ),
 		api = M.require( 'api' ),
+		toast = M.require( 'toast' ),
 		TalkSectionAddOverlay;
 
 	TalkSectionAddOverlay = Overlay.extend( {
@@ -60,8 +61,8 @@
 						self.hide();
 						// close the list of topics overlay as well
 						self.parent.hide();
-						// FIXME: give nicer user experience - toast message would be nice at least!
 						M.pageApi.invalidatePage( self.title );
+						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
 					} );
 				} );
 			} else {
