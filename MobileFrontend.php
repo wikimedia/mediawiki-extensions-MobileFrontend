@@ -77,6 +77,7 @@ $autoloadClasses = array (
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
 	'SpecialMobileContributions' => 'specials/SpecialMobileContributions',
 	'SpecialNearby' => 'specials/SpecialNearby',
+	'SpecialMobileLanguages' => 'specials/SpecialMobileLanguages',
 	'SpecialMobileNotifications' => 'specials/SpecialMobileNotifications',
 	'MobileSpecialPage' => 'specials/MobileSpecialPage',
 	'MobileSpecialPageFeed' => 'specials/MobileSpecialPageFeed',
@@ -144,6 +145,7 @@ $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
 $wgSpecialPages['MobileEditor'] = 'SpecialMobileEditor';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
+$wgSpecialPages['MobileLanguages'] = 'SpecialMobileLanguages';
 
 function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
