@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_6b4f8398",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-12-27T20:56:42Z",
+      "side": 1,
+      "message": "Is there any risk that this will affect all responses?",
+      "revId": "087063d19f460866d48b88105690cca2153be9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
