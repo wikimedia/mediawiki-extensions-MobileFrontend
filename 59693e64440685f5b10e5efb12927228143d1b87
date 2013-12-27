@@ -19,6 +19,41 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_8bbac71c",
+        "filename": "javascripts/externals/epoch.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:20:28Z",
+      "side": 1,
+      "message": "I think what would be better is to pass a state as a parameter to enable.",
+      "parentUuid": "eeebdf60_70fbf544",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_9fd32a61",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:20:28Z",
+      "side": 1,
+      "message": "I would suggest breaking this out into a separate JavaScript file and binding to the section-toggle event.",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_90d799c4",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 1
@@ -30,6 +65,23 @@
       "writtenOn": "2013-12-27T17:59:15Z",
       "side": 1,
       "message": "I think \"openState[id] \u003d isCollapsed\" is enough and then instead of \"if ( id in initOpenState )\" you can do \"if ( initOpenState[id] )\"",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_7fc866aa",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T19:20:28Z",
+      "side": 1,
+      "message": "Please don\u0027t!!",
       "revId": "59693e64440685f5b10e5efb12927228143d1b87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
