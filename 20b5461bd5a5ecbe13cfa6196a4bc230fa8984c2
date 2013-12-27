@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_7fd2a62d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T00:22:46Z",
+      "side": 1,
+      "message": "Just noticed this doesn\u0027t seem to be used?",
+      "revId": "20b5461bd5a5ecbe13cfa6196a4bc230fa8984c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
