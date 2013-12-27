@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_b015fd9e",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T17:47:40Z",
+      "side": 1,
+      "message": "We should use an option here rather than a config variable.",
+      "revId": "5ceda242ca61aff7519875432bc7419ef7f51079",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_f069451e",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-27T17:47:40Z",
+      "side": 1,
+      "message": "setting to true would make more sense assuming that has the same effect.",
+      "revId": "5ceda242ca61aff7519875432bc7419ef7f51079",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
