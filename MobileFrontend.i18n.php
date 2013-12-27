@@ -533,15 +533,6 @@ See also:
 {{Identical|On}}',
 	'mobile-frontend-featured-article' => 'The title that will appear before the element with the mf-tfa selector.',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
-	'mobile-frontend-languages-404-title' => 'Shown when no page is provided to Special:MobileLanguages.',
-	'mobile-frontend-languages-404-desc' => 'Error message on Special:MobileLanguages.',
-	'mobile-frontend-languages-header' => 'Header and title on the Special:MobileLanguages page.',
-	'mobile-frontend-languages-nonexistent-title' => 'Shown on Special:MobileLanguages when a nonexistent title is entered.',
-	'mobile-frontend-languages-text' => 'Introduction to the Special:Languages page.
-* $1 - page title
-* $2 - number of languages
-',
-	'mobile-frontend-languages-variant-header' => 'Header on the Special:MobileLanguages page.',
 	'mobile-frontend-language-heading' => 'The title for the list of languages for a page.
 {{Identical|Language}}',
 	'mobile-frontend-language-article-heading' => 'A heading within the page the content of which lists the other languages available for this page: translate the message considering the list to have an undetermined number of items.',
@@ -1065,7 +1056,7 @@ See also:
 
 Parameters:
 * $1 - username of user who talk page belongs to
-* $2 - the gender of that user',
+* $2 - (Optional) the gender of that user',
 	'mobile-frontend-profile-error' => 'Heading for errors on the profile page.',
 	'mobile-frontend-profile-noargs' => 'Message shown when no user profile URL is specified.
 
@@ -1551,6 +1542,7 @@ $messages['ary'] = array(
  * @author Nilamdyuti
  */
 $messages['as'] = array(
+	'nearby' => 'আপোনাৰ নিকট পৃষ্ঠাসমূহ',
 	'mobile-frontend-desc' => "মোবাইল ফ্ৰ'ণ্টএণ্ড",
 	'mobile-frontend-search-submit' => 'যাওক',
 	'mobile-frontend-home-button' => 'বেটুপাত',
@@ -1566,7 +1558,6 @@ $messages['as'] = array(
 	'mobile-frontend-save-settings' => 'ছেটিংসমূহ সাঁচক', # Fuzzy
 	'mobile-frontend-random-button' => 'যিকোনো',
 	'mobile-frontend-back-to-top-of-section' => 'এটা অনুচ্ছেদ ঘূৰি যাওক',
-	'mobile-frontend-close-section' => 'এই অনুচ্ছেদ বন্ধ কৰক',
 	'mobile-frontend-regular-site' => 'ডেক্সটপ সংস্কৰণ',
 	'mobile-frontend-wml-continue' => 'অব্যাহত ...',
 	'mobile-frontend-wml-back' => 'ঘূৰি যাওক...',
@@ -3148,6 +3139,7 @@ $messages['cdo'] = array(
 $messages['ce'] = array(
 	'mobilefrontend-keepgoing-suggest' => 'ХӀаъ',
 	'nearby' => 'Уллера чу хӀуманехь лаьцна агӀонаш',
+	'mobile-frontend-desc' => 'Мобилан интерфейс',
 	'mobile-frontend-search-submit' => 'Дехьа гӀо',
 	'mobile-frontend-home-button' => 'Цlехьа',
 	'mobile-frontend-settings-beta' => 'Бета',
@@ -3155,9 +3147,12 @@ $messages['ce'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'ЮхагӀо оцу дакъане',
 	'mobile-frontend-regular-site' => 'Хьажа гуттаралера Википеди агlоне', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Кхин дӀа ...',
-	'mobile-frontend-view' => 'Мобильни верси',
+	'mobile-frontend-view' => 'Мобилан верси',
+	'mobile-frontend-view-desktop' => 'Йоккха верси',
+	'mobile-frontend-view-mobile' => 'Мобилан',
 	'mobile-frontend-missing-image' => 'Сурт',
 	'mobile-frontend-featured-article' => 'Хаьржина яззам', # Fuzzy
+	'mobile-frontend-language-article-heading' => 'Еша кхечу маттахь',
 	'mobile-frontend-language-site-choose' => 'Лаха мотт',
 	'mobile-frontend-username' => 'Декъашхочун цӀе:',
 	'mobile-frontend-username-placeholder' => 'Декъашхочун цӀе',
@@ -3173,7 +3168,9 @@ $messages['ce'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 ТӀаьхьарлера {{GENDER:$1|нисдар дина}} {{PLURAL:$3|$3 шо}} хьалха] {{PLURAL:$5|цӀе хьулйина [$6 $2]|0=декъашхочо}}',
 	'mobile-frontend-placeholder-beta' => 'Лаха translatewiki.net чухула (бета-верси)',
 	'mobile-frontend-clear-search' => 'ЦӀанъян',
-	'mobile-frontend-copyright' => 'Йоза тlекхочучехь ду оцу хьола бакъойаларца <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike</a>, цхьайолчу хенахь хила мега хьоле хьаьжжина локхаллий таронца. Мадарра хьажа. <a href="http://wikimediafoundation.org/wiki/Terms_of_Use/ce">Лелоран хьал</a>. «{{SITENAME}}» — дlаязъйинайолу йохкаэцар доцуш вовшахтохаран <a href=\'http://www.wikimediafoundation.org/\'>«Хьундуз Викимедийа»</a>.', # Fuzzy
+	'mobile-frontend-privacy-link-text' => 'Къайлаха',
+	'mobile-frontend-copyright' => 'Чулацам лело мега $1 лицензица (кхениг билгалйина яцахь).',
+	'mobile-frontend-terms-text' => 'Лелоран хьал',
 	'mobile-frontend-main-menu-nearby' => 'Уллехь',
 	'mobile-frontend-main-menu-login' => 'Системин чугӀо',
 	'mobile-frontend-main-menu-upload' => 'Чуйаьхарш',
@@ -3759,9 +3756,9 @@ $messages['cy'] = array(
 	'mobile-frontend-nearby-link' => 'Darllen y dudalen hon yn gyfan',
 	'mobile-frontend-nearby-directions' => 'Llywio yma',
 	'mobile-frontend-donate-image-nouploads' => 'Dim uwchlwythiadau.',
-	'mobile-frontend-donate-image-login' => 'Rhaid mewngofnodi i weld eich uwchlwythiadau.', # Fuzzy
+	'mobile-frontend-donate-image-login' => "Chi a'ch tebyg sy'n rhoi ffeiliau cyfrwng i {{SITENAME}}.",
 	'mobile-frontend-photo-upload-disabled' => 'Nid oes angen llun ar y dudalen hon.',
-	'mobile-frontend-photo-upload-anon' => "Rhaid mewngofnodi i ychwanegu delwedd i'r dudalen hon.", # Fuzzy
+	'mobile-frontend-photo-upload-anon' => "Mewngofnodwch er mwyn ychwanegu delwedd i'r dudalen hon.",
 	'mobile-frontend-photo-upload-protected' => "Nid oes caniatâd gennych i ychwanegu delwedd i'r dudalen hon.",
 	'mobile-frontend-photo-upload-unavailable' => 'Nid yw eich porwr yn cynnal uwchlwytho delweddau.',
 	'mobile-frontend-photo-upload-generic' => 'Cyfrannu delwedd',
@@ -3782,7 +3779,7 @@ $messages['cy'] = array(
 	'mobile-frontend-watchlist-removed' => 'Tynnwyd $1 oddi ar eich rhestr wylio',
 	'mobile-frontend-watchlist-view' => 'Gweld eich rhestr wylio',
 	'mobile-frontend-watchlist-more' => 'rhagor',
-	'mobile-frontend-watchlist-cta' => "Rhaid mewngofnodi neu gofrestru er mwyn gwylio'r dudalen hon.", # Fuzzy
+	'mobile-frontend-watchlist-cta' => "Dilynwch hynt y dudalen hon a'r holl newidiadau iddi.",
 	'mobile-frontend-watchlist-cta-button-login' => 'Mewngofnodi',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Cofrestru',
 	'mobile-frontend-watch-login' => 'Rhaid mewngofnodi er mwyn gwylio tudalennau.', # Fuzzy
@@ -3878,8 +3875,8 @@ $messages['cy'] = array(
 	'mobile-frontend-editor-abusefilter-warning' => "Rhybudd: Ydych chi wir am roi'r golygiad hwn ar gadw? Efallai bod problem gan y golygiad.",
 	'mobile-frontend-editor-abusefilter-disallow' => "Ni ellir rhoi'r golgyiad ar gadw oherwydd bod problem i gael.",
 	'mobile-frontend-editor-abusefilter-read-more' => 'Darllen mwy',
-	'mobile-frontend-editor-editing-page' => "<strong>Wrthi'n golygu</strong> <span>$1</span>", # Fuzzy
-	'mobile-frontend-editor-previewing-page' => "<strong>Wrthi'n dangos rhagolwg</strong> <span>$1</span>", # Fuzzy
+	'mobile-frontend-editor-editing-page' => "<strong>Wrthi'n golygu</strong><span> $1</span>",
+	'mobile-frontend-editor-previewing-page' => "<strong>Wrthi'n dangos rhagolwg</strong><span> $1</span>",
 	'tag-mobile_edit' => 'Golygiad drwy declyn symudol',
 	'tag-mobile_edit-description' => 'Newidiwyd gyda theclyn symudol',
 	'mobile-frontend-drawer-cancel' => 'Diddymu',
@@ -9489,6 +9486,7 @@ $messages['it'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Ultima {{GENDER:$1|modifica}} {{PLURAL:$3|$3 anno|$3 anni}} fa] di {{PLURAL:$5|[$6 $2]|0=un utente anonimo}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Appena {{GENDER:$1|modificata}}] da {{PLURAL:$4|[$5 $2]|0=un utente anonimo}}.',
 	'mobile-frontend-learn-more' => 'Ulteriori informazioni',
+	'mobile-frontend-view-source' => 'Visualizza sorgente',
 	'mobile-frontend-account-create-submit' => 'Registrati',
 	'mobile-frontend-password-confirm-placeholder' => 'Conferma password',
 	'mobile-frontend-account-create-email-placeholder' => 'Indirizzo di posta elettronica (opzionale)',
@@ -9687,6 +9685,7 @@ in tutto il mondo',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Per saperne di più',
 	'mobile-frontend-editor-editing-page' => '<strong>Modificando</strong><span> $1</span>',
 	'mobile-frontend-editor-previewing-page' => '<strong>Anteprima</strong><span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Visualizza sorgente di</strong><span> $1</span>',
 	'tag-mobile_edit' => 'Modifica da mobile',
 	'tag-mobile_edit-description' => 'Modifica apportata dal sito per dispositivi mobili',
 	'mobile-frontend-drawer-cancel' => 'Annulla',
@@ -9724,6 +9723,8 @@ in tutto il mondo',
 	'mobile-frontend-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack-description' => 'Scopri le pagine che sono geograficamente vicine alla pagina di contenuto che stai attualmente leggendo.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Questa voce ha bisogno del tuo aiuto!',
+	'mobile-frontend-mainpage-cta-button' => 'Migliora questa voce',
 );
 
 /** Japanese (日本語)
@@ -12353,9 +12354,11 @@ $messages['mk'] = array(
 	'mobile-frontend-nearby-link' => 'Прочитајте ја страницава целосно',
 	'mobile-frontend-nearby-directions' => 'Појди тука',
 	'mobile-frontend-donate-image-nouploads' => 'Нема ништо подигнато.',
-	'mobile-frontend-donate-image-login' => 'Мора да сте најавени за да ги видите вашите подигања', # Fuzzy
+	'mobile-frontend-donate-image-login' => 'Слики и снимки на {{SITENAME}} дарувани од луѓе како Вас.',
+	'mobile-frontend-donate-image-login-action' => 'Најавете се за да ги споделите Вашите слики и снимки.',
+	'mobile-frontend-donate-image-signup-action' => 'Регистрирајте се за да ги споделите Вашите слики и снимки со светот.',
 	'mobile-frontend-photo-upload-disabled' => 'На страницава не ѝ треба ниедна слика.',
-	'mobile-frontend-photo-upload-anon' => 'Мора да сте најавени за да додавате слики во страницава.', # Fuzzy
+	'mobile-frontend-photo-upload-anon' => 'Најавете се за да ставите слика на страницава.',
 	'mobile-frontend-photo-upload-protected' => 'Немате дозвола да додавате слики на страницава.',
 	'mobile-frontend-photo-upload-unavailable' => 'Вашиот прелистувач не поддржува подигање на слики.',
 	'mobile-frontend-photo-upload-generic' => 'Приложете ваша слика',
@@ -12379,10 +12382,14 @@ $messages['mk'] = array(
 	'mobile-frontend-watchlist-removed' => '„$1“ е отстранета од набљудуваните',
 	'mobile-frontend-watchlist-view' => 'Погл. вашиот список на набљудувања',
 	'mobile-frontend-watchlist-more' => 'повеќе',
-	'mobile-frontend-watchlist-cta' => 'Најавете се или регистрирајте се за да ја набљудувате страницава.', # Fuzzy
+	'mobile-frontend-watchlist-cta' => 'Бидете во тек со сите случувања и измени на страницава.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Најава',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Регистрација',
-	'mobile-frontend-watch-login' => 'Мора да сте најавени за да набљудувате страници.', # Fuzzy
+	'mobile-frontend-watchlist-login-action' => 'Најавете се за да ја погледате.',
+	'mobile-frontend-watch-login' => 'Додај ја страницата „$1“ во набљудуваните.',
+	'mobile-frontend-edit-login' => 'Помогнете ни да ја подобриме страницата „$1“.',
+	'mobile-frontend-edit-login-action' => 'Најавете се за да уредувате.',
+	'mobile-frontend-edit-signup-action' => 'Регистрирајте се за да уредувате.',
 	'mobile-frontend-watchlist-a-z' => 'Список',
 	'mobile-frontend-watchlist-feed' => 'Изменети',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Стиснете на ѕвездата најгоре на страницата',
@@ -12446,11 +12453,14 @@ $messages['mk'] = array(
 	'mobile-frontend-image-heading-describe' => "'''Опишете''' ја сликата",
 	'mobile-frontend-image-uploading' => "Ја '''подигам''' сликата...",
 	'mobile-frontend-image-cancel-confirm' => 'Да го откажам подигањето?',
+	'mobile-frontend-editor-redirect-title' => 'Пренасочувам кон уредувачот...',
+	'mobile-frontend-editor-unavailable-header' => 'Уредувачот е недостапен',
 	'mobile-frontend-editor-unavailable' => 'Вашиот прелистувач моментално не поддржува мобилно уредување. Користете друг.',
 	'mobile-frontend-editor-undo-unsupported' => 'Поништувањето засега не е достапно на мобилни уреди.',
 	'mobile-frontend-editor-newpage-prompt' => 'Страницата не постои. Бидете смели — Направете ја!',
-	'mobile-frontend-editor-disabled' => 'Не ви е дозволено да ја уредувате оваа страница.', # Fuzzy
-	'mobile-frontend-editor-cta' => 'Мора да се најавите за да уредувате страници од мобилен уред.', # Fuzzy
+	'mobile-frontend-editor-disabled' => 'Страницава е заштитена за да се спречи вандализам.',
+	'mobile-frontend-editor-blocked' => 'Сметката ви е заклучена за уредување.',
+	'mobile-frontend-editor-cta' => 'Помогнете ни да ја подобриме страницава!',
 	'mobile-frontend-editor-edit' => 'Уреди',
 	'mobile-frontend-editor-continue' => 'Продолжи',
 	'mobile-frontend-editor-save' => 'Зачувај',
@@ -12476,8 +12486,9 @@ $messages['mk'] = array(
 	'mobile-frontend-editor-abusefilter-warning' => 'Предупредување: Дали сте сигурни дека сакате да го зачувате уредувањето? Може да е проблематично.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Не можам да го зачувам уредувањето бидејќи востановив проблем.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Прочитајте повеќе',
-	'mobile-frontend-editor-editing-page' => "'''Уредување''' на $1", # Fuzzy
-	'mobile-frontend-editor-previewing-page' => "'''Преглед''' на $1", # Fuzzy
+	'mobile-frontend-editor-editing-page' => '<strong>Уредување</strong><span> на $1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>Преглед</strong><span> на $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Преглед на изворот</strong><span>на $1</span>',
 	'tag-mobile_edit' => 'Мобилно уредување',
 	'tag-mobile_edit-description' => 'Уредување извршено од мобилната варијанта на викито',
 	'mobile-frontend-drawer-cancel' => 'Откажи',
@@ -12515,6 +12526,8 @@ $messages['mk'] = array(
 	'mobile-frontend-geonotahack' => 'Во околина на страницава',
 	'beta-feature-geonotahack' => 'Во околина на страницава',
 	'beta-feature-geonotahack-description' => 'Откријте други поврзани страници со слични координатни податоци како оние што ги гледате.',
+	'mobile-frontend-mainpage-cta-prompt' => 'На статијава ѝ треба Вашата помош!',
+	'mobile-frontend-mainpage-cta-button' => 'Подобри ја статијава',
 );
 
 /** Malayalam (മലയാളം)
@@ -14076,7 +14089,7 @@ $messages['nl'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'Of een gebruiker wel of niet via de mobiele interface bewerkt',
 	'mobile-frontend-profile-title' => 'Gebruikersprofiel',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|Gisteren|$1 dagen geleden|0=Vandaag|2=Eergisteren}} {{GENDER:$2|geüpload}}.',
-	'mobile-frontend-profile-usertalk' => 'In contact treden met {{GENDER:$1}}',
+	'mobile-frontend-profile-usertalk' => 'Overleg met {{GENDER:$2|$1}}', # Fuzzy
 	'mobile-frontend-profile-error' => 'Fout',
 	'mobile-frontend-profile-noargs' => 'Er is geen gebruikersnaam opgegeven. Geef een gebruikernaam op om een profiel te bekijken.',
 	'mobile-frontend-profile-nouser' => 'Er bestaat geen gebruiker met deze naam. Gebruikersnamen zijn hoofdlettergevoelig. Controleer uw invoer.',
@@ -17595,6 +17608,10 @@ $messages['sv'] = array(
 	'mobilefrontend-keepgoing-suggest-again' => 'Prova en annan',
 	'mobilefrontend-keepgoing-saved-title' => 'Redigering sparades!',
 	'mobilefrontend-keepgoing-links-title' => 'Lägg till länkar',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Grattis till din första redigering! Vill du hjälpa till med att lägga till länkar till en nyligen skapad sida?',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Fixa en annan sida?',
+	'mobilefrontend-keepgoing-links-explain' => 'Hitta fler ord som kan vara länkar. Lägg till dubbla hakparenteser runt ordet.',
+	'mobilefrontend-keepgoing-links-example' => 't.ex. $1gitarr$2 blir $3gitarr$4',
 	'nearby' => 'Sidor nära dig',
 	'mobile-frontend-desc' => 'Mobilt gränssnitt',
 	'mobile-frontend-search-submit' => 'Gå till',
@@ -17643,6 +17660,8 @@ $messages['sv'] = array(
 	'mobile-frontend-history' => 'Visa redigeringshistorik för denna sida.',
 	'mobile-frontend-history-404-title' => 'Ingen sådan sida',
 	'mobile-frontend-history-404-desc' => 'Kan inte titta på historiken för en sida som inte finns. Det kan ha raderats eller du kanske har följt en trasig länk.',
+	'mobile-frontend-history-no-results' => 'Ingen historik överensstämmer med det angivna filtret.',
+	'mobile-frontend-contribution-summary' => 'Alla redigeringar gjordes av {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}',
 	'mobile-frontend-history-summary' => 'Sidhistorik för [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Senast redigerad den $1, kl $2',
 	'mobile-frontend-last-modified-seconds' => 'Senast redigerad {{PLURAL:$1|$1 sekund|$1 sekunder}} sedan',
@@ -17660,6 +17679,7 @@ $messages['sv'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 år}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Senast {{GENDER:$1|redigerad}}] just nu av {{PLURAL:$4|[$5 $2]|0=en anonym användare}}.',
 	'mobile-frontend-learn-more' => 'Läs mer',
+	'mobile-frontend-view-source' => 'Visa källkod',
 	'mobile-frontend-account-create-submit' => 'Skapa ett konto',
 	'mobile-frontend-password-confirm-placeholder' => 'Bekräfta lösenord',
 	'mobile-frontend-account-create-email-placeholder' => 'E-postadress (valfritt)',
@@ -17673,6 +17693,9 @@ $messages['sv'] = array(
 	'mobile-frontend-search-help' => 'Skriv in sökterm ovanför och matchande sidnamn kommer att synas här.',
 	'mobile-frontend-dismiss-notification' => 'avfärda detta meddelande',
 	'mobile-frontend-clear-search' => 'Rensa',
+	'mobile-frontend-search-content' => 'Sök inom sidor',
+	'mobile-frontend-search-no-results' => 'Ingen sida med denna titel.',
+	'mobile-frontend-search-content-no-results' => "'''{{int:mobile-frontend-search-content}}''' för att se om denna fras finns någonstans.",
 	'mobile-frontend-privacy-link-text' => 'Sekretess',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text är tillgängligt under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; fler villkor kan gälla.',
@@ -17743,18 +17766,20 @@ som du hittar på internet samt
 bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Fattar du?',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Ja!',
-	'mobile-frontend-watchlist-add' => 'Lade till $1 till din bevakningslista',
+	'mobile-frontend-watchlist-add' => 'Lade till $1 i din bevakningslista',
 	'mobile-frontend-watchlist-removed' => 'Tog bort $1 från din bevakningslista',
 	'mobile-frontend-watchlist-view' => 'Visa din bevakningslista',
 	'mobile-frontend-watchlist-more' => 'mer',
 	'mobile-frontend-watchlist-cta' => 'Håll koll på denna sida och alla ändringar på den.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Logga in',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Skapa ett konto',
+	'mobile-frontend-watchlist-purpose' => 'En bevakningslista bokmärker sidor och hjälper dig hålla reda på ändringar som görs på dem.',
 	'mobile-frontend-watchlist-login-action' => 'Logga in för att se den.',
+	'mobile-frontend-watchlist-signup-action' => 'Registrera dig för att starta en nu.',
 	'mobile-frontend-generic-login' => '{{SITENAME}} är skapad av människor som dig.',
 	'mobile-frontend-generic-login-action' => 'Logga in för att bidra.',
 	'mobile-frontend-generic-signup-action' => 'Registrera för att bidra.',
-	'mobile-frontend-watch-login' => 'Lägg till $1 till din bevakningslista',
+	'mobile-frontend-watch-login' => 'Lägg till $1 i din bevakningslista',
 	'mobile-frontend-edit-login' => 'Hjälp till att förbättra sidan $1',
 	'mobile-frontend-edit-login-action' => 'Logga in för att redigera.',
 	'mobile-frontend-edit-signup-action' => 'Registrera för att redigera.',
@@ -17821,6 +17846,8 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-image-heading-describe' => "'''Beskriv''' bilden",
 	'mobile-frontend-image-uploading' => "'''Laddar upp''' bilden...",
 	'mobile-frontend-image-cancel-confirm' => 'Avbryt uppladdning?',
+	'mobile-frontend-editor-redirect-title' => 'Omdirigerar till redigeraren...',
+	'mobile-frontend-editor-unavailable-header' => 'Redigeraren är otillgänglig',
 	'mobile-frontend-editor-unavailable' => 'Mobil redigering är för närvarande inte tillgänglig i din webbläsare. Vänligen prova en annan webbläsare.',
 	'mobile-frontend-editor-undo-unsupported' => 'Ångrafunktionen stöds för tillfället inte på mobila enheter.',
 	'mobile-frontend-editor-newpage-prompt' => 'Denna sida finns inte. Varför inte vara djärv och skapa den?',
@@ -17846,13 +17873,15 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-editor-preview-header' => 'Förhandsgranska',
 	'mobile-frontend-editor-error-preview' => 'Fel, någonting oväntat hände när förhandsvisningen skulle läsas in. Var god stäng och försök igen.',
 	'mobile-frontend-editor-tutorial-summary' => 'Var inte rädd för kodning. Försök att förbättra sidan $1.',
+	'mobile-frontend-editor-tutorial-alt-summary' => 'Varför inte förbättra $1? Var inte rädd för koden!', # Fuzzy
 	'mobile-frontend-editor-tutorial-confirm' => 'Börja redigera',
 	'mobile-frontend-editor-captcha-try-again' => 'Fel kod, försök igen.',
 	'mobile-frontend-editor-abusefilter-warning' => 'Varning: Är du säker du vill spara denna redigering? Det kan finnas ett problem med den.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Denna redigering kan inte sparas eftersom vi har upptäckt ett problem.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Läs mer',
-	'mobile-frontend-editor-editing-page' => '<strong>Redigerar</strong> <span>$1</span>', # Fuzzy
-	'mobile-frontend-editor-previewing-page' => '<strong>Förhandgranskar</strong> <span>$1</span>', # Fuzzy
+	'mobile-frontend-editor-editing-page' => '<strong>Redigerar</strong> <span> $1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>Förhandgranskar</strong> <span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Visar källkoden för</strong><span> $1</span>',
 	'tag-mobile_edit' => 'Mobilredigering',
 	'tag-mobile_edit-description' => 'Redigering gjordes från mobilsidan',
 	'mobile-frontend-drawer-cancel' => 'Avbryt',
@@ -17874,6 +17903,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-title' => 'Användarprofil',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Laddades upp}} {{PLURAL:$2|igår|$1 dagar sedan|0=idag}}.',
 	'mobile-frontend-profile-usertalk' => 'Prata med $1',
+	'mobile-frontend-profile-error' => 'Åh nej!',
 	'mobile-frontend-profile-noargs' => 'Inget användarnamn angavs. Var god ange ett användarnamn för att visa en profil.',
 	'mobile-frontend-profile-nouser' => 'Det finns ingen användare med detta namn. Användarnamn är skiftlägeskänsliga, så kontrollera om det har skrivits korrekt.',
 	'mobile-frontend-profile-activity-heading' => 'Aktivitet och bidrag',
@@ -17884,9 +17914,12 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-footer-days' => 'Gick med för {{PLURAL:$2|1 dag|$2 dagar}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',
 	'mobile-frontend-profile-footer-months' => 'Gick med för över {{PLURAL:$2|1 månad|$2 månader}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',
 	'mobile-frontend-profile-footer-years' => 'Gick med för över {{PLURAL:$2|1 år|$2 år}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',
+	'mobile-frontend-profile-description-placeholder' => 'Varför vill {{GENDER:$1|du}} redigera? Vad vill {{GENDER:$1|du}} förbättra? Dela med {{GENDER:$1|dig}} dina intressen med andra.',
 	'mobile-frontend-geonotahack' => 'Nära denna sida',
 	'beta-feature-geonotahack' => 'Nära denna sida',
 	'beta-feature-geonotahack-description' => 'Upptäck sidor som är geografiskt närliggande till innehållssidan du för tillfället läser.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Denna artikel behöver din hjälp!',
+	'mobile-frontend-mainpage-cta-button' => 'Förbättra denna artikel',
 );
 
 /** Swahili (Kiswahili)
@@ -19713,6 +19746,8 @@ $messages['vi'] = array(
 	'mobile-frontend-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack-description' => 'Khám phá các trang lân cận với nội dung mà bạn đang đọc.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Bài này cần sự giúp đỡ của bạn!',
+	'mobile-frontend-mainpage-cta-button' => 'Cải thiện bài này',
 );
 
 /** Volapük (Volapük)
@@ -20218,6 +20253,8 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-geonotahack' => '本页附近',
 	'beta-feature-geonotahack' => '此页的附近',
 	'beta-feature-geonotahack-description' => '发现你正在阅读的页面在地理上邻近的页面。',
+	'mobile-frontend-mainpage-cta-prompt' => '此条目需要您的帮助！',
+	'mobile-frontend-mainpage-cta-button' => '改进此条目',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
