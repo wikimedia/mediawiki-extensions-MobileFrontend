@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_959f8b55",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T14:02:27Z",
+      "side": 1,
+      "message": "I don\u0027t think tabletStylesAreLoaded is necessary. RL won\u0027t download the module again anyway.",
+      "revId": "b538cb5b2f2ae500974b4b2f21e184862db6ac62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b59a8f64",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-27T14:02:27Z",
+      "side": 1,
+      "message": "I think this could go inside of init()",
+      "revId": "b538cb5b2f2ae500974b4b2f21e184862db6ac62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
