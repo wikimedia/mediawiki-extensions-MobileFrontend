@@ -120,6 +120,24 @@
       "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_fa58fb36",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-28T21:02:33Z",
+      "side": 1,
+      "message": "Well, on my test wiki I was able to use the sr language without ever configuring variantarticlepath and the variants worked just fine (using query strings)...so it is *possible*, although I don\u0027t know how much it actually happens in practice.",
+      "parentUuid": "eeebdf60_5f68f9f1",
+      "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
