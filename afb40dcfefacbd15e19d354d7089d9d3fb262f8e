@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_d46190d1",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1239
+      },
+      "writtenOn": "2013-12-28T17:02:53Z",
+      "side": 1,
+      "message": "Is there any better place to put it? I don\u0027t think skin\u0027s PHP file is proper way to do that, even if \u0027now\u0027 it works...",
+      "revId": "afb40dcfefacbd15e19d354d7089d9d3fb262f8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_346b1cb7",
+        "filename": "javascripts/modules/mf-stop-mobile-redirect.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1239
+      },
+      "writtenOn": "2013-12-28T17:02:53Z",
+      "side": 1,
+      "message": "Any (elegant) way to put i18n here?",
+      "revId": "afb40dcfefacbd15e19d354d7089d9d3fb262f8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
