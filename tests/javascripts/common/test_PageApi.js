@@ -142,45 +142,7 @@
 		PageApi.prototype.get.restore();
 	} );
 
-	QUnit.test( '#_getAllLanguages', 2, function( assert ) {
-		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
-			"query":{
-				"languages":[
-					{
-						"code":"en",
-						"*":"English"
-					},
-					{
-						"code":"es",
-						"*":"espa\u00f1ol"
-					},
-					{
-						"code":"pl",
-						"*":"polski"
-					},
-					{
-						"code":"sr",
-						"*":"\u0441\u0440\u043f\u0441\u043a\u0438 / srpski"
-					}
-				]
-			}
-		} ) );
-
-		pageApi._getAllLanguages().done( function( resp ) {
-			assert.deepEqual( resp, {
-				en: "English",
-				es: "espa\u00f1ol",
-				pl: "polski",
-				sr: "\u0441\u0440\u043f\u0441\u043a\u0438 / srpski"
-			}, 'return languages object' );
-		} );
-		pageApi._getAllLanguages();
-		assert.ok( pageApi.get.calledOnce, 'cache languages' );
-
-		PageApi.prototype.get.restore();
-	} );
-
-	QUnit.test( '#getPageLanguages', 1, function( assert ) {
+	QUnit.test( '#getPageLanguages', 2, function( assert ) {
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"query":{
 				"pages":{
@@ -206,22 +168,54 @@
 							}
 						]
 					}
-				}
+				},
+				"general": {
+					"variants": [
+						{
+							"code": "sr",
+							"name": "sr"
+						},
+						{
+							"code": "sr-ec",
+							"name": "\u040b\u0438\u0440\u0438\u043b\u0438\u0446\u0430"
+						},
+						{
+							"code": "sr-el",
+							"name": "Latinica"
+						}
+					],
+					"variantarticlepath": "/wiki/$1/$2",
+				},
+				"languages": [
+					{
+						"code": "sr",
+						"*": "\u0441\u0440\u043f\u0441\u043a\u0438 / srpski"
+					},
+					{
+						"code": "sr-ec",
+						"*": "\u0441\u0440\u043f\u0441\u043a\u0438 (\u045b\u0438\u0440\u0438\u043b\u0438\u0446\u0430)\u200e"
+					},
+					{
+						"code": "sr-el",
+						"*": "srpski (latinica)\u200e"
+					},
+					{
+						"code": "es",
+						"*": "espa\u00f1ol"
+					},
+					{
+						"code": "pl",
+						"*": "polski"
+					}
+				]
 			},
 			"limits":{
 				"langlinks":500
 			}
 		} ) );
 
-		sinon.stub( pageApi, '_getAllLanguages' ).returns( $.Deferred().resolve( {
-			en: "English",
-			es: "espa\u00f1ol",
-			pl: "polski",
-			sr: "\u0441\u0440\u043f\u0441\u043a\u0438 / srpski"
-		} ) );
-
 		pageApi.getPageLanguages( 'Test' ).done( function( resp ) {
-			assert.deepEqual( resp, [
+			assert.deepEqual( resp.languages, [
 				{
 					"lang":"es",
 					"url":"http://es.wikipedia.org/wiki/San_Francisco_(California)",
@@ -241,10 +235,27 @@
 					langname: "\u0441\u0440\u043f\u0441\u043a\u0438 / srpski"
 				}
 			], 'return augmented language links' );
+
+			assert.deepEqual( resp.variants, [
+				{
+					"lang":"sr",
+					"langname":"sr",
+					"url":"/wiki/sr/Test",
+				},
+				{
+					"lang":"sr-ec",
+					"langname":"\u040b\u0438\u0440\u0438\u043b\u0438\u0446\u0430",
+					"url":"/wiki/sr-ec/Test",
+				},
+				{
+					"lang":"sr-el",
+					"langname":"Latinica",
+					"url":"/wiki/sr-el/Test",
+				}
+			], 'return augmented language variant links' );
 		} );
 
 		PageApi.prototype.get.restore();
-		pageApi._getAllLanguages.restore();
 	} );
 
 	QUnit.test( '#getPage (html headings get stripped)', 1, function( assert ) {

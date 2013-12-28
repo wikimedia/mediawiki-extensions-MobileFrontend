@@ -102,58 +102,88 @@
 		},
 
 		/**
-		 * Gathers a mapping of all available language codes on the site and their human readable names
+		 * Gets language list for a page; helper function for getPageLanguages()
 		 *
-		 * @return {jQuery.Deferred} where argument is a javascript object with language codes as keys
+		 * @param  {object} data Data from API
+		 * @return {array} List of language objects
 		 */
-		_getAllLanguages: function() {
-			if ( !this._languageCache ) {
-				this._languageCache = this.get( {
-					action: 'query',
-					meta: 'siteinfo',
-					siprop: 'languages'
-				} ).then( function( data ) {
-					var languages = {};
-					data.query.languages.forEach( function( item ) {
-						languages[ item.code ] = item[ '*' ];
-					} );
-					return languages;
-				} );
+		_getLanguagesFromApiResponse: function( data ) {
+			// allAvailableLanguages is a mapping of all codes to language names
+			var pages, langlinks, allAvailableLanguages = {};
+			data.query.languages.forEach( function( item ) {
+				allAvailableLanguages[ item.code ] = item[ '*' ];
+			} );
+
+			// FIXME: API returns an object when a list makes much more sense
+			pages = $.map( data.query.pages, function( v ) { return v; } );
+			// FIXME: "|| []" wouldn't be needed if API was more consistent
+			langlinks = pages[0] ? pages[0].langlinks || [] : [];
+
+			langlinks.forEach( function( item, i ) {
+				langlinks[ i ].langname = allAvailableLanguages[ item.lang ];
+			} );
+
+			return langlinks;
+		},
+
+		/**
+		 * Gets language variant list for a page; helper function for getPageLanguages()
+		 *
+		 * @param  {string} title Name of the page to obtain variants for
+		 * @param  {object} data Data from API
+		 * @return {array} List of language variant objects
+		 */
+		_getLanguageVariantsFromApiResponse: function( title, data ) {
+			var generalData = data.query.general,
+				variantPath = generalData.variantarticlepath,
+				variants = [];
+
+			if ( !generalData.variants ) {
+				return false;
 			}
-			return this._languageCache;
+
+			// Create the data object for each variant and store it
+			generalData.variants.forEach( function( item ) {
+				var variant = {
+					langname: item.name,
+					lang: item.code
+				};
+				if ( variantPath ) {
+					variant.url = variantPath
+						.replace( '$1', item.code )
+						.replace( '$2', title );
+				} else {
+					variant.url = mw.util.getUrl( title, { 'variant' : item.code } );
+				}
+				variants.push( variant );
+			} );
+
+			return variants;
 		},
 
 		/**
 		 * Retrieve available languages for a given title
 		 *
-		 * FIXME: Return language variants as well. Requires an upstream change.
-		 *
 		 * @param {string} title the title of the page languages should be retrieved for
-		 * @return {jQuery.Deferred} which is called with a mapping of language codes to language names
+		 * @return {jQuery.Deferred} which is called with an object containing langlinks and variant links
 		 */
 		getPageLanguages: function( title ) {
 			var self = this, result = $.Deferred();
 
-			this._getAllLanguages().done( function( allAvailableLanguages ) {
-				self.get( {
+			self.get( {
 					action: 'query',
+					meta: 'siteinfo',
+					siprop: 'general|languages',
 					prop: 'langlinks',
 					llurl: true,
 					lllimit: 'max',
 					titles: title
 				} ).done( function( resp ) {
-					// FIXME: API returns an object when a list makes much more sense
-					var pages = $.map( resp.query.pages, function( v ) { return v; } ),
-					// FIXME: "|| []" wouldn't be needed if API was more consistent
-					langlinks = pages[0] ? pages[0].langlinks || [] : [];
-
-					langlinks.forEach( function( item, i ) {
-						langlinks[ i ].langname = allAvailableLanguages[ item.lang ];
+					result.resolve( {
+						languages: self._getLanguagesFromApiResponse( resp ),
+						variants: self._getLanguageVariantsFromApiResponse( title, resp )
 					} );
-
-					result.resolve( langlinks );
 				} ).fail( $.proxy( result, 'reject' ) );
-			} );
 
 			return result;
 		}

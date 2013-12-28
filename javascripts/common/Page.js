@@ -56,12 +56,12 @@
 
 					// FIXME: remove when Special:Languages link goes stable
 					if ( !M.isBetaGroupMember() ) {
-						M.pageApi.getPageLanguages( pageTitle ).done( function( langlinks ) {
+						M.pageApi.getPageLanguages( pageTitle ).done( function( langdata ) {
 							var template = M.template.get( 'languageSection' ),
 								data = {
-									langlinks: langlinks,
+									langlinks: langdata.languages,
 									heading: mw.msg( 'mobile-frontend-language-article-heading' ),
-									description: mw.msg( 'mobile-frontend-language-header', langlinks.length )
+									description: mw.msg( 'mobile-frontend-language-header', langdata.languages.length )
 								};
 
 							$el.find( '#mw-mf-language-section' ).html( template.render( data ) );
