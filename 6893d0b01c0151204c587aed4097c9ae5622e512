@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_3f9775f1",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-28T20:33:50Z",
+      "side": 0,
+      "message": "On reflection it may be worth keeping this method. If multiple pages are loaded the page load is smaller for subsequent language list requests. Definitely a caching opportunity here in some form.\n\nWill have to think about this some more. I\u0027m happy to merge in current form and rethink this later. It does save a HTTP request but at the expensive of a larger payload.",
+      "revId": "6893d0b01c0151204c587aed4097c9ae5622e512",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

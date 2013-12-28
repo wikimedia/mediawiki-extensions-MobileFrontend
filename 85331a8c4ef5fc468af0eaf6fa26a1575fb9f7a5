@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "eeebdf60_ffa0ed3f",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-28T20:33:50Z",
+      "side": 1,
+      "message": "naming wise I think _getLanguagesFromApiResponse might make more sense here.",
+      "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_df8529b3",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-28T20:33:50Z",
+      "side": 1,
+      "message": "naming wise I think _getVariantsFromApiResponse might make more sense here.",
+      "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_110b8a29",
         "filename": "javascripts/common/PageApi.js",
         "patchSetId": 2
@@ -13,6 +47,58 @@
       "writtenOn": "2013-12-28T00:20:10Z",
       "side": 1,
       "message": "Maybe a nicer way to do this?",
+      "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_bfa94523",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-28T20:33:50Z",
+      "side": 1,
+      "message": "Yeh this dooesn\u0027t look that readable. I think instead I\u0027d move this down to when you actually set the URL",
+      "parentUuid": "eeebdf60_110b8a29",
+      "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_bf5f0544",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-28T20:33:50Z",
+      "side": 1,
+      "message": "The patch for supporting this doesn\u0027t seem to have got merged. Do item.name || title in the mean time with A FIXME above pointing to the change id of the fix / bug (I can\u0027t find it right now :)) so we know when to remove this.",
+      "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_5f68f9f1",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-28T20:33:50Z",
+      "side": 1,
+      "message": "I think doing the logic above here will be more readable. I\u0027m not sure if there will ever be a case that variantPath does not exist and is setup though?\n\nif ( variantPath ) {\n variants[url] \u003d variantPath.replace(...) \n} else {\nvariants[url] \u003d variantPath \u003d mw.util.getUrl( item.title, { \u0027variant\u0027 : item.code } );\n}",
       "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
