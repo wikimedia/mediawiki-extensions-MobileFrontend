@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_5160f29f",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:57Z",
+      "side": 1,
+      "message": "Cargo culting, mostly.\n\nI guess I can use escaped() here.",
+      "parentUuid": "eeebdf60_ebcdd363",
+      "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_6b01c370",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-27T20:29:07Z",
       "side": 1,
       "message": "Please don\u0027t add JavaScript here and don\u0027t use global JavaScript variables. Keep JavaScript separate from HTML markup. Also this adds it unconditionally meaning JavaScript errors in beta where saveLocalStorageCheckboxes is not defined.\n\nAdd all this code to specials/mobileoptions.js instead",
+      "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_d119a228",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_6b01c370",
       "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_715bf6fd",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:57Z",
+      "side": 1,
+      "message": "It seems much easier to hide this in CSS and show it in JavaScript, which I\u0027ve done. Description added.",
+      "parentUuid": "eeebdf60_0b00f768",
+      "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_eb4393b4",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2013-12-27T20:29:07Z",
       "side": 1,
       "message": "See code conventions on whitespace and quotes.\nhttps://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions\nhttps://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript#Quotes",
+      "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_f11ca61a",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_eb4393b4",
       "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_11282a2e",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_0b3fd723",
+      "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_eb58338e",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 5
@@ -98,6 +188,24 @@
       "writtenOn": "2013-12-27T20:29:07Z",
       "side": 1,
       "message": "Don\u0027t bind to window. Instead do $( \u0027form.mw-mf-settings\u0027 ).on( \u0027submit\u0027, function(ev) {\nsaveLocalStorageCheckboxes();\n} );\n\nAlso I\u0027m not sure why you\u0027d want to save all of these to localStorage... the existing settings have to be set by cookies as they handle changes on the server so you\u0027re saving these unnecessarily. I would simply save the checkbox you\u0027ve created (which should be created in this file).",
+      "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_31232e56",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:57Z",
+      "side": 1,
+      "message": "\u003e Don\u0027t bind to window\n\nDone.\n\n\u003e Also I\u0027m not sure why you\u0027d want to save all of these to localStorage\n\nI\u0027m only saving check boxes with the mw-mf-checkbox-local-storage class (which is only the expand sections check box for now).",
+      "parentUuid": "eeebdf60_eb58338e",
       "revId": "5a75531219ccb27a8fe77eeee1324d5a5d1df7bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
