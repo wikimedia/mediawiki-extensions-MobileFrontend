@@ -252,7 +252,7 @@ $messages['en'] = array (
 	'mobile-frontend-changeslist-ip' => 'Anonymous user',
 	'mobile-frontend-changeslist-nocomment' => 'no edit summary',
 	'mobile-frontend-watchlist-filter-all' => 'All',
-	'mobile-frontend-watchlist-filter-articles' => 'Articles',
+	'mobile-frontend-watchlist-filter-articles' => 'Pages',
 	'mobile-frontend-watchlist-filter-talk' => 'Talk',
 	'mobile-frontend-watchlist-filter-other' => 'Other',
 	'mobile-frontend-watchlist-modified' => 'Modified $1',
@@ -383,7 +383,7 @@ $messages['en'] = array (
 	// Special:UserProfile
 	'mobile-frontend-profile-title' => 'User profile',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Uploaded}} {{PLURAL:$1|yesterday|$1 days ago|0=today}}.',
-	'mobile-frontend-profile-usertalk' => 'Talk to {{GENDER:$1|$1}}',
+	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|Talk to $1}}',
 	'mobile-frontend-profile-error' => "Oh no!",
 	'mobile-frontend-profile-noargs' => 'No username was given. Please provide a username to view a profile.',
 	'mobile-frontend-profile-nouser' => 'No user with this name exists. Usernames are case sensitive so please check if it has been typed correctly.',
@@ -406,8 +406,8 @@ $messages['en'] = array (
 	'beta-feature-geonotahack-description' => 'Discover pages which are geographically nearby to the content page you are currently reading.',
 
 	// Main Page
-	'mobile-frontend-mainpage-cta-prompt' => 'This article needs your help!',
-	'mobile-frontend-mainpage-cta-button' => 'Improve this article',
+	'mobile-frontend-mainpage-cta-prompt' => 'This page needs your help!',
+	'mobile-frontend-mainpage-cta-button' => 'Improve this page',
 );
 
 /** Message documentation (Message documentation)
@@ -1068,8 +1068,7 @@ See also:
 	'mobile-frontend-profile-usertalk' => 'Link label to user talk page.
 
 Parameters:
-* $1 - username of user who talk page belongs to
-* $2 - (Optional) the gender of that user',
+* $1 - username of user who talk page belongs to. Can be used for GENDER.',
 	'mobile-frontend-profile-error' => 'Heading for errors on the profile page.',
 	'mobile-frontend-profile-noargs' => 'Message shown when no user profile URL is specified.
 
