@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_313e8e88",
+        "filename": "javascripts/externals/epoch.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_8bbac71c",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_9fd32a61",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 1
@@ -54,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_f1c826ac",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:17Z",
+      "side": 1,
+      "message": "The code that reads from the history data has to run during or after init(). That seems harder to manage if that code is in a separate file, and I\u0027d prefer that code and this code to live in the same place.",
+      "parentUuid": "eeebdf60_9fd32a61",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_90d799c4",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 1
@@ -65,6 +101,24 @@
       "writtenOn": "2013-12-27T17:59:15Z",
       "side": 1,
       "message": "I think \"openState[id] \u003d isCollapsed\" is enough and then instead of \"if ( id in initOpenState )\" you can do \"if ( initOpenState[id] )\"",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_713416a8",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_90d799c4",
       "revId": "59693e64440685f5b10e5efb12927228143d1b87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -106,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_9191da9e",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:17Z",
+      "side": 1,
+      "message": "I didn\u0027t see anything in history-alpha.js that does anything like this.",
+      "parentUuid": "eeebdf60_ebe1532a",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_1065c941",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 1
@@ -123,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_f1470621",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:17Z",
+      "side": 1,
+      "message": "See below.",
+      "parentUuid": "eeebdf60_1065c941",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_5052316b",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 1
@@ -134,6 +224,24 @@
       "writtenOn": "2013-12-27T17:59:15Z",
       "side": 1,
       "message": "if can go with else:\n\nelse if ( ... ) {\n\nBut now that I look at it, the whole thing can be just a single if:\n\nif (\n  ( initOpenState \u0026\u0026 initOpenState.hasOwnProperty( id ) ) ||\n  ( M.isWideScreen() \u0026\u0026 M.isBetaGroupMember() ) ||\n  ( expandSections \u0026\u0026 M.isAlphaGroupMember() )\n) {\n  toggle( $elem );\n}",
+      "revId": "59693e64440685f5b10e5efb12927228143d1b87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_518c7289",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2013-12-28T04:54:17Z",
+      "side": 1,
+      "message": "\u003e if can go with else:\n\nDone.\n\n\u003e But now that I look at it, the whole thing can be just a single if:\n\nWe need to disable the latter two conditions if initOpenState is true-ish. Otherwise the sections would always open when using the back button if they would otherwise do so when first loading the page.\n\nI guess we could write this as:\n\nif (\n  ( initOpenState \u0026\u0026 initOpenState[id] ) ||\n  ( !initOpenState \u0026\u0026\n    ( ( M.isWideScreen() \u0026\u0026 M.isBetaGroupMember() ) ||\n      ( expandSections \u0026\u0026 M.isAlphaGroupMember() ) )\n)\n\nbut to me it seemed clearer to use nested if statements.",
+      "parentUuid": "eeebdf60_5052316b",
       "revId": "59693e64440685f5b10e5efb12927228143d1b87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
