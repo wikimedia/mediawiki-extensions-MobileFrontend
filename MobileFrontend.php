@@ -83,14 +83,14 @@ $autoloadClasses = array (
 	'MobileSpecialPageFeed' => 'specials/MobileSpecialPageFeed',
 
 	'MinervaTemplate' => 'skins/MinervaTemplate',
-	'MobileTemplate' => 'skins/MobileTemplate',
-	'MobileTemplateBeta' => 'skins/MobileTemplateBeta',
-	'MobileTemplateAlpha' => 'skins/MobileTemplateAlpha',
+	'MinervaTemplateBeta' => 'skins/MinervaTemplateBeta',
+	'MinervaTemplateAlpha' => 'skins/MinervaTemplateAlpha',
+
 	'MobileTemplateWML' => 'skins/MobileTemplateWML',
+
 	'SkinMinerva' => 'skins/SkinMinerva',
-	'SkinMobile' => 'skins/SkinMobile',
-	'SkinMobileBeta' => 'skins/SkinMobileBeta',
-	'SkinMobileAlpha' => 'skins/SkinMobileAlpha',
+	'SkinMinervaBeta' => 'skins/SkinMinervaBeta',
+	'SkinMinervaAlpha' => 'skins/SkinMinervaAlpha',
 	'SkinMobileWML' => 'skins/SkinMobileWML',
 	'UserLoginAndCreateTemplate' => 'skins/UserLoginAndCreateTemplate',
 	'UserLoginMobileTemplate' => 'skins/UserLoginMobileTemplate',
@@ -177,9 +177,9 @@ unset( $cwd );
 
 /**
  * The default skin for MobileFrontend
- * Defaults to MobileSkin
+ * Defaults to SkinMinerva
  */
-$wgMFDefaultSkinClass = 'SkinMobile';
+$wgMFDefaultSkinClass = 'SkinMinerva';
 
 /*
  * Allow editing (uploading) to external CentralAuth-enabled wikis where

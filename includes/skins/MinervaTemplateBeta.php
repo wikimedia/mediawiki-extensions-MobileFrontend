@@ -1,5 +1,5 @@
 <?php
-class MobileTemplateBeta extends MobileTemplate {
+class MinervaTemplateBeta extends MinervaTemplate {
 	protected $isMainPage;
 
 	public function execute() {

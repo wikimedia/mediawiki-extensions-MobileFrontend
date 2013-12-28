@@ -1,7 +1,7 @@
 <?php
 
-class SkinMobileAlpha extends SkinMobileBeta {
-	public $template = 'MobileTemplateAlpha';
+class SkinMinervaAlpha extends SkinMinervaBeta {
+	public $template = 'MinervaTemplateAlpha';
 	protected $mode = 'alpha';
 
 	protected function getSearchPlaceHolderText() {

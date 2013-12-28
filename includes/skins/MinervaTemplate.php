@@ -35,6 +35,10 @@ class MinervaTemplate extends BaseTemplate {
 		return $this->data['page_actions'];
 	}
 
+	public function getFooterLinks( $option = null ) {
+		return $this->data['footerlinks'];
+	}
+
 	protected function renderLanguages() {
 		$languages = $this->getLanguages();
 		$variants = $this->getLanguageVariants();

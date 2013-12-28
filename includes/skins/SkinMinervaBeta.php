@@ -1,7 +1,7 @@
 <?php
 
-class SkinMobileBeta extends SkinMobile {
-	public $template = 'MobileTemplateBeta';
+class SkinMinervaBeta extends SkinMinerva {
+	public $template = 'MinervaTemplateBeta';
 	protected $mode = 'beta';
 
 	public function outputPage( OutputPage $out = null ) {

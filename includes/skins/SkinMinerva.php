@@ -6,13 +6,13 @@
  * @ingroup Skins
  */
 class SkinMinerva extends SkinTemplate {
+	/** @var boolean describes whether reader is on a mobile device */
+	protected $isMobileMode = false;
 	public $skinname = 'minerva';
 	public $template = 'MinervaTemplate';
 	public $useHeadElement = true;
 	/* @var string  describing the current stability of the skin, can be overriden by derivative experimental skins */
 	protected $mode = 'stable';
-	/** @var array of classes that should be present on the body tag */
-	private $pageClassNames = array();
 
 	protected function prepareQuickTemplate() {
 		global $wgAppleTouchIcon;
@@ -60,6 +60,11 @@ class SkinMinerva extends SkinTemplate {
 		);
 		$bottomScripts .= $out->getBottomScripts();
 		$tpl->set( 'bottomscripts', $bottomScripts );
+		if ( $this->isMobileMode ) {
+			$html = ExtMobileFrontend::DOMParse( $out );
+			$tpl->set( 'bodytext', $html );
+			$this->prepareMobileFooterLinks( $tpl );
+		}
 		wfProfileOut( __METHOD__ );
 		return $tpl;
 	}
@@ -83,13 +88,6 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * @param string $className: valid class name
-	 */
-	protected function addPageClass( $className ) {
-		$this->pageClassNames[ $className ] = true;
-	}
-
-	/**
 	 * Overrides Skin::doEditSectionLink
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
@@ -108,14 +106,16 @@ class SkinMinerva extends SkinTemplate {
 	 * @return String
 	 */
 	public function getPageClasses( $title ) {
+		$className = $this->getMode();
 		if ( $title->isMainPage() ) {
-			$className = 'page-Main_Page ';
+			$className .= ' page-Main_Page ';
 		} else if ( $title->isSpecialPage() ) {
-			$className = 'mw-mf-special ';
-		} else {
-			$className = '';
+			$className .= ' mw-mf-special ';
 		}
-		return $className . implode( ' ', array_keys( $this->pageClassNames ) );
+		if ( !$this->getUser()->isAnon() ) {
+			$className .= ' is-authenticated';
+		}
+		return $className;
 	}
 
 	/**
@@ -132,10 +132,7 @@ class SkinMinerva extends SkinTemplate {
 
 	public function __construct() {
 		$this->mobileContext = MobileContext::singleton();
-		$this->addPageClass( $this->getMode() );
-		if ( !$this->getUser()->isAnon() ) {
-			$this->addPageClass( 'is-authenticated' );
-		}
+		$this->isMobileMode = $this->mobileContext->shouldDisplayMobileView();
 	}
 
 	/**
@@ -282,7 +279,18 @@ class SkinMinerva extends SkinTemplate {
 	 * @return string
 	 */
 	public function getLoginUrl( $query ) {
-		return SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
+		if ( $this->isMobileMode ) {
+			// FIXME: Does mobile really need special casing here?
+			global $wgSecureLogin;
+
+			if ( WebRequest::detectProtocol() != 'https' && $wgSecureLogin ) {
+				$loginUrl = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
+				return $this->mobileContext->getMobileUrl( $loginUrl, $wgSecureLogin );
+			}
+			return SpecialPage::getTitleFor( 'Userlogin' )->getLocalURL( $query );
+		} else {
+			return SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
+		}
 	}
 
 	/**
@@ -412,6 +420,20 @@ class SkinMinerva extends SkinTemplate {
 		if ( !isset( $tpl->data['postbodytext'] ) ) {
 			$tpl->set( 'postbodytext', '' ); // not currently set in desktop skin
 		}
+
+		// Prepare the mobile version of the footer
+		if ( $this->isMobileMode ) {
+			$tpl->set( 'footerlinks', array(
+				'info' => array(
+					'mobile-switcher',
+					'mobile-license',
+				),
+				'places' => array(
+					'terms-use',
+					'privacy',
+				),
+			) );
+		}
 	}
 
 	protected function prepareSearch( BaseTemplate $tpl ) {
@@ -530,6 +552,21 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'page_actions', $menu );
 	}
 
+	private function getSkinConfigMobileVariables() {
+		$vars = array();
+		if ( $this->isMobileMode ) {
+			global $wgCookiePath;
+			$wgUseFormatCookie = array(
+				'name' => MobileContext::USEFORMAT_COOKIE_NAME,
+				'duration' => -1, // in days
+				'path' => $wgCookiePath,
+				'domain' => $this->getRequest()->getHeader( 'Host' ),
+			);
+			$vars['wgUseFormatCookie'] = $wgUseFormatCookie;
+		}
+		return $vars;
+	}
+
 	/**
 	 * Returns array of config variables that should be added only to this skin
 	 * for use in JavaScript.
@@ -547,7 +584,7 @@ class SkinMinerva extends SkinTemplate {
 		$user = $this->getUser();
 		$userCanCreatePage = !$title->exists() && $title->quickUserCan( 'create', $user );
 
-		$vars = array(
+		$vars = array_merge( array(
 			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
 			'wgMFAjaxUploadProgressSupport' => $wgMFAjaxUploadProgressSupport,
 			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,
@@ -560,7 +597,8 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
 			'wgMFMode' => $this->getMode(),
 			'wgMFIsUserBlocked' => $user->isBlocked(),
-		);
+		), $this->getSkinConfigMobileVariables() );
+
 		if ( !$user->isAnon() ) {
 			$vars['wgWatchedPageCache'] = array(
 				$title->getPrefixedDBkey() => $user->isWatched( $title ),
@@ -587,7 +625,6 @@ class SkinMinerva extends SkinTemplate {
 			'mobile.stable',
 		);
 
-		$modules['toggling'] = array( 'mobile.toggling' );
 		$modules['notifications'] = array( 'mobile.notifications' );
 		$modules['watch'] = array();
 		$modules['search'] = array( 'mobile.search.stable' );
@@ -602,6 +639,20 @@ class SkinMinerva extends SkinTemplate {
 		if ( $title->inNamespace( NS_FILE ) ) {
 			$modules['file'] = array( 'mobile.file.scripts' );
 		}
+
+		if ( $this->isMobileMode ) {
+			$modules['toggling'] = array( 'mobile.toggling' );
+			// FIXME: This is duplicate code of that in MobileFrontend.hooks.php. Please apply hygiene.
+			if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
+				$modules['eventlogging'] = array(
+					'mobile.uploads.schema',
+					'mobile.watchlist.schema',
+					'mobile.editing.schema',
+					'schema.MobileWebCta',
+					'schema.MobileWebClickTracking',
+				);
+			}
+		}
 		return $modules;
 	}
 
@@ -612,7 +663,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @param $bodyAttrs Array
 	 */
 	public function addToBodyAttributes( $out, &$bodyAttrs ) {
-		// does nothing by default
+		// does nothing by default - used by Special:MobileMenu
 		$classes = $out->getProperty( 'bodyClassName' );
 		$bodyAttrs[ 'class' ] .= ' ' . $classes;
 	}
@@ -633,5 +684,167 @@ class SkinMinerva extends SkinTemplate {
 		// Add the ResourceLoader module to the page output
 
 		$out->addModuleStyles( $this->getSkinStyles() );
+	}
+
+	public function outputPage( OutputPage $out = null ) {
+		if ( $this->isMobileMode ) {
+			wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
+			$this->outputMobilePage();
+		} else {
+			// This might seem weird but now the meaning of 'mobile' is morphing to mean 'minerva skin'
+			// FIXME: Explore disabling this via a user preference and see what explodes
+			$out = $this->getOutput()->setTarget( 'mobile' );
+			parent::outputPage();
+		}
+	}
+
+	//
+	//
+	// Mobile specific functions
+	// FIXME: Try to kill any of the functions that follow
+	//
+	//
+
+	public function outputMobilePage() {
+		global $wgMFNoindexPages;
+		wfProfileIn( __METHOD__ );
+		$out = $this->getOutput();
+		$out->setTarget( 'mobile' );
+		if ( $out && $wgMFNoindexPages ) {
+			$out->setRobotPolicy( 'noindex,nofollow' );
+		}
+
+		wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
+		parent::outputPage();
+	}
+
+	/**
+	 * Returns the site name for the footer, either as a text or <img> tag
+	 */
+	protected function getSitename() {
+		global $wgMFCustomLogos, $wgMFTrademarkSitename;
+
+		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
+
+		if ( isset( $wgMFCustomLogos['copyright'] ) ) {
+			$suffix = $wgMFTrademarkSitename ? ' ®' : '';
+			$sitename = Html::element( 'img', array(
+				'src' => $wgMFCustomLogos['copyright'],
+				'alt' => $footerSitename . $suffix
+			) );
+		} else {
+			$suffix = $wgMFTrademarkSitename ? ' ™' : '';
+			$sitename = $footerSitename . $suffix;
+		}
+
+		return $sitename;
+	}
+
+	/**
+	 * Prepares links used in the mobile footer
+	 * @param QuickTemplate $tpl
+	 */
+	protected function prepareMobileFooterLinks( $tpl ) {
+		global $wgRightsPage, $wgRightsUrl, $wgRightsText;
+
+		$req = $this->getRequest();
+
+		$url = $this->mobileContext->getDesktopUrl( wfExpandUrl(
+			$req->appendQuery( 'mobileaction=toggle_view_desktop' )
+		) );
+		$url = htmlspecialchars( $url );
+
+		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
+		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
+
+		$switcherHtml = <<<HTML
+<h2>{$this->getSitename()}</h2>
+<ul>
+	<li>{$mobile}</li><li><a id="mw-mf-display-toggle" href="{$url}">{$desktop}</a></li>
+</ul>
+HTML;
+
+		// Construct the link to the licensinsing terms
+		if ( $wgRightsText ) {
+			// Use shorter text for some common licensing strings. See Installer.i18n.php
+			// for the currently offered strings. Unfortunately, there is no good way to
+			// comprehensively support localized licensing strings since the license (as
+			// stored in LocalSetttings.php) is just freeform text, not an i18n key.
+			$licenses = array(
+				'Creative Commons Attribution-Share Alike 3.0' => 'CC BY-SA 3.0',
+				'Creative Commons Attribution Share Alike' => 'CC BY-SA',
+				'Creative Commons Attribution' => 'CC BY',
+				'Creative Commons Attribution Non-Commercial Share Alike' => 'CC BY-NC-SA',
+				'Creative Commons Zero (Public Domain)' => 'CC0 (Public Domain)',
+				'GNU Free Documentation License 1.3 or later' => 'GFDL 1.3 or later',
+			);
+			if ( isset( $licenses[$wgRightsText] ) ) {
+				$wgRightsText = $licenses[$wgRightsText];
+			}
+			if ( $wgRightsPage ) {
+				$title = Title::newFromText( $wgRightsPage );
+				$link = Linker::linkKnown( $title, $wgRightsText );
+			} elseif ( $wgRightsUrl ) {
+				$link = Linker::makeExternalLink( $wgRightsUrl, $wgRightsText );
+			} else {
+				$link = $wgRightsText;
+			}
+		} else {
+			$link = '';
+		}
+		// The license message is displayed in the content language rather than the user
+		// language. See Skin::getCopyright.
+		if ( $link ) {
+			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $link )->inContentLanguage()->text();
+		} else {
+			$licenseText = '';
+		}
+
+		$tpl->set( 'mobile-switcher', $switcherHtml );
+		$tpl->set( 'mobile-license', $licenseText );
+		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
+		$tpl->set( 'terms-use', $this->getTermsLink( 'mobile-frontend-terms-url' ) );
+	}
+
+	/**
+	 * Returns HTML of terms of use link or null if it shouldn't be displayed
+	 *
+	 * @param $messageKey
+	 *
+	 * @return null|string
+	 */
+	public function getTermsLink( $messageKey ) {
+		$urlMsg = $this->msg( $messageKey )->inContentLanguage();
+		if ( $urlMsg->isDisabled() ) {
+			return null;
+		}
+		$url = $urlMsg->plain();
+		// Support both page titles and URLs
+		if ( preg_match( '#^(https?:)?//#', $url ) === 0 ) {
+			$title = Title::newFromText( $url );
+			if ( !$title ) {
+				return null;
+			}
+			$url = $title->getLocalURL();
+		}
+		return Html::element(
+			'a',
+			array( 'href' => $url ),
+			$this->msg( 'mobile-frontend-terms-text' )->text()
+		);
+	}
+
+	/**
+	 * Takes an array of link elements and applies mobile urls to any urls contained in them
+	 * @param $urls Array
+	 * @return Array
+	 */
+	public function mobilizeUrls( $urls ) {
+		$ctx = $this->mobileContext; // $this in closures is allowed only in PHP 5.4
+		return array_map( function( $url ) use ( $ctx ) {
+				$url['href'] = $ctx->getMobileUrl( $url['href'] );
+				return $url;
+			},
+			$urls );
 	}
 }
