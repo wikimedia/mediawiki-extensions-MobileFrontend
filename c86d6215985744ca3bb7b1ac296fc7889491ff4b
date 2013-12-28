@@ -16,6 +16,23 @@
       "revId": "c86d6215985744ca3bb7b1ac296fc7889491ff4b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_d133e2f1",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-28T00:25:58Z",
+      "side": 1,
+      "message": "This var needs a definition. I know it seems obvious to us, but it may help other developers understand what\u0027s going on here. i.e. \"Is MobileMode when I\u0027m viewing on a mobile device or when I click on the mobile link in the footer?\"",
+      "revId": "c86d6215985744ca3bb7b1ac296fc7889491ff4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
