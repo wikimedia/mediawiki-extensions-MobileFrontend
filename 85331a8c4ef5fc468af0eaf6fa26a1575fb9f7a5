@@ -102,6 +102,24 @@
       "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_5f36b901",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-28T20:34:29Z",
+      "side": 1,
+      "message": "variants.url \u003d  ...\nnot variants[url] :)",
+      "parentUuid": "eeebdf60_5f68f9f1",
+      "revId": "85331a8c4ef5fc468af0eaf6fa26a1575fb9f7a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
