@@ -28,7 +28,7 @@
 			currentUrl = mw.util.getUrl( title, M.query );
 		// initial history state does not contain title
 		// run before binding to avoid nasty surprises
-		History.replaceState( null, title, currentUrl );
+		History.replaceState( null, title, currentUrl + location.hash );
 
 		// Bind to future StateChange Events
 		History.Adapter.bind( window, 'statechange', function(){
