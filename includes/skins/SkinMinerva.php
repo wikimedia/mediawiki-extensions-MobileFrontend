@@ -213,21 +213,33 @@ class SkinMinerva extends SkinTemplate {
 					$watchTitle->getLocalUrl( $watchlistQuery ) :
 					$this->getLoginUrl( array( 'returnto' => $watchTitle ) ),
 				'class' => 'icon-watchlist',
-			),
-			'uploads' => array(
+			)
+		);
+		if ( $this->isMobileMode ) {
+			$items['uploads'] = array(
 				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
 				'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
 					$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
 				'class' => 'icon-uploads jsonly',
-			),
-			'settings' => array(
+			);
+			$items['settings'] = array(
 				'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
 				'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
 					getLocalUrl( array( 'returnto' => $returnToTitle ) ),
 				'class' => 'icon-settings',
-			),
-			'auth' => $this->getLogInOutLink(),
-		);
+			);
+		} else {
+			$prefUrl = SpecialPage::getTitleFor( 'Preferences' )->
+				getLocalUrl( array( 'returnto' => $returnToTitle ) );
+			$items['preferences'] = array(
+				'text' => wfMessage( 'preferences' )->escaped(),
+				'href' => $this->getUser()->isLoggedIn() ? $prefUrl :
+					$this->getLoginUrl( array( 'returnto' => $prefUrl ) ),
+				'class' => 'icon-settings',
+			);
+		}
+		$items['auth'] = $this->getLogInOutLink();
+
 		$tpl->set( 'personal_urls', $items );
 	}
 

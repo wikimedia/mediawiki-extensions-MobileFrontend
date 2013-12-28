@@ -41,7 +41,8 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition, $wgMFWap;
+		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition,
+			$wgMFWap, $wgValidSkinNames;
 
 		// check whether or not the user has requested to toggle their view
 		$mobileContext = MobileContext::singleton();
@@ -54,6 +55,11 @@ class MobileFrontendHooks {
 			if ( $wgMFEnableDesktopResources ) {
 				$out = $context->getOutput();
 				$out->addModules( 'mobile.desktop' );
+			}
+			if ( class_exists( 'BetaFeatures' ) &&
+				BetaFeatures::isFeatureEnabled( $context->getUser(), 'betafeatures-minerva' )
+			) {
+				$wgValidSkinNames['minerva'] = "Minerva";
 			}
 			return true;
 		}
@@ -388,15 +394,20 @@ class MobileFrontendHooks {
 		$mobileContext = MobileContext::singleton();
 		$isMobileView = $mobileContext->shouldDisplayMobileView();
 		$out = $special->getContext()->getOutput();
+		$skin = $out->getSkin()->getSkinName();
 
 		$out->setProperty( 'disableSearchAndFooter', true );
+		$name = $special->getName();
+
+		// Ensure desktop version of Special:Preferences page gets mobile targeted modules
+		// FIXME: Upstream to core (?)
+		if ( $name === 'Preferences' && $skin === 'minerva' ) {
+			$out->addModules( 'minerva.special.preferences' );
+		}
 
 		if ( $isMobileView ) {
-			$name = $special->getName();
 			if ( $name === 'Search' ) {
 				$out->addModuleStyles( 'mobile.search.styles' );
-			} else if ( $name === 'Preferences' ) {
-				$out->addModules( 'mobile.special.preferences' );
 			} else if ( $name === 'Userlogin' ) {
 				$out->addModuleStyles( 'mobile.userlogin.styles' );
 				// make sure we're on https if we're supposed to be and currently aren't.
@@ -602,6 +613,15 @@ class MobileFrontendHooks {
 				'screenshot' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/nearby-$dir.svg",
 			);
 		}
+
+		// Enable the mobile skin on desktop
+		$preferences['betafeatures-minerva'] = array(
+			'label-message' => 'beta-feature-minerva',
+			'desc-message' => 'beta-feature-minerva-description',
+			'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Minerva',
+			'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Minerva',
+			'screenshot' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva.svg",
+		);
 
 		return true;
 	}
