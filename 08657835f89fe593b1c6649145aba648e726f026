@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_65a68cc0",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 498,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-29T17:00:19Z",
+      "side": 1,
+      "message": "Better way to identify identical messages? I saw {{Identical}} but it looks like that requires some fiddling on translatewiki...",
+      "revId": "08657835f89fe593b1c6649145aba648e726f026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
