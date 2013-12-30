@@ -132,14 +132,14 @@ class SkinMobileBeta extends SkinMobile {
 				$thumb .
 				Html::element( 'h2', array(), $title->getPrefixedText() ) .
 				Html::element( 'p', array( 'class' => 'content component' ),
-					$this->msg( 'mobile-frontend-mainpage-cta-prompt' ) ) .
+					$this->msg( 'mobile-frontend-mainpage-cta-prompt' )->text() ) .
 				Html::openElement( 'p', array( 'class' => 'content component' ) ) .
 				Html::element( 'a', array(
 					'class' => 'button',
 					'href' => $title->getLocalUrl(
 						array( 'campaign' => 'mobile-mainpage-keepgoing-links'  )
 					),
-				), $this->msg( 'mobile-frontend-mainpage-cta-button' ) ) .
+				), $this->msg( 'mobile-frontend-mainpage-cta-button' )->text() ) .
 				Html::closeElement( 'p' ) .
 				Html::closeElement( 'li' ) .
 				Html::closeElement( 'ul' );
