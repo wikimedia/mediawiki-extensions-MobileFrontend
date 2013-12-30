@@ -66,7 +66,7 @@
 					return;
 				}
 				var directionUrl;
-				options.heading = options.page.title;
+				options.heading = '<span>' + options.page.title + '</span>';
 				options.preview = options.page.lead;
 				options.url = mw.util.getUrl( options.heading );
 				options.readMoreLink = mw.msg( 'mobile-frontend-nearby-link' );
