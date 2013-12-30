@@ -36,7 +36,6 @@
 			content: M.template.get( 'modules/editor/EditorOverlay' )
 		},
 		className: 'mw-mf-overlay editor-overlay',
-		closeOnBack: true,
 
 		log: function( action, errorText ) {
 			var data = { action: action, section: this.sectionId, funnel: this.funnel };
@@ -67,7 +66,6 @@
 			this.$spinner = this.$( '.spinner' );
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( 'textarea' ).
-				microAutosize().
 				on( 'input', function() {
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .save' ).prop( 'disabled', false );
@@ -192,7 +190,7 @@
 					self.$content.
 						show().
 						val( content ).
-						trigger( 'input' );
+						microAutosize();
 					self.$spinner.hide();
 				} ).
 				fail( function( error ) {
