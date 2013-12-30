@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	var Class = M.require( 'Class' ),
 		user = M.require( 'user' ),
-		popup = M.require( 'notifications' ),
+		popup = M.require( 'toast' ),
 		NagOverlay = M.require( 'modules/uploads/NagOverlay' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
 		PhotoUploadProgress = M.require( 'modules/uploads/PhotoUploadProgress' ),

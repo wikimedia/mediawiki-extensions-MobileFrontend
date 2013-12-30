@@ -4,7 +4,7 @@
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
-		popup = M.require( 'notifications' ),
+		popup = M.require( 'toast' ),
 		api = M.require( 'api' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
 		inCampaign = M.query.campaign ? true : false,

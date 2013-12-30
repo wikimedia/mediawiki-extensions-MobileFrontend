@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 	var View = M.require( 'view' ),
-		popup = M.require( 'notifications' ),
+		popup = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		PhotoUploaderButton,
 		LeadPhotoUploaderButton;

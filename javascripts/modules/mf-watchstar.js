@@ -2,7 +2,7 @@
 ( function( M, $ ) {
 
 var api = M.require( 'api' ), w = ( function() {
-	var popup = M.require( 'notifications' ),
+	var popup = M.require( 'toast' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		user = M.require( 'user' ),
 		drawer = new CtaDrawer( {

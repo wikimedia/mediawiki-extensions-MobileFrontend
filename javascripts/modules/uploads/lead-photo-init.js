@@ -3,7 +3,7 @@
 	var
 		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
 		user = M.require( 'user' ),
-		popup = M.require( 'notifications' ),
+		popup = M.require( 'toast' ),
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/LeadPhotoUploaderButton' ),
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		isSupported = PhotoUploaderButton.isSupported;

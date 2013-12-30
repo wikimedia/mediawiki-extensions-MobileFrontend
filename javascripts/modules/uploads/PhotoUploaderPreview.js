@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	var popup = M.require( 'notifications' ),
+	var popup = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		Overlay = M.require( 'Overlay' ),
 		LearnMoreOverlay = M.require( 'modules/uploads/LearnMoreOverlay' ),

@@ -15,6 +15,6 @@
 		}
 	} );
 
-	M.define( 'notifications', new Toast() );
+	M.define( 'toast', new Toast() );
 
 }( mw.mobileFrontend ) );

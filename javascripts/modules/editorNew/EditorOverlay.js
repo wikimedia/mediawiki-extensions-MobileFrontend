@@ -3,7 +3,7 @@
 	var EditorOverlayBase = M.require( 'modules/editorNew/EditorOverlayBase' ),
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
-		popup = M.require( 'notifications' ),
+		popup = M.require( 'toast' ),
 		api = M.require( 'api' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',

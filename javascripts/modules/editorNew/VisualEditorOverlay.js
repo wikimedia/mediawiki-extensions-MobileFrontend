@@ -1,7 +1,7 @@
 ( function( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'modules/editorNew/EditorOverlayBase' ),
 		Page = M.require( 'Page' ),
-		popup = M.require( 'notifications' ),
+		popup = M.require( 'toast' ),
 		VisualEditorOverlay;
 
 	VisualEditorOverlay = EditorOverlayBase.extend( {

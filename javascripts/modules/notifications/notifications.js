@@ -1,3 +1,7 @@
+/**
+ * This code loads the necessary modules for the notifications overlay, not to be confused
+ * with the Toast notifications defined by common/toast.js.
+ */
 ( function( M, $ ) {
 	var useNewOverlays = M.isBetaGroupMember(),
 		LoadingOverlay = useNewOverlays ? M.require( 'LoadingOverlayNew' ) : M.require( 'LoadingOverlay' );

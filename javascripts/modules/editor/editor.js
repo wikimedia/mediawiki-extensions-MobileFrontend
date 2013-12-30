@@ -3,7 +3,7 @@
 	var
 		inStable = mw.config.get( 'wgMFMode' ) === 'stable',
 		user = M.require( 'user' ),
-		popup = M.require( 'notifications' ),
+		popup = M.require( 'toast' ),
 		isUserBlocked = mw.config.get( 'wgMFIsUserBlocked' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),

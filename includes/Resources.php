@@ -672,7 +672,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.toast.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'less/common/notifications.less',
+			'less/common/toast.less',
 		),
 		'position' => 'top',
 	),
@@ -759,7 +759,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/Drawer.js',
 			'javascripts/common/CtaDrawer.js',
 			'javascripts/widgets/progress-bar.js',
-			'javascripts/common/notification.js',
+			'javascripts/common/toast.js',
 			'javascripts/common/Page.js',
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
 		),

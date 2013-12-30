@@ -2,7 +2,7 @@
 var
 	PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 	user = M.require( 'user' ),
-	popup = M.require( 'notifications' ),
+	popup = M.require( 'toast' ),
 	Api = M.require( 'api' ).Api,
 	View = M.require( 'view' ),
 	corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),

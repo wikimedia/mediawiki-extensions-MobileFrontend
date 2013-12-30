@@ -2,7 +2,7 @@
 
 var
 	Overlay = M.require( 'Overlay' ),
-	popup = M.require( 'notifications' ),
+	popup = M.require( 'toast' ),
 	api = M.require( 'api' ),
 	user = M.require( 'user' ),
 	TalkSectionOverlay = Overlay.extend( {
