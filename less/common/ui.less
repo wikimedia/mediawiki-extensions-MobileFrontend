@@ -25,83 +25,106 @@ body {
 	}
 }
 
-.header {
-	// .header needs position: relative, it's not always at the top of the page
-	// (Zero banners, campaigns)
-	position: relative;
-	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
-	border-bottom: 1px solid #e2e2e2;
-	line-height: (@headerHeight - 2px);
-	text-align: center;
-	min-height: (@headerHeight - 2px);
-	padding: 2px @searchBarPaddingLeft 0 @searchBarPaddingLeft;
+// FIXME: remove when new header in stable
+.stable {
+	.header {
+		// .header needs position: relative, it's not always at the top of the page
+		// (Zero banners, campaigns)
+		position: relative;
+		.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
+		border-bottom: 1px solid #e2e2e2;
+		line-height: (@headerHeight - 2px);
+		text-align: center;
+		min-height: (@headerHeight - 2px);
+		padding: 2px @searchBarPaddingLeft 0 @searchBarPaddingLeft;
 
-	h1, h2 {
-		font-size: 1.6em;
-	}
-}
-
-/* Menu buttons */
-#mw-mf-main-menu-button,
-#secondary-button {
-	// Needed for Special:UserProfile and Special:Nearby
-	.background-size( auto, 24px );
-	border: none;
-	height: @headerHeight;
-	width: @searchBarPaddingLeft;
-	position: absolute;
-	top: 0;
-}
-
-.user-button {
-	line-height: @headerHeight;
-
-	&:hover {
-		text-decoration: none;
-	}
-
-	span {
-		display: inline-block;
-		width: 24px;
-		height: 24px;
-		font-weight: bold;
-		color: #fff;
-		line-height: 24px;
-		background: #c91f2c;
-		border-radius: 2px;
-
-		&.zero {
-			background: #cecece;
+		h1, h2 {
+			font-size: 1.6em;
 		}
 	}
-}
 
-/* Echo Notifications */
-.is-authenticated {
-	.header {
-		padding-right: @searchBarPaddingRight;
+	/* Menu buttons */
+	#mw-mf-main-menu-button,
+	#secondary-button {
+		// Needed for Special:UserProfile and Special:Nearby
+		.background-size( auto, 24px );
+		border: none;
+		height: @headerHeight;
+		width: @searchBarPaddingLeft;
+		position: absolute;
+		top: 0;
+	}
+
+	.user-button {
+		line-height: @headerHeight;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		span {
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			font-weight: bold;
+			color: #fff;
+			line-height: 24px;
+			background: #c91f2c;
+			border-radius: 2px;
+
+			&.zero {
+				background: #cecece;
+			}
+		}
+	}
+
+	/* Echo Notifications */
+	.is-authenticated {
+		.header {
+			padding-right: @searchBarPaddingRight;
+		}
+	}
+
+	#secondary-button {
+		right: 0;
+	}
+
+	/* hamburger */
+	// FIXME: make consistent with user-button
+	#mw-mf-main-menu-button {
+		background: url(images/menu/lowres/main.png) 50% 50% no-repeat;
+		.background-size( 24px, 30px );
+		left: 0;
+	}
+
+	// FIXME: why is this needed?
+	input.search {
+		height: @headerElementHeight;
 	}
 }
 
-#secondary-button {
-	right: 0;
-}
-
-/* hamburger */
-// FIXME: make consistent with user-button
-#mw-mf-main-menu-button {
-	background: url(images/menu/lowres/main.png) 50% 50% no-repeat;
-	.background-size( 24px, 30px );
-	left: 0;
-}
-
-.client-js {
+// FIXME: remove when new header in stable
+.client-js .stable {
 	#mw-mf-main-menu-button {
 		.background-image('images/menu/main.png');
 	}
+}
 
+.client-js {
 	.searchSubmit {
 		display: none;
+	}
+}
+
+.client-nojs {
+	.searchSubmit {
+		// FIXME: do all buttons in header need to have padding by default?
+		padding: 0 !important;
+		width: 20%;
+	}
+
+	input.search {
+		width: 80%;
 	}
 }
 
@@ -117,23 +140,6 @@ input.search {
 	// get rid of X in Chrome
 	&::-webkit-search-cancel-button {
 		-webkit-appearance: none;
-	}
-}
-
-// FIXME: why is this needed?
-.stable input.search {
-	height: @headerElementHeight;
-}
-
-.searchSubmit {
-	// FIXME: do all buttons in header need to have padding by default?
-	padding: 0 !important;
-	width: 20%;
-}
-
-.client-nojs {
-	input.search {
-		width: 80%;
 	}
 }
 
@@ -186,28 +192,3 @@ input.search {
 	text-overflow: ellipsis;
 }
 
-// FIXME: Move to beta/alpha only place?
-.alpha,
-.beta {
-	.top-bar {
-		background-color: #F3F3F3;
-		padding: 5px @contentMargin;
-		display: block;
-		color: #666;
-		a {
-			color: #666;
-			// If browser supports
-			&:nth-child(2) {
-				font-weight: bold;
-			}
-		}
-
-		&.active {
-			background-color: #00AF8B;
-			color: #fff;
-			a {
-				color: #fff;
-			}
-		}
-	}
-}

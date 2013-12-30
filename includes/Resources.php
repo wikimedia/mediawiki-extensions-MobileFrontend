@@ -139,6 +139,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
+			'less/common/uiNew.less',
 			'less/common/secondaryPageActions.less',
 		),
 		'position' => 'top',
