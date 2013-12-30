@@ -16,6 +16,41 @@
       "revId": "08657835f89fe593b1c6649145aba648e726f026",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_0d87e215",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 498,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T17:57:01Z",
+      "side": 1,
+      "message": "Potentially you could also just use userlogin-loggedin - which might be preferable since we are not changing the message.",
+      "parentUuid": "eeebdf60_65a68cc0",
+      "revId": "08657835f89fe593b1c6649145aba648e726f026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2d92a657",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T17:57:01Z",
+      "side": 1,
+      "message": "Not sure this needs to be parse?",
+      "revId": "08657835f89fe593b1c6649145aba648e726f026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
