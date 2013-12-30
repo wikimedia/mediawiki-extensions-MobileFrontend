@@ -108,13 +108,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'group' => 'other',
 	),
 
-	'mobile.styles.page' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup' ),
-		'styles' => array(
-			'less/common/enwp.less'
-		),
-	),
-
 	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/pagelist.less',
@@ -135,6 +128,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/common/pageactions.less',
 		),
 		'position' => 'top',
+	),
+
+	'tablet.styles' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array( 'mobile.startup' ),
+		'styles' => array(
+			'less/tablet/common.less',
+			'less/tablet/hacks.less',
+		),
 	),
 
 	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(

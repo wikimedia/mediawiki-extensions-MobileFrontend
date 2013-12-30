@@ -222,6 +222,37 @@ pre {
 }
 
 .content {
+	// Linker.php
+	.thumb {
+		.thumbinner {
+			margin: 5px auto;
+			max-width: 100%;
+
+			> div {
+				float: none !important;
+				width: auto !important;
+				clear: both !important;
+			}
+		}
+
+		.thumbcaption {
+			width: 100%;
+			margin: 5px 10px 0;
+			text-align: center;
+			width: auto !important;
+		}
+
+		/* bug 20030 */
+		.noresize {
+			width: 100%;
+			overflow-x: auto;
+
+			img {
+				max-width: none !important;
+			}
+		}
+	}
+
 	// Includes images on the profile and uploads special pages
 	img {
 		// FIXME [Inline Styles]: Important ensures we can overwrite any inline styles
@@ -246,6 +277,7 @@ pre {
 		overflow-y: hidden;
 		overflow-x: auto;
 		display: block;
+		width: 100% !important;
 
 		td,
 		th {
@@ -316,28 +348,4 @@ pre {
 
 .nomobile {
 	display: none;
-}
-
-// classes added by thumbnails
-// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
-@media all and (min-width: @wgMFDeviceWidthTablet) {
-	.content {
-		.tleft {
-			float: left;
-		}
-
-		.tright {
-			float: right;
-		}
-
-		.thumb {
-			.tleft {
-				margin-right: 0.5em;
-			}
-
-			.tright {
-				margin-left: 0.5em;
-			}
-		}
-	}
 }
