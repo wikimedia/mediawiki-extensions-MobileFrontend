@@ -51,6 +51,24 @@
       "revId": "08657835f89fe593b1c6649145aba648e726f026",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_0d96c242",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-30T18:02:53Z",
+      "side": 1,
+      "message": "If we want to use userlogin-loggedin, a parse is required in practice.",
+      "parentUuid": "eeebdf60_2d92a657",
+      "revId": "08657835f89fe593b1c6649145aba648e726f026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
