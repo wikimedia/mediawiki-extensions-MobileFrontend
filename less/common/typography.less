@@ -22,8 +22,16 @@ body {
 	background: #fff;
 }
 
-.header h2,
-h1 {
+// FIXME: remove when new header in stable
+.stable {
+	.header h2,
+	h1 {
+		font-family: @fontFamilyHeading;
+		font-size: 1.8em;
+	}
+}
+
+#content_wrapper h1 {
 	font-family: @fontFamilyHeading;
 }
 
@@ -100,7 +108,7 @@ dl {
 	}
 }
 
-h1 {
+#content_wrapper h1 {
 	font-size: 1.8em;
 }
 

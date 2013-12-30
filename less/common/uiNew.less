@@ -1,0 +1,116 @@
+@import "mediawiki.mixins";
+@import "buttons.less";
+@import 'mainmenu.less';
+
+.beta, .alpha {
+	// FIXME: refactor and reuse OverlayNew header styling when cache expires
+
+	#mw-mf-page-center {
+		padding: @overlayHeaderMargin @overlayHeaderMargin 0;
+	}
+
+	#content_wrapper {
+		margin: 0 -@overlayHeaderMargin;
+	}
+
+	.header {
+		display: table;
+		width: 100%;
+		white-space: nowrap;
+		border-bottom: 1px solid @grayLight;
+
+		> * {
+			width: @overlayHeaderHeight - @overlayHeaderMargin;
+			display: table-cell;
+			vertical-align: middle;
+
+			&:first-child {
+				border-right: 1px solid @grayLight;
+			}
+
+			&:nth-child(3) {
+				border-left: 1px solid @grayLight;
+			}
+		}
+
+		> h1, > form, > ul {
+			padding: (@overlayHeadingMarginV - @overlayHeaderMargin) @overlayHeadingMarginH;
+			width: auto;
+		}
+
+		// FIXME: use .icon class
+		#mw-mf-main-menu-button, button {
+			height: @overlayHeaderHeight - @overlayHeaderMargin;
+			text-indent: -9999px;
+			background-repeat: no-repeat;
+			.background-size( 24px, auto );
+		}
+
+		#mw-mf-main-menu-button {
+			background-position: left 40% top 40%;
+			.background-image('images/menu/hamburger.png');
+		}
+
+		button {
+			// FIXME: remove <button> border, remove when we don't use header buttons anymore
+			border: none;
+			border-radius: 0;
+
+			background-position: right 40% top 40%;
+		}
+
+		.user-button {
+			width: @overlayHeaderHeight - 2 * @overlayHeaderMargin;
+			padding-left: @overlayHeaderMargin;
+			padding-bottom: @overlayHeaderMargin;
+			text-align: center;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			span {
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				font-weight: bold;
+				color: #fff;
+				line-height: 24px;
+				background: #c91f2c;
+				border-radius: 2px;
+
+				&.zero {
+					background: @grayLight;
+				}
+			}
+		}
+
+		// FIXME: merge with SearchOverlay
+		.search {
+			border: none;
+			padding: 0;
+		}
+	}
+
+	.top-bar {
+		background-color: #F3F3F3;
+		padding: 5px @contentMargin;
+		display: block;
+		color: #666;
+		a {
+			color: #666;
+			// If browser supports
+			&:nth-child(2) {
+				font-weight: bold;
+			}
+		}
+
+		&.active {
+			background-color: #00AF8B;
+			color: #fff;
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
