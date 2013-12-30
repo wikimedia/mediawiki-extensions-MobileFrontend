@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_684e5c3e",
+        "filename": "javascripts/common/api.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T19:55:31Z",
+      "side": 1,
+      "message": "Can this be derived from somewhere rather than hardcoded? Seems prone to problems.\n\nAlso what does easyTokens mean?",
+      "revId": "d2755977b580e3282b0f68702951af1b2ae46f9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2860549f",
+        "filename": "javascripts/common/api.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T19:55:31Z",
+      "side": 1,
+      "message": "I prefer \u003e -1 in this situation - easier to read and 2 characters less but that\u0027s just a personal preference\n\nAlso why not use easyTokens.indexOf here ? All the browsers we support on ResourceLoader support it.",
+      "revId": "d2755977b580e3282b0f68702951af1b2ae46f9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_48295835",
+        "filename": "tests/javascripts/common/test_api.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T19:55:31Z",
+      "side": 1,
+      "message": "It might be better to stub tokens.get\n\nShould update the teardown though to ensure it leaves the state of MediaWiki as it found it as this may have side effects that interfere with other tests.",
+      "revId": "d2755977b580e3282b0f68702951af1b2ae46f9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
