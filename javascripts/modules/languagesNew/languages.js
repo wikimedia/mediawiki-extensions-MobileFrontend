@@ -17,11 +17,10 @@
 					loadingOverlay = new LoadingOverlay();
 				loadingOverlay.show();
 
-				// FIXME: Once getPageLanguages() can return language variants,
-				// pass these to languageOverlay as well.
-				M.pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( langlinks ) {
+				M.pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 					var languageOverlay = new LanguageOverlay( {
-							languages: langlinks
+							languages: data.languages,
+							variants: data.variants
 						} );
 					loadingOverlay.hide();
 					languageOverlay.show();
