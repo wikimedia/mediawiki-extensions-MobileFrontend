@@ -37,6 +37,15 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 
 	protected function renderMessageHtml() {
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
+
+		// Render logged-in notice (beta/alpha)
+		if ( MobileContext::singleton()->isBetaGroupMember() && $this->data['loggedin'] ) {
+			$msgBox .= Html::element( 'div', array( 'class' => 'alert warning' ),
+				wfMessage( 'userlogin-loggedin' )->params(
+					$this->data['loggedinuser'] )->parse() );
+		}
+
+		// Render login errors
 		$message = $this->data['message'];
 		$messageType = $this->data['messagetype'];
 		if ( $message ) {
