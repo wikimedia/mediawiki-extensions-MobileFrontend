@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_ea1b8480",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-30T16:59:27Z",
+      "side": 1,
+      "message": "This chaining looks wrong because text() returns a string, you can\u0027t treat it like a Message object. Have you tried running this code?",
+      "revId": "f57c4d8c9c17c08d1052e6035c84a6df588a33a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
