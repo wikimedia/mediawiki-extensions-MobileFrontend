@@ -268,8 +268,6 @@ $messages['en'] = array (
 
 	'mobile-frontend-thanked-notice' => "$1 was told that you liked {{GENDER:$2|his|her|their}} edit.",
 
-	// tables
-	'mobile-frontend-table' => 'Table $1',
 	// confirm exit
 	'mobile-frontend-saving-exit-page' => 'Your contribution is still saving. If you leave your contributions will be lost. Are you sure you want to exit?',
 
