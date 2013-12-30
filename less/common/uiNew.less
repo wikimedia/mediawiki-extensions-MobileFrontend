@@ -39,7 +39,7 @@
 		}
 
 		// FIXME: use .icon class
-		#mw-mf-main-menu-button, button {
+		a {
 			height: @headerHeight - @headerMargin;
 			text-indent: -9999px;
 			background-repeat: no-repeat;
@@ -51,15 +51,13 @@
 			.background-image('images/menu/hamburger.png');
 		}
 
-		button {
-			// FIXME: remove <button> border, remove when we don't use header buttons anymore
-			border: none;
-			border-radius: 0;
-
+		#secondary-button {
+			height: @headerHeight - 2 * @headerMargin;
 			background-position: right 40% top 40%;
 		}
 
 		.user-button {
+			text-indent: 0;
 			width: @headerHeight - 2 * @headerMargin;
 			padding-left: @headerMargin;
 			padding-bottom: @headerMargin;
