@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_993a14bf",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-30T22:21:20Z",
+      "side": 1,
+      "message": "undefined \u003d undefined?",
+      "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_d9ae5ce4",
+        "filename": "javascripts/modules/uploadsNew/PhotoUploader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-30T22:21:20Z",
+      "side": 1,
+      "message": "It seems like if this class had no purpose now... Maybe it\u0027s not needed? Why did you move everything to PhotoUploadOverlay?",
+      "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_99de946f",
+        "filename": "javascripts/modules/uploadsNew/UploadTutorial.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-30T22:21:20Z",
+      "side": 1,
+      "message": "I\u0027m not sure if I understand. Why do we even have this class if it doesn\u0027t extend UploadTutorial?",
+      "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_190724cf",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-12-30T22:21:20Z",
+      "side": 1,
+      "message": "This feels like a step back. I would not pollute M with very non-global events and rather forward this from the overlay through the button.",
+      "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
