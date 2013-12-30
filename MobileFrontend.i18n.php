@@ -1175,6 +1175,7 @@ $messages['af'] = array(
 	'mobile-frontend-news-items' => 'In die nuus',
 	'mobile-frontend-languages-404-title' => 'Taalfout',
 	'mobile-frontend-languages-404-desc' => "'n Geldige titel moet verskaf word.",
+	'mobile-frontend-languages-header' => 'Tale',
 	'mobile-frontend-languages-nonexistent-title' => 'Die bladsy "$1" bestaan nie.',
 	'mobile-frontend-language-article-heading' => "Lees in 'n ander taal",
 	'mobile-frontend-language-header' => "Hierdie bladsy is in {{PLURAL:$1|'n taal|$1 tale}} beskikbaar", # Fuzzy
@@ -1198,7 +1199,7 @@ $messages['af'] = array(
 	'mobile-frontend-main-menu-featured' => 'Uitgelig',
 	'mobile-frontend-main-menu-settings' => 'Voorkeure',
 	'mobile-frontend-page-menu-history' => 'Geskiedenis',
-	'mobile-frontend-mainpage-cta-button' => 'Verbeter hierdie artikel',
+	'mobile-frontend-mainpage-cta-button' => 'Verbeter hierdie artikel', # Fuzzy
 );
 
 /** Akan (Akan)
@@ -3467,7 +3468,7 @@ $messages['cs'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonymní uživatel',
 	'mobile-frontend-changeslist-nocomment' => 'bez shrnutí editace',
 	'mobile-frontend-watchlist-filter-all' => 'Všechno',
-	'mobile-frontend-watchlist-filter-articles' => 'Články',
+	'mobile-frontend-watchlist-filter-articles' => 'Články', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskuse',
 	'mobile-frontend-watchlist-filter-other' => 'Jiné',
 	'mobile-frontend-watchlist-modified' => 'Změněno $1',
@@ -3565,8 +3566,8 @@ $messages['cs'] = array(
 	'mobile-frontend-geonotahack' => 'Poblíž této stránky',
 	'beta-feature-geonotahack' => 'Poblíž této stránky',
 	'beta-feature-geonotahack-description' => 'Objevte stránky, které jsou geograficky blízké stránce, kterou si právě čtete.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Tento článek potřebuje vaši pomoc!',
-	'mobile-frontend-mainpage-cta-button' => 'Vylepšit tento článek',
+	'mobile-frontend-mainpage-cta-prompt' => 'Tento článek potřebuje vaši pomoc!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Vylepšit tento článek', # Fuzzy
 );
 
 /** Church Slavic (словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
@@ -3822,7 +3823,7 @@ $messages['cy'] = array(
 	'mobile-frontend-changeslist-ip' => 'Defnyddiwr anhysbys',
 	'mobile-frontend-changeslist-nocomment' => 'dim crynodeb golygu',
 	'mobile-frontend-watchlist-filter-all' => 'Pob un',
-	'mobile-frontend-watchlist-filter-articles' => 'Erthyglau',
+	'mobile-frontend-watchlist-filter-articles' => 'Erthyglau', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Sgwrs',
 	'mobile-frontend-watchlist-filter-other' => 'Arall',
 	'mobile-frontend-watchlist-modified' => 'Addaswyd $1',
@@ -4002,6 +4003,12 @@ $messages['da'] = array(
 	'mobile-frontend-on' => 'TIL',
 	'mobile-frontend-featured-article' => 'Dagens udvalgte indhold',
 	'mobile-frontend-news-items' => 'Aktuelle begivenheder',
+	'mobile-frontend-languages-404-title' => 'Sprogfejl',
+	'mobile-frontend-languages-404-desc' => 'Der skal angives en gyldig titel.',
+	'mobile-frontend-languages-header' => 'Sprog',
+	'mobile-frontend-languages-nonexistent-title' => 'Siden "$1" findes ikke.',
+	'mobile-frontend-languages-text' => '$1 er tilgængelig på $2 {{PLURAL:$2|sprog}}',
+	'mobile-frontend-languages-variant-header' => '{{#language:{{CONTENTLANG}}}} varianter',
 	'mobile-frontend-language-heading' => '<strong>Sprog</strong>',
 	'mobile-frontend-language-article-heading' => 'Læs på et andet sprog',
 	'mobile-frontend-language-header' => 'Denne side er tilgængelig på $1 {{PLURAL:$1|sprog}}',
@@ -4145,7 +4152,7 @@ $messages['da'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonym bruger',
 	'mobile-frontend-changeslist-nocomment' => 'ingen ændringskommentar',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
-	'mobile-frontend-watchlist-filter-articles' => 'Artikler',
+	'mobile-frontend-watchlist-filter-articles' => 'Artikler', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Øvrige',
 	'mobile-frontend-watchlist-modified' => 'Ændret $1',
@@ -4255,7 +4262,7 @@ $messages['da'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'Hvorvidt en bruger redigerer via mobil-grænsefladen',
 	'mobile-frontend-profile-title' => 'Brugerdata',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Uploaded}} {{PLURAL:$1|i går|for $1 dage siden|0=i dag}}.',
-	'mobile-frontend-profile-usertalk' => 'Diskutér med $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'Diskutér med {{GENDER:$1|$1}}',
 	'mobile-frontend-profile-error' => 'Åh nej!',
 	'mobile-frontend-profile-noargs' => 'Intet brugernavn blev givet. Angiv venligst et brugernavn for at se en profil.',
 	'mobile-frontend-profile-nouser' => 'Ingen bruger med dette navn eksisterer. I brugernavne er der forskel på små og store bogstaver, så tjek venligst, om det er indtastet korrekt.',
@@ -4272,8 +4279,8 @@ $messages['da'] = array(
 	'mobile-frontend-geonotahack' => 'I nærheden af denne side',
 	'beta-feature-geonotahack' => 'I nærheden af denne side',
 	'beta-feature-geonotahack-description' => 'Find sider, der er geografisk i nærheden af indholdet på den side, du læser lige nu.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Denne artikel har brug for din hjælp!',
-	'mobile-frontend-mainpage-cta-button' => 'Forbedre denne artikel',
+	'mobile-frontend-mainpage-cta-prompt' => 'Denne artikel har brug for din hjælp!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Forbedre denne artikel', # Fuzzy
 );
 
 /** German (Deutsch)
@@ -4487,7 +4494,7 @@ $messages['de'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonymer Benutzer',
 	'mobile-frontend-changeslist-nocomment' => 'keine Bearbeitungszusammenfassung',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
-	'mobile-frontend-watchlist-filter-articles' => 'Artikel',
+	'mobile-frontend-watchlist-filter-articles' => 'Artikel', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Andere',
 	'mobile-frontend-watchlist-modified' => 'Geändert $1',
@@ -4614,8 +4621,8 @@ $messages['de'] = array(
 	'mobile-frontend-geonotahack' => 'In der Nähe dieser Seite',
 	'beta-feature-geonotahack' => 'In der Nähe dieser Seite',
 	'beta-feature-geonotahack-description' => 'Entdecke Seiten mit geografischer Nachbarschaft zur aktuell gelesenen Inhaltsseite.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Dieser Artikel benötigt deine Hilfe!',
-	'mobile-frontend-mainpage-cta-button' => 'Diesen Artikel verbessern',
+	'mobile-frontend-mainpage-cta-prompt' => 'Dieser Artikel benötigt deine Hilfe!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Diesen Artikel verbessern', # Fuzzy
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -4681,6 +4688,7 @@ $messages['diq'] = array(
 	'mobile-frontend-on' => 'AKE',
 	'mobile-frontend-featured-article' => 'Weçinaye zerreké naroc',
 	'mobile-frontend-news-items' => 'Xeberi',
+	'mobile-frontend-languages-header' => 'Zıwani',
 	'mobile-frontend-language-heading' => '<strong>Zuwani</strong>',
 	'mobile-frontend-language-article-heading' => 'Zewbi zıwan de bıwan',
 	'mobile-frontend-language-header' => 'Na wesiqa {{PLURAL:$1|zıwan dê|zıwanan dê}} $1 dı esta',
@@ -4696,6 +4704,7 @@ $messages['diq'] = array(
 	'mobile-frontend-last-modified-date' => 'Modifiya bahdoyen $1 seate $2',
 	'mobile-frontend-last-modified-seconds' => 'Verde {{PLURAL:$1|$1 saniyi|$1 saniyan}} modifiya bahdoyen',
 	'mobile-frontend-learn-more' => 'Zewbi',
+	'mobile-frontend-view-source' => 'Çımey bıvêne',
 	'mobile-frontend-account-create-submit' => 'Qeyd be',
 	'mobile-frontend-password-confirm-placeholder' => 'Parola tesdiq ke',
 	'mobile-frontend-account-create-email-placeholder' => 'Adresa e-postey (keyfi)',
@@ -4757,8 +4766,8 @@ $messages['diq'] = array(
 	'mobile-frontend-changeslist-ip' => 'Karbero bêname',
 	'mobile-frontend-changeslist-nocomment' => 'nê vurnaye xulasa',
 	'mobile-frontend-watchlist-filter-all' => 'Pêro',
-	'mobile-frontend-watchlist-filter-articles' => 'Wesiqey',
-	'mobile-frontend-watchlist-filter-talk' => 'Werênayış',
+	'mobile-frontend-watchlist-filter-articles' => 'Wesiqey', # Fuzzy
+	'mobile-frontend-watchlist-filter-talk' => 'werênayış',
 	'mobile-frontend-watchlist-filter-other' => 'Zewmi',
 	'mobile-frontend-watchlist-modified' => '$1 timariya yo',
 	'mobile-frontend-diffview-404-title' => 'Rewizyono xırab',
@@ -4909,7 +4918,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonymny wužywaŕ',
 	'mobile-frontend-changeslist-nocomment' => 'žedne zespominanje wobźěłanja',
 	'mobile-frontend-watchlist-filter-all' => 'Wšykne',
-	'mobile-frontend-watchlist-filter-articles' => 'Nastawki',
+	'mobile-frontend-watchlist-filter-articles' => 'Nastawki', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskusija',
 	'mobile-frontend-watchlist-filter-other' => 'Druge',
 	'mobile-frontend-watchlist-modified' => 'Změnjony $1',
@@ -5653,7 +5662,7 @@ $messages['et'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonüümne kasutaja',
 	'mobile-frontend-changeslist-nocomment' => 'resümee puudub',
 	'mobile-frontend-watchlist-filter-all' => 'Kõik',
-	'mobile-frontend-watchlist-filter-articles' => 'Artiklid',
+	'mobile-frontend-watchlist-filter-articles' => 'Artiklid', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Arutelu',
 	'mobile-frontend-watchlist-filter-other' => 'Muu',
 	'mobile-frontend-watchlist-modified' => 'Muudetud $1',
@@ -5954,7 +5963,7 @@ $messages['fa'] = array(
 	'mobile-frontend-nearby-link' => 'این صفحه را بطور کامل بخوانید',
 	'mobile-frontend-nearby-directions' => 'حرکت در اینجا',
 	'mobile-frontend-donate-image-nouploads' => 'هیچ بارگذاری‌ای نیست.',
-	'mobile-frontend-donate-image-login' => 'برای مشاهدهٔ بارگذاری‌هایتان باید به سامانه وارد شوید', # Fuzzy
+	'mobile-frontend-donate-image-login' => 'پروندهٔ {{SITENAME}} توسط شخصی مانند شما اهدا شده‌است.',
 	'mobile-frontend-photo-upload-disabled' => 'در این صفحه تصویری مورد نیاز نیست.',
 	'mobile-frontend-photo-upload-anon' => 'لطفاً برای افزودن تصویر به صفحه به سامانه وارد شوید.',
 	'mobile-frontend-photo-upload-protected' => 'شما دسترسی افزودن تصویر به این صفحه را ندارید.',
@@ -5981,7 +5990,8 @@ $messages['fa'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'ورود به سامانه',
 	'mobile-frontend-watchlist-cta-button-signup' => 'ثبت نام',
 	'mobile-frontend-watchlist-login-action' => 'برای مشاهده وارد سامانه شوید.',
-	'mobile-frontend-watch-login' => 'برای مشاهدهٔ صفحه‌هات باید به سامانه وارد شده‌باشید', # Fuzzy
+	'mobile-frontend-watch-login' => 'افزودن $1 به پیگیری‌های شما.',
+	'mobile-frontend-edit-login-action' => 'ورود برای ویرایش.',
 	'mobile-frontend-watchlist-a-z' => 'فهرست',
 	'mobile-frontend-watchlist-feed' => 'تغییر‌یافته',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'ستاره در بالای صفحه را کلیک کنید',
@@ -5991,7 +6001,7 @@ $messages['fa'] = array(
 	'mobile-frontend-changeslist-ip' => 'کاربر گمنام',
 	'mobile-frontend-changeslist-nocomment' => 'بدون خلاصه ویرایش',
 	'mobile-frontend-watchlist-filter-all' => 'همه',
-	'mobile-frontend-watchlist-filter-articles' => 'مقالات',
+	'mobile-frontend-watchlist-filter-articles' => 'مقالات', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'بحث',
 	'mobile-frontend-watchlist-filter-other' => 'دیگر',
 	'mobile-frontend-watchlist-modified' => 'تغییریافته $1',
@@ -6049,7 +6059,7 @@ $messages['fa'] = array(
 	'mobile-frontend-editor-undo-unsupported' => 'خنثی‌سازی در حال حاضر در دستگاه‌های همراه پشتیبانی نشده‌است.',
 	'mobile-frontend-editor-newpage-prompt' => 'این صفحه وجود ندارد. چرا جسور نباشید و ایجادش نکنید؟',
 	'mobile-frontend-editor-disabled' => 'این صفحه برای جلوگیری از خرابکاری محافظت می شود.',
-	'mobile-frontend-editor-cta' => 'شما باید برای ویرایش صفحات در تلفن همراه به سامانه وارد شوید.', # Fuzzy
+	'mobile-frontend-editor-cta' => 'کمک به بهبود این صفحه!',
 	'mobile-frontend-editor-edit' => 'ویرایش',
 	'mobile-frontend-editor-continue' => 'ادامه',
 	'mobile-frontend-editor-save' => 'ذخیره',
@@ -6074,8 +6084,8 @@ $messages['fa'] = array(
 	'mobile-frontend-editor-abusefilter-warning' => 'اخطار: شما می‌خواهید این ویرایش را ذخیره کنید؟ ممکن‌است مشکلی با آن وجود داشته باشد.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'این ویرایش نمی‌تواند ذخیره شود به این دلیل که ما خطایی را شناسایی کرده‌ایم.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'بیشتر بخوانید',
-	'mobile-frontend-editor-editing-page' => "''' ویرایش '''$1", # Fuzzy
-	'mobile-frontend-editor-previewing-page' => '<strong>پیش‌نمایش</strong> <span>$1</span>', # Fuzzy
+	'mobile-frontend-editor-editing-page' => '<strong>ویرایش </strong><span> $1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>پیش‌نمایش</strong><span>$1</span>',
 	'tag-mobile_edit' => 'ویرایش موبایل',
 	'tag-mobile_edit-description' => 'ویرایش انجام‌شده از سایت موبایل',
 	'mobile-frontend-drawer-cancel' => 'انصراف',
@@ -6096,14 +6106,14 @@ $messages['fa'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه',
 	'mobile-frontend-profile-title' => 'مشخصات کاربر',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|بارگذاری}}  {{PLURAL:$1| دیروز| $1  روز پیش|0 امروز =}}.',
-	'mobile-frontend-profile-usertalk' => 'بحث با $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'بحث با {{GENDER:$1|$1}}',
 	'mobile-frontend-profile-error' => 'اوه نه!',
 	'mobile-frontend-profile-noargs' => 'هیچ نام کاربری داده نشده است. لطفاً یک نام کاربری برای نمایش مشخصات بدهید.',
 	'mobile-frontend-profile-nouser' => 'هیچ کاربری با این نام وجود ندارد. نام‌‌کاربری به بزرگی و کوچکی حروف حساس است پس لطفاً بررسی کنید که آیا درست تایپ شده است.',
 	'mobile-frontend-profile-activity-heading' => 'فعالیت و مشارکت‌ها',
 	'mobile-frontend-profile-userpage-link' => 'نمایش صفحه کاربری.',
 	'mobile-frontend-requires-optin' => 'این صفحه موجود نخواهد بود مگر اینکه شما واردشده حالت آزمایشی ما باشید. [[Special:MobileOptions|صفحهٔ تنظیمات]] را برای واردشدن مشاهده کنید.',
-	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|تشکر}} توسط [[Special:UserProfile/$1|$1]] برای ویرایشی در [[$2]].', # Fuzzy
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$3|تشکر}} {{GENDER:$1|توسط}} [[Special:UserProfile/$1|$1]] برای ویرایشی در [[$2]].',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|ویرایش کرد}} صفحهٔ [[:$1]], {{PLURAL:$2|دیروز|$2 روز پیش |0=صبح امروز}}.',
 	'mobile-frontend-profile-footer-days' => 'عضو شد {{PLURAL:$2|۱ روز|$2 روز}} پیش با  [[Special:Contributions/$1|{{PLURAL:$3|ویرایش|$3 ویرایش}}]] و [[Special:Uploads/$1|{{PLURAL:$4|۱ بارگذاری|$4 بارگذاری|500=500+ بارگذاری}}]].',
 	'mobile-frontend-profile-footer-months' => 'عضو شد {{PLURAL:$2|۱ ماه|$2 ماه}} پیش با  [[Special:Contributions/$1|{{PLURAL:$3|ویرایش|$3 ویرایش}}]] و [[Special:Uploads/$1|{{PLURAL:$4|۱ بارگذاری|$4 بارگذاری|500=500+ بارگذاری}}]].',
@@ -6574,8 +6584,12 @@ $messages['fr'] = array(
 	'mobile-frontend-on' => 'ON',
 	'mobile-frontend-featured-article' => 'Contenu recommandé du jour',
 	'mobile-frontend-news-items' => 'Actualités',
+	'mobile-frontend-languages-404-title' => 'Erreur de langues',
+	'mobile-frontend-languages-404-desc' => 'Un titre valide doit être spécifié.',
 	'mobile-frontend-languages-header' => 'Langues',
 	'mobile-frontend-languages-nonexistent-title' => 'La page « $1 » n’existe pas.',
+	'mobile-frontend-languages-text' => '$1 est disponible en $2 {{PLURAL:$2|langue|langues}}.',
+	'mobile-frontend-languages-variant-header' => 'variantes en {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-heading' => '<strong>Langues</strong>',
 	'mobile-frontend-language-article-heading' => 'Lire dans une autre langue',
 	'mobile-frontend-language-header' => 'Cette page est disponible en $1 {{PLURAL:$1|langue|langues}}',
@@ -6719,7 +6733,7 @@ $messages['fr'] = array(
 	'mobile-frontend-changeslist-ip' => 'Utilisateur anonyme',
 	'mobile-frontend-changeslist-nocomment' => 'aucun résumé de modification',
 	'mobile-frontend-watchlist-filter-all' => 'Tous',
-	'mobile-frontend-watchlist-filter-articles' => 'Articles',
+	'mobile-frontend-watchlist-filter-articles' => 'Articles', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Discussion',
 	'mobile-frontend-watchlist-filter-other' => 'Autres',
 	'mobile-frontend-watchlist-modified' => 'Modifié $1',
@@ -6806,8 +6820,9 @@ $messages['fr'] = array(
 	'mobile-frontend-editor-abusefilter-warning' => 'Attention : Êtes-vous sûr de vouloir enregistrer cette modification ? Elle pourrait présenter un problème.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Cette modification ne peut pas être enregistrée parce que nous avons détecté un problème.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'En savoir plus',
-	'mobile-frontend-editor-editing-page' => '<strong>Modification</strong> de <span>$1</span>', # Fuzzy
-	'mobile-frontend-editor-previewing-page' => '<strong>Aperçu</strong> de <span>$1</span>', # Fuzzy
+	'mobile-frontend-editor-editing-page' => '<strong>Modification</strong> de<span> $1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>Aperçu</strong> de<span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Affichage de la source</strong> de<span> $1</span>',
 	'tag-mobile_edit' => 'Modification par mobile',
 	'tag-mobile_edit-description' => 'Modification effectuée depuis la version mobile',
 	'mobile-frontend-drawer-cancel' => 'Annuler',
@@ -6828,7 +6843,7 @@ $messages['fr'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'Si un utilisateur est ou non en cours de modification via l’interface mobile',
 	'mobile-frontend-profile-title' => 'Profil utilisateur',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Téléchargé}} {{PLURAL:$1|hier|il y a $1 jours|0=aujourd’hui}}.',
-	'mobile-frontend-profile-usertalk' => 'Parler à $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'Parler à {{GENDER:$1|$1}}',
 	'mobile-frontend-profile-error' => 'Oh non !',
 	'mobile-frontend-profile-noargs' => 'Aucun utilisateur n’a été indiqué. Veuillez indiquer un nom d’utilisateur pour afficher un profil.',
 	'mobile-frontend-profile-nouser' => 'Il n’existe pas d’utilisateur avec ce nom. Les noms d’utilisateur sont sensibles à la casse, veuillez donc vérifier si vous l’avez bien tapé.',
@@ -6845,6 +6860,8 @@ $messages['fr'] = array(
 	'mobile-frontend-geonotahack' => 'Proche de cette page',
 	'beta-feature-geonotahack' => 'Proche de cette page',
 	'beta-feature-geonotahack-description' => 'Découvrir des pages qui sont proches géographiquement du contenu de la page que vous êtes en train de regarder.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Cet article a besoin de votre aide !', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Améliorer cet article', # Fuzzy
 );
 
 /** Franco-Provençal (arpetan)
@@ -7807,6 +7824,12 @@ $messages['he'] = array(
 	'mobile-frontend-on' => 'כן',
 	'mobile-frontend-featured-article' => 'התוכן המומלץ של היום',
 	'mobile-frontend-news-items' => 'בחדשות',
+	'mobile-frontend-languages-404-title' => 'שגיאה בשפות',
+	'mobile-frontend-languages-404-desc' => 'יש לציין כותרת תקינה.',
+	'mobile-frontend-languages-header' => 'שפות',
+	'mobile-frontend-languages-nonexistent-title' => 'הדף "$1" אינו קיים.',
+	'mobile-frontend-languages-text' => 'הדף $1 זמין {{PLURAL:$2|בשפה אחת|ב־$2 שפות}}',
+	'mobile-frontend-languages-variant-header' => 'הגוונים של {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-heading' => '<strong>שפות</strong>',
 	'mobile-frontend-language-article-heading' => 'לקרוא בשפה אחרת',
 	'mobile-frontend-language-header' => 'הדף הזה זמין {{PLURAL:$1|בשפה אחת|ב־$1 שפות}}',
@@ -7950,7 +7973,7 @@ $messages['he'] = array(
 	'mobile-frontend-changeslist-ip' => 'משתמש אלמוני',
 	'mobile-frontend-changeslist-nocomment' => 'אין תקציר עריכה',
 	'mobile-frontend-watchlist-filter-all' => 'הכול',
-	'mobile-frontend-watchlist-filter-articles' => 'ערכים',
+	'mobile-frontend-watchlist-filter-articles' => 'ערכים', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'שיחה',
 	'mobile-frontend-watchlist-filter-other' => 'אחר',
 	'mobile-frontend-watchlist-modified' => 'השתנה $1',
@@ -8060,7 +8083,7 @@ $messages['he'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'האם משתמש עורך דרך הממשק למכשירים ניידים או לא',
 	'mobile-frontend-profile-title' => 'פרופיל משתמש',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|העלה|העלתה}} {{PLURAL:$1|אתמול|לפני יומיים|לפני $1 ימים|0=היום}}.',
-	'mobile-frontend-profile-usertalk' => 'לדבר עם $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'לדבר עם $1',
 	'mobile-frontend-profile-error' => 'אבוי!',
 	'mobile-frontend-profile-noargs' => 'לא ניתן שם משתמש. נא לתת שם משתמש כדי להציג פרופיל.',
 	'mobile-frontend-profile-nouser' => 'לא קיים משתמש עם שם כזה. שמות המשתמשים הם תלויי רישיות, אז נא לבדוק שהם הוקלדו נכון.',
@@ -8077,8 +8100,8 @@ $messages['he'] = array(
 	'mobile-frontend-geonotahack' => 'ליד הדף הזה',
 	'beta-feature-geonotahack' => 'בסביבות הדף הזה',
 	'beta-feature-geonotahack-description' => 'זה מאפשר לך לראות דפים שקרובים גאוגרפית לדפים שקראת.',
-	'mobile-frontend-mainpage-cta-prompt' => 'הערך הזה קוק לעזרתך!',
-	'mobile-frontend-mainpage-cta-button' => 'שיפור הערך הזה',
+	'mobile-frontend-mainpage-cta-prompt' => 'הערך הזה קוק לעזרתך!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'שיפור הערך הזה', # Fuzzy
 );
 
 /** Hindi (हिन्दी)
@@ -8417,7 +8440,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonymny wužiwar',
 	'mobile-frontend-changeslist-nocomment' => 'žane zjeće',
 	'mobile-frontend-watchlist-filter-all' => 'Wšě',
-	'mobile-frontend-watchlist-filter-articles' => 'Nastawki',
+	'mobile-frontend-watchlist-filter-articles' => 'Nastawki', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskusija',
 	'mobile-frontend-watchlist-filter-other' => 'Druhe',
 	'mobile-frontend-watchlist-modified' => 'Změnjeny $1',
@@ -9500,6 +9523,10 @@ $messages['it'] = array(
 	'mobile-frontend-on' => 'ON',
 	'mobile-frontend-featured-article' => 'Vetrina',
 	'mobile-frontend-news-items' => 'Novità',
+	'mobile-frontend-languages-404-desc' => 'Deve essere specificato un titolo valido.',
+	'mobile-frontend-languages-header' => 'Lingue',
+	'mobile-frontend-languages-nonexistent-title' => 'La pagina "$1" non esiste.',
+	'mobile-frontend-languages-text' => '$1 è disponibile in $2 {{PLURAL:$2|lingua|lingue}}',
 	'mobile-frontend-language-heading' => '<strong>Lingue</strong>',
 	'mobile-frontend-language-article-heading' => "Leggi in un'altra lingua",
 	'mobile-frontend-language-header' => 'Questa pagina è disponibile in $1 {{PLURAL:$1|lingua|lingue}}',
@@ -9645,7 +9672,7 @@ in tutto il mondo',
 	'mobile-frontend-changeslist-ip' => 'Utente anonimo',
 	'mobile-frontend-changeslist-nocomment' => 'nessun oggetto della modifica',
 	'mobile-frontend-watchlist-filter-all' => 'Tutte',
-	'mobile-frontend-watchlist-filter-articles' => 'Voci',
+	'mobile-frontend-watchlist-filter-articles' => 'Voci', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Discussioni',
 	'mobile-frontend-watchlist-filter-other' => 'Altro',
 	'mobile-frontend-watchlist-modified' => 'Modificata $1',
@@ -9753,7 +9780,7 @@ in tutto il mondo',
 	'abusefilter-edit-builder-vars-user-mobile' => "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
 	'mobile-frontend-profile-title' => 'Profilo utente',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Caricato}} {{PLURAL:$1|ieri|$1 giorni fa|0=oggi}}.',
-	'mobile-frontend-profile-usertalk' => 'Pagina di discussione di $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'Pagina di discussione di {{GENDER:$1|$1}}',
 	'mobile-frontend-profile-error' => 'Oh no!',
 	'mobile-frontend-profile-noargs' => 'Non è stato indicato alcun nome utente. Inserisci un nome utente per vedere un profilo.',
 	'mobile-frontend-profile-nouser' => 'Non esiste alcun utente con questo nome. I nomi utente tengono conto delle maiuscole\\minuscole, controlla se è stato digitato correttamente.',
@@ -9770,8 +9797,8 @@ in tutto il mondo',
 	'mobile-frontend-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack-description' => 'Scopri le pagine che sono geograficamente vicine alla pagina di contenuto che stai attualmente leggendo.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Questa voce ha bisogno del tuo aiuto!',
-	'mobile-frontend-mainpage-cta-button' => 'Migliora questa voce',
+	'mobile-frontend-mainpage-cta-prompt' => 'Questa voce ha bisogno del tuo aiuto!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Migliora questa voce', # Fuzzy
 );
 
 /** Japanese (日本語)
@@ -9981,7 +10008,7 @@ $messages['ja'] = array(
 	'mobile-frontend-changeslist-ip' => '匿名利用者',
 	'mobile-frontend-changeslist-nocomment' => '編集の要約なし',
 	'mobile-frontend-watchlist-filter-all' => 'すべて',
-	'mobile-frontend-watchlist-filter-articles' => '記事',
+	'mobile-frontend-watchlist-filter-articles' => '記事', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'トーク',
 	'mobile-frontend-watchlist-filter-other' => 'その他',
 	'mobile-frontend-watchlist-modified' => '$1に変更',
@@ -10107,8 +10134,8 @@ $messages['ja'] = array(
 	'mobile-frontend-geonotahack' => 'このページの近辺',
 	'beta-feature-geonotahack' => 'このページの近辺',
 	'beta-feature-geonotahack-description' => '現在閲覧している本文ページに地理的に近いページを見つけます。',
-	'mobile-frontend-mainpage-cta-prompt' => 'この記事にはあなたの助けが必要です!',
-	'mobile-frontend-mainpage-cta-button' => 'この記事を改善',
+	'mobile-frontend-mainpage-cta-prompt' => 'この記事にはあなたの助けが必要です!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'この記事を改善', # Fuzzy
 );
 
 /** Javanese (Basa Jawa)
@@ -10384,7 +10411,7 @@ $messages['kk-cyrl'] = array(
 	'nearby' => 'Сізге жақын бет',
 	'mobile-frontend-desc' => 'Мобильді интерфейс',
 	'mobile-frontend-search-submit' => 'Өту',
-	'mobile-frontend-home-button' => 'Басты бетке',
+	'mobile-frontend-home-button' => 'Басты бет',
 	'mobile-frontend-logged-out' => 'Кірмегенсіз',
 	'mobile-frontend-logged-in-homepage-notification' => 'Қош келдіңіз, $1!',
 	'mobile-frontend-logged-in-toast-notification' => '$1 ретінде кірдіңіз.',
@@ -10502,14 +10529,28 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-photo-upload-unavailable' => 'Сіздің шолғышыңыз сурет жүктеуді қолдамайды.',
 	'mobile-frontend-donate-image-title' => 'Жүктеулер',
 	'mobile-frontend-donate-image-heading' => 'Жуықтағы үлестеріңіз',
+	'mobile-frontend-user-account' => 'Қатысушы аккаунты',
 	'mobile-frontend-listed-image-no-description' => 'Сипаттамасы жоқ',
+	'mobile-frontend-donate-photo-upload-success' => 'Сәтті болды! Суретіңізді {{SITENAME}} сайтында қазір қолдана аласыз!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Сәтті болды! Бірінші үлесіңізге рахмет!',
+	'mobile-frontend-first-upload-wizard-new-page-1' => '{{SITENAME}} сайтындағы суреттер Ортаққордан',
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Болды!',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Иә!',
+	'mobile-frontend-watchlist-add' => '$1 бақылау тізіміңізге қосылды',
+	'mobile-frontend-watchlist-removed' => '$1 бақылау тізіміңізден аласталды',
 	'mobile-frontend-watchlist-view' => 'Бақылау тізіміңізді көру',
 	'mobile-frontend-watchlist-more' => 'көбірек',
 	'mobile-frontend-watchlist-cta' => 'Бұл бетті көру үшін кіріңіз немесе тіркеліңіз.', # Fuzzy
 	'mobile-frontend-watchlist-cta-button-login' => 'Кіру',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Тіркелу',
-	'mobile-frontend-watch-login' => 'Беттерді көру үшін кіруіңіз қажет.', # Fuzzy
-	'mobile-frontend-watchlist-a-z' => 'Барлығы', # Fuzzy
+	'mobile-frontend-watchlist-login-action' => 'Оны көру үшін кіріңіз.',
+	'mobile-frontend-generic-login' => '{{SITENAME}} сіз сияқты қызығатын адамдар арқылы жасалады.',
+	'mobile-frontend-generic-login-action' => 'Үлес қосу үшін кіріңіз.',
+	'mobile-frontend-generic-signup-action' => 'Үлес қосу үшін тіркеліңіз',
+	'mobile-frontend-watch-login' => '$1 дегенді бақылау тізіміңізге қосу.',
+	'mobile-frontend-edit-login-action' => 'Өңдеу үшін кіріңіз.',
+	'mobile-frontend-edit-signup-action' => 'Өңдеу үшін тіркеліңіз.',
+	'mobile-frontend-watchlist-a-z' => 'Тізім',
 	'mobile-frontend-watchlist-feed' => 'Өзгертілгендер',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Жоғарғы жақтағы жұлдызшаны басыңыз',
 	'mobile-frontend-watchlist-back-home' => 'Артқа',
@@ -10529,25 +10570,91 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-diffview-explained' => 'Келесі жолдар қосылған (+) және өшірілген (-) еді:',
 	'mobile-frontend-table' => '$1 кесте',
 	'mobile-frontend-saving-exit-page' => 'Сіздің өзгерістереңіз әлі сақталу үстінде. Егер сіз шығып кететін болсаңыз, өзгерістер сақталмайды. Шыққаныңызға сенімдісіз бе?',
-	'mobile-frontend-photo-upload' => 'Бұл тақырыпқа сурет қосу', # Fuzzy
-	'mobile-frontend-photo-article-edit-comment' => 'Бетке пайдалану үшін қосылған фотосурет', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Бұл бетке сурет қосу',
+	'mobile-frontend-photo-article-edit-comment' => 'Бетке пайдалану үшін қосылған сурет',
 	'mobile-frontend-photo-article-donate-comment' => 'Ұялы телефон арқылы бөліскен сурет', # Fuzzy
-	'mobile-frontend-photo-upload-comment' => 'Бетке қосылған суреттер', # Fuzzy
-	'mobile-frontend-photo-caption-placeholder' => 'Сипаттама қосу (міндетті)', # Fuzzy
+	'mobile-frontend-photo-upload-comment' => 'Бетке қосылған сурет',
+	'mobile-frontend-photo-caption-placeholder' => 'Бұл суретті сипаттаңыз (міндетті)',
 	'mobile-frontend-image-loading' => 'Сурет жүктеуде',
 	'mobile-frontend-photo-ownership' => 'Мен $1 бұл суретті жасадым.',
 	'mobile-frontend-photo-ownership-help' => 'Бұның мағынасы не?',
 	'mobile-frontend-photo-ownership-confirm' => 'Болды!',
+	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Бұл жеке сурет емес',
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Жүктеуді бастау',
 	'mobile-frontend-image-uploading-wait' => 'Сурет жүктелуде..., күте тұрыңыз.',
 	'mobile-frontend-image-uploading-long' => 'Сурет әлі жүктелуде! Шыдамдылық танытқаңыңыз үшін алғысымызды білдіреміз.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Болдырмау</a> егер бұл көп уақытқа созылса.',
 	'mobile-frontend-photo-upload-error' => 'Қате, қайтадан көріңіз.',
+	'mobile-frontend-photo-upload-error-file-type' => 'Тек суреттерді ғана жүктеңіз.',
 	'mobile-frontend-photo-submit' => 'Жіберу',
 	'mobile-frontend-photo-cancel' => 'Болдырмау',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> енгізілім|<span>$1</span> еңгізілім}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ еңгізілім',
+	'mobile-frontend-image-heading-describe' => "Суретті '''сипаттаңыз'''",
+	'mobile-frontend-image-uploading' => "Сурет '''жүктелуде'''...",
+	'mobile-frontend-image-cancel-confirm' => 'Жүтеуді болдырмағыңыз келе ме?',
+	'mobile-frontend-editor-unavailable' => 'Шолғышыңызда мобайлмен өңдеу мүмкіндігі жоқ. Басқа шолғышпен қайта байқап көріңіз.',
+	'mobile-frontend-editor-disabled' => 'Бұл бет бұзақылыққа кедергі жасау үшін қорғалған.',
+	'mobile-frontend-editor-blocked' => 'Аккаунтыңыз өңдеуден бұғатталған.',
+	'mobile-frontend-editor-cta' => 'Бұл бетті жетілдіруге көмектесіңіз!',
+	'mobile-frontend-editor-edit' => 'Өңдеу',
+	'mobile-frontend-editor-continue' => 'Жалғастыру',
+	'mobile-frontend-editor-save' => 'Сақтау',
+	'mobile-frontend-editor-cancel' => 'Болдырмау',
+	'mobile-frontend-editor-license' => 'Өзгертулерді сақтағаныңыз, біздің [//wikimediafoundation.org/wiki/Terms_of_use қолдану шарттарымен] және  [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 лицензиясы] және [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] аясында мәтініңізді жариялағаныңызға келіскеніңіз болып табылады.',
+	'mobile-frontend-editor-placeholder' => 'Бұл бөлім бос. Жетілдіру үшін бірінші болыңыз!',
+	'mobile-frontend-editor-summary-placeholder' => 'Нені өзгеркеніңізді айтыңыз (ерікті)',
+	'mobile-frontend-editor-cancel-confirm' => 'Өңдемеңізді қалырып кетуді шынымен қалайсыз ба?',
+	'mobile-frontend-editor-wait' => 'Өңдеме сақталуда, күте тұрыңыз.',
+	'mobile-frontend-editor-guider' => '"{{int:mobile-frontend-editor-continue}}" дегенді басаңыз өңдемеңізді қарап шығасыз және сақтайсыз.',
+	'mobile-frontend-editor-success' => 'Сәтті болды! Өңдемеңіз сақталды.',
+	'mobile-frontend-editor-success-landmark-1' => 'Құттықтаймыз, сіз енді {{SITENAME}} сайтының редакторысыз!',
+	'mobile-frontend-editor-error' => 'Қате, өңдеме сақталмады.',
+	'mobile-frontend-editor-error-conflict' => 'Қате, бұл бетті басқа қатысушы өңдеген.',
+	'mobile-frontend-editor-error-loading' => 'Қатеғ бөлім жүктелмеді.',
+	'mobile-frontend-editor-preview-header' => 'Қарап шығу',
+	'mobile-frontend-editor-tutorial-confirm' => 'Өңдеуді бастау',
+	'mobile-frontend-editor-captcha-try-again' => 'Қате код, қайта байқап көріңіз.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Ескерту: Бұл өңдемені сақтағыңыз келе ме? Онда мәселе туындауы мүмкін.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Бұл өңдеме сақталмады, себебі біз мәселеге кездестік.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Көбірек оқу',
+	'mobile-frontend-editor-editing-page' => '<span>$1</span> <strong>өңделуде</strong>',
+	'mobile-frontend-editor-previewing-page' => '<span> $1</span> <strong>қарап шығылуда</strong>',
+	'mobile-frontend-editor-viewing-source-page' => '<span>$1</span> <strong>дегеннің қайнары қаралуда</strong>',
 	'tag-mobile_edit' => '<span style="background-color:#FF4500"><span style="color:white">Мобилді өзгерту</span></span>',
+	'tag-mobile_edit-description' => 'Мобайлды сайттан жасалған өңдеме',
 	'mobile-frontend-drawer-cancel' => 'Болдырмау',
+	'mobile-frontend-talk-explained' => 'Келесі әңгімелесулер қазіргі уақытта белсенді',
+	'mobile-frontend-talk-explained-empty' => 'Бұл бет туралы талқылаулар жоқ.',
+	'mobile-frontend-talk-overlay-header' => 'Талқылауы',
+	'mobile-frontend-talk-back-to-page' => '"$1" бетін қайта қосу.',
+	'mobile-frontend-talk-overlay-lead-header' => 'Аталмаған сипаттама',
+	'mobile-frontend-talk-add-overlay-submit' => 'Талқылау қосу',
+	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Тақырып аты',
+	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Не ойлап тұрсыз?',
+	'mobile-frontend-talk-edit-summary' => 'Жаңа талқылау бөлімі: $1',
+	'mobile-frontend-talk-reply-success' => 'Талқылау бетінде сіздің жауабыңыз сәтті сақталды.',
+	'mobile-frontend-talk-reply-info' => 'Аңғарту: Жауабыңыз сіздің қатысушы есіміңізбен өздігінен қол қойылады.',
+	'mobile-frontend-talk-reply' => 'Жауап',
+	'mobile-frontend-media-details' => 'Бөлшектер',
+	'mobile-frontend-media-license-link' => 'Лицензиялық ақпараты',
+	'mobile-frontend-profile-title' => 'Қатысушы жеке деректері',
+	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$1|Кеше|$1 күн бұрын|0=Бүгін}} {{GENDER:$2|жүктелген}}.',
+	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|$1}} дегенді талқылау',
+	'mobile-frontend-profile-error' => 'Оһ, жоқ!',
+	'mobile-frontend-profile-activity-heading' => 'Белсенділігі және үлестері',
+	'mobile-frontend-profile-userpage-link' => 'Қатысушы бетінне барып шығу',
+	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] [[$2]] бетіндегі өңдемеге {{GENDER:$3|рахметін білдірді}}.',
+	'mobile-frontend-profile-last-edit' => '[[:$1]] беті {{PLURAL:$2|кеше|$2 күн бұрын|0=бүгін}} {{GENDER:$3|өңделген}}.',
+	'mobile-frontend-profile-footer-days' => ' {{PLURAL:$2|1 күн|$2 күн}} бұрын тіркеліп  [[Special:Contributions/$1|{{PLURAL:$3|1 өңдеме жасаған|$3 өңдеме жасаған}}]] және [[Special:Uploads/$1|{{PLURAL:$4|1 сурет жүктеген|$4 сурет жүктеген|500=500+ сурет жүктеген}}]].',
+	'mobile-frontend-profile-footer-months' => ' {{PLURAL:$2|1 ай|$2 ай}} бұрын тіркеліп  [[Special:Contributions/$1|{{PLURAL:$3|1 өңдеме жасаған|$3 өңдеме жасаған}}]] және [[Special:Uploads/$1|{{PLURAL:$4|1 сурет жүктеген|$4 сурет жүктеген|500=500+ сурет жүктеген}}]].',
+	'mobile-frontend-profile-footer-years' => ' {{PLURAL:$2|1 жыл|$2 жыл}} бұрын тіркеліп  [[Special:Contributions/$1|{{PLURAL:$3|1 өңдеме жасаған|$3 өңдеме жасаған}}]] және [[Special:Uploads/$1|{{PLURAL:$4|1 сурет жүктеген|$4 сурет жүктеген|500=500+ сурет жүктеген}}]].',
+	'mobile-frontend-profile-description-placeholder' => 'Не себептен {{GENDER:$1|өңдейсіз}}? {{GENDER:$1|Жетілдіргіңіз}} келе ме? {{GENDER:$1|Қызығушылығыңызды}} басқаларға бөлісіңіз.',
+	'mobile-frontend-profile-edit-summary' => 'Қатысушы бетіңіздегі таныстырымыңызды жаңарту',
+	'mobile-frontend-geonotahack' => 'Осы бетке жақындар',
+	'beta-feature-geonotahack' => 'Осы бетке жақындар',
+	'mobile-frontend-mainpage-cta-prompt' => 'Бұл мақалаға сіздің көмегіңіз керек!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Бұл мақаланы жетілдір', # Fuzzy
 );
 
 /** Kalaallisut (kalaallisut)
@@ -10921,7 +11028,7 @@ $messages['ko'] = array(
 	'mobile-frontend-changeslist-ip' => '익명 사용자',
 	'mobile-frontend-changeslist-nocomment' => '편집 요약 없음',
 	'mobile-frontend-watchlist-filter-all' => '모두',
-	'mobile-frontend-watchlist-filter-articles' => '문서',
+	'mobile-frontend-watchlist-filter-articles' => '문서', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => '토론',
 	'mobile-frontend-watchlist-filter-other' => '기타',
 	'mobile-frontend-watchlist-modified' => '$1에 수정됨',
@@ -11045,8 +11152,8 @@ $messages['ko'] = array(
 	'mobile-frontend-geonotahack' => '이 문서 근처',
 	'beta-feature-geonotahack' => '근처 문서',
 	'beta-feature-geonotahack-description' => '지리 좌표 정보를 포함한 문서의 근처의 관련된 문서를 볼 수 있게 합니다.',
-	'mobile-frontend-mainpage-cta-prompt' => '이 문서는 여러분의 도움이 필요합니다!',
-	'mobile-frontend-mainpage-cta-button' => '이 문서를 개선하기',
+	'mobile-frontend-mainpage-cta-prompt' => '이 문서는 여러분의 도움이 필요합니다!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => '이 문서를 개선하기', # Fuzzy
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -11620,6 +11727,13 @@ $messages['la'] = array(
 	'mobile-frontend-geonotahack' => 'Prope hanc paginam',
 );
 
+/** Ladino (Ladino)
+ * @author Menachem.Moreira
+ */
+$messages['lad'] = array(
+	'mobile-frontend-languages-header' => 'Lenguas',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author MaxSem
  * @author Robby
@@ -11803,7 +11917,7 @@ $messages['lb'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonyme Benotzer',
 	'mobile-frontend-changeslist-nocomment' => 'kee Resumé vun der Ännerung',
 	'mobile-frontend-watchlist-filter-all' => 'All',
-	'mobile-frontend-watchlist-filter-articles' => 'Artikelen',
+	'mobile-frontend-watchlist-filter-articles' => 'Artikelen', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussioun',
 	'mobile-frontend-watchlist-filter-other' => 'Anerer',
 	'mobile-frontend-watchlist-modified' => '$1 geännert',
@@ -11912,8 +12026,8 @@ Déi gi geläscht.",
 	'mobile-frontend-profile-last-edit' => "{{GENDER:$3|Huet}} d'Säit [[:$1]] {{PLURAL:$2|gëschter|viru(n) $2 Deeg|0=méi fréi haut am Laf vum Dag}} geännert.",
 	'mobile-frontend-geonotahack' => 'No bei dëser Säit',
 	'beta-feature-geonotahack' => 'No bei dëser Säit',
-	'mobile-frontend-mainpage-cta-prompt' => 'Dësen Artikel brauch Är Hëllef!',
-	'mobile-frontend-mainpage-cta-button' => 'Dësen Artikel verbesseren',
+	'mobile-frontend-mainpage-cta-prompt' => 'Dësen Artikel brauch Är Hëllef!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Dësen Artikel verbesseren', # Fuzzy
 );
 
 /** Lezghian (лезги)
@@ -12355,6 +12469,12 @@ $messages['mk'] = array(
 	'mobilefrontend-keepgoing-cancel' => 'Не, благодарам',
 	'mobilefrontend-keepgoing-suggest' => 'Да',
 	'mobilefrontend-keepgoing-suggest-again' => 'Дај друга',
+	'mobilefrontend-keepgoing-saved-title' => 'Уредувањето е зачувано!',
+	'mobilefrontend-keepgoing-links-title' => 'Додај врски',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Честитаме на вашето прво уредување! Дали би сакале да ни помогнете да додадеме врски на неодамна создадена страница?',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Да поправиме друга страница?',
+	'mobilefrontend-keepgoing-links-explain' => 'Пронајдете уште зборови што можат да бидат врски. Околу секој збор ставете двојни квадратни загради.',
+	'mobilefrontend-keepgoing-links-example' => 'на пр. $1гитара$2 да биде $3гитара$4',
 	'nearby' => 'Страници во ваша близина',
 	'mobile-frontend-desc' => 'Мобилен посредник',
 	'mobile.css' => '/* Тука поставениот CSS ќе се применува врз корисниците на мобилното мрежно место */',
@@ -12391,6 +12511,12 @@ $messages['mk'] = array(
 	'mobile-frontend-on' => 'ВКЛЧ',
 	'mobile-frontend-featured-article' => 'Содржина на денот',
 	'mobile-frontend-news-items' => 'Вести',
+	'mobile-frontend-languages-404-title' => 'Грешка со јазиците',
+	'mobile-frontend-languages-404-desc' => 'Мора да укажете важечки наслов.',
+	'mobile-frontend-languages-header' => 'Јазици',
+	'mobile-frontend-languages-nonexistent-title' => 'Страницата „$1“ не постои.',
+	'mobile-frontend-languages-text' => '$1 е достапна на {{PLURAL:$2|еден јазик|$2 јазици}}.',
+	'mobile-frontend-languages-variant-header' => 'Варијанти на {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-heading' => '<strong>Јазици</strong>',
 	'mobile-frontend-language-article-heading' => 'На други јазици',
 	'mobile-frontend-language-header' => 'Оваа страница е достапна на $1 {{PLURAL:$1|јазик|јазици}}',
@@ -12424,11 +12550,14 @@ $messages['mk'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|една година|$3 години}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Штотуку направено {{GENDER:$1|уредување}}]. Вршител: {{PLURAL:$4|[$5 $2]|0=анонимен корисник}}.',
 	'mobile-frontend-learn-more' => 'Дознајте повеќе',
+	'mobile-frontend-view-source' => 'Извор',
 	'mobile-frontend-account-create-submit' => 'Регистрација',
 	'mobile-frontend-password-confirm-placeholder' => 'Потврдете ја лозинката',
 	'mobile-frontend-account-create-email-placeholder' => 'Е-пошта (незадолжително)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Внесете го потврдниот код',
 	'mobile-frontend-overlay-escape' => 'Назад',
+	'mobile-frontend-overlay-close' => 'Затвори',
+	'mobile-frontend-overlay-continue' => 'Продолжи',
 	'mobile-frontend-placeholder' => 'Пребарајте ја {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Пребарување на {{SITENAME}} (бета)',
 	'mobile-frontend-placeholder-alpha' => 'Пребарајте по {{SITENAME}} (експериментално)',
@@ -12515,7 +12644,12 @@ $messages['mk'] = array(
 	'mobile-frontend-watchlist-cta' => 'Бидете во тек со сите случувања и измени на страницава.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Најава',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Регистрација',
+	'mobile-frontend-watchlist-purpose' => 'Со списокот на набљудувања можете да обележувате страници и да ги следите промените што ќе им се случуваат.',
 	'mobile-frontend-watchlist-login-action' => 'Најавете се за да ја погледате.',
+	'mobile-frontend-watchlist-signup-action' => 'Регистрирајте се сега за да го започнете.',
+	'mobile-frontend-generic-login' => '{{SITENAME}} е дело на луѓе како Вас.',
+	'mobile-frontend-generic-login-action' => 'Најавете се за да учествувате.',
+	'mobile-frontend-generic-signup-action' => 'Регистрирајте се за да учествувате.',
 	'mobile-frontend-watch-login' => 'Додај ја страницата „$1“ во набљудуваните.',
 	'mobile-frontend-edit-login' => 'Помогнете ни да ја подобриме страницата „$1“.',
 	'mobile-frontend-edit-login-action' => 'Најавете се за да уредувате.',
@@ -12529,7 +12663,7 @@ $messages['mk'] = array(
 	'mobile-frontend-changeslist-ip' => 'Анонимен корисник',
 	'mobile-frontend-changeslist-nocomment' => 'нема опис на уредувањето',
 	'mobile-frontend-watchlist-filter-all' => 'Сите',
-	'mobile-frontend-watchlist-filter-articles' => 'Статии',
+	'mobile-frontend-watchlist-filter-articles' => 'Статии', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Разговор',
 	'mobile-frontend-watchlist-filter-other' => 'Други',
 	'mobile-frontend-watchlist-modified' => 'Изменето $1',
@@ -12639,7 +12773,7 @@ $messages['mk'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'Дали корисникот уредува од мобилниот посредник',
 	'mobile-frontend-profile-title' => 'Кориснички профил',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Подигнато}} {{PLURAL:$1|вчера|пред $1 дена|0=денес}}.',
-	'mobile-frontend-profile-usertalk' => 'Разговарајте со $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'Разговарајте со {{GENDER:$1|$1}}',
 	'mobile-frontend-profile-error' => 'Се извинуваме',
 	'mobile-frontend-profile-noargs' => 'Нема наведено корисничко име. Укажете го за да го погледате профилот.',
 	'mobile-frontend-profile-nouser' => 'Нема корисник со тоа име. Проверете дали сте го внеле правилно, вклучувајќи големи и мали букви.',
@@ -12656,8 +12790,8 @@ $messages['mk'] = array(
 	'mobile-frontend-geonotahack' => 'Во околина на страницава',
 	'beta-feature-geonotahack' => 'Во околина на страницава',
 	'beta-feature-geonotahack-description' => 'Откријте други поврзани страници со слични координатни податоци како оние што ги гледате.',
-	'mobile-frontend-mainpage-cta-prompt' => 'На статијава ѝ треба Вашата помош!',
-	'mobile-frontend-mainpage-cta-button' => 'Подобри ја статијава',
+	'mobile-frontend-mainpage-cta-prompt' => 'На статијава ѝ треба Вашата помош!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Подобри ја статијава', # Fuzzy
 );
 
 /** Malayalam (മലയാളം)
@@ -14128,7 +14262,7 @@ $messages['nl'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonieme gebruiker',
 	'mobile-frontend-changeslist-nocomment' => 'geen bewerkingssamenvatting',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
-	'mobile-frontend-watchlist-filter-articles' => "Pagina's",
+	'mobile-frontend-watchlist-filter-articles' => "Pagina's", # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Overleg',
 	'mobile-frontend-watchlist-filter-other' => 'Overige',
 	'mobile-frontend-watchlist-modified' => '$1 gewijzigd',
@@ -14255,8 +14389,8 @@ $messages['nl'] = array(
 	'mobile-frontend-geonotahack' => 'In de buurt van deze pagina',
 	'beta-feature-geonotahack' => 'In de buurt van deze pagina',
 	'beta-feature-geonotahack-description' => "Ontdek pagina's die geografisch in de buurt liggen van deze pagina.",
-	'mobile-frontend-mainpage-cta-prompt' => 'Deze pagina heeft uw hulp nodig!',
-	'mobile-frontend-mainpage-cta-button' => 'Verbeter deze pagina',
+	'mobile-frontend-mainpage-cta-prompt' => 'Deze pagina heeft uw hulp nodig!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Verbeter deze pagina', # Fuzzy
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -14979,7 +15113,7 @@ $messages['pl'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonim',
 	'mobile-frontend-changeslist-nocomment' => 'brak opisu edycji',
 	'mobile-frontend-watchlist-filter-all' => 'Wszystko',
-	'mobile-frontend-watchlist-filter-articles' => 'Artykuły',
+	'mobile-frontend-watchlist-filter-articles' => 'Artykuły', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Dyskusje',
 	'mobile-frontend-watchlist-filter-other' => 'Pozostałe',
 	'mobile-frontend-watchlist-modified' => 'Zmienione $1',
@@ -15071,6 +15205,7 @@ $messages['pl'] = array(
 	'mobile-frontend-profile-error' => 'No nie!',
 	'mobile-frontend-profile-noargs' => 'Nie określono nazwy użytkownika. Proszę podać nazwę użytkownika, aby wyświetlić profil.',
 	'mobile-frontend-profile-activity-heading' => 'Aktywność i wkład',
+	'beta-feature-geonotahack' => 'W pobliżu',
 	'beta-feature-geonotahack-description' => 'Umożliwia wyszukanie artykułów opisujących miejsca położone niedaleko miejsca, o którym czytasz.',
 );
 
@@ -15277,7 +15412,7 @@ $messages['pms'] = array(
 	'mobile-frontend-changeslist-ip' => 'Utent anònim',
 	'mobile-frontend-changeslist-nocomment' => 'gnun resumé ëd modìfica',
 	'mobile-frontend-watchlist-filter-all' => 'Tùit',
-	'mobile-frontend-watchlist-filter-articles' => 'Artìcoj',
+	'mobile-frontend-watchlist-filter-articles' => 'Artìcoj', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Ciaciarade',
 	'mobile-frontend-watchlist-filter-other' => 'Àutr',
 	'mobile-frontend-watchlist-modified' => 'Modificà $1',
@@ -15645,7 +15780,7 @@ $messages['pt'] = array(
 	'mobile-frontend-changeslist-ip' => 'Utilizador anónimo',
 	'mobile-frontend-changeslist-nocomment' => 'sem sumário de edição',
 	'mobile-frontend-watchlist-filter-all' => 'Todas',
-	'mobile-frontend-watchlist-filter-articles' => 'Artigos',
+	'mobile-frontend-watchlist-filter-articles' => 'Artigos', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Discussão',
 	'mobile-frontend-watchlist-filter-other' => 'Outras',
 	'mobile-frontend-watchlist-modified' => 'Modificado $1',
@@ -16096,6 +16231,11 @@ $messages['ro'] = array(
 	'mobile-frontend-on' => 'PORNIT',
 	'mobile-frontend-featured-article' => 'Conținutul recomandat al zilei',
 	'mobile-frontend-news-items' => 'Știri',
+	'mobile-frontend-languages-404-title' => 'Eroare de limbi',
+	'mobile-frontend-languages-404-desc' => 'Trebuie specificat un titlu valid.',
+	'mobile-frontend-languages-header' => 'Limbi',
+	'mobile-frontend-languages-nonexistent-title' => 'Pagina „$1” nu există.',
+	'mobile-frontend-languages-text' => '$1 este disponibilă {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}.', # Fuzzy
 	'mobile-frontend-language-heading' => '<strong>Limbi</strong>',
 	'mobile-frontend-language-article-heading' => 'Lecturare în altă limbă',
 	'mobile-frontend-language-header' => 'Această pagină este disponibilă {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}',
@@ -16241,7 +16381,7 @@ din întreaga lume',
 	'mobile-frontend-changeslist-ip' => 'Utilizator anonim',
 	'mobile-frontend-changeslist-nocomment' => 'fără descrierea modificării',
 	'mobile-frontend-watchlist-filter-all' => 'Toate',
-	'mobile-frontend-watchlist-filter-articles' => 'Articole',
+	'mobile-frontend-watchlist-filter-articles' => 'Articole', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Discuție',
 	'mobile-frontend-watchlist-filter-other' => 'Altele',
 	'mobile-frontend-watchlist-modified' => 'Modificată cu $1',
@@ -16351,7 +16491,7 @@ din întreaga lume',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Dacă un utilizator modifică sau nu prin intermediul interfeței mobile',
 	'mobile-frontend-profile-title' => 'Profil utilizator',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Încărcată}} {{PLURAL:$1|ieri|acum $1 zile|acum $1 de zile|0=astăzi}}.',
-	'mobile-frontend-profile-usertalk' => 'Discutați cu $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'Discutați cu {{GENDER:$1|$1}}',
 	'mobile-frontend-profile-error' => 'Oh, nu!',
 	'mobile-frontend-profile-noargs' => 'Nu s-a specificat niciun nume de utilizator. Furnizați un nume de utilizator pentru a vizualiza un profil.',
 	'mobile-frontend-profile-nouser' => 'Nu există niciun utilizator cu acest nume. Numele de utilizator sunt sensibile la majuscule, drept pentru care verificați dacă ați tastat corect.',
@@ -16368,8 +16508,8 @@ din întreaga lume',
 	'mobile-frontend-geonotahack' => 'În apropierea acestei pagini',
 	'beta-feature-geonotahack' => 'În apropierea acestei pagini',
 	'beta-feature-geonotahack-description' => 'Descoperă pagini care sunt, din punct de vedere geografic, în apropierea conținutului paginii pe care o lecturați acum.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Acest articol are nevoie de ajutorul dumneavoastră!',
-	'mobile-frontend-mainpage-cta-button' => 'Îmbunătățiți acest articol',
+	'mobile-frontend-mainpage-cta-prompt' => 'Acest articol are nevoie de ajutorul dumneavoastră!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Îmbunătățiți acest articol', # Fuzzy
 );
 
 /** tarandíne (tarandíne)
@@ -17957,7 +18097,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-changeslist-ip' => 'Anonym användare',
 	'mobile-frontend-changeslist-nocomment' => 'ingen redigeringssammanfattning',
 	'mobile-frontend-watchlist-filter-all' => 'Alla',
-	'mobile-frontend-watchlist-filter-articles' => 'Artiklar',
+	'mobile-frontend-watchlist-filter-articles' => 'Artiklar', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Andra',
 	'mobile-frontend-watchlist-modified' => 'Redigerades för $1',
@@ -18084,8 +18224,8 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-geonotahack' => 'Nära denna sida',
 	'beta-feature-geonotahack' => 'Nära denna sida',
 	'beta-feature-geonotahack-description' => 'Upptäck sidor som är geografiskt närliggande till innehållssidan du för tillfället läser.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Denna artikel behöver din hjälp!',
-	'mobile-frontend-mainpage-cta-button' => 'Förbättra denna artikel',
+	'mobile-frontend-mainpage-cta-prompt' => 'Denna artikel behöver din hjälp!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Förbättra denna artikel', # Fuzzy
 );
 
 /** Swahili (Kiswahili)
@@ -18262,7 +18402,7 @@ $messages['ta'] = array(
 	'mobile-frontend-drawer-cancel' => 'விட்டுவிடு',
 	'mobile-frontend-talk-overlay-header' => 'பேச்சு',
 	'mobile-frontend-media-details' => 'விளக்கம்',
-	'mobile-frontend-mainpage-cta-button' => 'இக்கட்டுரையை மேம்படுத்துக',
+	'mobile-frontend-mainpage-cta-button' => 'இக்கட்டுரையை மேம்படுத்துக', # Fuzzy
 );
 
 /** Telugu (తెలుగు)
@@ -19122,7 +19262,7 @@ $messages['uk'] = array(
 	'mobile-frontend-changeslist-ip' => 'Анонімний користувач',
 	'mobile-frontend-changeslist-nocomment' => 'нема опису редагування',
 	'mobile-frontend-watchlist-filter-all' => 'Усі',
-	'mobile-frontend-watchlist-filter-articles' => 'Статті',
+	'mobile-frontend-watchlist-filter-articles' => 'Статті', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Обговорення',
 	'mobile-frontend-watchlist-filter-other' => 'Інші',
 	'mobile-frontend-watchlist-modified' => 'Змінена $1',
@@ -19249,8 +19389,8 @@ $messages['uk'] = array(
 	'mobile-frontend-geonotahack' => 'Поблизу цієї сторінки',
 	'beta-feature-geonotahack' => 'Поблизу цієї сторінки',
 	'beta-feature-geonotahack-description' => 'Відкрийте для себе сторінки, що географічно за змістом близькі із сторінкою, яку ви зараз читаєте.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Ця стаття потребує вашої допомоги!',
-	'mobile-frontend-mainpage-cta-button' => 'Поліпшити цю статтю',
+	'mobile-frontend-mainpage-cta-prompt' => 'Ця стаття потребує вашої допомоги!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Поліпшити цю статтю', # Fuzzy
 );
 
 /** Urdu (اردو)
@@ -19798,7 +19938,7 @@ $messages['vi'] = array(
 	'mobile-frontend-changeslist-ip' => 'Người dùng vô danh',
 	'mobile-frontend-changeslist-nocomment' => 'không có tóm lược sửa đổi',
 	'mobile-frontend-watchlist-filter-all' => 'Tất cả',
-	'mobile-frontend-watchlist-filter-articles' => 'Bài viết',
+	'mobile-frontend-watchlist-filter-articles' => 'Bài viết', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Thảo luận',
 	'mobile-frontend-watchlist-filter-other' => 'Khác',
 	'mobile-frontend-watchlist-modified' => 'Được sửa đổi $1',
@@ -19925,8 +20065,8 @@ $messages['vi'] = array(
 	'mobile-frontend-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack-description' => 'Khám phá các trang lân cận với nội dung mà bạn đang đọc.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Bài này cần sự giúp đỡ của bạn!',
-	'mobile-frontend-mainpage-cta-button' => 'Cải thiện bài này',
+	'mobile-frontend-mainpage-cta-prompt' => 'Bài này cần sự giúp đỡ của bạn!', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => 'Cải thiện bài này', # Fuzzy
 );
 
 /** Volapük (Volapük)
@@ -20313,7 +20453,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-changeslist-ip' => '匿名用户',
 	'mobile-frontend-changeslist-nocomment' => '无编辑摘要',
 	'mobile-frontend-watchlist-filter-all' => '全部',
-	'mobile-frontend-watchlist-filter-articles' => '条目',
+	'mobile-frontend-watchlist-filter-articles' => '条目', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => '讨论',
 	'mobile-frontend-watchlist-filter-other' => '其他',
 	'mobile-frontend-watchlist-modified' => '修改于$1',
@@ -20423,7 +20563,7 @@ $messages['zh-hans'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => '用户是否通过移动版界面编辑',
 	'mobile-frontend-profile-title' => '用户资料',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|上传}}于{{PLURAL:$1|昨天|$1天前|0=今天}}。',
-	'mobile-frontend-profile-usertalk' => '与$1讨论', # Fuzzy
+	'mobile-frontend-profile-usertalk' => '与$1讨论',
 	'mobile-frontend-profile-error' => '糟糕！',
 	'mobile-frontend-profile-noargs' => '未提供用户名。请提供用户名以查看资料。',
 	'mobile-frontend-profile-nouser' => '不存在用户名为此的用户。用户名区分大小写，请检查是否输入正确。',
@@ -20440,8 +20580,8 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-geonotahack' => '本页附近',
 	'beta-feature-geonotahack' => '此页的附近',
 	'beta-feature-geonotahack-description' => '发现你正在阅读的页面在地理上邻近的页面。',
-	'mobile-frontend-mainpage-cta-prompt' => '此条目需要您的帮助！',
-	'mobile-frontend-mainpage-cta-button' => '改进此条目',
+	'mobile-frontend-mainpage-cta-prompt' => '此条目需要您的帮助！', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => '改进此条目', # Fuzzy
 );
 
 /** Traditional Chinese (中文（繁體）‎)
@@ -20657,7 +20797,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-changeslist-ip' => '匿名用戶',
 	'mobile-frontend-changeslist-nocomment' => '沒有編輯摘要',
 	'mobile-frontend-watchlist-filter-all' => '全部',
-	'mobile-frontend-watchlist-filter-articles' => '條目',
+	'mobile-frontend-watchlist-filter-articles' => '條目', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => '討論',
 	'mobile-frontend-watchlist-filter-other' => '其他',
 	'mobile-frontend-watchlist-modified' => '$1前修改',
@@ -20767,7 +20907,7 @@ $messages['zh-hant'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => '用戶是否通過行動電話編輯',
 	'mobile-frontend-profile-title' => '用戶訊息',
 	'mobile-frontend-profile-last-upload-caption' => '於{{PLURAL:$1|昨日|$1日前|0=今日}}{{GENDER:$2|上載}}。',
-	'mobile-frontend-profile-usertalk' => '與$1討論', # Fuzzy
+	'mobile-frontend-profile-usertalk' => '與$1討論',
 	'mobile-frontend-profile-error' => '哦不！',
 	'mobile-frontend-profile-noargs' => '未確定用戶名。請確定一個用戶名以查看其資料。',
 	'mobile-frontend-profile-nouser' => "並無用戶具有此用戶名。用戶名'''不區分大小寫和繁簡'''故請檢查之。",
@@ -20784,8 +20924,8 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-geonotahack' => '此頁面附近',
 	'beta-feature-geonotahack' => '此頁面附近',
 	'beta-feature-geonotahack-description' => '發現您閱讀中頁面於地理中臨近頁面。',
-	'mobile-frontend-mainpage-cta-prompt' => '此條目需要您的幫助！',
-	'mobile-frontend-mainpage-cta-button' => '改進此條目',
+	'mobile-frontend-mainpage-cta-prompt' => '此條目需要您的幫助！', # Fuzzy
+	'mobile-frontend-mainpage-cta-button' => '改進此條目', # Fuzzy
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
