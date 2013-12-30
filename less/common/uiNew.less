@@ -6,11 +6,11 @@
 	// FIXME: refactor and reuse OverlayNew header styling when cache expires
 
 	#mw-mf-page-center {
-		padding: @overlayHeaderMargin @overlayHeaderMargin 0;
+		padding: @headerMargin @headerMargin 0;
 	}
 
 	#content_wrapper {
-		margin: 0 -@overlayHeaderMargin;
+		margin: 0 -@headerMargin;
 	}
 
 	.header {
@@ -20,7 +20,7 @@
 		border-bottom: 1px solid @grayLight;
 
 		> * {
-			width: @overlayHeaderHeight - @overlayHeaderMargin;
+			width: @headerHeight - @headerMargin;
 			display: table-cell;
 			vertical-align: middle;
 
@@ -34,13 +34,13 @@
 		}
 
 		> h1, > form, > ul {
-			padding: (@overlayHeadingMarginV - @overlayHeaderMargin) @overlayHeadingMarginH;
+			padding: (@headerTitleMarginV - @headerMargin) @headerTitleMarginH;
 			width: auto;
 		}
 
 		// FIXME: use .icon class
 		#mw-mf-main-menu-button, button {
-			height: @overlayHeaderHeight - @overlayHeaderMargin;
+			height: @headerHeight - @headerMargin;
 			text-indent: -9999px;
 			background-repeat: no-repeat;
 			.background-size( 24px, auto );
@@ -60,9 +60,9 @@
 		}
 
 		.user-button {
-			width: @overlayHeaderHeight - 2 * @overlayHeaderMargin;
-			padding-left: @overlayHeaderMargin;
-			padding-bottom: @overlayHeaderMargin;
+			width: @headerHeight - 2 * @headerMargin;
+			padding-left: @headerMargin;
+			padding-bottom: @headerMargin;
 			text-align: center;
 
 			&:hover {

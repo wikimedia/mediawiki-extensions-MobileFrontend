@@ -96,7 +96,7 @@
 	background: #fff;
 	z-index: 4;
 	.box-sizing(border-box);
-	padding-top: @overlayHeaderHeight;
+	padding-top: @headerHeight;
 
 	.overlay-header {
 		display: table;
@@ -133,23 +133,23 @@
 		}
 
 		> div {
-			padding: @overlayHeadingMarginV @overlayHeadingMarginH;
+			padding: @headerTitleMarginV @headerTitleMarginH;
 		}
 
 		h2 {
 			// FIXME: should not be necessary, scope other h2s to .content
-			font-size: @overlayHeadingFontSize;
+			font-size: @headerTitleFontSize;
 		}
 
 		> ul, button {
-			width: @overlayHeaderHeight - @overlayHeaderMargin;
+			width: @headerHeight - @headerMargin;
 		}
 
 		button {
-			padding: @overlayHeadingMarginV @overlayHeadingMarginH;
-			width: @overlayHeaderHeight;
+			padding: @headerTitleMarginV @headerTitleMarginH;
+			width: @headerHeight;
 			border-radius: 0;
-			min-height: @overlayHeaderHeight;
+			min-height: @headerHeight;
 		}
 
 		.v-border:first-child {
@@ -196,7 +196,7 @@
 
 	.overlay-header-container {
 		width: 100%;
-		padding: @overlayHeaderMargin @overlayHeaderMargin 0;
+		padding: @headerMargin @headerMargin 0;
 		.box-sizing(border-box);
 		background: #fff;
 		// For overlays that do not use position fixed headers e.g. ZeroOverlay
@@ -213,21 +213,21 @@
 
 		.overlay-header {
 			> div {
-				padding: (@overlayHeadingMarginV - @overlayHeaderMargin) @overlayHeadingMarginH;
+				padding: (@headerTitleMarginV - @headerMargin) @headerTitleMarginH;
 			}
 
 			button {
-				margin-top: -@overlayHeaderMargin;
+				margin-top: -@headerMargin;
 				// Line up with rest of header that has 1px bottom-border
 				margin-bottom: -1px;
 			}
 
 			> ul:first-child li:first-child button {
-				margin-left: -@overlayHeaderMargin;
+				margin-left: -@headerMargin;
 			}
 
 			> ul:last-child li:last-child button {
-				margin-right: -@overlayHeaderMargin;
+				margin-right: -@headerMargin;
 			}
 		}
 	}
@@ -260,7 +260,7 @@
 	}
 
 	.surface {
-		padding: @overlayHeaderMargin;
+		padding: @headerMargin;
 	}
 
 	.license {

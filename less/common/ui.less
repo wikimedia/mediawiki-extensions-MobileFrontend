@@ -33,9 +33,9 @@ body {
 		position: relative;
 		.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
 		border-bottom: 1px solid #e2e2e2;
-		line-height: (@headerHeight - 2px);
+		line-height: (@oldHeaderHeight - 2px);
 		text-align: center;
-		min-height: (@headerHeight - 2px);
+		min-height: (@oldHeaderHeight - 2px);
 		padding: 2px @searchBarPaddingLeft 0 @searchBarPaddingLeft;
 
 		h1, h2 {
@@ -49,14 +49,14 @@ body {
 		// Needed for Special:UserProfile and Special:Nearby
 		.background-size( auto, 24px );
 		border: none;
-		height: @headerHeight;
+		height: @oldHeaderHeight;
 		width: @searchBarPaddingLeft;
 		position: absolute;
 		top: 0;
 	}
 
 	.user-button {
-		line-height: @headerHeight;
+		line-height: @oldHeaderHeight;
 
 		&:hover {
 			text-decoration: none;

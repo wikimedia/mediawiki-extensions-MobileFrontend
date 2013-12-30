@@ -2,17 +2,20 @@
 @searchBarPaddingRight: 40px;
 @searchResultPaddingVertical: 12px;
 @searchBoxColor: #fafafa;
-@headerHeight: 46px;
-@headerElementHeight: @headerHeight - 16;
-@headerBorderBottom: #e3e3e3;
 @menuWidth: 16em;
 
-// new overlays
-@overlayHeaderMargin: .35em;
-@overlayHeadingMarginV: 1em;
-@overlayHeadingMarginH: .6em;
-@overlayHeadingFontSize: 1em;
-@overlayHeaderHeight: @overlayHeadingFontSize + @overlayHeadingMarginV * 2 + @overlayHeaderMargin;
+// old header
+// FIXME: remove when new header in stable
+@oldHeaderHeight: 46px;
+@headerElementHeight: @oldHeaderHeight - 16;
+@headerBorderBottom: #e3e3e3;
+
+// new header
+@headerMargin: .35em;
+@headerTitleMarginV: 1em;
+@headerTitleMarginH: .6em;
+@headerTitleFontSize: 1em;
+@headerHeight: @headerTitleFontSize + @headerTitleMarginV * 2 + @headerMargin;
 
 @grayDark: #252525;
 @grayMediumDark: #565656;
@@ -23,10 +26,6 @@
 
 // page actions
 @watchStarSize: 22px;
-
-// overlays
-@headerMargin: .4em;
-
 @contentMargin: 16px;
 
 // colors
