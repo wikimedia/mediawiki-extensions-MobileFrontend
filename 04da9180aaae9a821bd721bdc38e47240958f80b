@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_4a36f001",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-30T16:54:35Z",
+      "side": 1,
+      "message": "This message is tailored for situation where MobileFrontend resides on a separate domain - while this is true for WMF it\u0027s not the case for most other installations.",
+      "revId": "04da9180aaae9a821bd721bdc38e47240958f80b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_6aa3f43f",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-30T16:54:35Z",
+      "side": 1,
+      "message": "Output it unconditionally and set to empty string if no warning?",
+      "revId": "04da9180aaae9a821bd721bdc38e47240958f80b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_ea44a470",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-30T16:54:35Z",
+      "side": 1,
+      "message": "This is not going to work: mobileaction gets stripped before Varnish kicks you back to mobile site, so this is never going to happen.",
+      "revId": "04da9180aaae9a821bd721bdc38e47240958f80b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_8a8518a2",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-12-30T16:54:35Z",
+      "side": 1,
+      "message": "Don\u0027t prefix it with underscore - the above is an exception, not a rule.",
+      "revId": "04da9180aaae9a821bd721bdc38e47240958f80b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
