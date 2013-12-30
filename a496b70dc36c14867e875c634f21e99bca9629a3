@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_0d8802eb",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T18:37:58Z",
+      "side": 1,
+      "message": "It\u0027s a bit hacky to inspect the DOM in this situation (FYI $( \u0027#mw-imagepage-nofile\u0027 ).length does same thing as this line since all IDs are unique.\n\nAlso the name isExistingFile is a bit misleading - it doesn\u0027t check that. No file exists in this case.\n\nInstead I would suggest doing something akin to the following:\n\nisNewPage \u003d mw.config.get( \u0027wgArticleId\u0027 ) \u003d\u003d\u003d 0,\nisNewFile \u003d M.inNamespace( \u0027file\u0027 ) \u0026\u0026 isNewPage",
+      "revId": "a496b70dc36c14867e875c634f21e99bca9629a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_6d21cef5",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T18:37:58Z",
+      "side": 1,
+      "message": "I would actually in this situation hide the edit icon entirely, the toast message is just confusing and incorrect.\n\n\"This page is protected to prevent vandalism.\" (this is not the case)",
+      "revId": "a496b70dc36c14867e875c634f21e99bca9629a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_ed8cbe01",
+        "filename": "javascripts/modules/uploads/PhotoApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T18:37:58Z",
+      "side": 1,
+      "message": "See comment in editor.js review",
+      "revId": "a496b70dc36c14867e875c634f21e99bca9629a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_cd71fa0c",
+        "filename": "javascripts/modules/uploads/PhotoApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T18:37:58Z",
+      "side": 1,
+      "message": "This is an option - it should be better to set this beforehand when creating PhotoApi in PhotoUploader.js\n\nnew PhotoApi( { fileName: mw.config.get( \u0027wgTitle\u0027 )  } )",
+      "revId": "a496b70dc36c14867e875c634f21e99bca9629a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_6d78aeed",
+        "filename": "javascripts/modules/uploads/PhotoUploader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T18:37:58Z",
+      "side": 1,
+      "message": "See other comments.",
+      "revId": "a496b70dc36c14867e875c634f21e99bca9629a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_4d65ea40",
+        "filename": "javascripts/modules/uploads/PhotoUploader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T18:37:58Z",
+      "side": 1,
+      "message": "Use an option variable to control this switch rather than a global to this closure.",
+      "revId": "a496b70dc36c14867e875c634f21e99bca9629a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_0d5fe278",
+        "filename": "javascripts/modules/uploads/lead-photo-init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-30T18:37:58Z",
+      "side": 1,
+      "message": "See better test for this in other files.",
+      "revId": "a496b70dc36c14867e875c634f21e99bca9629a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
