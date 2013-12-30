@@ -1,7 +1,7 @@
 MW_INSTALL_PATH ?= ../..
 
 gerrit:
-	@scripts/gerrit.py
+	@scripts/gerrit.py 'mediawiki/extensions/MobileFrontend'
 
 kss: nodecheck
 	# FIXME: Use more up to date Ruby version
