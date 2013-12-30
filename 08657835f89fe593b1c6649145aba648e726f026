@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_6df54e4c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 498,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2013-12-30T19:05:39Z",
+      "side": 1,
+      "message": "Gotcha. I was under the impression that message reuse was frowned upon, but maybe I was misled..",
+      "parentUuid": "eeebdf60_0d87e215",
+      "revId": "08657835f89fe593b1c6649145aba648e726f026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_2d92a657",
         "filename": "includes/skins/UserLoginAndCreateTemplate.php",
         "patchSetId": 3
