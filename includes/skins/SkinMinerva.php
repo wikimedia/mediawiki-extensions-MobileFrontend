@@ -15,7 +15,7 @@ class SkinMinerva extends SkinTemplate {
 	protected $mode = 'stable';
 
 	protected function prepareQuickTemplate() {
-		global $wgAppleTouchIcon;
+		global $wgAppleTouchIcon, $wgMFNoindexPages;
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		// add head items
@@ -37,6 +37,9 @@ class SkinMinerva extends SkinTemplate {
 		$out->addHeadItem( 'loadingscript', Html::inlineScript(
 			"document.documentElement.className += ' page-loading';"
 		) );
+		if ( $wgMFNoindexPages ) {
+			$out->setRobotPolicy( 'noindex,nofollow' );
+		}
 
 		// Generate template after doing the above...
 		$tpl = parent::prepareQuickTemplate();
@@ -687,15 +690,26 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	public function outputPage( OutputPage $out = null ) {
+		global $wgMFWap, $wgMFTransitionalWapLifetime;
+		wfProfileIn( __METHOD__ );
+
+		// This might seem weird but now the meaning of 'mobile' is morphing to mean 'minerva skin'
+		// FIXME: Explore disabling this via a user preference and see what explodes
+		// Important: This must run before outputPage which generates script and style tags
+		// If run later incompatible desktop code will leak into Minerva.
+		$out = $this->getOutput();
+		$out->setTarget( 'mobile' );
 		if ( $this->isMobileMode ) {
+			# Restrict cache lifetime for potentially WAPy requests during the transitional period
+			if ( $wgMFWap == 'transitional' && $this->getRequest()->getText( 'X-WAP' ) == 'yes' ) {
+				$out->setSquidMaxage( min( $out->mSquidMaxage, $wgMFTransitionalWapLifetime ) );
+			}
+			// FIXME: Merge these hooks?
 			wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
-			$this->outputMobilePage();
-		} else {
-			// This might seem weird but now the meaning of 'mobile' is morphing to mean 'minerva skin'
-			// FIXME: Explore disabling this via a user preference and see what explodes
-			$out = $this->getOutput()->setTarget( 'mobile' );
-			parent::outputPage();
+			wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
 		}
+		parent::outputPage( $out );
+		wfProfileOut( __METHOD__ );
 	}
 
 	//
@@ -703,24 +717,6 @@ class SkinMinerva extends SkinTemplate {
 	// Mobile specific functions
 	// FIXME: Try to kill any of the functions that follow
 	//
-	//
-
-	public function outputMobilePage() {
-		global $wgMFNoindexPages, $wgMFWap, $wgMFTransitionalWapLifetime;
-		wfProfileIn( __METHOD__ );
-		$out = $this->getOutput();
-		$out->setTarget( 'mobile' );
-		if ( $out && $wgMFNoindexPages ) {
-			$out->setRobotPolicy( 'noindex,nofollow' );
-		}
-		# Restrict cache lifetime for potentially WAPy requests during the transitional period
-		if ( $wgMFWap == 'transitional' && $this->getRequest()->getText( 'X-WAP' ) == 'yes' ) {
-			$out->setSquidMaxage( min( $out->mSquidMaxage, $wgMFTransitionalWapLifetime ) );
-		}
-
-		wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
-		parent::outputPage();
-	}
 
 	/**
 	 * Returns the site name for the footer, either as a text or <img> tag
