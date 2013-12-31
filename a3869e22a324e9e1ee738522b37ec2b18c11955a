@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_19184322",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-31T00:58:30Z",
+      "side": 1,
+      "message": "lolz",
+      "parentUuid": "eeebdf60_993a14bf",
+      "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_d9ae5ce4",
         "filename": "javascripts/modules/uploadsNew/PhotoUploader.js",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2013-12-30T22:21:20Z",
       "side": 1,
       "message": "It seems like if this class had no purpose now... Maybe it\u0027s not needed? Why did you move everything to PhotoUploadOverlay?",
+      "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_f9f59fb6",
+        "filename": "javascripts/modules/uploadsNew/PhotoUploader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-31T00:58:30Z",
+      "side": 1,
+      "message": "Quite possibly I will explore. Now I look at it again you\u0027re probably right.",
+      "parentUuid": "eeebdf60_d9ae5ce4",
       "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_d9f09bc6",
+        "filename": "javascripts/modules/uploadsNew/UploadTutorial.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-31T00:58:30Z",
+      "side": 1,
+      "message": "I think this is a case of the uploadsNew \u0027New\u0027 suffix confusing me like crazy and remnants from the back in the day of closeOnBack: true\n\nWill remove.",
+      "parentUuid": "eeebdf60_99de946f",
+      "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_190724cf",
         "filename": "javascripts/specials/uploads.js",
         "patchSetId": 8
@@ -64,6 +118,24 @@
       "writtenOn": "2013-12-30T22:21:20Z",
       "side": 1,
       "message": "This feels like a step back. I would not pollute M with very non-global events and rather forward this from the overlay through the button.",
+      "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b9bf17cd",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-31T00:58:30Z",
+      "side": 1,
+      "message": "I knoooww. I really tried to find another way of doing this but just couldn\u0027t work it out. I think we\u0027ll need a way to pass the gallery object to the preview or some kind of abstraction around page :-(\n\nI\u0027ll add a FIXME and an underscore to the event name to discourage using it.",
+      "parentUuid": "eeebdf60_190724cf",
       "revId": "a3869e22a324e9e1ee738522b37ec2b18c11955a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
