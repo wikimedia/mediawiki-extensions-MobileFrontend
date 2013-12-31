@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_e259642e",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-31T19:02:53Z",
+      "side": 1,
+      "message": "This is now \u0027toast\u0027.",
+      "revId": "d2a57e42428df849397d3c7db4a5124184e92c0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
