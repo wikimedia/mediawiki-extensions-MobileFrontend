@@ -91,6 +91,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
 			'javascripts/loggingSchemas/mobileWebEditing.js',
+			'javascripts/loggingSchemas/mobileLeftNavbarEditCTA.js',
 		),
 	),
 
@@ -831,7 +832,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.newusers' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
-			'mobile.overlays',
+			'mobile.editor',
 		),
 		'scripts' => array(
 			'javascripts/common/ContentOverlay.js',
@@ -843,6 +844,29 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-tutorial-summary',
 			'mobile-frontend-editor-tutorial-alt-summary',
 			'mobile-frontend-editor-tutorial-confirm',
+			'mobile-frontend-editor-tutorial-cancel',
+		),
+		'templates' => array(
+			'modules/tutorials/PageActionOverlay',
+		),
+	),
+
+	'mobile.newusers.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.templates',
+			'mobile.editor.beta',
+		),
+		'scripts' => array(
+			'javascripts/common/ContentOverlay.js',
+			'javascripts/modules/tutorials/PageActionOverlay.js',
+			'javascripts/modules/tutorials/newbieEditorBeta.js',
+		),
+		'messages' => array(
+			// newbieEditor.js
+			'mobile-frontend-editor-tutorial-summary',
+			'mobile-frontend-editor-tutorial-alt-summary',
+			'mobile-frontend-editor-tutorial-confirm',
+			'mobile-frontend-editor-tutorial-cancel',
 		),
 		'templates' => array(
 			'modules/tutorials/PageActionOverlay',
@@ -860,7 +884,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.references',
 			'mediawiki.language',
 			'mobile.loggingSchemas',
-			'mobile.newusers',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',

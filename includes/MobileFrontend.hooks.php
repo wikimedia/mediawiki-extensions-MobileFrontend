@@ -725,6 +725,10 @@ class MobileFrontendHooks {
 				'schema' => 'MobileWebClickTracking',
 				'revision' => 5929948,
 			),
+			'schema.MobileLeftNavbarEditCTA' => array(
+				'schema' => 'MobileLeftNavbarEditCTA',
+				'revision' => 6792179,
+			),
 		);
 
 		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
