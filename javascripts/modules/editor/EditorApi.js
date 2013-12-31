@@ -151,6 +151,37 @@
 			this.getToken().done( saveContent ).fail( $.proxy( result, 'reject' ) );
 
 			return result;
+		},
+
+		getPreview: function( options ) {
+			var result = $.Deferred();
+
+			$.extend( options, {
+				action: 'parse',
+				// Enable section preview mode to avoid errors (bug 49218)
+				sectionpreview: true,
+				// needed for pre-save transform to work (bug 53692)
+				pst: true,
+				// Output mobile HTML (bug 54243)
+				mobileformat: true,
+				title: this.title,
+				prop: 'text'
+			} );
+
+			this.post( options ).done( function( resp ) {
+				if ( resp && resp.parse && resp.parse.text ) {
+					// FIXME: hacky
+					var $tmp = $( '<div>' ).html( resp.parse.text['*'] );
+					// remove heading from the parsed output
+					$tmp.find( 'h1, h2' ).eq( 0 ).remove();
+
+					result.resolve( $tmp.html() );
+				} else {
+					result.reject();
+				}
+			} ).fail( $.proxy( result, 'reject' ) );
+
+			return result;
 		}
 	} );
 
