@@ -1,7 +1,13 @@
 MW_INSTALL_PATH ?= ../..
 
-gerrit:
-	@scripts/gerrit.py 'mediawiki/extensions/MobileFrontend'
+clean:
+	rm -Rf scripts/remotes
+
+remotes:
+	@scripts/remotecheck.sh
+
+gerrit: remotes
+	@scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1
 
 kss: nodecheck
 	# FIXME: Use more up to date Ruby version

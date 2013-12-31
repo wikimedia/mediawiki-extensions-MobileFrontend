@@ -7,3 +7,4 @@ node_modules/
 tmp/
 less/*.html
 less/public
+scripts/remotes/*
