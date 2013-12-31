@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_f9eebfb0",
+        "filename": "javascripts/modules/nearbypages.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-31T01:33:58Z",
+      "side": 1,
+      "message": "Personally I\u0027d prefer if it ws latitude and longitude rather than lat, lon - this is more consistent with things like the geo microformat, the api of window.navigator.geolocation and various other things.",
+      "revId": "f81585f21b365f5e4383fede8b27da3c323af1c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
