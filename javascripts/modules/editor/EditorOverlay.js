@@ -5,7 +5,6 @@
 		Page = M.require( 'Page' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		popup = M.require( 'toast' ),
-		api = M.require( 'api' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
 		inCampaign = M.query.campaign ? true : false,
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
@@ -107,18 +106,7 @@
 		},
 
 		_showPreview: function() {
-			var self = this, params = {
-				action: 'parse',
-				// Enable section preview mode to avoid errors (bug 49218)
-				sectionpreview: true,
-				// needed for pre-save transform to work (bug 53692)
-				pst: true,
-				// Output mobile HTML (bug 54243)
-				mobileformat: true,
-				title: self.options.title,
-				text: self.$content.val(),
-				prop: 'text'
-			};
+			var self = this, params = { text: this.$content.val() };
 
 			// log save button click
 			this.log( 'save' );
@@ -138,34 +126,16 @@
 			if ( mw.config.get( 'wgIsMainPage' ) ) {
 				params.mainpage = 1; // Setting it to 0 will have the same effect
 			}
-			api.post( params ).then( function( resp ) {
-				var html;
-				if ( resp && resp.parse && resp.parse.text ) {
-					html = resp.parse.text['*'];
-					return $.Deferred().resolve( html );
-				} else {
-					return $.Deferred().reject();
-				}
-			} ).done( function( parsedText ) {
-				// FIXME: hacky
-				var $tmp = $( '<div>' ).html( parsedText ), heading;
-				// Extract the first heading
-				heading = $tmp.find( 'h1 span, h2 span' ).eq( 0 ).text();
-				// remove heading from the parsed output
-				$tmp.find( 'h1,h2' ).eq( 0 ).remove();
-
+			this.api.getPreview( params ).done( function( parsedText ) {
 				new Section( {
 					el: self.$preview.find( '.content' ),
-					index: 'preview',
-					// doesn't account for headings with html inside
-					heading: heading,
-					content: $tmp.html()
+					content: parsedText
 				// bug 49218: stop links from being clickable (note user can still hold down to navigate to them)
 				} ).$( 'a' ).on( 'click', false );
 				// Emit event so we can perform enhancements to page
 				M.emit( 'edit-preview', self );
 			} ).fail( function() {
-				self.$preview.addClass( 'error' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
+				self.$preview.addClass( 'error' ).find( '.content' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
 			} ).always( function() {
 				self.$spinner.hide();
 				self.$preview.show();
@@ -173,7 +143,9 @@
 		},
 
 		_hidePreview: function() {
-			this.$preview.hide();
+			this.api.abort();
+			this.$spinner.hide();
+			this.$preview.removeClass( 'error' ).hide();
 			this.$content.show();
 			window.scrollTo( 0, this.scrollTop );
 			this._showBar( '.initial-bar' );

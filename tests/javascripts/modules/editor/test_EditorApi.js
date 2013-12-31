@@ -338,4 +338,19 @@
 		assert.ok( !editorApi.getToken.called, "don't get the token" );
 	} );
 
+	QUnit.test( '#getPreview', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'Test', sectionId: 1 } ), doneSpy = sinon.spy();
+		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
+			"parse": {
+				"title": "test",
+				"text": { "*": "<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>" }
+			}
+		} ) );
+
+		editorApi.getPreview( { text: "test content" } ).done( doneSpy );
+
+		assert.ok( editorApi.post.calledWithMatch( { text: "test content" } ) );
+		assert.ok( doneSpy.calledWith( '<h2>Heading 2</h2><p>test content</p>' ) );
+	} );
+
 }( mw.mobileFrontend, jQuery ) );
