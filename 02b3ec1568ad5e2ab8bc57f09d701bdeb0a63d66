@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_2ddaa678",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-31T00:03:54Z",
+      "side": 1,
+      "message": "This should still be created in JavaScript. It is confusing having it here as it does not work like the other settings. It does not get saved or used on the serverside like the other ones. Please create this in JavaScript...",
+      "revId": "02b3ec1568ad5e2ab8bc57f09d701bdeb0a63d66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2d39869f",
+        "filename": "less/specials/mobileoptions.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-12-31T00:03:54Z",
+      "side": 1,
+      "message": "This is hacky and becomes unnecessary if you create the inputs in JavaScript instead...",
+      "revId": "02b3ec1568ad5e2ab8bc57f09d701bdeb0a63d66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
