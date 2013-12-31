@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_df575b28",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-12-31T18:28:56Z",
+      "side": 1,
+      "message": "I imagine this is supposed to be mw.config.set().",
+      "revId": "549c906bb2d37af164d53fbfaf860d8d5b30cf9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
