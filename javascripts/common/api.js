@@ -5,12 +5,20 @@
 		apiUrl = mw.config.get( 'wgScriptPath', '' ) + '/api.php',
 		Api, api;
 
+	/**
+	 * JavaScript wrapper for a horrible API. Use to retrieve things.
+	 * @class Api
+	 * @extends EventEmitter
+	 * @name Api
+	 */
 	Api = EventEmitter.extend( {
 		apiUrl: apiUrl,
 
 		/**
 		 * Constructor, if you override it, use _super().
 		 *
+		 * @function
+		 * @name Api.prototype.initialize
 		 * @param {Object} options Object passed to the constructor.
 		 */
 		initialize: function() {
@@ -25,6 +33,7 @@
 		 * - removes boolean values equal to false
 		 * - concatenates Array values with '|'
 		 *
+		 * @name Api.prototype.ajax
 		 * @example
 		 * <code>
 		 * ajax( { a: false, b: [1, 2, 3] }, { type: 'post' } );
@@ -35,6 +44,7 @@
 		 * } );
 		 * </code>
 		 *
+		 * @function
 		 * @param {Object} data Data to be preprocessed and added to options
 		 * @param {Object} options Parameters passed to $.ajax()
 		 * @return {jQuery.Deferred} Object returned by $.ajax()
@@ -81,6 +91,8 @@
 		 * A wrapper for $.ajax() to be used when calling server APIs.
 		 * Sends a GET request. See ajax() for details.
 		 *
+		 * @name Api.prototype.get
+		 * @function
 		 * @param {Object} data Data to be preprocessed and added to options
 		 * @param {Object} options Parameters passed to $.ajax()
 		 * @return {jQuery.Deferred} Object returned by $.ajax()
@@ -94,6 +106,8 @@
 		 * A wrapper for $.ajax() to be used when calling server APIs.
 		 * Sends a POST request. See ajax() for details.
 		 *
+		 * @name Api.prototype.post
+		 * @function
 		 * @param {Object} data Data to be preprocessed and added to options
 		 * @param {Object} options Parameters passed to $.ajax()
 		 * @return {jQuery.Deferred} Object returned by $.ajax()
@@ -105,6 +119,9 @@
 
 		/**
 		 * Abort all unfinished requests issued by this Api object.
+		 *
+		 * @name Api.prototype.abort
+		 * @function
 		 */
 		abort: function() {
 			this.requests.forEach( function( request ) {
@@ -115,9 +132,11 @@
 		/**
 		 * Retrieves a token for a given endpoint
 		 *
-		 * @param {String} tokenType: Name of the type of token needed e.g. edit, upload - defaults to edit
-		 * @param {String} endpoint: Optional alternative host to query via CORS
-		 * @param {String} caToken: Optional additional CentralAuth token to be
+		 * @name Api.prototype.getToken
+		 * @function
+		 * @param {String} tokenType Name of the type of token needed e.g. edit, upload - defaults to edit
+		 * @param {String} endpoint Optional alternative host to query via CORS
+		 * @param {String} caToken Optional additional CentralAuth token to be
 		 * sent with the request. This is needed for requests to external wikis
 		 * where the user is not logged in. caToken is for single use only.
 		 * @return {jQuery.Deferred} Object returned by $.ajax(), callback will be passed

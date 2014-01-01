@@ -1,6 +1,14 @@
 ( function( M, $ ) {
 
 var View = M.require( 'view' ),
+	Drawer;
+
+	/**
+	 * A {@link View} that pops up from the bottom of the screen.
+	 * @name Drawer
+	 * @class
+	 * @extends View
+	 */
 	Drawer = View.extend( {
 		defaults: {
 			cancelMessage: mw.msg( 'mobile-frontend-drawer-cancel' )
@@ -18,6 +26,10 @@ var View = M.require( 'view' ),
 			this.appendTo( '#notifications' );
 		},
 
+		/**
+		 * @name Drawer.prototype.show
+		 * @function
+		 */
 		show: function() {
 			var self = this;
 
@@ -41,6 +53,10 @@ var View = M.require( 'view' ),
 			}
 		},
 
+		/**
+		 * @name Drawer.prototype.hide
+		 * @function
+		 */
 		hide: function() {
 			var self = this;
 
@@ -54,10 +70,18 @@ var View = M.require( 'view' ),
 			}, 10 );
 		},
 
+		/**
+		 * @name Drawer.prototype.isVisible
+		 * @function
+		 */
 		isVisible: function() {
 			return this.$el.hasClass( 'visible' );
 		},
 
+		/**
+		 * @name Drawer.prototype.toggle
+		 * @function
+		 */
 		toggle: function() {
 			if ( this.isVisible() ) {
 				this.hide();

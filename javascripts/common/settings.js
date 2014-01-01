@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 
+/* @name M.settings */
 M.settings = ( function() {
 	var supportsLocalStorage;
 
@@ -31,12 +32,28 @@ M.settings = ( function() {
 		return $.cookie( name );
 	}
 
+	/**
+	 * Saves a user setting for a later browser settings via localStorage
+	 *
+	 * @name M.settings.saveUserSetting
+	 * @param {String} name The key to refer to this value
+	 * @param {String} value The value to store alongside the key
+	 * @param {Boolean} useCookieFallback Optional: When set this will use cookies when local storage not available.
+	 * @returns {Boolean} Whether the save was successful or not
+	 */
 	function saveUserSetting( name, value, useCookieFallback ) {
 		return supportsLocalStorage ?
 			localStorage.setItem( name, value ) :
 				( useCookieFallback ? writeCookie( name, value, 1 ) : false );
 	}
 
+	/**
+	 * Retrieves a user setting from a previous browser setting
+	 *
+	 * @param {String} name The key to refer to this value
+	 * @param {Boolean} useCookieFallback Optional: When set this will use cookies when local storage not available.
+	 * @returns {String|False} Returns the associated value or False if nothing is found
+	 */
 	function getUserSetting( name, useCookieFallback ) {
 		return supportsLocalStorage ? localStorage.getItem( name ) :
 			( useCookieFallback ? readCookie( name ) : false );

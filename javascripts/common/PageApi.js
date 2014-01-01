@@ -25,6 +25,11 @@
 		return result;
 	}
 
+	/**
+	 * @class
+	 * @name PageApi
+	 * @extends Api
+	 */
 	PageApi = Api.extend( {
 		initialize: function() {
 			this._super();
@@ -34,6 +39,8 @@
 		/**
 		 * Retrieve a page from the api
 		 *
+		 * @name PageApi.prototype.getPage
+		 * @function
 		 * @param {string} title the title of the page to be retrieved
 		 * @param {string} endpoint an alternative api url to retreive the page from
 		 * @param {boolean} leadOnly When set only the lead section content is returned
@@ -95,6 +102,8 @@
 		/**
 		 * Invalidate the internal cache for a given page
 		 *
+		 * @name PageApi.prototype.invalidatePage
+		 * @function
 		 * @param {string} title the title of the page who's cache you want to invalidate
 		 */
 		invalidatePage: function( title ) {
@@ -104,6 +113,8 @@
 		/**
 		 * Gets language list for a page; helper function for getPageLanguages()
 		 *
+		 * @name PageApi.prototype._getLanguagesFromApiResponse
+		 * @function
 		 * @param  {object} data Data from API
 		 * @return {array} List of language objects
 		 */
@@ -129,6 +140,8 @@
 		/**
 		 * Gets language variant list for a page; helper function for getPageLanguages()
 		 *
+		 * @name PageApi.prototype._getLanguageVariantsFromApiResponse
+		 * @function
 		 * @param  {string} title Name of the page to obtain variants for
 		 * @param  {object} data Data from API
 		 * @return {array} List of language variant objects
@@ -164,6 +177,8 @@
 		/**
 		 * Retrieve available languages for a given title
 		 *
+		 * @name PageApi.prototype.getPageLanguages
+		 * @function
 		 * @param {string} title the title of the page languages should be retrieved for
 		 * @return {jQuery.Deferred} which is called with an object containing langlinks and variant links
 		 */

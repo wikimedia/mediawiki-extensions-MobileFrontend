@@ -9,10 +9,17 @@
 		};
 	}
 
+	/**
+	 * @name EventEmitter
+	 * @class
+	 * @extends Class
+	 */
 	EventEmitter = Class.extend( {
 		/**
 		 * Bind a callback to the event.
 		 *
+		 * @name EventEmitter.prototype.on
+		 * @function
 		 * @param {string} event Event name.
 		 * @param {Function} callback Callback to be bound.
 		 */
@@ -24,6 +31,8 @@
 		/**
 		 * Bind a callback to the event and run it only once.
 		 *
+		 * @name EventEmitter.prototype.one
+		 * @function
 		 * @param {string} event Event name.
 		 * @param {Function} callback Callback to be bound.
 		 */
@@ -35,6 +44,8 @@
 		/**
 		 * Emit an event. This causes all bound callbacks to be run.
 		 *
+		 * @name EventEmitter.prototype.emit
+		 * @function
 		 * @param {string} event Event name.
 		 * @param {*} [arguments] Optional arguments to be passed to callbacks.
 		 */

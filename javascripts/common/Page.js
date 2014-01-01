@@ -4,6 +4,11 @@
 		View = M.require( 'view' ),
 		Section, Page;
 
+	/**
+	 * @class
+	 * @extends View
+	 * @name Section
+	 */
 	Section = View.extend( {
 		template: M.template.get( 'section' ),
 		defaults: {
@@ -21,6 +26,11 @@
 		}
 	} );
 
+	/**
+	 * @class
+	 * @extends View
+	 * @name Page
+	 */
 	Page = View.extend( {
 		template: M.template.get( 'page' ),
 		defaults: {
@@ -33,7 +43,11 @@
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' ),
 			languageLabel: mw.msg( 'mobile-frontend-language-article-heading' )
 		},
-
+		/**
+		 * @name Page.prototype.isMainPage
+		 * @function
+		 * @return {Boolean}
+		 */
 		isMainPage: function() {
 			return this.options.isMainPage;
 		},
@@ -79,10 +93,20 @@
 			}
 		},
 
+		/**
+		 * @name Page.prototype.getId
+		 * @function
+		 * @return {Integer}
+		 */
 		getId: function() {
 			return this.options.id;
 		},
 
+		/**
+		 * @name Page.prototype.getNamespaceId
+		 * @function
+		 * @return {Integer} namespace number
+		 */
 		getNamespaceId: function() {
 			var args = this.options.title.split( ':' ), nsId;
 			if ( args[1] ) {
@@ -93,6 +117,11 @@
 			return nsId;
 		},
 
+		/**
+		 * @name Page.prototype.isTalkPage
+		 * @function
+		 * @return {Boolean} Whether the page is a talk page or not
+		 */
 		isTalkPage: function() {
 			var ns = this.getNamespaceId();
 			// all talk pages are odd numbers (except the case of special pages)
@@ -113,17 +142,32 @@
 			} );
 		},
 
+		/**
+		 * @name Page.prototype.getReferenceSection
+		 * @function
+		 */
 		getReferenceSection: function() {
 			return this._referenceLookup;
 		},
 
-		// FIXME: rename to getSection
-		// FIXME: Change function signature to take the anchor of the heading
+		/**
+		 * FIXME: rename to getSection
+		 * FIXME: Change function signature to take the anchor of the heading
+		 * @name Page.prototype.getSubSection
+		 * @function
+		 * @return {Section}
+		 */
 		getSubSection: function( id ) {
 			return this._sectionLookup[ id ];
 		},
 
-		// FIXME: rename to getSections
+		/**
+		 * FIXME: rename to getSections
+		 *
+		 * @name Page.prototype.getSubSections
+		 * @function
+		 * @return Array
+		 */
 		getSubSections: function() {
 			return this.sections;
 		}

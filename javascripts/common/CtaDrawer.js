@@ -1,10 +1,15 @@
-/**
- * This creates the drawer at the bottom of the screen that appears when an anonymous
- * user tries to perform an action that requires being logged in. It presents the user
- * with options to log in or sign up for a new account.
- */
 ( function( M, $ ) {
 var Drawer = M.require( 'Drawer' ),
+	CtaDrawer;
+
+	/**
+	 * This creates the drawer at the bottom of the screen that appears when an anonymous
+	 * user tries to perform an action that requires being logged in. It presents the user
+	 * with options to log in or sign up for a new account.
+	 * @name CtaDrawer
+	 * @class
+	 * @extends Drawer
+	 */
 	CtaDrawer = Drawer.extend( {
 		defaults: {
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),

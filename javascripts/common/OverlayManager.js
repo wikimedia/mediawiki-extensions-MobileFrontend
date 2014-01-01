@@ -4,6 +4,11 @@
 		Class = M.require( 'Class' ),
 		OverlayManager;
 
+	/**
+	 * @class
+	 * @extends Class
+	 * @name OverlayManager
+	 */
 	OverlayManager = Class.extend( {
 		initialize: function( router ) {
 			router.on( 'route', $.proxy( this, '_checkRoute' ) );
@@ -95,6 +100,8 @@
 		/**
 		 * Add an overlay that should be shown on a specific route.
 		 *
+		 * @name OverlayManager.prototype.add
+		 * @function
 		 * @example
 		 * overlayManager.add( /\/hi\/(.*)/, function( name ) {
 		 *   var result = $.Deferred();
@@ -107,8 +114,8 @@
 		 *   return result;
 		 * } );
 		 *
-		 * @param {RegExp} route: route regular expression, optionally with parameters.
-		 * @param {Function} factory: a function returning an overlay or a $.Deferred
+		 * @param {RegExp} route route regular expression, optionally with parameters.
+		 * @param {Function} factory a function returning an overlay or a $.Deferred
 		 * which resolves to an overlay.
 		 */
 		add: function( route, factory ) {
