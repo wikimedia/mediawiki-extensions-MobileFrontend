@@ -268,9 +268,14 @@
 	 */
 	function reloadPage( page ) {
 		currentPage = page;
+		var parts = page.title.split( ':' );
 
 		// VisualEditor amongst other things relies on these variables to reflect current state of document
-		mw.config.set( 'wgTitle', page.title );
+		// FIXME: Why are there so many of these!?
+		// wgTitle does not have a namespace prefix. e.g. Talk:Foo -> Foo, Foo -> Foo
+		mw.config.set( 'wgTitle', parts[1] || parts[0] );
+		// wgPageName has namespace prefix
+		mw.config.set( 'wgPageName', page.title.replace( ' ', '_' ) );
 		mw.config.set( 'wgRelevantPageName', page.title );
 		mw.config.set( 'wgArticleId', page.getId() );
 		M.emit( 'page-loaded', page );
