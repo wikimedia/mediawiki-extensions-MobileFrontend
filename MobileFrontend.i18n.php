@@ -372,6 +372,7 @@ $messages['en'] = array (
 	'mobile-frontend-talk-reply-success' => 'Your reply was successfully saved to the talk page.',
 	'mobile-frontend-talk-reply-info' => 'Note your reply will be automatically signed with your username.',
 	'mobile-frontend-talk-reply' => 'Reply',
+	'mobile-frontend-talk-topic-feedback' => 'New topic added to talk page!',
 
 	// media viewer
 	'mobile-frontend-media-details' => 'Details',
@@ -1054,6 +1055,7 @@ See also:
 	'mobile-frontend-talk-reply-info' => 'Inform the user their talk reply will be automatically signed.',
 	'mobile-frontend-talk-reply' => 'Reply heading.
 {{Identical|Reply}}',
+	'mobile-frontend-talk-topic-feedback' => 'Feedback when a topic has been added to talk page.',
 	'mobile-frontend-media-details' => 'Caption for a button leading to the details of a media file (e.g. an image) in a preview.
 {{Identical|Detail}}',
 	'mobile-frontend-media-license-link' => 'Link to license information in media viewer.

@@ -642,6 +642,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-reply-success',
 			'mobile-frontend-talk-reply',
 			'mobile-frontend-talk-reply-info',
+			'mobile-frontend-talk-topic-feedback',
 			// FIXME: Gets loaded twice if editor and talk both loaded.
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-license' => array( 'parse' ),
