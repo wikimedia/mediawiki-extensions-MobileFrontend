@@ -6,6 +6,10 @@ clean:
 remotes:
 	@scripts/remotecheck.sh
 
+# Requires GERRIT_USERNAME to be defined - lists patchsets you need to amend
+mygerrit: remotes
+	@scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --byuser ${GERRIT_USERNAME} --ltscore 0
+
 gerrit: remotes
 	@scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1
 
