@@ -16,6 +16,24 @@
       "revId": "f81585f21b365f5e4383fede8b27da3c323af1c1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_45ced587",
+        "filename": "javascripts/modules/nearbypages.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T17:56:19Z",
+      "side": 1,
+      "message": "That\u0027s standard GeoData terminology, I want the config var to be consistent with API.",
+      "parentUuid": "eeebdf60_f9eebfb0",
+      "revId": "f81585f21b365f5e4383fede8b27da3c323af1c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
