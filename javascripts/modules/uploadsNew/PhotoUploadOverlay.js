@@ -2,7 +2,10 @@
 	var popup = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		OverlayNew = M.require( 'OverlayNew' ),
-		UploadTutorial = M.require( 'modules/uploads/UploadTutorial' ),
+		Page = M.require( 'Page' ),
+		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
+		PhotoUploadProgress = M.require( 'modules/uploadsNew/PhotoUploadProgress' ),
+		schema = M.require( 'loggingSchemas/mobileWebUploads' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', user.getName(), user ),
 		PhotoUploadOverlay;
 
@@ -26,8 +29,70 @@
 		},
 
 		initialize: function( options ) {
-			this.log = options.log;
+			var fileReader = new FileReader(), self = this;
+			this.log = schema.getLog( options.funnel );
+			this.file = options.file;
+			if ( this.file ) {
+				fileReader.readAsDataURL( options.file );
+				fileReader.onload = function() {
+					var dataUri = fileReader.result;
+					// add mimetype if not present (some browsers need it, e.g. Android browser)
+					dataUri = dataUri.replace( /^data:base64/, 'data:image/jpeg;base64' );
+					self.log( { action: 'preview' } );
+					self.setImageUrl( dataUri );
+				};
+			}
 			this._super( options );
+		},
+		_submit: function() {
+			var self = this,
+				saveOptions,
+				title = this.options.pageTitle,
+				description = this.getDescription(),
+				api = new PhotoApi(),
+				progressPopup = new PhotoUploadProgress();
+
+			saveOptions = {
+				file: this.file,
+				description: description,
+				insertInPage: this.options.insertInPage,
+				pageTitle: title
+			};
+			this.hide( true );
+			this.emit( 'hide' );
+
+			progressPopup.show();
+			progressPopup.on( 'cancel', function() {
+				api.abort();
+				self.log( { action: 'cancel' } );
+			} );
+			api.save( saveOptions ).done( function( fileName, descriptionUrl ) {
+				progressPopup.hide( true );
+				self.log( { action: 'success' } );
+				if ( saveOptions.insertInPage ) {
+					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
+
+					// FIXME: add helper M.refreshPage function
+					M.pageApi.invalidatePage( title );
+					new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
+				} else {
+					// FIXME: handle Special:Uploads case - find more generic way of doing this
+					M.emit( '_file-upload', {
+						fileName: fileName,
+						description: description,
+						descriptionUrl: descriptionUrl,
+						url: self.imageUrl
+					} );
+				}
+			} ).fail( function( err, msg ) {
+				progressPopup.hide( true );
+				popup.show( msg || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
+				self.log( { action: 'error', errorText: err } );
+			} );
+
+			api.on( 'uploadProgress', function( value ) {
+				progressPopup.setValue( value );
+			} );
 		},
 
 		postRender: function() {
@@ -38,7 +103,8 @@
 			$submitButton = this.$( '.submit' ).
 				prop( 'disabled', true ).
 				on( M.tapEvent( 'click' ), function() {
-					self.emit( 'submit' );
+					self.log( { action: 'previewSubmit' } );
+					self._submit();
 				} );
 			this.$description = this.$( 'textarea' ).
 				microAutosize().
@@ -50,13 +116,20 @@
 
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
+
+			// Deal with case where user refreshes the page
+			if ( !self.file ) {
+				M.router.navigate( '#' );
+			}
 		},
 
 		hide: function( force ) {
-			if ( force ) {
+			// In the case of a missing file force close
+			if ( force || !this.file ) {
 				return this._super();
 			} else if ( window.confirm( mw.msg( 'mobile-frontend-image-cancel-confirm' ) ) ) {
 				this.emit( 'cancel' );
+				this.log( { action: 'previewCancel' } );
 				return this._super();
 			} else {
 				return false;
@@ -73,7 +146,6 @@
 			this.imageUrl = url;
 			$preview.removeClass( 'loading' );
 			this.$( '.help' ).on( 'click', function() {
-				new UploadTutorial( { parent: self } ).show();
 				self.log( { action: 'whatDoesThisMean' } );
 			} );
 			$( '<img>' ).
@@ -82,7 +154,7 @@
 				on( 'error', function() {
 					// When using a bad filetype close the overlay
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
-					self.hide();
+					self.emit( 'hide' );
 				} );
 			}
 	} );

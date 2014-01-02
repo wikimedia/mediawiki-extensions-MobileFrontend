@@ -462,11 +462,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable',
 			'mobile.templates',
 			'mobile.uploads.common',
+			'mobile.uploads.tutorial',
 		),
 		'scripts' => array(
+			'javascripts/loggingSchemas/mobileWebUploads.js',
 			'javascripts/modules/uploadsNew/PhotoUploadProgress.js',
 			'javascripts/modules/uploadsNew/PhotoUploadOverlay.js',
-			'javascripts/modules/uploadsNew/PhotoUploader.js',
 		),
 		'styles' => array(
 			'less/modules/uploadsNew/PhotoUploadOverlay.less',
@@ -571,6 +572,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
+			'javascripts/modules/routes.js',
 		),
 		'templates' => array(
 			'modules/ImageOverlay',
@@ -767,6 +769,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/toast.js',
 			'javascripts/common/Page.js',
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
+			'javascripts/modules/uploads/LeadPhotoUploaderButton.js',
 		),
 		'messages' => array(
 			// mf-navigation.js
