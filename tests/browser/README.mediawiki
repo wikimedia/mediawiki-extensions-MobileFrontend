@@ -1,3 +1,13 @@
+= Setup =
+Unfortunately there are various tweaks you will need to make to any
+instance you run these tests against See
+[https://bugzilla.wikimedia.org/show_bug.cgi?id=56057 bug 56057].
+
+These include:
+* Create an account Selenium_newuser which has an edit count of 0
+* Create an account and store the username in MEDIAWIKI_USER which has
+an edit count of greater than 0
+
 = MobileFrontend Extension =
 
 For general information about MobileFrontend Extension please see
@@ -28,6 +38,10 @@ For example:
 
   export MEDIAWIKI_PASSWORD=<password here> # Linux/Unix/Mac
   set MEDIAWIKI_PASSWORD=<password here> # Windows
+
+In addition to this create another user which will be reserved for new uploads
+"Selenium_newuser". The password for this user should be the same as
+MEDIAWIKI_PASSWORD
 
 Run the tests from the MobileFrontend directory with:
 

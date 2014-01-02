@@ -1,11 +1,3 @@
-Given /^I am logged in as a new user$/ do
-  visit(HomePage) do |page|
-    page.mainmenu_button_element.when_present.click
-    page.login_button
-  end
-  on(LoginPage).login_with("Selenium_newuser", ENV["MEDIAWIKI_PASSWORD"])
-end
-
 When(/^I click Submit$/) do
   on(UploadsPage).submit_button_element.when_present.click
 end
@@ -18,14 +10,14 @@ When(/^I type a description$/) do
   on(UploadsPage).description_textarea_element.when_present.send_keys("Describing with #{@random_string}")
 end
 
-When(/^I upload Mobile file (.+)$/) do |file_name|
+When(/^I upload Mobile file (.+) on (.+)$/) do |file_name, page|
   require 'tempfile'
   path = "#{Dir.tmpdir}/#{file_name}"
 
   require 'chunky_png'
   ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save path
 
-  on(UploadsPage).select_file_element.send_keys(path)
+  on(page).select_file_element.send_keys(path)
 end
 
 Then(/^I see a blue tutorial screen$/) do
@@ -41,10 +33,15 @@ Then(/^my image is on the Uploads page$/) do
 	page.wait_until(10) do
       page.text.include? "#{@random_string}" #Chrome needs this, FF does not
     end
-    page.uploaded_image_link_element.when_present.href.should match "#{@random_string}"
+    page.uploaded_image_link_element.when_present.attribute( 'href' ).should match "#{@random_string}"
   end
 end
 
 Then(/^The Contribute an image button is visible$/) do
   on(UploadsPage).contribute_image_element.should be_visible
+end
+
+Then(/^The upload button links to the tutorial$/) do
+  # use should match as href will be relative/absolute url
+  on(UploadsPage).tutorial_link_element.when_present.attribute( 'href' ).should match "#/upload-tutorial/uploads$"
 end

@@ -20,6 +20,24 @@ Given /^I am logged into the mobile website$/ do
   end
 end
 
+Given /^I am logged in as a new user$/ do
+  visit(HomePage) do |page|
+    page.mainmenu_button_element.when_present.click
+    page.login_button
+  end
+  # FIXME: Actually create a new user instead of using an existing one
+  on(LoginPage).login_with("Selenium_newuser", ENV["MEDIAWIKI_PASSWORD"])
+end
+
+Given(/^I am logged in as a user with a > (\d+) edit count$/) do |arg1|
+  visit(HomePage) do |page|
+    page.mainmenu_button_element.when_present.click
+    page.login_button
+  end
+  # FIXME: Guarantee that MEDIAWIKI_USER has an edit count of > 0
+  on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
+end
+
 Given /^I am in beta mode$/ do
   visit(BetaPage) do |page|
     page.beta_element.click
@@ -33,4 +51,8 @@ end
 
 When /^I go to random page$/ do
   visit(RandomPage)
+end
+
+When(/^I go to a page with no lead photo$/) do
+  visit(LeadPhotoPage)
 end
