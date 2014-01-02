@@ -3832,7 +3832,7 @@ $messages['cy'] = array(
 	'mobile-frontend-changeslist-ip' => 'Defnyddiwr anhysbys',
 	'mobile-frontend-changeslist-nocomment' => 'dim crynodeb golygu',
 	'mobile-frontend-watchlist-filter-all' => 'Pob un',
-	'mobile-frontend-watchlist-filter-articles' => 'Erthyglau', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Tudalennau',
 	'mobile-frontend-watchlist-filter-talk' => 'Sgwrs',
 	'mobile-frontend-watchlist-filter-other' => 'Arall',
 	'mobile-frontend-watchlist-modified' => 'Addaswyd $1',
@@ -3937,7 +3937,7 @@ $messages['cy'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => "P'un ai yw defnyddiwr yn golygu gyda'r rhyngwyneb symudol ai pheidio",
 	'mobile-frontend-profile-title' => 'Data personol',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Uwchlwythwyd}} {{PLURAL:$1|heddiw|ddoe|deuddydd yn ôl|tridiau yn ôl|$2 diwrnod yn ôl}}.',
-	'mobile-frontend-profile-usertalk' => 'Sgwrsio gyda $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|Sgwrsio gyda $1}}',
 	'mobile-frontend-profile-error' => 'Wps!',
 	'mobile-frontend-profile-noargs' => 'Ni roddwyd enw defnyddiwr. Rhowch enw defnyddiwr i weld y data personol.',
 	'mobile-frontend-profile-nouser' => "Does dim defnyddiwr o'r enw hwn i gael. Mae'r peiriant yn gwahaniaethu rhwng llythrennau mawr a bach, felly gwiriwch union sillafiad yr enw.",
@@ -6848,6 +6848,7 @@ $messages['fr'] = array(
 	'mobile-frontend-talk-reply-success' => 'Votre réponse a été correctement enregistrée sur la page de discussion.',
 	'mobile-frontend-talk-reply-info' => 'Veuillez noter que votre réponse sera automatiquement signée avec votre nom d’utilisateur.',
 	'mobile-frontend-talk-reply' => 'Répondre',
+	'mobile-frontend-talk-topic-feedback' => 'Nouveau sujet ajouté à la page de discussion !',
 	'mobile-frontend-media-details' => 'Détails',
 	'mobile-frontend-media-license-link' => 'Informations sur la licence',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Si un utilisateur est ou non en cours de modification via l’interface mobile',
@@ -9607,6 +9608,7 @@ $messages['it'] = array(
 	'mobile-frontend-languages-header' => 'Lingue',
 	'mobile-frontend-languages-nonexistent-title' => 'La pagina "$1" non esiste.',
 	'mobile-frontend-languages-text' => '$1 è disponibile in $2 {{PLURAL:$2|lingua|lingue}}',
+	'mobile-frontend-languages-variant-header' => 'Varianti {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-heading' => '<strong>Lingue</strong>',
 	'mobile-frontend-language-article-heading' => "Leggi in un'altra lingua",
 	'mobile-frontend-language-header' => 'Questa pagina è disponibile in $1 {{PLURAL:$1|lingua|lingue}}',
@@ -9752,7 +9754,7 @@ in tutto il mondo',
 	'mobile-frontend-changeslist-ip' => 'Utente anonimo',
 	'mobile-frontend-changeslist-nocomment' => 'nessun oggetto della modifica',
 	'mobile-frontend-watchlist-filter-all' => 'Tutte',
-	'mobile-frontend-watchlist-filter-articles' => 'Voci', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Pagine',
 	'mobile-frontend-watchlist-filter-talk' => 'Discussioni',
 	'mobile-frontend-watchlist-filter-other' => 'Altro',
 	'mobile-frontend-watchlist-modified' => 'Modificata $1',
@@ -9855,6 +9857,7 @@ in tutto il mondo',
 	'mobile-frontend-talk-reply-success' => 'La tua risposta è stata salvata correttamente nella pagina di discussione.',
 	'mobile-frontend-talk-reply-info' => 'La risposta sarà firmata automaticamente con il tuo nome utente.',
 	'mobile-frontend-talk-reply' => 'Rispondi',
+	'mobile-frontend-talk-topic-feedback' => 'Nuova discussione aggiunta alla pagina di discussione!',
 	'mobile-frontend-media-details' => 'Dettagli',
 	'mobile-frontend-media-license-link' => 'Informazioni sulla licenza',
 	'abusefilter-edit-builder-vars-user-mobile' => "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -9877,8 +9880,8 @@ in tutto il mondo',
 	'mobile-frontend-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack-description' => 'Scopri le pagine che sono geograficamente vicine alla pagina di contenuto che stai attualmente leggendo.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Questa voce ha bisogno del tuo aiuto!', # Fuzzy
-	'mobile-frontend-mainpage-cta-button' => 'Migliora questa voce', # Fuzzy
+	'mobile-frontend-mainpage-cta-prompt' => 'Questa pagina ha bisogno del tuo aiuto!',
+	'mobile-frontend-mainpage-cta-button' => 'Migliora questa pagina',
 );
 
 /** Japanese (日本語)
@@ -12236,6 +12239,10 @@ $messages['lrc'] = array(
 	'mobile-frontend-off' => 'روشنا',
 	'mobile-frontend-on' => 'كور',
 	'mobile-frontend-news-items' => 'د حوال',
+	'mobile-frontend-languages-404-title' => 'خطا زون',
+	'mobile-frontend-languages-header' => 'زونيا',
+	'mobile-frontend-languages-nonexistent-title' => 'بلگه $1 وجود ناره.',
+	'mobile-frontend-language-heading' => '<strong>زونیا</strong>',
 	'mobile-frontend-language-article-heading' => 'د یه گل زون هنی بحون',
 	'mobile-frontend-language-site-choose' => 'پی جوری زون',
 	'mobile-frontend-username' => 'نوم كاروری:',
@@ -12244,11 +12251,13 @@ $messages['lrc'] = array(
 	'mobile-frontend-password-placeholder' => 'رمز',
 	'mobile-frontend-login' => 'اومائن',
 	'mobile-frontend-learn-more' => 'بيشتر يا بيئريت',
+	'mobile-frontend-view-source' => 'سرچشمه نه بوينيت',
 	'mobile-frontend-account-create-submit' => 'ثوت نام كردن',
 	'mobile-frontend-password-confirm-placeholder' => 'رمز محكم كو',
 	'mobile-frontend-account-create-email-placeholder' => 'نشونی ايميل',
 	'mobile-frontend-account-create-captcha-placeholder' => 'متن امنيتی نه وارد كو', # Fuzzy
 	'mobile-frontend-overlay-escape' => 'ورئرد',
+	'mobile-frontend-overlay-continue' => 'ادامه دئین',
 	'mobile-frontend-placeholder' => 'پی جوری {{SITENAME}}',
 	'mobile-frontend-clear-search' => 'پاك كردن',
 	'mobile-frontend-search-content' => 'پی جوری مینجا بلگیا',
@@ -12260,7 +12269,10 @@ $messages['lrc'] = array(
 	'mobile-frontend-main-menu-settings' => 'تنظيمات',
 	'mobile-frontend-main-menu-upload' => 'سوارکردیا',
 	'mobile-frontend-main-menu-settings-heading' => 'تنظيمات',
+	'mobile-frontend-main-menu-account-create' => 'يه گل حساو راست بكيد',
 	'mobile-frontend-page-menu-history' => 'ويرگار',
+	'mobile-frontend-nearby-title' => 'نزیک',
+	'mobile-frontend-user-account' => 'حساو کاروری',
 	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'روئه دش؟',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'هری!',
 	'mobile-frontend-watchlist-more' => 'بیشتر',
@@ -13705,6 +13717,16 @@ $messages['my'] = array(
 $messages['mzn'] = array(
 	'mobile-frontend-view' => 'موبایلی هارشائن',
 	'mobile-frontend-copyright' => "کل نوشتارون <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>موجوز Creative Commons Attribution/Share-Alike</a> اساس شمه دسترس درنه؛ مومکنه ای بعدن اته سری نو شرط و شروط ایضافه بوه. اگه اطلاعات ویشتری خواننی <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>قوانین و موقررات ایستفاده</a> ره هارشین. ویکی‌پدیا ، <a href='http://www.wikimediafoundation.org/'>ویکی‌مدیا بونیاد</a>اته تجاری علومت ثبت بئی هسه که اتا ناسودبر سازمون هسه.", # Fuzzy
+);
+
+/** Neapolitan (Napulitano)
+ * @author Chelin
+ */
+$messages['nap'] = array(
+	'mobile-frontend-watchlist-filter-articles' => 'Paggene',
+	'mobile-frontend-talk-topic-feedback' => "Novo sugietto aggiunto ad 'a paggena 'e discussione !",
+	'mobile-frontend-profile-usertalk' => "Paggena 'e discussione 'e {{GENDER:$1|$1}}",
+	'mobile-frontend-mainpage-cta-prompt' => "Chista paggena tene bisogno 'e ll'ajùto vuosto !",
 );
 
 /** Norwegian Bokmål (norsk bokmål)
@@ -15614,6 +15636,7 @@ Për piasì, ch'a sara e ch'a preuva torna.",
 	'mobile-frontend-talk-reply-success' => "Soa rispòsta a l'é stàita argistrà për da bin an sla pàgina ëd discussion.",
 	'mobile-frontend-talk-reply-info' => "Ch'a ten-a da ment che soa rispòsta a sarà sot-signà an automàtich con sò stranòm.",
 	'mobile-frontend-talk-reply' => 'Rësponde',
+	'mobile-frontend-talk-topic-feedback' => 'Neuv argoment giontà a la pàgina ëd discussion!',
 	'mobile-frontend-media-details' => 'Detaj',
 	'mobile-frontend-media-license-link' => 'Anformassion an sla licensa',
 	'abusefilter-edit-builder-vars-user-mobile' => "Se n'utent a l'é an camin ch'a modìfica për mojen dl'antërfassa dël sacociàbil o nò",
@@ -16586,6 +16609,7 @@ din întreaga lume',
 	'mobile-frontend-talk-reply-success' => 'Răspunsul dumneavoastră a fost înregistrat cu succes în pagina de discuții.',
 	'mobile-frontend-talk-reply-info' => 'Rețineți că răspunsul dumneavoastră va fi semnat în mod automat cu numele dumneavoastră de utilizator.',
 	'mobile-frontend-talk-reply' => 'Răspuns',
+	'mobile-frontend-talk-topic-feedback' => 'Subiect nou adăugat pe pagina de discuții!',
 	'mobile-frontend-media-details' => 'Detalii',
 	'mobile-frontend-media-license-link' => 'Informații despre licențiere',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Dacă un utilizator modifică sau nu prin intermediul interfeței mobile',
@@ -18304,6 +18328,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-talk-reply-success' => 'Ditt svar sparades framgångsrikt på diskussionssidan.',
 	'mobile-frontend-talk-reply-info' => 'Observera att ditt svar automatiskt kommer att undertecknas med ditt användarnamn.',
 	'mobile-frontend-talk-reply' => 'Svara',
+	'mobile-frontend-talk-topic-feedback' => 'Nytt ämne lades till i diskussionssidan!',
 	'mobile-frontend-media-details' => 'Detaljer',
 	'mobile-frontend-media-license-link' => 'Licensinformation',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Huruvida eller inte en användare redigerar via mobila gränssnittet',
