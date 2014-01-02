@@ -56,11 +56,23 @@
 			this._super( options );
 
 			api.getThumb( options.title ).done( function( data ) {
-				self.imgRatio = data.thumbwidth / data.thumbheight;
+				function removeLoader() {
+					self.$( '.container' ).removeClass( 'loading' );
+				}
 
-				self.$( '.container' ).removeClass( 'loading' );
+				self.imgRatio = data.thumbwidth / data.thumbheight;
 				$img = $( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', options.caption );
 				self.$( '.container div' ).append( $img );
+
+				if ( $img.prop( 'complete' ) ) {
+					// if the image is loaded from browser cache, "load" event may not fire
+					// (http://stackoverflow.com/questions/910727/jquery-event-for-images-loaded#comment10616132_1110094)
+					removeLoader();
+				} else {
+					// remove the loader when the image is loaded
+					$img.on( 'load', removeLoader );
+				}
+
 				self._positionImage();
 				self.$( '.details a' ).attr( 'href', data.descriptionurl );
 				if ( data.extmetadata && data.extmetadata.LicenseShortName ) {
