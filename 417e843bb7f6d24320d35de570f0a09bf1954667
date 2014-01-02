@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_36d8a921",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 814,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T22:43:21Z",
+      "side": 1,
+      "message": "Apart from what MaxSem said, do I understand that we\u0027re setting a cookie here and it stays in user\u0027s browser forever? It doesn\u0027t seem like a big deal, but it\u0027s kind of a bad practice because this cookie will be needlessly sent to the server in HTTP headers on every request.",
+      "revId": "417e843bb7f6d24320d35de570f0a09bf1954667",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_d604dd82",
+        "filename": "javascripts/common/settings.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T22:43:21Z",
+      "side": 1,
+      "message": "Same thing about the cookie staying forever.",
+      "revId": "417e843bb7f6d24320d35de570f0a09bf1954667",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b6add982",
+        "filename": "javascripts/modules/mf-stop-mobile-redirect.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T22:43:21Z",
+      "side": 1,
+      "message": "You can just return;",
+      "revId": "417e843bb7f6d24320d35de570f0a09bf1954667",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
