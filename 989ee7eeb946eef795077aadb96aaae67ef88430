@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_162005f1",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T23:10:34Z",
+      "side": 1,
+      "message": "So we got rid of the Selenium_user (kind of) using MEDIAWIKI_USER and now we\u0027re introducing another one? Why can\u0027t we just make this step create a new user?",
+      "revId": "989ee7eeb946eef795077aadb96aaae67ef88430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_164ec5c4",
+        "filename": "tests/browser/features/step_definitions/lead_photo_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T23:10:34Z",
+      "side": 1,
+      "message": "on(LeadPhotoPage).upload_button_element.class.should match \u0027enabled\u0027?",
+      "revId": "989ee7eeb946eef795077aadb96aaae67ef88430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_16dda5e1",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T23:10:34Z",
+      "side": 1,
+      "message": "on(UploadsPage).tutorial_link_element.when_present.href.should eq \u0027#/upload-tutorial/uploads\u0027",
+      "revId": "989ee7eeb946eef795077aadb96aaae67ef88430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_3690a9f0",
+        "filename": "tests/browser/features/support/pages/lead_photo_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T23:10:34Z",
+      "side": 1,
+      "message": "Doesn\u0027t seem to be needed, it would be better to check the class of :upload_button instead.",
+      "revId": "989ee7eeb946eef795077aadb96aaae67ef88430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_56d32dd7",
+        "filename": "tests/browser/features/support/pages/lead_photo_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T23:10:34Z",
+      "side": 1,
+      "message": "Won\u0027t this match the old overlay too?",
+      "revId": "989ee7eeb946eef795077aadb96aaae67ef88430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_56fa0d41",
+        "filename": "tests/browser/features/support/pages/uploads_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-02T23:10:34Z",
+      "side": 1,
+      "message": "Not needed. Adding the same element multiple times doesn\u0027t seem to be a good practice, there\u0027s :contribute_image already. See also comment in uploads_steps.rb",
+      "revId": "989ee7eeb946eef795077aadb96aaae67ef88430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
