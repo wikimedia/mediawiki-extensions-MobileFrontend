@@ -1,6 +1,6 @@
 ( function ( M, $) {
 
-var Api = M.require( 'api' ).Api, stub, tokens;
+var Api = M.require( 'api' ).Api, stub;
 
 QUnit.module( 'MobileFrontend api', {
 	setup: function() {
@@ -103,10 +103,6 @@ QUnit.module( 'MobileFrontend api.getToken', {
 
 		this.api = new Api();
 		stub = sinon.stub( this.api , 'ajax' );
-		tokens = {
-			editToken: mw.user.tokens.get( 'editToken' ),
-			watchToken: mw.user.tokens.get( 'watchToken' )
-		};
 		params = {
 			url: this.api.apiUrl,
 			xhrFields: { withCredentials: true }
@@ -124,14 +120,10 @@ QUnit.module( 'MobileFrontend api.getToken', {
 		stub.withArgs( { action: 'tokens', type: 'upload' }, params ).returns( uploadAnonDeferred );
 		stub.withArgs( corsData, corsParams ).returns( corsDeferred );
 		this.user = mw.user.getName() || '';
-		mw.user.tokens.set( 'editToken', '123' );
-		mw.user.tokens.set( 'watchToken', 'zyx' );
 		mw.config.set( 'wgUserName', 'EvilPanda' );
 	},
 	teardown: function() {
 		stub.restore();
-		mw.user.tokens.set( 'editToken', tokens.editToken );
-		mw.user.tokens.set( 'watchToken', tokens.watchToken );
 		mw.config.set( 'wgUserName', this.user );
 	}
 } );

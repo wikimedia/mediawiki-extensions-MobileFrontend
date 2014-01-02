@@ -124,9 +124,7 @@
 		 *   the token string, false if the user is anon or undefined where not available or a warning is set
 		 */
 		getToken: function( tokenType, endpoint, caToken ) {
-			var token, data, d = $.Deferred(), isCacheable,
-				// token types available from mw.user.tokens
-				easyTokens = [ 'edit', 'watch', 'patrol' ];
+			var data, d = $.Deferred(), isCacheable;
 
 			tokenType = tokenType || 'edit';
 			isCacheable = tokenType !== 'centralauth';
@@ -134,25 +132,10 @@
 			if ( !this.tokenCache[ endpoint ] ) {
 				this.tokenCache[ endpoint ] = {};
 			}
-
-			// If the user is anonymous and anonymous editing is disabled, reject the request.
-			// FIXME: Per the separation of concerns design principle, we should probably
-			// not be worrying about whether or not the user is anonymous within getToken.
-			// We'll need to check upstream usage though before removing this.
 			if ( user.isAnon() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
 				return d.reject( 'Token requested when not logged in.' );
-			// If the token is cached, return it from cache.
 			} else if ( isCacheable && this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
 				return this.tokenCache[ endpoint ][ tokenType ];
-			// If the token is available from mw.user.tokens, get it from there.
-			} else if ( easyTokens.indexOf( tokenType ) > -1 ) {
-				token = user.tokens.get( tokenType + 'Token' );
-				if ( token && ( token !== '+\\' || mw.config.get( 'wgMFAnonymousEditing' ) ) ) {
-					d.resolve( token );
-				} else {
-					d.reject( 'Anonymous token.' );
-				}
-			// Otherwise, make an API request for the token.
 			} else {
 				data = {
 					action: 'tokens',
@@ -182,10 +165,9 @@
 				} ).fail( function() {
 					d.reject( 'Failed to retrieve token.' );
 				} );
+				this.tokenCache[ endpoint ][ tokenType ] = d;
+				return d;
 			}
-			// Cache the token
-			this.tokenCache[ endpoint ][ tokenType ] = d;
-			return d;
 		}
 	} );
 
