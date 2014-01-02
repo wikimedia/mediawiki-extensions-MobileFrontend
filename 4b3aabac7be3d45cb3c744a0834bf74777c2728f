@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_58a0fc8c",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 798,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "Check for _any_ cookies present instead? Even if someone might not trigger something cookie-setting in MF, CentralNotice tends to set its cookies for everyone.",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_05a56d9a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 803,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "This might not go through for logged-out page views.",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_254e31de",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 805,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "This one is tricky: you want it on mobile but it\u0027s set only on desktop.",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_a5e481dc",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 809,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "Inconsistency: this function retturns no value in other code paths and it\u0027s not used anyway.",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_85b05dd9",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 814,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "$this-\u003egetRequest()-\u003esetcookie()",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_45c2553a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 821,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "307 is not present in HTTP 1.0 which someone might still be using (eek).",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_654439be",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 836,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "Wrong: the whole point of the bug is that you can\u0027t return back to desktop subdomain with a mobile client.",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_05ea0d9c",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 840,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "How are you going to enable a cookieless feature for beta when beta status is stored in cookies?",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_b804a881",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 844,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "What if checkCookieSupport() redirected and no further processing is needed?",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_d84acc5e",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-01-02T20:16:02Z",
+      "side": 1,
+      "message": "Unrelated change.",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
