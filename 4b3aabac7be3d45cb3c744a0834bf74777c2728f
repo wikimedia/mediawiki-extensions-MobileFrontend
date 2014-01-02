@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_1b86eeac",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 798,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-02T21:52:44Z",
+      "side": 1,
+      "message": "Cookies could be blocked for a certain domain or vice versa (only enabled for a certain domain).\n\nIs there a way to get all cookies from the WebRequest object? I didn\u0027t see one but perhaps I was missing something.",
+      "parentUuid": "eeebdf60_58a0fc8c",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_05a56d9a",
         "filename": "includes/MobileContext.php",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_db4f6696",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 803,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-02T21:52:44Z",
+      "side": 1,
+      "message": "Sorry, what do you mean? Are you talking about caching or something?",
+      "parentUuid": "eeebdf60_05a56d9a",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_254e31de",
         "filename": "includes/MobileContext.php",
         "patchSetId": 4
@@ -47,6 +83,24 @@
       "writtenOn": "2014-01-02T20:16:02Z",
       "side": 1,
       "message": "This one is tricky: you want it on mobile but it\u0027s set only on desktop.",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_bb52623d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 805,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-02T21:52:44Z",
+      "side": 1,
+      "message": "If the user is on the desktop site and clicks the mobile link..?",
+      "parentUuid": "eeebdf60_254e31de",
       "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_bb3942f1",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 814,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-02T21:52:44Z",
+      "side": 1,
+      "message": "You mean $request-\u003eresponse()-\u003esetcookie()? Any advantage to doing that (just curious)? We don\u0027t need any of the HTTP settings and whatnot, so this seemed simpler...",
+      "parentUuid": "eeebdf60_85b05dd9",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_45c2553a",
         "filename": "includes/MobileContext.php",
         "patchSetId": 4
@@ -98,6 +170,24 @@
       "writtenOn": "2014-01-02T20:16:02Z",
       "side": 1,
       "message": "307 is not present in HTTP 1.0 which someone might still be using (eek).",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_3b2532bd",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 821,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-02T21:52:44Z",
+      "side": 1,
+      "message": "So will it be acceptable to just do a 301 redirect?",
+      "parentUuid": "eeebdf60_45c2553a",
       "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +211,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_7b1a9a7f",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 836,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-02T21:52:44Z",
+      "side": 1,
+      "message": "Hmm, what? From Jon\u0027s comment in the bug report:\n\n\u003e In beta when I don\u0027t have cookies enabled and click \u0027desktop link\u0027, I (should) get an alert saying \"Cookies are needed to switch to desktop mode.\" and remain on the page\n\nSounds like we\u0027re talking about different things then...",
+      "parentUuid": "eeebdf60_654439be",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_05ea0d9c",
         "filename": "includes/MobileContext.php",
         "patchSetId": 4
@@ -138,6 +246,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_fb2eaa9f",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 840,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-02T21:52:44Z",
+      "side": 1,
+      "message": "No idea, honestly... any insights? :/",
+      "parentUuid": "eeebdf60_05ea0d9c",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_b804a881",
         "filename": "includes/MobileContext.php",
         "patchSetId": 4
@@ -149,6 +275,24 @@
       "writtenOn": "2014-01-02T20:16:02Z",
       "side": 1,
       "message": "What if checkCookieSupport() redirected and no further processing is needed?",
+      "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_db1d267a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 844,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-02T21:52:44Z",
+      "side": 1,
+      "message": "So if it redirects then you\u0027re saying this code would still execute? Sorry, I guess I missed that.",
+      "parentUuid": "eeebdf60_b804a881",
       "revId": "4b3aabac7be3d45cb3c744a0834bf74777c2728f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
