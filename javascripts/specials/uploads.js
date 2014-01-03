@@ -159,6 +159,38 @@ var
 		};
 	}
 
+	function createButton( $container, userGallery ) {
+		var btn = new PhotoUploaderButton( {
+			buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
+			pageTitle: mw.config.get( 'wgTitle' ),
+			funnel: 'uploads'
+		} );
+
+		// FIXME: Only exists for purposes of stable legacy code
+		if ( userGallery ) {
+			btn.on( 'success', function( image ) {
+				var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount, msgKey;
+
+				if ( userGallery.isEmpty() ) {
+					msgKey = 'mobile-frontend-donate-photo-first-upload-success';
+				} else {
+					msgKey = 'mobile-frontend-donate-photo-upload-success';
+				}
+				popup.show( mw.msg( msgKey ), 'toast' );
+
+				image.width = IMAGE_WIDTH;
+				userGallery.prependPhoto( image );
+
+				if ( $counter.length ) {
+					newCount = parseInt( $counter.text(), 10 ) + 1;
+					$counter.parent().html( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) ).show();
+				}
+			} );
+		}
+
+		btn.appendTo( $container );
+	}
+
 	function init() {
 		var $container, userGallery, $a;
 
@@ -173,6 +205,7 @@ var
 					var UploadTutorial = M.require( 'modules/uploads/UploadTutorial' );
 					new UploadTutorial().show();
 				} );
+				createButton( $container, userGallery );
 			} else {
 				if ( user.getEditCount() === 0 ) {
 					$a = $( '<a class="button photo">' ).
@@ -181,12 +214,7 @@ var
 					// FIXME: This is needed so the camera shows. Eww.
 					$( '<div>' ).appendTo( $a );
 				} else {
-					new PhotoUploaderButton( {
-						buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
-						pageTitle: mw.config.get( 'wgTitle' ),
-						funnel: 'uploads'
-					} ).
-						appendTo( $container );
+					createButton( $container );
 				}
 			}
 
