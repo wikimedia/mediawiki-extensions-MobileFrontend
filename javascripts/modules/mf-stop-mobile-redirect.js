@@ -14,10 +14,21 @@
 
 ( function( M, $ ) {
 
-	var
-		writeCookie = M.settings.writeCookie;
+	var writeCookie = M.settings.writeCookie,
+		cookiesEnabled = M.settings.cookiesEnabled,
+		popup = M.require( 'toast' );
 
 	function desktopViewClick() {
+		// If cookies are not enabled, show a toast and die
+		if ( !cookiesEnabled() ) {
+			popup.show(
+				mw.msg( 'mobile-frontend-cookies-required' ),
+				'toast error'
+			);
+			// Prevent default action
+			return false;
+		}
+
 		// get info from cookie defined by wgUseFormatCookie
 		var useFormatCookie = mw.config.get( 'wgUseFormatCookie' ),
 			redirectCookie = mw.config.get( 'wgStopMobileRedirectCookie' );

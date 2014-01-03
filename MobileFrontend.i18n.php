@@ -65,6 +65,7 @@ $messages['en'] = array (
 	'mobile-frontend-view' => 'Mobile view',
 	'mobile-frontend-view-desktop' => 'Desktop',
 	'mobile-frontend-view-mobile' => 'Mobile',
+	'mobile-frontend-cookies-required' => 'Cookies are required to switch view modes. Please enable them and try again.',
 	'mobile-frontend-opt-in-explain' => 'By joining the beta, you will get access to experimental features, at the risk of encountering bugs and issues.',
 	'mobile-frontend-images-status' => 'Images',
 	'mobile-frontend-disable-images' => 'Disable images on mobile site',
@@ -514,6 +515,7 @@ This buttons takes the user to a random page.
 {{Identical|Desktop}}',
 	'mobile-frontend-view-mobile' => 'This appears at the bottom of the mobile page, meaning that the current view is mobile. It appears near the message {{msg-mw|Mobile-frontend-view-desktop}} and should be worded similarly.
 {{Identical|Mobile}}',
+	'mobile-frontend-cookies-required' => 'Error message shown when user attempts to switch site modes and cookies are not enabled.',
 	'mobile-frontend-opt-in-explain' => 'Used as description for the "Beta" in [[Special:MobileOptions]], if the beta is not enabled.',
 	'mobile-frontend-images-status' => 'On settings page label for turning on/off images.
 {{Identical|Image}}',
