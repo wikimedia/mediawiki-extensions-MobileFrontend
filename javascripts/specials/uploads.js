@@ -90,15 +90,20 @@ var
 			return this.$list.find( 'li' ).length === 0;
 		},
 		showEmptyMessage: function() {
-			$( '<p class="content">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) ).
+			$( '<p class="content empty">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) ).
 				insertBefore( this.$list );
+		},
+		hideEmptyMessage: function() {
+			this.$( '.empty' ).remove();
 		},
 		prependPhoto: function( photoData ) {
 			var photoItem = new PhotoItem( photoData ).prependTo( this.$list );
+			this.hideEmptyMessage();
 			M.emit( 'photo-loaded', photoItem.$el );
 		},
 		appendPhoto: function( photoData ) {
 			var photoItem = new PhotoItem( photoData ).appendTo( this.$list );
+			this.hideEmptyMessage();
 			M.emit( 'photo-loaded', photoItem.$el );
 		},
 		_isEndNear: function() {
