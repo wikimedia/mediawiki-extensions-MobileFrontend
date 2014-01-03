@@ -85,16 +85,18 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$alphaDescriptionMsg = wfMessage( 'mobile-frontend-settings-alpha-description' )->text();
 
 		$betaSetting = <<<HTML
-		<li>
+	<li>
+		<div class="option-name">
 			{$betaEnableMsg}
 			<div class="mw-mf-checkbox-css3" id="enable-beta-toggle">
 				<input type="checkbox" name="enableBeta"
 				{$imagesBeta}>{$onoff}
 			</div>
-		</li>
-		<li class="mw-mf-settings-description">
+		</div>
+		<div class="option-description">
 				{$betaDescriptionMsg}
-		</li>
+		</div>
+	</li>
 HTML;
 		$alphaSetting = '';
 		if ( $betaEnabled ) {
@@ -104,16 +106,18 @@ HTML;
 			}
 
 			$alphaSetting .= <<<HTML
-			<li>
+		<li>
+			<div class="option-name">
 				{$alphaEnableMsg}
 				<div class="mw-mf-checkbox-css3" id="enable-alpha-toggle">
 					<input type="checkbox" name="enableAlpha"
 					{$alphaChecked}>{$onoff}
 				</div>
-			</li>
-			<li class="mw-mf-settings-description">
+			</div>
+			<div class="option-description">
 					{$alphaDescriptionMsg}
-			</li>
+			</div>
+		</li>
 HTML;
 		}
 
@@ -123,11 +127,13 @@ HTML;
 	</p>
 	<ul>
 		<li>
+			<div class="option-name">
 			{$disableMsg}
 			<span class="mw-mf-checkbox-css3" id="enable-images-toggle">
 				<input type="checkbox" name="enableImages"
 				{$imagesChecked}>{$onoff}
 			</span>
+			</div>
 		</li>
 		{$betaSetting}
 		{$alphaSetting}
