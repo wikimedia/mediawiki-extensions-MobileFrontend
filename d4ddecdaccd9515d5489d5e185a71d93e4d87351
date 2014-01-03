@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_fbac6134",
+        "filename": "javascripts/modules/tutorials/newbieEditor.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T23:22:40Z",
+      "side": 1,
+      "message": "Yeh I don\u0027t like this.. and Juliusz will hate it even more!! :)\n\nRemind me why can\u0027t you just add \u0027mobile.editor.beta\u0027 as a dependency?",
+      "revId": "d4ddecdaccd9515d5489d5e185a71d93e4d87351",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
