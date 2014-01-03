@@ -32,13 +32,22 @@
 	function init( page ) {
 		// reset the overlay in case a new page was loaded
 		overlay = null;
-		// in form 37.783; -122.417 - take the first one
-		latLng = $( '.geo' ).eq( 0 ).text();
-		// Matches <number>;<optional space(s)}><number> where number can be negative or positive and a float or integer
-		latLng = latLng.match( /([\-]?[\-0-9]+[\.]?[0-9]*);[ ]*([\-]?[0-9]+[\.]?[0-9]*)/ );
+		latLng = mw.config.get( 'wgCoordinates' );
 		if ( latLng ) {
-			lat = latLng[1];
-			lng = latLng[2];
+			lat = latLng.lat;
+			lng = latLng.lon;
+		} else {
+			// TODO: kill this b/c code when https://gerrit.wikimedia.org/r/104679
+			// gets deployed everywhere and old Varnish cache expires
+
+			// in form 37.783; -122.417 - take the first one
+			latLng = $( '.geo' ).eq( 0 ).text();
+			// Matches <number>;<optional space(s)}><number> where number can be negative or positive and a float or integer
+			latLng = latLng.match( /([\-]?[\-0-9]+[\.]?[0-9]*);[ ]*([\-]?[0-9]+[\.]?[0-9]*)/ );
+			if ( latLng ) {
+				lat = latLng[1];
+				lng = latLng[2];
+			}
 		}
 
 		if ( lat && lng ) {
