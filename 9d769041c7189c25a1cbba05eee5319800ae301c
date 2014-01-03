@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_2a627537",
+        "filename": "javascripts/modules/mf-stop-mobile-redirect.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:17:12Z",
+      "side": 1,
+      "message": "This alone seems useful.\nIn terms of not being able to get into beta without cookies, you can if you set mobileaction\u003dbeta meaning we can experiment with this on production for a bit before flicking the switch",
+      "revId": "9d769041c7189c25a1cbba05eee5319800ae301c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
