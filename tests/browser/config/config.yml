@@ -8,7 +8,7 @@ chrome:
 firefox:
   name: firefox
   platform: Linux
-  version: 23
+  version: 25
 
 internet_explorer_6:
   name: internet_explorer
