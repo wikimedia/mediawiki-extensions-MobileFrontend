@@ -651,28 +651,35 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.ajaxpages' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			// Requires the Page.js JavaScript file
+			'mobile.stable.common',
+		),
+		'scripts' => array(
+			'javascripts/externals/epoch.js',
+			'javascripts/common/history-alpha.js',
+			'javascripts/modules/lazyload.js',
+		),
+	),
+
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable',
 			'mobile.beta',
-			'mobile.templates',
+			'mobile.ajaxpages',
+			// For random.js
+			'mobile.keepgoing',
 		),
 		'messages' => array(
 			// for random.js
 			'mobilefrontend-random-explain',
 			'mobilefrontend-random-cancel',
-
-			// for mf-table.js
-			'mobile-frontend-table',
 		),
 		'styles' => array(
 			'less/common/mainmenuAnimation.less',
 		),
 		'scripts' => array(
-			'javascripts/externals/epoch.js',
-			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-translator.js',
-			'javascripts/modules/lazyload.js',
 			'javascripts/modules/random/random.js',
 		),
 	),
