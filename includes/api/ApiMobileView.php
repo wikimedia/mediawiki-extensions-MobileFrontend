@@ -122,6 +122,10 @@ class ApiMobileView extends ApiBase {
 				$result[] = $section;
 			}
 		}
+
+		if ( isset( $prop['protection'] ) ) {
+			$this->addProtection( $title );
+		}
 		// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
 		// Inform ppl if the page is infested with LiquidThreads but that's the only thing we support about it.
 		if ( class_exists( 'LqtDispatch' ) && LqtDispatch::isLqtPage( $title ) ) {
@@ -461,6 +465,25 @@ class ApiMobileView extends ApiBase {
 		}
 	}
 
+	/**
+	 * Adds protection information
+	 * @param Title $title
+	 */
+	private function addProtection( Title $title ) {
+		$result = $this->getResult();
+		$protection = array();
+		foreach ( $title->getRestrictionTypes() as $type ) {
+			$levels = $title->getRestrictions( $type );
+			if ( $levels ) {
+				$protection[$type] = $levels;
+				$result->setIndexedTagName( $protection[$type], 'level' );
+			}
+		}
+		$result->addValue( null, $this->getModuleName(),
+			array( 'protection' => $protection )
+		);
+	}
+
 	public function getAllowedParams() {
 		$res = array(
 			'page' => array(
@@ -481,6 +504,7 @@ class ApiMobileView extends ApiBase {
 					'normalizedtitle',
 					'lastmodified',
 					'lastmodifiedby',
+					'protection',
 				)
 			),
 			'sectionprop' => array(
@@ -543,6 +567,7 @@ class ApiMobileView extends ApiBase {
 				' normalizedtitle - normalized page title',
 				' lastmodified    - MW timestamp for when the page was last modified, e.g. "20130730174438"',
 				' lastmodifiedby  - information about the user who modified the page last',
+				' protection      - information about protection level',
 			),
 			'sectionprop' => 'What information about sections to get',
 			'variant' => "Convert content into this language variant",
