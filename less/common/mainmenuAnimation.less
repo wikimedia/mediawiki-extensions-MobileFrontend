@@ -31,6 +31,15 @@
 	}
 }
 
+.animations .alpha.rtl {
+	&.navigation-enabled {
+		.position-fixed,
+		#mw-mf-page-center {
+			.transform(translate3d(-@menuWidth, 0, 0));
+		}
+	}
+}
+
 #mw-mf-page-left {
 	// override non-animated version, can be removed when animation is in stable
 	// and position: absolute + visibility: hidden proves to be sufficient
@@ -38,6 +47,14 @@
 	position: absolute;
 	z-index: 0;
 	visibility: hidden;
+	width: @menuWidth;
+}
+
+#mw-mf-page-center {
+        min-height: 100%;
+        // We need to ensure the content has a white background - otherwise it will
+        // overlap the menu during the main menu reveal/hide animation
+        background-color: #fff;
 }
 
 .navigation-enabled {
@@ -51,6 +68,10 @@
 // don't use translate3d for tablets as it may introduce slight blur and
 // we can't use % in it
 @media (min-width: @wgMFDeviceWidthTablet) {
+	#mw-mf-page-left {
+                width: 20%;
+        }
+
 	.animations {
 		.alpha,
 		.beta {
@@ -60,11 +81,14 @@
 		}
 
 		.navigation-enabled.alpha,
-		.navigation-enabled.beta {
+		.navigation-enabled.alpha.rtl,
+		.navigation-enabled.beta,
+		.navigation-enabled.beta.rtl {
 			#mw-mf-page-center {
 				.transition(width @duration, left @duration;);
 				.transform(none);
 				left: 20% !important;
+				position: absolute;
 			}
 		}
 	}
