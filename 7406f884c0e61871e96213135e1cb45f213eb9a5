@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_6a907d4e",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "Please don\u0027t introduce more id\u0027s\nYou can already do $( \u0027#mw-mf-settings-save\u0027 ).parent() if you need this element.",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_4a87f914",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "Please add whitespace around arguments",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_8a8ce133",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "$( \u0027\u0027 ) mmm?? This won\u0027t match anything...",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2a995571",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "Please add spaces around function arguments\nM.settings.saveUserSetting( el.name, el.checked ? \u0027true\u0027 : \u0027false\u0027, true );\n\nand please make this a method of Checkbox with suggested name \u0027save\u0027",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_eac12d35",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "Add the following:\ntagName: \u0027li\u0027,\ndefaults: {\n  name: \u0027expandSections\u0027,\n  ...\n},\nappendTo: \u0027.mw-mf-settings ul\u0027,\npostRender: function() {\n  this.$( \u0027input[type\u003dcheckbox]\u0027 ).prop( \u0027checked\u0027, M.settings.getUserSetting(el.name, true) \u003d\u003d\u003d \u0027true\u0027 );\n}\n\nWithout tagName you are adding a DIV element to a UL element which is bad.",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2ab035d7",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "This line not needed see above.",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_aabb25b9",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "By using tagName and appendTo properties you don\u0027t need to append it into the DOM the View will take care of it.",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_eac80d53",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "These 3 can all be set as defaults on Checkbox",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_8a018173",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "Not needed if you put the logic here in postRender",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_6a04fd80",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T19:03:04Z",
+      "side": 1,
+      "message": "Instead $( \u0027form.mw-mf-settings\u0027 ).on( \u0027submit\u0027, cb.save )",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
