@@ -882,8 +882,6 @@ Pop-up message that is displayed after a user has thanked another user for their
 Parameters:
 * $1 - the username of the user that was thanked
 * $2 - the gender of the user that was thanked',
-	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. Parameters:
-* $1 - a unique table number for the page',
 	'mobile-frontend-saving-exit-page' => 'When a user makes an edit in the page which is happening in the background
 and then tries to leave the page this message is shown to check that they are happy that they will lose their changes.
 They can either exit the page and lose them or stay on the page until they are complete',
@@ -1451,7 +1449,6 @@ $messages['ar'] = array(
 	'mobile-frontend-diffview-anonymous' => 'مستخدم مجهول',
 	'mobile-frontend-diffview-explained' => 'السطور التالية أضيفت (+) وحذفت (-):',
 	'mobile-frontend-thanked-notice' => '{{GENDER:$2|أُخبِر|أُخبِرت}} $1 أن {{GENDER:$2|تعديلاته|تعديلاتها}} تعجبك.',
-	'mobile-frontend-table' => 'الجدول $1',
 	'mobile-frontend-saving-exit-page' => 'لا تزال مساهمتك قيد الحفظ. إذا غادرت فستُفقد تعديلاتك. هل أنت متأكد أنك تريد الخروج؟',
 	'mobile-frontend-photo-upload' => 'أضف صورة لهذه الصفحة',
 	'mobile-frontend-photo-article-edit-comment' => 'أضفت صورة للاستخدام في الصفحة',
@@ -1648,7 +1645,6 @@ $messages['as'] = array(
 	'mobile-frontend-diffview-anonymous' => 'বেনামী ব্যৱহাৰকাৰী',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|বাইট}} যোগ দিয়া হ’ল',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|বাইট}} বিলোপ কৰা হ’ল',
-	'mobile-frontend-table' => 'টেবুল $1',
 	'mobile-frontend-saving-exit-page' => 'পৃষ্ঠাটো সংৰক্ষণ কৰা হৈ আছে। আপুনি যদি এতিয়াই পৃষ্ঠাটো ত্যাগ কৰে তেনে আপুনি কৰা সম্পাদনাবোৰ সংৰক্ষণ নহ’ব। তথাপিটো আপুনি পৃষ্ঠাৰ পৰা আতৰি যাব খুজিছে নেকি?',
 	'mobile-frontend-photo-upload' => 'এই পৃষ্ঠাত প্ৰথম চিত্ৰখন যোগ দিয়ক', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'এই পৃষ্ঠাত ব্যৱহাৰৰ বাবে চিত্ৰ যোগ দিয়া হ’ল', # Fuzzy
@@ -2088,7 +2084,6 @@ $messages['ba'] = array(
 	'mobile-frontend-save-settings' => 'Көйләүҙәрҙе һаҡларға', # Fuzzy
 	'mobile-frontend-random-button' => 'Осраҡлы',
 	'mobile-frontend-back-to-top-of-section' => 'Бер бүлеккә кире ҡайтырға',
-	'mobile-frontend-close-section' => 'Был бүлекте ябырға',
 	'mobile-frontend-regular-site' => 'Ғәҙәти нөхсә',
 	'mobile-frontend-wml-continue' => 'Дауамы...',
 	'mobile-frontend-wml-back' => 'Кирегә...',
@@ -2105,7 +2100,7 @@ $messages['ba'] = array(
 	'mobile-frontend-featured-article' => 'Бөгөнгө көндә иң яҡшы мәҡәлә', # Fuzzy
 	'mobile-frontend-news-items' => 'Яңылыҡтар',
 	'mobile-frontend-language-article-heading' => 'Башҡа телдә уҡырға',
-	'mobile-frontend-language-header' => 'Был мәҡәлә {{PLURAL:$1|language|languages}} телдә бар',
+	'mobile-frontend-language-header' => 'Был мәҡәлә {{PLURAL:$1|1=language|languages}} телдә бар', # Fuzzy
 	'mobile-frontend-language-footer' => 'Иғтибар: Был бит һеҙ теләгән телдә яҙыла алмай. {{SITENAME}} ниндәй телдәр ҡулланыуын бында ҡарай алаһығыҙ.',
 	'mobile-frontend-language-site-choose' => 'Тел һайлау:',
 	'mobile-frontend-username' => 'Ҡулланыусы исеме:',
@@ -2133,10 +2128,9 @@ $messages['ba'] = array(
 	'mobile-frontend-main-menu-settings' => 'Көйләүҙәр',
 	'mobile-frontend-main-menu-settings-heading' => 'Сайттың мобиль нөхсәһен көйләү', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} проектындағы телдәр',
-	'mobile-frontend-settings-site-description' => '{{SITENAME}} проекты $1 {{PLURAL:$1|телдә}} бар. Түбәндә бөтә телдәр теҙмәһе килтерелгән.',
+	'mobile-frontend-settings-site-description' => '{{SITENAME}} проекты $1 {{PLURAL:$1|телдә}} бар. Түбәндә бөтә телдәр теҙмәһе килтерелгән.', # Fuzzy
 	'mobile-frontend-page-menu-contents' => 'йөкмәткеһе',
 	'mobile-frontend-page-menu-history' => 'Тарих',
-	'mobile-frontend-table' => '$1 таблицаһы',
 	'mobile-frontend-saving-exit-page' => 'Һеҙҙең үҙгәртеүҙәрегеҙ һаҡлана әле. Сыҡһағыҙ, үҙгәртеүҙәрегеҙ юғаласаҡ. Һеҙ ысынлап та сығырға теләйһегеҙме?',
 	'mobile-frontend-photo-upload' => 'Был биткә тәүге фотоны өҫтәргә', # Fuzzy
 );
@@ -2430,7 +2424,6 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-save-settings' => 'Захаваць',
 	'mobile-frontend-random-button' => 'Выпадковая',
 	'mobile-frontend-back-to-top-of-section' => 'Вярнуцца да папярэдняй сэкцыі',
-	'mobile-frontend-close-section' => 'Зачыніць гэты разьдзел',
 	'mobile-frontend-regular-site' => 'Поўная вэрсія',
 	'mobile-frontend-wml-continue' => 'Далей …',
 	'mobile-frontend-wml-back' => 'Вярнуцца …',
@@ -2447,7 +2440,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-featured-article' => 'Сёньняшні абраны артыкул',
 	'mobile-frontend-news-items' => 'Навіны',
 	'mobile-frontend-language-article-heading' => 'Чытаць на іншай мове',
-	'mobile-frontend-language-header' => 'Гэтая старонка даступная на $1 {{PLURAL:$1|мове|мовах}}',
+	'mobile-frontend-language-header' => 'Гэтая старонка даступная на $1 {{PLURAL:$1|1=мове|мовах}}', # Fuzzy
 	'mobile-frontend-language-variant-header' => 'Выберыце варыянт мовы {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-footer' => 'Заўвага: гэтая старонка, магчыма, напісаная не на пажаданай мове. Вы можаце аглядзець сьпіс моваў, якія падтрымлівае {{SITENAME}}, пстрыкнуўшы тут.',
 	'mobile-frontend-language-site-choose' => 'Пошук мовы',
@@ -2494,7 +2487,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-main-menu-upload' => 'Запампоўкі',
 	'mobile-frontend-main-menu-settings-heading' => 'Налады',
 	'mobile-frontend-settings-site-header' => 'Мовы {{GRAMMAR:родны|{{SITENAME}}}}',
-	'mobile-frontend-settings-site-description' => 'Праект «{{SITENAME}}» даступны на $1 {{PLURAL:$1|мове|мовах}}. Ніжэй выкладзеныя ўсе даступныя вэрсіі.',
+	'mobile-frontend-settings-site-description' => 'Праект «{{SITENAME}}» даступны на $1 {{PLURAL:$1|1=мове|мовах}}. Ніжэй выкладзеныя ўсе даступныя вэрсіі.', # Fuzzy
 	'mobile-frontend-main-menu-account-create' => 'Стварыць рахунак',
 	'mobile-frontend-page-menu-contents' => 'зьмест',
 	'mobile-frontend-page-menu-history' => 'Гісторыя',
@@ -2519,9 +2512,9 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-nearby-error-guidance' => 'Паспрабуйце абнавіць вашае месцазнаходжаньне.',
 	'mobile-frontend-nearby-link' => 'Прачытаць старонку цалкам',
 	'mobile-frontend-nearby-directions' => 'Навігацыя',
-	'mobile-frontend-donate-image-login' => 'Увайдзіце, каб праглядзець вашыя запампоўкі.',
+	'mobile-frontend-donate-image-login' => 'Увайдзіце, каб праглядзець вашыя запампоўкі.', # Fuzzy
 	'mobile-frontend-photo-upload-disabled' => 'Гэтая старонка не вымагае выявы.',
-	'mobile-frontend-photo-upload-anon' => 'Трэба ўвайсьці, каб дадаць выяву на гэтую старонку.',
+	'mobile-frontend-photo-upload-anon' => 'Трэба ўвайсьці, каб дадаць выяву на гэтую старонку.', # Fuzzy
 	'mobile-frontend-photo-upload-protected' => 'Вы ня маеце дазволу дадаваць выявы на гэтую старонку.',
 	'mobile-frontend-photo-upload-unavailable' => 'Ваш браўзэр не падтрымлівае запампоўку выяваў.',
 	'mobile-frontend-photo-upload-generic' => 'Загрузіць выяву',
@@ -2553,7 +2546,6 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Ананімны ўдзельнік',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|байт дададзены|байты дададзена|байтаў дададзена}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт выдалены|байты выдалена|байтаў выдалена}}',
-	'mobile-frontend-table' => 'Табліца $1',
 	'mobile-frontend-saving-exit-page' => 'Ваш унёсак яшчэ захохоўваецца. Калі вы сыйдзеце, зьмены будуць згубленыя. Вы ўпэўненыя, што хочаце выйсьці?',
 	'mobile-frontend-photo-upload' => 'Дадайце першую выяву ў гэты артыкул', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Дададзеная выява для выкарыстаньня ў артыкуле', # Fuzzy
@@ -2916,7 +2908,6 @@ $messages['br'] = array(
 	'mobile-frontend-watchlist-modified' => '$1 kemmet',
 	'mobile-frontend-diffview-title' => 'Kemmoù',
 	'mobile-frontend-diffview-anonymous' => 'Implijer dizanv',
-	'mobile-frontend-table' => 'Taolenn $1',
 	'mobile-frontend-image-loading' => 'O kargañ ur skeudenn',
 	'mobile-frontend-photo-submit' => 'Kas',
 	'mobile-frontend-photo-cancel' => 'Nullañ',
@@ -3179,14 +3170,14 @@ $messages['ce'] = array(
 	'mobile-frontend-username-placeholder' => 'Декъашхочун цӀе',
 	'mobile-frontend-history-summary' => 'АгӀона [[:$1]] хийцаман истори',
 	'mobile-frontend-last-modified-date' => 'ТӀехьара бина хийцам $2 $1',
-	'mobile-frontend-last-modified-minutes' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 минут}} хьалха',
-	'mobile-frontend-last-modified-hours' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 сахьт}} хьалха',
-	'mobile-frontend-last-modified-days' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 де}} хьалха',
-	'mobile-frontend-last-modified-months' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 бутт}} хьалха',
-	'mobile-frontend-last-modified-years' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 шо}} хьалха',
-	'mobile-frontend-last-modified-with-user-hours' => '[$4 ТӀаьхьарлера {{GENDER:$1|нисдар дина}} {{PLURAL:$3|$3 сахьт}} хьалха] {{PLURAL:$5|цӀе хьулйина [$6 $2]|0=декъашхочо}}',
-	'mobile-frontend-last-modified-with-user-days' => '[$4 ТӀаьхьарлера {{GENDER:$1|нисдар дина}} {{PLURAL:$3|$3 де}} хьалха] {{PLURAL:$5|цӀе хьулйина [$6 $2]|0=декъашхочо}}',
-	'mobile-frontend-last-modified-with-user-years' => '[$4 ТӀаьхьарлера {{GENDER:$1|нисдар дина}} {{PLURAL:$3|$3 шо}} хьалха] {{PLURAL:$5|цӀе хьулйина [$6 $2]|0=декъашхочо}}',
+	'mobile-frontend-last-modified-minutes' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 минут}} хьалха', # Fuzzy
+	'mobile-frontend-last-modified-hours' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 сахьт}} хьалха', # Fuzzy
+	'mobile-frontend-last-modified-days' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 де}} хьалха', # Fuzzy
+	'mobile-frontend-last-modified-months' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 бутт}} хьалха', # Fuzzy
+	'mobile-frontend-last-modified-years' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 шо}} хьалха', # Fuzzy
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 ТӀаьхьарлера {{GENDER:$1|нисдар дина}} {{PLURAL:$3|$3 сахьт}} хьалха] {{PLURAL:$5|цӀе хьулйина [$6 $2]|0=декъашхочо}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-days' => '[$4 ТӀаьхьарлера {{GENDER:$1|нисдар дина}} {{PLURAL:$3|$3 де}} хьалха] {{PLURAL:$5|цӀе хьулйина [$6 $2]|0=декъашхочо}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-years' => '[$4 ТӀаьхьарлера {{GENDER:$1|нисдар дина}} {{PLURAL:$3|$3 шо}} хьалха] {{PLURAL:$5|цӀе хьулйина [$6 $2]|0=декъашхочо}}', # Fuzzy
 	'mobile-frontend-placeholder-beta' => 'Лаха translatewiki.net чухула (бета-верси)',
 	'mobile-frontend-clear-search' => 'ЦӀанъян',
 	'mobile-frontend-privacy-link-text' => 'Къайлаха',
@@ -3201,6 +3192,8 @@ $messages['ce'] = array(
 	'mobile-frontend-page-saving' => 'Ӏалашяр $1',
 	'mobile-frontend-nearby-title' => 'Уллехь',
 	'mobile-frontend-nearby-loading' => 'Чу бокхуш бу хаам, хьона уллехь хӀун ю гойтуш',
+	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} тарцаделира хьо волу/йолу меттиг билгалъян... Юху гӀорта?',
+	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Дика зӀе йолу меттиг каро хьажа.',
 	'mobile-frontend-donate-image-title' => 'Чуйаьхарш',
 	'mobile-frontend-donate-image-heading' => 'Хьан тӀеххьара нисдарш',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'ХӀаъ!',
@@ -3219,7 +3212,7 @@ $messages['ce'] = array(
 	'mobile-frontend-drawer-cancel' => 'Цаоьшу',
 	'mobile-frontend-talk-overlay-header' => 'Дийцаре',
 	'mobile-frontend-media-details' => 'Мадарра',
-	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Чуяьккхина}} {{PLURAL:$1|селхана|$1 де хьалха|0=тахана}}.',
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Чуяьккхина}} {{PLURAL:$1|селхана|$1 де хьалха|0=тахана}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|Дийца цу $1}}',
 	'mobile-frontend-profile-last-edit' => 'Та йина [[:$1]], {{PLURAL:$2|селхана|$2 де хьалха|0=тахана}}.', # Fuzzy
 	'mobile-frontend-geonotahack' => 'Уллера меттиг',
@@ -3488,7 +3481,6 @@ $messages['cs'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Odebrán $1 bajt|Odebrány $1 bajty|Odebráno $1 bajtů}}',
 	'mobile-frontend-diffview-explained' => 'Následující řádky byly přidány (+) a odebrány (-):',
 	'mobile-frontend-thanked-notice' => '{{GENDER:$2|Uživatel $1 se dozvěděl|Uživatelka $1 se dozvěděla}}, že se vám líbila {{GENDER:$2|jeho|její}} editace.',
-	'mobile-frontend-table' => 'Tabulka $1',
 	'mobile-frontend-saving-exit-page' => 'Váš příspěvek se stále ukládá. Pokud odejdete, budou vaše příspěvky ztraceny. Určitě chcete odejít?',
 	'mobile-frontend-photo-upload' => 'Přidejte na tuto stránku obrázek',
 	'mobile-frontend-photo-caption-placeholder' => 'Popište tento obrázek (povinné)',
@@ -3843,7 +3835,6 @@ $messages['cy'] = array(
 	'mobile-frontend-diffview-bytesremoved' => 'Lleihawyd o $1 {{PLURAL:$1|beit|beit|feit|beit}}',
 	'mobile-frontend-diffview-explained' => 'Ychwanegwyd (+) a dilewyd (-) y llinellau a ganlyn:',
 	'mobile-frontend-thanked-notice' => "Dywedwyd wrth $1 eich bod yn hoff o'i {{GENDER:$2|adolygiad|hadolygiad|adolygiad}}.",
-	'mobile-frontend-table' => 'Tabl $1',
 	'mobile-frontend-saving-exit-page' => "Mae eich golygiad yn dal i fod wrthi'n cael ei roi ar gadw. Os y gadewch bydd y golygiad yn cael ei golli. Ydych chi wir am ymadael?",
 	'mobile-frontend-photo-upload' => "Ychwanegwch ddelwedd i'r dudalen hon",
 	'mobile-frontend-photo-article-edit-comment' => "Ychwanegwyd delwedd i'r dudalen",
@@ -4172,7 +4163,6 @@ $messages['da'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} fjernet',
 	'mobile-frontend-diffview-explained' => 'Følgende linjer blev tilføjet (+) og fjernet (-):',
 	'mobile-frontend-thanked-notice' => '$1 fik at vide, at du kan lide {{GENDER:$2|hans|hendes|deres}} redigering.',
-	'mobile-frontend-table' => 'Tabel $1',
 	'mobile-frontend-saving-exit-page' => 'Dit bidrag bliver stadig gemt. Hvis du afslutter går dit bidrag tabt. Er du sikker på, du vil afslutte?',
 	'mobile-frontend-photo-upload' => 'Tilføj et billede til denne side',
 	'mobile-frontend-photo-article-edit-comment' => 'Tilføjet billede til brug på siden',
@@ -4514,7 +4504,6 @@ $messages['de'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Ein Byte|$1 Byte}} entfernt',
 	'mobile-frontend-diffview-explained' => 'Die folgenden Zeilen wurden hinzugefügt (+) und entfernt (−):',
 	'mobile-frontend-thanked-notice' => '$1 wurde gesagt, dass du {{GENDER:$2|seine|ihre|die}} Bearbeitung magst.',
-	'mobile-frontend-table' => 'Tabelle $1',
 	'mobile-frontend-saving-exit-page' => 'Dein Beitrag wird noch gespeichert. Beim Verlassen gehen deine Beiträge verloren. Willst du wirklich abbrechen?',
 	'mobile-frontend-photo-upload' => 'Ein Bild zu dieser Seite hinzufügen',
 	'mobile-frontend-photo-article-edit-comment' => 'Bild zur Verwendung in der Seite hinzugefügt',
@@ -4784,7 +4773,6 @@ $messages['diq'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Karbero bêname',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bayt|bayti}} debiyay de',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bayt|bayti}} wedariyay',
-	'mobile-frontend-table' => 'Tabloye $1',
 	'mobile-frontend-photo-upload' => 'Zew resim dek na per miyan',
 	'mobile-frontend-photo-article-edit-comment' => 'Per de seba gurenayışi ra resım bar biyo',
 	'mobile-frontend-photo-upload-comment' => 'Resim debya per miyan',
@@ -4938,7 +4926,6 @@ $messages['dsb'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte pśidany|byta pśidanej|byty pśidane|bytow pśidane}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte wótpórany|byta wótpóranej|byty wótpórane|bytow wótpórane}}',
 	'mobile-frontend-diffview-explained' => 'Slědujuce smužki su se pśidali (+) a wótpórali (-):',
-	'mobile-frontend-table' => 'Tabela $1',
 	'mobile-frontend-saving-exit-page' => 'Twój pśinosk hyšći se składujo. Jolic něnto kóńcyš, se twóje pśinoski zgubiju. Coš napšawdu kóńcyś?',
 	'mobile-frontend-photo-upload' => 'Wobraz toś tomu bokoju pśidaś',
 	'mobile-frontend-photo-article-edit-comment' => 'Wobraz za wužywanje na boku pśidany',
@@ -5682,7 +5669,6 @@ $messages['et'] = array(
 	'mobile-frontend-diffview-bytesadded' => 'Lisatud $1 {{PLURAL:$1|bait|baiti}}',
 	'mobile-frontend-diffview-bytesremoved' => 'Eemaldatud $1 {{PLURAL:$1|bait|baiti}}',
 	'mobile-frontend-diffview-explained' => 'Lisati (+) ja eemaldati (-) järgmised read:',
-	'mobile-frontend-table' => 'Tabel $1',
 	'mobile-frontend-photo-upload' => 'Lisa selle lehekülje juurde pilt',
 	'mobile-frontend-photo-article-donate-comment' => 'Üles laaditud lehekülje Special:Uploads kaudu',
 	'mobile-frontend-photo-upload-comment' => 'Leheküljele lisati pilt',
@@ -6009,7 +5995,7 @@ $messages['fa'] = array(
 	'mobile-frontend-changeslist-ip' => 'کاربر گمنام',
 	'mobile-frontend-changeslist-nocomment' => 'بدون خلاصه ویرایش',
 	'mobile-frontend-watchlist-filter-all' => 'همه',
-	'mobile-frontend-watchlist-filter-articles' => 'مقالات', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'صفحه‌ها',
 	'mobile-frontend-watchlist-filter-talk' => 'بحث',
 	'mobile-frontend-watchlist-filter-other' => 'دیگر',
 	'mobile-frontend-watchlist-modified' => 'تغییریافته $1',
@@ -6022,7 +6008,6 @@ $messages['fa'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|بایت|بایت}} حذف‌شده',
 	'mobile-frontend-diffview-explained' => 'خطوط زیر اضافه شده (+) و برداشته شده (-):',
 	'mobile-frontend-thanked-notice' => 'به $1 گفته‌شد که ویرایش {{GENDER:$2|او|او|ایشان}} را دوست داشته‌اید.',
-	'mobile-frontend-table' => 'جدول $1',
 	'mobile-frontend-saving-exit-page' => 'ویرایش شما همچنان ذخیره شده‌است. خروج از این صفحه ممکن است باعث از دست دادن چیزی که نوشته‌اید شود. آیا می‌خواهید خارج شوید؟',
 	'mobile-frontend-photo-upload' => 'یک تصویر به این صفحه بیفزائید',
 	'mobile-frontend-photo-article-edit-comment' => 'تصویر به صفحه افزوده شد',
@@ -6286,7 +6271,6 @@ $messages['fi'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Rekisteröitymätön käyttäjä',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|tavu|tavua}} lisätty',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|tavu|tavua}} poistettu',
-	'mobile-frontend-table' => 'Taulukko $1',
 	'mobile-frontend-saving-exit-page' => 'Muutoksiasi tallennetaan yhä. Jos poistut nyt, muutoksesi eivät tallennu. Haluatko varmasti poistua?',
 	'mobile-frontend-photo-upload' => 'Lisää kuva tälle sivulle',
 	'mobile-frontend-photo-article-edit-comment' => 'Lisäsi kuvan sivulla käytettäväksi',
@@ -6754,7 +6738,6 @@ $messages['fr'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet supprimé|octets supprimés}}',
 	'mobile-frontend-diffview-explained' => 'Les lignes suivantes ont été ajoutées (+) et supprimées (-):',
 	'mobile-frontend-thanked-notice' => '$1 a été averti que vous avez aimé {{GENDER:$2|sa|sa|leur}} modification.',
-	'mobile-frontend-table' => 'Tableau $1',
 	'mobile-frontend-saving-exit-page' => "Votre contribution est en train d'être enregistrée. Si vous quittez, vos contributions seront perdues. Êtes-vous sûr de vouloir sortir?",
 	'mobile-frontend-photo-upload' => 'Ajouter une image à cette page',
 	'mobile-frontend-photo-article-edit-comment' => 'Image ajoutée pour être utilisée sur la page',
@@ -7995,7 +7978,6 @@ $messages['he'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|הוסר בית אחד|הוסרו $1 בתים}}',
 	'mobile-frontend-diffview-explained' => 'השורות הבאות נוספו (+) והוסרו (-):',
 	'mobile-frontend-thanked-notice' => 'סיפרנו ל־$1 שאהבת עריכה {{GENDER:$2|שלו|שלה|שלהם}}.',
-	'mobile-frontend-table' => 'טבלה $1',
 	'mobile-frontend-saving-exit-page' => 'תרומתך עדיין נשמרת. אם היישום ייסגר עכשיו, תרומתך תלך לאיבוד. באם ברצונך באמת לצאת?',
 	'mobile-frontend-photo-upload' => 'הוספת תמונה לדף הזה',
 	'mobile-frontend-photo-article-edit-comment' => 'נוספה תמונה לשימוש בדף הזה',
@@ -8491,7 +8473,6 @@ $messages['hsb'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bajt wotstronjeny|bajtaj wotstronjenej|bajty wostronjene|bajtow wotstronjenych}}',
 	'mobile-frontend-diffview-explained' => 'Slědowace linki su so přidali (+) a wotstronili (-):',
 	'mobile-frontend-thanked-notice' => '$1 je so {{GENDER:$1|informował|informowała}}, zo {{GENDER:$2|jeho|jeje}} změna je so ći spodobała.',
-	'mobile-frontend-table' => 'Tabela $1',
 	'mobile-frontend-saving-exit-page' => 'Twój přinošk so hišće składuje. Jeli nětko kónčiš, so twoje přinoški zhubja. Chceš woprawdźe kónčić?',
 	'mobile-frontend-photo-upload' => 'Wobraz tutej stronje přidać',
 	'mobile-frontend-photo-article-edit-comment' => 'Wobraz za wužiwanje na stronje přidaty',
@@ -9765,7 +9746,6 @@ in tutto il mondo',
 	'mobile-frontend-diffview-bytesremoved' => '$1 byte {{PLURAL:$1|rimosso|rimossi}}',
 	'mobile-frontend-diffview-explained' => 'Le righe seguenti sono stati aggiunte (+) e rimosse (-):',
 	'mobile-frontend-thanked-notice' => 'Hai detto a $1 che ti piace {{GENDER:$2|la sua}} modifica.',
-	'mobile-frontend-table' => 'Tabella $1',
 	'mobile-frontend-saving-exit-page' => 'La tua modifica è ancora da salvare. Se esci i tuoi contributi andranno persi. Sei sicuro di voler uscire?',
 	'mobile-frontend-photo-upload' => "Aggiungi un'immagine a questa pagina",
 	'mobile-frontend-photo-article-edit-comment' => "Aggiungi un'immagine a questa pagina",
@@ -10102,7 +10082,6 @@ $messages['ja'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|バイト}}除去',
 	'mobile-frontend-diffview-explained' => '「+」は追加された行、「-」は除去された行を示しています:',
 	'mobile-frontend-thanked-notice' => 'あなたが $1 の編集に感謝を示したことを{{GENDER:$2|本人}}に伝えました。',
-	'mobile-frontend-table' => '表 $1',
 	'mobile-frontend-saving-exit-page' => '編集内容をまだ保存中です。このまま終了すると編集内容が失われます。本当に終了しますか?',
 	'mobile-frontend-photo-upload' => 'このページに画像を追加する',
 	'mobile-frontend-photo-article-edit-comment' => 'ページで使用する画像を追加しました',
@@ -10653,7 +10632,6 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|байт|байт}} қосылды',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт|байт}} өшірілді',
 	'mobile-frontend-diffview-explained' => 'Келесі жолдар қосылған (+) және өшірілген (-) еді:',
-	'mobile-frontend-table' => '$1 кесте',
 	'mobile-frontend-saving-exit-page' => 'Сіздің өзгерістереңіз әлі сақталу үстінде. Егер сіз шығып кететін болсаңыз, өзгерістер сақталмайды. Шыққаныңызға сенімдісіз бе?',
 	'mobile-frontend-photo-upload' => 'Бұл бетке сурет қосу',
 	'mobile-frontend-photo-article-edit-comment' => 'Бетке пайдалану үшін қосылған сурет',
@@ -10810,9 +10788,7 @@ $messages['km'] = array(
 	'mobile-frontend-clear-search' => 'ជំរះ',
 	'mobile-frontend-privacy-link-text' => 'ភាព​ឯកជន',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-copyright' => 'អត្ថបទ​នេះ​អាចរកបាន ក្រោម​[http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License អាជ្ញាបណ្ណ Creative Commons Attribution/Share-Alike]។ លក្ខខណ្ឌបន្ថែម​ផ្សេងៗទៀតក៏នឹងអាចត្រូវបានអនុវត្ត។​
-សូមមើល [http://wikimediafoundation.org/wiki/Terms_of_Use/ លក្ខខណ្ឌ​ក្នុងការ​ប្រើប្រាស់] សម្រាប់​ព័ត៌មានលម្អិត​។
-វិគីភីឌា​គឺជាផ្លាកសញ្ញាដែលបានចុះបញ្ជីពាណិជ្ជកម្ម នៃ[http://www.wikimediafoundation.org មូលនិធិវិគីមេឌា (Wikimedia Foundation, Inc.)] ដែលជាអង្គការមិនរកប្រាក់ចំនេញ​។', # Fuzzy
+	'mobile-frontend-copyright' => 'ខ្លឹមសារអត្ថបទប្រើប្រាស់បានក្រោមអាជ្ញាបណ្ឌ$1 លើកលែងតែមានបញ្ជាក់ផ្សេងពីនោះ។',
 	'mobile-frontend-footer-contact' => 'ទំនាក់ទំនង',
 	'mobile-frontend-main-menu-button-tooltip' => 'បើក​ម៉ឺនុយ​មេ',
 	'mobile-frontend-main-menu-page-title' => 'ការ​រុករក​បណ្ដាញ',
@@ -10858,7 +10834,6 @@ $messages['km'] = array(
 	'mobile-frontend-diffview-anonymous' => 'អ្នក​ប្រើ​អនាមិក',
 	'mobile-frontend-diffview-bytesremoved' => 'យក $1 {{PLURAL:$1|byte|bytes}} ចេញ',
 	'mobile-frontend-diffview-explained' => 'បន្ទាត់​ខាងក្រោម​ត្រូវ​បាន​បន្ថែម (+) និង​យក​ចេញ (-)៖',
-	'mobile-frontend-table' => 'តារាង $1',
 	'mobile-frontend-photo-upload' => 'បន្ថែម​រូបភាពមួយ​ទៅ​ក្នុងទំព័រ​នេះ',
 	'mobile-frontend-photo-article-edit-comment' => 'បាន​បន្ថែម​រូបភាព​សម្រាប់​ប្រើ​លើ​ទំព័រ',
 	'mobile-frontend-photo-upload-comment' => 'បាន​បន្ថែម​រូបភាព​ទៅ​ទំព័រ',
@@ -11127,7 +11102,6 @@ $messages['ko'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|바이트}} 제거됨',
 	'mobile-frontend-diffview-explained' => '다음 줄이 추가(+)되고 제거(-)되었습니다.',
 	'mobile-frontend-thanked-notice' => '$1님이 당신이 {{GENDER:$2|그|그녀|그들}}의 편집에 감사했다는 것을 들었습니다.',
-	'mobile-frontend-table' => '표 $1',
 	'mobile-frontend-saving-exit-page' => '기여한 내용을 아직 저장하고 있습니다. 만일 떠나면 기여한 내용을 잃게 됩니다. 정말 끝내시겠습니까?',
 	'mobile-frontend-photo-upload' => '이 문서에 그림 추가',
 	'mobile-frontend-photo-article-edit-comment' => '문서에 사용할 그림을 추가했습니다',
@@ -11258,7 +11232,6 @@ $messages['krc'] = array(
 	'mobile-frontend-save-settings' => 'Джарашдырыўланы сакъла', # Fuzzy
 	'mobile-frontend-random-button' => 'Эсде болмагъан бет',
 	'mobile-frontend-back-to-top-of-section' => 'Бир бёлюмге артха атла',
-	'mobile-frontend-close-section' => 'Бу бёлюмню джаб',
 	'mobile-frontend-regular-site' => 'Тюз Википедияда къара бетге',
 	'mobile-frontend-wml-continue' => 'Мындан арысы ...',
 	'mobile-frontend-wml-back' => 'Артха ...',
@@ -11301,7 +11274,7 @@ $messages['krc'] = array(
 	'mobile-frontend-main-menu-settings' => 'Джарашдырыўла',
 	'mobile-frontend-main-menu-settings-heading' => 'Сайтны мобил версиясыны джарашдырыўлары', # Fuzzy
 	'mobile-frontend-settings-site-header' => '«{{SITENAME}}» проектни тиллери',
-	'mobile-frontend-settings-site-description' => '«{{SITENAME}}» проект $1 {{PLURAL:$1|тилде}} барды. Тюберекде болгъан версия да тизилибди.',
+	'mobile-frontend-settings-site-description' => '«{{SITENAME}}» проект $1 {{PLURAL:$1|тилде}} барды. Тюберекде болгъан версия да тизилибди.', # Fuzzy
 	'mobile-frontend-page-menu-contents' => 'ичиндегиси',
 	'mobile-frontend-page-menu-history' => 'Тарих',
 	'mobile-frontend-meta-data-issues-header' => 'Бу статьяны игилендир', # Fuzzy
@@ -12024,7 +11997,6 @@ $messages['lb'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|Byte|Byten}} derbäigesat',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|Byte|Byten}} ewechgeholl',
 	'mobile-frontend-diffview-explained' => 'Dës Linne goufen derbäigesat (+) an ewechgeholl (-):',
-	'mobile-frontend-table' => 'Tabell $1',
 	'mobile-frontend-saving-exit-page' => 'Äre Beitrag gëtt nach gespäichert. Wann Dir elo ofbriecht da sinn är Beiträg verluer. Sidd Dir sécher datt Dir wëllt erausgoen?',
 	'mobile-frontend-photo-upload' => 'Setzt e Bild op dës Säit derbäi',
 	'mobile-frontend-photo-article-edit-comment' => "Bild fir d'Benotzen op der Säit gouf derbäigesat",
@@ -12781,7 +12753,6 @@ $messages['mk'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Одземен $1 бајт|Одземени $1 бајти}}',
 	'mobile-frontend-diffview-explained' => 'Следниве редови се додадени (+) и отстранети (-):',
 	'mobile-frontend-thanked-notice' => '$1 доби известие дека ви се допаѓа {{GENDER:$2|неговото|нејзиното|направеното}} уредување.',
-	'mobile-frontend-table' => 'Табела $1',
 	'mobile-frontend-saving-exit-page' => 'Вашите придонеси сè уште се зачувуваат. Доколку напуштите, ќе ги изгубите придонесите. Дали сте сигурни дека сакате да излезете?',
 	'mobile-frontend-photo-upload' => 'Стави слика во страницава',
 	'mobile-frontend-photo-article-edit-comment' => 'Ставена слика за употреба во страница',
@@ -14391,7 +14362,6 @@ $messages['nl'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} verwijderd',
 	'mobile-frontend-diffview-explained' => 'De volgende regels zijn toegevoegd (+) en verwijderd (-):',
 	'mobile-frontend-thanked-notice' => '$1 heeft een bericht ontvangen dat u {{GENDER:$2|zijn|haar|zijn/haar}} bewerking leuk vindt.',
-	'mobile-frontend-table' => 'Tabel $1',
 	'mobile-frontend-saving-exit-page' => 'Uw bijdrage wordt opgeslagen. Als u deze pagina verlaat, gaat uw bijdrage verloren. Weet u zeker dat u deze pagina wilt verlaten?',
 	'mobile-frontend-photo-upload' => 'Voeg een afbeelding toe aan deze pagina',
 	'mobile-frontend-photo-article-edit-comment' => 'De afbeelding voor gebruik op de pagina is toegevoegd',
@@ -15241,7 +15211,6 @@ $messages['pl'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Usunięty $1 bajt|Usunięte $1 bajty|Usunięte $1 bajtów}}',
 	'mobile-frontend-diffview-explained' => 'Następujące wiersze zostały dodane (+) i usunięte (-):',
 	'mobile-frontend-thanked-notice' => '$1 {{GENDER:$2|został powiadomiony|została powiadomiona}} o twoim podziękowaniu za {{GENDER:$2|jego|jej}} edycję.',
-	'mobile-frontend-table' => 'Tabela $1',
 	'mobile-frontend-photo-upload' => 'Dodaj ilustrację do tej strony',
 	'mobile-frontend-photo-article-edit-comment' => 'Dodano grafikę do wykorzystania na stronie',
 	'mobile-frontend-photo-upload-comment' => 'Dodano grafikę do strony',
@@ -15541,7 +15510,6 @@ $messages['pms'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} gavà',
 	'mobile-frontend-diffview-explained' => 'Le linie sì-dapress a son stàite giontà (+) e gavà (-):',
 	'mobile-frontend-thanked-notice' => "$1 a l'é stàit avisà che a chiel a l'é piasuje {{GENDER:$2|soa|soa|soa}} modìfica.",
-	'mobile-frontend-table' => 'Tàula $1',
 	'mobile-frontend-saving-exit-page' => "Soa contribussion a l'é anco' da salvé. S'a chita, soe contribussion a sarà përdùe. É-lo sigur ëd vorèj seurte?",
 	'mobile-frontend-photo-upload' => 'Gionté na plancia a costa pàgina',
 	'mobile-frontend-photo-article-edit-comment' => 'Plancia giontà për esse dovrà an sla pàgina',
@@ -16515,7 +16483,6 @@ din întreaga lume',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet șters|octeți șterși|de octeți șterși}}',
 	'mobile-frontend-diffview-explained' => 'Următoarele rânduri au fost adăugate (+) și șterse (-):',
 	'mobile-frontend-thanked-notice' => '$1 {{GENDER:$2|a|a|au}} fost {{GENDER:$2|informat|informată|informați}} că {{GENDER:$2|i|i|le}}-ați apreciat modificarea.',
-	'mobile-frontend-table' => 'Tabelul $1',
 	'mobile-frontend-saving-exit-page' => 'Contribuția dumneavoastră încă se salvează. Dacă ieșiți, contribuțiile dumneavoastră se vor pierde. Sunteți sigur că doriți să ieșiți?',
 	'mobile-frontend-photo-upload' => 'Adăugați o imagine pentru această pagină',
 	'mobile-frontend-photo-article-edit-comment' => 'Adăugat imagine pentru a fi utilizată în pagină',
@@ -16739,7 +16706,6 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Utende anonime',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte}} aggiunde',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte}} luate',
-	'mobile-frontend-table' => 'Tabbelle $1',
 	'mobile-frontend-photo-caption-placeholder' => "Aggiunge 'na descrizione (richieste)", # Fuzzy
 	'mobile-frontend-image-loading' => "Stoche a scareche 'n'immaggine",
 	'mobile-frontend-photo-ownership-confirm' => 'Pigghiale!',
@@ -16827,7 +16793,7 @@ $messages['ru'] = array(
 	'mobile-frontend-news-items' => 'Новости',
 	'mobile-frontend-language-heading' => '<strong>Языки</strong>',
 	'mobile-frontend-language-article-heading' => 'Читать на другом языке',
-	'mobile-frontend-language-header' => 'Эта страница существует на $1 {{PLURAL:$1|языке|языках}}',
+	'mobile-frontend-language-header' => 'Эта страница существует на $1 {{PLURAL:$1|1=языке|языках}}', # Fuzzy
 	'mobile-frontend-language-variant-header' => 'Выберите вариант {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-footer' => 'Примечание: Эта страница может быть написана не на том языке, который вы предпочитаете. Вы можете увидеть, какие языки поддерживает {{SITENAME}}, кликнув здесь.',
 	'mobile-frontend-language-site-choose' => 'Поиск языка',
@@ -16843,20 +16809,20 @@ $messages['ru'] = array(
 	'mobile-frontend-contribution-summary' => 'Все правки, сделанные {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}',
 	'mobile-frontend-history-summary' => 'История изменений страницы [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Последние изменения на $2 $1',
-	'mobile-frontend-last-modified-seconds' => 'Последние изменения были сделаны {{PLURAL:$1|$1 секунду|$1 секунды|$1 секунд}} назад',
-	'mobile-frontend-last-modified-minutes' => 'Последние изменения были сделаны {{PLURAL:$1|$1 минуту|$1 минуты|$1 минут}} назад',
-	'mobile-frontend-last-modified-hours' => 'Последние изменения были сделаны {{PLURAL:$1|$1 час|$1 часа|$1 часов}} назад',
-	'mobile-frontend-last-modified-days' => 'Последние изменения были сделаны {{PLURAL:$1|$1 день|$1 дня|$1 дней}} назад',
-	'mobile-frontend-last-modified-months' => 'Последние изменения были сделаны {{PLURAL:$1|$1 месяц|$1 месяца|$1 месяцев}} назад',
-	'mobile-frontend-last-modified-years' => 'Последние изменения были сделаны {{PLURAL:$1|$1 год|$1 года|$1 лет}} назад',
+	'mobile-frontend-last-modified-seconds' => 'Последние изменения были сделаны {{PLURAL:$1|$1 секунду|$1 секунд|$1 секунды}} назад', # Fuzzy
+	'mobile-frontend-last-modified-minutes' => 'Последние изменения были сделаны {{PLURAL:$1|$1 минуту|$1 минут|$1 минуты}} назад', # Fuzzy
+	'mobile-frontend-last-modified-hours' => 'Последние изменения были сделаны {{PLURAL:$1|$1 час|$1 часов|$1 часа}} назад', # Fuzzy
+	'mobile-frontend-last-modified-days' => 'Последние изменения были сделаны {{PLURAL:$1|$1 день|$1 дней|$1 дня}} назад', # Fuzzy
+	'mobile-frontend-last-modified-months' => 'Последние изменения были сделаны {{PLURAL:$1|$1 месяц|$1 месяцев|$1 месяца}} назад', # Fuzzy
+	'mobile-frontend-last-modified-years' => 'Последние изменения были сделаны {{PLURAL:$1|$1 год|$1 лет|$1 года}} назад', # Fuzzy
 	'mobile-frontend-last-modified-just-now' => 'Последнее изменение внесено прямо сейчас',
-	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 секунду|$3 секунды|$3 секунд}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
-	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 минуту|$3 минуты|$3 минут}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
-	'mobile-frontend-last-modified-with-user-hours' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 час|$3 часа|$3 часов}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
-	'mobile-frontend-last-modified-with-user-days' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 день|$3 дня|$3 дней}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
-	'mobile-frontend-last-modified-with-user-months' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 месяц|$3 месяца|$3 месяцев}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
-	'mobile-frontend-last-modified-with-user-years' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 год|$3 года|$3 лет}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
-	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Последняя {{GENDER:$1|правка}}] сделана только что {{PLURAL:$4|участником [$5 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 секунду|$3 секунд|$3 секунды}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 минуту|$3 минут|$3 минуты}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 час|$3 часов|$3 часа}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 день|$3 дней|$3 дня}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 месяц|$3 месяцев|$3 месяца}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 год|$3 лет|$3 года}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Последняя {{GENDER:$1|правка}}] сделана только что {{PLURAL:$4|участником [$5 $2]|0=анонимным участником}}', # Fuzzy
 	'mobile-frontend-learn-more' => 'Узнать больше',
 	'mobile-frontend-account-create-submit' => 'Зарегистрироваться',
 	'mobile-frontend-password-confirm-placeholder' => 'Подтвердите пароль',
@@ -16892,7 +16858,7 @@ $messages['ru'] = array(
 	'mobile-frontend-main-menu-upload' => 'Загрузки',
 	'mobile-frontend-main-menu-settings-heading' => 'Настройки',
 	'mobile-frontend-settings-site-header' => 'Языки проекта «{{SITENAME}}»',
-	'mobile-frontend-settings-site-description' => 'Проект «{{SITENAME}}» доступен на $1 {{PLURAL:$1|языке|языках|языках}}. Ниже перечислены все доступные версии',
+	'mobile-frontend-settings-site-description' => 'Проект «{{SITENAME}}» доступен на $1 {{PLURAL:$1|языке|языках|языках}}. Ниже перечислены все доступные версии', # Fuzzy
 	'mobile-frontend-main-menu-account-create' => 'Создать учётную запись',
 	'mobile-frontend-page-menu-contents' => 'содержание',
 	'mobile-frontend-page-menu-history' => 'История',
@@ -16906,8 +16872,8 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-loading' => 'Загрузка информации о том, что находится невдалеке от вас',
 	'mobile-frontend-nearby-requirements' => 'Извините! Ваш браузер не поддерживает работу с {{SITENAME}}.',
 	'mobile-frontend-nearby-requirements-guidance' => 'Попробуйте использовать другой браузер или включите JavaScript, если вы отключили его.',
-	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}',
-	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 м}}',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}', # Fuzzy
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 м}}', # Fuzzy
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} не может выяснить, где вы находитесь… Попробовать ещё раз?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Попробуйте найти открытую местность с более лучшей связью.',
 	'mobile-frontend-nearby-permission' => '{{SITENAME}} не имеет разрешения на доступ к определению вашего местоположения.',
@@ -16956,20 +16922,19 @@ $messages['ru'] = array(
 	'mobile-frontend-changeslist-ip' => 'Анонимный участник',
 	'mobile-frontend-changeslist-nocomment' => 'Нет описания правки',
 	'mobile-frontend-watchlist-filter-all' => 'Всё',
-	'mobile-frontend-watchlist-filter-articles' => 'Статьи',
+	'mobile-frontend-watchlist-filter-articles' => 'Статьи', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Обсуждения',
 	'mobile-frontend-watchlist-filter-other' => 'Прочее',
 	'mobile-frontend-watchlist-modified' => 'Изменено $1',
 	'mobile-frontend-diffview-404-title' => 'Некорректная ссылка на версию',
 	'mobile-frontend-diffview-404-desc' => 'Не существует версии с запрошенным вами идентификатором',
 	'mobile-frontend-diffview-title' => 'Изменения',
-	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|правка|правки|правок}}',
+	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|правка|правок|правки}}', # Fuzzy
 	'mobile-frontend-diffview-anonymous' => 'Анонимный участник',
-	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|байт|байта|байтов}} добавлено',
-	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт|байта|байтов}} убрано',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|байт|байтов|байта}} добавлено', # Fuzzy
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт|байтов|байта}} убрано', # Fuzzy
 	'mobile-frontend-diffview-explained' => 'Следующие строки были добавлены (+) и удалены (-):',
 	'mobile-frontend-thanked-notice' => '$1 {{GENDER:$2|был оповещён|была оповещена|были оповещены}}, что вам понравилась {{GENDER:$2|его|её|их}} правка.',
-	'mobile-frontend-table' => 'Таблица $1',
 	'mobile-frontend-saving-exit-page' => 'Ваша правка всё ещё сохраняется. Если вы покинете страницу, ваши изменения будут потеряны. Вы уверены, что хотите уйти?',
 	'mobile-frontend-photo-upload' => 'Добавить на эту страницу изображение',
 	'mobile-frontend-photo-article-edit-comment' => 'Добавлено изображение для использования на странице',
@@ -17005,7 +16970,7 @@ $messages['ru'] = array(
 	'mobile-frontend-photo-license' => 'Загружая изображение, вы соглашаетесь с нашими [//wikimediafoundation.org/wiki/Terms_of_use/ru Условиями использования], а также соглашаетесь опубликовать своё изображение по [//creativecommons.org/licenses/by-sa/3.0/ лицензиии Creative Commons Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Отправить',
 	'mobile-frontend-photo-cancel' => 'Отмена',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> загрузка|<span>$1</span> загрузки|<span>$1</span> загрузок}}',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> загрузка|<span>$1</span> загрузок|<span>$1</span> загрузки}}', # Fuzzy
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ загрузок',
 	'mobile-frontend-image-heading-describe' => "'''Опишите''' изображение",
 	'mobile-frontend-image-uploading' => "'''Загрузка''' изображения…",
@@ -17061,8 +17026,8 @@ $messages['ru'] = array(
 	'mobile-frontend-media-license-link' => 'Информация о лицензии',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Редактирует ли участник через мобильный интерфейс',
 	'mobile-frontend-profile-title' => 'Профиль участника',
-	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Загружено}} {{PLURAL:$1|вчера|$1 дня назад|$1 дней назад|0=сегодня}}.',
-	'mobile-frontend-profile-usertalk' => 'Написать участнику $1',
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Загружено}} {{PLURAL:$1|вчера|$1 дней назад|$1 дня назад|0=сегодня}}.', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'Написать участнику $1', # Fuzzy
 	'mobile-frontend-profile-error' => 'О нет!',
 	'mobile-frontend-profile-noargs' => 'Имя не задано. Пожалуйста, укажите имя участника, чтобы просмотреть профиль.',
 	'mobile-frontend-profile-nouser' => 'Участника с таким именем не существует. Имена чувствительны к регистру, так что, пожалуйста, проверьте, набрано ли оно правильно.',
@@ -17070,10 +17035,10 @@ $messages['ru'] = array(
 	'mobile-frontend-profile-userpage-link' => 'Посетить страницу участника.',
 	'mobile-frontend-requires-optin' => 'Эта страница будет недоступна, пока вы не перейдёте в бета-режим. Зайдите для этого на страницу [[Special:MobileOptions|настроек]].',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] поблагодарил{{GENDER:$3||а}} за правку страницы [[$2]].',
-	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Отредактирована}} страница [[:$1]], {{PLURAL:$2|вчера|$2 дня назад|$2 дней назад|0=сегодня}}.',
-	'mobile-frontend-profile-footer-days' => 'Присоединился {{PLURAL:$2|1 дня|$2 дней}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].',
-	'mobile-frontend-profile-footer-months' => 'Присоединился более {{PLURAL:$2|1 месяца|$2 месяцев}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].',
-	'mobile-frontend-profile-footer-years' => 'Присоединился более {{PLURAL:$2|1 года|$2 лет}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].',
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Отредактирована}} страница [[:$1]], {{PLURAL:$2|вчера|$2 дней назад|$2 дня назад|0=сегодня}}.', # Fuzzy
+	'mobile-frontend-profile-footer-days' => 'Присоединился {{PLURAL:$2|1=1 дня|$2 дней}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1=1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].', # Fuzzy
+	'mobile-frontend-profile-footer-months' => 'Присоединился более {{PLURAL:$2|1=1 месяца|$2 месяцев}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1=1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].', # Fuzzy
+	'mobile-frontend-profile-footer-years' => 'Присоединился более {{PLURAL:$2|1=1 года|$2 лет}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1=1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].', # Fuzzy
 	'mobile-frontend-profile-description-placeholder' => 'Почему {{GENDER:$1|вы}} редактируете? Что {{GENDER:$1| вы}} хотите улучшить? Поделитесь {{GENDER:$1|вашими}} интересами с другими.',
 	'mobile-frontend-profile-edit-summary' => 'Обновление введения профиля участника',
 	'mobile-frontend-geonotahack' => 'Места поблизости',
@@ -17369,7 +17334,6 @@ $messages['si'] = array(
 	'mobile-frontend-diffview-title' => 'වෙනස්කම්',
 	'mobile-frontend-diffview-editcount' => '{{PLURAL:සංස්කරණ|සංස්කරණ}} <div>$1</div> ක්',
 	'mobile-frontend-diffview-anonymous' => 'නිර්නාමික පරිශීලක',
-	'mobile-frontend-table' => 'වගුව $1',
 	'mobile-frontend-photo-upload' => 'මෙම පිටුව සඳහා ප්‍රථම ඡායාරූපය එක් කරන්න', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'පිටුව මත භාවිතා කිරීම සඳහා ඡායාරූපයක් එක් කරන ලදී', # Fuzzy
 	'mobile-frontend-photo-upload-comment' => 'පිටුව වෙත ඡායාරූපයක් එක් කරන ලදී', # Fuzzy
@@ -17622,7 +17586,6 @@ $messages['sl'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|odstranjen|odstranjena|odstranjeni|odstranjenih}} $1 {{PLURAL:$1|zlog|zloga|zlogi|zlogov}}',
 	'mobile-frontend-diffview-explained' => 'Dodane (+) in odstranjene (-) so bile naslednje vrstice:',
 	'mobile-frontend-thanked-notice' => '$1 ste sporočili, da vam je bilo všeč {{GENDER:$2|njegovo|njeno|njihovo}} urejanje.',
-	'mobile-frontend-table' => 'Tabela $1',
 	'mobile-frontend-saving-exit-page' => 'Vaš prispevek se še vedno shranjuje. Če odidete, se bodo vaši prispevki izgubili. Ste prepričani, da želite oditi?',
 	'mobile-frontend-photo-upload' => 'Dodajte na to stran sliko',
 	'mobile-frontend-photo-article-edit-comment' => 'Dodana slika za uporabo na strani',
@@ -17816,7 +17779,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-news-items' => 'Вести',
 	'mobile-frontend-language-heading' => '<strong>Језици</strong>',
 	'mobile-frontend-language-article-heading' => 'Прочитај на другом језику',
-	'mobile-frontend-language-header' => 'Ова страница је доступан на $1 {{PLURAL:$1|језику|језика}}',
+	'mobile-frontend-language-header' => 'Ова страница је доступан на $1 {{PLURAL:$1|1=језику|језика}}', # Fuzzy
 	'mobile-frontend-language-footer' => 'Пројекат „{{SITENAME}}“ је доступан на другим језицима.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Претрага језика',
 	'mobile-frontend-username' => 'Корисничко име:',
@@ -17827,12 +17790,12 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-history' => 'Види историју измена ове странице.',
 	'mobile-frontend-contribution-summary' => 'Све измене начињене од стране {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}',
 	'mobile-frontend-last-modified-date' => 'Последњи пут измењено $1, у $2',
-	'mobile-frontend-last-modified-seconds' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 секунда|$1 секунди}}',
-	'mobile-frontend-last-modified-minutes' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 минут|$1 минута}}',
-	'mobile-frontend-last-modified-hours' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 сат|$1 сата}}',
-	'mobile-frontend-last-modified-days' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 дан|$1 дана}}',
-	'mobile-frontend-last-modified-months' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 месец|$1 месеци}}',
-	'mobile-frontend-last-modified-years' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 године|$1 година}}',
+	'mobile-frontend-last-modified-seconds' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|1=$1 секунда|$1 секунди}}', # Fuzzy
+	'mobile-frontend-last-modified-minutes' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|1=$1 минут|$1 минута}}', # Fuzzy
+	'mobile-frontend-last-modified-hours' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|1=$1 сат|$1 сата}}', # Fuzzy
+	'mobile-frontend-last-modified-days' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|1=$1 дан|$1 дана}}', # Fuzzy
+	'mobile-frontend-last-modified-months' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|1=$1 месец|$1 месеци}}', # Fuzzy
+	'mobile-frontend-last-modified-years' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|1=$1 године|$1 година}}', # Fuzzy
 	'mobile-frontend-last-modified-just-now' => 'Ова страница је измењена управо сада',
 	'mobile-frontend-learn-more' => 'Сазнајте више',
 	'mobile-frontend-account-create-submit' => 'Отвори налог',
@@ -17888,12 +17851,12 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-watchlist-back-home' => 'Назад на почетну страну',
 	'mobile-frontend-changeslist-ip' => 'Анониман корисник',
 	'mobile-frontend-watchlist-filter-all' => 'Све',
-	'mobile-frontend-watchlist-filter-articles' => 'Чланци',
+	'mobile-frontend-watchlist-filter-articles' => 'Чланци', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Разговор',
 	'mobile-frontend-watchlist-filter-other' => 'Друго',
 	'mobile-frontend-diffview-404-title' => 'Лоша ревизија',
 	'mobile-frontend-diffview-title' => 'Измене',
-	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|измена|измене}}',
+	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|1=измена|измене}}', # Fuzzy
 	'mobile-frontend-diffview-anonymous' => 'Анониман корисник',
 	'mobile-frontend-photo-upload' => 'Додајте слику на ову страницу',
 	'mobile-frontend-image-loading' => 'Учитавање слике',
@@ -18234,7 +18197,6 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|}} togs bort',
 	'mobile-frontend-diffview-explained' => 'Följande rader har lagts till (+) och tagits bort (-):',
 	'mobile-frontend-thanked-notice' => '$1 fick höra att du gillade {{GENDER:$2|hans|hennes|deras}} redigering.',
-	'mobile-frontend-table' => 'Tabell $1',
 	'mobile-frontend-saving-exit-page' => 'Ditt bidrag sparas fortfarande. Om du lämnar kommer dina bidrag förloras. Är du säker på att du vill avsluta?',
 	'mobile-frontend-photo-upload' => 'Lägg till en bild på denna sida',
 	'mobile-frontend-photo-article-edit-comment' => 'Lade till bild för användning på sidan',
@@ -18511,7 +18473,6 @@ $messages['ta'] = array(
 	'mobile-frontend-diffview-anonymous' => 'அடையாளம் காட்டாத பயனர்',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|பைட்டு|பைட்டுகள்}} சேர்க்கப்பட்டது',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|பைட்டு|பைட்டுகள்}} நீக்கப்பட்டது',
-	'mobile-frontend-table' => 'அட்டவணை $1',
 	'mobile-frontend-photo-upload' => 'இந்ந பக்கத்திற்கு ஒரு படம் சேர்க்கவும்', # Fuzzy
 	'mobile-frontend-photo-upload-comment' => 'பக்கத்திற்கு படம் சேர்க்கப்பட்டுள்ளது', # Fuzzy
 	'mobile-frontend-image-loading' => 'படிமம் ஏற்றப்படுகிறது',
@@ -18979,7 +18940,6 @@ $messages['tr'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bayt|bayt}} eklendi',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bayt|bayt}} çıkarıldı',
 	'mobile-frontend-diffview-explained' => 'Aşağıdaki satırlar eklenmiş (+) ve çıkarılmıştır (-):',
-	'mobile-frontend-table' => 'Tablo $1',
 	'mobile-frontend-saving-exit-page' => 'Kaydedilmemiş değişiklikleriniz var. Sayfadan çıkmak isterseniz bu değişiklikler kaybolacaktır. Yine de çıkmak istediğinizden emin misiniz?',
 	'mobile-frontend-photo-upload' => 'Bu sayfaya bir resim ekle',
 	'mobile-frontend-photo-article-edit-comment' => 'Sayfada kullanmak için resim eklendi',
@@ -19242,11 +19202,11 @@ $messages['uk'] = array(
 	'mobile-frontend-languages-404-desc' => 'Слід вказати вірну назву.',
 	'mobile-frontend-languages-header' => 'Мови',
 	'mobile-frontend-languages-nonexistent-title' => 'Сторінка "$1" не існує.',
-	'mobile-frontend-languages-text' => '$1 доступна на $2 {{PLURAL:$2|мові|мовах}}.',
+	'mobile-frontend-languages-text' => '$1 доступна на $2 {{PLURAL:$2|1=мові|мовах}}.',
 	'mobile-frontend-languages-variant-header' => '{{#language:{{CONTENTLANG}}}} варіантів',
 	'mobile-frontend-language-heading' => '<strong>Мови</strong>',
 	'mobile-frontend-language-article-heading' => 'Читати іншою мовою',
-	'mobile-frontend-language-header' => 'Сторінка доступна $1 {{PLURAL:$1|мовою|мовами}}',
+	'mobile-frontend-language-header' => 'Сторінка доступна $1 {{PLURAL:$1|1=мовою|мовами}}',
 	'mobile-frontend-language-variant-header' => 'Оберіть варіант мови {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-footer' => 'Примітка: у цієї сторінки немає перекладу Вашою мовою. Ви можете вибрати іншу мову {{SITENAME}} натиснувши тут.',
 	'mobile-frontend-language-site-choose' => 'Пошук мови',
@@ -19312,7 +19272,7 @@ $messages['uk'] = array(
 	'mobile-frontend-main-menu-upload' => 'Завантаження',
 	'mobile-frontend-main-menu-settings-heading' => 'Налаштування',
 	'mobile-frontend-settings-site-header' => 'Мови проекту {{SITENAME}}',
-	'mobile-frontend-settings-site-description' => '{{SITENAME}} доступний на {{PLURAL:$1|мові|мовах}}. Всі доступні версії перелічені нижче',
+	'mobile-frontend-settings-site-description' => '{{SITENAME}} доступний на $1 {{PLURAL:$1|1=мові|мовах}}. Всі доступні версії перелічені нижче',
 	'mobile-frontend-main-menu-account-create' => 'Створити обліковий запис',
 	'mobile-frontend-page-menu-contents' => 'зміст',
 	'mobile-frontend-page-menu-history' => 'Історія',
@@ -19400,7 +19360,6 @@ $messages['uk'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт|байти|байтів}} вилучено',
 	'mobile-frontend-diffview-explained' => 'Наступні рядки були додані (+) і видалені (-):',
 	'mobile-frontend-thanked-notice' => '$1 розповів, що вам сподобалися  {{GENDER:$2|його|її|їхні}} зміни.',
-	'mobile-frontend-table' => 'Таблиця $1',
 	'mobile-frontend-saving-exit-page' => 'Ваш внесок збережений. Якщо Ви залишите сторінку, Ваш внесок буде втрачено. Ви впевнені что бажаєте вийти?',
 	'mobile-frontend-photo-upload' => 'Додавання зображення до цієї сторінки',
 	'mobile-frontend-photo-article-edit-comment' => 'Додані зображення для використання на сторінці',
@@ -19507,9 +19466,9 @@ $messages['uk'] = array(
 	'mobile-frontend-requires-optin' => 'Ця сторінка недоступна, якщо ви виберете в нашому режимі бета. Відвідайте [[Special:MobileOptions|сторінку налаштувань]], щоб відмовитися.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$3|Подякував|Подякувала}} {{GENDER:$1|користувачу|користувачці}}[[Special:UserProfile/$1|$1]] за редагування на [[$2]].',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Змінив|Змінила}} сторінку [[:$1]] {{PLURAL:$2|вчора|$2 дні тому|$2 днів тому|0=раніше сьогодні}}.',
-	'mobile-frontend-profile-footer-days' => 'Приєднався {{PLURAL:$2|1 день|$2 дні|$2 днів}} тому з  [[Special:Contributions/$1|{{PLURAL:$3|1 зміною|$3 змінами}}]] та [[Special:Uploads/$1|{{PLURAL:$4|1 завантаженням|$4 завантаженнями|500=понад 500 завантаженнями}}]].',
-	'mobile-frontend-profile-footer-months' => 'Приєднався понад {{PLURAL:$2|1 місяць|$2 місяці|$2 місяців}} тому з [[Special:Contributions/$1|{{PLURAL:$3|1 зміною|$3 змінами}}]] та [[Special:Uploads/$1|{{PLURAL:$4|1 завантаженням|$4 завантаженнями|500=понад 500 завантаженнями}}]].',
-	'mobile-frontend-profile-footer-years' => 'Приєднався {{PLURAL:$2|1 рік|$2 роки|$2 років}}тому з   [[Special:Contributions/$1|{{PLURAL:$3|1 зміною|$3 змінами}}]] та [[Special:Uploads/$1|{{PLURAL:$4|1 завантаженням|$4 завантаженнями|500=понад 500 завантаженнями}}]].',
+	'mobile-frontend-profile-footer-days' => 'Приєднався {{PLURAL:$2|1 день|$2 дні|$2 днів}} тому з  [[Special:Contributions/$1|{{PLURAL:$3|1=1 зміною|$3 змінами}}]] та [[Special:Uploads/$1|{{PLURAL:$4|1 завантаженням|$4 завантаженнями|500=понад 500 завантаженнями}}]].',
+	'mobile-frontend-profile-footer-months' => 'Приєднався понад {{PLURAL:$2|1 місяць|$2 місяці|$2 місяців}} тому з [[Special:Contributions/$1|{{PLURAL:$3|1=1 зміною|$3 змінами}}]] та [[Special:Uploads/$1|{{PLURAL:$4|1 завантаженням|$4 завантаженнями|500=понад 500 завантаженнями}}]].',
+	'mobile-frontend-profile-footer-years' => 'Приєднався {{PLURAL:$2|1 рік|$2 роки|$2 років}}тому з   [[Special:Contributions/$1|{{PLURAL:$3|1=1 зміною|$3 змінами}}]] та [[Special:Uploads/$1|{{PLURAL:$4|1 завантаженням|$4 завантаженнями|500=понад 500 завантаженнями}}]].',
 	'mobile-frontend-profile-description-placeholder' => 'Чому {{GENDER:$1|ви}} редагуєте? Що {{GENDER:$1|ви}} хочете поліпшити? Поділіться {{GENDER:$1|своїми}} зацікавленнями з іншими.',
 	'mobile-frontend-profile-edit-summary' => 'Оновлення вступу профілю користувача',
 	'mobile-frontend-geonotahack' => 'Поблизу цієї сторінки',
@@ -19859,6 +19818,7 @@ $messages['vep'] = array(
 );
 
 /** Vietnamese (Tiếng Việt)
+ * @author Baonguyen21022003
  * @author Cheers!
  * @author Minh Nguyen
  * @author Tranletuhan
@@ -20064,7 +20024,7 @@ $messages['vi'] = array(
 	'mobile-frontend-changeslist-ip' => 'Người dùng vô danh',
 	'mobile-frontend-changeslist-nocomment' => 'không có tóm lược sửa đổi',
 	'mobile-frontend-watchlist-filter-all' => 'Tất cả',
-	'mobile-frontend-watchlist-filter-articles' => 'Bài viết', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Trang',
 	'mobile-frontend-watchlist-filter-talk' => 'Thảo luận',
 	'mobile-frontend-watchlist-filter-other' => 'Khác',
 	'mobile-frontend-watchlist-modified' => 'Được sửa đổi $1',
@@ -20077,7 +20037,6 @@ $messages['vi'] = array(
 	'mobile-frontend-diffview-bytesremoved' => 'bớt $1 byte',
 	'mobile-frontend-diffview-explained' => 'Các dòng sau đã được thêm (+) và xóa (-):',
 	'mobile-frontend-thanked-notice' => 'Đã cho $1 biết rằng bạn thích sửa đổi của {{GENDER:$2}}họ.',
-	'mobile-frontend-table' => 'Bảng $1',
 	'mobile-frontend-saving-exit-page' => 'Các đóng góp của bạn còn đang được lưu giữ. Nếu bạn bỏ đi, các đóng góp này sẽ bị mất. Bạn có chắc muốn thoát?',
 	'mobile-frontend-photo-upload' => 'Thêm hình vào trang này',
 	'mobile-frontend-photo-article-edit-comment' => 'Đã thêm hình để sử dụng trong trang',
@@ -20169,12 +20128,13 @@ $messages['vi'] = array(
 	'mobile-frontend-talk-reply-success' => 'Đã lưu lời đáp của bạn vào trang thảo luận.',
 	'mobile-frontend-talk-reply-info' => 'Lưu ý rằng lời đáp sẽ được tự động ký tên dùng tên người dùng của bạn.',
 	'mobile-frontend-talk-reply' => 'Trả lời',
+	'mobile-frontend-talk-topic-feedback' => 'Chủ đề mới được thêm vào trang thảo luận!',
 	'mobile-frontend-media-details' => 'Chi tiết',
 	'mobile-frontend-media-license-link' => 'Thông tin giấy phép',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Người dùng có sửa đổi qua giao diện di động hay không',
 	'mobile-frontend-profile-title' => 'Thông tin cá nhân',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2}}Được tải lên {{PLURAL:$1|ngày hôm qua|$1 ngày trước|0=hôm nay}}.',
-	'mobile-frontend-profile-usertalk' => 'Thảo luận với $1', # Fuzzy
+	'mobile-frontend-profile-usertalk' => 'Thảo luận với $1',
 	'mobile-frontend-profile-error' => 'Ôi!',
 	'mobile-frontend-profile-noargs' => 'Tên người dùng không được cung cấp. Xin vui lòng nhập tên người dùng để xem trang thành viên.',
 	'mobile-frontend-profile-nouser' => 'Không có người dùng với tên này. Vì phân biệt chữ hoa/thường trong tên người dùng, xin vui lòng kiểm tra tên người dùng có đúng không.',
@@ -20191,8 +20151,8 @@ $messages['vi'] = array(
 	'mobile-frontend-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack-description' => 'Khám phá các trang lân cận với nội dung mà bạn đang đọc.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Bài này cần sự giúp đỡ của bạn!', # Fuzzy
-	'mobile-frontend-mainpage-cta-button' => 'Cải thiện bài này', # Fuzzy
+	'mobile-frontend-mainpage-cta-prompt' => 'Trang này cần sự giúp đỡ của bạn!',
+	'mobile-frontend-mainpage-cta-button' => 'Cải thiện trang này',
 );
 
 /** Volapük (Volapük)
@@ -20592,7 +20552,6 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '删除$1字节',
 	'mobile-frontend-diffview-explained' => '以下行是添加（+）和删除（-）的内容：',
 	'mobile-frontend-thanked-notice' => '$1已被告知你喜欢{{GENDER:$2|他|她|他/她}}的编辑。',
-	'mobile-frontend-table' => '表$1',
 	'mobile-frontend-saving-exit-page' => '你的贡献仍在保存当中。如果离开，你的贡献将会丢失。你真的想要离开吗？',
 	'mobile-frontend-photo-upload' => '添加图像至本页面',
 	'mobile-frontend-photo-article-edit-comment' => '添加用于页面的图像',
@@ -20937,7 +20896,6 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '已移除$1位元組',
 	'mobile-frontend-diffview-explained' => '以下行被添加（+）和刪除（-）：',
 	'mobile-frontend-thanked-notice' => '$1說您喜歡{{GENDER:$2|他|她|他們}}的編輯。',
-	'mobile-frontend-table' => '表$1',
 	'mobile-frontend-saving-exit-page' => '正在保存您的貢獻。如果離開的話，你的貢獻將會丟失。你真的要離開嗎？',
 	'mobile-frontend-photo-upload' => '為本頁加入圖片',
 	'mobile-frontend-photo-article-edit-comment' => '已在頁面上添加照片',
