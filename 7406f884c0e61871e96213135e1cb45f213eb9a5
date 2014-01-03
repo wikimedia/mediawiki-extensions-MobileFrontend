@@ -177,6 +177,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_fbe1012a",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T21:53:41Z",
+      "side": 1,
+      "message": "If the tagname is LI you do not have to add LI to the template itself.\nYou are correct about the appendTo property - apologies for confusion there.",
+      "parentUuid": "eeebdf60_2a9f1508",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_2ab035d7",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 10
@@ -240,6 +258,24 @@
       "side": 1,
       "message": "Huh? If we ever add more check boxes like this we would need to move these back.",
       "parentUuid": "eeebdf60_eac80d53",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_bbeb7908",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T21:53:41Z",
+      "side": 1,
+      "message": "Makes sense. Ignore my early comment. Thanks for challenging :)",
+      "parentUuid": "eeebdf60_cae1c998",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -310,6 +346,24 @@
       "side": 1,
       "message": "Or I could add that line to postRender.",
       "parentUuid": "eeebdf60_6a04fd80",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_5bd8ed7e",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-03T21:53:41Z",
+      "side": 1,
+      "message": "You could but since the submit button lives outside the view this may be a little confusing.",
+      "parentUuid": "eeebdf60_ea800da2",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
