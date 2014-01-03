@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_2dadefe7",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-03T20:49:55Z",
+      "side": 1,
+      "message": "Ack.",
+      "parentUuid": "eeebdf60_6a907d4e",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_4a87f914",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 10
@@ -30,6 +48,24 @@
       "writtenOn": "2014-01-03T19:03:04Z",
       "side": 1,
       "message": "Please add whitespace around arguments",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_0db46b32",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-03T20:49:55Z",
+      "side": 1,
+      "message": "Ack.",
+      "parentUuid": "eeebdf60_4a87f914",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_0d3eabb5",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-03T20:49:55Z",
+      "side": 1,
+      "message": "Right. This value is used when the checkbox is not created (i.e. when not in alpha), in which case the calls to .each() below won\u0027t match anything. But I guess this is moot once everything is moved to Checkbox.",
+      "parentUuid": "eeebdf60_8a8ce133",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_2a995571",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 10
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_8d4abb5d",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-03T20:49:55Z",
+      "side": 1,
+      "message": "Sounds reasonable.",
+      "parentUuid": "eeebdf60_2a995571",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_eac12d35",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 10
@@ -81,6 +153,24 @@
       "writtenOn": "2014-01-03T19:03:04Z",
       "side": 1,
       "message": "Add the following:\ntagName: \u0027li\u0027,\ndefaults: {\n  name: \u0027expandSections\u0027,\n  ...\n},\nappendTo: \u0027.mw-mf-settings ul\u0027,\npostRender: function() {\n  this.$( \u0027input[type\u003dcheckbox]\u0027 ).prop( \u0027checked\u0027, M.settings.getUserSetting(el.name, true) \u003d\u003d\u003d \u0027true\u0027 );\n}\n\nWithout tagName you are adding a DIV element to a UL element which is bad.",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_2a9f1508",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-03T20:49:55Z",
+      "side": 1,
+      "message": "\u003e appendTo: \u0027.mw-mf-settings ul\u0027,\n\nThis would cause the element to appear after the submit button, right? Also it looks like the code to support appendTo is only present in the Overlay class.\n\n\u003e Without tagName you are adding a DIV element to a UL element which is bad.\n\nSo now we would have two \u003cli\u003es (from the template) inside another \u003cli\u003e (from View), which seems to be just as bad according to my reading of the HTML specification.\n\nI guess what we really want is a way to insert the contents of the template without a surrounding tag but I couldn\u0027t see a good way to do that with the current View class.",
+      "parentUuid": "eeebdf60_eac12d35",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -138,6 +228,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_cae1c998",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-03T20:49:55Z",
+      "side": 1,
+      "message": "Huh? If we ever add more check boxes like this we would need to move these back.",
+      "parentUuid": "eeebdf60_eac80d53",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_8a018173",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 10
@@ -155,6 +263,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_ed3147eb",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-03T20:49:55Z",
+      "side": 1,
+      "message": "Right.",
+      "parentUuid": "eeebdf60_8a018173",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_6a04fd80",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 10
@@ -166,6 +292,24 @@
       "writtenOn": "2014-01-03T19:03:04Z",
       "side": 1,
       "message": "Instead $( \u0027form.mw-mf-settings\u0027 ).on( \u0027submit\u0027, cb.save )",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_ea800da2",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-03T20:49:55Z",
+      "side": 1,
+      "message": "Or I could add that line to postRender.",
+      "parentUuid": "eeebdf60_6a04fd80",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
