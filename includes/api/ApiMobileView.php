@@ -576,9 +576,4 @@ class ApiMobileView extends ApiBase {
 	public function getHelpUrls() {
 		return 'https://www.mediawiki.org/wiki/Extension:MobileFrontend#action.3Dmobileview';
 	}
-
-	public function getVersion() {
-		return __CLASS__ . ': $Id$';
-	}
-
 }
