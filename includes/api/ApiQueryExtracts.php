@@ -388,8 +388,4 @@ class ApiQueryExtracts extends ApiQueryBase {
 	public function getHelpUrls() {
 		return 'https://www.mediawiki.org/wiki/Extension:MobileFrontend#prop.3Dextracts';
 	}
-
-	public function getVersion() {
-		return __CLASS__ . ': $Id$';
-	}
 }
