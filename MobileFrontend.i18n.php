@@ -3660,6 +3660,8 @@ $messages['cy'] = array(
 	'mobilefrontend-keepgoing-suggest-again' => 'Ceisio tudalen arall',
 	'mobilefrontend-keepgoing-saved-title' => 'Cadwyd y golygiad!',
 	'mobilefrontend-keepgoing-links-title' => 'Ychwanegu cysylltau',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Am wella tudalen arall?',
+	'mobilefrontend-keepgoing-links-example' => 'e.e. bydd ysgrifennu $1guitar$2 yn cynhyrchu $3guitar$4',
 	'nearby' => "Tudalennau yn perthyn i'r cyffiniau",
 	'mobile-frontend-desc' => 'Rhaglen pen blaen i declynnau symudol',
 	'mobile-frontend-search-submit' => 'Eler',
@@ -3694,6 +3696,12 @@ $messages['cy'] = array(
 	'mobile-frontend-on' => 'ARNO',
 	'mobile-frontend-featured-article' => 'Cynnwys Dethol y Dydd',
 	'mobile-frontend-news-items' => 'Ar y Newyddion',
+	'mobile-frontend-languages-404-title' => 'Gwall yn yr ieithoedd',
+	'mobile-frontend-languages-404-desc' => 'Rhaid rhoi teitl dilys.',
+	'mobile-frontend-languages-header' => 'Ieithoedd',
+	'mobile-frontend-languages-nonexistent-title' => "Nid yw'r dudalen $1 ar gael.",
+	'mobile-frontend-languages-text' => 'Mae $1 ar gael mewn $2 {{PLURAL:$2|iaith}}.',
+	'mobile-frontend-languages-variant-header' => 'Amrywiadau ar {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-heading' => '<strong>Ieithoedd</strong>',
 	'mobile-frontend-language-article-heading' => 'Darllen mewn iaith arall',
 	'mobile-frontend-language-header' => "Mae'r dudalen hon ar gael mewn $1 {{PLURAL:$1|iaith}}",
@@ -3725,6 +3733,7 @@ $messages['cy'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Golygwyd {{GENDER:$1|ddiwethaf}} {{PLURAL:$3||blwyddyn|$3 flynedd|$3 mlynedd|$3 mlynedd|$3 blynedd}} yn ôl] gan {{PLURAL:$5|ddefnyddiwr dienw|[$6 $2]}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 {{GENDER:$1|Golygwyd}}] y dudalen gynnau gan {{PLURAL:$4|ddefnyddiwr dienw|[$5 $2]}}.',
 	'mobile-frontend-learn-more' => 'Mwy o wybodaeth',
+	'mobile-frontend-view-source' => 'Dangos côd y dudalen',
 	'mobile-frontend-account-create-submit' => 'Cofrestru',
 	'mobile-frontend-password-confirm-placeholder' => 'Gwirwch eich cyfrinair',
 	'mobile-frontend-account-create-email-placeholder' => 'Cyfeiriad ebost (opsiynol)',
@@ -3812,7 +3821,10 @@ $messages['cy'] = array(
 	'mobile-frontend-watchlist-cta' => "Dilynwch hynt y dudalen hon a'r holl newidiadau iddi.",
 	'mobile-frontend-watchlist-cta-button-login' => 'Mewngofnodi',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Cofrestru',
+	'mobile-frontend-watchlist-purpose' => 'Mae rhestr wylio yn eich cynorthwyo i glustnodi tudalennau er mwyn dilyn hynt y newidiadau iddynt.',
+	'mobile-frontend-watchlist-login-action' => 'Mewngofnodwch er mwyn ei gweld.',
 	'mobile-frontend-watch-login' => 'Ychwanegu $1 at eich rhestr wylio.',
+	'mobile-frontend-edit-login-action' => 'Mewngofnodwch er mwyn golygu.',
 	'mobile-frontend-watchlist-a-z' => 'Rhestr',
 	'mobile-frontend-watchlist-feed' => 'Newidiwyd',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Cliciwch y seren ar frig y dudalen',
@@ -3875,6 +3887,7 @@ $messages['cy'] = array(
 	'mobile-frontend-image-heading-describe' => "'''Disgrifiwch''' y ddelwedd",
 	'mobile-frontend-image-uploading' => "'''Wrthi'n uwchlwytho'r''' ddelwedd...",
 	'mobile-frontend-image-cancel-confirm' => "Diddymu'r uwchlwytho?",
+	'mobile-frontend-editor-unavailable-header' => "Nid yw'r golygydd ar gael",
 	'mobile-frontend-editor-unavailable' => "Ar hyn o bryd, nid oes modd golygu â'ch porwr presennol o'r teclyn symudol. Ceisiwch ddefnyddio porwr gwahanol.",
 	'mobile-frontend-editor-undo-unsupported' => 'Ni ellir ddadwneud ar declynnau symudol, ar hyn o bryd.',
 	'mobile-frontend-editor-newpage-prompt' => "Nid yw'r dudalen ar gael eto. Beth am fentro a'i dechrau!",
@@ -3921,6 +3934,7 @@ $messages['cy'] = array(
 	'mobile-frontend-talk-reply-success' => 'Rhoddwyd eich ateb ar gadw ar y dudalen sgwrs.',
 	'mobile-frontend-talk-reply-info' => "Sylwer y caiff eich ateb ei llofnodi'n awtomatig a'ch enw defnyddiwr.",
 	'mobile-frontend-talk-reply' => 'Ateb',
+	'mobile-frontend-talk-topic-feedback' => "Ychwanegwyd pwnc newydd i'r dudalen sgwrs!",
 	'mobile-frontend-media-details' => 'Manylion',
 	'mobile-frontend-media-license-link' => 'Manylion y drwydded',
 	'abusefilter-edit-builder-vars-user-mobile' => "P'un ai yw defnyddiwr yn golygu gyda'r rhyngwyneb symudol ai pheidio",
@@ -3936,6 +3950,8 @@ $messages['cy'] = array(
 	'mobile-frontend-profile-last-thanked' => 'Cafodd {{GENDER:$3|ei ddiolch|ei diolch|ei ddiolch}} {{GENDER:$1|gan}} [[Special:UserProfile/$1|$1]] am olygiad i [[$2]].',
 	'mobile-frontend-geonotahack' => "Yng nghyffiniau'r dudalen hon",
 	'beta-feature-geonotahack' => "Yng nghyffiniau'r dudalen hon",
+	'mobile-frontend-mainpage-cta-prompt' => 'Mae angen eich cymorth ar y dudalen hon!',
+	'mobile-frontend-mainpage-cta-button' => "Gwella'r dudalen",
 );
 
 /** Danish (dansk)
@@ -4150,7 +4166,7 @@ $messages['da'] = array(
 	'mobile-frontend-changeslist-ip' => 'Anonym bruger',
 	'mobile-frontend-changeslist-nocomment' => 'ingen ændringskommentar',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
-	'mobile-frontend-watchlist-filter-articles' => 'Artikler', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Sider',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Øvrige',
 	'mobile-frontend-watchlist-modified' => 'Ændret $1',
@@ -4276,8 +4292,8 @@ $messages['da'] = array(
 	'mobile-frontend-geonotahack' => 'I nærheden af denne side',
 	'beta-feature-geonotahack' => 'I nærheden af denne side',
 	'beta-feature-geonotahack-description' => 'Find sider, der er geografisk i nærheden af indholdet på den side, du læser lige nu.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Denne artikel har brug for din hjælp!', # Fuzzy
-	'mobile-frontend-mainpage-cta-button' => 'Forbedre denne artikel', # Fuzzy
+	'mobile-frontend-mainpage-cta-prompt' => 'Denne side har brug for din hjælp!',
+	'mobile-frontend-mainpage-cta-button' => 'Forbedre denne side',
 );
 
 /** German (Deutsch)
@@ -5913,7 +5929,7 @@ $messages['fa'] = array(
 	'mobile-frontend-search-content-no-results' => "'''{{int:mobile-frontend-search-content}}''' برای دیدن اگر این متن در همه‌جا پدیدار شود.",
 	'mobile-frontend-privacy-link-text' => 'حریم خصوصی',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'محتوی تحت مجوز [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] در دسترس است.',
+	'mobile-frontend-footer-license' => 'متن تحت مجوز [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] در دسترس است.',
 	'mobile-frontend-copyright' => 'محتوا تحت $1 در دسترس است، مگر اینکه خلافش ذکر شده باشد.',
 	'mobile-frontend-footer-contact' => 'تماس',
 	'mobile-frontend-search-noresults' => 'هیچ عنوان مقاله‌ای مطابق با کلیدواژه نیست. کلیدواژهٔ جستجو را تغییر دهید یا برای جستجو درون متن مقاله‌ها دکمه جستجوی کیبرد را بفشارید.',
@@ -6051,7 +6067,7 @@ $messages['fa'] = array(
 	'mobile-frontend-editor-unavailable' => 'ویرایش تلفن همراه هم‌اکنون در مرورگر شما دردسترس نیست. خواهشمندیم مرورگر دیگری را بیازمایید.',
 	'mobile-frontend-editor-undo-unsupported' => 'خنثی‌سازی در حال حاضر در دستگاه‌های همراه پشتیبانی نشده‌است.',
 	'mobile-frontend-editor-newpage-prompt' => 'این صفحه وجود ندارد. چرا جسور نباشید و ایجادش نکنید؟',
-	'mobile-frontend-editor-disabled' => 'این صفحه برای جلوگیری از خرابکاری محافظت می شود.',
+	'mobile-frontend-editor-disabled' => 'این صفحه برای جلوگیری از خرابکاری محافظت می‌شود.',
 	'mobile-frontend-editor-cta' => 'کمک به بهبود این صفحه!',
 	'mobile-frontend-editor-edit' => 'ویرایش',
 	'mobile-frontend-editor-continue' => 'ادامه',
@@ -6094,6 +6110,7 @@ $messages['fa'] = array(
 	'mobile-frontend-talk-reply-success' => 'پاسخ شما با موفقیت در صفحۀ بحث ذخیره شد.',
 	'mobile-frontend-talk-reply-info' => 'به خاطر داشته باشید پیام شما به طور خودکار با نام کاربریتان امضا خواهد شد.',
 	'mobile-frontend-talk-reply' => 'پاسخ',
+	'mobile-frontend-talk-topic-feedback' => 'موضوع جدیدی به صفحه بحث اضافه شده است!',
 	'mobile-frontend-media-details' => 'جزئیات',
 	'mobile-frontend-media-license-link' => 'اطلاعات مجوز',
 	'abusefilter-edit-builder-vars-user-mobile' => 'اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه',
@@ -6116,6 +6133,8 @@ $messages['fa'] = array(
 	'mobile-frontend-geonotahack' => 'نزدیک این صفحه',
 	'beta-feature-geonotahack' => 'نزدیک این صفحه',
 	'beta-feature-geonotahack-description' => 'کشف صفحاتی که از نظر جغرافیایی در نزدیکی محتوای صفحه‌ای که شما در حال خواندن هستید.',
+	'mobile-frontend-mainpage-cta-prompt' => 'این صفحه به کمک شما نیاز دارد!',
+	'mobile-frontend-mainpage-cta-button' => 'بهبود این صفحه',
 );
 
 /** Finnish (suomi)
@@ -7306,6 +7325,7 @@ $messages['gd'] = array(
 	'mobile-frontend-random-button' => 'Air thuaiream',
 	'mobile-frontend-back-to-top-of-section' => 'Leum earrann air ais',
 	'mobile-frontend-regular-site' => 'Sealladh desktop',
+	'mobile-frontend-view' => 'An sealladh mobile',
 	'mobile-frontend-featured-article' => 'Susbaint bhrosnaichte an latha an-diugh',
 	'mobile-frontend-copyright' => "Tha an t-susbaint seo ri fhaighinn fo $1 mur eil an caochladh 'ga innse.",
 );
@@ -8808,7 +8828,6 @@ $messages['id'] = array(
 	'mobile-frontend-save-error' => 'Galat menyimpan pengaturan. Pastikan bahwa Anda telah mengaktifkan kuki.',
 	'mobile-frontend-random-button' => 'Sembarang',
 	'mobile-frontend-back-to-top-of-section' => 'Kembali ke bagian sebelumnya',
-	'mobile-frontend-close-section' => 'Tutup bagian ini',
 	'mobile-frontend-regular-site' => 'Tampilan komputer meja',
 	'mobile-frontend-wml-continue' => 'Lanjutkan...',
 	'mobile-frontend-wml-back' => 'Kembali ...',
@@ -8907,9 +8926,9 @@ $messages['id'] = array(
 	'mobile-frontend-nearby-link' => 'Baca halaman ini secara penuh',
 	'mobile-frontend-nearby-directions' => 'Navigasi ke sini',
 	'mobile-frontend-donate-image-nouploads' => 'Tidak ada unggahan.',
-	'mobile-frontend-donate-image-login' => 'Anda harus masuk log untuk melihat unggahan Anda.',
+	'mobile-frontend-donate-image-login' => 'Anda harus masuk log untuk melihat unggahan Anda.', # Fuzzy
 	'mobile-frontend-photo-upload-disabled' => 'Tidak ada gambar yang diperlukan pada halaman ini.',
-	'mobile-frontend-photo-upload-anon' => 'Anda harus masuk log untuk menambahkan gambar ke halaman ini.',
+	'mobile-frontend-photo-upload-anon' => 'Anda harus masuk log untuk menambahkan gambar ke halaman ini.', # Fuzzy
 	'mobile-frontend-photo-upload-protected' => 'Anda tidak memiliki izin untuk menambahkan gambar ke halaman ini.',
 	'mobile-frontend-photo-upload-unavailable' => 'Penjelajah Anda tidak mendukung pengunggahan gambar.',
 	'mobile-frontend-photo-upload-generic' => 'Sumbang sebuah gambar',
@@ -8930,14 +8949,14 @@ $messages['id'] = array(
 	'mobile-frontend-watchlist-removed' => 'Dihapus $1 dari daftar pantauan Anda',
 	'mobile-frontend-watchlist-view' => 'Lihat daftar pantauan Anda',
 	'mobile-frontend-watchlist-more' => 'lainnya',
-	'mobile-frontend-watchlist-cta' => 'Silakan masuk log atau mendaftar untuk mamantau halaman ini.',
+	'mobile-frontend-watchlist-cta' => 'Silakan masuk log atau mendaftar untuk mamantau halaman ini.', # Fuzzy
 	'mobile-frontend-watchlist-cta-button-login' => 'Masuk log',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Daftar',
-	'mobile-frontend-watch-login' => 'Anda harus masuk log untuk memantau halaman.',
+	'mobile-frontend-watch-login' => 'Anda harus masuk log untuk memantau halaman.', # Fuzzy
 	'mobile-frontend-watchlist-a-z' => 'Daftar',
 	'mobile-frontend-watchlist-feed' => 'Diubah',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik bintang di bagian atas halaman',
-	'mobile-frontend-watchlist-a-z-empty-howto' => 'Anda tidak sedang memantau halamlan apa pun. Daftar pantauan Anda membantu mendaftarkan halaman-halaman yang menarik bagi Anda. Anda dapat memantau halaman dengan menekan simbol bintang.',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Anda tidak sedang memantau halaman apa pun. Daftar pantauan Anda membantu mendaftarkan halaman-halaman yang menarik bagi Anda. Anda dapat memantau halaman dengan menekan simbol bintang.',
 	'mobile-frontend-watchlist-feed-empty' => 'Tidak ada halaman dengan perubahan terbaru.',
 	'mobile-frontend-watchlist-back-home' => 'Kembali ke beranda',
 	'mobile-frontend-changeslist-ip' => 'Pengguna anonim',
@@ -8956,7 +8975,6 @@ $messages['id'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bita|bita}} dihapus',
 	'mobile-frontend-diffview-explained' => 'Baris berikut ini ditambahkan (+) dan dihapus (-):',
 	'mobile-frontend-thanked-notice' => '$1 telah diberitahu bahwa Anda menyukai {{GENDER:$2|suntingannya|suntingannya|suntingan mereka}}.',
-	'mobile-frontend-table' => 'Tabel $1',
 	'mobile-frontend-saving-exit-page' => 'Kontribusi Anda sedang disimpan. Jika Anda meninggalkan halaman ini maka kontribusi Anda akan hilang. Apakah Anda yakin Anda ingin keluar?',
 	'mobile-frontend-photo-upload' => 'Tambahkan gambar ke halaman ini',
 	'mobile-frontend-photo-article-edit-comment' => 'Tambahkan gambar untuk digunakan pada halaman',
@@ -8974,7 +8992,7 @@ $messages['id'] = array(
 	'mobile-frontend-photo-nag-1-bullet-1-text' => "Ini '''bukan''' gambar yang saya temukan di Internet. Ini adalah buatan saya sendiri.",
 	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Ini bukan gambaran diri saya',
 	'mobile-frontend-photo-nag-1-bullet-2-text' => 'Dan dapat membantu mengilustrasikan topik yang penting.',
-	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Pastsi tidak melanggar hak cipta, dan gambar ini memiliki nilai edukasi.',
+	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Pasti tidak melanggar hak cipta, dan gambar ini memiliki nilai edukasi.',
 	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'Saya mengerti apa yang boleh diunggah. Jangan tampilkan pesan ini lagi.',
 	'mobile-frontend-photo-nag-learn-more-heading' => 'Apa yang boleh diunggah',
 	'mobile-frontend-photo-nag-learn-more-1' => "'''Ya!''' Foto-foto tempat, benda-benda, dan peristiwa.",
@@ -8994,12 +9012,11 @@ $messages['id'] = array(
 	'mobile-frontend-photo-cancel' => 'Batalkan',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> unggah|<span> $1 </span> unggah}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ unggahan',
-	'mobile-frontend-photo-upload-login' => 'Anda harus masuk log untuk menambah gambar.',
+	'mobile-frontend-editor-unavailable' => 'Penyuntingan lewat piranti mobil saat ini tidak tersedia pada penjelajah Anda. Silakan coba penjelajah yang berbeda.',
 	'mobile-frontend-editor-undo-unsupported' => 'Fitur pembatalan saat ini tidak didukung pada piranti mobil.',
 	'mobile-frontend-editor-newpage-prompt' => 'Halaman ini tidak ada. Mengapa tidak Anda coba buat saja?',
-	'mobile-frontend-editor-disabled' => 'Anda tidak dapat menyunting halaman ini',
-	'mobile-frontend-editor-unavailable' => 'Penyuntingan lewat piranti mobil saat ini tidak tersedia pada penjelajah Anda. Silakan coba penjelajah yang berbeda.',
-	'mobile-frontend-editor-cta' => 'Anda harus masuk log untuk menyunting halaman pada piranti mobil.',
+	'mobile-frontend-editor-disabled' => 'Anda tidak dapat menyunting halaman ini', # Fuzzy
+	'mobile-frontend-editor-cta' => 'Anda harus masuk log untuk menyunting halaman pada piranti mobil.', # Fuzzy
 	'mobile-frontend-editor-edit' => 'Sunting',
 	'mobile-frontend-editor-continue' => 'Lanjutkan',
 	'mobile-frontend-editor-save' => 'Simpan',
@@ -10200,18 +10217,41 @@ $messages['ja'] = array(
 );
 
 /** Javanese (Basa Jawa)
+ * @author Bennylin
  * @author NoiX180
  */
 $messages['jv'] = array(
+	'mobilefrontend-random-explain' => 'Apakah halaman sembarang ini menarik bagi Anda?',
+	'mobilefrontend-random-cancel' => 'Saya mau membaca!',
+	'mobilefrontend-keepgoing-ask' => 'Selamat! Anda sudah tahu caranya! Apakah Anda mau mencoba menyunting halaman lain?',
+	'mobilefrontend-keepgoing-ask-first' => 'Selamat untuk suntingan pertama Anda! Apakah Anda mau mencoba menyunting halaman lain?',
+	'mobilefrontend-keepgoing-explain' => 'Bagus! Menurut pengguna lain, halaman ini perlu bantuan. Coba halaman ini, atau coba halaman lain.',
+	'mobilefrontend-keepgoing-cancel' => 'Ora, suwun',
+	'mobilefrontend-keepgoing-suggest' => 'Iya, suwun',
+	'mobilefrontend-keepgoing-suggest-again' => 'Coba liyane',
+	'mobilefrontend-keepgoing-saved-title' => 'Pangowahan kasimpen!',
+	'mobilefrontend-keepgoing-links-title' => 'Tambah pranala',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Owahi kaca liyane?',
+	'mobilefrontend-keepgoing-links-example' => 'kajaba $1guitar$2 dadi 3guitar$4', # Fuzzy
+	'nearby' => 'Artikel tentang tempat di dekat Anda',
 	'mobile-frontend-desc' => 'Antarmuka Ponsèl',
 	'mobile-frontend-search-submit' => 'Nuju',
 	'mobile-frontend-home-button' => 'Latar',
 	'mobile-frontend-logged-out' => 'Durung mlebu log',
+	'mobile-frontend-logged-in-homepage-notification' => 'Sugeng Rawuh, $1!',
+	'mobile-frontend-logged-in-toast-notification' => 'Mlebet log dadi $1',
+	'mobile-frontend-sign-up-heading' => 'Daptar',
+	'mobile-frontend-sign-in-heading' => 'Mlebu log',
+	'mobile-frontend-sign-in-why' => 'Jika Anda memiliki akun {{SITENAME}}, Anda dapat masuk log di bawah ini.',
+	'mobile-frontend-sign-in-error-heading' => 'Wélah!',
+	'mobile-frontend-settings-description' => 'Menyesuaikan pengalaman Anda di piranti mobil dengan pengaturan spesifik untuk situs mobil.',
 	'mobile-frontend-settings-beta' => 'Béta',
-	'mobile-frontend-save-settings' => 'Simpen pangaturan', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Mode eksperimental',
+	'mobile-frontend-settings-alpha-description' => 'Masuk ke wilayah seluler yang berbahaya dan belum dieksplorasi. Dapatkan fitur yang lebih eksperimental, tapi dengan lebih banyak kemungkinan kesalahan.',
+	'mobile-frontend-save-settings' => 'Simpen',
+	'mobile-frontend-save-error' => 'Galat menyimpan pengaturan. Pastikan bahwa Anda telah mengaktifkan kuki.',
 	'mobile-frontend-random-button' => 'Waton',
 	'mobile-frontend-back-to-top-of-section' => 'Balik nèng sakdurungé',
-	'mobile-frontend-close-section' => 'Tutup bagèyan iki',
 	'mobile-frontend-regular-site' => 'Tampilan komputer',
 	'mobile-frontend-wml-continue' => 'Banjuraké...',
 	'mobile-frontend-wml-back' => 'Balik...',
@@ -10222,33 +10262,197 @@ $messages['jv'] = array(
 	'mobile-frontend-images-status' => 'Gambar',
 	'mobile-frontend-disable-images' => 'Patèni gambar nèng situs ponsèl',
 	'mobile-frontend-enable-images' => 'Urubaké gambar nèng situs ponsèl',
+	'mobile-frontend-missing-image' => 'Gambar',
 	'mobile-frontend-off' => 'MATI',
 	'mobile-frontend-on' => 'MURUB',
-	'mobile-frontend-featured-article' => 'Artikel Pinilih Dina Iki', # Fuzzy
+	'mobile-frontend-featured-article' => 'Artikel Pinilih Dina Iki',
 	'mobile-frontend-news-items' => 'Warta Pinjunjul',
-	'mobile-frontend-language-header' => 'Artikel iki sumadhiya nèng $1 {{PLURAL:$1|basa|basa}}', # Fuzzy
-	'mobile-frontend-language-footer' => '{{SITENAME}} sumadhiya nèng basa liya.', # Fuzzy
+	'mobile-frontend-languages-404-title' => 'Kesalahan basa',
+	'mobile-frontend-languages-404-desc' => 'Judul kudu diwenehi sing bener',
+	'mobile-frontend-languages-header' => 'Basa-basa',
+	'mobile-frontend-languages-nonexistent-title' => 'Kaca "$1" ora ana.',
+	'mobile-frontend-languages-variant-header' => 'variasi {{#language:{{CONTENTLANG}}}}',
+	'mobile-frontend-language-heading' => '<strong>Basa-basa</strong>',
+	'mobile-frontend-language-article-heading' => 'Maca ing basa liyane',
+	'mobile-frontend-language-header' => 'Kaca iki sumadhiya nèng $1 {{PLURAL:$1|basa|basa}}',
+	'mobile-frontend-language-variant-header' => 'Pilih variasi {{#language:{{CONTENTLANG}}}}',
+	'mobile-frontend-language-footer' => 'Catatan: Halaman ini mungkin tidak ditulis dalam bahasa pilihan Anda. Anda dapat melihat {{SITENAME}} bahasa apa yang didukung dengan mengeklik di sini.',
 	'mobile-frontend-language-site-choose' => 'Golèk basa',
 	'mobile-frontend-username' => 'Jeneng panganggo:',
 	'mobile-frontend-password' => 'Tembung sandhi:',
+	'mobile-frontend-username-placeholder' => 'Jeneng panganggo',
+	'mobile-frontend-password-placeholder' => 'Tembung sandhi',
 	'mobile-frontend-login' => 'Mlebu log',
+	'mobile-frontend-history' => 'Lihat riwayat suntingan halaman ini.',
+	'mobile-frontend-history-404-title' => 'Ora ana kaca kuwi',
+	'mobile-frontend-history-summary' => 'Riwayat kaca kanggo [[:$1]]',
+	'mobile-frontend-last-modified-date' => 'Dianyari pungkasan ing tanggal $1, $jam 2', # Fuzzy
+	'mobile-frontend-last-modified-seconds' => 'Dianyari pungkasan {{PLURAL:$1|$1 detik|$1 detik}} kapungkur',
+	'mobile-frontend-last-modified-minutes' => 'Dianyari pungkasan {{PLURAL:$1|$1 menit|$1 menit}} kapungkur',
+	'mobile-frontend-last-modified-hours' => 'Dianyari pungkasan {{PLURAL:$1|$1 jam|$1 jam}} kapungkur',
+	'mobile-frontend-last-modified-days' => 'Dianyari pungkasan {{PLURAL:$1|$1 dina|$1 dinat}} kapungkur',
+	'mobile-frontend-last-modified-months' => 'Dianyari pungkasan {{PLURAL:$1|$1 sasi|$1 sasi}} kapungkur',
+	'mobile-frontend-last-modified-years' => 'Dianyari pungkasan {{PLURAL:$1|$1 taun|$1 taun}} kapungkur',
+	'mobile-frontend-last-modified-just-now' => 'Lagi wae dianyari',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3 detik|$3 detik}} yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} menit yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} jam yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} hari yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} bulan yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} tahun yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Baru saja {{GENDER:$1|disunting}}] oleh {{PLURAL:$4|[$5 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-learn-more' => 'Sinau luwih',
+	'mobile-frontend-view-source' => 'Pirsani sumber',
+	'mobile-frontend-account-create-submit' => 'Daptar',
+	'mobile-frontend-password-confirm-placeholder' => 'Konfirmasi tembung sandhi',
+	'mobile-frontend-account-create-email-placeholder' => 'Alamat layang èlèktronik (ora kudu)',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Lebokna kode konfirmasi',
+	'mobile-frontend-overlay-escape' => 'Mbalik',
+	'mobile-frontend-overlay-close' => 'Tutup',
+	'mobile-frontend-overlay-continue' => 'Banjuraké',
 	'mobile-frontend-placeholder' => 'Golèk {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Golek {{SITENAME}} (Beta)',
+	'mobile-frontend-placeholder-alpha' => 'Golek {{SITENAME}} (Eksperimental)',
 	'mobile-frontend-search-help' => 'Tulis istilah sing digolèki kuwi lan cocokaké karo judhul artikel sing njedhul mengko.', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'tutup warta iki',
 	'mobile-frontend-clear-search' => 'Busak',
+	'mobile-frontend-search-content' => 'Golek ing sajroning kaca-kaca',
+	'mobile-frontend-search-no-results' => 'Ora ana kaca nganggo judul iki.',
 	'mobile-frontend-privacy-link-text' => 'Pripasi',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Kontèn sumadhiya sakisoré [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Kontèn sumadhiya sakisoré [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; ketentuan tambahan mungkin berlaku.',
+	'mobile-frontend-copyright' => 'Koten kasedyakaké miturut $1, kecuali ditulis liyane.',
 	'mobile-frontend-footer-contact' => 'Kontak',
-	'mobile-frontend-search-noresults' => 'Ora ana artikel sing padha karo panggolèkan Sampéyan. Ganti panggolèkan, utawa teken tombol golèk nèng keyboard kanggo nggolèki saknjeroné artikel.', # Fuzzy
+	'mobile-frontend-search-noresults' => 'Ora ana judul sing padha karo panggolèkan sampéyan. Ganti panggolèkan, utawa teken tombol golèk nèng keyboard kanggo nggolèki saknjeroné artikel.',
+	'mobile-frontend-terms-text' => 'Kebijakan penggunaan',
+	'mobile-frontend-main-menu-button-tooltip' => 'Buka menu utama',
+	'mobile-frontend-main-menu-page-title' => 'Navigasi situs',
 	'mobile-frontend-main-menu-featured' => 'Pinilih',
 	'mobile-frontend-main-menu-nearby' => 'Paling cedhak',
+	'mobile-frontend-main-menu-login' => 'Mlebu log',
+	'mobile-frontend-main-menu-logout' => 'Metu log',
+	'mobile-frontend-main-menu-watchlist' => 'Daptar pangawasan',
 	'mobile-frontend-main-menu-settings' => 'Pangaturan',
-	'mobile-frontend-main-menu-settings-heading' => 'Pangaturan situs ponsèl', # Fuzzy
+	'mobile-frontend-main-menu-upload' => 'Unggahan',
+	'mobile-frontend-main-menu-settings-heading' => 'Pangaturan',
 	'mobile-frontend-settings-site-header' => 'Basa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} sumadhiya nèng $1 {{PLURAL:$1|basa|basa}}. Kabéh vèrsi sumadhiya kadaptar nèng ngisor',
+	'mobile-frontend-main-menu-account-create' => 'Nggawé akun anyar',
 	'mobile-frontend-page-menu-contents' => 'isi',
 	'mobile-frontend-page-menu-history' => 'Riwayat',
+	'mobile-frontend-meta-data-issues-header' => 'Masalah',
+	'mobile-frontend-meta-data-issues' => 'Halaman ini memiliki beberapa masalah',
+	'mobile-frontend-page-saving' => 'Menyimpan $1',
+	'mobile-frontend-user-cta' => 'Silakan masuk log atau mendaftar untuk melihat pemberitahuan Anda.',
+	'mobile-frontend-user-button-tooltip' => 'Tampilkan pemberitahuan saya',
+	'mobile-frontend-nearby-to-page' => 'Halaman berikut terkait dengan $1 menurut lokasi geografis mereka',
+	'mobile-frontend-nearby-title' => 'Cedhak',
+	'mobile-frontend-nearby-loading' => 'Memuat topik di dekat lokasi Anda saat ini',
+	'mobile-frontend-nearby-requirements' => 'Maaf! Penjelajah Anda tidak mendukung fitur Dekat {{SITENAME}} .',
+	'mobile-frontend-nearby-requirements-guidance' => 'Cobalah penjelajah yang lain atau mengaktifkan JavaScript jika Anda telah menon-aktifkannya.',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
+	'mobile-frontend-nearby-lookup-ui-error' => 'Fitur Dekat {{SITENAME}} tidak tahu di mana Anda... coba lagi?',
+	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Cobalah area terbuka dengan sinyal yang lebih baik.',
+	'mobile-frontend-nearby-permission' => 'Fitur Dekat {{SITENAME}} tidak memiliki izin untuk mengakses lokasi Anda.',
+	'mobile-frontend-nearby-permission-guidance' => 'Pastikan Anda memberikan izin untuk menunjukkan lokasi Anda. Anda mungkin perlu mengecek pengaturan lokasi penjelajah Anda.',
+	'mobile-frontend-nearby-noresults' => 'Di luar sana sepi... Tidak ada artikel lain tentang tempat di dekat Anda yang dapat ditemukan.',
+	'mobile-frontend-nearby-noresults-guidance' => 'Cobalah membuat sebuah halaman baru atau menambahkan lokasi ke halaman yang sudah ada',
+	'mobile-frontend-nearby-refresh' => 'Kami menemukan lokasi yang lebih akurat untuk Anda. Klik di sini untuk memperbarui daftar halaman tentang tempat di dekat Anda.',
+	'mobile-frontend-nearby-error' => 'Fitur Dekat {{SITENAME}} memiliki beberapa masalah.',
+	'mobile-frontend-nearby-error-guidance' => 'Cobalah perbarui lokasi Anda.',
+	'mobile-frontend-nearby-link' => 'Baca halaman ini secara penuh',
+	'mobile-frontend-nearby-directions' => 'Navigasi ke sini',
+	'mobile-frontend-donate-image-nouploads' => 'Tidak ada unggahan.',
+	'mobile-frontend-donate-image-login' => 'Media di {{SITENAME}} disumbangne kaliyan wong-wong kaya sampeyan.',
+	'mobile-frontend-photo-upload-disabled' => 'Tidak ada gambar yang diperlukan pada halaman ini.',
+	'mobile-frontend-photo-upload-protected' => 'Panjenengan ora duwé idin kanggo nambah gambar ing kaca iki.',
+	'mobile-frontend-photo-upload-unavailable' => 'Penjelajah Anda tidak mendukung pengunggahan gambar.',
+	'mobile-frontend-photo-upload-generic' => 'Sumbang sebuah gambar',
+	'mobile-frontend-donate-image-title' => 'Unggahan',
+	'mobile-frontend-donate-image-heading' => 'Kontribusi terakhir Anda',
+	'mobile-frontend-donate-image-anon' => '$1 dibutuhkan untuk melihat halaman pengunggahan.',
+	'mobile-frontend-user-account' => 'rékening panganggo',
+	'mobile-frontend-listed-image-no-description' => 'Ora ana katrangan',
+	'mobile-frontend-donate-photo-upload-success' => 'Sukses! Gambar Anda sekarang dapat digunakan pada {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Berhasil! Terima kasih atas kontribusi pertama Anda!',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Kirimkan gambar yang Anda buat. Bantulah {{SITENAME}} menjadi lebih hidup!',
+	'mobile-frontend-first-upload-wizard-new-page-1' => 'Gambar pada {{SITENAME}} berasal dari Wikimedia Commons',
+	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'Gambar Anda membantu mendidik orang-orang di seluruh dunia',
+	'mobile-frontend-first-upload-wizard-new-page-2' => 'Hindari materi berhak cipta yang Anda temukan dari internet serta gambar poster, sampul buku, dll.',
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Mudheng?',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Iya!',
+	'mobile-frontend-watchlist-add' => 'Ditambahkan $1 ke daftar pantauan Anda',
+	'mobile-frontend-watchlist-removed' => 'Busak kaca iki saka daftar pangawasan panjenengan', # Fuzzy
+	'mobile-frontend-watchlist-view' => 'Dheleng daftar pangawasan sampeyan',
+	'mobile-frontend-watchlist-more' => 'Luwih akèh',
+	'mobile-frontend-watchlist-cta-button-login' => 'Mlebu log',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Daptar',
+	'mobile-frontend-generic-login' => '{{SITENAME}} digawe karo wong-wong kaya sampeyan.',
+	'mobile-frontend-generic-login-action' => 'Mlebu log kanggo kontribusi.',
+	'mobile-frontend-generic-signup-action' => 'Daftara dhisik yen arep kontribusi.',
+	'mobile-frontend-watch-login' => 'Tambahna $1 menyang daftar pangawasan sampeyan.',
+	'mobile-frontend-edit-login' => 'Èwangi mbenahi kaca $1',
+	'mobile-frontend-edit-login-action' => 'Mlebu log kanggo ngowahi.',
+	'mobile-frontend-edit-signup-action' => 'Daftara dhisik yen arep ngowahi.',
+	'mobile-frontend-watchlist-a-z' => 'Daptar',
+	'mobile-frontend-watchlist-feed' => 'Diowahi',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik bintang di bagian atas halaman',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Anda tidak sedang memantau halamlan apa pun. Daftar pantauan Anda membantu mendaftarkan halaman-halaman yang menarik bagi Anda. Anda dapat memantau halaman dengan menekan simbol bintang.',
+	'mobile-frontend-watchlist-feed-empty' => 'Tidak ada halaman dengan perubahan terbaru.',
+	'mobile-frontend-watchlist-back-home' => 'Kembali ke beranda',
+	'mobile-frontend-changeslist-ip' => 'Panganggo ora dikenal',
+	'mobile-frontend-changeslist-nocomment' => 'ora ana ringkesan suntingan',
+	'mobile-frontend-watchlist-filter-all' => 'Kabèh',
+	'mobile-frontend-watchlist-filter-articles' => 'Kaca-kaca',
+	'mobile-frontend-watchlist-filter-talk' => 'Wicara',
+	'mobile-frontend-watchlist-filter-other' => 'Liyané',
+	'mobile-frontend-watchlist-modified' => 'Diubah $1',
+	'mobile-frontend-diffview-404-title' => 'Batalaké benahan',
+	'mobile-frontend-diffview-404-desc' => 'ID untuk revisi yang Anda minta tidak ada.',
+	'mobile-frontend-diffview-title' => 'Owah-owahan',
+	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|suntingan|suntingan}}',
+	'mobile-frontend-diffview-anonymous' => 'Panganggo ora dikenal',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bita|bita}} wis ditambahake',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bita|bita}} wis dibusak',
+	'mobile-frontend-diffview-explained' => 'Baris berikut ini ditambahkan (+) dan dihapus (-):',
+	'mobile-frontend-thanked-notice' => '$1 telah diberitahu bahwa Anda menyukai {{GENDER:$2|suntingannya|suntingannya|suntingan mereka}}.',
+	'mobile-frontend-saving-exit-page' => 'Kontribusi Anda sedang disimpan. Jika Anda meninggalkan halaman ini maka kontribusi Anda akan hilang. Apakah Anda yakin Anda ingin keluar?',
+	'mobile-frontend-photo-upload' => 'Tambahkan gambar ke halaman ini',
+	'mobile-frontend-photo-article-edit-comment' => 'Tambahkan gambar untuk digunakan pada halaman',
+	'mobile-frontend-photo-article-donate-comment' => 'Sumbang gambar dari Special:Uploads',
+	'mobile-frontend-photo-upload-comment' => 'Menambahkan gambar ke halaman',
+	'mobile-frontend-image-loading' => 'Memuat gambar',
+	'mobile-frontend-photo-ownership' => 'Saya, $1, yang membuat gambar ini.',
+	'mobile-frontend-photo-ownership-help' => 'Iki artine apa?',
+	'mobile-frontend-photo-ownership-confirm' => 'Mudheng!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Kami hanya dapat menerima gambar milik Anda. Jangan mengunggah gambar yang Anda temukan di tempat lain di Internet.',
+	'mobile-frontend-photo-ownership-bullet-two' => 'Gambar yang dilindungi hak cipta dan tidak patut akan dihapus.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Unggahan Anda dirilis di bawah lisensi yang memungkinkan setiap orang untuk menggunakan kembali berkas Anda secara gratis.',
+	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Saya tidak melanggar hak cipta',
+	'mobile-frontend-photo-nag-1-bullet-1-text' => "Ini '''bukan''' gambar yang saya temukan di Internet. Ini adalah buatan saya sendiri.",
+	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Ini bukan gambaran diri saya',
+	'mobile-frontend-photo-nag-1-bullet-2-text' => 'Dan dapat membantu mengilustrasikan topik yang penting.',
+	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Pasti tidak melanggar hak cipta, dan gambar ini memiliki nilai edukasi.',
+	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'Saya mengerti apa yang boleh diunggah. Jangan tampilkan pesan ini lagi.',
+	'mobile-frontend-photo-nag-learn-more-heading' => 'Apa yang boleh diunggah',
+	'mobile-frontend-photo-nag-learn-more-1' => "'''Ya!''' Foto-foto tempat, benda-benda, dan peristiwa.",
+	'mobile-frontend-photo-nag-learn-more-2' => "'''Ya!''' Foto yang dapat membantu menggambarkan dan memperkaya halaman {{SITENAME}}.",
+	'mobile-frontend-photo-nag-learn-more-3' => "'''Tidak.''' foto poster film, sampul buku, atau materi berhak cipta lainnya. Gambar-gambar seperti ini akan dihapus.",
+	'mobile-frontend-lead-image-tutorial-summary' => 'Pastikan bahwa gambar Anda dapat membantu mengilustrasikan halaman. Gambar tersebut harus gambar yang Anda buat sendiri, yang tidak melanggar hak cipta.',
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Miwiti pangunggahan',
+	'mobile-frontend-image-uploading-wait' => 'Mengunggah gambar, silakan tunggu.',
+	'mobile-frontend-image-uploading-long' => 'Gambar masih diunggah! Terima kasih atas kesabaran Anda.',
+	'mobile-frontend-image-uploading-cancel' => '<a href="#">Batalkan</a> jika ini terlalu lama.',
+	'mobile-frontend-photo-upload-error' => 'Galat, coba lagi.',
+	'mobile-frontend-photo-upload-error-file-type' => 'Harap hanya mengunggah gambar.',
+	'mobile-frontend-photo-upload-error-filename' => 'Galat, harap memberikan ringkasan yang lebih deskriptif.',
+	'mobile-frontend-photo-upload-success-article' => 'Berhasil! Gambar Anda sekarang telah tertampil di halaman ini.',
+	'mobile-frontend-photo-submit' => 'Kirim',
+	'mobile-frontend-photo-cancel' => 'Batal',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> unggah|<span> $1 </span> unggah}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ unggahan',
+	'mobile-frontend-image-cancel-confirm' => 'Batalna ngunggahé',
 );
 
 /** Georgian (ქართული)
@@ -10882,6 +11086,7 @@ $messages['kn'] = array(
 /** Korean (한국어)
  * @author Altostratus
  * @author Clockoon
+ * @author Freebiekr
  * @author Hym411
  * @author Klutzy
  * @author Kwj2772
@@ -12928,6 +13133,12 @@ $messages['ml'] = array(
 	'mobile-frontend-on' => 'വേണം',
 	'mobile-frontend-featured-article' => 'ഇന്നത്തെ തിരഞ്ഞെടുത്ത ഉള്ളടക്കം',
 	'mobile-frontend-news-items' => 'വാർത്തയിൽ',
+	'mobile-frontend-languages-404-title' => 'ഭാഷകളിൽ പിഴവ്',
+	'mobile-frontend-languages-404-desc' => 'സാധുവായ തലക്കെട്ട് നൽകിയിരിക്കണം.',
+	'mobile-frontend-languages-header' => 'ഭാഷകൾ',
+	'mobile-frontend-languages-nonexistent-title' => '"$1" എന്ന താൾ നിലവിലില്ല.',
+	'mobile-frontend-languages-text' => '{{PLURAL:$2|ഒരു ഭാഷയിൽ|$2 ഭാഷകളിൽ}} $1 എന്ന താൾ ലഭ്യമാണ്.',
+	'mobile-frontend-languages-variant-header' => '{{#language:{{CONTENTLANG}}}} ഇതരരൂപങ്ങൾ',
 	'mobile-frontend-language-heading' => '<strong>ഭാഷകൾ</strong>',
 	'mobile-frontend-language-article-heading' => 'മറ്റൊരു ഭാഷയിൽ വായിക്കുക',
 	'mobile-frontend-language-header' => 'ഈ താൾ {{PLURAL:$1|ഒരു ഭാഷയിൽ|$1 ഭാഷകളിൽ}} ലഭ്യമാണ്',
@@ -12961,6 +13172,7 @@ $messages['ml'] = array(
 	'mobile-frontend-last-modified-with-user-years' => '[$4 അവസാനം {{GENDER:$1|തിരുത്തിയത്}} {{PLURAL:$3|ഒരു വർഷം|$3 വർഷം}} മുമ്പ്] {{PLURAL:$5|[$6 $2]|0=ഒരു അജ്ഞാത ഉപയോക്താവ്}} ആണ്',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 അവസാനം {{GENDER:$1|തിരുത്തിയത്}}] ഇപ്പോഴാണ്, ചെയ്തത് {{PLURAL:$4|[$5 $2]|0=ഒരു അജ്ഞാത ഉപയോക്താവ്}} ആണ്',
 	'mobile-frontend-learn-more' => 'കൂടുതൽ അറിയുക',
+	'mobile-frontend-view-source' => 'മൂലരൂപം കാണുക',
 	'mobile-frontend-account-create-submit' => 'അംഗത്വമെടുക്കുക',
 	'mobile-frontend-password-confirm-placeholder' => 'രഹസ്യവാക്ക് സ്ഥിരീകരിക്കുക',
 	'mobile-frontend-account-create-email-placeholder' => 'ഇമെയിൽ വിലാസം (ഐച്ഛികം)',
@@ -13023,7 +13235,7 @@ $messages['ml'] = array(
 	'mobile-frontend-nearby-link' => 'ഈ താൾ മുഴുവനും വായിക്കുക',
 	'mobile-frontend-nearby-directions' => 'ഇവിടേയ്ക്ക് എത്തുക',
 	'mobile-frontend-donate-image-nouploads' => 'അപ്‌ലോഡുകൾ ഒന്നുമില്ല.',
-	'mobile-frontend-donate-image-login' => '{{SITENAME} സംരംഭത്തിലെ മീഡിയകൾ താങ്കളെപ്പോലെയുള്ളവർ സംഭാവന ചെയ്തതാണ്.', # Fuzzy
+	'mobile-frontend-donate-image-login' => '{{SITENAME}} സംരംഭത്തിലെ മീഡിയകൾ താങ്കളെപ്പോലെയുള്ളവർ സംഭാവന ചെയ്തതാണ്.',
 	'mobile-frontend-donate-image-login-action' => 'താങ്കളുടെ പക്കലുള്ള മീഡിയ പങ്ക് വെയ്ക്കാൻ പ്രവേശിക്കുക.',
 	'mobile-frontend-donate-image-signup-action' => 'താങ്കളുടെ പക്കലുള്ള മീഡിയ ലോകവുമായി പങ്ക് വെയ്ക്കാൻ അംഗത്വമെടുക്കുക.',
 	'mobile-frontend-photo-upload-disabled' => 'ഈ താളിൽ ചിത്രങ്ങളൊന്നും ആവശ്യമില്ല.',
@@ -13048,10 +13260,19 @@ $messages['ml'] = array(
 	'mobile-frontend-watchlist-removed' => '$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിൽ നിന്ന് നീക്കി',
 	'mobile-frontend-watchlist-view' => 'താങ്കൾ ശ്രദ്ധിക്കുന്നവയുടെ പട്ടിക കാണുക',
 	'mobile-frontend-watchlist-more' => 'കൂടുതൽ',
-	'mobile-frontend-watchlist-cta' => 'ഈ താൾ ശ്രദ്ധിക്കുന്നവയുടെ പട്ടികയിലേക്ക് ചേർക്കാൻ ലോഗിൻ ചെയ്യുക അല്ലെങ്കിൽ അംഗത്വമെടുക്കുക.', # Fuzzy
+	'mobile-frontend-watchlist-cta' => 'ഈ താളും അതിലെ മാറ്റങ്ങളും ശ്രദ്ധിക്കുക.',
 	'mobile-frontend-watchlist-cta-button-login' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-watchlist-cta-button-signup' => 'അംഗത്വമെടുക്കുക',
-	'mobile-frontend-watch-login' => 'ശ്രദ്ധിക്കുന്ന താളുകൾ കാണണമെങ്കിൽ താങ്കൾ പ്രവേശിച്ചിരിക്കണം.', # Fuzzy
+	'mobile-frontend-watchlist-purpose' => 'ശ്രദ്ധിക്കുന്നവയുടെ പട്ടിക താളുകൾ പിന്നീട് വായിക്കാൻ ശേഖരിക്കാനും അവയിലെ മാറ്റങ്ങൾ എളുപ്പത്തിലറിയാനും സഹായമാണ്.',
+	'mobile-frontend-watchlist-login-action' => 'കാണാനായി പ്രവേശിക്കുക.',
+	'mobile-frontend-watchlist-signup-action' => 'ഒരെണ്ണം തുടങ്ങാൻ പേരുചേർക്കുക.',
+	'mobile-frontend-generic-login' => 'താങ്കളെപ്പോലെയുള്ളവരാണ്  {{SITENAME}}  പടുത്തുയർത്തിയിരിക്കുന്നത്.',
+	'mobile-frontend-generic-login-action' => 'സംഭാവന ചെയ്യാനായി പ്രവേശിക്കുക.',
+	'mobile-frontend-generic-signup-action' => 'സംഭാവന ചെയ്യാനായി പേരുചേർക്കുക.',
+	'mobile-frontend-watch-login' => '$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിലേയ്ക്ക് ചേർക്കുക.',
+	'mobile-frontend-edit-login' => '$1 എന്ന താൾ മെച്ചപ്പെടുത്താൻ സഹായിക്കുക',
+	'mobile-frontend-edit-login-action' => 'തിരുത്താനായി പ്രവേശിക്കുക.',
+	'mobile-frontend-edit-signup-action' => 'തിരുത്താനായി പേരുചേർക്കുക.',
 	'mobile-frontend-watchlist-a-z' => 'പട്ടിക',
 	'mobile-frontend-watchlist-feed' => 'പുതുക്കപ്പെട്ടവ',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'താളിനു മുകളിലുള്ള നക്ഷത്രത്തിൽ ഞെക്കുക',
@@ -13061,7 +13282,7 @@ $messages['ml'] = array(
 	'mobile-frontend-changeslist-ip' => 'അജ്ഞാത ഉപയോക്താവ്',
 	'mobile-frontend-changeslist-nocomment' => 'തിരുത്തലിനു സംഗ്രഹമില്ല',
 	'mobile-frontend-watchlist-filter-all' => 'എല്ലാം',
-	'mobile-frontend-watchlist-filter-articles' => 'ലേഖനങ്ങൾ',
+	'mobile-frontend-watchlist-filter-articles' => 'താളുകൾ',
 	'mobile-frontend-watchlist-filter-talk' => 'സംവാദം',
 	'mobile-frontend-watchlist-filter-other' => 'മറ്റുള്ളവ',
 	'mobile-frontend-watchlist-modified' => 'പുതുക്കപ്പെട്ടത് $1',
@@ -13074,7 +13295,6 @@ $messages['ml'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|ഒരു ബൈറ്റ്|$1 ബൈറ്റുകൾ}} നീക്കംചെയ്തിരിക്കുന്നു',
 	'mobile-frontend-diffview-explained' => 'താഴെപ്പറയുന്ന വരികൾ ചേർക്കുകയും (+) നീക്കം ചെയ്യുകയും (-)‌‌ ചെയ്തിട്ടുണ്ട്:',
 	'mobile-frontend-thanked-notice' => 'താങ്കൾക്ക് $1 എന്ന ഉപയോക്താവിന്റെ തിരുത്തൽ ഇഷ്ടപ്പെട്ടുവെന്ന് {{GENDER:$2|അദ്ദേഹത്തോട്|അവരോട്|അവരോട്}} പറഞ്ഞിരിക്കുന്നു.',
-	'mobile-frontend-table' => 'പട്ടിക $1',
 	'mobile-frontend-saving-exit-page' => 'താങ്കളുടെ സംഭാവന ഇപ്പോഴും സേ‌വ് ചെയ്തുകൊണ്ടിരിക്കുന്നു. താങ്കൾ ഇപ്പോൾ പോവുകയാണെങ്കിൽ, താങ്കളുടെ സേവനങ്ങൾ നഷ്ടപ്പെടുന്നതാണ്. പുറത്തുകടക്കണമെന്ന് താങ്കൾക്കുറപ്പാണോ?',
 	'mobile-frontend-photo-upload' => 'ഈ താളിലേയ്ക്ക് ഒരു ചിത്രം ചേർക്കുക',
 	'mobile-frontend-photo-article-edit-comment' => 'താളിൽ ഉപയോഗിക്കാനായി ചിത്രം ചേർത്തു',
@@ -13115,12 +13335,14 @@ $messages['ml'] = array(
 	'mobile-frontend-image-heading-describe' => "ചിത്രം '''വിവരിക്കുക'''",
 	'mobile-frontend-image-uploading' => "ചിത്രം '''അപ്‌ലോഡ് ചെയ്യുന്നു'''...",
 	'mobile-frontend-image-cancel-confirm' => 'അപ്‌ലോഡ് റദ്ദാക്കണോ?',
+	'mobile-frontend-editor-redirect-title' => 'തിരുത്തൽ സൗകര്യത്തിലേക്ക് തിരിച്ചുവിടുന്നു...',
 	'mobile-frontend-editor-unavailable-header' => 'എഡിറ്റർ ലഭ്യമല്ല്ല',
 	'mobile-frontend-editor-unavailable' => 'മൊബൈലുപയോഗിച്ചുള്ള തിരുത്തൽ ഇപ്പോൾ താങ്കളുടെ ബ്രൗസറിൽ ലഭ്യമല്ല. ദയവായി മറ്റൊരു ബ്രൗസർ പരീക്ഷിക്കുക.',
 	'mobile-frontend-editor-undo-unsupported' => 'മൊബൈൽ ഉപകരണങ്ങളിൽ തിരസ്കരിക്കൽ പിന്തുണയ്ക്കുന്നില്ല.',
 	'mobile-frontend-editor-newpage-prompt' => 'ഈ താൾ നിലവിലില്ല. എന്തുകൊണ്ടത് സൃഷ്ടിച്ചുകൂടാ?',
-	'mobile-frontend-editor-disabled' => 'ഈ താൾ തിരുത്താൻ താങ്കൾക്ക് അനുവാദമില്ല.', # Fuzzy
-	'mobile-frontend-editor-cta' => 'മൊബൈലിൽ താളുകൾ തിരുത്താൻ താങ്കൾ പ്രവേശിച്ചിരിക്കേണ്ടതുണ്ട്.', # Fuzzy
+	'mobile-frontend-editor-disabled' => 'ഈ താൾ നശീകരണപ്രവർത്തനങ്ങളെ നേരിടാൻ സംരക്ഷിച്ചിരിക്കുന്നതാണ്.',
+	'mobile-frontend-editor-blocked' => 'താങ്കളുടെ അംഗത്വത്തെ തിരുത്തുന്നതിൽ നിന്നും തടഞ്ഞിരിക്കുന്നു.',
+	'mobile-frontend-editor-cta' => 'ഈ താൾ മെച്ചപ്പെടുത്താൻ സഹായിക്കുക!',
 	'mobile-frontend-editor-edit' => 'തിരുത്തുക',
 	'mobile-frontend-editor-continue' => 'തുടരുക',
 	'mobile-frontend-editor-save' => 'സേവ് ചെയ്യുക',
@@ -13140,13 +13362,15 @@ $messages['ml'] = array(
 	'mobile-frontend-editor-preview-header' => 'എങ്ങനെയുണ്ടെന്ന് കാണുക',
 	'mobile-frontend-editor-error-preview' => 'പിഴവ്, പ്രിവ്യൂ എടുക്കുന്നതിനിടെ എന്തോ അപ്രതീക്ഷിതമായത് സംഭവിച്ചു. ദയവായി അടച്ച് വീണ്ടും ശ്രമിക്കുക.',
 	'mobile-frontend-editor-tutorial-summary' => 'അടയാളഭാഷ കണ്ടെ പേടിക്കേണ്ടതില്ല. താൾ $1 മെച്ചപ്പെടുത്താൻ ശ്രമിക്കുക.',
+	'mobile-frontend-editor-tutorial-alt-summary' => 'എന്തുകൊണ്ട് $1 മെച്ചപ്പെടുത്തിക്കൂടാ? എഴുത്തുരീതിയെ ഭയക്കേണ്ടതില്ല!',
 	'mobile-frontend-editor-tutorial-confirm' => 'തിരുത്തൽ തുടങ്ങുക',
 	'mobile-frontend-editor-captcha-try-again' => 'കോഡ് തെറ്റാണ്, വീണ്ടും ശ്രമിക്കുക.',
 	'mobile-frontend-editor-abusefilter-warning' => 'മുന്നറിയിപ്പ്: ഈ തിരുത്ത് സേവ് ചെയ്യണമെന്നുറപ്പാണോ? അതിൽ ഒരു പ്രശ്നമുണ്ടെന്ന് തോന്നുന്നു.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'തിരുത്തിൽ ഒരു പ്രശ്നം കണ്ടെത്താനായതിനാൽ അത് സേവ് ചെയ്യാനാവില്ല.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'കൂടുതൽ വായിക്കുക',
-	'mobile-frontend-editor-editing-page' => "$1 '''തിരുത്തുന്നു'''", # Fuzzy
-	'mobile-frontend-editor-previewing-page' => "$1 '''എങ്ങനെയുണ്ടെന്ന് കാണുന്നു'''", # Fuzzy
+	'mobile-frontend-editor-editing-page' => '<span> $1</span> <strong>തിരുത്തുന്നു</strong>',
+	'mobile-frontend-editor-previewing-page' => '<span> $1</span> <strong>എങ്ങനെയുണ്ടെന്ന് കാണുന്നു</strong>',
+	'mobile-frontend-editor-viewing-source-page' => '<span> $1</span> എന്ന താളിന്റെ <strong>മൂലരൂപം കാണുന്നു</strong>',
 	'tag-mobile_edit' => 'മൊബൈൽ സൈറ്റ്',
 	'tag-mobile_edit-description' => 'മൊബൈൽ സൈറ്റ് വഴി വരുത്തിയ തിരുത്തുകൾ',
 	'mobile-frontend-drawer-cancel' => 'റദ്ദാക്കുക',
@@ -13162,25 +13386,27 @@ $messages['ml'] = array(
 	'mobile-frontend-talk-reply-success' => 'താങ്കളുടെ മറുപടി സംവാദത്താളിൽ വിജയകരമായി ചേർത്തിട്ടുണ്ട്.',
 	'mobile-frontend-talk-reply-info' => 'താങ്കളുടെ മറുപടിയിൽ താങ്കളുടെ ഉപയോക്തൃനാമം അടക്കമുള്ള ഒപ്പ് സ്വയമേവ ചേർക്കുന്നതാണ്.',
 	'mobile-frontend-talk-reply' => 'മറുപടി',
+	'mobile-frontend-talk-topic-feedback' => 'സംവാദത്താളിൽ പുതിയ വിഷയം ചേർത്തിരിക്കുന്നു!',
 	'mobile-frontend-media-details' => 'വിശദാംശങ്ങൾ',
 	'mobile-frontend-media-license-link' => 'അനുമതി വിവരങ്ങൾ',
 	'abusefilter-edit-builder-vars-user-mobile' => 'ഉപയോക്താവ് മൊബൈൽ സമ്പർക്കമുഖം ഉപയോഗിച്ചാണോ അല്ലയോ തിരുത്തുന്നത്',
 	'mobile-frontend-profile-title' => 'എന്നെപ്പറ്റി',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|അപ്‌ലോഡ് ചെയ്തത്}} {{PLURAL:$1|ഇന്നലെ|$1 ദിവസം മുമ്പ്|0=ഇന്ന്}} ആണ്.',
-	'mobile-frontend-profile-usertalk' => 'സംവദിക്കുക ($1)', # Fuzzy
+	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|$1 എന്ന ഉപയോക്താവിനോട് സംവദിക്കുക}}',
 	'mobile-frontend-profile-error' => 'അത്തിപ്പാറ അമ്മച്ചീ!',
 	'mobile-frontend-profile-noargs' => 'ഉപയോക്തൃനാമം നൽകിയിട്ടില്ല. ഉപയോക്തൃവിവരങ്ങൾ കാണാനായി ഒരു ഉപയോക്തൃനാമം നൽകുക.',
 	'mobile-frontend-profile-nouser' => 'ഈ പേരിൽ ഒരു ഉപയോക്താവുമില്ല. ഉപയോക്തൃനാമങ്ങൾ കേസ് സെൻസിറ്റീവ് ആയതിനാൽ താങ്കൾ ടൈപ്പ് ചെയ്തത് ശരിയാണോയെന്ന് ദയവായി പരിശോധിക്കുക.',
 	'mobile-frontend-profile-activity-heading' => 'പ്രവൃത്തികളും സംഭാവനകളും',
 	'mobile-frontend-profile-userpage-link' => 'ഉപയോക്തൃതാൾ കാണുക.',
 	'mobile-frontend-requires-optin' => 'ബീറ്റ മട്ട് തിരഞ്ഞെടുക്കാതെ ഈ താൾ താങ്കൾക്ക് ലഭ്യമായിരിക്കില്ല. അത് തിരഞ്ഞെടുക്കുവാൻ [[Special:MobileOptions|സജ്ജീകരണങ്ങൾ താൾ]] സന്ദർശിക്കുക.',
-	'mobile-frontend-profile-last-thanked' => '[[$2]] എന്ന താളിൽ ചെയ്ത തിരുത്തിന് [[Special:UserProfile/$1|$1]] {{GENDER:$1|നന്ദി രേഖപ്പെടുത്തിയിരിക്കുന്നു}}.', # Fuzzy
+	'mobile-frontend-profile-last-thanked' => '[[$2]] എന്ന താളിൽ ചെയ്ത തിരുത്തിന് [[Special:UserProfile/$1|$1]] {{GENDER:$3|നന്ദി രേഖപ്പെടുത്തിയിരിക്കുന്നു}}.',
 	'mobile-frontend-profile-last-edit' => '[[:$1]] എന്ന താൾ {{PLURAL:$2|ഇന്നലെ|$2 ദിവസങ്ങൾ മുമ്പ്|0=ഇന്ന്}} {{GENDER:$3|തിരുത്തിയിട്ടുണ്ട്}}.',
 	'mobile-frontend-profile-footer-days' => '{{PLURAL:$2|ഒരു ദിവസം|$2 ദിവസം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]]', # Fuzzy
 	'mobile-frontend-profile-footer-months' => '{{PLURAL:$2|ഒരു മാസം|$2 മാസം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]]', # Fuzzy
 	'mobile-frontend-profile-footer-years' => '{{PLURAL:$2|ഒരു വർഷം|$2 വർഷം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]]', # Fuzzy
 	'mobile-frontend-geonotahack' => 'ഈ താളിന്റെ സമീപസ്ഥം',
 	'beta-feature-geonotahack' => 'ഈ താളിനു സമീപം',
+	'mobile-frontend-mainpage-cta-button' => 'ഈ താൾ മെച്ചപ്പെടുത്തുക',
 );
 
 /** Mongolian (монгол)
@@ -13707,6 +13933,7 @@ $messages['nap'] = array(
  * @author Lokal Profil
  * @author Nghtwlkr
  * @author Njardarlogar
+ * @author Nsaa
  */
 $messages['nb'] = array(
 	'mobilefrontend-random-explain' => 'Interesserer denne tilfeldige siden deg?',
@@ -13765,13 +13992,13 @@ $messages['nb'] = array(
 	'mobile-frontend-history-404-title' => 'Ugyldig tittel angitt', # Fuzzy
 	'mobile-frontend-history-404-desc' => 'Kan ikke se på historikken for en side som ikke eksisterer. Den kan ha blitt slettet eller du kan ha fulgt en ugyldig lenke.',
 	'mobile-frontend-history-summary' => 'Sidehistorikk for [[:$1]]',
-	'mobile-frontend-last-modified-date' => 'Sist endra $1, kl. $2',
-	'mobile-frontend-last-modified-seconds' => 'Sist endra for {{PLURAL:$1|$1 sekund|$1 sekunder}} siden',
-	'mobile-frontend-last-modified-minutes' => 'Sist endra for {{PLURAL:$1|$1 minutt|$1 minutter}} siden',
-	'mobile-frontend-last-modified-hours' => 'Sist endra for {{PLURAL:$1|$1 time|$1 timer}} siden',
-	'mobile-frontend-last-modified-days' => 'Sist endra for {{PLURAL:$1|$1 dag|$1 dager}} siden',
-	'mobile-frontend-last-modified-months' => 'Sist endra for {{PLURAL:$1|$1 måned|$1 måneder}} siden',
-	'mobile-frontend-last-modified-years' => 'Sist endra for {{PLURAL:$1|$1 år}} siden',
+	'mobile-frontend-last-modified-date' => 'Sist endret $1, kl. $2',
+	'mobile-frontend-last-modified-seconds' => 'Sist endret for {{PLURAL:$1|$1 sekund|$1 sekunder}} siden',
+	'mobile-frontend-last-modified-minutes' => 'Sist endret for {{PLURAL:$1|$1 minutt|$1 minutter}} siden',
+	'mobile-frontend-last-modified-hours' => 'Sist endret for {{PLURAL:$1|$1 time|$1 timer}} siden',
+	'mobile-frontend-last-modified-days' => 'Sist endret for {{PLURAL:$1|$1 dag|$1 dager}} siden',
+	'mobile-frontend-last-modified-months' => 'Sist endret for {{PLURAL:$1|$1 måned|$1 måneder}} siden',
+	'mobile-frontend-last-modified-years' => 'Sist endret for {{PLURAL:$1|$1 år}} siden',
 	'mobile-frontend-last-modified-just-now' => 'Sist redigert nå nettopp',
 	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Sist {{GENDER:$1|redigert}} for {{PLURAL:$3|$3 sekund|$3 sekunder}} siden] av {{PLURAL:$5|[$6 $2]|0=en anonym bruker}}',
 	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Sist {{GENDER:$1|redigert}} for {{PLURAL:$3|$3 minutt|$3 minutter}} siden] av  {{PLURAL:$5|[$6 $2]|0=en anonym bruker}}.',
@@ -13890,7 +14117,6 @@ $messages['nb'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte}} fjernet',
 	'mobile-frontend-diffview-explained' => 'Følgende linjer ble lagt til (+) og fjernet (-):',
 	'mobile-frontend-thanked-notice' => '$1 fikk høre at du likte {{GENDER:$2|hans|hennes|vedkommendes}} redigering.',
-	'mobile-frontend-table' => 'Tabell $1',
 	'mobile-frontend-saving-exit-page' => 'Bidraget ditt holder fortsatt på å lagres. Hvis du forlater siden nå, vil bidraget gå tapt. Er du sikker på at du vil avslutte?',
 	'mobile-frontend-photo-upload' => 'Legg til et bilde på denne siden',
 	'mobile-frontend-photo-article-edit-comment' => 'Lagt til bilde for bruk på siden',
@@ -13982,7 +14208,7 @@ $messages['nb'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'Hvorvidt en bruker redigerer fra mobilgrensesnittet',
 	'mobile-frontend-profile-title' => 'Brukerprofil',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Lastet opp}} {{PLURAL:$1|i går|for $1 dager siden|0=i dag}}.',
-	'mobile-frontend-profile-usertalk' => 'Diskutér med $1',
+	'mobile-frontend-profile-usertalk' => 'Diskutér med $1', # Fuzzy
 	'mobile-frontend-profile-noargs' => 'Oppgi et brukernavn for å vise en profil.', # Fuzzy
 	'mobile-frontend-profile-nouser' => 'Ikke-eksisterende eller ugyldig brukernavn', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'Aktivitet og bidrag',
@@ -16736,6 +16962,7 @@ $messages['roa-tara'] = array(
  * @author Kaganer
  * @author Lockal
  * @author MaxSem
+ * @author NBS
  * @author Okras
  * @author Ole Yves
  * @author Rave
@@ -16876,7 +17103,7 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 м}}', # Fuzzy
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} не может выяснить, где вы находитесь… Попробовать ещё раз?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Попробуйте найти открытую местность с более лучшей связью.',
-	'mobile-frontend-nearby-permission' => '{{SITENAME}} не имеет разрешения на доступ к определению вашего местоположения.',
+	'mobile-frontend-nearby-permission' => '{{SITENAME}} не имеет разрешения на доступ к определению вашего местоположения',
 	'mobile-frontend-nearby-permission-guidance' => 'Пожалуйста, убедитесь, что вы даёте разрешение на показ своего местоположения. Возможно, вам нужно проверить настройки определения местоположения вашего браузера.',
 	'mobile-frontend-nearby-noresults' => 'Что-то тихо здесь… Поблизости нет ни одной страницы.',
 	'mobile-frontend-nearby-noresults-guidance' => 'Попробуйте создать новую страницу или добавить местоположение к уже существующей',
@@ -16929,10 +17156,10 @@ $messages['ru'] = array(
 	'mobile-frontend-diffview-404-title' => 'Некорректная ссылка на версию',
 	'mobile-frontend-diffview-404-desc' => 'Не существует версии с запрошенным вами идентификатором',
 	'mobile-frontend-diffview-title' => 'Изменения',
-	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|правка|правок|правки}}', # Fuzzy
+	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|правка|правок|правки}}',
 	'mobile-frontend-diffview-anonymous' => 'Анонимный участник',
-	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|байт|байтов|байта}} добавлено', # Fuzzy
-	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт|байтов|байта}} убрано', # Fuzzy
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|байт|байтов|байта}} добавлено',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт|байтов|байта}} убрано',
 	'mobile-frontend-diffview-explained' => 'Следующие строки были добавлены (+) и удалены (-):',
 	'mobile-frontend-thanked-notice' => '$1 {{GENDER:$2|был оповещён|была оповещена|были оповещены}}, что вам понравилась {{GENDER:$2|его|её|их}} правка.',
 	'mobile-frontend-saving-exit-page' => 'Ваша правка всё ещё сохраняется. Если вы покинете страницу, ваши изменения будут потеряны. Вы уверены, что хотите уйти?',
@@ -16970,7 +17197,7 @@ $messages['ru'] = array(
 	'mobile-frontend-photo-license' => 'Загружая изображение, вы соглашаетесь с нашими [//wikimediafoundation.org/wiki/Terms_of_use/ru Условиями использования], а также соглашаетесь опубликовать своё изображение по [//creativecommons.org/licenses/by-sa/3.0/ лицензиии Creative Commons Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Отправить',
 	'mobile-frontend-photo-cancel' => 'Отмена',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> загрузка|<span>$1</span> загрузок|<span>$1</span> загрузки}}', # Fuzzy
+	'mobile-frontend-photo-upload-user-count' => '<span>$1</span> {{PLURAL:$1|загрузка|загрузок|загрузки}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ загрузок',
 	'mobile-frontend-image-heading-describe' => "'''Опишите''' изображение",
 	'mobile-frontend-image-uploading' => "'''Загрузка''' изображения…",
@@ -16978,8 +17205,8 @@ $messages['ru'] = array(
 	'mobile-frontend-editor-unavailable' => 'Мобильное редактирование недоступно в настоящее время в вашем браузере. Пожалуйста, попробуйте другой браузер.',
 	'mobile-frontend-editor-undo-unsupported' => 'Отмена в настоящее время не поддерживается на мобильных устройствах.',
 	'mobile-frontend-editor-newpage-prompt' => 'Эта страница не существует. Почему бы не набраться смелости и создать её?',
-	'mobile-frontend-editor-disabled' => 'Вам не разрешено редактировать эту страницу.', # Fuzzy
-	'mobile-frontend-editor-cta' => 'Вам необходимо представиться системе, чтоб редактировать страницы на мобильном телефоне.', # Fuzzy
+	'mobile-frontend-editor-disabled' => 'Эта страница защищена ради предотвращения вандализма.',
+	'mobile-frontend-editor-cta' => 'Помогите улучшить эту страницу!',
 	'mobile-frontend-editor-edit' => 'Править',
 	'mobile-frontend-editor-continue' => 'Продолжить',
 	'mobile-frontend-editor-save' => 'Сохранить',
@@ -17005,8 +17232,8 @@ $messages['ru'] = array(
 	'mobile-frontend-editor-abusefilter-warning' => 'Предупреждение: Вы уверены, что вы хотите сохранить эту правку? С этим могут возникнуть проблемы.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Эта правка не может быть сохранена, поскольку мы обнаружили проблему.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'Читать подробнее',
-	'mobile-frontend-editor-editing-page' => '<strong>Редактирование</strong> <span>$1</span>', # Fuzzy
-	'mobile-frontend-editor-previewing-page' => '<strong>Предварительный просмотр</strong> <span>$1</span>', # Fuzzy
+	'mobile-frontend-editor-editing-page' => '<strong>Редактирование</strong> <span>$1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>Предварительный просмотр</strong> <span>$1</span>',
 	'tag-mobile_edit' => 'Правка с моб. устройства',
 	'tag-mobile_edit-description' => 'Правки, сделанные через мобильную версию сайта',
 	'mobile-frontend-drawer-cancel' => 'Отмена',
@@ -17026,8 +17253,8 @@ $messages['ru'] = array(
 	'mobile-frontend-media-license-link' => 'Информация о лицензии',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Редактирует ли участник через мобильный интерфейс',
 	'mobile-frontend-profile-title' => 'Профиль участника',
-	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Загружено}} {{PLURAL:$1|вчера|$1 дней назад|$1 дня назад|0=сегодня}}.', # Fuzzy
-	'mobile-frontend-profile-usertalk' => 'Написать участнику $1', # Fuzzy
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Загружено}} {{PLURAL:$1|$1 день назад|$1 дней назад|$1 дня назад|0=сегодня|1=вчера}}.',
+	'mobile-frontend-profile-usertalk' => 'Написать {{GENDER:$1|участнику|участнице}} $1',
 	'mobile-frontend-profile-error' => 'О нет!',
 	'mobile-frontend-profile-noargs' => 'Имя не задано. Пожалуйста, укажите имя участника, чтобы просмотреть профиль.',
 	'mobile-frontend-profile-nouser' => 'Участника с таким именем не существует. Имена чувствительны к регистру, так что, пожалуйста, проверьте, набрано ли оно правильно.',
@@ -17035,10 +17262,10 @@ $messages['ru'] = array(
 	'mobile-frontend-profile-userpage-link' => 'Посетить страницу участника.',
 	'mobile-frontend-requires-optin' => 'Эта страница будет недоступна, пока вы не перейдёте в бета-режим. Зайдите для этого на страницу [[Special:MobileOptions|настроек]].',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] поблагодарил{{GENDER:$3||а}} за правку страницы [[$2]].',
-	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Отредактирована}} страница [[:$1]], {{PLURAL:$2|вчера|$2 дней назад|$2 дня назад|0=сегодня}}.', # Fuzzy
-	'mobile-frontend-profile-footer-days' => 'Присоединился {{PLURAL:$2|1=1 дня|$2 дней}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1=1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].', # Fuzzy
-	'mobile-frontend-profile-footer-months' => 'Присоединился более {{PLURAL:$2|1=1 месяца|$2 месяцев}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1=1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].', # Fuzzy
-	'mobile-frontend-profile-footer-years' => 'Присоединился более {{PLURAL:$2|1=1 года|$2 лет}} назад с [[Special:Contributions/$1|{{PLURAL:$3|1=1 правкой|$3 правками}}]] и [[Special:Uploads/$1|{{PLURAL:$4|1 загрузкой|$4 загрузками|500=500+ загрузками}}]].', # Fuzzy
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Отредактирована}} страница [[:$1]], {{PLURAL:$2|$2 день назад|$2 дней назад|$2 дня назад|1=вчера|0=сегодня}}.',
+	'mobile-frontend-profile-footer-days' => 'Присоединился {{PLURAL:$2|$2 день назад|$2 дней назад|$2 дня назад|1=вчера|0=сегодня}} с [[Special:Contributions/$1|{{PLURAL:$3|$3 правкой|$3 правками|$3 правками|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=500+ загрузками}}]].', # Fuzzy
+	'mobile-frontend-profile-footer-months' => 'Присоединился {{PLURAL:$2|$2 месяц|$2 месяцев|$2 месяцев }} назад [[Special:Contributions/$1|{{PLURAL:$3|с $3 правкой|с $3 правками|с $3 правками|0=без правок|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=500+ загрузками}}]].', # Fuzzy
+	'mobile-frontend-profile-footer-years' => 'Присоединился более {{PLURAL:$2|года|$2 лет}} назад [[Special:Contributions/$1|{{PLURAL:$3|с $3 правкой|с $3 правками|с $3 правками|0=без правок|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=500+ загрузками}}]].', # Fuzzy
 	'mobile-frontend-profile-description-placeholder' => 'Почему {{GENDER:$1|вы}} редактируете? Что {{GENDER:$1| вы}} хотите улучшить? Поделитесь {{GENDER:$1|вашими}} интересами с другими.',
 	'mobile-frontend-profile-edit-summary' => 'Обновление введения профиля участника',
 	'mobile-frontend-geonotahack' => 'Места поблизости',
@@ -17214,6 +17441,15 @@ $messages['scn'] = array(
 	'mobile-frontend-footer-license' => 'Cuntinutu dispunìbbili sutta la [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-copyright' => "Lu testu è dispunibbili secunnu la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>licenza Creative Commons Attribuzione-Condividi allo stesso modo</a>; si ponnu applicari àutri cunnizzioni. Talia li <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>cunnizziuni d'usu</a> pi li dittagghi. {{SITENAME}} è nu marchiu arriggistratu dâ <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, n'urganizzazzioni senza scopu di lucru", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Cuntatti',
+);
+
+/** Sassaresu (Sassaresu)
+ * @author Jun Misugi
+ */
+$messages['sdc'] = array(
+	'mobile-frontend-languages-header' => 'Linghi',
+	'mobile-frontend-watchlist-filter-articles' => 'Pàgini',
+	'mobile-frontend-mainpage-cta-prompt' => "Kistha pàgina ha bisognu d'aggiuddu tòiu",
 );
 
 /** Serbo-Croatian (srpskohrvatski / српскохрватски)
@@ -18317,6 +18553,7 @@ bilder av affischer, bokomslag, etc.',
 
 /** Swahili (Kiswahili)
  * @author Kwisha
+ * @author Lloffiwr
  * @author Muddyb Blast Producer
  * @author Stephenwanjau
  */
@@ -18327,7 +18564,6 @@ $messages['sw'] = array(
 	'mobile-frontend-save-settings' => 'Hifadhi mpangilio', # Fuzzy
 	'mobile-frontend-random-button' => 'Bahatisha',
 	'mobile-frontend-back-to-top-of-section' => 'Rudi Sehemu A',
-	'mobile-frontend-close-section' => 'Funga sehemu hii',
 	'mobile-frontend-regular-site' => 'Onesha ukurasa huu katika {{SITENAME}} ya kawaida',
 	'mobile-frontend-wml-continue' => 'Endelea...',
 	'mobile-frontend-wml-back' => 'Nyuma...',
@@ -18357,6 +18593,7 @@ $messages['sw'] = array(
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} inapatikana katika $1 {{PLURAL:$1|language|lugha}}. Toleo zote zinazopatikana zimeorodhweshwa hapa chini',
 	'mobile-frontend-page-menu-contents' => 'Maudhui',
 	'mobile-frontend-page-menu-history' => 'Historia',
+	'mobile-frontend-edit-login' => "Helpwch wella'r dudalen $1.",
 );
 
 /** Silesian (ślůnski)
