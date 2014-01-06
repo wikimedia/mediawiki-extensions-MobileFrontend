@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_da52ae69",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 836,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T17:29:09Z",
+      "side": 1,
+      "message": "It seems mobile.newusers is loaded in stable, requires stable overlays (mobile.overlays), but then depends on beta editor. Is this correct?",
+      "revId": "735f3b36b4825ca9c06050e6ba24d031f1d88de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_3ad19ad0",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T17:29:09Z",
+      "side": 1,
+      "message": "When and why would this happen?",
+      "revId": "735f3b36b4825ca9c06050e6ba24d031f1d88de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_1ad816f3",
+        "filename": "javascripts/modules/editorNew/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T17:29:09Z",
+      "side": 1,
+      "message": "Why not call it mobileLeftNavbarEditCTA?",
+      "revId": "735f3b36b4825ca9c06050e6ba24d031f1d88de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
