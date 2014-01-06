@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_152b49dc",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T19:09:21Z",
+      "side": 1,
+      "message": "I would worry about it when it happens. And when it happens I\u0027d rather track the real issue.",
+      "parentUuid": "eeebdf60_b5bb7db9",
+      "revId": "735f3b36b4825ca9c06050e6ba24d031f1d88de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_1ad816f3",
         "filename": "javascripts/modules/editorNew/EditorOverlay.js",
         "patchSetId": 7
