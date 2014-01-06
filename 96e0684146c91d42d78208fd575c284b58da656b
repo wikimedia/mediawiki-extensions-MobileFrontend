@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_980b0d2d",
+        "filename": "includes/Resources.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T22:41:41Z",
+      "side": 1,
+      "message": "Isn\u0027t RL case-sensitive? I prefer newUsers. When I fix it, I get another error though:\n\nError: Module already exists: ContentOverlay Error {}\n\nThat\u0027s because you include the same scripts in mobile.newusers and mobile.newUsers.beta. Instead, I think, mobile.newUsers.beta should depend on mobile.newUsers.",
+      "revId": "96e0684146c91d42d78208fd575c284b58da656b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
