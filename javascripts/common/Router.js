@@ -12,6 +12,10 @@
 		return false;
 	}
 
+	/**
+	 * @class
+	 * @name Router
+	 */
 	function Router() {
 		var self = this;
 		// use an object instead of an array for routes so that we don't
@@ -49,6 +53,8 @@
 	// FIXME: remove when OverlayManager used everywhere
 	/**
 	 * Check the current route and run appropriate callback if it matches.
+	 * @name Router.prototype.checkRoute
+	 * @function
 	 */
 	Router.prototype.checkRoute = function() {
 		var hash = this.getPath();
@@ -58,14 +64,16 @@
 		} );
 	};
 
-	// FIXME: remove when OverlayManager used everywhere
 	/**
 	 * Bind a specific callback to a hash-based route, e.g.
+	 * FIXME: remove when OverlayManager used everywhere
 	 *
 	 * @example
 	 * route( 'alert', function() { alert( 'something' ); } );
 	 * route( /hi-(.*)/, function( name ) { alert( 'Hi ' + name ) } );
 	 *
+	 * @name Router.prototype.route
+	 * @function
 	 * @param {Object} path String or RegExp to match.
 	 * @param {Function} callback Callback to be run when hash changes to one
 	 * that matches.
@@ -83,6 +91,8 @@
 	 * Navigate to a specific route. This is only a wrapper for changing the
 	 * hash now.
 	 *
+	 * @name Router.prototype.navigate
+	 * @function
 	 * @param {string} path String with a route (hash without #).
 	 */
 	Router.prototype.navigate = function( path ) {
@@ -91,6 +101,8 @@
 
 	/**
 	 * Navigate to the previous route. This is a wrapper for window.history.back
+	 * @name Router.prototype.back
+	 * @function
 	 */
 	Router.prototype.back = function() {
 		window.history.back();
@@ -99,12 +111,19 @@
 	/**
 	 * Get current path (hash).
 	 *
+	 * @name Router.prototype.getPath
+	 * @function
 	 * @return {string} Current path.
 	 */
 	Router.prototype.getPath = function() {
 		return window.location.hash.slice( 1 );
 	};
 
+	/**
+	 * @name Router.prototype.isSupported
+	 * @function
+	 * @return {Boolean}
+	 */
 	Router.prototype.isSupported = function() {
 		return 'onhashchange' in window;
 	};

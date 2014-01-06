@@ -18,6 +18,11 @@
 	// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
 	// https://github.com/Modernizr/Modernizr/issues/167
 	// http://mobilehtml5.org/
+	/**
+	 * @name M.supportsPositionFixed
+	 * @function
+	 * @return {Boolean}
+	 */
 	function supportsPositionFixed() {
 		var support = false;
 		[
@@ -39,10 +44,22 @@
 		return support;
 	}
 
+	/**
+	 * @name M.supportsGeoLocation
+	 * @function
+	 * @return {Boolean}
+	 */
 	function supportsGeoLocation() {
 		return !!navigator.geolocation;
 	}
 
+	/**
+	 * Whether touchstart and other touch events are supported by the current browser.
+	 *
+	 * @name M.supportsTouchEvents
+	 * @function
+	 * @return {Boolean}
+	 */
 	function supportsTouchEvents() {
 		return 'ontouchstart' in window;
 	}
@@ -53,16 +70,31 @@
 	 * http://bugs.jquery.com/ticket/5241
 	 * http://stackoverflow.com/questions/350292/how-do-i-get-jquery-to-select-elements-with-a-period-in-their-id
 	 *
+	 * @name M.escapeHash
+	 * @function
 	 * @param {String} hash A hash to escape
+	 * @return {String}
 	 */
 	function escapeHash( hash ) {
 		return hash.replace( /(:|\.)/g, '\\$1' );
 	}
 
+	/**
+	 * Locks the viewport so that pinch zooming is disabled
+	 *
+	 * @name M.lockViewport
+	 * @function
+	 */
 	function lockViewport() {
 		$viewportMeta.attr( 'content', 'initial-scale=1.0, maximum-scale=1.0, user-scalable=no' );
 	}
 
+	/**
+	 * Unlocks viewport so that pinch zooming is enabled
+	 *
+	 * @name M.unlockViewport
+	 * @function
+	 */
 	function unlockViewport() {
 		$viewportMeta.attr( 'content', viewport );
 	}
@@ -70,6 +102,8 @@
 	/**
 	 * Tests current window size and if suitable loads styles specific for larger devices
 	 *
+	 * @name M.loadWideScreenStyles
+	 * @function
 	 */
 	function loadWideScreenStyles() {
 		if ( isWideScreen() ) {
@@ -79,6 +113,10 @@
 	}
 
 	// TODO: separate main menu navigation code into separate module
+	/**
+	 * @name M.init
+	 * @function
+	 */
 	function init() {
 		var
 			$body = $( 'body' ),
@@ -201,15 +239,33 @@
 		$( window ).on( 'resize', loadWideScreenStyles );
 	}
 
+	/**
+	 * Returns the current URL including protocol
+	 *
+	 * @name M.getOrigin
+	 * @function
+	 * @return {String}
+	 */
 	function getOrigin() {
 		return window.location.protocol + '//' + window.location.hostname;
 	}
 
+	/**
+	 * @name M.prettyEncodeTitle
+	 * @function
+	 * @return {String}
+	 */
 	function prettyEncodeTitle( title ) {
 		return encodeURIComponent( title.replace( / /g, '_' ) ).replace( /%3A/g, ':' ).replace( /%2F/g, '/' );
 	}
 
-	// FIXME: sandbox from mf-application.js
+	/**
+	 * FIXME: sandbox from mf-application.js
+	 *
+	 * @name M.log
+	 * @function
+	 * @return {jQuery.Deferred}
+	 */
 	function log( schemaName, data ) {
 		if ( mw.eventLog ) {
 			return mw.eventLog.logEvent( schemaName, data );
@@ -223,6 +279,8 @@
 	 * (32 alphanumeric characters).
 	 * FIXME: Use mw.user
 	 *
+	 * @name M.getSessionId
+	 * @function
 	 * @return {string}
 	 */
 	function getSessionId() {
@@ -245,6 +303,15 @@
 		return sessionId;
 	}
 
+	/**
+	 * Takes a Query string and turns it into a JavaScript object mapping parameter names
+	 * to values. Does the opposite of $.param
+	 *
+	 * @name M.deParam
+	 * @function
+	 * @param {String} qs A querystring excluding the ? prefix. e.g. foo=4&bar=5
+	 * @return {Object}
+	 */
 	function deParam( qs ) {
 		var params = {};
 		if ( qs ) {
@@ -256,6 +323,12 @@
 		return params;
 	}
 
+	/**
+	 *
+	 * @name M.isWideScreen
+	 * @function
+	 * @return {Boolean}
+	 */
 	function isWideScreen() {
 		return window.innerWidth > mw.config.get( 'wgMFDeviceWidthTablet' );
 	}
@@ -265,6 +338,8 @@
 	 * Emits a page-loaded event that modules can subscribe to, so that they can
 	 * re-initialize
 	 *
+	 * @name M.reloadPage
+	 * @function
 	 */
 	function reloadPage( page ) {
 		currentPage = page;
@@ -283,10 +358,22 @@
 		document.title = page.title;
 	}
 
+	/**
+	 *
+	 * @name M.inNamespace
+	 * @function
+	 * @return {Boolean}
+	 */
 	function inNamespace( namespace ) {
 		return mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' )[namespace];
 	}
 
+	/**
+	 *
+	 * @name M.getCurrentPage
+	 * @function
+	 * @return {Page}
+	 */
 	function getCurrentPage() {
 		// FIXME: Currently returns undefined when a page has not been rendered via JavaScript
 		return currentPage;
@@ -301,6 +388,12 @@
 		getCurrentPage: getCurrentPage,
 		getOrigin: getOrigin,
 		// FIXME: No Page object exists on initial page load but would be better to make this a function of Page object
+		/**
+		 *
+		 * @name M.getLeadSection
+		 * @function
+		 * @return {Boolean}
+		 */
 		getLeadSection: function() {
 			return $( '#content div' ).eq( 0 );
 		},
@@ -316,13 +409,35 @@
 		// FIXME: Replace all instances of M.template with mw.template
 		template: mw.template,
 		unlockViewport: unlockViewport,
+		/**
+		 * @name M.router
+		 * @type {Router}
+		 */
 		router: router,
+		/**
+		 * @name M.overlayManager
+		 * @type {OverlayManager}
+		 */
 		overlayManager: new OverlayManager( router ),
+		/**
+		 * @name M.pageApi
+		 * @type {PageApi}
+		 */
 		pageApi: new PageApi(),
 		deParam: deParam,
 		// for A/B testing (we want this to be the same everywhere)
+		/**
+		 * @name M.isTestA
+		 * @type {Boolean}
+		 */
 		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0,
 		// FIXME: get rid off this (grep M.tapEvent) when micro.tap.js is in stable
+		/**
+		 * @name M.tapEvent
+		 * @function
+		 * @param {String} fallbackEvent
+		 * @return {String}
+		 */
 		tapEvent: function( fallbackEvent ) {
 			return M.isBetaGroupMember() ? 'tap' : fallbackEvent;
 		}

@@ -2,18 +2,49 @@
 ( function( M, $ ) {
 
 var View = M.require( 'view' ),
+	Overlay;
+
+	/**
+	 * @class
+	 * @name Overlay
+	 * @extends View
+	 */
 	Overlay = View.extend( {
 		defaults: {
 			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' )
 		},
+		/**
+		 * @name Overlay.prototype.template
+		 * @type {Hogan.Template}
+		 */
 		template: M.template.get( 'overlay' ),
+		/**
+		 * @name Overlay.prototype.className
+		 * @type {String}
+		 */
 		className: 'mw-mf-overlay',
-		// FIXME: remove when OverlayManager used everywhere
+		/**
+		 * FIXME: remove when OverlayManager used everywhere
+		 * @name Overlay.prototype.closeOnBack
+		 * @type {Boolean}
+		 */
 		closeOnBack: false,
+		/**
+		 * @name Overlay.prototype.closeOnContentTap
+		 * @type {Boolean}
+		 */
 		closeOnContentTap: false,
+		/**
+		 * @name Overlay.prototype.fullScreen
+		 * @type {Boolean}
+		 */
 		fullScreen: true,
-		// use '#mw-mf-viewport' rather than 'body' - for some reasons this has
-		// odd consequences on Opera Mobile (see bug 52361)
+		/**
+		 * use '#mw-mf-viewport' rather than 'body' - for some reasons this has
+		 * odd consequences on Opera Mobile (see bug 52361)
+		 * @name Overlay.prototype.appendTo
+		 * @type {String|jQuery.Object}
+		 */
 		appendTo: '#mw-mf-viewport',
 		initialize: function( options ) {
 			options = options || {};
@@ -51,6 +82,10 @@ var View = M.require( 'view' ),
 			} );
 		},
 
+		/**
+		 * @name Overlay.prototype.show
+		 * @function
+		 */
 		show: function() {
 			// FIXME: remove when OverlayManager used everywhere
 			if ( this.closeOnBack ) {
@@ -82,6 +117,8 @@ var View = M.require( 'view' ),
 		/**
 		 * Detach the overlay from the current view
 		 *
+		 * @name Overlay.prototype.hide
+		 * @function
 		 * @param {boolean} force: Whether the overlay should be closed regardless of state (see PhotoUploadProgress)
 		 * @return {boolean}: Whether the overlay was successfully hidden or not
 		 */

@@ -1,12 +1,17 @@
 ( function( $ ) {
 var
-	templates = {},
+	templates = {}, template;
+	/**
+	 * @namespace
+	 * @name mw.template
+	 */
 	template = {
 		/**
 		 * Define template using html. Compiles newly added templates
-		 *
-		 * @param {string} name: Name of template to add
-		 * @param {string} markup: Associated markup (html)
+		 * @name mw.template.add
+		 * @function
+		 * @param {String} name Name of template to add
+		 * @param {String} markup Associated markup (html)
 		 */
 		add: function( name, markup ) {
 			templates[ name ] = this.compile( markup );
@@ -14,7 +19,9 @@ var
 		/**
 		 * Retrieve defined template
 		 *
-		 * @param {string} name: Name of template to be retrieved
+		 * @name mw.template.get
+		 * @function
+		 * @param {String} name Name of template to be retrieved
 		 * @return {Hogan.Template}
 		 * accepts template data object as its argument.
 		 */
@@ -27,6 +34,8 @@ var
 		/**
 		 * Wraps our template engine of choice (currently Hogan).
 		 *
+		 * @name mw.template.compile
+		 * @function
 		 * @param {string} templateBody Template body.
 		 * @return {Hogan.Template}
 		 * accepts template data object as its argument.

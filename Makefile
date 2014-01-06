@@ -17,6 +17,12 @@ kss: nodecheck
 	# FIXME: Use more up to date Ruby version
 	@node_modules/.bin/kss-node less/ less/ -l less/mobile.less -t styleguide-template
 
+jsdoc: nodecheck
+	rm -rf docs
+	@node_modules/.bin/jsdoc -r --verbose javascripts/common/ javascripts/common/README.md -d docs
+
+docs: kss jsdoc
+
 nodecheck:
 	@scripts/nodecheck.sh
 
