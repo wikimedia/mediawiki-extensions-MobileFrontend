@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_b5bb7db9",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-06T19:00:26Z",
+      "side": 1,
+      "message": "If we accidentally load the editor module more than once, or load both the editor and editor.beta modules. Neither of these should ever happen, so this is just paranoia. Let me know if you want me to remove it.",
+      "parentUuid": "eeebdf60_3ad19ad0",
+      "revId": "735f3b36b4825ca9c06050e6ba24d031f1d88de3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_1ad816f3",
         "filename": "javascripts/modules/editorNew/EditorOverlay.js",
         "patchSetId": 7
