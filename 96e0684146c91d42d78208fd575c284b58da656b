@@ -16,6 +16,24 @@
       "revId": "96e0684146c91d42d78208fd575c284b58da656b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_bb392bcd",
+        "filename": "includes/Resources.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-06T22:49:37Z",
+      "side": 1,
+      "message": "But that will cause us to load both mobile.editor and mobile.editor.beta (which leads to the same problem). I\u0027ll see if there\u0027s another way to fix this...",
+      "parentUuid": "eeebdf60_980b0d2d",
+      "revId": "96e0684146c91d42d78208fd575c284b58da656b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
