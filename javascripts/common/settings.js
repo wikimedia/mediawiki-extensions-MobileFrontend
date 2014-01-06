@@ -10,6 +10,17 @@ M.settings = ( function() {
 		supportsLocalStorage = false;
 	}
 
+	function cookiesEnabled() {
+		// If session cookie already set, return true
+		if ( $.cookie( 'mf_testcookie' ) === 'test_value' ) {
+			return true;
+		// Otherwise try to set mf_testcookie and return true if it was set
+		} else {
+			$.cookie( 'mf_testcookie', 'test_value', { path: '/' } );
+			return $.cookie( 'mf_testcookie' ) === 'test_value';
+		}
+	}
+
 	// FIXME: Deprecate - use $.cookie instead
 	function writeCookie( name, value, days, path, domain ) {
 		$.cookie( name, value, { path: path, expires: days, domain: domain } );
@@ -36,7 +47,8 @@ M.settings = ( function() {
 		readCookie: readCookie,
 		saveUserSetting: saveUserSetting,
 		supportsLocalStorage: supportsLocalStorage,
-		writeCookie: writeCookie
+		writeCookie: writeCookie,
+		cookiesEnabled: cookiesEnabled
 	};
 }());
 

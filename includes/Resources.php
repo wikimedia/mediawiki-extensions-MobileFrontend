@@ -196,7 +196,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/application.js',
 			'javascripts/common/View.js',
 			'javascripts/common/settings.js',
-			'javascripts/modules/mf-stop-mobile-redirect.js',
 		),
 		'position' => 'bottom',
 	),
@@ -777,6 +776,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/Page.js',
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
 			'javascripts/modules/uploads/LeadPhotoUploaderButton.js',
+			'javascripts/modules/mf-stop-mobile-redirect.js',
 		),
 		'messages' => array(
 			// mf-navigation.js
@@ -800,6 +800,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-save',
 			// PageApi.js
 			'mobile-frontend-last-modified-with-user-date',
+			// mf-stop-mobile-redirect.js
+			'mobile-frontend-cookies-required',
 		),
 	),
 
