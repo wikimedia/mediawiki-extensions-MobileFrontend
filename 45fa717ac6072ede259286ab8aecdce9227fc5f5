@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_15d8e9f2",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T19:24:04Z",
+      "side": 1,
+      "message": "I would worry about it when it happens. And when it happens I\u0027d rather track the real issue.",
+      "revId": "45fa717ac6072ede259286ab8aecdce9227fc5f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_75c73516",
+        "filename": "javascripts/modules/tutorials/newbieEditor.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T19:24:04Z",
+      "side": 1,
+      "message": "I\u0027m not sure if that\u0027s going to work. We\u0027re waiting for the editor module here, but it\u0027s asynchronous so it\u0027s not guaranteed that it will load in a single tick. In fact it most likely won\u0027t.",
+      "revId": "45fa717ac6072ede259286ab8aecdce9227fc5f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
