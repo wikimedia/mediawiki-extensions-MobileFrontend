@@ -44,7 +44,7 @@
 		}
 
 		// FIXME: use .icon class
-		a {
+		#mw-mf-main-menu-button, #secondary-button {
 			height: @headerHeight - @headerMargin;
 			text-indent: -9999px;
 			background-repeat: no-repeat;
@@ -61,7 +61,9 @@
 			background-position: right 40% top 40%;
 		}
 
-		.user-button {
+		// need to specify id or else other rules are more important
+		// FIXME: simplify when .icon class from OverlayNew used instead
+		#secondary-button.user-button {
 			text-indent: 0;
 			width: @headerHeight - 2 * @headerMargin;
 			padding-left: @headerMargin;
