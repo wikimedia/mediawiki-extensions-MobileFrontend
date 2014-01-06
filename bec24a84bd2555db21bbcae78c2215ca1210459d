@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_75c2955e",
+        "filename": "javascripts/externals/epoch.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T19:27:49Z",
+      "side": 1,
+      "message": "Can we change it to null?",
+      "revId": "bec24a84bd2555db21bbcae78c2215ca1210459d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
