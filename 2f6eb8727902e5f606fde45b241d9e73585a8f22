@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_5bd9ff5a",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T23:14:45Z",
+      "side": 1,
+      "message": "I know it\u0027s not introduced here, but let\u0027s add a FIXME.",
+      "revId": "2f6eb8727902e5f606fde45b241d9e73585a8f22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
