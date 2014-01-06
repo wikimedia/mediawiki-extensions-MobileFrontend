@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_5a40de5a",
+        "filename": "less/specials/common.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T17:46:10Z",
+      "side": 1,
+      "message": "This could be .5em 0...",
+      "revId": "687d7b5ef5bd0bf5e77246a71a96dae0fe4d9506",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_3a43da68",
+        "filename": "less/specials/common.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-06T17:46:10Z",
+      "side": 1,
+      "message": "...and then this wouldn\u0027t be necessary.",
+      "revId": "687d7b5ef5bd0bf5e77246a71a96dae0fe4d9506",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
