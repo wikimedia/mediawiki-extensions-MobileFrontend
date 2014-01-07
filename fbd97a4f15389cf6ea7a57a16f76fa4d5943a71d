@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_417229ad",
+        "filename": "includes/Resources.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 835,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-07T21:55:55Z",
+      "side": 1,
+      "message": "I\u0027d prefer to explicitly declare \u0027mobile.overlays\u0027 here as well in case mobile.editor changes.",
+      "revId": "fbd97a4f15389cf6ea7a57a16f76fa4d5943a71d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_a160d5cc",
+        "filename": "includes/Resources.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 857,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-07T21:55:55Z",
+      "side": 1,
+      "message": "add \u0027mobile.overlays\u0027 to be explicit.",
+      "revId": "fbd97a4f15389cf6ea7a57a16f76fa4d5943a71d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_c16519df",
+        "filename": "includes/Resources.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 860,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-07T21:55:55Z",
+      "side": 1,
+      "message": "Listing this twice is now confusing. I think we should have a separate module and this shouldn\u0027t be a common file.",
+      "revId": "fbd97a4f15389cf6ea7a57a16f76fa4d5943a71d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
