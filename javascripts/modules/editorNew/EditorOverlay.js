@@ -228,7 +228,7 @@
 						// Show KeepGoing overlay at step 1 (ask)
 						mw.loader.using( 'mobile.keepgoing', function() {
 							var KeepGoingOverlay = M.require( 'modules/keepgoing/KeepGoingOverlay' );
-							new KeepGoingOverlay( { step: 1 } );
+							new KeepGoingOverlay( { step: 1 } ).show();
 						} );
 						self._keepgoing = false;
 					} else {
