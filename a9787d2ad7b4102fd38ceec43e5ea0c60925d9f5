@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_9ef1b0dc",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-01-07T20:53:33Z",
+      "side": 1,
+      "message": "You no longer need to fetch event_page_id then right?",
+      "revId": "a9787d2ad7b4102fd38ceec43e5ea0c60925d9f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
