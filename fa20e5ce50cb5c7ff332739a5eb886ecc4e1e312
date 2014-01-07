@@ -16,6 +16,24 @@
       "revId": "fa20e5ce50cb5c7ff332739a5eb886ecc4e1e312",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_4f06d5d2",
+        "filename": "includes/Resources.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 779,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-07T16:24:07Z",
+      "side": 1,
+      "message": "Dependency on javascripts/common/toast.js; I guess it could perhaps just be moved to mobile.startup, but I didn\u0027t know if that would break something else...",
+      "parentUuid": "eeebdf60_b52b7d77",
+      "revId": "fa20e5ce50cb5c7ff332739a5eb886ecc4e1e312",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
