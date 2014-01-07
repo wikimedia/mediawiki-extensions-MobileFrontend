@@ -163,6 +163,9 @@ function efMobileFrontend_Setup() {
 			'wgMFMobileImageRootDir' => 'images',
 			'wgMFDeviceWidthTablet' => "{$wgMFDeviceWidthTablet}px",
 			'wgMFDeviceWidthMobileSmall' => "{$wgMFDeviceWidthMobileSmall}px",
+			'wgMFThumbnailTiny' =>  MobilePage::TINY_IMAGE_WIDTH . 'px',
+			'wgMFThumbnailSmall' =>  MobilePage::SMALL_IMAGE_WIDTH . 'px',
+			'wgMFThumbnailMedium' => MobilePage::MEDIUM_IMAGE_WIDTH . 'px',
 		)
 	);
 }

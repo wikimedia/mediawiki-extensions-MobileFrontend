@@ -8,6 +8,7 @@
 class MobilePage {
 	const MEDIUM_IMAGE_WIDTH = 300;
 	const SMALL_IMAGE_WIDTH = 150;
+	const TINY_IMAGE_WIDTH = 50;
 
 	/**
 	 * @var Title: Title for page
@@ -24,6 +25,21 @@ class MobilePage {
 			$this->usePageImages = true;
 			$this->file = $file ? $file : PageImages::getPageImage( $title );
 		}
+	}
+
+	static function getPlaceHolderThumbnailHtml( $className ) {
+		return Html::element( 'div', array(
+			'class' => 'listThumb list-thumb-placeholder ' . $className,
+		) );
+	}
+
+	/**
+	 * Check whether a page has a thumbnail associated with it
+	 *
+	 * @return Boolean whether the page has an image associated with it
+	 */
+	public function hasThumbnail() {
+		return $this->file ? true : false;
 	}
 
 	public function setPageListItemContent( $html ) {

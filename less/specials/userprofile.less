@@ -1,5 +1,8 @@
 @import "../mixins.less";
 
+@cardMargin: @contentMargin / 2;
+@captionPadding: 8px;
+
 // FIXME: Refactor our CSS for errors - 1 class for the text, 1 for the block
 .error {
 	padding: 1em;
@@ -69,32 +72,50 @@
 		text-transform: uppercase;
 	}
 
-	@margin: @contentMargin / 2;
 	.card-container {
 		text-align: center;
-		background: #eee;
 		padding: 1px;
 	}
 
 	.card {
+		max-width: @wgMFDeviceWidthTablet;
 		background: #fff;
 		color: @grayMediumDark;
 		border: solid 1px @grayLight;
-		margin: 0 @margin @margin;
+		margin: 0 @cardMargin @cardMargin;
 		text-align: left;
 
-		img, .caption {
+		.listThumb,
+		.caption {
 			display: inline-block;
 		}
 
-		img {
+		// FIXME: Rename all instances of listThumb to list-thumb
+		.listThumb {
 			width: 33%;
+			vertical-align: middle;
+
+			&.list-thumb-placeholder {
+				.background-size( 32px, auto );
+				padding: @captionPadding 0;
+				background-color: @grayLightest;
+				min-height: @wgMFThumbnailTiny;
+				background-position: center center;
+			}
+
+			&.list-thumb-edit {
+				background-image: url(images/profile/placeholder-edit.png);
+			}
+
+			&.list-thumb-thanks {
+				background-image: url(images/profile/placeholder-thank.png);
+			}
 		}
 
 		.caption {
 			width: 66%;
 			vertical-align: top;
-			padding: 8px;
+			padding: @captionPadding;
 			.box-sizing(border-box);
 		}
 	}
@@ -118,14 +139,17 @@
 // Tablet styling
 @media all and (min-width: @wgMFDeviceWidthTablet) {
 	.profile {
-		.card-container {
-			display: block;
-		}
-
 		.card {
-			display: inline-block;
-			float: none;
-			width: round( @wgMFDeviceWidthTablet / 3 );
+			margin: @cardMargin auto;
+			min-height: @wgMFThumbnailSmall;
+
+			.listThumb {
+
+				&.list-thumb-placeholder {
+					.background-size( 64px, auto );
+					min-height: @wgMFThumbnailSmall;
+				}
+			}
 		}
 	}
 }
