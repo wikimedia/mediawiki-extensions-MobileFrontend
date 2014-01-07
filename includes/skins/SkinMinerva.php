@@ -635,6 +635,7 @@ class SkinMinerva extends SkinTemplate {
 		$modules['issues'] = array( 'mobile.issues' );
 		$modules['editor'] = array( 'mobile.editor' );
 		$modules['languages'] = array( 'mobile.languages' );
+		$modules['newusers'] = array( 'mobile.newusers' );
 
 		$title = $this->getTitle();
 
@@ -653,6 +654,7 @@ class SkinMinerva extends SkinTemplate {
 					'mobile.editing.schema',
 					'schema.MobileWebCta',
 					'schema.MobileWebClickTracking',
+					'schema.MobileLeftNavbarEditCTA',
 				);
 			}
 		}

@@ -6,9 +6,11 @@
 		popup = M.require( 'toast' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
+		inNavSignupCampaign = M.query.campaign === 'leftNavSignup',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		AbuseFilterOverlay = M.require( 'modules/editorNew/AbuseFilterOverlay' ),
+		mobileLeftNavbarEditCTA = M.require( 'loggingSchemas/mobileLeftNavbarEditCTA' ),
 		EditorOverlay;
 
 	EditorOverlay = EditorOverlayBase.extend( {
@@ -196,6 +198,11 @@
 			}
 
 			self.log( 'submit' );
+			if ( inNavSignupCampaign ) {
+				mobileLeftNavbarEditCTA.log( {
+					action: 'page-save-attempt',
+				} );
+			}
 			this._showHidden( '.saving-header' );
 
 			this.api.save( options ).
@@ -209,6 +216,11 @@
 
 					// log success!
 					self.log( 'success' );
+					if ( inNavSignupCampaign ) {
+						mobileLeftNavbarEditCTA.log( {
+							action: 'page-save-success',
+						} );
+					}
 					M.pageApi.invalidatePage( title );
 					new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
 					M.router.navigate( '' );
