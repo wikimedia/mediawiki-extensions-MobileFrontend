@@ -22,9 +22,11 @@
 	</div>
 	{{/sections}}
 	{{#inBetaOrAlpha}}
+	{{#hasLanguages}}
 	<div id="page-secondary-actions">
 		<a class="button languageSelector">{{languageLabel}}</a>
 	</div>
+	{{/hasLanguages}}
 	{{/inBetaOrAlpha}}
 	{{^inBetaOrAlpha}}
 	<div class="section" id="mw-mf-language-section"></div>
