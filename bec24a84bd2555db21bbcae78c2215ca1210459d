@@ -16,6 +16,24 @@
       "revId": "bec24a84bd2555db21bbcae78c2215ca1210459d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_afc3218b",
+        "filename": "javascripts/externals/epoch.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-07T16:13:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_75c2955e",
+      "revId": "bec24a84bd2555db21bbcae78c2215ca1210459d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
