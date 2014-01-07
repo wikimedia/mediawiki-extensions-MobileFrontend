@@ -853,14 +853,26 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.contentOverlays' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+		),
+		'scripts' => array(
+			'javascripts/modules/tutorials/ContentOverlay.js',
+			'javascripts/modules/tutorials/PageActionOverlay.js',
+		),
+		'templates' => array(
+			'modules/tutorials/PageActionOverlay',
+		),
+	),
+
 	'mobile.newusers' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
 			'mobile.editor',
+			'mobile.contentOverlays',
 		),
 		'scripts' => array(
-			'javascripts/common/ContentOverlay.js',
-			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbieEditor.js',
 		),
 		'messages' => array(
@@ -870,19 +882,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-tutorial-confirm',
 			'mobile-frontend-editor-tutorial-cancel',
 		),
-		'templates' => array(
-			'modules/tutorials/PageActionOverlay',
-		),
 	),
 
 	'mobile.newusers.beta' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
 			'mobile.editor.beta',
+			'mobile.contentOverlays',
 		),
 		'scripts' => array(
-			'javascripts/common/ContentOverlay.js',
-			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbieEditorBeta.js',
 		),
 		'messages' => array(
@@ -891,9 +899,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-tutorial-alt-summary',
 			'mobile-frontend-editor-tutorial-confirm',
 			'mobile-frontend-editor-tutorial-cancel',
-		),
-		'templates' => array(
-			'modules/tutorials/PageActionOverlay',
 		),
 	),
 

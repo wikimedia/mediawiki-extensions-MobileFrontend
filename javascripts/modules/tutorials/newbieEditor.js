@@ -1,3 +1,8 @@
+/* When an editor registers via the edit page action show a blue guider
+prompting them to continue editing.
+
+You can replicate this by appending article_action=signup-edit to the URL of an
+editable page whilst logged in. */
 ( function( M, $ ) {
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
 		user = M.require( 'user' ),

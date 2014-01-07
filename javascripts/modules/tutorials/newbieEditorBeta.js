@@ -1,3 +1,9 @@
+/* When an editor registers via the left navigation menu upon returning to the page they
+are shown a blue tutorial in 50% of cases prompting them to try editing.
+
+You can replicate this by appending campaign=leftNavSignup to the URL of an editable
+page whilst logged in, although you must be in test group A to see the CTA. */
+
 ( function( M, $ ) {
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
 		user = M.require( 'user' ),

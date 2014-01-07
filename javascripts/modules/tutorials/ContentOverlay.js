@@ -51,6 +51,6 @@
 			} ).appendTo( this.$el );
 		}
 	} );
-	M.define( 'ContentOverlay', ContentOverlay );
+	M.define( 'modules/tutorials/ContentOverlay', ContentOverlay );
 
 }( mw.mobileFrontend, jQuery ) );
