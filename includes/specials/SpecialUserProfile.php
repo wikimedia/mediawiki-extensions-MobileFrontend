@@ -113,14 +113,12 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$thank = $this->userInfo->getLastThanking();
 		if ( $thank ) {
 			$user = $thank['user'];
-			$title = $thank['title'];
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container' ) )
 				. MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-thanks' )
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
-				. $this->msg( 'mobile-frontend-profile-last-thanked',
+				. $this->msg( 'mobile-frontend-profile-last-thank',
 					$user,
-					$title->getFullText(),
 					$this->targetUser
 				)->parse()
 				. '</div>'
