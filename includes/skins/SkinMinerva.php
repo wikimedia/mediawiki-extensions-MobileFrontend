@@ -327,6 +327,8 @@ class SkinMinerva extends SkinTemplate {
 			 // note returnto is not set for mobile (per product spec)
 			// note welcome=yes in return to query allows us to detect accounts created from the left nav
 			$returntoquery[ 'welcome' ] = 'yes';
+			// unset campaign on login link so as not to interfere with A/B tests
+			unset( $returntoquery['campaign'] );
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = $this->getLoginUrl( $query );
 			$text = wfMessage( 'mobile-frontend-main-menu-login' )->escaped();
