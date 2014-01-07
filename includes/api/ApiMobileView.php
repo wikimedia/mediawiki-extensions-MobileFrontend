@@ -76,6 +76,16 @@ class ApiMobileView extends ApiBase {
 				array( 'id' => $data['id'] )
 			);
 		}
+		if ( isset( $prop['languagecount'] ) ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'languagecount' => $data['languagecount'] )
+			);
+		}
+		if ( isset( $prop['hasvariants'] ) && isset( $data['hasvariants'] ) ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'hasvariants' => $data['hasvariants'] )
+			);
+		}
 		if ( $this->usePageImages ) {
 			$this->addPageImage( $data, $prop, $params['thumbsize'] );
 		}
@@ -398,6 +408,18 @@ class ApiMobileView extends ApiBase {
 				'gender' => $user->getOption( 'gender' ),
 			);
 		}
+
+		if ( $parserOutput ) {
+			$languages = $parserOutput->getLanguageLinks();
+			$data['languagecount'] = count( $languages );
+		} else {
+			$data['languagecount'] = 0;
+		}
+
+		if ( $title->getPageLanguage()->hasVariants() ) {
+			$data['hasvariants'] = true;
+		}
+
 		// Don't store small pages to decrease cache size requirements
 		if ( strlen( $html ) >= $wgMFMinCachedPageSize ) {
 			// store for the same time as original parser output
@@ -505,6 +527,8 @@ class ApiMobileView extends ApiBase {
 					'lastmodified',
 					'lastmodifiedby',
 					'protection',
+					'languagecount',
+					'hasvariants',
 				)
 			),
 			'sectionprop' => array(
@@ -568,6 +592,8 @@ class ApiMobileView extends ApiBase {
 				' lastmodified    - MW timestamp for when the page was last modified, e.g. "20130730174438"',
 				' lastmodifiedby  - information about the user who modified the page last',
 				' protection      - information about protection level',
+				' languagecount   - number of languages that the page is available in',
+				' hasvariants     - whether or not the page is available in other language variants',
 			),
 			'sectionprop' => 'What information about sections to get',
 			'variant' => "Convert content into this language variant",
