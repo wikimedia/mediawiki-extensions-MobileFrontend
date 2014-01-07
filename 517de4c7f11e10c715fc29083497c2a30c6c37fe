@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_0a59db00",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-07T19:24:45Z",
+      "side": 1,
+      "message": "console.log",
+      "revId": "517de4c7f11e10c715fc29083497c2a30c6c37fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_4a06c3d2",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-07T19:24:45Z",
+      "side": 1,
+      "message": "No need to use ? true : false notation - it already resolves to a boolean!\nIn my opinion it also might be more informative to return the number of languages and number of variants e.g.\n\nlanguages: 3,\nvariants: true\n\nThis allows you to do things like print \"This page is available in 4 other languages\" (which we might want to do on tablets)",
+      "revId": "517de4c7f11e10c715fc29083497c2a30c6c37fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
