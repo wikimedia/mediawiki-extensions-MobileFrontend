@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_0444346d",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-07T16:11:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_2dadefe7",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_4a87f914",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 10
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Ack.",
       "parentUuid": "eeebdf60_4a87f914",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_e42a708e",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-07T16:11:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_0db46b32",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -107,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_c4252cbe",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-07T16:11:13Z",
+      "side": 1,
+      "message": "Removed.",
+      "parentUuid": "eeebdf60_0d3eabb5",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_2a995571",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 10
@@ -136,6 +190,24 @@
       "side": 1,
       "message": "Sounds reasonable.",
       "parentUuid": "eeebdf60_2a995571",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_a43468f2",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-07T16:11:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_8d4abb5d",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -207,6 +279,24 @@
       "side": 1,
       "message": "But the template contains two LI elements.",
       "parentUuid": "eeebdf60_fbe1012a",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_842f249c",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-07T16:11:13Z",
+      "side": 1,
+      "message": "This now uses the new markup so this point is moot.",
+      "parentUuid": "eeebdf60_dbc3dd8b",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -335,6 +425,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_641e6077",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-07T16:11:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eeebdf60_ed3147eb",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_6a04fd80",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 10
@@ -382,6 +490,24 @@
       "side": 1,
       "message": "You could but since the submit button lives outside the view this may be a little confusing.",
       "parentUuid": "eeebdf60_ea800da2",
+      "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_8f2cdd90",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-01-07T16:11:13Z",
+      "side": 1,
+      "message": "We can\u0027t add cb.save as an event handler because it loses the implicit \"this\" argument. Since the code ends up becoming somewhat awkward I decided to add it to postRender.",
+      "parentUuid": "eeebdf60_5bd8ed7e",
       "revId": "7406f884c0e61871e96213135e1cb45f213eb9a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
