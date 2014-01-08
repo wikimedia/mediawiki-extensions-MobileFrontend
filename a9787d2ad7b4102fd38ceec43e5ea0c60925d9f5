@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "eeebdf60_f2fb4ddc",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-01-08T12:55:32Z",
+      "side": 1,
+      "message": "This change invalidates/corrupts existing translations. Either change the key, or keep the second parameter with a dummy string and document it as unused.",
+      "revId": "a9787d2ad7b4102fd38ceec43e5ea0c60925d9f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_9ef1b0dc",
         "filename": "includes/MobileUserInfo.php",
         "patchSetId": 1
