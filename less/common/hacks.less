@@ -9,6 +9,7 @@ https://www.mediawiki.org/wiki/Requests_for_comment/Allow_styling_in_templates
 
 FIXME: Review all of these hacks to see if they still apply.
 */
+@import "../mixins.less";
 
 /* Hide some on-wiki defined classes */
 #content {
@@ -97,4 +98,14 @@ ul.gallery {
 // When JavaScript is disabled clarify to the user which reference they clicked on
 .references li:target {
 	background-color: #ddeeff;
+}
+
+.beta, .alpha {
+	.dablink {
+		margin-bottom: 0.6em;
+		padding-left: 0;
+		color: @grayMedium;
+		font-size: 0.85em;
+		font-style: italic;
+	}
 }
