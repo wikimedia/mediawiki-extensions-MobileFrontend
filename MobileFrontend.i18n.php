@@ -2732,7 +2732,7 @@ $messages['bn'] = array(
 	'mobile-frontend-password-placeholder' => 'শব্দচাবি (Password)',
 	'mobile-frontend-login' => 'প্রবেশ',
 	'mobile-frontend-history' => 'এই পাতার ইতিহাস দেখাও।',
-	'mobile-frontend-history-404-title' => 'খারাপ শিরোনাম দেয়া হয়েছে', # Fuzzy
+	'mobile-frontend-history-404-title' => 'এই ধরনের কোন পাতা নেই',
 	'mobile-frontend-history-summary' => '[[:$1]] পাতার ইতিহাস',
 	'mobile-frontend-last-modified-date' => 'সর্বশেষ পরিবর্তন $2, $1 তারিখে',
 	'mobile-frontend-last-modified-seconds' => 'সর্বশেষ পরিবর্তন {{PLURAL:$1|$1 সেকেন্ড}} আগে',
@@ -2826,7 +2826,7 @@ $messages['bn'] = array(
 	'mobile-frontend-photo-cancel' => 'বাতিল',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>১টি</span> আপলোড|<span>$1টি</span> আপলোড}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '৫০০+ আপলোড',
-	'mobile-frontend-editor-disabled' => 'আপনার এই পাতায় সম্পাদনার অনুমতি নেই।', # Fuzzy
+	'mobile-frontend-editor-disabled' => 'ধ্বংসপ্রবণতা রোধে এই পাতাটি সুরক্ষিত করা হয়েছে।',
 	'mobile-frontend-editor-edit' => 'সম্পাদনা',
 	'mobile-frontend-editor-continue' => 'অব্যাহত',
 	'mobile-frontend-editor-save' => 'সংরক্ষণ',
@@ -2849,7 +2849,7 @@ $messages['bn'] = array(
 	'mobile-frontend-media-details' => 'বিস্তারিত',
 	'mobile-frontend-media-license-link' => 'লাইসেন্স তথ্য',
 	'mobile-frontend-profile-title' => 'ব্যবহারকারী বৃত্তান্ত',
-	'mobile-frontend-profile-usertalk' => '$1-এর সাথে আলাপ করুন', # Fuzzy
+	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|$1-এর সাথে আলাপ করুন}}',
 	'mobile-frontend-profile-noargs' => 'একটি প্রোফাইল দেখতে একটি ব্যবহারকারী নাম প্রদান করুন।', # Fuzzy
 	'mobile-frontend-profile-nouser' => 'অস্তিত্বহীন বা ভুল ব্যবহারকারী নাম', # Fuzzy
 	'mobile-frontend-profile-activity-heading' => 'কার্যকলাপ ও অবদানসমূহ',
@@ -4046,6 +4046,7 @@ $messages['da'] = array(
 	'mobile-frontend-view' => 'Mobilvisning',
 	'mobile-frontend-view-desktop' => 'Skrivebord',
 	'mobile-frontend-view-mobile' => 'Mobil',
+	'mobile-frontend-cookies-required' => 'Cookies er nødvendige for at skifte visningstilstand. Aktivér dem og prøv igen.',
 	'mobile-frontend-opt-in-explain' => 'Ved at deltage i betaen, får du adgang til eksperimentale funktioner, med risiko for at støde på fejl og problemer.',
 	'mobile-frontend-images-status' => 'Billeder',
 	'mobile-frontend-disable-images' => 'Slå billeder fra på den mobile hjemmeside',
@@ -4308,6 +4309,7 @@ $messages['da'] = array(
 	'mobile-frontend-talk-reply-success' => 'Dit svar blev gemt på diskussionssiden.',
 	'mobile-frontend-talk-reply-info' => 'Bemærk at dit svar automatisk bliver signeret med dit brugernavn.',
 	'mobile-frontend-talk-reply' => 'Svar',
+	'mobile-frontend-talk-topic-feedback' => 'Nyt emne føjet til diskussionssiden!',
 	'mobile-frontend-media-details' => 'Detaljer',
 	'mobile-frontend-media-license-link' => 'Licensoplysninger',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Hvorvidt en bruger redigerer via mobil-grænsefladen',
@@ -4628,6 +4630,7 @@ $messages['de'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'Habe keine Angst vor Markup. Versuche, die Seite „$1“ zu verbessern.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'Warum nicht $1 verbessern? Hab keine Angst vor Wikitext!',
 	'mobile-frontend-editor-tutorial-confirm' => 'Mit dem Bearbeiten anfangen',
+	'mobile-frontend-editor-tutorial-cancel' => 'Nein danke',
 	'mobile-frontend-editor-captcha-try-again' => 'Falscher Code. Versuche es erneut.',
 	'mobile-frontend-editor-abusefilter-warning' => 'Warnung: Willst du diese Bearbeitung wirklich speichern? Mit dieser könnte es ein Problem geben.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Diese Bearbeitung konnte nicht gespeichert werden, da ein Problem festgestellt wurde.',
@@ -6892,6 +6895,7 @@ $messages['fr'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'N’ayez pas peur de marquer. Essayez d’améliorer la page $1.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'Pourquoi ne pas améliorer $1 ? N’ayez pas peur du balisage !',
 	'mobile-frontend-editor-tutorial-confirm' => 'Commencer à modifier',
+	'mobile-frontend-editor-tutorial-cancel' => 'Non merci',
 	'mobile-frontend-editor-captcha-try-again' => 'Mauvais code, essayez de nouveau.',
 	'mobile-frontend-editor-abusefilter-warning' => 'Attention : Êtes-vous sûr de vouloir enregistrer cette modification ? Elle pourrait présenter un problème.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Cette modification ne peut pas être enregistrée parce que nous avons détecté un problème.',
@@ -8859,7 +8863,7 @@ $messages['ia'] = array(
 	'mobile-frontend-last-modified-with-user-days' => '[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 die|$3 dies}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}',
 	'mobile-frontend-last-modified-with-user-months' => '[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 mense|$3 menses}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}',
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 anno|$3 annos}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}',
-	'mobile-frontend-last-modified-with-user-just-now' => '[$3 {{GENDER:$1|Modificate}} justo nunc per {{PLURAL:$4|[$5 $2]|0=un usator anonyme}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 {{GENDER:$1|Modificate}}] justo nunc per {{PLURAL:$4|[$5 $2]|0=un usator anonyme}}',
 	'mobile-frontend-learn-more' => 'Leger plus',
 	'mobile-frontend-view-source' => 'Vider texto fonte',
 	'mobile-frontend-account-create-submit' => 'Crear un conto',
@@ -8924,13 +8928,29 @@ $messages['ia'] = array(
 	'mobile-frontend-nearby-link' => 'Leger tote iste pagina',
 	'mobile-frontend-nearby-directions' => 'Navigar a hic',
 	'mobile-frontend-donate-image-nouploads' => 'Nihil incargate.',
+	'mobile-frontend-donate-image-login' => 'Le materiales disponibile in {{SITENAME}} es donate per gente como tu.',
+	'mobile-frontend-donate-image-login-action' => 'Aperi session pro divider contento multimedial.',
+	'mobile-frontend-donate-image-signup-action' => 'Aperi session pro divider contento multimedial con le mundo integre.',
+	'mobile-frontend-photo-upload-disabled' => 'Nulle imagine es necessari pro iste pagina.',
+	'mobile-frontend-photo-upload-anon' => 'Aperi session pro adder un imagine a iste pagina.',
+	'mobile-frontend-photo-upload-protected' => 'Tu non ha le permission de adder un imagine a iste pagina.',
+	'mobile-frontend-photo-upload-unavailable' => 'Tu navigator non supporta le incargamento de imagines.',
+	'mobile-frontend-photo-upload-generic' => 'Contribuer un imagine',
+	'mobile-frontend-donate-image-title' => 'Incargamentos',
 	'mobile-frontend-donate-image-heading' => 'Tu contributiones recente',
+	'mobile-frontend-donate-image-anon' => 'Un $1 es necessari pro vider le pagina de incargamento.',
+	'mobile-frontend-user-account' => 'conto de usator',
 	'mobile-frontend-listed-image-no-description' => 'Nulle description',
+	'mobile-frontend-donate-photo-upload-success' => 'Successo! Tu imagine es ora usabile in {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Successo! Gratias pro tu prime contribution!',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Contribue tu imagines. Adjuta {{SITENAME}} a viver!',
+	'mobile-frontend-first-upload-wizard-new-page-1' => 'Imagines in {{SITENAME}} veni de Wikimedia Commons',
+	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'Tu imagines adjuta a educar personas in tote le mundo',
 	'mobile-frontend-watchlist-more' => 'plus',
-	'mobile-frontend-watchlist-cta' => 'Per favor aperi un session o crea un conto pro vider ista pagina.', # Fuzzy
+	'mobile-frontend-watchlist-cta' => 'Sequer iste pagina e tote su modificationes.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Aperir session',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Crear un conto',
-	'mobile-frontend-watch-login' => 'Tu debe aperir un session pro observar paginas.', # Fuzzy
+	'mobile-frontend-watch-login' => 'Adder $1 a tu observatorio.',
 	'mobile-frontend-watchlist-a-z' => 'Lista',
 	'mobile-frontend-watchlist-feed' => 'Modificate',
 	'mobile-frontend-changeslist-ip' => 'Usator anonyme',
@@ -9743,6 +9763,7 @@ $messages['it'] = array(
 	'mobile-frontend-view' => 'Versione mobile',
 	'mobile-frontend-view-desktop' => 'Desktop',
 	'mobile-frontend-view-mobile' => 'Cellulare',
+	'mobile-frontend-cookies-required' => 'I cookie sono necessari per cambiare la modalità di visualizzazione. Si prega di abilitarli e riprovare.',
 	'mobile-frontend-opt-in-explain' => 'Partecipando alla versione di prova avrai la possibilità di usare funzionalità sperimentali, ma con il rischio di incontrare errori e problemi.',
 	'mobile-frontend-images-status' => 'Immagini',
 	'mobile-frontend-disable-images' => 'Disabilita le immagini sul sito per dispositivi mobili',
@@ -9752,6 +9773,7 @@ $messages['it'] = array(
 	'mobile-frontend-on' => 'ON',
 	'mobile-frontend-featured-article' => 'Vetrina',
 	'mobile-frontend-news-items' => 'Novità',
+	'mobile-frontend-languages-404-title' => 'Errore di lingue',
 	'mobile-frontend-languages-404-desc' => 'Deve essere specificato un titolo valido.',
 	'mobile-frontend-languages-header' => 'Lingue',
 	'mobile-frontend-languages-nonexistent-title' => 'La pagina "$1" non esiste.',
@@ -9955,6 +9977,8 @@ in tutto il mondo',
 	'mobile-frontend-image-heading-describe' => "'''Descrivi''' immagine",
 	'mobile-frontend-image-uploading' => "'''Caricamento''' immagine...",
 	'mobile-frontend-image-cancel-confirm' => 'Annullare il caricamento?',
+	'mobile-frontend-editor-redirect-title' => "Reindirizzamento all'editor...",
+	'mobile-frontend-editor-unavailable-header' => 'Editor non disponibile',
 	'mobile-frontend-editor-unavailable' => 'La modifica attraverso dispositivo mobile non è attualmente disponibile sul tuo browser. Prova un browser diverso.',
 	'mobile-frontend-editor-undo-unsupported' => "L'annullamento non è attualmente supportato sui dispositivi mobili.",
 	'mobile-frontend-editor-newpage-prompt' => 'Questa pagina non esiste. Perché non essere audaci e crearla?',
@@ -9982,6 +10006,7 @@ in tutto il mondo',
 	'mobile-frontend-editor-tutorial-summary' => 'Non aver paura del markup. Prova a migliorare la pagina su $1.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'Perché non migliori $1? Non preoccuparti del markup!',
 	'mobile-frontend-editor-tutorial-confirm' => 'Inizia a modificare',
+	'mobile-frontend-editor-tutorial-cancel' => 'No, grazie',
 	'mobile-frontend-editor-captcha-try-again' => 'Codice errato, riprova.',
 	'mobile-frontend-editor-abusefilter-warning' => 'Attenzione: sei sicuro di voler salvare questa modifica? Potrebbe esserci un problema con essa.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Questa modifica non può essere salvata perché è stato rilevato un problema.',
@@ -12636,6 +12661,7 @@ $messages['lrc'] = array(
 
 /** Lithuanian (lietuvių)
  * @author Eitvys200
+ * @author Robotukas11
  * @author Vogone
  */
 $messages['lt'] = array(
@@ -12646,13 +12672,13 @@ $messages['lt'] = array(
 	'mobile-frontend-save-settings' => 'Išsaugoti nustatymus', # Fuzzy
 	'mobile-frontend-random-button' => 'Atsitiktinis',
 	'mobile-frontend-back-to-top-of-section' => 'Peršokti atgal sekcija',
-	'mobile-frontend-close-section' => 'Uždarykite šį skirsnį',
 	'mobile-frontend-regular-site' => 'Peržiūrėti šį puslapį įprastoje Vikipedijoje', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Toliau ...',
 	'mobile-frontend-wml-back' => 'Atgal ...',
 	'mobile-frontend-view' => 'Mobili peržiūra',
 	'mobile-frontend-view-desktop' => 'Darbalaukis',
 	'mobile-frontend-view-mobile' => 'Mobilus',
+	'mobile-frontend-cookies-required' => 'Slapukai yra reikalingi norint pakeisti peržiūros režimus. Įjunkite juos ir bandykite dar kartą.',
 	'mobile-frontend-opt-in-explain' => 'Prisijungiant prie beta, jūs gausite prieigą prie dar tik bandomų galimybių, rizikuodami puslapio klaidomis.',
 	'mobile-frontend-images-status' => 'Paveikslėliai',
 	'mobile-frontend-disable-images' => 'Išjungti vaizdus mobilioje svetainėje',
@@ -15726,6 +15752,7 @@ $messages['pms'] = array(
 	'mobile-frontend-view' => 'Visualisassion an sël sacociàbil',
 	'mobile-frontend-view-desktop' => 'Tàula',
 	'mobile-frontend-view-mobile' => 'Sacociàbil',
+	'mobile-frontend-cookies-required' => "A-i é damanca dij bëscotin për passé da na manera ëd visualisassion a n'àutra. Për piasì, ch'a j'abìlita e ch'a prevua torna.",
 	'mobile-frontend-opt-in-explain' => "Partissipand a le preuve beta, a l'avrà drit a le funsion sperimentaj, con l'arzigh d'ancontré eror e problema.",
 	'mobile-frontend-images-status' => 'Figure',
 	'mobile-frontend-disable-images' => "Disabilité le figure an sël sit pr'ij sacociàbij",
@@ -15967,6 +15994,7 @@ Për piasì, ch'a sara e ch'a preuva torna.",
 	'mobile-frontend-editor-tutorial-summary' => "Ch'a l'abia nen peur dë scrive. Ch'a serca d'amelioré la pàgina $1.",
 	'mobile-frontend-editor-tutorial-alt-summary' => "Përchè nen amelioré $1? Ch'a l'abia nen peur d'ës pass!",
 	'mobile-frontend-editor-tutorial-confirm' => 'Ancaminé a modifiché',
+	'mobile-frontend-editor-tutorial-cancel' => 'Nò, mersì',
 	'mobile-frontend-editor-captcha-try-again' => "Còdes gram, ch'a preuva torna.",
 	'mobile-frontend-editor-abusefilter-warning' => "Atension: É-lo sigur ch'a veul argistré costa modìfica? A podrìa avèj dij problema.",
 	'mobile-frontend-editor-abusefilter-disallow' => "Costa modìfica a l'ha pa podù esse salvà përchè i l'oma trovà un problema.",
@@ -16697,6 +16725,7 @@ $messages['ro'] = array(
 	'mobile-frontend-view' => 'Versiune mobilă',
 	'mobile-frontend-view-desktop' => 'Desktop',
 	'mobile-frontend-view-mobile' => 'Mobil',
+	'mobile-frontend-cookies-required' => 'Sunt necesare module cookie pentru a comuta între modurile de vizualizare. Activați-le și încercați din nou.',
 	'mobile-frontend-opt-in-explain' => 'Prin examinarea stadiului beta, veți avea acces la caracteristici experimentale, cu riscul de a întâmpina erori și probleme.',
 	'mobile-frontend-images-status' => 'Imagini',
 	'mobile-frontend-disable-images' => 'Dezactivează imaginile pe site-ul mobil',
@@ -17181,7 +17210,7 @@ $messages['ru'] = array(
 	'mobile-frontend-news-items' => 'Новости',
 	'mobile-frontend-language-heading' => '<strong>Языки</strong>',
 	'mobile-frontend-language-article-heading' => 'Читать на другом языке',
-	'mobile-frontend-language-header' => 'Эта страница существует на $1 {{PLURAL:$1|1=языке|языках}}', # Fuzzy
+	'mobile-frontend-language-header' => 'Эта страница существует на $1 {{PLURAL:$1|языке|языках}}',
 	'mobile-frontend-language-variant-header' => 'Выберите вариант {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-footer' => 'Примечание: Эта страница может быть написана не на том языке, который вы предпочитаете. Вы можете увидеть, какие языки поддерживает {{SITENAME}}, кликнув здесь.',
 	'mobile-frontend-language-site-choose' => 'Поиск языка',
@@ -17197,20 +17226,20 @@ $messages['ru'] = array(
 	'mobile-frontend-contribution-summary' => 'Все правки, сделанные {{GENDER:$1|[[Special:UserProfile/$1|$1]]}}',
 	'mobile-frontend-history-summary' => 'История изменений страницы [[:$1]]',
 	'mobile-frontend-last-modified-date' => 'Последние изменения на $2 $1',
-	'mobile-frontend-last-modified-seconds' => 'Последние изменения были сделаны {{PLURAL:$1|$1 секунду|$1 секунд|$1 секунды}} назад', # Fuzzy
-	'mobile-frontend-last-modified-minutes' => 'Последние изменения были сделаны {{PLURAL:$1|$1 минуту|$1 минут|$1 минуты}} назад', # Fuzzy
-	'mobile-frontend-last-modified-hours' => 'Последние изменения были сделаны {{PLURAL:$1|$1 час|$1 часов|$1 часа}} назад', # Fuzzy
-	'mobile-frontend-last-modified-days' => 'Последние изменения были сделаны {{PLURAL:$1|$1 день|$1 дней|$1 дня}} назад', # Fuzzy
-	'mobile-frontend-last-modified-months' => 'Последние изменения были сделаны {{PLURAL:$1|$1 месяц|$1 месяцев|$1 месяца}} назад', # Fuzzy
-	'mobile-frontend-last-modified-years' => 'Последние изменения были сделаны {{PLURAL:$1|$1 год|$1 лет|$1 года}} назад', # Fuzzy
+	'mobile-frontend-last-modified-seconds' => 'Последние изменения были сделаны {{PLURAL:$1|$1 секунду|$1 секунд|$1 секунды}} назад',
+	'mobile-frontend-last-modified-minutes' => 'Последние изменения были сделаны {{PLURAL:$1|$1 минуту|$1 минут|$1 минуты|1=минуту}} назад',
+	'mobile-frontend-last-modified-hours' => 'Последние изменения были сделаны {{PLURAL:$1|$1 час|$1 часов|$1 часа|1=час}} назад',
+	'mobile-frontend-last-modified-days' => 'Последние изменения были сделаны {{PLURAL:$1|$1 день назад|$1 дней назад|$1 дня назад|1=вчера}}',
+	'mobile-frontend-last-modified-months' => 'Последние изменения были сделаны {{PLURAL:$1|$1 месяц|$1 месяцев|$1 месяца|1=месяц}} назад',
+	'mobile-frontend-last-modified-years' => 'Последние изменения были сделаны {{PLURAL:$1|$1 год|$1 лет|$1 года|1=год}} назад',
 	'mobile-frontend-last-modified-just-now' => 'Последнее изменение внесено прямо сейчас',
-	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 секунду|$3 секунд|$3 секунды}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
-	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 минуту|$3 минут|$3 минуты}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
-	'mobile-frontend-last-modified-with-user-hours' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 час|$3 часов|$3 часа}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
-	'mobile-frontend-last-modified-with-user-days' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 день|$3 дней|$3 дня}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
-	'mobile-frontend-last-modified-with-user-months' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 месяц|$3 месяцев|$3 месяца}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
-	'mobile-frontend-last-modified-with-user-years' => '[$4 Последняя {{GENDER:$1|правка}} {{PLURAL:$3|$3 год|$3 лет|$3 года}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}', # Fuzzy
-	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Последняя {{GENDER:$1|правка}}] сделана только что {{PLURAL:$4|участником [$5 $2]|0=анонимным участником}}', # Fuzzy
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Последняя {{GENDER:$1|правка}} сделана {{PLURAL:$3|$3 секунду|$3 секунд|$3 секунды|1=секунду}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Последняя {{GENDER:$1|правка}} сделана {{PLURAL:$3|$3 минуту|$3 минут|$3 минуты|1=минуту}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Последняя {{GENDER:$1|правка}} сделана {{PLURAL:$3|$3 час|$3 часов|$3 часа|1=час}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Последняя {{GENDER:$1|правка}} сделана {{PLURAL:$3|$3 день назад|$3 дней назад|$3 дня назад|1=вчера}}] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Последняя {{GENDER:$1|правка}} сделана {{PLURAL:$3|$3 месяц|$3 месяцев|$3 месяца|1=месяц}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Последняя {{GENDER:$1|правка}} сделана {{PLURAL:$3|$3 год|$3 лет|$3 года|1=год}} назад] {{PLURAL:$5|участником [$6 $2]|0=анонимным участником}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Последняя {{GENDER:$1|правка}}] сделана только что {{PLURAL:$4|участником [$5 $2]|0=анонимным участником}}',
 	'mobile-frontend-learn-more' => 'Узнать больше',
 	'mobile-frontend-account-create-submit' => 'Зарегистрироваться',
 	'mobile-frontend-password-confirm-placeholder' => 'Подтвердите пароль',
@@ -17246,7 +17275,7 @@ $messages['ru'] = array(
 	'mobile-frontend-main-menu-upload' => 'Загрузки',
 	'mobile-frontend-main-menu-settings-heading' => 'Настройки',
 	'mobile-frontend-settings-site-header' => 'Языки проекта «{{SITENAME}}»',
-	'mobile-frontend-settings-site-description' => 'Проект «{{SITENAME}}» доступен на $1 {{PLURAL:$1|языке|языках|языках}}. Ниже перечислены все доступные версии', # Fuzzy
+	'mobile-frontend-settings-site-description' => 'Проект «{{SITENAME}}» доступен на $1 {{PLURAL:$1|языке|языках}}. Ниже перечислены все доступные версии',
 	'mobile-frontend-main-menu-account-create' => 'Создать учётную запись',
 	'mobile-frontend-page-menu-contents' => 'содержание',
 	'mobile-frontend-page-menu-history' => 'История',
@@ -17260,8 +17289,8 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-loading' => 'Загрузка информации о том, что находится невдалеке от вас',
 	'mobile-frontend-nearby-requirements' => 'Извините! Ваш браузер не поддерживает работу с {{SITENAME}}.',
 	'mobile-frontend-nearby-requirements-guidance' => 'Попробуйте использовать другой браузер или включите JavaScript, если вы отключили его.',
-	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}', # Fuzzy
-	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 м}}', # Fuzzy
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 м}}',
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} не может выяснить, где вы находитесь… Попробовать ещё раз?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Попробуйте найти открытую местность с более лучшей связью.',
 	'mobile-frontend-nearby-permission' => '{{SITENAME}} не имеет разрешения на доступ к определению вашего местоположения',
@@ -17274,9 +17303,9 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-link' => 'Прочитайте эту страницу целиком',
 	'mobile-frontend-nearby-directions' => 'Перейдите сюда',
 	'mobile-frontend-donate-image-nouploads' => 'Нет загрузок.',
-	'mobile-frontend-donate-image-login' => 'Вы должны авторизоваться для просмотра своих загрузок.', # Fuzzy
+	'mobile-frontend-donate-image-login' => 'Медиафайлы проекту «{{SITENAME}}» дарят такие же люди, как и вы.',
 	'mobile-frontend-photo-upload-disabled' => 'Для этой страницы не нужно изображение.',
-	'mobile-frontend-photo-upload-anon' => 'Вам нужно представиться системе, чтобы добавить изображение на эту страницу.', # Fuzzy
+	'mobile-frontend-photo-upload-anon' => 'Пожалуйста, представьтесь системе, чтобы добавить изображение на эту страницу.',
 	'mobile-frontend-photo-upload-protected' => 'У вас недостаточно прав для добавления изображения на эту страницу.',
 	'mobile-frontend-photo-upload-unavailable' => 'Ваш браузер не поддерживает загрузку изображений.',
 	'mobile-frontend-photo-upload-generic' => 'Пожертвовать изображение',
@@ -17297,10 +17326,10 @@ $messages['ru'] = array(
 	'mobile-frontend-watchlist-removed' => '$1 удалена из вашего списка наблюдения',
 	'mobile-frontend-watchlist-view' => 'Просмотреть свой список наблюдения',
 	'mobile-frontend-watchlist-more' => 'далее',
-	'mobile-frontend-watchlist-cta' => 'Пожалуйста, авторизуйтесь или зарегистрируйтесь, чтобы посмотреть эту страницу.', # Fuzzy
+	'mobile-frontend-watchlist-cta' => 'Следить за этой страницей, и всеми изменениями на ней.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Представиться',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Зарегистрироваться',
-	'mobile-frontend-watch-login' => 'Вы должны представиться системе для того, чтобы следить за страницами.', # Fuzzy
+	'mobile-frontend-watch-login' => 'Добавить $1 в ваш список наблюдения',
 	'mobile-frontend-watchlist-a-z' => 'Список',
 	'mobile-frontend-watchlist-feed' => 'Изменено',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Нажмите на звёздочку в верхней части страницы',
@@ -17310,7 +17339,7 @@ $messages['ru'] = array(
 	'mobile-frontend-changeslist-ip' => 'Анонимный участник',
 	'mobile-frontend-changeslist-nocomment' => 'Нет описания правки',
 	'mobile-frontend-watchlist-filter-all' => 'Всё',
-	'mobile-frontend-watchlist-filter-articles' => 'Статьи', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Страницы',
 	'mobile-frontend-watchlist-filter-talk' => 'Обсуждения',
 	'mobile-frontend-watchlist-filter-other' => 'Прочее',
 	'mobile-frontend-watchlist-modified' => 'Изменено $1',
@@ -17424,9 +17453,9 @@ $messages['ru'] = array(
 	'mobile-frontend-requires-optin' => 'Эта страница будет недоступна, пока вы не перейдёте в бета-режим. Зайдите для этого на страницу [[Special:MobileOptions|настроек]].',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] поблагодарил{{GENDER:$3||а}} за правку страницы [[$2]].',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Отредактирована}} страница [[:$1]], {{PLURAL:$2|$2 день назад|$2 дней назад|$2 дня назад|1=вчера|0=сегодня}}.',
-	'mobile-frontend-profile-footer-days' => 'Присоединился {{PLURAL:$2|$2 день назад|$2 дней назад|$2 дня назад|1=вчера|0=сегодня}} с [[Special:Contributions/$1|{{PLURAL:$3|$3 правкой|$3 правками|$3 правками|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=500+ загрузками}}]].', # Fuzzy
-	'mobile-frontend-profile-footer-months' => 'Присоединился {{PLURAL:$2|$2 месяц|$2 месяцев|$2 месяцев }} назад [[Special:Contributions/$1|{{PLURAL:$3|с $3 правкой|с $3 правками|с $3 правками|0=без правок|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=500+ загрузками}}]].', # Fuzzy
-	'mobile-frontend-profile-footer-years' => 'Присоединился более {{PLURAL:$2|года|$2 лет}} назад [[Special:Contributions/$1|{{PLURAL:$3|с $3 правкой|с $3 правками|с $3 правками|0=без правок|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=500+ загрузками}}]].', # Fuzzy
+	'mobile-frontend-profile-footer-days' => 'Присоединился {{PLURAL:$2|$2 день назад|$2 дней назад|$2 дня назад|1=вчера|0=сегодня}} с [[Special:Contributions/$1|{{PLURAL:$3|$3 правкой|$3 правками|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=более чем 500 загрузками}}]].',
+	'mobile-frontend-profile-footer-months' => 'Присоединился {{PLURAL:$2|$2 месяц|$2 месяцев|$2 месяцев }} назад [[Special:Contributions/$1|{{PLURAL:$3|с $3 правкой|с $3 правками|0=без правок|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=более чем 500 загрузками}}]].',
+	'mobile-frontend-profile-footer-years' => 'Присоединился более {{PLURAL:$2|года|$2 лет}} назад [[Special:Contributions/$1|{{PLURAL:$3|с $3 правкой|с $3 правками|0=без правок|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=более чем 500 загрузками}}]].',
 	'mobile-frontend-profile-description-placeholder' => 'Почему {{GENDER:$1|вы}} редактируете? Что {{GENDER:$1| вы}} хотите улучшить? Поделитесь {{GENDER:$1|вашими}} интересами с другими.',
 	'mobile-frontend-profile-edit-summary' => 'Обновление введения профиля участника',
 	'mobile-frontend-geonotahack' => 'Места поблизости',
@@ -18346,6 +18375,7 @@ $messages['sr-el'] = array(
 	'mobile-frontend-copyright' => 'Sadržaj je dostupan pod licencom $1 osim ako je drugačije navedeno.',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Nema članka koji odgovara pretrazi. Promenite uslove pretrage, ili pritisnite dugme za pretragu da biste je proširili na sadržaj članaka.', # Fuzzy
+	'mobile-frontend-terms-text' => 'Uslovi korišćenja',
 	'mobile-frontend-main-menu-featured' => 'Izabrano',
 	'mobile-frontend-main-menu-nearby' => 'Okolina',
 	'mobile-frontend-main-menu-settings' => 'Podešavanja',
@@ -19828,6 +19858,7 @@ $messages['uk'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'Не лякайтеся розмітки. Спробуйте поліпшити сторінку $1.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'Чому б не поліпшити $1? Не бійтеся розмітки!',
 	'mobile-frontend-editor-tutorial-confirm' => 'Почати редагування',
+	'mobile-frontend-editor-tutorial-cancel' => 'Ні, дякую.',
 	'mobile-frontend-editor-captcha-try-again' => 'Неправильний код, повторіть спробу.',
 	'mobile-frontend-editor-abusefilter-warning' => 'Увага: Ви дійсно бажаєте зберегти цю правку? Там може бути проблема з цим.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Це редагування неможливо зберегти, бо ми виявили проблему.',
@@ -21021,6 +21052,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-editor-tutorial-summary' => '不要害怕标记。请尝试改进$1页面。',
 	'mobile-frontend-editor-tutorial-alt-summary' => '为什么不改进$1呢？不要害怕标记！',
 	'mobile-frontend-editor-tutorial-confirm' => '开始编辑',
+	'mobile-frontend-editor-tutorial-cancel' => '不，谢谢',
 	'mobile-frontend-editor-captcha-try-again' => '错误代码，请重试。',
 	'mobile-frontend-editor-abusefilter-warning' => '警告：您确信要保存此次编辑么？这可能将产生一些问题。',
 	'mobile-frontend-editor-abusefilter-disallow' => '因为我们检测到的问题此次编辑无法保存。',
@@ -21366,6 +21398,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-editor-tutorial-summary' => '不要害怕標記。請嘗試改變$1頁面。',
 	'mobile-frontend-editor-tutorial-alt-summary' => '為何不改進$1？不要害怕標記！',
 	'mobile-frontend-editor-tutorial-confirm' => '開始編輯',
+	'mobile-frontend-editor-tutorial-cancel' => '不，謝謝',
 	'mobile-frontend-editor-captcha-try-again' => '錯誤代碼，請重試。',
 	'mobile-frontend-editor-abusefilter-warning' => '警告：您確信要保存此次編輯？這將產生一些程式錯誤。',
 	'mobile-frontend-editor-abusefilter-disallow' => '因我們檢測到問題是次編輯不能保存。',
