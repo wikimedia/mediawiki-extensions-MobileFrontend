@@ -395,7 +395,7 @@
 		 * @return {Boolean}
 		 */
 		getLeadSection: function() {
-			return $( '#content div' ).eq( 0 );
+			return $( '#content > div > div' ).eq( 0 );
 		},
 		getSessionId: getSessionId,
 		isWideScreen: isWideScreen,
