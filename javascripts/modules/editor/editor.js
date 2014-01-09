@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 
 	var
-		inStable = mw.config.get( 'wgMFMode' ) === 'stable',
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
 		isUserBlocked = mw.config.get( 'wgMFIsUserBlocked' ),
@@ -11,6 +10,7 @@
 		// FIXME: Should we consider default site options and user prefs?
 		// FIXME: This also needs to check that VisualEditor is actually installed.
 		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha',
+		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			queryParams: {
@@ -56,16 +56,13 @@
 		}
 
 		M.overlayManager.add( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
-			// FIXME: clean up when new overlays in stable
 			var
-				LoadingOverlay = M.require( inStable ? 'LoadingOverlay' : 'LoadingOverlayNew' ),
 				loadingOverlay = new LoadingOverlay(),
 				title = page ? page.title : mw.config.get( 'wgPageName' ).replace( /_/g, ' ' ),
 				result = $.Deferred();
 			loadingOverlay.show();
 			sectionId = mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? parseInt( sectionId, 10 ) : null;
 
-			// FIXME: clean up when new overlays in stable
 			if ( isVisualEditorEnabled ) {
 				// Load VE init module
 				mw.loader.using( 'mobile.editor.ve', function () {
@@ -77,8 +74,8 @@
 					} ) );
 				} );
 			} else {
-				mw.loader.using( inStable ? 'mobile.editor.overlay.stable' : 'mobile.editor.overlay.beta', function() {
-					var EditorOverlay = M.require( inStable ? 'modules/editor/EditorOverlay' : 'modules/editorNew/EditorOverlay' );
+				mw.loader.using( 'mobile.editor.overlay', function() {
+					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
 
 					loadingOverlay.hide();
 					result.resolve( new EditorOverlay( {

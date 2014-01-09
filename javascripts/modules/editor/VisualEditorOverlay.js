@@ -1,12 +1,12 @@
 ( function( M, $, ve ) {
-	var EditorOverlayBase = M.require( 'modules/editorNew/EditorOverlayBase' ),
+	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		Page = M.require( 'Page' ),
 		popup = M.require( 'toast' ),
 		VisualEditorOverlay;
 
 	VisualEditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
-			content: M.template.get( 'modules/editorNew/VisualEditorOverlay' )
+			content: M.template.get( 'modules/editor/VisualEditorOverlay' )
 		},
 		initialize: function( options ) {
 			var self = this;

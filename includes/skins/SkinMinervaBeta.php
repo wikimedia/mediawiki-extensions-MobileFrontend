@@ -63,7 +63,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		$modules['beta'][] = 'mobile.geonotahack';
 		$modules['search'] = array( 'mobile.search.beta' );
 		$modules['issues'] = array( 'mobile.issues.beta' );
-		$modules['editor'] = array( 'mobile.editor.beta' );
 		$modules['languages'] = array( 'mobile.languages.beta' );
 		$modules['newusers'] = array( 'mobile.newusers.beta' );
 		$modules['toggling'] = array( 'mobile.toggling.beta' );

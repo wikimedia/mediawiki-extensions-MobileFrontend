@@ -16,7 +16,7 @@
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			abusefilterReadMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
 		},
-		template: M.template.get( 'modules/editorNew/EditorOverlayBase' ),
+		template: M.template.get( 'modules/editor/EditorOverlayBase' ),
 		className: 'overlay editor-overlay',
 		initialize: function( options ) {
 			if ( this.readOnly ) {
@@ -64,6 +64,6 @@
 		}
 	} );
 
-	M.define( 'modules/editorNew/EditorOverlayBase', EditorOverlayBase );
+	M.define( 'modules/editor/EditorOverlayBase', EditorOverlayBase );
 
 }( mw.mobileFrontend ) );

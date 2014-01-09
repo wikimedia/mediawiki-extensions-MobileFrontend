@@ -254,16 +254,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.editor.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.stable.common',
-			'mobile.overlays.beta',
-		),
-		'scripts' => array(
-			'javascripts/modules/editor/editor.js',
-		),
-	),
-
 	'mobile.editor.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
@@ -272,9 +262,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
+			'javascripts/modules/editor/EditorOverlayBase.js',
+		),
+		'styles' => array(
+			'less/modules/editor.less',
 		),
 		'templates' => array(
-			'modules/editor/AbuseFilterOverlay',
+			'modules/editor/EditorOverlayBase',
 		),
 		'messages' => array(
 			// modules/editor/EditorOverlay.js
@@ -299,11 +293,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-abusefilter-warning',
 			'mobile-frontend-editor-abusefilter-disallow',
 			'mobile-frontend-editor-abusefilter-read-more',
-		),
-	),
-	'mobile.editor.styles' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/modules/editor.less',
+			'mobile-frontend-editor-editing-page',
+			'mobile-frontend-editor-previewing-page',
 		),
 	),
 
@@ -313,29 +304,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta',
 			'mobile.editor.common',
 			'mobile.stable.common',
-			'mobile.editor.styles',
 		),
 		'scripts' => array(
-			// FIXME: Move to mobile.editor.common when new overlays go to stable
-			'javascripts/modules/editorNew/EditorOverlayBase.js',
-			'javascripts/modules/editorNew/VisualEditorOverlay.js',
+			'javascripts/modules/editor/VisualEditorOverlay.js',
 		),
 		'templates' => array(
-			'modules/editorNew/EditorOverlayBase',
-			'modules/editorNew/VisualEditorOverlay',
-		),
-		// FIXME: these messages should go to mobile.editor.common when new overlays go to stable.
-		'messages' => array(
-			'mobile-frontend-editor-editing-page',
-			'mobile-frontend-editor-previewing-page',
+			'modules/editor/VisualEditorOverlay',
 		),
 	),
 
-	// FIXME: clean up when new overlays in stable (use single mobile.edit as before)
-	'mobile.editor.overlay.stable' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.editor.overlay' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.editor.common',
-			'mobile.editor.styles',
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
@@ -343,35 +323,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/EditorOverlay.js',
 		),
 		'templates' => array(
+			'modules/editor/AbuseFilterOverlay',
 			'modules/editor/EditorOverlay',
 		),
 		'messages' => array(
-			'mobile-frontend-editor-guider',
-			'mobile-frontend-editor-preview-header',
-		),
-	),
-
-	// FIXME: clean up when new overlays in stable (use single mobile.edit as before)
-	'mobile.editor.overlay.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.editor.common',
-		),
-		'scripts' => array(
-			'javascripts/modules/editorNew/AbuseFilterOverlay.js',
-			// FIXME: Move to mobile.editor.common when new overlays go to stable
-			'javascripts/modules/editorNew/EditorOverlayBase.js',
-			'javascripts/modules/editorNew/EditorOverlay.js',
-		),
-		'styles' => array(
-			'less/modules/editorNew.less',
-		),
-		'templates' => array(
-			'modules/editorNew/EditorOverlayBase',
-			'modules/editorNew/EditorOverlay',
-		),
-		'messages' => array(
-			'mobile-frontend-editor-editing-page',
-			'mobile-frontend-editor-previewing-page',
 			'mobile-frontend-editor-viewing-source-page',
 		),
 	),
@@ -547,7 +502,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.beta',
 			'mobile.templates',
-			'mobile.overlays.beta',
+			'mobile.overlays',
 		),
 		'templates' => array(
 			'keepgoing/KeepGoingDrawer',
@@ -580,7 +535,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 			// Needs LoadingOverlay
 			'mobile.stable.common',
-			'mobile.overlays.beta',
+			'mobile.overlays',
 		),
 		'messages' => array(
 			'mobile-frontend-geonotahack',
@@ -594,7 +549,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta.common',
-			'mobile.overlays.beta',
+			'mobile.overlays',
 		),
 		'styles' => array(
 			'less/modules/talk.less',
@@ -736,39 +691,30 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 		),
 		'scripts' => array(
+			// FIXME: remove when all new overlays moved to stable
 			'javascripts/common/Overlay.js',
 			'javascripts/common/LoadingOverlay.js',
-		),
-		'messages' => array(
-			'mobile-frontend-overlay-escape',
-		),
-		'templates' => array(
-			'LoadingOverlay',
-			'overlay',
-		),
-		'styles' => array(
-			'less/common/overlays.less',
-		)
-	),
 
-	'mobile.overlays.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-		),
-		'scripts' => array(
 			'javascripts/common/OverlayNew.js',
 			'javascripts/common/LoadingOverlayNew.js',
-		),
-		'styles' => array(
-			'less/common/OverlayNew.less',
-		),
-		'templates' => array(
-			'OverlayNew',
 		),
 		'messages' => array(
 			'mobile-frontend-overlay-close',
 			'mobile-frontend-overlay-continue',
+			// FIXME: remove when all new overlays moved to stable
+			'mobile-frontend-overlay-escape',
 		),
+		'templates' => array(
+			'OverlayNew',
+			'LoadingOverlay',
+			// FIXME: remove when all new overlays moved to stable
+			'overlay',
+		),
+		'styles' => array(
+			'less/common/OverlayNew.less',
+			// FIXME: remove when all new overlays moved to stable
+			'less/common/overlays.less',
+		)
 	),
 
 	// Important: This module is loaded on both mobile and desktop skin
@@ -911,7 +857,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.newusers.beta' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
-			'mobile.editor.beta',
+			'mobile.editor',
 			'mobile.contentOverlays',
 		),
 		'scripts' => array(
@@ -1016,7 +962,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.languages.beta' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.overlays.beta',
+			'mobile.overlays',
 		),
 		'scripts' => array(
 			'javascripts/modules/languagesNew/LanguageOverlay.js',
@@ -1053,7 +999,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.issues.beta' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.overlays.beta',
+			'mobile.overlays',
 		),
 		'styles' => array(
 			'less/modules/issues.less',
@@ -1250,7 +1196,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.notifications.beta' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.overlays.beta',
+			'mobile.overlays',
 		),
 		'scripts' => array(
 			'javascripts/modules/notifications/notifications.js',
@@ -1281,7 +1227,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.notifications.overlay.beta' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.overlays.beta',
+			'mobile.overlays',
 			'mobile.notifications.overlay',
 		),
 		'scripts' => array(

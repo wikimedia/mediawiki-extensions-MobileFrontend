@@ -1,13 +1,13 @@
 ( function( M ) {
-	var Overlay = M.require( 'Overlay' ), AbuseFilterOverlay;
-	AbuseFilterOverlay = Overlay.extend( {
+	var OverlayNew = M.require( 'OverlayNew' ), AbuseFilterOverlay;
+	AbuseFilterOverlay = OverlayNew.extend( {
 		defaults: {
 			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
 		},
 		templatePartials: {
 			content: M.template.get( 'modules/editor/AbuseFilterOverlay' )
 		},
-		className: 'mw-mf-overlay abusefilter-overlay',
+		className: 'overlay abusefilter-overlay',
 
 		postRender: function() {
 			this._super();

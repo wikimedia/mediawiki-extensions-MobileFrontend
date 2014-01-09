@@ -56,3 +56,15 @@ end
 When(/^I go to a page with no lead photo$/) do
   visit(LeadPhotoPage)
 end
+
+When(/^I go to a nonexistent page$/) do
+  visit(NonexistentPage)
+end
+
+Then(/^I am on the nonexistent page$/) do
+  on(NonexistentPage).current_url.should eq NonexistentPage.url
+end
+
+When(/^I click the browser back button$/) do
+  on(ArticlePage).back
+end

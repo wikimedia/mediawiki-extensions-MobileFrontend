@@ -21,7 +21,7 @@
 		var editorOverlay = new EditorOverlay( { title: 'test', sectionId: 0 } );
 
 		assert.ok( apiSpy.calledOnce, 'initialize EditorApi once' );
-		assert.ok( apiSpy.calledWith( { title: 'test', isNew: undefined, sectionId: 0} ), 'initialize EditorApi with correct pageTitle' );
+		assert.ok( apiSpy.calledWith( { title: 'test', isNew: undefined, oldId: undefined, sectionId: 0} ), 'initialize EditorApi with correct pageTitle' );
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
 	} );
 
@@ -29,7 +29,7 @@
 		new EditorOverlay( { title: 'test.css' } );
 
 		assert.ok( apiSpy.calledOnce, 'initialize EditorApi once' );
-		assert.ok( apiSpy.calledWith( { title: 'test.css', isNew: undefined, sectionId: undefined } ), 'initialize EditorApi without a section' );
+		assert.ok( apiSpy.calledWith( { title: 'test.css', isNew: undefined, oldId: undefined, sectionId: undefined } ), 'initialize EditorApi without a section' );
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
