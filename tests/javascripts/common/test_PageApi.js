@@ -287,4 +287,16 @@
 		PageApi.prototype.get.restore();
 	} );
 
+	QUnit.test( '#_getAPIResponseFromHTML', 1, function( assert ) {
+		var resp = pageApi._getAPIResponseFromHTML( $( '<div><h1><span id="1.0">A1</span></h1><h2><span>A2.1<span></h2><h2><span>A2.2<span></h2><h1><span>A2<span></h1><h2><span>A2.1<span></h2></div>' ) );
+		console.log( JSON.stringify( resp ) );
+		assert.deepEqual( resp, [
+			{ line: 'A1', level: '1', anchor: '1.0', text: '' },
+			{ line: 'A2.1', level: '2', anchor: '', text: '' },
+			{ line: 'A2.2', level: '2', anchor: '', text: '' },
+			{ line: 'A2', level: '1', anchor: '', text: '' },
+			{ line: 'A2.1', level: '2', anchor: '', text: '' }
+		] );
+	} );
+
 }( mw.mobileFrontend, jQuery ) );

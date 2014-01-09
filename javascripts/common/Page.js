@@ -10,7 +10,7 @@
 	 * @name Section
 	 */
 	Section = View.extend( {
-		template: M.template.get( 'section' ),
+		template: mw.template.get( 'section' ),
 		defaults: {
 			line: '',
 			text: '',
@@ -32,7 +32,7 @@
 	 * @name Page
 	 */
 	Page = View.extend( {
-		template: M.template.get( 'page' ),
+		template: mw.template.get( 'page' ),
 		defaults: {
 			// For titles from other namespaces use a prefix e.g. Talk:Foo
 			title: '',
@@ -72,7 +72,7 @@
 					// FIXME: remove when Special:Languages link goes stable
 					if ( !M.isBetaGroupMember() ) {
 						M.pageApi.getPageLanguages( pageTitle ).done( function( langdata ) {
-							var template = M.template.get( 'languageSection' ),
+							var template = mw.template.get( 'languageSection' ),
 								data = {
 									langlinks: langdata.languages,
 									heading: mw.msg( 'mobile-frontend-language-article-heading' ),

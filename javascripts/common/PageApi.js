@@ -203,6 +203,24 @@
 				} ).fail( $.proxy( result, 'reject' ) );
 
 			return result;
+		},
+
+		// FIXME: Where's a better place for these two functions to live?
+		_getAPIResponseFromHTML: function( $el ) {
+			var $headings = $el.find( 'h1,h2,h3,h4,h5,h6' ),
+				sections = [];
+
+			$headings.each( function() {
+				var level = $( this )[0].tagName.substr( 1 ),
+					$span = $( this ).find( 'span' );
+
+				sections.push( { level: level, line: $span.text(), anchor: $span.attr( 'id' ) || '', text: '' } );
+			} );
+			return sections;
+		},
+
+		getSectionsFromHTML: function( $el ) {
+			return transformSections( this._getAPIResponseFromHTML( $el ) );
 		}
 	} );
 
