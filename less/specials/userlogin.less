@@ -49,3 +49,23 @@ form.user-login {
 		text-align: center;
 	}
 }
+
+/* fancycaptcha reload button */
+#mf-captcha-reload-container {
+	border-top: 1px dashed #e1e1e1;
+	display: inline-block;
+	padding: 14px 25%;
+
+	.fancycaptcha-reload {
+		color: #787878;
+		font-weight: bold;
+		background-image: url(images/login/refresh.png);
+		background-repeat: no-repeat;
+		background-size: 24px;
+		padding: 4px 0px 4px 26px;
+	}
+
+	.fancycaptcha-reload-loading {
+		background-image: @ajaxLoadingImage;
+	}
+}
