@@ -3,7 +3,7 @@ When /^I select Uploads$/ do
   on(RandomPage).uploads_link_element.when_present.click
 end
 
-Then /^I receive upload message (.+)$/ do |text|
-  on(RandomPage).login_text_element.when_present.text.should match text
+Then /^I receive upload message "(.+)"$/ do |text|
+  on(RandomPage).login_text_element.text.should match Regexp.escape(text)
 end
 

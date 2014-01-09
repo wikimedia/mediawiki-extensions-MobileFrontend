@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 	var View = M.require( 'View' ),
+		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		PhotoUploaderButton;
 
 	function isSupported() {
@@ -84,34 +85,16 @@
 					parent: self,
 					file: file
 				} ),
-					LoadingOverlay, loadingOverlay;
-
-				// FIXME: remove when new uploads overlay in stable
-				if ( !M.isBetaGroupMember() ) {
-					LoadingOverlay = M.require( 'LoadingOverlay' );
 					loadingOverlay = new LoadingOverlay();
-					loadingOverlay.show();
 
-					mw.loader.using( 'mobile.uploads', function() {
-						var PhotoUploader = M.require( 'modules/uploads/PhotoUploader' );
-						loadingOverlay.hide();
-						new PhotoUploader( options );
-					} );
-				} else {
-					// make sure LoadingOverlayNew is present
-					mw.loader.using( 'mobile.beta', function() {
-						LoadingOverlay = M.require( 'LoadingOverlayNew' );
-						loadingOverlay = new LoadingOverlay();
-						loadingOverlay.show();
+				loadingOverlay.show();
 
-						mw.loader.using( 'mobile.uploadsNew', function() {
-							loadingOverlay.hide();
-							// FIXME: this is hacky but it would be hard to pass a file in a route
-							M.emit( '_upload-preview', options.file );
-							M.router.navigate( '#/upload-preview/' + options.funnel );
-						} );
-					} );
-				}
+				mw.loader.using( 'mobile.uploads', function() {
+					loadingOverlay.hide();
+					// FIXME: this is hacky but it would be hard to pass a file in a route
+					M.emit( '_upload-preview', options.file );
+					M.router.navigate( '#/upload-preview/' + options.funnel );
+				} );
 			}
 
 			$input.

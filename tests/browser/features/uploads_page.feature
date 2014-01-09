@@ -1,5 +1,5 @@
-@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
-Feature: Upload image
+@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org @login
+Feature: Special:Uploads uploads
 
   Scenario: Upload image file
     Given I am logged into the mobile website

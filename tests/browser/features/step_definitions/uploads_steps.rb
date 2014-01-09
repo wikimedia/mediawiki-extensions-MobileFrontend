@@ -7,7 +7,7 @@ When(/^I go to uploads page$/) do
 end
 
 When(/^I type a description$/) do
-  on(UploadsPage).description_textarea_element.when_present.send_keys("Describing with #{@random_string}")
+  on(UploadsPage).photo_description_element.when_present.send_keys("Describing with #{@random_string}")
 end
 
 When(/^I upload Mobile file (.+) on (.+)$/) do |file_name, page|
@@ -17,15 +17,8 @@ When(/^I upload Mobile file (.+) on (.+)$/) do |file_name, page|
   require 'chunky_png'
   ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save path
 
+  # FIXME: does this really work? can it accept a string?
   on(page).select_file_element.send_keys(path)
-end
-
-Then(/^I see a blue tutorial screen$/) do
-  on(UploadsPage).tutorial_element.when_present.should exist
-end
-
-Then(/^I see a next button$/) do
-  on(UploadsPage).next_button_element.when_present.should exist
 end
 
 Then(/^my image is on the Uploads page$/) do
@@ -44,4 +37,22 @@ end
 Then(/^The upload button links to the tutorial$/) do
   # use should match as href will be relative/absolute url
   on(UploadsPage).tutorial_link_element.when_present.attribute( 'href' ).should match "#/upload-tutorial/uploads$"
+end
+
+Then(/^I see the upload preview$/) do
+  on(ArticlePage).photo_overlay_element.should be_visible
+end
+
+Then(/^I can enter a description for my file upload$/) do
+  on(NonexistentPage).photo_description_element.when_present.should exist
+end
+
+When(/^I click the upload preview overlay close button and confirm$/) do
+  on(ArticlePage).confirm(true) do
+    on(ArticlePage).photo_overlay_close_button_element.click
+  end
+end
+
+Then(/^I don't see the upload preview$/) do
+  on(ArticlePage).photo_overlay_element.should_not be_visible
 end

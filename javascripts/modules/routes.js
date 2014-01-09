@@ -11,7 +11,7 @@
 		var result = $.Deferred();
 		// FIXME: Use loadModuleScript function in notifications.js so that this shows a loader
 		// or make showing a loader part of OverlayManager
-		mw.loader.using( 'mobile.uploadsNew', function() {
+		mw.loader.using( 'mobile.uploads', function() {
 			var UploadTutorialNew = M.require( 'modules/uploads/UploadTutorial' );
 			result.resolve( new UploadTutorialNew( { funnel: funnel || null } ) );
 		} );
@@ -23,8 +23,8 @@
 		var result = $.Deferred();
 		// FIXME: Use loadModuleScript function in notifications.js so that this shows a loader
 		// or make showing a loader part of OverlayManager
-		mw.loader.using( 'mobile.uploadsNew', function() {
-			var PhotoUploadOverlay = M.require( 'modules/uploadsNew/PhotoUploadOverlay' );
+		mw.loader.using( 'mobile.uploads', function() {
+			var PhotoUploadOverlay = M.require( 'modules/uploads/PhotoUploadOverlay' );
 			result.resolve( new PhotoUploadOverlay( {
 				pageTitle: mw.config.get( 'wgTitle' ),
 				file: lastFile,

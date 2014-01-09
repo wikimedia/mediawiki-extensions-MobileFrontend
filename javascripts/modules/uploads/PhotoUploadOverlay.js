@@ -4,7 +4,7 @@
 		OverlayNew = M.require( 'OverlayNew' ),
 		Page = M.require( 'Page' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
-		PhotoUploadProgress = M.require( 'modules/uploadsNew/PhotoUploadProgress' ),
+		PhotoUploadProgress = M.require( 'modules/uploads/PhotoUploadProgress' ),
 		schema = M.require( 'loggingSchemas/mobileWebUploads' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', user.getName(), user ),
 		PhotoUploadOverlay;
@@ -25,7 +25,7 @@
 		className: 'overlay photo-overlay',
 
 		templatePartials: {
-			content: M.template.get( 'uploadsNew/PhotoUploadOverlay' )
+			content: M.template.get( 'uploads/PhotoUploadOverlay' )
 		},
 
 		initialize: function( options ) {
@@ -160,6 +160,6 @@
 			}
 	} );
 
-	M.define( 'modules/uploadsNew/PhotoUploadOverlay', PhotoUploadOverlay );
+	M.define( 'modules/uploads/PhotoUploadOverlay', PhotoUploadOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -38,7 +38,7 @@
 			return makeDisabledButton();
 		}
 
-		if ( M.isBetaGroupMember() && user.getEditCount() === 0 ) {
+		if ( user.getEditCount() === 0 ) {
 			$( '#ca-upload' ).addClass( 'enabled' );
 			$( '<a>' ).attr( 'href', '#/upload-tutorial/' + funnel ).appendTo( '#ca-upload' );
 		} else {

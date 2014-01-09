@@ -331,22 +331,39 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// FIXME: merge into mobile.uploadsNew when mobile.uploads is gone
-	'mobile.uploads.tutorial' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.uploads' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
 		),
 		'scripts' => array(
+			'javascripts/loggingSchemas/mobileWebUploads.js',
+			'javascripts/modules/uploads/PhotoApi.js',
+			'javascripts/modules/uploads/LeadPhoto.js',
 			'javascripts/modules/uploads/UploadTutorial.js',
+			'javascripts/modules/uploads/PhotoUploadProgress.js',
+			'javascripts/modules/uploads/PhotoUploadOverlay.js',
 		),
 		'styles' => array(
 			'less/modules/uploads/UploadTutorial.less',
+			'less/modules/uploads/PhotoUploadOverlay.less',
 		),
 		'templates' => array(
+			'uploads/LeadPhoto',
 			'uploads/UploadTutorial',
+			'uploads/PhotoUploadOverlay',
+			'uploads/PhotoUploadProgress',
 		),
 		'messages' => array(
+			'mobile-frontend-photo-upload-success-article',
+			'mobile-frontend-photo-upload-error',
+
+			// PhotoApi.js
+			'mobile-frontend-photo-article-edit-comment',
+			'mobile-frontend-photo-article-donate-comment',
+			'mobile-frontend-photo-upload-error-filename',
+			'mobile-frontend-photo-upload-comment',
+
 			// UploadTutorial.js
 			'mobile-frontend-first-upload-wizard-new-page-1-header',
 			'mobile-frontend-first-upload-wizard-new-page-1',
@@ -355,119 +372,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-first-upload-wizard-new-page-3-header',
 			'mobile-frontend-first-upload-wizard-new-page-3',
 			'mobile-frontend-first-upload-wizard-new-page-3-ok',
-		),
-	),
-
-	// FIXME: merge into mobile.uploadsNew when mobile.uploads is gone
-	'mobile.uploads.common' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.stable',
-			'mobile.templates',
-			'mobile.uploads.tutorial',
-		),
-		'scripts' => array(
-			'javascripts/modules/uploads/PhotoApi.js',
-			'javascripts/modules/uploads/LeadPhoto.js',
-		),
-		'templates' => array(
-			'uploads/LeadPhoto',
-		),
-		'messages' => array(
-			// PhotoApi.js
-			'mobile-frontend-photo-article-edit-comment',
-			'mobile-frontend-photo-article-donate-comment',
-			'mobile-frontend-photo-upload-error-filename',
-			'mobile-frontend-photo-upload-comment',
-		),
-	),
-
-	'mobile.uploads' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.stable',
-			'mobile.templates',
-			'mobile.uploads.common',
-		),
-		'scripts' => array(
-			'javascripts/modules/uploads/LearnMoreOverlay.js',
-			'javascripts/modules/uploads/NagOverlay.js',
-			'javascripts/modules/uploads/PhotoUploadProgress.js',
-			'javascripts/modules/uploads/PhotoUploaderPreview.js',
-			'javascripts/modules/uploads/PhotoUploader.js',
-		),
-		'styles' => array(
-			'less/modules/uploads.less',
-		),
-		'templates' => array(
-			'uploads/PhotoUploadPreview',
-			'uploads/PhotoUploadProgress',
-			'uploads/NagOverlay',
-			'uploads/LearnMoreOverlay',
-			'uploads/LeadPhoto',
-		),
-		'messages' => array(
-			'mobile-frontend-photo-upload-success-article',
-			'mobile-frontend-photo-upload-error',
-
-			// LearnMoreOverlay.js
-			'mobile-frontend-photo-ownership-confirm',
-
-			// PhotoUploaderPreview.js
-			'mobile-frontend-photo-license' => array( 'parse' ),
-			'mobile-frontend-photo-ownership',
-			'mobile-frontend-photo-ownership-help',
-			'mobile-frontend-photo-caption-placeholder',
-			'mobile-frontend-image-loading',
-			'mobile-frontend-photo-submit',
-			'mobile-frontend-photo-cancel',
-			'mobile-frontend-photo-ownership-bullet-one',
-			'mobile-frontend-photo-ownership-bullet-two',
-			'mobile-frontend-photo-ownership-bullet-three',
-			'mobile-frontend-photo-upload-error-file-type',
-			'mobile-frontend-photo-license' => array( 'parse' ),
-
-			// PhotoUploadProgress.js
-			'mobile-frontend-image-uploading-wait',
-			'mobile-frontend-image-uploading-long',
-			'mobile-frontend-image-uploading-cancel',
-
-			// NagOverlay.js
-			'mobile-frontend-photo-nag-1-bullet-1-heading',
-			'mobile-frontend-photo-nag-1-bullet-1-text' => array( 'parse' ),
-			'mobile-frontend-photo-nag-1-bullet-2-heading',
-			'mobile-frontend-photo-nag-1-bullet-2-text',
-			'mobile-frontend-photo-nag-2-bullet-1-heading',
-			'mobile-frontend-photo-nag-3-bullet-1-heading',
-			'parentheses',
-			'mobile-frontend-learn-more',
-			'mobile-frontend-photo-nag-learn-more-heading',
-			'mobile-frontend-photo-nag-learn-more-1' => array( 'parse' ),
-			'mobile-frontend-photo-nag-learn-more-2' => array( 'parse' ),
-			'mobile-frontend-photo-nag-learn-more-3' => array( 'parse' ),
-		),
-	),
-
-	'mobile.uploadsNew' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.stable',
-			'mobile.templates',
-			'mobile.uploads.common',
-			'mobile.uploads.tutorial',
-		),
-		'scripts' => array(
-			'javascripts/loggingSchemas/mobileWebUploads.js',
-			'javascripts/modules/uploadsNew/PhotoUploadProgress.js',
-			'javascripts/modules/uploadsNew/PhotoUploadOverlay.js',
-		),
-		'styles' => array(
-			'less/modules/uploadsNew/PhotoUploadOverlay.less',
-		),
-		'templates' => array(
-			'uploadsNew/PhotoUploadOverlay',
-			'uploadsNew/PhotoUploadProgress',
-		),
-		'messages' => array(
-			'mobile-frontend-photo-upload-success-article',
-			'mobile-frontend-photo-upload-error',
 
 			// PhotoUploadOverlay.js
 			'mobile-frontend-image-heading-describe' => array( 'parse' ),
@@ -561,7 +465,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
-			'javascripts/modules/routes.js',
 		),
 		'templates' => array(
 			'modules/ImageOverlay',
@@ -742,6 +645,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'ctaDrawer',
 		),
 		'scripts' => array(
+			'javascripts/modules/routes.js',
 			'javascripts/common/Drawer.js',
 			'javascripts/common/CtaDrawer.js',
 			'javascripts/widgets/progress-bar.js',
@@ -756,7 +660,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-watchlist-cta-button-login',
 			'mobile-frontend-drawer-cancel',
 
-			// LearnMoreOverlay.js, newbie.js
+			// newbie.js
 			'cancel',
 
 			// page.js
@@ -1270,8 +1174,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.styles',
 			'mobile.stable.common',
 			'mobile.templates',
-			// FIXME: remove when new uploads overlay in stable
-			'mobile.uploads.tutorial',
 		),
 		'templates' => array(
 			'specials/uploads/photo',

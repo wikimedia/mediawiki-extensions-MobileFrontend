@@ -1,3 +1,4 @@
+# FIXME: separate this into ArticlePage and LoginPage
 class RandomPage
   include PageObject
 
