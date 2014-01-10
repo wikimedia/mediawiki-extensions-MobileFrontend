@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cef0db4e_94be94d0",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-10T20:04:50Z",
+      "side": 1,
+      "message": "description qqq code is missing.",
+      "revId": "3edf3f386fe6446422e1dbbd72c5686eb0fad0b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cef0db4e_34bd88d2",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-10T20:04:50Z",
+      "side": 1,
+      "message": "Looks like an unrelated change due to a bad rebase. This is now appearing twice.",
+      "revId": "3edf3f386fe6446422e1dbbd72c5686eb0fad0b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cef0db4e_54b80ce2",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-10T20:04:50Z",
+      "side": 1,
+      "message": "Looks like an unrelated change due to a bad rebase.",
+      "revId": "3edf3f386fe6446422e1dbbd72c5686eb0fad0b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
