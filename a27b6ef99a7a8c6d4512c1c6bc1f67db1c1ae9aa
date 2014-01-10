@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cef0db4e_d4f41cbc",
+        "filename": "less/mixins.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-10T20:02:02Z",
+      "side": 1,
+      "message": "This is in core :) Use that instead\n(@import mediawiki.mixins)\n\nhttp://git.wikimedia.org/blob/mediawiki%2Fcore.git/991839eddac141aa2b3c80f3b42f9abdb2841739/resources%2Fmediawiki.less%2Fmediawiki.mixins.less",
+      "revId": "a27b6ef99a7a8c6d4512c1c6bc1f67db1c1ae9aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
