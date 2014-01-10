@@ -2,23 +2,44 @@
 
 	var Api = M.require( 'api' ).Api, PageApi;
 
+	function assignToParent( listOfSections, child ) {
+		var section;
+		if ( listOfSections.length === 0 ) {
+			listOfSections.push( child );
+		} else {
+			// take a look at the last child
+			section = listOfSections[listOfSections.length - 1];
+			// If the level is the same as another section in this list it is a sibling
+			if ( parseInt( section.level, 10 ) === parseInt( child.level, 10 ) ) {
+				listOfSections.push( child );
+			} else {
+				// Otherwise take a look at that sections children recursively
+				assignToParent( section.children, child );
+			}
+		}
+	}
+
 	function transformSections( sections ) {
 		var
 			collapseLevel = Math.min.apply( this, $.map( sections, function( s ) { return s.level; } ) ) + '',
+			lastSection,
 			result = [], $tmpContainer = $( '<div>' );
 
 		$.each( sections, function( i, section ) {
 			// FIXME: [API] should probably do this for us - we want to be able to control the styling of these headings - no inline styles!
 			section.line = $( '<div>' ).html( section.line ).text();
+			section.children = [];
 			if ( !section.level || section.level === collapseLevel ) {
 				result.push( section );
+				lastSection = section;
 			} else {
 				// FIXME: ugly, maintain structure returned by API and use templates instead
 				$tmpContainer.html( section.text );
 				$tmpContainer.prepend(
 					$( '<h' + section.level + '>' ).attr( 'id', section.anchor ).html( section.line )
 				);
-				result[result.length - 1].text += $tmpContainer.html();
+				assignToParent( lastSection.children, section );
+				lastSection.text += $tmpContainer.html();
 			}
 		} );
 
