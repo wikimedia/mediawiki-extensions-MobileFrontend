@@ -205,7 +205,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			} else {
 				$tag = Html::element( 'ins', array(), $el->nodeValue );
 			}
-			$out = "<div>$tag</div>";
+			$out .= "<div>$tag</div>";
 		}
 
 		return $out;
