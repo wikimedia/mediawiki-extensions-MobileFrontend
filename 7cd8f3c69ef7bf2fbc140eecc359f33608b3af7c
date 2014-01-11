@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cef0db4e_5a16f55b",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-01-11T05:17:40Z",
+      "side": 0,
+      "message": "I think you still need the check for wgIsPageEditable.",
+      "revId": "7cd8f3c69ef7bf2fbc140eecc359f33608b3af7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
