@@ -36,7 +36,13 @@ class HomePage
   div(:watch_note_removed, text: "Removed San Francisco Chronicle from your watchlist")
   a(:watched_link, class: "watch-this-article watched")
   a(:create_account, class: "mw-mf-create-account")
+
   button(:language_button, text: "Read in another language")
+  div(:language_overlay, class: "language-overlay")
+  button(:language_overlay_close_button) do |page|
+    page.language_overlay_element.button_element(class: "cancel")
+  end
+
   li(:edit_icon, id:"ca-edit")
   li(:upload_icon, id:"ca-upload")
   div(:fe_notification, class:"drawer position-fixed visible")

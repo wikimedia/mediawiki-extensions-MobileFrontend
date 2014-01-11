@@ -2,10 +2,14 @@ When /^I click the language button$/ do
   on(HomePage).language_button_element.when_present.click
 end
 
-Then /^I move to the language screen$/ do
-  on(LanguagePage)  do |page|
-  page.number_languages_element.element.should exist
-  page.search_box_placeholder_element.element.when_present.set "Esp"
-  page.language_search_results_element.element.should exist
-  end
+Then(/^I see the language overlay$/) do
+  on(HomePage).language_overlay_element.should be_visible
+end
+
+When(/^I click the language overlay close button$/) do
+  on(HomePage).language_overlay_close_button_element.click
+end
+
+Then(/^I don't see the languages overlay$/) do
+  on(HomePage).language_overlay_element.should_not be_visible
 end

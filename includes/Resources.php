@@ -394,12 +394,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 			'mobile.templates',
 		),
-		'messages' => array(
-			// LanguageOverlay.js
-			'mobile-frontend-language-header',
-			'mobile-frontend-language-site-choose',
-			'mobile-frontend-language-footer',
-		),
 	),
 
 	'mobile.keepgoing' => $wgMFMobileResourceBoilerplate + array(
@@ -465,6 +459,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
+			'javascripts/modules/languages/preferred.js',
 		),
 		'templates' => array(
 			'modules/ImageOverlay',
@@ -842,45 +837,39 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// FIXME: remove when new overlays in stable
-	'mobile.languages' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.languages.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
-		),
-		'styles' => array(
-			'less/modules/languages.less',
 		),
 		'scripts' => array(
 			'javascripts/modules/languages/LanguageOverlay.js',
-			'javascripts/modules/languages/languages.js',
 		),
 		'templates' => array(
-			'overlays/languages',
-		),
-		'messages' => array(
-			'mobile-frontend-language-header',
-			'mobile-frontend-language-site-choose',
-			'mobile-frontend-language-footer',
-		),
-	),
-
-	'mobile.languages.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-		),
-		'scripts' => array(
-			'javascripts/modules/languagesNew/LanguageOverlay.js',
-			'javascripts/modules/languagesNew/languages.js',
-			'javascripts/modules/languagesNew/preferred.js',
-		),
-		'templates' => array(
-			'modules/languagesNew/LanguageOverlay',
+			'modules/languages/LanguageOverlay',
 		),
 		'messages' => array(
 			'mobile-frontend-language-heading',
 			'mobile-frontend-language-header',
 			'mobile-frontend-language-variant-header' => array( 'parse' ),
 			'mobile-frontend-language-site-choose',
+		),
+	),
+
+	'mobile.languages' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.languages.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/languages/languagesStable.js',
+		),
+	),
+
+	'mobile.languages.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.languages.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/languages/languagesBeta.js',
 		),
 	),
 

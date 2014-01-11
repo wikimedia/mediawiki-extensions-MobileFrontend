@@ -1,6 +1,6 @@
-( function( M,  $ ) {
+( function( M, $ ) {
 
-	var LanguageOverlay = M.require( 'languagesNew/LanguageOverlay' );
+	var LanguageOverlay = M.require( 'languages/LanguageOverlay' );
 
 	M.overlayManager.add( /^\/languages$/, function() {
 		var LoadingOverlay = M.require( 'LoadingOverlayNew' ),
