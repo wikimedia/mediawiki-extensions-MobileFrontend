@@ -65,6 +65,6 @@
 	// for tests
 	SearchApi._highlightSearchTerm = highlightSearchTerm;
 
-	M.define( 'modules/searchNew/SearchApi', SearchApi );
+	M.define( 'modules/search/SearchApi', SearchApi );
 
 }( mw.mobileFrontend, jQuery ));

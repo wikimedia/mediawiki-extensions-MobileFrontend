@@ -23,6 +23,17 @@ class ArticlePage
     page.upload_button_element.link_element(href: '#/upload-tutorial/article')
   end
 
+  text_field(:search_box_placeholder, name: "search", index: 0)
+  text_field(:search_box2, name: "search", index: 1)
+  li(:search_results, title: "Barack Obama")
+  a(:search_result) do |page|
+    page.search_results_element.element.a
+  end
+  div(:search_overlay, class: "search-overlay")
+  button(:search_overlay_close_button) do |page|
+    page.search_overlay_element.button_element(class: "cancel")
+  end
+
   span(:external_links_section, id:"External_links")
   span(:pres_campaign_section, id:"Presidential_campaigns")
   a(:ext_whitehouse_link, href: "http://www.whitehouse.gov/administration/president_obama/")

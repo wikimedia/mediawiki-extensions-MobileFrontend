@@ -2,13 +2,13 @@
 
 	var
 		OverlayNew = M.require( 'OverlayNew' ),
-		SearchApi = M.require( 'modules/searchNew/SearchApi' ),
+		SearchApi = M.require( 'modules/search/SearchApi' ),
 		SEARCH_DELAY = 500,
 		SearchOverlay;
 
 	SearchOverlay = OverlayNew.extend( {
 		className: 'overlay search-overlay',
-		template: M.template.get( 'modules/searchNew/SearchOverlay' ),
+		template: M.template.get( 'modules/search/SearchOverlay' ),
 		defaults: {
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
 			clearMsg: mw.msg( 'mobile-frontend-clear-search' ),
@@ -124,6 +124,6 @@
 		}
 	} );
 
-	M.define( 'modules/searchNew/SearchOverlay', SearchOverlay );
+	M.define( 'modules/search/SearchOverlay', SearchOverlay );
 
 }( mw.mobileFrontend, jQuery ));

@@ -135,7 +135,6 @@ $messages['en'] = array (
 	'mobile-frontend-placeholder' => 'Search {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Search {{SITENAME}} (Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Search {{SITENAME}} (Experimental)',
-	'mobile-frontend-search-help' => 'Type search term above and matching page titles will appear here.',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 	'mobile-frontend-clear-search' => 'Clear',
 	'mobile-frontend-search-content' => 'Search within pages',
@@ -147,7 +146,6 @@ $messages['en'] = array (
 	'mobile-frontend-footer-license' => 'Text is available under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional terms may apply.',
 	'mobile-frontend-copyright' => 'Content is available under $1 unless otherwise noted.',
 	'mobile-frontend-footer-contact' => 'Contact',
-	'mobile-frontend-search-noresults' => 'No page titles match your search. Change your search, or press the keyboard search button to search inside pages.',
 	'mobile-frontend-terms-text' => 'Terms of use',
 	'mobile-frontend-terms-url' => '',
 

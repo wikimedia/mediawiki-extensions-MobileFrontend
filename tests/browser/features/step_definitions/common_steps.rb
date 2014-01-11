@@ -61,6 +61,10 @@ Then(/^I am on the nonexistent page$/) do
   on(NonexistentPage).current_url.should eq NonexistentPage.url
 end
 
+Then(/^I am on the home page$/) do
+  on(HomePage).current_url.should eq HomePage.url
+end
+
 When(/^I click the browser back button$/) do
   on(ArticlePage).back
 end

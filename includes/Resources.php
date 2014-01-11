@@ -475,21 +475,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.search.beta' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.search' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.beta'
+			'mobile.overlays'
 		),
 		'styles' => array(
-			'less/modules/searchNew/SearchOverlay.less',
+			'less/modules/search/SearchOverlay.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/searchNew/SearchApi.js',
-			'javascripts/modules/searchNew/SearchOverlay.js',
-			'javascripts/modules/searchNew/search.js',
-			'javascripts/modules/searchNew/pageImages.js',
+			'javascripts/modules/search/SearchApi.js',
+			'javascripts/modules/search/SearchOverlay.js',
+			'javascripts/modules/search/search.js',
+			'javascripts/modules/search/pageImages.js',
 		),
 		'templates' => array(
-			'modules/searchNew/SearchOverlay',
+			'modules/search/SearchOverlay',
 		),
 		'messages' => array(
 			// for search.js
@@ -497,6 +497,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-search-content',
 			'mobile-frontend-search-no-results',
 			'mobile-frontend-search-content-no-results' => array( 'parse' ),
+		),
+	),
+
+	// FIXME: remove when cache expires
+	'mobile.search.stable' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.search'
 		),
 	),
 
@@ -628,7 +635,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'wikitext/commons-upload',
 			'overlays/cleanup',
-			// search.js and Nearby.js
+			// SearchOverlay.js and Nearby.js
 			'articleList',
 			// PhotoUploaderButton.js
 			// For new page action menu
@@ -811,29 +818,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-watchlist-add',
 			'mobile-frontend-watchlist-removed',
 			'mobile-frontend-watchlist-cta',
-		),
-	),
-
-
-	// FIXME: remove when new search overlay in stable
-	'mobile.search.stable' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.stable',
-			'mobile.templates',
-		),
-		'scripts' => array(
-			'javascripts/modules/search/search.js',
-		),
-		'styles' => array(
-			'less/modules/search.less',
-		),
-		'templates' => array(
-			'overlays/search/search',
-		),
-		'messages' => array(
-			// for search.js
-			'mobile-frontend-search-help',
-			'mobile-frontend-search-noresults',
 		),
 	),
 
