@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "cef0db4e_1a998d80",
+        "filename": "less/common/hacks.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-11T00:01:26Z",
+      "side": 1,
+      "message": "Good catch.",
+      "parentUuid": "cef0db4e_9ad7dd28",
+      "revId": "bb9f8b86557854916071f6f83906e1c66a0137fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cef0db4e_7adc194c",
         "filename": "less/common/typography.less",
         "patchSetId": 5
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "cef0db4e_5ab835e2",
+        "filename": "less/common/typography.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-11T00:01:26Z",
+      "side": 1,
+      "message": "It\u0027s for parity with the class above.",
+      "parentUuid": "cef0db4e_7adc194c",
+      "revId": "bb9f8b86557854916071f6f83906e1c66a0137fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cef0db4e_5ae155fa",
         "filename": "less/common/typography.less",
         "patchSetId": 5
@@ -64,6 +100,24 @@
       "writtenOn": "2014-01-10T23:51:25Z",
       "side": 1,
       "message": "Is this not the default?",
+      "revId": "bb9f8b86557854916071f6f83906e1c66a0137fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cef0db4e_9aa59db4",
+        "filename": "less/common/typography.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-11T00:01:26Z",
+      "side": 1,
+      "message": "Otherwise it inherits 1.6 which is huge for a 3em character, i.e. it gets placed way above the adjacent line of text.",
+      "parentUuid": "cef0db4e_5ae155fa",
       "revId": "bb9f8b86557854916071f6f83906e1c66a0137fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
