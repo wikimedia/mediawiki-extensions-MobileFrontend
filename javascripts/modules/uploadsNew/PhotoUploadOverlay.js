@@ -154,6 +154,7 @@
 				on( 'error', function() {
 					// When using a bad filetype close the overlay
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
+					self.hide( true );
 					self.emit( 'hide' );
 				} );
 			}
