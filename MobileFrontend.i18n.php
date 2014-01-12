@@ -3703,6 +3703,7 @@ $messages['cy'] = array(
 	'mobilefrontend-keepgoing-suggest-again' => 'Ceisio tudalen arall',
 	'mobilefrontend-keepgoing-saved-title' => 'Cadwyd y golygiad!',
 	'mobilefrontend-keepgoing-links-title' => 'Ychwanegu cysylltau',
+	'mobilefrontend-keepgoing-links-ask-first' => "Llongyfarchiadau ar gwblhau eich golygiad cyntaf! A ydych am gynorthwyo yn ychwanegu cysylltau i dudalen a chafodd ei dechrau'n ddiweddar?",
 	'mobilefrontend-keepgoing-links-ask-again' => 'Am wella tudalen arall?',
 	'mobilefrontend-keepgoing-links-example' => 'e.e. bydd ysgrifennu $1guitar$2 yn cynhyrchu $3guitar$4',
 	'nearby' => "Tudalennau yn perthyn i'r cyffiniau",
@@ -3866,6 +3867,9 @@ $messages['cy'] = array(
 	'mobile-frontend-watchlist-cta-button-signup' => 'Cofrestru',
 	'mobile-frontend-watchlist-purpose' => 'Mae rhestr wylio yn eich cynorthwyo i glustnodi tudalennau er mwyn dilyn hynt y newidiadau iddynt.',
 	'mobile-frontend-watchlist-login-action' => 'Mewngofnodwch er mwyn ei gweld.',
+	'mobile-frontend-generic-login' => 'Ffrwyth llafur pobl fel chi yw {{SITENAME}}.',
+	'mobile-frontend-generic-login-action' => 'Mewngofnodwch er mwyn cyfrannu.',
+	'mobile-frontend-generic-signup-action' => 'Cofrestrwch er mwyn cyfrannu.',
 	'mobile-frontend-watch-login' => 'Ychwanegu $1 at eich rhestr wylio.',
 	'mobile-frontend-edit-login-action' => 'Mewngofnodwch er mwyn golygu.',
 	'mobile-frontend-watchlist-a-z' => 'Rhestr',
@@ -3930,11 +3934,13 @@ $messages['cy'] = array(
 	'mobile-frontend-image-heading-describe' => "'''Disgrifiwch''' y ddelwedd",
 	'mobile-frontend-image-uploading' => "'''Wrthi'n uwchlwytho'r''' ddelwedd...",
 	'mobile-frontend-image-cancel-confirm' => "Diddymu'r uwchlwytho?",
+	'mobile-frontend-editor-redirect-title' => "Wrthi'n ailgyfeirio i'r golygydd...",
 	'mobile-frontend-editor-unavailable-header' => "Nid yw'r golygydd ar gael",
 	'mobile-frontend-editor-unavailable' => "Ar hyn o bryd, nid oes modd golygu â'ch porwr presennol o'r teclyn symudol. Ceisiwch ddefnyddio porwr gwahanol.",
 	'mobile-frontend-editor-undo-unsupported' => 'Ni ellir ddadwneud ar declynnau symudol, ar hyn o bryd.',
 	'mobile-frontend-editor-newpage-prompt' => "Nid yw'r dudalen ar gael eto. Beth am fentro a'i dechrau!",
 	'mobile-frontend-editor-disabled' => "Mae'r dudalen hon wedi ei gwarchod rhag cael ei fandaleiddio.",
+	'mobile-frontend-editor-blocked' => 'Gosodwyd bloc rhag golygu ar eich cyfrif.',
 	'mobile-frontend-editor-cta' => "Helpwch wella'r dudalen hon!",
 	'mobile-frontend-editor-edit' => 'Golygu',
 	'mobile-frontend-editor-continue' => 'Ymlaen',
@@ -3956,6 +3962,7 @@ $messages['cy'] = array(
 	'mobile-frontend-editor-error-preview' => "Gwall, digwyddodd rhywbeth annisgwyl wrth lwytho'r rhagolwg. Caewch ef ac yna ceisiwch eto.",
 	'mobile-frontend-editor-tutorial-summary' => "Peidiwch â bod ofn cystrawen wici. Ceisiwch wella'r dudalen $1.",
 	'mobile-frontend-editor-tutorial-confirm' => 'Dechrau golygu',
+	'mobile-frontend-editor-tutorial-cancel' => 'Dim diolch',
 	'mobile-frontend-editor-captcha-try-again' => 'Cod anghywir, ceisiwch eto.',
 	'mobile-frontend-editor-abusefilter-warning' => "Rhybudd: Ydych chi wir am roi'r golygiad hwn ar gadw? Efallai bod problem gan y golygiad.",
 	'mobile-frontend-editor-abusefilter-disallow' => "Ni ellir rhoi'r golgyiad ar gadw oherwydd bod problem i gael.",
@@ -5880,6 +5887,7 @@ $messages['ext'] = array(
 
 /** Persian (فارسی)
  * @author Alireza
+ * @author Armin1392
  * @author Baqeri
  * @author Calak
  * @author Dalba
@@ -5945,8 +5953,12 @@ $messages['fa'] = array(
 	'mobile-frontend-on' => 'روشن',
 	'mobile-frontend-featured-article' => 'مطلب برگزیدهٔ امروز',
 	'mobile-frontend-news-items' => 'در خبرها',
+	'mobile-frontend-languages-404-title' => 'خطای زبان‌ها',
 	'mobile-frontend-languages-404-desc' => 'یک عنوان معتبر باید مشخص شود.',
 	'mobile-frontend-languages-header' => 'زبان‌ها',
+	'mobile-frontend-languages-nonexistent-title' => 'صفحهٔ "$1" وجود ندارد.',
+	'mobile-frontend-languages-text' => '$1 در دسترس است در $2 {{PLURAL:$2|زبان|زبان‌ها}}.',
+	'mobile-frontend-languages-variant-header' => '{{#language:{{CONTENTLANG}}}} انواع',
 	'mobile-frontend-language-heading' => '<strong>زبان‌ها</strong>',
 	'mobile-frontend-language-article-heading' => 'به زبان‌های دیگر مطالعه کنید',
 	'mobile-frontend-language-header' => 'این صفحه در $1 {{PLURAL:$1|زبان|زبان}} در دسترس است',
@@ -6044,6 +6056,8 @@ $messages['fa'] = array(
 	'mobile-frontend-nearby-directions' => 'حرکت در اینجا',
 	'mobile-frontend-donate-image-nouploads' => 'هیچ بارگذاری‌ای نیست.',
 	'mobile-frontend-donate-image-login' => 'پروندهٔ {{SITENAME}} توسط شخصی مانند شما اهدا شده‌است.',
+	'mobile-frontend-donate-image-login-action' => 'ورود برای اشتراک گذاری رسانه‌های خود.',
+	'mobile-frontend-donate-image-signup-action' => 'ثبت‌نام برای اشتراک گذاری رسانه‌های خود با دنیا.',
 	'mobile-frontend-photo-upload-disabled' => 'در این صفحه تصویری مورد نیاز نیست.',
 	'mobile-frontend-photo-upload-anon' => 'لطفاً برای افزودن تصویر به صفحه به سامانه وارد شوید.',
 	'mobile-frontend-photo-upload-protected' => 'شما دسترسی افزودن تصویر به این صفحه را ندارید.',
@@ -6070,8 +6084,14 @@ $messages['fa'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'ورود به سامانه',
 	'mobile-frontend-watchlist-cta-button-signup' => 'ثبت نام',
 	'mobile-frontend-watchlist-login-action' => 'برای مشاهده وارد سامانه شوید.',
+	'mobile-frontend-watchlist-signup-action' => 'ثبت‌نام برای شروع یکی هم‌اکنون.',
+	'mobile-frontend-generic-login' => '{{SITENAME}} توسط افرادی چون شما ساخته شده‌است.',
+	'mobile-frontend-generic-login-action' => 'ورود برای کمک.',
+	'mobile-frontend-generic-signup-action' => 'ثبت نام برای کمک.',
 	'mobile-frontend-watch-login' => 'افزودن $1 به پیگیری‌های شما.',
+	'mobile-frontend-edit-login' => 'کمک به بهبود صفحهٔ $1.',
 	'mobile-frontend-edit-login-action' => 'ورود برای ویرایش.',
+	'mobile-frontend-edit-signup-action' => 'ثبت‌نام برای ویرایش.',
 	'mobile-frontend-watchlist-a-z' => 'فهرست',
 	'mobile-frontend-watchlist-feed' => 'تغییر‌یافته',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'ستاره در بالای صفحه را کلیک کنید',
@@ -6134,10 +6154,13 @@ $messages['fa'] = array(
 	'mobile-frontend-image-heading-describe' => "''' توصیف ''' تصویر",
 	'mobile-frontend-image-uploading' => "''' بارگذاری''' تصویر...",
 	'mobile-frontend-image-cancel-confirm' => 'لغو بارگذاری؟',
+	'mobile-frontend-editor-redirect-title' => 'در حال هدایت به ویرایشگر...',
+	'mobile-frontend-editor-unavailable-header' => 'در دسترس نبودن ویرایشگر',
 	'mobile-frontend-editor-unavailable' => 'ویرایش تلفن همراه هم‌اکنون در مرورگر شما دردسترس نیست. خواهشمندیم مرورگر دیگری را بیازمایید.',
 	'mobile-frontend-editor-undo-unsupported' => 'خنثی‌سازی در حال حاضر در دستگاه‌های همراه پشتیبانی نشده‌است.',
 	'mobile-frontend-editor-newpage-prompt' => 'این صفحه وجود ندارد. چرا جسور نباشید و ایجادش نکنید؟',
 	'mobile-frontend-editor-disabled' => 'این صفحه برای جلوگیری از خرابکاری محافظت می‌شود.',
+	'mobile-frontend-editor-blocked' => 'حساب شما از ویرایش مسدود شده‌است.',
 	'mobile-frontend-editor-cta' => 'کمک به بهبود این صفحه!',
 	'mobile-frontend-editor-edit' => 'ویرایش',
 	'mobile-frontend-editor-continue' => 'ادامه',
@@ -6159,6 +6182,7 @@ $messages['fa'] = array(
 	'mobile-frontend-editor-error-preview' => 'خطا، مشکلی غیر منتظره برای بارگذاری صفحه پدید آمده. لطفا صفحه را ببندید و دوباره تلاش کنید.',
 	'mobile-frontend-editor-tutorial-summary' => 'از نشانه‌گذاری‌ها نترسید. تلاش کنید صفحهٔ $1 را بهبود بخشید.',
 	'mobile-frontend-editor-tutorial-confirm' => 'ویرایش را آغاز کنید',
+	'mobile-frontend-editor-tutorial-cancel' => 'نه، متشکرم',
 	'mobile-frontend-editor-captcha-try-again' => 'کد اشتباه، مجدداً تلاش کنید.',
 	'mobile-frontend-editor-abusefilter-warning' => 'اخطار: شما می‌خواهید این ویرایش را ذخیره کنید؟ ممکن‌است مشکلی با آن وجود داشته باشد.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'این ویرایش نمی‌تواند ذخیره شود به این دلیل که ما خطایی را شناسایی کرده‌ایم.',
@@ -6607,6 +6631,7 @@ plakatum, forsíðum á bókum osfr.',
  * @author Louperivois
  * @author Ltrlg
  * @author Lucky
+ * @author McDutchie
  * @author Metroitendo
  * @author NemesisIII
  * @author Nobody
@@ -6830,7 +6855,7 @@ $messages['fr'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet ajouté|octets ajoutés}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet supprimé|octets supprimés}}',
 	'mobile-frontend-diffview-explained' => 'Les lignes suivantes ont été ajoutées (+) et supprimées (-):',
-	'mobile-frontend-thanked-notice' => '$1 a été averti que vous avez aimé {{GENDER:$2|sa|sa|leur}} modification.',
+	'mobile-frontend-thanked-notice' => '$1 a été averti que vous avez aimé {{GENDER:$2|sa}} modification.',
 	'mobile-frontend-saving-exit-page' => "Votre contribution est en train d'être enregistrée. Si vous quittez, vos contributions seront perdues. Êtes-vous sûr de vouloir sortir?",
 	'mobile-frontend-photo-upload' => 'Ajouter une image à cette page',
 	'mobile-frontend-photo-article-edit-comment' => 'Image ajoutée pour être utilisée sur la page',
@@ -8991,6 +9016,52 @@ $messages['ia'] = array(
 	'mobile-frontend-diffview-title' => 'Cambios',
 	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|modification|modificationes}}',
 	'mobile-frontend-diffview-anonymous' => 'Usator anonyme',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} addite',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} removite',
+	'mobile-frontend-diffview-explained' => 'Le sequente lineas ha essite addite (+) e removite (-):',
+	'mobile-frontend-thanked-notice' => '$1 ha essite informate que {{GENDER:$2|su}} modification te placeva.',
+	'mobile-frontend-saving-exit-page' => 'Tu contribution es ancora in curso de esser salveguardate. Si tu parti, illo essera perdite. Es tu secur de voler exir?',
+	'mobile-frontend-photo-upload' => 'Adder un imagine a iste pagina',
+	'mobile-frontend-photo-article-edit-comment' => 'Imagine addite pro uso in pagina',
+	'mobile-frontend-photo-article-donate-comment' => 'Imagine contribuite ab Special:Uploads',
+	'mobile-frontend-photo-upload-comment' => 'Imagine addite al pagina',
+	'mobile-frontend-photo-caption-placeholder' => 'Describe iste imagine (obligatori)',
+	'mobile-frontend-image-loading' => 'Carga imagine',
+	'mobile-frontend-photo-ownership' => 'Io, $1, ha create iste imagine.',
+	'mobile-frontend-photo-ownership-help' => 'Que significa isto?',
+	'mobile-frontend-photo-ownership-confirm' => 'Comprendite!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Nos pote solmente acceptar imagines de tu proprietate. Per favor non incarga imagines que tu ha trovate alterubi in internet.',
+	'mobile-frontend-photo-ownership-bullet-two' => 'Imagines sub copyright o inappropriate essera removite.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Tu files incargate essera liberate sub un licentia que permitte a omnes de re-usar los gratuitemente.',
+	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Io non viola derectos de autor',
+	'mobile-frontend-photo-nag-1-bullet-1-text' => "'''Non''' es un imagine que io ha trovate in internet. Es un obra mie.",
+	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Isto non es un imagine personal',
+	'mobile-frontend-photo-nag-1-bullet-2-text' => 'E illo pote adjutar a illustrar un subjecto importante.',
+	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Absolutemente non viola le derecto de autor, e iste imagine es educative.',
+	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'Io comprende lo que io pote incargar. Non plus monstra me iste message.',
+	'mobile-frontend-photo-nag-learn-more-heading' => 'Que incargar?',
+	'mobile-frontend-photo-nag-learn-more-1' => "'''Si!''' Photos que tu ha prendite de locos, objectos e eventos.",
+	'mobile-frontend-photo-nag-learn-more-2' => "'''Si!''' Photos que pote adjutar a illustrar e inricchir paginas de {{SITENAME}}.",
+	'mobile-frontend-photo-nag-learn-more-3' => "'''No.''' Photos de affiches de films, coperturas de libros o altere materiales sub derecto de autor. Istes essera delite.",
+	'mobile-frontend-lead-image-tutorial-summary' => 'Assecura te que le imagine pote adjutar a illustrar le pagina. Illo debe esser un imagine que tu ha create e que non viola alcun derecto de autor.',
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Comenciar a incargar',
+	'mobile-frontend-image-uploading-wait' => 'Incarga imagine, per favor attende.',
+	'mobile-frontend-image-uploading-long' => 'Imagine in curso de incargamento! Gratias pro tu patientia.',
+	'mobile-frontend-image-uploading-cancel' => '<a href="#">Cancellar</a> si isto se prolonga troppo.',
+	'mobile-frontend-photo-upload-error' => 'Error. Proba de novo.',
+	'mobile-frontend-photo-upload-error-file-type' => 'Per favor incarga solmente imagines.',
+	'mobile-frontend-photo-upload-error-filename' => 'Error. Per favor forni un summario plus descriptive.',
+	'mobile-frontend-photo-upload-success-article' => 'Successo! Le imagine es ora visibile sur iste pagina.',
+	'mobile-frontend-photo-license' => 'Si tu incarga iste imagine, tu accepta nostre [//wikimediafoundation.org/wiki/Terms_of_use conditiones de uso] e accepta de liberar tu imagine sub le [//creativecommons.org/licenses/by-sa/3.0/ licentia Creative Commons Attribution-ShareAlike 3.0].',
+	'mobile-frontend-photo-submit' => 'Submitter',
+	'mobile-frontend-photo-cancel' => 'Cancellar',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> imagine incargate|<span>$1</span> imagines incargate}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ imagines incargate',
+	'mobile-frontend-image-heading-describe' => "'''Describe''' le imagine",
+	'mobile-frontend-image-uploading' => "'''Incarga''' le image...",
+	'mobile-frontend-image-cancel-confirm' => 'Cancellar incargamento?',
+	'mobile-frontend-editor-redirect-title' => 'Redirige verso editor...',
+	'mobile-frontend-editor-unavailable-header' => 'Editor indisponibile',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -12206,16 +12277,24 @@ $messages['la'] = array(
  * @author Menachem.Moreira
  */
 $messages['lad'] = array(
+	'mobile-frontend-search-submit' => 'Ir',
 	'mobile-frontend-home-button' => 'Kaza',
 	'mobile-frontend-languages-header' => 'Lenguas',
 	'mobile-frontend-language-heading' => '<strong>Lenguas</strong>',
 	'mobile-frontend-language-site-choose' => 'Bushkar lengua',
+	'mobile-frontend-username' => 'Nombre de usuario:',
+	'mobile-frontend-password' => 'Kontrasenya:',
+	'mobile-frontend-username-placeholder' => 'Nombre de usuario',
+	'mobile-frontend-password-placeholder' => 'Kontrasenya',
 	'mobile-frontend-placeholder' => 'Bushka en {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Bushka en {{SITENAME}}(Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Buska en {{SITENAME}}(Experimental)',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Si!',
+	'mobile-frontend-watchlist-more' => 'mas',
+	'mobile-frontend-watchlist-filter-all' => 'Todos',
 	'mobile-frontend-watchlist-filter-articles' => 'Pajinas',
+	'mobile-frontend-diffview-title' => 'Kambios',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -14857,7 +14936,7 @@ $messages['nl'] = array(
 	'mobile-frontend-photo-ownership-confirm' => 'Begrepen!',
 	'mobile-frontend-photo-ownership-bullet-one' => "We accepteren alleen foto's die u zelf hebt gemaakt. Upload geen foto's die u ergens anders op het internet hebt gevonden.",
 	'mobile-frontend-photo-ownership-bullet-two' => 'Auteursrechtelijk beschermde en ongepaste afbeeldingen worden verwijderd.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'Uw uploads zijn vrijgegeven onder een licentie die iedereen in staat stelt ze vrij te hergebruiken.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Uw uploads worden vrijgegeven onder een licentie die iedereen in staat stelt ze gratis te hergebruiken.',
 	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Ik schend geen auteursrechten',
 	'mobile-frontend-photo-nag-1-bullet-1-text' => "Het is '''geen''' afbeelding die ik op het internet heb gevonden. Het is mijn eigen werk.",
 	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Dit is geen persoonlijke afbeelding',
@@ -14871,7 +14950,7 @@ $messages['nl'] = array(
 	'mobile-frontend-lead-image-tutorial-summary' => 'Zorg dat uw afbeelding de pagina helpt te illustreren. Het moet een afbeelding zijn die geen auteursrechten schendt.',
 	'mobile-frontend-lead-image-tutorial-confirm' => 'Beginnen met uploaden',
 	'mobile-frontend-image-uploading-wait' => 'Bezig met het uploaden van de afbeelding.',
-	'mobile-frontend-image-uploading-long' => 'De afbeelding wordt nog geüpload. Dank u wel voor uw geduld.',
+	'mobile-frontend-image-uploading-long' => 'De afbeelding wordt nog geüpload. Nog even geduld alstublieft.',
 	'mobile-frontend-image-uploading-cancel' => 'Klik op <a href="#">Annuleren</a> als dit te lang duurt.',
 	'mobile-frontend-photo-upload-error' => 'Er is een fout opgetreden. Probeer het opnieuw.',
 	'mobile-frontend-photo-upload-error-file-type' => 'Upload alstublieft alleen afbeeldingen.',
@@ -16428,6 +16507,7 @@ $messages['pt'] = array(
  * @author Giro720
  * @author HenriqueCrang
  * @author Luckas
+ * @author McDutchie
  * @author MetalBrasil
  * @author Rafael Vargas
  * @author Rodrigo codignoli
@@ -16603,7 +16683,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-changeslist-ip' => 'Usuário anônimo',
 	'mobile-frontend-changeslist-nocomment' => 'sem sumário de edição',
 	'mobile-frontend-watchlist-filter-all' => 'Todas',
-	'mobile-frontend-watchlist-filter-articles' => 'Artigos',
+	'mobile-frontend-watchlist-filter-articles' => 'Artigos', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'Discussão',
 	'mobile-frontend-watchlist-filter-other' => 'Outros',
 	'mobile-frontend-watchlist-modified' => 'Modificada $1',
@@ -16615,8 +16695,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} adicionados',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} removidos',
 	'mobile-frontend-diffview-explained' => 'As linhas a seguir foram adicionadas (+) e removidas (-):',
-	'mobile-frontend-thanked-notice' => '$1 foi {{GENDER:$2|informado|informada|informados}} que você curtiu sua edição.',
-	'mobile-frontend-table' => 'Tabela $1',
+	'mobile-frontend-thanked-notice' => '$1 foi {{GENDER:$2|informado|informada}} que você curtiu sua edição.',
 	'mobile-frontend-saving-exit-page' => 'Sua contribuição ainda está sendo salva. Se você sair suas contribuições serão perdidas. Tem certeza que deseja sair?',
 	'mobile-frontend-photo-upload' => 'Adicione uma imagem a esta página',
 	'mobile-frontend-photo-article-edit-comment' => 'Adicionada imagem para uso na página',
@@ -16708,7 +16787,7 @@ $messages['pt-br'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'Se um usuário está ou não editando através da interface móvel',
 	'mobile-frontend-profile-title' => 'Perfil de usuário',
 	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Enviada}} {{PLURAL:$1|ontem|$1 dias atrás|0=hoje}}.',
-	'mobile-frontend-profile-usertalk' => 'Falar com $1',
+	'mobile-frontend-profile-usertalk' => 'Falar com $1', # Fuzzy
 	'mobile-frontend-profile-error' => 'Ó não!',
 	'mobile-frontend-profile-noargs' => 'Por favor informe um nome de usuário para ver o perfil.',
 	'mobile-frontend-profile-nouser' => 'Nome de usuário inexistente. Nomes de usuário diferenciam minúsculas e maiúsculas, por favor confira se digitou corretamente.',
@@ -18479,6 +18558,7 @@ $messages['su'] = array(
  * @author Jopparn
  * @author Lokal Profil
  * @author MaxSem
+ * @author McDutchie
  * @author Skalman
  * @author WikiPhoenix
  */
@@ -18696,7 +18776,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte}} lades till',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|}} togs bort',
 	'mobile-frontend-diffview-explained' => 'Följande rader har lagts till (+) och tagits bort (-):',
-	'mobile-frontend-thanked-notice' => '$1 fick höra att du gillade {{GENDER:$2|hans|hennes|deras}} redigering.',
+	'mobile-frontend-thanked-notice' => '$1 meddelades att du gillade {{GENDER:$2|hans|hennes|dennes}} redigering.',
 	'mobile-frontend-saving-exit-page' => 'Ditt bidrag sparas fortfarande. Om du lämnar kommer dina bidrag förloras. Är du säker på att du vill avsluta?',
 	'mobile-frontend-photo-upload' => 'Lägg till en bild på denna sida',
 	'mobile-frontend-photo-article-edit-comment' => 'Lade till bild för användning på sidan',
