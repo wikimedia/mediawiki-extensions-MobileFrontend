@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_199f5b57",
+        "filename": "less/styleguide.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-13T23:36:29Z",
+      "side": 1,
+      "message": "Why is an *.md file HTML?",
+      "revId": "04bc3f010c89745694f3fbe30c2b7fa67d7fe29b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
