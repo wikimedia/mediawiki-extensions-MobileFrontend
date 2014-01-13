@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_b349b0d5",
+        "filename": "tests/browser/features/create_account_failure_messages.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:44:23Z",
+      "side": 1,
+      "message": "This is broken error message is actually\n\"Incorrect or missing confirmation code.\"",
+      "revId": "57b0892842230fae8856f09dd1abdad186a3dd00",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

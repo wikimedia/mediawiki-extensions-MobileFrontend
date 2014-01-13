@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_f3c97856",
+        "filename": "tests/browser/features/support/pages/create_user_page.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:44:23Z",
+      "side": 0,
+      "message": "How did this even sneak into the code base?!",
+      "revId": "7cd8f3c69ef7bf2fbc140eecc359f33608b3af7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
