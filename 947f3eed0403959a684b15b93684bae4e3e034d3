@@ -2,6 +2,142 @@
   "comments": [
     {
       "key": {
+        "uuid": "aef5673e_f395f843",
+        "filename": "less/common/common.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "We now have 3 new lines at the bottom of this file..!",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_b39f7062",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "It\u0027s not really fixed... it\u0027s in ems. I\u0027m confused by this comment.\n\nWhy use a variable here at all? It\u0027s not used anywhere else.",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_7391e851",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "Instead of doing this maybe limit the existing common.less rules to stable\ne.g.\n.stable {\n p,li,dl {...\n}\n(Since inherit is the default)",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_d379d42b",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "A comment will be useful here to explain this is to avoid line height issues caused by sup.",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_b3765038",
+        "filename": "less/common/footer.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "Merge the margin-left and margin-right rules\nhttps://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions#Use_shorthand_where_possible",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_b3a5309d",
+        "filename": "less/common/hacks.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "Use @grayMedium.",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_d3fe74ab",
+        "filename": "less/common/typographyNew.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "Juliusz prefers us to avoid using the 0 here e.g. .6em\n\nI put this in the coding convention. Since you\u0027ve got to change this file anyway...\nhttps://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions#CSS.2FLESS",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_935a2cf8",
+        "filename": "less/common/typographyNew.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "oops",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_b3b9b02b",
         "filename": "less/specials/userprofile.less",
         "patchSetId": 11
@@ -13,6 +149,92 @@
       "writtenOn": "2014-01-13T18:59:02Z",
       "side": 1,
       "message": "There\u0027s now a variable for this, so might as well use it.",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_13ebbcdc",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "Technically this was 1.65 and has now been changed to 1.6 but I\u0027ll pretend I didn\u0027t see that ;-)",
+      "parentUuid": "aef5673e_b3b9b02b",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_d3bf94a6",
+        "filename": "less/variables.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "I\u0027d move these into the tablet file itself rather than making them global LESS variables.",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_f3ce1886",
+        "filename": "less/variables.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "I really dislike the New suffix. Beta might be a better suffix. Also I don\u0027t think this needs to be a global.",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_f3c29838",
+        "filename": "less/variables.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "Are any of these variables with the exception of contentLineHeight ever going to be reused anywhere? If not they shouldn\u0027t be variables or at least be \u0027local\u0027 variables.",
+      "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_13d29c2c",
+        "filename": "less/variables.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 1,
+      "message": "I don\u0027t think these should be variables - they are not really reusable...",
       "revId": "947f3eed0403959a684b15b93684bae4e3e034d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "aef5673e_33b120dd",
+        "filename": "less/common/typography.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T19:33:37Z",
+      "side": 0,
+      "message": "Why? They are not used anywhere else and are not global....",
+      "parentUuid": "aef5673e_d3bc341d",
+      "revId": "a86338cba24909957cdd7fd6bcf71c09f9b2b001",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_139a9cbd",
         "filename": "less/tablet/hacks.less",
         "patchSetId": 11
