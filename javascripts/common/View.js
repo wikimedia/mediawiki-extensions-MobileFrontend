@@ -56,6 +56,38 @@
 		tagName: 'div',
 
 		/**
+		 * Specifies the template used in render().
+		 *
+		 * @name View.prototype.template
+		 * @type {Object|string|HoganTemplate}
+		 */
+
+		/**
+		 * Specifies partials (sub-templates) for the main template. Example:
+		 *
+		 * @example
+		 * // example content for the "some" template (sub-template will be
+		 * // inserted where {{>content}} is):
+		 * // <h1>Heading</h1>
+		 * // {{>content}}
+		 *
+		 * var SomeView = View.extend( {
+		 *   template: M.template.get( 'some' ),
+		 *   templatePartials: { content: M.template.get( 'sub' ) }
+		 * }
+		 *
+		 * @name View.prototype.templatePartials
+		 * @type {Object|string|HoganTemplate}
+		 */
+
+		/**
+		 * A set of default options that are merged with options passed into the initialize function.
+		 *
+		 * @name View.prototype.defaults
+		 * @type {Object}
+		 */
+
+		/**
 		 * Constructor, if you override it, use _super().
 		 *
 		 * @name View.prototype.initialize
