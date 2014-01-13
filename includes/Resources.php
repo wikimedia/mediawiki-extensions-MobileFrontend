@@ -587,10 +587,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'position' => 'bottom',
 		'messages' => array(
-			// for mf-toggle-dynamic.js
-			'mobile-frontend-show-button',
-			'mobile-frontend-hide-button',
-
 			// for talk.js
 			'mobile-frontend-talk-overlay-header',
 
@@ -842,6 +838,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/toggling/toggle.js',
+		),
+	),
+
+	'mobile.toggling.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.toggling',
+		),
+		'scripts' => array(
+			'javascripts/modules/toggling/accessibility.js',
+			'javascripts/modules/mf-toggle-dynamic.js',
 		),
 	),
 

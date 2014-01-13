@@ -95,6 +95,7 @@
 		}
 		checkHash();
 		$( '#content_wrapper a' ).on( 'click', checkHash );
+		M.emit( 'toggling-enabled', $headings );
 	}
 
 	// avoid this running on Watchlist
