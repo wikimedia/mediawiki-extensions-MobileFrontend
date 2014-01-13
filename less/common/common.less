@@ -1,5 +1,19 @@
 @import "../mixins.less";
 
+// Deprecated rules
+.stable {
+	input,
+	textarea {
+		font-size: round( 1em / @fontScalingFactor, 2 );
+	}
+
+	p,
+	li,
+	dl {
+		line-height: 1.65;
+	}
+}
+
 .mw-mf-overlay,
 #content_wrapper {
 	.error {
@@ -45,11 +59,6 @@
 
 textarea {
 	padding: 5px 0 5px 5px;
-}
-
-input,
-textarea {
-	font-size: round( 1em / @fontScalingFactor, 2 ); // Fixed font on purpose to avoid zooming on iOS
 }
 
 input:not([type=submit]), textarea {
@@ -101,12 +110,6 @@ ul.gallery {
 			word-wrap: break-word;
 		}
 	}
-}
-
-p,
-li,
-dl {
-	line-height: 1.65;
 }
 
 pre {
@@ -236,7 +239,6 @@ pre {
 		}
 
 		.thumbcaption {
-			width: 100%;
 			margin: 5px 10px 0;
 			text-align: center;
 			width: auto !important;

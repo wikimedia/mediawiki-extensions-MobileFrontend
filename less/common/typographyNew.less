@@ -1,0 +1,42 @@
+@import "../variables.less";
+
+.beta, .alpha {
+	html {
+		// When moving to stable, just change @fontScalingFactor to 1.0
+		font-size: 1.0;
+	}
+
+	.thumb {
+		margin: .6em 0;
+		/* resets */
+		border: none;
+		border-radius: 0;
+		background-color: transparent;
+		text-align: inherit;
+	}
+
+	blockquote {
+		quotes: "\201C" "\201D";
+		font-family: @fontFamilyHeading;
+		font-size: 1.1em;
+		padding: 1em @blockquotePaddingRight 1em @blockquotePaddingLeft;
+		position: relative;
+
+		&:before {
+			content: open-quote;
+			font-size: 3em;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		&:after{
+			content: close-quote;
+			font-size: 3em;
+			line-height: 1;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
