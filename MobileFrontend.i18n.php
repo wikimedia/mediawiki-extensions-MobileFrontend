@@ -398,8 +398,6 @@ $messages['en'] = array (
 	'mobile-frontend-profile-footer-days' => 'Joined {{PLURAL:$2|1 day|$2 days}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 	'mobile-frontend-profile-footer-months' => 'Joined over {{PLURAL:$2|1 month|$2 months}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 	'mobile-frontend-profile-footer-years' => 'Joined over {{PLURAL:$2|1 year|$2 years}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
-	'mobile-frontend-profile-description-placeholder' => 'Why do {{GENDER:$1|you}} edit? What do {{GENDER:$1|you}} want to improve? Share {{GENDER:$1|your}} interests with others.',
-	'mobile-frontend-profile-edit-summary' => 'Updating user profile introduction',
 
 	// geo not a hack
 	'mobile-frontend-geonotahack' => 'Near this page',

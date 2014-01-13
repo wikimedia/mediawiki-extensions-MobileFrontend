@@ -232,30 +232,13 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$this->targetUser = User::newFromName( $par );
 			// Make sure this is a valid registered user and not an invalid username (e.g. ip see bug 56822)
 			if ( $this->targetUser && $this->targetUser->getId() ) {
-				// FIXME: There's probably a cleaner way to do this.
-				$userDescPageName = $this->targetUser->getUserPage()->getPrefixedText() . '/UserProfileIntro';
-				$userDescPageTitle = Title::newFromText( $userDescPageName );
-
-				// See if user is allowed to edit this user profile
-				$user = $this->getUser();
-				if ( $user->isLoggedIn() &&
-					$user->getId() === $this->targetUser->getId() &&
-					$userDescPageTitle->quickUserCan( 'edit', $user )
-				) {
-					$this->editable = true;
-					$out->addJsConfigVars( array( 'wgMFUserCanEditProfile' => true ) );
-				}
-
 				// Prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$activityHtml = $this->getLastEditHtml() . $this->getLastUploadHtml()
 					. $this->getLastThanksHtml();
-				$this->userDescription = $this->getLanguage()->truncate( $this->getWikiPageText( $userDescPageTitle ),
-					self::MAX_DESCRIPTION_CHARS );
 
 				$html = Html::element( 'h1', array(), $this->targetUser->getName() )
-					. Html::openElement( 'div', array( 'class' => 'profile content' ) )
-					. $this->getUserSummary();
+					. Html::openElement( 'div', array( 'class' => 'profile content' ) );
 
 				if ( $activityHtml ) {
 					$html .= Html::openElement( 'div', array( 'class' => 'card-container' ) )
