@@ -34,7 +34,7 @@
 			M.router.route( /^\/notifications$/, function() {
 				loadModuleScript( 'mobile.notifications.overlay.beta' ).done( function() {
 					var NotificationsOverlayNew = M.require( 'modules/notifications/NotificationsOverlayNew' );
-					new NotificationsOverlayNew( { $badge: $btn, headerContext: $btn.find( 'span' ).text() } ).show();
+					new NotificationsOverlayNew( { $badge: $btn, count: $btn.find( 'span' ).text() } ).show();
 				} );
 			} );
 
