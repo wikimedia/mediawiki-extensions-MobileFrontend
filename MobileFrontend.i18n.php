@@ -522,8 +522,6 @@ This buttons takes the user to a random page.
 	'mobile-frontend-opt-in-explain' => 'Used as description for the "Beta" in [[Special:MobileOptions]], if the beta is not enabled.',
 	'mobile-frontend-images-status' => 'On settings page label for turning on/off images.
 {{Identical|Image}}',
-	'mobile-frontend-expand-sections-status' => 'On settings page label for turning on/off expansion of all sections on page load.',
-	'mobile-frontend-expand-sections-description' => 'On settings page description for turning on/off expansion of all sections on page load.',
 	'mobile-frontend-disable-images' => 'Unused at this time.
 
 See also:
@@ -532,6 +530,8 @@ See also:
 
 See also:
 * {{msg-mw|Mobile-frontend-disable-images}}',
+	'mobile-frontend-expand-sections-status' => 'On settings page label for turning on/off expansion of all sections on page load.',
+	'mobile-frontend-expand-sections-description' => 'On settings page description for turning on/off expansion of all sections on page load.',
 	'mobile-frontend-missing-image' => 'When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image.
 {{Identical|Image}}',
 	'mobile-frontend-off' => 'On settings page signals that a feature will be turned off. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
@@ -1535,7 +1535,7 @@ $messages['ar'] = array(
 	'mobile-frontend-talk-reply' => 'رد',
 	'abusefilter-edit-builder-vars-user-mobile' => 'إذا كان المستخدم يعدل عبر واجهة الجوال',
 	'mobile-frontend-geonotahack' => 'قرب هذه الصفحة',
-	'beta-feature-geonotahack-description' => 'إستكشف الصفحات القريبة جغرافياً من محتوى الصفحة التي تقوم بقرائتها حالياً.',
+	'beta-feature-geonotahack-description' => 'إستكشف الصفحات القريبة جغرافيا من محتوى الصفحة التي تقوم بقراءتها حالياً.',
 );
 
 /** Aramaic (ܐܪܡܝܐ)
@@ -4303,6 +4303,7 @@ $messages['da'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'Vær ikke bange for markup. Prøv at forbedre siden $1.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'Hvorfor ikke forbedre $1? Du skal ikke være bange for opmærkningen!',
 	'mobile-frontend-editor-tutorial-confirm' => 'Begynd at redigere',
+	'mobile-frontend-editor-tutorial-cancel' => 'Nej tak',
 	'mobile-frontend-editor-captcha-try-again' => 'Forkert kode, prøv igen.',
 	'mobile-frontend-editor-abusefilter-warning' => 'Advarsel: Er du sikker på, du vil gemme denne redigering? Der kan være et problem med det.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Denne redigering kan ikke gemmes, fordi vi har opdaget et problem.',
@@ -5139,6 +5140,7 @@ $messages['el'] = array(
 	'mobile-frontend-page-menu-contents' => 'περιεχόμενα',
 	'mobile-frontend-page-menu-history' => 'Ιστορικό',
 	'mobile-frontend-meta-data-issues-header' => 'Θέματα',
+	'mobile-frontend-meta-data-issues' => 'Αυτή η σελίδα έχει κάποια προβλήματα',
 	'mobile-frontend-page-saving' => 'Αποθήκευση $1',
 	'mobile-frontend-nearby-to-page' => 'Οι ακόλουθες σελίδες είναι σχετικές με την $1, με βάση της γεωγραφικής τοποθεσίας τους',
 	'mobile-frontend-nearby-title' => 'Κοντινά',
@@ -5160,6 +5162,7 @@ $messages['el'] = array(
 	'mobile-frontend-nearby-directions' => 'Πλοηγηθήτε εδώ',
 	'mobile-frontend-donate-image-nouploads' => 'Χωρίς επιφορτώσεις.',
 	'mobile-frontend-donate-image-login' => 'Πρέπει να είστε συνδεδεμένος για να δείτε τις προσθήκες σας.', # Fuzzy
+	'mobile-frontend-photo-upload-disabled' => 'Καμία εικόνα δεν είναι απαραίτητη σε αυτή τη σελίδα.',
 	'mobile-frontend-photo-upload-generic' => 'Συνεισφορά μιας εικόνας',
 	'mobile-frontend-donate-image-title' => 'Επιφορτώσεις',
 	'mobile-frontend-donate-image-heading' => 'Οι πρόσφατες συνεισφορές σας',
@@ -5168,6 +5171,8 @@ $messages['el'] = array(
 	'mobile-frontend-listed-image-no-description' => 'Καμία περιγραφή',
 	'mobile-frontend-donate-photo-upload-success' => 'Επιτυχία! Η εικόνα σας μπορεί τώρα να χρησιμοποιηθεί στη {{ΌΝΟΜΑ_ΤΟΠΟΘΕΣΊΑΣ}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Επιτυχία! Ευχαριστούμε για την πρώτη σας συνεισφορά!',
+	'mobile-frontend-watchlist-add' => 'Προστέθηκε  $1  στη λίστα παρακολούθησης σας',
+	'mobile-frontend-watchlist-removed' => 'Αφαιρέθηκε $1 από τη λίστα παρακολούθησής σας',
 	'mobile-frontend-watchlist-view' => 'Προβολή της λίστας παρακολούθησής σας',
 	'mobile-frontend-watchlist-cta-button-login' => 'Είσοδος',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Εγγραφή',
@@ -5187,9 +5192,38 @@ $messages['el'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte προστέθηκε|bytes προστέθηκαν}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte αφαιρέθηκε|bytes αφαιρέθηκαν}}',
 	'mobile-frontend-diffview-explained' => 'Οι παρακάτω γραμμές προστέθηκαν (+) και αφαιρέθηκαν (-):',
+	'mobile-frontend-photo-submit' => 'Υποβολή',
+	'mobile-frontend-photo-cancel' => 'Ακύρωση',
+	'mobile-frontend-editor-cta' => 'Βοηθήστε να βελτιωθεί αυτή η σελίδα!',
+	'mobile-frontend-editor-edit' => 'Επεξεργασία',
+	'mobile-frontend-editor-continue' => 'Συνέχεια',
+	'mobile-frontend-editor-save' => 'Αποθήκευση',
+	'mobile-frontend-editor-cancel' => 'Ακύρωση',
+	'mobile-frontend-editor-keep-editing' => 'Συνέχεια επεξεργασίας',
 	'mobile-frontend-editor-license' => 'Αποθηκεύοντας τις αλλαγές, συμφωνείτε με τους [//wikimediafoundation.org/wiki/Terms_of_use Όρους Χρήσης] μας και συμφωνείτε να δημοσιεύσετε το κείμενό σας υπό την [//creativecommons.org/licenses/by-sa/3.0/ Άδεια CC BY-SA 3.0] και την [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
-	'mobile-frontend-editor-editing-page' => '<strong>Επεξεργασία</strong> <span>$1</span>', # Fuzzy
-	'mobile-frontend-editor-previewing-page' => '<strong>Προεπισκόπηση</strong> <span>$1</span>', # Fuzzy
+	'mobile-frontend-editor-placeholder' => 'Αυτή η ενότητα είναι κενή. Γίνετε ο πρώτος που θα την αναπτύξει!',
+	'mobile-frontend-editor-summary-placeholder' => 'Πείτε μας τι αλλάξατε (προαιρετικά)',
+	'mobile-frontend-editor-cancel-confirm' => 'Θέλετε πραγματικά να εγκαταλείψετε την επεξεργασία;',
+	'mobile-frontend-editor-wait' => 'Αποθήκευση επεξεργασίας, παρακαλούμε περιμένετε.',
+	'mobile-frontend-editor-guider' => '"{{int:mobile-frontend-editor-continue}}" θα σας επιτρέψει να κάνετε προεπισκόπηση και να αποθηκεύσετε.',
+	'mobile-frontend-editor-success' => 'Επιτυχία! Η επεξεργασία σας αποθηκεύτηκε.',
+	'mobile-frontend-editor-success-landmark-1' => 'Συγχαρητήρια, είστε τώρα ένας συντάκτης στη {{SITENAME}}!',
+	'mobile-frontend-editor-error' => 'Σφάλμα, η επεξεργασία δεν αποθηκεύτηκε.',
+	'mobile-frontend-editor-error-conflict' => 'Σφάλμα, ένας άλλος χρήστης έχει επεξεργαστεί αυτή τη σελίδα.',
+	'mobile-frontend-editor-error-loading' => 'Σφάλμα, δεν μπορεί να φορτωθεί η ενότητα.',
+	'mobile-frontend-editor-preview-header' => 'Προεπισκόπηση',
+	'mobile-frontend-editor-error-preview' => 'Σφάλμα, κάτι αναπάντεχο συνέβη κατά την φόρτωση της προεπισκόπησης. Παρακαλούμε κλείστε και προσπαθήστε ξανά.',
+	'mobile-frontend-editor-tutorial-summary' => 'Μη φοβάστε τη σήμανση. Προσπαθήστε να βελτιώσετε την σελίδα $1.',
+	'mobile-frontend-editor-tutorial-alt-summary' => 'Γιατί να μην βελτιώσετε το $1; Μην φοβηθείτε από τη σήμανση!',
+	'mobile-frontend-editor-tutorial-confirm' => 'Ξεκινήστε την επεξεργασία',
+	'mobile-frontend-editor-tutorial-cancel' => 'Όχι, ευχαριστώ',
+	'mobile-frontend-editor-captcha-try-again' => 'Λάθος κωδικός, προσπαθήστε ξανά.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Προειδοποίηση: Είστε βέβαιοι ότι θέλετε να αποθηκεύσετε αυτή την επεξεργασία; Μπορεί να υπάρχει ένα ζήτημα με αυτή.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Αυτή η επεξεργασία δεν μπορεί να αποθηκευτεί, διότι εντοπίσαμε ένα ζήτημα.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Διαβάστε περισσότερα',
+	'mobile-frontend-editor-editing-page' => '<strong>Επεξεργασία</strong> <span>$1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>Προεπισκόπηση</strong> <span>$1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Προβολή κώδικα του</strong><span> $1</span>',
 	'beta-feature-geonotahack-description' => 'Ανακαλύψτε σελίδες που βρίσκονται γεωγραφικά κοντά στο περιεχόμενο της σελίδας που διαβάζετε αυτή τη στιγμή.',
 );
 
@@ -9066,6 +9100,71 @@ $messages['ia'] = array(
 	'mobile-frontend-image-cancel-confirm' => 'Cancellar incargamento?',
 	'mobile-frontend-editor-redirect-title' => 'Redirige verso editor...',
 	'mobile-frontend-editor-unavailable-header' => 'Editor indisponibile',
+	'mobile-frontend-editor-unavailable' => 'Modificar in modo mobile non es actualmente possibile in tu navigator. Per favor proba un altere navigator.',
+	'mobile-frontend-editor-undo-unsupported' => 'Disfacer non es actualmente possibile con dispositivos mobile.',
+	'mobile-frontend-editor-newpage-prompt' => 'Iste pagina non existe. Proque non esser intrepide e crear lo?',
+	'mobile-frontend-editor-disabled' => 'Iste pagina es protegite pro impedir le vandalismo.',
+	'mobile-frontend-editor-blocked' => 'Tu conto ha essite blocate pro modification.',
+	'mobile-frontend-editor-cta' => 'Adjuta a meliorar iste pagina!',
+	'mobile-frontend-editor-edit' => 'Modificar',
+	'mobile-frontend-editor-continue' => 'Continuar',
+	'mobile-frontend-editor-save' => 'Salveguardar',
+	'mobile-frontend-editor-cancel' => 'Cancellar',
+	'mobile-frontend-editor-keep-editing' => 'Continuar a modificar',
+	'mobile-frontend-editor-license' => 'Si tu salveguarda le cambiamentos, tu accepta nostre [//wikimediafoundation.org/wiki/Terms_of_use conditiones de uso] e accepta de liberar tu texto sub le [//creativecommons.org/licenses/by-sa/3.0/ licentia CC BY-SA 3.0] e sub [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
+	'mobile-frontend-editor-placeholder' => 'Iste section es vacue. Sia le prime a elaborar lo!',
+	'mobile-frontend-editor-summary-placeholder' => 'Dice nos lo que tu ha cambiate (optional)',
+	'mobile-frontend-editor-cancel-confirm' => 'Es tu secur de voler abandonar tu modification?',
+	'mobile-frontend-editor-wait' => 'Salveguarda modification, attende.',
+	'mobile-frontend-editor-guider' => 'Tocca "{{int:mobile-frontend-editor-continue}}" pro previsualisar e salveguardar.',
+	'mobile-frontend-editor-success' => 'Successo! Tu modification ha essite salveguardate.',
+	'mobile-frontend-editor-success-landmark-1' => 'Felicitationes, tu ora es redactor de {{SITENAME}}!',
+	'mobile-frontend-editor-error' => 'Error. Modification non salveguardate.',
+	'mobile-frontend-editor-error-conflict' => 'Error. Un altere usator ha modificate iste pagina.',
+	'mobile-frontend-editor-error-loading' => 'Error. Non pote cargar section.',
+	'mobile-frontend-editor-preview-header' => 'Previsualisation',
+	'mobile-frontend-editor-error-preview' => 'Error. Un problema ha occurrite durante le cargamento del previsualisation. Per favor claude lo e reproba.',
+	'mobile-frontend-editor-tutorial-summary' => 'Non sia intimidate per le codice. Tenta meliorar le pagina $1.',
+	'mobile-frontend-editor-tutorial-alt-summary' => 'Proque non meliorar $1? Non lassa le codice intimidar te!',
+	'mobile-frontend-editor-tutorial-confirm' => 'Comenciar a modificar',
+	'mobile-frontend-editor-tutorial-cancel' => 'No, gratias',
+	'mobile-frontend-editor-captcha-try-again' => 'Codice incorrecte. Proba de novo.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Attention: Es tu secur de voler salveguardar iste modification? Il pote haber un problema con illo.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Iste modification non pote esser salveguardate perque nos ha detegite un problema.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Leger plus',
+	'mobile-frontend-editor-editing-page' => '<strong>Modification de</strong><span> $1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>Previsualisation de</strong><span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>Codice-fonte de</strong><span> $1</span>',
+	'tag-mobile_edit' => 'Modification per mobile',
+	'tag-mobile_edit-description' => 'Modification facite con sito mobile',
+	'mobile-frontend-drawer-cancel' => 'Cancellar',
+	'mobile-frontend-talk-explained' => 'Le sequente conversationes es ora active',
+	'mobile-frontend-talk-explained-empty' => 'Il non ha conversationes sur iste pagina.',
+	'mobile-frontend-talk-overlay-header' => 'Discussion',
+	'mobile-frontend-talk-back-to-page' => 'Retornar al pagina "$1".',
+	'mobile-frontend-talk-overlay-lead-header' => 'Discussion sin titulo',
+	'mobile-frontend-talk-add-overlay-submit' => 'Adder discussion',
+	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Subjecto',
+	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Que vole tu discuter?',
+	'mobile-frontend-talk-edit-summary' => 'Nove section de discussion: $1',
+	'mobile-frontend-talk-reply-success' => 'Tu responsa ha essite salveguardate in le pagina de discussion.',
+	'mobile-frontend-talk-reply-info' => 'Nota que tu responsa essera automaticamente signate con tu nomine de usator.',
+	'mobile-frontend-talk-reply' => 'Responder',
+	'mobile-frontend-talk-topic-feedback' => 'Nove topico addite al pagina de discussion!',
+	'mobile-frontend-media-details' => 'Detalios',
+	'mobile-frontend-media-license-link' => 'Information de licentia',
+	'abusefilter-edit-builder-vars-user-mobile' => 'Si un usator es o non es in curso de modification per le interfacie mobile',
+	'mobile-frontend-profile-title' => 'Profilo de usator',
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|Incargate}} {{PLURAL:$1|heri|$1 dies retro|0=hodie}}.',
+	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|Parlar a $1}}',
+	'mobile-frontend-profile-error' => 'Oh no!',
+	'mobile-frontend-profile-noargs' => 'Nulle nomine de usator ha essite fornite. Per favor forni un nomine de usator pro vider un profilo.',
+	'mobile-frontend-profile-nouser' => 'Non existe un usator con iste nomine. Nomines de usator distingue inter majusculas e minusculas, dunque verifica si illo ha essite scribite correctemente.',
+	'mobile-frontend-profile-activity-heading' => 'Activitate e contributiones',
+	'mobile-frontend-profile-userpage-link' => 'Visitar le pagina del usator.',
+	'mobile-frontend-requires-optin' => 'Iste pagina es solmente disponibile in modo beta. Visita le [[Special:MobileOptions|pagina de configuration]] pro activar lo.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$3|Reingratiate}} {{GENDER:$1|per}} [[Special:UserProfile/$1|$1]] pro un modification in [[$2]].',
+	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Ha modificate}} le pagina [[:$1]] {{PLURAL:$2|heri|$2 dies retro|0=hodie}}.',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -12279,6 +12378,7 @@ $messages['la'] = array(
 
 /** Ladino (Ladino)
  * @author Menachem.Moreira
+ * @author Universal Life
  */
 $messages['lad'] = array(
 	'mobile-frontend-search-submit' => 'Ir',
@@ -12286,10 +12386,10 @@ $messages['lad'] = array(
 	'mobile-frontend-languages-header' => 'Lenguas',
 	'mobile-frontend-language-heading' => '<strong>Lenguas</strong>',
 	'mobile-frontend-language-site-choose' => 'Bushkar lengua',
-	'mobile-frontend-username' => 'Nombre de usuario:',
-	'mobile-frontend-password' => 'Kontrasenya:',
-	'mobile-frontend-username-placeholder' => 'Nombre de usuario',
-	'mobile-frontend-password-placeholder' => 'Kontrasenya',
+	'mobile-frontend-username' => 'Nombre de kullaneador:',
+	'mobile-frontend-password' => 'Kóddiche:',
+	'mobile-frontend-username-placeholder' => 'Nombre de kullaneador',
+	'mobile-frontend-password-placeholder' => 'Kóddiche',
 	'mobile-frontend-placeholder' => 'Bushka en {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Bushka en {{SITENAME}}(Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Buska en {{SITENAME}}(Experimental)',
@@ -12298,7 +12398,7 @@ $messages['lad'] = array(
 	'mobile-frontend-watchlist-more' => 'mas',
 	'mobile-frontend-watchlist-filter-all' => 'Todos',
 	'mobile-frontend-watchlist-filter-articles' => 'Pajinas',
-	'mobile-frontend-diffview-title' => 'Kambios',
+	'mobile-frontend-diffview-title' => 'Trocamientos',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -17363,6 +17463,7 @@ $messages['ru'] = array(
 	'mobile-frontend-on' => 'ВКЛ',
 	'mobile-frontend-featured-article' => 'Избранный материал дня',
 	'mobile-frontend-news-items' => 'Новости',
+	'mobile-frontend-languages-header' => 'Языки',
 	'mobile-frontend-language-heading' => '<strong>Языки</strong>',
 	'mobile-frontend-language-article-heading' => 'Читать на другом языке',
 	'mobile-frontend-language-header' => 'Эта страница существует на $1 {{PLURAL:$1|языке|языках}}',
@@ -17573,6 +17674,7 @@ $messages['ru'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'Не пугайтесь разметки. Попробуйте улучшить страницу $1.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'Почему бы не улучшить $1? Не стоит пугаться вики-разметки!',
 	'mobile-frontend-editor-tutorial-confirm' => 'Начать редактирование',
+	'mobile-frontend-editor-tutorial-cancel' => 'Нет, спасибо',
 	'mobile-frontend-editor-captcha-try-again' => 'Неверный код, попробуйте еще раз.',
 	'mobile-frontend-editor-abusefilter-warning' => 'Предупреждение: Вы уверены, что вы хотите сохранить эту правку? С этим могут возникнуть проблемы.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Эта правка не может быть сохранена, поскольку мы обнаружили проблему.',
@@ -17616,6 +17718,7 @@ $messages['ru'] = array(
 	'mobile-frontend-geonotahack' => 'Места поблизости',
 	'beta-feature-geonotahack' => 'Места поблизости',
 	'beta-feature-geonotahack-description' => 'Откройте для себя страницы, которые географически находятся поблизости от страницы, которую вы сейчас читаете.',
+	'mobile-frontend-mainpage-cta-button' => 'Улучшить эту страницу',
 );
 
 /** Rusyn (русиньскый)
