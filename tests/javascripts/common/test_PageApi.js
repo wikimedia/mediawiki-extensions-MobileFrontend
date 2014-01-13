@@ -44,14 +44,20 @@
 						"line": "1",
 						"anchor": "1",
 						"id": 1,
-						"text": '<p>Text of 1\n</p><h2 id="1.1">1.1</h2><p>Text of 1.1\n</p>'
+						"text": '<p>Text of 1\n</p><h2 id="1.1">1.1</h2><p>Text of 1.1\n</p>',
+						"children": [
+							{"level":"2","line":"1.1","anchor":"1.1","id":2,"text":"<p>Text of 1.1\n</p>", children: [] }
+						]
 					},
 					{
 						"level": "1",
 						"line": "2",
 						"anchor": "2",
 						"id": 3,
-						"text": '<p>Text of 2\n</p><h2 id="2.1">2.1</h2><p>Text of 2.1\n</p>'
+						"text": '<p>Text of 2\n</p><h2 id="2.1">2.1</h2><p>Text of 2.1\n</p>',
+						"children": [
+							{"level":"2","line":"2.1","anchor":"2.1","id":4,"text":"<p>Text of 2.1\n</p>", children: [] }
+						]
 					}
 				]
 			}, 'return lead and sections' );
@@ -122,14 +128,25 @@
 						"line": "Aaa section",
 						"anchor": "Aaa_section",
 						"id": 1,
-						"text": 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>subaaa content'
+						"text": 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>subaaa content',
+						"children": [
+							{
+								"level": "3",
+								"line": "Subaaa section",
+								"anchor": "Subaaa_section",
+								"id": 2,
+								"text": "subaaa content",
+								"children": []
+							}
+						]
 					},
 					{
 						"level": "2",
 						"line": "Bbb section",
 						"anchor": "Bbb_section",
 						"id": 3,
-						"text": "bbb content"
+						"text": "bbb content",
+						"children": []
 					},
 					{
 						"level": "2",
@@ -137,7 +154,8 @@
 						"references": "",
 						"anchor": "References",
 						"id": 4,
-						"text": "references"
+						"text": "references",
+						"children": []
 					}
 				]
 			}, 'return lead and sections' );
