@@ -1,0 +1,74 @@
+@import "../../mixins.less";
+@import "../../variables.less";
+
+@leftMargin: 1.5em;
+@iconSize: 1em;
+@iconHeadingGap: 1em;
+
+.client-js .toc-mobile {
+	// FIXME: Use predefined colors?
+	background-color: #f9f9f9;
+	border: solid 1px @grayLightest;
+	font-size: 1.3em;
+	float: left;
+	width: @wgMFDeviceWidthTablet - @infoboxWidth;
+
+	@paddingVertical: 1em;
+	@fontSize: .8em;
+	h2 {
+		font-family: @fontFamily;
+		line-height: @iconSize;
+		margin-left: @leftMargin;
+		background-position: right center;
+		font-size: @fontSize;
+		font-weight: bold;
+		padding: @paddingVertical 0 @paddingVertical @iconSize + @iconHeadingGap;
+		border-bottom: none;
+
+		.icon {
+			background: url(images/contents.png) no-repeat 0 center;
+			.background-size( auto, @iconSize );
+			width: @iconSize;
+			height: @iconSize;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: @paddingVertical;
+		}
+	}
+
+	.content_block {
+		// Override default toggle styles
+		border-bottom: none;
+		margin-left: @leftMargin + @iconSize + @iconHeadingGap;
+		font-size: (7 * @fontSize) / 8;
+
+		> ul {
+			padding-bottom: @fontSize + @headingMargin;
+		}
+
+		ul {
+			// FIXME: Shouldn't have to do this. Add another class to normal sections to distinguish them from this content_block
+			list-style: none;
+			// Account for border at bottom of heading
+			margin-bottom: 1px;
+
+			li {
+				padding-top: @fontSize;
+				// This ensures when a heading spills to a second line it can be distinguished from other headings
+				line-height: 1.2;
+			}
+		}
+	}
+}
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.beta #content_wrapper {
+		.toc-mobile {
+			.content_block,
+			.section_heading {
+				margin-right: @leftMargin;
+			}
+		}
+	}
+}

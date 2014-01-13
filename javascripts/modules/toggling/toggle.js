@@ -41,8 +41,9 @@
 		} catch ( e ) {}
 	}
 
-	function init() {
-		var $page = $( '#content' ), tagName = 'h2', $headings, expandSections;
+	function init( $page ) {
+		var tagName = 'h2', $headings, expandSections;
+		$page = $page || $( '#content' );
 
 		$( 'html' ).removeClass( 'stub' );
 		if ( $page.find( 'h1' ).length > 0 ) {
@@ -103,7 +104,10 @@
 		init();
 	}
 
-	M.on( 'page-loaded', init );
+	M.on( 'page-loaded', function() {
+		// don't pass page-loaded parameter
+		init();
+	} );
 
 	// FIXME: Temporary workaround while toggle-dynamic is not in stable
 	// (needed for dynamic section loading after editing)

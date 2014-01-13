@@ -187,6 +187,8 @@
 		};
 	} );
 
+	// FIXME: Deprecate view
 	M.define( 'view', View );
+	M.define( 'View', View );
 
 }( mw.mobileFrontend, jQuery ) );

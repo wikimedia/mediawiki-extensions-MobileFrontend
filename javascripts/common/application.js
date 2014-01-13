@@ -102,17 +102,20 @@
 	}
 
 	/**
-	 * Tests current window size and if suitable loads styles specific for larger devices
+	 * Tests current window size and if suitable loads styles and scripts specific for larger devices
 	 * FIXME: Separate from application.js
 	 *
-	 * @name M.loadWideScreenStyles
+	 * @name M.loadWideScreenModules
 	 * @function
 	 */
-	function loadWideScreenStyles() {
-		// Check that we are in the Minerva skin so as this doesn't leak into desktop
+	function loadWideScreenModules() {
+		var modules = [ 'tablet.styles' ];
 		if ( isWideScreen() && $( 'body' ).hasClass( 'skin-minerva' ) ) {
 			// Adjust screen for tablets
-			mw.loader.using( 'tablet.styles' );
+			if ( inNamespace( '' ) ) {
+				modules.push( 'tablet.scripts' );
+			}
+			mw.loader.using( modules );
 		}
 	}
 
@@ -239,8 +242,8 @@
 		if ( supportsTouchEvents() ) {
 			$doc.addClass( 'touch-events' );
 		}
-		loadWideScreenStyles();
-		$( window ).on( 'resize', loadWideScreenStyles );
+		$( loadWideScreenModules );
+		$( window ).on( 'resize', loadWideScreenModules );
 		loadCurrentPage();
 	}
 
