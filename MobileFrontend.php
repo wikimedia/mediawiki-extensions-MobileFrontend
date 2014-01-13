@@ -158,9 +158,6 @@ function efMobileFrontend_Setup() {
 	// Set LESS global variables
 	$wgResourceLoaderLESSVars = array_merge( $wgResourceLoaderLESSVars,
 		array(
-			// FIXME: this var is evil and necessary only for KSS docs,
-			// we should do something so that it's not necessary
-			'wgMFMobileImageRootDir' => 'images',
 			'wgMFDeviceWidthTablet' => "{$wgMFDeviceWidthTablet}px",
 			'wgMFDeviceWidthMobileSmall' => "{$wgMFDeviceWidthMobileSmall}px",
 		)

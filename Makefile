@@ -1,4 +1,5 @@
 MW_INSTALL_PATH ?= ../..
+MEDIAWIKI_LOAD_URL ?= http://localhost/w/load.php
 
 clean:
 	rm -Rf scripts/remotes
@@ -15,7 +16,8 @@ gerrit: remotes
 
 kss: nodecheck
 	# FIXME: Use more up to date Ruby version
-	@node_modules/.bin/kss-node less/ less/ -l less/mobile.less -t styleguide-template
+	@node_modules/.bin/kss-node less/ less/ -t styleguide-template
+	curl -sG "${MEDIAWIKI_LOAD_URL}?modules=mobile.styles|mobile.toast.styles|mobile.stable.styles|mobile.overlays|mobile.overlays.beta|mobile.pagelist.styles&only=styles" > less/public/style.css
 
 jsdoc: nodecheck
 	rm -rf docs
