@@ -10,7 +10,6 @@
 				content: M.template.get( 'modules/notifications/NotificationsOverlay' )
 			},
 			defaults: {
-				heading: mw.msg( 'notifications' ),
 				archiveLink: mw.util.getUrl( 'Special:Notifications' ),
 				archiveLinkMsg: mw.msg( 'echo-overlay-link' )
 			},
@@ -87,6 +86,9 @@
 						token : token
 					} );
 				} );
+			},
+			preRender: function( options ) {
+				options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong> <span>' + options.count + '</span>';
 			},
 			postRender: function( options ) {
 				this._super( options );
