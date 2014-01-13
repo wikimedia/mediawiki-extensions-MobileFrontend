@@ -155,7 +155,7 @@ class MobileUserInfo {
 			$dbr = MWEchoDbFactory::getDB( DB_SLAVE );
 			$rows = $dbr->select(
 				array( 'echo_event', 'echo_notification' ),
-				'event_agent_id, event_page_id, notification_timestamp',
+				'event_agent_id, notification_timestamp',
 				array(
 					'notification_user' => $this->user->getId(),
 					'event_id=notification_event',
@@ -166,7 +166,6 @@ class MobileUserInfo {
 			$row = $rows->fetchObject();
 			if ( $row ) {
 				$thank = array(
-					'title' => Title::newFromId( $row->event_page_id ),
 					'user' => User::newFromId( $row->event_agent_id ),
 				);
 			}
