@@ -5,6 +5,8 @@
 		OverlayManager = M.require( 'OverlayManager' ),
 		qs = window.location.search.split( '?' )[1],
 		PageApi = M.require( 'PageApi' ),
+		pageApi = new PageApi(),
+		Page = M.require( 'Page' ),
 		router = new Router(),
 		$viewportMeta, viewport,
 		currentPage,
@@ -237,6 +239,7 @@
 		}
 		loadWideScreenStyles();
 		$( window ).on( 'resize', loadWideScreenStyles );
+		loadCurrentPage();
 	}
 
 	/**
@@ -379,7 +382,24 @@
 		return currentPage;
 	}
 
-	$( init );
+	/**
+	 *
+	 * @name M.getLeadSection
+	 * @function
+	 * @return {Boolean}
+	 */
+	function getLeadSection() {
+		return $( '#content > div > div' ).eq( 0 );
+	}
+
+	function loadCurrentPage() {
+		currentPage = new Page( {
+			title: mw.config.get( 'wgPageName' ),
+			lead: getLeadSection().html(),
+			sections: pageApi.getSectionsFromHTML( $( '#content' ) ),
+			id: mw.config.get( 'wgArticleId' )
+		} );
+	}
 
 	$.extend( M, {
 		init: init,
@@ -387,16 +407,7 @@
 		inNamespace: inNamespace,
 		getCurrentPage: getCurrentPage,
 		getOrigin: getOrigin,
-		// FIXME: No Page object exists on initial page load but would be better to make this a function of Page object
-		/**
-		 *
-		 * @name M.getLeadSection
-		 * @function
-		 * @return {Boolean}
-		 */
-		getLeadSection: function() {
-			return $( '#content > div > div' ).eq( 0 );
-		},
+		getLeadSection: getLeadSection,
 		getSessionId: getSessionId,
 		isWideScreen: isWideScreen,
 		lockViewport: lockViewport,
@@ -423,7 +434,7 @@
 		 * @name M.pageApi
 		 * @type {PageApi}
 		 */
-		pageApi: new PageApi(),
+		pageApi: pageApi,
 		deParam: deParam,
 		// for A/B testing (we want this to be the same everywhere)
 		/**
@@ -442,5 +453,8 @@
 			return M.isBetaGroupMember() ? 'tap' : fallbackEvent;
 		}
 	} );
+
+	// Initialize
+	$( init );
 
 }( mw.mobileFrontend, jQuery ) );

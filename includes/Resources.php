@@ -189,11 +189,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.user',
 			'jquery.cookie',
 		),
+		'templates' => array(
+			'page',
+			'section',
+			// FIXME: Remove when lazy loaded languages go to stable
+			'languageSection',
+		),
 		'scripts' => array(
 			'javascripts/common/Router.js',
 			'javascripts/common/OverlayManager.js',
 			'javascripts/common/api.js',
 			'javascripts/common/PageApi.js',
+			'javascripts/common/View.js',
+			'javascripts/common/Page.js',
 			'javascripts/common/application.js',
 			'javascripts/common/View.js',
 			'javascripts/common/settings.js',
@@ -654,7 +662,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.ajaxpages' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			// Requires the Page.js JavaScript file
-			'mobile.stable.common',
+			'mobile.startup',
 		),
 		'scripts' => array(
 			'javascripts/externals/epoch.js',
@@ -752,14 +760,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 		),
 		'templates' => array(
-			'section',
 			'wikitext/commons-upload',
 			'overlays/cleanup',
 			// search.js and Nearby.js
 			'articleList',
-			// page.js
-			'page',
-			'languageSection',
 			// PhotoUploaderButton.js
 			// For new page action menu
 			'uploads/LeadPhotoUploaderButton',
@@ -774,7 +778,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/CtaDrawer.js',
 			'javascripts/widgets/progress-bar.js',
 			'javascripts/common/toast.js',
-			'javascripts/common/Page.js',
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
 			'javascripts/modules/uploads/LeadPhotoUploaderButton.js',
 			'javascripts/modules/mf-stop-mobile-redirect.js',
