@@ -1054,15 +1054,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.notifications.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-		),
-		'scripts' => array(
-			'javascripts/modules/notifications/notifications.js',
-		),
-	),
-
 	'mobile.notifications.overlay' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
@@ -1082,16 +1073,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'echo-none',
 			'notifications',
 			'echo-overlay-link',
-		),
-	),
-
-	'mobile.notifications.overlay.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-			'mobile.notifications.overlay',
-		),
-		'scripts' => array(
-			'javascripts/modules/notifications/NotificationsOverlayNew.js',
 		),
 	),
 

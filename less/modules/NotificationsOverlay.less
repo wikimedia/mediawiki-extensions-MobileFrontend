@@ -1,8 +1,7 @@
 // FIXME: some of this could be removed if we reused .page-list styling
 @import "../mixins.less";
 
-.overlay,
-.mw-mf-overlay {
+.overlay {
 	.mw-mf-notifications {
 		padding-bottom: 0;
 	}
@@ -22,7 +21,7 @@
 		display: none;
 	}
 	.mw-echo-notification {
-		padding: 1.2em 1em 1em 1em;
+		padding: 1.2em 1em 1em;
 		border-bottom: 1px solid #eee;
 	}
 	.mw-echo-notification:hover {
@@ -36,16 +35,6 @@
 		// The 1em bottom whitespace is applied as padding since Chrome and Safari ignore
 		// it otherwise. The 10px padding corresponds with the icon margin.
 		margin: 1em 1em 0 1em;
-		padding: 0 0 1em 10px;
-	}
-}
-
-// FIXME: Merge both of these rules with above padding definitions when goes to stable
-.overlay {
-	.mw-echo-notification {
-		padding-right: @headerMargin;
-	}
-	.notifications-archive-link {
-		padding-left: @headerMargin;
+		padding: 0 1em 1em 10px;
 	}
 }

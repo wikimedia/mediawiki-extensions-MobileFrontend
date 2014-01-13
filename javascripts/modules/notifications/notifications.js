@@ -3,8 +3,7 @@
  * with the Toast notifications defined by common/toast.js.
  */
 ( function( M, $ ) {
-	var useNewOverlays = M.isBetaGroupMember(),
-		LoadingOverlay = useNewOverlays ? M.require( 'LoadingOverlayNew' ) : M.require( 'LoadingOverlay' );
+	var LoadingOverlay = M.require( 'LoadingOverlayNew' );
 
 	/**
 	 * Loads a ResourceLoader module script. Shows ajax loader whilst loading.
@@ -27,25 +26,18 @@
 	// Once the DOM is loaded hijack the notifications button to display an overlay rather
 	// than linking to Special:Notifications.
 	$( function () {
-		var $btn = $( '#secondary-button.user-button' );
+		var $btn = $( '#secondary-button.user-button' ).attr( 'href', '#/notifications' );
+		M.overlayManager.add( /^\/notifications$/, function() {
+			var result = $.Deferred();
 
-		if ( useNewOverlays ) {
-			$btn.attr( 'href', '#/notifications' );
-			M.router.route( /^\/notifications$/, function() {
-				loadModuleScript( 'mobile.notifications.overlay.beta' ).done( function() {
-					var NotificationsOverlayNew = M.require( 'modules/notifications/NotificationsOverlayNew' );
-					new NotificationsOverlayNew( { $badge: $btn, count: $btn.find( 'span' ).text() } ).show();
-				} );
+			loadModuleScript( 'mobile.notifications.overlay' ).done( function() {
+				var NotificationsOverlay = M.require( 'modules/notifications/NotificationsOverlay' );
+				result.resolve(
+					new NotificationsOverlay( { $badge: $btn, count: $btn.find( 'span' ).text() } )
+				);
 			} );
 
-		} else {
-			$btn.on( 'click', function( ev ) {
-				ev.preventDefault();
-				loadModuleScript( 'mobile.notifications.overlay' ).done( function() {
-						var NotificationsOverlay = M.require( 'modules/notifications/NotificationsOverlay' );
-						new NotificationsOverlay( { $badge: $btn } ).show();
-				} );
-			} );
-		}
+			return result;
+		} );
 	} );
 }( mw.mobileFrontend, jQuery ) );

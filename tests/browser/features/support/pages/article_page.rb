@@ -34,6 +34,12 @@ class ArticlePage
     page.search_overlay_element.button_element(class: "cancel")
   end
 
+  a(:notifications_button, id: "secondary-button", class: "user-button")
+  div(:notifications_overlay, class: "notifications-overlay")
+  button(:notifications_overlay_close_button) do |page|
+    page.notifications_overlay_element.button_element(class: "cancel")
+  end
+
   span(:external_links_section, id:"External_links")
   span(:pres_campaign_section, id:"Presidential_campaigns")
   a(:ext_whitehouse_link, href: "http://www.whitehouse.gov/administration/president_obama/")

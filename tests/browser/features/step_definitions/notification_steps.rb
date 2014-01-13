@@ -1,28 +1,15 @@
 When /^I click on the notification icon$/ do
-  begin
-    on(HomePage).notification_button_element.when_present.click
-  rescue
-    puts "Echo is not enabled"
-  end
+  on(ArticlePage).notifications_button_element.when_present.click
 end
 
-Then /^I go to the notifications page$/ do
-  begin
-    @browser.text.should include "Notifications"
-  rescue
-    puts "Unable to validate Notifications Page"
-  end
+Then(/^I see the notifications overlay$/) do
+  on(ArticlePage).notifications_overlay_element.should be_visible
 end
 
-Then /^the notifications overlay appears$/ do
-  begin
-    if @browser.url.match Regexp.escape("Special:Notifications")
-      on(HomePage).notifications_archive_link_element.should_not exist
-    else
-      on(HomePage).notifications_archive_link_element.should exist
-    end
-  rescue
-    "Unable to run overlay tests"
-  end
+When(/^I click the notifications overlay close button$/) do
+  on(ArticlePage).notifications_overlay_close_button_element.click
 end
 
+Then(/^I don't see the notifications overlay$/) do
+  on(ArticlePage).notifications_overlay_element.should_not be_visible
+end
