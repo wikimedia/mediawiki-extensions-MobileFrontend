@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_ae5a6720",
+        "filename": "tests/browser/features/proof_of_concept.feature",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-13T20:42:07Z",
+      "side": 1,
+      "message": "Toy test?",
+      "revId": "eec1c50f3778cfa6b221700d4c2bd92d47a4c747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
