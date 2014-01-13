@@ -1,9 +1,9 @@
-( function( M,  $ ) {
+( function( M, $ ) {
 
 var module = (function() {
-	var useNewOverlays = mw.config.get( 'wgMFMode' ) !== 'stable',
+	var
 		// FIXME: Promote to stable
-		Overlay = M.require( useNewOverlays ? 'OverlayNew' : 'Overlay' ),
+		Overlay = M.require( 'OverlayNew' ),
 		// FIXME: Separate into separate file
 		CleanupOverlay = Overlay.extend( {
 			defaults: $.extend( {}, Overlay.prototype.defaults, {
@@ -14,12 +14,11 @@ var module = (function() {
 			}
 		} );
 
-	function run( $container, parentOverlay ) {
+	function run( $container ) {
 		$container = $container || M.getLeadSection();
 		var $metadata = $container.find( 'table.ambox' ),
 			issues = [],
-			$link,
-			overlay;
+			$link;
 
 		// clean it up a little
 		$metadata.find( '.NavFrame' ).remove();
@@ -33,38 +32,22 @@ var module = (function() {
 					// .ambox- is used e.g. on eswiki
 					text: $this.find( '.mbox-text, .ambox-text' ).html()
 				};
-				// new overlays have same icon for all issues
-				if ( !useNewOverlays ) {
-					issue.icon = $this.find( '.mbox-image img, .ambox-image img' ).attr( 'src' );
-				}
 				issues.push( issue );
 			}
 		} );
 
-		$link = $( '<a class="mw-mf-cleanup icon-24px">' );
-		// If we're using the new overlays and we aren't already in the editing overlay,
-		// set-up the issues overlay using M.router for proper back button behavior.
-		// FIXME: Refactor this once the overlay manager is available
-		if ( useNewOverlays ) {
-			$link.attr( 'href', '#issues' );
-			M.overlayManager.add( /^issues$/, function() {
-				return new CleanupOverlay( { issues: issues } );
-			} );
-		} else {
-			overlay = new CleanupOverlay( {
-				parent: parentOverlay,
-				issues: issues
-			} );
-			$link.on( 'click', $.proxy( overlay, 'show' ) );
-		}
+		$link = $( '<a class="mw-mf-cleanup icon-24px">' ).attr( 'href', '#/issues' );
+		M.overlayManager.add( /^\/issues$/, function() {
+			return new CleanupOverlay( { issues: issues } );
+		} );
 
 		$link.text( mw.msg( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
 	}
 
-	function initPageIssues( $container, parentOverlay ) {
+	function initPageIssues( $container ) {
 		if ( mw.config.get( 'wgNamespaceNumber' ) === 0 ) {
-			run( $container, parentOverlay );
+			run( $container );
 		}
 	}
 
@@ -73,7 +56,7 @@ var module = (function() {
 		initPageIssues();
 	} );
 	M.on( 'edit-preview', function( overlay ) {
-		initPageIssues( overlay.$el, overlay );
+		initPageIssues( overlay.$el );
 	} );
 
 	return {

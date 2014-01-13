@@ -874,23 +874,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.issues.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-		),
-		'styles' => array(
-			'less/modules/issues.less',
-		),
-		'scripts' => array(
-			'javascripts/modules/issues/issues.js',
-		),
-		'messages' => array(
-			// issues.js
-			'mobile-frontend-meta-data-issues',
-			'mobile-frontend-meta-data-issues-header',
-		),
-	),
-
 	'mobile.site' => array(
 		'dependencies' => array( 'mobile.startup' ),
 		'class' => 'MobileSiteModule',

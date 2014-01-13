@@ -25,35 +25,22 @@
 	}
 }
 
-.mw-mf-overlay {
-	.cleanup {
-		margin: @contentMargin @contentMargin 0 @contentMargin;
-	}
-}
-
-.mw-mf-overlay .cleanup {
-	img {
-		display: block;
-		margin: 0 auto 1em auto;
-	}
-}
-
 .alpha,
 .beta {
 	.mw-mf-cleanup {
 		background-image: url(images/issues/blue-triangle.png);
 	}
+}
 
-	// overlay styles
-	.overlay {
-		.cleanup {
-			margin: 0 @headerMargin;
-			li {
-				padding: @iconSize * 2.5 @headerMargin @iconSize @headerMargin;
-				background-position: center @iconSize;
-				background-image: url(images/issues/gray-triangle.png);
-				border-bottom: solid 1px @grayLight;
-			}
+// overlay styles
+.overlay {
+	.cleanup {
+		margin: 0 @headerMargin;
+		li {
+			padding: @iconSize * 2.5 @headerMargin @iconSize @headerMargin;
+			background-position: center @iconSize;
+			background-image: url(images/issues/gray-triangle.png);
+			border-bottom: solid 1px @grayLight;
 		}
 	}
 }
