@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_f3185825",
+        "filename": "javascripts/modules/tutorials/newbieEditorBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-13T19:20:49Z",
+      "side": 1,
+      "message": "Need to mention that you have to be in test group A for this to work.",
+      "revId": "579ffbb0d251323f2d2d40640ed4f875631a246e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
