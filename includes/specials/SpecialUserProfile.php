@@ -114,10 +114,9 @@ class SpecialUserProfile extends MobileSpecialPage {
 		if ( $thank ) {
 			$user = $thank['user'];
 			$title = $thank['title'];
-			$page = new MobilePage( $title );
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container' ) )
-				. $page->getMediumThumbnailHtml()
+				. MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-thanks' )
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-thanked',
 					$user,
@@ -144,9 +143,14 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$daysAgo = $this->getDaysAgo( new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) ) );
 			$imageHtml = '';
 			$page = new MobilePage( $rev->getTitle() );
+			if ( $page->hasThumbnail() ) {
+				$thumbnail = $page->getMediumThumbnailHtml();
+			} else {
+				$thumbnail = $page->getPlaceHolderThumbnailHtml( 'list-thumb-edit' );
+			}
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container image' ) )
-				. $page->getMediumThumbnailHtml()
+				. $thumbnail
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-edit',
 					$rev->getTitle(),
