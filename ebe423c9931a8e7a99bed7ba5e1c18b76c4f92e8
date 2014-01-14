@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_79c8a725",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-01-14T00:03:09Z",
+      "side": 1,
+      "message": "This doesn\u0027t mean much to users. Instead say something like \"Mobile skin on desktop\"?",
+      "revId": "ebe423c9931a8e7a99bed7ba5e1c18b76c4f92e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
