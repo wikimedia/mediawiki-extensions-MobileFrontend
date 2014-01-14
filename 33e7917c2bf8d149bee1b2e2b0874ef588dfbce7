@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_b7b87375",
+        "filename": "less/common/reset.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-14T23:32:35Z",
+      "side": 1,
+      "message": "Expand the code above to see where this is set to \u0027inherit\u0027, which is not the correct default for th.",
+      "revId": "33e7917c2bf8d149bee1b2e2b0874ef588dfbce7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
