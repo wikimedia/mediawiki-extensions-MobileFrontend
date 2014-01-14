@@ -1,4 +1,5 @@
 @import "../mixins.less";
+@import "mediawiki.mixins.less";
 
 // Deprecated rules
 .stable {
@@ -85,7 +86,9 @@ input:not([type=submit]), textarea {
 }
 
 a.external {
-	background: url(images/external-link-ltr-icon.png) center right no-repeat;
+	.background-image-svg( 'images/external-link-ltr-icon.svg', 'images/external-link-ltr-icon.png' );
+	background-repeat: no-repeat;
+	background-position: center right;
 	padding-right: 13px;
 }
 
