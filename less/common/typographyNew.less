@@ -1,9 +1,13 @@
 @import "../variables.less";
 
+html {
+	// When moving to stable, change @fontScalingFactor to 1.0
+	font-size: 100%;
+}
+
 .beta, .alpha {
-	html {
-		// When moving to stable, just change @fontScalingFactor to 1.0
-		font-size: 1.0;
+	#content_wrapper h1 {
+		font-size: 1.7em;
 	}
 
 	.thumb {
