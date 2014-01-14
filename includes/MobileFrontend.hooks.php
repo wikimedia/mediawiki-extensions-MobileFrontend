@@ -625,7 +625,6 @@ class MobileFrontendHooks {
 		$files[] = "$dir/ApiMobileViewTest.php";
 		$files[] = "$dir/ApiParseExtenderTest.php";
 		$files[] = "$dir/DeviceDetectionTest.php";
-		$files[] = "$dir/ExtractFormatterTest.php";
 		$files[] = "$dir/MobileContextTest.php";
 		$files[] = "$dir/MobileFormatterTest.php";
 		$files[] = "$dir/MobileFrontendHooksTest.php";
