@@ -43,6 +43,9 @@ $messages['en'] = array (
 	'mobile-frontend-logged-in-homepage-notification' => 'Welcome, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Logged in as $1.',
 
+	'mobile-frontend-generic-404-title' => 'Error - Page not found',
+	'mobile-frontend-generic-404-desc' => 'The page you are looking for could not be found.',
+
 	/** log-in page **/
 	'mobile-frontend-sign-up-heading' => 'Sign up',
 	'mobile-frontend-sign-in-heading' => 'Sign in',
@@ -485,6 +488,8 @@ This buttons takes the user to the home page.
 {{Identical|Not logged in}}',
 	'mobile-frontend-logged-in-homepage-notification' => 'Heading at top of homepage telling user they are logged in. Parameters:
 * $1 - username',
+	'mobile-frontend-generic-404-title' => 'Title for a generic HTTP 404 error page',
+	'mobile-frontend-generic-404-desc' => 'Generic description of the HTTP 404 error shown to users',
 	'mobile-frontend-logged-in-toast-notification' => 'Message telling user that they are logged in. Shows as a notification at bottom of page
 *$1 - username',
 	'mobile-frontend-sign-up-heading' => 'Header for sign up page.
