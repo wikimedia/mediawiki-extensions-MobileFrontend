@@ -1,7 +1,7 @@
 /*jshint unused:vars */
 ( function( M, $ ) {
 
-var View = M.require( 'view' ),
+var View = M.require( 'View' ),
 	Overlay;
 
 	/**

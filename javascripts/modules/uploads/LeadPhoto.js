@@ -1,6 +1,6 @@
 ( function( M ) {
 
-	var View = M.require( 'view' ), LeadPhoto;
+	var View = M.require( 'View' ), LeadPhoto;
 
 	LeadPhoto = View.extend( {
 		template: M.template.get( 'uploads/LeadPhoto' ),

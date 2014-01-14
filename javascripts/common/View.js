@@ -34,7 +34,7 @@
 	 * @example
 	 * // var View, Section, section;
 	 * //
-	 * // View = M.require( 'view' );
+	 * // View = M.require( 'View' );
 	 * // Section = View.extend( {
 	 * //    template: M.template.compile( '<h2>{{title}}</h2><p>{{text}}</p>' ),
 	 * //     // ...
@@ -187,8 +187,6 @@
 		};
 	} );
 
-	// FIXME: Deprecate view
-	M.define( 'view', View );
 	M.define( 'View', View );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	var View = M.require( 'view' ), Checkbox;
+	var View = M.require( 'View' ), Checkbox;
 
 	function supportsTouchEvents() {
 		return 'ontouchstart' in window;
