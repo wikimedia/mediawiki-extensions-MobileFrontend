@@ -26,6 +26,18 @@ do
 		optipng -q -o7 "$file" && advpng -z -4 "$file" && advdef -z -4 "$file" | grep "Output"
 		git add "$file"
 	else
-		echo 'png was removed'
+		echo 'file was removed'
+	fi
+done
+
+for file in `git diff --cached --name-only | grep -i ".svg\$"`
+do
+	make nodecheck
+	echo "Compressing $file"
+	if [ -f $file ]; then
+		node_modules/.bin/svgo "$file"
+		git add "$file"
+	else
+		echo 'file was removed'
 	fi
 done
