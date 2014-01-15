@@ -213,6 +213,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.user' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.user',
+			// Ensure M.define exists
+			'mobile.head',
 		),
 		'scripts' => array(
 			'javascripts/common/user.js',
