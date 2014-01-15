@@ -5847,14 +5847,13 @@ $messages['et'] = array(
 	'mobile-frontend-profile-usertalk' => 'Arutelu kasutajaga {{GENDER:$1|$1}}',
 	'mobile-frontend-profile-noargs' => 'Kasutajanimi puudub. Palun määra profiili vaatamiseks kasutajanimi.',
 	'mobile-frontend-profile-nouser' => 'Sellise nimega kasutajat pole. Kasutajanimed on tõstutundlikud, seega kontrolli, kas see on õigesti sisestatud.',
-	'mobile-frontend-profile-activity-heading' => 'Aktiivsus ja kaastöö',
+	'mobile-frontend-profile-activity-heading' => 'Hiljutine aktiivsus',
 	'mobile-frontend-profile-userpage-link' => 'Vaata kasutajalehekülge.',
-	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] {{GENDER:$3|tänas}} muudatuse eest leheküljel [[$2]].',
+	'mobile-frontend-profile-last-thank' => '{{GENDER:$2|Tänanud}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Redigeeris}} {{PLURAL:$2|eile|$2 päeva tagasi|0=täna}} lehekülge [[:$1]].',
 	'mobile-frontend-profile-footer-days' => 'Ühines {{PLURAL:$2|ühe|$2}} päeva eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
 	'mobile-frontend-profile-footer-months' => 'Ühines enam kui {{PLURAL:$2|ühe|$2}} kuu eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
 	'mobile-frontend-profile-footer-years' => 'Ühines enam kui {{PLURAL:$2|ühe|$2}} aasta eest ning on redigeerinud [[Special:Contributions/$1|{{PLURAL:$3|üht|$3}} lehekülge]] ja on üles laadinud [[Special:Uploads/$1|{{PLURAL:$4|ühe|$4|500=üle 500}} faili]].',
-	'mobile-frontend-profile-description-placeholder' => 'Miks {{GENDER:$1|teed}} kaastööd? Mida tahad paremaks teha? Jaga oma huvisid teistega.',
 	'beta-feature-geonotahack' => 'Selle lehekülje lähikond',
 );
 
@@ -5947,6 +5946,7 @@ $messages['fa'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'افزودن پیوند',
 	'mobilefrontend-keepgoing-links-ask-first' => 'برای اولین ویرایش به شما تبریک می‌گوییم! آیا مایل هستید که به افزودن پیوند به صفحهٔ‌ای که اخیرأ ایجاد کرده‌اید کمک کنید؟',
 	'mobilefrontend-keepgoing-links-ask-again' => 'تصحیح یک صفحهٔ دیگر؟',
+	'mobilefrontend-keepgoing-links-example' => 'مثال $1 گیتار $2 می‌شود $3 گیتار $4',
 	'nearby' => 'صفحه‌های نزدیک شما',
 	'mobile-frontend-desc' => 'ظاهر تلفن همراه',
 	'mobile-frontend-search-submit' => 'برو',
@@ -6249,7 +6249,7 @@ $messages['fa'] = array(
 	'mobile-frontend-profile-activity-heading' => 'فعالیت اخیر',
 	'mobile-frontend-profile-userpage-link' => 'نمایش صفحه کاربری.',
 	'mobile-frontend-requires-optin' => 'این صفحه موجود نخواهد بود مگر اینکه شما واردشده حالت آزمایشی ما باشید. [[Special:MobileOptions|صفحهٔ تنظیمات]] را برای واردشدن مشاهده کنید.',
-	'mobile-frontend-profile-last-thank' => '{{GENDER:$2|تشکر شد}} {{GENDER:$1|توسط}} [[ویژه:صفحهٔ کاربر/$1|$1]]', # Fuzzy
+	'mobile-frontend-profile-last-thank' => '[[ویژه:صفحهٔ کاربر/$1|$1]] {{GENDER:$1|توسط}} {{GENDER:$2|تشکر شده}}', # Fuzzy
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|ویرایش کرد}} صفحهٔ [[:$1]], {{PLURAL:$2|دیروز|$2 روز پیش |0=صبح امروز}}.',
 	'mobile-frontend-profile-footer-days' => 'عضو شد {{PLURAL:$2|۱ روز|$2 روز}} پیش با  [[Special:Contributions/$1|{{PLURAL:$3|ویرایش|$3 ویرایش}}]] و [[Special:Uploads/$1|{{PLURAL:$4|۱ بارگذاری|$4 بارگذاری|500=500+ بارگذاری}}]].',
 	'mobile-frontend-profile-footer-months' => 'عضو شد {{PLURAL:$2|۱ ماه|$2 ماه}} پیش با  [[Special:Contributions/$1|{{PLURAL:$3|ویرایش|$3 ویرایش}}]] و [[Special:Uploads/$1|{{PLURAL:$4|۱ بارگذاری|$4 بارگذاری|500=500+ بارگذاری}}]].',
@@ -7957,10 +7957,13 @@ $messages['he'] = array(
 	'mobile-frontend-view' => 'תצוגה למכשירים ניידים',
 	'mobile-frontend-view-desktop' => 'תצוגת מחשבים',
 	'mobile-frontend-view-mobile' => 'תצוגת מכשירים ניידים',
+	'mobile-frontend-cookies-required' => 'נדרשות עוגיות כדי לעבור בין מצבים. נא להפעיל אותן ולנסות שוב.',
 	'mobile-frontend-opt-in-explain' => 'על־ידי הצטרפות לבטא, תקבלו גישה לאפשרויות ניסיוניות, אבל תסתכנו בהיתקלות בבאגים ובעיות.',
 	'mobile-frontend-images-status' => 'להציג תמונות',
 	'mobile-frontend-disable-images' => 'לכבות תמונות באתר למכשירים ניידים',
 	'mobile-frontend-enable-images' => 'להפעיל תצוגת תמונות באתר למכשירים ניידים',
+	'mobile-frontend-expand-sections-status' => 'להרחיב את כל הפסקאות',
+	'mobile-frontend-expand-sections-description' => 'תמיד להרחיב את כל הפסקאות בעת מעבר לדף חדש.',
 	'mobile-frontend-missing-image' => 'תמונה',
 	'mobile-frontend-off' => 'לא',
 	'mobile-frontend-on' => 'כן',
@@ -8197,6 +8200,7 @@ $messages['he'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'אל תפחדו משפת העיצוב. בואו לנסות לשפר את הדף $1.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'מה דעתך לנסות לשפר את $1? לא צריך לפחד משפת העיצוב!',
 	'mobile-frontend-editor-tutorial-confirm' => 'להתחיל לערוך',
+	'mobile-frontend-editor-tutorial-cancel' => 'לא, תודה',
 	'mobile-frontend-editor-captcha-try-again' => 'קוד שגוי, אנא נסו שוב.',
 	'mobile-frontend-editor-abusefilter-warning' => 'אזהרה: האם ברצונך לשמור את העריכה הזאת? ייתכן שיש אתה בעיה.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'לא ניתן לשמור את העריכה הזאת מכיוון שמצאנו בה בעיה.',
@@ -8229,16 +8233,14 @@ $messages['he'] = array(
 	'mobile-frontend-profile-error' => 'אבוי!',
 	'mobile-frontend-profile-noargs' => 'לא ניתן שם משתמש. נא לתת שם משתמש כדי להציג פרופיל.',
 	'mobile-frontend-profile-nouser' => 'לא קיים משתמש עם שם כזה. שמות המשתמשים הם תלויי רישיות, אז נא לבדוק שהם הוקלדו נכון.',
-	'mobile-frontend-profile-activity-heading' => 'פעילות ותרומות',
+	'mobile-frontend-profile-activity-heading' => 'פעילות לאחרונה',
 	'mobile-frontend-profile-userpage-link' => 'לבקר בדף המשתמש.',
 	'mobile-frontend-requires-optin' => 'הדף הזה זמין רק למי שבחר להירשם לתכנית הבטא שלנו. נא לבקר [[Special:MobileOptions|בדף ההגדרות]] כדי להירשם.',
-	'mobile-frontend-profile-last-thanked' => '{{GENDER:$3|קיבל|קיבלה}} הודעת תודה מאת [[Special:UserProfile/$1|$1]] עבור עריכה לדף [[$2]].',
+	'mobile-frontend-profile-last-thank' => '{{GENDER:$3|קיבל|קיבלה}} הודעת תודה מאת [[Special:UserProfile/$1|$1]].', # Fuzzy
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|ערך|ערכה}} את הדף [[:$1]] {{PLURAL:$2|אתמול|לפני יומיים|לפני $2 ימים|0=מוקדם יותר היום}}.',
 	'mobile-frontend-profile-footer-days' => '{{GENDER:$1|הצרטרף|הצרטרפה}} לפני {{PLURAL:$2|יום אחד|יומיים|$2 ימים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].',
 	'mobile-frontend-profile-footer-months' => '{{GENDER:$1|הצרטרף|הצרטרפה}} לפני {{PLURAL:$2|חודש אחד|חודשיים|$2 חודשים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].',
 	'mobile-frontend-profile-footer-years' => '{{GENDER:$1|הצרטרף|הצרטרפה}} לפני {{PLURAL:$2|שנה אחת|שנתיים|$2 שנים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].',
-	'mobile-frontend-profile-description-placeholder' => 'למה {{GENDER:$1|אתה עורך|את עורכת}}? מה {{GENDER:$1|אתה|את}} רוצה לשפר? {{GENDER:$1|שתף|שתפי}} את מה שמעניין אותך עם אחרים.',
-	'mobile-frontend-profile-edit-summary' => 'עדכון היכרות בדף המשתמש',
 	'mobile-frontend-geonotahack' => 'ליד הדף הזה',
 	'beta-feature-geonotahack' => 'בסביבות הדף הזה',
 	'beta-feature-geonotahack-description' => 'זה מאפשר לך לראות דפים שקרובים גאוגרפית לדפים שקראת.',
@@ -8881,6 +8883,8 @@ $messages['ia'] = array(
 	'mobile-frontend-images-status' => 'Imagines',
 	'mobile-frontend-disable-images' => 'Disactivar imagines in sito mobile',
 	'mobile-frontend-enable-images' => 'Activar imagines in sito mobile',
+	'mobile-frontend-expand-sections-status' => 'Displicar tote le sectiones',
+	'mobile-frontend-expand-sections-description' => 'Sempre displicar tote le sectiones quando tu naviga a un nove pagina.',
 	'mobile-frontend-missing-image' => 'Imagine',
 	'mobile-frontend-off' => 'INACTIVE',
 	'mobile-frontend-on' => 'ACTIVE',
@@ -9150,11 +9154,19 @@ $messages['ia'] = array(
 	'mobile-frontend-profile-error' => 'Oh no!',
 	'mobile-frontend-profile-noargs' => 'Nulle nomine de usator ha essite fornite. Per favor forni un nomine de usator pro vider un profilo.',
 	'mobile-frontend-profile-nouser' => 'Non existe un usator con iste nomine. Nomines de usator distingue inter majusculas e minusculas, dunque verifica si illo ha essite scribite correctemente.',
-	'mobile-frontend-profile-activity-heading' => 'Activitate e contributiones', # Fuzzy
+	'mobile-frontend-profile-activity-heading' => 'Activitate recente',
 	'mobile-frontend-profile-userpage-link' => 'Visitar le pagina del usator.',
 	'mobile-frontend-requires-optin' => 'Iste pagina es solmente disponibile in modo beta. Visita le [[Special:MobileOptions|pagina de configuration]] pro activar lo.',
-	'mobile-frontend-profile-last-thank' => '{{GENDER:$3|Reingratiate}} {{GENDER:$1|per}} [[Special:UserProfile/$1|$1]] pro un modification in [[$2]].', # Fuzzy
+	'mobile-frontend-profile-last-thank' => '{{GENDER:$2|Reingratiate}} {{GENDER:$1|per}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Ha modificate}} le pagina [[:$1]] {{PLURAL:$2|heri|$2 dies retro|0=hodie}}.',
+	'mobile-frontend-profile-footer-days' => 'Inscribite {{PLURAL:$2|1 die|$2 dies}} retro con [[Special:Contributions/$1|{{PLURAL:$3|1 modification|$3 modificationes}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 file incargate|$4 files incargate|500=plus de 500 files incargate}}]].',
+	'mobile-frontend-profile-footer-months' => 'Inscribite plus de {{PLURAL:$2|1 mense|$2 menses}} retro con [[Special:Contributions/$1|{{PLURAL:$3|1 modification|$3 modificationes}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 file incargate|$4 files incargate|500=plus de 500 files incargate}}]].',
+	'mobile-frontend-profile-footer-years' => 'Inscribite plus de {{PLURAL:$2|1 anno|$2 annos}} retro con [[Special:Contributions/$1|{{PLURAL:$3|1 modification|$3 modificationes}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 file incargate|$4 files incargate|500=plus de 500 files incargate}}]].',
+	'mobile-frontend-geonotahack' => 'Proxime a iste pagina',
+	'beta-feature-geonotahack' => 'Proxime a iste pagina',
+	'beta-feature-geonotahack-description' => 'Discoperi paginas que es in le proximitate geographic del pagina que tu lege actualmente.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Iste pagina ha besonio de tu adjuta!',
+	'mobile-frontend-mainpage-cta-button' => 'Meliorar iste pagina',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -11462,6 +11474,7 @@ $messages['kn'] = array(
  * @author Jskang
  * @author Klutzy
  * @author Kwj2772
+ * @author Priviet
  * @author SEVEREN
  * @author 관인생략
  * @author 아라
@@ -12676,7 +12689,7 @@ Déi gi geläscht.",
 	'mobile-frontend-profile-error' => 'Oh neen!',
 	'mobile-frontend-profile-noargs' => 'Et gouf kee Benotzernumm uginn. Gitt w.e.g. e Benotzernumm u fir ee Profil ze gesinn.',
 	'mobile-frontend-profile-nouser' => 'Et gëtt kee Benotzernumm mat dësem Numm. Bei Benotzernimm gëtt tëscht groussen a kleng Buschtawen ënnerscheed, kuckt dofir no ob de Benotzernumm richteg geschriwwen ass.',
-	'mobile-frontend-profile-activity-heading' => 'Aktivitéit a Kontributiounen', # Fuzzy
+	'mobile-frontend-profile-activity-heading' => 'Rezent Aktivitéit',
 	'mobile-frontend-profile-userpage-link' => 'Benotzersäit besichen.',
 	'mobile-frontend-profile-last-edit' => "{{GENDER:$3|Huet}} d'Säit [[:$1]] {{PLURAL:$2|gëschter|viru(n) $2 Deeg|0=méi fréi haut am Laf vum Dag}} geännert.",
 	'mobile-frontend-geonotahack' => 'No bei dëser Säit',
@@ -13846,7 +13859,6 @@ $messages['mr'] = array(
 	'mobile-frontend-save-settings' => 'जतन करा',
 	'mobile-frontend-random-button' => 'अविशिष्ट',
 	'mobile-frontend-back-to-top-of-section' => 'एक विभाग मागे जा',
-	'mobile-frontend-close-section' => 'हा विभाग बंद करा',
 	'mobile-frontend-regular-site' => 'हे पृष्ठ सामान्य {{SITENAME}}मध्ये पाहा',
 	'mobile-frontend-wml-continue' => 'सुरु ठेवा ...',
 	'mobile-frontend-wml-back' => 'माघारी',
@@ -13856,6 +13868,8 @@ $messages['mr'] = array(
 	'mobile-frontend-images-status' => 'चित्रे',
 	'mobile-frontend-disable-images' => 'मोबाईल साईटवरील प्रतिमा अक्षम करा',
 	'mobile-frontend-enable-images' => 'मोबाईल साईटवरील प्रतिमा सक्षम करा',
+	'mobile-frontend-expand-sections-status' => 'सर्व विभागांचा विस्तार करा',
+	'mobile-frontend-expand-sections-description' => 'नविन पानावर जातांना सर्व विभाग विस्तारीत करा.',
 	'mobile-frontend-missing-image' => 'चित्र',
 	'mobile-frontend-off' => 'बंद',
 	'mobile-frontend-on' => 'सुरु',
@@ -13921,6 +13935,8 @@ $messages['mr'] = array(
 	'mobile-frontend-drawer-cancel' => 'रद्द',
 	'mobile-frontend-talk-overlay-header' => 'चर्चा',
 	'mobile-frontend-talk-back-to-page' => '"$1" पानाकडे परत चला.',
+	'mobile-frontend-profile-activity-heading' => 'अलीकडील क्रिया',
+	'mobile-frontend-profile-last-thank' => '[[Special:UserProfile/$1|$1]] {{GENDER:$1|द्वारा }} {{GENDER:$2|धन्यवाद दिल्या गेले}}',
 );
 
 /** Malay (Bahasa Melayu)
@@ -17568,6 +17584,8 @@ $messages['ru'] = array(
 	'mobile-frontend-watchlist-cta-button-signup' => 'Зарегистрироваться',
 	'mobile-frontend-watch-login' => 'Добавить $1 в ваш список наблюдения',
 	'mobile-frontend-edit-login' => 'Помогите улучшить страницу $1.',
+	'mobile-frontend-edit-login-action' => 'Войдите для редактирования.',
+	'mobile-frontend-edit-signup-action' => 'Зарегистрируйтесь для редактирования.',
 	'mobile-frontend-watchlist-a-z' => 'Список',
 	'mobile-frontend-watchlist-feed' => 'Изменено',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Нажмите на звёздочку в верхней части страницы',
@@ -17630,6 +17648,8 @@ $messages['ru'] = array(
 	'mobile-frontend-image-heading-describe' => "'''Опишите''' изображение",
 	'mobile-frontend-image-uploading' => "'''Загрузка''' изображения…",
 	'mobile-frontend-image-cancel-confirm' => 'Отменить загрузку?',
+	'mobile-frontend-editor-redirect-title' => 'Перенаправление в редактор…',
+	'mobile-frontend-editor-unavailable-header' => 'Редактор недоступен',
 	'mobile-frontend-editor-unavailable' => 'Мобильное редактирование недоступно в настоящее время в вашем браузере. Пожалуйста, попробуйте другой браузер.',
 	'mobile-frontend-editor-undo-unsupported' => 'Отмена в настоящее время не поддерживается на мобильных устройствах.',
 	'mobile-frontend-editor-newpage-prompt' => 'Эта страница не существует. Почему бы не набраться смелости и создать её?',
