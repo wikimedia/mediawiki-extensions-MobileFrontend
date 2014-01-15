@@ -14,7 +14,7 @@
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
-			heading: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
+			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-add-overlay-submit' ) + '</strong>',
 			topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
 			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' )
 		},

@@ -14,7 +14,7 @@
 			},
 			defaults: {
 				addTopicLabel: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
-				heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
+				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
 			},
 			initialize: function( options ) {

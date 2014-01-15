@@ -7,7 +7,7 @@ var module = (function() {
 		// FIXME: Separate into separate file
 		CleanupOverlay = Overlay.extend( {
 			defaults: $.extend( {}, Overlay.prototype.defaults, {
-				heading: mw.msg( 'mobile-frontend-meta-data-issues-header' )
+				heading: '<strong>' + mw.msg( 'mobile-frontend-meta-data-issues-header' ) + '</strong>'
 			} ),
 			templatePartials: {
 				content: M.template.get( 'overlays/cleanup' )
