@@ -103,12 +103,14 @@
 
 	/**
 	 * Tests current window size and if suitable loads styles specific for larger devices
+	 * FIXME: Separate from application.js
 	 *
 	 * @name M.loadWideScreenStyles
 	 * @function
 	 */
 	function loadWideScreenStyles() {
-		if ( isWideScreen() ) {
+		// Check that we are in the Minerva skin so as this doesn't leak into desktop
+		if ( isWideScreen() && $( 'body' ).hasClass( 'skin-minerva' ) ) {
 			// Adjust screen for tablets
 			mw.loader.using( 'tablet.styles' );
 		}

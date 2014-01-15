@@ -16,7 +16,7 @@ mw.mobileFrontend = {
 	 * @return {Boolean}
 	 */
 	isBetaGroupMember: function() {
-		return mw.config.get( 'wgMFMode' ) !== 'stable';
+		return mw.config.get( 'wgMFMode' ) === 'beta' || this.isAlphaGroupMember();
 	},
 
 	/**
