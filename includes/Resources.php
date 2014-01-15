@@ -139,6 +139,29 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.toc' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.templates',
+		),
+		'scripts' => array(
+			'javascripts/modules/toc/toc.js',
+		),
+		'styles' => array(
+			'less/modules/toc/toc.less',
+		),
+		'templates' => array(
+			'modules/toc/toc',
+			'modules/toc/tocHeading'
+		),
+	),
+
+	'tablet.scripts' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.toc',
+		),
+	),
+
 	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/uiNew.less',
