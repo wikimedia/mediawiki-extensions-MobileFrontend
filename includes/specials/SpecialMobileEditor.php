@@ -11,6 +11,11 @@ class SpecialMobileEditor extends MobileSpecialPage {
 
 		$title = Title::newFromText( $subpage );
 
+		if ( is_null( $title )) {
+			$this->showPageNotFound();
+			return;
+		}
+
 		$data = $this->getRequest()->getValues();
 		unset( $data['title'] ); // Remove the title of the special page
 

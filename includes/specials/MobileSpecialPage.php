@@ -75,4 +75,9 @@ class MobileSpecialPage extends SpecialPage {
 	public function isListed() {
 		return $this->listed;
 	}
+
+	protected function showPageNotFound() {
+		wfHttpError( 404, $this->msg( 'mobile-frontend-generic-404-title' )->text(),
+			$this->msg( 'mobile-frontend-generic-404-desc' )->text() );
+	}
 }
