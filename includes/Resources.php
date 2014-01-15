@@ -226,6 +226,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/api.js',
 			'javascripts/common/PageApi.js',
 			'javascripts/common/View.js',
+			'javascripts/common/Section.js',
 			'javascripts/common/Page.js',
 			'javascripts/common/application.js',
 			'javascripts/common/settings.js',
