@@ -2,8 +2,6 @@
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		View = M.require( 'view' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
-		// Set mode to stable when not defined (means you are in desktop mode)
-		wgMFMode = mw.config.get( 'wgMFMode' ) || 'stable',
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		loader = new LoadingOverlay(),
 		Nearby;
@@ -114,7 +112,7 @@
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
 				// Note router support required for page previews in beta
-				if ( wgMFMode === 'stable' || !M.router.isSupported() ) {
+				if ( !M.isBetaGroupMember() || !M.router.isSupported() ) {
 					window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
 				} else {
 					ev.preventDefault();
