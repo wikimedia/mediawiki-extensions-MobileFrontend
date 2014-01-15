@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_175cba4d",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "Shouldn\u0027t all of this be indented?",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_57292299",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "Maybe it would be safer to use toc.$el?",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_d73532f5",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "We probably don\u0027t need to wrap it in $(). Is this loaded at the top of the page?",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_57624207",
+        "filename": "less/modules/toc/images/contents.svg",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "Let\u0027s remove that.",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_d7677221",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "Why not .toc if we use toc everywhere else?",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_9771eadf",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "Maybe a FIXME here? Shouldn\u0027t be necessary.",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_17a6fa50",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "Let\u0027s not do that now. It makes the section bottom border and the border dividing section title and edit button have different shades of gray.",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_97b20a91",
+        "filename": "templates/modules/toc/toc.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "tocHeading",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_5785a2b0",
+        "filename": "templates/modules/toc/tocheading.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "tocHeading.html",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_37821eaa",
+        "filename": "templates/modules/toc/tocheading.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-15T19:29:07Z",
+      "side": 1,
+      "message": "tocHeading?\nAlso, it\u0027s confusing why tocHeading would include tocHeading...",
+      "revId": "739d727e810e756c9e9fe4f79610015610c68ef2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
