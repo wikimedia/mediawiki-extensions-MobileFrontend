@@ -24,7 +24,7 @@
 			this.id = options.id || null;
 			this.anchor = options.anchor;
 			this.children = [];
-			$.each( options.children, function() {
+			$.each( options.children || [], function() {
 				self.children.push( new Section( this ) );
 			} );
 			this._super( options );
