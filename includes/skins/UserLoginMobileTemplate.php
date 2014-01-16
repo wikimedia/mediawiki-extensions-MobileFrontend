@@ -4,7 +4,7 @@
  */
 class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 	protected $actionMessages = array(
-		'watch' => 'mobile-frontend-watchlist-purpose',
+		'watch' => 'mobile-frontend-watchlist-login-action',
 		'edit' => 'mobile-frontend-edit-login-action',
 		'' => 'mobile-frontend-generic-login-action',
 	);
