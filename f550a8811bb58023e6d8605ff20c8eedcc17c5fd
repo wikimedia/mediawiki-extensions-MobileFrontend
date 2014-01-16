@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_6b0aff25",
+        "filename": "less/common/reset.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-16T00:42:21Z",
+      "side": 1,
+      "message": "Border spacing in Chrome seems to be 2px by default (top border and bottom border) Just use this default and omit this line altogether?",
+      "revId": "f550a8811bb58023e6d8605ff20c8eedcc17c5fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
