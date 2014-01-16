@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "aef5673e_00f8f244",
+        "filename": "less/common/reset.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-16T00:17:22Z",
+      "side": 1,
+      "message": "The default in all browsers (since Netscape) has been to set default cell-spacing to 1px. Border-spacing is the CSS equivalent of cell-spacing. It is also a much more sensible default than 0. If you set it to 0, the content runs right to the edge of the cell and if you don\u0027t have borders, there is no whitespace between data in separate cells. So we should either remove this reset and let the browsers control it, or set it to 1px as a good default. What is the argument for using \u00270\u0027? Setting it to zero isn\u0027t \"no formatting\", it\u0027s bad formatting.",
+      "parentUuid": "aef5673e_808762dc",
+      "revId": "33e7917c2bf8d149bee1b2e2b0874ef588dfbce7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_b7b87375",
         "filename": "less/common/reset.less",
         "patchSetId": 4
