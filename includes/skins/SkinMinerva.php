@@ -41,6 +41,11 @@ class SkinMinerva extends SkinTemplate {
 			$out->setRobotPolicy( 'noindex,nofollow' );
 		}
 
+		if ( $this->isMobileMode ) {
+			// FIXME: This needs to occur before prepareQuickTemplate which wraps the body text in an element with id mw-content-text
+			// Otherwise we end up with an unnecessary div.
+			$html = ExtMobileFrontend::DOMParse( $out );
+		}
 		// Generate template after doing the above...
 		$tpl = parent::prepareQuickTemplate();
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
@@ -64,7 +69,6 @@ class SkinMinerva extends SkinTemplate {
 		$bottomScripts .= $out->getBottomScripts();
 		$tpl->set( 'bottomscripts', $bottomScripts );
 		if ( $this->isMobileMode ) {
-			$html = ExtMobileFrontend::DOMParse( $out );
 			$tpl->set( 'bodytext', $html );
 			$this->prepareMobileFooterLinks( $tpl );
 		}

@@ -394,7 +394,9 @@
 	 * @return {Boolean}
 	 */
 	function getLeadSection() {
-		return $( '#content > div > div' ).eq( 0 );
+		// FIXME: Simplify when cache has cleared
+		var lead = $( '#content #mw-content-text' ).eq( 0 );
+		return lead.length > 0 ? lead : $( '#content > div' ).eq( 0 );
 	}
 
 	function loadCurrentPage() {
