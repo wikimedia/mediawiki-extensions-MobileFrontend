@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_61f576b5",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-17T20:11:34Z",
+      "side": 1,
+      "message": "Due to the rename of mobile.search.stable to mobile.search, search will become broken for cached HTML. Please rename this to mobile.search.stable with a FIXME.\n\nYou can see this for yourself by running:\n./scripts/cachedpage.sh 08a04c94f49eb730745946c9de498177c5a325e2 Headings\n\nand then opening the resulting page with this commit.",
+      "revId": "803e171dd3d6122e68ac6e46e7dc6789bc84c7b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
