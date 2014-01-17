@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_012eaa3e",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-17T20:01:04Z",
+      "side": 1,
+      "message": "Why is this still limited to stable?",
+      "revId": "91f9b6ec57d1aeedf351a7aa0d40b87d70a182f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_2129ae36",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-17T20:01:04Z",
+      "side": 1,
+      "message": "Why is this still limited to alpha and beta? (confused)",
+      "revId": "91f9b6ec57d1aeedf351a7aa0d40b87d70a182f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
