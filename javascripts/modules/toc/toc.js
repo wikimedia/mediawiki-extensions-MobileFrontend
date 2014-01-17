@@ -1,4 +1,5 @@
 ( function( M ) {
+	M.assertMode( [ 'beta', 'alpha' ] );
 	var View = M.require( 'View' ), TableOfContents,
 		toggle = M.require( 'toggle' );
 
@@ -14,7 +15,7 @@
 
 	function init( page ) {
 		var toc, sections = page.getSubSections();
-		if ( sections.length > 0 ) {
+		if ( sections.length > 0 && !page.isMainPage() ) {
 			toc = new TableOfContents( {
 				sections: sections
 			} );

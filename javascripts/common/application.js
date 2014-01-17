@@ -110,7 +110,7 @@
 	 */
 	function loadWideScreenModules() {
 		var modules = [ 'tablet.styles' ];
-		if ( isWideScreen() && $( 'body' ).hasClass( 'skin-minerva' ) ) {
+		if ( isWideScreen() && $( 'body' ).hasClass( 'skin-minerva' ) && M.isBetaGroupMember() ) {
 			// Adjust screen for tablets
 			if ( inNamespace( '' ) ) {
 				modules.push( 'tablet.scripts' );
@@ -401,6 +401,7 @@
 		currentPage = new Page( {
 			title: mw.config.get( 'wgPageName' ),
 			lead: getLeadSection().html(),
+			isMainPage: mw.config.get( 'wgIsMainPage' ),
 			sections: pageApi.getSectionsFromHTML( $( '#content' ) ),
 			id: mw.config.get( 'wgArticleId' )
 		} );
