@@ -51,14 +51,12 @@ $autoloadClasses = array (
 	'WmlContext' => 'WmlContext',
 	'WmlDeviceProperties' => 'DeviceDetection',
 
-	'ExtractFormatter' => 'formatters/ExtractFormatter',
 	'MobileFormatter' => 'formatters/MobileFormatter',
 	'MobileFormatterHTML' => 'formatters/MobileFormatterHTML',
 	'MobileFormatterWML' => 'formatters/MobileFormatterWML',
 
 	'ApiMobileView' => 'api/ApiMobileView',
 	'ApiParseExtender' => 'api/ApiParseExtender',
-	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
 	'InlineDiffFormatter' => 'diff/InlineDiffFormatter',
 	'InlineDifferenceEngine' => 'diff/InlineDifferenceEngine',
@@ -103,14 +101,12 @@ foreach ( $autoloadClasses as $className => $classFilename ) {
 
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
 
-$wgAPIPropModules['extracts'] = 'ApiQueryExtracts';
 $wgAPIModules['mobileview'] = 'ApiMobileView';
 
 $wgHooks['APIGetAllowedParams'][] = 'ApiParseExtender::onAPIGetAllowedParams';
 $wgHooks['APIAfterExecute'][] = 'ApiParseExtender::onAPIAfterExecute';
 $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescription';
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
-$wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
 $wgHooks['LinksUpdate'][] = 'MobileFrontendHooks::onLinksUpdate';
 
@@ -273,11 +269,6 @@ $wgMFRemovableClasses = array(
 		'div.magnify',
 		'.nomobile',
 	),
-	// Text extracts
-	'extracts' => array(
-		'.toc', 'table', 'div', '.mw-editsection', 'sup.reference', 'span.coordinates',
-		'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error', '.nomobile'
-	),
 );
 
 /**
@@ -292,11 +283,6 @@ $wgMFRemovableClasses = array(
  * 	);
  */
 $wgMFCustomLogos = array();
-
-/**
- * Whether this extension should provide its extracts to OpenSearchXml extension
- */
-$wgMFExtendOpenSearchXml = false;
 
 /**
  * Set to false to allow search engines to index your mobile pages. So far, Google seems
