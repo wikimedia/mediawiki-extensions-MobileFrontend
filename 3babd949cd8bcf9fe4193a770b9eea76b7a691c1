@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_c158c237",
+        "filename": "javascripts/common/OverlayNew.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-17T19:16:27Z",
+      "side": 1,
+      "message": "We do some similar tests in application.js - makes me think we should define a device model in a future patch.",
+      "revId": "3babd949cd8bcf9fe4193a770b9eea76b7a691c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
