@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_61a336a9",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 639,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-17T20:19:50Z",
+      "side": 0,
+      "message": "Try and avoid this rename - it will break languages for cached pages.",
+      "revId": "beea97f2041ea6662f1ac17823115a77338fe443",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
