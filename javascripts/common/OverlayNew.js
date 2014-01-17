@@ -14,6 +14,23 @@
 			headerButtonsListClassName: 'v-border bottom-border',
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
 			fixedHeader: true
+		},
+
+		postRender: function( options ) {
+			var self = this;
+			this._super( options );
+
+			// This is used to avoid position: fixed weirdness in mobile Safari when
+			// the keyboard is visible
+			if ( ( /ipad|iphone/i ).test( navigator.userAgent ) ) {
+				this.$( 'textarea, input' ).
+					on( 'focus', function() {
+						self.$( '.overlay-header-container' ).removeClass( 'position-fixed' );
+					} ).
+					on( 'blur', function() {
+						self.$( '.overlay-header-container' ).addClass( 'position-fixed' );
+					} );
+			}
 		}
 	} );
 
