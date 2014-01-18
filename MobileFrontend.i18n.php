@@ -1668,6 +1668,7 @@ $messages['as'] = array(
 	'mobile-frontend-image-uploading-wait' => 'চিত্ৰ আপল’ড হৈ আছে', # Fuzzy
 	'mobile-frontend-photo-upload-error' => 'চিত্ৰ আপল’ড কৰাত কিছু সমস্যা হৈছে। অনুগ্ৰহ কৰি অন্য চিত্ৰ আপ’লড কৰাৰ প্ৰয়াস কৰক।', # Fuzzy
 	'mobile-frontend-photo-license' => 'টোকা: আপুনি প্ৰকাশ কৰা সকলোবোৰ চিত্ৰ  [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 license] অধীনত প্ৰকাশ কৰা হ’ব।', # Fuzzy
+	'tag-mobile_edit' => "ম'বাইল সম্পাদনা",
 );
 
 /** Asturian (asturianu)
@@ -5731,6 +5732,7 @@ $messages['et'] = array(
 	'mobile-frontend-copyright' => 'Sisu on kasutatav litsentsi $1 tingimustel, kui pole öeldud teisiti.',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Otsitavale vastavad leheküljepealkirjad puuduvad. Vaheta otsisõna või vajuta sõrmistiku otsinuppu, et otsida lehekülgedelt.',
+	'mobile-frontend-terms-text' => 'Kasutustingimused',
 	'mobile-frontend-main-menu-button-tooltip' => 'Ava peamenüü',
 	'mobile-frontend-main-menu-featured' => 'Esile tõstetud',
 	'mobile-frontend-main-menu-nearby' => 'Lähikond',
@@ -11584,13 +11586,13 @@ $messages['ko'] = array(
 	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1달}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-years' => '{{PLURAL:$1|$1년}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-just-now' => '방금 편집됨',
-	'mobile-frontend-last-modified-with-user-seconds' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3초 전에 편집됨]', # Fuzzy
-	'mobile-frontend-last-modified-with-user-minutes' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3분 전에 편집됨]', # Fuzzy
-	'mobile-frontend-last-modified-with-user-hours' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3시간 전에 편집됨]', # Fuzzy
-	'mobile-frontend-last-modified-with-user-days' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3일 전에 편집됨]', # Fuzzy
-	'mobile-frontend-last-modified-with-user-months' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3개월 전에 편집됨]', # Fuzzy
-	'mobile-frontend-last-modified-with-user-years' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3년 전에 편집됨]', # Fuzzy
-	'mobile-frontend-last-modified-with-user-just-now' => '{{PLURAL:$4|[$5 $2] |0=익명 사용자}}에 의해 [$3 방금 편집됨]', # Fuzzy
+	'mobile-frontend-last-modified-with-user-seconds' => '{{PLURAL:$5|[$6 $2]|0=익명의}} 사용자가 [$4 {{PLURAL:$3|$3 초}} 전 마지막으로 {{GENDER:$1|편집함}}]',
+	'mobile-frontend-last-modified-with-user-minutes' => '{{PLURAL:$5|[$6 $2]|0=익명의}} 사용자가 [$4 {{PLURAL:$3|$3 분}} 전 마지막으로 {{GENDER:$1|편집함}}]',
+	'mobile-frontend-last-modified-with-user-hours' => '{{PLURAL:$5|[$6 $2]|0=익명의}} 사용자가 [$4 {{PLURAL:$3|$3 시간}} 전 마지막으로 {{GENDER:$1|편집함}}]',
+	'mobile-frontend-last-modified-with-user-days' => '{{PLURAL:$5|[$6 $2]|0=익명의}} 사용자가 [$4 {{PLURAL:$3|$3 일}} 전 마지막으로 {{GENDER:$1|편집함}}]',
+	'mobile-frontend-last-modified-with-user-months' => '{{PLURAL:$5|[$6 $2]|0=익명의}} 사용자가 [$4 {{PLURAL:$3|$3 개월}} 전 마지막으로 {{GENDER:$1|편집함}}]',
+	'mobile-frontend-last-modified-with-user-years' => '{{PLURAL:$5|[$6 $2]|0=익명의}} 사용자가 [$4 {{PLURAL:$3|$3 년}} 전 마지막으로 {{GENDER:$1|편집함}}]',
+	'mobile-frontend-last-modified-with-user-just-now' => '{{PLURAL:$4|[$5 $2]|0=익명의}} 사용자가 방금 [$3 마지막으로 {{GENDER:$1|편집함}}]',
 	'mobile-frontend-learn-more' => '더 알아보기',
 	'mobile-frontend-view-source' => '원본 보기',
 	'mobile-frontend-account-create-submit' => '가입하기',
@@ -11820,8 +11822,8 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-activity-heading' => '최근 활동',
 	'mobile-frontend-profile-userpage-link' => '사용자 문서를 방문합니다.',
 	'mobile-frontend-requires-optin' => '우리의 베타 모드로 선택하지 않으면 이 페이지를 사용할 수 없습니다. 선택하려면 [[Special:MobileOptions|설정 문서]]를 방문하세요.',
-	'mobile-frontend-profile-last-thank' => '[[$2]] 문서로의 편집에 대해 [[Special:UserProfile/$1|$1]]님이 {{GENDER:$1|마지막으로 감사를 표했습니다}}.', # Fuzzy
-	'mobile-frontend-profile-last-edit' => '[[:$1]]을 {{PLURAL:$2|어제|$2일 전|0=오늘}} 편집했습니다.', # Fuzzy
+	'mobile-frontend-profile-last-thank' => ' {{GENDER:$1}}([[Special:UserProfile/$1|$1]]) 사용자가 {{GENDER:$2|감사를 표시했습니다}}',
+	'mobile-frontend-profile-last-edit' => '[[:$1]] 문서를 {{PLURAL:$2|어제|$2일 전|0=오늘}} {{GENDER:$3|편집했습니다}}.',
 	'mobile-frontend-profile-footer-days' => '{{PLURAL:$2|$2일}}전에 가입하여 [[Special:Contributions/$1|{{PLURAL:$3|편집 1회|편집 $3회}}]]와 [[Special:Uploads/$1|{{PLURAL:$4|1개의 파일 올림|$4개의 파일 올림|500=500개 이상의 파일을 올림}}]].',
 	'mobile-frontend-profile-footer-months' => '{{PLURAL:$2|1개월|$2 개월}} 전에 가입하여 [[Special:Contributions/$1|{{PLURAL:$3|편집 1회|편집 $3회}}]]와 [[Special:Uploads/$1|{{PLURAL:$4|1개의 파일 올림|$4개의 파일 올림|500= 500+ 사진 올림}}]].',
 	'mobile-frontend-geonotahack' => '이 문서 근처',
@@ -16018,6 +16020,8 @@ $messages['pms'] = array(
 	'mobile-frontend-logged-out' => 'Nen rintrà ant ël sistema',
 	'mobile-frontend-logged-in-homepage-notification' => 'Bin ëvnù, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Intrà ant ël sistema com $1.',
+	'mobile-frontend-generic-404-title' => 'Eror - Pàgina nen trovà',
+	'mobile-frontend-generic-404-desc' => "La pàgina ch'a sërca a l'é pa podù trovesse.",
 	'mobile-frontend-sign-up-heading' => "Ch'as anscriva",
 	'mobile-frontend-sign-in-heading' => 'Rintré ant ël sistema',
 	'mobile-frontend-sign-in-why' => "S'a l'ha un cont su {{SITENAME}}, a peul intré ant ël sistema sì-sota.",
@@ -18418,10 +18422,10 @@ $messages['sl'] = array(
 	'mobile-frontend-profile-usertalk' => 'Pogovorite se z {{GENDER:$1|uporabnikom|uporabnico}} $1',
 	'mobile-frontend-profile-noargs' => 'Podali niste nobenega uporabniškega imena. Prosimo, vnesite uporabniško ime za ogled profila.',
 	'mobile-frontend-profile-nouser' => 'Uporabnik s tem imenom ne obstaja. Uporabniška imena so občutljiva na velikost črk, zato preverite, če ste ga vtipkali pravilno.',
-	'mobile-frontend-profile-activity-heading' => 'Dejavnosti in prispevki',
+	'mobile-frontend-profile-activity-heading' => 'Nedavna dejavnost',
 	'mobile-frontend-profile-userpage-link' => 'Obiščite uporabnikovo stran.',
 	'mobile-frontend-requires-optin' => 'Ta stran je na razpolago samo, če privolite v betanačin. Za privolitev obiščite [[Special:MobileOptions|stran z nastavitvami]].',
-	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Zahvalil|Zahvalila}} se {{GENDER:$3|mu|ji}} je {{GENDER:$1|uporabnik|uporabnica}} [[Special:UserProfile/$1|$1]] za urejanje strani »[[$2]]«.',
+	'mobile-frontend-profile-last-thank' => '{{GENDER:$1|Zahvalil|Zahvalila}} se {{GENDER:$2|mu|ji}} je {{GENDER:$1|uporabnik|uporabnica}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-geonotahack' => 'Blizu te strani',
 );
 
@@ -19916,6 +19920,8 @@ $messages['uk'] = array(
 	'mobile-frontend-logged-out' => 'Ви не ввійшли до системи',
 	'mobile-frontend-logged-in-homepage-notification' => 'Вітаємо, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Увійти в систему як $1',
+	'mobile-frontend-generic-404-title' => 'Помилка - сторінку не знайдено',
+	'mobile-frontend-generic-404-desc' => 'Сторінку, яку ви шукали, не знайдено.',
 	'mobile-frontend-sign-up-heading' => 'Реєстрація',
 	'mobile-frontend-sign-in-heading' => 'Увійти',
 	'mobile-frontend-sign-in-why' => 'Якщо у вас уже є акаунт у {{GRAMMAR:genitive|{{SITENAME}}}}, то можете представитись нижче.',
@@ -21462,6 +21468,8 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-logged-out' => '未登入',
 	'mobile-frontend-logged-in-homepage-notification' => '歡迎，$1！',
 	'mobile-frontend-logged-in-toast-notification' => '以$1登入。',
+	'mobile-frontend-generic-404-title' => '404錯誤——找不到頁面',
+	'mobile-frontend-generic-404-desc' => '找不到您正在尋找的頁面。',
 	'mobile-frontend-sign-up-heading' => '註冊',
 	'mobile-frontend-sign-in-heading' => '登入',
 	'mobile-frontend-sign-in-why' => '如果您有一個{{SITENAME}}的用戶，您可以在下面登入。',
