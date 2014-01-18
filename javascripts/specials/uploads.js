@@ -4,7 +4,7 @@ var
 	user = M.require( 'user' ),
 	popup = M.require( 'toast' ),
 	Api = M.require( 'api' ).Api,
-	View = M.require( 'view' ),
+	View = M.require( 'View' ),
 	corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 	pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 	currentUserName = user.getName(),

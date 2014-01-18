@@ -1,6 +1,6 @@
 ( function( M ) {
 
-	var View = M.require( 'view' ), ProgressBar;
+	var View = M.require( 'View' ), ProgressBar;
 
 	ProgressBar = View.extend( {
 		className: 'progress-bar',

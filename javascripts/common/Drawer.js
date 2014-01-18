@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-var View = M.require( 'view' ),
+var View = M.require( 'View' ),
 	Drawer;
 
 	/**

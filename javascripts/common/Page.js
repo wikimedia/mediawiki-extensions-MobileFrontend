@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 
 	var
-		View = M.require( 'view' ),
+		View = M.require( 'View' ),
 		Section, Page;
 
 	/**
