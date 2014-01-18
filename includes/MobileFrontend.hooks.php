@@ -592,6 +592,9 @@ class MobileFrontendHooks {
 
 		if ( $wgMFNearby ) {
 			$preferences['betafeatures-geonotahack'] = array(
+				'requirements' => array(
+					'skins' => array( 'vector' ),
+				),
 				'label-message' => 'beta-feature-geonotahack',
 				'desc-message' => 'beta-feature-geonotahack-description',
 				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Nearby_Pages',
