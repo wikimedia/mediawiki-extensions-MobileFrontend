@@ -412,7 +412,7 @@ class SkinMinerva extends SkinTemplate {
 				$tpl->set( 'specialPageHeader', $htmlHeader );
 			}
 		} else {
-			$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading );
+			$preBodyText = $pageHeading ? Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading ) : '';
 			$tpl->set( 'prebodytext', $preBodyText );
 
 			// If it's a page that exists, add last edited timestamp

@@ -155,20 +155,19 @@ class MinervaTemplate extends BaseTemplate {
 
 	protected function renderPreContent( $data ) {
 		$internalBanner = $data[ 'internalBanner' ];
-		$notSpecialPage = !$this->isSpecialPage;
+		$isSpecialPage = $this->isSpecialPage;
+		$preBodyText = isset( $data['prebodytext'] ) ? $data['prebodytext'] : '';
 
-		if ( $notSpecialPage || $internalBanner ) {
+		if ( ( $internalBanner || $preBodyText ) && !$isSpecialPage ) {
 		?>
 		<div class="pre-content">
 			<?php
-				if ( $notSpecialPage ) {
-					echo $data['prebodytext'];
-					// FIXME: Temporary solution until we have design
-					if ( isset( $data['_old_revision_warning'] ) ) {
-						echo $data['_old_revision_warning'];
-					} else {
-						$this->renderPageActions( $data );
-					}
+				echo $preBodyText;
+				// FIXME: Temporary solution until we have design
+				if ( isset( $data['_old_revision_warning'] ) ) {
+					echo $data['_old_revision_warning'];
+				} else {
+					$this->renderPageActions( $data );
 				}
 				echo $internalBanner;
 				?>
