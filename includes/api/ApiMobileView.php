@@ -86,6 +86,11 @@ class ApiMobileView extends ApiBase {
 				array( 'hasvariants' => $data['hasvariants'] )
 			);
 		}
+		if ( isset( $prop['displaytitle'] ) ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'displaytitle' => $data['displaytitle'] )
+			);
+		}
 		if ( $this->usePageImages ) {
 			$this->addPageImage( $data, $prop, $params['thumbsize'] );
 		}
@@ -420,6 +425,12 @@ class ApiMobileView extends ApiBase {
 			$data['hasvariants'] = true;
 		}
 
+		if ( $parserOutput ) {
+			$data['displaytitle'] = $parserOutput->getDisplayTitle();
+		} else {
+			$data['displaytitle'] = $title->getPrefixedText();
+		}
+
 		// Don't store small pages to decrease cache size requirements
 		if ( strlen( $html ) >= $wgMFMinCachedPageSize ) {
 			// store for the same time as original parser output
@@ -529,6 +540,7 @@ class ApiMobileView extends ApiBase {
 					'protection',
 					'languagecount',
 					'hasvariants',
+					'displaytitle',
 				)
 			),
 			'sectionprop' => array(
@@ -594,6 +606,7 @@ class ApiMobileView extends ApiBase {
 				' protection      - information about protection level',
 				' languagecount   - number of languages that the page is available in',
 				' hasvariants     - whether or not the page is available in other language variants',
+				' displaytitle    - the rendered title of the page, with {{DISPLAYTITLE}} and such applied'
 			),
 			'sectionprop' => 'What information about sections to get',
 			'variant' => "Convert content into this language variant",
