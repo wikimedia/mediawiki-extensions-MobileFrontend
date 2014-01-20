@@ -60,9 +60,7 @@
 			var
 				LoadingOverlay = M.require( inStable ? 'LoadingOverlay' : 'LoadingOverlayNew' ),
 				loadingOverlay = new LoadingOverlay(),
-				title = page ? page.title : mw.config.get( 'wgTitle' ),
-				// Note in current implementation Page title is prefixed with namespace
-				ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' ),
+				title = page ? page.title : mw.config.get( 'wgPageName' ).replace( /_/g, ' ' ),
 				result = $.Deferred();
 			loadingOverlay.show();
 			sectionId = mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? parseInt( sectionId, 10 ) : null;
@@ -74,8 +72,7 @@
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 					loadingOverlay.hide();
 					result.resolve( new VisualEditorOverlay( {
-						// FIXME: use wgPageName (?)
-						title: ns ? ns + ':' + title : title,
+						title: title,
 						sectionId: sectionId
 					} ) );
 				} );
@@ -85,8 +82,7 @@
 
 					loadingOverlay.hide();
 					result.resolve( new EditorOverlay( {
-						// FIXME: use wgPageName (?)
-						title: ns ? ns + ':' + title : title,
+						title: title,
 						isNew: isNew,
 						isNewEditor: user.getEditCount() === 0,
 						sectionId: sectionId,
