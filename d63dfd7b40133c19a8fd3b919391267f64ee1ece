@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_cd8227a9",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-21T18:11:08Z",
+      "side": 1,
+      "message": "If you made this a logged in only feature you could just make this a user preference rather than adding a cookie.\n\nI\u0027ve been wanting to look at merging Special:MobileOptions and Special:Preferences in some form for some time to limit our use of cookies so if you took this approach eventually the feature would be available to anonymous users too!",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_8df53f4f",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-21T18:11:08Z",
+      "side": 1,
+      "message": "On the long term this will have cache issues (HTML shouldn\u0027t vary for logged out users).\n\nIf you want to limit this feature to logged in users (which I think is totally acceptable you can modify the global $wgResourceLoaderLESSVars and adjust the @fontScalingFactor variable and use LESS\u0027s built in magic.)",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_2d9cf311",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-21T18:11:08Z",
+      "side": 1,
+      "message": "Instead of adding this on Special:MobileOptions I think the suggestion was to have it in the page itself - take a look at Jared\u0027s thoughts around this in https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d48946#c12\n\nAlso May\u0027s video:\nhttps://bugzilla.wikimedia.org/show_bug.cgi?id\u003d48946#c17",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
