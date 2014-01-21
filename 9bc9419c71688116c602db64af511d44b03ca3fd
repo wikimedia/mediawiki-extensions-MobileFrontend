@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_41f38007",
+        "filename": "tests/browser/features/support/article.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "Same code in two places.",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_21f87ce1",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "Why wouldn\u0027t this be a method of Article?",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_41da6079",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "It seems like all the logging stuff could be a part of the User class too. The the Article class could either use User class to create an Article, or User class could have a method for creating articles using Article class.",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_e1e1742a",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we print this to stderr?",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_e1c854ac",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "Preferably this could return an Article instance and then you can use whatever you need from it.",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_01fd78d1",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "Why wouldn\u0027t this be a method of User?",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_c1c55092",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "Why not bundle it in the User class and return its instance instead?",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_21819c4f",
+        "filename": "tests/browser/features/support/user.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "What\u0027s the point of assigning this to a variable?",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_01869867",
+        "filename": "tests/browser/features/support/user.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-21T23:43:41Z",
+      "side": 1,
+      "message": "return is optional in Ruby.",
+      "revId": "9bc9419c71688116c602db64af511d44b03ca3fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
