@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "aef5673e_61d56447",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-21T23:42:15Z",
+      "side": 1,
+      "message": "Ooh, that would be great! And then we could perhaps use ResoureLoader to do the css instead...since that runs for logged-in users, right...",
+      "parentUuid": "aef5673e_cd8227a9",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_8df53f4f",
         "filename": "includes/skins/SkinMinervaAlpha.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "aef5673e_21cf5cb7",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-21T23:42:15Z",
+      "side": 1,
+      "message": "Aha, we had the same idea :) I like that so much more.",
+      "parentUuid": "aef5673e_8df53f4f",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_2d9cf311",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2014-01-21T18:11:08Z",
       "side": 1,
       "message": "Instead of adding this on Special:MobileOptions I think the suggestion was to have it in the page itself - take a look at Jared\u0027s thoughts around this in https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d48946#c12\n\nAlso May\u0027s video:\nhttps://bugzilla.wikimedia.org/show_bug.cgi?id\u003d48946#c17",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_a1c24c86",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-21T23:42:15Z",
+      "side": 1,
+      "message": "Hmm, yeah. I kind of added it here as a first step just to offer control because displaying some sort of widget on the page itself would be a pretty big change, don\u0027t you think?\n\nFrom May\u0027s comment,\n\n\u003e I\u0027ve received feedback that the reading experience settings should stay under settings (accessible through side drawer) and I can agree because it isn\u0027t something users change frequently. Users will most likely adjust their reading experience settings (**text size**, contrast, background color) once every now and then to their comfortable spot.\n\n(My emphasis). Although I\u0027m totally up for a brow.si-esque menu, maybe that\u0027s something that needs more discussion/design first...",
+      "parentUuid": "aef5673e_2d9cf311",
       "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
