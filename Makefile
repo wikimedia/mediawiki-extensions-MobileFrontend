@@ -16,8 +16,10 @@ gerrit: remotes
 
 kss: nodecheck
 	# FIXME: Use more up to date Ruby version
-	@node_modules/.bin/kss-node less/ less/ -t styleguide-template
-	curl -sG "${MEDIAWIKI_LOAD_URL}?modules=mobile.styles|mobile.toast.styles|mobile.stable.styles|mobile.overlays|mobile.overlays.beta|mobile.pagelist.styles&only=styles" > less/public/style.css
+	$(eval KSS_MF_RL_TMP := $(shell mktemp /tmp/tmp.XXXXXXXXXX))
+	curl -sG "${MEDIAWIKI_LOAD_URL}?modules=mobile.styles|mobile.toast.styles|mobile.stable.styles|mobile.overlays|mobile.overlays.beta|mobile.pagelist.styles&only=styles" > $(KSS_MF_RL_TMP)
+	@node_modules/.bin/kss-node less/ less/ --css $(KSS_MF_RL_TMP) -t styleguide-template
+	@rm $(KSS_MF_RL_TMP)
 
 jsdoc: nodecheck
 	rm -rf docs
