@@ -427,11 +427,6 @@ $wgMFDeviceWidthMobileSmall = 280;
 $wgMFKeepGoing = false;
 
 /**
- * Controls whether new 1-column diffs should be used
- */
-$wgMFEnableBetaDiff = false;
-
-/**
  * Controls whether API action=mobileview should have every HTML section tidied for invalid markup
  */
 $wgMFTidyMobileViewSections = true;

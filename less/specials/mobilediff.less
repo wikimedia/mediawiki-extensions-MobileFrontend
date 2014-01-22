@@ -30,19 +30,6 @@
 		background-image: url(images/negative.png);
 	}
 
-	ins,
-	del {
-		padding-left: 3px;
-	}
-
-	ins::before {
-		content: "+ ";
-	}
-
-	del::before {
-		content: "- ";
-	}
-
 	.meta {
 		font-size: 0.7em;
 		text-transform: uppercase;
@@ -50,16 +37,6 @@
 
 	.mw-mf-diff-date {
 		color: #c6c6c6;
-	}
-
-	ins {
-		color: #008a46;
-		text-decoration: none;
-	}
-
-	del {
-		color: #b24242;
-		text-decoration: strikethrough;
 	}
 
 	#mw-mf-diffarea {
@@ -94,30 +71,6 @@
 		left: 0;
 		right: 0;
 
-		&::before {
-			content: "";
-			position: absolute;
-			top: -10px;
-			left: 19px;
-			border-width: 0px 11px 10px;
-			border-style: solid;
-			border-color: #c0c0c0 transparent;
-			display: block;
-			width: 0;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			top: -9px;
-			left: 20px;
-			border-width: 0px 10px 10px;
-			border-style: solid;
-			border-color: #f0f0f0 transparent;
-			display: block;
-			width: 0;
-		}
-
 		.mw-mf-user {
 			margin-bottom: .7em;
 		}
@@ -137,40 +90,35 @@
 			}
 		}
 	}
+
+	ins,
+	del {
+		color: black;
+		text-decoration: none;
+	}
+
+	span {
+		margin-right: 2px;
+	}
+
+	ins {
+		background-color: #75C877;
+	}
+
+	del {
+		background-color: #E07076;
+		text-decoration: none;
+	}
+
+	.prettyDiff {
+		ins, del, span {
+			display: inline;
+		}
+	}
 }
 
 .beta,
 .alpha {
-	#mw-mf-diffview {
-		ins,
-		del {
-			padding-left: 0;
-			color: black;
-			&::before {
-				content: ""
-			}
-		}
-
-		span {
-			margin-right: 2px;
-		}
-
-		ins {
-			background-color: #75C877;
-		}
-
-		del {
-			background-color: #E07076;
-			text-decoration: none;
-		}
-
-		.prettyDiff {
-			ins, del, span {
-				display: inline;
-			}
-		}
-	}
-
 	.revision-history-links {
 		font-size: 0.9em;
 		margin-top: 8px;

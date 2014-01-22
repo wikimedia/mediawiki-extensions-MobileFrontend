@@ -142,22 +142,16 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	}
 
 	function showDiff() {
-		global $wgMFEnableBetaDiff;
 		$ctx = MobileContext::singleton();
-		$newDiff = $wgMFEnableBetaDiff && $ctx->isBetaGroupMember();
 		if ( $this->prevRev ) {
 			$prevId = $this->prevRev->getId();
 			$contentHandler = $this->rev->getContentHandler();
 			$de = $contentHandler->createDifferenceEngine( $this->getContext(), $prevId, $this->revId );
-			$newDiff &= get_class( $de ) == 'DifferenceEngine';
 			// HACK:
-			if ( $newDiff ) {
+			if ( get_class( $de ) == 'DifferenceEngine' ) {
 				$de = new InlineDifferenceEngine( $this->getContext(), $prevId, $this->revId );
 			}
 			$diff = $de->getDiffBody();
-			if ( !$newDiff ) {
-				$diff = $this->processDiff( $diff );
-			}
 		} else {
 			$diff = '<ins>' . htmlspecialchars( $this->rev->getText() ) . '</ins>';
 		}
@@ -185,30 +179,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$history .= Html::closeElement( 'ul' );
 			$this->getOutput()->addHtml( $history );
 		}
-	}
-
-	function processDiff( $diff ) {
-		$out = '';
-
-		// haaaacccckkkkk
-		$doc = new DOMDocument();
-		$doc->loadHtml( '<?xml encoding="utf-8">' . $diff );
-		$xpath = new DOMXpath( $doc );
-		$els = $xpath->query( "//td[@class='diff-deletedline'] | //td[@class='diff-addedline']" );
-		$out .= Html::element( 'div', array( 'class' => 'heading' ),
-			$this->msg( 'mobile-frontend-diffview-explained' )->plain() );
-		/** @var $el DOMElement */
-		foreach( $els as $el ) {
-			$class = $el->getAttribute( 'class' );
-			if ( $class === 'diff-deletedline' ) {
-				$tag = Html::element( 'del', array(), $el->nodeValue );
-			} else {
-				$tag = Html::element( 'ins', array(), $el->nodeValue );
-			}
-			$out .= "<div>$tag</div>";
-		}
-
-		return $out;
 	}
 
 	function showFooter() {
