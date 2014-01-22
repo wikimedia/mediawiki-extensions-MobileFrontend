@@ -68,7 +68,7 @@
 				var directionUrl;
 				options.heading = '<span>' + options.page.title + '</span>';
 				options.preview = options.page.lead;
-				options.url = mw.util.getUrl( options.heading );
+				options.url = mw.util.getUrl( options.page.title );
 				options.readMoreLink = mw.msg( 'mobile-frontend-nearby-link' );
 
 				if ( options.latLngString ) {
@@ -77,7 +77,7 @@
 					if ( device === 'iphone' ) {
 						directionUrl = 'http://maps.apple.com/?daddr=' + options.latLngString;
 					} else if ( device === 'android' ) {
-						directionUrl = 'geo:' + options.latLngString + '?q=' + options.latLngString + '(' + encodeURIComponent( options.heading ) + ')&z=20';
+						directionUrl = 'geo:' + options.latLngString + '?q=' + options.latLngString + '(' + encodeURIComponent( options.page.title ) + ')&z=20';
 					} else if ( device === 'wp' ) {
 						directionUrl = 'maps:' + options.latLngString;
 					} // FIXME: what in other cases?!
