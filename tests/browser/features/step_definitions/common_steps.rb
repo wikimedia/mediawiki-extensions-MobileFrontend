@@ -20,6 +20,30 @@ Given /^I am logged into the mobile website$/ do
   end
 end
 
+Given(/^I register a new account with a random username$/) do
+  username = 'NewUser' + Time.now.to_i.to_s
+  pwd = 'test'
+  visit(CreateAccountPage) do |page|
+    # undo auto complete
+    page.username_field_element.when_present.send_keys(username)
+    page.password_field_element.when_present.send_keys(pwd)
+    page.confirm_password_field_element.when_present.send_keys(pwd)
+    page.sign_up_element.when_present.click
+    visit(LogoutPage)
+    visit(LoginPage) do |page|
+      page.login_with(username, pwd)
+    end
+  end
+end
+
+Given(/^I have just registered a new account$/) do
+  # Note the fact that we log in first means we can avoid needing to fill in a captcha
+  step 'I am logged into the mobile website'
+  step 'that I am on the User login page'
+  step 'I click Create Account'
+  step 'I register a new account with a random username'
+end
+
 Given /^I am logged in as a new user$/ do
   visit(HomePage) do |page|
     page.mainmenu_button_element.when_present.click
@@ -40,18 +64,18 @@ end
 
 Given /^I am in beta mode$/ do
   visit(MobileOptions) do |page|
-    page.beta_element.click
-    page.save_settings
+    page.beta_element.when_present.click
+    page.save_settings_element.when_present.click
   end
 end
 
 Given /^I am in alpha mode$/ do
   visit(MobileOptions) do |page|
-    page.beta_element.click
-    page.save_settings
+    page.beta_element.when_present.click
+    page.save_settings_element.when_present.click
     visit(MobileOptions) do |page|
-      page.alpha_element.click
-      page.save_settings
+      page.alpha_element.when_present.click
+      page.save_settings_element.when_present.click
     end
   end
 end

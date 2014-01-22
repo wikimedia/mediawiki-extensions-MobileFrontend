@@ -1,0 +1,12 @@
+@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
+Feature: Encourage new users to Keep Going
+
+  Scenario: I see a KeepGoing message after completing my edit
+    Given I am in beta mode
+      And I have just registered a new account
+    When I am on the Selenium Edit Test article
+      And I click edit
+      And I type ABCDEFG into the editor
+      And I click continue
+      And I click submit
+    Then I see the KeepGoing drawer prompting me to continue editing

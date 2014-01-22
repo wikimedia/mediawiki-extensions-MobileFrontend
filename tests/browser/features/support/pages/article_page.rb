@@ -45,4 +45,14 @@ class ArticlePage
   a(:ext_whitehouse_link, href: "http://www.whitehouse.gov/administration/president_obama/")
   a(:image_link, class:"image")
 
+  # page-actions
+  ul(:page_actions, id:"page-actions")
+
+  # editor
+  textarea(:editor_text_area, class:"wikitext-editor")
+  button(:continue_button, class:"continue icon")
+  button(:submit_button, class:"submit icon")
+
+  # drawer
+  div(:keep_going, class:'overlay-bottom')
 end

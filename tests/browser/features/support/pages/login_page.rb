@@ -20,6 +20,8 @@ class LoginPage
     @browser.div(id: "mw-content-text").p.b
   end
   def login_with(username, password)
+    # deal with autocomplete
+    self.username_element.when_present.clear()
     self.username_element.when_present.send_keys(username)
     self.password_element.when_present.send_keys(password)
     login
