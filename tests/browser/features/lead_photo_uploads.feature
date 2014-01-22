@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @login @test2.m.wikipedia.org
+@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org @login
 Feature: Uploading a lead photo
   # Stable: New user scenarios
   Scenario: There is an upload button
