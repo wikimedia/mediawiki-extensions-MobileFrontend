@@ -1,6 +1,5 @@
 ( function( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
-		Page = M.require( 'Page' ),
 		popup = M.require( 'toast' ),
 		VisualEditorOverlay;
 
@@ -80,16 +79,12 @@
 		clearSpinner: function() {
 			this.$spinner.hide();
 		},
+		onSave: function() {
+			this._super();
+			this.clearSpinner();
+		},
 		reportError: function ( msg ) {
 			popup.show( msg, 'toast error' );
-		},
-		onSave: function() {
-			var title = mw.config.get( 'wgTitle' );
-			// FIXME: use generic method for following 3 lines
-			M.pageApi.invalidatePage( title );
-			new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
-			M.router.navigate( '' );
-			this.clearSpinner();
 		},
 		onSurfaceReady: function () {
 			this.clearSpinner();

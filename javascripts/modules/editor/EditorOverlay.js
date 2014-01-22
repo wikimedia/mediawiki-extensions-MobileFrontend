@@ -2,7 +2,6 @@
 
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		user = M.require( 'user' ),
-		Page = M.require( 'Page' ),
 		popup = M.require( 'toast' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
@@ -221,9 +220,7 @@
 							action: 'page-save-success',
 						} );
 					}
-					M.pageApi.invalidatePage( title );
-					new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
-					M.router.navigate( '' );
+					self.onSave();
 					self.hide();
 					if ( self.isNewEditor ) {
 						msg = 'mobile-frontend-editor-success-landmark-1';

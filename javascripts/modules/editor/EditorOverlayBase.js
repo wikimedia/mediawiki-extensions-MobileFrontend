@@ -1,5 +1,6 @@
-( function( M ) {
+( function( M, $ ) {
 	var OverlayNew = M.require( 'OverlayNew' ),
+		Page = M.require( 'Page' ),
 		EditorOverlayBase;
 
 	EditorOverlayBase = OverlayNew.extend( {
@@ -18,6 +19,14 @@
 		},
 		template: M.template.get( 'modules/editor/EditorOverlayBase' ),
 		className: 'overlay editor-overlay',
+
+		onSave: function() {
+			var title = this.options.title;
+			// FIXME: use generic method for following 3 lines
+			M.pageApi.invalidatePage( title );
+			new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
+			M.router.navigate( '' );
+		},
 		initialize: function( options ) {
 			if ( this.readOnly ) {
 				options.readOnly = true;
@@ -66,4 +75,4 @@
 
 	M.define( 'modules/editor/EditorOverlayBase', EditorOverlayBase );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );
