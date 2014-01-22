@@ -82,6 +82,12 @@
 			this._loadContent();
 			// log section edit attempt
 			self.log( 'attempt' );
+			if ( inNavSignupCampaign ) {
+				// Log edit page impression
+				mobileLeftNavbarEditCTA.log( {
+					action: 'page-edit-impression'
+				} );
+			}
 		},
 
 		_shouldShowKeepGoingOverlay: function() {

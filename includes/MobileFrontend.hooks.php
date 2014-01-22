@@ -729,7 +729,7 @@ class MobileFrontendHooks {
 			),
 			'schema.MobileLeftNavbarEditCTA' => array(
 				'schema' => 'MobileLeftNavbarEditCTA',
-				'revision' => 6792179,
+				'revision' => 7074652,
 			),
 		);
 

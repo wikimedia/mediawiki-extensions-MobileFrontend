@@ -50,7 +50,7 @@ page whilst logged in, although you must be in test group A to see the CTA. */
 			// Add appropriate logging functionality to the edit button
 			$target.on( M.tapEvent( 'click' ), function() {
 				schema.log( {
-					action: 'page-edit-impression',
+					action: 'page-edit-click',
 					clickSource: 'edit'
 				} );
 			} );
@@ -74,7 +74,7 @@ page whilst logged in, although you must be in test group A to see the CTA. */
 			if ( shouldShowLeftNavEditTutorial ) {
 				// Log the action
 				schema.log( {
-					action: 'page-edit-impression',
+					action: 'page-edit-click',
 					clickSource: 'cta'
 				} );
 			}
