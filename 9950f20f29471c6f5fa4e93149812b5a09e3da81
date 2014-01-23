@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8efa632e_2562ed06",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-23T21:17:53Z",
+      "side": 1,
+      "message": "Well, when we render the page in render() a displayTitle will always be received (since the API always returns it). What exactly do you mean? (Sorry if I\u0027m misunderstanding you.)",
+      "parentUuid": "8efa632e_e58405a6",
+      "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8efa632e_057811be",
         "filename": "javascripts/common/Page.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-01-23T21:12:48Z",
       "side": 1,
       "message": "postRender runs /after/ the page has been rendered at which point it is too late to change the outputted text.\n\nHowever this still works as it is not needed - options.displayTitle is passed to the template.",
+      "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_055ff145",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-23T21:17:53Z",
+      "side": 1,
+      "message": "Is this not necessary for setting window.title in application.js?",
+      "parentUuid": "8efa632e_057811be",
       "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
