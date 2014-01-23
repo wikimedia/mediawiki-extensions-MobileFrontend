@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8efa632e_e58405a6",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-23T21:12:48Z",
+      "side": 1,
+      "message": "I would also suggest adding an initialize function that runs options.displayTitle \u003d options.displayTitle || options.title;\n\nNot specifying a displayTitle should still work.",
+      "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_057811be",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-23T21:12:48Z",
+      "side": 1,
+      "message": "postRender runs /after/ the page has been rendered at which point it is too late to change the outputted text.\n\nHowever this still works as it is not needed - options.displayTitle is passed to the template.",
+      "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
