@@ -3,8 +3,8 @@ Feature: Language Validation - Logged In
 
   Background:
     Given I am logged into the mobile website
+    And I am on the home page
 
   Scenario: Validate Language selection availability
-    When I am on the home page
-      And I click the language button
-    Then I move to the language screen
+    When I click the language button
+    Then I see the language overlay
