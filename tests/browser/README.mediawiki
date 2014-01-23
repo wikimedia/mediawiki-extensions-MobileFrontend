@@ -7,6 +7,27 @@ These include:
 * Create an account Selenium_newuser which has an edit count of 0
 * Create an account and store the username in MEDIAWIKI_USER which has
 an edit count of greater than 0
+* Ensure the Main Page has languages enabled
+* Ensure there is a Barack Obama article with the content
+<pre>
+  == Presidential_campaigns ==
+  Test
+  [[File:Flickr_Obama_Springfield_01.jpg|thumbnail|Foo]]
+
+  == External_links ==
+  [image http://www.whitehouse.gov/administration/president_obama/]
+</pre>
+* Edit MediaWiki:mobile-frontend-terms-text with text Terms_of_use
+* In LocalSettings place the following code:
+<pre>
+  $wgRightsUrl = '//creativecommons.org/licenses/by-sa/3.0/';
+</pre>
+
+Note a few caveats with browser tests:
+* Random page tests may fail on a timeout
+* Nearby page may fail currently if your browser does not always allow geolocation tests
+	** Nearby tests currently check articles near your current location and assume there is
+	an article nearby.
 
 = MobileFrontend Extension =
 
