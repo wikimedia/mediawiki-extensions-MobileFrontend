@@ -760,24 +760,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.newusers.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.templates',
-			'mobile.editor',
-			'mobile.contentOverlays',
-		),
-		'scripts' => array(
-			'javascripts/modules/tutorials/newbieEditorBeta.js',
-		),
-		'messages' => array(
-			// newbieEditor.js
-			'mobile-frontend-editor-tutorial-summary',
-			'mobile-frontend-editor-tutorial-alt-summary',
-			'mobile-frontend-editor-tutorial-confirm',
-			'mobile-frontend-editor-tutorial-cancel',
-		),
-	),
-
 	'mobile.stable' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
