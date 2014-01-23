@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "8efa632e_93c34e0a",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-01-23T20:19:32Z",
+      "side": 1,
+      "message": "\"on the mobile site\" or \"in the mobile skin\"?",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_b3dd2ae4",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-01-23T20:19:32Z",
+      "side": 1,
+      "message": "These things are not documented, presumably because you think they shouldn\u0027t be translated. I assume that these are UI texts that allow a user to increase or decrease the font size (the same as text size?). Why not use icons like (just an example, maybe we have these already somewhere...): http://www.softicons.com/free-icons/system-icons/oxygen-icons-by-oxygen/actions-format-font-size-more-icon",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_cd8227a9",
         "filename": "includes/MobileContext.php",
         "patchSetId": 2
