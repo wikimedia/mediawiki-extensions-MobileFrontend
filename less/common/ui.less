@@ -8,55 +8,71 @@ body {
 	height: 100%;
 }
 
-// Used for messages on login screen, page lists and uploads and when showing old revisions
-.alert {
-	padding: 1em @contentMargin;
-	margin: 0 0 1em;
-
-	&.warning {
-		color: #850;
-		background: #feb
-	}
-
-	h2 {
-		font: bold 100% @fontFamily;
-		padding: 0;
-		margin: 0 0 .5em 0;
-	}
+// FIXME: refactor all the below and reuse OverlayNew header styling
+#mw-mf-page-center {
+	padding: @headerMargin @headerMargin 0;
 }
 
-// FIXME: remove when new header in stable
-.stable {
-	.header {
-		// .header needs position: relative, it's not always at the top of the page
-		// (Zero banners, campaigns)
-		position: relative;
-		.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
-		border-bottom: 1px solid #e2e2e2;
-		line-height: (@oldHeaderHeight - 2px);
-		text-align: center;
-		min-height: (@oldHeaderHeight - 2px);
-		padding: 2px @searchBarPaddingLeft 0 @searchBarPaddingLeft;
+#content_wrapper {
+	margin: 0 -@headerMargin;
+}
 
-		h1, h2 {
-			font-size: 1.6em;
+.header {
+	display: table;
+	width: 100%;
+	white-space: nowrap;
+	border-bottom: 1px solid @grayLight;
+
+	> * {
+		width: @headerHeight - @headerMargin;
+		display: table-cell;
+		vertical-align: middle;
+
+		&:first-child {
+			border-right: 1px solid @grayLight;
+		}
+
+		&:nth-child(3) {
+			border-left: 1px solid @grayLight;
 		}
 	}
 
-	/* Menu buttons */
-	#mw-mf-main-menu-button,
-	#secondary-button {
-		// Needed for Special:UserProfile and Special:Nearby
-		.background-size( auto, 24px );
-		border: none;
-		height: @oldHeaderHeight;
-		width: @searchBarPaddingLeft;
-		position: absolute;
-		top: 0;
+	> h1, > form, > ul {
+		padding: (@headerTitleMarginV - @headerMargin) @headerTitleMarginH;
+		width: auto;
 	}
 
-	.user-button {
-		line-height: @oldHeaderHeight;
+	h1 {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	// FIXME: use .icon class
+	#mw-mf-main-menu-button, #secondary-button {
+		height: @headerHeight - @headerMargin;
+		text-indent: -9999px;
+		background-repeat: no-repeat;
+		.background-size( 24px, auto );
+	}
+
+	#mw-mf-main-menu-button {
+		background-position: 40% 40%;
+		.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
+	}
+
+	#secondary-button {
+		height: @headerHeight - 2 * @headerMargin;
+		background-position: 60% 40%;
+	}
+
+	// need to specify id or else other rules are more important
+	// FIXME: simplify when .icon class from OverlayNew used instead
+	#secondary-button.user-button {
+		text-indent: 0;
+		width: @headerHeight - 2 * @headerMargin;
+		padding-left: @headerMargin;
+		padding-bottom: @headerMargin;
+		text-align: center;
 
 		&:hover {
 			text-decoration: none;
@@ -73,35 +89,32 @@ body {
 			border-radius: 2px;
 
 			&.zero {
-				background: #cecece;
+				background: @grayLight;
 			}
 		}
 	}
 
-	/* Echo Notifications */
-	.is-authenticated {
-		.header {
-			padding-right: @searchBarPaddingRight;
-		}
-	}
-
-	#secondary-button {
-		right: 0;
-	}
-
-	/* hamburger */
-	// FIXME: make consistent with user-button
-	#mw-mf-main-menu-button {
-		background: url(images/menu/lowres/main.png) 50% 50% no-repeat;
-		.background-size( 24px, 30px );
-		left: 0;
+	// FIXME: merge with SearchOverlay
+	.search {
+		border: none;
+		padding: 0;
 	}
 }
 
-// FIXME: remove when new header in stable
-.client-js .stable {
-	#mw-mf-main-menu-button {
-		.background-image('images/menu/main.png');
+// Used for messages on login screen, page lists and uploads and when showing old revisions
+.alert {
+	padding: 1em @contentMargin;
+	margin: 0 0 1em;
+
+	&.warning {
+		color: #850;
+		background: #feb
+	}
+
+	h2 {
+		font: bold 100% @fontFamily;
+		padding: 0;
+		margin: 0 0 .5em 0;
 	}
 }
 
