@@ -1,9 +1,9 @@
 Given(/^that I am on the User login page$/) do
-  visit(UserLoginPage)
+  visit(LoginPage)
 end
 
 Given(/^I click Create Account$/) do
-  on(UserLoginPage).create_account_link_element.when_present.click
+  on(LoginPage).create_account_link_element.when_present.click
 end
 
 Given(/^I type (.+) into Username field$/) do |username|

@@ -14,6 +14,7 @@ class LoginPage
   text_field(:username, id: "wpName1")
   a(:login_wl, class: "button")
   button(:signup_submit, id:"wpCreateaccount")
+  a(:create_account_link, text: "Create account")
 
   def logged_in_as_element
     @browser.div(id: "mw-content-text").p.b
@@ -24,5 +25,3 @@ class LoginPage
     login
   end
 end
-
-
