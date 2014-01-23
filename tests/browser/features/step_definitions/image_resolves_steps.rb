@@ -1,5 +1,5 @@
 When /^I click on this image$/ do
-  on(ArticlePage).springfield_image_element.when_present.click
+  on(ArticlePage).image_link_element.when_present.click
 end
 
 When /^I expand Presidential Campaign Section$/ do
@@ -7,5 +7,5 @@ When /^I expand Presidential Campaign Section$/ do
 end
 
 Then /^I go to the image's page$/ do
-  @browser.url.should match Regexp.escape("File:Flickr_Obama_Springfield_01.jpg")
+  @browser.url.should match Regexp.escape("File:")
 end
