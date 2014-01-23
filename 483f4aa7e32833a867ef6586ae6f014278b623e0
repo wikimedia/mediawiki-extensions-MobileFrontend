@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8efa632e_0d0f1d35",
+        "filename": "includes/modules/LicenseTextModule.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-01-23T02:12:00Z",
+      "side": 1,
+      "message": "Do you need to pass the $title parameter?",
+      "revId": "483f4aa7e32833a867ef6586ae6f014278b623e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_ad15c942",
+        "filename": "includes/modules/LicenseTextModule.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-01-23T02:12:00Z",
+      "side": 1,
+      "message": "Do you need to pass the $title parameter?",
+      "revId": "483f4aa7e32833a867ef6586ae6f014278b623e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
