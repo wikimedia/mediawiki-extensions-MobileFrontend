@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8efa632e_394338b8",
+        "filename": "includes/Resources.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-24T18:58:25Z",
+      "side": 1,
+      "message": "don\u0027t do this. It breaks template support which is provided by the class MFResourceLoaderModule\n\nYou\u0027ll need a separate module...",
+      "revId": "4f50569a2f25205bd7e4931fd2211ce8b19cc74d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
