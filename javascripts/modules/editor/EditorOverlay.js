@@ -193,9 +193,8 @@
 		},
 
 		_save: function() {
-			var self = this, className = 'toast landmark',
-				options = { summary: this.$( '.summary' ).val() },
-				msg;
+			var self = this,
+				options = { summary: this.$( '.summary' ).val() };
 
 			if ( this.captchaId ) {
 				options.captchaId = this.captchaId;
@@ -228,30 +227,6 @@
 					}
 					self.onSave();
 					self.hide();
-					if ( self.isNewEditor ) {
-						msg = 'mobile-frontend-editor-success-landmark-1';
-					} else {
-						className = 'toast';
-						msg = 'mobile-frontend-editor-success';
-					}
-					self._updateEditCount();
-					// Set a cookie for 30 days indicating that this user has edited from
-					// the mobile interface.
-					$.cookie( 'mobileEditor', 'true', { expires: 30 } );
-					// double check it was successfully pre-fetched during preview phase
-					if ( self._keepgoing ) {
-						// Show KeepGoing overlay at step 1 (ask)
-						mw.loader.using( 'mobile.keepgoing', function() {
-							var KeepGoingOverlay = M.require( 'modules/keepgoing/KeepGoingOverlay' );
-							new KeepGoingOverlay( { step: 1 } ).show();
-						} );
-						self._keepgoing = false;
-					} else {
-						// just show a toast
-						popup.show( mw.msg( msg ), className );
-					}
-					// update after _shouldShowKeepGoingOverlay test
-					self._updateEditCount();
 				} ).
 				fail( function( data ) {
 					var msg;
