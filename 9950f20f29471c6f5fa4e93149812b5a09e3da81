@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8efa632e_b964e846",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-24T19:17:36Z",
+      "side": 1,
+      "message": "Currently I can do\n\nnew Page( { title: \"Foo\", sections: [ new Section( { line: \u0027Yo\u0027, text: \u0027Foo\u0027 } ) ] } ).prependTo( \u0027#content_wrapper\u0027 )\n\nWith your patchset I am forced to do\n\nnew Page( { title: \"Foo\", pageTitle: \"Foo\", sections: [ new Section( { line: \u0027Yo\u0027, text: \u0027Foo\u0027 } ) ] } ).prependTo( \u0027#content_wrapper\u0027 )\n\nLet\u0027s make pagetTitle optional. :)",
+      "parentUuid": "8efa632e_2562ed06",
+      "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8efa632e_057811be",
         "filename": "javascripts/common/Page.js",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Is this not necessary for setting window.title in application.js?",
       "parentUuid": "8efa632e_057811be",
+      "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_59d284d6",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-24T19:17:36Z",
+      "side": 1,
+      "message": "Ah I see.... This would be better done in the jQuery deferred callback after the api call is made so this only happens once.\n\nThis will set it every single time the page is rendered and it only needs to be set once.\n\nMight be worth updating the comment to say - // Surface the display title for M.reloadPage",
+      "parentUuid": "8efa632e_055ff145",
       "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
