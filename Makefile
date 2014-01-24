@@ -15,15 +15,16 @@ gerrit: remotes
 	@scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1
 
 kss: nodecheck
+	mkdir -p docs
 	# FIXME: Use more up to date Ruby version
 	$(eval KSS_MF_RL_TMP := $(shell mktemp /tmp/tmp.XXXXXXXXXX))
 	curl -sG "${MEDIAWIKI_LOAD_URL}?modules=mobile.styles|mobile.toast.styles|mobile.stable.styles|mobile.overlays|mobile.overlays.beta|mobile.pagelist.styles&only=styles" > $(KSS_MF_RL_TMP)
-	@node_modules/.bin/kss-node less/ less/ --css $(KSS_MF_RL_TMP) -t styleguide-template
+	@node_modules/.bin/kss-node less/ docs/styleguide/ --css $(KSS_MF_RL_TMP) -t styleguide-template
 	@rm $(KSS_MF_RL_TMP)
 
 jsdoc: nodecheck
-	rm -rf docs
-	@node_modules/.bin/jsdoc -r --verbose javascripts/common/ javascripts/common/README.md -d docs
+	rm -rf docs/js
+	@node_modules/.bin/jsdoc -r --verbose javascripts/common/ javascripts/common/README.md -d docs/js/
 
 docs: kss jsdoc
 
