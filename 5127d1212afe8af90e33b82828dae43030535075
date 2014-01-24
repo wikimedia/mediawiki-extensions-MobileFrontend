@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8efa632e_aa7004a4",
+        "filename": "images/BetaFeatures/minerva.svg",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-24T23:49:45Z",
+      "side": 1,
+      "message": "Run this through svgo (with --config\u003d.svgo.yml).",
+      "revId": "5127d1212afe8af90e33b82828dae43030535075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_4a6f40c1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-24T23:49:45Z",
+      "side": 1,
+      "message": "That indentation is confusing. Can you make a blank line after it or do\nif (\n  ... \u0026\u0026\n  ...\n) {\n  ...\n}",
+      "revId": "5127d1212afe8af90e33b82828dae43030535075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_2a64f4e0",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-24T23:49:45Z",
+      "side": 1,
+      "message": "Why do we assign it to a variable if we don\u0027t reuse it? Also, can you add a comment here saying that this is for the beta feature?",
+      "revId": "5127d1212afe8af90e33b82828dae43030535075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_aa9fe4b8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-24T23:49:45Z",
+      "side": 1,
+      "message": "Can you put a comment here explaining that it\u0027s for a beta feature?",
+      "revId": "5127d1212afe8af90e33b82828dae43030535075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
