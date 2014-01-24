@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "8efa632e_fe7c961d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-24T13:36:47Z",
+      "side": 1,
+      "message": "Ideally, I\u0027d like to just use icons. However, I know the mobile frontend folks have dedicated designers and I wouldn\u0027t want to  duplicate work if something\u0027s already been created/prototyped...the +/- are just for demonstration purposes at the moment.",
+      "parentUuid": "8efa632e_b3dd2ae4",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_cd8227a9",
         "filename": "includes/MobileContext.php",
         "patchSetId": 2
