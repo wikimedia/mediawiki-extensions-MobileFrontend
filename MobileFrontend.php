@@ -145,6 +145,7 @@ $wgSpecialPages['MobileLanguages'] = 'SpecialMobileLanguages';
 
 function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
+		$wgResourceLoaderLESSImportPaths,
 		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall;
 
 	if ( $wgMFNearby ) {
@@ -152,6 +153,10 @@ function efMobileFrontend_Setup() {
 		$wgSpecialPageGroups['Nearby'] = 'pages';
 	}
 	// Set LESS global variables
+	$localBasePath = dirname( __DIR__ );
+	$wgResourceLoaderLESSImportPaths = array_merge( $wgResourceLoaderLESSImportPaths, array(
+		"$localBasePath/MobileFrontend/less/minerva.less/",
+	) );
 	$wgResourceLoaderLESSVars = array_merge( $wgResourceLoaderLESSVars,
 		array(
 			'wgMFDeviceWidthTablet' => "{$wgMFDeviceWidthTablet}px",
