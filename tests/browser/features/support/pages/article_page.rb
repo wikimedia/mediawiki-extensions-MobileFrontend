@@ -55,4 +55,10 @@ class ArticlePage
 
   # drawer
   div(:keep_going, class:'overlay-bottom')
+
+  # visual editor
+  div(:editor_ve, class: "ve-ce-documentNode ve-ce-branchNode")
+
+  # toast
+  div(:toast, class:'toast position-fixed visible')
 end
