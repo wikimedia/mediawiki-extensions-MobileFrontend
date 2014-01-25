@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "8efa632e_0f5ee717",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-25T18:09:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8efa632e_b964e846",
+      "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8efa632e_057811be",
         "filename": "javascripts/common/Page.js",
         "patchSetId": 1
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "Ah I see.... This would be better done in the jQuery deferred callback after the api call is made so this only happens once.\n\nThis will set it every single time the page is rendered and it only needs to be set once.\n\nMight be worth updating the comment to say - // Surface the display title for M.reloadPage",
       "parentUuid": "8efa632e_055ff145",
+      "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_2f61a3d0",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-25T18:09:56Z",
+      "side": 1,
+      "message": "Hmm, but what if options.sections is set manually? Then this.displayTitle wouldn\u0027t be set...",
+      "parentUuid": "8efa632e_59d284d6",
       "revId": "9950f20f29471c6f5fa4e93149812b5a09e3da81",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
