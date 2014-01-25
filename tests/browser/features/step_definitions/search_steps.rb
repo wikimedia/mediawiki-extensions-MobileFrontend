@@ -26,3 +26,7 @@ end
 Then(/^I don't see the search overlay$/) do
   on(ArticlePage).search_overlay_element.should_not be_visible
 end
+
+When(/^I click a search result$/) do
+  on(ArticlePage).search_result_element.when_present.click
+end

@@ -3,8 +3,10 @@ class ArticlePage
 
   include URL
   page_url URL.url("<%=params[:article_name]%>")
+  h1(:first_heading, id: "section_0")
 
-  a(:edit_button, text: "Edit")
+  li(:edit_button, id: "ca-edit")
+  a(:edit_link, text: "Edit")
   div(:editor_overlay, class: "editor-overlay")
   button(:editor_overlay_close_button) do |page|
     page.editor_overlay_element.button_element(class: "cancel")
@@ -23,15 +25,19 @@ class ArticlePage
     page.upload_button_element.link_element(href: '#/upload-tutorial/article')
   end
 
+  # search
   text_field(:search_box_placeholder, name: "search", index: 0)
   text_field(:search_box2, name: "search", index: 1)
   li(:search_results, title: "Barack Obama")
-  a(:search_result) do |page|
-    page.search_results_element.element.a
-  end
   div(:search_overlay, class: "search-overlay")
   button(:search_overlay_close_button) do |page|
     page.search_overlay_element.button_element(class: "cancel")
+  end
+  ul(:search_overlay_page_list) do |page|
+    page.search_overlay_element.element.ul(class: "page-list thumbs actionable")
+  end
+  a(:search_result) do |page|
+    page.search_overlay_page_list_element.element.a
   end
 
   a(:notifications_button, id: "secondary-button", class: "user-button")
@@ -44,6 +50,7 @@ class ArticlePage
   span(:pres_campaign_section, id:"Presidential_campaigns")
   a(:ext_whitehouse_link, href: "http://www.whitehouse.gov/administration/president_obama/")
   a(:image_link, class:"image")
+
 
   # page-actions
   ul(:page_actions, id:"page-actions")
@@ -62,4 +69,7 @@ class ArticlePage
 
   # toast
   div(:toast, class:'toast position-fixed visible')
+
+  #loader
+  div(:content_wrapper, id:'content_wrapper')
 end
