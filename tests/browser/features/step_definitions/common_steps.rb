@@ -39,9 +39,20 @@ Given(/^I am logged in as a user with a > (\d+) edit count$/) do |arg1|
 end
 
 Given /^I am in beta mode$/ do
-  visit(BetaPage) do |page|
+  visit(MobileOptions) do |page|
     page.beta_element.click
     page.save_settings
+  end
+end
+
+Given /^I am in alpha mode$/ do
+  visit(MobileOptions) do |page|
+    page.beta_element.click
+    page.save_settings
+    visit(MobileOptions) do |page|
+      page.alpha_element.click
+      page.save_settings
+    end
   end
 end
 
