@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8efa632e_8fe437a5",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15128,
+      "author": {
+        "id": 468
+      },
+      "writtenOn": "2014-01-26T07:31:54Z",
+      "side": 1,
+      "message": "Thanks for the typo fix",
+      "revId": "5eba35e78f028fdaab61de2e28dcc9f025ab236f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
