@@ -172,7 +172,7 @@ $messages['en'] = array (
 
 	'mobile-frontend-page-saving' => 'Saving $1',
 
-	'mobile-frontend-user-cta' => 'Please login or sign up to see your notifications.',
+	'mobile-frontend-user-cta' => 'Please log in or sign up to see your notifications.',
 	'mobile-frontend-user-button-tooltip' => 'Show my notifications',
 
 	// nearby overlay
@@ -200,10 +200,10 @@ $messages['en'] = array (
 	// image donation
 	'mobile-frontend-donate-image-nouploads' => 'No uploads.',
 	'mobile-frontend-donate-image-login' => 'Media on {{SITENAME}} is donated by people like you.',
-	'mobile-frontend-donate-image-login-action' => 'Login to share your media.',
+	'mobile-frontend-donate-image-login-action' => 'Log in to share your media.',
 	'mobile-frontend-donate-image-signup-action' => 'Sign up to share your media with the world.',
 	'mobile-frontend-photo-upload-disabled' => 'No image is needed on this page.',
-	'mobile-frontend-photo-upload-anon' => 'Please login to add an image to this page.',
+	'mobile-frontend-photo-upload-anon' => 'Please log in to add an image to this page.',
 	'mobile-frontend-photo-upload-protected' => 'You do not have permission to add an image to this page.',
 	'mobile-frontend-photo-upload-unavailable' => 'Your browser does not support image uploads.',
 	'mobile-frontend-photo-upload-generic' => 'Contribute an image',
@@ -227,21 +227,21 @@ $messages['en'] = array (
 	'mobile-frontend-watchlist-view' => 'View your watchlist',
 	'mobile-frontend-watchlist-more' => 'more',
 	'mobile-frontend-watchlist-cta' => 'Keep track of this page and all changes to it.',
-	'mobile-frontend-watchlist-cta-button-login' => 'Login',
+	'mobile-frontend-watchlist-cta-button-login' => 'Log in',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Sign up',
 
 	// login headers from left nav
 	'mobile-frontend-watchlist-purpose' => 'A watchlist helps you bookmark pages and keep track of changes to them.',
-	'mobile-frontend-watchlist-login-action' => 'Login to see it.',
+	'mobile-frontend-watchlist-login-action' => 'Log in to see it.',
 	'mobile-frontend-watchlist-signup-action' => 'Sign up to start one now.',
 	'mobile-frontend-generic-login' => '{{SITENAME}} is made by people like you.',
-	'mobile-frontend-generic-login-action' => 'Login to contribute.',
+	'mobile-frontend-generic-login-action' => 'Log in to contribute.',
 	'mobile-frontend-generic-signup-action' => 'Sign up to contribute.',
 
 	// login article actions
 	'mobile-frontend-watch-login' => 'Add $1 to your watchlist.',
 	'mobile-frontend-edit-login' => 'Help improve the $1 page.',
-	'mobile-frontend-edit-login-action' => 'Login to edit.',
+	'mobile-frontend-edit-login-action' => 'Log in to edit.',
 	'mobile-frontend-edit-signup-action' => 'Sign up to edit.',
 
 	'mobile-frontend-watchlist-a-z' => 'List',
@@ -15125,7 +15125,7 @@ $messages['nn'] = array(
 	'mobile-frontend-watchlist-removed' => 'Fjerna $1 frå overvakingslista di',
 	'mobile-frontend-watchlist-view' => 'Sjå overvakingslista di',
 	'mobile-frontend-watchlist-more' => 'meir',
-	'mobile-frontend-watchlist-cta-button-login' => 'Log inn',
+	'mobile-frontend-watchlist-cta-button-login' => 'Log in',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Registrer deg',
 	'mobile-frontend-watch-login' => 'Du lyt vera innlogga for å overvaka sider.', # Fuzzy
 	'mobile-frontend-watchlist-a-z' => 'Liste',
