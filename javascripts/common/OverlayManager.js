@@ -61,7 +61,11 @@
 			} );
 
 			// force hide only if more overlays in stack
-			if ( previous && this.hidePrevious && !previous.overlay.hide( this.stack.length > 1 ) ) {
+			if ( previous &&
+				previous.overlay !== undefined &&
+				this.hidePrevious &&
+				!previous.overlay.hide( this.stack.length > 1 )
+			) {
 				// if hide prevented, prevent route change event
 				ev.preventDefault();
 			} else if ( !match ) {
