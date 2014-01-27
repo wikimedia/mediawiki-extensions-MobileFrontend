@@ -3,7 +3,7 @@ Feature: Editor
 
   Background:
     Given I am logged into the mobile website
-    When I go to a nonexistent page
+    When I go to an uncreated page using URL Nonexistent_page_ijewrcmhvg34773
       And I click the edit button
 
   Scenario: Opening editor
@@ -11,10 +11,10 @@ Feature: Editor
 
   Scenario: Closing editor (overlay button)
     When I click the editor overlay close button
-    Then I don't see the editor
-      And I am on the nonexistent page
+    Then I should not see the editor
+      And the URL of of my page should contain Nonexistent_page_ijewrcmhvg34773
 
   Scenario: Closing editor (browser button)
     When I click the browser back button
-    Then I don't see the editor
-      And I am on the nonexistent page
+    Then I should not see the editor
+      And the URL of of my page should contain Nonexistent_page_ijewrcmhvg34773

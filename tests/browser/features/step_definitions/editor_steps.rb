@@ -10,6 +10,6 @@ When(/^I click the editor overlay close button$/) do
   on(ArticlePage).editor_overlay_close_button_element.click
 end
 
-Then(/^I don't see the editor$/) do
+Then(/^I should not see the editor$/) do
   on(ArticlePage).editor_overlay_element.should_not be_visible
 end
