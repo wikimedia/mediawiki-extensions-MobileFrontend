@@ -50,6 +50,7 @@ class ArticlePage
 
   # editor
   textarea(:editor_text_area, class:"wikitext-editor")
+  button(:escape_button, class:"back icon")
   button(:continue_button, class:"continue icon")
   button(:submit_button, class:"submit icon")
 

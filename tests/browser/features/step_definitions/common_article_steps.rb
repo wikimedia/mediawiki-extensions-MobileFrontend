@@ -2,6 +2,10 @@ Given(/^I click edit$/) do
   on(ArticlePage).edit_button_element.when_present.click
 end
 
+Then(/^I see the VisualEditor$/) do
+  on(ArticlePage).editor_ve_element.when_present.should exist
+end
+
 Given(/^I type (.+) into the editor$/) do |text|
   on(ArticlePage).editor_text_area_element.when_present.send_keys(text)
 end
@@ -11,6 +15,10 @@ Given(/^I type (.+) into VisualEditor$/) do |text|
     page.editor_ve_element.when_present.fire_event("onfocus")
     page.editor_ve_element.when_present.send_keys(text)
   end
+end
+
+Given(/^I click the escape button$/) do
+  on(ArticlePage).escape_button_element.when_present.click
 end
 
 Given(/^I click continue$/) do

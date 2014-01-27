@@ -46,13 +46,18 @@
 			// Save button
 			this.$( '.continue' ).on( 'click', $.proxy( this, 'prepareForSave' ) );
 			this.$( '.submit' ).on( 'click', $.proxy( this, 'save' ) );
+			this.$( '.back' ).on( 'click', $.proxy( this, 'switchToEditor' ) );
 			this._super( options );
+		},
+		switchToEditor: function() {
+			this._showHidden( '.initial-header' );
+			this.$( '.surface' ).show();
+			this.docToSave = false;
 		},
 		prepareForSave: function() {
 			var self = this,
 				doc = this.target.surface.getModel().getDocument();
-			// Disable VE surface
-			this.target.surface.getView().disable();
+			this.$( '.surface' ).hide();
 			self._showHidden( '.save-header, .save-panel' );
 			self.$( '.submit' ).prop( 'disabled', true );
 			this.$spinner.show();
