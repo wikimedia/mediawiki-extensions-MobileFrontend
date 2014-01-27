@@ -6,7 +6,7 @@ Feature: Manage Watchlist
       And I am not logged in
     When I select Watchlist
     Then I receive watchlist message A watchlist helps you bookmark pages and keep track of changes to them.
-      And I receive watchlist message Login to see it.
+      And I receive watchlist message Log in to see it.
 
   Scenario: Add an article to the watchlist
     Given I am logged into the mobile website
