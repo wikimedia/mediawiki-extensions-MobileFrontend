@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8efa632e_5696c350",
+        "filename": "javascripts/modules/uploads/PhotoApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-27T22:22:14Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this if statement go inside the one above? It would be strange to add \u0027 \u0027 + details without the code.",
+      "revId": "76ad148e36d42790552a25db936bd58474e3a820",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
