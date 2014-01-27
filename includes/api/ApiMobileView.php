@@ -4,7 +4,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Increment this when changing the format of cached data
 	 */
-	const CACHE_VERSION = 6;
+	const CACHE_VERSION = 7;
 
 	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant, $offset, $maxlen,
 		$usePageImages;
