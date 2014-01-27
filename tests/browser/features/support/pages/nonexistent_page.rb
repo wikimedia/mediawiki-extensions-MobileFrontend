@@ -1,7 +1,6 @@
 class NonexistentPage < ArticlePage
-  def self.url
-    URL.url("Nonexistent_page_ijewrcmhvg34773")
-  end
+  include PageObject
 
-  page_url url
+  include URL
+  page_url URL.url("<%=params[:article_name]%>")
 end

@@ -53,12 +53,12 @@ When /^I go to random page$/ do
   visit(RandomPage)
 end
 
-When(/^I go to a nonexistent page$/) do
-  visit(NonexistentPage)
+When(/^I go to an uncreated page using URL (.+)$/) do |article|
+  visit(NonexistentPage, :using_params => {:article_name => article})
 end
 
-Then(/^I am on the nonexistent page$/) do
-  on(NonexistentPage).current_url.should eq NonexistentPage.url
+Then(/^the URL of of my page should contain (.+)$/) do |article|
+  on(NonexistentPage).current_url.should match article
 end
 
 When(/^I am on the home page$/) do
