@@ -1,0 +1,11 @@
+<div class="overlay-header initial-header hideable hidden">
+	<ul class="v-border bottom-border">
+		<li><button class="cancel icon">{{closeMsg}}</button></li>
+	</ul>
+	<div class="toolbar bottom-border"></div>
+	{{^readOnly}}
+	<ul>
+		<li><button class="continue icon" disabled>{{continueMsg}}</button></li>
+	</ul>
+	{{/readOnly}}
+</div>

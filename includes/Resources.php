@@ -333,6 +333,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.editor.common',
 			'mobile.stable.common',
 		),
+		'styles' => array(
+			'less/modules/editor/VisualEditorOverlay.less',
+		),
 		'scripts' => array(
 			'javascripts/modules/editor/VisualEditorOverlay.js',
 		),
@@ -340,6 +343,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/editor/VisualEditorOverlay.less',
 		),
 		'templates' => array(
+			'modules/editor/VisualEditorOverlayHeader',
 			'modules/editor/VisualEditorOverlay',
 		),
 	),
@@ -355,6 +359,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'modules/editor/AbuseFilterOverlay',
+			'modules/editor/EditorOverlayHeader',
 			'modules/editor/EditorOverlay',
 		),
 		'messages' => array(

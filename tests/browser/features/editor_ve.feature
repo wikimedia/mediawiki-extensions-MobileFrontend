@@ -1,7 +1,6 @@
 @en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
 Feature: VisualEditor
 
-@wip
 Scenario: Toolbar VisualEditor
   Given I am in alpha mode
     And I am logged into the mobile website
