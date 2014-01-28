@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_4ce3e7d4",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2014-01-28T19:57:02Z",
+      "side": 1,
+      "message": "lolxml :P",
+      "revId": "161abb4277535b96c33a15abddf7589eb4c828fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
