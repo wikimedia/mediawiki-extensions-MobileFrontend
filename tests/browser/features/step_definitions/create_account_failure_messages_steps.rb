@@ -6,6 +6,10 @@ Given(/^I click Create Account$/) do
   on(LoginPage).create_account_link_element.when_present.click
 end
 
+Then(/^I see the refresh captcha icon$/) do
+  on(CreateAccountPage).refresh_captcha_element.when_present.should exist
+end
+
 Given(/^I type (.+) into Username field$/) do |username|
   on(CreateAccountPage).username_field_element.when_present.send_keys(username)
 end
