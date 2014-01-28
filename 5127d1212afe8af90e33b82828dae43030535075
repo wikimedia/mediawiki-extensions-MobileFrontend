@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_86342b48",
+        "filename": "images/BetaFeatures/minerva.svg",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-28T22:48:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8efa632e_aa7004a4",
+      "revId": "5127d1212afe8af90e33b82828dae43030535075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8efa632e_4a6f40c1",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 11
@@ -30,6 +48,24 @@
       "writtenOn": "2014-01-24T23:49:45Z",
       "side": 1,
       "message": "That indentation is confusing. Can you make a blank line after it or do\nif (\n  ... \u0026\u0026\n  ...\n) {\n  ...\n}",
+      "revId": "5127d1212afe8af90e33b82828dae43030535075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_06f13b92",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-28T22:48:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8efa632e_4a6f40c1",
       "revId": "5127d1212afe8af90e33b82828dae43030535075",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_e6ed2fb6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-28T22:48:43Z",
+      "side": 1,
+      "message": "We do reuse it. I\u0027m moving it up. Look below - there are loads of uses.",
+      "parentUuid": "8efa632e_2a64f4e0",
+      "revId": "5127d1212afe8af90e33b82828dae43030535075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8efa632e_aa9fe4b8",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 11
@@ -64,6 +118,24 @@
       "writtenOn": "2014-01-24T23:49:45Z",
       "side": 1,
       "message": "Can you put a comment here explaining that it\u0027s for a beta feature?",
+      "revId": "5127d1212afe8af90e33b82828dae43030535075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_4afce0d5",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-28T22:48:43Z",
+      "side": 1,
+      "message": "It\u0027s not though.. it\u0027s for the desktop skin - the fact that it happens to get enabled by beta feature is a different problem. Surely this is clear enough - we use this pattern elsewhere.",
+      "parentUuid": "8efa632e_aa9fe4b8",
       "revId": "5127d1212afe8af90e33b82828dae43030535075",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
