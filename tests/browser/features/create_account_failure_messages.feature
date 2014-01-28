@@ -1,6 +1,5 @@
 @en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
 Feature: Create failure messages
-  @wip
   Scenario: Can refresh captcha
     Given that I am on the User login page
       And I click Create Account
