@@ -459,7 +459,7 @@ class SkinMinerva extends SkinTemplate {
 
 	protected function prepareMenuButton( BaseTemplate $tpl ) {
 		// menu button
-		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
+		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl();
 		$tpl->set( 'menuButton',
 			Html::element( 'a', array(
 			'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' ),
