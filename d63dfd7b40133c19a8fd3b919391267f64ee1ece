@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_89ef9c82",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T01:31:00Z",
+      "side": 1,
+      "message": "Correct! :)",
+      "parentUuid": "aef5673e_61d56447",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_8df53f4f",
         "filename": "includes/skins/SkinMinervaAlpha.php",
         "patchSetId": 2
@@ -124,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_69e450a4",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T01:31:00Z",
+      "side": 1,
+      "message": "Go for it! :)",
+      "parentUuid": "aef5673e_21cf5cb7",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_2d9cf311",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 2
@@ -153,6 +189,24 @@
       "side": 1,
       "message": "Hmm, yeah. I kind of added it here as a first step just to offer control because displaying some sort of widget on the page itself would be a pretty big change, don\u0027t you think?\n\nFrom May\u0027s comment,\n\n\u003e I\u0027ve received feedback that the reading experience settings should stay under settings (accessible through side drawer) and I can agree because it isn\u0027t something users change frequently. Users will most likely adjust their reading experience settings (**text size**, contrast, background color) once every now and then to their comfortable spot.\n\n(My emphasis). Although I\u0027m totally up for a brow.si-esque menu, maybe that\u0027s something that needs more discussion/design first...",
       "parentUuid": "aef5673e_2d9cf311",
+      "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_49e9947a",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T01:31:00Z",
+      "side": 1,
+      "message": "Maybe - might be worth bringing up on design-l or mobile-l mailing lists - I know Jared has been keen to experiment with this so I\u0027m sure they would give you some support!\nlists.wikimedia.org",
+      "parentUuid": "aef5673e_a1c24c86",
       "revId": "d63dfd7b40133c19a8fd3b919391267f64ee1ece",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
