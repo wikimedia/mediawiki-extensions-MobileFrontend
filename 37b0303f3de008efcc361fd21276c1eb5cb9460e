@@ -16,6 +16,24 @@
       "revId": "37b0303f3de008efcc361fd21276c1eb5cb9460e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_e9f74055",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-01-29T01:35:34Z",
+      "side": 1,
+      "message": "Yeah, the problem is just if the callback never executes (for example sections is already defined manually). See what I\u0027m saying? I want to find a way to do this then without duplicating code...ideas welcome, of course; I\u0027ll have time to work on this and the other patchset over the weekend.",
+      "parentUuid": "6ef7ef47_acf4ab51",
+      "revId": "37b0303f3de008efcc361fd21276c1eb5cb9460e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
