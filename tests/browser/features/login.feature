@@ -7,7 +7,6 @@ Feature: Login
     Then I see a message box at the top of the login page
       And I do not see a message warning me I am already logged in
 
-  @wip
   Scenario: Already logged in
     Given I am logged into the mobile website
     When I go to the login page
