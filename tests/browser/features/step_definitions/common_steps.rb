@@ -38,6 +38,10 @@ Given(/^I am logged in as a user with a > (\d+) edit count$/) do |arg1|
   on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
 end
 
+When /^I go to the login page$/ do
+  visit(LoginPage)
+end
+
 Given /^I am in beta mode$/ do
   visit(BetaPage) do |page|
     page.beta_element.click
