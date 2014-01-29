@@ -34,6 +34,24 @@
       "revId": "37b0303f3de008efcc361fd21276c1eb5cb9460e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_89bd5c66",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T01:45:22Z",
+      "side": 1,
+      "message": "You can use initialize function and set \nfunction initialize( options) {\noptions.displayTitle \u003d options.displayTitle || options.title;\nthis.displayTitle \u003d options.displayTitle;\nthis._super( options );\n}\n\nand then in render callback\nensure this.displayTitle and options.displayTitle are redefined.\n\nThe render function already has a FIXME so we\u0027re likely to need to refactor in this direction anyhow! ( FIXME: this is horrible, because it makes preRender run _during_ render..)",
+      "parentUuid": "6ef7ef47_e9f74055",
+      "revId": "37b0303f3de008efcc361fd21276c1eb5cb9460e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
