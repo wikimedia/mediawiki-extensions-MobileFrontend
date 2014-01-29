@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_0e19497e",
+        "filename": "includes/Resources.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T23:47:34Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this also be loaded in top?",
+      "revId": "9dec1d9693bb9cd27a5e65f241ffb112046ef5f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_ce49216c",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T23:47:34Z",
+      "side": 1,
+      "message": "Please add a description stating something like \"Replacing MobileFrontend button styles with mediawiki.ui button styles.\"",
+      "revId": "9dec1d9693bb9cd27a5e65f241ffb112046ef5f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_8e53191a",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T23:47:34Z",
+      "side": 1,
+      "message": "Not sure what to make of this. Is it a typo?",
+      "revId": "9dec1d9693bb9cd27a5e65f241ffb112046ef5f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
