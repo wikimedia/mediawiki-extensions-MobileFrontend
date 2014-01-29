@@ -16,6 +16,24 @@
       "revId": "76ad148e36d42790552a25db936bd58474e3a820",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_8bd9cc85",
+        "filename": "javascripts/modules/uploads/PhotoApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-01-29T20:04:47Z",
+      "side": 1,
+      "message": "It is strange, but I don\u0027t know all the possibilities that API can return. Who knows, maybe it can return details without code? ;)",
+      "parentUuid": "8efa632e_5696c350",
+      "revId": "76ad148e36d42790552a25db936bd58474e3a820",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
