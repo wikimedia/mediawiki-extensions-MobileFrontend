@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_aba48705",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T22:18:56Z",
+      "side": 1,
+      "message": "I\u0027d suggest making an editor folder and put this file there to be consistent.",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_6bae7fe6",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T22:18:56Z",
+      "side": 1,
+      "message": "hmmm? Please explain. This looks doesn\u0027t look right and I don\u0027t trust this change not break other things.\n\nTalk pages overlay for instance might have headings.",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_6b855f5a",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T22:18:56Z",
+      "side": 1,
+      "message": "I think this would be better in commit message rather than comment.\n\nAlso is there any way to better group them?\nWhat are they both inside?? - I think it would be good to keep these together since they are related if possible.",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_4b9aa3be",
+        "filename": "less/common/typography.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T22:18:56Z",
+      "side": 1,
+      "message": "This is stable. This also looks suspect--  why would a change in beta change stable?",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_2b975795",
+        "filename": "less/modules/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T22:18:56Z",
+      "side": 1,
+      "message": "oh gawd lol\n\nLet\u0027s not merge this whilst there are !important rules \nSee https://gerrit.wikimedia.org/r/#/c/109940/",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_cbed9324",
+        "filename": "less/modules/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T22:18:56Z",
+      "side": 1,
+      "message": "add new line",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_eb904f9a",
+        "filename": "less/modules/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T22:18:56Z",
+      "side": 1,
+      "message": "can\u0027t we just use figure here?",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_cb70f3a5",
+        "filename": "less/tablet/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-29T22:18:56Z",
+      "side": 1,
+      "message": "doop",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
