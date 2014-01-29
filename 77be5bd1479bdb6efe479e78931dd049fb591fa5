@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_abdec712",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "6ef7ef47_aba48705",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_6bae7fe6",
         "filename": "less/common/OverlayNew.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-01-29T22:18:56Z",
       "side": 1,
       "message": "hmmm? Please explain. This looks doesn\u0027t look right and I don\u0027t trust this change not break other things.\n\nTalk pages overlay for instance might have headings.",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_ab348747",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "Right now these styles are being applied to h3 headers of article sections in VE, which looks very strange. (These styles create a grey box with grey text, not a normal h3.) Instead, I\u0027m making the selector more specific so that it only applies to non-content headers. I looked through the existing overlays and it looks like the h3s where this is actually intended to apply also use the mw-mf-overlay-header class. Is that isn\u0027t correct, let me know.",
+      "parentUuid": "6ef7ef47_6bae7fe6",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_cb28f334",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "VisualEditor doesn\u0027t use the thumb class at all (or thumbinner), so the only thing they are both inside of is .content. I\u0027m not sure we want to restrict the .thumb styles to only applying within .content though, as I could imagine some future case where we display a formatted thumbnail within an overlay or weird special page. I\u0027m fine with moving this comment to the commit message though.",
+      "parentUuid": "6ef7ef47_6b855f5a",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_4b9aa3be",
         "filename": "less/common/typography.less",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2014-01-29T22:18:56Z",
       "side": 1,
       "message": "This is stable. This also looks suspect--  why would a change in beta change stable?",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_cbd7d327",
+        "filename": "less/common/typography.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "I\u0027m moving these from toggle.less, which is necessary for it to display correctly in VE (or without JS).",
+      "parentUuid": "6ef7ef47_4b9aa3be",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_4bc62350",
+        "filename": "less/modules/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "I\u0027m fine on waiting for that.",
+      "parentUuid": "6ef7ef47_2b975795",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_cbed9324",
         "filename": "less/modules/VisualEditorOverlay.less",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2014-01-29T22:18:56Z",
       "side": 1,
       "message": "add new line",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_0bc01b2e",
+        "filename": "less/modules/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "Will do.",
+      "parentUuid": "6ef7ef47_cbed9324",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_cbb233e4",
+        "filename": "less/modules/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "Better to match the selectors used in VE, IMO, since we\u0027re overriding them. As soon as they are no longer in VE (and moved to skins instead per bug 60542), we can remove the !importants and make them more generic if we want. Currently, though I have no idea what the VE team is planning to do with figures (or why they were implemented in the first place), so it seems safer to copy their selectors. Let me know if you disagree.",
+      "parentUuid": "6ef7ef47_eb904f9a",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_2bc51791",
         "filename": "less/modules/toggle.less",
         "patchSetId": 1
@@ -132,6 +258,24 @@
       "writtenOn": "2014-01-29T22:20:45Z",
       "side": 1,
       "message": "Changing stable and causing CSS regressions! - don\u0027t scare me!",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_6bbd5fd1",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "?",
+      "parentUuid": "6ef7ef47_2bc51791",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_8bb8abe3",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "Needed to override the default state set in common/typography.less (which assumes the sections are expanded (as in VE and no JS).\n\nI admit this set-up is a bit backwards, but that\u0027s because we don\u0027t use a \"closedSection\" class for the closed state. If we did, we could move this there. In the meantime, this works just as well since it is restricted to .client-js and VE doesn\u0027t use .section_heading. So effectively, whenever the sections are closed, the bottom-margin is also collapsed. I could refactor toggle.js to implement a closedSection class, but that seems like a better thing to do in a different changeset.",
+      "parentUuid": "6ef7ef47_2bde3771",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_cb70f3a5",
         "filename": "less/tablet/hacks.less",
         "patchSetId": 1
@@ -166,6 +328,24 @@
       "writtenOn": "2014-01-29T22:18:56Z",
       "side": 1,
       "message": "doop",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_2bcf5784",
+        "filename": "less/tablet/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-29T22:51:59Z",
+      "side": 1,
+      "message": "? The comment was moved below.",
+      "parentUuid": "6ef7ef47_cb70f3a5",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
