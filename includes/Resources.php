@@ -266,7 +266,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/EditorOverlayBase.js',
 		),
 		'styles' => array(
-			'less/modules/editor.less',
+			'less/modules/editor/editor.less',
 		),
 		'templates' => array(
 			'modules/editor/EditorOverlayBase',
@@ -308,6 +308,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/VisualEditorOverlay.js',
+		),
+		'styles' => array(
+			'less/modules/editor/VisualEditorOverlay.less',
 		),
 		'templates' => array(
 			'modules/editor/VisualEditorOverlay',

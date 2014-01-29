@@ -14,14 +14,13 @@ FIXME: Review all of these hacks to see if they still apply.
 
 /* Tablet specific styling */
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	/* Revert to showing nav boxes on tablet/desktop */
-	#content {
+
+	.content {
+		// Revert to showing nav boxes on tablet/desktop
 		.navbox, .vertical-navbox {
 			display: inherit;
 		}
-	}
 
-	.content {
 		// Infobox styling
 		.infobox {
 			margin-left: 1em !important;
