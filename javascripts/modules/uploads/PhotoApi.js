@@ -80,6 +80,7 @@
 
 	PhotoApi = Api.extend( {
 		useCentralAuthToken: mw.config.get( 'wgMFUseCentralAuthToken' ),
+
 		updatePage: function( options, callback ) {
 			var self = this;
 			self.getToken().done( function( token ) {
@@ -162,10 +163,19 @@
 					processData: false
 				} ).done( function( data ) {
 					var descriptionUrl = '',
-						warnings = data.upload ? data.upload.warnings : false;
+						warnings = data.upload ? data.upload.warnings : false,
+						err = '';
 					if ( !data || !data.upload ) {
 						// error uploading image
-						result.reject( data.error ? data.error.info : '' );
+						if ( data.error ) {
+							if ( data.error.code ) {
+								err += data.error.code;
+							}
+							if ( data.error.details && data.error.details[0] ) {
+								err += ' ' + data.error.details[0];
+							}
+						}
+						result.reject( err );
 						return;
 					}
 					options.fileName = data.upload.filename;
@@ -183,12 +193,28 @@
 						descriptionUrl = data.upload.imageinfo.descriptionurl;
 					}
 					if ( options.insertInPage ) {
+						// FIXME: refactor EditorApi and use it here instead
 						self.updatePage( options, function( data ) {
-							if ( !data || data.error ) {
-								// error updating page's wikitext
-								result.reject( data.error.info );
-							} else {
+							var code;
+
+							if ( data && data.edit && data.edit.result === 'Success' ) {
 								result.resolve( options.fileName, descriptionUrl );
+							} else if ( data && data.error ) {
+								// Edit API error
+								result.reject( data.error.code );
+							} else if ( data && data.edit && data.edit.captcha ) {
+								// CAPTCHAs
+								result.reject( 'captcha' );
+							} else if ( data && data.edit && data.edit.code ) {
+								code = data.edit.code;
+								// AbuseFilter
+								if ( /^abusefilter/.test( code ) ) {
+									result.reject( 'abusefilter' );
+								} else {
+									result.reject( code );
+								}
+							} else {
+								result.reject( 'unknown error' );
 							}
 						} );
 					} else {
