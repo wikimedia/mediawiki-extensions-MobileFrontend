@@ -52,6 +52,24 @@
       "revId": "37d11eda5a3f56b6cb8accd9a982a07fda7ca680",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_f42f0bf2",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-30T20:44:11Z",
+      "side": 0,
+      "message": "The problem is that section_heading doesn\u0027t exist in VE or without JS. The only selector that MediaWiki consistently provides for section headings is h tags, so we should be styling the h tags like every other skin, IMO, not a custom class that only gets created by JS.",
+      "parentUuid": "6ef7ef47_8b5e6b7a",
+      "revId": "37d11eda5a3f56b6cb8accd9a982a07fda7ca680",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

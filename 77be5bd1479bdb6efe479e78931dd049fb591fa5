@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_9463273b",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-30T20:44:11Z",
+      "side": 1,
+      "message": "OK, I\u0027ll change to .mw-mf-overlay-header instead. I was reluctant to do that since I figured there must be some reason why it was assigned to h3s in the first place (which seemed pretty weird). I\u0027ll check to make sure this doesn\u0027t inadvertently affect other elements.",
+      "parentUuid": "6ef7ef47_4b71830a",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_6b855f5a",
         "filename": "less/common/commonNew.less",
         "patchSetId": 1
@@ -143,6 +161,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_f4ea6b72",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-30T20:44:11Z",
+      "side": 1,
+      "message": "I\u0027m in discussions with the VE team about it, although I haven\u0027t gotten very far so far :P",
+      "parentUuid": "6ef7ef47_eb772ffc",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_4b9aa3be",
         "filename": "less/common/typography.less",
         "patchSetId": 1
@@ -190,6 +226,24 @@
       "side": 1,
       "message": "You\u0027ve not moved them though.... you\u0027ve changed the meaning as well.\n\nConfusingly section_headings can take other forms e.g. h1\nAlso they now work when JavaScript is disabled as well.",
       "parentUuid": "6ef7ef47_cbd7d327",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_547d9f16",
+        "filename": "less/common/typography.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-30T20:44:11Z",
+      "side": 1,
+      "message": "Yes, I had to change them since VE doesn\u0027t implement section_headings. And having it work when JavaScript is disabled is on purpose.",
+      "parentUuid": "6ef7ef47_d4388f9d",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -319,6 +373,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_14771737",
+        "filename": "less/modules/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-30T20:44:11Z",
+      "side": 1,
+      "message": "I agree, but that\u0027s all dependent on disabling VE\u0027s styles, which hasn\u0027t happened yet.",
+      "parentUuid": "6ef7ef47_94d32761",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_2bc51791",
         "filename": "less/modules/toggle.less",
         "patchSetId": 1
@@ -372,6 +444,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_34a9f378",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-30T20:44:11Z",
+      "side": 1,
+      "message": "Hmm, not sure how that\u0027s possible since h2s are supposed to have a bottom border now (see typography.less). Are those h1s instead of h2s? I\u0027ll look into it.",
+      "parentUuid": "6ef7ef47_3451f3dd",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_2bde3771",
         "filename": "less/modules/toggle.less",
         "patchSetId": 1
@@ -419,6 +509,24 @@
       "side": 1,
       "message": "Okay. I\u0027d suggest putting this in the Ve stylesheet or limiting this in scope to the VE editor since this highlights a known difference between mobile and desktop mode (that we should aim to solve at some point in the future)\n\ne.g. .visual-editor-overlay h2, .section_heading\n\nI don\u0027t think there is a need for a closedSection class since this problem is only hitting VE.",
       "parentUuid": "6ef7ef47_8bb8abe3",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_d41befd2",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-01-30T20:44:11Z",
+      "side": 1,
+      "message": "OK.",
+      "parentUuid": "6ef7ef47_d4064fd1",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
