@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_c091eafc",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 143
+      },
+      "writtenOn": "2014-01-30T19:31:49Z",
+      "side": 1,
+      "message": "Nice!\n\nMaybe the wiki page you link to should have a reverse link as well, so it\u0027s possible to find this setting?",
+      "revId": "f0b17e811914a8e4a430444b565b18bca9a4fa4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
