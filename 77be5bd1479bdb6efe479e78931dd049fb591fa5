@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_4b71830a",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-30T20:07:41Z",
+      "side": 1,
+      "message": "If this is the case simply .mw-mf-overlay-header should suffice - but let\u0027s check this has no knock on effects on existing behaviour.",
+      "parentUuid": "6ef7ef47_ab348747",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_6b855f5a",
         "filename": "less/common/commonNew.less",
         "patchSetId": 1
@@ -107,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_eb772ffc",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-30T20:07:41Z",
+      "side": 1,
+      "message": "So this is VE specific? That seems a bug with VE as it leads to inconsistent styling? If so let\u0027s raise it.\n\nThe comment could be clearer here.\ne.g.\n// Although .thumbcaption is usually inside .thumb this is different in VE (see bug X)",
+      "parentUuid": "6ef7ef47_cb28f334",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_4b9aa3be",
         "filename": "less/common/typography.less",
         "patchSetId": 1
@@ -136,6 +172,24 @@
       "side": 1,
       "message": "I\u0027m moving these from toggle.less, which is necessary for it to display correctly in VE (or without JS).",
       "parentUuid": "6ef7ef47_4b9aa3be",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_d4388f9d",
+        "filename": "less/common/typography.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-30T20:07:41Z",
+      "side": 1,
+      "message": "You\u0027ve not moved them though.... you\u0027ve changed the meaning as well.\n\nConfusingly section_headings can take other forms e.g. h1\nAlso they now work when JavaScript is disabled as well.",
+      "parentUuid": "6ef7ef47_cbd7d327",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -247,6 +301,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_94d32761",
+        "filename": "less/modules/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-30T20:07:41Z",
+      "side": 1,
+      "message": "Yet if we disable VE\u0027s styles we are free to use our own selectors. Otherwise I\u0027m concerned we might be inheriting overly specific css selectors.",
+      "parentUuid": "6ef7ef47_cbb233e4",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_2bc51791",
         "filename": "less/modules/toggle.less",
         "patchSetId": 1
@@ -276,6 +348,24 @@
       "side": 1,
       "message": "?",
       "parentUuid": "6ef7ef47_2bc51791",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_3451f3dd",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-30T20:07:41Z",
+      "side": 1,
+      "message": "Notice before and after on collapsed pages - the bottom border has now disappeared\nhttp://imgur.com/x27wRLt,zf0YSKK",
+      "parentUuid": "6ef7ef47_6bbd5fd1",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -317,6 +407,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_d4064fd1",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-30T20:07:41Z",
+      "side": 1,
+      "message": "Okay. I\u0027d suggest putting this in the Ve stylesheet or limiting this in scope to the VE editor since this highlights a known difference between mobile and desktop mode (that we should aim to solve at some point in the future)\n\ne.g. .visual-editor-overlay h2, .section_heading\n\nI don\u0027t think there is a need for a closedSection class since this problem is only hitting VE.",
+      "parentUuid": "6ef7ef47_8bb8abe3",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_cb70f3a5",
         "filename": "less/tablet/hacks.less",
         "patchSetId": 1
@@ -346,6 +454,24 @@
       "side": 1,
       "message": "? The comment was moved below.",
       "parentUuid": "6ef7ef47_cb70f3a5",
+      "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_4b58638c",
+        "filename": "less/tablet/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-30T20:07:41Z",
+      "side": 1,
+      "message": "Tab on this line. Whitespace issues.",
+      "parentUuid": "6ef7ef47_2bcf5784",
       "revId": "77be5bd1479bdb6efe479e78931dd049fb591fa5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

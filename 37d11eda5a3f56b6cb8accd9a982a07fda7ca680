@@ -34,6 +34,24 @@
       "revId": "37d11eda5a3f56b6cb8accd9a982a07fda7ca680",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_8b5e6b7a",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-30T20:07:41Z",
+      "side": 0,
+      "message": "... doesn\u0027t seem to be working in stable as it was before though.. section_heading can also be an h1 and in theory anything and a section_heading only gets added in JavaScript. Please don\u0027t change this.",
+      "parentUuid": "6ef7ef47_0bf5bbb5",
+      "revId": "37d11eda5a3f56b6cb8accd9a982a07fda7ca680",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
