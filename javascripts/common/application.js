@@ -338,7 +338,9 @@
 	 * @return {Boolean}
 	 */
 	function isWideScreen() {
-		return window.innerWidth > mw.config.get( 'wgMFDeviceWidthTablet' );
+		var val = mw.config.get( 'wgMFDeviceWidthTablet' );
+		// Check portrait and landscape mode to be consistent
+		return window.innerWidth > val || window.innerHeight > val;
 	}
 
 	/**
