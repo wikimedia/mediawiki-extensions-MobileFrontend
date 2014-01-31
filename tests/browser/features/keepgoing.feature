@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
+
 Feature: Encourage new users to Keep Going
 
   Scenario: I see a KeepGoing message after completing my edit

@@ -22,7 +22,7 @@ end
 
 Given(/^I register a new account with a random username$/) do
   username = 'NewUser' + Time.now.to_i.to_s
-  pwd = 'test'
+  pwd = ENV["MEDIAWIKI_PASSWORD"]
   visit(CreateAccountPage) do |page|
     # undo auto complete
     page.username_field_element.when_present.send_keys(username)
