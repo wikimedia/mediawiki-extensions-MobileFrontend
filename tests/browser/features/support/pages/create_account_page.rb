@@ -7,4 +7,5 @@ include PageObject
   button(:sign_up, id: "wpCreateaccount")
   div(:error_message, class: "alert error")
   text_field(:confirmation_field, id: "wpCaptchaWord")
+  div(:refresh_captcha, id:"mf-captcha-reload-container")
 end

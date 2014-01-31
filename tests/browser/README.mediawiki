@@ -9,6 +9,8 @@ These include:
 an edit count of greater than 0
 * Ensure the Main Page has languages enabled
 * Ensure there is a Barack Obama article with the content
+* Ensure you have [//www.mediawiki.org/wiki/Extension:ConfirmEdit Extension:ConfirmEdit] installed
+** and setup with FancyCaptcha
 <pre>
   == Presidential_campaigns ==
   Test

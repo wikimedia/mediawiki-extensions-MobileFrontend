@@ -1,5 +1,10 @@
 @en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
 Feature: Create failure messages
+  @wip
+  Scenario: Can refresh captcha
+    Given that I am on the User login page
+      And I click Create Account
+    Then I see the refresh captcha icon
 
   Scenario: Create account password mismatch message
     Given that I am on the User login page
