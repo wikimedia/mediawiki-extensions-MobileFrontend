@@ -117,24 +117,21 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		$captchaSrc = SpecialPage::getTitleFor( 'Captcha', 'image' )->getLocalUrl( array( 'wpCaptchaId' => $captchaId ) );
 
 		// add reload if fancyCaptcha and has reload
-		if ( MobileContext::singleton()->isBetaGroupMember() ) {
-			if ( stristr( $header, 'fancycaptcha-reload' ) ) {
-				$output = $this->getSkin()->getOutput();
-				$output->addModuleStyles( 'ext.confirmEdit.fancyCaptcha.styles' );
-				$output->addModules( 'ext.confirmEdit.fancyCaptchaMobile' );
-				$captchaReload = Html::element( 'br' ) .
-					Html::openElement( 'div', array( 'id' => 'mf-captcha-reload-container' ) ) .
-					Html::element(
-						'span',
-						array(
-							'class' => 'confirmedit-captcha-reload fancycaptcha-reload'
-						),
-						wfMessage( 'fancycaptcha-reload-text' )->text()
-					) .
-					Html::closeElement( 'div' ); #mf-captcha-reload-container
-			}
-		}
-		else {
+		if ( stristr( $header, 'fancycaptcha-reload' ) ) {
+			$output = $this->getSkin()->getOutput();
+			$output->addModuleStyles( 'ext.confirmEdit.fancyCaptcha.styles' );
+			$output->addModules( 'ext.confirmEdit.fancyCaptchaMobile' );
+			$captchaReload = Html::element( 'br' ) .
+				Html::openElement( 'div', array( 'id' => 'mf-captcha-reload-container' ) ) .
+				Html::element(
+					'span',
+					array(
+						'class' => 'confirmedit-captcha-reload fancycaptcha-reload'
+					),
+					wfMessage( 'fancycaptcha-reload-text' )->text()
+				) .
+				Html::closeElement( 'div' ); #mf-captcha-reload-container
+		} else {
 			$captchaReload = '';
 		}
 
