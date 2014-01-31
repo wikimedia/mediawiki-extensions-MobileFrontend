@@ -382,6 +382,10 @@ $wgMFEnableXAnalyticsLogging = false;
 
 /**
  * Whether or not anonymous (not logged in) users should be able to edit.
+ * Note this is highly experimental and comes without any warranty and may introduce bugs
+ * until anonymous editing experience is addressed in this extension. Anonymous editing
+ * on mobile is still a big unknown. See bug 53069.
+ * Thoughts welcomed on https://www.mediawiki.org/wiki/Mobile_wikitext_editing#Anonymous_editing
  */
 $wgMFAnonymousEditing = false;
 
