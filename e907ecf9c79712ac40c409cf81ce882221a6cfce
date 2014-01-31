@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_e153c218",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2014-01-31T23:18:01Z",
+      "side": 1,
+      "message": "Should this be MEDIAWIKI_PASSWORD?",
+      "revId": "e907ecf9c79712ac40c409cf81ce882221a6cfce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
