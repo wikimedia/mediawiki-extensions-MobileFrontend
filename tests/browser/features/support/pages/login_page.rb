@@ -15,6 +15,8 @@ class LoginPage
   a(:login_wl, class: "button")
   button(:signup_submit, id:"wpCreateaccount")
   a(:create_account_link, text: "Create account")
+  div(:message_box, class:"headmsg")
+  div(:warning_box, class:"alert warning")
 
   def logged_in_as_element
     @browser.div(id: "mw-content-text").p.b
