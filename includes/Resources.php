@@ -223,6 +223,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/lastEdited/lastEditedBeta.js',
+			'javascripts/common/matchMedia.js',
 		),
 		'messages' => array(
 			// LastEditedBeta.js

@@ -24,7 +24,37 @@ class SkinMinervaBeta extends SkinMinerva {
 		# Replace page content before DOMParse to make sure images are scrubbed
 		# and Zero transformations are applied.
 		$this->handleNewPages( $out );
+		$this->prepareResponsiveStyles();
 		parent::outputPage( $out );
+	}
+
+	/**
+	 * Prepares head items that add conditionally loaded responsive styles.
+	 * FIXME: Review this approach thoroughly before pushing to stable.
+	 * Loosely based on:
+	 *   http://christianheilmann.com/2012/12/19/conditional-loading-of-resources-with-mediaqueries/
+	 */
+	protected function prepareResponsiveStyles() {
+		global $wgMFDeviceWidthTablet;
+
+		$url = ResourceLoader::makeLoaderURL(
+			array( 'tablet.styles' ),
+			$this->getLanguage()->getCode(),
+			$this->getSkinName(),
+			null,
+			null,
+			ResourceLoader::inDebugMode(),
+			'styles'
+		);
+		$attrs = array(
+			'data-href' => $url,
+			'data-media' => '(min-width: ' . $wgMFDeviceWidthTablet .'px)'
+		);
+		$out = $this->getOutput();
+		$out->addHeadItem( 'responsiveStyles', Html::element( 'style', $attrs ) );
+		$out->addHeadItem( 'responsiveScript', Html::inlineScript(
+			"jQuery.matchMedia();"
+		) );
 	}
 
 	protected function getSearchPlaceHolderText() {
