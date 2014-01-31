@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_435f1f45",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-31T18:37:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ef7ef47_8a21bc9c",
+      "revId": "034d9bc09da598b5a7c21bea8d7e21fd413a0f6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_0a2dac8b",
         "filename": "javascripts/common/PageApi.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2014-01-31T00:43:04Z",
       "side": 1,
       "message": "Why is this needed? Can you comment this line?",
+      "revId": "034d9bc09da598b5a7c21bea8d7e21fd413a0f6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_e3350bf5",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-31T18:37:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ef7ef47_0a2dac8b",
       "revId": "034d9bc09da598b5a7c21bea8d7e21fd413a0f6b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_83440770",
+        "filename": "javascripts/common/user.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-31T18:37:55Z",
+      "side": 1,
+      "message": "Have added note",
+      "parentUuid": "6ef7ef47_aa535819",
+      "revId": "034d9bc09da598b5a7c21bea8d7e21fd413a0f6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_2a474852",
         "filename": "tests/browser/features/step_definitions/editor_steps.rb",
         "patchSetId": 4
@@ -64,6 +118,24 @@
       "writtenOn": "2014-01-31T00:43:04Z",
       "side": 1,
       "message": "https://github.com/cheezy/page-object/wiki/Ajax-Calls\n\non(ArticlePage).wait_until(5, \"Edit button not enabled\") do\n  on(ArticlePage).edit_button_element.when_present.class_name.should match \"enabled\"\nend",
+      "revId": "034d9bc09da598b5a7c21bea8d7e21fd413a0f6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_2333f30b",
+        "filename": "tests/browser/features/step_definitions/editor_steps.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-01-31T18:37:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ef7ef47_2a474852",
       "revId": "034d9bc09da598b5a7c21bea8d7e21fd413a0f6b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
