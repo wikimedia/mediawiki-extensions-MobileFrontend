@@ -13,7 +13,14 @@
 			this.hasChanged = false;
 			this.$spinner = self.$( '.spinner' );
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
-			this.target = new ve.init.mw.MobileViewTarget( this.$( '.surface' ), options.sectionId );
+		},
+		show: function() {
+			this._super();
+			// FIXME: MobileViewTarget does not accept a second argument
+			// FIXME: we have to initialize MobileViewTarget after this.$el
+			// is attached to DOM, maybe we should attach it earlier and hide
+			// overlays in a different way?
+			this.target = new ve.init.mw.MobileViewTarget( this.$( '.surface' ), this.options.sectionId );
 			this.target.activating = true;
 			this.target.load();
 			this.target.connect( this, {
