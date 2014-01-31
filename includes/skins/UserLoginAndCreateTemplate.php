@@ -39,7 +39,7 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 
 		// Render logged-in notice (beta/alpha)
-		if ( MobileContext::singleton()->isBetaGroupMember() && $this->data['loggedin'] ) {
+		if ( $this->data['loggedin'] ) {
 			$msgBox .= Html::element( 'div', array( 'class' => 'alert warning' ),
 				wfMessage( 'userlogin-loggedin' )->params(
 					$this->data['loggedinuser'] )->parse() );
@@ -157,14 +157,16 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 	 *
 	 */
 	protected function renderGuiderMessage() {
-		$msgs = $this->getGuiderMessage();
-		if ( $msgs[0] ) {
-			echo Html::openElement( 'div', array( 'class' => 'headmsg' ) );
-			echo Html::element( 'strong', array(), $msgs[0] );
-			if ( $msgs[1] ) {
-				echo Html::element( 'div', array(), $msgs[1] );
+		if ( !$this->data['loggedin'] ) {
+			$msgs = $this->getGuiderMessage();
+			if ( $msgs[0] ) {
+				echo Html::openElement( 'div', array( 'class' => 'headmsg' ) );
+				echo Html::element( 'strong', array(), $msgs[0] );
+				if ( $msgs[1] ) {
+					echo Html::element( 'div', array(), $msgs[1] );
+				}
+				echo Html::closeElement( 'div' );
 			}
-			echo Html::closeElement( 'div' );
 		}
 	}
 
