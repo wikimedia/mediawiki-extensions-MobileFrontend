@@ -388,6 +388,9 @@ $messages['en'] = array (
 	// Main Page
 	'mobile-frontend-mainpage-cta-prompt' => 'This page needs your help!',
 	'mobile-frontend-mainpage-cta-button' => 'Improve this page',
+	// Preferences for toggling mobile skins
+	'beta-feature-minerva' => 'Enable mobile skin (Minerva) on desktop',
+	'beta-feature-minerva-description' => 'Make the skin used on mobile devices a selectable desktop skin under the appearance preferences tab.',
 );
 
 /** Message documentation (Message documentation)
@@ -1082,6 +1085,8 @@ Followed by the button {{msg-mw|Mobile-frontend-mainpage-cta-button}}.',
 	'mobile-frontend-mainpage-cta-button' => 'Used as label for button.
 
 Preceded by {{msg-mw|Mobile-frontend-mainpage-cta-prompt}}.',
+	'beta-feature-minerva' => 'Name of the Minerva beta feature.',
+	'beta-feature-minerva-description' => 'Describe the Minerva beta feature - it makes a new skin available.',
 );
 
 /** Achinese (Acèh)
