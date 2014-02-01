@@ -16,6 +16,24 @@
       "revId": "a3519b8e32e497ed316648d89e89a8806f61451e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_a1437ab5",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2014-02-01T01:11:30Z",
+      "side": 1,
+      "message": "Maybe try the htmlencoding of that unicode character - \u0026#x2318; not sure if it will work but worth a shot.",
+      "parentUuid": "6ef7ef47_21b3eae9",
+      "revId": "a3519b8e32e497ed316648d89e89a8806f61451e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
