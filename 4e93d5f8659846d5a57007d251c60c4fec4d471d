@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_e41070af",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-02-01T14:47:07Z",
+      "side": 1,
+      "message": "Is it possible to use and {{int:key}} instead of \"preferences\" here?",
+      "revId": "4e93d5f8659846d5a57007d251c60c4fec4d471d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
