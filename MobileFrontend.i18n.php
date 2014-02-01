@@ -1085,8 +1085,15 @@ Followed by the button {{msg-mw|Mobile-frontend-mainpage-cta-button}}.',
 	'mobile-frontend-mainpage-cta-button' => 'Used as label for button.
 
 Preceded by {{msg-mw|Mobile-frontend-mainpage-cta-prompt}}.',
-	'beta-feature-minerva' => 'Name of the Minerva beta feature.',
-	'beta-feature-minerva-description' => 'Describe the Minerva beta feature - it makes a new skin available.',
+	'beta-feature-minerva' => 'Name of the Minerva beta feature.
+
+Used as checkbox label.
+
+See also:
+* {{msg-mw|Beta-feature-minerva-description}}',
+	'beta-feature-minerva-description' => 'Describe the Minerva beta feature - it makes a new skin available.
+
+This description is for the label {{msg-mw|Beta-feature-minerva}}.',
 );
 
 /** Achinese (Acèh)
@@ -3353,6 +3360,7 @@ $messages['co'] = array(
  * @author Jezevec
  * @author Michaelbrabec
  * @author Mormegil
+ * @author Paxt
  * @author Reaperman
  * @author Vks
  */
@@ -3415,7 +3423,6 @@ $messages['cs'] = array(
 	'mobile-frontend-language-article-heading' => 'Přečíst v jiném jazyce',
 	'mobile-frontend-language-header' => 'Tato stránka je k dispozici v $1 {{PLURAL:$1|jazyce|jazycích}}',
 	'mobile-frontend-language-variant-header' => 'Vyberte variantu jazyka {{#language:{{CONTENTLANG}}}}',
-	'mobile-frontend-language-footer' => 'Poznámka: Tato stránka nemusí být ve vašem preferovaném jazyce. Pokud chcete, můžete se podívat, jaké další jazyky {{SITENAME}} podporuje.',
 	'mobile-frontend-language-site-choose' => 'Hledání jazyka',
 	'mobile-frontend-username' => 'Uživatelské jméno:',
 	'mobile-frontend-password' => 'Heslo:',
@@ -3443,7 +3450,6 @@ $messages['cs'] = array(
 	'mobile-frontend-last-modified-with-user-months' => 'Stránku [$4 naposledy {{GENDER:$1|upravil|upravila}}] {{PLURAL:$5|[$6 $2]|0=anonymní uživatel}} před $3 {{PLURAL:$3|měsícem|měsíci}}',
 	'mobile-frontend-last-modified-with-user-years' => 'Stránku [$4 naposledy {{GENDER:$1|upravil|upravila}}] {{PLURAL:$5|[$6 $2]|0=anonymní uživatel}} před $3 {{PLURAL:$3|rokem|lety}}',
 	'mobile-frontend-last-modified-with-user-just-now' => 'Stránku [$3 před okamžikem {{GENDER:$1|upravil|upravila}}] {{PLURAL:$4|[$5 $2]|0=anonymní uživatel}}',
-	'mobile-frontend-learn-more' => 'Více informací',
 	'mobile-frontend-view-source' => 'Zobrazit zdrojový kód',
 	'mobile-frontend-account-create-submit' => 'Registrace',
 	'mobile-frontend-password-confirm-placeholder' => 'Potvrďte heslo',
@@ -3455,7 +3461,6 @@ $messages['cs'] = array(
 	'mobile-frontend-placeholder' => 'Hledání na {{grammar:6sg|{{SITENAME}}}}',
 	'mobile-frontend-placeholder-beta' => 'Hledání ve {{grammar:6sg|{{SITENAME}}}} (beta)',
 	'mobile-frontend-placeholder-alpha' => 'Hledání ve {{grammar:6sg|{{SITENAME}}}} (experimentální)',
-	'mobile-frontend-search-help' => 'Nahoru napište hledaný výraz, zde se objeví názvy odpovídajících stránek.',
 	'mobile-frontend-dismiss-notification' => 'zavřít toto oznámení',
 	'mobile-frontend-clear-search' => 'Smazat',
 	'mobile-frontend-search-content' => 'Hledat v obsahu stránek',
@@ -3466,7 +3471,6 @@ $messages['cs'] = array(
 	'mobile-frontend-footer-license' => 'Text je dostupný pod [//cs.m.wikipedia.org/wiki/Wikipedie:Text_licence_Creative_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC BY-SA 3.0]; případně za dalších podmínek.',
 	'mobile-frontend-copyright' => 'Text je dostupný pod $1, pokud není uvedeno jinak.',
 	'mobile-frontend-footer-contact' => 'Kontakt',
-	'mobile-frontend-search-noresults' => 'Vašemu hledání neodpovídají žádné názvy stránek. Změňte zadání nebo stiskněte tlačítko hledání pro hledání ve stránkách.',
 	'mobile-frontend-terms-text' => 'Podmínky užití',
 	'mobile-frontend-main-menu-button-tooltip' => 'Otevřít hlavní menu',
 	'mobile-frontend-main-menu-page-title' => 'Navigace po webu',
@@ -3509,7 +3513,7 @@ $messages['cs'] = array(
 	'mobile-frontend-donate-image-nouploads' => 'Žádné načtené soubory.',
 	'mobile-frontend-donate-image-login' => 'Abyste mohli vidět své soubory, musíte se přihlásit.', # Fuzzy
 	'mobile-frontend-photo-upload-disabled' => 'Na této stránce není potřeba obrázek.',
-	'mobile-frontend-photo-upload-anon' => 'Abyste mohli přidat na tuto stránku obrázek, musíte být přihlášen(a).', # Fuzzy
+	'mobile-frontend-photo-upload-anon' => 'Abyste mohli přidat na tuto stránku obrázek, musíte být přihlášeni.',
 	'mobile-frontend-photo-upload-protected' => 'Nemáte oprávnění přidat obrázek na tuto stránku.',
 	'mobile-frontend-photo-upload-unavailable' => 'Váš prohlížeč nepodporuje načítání obrázků.',
 	'mobile-frontend-photo-upload-generic' => 'Přispět obrázkem',
@@ -3526,6 +3530,7 @@ $messages['cs'] = array(
 	'mobile-frontend-watchlist-cta' => 'Pokud chcete sledovat tuto stránku, musíte se přihlásit nebo zaregistrovat.', # Fuzzy
 	'mobile-frontend-watchlist-cta-button-login' => 'Přihlásit se',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Zaregistrovat se',
+	'mobile-frontend-watchlist-login-action' => 'Přihlaste se a uvidíte to.',
 	'mobile-frontend-watch-login' => 'Přidat stránku $1 mezi sledované.',
 	'mobile-frontend-watchlist-a-z' => 'Seznam',
 	'mobile-frontend-watchlist-feed' => 'Změněné',
@@ -3552,17 +3557,9 @@ $messages['cs'] = array(
 	'mobile-frontend-saving-exit-page' => 'Váš příspěvek se stále ukládá. Pokud odejdete, budou vaše příspěvky ztraceny. Určitě chcete odejít?',
 	'mobile-frontend-photo-upload' => 'Přidejte na tuto stránku obrázek',
 	'mobile-frontend-photo-caption-placeholder' => 'Popište tento obrázek (povinné)',
-	'mobile-frontend-image-loading' => 'Načítá se obrázek',
-	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Toto není osobní obrázek',
-	'mobile-frontend-photo-nag-learn-more-1' => "'''Ano!''' Vámi pořízené fotografie míst, objektů a událostí.",
-	'mobile-frontend-photo-nag-learn-more-2' => "'''Ano!''' Fotografie, které mohou pomoci ilustrovat a obohatit stránky {{grammar:2sg|{{SITENAME}}}}.",
-	'mobile-frontend-photo-nag-learn-more-3' => "'''Ne.''' Fotografie filmových plakátů, přebalů knih či dalších materiálů chráněných autorským právem. Takové budou smazány.",
-	'mobile-frontend-image-uploading-long' => 'Obrázek se stále načítá! Děkujeme za trpělivost.',
-	'mobile-frontend-image-uploading-cancel' => '<a href="#">Zrušit</a>, pokud to trvá příliš dlouho.',
 	'mobile-frontend-photo-upload-error' => 'Chyba, zkuste to znovu.',
 	'mobile-frontend-photo-upload-error-file-type' => 'Načítejte prosím pouze obrázky.',
 	'mobile-frontend-photo-upload-success-article' => 'Úspěch! Váš obrázek se nyní zobrazuje na této stránce.',
-	'mobile-frontend-photo-cancel' => 'Storno',
 	'mobile-frontend-photo-upload-user-count' => '<span>$1</span> {{PLURAL:$1|načtený soubor|načtené soubory|načtených souborů}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ načtených souborů',
 	'mobile-frontend-editor-unavailable-header' => 'Editor není dostupný',
@@ -3585,7 +3582,6 @@ $messages['cs'] = array(
 	'mobile-frontend-editor-error' => 'Chyba, editace nebyla uložena.',
 	'mobile-frontend-editor-error-conflict' => 'Chyba, jiný uživatel mezitím tuto stránku upravil.',
 	'mobile-frontend-editor-error-loading' => 'Chyba, nelze načíst sekci.',
-	'mobile-frontend-editor-preview-header' => 'Náhled',
 	'mobile-frontend-editor-error-preview' => 'Chyba, při načítání náhledu se stalo něco neočekávaného. Zavřete a zkuste to znovu.',
 	'mobile-frontend-editor-tutorial-summary' => 'Nebojte se formátovacích značek. Zkuste vylepšit stránku $1.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Začněte editovat',
@@ -3633,6 +3629,8 @@ $messages['cs'] = array(
 	'beta-feature-geonotahack-description' => 'Objevte stránky, které jsou geograficky blízké stránce, kterou si právě čtete.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Tato stránka potřebuje vaši pomoc!',
 	'mobile-frontend-mainpage-cta-button' => 'Vylepšit tuto stránku',
+	'beta-feature-minerva' => 'Zapnutí mobilního vzhledu (Minerva) na desktopu',
+	'beta-feature-minerva-description' => 'Přidá do nabídky vzhledů v uživatelském nastavení na desktopu i vzhled používaný na mobilních zařízeních.',
 );
 
 /** Church Slavic (словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
@@ -4665,11 +4663,13 @@ $messages['de'] = array(
 	'mobile-frontend-profile-footer-days' => 'Beigetreten vor {{PLURAL:$2|einem Tag|$2 Tagen}} mit [[Special:Contributions/$1|{{PLURAL:$3|einer Bearbeitung|$3 Bearbeitungen}}]] und [[Special:Uploads/$1|{{PLURAL:$4|einer hochgeladenen Datei|$4 hochgeladenen Dateien}}]].',
 	'mobile-frontend-profile-footer-months' => 'Beigetreten vor über {{PLURAL:$2|einem Monat|$2 Monaten}} mit [[Special:Contributions/$1|{{PLURAL:$3|einer Bearbeitung|$3 Bearbeitungen}}]] und [[Special:Uploads/$1|{{PLURAL:$4|einer hochgeladenen Datei|$4 hochgeladenen Dateien}}]].',
 	'mobile-frontend-profile-footer-years' => 'Beigetreten vor über {{PLURAL:$2|einem Jahr|$2 Jahren}} mit [[Special:Contributions/$1|{{PLURAL:$3|einer Bearbeitung|$3 Bearbeitungen}}]] und [[Special:Uploads/$1|{{PLURAL:$4|einer hochgeladenen Datei|$4 hochgeladenen Dateien}}]].',
-	'mobile-frontend-geonotahack' => 'In der Nähe dieser Seite',
-	'beta-feature-geonotahack' => 'In der Nähe dieser Seite',
+	'mobile-frontend-geonotahack' => 'In der Nähe',
+	'beta-feature-geonotahack' => 'In der Nähe',
 	'beta-feature-geonotahack-description' => 'Entdecke Seiten mit geografischer Nachbarschaft zur aktuell gelesenen Inhaltsseite.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Diese Seite benötigt deine Hilfe!',
 	'mobile-frontend-mainpage-cta-button' => 'Diese Seite verbessern',
+	'beta-feature-minerva' => 'Die mobile Benutzeroberfläche „Minerva“ auf dem Desktop aktivieren',
+	'beta-feature-minerva-description' => 'Macht aus der auf mobilen Geräten verwendeten Benutzeroberfläche unter der erscheinenden Einstellungs-Registerkarte eine auswählbare Desktop-Benutzeroberfläche.',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -4760,7 +4760,7 @@ $messages['diq'] = array(
 	'mobile-frontend-placeholder' => '{{SITENAME}} de cıgeyre',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} de cı geyre (Beta)',
 	'mobile-frontend-dismiss-notification' => 'Eno xeberdayışê wezifayo',
-	'mobile-frontend-clear-search' => 'Pak ke',
+	'mobile-frontend-clear-search' => 'Bestere',
 	'mobile-frontend-search-content' => 'Na per d cı geyr',
 	'mobile-frontend-privacy-link-text' => 'Nımıtış',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
@@ -4832,7 +4832,7 @@ $messages['diq'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ barkerdışi',
 	'mobile-frontend-editor-edit' => 'Bıvurne',
 	'mobile-frontend-editor-continue' => 'Dewam k',
-	'mobile-frontend-editor-save' => 'Star ke',
+	'mobile-frontend-editor-save' => 'Qeyd ke',
 	'mobile-frontend-editor-cancel' => 'Bıterkn',
 	'mobile-frontend-editor-tutorial-confirm' => 'Dest bıke vırnayış',
 	'mobile-frontend-editor-editing-page' => '<strong>Sero gureyayış</strong><span>$1</span>',
@@ -5658,6 +5658,7 @@ $messages['et'] = array(
 	'mobile-frontend-on' => 'SEES',
 	'mobile-frontend-featured-article' => 'Täna esile tõstetud sisu',
 	'mobile-frontend-news-items' => 'Päevakajaline',
+	'mobile-frontend-languages-header' => 'Keeled',
 	'mobile-frontend-language-article-heading' => 'Loe teises keeles',
 	'mobile-frontend-language-header' => 'See lehekülg on saadaval {{PLURAL:$1|ühes|$1}} keeles.',
 	'mobile-frontend-language-site-choose' => 'Otsi keelt',
@@ -6204,7 +6205,7 @@ $messages['fa'] = array(
 	'mobile-frontend-profile-activity-heading' => 'فعالیت اخیر',
 	'mobile-frontend-profile-userpage-link' => 'نمایش صفحه کاربری.',
 	'mobile-frontend-requires-optin' => 'این صفحه موجود نخواهد بود مگر اینکه شما واردشده حالت آزمایشی ما باشید. [[Special:MobileOptions|صفحهٔ تنظیمات]] را برای واردشدن مشاهده کنید.',
-	'mobile-frontend-profile-last-thank' => '{{GENDER:$2|تشکر شده}} {{GENDER:$1|توسط}} [[Special:صفحهٔ کاربر/$1|$1]]', # Fuzzy
+	'mobile-frontend-profile-last-thank' => '{{GENDER:$2|تشکر شده}} {{GENDER:$1|توسط}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|ویرایش کرد}} صفحهٔ [[:$1]], {{PLURAL:$2|دیروز|$2 روز پیش |0=صبح امروز}}.',
 	'mobile-frontend-profile-footer-days' => 'عضو شد {{PLURAL:$2|۱ روز|$2 روز}} پیش با  [[Special:Contributions/$1|{{PLURAL:$3|ویرایش|$3 ویرایش}}]] و [[Special:Uploads/$1|{{PLURAL:$4|۱ بارگذاری|$4 بارگذاری|500=500+ بارگذاری}}]].',
 	'mobile-frontend-profile-footer-months' => 'عضو شد {{PLURAL:$2|۱ ماه|$2 ماه}} پیش با  [[Special:Contributions/$1|{{PLURAL:$3|ویرایش|$3 ویرایش}}]] و [[Special:Uploads/$1|{{PLURAL:$4|۱ بارگذاری|$4 بارگذاری|500=500+ بارگذاری}}]].',
@@ -7597,7 +7598,7 @@ $messages['gl'] = array(
 	'mobile-frontend-editor-save' => 'Gardar',
 	'mobile-frontend-editor-cancel' => 'Cancelar',
 	'mobile-frontend-editor-keep-editing' => 'Seguir editando',
-	'mobile-frontend-editor-license' => 'Ao premer no botón "Gardar", acepta os nosos [//wikimediafoundation.org/wiki/Terms_of_Use/gl termos de uso] e acepta liberar o seu texto baixo a [//creativecommons.org/licenses/by-sa/3.0/deed.gl licenza CC-BY-SA 3.0] e a [//gl.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_de_documentación_libre_de_GNU licenza GFDL].', # Fuzzy
+	'mobile-frontend-editor-license' => 'Ao gardar os cambios, acepta os nosos [//wikimediafoundation.org/wiki/Terms_of_Use/gl termos de uso] e acepta liberar o seu texto baixo a [//creativecommons.org/licenses/by-sa/3.0/deed.gl licenza CC BY-SA 3.0] e a [//gl.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_de_documentación_libre_de_GNU licenza GFDL].',
 	'mobile-frontend-editor-placeholder' => 'Esta sección está baleira. Sexa o primeiro en expandila!',
 	'mobile-frontend-editor-summary-placeholder' => 'Díganos o que modificou (opcional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Está seguro de querer deixar a edición?',
@@ -8132,6 +8133,8 @@ $messages['he'] = array(
 	'beta-feature-geonotahack-description' => 'זה מאפשר לך לראות דפים שקרובים גאוגרפית לדפים שקראת.',
 	'mobile-frontend-mainpage-cta-prompt' => 'הדף הזה זקוק לעזרתך!',
 	'mobile-frontend-mainpage-cta-button' => 'שיפור הדף הזה',
+	'beta-feature-minerva' => 'הפעלת העיצוב למכשירים ניידים (מינרווה) במחשב',
+	'beta-feature-minerva-description' => 'הוספת האפשרות לבחור בעיצוב שמשמש למכשירים ניידים בתור אחד העיצובים בלשונית "מראה" בהעדפות.',
 );
 
 /** Hindi (हिन्दी)
@@ -8140,6 +8143,7 @@ $messages['he'] = array(
  * @author Faisalaziz4ever
  * @author Karthi.dr
  * @author Siddhartha Ghai
+ * @author Venky2834
  */
 $messages['hi'] = array(
 	'mobile-frontend-desc' => 'मोबाइल फ़्रंटएंड',
@@ -8154,7 +8158,6 @@ $messages['hi'] = array(
 	'mobile-frontend-save-settings' => 'सेटिंग्स सहेजें', # Fuzzy
 	'mobile-frontend-random-button' => 'बेतरतीब',
 	'mobile-frontend-back-to-top-of-section' => 'पिछला अनुभाग',
-	'mobile-frontend-close-section' => 'इस भाग को बंद करें',
 	'mobile-frontend-regular-site' => 'डेस्कटॉप दृश्य',
 	'mobile-frontend-wml-continue' => 'जारी रखें ...',
 	'mobile-frontend-wml-back' => 'वापस ...',
@@ -8176,6 +8179,8 @@ $messages['hi'] = array(
 	'mobile-frontend-copyright' => 'इस भाषा के लिए मानक प्रकाशनाधिकार।', # Fuzzy
 	'mobile-frontend-main-menu-account-create' => 'खाता बनाएँ',
 	'mobile-frontend-page-menu-history' => 'इतिहास',
+	'mobile-frontend-watchlist-cta-button-login' => 'लॉग इन करें',
+	'mobile-frontend-watchlist-login-action' => 'यह देखने के लिए लॉग इन करें।',
 	'mobile-frontend-watchlist-filter-all' => 'सभी',
 	'mobile-frontend-watchlist-filter-articles' => 'लेख', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'वार्ता',
@@ -8727,6 +8732,8 @@ $messages['ia'] = array(
 	'mobile-frontend-logged-out' => 'Non identificate',
 	'mobile-frontend-logged-in-homepage-notification' => 'Benvenite, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Authenticate como $1.',
+	'mobile-frontend-generic-404-title' => 'Error - Pagina non trovate',
+	'mobile-frontend-generic-404-desc' => 'Le pagina que tu cerca non pote esser trovate.',
 	'mobile-frontend-sign-up-heading' => 'Crear conto',
 	'mobile-frontend-sign-in-heading' => 'Aperir session',
 	'mobile-frontend-sign-in-why' => 'Si tu ha un conto de {{SITENAME}}, tu pote aperir session hic infra.',
@@ -8767,7 +8774,6 @@ $messages['ia'] = array(
 	'mobile-frontend-language-article-heading' => 'Leger in un altere lingua',
 	'mobile-frontend-language-header' => 'Ista pagina es disponibile in $1 {{PLURAL:$1|lingua|linguas}}',
 	'mobile-frontend-language-variant-header' => 'Elige un variante de {{#language:{{CONTENTLANG}}}}',
-	'mobile-frontend-language-footer' => 'Nota: Iste pagina poterea non esser scribite in tu lingua preferite. Tu pote vider le linguas disponibile in {{SITENAME}} cliccante hic.',
 	'mobile-frontend-language-site-choose' => 'Cercar lingua',
 	'mobile-frontend-username' => 'Nomine de usator:',
 	'mobile-frontend-password' => 'Contrasigno:',
@@ -8795,7 +8801,6 @@ $messages['ia'] = array(
 	'mobile-frontend-last-modified-with-user-months' => '[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 mense|$3 menses}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}',
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 anno|$3 annos}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 {{GENDER:$1|Modificate}}] justo nunc per {{PLURAL:$4|[$5 $2]|0=un usator anonyme}}',
-	'mobile-frontend-learn-more' => 'Leger plus',
 	'mobile-frontend-view-source' => 'Vider texto fonte',
 	'mobile-frontend-account-create-submit' => 'Crear un conto',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmar contrasigno',
@@ -8807,7 +8812,6 @@ $messages['ia'] = array(
 	'mobile-frontend-placeholder' => 'Cercar in {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Cercar in {{SITENAME}} (Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Cercar in {{SITENAME}} (experimental)',
-	'mobile-frontend-search-help' => 'Scribe le parolas a cercar hic supra e le titulos del paginas correspondente apparera hic.',
 	'mobile-frontend-dismiss-notification' => 'clauder iste notification',
 	'mobile-frontend-clear-search' => 'Rader',
 	'mobile-frontend-search-content' => 'Cerca intra paginas',
@@ -8818,7 +8822,6 @@ $messages['ia'] = array(
 	'mobile-frontend-footer-license' => 'Contento disponibile sub [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional conditiones pote esser in vigor.',
 	'mobile-frontend-copyright' => 'Le contento es disponibile sub $1 salvo indication contrari.',
 	'mobile-frontend-footer-contact' => 'Contacto',
-	'mobile-frontend-search-noresults' => 'Nulle titulo de pagina corresponde a tu recerca. Cambia le recerca, o preme le button de recerca de claviero pro cercar intra paginas.',
 	'mobile-frontend-terms-text' => 'Conditiones de uso',
 	'mobile-frontend-main-menu-button-tooltip' => 'Aperir le menu principal',
 	'mobile-frontend-main-menu-page-title' => 'Navigation in sito',
@@ -8925,35 +8928,17 @@ $messages['ia'] = array(
 	'mobile-frontend-photo-article-donate-comment' => 'Imagine contribuite ab Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => 'Imagine addite al pagina',
 	'mobile-frontend-photo-caption-placeholder' => 'Describe iste imagine (obligatori)',
-	'mobile-frontend-image-loading' => 'Carga imagine',
 	'mobile-frontend-photo-ownership' => 'Io, $1, ha create iste imagine.',
 	'mobile-frontend-photo-ownership-help' => 'Que significa isto?',
 	'mobile-frontend-photo-ownership-confirm' => 'Comprendite!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'Nos pote solmente acceptar imagines de tu proprietate. Per favor non incarga imagines que tu ha trovate alterubi in internet.',
-	'mobile-frontend-photo-ownership-bullet-two' => 'Imagines sub copyright o inappropriate essera removite.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'Tu files incargate essera liberate sub un licentia que permitte a omnes de re-usar los gratuitemente.',
-	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Io non viola derectos de autor',
-	'mobile-frontend-photo-nag-1-bullet-1-text' => "'''Non''' es un imagine que io ha trovate in internet. Es un obra mie.",
-	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Isto non es un imagine personal',
-	'mobile-frontend-photo-nag-1-bullet-2-text' => 'E illo pote adjutar a illustrar un subjecto importante.',
-	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Absolutemente non viola le derecto de autor, e iste imagine es educative.',
-	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'Io comprende lo que io pote incargar. Non plus monstra me iste message.',
-	'mobile-frontend-photo-nag-learn-more-heading' => 'Que incargar?',
-	'mobile-frontend-photo-nag-learn-more-1' => "'''Si!''' Photos que tu ha prendite de locos, objectos e eventos.",
-	'mobile-frontend-photo-nag-learn-more-2' => "'''Si!''' Photos que pote adjutar a illustrar e inricchir paginas de {{SITENAME}}.",
-	'mobile-frontend-photo-nag-learn-more-3' => "'''No.''' Photos de affiches de films, coperturas de libros o altere materiales sub derecto de autor. Istes essera delite.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Assecura te que le imagine pote adjutar a illustrar le pagina. Illo debe esser un imagine que tu ha create e que non viola alcun derecto de autor.',
 	'mobile-frontend-lead-image-tutorial-confirm' => 'Comenciar a incargar',
-	'mobile-frontend-image-uploading-wait' => 'Incarga imagine, per favor attende.',
-	'mobile-frontend-image-uploading-long' => 'Imagine in curso de incargamento! Gratias pro tu patientia.',
-	'mobile-frontend-image-uploading-cancel' => '<a href="#">Cancellar</a> si isto se prolonga troppo.',
 	'mobile-frontend-photo-upload-error' => 'Error. Proba de novo.',
 	'mobile-frontend-photo-upload-error-file-type' => 'Per favor incarga solmente imagines.',
 	'mobile-frontend-photo-upload-error-filename' => 'Error. Per favor forni un summario plus descriptive.',
 	'mobile-frontend-photo-upload-success-article' => 'Successo! Le imagine es ora visibile sur iste pagina.',
 	'mobile-frontend-photo-license' => 'Si tu incarga iste imagine, tu accepta nostre [//wikimediafoundation.org/wiki/Terms_of_use conditiones de uso] e accepta de liberar tu imagine sub le [//creativecommons.org/licenses/by-sa/3.0/ licentia Creative Commons Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Submitter',
-	'mobile-frontend-photo-cancel' => 'Cancellar',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> imagine incargate|<span>$1</span> imagines incargate}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ imagines incargate',
 	'mobile-frontend-image-heading-describe' => "'''Describe''' le imagine",
@@ -8977,13 +8962,11 @@ $messages['ia'] = array(
 	'mobile-frontend-editor-summary-placeholder' => 'Dice nos lo que tu ha cambiate (optional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Es tu secur de voler abandonar tu modification?',
 	'mobile-frontend-editor-wait' => 'Salveguarda modification, attende.',
-	'mobile-frontend-editor-guider' => 'Tocca "{{int:mobile-frontend-editor-continue}}" pro previsualisar e salveguardar.',
 	'mobile-frontend-editor-success' => 'Successo! Tu modification ha essite salveguardate.',
 	'mobile-frontend-editor-success-landmark-1' => 'Felicitationes, tu ora es redactor de {{SITENAME}}!',
 	'mobile-frontend-editor-error' => 'Error. Modification non salveguardate.',
 	'mobile-frontend-editor-error-conflict' => 'Error. Un altere usator ha modificate iste pagina.',
 	'mobile-frontend-editor-error-loading' => 'Error. Non pote cargar section.',
-	'mobile-frontend-editor-preview-header' => 'Previsualisation',
 	'mobile-frontend-editor-error-preview' => 'Error. Un problema ha occurrite durante le cargamento del previsualisation. Per favor claude lo e reproba.',
 	'mobile-frontend-editor-tutorial-summary' => 'Non sia intimidate per le codice. Tenta meliorar le pagina $1.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'Proque non meliorar $1? Non lassa le codice intimidar te!',
@@ -10107,6 +10090,8 @@ in tutto il mondo',
 	'beta-feature-geonotahack-description' => 'Scopri le pagine che sono geograficamente vicine alla pagina di contenuto che stai attualmente leggendo.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Questa pagina ha bisogno del tuo aiuto!',
 	'mobile-frontend-mainpage-cta-button' => 'Migliora questa pagina',
+	'beta-feature-minerva' => 'Abilita la skin mobile (Minerva) sul desktop',
+	'beta-feature-minerva-description' => 'Rende selezionabile la skin utilizzata sui dispositivi mobili anche per i desktop nella scheda aspetto delle preferenze.',
 );
 
 /** Japanese (日本語)
@@ -12483,6 +12468,7 @@ $messages['lb'] = array(
 	'beta-feature-geonotahack' => 'No bei dëser Säit',
 	'mobile-frontend-mainpage-cta-prompt' => 'Dës Säit brauch Är Hëllef!',
 	'mobile-frontend-mainpage-cta-button' => 'Dës Säit verbesseren',
+	'beta-feature-minerva' => 'Mobilt Ausgesinn (Minerva) um Desktop aktivéieren',
 );
 
 /** Lezghian (лезги)
@@ -12621,7 +12607,9 @@ $messages['lrc'] = array(
 	'mobile-frontend-placeholder' => 'پی جوری {{SITENAME}}',
 	'mobile-frontend-clear-search' => 'پاك كردن',
 	'mobile-frontend-search-content' => 'پی جوری مینجا بلگیا',
+	'mobile-frontend-footer-sitename' => '{{نوم سیلجا}}',
 	'mobile-frontend-footer-contact' => 'تماس',
+	'mobile-frontend-main-menu-page-title' => 'ناوگردی سیلجا',
 	'mobile-frontend-main-menu-nearby' => 'نزیک',
 	'mobile-frontend-main-menu-login' => 'اومائن د سيستم',
 	'mobile-frontend-main-menu-logout' => 'د سيستم دراومائن',
@@ -12646,6 +12634,7 @@ $messages['lrc'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'اومائن د سیستم',
 	'mobile-frontend-watchlist-cta-button-signup' => 'ثوت نام كردن',
 	'mobile-frontend-watchlist-login-action' => 'اومائن سی ددیئن وه',
+	'mobile-frontend-generic-login' => '{{نوم سیلجا}} وه دس خلکی چی شما راس بیه.',
 	'mobile-frontend-generic-login-action' => 'اومائن د سیستم سی هومیاری',
 	'mobile-frontend-generic-signup-action' => 'ثوت نام سی هومیاری',
 	'mobile-frontend-edit-login-action' => 'اومائن د سیستم سی ویرایشت',
@@ -12673,9 +12662,12 @@ $messages['lrc'] = array(
 	'mobile-frontend-editor-save' => 'ذخيره كردن',
 	'mobile-frontend-editor-cancel' => 'رد کردن',
 	'mobile-frontend-editor-cancel-confirm' => 'شما واقعا میهایشت ای ویرایشت نه ول بکید؟',
+	'mobile-frontend-editor-success-landmark-1' => 'موارک با، ایسه شما یه گل ویرایشتگر{{نوم سیلجا}} هئیت',
+	'tag-mobile_edit-description' => 'ویرایشت سی سیلجا هومدرونگ راس بیه',
 	'mobile-frontend-talk-overlay-header' => 'چك چنه',
 	'mobile-frontend-profile-last-upload-caption' => '{{جنس:$2|سواربیه}} {{جمی:$1|دوش|$1روزیا دما|0=امرو}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'بلگه چك چنه نه بوينيت', # Fuzzy
+	'mobile-frontend-profile-userpage-link' => 'ديئن بلگه كارور',
 	'mobile-frontend-geonotahack' => 'نزیک د ای بلگه',
 	'beta-feature-geonotahack' => 'نزیک د ای بلگه',
 	'mobile-frontend-mainpage-cta-prompt' => 'ای بلگه هومیاری تونه میها!',
@@ -13251,6 +13243,8 @@ $messages['mk'] = array(
 	'beta-feature-geonotahack-description' => 'Откријте други поврзани страници со слични координатни податоци како оние што ги гледате.',
 	'mobile-frontend-mainpage-cta-prompt' => 'На страницава ѝ треба Вашата помош!',
 	'mobile-frontend-mainpage-cta-button' => 'Подобри ја страницава',
+	'beta-feature-minerva' => 'Вклучи го мобилното руво (Минерва) како обично',
+	'beta-feature-minerva-description' => 'Можност рувото за мобилни уреди да се користи обично (немобилно), избирајќи го во јазичето „Изглед“ во нагодувањата.',
 );
 
 /** Malayalam (മലയാളം)
@@ -13283,6 +13277,8 @@ $messages['ml'] = array(
 	'mobile-frontend-logged-out' => 'പ്രവേശിച്ചിട്ടില്ല',
 	'mobile-frontend-logged-in-homepage-notification' => 'സ്വാഗതം, $1!',
 	'mobile-frontend-logged-in-toast-notification' => '$1 ആയി പ്രവേശിച്ചിരിക്കുന്നു.',
+	'mobile-frontend-generic-404-title' => 'പിഴവ് - താൾ കണ്ടെത്താനായില്ല',
+	'mobile-frontend-generic-404-desc' => 'താങ്കൾ നോക്കിയ താൾ കണ്ടെത്താൻ കഴിഞ്ഞില്ല.',
 	'mobile-frontend-sign-up-heading' => 'അംഗത്വമെടുക്കുക',
 	'mobile-frontend-sign-in-heading' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-sign-in-why' => 'താങ്കൾക്ക് {{SITENAME}} അംഗത്വമുണ്ടെങ്കിൽ, താഴെ പ്രവേശിക്കുക.',
@@ -13306,6 +13302,8 @@ $messages['ml'] = array(
 	'mobile-frontend-images-status' => 'ചിത്രങ്ങൾ',
 	'mobile-frontend-disable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനരഹിതമാക്കുക',
 	'mobile-frontend-enable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനസജ്ജമാക്കുക',
+	'mobile-frontend-expand-sections-status' => 'എല്ലാ ഭാഗങ്ങളും വികസിപ്പിക്കുക',
+	'mobile-frontend-expand-sections-description' => 'പുതിയ താളിലേക്ക് പോകുമ്പോൾ എല്ലാ ഭാഗങ്ങളും വികസിപ്പിക്കുക.',
 	'mobile-frontend-missing-image' => 'ചിത്രം',
 	'mobile-frontend-off' => 'വേണ്ട',
 	'mobile-frontend-on' => 'വേണം',
@@ -13321,7 +13319,6 @@ $messages['ml'] = array(
 	'mobile-frontend-language-article-heading' => 'മറ്റൊരു ഭാഷയിൽ വായിക്കുക',
 	'mobile-frontend-language-header' => 'ഈ താൾ {{PLURAL:$1|ഒരു ഭാഷയിൽ|$1 ഭാഷകളിൽ}} ലഭ്യമാണ്',
 	'mobile-frontend-language-variant-header' => '{{#language:{{CONTENTLANG}}}} ഇതരരൂപം തിരഞ്ഞെടുക്കുക',
-	'mobile-frontend-language-footer' => 'കുറിപ്പ്: താങ്കളുടെ ആഗ്രഹിക്കുന്ന ഭാഷയിൽ ഈ താൾ ഉണ്ടായിരിക്കണമെന്നില്ല. ഇവിടെ ഞെക്കി {{SITENAME}} പിന്തുണയുള്ള ഭാഷകൾ കാണാവുന്നതാണ്.',
 	'mobile-frontend-language-site-choose' => 'ഭാഷ തിരയുക',
 	'mobile-frontend-username' => 'ഉപയോക്തൃനാമം:',
 	'mobile-frontend-password' => 'രഹസ്യവാക്ക്:',
@@ -13349,7 +13346,6 @@ $messages['ml'] = array(
 	'mobile-frontend-last-modified-with-user-months' => '[$4 അവസാനം {{GENDER:$1|തിരുത്തിയത്}} {{PLURAL:$3|ഒരു മാസം|$3 മാസം}} മുമ്പ്] {{PLURAL:$5|[$6 $2]|0=ഒരു അജ്ഞാത ഉപയോക്താവ്}} ആണ്',
 	'mobile-frontend-last-modified-with-user-years' => '[$4 അവസാനം {{GENDER:$1|തിരുത്തിയത്}} {{PLURAL:$3|ഒരു വർഷം|$3 വർഷം}} മുമ്പ്] {{PLURAL:$5|[$6 $2]|0=ഒരു അജ്ഞാത ഉപയോക്താവ്}} ആണ്',
 	'mobile-frontend-last-modified-with-user-just-now' => '[$3 അവസാനം {{GENDER:$1|തിരുത്തിയത്}}] ഇപ്പോഴാണ്, ചെയ്തത് {{PLURAL:$4|[$5 $2]|0=ഒരു അജ്ഞാത ഉപയോക്താവ്}} ആണ്',
-	'mobile-frontend-learn-more' => 'കൂടുതൽ അറിയുക',
 	'mobile-frontend-view-source' => 'മൂലരൂപം കാണുക',
 	'mobile-frontend-account-create-submit' => 'അംഗത്വമെടുക്കുക',
 	'mobile-frontend-password-confirm-placeholder' => 'രഹസ്യവാക്ക് സ്ഥിരീകരിക്കുക',
@@ -13361,7 +13357,6 @@ $messages['ml'] = array(
 	'mobile-frontend-placeholder' => '{{SITENAME}} സംരംഭത്തിൽ തിരയുക',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} (ബീറ്റ) സംരംഭത്തിൽ തിരയുക',
 	'mobile-frontend-placeholder-alpha' => '{{SITENAME}} സംരംഭത്തിൽ തിരയുക (പരീക്ഷണാടിസ്ഥാനം)',
-	'mobile-frontend-search-help' => 'തിരയാനുള്ള പദം മുകളിൽ നൽകുക, ചേർച്ചയുള്ള താളുകളുടെ തലക്കെട്ടുകൾ ഇവിടെ വരും.',
 	'mobile-frontend-dismiss-notification' => 'ഈ അറിയിപ്പ് ഒഴിവാക്കുക',
 	'mobile-frontend-clear-search' => 'ശൂന്യമാക്കുക',
 	'mobile-frontend-search-content' => 'താളുകൾക്കുള്ളിൽ തിരയുക',
@@ -13372,7 +13367,6 @@ $messages['ml'] = array(
 	'mobile-frontend-footer-license' => 'എഴുത്തുകൾ [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile സി.സി. ബൈ-എസ്.എ. 3.0] പ്രകാരം ലഭ്യം; മേൽ നിബന്ധനകൾ ഉണ്ടായേക്കാം.',
 	'mobile-frontend-copyright' => 'പ്രത്യേകം പറയാത്ത പക്ഷം ഉള്ളടക്കം $1 പ്രകാരം ലഭ്യം.',
 	'mobile-frontend-footer-contact' => 'സമ്പർക്കം',
-	'mobile-frontend-search-noresults' => 'താങ്കൾ തിരഞ്ഞതുമായി സാമ്യമുള്ള താളുകൾ ഒന്നുമില്ല. ദയവായി മാറ്റി തിരയുക, അല്ലെങ്കിൽ കീബോർഡ് തിരച്ചിൽ ബട്ടൺ ഉപയോഗിച്ച് താളുകൾക്കുള്ളിൽ തിരയുക.',
 	'mobile-frontend-terms-text' => 'ഉപയോഗനിബന്ധനകൾ',
 	'mobile-frontend-main-menu-button-tooltip' => 'പ്രധാന മെനു തുറക്കുക',
 	'mobile-frontend-main-menu-page-title' => 'സൈറ്റിലൂടെ ഗമിക്കൽ',
@@ -13479,35 +13473,17 @@ $messages['ml'] = array(
 	'mobile-frontend-photo-article-donate-comment' => 'പ്രത്യേകം:അപ്‌ലോഡ് ഉപയോഗിച്ച് ഒരു ചിത്രം സംഭാവന ചെയ്തു',
 	'mobile-frontend-photo-upload-comment' => 'താളിൽ ചിത്രം ചേർത്തു',
 	'mobile-frontend-photo-caption-placeholder' => 'ഈ ചിത്രം വിവരിക്കുക  (ആവശ്യമാണ്)',
-	'mobile-frontend-image-loading' => 'ചിത്രം എടുക്കുന്നു',
 	'mobile-frontend-photo-ownership' => 'ഈ ചിത്രം സൃഷ്ടിച്ചത് $1 എന്ന ഞാനാണ്.',
 	'mobile-frontend-photo-ownership-help' => 'എന്താണിതിനർത്ഥം?',
 	'mobile-frontend-photo-ownership-confirm' => 'കിട്ടിപ്പോയ്!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'താങ്കൾ സ്വയമെടുത്ത ചിത്രങ്ങൾ മാത്രമേ ഞങ്ങൾക്ക് സ്വീകരിക്കാനാവൂ. ദയവായി ഇന്റർനെറ്റിൽ മറ്റെവിടെയെങ്കിലും താങ്കൾ കണ്ടെത്തിയ ചിത്രങ്ങൾ അപ്‌ലോഡ് ചെയ്യാതിരിക്കുക.',
-	'mobile-frontend-photo-ownership-bullet-two' => 'പകർപ്പവകാശസംരക്ഷിതമോ അനുയോജ്യമല്ലാത്തവയോ ആയ ചിത്രങ്ങൾ നീക്കം ചെയ്യപ്പെടുന്നതാണ്.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'താങ്കളുടെ അപ്‌ലോഡുകൾ ആർക്കും സ്വതന്ത്രമായും സൗജന്യമായും ഉപയോഗിക്കാവുന്ന വിധത്തിലുള്ള ഒരു സ്വതന്ത്ര ഉപയോഗാനുമതിയിൽ പ്രസിദ്ധീകരിക്കുന്നതാണ്.',
-	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'ഞാൻ പകർപ്പവകാശം ലംഘിക്കുന്നില്ല',
-	'mobile-frontend-photo-nag-1-bullet-1-text' => "ഇത് ഞാൻ ഇന്റർനെറ്റിൽ നിന്ന് കണ്ടെടുത്ത ചിത്രം '''അല്ല'''. ഇതെന്റെ സ്വന്തം സൃഷ്ടിയാണ്.",
-	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'ഇതൊരു വ്യക്തിപരമായ ചിത്രം അല്ല.',
-	'mobile-frontend-photo-nag-1-bullet-2-text' => 'ഇത് ഒരു സുപ്രധാന വിഷയം ചിത്രീകരിക്കാൻ ആവുന്ന ഒന്നാണ്.',
-	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'പകർപ്പവകാശലംഘനമല്ലെന്ന് കരുതുന്നു, ഒപ്പം ഇത് വിദ്യാഭ്യാസ ഉദ്ദേശത്തോടെയുള്ളതുമാണ്.',
-	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'എന്താണ് അപ്‌ലോഡ് ചെയ്യേണ്ടതെന്ന് എനിക്ക് മനസ്സിലായി. ഇനി ഈ സന്ദേശം കാണിക്കേണ്ടതില്ല.',
-	'mobile-frontend-photo-nag-learn-more-heading' => 'എന്താണ് അപ്‌ലോഡ് ചെയ്യുന്നത്',
-	'mobile-frontend-photo-nag-learn-more-1' => "'''ഉവ്വ്!''' താങ്കൾ തന്നെ എടുക്കുന്ന വസ്തുക്കളുടെ, സംഭവങ്ങളുടെ സ്ഥലങ്ങളുടെ ചിത്രങ്ങൾ.",
-	'mobile-frontend-photo-nag-learn-more-2' => "'''ഉവ്വ്!''' {{SITENAME}} താളുകൾക്ക് സ്പഷ്ടതയേകാൻ കഴിവുള്ള ചിത്രങ്ങൾ.",
-	'mobile-frontend-photo-nag-learn-more-3' => "'''അരുത്.''' ചലച്ചിത്ര പോസ്റ്ററുകളുടെ, പുസ്തകങ്ങളുടെ പുറംചട്ടകളുടെ അല്ലെങ്കിൽ മറ്റ് പകർപ്പവകാശസംരക്ഷിത വസ്തുവകകളുടെ ചിത്രങ്ങൾ പാടില്ല. അവ മായ്ക്കപ്പെടും.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'താളിനു വ്യക്തത നൽകാൻ താങ്കളുടെ ചിത്രത്തിന് കഴിയുമെന്ന് ഉറപ്പാക്കുക. ചിത്രം താങ്കൾ തന്നെ സൃഷ്ടിച്ചതും പകർപ്പവകാശം ലംഘിക്കാത്തതുമാവണം.',
 	'mobile-frontend-lead-image-tutorial-confirm' => 'അപ്‌ലോഡ് തുടങ്ങുക',
-	'mobile-frontend-image-uploading-wait' => 'ചിത്രം അപ്‌ലോഡ് ചെയ്യുന്നു, ദയവായി കാത്തിരിക്കുക.',
-	'mobile-frontend-image-uploading-long' => 'ചിത്രം ഇപ്പോഴും അപ്‌ലോഡ് ചെയ്യുകയാണ്! താങ്കളുടെ ക്ഷമയ്ക്ക് നന്ദി.',
-	'mobile-frontend-image-uploading-cancel' => 'ഇതിനു വളരെ കാലതാമസമുണ്ടെങ്കിൽ <a href="#">റദ്ദാക്കുക</a>.',
 	'mobile-frontend-photo-upload-error' => 'പിഴവുണ്ടായി, വീണ്ടും ശ്രമിക്കുക.',
 	'mobile-frontend-photo-upload-error-file-type' => 'ദയവായി ചിത്രങ്ങൾ മാത്രം അപ്‌ലോഡ് ചെയ്യുക.',
 	'mobile-frontend-photo-upload-error-filename' => 'പിഴവ്, ദയവായി കൂടുതൽ വിവരണാത്മകമായിട്ടുള്ള ചുരുക്കം നൽകുക.',
 	'mobile-frontend-photo-upload-success-article' => 'വിജയകരം! താങ്കളുടെ ചിത്രം ഇനി ഈ താളിൽ കാണാവുന്നതാണ്.',
 	'mobile-frontend-photo-license' => 'ഈ ചിത്രം അപ്‌ലോഡ് ചെയ്യുമ്പോൾ, താങ്കൾ ഞങ്ങളുടെ [//wikimediafoundation.org/wiki/Terms_of_Use/ml ഉപയോഗനിബന്ധനകൾ] പാലിക്കാമെന്നും, താങ്കളെടുത്ത ചിത്രം  [//creativecommons.org/licenses/by-sa/3.0/ ക്രിയേറ്റീവ് കോമൺസ് ആട്രിബ്യൂഷൻ-ഷെയർ‌എലൈക് 3.0 അനുവാദപത്രം] പ്രകാരം പ്രസിദ്ധീകരിക്കുന്നുവെന്നും സമ്മതിക്കുന്നുണ്ട്.',
 	'mobile-frontend-photo-submit' => 'സമർപ്പിക്കുക',
-	'mobile-frontend-photo-cancel' => 'റദ്ദാക്കുക',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>ഒരു</span> അപ്‌ലോഡ്|<span>$1</span> അപ്‌ലോഡുകൾ}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ അപ്‌ലോഡുകൾ',
 	'mobile-frontend-image-heading-describe' => "ചിത്രം '''വിവരിക്കുക'''",
@@ -13531,17 +13507,16 @@ $messages['ml'] = array(
 	'mobile-frontend-editor-summary-placeholder' => 'താങ്കളെന്താണ് മാറ്റം വരുത്തിയതെന്ന് പറയുക (നിർബന്ധമില്ല)',
 	'mobile-frontend-editor-cancel-confirm' => 'താങ്കളുടെ തിരുത്ത് ഉപേക്ഷിക്കണം എന്നുറപ്പാണോ?',
 	'mobile-frontend-editor-wait' => 'തിരുത്ത് സേവ് ചെയ്യുന്നു, ദയവായി കാത്തിരിക്കുക.',
-	'mobile-frontend-editor-guider' => 'എങ്ങനെയുണ്ടെന്ന് കാണാനും സേവ് ചെയ്യാനും "{{int:mobile-frontend-editor-continue}}" സഹായിക്കുന്നതാണ്.',
 	'mobile-frontend-editor-success' => 'വിജയകരം! താങ്കളുടെ തിരുത്ത് സേവ് ചെയ്തിരിക്കുന്നു.',
 	'mobile-frontend-editor-success-landmark-1' => 'അഭിനന്ദനങ്ങൾ, താങ്കൾ ഇപ്പോളൊരു {{SITENAME}} എഡിറ്റർ ആണ്!',
 	'mobile-frontend-editor-error' => 'പിഴവ്, തിരുത്ത് സേവ് ചെയ്യപ്പെട്ടില്ല.',
 	'mobile-frontend-editor-error-conflict' => 'പിഴവ്, മറ്റൊരു ഉപയോക്താവ് ഈ താൾ തിരുത്തിയിരിക്കുന്നു.',
 	'mobile-frontend-editor-error-loading' => 'പിഴവ്, ഉപഭാഗം എടുക്കാനാവുന്നില്ല.',
-	'mobile-frontend-editor-preview-header' => 'എങ്ങനെയുണ്ടെന്ന് കാണുക',
 	'mobile-frontend-editor-error-preview' => 'പിഴവ്, പ്രിവ്യൂ എടുക്കുന്നതിനിടെ എന്തോ അപ്രതീക്ഷിതമായത് സംഭവിച്ചു. ദയവായി അടച്ച് വീണ്ടും ശ്രമിക്കുക.',
 	'mobile-frontend-editor-tutorial-summary' => 'അടയാളഭാഷ കണ്ടെ പേടിക്കേണ്ടതില്ല. താൾ $1 മെച്ചപ്പെടുത്താൻ ശ്രമിക്കുക.',
 	'mobile-frontend-editor-tutorial-alt-summary' => 'എന്തുകൊണ്ട് $1 മെച്ചപ്പെടുത്തിക്കൂടാ? എഴുത്തുരീതിയെ ഭയക്കേണ്ടതില്ല!',
 	'mobile-frontend-editor-tutorial-confirm' => 'തിരുത്തൽ തുടങ്ങുക',
+	'mobile-frontend-editor-tutorial-cancel' => 'വേണ്ട, നന്ദി',
 	'mobile-frontend-editor-captcha-try-again' => 'കോഡ് തെറ്റാണ്, വീണ്ടും ശ്രമിക്കുക.',
 	'mobile-frontend-editor-abusefilter-warning' => 'മുന്നറിയിപ്പ്: ഈ തിരുത്ത് സേവ് ചെയ്യണമെന്നുറപ്പാണോ? അതിൽ ഒരു പ്രശ്നമുണ്ടെന്ന് തോന്നുന്നു.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'തിരുത്തിൽ ഒരു പ്രശ്നം കണ്ടെത്താനായതിനാൽ അത് സേവ് ചെയ്യാനാവില്ല.',
@@ -13574,14 +13549,14 @@ $messages['ml'] = array(
 	'mobile-frontend-profile-error' => 'അത്തിപ്പാറ അമ്മച്ചീ!',
 	'mobile-frontend-profile-noargs' => 'ഉപയോക്തൃനാമം നൽകിയിട്ടില്ല. ഉപയോക്തൃവിവരങ്ങൾ കാണാനായി ഒരു ഉപയോക്തൃനാമം നൽകുക.',
 	'mobile-frontend-profile-nouser' => 'ഈ പേരിൽ ഒരു ഉപയോക്താവുമില്ല. ഉപയോക്തൃനാമങ്ങൾ കേസ് സെൻസിറ്റീവ് ആയതിനാൽ താങ്കൾ ടൈപ്പ് ചെയ്തത് ശരിയാണോയെന്ന് ദയവായി പരിശോധിക്കുക.',
-	'mobile-frontend-profile-activity-heading' => 'പ്രവൃത്തികളും സംഭാവനകളും', # Fuzzy
+	'mobile-frontend-profile-activity-heading' => 'സമീപകാല പ്രവൃത്തികൾ',
 	'mobile-frontend-profile-userpage-link' => 'ഉപയോക്തൃതാൾ കാണുക.',
 	'mobile-frontend-requires-optin' => 'ബീറ്റ മട്ട് തിരഞ്ഞെടുക്കാതെ ഈ താൾ താങ്കൾക്ക് ലഭ്യമായിരിക്കില്ല. അത് തിരഞ്ഞെടുക്കുവാൻ [[Special:MobileOptions|സജ്ജീകരണങ്ങൾ താൾ]] സന്ദർശിക്കുക.',
-	'mobile-frontend-profile-last-thank' => '[[$2]] എന്ന താളിൽ ചെയ്ത തിരുത്തിന് [[Special:UserProfile/$1|$1]] {{GENDER:$3|നന്ദി രേഖപ്പെടുത്തിയിരിക്കുന്നു}}.', # Fuzzy
+	'mobile-frontend-profile-last-thank' => '[[Special:UserProfile/$1|$1]] {{GENDER:$2|നന്ദി രേഖപ്പെടുത്തിയിരിക്കുന്നു}}.',
 	'mobile-frontend-profile-last-edit' => '[[:$1]] എന്ന താൾ {{PLURAL:$2|ഇന്നലെ|$2 ദിവസങ്ങൾ മുമ്പ്|0=ഇന്ന്}} {{GENDER:$3|തിരുത്തിയിട്ടുണ്ട്}}.',
 	'mobile-frontend-profile-footer-days' => '{{PLURAL:$2|ഒരു ദിവസം|$2 ദിവസം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]]',
-	'mobile-frontend-profile-footer-months' => '{{PLURAL:$2|ഒരു മാസം|$2 മാസം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]]', # Fuzzy
-	'mobile-frontend-profile-footer-years' => '{{PLURAL:$2|ഒരു വർഷം|$2 വർഷം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]]', # Fuzzy
+	'mobile-frontend-profile-footer-months' => '{{PLURAL:$2|ഒരു മാസം|$2 മാസം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]].',
+	'mobile-frontend-profile-footer-years' => '{{PLURAL:$2|ഒരു വർഷം|$2 വർഷം}} മുമ്പ് അംഗത്വമെടുത്തു, ആകെ [[Special:Contributions/$1|{{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്ത്}}]]   [[Special:Uploads/$1|{{PLURAL:$4|ഒരു അപ്‌ലോഡ്|$4 അപ്‌ലോഡുകൾ|500=500+ അപ്‌ലോഡുകൾ}}]].',
 	'mobile-frontend-geonotahack' => 'ഈ താളിന്റെ സമീപസ്ഥം',
 	'beta-feature-geonotahack' => 'ഈ താളിനു സമീപം',
 	'beta-feature-geonotahack-description' => 'താങ്കൾ ഇപ്പോൾ വായിച്ചുകൊണ്ടിരിക്കുന്നവയുമായി ഭൗമശാസ്ത്രപരമായി അടുത്തുള്ള വിഷയങ്ങൾ കണ്ടെത്തുക.',
@@ -16093,6 +16068,8 @@ Për piasì, ch'a sara e ch'a preuva torna.",
 	'beta-feature-geonotahack-description' => "Dëscheurve dle pàgine che a son davzin-a da na mira geogràfica a la pàgina ëd contnù che a l'é an camin a lese.",
 	'mobile-frontend-mainpage-cta-prompt' => "Costa pàgina a l'ha damanca ëd sò agiut!",
 	'mobile-frontend-mainpage-cta-button' => 'Amelioré costa pàgina',
+	'beta-feature-minerva' => "Abilité la pel për sacociàbil (Minerva) an sl'ordinator da taulin",
+	'beta-feature-minerva-description' => "Rende la pel dovrà an sij dispositiv sacociàbij na pel selessionàbil për l'ordinator da taulin sota la schema dij gust d'aparensa.",
 );
 
 /** Western Punjabi (پنجابی)
@@ -17043,6 +17020,8 @@ din întreaga lume',
 	'beta-feature-geonotahack-description' => 'Descoperă pagini care sunt, din punct de vedere geografic, în apropierea conținutului paginii pe care o lecturați acum.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Această pagină are nevoie de ajutorul dumneavoastră!',
 	'mobile-frontend-mainpage-cta-button' => 'Îmbunătățiți această pagină',
+	'beta-feature-minerva' => 'Activează interfața mobilă (Minerva) pe desktop',
+	'beta-feature-minerva-description' => 'Permite ca interfața utilizată pe dispozitivele mobile să poată fi selectată și pe desktop din cadrul filei cu preferințe pentru aspect.',
 );
 
 /** tarandíne (tarandíne)
@@ -17492,6 +17471,8 @@ $messages['ru'] = array(
 	'beta-feature-geonotahack-description' => 'Откройте для себя страницы, которые географически находятся поблизости от страницы, которую вы сейчас читаете.',
 	'mobile-frontend-mainpage-cta-prompt' => 'На этой странице нужна ваша помощь!',
 	'mobile-frontend-mainpage-cta-button' => 'Улучшить эту страницу',
+	'beta-feature-minerva' => 'Включает мобильную тему оформления (Minerva) в обычной версии',
+	'beta-feature-minerva-description' => 'Делает выбор темы оформления, используемой на мобильных устройствах, доступным в настройках внешнего вида в обычной версии.',
 );
 
 /** Rusyn (русиньскый)
@@ -17806,6 +17787,7 @@ $messages['si'] = array(
 /** Slovak (slovenčina)
  * @author Helix84
  * @author Kusavica
+ * @author Sudo77(new)
  * @author Teslaton
  */
 $messages['sk'] = array(
@@ -17818,7 +17800,6 @@ $messages['sk'] = array(
 	'mobile-frontend-save-settings' => 'Uložiť nastavenia', # Fuzzy
 	'mobile-frontend-random-button' => 'Náhodná',
 	'mobile-frontend-back-to-top-of-section' => 'Skočiť o sekciu späť',
-	'mobile-frontend-close-section' => 'Zatvoriť túto sekciu',
 	'mobile-frontend-regular-site' => 'Klasické zobrazenie',
 	'mobile-frontend-wml-continue' => 'Pokračovať...',
 	'mobile-frontend-wml-back' => 'Späť...',
@@ -17834,13 +17815,11 @@ $messages['sk'] = array(
 	'mobile-frontend-featured-article' => 'Článok dňa', # Fuzzy
 	'mobile-frontend-news-items' => 'V novinkách',
 	'mobile-frontend-language-header' => 'Tento článok je dostupný v $1 {{PLURAL:$1|jazyku|jazykoch}}', # Fuzzy
-	'mobile-frontend-language-footer' => '[[Special:MobileOptions|Nevidíte svoj jazyk? Pozrite si podrobnosti]].', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Hľadať jazyk',
 	'mobile-frontend-username' => 'Používateľské meno:',
 	'mobile-frontend-password' => 'Heslo:',
 	'mobile-frontend-login' => 'Prihlásiť sa',
 	'mobile-frontend-placeholder' => 'Sem napíšte hľadaný výraz...', # Fuzzy
-	'mobile-frontend-search-help' => 'Napíšte hľadané slová hore. Zodpovedajúci článok sa objaví tu.', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'zavrieť toto oznámenie',
 	'mobile-frontend-clear-search' => 'Vyčistiť',
 	'mobile-frontend-privacy-link-text' => 'Súkromie',
@@ -17848,7 +17827,6 @@ $messages['sk'] = array(
 	'mobile-frontend-footer-license' => 'Obsah je dostupný za podmienok [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-copyright' => "Tento text je dostupný za podmienok licencie <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; môžu sa naň vzťahovať dodatočné ďalšie podmienky. Podrobnosti nájdete v <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Podmienkach používania</a>. Wikipédia je registrovaná obchodná značka neziskovej organizácie <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
-	'mobile-frontend-search-noresults' => 'Žiadne názvy článkov nezodpovedajú vášmu vyhľadávaniu. Zmeňte hľadané slová alebo stlačením tlačidla hľadať na klávesnici hľadajte v texte článkov.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Odporúčané',
 	'mobile-frontend-main-menu-nearby' => 'V blízkosti',
 	'mobile-frontend-main-menu-settings' => 'Nastavenia',
@@ -17856,6 +17834,9 @@ $messages['sk'] = array(
 	'mobile-frontend-settings-site-header' => 'Jazyky {{GRAMMAR:genitív|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} je {{GENDER:$1|dostupný|dostupná|dostupné}} v $1 {{PLURAL:$1|jazyku|jazykoch}}. Všetky dostupné verzie sú uvedené nižšie',
 	'mobile-frontend-page-menu-contents' => 'obsah',
+	'mobile-frontend-nearby-to-page' => 'Nasledujúce stránky súvisia podľa geografickej polohy so stránkou $1',
+	'mobile-frontend-nearby-title' => 'V okolí',
+	'mobile-frontend-nearby-noresults' => 'Je tu trochu ticho... V okolí neboli nájdené žiadne stránky.',
 );
 
 /** Slovenian (slovenščina)
@@ -20491,6 +20472,8 @@ $messages['vi'] = array(
 	'beta-feature-geonotahack-description' => 'Khám phá các trang lân cận với nội dung mà bạn đang đọc.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Trang này cần sự giúp đỡ của bạn!',
 	'mobile-frontend-mainpage-cta-button' => 'Cải thiện trang này',
+	'beta-feature-minerva' => 'Sử dụng hình dạng di động (Minerva) trên máy tính để bàn',
+	'beta-feature-minerva-description' => 'Cho phép sử dụng hình dạng của thiết bị di động trên máy tính để bàn qua thẻ tùy chọn Bề ngoài.',
 );
 
 /** Volapük (Volapük)
