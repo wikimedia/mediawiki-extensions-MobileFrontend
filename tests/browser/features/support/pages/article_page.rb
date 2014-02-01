@@ -68,6 +68,19 @@ class ArticlePage
   div(:keep_going, class:'overlay-bottom')
 
   # visual editor
+  div(:overlay_ve, class: "overlay editor-overlay editor-overlay-ve")
+  div(:overlay_ve_header) do |page|
+    page.overlay_ve_element.div_element(class: "overlay-header-container position-fixed")
+  end
+  div(:overlay_ve_header_toolbar) do |page|
+    page.overlay_ve_header_element.div_element(class: "oo-ui-toolbar-bar")
+  end
+  span(:overlay_ve_header_toolbar_bold_button) do |page|
+    page.overlay_ve_header_element.span_element(class: "oo-ui-iconedElement-icon oo-ui-icon-bold-b")
+  end
+  span(:overlay_ve_header_toolbar_italic_button) do |page|
+    page.overlay_ve_header_element.span_element(class: "oo-ui-iconedElement-icon oo-ui-icon-italic-i")
+  end
   div(:editor_ve, class: "ve-ce-documentNode ve-ce-branchNode")
   div(:spinner_loading, class: "spinner loading")
 

@@ -7,6 +7,7 @@
 		templatePartials: {
 			content: M.template.get( 'modules/editor/VisualEditorOverlay' )
 		},
+		className: 'overlay editor-overlay editor-overlay-ve',
 		initialize: function( options ) {
 			var self = this;
 			this._super( options );
