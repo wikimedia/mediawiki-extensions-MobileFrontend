@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_4d5ce04e",
+        "filename": "less/minerva.less/minerva.mixins.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T17:56:35Z",
+      "side": 1,
+      "message": "Do we really need this? I mean, it saves a few keystrokes in LESS, but resulting CSS is the same and the core version is less magical.",
+      "revId": "e88ee010ebf7d56eef0883878f939ec55b922e64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_4d33c00a",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T17:56:35Z",
+      "side": 1,
+      "message": "Is this really required? Can\u0027t it be more specific?",
+      "revId": "e88ee010ebf7d56eef0883878f939ec55b922e64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
