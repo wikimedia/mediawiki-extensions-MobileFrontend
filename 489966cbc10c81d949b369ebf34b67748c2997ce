@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_20787bec",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 723,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-03T19:48:32Z",
+      "side": 1,
+      "message": "This will load this code in stable for all users. This code is highly experimental and we shouldn\u0027t do this. instead I would suggest \n\n\u0027mobile.toggling.alpha\u0027 \u003d\u003e $wgMFMobileResourceBoilerplate + array(\n\u0027dependencies\u0027 \u003d\u003e array(\n\u0027mobile.toggling\u0027,\n\u0027mobile.epoch\u0027",
+      "revId": "489966cbc10c81d949b369ebf34b67748c2997ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_a0636b3a",
+        "filename": "javascripts/externals/epoch.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-03T19:48:32Z",
+      "side": 1,
+      "message": "Can you add a test for this in test_epoch.js  ?",
+      "revId": "489966cbc10c81d949b369ebf34b67748c2997ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_c05e777b",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-03T19:48:32Z",
+      "side": 1,
+      "message": "I know I keep banging this drum but as tiny as this code is, it should belong in a separate file and use the section-toggle event\nM.on( \u0027section-toggle\u0027",
+      "revId": "489966cbc10c81d949b369ebf34b67748c2997ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
