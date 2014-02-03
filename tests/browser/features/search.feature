@@ -19,5 +19,5 @@ Feature: Search
       And I am on the home page
 
   Scenario: Search for partial text
-    When I type into search box bara
+    When I type into search box "bara"
     Then Search results should contain Barack Obama

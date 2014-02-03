@@ -7,7 +7,7 @@ When(/^I click the placeholder search box$/) do
   end
 end
 
-When(/^I type into search box (.+)$/) do |search_term|
+When(/^I type into search box "(.+)"$/) do |search_term|
   on(ArticlePage).search_box2=search_term
 end
 
