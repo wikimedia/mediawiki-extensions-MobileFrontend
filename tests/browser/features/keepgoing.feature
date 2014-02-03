@@ -11,7 +11,6 @@ Feature: Encourage new users to Keep Going
       And I click submit
     Then I see the KeepGoing drawer prompting me to continue editing
 
-  @wip
   Scenario: I see a KeepGoing message after completing my VisualEditor edit
     Given I am in alpha mode
       And I have just registered a new account

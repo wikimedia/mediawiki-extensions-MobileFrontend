@@ -38,12 +38,10 @@
 			var exampleMsg;
 			options = $.extend( {}, this.defaults, options );
 			if ( !options.msg ) {
-				if ( options.step === 1 ) {
-					if ( mw.config.get( 'wgUserEditCount' ) === 1 ) {
-						options.msg = mw.msg( 'mobilefrontend-keepgoing-links-ask-first' );
-					} else {
-						options.msg = mw.msg( 'mobilefrontend-keepgoing-links-ask-again' );
-					}
+				if ( options.isNewEditor ) {
+					options.msg = mw.msg( 'mobilefrontend-keepgoing-links-ask-first' );
+				} else if ( options.step === 1 ) {
+					options.msg = mw.msg( 'mobilefrontend-keepgoing-links-ask-again' );
 				} else if ( options.step === 2 ) {
 					options.msg = mw.msg( 'mobilefrontend-keepgoing-links-explain' );
 					options.heading = mw.msg( 'mobilefrontend-keepgoing-links-title' );
