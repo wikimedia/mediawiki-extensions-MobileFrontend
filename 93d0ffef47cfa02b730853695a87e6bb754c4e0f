@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_e02df342",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T18:52:50Z",
+      "side": 1,
+      "message": "Where is that file?",
+      "revId": "93d0ffef47cfa02b730853695a87e6bb754c4e0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
