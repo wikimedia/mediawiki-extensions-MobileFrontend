@@ -364,8 +364,8 @@
 		mw.config.set( 'wgRelevantPageName', page.title );
 		mw.config.set( 'wgArticleId', page.getId() );
 		M.emit( 'page-loaded', page );
-		// Update page title
-		document.title = page.title;
+		// Update page title with the displayTitle
+		document.title = page.displayTitle;
 	}
 
 	/**

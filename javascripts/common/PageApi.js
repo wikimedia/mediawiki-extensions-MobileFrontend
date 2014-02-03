@@ -77,7 +77,7 @@
 					page: title,
 					variant: mw.config.get( 'wgPreferredVariant' ),
 					redirect: 'yes',
-					prop: 'id|sections|text|lastmodified|lastmodifiedby|languagecount|hasvariants',
+					prop: 'id|sections|text|lastmodified|lastmodifiedby|languagecount|hasvariants|displaytitle',
 					noheadings: 'yes',
 					noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 					sectionprop: 'level|line|anchor',
@@ -105,7 +105,8 @@
 							historyUrl: mw.util.getUrl( title, { action: 'history' } ),
 							lastModifiedTimestamp: timestamp,
 							languageCount: resp.mobileview.languagecount,
-							hasVariants: resp.mobileview.hasOwnProperty( 'hasvariants' )
+							hasVariants: resp.mobileview.hasOwnProperty( 'hasvariants' ),
+							displayTitle: resp.mobileview.displaytitle
 						};
 						// Add non-anonymous user information
 						if ( lastModified ) {

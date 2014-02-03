@@ -15,6 +15,7 @@
 		defaults: {
 			// For titles from other namespaces use a prefix e.g. Talk:Foo
 			title: '',
+			displayTitle: '',
 			lead: '',
 			inBetaOrAlpha: M.isBetaGroupMember(),
 			isMainPage: false,
@@ -22,6 +23,15 @@
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' ),
 			languageLabel: mw.msg( 'mobile-frontend-language-article-heading' )
 		},
+
+		initialize: function( options ) {
+			// Fallback if no displayTitle provided
+			options.displayTitle = options.displayTitle || options.title;
+			// Surface the display title for M.reloadPage
+			this.displayTitle = options.displayTitle;
+			this._super( options );
+		},
+
 		/**
 		 * @name Page.prototype.isMainPage
 		 * @function
@@ -45,6 +55,8 @@
 				M.pageApi.getPage( pageTitle ).done( function( pageData ) {
 					options = $.extend( options, pageData );
 					options.hasLanguages = pageData.languageCount > 0 || pageData.hasVariants;
+					// Resurface the display title for M.reloadPage
+					self.displayTitle = options.displayTitle;
 
 					_super.call( self, options );
 

@@ -11,6 +11,7 @@
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
 				"id": -1,
+				displaytitle: 'Test',
 				"lastmodifiedby": {
 					"name": "bob",
 					"gender": "unknown"
@@ -33,6 +34,7 @@
 				lastModifiedUserGender: 'unknown',
 				lastModifiedTimestamp: 1382986196,
 				title: 'Test',
+				displayTitle: 'Test',
 				id: -1,
 				isMainPage: false,
 				languageCount: 10,
@@ -73,6 +75,7 @@
 					"name": "Melissa",
 					"gender": "female"
 				},
+				displaytitle: 'Test',
 				"lastmodified": "2013-10-28T18:49:56Z",
 				"languagecount": 10,
 				"sections": [
@@ -117,6 +120,7 @@
 				lastModifiedUserGender: 'female',
 				lastModifiedTimestamp: 1382986196,
 				title: 'Test',
+				displayTitle: 'Test',
 				id: -1,
 				isMainPage: false,
 				languageCount: 10,
