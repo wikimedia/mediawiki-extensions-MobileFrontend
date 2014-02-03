@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_198dfa36",
+        "filename": "tests/browser/README.mediawiki",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T22:47:55Z",
+      "side": 1,
+      "message": "Can we put \"Foo bar\" in quotes?",
+      "revId": "5ba1ec95ab3538dd5cfcd00f96b034b0923e03f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_39a0b699",
+        "filename": "tests/browser/features/page_loading.feature",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T22:47:55Z",
+      "side": 1,
+      "message": "I\u0027m not sure if that\u0027s mentioned in guidelines somewhere, but can we put arguments in quotes? Actually if you write:\n\nAnd I type into search box \"Foo bar\"\n\nand run cucumber before implementing the step, Cucumber will generate a better snippet (it will assume that the part in quotes is an argument).",
+      "revId": "5ba1ec95ab3538dd5cfcd00f96b034b0923e03f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_19a61abf",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 6
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T22:47:55Z",
+      "side": 1,
+      "message": "If that\u0027s the case, I would not test for the presence of the spinner at all. This still looks unreliable, who knows how 10.times (BTW, you don\u0027t need to assign it to a variable) will behave on different machines, how fast it will run on different Ruby interpreters, etc.\n\nI would just skip testing for the spinner. It\u0027s not that big of a deal, not crucial for the functionality (i.e. it\u0027s not the end of the world if the spinner is missing for a few days) and easy to catch by anyone simply using the page. Plus, the fact that it has a class \"spinner loading\" also doesn\u0027t mean it\u0027s showing a spinner ;)\n\nLet\u0027s just check if the page gets loaded.",
+      "revId": "5ba1ec95ab3538dd5cfcd00f96b034b0923e03f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
