@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_4d8f40d2",
+        "filename": "less/common/hacks.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T17:38:28Z",
+      "side": 1,
+      "message": "Can you comment that this line is only necessary for VE? Possibly also move it to tablet/hacks.less?",
+      "revId": "e445fa4cdad0571e93f68c71b2df559a9f8dea53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_edbdec64",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T17:38:28Z",
+      "side": 1,
+      "message": "What is the condition for them not to be necessary? Can we add it here?",
+      "revId": "e445fa4cdad0571e93f68c71b2df559a9f8dea53",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
