@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_74c52590",
+        "filename": "templates/talkSection.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-03T23:40:46Z",
+      "side": 1,
+      "message": "mw-mf-overlay-header seems like a rather meaningless class name. I wonder if we should move away from it to something more meaningful?",
+      "revId": "964d50b59394298160a5845f912837f9ee2fb22c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
