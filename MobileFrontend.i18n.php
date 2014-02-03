@@ -1932,6 +1932,8 @@ $messages['ast'] = array(
 	'beta-feature-geonotahack-description' => 'Descubra páxines que tan averaes xeográficamente a la páxina que ta lleendo agora.',
 	'mobile-frontend-mainpage-cta-prompt' => '¡Esta páxina necesita la so ayuda!',
 	'mobile-frontend-mainpage-cta-button' => 'Ameyorar esta páxina',
+	'beta-feature-minerva' => 'Activar la piel pa móvil (Minerva) nel escritoriu',
+	'beta-feature-minerva-description' => "Facer que la piel que s'usa nos preseos móviles seya una piel seleicionable pal escritoriu na llingüeta preferencies d'aspeutu.",
 );
 
 /** Azerbaijani (azərbaycanca)
@@ -3362,6 +3364,7 @@ $messages['co'] = array(
  * @author Mormegil
  * @author Paxt
  * @author Reaperman
+ * @author Utar
  * @author Vks
  */
 $messages['cs'] = array(
@@ -3530,7 +3533,8 @@ $messages['cs'] = array(
 	'mobile-frontend-watchlist-cta' => 'Pokud chcete sledovat tuto stránku, musíte se přihlásit nebo zaregistrovat.', # Fuzzy
 	'mobile-frontend-watchlist-cta-button-login' => 'Přihlásit se',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Zaregistrovat se',
-	'mobile-frontend-watchlist-login-action' => 'Přihlaste se a uvidíte to.',
+	'mobile-frontend-watchlist-purpose' => 'Seznam sledovaných stránek Vám umožňuje mít přehled o změnách stránek, jež Vás zajímají.',
+	'mobile-frontend-watchlist-login-action' => 'Pro jeho zobrazení se přihlaste.',
 	'mobile-frontend-watch-login' => 'Přidat stránku $1 mezi sledované.',
 	'mobile-frontend-watchlist-a-z' => 'Seznam',
 	'mobile-frontend-watchlist-feed' => 'Změněné',
@@ -4346,6 +4350,7 @@ $messages['da'] = array(
 	'beta-feature-geonotahack-description' => 'Find sider, der er geografisk i nærheden af indholdet på den side, du læser lige nu.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Denne side har brug for din hjælp!',
 	'mobile-frontend-mainpage-cta-button' => 'Forbedre denne side',
+	'beta-feature-minerva' => 'Aktivere mobilt udseende (Minerva) på PC',
 );
 
 /** German (Deutsch)
@@ -6937,6 +6942,8 @@ $messages['fr'] = array(
 	'beta-feature-geonotahack-description' => 'Découvrir des pages qui sont proches géographiquement du contenu de la page que vous êtes en train de regarder.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Cette page a besoin de votre aide !',
 	'mobile-frontend-mainpage-cta-button' => 'Améliorer cette page',
+	'beta-feature-minerva' => 'Activer le thème mobile (Minerve) sur le bureau',
+	'beta-feature-minerva-description' => 'Faire du thème utilisé sur les périphériques mobiles un thème de bureau sélectionnable sous l’onglet des préférences d’apparence',
 );
 
 /** Franco-Provençal (arpetan)
@@ -7409,6 +7416,12 @@ $messages['gl'] = array(
 	'mobilefrontend-keepgoing-cancel' => 'Non, grazas',
 	'mobilefrontend-keepgoing-suggest' => 'Si, por favor',
 	'mobilefrontend-keepgoing-suggest-again' => 'Probar outra',
+	'mobilefrontend-keepgoing-saved-title' => 'Gardouse a edición!',
+	'mobilefrontend-keepgoing-links-title' => 'Engada algunhas ligazóns',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Parabéns por facer a súa primeira edición! Quere axudar engadindo algunhas ligazóns ás páxinas creadas recentemente?',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Quere corrixir outra páxina?',
+	'mobilefrontend-keepgoing-links-explain' => 'Atope máis palabras que poderían ser ligazóns. Poña a palabra entre corchetes dobres.',
+	'mobilefrontend-keepgoing-links-example' => 'por exemplo, $1guitarra$2 convértese en $3guitarra$4',
 	'nearby' => 'Páxinas preto de vostede',
 	'mobile-frontend-desc' => 'Interface para dispositivos móbiles',
 	'mobile.css' => '/* O CSS que se coloque aquí afectará a quen use o sitio móbil */',
@@ -7418,6 +7431,8 @@ $messages['gl'] = array(
 	'mobile-frontend-logged-out' => 'Non accedeu ao sistema',
 	'mobile-frontend-logged-in-homepage-notification' => 'Reciba a nosa benvida, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Accedeu ao sistema como $1.',
+	'mobile-frontend-generic-404-title' => 'Erro: Non se atopou a páxina',
+	'mobile-frontend-generic-404-desc' => 'Non se puido atopar a páxina que buscaba.',
 	'mobile-frontend-sign-up-heading' => 'Crear unha conta',
 	'mobile-frontend-sign-in-heading' => 'Acceder',
 	'mobile-frontend-sign-in-why' => 'Se ten unha conta en {{SITENAME}}, pode acceder a continuación.',
@@ -7436,18 +7451,28 @@ $messages['gl'] = array(
 	'mobile-frontend-view' => 'Vista móbil',
 	'mobile-frontend-view-desktop' => 'Escritorio',
 	'mobile-frontend-view-mobile' => 'Móbil',
+	'mobile-frontend-cookies-required' => 'As cookies son necesarias para cambiar o modo de visualización. Permita o uso de cookies e inténteo de novo.',
 	'mobile-frontend-opt-in-explain' => 'Ao entrar nas probas da versión móbil terá acceso ás características experimentais, correndo o risco de atopar erros e problemas.',
 	'mobile-frontend-images-status' => 'Imaxes',
 	'mobile-frontend-disable-images' => 'Desactivar as imaxes na versión móbil',
 	'mobile-frontend-enable-images' => 'Activar as imaxes na versión móbil',
+	'mobile-frontend-expand-sections-status' => 'Expandir todas as seccións',
+	'mobile-frontend-expand-sections-description' => 'Expandir sempre todas as seccións ao explorar unha nova páxina.',
 	'mobile-frontend-missing-image' => 'Imaxe',
 	'mobile-frontend-off' => 'DESACTIVADAS',
 	'mobile-frontend-on' => 'ACTIVADAS',
 	'mobile-frontend-featured-article' => 'Contido destacado',
 	'mobile-frontend-news-items' => 'Actualidade',
+	'mobile-frontend-languages-404-title' => 'Erro de linguas',
+	'mobile-frontend-languages-404-desc' => 'Cómpre especificar un título válido.',
+	'mobile-frontend-languages-header' => 'Linguas',
+	'mobile-frontend-languages-nonexistent-title' => 'A páxina "$1" non existe.',
+	'mobile-frontend-languages-text' => '"$1" está dispoñible en $2 {{PLURAL:$2|lingua|linguas}}.',
+	'mobile-frontend-languages-variant-header' => 'Variantes de {{#language:{{CONTENTLANG}}}}',
+	'mobile-frontend-language-heading' => '<strong>Linguas</strong>',
 	'mobile-frontend-language-article-heading' => 'Ler noutra lingua',
 	'mobile-frontend-language-header' => 'Esta páxina está dispoñible en $1 {{PLURAL:$1|lingua|linguas}}',
-	'mobile-frontend-language-variant-header' => 'Escolla a variante {{#language:{{CONTENTLANG}}}}',
+	'mobile-frontend-language-variant-header' => 'Escolla a variante de {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-site-choose' => 'Procurar unha lingua',
 	'mobile-frontend-username' => 'Nome de usuario:',
 	'mobile-frontend-password' => 'Contrasinal:',
@@ -7471,6 +7496,8 @@ $messages['gl'] = array(
 	'mobile-frontend-account-create-email-placeholder' => 'Enderezo de correo electrónico (opcional)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Insira o código de confirmación',
 	'mobile-frontend-overlay-escape' => 'Volver',
+	'mobile-frontend-overlay-close' => 'Pechar',
+	'mobile-frontend-overlay-continue' => 'Continuar',
 	'mobile-frontend-placeholder' => 'Procurar en {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Procurar en {{SITENAME}} (beta)',
 	'mobile-frontend-placeholder-alpha' => 'Procurar en {{SITENAME}} (experimental)',
@@ -7481,6 +7508,7 @@ $messages['gl'] = array(
 	'mobile-frontend-footer-license' => 'O texto está dispoñible baixo a licenza [//gl.m.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0?useformat=mobile CC BY-SA 3.0]; pódense aplicar termos adicionais.',
 	'mobile-frontend-copyright' => 'Todo o contido está dispoñible baixo a licenza $1, agás que se indique o contrario.',
 	'mobile-frontend-footer-contact' => 'Contacto',
+	'mobile-frontend-terms-text' => 'Termos de uso',
 	'mobile-frontend-main-menu-button-tooltip' => 'Abrir o menú principal',
 	'mobile-frontend-main-menu-page-title' => 'Navegación do sitio',
 	'mobile-frontend-main-menu-featured' => 'Destacado',
@@ -7556,7 +7584,7 @@ $messages['gl'] = array(
 	'mobile-frontend-changeslist-ip' => 'Usuario anónimo',
 	'mobile-frontend-changeslist-nocomment' => 'sen resumo de edición',
 	'mobile-frontend-watchlist-filter-all' => 'Todas',
-	'mobile-frontend-watchlist-filter-articles' => 'Artigos', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Páxinas',
 	'mobile-frontend-watchlist-filter-talk' => 'Conversa',
 	'mobile-frontend-watchlist-filter-other' => 'Outras',
 	'mobile-frontend-watchlist-modified' => 'Modificada $1',
@@ -7574,7 +7602,7 @@ $messages['gl'] = array(
 	'mobile-frontend-photo-article-edit-comment' => 'Engadiuse unha imaxe para o seu uso na páxina',
 	'mobile-frontend-photo-article-donate-comment' => 'Imaxe achegada desde Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => 'Engadiuse unha imaxe á páxina',
-	'mobile-frontend-photo-caption-placeholder' => 'Engadir unha descrición (obrigatorio)', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Describa esta imaxe (obrigatorio)',
 	'mobile-frontend-photo-ownership' => 'Eu, $1, creei esta imaxe.',
 	'mobile-frontend-photo-ownership-help' => 'Que significa isto?',
 	'mobile-frontend-photo-ownership-confirm' => 'Xa entendín!',
@@ -7611,6 +7639,7 @@ $messages['gl'] = array(
 	'mobile-frontend-editor-error-preview' => 'Erro! Houbo un problema inesperado ao cargar a vista previa. Peche e vólvao intentar.',
 	'mobile-frontend-editor-tutorial-summary' => 'Non lle teña medo ao formato wiki. Intente mellorar a páxina "$1".',
 	'mobile-frontend-editor-tutorial-confirm' => 'Comece a editar',
+	'mobile-frontend-editor-tutorial-cancel' => 'Non, grazas',
 	'mobile-frontend-editor-captcha-try-again' => 'Código incorrecto. Inténteo de novo.',
 	'mobile-frontend-editor-abusefilter-warning' => 'Atención: Está seguro de querer gardar esta edición? Pode haber problemas con ela.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'Esta edición non se pode gardar porque detectamos un problema.',
@@ -7631,16 +7660,20 @@ $messages['gl'] = array(
 	'mobile-frontend-talk-reply-info' => 'Teña en conta que a súa resposta ha asinarse automaticamente co seu nome de usuario.',
 	'mobile-frontend-talk-reply' => 'Responder',
 	'mobile-frontend-media-details' => 'Detalles',
+	'mobile-frontend-media-license-link' => 'Información sobre a licenza',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Se un usuario está ou non está editando a través da interface móbil',
 	'mobile-frontend-profile-title' => 'Perfil de usuario',
 	'mobile-frontend-profile-last-upload-caption' => 'A última carga realizouna {{GENDER:$1|$1}} {{PLURAL:$2|onte|hai $2 días|0=hoxe}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Ver a páxina de conversa.', # Fuzzy
 	'mobile-frontend-profile-noargs' => 'Indique un nome de usuario para ollar un perfil.', # Fuzzy
 	'mobile-frontend-profile-nouser' => 'O nome de usuario non existe ou non é válido', # Fuzzy
+	'mobile-frontend-profile-activity-heading' => 'Actividade recente',
 	'mobile-frontend-profile-userpage-link' => 'Visitar a páxina de usuario.',
 	'mobile-frontend-requires-optin' => 'Esta páxina non está dispoñible a menos que active o noso modo beta. Visite a [[Special:MobileOptions|páxina de configuración]] para activalo.',
 	'mobile-frontend-profile-last-thank' => '[[Special:UserProfile/$1|$1]] foi {{GENDER:$1|o último|a última}} en agradecerlle unha edición feita en "[[$2]]".', # Fuzzy
 	'mobile-frontend-geonotahack' => 'Preto desta páxina',
+	'beta-feature-geonotahack' => 'Preto desta páxina',
+	'mobile-frontend-mainpage-cta-button' => 'Mellorar esta páxina',
 );
 
 /** Guarani (Avañe'ẽ)
@@ -11598,6 +11631,8 @@ $messages['ko'] = array(
 	'beta-feature-geonotahack-description' => '자신이 지금 보고 있는 내용과 지리적으로 가까운 문서를 찾아 보십시오.',
 	'mobile-frontend-mainpage-cta-prompt' => '이 문서는 여러분의 도움이 필요합니다!',
 	'mobile-frontend-mainpage-cta-button' => '이 문서 개선하기',
+	'beta-feature-minerva' => '데스크탑에서 모바일 스킨(미네르바)을 활성화',
+	'beta-feature-minerva-description' => '모바일 기기에서 사용되는 스킨을 문서 보이기 환경 설정에서 선택 가능한 데스크탑 스킨으로 만들기',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -12605,6 +12640,7 @@ $messages['lrc'] = array(
 	'mobile-frontend-overlay-escape' => 'ورئرد',
 	'mobile-frontend-overlay-continue' => 'ادامه دئین',
 	'mobile-frontend-placeholder' => 'پی جوری {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'مئن جوری {{نوم سیلجا}} (Beta)',
 	'mobile-frontend-clear-search' => 'پاك كردن',
 	'mobile-frontend-search-content' => 'پی جوری مینجا بلگیا',
 	'mobile-frontend-footer-sitename' => '{{نوم سیلجا}}',
@@ -12619,7 +12655,9 @@ $messages['lrc'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'تنظيمات',
 	'mobile-frontend-settings-site-header' => '{{نوم مالگه}} زونا',
 	'mobile-frontend-main-menu-account-create' => 'يه گل حساو راست بكيد',
+	'mobile-frontend-page-menu-contents' => 'مینونه یا',
 	'mobile-frontend-page-menu-history' => 'ويرگار',
+	'mobile-frontend-user-button-tooltip' => 'نشو دئن وارسیاری یا مه',
 	'mobile-frontend-nearby-title' => 'نزیک',
 	'mobile-frontend-donate-image-nouploads' => 'هیچ سوار کرد نئ.',
 	'mobile-frontend-donate-image-login-action' => 'بیایت وا مین سی بهر کردن رسانه یاتو.',
@@ -19814,6 +19852,8 @@ $messages['uk'] = array(
 	'beta-feature-geonotahack-description' => 'Відкрийте для себе сторінки, що географічно за змістом близькі із сторінкою, яку ви зараз читаєте.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Ця сторінка потребує вашої допомоги!',
 	'mobile-frontend-mainpage-cta-button' => 'Поліпшити цю сторінку',
+	'beta-feature-minerva' => 'Увімкнути мобільну оболонку (Minerva) на стільниці',
+	'beta-feature-minerva-description' => 'Робить тему оформлення, вживану на мобільних пристроях, доступною у вкладці налаштування вигляду звичайної версії.',
 );
 
 /** Urdu (اردو)
@@ -19873,7 +19913,6 @@ $messages['uz'] = array(
 	'mobile-frontend-save-settings' => 'Sozlamalarni saqla', # Fuzzy
 	'mobile-frontend-random-button' => 'Tasodifiy',
 	'mobile-frontend-back-to-top-of-section' => 'Bir boʻlim ortga qayt',
-	'mobile-frontend-close-section' => 'Bu boʻlimni yop',
 	'mobile-frontend-regular-site' => 'Oddiy koʻrinish',
 	'mobile-frontend-wml-continue' => 'Davomi...',
 	'mobile-frontend-wml-back' => 'Ortga...',
@@ -19933,7 +19972,7 @@ $messages['uz'] = array(
 	'mobile-frontend-nearby-title' => 'Yonida',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
-	'mobile-frontend-listed-image-no-description' => 'Tavsif mavjud emas',
+	'mobile-frontend-listed-image-no-description' => 'Tavsif yoʻq',
 	'mobile-frontend-watchlist-add' => '$1 kuzatuv roʻyxatingizga qoʻshildi',
 	'mobile-frontend-watchlist-removed' => '$1 kuzatuv roʻyxatingizdan oʻchirildi',
 	'mobile-frontend-watchlist-view' => 'Kuzatuv roʻyxatimni koʻrish',
@@ -19952,11 +19991,8 @@ $messages['uz'] = array(
 	'mobile-frontend-photo-ownership' => 'Men, $1, ushbu tasvirni yaratdim.',
 	'mobile-frontend-photo-ownership-help' => 'Bu nimani anglatadi?',
 	'mobile-frontend-photo-ownership-confirm' => 'Tushunarli!',
-	'mobile-frontend-image-uploading-wait' => 'Tasvir yuklanmoqda, iltimos kutib turing.',
-	'mobile-frontend-image-uploading-long' => 'Tasvir hali ham yuklanmoqda! Sabr uchun rahmat.',
 	'mobile-frontend-photo-upload-error' => 'Xatolik sodir boʻldi, iltimos, qaytadan urinib koʻring.',
 	'mobile-frontend-photo-submit' => 'Joʻnatish',
-	'mobile-frontend-photo-cancel' => 'Bekor qilish',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ yuklanmalar',
 	'tag-mobile_edit' => 'Mobil tahrirlash',
 	'tag-mobile_edit-description' => 'Saytning mobil versiyasidan qilingan tahrirlar',
@@ -20969,6 +21005,8 @@ $messages['zh-hans'] = array(
 	'beta-feature-geonotahack-description' => '发现你正在阅读的页面在地理上邻近的页面。',
 	'mobile-frontend-mainpage-cta-prompt' => '此页面需要您的帮助！',
 	'mobile-frontend-mainpage-cta-button' => '改进此页面',
+	'beta-feature-minerva' => '在桌面版上启用移动版皮肤（Minerva）',
+	'beta-feature-minerva-description' => '使适用移动设备的皮肤可作为桌面版的一项皮肤在首选项-外观选项卡中出现。',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
