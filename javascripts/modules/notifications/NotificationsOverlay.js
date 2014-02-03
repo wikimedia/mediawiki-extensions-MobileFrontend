@@ -47,7 +47,7 @@
 							notifications = $.map( result.query.notifications.list, function( a ) {
 								return { message: a['*'], timestamp: a.timestamp.mw };
 							} ).sort( function( a, b ) {
-								return a.timestamp < b.timestamp;
+								return a.timestamp < b.timestamp ? 1 : -1;
 							} );
 							if ( notifications.length ) {
 								options.notifications = notifications;
