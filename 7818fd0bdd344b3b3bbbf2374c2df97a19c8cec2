@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_f6f702f1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-02-03T04:03:10Z",
+      "side": 1,
+      "message": "I\u0027ve rearranged the dependencies to fix the mobile.ajaxpages module.",
+      "parentUuid": "aef5673e_0fc93129",
+      "revId": "7818fd0bdd344b3b3bbbf2374c2df97a19c8cec2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aef5673e_8fd421c0",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 10
@@ -30,6 +48,24 @@
       "writtenOn": "2014-01-18T01:07:26Z",
       "side": 1,
       "message": "It would be better to separate this functionality into a separate module and bind it the section-toggle event.",
+      "revId": "7818fd0bdd344b3b3bbbf2374c2df97a19c8cec2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_d6fc06d8",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 979
+      },
+      "writtenOn": "2014-02-03T04:03:10Z",
+      "side": 1,
+      "message": "I addressed this point in the review of patch set 1.",
+      "parentUuid": "aef5673e_8fd421c0",
       "revId": "7818fd0bdd344b3b3bbbf2374c2df97a19c8cec2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
