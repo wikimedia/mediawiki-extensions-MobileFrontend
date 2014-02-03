@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_4324b107",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-03T21:37:48Z",
+      "side": 1,
+      "message": "That will create an infinite loop... alternatively I could ensure mw.loader.using only fires once by using a boolean. Thoughts?",
+      "parentUuid": "6ef7ef47_80850fb4",
+      "revId": "667316b2efb0039676d3c13c3c5ddb776a1417cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_c09b171a",
         "filename": "javascripts/common/application.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_6327ad0e",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-03T21:37:48Z",
+      "side": 1,
+      "message": "I tried this previously and it wasn\u0027t working. Can try again.",
+      "parentUuid": "6ef7ef47_c09b171a",
+      "revId": "667316b2efb0039676d3c13c3c5ddb776a1417cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_008c5f31",
         "filename": "javascripts/modules/tutorials/ContentOverlay.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2014-02-03T19:59:22Z",
       "side": 1,
       "message": "Why not make it a part of the prototype? We don\u0027t need to redefine this method for every instance of ContentOverlay, every time postRender is called.\n\nYou could even reuse addPointerArrow() and add:\n\nif ( this.$pointer ) {\n  this.$pointer.remove();\n}\n\nthere.",
+      "revId": "667316b2efb0039676d3c13c3c5ddb776a1417cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_2321a5f6",
+        "filename": "javascripts/modules/tutorials/ContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-03T21:37:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ef7ef47_008c5f31",
       "revId": "667316b2efb0039676d3c13c3c5ddb776a1417cb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
