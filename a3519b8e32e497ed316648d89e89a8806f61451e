@@ -34,6 +34,24 @@
       "revId": "a3519b8e32e497ed316648d89e89a8806f61451e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_0017bfa9",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-03T19:34:45Z",
+      "side": 1,
+      "message": "I changed the selector.",
+      "parentUuid": "6ef7ef47_a1437ab5",
+      "revId": "a3519b8e32e497ed316648d89e89a8806f61451e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
