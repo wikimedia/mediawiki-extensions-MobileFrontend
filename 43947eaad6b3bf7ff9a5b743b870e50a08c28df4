@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_e038539d",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T18:45:55Z",
+      "side": 1,
+      "message": "Won\u0027t this load VE in landscape mode on some phones? Can you check on your Nexus and possibly an iPhone 5?",
+      "revId": "43947eaad6b3bf7ff9a5b743b870e50a08c28df4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
