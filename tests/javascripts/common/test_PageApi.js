@@ -16,6 +16,7 @@
 					"name": "bob",
 					"gender": "unknown"
 				},
+				"protection": [],
 				"lastmodified": "2013-10-28T18:49:56Z",
 				"languagecount": 10,
 				"sections":[
@@ -36,6 +37,9 @@
 				title: 'Test',
 				displayTitle: 'Test',
 				id: -1,
+				protection: {
+					edit: [ '*' ]
+				},
 				isMainPage: false,
 				languageCount: 10,
 				hasVariants: false,
@@ -71,6 +75,9 @@
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
 				"id": -1,
+				protection: {
+					edit: [ 'sysop' ]
+				},
 				"lastmodifiedby": {
 					"name": "Melissa",
 					"gender": "female"
@@ -119,6 +126,9 @@
 				lastModifiedUserName: 'Melissa',
 				lastModifiedUserGender: 'female',
 				lastModifiedTimestamp: 1382986196,
+				protection: {
+					edit: [ 'sysop' ]
+				},
 				title: 'Test',
 				displayTitle: 'Test',
 				id: -1,
@@ -290,6 +300,7 @@
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
 				"id": -1,
+				protection: [],
 				"lastmodifiedby": {
 					"user": {
 						"name": "",

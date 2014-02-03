@@ -12,7 +12,6 @@ Scenario: Page loads without ajax in stable
     And The text of the first heading is "Foo bar"
 
 # In alpha mode pages are loaded via JavaScript and ajax.
-@wip
 Scenario: Edit button updates when lazy load a page from search
   Given I am in alpha mode
     And I am logged in as a new user

@@ -49,7 +49,7 @@
 	 * @param {object} page The page to edit (optional). If no page is specified it
 	 *  assumes the current page.
 	 */
-	function init( page ) {
+	function setupEditor( page ) {
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
 		if ( M.query.undo ) {
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
@@ -112,6 +112,16 @@
 		} );
 	}
 
+	function init( page ) {
+		page.isEditable( user ).done( function( isEditable ) {
+			if ( isEditable ) {
+				setupEditor( page );
+			} else {
+				showSorryToast( 'mobile-frontend-editor-disabled' );
+			}
+		} );
+	}
+
 	/**
 	 * Initialize the edit button so that it launches a login call-to-action when clicked.
 	 */
@@ -146,26 +156,13 @@
 		// Editing is disabled (or browser is blacklisted)
 		showSorryToast( 'mobile-frontend-editor-unavailable' );
 	} else {
-		if ( user.isAnon() ) {
-			if ( mw.config.get( 'wgMFAnonymousEditing' ) && mw.config.get( 'wgIsPageEditable' ) ) {
-				// Set edit button to launch editor
-				init();
-				M.on( 'page-loaded', init );
-			} else {
-				// Set edit button to launch login CTA
-				initCta();
-				M.on( 'page-loaded', initCta );
-			}
+		if ( user.isAnon() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
+			// Set edit button to launch login CTA
+			initCta();
+			M.on( 'page-loaded', initCta );
 		} else {
-			// User is logged in
-			if ( mw.config.get( 'wgIsPageEditable' ) ) {
-				// Set edit button to launch editor
-				init();
-				M.on( 'page-loaded', init );
-			} else {
-				// Page is not editable (probably protected)
-				showSorryToast( 'mobile-frontend-editor-disabled' );
-			}
+			init( M.getCurrentPage() );
+			M.on( 'page-loaded', init );
 		}
 	}
 

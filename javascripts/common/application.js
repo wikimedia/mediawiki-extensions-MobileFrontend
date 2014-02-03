@@ -360,7 +360,7 @@
 		// wgTitle does not have a namespace prefix. e.g. Talk:Foo -> Foo, Foo -> Foo
 		mw.config.set( 'wgTitle', parts[1] || parts[0] );
 		// wgPageName has namespace prefix
-		mw.config.set( 'wgPageName', page.title.replace( ' ', '_' ) );
+		mw.config.set( 'wgPageName', page.title.replace( / /g, '_' ) );
 		mw.config.set( 'wgRelevantPageName', page.title );
 		mw.config.set( 'wgArticleId', page.getId() );
 		M.emit( 'page-loaded', page );
@@ -403,7 +403,11 @@
 
 	function loadCurrentPage() {
 		currentPage = new Page( {
-			title: mw.config.get( 'wgPageName' ),
+			title: mw.config.get( 'wgPageName' ).replace( /_/g, ' ' ),
+			protection: {
+				// FIXME: Make this pull the actual permissions of the current page
+				edit: mw.config.get( 'wgIsPageEditable' ) ? [ '*' ] : [ 'unknown' ]
+			},
 			lead: getLeadSection().html(),
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
 			sections: pageApi.getSectionsFromHTML( $( '#content' ) ),

@@ -77,13 +77,13 @@
 					page: title,
 					variant: mw.config.get( 'wgPreferredVariant' ),
 					redirect: 'yes',
-					prop: 'id|sections|text|lastmodified|lastmodifiedby|languagecount|hasvariants|displaytitle',
+					prop: 'id|sections|text|lastmodified|lastmodifiedby|languagecount|hasvariants|protection|displaytitle',
 					noheadings: 'yes',
 					noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 					sectionprop: 'level|line|anchor',
 					sections: leadOnly ? 0 : 'all'
 				}, options ).done( function( resp ) {
-					var sections, lastModified, resolveObj;
+					var sections, lastModified, resolveObj, mv;
 
 					if ( resp.error || !resp.mobileview.sections ) {
 						page.reject( resp );
@@ -91,22 +91,26 @@
 					} else if ( resp.mobileview.hasOwnProperty( 'liquidthreads' ) ) {
 						page.reject( { error: { code: 'lqt' } } );
 					} else {
-						sections = transformSections( resp.mobileview.sections );
+						mv = resp.mobileview;
+						sections = transformSections( mv.sections );
 						// Assume the timestamp is in the form TS_ISO_8601 and we don't care about old browsers
 						// change to seconds to be consistent with PHP
-						timestamp = new Date( resp.mobileview.lastmodified ).getTime() / 1000;
-						lastModified = resp.mobileview.lastmodifiedby;
+						timestamp = new Date( mv.lastmodified ).getTime() / 1000;
+						lastModified = mv.lastmodifiedby;
 						resolveObj = {
 							title: title,
-							id: resp.mobileview.id,
+							id: mv.id,
+							// FIXME: [API] the API sometimes returns an object and sometimes an array
+							// (Array seems to be a shorthand for apply this to everything)
+							protection: $.isArray( mv.protection ) ? { edit:[ '*' ] } : mv.protection,
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
-							isMainPage: resp.mobileview.hasOwnProperty( 'mainpage' ) ? true : false,
+							isMainPage: mv.hasOwnProperty( 'mainpage' ) ? true : false,
 							historyUrl: mw.util.getUrl( title, { action: 'history' } ),
 							lastModifiedTimestamp: timestamp,
-							languageCount: resp.mobileview.languagecount,
-							hasVariants: resp.mobileview.hasOwnProperty( 'hasvariants' ),
-							displayTitle: resp.mobileview.displaytitle
+							languageCount: mv.languagecount,
+							hasVariants: mv.hasOwnProperty( 'hasvariants' ),
+							displayTitle: mv.displaytitle
 						};
 						// Add non-anonymous user information
 						if ( lastModified ) {
