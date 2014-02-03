@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_80850fb4",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T19:59:22Z",
+      "side": 1,
+      "message": "Maybe just emit resize?",
+      "revId": "667316b2efb0039676d3c13c3c5ddb776a1417cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_c09b171a",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T19:59:22Z",
+      "side": 1,
+      "message": "You can also do $.proxy( M, \u0027emit\u0027, \u0027resize\u0027 )",
+      "revId": "667316b2efb0039676d3c13c3c5ddb776a1417cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_008c5f31",
+        "filename": "javascripts/modules/tutorials/ContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-03T19:59:22Z",
+      "side": 1,
+      "message": "Why not make it a part of the prototype? We don\u0027t need to redefine this method for every instance of ContentOverlay, every time postRender is called.\n\nYou could even reuse addPointerArrow() and add:\n\nif ( this.$pointer ) {\n  this.$pointer.remove();\n}\n\nthere.",
+      "revId": "667316b2efb0039676d3c13c3c5ddb776a1417cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
