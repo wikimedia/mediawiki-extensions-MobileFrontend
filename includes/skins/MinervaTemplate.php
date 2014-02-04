@@ -239,7 +239,7 @@ class MinervaTemplate extends BaseTemplate {
 							<form action="<?php echo $data['wgScript'] ?>" class="search-box">
 							<?php
 							echo $this->makeSearchInput( $data['searchBox'] );
-							echo $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit' ) );
+							echo $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit mw-ui-button mw-ui-progressive' ) );
 							?>
 							</form>
 							<?php

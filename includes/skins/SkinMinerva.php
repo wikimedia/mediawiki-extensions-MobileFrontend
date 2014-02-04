@@ -693,7 +693,12 @@ class SkinMinerva extends SkinTemplate {
 
 	protected function getSkinStyles() {
 		return array(
-			'mobile.styles',
+			'skins.minerva.chrome.styles',
+			'skins.minerva.buttons.styles',
+			'skins.minerva.content.styles',
+			'skins.minerva.drawers.styles',
+			// FIXME: Rename to use skins.minerva prefix - don't break cache in process
+			'mobile.styles.page',
 			'mobile.pagelist.styles',
 		);
 	}

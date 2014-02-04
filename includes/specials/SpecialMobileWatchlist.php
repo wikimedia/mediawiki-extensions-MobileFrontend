@@ -145,13 +145,17 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
 		$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, 'all' );
 		if ( $view === 'feed' ) {
-			$attrsFeed[ 'class' ] = 'active';
+			$attrsList[ 'class' ] = 'mw-ui-button';
+			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
+			$attrsFeed[ 'class' ] = 'active mw-ui-progressive mw-ui-button';
 		} else {
-			$attrsList[ 'class' ] = 'active';
+			$attrsFeed[ 'class' ] = 'mw-ui-button';
+			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
+			$attrsList[ 'class' ] = 'active mw-ui-progressive mw-ui-button';
 		}
 
 		$html =
-		Html::openElement( 'ul', array( 'class' => 'button-bar' ) ) .
+		Html::openElement( 'ul', array( 'class' => 'button-bar mw-ui-button-group' ) ) .
 			Html::openElement( 'li', $attrsList ) .
 			Linker::link( $sp,
 				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
