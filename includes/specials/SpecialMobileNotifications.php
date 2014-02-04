@@ -5,7 +5,7 @@
 class SpecialMobileNotifications extends SpecialNotifications {
 	public function execute( $par ) {
 		$out = $this->getOutput();
-		$out->addModuleStyles( 'mobile.notifications.special.styles' );
+		$out->addModuleStyles( 'mobile.special.notifications.styles' );
 		$title = $out->getRequest()->getText( 'returnto' );
 		$title = Title::newFromText( $title );
 		if ( $title ) {
@@ -16,7 +16,7 @@ class SpecialMobileNotifications extends SpecialNotifications {
 			);
 		}
 		parent::execute( $par );
-		$out->addModules( 'mobile.notifications.special.scripts' );
+		$out->addModules( 'mobile.special.notifications.scripts' );
 	}
 
 	/**

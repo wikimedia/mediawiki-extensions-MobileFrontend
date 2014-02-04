@@ -892,111 +892,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.site' => array(
-		'dependencies' => array( 'mobile.startup' ),
-		'class' => 'MobileSiteModule',
-	),
-
-	// Resources to be loaded on desktop version of site
-	'mobile.desktop' => array(
-		'scripts' => array( 'javascripts/desktop/unset_stopmobileredirect.js' ),
-		'dependencies' => array( 'jquery.cookie' ),
-		'localBasePath' => $localBasePath,
-		'remoteExtPath' => $remoteExtPath,
-		'targets' => 'desktop',
-	),
-
-	/**
-		* Special page modules
-		* FIXME: Remove the need for these by making more reusable CSS
-		* FIXME: Rename these modules in the interim to clarify that they are modules for use on special pages
-		*
-		* Note: Use correct names to ensure modules load on pages
-		* Name must be the name of the special page lowercased prefixed by 'mobile.'
-		* suffixed by '.styles' or '.scripts'
-		*/
-	// Special:UserProfile
-	'mobile.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'less/specials/common.less',
-		),
-	),
-
-	'minerva.special.preferences' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'scripts' => array(
-			'javascripts/specials/preferences.js',
-		),
-	),
-
-	'mobile.mobilemenu.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'less/specials/mobilemenu.less',
-		),
-	),
-	'mobile.mobileoptions.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'less/specials/mobileoptions.less',
-		),
-	),
-	'mobile.mobileoptions.scripts' => $wgMFMobileResourceBoilerplate + array(
-		'position' => 'top',
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.templates',
-		),
-		'scripts' => array(
-			'javascripts/specials/mobileoptions.js',
-		),
-		'templates' => array(
-			'specials/mobileoptions/checkbox',
-		),
-		'messages' => array(
-			'mobile-frontend-off',
-			'mobile-frontend-on',
-			'mobile-frontend-expand-sections-description',
-			'mobile-frontend-expand-sections-status',
-		),
-	),
-	'mobile.mobileeditor.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-			'scripts' => array(
-					'javascripts/specials/redirectmobileeditor.js',
-			),
-	),
-
-	'mobile.nearby.styles' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/specials/nearby.less',
-		),
-		'skinStyles' => array(
-			'vector' => 'less/desktop/special/nearby.less',
-		),
-	),
-
-	// FIXME: Merge with mobile.nearby when geonotahack moves to  stable
-	'mobile.nearby.beta' => $wgMFMobileResourceBoilerplate + array(
-		'messages' => array(
-			// NearbyOverlay.js
-			'mobile-frontend-nearby-to-page',
-			'mobile-frontend-nearby-title',
-
-			// PagePreviewOverlay
-			'mobile-frontend-nearby-directions',
-			'mobile-frontend-nearby-link',
-		),
-		'templates' => array(
-			'overlays/nearby',
-		),
-		'dependencies' => array(
-			'mobile.stable.common',
-			'mobile.nearby',
-			'mobile.beta.common',
-		),
-		'scripts' => array(
-			'javascripts/modules/nearby/PagePreviewOverlay.js',
-			'javascripts/modules/nearby/NearbyOverlay.js',
-		)
-	),
-
 	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
 		'templates' => array(
 			'articleList',
@@ -1004,7 +899,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'dependencies' => array(
 			'mobile.stable.common',
-			'mobile.nearby.styles',
+			// FIXME: Kill this dependency!
+			'mobile.special.nearby.styles',
 			'jquery.json',
 			'mediawiki.language',
 			'mobile.templates',
@@ -1030,36 +926,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/nearby/NearbyApi.js',
 			'javascripts/modules/nearby/Nearby.js',
-		),
-	),
-
-	'mobile.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.nearby',
-		),
-		'messages' => array(
-			// specials/nearby.js
-			'mobile-frontend-nearby-refresh',
-		),
-		'scripts' => array(
-			'javascripts/specials/nearby.js',
-		),
-		// stop flash of unstyled content when loading from cache
-		'position' => 'top',
-	),
-	'mobile.notifications.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'less/specials/notifications.less',
-		),
-		'position' => 'top',
-	),
-	'mobile.notifications.special.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
-		'scripts' => array(
-			'javascripts/specials/notifications.js',
-		),
-		'messages' => array(
-			// defined in Echo
-			'echo-load-more-error',
 		),
 	),
 
@@ -1094,37 +960,139 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'mobile.site' => array(
+		'dependencies' => array( 'mobile.startup' ),
+		'class' => 'MobileSiteModule',
+	),
+
+	// Resources to be loaded on desktop version of site
+	'mobile.desktop' => array(
+		'scripts' => array( 'javascripts/desktop/unset_stopmobileredirect.js' ),
+		'dependencies' => array( 'jquery.cookie' ),
+		'localBasePath' => $localBasePath,
+		'remoteExtPath' => $remoteExtPath,
+		'targets' => 'desktop',
+	),
+) );
+
+/**
+	* Special page modules
+	* FIXME: Remove the need for these by making more reusable CSS
+	*
+	* Note: Use correct names to ensure modules load on pages
+	* Name must be the name of the special page lowercased prefixed by 'mobile.special.' or 'skins.minerva.special.'
+	* depending on where the module is used.
+	* suffixed by '.styles' or '.scripts'
+	*/
+$wgMobileSpecialPageModules = array(
+	'mobile.special.mobilemenu.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/search.less',
+			'less/specials/mobilemenu.less',
 		),
 	),
-	'mobile.watchlist.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'mobile.special.mobileoptions.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
+			'less/specials/mobileoptions.less',
+		),
+	),
+	'mobile.special.mobileoptions.scripts' => $wgMFMobileResourceBoilerplate + array(
+		'position' => 'top',
 		'dependencies' => array(
-			'mobile.loggingSchemas',
-			'mobile.stable',
+			'mobile.startup',
+			'mobile.templates',
 		),
 		'scripts' => array(
-			'javascripts/specials/watchlist.js',
+			'javascripts/specials/mobileoptions.js',
+		),
+		'templates' => array(
+			'specials/mobileoptions/checkbox',
+		),
+		'messages' => array(
+			'mobile-frontend-off',
+			'mobile-frontend-on',
+			'mobile-frontend-expand-sections-description',
+			'mobile-frontend-expand-sections-status',
 		),
 	),
-	'mobile.watchlist.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'mobile.special.mobileeditor.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+			'scripts' => array(
+					'javascripts/specials/redirectmobileeditor.js',
+			),
+	),
+
+	'mobile.special.nearby.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/watchlist.less',
+			'less/specials/nearby.less',
+		),
+		'skinStyles' => array(
+			'vector' => 'less/desktop/special/nearby.less',
 		),
 	),
-	'mobile.userlogin.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+
+	// FIXME: Merge with mobile.nearby when geonotahack moves to  stable
+	'mobile.special.nearby.beta' => $wgMFMobileResourceBoilerplate + array(
+		'messages' => array(
+			// NearbyOverlay.js
+			'mobile-frontend-nearby-to-page',
+			'mobile-frontend-nearby-title',
+
+			// PagePreviewOverlay
+			'mobile-frontend-nearby-directions',
+			'mobile-frontend-nearby-link',
+		),
+		'templates' => array(
+			'overlays/nearby',
+		),
+		'dependencies' => array(
+			'mobile.stable.common',
+			'mobile.nearby',
+			'mobile.beta.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/nearby/PagePreviewOverlay.js',
+			'javascripts/modules/nearby/NearbyOverlay.js',
+		)
+	),
+
+	'mobile.special.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.nearby',
+		),
+		'messages' => array(
+			// specials/nearby.js
+			'mobile-frontend-nearby-refresh',
+		),
+		'scripts' => array(
+			'javascripts/specials/nearby.js',
+		),
+		// stop flash of unstyled content when loading from cache
+		'position' => 'top',
+	),
+
+	'mobile.special.notifications.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/userlogin.less',
+			'less/specials/notifications.less',
+		),
+		'position' => 'top',
+	),
+
+	'mobile.special.notifications.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+		'scripts' => array(
+			'javascripts/specials/notifications.js',
+		),
+		'messages' => array(
+			// defined in Echo
+			'echo-load-more-error',
 		),
 	),
-	// Special:UserProfile
-	'mobile.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+
+	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/userprofile.less',
 		),
 	),
-	'mobile.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
+
+	'mobile.special.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable.styles',
 			'mobile.stable.common',
@@ -1147,22 +1115,29 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'position' => 'top',
 	),
-	'mobile.uploads.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+
+	'mobile.special.uploads.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/uploads.less',
 			'less/modules/uploads/PhotoUploaderButton.less',
 		),
 	),
-	'mobile.mobilediff.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+
+	'mobile.special.pagefeed.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'less/specials/watchlist.less',
+			'less/specials/pagefeed.less',
+		),
+	),
+
+	'mobile.special.mobilediff.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
 			'less/specials/mobilediff.less',
 		),
 	),
 
 	// Note that this module is declared as a dependency in the Thanks extension (for the
 	// mobile diff thanks button code). Keep the module name there in sync with this one.
-	'mobile.mobilediff.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.special.mobilediff.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.loggingSchemas',
 			'mobile.stable.common',
@@ -1171,7 +1146,49 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/specials/mobilediff.js',
 		),
 	),
-) );
+);
 
+/**
+	* Special page modules  that are specific to minerva.
+	* FIXME: With the exception of skins.minerva.special.styles these should not exist.
+	*/
+$wgMinervaSpecialPageModules = array(
+	'skins.minerva.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
+			'less/specials/common.less',
+		),
+	),
+
+	'skins.minerva.special.preferences.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'scripts' => array(
+			'javascripts/specials/preferences.js',
+		),
+	),
+
+	'skins.minerva.special.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
+			'less/specials/search.less',
+		),
+	),
+
+	'skins.minerva.special.watchlist.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.loggingSchemas',
+			'mobile.stable',
+		),
+		'scripts' => array(
+			'javascripts/specials/watchlist.js',
+		),
+	),
+
+	'skins.minerva.special.userlogin.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
+			'less/specials/userlogin.less',
+		),
+	),
+);
+
+$wgResourceModules = array_merge( $wgResourceModules, $wgMobileSpecialPageModules );
+$wgResourceModules = array_merge( $wgResourceModules, $wgMinervaSpecialPageModules );
 unset( $localBasePath );
 unset( $remoteExtPath );

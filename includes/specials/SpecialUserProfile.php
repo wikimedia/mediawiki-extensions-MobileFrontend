@@ -226,7 +226,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		$this->addModules();
-		$out->addModuleStyles( 'mobile.special.styles' );
+		$out->addModuleStyles( 'skins.minerva.special.styles' );
 		$out->setProperty( 'unstyledContent', true );
 		$out->addJsConfigVars( array( 'wgMFMaxDescriptionChars' => self::MAX_DESCRIPTION_CHARS ) );
 		if ( $par ) {
