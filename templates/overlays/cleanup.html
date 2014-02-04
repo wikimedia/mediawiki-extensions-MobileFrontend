@@ -1,8 +1,10 @@
 <ul class="cleanup">
 	{{#issues}}
-	<li class="icon-24px">
-		{{#icon}}<img src="{{icon}}"> {{/icon}}
-		{{{text}}}
+	<li>
+		<div class="issue-notice">
+			{{#icon}}<img src="{{icon}}"> {{/icon}}
+			{{{text}}}
+		</div>
 	</li>
 	{{/issues}}
 </ul>

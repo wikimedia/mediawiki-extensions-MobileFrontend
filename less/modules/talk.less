@@ -18,4 +18,35 @@
 	.error {
 		border: solid 1px @redBase;
 	}
+
+	.comment {
+		margin: 40px 0 10px 0;
+
+		.comment-content {
+			margin: 0 @contentMargin;
+		}
+
+		.wikitext-editor {
+			margin-top: 1em;
+			// Normally, wikitext editors don't have a border
+			border: 1px solid @grayLight;
+		}
+	}
+}
+
+.content-header {
+	.add {
+		margin-top: 1em;
+	}
+}
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	// Although talk pages are only loaded in alpha and beta currently, this is overriding
+	// a rule targeted to alpha and beta in tablet/common.less.
+	.alpha,
+	.beta {
+		.content {
+			margin: 0 auto 0 0;
+		}
+	}
 }

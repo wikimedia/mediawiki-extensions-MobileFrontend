@@ -2,7 +2,6 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-
 .overlay {
 	.mw-mf-notifications {
 		padding-bottom: 0;
@@ -17,7 +16,7 @@
 		margin-left: 40px;
 	}
 	.mw-echo-notification-footer {
-		font-size: 0.75em;
+		font-size: .75em;
 	}
 	.mw-echo-notification-primary-link {
 		display: none;
@@ -38,5 +37,28 @@
 		// it otherwise. The 10px padding corresponds with the icon margin.
 		margin: 1em 1em 0 1em;
 		padding: 0 1em 1em 10px;
+	}
+}
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.overlay {
+		.mw-echo-title {
+			font-size: 1em;
+			line-height: 1.4;
+		}
+		.mw-echo-content {
+			font-size: .9em;
+			line-height: 1.4;
+		}
+		.mw-echo-payload {
+			margin-top: .4em
+		}
+		.mw-echo-notification-footer {
+			margin-top: .6em;
+			font-size: .9em;
+		}
+		.mw-echo-notification {
+			padding: 1.75em 2.75em;
+		}
 	}
 }
