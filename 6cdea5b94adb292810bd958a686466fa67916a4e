@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_94fe7134",
+        "filename": "javascripts/modules/tutorials/ContentOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-04T01:06:21Z",
+      "side": 1,
+      "message": "Doesn\u0027t seem to be necessary.",
+      "revId": "6cdea5b94adb292810bd958a686466fa67916a4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
