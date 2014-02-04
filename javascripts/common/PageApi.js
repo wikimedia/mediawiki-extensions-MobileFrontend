@@ -187,8 +187,8 @@
 				};
 				if ( variantPath ) {
 					variant.url = variantPath
-						.replace( '$1', item.code )
-						.replace( '$2', title );
+						.replace( '$1', title )
+						.replace( '$2', item.code );
 				} else {
 					variant.url = mw.util.getUrl( title, { 'variant' : item.code } );
 				}

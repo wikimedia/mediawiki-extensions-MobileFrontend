@@ -212,7 +212,7 @@
 							"name": "Latinica"
 						}
 					],
-					"variantarticlepath": "/wiki/$1/$2",
+					"variantarticlepath": "/$2/$1"
 				},
 				"languages": [
 					{
@@ -268,17 +268,17 @@
 				{
 					"lang":"sr",
 					"langname":"sr",
-					"url":"/wiki/sr/Test",
+					"url":"/sr/Test"
 				},
 				{
 					"lang":"sr-ec",
 					"langname":"\u040b\u0438\u0440\u0438\u043b\u0438\u0446\u0430",
-					"url":"/wiki/sr-ec/Test",
+					"url":"/sr-ec/Test"
 				},
 				{
 					"lang":"sr-el",
 					"langname":"Latinica",
-					"url":"/wiki/sr-el/Test",
+					"url":"/sr-el/Test"
 				}
 			], 'return augmented language variant links' );
 		} );
