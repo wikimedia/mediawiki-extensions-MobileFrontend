@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_151c9a78",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2014-02-04T17:51:56Z",
+      "side": 1,
+      "message": "I\u0027m not familiar enough with Ruby to completely understand http://www.ruby-doc.org/core-2.1.0/Random.html, but it looks like new uses ::new_seed, which (maybe?) uses /dev/urand as the seed? If not, then you also need to call srand directly. But maybe a Ruby person can confirm.",
+      "revId": "e0615563dda05f94fd9d7cc9d244ffddc3a94d7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
