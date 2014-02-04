@@ -105,6 +105,11 @@ When(/^I am on the home page$/) do
   visit(HomePage)
 end
 
+Given(/^I visit a protected page$/) do
+  # FIXME: Assumes Barack Obama article is protected
+  step 'I am on the Barack_Obama article'
+end
+
 When(/^I click the browser back button$/) do
   on(ArticlePage).back
 end

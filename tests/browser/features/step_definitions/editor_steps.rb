@@ -1,5 +1,9 @@
+Then(/^The edit button is enabled$/) do
+  on(ArticlePage).edit_button_element.when_present.class_name.should match "enabled"
+end
+
 When(/^I click the edit button$/) do
-  on(ArticlePage).edit_button_element.when_present.click
+  on(ArticlePage).edit_link_element.when_present.click
 end
 
 Then(/^I see the editor$/) do

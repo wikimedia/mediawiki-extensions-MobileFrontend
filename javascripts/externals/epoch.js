@@ -12,6 +12,8 @@ window.History = {
 	function isBrowserSupported( ua ) {
 		// http://caniuse.com/history
 		return (
+			// Firefox 4.0+
+			ua.match( /Firefox\/[4-9]\.|Firefox\/[1-9][1-9]*\./ ) ||
 			// Chrome browser 5-9
 			ua.match( /Chrome\/[5-9]\./ ) ||
 			// Chrome 10+
