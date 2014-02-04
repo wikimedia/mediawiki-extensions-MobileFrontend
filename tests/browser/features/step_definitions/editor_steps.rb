@@ -6,14 +6,14 @@ When(/^I click the edit button$/) do
   on(ArticlePage).edit_link_element.when_present.click
 end
 
-Then(/^I see the editor$/) do
+Then(/^I see the wikitext editor$/) do
   on(ArticlePage).editor_overlay_element.should be_visible
 end
 
-When(/^I click the editor overlay close button$/) do
+When(/^I click the wikitext editor overlay close button$/) do
   on(ArticlePage).editor_overlay_close_button_element.click
 end
 
-Then(/^I should not see the editor$/) do
+Then(/^I should not see the wikitext editor$/) do
   on(ArticlePage).editor_overlay_element.should_not be_visible
 end
