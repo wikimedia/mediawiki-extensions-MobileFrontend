@@ -63,10 +63,6 @@ Given(/^I am logged in as a user with a > (\d+) edit count$/) do |arg1|
   on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
 end
 
-When /^I go to the login page$/ do
-  visit(LoginPage)
-end
-
 Given /^I am in beta mode$/ do
   visit(MobileOptions) do |page|
     page.beta_element.when_present.click
@@ -93,16 +89,20 @@ When /^I go to random page$/ do
   visit(RandomPage)
 end
 
-When(/^I go to an uncreated page using URL (.+)$/) do |article|
+When(/^I go to the "(.+)" page$/) do |article|
   visit(NonexistentPage, :using_params => {:article_name => article})
 end
 
-Then(/^the URL of of my page should contain (.+)$/) do |article|
-  on(NonexistentPage).current_url.should match article
+When /^I go to the login page$/ do
+  step 'I go to the "Special:Userlogin" page'
 end
 
 When(/^I am on the home page$/) do
-  visit(HomePage)
+  step 'I go to the "Main Page" page'
+end
+
+Then(/^the URL of of my page should contain "(.+)"$/) do |article|
+  on(NonexistentPage).current_url.should match article
 end
 
 Given(/^I visit a protected page$/) do

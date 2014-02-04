@@ -3,7 +3,7 @@ Feature: Wikitext Editor
 
   Background:
     Given I am logged into the mobile website
-    When I go to an uncreated page using URL Nonexistent_page_ijewrcmhvg34773
+    When I go to the "Nonexistent_page_ijewrcmhvg34773" page
       And I click the edit button
 
   Scenario: Opening editor
