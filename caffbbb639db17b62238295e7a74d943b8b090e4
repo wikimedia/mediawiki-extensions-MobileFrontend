@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_11e4a5da",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T19:20:16Z",
+      "side": 1,
+      "message": "This should match with other edit buttons .e.g those in the section.\nYou should limit this to be an element inside the ca-edit element.",
+      "revId": "caffbbb639db17b62238295e7a74d943b8b090e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
