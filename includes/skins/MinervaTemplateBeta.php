@@ -17,7 +17,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
 
 		// If languages are available, render a languages link
-		if ( $this->data['language_urls'] ) {
+		if ( $this->getLanguages() || $this->getLanguageVariants() ) {
 			$languageUrl = SpecialPage::getTitleFor( 'MobileLanguages', $this->getSkin()->getTitle() )->getLocalURL();
 			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 
