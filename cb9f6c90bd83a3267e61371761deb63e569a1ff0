@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_025fb178",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-05T23:03:15Z",
+      "side": 1,
+      "message": "These rules are only for echo notifications. The only reason we have the rules in MobileFrontend is to override some of the styles for mobile. Since they aren\u0027t going to be used anywhere else, I don\u0027t think it would make sense to bloat mediawiki-ui with them.",
+      "parentUuid": "6ef7ef47_675b2727",
+      "revId": "cb9f6c90bd83a3267e61371761deb63e569a1ff0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_6791e79b",
         "filename": "less/modules/talk.less",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2014-02-05T21:48:03Z",
       "side": 1,
       "message": "?\nTalk only appears in alpha/beta. I think you can get away with dropping these :)",
+      "revId": "cb9f6c90bd83a3267e61371761deb63e569a1ff0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_029c5111",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-05T23:03:15Z",
+      "side": 1,
+      "message": "This is just in case the talk pages are promoted to stable before the typography changes. I\u0027ll replace it with a comment to that effect instead.",
+      "parentUuid": "6ef7ef47_6791e79b",
       "revId": "cb9f6c90bd83a3267e61371761deb63e569a1ff0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
