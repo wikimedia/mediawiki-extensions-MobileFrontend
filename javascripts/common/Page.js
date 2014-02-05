@@ -13,10 +13,17 @@
 	Page = View.extend( {
 		template: mw.template.get( 'page' ),
 		defaults: {
-			// For titles from other namespaces use a prefix e.g. Talk:Foo
+			/**
+			 * Includes prefix where needed and is human readable.
+			 * e.g. Talk:The man who lived
+			 * @string
+			 */
 			title: '',
 			displayTitle: '',
 			lead: '',
+			protection: {
+				edit: [ '*' ]
+			},
 			inBetaOrAlpha: M.isBetaGroupMember(),
 			isMainPage: false,
 			talkLabel: mw.msg( 'mobile-frontend-talk-overlay-header' ),
@@ -39,6 +46,30 @@
 		 */
 		isMainPage: function() {
 			return this.options.isMainPage;
+		},
+
+		/**
+		 * Checks whether the given user can edit the page.
+		 * @name Page.prototype.isEditable
+		 * @function
+		 * @param {mw.user} Object representing a user
+		 * @return {jQuery.deferred} With parameter boolean
+		 */
+		isEditable: function( user ) {
+			var editProtection = this.options.protection.edit,
+				resp = $.Deferred();
+
+			user.getGroups().done( function( groups ) {
+				var editable = false;
+				$.each( groups, function( i, group ) {
+					if ( editProtection.indexOf( group ) > -1 ) {
+						editable = true;
+						return false;
+					}
+				} );
+				resp.resolve( editable );
+			} );
+			return resp;
 		},
 
 		// FIXME: This assumes only one page can be rendered at one time - emits a page-loaded event and sets wgArticleId

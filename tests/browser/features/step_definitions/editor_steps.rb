@@ -1,5 +1,7 @@
 Then(/^The edit button is enabled$/) do
-  on(ArticlePage).edit_button_element.when_present.class_name.should match "enabled"
+  on(ArticlePage).wait_until(5, "Edit button not enabled") do
+    on(ArticlePage).edit_button_element.when_present.class_name.should match "enabled"
+  end
 end
 
 When(/^I click the edit button$/) do
