@@ -10,6 +10,7 @@
 		router = new Router(),
 		$viewportMeta, viewport,
 		currentPage,
+		inWideScreenMode = false,
 		ua = window.navigator.userAgent,
 		isAppleDevice = /ipad|iphone/i.test( ua ),
 		isIPhone4 = isAppleDevice && /OS 4_/.test( ua ),
@@ -110,12 +111,16 @@
 	 */
 	function loadWideScreenModules() {
 		var modules = [ 'tablet.styles' ];
-		if ( isWideScreen() && $( 'body' ).hasClass( 'skin-minerva' ) && M.isBetaGroupMember() ) {
+		if ( !inWideScreenMode && isWideScreen() &&
+			$( 'body' ).hasClass( 'skin-minerva' ) && M.isBetaGroupMember() ) {
 			// Adjust screen for tablets
 			if ( inNamespace( '' ) ) {
 				modules.push( 'tablet.scripts' );
 			}
-			mw.loader.using( modules );
+			inWideScreenMode = true;
+			mw.loader.using( modules, function() {
+				M.emit( 'resize' );
+			} );
 		}
 	}
 
@@ -243,7 +248,8 @@
 			$doc.addClass( 'touch-events' );
 		}
 		$( loadWideScreenModules );
-		$( window ).on( 'resize', loadWideScreenModules );
+		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
+		M.on( 'resize', loadWideScreenModules );
 		loadCurrentPage();
 	}
 

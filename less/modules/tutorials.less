@@ -3,9 +3,14 @@
 
 /* Tutorial overlay styling */
 
-.tutorial,
-// Use two selectors to ensure this is more specific then .mw-mf-overlay in cases of load order differences
-.mw-mf-overlay.tutorial {
+// For upload tutorial
+.mw-mf-overlay.tutorial,
+// For page action overlay
+.content-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 	padding: 1em @contentMargin;
 	line-height: 1.4;
 	font-size: .9em;

@@ -25,9 +25,6 @@ A file for css that optimises the Minerva skin on larger devices.
 		.pre-content {
 			position: relative;
 			padding: 20px @contentPaddingTablet 0 @contentPaddingTablet;
-			max-width: @contentMaxWidth;
-			margin-left: auto;
-			margin-right: auto;
 			border: none;
 
 			h1#section_0 {
@@ -48,11 +45,18 @@ A file for css that optimises the Minerva skin on larger devices.
 				}
 			}
 		}
-		.content {
+
+		// FIXME: Have a class that identifies all 4 of these
+		.drawer,
+		.pre-content,
+		.content,
+		.content-overlay {
 			max-width: @contentMaxWidth;
 			margin: 0 auto;
-			padding: 1.6em @contentPaddingTablet 0 @contentPaddingTablet;
+		}
 
+		.content {
+			padding: 1.6em @contentPaddingTablet 0 @contentPaddingTablet;
 			// Classes added by thumbnails
 			// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
 			.thumb {
