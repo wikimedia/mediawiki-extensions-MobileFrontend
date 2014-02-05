@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_ccc8e0ac",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-05T20:12:00Z",
+      "side": 1,
+      "message": "Can this functionality be a subpage of MobileWebApp to keep everything in one place?",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_acc59492",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-05T20:12:00Z",
+      "side": 1,
+      "message": "Unused.",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_8cc2d886",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-05T20:12:00Z",
+      "side": 1,
+      "message": "Unused.",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_4c34d0a7",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-05T20:12:00Z",
+      "side": 1,
+      "message": "Unused.",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_2c39849f",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-05T20:12:00Z",
+      "side": 1,
+      "message": "Let genAppCache() call this getter?",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_0c3ec887",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-05T20:12:00Z",
+      "side": 1,
+      "message": "Why not make it depend on the actual module(s) needed by the app? Currently, if resources have changed but MF haven\u0027t the manifest will not be refreshed.",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
