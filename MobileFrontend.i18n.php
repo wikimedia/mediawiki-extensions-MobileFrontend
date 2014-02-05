@@ -6640,6 +6640,7 @@ plakatum, forsíðum á bókum osfr.',
  * @author Tititou36
  * @author Tpt
  * @author Urhixidur
+ * @author Verdy p
  * @author Wyz
  * @author Yann.fauche
  * @author عبد الحق فارح
@@ -6661,6 +6662,8 @@ $messages['fr'] = array(
 	'mobilefrontend-keepgoing-links-example' => 'par ex. $1guitar$2 devient $3guitar$4',
 	'nearby' => 'Pages près de vous',
 	'mobile-frontend-desc' => 'Affichage mobile',
+	'mobile.css' => '/* Le CSS placé ici n’affectera que les utilisateurs du site mobile */',
+	'mobile.js' => '/* Le Javascript placé ici n’affectera que les utilisateurs du site mobile */',
 	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-home-button' => 'Accueil',
 	'mobile-frontend-logged-out' => 'Non connecté(e)',
@@ -11641,7 +11644,7 @@ $messages['ko'] = array(
 	'mobile-frontend-mainpage-cta-prompt' => '이 문서는 여러분의 도움이 필요합니다!',
 	'mobile-frontend-mainpage-cta-button' => '이 문서 개선하기',
 	'beta-feature-minerva' => '데스크탑에서 모바일 스킨(미네르바)을 활성화',
-	'beta-feature-minerva-description' => '모바일 기기에서 사용되는 스킨을 문서 보이기 환경 설정에서 선택 가능한 데스크탑 스킨으로 만들기',
+	'beta-feature-minerva-description' => '모바일 기기에서 사용되는 스킨을 문서 보이기 환경 설정에서 선택할 수 있는 데스크탑 스킨으로 만듭니다.',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -12641,6 +12644,8 @@ $messages['lrc'] = array(
 	'mobile-frontend-username-placeholder' => 'نوم كاروری',
 	'mobile-frontend-password-placeholder' => 'رمز',
 	'mobile-frontend-login' => 'اومائن',
+	'mobile-frontend-last-modified-days' => 'آخرین آلشت د {{جمی:$1|$1 روز|$1 روز}} دما انجوم بیه', # Fuzzy
+	'mobile-frontend-last-modified-years' => 'آخرین بار د {{جمی:$1|$1 سال|$1 سالیا}} دما آلشت بیه', # Fuzzy
 	'mobile-frontend-view-source' => 'سرچشمه نه بوينيت',
 	'mobile-frontend-account-create-submit' => 'ثوت نام كردن',
 	'mobile-frontend-password-confirm-placeholder' => 'رمز محكم كو',
