@@ -12,7 +12,7 @@ end
 
 Given(/^I type (.+) into VisualEditor$/) do |text|
   on(ArticlePage) do |page|
-    page.editor_ve_element.when_present.fire_event("onfocus")
+    page.editor_ve_element.when_present(15).fire_event("onfocus")
     page.editor_ve_element.when_present.send_keys(text)
   end
 end
@@ -25,16 +25,10 @@ Given(/^I click continue$/) do
   on(ArticlePage).continue_button_element.when_present.click
 end
 
-Given(/^I click submit$/) do
-  # In VE the submit button takes a while to become enabled while it prepares for a save
-  # according to Jeff this is the best way to get round this
-  # FIXME: Must be a more elegant way?
-  try = 10
-  try.times do
-    begin
-      on(ArticlePage).submit_button_element.when_present.click
-    rescue
-    end
+Given(/^I click submit$/) do 
+  on(ArticlePage) do |page|
+    page.spinner_loading_element.when_not_present
+    page.submit_button_element.when_present.click
   end
 end
 

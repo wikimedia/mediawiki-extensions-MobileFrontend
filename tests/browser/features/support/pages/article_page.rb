@@ -5,7 +5,10 @@ class ArticlePage
   page_url URL.url("<%=params[:article_name]%>")
   h1(:first_heading, id: "section_0")
 
-  li(:edit_button, id: "ca-edit")
+  li(:edit_button_holder, id: "ca-edit")
+  a(:edit_button) do |page|
+    page.edit_button_holder_element.link_element(class: "edit-page")
+  end
   a(:edit_link, text: "Edit")
   div(:editor_overlay, class: "editor-overlay")
   button(:editor_overlay_close_button) do |page|
@@ -66,6 +69,7 @@ class ArticlePage
 
   # visual editor
   div(:editor_ve, class: "ve-ce-documentNode ve-ce-branchNode")
+  div(:spinner_loading, class: "spinner loading")
 
   # toast
   div(:toast, class:'toast position-fixed visible')
