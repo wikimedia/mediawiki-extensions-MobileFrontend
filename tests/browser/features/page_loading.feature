@@ -17,7 +17,7 @@ Scenario: Edit button updates when lazy load a page from search
     And I am logged in as a new user
     And I visit a protected page
     And I click the placeholder search box
-    And I type into search box Foo bar
+    And I type into search box "Foo bar"
   When I click a search result
   Then The edit button is enabled
     And The text of the first heading is "Foo bar"
