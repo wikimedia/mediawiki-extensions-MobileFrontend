@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_426819f2",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T23:04:42Z",
+      "side": 1,
+      "message": "Genius idea Max!",
+      "parentUuid": "6ef7ef47_ccc8e0ac",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_acc59492",
         "filename": "includes/specials/SpecialManifests.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-02-05T20:12:00Z",
       "side": 1,
       "message": "Unused.",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_62a0b59a",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T23:04:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ef7ef47_acc59492",
       "revId": "052bb856072a57507889b195d854e123b0bfd93f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_82a3c1a7",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T23:04:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ef7ef47_8cc2d886",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_4c34d0a7",
         "filename": "includes/specials/SpecialManifests.php",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2014-02-05T20:12:00Z",
       "side": 1,
       "message": "Unused.",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_a296bd4d",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T23:04:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ef7ef47_4c34d0a7",
       "revId": "052bb856072a57507889b195d854e123b0bfd93f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_02b0d1ef",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T23:04:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6ef7ef47_2c39849f",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_0c3ec887",
         "filename": "includes/specials/SpecialManifests.php",
         "patchSetId": 2
@@ -98,6 +188,24 @@
       "writtenOn": "2014-02-05T20:12:00Z",
       "side": 1,
       "message": "Why not make it depend on the actual module(s) needed by the app? Currently, if resources have changed but MF haven\u0027t the manifest will not be refreshed.",
+      "revId": "052bb856072a57507889b195d854e123b0bfd93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_a2cfdd81",
+        "filename": "includes/specials/SpecialManifests.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T23:04:42Z",
+      "side": 1,
+      "message": "Actually this is all  bit premature for this patchset and is remnants from an early version - I\u0027ll remove this.",
+      "parentUuid": "6ef7ef47_0c3ec887",
       "revId": "052bb856072a57507889b195d854e123b0bfd93f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
