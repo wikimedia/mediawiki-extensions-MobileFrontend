@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_675b2727",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T21:48:03Z",
+      "side": 1,
+      "message": "These class names are really nasty. Can we start mediawiki-ui\u0027ing someof the concepts here to get away from the mw-echo prefix?\n\nSince both MobileFrontend and Echo are now using these rules it sounds like a precursor for mediawiki-ui-ification.",
+      "revId": "cb9f6c90bd83a3267e61371761deb63e569a1ff0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_6791e79b",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T21:48:03Z",
+      "side": 1,
+      "message": "?\nTalk only appears in alpha/beta. I think you can get away with dropping these :)",
+      "revId": "cb9f6c90bd83a3267e61371761deb63e569a1ff0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_47a02bf1",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T21:48:03Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "cb9f6c90bd83a3267e61371761deb63e569a1ff0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_8794f38e",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-05T21:48:03Z",
+      "side": 1,
+      "message": "This should be in the pagelist.less since it relates to the page list element.",
+      "revId": "cb9f6c90bd83a3267e61371761deb63e569a1ff0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
