@@ -3,6 +3,7 @@ MEDIAWIKI_LOAD_URL ?= http://localhost/w/load.php
 
 clean:
 	rm -Rf scripts/remotes
+	rm -Rf docs
 
 remotes:
 	@scripts/remotecheck.sh
