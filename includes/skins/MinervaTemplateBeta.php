@@ -22,7 +22,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 
 			echo Html::element( 'a', array(
-				'class' => 'button languageSelector',
+				'class' => 'mw-ui-button mw-ui-progressive button languageSelector',
 				'href' => $languageUrl
 				), $languageLabel );
 		}
