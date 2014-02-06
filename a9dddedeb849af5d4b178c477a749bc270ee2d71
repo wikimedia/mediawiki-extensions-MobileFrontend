@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_4a86e7bf",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-06T22:34:04Z",
+      "side": 1,
+      "message": "This has no effect on the language overlay - It is already @fontFamily (inherits from body)\n\nThis only effects the talk page overlay when it is a heading, so belongs in talk.less - or maybe it shouldn\u0027t be a heading and should be a div?",
+      "revId": "a9dddedeb849af5d4b178c477a749bc270ee2d71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_8a72afe0",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-06T22:34:04Z",
+      "side": 1,
+      "message": "All these rules apply to mobile as well and look very very squashed on a small screen. Are you sure you didn\u0027t mean to scope these with media queries?",
+      "revId": "a9dddedeb849af5d4b178c477a749bc270ee2d71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_2aa83b1c",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-06T22:34:04Z",
+      "side": 1,
+      "message": "This rule needs to be in a media query. It breaks mobile.\nMaybe the css rule name needs to be renamed.",
+      "revId": "a9dddedeb849af5d4b178c477a749bc270ee2d71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_0aa7bf4d",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-06T22:34:04Z",
+      "side": 1,
+      "message": "I think this is meant to be beta only and in a media query - it looks terrible on an iphone",
+      "revId": "a9dddedeb849af5d4b178c477a749bc270ee2d71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_6ab64387",
+        "filename": "templates/overlays/cleanup.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-06T22:34:04Z",
+      "side": 1,
+      "message": "Instead of changing the class here use a media query. This breaks the mobile view.",
+      "revId": "a9dddedeb849af5d4b178c477a749bc270ee2d71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

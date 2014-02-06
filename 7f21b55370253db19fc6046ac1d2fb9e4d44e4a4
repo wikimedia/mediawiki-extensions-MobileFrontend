@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_ca68b7f4",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-06T22:34:04Z",
+      "side": 0,
+      "message": "I think these rules need to stay for the mobile experience.",
+      "revId": "7f21b55370253db19fc6046ac1d2fb9e4d44e4a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
