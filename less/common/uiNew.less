@@ -26,20 +26,17 @@
 	}
 }
 
-// FIXME [mediawiki ui] These rules should not be needed and are specifically for Watchlist and
-// the CTADrawer
-.mw-ui-button-group {
+// FIXME [mediawiki ui] These rules should not be needed in the mobile context
+.alpha .mw-ui-button-group {
 	text-align: center;
-	a:visited,
-	a:hover,
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
+
 	* {
 		float: none !important;
 	}
+
+	// For talk and CTA drawer
 	.mw-ui-block {
 		width: auto;
 	}
 }
+
