@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_5eec6cf2",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-06T23:36:19Z",
+      "side": 1,
+      "message": "This comment doesn\u0027t add anything. It should either be expanded or removed.",
+      "revId": "1ac66af7c14cee28ed94bd91fdfeec6c57914ac2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_dedabc20",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-06T23:36:19Z",
+      "side": 1,
+      "message": "This comment is confusing. How about \"Make sure that non-wikitext pages don\u0027t route to VisualEditor\" (as one day we make have other editors available for non-wikitext pages)",
+      "revId": "1ac66af7c14cee28ed94bd91fdfeec6c57914ac2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
