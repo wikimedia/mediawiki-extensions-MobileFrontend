@@ -21,8 +21,11 @@
 			content: mw.msg( 'mobile-frontend-editor-cta' )
 		} );
 
-	function addEditButton( section, container ) {
-		return $( '<a class="edit-page" href="#editor/' + section + '">' ).
+	function addEditButton( section, container, page ) {
+		// Pages that contain JavaScript and CSS are not suitable for VisualEditor so check if wikitext.
+		var url = page.isWikiText() && isVisualEditorEnabled ? '#/VisualEditor/' + section : '#editor/' + section;
+		return $( '<a class="edit-page">' ).
+			attr( 'href', url ).
 			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
 			prependTo( container );
 	}
@@ -46,48 +49,53 @@
 	/**
 	 * Initialize the edit button so that it launches the editor interface when clicked.
 	 *
-	 * @param {object} page The page to edit (optional). If no page is specified it
-	 *  assumes the current page.
+	 * @param {Page} page The page to edit.
 	 */
 	function setupEditor( page ) {
-		var isNew = mw.config.get( 'wgArticleId' ) === 0;
+		var isNew = page.options.id === 0;
 		if ( M.query.undo ) {
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
-		M.overlayManager.add( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
-			var
-				loadingOverlay = new LoadingOverlay(),
-				title = page ? page.title : mw.config.get( 'wgPageName' ).replace( /_/g, ' ' ),
-				result = $.Deferred();
-			loadingOverlay.show();
-			sectionId = mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? parseInt( sectionId, 10 ) : null;
+		if ( isVisualEditorEnabled ) {
+			M.overlayManager.add( /^\/VisualEditor\/(\d+)$/, function( sectionId ) {
+				var
+					loadingOverlay = new LoadingOverlay(),
+					result = $.Deferred();
 
-			if ( isVisualEditorEnabled ) {
 				// Load VE init module
 				mw.loader.using( 'mobile.editor.ve', function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 					loadingOverlay.hide();
 					result.resolve( new VisualEditorOverlay( {
-						title: title,
-						sectionId: sectionId
+						title: page.title,
+						sectionId: parseInt( sectionId, 10 )
 					} ) );
 				} );
-			} else {
-				mw.loader.using( 'mobile.editor.overlay', function() {
-					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+				return result;
+			} );
+		}
 
-					loadingOverlay.hide();
-					result.resolve( new EditorOverlay( {
-						title: title,
-						isNew: isNew,
-						isNewEditor: user.getEditCount() === 0,
-						sectionId: sectionId,
-						oldId: M.query.oldid,
-						funnel: funnel || 'article'
-					} ) );
-				} );
-			}
+		M.overlayManager.add( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
+			var
+				loadingOverlay = new LoadingOverlay(),
+				result = $.Deferred();
+			loadingOverlay.show();
+			sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
+
+			mw.loader.using( 'mobile.editor.overlay', function() {
+				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+
+				loadingOverlay.hide();
+				result.resolve( new EditorOverlay( {
+					title: page.title,
+					isNew: isNew,
+					isNewEditor: user.getEditCount() === 0,
+					sectionId: sectionId,
+					oldId: M.query.oldid,
+					funnel: funnel || 'article'
+				} ) );
+			} );
 
 			return result;
 		} );
@@ -98,13 +106,20 @@
 			// FIXME: unfortunately the main page is special cased.
 			if ( mw.config.get( 'wgIsMainPage' ) || isNew || M.getLeadSection().text() ) {
 				// if lead section is not empty, open editor with lead section
-				addEditButton( 0, '#ca-edit' );
+				addEditButton( 0, '#ca-edit', page );
 			} else {
 				// if lead section is empty, open editor with first section
-				addEditButton( 1, '#ca-edit' );
+				addEditButton( 1, '#ca-edit', page );
 			}
 		}
 
+		if ( isVisualEditorEnabled ) {
+			// Point all section edit links to VE
+			$( '#content .edit-page' ).each( function() {
+				var $this = $( this );
+				$this.attr( 'href', '#/VisualEditor/' + $this.data( 'section' ) );
+			} );
+		}
 		// FIXME change when micro.tap.js in stable
 		$( '.edit-page' ).on( M.tapEvent( 'mouseup' ), function( ev ) {
 			// prevent folding section when clicking Edit
