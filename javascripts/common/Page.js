@@ -13,6 +13,8 @@
 	Page = View.extend( {
 		template: mw.template.get( 'page' ),
 		defaults: {
+			// id defaults to 0 which represents a new page. Be sure to override to avoid side effects.
+			id: 0,
 			/**
 			 * Includes prefix where needed and is human readable.
 			 * e.g. Talk:The man who lived
@@ -37,6 +39,16 @@
 			// Surface the display title for M.reloadPage
 			this.displayTitle = options.displayTitle;
 			this._super( options );
+		},
+
+		/**
+		 * @name Page.prototype.isWikiText
+		 * @function
+		 * FIXME: Make this update with ajax page loads
+		 * @return {Boolean}
+		 */
+		isWikiText: function() {
+			return mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 		},
 
 		/**
