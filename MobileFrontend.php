@@ -452,3 +452,8 @@ $wgMFWap = 'enabled';
  * Maximum HTTP lifetime for page views with $wgMFWap = 'transitional'
  */
 $wgMFTransitionalWapLifetime = 3 * 86400;
+
+/**
+ * Controls whether the "Minerva as a desktop skin" beta feature is enabled
+ */
+$wgMFEnableMinervaBetaFeature = false;
