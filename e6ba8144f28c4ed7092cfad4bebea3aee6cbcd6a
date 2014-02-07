@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_0da2343b",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T19:27:03Z",
+      "side": 1,
+      "message": "use @iconSize",
+      "revId": "e6ba8144f28c4ed7092cfad4bebea3aee6cbcd6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_2d34d0f0",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T19:27:03Z",
+      "side": 1,
+      "message": "I don\u0027t understand how issue-notice is different from issue-icon - they are used in one place together. Shouldn\u0027t there just be one class?",
+      "revId": "e6ba8144f28c4ed7092cfad4bebea3aee6cbcd6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_8d43e466",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T19:27:03Z",
+      "side": 1,
+      "message": "This rule and the one below are the same as icon-24px - use that class on this element for consistency since that class is also used in issues.js",
+      "revId": "e6ba8144f28c4ed7092cfad4bebea3aee6cbcd6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_2da7304e",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T19:27:03Z",
+      "side": 1,
+      "message": "Reddd red lineeee.\nhttp://www.youtube.com/watch?v\u003dzXt56MB-3vc\u0026feature\u003dkp",
+      "revId": "e6ba8144f28c4ed7092cfad4bebea3aee6cbcd6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_6d2ad890",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T19:27:03Z",
+      "side": 1,
+      "message": "Are not all these rules redundant as issues-notice always seems to be paired with issue-icon?",
+      "revId": "e6ba8144f28c4ed7092cfad4bebea3aee6cbcd6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_cd6b2ced",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T19:27:03Z",
+      "side": 1,
+      "message": "Maybe @iconSize * 2 ?\nAlso I think this should apply to icon-24px class",
+      "revId": "e6ba8144f28c4ed7092cfad4bebea3aee6cbcd6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
