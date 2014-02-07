@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_adb34095",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T19:15:02Z",
+      "side": 1,
+      "message": "Note spelling mistake  - triggered.",
+      "revId": "4ff96c815063280bce6360843cd2d7b0d9e47b4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
