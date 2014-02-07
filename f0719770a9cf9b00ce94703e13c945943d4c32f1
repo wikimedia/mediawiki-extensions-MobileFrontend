@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_c8379aaa",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T20:10:16Z",
+      "side": 1,
+      "message": "Red red space!\nAlso please add better documentation to this patch and say that it calls the hook which points to some documentation on how to use it. I\u0027m not clear for instance how a link would get changed..\n\nAlso isn\u0027t the variable $links unclear - below we pass it the result of getLanguages - isn\u0027t it a language?\n\nAlso prepare is probably the wrong word as the links are already prepared.  Maybe tweak or transform?",
+      "revId": "f0719770a9cf9b00ce94703e13c945943d4c32f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_68488632",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-07T20:10:16Z",
+      "side": 1,
+      "message": "This line is long I\u0027d recommend breaking it at array(",
+      "revId": "f0719770a9cf9b00ce94703e13c945943d4c32f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
