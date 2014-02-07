@@ -16,6 +16,24 @@
       "revId": "9ed6575d112cad52f831f8b4b0c244399218a5af",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_08f102c8",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-07T20:19:17Z",
+      "side": 1,
+      "message": "Well, it\u0027s called language_links in skin",
+      "parentUuid": "6ef7ef47_a8e20efe",
+      "revId": "9ed6575d112cad52f831f8b4b0c244399218a5af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
