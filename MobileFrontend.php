@@ -331,6 +331,13 @@ $wgMFTrademarkSitename = false;
 $wgDeviceDetectionClass = 'DeviceDetection';
 
 /**
+ * Whether the Minerva skin should be offered to desktop users as a Beta Feature
+ *
+ * Defaults to false.
+ */
+$wgMFDesktopMinerva = false;
+
+/**
  * Whether geodata related functionality should be enabled
  *
  * Defaults to false.

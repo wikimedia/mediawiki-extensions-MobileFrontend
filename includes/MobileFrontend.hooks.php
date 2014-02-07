@@ -598,7 +598,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
-		global $wgExtensionAssetsPath, $wgMFNearby, $wgLang;
+		global $wgExtensionAssetsPath, $wgMFNearby, $wgMFDesktopMinerva, $wgLang;
 
 		$dir = $wgLang->getDir();
 
@@ -615,14 +615,16 @@ class MobileFrontendHooks {
 			);
 		}
 
-		// Enable the mobile skin on desktop
-		$preferences['betafeatures-minerva'] = array(
-			'label-message' => 'beta-feature-minerva',
-			'desc-message' => 'beta-feature-minerva-description',
-			'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Minerva',
-			'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Minerva',
-			'screenshot' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva.svg",
-		);
+		if ( $wgMFDesktopMinerva ) {
+			// Enable the mobile skin on desktop
+			$preferences['betafeatures-minerva'] = array(
+				'label-message' => 'beta-feature-minerva',
+				'desc-message' => 'beta-feature-minerva-description',
+				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Minerva',
+				'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Minerva',
+				'screenshot' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva.svg",
+			);
+		}
 
 		return true;
 	}
