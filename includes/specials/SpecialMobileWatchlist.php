@@ -54,6 +54,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			return;
 		}
 
+		if ( !$output->getProperty( 'disableSearchAndFooter' ) ) {
+			$output->addHtml( '<div class="content-header">' . $this->getWatchlistHeader() . '</div>' );
+		}
+
 		if ( $view === 'feed' ) {
 			$this->filter = $this->getRequest()->getVal( 'filter', 'all' );
 			$this->showRecentChangesHeader();
@@ -72,7 +76,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		if ( $this->optionsChanged ) {
 			$user->saveSettings();
 		}
-		$this->getOutput()->setProperty( 'mobile.htmlHeader', $this->getWatchlistHeader() );
+
+		// Support the old style header in stable
+		// FIXME: Kill when new headers go to stable
+		if ( !$ctx->isBetaGroupMember() ) {
+			$output->setProperty( 'mobile.htmlHeader', $this->getWatchlistHeader() );
+		}
 
 		wfProfileOut( __METHOD__ );
 	}

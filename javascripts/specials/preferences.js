@@ -5,7 +5,7 @@ var $header, $tabHeadings, $tabs, $activeBtn, val,
 	// Load from user preference if available
 	hash = window.location.hash;
 
-$header = $( '<div class="header">' ).insertBefore( '#content' );
+$header = $( '<div class="content-header">' ).insertBefore( '#content' );
 $tabHeadings = $( '<ul class="button-bar">' ).appendTo( $header );
 $tabs = $( '#preferences > fieldset' );
 
