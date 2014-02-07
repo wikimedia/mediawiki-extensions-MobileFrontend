@@ -5,6 +5,7 @@
 
 	VisualEditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
+			header: M.template.get( 'modules/editor/VisualEditorOverlayHeader' ),
 			content: M.template.get( 'modules/editor/VisualEditorOverlay' )
 		},
 		className: 'overlay editor-overlay editor-overlay-ve',

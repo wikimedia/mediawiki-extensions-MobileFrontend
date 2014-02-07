@@ -56,3 +56,59 @@
 		text-align: inherit !important;
 	}
 }
+
+.editor-overlay-ve {
+	// Toolbar
+	.overlay-header-container {
+		.overlay-header > .toolbar {
+			padding: 0;
+		}
+
+		.oo-ui-tool {
+			height: 3em + @headerMargin;
+			display: block;
+			float: left;
+			margin-left: 1em;
+			text-indent: -999px;
+			width: 24px;
+			padding: 0 12px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			.background-size(24px, 24px);
+			position: relative;
+
+			&.oo-ui-tool-active {
+				background-color: #EDF4FF;
+			}
+
+			* {
+				position: absolute;
+				right: 0;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				display: block;
+			}
+
+			&.oo-ui-tool-name-bold {
+				.background-image-svg-quick( 'images/bold-normal' );
+				&.oo-ui-tool-active {
+					.background-image-svg-quick( 'images/bold-select' );
+				}
+			}
+
+			&.oo-ui-tool-name-italic {
+				.background-image-svg-quick( 'images/italic-normal' );
+				&.oo-ui-tool-active {
+					.background-image-svg-quick( 'images/italic-select' );
+				}
+			}
+		}
+	}
+
+	// Link inspector
+	// FIXME: Disable until appropriate style and workflow
+	.oo-ui-tool-name-link {
+		display: none;
+	}
+}
