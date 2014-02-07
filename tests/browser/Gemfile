@@ -4,4 +4,4 @@
 source "https://rubygems.org"
 
 gem "chunky_png"
-gem "mediawiki-selenium"
+gem "mediawiki_selenium"

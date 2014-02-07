@@ -1,5 +1,5 @@
 require_relative "hooks"
-require "mediawiki/selenium"
+require "mediawiki_selenium"
 
 def local_browser(user_agent)
   if ENV["BROWSER_LABEL"]
