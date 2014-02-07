@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_6311c95e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-07T22:47:38Z",
+      "side": 1,
+      "message": "Empire strikes back?",
+      "revId": "a60716ef36384438827f49a31db2e84d0fbf5989",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
