@@ -42,7 +42,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
 		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition,
-			$wgMFWap, $wgValidSkinNames;
+			$wgMFWap, $wgValidSkinNames, $wgMFEnableMinervaBetaFeature;
 
 		// check whether or not the user has requested to toggle their view
 		$mobileContext = MobileContext::singleton();
@@ -56,8 +56,9 @@ class MobileFrontendHooks {
 				$out = $context->getOutput();
 				$out->addModules( 'mobile.desktop' );
 			}
-			if ( class_exists( 'BetaFeatures' ) &&
-				BetaFeatures::isFeatureEnabled( $context->getUser(), 'betafeatures-minerva' )
+			if ( class_exists( 'BetaFeatures' )
+				&& BetaFeatures::isFeatureEnabled( $context->getUser(), 'betafeatures-minerva' )
+				&& $wgMFEnableMinervaBetaFeature
 			) {
 				$wgValidSkinNames['minerva'] = "Minerva";
 			}
