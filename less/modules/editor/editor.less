@@ -21,6 +21,93 @@
 			}
 		}
 	}
+
+	.overlay-header {
+		.switcher-container {
+			padding: 0;
+			// Have to set an explicit width since we're using display:table-cell
+			width: 5em;
+			vertical-align: middle;
+			border-right: 1px solid @grayLight;
+			position: relative;
+		}
+
+		.icon.editor-switcher {
+			padding: 0;
+			.background-image-svg-quick( 'images/edit-visual-normal' );
+			background-size: 40px auto;
+			width: 5em;
+
+			&.selected {
+				.background-image-svg-quick( 'images/edit-visual-select' );
+			}
+		}
+
+		.icon.editor-switcher:focus {
+			outline: none;
+		}
+
+		.switcher-drop-down {
+			display: none;
+			position: absolute;
+			top: @headerHeight;
+			// FIXME: Negative margin is needed in Chrome and Safari to match our negative
+			// margins on the buttons, but this breaks the layout in Firefox and IE :(
+			// Spent a very long time trying to find a CSS solution that worked in all
+			// four browsers, but no luck.
+			margin-top: -@headerMargin;
+			// We have to use margin-left instead of left due to a rendering bug in
+			// Firefox. Firefox sets the wrong horizontal positioning frame for
+			// children of elements with position:relative and display:table-cell.
+			margin-left: -1px;
+			border: 1px solid @grayLight;
+			white-space: nowrap;
+
+			> .mw-ui-button {
+				display: inline-block;
+				border: none;
+				border-right: 1px solid @grayLight;
+				border-radius: 0;
+				line-height: 2em;
+				padding: 0.5em 1.4em 0.5em 1em;
+
+				.icon {
+					background-repeat: no-repeat;
+					background-position: left center;
+					background-size: 30px 30px;
+					display: inline-block;
+					margin-right: 10px;
+					width: 30px;
+					height: 30px;
+					vertical-align: middle;
+				}
+
+				&.visual-editor {
+					.icon {
+						.background-image-svg-quick( 'images/edit-visual-normal' );
+
+						&.selected {
+							.background-image-svg-quick( 'images/edit-visual-toggle' );
+						}
+					}
+				}
+
+				&.source-editor {
+					.icon {
+						.background-image-svg-quick( 'images/edit-source-normal' );
+
+						&.selected {
+							.background-image-svg-quick( 'images/edit-visual-toggle' );
+						}
+					}
+				}
+			}
+
+			> div:last-child {
+				border-right: none;
+			}
+		}
+	}
 }
 
 .abusefilter-overlay {

@@ -2,7 +2,9 @@
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		popup = M.require( 'toast' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
+		isVisualEditorEnabled = M.isWideScreen() && M.isAlphaGroupMember(),
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		inNavSignupCampaign = M.query.campaign === 'leftNavSignup',
 		Section = M.require( 'Section' ),
@@ -36,10 +38,15 @@
 				oldId: options.oldId,
 				isNewPage: options.isNewPage
 			} );
-			this.sectionId = options.sectionId;
 			this.readOnly = options.oldId ? true : false; // If old revision, readOnly mode
 			this.funnel = options.funnel;
+			if ( isVisualEditorEnabled ) {
+				options.editSwitcher = true;
+			}
 			this._super( options );
+			if ( isVisualEditorEnabled ) {
+				this.initializeSwitcher();
+			}
 		},
 
 		postRender: function( options ) {
@@ -62,6 +69,22 @@
 			} );
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
+
+			if ( isVisualEditorEnabled ) {
+				this.$( '.visual-editor' ).on( 'click', function() {
+					// If changes have been made tell the user they have to save first
+					if ( !self.api.hasChanged ) {
+						MobileWebClickTracking.log( 'editor-switch-to-visual', options.title );
+						// FIXME: Come up with a solution that doesn't cause weird behavior
+						// when using the close button.
+						M.router.navigate( '#/VisualEditor/' + options.sectionId );
+					} else {
+						if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
+							self._showPreview();
+						}
+					}
+				} );
+			}
 
 			this.abuseFilterPanel = new AbuseFilterPanel().appendTo( this.$( '.panels' ) );
 

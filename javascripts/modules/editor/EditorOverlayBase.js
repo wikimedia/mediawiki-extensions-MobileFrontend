@@ -18,6 +18,9 @@
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
 			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
+			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
+			visualEditorMsg: mw.msg( 'mobile-frontend-editor-visual-editor' ),
+			sourceEditorMsg: mw.msg( 'mobile-frontend-editor-source-editor' ),
 		},
 		template: M.template.get( 'modules/editor/EditorOverlayBase' ),
 		className: 'overlay editor-overlay',
@@ -102,6 +105,7 @@
 			this.editCount = user.getEditCount();
 			this.isNewPage = options.isNewPage;
 			this.isNewEditor = options.isNewEditor;
+			this.sectionId = options.sectionId;
 
 			// pre-fetch keep going with expectation user will go on to save
 			if ( this._shouldShowKeepGoingOverlay() ) {
@@ -113,6 +117,29 @@
 		postRender: function( options ) {
 			this._super( options );
 			this._showHidden( '.initial-header' );
+		},
+		/**
+		 * Set up the editor switching interface
+		 * The actual behavior of the editor buttons is initialized in postRender()
+		 */
+		initializeSwitcher: function() {
+			this.$( '.editor-switcher' ).on( 'click', function( ev ) {
+				var $self = $( this );
+				ev.preventDefault();
+				// Prevent double toggling
+				ev.stopPropagation();
+				// Exit early if switcher is disabled
+				if ( $self.hasClass( 'disabled' ) ) {
+					return false;
+				}
+				$self.toggleClass( 'selected' );
+				$( '.switcher-drop-down' ).toggle();
+				// If you click outside the drop-down, hide the drop-down
+				$( document ).one( 'click', function() {
+					$( '.switcher-drop-down' ).hide();
+					$self.removeClass( 'selected' );
+				} );
+			} );
 		},
 		hide: function( force ) {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );

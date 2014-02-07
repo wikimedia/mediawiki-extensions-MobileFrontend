@@ -16,6 +16,10 @@
 @headerTitleMarginV: 1em;
 @headerTitleMarginH: .6em;
 @headerTitleFontSize: 1em;
+// FIXME: Font-size does not equal block height, use an actual height var instead. So,
+// @headerHeight: @headerTitleHeight + @headerTitleMarginV * 2 + @headerMargin; This will
+// require adjusting a lot of CSS to make sure everything still lines up. Since the
+// header design is changing anyway, not implementing this change just yet.
 @headerHeight: @headerTitleFontSize + @headerTitleMarginV * 2 + @headerMargin;
 
 @grayDark: #252525;

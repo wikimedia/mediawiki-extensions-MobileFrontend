@@ -75,8 +75,13 @@ class ArticlePage
   ul(:page_actions, id:"page-actions")
   a(:nearby_button, css: "#page-secondary-actions .nearby")
 
+  # editor (common)
+  button(:overlay_editor_mode_switcher, css: ".editor-switcher")
+  div(:source_editor_button, css: ".source-editor")
+  div(:visual_editor_button, css: ".visual-editor")
+
   # editor
-  textarea(:editor_text_area, class:"wikitext-editor")
+  textarea(:editor_textarea, class:"wikitext-editor")
   button(:escape_button, class:"back icon")
   button(:continue_button, class:"continue icon")
   button(:submit_button, class:"submit icon")
