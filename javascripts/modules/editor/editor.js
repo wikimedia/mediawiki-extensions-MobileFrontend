@@ -3,7 +3,6 @@
 	var
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
-		isUserBlocked = mw.config.get( 'wgMFIsUserBlocked' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
@@ -164,10 +163,7 @@
 		} );
 	}
 
-	if ( isUserBlocked ) {
-		// User is blocked. Both anonymous and logged in users can be blocked.
-		showSorryToast( 'mobile-frontend-editor-blocked' );
-	} else if ( !isEditingSupported ) {
+	if ( !isEditingSupported ) {
 		// Editing is disabled (or browser is blacklisted)
 		showSorryToast( 'mobile-frontend-editor-unavailable' );
 	} else {
@@ -176,8 +172,13 @@
 			initCta();
 			M.on( 'page-loaded', initCta );
 		} else {
-			init( M.getCurrentPage() );
-			M.on( 'page-loaded', init );
+			if ( mw.config.get( 'wgMFIsLoggedInUserBlocked' ) ) {
+				// User is blocked. Both anonymous and logged in users can be blocked.
+				showSorryToast( 'mobile-frontend-editor-blocked' );
+			} else {
+				init( M.getCurrentPage() );
+				M.on( 'page-loaded', init );
+			}
 		}
 	}
 
