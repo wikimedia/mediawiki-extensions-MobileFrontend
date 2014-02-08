@@ -1449,8 +1449,8 @@ $messages['ar'] = array(
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|ملف واحد|ملفان|<span>$1</span> ملفات|<span>$1</span> ملفا|<span>$1</span> ملف}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500 + ملف',
 	'mobile-frontend-editor-unavailable' => 'حاليا لا يتوفر التعديل عبر الجوال لمتصفحك. الرجاء المحاولة بمتصفح آخر.',
-	'mobile-frontend-editor-disabled' => 'لا يسمح لك بتعديل هذه الصفحة.', # Fuzzy
-	'mobile-frontend-editor-cta' => 'يجب أن تدخل لتعدل من الجوال.', # Fuzzy
+	'mobile-frontend-editor-disabled' => 'هذه الصفحة محمية لمنع التخريب.',
+	'mobile-frontend-editor-cta' => 'ساعد في تحسين هذه الصفحة!',
 	'mobile-frontend-editor-edit' => 'عدل',
 	'mobile-frontend-editor-continue' => 'استمر',
 	'mobile-frontend-editor-save' => 'احفظ',
@@ -10152,6 +10152,7 @@ in tutto il mondo',
  * @author Ohgi
  * @author Schu
  * @author Shirayuki
+ * @author What here area team
  * @author Whym
  */
 $messages['ja'] = array(
@@ -10299,7 +10300,7 @@ $messages['ja'] = array(
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => '電波がよく届く、開けた場所で試してください。',
 	'mobile-frontend-nearby-permission' => '{{SITENAME}} Nearby にはあなたの現在地にアクセスする権限がありません。',
 	'mobile-frontend-nearby-permission-guidance' => 'あなたの現在地を表示する権限を与えるようにしてください。ブラウザーの現在地の設定を変更する必要がある可能性があります。',
-	'mobile-frontend-nearby-noresults' => '何も聞こえません… この付近にはページがないようです。',
+	'mobile-frontend-nearby-noresults' => 'この付近に関するページはありませんでした。',
 	'mobile-frontend-nearby-noresults-guidance' => '新しいページを作ったり、既存のページに位置を追加したりしてみてください。',
 	'mobile-frontend-nearby-refresh' => 'より正確な位置情報が見つかりました。ここをクリックすると、近くのページのリストが更新されます。',
 	'mobile-frontend-nearby-error' => '{{SITENAME}} 付近の検索で問題が発生しました。',
@@ -11342,7 +11343,7 @@ $messages['kn'] = array(
  */
 $messages['ko'] = array(
 	'mobilefrontend-random-explain' => '이 문서가 당신의 관심을 끕니까?',
-	'mobilefrontend-random-cancel' => '읽어 보기',
+	'mobilefrontend-random-cancel' => '읽어 봅시다!',
 	'mobilefrontend-keepgoing-ask' => '잘하셨습니다! 이제 문서를 편집하는 요령을 알게 되었습니다! 다른 문서도 편집해 보겠습니까?',
 	'mobilefrontend-keepgoing-ask-first' => '첫 편집을 한 것을 축하드립니다! 다른 문서도 편집해 보겠습니까?',
 	'mobilefrontend-keepgoing-explain' => '좋아요! 다른 사용자가 이 문서가 도움이 필요하다고 했습니다. 이 문서를 고치거나, 다른 문서를 고치세요.',
@@ -11409,7 +11410,7 @@ $messages['ko'] = array(
 	'mobile-frontend-language-site-choose' => '언어 검색',
 	'mobile-frontend-username' => '사용자 이름:',
 	'mobile-frontend-password' => '비밀번호:',
-	'mobile-frontend-username-placeholder' => '사용자 이름',
+	'mobile-frontend-username-placeholder' => '사용자 계정 이름',
 	'mobile-frontend-password-placeholder' => '비밀번호',
 	'mobile-frontend-login' => '로그인',
 	'mobile-frontend-history' => '이 문서의 편집 역사를 봅니다.',
@@ -18178,7 +18179,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-logged-in-homepage-notification' => 'Добро дошли, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Пријављен сте као $1.',
 	'mobile-frontend-sign-up-heading' => 'Отварање налога',
-	'mobile-frontend-sign-in-heading' => 'Пријави ме',
+	'mobile-frontend-sign-in-heading' => 'Пријављивање',
 	'mobile-frontend-sign-in-error-heading' => 'Грешка',
 	'mobile-frontend-settings-beta' => 'Бета',
 	'mobile-frontend-save-settings' => 'Сачувај',
@@ -18265,6 +18266,9 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-watchlist-cta' => 'Морате бити пријављени да би сте активирали ову опцију', # Fuzzy
 	'mobile-frontend-watchlist-cta-button-login' => 'Пријава',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Отвори налог',
+	'mobile-frontend-generic-login' => '{{SITENAME}} је направљен од стране људи као што сте ви.',
+	'mobile-frontend-generic-login-action' => 'Пријавите се да би доприносили.',
+	'mobile-frontend-generic-signup-action' => 'Региструјте се да би доприносили.',
 	'mobile-frontend-watch-login' => 'Морате бити пријављени да бисте надгледали странице.', # Fuzzy
 	'mobile-frontend-watchlist-a-z' => 'Списак',
 	'mobile-frontend-watchlist-back-home' => 'Назад на почетну страну',
