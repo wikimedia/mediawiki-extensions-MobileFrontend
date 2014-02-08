@@ -32,7 +32,7 @@ class SkinMinerva extends SkinTemplate {
 			Html::element( 'meta', array( 'name' => 'apple-mobile-web-app-capable', 'content' => 'yes' ) )
 		);
 		$out->addHeadItem( 'apple-mobile-web-app-status-bar-style',
-			Html::element( 'meta', array( 'name' => 'apple-mobile-web-app-status-bar-style', 'content' => 'default' ) )
+			Html::element( 'meta', array( 'name' => 'apple-mobile-web-app-status-bar-style', 'content' => 'black' ) )
 		);
 		$out->addHeadItem( 'loadingscript', Html::inlineScript(
 			"document.documentElement.className += ' page-loading';"
