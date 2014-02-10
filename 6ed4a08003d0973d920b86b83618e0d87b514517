@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_40bc75d5",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:25:51Z",
+      "side": 1,
+      "message": "This changes size of variant/language count headers in languages overlay when variants are present. Probably not a big deal, but just saying.",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_20d3a931",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:25:51Z",
+      "side": 1,
+      "message": "Probably not a big deal either, but this changes the look in stable too.",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_a0a699bc",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:25:51Z",
+      "side": 1,
+      "message": "Put the sum in brackets, just for clarity.",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_00ce6d86",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:25:51Z",
+      "side": 1,
+      "message": "Shouldn\u0027t a right margin also be set?",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_c0c76566",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:25:51Z",
+      "side": 1,
+      "message": "Why don\u0027t we use this in L44?",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_408a351d",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:25:51Z",
+      "side": 1,
+      "message": "Seems like a lot of rules that are not reusable. Couldn\u0027t we come up with something more generic? E.g. use .license for the disclaimer, possibly .panel instead of .comment?",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_60965144",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:25:51Z",
+      "side": 1,
+      "message": "Where is this used? Where do we have input[type\u003d\"submit\"]?",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_a08c5933",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:25:51Z",
+      "side": 1,
+      "message": "Messes up the Add discussion button.",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
