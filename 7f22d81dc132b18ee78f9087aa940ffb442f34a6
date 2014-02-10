@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_00f0ad8c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 788,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-10T23:32:45Z",
+      "side": 1,
+      "message": "This is invalid HTML5. Paste:\n\n\u003c!doctype html\u003e\n\u003ctitle\u003eTest\u003c/title\u003e\n\u003cul\u003e\u003cli\u003ea\u003c/li\u003e\u0026zwnj;\u003cli\u003eb\u003c/li\u003e\u003c/ul\u003e\n\nat http://validator.w3.org/#validate_by_input\n\nIs the ligature correct if you move the \u0026zwnj; inside of one of the \u003cli\u003e tags?",
+      "revId": "7f22d81dc132b18ee78f9087aa940ffb442f34a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
