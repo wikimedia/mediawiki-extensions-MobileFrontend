@@ -5927,6 +5927,7 @@ $messages['ext'] = array(
  * @author Pouyana
  * @author Reza1615
  * @author Rmashhadi
+ * @author Sahim
  * @author ZxxZxxZ
  * @author پسر یاس
  */
@@ -5953,7 +5954,7 @@ $messages['fa'] = array(
 	'mobile-frontend-logged-in-homepage-notification' => 'خوشامدید $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'ورود به‌عنوان $1.',
 	'mobile-frontend-generic-404-title' => 'خطا- صفحه پیدا نشد',
-	'mobile-frontend-generic-404-desc' => 'صفحه‌ای که به دنبالش هستید نتوانست پیدا شود.',
+	'mobile-frontend-generic-404-desc' => 'صفحه‌ای که به دنبالش هستید پیدا نشد.',
 	'mobile-frontend-sign-up-heading' => 'ثبت نام',
 	'mobile-frontend-sign-in-heading' => 'ورود',
 	'mobile-frontend-sign-in-why' => 'اگر در {{SITENAME}} حساب کاربری دارید، می‌توانید در پائین وارد سیستم شوید.',
@@ -11451,7 +11452,7 @@ $messages['ko'] = array(
 	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|$1분}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-hours' => '{{PLURAL:$1|$1시간}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-days' => '{{PLURAL:$1|$1일}} 전에 마지막으로 수정됨',
-	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1달}} 전에 마지막으로 수정됨',
+	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1개월}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-years' => '{{PLURAL:$1|$1년}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-just-now' => '방금 편집됨',
 	'mobile-frontend-last-modified-with-user-seconds' => '{{PLURAL:$5|[$6 $2]|0=익명의}} 사용자가 [$4 {{PLURAL:$3|$3 초}} 전 마지막으로 {{GENDER:$1|편집함}}]',
@@ -13648,6 +13649,8 @@ $messages['ml'] = array(
 	'beta-feature-geonotahack-description' => 'താങ്കൾ ഇപ്പോൾ വായിച്ചുകൊണ്ടിരിക്കുന്നവയുമായി ഭൗമശാസ്ത്രപരമായി അടുത്തുള്ള വിഷയങ്ങൾ കണ്ടെത്തുക.',
 	'mobile-frontend-mainpage-cta-prompt' => 'ഈ താളിൽ താങ്കളുടെ സഹായം ആവശ്യമുണ്ട്!',
 	'mobile-frontend-mainpage-cta-button' => 'ഈ താൾ മെച്ചപ്പെടുത്തുക',
+	'beta-feature-minerva' => 'മൊബൈൽ ദൃശ്യരൂപം (മിനെർവ) ഡെസ്ക്‌ടോപ്പിലും സജ്ജമാക്കുക',
+	'beta-feature-minerva-description' => 'മൊബൈൽ ഉപകരണങ്ങൾക്കായുള്ള ദൃശ്യരൂപം, ക്രമീകരണങ്ങളിലെ ദൃശ്യരൂപം ടാബ് ഉപയോഗിച്ച് ഡെസ്ക്ടോപ്പിലും എടുക്കാവുന്നതാക്കുക.',
 );
 
 /** Mongolian (монгол)
