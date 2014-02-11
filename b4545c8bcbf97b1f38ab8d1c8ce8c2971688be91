@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_16accc31",
+        "filename": "tests/browser/features/support/pages/login_page.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-11T23:05:29Z",
+      "side": 0,
+      "message": "I\u0027m not sure about removing this file. As of now MobileFrontend overrides the login page HTML. Most of the element ids should match, but you never know. Maybe we should still use this and put a FIXME saying that MobileFrontend should try to use the same HTML as desktop instead of overriding it?",
+      "revId": "b4545c8bcbf97b1f38ab8d1c8ce8c2971688be91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
