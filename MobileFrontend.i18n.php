@@ -10170,6 +10170,7 @@ in tutto il mondo',
  * @author Fryed-peach
  * @author Miya
  * @author Ohgi
+ * @author Penn Station
  * @author Schu
  * @author Shirayuki
  * @author What here area team
@@ -10441,7 +10442,7 @@ $messages['ja'] = array(
 	'mobile-frontend-editor-editing-page' => '<span>$1</span> を<strong>編集中</strong>',
 	'mobile-frontend-editor-previewing-page' => '<span>$1</span> の<strong>プレビュー</strong>',
 	'mobile-frontend-editor-viewing-source-page' => '<span>$1</span> の<strong>ソースを閲覧中</strong>',
-	'tag-mobile_edit' => 'モバイル版編集',
+	'tag-mobile_edit' => 'モバイル編集',
 	'tag-mobile_edit-description' => 'モバイル版から行われた編集',
 	'mobile-frontend-drawer-cancel' => 'キャンセル',
 	'mobile-frontend-talk-explained' => '以下の会話が現在進行中です',
