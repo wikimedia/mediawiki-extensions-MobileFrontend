@@ -43,7 +43,7 @@
 	} );
 
 	QUnit.test( '#initialize', 1, function( assert ) {
-		var Thing, spy = sinon.spy();
+		var Thing, spy = this.sandbox.spy();
 
 		Thing = Class.extend( {
 			initialize: spy

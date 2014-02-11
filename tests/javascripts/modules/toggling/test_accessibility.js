@@ -17,13 +17,12 @@ function makeSections() {
 QUnit.module( 'MobileFrontend toggle.js: accessibility', {
 	setup: function() {
 		$container = makeSections();
-		sinon.stub( M, 'isWideScreen' ).returns( false );
+		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
 		toggle.enable();
 	},
 	teardown: function() {
 		window.location.hash = "#";
 		$container.remove();
-		M.isWideScreen.restore();
 	}
 } );
 

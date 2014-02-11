@@ -3,8 +3,9 @@
 var _ajax;
 QUnit.module( 'MobileFrontend mf-watchlist.js', {
 	setup: function() {
-		sinon.stub( mw.user, 'isAnon' ).returns( false );
+		this.sandbox.stub( mw.user, 'isAnon' ).returns( false );
 		_ajax = $.ajax;
+		// FIXME: horrible, use this.sandbox AKA sinon instead
 		$.ajax = function( options ) {
 			var d = new $.Deferred();
 			if ( options.data.action === 'tokens' ) {
@@ -40,7 +41,6 @@ QUnit.module( 'MobileFrontend mf-watchlist.js', {
 	},
 	teardown: function() {
 		$.ajax = _ajax;
-		mw.user.isAnon.restore();
 	}
 } );
 

@@ -49,7 +49,7 @@
 	} );
 
 	QUnit.asyncTest( 'on route', 2, function( assert ) {
-		var count = 0, spy = sinon.spy();
+		var count = 0, spy = this.sandbox.spy();
 
 		router.route( 'testprevent', spy );
 

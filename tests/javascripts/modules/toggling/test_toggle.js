@@ -17,14 +17,13 @@ QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	setup: function() {
 		$container = makeSections();
 		this.$section0 = $container.find( 'h2' ).eq( 0 );
-		sinon.stub( M, 'isWideScreen' ).returns( false );
+		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
 		toggle.enable();
 		toggle.toggle( this.$section0 );
 	},
 	teardown: function() {
 		window.location.hash = "#";
 		$container.remove();
-		M.isWideScreen.restore();
 	}
 });
 
@@ -96,13 +95,12 @@ QUnit.test( 'Verify aria attributes', 9, function () {
 QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	setup: function() {
 		$container = makeSections();
-		sinon.stub( M, 'isWideScreen' ).returns( true );
+		this.sandbox.stub( M, 'isWideScreen' ).returns( true );
 		toggle.enable();
 	},
 	teardown: function() {
 		window.location.hash = "#";
 		$container.remove();
-		M.isWideScreen.restore();
 	}
 } );
 

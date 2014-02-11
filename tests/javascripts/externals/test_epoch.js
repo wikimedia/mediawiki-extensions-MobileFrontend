@@ -1,13 +1,9 @@
 ( function( H, $ ) {
 	QUnit.module( 'epoch.js', {
 		setup: function() {
-			sinon.stub( window.history, 'pushState' );
-			sinon.stub( window.history, 'replaceState' );
+			this.sandbox.stub( window.history, 'pushState' );
+			this.sandbox.stub( window.history, 'replaceState' );
 			H._enable();
-		},
-		teardown: function() {
-			window.history.replaceState.restore();
-			window.history.pushState.restore();
 		}
 	} );
 

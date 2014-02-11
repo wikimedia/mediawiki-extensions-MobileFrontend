@@ -6,7 +6,7 @@ var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 QUnit.module( 'MobileFrontend NearbyApi', {
 	setup: function() {
 		m = new NearbyApi();
-		sinon.stub( m, 'get', function() {
+		this.sandbox.stub( m, 'get', function() {
 			return $.Deferred().resolve( {"query":{"pages":{
 				"20004112":{"pageid":20004112,"ns":0,"title":"The Montgomery (San Francisco)","thumbnail":{"source":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Montgomery%2C_San_Francisco.jpg/119px-The_Montgomery%2C_San_Francisco.jpg","width":119,"height":180},"pageimage":"The_Montgomery,_San_Francisco.jpg","coordinates":[{"lat":37.787,"lon":-122.41,"primary":"","globe":"earth"}]},
 				"18618509":{"pageid":18618509,"ns":0,"title":"Wikimedia Foundation","thumbnail":{"source":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Wikimedia_Foundation_RGB_logo_with_text.svg/180px-Wikimedia_Foundation_RGB_logo_with_text.svg.png","width":180,"height":180},"pageimage":"Wikimedia_Foundation_RGB_logo_with_text.svg","coordinates":[{"lat":37.787,"lon":-122.51,"primary":"","globe":"earth"}]},
@@ -29,7 +29,7 @@ QUnit.test( '#_distanceMessage', function( assert ) {
 			[ 2.561, msgKm, '2.6' ],
 			[ 10.8334, msgKm, '10.9' ]
 		];
-	sinon.spy( mw, 'msg' );
+	this.sandbox.spy( mw, 'msg' );
 
 	QUnit.expect( tests.length );
 	$( tests ).each( function( i ) {

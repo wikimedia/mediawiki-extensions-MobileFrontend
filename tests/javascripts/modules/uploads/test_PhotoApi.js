@@ -10,10 +10,10 @@
 
 			this.api = new PhotoApi();
 			this.api2 = new PhotoApi();
-			sinon.stub( this.api, 'getToken' ).returns( $.Deferred().resolve( 'foo' ) );
-			sinon.stub( this.api, 'post' ).returns( $.Deferred().resolve( resp ) );
-			sinon.stub( this.api2, 'getToken' ).returns( $.Deferred().resolve( 'foo' ) );
-			sinon.stub( this.api2, 'post' ).returns( $.Deferred().resolve( resp2 ) );
+			this.sandbox.stub( this.api, 'getToken' ).returns( $.Deferred().resolve( 'foo' ) );
+			this.sandbox.stub( this.api, 'post' ).returns( $.Deferred().resolve( resp ) );
+			this.sandbox.stub( this.api2, 'getToken' ).returns( $.Deferred().resolve( 'foo' ) );
+			this.sandbox.stub( this.api2, 'post' ).returns( $.Deferred().resolve( resp2 ) );
 		}
 	} );
 
@@ -52,21 +52,21 @@
 
 	QUnit.test( 'warnings (large file)', 1, function() {
 		var d = $.Deferred(),
-			stub = sinon.stub( d, 'reject' );
+			stub = this.sandbox.stub( d, 'reject' );
 		this.api2._handleWarnings( d, { 'large-file': true } );
 		strictEqual( stub.calledWith( 'Missing filename: Large file' ), true );
 	} );
 
 	QUnit.test( 'warnings (existing file)', 1, function() {
 		var d = $.Deferred(),
-			stub = sinon.stub( d, 'reject' );
+			stub = this.sandbox.stub( d, 'reject' );
 		this.api2._handleWarnings( d, { exists: true } );
 		strictEqual( stub.calledWith( 'Missing filename: Filename exists', mw.msg( 'mobile-frontend-photo-upload-error-filename' ) ),
 			true );
 	} );
 
 	QUnit.test( 'error uploading, AbuseFilter', 2, function( assert ) {
-		var doneSpy = sinon.spy(), failSpy = sinon.spy();
+		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
 
 		this.api2.post.
 			returns( $.Deferred().resolve( {"error":{"code":"verification-error","info":"This file did not pass file verification","details":["abusefilter-warning","test",1]}} ) );
@@ -84,7 +84,7 @@
 	} );
 
 	QUnit.test( 'error inserting in page, captcha', 2, function( assert ) {
-		var doneSpy = sinon.spy(), failSpy = sinon.spy();
+		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
 
 		this.api2.post.
 			withArgs( sinon.match( { action: 'edit' } ) ).
@@ -103,7 +103,7 @@
 	} );
 
 	QUnit.test( 'error inserting in page, AbuseFilter', 2, function( assert ) {
-		var doneSpy = sinon.spy(), failSpy = sinon.spy();
+		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
 
 		this.api2.post.
 			withArgs( sinon.match( { action: 'edit' } ) ).

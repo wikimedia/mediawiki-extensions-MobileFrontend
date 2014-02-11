@@ -8,7 +8,7 @@
 	} );
 
 	QUnit.test( '#getPage (h1s)', 1, function( assert ) {
-		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
 				"id": -1,
 				displaytitle: 'Test',
@@ -72,7 +72,7 @@
 	} );
 
 	QUnit.test( '#getPage', 2, function( assert ) {
-		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
 				"id": -1,
 				protection: {
@@ -181,7 +181,7 @@
 	} );
 
 	QUnit.test( '#getPageLanguages', 2, function( assert ) {
-		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"query":{
 				"pages":{
 					"94":{
@@ -297,7 +297,7 @@
 	} );
 
 	QUnit.test( '#getPage (html headings get stripped)', 1, function( assert ) {
-		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
 				"id": -1,
 				protection: [],

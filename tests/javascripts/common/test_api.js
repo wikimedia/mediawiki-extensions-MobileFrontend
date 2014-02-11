@@ -4,15 +4,12 @@ var Api = M.require( 'api' ).Api, stub, tokens;
 
 QUnit.module( 'MobileFrontend api', {
 	setup: function() {
-		var self = this;
-		this.xhr = sinon.useFakeXMLHttpRequest();
-		this.xhr.onCreate = function( xhr ) {
+		var self = this, server = this.sandbox.useFakeServer();
+		server.xhr.onCreate = function( xhr ) {
+			// FIXME: smelly, sinon.extend and sinon.EventTarget are not public interface
 			xhr.upload = sinon.extend( {}, sinon.EventTarget );
 			self.lastXhr = xhr;
 		};
-	},
-	teardown: function() {
-		this.xhr.restore();
 	}
 } );
 
@@ -21,7 +18,7 @@ QUnit.test( 'default instance', 1, function() {
 } );
 
 QUnit.test( 'progress event', 1, function() {
-	var spy = sinon.spy(), api = new Api(), request;
+	var spy = this.sandbox.spy(), api = new Api(), request;
 
 	api.on( 'progress', spy );
 	request = api.post();
@@ -31,16 +28,13 @@ QUnit.test( 'progress event', 1, function() {
 
 QUnit.module( 'MobileFrontend api.Api', {
 	setup: function() {
-		var requests = this.requests = [];
+		var self = this, requests = this.requests = [];
 		this.api = new Api();
-		sinon.stub( $, 'ajax', function() {
-			var request = { abort: sinon.spy() };
+		this.sandbox.stub( $, 'ajax', function() {
+			var request = { abort: self.sandbox.spy() };
 			requests.push( request );
 			return request;
 		} );
-	},
-	teardown: function() {
-		$.ajax.restore();
 	}
 } );
 
@@ -102,7 +96,7 @@ QUnit.module( 'MobileFrontend api.getToken', {
 			warningDeferred = $.Deferred().resolve( { warning: 'you passed a bad watch token' } );
 
 		this.api = new Api();
-		stub = sinon.stub( this.api , 'ajax' );
+		stub = this.sandbox.stub( this.api , 'ajax' );
 		tokens = {
 			editToken: mw.user.tokens.get( 'editToken' ),
 			watchToken: mw.user.tokens.get( 'watchToken' )

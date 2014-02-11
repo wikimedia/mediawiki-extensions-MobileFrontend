@@ -11,7 +11,7 @@ QUnit.test( 'View', 2, function() {
 } );
 
 QUnit.test( 'View, jQuery proxy functions', 10, function() {
-	var view = new View( { el: 'body' } );
+	var self = this, view = new View( { el: 'body' } );
 	[
 		'append',
 		'prepend',
@@ -24,7 +24,7 @@ QUnit.test( 'View, jQuery proxy functions', 10, function() {
 		'remove',
 		'detach'
 	].forEach( function( prop ) {
-		var stub = sinon.stub( view.$el, prop );
+		var stub = self.sandbox.stub( view.$el, prop );
 		view[prop]( 'test', 1 );
 		ok( stub.calledWith( 'test', 1 ) );
 		stub.restore();
@@ -139,7 +139,7 @@ QUnit.test( 'View#preRender', 1, function() {
 } );
 
 QUnit.test( 'View#postRender', 1, function() {
-	var ChildView, view, spy = sinon.spy();
+	var ChildView, view, spy = this.sandbox.spy();
 	ChildView = View.extend( {
 		postRender: function() {
 			spy();

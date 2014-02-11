@@ -204,7 +204,6 @@ class MobileFrontendHooks {
 		// additional frameworks and fixtures we use in tests
 		$testModules['qunit']['mobile.tests.base'] = $testModuleBoilerplate + array(
 			'scripts' => array(
-				'tests/externals/sinon.js',
 				'tests/javascripts/fixtures.js',
 			),
 		);

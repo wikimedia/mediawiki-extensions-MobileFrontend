@@ -6,14 +6,10 @@
 
 	QUnit.module( 'MobileFrontend modules/editor/EditorOverlay', {
 		setup: function() {
-			apiSpy = sinon.spy( EditorApi.prototype, 'initialize' );
+			apiSpy = this.sandbox.spy( EditorApi.prototype, 'initialize' );
 
-			sinon.stub( EditorApi.prototype, 'getContent' ).
+			this.sandbox.stub( EditorApi.prototype, 'getContent' ).
 				returns( $.Deferred().resolve( 'section 0' ) );
-		},
-		teardown: function() {
-			EditorApi.prototype.initialize.restore();
-			EditorApi.prototype.getContent.restore();
 		}
 	} );
 
