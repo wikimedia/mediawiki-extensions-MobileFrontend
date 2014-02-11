@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_3c10d1ac",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-11T02:30:46Z",
+      "side": 1,
+      "message": "That\u0027s fine. I checked it locally and it seems to look OK.",
+      "parentUuid": "6ef7ef47_40bc75d5",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_20d3a931",
         "filename": "less/modules/NotificationsOverlay.less",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2014-02-10T23:25:51Z",
       "side": 1,
       "message": "Probably not a big deal either, but this changes the look in stable too.",
+      "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_fc1b891f",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-11T02:30:46Z",
+      "side": 1,
+      "message": "Moiz said he wants to push these tablet tweaks straight to stable. But I\u0027m happy restricting them to beta if you think that makes more sense.",
+      "parentUuid": "6ef7ef47_20d3a931",
       "revId": "6ed4a08003d0973d920b86b83618e0d87b514517",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
