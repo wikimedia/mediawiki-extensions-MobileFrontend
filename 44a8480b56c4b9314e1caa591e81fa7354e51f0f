@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_f9c27038",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2014-02-12T18:46:11Z",
+      "side": 1,
+      "message": "avoid setting $path to two separate values, it\u0027s easy to think \"oh this first line is redundant\" and remove it by accident doing maintenance :D",
+      "revId": "44a8480b56c4b9314e1caa591e81fa7354e51f0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_d9bfb4a6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2014-02-12T18:46:11Z",
+      "side": 1,
+      "message": "Probably should only prepend the scheme if our mobile URL doesn\u0027t have one already -- can\u0027t assume it\u0027s always protocol-relative.",
+      "revId": "44a8480b56c4b9314e1caa591e81fa7354e51f0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
