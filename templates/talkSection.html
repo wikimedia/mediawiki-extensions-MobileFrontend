@@ -4,12 +4,14 @@
 	{{{section.text}}}
 	<div class="loading"></div>
 	<div class="comment">
-		<h3 class="mw-mf-overlay-header">{{reply}}</h3>
-		<p>
-			<em>{{info}}</em>
-			<em>{{{licenseMsg}}}</em>
-		</p>
-		<textarea class="wikitext-editor"></textarea>
-		<button class="mw-ui-button mw-ui-constructive mw-ui-block">{{confirmMsg}}</button>
+		<div class="mw-mf-overlay-header">{{reply}}</div>
+		<div class="comment-content">
+			<textarea class="wikitext-editor"></textarea>
+			<p class="license">
+				{{info}}
+				{{{licenseMsg}}}
+			</p>
+			<button class="mw-ui-button mw-ui-constructive mw-ui-block">{{confirmMsg}}</button>
+		</div>
 	</div>
 </div>
