@@ -508,10 +508,34 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
-		global $wgMFEnableXAnalyticsLogging;
+		global $wgMFEnableXAnalyticsLogging, $wgMFAppPackageId, $wgMFAppScheme;
 		wfProfileIn( __METHOD__ );
 
 		$context = MobileContext::singleton();
+
+		$title = $sk->getTitle();
+		$request = $context->getRequest();
+		# Add deep link to a mobile app specified by $wgMFAppScheme
+		if ( ( $wgMFAppPackageId !== false ) && ( $title->isContentPage() )
+		     && ( $request->getRawQueryString() === '' ) ) {
+			$fullUrl = $title->getFullURL();
+			$mobileUrl = $context->getMobileUrl( $fullUrl );
+			$path = preg_replace( "/^([a-z]+:)?(\/)*/", '', $mobileUrl, 1 );
+
+			$scheme = 'http';
+			if ( $wgMFAppScheme !== false ) {
+				$scheme = $wgMFAppScheme;
+			} else {
+				$protocol = $request->getProtocol();
+				if ( $protocol != '' ) {
+					$scheme = $protocol;
+				}
+			}
+
+			$hreflink = 'android-app://' . $wgMFAppPackageId . '/' . $scheme . '/' . $path;
+			$out->addLink( array( 'rel' => 'alternate', 'href' => $hreflink ) );
+		}
+
 		if ( !$context->shouldDisplayMobileView() ) {
 			if ( class_exists( 'BetaFeatures' ) &&
 				BetaFeatures::isFeatureEnabled( $out->getSkin()->getUser(), 'betafeatures-geonotahack' ) ) {
