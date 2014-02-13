@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_54f5a2c6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 247
+      },
+      "writtenOn": "2014-02-13T18:48:15Z",
+      "side": 1,
+      "message": "Ups, will fix.",
+      "parentUuid": "4e04eb01_34de9671",
+      "revId": "2ccfb6677ffce6cfece5c75e4c9a9837eb88e7db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_14eb9a0a",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_5447e222",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 247
+      },
+      "writtenOn": "2014-02-13T18:48:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e04eb01_14eb9a0a",
+      "revId": "2ccfb6677ffce6cfece5c75e4c9a9837eb88e7db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_94ce8ab8",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
@@ -47,6 +83,24 @@
       "writtenOn": "2014-02-13T18:35:53Z",
       "side": 1,
       "message": "$context-\u003egetProtocol()? Also, will it work with protocol-relative URLs?",
+      "revId": "2ccfb6677ffce6cfece5c75e4c9a9837eb88e7db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_94544acb",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 531,
+      "author": {
+        "id": 247
+      },
+      "writtenOn": "2014-02-13T18:48:15Z",
+      "side": 1,
+      "message": "I didn\u0027t know about $context-getProtocol(). When a protocol-relative URL is encountered it will fall back to the default given above. Shall I just use $context-\u003egetProtocol? It sounds simpler.",
+      "parentUuid": "4e04eb01_94ce8ab8",
       "revId": "2ccfb6677ffce6cfece5c75e4c9a9837eb88e7db",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
