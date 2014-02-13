@@ -80,7 +80,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 *
 	 */
 	protected function getUserSummary() {
-		$user = $this->getUser();
 		$out = '';
 		if ( $this->editable || $this->userDescription ) {
 			$out = Html::openElement( 'div', array( 'class' => 'user-description-container' ) );
@@ -139,7 +138,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$rev = $this->userInfo->getLastEdit();
 		if ( $rev ) {
 			$daysAgo = $this->getDaysAgo( new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) ) );
-			$imageHtml = '';
 			$page = new MobilePage( $rev->getTitle() );
 			if ( $page->hasThumbnail() ) {
 				$thumbnail = $page->getMediumThumbnailHtml();
@@ -222,7 +220,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 	public function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
-		$request = $this->getRequest();
 		$this->addModules();
 		$out->addModuleStyles( 'mobile.special.styles' );
 		$out->setProperty( 'unstyledContent', true );
