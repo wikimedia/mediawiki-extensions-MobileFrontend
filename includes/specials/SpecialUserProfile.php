@@ -186,11 +186,14 @@ class SpecialUserProfile extends MobileSpecialPage {
 
 	protected function getUserFooterHtml() {
 		$fromDate = $this->targetUser->getRegistration();
-		$editCount = $this->targetUser->getEditCount();
-		$uploadCount = $this->userInfo->countRecentUploads( $fromDate );
 		$ts = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
 		$diff = $ts->diff( new MWTimestamp() );
-		if ( $diff->y ) {
+		if ( $fromDate === null ) {
+			// User was registered in pre-historic times when registration wasn't recorded
+			$msg = 'mobile-frontend-profile-footer-ancient';
+			$units = 0;
+			$fromDate = '20010115000000'; // No users before that date
+		} elseif ( $diff->y ) {
 			$msg = 'mobile-frontend-profile-footer-years';
 			$units = $diff->y;
 		} elseif ( $diff->m ) {
@@ -200,6 +203,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$msg = 'mobile-frontend-profile-footer-days';
 			$units = $diff->d;
 		}
+		$editCount = $this->targetUser->getEditCount();
+		$uploadCount = $this->userInfo->countRecentUploads( $fromDate );
 
 		// Ensure that the upload count is compatible with the i18n message
 		if ( $uploadCount > 500 ) {
