@@ -16,6 +16,24 @@
       "revId": "b4545c8bcbf97b1f38ab8d1c8ce8c2971688be91",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_ae75b994",
+        "filename": "tests/browser/features/support/pages/login_page.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2014-02-13T11:17:31Z",
+      "side": 0,
+      "message": "I am not sure what should be done here. If it is possible to use the same HTML, that would be the simplest solution.",
+      "parentUuid": "4e04eb01_16accc31",
+      "revId": "b4545c8bcbf97b1f38ab8d1c8ce8c2971688be91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
