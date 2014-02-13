@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_91e45ca5",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 521,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2014-02-13T17:45:38Z",
+      "side": 1,
+      "message": "Hmm, I would avoid replacing the scheme with \u0027http\u0027 if it\u0027s not set in the config here. Some sites may prefer https by default and shouldn\u0027t have to set it twice...",
+      "revId": "d7350959703b8167386f4b8d3fd474b718985e06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
