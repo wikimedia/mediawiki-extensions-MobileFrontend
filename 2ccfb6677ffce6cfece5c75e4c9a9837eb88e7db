@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_17bddc16",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 247
+      },
+      "writtenOn": "2014-02-13T20:55:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e04eb01_54f5a2c6",
+      "revId": "2ccfb6677ffce6cfece5c75e4c9a9837eb88e7db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_14eb9a0a",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
@@ -100,6 +118,24 @@
       "writtenOn": "2014-02-13T18:48:15Z",
       "side": 1,
       "message": "I didn\u0027t know about $context-getProtocol(). When a protocol-relative URL is encountered it will fall back to the default given above. Shall I just use $context-\u003egetProtocol? It sounds simpler.",
+      "parentUuid": "4e04eb01_94ce8ab8",
+      "revId": "2ccfb6677ffce6cfece5c75e4c9a9837eb88e7db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_37b0d83d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 531,
+      "author": {
+        "id": 247
+      },
+      "writtenOn": "2014-02-13T20:55:22Z",
+      "side": 1,
+      "message": "Done",
       "parentUuid": "4e04eb01_94ce8ab8",
       "revId": "2ccfb6677ffce6cfece5c75e4c9a9837eb88e7db",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
