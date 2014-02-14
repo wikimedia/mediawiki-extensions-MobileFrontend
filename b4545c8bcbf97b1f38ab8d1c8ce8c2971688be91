@@ -34,6 +34,24 @@
       "revId": "b4545c8bcbf97b1f38ab8d1c8ce8c2971688be91",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_83e3eed3",
+        "filename": "tests/browser/features/support/pages/login_page.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-14T02:32:42Z",
+      "side": 0,
+      "message": "It is, but not as a part of this patch anyway, that\u0027s why I\u0027d suggest a FIXME here saying that this file could be removed when mobile stops using custom HTML for login.",
+      "parentUuid": "4e04eb01_ae75b994",
+      "revId": "b4545c8bcbf97b1f38ab8d1c8ce8c2971688be91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
