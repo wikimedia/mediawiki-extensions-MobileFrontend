@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_e4eab572",
+        "filename": "includes/api/ApiMobileLangLinks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-02-14T22:56:03Z",
+      "side": 1,
+      "message": "I think it would be slightly more efficient to pass in the pageids",
+      "revId": "23f7e331c846790aa3a58a9cf4ddafbfda825abd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_64d7c5c5",
+        "filename": "includes/api/ApiMobileLangLinks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-02-14T22:56:03Z",
+      "side": 1,
+      "message": "In the future we should switch to using the new continue\u003d method, but its fine for now.",
+      "revId": "23f7e331c846790aa3a58a9cf4ddafbfda825abd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_e42f55f2",
+        "filename": "includes/api/ApiMobileLangLinks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-02-14T22:56:03Z",
+      "side": 1,
+      "message": "$this-\u003edie* () ?",
+      "revId": "23f7e331c846790aa3a58a9cf4ddafbfda825abd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_a4e4ada4",
+        "filename": "includes/api/ApiMobileLangLinks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-02-14T22:56:03Z",
+      "side": 1,
+      "message": "i think $this-\u003edieDebug() would be good here.",
+      "revId": "23f7e331c846790aa3a58a9cf4ddafbfda825abd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_04dec1de",
+        "filename": "includes/api/ApiMobileLangLinks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-02-14T22:56:03Z",
+      "side": 1,
+      "message": "do we even need a special method for this? Up to you.",
+      "revId": "23f7e331c846790aa3a58a9cf4ddafbfda825abd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_c4efb981",
+        "filename": "includes/api/ApiMobileLangLinks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-02-14T22:56:03Z",
+      "side": 1,
+      "message": "boo!",
+      "revId": "23f7e331c846790aa3a58a9cf4ddafbfda825abd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
