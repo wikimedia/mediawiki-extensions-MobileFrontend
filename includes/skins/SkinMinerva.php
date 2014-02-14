@@ -11,7 +11,7 @@ class SkinMinerva extends SkinTemplate {
 	public $skinname = 'minerva';
 	public $template = 'MinervaTemplate';
 	public $useHeadElement = true;
-	/* @var string  describing the current stability of the skin, can be overriden by derivative experimental skins */
+	/* @var string  describes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'stable';
 
 	protected function prepareQuickTemplate() {
@@ -25,14 +25,24 @@ class SkinMinerva extends SkinTemplate {
 			);
 		}
 		$out->addHeadItem( 'viewport',
-			Html::element( 'meta', array( 'name' => 'viewport', 'content' => 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=1.6' ) )
+			Html::element(
+				'meta', array(
+					'name' => 'viewport',
+					'content' => 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=1.6',
+				)
+			)
 		);
 		// hide chrome on bookmarked sites
 		$out->addHeadItem( 'apple-mobile-web-app-capable',
 			Html::element( 'meta', array( 'name' => 'apple-mobile-web-app-capable', 'content' => 'yes' ) )
 		);
 		$out->addHeadItem( 'apple-mobile-web-app-status-bar-style',
-			Html::element( 'meta', array( 'name' => 'apple-mobile-web-app-status-bar-style', 'content' => 'black' ) )
+			Html::element(
+				'meta', array(
+					'name' => 'apple-mobile-web-app-status-bar-style',
+					'content' => 'black',
+				)
+			)
 		);
 		$out->addHeadItem( 'loadingscript', Html::inlineScript(
 			"document.documentElement.className += ' page-loading';"
@@ -42,7 +52,8 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $this->isMobileMode ) {
-			// FIXME: This needs to occur before prepareQuickTemplate which wraps the body text in an element with id mw-content-text
+			// @FIXME: This needs to occur before prepareQuickTemplate which wraps the body text in an
+			// element with id mw-content-text
 			// Otherwise we end up with an unnecessary div.
 			$html = ExtMobileFrontend::DOMParse( $out );
 		}
@@ -64,7 +75,8 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareLanguages( $tpl );
 		// FIXME: Remove need for a page-loading class
 		$bottomScripts = Html::inlineScript(
-			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
+			"document.documentElement.className = " .
+				"document.documentElement.className.replace( 'page-loading', '' );"
 		);
 		$bottomScripts .= $out->getBottomScripts();
 		$tpl->set( 'bottomscripts', $bottomScripts );
@@ -116,7 +128,7 @@ class SkinMinerva extends SkinTemplate {
 		$className = $this->getMode();
 		if ( $title->isMainPage() ) {
 			$className .= ' page-Main_Page ';
-		} else if ( $title->isSpecialPage() ) {
+		} elseif ( $title->isSpecialPage() ) {
 			$className .= ' mw-mf-special ';
 		}
 		if ( !$this->getUser()->isAnon() ) {
@@ -171,11 +183,15 @@ class SkinMinerva extends SkinTemplate {
 			$tpl->set( 'secondaryButton',
 				Html::openElement( 'a', array(
 					'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
-					'href' => $notificationsTitle->getLocalURL( array( 'returnto' => $currentTitle->getPrefixedText() ) ),
+					'href' => $notificationsTitle->getLocalURL(
+						array( 'returnto' => $currentTitle->getPrefixedText() ) ),
 					'class' => 'user-button',
 					'id'=> 'secondary-button',
 				) ) .
-				Html::element( 'span', array( 'class' => $count ? '' : 'zero' ), $this->getLanguage()->formatNum( $count ) ) .
+				Html::element(
+					'span',
+					array( 'class' => $count ? '' : 'zero' ),
+					$this->getLanguage()->formatNum( $count ) ) .
 				Html::closeElement( 'a' )
 			);
 		} else {
@@ -244,7 +260,8 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Rewrites the language list so that it cannot be contaminated by other extensions with things other than languages
+	 * Rewrites the language list so that it cannot be contaminated by other extensions with things
+	 * other than languages
 	 * See bug 57094.
 	 *
 	 * FIXME: Remove when Special:Languages link goes stable
@@ -275,7 +292,8 @@ class SkinMinerva extends SkinTemplate {
 			),
 			'random' => array(
 				'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl( array( 'campaign' => 'random' ) ),
+				'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl(
+					array( 'campaign' => 'random' ) ),
 				'class' => 'icon-random',
 				'id' => 'randomButton',
 			),
@@ -340,8 +358,8 @@ class SkinMinerva extends SkinTemplate {
 			$url = $this->mobileContext->getMobileUrl( $url, $wgSecureLogin );
 			$text = wfMessage( 'mobile-frontend-main-menu-logout' )->escaped();
 		} else {
-			 // note returnto is not set for mobile (per product spec)
-			// note welcome=yes in return to query allows us to detect accounts created from the left nav
+			// note returnto is not set for mobile (per product spec)
+			// note welcome=yes in returnto  allows us to detect accounts created from the left nav
 			$returntoquery[ 'welcome' ] = 'yes';
 			// unset campaign on login link so as not to interfere with A/B tests
 			unset( $returntoquery['campaign'] );
@@ -414,8 +432,13 @@ class SkinMinerva extends SkinTemplate {
 		$disableSearchAndFooter = $out->getProperty( 'disableSearchAndFooter' );
 		$tpl->set( 'disableSearchAndFooter', $disableSearchAndFooter );
 		if ( $title->isMainPage() ) {
-			$out->setPageTitle( $user->isLoggedIn() ?
-				wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() : '' );
+			if ( $user->isLoggedIn() ) {
+				$pageTitle = wfMessage(
+					'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text();
+			} else {
+				$pageTitle = '';
+			}
+			$out->setPageTitle( $pageTitle );
 		}
 		$pageHeading = $out->getPageTitle();
 
@@ -428,7 +451,11 @@ class SkinMinerva extends SkinTemplate {
 				$tpl->set( 'specialPageHeader', $htmlHeader );
 			}
 		} else {
-			$preBodyText = $pageHeading ? Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading ) : '';
+			if ( $pageHeading ) {
+				$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading );
+			} else {
+				$preBodyText = '';
+			}
 			$tpl->set( 'prebodytext', $preBodyText );
 
 			// If it's a page that exists, add last edited timestamp
@@ -519,8 +546,10 @@ class SkinMinerva extends SkinTemplate {
 		$out = $this->getOutput();
 		if ( $out->getRequest()->getText( 'oldid' ) ) {
 			$subtitle = $out->getSubtitle();
-			$tpl->set( '_old_revision_warning',
-				Html::openElement( 'div', array( 'class' => 'alert warning' ) ) . $subtitle . Html::closeElement( 'div' ) );
+			$tpl->set(
+				'_old_revision_warning',
+				Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
+					$subtitle . Html::closeElement( 'div' ) );
 		}
 	}
 
@@ -821,7 +850,8 @@ HTML;
 		// The license message is displayed in the content language rather than the user
 		// language. See Skin::getCopyright.
 		if ( $link ) {
-			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $link )->inContentLanguage()->text();
+			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams(
+				$link )->inContentLanguage()->text();
 		} else {
 			$licenseText = '';
 		}
