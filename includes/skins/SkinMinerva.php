@@ -628,7 +628,8 @@ class SkinMinerva extends SkinTemplate {
 			$wgMFDeviceWidthTablet,
 			$wgMFAjaxUploadProgressSupport,
 			$wgMFAnonymousEditing,
-			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc;
+			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc,
+			$wgMFCollapseSectionsByDefault;
 
 		$title = $this->getTitle();
 		$user = $this->getUser();
@@ -646,6 +647,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgIsPageEditable' => $title->quickUserCan( 'edit', $user ) || $userCanCreatePage,
 			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
 			'wgMFMode' => $this->getMode(),
+			'wgMFCollapseSectionsByDefault' => $wgMFCollapseSectionsByDefault,
 		), $this->getSkinConfigMobileVariables() );
 
 		if ( !$user->isAnon() ) {

@@ -464,3 +464,13 @@ $wgMFTransitionalWapLifetime = 3 * 86400;
  * Controls whether the "Minerva as a desktop skin" beta feature is enabled
  */
 $wgMFEnableMinervaBetaFeature = false;
+
+/**
+ * Controls whether to collapse sections by default.
+ *
+ * Leave at default true for "encyclopedia style", where the section 0 lead text will
+ * always be visible and subsequent sections may be collapsed by default.
+ *
+ * Set to false for "dictionary style", sections are not collapsed.
+ */
+$wgMFCollapseSectionsByDefault = true;
