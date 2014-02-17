@@ -1,4 +1,3 @@
-require_relative "hooks"
 require "mediawiki_selenium"
 
 def local_browser(user_agent)
