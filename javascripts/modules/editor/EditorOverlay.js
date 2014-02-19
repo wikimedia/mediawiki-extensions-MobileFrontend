@@ -176,9 +176,7 @@
 			var self = this, msg;
 
 			this.$( '.abusefilter-panel .readmore' ).on( 'click', function() {
-				self.canHide = true;
 				new AbuseFilterOverlay( { parent: self, message: message } ).show();
-				self.canHide = false;
 			} );
 
 			if ( type === 'warning' ) {

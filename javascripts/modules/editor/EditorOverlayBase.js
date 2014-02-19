@@ -93,7 +93,7 @@
 		},
 		hide: function( force ) {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
-			if ( force || !this._hasChanged() || this.canHide || window.confirm( confirmMessage ) ) {
+			if ( force || !this._hasChanged() || window.confirm( confirmMessage ) ) {
 				return this._super();
 			} else {
 				return false;

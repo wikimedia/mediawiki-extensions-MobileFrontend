@@ -82,7 +82,7 @@
 
 			this.$spinner.show();
 			// Stop the confirmation message from being thrown when you hit save.
-			this.canHide = true;
+			this.hasChanged = false;
 			this.$( '.surface, .summary-area' ).hide();
 			if ( this.captchaId ) {
 				// Intentional Lcase ve save api properties
