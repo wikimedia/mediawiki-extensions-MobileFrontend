@@ -8,14 +8,14 @@
 			this.sectionId = options.sectionId;
 			this.oldId = options.oldId;
 			// return an empty section for new pages
-			this.content = options.isNew ? '' : null;
+			this.content = options.isNew ? '' : undefined;
 			this.hasChanged = false;
 		},
 
 		getContent: function() {
 			var self = this, result = $.Deferred(), options;
 
-			if ( this.content !== null ) {
+			if ( this.content !== undefined ) {
 				result.resolve( this.content );
 			} else {
 				options = {
@@ -67,6 +67,17 @@
 		},
 
 		/**
+		 * Mark content as modified and set text that should be prepended to given
+		 * section when #save is invoked.
+		 *
+		 * @param text String Text to be prepended.
+		 */
+		setPrependText: function( text ) {
+			this.prependtext = text;
+			this.hasChanged = true;
+		},
+
+		/**
 		 * Save the new content of the section, previously set using #setContent.
 		 *
 		 * @param [options.summary] String Optional summary for the edit.
@@ -90,7 +101,6 @@
 				var apiOptions = {
 					action: 'edit',
 					title: self.title,
-					text: self.content,
 					summary: options.summary,
 					captchaid: options.captchaId,
 					captchaword: options.captchaWord,
@@ -98,6 +108,12 @@
 					basetimestamp: self.timestamp,
 					starttimestamp: self.timestamp
 				};
+
+				if ( self.content !== undefined ) {
+					apiOptions.text = self.content;
+				} else if ( self.prependtext ) {
+					apiOptions.prependtext = self.prependtext;
+				}
 
 				if ( $.isNumeric( self.sectionId ) ) {
 					apiOptions.section = self.sectionId;

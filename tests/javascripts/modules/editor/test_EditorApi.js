@@ -118,6 +118,30 @@
 		assert.strictEqual( editorApi.hasChanged, false, 'reset hasChanged' );
 	} );
 
+	QUnit.test( '#save, after #prependText', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test' } );
+
+		this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve(
+			{ edit: { result: 'Success' } }
+		) );
+
+		editorApi.setPrependText( 'abc' );
+		editorApi.save( { summary: 'summary' } ).done( function() {
+			assert.ok( editorApi.post.calledWith( {
+				action: 'edit',
+				title: 'test',
+				prependtext: 'abc',
+				summary: 'summary',
+				captchaid: undefined,
+				captchaword: undefined,
+				token: 'fake token',
+				basetimestamp: undefined,
+				starttimestamp: undefined
+			} ), 'prepend text' );
+		} );
+		assert.strictEqual( editorApi.hasChanged, false, 'reset hasChanged' );
+	} );
+
 	QUnit.test( '#save, submit CAPTCHA', 2, function( assert ) {
 		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } );
 
