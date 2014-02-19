@@ -96,22 +96,15 @@
 
 		// FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
 		_handleWarnings: function( result, warnings ) {
-			var errorMsg = 'Missing filename: ', humanErrorMsg;
+			var errorMsg = 'upload/warning/', humanErrorMsg;
+
+			warnings = $.map( warnings, function( value, code ) {
+				return code + '/' + value;
+			} );
+			errorMsg += warnings[0] || 'unknown';
+
 			if ( warnings.exists ) {
-				errorMsg += 'Filename exists';
 				humanErrorMsg = mw.msg( 'mobile-frontend-photo-upload-error-filename' );
-			} else if ( warnings.badfilename ) {
-				errorMsg = 'Bad filename: [' + warnings.badfilename + ']';
-			} else if ( warnings.emptyfile ) {
-				errorMsg += 'Empty file';
-			} else if ( warnings['filetype-unwanted-type'] ) {
-				errorMsg += 'Bad filetype';
-			} else if ( warnings['duplicate-archive'] ) {
-				errorMsg += 'Duplicate archive';
-			} else if ( warnings['large-file'] ) {
-				errorMsg += 'Large file';
-			} else {
-				errorMsg += 'Unknown warning ' + $.toJSON( warnings );
 			}
 
 			return result.reject( errorMsg, humanErrorMsg );
@@ -164,15 +157,15 @@
 				} ).done( function( data ) {
 					var descriptionUrl = '',
 						warnings = data.upload ? data.upload.warnings : false,
-						err = '';
+						err = 'upload/error';
 					if ( !data || !data.upload ) {
 						// error uploading image
 						if ( data.error ) {
 							if ( data.error.code ) {
-								err += data.error.code;
+								err += '/' + data.error.code;
 							}
 							if ( data.error.details && data.error.details[0] ) {
-								err += ' ' + data.error.details[0];
+								err += '/' + data.error.details[0];
 							}
 						}
 						result.reject( err );
@@ -185,7 +178,7 @@
 						} else if ( warnings ) {
 							return self._handleWarnings( result, warnings );
 						} else {
-							return result.reject( 'Missing filename: ' + $.toJSON( data.upload ) );
+							return result.reject( 'upload/unknown/missing-filename' );
 						}
 					}
 					// FIXME: API doesn't return this information on duplicate images...
@@ -201,20 +194,20 @@
 								result.resolve( options.fileName, descriptionUrl );
 							} else if ( data && data.error ) {
 								// Edit API error
-								result.reject( data.error.code );
+								result.reject( 'edit/error/' + data.error.code );
 							} else if ( data && data.edit && data.edit.captcha ) {
 								// CAPTCHAs
-								result.reject( 'captcha' );
+								result.reject( 'edit/captcha' );
 							} else if ( data && data.edit && data.edit.code ) {
 								code = data.edit.code;
 								// AbuseFilter
 								if ( /^abusefilter/.test( code ) ) {
-									result.reject( 'abusefilter' );
+									result.reject( 'edit/abusefilter' );
 								} else {
-									result.reject( code );
+									result.reject( 'edit/unknown/' + code );
 								}
 							} else {
-								result.reject( 'unknown error' );
+								result.reject( 'edit/unknown' );
 							}
 						} );
 					} else {
