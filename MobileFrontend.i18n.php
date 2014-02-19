@@ -469,7 +469,8 @@ This buttons takes the user to the home page.
 * $1 - username',
 	'mobile-frontend-logged-in-toast-notification' => 'Message telling user that they are logged in. Shows as a notification at bottom of page
 *$1 - username',
-	'mobile-frontend-generic-404-title' => 'Title for a generic HTTP 404 error page',
+	'mobile-frontend-generic-404-title' => 'Title for a generic HTTP 404 error page.
+{{Identical|Page not found}}',
 	'mobile-frontend-generic-404-desc' => 'Generic description of the HTTP 404 error shown to users',
 	'mobile-frontend-sign-up-heading' => 'Header for sign up page.
 {{Identical|Sign up}}',
@@ -6526,7 +6527,7 @@ $messages['fi'] = array(
 	'mobile-frontend-nearby-requirements-guidance' => 'Kokeile eri selainta tai JavaScriptin ottamista käyttöön.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
-	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} Lähistöllä ei voi selvittää missä olet... yritä uudelleen?',
+	'mobile-frontend-nearby-lookup-ui-error' => 'Sivuston {{SITENAME}} Lähistöllä-toiminto ei onnistunut selvittämään sijaintiasi. Yritä uudelleen?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Kokeile avointa aluetta, jossa on parempi signaali.',
 	'mobile-frontend-nearby-error' => 'Sivuston {{SITENAME}} Lähistöllä-toiminnossa on ongelmia.',
 	'mobile-frontend-nearby-error-guidance' => 'Yritä päivittää sijaintisi.',
@@ -6612,7 +6613,8 @@ $messages['fi'] = array(
 	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|Keskustele käyttäjälle $1}}',
 	'mobile-frontend-profile-noargs' => 'Käyttäjätunnusta ei annettu. Anna käyttäjätunnus, jonka käyttäjätiedot haluat nähdä.',
 	'mobile-frontend-profile-userpage-link' => 'Näytä käyttäjäsivu.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Tämä sivu tarvitsee apuasi!',
+	'mobile-frontend-mainpage-cta-prompt' => 'Tämä sivu tarvitsee apuasi.',
+	'mobile-frontend-mainpage-cta-button' => 'Paranna tätä sivua',
 );
 
 /** Faroese (føroyskt)
@@ -11847,7 +11849,7 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-last-edit' => '[[:$1]] 문서를 {{PLURAL:$2|어제|$2일 전|0=오늘}} {{GENDER:$3|편집했습니다}}.',
 	'mobile-frontend-profile-footer-days' => '{{PLURAL:$2|$2일}}전에 가입하여 [[Special:Contributions/$1|{{PLURAL:$3|편집 1회|편집 $3회}}]]와 [[Special:Uploads/$1|{{PLURAL:$4|1개의 파일 올림|$4개의 파일 올림|500=500개 이상의 파일 올림}}]].',
 	'mobile-frontend-profile-footer-months' => '{{PLURAL:$2|1개월|$2개월}} 전에 가입하여 [[Special:Contributions/$1|{{PLURAL:$3|편집 1회|편집 $3회}}]]와 [[Special:Uploads/$1|{{PLURAL:$4|1개의 파일 올림|$4개의 파일 올림|500= 500+개의 사진 올림}}]].',
-	'mobile-frontend-profile-footer-years' => '[[Special:Contributions/$1|{{PLURAL:$3|1번의 편집|$3번의 편집}}]]과[[Special:Uploads/$1|{{PLURAL:$4|1번의 파일 올리기|$4번의 파일 올리기|500=500+번의 파일올리기}}]]로 {{PLURAL:$2|1년|$년}} 전에 가입함.',
+	'mobile-frontend-profile-footer-years' => '{{PLURAL:$2|1년|$2년}} 전에 가입해 [[Special:Contributions/$1|{{PLURAL:$3|1번의 편집|$3번의 편집}}]]과 [[Special:Uploads/$1|{{PLURAL:$4|1번의 파일 올리기|$4번의 파일 올리기|500=500+번의 파일 올리기}}]]를 함.',
 	'mobile-frontend-geonotahack' => '이 문서 근처',
 	'beta-feature-geonotahack' => '근처 문서',
 	'beta-feature-geonotahack-description' => '자신이 지금 보고 있는 내용과 지리적으로 가까운 문서를 찾아 보십시오.',
@@ -18632,6 +18634,7 @@ $messages['sv'] = array(
 	'mobile-frontend-logged-in-homepage-notification' => 'Välkommen, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Inloggad som $1.',
 	'mobile-frontend-generic-404-title' => 'Fel - Sidan hittades inte',
+	'mobile-frontend-generic-404-desc' => 'Sidan du letar efter kunde inte hittas.',
 	'mobile-frontend-sign-up-heading' => 'Skapa ett konto',
 	'mobile-frontend-sign-in-heading' => 'Logga in',
 	'mobile-frontend-sign-in-why' => 'Om du har ett {{SITENAME}}konto kan du logga in nedan.',

@@ -22,6 +22,13 @@ $specialPageAliases['en'] = array(
 	'UserProfile' => array( 'UserProfile' ),
 );
 
+/** Afrikaans (Afrikaans) */
+$specialPageAliases['af'] = array(
+	'History' => array( 'Geskiedenis' ),
+	'Uploads' => array( 'Oplaaie' ),
+	'Nearby' => array( 'Naby' ),
+);
+
 /** Arabic (العربية) */
 $specialPageAliases['ar'] = array(
 	'History' => array( 'تاريخ' ),
@@ -29,8 +36,22 @@ $specialPageAliases['ar'] = array(
 	'Uploads' => array( 'مرفوعات' ),
 	'MobileDiff' => array( 'فرق_المحمول' ),
 	'MobileMenu' => array( 'قائمة_المحمول' ),
+	'MobileLanguages' => array( 'لغات_المحمول' ),
 	'Nearby' => array( 'قريب' ),
 	'UserProfile' => array( 'ملف_المستخدم' ),
+);
+
+/** Egyptian Spoken Arabic (مصرى) */
+$specialPageAliases['arz'] = array(
+	'History' => array( 'تاريخ' ),
+	'MobileOptions' => array( 'خيارات_الموبايل' ),
+	'Uploads' => array( 'مرفوعات' ),
+	'MobileDiff' => array( 'فرق_الموبايل' ),
+	'MobileEditor' => array( 'محرر_الموبايل' ),
+	'MobileMenu' => array( 'قايمه_الموبايل' ),
+	'MobileLanguages' => array( 'لغات_الموبايل' ),
+	'Nearby' => array( 'قريب' ),
+	'UserProfile' => array( 'بروفايل_اليوزر' ),
 );
 
 /** Asturian (asturianu) */
@@ -60,6 +81,7 @@ $specialPageAliases['de'] = array(
 	'MobileDiff' => array( 'Mobiler_Unterschied' ),
 	'MobileEditor' => array( 'Mobiler_Editor' ),
 	'MobileMenu' => array( 'Mobiles_Menü' ),
+	'MobileLanguages' => array( 'Mobile_Sprachen' ),
 	'Nearby' => array( 'In_der_Nähe' ),
 	'UserProfile' => array( 'Benutzerprofil' ),
 );
@@ -100,10 +122,13 @@ $specialPageAliases['et'] = array(
 
 /** Persian (فارسی) */
 $specialPageAliases['fa'] = array(
-	'MobileOptions' => array( 'گزینه‌های_تلفن_همراه' ),
+	'History' => array( 'تاریخچه' ),
+	'MobileOptions' => array( 'گزینه‌های_گوشی_همراه' ),
 	'Uploads' => array( 'بارگذاری‌ها' ),
-	'MobileDiff' => array( 'تفاوت_تلفن_همراه' ),
-	'MobileMenu' => array( 'گزینگان_تلفن_همراه' ),
+	'MobileDiff' => array( 'تفاوت_گوشی_همراه' ),
+	'MobileEditor' => array( 'ویرایشگر_گوشی_همراه' ),
+	'MobileMenu' => array( 'گزینگان_گوشی_همراه' ),
+	'MobileLanguages' => array( 'زبان‌های_گوشی_همراه' ),
 	'Nearby' => array( 'درنزدیکی', 'در_نزدیکی' ),
 	'UserProfile' => array( 'شناسنامهٔ_کاربری', 'شناسنامه_کاربری' ),
 );
@@ -134,9 +159,13 @@ $specialPageAliases['it'] = array(
 
 /** Japanese (日本語) */
 $specialPageAliases['ja'] = array(
+	'History' => array( '履歴' ),
 	'MobileOptions' => array( '携帯機器オプション' ),
+	'Uploads' => array( '携帯機器アップロード' ),
 	'MobileDiff' => array( '携帯機器差分' ),
+	'MobileEditor' => array( '携帯機器編集' ),
 	'MobileMenu' => array( '携帯機器メニュー' ),
+	'MobileLanguages' => array( '携帯機器言語', '言語' ),
 	'Nearby' => array( '付近' ),
 	'UserProfile' => array( '利用者プロフィール' ),
 );
@@ -164,10 +193,13 @@ $specialPageAliases['lb'] = array(
 
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
+	'History' => array( 'Историја' ),
 	'MobileOptions' => array( 'МобилниПоставки' ),
 	'Uploads' => array( 'Подигања' ),
 	'MobileDiff' => array( 'МобилнаРазлика' ),
+	'MobileEditor' => array( 'МобиленУредувач' ),
 	'MobileMenu' => array( 'МобилноМени' ),
+	'MobileLanguages' => array( 'МобилниЈазици' ),
 	'Nearby' => array( 'ВоБлизина' ),
 	'UserProfile' => array( 'КорисничкиПрофил' ),
 );
@@ -233,24 +265,33 @@ $specialPageAliases['vi'] = array(
 	'MobileDiff' => array( 'So_sánh_di_động' ),
 	'MobileEditor' => array( 'Sửa_đổi_di_động' ),
 	'MobileMenu' => array( 'Trình_đơn_di_động' ),
+	'MobileLanguages' => array( 'Ngôn_ngữ_di_động' ),
 	'Nearby' => array( 'Kề_bên' ),
 	'UserProfile' => array( 'Hồ_sơ_cá_nhân' ),
 );
 
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
+	'History' => array( '历史' ),
 	'MobileOptions' => array( '移动版选项' ),
 	'Uploads' => array( '上传' ),
 	'MobileDiff' => array( '移动版差异' ),
+	'MobileEditor' => array( '移动版编辑器' ),
 	'MobileMenu' => array( '移动版菜单' ),
+	'MobileLanguages' => array( '移动版语言' ),
 	'Nearby' => array( '附近' ),
+	'UserProfile' => array( '用户资料' ),
 );
 
 /** Traditional Chinese (中文（繁體）‎) */
 $specialPageAliases['zh-hant'] = array(
-	'MobileOptions' => array( '手機版選項' ),
+	'History' => array( '歷史' ),
+	'MobileOptions' => array( '移動版選項' ),
 	'Uploads' => array( '上載' ),
-	'MobileDiff' => array( '手機版差異' ),
-	'MobileMenu' => array( '手機版選單' ),
+	'MobileDiff' => array( '移動版差異' ),
+	'MobileEditor' => array( '移動版編輯器' ),
+	'MobileMenu' => array( '移動版選單' ),
+	'MobileLanguages' => array( '移動版語言' ),
 	'Nearby' => array( '附近' ),
+	'UserProfile' => array( '用戶資訊' ),
 );
