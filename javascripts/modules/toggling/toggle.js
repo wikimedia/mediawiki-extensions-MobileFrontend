@@ -42,7 +42,8 @@
 	}
 
 	function init( $page ) {
-		var tagName = 'h2', $headings, expandSections;
+		var tagName = 'h2', $headings, expandSections,
+			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 		$page = $page || $( '#content' );
 
 		$( 'html' ).removeClass( 'stub' );
@@ -53,7 +54,11 @@
 		$headings = $page.find( '.section_heading' );
 		$headings.next( 'div' ).addClass( 'content_block' );
 
-		expandSections = M.isAlphaGroupMember() && M.settings.getUserSetting( 'expandSections', true ) === 'true';
+		if ( collapseSectionsByDefault === undefined ) {
+			// Old default behavior if on cached output
+			collapseSectionsByDefault = true;
+		}
+		expandSections = !collapseSectionsByDefault || (M.isAlphaGroupMember() && M.settings.getUserSetting( 'expandSections', true ) === 'true');
 
 		$headings.each( function ( i ) {
 			var $elem = $( this ),
