@@ -377,6 +377,7 @@ $messages['en'] = array (
 	'mobile-frontend-profile-footer-days' => 'Joined {{PLURAL:$2|1 day|$2 days}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 	'mobile-frontend-profile-footer-months' => 'Joined over {{PLURAL:$2|1 month|$2 months}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 	'mobile-frontend-profile-footer-years' => 'Joined over {{PLURAL:$2|1 year|$2 years}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
+	'mobile-frontend-profile-footer-ancient' => 'Made [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 
 	// geo not a hack
 	'mobile-frontend-geonotahack' => 'Near this page',
@@ -1072,6 +1073,12 @@ Parameters:
 	'mobile-frontend-profile-footer-years' => 'Generates the informative footer on [[Special:UserProfile]]. Parameters:
 * $1 - username of user (used for link generation and can be used for GENDER)
 * $2 - number of years the user has been a member for.
+* $3 - number of edits
+* $4 - number of uploads, capped to 500
+{{Related|Mobile-frontend-profile-footer}}',
+	'mobile-frontend-profile-footer-ancient' => 'Generates the informative footer on [[Special:UserProfile]]. Parameters:
+* $1 - username of user (used for link generation and can be used for GENDER)
+* $2 - unused
 * $3 - number of edits
 * $4 - number of uploads, capped to 500
 {{Related|Mobile-frontend-profile-footer}}',
