@@ -195,7 +195,7 @@ class DeviceProperties implements IDeviceProperties {
 abstract class PredefinedDeviceProperties implements IDeviceProperties {
 	/**
 	 * This class's descendants should only be instantiated with $wgMFAutodetectMobileView set to true,
-	 * otherwise all attempts to check for tabletness
+	 * otherwise all attempts to check for tabletness will lie
 	 */
 	function isTablet() {
 		throw new MWException( __METHOD__ . '() called!' );
