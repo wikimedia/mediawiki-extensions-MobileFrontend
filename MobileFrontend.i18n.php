@@ -6145,6 +6145,7 @@ $messages['fa'] = array(
 	'mobile-frontend-view' => 'نمای تلفن همراه',
 	'mobile-frontend-view-desktop' => 'رایانه',
 	'mobile-frontend-view-mobile' => 'تلفن همراه',
+	'mobile-frontend-cookies-required' => 'کوکی‌ها نیاز به تعویض روش‌های نمایش هستند. لطفاً آنها را فعال کنید و دوباره امتحان کنید.',
 	'mobile-frontend-opt-in-explain' => 'با پیوستن به نسخهٔ آزمایشی، شما به ویژگی‌های آزمایشی دسترسی پیدا می‌کنید اما ممکن است با مشکلاتی هم مواجه شوید.',
 	'mobile-frontend-images-status' => 'تصویرها',
 	'mobile-frontend-disable-images' => 'غیر فعال کردن تصاویر بر روی تارنمای تلفن همراه',
@@ -6282,6 +6283,7 @@ $messages['fa'] = array(
 	'mobile-frontend-watchlist-cta' => 'پیگیری این صفحه و همه تغییرات به آن.',
 	'mobile-frontend-watchlist-cta-button-login' => 'ورود به سامانه',
 	'mobile-frontend-watchlist-cta-button-signup' => 'ثبت نام',
+	'mobile-frontend-watchlist-purpose' => 'فهرست مشاهده به شما برای نشانه‌گذاری صفحات کمک می‌کند و پیگیری تغییرات آنها را نگه می‌دارد.',
 	'mobile-frontend-watchlist-login-action' => 'برای مشاهده وارد سامانه شوید.',
 	'mobile-frontend-watchlist-signup-action' => 'ثبت‌نام برای شروع یکی هم‌اکنون.',
 	'mobile-frontend-generic-login' => '{{SITENAME}} توسط افرادی چون شما ساخته شده‌است.',
@@ -6409,6 +6411,7 @@ $messages['fa'] = array(
 	'mobile-frontend-mainpage-cta-prompt' => 'این صفحه به کمک شما نیاز دارد!',
 	'mobile-frontend-mainpage-cta-button' => 'بهبود این صفحه',
 	'beta-feature-minerva' => 'فعال‌سازی پوسته موبایل بر روی میزکار',
+	'beta-feature-minerva-description' => 'ساختن پوستهٔ مورد استفاده در دستگاه‌های تلفن همراه پوستهٔ دسکتاپ قابل انتخاب تحت تب ضاهری ترجیحات.',
 );
 
 /** Finnish (suomi)
@@ -17878,6 +17881,14 @@ $messages['scn'] = array(
 	'mobile-frontend-footer-contact' => 'Cuntatti',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'beta-feature-minerva' => 'Enable mobile skin (Minerva) on the desktap',
+	'beta-feature-minerva-description' => 'Mak the skin uised on mobile devices ae selectable desktop skin unner the appearance preferences tab.',
+);
+
 /** Sassaresu (Sassaresu)
  * @author Jun Misugi
  */
@@ -19110,6 +19121,7 @@ $messages['ta'] = array(
 
 /** Telugu (తెలుగు)
  * @author Jprmvnvijay5
+ * @author Ravichandra
  * @author Veeven
  * @author Wellwisher
  * @author రహ్మానుద్దీన్
@@ -19131,14 +19143,12 @@ $messages['te'] = array(
 	'mobile-frontend-featured-article' => 'నేటి విశేష వ్యాసం', # Fuzzy
 	'mobile-frontend-news-items' => 'వార్తల్లో',
 	'mobile-frontend-language-header' => 'ఈ వ్యాసం $1 {{PLURAL:$1|భాషలో|భాషలలో}} లభ్యం', # Fuzzy
-	'mobile-frontend-language-footer' => 'గమనిక: ఈ వ్యాసం మీ భాషలో లేకపోవచ్చు. {{SITENAME}} ఏయో భాషలలో లభిస్తుందో ఇక్కడ నొక్కి తెలుసుకోవచ్చు.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'వెతికే భాష',
 	'mobile-frontend-username' => 'వాడుకరి పేరు:',
 	'mobile-frontend-password' => 'సంకేతపదం:',
 	'mobile-frontend-login' => 'ప్రవేశించండి',
 	'mobile-frontend-history-404-title' => 'అలాంటి పేజీ ఏదీ లేదు',
 	'mobile-frontend-placeholder' => 'మీ శోధనపదమును ఇక్కడ రాయుము', # Fuzzy
-	'mobile-frontend-search-help' => 'పైన శోధనపదమును రాసినచో, సంబంధిత సంచికలు ఇక్కడ కనిపించును', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'ఈ చాటింపును తొలగించు',
 	'mobile-frontend-clear-search' => 'తుడిచివేయి',
 	'mobile-frontend-privacy-link-text' => 'మరుగు',
@@ -19153,6 +19163,8 @@ $messages['te'] = array(
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} $1 {{PLURAL:$1|భాషలో|భాషలలో}} లభ్యమవుతూంది. లభ్యమయ్యే సంచికలు అన్నీ క్రింద ఇవ్వబడ్డాయి',
 	'mobile-frontend-page-menu-contents' => 'విషయ సూచిక',
 	'mobile-frontend-page-menu-history' => 'చరిత్ర',
+	'mobile-frontend-watchlist-cta-button-login' => 'ప్రవేశించండి',
+	'mobile-frontend-watchlist-login-action' => 'చూడ్డానికి ప్రవేశించు.',
 );
 
 /** Tajik (Cyrillic script) (тоҷикӣ)
