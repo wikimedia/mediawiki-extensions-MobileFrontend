@@ -24,21 +24,19 @@
 	</div>
 </div>
 
-<div class="save-panel panel hideable hidden">
-	<input class="summary" placeholder="{{summaryMsg}}" />
-	<p class="license">{{{licenseMsg}}}</p>
-</div>
-<div class="captcha-panel panel hideable hidden">
-	<div class="inputs-box">
-		<img src="">
-		<input class="captcha-word" placeholder="{{captchaMsg}}" />
+<div class="panels">
+	<div class="save-panel panel hideable hidden">
+		<input class="summary" placeholder="{{summaryMsg}}" />
+		<p class="license">{{{licenseMsg}}}</p>
+	</div>
+	<div class="captcha-panel panel hideable hidden">
+		<div class="inputs-box">
+			<img src="">
+			<input class="captcha-word" placeholder="{{captchaMsg}}" />
+		</div>
 	</div>
 </div>
-<div class="abusefilter-panel panel hideable hidden">
-	<div class="message">
-		<p></p><button class="readmore inline">{{abusefilterReadMoreMsg}}</button>
-	</div>
-</div>
+
 <div class="spinner loading"></div>
 
 {{>content}}

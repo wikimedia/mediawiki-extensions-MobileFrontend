@@ -8,7 +8,7 @@
 		inNavSignupCampaign = M.query.campaign === 'leftNavSignup',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
-		AbuseFilterOverlay = M.require( 'modules/editor/AbuseFilterOverlay' ),
+		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		mobileLeftNavbarEditCTA = M.require( 'loggingSchemas/mobileLeftNavbarEditCTA' ),
 		EditorOverlay;
 
@@ -73,6 +73,8 @@
 			} );
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
+
+			this.abuseFilterPanel = new AbuseFilterPanel().appendTo( this.$( '.panels' ) );
 
 			// If in readOnly mode, make textarea readonly
 			if ( this.readOnly ) {
@@ -144,6 +146,7 @@
 			this.$content.show();
 			window.scrollTo( 0, this.scrollTop );
 			this._showHidden( '.initial-header' );
+			this.abuseFilterPanel.hide();
 		},
 
 		_loadContent: function() {
@@ -173,22 +176,10 @@
 		},
 
 		_showAbuseFilter: function( type, message ) {
-			var self = this, msg;
-
-			this.$( '.abusefilter-panel .readmore' ).on( 'click', function() {
-				new AbuseFilterOverlay( { parent: self, message: message } ).show();
-			} );
-
-			if ( type === 'warning' ) {
-				msg = mw.msg( 'mobile-frontend-editor-abusefilter-warning' );
-			} else if ( type === 'disallow' ) {
-				msg = mw.msg( 'mobile-frontend-editor-abusefilter-disallow' );
-				// disable continue and save buttons, reenabled when user changes content
-				this.$( '.continue, .submit' ).prop( 'disabled', true );
-			}
-
-			this.$( '.message p' ).text( msg );
-			this._showHidden( '.save-header, .abusefilter-panel' );
+			this.abuseFilterPanel.show( type, message );
+			this._showHidden( '.save-header' );
+			// disable continue and save buttons, reenabled when user changes content
+			this.$( '.continue, .submit' ).prop( 'disabled', this.abuseFilterPanel.isDisallowed );
 		},
 
 		_save: function() {

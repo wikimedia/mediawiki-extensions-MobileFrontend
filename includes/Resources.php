@@ -288,6 +288,20 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
+			'javascripts/modules/editor/AbuseFilterOverlay.js',
+			'javascripts/modules/editor/AbuseFilterPanel.js',
+		),
+		'templates' => array(
+			'modules/editor/AbuseFilterOverlay',
+			'modules/editor/AbuseFilterPanel',
+		),
+		'messages' => array(
+			// AbuseFilterOverlay
+			'mobile-frontend-photo-ownership-confirm',
+			// AbuseFilterPanel
+			'mobile-frontend-editor-abusefilter-warning',
+			'mobile-frontend-editor-abusefilter-disallow',
+			'mobile-frontend-editor-abusefilter-read-more',
 		),
 	),
 
@@ -326,10 +340,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-error-preview',
 			'mobile-frontend-account-create-captcha-placeholder',
 			'mobile-frontend-editor-captcha-try-again',
-			'mobile-frontend-photo-ownership-confirm',
-			'mobile-frontend-editor-abusefilter-warning',
-			'mobile-frontend-editor-abusefilter-disallow',
-			'mobile-frontend-editor-abusefilter-read-more',
 			'mobile-frontend-editor-editing-page',
 			'mobile-frontend-editor-previewing-page',
 		),
@@ -363,11 +373,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/AbuseFilterOverlay.js',
 			'javascripts/modules/editor/EditorOverlay.js',
 		),
 		'templates' => array(
-			'modules/editor/AbuseFilterOverlay',
 			'modules/editor/EditorOverlayHeader',
 			'modules/editor/EditorOverlay',
 		),
