@@ -3,6 +3,7 @@
 		user = M.require( 'user' ),
 		OverlayNew = M.require( 'OverlayNew' ),
 		Page = M.require( 'Page' ),
+		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
 		PhotoUploadProgress = M.require( 'modules/uploads/PhotoUploadProgress' ),
 		schema = M.require( 'loggingSchemas/mobileWebUploads' ),
@@ -49,15 +50,22 @@
 				saveOptions,
 				title = this.options.pageTitle,
 				description = this.getDescription(),
-				api = new PhotoApi(),
-				progressPopup = new PhotoUploadProgress();
+				progressPopup = new PhotoUploadProgress(),
+				api;
 
 			saveOptions = {
 				file: this.file,
-				description: description,
-				insertInPage: this.options.insertInPage,
-				pageTitle: title
+				description: description
 			};
+
+			if ( this.options.insertInPage ) {
+				api = new PhotoApi( {
+					editorApi: new EditorApi( { title: title } )
+				} );
+			} else {
+				api = new PhotoApi();
+			}
+
 			this.hide( true );
 			this.emit( 'hide' );
 
@@ -69,7 +77,7 @@
 			api.save( saveOptions ).done( function( fileName, descriptionUrl ) {
 				progressPopup.hide( true );
 				self.log( { action: 'success' } );
-				if ( saveOptions.insertInPage ) {
+				if ( self.options.insertInPage ) {
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
 
 					// FIXME: add helper M.refreshPage function
