@@ -274,12 +274,10 @@ pre {
 		}
 	}
 
-	// Includes images on the profile and uploads special pages
 	img {
-		// FIXME [Inline Styles]: Important ensures we can overwrite any inline styles
-		// It's a leaf node so Nicole Sullivan says its okay
+		// make sure that images in articles don't cause a horizontal scrollbar
+		// on small screens
 		max-width: 100% !important;
-		height: auto !important;
 	}
 
 	ul {
