@@ -45,6 +45,13 @@
 						$window.off( '.fixIosHeader' );
 					} );
 			}
+		},
+
+		_showHidden: function( className ) {
+			// can't use jQuery's hide() and show() beause show() sets display: block
+			// and we want display: table for headers
+			this.$( '.hideable' ).addClass( 'hidden' );
+			this.$( className ).removeClass( 'hidden' );
 		}
 	} );
 
