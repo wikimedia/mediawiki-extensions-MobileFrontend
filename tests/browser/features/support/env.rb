@@ -2,8 +2,8 @@ require_relative "hooks"
 require "mediawiki_selenium"
 
 def local_browser(user_agent)
-  if ENV["BROWSER_LABEL"]
-    browser_label = ENV["BROWSER_LABEL"].to_sym
+  if ENV["BROWSER"]
+    browser_label = ENV["BROWSER"].to_sym
   else
     browser_label = :firefox
   end
@@ -47,7 +47,7 @@ def local_browser(user_agent)
 
   def sauce_browser(test_name, user_agent)
     config = YAML.load_file("config/config.yml")
-    browser_label = config[ENV["BROWSER_LABEL"]]
+    browser_label = config[ENV["BROWSER"]]
 
     if user_agent == "default"
       caps = Selenium::WebDriver::Remote::Capabilities.send(browser_label["name"])
