@@ -2,8 +2,11 @@
 @import "minerva.mixins";
 
 html {
-	// When moving to stable, change @fontScalingFactor to 1.0
-	font-size: 100%;
+	// When moving to stable, change @fontScalingFactor to 1.0.
+	// We have to use !important here since the html element cannot be targeted to stable
+	// or beta (as it is outside the body element). Thus we have to override the rule in
+	// typography.less.
+	font-size: 100% !important;
 }
 
 .beta, .alpha {
