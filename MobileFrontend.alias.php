@@ -182,11 +182,13 @@ $specialPageAliases['ko'] = array(
 
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
+	'History' => array( 'Versiounen' ),
 	'MobileOptions' => array( 'Mobil_Optiounen' ),
 	'Uploads' => array( 'Eropgeluede_Fichieren' ),
 	'MobileDiff' => array( 'Mobilen_Ënnerscheed' ),
 	'MobileEditor' => array( 'Mobilen_Editeur' ),
 	'MobileMenu' => array( 'Mobile_Menü' ),
+	'MobileLanguages' => array( 'Mobil_Sproochen' ),
 	'Nearby' => array( 'Nobäi' ),
 	'UserProfile' => array( 'Benotzerprofil' ),
 );

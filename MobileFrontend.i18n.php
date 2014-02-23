@@ -6420,6 +6420,7 @@ $messages['fa'] = array(
 /** Finnish (suomi)
  * @author Beluga
  * @author Crt
+ * @author Elseweyr
  * @author Kulmalukko
  * @author Linnea
  * @author Nedergard
@@ -6564,7 +6565,7 @@ $messages['fi'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Kirjaudu sisään',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Luo tunnus',
 	'mobile-frontend-generic-login' => '{{SITENAME}} on sinun kaltaistesi ihmisten tekemä.',
-	'mobile-frontend-generic-login-action' => 'Kirjaudu sisään osallistuaksesi.',
+	'mobile-frontend-generic-login-action' => 'Kirjaudu sisään osallistuaksesi wikin muokkaamiseen.',
 	'mobile-frontend-watch-login' => 'Lisää $1 tarkkailulistallesi.',
 	'mobile-frontend-edit-login' => 'Auta parantamaan sivua $1.',
 	'mobile-frontend-watchlist-a-z' => 'Lista',
@@ -6596,7 +6597,7 @@ $messages['fi'] = array(
 	'mobile-frontend-photo-submit' => 'Lähetä',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> lataus|<span>$1</span> latausta}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'Yli 500 tallennettua tiedostoa',
-	'mobile-frontend-editor-cta' => 'Auta parantamaan tätä sivua.',
+	'mobile-frontend-editor-cta' => 'Auta parantamaan tätä sivua!',
 	'mobile-frontend-editor-edit' => 'Muokkaa',
 	'mobile-frontend-editor-continue' => 'Jatka',
 	'mobile-frontend-editor-save' => 'Tallenna',
@@ -6624,9 +6625,9 @@ $messages['fi'] = array(
 	'mobile-frontend-media-details' => 'Tiedot',
 	'mobile-frontend-profile-title' => 'Käyttäjätiedot',
 	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|Keskustele käyttäjälle $1}}',
-	'mobile-frontend-profile-noargs' => 'Käyttäjätunnusta ei annettu. Anna käyttäjätunnus, jonka käyttäjätiedot haluat nähdä.',
+	'mobile-frontend-profile-noargs' => 'Käyttäjätunnusta ei annettu. Ole hyvä ja anna käyttäjätunnus nähdäksesi profiilin.',
 	'mobile-frontend-profile-userpage-link' => 'Näytä käyttäjäsivu.',
-	'mobile-frontend-mainpage-cta-prompt' => 'Tämä sivu tarvitsee apuasi.',
+	'mobile-frontend-mainpage-cta-prompt' => 'Tämä sivu tarvitsee apuasi!',
 	'mobile-frontend-mainpage-cta-button' => 'Paranna tätä sivua',
 );
 
@@ -10923,8 +10924,10 @@ $messages['jv'] = array(
  */
 $messages['ka'] = array(
 	'mobilefrontend-keepgoing-cancel' => 'არა, გმადლობთ',
+	'mobilefrontend-keepgoing-suggest' => 'დიახ, თუ შეიძლება',
 	'mobilefrontend-keepgoing-saved-title' => 'რედაქტირება განხორციელდა!',
 	'mobilefrontend-keepgoing-links-title' => 'ბმულების დამატება',
+	'nearby' => 'გვერდები შენთან ახლოს',
 	'mobile-frontend-desc' => 'მობილური ინტერფეისი',
 	'mobile-frontend-search-submit' => 'აბა ჰე',
 	'mobile-frontend-home-button' => 'შინ',
@@ -10952,6 +10955,8 @@ $messages['ka'] = array(
 	'mobile-frontend-images-status' => 'სურათები',
 	'mobile-frontend-disable-images' => 'მობილურ საიტზე სურათების გამორთვა',
 	'mobile-frontend-enable-images' => 'მობილურ საიტზე სურათების ჩართვა',
+	'mobile-frontend-expand-sections-status' => 'აჩვენე ყველა სექცია',
+	'mobile-frontend-expand-sections-description' => 'ყოველთვის აჩვენე ყველა სექცია ახალი გვერდის ნახვისას.',
 	'mobile-frontend-missing-image' => 'სურათი',
 	'mobile-frontend-off' => 'გამორთვა',
 	'mobile-frontend-on' => 'ჩართვა',
@@ -10976,12 +10981,14 @@ $messages['ka'] = array(
 	'mobile-frontend-last-modified-days' => 'ბოლოს შეიცვალა {{PLURAL:$1|$1 დღის|$1 დღის}} წინ',
 	'mobile-frontend-last-modified-months' => 'ბოლოს შეიცვალა {{PLURAL:$1|$1 თვის|$1 თვის}} წინ',
 	'mobile-frontend-last-modified-years' => 'ბოლოს შეიცვალა {{PLURAL:$1|$1 წლის|$1 წლის}} წინ',
+	'mobile-frontend-view-source' => 'წყაროს ხილვა',
 	'mobile-frontend-account-create-submit' => 'რეგისტრაცია',
 	'mobile-frontend-password-confirm-placeholder' => 'პაროლის დადასტურება',
 	'mobile-frontend-account-create-email-placeholder' => 'ელ. ფოსტის მისამართი (არასავალდებულო)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'შეიყვანეთ დადასტურების კოდი',
 	'mobile-frontend-overlay-escape' => 'უკან',
 	'mobile-frontend-overlay-close' => 'დახურვა',
+	'mobile-frontend-overlay-continue' => 'გაგრძელება',
 	'mobile-frontend-placeholder' => 'ძიება {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'ძიება {{SITENAME}} (ბეტა)',
 	'mobile-frontend-placeholder-alpha' => 'ძიება საიტზე {{SITENAME}} (ექსპერიმენტული)',
@@ -10990,7 +10997,7 @@ $messages['ka'] = array(
 	'mobile-frontend-privacy-link-text' => 'უსაფრთხოება',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'ტექსტი ხელმისაწვდომია [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] ლიცენზიით; შესაძლოა გამოიყენებოდეს დამატებითი პირობები.',
-	'mobile-frontend-copyright' => "ეს ტექსტი ვრცელდება <a  href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative	 Commons Attribution/Share-Alike ლიცენზიით</a>; ზოგ შემთხვევაში შესაძლებელია დამატებითი პირობები. იხილეთ <a	 href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>გამოყენების პირობი</a>. «{{SITENAME}}» — არაკომერციული ორგანიზაციია <a  href='http://www.wikimediafoundation.org/'>«ფონდ ვიკიმედიის»</a> პროექტია.", # Fuzzy
+	'mobile-frontend-copyright' => 'შინაარსი წარმოდგენილია $1 პირობებით (თუ სხვა არ არის მითითებული).',
 	'mobile-frontend-footer-contact' => 'კონტაქტი',
 	'mobile-frontend-terms-text' => 'გამოყენების პირობები',
 	'mobile-frontend-main-menu-button-tooltip' => 'მთავარი მენიუს გახსნა',
@@ -11019,7 +11026,8 @@ $messages['ka'] = array(
 	'mobile-frontend-nearby-noresults' => 'თქვენ იმყოფებით გაურკვევლობის ცენტრში და ჩვენ ვერ შევძელით შესაბამისი თემების მოძიება. იქნებ დაწეროთ ერთი მათგანი?', # Fuzzy
 	'mobile-frontend-nearby-refresh' => 'ჩვენ ზუსტად განვსაზღვრეთ თქვენი ადგილმდებარეობა. დააჭირეთ აქ, რათა განაახლოთ უახლოესი გვერდების სია',
 	'mobile-frontend-nearby-error' => 'გვერდების ძიებისას მოხდა მოულოდნელი შეცდომა, რაც დაკავშირებულია თქვენ ადგილმდებარეობასთან', # Fuzzy
-	'mobile-frontend-donate-image-login' => 'თქვენ უნდა შეხვიდეთ სისტემაში რათა იხილოთ თქვენი ატვირთვები.', # Fuzzy
+	'mobile-frontend-nearby-link' => 'წაიკითხე გვერდი სრულად',
+	'mobile-frontend-donate-image-login' => 'მასალები {{SITENAME}}-ზე მოწოდებულია თქვენნაირი ხალხის მიერ.',
 	'mobile-frontend-photo-upload-generic' => 'შეწირეთ სურათი',
 	'mobile-frontend-donate-image-title' => 'ატვირთვები',
 	'mobile-frontend-donate-image-heading' => 'თქვენი ბოლო ცლილებები',
@@ -11029,6 +11037,7 @@ $messages['ka'] = array(
 	'mobile-frontend-donate-photo-upload-success' => 'გამოვიდა! ახლა თქვენი სურათი შეიძლება გამოყენებულ იქნას საიტზე {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'გამოვიდა! გმადლობთ თქვენი წვილისათვის!',
 	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'თავად შემოიტანე სურათები. დაეხმარე {{SITENAME}}',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'დიახ!',
 	'mobile-frontend-watchlist-add' => '$1 დაემატა თქვენი კონტროლის სიაში',
 	'mobile-frontend-watchlist-removed' => '$1 წაიშალა თქვენი კონტროლის სიიდან',
 	'mobile-frontend-watchlist-view' => 'თქვენი კონტროლის სიის ხილვა',
@@ -11036,11 +11045,16 @@ $messages['ka'] = array(
 	'mobile-frontend-watchlist-cta' => 'გთხოვთ, შედით ან დარეგისტრირდით, რათა იხილოთ ეს გვერდი.', # Fuzzy
 	'mobile-frontend-watchlist-cta-button-login' => 'შესვლა',
 	'mobile-frontend-watchlist-cta-button-signup' => 'დარეგისტრირდით',
-	'mobile-frontend-watch-login' => 'ამ გვერდების სანახავად თქვენ უნდა შეხვიდეთ სისტემაში.', # Fuzzy
+	'mobile-frontend-watchlist-login-action' => 'სანახავად შედით სისტემაში.',
+	'mobile-frontend-generic-login-action' => 'წვლილის შესატანად გთხოვთ გაიაროთ ავტორიზაცია',
+	'mobile-frontend-generic-signup-action' => 'წვლილის შესატანად დარეგისტრირდით',
+	'mobile-frontend-watch-login' => 'დაამატეთ $1 თქვენს კონტროლის სიაში',
+	'mobile-frontend-edit-login-action' => 'რედაქტირების განსახორციელებლად შედით სისტემაში.',
+	'mobile-frontend-edit-signup-action' => 'რედაქტირების განსახორციელებლად დარეგისტრირდით.',
 	'mobile-frontend-watchlist-a-z' => 'სია',
 	'mobile-frontend-watchlist-feed' => 'შეცვლილია',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'დააჭირეთ გვერდის ზედა ნაწილში განთავსებულ ვარსკვლავს',
-	'mobile-frontend-watchlist-a-z-empty-howto' => 'შესაძლებელია თქვენთვის საინტერესო გვერდისათვის თვალის დევნება. ამისათვის საჭიროა ეკრანის ზედა ნაწილში ვარსკვლავის სიმბოლოზე დაწკაპუნება. ეს საშუალებას მოგცემთ თვალი ადევნოთ თქვენთვის სასურველი გვერდების ცვლილებებს.', # Fuzzy
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'შესაძლებელია თქვენთვის საინტერესო გვერდისათვის თვალის დევნება. ამისათვის საჭიროა ეკრანის ზედა ნაწილში ვარსკვლავის სიმბოლოზე დაწკაპუნება. ეს საშუალებას მოგცემთ თვალი ადევნოთ თქვენთვის სასურველი გვერდების ცვლილებებს. ამჟამად, თქვენ არც ერთ გვერდს არ ადევნებთ თვალს.',
 	'mobile-frontend-watchlist-feed-empty' => 'გვერდები ბოლო ცვლილებებით არ არის',
 	'mobile-frontend-watchlist-back-home' => 'უკან დაბრუნება',
 	'mobile-frontend-changeslist-ip' => 'ანონიმური მომხმარებელი',
@@ -11069,24 +11083,70 @@ $messages['ka'] = array(
 	'mobile-frontend-photo-ownership-confirm' => 'არის!',
 	'mobile-frontend-lead-image-tutorial-confirm' => 'დაიწყეთ ატვირთვა',
 	'mobile-frontend-photo-upload-error' => 'შეცდომა, კიდევ სცადეთ.',
+	'mobile-frontend-photo-upload-error-file-type' => 'გთხოვთ ატვირთოთ მხოლოდ სურათები.',
 	'mobile-frontend-photo-upload-error-filename' => 'შეცდომა. გთხოვთ მიუთითოთ უფრო აღწერადი რეზიუმე.',
 	'mobile-frontend-photo-upload-success-article' => 'წარმატებით აიტვირთა! თქვენი სურათი ახლა უკვე განთავსებულია ამ გვერდზე.',
 	'mobile-frontend-photo-license' => '"მიღებაზე" დაწკაპუნებით, თქვენ ეთანხმებით ჩვენი [//wikimediafoundation.org/wiki/Terms_of_use გამოყენების წესებს] და თანახმა ხართ თქვენი ფოტოს გადაცემაზე [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 ლიცენზიით].', # Fuzzy
 	'mobile-frontend-photo-submit' => 'მიღება',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> ატვირთვა|<span>$1</span> ატვირთვა}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ ატვირთვა',
+	'mobile-frontend-image-heading-describe' => "'''აღწერე''' სურათი",
+	'mobile-frontend-image-uploading' => "სურათი '''იტვირთება'''...",
+	'mobile-frontend-image-cancel-confirm' => 'ატვირთვის გაუქმება',
+	'mobile-frontend-editor-newpage-prompt' => 'ეს გვერდი არ არსებობს. არ გინდათ შექმნათ ის?',
+	'mobile-frontend-editor-blocked' => 'ანგარიში დაბლოკილია რედაქტირებისაგან',
+	'mobile-frontend-editor-cta' => 'დაგვეხმარეთ ამ გვერდის გაუმჯობესებაში',
 	'mobile-frontend-editor-edit' => 'რედაქტირება',
 	'mobile-frontend-editor-continue' => 'გაგრძელება',
 	'mobile-frontend-editor-save' => 'შენახვა',
 	'mobile-frontend-editor-cancel' => 'გაუქმება',
+	'mobile-frontend-editor-keep-editing' => 'განაგრძე რედაქტირება',
+	'mobile-frontend-editor-summary-placeholder' => 'გვითხარით რა შეცვალეთ (არასავალდებულო)',
+	'mobile-frontend-editor-wait' => 'მიმდინარეობს რედაქტირების შენახვა, გთხოვთ მოიცადოთ.',
+	'mobile-frontend-editor-success' => 'თქვენი რედაქტირება წარმატებით განხორციელდა.',
 	'mobile-frontend-editor-success-landmark-1' => 'გილოცავ, შენ ახლა უკვე {{SITENAME}} რედაქტორი ხარ!',
+	'mobile-frontend-editor-error' => 'შეცდობა, რედაქტირება არ შენახულა.',
+	'mobile-frontend-editor-error-conflict' => 'შეცდომა, სხვა მომხმარებელმა დაარედაქტირა ეს გვერდი.',
+	'mobile-frontend-editor-error-loading' => 'შეცდომა, სექცია ვერ ჩაიტვირთა.',
+	'mobile-frontend-editor-error-preview' => 'შეცდომა, რაღაც გაუთვალისწინებელი მოხდა წინასწარი გადახედვის ჩატვირთვისას. გთხოვთ, დახურეთ და თავიდან სცადეთ.',
+	'mobile-frontend-editor-tutorial-confirm' => 'დაიწყე რედაქტირება',
 	'mobile-frontend-editor-tutorial-cancel' => 'არა, გმადლობთ',
+	'mobile-frontend-editor-captcha-try-again' => 'არასწორი კოდი, თავიდან სცადე.',
+	'mobile-frontend-editor-abusefilter-warning' => 'გაფრთხილება: დარწმუნებული ხარ, რომ რედაქტირების შენახვა გინდა?',
+	'mobile-frontend-editor-abusefilter-disallow' => 'შეცდომა, რედაქტირება ვერ განხორციელდა.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'წაიკითხე მეტი',
+	'mobile-frontend-editor-editing-page' => '<strong>რედაქტირება</strong><span> $1</span>',
+	'mobile-frontend-editor-previewing-page' => '<strong>წინასწარ გადახედვა</strong><span> $1</span>',
+	'mobile-frontend-editor-viewing-source-page' => '<strong>გვერდის წყარო</strong><span> $1</span>',
 	'tag-mobile_edit' => 'რედაქტირება მობილურით',
 	'tag-mobile_edit-description' => 'რედაქტირება შესრულებულია საიტის მობილური ვერსიიდან',
 	'mobile-frontend-drawer-cancel' => 'გაუქმება',
 	'mobile-frontend-talk-explained' => 'შემდეგი საუბრები მოცემულ მომენტში აქტიურია',
 	'mobile-frontend-talk-explained-empty' => 'აქ არ არის არანაირი საუბარი ამ გვერდის შესახებ.',
 	'mobile-frontend-talk-overlay-header' => 'განხილვა',
+	'mobile-frontend-talk-back-to-page' => 'დაბრუნდი "$1"-ზე.',
+	'mobile-frontend-talk-overlay-lead-header' => 'უსათაურო დისკუსია',
+	'mobile-frontend-talk-add-overlay-submit' => 'დაამატე დისკუსია',
+	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'თემა',
+	'mobile-frontend-talk-add-overlay-content-placeholder' => 'რაზე ფიქრობ?',
+	'mobile-frontend-talk-edit-summary' => 'განხილვის ახალი სექცია: $1',
+	'mobile-frontend-talk-reply-success' => 'თქვენი პასუხი წარმატებით აისახა განხილვის გვერდზე.',
+	'mobile-frontend-talk-reply-info' => 'თქვენს პასუხს ავტომატურად დაერთვება ხელმოწერა',
+	'mobile-frontend-talk-reply' => 'პასუხი',
+	'mobile-frontend-talk-topic-feedback' => 'განხილვის გვერდს ახალი თემა დაემატა!',
+	'mobile-frontend-media-details' => 'დეტალები',
+	'mobile-frontend-media-license-link' => 'ლიცენზიის ინფორმაცია',
+	'mobile-frontend-profile-title' => 'მომხმარებლის მონაცემები',
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|აიტვირთა}} {{PLURAL:$1|გუშინ|$1 დღის წინ|0=დღეს}}.',
+	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|დაუკავშირდი $1-ს}}',
+	'mobile-frontend-profile-error' => 'ო, არა!',
+	'mobile-frontend-profile-activity-heading' => 'უკანასკნელი აქტივობა',
+	'mobile-frontend-profile-userpage-link' => 'ნახე მომხმარებლის გვერდი.',
+	'mobile-frontend-geonotahack' => 'ამ გვერდთან ახლოს',
+	'beta-feature-geonotahack' => 'ამ გვერდთან ახლოს',
+	'beta-feature-geonotahack-description' => 'აღმოაჩინე გვერდები, რომლებიც აღნიშნულ გვერდთან გეოგრაფიულად ახლოს არიან.',
+	'mobile-frontend-mainpage-cta-prompt' => 'ამ გვერდს სჭირდება შენი დახმარება!',
+	'mobile-frontend-mainpage-cta-button' => 'ამ გვერდის გაუმჯობესება',
 );
 
 /** Адыгэбзэ (Адыгэбзэ)
@@ -12874,6 +12934,7 @@ $messages['lrc'] = array(
 	'mobile-frontend-password-placeholder' => 'رمز',
 	'mobile-frontend-login' => 'اومائن',
 	'mobile-frontend-last-modified-days' => 'آخرین آلشت د {{جمی:$1|$1 روز|$1 روز}} دما انجوم بیه', # Fuzzy
+	'mobile-frontend-last-modified-months' => 'آخرین آلشت د {{جمی:$1|$1 ما|$1 مایا}} دما بیه', # Fuzzy
 	'mobile-frontend-last-modified-years' => 'آخرین بار د {{جمی:$1|$1 سال|$1 سالیا}} دما آلشت بیه', # Fuzzy
 	'mobile-frontend-view-source' => 'سرچشمه نه بوينيت',
 	'mobile-frontend-account-create-submit' => 'ثوت نام كردن',
@@ -13193,6 +13254,7 @@ $messages['mg'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Hiverina any amina fizarana nialoha',
 	'mobile-frontend-regular-site' => "Aseho amin'ny {{SITENAME}} tsotra ity pejy ity", # Fuzzy
 	'mobile-frontend-featured-article' => "Takelak'ity andro ity", # Fuzzy
+	'mobile-frontend-profile-footer-ancient' => 'Nanao [[Special:Contributions/$1|{{PLURAL:$3|fanovana tokana |fanovana $3}}]] ary [[Special:Uploads/$1|{{PLURAL:$4|fampidiran-drakitra tokana |fampidiran-drakitra $4|500=fampidiran-drakitra mahery ny 500 }}]].',
 );
 
 /** Maori (Māori)
@@ -20742,6 +20804,7 @@ $messages['vi'] = array(
 	'mobile-frontend-profile-footer-days' => 'Đã mở tài khoản cách đây $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
 	'mobile-frontend-profile-footer-months' => 'Đã mở tài khoản cách đây hơn $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
 	'mobile-frontend-profile-footer-years' => 'Đã mở tài khoản cách đây $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
+	'mobile-frontend-profile-footer-ancient' => 'Đã đóng góp [[Special:Contributions/$1|{{PLURAL:$3|1 sửa đổi|$3 sửa đổi}}]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
 	'mobile-frontend-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack' => 'Lân cận trang này',
 	'beta-feature-geonotahack-description' => 'Khám phá các trang lân cận với nội dung mà bạn đang đọc.',
