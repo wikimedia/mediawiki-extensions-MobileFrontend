@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_86a624bd",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-24T23:09:34Z",
+      "side": 1,
+      "message": "Can we add a comment about removing those rules too?",
+      "revId": "83f2ee98c6fcd62a336bcb0cb630458a301eef10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_46b01cf1",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-24T23:09:34Z",
+      "side": 1,
+      "message": "We should remove this according to what Trevor said.",
+      "revId": "83f2ee98c6fcd62a336bcb0cb630458a301eef10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_26b3d0fe",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-24T23:09:34Z",
+      "side": 1,
+      "message": "We should remove this according to what Trevor said.",
+      "revId": "83f2ee98c6fcd62a336bcb0cb630458a301eef10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_66a9d88c",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-02-24T23:09:34Z",
+      "side": 1,
+      "message": "Can we add a comment about removing those rules too?",
+      "revId": "83f2ee98c6fcd62a336bcb0cb630458a301eef10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
