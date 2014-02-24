@@ -1444,6 +1444,7 @@ $messages['ar'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'ادخل',
 	'mobile-frontend-watchlist-cta-button-signup' => 'أنشئ حسابًا',
 	'mobile-frontend-watchlist-login-action' => 'سجل الدخول للمطالعة',
+	'mobile-frontend-watchlist-signup-action' => 'سجل لبدء واحدة الآن.',
 	'mobile-frontend-generic-login' => '{{SITENAME}} مبني بأيادي أناس مثلك.',
 	'mobile-frontend-generic-login-action' => 'سجل دخولك للمساهمة',
 	'mobile-frontend-generic-signup-action' => 'أنشأ حساب للمساهمة',
@@ -1550,9 +1551,14 @@ $messages['ar'] = array(
 	'mobile-frontend-media-license-link' => 'معلومات الترخيص',
 	'abusefilter-edit-builder-vars-user-mobile' => 'إذا كان المستخدم يعدل عبر واجهة الجوال',
 	'mobile-frontend-profile-title' => 'ملف المستخدم',
+	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|تحدث إلى $1|تحدثي إلى $1}}',
 	'mobile-frontend-profile-error' => 'أوه لا!',
+	'mobile-frontend-profile-noargs' => 'لم يتم توفير اسم مستخدم. الرجاء توفير اسم مستخدم لمطالعة ملف المستخدم الخاص به.',
+	'mobile-frontend-profile-nouser' => 'لا يوجد مستخدم بهذا الاسم. أسماء المستخدمين حساسة لحالة الأحرف. الرجاء التأكد من أن الإسم قد تم كتابته بطريقة صحيحة.',
 	'mobile-frontend-profile-activity-heading' => 'النشاطات الحديثة',
 	'mobile-frontend-profile-userpage-link' => 'طالع صفحة المستخدم.',
+	'mobile-frontend-requires-optin' => 'هذه الصفحة غير متوفرة إلا إذا وافقت على استخدام وضع البيتا(الوضع التجريبي). الرجاء زيارة [[Special:MobileOptions|صفحة التفضيلات]] لتفعيل الوضع.',
+	'mobile-frontend-profile-last-thank' => 'الشكر من قبل [[Special:UserProfile/$1|$1]].', # Fuzzy
 	'mobile-frontend-geonotahack' => 'قرب هذه الصفحة',
 	'beta-feature-geonotahack' => 'قرب هذه الصفحة',
 	'beta-feature-geonotahack-description' => 'إستكشف الصفحات القريبة جغرافيا من محتوى الصفحة التي تقوم بقراءتها حالياً.',
@@ -8947,13 +8953,24 @@ $messages['hu'] = array(
  * @author Chaojoker
  * @author Jazz
  * @author M hamlet
+ * @author Pandukht
  * @author Vadgt
  */
 $messages['hy'] = array(
 	'mobilefrontend-keepgoing-explain' => 'Հիանալի է: Մեկ այլ օգտվող էլ է ասել, որ այս էջն օգնության կարիք ունի: Փորձել այս մեկը կամ մեկ ուրիշը:',
 	'mobilefrontend-keepgoing-cancel' => 'Ոչ,շնորհակալություն:',
+	'mobilefrontend-keepgoing-suggest' => 'Այո, խնդրում եմ',
 	'mobilefrontend-keepgoing-suggest-again' => 'Փորձե´լ մեկ ուրիշը:',
-	'mobile-frontend-home-button' => 'Դեպի տուն',
+	'mobilefrontend-keepgoing-saved-title' => 'Խմբագրումը պահպանված է:',
+	'mobilefrontend-keepgoing-links-title' => 'Ավելացնել հղումներ',
+	'mobilefrontend-keepgoing-links-ask-first' => 'Շնորհավորում ենք Ձեր առաջին խմբագրման առթիվ: Կցանկան՞աք օգնել, հղումներ ավելացնելով նորաստեղծ էջում:',
+	'mobilefrontend-keepgoing-links-ask-again' => 'Ուղղ՞ել մեկ այլ էջ:',
+	'nearby' => 'Էջեր մոտակայքում գտնվող օբյեկտների մասին:',
+	'mobile-frontend-desc' => 'Բջջային միջերես',
+	'mobile-frontend-search-submit' => 'Անցնել',
+	'mobile-frontend-home-button' => 'Գլխավոր Էջ',
+	'mobile-frontend-logged-out' => 'Դուք չեք մտել համակարգ',
+	'mobile-frontend-logged-in-homepage-notification' => 'Բարի գալո՜ւստ, $1',
 	'mobile-frontend-save-settings' => 'Պահպանել կարգավորումները', # Fuzzy
 	'mobile-frontend-random-button' => 'Պատահական',
 	'mobile-frontend-back-to-top-of-section' => 'Վերադառնալ մեկ բաժին առաջ',
@@ -9275,11 +9292,14 @@ $messages['ia'] = array(
 	'mobile-frontend-profile-footer-days' => 'Inscribite {{PLURAL:$2|1 die|$2 dies}} retro con [[Special:Contributions/$1|{{PLURAL:$3|1 modification|$3 modificationes}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 file incargate|$4 files incargate|500=plus de 500 files incargate}}]].',
 	'mobile-frontend-profile-footer-months' => 'Inscribite plus de {{PLURAL:$2|1 mense|$2 menses}} retro con [[Special:Contributions/$1|{{PLURAL:$3|1 modification|$3 modificationes}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 file incargate|$4 files incargate|500=plus de 500 files incargate}}]].',
 	'mobile-frontend-profile-footer-years' => 'Inscribite plus de {{PLURAL:$2|1 anno|$2 annos}} retro con [[Special:Contributions/$1|{{PLURAL:$3|1 modification|$3 modificationes}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 file incargate|$4 files incargate|500=plus de 500 files incargate}}]].',
+	'mobile-frontend-profile-footer-ancient' => 'Ha facite [[Special:Contributions/$1|{{PLURAL:$3|1 modification|$3 modification}}]] e ha incargate [[Special:Uploads/$1|{{PLURAL:$4|1 file|$4 files|500=plus de 500 files}}]].',
 	'mobile-frontend-geonotahack' => 'Proxime a iste pagina',
 	'beta-feature-geonotahack' => 'Proxime a iste pagina',
 	'beta-feature-geonotahack-description' => 'Discoperi paginas que es in le proximitate geographic del pagina que tu lege actualmente.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Iste pagina ha besonio de tu adjuta!',
 	'mobile-frontend-mainpage-cta-button' => 'Meliorar iste pagina',
+	'beta-feature-minerva' => 'Activar le apparentia mobile (Minerva) sur le scriptorio',
+	'beta-feature-minerva-description' => 'Facer del apparentia usate sur dispositivos mobile un apparentia seligibile pro le scriptorio in le scheda Apparentia del Preferentias.',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -10348,6 +10368,7 @@ in tutto il mondo',
 	'mobile-frontend-profile-footer-days' => 'Registrato {{PLURAL:$2|1 giorno|$2 giorni}} fa con [[Special:Contributions/$1|{{PLURAL:$3|1 modifica|$3 modifiche}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 caricamento|$4 caricamenti|500=più di 500 caricamenti}}]].',
 	'mobile-frontend-profile-footer-months' => 'Registrato più di {{PLURAL:$2|1 mese|$2 mesi}} fa con [[Special:Contributions/$1|{{PLURAL:$3|1 modifica|$3 modifiche}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 caricamento|$4 caricamenti|500=più di 500 caricamenti}}]].',
 	'mobile-frontend-profile-footer-years' => 'Registrato più di {{PLURAL:$2|1 anno|$2 anni}} fa con [[Special:Contributions/$1|{{PLURAL:$3|1 modifica|$3 modifiche}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 caricamento|$4 caricamenti|500=più di 500 caricamenti}}]].',
+	'mobile-frontend-profile-footer-ancient' => 'Contribuito con [[Special:Contributions/$1|{{PLURAL:$3|1 modifica|$3 modifiche}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 caricamento|$4 caricamenti|500=più di 500 caricamenti}}]].',
 	'mobile-frontend-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack' => 'Vicino a questa pagina',
 	'beta-feature-geonotahack-description' => 'Scopri le pagine che sono geograficamente vicine alla pagina di contenuto che stai attualmente leggendo.',
@@ -13416,7 +13437,7 @@ $messages['mk'] = array(
 	'mobile-frontend-nearby-requirements-guidance' => 'Користете друг прелистувач или вклучете JavaScript ако ви е исклучен.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 м}}',
-	'mobile-frontend-nearby-lookup-ui-error' => '„Во близина“ на {{SITENAME}} не може да утвртди каде се ноаѓате… Да се обиде повторно?',
+	'mobile-frontend-nearby-lookup-ui-error' => '„Во близина“ на {{SITENAME}} не може да утврди каде се ноаѓате… Да се обиде повторно?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Појдете на поотворен простор со подобар сигнал.',
 	'mobile-frontend-nearby-permission' => '„Во околина“ на {{SITENAME}} нема дозвола да ја дознае вашата местоположба.',
 	'mobile-frontend-nearby-permission-guidance' => 'Дајте му дозвола на програмот за да знае каде сте. Може да треба да ги проверите поставките за местоположба во прелистувачот.',
@@ -19024,11 +19045,14 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-footer-days' => 'Gick med för {{PLURAL:$2|1 dag|$2 dagar}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',
 	'mobile-frontend-profile-footer-months' => 'Gick med för över {{PLURAL:$2|1 månad|$2 månader}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',
 	'mobile-frontend-profile-footer-years' => 'Gick med för över {{PLURAL:$2|1 år|$2 år}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',
+	'mobile-frontend-profile-footer-ancient' => 'Gjorde [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',
 	'mobile-frontend-geonotahack' => 'Nära denna sida',
 	'beta-feature-geonotahack' => 'Nära denna sida',
 	'beta-feature-geonotahack-description' => 'Upptäck sidor som är geografiskt närliggande till innehållssidan du för tillfället läser.',
 	'mobile-frontend-mainpage-cta-prompt' => 'Denna sida behöver din hjälp!',
 	'mobile-frontend-mainpage-cta-button' => 'Förbättra denna sida',
+	'beta-feature-minerva' => 'Aktivera mobilt utseende (Minerva) på stationära datorer',
+	'beta-feature-minerva-description' => 'Gör utseendet som används på mobila enheter till ett valbart utseende för stationära enheter under utseende-fliken i inställningarna.',
 );
 
 /** Swahili (Kiswahili)
