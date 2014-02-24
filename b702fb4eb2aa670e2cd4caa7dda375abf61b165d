@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_aace882f",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-24T18:40:11Z",
+      "side": 1,
+      "message": "This function should be named setPrependText() for consistency.",
+      "revId": "b702fb4eb2aa670e2cd4caa7dda375abf61b165d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
