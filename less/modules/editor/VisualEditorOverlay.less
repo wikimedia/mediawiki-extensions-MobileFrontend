@@ -11,8 +11,6 @@
 	background-color: white !important;
 }
 
-// FIXME: Remove !importants once they are no longer necessary, i.e. once figure styles
-// are moved out of VisualEditor and into the skins
 .content {
 	// VisualEditor doesn't have section_heading class, so we need to apply
 	// heading styles to the header tags directly.
@@ -23,37 +21,26 @@
 
 	figure[typeof*='mw:Image'] {
 		&.mw-halign-left {
-			float: left !important;
-			clear: left !important;
-			margin-right: 1.4em !important;
+			margin-right: 1.4em;
 		}
 
 		&.mw-halign-right {
-			float: right !important;
-			clear: right !important;
-			margin-left: 1.4em !important;
-		}
-
-		&.mw-halign-center {
-			margin-left: auto !important;
-			margin-right: auto !important;
+			margin-left: 1.4em;
 		}
 
 		.ve-ce-mwBlockImageNode-thumbimage {
-			border: none !important;
+			border: none;
 		}
 	}
 
 	figure[typeof='mw:Image/Thumb'],
 	figure[typeof='mw:Image/Frame'] {
-		margin: 0.6em 0 !important;
-		max-width: 100% !important;
-		background-color: transparent !important;
-		border: none !important;
-		padding: 0 !important;
-		overflow: hidden !important;
-		font-size: inherit !important;
-		text-align: inherit !important;
+		margin: 0.6em 0;
+		max-width: 100%;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		font-size: inherit;
 	}
 }
 
@@ -62,10 +49,28 @@
 	.overlay-header-container {
 		.overlay-header > .toolbar {
 			padding: 0;
+
+			// FIXME: Remove most of these resets once oo-ui supports skinning
+			// and no longer loads Vector-like styles by default in MediaWiki.
+			.oo-ui-toolbar-bar {
+				background-color: transparent;
+				background-image: none;
+				border-bottom: none;
+				padding: 0;
+
+				.oo-ui-toolGroup {
+					margin: 0;
+					border: none;
+				}
+
+				.oo-ui-toolbar-shadow {
+					display: none;
+				}
+			}
 		}
 
 		.oo-ui-tool {
-			height: 3em + @headerMargin;
+			height: 3em;
 			display: block;
 			float: left;
 			margin-left: 1em;
@@ -76,6 +81,12 @@
 			background-repeat: no-repeat;
 			.background-size(24px, 24px);
 			position: relative;
+			// FIXME: Remove this reset once oo-ui supports skinning
+			border: none;
+			// FIXME: Remove this reset once oo-ui supports skinning
+			border-radius: 0;
+			margin-top: -@headerMargin;
+			padding-bottom: @headerMargin;
 
 			&.oo-ui-tool-active {
 				background-color: #EDF4FF;
@@ -90,6 +101,7 @@
 				display: block;
 			}
 
+			// FIXME: Remove this once Story 1714 is complete (support for localized icons in mobile VE)
 			&.oo-ui-tool-name-bold {
 				.background-image-svg-quick( 'images/bold-normal' );
 				&.oo-ui-tool-active {
@@ -97,12 +109,24 @@
 				}
 			}
 
+			// FIXME: Remove this once Story 1714 is complete (support for localized icons in mobile VE)
 			&.oo-ui-tool-name-italic {
 				.background-image-svg-quick( 'images/italic-normal' );
 				&.oo-ui-tool-active {
 					.background-image-svg-quick( 'images/italic-select' );
 				}
 			}
+		}
+
+		// FIXME: Remove these resets once oo-ui supports skinning
+		.oo-ui-tool-active:not(.oo-ui-widget-disabled) {
+			box-shadow: none;
+			border: none;
+		}
+
+		// FIXME: Remove these resets once oo-ui supports skinning
+		.oo-ui-tool:hover:not(.oo-ui-widget-disabled) {
+			border: none;
 		}
 	}
 
