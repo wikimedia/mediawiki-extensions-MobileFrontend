@@ -45,7 +45,7 @@
 	} );
 
 	QUnit.test( '#getContent, new page', 2, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test', isNew: true } );
+		var editorApi = new EditorApi( { title: 'test', isNewPage: true } );
 
 		editorApi.getContent().done( function( resp ) {
 			assert.strictEqual( resp, '', 'return empty section' );
@@ -94,7 +94,7 @@
 	} );
 
 	QUnit.test( '#save, new page', 2, function( assert ) {
-		var editorApi = new EditorApi( { title: 'Talk:test', isNew: true } );
+		var editorApi = new EditorApi( { title: 'Talk:test', isNewPage: true } );
 
 		this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve(
 			{ edit: { result: 'Success' } }

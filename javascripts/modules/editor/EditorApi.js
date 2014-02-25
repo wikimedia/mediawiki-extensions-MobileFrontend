@@ -8,7 +8,7 @@
 			this.sectionId = options.sectionId;
 			this.oldId = options.oldId;
 			// return an empty section for new pages
-			this.content = options.isNew ? '' : undefined;
+			this.content = options.isNewPage ? '' : undefined;
 			this.hasChanged = false;
 		},
 

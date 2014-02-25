@@ -43,11 +43,9 @@
 				title: options.title,
 				sectionId: options.sectionId,
 				oldId: options.oldId,
-				isNew: options.isNew
+				isNewPage: options.isNewPage
 			} );
 			this.sectionId = options.sectionId;
-			this.isNewEditor = options.isNewEditor;
-			this.editCount = user.getEditCount();
 			this.readOnly = options.oldId ? true : false; // If old revision, readOnly mode
 			this.funnel = options.funnel;
 			this._super( options );
@@ -182,9 +180,18 @@
 			this.$( '.continue, .submit' ).prop( 'disabled', this.abuseFilterPanel.isDisallowed );
 		},
 
+		/**
+		 * Executed when the editor clicks the save button. Handles logging and submitting
+		 * the save action to the editor API.
+		 */
 		_save: function() {
 			var self = this,
 				options = { summary: this.$( '.summary' ).val() };
+
+			// Ask for confirmation in some cases
+			if ( !this.confirmSave() ) {
+				return;
+			}
 
 			if ( this.captchaId ) {
 				options.captchaId = this.captchaId;

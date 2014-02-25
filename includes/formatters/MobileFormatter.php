@@ -64,7 +64,8 @@ abstract class MobileFormatter extends HtmlFormatter {
 		} else {
 			$formatter = new MobileFormatterHTML( $html, $title );
 			$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
-			$formatter->flattenRedLinks( !$context->isBetaGroupMember() );
+			// Only show red links to logged in users in beta or alpha mode
+			$formatter->flattenRedLinks( !$context->isBetaGroupMember() || $context->getUser()->isAnon() );
 		}
 
 		if ( $context->isBetaGroupMember() ) {
@@ -128,7 +129,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 		}
 		parent::filterContent();
 
-		// Handle red links with action equal to edit
+		// Handle red links
 		if ( $this->flattenRedLinks ) {
 			$this->doFlattenRedLinks();
 		}

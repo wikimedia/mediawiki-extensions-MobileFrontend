@@ -312,11 +312,14 @@ $messages['en'] = array (
 	'mobile-frontend-editor-keep-editing' => 'Keep editing',
 	'mobile-frontend-editor-license' => 'By saving changes, you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 License] and [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
 	'mobile-frontend-editor-placeholder' => 'This section is empty. Be the first to expand it!',
+	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1|You}} {{GENDER:$1|are creating}} a new page on {{SITENAME}}!',
 	'mobile-frontend-editor-summary-placeholder' => 'Tell us what you changed (optional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Do you really want to abandon your edit?',
+	'mobile-frontend-editor-new-page-confirm' => '{{GENDER:$1|Are you sure you want to create}} a new page on {{SITENAME}}?',
 	'mobile-frontend-editor-wait' => 'Saving edit, please wait.',
 	'mobile-frontend-editor-success' => 'Success! Your edit was saved.',
 	'mobile-frontend-editor-success-landmark-1' => 'Congratulations, you are now a {{SITENAME}} editor!',
+	'mobile-frontend-editor-success-new-page' => 'Congratulations on creating a new page!',
 	'mobile-frontend-editor-error' => 'Error, edit not saved.',
 	'mobile-frontend-editor-error-conflict' => 'Error, another user has edited this page.',
 	'mobile-frontend-editor-error-loading' => 'Error, can\'t load section.',
@@ -937,8 +940,14 @@ Should be consistent with the following message:
 See also:
 * {{msg-mw|Mobile-frontend-editor-save}}',
 	'mobile-frontend-editor-placeholder' => 'Placeholder text for empty sections.',
+	'mobile-frontend-editor-placeholder-new-page' => 'Placeholder text for new pages.
+Parameters:
+* $1 - the user name for GENDER',
 	'mobile-frontend-editor-summary-placeholder' => 'A placeholder for the summary input field asking user what they changed (the field is optional).',
 	'mobile-frontend-editor-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved edit.',
+	'mobile-frontend-editor-new-page-confirm' => 'Question asking user if they are positive they want to create a new page.
+Parameters:
+* $1 - the user name for GENDER',
 	'mobile-frontend-editor-wait' => 'Text that displays while a page edit is being saved.',
 	'mobile-frontend-editor-success' => 'Text that displays when a page edit has been successfully saved.
 
@@ -950,6 +959,9 @@ See also:
 
 See also:
 * {{msg-mw|Mobile-frontend-editor-success}}',
+	'mobile-frontend-editor-success-new-page' => 'Text that displays when a new page has been successfully saved.
+
+Used as "toast" message.',
 	'mobile-frontend-editor-error' => 'Text that displays when there have been errors when saving a page edit.
 
 Used as "toast" error message.',

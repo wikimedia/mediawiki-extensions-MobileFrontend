@@ -72,6 +72,11 @@
 				summary = this.$( '.save-panel input' ).val(),
 				options = { summary: summary };
 
+			// Ask for confirmation in some cases
+			if ( !this.confirmSave() ) {
+				return;
+			}
+
 			this._showHidden( '.saving-header' );
 			// Stop the confirmation message from being thrown when you hit save.
 			this.hasChanged = false;
