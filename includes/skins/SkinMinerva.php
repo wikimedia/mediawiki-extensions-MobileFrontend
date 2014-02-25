@@ -78,7 +78,7 @@ class SkinMinerva extends SkinTemplate {
 			"document.documentElement.className = " .
 				"document.documentElement.className.replace( 'page-loading', '' );"
 		);
-		$bottomScripts .= $out->getBottomScripts();
+		$bottomScripts .= $this->bottomScripts();
 		$tpl->set( 'bottomscripts', $bottomScripts );
 		if ( $this->isMobileMode ) {
 			$tpl->set( 'bodytext', $html );
