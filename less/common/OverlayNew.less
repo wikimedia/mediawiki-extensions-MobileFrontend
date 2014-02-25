@@ -205,6 +205,19 @@
 		position: absolute;
 		top: 0;
 		white-space: nowrap;
+		// has to be here in case has no position: fixed but is positioned using
+		// JS on iOS
+		z-index: 5;
+		// prevent horizontal scrollbar when no position: fixed
+		overflow: hidden;
+		// make header reappearing less abrupt when scrolling on iOS with open
+		// keyboard
+		opacity: 0;
+
+		&.visible {
+			opacity: 1;
+			.transition( opacity .2s );
+		}
 
 		&.position-fixed {
 			// both top and left required for Android 2 for the element to be visible
