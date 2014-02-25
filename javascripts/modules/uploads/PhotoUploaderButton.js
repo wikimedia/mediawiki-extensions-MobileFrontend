@@ -98,8 +98,6 @@
 			}
 
 			$input.
-				// accept must be set via attr otherwise cannot use camera on Android
-				attr( 'accept', 'image/*;' ).
 				on( 'change', function() {
 					handleFile( $input[0].files[0] );
 					// clear so that change event is fired again when user selects the same file
