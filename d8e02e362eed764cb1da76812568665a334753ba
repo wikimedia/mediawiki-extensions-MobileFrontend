@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_e995bb8b",
+        "filename": "javascripts/modules/uploads/PhotoApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-25T01:36:05Z",
+      "side": 1,
+      "message": "These lines above are hard to read. How about:\nwarnings \u003d $.map( warnings, function( value, code ) {\n    return code + \u0027/\u0027 + value;\n} );\nerrorMsg +\u003d warnings[0] || \u0027unknown\u0027;",
+      "revId": "d8e02e362eed764cb1da76812568665a334753ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
