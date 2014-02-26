@@ -524,22 +524,22 @@ class MobileContext extends ContextSource {
 	 * This cookie can determine whether or not a user should see the mobile
 	 * version of pages.
 	 *
-	 * Uses regular php setcookie rather than WebResponse::setCookie()
-	 * so we can ignore $wgCookieHttpOnly since the protection is provides
-	 * is irrelevant for this cookie.
-	 *
 	 * @param string $cookieFormat
 	 * @param null $expiry
 	 */
 	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null ) {
-		global $wgCookiePath, $wgCookieSecure;
-
 		if ( is_null( $expiry ) ) {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
-
-		setcookie( self::USEFORMAT_COOKIE_NAME, $cookieFormat, $expiry, $wgCookiePath,
-			$this->getRequest()->getHeader( 'Host' ), $wgCookieSecure );
+		$this->getRequest()->response()->setcookie(
+			self::USEFORMAT_COOKIE_NAME,
+			$cookieFormat,
+			$expiry,
+			array(
+				'prefix' => '',
+				'httpOnly' => false,
+			)
+		);
 		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
 	}
 
