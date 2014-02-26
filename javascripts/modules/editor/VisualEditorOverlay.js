@@ -61,26 +61,17 @@
 			this.docToSave = false;
 		},
 		prepareForSave: function() {
-			var self = this,
-				doc = this.target.surface.getModel().getDocument();
 			this.$( '.surface' ).hide();
-			self._showHidden( '.save-header, .save-panel' );
-			self.$( '.submit' ).prop( 'disabled', true );
-			this.$spinner.show();
-			// Preload the serialization
-			if ( !this.docToSave ) {
-				this.docToSave = ve.dm.converter.getDomFromModel( doc );
-			}
-			this.target.prepareCacheKey( this.docToSave ).done( function () {
-				self.clearSpinner();
-				self.$( '.submit' ).prop( 'disabled', false );
-			} );
+			this._showHidden( '.save-header, .save-panel' );
 		},
 		save: function() {
-			var summary = this.$( '.save-panel input' ).val(),
+			var
+				self = this,
+				doc = this.target.surface.getModel().getDocument(),
+				summary = this.$( '.save-panel input' ).val(),
 				options = { summary: summary };
 
-			this.$spinner.show();
+			this._showHidden( '.saving-header' );
 			// Stop the confirmation message from being thrown when you hit save.
 			this.hasChanged = false;
 			this.$( '.surface, .summary-area' ).hide();
@@ -89,7 +80,14 @@
 				options.captchaid = this.captchaId;
 				options.captchaword = this.$( '.captcha-word' ).val();
 			}
-			this.target.save( this.docToSave, options );
+
+			// Preload the serialization
+			if ( !this.docToSave ) {
+				this.docToSave = ve.dm.converter.getDomFromModel( doc );
+			}
+			this.target.prepareCacheKey( this.docToSave ).done( function () {
+				self.target.save( self.docToSave, options );
+			} );
 		},
 		showSpinner: function () {
 			this.$spinner.show();
