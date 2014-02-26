@@ -107,6 +107,13 @@
 			this.clearSpinner();
 			this.target.surface.getModel().getDocument().connect( this, { 'transact': 'onTransact' } );
 			this.target.surface.$element.addClass( 'content' );
+
+			// for some reason the first time contenteditables are focused, focus
+			// event doesn't fire if we don't blur them first
+			this.$( '[contenteditable]' ).blur();
+			// we have to do it here because contenteditable elements still do not
+			// exist when postRender is executed
+			this._fixIosHeader( '[contenteditable]' );
 		},
 		onTransact: function () {
 			this.hasChanged = true;
