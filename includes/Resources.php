@@ -346,6 +346,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'modules/editor/VisualEditorOverlayHeader',
 			'modules/editor/VisualEditorOverlay',
 		),
+		'messages' => array(
+			'mobile-frontend-page-saving',
+		),
 	),
 
 	'mobile.editor.overlay' => $wgMFMobileResourceBoilerplate + array(

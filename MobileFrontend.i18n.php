@@ -170,7 +170,7 @@ $messages['en'] = array (
 	'mobile-frontend-meta-data-issues-header' => 'Issues',
 	'mobile-frontend-meta-data-issues' => 'This page has some issues',
 
-	'mobile-frontend-page-saving' => 'Saving $1',
+	'mobile-frontend-page-saving' => '<strong>Saving</strong><span> $1</span>',
 
 	'mobile-frontend-user-cta' => 'Please log in or sign up to see your notifications.',
 	'mobile-frontend-user-button-tooltip' => 'Show my notifications',
@@ -727,11 +727,10 @@ Refers to {{msg-mw|Mobile-frontend-search-content}}.',
 {{Identical|History}}',
 	'mobile-frontend-meta-data-issues-header' => 'Heading for overlay listing all cleanup templates',
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that a page has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
-	'mobile-frontend-page-saving' => 'Unused at this time.
+	'mobile-frontend-page-saving' => 'A heading saying what page will be saved after editing. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).
 
-Text shown whilst a page is being saved. Parameters:
-* $1 - page title
-{{Identical|Saving}}',
+Parameters:
+* $1 - page title',
 	'mobile-frontend-user-cta' => 'Appears when you click user icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.',
 	'mobile-frontend-user-button-tooltip' => 'Title tooltip for the user notifications button',
 	'mobile-frontend-nearby-to-page' => 'Header that describes that the pages are related as they have locations near the location of the current page.
