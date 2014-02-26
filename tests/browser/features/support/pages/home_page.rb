@@ -47,7 +47,6 @@ class HomePage
   li(:upload_icon, id:"ca-upload")
   div(:fe_notification, class:"drawer position-fixed visible")
   div(:rl_notification, id:"notifications")
-  a(:edit_history_link, id:"mw-mf-last-modified")
   a(:edit_icon_enabled, text:"Edit")
   li(:mobile_view, id:"footer-places-mobileview")
 end

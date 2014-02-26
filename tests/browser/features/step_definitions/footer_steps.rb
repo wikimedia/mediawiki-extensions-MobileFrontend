@@ -1,7 +1,3 @@
-When(/^I click on the view edit history link$/) do
-  on(HomePage).edit_history_link_element.when_present.click
-end
-
 Then(/^I go to the edit history page$/) do
   @browser.url.should match Regexp.escape("Main_Page&action=history")
 end
