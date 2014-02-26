@@ -16,6 +16,24 @@
       "revId": "a37580f56180e895af54328d83c8fff617a2d264",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_e15ca750",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-26T20:37:24Z",
+      "side": 0,
+      "message": "Will remove.",
+      "parentUuid": "4e04eb01_c1a40ba1",
+      "revId": "a37580f56180e895af54328d83c8fff617a2d264",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
