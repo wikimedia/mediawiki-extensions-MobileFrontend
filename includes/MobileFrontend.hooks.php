@@ -399,21 +399,21 @@ class MobileFrontendHooks {
 		// Ensure desktop version of Special:Preferences page gets mobile targeted modules
 		// FIXME: Upstream to core (?)
 		if ( $name === 'Preferences' && $skin === 'minerva' ) {
-			$out->addModules( 'minerva.special.preferences' );
+			$out->addModules( 'skins.minerva.special.preferences.scripts' );
 		}
 
 		if ( $isMobileView ) {
 			// Enable search header in beta
 			if ( $mobileContext->isBetaGroupMember() ) {
-				$out->addModuleStyles( 'mobile.special.styles' );
+				$out->addModuleStyles( 'skins.minerva.special.styles' );
 			} else {
 				$out->setProperty( 'disableSearchAndFooter', true );
 			}
 
 			if ( $name === 'Search' ) {
-				$out->addModuleStyles( 'mobile.search.styles' );
+				$out->addModuleStyles( 'skins.minerva.special.search.styles' );
 			} else if ( $name === 'Userlogin' ) {
-				$out->addModuleStyles( 'mobile.userlogin.styles' );
+				$out->addModuleStyles( 'skins.minerva.special.userlogin.styles' );
 				// make sure we're on https if we're supposed to be and currently aren't.
 				// most of this is lifted from https redirect code in SpecialUserlogin::execute()
 				// also, checking for 'https' in $wgServer is a little funky, but this is what

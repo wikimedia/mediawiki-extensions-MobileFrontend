@@ -3,7 +3,7 @@
 abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
-		$out->addModuleStyles( 'mobile.watchlist.styles' );
+		$out->addModuleStyles( 'mobile.special.pagefeed.styles' );
 		$this->setHeaders();
 		$out->setProperty( 'unstyledContent', true );
 		parent::execute( $par );

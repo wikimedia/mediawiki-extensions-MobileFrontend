@@ -87,7 +87,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$output->setPageTitle( $this->msg( 'mobile-frontend-diffview-title', $this->targetTitle->getPrefixedText() ) );
 
-		$output->addModules( 'mobile.watchlist' );
+		// FIXME: Don't add these styles. This is only needed for the user icon to the left of the username
+		$output->addModuleStyles( 'mobile.special.pagefeed.styles' );
 
 		// Allow other extensions to load more stuff here
 		wfRunHooks( 'BeforeSpecialMobileDiffDisplay', array( &$output, $ctx, $revisions ) );

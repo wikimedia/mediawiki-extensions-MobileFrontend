@@ -59,8 +59,8 @@ class MobileSpecialPage extends SpecialPage {
 		list( $name, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
 		$id = strtolower( $name );
 		// FIXME: These names should be more specific
-		$specialStyleModuleName = 'mobile.' . $id . '.styles';
-		$specialScriptModuleName = 'mobile.' . $id . '.scripts';
+		$specialStyleModuleName = 'mobile.special.' . $id . '.styles';
+		$specialScriptModuleName = 'mobile.special.' . $id . '.scripts';
 
 		if ( $rl->getModule( $specialStyleModuleName ) ) {
 			$out->addModuleStyles( $specialStyleModuleName );

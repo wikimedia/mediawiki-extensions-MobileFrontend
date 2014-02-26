@@ -40,7 +40,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
-		$output->addModules( 'mobile.watchlist.scripts' );
+		$output->addModules( 'skins.minerva.special.watchlist.scripts' );
 		$req = $this->getRequest();
 		$view = $req->getVal( 'watchlistview', 'a-z' );
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
