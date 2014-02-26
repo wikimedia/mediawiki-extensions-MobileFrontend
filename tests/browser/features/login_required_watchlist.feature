@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org @user_agent
+@custom-browser @en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org
 Feature: Login required for Watchlist
 
   Scenario: Login for Uploads
@@ -6,5 +6,3 @@ Feature: Login required for Watchlist
     When I select Watchlist
     Then I receive watchlist message A watchlist helps you bookmark pages and keep track of changes to them
       And I receive watchlist message Log in to see it.
-
-
