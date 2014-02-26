@@ -1,4 +1,8 @@
 <?php
+/**
+ * This is an abstract class intended for use by special pages that consist primarily of
+ * a list of pages, for example, Special:Watchlist or Special:History.
+ */
 
 abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	public function execute( $par ) {
