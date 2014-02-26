@@ -161,7 +161,7 @@
 					} else {
 						result.reject( { type: 'error', details: 'unknown' } );
 					}
-				} ).fail( $.proxy( result, 'reject', { type: 'error', details: 'HTTP error' } ) );
+				} ).fail( $.proxy( result, 'reject', { type: 'error', details: 'http' } ) );
 			}
 
 			this.getToken().done( saveContent ).fail( $.proxy( result, 'reject' ) );

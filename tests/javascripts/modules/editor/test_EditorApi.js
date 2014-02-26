@@ -118,7 +118,7 @@
 		assert.strictEqual( editorApi.hasChanged, false, 'reset hasChanged' );
 	} );
 
-	QUnit.test( '#save, after #prependText', 2, function( assert ) {
+	QUnit.test( '#save, after #setPrependText', 2, function( assert ) {
 		var editorApi = new EditorApi( { title: 'test' } );
 
 		this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve(
@@ -179,7 +179,7 @@
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
-		assert.ok( failSpy.calledWith( { type: 'error', details: 'HTTP error' } ), "call fail" );
+		assert.ok( failSpy.calledWith( { type: 'error', details: 'http' } ), "call fail" );
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 

@@ -2,15 +2,19 @@
 
 	var photo = M.require( 'modules/uploads/_photo' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
-		api;
+		EditorApi = M.require( 'modules/editor/EditorApi' ),
+		editorApi, photoApi;
 
 	QUnit.module( 'MobileFrontend modules/uploads/PhotoApi', {
 		setup: function() {
-			var resp = {"warnings":{"main":{"*":"Unrecognized parameters: 'useformat', 'r'"}},"upload":{"result":"Success","filename":"Tulip_test_2013-05-13_09-45.jpg","imageinfo":{"timestamp":"2013-05-13T16:45:53Z","user":"Jdlrobson","userid":825,"size":182912,"width":960,"height":578,"parsedcomment":"Added photo for use on page","comment":"Added photo for use on page","url":"http://upload.beta.wmflabs.org/wikipedia/en/b/b3/Tulip_test_2013-05-13_09-45.jpg","descriptionurl":"http://en.wikipedia.beta.wmflabs.org/wiki/File:Tulip_test_2013-05-13_09-45.jpg","sha1":"7e56537b1929d7d4d211bded2d46ba01ddbbe30f","metadata":[{"name":"JPEGFileComment","value":[{"name":0,"value":"*"}]},{"name":"MEDIAWIKI_EXIF_VERSION","value":2}],"mime":"image/jpeg","mediatype":"BITMAP","bitdepth":8}}};
+			var resp = {"warnings":{"main":{"*":"Unrecognized parameters: 'useformat', 'r'"}},"upload":{"result":"Success","filename":"z_2013-05-13_09-45.jpg","imageinfo":{"timestamp":"2013-05-13T16:45:53Z","user":"Jdlrobson","userid":825,"size":182912,"width":960,"height":578,"parsedcomment":"Added photo for use on page","comment":"Added photo for use on page","url":"http://upload.beta.wmflabs.org/wikipedia/en/b/b3/Tulip_test_2013-05-13_09-45.jpg","descriptionurl":"http://en.wikipedia.beta.wmflabs.org/wiki/File:Tulip_test_2013-05-13_09-45.jpg","sha1":"7e56537b1929d7d4d211bded2d46ba01ddbbe30f","metadata":[{"name":"JPEGFileComment","value":[{"name":0,"value":"*"}]},{"name":"MEDIAWIKI_EXIF_VERSION","value":2}],"mime":"image/jpeg","mediatype":"BITMAP","bitdepth":8}}};
 
-			api = new PhotoApi();
-			this.sandbox.stub( api, 'getToken' ).returns( $.Deferred().resolve( 'foo' ) );
-			this.sandbox.stub( api, 'post' ).returns( $.Deferred().resolve( resp ) );
+			editorApi = new EditorApi( {} );
+			photoApi = new PhotoApi( { editorApi: editorApi } );
+			this.sandbox.stub( editorApi, 'getToken' ).returns( $.Deferred().resolve( 'foo' ) );
+			this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve( { edit: { result: 'Success' } } ) );
+			this.sandbox.stub( photoApi, 'getToken' ).returns( $.Deferred().resolve( 'foo' ) );
+			this.sandbox.stub( photoApi, 'post' ).returns( $.Deferred().resolve( resp ) );
 		}
 	} );
 
@@ -18,10 +22,9 @@
 		var resp = {"upload":{"result":"Warning","warnings":{"badfilename":"::.JPG"},"filekey":"1s.1.jpg","sessionkey":"z1.jpg"}},
 			spy = this.sandbox.spy();
 
-		api.post.returns( $.Deferred().resolve( resp ) );
+		photoApi.post.returns( $.Deferred().resolve( resp ) );
 
-		api.save( {
-			insertInPage: true,
+		photoApi.save( {
 			file: {
 				name: '::'
 			},
@@ -31,30 +34,28 @@
 		assert.ok( spy.calledWith( 'upload/warning/badfilename/::.JPG' ), 'The request caused a bad file name error' );
 	} );
 
-	QUnit.test( '#save, successful upload', 1, function( assert ) {
+	QUnit.test( '#save, successful upload', 2, function( assert ) {
 		var spy = this.sandbox.spy();
+		this.sandbox.spy( editorApi, 'setPrependText' );
 
-		api.post.
-			withArgs( sinon.match( { action: 'edit' } ) ).
-			returns( $.Deferred().resolve( { edit: { result: 'Success' } } ) );
-
-		api.save( {
-			insertInPage: true,
+		photoApi.save( {
 			file: {
 				name: 'z.jpg'
 			},
 			description: 'hello world'
 		} ).done( spy );
-		assert.ok( spy.calledOnce, 'The request succeeded and ran done callback' );
+
+		assert.ok( spy.calledOnce, 'call done' );
+		assert.ok( editorApi.setPrependText.calledWith( '[[File:z_2013-05-13_09-45.jpg|thumbnail|hello world]]\n\n' ), 'prepend text' );
 	} );
 
 	QUnit.test( '#save, error uploading, AbuseFilter', 2, function( assert ) {
 		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
 
-		api.post.
+		photoApi.post.
 			returns( $.Deferred().resolve( {"error":{"code":"verification-error","info":"This file did not pass file verification","details":["abusefilter-warning","test",1]}} ) );
 
-		api.save( {
+		photoApi.save( {
 			insertInPage: true,
 			file: {
 				name: 'z.jpg'
@@ -69,11 +70,10 @@
 	QUnit.test( '#save. error inserting in page, captcha', 2, function( assert ) {
 		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
 
-		api.post.
-			withArgs( sinon.match( { action: 'edit' } ) ).
+		editorApi.post.
 			returns( $.Deferred().resolve( { edit: { captcha: {}, result: 'Failure' } } ) );
 
-		api.save( {
+		photoApi.save( {
 			insertInPage: true,
 			file: {
 				name: 'z.jpg'
@@ -85,14 +85,13 @@
 		assert.ok( failSpy.calledWith( 'edit/captcha' ), "call fail" );
 	} );
 
-	QUnit.test( 'error inserting in page, AbuseFilter', 2, function( assert ) {
+	QUnit.test( '#save, error inserting in page, AbuseFilter', 2, function( assert ) {
 		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
 
-		api.post.
-			withArgs( sinon.match( { action: 'edit' } ) ).
+		editorApi.post.
 			returns( $.Deferred().resolve( { edit: { code: 'abusefilter-warning', result: 'Failure' } } ) );
 
-		api.save( {
+		photoApi.save( {
 			insertInPage: true,
 			file: {
 				name: 'z.jpg'

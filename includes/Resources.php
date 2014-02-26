@@ -282,14 +282,23 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.editor.api' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/EditorApi.js',
+		),
+	),
+
 	'mobile.editor.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
+			'mobile.editor.api',
 			'jquery.cookie',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/EditorApi.js',
 			'javascripts/modules/editor/EditorOverlayBase.js',
 		),
 		'styles' => array(
@@ -374,6 +383,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
+			'mobile.editor.api',
 		),
 		'scripts' => array(
 			'javascripts/loggingSchemas/mobileWebUploads.js',

@@ -81,17 +81,10 @@
 	PhotoApi = Api.extend( {
 		useCentralAuthToken: mw.config.get( 'wgMFUseCentralAuthToken' ),
 
-		updatePage: function( options, callback ) {
-			var self = this;
-			self.getToken().done( function( token ) {
-				self.post( {
-					action: 'edit',
-					title: options.pageTitle,
-					token: token,
-					summary: mw.msg( 'mobile-frontend-photo-upload-comment' ),
-					prependtext: '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n'
-				} ).done( callback );
-			} );
+		initialize: function( options ) {
+			this._super();
+			options = options || {};
+			this.editorApi = options.editorApi;
 		},
 
 		// FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
@@ -158,6 +151,7 @@
 					var descriptionUrl = '',
 						warnings = data.upload ? data.upload.warnings : false,
 						err = 'upload/error';
+
 					if ( !data || !data.upload ) {
 						// error uploading image
 						if ( data.error ) {
@@ -171,7 +165,9 @@
 						result.reject( err );
 						return;
 					}
+
 					options.fileName = data.upload.filename;
+
 					if ( !options.fileName ) {
 						if ( warnings && warnings.duplicate ) {
 							options.fileName = warnings.duplicate[ '0' ];
@@ -181,42 +177,33 @@
 							return result.reject( 'upload/unknown/missing-filename' );
 						}
 					}
+
 					// FIXME: API doesn't return this information on duplicate images...
 					if ( data.upload.imageinfo ) {
 						descriptionUrl = data.upload.imageinfo.descriptionurl;
 					}
-					if ( options.insertInPage ) {
-						// FIXME: refactor EditorApi and use it here instead
-						self.updatePage( options, function( data ) {
-							var code;
 
-							if ( data && data.edit && data.edit.result === 'Success' ) {
+					if ( self.editorApi ) {
+						self.editorApi.setPrependText( '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n' );
+						self.editorApi.save( { summary: mw.msg( 'mobile-frontend-photo-upload-comment' ) } ).
+							done( function() {
 								result.resolve( options.fileName, descriptionUrl );
-							} else if ( data && data.error ) {
-								// Edit API error
-								result.reject( 'edit/error/' + data.error.code );
-							} else if ( data && data.edit && data.edit.captcha ) {
-								// CAPTCHAs
-								result.reject( 'edit/captcha' );
-							} else if ( data && data.edit && data.edit.code ) {
-								code = data.edit.code;
-								// AbuseFilter
-								if ( /^abusefilter/.test( code ) ) {
-									result.reject( 'edit/abusefilter' );
-								} else {
-									result.reject( 'edit/unknown/' + code );
+							} ).
+							fail( function( err ) {
+								var msg = 'edit/' + err.type;
+								if ( typeof err.details === 'string' ) {
+									msg += '/' + err.details;
 								}
-							} else {
-								result.reject( 'edit/unknown' );
-							}
-						} );
+								result.reject( msg );
+							} );
 					} else {
 						result.resolve( options.fileName, descriptionUrl );
 					}
-				} ).fail( function( xhr, status, error ) {
+
+				} ).fail( function() {
 					// error on the server side (abort happens when user cancels the upload)
 					if ( status !== 'abort' ) {
-						result.reject( status + ': ' + error );
+						result.reject( 'upload/error/http' );
 					}
 				} );
 
