@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_c1a40ba1",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-26T20:28:07Z",
+      "side": 0,
+      "message": "Any reason you don\u0027t also remove this.editCount which is also set in Base?",
+      "revId": "a37580f56180e895af54328d83c8fff617a2d264",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

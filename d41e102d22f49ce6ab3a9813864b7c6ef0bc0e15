@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_e1f82748",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-26T20:28:07Z",
+      "side": 1,
+      "message": "This is actually common with VisualEditorOverlay put in base?",
+      "revId": "d41e102d22f49ce6ab3a9813864b7c6ef0bc0e15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_21c72f4c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-26T20:28:07Z",
+      "side": 1,
+      "message": "What is cancelled? Can you document this? I\u0027m not sure when this is triggered..",
+      "revId": "d41e102d22f49ce6ab3a9813864b7c6ef0bc0e15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_013f9321",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-26T20:28:07Z",
+      "side": 1,
+      "message": "Removing the toast class here confused me - then I realised this is a default Toast class name. Maybe we should do a hygiene fix that removes all usages of toast class to make this less confusing?",
+      "revId": "d41e102d22f49ce6ab3a9813864b7c6ef0bc0e15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_01c9d354",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-26T20:28:07Z",
+      "side": 1,
+      "message": "No toast class?",
+      "revId": "d41e102d22f49ce6ab3a9813864b7c6ef0bc0e15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_61e5379f",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-26T20:28:07Z",
+      "side": 1,
+      "message": "This is a little confusing. If I blank a section of an existing page I also see this. Wrap in an if statement or alter wording to say starting a new section?",
+      "revId": "d41e102d22f49ce6ab3a9813864b7c6ef0bc0e15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_c1dc0be8",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-26T20:28:07Z",
+      "side": 1,
+      "message": "Sorry to be picky but please can we call this isNewPage ? It\u0027s a little confusing as it suggests the EditorOverlay isNew rather than the page that is being edited...",
+      "revId": "d41e102d22f49ce6ab3a9813864b7c6ef0bc0e15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_21ff2f33",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-02-26T20:28:07Z",
+      "side": 1,
+      "message": "This is actually common with EditorOverlay put in base?",
+      "revId": "d41e102d22f49ce6ab3a9813864b7c6ef0bc0e15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
