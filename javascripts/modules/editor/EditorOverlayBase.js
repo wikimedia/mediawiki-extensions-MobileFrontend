@@ -76,7 +76,9 @@
 			} else {
 				options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
 			}
-			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
+			if ( !options.previewingMsg ) {
+				options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
+			}
 			this.editCount = user.getEditCount();
 			this.isNewEditor = options.isNewEditor;
 

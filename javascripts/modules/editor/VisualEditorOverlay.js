@@ -11,6 +11,7 @@
 		className: 'overlay editor-overlay editor-overlay-ve',
 		initialize: function( options ) {
 			var self = this;
+			options.previewingMsg = mw.msg( 'mobile-frontend-page-saving', options.title );
 			this._super( options );
 			this.hasChanged = false;
 			this.$spinner = self.$( '.spinner' );
