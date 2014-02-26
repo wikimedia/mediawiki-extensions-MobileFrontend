@@ -1266,6 +1266,7 @@ $messages['anp'] = array(
  * @author AwamerT
  * @author Bassem JARKAS
  * @author Claw eg
+ * @author Emara
  * @author Kuwaity26
  * @author Meno25
  * @author Mido
@@ -1408,6 +1409,7 @@ $messages['ar'] = array(
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 م}}',
 	'mobile-frontend-nearby-lookup-ui-error' => 'لا يمكن للصفحات القريبة في {{SITENAME}}  أن تتعرف على مكانك..أأحاول مجددا؟',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'حاول في منطقة متفوحة فيها إشارة أقوى.',
+	'mobile-frontend-nearby-permission-guidance' => 'الرجاء التأكد من إعطاء الإذن لإظهار المكان الذي تتواجد فيه. قد تحتاج إلى فحص إعدادات موقع المتصفح.',
 	'mobile-frontend-nearby-noresults' => 'هذا المكان هادئ...لا وجود لأية صفحات عن أماكن قريبة.',
 	'mobile-frontend-nearby-noresults-guidance' => 'حاول إنشاء صفحة جديدة أو إضافة الموقع لصفحة موجودة',
 	'mobile-frontend-nearby-refresh' => 'عثرنا على مكان أدق لك. انقر هنا لإنعاش قائمة الصفحات القريبة.',
@@ -1418,6 +1420,7 @@ $messages['ar'] = array(
 	'mobile-frontend-donate-image-nouploads' => 'لا مرفوعات.',
 	'mobile-frontend-donate-image-login' => 'ملفات {{SITENAME}} ساهم بها أناس مثلك.',
 	'mobile-frontend-donate-image-login-action' => 'سجل دخولك لمشاركة ملفات الوسائط الخاصة بك.',
+	'mobile-frontend-donate-image-signup-action' => 'انشىء حسابًا لمشاركة وسائطك  مع العالم.',
 	'mobile-frontend-photo-upload-disabled' => 'لا حاجة لأي صورة على هذه الصفحة.',
 	'mobile-frontend-photo-upload-anon' => 'يلزمك تسجيل الدخول لكي تضيف صورة لهذه الصفحة.',
 	'mobile-frontend-photo-upload-protected' => 'لا تملك صلاحية إضافة صورة لهذه الصفحة.',
@@ -1443,6 +1446,7 @@ $messages['ar'] = array(
 	'mobile-frontend-watchlist-cta' => 'تابع كافة التغييرات التي تطرأ على هذه الصفحة.',
 	'mobile-frontend-watchlist-cta-button-login' => 'ادخل',
 	'mobile-frontend-watchlist-cta-button-signup' => 'أنشئ حسابًا',
+	'mobile-frontend-watchlist-purpose' => 'قائمة المراقبة تساعدك في وضع إشارة مرجعية للصفحات وتتبع التغيرات عليها.',
 	'mobile-frontend-watchlist-login-action' => 'سجل الدخول للمطالعة',
 	'mobile-frontend-watchlist-signup-action' => 'سجل لبدء واحدة الآن.',
 	'mobile-frontend-generic-login' => '{{SITENAME}} مبني بأيادي أناس مثلك.',
@@ -1551,6 +1555,7 @@ $messages['ar'] = array(
 	'mobile-frontend-media-license-link' => 'معلومات الترخيص',
 	'abusefilter-edit-builder-vars-user-mobile' => 'إذا كان المستخدم يعدل عبر واجهة الجوال',
 	'mobile-frontend-profile-title' => 'ملف المستخدم',
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$2|حملت}} {{PLURAL:$1|أمس|$1 days ago|0=اليوم}}.',
 	'mobile-frontend-profile-usertalk' => '{{GENDER:$1|تحدث إلى $1|تحدثي إلى $1}}',
 	'mobile-frontend-profile-error' => 'أوه لا!',
 	'mobile-frontend-profile-noargs' => 'لم يتم توفير اسم مستخدم. الرجاء توفير اسم مستخدم لمطالعة ملف المستخدم الخاص به.',
@@ -1995,6 +2000,7 @@ $messages['ast'] = array(
 	'mobile-frontend-profile-footer-days' => 'Xunióse hai {{PLURAL:$2|1 día|$2 díes}} con [[Special:Contributions/$1|{{PLURAL:$3|1 edición|$3 ediciones}}]] y [[Special:Uploads/$1|{{PLURAL:$4|1 carga|$4 cargues|500=500 o más cargues}}]].',
 	'mobile-frontend-profile-footer-months' => 'Xunióse hai más de {{PLURAL:$2|1 mes|$2 meses}} con [[Special:Contributions/$1|{{PLURAL:$3|1 edición|$3 ediciones}}]] y [[Special:Uploads/$1|{{PLURAL:$4|1 carga|$4 cargues|500=500 o más cargues}}]].',
 	'mobile-frontend-profile-footer-years' => 'Xunióse hai más de {{PLURAL:$2|1 añu|$2 años}} con [[Special:Contributions/$1|{{PLURAL:$3|1 edición|$3 ediciones}}]] y [[Special:Uploads/$1|{{PLURAL:$4|1 carga|$4 cargues|500=500 o más cargues}}]].',
+	'mobile-frontend-profile-footer-ancient' => 'fizo [[Special:Contributions/$1|{{PLURAL:$3|1 edición|$3 ediciones}}]] y [[Special:Uploads/$1|{{PLURAL:$4|1 xubida|$4 xubíes|500=500+ xubíes}}]].',
 	'mobile-frontend-geonotahack' => "Cerca d'esta páxina",
 	'beta-feature-geonotahack' => "Cerca d'esta páxina",
 	'beta-feature-geonotahack-description' => 'Descubra páxines que tan averaes xeográficamente a la páxina que ta lleendo agora.',
