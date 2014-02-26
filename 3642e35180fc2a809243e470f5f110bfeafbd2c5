@@ -16,6 +16,24 @@
       "revId": "3642e35180fc2a809243e470f5f110bfeafbd2c5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_fccd6c8a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 521,
+      "author": {
+        "id": 247
+      },
+      "writtenOn": "2014-02-26T21:36:51Z",
+      "side": 1,
+      "message": "I rather keep the brackets. Especially since I switch Programming Languages, remembering in which languages \u0026\u0026 binds stronger than \u003d\u003d or !\u003d\u003d is always a hassle.",
+      "parentUuid": "4e04eb01_c1752b2e",
+      "revId": "3642e35180fc2a809243e470f5f110bfeafbd2c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
