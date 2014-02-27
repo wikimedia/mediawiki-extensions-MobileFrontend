@@ -34,11 +34,24 @@ class MobileContextTest extends MediaWikiTestCase {
 		parent::tearDown();
 	}
 
-	public function testGetBaseDomain() {
-		MobileContext::singleton()->getRequest()->setHeader( 'Host', 'en.wikipedia.org' );
-		$this->assertEquals( '.wikipedia.org', MobileContext::singleton()->getBaseDomain() );
-		MobileContext::singleton()->getRequest()->setHeader( 'Host', 'en.m.wikipedia.org' );
-		$this->assertEquals( '.wikipedia.org', MobileContext::singleton()->getBaseDomain() );
+	/**
+	 * @dataProvider getBaseDomainProvider
+	 */
+	public function testGetBaseDomain( $server, $baseDomain ) {
+		global $wgServer;
+		$wgServer = $server;
+		$this->assertEquals( $baseDomain, MobileContext::singleton()->getBaseDomain() );
+
+	}
+
+	public function getBaseDomainProvider() {
+		return array(
+			array( 'https://en.wikipedia.org', '.wikipedia.org' ),
+			array( 'http://en.m.wikipedia.org', '.wikipedia.org' ),
+			array( '//en.m.wikipedia.org', '.wikipedia.org' ),
+			array( 'http://127.0.0.1', '127.0.0.1' ),
+			array( 'http://127.0.0.1:8080', '127.0.0.1' ),
+		);
 	}
 
 	public function testGetMobileUrl() {
@@ -329,10 +342,10 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	public function testGetStopMobileRedirectCookieDomain(){
-		global $wgMFStopRedirectCookieHost;
+		global $wgMFStopRedirectCookieHost, $wgServer;
 		$context = MobileContext::singleton();
 		$wgMFStopRedirectCookieHost = null;
-		$context->getRequest()->setHeader( 'Host', 'en.wikipedia.org' );
+		$wgServer = 'http://en.wikipedia.org';
 		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), '.wikipedia.org' );
 		$wgMFStopRedirectCookieHost = 'foo.bar.baz';
 		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), 'foo.bar.baz' );
