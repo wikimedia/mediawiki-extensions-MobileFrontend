@@ -22,7 +22,7 @@ class SpecialMobileEditor extends MobileSpecialPage {
 		$section = (int)$this->getRequest()->getVal( 'section', 0 );
 
 		$output = $this->getOutput();
-		$output->addModules( 'mobile.mobileeditor.scripts' );
+		$output->addModules( 'mobile.special.mobileeditor.scripts' );
 		$output->setPageTitle( $this->msg( 'mobile-frontend-editor-redirect-title' )->text() );
 
 		$context = MobileContext::singleton();
