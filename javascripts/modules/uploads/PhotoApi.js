@@ -81,6 +81,10 @@
 	PhotoApi = Api.extend( {
 		useCentralAuthToken: mw.config.get( 'wgMFUseCentralAuthToken' ),
 
+		/**
+		 * @param [options.editorApi] EditorApi An API instance that will be used
+		 * for inserting images in a page.
+		 */
 		initialize: function( options ) {
 			this._super();
 			options = options || {};
@@ -89,20 +93,32 @@
 
 		// FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
 		_handleWarnings: function( result, warnings ) {
-			var errorMsg = 'upload/warning/', humanErrorMsg;
+			var err = { stage: 'upload', type: 'warning' }, humanErrorMsg;
 
 			warnings = $.map( warnings, function( value, code ) {
 				return code + '/' + value;
 			} );
-			errorMsg += warnings[0] || 'unknown';
+			err.details = warnings[0] || 'unknown';
 
 			if ( warnings.exists ) {
 				humanErrorMsg = mw.msg( 'mobile-frontend-photo-upload-error-filename' );
 			}
 
-			return result.reject( errorMsg, humanErrorMsg );
+			return result.reject( err, humanErrorMsg );
 		},
 
+		/**
+		 * Upload an image and, optionally, add it to current page (if PhotoApi
+		 * was initialized with `editorApi`).
+		 *
+		 * @param options.file File A file object obtained from a file input.
+		 * @param options.description String Image description.
+		 * @return jQuery.Deferred On failure callback is passed an object with
+		 * `stage`, `type` and `details` properties. `stage` is either "upload"
+		 * or "edit" (inserting image in a page). `type` is a string describing
+		 * the type of error, `details` can be any object (usually a string
+		 * containing error message).
+		 */
 		save: function( options ) {
 			var self = this, result = $.Deferred(), apiUrl = endpoint || this.apiUrl;
 
@@ -150,16 +166,16 @@
 				} ).done( function( data ) {
 					var descriptionUrl = '',
 						warnings = data.upload ? data.upload.warnings : false,
-						err = 'upload/error';
+						err = { stage: 'upload', type: 'error' };
 
 					if ( !data || !data.upload ) {
 						// error uploading image
 						if ( data.error ) {
 							if ( data.error.code ) {
-								err += '/' + data.error.code;
-							}
-							if ( data.error.details && data.error.details[0] ) {
-								err += '/' + data.error.details[0];
+								err.details = data.error.code;
+								if ( data.error.details && data.error.details[0] ) {
+									err.details += '/' + data.error.details[0];
+								}
 							}
 						}
 						result.reject( err );
@@ -174,7 +190,7 @@
 						} else if ( warnings ) {
 							return self._handleWarnings( result, warnings );
 						} else {
-							return result.reject( 'upload/unknown/missing-filename' );
+							return result.reject( { stage: 'upload', type: 'unknown', details: 'missing-filename' } );
 						}
 					}
 
@@ -190,11 +206,8 @@
 								result.resolve( options.fileName, descriptionUrl );
 							} ).
 							fail( function( err ) {
-								var msg = 'edit/' + err.type;
-								if ( typeof err.details === 'string' ) {
-									msg += '/' + err.details;
-								}
-								result.reject( msg );
+								err.stage = 'edit';
+								result.reject( err );
 							} );
 					} else {
 						result.resolve( options.fileName, descriptionUrl );
@@ -203,7 +216,7 @@
 				} ).fail( function() {
 					// error on the server side (abort happens when user cancels the upload)
 					if ( status !== 'abort' ) {
-						result.reject( 'upload/error/http' );
+						result.reject( { stage: 'upload', type: 'error', details: 'http' } );
 					}
 				} );
 

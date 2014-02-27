@@ -731,7 +731,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-blocked',
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-edit',
-			// modules/editor/EditorOverlay.js and modules/talk.js
+			// modules/editor/EditorOverlay.js
+			// modules/talk.js
+			// modules/uploads/PhotoUploadProgress.js
 			'mobile-frontend-editor-save',
 			// PageApi.js
 			'mobile-frontend-last-modified-with-user-date',

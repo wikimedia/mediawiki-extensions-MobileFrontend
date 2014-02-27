@@ -204,7 +204,6 @@
 		// FIXME: make those overlays use position fixed headers
 		position: absolute;
 		top: 0;
-		white-space: nowrap;
 		// has to be here in case has no position: fixed but is positioned using
 		// JS on iOS
 		z-index: 5;
@@ -231,6 +230,8 @@
 		}
 
 		.overlay-header {
+			white-space: nowrap;
+
 			> div {
 				padding: (@headerTitleMarginV - @headerMargin) @headerTitleMarginH;
 			}

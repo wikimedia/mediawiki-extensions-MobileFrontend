@@ -1,5 +1,5 @@
 <div class="overlay-header-container position-fixed">
-	<div class="overlay-header">
+	<div class="overlay-header progress-header hideable">
 		<ul class="v-border bottom-border">
 			<li><button class="cancel icon">{{closeMsg}}</button></li>
 		</ul>
@@ -8,6 +8,16 @@
 		</div>
 		<ul class="{{headerButtonsListClassName}}">
 			<li><button class="loading icon">{{{uploadingMsg}}}</button></li>
+		</ul>
+	</div>
+	<div class="overlay-header save-header hideable hidden">
+		<ul class="v-border bottom-border">
+			<li><button class="cancel icon">{{closeMsg}}</button></li>
+		</ul>
+		<div class="bottom-border">
+		</div>
+		<ul>
+			<li><button class="submit icon">{{saveMsg}}</button></li>
 		</ul>
 	</div>
 </div>

@@ -43,39 +43,43 @@
 					self.setImageUrl( dataUri );
 				};
 			}
-			this._super( options );
-		},
-		_submit: function() {
-			var self = this,
-				saveOptions,
-				title = this.options.pageTitle,
-				description = this.getDescription(),
-				progressPopup = new PhotoUploadProgress(),
-				api;
 
-			saveOptions = {
-				file: this.file,
-				description: description
-			};
-
-			if ( this.options.insertInPage ) {
-				api = new PhotoApi( {
-					editorApi: new EditorApi( { title: title } )
+			if ( options.insertInPage ) {
+				this.api = new PhotoApi( {
+					editorApi: new EditorApi( { title: options.pageTitle } )
 				} );
 			} else {
-				api = new PhotoApi();
+				this.api = new PhotoApi();
 			}
-
-			this.hide( true );
-			this.emit( 'hide' );
-
-			progressPopup.show();
-			progressPopup.on( 'cancel', function() {
-				api.abort();
-				self.log( { action: 'cancel' } );
+			this.api.on( 'uploadProgress', function( value ) {
+				self.progressPopup.setValue( value );
 			} );
-			api.save( saveOptions ).done( function( fileName, descriptionUrl ) {
-				progressPopup.hide( true );
+
+			this.progressPopup = new PhotoUploadProgress().on( 'cancel', function() {
+				self.api.abort();
+				self.log( { action: 'cancel' } );
+			} ).on( 'submit', function() {
+				// handle resubmitting after abusefilter message
+				self._save();
+			} );
+
+			this._super( options );
+		},
+
+		_save: function() {
+			var
+				self = this,
+				description = this.getDescription(),
+				saveOptions = {
+					file: this.file,
+					description: description
+				};
+
+			this.api.save( saveOptions ).done( function( fileName, descriptionUrl ) {
+				var title = self.options.pageTitle;
+
+				self.progressPopup.hide( true );
+
 				self.log( { action: 'success' } );
 				if ( self.options.insertInPage ) {
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
@@ -93,14 +97,30 @@
 					} );
 				}
 			} ).fail( function( err, msg ) {
-				progressPopup.hide( true );
-				popup.show( msg || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
-				self.log( { action: 'error', errorText: err } );
-			} );
+				var errMsg;
 
-			api.on( 'uploadProgress', function( value ) {
-				progressPopup.setValue( value );
+				if ( err.type === 'abusefilter' ) {
+					self.progressPopup.showAbuseFilter( err.details.type, err.details.message );
+				} else {
+					self.progressPopup.hide( true );
+					popup.show( msg || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
+
+					errMsg = err.stage + '/' + err.type;
+					if ( typeof err.details === 'string' ) {
+						errMsg += '/' + err.details;
+					}
+					self.log( { action: 'error', errorText: errMsg } );
+				}
 			} );
+		},
+
+		_submit: function() {
+			this.hide( true );
+			this.emit( 'hide' );
+
+			this.progressPopup.show();
+
+			this._save();
 		},
 
 		postRender: function() {

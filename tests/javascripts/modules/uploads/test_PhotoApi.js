@@ -31,7 +31,11 @@
 			description: 'yo:: yo ::'
 		} ).fail( spy );
 
-		assert.ok( spy.calledWith( 'upload/warning/badfilename/::.JPG' ), 'The request caused a bad file name error' );
+		assert.ok( spy.calledWith( {
+			stage: 'upload',
+			type: 'warning',
+			details: 'badfilename/::.JPG'
+		} ), 'The request caused a bad file name error' );
 	} );
 
 	QUnit.test( '#save, successful upload', 2, function( assert ) {
@@ -64,14 +68,24 @@
 		} ).done( doneSpy ).fail( failSpy );
 
 		assert.ok( !doneSpy.called, "don't call done" );
-		assert.ok( failSpy.calledWith( 'upload/error/verification-error/abusefilter-warning' ), "call fail" );
+		assert.ok( failSpy.calledWith( {
+			stage: 'upload',
+			type: 'error',
+			details: 'verification-error/abusefilter-warning'
+		} ), "call fail" );
 	} );
 
 	QUnit.test( '#save. error inserting in page, captcha', 2, function( assert ) {
-		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
+		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy(),
+			captcha = {
+				type: "image",
+				mime: "image/png",
+				id: "1852528679",
+				url: "/w/index.php?title=Especial:Captcha/image&wpCaptchaId=1852528679"
+			};
 
 		editorApi.post.
-			returns( $.Deferred().resolve( { edit: { captcha: {}, result: 'Failure' } } ) );
+			returns( $.Deferred().resolve( { edit: { captcha: captcha, result: 'Failure' } } ) );
 
 		photoApi.save( {
 			insertInPage: true,
@@ -82,14 +96,20 @@
 		} ).done( doneSpy ).fail( failSpy );
 
 		assert.ok( !doneSpy.called, "don't call done" );
-		assert.ok( failSpy.calledWith( 'edit/captcha' ), "call fail" );
+		assert.ok( failSpy.calledWith( { stage: 'edit', type: 'captcha', details: captcha } ), "call fail" );
 	} );
 
 	QUnit.test( '#save, error inserting in page, AbuseFilter', 2, function( assert ) {
 		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
 
-		editorApi.post.
-			returns( $.Deferred().resolve( { edit: { code: 'abusefilter-warning', result: 'Failure' } } ) );
+		editorApi.post.returns( $.Deferred().resolve( {
+			edit: {
+				code: "abusefilter-warning-usuwanie-tekstu",
+				info: "Hit AbuseFilter: Usuwanie du\u017cej ilo\u015bci tekstu",
+				warning: "horrible desktop-formatted message",
+				result: "Failure"
+			}
+		} ) );
 
 		photoApi.save( {
 			insertInPage: true,
@@ -100,7 +120,14 @@
 		} ).done( doneSpy ).fail( failSpy );
 
 		assert.ok( !doneSpy.called, "don't call done" );
-		assert.ok( failSpy.calledWith( 'edit/abusefilter' ), "call fail" );
+		assert.ok( failSpy.calledWith( {
+			stage: 'edit',
+			type: 'abusefilter',
+			details: {
+				type: 'warning',
+				message: "horrible desktop-formatted message"
+			}
+		} ), "call fail" );
 	} );
 
 	QUnit.module( 'MobileFrontend photo: filenames' );

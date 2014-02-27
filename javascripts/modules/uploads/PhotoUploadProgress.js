@@ -1,12 +1,13 @@
-( function( M ) {
+( function( M, $ ) {
 	var OverlayNew = M.require( 'OverlayNew' ),
 		ProgressBar = M.require( 'widgets/progress-bar' ),
+		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		PhotoUploadProgress;
 
 	PhotoUploadProgress = OverlayNew.extend( {
 		defaults: {
 			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' ),
-			closeMsg: mw.msg( 'cancel' )
+			saveMsg: mw.msg( 'mobile-frontend-editor-save' )
 		},
 		template: M.template.get( 'uploads/PhotoUploadProgress' ),
 		fullScreen: false,
@@ -14,6 +15,16 @@
 		initialize: function( options ) {
 			this._super( options );
 			this.progressBar = new ProgressBar();
+		},
+
+		postRender: function() {
+			this._super();
+			this.$( '.submit' ).on( M.tapEvent( 'click' ), $.proxy( this, 'emit', 'submit' ) );
+		},
+
+		showAbuseFilter: function( type, message ) {
+			new AbuseFilterPanel().appendTo( this.$( '.overlay-header-container' ) ).show( type, message );
+			this._showHidden( '.save-header' );
 		},
 
 		hide: function( force ) {
@@ -41,4 +52,4 @@
 
 	M.define( 'modules/uploads/PhotoUploadProgress', PhotoUploadProgress );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );
