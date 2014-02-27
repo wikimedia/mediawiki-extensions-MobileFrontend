@@ -625,7 +625,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
-		global $wgExtensionAssetsPath, $wgMFNearby, $wgMFDesktopMinerva, $wgLang;
+		global $wgExtensionAssetsPath, $wgMFNearby, $wgMFEnableMinervaBetaFeature, $wgLang;
 
 		$dir = $wgLang->getDir();
 
@@ -642,7 +642,7 @@ class MobileFrontendHooks {
 			);
 		}
 
-		if ( $wgMFDesktopMinerva ) {
+		if ( $wgMFEnableMinervaBetaFeature ) {
 			// Enable the mobile skin on desktop
 			$preferences['betafeatures-minerva'] = array(
 				'label-message' => 'beta-feature-minerva',
