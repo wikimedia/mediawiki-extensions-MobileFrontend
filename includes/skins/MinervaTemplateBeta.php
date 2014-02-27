@@ -13,23 +13,6 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		}
 	}
 
-	protected function renderMetaSections() {
-		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
-
-		// If languages are available, render a languages link
-		if ( $this->getLanguages() || $this->getLanguageVariants() ) {
-			$languageUrl = SpecialPage::getTitleFor( 'MobileLanguages', $this->getSkin()->getTitle() )->getLocalURL();
-			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
-
-			echo Html::element( 'a', array(
-				'class' => 'mw-ui-button mw-ui-progressive button languageSelector',
-				'href' => $languageUrl
-				), $languageLabel );
-		}
-
-		echo Html::closeElement( 'div' );
-	}
-
 	protected function renderContentWrapper( $data ) {
 		$this->renderHistoryLinkTop( $data );
 		parent::renderContentWrapper( $data );

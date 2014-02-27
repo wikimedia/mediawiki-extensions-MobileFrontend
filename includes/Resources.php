@@ -244,8 +244,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'page',
 			'section',
-			// FIXME: Remove when lazy loaded languages go to stable
-			'languageSection',
 		),
 		'scripts' => array(
 			'javascripts/common/Router.js',
@@ -862,12 +860,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.languages.common' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.languages' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
 		),
 		'scripts' => array(
 			'javascripts/modules/languages/LanguageOverlay.js',
+			'javascripts/modules/languages/languages.js',
 		),
 		'templates' => array(
 			'modules/languages/LanguageOverlay',
@@ -877,24 +876,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-language-header',
 			'mobile-frontend-language-variant-header' => array( 'parse' ),
 			'mobile-frontend-language-site-choose',
-		),
-	),
-
-	'mobile.languages' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.languages.common',
-		),
-		'scripts' => array(
-			'javascripts/modules/languages/languagesStable.js',
-		),
-	),
-
-	'mobile.languages.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.languages.common',
-		),
-		'scripts' => array(
-			'javascripts/modules/languages/languagesBeta.js',
 		),
 	),
 
