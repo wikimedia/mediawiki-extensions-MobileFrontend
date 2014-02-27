@@ -1,6 +1,7 @@
 <?php
 
 class SpecialNearby extends MobileSpecialPage {
+	protected $hasDesktopVersion = true;
 	public function __construct() {
 		parent::__construct( 'Nearby' );
 		$this->listed = true;

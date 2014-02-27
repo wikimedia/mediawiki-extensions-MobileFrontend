@@ -1,6 +1,7 @@
 <?php
 
 class MobileSpecialPage extends SpecialPage {
+	protected $hasDesktopVersion = false;
 	protected $mode = 'stable';
 	/**
 	 * @var bool: Whether this special page should appear on Special:SpecialPages
@@ -21,11 +22,14 @@ class MobileSpecialPage extends SpecialPage {
 
 	public function execute( $subPage ) {
 		$ctx = MobileContext::singleton();
-		if ( $this->mode !== 'stable' ) {
+		if ( !$ctx->shouldDisplayMobileView() && !$this->hasDesktopVersion ) {
+			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' ) );
+		} else if ( $this->mode !== 'stable' ) {
 			if ( $this->mode === 'beta' && !$ctx->isBetaGroupMember() ) {
-				$this->renderOptinBanner();
+				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );
 			} else if ( $this->mode === 'alpha' && !$ctx->isAlphaGroupMember() ) {
-				$this->renderOptinBanner();
+				// FIXME: Do we need a more specific one for alpha special pages (we currently have none)
+				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );
 			} else {
 				$this->executeWhenAvailable( $subPage );
 			}
@@ -43,11 +47,17 @@ class MobileSpecialPage extends SpecialPage {
 		}
 	}
 
-	protected function renderOptinBanner() {
+	/**
+	 * Renders a banner telling the user the page is unavailable
+	 *
+	 * $msg String Message to display
+	 */
+	protected function renderUnavailableBanner( $msg ) {
 		$out = $this->getOutput();
+		$out->setPageTitle( $this->msg( 'mobile-frontend-requires-title' ) );
 		$out->setProperty( 'unstyledContent', true );
 		$out->addHTML( Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
-			wfMessage( 'mobile-frontend-requires-optin' )->parse() .
+			$msg .
 			Html::closeElement( 'div' )
 		);
 	}

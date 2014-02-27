@@ -137,11 +137,17 @@ $wgHooks['UserRequiresHTTPS'][] = 'MobileFrontendHooks::onUserRequiresHTTPS';
 $wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::onResourceLoaderRegisterModules';
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
 
-$wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
-$wgSpecialPages['MobileEditor'] = 'SpecialMobileEditor';
-$wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
-$wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
-$wgSpecialPages['MobileLanguages'] = 'SpecialMobileLanguages';
+// use array_merge to ensure we do not override existing values set by core
+$wgSpecialPages = array_merge( $wgSpecialPages, array(
+	'History' => 'SpecialMobileHistory',
+	'MobileDiff' => 'SpecialMobileDiff',
+	'MobileEditor' => 'SpecialMobileEditor',
+	'MobileOptions' => 'SpecialMobileOptions',
+	'MobileMenu' => 'SpecialMobileMenu',
+	'MobileLanguages' => 'SpecialMobileLanguages',
+	'Uploads' => 'SpecialUploads',
+	'UserProfile' => 'SpecialUserProfile',
+) );
 
 function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,

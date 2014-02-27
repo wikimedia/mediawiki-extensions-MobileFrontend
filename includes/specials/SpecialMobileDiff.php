@@ -1,6 +1,7 @@
 <?php
 
 class SpecialMobileDiff extends MobileSpecialPage {
+	protected $hasDesktopVersion = true;
 	private $revId;
 	/** @var Revision */
 	private $rev;
@@ -64,7 +65,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		return array( $prev, $rev );
 	}
 
-	function execute( $par ) {
+	function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$ctx = MobileContext::singleton();
 		$this->setHeaders();

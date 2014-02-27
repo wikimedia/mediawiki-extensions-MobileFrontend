@@ -122,7 +122,7 @@ class MobileFrontendHooks {
 		$isSpecial = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 
-		if ( !$isSpecial && !$context->isBlacklistedPage() ) {
+		if ( !$context->isBlacklistedPage() ) {
 			$footerlinks = $tpl->data['footerlinks'];
 			$args = $tpl->getSkin()->getRequest()->getValues();
 			// avoid title being set twice
@@ -286,9 +286,12 @@ class MobileFrontendHooks {
 	 */
 	public static function onSpecialPage_initList( &$list ) {
 		$ctx = MobileContext::singleton();
+		// Perform substitutions of pages that are unsuitable for mobile
+		// FIXME: Upstream these changes to core.
 		if ( $ctx->shouldDisplayMobileView() ) {
 			// Replace the standard watchlist view with our custom one
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
+
 			if ( $ctx->isBetaGroupMember() ) {
 				/* Special:MobileContributions redefines Special:History in such a way that for Special:Contributions/Foo,
 				 * Foo is a username (in Special:History/Foo, Foo is a page name)
@@ -297,16 +300,11 @@ class MobileFrontendHooks {
 				$list['Contributions'] = 'SpecialMobileContributions';
 			}
 
-			// FIXME: Make uploads work on desktop
-			$list['Uploads'] = 'SpecialUploads';
 			$list['Userlogin'] = 'SpecialMobileUserlogin';
 
 			if ( class_exists( 'MWEchoNotifUser' ) ) {
 				$list['Notifications'] = 'SpecialMobileNotifications';
 			}
-
-			$list['UserProfile'] = 'SpecialUserProfile';
-			$list['History'] = 'SpecialMobileHistory';
 		}
 		return true;
 	}

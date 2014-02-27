@@ -19,7 +19,7 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 	 */
 	public function testNames( $par, $expected ) {
 		$page = new MockSpecialMobileDiff();
-		$rendered = $page->execute( $par );
+		$rendered = $page->executeWhenAvailable( $par );
 		$this->assertEquals( $expected, $rendered );
 	}
 

@@ -6,6 +6,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 */
 	private $returnToTitle;
 	private $subpage;
+	protected $hasDesktopVersion = true;
 	private $options = array(
 		'Language' => array( 'get' => 'chooseLanguage' ),
 	);

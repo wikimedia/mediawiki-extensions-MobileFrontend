@@ -373,7 +373,9 @@ $messages['en'] = array (
 	'mobile-frontend-profile-nouser' => 'No user with this name exists. Usernames are case sensitive so please check if it has been typed correctly.',
 	'mobile-frontend-profile-activity-heading' => 'Recent activity',
 	'mobile-frontend-profile-userpage-link' => 'Visit user page.',
+	'mobile-frontend-requires-title' => 'Page unavailable',
 	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.',
+	'mobile-frontend-requires-mobile' => 'This page is not available on desktop. Please click the mobile view link at the bottom of the page.',
 	'mobile-frontend-profile-last-thank' => '{{GENDER:$2|Thanked}} {{GENDER:$1|by}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Edited}} the page [[:$1]], {{PLURAL:$2|yesterday|$2 days ago|0=earlier today}}.',
 	'mobile-frontend-profile-footer-days' => 'Joined {{PLURAL:$2|1 day|$2 days}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
@@ -1057,7 +1059,9 @@ If the user is logged in, this message is followed by:
 * {{msg-mw|Mobile-frontend-profile-yours}}',
 	'mobile-frontend-profile-activity-heading' => 'Heading for recent contributions section. The ampersand can be swapped out for the word "and" if it makes sense in your language.',
 	'mobile-frontend-profile-userpage-link' => 'Label for a link to user page that shows on [[Special:UserProfile]].',
+	'mobile-frontend-requires-title' => 'Title shown on page when the page is not available to the user. Currently used for special pages that have no mobile/desktop equivalent or that are only available as experimental features.',
 	'mobile-frontend-requires-optin' => 'Message that shows when a page requires beta mode to work. Wikitext that links to [[Special:MobileOptions]] page.',
+	'mobile-frontend-requires-mobile' => 'Message that shows when a special page does not have a desktop equivalent. Points user to mobile view link at bottom of page to switch to mobile.',
 	'mobile-frontend-profile-last-thank' => 'Informs about person who last thanked a user on [[Special:UserProfile]].
 
 Parameters:
