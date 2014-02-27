@@ -4,6 +4,7 @@ class ArticlePage
   include URL
   page_url URL.url("<%=params[:article_name]%>")
   h1(:first_heading, id: "section_0")
+  a(:edit_history_link, id: "mw-mf-last-modified")
 
   li(:edit_button_holder, id: "ca-edit")
   a(:edit_button) do |page|

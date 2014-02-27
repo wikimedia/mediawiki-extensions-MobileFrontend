@@ -1,3 +1,4 @@
+# FIXME: replace with I click the edit button from editor_steps.rb
 Given(/^I click edit$/) do
   on(ArticlePage).edit_button_element.when_present.click
 end
@@ -54,4 +55,8 @@ end
 
 Then(/^The text of the first heading is "(.*)"$/) do |title|
   on(ArticlePage).first_heading_element.when_present.text.should match title
+end
+
+When(/^I click on the view edit history link$/) do
+  on(ArticlePage).edit_history_link_element.when_present.click
 end
