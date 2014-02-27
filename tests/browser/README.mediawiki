@@ -9,12 +9,12 @@ These include:
 an edit count of greater than 0
 * Ensure the Main Page has languages enabled
 * Ensure an article called "Foo bar" (without quotes) exists and is not protected
+* Ensure you have [//www.mediawiki.org/wiki/Extension:ConfirmEdit Extension:ConfirmEdit] installed
+** and setup with FancyCaptcha
+* A "Diff test" page is used by the test suite thus cannot be used for another purpose.
 * Ensure there is a Barack Obama article
 ** and it is a protected page
 ** and it has the content:
-* Ensure you have [//www.mediawiki.org/wiki/Extension:ConfirmEdit Extension:ConfirmEdit] installed
-** and setup with FancyCaptcha
-
 <pre>
   == Presidential_campaigns ==
   Test
