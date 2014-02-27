@@ -16,6 +16,15 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	private $hasTemplates = false;
 
 	/**
+	 * Array: Cache for mtime of templates
+	 * @par Usage:
+	 * @code
+	 * array( [hash] => [mtime], [hash] => [mtime], ... )
+	 * @endcode
+	 */
+	protected $templateModifiedTime = array();
+
+	/**
 	 * Registers core modules and runs registration hooks.
 	 */
 	public function __construct( $options ) {
@@ -168,15 +177,45 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	}
 
 	/**
+	 * Checks whether any templates used by module have changed
+	 *
+	 * @param $context ResourceLoaderContext: Context in which to generate script
+	 * @return Integer: UNIX timestamp
+	 */
+	public function getModifiedTimeTemplates( ResourceLoaderContext $context ) {
+		$hash = $context->getHash();
+		if ( isset( $this->templateModifiedTime[$hash] ) ) {
+			$tlm = $this->templateModifiedTime[$hash];
+		} else {
+			// Get local paths to all templates
+			$files = array_map(
+				array( $this, 'getLocalTemplatePath' ),
+				$this->getTemplateNames()
+			);
+
+			// Store for quicker future lookup
+			if ( count( $files ) === 0 ) {
+				$tlm = 1;
+			} else {
+				// check the last modified time of them
+				wfProfileIn( __METHOD__ . '-filemtime' );
+				$tlm = max( array_map( array( __CLASS__, 'safeFilemtime' ), $files ) );
+				wfProfileOut( __METHOD__ . '-filemtime' );
+			}
+			// store for future lookup
+			$this->templateModifiedTime[$hash] = $tlm;
+		}
+		return $tlm;
+	}
+
+	/**
 	 * Checks whether any resources used by module have changed
 	 *
 	 * @param $context ResourceLoaderContext: Context in which to generate script
 	 * @return Integer: UNIX timestamp
 	 */
 	public function getModifiedTime( ResourceLoaderContext $context ) {
-		return max(
-			filemtime( dirname( dirname( __DIR__ ) ) . "/MobileFrontend.php" ),
-			filemtime( dirname( dirname( __DIR__ ) ) . "/MobileFrontend.i18n.php" )
-		);
+		return max( parent::getModifiedTime( $context ),
+			$this->getModifiedTimeTemplates( $context ) );
 	}
 }

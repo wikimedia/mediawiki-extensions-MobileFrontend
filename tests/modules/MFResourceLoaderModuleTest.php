@@ -110,6 +110,16 @@ class MFResourceLoaderModuleTest extends MediaWikiTestCase {
 		);
 	}
 
+	public function providerGetModifiedTimeTemplates() {
+		$module = $this->modules['templateModule'];
+		$module['localTemplateBasePath'] = '/tmp/templates';
+
+		return array(
+			// Check the default value when no templates present in module is 1
+			array( $module, 1 ),
+		);
+	}
+
 	// tests
 
 	/**
@@ -150,5 +160,14 @@ class MFResourceLoaderModuleTest extends MediaWikiTestCase {
 		$js = $rl->getTemplateScript();
 
 		$this->assertEquals( $js, $expected );
+	}
+
+	/**
+	 * @dataProvider providerGetModifiedTimeTemplates
+	 */
+	public function testGetModifiedTimeTemplates( $module, $expected ) {
+		$rl = new MFResourceLoaderModule( $module );
+		$ts = $rl->getModifiedTimeTemplates( new ResourceLoaderContext( array(), new WebRequest() ) );
+		$this->assertEquals( $ts, $expected );
 	}
 }
