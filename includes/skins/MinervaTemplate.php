@@ -39,50 +39,6 @@ class MinervaTemplate extends BaseTemplate {
 		return $this->data['footerlinks'];
 	}
 
-	protected function renderLanguages() {
-		$languages = $this->getLanguages();
-		$variants = $this->getLanguageVariants();
-		// stupid php: count( false ) returns 1
-		$languagesCount = is_array( $languages ) ? count( $languages ) : 0;
-		$variantsCount = is_array( $variants ) ? count( $variants ) : 0;
-
-		if ( $languagesCount > 0 || $variantsCount > 1 ) {
-			$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
-			$languageSummary = wfMessage( 'mobile-frontend-language-header', $languagesCount )->text();
-			$variantSummary = $variantsCount > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '';
-			?>
-			<div class="section" id="mw-mf-language-section">
-				<h2 id="section_language" class="section_heading"><?php echo $heading; ?></h2>
-				<div id="content_language" class="content_block">
-
-					<?php if ( $variantsCount > 1 ) { ?>
-					<p id="mw-mf-language-variant-header"><?php echo $variantSummary; ?></p>
-					<ul id="mw-mf-language-variant-selection">
-					<?php
-					foreach( $variants as $key => $val ):
-						echo $this->makeListItem( $key, $val );
-					endforeach;
-					?>
-					</ul>
-					<?php } ?>
-
-					<?php if ( $languagesCount > 0 ) { ?>
-					<p id="mw-mf-language-header"><?php echo $languageSummary; ?></p>
-					<ul id="mw-mf-language-selection">
-					<?php
-					foreach( $languages as $key => $val ):
-						echo $this->makeListItem( $key, $val );
-					endforeach;
-					?>
-					</ul>
-					<?php } ?>
-
-				</div>
-			</div>
-		<?php
-		}
-	}
-
 	protected function renderFooter( $data ) {
 		if ( !$data['disableSearchAndFooter'] ) {
 		?>
@@ -129,7 +85,20 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	protected function renderMetaSections() {
-		$this->renderLanguages();
+		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
+
+		// If languages are available, render a languages link
+		if ( $this->getLanguages() || $this->getLanguageVariants() ) {
+			$languageUrl = SpecialPage::getTitleFor( 'MobileLanguages', $this->getSkin()->getTitle() )->getLocalURL();
+			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
+
+			echo Html::element( 'a', array(
+				'class' => 'mw-ui-button mw-ui-progressive button languageSelector',
+				'href' => $languageUrl
+			), $languageLabel );
+		}
+
+		echo Html::closeElement( 'div' );
 	}
 
 	/**

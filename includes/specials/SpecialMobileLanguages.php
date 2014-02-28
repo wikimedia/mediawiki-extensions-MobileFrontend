@@ -1,7 +1,6 @@
 <?php
 
 class SpecialMobileLanguages extends MobileSpecialPage {
-	protected $mode = 'beta';
 	/** @var Title */
 	private $title;
 
