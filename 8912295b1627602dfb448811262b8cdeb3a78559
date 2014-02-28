@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_ee9fe404",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 873,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-28T20:07:10Z",
+      "side": 1,
+      "message": "Modifying a global config setting is scary, better use a temporary for it.",
+      "revId": "8912295b1627602dfb448811262b8cdeb3a78559",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
