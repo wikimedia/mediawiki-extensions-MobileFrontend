@@ -51,7 +51,7 @@
 	 * @param {Page} page The page to edit.
 	 */
 	function setupEditor( page ) {
-		var isNew = page.options.id === 0;
+		var isNewPage = page.options.id === 0;
 		if ( M.query.undo ) {
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
@@ -88,7 +88,7 @@
 				loadingOverlay.hide();
 				result.resolve( new EditorOverlay( {
 					title: page.title,
-					isNew: isNew,
+					isNewPage: isNewPage,
 					isNewEditor: user.getEditCount() === 0,
 					sectionId: sectionId,
 					oldId: M.query.oldid,
@@ -103,7 +103,7 @@
 		// Make sure we never create two edit links by accident
 		if ( $( '#ca-edit .edit-page' ).length === 0 ) {
 			// FIXME: unfortunately the main page is special cased.
-			if ( mw.config.get( 'wgIsMainPage' ) || isNew || M.getLeadSection().text() ) {
+			if ( mw.config.get( 'wgIsMainPage' ) || isNewPage || M.getLeadSection().text() ) {
 				// if lead section is not empty, open editor with lead section
 				addEditButton( 0, '#ca-edit', page );
 			} else {

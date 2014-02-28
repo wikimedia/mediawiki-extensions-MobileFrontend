@@ -36,19 +36,37 @@
 				return false;
 			}
 		},
+		/**
+		 * If this is a new article, require confirmation before saving.
+		 */
+		confirmSave: function() {
+			if ( this.isNewPage &&
+				!window.confirm( mw.msg( 'mobile-frontend-editor-new-page-confirm', mw.user ) )
+			) {
+				return false;
+			} else {
+				return true;
+			}
+		},
+		/**
+		 * Executed when page save is complete. Handles reloading the page, showing toast
+		 * messages, and setting mobile edit cookie.
+		 */
 		onSave: function() {
 			var title = this.options.title,
-				className = 'toast landmark', msg;
+				extraToastClasses = '', msg;
 
 			// FIXME: use generic method for following 3 lines
 			M.pageApi.invalidatePage( title );
 			new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
 			M.router.navigate( '' );
 
-			if ( this.isNewEditor ) {
+			if ( this.isNewPage ) {
+				msg = 'mobile-frontend-editor-success-new-page';
+			} else if ( this.isNewEditor ) {
+				extraToastClasses = 'landmark';
 				msg = 'mobile-frontend-editor-success-landmark-1';
 			} else {
-				className = 'toast';
 				msg = 'mobile-frontend-editor-success';
 			}
 
@@ -60,7 +78,7 @@
 				} );
 			} else {
 				// just show a toast
-				toast.show( mw.msg( msg ), className );
+				toast.show( mw.msg( msg ), extraToastClasses );
 			}
 
 			// Set a cookie for 30 days indicating that this user has edited from
@@ -78,7 +96,11 @@
 			if ( !options.previewingMsg ) {
 				options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			}
+			if ( options.isNewPage ) {
+				options.placeholder =  mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
+			}
 			this.editCount = user.getEditCount();
+			this.isNewPage = options.isNewPage;
 			this.isNewEditor = options.isNewEditor;
 
 			// pre-fetch keep going with expectation user will go on to save
