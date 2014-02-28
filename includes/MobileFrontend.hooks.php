@@ -740,7 +740,7 @@ class MobileFrontendHooks {
 	 * @return bool Always true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		global $wgResourceModules;
+		global $wgResourceModules, $wgMFMobileResourceBoilerplate;
 
 		$mobileEventLoggingSchemas = array(
 			'mobile.uploads.schema' => array(
@@ -769,6 +769,11 @@ class MobileFrontendHooks {
 			),
 		);
 
+		$scripts = array(
+			'javascripts/loggingSchemas/mobileWebEditing.js',
+			'javascripts/loggingSchemas/mobileLeftNavbarEditCTA.js',
+			'javascripts/loggingSchemas/MobileWebClickTracking.js',
+		);
 		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
 			foreach ( $mobileEventLoggingSchemas as $module => $properties ) {
 				$wgResourceModules[ $module ] = array(
@@ -778,6 +783,23 @@ class MobileFrontendHooks {
 					'targets' => 'mobile',
 				);
 			}
+			$wgResourceModules['mobile.loggingSchemas'] = $wgMFMobileResourceBoilerplate + array(
+				'dependencies' => array_merge( array_keys( $mobileEventLoggingSchemas ), array(
+					'mobile.startup',
+					'ext.eventLogging',
+				) ),
+				'scripts' => $scripts,
+			);
+		} else {
+			// Define a module without the EventLogging dependency
+			// Note the log function will be benign and do nothing but available as if exists for purpose
+			// of modules that want to log.
+			$wgResourceModules['mobile.loggingSchemas'] = $wgMFMobileResourceBoilerplate + array(
+				'dependencies' => array(
+					'mobile.startup',
+				),
+				'scripts' => $scripts,
+			);
 		}
 
 		return true;

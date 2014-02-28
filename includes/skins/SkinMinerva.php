@@ -721,17 +721,7 @@ class SkinMinerva extends SkinTemplate {
 
 		if ( $this->isMobileMode ) {
 			$modules['toggling'] = array( 'mobile.toggling' );
-			// FIXME: This is duplicate code of that in MobileFrontend.hooks.php. Please apply hygiene.
-			if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
-				$modules['eventlogging'] = array(
-					'mobile.uploads.schema',
-					'mobile.watchlist.schema',
-					'mobile.editing.schema',
-					'schema.MobileWebCta',
-					'schema.MobileWebClickTracking',
-					'schema.MobileLeftNavbarEditCTA',
-				);
-			}
+			$modules['eventlogging'] = array( 'mobile.loggingSchemas' );
 		}
 		return $modules;
 	}

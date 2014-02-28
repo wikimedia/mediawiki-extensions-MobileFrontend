@@ -180,6 +180,31 @@ function efMobileFrontend_Setup() {
 }
 
 // ResourceLoader modules
+
+/**
+ * A boilerplate for the MFResourceLoaderModule that does not support templates
+ * Agnostic to whether desktop or mobile specific.
+ */
+$wgMFResourceBoilerplate = array(
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'MobileFrontend',
+);
+/**
+ * A boilerplate for the MFResourceLoaderModule that supports templates
+ */
+$wgMFMobileResourceBoilerplate = $wgMFResourceBoilerplate + array(
+	'localTemplateBasePath' => __DIR__ . '/templates',
+	'class' => 'MFResourceLoaderModule',
+);
+
+/**
+ * A boilerplate containing common properties for all RL modules served to mobile site special pages
+ * Restricted to mobile site.
+ */
+$wgMFMobileSpecialPageResourceBoilerplate = $wgMFResourceBoilerplate + array(
+	'targets' => 'mobile',
+	'group' => 'other',
+);
 require_once __DIR__ . "/includes/Resources.php";
 
 /**

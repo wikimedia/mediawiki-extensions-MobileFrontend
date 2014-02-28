@@ -24,29 +24,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-$localBasePath = dirname( __DIR__ );
-$remoteExtPath = 'MobileFrontend';
-
-/**
- * A boilerplate for the MFResourceLoaderModule that supports templates
- */
-$wgMFMobileResourceBoilerplate = array(
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'localTemplateBasePath' => $localBasePath . '/templates',
-	'class' => 'MFResourceLoaderModule',
-);
-
-/**
- * A boilerplate containing common properties for all RL modules served to mobile site special pages
- */
-$wgMFMobileSpecialPageResourceBoilerplate = array(
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
-	'group' => 'other',
-);
-
 /**
  * A boilerplate for RL script modules
 */
@@ -56,9 +33,7 @@ $wgMFMobileSpecialPageResourceScriptBoilerplate = $wgMFMobileSpecialPageResource
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
 	// @todo FIXME: Upstream to core
-	'mobile.templates' => array(
-		'localBasePath' => $localBasePath,
-		'remoteExtPath' => $remoteExtPath,
+	'mobile.templates' => $wgMFMobileResourceBoilerplate + array(
 		'scripts' => array(
 			'javascripts/externals/hogan.js',
 			'javascripts/common/templates.js'
@@ -74,17 +49,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/desktop/mobileBridge.js',
-		),
-	),
-
-	'mobile.loggingSchemas' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-		),
-		'scripts' => array(
-			'javascripts/loggingSchemas/MobileWebClickTracking.js',
-			'javascripts/loggingSchemas/mobileWebEditing.js',
-			'javascripts/loggingSchemas/mobileLeftNavbarEditCTA.js',
 		),
 	),
 
@@ -985,11 +949,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	// Resources to be loaded on desktop version of site
-	'mobile.desktop' => array(
+	'mobile.desktop' => $wgMFResourceBoilerplate + array(
 		'scripts' => array( 'javascripts/desktop/unset_stopmobileredirect.js' ),
 		'dependencies' => array( 'jquery.cookie' ),
-		'localBasePath' => $localBasePath,
-		'remoteExtPath' => $remoteExtPath,
 		'targets' => 'desktop',
 	),
 ) );
@@ -1229,5 +1191,3 @@ $wgMinervaSpecialPageModules = array(
 
 $wgResourceModules = array_merge( $wgResourceModules, $wgMobileSpecialPageModules );
 $wgResourceModules = array_merge( $wgResourceModules, $wgMinervaSpecialPageModules );
-unset( $localBasePath );
-unset( $remoteExtPath );
