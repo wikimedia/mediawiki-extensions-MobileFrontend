@@ -807,6 +807,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 			'mobile.editor',
 			'mobile.contentOverlays',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/modules/tutorials/newbieEditor.js',
