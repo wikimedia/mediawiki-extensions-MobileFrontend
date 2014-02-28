@@ -369,6 +369,7 @@
 		mw.config.set( 'wgPageName', page.title.replace( / /g, '_' ) );
 		mw.config.set( 'wgRelevantPageName', page.title );
 		mw.config.set( 'wgArticleId', page.getId() );
+		mw.config.set( 'wgRevisionId', page.getRevisionId() );
 		M.emit( 'page-loaded', page );
 		// Update page title with the displayTitle
 		document.title = page.displayTitle;

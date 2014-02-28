@@ -1,8 +1,8 @@
 ( function( M, $ ) {
 
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
-		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
+		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		inNavSignupCampaign = M.query.campaign === 'leftNavSignup',
@@ -20,22 +20,14 @@
 		log: function( action, errorText ) {
 			var
 				data = {
-					token: M.getSessionId(),
 					action: action,
 					section: this.sectionId,
-					namespace: mw.config.get( 'wgNamespaceNumber' ),
-					userEditCount: user.getEditCount(),
-					isTestA: M.isTestA,
-					pageId: mw.config.get( 'wgArticleId' ),
-					username: user.getName(),
-					mobileMode: mw.config.get( 'wgMFMode' ),
-					userAgent: window.navigator.userAgent,
 					funnel: this.funnel
 				};
 			if ( errorText ) {
 				data.errorText = errorText;
 			}
-			M.log( 'MobileWebEditing', data );
+			schema.log( data );
 		},
 
 		initialize: function( options ) {

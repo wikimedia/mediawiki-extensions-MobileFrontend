@@ -77,7 +77,7 @@
 					page: title,
 					variant: mw.config.get( 'wgPreferredVariant' ),
 					redirect: 'yes',
-					prop: 'id|sections|text|lastmodified|lastmodifiedby|languagecount|hasvariants|protection|displaytitle',
+					prop: 'id|sections|text|lastmodified|lastmodifiedby|languagecount|hasvariants|protection|displaytitle|revision',
 					noheadings: 'yes',
 					noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 					sectionprop: 'level|line|anchor',
@@ -100,6 +100,7 @@
 						resolveObj = {
 							title: title,
 							id: mv.id,
+							revId: mv.revId,
 							// FIXME: [API] the API sometimes returns an object and sometimes an array
 							// (Array seems to be a shorthand for apply this to everything)
 							protection: $.isArray( mv.protection ) ? { edit:[ '*' ] } : mv.protection,

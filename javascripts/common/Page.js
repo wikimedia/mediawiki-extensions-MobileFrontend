@@ -129,6 +129,16 @@
 		},
 
 		/**
+		 * Return the latest revision id for this page
+		 * @name Page.prototype.getRevisionId
+		 * @function
+		 * @return {Integer}
+		 */
+		getRevisionId: function() {
+			return this.options.revId;
+		},
+
+		/**
 		 * @name Page.prototype.getId
 		 * @function
 		 * @return {Integer}

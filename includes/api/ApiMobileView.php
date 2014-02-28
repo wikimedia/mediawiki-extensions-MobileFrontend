@@ -71,6 +71,11 @@ class ApiMobileView extends ApiBase {
 				array( 'lastmodifiedby' => $data['lastmodifiedby'] )
 			);
 		}
+		if ( isset( $prop['revision'] ) ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'revision' => $data['revision'] )
+			);
+		}
 		if ( isset( $prop['id'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'id' => $data['id'] )
@@ -413,6 +418,7 @@ class ApiMobileView extends ApiBase {
 				'gender' => $user->getOption( 'gender' ),
 			);
 		}
+		$data['revision'] = $title->getLatestRevID();
 
 		if ( $parserOutput ) {
 			$languages = $parserOutput->getLanguageLinks();
@@ -537,6 +543,7 @@ class ApiMobileView extends ApiBase {
 					'normalizedtitle',
 					'lastmodified',
 					'lastmodifiedby',
+					'revision',
 					'protection',
 					'languagecount',
 					'hasvariants',
@@ -603,6 +610,7 @@ class ApiMobileView extends ApiBase {
 				' normalizedtitle - normalized page title',
 				' lastmodified    - MW timestamp for when the page was last modified, e.g. "20130730174438"',
 				' lastmodifiedby  - information about the user who modified the page last',
+				' revision        - return the current revision id of the page',
 				' protection      - information about protection level',
 				' languagecount   - number of languages that the page is available in',
 				' hasvariants     - whether or not the page is available in other language variants',
