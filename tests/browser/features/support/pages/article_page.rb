@@ -69,6 +69,7 @@ class ArticlePage
   button(:notifications_overlay_close_button) do |page|
     page.notifications_overlay_element.button_element(class: "cancel")
   end
+  h2(:progress_header, class: "uploading")
 
   a(:image_link, class:"image")
 

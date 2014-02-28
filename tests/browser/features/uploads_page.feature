@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @login @test2.m.wikipedia.org
 Feature: Special:Uploads uploads
 
   Scenario: Upload image file of invalid format
@@ -15,5 +15,6 @@ Feature: Special:Uploads uploads
     When upload file image.png
       And I type a description
       And I click Submit
-    Then my image is on the Uploads page
+    Then I see an upload progress bar
+      And my image is on the Uploads page
       And The Contribute an image button is visible

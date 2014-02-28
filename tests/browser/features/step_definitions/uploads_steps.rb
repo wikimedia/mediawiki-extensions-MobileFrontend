@@ -48,3 +48,7 @@ end
 Then(/^I don't see the upload preview$/) do
   on(ArticlePage).photo_overlay_element.should_not be_visible
 end
+
+Then(/^I see an upload progress bar$/) do
+  on(ArticlePage).progress_header_element.should be_visible
+end
