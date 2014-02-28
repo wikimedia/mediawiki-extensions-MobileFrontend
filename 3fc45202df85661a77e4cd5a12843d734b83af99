@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_5fdd68e0",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-28T01:41:48Z",
+      "side": 1,
+      "message": "Please change the function name to something like renderErrorBanner() so that it\u0027s use isn\u0027t confusing above.",
+      "revId": "3fc45202df85661a77e4cd5a12843d734b83af99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_1fefe083",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-02-28T01:41:48Z",
+      "side": 1,
+      "message": "Please move \"$this-\u003emsg( \u0027mobile-frontend-requires-optin\u0027 )-\u003eparse()\" to the function call and then delete this line.",
+      "revId": "3fc45202df85661a77e4cd5a12843d734b83af99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
