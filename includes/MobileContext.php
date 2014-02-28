@@ -274,8 +274,6 @@ class MobileContext extends ContextSource {
 			return $this->mobileView;
 		}
 		wfProfileIn( __METHOD__ );
-		// check if the user requested to toggle their view
-		$this->checkToggleView();
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
 			$this->redirectMobileEnabledPages();
