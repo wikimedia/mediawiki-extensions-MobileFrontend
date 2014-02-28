@@ -28,11 +28,6 @@
  */
 interface IDeviceProperties {
 	/**
-	 * @return string: 'html' or 'wml'
-	 */
-	function format();
-
-	/**
 	 * @return bool
 	 */
 	function isMobileDevice();
@@ -66,30 +61,6 @@ class DeviceProperties implements IDeviceProperties {
 	public function __construct( $userAgent, $acceptHeader ) {
 		$this->userAgent = $userAgent;
 		$this->acceptHeader = $acceptHeader;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function format() {
-		wfProfileIn( __METHOD__ );
-		if ( !$this->format ) {
-			$this->format = $this->detectFormat( $this->userAgent, $this->acceptHeader );
-		}
-		wfProfileOut( __METHOD__ );
-		return $this->format;
-	}
-
-	/**
-	 * @return string
-	 */
-	protected function detectFormat() {
-		if ( strpos( $this->acceptHeader, 'text/vnd.wap.wml' ) !== false
-			&& strpos( $this->acceptHeader, 'text/html' ) === false
-		) {
-			return 'wml';
-		}
-		return 'html';
 	}
 
 	/**
@@ -203,31 +174,6 @@ abstract class PredefinedDeviceProperties implements IDeviceProperties {
 }
 
 class HtmlDeviceProperties extends PredefinedDeviceProperties {
-
-	/**
-	 * @return string
-	 */
-	function format() {
-		return 'html';
-	}
-
-	/**
-	 * @return bool
-	 */
-	function isMobileDevice() {
-		return true;
-	}
-}
-
-class WmlDeviceProperties extends PredefinedDeviceProperties {
-
-	/**
-	 * @return string
-	 */
-	function format() {
-		return 'wml';
-	}
-
 	/**
 	 * @return bool
 	 */

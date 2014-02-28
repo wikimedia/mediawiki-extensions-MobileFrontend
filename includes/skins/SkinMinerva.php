@@ -755,7 +755,6 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	public function outputPage( OutputPage $out = null ) {
-		global $wgMFWap, $wgMFTransitionalWapLifetime;
 		wfProfileIn( __METHOD__ );
 
 		// This might seem weird but now the meaning of 'mobile' is morphing to mean 'minerva skin'
@@ -765,10 +764,6 @@ class SkinMinerva extends SkinTemplate {
 		$out = $this->getOutput();
 		$out->setTarget( 'mobile' );
 		if ( $this->isMobileMode ) {
-			# Restrict cache lifetime for potentially WAPy requests during the transitional period
-			if ( $wgMFWap == 'transitional' && $this->getRequest()->getText( 'X-WAP' ) == 'yes' ) {
-				$out->setSquidMaxage( min( $out->mSquidMaxage, $wgMFTransitionalWapLifetime ) );
-			}
 			// FIXME: Merge these hooks?
 			wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
 			wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );

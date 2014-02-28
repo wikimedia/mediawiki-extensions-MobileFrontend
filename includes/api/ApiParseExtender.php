@@ -70,7 +70,7 @@ class ApiParseExtender {
 
 				$title = Title::newFromText( $data['parse']['title'] );
 				$html = MobileFormatter::wrapHTML( $data['parse']['text']['*'] );
-				$mf = new MobileFormatterHTML( $html, $title );
+				$mf = new MobileFormatter( $html, $title );
 				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] );
 				$mf->enableExpandableSections( !$params['mainpage'] );
