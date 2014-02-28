@@ -23,7 +23,12 @@ var View = M.require( 'View' ),
 				ev.preventDefault();
 				self.hide();
 			} );
-			this.appendTo( '#notifications' );
+			// This module might be loaded at the top of the page e.g. Special:Uploads
+			// Thus ensure we wait for the DOM to be loaded
+			// FIXME: This should be moved out of Drawer.js. Caller should actually append to DOM.
+			$( function() {
+				self.appendTo( '#notifications' );
+			} );
 		},
 
 		/**

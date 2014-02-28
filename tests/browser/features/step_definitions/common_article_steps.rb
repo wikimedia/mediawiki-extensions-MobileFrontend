@@ -53,6 +53,10 @@ Then(/^I see a toast confirmation$/) do
   on(ArticlePage).toast_element.when_present.should be_visible
 end
 
+Then(/^I see a toast error$/) do
+  on(ArticlePage).toast_error_element.when_present.should be_visible
+end
+
 Then(/^The text of the first heading is "(.*)"$/) do |title|
   on(ArticlePage).first_heading_element.when_present.text.should match title
 end
