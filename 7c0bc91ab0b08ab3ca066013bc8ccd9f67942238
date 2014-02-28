@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_0e41f05e",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-28T20:23:11Z",
+      "side": 1,
+      "message": "Use string for static functions, e.g. \u0027ClassName::functionName\u0027.",
+      "revId": "7c0bc91ab0b08ab3ca066013bc8ccd9f67942238",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_ee436465",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-02-28T20:23:11Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "7c0bc91ab0b08ab3ca066013bc8ccd9f67942238",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
