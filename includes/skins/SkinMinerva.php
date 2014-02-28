@@ -6,12 +6,18 @@
  * @ingroup Skins
  */
 class SkinMinerva extends SkinTemplate {
-	/** @var boolean describes whether reader is on a mobile device */
+	/**
+	 * Describes whether reader is on a mobile device
+	 * @var boolean $isMobileMode
+	 */
 	protected $isMobileMode = false;
 	public $skinname = 'minerva';
 	public $template = 'MinervaTemplate';
 	public $useHeadElement = true;
-	/* @var string  describes 'stability' of the skin - alpha, beta, stable */
+	/**
+	 * Describes 'stability' of the skin - alpha, beta, stable
+	 * @var string $mode
+	 */
 	protected $mode = 'stable';
 
 	protected function prepareQuickTemplate() {
@@ -801,8 +807,6 @@ class SkinMinerva extends SkinTemplate {
 	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareMobileFooterLinks( $tpl ) {
-		global $wgRightsPage, $wgRightsUrl, $wgRightsText;
-
 		$req = $this->getRequest();
 
 		$url = $this->mobileContext->getDesktopUrl( wfExpandUrl(
@@ -821,34 +825,8 @@ class SkinMinerva extends SkinTemplate {
 </ul>
 HTML;
 
-		// Construct the link to the licensinsing terms
-		if ( $wgRightsText ) {
-			// Use shorter text for some common licensing strings. See Installer.i18n.php
-			// for the currently offered strings. Unfortunately, there is no good way to
-			// comprehensively support localized licensing strings since the license (as
-			// stored in LocalSetttings.php) is just freeform text, not an i18n key.
-			$licenses = array(
-				'Creative Commons Attribution-Share Alike 3.0' => 'CC BY-SA 3.0',
-				'Creative Commons Attribution Share Alike' => 'CC BY-SA',
-				'Creative Commons Attribution' => 'CC BY',
-				'Creative Commons Attribution Non-Commercial Share Alike' => 'CC BY-NC-SA',
-				'Creative Commons Zero (Public Domain)' => 'CC0 (Public Domain)',
-				'GNU Free Documentation License 1.3 or later' => 'GFDL 1.3 or later',
-			);
-			if ( isset( $licenses[$wgRightsText] ) ) {
-				$wgRightsText = $licenses[$wgRightsText];
-			}
-			if ( $wgRightsPage ) {
-				$title = Title::newFromText( $wgRightsPage );
-				$link = Linker::linkKnown( $title, $wgRightsText );
-			} elseif ( $wgRightsUrl ) {
-				$link = Linker::makeExternalLink( $wgRightsUrl, $wgRightsText );
-			} else {
-				$link = $wgRightsText;
-			}
-		} else {
-			$link = '';
-		}
+		// Generate the licensing text displayed in the footer of each page
+		$link = $this->getLicenseLink();
 		// The license message is displayed in the content language rather than the user
 		// language. See Skin::getCopyright.
 		if ( $link ) {
@@ -861,18 +839,62 @@ HTML;
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'mobile-license', $licenseText );
 		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
-		$tpl->set( 'terms-use', $this->getTermsLink( 'mobile-frontend-terms-url' ) );
+		$tpl->set( 'terms-use', $this->getTermsLink() );
+	}
+
+	/**
+	 * Returns HTML of license link or empty string
+	 * For example:
+	 *   "<a title="Wikipedia:Copyright" href="/index.php/Wikipedia:Copyright">CC BY</a>"
+	 *
+	 * @param array $attribs An associative array of extra HTML attributes to add to the link
+	 * @return string
+	 */
+	public function getLicenseLink( $attribs = array() ) {
+		global $wgRightsPage, $wgRightsUrl, $wgRightsText;
+
+		// Construct the link to the licensing terms
+		if ( $wgRightsText ) {
+			// Switch to a local variable so we don't overwrite the global
+			$rightsText = $wgRightsText;
+			// Use shorter text for some common licensing strings. See Installer.i18n.php
+			// for the currently offered strings. Unfortunately, there is no good way to
+			// comprehensively support localized licensing strings since the license (as
+			// stored in LocalSetttings.php) is just freeform text, not an i18n key.
+			$commonLicenses = array(
+				'Creative Commons Attribution-Share Alike 3.0' => 'CC BY-SA 3.0',
+				'Creative Commons Attribution Share Alike' => 'CC BY-SA',
+				'Creative Commons Attribution 3.0' => 'CC BY 3.0',
+				'Creative Commons Attribution 2.5' => 'CC BY 2.5', // Wikinews
+				'Creative Commons Attribution' => 'CC BY',
+				'Creative Commons Attribution Non-Commercial Share Alike' => 'CC BY-NC-SA',
+				'Creative Commons Zero (Public Domain)' => 'CC0 (Public Domain)',
+				'GNU Free Documentation License 1.3 or later' => 'GFDL 1.3 or later',
+			);
+			if ( isset( $commonLicenses[$rightsText] ) ) {
+				$rightsText = $commonLicenses[$rightsText];
+			}
+			if ( $wgRightsPage ) {
+				$title = Title::newFromText( $wgRightsPage );
+				$link = Linker::linkKnown( $title, $rightsText, $attribs );
+			} elseif ( $wgRightsUrl ) {
+				$link = Linker::makeExternalLink( $wgRightsUrl, $rightsText, true, '', $attribs );
+			} else {
+				$link = $rightsText;
+			}
+		} else {
+			$link = '';
+		}
+		return $link;
 	}
 
 	/**
 	 * Returns HTML of terms of use link or null if it shouldn't be displayed
 	 *
-	 * @param $messageKey
-	 *
 	 * @return null|string
 	 */
-	public function getTermsLink( $messageKey ) {
-		$urlMsg = $this->msg( $messageKey )->inContentLanguage();
+	public function getTermsLink() {
+		$urlMsg = $this->msg( 'mobile-frontend-terms-url' )->inContentLanguage();
 		if ( $urlMsg->isDisabled() ) {
 			return null;
 		}

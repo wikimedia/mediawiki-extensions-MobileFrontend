@@ -143,7 +143,6 @@ $messages['en'] = array (
 
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Text is available under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional terms may apply.',
 	'mobile-frontend-copyright' => 'Content is available under $1 unless otherwise noted.',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-terms-text' => 'Terms of use',
@@ -687,7 +686,6 @@ Refers to {{msg-mw|Mobile-frontend-search-content}}.',
 	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
 {{Identical|Privacy}}',
 	'mobile-frontend-footer-sitename' => 'Name of site',
-	'mobile-frontend-footer-license' => 'License shown in footer',
 	'mobile-frontend-copyright' => "A short sentence explaining that the content of the page is available under a particular license. Parameters:
 * $1 - license name
 '''See also'''
