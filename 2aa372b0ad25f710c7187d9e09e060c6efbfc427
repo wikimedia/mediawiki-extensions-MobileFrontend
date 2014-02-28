@@ -85,6 +85,23 @@
       "revId": "2aa372b0ad25f710c7187d9e09e060c6efbfc427",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_df573804",
+        "filename": "tests/modules/MFResourceLoaderModuleTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2014-02-28T00:32:18Z",
+      "side": 1,
+      "message": "i do not think this is safe to rely on and i can\u0027t quite grok how this functionality is supposed to work. According to the phpunit docs, mocking static methods is not possible (http://phpunit.de/manual/3.7/en/test-doubles.html#test-doubles.mock-objects see \u0027Limitations\u0027), however, sebastian bergman has a blog post with some examples of how to do this (which I presume is where you got this?). digging deeper, even phpunit devs don\u0027t understand how this is supposed to work and they\u0027re getting rid of the functionality in future versions of phpunit (https://github.com/sebastianbergmann/phpunit-documentation/issues/77#issuecomment-23323786)",
+      "revId": "2aa372b0ad25f710c7187d9e09e060c6efbfc427",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
