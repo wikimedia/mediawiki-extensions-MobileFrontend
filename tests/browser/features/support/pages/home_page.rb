@@ -46,7 +46,6 @@ class HomePage < ArticlePage
 
   li(:edit_icon, id:"ca-edit")
   li(:upload_icon, id:"ca-upload")
-  div(:rl_notification, id:"notifications")
   a(:edit_icon_enabled, text:"Edit")
   li(:mobile_view, id:"footer-places-mobileview")
 end

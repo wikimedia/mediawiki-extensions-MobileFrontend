@@ -49,8 +49,13 @@ Given(/^I click submit$/) do
   end
 end
 
+# Toast notifications
 Then(/^I see a toast confirmation$/) do
   on(ArticlePage).toast_element.when_present.should be_visible
+end
+
+Then(/^I see a toast with message "(.*)"$/) do |text|
+  on(ArticlePage).toast_element.when_present.text.should match text
 end
 
 Then(/^I see a toast error$/) do

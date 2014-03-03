@@ -10,7 +10,7 @@ Feature: Page actions menu when anonymous
 
   Scenario: Receive notification message - Upload Icon
     When I click on the upload icon
-    Then I receive upload icon message Please log in to add an image to this page.
+    Then I see a toast with message "Please log in to add an image to this page."
 
   Scenario: Receive notification message - Watchlist Icon
     When I click on watchlist icon
