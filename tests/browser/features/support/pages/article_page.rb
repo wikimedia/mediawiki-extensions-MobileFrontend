@@ -6,6 +6,8 @@ class ArticlePage
   h1(:first_heading, id: "section_0")
   a(:edit_history_link, id: "mw-mf-last-modified")
 
+  # page actions
+  ## edit
   li(:edit_button_holder, id: "ca-edit")
   a(:edit_button) do |page|
     page.edit_button_holder_element.link_element(class: "edit-page")
@@ -16,6 +18,7 @@ class ArticlePage
     page.editor_overlay_element.button_element(class: "cancel")
   end
 
+  ## upload
   li(:upload_button, id: "ca-upload")
   file_field(:select_file, name: 'file', type: 'file')
   div(:photo_overlay, class: "photo-overlay")
@@ -28,6 +31,10 @@ class ArticlePage
   a(:tutorial_link) do |page|
     page.upload_button_element.link_element(href: '#/upload-tutorial/article')
   end
+
+  ## watch star
+  a(:watch_link, class: "watch-this-article")
+  a(:watched_link, class: "watch-this-article watched")
 
   # search
   text_field(:search_box_placeholder, name: "search", index: 0)

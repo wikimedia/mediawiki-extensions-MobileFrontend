@@ -6,7 +6,7 @@ Feature: Encourage new users to Keep Going
     Given I am in beta mode
       And I have just registered a new account
     When I am on the Selenium Edit Test article
-      And I click edit
+      And I click the edit button
       And I type ABCDEFG into the editor
       And I click continue
       And I click submit
@@ -17,7 +17,7 @@ Feature: Encourage new users to Keep Going
     Given I am in alpha mode
       And I have just registered a new account
     When I am on the Selenium Edit Test article
-      And I click edit
+      And I click the edit button
       And I type ABCDEFG into VisualEditor
       And I click continue
       And I click submit

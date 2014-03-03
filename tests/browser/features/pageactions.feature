@@ -5,7 +5,7 @@ Feature: Page actions menu when anonymous
     Given I go to random page
 
   Scenario: Receive notification message - Edit Icon
-    When I click the edit icon
+    When I click the edit icon holder
     Then I see drawer with message "Help improve this page!"
 
   Scenario: Receive notification message - Upload Icon

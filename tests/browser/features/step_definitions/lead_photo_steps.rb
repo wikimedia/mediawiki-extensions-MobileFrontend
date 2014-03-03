@@ -1,3 +1,7 @@
+When /^I click on the upload icon$/  do
+ on(HomePage).upload_button_element.when_present.click
+end
+
 Then(/^There is an upload an image to this page button$/) do
   on(NonexistentPage).upload_button_element.should exist
 end

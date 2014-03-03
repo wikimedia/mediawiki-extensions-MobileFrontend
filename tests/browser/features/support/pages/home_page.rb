@@ -32,10 +32,8 @@ class HomePage < ArticlePage
   a(:search_result) do |page|
     page.search_results_element.a
   end
-  a(:watch_link, class: "watch-this-article")
   div(:watch_note, text: "Added San Francisco Chronicle to your watchlist")
   div(:watch_note_removed, text: "Removed San Francisco Chronicle from your watchlist")
-  a(:watched_link, class: "watch-this-article watched")
   a(:create_account, class: "mw-mf-create-account")
 
   a(:language_button, text: "Read in another language")
@@ -44,8 +42,5 @@ class HomePage < ArticlePage
     page.language_overlay_element.button_element(class: "cancel")
   end
 
-  li(:edit_icon, id:"ca-edit")
-  li(:upload_icon, id:"ca-upload")
-  a(:edit_icon_enabled, text:"Edit")
   li(:mobile_view, id:"footer-places-mobileview")
 end
