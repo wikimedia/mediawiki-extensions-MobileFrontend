@@ -269,6 +269,9 @@ class SkinMinerva extends SkinTemplate {
 	 * @param QuickTemplate
 	 */
 	protected function prepareLanguages( $tpl ) {
+		$lang = $this->getTitle()->getPageViewLanguage();
+		$tpl->set( 'pageLang', $lang->getHtmlCode() );
+		$tpl->set( 'pageDir', $lang->getDir() );
 		$language_urls = $this->getLanguages();
 		if ( count( $language_urls ) ) {
 			$tpl->setRef( 'language_urls', $language_urls );
