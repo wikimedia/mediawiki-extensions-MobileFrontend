@@ -6,7 +6,7 @@ Feature: Page actions menu when anonymous
 
   Scenario: Receive notification message - Edit Icon
     When I click the edit icon
-    Then I receive edit icon message Help improve this page!
+    Then I see drawer with message "Help improve this page!"
 
   Scenario: Receive notification message - Upload Icon
     When I click on the upload icon
@@ -14,4 +14,4 @@ Feature: Page actions menu when anonymous
 
   Scenario: Receive notification message - Watchlist Icon
     When I click on watchlist icon
-    Then I receive watchlist icon message Keep track of this page and all changes to it.
+    Then I see drawer with message "Keep track of this page and all changes to it."

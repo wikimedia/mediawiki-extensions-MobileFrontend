@@ -1,4 +1,5 @@
-class HomePage
+# FIXME: Deprecate in favour of Article Page
+class HomePage < ArticlePage
   include PageObject
 
   include URL
@@ -45,7 +46,6 @@ class HomePage
 
   li(:edit_icon, id:"ca-edit")
   li(:upload_icon, id:"ca-upload")
-  div(:fe_notification, class:"drawer position-fixed visible")
   div(:rl_notification, id:"notifications")
   a(:edit_icon_enabled, text:"Edit")
   li(:mobile_view, id:"footer-places-mobileview")

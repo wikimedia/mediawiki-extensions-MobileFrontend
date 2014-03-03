@@ -67,6 +67,7 @@ class ArticlePage
 
   # drawer
   div(:keep_going, class:'overlay-bottom')
+  div(:drawer, class:"drawer position-fixed visible")
 
   # visual editor
   div(:overlay_ve, class: "overlay editor-overlay editor-overlay-ve")

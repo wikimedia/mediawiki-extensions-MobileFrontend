@@ -64,3 +64,7 @@ end
 When(/^I click on the view edit history link$/) do
   on(ArticlePage).edit_history_link_element.when_present.click
 end
+
+Then /^I see drawer with message "(.+)"$/ do |text|
+  on(HomePage).drawer_element.when_present.text.should match text
+end
