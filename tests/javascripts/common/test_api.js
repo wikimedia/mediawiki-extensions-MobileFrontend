@@ -30,8 +30,8 @@ QUnit.module( 'MobileFrontend api.Api', {
 	setup: function() {
 		var self = this, requests = this.requests = [];
 		this.api = new Api();
-		this.sandbox.stub( $, 'ajax', function() {
-			var request = { abort: self.sandbox.spy() };
+		this.sandbox.stub( mw.Api.prototype, 'ajax', function() {
+			var request = $.extend( { abort: self.sandbox.spy() }, $.Deferred() );
 			requests.push( request );
 			return request;
 		} );
@@ -46,36 +46,13 @@ QUnit.test( '#ajax', 1, function() {
 		normal: 'test'
 	} );
 	ok(
-		$.ajax.calledWithMatch( {
-			url: Api.prototype.apiUrl,
-			dataType: 'json',
-			data: {
-				format: 'json',
-				trueBool: true,
-				list: 'one|2|three',
-				normal: 'test'
-			}
+		mw.Api.prototype.ajax.calledWithMatch( {
+			trueBool: true,
+			list: 'one|2|three',
+			normal: 'test'
 		} ),
 		'set defaults and transform boolean and array data'
 	);
-} );
-
-QUnit.test( '#ajax, with FormData', 1, function() {
-	var data = new FormData();
-	// add a property that should not disappear
-	data.testBool = false;
-	this.api.ajax( data );
-	strictEqual( $.ajax.args[0][0].data.testBool, false, 'use unmodified FormData' );
-} );
-
-QUnit.test( '#get', 1, function() {
-	this.api.get( { a: 1 } );
-	ok( $.ajax.calledWithMatch( { type: 'GET', data: { a: 1 } } ), 'call with type: GET' );
-} );
-
-QUnit.test( '#post', 1, function() {
-	this.api.post( { a: 1 } );
-	ok( $.ajax.calledWithMatch( { type: 'POST', data: { a: 1 } } ), 'call with type: POST' );
 } );
 
 QUnit.test( '#abort', 2, function() {

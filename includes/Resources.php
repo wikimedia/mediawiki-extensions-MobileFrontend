@@ -191,6 +191,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.head',
 			'mobile.templates',
 			'mobile.user',
+			'mediawiki.api',
 			'jquery.cookie',
 			'mobile.redlinks',
 		),
