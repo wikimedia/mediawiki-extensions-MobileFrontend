@@ -1,5 +1,5 @@
 @en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org
-Feature: Header Validation
+Feature: Page actions menu when anonymous
 
   Background:
     Given I go to random page
