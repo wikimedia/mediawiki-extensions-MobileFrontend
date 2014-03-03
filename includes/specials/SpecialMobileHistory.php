@@ -127,7 +127,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 		$canSeeText = $rev->userCan( Revision::DELETED_TEXT, $user );
 		if ( $canSeeText && $prev && $prev->userCan( Revision::DELETED_TEXT, $user ) ) {
-			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )->getLocalUrl();
+			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalUrl();
 		} elseif ( $canSeeText && $rev->getTitle() !== null ) {
 			$diffLink = $rev->getTitle()->getLocalUrl( array( 'oldid' => $rev->getId() ) );
 		} else {
