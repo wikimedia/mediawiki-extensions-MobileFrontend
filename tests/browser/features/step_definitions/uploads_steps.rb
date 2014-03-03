@@ -10,7 +10,15 @@ When(/^I type a description$/) do
   on(UploadsPage).photo_description_element.when_present.send_keys("Describing with #{@random_string}")
 end
 
-When(/^I upload Mobile file (.+) on (.+)$/) do |file_name, page|
+When(/^I try to upload (.+) on (.+)$/) do |file_name, page|
+  require 'tempfile'
+  path = "#{Dir.tmpdir}/#{file_name}"
+  File.open(path, "w") { |f| f.puts "Test" }
+
+  on(page).select_file_element.send_keys(path)
+end
+
+When(/^I upload image file (.+) on (.+)$/) do |file_name, page|
   require 'tempfile'
   path = "#{Dir.tmpdir}/#{file_name}"
 

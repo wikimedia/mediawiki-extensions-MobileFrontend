@@ -87,6 +87,7 @@ class ArticlePage
 
   # toast
   div(:toast, class:'toast position-fixed visible')
+  div(:toast_error, css: ".toast.error")
 
   #loader
   div(:content_wrapper, id:'content_wrapper')
