@@ -106,8 +106,14 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param Array $data Data used to build the page
 	 */
 	protected function renderContent( $data ) {
-		if ( !$data[ 'unstyledContent' ] ) { ?>
-		<div id="content" class="content">
+		if ( !$data[ 'unstyledContent' ] ) {
+			echo Html::openElement( 'div', array(
+				'id' => 'content',
+				'class' => 'content',
+				'lang' => $data['pageLang'],
+				'dir' => $data['pageDir'],
+			) );
+			?>
 			<?php
 				if ( isset( $data['subject-page'] ) ) {
 					echo $data['subject-page'];
