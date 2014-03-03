@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_072427ac",
+        "filename": "javascripts/common/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-03T22:37:26Z",
+      "side": 1,
+      "message": "This page or this file/module?",
+      "revId": "ca87f7dee3620298a4ccba936211431ff718c71f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_873717e0",
+        "filename": "javascripts/common/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-03T22:37:26Z",
+      "side": 1,
+      "message": "If you\u0027re changing this file, can you add a FIXME saying that this should probably be moved outside of the Drawer class? It\u0027ll make it easier to unit test.",
+      "revId": "ca87f7dee3620298a4ccba936211431ff718c71f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_873ef7b3",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-03T22:37:26Z",
+      "side": 1,
+      "message": "A more Ruby-way like would be:\n\nFile.open(path, \"w\") { |f| f.puts \"Test\" }",
+      "revId": "ca87f7dee3620298a4ccba936211431ff718c71f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_c76bdfb3",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-03T22:37:26Z",
+      "side": 1,
+      "message": "Do we need position-fixed here?",
+      "revId": "ca87f7dee3620298a4ccba936211431ff718c71f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
