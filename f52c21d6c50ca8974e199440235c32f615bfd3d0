@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_e7049b82",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 494,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-03T23:58:46Z",
+      "side": 1,
+      "message": "I hate our whitespace guidelines, but there should be a space before the second ).",
+      "revId": "f52c21d6c50ca8974e199440235c32f615bfd3d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_e7bc9b69",
+        "filename": "tests/MobileContextTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-03T23:58:46Z",
+      "side": 1,
+      "message": "Maybe one more test with a query string if we decide to use Location?",
+      "revId": "f52c21d6c50ca8974e199440235c32f615bfd3d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
