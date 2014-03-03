@@ -37,7 +37,7 @@ class HomePage
   a(:watched_link, class: "watch-this-article watched")
   a(:create_account, class: "mw-mf-create-account")
 
-  button(:language_button, text: "Read in another language")
+  a(:language_button, text: "Read in another language")
   div(:language_overlay, class: "language-overlay")
   button(:language_overlay_close_button) do |page|
     page.language_overlay_element.button_element(class: "cancel")
