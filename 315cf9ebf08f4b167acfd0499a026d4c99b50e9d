@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_766f1790",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-04T19:20:33Z",
+      "side": 1,
+      "message": "Move non-JS search submit button to Article page and remove unused elements from RandomPage.",
+      "revId": "315cf9ebf08f4b167acfd0499a026d4c99b50e9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_f65b27fb",
+        "filename": "tests/browser/features/step_definitions/navigation_menu_steps.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-04T19:20:33Z",
+      "side": 1,
+      "message": "Try without when_present (in other steps too) since this is testing a non-JS version of the page.",
+      "revId": "315cf9ebf08f4b167acfd0499a026d4c99b50e9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_b6559fc7",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-04T19:20:33Z",
+      "side": 1,
+      "message": "Not sure why we\u0027d want to change it from text: \"Go\".",
+      "revId": "315cf9ebf08f4b167acfd0499a026d4c99b50e9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
