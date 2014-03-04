@@ -29,16 +29,21 @@
 			if ( ( /ipad|iphone/i ).test( navigator.userAgent ) ) {
 				this.$( el ).
 					on( 'focus', function() {
-						$header.css( 'top', $window.scrollTop() ).removeClass( 'position-fixed' );
-						$window.on( 'scroll.fixIosHeader', function() {
-							$header.css( 'top', $window.scrollTop() ).addClass( 'visible' );
-						} );
-						$window.on( 'touchmove.fixIosHeader', function() {
-							// don't hide header if we're at the top
-							if ( $window.scrollTop() > 0 ) {
-								$header.removeClass( 'visible' );
-							}
-						} );
+						$header.removeClass( 'position-fixed' );
+						// don't show fixed header on iPhone, it causes bug 62120
+						// (also, there is a Done button on the keyboard anyway)
+						if ( M.isWideScreen() ) {
+							$header.css( 'top', $window.scrollTop() );
+							$window.on( 'scroll.fixIosHeader', function() {
+								$header.css( 'top', $window.scrollTop() ).addClass( 'visible' );
+							} );
+							$window.on( 'touchmove.fixIosHeader', function() {
+								// don't hide header if we're at the top
+								if ( $window.scrollTop() > 0 ) {
+									$header.removeClass( 'visible' );
+								}
+							} );
+						}
 					} ).
 					on( 'blur', function() {
 						$header.css( 'top', 0 ).addClass( 'position-fixed visible' );
