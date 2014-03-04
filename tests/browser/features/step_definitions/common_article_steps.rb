@@ -58,7 +58,7 @@ Then(/^I see the watch star$/) do
 end
 
 Then /^The watch star is selected$/ do
-  on(ArticlePage).watched_link_element.should exist
+  on(ArticlePage).watch_link_element.class_name.should match "watched"
 end
 
 Then /^The watch star is not selected$/ do
@@ -75,7 +75,7 @@ Then(/^I see a toast with message "(.*)"$/) do |text|
 end
 
 Then(/^I see a toast error$/) do
-  on(ArticlePage).toast_error_element.when_present.should be_visible
+  on(ArticlePage).toast_element.when_present.class_name.should match "error"
 end
 
 Then(/^The text of the first heading is "(.*)"$/) do |title|

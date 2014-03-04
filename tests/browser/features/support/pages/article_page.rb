@@ -43,7 +43,6 @@ class ArticlePage
 
   ## watch star
   a(:watch_link, css: "#ca-watch a")
-  a(:watched_link, class: "watch-this-article watched")
 
   # search
   button(:search_button, css: ".searchSubmit")
@@ -105,7 +104,6 @@ class ArticlePage
 
   # toast
   div(:toast, css: ".toast")
-  div(:toast_error, css: ".toast.error")
 
   #loader
   div(:content_wrapper, id:'content_wrapper')
