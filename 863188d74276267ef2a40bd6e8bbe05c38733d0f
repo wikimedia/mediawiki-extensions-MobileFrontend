@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_0766674e",
+        "filename": "tests/browser/features/step_definitions/common_article_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-04T02:07:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e04eb01_87c7174a",
+      "revId": "863188d74276267ef2a40bd6e8bbe05c38733d0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_67c2cb3a",
         "filename": "tests/browser/features/support/pages/article_page.rb",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-03-03T23:25:04Z",
       "side": 1,
       "message": "css: \u0027.toast\u0027",
+      "revId": "863188d74276267ef2a40bd6e8bbe05c38733d0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_07930705",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-04T02:07:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e04eb01_67c2cb3a",
       "revId": "863188d74276267ef2a40bd6e8bbe05c38733d0f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
