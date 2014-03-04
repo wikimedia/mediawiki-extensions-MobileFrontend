@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_cae406de",
+        "filename": "tests/browser/features/watchlist.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-04T01:56:44Z",
+      "side": 1,
+      "message": "whoops. should be main navigation menu",
+      "revId": "7ccbfbd4b2306cbab8d7dd45593fbdb70a1db5ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
