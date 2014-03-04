@@ -487,9 +487,11 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	public function getBaseDomain() {
+		global $wgServer;
 		wfProfileIn( __METHOD__ );
+		$parsedUrl = wfParseUrl( $wgServer );
+		$host = $parsedUrl['host'];
 		// Validates value as IP address
-		$host = $this->getRequest()->getHeader( 'Host' );
 		if ( !IP::isValid( $host ) ) {
 			$domainParts = explode( '.', $host );
 			$domainParts = array_reverse( $domainParts );
