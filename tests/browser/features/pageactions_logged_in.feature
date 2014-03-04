@@ -10,9 +10,9 @@ Feature: Page actions menu when logged in
 
   Scenario: I cannot upload a lead photo to the Main Page
     When I click on the upload icon
-    Then I receive an upload error message
+    Then I see a toast with message "You do not have permission to add an image to this page."
 
   Scenario: I can add the Main Page to my watchlist
     When I click on watchlist icon
-    Then I receive notification that the article has been added to the watchlist
-
+    # Note could be watched or unwatched so do not check message
+    Then I see a toast confirmation

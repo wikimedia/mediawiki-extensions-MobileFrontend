@@ -1,3 +1,4 @@
+
 When(/^I click Submit$/) do
   on(UploadsPage).submit_button_element.when_present.click
 end
@@ -18,7 +19,7 @@ When(/^I try to upload (.+) on (.+)$/) do |file_name, page|
   on(page).select_file_element.send_keys(path)
 end
 
-When(/^I upload image file (.+) on (.+)$/) do |file_name, page|
+When(/^I click the upload button to stage the image file "(.+)"$/) do |file_name|
   require 'tempfile'
   path = "#{Dir.tmpdir}/#{file_name}"
 
@@ -26,7 +27,7 @@ When(/^I upload image file (.+) on (.+)$/) do |file_name, page|
   ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save path
 
   # FIXME: does this really work? can it accept a string?
-  on(page).select_file_element.send_keys(path)
+  on(ArticlePage).select_file_element.send_keys(path)
 end
 
 Then(/^my image is on the Uploads page$/) do
@@ -52,7 +53,7 @@ Then(/^I see the upload preview$/) do
 end
 
 Then(/^I can enter a description for my file upload$/) do
-  on(NonexistentPage).photo_description_element.when_present.should exist
+  on(ArticlePage).photo_description_element.when_present.should exist
 end
 
 When(/^I click the upload preview overlay close button and confirm$/) do

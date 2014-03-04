@@ -3,7 +3,7 @@ Feature: Lead image tutorial
 
   Background:
     Given I am logged in as a new user
-    When I go to a nonexistent page
+    When I go to the "Nonexistent_page_abc" page
 
   Scenario: There is an upload button
     Then There is an upload an image to this page button

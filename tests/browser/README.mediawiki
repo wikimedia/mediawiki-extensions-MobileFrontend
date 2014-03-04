@@ -4,6 +4,7 @@ instance you run these tests against See
 [https://bugzilla.wikimedia.org/show_bug.cgi?id=56057 bug 56057].
 
 These include:
+* Sitename needs to be set to Wikipedia (for purpose of login_required_uploads.feature)
 * Create an account Selenium_newuser which has an edit count of 0
 * Create an account and store the username in MEDIAWIKI_USER which has
 an edit count of greater than 0

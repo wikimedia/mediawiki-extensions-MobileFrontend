@@ -1,3 +1,7 @@
+Then /^I should see the edit icon$/ do
+  on(HomePage).edit_button_holder_element.when_present.should be_visible
+end
+
 # FIXME: Consolidate with code in editor_steps.rb
 # Confusingly we have 2 touch areas when it comes to the edit button
 # This is one is needed to triggers the edit CTA and is needed for pageactions.feature
