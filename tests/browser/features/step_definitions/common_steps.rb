@@ -1,3 +1,10 @@
+Given /^I am using user agent "(.+)"$/ do |user_agent|
+  @user_agent = user_agent
+  @browser = browser(environment, test_name(@scenario), user_agent)
+  @browser.window.resize_to(480, 800)
+  $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
+end
+
 Given /^I am logged into the mobile website$/ do
   visit(HomePage) do |page|
     page.mainmenu_button

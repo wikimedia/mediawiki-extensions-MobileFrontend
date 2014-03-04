@@ -1,3 +1,7 @@
+Then(/^I see the search button$/) do
+  on(ArticlePage).search_button_element.should be_visible
+end
+
 When(/^I click the placeholder search box$/) do
   on(ArticlePage).search_box_placeholder_element.when_present.click
   # this check is needed to accommodate for the hack for opening the virtual

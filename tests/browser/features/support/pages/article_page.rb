@@ -42,10 +42,11 @@ class ArticlePage
   end
 
   ## watch star
-  a(:watch_link, class: "watch-this-article")
+  a(:watch_link, css: "#ca-watch a")
   a(:watched_link, class: "watch-this-article watched")
 
   # search
+  button(:search_button, css: ".searchSubmit")
   text_field(:search_box_placeholder, name: "search", index: 0)
   text_field(:search_box2, name: "search", index: 1)
   li(:search_results, title: "Barack Obama")

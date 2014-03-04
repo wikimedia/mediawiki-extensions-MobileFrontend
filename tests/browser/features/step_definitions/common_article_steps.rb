@@ -53,6 +53,10 @@ Given(/^I click submit$/) do
 end
 
 # Watch star
+Then(/^I see the watch star$/) do
+  on(ArticlePage).watch_link_element.should be_visible
+end
+
 Then /^The watch star is selected$/ do
   on(ArticlePage).watched_link_element.should exist
 end
