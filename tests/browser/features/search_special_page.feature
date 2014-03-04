@@ -9,18 +9,18 @@ Feature: Search
 
   Scenario: Search from Watchlist
     Given I am in beta mode
-      And I select Watchlist from the left navigation menu
+      And I click on "Watchlist" in the left navigation menu
     When I click the placeholder search box
     Then I see the search overlay
 
   Scenario: Search from Nearby
     Given I am in beta mode
-      And I navigate to the nearby page
+      And I click on "Nearby" in the left navigation menu
     When I click the placeholder search box
     Then I see the search overlay
 
   Scenario: Search from Login
     Given I am in beta mode
-      And I go to the login page
+      And I click on "Log in" in the left navigation menu
     When I click the placeholder search box
     Then I see the search overlay

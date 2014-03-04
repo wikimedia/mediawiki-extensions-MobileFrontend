@@ -12,6 +12,7 @@ class ArticlePage
   a(:edit_history_link, id: "mw-mf-last-modified")
 
   # left nav
+  div(:navigation, css:"#mw-mf-page-left")
   a(:watchlist_link, css:"#mw-mf-page-left .icon-watchlist a")
 
   # page actions

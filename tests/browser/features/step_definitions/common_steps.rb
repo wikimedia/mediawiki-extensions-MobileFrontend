@@ -102,7 +102,7 @@ When(/^I am on the home page$/) do
 end
 
 Then(/^the URL of of my page should contain "(.+)"$/) do |article|
-  on(NonexistentPage).current_url.should match article
+  on(ArticlePage).current_url.should match article
 end
 
 Given(/^I visit a protected page$/) do
