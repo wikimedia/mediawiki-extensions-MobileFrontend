@@ -3,8 +3,16 @@ class ArticlePage
 
   include URL
   page_url URL.url("<%=params[:article_name]%>")
+
+  # UI elements
+  a(:mainmenu_button, id: "mw-mf-main-menu-button")
+
+  # pre-content
   h1(:first_heading, id: "section_0")
   a(:edit_history_link, id: "mw-mf-last-modified")
+
+  # left nav
+  a(:watchlist_link, css:"#mw-mf-page-left .icon-watchlist a")
 
   # page actions
   ## edit
@@ -94,7 +102,7 @@ class ArticlePage
   div(:spinner_loading, class: "spinner loading")
 
   # toast
-  div(:toast, class:'toast position-fixed visible')
+  div(:toast, css: ".toast")
   div(:toast_error, css: ".toast.error")
 
   #loader

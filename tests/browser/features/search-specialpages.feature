@@ -9,7 +9,7 @@ Feature: Search
 
   Scenario: Search from Watchlist
     Given I am in beta mode
-      And I select Watchlist
+      And I select Watchlist from the left navigation menu
     When I click the placeholder search box
     Then I see the search overlay
 

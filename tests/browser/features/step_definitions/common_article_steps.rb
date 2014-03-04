@@ -52,6 +52,15 @@ Given(/^I click submit$/) do
   end
 end
 
+# Watch star
+Then /^The watch star is selected$/ do
+  on(ArticlePage).watched_link_element.should exist
+end
+
+Then /^The watch star is not selected$/ do
+  on(ArticlePage).watch_link_element.should exist
+end
+
 # Toast notifications
 Then(/^I see a toast confirmation$/) do
   on(ArticlePage).toast_element.when_present.should be_visible

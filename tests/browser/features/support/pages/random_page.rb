@@ -20,5 +20,4 @@ class RandomPage
   li(:uploads_button, class: "icon-uploads jsonly")
   a(:uploads_link, text:"Uploads")
   li(:watchlist_button, class: "icon-watchlist")
-  a(:watchlist_link, text:"Watchlist")
 end
