@@ -30,7 +30,7 @@ Given(/^I register a new account with a random username$/) do
     page.password_field_element.when_present.send_keys(pwd)
     page.confirm_password_field_element.when_present.send_keys(pwd)
     page.sign_up_element.when_present.click
-    visit(LogoutPage)
+    step 'I go to the "Special:UserLogout" page'
     visit(LoginPage) do |page|
       page.login_with(username, pwd)
     end
