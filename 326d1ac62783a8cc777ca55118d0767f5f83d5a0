@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_0c056716",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-04T21:59:42Z",
+      "side": 1,
+      "message": "Let\u0027s move it into an anonymous function below or use $.proxy.",
+      "revId": "326d1ac62783a8cc777ca55118d0767f5f83d5a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
