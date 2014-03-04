@@ -21,12 +21,6 @@ class HomePage < ArticlePage
   form(:search_form, id: "mw-mf-searchForm")
   a(:sign_up, text: "Sign up")
   a(:terms_link, text: "Terms of use")
-  text_field(:search_box, name: "search")
-  form(:search_form, id: "mw-mf-searchForm")
-  li(:search_results, title: "San Francisco")
-  a(:search_result) do |page|
-    page.search_results_element.a
-  end
   a(:create_account, class: "mw-mf-create-account")
 
   a(:language_button, text: "Read in another language")
