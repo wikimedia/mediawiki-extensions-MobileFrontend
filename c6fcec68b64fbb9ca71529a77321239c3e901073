@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_f6bfa7cb",
+        "filename": "tests/browser/features/main_menu_navigation.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-04T19:34:32Z",
+      "side": 1,
+      "message": "Doesn\u0027t seem to be needed.",
+      "revId": "c6fcec68b64fbb9ca71529a77321239c3e901073",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_76a0378d",
+        "filename": "tests/browser/features/pageactions.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-04T19:34:32Z",
+      "side": 1,
+      "message": "This is kind of against the rules (although I know it was like that before too):\n\n\"Avoid talking about user interaction in givens\"\n(https://github.com/cucumber/cucumber/wiki/Given-When-Then#wiki-given)",
+      "revId": "c6fcec68b64fbb9ca71529a77321239c3e901073",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
