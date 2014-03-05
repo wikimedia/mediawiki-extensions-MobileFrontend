@@ -175,7 +175,7 @@ $messages['en'] = array (
 	'mobile-frontend-user-button-tooltip' => 'Show my notifications',
 
 	// nearby overlay
-	'mobile-frontend-nearby-to-page' => 'The following pages are related to $1 by their geographical location',
+	'mobile-frontend-nearby-to-page' => 'Near $1:',
 
 	// nearby
 	'mobile-frontend-nearby-title' => 'Nearby',
@@ -545,7 +545,7 @@ See also:
 * {{msg-mw|Mobile-frontend-language-variant-header}}',
 	'mobile-frontend-language-heading' => 'The title for the list of languages for a page.
 {{Identical|Language}}',
-	'mobile-frontend-language-article-heading' => 'A heading within the page the content of which lists the other languages available for this page: translate the message considering the list to have an undetermined number of items.',
+	'mobile-frontend-language-article-heading' => 'Button label prompting reader to read in another language. The button is only visible when at least one other language is available. Found at bottom of page.',
 	'mobile-frontend-current-language' => '{{optional}}',
 	'mobile-frontend-language-header' => 'Header at top of language selection overlay describing number of languages that it is possible to read the page in
 * $1 - number of languages',
@@ -736,7 +736,7 @@ Parameters:
 * $1 - page title',
 	'mobile-frontend-user-cta' => 'Appears when you click user icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.',
 	'mobile-frontend-user-button-tooltip' => 'Title tooltip for the user notifications button',
-	'mobile-frontend-nearby-to-page' => 'Header that describes that the pages are related as they have locations near the location of the current page.
+	'mobile-frontend-nearby-to-page' => 'Header that preceeds a list of pages that are related as they have locations near the location of the current page. The list may be empty or contain multiple items.
 
 Parameters:
 * $1 - page title',
@@ -995,17 +995,17 @@ See also:
 	'mobile-frontend-editor-abusefilter-disallow' => 'A message telling their user that their edit has been disallowed by AbuseFilter.',
 	'mobile-frontend-editor-abusefilter-read-more' => 'A caption for the button allowing the user to read more about the problems with their edit.
 {{Identical|Read more}}',
-	'mobile-frontend-editor-editing-page' => 'A heading saying what page is being edited. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).
+	'mobile-frontend-editor-editing-page' => 'A heading saying what page is being edited. All text should be wrapped in a STRONG tag except the page title itself.
 
 Parameters:
 * $1 - page title
 {{Related|Mobile-frontend-editor-page}}',
-	'mobile-frontend-editor-previewing-page' => 'A heading saying what page is being previewed after editing. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).
+	'mobile-frontend-editor-previewing-page' => 'A heading saying what page is being previewed after editing. All text should be wrapped in a STRONG tag except the page title itself.
 
 Parameters:
 * $1 - page title
 {{Related|Mobile-frontend-editor-page}}',
-	'mobile-frontend-editor-viewing-source-page' => "A heading saying which page's source code is being viewed. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).
+	'mobile-frontend-editor-viewing-source-page' => "A heading saying which page's source code is being viewed. All text should be wrapped in a STRONG tag except the page title itself.
 
 Parameters:
 * $1 - page title
