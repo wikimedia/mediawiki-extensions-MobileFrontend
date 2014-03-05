@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_326638b9",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2014-03-05T00:33:34Z",
+      "side": 1,
+      "message": "This is indeed two distinct (but certainly sequential) steps; it requires two separate actions to complete: click upload button, stage file.",
+      "parentUuid": "4e04eb01_12e69c3f",
+      "revId": "eb7224f1d1a430fbf08b3c1e47e4c6caeb98f024",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_723f20b2",
         "filename": "tests/browser/features/uploads_lead.feature",
         "patchSetId": 2
