@@ -23,11 +23,12 @@ an edit count of greater than 0
   == External_links ==
   [image http://www.whitehouse.gov/administration/president_obama/]
 </pre>
-* Edit MediaWiki:mobile-frontend-terms-text with text Terms_of_use
-* In LocalSettings place the following code:
+* Edit MediaWiki:mobile-frontend-terms-text with text 'Terms of use'
+* In LocalSettings.php place the following code:
 <pre>
   $wgRightsUrl = '//creativecommons.org/licenses/by-sa/3.0/';
 </pre>
+* Make sure that $wgRightsPage is not set in LocalSettings.php
 
 Note a few caveats with browser tests:
 * Random page tests may fail on a timeout
