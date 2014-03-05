@@ -1962,11 +1962,14 @@ $messages['ast'] = array(
 	'mobile-frontend-editor-keep-editing' => 'Siguir editando',
 	'mobile-frontend-editor-license' => "Al guardar los cambios, aceuta les nueses [//wikimediafoundation.org/wiki/Terms_of_use Condiciones d'usu] y ta d'alcuerdu con distribuir el so testu baxo la [//creativecommons.org/licenses/by-sa/3.0/ Llicencia CC-BY-SA 3.0] y la [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].",
 	'mobile-frontend-editor-placeholder' => "Esta seición ta balera. ¡Seya'l primeru n'espandela!",
+	'mobile-frontend-editor-placeholder-new-page' => '¡{{GENDER:$1|Ta a piques}} {{GENDER:$1|de crear}} una páxina nueva en {{SITENAME}}!',
 	'mobile-frontend-editor-summary-placeholder' => 'Diganos lo que camudó (opcional)',
 	'mobile-frontend-editor-cancel-confirm' => '¿Realmente quier abandonar la edición?',
+	'mobile-frontend-editor-new-page-confirm' => 'Ta {{GENDER:$1|seguru|segura}} de que quier crear una páxina nueva en {{SITENAME}}?',
 	'mobile-frontend-editor-wait' => 'Guardando la edición; por favor, espere.',
 	'mobile-frontend-editor-success' => '¡Correuto! Guardóse la edición.',
 	'mobile-frontend-editor-success-landmark-1' => 'Norabona, ¡yá ye editor de {{SITENAME}}!',
+	'mobile-frontend-editor-success-new-page' => '¡Norabona por crear una páxina nueva!',
 	'mobile-frontend-editor-error' => 'Error, la edición nun se guardó.',
 	'mobile-frontend-editor-error-conflict' => 'Error, otru usuariu editó esta páxina.',
 	'mobile-frontend-editor-error-loading' => 'Error, nun pue cargase la seición.',
@@ -2009,7 +2012,9 @@ $messages['ast'] = array(
 	'mobile-frontend-profile-nouser' => "Nun esiste dengún usuariu con esti nome. Los nomes d'usuariu son sensibles a les mayúscules, compruebe si s'escribió correutamente.",
 	'mobile-frontend-profile-activity-heading' => 'Actividá reciente',
 	'mobile-frontend-profile-userpage-link' => "Visitar la páxina d'usuariu.",
+	'mobile-frontend-requires-title' => 'Páxina non disponible',
 	'mobile-frontend-requires-optin' => "Esta páxina nun ta disponible si nun activa'l nuesu mou beta. Visite la [[Special:MobileOptions|páxina de configuración]] p'activalu.",
+	'mobile-frontend-requires-mobile' => 'Esta páxina nun ta disponible nel escritoriu. Faiga clic nel enllaz de vista pa móviles del pie de la páxina.',
 	'mobile-frontend-profile-last-thank' => '[[Special:UserProfile/$1|$1]] {{GENDER:$1|dio-y}} {{GENDER:$2|les gracies}}.',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Editó}} la páxina [[:$1]] {{PLURAL:$2|ayeri|hai $2 díes|0=güei mesmo}}.',
 	'mobile-frontend-profile-footer-days' => 'Xunióse hai {{PLURAL:$2|1 día|$2 díes}} con [[Special:Contributions/$1|{{PLURAL:$3|1 edición|$3 ediciones}}]] y [[Special:Uploads/$1|{{PLURAL:$4|1 carga|$4 cargues|500=500 o más cargues}}]].',
@@ -5107,7 +5112,6 @@ $messages['dsb'] = array(
 	'mobile-frontend-language-article-heading' => 'W drugej rěcy cytaś',
 	'mobile-frontend-language-header' => 'Toś ten bok stoj w $1 {{PLURAL:$1|rěcy|rěcoma|rěcach}} k dispoziciji',
 	'mobile-frontend-language-variant-header' => 'Wariantu rěcy {{#language:{{CONTENTLANG}}}} wubraś',
-	'mobile-frontend-language-footer' => 'Glědaj: Toś ten bok njejo snaź w twójej preferěrowanej rěcy napisał. Móžoš wiźeś, kótare rěcy {{SITENAME}} pódpěra, z tym až kliknjoš how.',
 	'mobile-frontend-language-site-choose' => 'Rěc pytaś',
 	'mobile-frontend-username' => 'Wužywarske mě:',
 	'mobile-frontend-password' => 'Gronidło:',
@@ -5122,15 +5126,12 @@ $messages['dsb'] = array(
 	'mobile-frontend-placeholder' => '{{GRAMMAR:akuzatiw|{{SITENAME}}}} pśepytaś',
 	'mobile-frontend-placeholder-beta' => '{{GRAMMAR:akuzatiw|{{SITENAME}}}} pśepytaś (beta)',
 	'mobile-frontend-placeholder-alpha' => '{{GRAMMAR:akuzatiw|{{SITENAME}}}} pśepytaś (eksperimentelny)',
-	'mobile-frontend-search-help' => 'Zapiš górjejce pytańske zapśimjeśe a wótpowědne bokowe titele budu se how pokazaś.',
 	'mobile-frontend-dismiss-notification' => 'Toś tu powěźeńku zachyśiś',
 	'mobile-frontend-clear-search' => 'Wuprozniś',
 	'mobile-frontend-privacy-link-text' => 'Priwatnosć',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Tekst stoj pód licencu [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] k dispoziciji; pśidatne wuměnjenja daju se nałožyś.',
 	'mobile-frontend-copyright' => 'Wopśimjeśe stoj pód $1 k dispoziciji, jolic njejo se hynac pódało.',
 	'mobile-frontend-footer-contact' => 'Kontakt',
-	'mobile-frontend-search-noresults' => 'Twójomu pytanjeju žedne bokowe titele njewotpówěduju. Změń swójo pytanje abo tłoc pytańsku tastu swójeje tastatury, aby w bokach pytał.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Głowny meni wócyniś',
 	'mobile-frontend-main-menu-page-title' => 'Sedłowa nawigacija',
 	'mobile-frontend-main-menu-featured' => 'Nabejny',
@@ -5148,7 +5149,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-page-menu-history' => 'Historija',
 	'mobile-frontend-meta-data-issues-header' => 'Problemy',
 	'mobile-frontend-meta-data-issues' => 'Toś ten bok ma problemy',
-	'mobile-frontend-page-saving' => '$1 se składujo',
+	'mobile-frontend-page-saving' => '<strong>Składuj</strong><span> $1</span>',
 	'mobile-frontend-nearby-title' => 'W bliskosći',
 	'mobile-frontend-donate-image-login' => 'Medije na {{GRAMMAR:lokatiw|{{SITENAME}}}} pósćiwaju se wót luźi ako ty .',
 	'mobile-frontend-photo-upload-generic' => 'Wobraz pśinosowaś',
@@ -5192,15 +5193,10 @@ $messages['dsb'] = array(
 	'mobile-frontend-photo-article-donate-comment' => 'Pśinosowany wobraz ze Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => 'Wobraz bokoju pśidany',
 	'mobile-frontend-photo-caption-placeholder' => 'Wopiš toś ten wobraz (trěbny)',
-	'mobile-frontend-image-loading' => 'Wobraz se zacytujo',
-	'mobile-frontend-image-uploading-wait' => 'Wobraz se nagrawa, pšosym cakaj.',
-	'mobile-frontend-image-uploading-long' => 'Wobraz se hyšći nagrawa! Źěkujomy se za twóju sćerpnosć.',
-	'mobile-frontend-image-uploading-cancel' => '<a href="#">Pśetergni</a>, jolic to traje pśedłujko.',
 	'mobile-frontend-photo-upload-error' => 'Zmólka, wopytaj hyšći raz.',
 	'mobile-frontend-photo-upload-success-article' => 'Wuspěch! Twój wobraz jo něnto na toś tom boku.',
 	'mobile-frontend-photo-license' => 'Gaž nagrawaš toś ten wobraz, zwólijoš do našych [//wikimediafoundation.org/wiki/Terms_of_use wužywarskich wuměnjenjow] a pśizwólijoš swój wobraz pód licencu  [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0] wózjawiś.',
 	'mobile-frontend-photo-submit' => 'Wótpósłaś',
-	'mobile-frontend-photo-cancel' => 'Pśetergnuś',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> nagraśe|<span<$1</span> nagraśi|<span>$1</span> nagraśa|<span>$1</span> nagraśow}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ nagratych datajow',
 	'tag-mobile_edit' => 'Mobilna změna',
@@ -6855,6 +6851,7 @@ plakatum, forsíðum á bókum osfr.',
  * @author Lucky
  * @author McDutchie
  * @author Metroitendo
+ * @author Momo50WM
  * @author NemesisIII
  * @author Nobody
  * @author Peter17
@@ -7120,7 +7117,7 @@ $messages['fr'] = array(
 	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1|Vous}} {{GENDER:$1|êtes en train de créer}} une nouvelle page sur {{SITENAME}} !',
 	'mobile-frontend-editor-summary-placeholder' => 'Nous dire ce que vous avez modifié (facultatif)',
 	'mobile-frontend-editor-cancel-confirm' => 'Voulez-vous vraiment abandonner votre modification ?',
-	'mobile-frontend-editor-new-page-confirm' => '{{GENDER:$1|Êtes-vous sûr de vouloir créer|Êtes-vous sûre de vouloir créer}} une nouvelle page sur {{SITENAME}} ?',
+	'mobile-frontend-editor-new-page-confirm' => '{{GENDER:$1|Êtes-vous sûr de vouloir créer}} une nouvelle page sur {{SITENAME}} ?',
 	'mobile-frontend-editor-wait' => 'Enregistrement de la modification, veuillez patienter.',
 	'mobile-frontend-editor-success' => 'Oui ! Votre modification a été enregistrée.',
 	'mobile-frontend-editor-success-landmark-1' => 'Félicitations, vous êtes maintenant un éditeur {{SITENAME}} !',
@@ -8729,7 +8726,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-page-menu-history' => 'Stawizny',
 	'mobile-frontend-meta-data-issues-header' => 'Problemy',
 	'mobile-frontend-meta-data-issues' => 'Tuta strona ma problemy',
-	'mobile-frontend-page-saving' => '<strong>Składować</strong><span> $1</span>',
+	'mobile-frontend-page-saving' => '<strong>Składuj</strong><span> $1</span>',
 	'mobile-frontend-user-button-tooltip' => 'Moje zdźělenki pokazać',
 	'mobile-frontend-nearby-title' => 'W bliskosći',
 	'mobile-frontend-nearby-loading' => 'Temy začitać, kotrež su w bliskosći twojeho městna',
@@ -10967,6 +10964,7 @@ $messages['jv'] = array(
  * @author David1010
  * @author Dawid Deutschland
  * @author ITshnik
+ * @author Otogi
  * @author Tokoko
  * @author გიორგიმელა
  */
@@ -11217,7 +11215,7 @@ $messages['ka'] = array(
 	'mobile-frontend-profile-userpage-link' => 'ნახე მომხმარებლის გვერდი.',
 	'mobile-frontend-geonotahack' => 'ამ გვერდთან ახლოს',
 	'beta-feature-geonotahack' => 'ამ გვერდთან ახლოს',
-	'beta-feature-geonotahack-description' => 'აღმოაჩინე გვერდები, რომლებიც აღნიშნულ გვერდთან გეოგრაფიულად ახლოს არიან.',
+	'beta-feature-geonotahack-description' => 'აღმოაჩინე გვერდები, რომლებიც აღნიშნულ გვერდთან გეოგრაფიულად ახლოს დგანან.',
 	'mobile-frontend-mainpage-cta-prompt' => 'ამ გვერდს სჭირდება შენი დახმარება!',
 	'mobile-frontend-mainpage-cta-button' => 'ამ გვერდის გაუმჯობესება',
 );
@@ -13094,6 +13092,8 @@ $messages['lrc'] = array(
 
 /** Lithuanian (lietuvių)
  * @author Eitvys200
+ * @author Mantak111
+ * @author Reedy
  * @author Robotukas11
  * @author Vogone
  */
@@ -13121,7 +13121,6 @@ $messages['lt'] = array(
 	'mobile-frontend-featured-article' => 'Dienos straipsnis', # Fuzzy
 	'mobile-frontend-news-items' => 'Naujienose',
 	'mobile-frontend-language-header' => 'Šis straipsnis prieinamas $1 {{PLURAL:$1|kalba|kalbomis}}', # Fuzzy
-	'mobile-frontend-language-footer' => '{{SITENAME}} yra prieinamas kitomis kalbomis', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Paieškos kalba',
 	'mobile-frontend-username' => 'Naudotojo vardas:',
 	'mobile-frontend-password' => 'Slaptažodis:',
@@ -13139,6 +13138,9 @@ $messages['lt'] = array(
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} yra prieinamas $1 {{PLURAL:$1|kalba|kalbomis}}. Visos prieinamos versijos nurodytos žemiau',
 	'mobile-frontend-page-menu-contents' => 'turinys',
 	'mobile-frontend-page-menu-history' => 'Istorija',
+	'mobile-frontend-page-saving' => '<strong>Saugojama</strong><span> $1</span>',
+	'mobile-frontend-editor-success-new-page' => 'Sveikiname sukūrus naują puslapį!',
+	'mobile-frontend-requires-title' => 'Nepasiekiamas puslapis',
 );
 
 /** Latgalian (latgaļu)
@@ -13655,7 +13657,9 @@ $messages['mk'] = array(
 	'mobile-frontend-profile-nouser' => 'Нема корисник со тоа име. Проверете дали сте го внеле правилно, вклучувајќи големи и мали букви.',
 	'mobile-frontend-profile-activity-heading' => 'Скорешни активности',
 	'mobile-frontend-profile-userpage-link' => 'Посетете ја корисничката страница',
+	'mobile-frontend-requires-title' => 'Страницата е недостапна',
 	'mobile-frontend-requires-optin' => 'Страницава не е достапна доколку не изберете да ги користите бета-можностите. Ова можете да го направите во [[Special:MobileOptions|поставките]].',
+	'mobile-frontend-requires-mobile' => 'Оваа страница не е достапна со обичен изглед. Сменете на мобилен изглед на дното од страницата.',
 	'mobile-frontend-profile-last-thank' => '{{GENDER:$2|Добил благодарност|Добила благодарност|Доби благодарност}} {{GENDER:$1|од}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Ја измени}} страницата [[:$1]], {{PLURAL:$2|вчера|пред $2 дена|0=денес}}.',
 	'mobile-frontend-profile-footer-days' => 'Регистриран пред {{PLURAL:$2|еден ден|$2 дена}} со [[Special:Contributions/$1|{{PLURAL:$3|едно уредување|$3 уредувања}}]] и [[Special:Uploads/$1|{{PLURAL:$4|едно подигање|$4 подигања|500=преку 500 подигања}}]].',
@@ -17866,6 +17870,7 @@ $messages['ru'] = array(
 	'mobile-frontend-profile-userpage-link' => 'Посетить страницу участника.',
 	'mobile-frontend-requires-title' => 'Страница недоступна',
 	'mobile-frontend-requires-optin' => 'Эта страница будет недоступна, пока вы не перейдёте в бета-режим. Зайдите для этого на страницу [[Special:MobileOptions|настроек]].',
+	'mobile-frontend-requires-mobile' => 'Эта страница не доступна для просмотра с компьютера. Пожалуйста, нажмите на ссылку мобильного вида в нижней части страницы.',
 	'mobile-frontend-profile-last-thank' => 'Поблагодарил{{GENDER:$2||а}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Отредактирована}} страница [[:$1]], {{PLURAL:$2|$2 день назад|$2 дней назад|$2 дня назад|1=вчера|0=сегодня}}.',
 	'mobile-frontend-profile-footer-days' => 'Присоединился {{PLURAL:$2|$2 день назад|$2 дней назад|$2 дня назад|1=вчера|0=сегодня}} с [[Special:Contributions/$1|{{PLURAL:$3|$3 правкой|$3 правками|1=одной правкой}}]] и [[Special:Uploads/$1|{{PLURAL:$4|с $4 загрузкой|с $4 загрузками|1=с одной загрузкой|0=без загрузок|500=более чем 500 загрузками}}]].',
@@ -18059,6 +18064,8 @@ $messages['sco'] = array(
 	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1|Ye}} {{GENDER:$1|ar cræftin}} ae new page oan {{SITENAME}}!',
 	'mobile-frontend-editor-new-page-confirm' => '{{GENDER:$1|Ar ye sair ye want tae cræft}} ae new page oan {{SITENAME}}?',
 	'mobile-frontend-editor-success-new-page' => 'Congratulâtions oan cræftin ae new page!',
+	'mobile-frontend-requires-title' => 'Page no available',
+	'mobile-frontend-requires-mobile' => 'This page isna available oan desktap. Please clap the mobile luik-at link at the bottom o the page.',
 	'mobile-frontend-profile-footer-ancient' => 'Makit [[Special:Contributions/$1|{{PLURAL:$3|1 eidit|$3 eidits}}]] an [[Special:Uploads/$1|{{PLURAL:$4|1 uplaid|$4 uplaids|500=500+ uplaids}}]].',
 	'beta-feature-minerva' => 'Enable mobile skin (Minerva) oan the desktap',
 	'beta-feature-minerva-description' => 'Mak the skin uised on mobile devices ae selectable desktop skin unner the appearance preferences tab.',
@@ -18942,7 +18949,7 @@ $messages['sv'] = array(
 	'mobile-frontend-page-menu-history' => 'Historik',
 	'mobile-frontend-meta-data-issues-header' => 'Problem',
 	'mobile-frontend-meta-data-issues' => 'Denna sida har några problem',
-	'mobile-frontend-page-saving' => 'Sparar $1', # Fuzzy
+	'mobile-frontend-page-saving' => '<strong>Sparar</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'Var god logga in eller registrera dig för att se dina meddelanden.',
 	'mobile-frontend-user-button-tooltip' => 'Visa mina meddelanden',
 	'mobile-frontend-nearby-to-page' => 'Följande sidor är relaterade till $1 av deras geografiska läge',
@@ -19064,11 +19071,14 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-editor-keep-editing' => 'Fortsätt redigera',
 	'mobile-frontend-editor-license' => 'Genom att spara ändringar godkänner du våra [//wikimediafoundation.org/wiki/Terms_of_use användarvillkor] och samtycker till att släppa din text under [//creativecommons.org/licenses/by-sa/3.0/ licensen Creative Commons Attribution-ShareAlike 3.0] och [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
 	'mobile-frontend-editor-placeholder' => 'Detta avsnitt är tomt. Bli den första att bygga ut det!',
+	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1|DU}} {{GENDER:$1|skapar}} en ny sida på {{SITENAME}}!',
 	'mobile-frontend-editor-summary-placeholder' => 'Berätta för oss vad du ändrat (frivilligt)',
 	'mobile-frontend-editor-cancel-confirm' => 'Är du säker på att du vill avbryta din redigering?',
+	'mobile-frontend-editor-new-page-confirm' => '{{GENDER:$1|Är du säker på att du vill skapa}} en ny sida på {{SITENAME}}?',
 	'mobile-frontend-editor-wait' => 'Sparar redigering, vänta.',
 	'mobile-frontend-editor-success' => 'Din redigering har sparats.',
 	'mobile-frontend-editor-success-landmark-1' => 'Grattis, du är nu en redaktör på {{SITENAME}}!',
+	'mobile-frontend-editor-success-new-page' => 'Grattis till att ha skapat en ny sida!',
 	'mobile-frontend-editor-error' => 'Fel, redigeringen sparades inte.',
 	'mobile-frontend-editor-error-conflict' => 'Fel, en annan användare har redigerat sidan.',
 	'mobile-frontend-editor-error-loading' => 'Fel, kan inte läsa avsnittet.',
@@ -19111,7 +19121,9 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-nouser' => 'Det finns ingen användare med detta namn. Användarnamn är skiftlägeskänsliga, så kontrollera om det har skrivits korrekt.',
 	'mobile-frontend-profile-activity-heading' => 'Senaste aktivitet',
 	'mobile-frontend-profile-userpage-link' => 'Besök användarsidan.',
+	'mobile-frontend-requires-title' => 'Sidan ej tillgänglig',
 	'mobile-frontend-requires-optin' => 'Denna sida är inte tillgänglig om du inte väljer att vara i vårt betaläge. Besök [[Special:MobileOptions|inställningssidan]] för att ställa in det.',
+	'mobile-frontend-requires-mobile' => 'Denna sida är inte tillgänglig i skrivbordsvy. Klicka på mobilformat-länken längst ner på sidan.',
 	'mobile-frontend-profile-last-thank' => '{{GENDER:$2|Tackades}} {{GENDER:$1|av}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3|Redigerade}} sidan [[:$1]], {{PLURAL:$2|igår|$2 dagar sedan|0=tidigare idag}}.',
 	'mobile-frontend-profile-footer-days' => 'Gick med för {{PLURAL:$2|1 dag|$2 dagar}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].',

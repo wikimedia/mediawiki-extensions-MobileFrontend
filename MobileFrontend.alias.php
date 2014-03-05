@@ -250,6 +250,11 @@ $specialPageAliases['scn'] = array(
 	'MobileOptions' => array( 'OpzioniMobile' ),
 );
 
+/** Swedish (svenska) */
+$specialPageAliases['sv'] = array(
+	'Nearby' => array( 'Nära' ),
+);
+
 /** Ukrainian (українська) */
 $specialPageAliases['uk'] = array(
 	'MobileOptions' => array( 'Налаштування_мобільної_версії' ),
