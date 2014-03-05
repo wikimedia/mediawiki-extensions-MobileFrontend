@@ -19,6 +19,7 @@ class LoginPage
   a(:create_account_link, text: "Create account")
   div(:message_box, class:"headmsg")
   div(:warning_box, class:"alert warning")
+  a(:password_reset, css:".mw-userlogin-help")
 
   def login_with(username, password)
     # deal with autocomplete

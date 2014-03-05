@@ -47,7 +47,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 
 		$signupLink = Linker::link( SpecialPage::getTitleFor( 'Userlogin' ),
 			wfMessage( 'mobile-frontend-main-menu-account-create' )->text(),
-			array( 'class'=> 'mw-mf-create-account' ), $query );
+			array( 'class'=> 'mw-mf-create-account mw-ui-block' ), $query );
 
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login', 'class' => 'content' ) );
 
@@ -79,11 +79,16 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 				array( 'id' => 'wpLoginAttempt',
 					'class' => 'mw-ui-button mw-ui-constructive',
 					'tabindex' => '3' ) ) .
-			$signupLink .
 			Html::input( 'wpLoginToken', $token, 'hidden' ) .
 			Html::input( 'watch', $watchArticle, 'hidden' ) .
 			$stickHTTPS .
 			Html::closeElement( 'form' ) .
+			Html::element( 'a', array(
+					'class' => 'mw-userlogin-help mw-ui-block',
+					'href' => SpecialPage::getTitleFor( 'PasswordReset' )->getLocalUrl(),
+				),
+				wfMessage( 'passwordreset' ) ) .
+			$signupLink .
 			Html::closeElement( 'div' );
 		echo $login;
 		$this->renderGuiderMessage();

@@ -18,3 +18,6 @@ Then(/^I do not see a message warning me I am already logged in$/) do
   on(LoginPage).warning_box_element.should_not be_visible
 end
 
+Then(/^I see a password reset link$/) do
+   on(LoginPage).password_reset_element.should be_visible
+end
