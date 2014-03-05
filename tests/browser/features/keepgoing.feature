@@ -7,7 +7,7 @@ Feature: Encourage new users to Keep Going
       And I have just registered a new account
     When I am on the Selenium Edit Test article
       And I click the edit button
-      And I type ABCDEFG into the editor
+      And I type "ABCDEFG" into the editor
       And I click continue
       And I click submit
     Then I see the KeepGoing drawer prompting me to continue editing

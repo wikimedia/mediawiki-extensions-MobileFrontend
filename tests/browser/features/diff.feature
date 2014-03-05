@@ -6,12 +6,12 @@ Feature: Page diff
     When I go to the "Diff test" page
       And I click the edit button
       And I clear the editor
-      And I type ABC DEF into the editor
+      And I type "ABC DEF" into the editor
       And I click continue
       And I click submit
       And I click the edit button
       And I clear the editor
-      And I type ABC GHI into the editor
+      And I type "ABC GHI" into the editor
       And I click continue
       And I click submit
       And I click on the view edit history link

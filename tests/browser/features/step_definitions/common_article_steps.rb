@@ -14,7 +14,7 @@ Then(/^I see the VisualEditor$/) do
   on(ArticlePage).editor_ve_element.when_present.should exist
 end
 
-Given(/^I type (.+) into the editor$/) do |text|
+Given(/^I type "(.+)" into the editor$/) do |text|
   on(ArticlePage).editor_text_area_element.when_present.send_keys(text)
 end
 
@@ -34,7 +34,7 @@ Then(/^The VisualEditor toolbar has an italic button$/) do
   on(ArticlePage).overlay_ve_header_toolbar_italic_button_element.when_present.should exist
 end
 
-Given(/^I type (.+) into VisualEditor$/) do |text|
+Given(/^I type "(.+)" into VisualEditor$/) do |text|
   on(ArticlePage) do |page|
     page.editor_ve_element.when_present(15).fire_event("onfocus")
     page.editor_ve_element.when_present.send_keys(text)
