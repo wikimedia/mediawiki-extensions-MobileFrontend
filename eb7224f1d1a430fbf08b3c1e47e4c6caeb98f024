@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_72496035",
+        "filename": "scripts/cucumber_check.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2014-03-05T00:15:34Z",
+      "side": 1,
+      "message": "really? you\u0027re not willing to throw a bone to the user to save them an annoying step of figuring out what a command to execute an external application does?",
+      "parentUuid": "4e04eb01_92acecec",
+      "revId": "eb7224f1d1a430fbf08b3c1e47e4c6caeb98f024",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_322e388a",
         "filename": "tests/browser/features/pageactions_logged_in.feature",
         "patchSetId": 2
@@ -72,6 +90,23 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_12e69c3f",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2014-03-05T00:15:34Z",
+      "side": 1,
+      "message": "This contains two distinct steps",
+      "revId": "eb7224f1d1a430fbf08b3c1e47e4c6caeb98f024",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_723f20b2",
         "filename": "tests/browser/features/uploads_lead.feature",
         "patchSetId": 2
@@ -101,6 +136,24 @@
       "side": 1,
       "message": "It\u0027s part of the rule so no it needs to be on this line or it won\u0027t match. I suppose I can reword this to make this clearer.",
       "parentUuid": "4e04eb01_723f20b2",
+      "revId": "eb7224f1d1a430fbf08b3c1e47e4c6caeb98f024",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_d2db947a",
+        "filename": "tests/browser/features/uploads_lead.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2014-03-05T00:15:34Z",
+      "side": 1,
+      "message": "alright, then the steps rule is no bueno as it contains two distinct steps.",
+      "parentUuid": "4e04eb01_f288d077",
       "revId": "eb7224f1d1a430fbf08b3c1e47e4c6caeb98f024",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
