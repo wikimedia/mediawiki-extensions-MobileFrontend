@@ -31,8 +31,3 @@ Feature: Menus open correct page for anonymous users
   Scenario: Log In URL is set correctly
     When I click on "Log in" in the main navigation menu
     Then the URL of of my page should contain "Special:UserLogin"
-
-
-
-
-

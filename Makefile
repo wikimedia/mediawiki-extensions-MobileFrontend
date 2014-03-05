@@ -58,6 +58,11 @@ tests: jshint phpunit qunit
 cucumber:
 	@scripts/cucumber.sh
 
+checkcucumber:
+	@scripts/cucumber_check.sh
+
+lint: jshint phplint checkcucumber
+
 installhooks:
 	ln -sf ${PWD}/scripts/pre-commit .git/hooks/pre-commit
 

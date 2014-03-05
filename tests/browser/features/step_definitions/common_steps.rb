@@ -27,6 +27,7 @@ Given /^I am logged into the mobile website$/ do
   end
 end
 
+# Note: Used by "I have just registered a new account"
 Given(/^I register a new account with a random username$/) do
   username = 'NewUser' + Time.now.to_i.to_s
   #the call to Random creates a long string of the form "0.10879935166988186"
@@ -97,7 +98,7 @@ When /^I go to random page$/ do
 end
 
 When(/^I go to the "(.+)" page$/) do |article|
-  visit(NonexistentPage, :using_params => {:article_name => article})
+  visit(ArticlePage, :using_params => {:article_name => article})
 end
 
 When /^I go to the login page$/ do
