@@ -70,7 +70,7 @@ Then /^The watch star is not selected$/ do
 end
 
 # Toast notifications
-Then(/^I see a toast confirmation$/) do
+Then(/^I see a toast notification$/) do
   on(ArticlePage).toast_element.when_present.should be_visible
 end
 

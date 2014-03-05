@@ -20,7 +20,7 @@ Scenario: I can edit a page using VisualEditor
     And I type "ABCDEFG" into VisualEditor
     And I click continue
     And I click submit
-  Then I see a toast confirmation
+  Then I see a toast notification
 
 Scenario: Going back from save screen in VisualEditor
   Given I am in alpha mode
