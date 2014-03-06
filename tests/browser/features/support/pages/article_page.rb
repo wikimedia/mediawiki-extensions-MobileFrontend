@@ -66,9 +66,6 @@ class ArticlePage
     page.notifications_overlay_element.button_element(class: "cancel")
   end
 
-  span(:external_links_section, id:"External_links")
-  span(:pres_campaign_section, id:"Presidential_campaigns")
-  a(:ext_whitehouse_link, href: "http://www.whitehouse.gov/administration/president_obama/")
   a(:image_link, class:"image")
 
 
