@@ -12874,6 +12874,7 @@ $messages['lb'] = array(
 	'mobile-frontend-profile-nouser' => 'Et gëtt kee Benotzernumm mat dësem Numm. Bei Benotzernimm gëtt tëscht groussen a kleng Buschtawen ënnerscheed, kuckt dofir no ob de Benotzernumm richteg geschriwwen ass.',
 	'mobile-frontend-profile-activity-heading' => 'Rezent Aktivitéit',
 	'mobile-frontend-profile-userpage-link' => 'Benotzersäit besichen.',
+	'mobile-frontend-requires-title' => 'Säit net disponibel',
 	'mobile-frontend-profile-last-edit' => "{{GENDER:$3|Huet}} d'Säit [[:$1]] {{PLURAL:$2|gëschter|viru(n) $2 Deeg|0=méi fréi haut am Laf vum Dag}} geännert.",
 	'mobile-frontend-geonotahack' => 'No bei dëser Säit',
 	'beta-feature-geonotahack' => 'No bei dëser Säit',
@@ -15900,6 +15901,7 @@ $messages['pfl'] = array(
  * @author Odie2
  * @author Olgak85
  * @author P0358
+ * @author Peter Bowman
  * @author Przemub
  * @author Rezonansowy
  * @author Rzuwig
@@ -16072,6 +16074,7 @@ $messages['pl'] = array(
 	'mobile-frontend-watchlist-cta' => 'Zaloguj się lub zarejestruj aby obserwować tę stronę.', # Fuzzy
 	'mobile-frontend-watchlist-cta-button-login' => 'Zaloguj się',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Zarejestruj się',
+	'mobile-frontend-watchlist-login-action' => 'Zaloguj się, aby ją zobaczyć.',
 	'mobile-frontend-watch-login' => 'Dodaj $1 do swojej listy obserwowanych.',
 	'mobile-frontend-watchlist-a-z' => 'Lista',
 	'mobile-frontend-watchlist-feed' => 'Zmienione',
@@ -20734,7 +20737,6 @@ $messages['vi'] = array(
 	'mobile-frontend-search-content-no-results' => "'''{{int:mobile-frontend-search-content}}''' để xem cụm từ này có xuất hiện trong trang nào.",
 	'mobile-frontend-privacy-link-text' => 'Riêng tư',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Văn bản có sẵn theo [//vi.m.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi?useformat=mobile CC BY-SA 3.0]; có thể áp dụng điều khoản bổ sung.',
 	'mobile-frontend-copyright' => 'Nội dung được phát hành theo $1, ngoại trừ khi có ghi chú khác.',
 	'mobile-frontend-footer-contact' => 'Liên lạc',
 	'mobile-frontend-terms-text' => 'Điều khoản Sử dụng',
@@ -20755,7 +20757,7 @@ $messages['vi'] = array(
 	'mobile-frontend-page-menu-history' => 'Lịch sử',
 	'mobile-frontend-meta-data-issues-header' => 'Các vấn đề',
 	'mobile-frontend-meta-data-issues' => 'Trang này có một số vấn đề',
-	'mobile-frontend-page-saving' => 'Đang lưu $1',
+	'mobile-frontend-page-saving' => '<strong>Đang lưu</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'Xin vui lòng đăng nhập hoặc mở tài khoản để xem thông báo của bạn.',
 	'mobile-frontend-user-button-tooltip' => 'Xem thông báo của tôi',
 	'mobile-frontend-nearby-to-page' => 'Các trang sau có liên quan đến $1 theo vị trí địa lý',
@@ -20874,11 +20876,14 @@ $messages['vi'] = array(
 	'mobile-frontend-editor-keep-editing' => 'Sửa tiếp',
 	'mobile-frontend-editor-license' => 'Với việc lưu các thay đổi, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng] của chúng tôi và đồng ý phát hành văn bản của bạn theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép CC Ghi công–Chia sẻ tương tự 3.0] và [//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Tài_liệu_Tự_do_GNU GFDL].',
 	'mobile-frontend-editor-placeholder' => 'Phần này còn trống. Hãy Be the first to expand it! Hãy là người đầu tiên mở rộng nó!',
+	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1}}Bạn đang tạo một trang mới tại {{SITENAME}}!',
 	'mobile-frontend-editor-summary-placeholder' => 'Cho chúng tôi biết bạn đã thay đổi những gì (tùy chọn)',
 	'mobile-frontend-editor-cancel-confirm' => 'Bạn có thực sự muốn từ bỏ sửa đổi của bạn?',
+	'mobile-frontend-editor-new-page-confirm' => '{{GENDER:$1}}Bạn có chắc chắn muốn tạo một trang mới tại {{SITENAME}}?',
 	'mobile-frontend-editor-wait' => 'Đang lưu sửa đổi, vui lòng chờ.',
 	'mobile-frontend-editor-success' => 'Thao tác thành công! Sửa đổi của bạn đã được lưu.',
 	'mobile-frontend-editor-success-landmark-1' => 'Chúc mừng bạn đã trở thành biên tập viên {{SITENAME}}!',
+	'mobile-frontend-editor-success-new-page' => 'Chúc mừng bạn đã tạo trang mới!',
 	'mobile-frontend-editor-error' => 'Đã xuất hiện lỗi; sửa đổi không được lưu.',
 	'mobile-frontend-editor-error-conflict' => 'Đã xuất hiện lỗi: người dùng khác đã sửa đổi trang này.',
 	'mobile-frontend-editor-error-loading' => 'Đã xuất hiện lỗi; không thể tải phần này.',
@@ -20921,7 +20926,9 @@ $messages['vi'] = array(
 	'mobile-frontend-profile-nouser' => 'Không có người dùng với tên này. Vì phân biệt chữ hoa/thường trong tên người dùng, xin vui lòng kiểm tra tên người dùng có đúng không.',
 	'mobile-frontend-profile-activity-heading' => 'Hoạt động gần đây',
 	'mobile-frontend-profile-userpage-link' => 'Xem trang thành viên.',
+	'mobile-frontend-requires-title' => 'Trang không có sẵn',
 	'mobile-frontend-requires-optin' => 'Để xem trang này, hãy quyết định kích hoạt chế độ beta. Mở [[Special:MobileOptions|trang tùy chọn]] để kích hoạt.',
+	'mobile-frontend-requires-mobile' => 'Trang này không có sẵn trên máy tính để bàn. Xin hãy nhấn chuột vào liên kết “Phiên bản di động” ở cuối trang.',
 	'mobile-frontend-profile-last-thank' => '{{GENDER:$2}}Đã nhận lời cảm ơn {{GENDER:$1}}từ [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-profile-last-edit' => '{{GENDER:$3}}Đã sửa đổi trang [[:$1]] {{PLURAL:$2|hôm qua|cách đây $2 ngày|0=hôm nay}}.',
 	'mobile-frontend-profile-footer-days' => 'Đã mở tài khoản cách đây $2 ngày và hiện có [[Special:Contributions/$1|$3 sửa đổi]] và [[Special:Uploads/$1|{{PLURAL:$4|1 tập tin tải lên|$4 tập tin tải lên|500=500+ tập tin tải lên}}]].',
