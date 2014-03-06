@@ -2,7 +2,7 @@
 Feature: Search
 
   Background:
-    Given I am on the home page
+    Given I am on the "Main Page" page
     When I click the placeholder search box
 
   Scenario: Opening search
@@ -11,12 +11,12 @@ Feature: Search
   Scenario: Closing search (overlay button)
     When I click the search overlay close button
     Then I don't see the search overlay
-      And I am on the home page
+      And the URL of of my page should contain "Main%20Page"
 
   Scenario: Closing search (browser button)
     When I click the browser back button
     Then I don't see the search overlay
-      And I am on the home page
+      And the URL of of my page should contain "Main%20Page"
 
   Scenario: Search for partial text
     When I type into search box "bara"

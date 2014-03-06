@@ -3,7 +3,7 @@
 Feature: Language selection
 
   Background:
-    Given I am on the home page
+    Given I am on the "Main Page" page
     When I click the language button
 
   Scenario: Opening language overlay

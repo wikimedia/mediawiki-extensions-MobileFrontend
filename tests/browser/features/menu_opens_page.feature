@@ -2,7 +2,7 @@
 Feature: Menus open correct page for anonymous users
 
   Background:
-    Given I am on the home page
+    Given I am on the "Main Page" page
 
   Scenario: Home URL is set correctly
     When I click on "Home" in the main navigation menu

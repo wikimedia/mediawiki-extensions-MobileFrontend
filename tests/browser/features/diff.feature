@@ -3,8 +3,8 @@ Feature: Page diff
 
   Scenario: Added and removed content
     Given I am logged into the mobile website
-    When I go to the "Diff test" page
-      And I click the edit button
+      And I am on the "Diff test" page
+    When I click the edit button
       And I clear the editor
       And I type "ABC DEF" into the editor
       And I click continue

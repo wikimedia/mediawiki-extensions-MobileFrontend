@@ -3,7 +3,7 @@ Feature: Page actions menu when logged in
 
   Background:
     Given I am logged into the mobile website
-      And I am on the home page
+      And I am on the "Main Page" page
 
   Scenario: I can see the edit button on the Main Page
     Then I should see the edit icon
