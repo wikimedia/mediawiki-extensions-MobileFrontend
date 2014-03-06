@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_3e8f1731",
+        "filename": "tests/browser/features/login.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-06T18:31:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e04eb01_a711e158",
+      "revId": "2ca3178088a72ef0533cafd62a71d3f4057e0cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_870ee534",
         "filename": "tests/browser/features/search.feature",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2014-03-06T01:37:56Z",
       "side": 1,
       "message": "\"of of\"\n\nShould be \"Main_Page\".",
+      "revId": "2ca3178088a72ef0533cafd62a71d3f4057e0cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_fe93ef4f",
+        "filename": "tests/browser/features/search.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-06T18:31:40Z",
+      "side": 1,
+      "message": "of of seems to be a typo in the rule itself. Will fix in a follow up patch.",
+      "parentUuid": "4e04eb01_870ee534",
       "revId": "2ca3178088a72ef0533cafd62a71d3f4057e0cb7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
