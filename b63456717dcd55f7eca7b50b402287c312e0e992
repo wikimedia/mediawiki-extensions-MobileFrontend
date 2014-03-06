@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_be5a0783",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-06T19:03:01Z",
+      "side": 1,
+      "message": "step definitions aren\u0027t usually capitalized, at least per my rspec book (since they usually don\u0027t begin the sentence in the actual test definitions). Would probably be better to leave the first \u0027the\u0027 uncapitalized, although this is rather nitpicky :)",
+      "revId": "b63456717dcd55f7eca7b50b402287c312e0e992",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
