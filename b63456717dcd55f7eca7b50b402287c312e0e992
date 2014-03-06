@@ -34,6 +34,24 @@
       "revId": "b63456717dcd55f7eca7b50b402287c312e0e992",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_5e8ae3c0",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-06T19:17:55Z",
+      "side": 1,
+      "message": "Not all of the existing rules are capitalized. Most of them start with the word \"I\", so it\u0027s ambiguous, but the ones that don\u0027t are inconsistent. I\u0027m fine with approving this as long as we revisit later.",
+      "parentUuid": "4e04eb01_bed9e7f9",
+      "revId": "b63456717dcd55f7eca7b50b402287c312e0e992",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
