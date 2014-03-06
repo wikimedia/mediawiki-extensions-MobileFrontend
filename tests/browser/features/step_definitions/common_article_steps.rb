@@ -1,5 +1,5 @@
 Then /^I should see the edit icon$/ do
-  on(HomePage).edit_button_holder_element.when_present.should be_visible
+  on(ArticlePage).edit_button_holder_element.when_present.should be_visible
 end
 
 # FIXME: Consolidate with code in editor_steps.rb
@@ -91,5 +91,5 @@ When(/^I click on the view edit history link$/) do
 end
 
 Then /^I see drawer with message "(.+)"$/ do |text|
-  on(HomePage).drawer_element.when_present.text.should match text
+  on(ArticlePage).drawer_element.when_present.text.should match text
 end
