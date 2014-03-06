@@ -14,6 +14,8 @@ class ArticlePage
   # left nav
   div(:navigation, css:"#mw-mf-page-left")
   a(:watchlist_link, css:"#mw-mf-page-left .icon-watchlist a")
+  a(:about_link, text: "About Wikipedia")
+  a(:disclaimer_link, text: "Disclaimers")
 
   # page actions
   ## edit
@@ -104,4 +106,18 @@ class ArticlePage
 
   #loader
   div(:content_wrapper, id:'content_wrapper')
+
+  # secondary menu
+  ## languages
+  a(:language_button, text: "Read in another language")
+  div(:language_overlay, class: "language-overlay")
+  button(:language_overlay_close_button) do |page|
+    page.language_overlay_element.button_element(class: "cancel")
+  end
+
+  #footer
+  a(:desktop_link, text: "Desktop")
+  a(:terms_link, text: "Terms of use")
+  a(:license_link, href: "//creativecommons.org/licenses/by-sa/3.0/")
+  a(:privacy_link, text: "Privacy")
 end
