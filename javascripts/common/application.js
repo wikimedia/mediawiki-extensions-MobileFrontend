@@ -396,15 +396,14 @@
 	}
 
 	/**
+	 * Return the first section of page content
 	 *
 	 * @name M.getLeadSection
 	 * @function
-	 * @return {Boolean}
+	 * @return {Object}
 	 */
 	function getLeadSection() {
-		// FIXME: Simplify when cache has cleared
-		var lead = $( '#content #mw-content-text' ).eq( 0 );
-		return lead.length > 0 ? lead : $( '#content > div' ).eq( 0 );
+		return $( '#content > div' ).eq( 0 );
 	}
 
 	function loadCurrentPage() {
