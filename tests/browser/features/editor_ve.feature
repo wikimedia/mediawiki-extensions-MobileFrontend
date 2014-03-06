@@ -4,8 +4,8 @@ Feature: VisualEditor
 Scenario: Toolbar VisualEditor
   Given I am in alpha mode
     And I am logged into the mobile website
-  When I am on the Selenium Edit Test article
-    And I click the edit button
+    And I am on the "Selenium Edit Test" page
+  When I click the edit button
   Then I see the VisualEditor overlay
     And I see a toolbar in the overlay header
     And The VisualEditor toolbar has a bold button
@@ -14,8 +14,8 @@ Scenario: Toolbar VisualEditor
 Scenario: I can edit a page using VisualEditor
   Given I am in alpha mode
     And I am logged into the mobile website
-  When I am on the Selenium Edit Test article
-    And I click the edit button
+    And I am on the "Selenium Edit Test" page
+  When I click the edit button
     And VisualEditor has loaded
     And I type "ABCDEFG" into VisualEditor
     And I click continue
@@ -25,9 +25,9 @@ Scenario: I can edit a page using VisualEditor
 Scenario: Going back from save screen in VisualEditor
   Given I am in alpha mode
     And I am logged into the mobile website
-  When I am on the Selenium Edit Test article
-    And I click the edit button
-    And I type "ABCDEFG" into VisualEditor
+    And I am on the "Selenium Edit Test" page
+  When I click the edit button
+    And I type ABCDEFG into VisualEditor
     And I click continue
     And I click the escape button
   Then I see the VisualEditor

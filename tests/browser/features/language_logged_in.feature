@@ -3,7 +3,7 @@ Feature: Language Validation - Logged In
 
   Background:
     Given I am logged into the mobile website
-    And I am on the home page
+    And I am on the "Main Page" page
 
   Scenario: Validate Language selection availability
     When I click the language button

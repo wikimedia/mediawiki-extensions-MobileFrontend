@@ -2,7 +2,7 @@
 Feature: Footer links resolve
 
   Background:
-    Given I am on the home page
+    Given I am on the "Main Page" page
 
   Scenario: View Edit history link resolves
     When I click on the view edit history link
