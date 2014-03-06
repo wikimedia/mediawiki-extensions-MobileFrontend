@@ -12,7 +12,7 @@ Feature: Manage Watchlist
     Given I am logged into the mobile website
       And I am on the "Barack Obama" page
       And I click the watch star
-    Then I see a toast confirmation
+    Then I see a toast notification
       And I see a toast with message "Added Barack Obama to your watchlist"
       And The watch star is selected
 
@@ -22,6 +22,6 @@ Feature: Manage Watchlist
     # Add statement to ensure the Barack Obama article is already watched.
       And I am on the "Barack Obama" page
     When I click the watch star
-    Then I see a toast confirmation
+    Then I see a toast notification
       And I see a toast with message "Removed Barack Obama from your watchlist"
       And The watch star is not selected
