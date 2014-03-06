@@ -101,7 +101,7 @@ Given(/^I am on the "(.+)" page$/) do |article|
   visit(ArticlePage, :using_params => {:article_name => article})
 end
 
-Then(/^the URL of of my page should contain "(.+)"$/) do |article|
+Then(/^The URL of the page should contain "(.+)"$/) do |article|
   on(ArticlePage).current_url.should match article
 end
 
