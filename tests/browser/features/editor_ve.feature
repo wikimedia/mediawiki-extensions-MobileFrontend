@@ -17,7 +17,7 @@ Scenario: I can edit a page using VisualEditor
   When I am on the Selenium Edit Test article
     And I click the edit button
     And VisualEditor has loaded
-    And I type ABCDEFG into VisualEditor
+    And I type "ABCDEFG" into VisualEditor
     And I click continue
     And I click submit
   Then I see a toast confirmation
@@ -27,7 +27,7 @@ Scenario: Going back from save screen in VisualEditor
     And I am logged into the mobile website
   When I am on the Selenium Edit Test article
     And I click the edit button
-    And I type ABCDEFG into VisualEditor
+    And I type "ABCDEFG" into VisualEditor
     And I click continue
     And I click the escape button
   Then I see the VisualEditor
