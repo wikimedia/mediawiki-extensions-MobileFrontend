@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
+@en.m.wikipedia.beta.wmflabs.org @login @test2.m.wikipedia.org
 Feature: VisualEditor
 
 Scenario: Toolbar VisualEditor
