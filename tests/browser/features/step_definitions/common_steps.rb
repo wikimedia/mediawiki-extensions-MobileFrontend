@@ -6,7 +6,7 @@ Given /^I am using user agent "(.+)"$/ do |user_agent|
 end
 
 Given /^I am logged into the mobile website$/ do
-  visit LoginPage
+  step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
   on(LoginPage) do |page|
   page.login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
@@ -52,12 +52,14 @@ Given(/^I have just registered a new account$/) do
 end
 
 Given /^I am logged in as a new user$/ do
+  step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
   # FIXME: Actually create a new user instead of using an existing one
   on(LoginPage).login_with("Selenium_newuser", ENV["MEDIAWIKI_PASSWORD"])
 end
 
 Given(/^I am logged in as a user with a > (\d+) edit count$/) do |arg1|
+  step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
   # FIXME: Guarantee that MEDIAWIKI_USER has an edit count of > 0
   on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
