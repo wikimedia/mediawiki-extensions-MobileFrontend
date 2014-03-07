@@ -85,12 +85,12 @@ class ArticlePage
   div(:drawer, class:"drawer position-fixed visible")
 
   # visual editor
-  div(:overlay_ve, class: "overlay editor-overlay editor-overlay-ve")
+  div(:overlay_ve, css: ".editor-overlay-ve")
   div(:overlay_ve_header) do |page|
-    page.overlay_ve_element.div_element(class: "overlay-header-container position-fixed")
+    page.overlay_ve_element.div_element(css: ".overlay-header-container")
   end
   div(:overlay_ve_header_toolbar) do |page|
-    page.overlay_ve_header_element.div_element(class: "oo-ui-toolbar-bar")
+    page.overlay_ve_header_element.div_element(css: ".oo-ui-toolbar-bar")
   end
   span(:overlay_ve_header_toolbar_bold_button) do |page|
     page.overlay_ve_header_element.span_element(class: "oo-ui-iconedElement-icon oo-ui-icon-bold-b")
