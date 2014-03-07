@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_45856bd3",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-07T21:15:22Z",
+      "side": 1,
+      "message": "Just remove this copyright line. It isn\u0027t necessary legally, and it\u0027s not accurate anyway. The actual copyright would be \"2011–2014 Wikimedia Foundation\" which is pretty useless since it\u0027s always a work in progress.",
+      "revId": "2ca45346b12fb167f44372d67964148893ad493d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
