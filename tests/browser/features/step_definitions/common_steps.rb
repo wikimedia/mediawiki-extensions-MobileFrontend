@@ -6,6 +6,7 @@ Given /^I am using user agent "(.+)"$/ do |user_agent|
 end
 
 Given /^I am logged into the mobile website$/ do
+  visit LoginPage
   step 'I click on "Log in" in the main navigation menu'
   on(LoginPage) do |page|
   page.login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
