@@ -148,6 +148,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'modules/toc/toc',
 			'modules/toc/tocHeading'
 		),
+		'messages' => array(
+			'toc'
+		),
 	),
 
 	'tablet.scripts' => $wgMFMobileResourceBoilerplate + array(

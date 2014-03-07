@@ -7,6 +7,9 @@
 		templatePartials: {
 			tocHeading: mw.template.get( 'modules/toc/tocHeading' )
 		},
+		defaults: {
+			contentsMsg: mw.msg( 'toc' )
+		},
 		tagName: 'div',
 		className: 'toc-mobile',
 		template: mw.template.get( 'modules/toc/toc' )
