@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_131e8cc4",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-03-07T19:05:15Z",
+      "side": 1,
+      "message": "Theming for OOjs UI is now live in master…",
+      "revId": "0c72fb8ac8d3044b0852456b60e3d7f907880b7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_f30e8090",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-03-07T19:05:15Z",
+      "side": 1,
+      "message": "See above.",
+      "revId": "0c72fb8ac8d3044b0852456b60e3d7f907880b7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
