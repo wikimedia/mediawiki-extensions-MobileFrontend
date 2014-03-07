@@ -73,6 +73,7 @@ class ArticlePage
 
   # page-actions
   ul(:page_actions, id:"page-actions")
+  a(:nearby_button, css: "#page-secondary-actions .nearby")
 
   # editor
   textarea(:editor_text_area, class:"wikitext-editor")
@@ -83,6 +84,9 @@ class ArticlePage
   # drawer
   div(:keep_going, class:'overlay-bottom')
   div(:drawer, class:"drawer position-fixed visible")
+
+  # overlay
+  div(:overlay, css:".overlay")
 
   # visual editor
   div(:overlay_ve, css: ".editor-overlay-ve")
@@ -120,4 +124,7 @@ class ArticlePage
   a(:terms_link, text: "Terms of use")
   a(:license_link, href: "//creativecommons.org/licenses/by-sa/3.0/")
   a(:privacy_link, text: "Privacy")
+
+  # pagelist
+  ul(:page_list, css: ".page-list")
 end

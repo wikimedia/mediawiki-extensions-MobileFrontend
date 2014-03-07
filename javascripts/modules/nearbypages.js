@@ -8,7 +8,7 @@
 	function initNearbyButton( title, latitude, longitude ) {
 		function loadGeoNotAHack() {
 			loader.show();
-			mw.loader.using( 'mobile.nearby.beta', function() {
+			mw.loader.using( 'mobile.special.nearby.beta', function() {
 				var NearbyOverlay = M.require( 'modules/nearby/NearbyOverlay' );
 				if ( !overlay ) {
 					MobileWebClickTracking.log( 'geonotahack-clicked' );
