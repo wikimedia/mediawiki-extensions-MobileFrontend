@@ -4,6 +4,8 @@ class LoginPage
   include URL
   page_url URL.url("Special:UserLogin")
 
+  div(:login_head_message, class: "headmsg")
+
   div(:feedback, class: "errorbox")
   button(:login, id: "wpLoginAttempt")
   text_field(:password, id: "wpPassword1")

@@ -24,10 +24,14 @@ Feature: Menus open correct page for anonymous users
   Scenario: Watchlist URL is set correctly
     When I click on "Watchlist" in the main navigation menu
     Then The URL of the page should contain "returnto=Special%3AWatchlist"
+        And I see the log in prompt message "A watchlist helps you bookmark pages and keep track of changes to them."
+        And I see the log in prompt message "Log in to see it."
 
   Scenario: Uploads URL is set correctly
     When I click on "Uploads" in the main navigation menu
     Then The URL of the page should contain "returnto=Special%3AUploads"
+      And I see the log in prompt message "Media on Wikipedia is donated by people like you"
+      And I see the log in prompt message "Log in to share your media"
 
   Scenario: Settings URL is set correctly
     When I click on "Settings" in the main navigation menu
