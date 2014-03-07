@@ -27,7 +27,7 @@ Scenario: Going back from save screen in VisualEditor
     And I am logged into the mobile website
     And I am on the "Selenium Edit Test" page
   When I click the edit button
-    And I type ABCDEFG into VisualEditor
+    And I type "ABCDEFG" into VisualEditor
     And I click continue
     And I click the escape button
   Then I see the VisualEditor
