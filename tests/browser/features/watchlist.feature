@@ -8,6 +8,7 @@ Feature: Manage Watchlist
     Then I receive watchlist message A watchlist helps you bookmark pages and keep track of changes to them.
       And I receive watchlist message Log in to see it.
 
+  @login
   Scenario: Add an article to the watchlist
     Given I am logged into the mobile website
       And I am on the "Barack Obama" page
@@ -16,6 +17,7 @@ Feature: Manage Watchlist
       And I see a toast with message "Added Barack Obama to your watchlist"
       And The watch star is selected
 
+  @login
   Scenario: Remove an article from the watchlist
     Given I am logged into the mobile website
     # FIXME: This assumes the scenario above has run and that the article is in fact watched

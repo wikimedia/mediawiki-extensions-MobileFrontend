@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org @login
+@en.m.wikipedia.beta.wmflabs.org @login @test2.m.wikipedia.org
 Feature: Special:Uploads uploads
 
   Scenario: Upload image file of invalid format
