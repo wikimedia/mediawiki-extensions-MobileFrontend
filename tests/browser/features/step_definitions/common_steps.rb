@@ -89,6 +89,11 @@ Given(/^I am on the "(.+)" page$/) do |article|
   visit(ArticlePage, :using_params => {:article_name => article})
 end
 
+Given(/^I am on a page that does not exist$/) do
+  name = 'NewPage' + Time.now.to_i.to_s
+  visit(ArticlePage, :using_params => {:article_name => name})
+end
+
 Then(/^The URL of the page should contain "(.+)"$/) do |article|
   on(ArticlePage) do |page|
     page.wait_until do
@@ -107,8 +112,12 @@ When(/^I click the browser back button$/) do
   on(ArticlePage).back
 end
 
-When(/^I click the browser back button and confirm$/) do
+When(/^I say OK in the confirm dialog$/) do
   on(ArticlePage).confirm(true) do
-    on(ArticlePage).back
   end
+end
+
+Then(/^There is a red link with text "(.+)"$/) do |text|
+  # FIXME: Switch to link_element when red links move to stable
+  on(ArticlePage).content_wrapper_element.span_element(text: text).when_present(10).should be_visible
 end
