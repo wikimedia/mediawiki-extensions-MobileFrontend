@@ -592,10 +592,11 @@ class ApiMobileView extends ApiBase {
 			'id' => 'Id of the page',
 			'page' => 'Title of page to process',
 			'redirect' => 'Whether redirects should be followed',
-			'sections' => "Pipe-separated list of section numbers for which to return text. "
-				. "`all' can be used to return for all. Ranges in format '1-4' mean get sections 1,2,3,4. "
-				. "Ranges without second number, e.g. '1-' means get all until the end. "
-				. "`references' can be used to specify that all sections containing references should be returned.",
+			'sections' => array( 'Pipe-separated list of section numbers for which to return text.',
+				" `all' can be used to return for all. Ranges in format '1-4' mean get sections 1,2,3,4.",
+				" Ranges without second number, e.g. '1-' means get all until the end.",
+				" `references' can be used to specify that all sections containing references should be returned."
+			),
 			'prop' => array(
 				'Which information to get',
 				' text            - HTML of selected section(s)',
