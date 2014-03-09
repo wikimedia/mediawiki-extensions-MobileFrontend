@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_aae07624",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 596,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-03-09T17:03:28Z",
+      "side": 1,
+      "message": "There\u0027s a double space here (end of this and beginning of next line).",
+      "revId": "f8c383a82f197bf0251a9611a9aa581fe02cafad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
