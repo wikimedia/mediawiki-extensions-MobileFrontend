@@ -12,6 +12,7 @@
 			"mobileview": {
 				"id": -1,
 				displaytitle: 'Test',
+				revId: 42,
 				"lastmodifiedby": {
 					"name": "bob",
 					"gender": "unknown"
@@ -35,6 +36,7 @@
 				lastModifiedUserGender: 'unknown',
 				lastModifiedTimestamp: 1382986196,
 				title: 'Test',
+				revId: 42,
 				displayTitle: 'Test',
 				id: -1,
 				protection: {
@@ -82,6 +84,7 @@
 					"name": "Melissa",
 					"gender": "female"
 				},
+				revId: 42,
 				displaytitle: 'Test',
 				"lastmodified": "2013-10-28T18:49:56Z",
 				"languagecount": 10,
@@ -133,6 +136,7 @@
 				displayTitle: 'Test',
 				id: -1,
 				isMainPage: false,
+				revId: 42,
 				languageCount: 10,
 				hasVariants: false,
 				lead: 'lead content',
