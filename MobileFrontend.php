@@ -4,8 +4,12 @@
  *
  * @file
  * @ingroup Extensions
+ * @author Arthur Richards
+ * @author Jon Robson
+ * @author Juliusz Gonera
+ * @author Max Semenik
  * @author Patrick Reilly
- * @copyright © 2011 Patrick Reilly
+ * @author Ryan Kaldari
  * @licence GNU General Public Licence 2.0 or later
  */
 
