@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_ca13bb5b",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 18
+      },
+      "writtenOn": "2014-03-10T19:18:56Z",
+      "side": 0,
+      "message": "I didn\u0027t think it was legal with http://www.gnu.org/licenses/gpl-2.0.html to just remove the copyright line?",
+      "revId": "fa9a102d5e2d7f33d79c3c16be3ad32a528b47a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
