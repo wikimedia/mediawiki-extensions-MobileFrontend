@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_5651980f",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-03-10T10:31:29Z",
+      "side": 1,
+      "message": "Double escaping: element() already escapes its input.",
+      "revId": "de3171ac7cb5043a59610dffc27c28f1f1422f76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
