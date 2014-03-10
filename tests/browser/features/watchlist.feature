@@ -2,7 +2,7 @@
 Feature: Manage Watchlist
 
   Scenario: Clicking the watchlist item in main menu when anonymous
-    Given I am on the home page
+    Given I am on the "Main Page" page
       And I am not logged in
     When I click on "Watchlist" in the main navigation menu
     Then I receive watchlist message A watchlist helps you bookmark pages and keep track of changes to them.
