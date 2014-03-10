@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_c475f2f5",
+        "filename": "tests/browser/README.mediawiki",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-10T17:30:58Z",
+      "side": 1,
+      "message": "Instead of requiring people to set-up the Coord template, it would be better to just use the parser function directly:\n{{#coordinates:43|-75|primary}}",
+      "revId": "f5fdb041d9fbb1aef690c69b79f06e0c6a12f541",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
