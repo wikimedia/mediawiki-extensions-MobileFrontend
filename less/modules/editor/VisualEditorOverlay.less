@@ -76,19 +76,19 @@
 			text-indent: -999px;
 			width: 24px;
 			padding: 0 12px;
-			background-position: center center;
-			background-repeat: no-repeat;
-			.background-size(24px, 24px);
 			position: relative;
 			// FIXME: Remove this reset once oo-ui supports skinning
 			border: none;
 			// FIXME: Remove this reset once oo-ui supports skinning
 			border-radius: 0;
 			margin: -@headerMargin 0 0 1em;
-			padding-bottom: @headerMargin;
 
 			&.oo-ui-tool-active {
 				background-color: #EDF4FF;
+				&.oo-ui-widget-enabled {
+					// FIXME: Remove this when oo-ui supports skinning. Reset background gradient from VE.
+					background-image: none;
+				}
 			}
 
 			* {
@@ -99,25 +99,18 @@
 				bottom: 0;
 				display: block;
 			}
+		}
 
-			// FIXME: Remove this once Story 1714 is complete (support for localized icons in mobile VE)
-			&.oo-ui-tool-name-bold {
-				.background-image-svg-quick( 'images/bold-normal' );
-				&.oo-ui-tool-active {
-					.background-image-svg-quick( 'images/bold-select' );
-				}
-			}
-
-			// FIXME: Remove this once Story 1714 is complete (support for localized icons in mobile VE)
-			&.oo-ui-tool-name-italic {
-				.background-image-svg-quick( 'images/italic-normal' );
-				&.oo-ui-tool-active {
-					.background-image-svg-quick( 'images/italic-select' );
-				}
-			}
-
+		// FIXME: remove these once oo-ui supports skinning (lib/oojs-ui/oojs-ui.svg.css is not loaded)
+		.oo-ui-barToolGroup {
 			.oo-ui-tool-link {
 				height: 3em;
+
+				.oo-ui-iconedElement-icon {
+					width: 3em;
+					height: 3em;
+					.background-size( 32px, 32px );
+				}
 			}
 		}
 
