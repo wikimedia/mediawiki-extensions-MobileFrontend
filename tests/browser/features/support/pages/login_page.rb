@@ -18,9 +18,6 @@ class LoginPage
   div(:message_box, class:"headmsg")
   div(:warning_box, class:"alert warning")
 
-  def logged_in_as_element
-    @browser.div(id: "mw-content-text").p.b
-  end
   def login_with(username, password)
     # deal with autocomplete
     self.username_element.when_present.clear()
