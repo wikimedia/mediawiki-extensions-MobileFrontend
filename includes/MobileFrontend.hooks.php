@@ -42,7 +42,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
 		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition,
-			$wgMFWap, $wgValidSkinNames, $wgMFEnableMinervaBetaFeature;
+			$wgValidSkinNames, $wgMFEnableMinervaBetaFeature;
 
 		$mobileContext = MobileContext::singleton();
 
@@ -83,23 +83,18 @@ class MobileFrontendHooks {
 		// log whether user is using alpha/beta/stable
 		$mobileContext->logMobileMode();
 
-		if ( $mobileContext->getContentFormat() == 'WML' && $wgMFWap == 'enabled' ) {
-			# Grab the skin class and initialise it.
-			$skin = new SkinMobileWML( $context );
-		} else {
-			$skinName = $wgMFDefaultSkinClass;
-			$betaSkinName = $skinName . 'Beta';
-			$alphaSkinName = $skinName . 'Alpha';
-			// Force alpha for test mode to sure all modules can run
-			$inTestMode =
-				$context->getTitle()->getDBkey() === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
-			if ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) && class_exists( $alphaSkinName ) ) {
-				$skinName = $alphaSkinName;
-			} else if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
-				$skinName = $betaSkinName;
-			}
-			$skin = new $skinName( $context );
+		$skinName = $wgMFDefaultSkinClass;
+		$betaSkinName = $skinName . 'Beta';
+		$alphaSkinName = $skinName . 'Alpha';
+		// Force alpha for test mode to sure all modules can run
+		$inTestMode =
+			$context->getTitle()->getDBkey() === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
+		if ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) && class_exists( $alphaSkinName ) ) {
+			$skinName = $alphaSkinName;
+		} else if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
+			$skinName = $betaSkinName;
 		}
+		$skin = new $skinName( $context );
 
 		return false;
 	}
@@ -555,12 +550,6 @@ class MobileFrontendHooks {
 			}
 		}
 
-		$request = $context->getRequest();
-		$xWap = $request->getHeader( 'X-WAP' );
-		if ( $xWap ) {
-			$out->addVaryHeader( 'X-WAP' );
-			$request->response()->header( "X-WAP: $xWap" );
-		}
 		$out->addVaryHeader( 'Cookie' );
 
 		wfProfileOut( __METHOD__ );
@@ -678,7 +667,6 @@ class MobileFrontendHooks {
 		$files[] = "$dir/DeviceDetectionTest.php";
 		$files[] = "$dir/MobileContextTest.php";
 		$files[] = "$dir/MobileFormatterTest.php";
-		$files[] = "$dir/MobileFrontendHooksTest.php";
 		$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
 
 		// special page tests
@@ -720,25 +708,6 @@ class MobileFrontendHooks {
 			$urlParsed = wfParseUrl( $url );
 			$urlParsed['host'] = $mobileUrlParsed['host'];
 			$url = wfAssembleUrl( $urlParsed );
-		}
-		return true;
-	}
-
-	/**
-	 * UserRequiresHTTPS hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserRequiresHTTPS
-	 *
-	 * @param User $user
-	 * @param bool $https
-	 *
-	 * @return bool
-	 */
-	public static function onUserRequiresHTTPS( $user, &$https ) {
-		// WAP phones allegedly can't handle HTTPS, don't redirect them there
-		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() && $context->getDevice()->format() === 'wml' ) {
-			$https = false;
-			return false; // Stop further hook processing
 		}
 		return true;
 	}

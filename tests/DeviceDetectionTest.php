@@ -67,34 +67,6 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 		);
 	}
 
-	/**
-	 * @dataProvider provideTestFormat
-	 */
- 	public function testFormat( $format, $acceptHeader ) {
-		$detector = new DeviceDetection();
-		$device = $detector->detectDeviceProperties( '', $acceptHeader );
-		$this->assertEquals( $format, $device->format() );
-	}
-
-	public function provideTestFormat() {
-		return array(
-			// Typical WebKit-based mobile browser, e.g. Android
-			array( 'html', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' ),
-			// Opera Mini
-			array( 'html', 'text/html, application/xml;q=0.9, application/xhtml+xml, image/png,image/webp, image/jpeg,image/gif, image/x-xbitmap, */*;q=0.1' ),
-			// Samsung JET, https://bugzilla.wikimedia.org/show_bug.cgi?id=30827
-			array( 'html', 'text/html, application/xml, image/vnd.wap.wbmp, image/png, image/jpeg, image/gif, image/bmp, application/vnd.wap.xhtml+xml, application/xhtml+xml, application/vnd.wap.multipart.mixed, multipart/mixed, text/vnd.wap.wml, application/vnd.wap.wmlc, application/vnd.oma.dd+xml, text/vnd.sun.j2me.app-descriptor, application/java-archive, */*' ),
-			// Some average WAP browser
-			array( 'wml', 'text/vnd.wap.wml, image/vnd.wap.wbmp, image/png, image/jpeg, image/gif, image/bmp' ),
-			// Imaginary browser that prefers wml to html, but still takes html
-			array( 'html', 'text/vnd.wap.wml, text/html' ),
-			// Imaginary browser that prefers html to wml
-			array( 'html', 'text/html, text/vnd.wap.wml' ),
-			// Imaginary browser that wants only wml
-			array( 'wml', 'text/vnd.wap.wml' ),
-		);
-	}
-
 	private function mobileDevices() {
 		return $this->map( array_merge( $this->mobiles, $this->tablets ), true );
 	}

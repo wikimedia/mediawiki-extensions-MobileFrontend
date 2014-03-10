@@ -55,12 +55,13 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	public function testGetMobileUrl() {
-		global $wgMobileUrlTemplate, $wgHooks;
+		global $wgHooks;
 
+		$this->setMwGlobals( 'wgMFMobileHeader','X-WAP' );
+		$this->setMwGlobals( 'wgMobileUrlTemplate', '%h0.m.%h1.%h2' );
 		$invokes = 0;
 		$context = MobileContext::singleton();
 		$asserter = $this;
-		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
 		$wgHooks['GetMobileUrl'][] = function( &$string, $hookCtx ) use ( $asserter, &$invokes, $context ) {
 			$asserter->assertEquals( $context, $hookCtx );
 			$invokes++;
@@ -235,6 +236,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function testShouldDisplayMobileView( $shouldDisplay, $xWap = null, $requestVal = array(), $msg = null ) {
 		$testMethod = ( $shouldDisplay ) ? 'assertTrue' : 'assertFalse';
 
+		$this->setMwGlobals( 'wgMFMobileHeader','X-WAP' );
 		$request = MobileContext::singleton()->getRequest();
 		if ( count( $requestVal ) ) {
 			foreach ( $requestVal as $key => $val ) {

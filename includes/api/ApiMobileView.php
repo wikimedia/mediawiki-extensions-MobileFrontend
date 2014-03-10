@@ -354,7 +354,7 @@ class ApiMobileView extends ApiBase {
 
 		wfProfileIn( __METHOD__ . '-MobileFormatter' );
 		if ( !$this->noTransform ) {
-			$mf = new MobileFormatterHTML( MobileFormatter::wrapHTML( $html ), $title );
+			$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $title );
 			$mf->setRemoveMedia( $noImages );
 			$mf->filterContent();
 			$mf->setIsMainPage( $this->mainPage );

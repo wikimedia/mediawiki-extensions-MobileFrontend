@@ -50,14 +50,9 @@ $autoloadClasses = array (
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlDeviceProperties' => 'DeviceDetection',
 	'MobileContext' => 'MobileContext',
+	'MobileFormatter' => 'MobileFormatter',
 	'MobilePage' => 'MobilePage',
 	'MobileUserInfo' => 'MobileUserInfo',
-	'WmlContext' => 'WmlContext',
-	'WmlDeviceProperties' => 'DeviceDetection',
-
-	'MobileFormatter' => 'formatters/MobileFormatter',
-	'MobileFormatterHTML' => 'formatters/MobileFormatterHTML',
-	'MobileFormatterWML' => 'formatters/MobileFormatterWML',
 
 	'ApiMobileView' => 'api/ApiMobileView',
 	'ApiParseExtender' => 'api/ApiParseExtender',
@@ -88,12 +83,9 @@ $autoloadClasses = array (
 	'MinervaTemplateBeta' => 'skins/MinervaTemplateBeta',
 	'MinervaTemplateAlpha' => 'skins/MinervaTemplateAlpha',
 
-	'MobileTemplateWML' => 'skins/MobileTemplateWML',
-
 	'SkinMinerva' => 'skins/SkinMinerva',
 	'SkinMinervaBeta' => 'skins/SkinMinervaBeta',
 	'SkinMinervaAlpha' => 'skins/SkinMinervaAlpha',
-	'SkinMobileWML' => 'skins/SkinMobileWML',
 	'UserLoginAndCreateTemplate' => 'skins/UserLoginAndCreateTemplate',
 	'UserLoginMobileTemplate' => 'skins/UserLoginMobileTemplate',
 	'UserAccountCreateMobileTemplate' => 'skins/UserAccountCreateMobileTemplate',
@@ -137,7 +129,6 @@ $wgHooks['Gadgets::allowLegacy'][] = 'MobileFrontendHooks::onAllowLegacyGadgets'
 $wgHooks['UnitTestsList'][] = 'MobileFrontendHooks::onUnitTestsList';
 $wgHooks['CentralAuthLoginRedirectData'][] = 'MobileFrontendHooks::onCentralAuthLoginRedirectData';
 $wgHooks['CentralAuthSilentLoginRedirect'][] = 'MobileFrontendHooks::onCentralAuthSilentLoginRedirect';
-$wgHooks['UserRequiresHTTPS'][] = 'MobileFrontendHooks::onUserRequiresHTTPS';
 $wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::onResourceLoaderRegisterModules';
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
 
@@ -274,16 +265,9 @@ $wgMobileFrontendFormatCookieExpiry = null;
  */
 $wgMFRemovableClasses = array(
 	// These rules will be used for all transformations
-	'base' => array(
-	),
+	'base' => array(),
 	// HTML view
 	'HTML' => array(),
-	// WML view
-	'WML' => array(
-		'sup.reference', // References generally don't work in WML due to per-section views
-		'div.magnify',
-		'.nomobile',
-	),
 );
 
 /**
@@ -452,17 +436,11 @@ $wgMFKeepGoing = false;
 $wgMFTidyMobileViewSections = true;
 
 /**
- * Controls the use of WAP view. Possible values:
- *   enabled      - WAP is enabled;
- *   transitional - disabled but output still varied by X-WAP and requests with X-WAP: yes have shorter expiry time;
- *   disabled     - WAP is disabled;
+ * Requests containing header with this name will be considered as coming from mobile devices.
+ * The default value is for backwards compatibility.
+ * Set to false to explicitly disable this way of detection.
  */
-$wgMFWap = 'enabled';
-
-/**
- * Maximum HTTP lifetime for page views with $wgMFWap = 'transitional'
- */
-$wgMFTransitionalWapLifetime = 3 * 86400;
+$wgMFMobileHeader = 'X-WAP';
 
 /**
  * Controls whether the "Minerva as a desktop skin" beta feature is enabled

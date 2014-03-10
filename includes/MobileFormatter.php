@@ -3,17 +3,17 @@
 /**
  * Converts HTML into a mobile-friendly version
  */
-abstract class MobileFormatter extends HtmlFormatter {
+class MobileFormatter extends HtmlFormatter {
 	/*
 		String prefixes to be applied at start and end of output from Parser
 	*/
-	protected $pageTransformStart = '';
-	protected $pageTransformEnd = '';
+	protected $pageTransformStart = '<div>';
+	protected $pageTransformEnd = '</div>';
 	/*
 		String prefixes to be applied before and after section content.
 	*/
-	protected $headingTransformStart = '';
-	protected $headingTransformEnd = '';
+	protected $headingTransformStart = '</div>';
+	protected $headingTransformEnd = '<div>';
 
 	/**
 	 * @var Title
@@ -48,8 +48,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 	 * @return MobileFormatter
 	 */
 	public static function newFromContext( $context, $html ) {
-		global $wgMFWap;
-
 		wfProfileIn( __METHOD__ );
 
 		$title = $context->getTitle();
@@ -58,15 +56,10 @@ abstract class MobileFormatter extends HtmlFormatter {
 		$isSpecialPage = $title->isSpecialPage();
 
 		$html = self::wrapHTML( $html );
-		if ( $context->getContentFormat() === 'WML' && $wgMFWap === 'enabled' ) {
-			$wmlContext = new WmlContext( $context );
-			$formatter = new MobileFormatterWML( $html, $title, $wmlContext );
-		} else {
-			$formatter = new MobileFormatterHTML( $html, $title );
-			$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
-			// Only show red links to logged in users in beta or alpha mode
-			$formatter->flattenRedLinks( !$context->isBetaGroupMember() || $context->getUser()->isAnon() );
-		}
+		$formatter = new MobileFormatter( $html, $title );
+		$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
+		// Only show red links to logged in users in beta or alpha mode
+		$formatter->flattenRedLinks( !$context->isBetaGroupMember() || $context->getUser()->isAnon() );
 
 		if ( $context->isBetaGroupMember() ) {
 			$formatter->disableBackToTop();
@@ -79,11 +72,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 		wfProfileOut( __METHOD__ );
 		return $formatter;
 	}
-
-	/**
-	 * @return string: Output format
-	 */
-	public abstract function getFormat();
 
 	/**
 	 * @todo: kill with fire when there will be minimum of pre-1.1 app users remaining
@@ -121,7 +109,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 
 		if ( $removeDefaults ) {
 			$this->remove( $wgMFRemovableClasses['base'] );
-			$this->remove( $wgMFRemovableClasses[$this->getFormat()] );
+			$this->remove( $wgMFRemovableClasses['HTML'] ); // @todo: Migrate this variable
 		}
 
 		if ( $this->removeMedia ) {
@@ -184,7 +172,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Performs final transformations to mobile format and returns resulting HTML/WML
+	 * Performs final transformations to mobile format and returns resulting HTML
 	 *
 	 * @param DOMElement|string|null $element: ID of element to get HTML from or false to get it from the whole tree
 	 * @return string: Processed HTML
@@ -266,8 +254,10 @@ abstract class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Prepares headings in WML mode, makes sections expandable in HTML mode
+	 * Makes sections expandable
+	 *
 	 * @param string $s
+	 * @param string $tagName
 	 * @return string
 	 */
 	protected function headingTransform( $s, $tagName = 'h2' ) {
@@ -278,5 +268,15 @@ abstract class MobileFormatter extends HtmlFormatter {
 			$this->pageTransformEnd;
 		wfProfileOut( __METHOD__ );
 		return $s;
+	}
+
+	protected function onHtmlReady( $html ) {
+		wfProfileIn( __METHOD__ );
+		if ( $this->expandableSections ) {
+			$tagName = strrpos( $html, '<h1' ) !== false ? 'h1' : 'h2';
+			$html = $this->headingTransform( $html, $tagName );
+		}
+		wfProfileOut( __METHOD__ );
+		return $html;
 	}
 }

@@ -56,6 +56,8 @@ class MobileContext extends ContextSource {
 	 * @return IDeviceProperties
 	 */
 	public function getDevice() {
+		global $wgMFMobileHeader;
+
 		wfProfileIn( __METHOD__ );
 		if ( $this->device ) {
 			wfProfileOut( __METHOD__ );
@@ -64,10 +66,8 @@ class MobileContext extends ContextSource {
 		$detector = DeviceDetection::factory();
 		$request = $this->getRequest();
 
-		$wap = $this->getRequest()->getHeader( 'X-WAP' );
-		if ( $wap ) {
-			$className = ( $wap === 'no' ) ? 'HtmlDeviceProperties' : 'WmlDeviceProperties';
-			$this->device = new $className;
+		if ( $wgMFMobileHeader && $this->getRequest()->getHeader( $wgMFMobileHeader ) !== false ) {
+			$this->device = new HtmlDeviceProperties();
 		} else {
 			$userAgent = $request->getHeader( 'User-agent' );
 			$acceptHeader = $request->getHeader( 'Accept' );
@@ -93,24 +93,6 @@ class MobileContext extends ContextSource {
 		return $this->contentFormat;
 	}
 
-	/**
-	 * Converts a multitude of format strings to 'HTML' or 'WML'
-	 * @param string $format
-	 *
-	 * @return string
-	 */
-	public static function parseContentFormat( $format ) {
-		if ( $format === 'wml' ) {
-			return 'WML';
-		} elseif ( $format === 'html' ) {
-			return 'HTML';
-		}
-		if ( $format === 'mobile-wap' ) {
-			return 'WML';
-		}
-		return 'HTML';
-	}
-
 	public function imagesDisabled() {
 		if ( is_null( $this->disableImages ) ) {
 			$this->disableImages = (bool)$this->getRequest()->getCookie( 'disableImages' );
@@ -128,7 +110,7 @@ class MobileContext extends ContextSource {
 		if ( $this->getAMF() ) {
 			return true;
 		}
-		$device =  $this->getDevice();
+		$device = $this->getDevice();
 		return $device->isMobileDevice()
 			&& !( !$wgMFShowMobileViewToTablets && $device->isTablet() );
 
@@ -313,7 +295,8 @@ class MobileContext extends ContextSource {
 	 * @return bool Value for shouldDisplayMobileView()
 	 */
 	private function shouldDisplayMobileViewInternal() {
-		global $wgMobileUrlTemplate;
+		global $wgMobileUrlTemplate, $wgMFMobileHeader;
+
 		$ctx = MobileContext::singleton();
 		$action = $this->getAction();
 
@@ -336,14 +319,17 @@ class MobileContext extends ContextSource {
 
 		/**
 		 * If a mobile-domain is specified by the $wgMobileUrlTemplate and
-		 * there's an X-WAP header, then we assume the user is accessing
+		 * there's a mobile header, then we assume the user is accessing
 		 * the site from the mobile-specific domain (because why would the
-		 * desktop site set X-WAP header?). If a user is accessing the
+		 * desktop site set the header?). If a user is accessing the
 		 * site from a mobile domain, then we should always display the mobile
 		 * version of the site (otherwise, the cache may get polluted). See
 		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=46473
 		 */
-		if ( $wgMobileUrlTemplate && $this->getRequest()->getHeader( 'X-WAP' ) ) {
+		if ( $wgMobileUrlTemplate
+			&& $wgMFMobileHeader
+			&& $this->getRequest()->getHeader( $wgMFMobileHeader ) !== false )
+		{
 			return true;
 		}
 
