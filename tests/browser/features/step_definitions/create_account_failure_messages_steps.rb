@@ -1,7 +1,3 @@
-Given(/^that I am on the User login page$/) do
-  visit(LoginPage)
-end
-
 Given(/^I click Create Account$/) do
   on(LoginPage).create_account_link_element.when_present.click
 end
