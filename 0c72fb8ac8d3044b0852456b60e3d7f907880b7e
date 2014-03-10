@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_9f35f3a5",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-10T18:19:56Z",
+      "side": 1,
+      "message": "True, although the apex theme is still assigned to all skins by default in the oojs-ui module definition in core. Still need to fix that.",
+      "parentUuid": "4e04eb01_131e8cc4",
+      "revId": "0c72fb8ac8d3044b0852456b60e3d7f907880b7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_f30e8090",
         "filename": "less/modules/editor/VisualEditorOverlay.less",
         "patchSetId": 1
@@ -30,6 +48,23 @@
       "writtenOn": "2014-03-07T19:05:15Z",
       "side": 1,
       "message": "See above.",
+      "revId": "0c72fb8ac8d3044b0852456b60e3d7f907880b7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_1fca03a3",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-10T18:19:56Z",
+      "side": 1,
+      "message": "We should increase the background-size so the icons aren\u0027t so small.\n\nAlso, after the rebase, you\u0027ll notice we are using LESS vars instead of 3em.",
       "revId": "0c72fb8ac8d3044b0852456b60e3d7f907880b7e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
