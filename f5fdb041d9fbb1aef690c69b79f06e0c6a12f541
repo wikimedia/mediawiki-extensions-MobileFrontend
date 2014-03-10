@@ -16,6 +16,24 @@
       "revId": "f5fdb041d9fbb1aef690c69b79f06e0c6a12f541",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_7fca271f",
+        "filename": "tests/browser/README.mediawiki",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-10T21:49:42Z",
+      "side": 1,
+      "message": "Mm.. as discussed in person this doesn\u0027t work for me. Is anything else in that template? Can we resolve this in a follow up commit?",
+      "parentUuid": "4e04eb01_c475f2f5",
+      "revId": "f5fdb041d9fbb1aef690c69b79f06e0c6a12f541",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
