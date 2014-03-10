@@ -3476,7 +3476,7 @@ $messages['ce'] = array(
 	'mobile-frontend-settings-site-header' => '«{{SITENAME}}» проектан меттанаш',
 	'mobile-frontend-page-menu-contents' => 'чулацам',
 	'mobile-frontend-page-menu-history' => 'Истори',
-	'mobile-frontend-page-saving' => 'Ӏалашяр $1',
+	'mobile-frontend-page-saving' => '<strong>Ӏалашяр</strong><span> $1</span>',
 	'mobile-frontend-nearby-title' => 'Уллехь',
 	'mobile-frontend-nearby-loading' => 'Чу бокхуш бу хаам, хьона уллехь хӀун ю гойтуш',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}',
@@ -3498,6 +3498,7 @@ $messages['ce'] = array(
 	'mobile-frontend-image-heading-describe' => "'''Язъе суьртах''' лаьцна",
 	'mobile-frontend-editor-continue' => 'Кхин дӀа',
 	'mobile-frontend-editor-cancel' => 'Цаоьшу',
+	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1|Ахьа}} {{SITENAME}} сайтан чохь керла агӀо кхуллуш ю!',
 	'tag-mobile_edit' => 'Мобиль-ца. дийна нисдар',
 	'tag-mobile_edit-description' => 'Сайтан мобильни версеца дина нисдарш',
 	'mobile-frontend-drawer-cancel' => 'Цаоьшу',
@@ -8417,6 +8418,7 @@ $messages['he'] = array(
 );
 
 /** Hindi (हिन्दी)
+ * @author Adithyavr
  * @author Ankitgadgil
  * @author Ansumang
  * @author Faisalaziz4ever
@@ -8464,6 +8466,7 @@ $messages['hi'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'लेख', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'वार्ता',
 	'mobile-frontend-watchlist-filter-other' => 'अन्य',
+	'mobile-frontend-editor-placeholder-new-page' => '$1{{GENDER:$1|आप बना रहे है}} {{SITENAME}} पर नया पृष्ठ!',
 );
 
 /** Fiji Hindi (Latin script) (Fiji Hindi)
@@ -16634,7 +16637,7 @@ $messages['pt'] = array(
 	'mobile-frontend-overlay-escape' => 'Voltar',
 	'mobile-frontend-overlay-close' => 'Fechar',
 	'mobile-frontend-overlay-continue' => 'Continuar',
-	'mobile-frontend-placeholder' => 'Pesquisar na {{SITENAME}}',
+	'mobile-frontend-placeholder' => 'Pesquisar em {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Pesquisar em {{SITENAME}} (beta)',
 	'mobile-frontend-placeholder-alpha' => 'Pesquisar em {{SITENAME}} (experimental)',
 	'mobile-frontend-dismiss-notification' => 'ignorar esta notificação',
@@ -16753,6 +16756,7 @@ $messages['pt'] = array(
 	'mobile-frontend-editor-save' => 'Gravar',
 	'mobile-frontend-editor-cancel' => 'Cancelar',
 	'mobile-frontend-editor-keep-editing' => 'Continuar a editar',
+	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1|Está a criar}} uma nova página em {{SITENAME}}!',
 	'mobile-frontend-editor-new-page-confirm' => '{{GENDER:$1|Tens a certeza que pretendes criar}} uma nova página em {{SITENAME}}?',
 	'mobile-frontend-editor-wait' => 'A gravar edição, aguarde por favor.',
 	'mobile-frontend-editor-success' => 'Sucesso! A sua edição foi gravada.',
@@ -18077,7 +18081,7 @@ $messages['sco'] = array(
 	'mobile-frontend-editor-success-new-page' => 'Congratulâtions oan cræftin ae new page!',
 	'mobile-frontend-requires-title' => 'Page no available',
 	'mobile-frontend-requires-mobile' => 'This page isna available oan desktap. Please clap the mobile luik-at link at the bottom o the page.',
-	'mobile-frontend-profile-footer-ancient' => 'Makit [[Special:Contributions/$1|{{PLURAL:$3|1 eidit|$3 eidits}}]] an [[Special:Uploads/$1|{{PLURAL:$4|1 uplaid|$4 uplaids|500=500+ uplaids}}]].',
+	'mobile-frontend-profile-footer-ancient' => 'Makit [[Special:Contributions/$1|{{PLURAL:$3|1 eedit|$3 eedits}}]] n [[Special:Uploads/$1|{{PLURAL:$4|1 uplaid|$4 uplaids|500=500+ uplaids}}]].',
 	'beta-feature-minerva' => 'Enable mobile skin (Minerva) oan the desktap',
 	'beta-feature-minerva-description' => 'Mak the skin uised on mobile devices ae selectable desktop skin unner the appearance preferences tab.',
 );
