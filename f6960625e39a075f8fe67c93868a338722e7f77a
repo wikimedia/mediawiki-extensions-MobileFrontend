@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_77b48bcf",
+        "filename": "tests/browser/features/no_javascript_site.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-10T22:07:46Z",
+      "side": 1,
+      "message": "This doesn\u0027t make sense without the commented tags :)",
+      "revId": "f6960625e39a075f8fe67c93868a338722e7f77a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
