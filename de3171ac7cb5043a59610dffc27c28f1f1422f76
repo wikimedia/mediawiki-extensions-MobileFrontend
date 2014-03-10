@@ -16,6 +16,24 @@
       "revId": "de3171ac7cb5043a59610dffc27c28f1f1422f76",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_a4b426d0",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-10T17:00:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e04eb01_5651980f",
+      "revId": "de3171ac7cb5043a59610dffc27c28f1f1422f76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
