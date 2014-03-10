@@ -1,4 +1,4 @@
-@custom-browser @en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org
+@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org
 Feature: Basic site for legacy devices.
 
   # FIXME: Add scenario to check search actually works
