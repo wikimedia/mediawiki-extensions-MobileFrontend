@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e0177f3_eaf05790",
+        "filename": "includes/specials/SpecialMobileMenu.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-03-11T18:34:38Z",
+      "side": 1,
+      "message": "Commit summary in comments?:)",
+      "revId": "35bfe977f807837c66b3fe11f57794753f3a6934",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
