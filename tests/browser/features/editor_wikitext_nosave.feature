@@ -1,5 +1,5 @@
 @en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @login @test2.m.wikipedia.org
-Feature: Wikitext Editor
+Feature: Wikitext Editor (TEST RUN ON WIKIPEDIA.ORG SO SHOULD NOT CAUSE SAVES)
 
   Background:
     Given I am logged into the mobile website

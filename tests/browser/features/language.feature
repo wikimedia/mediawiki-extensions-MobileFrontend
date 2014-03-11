@@ -4,6 +4,7 @@ Feature: Language selection
 
   Background:
     Given I am on the "Main Page" page
+      And I see the read in another language button
     When I click the language button
 
   Scenario: Opening language overlay

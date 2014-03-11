@@ -38,6 +38,7 @@
 			options.displayTitle = options.displayTitle || options.title;
 			// Surface the display title for M.reloadPage
 			this.displayTitle = options.displayTitle;
+			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 			this._super( options );
 		},
 

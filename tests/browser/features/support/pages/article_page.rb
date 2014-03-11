@@ -116,7 +116,7 @@ class ArticlePage
 
   # secondary menu
   ## languages
-  a(:language_button, text: "Read in another language")
+  a(:language_button, css: ".languageSelector")
 
   #footer
   a(:desktop_link, text: "Desktop")

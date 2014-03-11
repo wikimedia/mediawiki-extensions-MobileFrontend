@@ -26,12 +26,12 @@
 	{{#inBetaOrAlpha}}
 	{{#hasLanguages}}
 	<div id="page-secondary-actions">
-		<a class="mw-ui-button mw-ui-progressive button languageSelector">{{languageLabel}}</a>
+		<a href="{{languageUrl}}" class="mw-ui-button mw-ui-progressive button languageSelector">{{languageLabel}}</a>
 	</div>
 	{{/hasLanguages}}
 	{{/inBetaOrAlpha}}
 	{{^inBetaOrAlpha}}
-	<div class="section" id="mw-mf-language-section"></div>
+	<a href="{{languageUrl}}" class="mw-ui-button mw-ui-progressive button languageSelector">{{languageLabel}}</a>
 	<a href="{{historyUrl}}" id="mw-mf-last-modified" data-timestamp="{{lastModifiedTimestamp}}"
 		data-user-name="{{lastModifiedUserName}}" data-user-gender="{{lastModifiedUserGender}}"
 		></a>

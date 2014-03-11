@@ -18,6 +18,8 @@ an edit count of greater than 0
 * Ensure you have [//www.mediawiki.org/wiki/Extension:ConfirmEdit Extension:ConfirmEdit] installed
 ** and setup with FancyCaptcha
 * A "Diff test" page is used by the test suite thus cannot be used for another purpose.
+* Ensure there is a San Francisco article
+** and it has languages
 * Ensure there is a Barack Obama article
 ** and it is a protected page
 * Edit MediaWiki:mobile-frontend-terms-text with text 'Terms of use'

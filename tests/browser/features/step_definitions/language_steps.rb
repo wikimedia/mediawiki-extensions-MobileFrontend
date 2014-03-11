@@ -1,3 +1,7 @@
+When /^I see the read in another language button$/ do
+  on(ArticlePage).language_button_element.when_present.should be_visible
+end
+
 When /^I click the language button$/ do
   on(ArticlePage).language_button_element.when_present.click
 end
