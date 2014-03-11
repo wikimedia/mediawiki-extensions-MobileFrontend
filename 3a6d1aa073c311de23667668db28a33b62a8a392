@@ -22,6 +22,24 @@
       "revId": "3a6d1aa073c311de23667668db28a33b62a8a392",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e0177f3_8a5af3f7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-11T18:24:13Z",
+      "side": 1,
+      "message": "Feel free to update commit message and +2 in future. I\u0027m all more meaningful commit messages.",
+      "parentUuid": "2e0177f3_beea9503",
+      "revId": "3a6d1aa073c311de23667668db28a33b62a8a392",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
