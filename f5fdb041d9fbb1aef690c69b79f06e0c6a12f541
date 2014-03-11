@@ -34,6 +34,24 @@
       "revId": "f5fdb041d9fbb1aef690c69b79f06e0c6a12f541",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e0177f3_d0f78a55",
+        "filename": "tests/browser/README.mediawiki",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-11T22:23:04Z",
+      "side": 1,
+      "message": "Turns out I needed to pull the latest GeoData extension for this to work.",
+      "parentUuid": "4e04eb01_7fca271f",
+      "revId": "f5fdb041d9fbb1aef690c69b79f06e0c6a12f541",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
