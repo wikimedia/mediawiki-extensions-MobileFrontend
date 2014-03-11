@@ -23,3 +23,7 @@ end
 When(/^I clear the editor$/) do
   on(ArticlePage).editor_text_area_element.when_present.clear
 end
+
+Given(/^I type "(.+)" into the editor$/) do |text|
+  on(ArticlePage).editor_text_area_element.when_present.send_keys(text)
+end
