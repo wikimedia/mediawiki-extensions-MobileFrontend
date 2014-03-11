@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e0177f3_2fb1b1dc",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-11T17:24:48Z",
+      "side": 0,
+      "message": "This seems to still be needed - I\u0027m seeing no gradient before this change and a gradient after this change....",
+      "revId": "1a598fbeb73da664d153582da440bfab0195d608",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
