@@ -26,8 +26,8 @@ $messages['en'] = array (
 	'mobilefrontend-keepgoing-links-title' => 'Add links',
 	'mobilefrontend-keepgoing-links-ask-first' => 'Congratulations on making your first edit! Would you like to help add links to a recently created page?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'Fix another page?',
-	'mobilefrontend-keepgoing-links-explain' => 'Find more words that could be links. Add double brackets around the word.',
-	'mobilefrontend-keepgoing-links-example' => 'e.g. $1guitar$2 becomes $3guitar$4',
+	'mobilefrontend-keepgoing-links-explain' => 'Where the title of an existing page is mentioned, enclose it in double brackets',
+	'mobilefrontend-keepgoing-links-example' => 'E.g. $1guitar$2 becomes $3guitar$4',
 
 	/** special pages */
 	'nearby' => 'Pages near you',
