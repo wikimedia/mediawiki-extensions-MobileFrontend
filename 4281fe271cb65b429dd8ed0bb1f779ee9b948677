@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e0177f3_bbd627f5",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 600,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-11T01:01:38Z",
+      "side": 1,
+      "message": "Notice: Undefined variable: wgMFEnableMinervaBetaFeature in /Users/jrobson/Sites/w/extensions/MobileFrontend/includes/MobileFrontend.hooks.php on line \u003ci\u003e601",
+      "revId": "4281fe271cb65b429dd8ed0bb1f779ee9b948677",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
