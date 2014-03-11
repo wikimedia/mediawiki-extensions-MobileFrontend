@@ -105,7 +105,6 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 
 $wgHooks['LinksUpdate'][] = 'MobileFrontendHooks::onLinksUpdate';
-
 $wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::onRequestContextCreateSkin';
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec';
 $wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::onBeforePageRedirect';
@@ -143,6 +142,9 @@ $wgSpecialPages = array_merge( $wgSpecialPages, array(
 	'Uploads' => 'SpecialUploads',
 	'UserProfile' => 'SpecialUserProfile',
 ) );
+
+// Register Minerva as a valid skin
+$wgValidSkinNames['minerva'] = "Minerva";
 
 function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,

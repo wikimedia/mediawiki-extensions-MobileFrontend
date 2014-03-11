@@ -54,12 +54,6 @@ class MobileFrontendHooks {
 				$out = $context->getOutput();
 				$out->addModules( 'mobile.desktop' );
 			}
-			if ( class_exists( 'BetaFeatures' )
-				&& BetaFeatures::isFeatureEnabled( $context->getUser(), 'betafeatures-minerva' )
-				&& $wgMFEnableMinervaBetaFeature
-			) {
-				$wgValidSkinNames['minerva'] = "Minerva";
-			}
 			return true;
 		}
 
@@ -592,12 +586,25 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
+		global $wgMFEnableMinervaBetaFeature;
 		$definition = array(
 			'type' => 'api',
 			'default' => '',
 		);
 		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
+
+		// Remove the Minerva skin from the preferences unless Minerva has been enabled in
+		// BetaFeatures.
+		if ( !class_exists( 'BetaFeatures' )
+			|| !BetaFeatures::isFeatureEnabled( $user, 'betafeatures-minerva' )
+			|| !$wgMFEnableMinervaBetaFeature
+		) {
+			// Preference key/values are backwards. The value is the name of the skin. The
+			// key is the text+links to display.
+			$key = array_search( 'minerva', $preferences['skin']['options'] );
+			unset( $preferences['skin']['options'][$key] );
+		}
 
 		return true;
 	}
