@@ -1,13 +1,6 @@
 @en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org
 Feature: Manage Watchlist
 
-  Scenario: Clicking the watchlist item in main menu when anonymous
-    Given I am on the "Main Page" page
-      And I am not logged in
-    When I click on "Watchlist" in the main navigation menu
-    Then I receive watchlist message A watchlist helps you bookmark pages and keep track of changes to them.
-      And I receive watchlist message Log in to see it.
-
   @login
   Scenario: Add an article to the watchlist
     Given I am logged into the mobile website

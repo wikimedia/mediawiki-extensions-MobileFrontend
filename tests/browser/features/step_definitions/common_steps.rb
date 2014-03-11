@@ -85,10 +85,6 @@ Given /^I am in alpha mode$/ do
   end
 end
 
-Given /^I am not logged in$/ do
-  # nothing to do here, user in not logged in by default
-end
-
 Given(/^I am on the "(.+)" page$/) do |article|
   visit(ArticlePage, :using_params => {:article_name => article})
 end
