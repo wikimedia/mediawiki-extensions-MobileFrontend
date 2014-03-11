@@ -61,6 +61,10 @@ Then(/^I see the watch star$/) do
   on(ArticlePage).watch_link_element.should be_visible
 end
 
+When(/^I click the watch star$/) do
+  on(ArticlePage).watch_link_element.when_present.click
+end
+
 Then /^The watch star is selected$/ do
   on(ArticlePage).watch_link_element.class_name.should match "watched"
 end
