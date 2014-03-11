@@ -990,6 +990,9 @@ $wgMobileSpecialPageModules = array(
 		'styles' => array(
 			'less/specials/mobilemenu.less',
 		),
+		'skinStyles' => array(
+			'vector' => 'less/desktop/special/mobilemenu.less',
+		)
 	),
 	'mobile.special.mobileoptions.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
