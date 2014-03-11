@@ -10,6 +10,10 @@ Then(/^I see the VisualEditor overlay$/) do
   on(ArticlePage).overlay_ve_element.when_present.should exist
 end
 
+Then(/^I do not see the VisualEditor overlay$/) do
+  on(ArticlePage).overlay_ve_element.when_not_present(15)
+end
+
 Then(/^I see a toolbar in the overlay header$/) do
   on(ArticlePage).overlay_ve_header_toolbar_element.when_present.should exist
 end
