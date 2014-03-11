@@ -15,15 +15,6 @@ an edit count of greater than 0
 * A "Diff test" page is used by the test suite thus cannot be used for another purpose.
 * Ensure there is a Barack Obama article
 ** and it is a protected page
-** and it has the content:
-<pre>
-  == Presidential_campaigns ==
-  Test
-  [[File:Flickr_Obama_Springfield_01.jpg|thumbnail|Foo]]
-
-  == External_links ==
-  [image http://www.whitehouse.gov/administration/president_obama/]
-</pre>
 * Edit MediaWiki:mobile-frontend-terms-text with text 'Terms of use'
 * In LocalSettings.php place the following code:
 <pre>
