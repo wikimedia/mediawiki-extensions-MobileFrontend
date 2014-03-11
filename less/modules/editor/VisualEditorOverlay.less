@@ -85,10 +85,6 @@
 
 			&.oo-ui-tool-active {
 				background-color: #EDF4FF;
-				&.oo-ui-widget-enabled {
-					// FIXME: Remove this when oo-ui supports skinning. Reset background gradient from VE.
-					background-image: none;
-				}
 			}
 
 			* {
@@ -101,7 +97,8 @@
 			}
 		}
 
-		// FIXME: remove these once oo-ui supports skinning (lib/oojs-ui/oojs-ui.svg.css is not loaded)
+		// We may want to move these to an oojs-ui theme at some point. The down-side is
+		// that we wouldn't be able to use the @headerHeight LESS variable.
 		.oo-ui-barToolGroup {
 			.oo-ui-tool-link {
 				height: 3em;
