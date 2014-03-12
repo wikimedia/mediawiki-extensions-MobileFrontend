@@ -87,6 +87,9 @@ class ArticlePage
 
   # overlay
   div(:overlay, css:".overlay")
+  button(:overlay_close_button) do |page|
+    page.overlay_element.button_element(class: "cancel")
+  end
 
   # visual editor
   div(:overlay_ve, css: ".editor-overlay-ve")
@@ -114,10 +117,6 @@ class ArticlePage
   # secondary menu
   ## languages
   a(:language_button, text: "Read in another language")
-  div(:language_overlay, class: "language-overlay")
-  button(:language_overlay_close_button) do |page|
-    page.language_overlay_element.button_element(class: "cancel")
-  end
 
   #footer
   a(:desktop_link, text: "Desktop")
