@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
+@en.m.wikipedia.beta.wmflabs.org
 Feature: Nearby pages
 
 Scenario: Nearby button visible
