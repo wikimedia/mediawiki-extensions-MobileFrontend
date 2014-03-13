@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_9c2fe99c",
+        "filename": "tests/browser/README.mediawiki",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-13T21:20:19Z",
+      "side": 1,
+      "message": "Isn\u0027t there a shorter article to make the tests run faster?",
+      "revId": "cd583a0ae4c5ce691f622110bcc849126396738c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_7c1c157d",
+        "filename": "tests/browser/features/editor_wikitext_nosave.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-13T21:20:19Z",
+      "side": 1,
+      "message": "Not sure if this is visible enough. Maybe a comment in UPPERCASE?",
+      "revId": "cd583a0ae4c5ce691f622110bcc849126396738c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_bc32ad04",
+        "filename": "tests/browser/features/language.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-13T21:20:19Z",
+      "side": 1,
+      "message": "Why do we need this? If there\u0027s no button, the next step will fail anyway.",
+      "revId": "cd583a0ae4c5ce691f622110bcc849126396738c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
