@@ -4574,7 +4574,7 @@ $messages['de'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'Links hinzufügen',
 	'mobilefrontend-keepgoing-links-ask-first' => 'Herzlichen Glückwunsch für deine erste Bearbeitung! Willst du dabei helfen, Links zu einer kürzlich erstellten Seite hinzuzufügen?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'Eine andere Seite bearbeiten?',
-	'mobilefrontend-keepgoing-links-explain' => 'Finde weitere Wörter, die Links sein könnten. Füge doppelte Klammern um das Wort hinzu.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'Wo der Titel einer vorhandenen Seite erwähnt wird, umschließe ihn mit doppelten Klammern.',
 	'mobilefrontend-keepgoing-links-example' => 'z.&nbsp;B. aus $1Gitarre$2 wird $3Gitarre$4',
 	'nearby' => 'Seiten in deiner Nähe',
 	'mobile-frontend-desc' => 'Ermöglicht die für mobile Endgeräte optimierte Darstellung von Seiten',
@@ -6141,7 +6141,7 @@ $messages['fa'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'افزودن پیوند',
 	'mobilefrontend-keepgoing-links-ask-first' => 'برای اولین ویرایش به شما تبریک می‌گوییم! آیا مایل هستید که به افزودن پیوند به صفحهٔ‌ای که اخیرأ ایجاد کرده‌اید کمک کنید؟',
 	'mobilefrontend-keepgoing-links-ask-again' => 'تصحیح یک صفحهٔ دیگر؟',
-	'mobilefrontend-keepgoing-links-explain' => 'کلمات بیشتری که می‌توانستند لینک شوند را پیدا کنید. براکت‌های دوتایی اطراف کلمه اضافه کنید.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'هرجایی که عنوان صفحهٔ موجود ذکر شده‌است آن را در میان [[]] قرار دهید',
 	'mobilefrontend-keepgoing-links-example' => 'مثال $1 گیتار $2 می‌شود $3 گیتار $4',
 	'nearby' => 'صفحه‌های نزدیک شما',
 	'mobile-frontend-desc' => 'ظاهر تلفن همراه',
@@ -6260,7 +6260,7 @@ $messages['fa'] = array(
 	'mobile-frontend-page-saving' => '<strong>Saving</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'برای مشاهدهٔ اعلان‌ها لطفاً به سامانه وارد شوید یا ثبت‌نام کنید.',
 	'mobile-frontend-user-button-tooltip' => 'نمایش اعلان‌های من',
-	'mobile-frontend-nearby-to-page' => 'این صفحات به خاطر مکان جغرافیاییشان به $1 مربوط می‌شوند', # Fuzzy
+	'mobile-frontend-nearby-to-page' => 'نردیک $1',
 	'mobile-frontend-nearby-title' => 'در نزدیکی',
 	'mobile-frontend-nearby-loading' => 'بارگذاری موضوع‌های نزدیک به مکان فعلی شما',
 	'mobile-frontend-nearby-requirements' => 'پوزش! مرورگر وب شما تقریباً {{SITENAME}} را پشتیبانی نمی‌کند.',
@@ -6883,7 +6883,7 @@ $messages['fr'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'Ajouter des liens',
 	'mobilefrontend-keepgoing-links-ask-first' => 'Félicitations ! Vous avez fait votre première édition ! Voulez-vous nous aider en ajoutant des liens  vers une page récemment créée ?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'Corriger une autre page ?',
-	'mobilefrontend-keepgoing-links-explain' => 'Trouver davantage de mots qui pourraient être des liens. Ajouter des doubles crochets autour de ces mots.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'Quand le titre d’une page existante est mentionné, l’englober dans des crochets doubles',
 	'mobilefrontend-keepgoing-links-example' => 'par ex. $1guitar$2 devient $3guitar$4',
 	'nearby' => 'Pages près de vous',
 	'mobile-frontend-desc' => 'Affichage mobile',
@@ -8083,15 +8083,16 @@ $messages['ha'] = array(
 );
 
 /** Hawaiian (Hawai`i)
+ * @author Kolonahe
  */
 $messages['haw'] = array(
-	'mobile-frontend-search-submit' => 'Hele',
+	'mobile-frontend-search-submit' => 'E huli',
 	'mobile-frontend-home-button' => 'Home',
 	'mobile-frontend-random-button' => 'ʻOhi Kaulele',
 	'mobile-frontend-back-to-top-of-section' => 'Hoʻi i ka Māhele ma mua',
-	'mobile-frontend-regular-site' => 'Nānā kēia ʻaoʻao ma Wikipikia maʻamau', # Fuzzy
-	'mobile-frontend-featured-article' => 'Ka ʻAtikala Nui o Kēia Lā', # Fuzzy
-	'mobile-frontend-copyright' => "Loaʻa nā kikokikona i loko o <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; hiki paha kekahi mau mea ʻē aʻe ke pili. ʻIke i <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> no nā kikoʻī. ʻO Wikipikia kekahi Kunikia i kāinoa ʻia e <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, he ʻahahui uku ʻole ia.", # Fuzzy
+	'mobile-frontend-regular-site' => 'Nānā lolouila',
+	'mobile-frontend-featured-article' => 'Ka ʻAtikala hoʻohanohano o kēia lā',
+	'mobile-frontend-copyright' => 'Aia nā mealoko ma lalo o ka laikini $1 inā noka ʻole ia.',
 );
 
 /** Hebrew (עברית)
@@ -8118,7 +8119,7 @@ $messages['he'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'הוספת קישורים',
 	'mobilefrontend-keepgoing-links-ask-first' => 'ברכות על העריכה הראשונה שלך! אפשר לבקש ממך לעזור לנו להוסיף קישורים לדף שנוצר לא מזמן?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'לתקן דף אחר?',
-	'mobilefrontend-keepgoing-links-explain' => 'חשפו עוד מילים שהיו יכוליחם להיות קישורים. שימו אותה בסוגריים מרובעים כפולים.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'כאשר מוזכרת כותרת של דף קיים, יש להקיף אותה בסוגריים מרובעים כפולים.',
 	'mobilefrontend-keepgoing-links-example' => 'למשל, $1גיטרה$2 תהפוך ל$3גיטרה$4',
 	'nearby' => 'דפים לידך',
 	'mobile-frontend-desc' => 'תצוגה עבור מכשירים ניידים',
@@ -8239,7 +8240,7 @@ $messages['he'] = array(
 	'mobile-frontend-page-saving' => '<strong>שמירת<strong> <span>$1</span>',
 	'mobile-frontend-user-cta' => 'נא להיכנס או להירשם כדי לראות את ההודעות שלך.',
 	'mobile-frontend-user-button-tooltip' => 'הצגת ההודעות שלי',
-	'mobile-frontend-nearby-to-page' => 'הדפים הבאים קשורים ל{{GRAMMAR:$1}} במיקום הגאוגרפי שלהם', # Fuzzy
+	'mobile-frontend-nearby-to-page' => 'ליד $1:',
 	'mobile-frontend-nearby-title' => 'בסביבה',
 	'mobile-frontend-nearby-loading' => 'טעינת נושאים ליד המיקום הנוכחי שלך',
 	'mobile-frontend-nearby-requirements' => 'סילחה! הדפדפן שלך אינו תומך בפעולה "בסביבה" של אתר {{SITENAME}}.',
@@ -10441,7 +10442,7 @@ $messages['ja'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'リンクの追加',
 	'mobilefrontend-keepgoing-links-ask-first' => '初めての編集お疲れ様でした。最近作成されたページにリンクを追加してみませんか?',
 	'mobilefrontend-keepgoing-links-ask-again' => '別のページを修正しますか?',
-	'mobilefrontend-keepgoing-links-explain' => 'リンクにする語句を見つけます。その語句を二重括弧で囲みます。',
+	'mobilefrontend-keepgoing-links-explain' => '既存のページで言及している箇所を見つけたら、その語句を二重括弧で囲みます。',
 	'mobilefrontend-keepgoing-links-example' => '例: $1ギター$2 は $3ギター$4 になります',
 	'nearby' => '付近のページ',
 	'mobile-frontend-desc' => '携帯機器フロントエンド',
@@ -10562,7 +10563,7 @@ $messages['ja'] = array(
 	'mobile-frontend-page-saving' => '<span>$1</span> を<strong>保存中</strong>',
 	'mobile-frontend-user-cta' => '自分への通知を見るにはログインまたはアカウント作成をしてください。',
 	'mobile-frontend-user-button-tooltip' => '自分宛の通知を表示',
-	'mobile-frontend-nearby-to-page' => '以下のページは $1 と地理的に関連しています',
+	'mobile-frontend-nearby-to-page' => '以下のページは $1 と地理的に関連しています', # Fuzzy
 	'mobile-frontend-nearby-title' => '付近',
 	'mobile-frontend-nearby-loading' => '現在地付近の話題を読み込み中',
 	'mobile-frontend-nearby-requirements' => '申し訳ありませんが、ご使用中のブラウザーは{{SITENAME}}の付近検索に対応していません。',
@@ -13380,7 +13381,7 @@ $messages['mk'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'Додај врски',
 	'mobilefrontend-keepgoing-links-ask-first' => 'Честитаме на вашето прво уредување! Дали би сакале да ни помогнете да додадеме врски на неодамна создадена страница?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'Да поправиме друга страница?',
-	'mobilefrontend-keepgoing-links-explain' => 'Пронајдете уште зборови што можат да бидат врски. Околу секој збор ставете двојни квадратни загради.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'Кога ќе наидете на име на некоја постоечка страница, ставете го двојни квадратни загради.',
 	'mobilefrontend-keepgoing-links-example' => 'на пр. $1гитара$2 да биде $3гитара$4',
 	'nearby' => 'Страници во ваша близина',
 	'mobile-frontend-desc' => 'Мобилен посредник',
@@ -15588,7 +15589,6 @@ $messages['oc'] = array(
 	'mobile-frontend-settings-beta' => 'Bèta',
 	'mobile-frontend-random-button' => "A l'azard",
 	'mobile-frontend-back-to-top-of-section' => "Tornar d'una seccion",
-	'mobile-frontend-close-section' => 'Tampar aquesta seccion',
 	'mobile-frontend-regular-site' => 'Desactivar la version mobil',
 	'mobile-frontend-wml-continue' => 'Contunhar…',
 	'mobile-frontend-wml-back' => 'Retorn…',
@@ -15640,7 +15640,7 @@ $messages['oc'] = array(
 	'mobile-frontend-page-menu-contents' => 'contenguts',
 	'mobile-frontend-page-menu-history' => 'Istoric',
 	'mobile-frontend-meta-data-issues-header' => 'Problèmas',
-	'mobile-frontend-page-saving' => 'Enregistrament de $1',
+	'mobile-frontend-page-saving' => 'Enregistrament de $1', # Fuzzy
 	'mobile-frontend-photo-upload-generic' => 'Contribuir amb un imatge',
 	'mobile-frontend-donate-image-title' => 'Telecargaments',
 	'mobile-frontend-watchlist-more' => 'mai',
@@ -15651,7 +15651,7 @@ $messages['oc'] = array(
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Clicatz sus l’estela amont de la pagina',
 	'mobile-frontend-watchlist-back-home' => 'Retorn a l’acuèlh',
 	'mobile-frontend-watchlist-filter-all' => 'Totes',
-	'mobile-frontend-watchlist-filter-articles' => 'Articles', # Fuzzy
+	'mobile-frontend-watchlist-filter-articles' => 'Paginas',
 	'mobile-frontend-watchlist-filter-talk' => 'Discussion',
 	'mobile-frontend-watchlist-filter-other' => 'Autres',
 	'mobile-frontend-watchlist-modified' => 'Modificat $1',
@@ -15661,7 +15661,6 @@ $messages['oc'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Utilizaire anonim',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet apondut|octets aponduts}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet suprimit|octets suprimits}}',
-	'mobile-frontend-table' => 'Tablèu $1',
 );
 
 /** Oriya (ଓଡ଼ିଆ)
@@ -16671,7 +16670,7 @@ $messages['pt'] = array(
 	'mobile-frontend-page-saving' => '<strong>A gravar</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'Por favor, autentique-se ou registe-se para ver as suas notificações.',
 	'mobile-frontend-user-button-tooltip' => 'Mostrar as minhas notificações',
-	'mobile-frontend-nearby-to-page' => 'As seguintes páginas estão relacionadas com $1 através da sua localização geográfica', # Fuzzy
+	'mobile-frontend-nearby-to-page' => 'Perto de $1:',
 	'mobile-frontend-nearby-title' => 'Perto',
 	'mobile-frontend-nearby-loading' => 'A carregar tópicos próximos da sua localização',
 	'mobile-frontend-nearby-requirements' => 'Desculpe! O seu navegador não suporta a funcionalidade Redondezas em {{SITENAME}}.',
@@ -18080,7 +18079,10 @@ $messages['scn'] = array(
  * @author John Reid
  */
 $messages['sco'] = array(
+	'mobilefrontend-keepgoing-links-explain' => 'Whuar the title o aen exeestin page is mentioned, enclaise it in dooble brackets',
+	'mobilefrontend-keepgoing-links-example' => 'E.g. $1guitar$2 becomes $3guitar$4',
 	'mobile-frontend-page-saving' => '<strong>Hainin</strong><span> $1</span>',
+	'mobile-frontend-nearby-to-page' => 'Naur $1:',
 	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1|Ye}} {{GENDER:$1|ar cræftin}} ae new page oan {{SITENAME}}!',
 	'mobile-frontend-editor-new-page-confirm' => '{{GENDER:$1|Ar ye sair ye want tae cræft}} ae new page oan {{SITENAME}}?',
 	'mobile-frontend-editor-success-new-page' => 'Congratulâtions oan cræftin ae new page!',
@@ -19884,18 +19886,24 @@ $messages['tru'] = array(
 );
 
 /** Tatar (Cyrillic script) (татарча)
+ * @author Ilnur efende
  * @author Ильнар
  */
 $messages['tt-cyrl'] = array(
+	'mobilefrontend-keepgoing-links-title' => 'Сылтамалар өстәү',
 	'mobile-frontend-desc' => 'Мобиль интерфейс',
 	'mobile-frontend-search-submit' => 'Күчү',
 	'mobile-frontend-home-button' => 'Өйгә',
+	'mobile-frontend-sign-in-heading' => 'Керү',
 	'mobile-frontend-random-button' => 'Очраклы',
 	'mobile-frontend-back-to-top-of-section' => 'Бер бүлеккә артка',
 	'mobile-frontend-regular-site' => 'Сәхифәне гади {{SITENAME}} сәхифәсендә карау', # Fuzzy
 	'mobile-frontend-view' => 'Мобиль юрама',
 	'mobile-frontend-featured-article' => 'Көннең сайланган мәкаләсе', # Fuzzy
+	'mobile-frontend-login' => 'Керү',
 	'mobile-frontend-copyright' => "Текст <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензиясе шартларында ачык, махсус очракларда өстәмә шартлар кулланыла ала. Күбрәк <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Условия использования</a> кара. «{{SITENAME}}» — <a href='http://www.wikimediafoundation.org/'>«Викимедиа фонды»</a> табышсыз оешманың теркәлгән сәүдә маркасы.", # Fuzzy
+	'mobile-frontend-main-menu-logout' => 'Чыгу',
+	'mobile-frontend-watchlist-cta-button-login' => 'Керү',
 );
 
 /** Tati (Tati)
@@ -20684,7 +20692,7 @@ $messages['vi'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'Thêm liên kết',
 	'mobilefrontend-keepgoing-links-ask-first' => 'Chúc mừng bạn đã sửa đổi lần đầu tiên! Bạn có muốn giúp tạo thêm liên kết vào một trang mới được viết?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'Bạn có muốn sửa một trang nữa?',
-	'mobilefrontend-keepgoing-links-explain' => 'Tìm thêm cụm từ nên trở thành liên kết. Đưa cụm từ vào các đôi dấu ngoặc vuông.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'Đưa những tên của trang đã tồn tại vào đôi dấu ngoặc vuông',
 	'mobilefrontend-keepgoing-links-example' => 'ví dụ $1guitar$2 sẽ trở thành $3guitar$4',
 	'nearby' => 'Trang gần bạn',
 	'mobile-frontend-desc' => 'Giao diện di động',
@@ -20805,7 +20813,7 @@ $messages['vi'] = array(
 	'mobile-frontend-page-saving' => '<strong>Đang lưu</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'Xin vui lòng đăng nhập hoặc mở tài khoản để xem thông báo của bạn.',
 	'mobile-frontend-user-button-tooltip' => 'Xem thông báo của tôi',
-	'mobile-frontend-nearby-to-page' => 'Các trang sau có liên quan đến $1 theo vị trí địa lý', # Fuzzy
+	'mobile-frontend-nearby-to-page' => 'Lân cận với $1:',
 	'mobile-frontend-nearby-title' => 'Lân cận',
 	'mobile-frontend-nearby-loading' => 'Đang tải các đề tài gần vị trí của bạn',
 	'mobile-frontend-nearby-requirements' => 'Rất tiếc, trình duyệt của bạn không hỗ trợ {{SITENAME}} Lân cận.',
@@ -21183,7 +21191,7 @@ $messages['zh-hans'] = array(
 	'mobilefrontend-keepgoing-links-title' => '添加链接',
 	'mobilefrontend-keepgoing-links-ask-first' => '恭喜你的第一次编辑！你想帮助将链接添加到刚创建的页面吗？',
 	'mobilefrontend-keepgoing-links-ask-again' => '修复其他页面？',
-	'mobilefrontend-keepgoing-links-explain' => '查找更多可能是链接的词。在词前后添加两层括号。', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => '现有页面的标题被提及时，使用两个方括号框住',
 	'mobilefrontend-keepgoing-links-example' => '例如，$1吉他$2成为$3吉他$4',
 	'nearby' => '您附近的页面',
 	'mobile-frontend-desc' => '移动前端',
@@ -21305,7 +21313,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-page-saving' => '<strong>正在保存</strong><span>$1</span>',
 	'mobile-frontend-user-cta' => '请登录或注册以查看你的通知。',
 	'mobile-frontend-user-button-tooltip' => '显示我的通知',
-	'mobile-frontend-nearby-to-page' => '以下页面在地理位置上与$1相关', # Fuzzy
+	'mobile-frontend-nearby-to-page' => '靠近$1：',
 	'mobile-frontend-nearby-title' => '附近',
 	'mobile-frontend-nearby-loading' => '正在载入你当前位置附近的主题',
 	'mobile-frontend-nearby-requirements' => '对不起！你的网页浏览器不支持{{SITENAME}}附近功能。',
@@ -21517,7 +21525,7 @@ $messages['zh-hant'] = array(
 	'mobilefrontend-keepgoing-links-title' => '添加連結',
 	'mobilefrontend-keepgoing-links-ask-first' => '恭喜您的第一次編輯！您是否對剛創建的連接加入連接感興趣？',
 	'mobilefrontend-keepgoing-links-ask-again' => '修復另一頁面？',
-	'mobilefrontend-keepgoing-links-explain' => '查找更多可連接單詞。單詞前後加入兩組括號。', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => '現有頁面之標題提及時，使用兩個方括弧框住',
 	'mobilefrontend-keepgoing-links-example' => '例：$1吉他$2成為$3吉他$4',
 	'nearby' => '臨近您的頁面',
 	'mobile-frontend-desc' => '手機前端',
@@ -21636,7 +21644,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-page-saving' => '<strong>正在保存</strong><span>$1</span>',
 	'mobile-frontend-user-cta' => '請登入或註冊以查閱您的通知。',
 	'mobile-frontend-user-button-tooltip' => '顯示本人通知',
-	'mobile-frontend-nearby-to-page' => '以下與$1位置有關的頁面', # Fuzzy
+	'mobile-frontend-nearby-to-page' => '接近$1：',
 	'mobile-frontend-nearby-title' => '附近',
 	'mobile-frontend-nearby-loading' => '載入您當前的位置附近的主題',
 	'mobile-frontend-nearby-requirements' => '抱歉！你的網頁瀏覽器不支援{{SITENAME}}附近的功能。',
