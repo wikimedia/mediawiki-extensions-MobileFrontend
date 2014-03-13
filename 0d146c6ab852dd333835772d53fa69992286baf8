@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_1c4d199c",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-13T21:15:47Z",
+      "side": 1,
+      "message": "Why don\u0027t we always load it at the bottom and make EL a dependency?",
+      "revId": "0d146c6ab852dd333835772d53fa69992286baf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
