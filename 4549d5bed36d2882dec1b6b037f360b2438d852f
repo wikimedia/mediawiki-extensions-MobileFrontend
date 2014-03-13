@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_5fa4a304",
+        "filename": "tests/browser/features/step_definitions/common_steps.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-13T21:38:08Z",
+      "side": 1,
+      "message": "A bit worried about this. We might be using some undocumented behavior here which might change in future. Chris, what are your thoughts?",
+      "revId": "4549d5bed36d2882dec1b6b037f360b2438d852f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_1fae2be5",
+        "filename": "tests/browser/features/wikitext_editor.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-13T21:38:08Z",
+      "side": 1,
+      "message": "Let\u0027s use the \"Given I am on a page that does not exist\" step and move the first two steps back to the background.",
+      "revId": "4549d5bed36d2882dec1b6b037f360b2438d852f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
