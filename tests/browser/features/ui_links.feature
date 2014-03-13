@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @test2.m.wikipedia.org
+@en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org
 Feature: Check UI components
 
   Scenario: Check existence of important UI components on the main page
