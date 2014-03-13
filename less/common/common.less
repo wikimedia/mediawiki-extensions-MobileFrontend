@@ -274,10 +274,14 @@ pre {
 		}
 	}
 
-	img {
+	// Prevent inline styles on images in wikitext
+	// Note we restrict to img's to avoid conflicts with VisualEditor shields
+	// See bug 62460
+	a > img {
 		// make sure that images in articles don't cause a horizontal scrollbar
 		// on small screens
 		max-width: 100% !important;
+		height: auto !important;
 	}
 
 	ul {
