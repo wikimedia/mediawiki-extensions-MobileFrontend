@@ -1,4 +1,5 @@
-Feature: Basic site for legacy devices.
+@custom-browser @en.m.wikipedia.org @test2.m.wikipedia.org
+Feature: Basic site for legacy devices
 
   # FIXME: Add scenario to check search actually works
   # FIXME: Add scenario to check watch star actually works
