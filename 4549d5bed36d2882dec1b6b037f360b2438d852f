@@ -33,6 +33,24 @@
       "revId": "4549d5bed36d2882dec1b6b037f360b2438d852f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_ff1b771f",
+        "filename": "tests/browser/features/wikitext_editor.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-13T21:56:06Z",
+      "side": 1,
+      "message": "So the reason for this is the URL test later on that checks which is unnecessary. I\u0027ll remove that line too.",
+      "parentUuid": "ee14bf34_1fae2be5",
+      "revId": "4549d5bed36d2882dec1b6b037f360b2438d852f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
