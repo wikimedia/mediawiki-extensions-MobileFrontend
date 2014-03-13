@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_3ff7aff4",
+        "filename": "tests/browser/features/pageactions.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-13T21:44:12Z",
+      "side": 1,
+      "message": "Let\u0027s use \"When I click on \"Random\" in the main navigation menu\" so that we don\u0027t make too many changes at the same time.",
+      "revId": "0ca0a9a006d4eba8436b93bd2f5b015268d15342",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
