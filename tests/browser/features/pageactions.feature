@@ -2,7 +2,8 @@
 Feature: Page actions menu when anonymous
 
   Background:
-    Given I go to random page
+    Given I am on the "Main Page" page
+       And I click on "Random" in the main navigation menu
 
   Scenario: Receive notification message - Edit Icon
     When I click the edit icon holder

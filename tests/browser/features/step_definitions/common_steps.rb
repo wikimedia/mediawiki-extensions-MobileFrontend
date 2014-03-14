@@ -89,10 +89,6 @@ Given /^I am not logged in$/ do
   # nothing to do here, user in not logged in by default
 end
 
-When /^I go to random page$/ do
-  visit(RandomPage)
-end
-
 Given(/^I am on the "(.+)" page$/) do |article|
   visit(ArticlePage, :using_params => {:article_name => article})
 end
