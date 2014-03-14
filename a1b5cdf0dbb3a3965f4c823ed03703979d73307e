@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_0d9a81bd",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-14T00:42:15Z",
+      "side": 1,
+      "message": "What should the href be?",
+      "parentUuid": "6ef7ef47_dbebd807",
+      "revId": "a1b5cdf0dbb3a3965f4c823ed03703979d73307e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_e67ba622",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2014-02-08T01:30:48Z",
       "side": 1,
       "message": "Will this work when we push tablet styles to stable or will we have to flush cache?",
+      "revId": "a1b5cdf0dbb3a3965f4c823ed03703979d73307e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_ed962d97",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-14T00:42:15Z",
+      "side": 1,
+      "message": "Resolve later... at end of day, if some pages show mobile skin it is not the worst scenario but we will need to think about this carefully during any push to stable.",
+      "parentUuid": "6ef7ef47_e67ba622",
       "revId": "a1b5cdf0dbb3a3965f4c823ed03703979d73307e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -65,6 +101,24 @@
       "side": 1,
       "message": "We could attach it to jQuery instead since it doesn\u0027t use anything from mw.",
       "parentUuid": "6ef7ef47_66a9d68c",
+      "revId": "a1b5cdf0dbb3a3965f4c823ed03703979d73307e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_cd9369a5",
+        "filename": "javascripts/common/matchMedia.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-14T00:42:15Z",
+      "side": 1,
+      "message": "Yes, that would also be an option.",
+      "parentUuid": "6ef7ef47_668f9627",
       "revId": "a1b5cdf0dbb3a3965f4c823ed03703979d73307e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
