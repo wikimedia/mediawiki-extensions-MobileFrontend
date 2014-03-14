@@ -274,8 +274,6 @@ class MobileContext extends ContextSource {
 			return $this->mobileView;
 		}
 		wfProfileIn( __METHOD__ );
-		// check if the user requested to toggle their view
-		$this->checkToggleView();
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
 			$this->redirectMobileEnabledPages();
@@ -612,13 +610,15 @@ class MobileContext extends ContextSource {
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
 
-		$subdomainTokenReplacement = null;
-		if ( wfRunHooks( 'GetMobileUrl', array( &$subdomainTokenReplacement, $this ) ) ) {
-			if ( !empty( $subdomainTokenReplacement ) ) {
-				global $wgMobileUrlTemplate;
-				$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
-				$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
-				$wgMobileUrlTemplate = str_replace( $mobileToken, $subdomainTokenReplacement, $wgMobileUrlTemplate );
+		if ( $this->shouldDisplayMobileView() ) {
+			$subdomainTokenReplacement = null;
+			if ( wfRunHooks( 'GetMobileUrl', array( &$subdomainTokenReplacement, $this ) ) ) {
+				if ( !empty( $subdomainTokenReplacement ) ) {
+					global $wgMobileUrlTemplate;
+					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
+					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
+					$wgMobileUrlTemplate = str_replace( $mobileToken, $subdomainTokenReplacement, $wgMobileUrlTemplate );
+				}
 			}
 		}
 
