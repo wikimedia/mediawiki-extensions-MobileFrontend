@@ -44,7 +44,9 @@ class MobileFrontendHooks {
 		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition,
 			$wgValidSkinNames, $wgMFEnableMinervaBetaFeature;
 
+		// check whether or not the user has requested to toggle their view
 		$mobileContext = MobileContext::singleton();
+		$mobileContext->checkToggleView();
 
 		if ( !$mobileContext->shouldDisplayMobileView()
 			|| $mobileContext->isBlacklistedPage()
