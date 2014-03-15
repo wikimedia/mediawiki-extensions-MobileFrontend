@@ -137,6 +137,11 @@ class SkinMinerva extends SkinTemplate {
 		} elseif ( $title->isSpecialPage() ) {
 			$className .= ' mw-mf-special ';
 		}
+		if ( $this->isMobileMode ) {
+			$className .= ' mw-mobile-mode';
+		} else {
+			$className .= ' mw-desktop-mode';
+		}
 		if ( !$this->getUser()->isAnon() ) {
 			$className .= ' is-authenticated';
 		}
