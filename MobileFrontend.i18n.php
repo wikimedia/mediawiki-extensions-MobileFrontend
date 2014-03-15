@@ -2032,9 +2032,15 @@ $messages['ast'] = array(
 
 /** Azerbaijani (azərbaycanca)
  * @author Cekli829
+ * @author Interfase
  * @author Vugar 1981
  */
 $messages['az'] = array(
+	'mobilefrontend-keepgoing-cancel' => 'Yox, sağ olun',
+	'mobilefrontend-keepgoing-suggest' => 'Bəli',
+	'mobilefrontend-keepgoing-suggest-again' => 'Digərini yoxla',
+	'mobilefrontend-keepgoing-saved-title' => 'Redaktə qeydə alındı!',
+	'mobilefrontend-keepgoing-links-title' => 'Keçidlər daxil et',
 	'mobile-frontend-search-submit' => 'Get',
 	'mobile-frontend-home-button' => 'Ana səhifə',
 	'mobile-frontend-random-button' => 'Təsadüfi',
@@ -2043,14 +2049,35 @@ $messages['az'] = array(
 	'mobile-frontend-wml-continue' => 'Davam et ...',
 	'mobile-frontend-wml-back' => 'Geri ...',
 	'mobile-frontend-view' => 'Mobil görüntü',
+	'mobile-frontend-missing-image' => 'Şəkil',
 	'mobile-frontend-featured-article' => 'Günün seçilmiş məqaləsi', # Fuzzy
 	'mobile-frontend-languages-header' => 'Dillər',
 	'mobile-frontend-username' => 'İstifadəçi adı:',
 	'mobile-frontend-password' => 'Parol:',
+	'mobile-frontend-username-placeholder' => 'İstifadəçinin adı',
+	'mobile-frontend-password-placeholder' => 'Parol',
 	'mobile-frontend-login' => 'Daxil ol',
+	'mobile-frontend-history' => 'Bu səhifənin dəyişikliklər tarixinə bax',
 	'mobile-frontend-clear-search' => 'Təmizlə',
 	'mobile-frontend-copyright' => "Mətn <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.az\">Creative Commons Attribution/Share-Alike lisenziyası</a> üzrə icazəlidir, xüsusi hallarda digər şərtlər də əlavə ola bilər. Daha ətraflı bax: <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/az'>İstifadə şərtləri</a>. «{{SITENAME}}» — «<a href='http://www.wikimediafoundation.org/'>Vikimediya Fondu</a>» qeyri-kommersiya təşkilatının qeydə alınmış ticarət markasıdır.", # Fuzzy
+	'mobile-frontend-main-menu-login' => 'Daxil ol',
+	'mobile-frontend-main-menu-logout' => 'Çıxış',
+	'mobile-frontend-main-menu-watchlist' => 'İzlədiyim səhifələr',
+	'mobile-frontend-main-menu-settings' => 'Nizamlamalar',
+	'mobile-frontend-main-menu-upload' => 'Yükləmələr',
+	'mobile-frontend-watchlist-cta-button-login' => 'Daxil ol',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Qeydiyyatdan keç',
+	'mobile-frontend-edit-login-action' => 'Redaktə üçün daxil ol',
+	'mobile-frontend-edit-signup-action' => 'Redaktə üçün qeydiyyatdan keç',
+	'mobile-frontend-watchlist-a-z' => 'Siyahı',
+	'mobile-frontend-watchlist-feed' => 'Dəyişdirilib',
 	'mobile-frontend-watchlist-filter-articles' => 'Səhifələr',
+	'mobile-frontend-watchlist-filter-talk' => 'Müzakirə',
+	'mobile-frontend-watchlist-filter-other' => 'Digər',
+	'mobile-frontend-watchlist-modified' => 'Dəyişdirilib $1',
+	'mobile-frontend-editor-save' => 'Yadda saxla',
+	'mobile-frontend-editor-cancel' => 'Bağla',
+	'mobile-frontend-editor-keep-editing' => 'Redaktəni davam etdir',
 );
 
 /** South Azerbaijani (تورکجه)
@@ -3479,7 +3506,7 @@ $messages['ce'] = array(
 	'mobile-frontend-page-menu-contents' => 'чулацам',
 	'mobile-frontend-page-menu-history' => 'Истори',
 	'mobile-frontend-page-saving' => '<strong>Ӏалашяр</strong><span> $1</span>',
-	'mobile-frontend-nearby-to-page' => 'Уллехь $ 1:', # Fuzzy
+	'mobile-frontend-nearby-to-page' => 'Уллехь — $1:',
 	'mobile-frontend-nearby-title' => 'Уллехь',
 	'mobile-frontend-nearby-loading' => 'Чу бокхуш бу хаам, хьона уллехь хӀун ю гойтуш',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}',
@@ -5931,7 +5958,7 @@ $messages['et'] = array(
 	'mobile-frontend-meta-data-issues' => 'Selle leheküljega on probleeme',
 	'mobile-frontend-page-saving' => '<span>Lehekülje "$1" </span><strong>salvestamine</strong>',
 	'mobile-frontend-user-button-tooltip' => 'Näita mu teavitusi',
-	'mobile-frontend-nearby-to-page' => '$1 on järgmiste nähtuste lähedal.',
+	'mobile-frontend-nearby-to-page' => '$1 on järgmiste nähtuste lähedal:',
 	'mobile-frontend-nearby-title' => 'Lähikond',
 	'mobile-frontend-nearby-loading' => 'Laaditakse sinu lähiümbrusega seotud teemasid.',
 	'mobile-frontend-nearby-requirements' => 'Kahjuks ei toeta sinu võrgulehitseja {{GRAMMAR:genitive|{{SITENAME}}}} funktsiooni "Lähikond".',
@@ -8473,7 +8500,7 @@ $messages['hi'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'लेख', # Fuzzy
 	'mobile-frontend-watchlist-filter-talk' => 'वार्ता',
 	'mobile-frontend-watchlist-filter-other' => 'अन्य',
-	'mobile-frontend-editor-placeholder-new-page' => '$1{{GENDER:$1|आप बना रहे है}} {{SITENAME}} पर नया पृष्ठ!',
+	'mobile-frontend-editor-placeholder-new-page' => '{{GENDER:$1|आप}} {{SITENAME}} पर नया पृष्ठ बना रहे हैं!',
 );
 
 /** Fiji Hindi (Latin script) (Fiji Hindi)
@@ -11721,7 +11748,7 @@ $messages['ko'] = array(
 	'mobilefrontend-keepgoing-links-title' => '링크 추가',
 	'mobilefrontend-keepgoing-links-ask-first' => '첫 편집을 한 것을 축하합니다! 최근에 만들어진 문서에 링크를 추가하는 것을 도와줄 수 있나요?',
 	'mobilefrontend-keepgoing-links-ask-again' => '다른 문서를 고치겠습니까?',
-	'mobilefrontend-keepgoing-links-explain' => '링크할 수 있는 더 많은 낱말을 찾으세요. 낱말 주위에 이중 대괄호를 추가하세요.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => '존재하는 문서가 언급된 곳을 대괄호 두 개로 묶습니다.',
 	'mobilefrontend-keepgoing-links-example' => '예를 들어 $1기타$2는 $3기타$4가 됩니다',
 	'nearby' => '근처 문서',
 	'mobile-frontend-desc' => '모바일 프론트엔드',
@@ -11842,7 +11869,7 @@ $messages['ko'] = array(
 	'mobile-frontend-page-saving' => '<span> $1 </span> <strong> 저장 중 </strong>',
 	'mobile-frontend-user-cta' => '알림을 보려면 로그인하거나 가입하세요.',
 	'mobile-frontend-user-button-tooltip' => '내 알림 보기',
-	'mobile-frontend-nearby-to-page' => '다음 문서는 $1 문서와 지리적으로 관련이 있습니다', # Fuzzy
+	'mobile-frontend-nearby-to-page' => '$1 문서 근처:',
 	'mobile-frontend-nearby-title' => '근처',
 	'mobile-frontend-nearby-loading' => '현재 위치 근처에 주제를 불러오는 중',
 	'mobile-frontend-nearby-requirements' => '죄송합니다! 사용 중인 웹 브라우저가 {{SITENAME}} 근처를 지원하지 않습니다.',
@@ -15108,7 +15135,7 @@ $messages['nl'] = array(
 	'mobile-frontend-settings-description' => 'Pas uw gebruikerservaring op uw mobiele apparaat aan via deze instellingen.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-settings-alpha' => 'Experimentele functies',
-	'mobile-frontend-settings-alpha-description' => 'Betreed gevaarlijk en onontgonnen mobiel gebied. Verken nog meer experimentele functies met de kan op bugs.',
+	'mobile-frontend-settings-alpha-description' => 'Betreed gevaarlijk en onontgonnen mobiel gebied. Verken nog meer experimentele functies met de kans op bugs.',
 	'mobile-frontend-save-settings' => 'Opslaan',
 	'mobile-frontend-save-error' => 'Fout bij het opslaan van instellingen. Zorg ervoor dat u cookies hebt ingeschakeld.',
 	'mobile-frontend-random-button' => 'Willekeurig',
@@ -17144,7 +17171,7 @@ $messages['ro'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'Adăugare legături',
 	'mobilefrontend-keepgoing-links-ask-first' => 'Felicitări pentru prima dumneavoastră modificare! Doriți să ajutați la adăugarea de legături într-o pagină creată recent?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'Îmbunătățiți o altă pagină?',
-	'mobilefrontend-keepgoing-links-explain' => 'Găsiți mai multe cuvinte care ar putea fi legături. Adăugați paranteze drepte duble în jurul cuvântului.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'Când titlul unei pagini existente este menționat, includeți-l între paranteze pătrate duble',
 	'mobilefrontend-keepgoing-links-example' => 'ex.: $1chitară$2 devine $3chitară$4',
 	'nearby' => 'Pagini în apropierea dumneavoastră',
 	'mobile-frontend-desc' => 'Interfața mobilă',
@@ -17263,7 +17290,7 @@ $messages['ro'] = array(
 	'mobile-frontend-page-saving' => '<strong>Se salvează</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'Vă rugăm să vă autentificați sau să vă creați un cont pentru a vizualiza notificările.',
 	'mobile-frontend-user-button-tooltip' => 'Arată-mi notificări',
-	'mobile-frontend-nearby-to-page' => 'Următoarele pagini sunt asociate cu $1 în funcție de amplasarea geografică', # Fuzzy
+	'mobile-frontend-nearby-to-page' => 'În apropiere de $1:',
 	'mobile-frontend-nearby-title' => 'În apropiere',
 	'mobile-frontend-nearby-loading' => 'Se încarcă subiecte din apropierea dumneavoastră',
 	'mobile-frontend-nearby-requirements' => 'Ne pare rău! Navigatorul dumneavoastră nu suportă funcția În apropiere a proiectului {{SITENAME}}.',
@@ -17602,7 +17629,7 @@ $messages['ru'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'Добавить ссылки',
 	'mobilefrontend-keepgoing-links-ask-first' => 'Поздравляем вас с вашей первой правкой! Вы хотели бы помочь, добавив ссылки на недавно созданной странице?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'Исправить другую страницу?',
-	'mobilefrontend-keepgoing-links-explain' => 'Найдите ещё слова, которые могли бы быть ссылками. Добавьте двойные скобки вокруг слова.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'Там, где упоминается название существующей страницы, заключите его в двойные квадратные скобки.',
 	'mobilefrontend-keepgoing-links-example' => 'например, $1гитара$2 станет $3гитара$4',
 	'nearby' => 'Страницы об объектах поблизости',
 	'mobile-frontend-desc' => 'Мобильный интерфейс',
@@ -17721,7 +17748,7 @@ $messages['ru'] = array(
 	'mobile-frontend-page-saving' => '<strong>Сохранение</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'Пожалуйста, войдите или зарегистрируйтесь, чтобы увидеть ваши уведомления.',
 	'mobile-frontend-user-button-tooltip' => 'Показать мои уведомления',
-	'mobile-frontend-nearby-to-page' => 'Эти страницы связаны с $1 своим географическим расположением', # Fuzzy
+	'mobile-frontend-nearby-to-page' => '$1 — вблизи:',
 	'mobile-frontend-nearby-title' => 'Рядом',
 	'mobile-frontend-nearby-loading' => 'Загрузка информации о том, что находится невдалеке от вас',
 	'mobile-frontend-nearby-requirements' => 'Извините! Ваш браузер не поддерживает работу с {{SITENAME}}.',
@@ -18395,7 +18422,7 @@ $messages['sl'] = array(
 	'mobile-frontend-page-saving' => '<strong>Shranjevanje</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'Za ogled svojih obvestil se najprej prijavite.',
 	'mobile-frontend-user-button-tooltip' => 'Prikaži obvestila',
-	'mobile-frontend-nearby-to-page' => 'Po geografski legi so članku $1 sorodne naslednje strani', # Fuzzy
+	'mobile-frontend-nearby-to-page' => 'Blizu $1:',
 	'mobile-frontend-nearby-title' => 'Bližnje',
 	'mobile-frontend-nearby-loading' => 'Nalagam teme blizu vaše trenutne lokacije',
 	'mobile-frontend-nearby-requirements' => 'Oprostite! Vaš spletni brskalnik ne podpira možnosti Bližnje {{GRAMMAR:rodilnik|{{SITENAME}}}}.',
@@ -18540,6 +18567,13 @@ $messages['sl'] = array(
 	'mobile-frontend-requires-optin' => 'Ta stran je na razpolago samo, če privolite v betanačin. Za privolitev obiščite [[Special:MobileOptions|stran z nastavitvami]].',
 	'mobile-frontend-profile-last-thank' => '{{GENDER:$1|Zahvalil|Zahvalila}} se {{GENDER:$2|mu|ji}} je {{GENDER:$1|uporabnik|uporabnica}} [[Special:UserProfile/$1|$1]]',
 	'mobile-frontend-geonotahack' => 'Blizu te strani',
+);
+
+/** Somali (Soomaaliga)
+ * @author Abshirdheere
+ */
+$messages['so'] = array(
+	'mobile-frontend-main-menu-logout' => 'Ka bax',
 );
 
 /** Albanian (shqip)
@@ -20006,7 +20040,7 @@ $messages['uk'] = array(
 	'mobilefrontend-keepgoing-links-title' => 'Додати посилання',
 	'mobilefrontend-keepgoing-links-ask-first' => 'Вітаємо вас з вашої першим редагуванням! Ви хотіли б допомогти, додавши посилання на нещодавно створену сторінку?',
 	'mobilefrontend-keepgoing-links-ask-again' => 'Виправити іншу сторінку?',
-	'mobilefrontend-keepgoing-links-explain' => 'Знайдіть ще слова, які могли б бути посиланнями. Додайте подвійні дужки навколо слова.', # Fuzzy
+	'mobilefrontend-keepgoing-links-explain' => 'Там, де згадується назва існуючої сторінки, візьміть його в подвійні квадратні дужки.',
 	'mobilefrontend-keepgoing-links-example' => 'наприклад, $1гітара$2 стане $3гітара$4',
 	'nearby' => 'Сторінки поруч з вами',
 	'mobile-frontend-desc' => 'Мобільний інтерфейс',
@@ -20125,7 +20159,7 @@ $messages['uk'] = array(
 	'mobile-frontend-page-saving' => '<strong>Збереження</strong><span> $1</span>',
 	'mobile-frontend-user-cta' => 'Будь ласка, увійдіть до системи, або зареєструйтеся, щоб побачити Ваші сповіщення.',
 	'mobile-frontend-user-button-tooltip' => 'Відображати мої сповіщення',
-	'mobile-frontend-nearby-to-page' => 'Наступні сторінки, що відносяться до $1 за географічним розташуванням', # Fuzzy
+	'mobile-frontend-nearby-to-page' => 'Поблизу $1:',
 	'mobile-frontend-nearby-title' => 'Поблизу',
 	'mobile-frontend-nearby-loading' => 'Завантаження інформації про те, що знаходиться поблизу Вас',
 	'mobile-frontend-nearby-requirements' => 'На жаль! Веб-переглядач неподалік не підтримує {{SITENAME}}.',
@@ -21191,7 +21225,7 @@ $messages['zh-hans'] = array(
 	'mobilefrontend-keepgoing-links-title' => '添加链接',
 	'mobilefrontend-keepgoing-links-ask-first' => '恭喜你的第一次编辑！你想帮助将链接添加到刚创建的页面吗？',
 	'mobilefrontend-keepgoing-links-ask-again' => '修复其他页面？',
-	'mobilefrontend-keepgoing-links-explain' => '现有页面的标题被提及时，使用两个方括号框住',
+	'mobilefrontend-keepgoing-links-explain' => '已有页面标题被提及时，把它放入两层方括号中',
 	'mobilefrontend-keepgoing-links-example' => '例如，$1吉他$2成为$3吉他$4',
 	'nearby' => '您附近的页面',
 	'mobile-frontend-desc' => '移动前端',
