@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_d84c44e7",
+        "filename": "includes/specials/SpecialMobileWebApp.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-15T00:08:54Z",
+      "side": 1,
+      "message": "Function documentation would be nice.",
+      "revId": "dd3eb3ab3189d6fed5a57e0a26d4ba547aac0023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_b84990d5",
+        "filename": "includes/specials/SpecialMobileWebApp.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-15T00:08:54Z",
+      "side": 1,
+      "message": "Would also be useful to have some documentation for genAppCache().",
+      "revId": "dd3eb3ab3189d6fed5a57e0a26d4ba547aac0023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_1843dcb7",
+        "filename": "includes/specials/SpecialMobileWebApp.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-15T00:08:54Z",
+      "side": 1,
+      "message": "Nitpicky: Don\u0027t really need the extra \\n at the end.",
+      "revId": "dd3eb3ab3189d6fed5a57e0a26d4ba547aac0023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_5839543d",
+        "filename": "includes/specials/SpecialMobileWebApp.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-15T00:08:54Z",
+      "side": 1,
+      "message": "Please change $lm to $lastModified for better readability. I\u0027ll let you keep $ts, but $lm isn\u0027t common enough, IMO.",
+      "revId": "dd3eb3ab3189d6fed5a57e0a26d4ba547aac0023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
