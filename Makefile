@@ -65,6 +65,7 @@ lint: jshint phplint checkcucumber
 
 installhooks:
 	ln -sf ${PWD}/scripts/pre-commit .git/hooks/pre-commit
+	ln -sf ${PWD}/scripts/pre-review .git/hooks/pre-review
 
 # user must create W3CValidationTest wiki page with text 'Hello world' for this to work
 validatehtml:
