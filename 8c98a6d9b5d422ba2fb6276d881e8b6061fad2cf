@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_1f8f30d3",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T23:55:27Z",
+      "side": 1,
+      "message": "I don\u0027t like. It seems like it could be done cleaner?",
+      "revId": "8c98a6d9b5d422ba2fb6276d881e8b6061fad2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_9fb22091",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T23:55:27Z",
+      "side": 1,
+      "message": "I personally like returning at the end of a JavaScript function for readability but it\u0027s not a coding convention. Maybe it should be?",
+      "revId": "8c98a6d9b5d422ba2fb6276d881e8b6061fad2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_fff47c52",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T23:55:27Z",
+      "side": 1,
+      "message": "It will be cleaner to use `one( \u0027click\u0027 )` here rather than on and off but we may also want to use M.emit will leave Juliusz to comment...",
+      "revId": "8c98a6d9b5d422ba2fb6276d881e8b6061fad2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_7a219a99",
+        "filename": "templates/modules/editor/VisualEditorOverlayHeader.html",
+        "patchSetId": 23
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T23:55:27Z",
+      "side": 1,
+      "message": "Why the comment?",
+      "revId": "8c98a6d9b5d422ba2fb6276d881e8b6061fad2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
