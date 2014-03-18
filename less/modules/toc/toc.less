@@ -19,6 +19,7 @@
 		font-family: @fontFamily;
 		line-height: @iconSize;
 		margin-left: @leftMargin;
+		margin-right: @leftMargin;
 		background-position: right center;
 		font-size: @fontSize;
 		font-weight: bold;
@@ -41,6 +42,7 @@
 		// Override default toggle styles
 		border-bottom: none;
 		margin-left: @leftMargin + @iconSize + @iconHeadingGap;
+		margin-right: @leftMargin;
 		font-size: (7 * @fontSize) / 8;
 
 		> ul {
@@ -57,17 +59,6 @@
 				padding-top: @fontSize;
 				// This ensures when a heading spills to a second line it can be distinguished from other headings
 				line-height: 1.2;
-			}
-		}
-	}
-}
-
-@media all and (min-width: @wgMFDeviceWidthTablet) {
-	.beta #content_wrapper {
-		.toc-mobile {
-			.content_block,
-			.section_heading {
-				margin-right: @leftMargin;
 			}
 		}
 	}
