@@ -205,7 +205,7 @@ $wgMFPhotoUploadEndpoint = '';
  * If set forces nearby to operate in JSONP mode
  * @var String
  */
-$wgMFNearbyEndpoint = 'https://en.m.wikipedia.org/w/api.php';
+$wgMFNearbyEndpoint = '';
 
 /**
  * Namespace(s) where Special:Nearby should search. Should be one or more of NS_* constants, pipe-separated
