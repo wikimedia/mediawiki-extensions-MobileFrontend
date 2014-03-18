@@ -491,6 +491,7 @@ Previously, it was called "Dragons Mode".',
 	'mobile-frontend-settings-alpha-description' => 'Disclaimer about dangers and excitement that come with being in an alpha mode',
 	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions. Since this appears on the settings page translating the word save is sufficient
 {{Identical|Save}}',
+	'mobile-frontend-save-error' => 'Error message shown when a user tries to save settings form without cookies present.',
 	'mobile-frontend-random-button' => 'This is the label of one of the buttons that appear if you click the wiki logo near the search box.
 
 This buttons takes the user to a random page.
@@ -534,6 +535,7 @@ See also:
 	'mobile-frontend-languages-404-title' => 'Used as title for the description {{msg-mw|Mobile-frontend-languages-404-desc}}.',
 	'mobile-frontend-languages-404-desc' => 'The title for this message is {{msg-mw|Mobile-frontend-languages-404-title}}.',
 	'mobile-frontend-languages-header' => '{{Identical|Language}}',
+	'mobile-frontend-languages-nonexistent-title' => 'Shown as error message on Special:MobileLanguages when the title parameter given does not map to an existing page.',
 	'mobile-frontend-languages-text' => 'Parameters:
 * $1 - page title
 * $2 - number of languages
