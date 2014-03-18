@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_c91b46d3",
+        "filename": "tests/browser/features/editor_ve.feature",
+        "patchSetId": 15
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:00:34Z",
+      "side": 1,
+      "message": "Should be I am on the \"Selenium Edit Test\" /article/",
+      "revId": "6a72e0e7726fa3617fc563a6a1e39426e7ae5d33",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_294d22e1",
+        "filename": "tests/browser/features/editor_ve.feature",
+        "patchSetId": 15
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:00:34Z",
+      "side": 1,
+      "message": "Unrelated change - this doesn\u0027t exist. Think this might be a rebase issue.\nI click the edit button \u003d\u003e  I click edit",
+      "revId": "6a72e0e7726fa3617fc563a6a1e39426e7ae5d33",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
