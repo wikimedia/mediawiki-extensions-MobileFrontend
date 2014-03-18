@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_a4a959de",
+        "filename": "scripts/pre-review",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2014-03-18T20:26:25Z",
+      "side": 1,
+      "message": "head, awk and sed could be replaced by python string manipulation methods",
+      "revId": "ad12c72ae9b1900dd39f4f86f701a12ab1556ff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
