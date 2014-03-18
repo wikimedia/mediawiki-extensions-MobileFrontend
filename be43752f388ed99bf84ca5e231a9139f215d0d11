@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_5fb3684c",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T22:02:32Z",
+      "side": 1,
+      "message": "So that they can be used in Resources.php and MobileFrontend.hooks.php\n\nThis avoids duplicating things and running the risk of changing one but not the other.",
+      "parentUuid": "ee14bf34_81e40ca5",
+      "revId": "be43752f388ed99bf84ca5e231a9139f215d0d11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee14bf34_21fb0046",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 11
@@ -30,6 +48,24 @@
       "writtenOn": "2014-03-18T01:11:07Z",
       "side": 1,
       "message": "It\u0027s not empty, only doesn\u0027t depend on ext.eventLogging.",
+      "revId": "be43752f388ed99bf84ca5e231a9139f215d0d11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_bf8ba471",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 782,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T22:02:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee14bf34_21fb0046",
       "revId": "be43752f388ed99bf84ca5e231a9139f215d0d11",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_5f9a48be",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T22:02:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee14bf34_61e9f87a",
+      "revId": "be43752f388ed99bf84ca5e231a9139f215d0d11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee14bf34_41fef436",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 11
@@ -64,6 +118,24 @@
       "writtenOn": "2014-03-18T01:11:07Z",
       "side": 1,
       "message": "It\u0027s not. It just doesn\u0027t depend on ext.eventLogging.",
+      "revId": "be43752f388ed99bf84ca5e231a9139f215d0d11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_3f979495",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 707,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T22:02:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee14bf34_41fef436",
       "revId": "be43752f388ed99bf84ca5e231a9139f215d0d11",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
