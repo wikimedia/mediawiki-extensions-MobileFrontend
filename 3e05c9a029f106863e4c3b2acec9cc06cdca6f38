@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_01e11c97",
+        "filename": "less/header.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-18T01:03:40Z",
+      "side": 1,
+      "message": "What is the purpose of this file? Is it really part of this commit?",
+      "revId": "3e05c9a029f106863e4c3b2acec9cc06cdca6f38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
