@@ -33,6 +33,24 @@
       "revId": "6a72e0e7726fa3617fc563a6a1e39426e7ae5d33",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_290ac229",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-18T20:17:36Z",
+      "side": 0,
+      "message": "This had side effects all over the place, which is why I removed it. I replaced it with .overlay-title and .overlay-search below.",
+      "parentUuid": "ee14bf34_e964ca47",
+      "revId": "6a72e0e7726fa3617fc563a6a1e39426e7ae5d33",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

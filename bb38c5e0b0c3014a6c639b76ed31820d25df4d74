@@ -87,6 +87,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_0907fe20",
+        "filename": "less/minerva.less/minerva.variables.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-18T20:17:36Z",
+      "side": 1,
+      "message": "Sure...",
+      "parentUuid": "ee14bf34_c969061f",
+      "revId": "bb38c5e0b0c3014a6c639b76ed31820d25df4d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee14bf34_89630e3b",
         "filename": "less/modules/editor/images/edit-source-select.svg",
         "patchSetId": 22
