@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_e92f2af2",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 1,
+      "message": "This feels like code similar to that in Router\nMaybe this should be made a function.\nAlso use HASH testing against the document.URL seems overkill.",
+      "revId": "bb38c5e0b0c3014a6c639b76ed31820d25df4d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_692afad8",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 1,
+      "message": "See comment in other file - let\u0027s make this part of Router.",
+      "revId": "bb38c5e0b0c3014a6c639b76ed31820d25df4d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_a987f2db",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 1,
+      "message": "Match can potentially return null so just do match \u0026\u0026 match[1] - no need for undefined test.",
+      "revId": "bb38c5e0b0c3014a6c639b76ed31820d25df4d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_6971da0a",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 1,
+      "message": "I\u0027m not sure we should load it in this way. We should probably not update the hash here to avoid the unexpected back behaviour.",
+      "revId": "bb38c5e0b0c3014a6c639b76ed31820d25df4d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_c969061f",
+        "filename": "less/minerva.less/minerva.variables.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 1,
+      "message": "Not sure I understand this comment about @headerHeight. Can you point to a bug or elaborate?",
+      "revId": "bb38c5e0b0c3014a6c639b76ed31820d25df4d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_89630e3b",
+        "filename": "less/modules/editor/images/edit-source-select.svg",
+        "patchSetId": 22
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 1,
+      "message": "Lots of \\r\u0027s here and meta data - seems like the SVG hook thingy didn\u0027t get run?",
+      "revId": "bb38c5e0b0c3014a6c639b76ed31820d25df4d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_2952c26a",
+        "filename": "templates/modules/editor/VisualEditorOverlayHeader.html",
+        "patchSetId": 22
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 1,
+      "message": "eep",
+      "revId": "bb38c5e0b0c3014a6c639b76ed31820d25df4d74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

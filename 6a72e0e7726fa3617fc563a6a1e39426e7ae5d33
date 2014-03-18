@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_496e162c",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 0,
+      "message": "I like my whitespace here.. :(",
+      "revId": "6a72e0e7726fa3617fc563a6a1e39426e7ae5d33",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_e964ca47",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-18T19:11:00Z",
+      "side": 0,
+      "message": "Are you sure removing this doesn\u0027t have any side effects on other overlays? This makes me suspicious.",
+      "revId": "6a72e0e7726fa3617fc563a6a1e39426e7ae5d33",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
