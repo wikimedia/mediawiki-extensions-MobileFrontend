@@ -38,9 +38,8 @@ $wgExtensionCredits['other'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
 
-$cwd = dirname( __FILE__ );
-$wgExtensionMessagesFiles['MobileFrontend'] = "$cwd/MobileFrontend.i18n.php";
-$wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.php";
+$wgExtensionMessagesFiles['MobileFrontend'] = __DIR__ . "/MobileFrontend.i18n.php";
+$wgExtensionMessagesFiles['MobileFrontendAlias'] = __DIR__ . "/MobileFrontend.alias.php";
 
 // autoload extension classes
 $autoloadClasses = array (
@@ -92,7 +91,7 @@ $autoloadClasses = array (
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
-	$wgAutoloadClasses[$className] = "$cwd/includes/$classFilename.php";
+	$wgAutoloadClasses[$className] = __DIR__ . "/includes/$classFilename.php";
 }
 
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
@@ -172,8 +171,7 @@ function efMobileFrontend_Setup() {
 }
 
 // ResourceLoader modules
-require_once( "$cwd/includes/Resources.php" );
-unset( $cwd );
+require_once __DIR__ . "/includes/Resources.php";
 
 /**
  * Begin configuration variables
@@ -469,4 +467,3 @@ $wgMFAppPackageId = false;
  * Scheme to use for the deep link. Per default, 'http' is used.
  */
 $wgMFAppScheme = 'http';
-
