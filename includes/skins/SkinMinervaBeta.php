@@ -4,6 +4,18 @@ class SkinMinervaBeta extends SkinMinerva {
 	public $template = 'MinervaTemplateBeta';
 	protected $mode = 'beta';
 
+	/**
+	 * Initializes output page and sets up skin-specific parameters
+	 * @param $out OutputPage object to initialize
+	 */
+	public function initPage( OutputPage $out ) {
+		parent::initPage( $out );
+		// Enable search header in beta
+		if ( $this->getTitle()->isSpecialPage() ) {
+			$out->setProperty( 'disableSearchAndFooter', false );
+		}
+	}
+
 	public function outputPage( OutputPage $out = null ) {
 		wfProfileIn( __METHOD__ );
 		if ( !$out ) {
@@ -19,10 +31,15 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	protected function getSkinStyles() {
+		$title = $this->getTitle();
+
 		$styles = parent::getSkinStyles();
 		$styles[] = 'mobile.styles.beta';
-		if ( $this->getTitle()->isMainPage() ) {
+		if ( $title->isMainPage() ) {
 			$styles[] = 'mobile.styles.mainpage';
+		}
+		if ( $title->isSpecialPage() ) {
+			$styles['special'] = 'skins.minerva.special.styles';
 		}
 		return $styles;
 	}

@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	var LoadingOverlay = M.require( 'LoadingOverlayNew' );
 
-	M.assertMode( [ 'beta', 'alpha' ] );
+	M.assertMode( [ 'beta', 'alpha', 'app' ] );
 
 	function onTalkClick( ev ) {
 		var talkPage = $( this ).data( 'title' ),

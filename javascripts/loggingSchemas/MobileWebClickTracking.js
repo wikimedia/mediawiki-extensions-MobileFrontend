@@ -35,13 +35,15 @@
 	} );
 
 	// Add EventLogging to hamburger menu
-	hijackLink( '#mw-mf-page-left .icon-home a', 'hamburger-home' );
-	hijackLink( '#mw-mf-page-left .icon-random a', 'hamburger-random' );
-	hijackLink( '#mw-mf-page-left .icon-nearby a', 'hamburger-nearby' );
-	hijackLink( '#mw-mf-page-left .icon-watchlist a', 'hamburger-watchlist' );
-	hijackLink( '#mw-mf-page-left .icon-settings a', 'hamburger-settings' );
-	hijackLink( '#mw-mf-page-left .icon-uploads a', 'hamburger-uploads' );
-	hijackLink( '#mw-mf-page-left .icon-profile', 'hamburger-profile' );
-	hijackLink( '#mw-mf-page-left .icon-anon a', 'hamburger-login' );
-	hijackLink( '#mw-mf-page-left .icon-secondary-logout', 'hamburger-logout' );
+	if ( !M.isApp() ) {
+		hijackLink( '#mw-mf-page-left .icon-home a', 'hamburger-home' );
+		hijackLink( '#mw-mf-page-left .icon-random a', 'hamburger-random' );
+		hijackLink( '#mw-mf-page-left .icon-nearby a', 'hamburger-nearby' );
+		hijackLink( '#mw-mf-page-left .icon-watchlist a', 'hamburger-watchlist' );
+		hijackLink( '#mw-mf-page-left .icon-settings a', 'hamburger-settings' );
+		hijackLink( '#mw-mf-page-left .icon-uploads a', 'hamburger-uploads' );
+		hijackLink( '#mw-mf-page-left .icon-profile', 'hamburger-profile' );
+		hijackLink( '#mw-mf-page-left .icon-anon a', 'hamburger-login' );
+		hijackLink( '#mw-mf-page-left .icon-secondary-logout', 'hamburger-logout' );
+	}
 } )( mw.mobileFrontend, jQuery );
