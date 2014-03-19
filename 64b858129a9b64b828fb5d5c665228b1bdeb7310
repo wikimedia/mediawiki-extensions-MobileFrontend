@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_fb3a4be3",
+        "filename": "javascripts/common/OverlayManager.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-19T17:49:05Z",
+      "side": 1,
+      "message": "Should be the top of the stack not the first in the stack surely?\ne.g. this.stack.length - 1",
+      "revId": "64b858129a9b64b828fb5d5c665228b1bdeb7310",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
