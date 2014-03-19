@@ -5,6 +5,7 @@ Feature: Basic site for legacy devices
   # FIXME: Add scenario to check watch star actually works
   Scenario: Able to search in basic non-JavaScript site
     Given I am using user agent "Opera/9.80 (J2ME/MIDP; Opera Mini/9.80 (S60; SymbOS; Opera Mobi/23.348; U; en) Presto/2.5.25 Version/10.54"
+      And I am on the "Main Page" page
     When I click on "Random" in the main navigation menu
     Then I see the watch star
       And I see the search button
@@ -13,6 +14,7 @@ Feature: Basic site for legacy devices
 
   Scenario: Able to access left navigation in basic non-JavaScript site
     Given I am using user agent "Opera/9.80 (J2ME/MIDP; Opera Mini/9.80 (S60; SymbOS; Opera Mobi/23.348; U; en) Presto/2.5.25 Version/10.54"
+      And I am on the "Main Page" page
     When I click on "Random" in the main navigation menu
       And I click on the main navigation button
     Then I see a link to "Home" in the main navigation menu
