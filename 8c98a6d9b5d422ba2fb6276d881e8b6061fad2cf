@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_badcd24c",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-19T00:43:35Z",
+      "side": 1,
+      "message": "I\u0027ll see if I can clean-up a bit.",
+      "parentUuid": "ee14bf34_1f8f30d3",
+      "revId": "8c98a6d9b5d422ba2fb6276d881e8b6061fad2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee14bf34_9fb22091",
         "filename": "javascripts/modules/editor/EditorOverlayBase.js",
         "patchSetId": 23
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_1af5feb5",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-19T00:43:35Z",
+      "side": 1,
+      "message": "The .one(\u0027click\u0027) won\u0027t work if we actually need the if statement below. I could probably just stop propagation from editor-switcher though and get rid of the if statement.",
+      "parentUuid": "ee14bf34_fff47c52",
+      "revId": "8c98a6d9b5d422ba2fb6276d881e8b6061fad2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee14bf34_7a219a99",
         "filename": "templates/modules/editor/VisualEditorOverlayHeader.html",
         "patchSetId": 23
@@ -64,6 +100,24 @@
       "writtenOn": "2014-03-18T23:55:27Z",
       "side": 1,
       "message": "Why the comment?",
+      "revId": "8c98a6d9b5d422ba2fb6276d881e8b6061fad2cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_dad78627",
+        "filename": "templates/modules/editor/VisualEditorOverlayHeader.html",
+        "patchSetId": 23
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-19T00:43:35Z",
+      "side": 1,
+      "message": "To keep there from being a space between the two buttons. I could just put them both on one line instead, but I thought this would be easier to read.",
+      "parentUuid": "ee14bf34_7a219a99",
       "revId": "8c98a6d9b5d422ba2fb6276d881e8b6061fad2cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
