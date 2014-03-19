@@ -35,7 +35,13 @@ class MobileUserInfo {
 		$constraints = array(
 			'LIMIT' => self::LIMIT + 1,
 		);
-		$innerSelect = $dbr->selectSQLText( 'recentchanges', 'rc_timestamp', $where, __METHOD__, $constraints );
+		$innerSelect = $dbr->selectSQLText(
+			'recentchanges',
+			'rc_timestamp',
+			$where,
+			__METHOD__,
+			$constraints
+		);
 		$res = $dbr->query( "SELECT COUNT(*) FROM ($innerSelect) t", __METHOD__ );
 		$row = $res->fetchRow();
 		$result = 0;
@@ -47,7 +53,8 @@ class MobileUserInfo {
 	}
 
 	/**
-	 * Returns a count of the most recent uploads to $wgMFPhotoUploadWiki since a given timestamp, not exceeding LIMIT
+	 * Returns a count of the most recent uploads to $wgMFPhotoUploadWiki since
+	 * a given timestamp, not exceeding LIMIT.
 	 *
 	 * @param Integer $fromDate Time to measure from
 	 * @return Integer the amount of edits
@@ -150,7 +157,8 @@ class MobileUserInfo {
 	public function getLastThanking() {
 		wfProfileIn( __METHOD__ );
 		$thank = false;
-		// Check that the Thank Extension and Echo extension are both installed before doing this (bug 56825)
+		// Check that the Thank Extension and Echo extension are both installed
+		// before doing this (bug 56825).
 		if ( class_exists( 'MWEchoDbFactory' ) && class_exists( 'ApiThank' ) ) {
 			$dbr = MWEchoDbFactory::getDB( DB_SLAVE );
 			$rows = $dbr->select(

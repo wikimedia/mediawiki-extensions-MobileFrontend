@@ -29,7 +29,7 @@
 		_shouldShowKeepGoingOverlay: function() {
 			if ( M.isBetaGroupMember() &&
 				mw.config.get( 'wgMFKeepGoing' ) &&
-				( this.editCount === 0  || inKeepGoingCampaign )
+				( this.editCount === 0 || inKeepGoingCampaign )
 			) {
 				return true;
 			} else {
@@ -141,5 +141,4 @@
 	} );
 
 	M.define( 'modules/editor/EditorOverlayBase', EditorOverlayBase );
-
 }( mw.mobileFrontend, jQuery ) );

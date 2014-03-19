@@ -102,7 +102,10 @@ END;
 
 END;
 		$diff = new InlineDifferenceEngine;
-		$this->assertEquals( $this->strip( $diffExpected ), $diff->generateTextDiffBody( $this->strip( $x ), $this->strip( $y ) ) );
+		$this->assertEquals(
+			$this->strip( $diffExpected ),
+			$diff->generateTextDiffBody( $this->strip( $x ), $this->strip( $y ) )
+		);
 	}
 
 	private function strip( $text ) {

@@ -79,6 +79,4 @@
 	} );
 
 	M.define( 'modules/keepgoing/KeepGoingOverlay', KeepGoingOverlay );
-
 }( mw.mobileFrontend, jQuery ) );
-

@@ -7,6 +7,7 @@ class MockApiMobileView extends ApiMobileView {
 		$row->page_id = 1;
 		$row->page_title = $t->getDBkey();
 		$row->page_namespace = $t->getNamespace();
+
 		return Title::newFromRow( $row );
 	}
 
@@ -18,7 +19,8 @@ class MockApiMobileView extends ApiMobileView {
 		$parser = new Parser();
 		$po = $parser->parse( $params['text'], $wp->getTitle(), $parserOptions );
 		$po->setTOCEnabled( false );
-		$po->setText( str_replace( array( "\r", "\n" ) , '', $po->getText() ) );
+		$po->setText( str_replace( array( "\r", "\n" ), '', $po->getText() ) );
+
 		return $po;
 	}
 
@@ -56,6 +58,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 		parent::tearDown();
 		$GLOBALS = $this->savedGlobals;
 	}
+
 	/**
 	 * @dataProvider provideSections
 	 */
@@ -107,7 +110,10 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 		$api = new MockApiMobileView( new ApiMain( $context ), 'mobileview' );
 		$api->execute();
 		$result = $api->getResultData();
-		$this->assertTrue( isset( $result['mobileview'] ), 'API output should be encloded in mobileview element' );
+		$this->assertTrue(
+			isset( $result['mobileview'] ),
+			'API output should be encloded in mobileview element'
+		);
 		$this->assertArrayEquals( $expected, $result['mobileview'] );
 	}
 
@@ -141,6 +147,7 @@ Text 2
 				),
 			),
 		);
+
 		return array(
 			array(
 				$baseIn,

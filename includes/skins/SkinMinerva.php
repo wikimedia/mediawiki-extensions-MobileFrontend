@@ -614,7 +614,7 @@ class SkinMinerva extends SkinTemplate {
 		// standardise watch article into one menu item
 		if ( isset( $actions['watch'] ) ) {
 			$menu['watch'] = array_merge( $actions['watch'], $watchTemplate );
-		} else if ( isset( $actions['unwatch'] ) ) {
+		} elseif ( isset( $actions['unwatch'] ) ) {
 			$menu['watch'] = array_merge( $actions['unwatch'], $watchTemplate );
 			$menu['watch']['class'] .= ' watched';
 		} else {
@@ -933,15 +933,15 @@ HTML;
 
 	/**
 	 * Takes an array of link elements and applies mobile urls to any urls contained in them
-	 * @param $urls Array
-	 * @return Array
+	 * @param array $urls
+	 * @return array
 	 */
 	public function mobilizeUrls( $urls ) {
 		$ctx = $this->mobileContext; // $this in closures is allowed only in PHP 5.4
 		return array_map( function( $url ) use ( $ctx ) {
-				$url['href'] = $ctx->getMobileUrl( $url['href'] );
-				return $url;
-			},
-			$urls );
+			$url['href'] = $ctx->getMobileUrl( $url['href'] );
+			return $url;
+		},
+		$urls );
 	}
 }

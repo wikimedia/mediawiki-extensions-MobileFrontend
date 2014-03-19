@@ -429,7 +429,8 @@ class MobileContext extends ContextSource {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
 
-		setcookie( 'stopMobileRedirect', 'true', $expiry, $wgCookiePath, $this->getStopMobileRedirectCookieDomain(), $wgCookieSecure );
+		setcookie( 'stopMobileRedirect', 'true', $expiry, $wgCookiePath,
+			$this->getStopMobileRedirectCookieDomain(), $wgCookieSecure );
 	}
 
 	public function unsetStopMobileRedirectCookie() {
@@ -479,7 +480,8 @@ class MobileContext extends ContextSource {
 		if ( !IP::isValid( $host ) ) {
 			$domainParts = explode( '.', $host );
 			$domainParts = array_reverse( $domainParts );
-			// Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included.
+			// Although some browsers will accept cookies without the initial .,
+			// » RFC 2109 requires it to be included.
 			wfProfileOut( __METHOD__ );
 			return count( $domainParts ) >= 2 ? '.' . $domainParts[1] . '.' . $domainParts[0] : $host;
 		}
@@ -605,7 +607,11 @@ class MobileContext extends ContextSource {
 					global $wgMobileUrlTemplate;
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
-					$wgMobileUrlTemplate = str_replace( $mobileToken, $subdomainTokenReplacement, $wgMobileUrlTemplate );
+					$wgMobileUrlTemplate = str_replace(
+						$mobileToken,
+						$subdomainTokenReplacement,
+						$wgMobileUrlTemplate
+					);
 				}
 			}
 		}
@@ -846,7 +852,7 @@ class MobileContext extends ContextSource {
 		global $wgServer;
 		$parsedTarget = wfParseUrl( $url );
 		$parsedServer = wfParseUrl( $wgServer );
-		return  $parsedTarget['host'] === $parsedServer['host'];
+		return $parsedTarget['host'] === $parsedServer['host'];
 	}
 
 	/**

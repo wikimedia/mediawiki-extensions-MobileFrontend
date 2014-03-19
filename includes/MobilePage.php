@@ -3,7 +3,7 @@
 /**
  * Retrieves information specific to a mobile page
  * Currently this only provides helper functions for loading PageImage associated with a page
- * FIXME: Rename when this class when its purpose becomes clearer
+ * @todo FIXME: Rename when this class when its purpose becomes clearer
  */
 class MobilePage {
 	const MEDIUM_IMAGE_WIDTH = 300;
@@ -20,7 +20,7 @@ class MobilePage {
 
 	public function __construct( Title $title, $file = false ) {
 		$this->title = $title;
-		// FIXME: check existence
+		// @todo FIXME: check existence
 		if ( defined( 'PAGE_IMAGES_INSTALLED' ) ) {
 			$this->usePageImages = true;
 			$this->file = $file ? $file : PageImages::getPageImage( $title );
@@ -64,7 +64,10 @@ class MobilePage {
 			if ( $file ) {
 				$thumb = $file->transform( array( 'width' => $size ) );
 				if ( $thumb && $thumb->getUrl() ) {
-					$className = 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight() ? 'listThumbH' : 'listThumbV' );
+					$className = 'listThumb ';
+					$className .= $thumb->getWidth() > $thumb->getHeight()
+						? 'listThumbH'
+						: 'listThumbV';
 					$props = array(
 						'class' => $className,
 					);
@@ -83,5 +86,4 @@ class MobilePage {
 		}
 		return $imageHtml;
 	}
-
 }

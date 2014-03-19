@@ -1,7 +1,6 @@
 <?php
 
 class SpecialUserProfile extends MobileSpecialPage {
-
 	protected $mode = 'beta';
 	protected $disableSearchAndFooter = false;
 	protected $hasDesktopVersion = false;
@@ -59,7 +58,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$daysAgo = $this->getDaysAgo( $ts );
 		$page = new MobilePage( $title, $file );
 		$img = Html::openElement( 'div', array( 'class' => 'card' ) ) .
-			Html::openElement( 'a', array( 'class' => 'container image', 'href' => $title->getLocalUrl() ) ) .
+			Html::openElement( 'a', array(
+				'class' => 'container image',
+				'href' => $title->getLocalUrl() )
+			) .
 			$page->getMediumThumbnailHtml() .
 			Html::openElement( 'div', array( 'class' => 'caption' ) ) .
 			$this->msg( 'mobile-frontend-profile-last-upload-caption' )
@@ -91,7 +93,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 					// purpose, but may be changed in the future.
 					$out .= htmlspecialchars( $this->userDescription );
 					$out .= Html::closeElement( 'p' );
-				} else if ( $this->editable ) {
+				} elseif ( $this->editable ) {
 					$out .= Html::openElement( 'p', array( 'class' => 'user-description-placeholder' ) );
 					$out .= $this->msg( 'mobile-frontend-profile-description-placeholder',
 						$this->targetUser );
@@ -172,7 +174,12 @@ class SpecialUserProfile extends MobileSpecialPage {
 			'href' => $this->targetUser->getTalkPage()->getLocalUrl(),
 		);
 		// FIXME: What if this is the user's own profile? Should we change the message?
-		return Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk', $this->targetUser->getName() ) );
+		return Html::element(
+			'a',
+			$attrs,
+			$this->msg( 'mobile-frontend-profile-usertalk',
+				$this->targetUser->getName() )
+		);
 	}
 
 	protected function getHtmlNoUser() {

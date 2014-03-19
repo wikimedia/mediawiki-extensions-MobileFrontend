@@ -65,10 +65,14 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 					'size' => '20' ) ) .
 			Html::closeElement( 'div' ) .
 			$captcha .
-			Html::input( 'wpCreateaccount', wfMessage( 'mobile-frontend-account-create-submit' )->text(), 'submit',
+			Html::input( 'wpCreateaccount',
+				wfMessage( 'mobile-frontend-account-create-submit' )->text(),
+				'submit',
 				array( 'id' => 'wpCreateaccount',
 					'class' => 'mw-ui-button mw-ui-constructive',
-					'tabindex' => '6' ) ) .
+					'tabindex' => '6'
+				)
+			) .
 			Html::input( 'wpRemember', '1', 'hidden' ) .
 			Html::input( 'wpCreateaccountToken', $token, 'hidden' ) .
 			Html::input( 'watch', $watchArticle, 'hidden' ) .
@@ -115,7 +119,8 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		$captchaId = $matches[1];
 
 		// generate src for captcha img
-		$captchaSrc = SpecialPage::getTitleFor( 'Captcha', 'image' )->getLocalUrl( array( 'wpCaptchaId' => $captchaId ) );
+		$captchaSrc = SpecialPage::getTitleFor( 'Captcha', 'image' )
+			->getLocalUrl( array( 'wpCaptchaId' => $captchaId ) );
 
 		// add reload if fancyCaptcha and has reload
 		if ( stristr( $header, 'fancycaptcha-reload' ) ) {

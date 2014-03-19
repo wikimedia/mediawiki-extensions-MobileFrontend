@@ -1,11 +1,8 @@
 ( function( M, $ ) {
-
 	var
 		OverlayManager = M.require( 'OverlayManager' ),
 		EventEmitter = M.require( 'eventemitter' ),
 		fakeRouter, overlayManager;
-
-
 
 	QUnit.module( 'MobileFrontend OverlayManager', {
 		setup: function() {
@@ -121,5 +118,4 @@
 		fakeRouter.emit( 'route', ev );
 		assert.ok( ev.isDefaultPrevented(), 'prevent route change' );
 	} );
-
 }( mw.mobileFrontend, jQuery ) );

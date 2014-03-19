@@ -84,8 +84,9 @@ class ApiParseExtender {
 				// @todo: Remove this no earlier than 6 months from Oct 31, 2013
 				$mobileformat = $module->getRequest()->getText( 'mobileformat' );
 				if ( $mobileformat === 'html' || $mobileformat === 'wml' ) {
-					$result->setWarning( 'mobileformat parameter calling style have changed and current usage will be'
-						. ' deprecated. See https://lists.wikimedia.org/pipermail/mediawiki-api/2013-October/003131.html'
+					$result->setWarning( 'mobileformat parameter calling style have changed '
+						. 'and current usage will be  deprecated. See '
+						. 'https://lists.wikimedia.org/pipermail/mediawiki-api/2013-October/003131.html'
 						. ' for details.'
 					);
 					$data['parse']['text'] = $mf->getText();

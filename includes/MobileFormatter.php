@@ -174,8 +174,9 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Performs final transformations to mobile format and returns resulting HTML
 	 *
-	 * @param DOMElement|string|null $element: ID of element to get HTML from or false to get it from the whole tree
-	 * @return string: Processed HTML
+	 * @param DOMElement|string|null $element ID of element to get HTML from or
+	 *   false to get it from the whole tree
+	 * @return string Processed HTML
 	 */
 	public function getText( $element = null ) {
 		wfProfileIn( __METHOD__ );
@@ -216,7 +217,10 @@ class MobileFormatter extends HtmlFormatter {
 		$content->setAttribute( 'id', 'mainpage' );
 
 		if ( $featuredArticle ) {
-			$h2FeaturedArticle = $mainPage->createElement( 'h2', $this->msg( 'mobile-frontend-featured-article' ) );
+			$h2FeaturedArticle = $mainPage->createElement(
+				'h2',
+				$this->msg( 'mobile-frontend-featured-article' )
+			);
 			$content->appendChild( $h2FeaturedArticle );
 			$content->appendChild( $featuredArticle );
 		}
@@ -264,7 +268,10 @@ class MobileFormatter extends HtmlFormatter {
 		wfProfileIn( __METHOD__ );
 		$tagRegEx = '<' . $tagName . '.*</' . $tagName . '>';
 		$s = $this->pageTransformStart .
-			preg_replace( '%(' . $tagRegEx . ')%sU', $this->headingTransformStart . '\1' . $this->headingTransformEnd, $s ) .
+			preg_replace(
+				'%(' . $tagRegEx . ')%sU', $this->headingTransformStart . '\1' . $this->headingTransformEnd,
+				$s
+			) .
 			$this->pageTransformEnd;
 		wfProfileOut( __METHOD__ );
 		return $s;

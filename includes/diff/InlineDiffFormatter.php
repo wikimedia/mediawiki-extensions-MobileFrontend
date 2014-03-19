@@ -1,4 +1,5 @@
 <?php
+
 class InlineDiffFormatter extends TableDiffFormatter {
 	/**
 	 * @param $xbeg
@@ -38,7 +39,8 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 */
 	function context( $lines ) {
 		foreach ( $lines as $line ) {
-			echo "<div class=\"mw-diff-inline-context\">{$this->contextLine( htmlspecialchars( $line ) )}</div>\n";
+			echo "<div class=\"mw-diff-inline-context\">" .
+				"{$this->contextLine( htmlspecialchars( $line ) )}</div>\n";
 		}
 	}
 
@@ -64,6 +66,7 @@ class InlineDiffFormatter extends TableDiffFormatter {
 		if ( $line === '' ) {
 			$line = '&#160;';
 		}
+
 		return $line;
 	}
 
@@ -105,7 +108,6 @@ class InlineDiffFormatter extends TableDiffFormatter {
 		$lines = $inline->getLines();
 		wfProfileOut( __METHOD__ );
 
-	return $lines;
-}
-
+		return $lines;
+	}
 }

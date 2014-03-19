@@ -124,24 +124,36 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 			$variantsCount = count( $variants );
 
 			$html .= Html::element( 'p', array(),
-				$this->msg( 'mobile-frontend-languages-text' )->params( $titlename )->numParams( $languagesCount )->text() ) .
-			Html::openElement( 'p' ) .
-				Html::element( 'a',
-					array( 'href' => $this->title->getLocalUrl() ),
-					$this->msg( 'returnto', $titlename )->text() ) .
-			Html::closeElement( 'p' );
+				$this->msg( 'mobile-frontend-languages-text' )
+					->params( $titlename )->numParams( $languagesCount )->text()
+			);
+			$html .= Html::openElement( 'p' );
+			$html .= Html::element( 'a',
+				array( 'href' => $this->title->getLocalUrl() ),
+				$this->msg( 'returnto', $titlename )->text()
+			);
+			$html .= Html::closeElement( 'p' );
 
 			if ( $languagesCount > 0 || $variantsCount > 1 ) {
 				// Language variants first
 				if ( $variantsCount > 1 ) {
-					$variantHeader = $variantsCount > 1 ? $this->msg( 'mobile-frontend-languages-variant-header' )->text() : '';
-					$html .= Html::element( 'h2', array( 'id' => 'mw-mf-language-variant-header' ), $variantHeader )
-						. Html::openElement( 'ul', array( 'id' => 'mw-mf-language-variant-selection' ) );
+					$variantHeader = $variantsCount > 1
+						? $this->msg( 'mobile-frontend-languages-variant-header' )->text()
+						: '';
+					$html .= Html::element( 'h2',
+							array( 'id' => 'mw-mf-language-variant-header' ),
+							$variantHeader
+					);
+					$html .= Html::openElement( 'ul',
+						array( 'id' => 'mw-mf-language-variant-selection' )
+					);
+
 					foreach ( $variants as $val ) {
 						$html .= $this->makeLangListItem( $val );
 					}
 					$html .= Html::closeElement( 'ul' );
 				}
+
 				// Then other languages
 				if ( $languagesCount > 0 ) {
 					$languageHeader = $this->msg( 'mobile-frontend-languages-header' )->text();

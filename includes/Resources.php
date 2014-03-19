@@ -55,7 +55,7 @@ $wgMFMobileSpecialPageResourceScriptBoilerplate = $wgMFMobileSpecialPageResource
 );
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
-	// FIXME: Upstream to core
+	// @todo FIXME: Upstream to core
 	'mobile.templates' => array(
 		'localBasePath' => $localBasePath,
 		'remoteExtPath' => $remoteExtPath,
@@ -66,7 +66,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'targets' => array( 'mobile', 'desktop' ),
 	),
 
-	// FIXME: Remove need for this module
+	// @todo FIXME: Remove need for this module
 	// Mobile Bridge - Tweaks the desktop UI so mobile code can run on it
 	'mobile.bridge' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
@@ -109,7 +109,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	// FIXME: Kill module when no longer in cache.
+	// @todo FIXME: Kill module when no longer in cache.
 	'mobile.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/reset.less',
@@ -159,7 +159,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// FIXME: Remove in favour of mediawiki ui
+	// @todo FIXME: Remove in favour of mediawiki ui
 	'skins.minerva.buttons.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/buttons.less',
@@ -566,7 +566,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// FIXME: remove when cache expires
+	// @todo FIXME: remove when cache expires
 	'mobile.search.stable' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.search'
@@ -601,7 +601,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-reply',
 			'mobile-frontend-talk-reply-info',
 			'mobile-frontend-talk-topic-feedback',
-			// FIXME: Gets loaded twice if editor and talk both loaded.
+			// @todo FIXME: Gets loaded twice if editor and talk both loaded.
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-license' => array( 'parse' ),
 		),
@@ -662,7 +662,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 		),
 		'scripts' => array(
-			// FIXME: remove when all new overlays moved to stable
+			// @todo FIXME: remove when all new overlays moved to stable
 			'javascripts/common/Overlay.js',
 			'javascripts/common/LoadingOverlay.js',
 
@@ -672,18 +672,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			'mobile-frontend-overlay-close',
 			'mobile-frontend-overlay-continue',
-			// FIXME: remove when all new overlays moved to stable
+			// @todo FIXME: remove when all new overlays moved to stable
 			'mobile-frontend-overlay-escape',
 		),
 		'templates' => array(
 			'OverlayNew',
 			'LoadingOverlay',
-			// FIXME: remove when all new overlays moved to stable
+			// @todo FIXME: remove when all new overlays moved to stable
 			'overlay',
 		),
 		'styles' => array(
 			'less/common/OverlayNew.less',
-			// FIXME: remove when all new overlays moved to stable
+			// @todo FIXME: remove when all new overlays moved to stable
 			'less/common/overlays.less',
 		)
 	),
@@ -706,7 +706,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// PhotoUploaderButton.js
 			// For new page action menu
 			'uploads/LeadPhotoUploaderButton',
-			// FIXME: this should be in special.uploads (need to split
+			// @todo FIXME: this should be in special.uploads (need to split
 			// code in PhotoUploaderButton.js into separate files too)
 			'uploads/PhotoUploaderButton',
 
@@ -914,7 +914,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'dependencies' => array(
 			'mobile.stable.common',
-			// FIXME: Kill this dependency!
+			// @todo FIXME: Kill this dependency!
 			'mobile.special.nearby.styles',
 			'jquery.json',
 			'mediawiki.language',
@@ -991,14 +991,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 ) );
 
 /**
-	* Special page modules
-	* FIXME: Remove the need for these by making more reusable CSS
-	*
-	* Note: Use correct names to ensure modules load on pages
-	* Name must be the name of the special page lowercased prefixed by 'mobile.special.' or 'skins.minerva.special.'
-	* depending on where the module is used.
-	* suffixed by '.styles' or '.scripts'
-	*/
+ * Special page modules
+ * @todo FIXME: Remove the need for these by making more reusable CSS
+ *
+ * Note: Use correct names to ensure modules load on pages
+ * Name must be the name of the special page lowercased prefixed by
+ * 'mobile.special.' or 'skins.minerva.special.'
+ * depending on where the module is used.
+ * suffixed by '.styles' or '.scripts'
+ */
 $wgMobileSpecialPageModules = array(
 	'mobile.special.app.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
@@ -1063,7 +1064,7 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
-	// FIXME: Merge with mobile.nearby when geonotahack moves to  stable
+	// @todo FIXME: Merge with mobile.nearby when geonotahack moves to  stable
 	'mobile.special.nearby.beta' => $wgMFMobileResourceBoilerplate + array(
 		'messages' => array(
 			// NearbyOverlay.js
@@ -1184,7 +1185,7 @@ $wgMobileSpecialPageModules = array(
 
 /**
 	* Special page modules  that are specific to minerva.
-	* FIXME: With the exception of skins.minerva.special.styles these should not exist.
+	* @todo FIXME: With the exception of skins.minerva.special.styles these should not exist.
 	*/
 $wgMinervaSpecialPageModules = array(
 	'skins.minerva.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(

@@ -47,9 +47,15 @@ class MinervaTemplate extends BaseTemplate {
 				foreach( $this->getFooterLinks() as $category => $links ):
 			?>
 				<ul class="footer-<?php echo $category; ?>">
-					<?php foreach( $links as $link ): if ( isset( $this->data[$link] ) ): ?><li><?php $this->html( $link ) ?></li><?php endif; endforeach; ?>
+					<?php
+						// @codingStandardsIgnoreStart Long line Siebrand has no clue how to break up correctly.
+						foreach( $links as $link ): if ( isset( $this->data[$link] ) ): ?><li><?php $this->html( $link ) ?></li><?php endif; endforeach;
+						// @codingStandardsIgnoreEnd
+					?>
 				</ul>
-			<?php endforeach; ?>
+			<?php
+				endforeach;
+			?>
 		</div>
 		<?php
 		}
@@ -89,7 +95,10 @@ class MinervaTemplate extends BaseTemplate {
 
 		// If languages are available, render a languages link
 		if ( $this->getLanguages() || $this->getLanguageVariants() ) {
-			$languageUrl = SpecialPage::getTitleFor( 'MobileLanguages', $this->getSkin()->getTitle() )->getLocalURL();
+			$languageUrl = SpecialPage::getTitleFor(
+				'MobileLanguages',
+				$this->getSkin()->getTitle()
+			)->getLocalURL();
 			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 
 			echo Html::element( 'a', array(
@@ -123,7 +132,8 @@ class MinervaTemplate extends BaseTemplate {
 				$this->renderHistoryLinkBottom( $data );
 			?>
 		</div>
-		<?php } else {
+		<?php
+		} else {
 			echo $data[ 'bodytext' ];
 		}
 	}
@@ -141,7 +151,7 @@ class MinervaTemplate extends BaseTemplate {
 				// FIXME: Temporary solution until we have design
 				if ( isset( $data['_old_revision_warning'] ) ) {
 					echo $data['_old_revision_warning'];
-				} else if ( !$isSpecialPage ){
+				} elseif ( !$isSpecialPage ){
 					$this->renderPageActions( $data );
 				}
 				echo $internalBanner;
@@ -214,7 +224,10 @@ class MinervaTemplate extends BaseTemplate {
 							<form action="<?php echo $data['wgScript'] ?>" class="search-box">
 							<?php
 							echo $this->makeSearchInput( $data['searchBox'] );
-							echo $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit mw-ui-button mw-ui-progressive' ) );
+							echo $this->makeSearchButton(
+								'go',
+								array( 'class' => 'searchSubmit mw-ui-button mw-ui-progressive' )
+							);
 							?>
 							</form>
 							<?php

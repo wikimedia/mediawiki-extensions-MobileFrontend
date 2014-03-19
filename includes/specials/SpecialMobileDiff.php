@@ -29,7 +29,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Takes 2 ids/keywords and validates them returning respective revisions
 	 *
 	 * @param Array Array of revision ids currently limited to 2 elements
-	 * @return Array of previous and next revision. The next revision is null if a bad parameter is passed
+	 * @return Array of previous and next revision. The next revision is null if
+	 *   a bad parameter is passed
 	 */
 	public function getRevisionsToCompare( $revids ) {
 		$prev = null;
@@ -44,7 +45,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				// deal with identical ids
 				if ( $id === $prevId ) {
 					$rev = null;
-				} else if ( $rev ) {
+				} elseif ( $rev ) {
 					$prev = static::getRevision( $prevId );
 					if ( !$prev ) {
 						$rev = null;
@@ -53,7 +54,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					$rev = null;
 				}
 			}
-		} else if ( count( $revids ) === 1 ) {
+		} elseif ( count( $revids ) === 1 ) {
 			$id = intval( $revids[0] );
 			if ( $id ) {
 				$rev = static::getRevision( $id );
@@ -86,9 +87,13 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$this->prevRev = $prev;
 		$this->targetTitle = $this->rev->getTitle();
 
-		$output->setPageTitle( $this->msg( 'mobile-frontend-diffview-title', $this->targetTitle->getPrefixedText() ) );
+		$output->setPageTitle( $this->msg(
+			'mobile-frontend-diffview-title',
+			$this->targetTitle->getPrefixedText()
+		) );
 
-		// FIXME: Don't add these styles. This is only needed for the user icon to the left of the username
+		// @todo FIXME: Don't add these styles. This is only needed for the user
+		// icon to the left of the username
 		$output->addModuleStyles( 'mobile.special.pagefeed.styles' );
 
 		// Allow other extensions to load more stuff here
@@ -135,7 +140,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					$title->getPrefixedText()
 				).
 				Html::closeElement( 'h2' ) .
-				Html::element( 'span', array( 'class' => $sizeClass ), $this->msg( $changeMsg )->numParams( $bytesChanged )->text() ) .
+				Html::element( 'span', array( 'class' => $sizeClass ),
+					$this->msg( $changeMsg )->numParams( $bytesChanged )->text()
+				) .
 				$this->msg( 'comma-separator' )->text() .
 				Html::element( 'span', array( 'class' => 'mw-mf-diff-date meta' ), $ts->getHumanTimestamp() ) .
 			Html::closeElement( 'div' ) .
@@ -202,7 +209,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'data-user-gender' => $user->getOption( 'gender' ),
 			);
 			$inBeta = MobileContext::singleton()->isBetaGroupMember();
-			$userLink = $inBeta ? SpecialPage::getTitleFor( 'UserProfile', $user->getName() ) : $user->getUserPage();
+			$userLink = $inBeta
+				? SpecialPage::getTitleFor( 'UserProfile', $user->getName() )
+				: $user->getUserPage();
 			$output->addHtml(
 				Html::openElement( 'div', $attrs ) .
 				Linker::link(
@@ -215,7 +224,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					$this->listGroups( $user ) .
 				'</div>' .
 				'<div class="mw-mf-edit-count meta">' .
-					$this->msg( 'mobile-frontend-diffview-editcount', $this->getLanguage()->formatNum( $edits ) )->parse() .
+					$this->msg(
+						'mobile-frontend-diffview-editcount',
+						$this->getLanguage()->formatNum( $edits )
+					)->parse() .
 				'</div>'
 			);
 		} else {
@@ -274,7 +286,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					// yes this is confusing - this is how it works arrgghh
 					$rev2 = $rev1;
 					$rev1 = $prev ? $prev->getId() : '';
-				} else if ( $rev2 === 'next' ) {
+				} elseif ( $rev2 === 'next' ) {
 					$next = $rev->getNext();
 					$rev2 = $next ? $next->getId() : '';
 				} else {

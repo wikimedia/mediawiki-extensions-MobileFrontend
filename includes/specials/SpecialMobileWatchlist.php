@@ -264,7 +264,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		// object (which implements array-like interface ArrayAccess).
 		// Let's keep using an array and hope any new extensions are compatible with both styles...
 		$values = array();
-		wfRunHooks( 'SpecialWatchlistQuery', array( &$conds, &$tables, &$join_conds, &$fields, &$values ) );
+		wfRunHooks(
+			'SpecialWatchlistQuery',
+			array( &$conds, &$tables, &$join_conds, &$fields, &$values )
+		);
 
 		wfProfileIn( __METHOD__ . '-query' );
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $join_conds );
@@ -405,16 +408,17 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		if ( $feed ) {
 			$msg = Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-feed-empty' )->plain() );
 		} else {
-			$msg  = Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain() ) .
-				Html::element( 'img', array(
-					'src' => $imgUrl,
-					'alt' => wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto-alt' )->plain(),
-					)
-				);
+			$msg = Html::element( 'p', null,
+				wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain()
+			);
+			$msg .=	Html::element( 'img', array(
+				'src' => $imgUrl,
+				'alt' => wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto-alt' )->plain(),
+			) );
 		}
 
 		$output->addHtml(
-				Html::openElement( 'div', array( 'class' => 'info' ) ) .
+			Html::openElement( 'div', array( 'class' => 'info' ) ) .
 				$msg .
 				Html::element( 'a',
 					array( 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ),
@@ -436,12 +440,19 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			if ( !is_null( $row->pp_value ) ) {
 				$file = wfFindFile( $row->pp_value );
 				if ( $file ) {
-					$thumb = $file->transform( array( 'width' => self::THUMB_SIZE, 'height' => self::THUMB_SIZE ) );
+					$thumb = $file->transform( array(
+						'width' => self::THUMB_SIZE,
+						'height' => self::THUMB_SIZE )
+					);
+
 					if ( $thumb ) {
 						$needsPhoto = false;
 						$props = array(
-								'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight() ? 'listThumbH' : 'listThumbV' ),
-								'style' => 'background-image: url("' . wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
+							'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight()
+								? 'listThumbH'
+								: 'listThumbV' ),
+							'style' => 'background-image: url("' .
+								wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
 						);
 					}
 				}
@@ -469,9 +480,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output = $this->getOutput();
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
-		$comment = $this->formatComment( $row->rc_comment , $title );
+		$comment = $this->formatComment( $row->rc_comment, $title );
 		$ts = new MWTimestamp( $row->rc_timestamp );
-		$username = $row->rc_user != 0 && isset( $row->rc_user_text ) ? htmlspecialchars( $row->rc_user_text ) : '';
+		$username = $row->rc_user != 0 && isset( $row->rc_user_text )
+			? htmlspecialchars( $row->rc_user_text )
+			: '';
 		$revId = $row->rc_this_oldid;
 
 		if ( $revId ) {
@@ -496,7 +509,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$ts = $row->rev_timestamp;
 		if ( $ts ) {
 			$ts = new MWTimestamp( $ts );
-			$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->text();
+			$lastModified = wfMessage(
+				'mobile-frontend-watchlist-modified',
+				$ts->getHumanTimestamp()
+			)->text();
 			$className = 'title';
 		} else {
 			$className = 'title new';

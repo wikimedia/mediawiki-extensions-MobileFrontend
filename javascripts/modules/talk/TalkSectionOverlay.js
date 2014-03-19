@@ -1,5 +1,4 @@
 ( function( M ) {
-
 var
 	Overlay = M.require( 'OverlayNew' ),
 	popup = M.require( 'toast' ),
@@ -63,6 +62,4 @@ var
 	} );
 
 	M.define( 'modules/talk/TalkSectionOverlay', TalkSectionOverlay );
-
 }( mw.mobileFrontend ) );
-

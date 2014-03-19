@@ -29,7 +29,8 @@ class ApiMobileView extends ApiBase {
 		$this->getMain()->setCacheMode( 'anon-public-user-private' );
 
 		// Enough '*' keys in JSON!!!
-		$isXml = $this->getMain()->isInternalMode() || $this->getMain()->getPrinter()->getFormat() == 'XML';
+		$isXml = $this->getMain()->isInternalMode()
+			|| $this->getMain()->getPrinter()->getFormat() == 'XML';
 		$textElement = $isXml ? '*' : 'text';
 		$params = $this->extractRequestParams();
 
@@ -112,7 +113,8 @@ class ApiMobileView extends ApiBase {
 			$requestedSections = array();
 		}
 		if ( isset( $prop['sections'] ) ) {
-			for ( $i = 0; $i <= count( $data['sections'] ); $i++ ) {
+			$sectionCount = count( $data['sections'] );
+			for ( $i = 0; $i <= $sectionCount; $i++ ) {
 				if ( !isset( $requestedSections[$i] ) && $onlyRequestedSections ) {
 					continue;
 				}
@@ -135,7 +137,8 @@ class ApiMobileView extends ApiBase {
 			foreach ( array_keys( $requestedSections ) as $index ) {
 				$section = array( 'id' => $index );
 				if ( isset( $data['text'][$index] ) ) {
-					$section[$textElement] = $this->stringSplitter( $this->prepareSection( $data['text'][$index] ) );
+					$section[$textElement] =
+						$this->stringSplitter( $this->prepareSection( $data['text'][$index] ) );
 				} else {
 					$missingSections[] = $index;
 				}
@@ -147,7 +150,8 @@ class ApiMobileView extends ApiBase {
 			$this->addProtection( $title );
 		}
 		// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
-		// Inform ppl if the page is infested with LiquidThreads but that's the only thing we support about it.
+		// Inform ppl if the page is infested with LiquidThreads but that's the
+		// only thing we support about it.
 		if ( class_exists( 'LqtDispatch' ) && LqtDispatch::isLqtPage( $title ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'liquidthreads' => '' )
@@ -278,7 +282,8 @@ class ApiMobileView extends ApiBase {
 		$parserOutput = $wp->getParserOutput( $parserOptions );
 		$time = microtime( true ) - $time;
 		if ( !$parserOutput ) {
-			wfDebugLog( 'mobile', "Empty parser output on '{$wp->getTitle()->getPrefixedText()}': rev {$wp->getId()}, time $time" );
+			wfDebugLog( 'mobile', "Empty parser output on '{$wp->getTitle()->getPrefixedText()}'" .
+				": rev {$wp->getId()}, time $time" );
 			throw new MWException( __METHOD__ . ": PoolCounter didn't return parser output" );
 		}
 		$parserOutput->setTOCEnabled( false );
@@ -335,7 +340,15 @@ class ApiMobileView extends ApiBase {
 		} else {
 			$parserOptions = $this->makeParserOptions( $wp );
 			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
-			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->noTransform, $parserCacheKey );
+			$key = wfMemcKey(
+				'mf',
+				'mobileview',
+				self::CACHE_VERSION,
+				$noImages,
+				$latest,
+				$this->noTransform,
+				$parserCacheKey
+			);
 		}
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
@@ -372,12 +385,15 @@ class ApiMobileView extends ApiBase {
 			wfProfileIn( __METHOD__ . '-sections' );
 			$data = array();
 			$data['sections'] = $parserOutput->getSections();
-			for ( $i = 0; $i < count( $data['sections'] ); $i++ ) {
-				$data['sections'][$i]['line'] = $title->getPageLanguage()->convert( $data['sections'][$i]['line'] );
+			$sectionCount = count( $data['sections'] );
+			for ( $i = 0; $i < $sectionCount; $i++ ) {
+				$data['sections'][$i]['line'] =
+					$title->getPageLanguage()->convert( $data['sections'][$i]['line'] );
 			}
 			$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
 			if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
-				wfDebugLog( 'mobile', __METHOD__ . "(): mismatching number of sections from parser and split on page {$title->getPrefixedText()}, oldid=$latest" );
+				wfDebugLog( 'mobile', __METHOD__ . "(): mismatching number of " .
+					"sections from parser and split on page {$title->getPrefixedText()}, oldid=$latest" );
 				// We can't be sure about anything here, return all page HTML as one big section
 				$chunks = array( $html );
 				$data['sections'] = array();
@@ -599,10 +615,12 @@ class ApiMobileView extends ApiBase {
 			'id' => 'Id of the page',
 			'page' => 'Title of page to process',
 			'redirect' => 'Whether redirects should be followed',
-			'sections' => array( 'Pipe-separated list of section numbers for which to return text.',
+			'sections' => array(
+				'Pipe-separated list of section numbers for which to return text.',
 				" `all' can be used to return for all. Ranges in format '1-4' mean get sections 1,2,3,4.",
 				" Ranges without second number, e.g. '1-' means get all until the end.",
-				" `references' can be used to specify that all sections containing references should be returned."
+				" `references' can be used to specify that all sections containing references",
+				" should be returned."
 			),
 			'prop' => array(
 				'Which information to get',
@@ -623,7 +641,8 @@ class ApiMobileView extends ApiBase {
 			'noheadings' => "Don't include headings in output",
 			'notransform' => "Don't transform HTML into mobile-specific version",
 			'onlyrequestedsections' => 'Return only requested sections even with prop=sections',
-			'offset' => 'Pretend all text result is one string, and return the substring starting at this point',
+			'offset' =>
+				'Pretend all text result is one string, and return the substring starting at this point',
 			'maxlen' => 'Pretend all text result is one string, and limit result to this length',
 		);
 		if ( $this->usePageImages ) {

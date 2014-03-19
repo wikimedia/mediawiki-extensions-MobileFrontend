@@ -7,8 +7,8 @@ class MobileContextTest extends MediaWikiTestCase {
 	private $savedGlobals;
 
 	/**
-	* PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of
-	* protected and private methods directly through the Reflection API
+	 * PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of
+	 * protected and private methods directly through the Reflection API
 	 *
 	 * @param $name string
 	 * @return \ReflectionMethod
@@ -17,6 +17,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$class = new ReflectionClass( 'MobileContext' );
 		$method = $class->getMethod( $name );
 		$method->setAccessible( true );
+
 		return $method;
 	}
 
@@ -41,7 +42,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		global $wgServer;
 		$wgServer = $server;
 		$this->assertEquals( $baseDomain, MobileContext::singleton()->getBaseDomain() );
-
 	}
 
 	public function getBaseDomainProvider() {
@@ -57,18 +57,28 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function testGetMobileUrl() {
 		global $wgHooks;
 
-		$this->setMwGlobals( 'wgMFMobileHeader','X-WAP' );
+		$this->setMwGlobals( 'wgMFMobileHeader', 'X-WAP' );
 		$this->setMwGlobals( 'wgMobileUrlTemplate', '%h0.m.%h1.%h2' );
 		$invokes = 0;
 		$context = MobileContext::singleton();
 		$asserter = $this;
-		$wgHooks['GetMobileUrl'][] = function( &$string, $hookCtx ) use ( $asserter, &$invokes, $context ) {
+		$wgHooks['GetMobileUrl'][] = function ( &$string, $hookCtx ) use (
+			$asserter,
+			&$invokes,
+			$context
+		) {
 			$asserter->assertEquals( $context, $hookCtx );
 			$invokes++;
 		};
 		$context->getRequest()->setHeader( 'X-WAP', 'no' );
-		$this->assertEquals( 'http://en.m.wikipedia.org/wiki/Article', $context->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' ) );
-		$this->assertEquals( '//en.m.wikipedia.org/wiki/Article', $context->getMobileUrl( '//en.wikipedia.org/wiki/Article' ) );
+		$this->assertEquals(
+			'http://en.m.wikipedia.org/wiki/Article',
+			$context->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' )
+		);
+		$this->assertEquals(
+			'//en.m.wikipedia.org/wiki/Article',
+			$context->getMobileUrl( '//en.wikipedia.org/wiki/Article' )
+		);
 		$this->assertEquals( 2, $invokes, 'Ensure that hook got the right context' );
 	}
 
@@ -76,9 +86,18 @@ class MobileContextTest extends MediaWikiTestCase {
 		global $wgMobileUrlTemplate;
 
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2/path/morepath";
-		$this->assertEquals( '%h0.m.%h1.%h2', MobileContext::singleton()->parseMobileUrlTemplate( 'host' ) );
-		$this->assertEquals( '/path/morepath', MobileContext::singleton()->parseMobileUrlTemplate( 'path' ) );
-		$this->assertEquals( array( 'host' => '%h0.m.%h1.%h2', 'path' => '/path/morepath' ), MobileContext::singleton()->parseMobileUrlTemplate() );
+		$this->assertEquals(
+			'%h0.m.%h1.%h2',
+			MobileContext::singleton()->parseMobileUrlTemplate( 'host' )
+		);
+		$this->assertEquals(
+			'/path/morepath',
+			MobileContext::singleton()->parseMobileUrlTemplate( 'path' )
+		);
+		$this->assertEquals(
+			array( 'host' => '%h0.m.%h1.%h2', 'path' => '/path/morepath' ),
+			MobileContext::singleton()->parseMobileUrlTemplate()
+		);
 	}
 
 	/**
@@ -116,15 +135,17 @@ class MobileContextTest extends MediaWikiTestCase {
 		$updateDesktopUrlQuery = self::getMethod( "updateDesktopUrlQuery" );
 		$parsedUrl = wfParseUrl( $mobile );
 		$updateDesktopUrlQuery->invokeArgs( MobileContext::singleton(), array( &$parsedUrl ) );
-		$url =  wfAssembleUrl( $parsedUrl );
+		$url = wfAssembleUrl( $parsedUrl );
 		$this->assertEquals( $desktop, $url );
 	}
 
 	public function updateDesktopUrlQueryProvider() {
+		$baseUrl = 'http://en.m.wikipedia.org/wiki/Gustavus_Airport';
+
 		return array(
 			array(
-				'http://en.m.wikipedia.org/wiki/Gustavus_Airport?useformat=mobile&mobileaction=toggle_desktop_view',
-				'http://en.m.wikipedia.org/wiki/Gustavus_Airport?mobileaction=toggle_desktop_view'
+				$baseUrl . '?useformat=mobile&mobileaction=toggle_desktop_view',
+				$baseUrl . '?mobileaction=toggle_desktop_view'
 			),
 		);
 	}
@@ -174,12 +195,18 @@ class MobileContextTest extends MediaWikiTestCase {
 		// check for constructing a templated URL
 		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/Gustavus_Airport" );
 		$updateMobileUrlHost->invokeArgs( MobileContext::singleton(), array( &$parsedUrl ) );
-		$this->assertEquals( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+		$this->assertEquals(
+			"http://en.wikipedia.org/wiki/mobile/Gustavus_Airport",
+			wfAssembleUrl( $parsedUrl )
+		);
 
 		// check for maintaining an already templated URL
 		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport" );
 		$updateMobileUrlHost->invokeArgs( MobileContext::singleton(), array( &$parsedUrl ) );
-		$this->assertEquals( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+		$this->assertEquals(
+			"http://en.wikipedia.org/wiki/mobile/Gustavus_Airport",
+			wfAssembleUrl( $parsedUrl )
+		);
 	}
 
 	/**
@@ -218,7 +245,10 @@ class MobileContextTest extends MediaWikiTestCase {
 		$testMethod = ( $isFauxDevice ) ? 'assertTrue' : 'assertFalse';
 
 		MobileContext::singleton()->setUseFormat( $useformat );
-		$this->$testMethod( $isFauxMobileDevice->invokeArgs( MobileContext::singleton(), array() ), $msg );
+		$this->$testMethod(
+			$isFauxMobileDevice->invokeArgs( MobileContext::singleton(), array() ),
+			$msg
+		);
 	}
 
 	public function isFauxMobileDeviceProvider() {
@@ -233,10 +263,12 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider shouldDisplayMobileViewProvider
 	 */
-	public function testShouldDisplayMobileView( $shouldDisplay, $xWap = null, $requestVal = array(), $msg = null ) {
+	public function testShouldDisplayMobileView( $shouldDisplay, $xWap = null,
+		$requestVal = array(), $msg = null
+	) {
 		$testMethod = ( $shouldDisplay ) ? 'assertTrue' : 'assertFalse';
 
-		$this->setMwGlobals( 'wgMFMobileHeader','X-WAP' );
+		$this->setMwGlobals( 'wgMFMobileHeader', 'X-WAP' );
 		$request = MobileContext::singleton()->getRequest();
 		if ( count( $requestVal ) ) {
 			foreach ( $requestVal as $key => $val ) {
@@ -336,14 +368,26 @@ class MobileContextTest extends MediaWikiTestCase {
 		$startTime = time();
 		$wgMobileFrontendFormatCookieExpiry = 60;
 		$mfCookieExpected = $startTime + 60;
-		$this->assertTrue( $mfCookieExpected == $getUseFormatCookieExpiry->invokeArgs( MobileContext::singleton(), array( $startTime ) ), 'Using MobileFrontend expiry.' );
+		$this->assertTrue(
+			$mfCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
+				MobileContext::singleton(),
+				array( $startTime )
+			),
+			'Using MobileFrontend expiry.'
+		);
 
 		$wgMobileFrontendFormatCookieExpiry = null;
 		$defaultMWCookieExpected = $startTime + $wgCookieExpiration;
-		$this->assertTrue( $defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs( MobileContext::singleton(), array( $startTime ) ), 'Using default MediaWiki cookie expiry.' );
+		$this->assertTrue(
+			$defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
+				MobileContext::singleton(),
+				array( $startTime )
+			),
+			'Using default MediaWiki cookie expiry.'
+		);
 	}
 
-	public function testGetStopMobileRedirectCookieDomain(){
+	public function testGetStopMobileRedirectCookieDomain() {
 		global $wgMFStopRedirectCookieHost, $wgServer;
 		$context = MobileContext::singleton();
 		$wgMFStopRedirectCookieHost = null;
@@ -382,9 +426,9 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getXAnalyticsHeaderProvider
 	 */
-	public function testGetXAnalyticsHeader( $logItems, $expectedHeader ){
+	public function testGetXAnalyticsHeader( $logItems, $expectedHeader ) {
 		$context = MobileContext::singleton();
-		foreach( $logItems as $key => $val ) {
+		foreach ( $logItems as $key => $val ) {
 			$context->addAnalyticsLogItem( $key, $val );
 		}
 		$this->assertEquals( $context->getXAnalyticsHeader(), $expectedHeader );
@@ -412,12 +456,12 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider addAnalyticsLogItemFromXAnalyticsProvider
 	 */
-	public function testAddAnalyticsLogItemFromXAnalytics( $analyticsItem, $key, $val ){
-			$context = MobileContext::singleton();
-			$context->addAnalyticsLogItemFromXanalytics( $analyticsItem );
-			$logItems = $context->getAnalyticsLogItems();
-			$this->assertTrue( isset( $logItems[$key] ) );
-			$this->assertEquals( $logItems[$key], $val );
+	public function testAddAnalyticsLogItemFromXAnalytics( $analyticsItem, $key, $val ) {
+		$context = MobileContext::singleton();
+		$context->addAnalyticsLogItemFromXanalytics( $analyticsItem );
+		$logItems = $context->getAnalyticsLogItems();
+		$this->assertTrue( isset( $logItems[$key] ) );
+		$this->assertEquals( $logItems[$key], $val );
 	}
 
 	public function addAnalyticsLogItemFromXAnalyticsProvider() {

@@ -1,5 +1,4 @@
 ( function( M, $ ) {
-
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		popup = M.require( 'toast' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
@@ -85,7 +84,7 @@
 		_shouldShowKeepGoingOverlay: function() {
 			if ( inBetaOrAlpha &&
 				mw.config.get( 'wgMFKeepGoing' ) &&
-				( this.editCount === 0  || inKeepGoingCampaign )
+				( this.editCount === 0 || inKeepGoingCampaign )
 			) {
 				return true;
 			} else {
@@ -245,5 +244,4 @@
 	} );
 
 	M.define( 'modules/editor/EditorOverlay', EditorOverlay );
-
 }( mw.mobileFrontend, jQuery ) );

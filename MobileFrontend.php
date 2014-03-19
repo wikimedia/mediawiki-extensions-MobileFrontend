@@ -15,14 +15,15 @@
 
 // Needs to be called within MediaWiki; not standalone
 if ( !defined( 'MEDIAWIKI' ) ) {
-	echo( "This is a MediaWiki extension and cannot run standalone.\n" );
+	echo "This is a MediaWiki extension and cannot run standalone.\n";
 	die( -1 );
 }
 
 // Too many people are trying to use master MF with stable MediaWiki releases
 if ( version_compare( $wgVersion, '1.23c', '<' ) ) {
-	echo( "This version of MobileFrontend requires MediaWiki 1.22, you have $wgVersion.
-You can download a more appropriate version from https://www.mediawiki.org/wiki/Special:ExtensionDistributor/MobileFrontend\n" );
+	echo "This version of MobileFrontend requires MediaWiki 1.22, you have $wgVersion.
+You can download a more appropriate version from
+https://www.mediawiki.org/wiki/Special:ExtensionDistributor/MobileFrontend\n";
 	die( -1 );
 }
 
@@ -33,7 +34,8 @@ define( 'MOBILEFRONTEND', 'MobileFrontend' );
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'MobileFrontend',
-	'author' => array( 'Patrick Reilly', 'Max Semenik', 'Jon Robson', 'Arthur Richards', 'Brion Vibber', 'Juliusz Gonera', 'Ryan Kaldari' ),
+	'author' => array( 'Patrick Reilly', 'Max Semenik', 'Jon Robson', 'Arthur Richards',
+		'Brion Vibber', 'Juliusz Gonera', 'Ryan Kaldari' ),
 	'descriptionmsg' => 'mobile-frontend-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
@@ -108,7 +110,8 @@ $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 
 $wgHooks['LinksUpdate'][] = 'MobileFrontendHooks::onLinksUpdate';
 $wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::onRequestContextCreateSkin';
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec';
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] =
+	'MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec';
 $wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::onBeforePageRedirect';
 $wgHooks['ResourceLoaderTestModules'][] = 'MobileFrontendHooks::onResourceLoaderTestModules';
 $wgHooks['GetCacheVaryCookies'][] = 'MobileFrontendHooks::onGetCacheVaryCookies';
@@ -129,8 +132,10 @@ $wgHooks['GetBetaFeaturePreferences'][] = 'MobileFrontendHooks::onGetBetaFeature
 $wgHooks['Gadgets::allowLegacy'][] = 'MobileFrontendHooks::onAllowLegacyGadgets';
 $wgHooks['UnitTestsList'][] = 'MobileFrontendHooks::onUnitTestsList';
 $wgHooks['CentralAuthLoginRedirectData'][] = 'MobileFrontendHooks::onCentralAuthLoginRedirectData';
-$wgHooks['CentralAuthSilentLoginRedirect'][] = 'MobileFrontendHooks::onCentralAuthSilentLoginRedirect';
-$wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::onResourceLoaderRegisterModules';
+$wgHooks['CentralAuthSilentLoginRedirect'][] =
+	'MobileFrontendHooks::onCentralAuthSilentLoginRedirect';
+$wgHooks['ResourceLoaderRegisterModules'][] =
+	'MobileFrontendHooks::onResourceLoaderRegisterModules';
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
 
 // use array_merge to ensure we do not override existing values set by core
@@ -210,7 +215,8 @@ $wgMFPhotoUploadEndpoint = '';
 $wgMFNearbyEndpoint = '';
 
 /**
- * Namespace(s) where Special:Nearby should search. Should be one or more of NS_* constants, pipe-separated
+ * Namespace(s) where Special:Nearby should search. Should be one or more of
+ * NS_* constants, pipe-separated.
  * @var int|string
  */
 $wgMFNearbyNamespace = NS_MAIN;
@@ -337,7 +343,8 @@ $wgDeviceDetectionClass = 'DeviceDetection';
 $wgMFNearby = false;
 
 /**
- * The range in meters that should be searched to find nearby pages on Special:Nearby (defaults to 10km)
+ * The range in meters that should be searched to find nearby pages on
+ * Special:Nearby (defaults to 10km).
  */
 $wgMFNearbyRange = 10000;
 
@@ -355,7 +362,8 @@ $wgMFMinCachedPageSize = 64 * 1024;
 $wgMFAutodetectMobileView = false;
 
 /**
- * Controls whether tablets should be shown the mobile site. Works only if $wgMFAutodetectMobileView is true.
+ * Controls whether tablets should be shown the mobile site. Works only if
+ * $wgMFAutodetectMobileView is true.
  */
 $wgMFShowMobileViewToTablets = false;
 
@@ -423,8 +431,8 @@ $wgMFAjaxUploadProgressSupport = true;
 $wgMFDeviceWidthTablet = 768;
 
 /**
- * Devices with available screen of this value and less will have some styles adapted for improved reading
- * on small screens
+ * Devices with available screen of this value and less will have some styles
+ * adapted for improved reading on small screens.
  */
 $wgMFDeviceWidthMobileSmall = 280;
 

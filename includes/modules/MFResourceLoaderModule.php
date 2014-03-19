@@ -163,8 +163,10 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 					$context->getUser(),
 					$context->getVersion(),
 					true, // debug
-					// FIXME: Make this templates and update makeModuleResponse so that it only outputs template code
-					// When this is done you can merge with parent array and retain file names
+					// @todo FIXME: Make this templates and update
+					// makeModuleResponse so that it only outputs template code.
+					// When this is done you can merge with parent array and
+					// retain file names.
 					'scripts', // only
 					$context->getRequest()->getBool( 'printable' ),
 					$context->getRequest()->getBool( 'handheld' )

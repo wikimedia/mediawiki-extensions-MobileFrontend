@@ -89,9 +89,10 @@ class MobileFrontendHooks {
 			$name === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
 		if ( $name === 'MobileWebApp' ) {
 			$skinName = $appSkinName;
-		} else if ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) && class_exists( $alphaSkinName ) ) {
+		} else if ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) &&
+			class_exists( $alphaSkinName ) ) {
 			$skinName = $alphaSkinName;
-		} else if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
+		} elseif ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
 			$skinName = $betaSkinName;
 		}
 		$skin = new $skinName( $context );
@@ -185,7 +186,9 @@ class MobileFrontendHooks {
 	 * @param ResourceLoader $resourceLoader
 	 * @return bool
 	 */
-	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
+	public static function onResourceLoaderTestModules( array &$testModules,
+		ResourceLoader &$resourceLoader
+	) {
 		global $wgResourceModules;
 
 		$testModuleBoilerplate = array(
@@ -236,14 +239,18 @@ class MobileFrontendHooks {
 	public static function onGetCacheVaryCookies( $out, &$cookies ) {
 		global $wgMobileUrlTemplate;
 
-		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME; // Enables mobile cookies on wikis w/o mobile domain
-		$cookies[] = 'stopMobileRedirect'; // Don't redirect to mobile if user had explicitly opted out of it
+		// Enables mobile cookies on wikis w/o mobile domain
+		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME;
+		// Don't redirect to mobile if user had explicitly opted out of it
+		$cookies[] = 'stopMobileRedirect';
+
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() || !$wgMobileUrlTemplate ) {
 			$cookies[] = 'optin'; // Alpha/beta cookie
 			$cookies[] = 'disableImages';
 		}
-		// Redirect people who want so from HTTP to HTTPS. Ideally, should be only for HTTP but we don't vary on protocol
+		// Redirect people who want so from HTTP to HTTPS. Ideally, should be
+		// only for HTTP but we don't vary on protocol.
 		$cookies[] = 'forceHTTPS';
 		return true;
 	}
@@ -288,10 +295,12 @@ class MobileFrontendHooks {
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
 
 			if ( $ctx->isBetaGroupMember() ) {
-				/* Special:MobileContributions redefines Special:History in such a way that for Special:Contributions/Foo,
-				 * Foo is a username (in Special:History/Foo, Foo is a page name)
-				 * Redirect people here as this is essential Special:Contributions without the bells and whistles.
-				*/
+				/* Special:MobileContributions redefines Special:History in
+				 * such a way that for Special:Contributions/Foo, Foo is a
+				 * username (in Special:History/Foo, Foo is a page name).
+				 * Redirect people here as this is essential
+				 * Special:Contributions without the bells and whistles.
+				 */
 				$list['Contributions'] = 'SpecialMobileContributions';
 			}
 
@@ -398,7 +407,7 @@ class MobileFrontendHooks {
 		if ( $isMobileView ) {
 			if ( $name === 'Search' ) {
 				$out->addModuleStyles( 'skins.minerva.special.search.styles' );
-			} else if ( $name === 'Userlogin' ) {
+			} elseif ( $name === 'Userlogin' ) {
 				$out->addModuleStyles( 'skins.minerva.special.userlogin.styles' );
 				// make sure we're on https if we're supposed to be and currently aren't.
 				// most of this is lifted from https redirect code in SpecialUserlogin::execute()
@@ -503,7 +512,8 @@ class MobileFrontendHooks {
 		$request = $context->getRequest();
 		# Add deep link to a mobile app specified by $wgMFAppScheme
 		if ( ( $wgMFAppPackageId !== false ) && ( $title->isContentPage() )
-		     && ( $request->getRawQueryString() === '' ) ) {
+			&& ( $request->getRawQueryString() === '' )
+		) {
 			$fullUrl = $title->getFullURL();
 			$mobileUrl = $context->getMobileUrl( $fullUrl );
 			$path = preg_replace( "/^([a-z]+:)?(\/)*/", '', $mobileUrl, 1 );
@@ -525,9 +535,10 @@ class MobileFrontendHooks {
 		if ( !$context->shouldDisplayMobileView() ) {
 			if ( class_exists( 'BetaFeatures' ) &&
 				BetaFeatures::isFeatureEnabled( $out->getSkin()->getUser(), 'betafeatures-geonotahack' ) ) {
-				// FIXME: Remove need for this module
+				// @todo FIXME: Remove need for this module
 				$out->addModules( array( 'mobile.bridge' ) );
-				// FIXME: Find better way to deal with wgMFMode in desktop (maybe standardise BetaFeatures to use the same variable)
+				// @todo FIXME: Find better way to deal with wgMFMode in desktop
+				// (maybe standardise BetaFeatures to use the same variable).
 				$out->addJsConfigVars( 'wgMFMode', 'desktop-beta' );
 			}
 			wfProfileOut( __METHOD__);
@@ -564,11 +575,13 @@ class MobileFrontendHooks {
 		if ( $context->shouldDisplayMobileView() ) {
 			$output = $context->getOutput();
 			$data = $output->getRequest()->getValues();
-			// Unset these to avoid a redirect loop but make sure we pass other parameters to edit e.g. undo actions
+			// Unset these to avoid a redirect loop but make sure we pass other
+			// parameters to edit e.g. undo actions
 			unset( $data['action'] );
 			unset( $data['title'] );
 
-			$output->redirect( SpecialPage::getTitleFor( 'MobileEditor', $article->getTitle() )->getFullURL( $data ) );
+			$output->redirect( SpecialPage::getTitleFor( 'MobileEditor', $article->getTitle() )
+				->getFullURL( $data ) );
 			return false;
 		}
 

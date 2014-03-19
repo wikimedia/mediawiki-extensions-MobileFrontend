@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 	var OverlayNew = M.require( 'OverlayNew' ), AbuseFilterOverlay;
 	AbuseFilterOverlay = OverlayNew.extend( {
 		defaults: {
@@ -9,7 +9,7 @@
 		},
 		className: 'overlay abusefilter-overlay',
 
-		postRender: function() {
+		postRender: function () {
 			this._super();
 			// make links open in separate tabs
 			this.$( 'a' ).attr( 'target', '_blank' );
@@ -17,6 +17,4 @@
 	} );
 
 	M.define( 'modules/editor/AbuseFilterOverlay', AbuseFilterOverlay );
-
 }( mw.mobileFrontend ) );
-

@@ -1,5 +1,4 @@
 ( function( M, $ ) {
-
 	var Api = M.require( 'api' ).Api, PageApi;
 
 	function assignToParent( listOfSections, child ) {
@@ -252,6 +251,4 @@
 	} );
 
 	M.define( 'PageApi', PageApi );
-
 }( mw.mobileFrontend, jQuery ) );
-

@@ -18,17 +18,19 @@ class MobileSpecialPage extends SpecialPage {
 	protected $disableSearchAndFooter = true;
 
 	/* Executes the page when available in the current $mode */
-	public function executeWhenAvailable( $subPage ) {}
+	public function executeWhenAvailable( $subPage ) {
+	}
 
 	public function execute( $subPage ) {
 		$ctx = MobileContext::singleton();
 		if ( !$ctx->shouldDisplayMobileView() && !$this->hasDesktopVersion ) {
 			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' ) );
-		} else if ( $this->mode !== 'stable' ) {
+		} elseif ( $this->mode !== 'stable' ) {
 			if ( $this->mode === 'beta' && !$ctx->isBetaGroupMember() ) {
 				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );
-			} else if ( $this->mode === 'alpha' && !$ctx->isAlphaGroupMember() ) {
-				// FIXME: Do we need a more specific one for alpha special pages (we currently have none)
+			} elseif ( $this->mode === 'alpha' && !$ctx->isAlphaGroupMember() ) {
+				// @todo FIXME: Do we need a more specific one for alpha special
+				// pages (we currently have none)
 				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );
 			} else {
 				$this->executeWhenAvailable( $subPage );

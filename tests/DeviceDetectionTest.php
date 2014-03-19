@@ -4,6 +4,7 @@
  * @group MobileFrontend
  */
 class DeviceDetectionTest extends MediaWikiTestCase {
+	// @codingStandardsIgnoreStart Ignore long lines.
 	private $mobiles = array(
 		// Firefox OS (bug 40919)
 		'Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0',
@@ -53,17 +54,20 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 		//'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML, like Gecko) Version/7.2.1.0 Safari/536.2+',
 		//'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MDDR; .NET4.0C; .NET4.0E; .NET CLR 1.1.4322; Tablet PC 2.0); 360Spider',
 	);
+	// @codingStandardsIgnoreEnd
 
 	private function map( $array, $flag ) {
 		return array_map(
-			function( $ua ) use ( $flag ) {
+			function ( $ua ) use ( $flag ) {
 				if ( is_array( $ua ) ) {
 					array_unshift( $ua, $flag );
+
 					return $ua;
 				}
+
 				return array( $flag, $ua );
 			},
-			 $array
+			$array
 		);
 	}
 
@@ -83,6 +87,8 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 	public function provideTestIsMobileDevice() {
 		// Borrow mobile user agent strings from another test...
 		$input = $this->mobileDevices();
+
+		// @codingStandardsIgnoreStart Ignore long lines.
 		return array_merge( $input,
 			array(
 				// add more obscure mobile devices
@@ -111,6 +117,7 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 				array( false, 'Mozilla/5.0 (compatible; YandexBot/3.0)' ),
 			)
 		);
+		// @codingStandardsIgnoreEnd
 	}
 
 	/**
@@ -131,5 +138,4 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 			$this->map( $this->mobiles, false )
 		);
 	}
-
 }

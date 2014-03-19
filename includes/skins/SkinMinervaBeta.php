@@ -21,7 +21,8 @@ class SkinMinervaBeta extends SkinMinerva {
 		if ( !$out ) {
 			$out = $this->getOutput();
 		}
-		# Replace page content before DOMParse to make sure images are scrubbed and Zero transformations are applied
+		# Replace page content before DOMParse to make sure images are scrubbed
+		# and Zero transformations are applied.
 		$this->handleNewPages( $out );
 		parent::outputPage( $out );
 	}
@@ -140,7 +141,10 @@ class SkinMinervaBeta extends SkinMinerva {
 			}
 			$page = new MobilePage( $title );
 			$thumb = $page->getSmallThumbnailHtml( true );
-			$html = Html::openElement( 'ul', array( 'class' => 'page-list page-banner' . ( $thumb ? ' thumbs' : '' ) ) ) .
+			$html = Html::openElement(
+					'ul',
+					array( 'class' => 'page-list page-banner' . ( $thumb ? ' thumbs' : '' ) )
+				) .
 				Html::openElement( 'li', array( 'class' => 'title' ) ) .
 				$thumb .
 				Html::element( 'h2', array(), $title->getPrefixedText() ) .

@@ -25,7 +25,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$conds = array();
 		if ( $this->title ) {
 			$conds[ 'rev_page' ] = $this->title->getArticleID();
-		} else if ( $this->offset ) {
+		} elseif ( $this->offset ) {
 				$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
 		}
 		return $conds;
@@ -65,7 +65,10 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
-				$this->renderHeaderBar( $this->msg( 'mobile-frontend-history-summary', $this->title->getText() ), true );
+				$this->renderHeaderBar(
+					$this->msg( 'mobile-frontend-history-summary', $this->title->getText() ),
+					true
+				);
 				$res = $this->doQuery();
 				$this->showHistory( $res );
 				wfProfileOut( __METHOD__ );
@@ -187,7 +190,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				$this->showRow( $rev1, null );
 			}
 			$out->addHtml( '</ul>' );
-			// Captured 1 more than we should have done so if the number of results is greater than the limit there are more to show
+			// Captured 1 more than we should have done so if the number of
+			// results is greater than the limit there are more to show.
 			if ( $numRows > self::LIMIT ) {
 				$out->addHtml( $this->getMoreButton( $rev1->getTimestamp() ) );
 			}

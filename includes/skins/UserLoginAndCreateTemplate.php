@@ -116,12 +116,15 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 	}
 
 	/**
-	 * Gets the message that should guide a user who is creating an account or logging in to an account.
-	 * @return Array: first element is header of message and second is the content.
+	 * Gets the message that should guide a user who is creating an account or
+	 * logging in to an account.
+	 * @return array First element is header of message and second is the content.
 	 */
 	protected function getGuiderMessage() {
 		$req = $this->getRequestContext()->getRequest();
-		if ( $req->getVal( 'returnto' ) && ( $title = Title::newFromText( $req->getVal( 'returnto' ) ) ) ) {
+		if ( $req->getVal( 'returnto' )
+			&& ( $title = Title::newFromText( $req->getVal( 'returnto' ) ) )
+		) {
 			list( $returnto, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
 			$title = $title->getText();
 		} else {
@@ -143,7 +146,7 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 			if ( isset( $this->pageMessages[$returnto] ) ) {
 				$content = wfMessage( $this->pageMessages[$returnto] )->parse();
 			}
-		} else if ( isset( $this->actionMessageHeaders[$action] ) ) {
+		} elseif ( isset( $this->actionMessageHeaders[$action] ) ) {
 			$heading = wfMessage( $this->actionMessageHeaders[$action], $title )->parse();
 			if ( isset( $this->actionMessages[$action] ) ) {
 				$content = wfMessage( $this->actionMessages[$action], $title )->parse();

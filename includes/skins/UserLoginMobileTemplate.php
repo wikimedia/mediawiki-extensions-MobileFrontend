@@ -14,7 +14,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 	);
 
 	/**
-	 * @TODO refactor this into parent template
+	 * @todo Refactor this into parent template
 	 */
 	public function execute() {
 		$action = $this->data['action'];
@@ -34,7 +34,8 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 		}
 		if ( isset( $actionQuery['returntoquery'] ) ) {
 			$query['returntoquery'] = $actionQuery['returntoquery'];
-			// Allow us to distinguish sign ups from the left nav to logins. This allows us to apply story 1402 A/B test
+			// Allow us to distinguish sign ups from the left nav to logins.
+			// This allows us to apply story 1402 A/B test.
 			if ( $query['returntoquery'] === 'welcome=yes' ) {
 				$query['returntoquery'] = 'campaign=leftNavSignup';
 			}

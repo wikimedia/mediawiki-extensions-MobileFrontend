@@ -59,6 +59,4 @@
 	} );
 
 	M.define( 'modules/keepgoing/KeepGoingDrawer', KeepGoingDrawer );
-
 }( mw.mobileFrontend ) );
-

@@ -35,9 +35,11 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		return $conds;
 	}
 
-	protected function renderFeedItemHtml( $ts, $diffLink ='', $username = '', $comment = '', $title = false, $isAnon=false ) {
+	protected function renderFeedItemHtml( $ts, $diffLink ='', $username = '',
+		$comment = '', $title = false, $isAnon = false
+	) {
 		// Stop username from being rendered
-		$username = False;
+		$username = false;
 		parent::renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title );
 	}
 

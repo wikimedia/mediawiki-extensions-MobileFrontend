@@ -71,8 +71,11 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$betaDescriptionMsg = $this->msg( 'mobile-frontend-opt-in-explain' )->parse();
 
 		$saveSettings = $this->msg( 'mobile-frontend-save-settings' )->escaped();
-		$onoff = '<span class="mw-mf-settings-on">' . $this->msg( 'mobile-frontend-on' )->escaped() . '</span><span class="mw-mf-settings-off">' .
-			$this->msg( 'mobile-frontend-off' )->escaped() .'</span>';
+		$onoff = '<span class="mw-mf-settings-on">' .
+			$this->msg( 'mobile-frontend-on' )->escaped() .
+			'</span><span class="mw-mf-settings-off">' .
+			$this->msg( 'mobile-frontend-off' )->escaped() .
+			'</span>';
 		$action = $this->getPageTitle()->getLocalURL();
 		$html = Html::openElement( 'form',
 			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
@@ -122,6 +125,7 @@ HTML;
 HTML;
 		}
 
+		// @codingStandardsIgnoreStart Long line
 		$html .= <<<HTML
 	<p>
 		{$aboutMessage}
@@ -146,6 +150,7 @@ HTML;
 	$returnto
 </form>
 HTML;
+		// @codingStandardsIgnoreEnd
 		$out->addHTML( $html );
 	}
 
