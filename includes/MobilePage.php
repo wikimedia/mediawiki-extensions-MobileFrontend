@@ -57,9 +57,7 @@ class MobilePage {
 	private function getPageImageHtml( $size, $useBackgroundImage = false ) {
 		$imageHtml = '';
 		// FIXME: Use more generic classes - no longer restricted to lists
-		$className = 'listThumb needsPhoto';
 		if ( $this->usePageImages ) {
-			$title = $this->title;
 			$file = $this->file;
 			if ( $file ) {
 				$thumb = $file->transform( array( 'width' => $size ) );
