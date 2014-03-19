@@ -1,0 +1,19 @@
+{
+    "@metadata": {
+        "authors": [
+            "John Reid"
+        ]
+    },
+    "mobilefrontend-keepgoing-links-explain": "Whuar the title o aen exeestin page is mentioned, enclaise it in dooble brackets",
+    "mobilefrontend-keepgoing-links-example": "E.g. $1guitar$2 becomes $3guitar$4",
+    "mobile-frontend-page-saving": "<strong>Hainin</strong><span> $1</span>",
+    "mobile-frontend-nearby-to-page": "Naur $1:",
+    "mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Ye}} {{GENDER:$1|ar cræftin}} ae new page oan {{SITENAME}}!",
+    "mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye sair ye want tae cræft}} ae new page oan {{SITENAME}}?",
+    "mobile-frontend-editor-success-new-page": "Congratulâtions oan cræftin ae new page!",
+    "mobile-frontend-requires-title": "Page naw available",
+    "mobile-frontend-requires-mobile": "This page isna available oan desktap. Please clap the mobile luik-at link at the bottom o the page.",
+    "mobile-frontend-profile-footer-ancient": "Makit [[Special:Contributions/$1|{{PLURAL:$3|1 eedit|$3 eedits}}]] n [[Special:Uploads/$1|{{PLURAL:$4|1 uplaid|$4 uplaids|500=500+ uplaids}}]].",
+    "beta-feature-minerva": "Enable mobile skin (Minerva) oan the desktap",
+    "beta-feature-minerva-description": "Mak the skin uised on mobile devices ae selectable desktop skin unner the appearance preferences tab."
+}
