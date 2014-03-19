@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_cfb7bd80",
+        "filename": "scripts/message.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-19T22:50:46Z",
+      "side": 1,
+      "message": "The message key is language agnostic. Putting \"(en)\" here is confusing IMO.",
+      "revId": "8f4724edc5d14cb1677c3b3a72ca618c6db6e5e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_afac8933",
+        "filename": "scripts/message.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-19T22:50:46Z",
+      "side": 1,
+      "message": "If it\u0027s going to be \u0027qqq\u0027 elsewhere, might as well make this one lowercase as well :P",
+      "revId": "8f4724edc5d14cb1677c3b3a72ca618c6db6e5e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
