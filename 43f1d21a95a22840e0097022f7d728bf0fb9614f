@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_4fbf2df7",
+        "filename": "tests/browser/features/editor_ve.feature",
+        "patchSetId": 16
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-19T21:40:28Z",
+      "side": 1,
+      "message": "See PS15 comments!",
+      "revId": "43f1d21a95a22840e0097022f7d728bf0fb9614f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
