@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_0f60159f",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 26
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-19T21:42:26Z",
+      "side": 0,
+      "message": "don\u0027t delete this one!",
+      "revId": "43f1d21a95a22840e0097022f7d728bf0fb9614f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
