@@ -38,7 +38,7 @@ $wgExtensionCredits['other'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
 
-$wgExtensionMessagesFiles['MobileFrontend'] = __DIR__ . "/MobileFrontend.i18n.php";
+$wgMessagesDirs['MobileFrontend'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['MobileFrontendAlias'] = __DIR__ . "/MobileFrontend.alias.php";
 
 // autoload extension classes

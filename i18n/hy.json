@@ -1,0 +1,39 @@
+{
+    "@metadata": {
+        "authors": [
+            "Chaojoker",
+            "Jazz",
+            "M hamlet",
+            "Pandukht",
+            "Vadgt",
+            "Xelgen"
+        ]
+    },
+    "mobilefrontend-keepgoing-explain": "Հիանալի է: Մեկ այլ օգտվող էլ է ասել, որ այս էջն օգնության կարիք ունի: Փորձել այս մեկը կամ մեկ ուրիշը:",
+    "mobilefrontend-keepgoing-cancel": "Ոչ,շնորհակալություն:",
+    "mobilefrontend-keepgoing-suggest": "Այո, խնդրում եմ",
+    "mobilefrontend-keepgoing-suggest-again": "Փորձե´լ մեկ ուրիշը:",
+    "mobilefrontend-keepgoing-saved-title": "Խմբագրումը պահպանված է:",
+    "mobilefrontend-keepgoing-links-title": "Հղումներ ավելացնել",
+    "mobilefrontend-keepgoing-links-ask-first": "Շնորհավորո՜ւմ ենք Ձեր առաջին խմբագրման կապակցությամբ։ Կցանկանա՞ք օգնել, հղումներ ավելացնելով նորաստեղծ էջում։",
+    "mobilefrontend-keepgoing-links-ask-again": "Ուղղե՞լ մեկ այլ էջ։",
+    "nearby": "Էջեր մոտակա օբյեկտների մասին։",
+    "mobile-frontend-desc": "Բջջային միջերես",
+    "mobile-frontend-search-submit": "Անցնել",
+    "mobile-frontend-home-button": "Գլխավոր Էջ",
+    "mobile-frontend-logged-out": "Դուք չեք մտել համակարգ",
+    "mobile-frontend-logged-in-homepage-notification": "Բարի գալո՜ւստ, $1",
+    "mobile-frontend-save-settings": "Պահպանել կարգավորումները",
+    "mobile-frontend-random-button": "Պատահական",
+    "mobile-frontend-back-to-top-of-section": "Վերադառնալ մեկ բաժին առաջ",
+    "mobile-frontend-view": "Տեսքը բջջայինով",
+    "mobile-frontend-view-mobile": "Հեռախոս",
+    "mobile-frontend-featured-article": "Օրվա ընտրված հոդվածը",
+    "mobile-frontend-search-content": "Ընտրել էջերում",
+    "mobile-frontend-search-no-results": "Այս անվանումով էջեր չկան։",
+    "mobile-frontend-copyright": "Տեքստը մատչելի է <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.hy\">Քրիեյթիվ Քոմոնս Հղման-Համանման տարածման</a> թույլատրագրի ներքո, առանձին դեպքերում կարող են գործել լրացուցիչ պայմաններ։ Մանրամասնությունների համար այցելեք՝ <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Օգտագործման պայմաններ</a>։ {{SITENAME}}ն <a href='http://www.wikimediafoundation.org/'>Վիքիմեդիա հիմնադրամ</a> ոչ-առևտրական կազմակերպության գրանցված ապրանքանիշ է։",
+    "mobile-frontend-watchlist-filter-articles": "Հոդվածների էջեր",
+    "mobile-frontend-editor-editing-page": "<strong>Խմբագրում</strong> <span>$1</span>",
+    "mobile-frontend-editor-previewing-page": "<strong>Նախադիտում</strong> <span>$1</span>",
+    "beta-feature-geonotahack-description": "Հայտնաբերեք էջեր, որոնք աշխարհագրական դիրքով մոտ են այն էջին, որը դուք հիմա կարդում եք։"
+}
