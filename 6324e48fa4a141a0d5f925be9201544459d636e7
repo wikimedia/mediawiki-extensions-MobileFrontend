@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_0fab7587",
+        "filename": "scripts/message.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-03-19T22:04:28Z",
+      "side": 1,
+      "message": "Use just read()?",
+      "revId": "6324e48fa4a141a0d5f925be9201544459d636e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_8f96654e",
+        "filename": "scripts/message.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-03-19T22:04:28Z",
+      "side": 1,
+      "message": "Inconsistent qqq case.",
+      "revId": "6324e48fa4a141a0d5f925be9201544459d636e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_6fa311a9",
+        "filename": "scripts/message.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-03-19T22:04:28Z",
+      "side": 1,
+      "message": "What\u0027s the point of this message?",
+      "revId": "6324e48fa4a141a0d5f925be9201544459d636e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
