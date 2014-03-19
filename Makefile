@@ -44,6 +44,9 @@ jshint: nodecheck jshinttests
 checkless:
 	@php ../../maintenance/checkLess.php
 
+dependencies: nodecheck remotes
+	pear install PHP_CodeSniffer
+
 phplint:
 	@scripts/phpcheck.sh
 
