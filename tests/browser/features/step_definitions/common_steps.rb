@@ -2,7 +2,7 @@
 # Add tags to no_javascript_site.feature when resolved
 Given /^I am using user agent "(.+)"$/ do |user_agent|
   @user_agent = user_agent
-  @browser = browser(environment, test_name(@scenario), user_agent)
+  @browser = browser(test_name(@scenario), {user_agent: user_agent})
   @browser.window.resize_to(480, 800)
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end
