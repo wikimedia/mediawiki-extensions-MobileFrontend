@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_ca59eb02",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2014-03-19T23:55:19Z",
+      "side": 1,
+      "message": "Triple equals obviates the need for the first check on $name.",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_8af2d3dd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 401,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2014-03-19T23:55:19Z",
+      "side": 1,
+      "message": "Was the addModuleStyles(\u0027skins.minerva.special.styles\u0027) intentional because it is added by SkinMinervaBeta.php\u0027s getSkinStyles() only for special pages (and within a beta context, no less)?",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_4a215bf5",
+        "filename": "javascripts/common/history-alpha.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2014-03-19T23:55:19Z",
+      "side": 1,
+      "message": "title already holds s.title. Just use title instead of s.title?",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_0a8363d2",
+        "filename": "javascripts/hamburger.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2014-03-19T23:55:19Z",
+      "side": 1,
+      "message": "Is this just sliding this in for a future state? I don\u0027t see any references to this.",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_0a6a4312",
+        "filename": "javascripts/header.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2014-03-19T23:55:19Z",
+      "side": 1,
+      "message": "Is this also just sliding in for a future state?",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
