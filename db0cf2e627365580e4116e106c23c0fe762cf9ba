@@ -16,6 +16,24 @@
       "revId": "db0cf2e627365580e4116e106c23c0fe762cf9ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_9b710f0e",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-03-19T17:31:47Z",
+      "side": 0,
+      "message": "Are you sure you\u0027re reading this code correctly?\n\n* If there is no $file, $imageHtml, which is returned, is an empty string.\n* If there is no thumb, $imageHtml, which is returned, is an empty string.\n\nThis is a useless assignment, because it reset only in line 65, and is not used outside of if ( $this-\u003eusePageImages \u0026\u0026 $file \u0026\u0026 $thumb \u0026\u0026 $thumb-\u003egetUrl() ).",
+      "parentUuid": "ee14bf34_5beed7b2",
+      "revId": "db0cf2e627365580e4116e106c23c0fe762cf9ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
