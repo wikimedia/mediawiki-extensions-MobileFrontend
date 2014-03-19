@@ -299,8 +299,6 @@
     "mobile-frontend-watchlist-removed": "Removed $1 from your watchlist",
     "mobile-frontend-watchlist-signup-action": "Sign up to start one now.",
     "mobile-frontend-watchlist-view": "View your watchlist",
-    "mobile-frontend-wml-back": "Back...",
-    "mobile-frontend-wml-continue": "Continue...",
     "mobile.css": "/* CSS placed here will affect users of the mobile site */",
     "mobile.js": "/* Any JavaScript here will be loaded for users using the mobile site */",
     "mobilefrontend-keepgoing-ask": "Well done! You're getting the hang of this! Do you want to try editing another page?",
