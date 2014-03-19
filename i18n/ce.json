@@ -49,7 +49,7 @@
     "mobile-frontend-settings-site-header": "«{{SITENAME}}» проектан меттанаш",
     "mobile-frontend-page-menu-contents": "чулацам",
     "mobile-frontend-page-menu-history": "Истори",
-    "mobile-frontend-page-saving": "<strong>Ӏалашяр</strong><span> $1</span>",
+    "mobile-frontend-page-saving": "\u003Cstrong\u003EӀалашяр\u003C/strong\u003E\u003Cspan\u003E $1\u003C/span\u003E",
     "mobile-frontend-nearby-to-page": "Уллехь — $1:",
     "mobile-frontend-nearby-title": "Уллехь",
     "mobile-frontend-nearby-loading": "Чу бокхуш бу хаам, хьона уллехь хӀун ю гойтуш",
