@@ -117,6 +117,8 @@ class ArticlePage
   # secondary menu
   ## languages
   a(:language_button, css: ".languageSelector")
+  # Can't use generic overlay class as this will match with the LoadingOverlay that shows before loading the language overlay
+  div(:overlay_languages, css: ".language-overlay")
 
   #footer
   a(:desktop_link, text: "Desktop")
