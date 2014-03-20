@@ -14,6 +14,7 @@ Feature: Login
     Then I do not see a message box at the top of the login page
       And I see a message warning me I am already logged in
 
+  @login
   Scenario: Password reset available
     Given I am logged into the mobile website
     When I am on the "Special:UserLogin" page
