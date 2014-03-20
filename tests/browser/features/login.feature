@@ -16,5 +16,5 @@ Feature: Login
 
   Scenario: Password reset available
     Given I am logged into the mobile website
-    When I go to the login page
+    When I am on the "Special:UserLogin" page
     Then I see a password reset link
