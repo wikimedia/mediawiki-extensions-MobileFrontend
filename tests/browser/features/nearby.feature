@@ -1,4 +1,3 @@
-@chrome-bug @nearby_firefox
 Feature: Nearby page (mobile interface)
   Test currently only works with Firefox
 

@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox
 Feature: Nearby pages
 
 Scenario: Nearby button visible

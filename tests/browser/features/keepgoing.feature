@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox
 Feature: Encourage new users to Keep Going
 
   Scenario: I see a KeepGoing message after completing my edit

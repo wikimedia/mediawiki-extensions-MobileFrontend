@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
 Feature: Loading pages
 
 # In stable pages are loaded the standard way via links.

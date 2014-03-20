@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
 Feature: Create failure messages
   Scenario: Can refresh captcha
     Given I am on the "Special:Userlogin" page

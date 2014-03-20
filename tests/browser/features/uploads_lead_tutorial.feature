@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @test2.m.wikipedia.org @login
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org
 Feature: Lead image tutorial
 
   Background:

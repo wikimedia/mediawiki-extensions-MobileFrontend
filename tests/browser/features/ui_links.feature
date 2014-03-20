@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox
 Feature: Check UI components
 
   Scenario: Check existence of important UI components on the main page
