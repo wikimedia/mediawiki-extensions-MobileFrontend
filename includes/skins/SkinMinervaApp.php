@@ -15,7 +15,8 @@ class SkinMinervaApp extends SkinMinervaBeta {
 		$target = $out->getTarget();
 		$lang = $this->getLanguage()->getCode();
 		$queryString = "?skin={$skin}&target={$target}&lang={$lang}";
-		$attrs['manifest'] = Title::makeTitle( NS_SPECIAL, 'MobileWebApp/manifest' )->getLocalURL() . $queryString;
+		$attrs['manifest'] = Title::makeTitle( NS_SPECIAL, 'MobileWebApp/manifest' )->
+			getLocalURL() . $queryString;
 		return $attrs;
 	}
 
