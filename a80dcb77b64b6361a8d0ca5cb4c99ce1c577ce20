@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_cdac6087",
+        "filename": "tests/browser/features/editor_ve.feature",
+        "patchSetId": 20
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-20T18:15:54Z",
+      "side": 1,
+      "message": "Still article... see PS15.. sort it out - un-2 me when you have this fixed! ;-)",
+      "revId": "a80dcb77b64b6361a8d0ca5cb4c99ce1c577ce20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
