@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_2a92a700",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-20T00:07:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee14bf34_ca59eb02",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee14bf34_8af2d3dd",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 10
@@ -30,6 +48,24 @@
       "writtenOn": "2014-03-19T23:55:19Z",
       "side": 1,
       "message": "Was the addModuleStyles(\u0027skins.minerva.special.styles\u0027) intentional because it is added by SkinMinervaBeta.php\u0027s getSkinStyles() only for special pages (and within a beta context, no less)?",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_4af5db4b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 401,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-20T00:07:18Z",
+      "side": 1,
+      "message": "This module still gets added but it\u0027s better for this to happen as part of the skin and not the hook. The less code in these hooks the better. In theory we might even consider moving this setProperty call into SkinMinervaBeta as well in a later patchset..",
+      "parentUuid": "ee14bf34_8af2d3dd",
       "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_0a97e3f0",
+        "filename": "javascripts/common/history-alpha.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-20T00:07:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee14bf34_4a215bf5",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee14bf34_0a8363d2",
         "filename": "javascripts/hamburger.js",
         "patchSetId": 10
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "ee14bf34_caa0cb40",
+        "filename": "javascripts/hamburger.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-20T00:07:18Z",
+      "side": 1,
+      "message": "Nope this snuck in. I accidentally checked out another extension here. Good catch.",
+      "parentUuid": "ee14bf34_0a8363d2",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee14bf34_0a6a4312",
         "filename": "javascripts/header.js",
         "patchSetId": 10
@@ -81,6 +153,24 @@
       "writtenOn": "2014-03-19T23:55:19Z",
       "side": 1,
       "message": "Is this also just sliding in for a future state?",
+      "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_aa8597b3",
+        "filename": "javascripts/header.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-20T00:07:18Z",
+      "side": 1,
+      "message": "Same this shouldn\u0027t be here.",
+      "parentUuid": "ee14bf34_0a6a4312",
       "revId": "b77e45aa6d364f56e17eb6986a35d931f1096747",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
