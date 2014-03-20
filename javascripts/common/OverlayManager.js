@@ -128,6 +128,24 @@
 			this.routes[route] = entry;
 			// check if overlay should be shown for the current path
 			this._processMatch( this._matchRoute( this.router.getPath(), entry ) );
+		},
+
+		/**
+		 * Replace the currently displayed overlay with a new overlay without changing the
+		 * URL. This is useful for when you want to switch overlays, but don't want to
+		 * change the back button or close box behavior.
+		 *
+		 * @name OverlayManager.prototype.replaceCurrent
+		 * @function
+		 * @param {Object} overlay The overlay to display
+		*/
+		replaceCurrent: function( overlay ) {
+			if ( this.stack.length === 0 ) {
+				throw new Error( "Trying to replace OverlayManager's current overlay, but stack is empty" );
+			}
+			this.stack[0].overlay.hide();
+			this.stack[0].result = overlay;
+			this._showOverlay( overlay );
 		}
 	} );
 

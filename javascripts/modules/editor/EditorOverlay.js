@@ -75,9 +75,7 @@
 					// If changes have been made tell the user they have to save first
 					if ( !self.api.hasChanged ) {
 						MobileWebClickTracking.log( 'editor-switch-to-visual', options.title );
-						// FIXME: Come up with a solution that doesn't cause weird behavior
-						// when using the close button.
-						M.router.navigate( '#/VisualEditor/' + options.sectionId );
+						self._switchToVisualEditor( options );
 					} else {
 						if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
 							self._showPreview();
@@ -180,6 +178,13 @@
 					// log error that occurred in retrieving section
 					self.log( 'error', error );
 				} );
+		},
+
+		_switchToVisualEditor: function( options ) {
+			mw.loader.using( 'mobile.editor.ve', function() {
+				var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
+				M.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
+			} );
 		},
 
 		_updateEditCount: function() {
