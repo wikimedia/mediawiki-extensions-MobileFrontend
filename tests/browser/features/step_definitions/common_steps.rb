@@ -90,7 +90,12 @@ Given(/^I am on the "(.+)" page$/) do |article|
 end
 
 Then(/^The URL of the page should contain "(.+)"$/) do |article|
-  on(ArticlePage).current_url.should match article
+  on(ArticlePage) do |page|
+    page.wait_until do
+      page.current_url.include? article
+    end
+    page.current_url.should match article
+  end
 end
 
 Given(/^I visit a protected page$/) do
