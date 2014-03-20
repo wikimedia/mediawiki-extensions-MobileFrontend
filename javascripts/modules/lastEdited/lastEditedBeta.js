@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-M.assertMode( [ 'beta', 'alpha' ] );
+M.assertMode( [ 'beta', 'alpha', 'app' ] );
 
 ( function() {
 	var time = M.require( 'modules/lastEdited/time' );

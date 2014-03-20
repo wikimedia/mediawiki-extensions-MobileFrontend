@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	M.assertMode( [ 'alpha' ] );
+	M.assertMode( [ 'alpha', 'app' ] );
 
 	var
 		Page = M.require( 'Page' ),
@@ -22,6 +22,12 @@
 		return args[0] + '?' + $.param( params );
 	}
 
+	function renderPage( title ) {
+		new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'error', function() {
+			window.location.reload(); // the page either doesn't exist or was a Special:Page so force a refresh
+		} ).on( 'ready', M.reloadPage );
+	}
+
 	// do not run more than once
 	function init() {
 		// use wgPageName to ensure we keep the namespace prefix
@@ -38,9 +44,7 @@
 				// The main page has various special cases so force a reload
 				window.location = mw.util.getUrl( title );
 			} else if ( currentUrl !== s.url ) {
-				new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'error', function() {
-					window.location.reload(); // the page either doesn't exist or was a Special:Page so force a refresh
-				} ).on( 'ready', M.reloadPage );
+				renderPage( title );
 			}
 			currentUrl = s.url;
 		} );
@@ -53,7 +57,11 @@
 		 * a new one.
 		 */
 		function navigateToPage( title, replaceState ) {
-			History[replaceState ? 'replaceState' : 'pushState']( null, title, mw.util.getUrl( title ) );
+			if ( M.isApp() ) {
+				renderPage( title );
+			} else {
+				History[replaceState ? 'replaceState' : 'pushState']( null, title, mw.util.getUrl( title ) );
+			}
 		}
 
 		/**
@@ -98,6 +106,7 @@
 		}
 
 		return {
+			navigateToPage: navigateToPage,
 			hijackLinks: hijackLinks
 		};
 	}
@@ -107,7 +116,7 @@
 		updateQueryStringParameter: updateQueryStringParameter
 	};
 
-	if ( History.enabled && !M.inNamespace( 'special' ) ) {
+	if ( History.enabled && ( !M.inNamespace( 'special' ) || M.isApp() ) ) {
 		$.extend( M.history, init() );
 	}
 

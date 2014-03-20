@@ -21,7 +21,7 @@
 	// FIXME: ugly hack that removes search from browser history when navigating
 	// to search results (we can't rely on History API yet)
 	// alpha does it differently in lazyload.js
-	if ( !M.isAlphaGroupMember() ) {
+	if ( !M.isAlphaGroupMember() && !M.isApp() ) {
 		M.on( 'search-results', function( overlay ) {
 			overlay.$( '.results a' ).on( 'click', function( ev ) {
 				var href = $( this ).attr( 'href' );

@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	M.assertMode( [ 'alpha', 'beta' ] );
+	M.assertMode( [ 'alpha', 'beta', 'app' ] );
 
 	var Overlay = M.require( 'Overlay' ),
 		Api = M.require( 'api' ).Api,

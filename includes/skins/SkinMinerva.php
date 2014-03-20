@@ -137,19 +137,20 @@ class SkinMinerva extends SkinTemplate {
 		} elseif ( $title->isSpecialPage() ) {
 			$className .= ' mw-mf-special ';
 		}
+
 		if ( $this->isMobileMode ) {
 			$className .= ' mw-mobile-mode';
 		} else {
 			$className .= ' mw-desktop-mode';
 		}
-		if ( !$this->getUser()->isAnon() ) {
+		if ( $this->isAuthenticatedUser() ) {
 			$className .= ' is-authenticated';
 		}
 		return $className;
 	}
 
 	/**
-	 * @return string: The current mode of the skin [stable|beta|alpha] that is running
+	 * @return string: The current mode of the skin [stable|beta|alpha|app] that is running
 	 */
 	protected function getMode() {
 		return $this->mode;
@@ -159,6 +160,14 @@ class SkinMinerva extends SkinTemplate {
 	 * @var MobileContext
 	 */
 	protected $mobileContext;
+
+	/**
+	 * FIXME: This helper function is only truly needed whilst SkinMobileApp does not support login
+	 * @return Boolean: Whether the current user is authenticated or not.
+	 */
+	protected function isAuthenticatedUser() {
+		return !$this->getUser()->isAnon();
+	}
 
 	public function __construct() {
 		$this->mobileContext = MobileContext::singleton();
@@ -171,7 +180,10 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
-
+		// Enable search header in beta
+		if ( $this->getTitle()->isSpecialPage() ) {
+			$out->setProperty( 'disableSearchAndFooter', true );
+		}
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
 
@@ -664,7 +676,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFCollapseSectionsByDefault' => $wgMFCollapseSectionsByDefault,
 		), $this->getSkinConfigMobileVariables() );
 
-		if ( !$user->isAnon() ) {
+		if ( $this->isAuthenticatedUser() ) {
 			$vars['wgWatchedPageCache'] = array(
 				$title->getPrefixedDBkey() => $user->isWatched( $title ),
 			);

@@ -20,6 +20,15 @@ mw.mobileFrontend = {
 	},
 
 	/**
+	 * @name M.isApp
+	 * @function
+	 * @return {Boolean}
+	 */
+	isApp: function() {
+		return mw.config.get( 'wgMFMode' ) === 'app';
+	},
+
+	/**
 	 * @name M.assertMode
 	 * @function
 	 * @throws Error when a module is run out of its allowed modes

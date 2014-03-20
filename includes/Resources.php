@@ -248,6 +248,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'page',
 			'section',
 		),
+		'messages' => array(
+			'mobile-frontend-language-article-heading',
+		),
 		'scripts' => array(
 			'javascripts/common/Router.js',
 			'javascripts/common/OverlayManager.js',
@@ -538,6 +541,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.search' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
+			// Make sure we have articleList template
+			'mobile.stable.common',
 			'mobile.overlays'
 		),
 		'styles' => array(
@@ -728,7 +733,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// page.js
 			'mobile-frontend-talk-overlay-header',
-			'mobile-frontend-language-article-heading',
 			// editor.js
 			'mobile-frontend-editor-disabled',
 			'mobile-frontend-editor-unavailable',
@@ -996,6 +1000,25 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	* suffixed by '.styles' or '.scripts'
 	*/
 $wgMobileSpecialPageModules = array(
+	'mobile.special.app.scripts' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.ajaxpages',
+			'mobile.startup',
+			'mobile.search',
+			// Make sure loader styles etc are present
+			'mobile.stable.styles',
+		),
+		'scripts' => array(
+			'javascripts/app/startup.js',
+		),
+	),
+
+	'mobile.special.app.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/app/common.less',
+		),
+	),
+
 	'mobile.special.mobilemenu.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/mobilemenu.less',

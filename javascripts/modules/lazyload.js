@@ -1,8 +1,9 @@
 ( function( M, $ ) {
+	M.assertMode( [ 'alpha', 'app' ] );
 
 	var history = M.history,
 		// FIXME: use fuzzy link hijacking in the main namespace - core should be updated to make links more explicit
-		useFuzzyLinkHijacking = M.inNamespace( '' );
+		useFuzzyLinkHijacking = M.inNamespace( '' ) || M.isApp();
 
 	if ( history.hijackLinks ) {
 		history.hijackLinks( $( '#content' ), useFuzzyLinkHijacking );

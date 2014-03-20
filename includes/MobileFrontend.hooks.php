@@ -82,10 +82,14 @@ class MobileFrontendHooks {
 		$skinName = $wgMFDefaultSkinClass;
 		$betaSkinName = $skinName . 'Beta';
 		$alphaSkinName = $skinName . 'Alpha';
+		$appSkinName = $skinName . 'App';
 		// Force alpha for test mode to sure all modules can run
+		$name = $context->getTitle()->getDBkey();
 		$inTestMode =
-			$context->getTitle()->getDBkey() === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
-		if ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) && class_exists( $alphaSkinName ) ) {
+			$name === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
+		if ( $name === 'MobileWebApp' ) {
+			$skinName = $appSkinName;
+		} else if ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) && class_exists( $alphaSkinName ) ) {
 			$skinName = $alphaSkinName;
 		} else if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
 			$skinName = $betaSkinName;
@@ -392,13 +396,6 @@ class MobileFrontendHooks {
 		}
 
 		if ( $isMobileView ) {
-			// Enable search header in beta
-			if ( $mobileContext->isBetaGroupMember() ) {
-				$out->addModuleStyles( 'skins.minerva.special.styles' );
-			} else {
-				$out->setProperty( 'disableSearchAndFooter', true );
-			}
-
 			if ( $name === 'Search' ) {
 				$out->addModuleStyles( 'skins.minerva.special.search.styles' );
 			} else if ( $name === 'Userlogin' ) {

@@ -154,7 +154,7 @@ class MinervaTemplate extends BaseTemplate {
 	protected function renderContentWrapper( $data ) {
 		?>
 		<script>
-			mw.mobileFrontend.emit( 'header-loaded' );
+			if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'header-loaded' ); }
 		</script>
 		<?php
 			$this->renderPreContent( $data );

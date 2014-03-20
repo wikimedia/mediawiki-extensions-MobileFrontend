@@ -62,6 +62,7 @@ $autoloadClasses = array (
 	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
 	'MobileSiteModule' => 'modules/MobileSiteModule',
 
+	'SpecialMobileWebApp' => 'specials/SpecialMobileWebApp',
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialUserProfile' => 'specials/SpecialUserProfile',
 	'SpecialMobileHistory' => 'specials/SpecialMobileHistory',
@@ -85,6 +86,8 @@ $autoloadClasses = array (
 	'SkinMinerva' => 'skins/SkinMinerva',
 	'SkinMinervaBeta' => 'skins/SkinMinervaBeta',
 	'SkinMinervaAlpha' => 'skins/SkinMinervaAlpha',
+	'SkinMinervaApp' => 'skins/SkinMinervaApp',
+
 	'UserLoginAndCreateTemplate' => 'skins/UserLoginAndCreateTemplate',
 	'UserLoginMobileTemplate' => 'skins/UserLoginMobileTemplate',
 	'UserAccountCreateMobileTemplate' => 'skins/UserAccountCreateMobileTemplate',
@@ -138,6 +141,7 @@ $wgSpecialPages = array_merge( $wgSpecialPages, array(
 	'MobileOptions' => 'SpecialMobileOptions',
 	'MobileMenu' => 'SpecialMobileMenu',
 	'MobileLanguages' => 'SpecialMobileLanguages',
+	'MobileWebApp' => 'SpecialMobileWebApp',
 	'Uploads' => 'SpecialUploads',
 	'UserProfile' => 'SpecialUserProfile',
 ) );
