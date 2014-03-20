@@ -1,37 +1,50 @@
 
+Given(/^I can see the uploads interface$/) do
+  on(UploadPage).contribute_image_element.when_present
+end
+
 When(/^I click Submit$/) do
-  on(UploadsPage).submit_button_element.when_present.click
+  on(UploadPage).submit_button_element.when_present.click
 end
 
 When(/^I go to uploads page$/) do
-  visit(UploadsPage)
+  visit(UploadPage)
 end
 
 When(/^I type a description$/) do
-  on(UploadsPage).photo_description_element.when_present.send_keys("Describing with #{@random_string}")
+  on(UploadPage).photo_description_element.when_present.send_keys("Describing with #{@random_string}")
 end
 
-When(/^I try to upload (.+) on (.+)$/) do |file_name, page|
-  require 'tempfile'
+When(/^upload bogus file (.+)$/) do |file_name|
+  require "tempfile"
   path = "#{Dir.tmpdir}/#{file_name}"
-  File.open(path, "w") { |f| f.puts "Test" }
 
-  on(page).select_file_element.send_keys(path)
+  system("touch #{path}")
+  if @browser.driver.browser == :chrome
+    @browser.execute_script "document.getElementsByName('file')[0].removeAttribute('class');"
+    @browser.execute_script "document.getElementsByName('file')[0].removeAttribute('style');"
+  end
+  
+  on(UploadPage).select_file = path
 end
 
-When(/^I click the upload button to stage the image file "(.+)"$/) do |file_name|
-  require 'tempfile'
+When(/^upload file (.+)$/) do |file_name|
+  require "tempfile"
   path = "#{Dir.tmpdir}/#{file_name}"
 
-  require 'chunky_png'
+  require "chunky_png"
   ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save path
 
-  # FIXME: does this really work? can it accept a string?
-  on(ArticlePage).select_file_element.send_keys(path)
+  if @browser.driver.browser == :chrome
+    @browser.execute_script "document.getElementsByName('file')[0].removeAttribute('class');"
+    @browser.execute_script "document.getElementsByName('file')[0].removeAttribute('style');"
+  end
+  
+  on(UploadPage).select_file = path
 end
 
 Then(/^my image is on the Uploads page$/) do
-  on(UploadsPage) do |page|
+  on(UploadPage) do |page|
 	page.wait_until(10) do
       page.text.include? "#{@random_string}" #Chrome needs this, FF does not
     end
@@ -40,12 +53,12 @@ Then(/^my image is on the Uploads page$/) do
 end
 
 Then(/^The Contribute an image button is visible$/) do
-  on(UploadsPage).contribute_image_element.should be_visible
+  on(UploadPage).contribute_image_element.should be_visible
 end
 
 Then(/^The upload button links to the tutorial$/) do
   # use should match as href will be relative/absolute url
-  on(UploadsPage).tutorial_link_element.when_present.attribute( 'href' ).should match "#/upload-tutorial/uploads$"
+  on(UploadPage).tutorial_link_element.when_present.attribute( 'href' ).should match "#/upload-tutorial/uploads$"
 end
 
 Then(/^I see the upload preview$/) do

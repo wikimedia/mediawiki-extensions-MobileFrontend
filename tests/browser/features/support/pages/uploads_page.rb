@@ -1,6 +1,6 @@
 # FIXME: this inherits from ArticlePage here for the photo_description element
 # move uploads related elements to BasePage?
-class UploadsPage < ArticlePage
+class UploadPage < ArticlePage
   include PageObject
   include URL
   page_url URL.url("Special:Uploads")
