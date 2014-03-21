@@ -13,9 +13,9 @@
 		initialize: function( router ) {
 			router.on( 'route', $.proxy( this, '_checkRoute' ) );
 			this.router = router;
-			// use an object instead of an array for routes so that we don't
+			// use an object instead of an array for entries so that we don't
 			// duplicate entries that already exist
-			this.routes = {};
+			this.entries = {};
 			this.stack = [];
 			this.hidePrevious = true;
 		},
@@ -32,19 +32,23 @@
 		},
 
 		_processMatch: function( match ) {
-			var self = this, result;
+			var self = this, factoryResult;
 
 			if ( match ) {
-				result = match.result;
-				// http://stackoverflow.com/a/13075985/365238
-				if ( $.isFunction( result.promise ) ) {
-					result.done( function( overlay ) {
-						match.overlay = overlay;
-						self._showOverlay( overlay );
-					} );
+				if ( match.overlay ) {
+					self._showOverlay( match.overlay );
 				} else {
-					match.overlay = result;
-					self._showOverlay( result );
+					factoryResult = match.factoryResult;
+					// http://stackoverflow.com/a/13075985/365238
+					if ( $.isFunction( factoryResult.promise ) ) {
+						factoryResult.done( function( overlay ) {
+							match.overlay = overlay;
+							self._showOverlay( overlay );
+						} );
+					} else {
+						match.overlay = factoryResult;
+						self._showOverlay( factoryResult );
+					}
 				}
 			}
 		},
@@ -55,7 +59,7 @@
 				previous = this.stack[0],
 				match;
 
-			$.each( this.routes, function( id, entry ) {
+			$.each( this.entries, function( id, entry ) {
 				match = self._matchRoute( ev.path, entry );
 				return match === null;
 			} );
@@ -91,7 +95,7 @@
 				} else {
 					current = {
 						path: path,
-						result: entry.factory.apply( this, match.slice( 1 ) )
+						factoryResult: entry.factory.apply( this, match.slice( 1 ) )
 					};
 					this.stack.unshift( current );
 					return current;
@@ -108,14 +112,14 @@
 		 * @function
 		 * @example
 		 * overlayManager.add( /\/hi\/(.*)/, function( name ) {
-		 *   var result = $.Deferred();
+		 *   var factoryResult = $.Deferred();
 		 *
 		 *   mw.using( 'mobile.HiOverlay', function() {
 		 *     var HiOverlay = M.require( 'HiOverlay' );
-		 *     result.resolve( new HiOverlay( { name: name } ) );
+		 *     factoryResult.resolve( new HiOverlay( { name: name } ) );
 		 *   } );
 		 *
-		 *   return result;
+		 *   return factoryResult;
 		 * } );
 		 *
 		 * @param {RegExp} route route regular expression, optionally with parameters.
@@ -125,7 +129,7 @@
 		add: function( route, factory ) {
 			var entry = { route: route, factory: factory };
 
-			this.routes[route] = entry;
+			this.entries[route] = entry;
 			// check if overlay should be shown for the current path
 			this._processMatch( this._matchRoute( this.router.getPath(), entry ) );
 		},
@@ -144,7 +148,7 @@
 				throw new Error( "Trying to replace OverlayManager's current overlay, but stack is empty" );
 			}
 			this.stack[0].overlay.hide();
-			this.stack[0].result = overlay;
+			this.stack[0].overlay = overlay;
 			this._showOverlay( overlay );
 		}
 	} );
