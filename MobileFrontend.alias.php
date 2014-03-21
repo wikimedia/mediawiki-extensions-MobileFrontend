@@ -89,10 +89,14 @@ $specialPageAliases['de'] = array(
 
 /** Zazaki (Zazaki) */
 $specialPageAliases['diq'] = array(
+	'History' => array( 'Tariğ' ),
+	'MobileWebApp' => array( 'MobilWebDezge' ),
 	'MobileOptions' => array( 'MobilWeçenegi' ),
 	'Uploads' => array( 'Barkerdışi' ),
 	'MobileDiff' => array( 'MobilVer' ),
+	'MobileEditor' => array( 'MobilVurnayoğ' ),
 	'MobileMenu' => array( 'MıobilMenu' ),
+	'MobileLanguages' => array( 'MobilZıwani' ),
 	'Nearby' => array( 'Nezdıra' ),
 	'UserProfile' => array( 'ProfilaKarberi' ),
 );

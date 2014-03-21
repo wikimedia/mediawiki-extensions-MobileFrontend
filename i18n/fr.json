@@ -28,7 +28,8 @@
             "Verdy p",
             "Wyz",
             "Yann.fauche",
-            "عبد الحق فارح"
+            "عبد الحق فارح",
+            "Maxim21"
         ]
     },
     "abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -96,10 +97,13 @@
     "mobile-frontend-editor-previewing-page": "\u003Cstrong\u003EAperçu\u003C/strong\u003E de\u003Cspan\u003E $1\u003C/span\u003E",
     "mobile-frontend-editor-redirect-title": "Redirection vers l'éditeur...",
     "mobile-frontend-editor-save": "Sauvegarder",
+    "mobile-frontend-editor-source-editor": "Éditeur source",
     "mobile-frontend-editor-success": "Oui ! Votre modification a été enregistrée.",
     "mobile-frontend-editor-success-landmark-1": "Félicitations, vous êtes maintenant un éditeur {{SITENAME}} !",
     "mobile-frontend-editor-success-new-page": "Félicitations pour avoir créé une nouvelle page !",
     "mobile-frontend-editor-summary-placeholder": "Nous dire ce que vous avez modifié (facultatif)",
+    "mobile-frontend-editor-switch-confirm": "Vous devez enregistrer votre modification avant de basculer dans un autre mode d’édition.",
+    "mobile-frontend-editor-switch-editor": "Changer d'éditeur",
     "mobile-frontend-editor-tutorial-alt-summary": "Pourquoi ne pas améliorer $1 ? N’ayez pas peur du balisage !",
     "mobile-frontend-editor-tutorial-cancel": "Non merci",
     "mobile-frontend-editor-tutorial-confirm": "Commencer à modifier",
@@ -108,6 +112,7 @@
     "mobile-frontend-editor-unavailable-header": "Éditeur indisponible",
     "mobile-frontend-editor-undo-unsupported": "L’annulation n’est pour le moment pas supportée sur les terminaux mobiles.",
     "mobile-frontend-editor-viewing-source-page": "\u003Cstrong\u003EAffichage de la source\u003C/strong\u003E de\u003Cspan\u003E $1\u003C/span\u003E",
+    "mobile-frontend-editor-visual-editor": "Éditeur visuel",
     "mobile-frontend-editor-wait": "Enregistrement de la modification, veuillez patienter.",
     "mobile-frontend-enable-images": "Activer les images sur le site mobile",
     "mobile-frontend-expand-sections-description": "Toujours développer toutes les sections en navigant vers une nouvelle page.",
