@@ -15,34 +15,6 @@ When(/^I type a description$/) do
   on(UploadPage).photo_description_element.when_present.send_keys("Describing with #{@random_string}")
 end
 
-When(/^upload bogus file (.+)$/) do |file_name|
-  require "tempfile"
-  path = "#{Dir.tmpdir}/#{file_name}"
-
-  system("touch #{path}")
-  if @browser.driver.browser == :chrome
-    @browser.execute_script "document.getElementsByName('file')[0].removeAttribute('class');"
-    @browser.execute_script "document.getElementsByName('file')[0].removeAttribute('style');"
-  end
-  
-  on(UploadPage).select_file = path
-end
-
-When(/^upload file (.+)$/) do |file_name|
-  require "tempfile"
-  path = "#{Dir.tmpdir}/#{file_name}"
-
-  require "chunky_png"
-  ChunkyPNG::Image.new(Random.new.rand(255), Random.new.rand(255), Random.new.rand(255)).save path
-
-  if @browser.driver.browser == :chrome
-    @browser.execute_script "document.getElementsByName('file')[0].removeAttribute('class');"
-    @browser.execute_script "document.getElementsByName('file')[0].removeAttribute('style');"
-  end
-  
-  on(UploadPage).select_file = path
-end
-
 Then(/^my image is on the Uploads page$/) do
   on(UploadPage) do |page|
 	page.wait_until(10) do
