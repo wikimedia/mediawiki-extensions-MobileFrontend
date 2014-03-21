@@ -1,6 +1,7 @@
 ( function( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		popup = M.require( 'toast' ),
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		VisualEditorOverlay;
 
 	VisualEditorOverlay = EditorOverlayBase.extend( {
@@ -16,44 +17,61 @@
 			this.hasChanged = false;
 			this.$spinner = self.$( '.spinner' );
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
+			this.initializeSwitcher();
 		},
 		show: function() {
 			this._super();
-			// FIXME: MobileViewTarget does not accept a second argument
-			// FIXME: we have to initialize MobileViewTarget after this.$el
-			// is attached to DOM, maybe we should attach it earlier and hide
-			// overlays in a different way?
-			this.target = new ve.init.mw.MobileViewTarget( this.$( '.surface' ), {
-				// || undefined so that scrolling is not triggered for the lead (0) section
-				// (which has no header to scroll to)
-				section: this.options.sectionId || undefined
-			} );
-			this.target.activating = true;
-			this.target.load();
-			this.target.connect( this, {
-				save: 'onSave',
-				saveAsyncBegin: 'showSpinner',
-				saveAsyncComplete: 'clearSpinner',
-				saveErrorEmpty: 'onSaveError',
-				// FIXME: Expand on save errors by having a method for each
-				saveErrorSpamBlacklist: 'onSaveError',
-				saveErrorAbuseFilter: 'onSaveError',
-				saveErrorBlocked: 'onSaveError',
-				saveErrorNewUser: 'onSaveError',
-				saveErrorCaptcha: 'onSaveErrorCaptcha',
-				saveErrorUnknown: 'onSaveError',
-				surfaceReady: 'onSurfaceReady',
-				loadError: 'onLoadError',
-				conflictError: 'onConflictError',
-				showChangesError: 'onShowChangesError',
-				serializeError: 'onSerializeError'
-			} );
+			if ( this.target === undefined ) {
+				// FIXME: MobileViewTarget does not accept a second argument
+				// FIXME: we have to initialize MobileViewTarget after this.$el
+				// is attached to DOM, maybe we should attach it earlier and hide
+				// overlays in a different way?
+				this.target = new ve.init.mw.MobileViewTarget( this.$( '.surface' ), {
+					// || undefined so that scrolling is not triggered for the lead (0) section
+					// (which has no header to scroll to)
+					section: this.options.sectionId || undefined
+				} );
+				this.target.activating = true;
+				this.target.load();
+				this.target.connect( this, {
+					save: 'onSave',
+					saveAsyncBegin: 'showSpinner',
+					saveAsyncComplete: 'clearSpinner',
+					saveErrorEmpty: 'onSaveError',
+					// FIXME: Expand on save errors by having a method for each
+					saveErrorSpamBlacklist: 'onSaveError',
+					saveErrorAbuseFilter: 'onSaveError',
+					saveErrorBlocked: 'onSaveError',
+					saveErrorNewUser: 'onSaveError',
+					saveErrorCaptcha: 'onSaveErrorCaptcha',
+					saveErrorUnknown: 'onSaveError',
+					surfaceReady: 'onSurfaceReady',
+					loadError: 'onLoadError',
+					conflictError: 'onConflictError',
+					showChangesError: 'onShowChangesError',
+					serializeError: 'onSerializeError'
+				} );
+			}
 		},
 		postRender: function( options ) {
+			var self = this;
 			// Save button
 			this.$( '.continue' ).on( 'click', $.proxy( this, 'prepareForSave' ) );
 			this.$( '.submit' ).on( 'click', $.proxy( this, 'save' ) );
 			this.$( '.back' ).on( 'click', $.proxy( this, 'switchToEditor' ) );
+			this.$( '.source-editor' ).on( 'click', function() {
+				// If changes have been made tell the user they have to save first
+				if ( !self.hasChanged ) {
+					MobileWebClickTracking.log( 'editor-switch-to-source', options.title );
+					// FIXME: Come up with a solution that doesn't cause weird behavior
+					// when using the close button.
+					M.router.navigate( '#editor/' + options.sectionId );
+				} else {
+					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
+						self.prepareForSave();
+					}
+				}
+			} );
 			this._super( options );
 		},
 		switchToEditor: function() {

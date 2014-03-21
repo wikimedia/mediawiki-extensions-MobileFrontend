@@ -70,7 +70,7 @@
 		}
 
 		.oo-ui-tool {
-			height: 3em;
+			height: @headerHeight;
 			display: block;
 			float: left;
 			text-indent: -999px;
@@ -101,11 +101,14 @@
 		// that we wouldn't be able to use the @headerHeight LESS variable.
 		.oo-ui-barToolGroup {
 			.oo-ui-tool-link {
-				height: 3em;
+				height: 100%;
+				padding: 0;
+				.box-sizing( border-box );
 
 				.oo-ui-iconedElement-icon {
-					width: 3em;
-					height: 3em;
+					width: @headerTitleFontSize + @headerTitleMarginV * 2;
+					height: @headerTitleFontSize + @headerTitleMarginV * 2;
+					margin-top: @headerMargin;
 					.background-size( 32px, 32px );
 				}
 			}

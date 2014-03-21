@@ -349,6 +349,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-captcha-try-again',
 			'mobile-frontend-editor-editing-page',
 			'mobile-frontend-editor-previewing-page',
+			'mobile-frontend-editor-switch-confirm',
+			'mobile-frontend-editor-visual-editor',
+			'mobile-frontend-editor-source-editor',
+			'mobile-frontend-editor-switch-editor',
 		),
 	),
 

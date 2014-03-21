@@ -133,8 +133,10 @@
 			border-bottom: 1px solid @grayLight;
 		}
 
-		> div {
-			padding: @headerTitleMarginV @headerTitleMarginH;
+		> ul {
+			li {
+				display: inline-block;
+			}
 		}
 
 		h2 {
@@ -166,6 +168,7 @@
 			background-position: 50%;
 			background-repeat: no-repeat;
 			.background-size( 24px, auto );
+			cursor: pointer;
 
 			&[disabled] {
 				opacity: .5;
@@ -200,15 +203,10 @@
 		padding: @headerMargin @headerMargin 0;
 		.box-sizing(border-box);
 		background: #fff;
-		// For overlays that do not use position fixed headers e.g. ZeroOverlay
-		// FIXME: make those overlays use position fixed headers
-		position: absolute;
+		// FIXME: After this has been deployed for a while, remove the 'position-fixed'
+		// class from OverlayNew.html.
+		position: fixed;
 		top: 0;
-		// has to be here in case has no position: fixed but is positioned using
-		// JS on iOS
-		z-index: 5;
-		// prevent horizontal scrollbar when no position: fixed
-		overflow: hidden;
 		// make header reappearing less abrupt when scrolling on iOS with open
 		// keyboard
 		opacity: 0;
@@ -229,11 +227,13 @@
 			z-index: 5;
 		}
 
+		// FIXME: Combine with .overlay-header above.
 		.overlay-header {
 			white-space: nowrap;
 
-			> div {
-				padding: (@headerTitleMarginV - @headerMargin) @headerTitleMarginH;
+			.overlay-title,
+			.overlay-search {
+				padding: 0 @headerTitleMarginH;
 			}
 
 			button {
