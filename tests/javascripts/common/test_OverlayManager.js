@@ -56,6 +56,22 @@
 		assert.ok( fakeOverlay.show.calledOnce, 'show registered overlay' );
 	} );
 
+	QUnit.test( '#replaceCurrent', 3, function( assert ) {
+		var fakeOverlay = this.createFakeOverlay(),
+			anotherFakeOverlay = this.createFakeOverlay();
+
+		overlayManager.add( /^test$/, function() {
+			return fakeOverlay;
+		} );
+
+		fakeRouter.emit( 'route', $.Event( 'route', { path: 'test' } ) );
+		overlayManager.replaceCurrent( anotherFakeOverlay );
+		assert.ok( fakeOverlay.hide.calledOnce, 'hide overlay' );
+		assert.ok( anotherFakeOverlay.show.calledOnce, 'show another overlay' );
+		fakeRouter.emit( 'route', $.Event( 'route', { path: '' } ) );
+		assert.ok( anotherFakeOverlay.hide.calledOnce, 'hide another overlay' );
+	} );
+
 	QUnit.test( 'route with params', 1, function( assert ) {
 		var
 			fakeOverlay = this.createFakeOverlay(),
