@@ -24,7 +24,6 @@
 		},
 		template: M.template.get( 'modules/editor/EditorOverlayBase' ),
 		className: 'overlay editor-overlay',
-		closeOnBack: true,
 
 		_updateEditCount: function() {
 			this.editCount += 1;
