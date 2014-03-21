@@ -164,7 +164,17 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		} else {
 			$diff = '<ins>' . htmlspecialchars( $this->rev->getText() ) . '</ins>';
 		}
+		$warnings = $de->getWarningMessageText();
+		if ( $warnings ) {
+			$warnings = Html::openElement( 'div',
+				array(
+					'class' => 'warning alert',
+				) ) .
+				$warnings .
+				Html::closeElement( 'div' );
+		}
 		$this->getOutput()->addHtml(
+			$warnings .
 			'<div id="mw-mf-minidiff">' .
 			$diff .
 			'</div>'
