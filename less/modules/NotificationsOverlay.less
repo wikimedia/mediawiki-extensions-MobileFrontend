@@ -24,9 +24,11 @@
 	.mw-echo-notification {
 		padding: 1.2em 1em 1em;
 		border-bottom: 1px solid #eee;
-	}
-	.mw-echo-notification:hover {
-		background-color: #F9F9F9;
+
+		&:hover {
+			// FIXME: Yet another gray..
+			background-color: #F9F9F9;
+		}
 	}
 	.mw-echo-linked-notification {
 		cursor: pointer;
@@ -59,6 +61,45 @@
 		}
 		.mw-echo-notification {
 			padding: 1.75em 2.75em;
+		}
+	}
+
+	.alpha,
+	.beta {
+		.navigation-drawer {
+			box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.3);
+			width: auto;
+
+			.overlay-header-container {
+				width: auto;
+			}
+
+			.mw-echo-notification {
+				// FIXME: ARgghghghg more grays - think of the children!
+				background: #F8F8F8;
+			}
+
+			.mw-mf-notifications,
+			.notifications-archive-link {
+				position: absolute;
+				right: 0;
+				left: 0;
+			}
+
+			.mw-mf-notifications {
+				bottom: @headerHeight;
+				top: @headerHeight;
+				overflow-y: scroll;
+			}
+
+			.notifications-archive-link {
+				border-top: 1px solid @grayLight;
+				background-color: #FFF;
+				text-align: center;
+				bottom: 0;
+				margin: 0;
+				padding-top: 1em;
+			}
 		}
 	}
 }

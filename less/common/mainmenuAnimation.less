@@ -18,7 +18,7 @@
 		.transition(visibility 0s @duration);
 	}
 
-	&.navigation-enabled {
+	&.primary-navigation-enabled {
 		.position-fixed,
 		#mw-mf-page-center {
 			// override non-animated version
@@ -34,7 +34,7 @@
 }
 
 .animations .alpha.rtl {
-	&.navigation-enabled {
+	&.primary-navigation-enabled {
 		.position-fixed,
 		#mw-mf-page-center {
 			.transform(translate3d(-@menuWidth, 0, 0));
@@ -59,7 +59,7 @@
 	background-color: #fff;
 }
 
-.navigation-enabled {
+.primary-navigation-enabled {
 	#mw-mf-page-left {
 		// make menu scrollable when open (on small screens)
 		position: static;
