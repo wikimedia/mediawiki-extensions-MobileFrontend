@@ -63,9 +63,7 @@
 				// If changes have been made tell the user they have to save first
 				if ( !self.hasChanged ) {
 					MobileWebClickTracking.log( 'editor-switch-to-source', options.title );
-					// FIXME: Come up with a solution that doesn't cause weird behavior
-					// when using the close button.
-					M.router.navigate( '#editor/' + options.sectionId );
+					self.switchToSourceEditor( options );
 				} else {
 					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
 						self.prepareForSave();
@@ -111,6 +109,12 @@
 			}
 			this.target.prepareCacheKey( this.docToSave ).done( function () {
 				self.target.save( self.docToSave, options );
+			} );
+		},
+		switchToSourceEditor: function( options ) {
+			mw.loader.using( 'mobile.editor.overlay', function() {
+				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+				M.overlayManager.replaceCurrent( new EditorOverlay( options ) );
 			} );
 		},
 		showSpinner: function () {
