@@ -223,7 +223,7 @@
     "mobile-frontend-password-placeholder": "密码",
     "mobile-frontend-photo-article-donate-comment": "贡献图像自Special:Uploads",
     "mobile-frontend-photo-article-edit-comment": "添加用于页面的图像",
-    "mobile-frontend-photo-caption-placeholder": "描述此图像（必须）",
+    "mobile-frontend-photo-caption-placeholder": "描述该图像（必填）",
     "mobile-frontend-photo-license": "上传该图像，即表示你认同我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意采用[http://creativecommons.org/licenses/by-sa/3.0/deed.zh 知识共享“署名-相同方式共享 3.0”许可协议]发表你的图像。",
     "mobile-frontend-photo-ownership": "我，$1，是该图像的作者。",
     "mobile-frontend-photo-ownership-confirm": "明白了！",
