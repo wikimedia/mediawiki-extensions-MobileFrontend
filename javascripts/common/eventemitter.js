@@ -10,7 +10,6 @@
 	}
 
 	/**
-	 * @name EventEmitter
 	 * @class
 	 * @extends Class
 	 */
@@ -18,8 +17,7 @@
 		/**
 		 * Bind a callback to the event.
 		 *
-		 * @name EventEmitter.prototype.on
-		 * @function
+		 * @method
 		 * @param {string} event Event name.
 		 * @param {Function} callback Callback to be bound.
 		 */
@@ -31,8 +29,7 @@
 		/**
 		 * Bind a callback to the event and run it only once.
 		 *
-		 * @name EventEmitter.prototype.one
-		 * @function
+		 * @method
 		 * @param {string} event Event name.
 		 * @param {Function} callback Callback to be bound.
 		 */
@@ -44,8 +41,7 @@
 		/**
 		 * Emit an event. This causes all bound callbacks to be run.
 		 *
-		 * @name EventEmitter.prototype.emit
-		 * @function
+		 * @method
 		 * @param {string} event Event name.
 		 * @param {*} [arguments] Optional arguments to be passed to callbacks.
 		 */

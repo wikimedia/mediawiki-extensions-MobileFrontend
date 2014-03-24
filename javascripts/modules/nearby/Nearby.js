@@ -6,6 +6,10 @@
 		loader = new LoadingOverlay(),
 		Nearby;
 
+	/**
+	 * @extends View
+	 * @class Nearby
+	 */
 	Nearby = View.extend( {
 		template: M.template.get( 'articleList' ),
 		/**

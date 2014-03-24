@@ -6,9 +6,8 @@
 		Page;
 
 	/**
-	 * @class
+	 * @class Page
 	 * @extends View
-	 * @name Page
 	 */
 	Page = View.extend( {
 		template: mw.template.get( 'page' ),
@@ -18,7 +17,7 @@
 			/**
 			 * Includes prefix where needed and is human readable.
 			 * e.g. Talk:The man who lived
-			 * @string
+			 * @type {string}
 			 */
 			title: '',
 			displayTitle: '',
@@ -43,8 +42,7 @@
 		},
 
 		/**
-		 * @name Page.prototype.isWikiText
-		 * @function
+		 * @method
 		 * FIXME: Make this update with ajax page loads
 		 * @return {Boolean}
 		 */
@@ -53,8 +51,7 @@
 		},
 
 		/**
-		 * @name Page.prototype.isMainPage
-		 * @function
+		 * @method
 		 * @return {Boolean}
 		 */
 		isMainPage: function() {
@@ -63,10 +60,9 @@
 
 		/**
 		 * Checks whether the given user can edit the page.
-		 * @name Page.prototype.isEditable
-		 * @function
+		 * @method
 		 * @param {mw.user} Object representing a user
-		 * @return {jQuery.deferred} With parameter boolean
+		 * @return {jQuery.Deferred} With parameter boolean
 		 */
 		isEditable: function( user ) {
 			var editProtection = this.options.protection.edit,
@@ -116,27 +112,24 @@
 
 		/**
 		 * Return the latest revision id for this page
-		 * @name Page.prototype.getRevisionId
-		 * @function
-		 * @return {Integer}
+		 * @method
+		 * @return {Number}
 		 */
 		getRevisionId: function() {
 			return this.options.revId;
 		},
 
 		/**
-		 * @name Page.prototype.getId
-		 * @function
-		 * @return {Integer}
+		 * @method
+		 * @return {Number}
 		 */
 		getId: function() {
 			return this.options.id;
 		},
 
 		/**
-		 * @name Page.prototype.getNamespaceId
-		 * @function
-		 * @return {Integer} namespace number
+		 * @method
+		 * @return {Number} namespace Number
 		 */
 		getNamespaceId: function() {
 			var args = this.options.title.split( ':' ), nsId;
@@ -149,13 +142,12 @@
 		},
 
 		/**
-		 * @name Page.prototype.isTalkPage
-		 * @function
+		 * @method
 		 * @return {Boolean} Whether the page is a talk page or not
 		 */
 		isTalkPage: function() {
 			var ns = this.getNamespaceId();
-			// all talk pages are odd numbers (except the case of special pages)
+			// all talk pages are odd Numbers (except the case of special pages)
 			return ns > 0 && ns % 2 === 1;
 		},
 
@@ -174,8 +166,7 @@
 		},
 
 		/**
-		 * @name Page.prototype.getReferenceSection
-		 * @function
+		 * @method
 		 */
 		getReferenceSection: function() {
 			return this._referenceLookup;
@@ -184,8 +175,7 @@
 		/**
 		 * FIXME: rename to getSection
 		 * FIXME: Change function signature to take the anchor of the heading
-		 * @name Page.prototype.getSubSection
-		 * @function
+		 * @method
 		 * @return {Section}
 		 */
 		getSubSection: function( id ) {
@@ -195,8 +185,7 @@
 		/**
 		 * FIXME: rename to getSections
 		 *
-		 * @name Page.prototype.getSubSections
-		 * @function
+		 * @method
 		 * @return Array
 		 */
 		getSubSections: function() {

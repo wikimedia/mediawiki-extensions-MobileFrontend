@@ -1,5 +1,4 @@
 /**
- * mainmenutweaks.js
  * Disables functionality that is not supported by the app
  */
 ( function( M, $ ) {

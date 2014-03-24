@@ -8,7 +8,6 @@
 	 * JavaScript wrapper for a horrible API. Use to retrieve things.
 	 * @class Api
 	 * @extends EventEmitter
-	 * @name Api
 	 */
 	Api = EventEmitter.extend( mw.Api.prototype ).extend( {
 		apiUrl: mw.util.wikiScript( 'api' ),
@@ -16,8 +15,7 @@
 		/**
 		 * Constructor, if you override it, use _super().
 		 *
-		 * @function
-		 * @name Api.prototype.initialize
+		 * @method
 		 */
 		initialize: function() {
 			mw.Api.apply( this, arguments );
@@ -32,18 +30,17 @@
 		 * - removes boolean values equal to false
 		 * - concatenates Array values with '|'
 		 *
-		 * @name Api.prototype.ajax
-		 * @example
-		 * <code>
-		 * ajax( { a: false, b: [1, 2, 3] }, { type: 'post' } );
-		 * // is equal to
-		 * $.ajax( {
-		 *     type: 'post',
-		 *     data: { b: '1|2|3' }
-		 * } );
-		 * </code>
+		 *     @example
+		 *     <code>
+		 *     ajax( { a: false, b: [1, 2, 3] }, { type: 'post' } );
+		 *     // is equal to
+		 *     $.ajax( {
+		 *         type: 'post',
+		 *         data: { b: '1|2|3' }
+		 *     } );
+		 *     </code>
 		 *
-		 * @function
+		 * @method
 		 * @param {Object} data Data to be preprocessed and added to options
 		 * @param {Object} options Parameters passed to $.ajax()
 		 * @return {jQuery.Deferred} Object returned by $.ajax()
@@ -86,8 +83,7 @@
 		/**
 		 * Abort all unfinished requests issued by this Api object.
 		 *
-		 * @name Api.prototype.abort
-		 * @function
+		 * @method
 		 */
 		// FIXME: move to mw.Api
 		abort: function() {
@@ -99,8 +95,7 @@
 		/**
 		 * Retrieves a token for a given endpoint
 		 *
-		 * @name Api.prototype.getToken
-		 * @function
+		 * @method
 		 * @param {String} tokenType Name of the type of token needed e.g. edit, upload - defaults to edit
 		 * @param {String} endpoint Optional alternative host to query via CORS
 		 * @param {String} caToken Optional additional CentralAuth token to be

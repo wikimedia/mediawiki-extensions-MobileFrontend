@@ -7,7 +7,7 @@
 	 *
 	 * When options contains el property, this.$el in the constructed object
 	 * will be set to the corresponding jQuery object. Otherwise, this.$el
-	 * will be an empty <div>.
+	 * will be an empty div.
 	 *
 	 * When extended using extend(), if the extended prototype contains
 	 * template property, this.$el will be filled with rendered template (with
@@ -29,69 +29,63 @@
 	 * append(), prepend(), before(), after() can be used to modify $el. on()
 	 * can be used to bind events.
 	 *
-	 * @class
-	 * @name View
-	 * @example
-	 * // var View, Section, section;
-	 * //
-	 * // View = M.require( 'View' );
-	 * // Section = View.extend( {
-	 * //    template: M.template.compile( '<h2>{{title}}</h2><p>{{text}}</p>' ),
-	 * //     // ...
-	 * // } );
-	 * //
-	 * // section = new Section( { title: 'Test', text: 'Test section body' } );
-	 * // section.appendTo( 'body' );
-	 *
-	 * @constructor
+	 * @class View
 	 * @extends EventEmitter
 	 * @param {Object} options Options for the view, containing the el or
 	 * template data or any other information you want to use in the view.
+	 * Example:
+	 *     @example
+	 *     <pre>
+	 *     var View, Section, section;
+	 *     View = M.require( 'View' );
+	 *     Section = View.extend( {
+	 *       template: M.template.compile( "&lt;h2&gt;{{title}}&lt;/h2&gt;" ),
+	 *     } );
+	 *     section = new Section( { title: 'Test', text: 'Test section body' } );
+	 *     section.appendTo( 'body' );
+	 *     </pre>
 	 */
 	View = EventEmitter.extend( {
 		/**
-		 * @name View.prototype.tagName
 		 * @type String
 		 */
 		tagName: 'div',
 
 		/**
-		 * Specifies the template used in render().
-		 *
-		 * @name View.prototype.template
-		 * @type {Object|string|HoganTemplate}
+		 * @type {Mixed}
+		 * Specifies the template used in render(). Object|String|HoganTemplate
 		 */
+		template: undefined,
 
 		/**
 		 * Specifies partials (sub-templates) for the main template. Example:
 		 *
-		 * @example
-		 * // example content for the "some" template (sub-template will be
-		 * // inserted where {{>content}} is):
-		 * // <h1>Heading</h1>
-		 * // {{>content}}
+		 *     @example
+		 *     // example content for the "some" template (sub-template will be
+		 *     // inserted where {{>content}} is):
+		 *     // <h1>Heading</h1>
+		 *     // {{>content}}
 		 *
-		 * var SomeView = View.extend( {
-		 *   template: M.template.get( 'some' ),
-		 *   templatePartials: { content: M.template.get( 'sub' ) }
-		 * }
+		 *     var SomeView = View.extend( {
+		 *     template: M.template.get( 'some' ),
+		 *     templatePartials: { content: M.template.get( 'sub' ) }
+		 *     }
 		 *
-		 * @name View.prototype.templatePartials
-		 * @type {Object|string|HoganTemplate}
+		 * @type {Object}
 		 */
+		templatePartials: {},
 
 		/**
 		 * A set of default options that are merged with options passed into the initialize function.
 		 *
-		 * @name View.prototype.defaults
 		 * @type {Object}
 		 */
+		defaults: {},
 
 		/**
 		 * Constructor, if you override it, use _super().
 		 *
-		 * @name View.prototype.initialize
-		 * @function
+		 * @method
 		 * @param {Object} options Object passed to the constructor.
 		 */
 		initialize: function( options ) {
@@ -121,8 +115,7 @@
 		 * Function called before the view is rendered. Can be redefined in
 		 * objects that extend View.
 		 *
-		 * @name View.prototype.preRender
-		 * @function
+		 * @method
 		 * @param {Object} options Object passed to the constructor.
 		 */
 		preRender: function() {},
@@ -131,8 +124,7 @@
 		 * Function called after the view is rendered. Can be redefined in
 		 * objects that extend View.
 		 *
-		 * @name View.prototype.postRender
-		 * @function
+		 * @method
 		 * @param {Object} options Object passed to the constructor.
 		 */
 		postRender: function() {},
@@ -140,8 +132,7 @@
 		/**
 		 * Fill this.$el with template rendered using data if template is set.
 		 *
-		 * @name View.prototype.render
-		 * @function
+		 * @method
 		 * @param {Object} data Template data.
 		 */
 		render: function( data ) {
@@ -159,10 +150,9 @@
 		 * Wraps this.$el.find, so that you can search for elements in the view's
 		 * ($el's) scope.
 		 *
-		 * @name View.prototype.$
-		 * @function
+		 * @method
 		 * @param {string} query A jQuery CSS selector.
-		 * @return {jQuery} jQuery object containing results of the search.
+		 * @return {jQuery.Object} jQuery object containing results of the search.
 		 */
 		$: function( query ) {
 			return this.$el.find( query );

@@ -4,6 +4,9 @@
 		Overlay = M.require( 'OverlayNew' ),
 		NearbyOverlay;
 
+	/*
+	* @class NearbyOverlay
+	*/
 	NearbyOverlay = Overlay.extend( {
 			active: false,
 			closeOnBack: true,

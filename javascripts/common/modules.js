@@ -1,9 +1,13 @@
+/**
+ *
+ * @class mw.mobileFrontend
+ * @singleton
+ */
 mw.mobileFrontend = {
 	_modules: {},
 
 	/**
-	 * @name M.isAlphaGroupMember
-	 * @function
+	 * @method
 	 * @return {Boolean}
 	 */
 	isAlphaGroupMember: function() {
@@ -11,8 +15,7 @@ mw.mobileFrontend = {
 	},
 
 	/**
-	 * @name M.isBetaGroupMember
-	 * @function
+	 * @method
 	 * @return {Boolean}
 	 */
 	isBetaGroupMember: function() {
@@ -20,8 +23,7 @@ mw.mobileFrontend = {
 	},
 
 	/**
-	 * @name M.isApp
-	 * @function
+	 * @method
 	 * @return {Boolean}
 	 */
 	isApp: function() {
@@ -29,8 +31,7 @@ mw.mobileFrontend = {
 	},
 
 	/**
-	 * @name M.assertMode
-	 * @function
+	 * @method
 	 * @throws Error when a module is run out of its allowed modes
 	 */
 	assertMode: function( modes ) {
@@ -43,7 +44,6 @@ mw.mobileFrontend = {
 	/**
 	 * Require (import) a module previously defined using define().
 	 *
-	 * @name M.require
 	 * @param {string} id Required module id.
 	 * @return {Object} Required module, can be any JavaScript object.
 	 */
@@ -58,7 +58,6 @@ mw.mobileFrontend = {
 	/**
 	 * Define a module which can be later required (imported) using require().
 	 *
-	 * @name M.define
 	 * @param {string} id Defined module id.
 	 * @param {Object} obj Defined module body, can be any JavaScript object.
 	 */

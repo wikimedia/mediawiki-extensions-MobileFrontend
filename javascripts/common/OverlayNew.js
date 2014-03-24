@@ -3,9 +3,8 @@
 
 	var Overlay = M.require( 'Overlay' ), OverlayNew;
 	/**
-	 * @name OverlayNew
 	 * @extends Overlay
-	 * @class
+	 * @class OverlayNew
 	 */
 	OverlayNew = Overlay.extend( {
 		className: 'overlay',

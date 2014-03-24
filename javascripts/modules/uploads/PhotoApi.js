@@ -69,8 +69,8 @@
 		// https://commons.wikimedia.org/wiki/MediaWiki:Titleblacklist-custom-double-apostrophe
 		name = name.replace( /''/g, '\'_' );
 
-		function pad( number ) {
-			return number < 10 ? '0' + number : number;
+		function pad( Number ) {
+			return Number < 10 ? '0' + Number : Number;
 		}
 
 		suffix = ' ' + date.getFullYear() + '-' +
@@ -81,11 +81,16 @@
 		return trimUtf8String( name, allowedLength ) + suffix;
 	}
 
+	/**
+	 * @class PhotoApi
+	 * @extends Api
+	 */
 	PhotoApi = Api.extend( {
 		useCentralAuthToken: mw.config.get( 'wgMFUseCentralAuthToken' ),
 
 		/**
-		 * @param [options.editorApi] EditorApi An API instance that will be used
+		 * @param {Object} options
+		 *     [options.editorApi] EditorApi An API instance that will be used
 		 * for inserting images in a page.
 		 */
 		initialize: function( options ) {
@@ -114,8 +119,9 @@
 		 * Upload an image and, optionally, add it to current page (if PhotoApi
 		 * was initialized with `editorApi`).
 		 *
-		 * @param options.file File A file object obtained from a file input.
-		 * @param options.description String Image description.
+		 * @param {Object} options
+		 *     options.file File A file object obtained from a file input.
+		 *     options.description String Image description.
 		 * @return jQuery.Deferred On failure callback is passed an object with
 		 * `stage`, `type` and `details` properties. `stage` is either "upload"
 		 * or "edit" (inserting image in a page). `type` is a string describing

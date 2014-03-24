@@ -2,6 +2,10 @@
 	var ContentOverlay = M.require( 'modules/tutorials/ContentOverlay' ),
 		PageActionOverlay;
 
+	/**
+	 * @class PageActionOverlay
+	 * @extends ContentOverlay
+	 */
 	PageActionOverlay = ContentOverlay.extend( {
 		template: M.template.get( 'modules/tutorials/PageActionOverlay' ),
 		defaults: {

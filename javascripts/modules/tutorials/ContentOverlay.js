@@ -4,24 +4,20 @@
 
 	/**
 	 * An {@link Overlay} that points at an element on the page.
-	 * @name ContentOverlay
-	 * @class
+	 * @class ContentOverlay
 	 * @extends Overlay
 	 */
 	ContentOverlay = Overlay.extend( {
 		className: 'content-overlay',
 		/**
-		 * @name ContentOverlay.prototype.fullScreen
 		 * @type Boolean
 		 */
 		fullScreen: false,
 		/**
-		 * @name ContentOverlay.prototype.closeOnContentTap
 		 * @type Boolean
 		 */
 		closeOnContentTap: true,
 		/**
-		 * @name ContentOverlay.prototype.appendTo
 		 * @type String
 		 */
 		appendTo: '#mw-mf-page-center',
@@ -42,8 +38,7 @@
 		},
 		/**
 		 * Refreshes the pointer arrow.
-		 * @name ContentOverlay.prototype.refreshPointerArrow
-		 * @function
+		 * @method
 		 */
 		refreshPointerArrow: function( target ) {
 			this.$pointer.remove();
@@ -59,8 +54,7 @@
 			this.$el.css( 'top', paOffset.top + h );
 		},
 		/**
-		 * @name ContentOverlay.prototype.addPointerArrow
-		 * @function
+		 * @method
 		 * @param {jQuery.Object} $pa An element that should be pointed at by the overlay
 		 */
 		addPointerArrow: function( $pa ) {

@@ -8,7 +8,6 @@
 
 	/**
 	 * Closes all open navigation drawers
-	 * @name mainmenu.closeNavigationDrawers
 	 */
 	function closeNavigationDrawers() {
 		$( 'body' ).removeClass( 'navigation-enabled' ).
@@ -17,7 +16,6 @@
 	}
 
 	/**
-	 * @name mainmenu.openNavigationDrawer
 	 * @param {String} drawerType A name that identifies the navigation drawer that should be toggled open
 	 */
 	function openNavigationDrawer( drawerType ) {

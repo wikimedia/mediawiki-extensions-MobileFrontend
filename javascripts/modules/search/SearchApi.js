@@ -1,3 +1,7 @@
+/**
+ * @extends Api
+ * @class SearchApi
+ */
 ( function( M, $ ) {
 
 	var Api = M.require( 'api' ).Api, SearchApi;

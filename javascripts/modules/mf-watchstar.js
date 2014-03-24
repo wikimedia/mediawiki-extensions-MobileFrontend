@@ -18,7 +18,7 @@ var api = M.require( 'api' ), w = ( function() {
 	 * Checks whether a list of article titles are being watched by the current user
 	 * Checks a local cache before making a query to server
 	 *
-	 * @param {Integer} eventType: 0=watched article, 1=stopped watching article, 2=clicked star as anonymous user
+	 * @param {Number} eventType: 0=watched article, 1=stopped watching article, 2=clicked star as anonymous user
 	 * @param {String} token: Token returned from getToken, optional when eventType is 2
 	 */
 	function logWatchEvent( eventType, token ) {
@@ -66,7 +66,7 @@ var api = M.require( 'api' ), w = ( function() {
 	/**
 	 * Creates a watchlist button
 	 *
-	 * @param {jQuery} container: Element in which to create a watch star
+	 * @param {jQuery.Object} container: Element in which to create a watch star
 	 * @param {String} title: The title to be watched
 	 * @param {Boolean} isWatchedArticle: Whether the article is currently watched by the user or not
 	 */
@@ -162,7 +162,7 @@ var api = M.require( 'api' ), w = ( function() {
 	/**
 	 * Creates a watch star OR a drawer to encourage user to register / login
 	 *
-	 * @param {jQuery} container: A jQuery container to create a watch list button
+	 * @param {jQuery.Object} container: A jQuery container to create a watch list button
 	 * @param {String} title: The name of the article to watch
 	 */
 	function initWatchListIcon( container, title ) {
@@ -186,11 +186,11 @@ var api = M.require( 'api' ), w = ( function() {
 	 * Init a list of watch list icons where each li element has a title
 	 * attribute pointing to the name of the article
 	 *
-	 * @param {jQuery object} %container: An element wrapped in jQuery
+	 * FIXME: avoid if statement repetition with initWatchListIcon
+	 * @param {jQuery.Object} container: An element wrapped in jQuery
 	 * @param {boolean} allPagesAreWatched: When set avoids
 	 *   ajax lookup and assumes all title's are currently watched
 	 */
-	// FIXME: avoid if statement repetition with initWatchListIcon
 	function initWatchListIconList( $container, allPagesAreWatched ) {
 		var $items = $container.find( 'li' ), titles = [];
 		$items.each( function() {

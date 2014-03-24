@@ -47,8 +47,7 @@
 	}
 
 	/**
-	 * @class
-	 * @name PageApi
+	 * @class PageApi
 	 * @extends Api
 	 */
 	PageApi = Api.extend( {
@@ -60,8 +59,7 @@
 		/**
 		 * Retrieve a page from the api
 		 *
-		 * @name PageApi.prototype.getPage
-		 * @function
+		 * @method
 		 * @param {string} title the title of the page to be retrieved
 		 * @param {string} endpoint an alternative api url to retreive the page from
 		 * @param {boolean} leadOnly When set only the lead section content is returned
@@ -131,8 +129,7 @@
 		/**
 		 * Invalidate the internal cache for a given page
 		 *
-		 * @name PageApi.prototype.invalidatePage
-		 * @function
+		 * @method
 		 * @param {string} title the title of the page who's cache you want to invalidate
 		 */
 		invalidatePage: function( title ) {
@@ -142,10 +139,9 @@
 		/**
 		 * Gets language list for a page; helper function for getPageLanguages()
 		 *
-		 * @name PageApi.prototype._getLanguagesFromApiResponse
-		 * @function
-		 * @param  {object} data Data from API
-		 * @return {array} List of language objects
+		 * @method
+		 * @param  {Object} data Data from API
+		 * @return {Array} List of language objects
 		 */
 		_getLanguagesFromApiResponse: function( data ) {
 			// allAvailableLanguages is a mapping of all codes to language names
@@ -170,11 +166,10 @@
 		/**
 		 * Gets language variant list for a page; helper function for getPageLanguages()
 		 *
-		 * @name PageApi.prototype._getLanguageVariantsFromApiResponse
-		 * @function
+		 * @method
 		 * @param  {string} title Name of the page to obtain variants for
-		 * @param  {object} data Data from API
-		 * @return {array} List of language variant objects
+		 * @param  {Object} data Data from API
+		 * @return {Array} List of language variant objects
 		 */
 		_getLanguageVariantsFromApiResponse: function( title, data ) {
 			var generalData = data.query.general,
@@ -207,8 +202,7 @@
 		/**
 		 * Retrieve available languages for a given title
 		 *
-		 * @name PageApi.prototype.getPageLanguages
-		 * @function
+		 * @method
 		 * @param {string} title the title of the page languages should be retrieved for
 		 * @return {jQuery.Deferred} which is called with an object containing langlinks and variant links
 		 */

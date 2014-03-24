@@ -14,6 +14,10 @@
 		mobileLeftNavbarEditCTA = M.require( 'loggingSchemas/mobileLeftNavbarEditCTA' ),
 		EditorOverlay;
 
+	/**
+	 * @class EditorOverlay
+	 * @extends EditorOverlayBase
+	 */
 	EditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
 			header: M.template.get( 'modules/editor/EditorOverlayHeader' ),

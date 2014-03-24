@@ -3,4 +3,6 @@
 
 source "https://rubygems.org"
 
-gem "jsduck"
+gem "chunky_png"
+gem "mediawiki_api"
+gem "mediawiki_selenium"

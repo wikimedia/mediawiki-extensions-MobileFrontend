@@ -5,9 +5,8 @@
 		OverlayManager;
 
 	/**
-	 * @class
+	 * @class OverlayManager
 	 * @extends Class
-	 * @name OverlayManager
 	 */
 	OverlayManager = Class.extend( {
 		initialize: function( router ) {
@@ -121,20 +120,19 @@
 		/**
 		 * Add an overlay that should be shown on a specific route.
 		 *
-		 * @name OverlayManager.prototype.add
-		 * @function
-		 * @example
-		 * overlayManager.add( /\/hi\/(.*)/, function( name ) {
-		 *   var factoryResult = $.Deferred();
+		 *     @example
+		 *     overlayManager.add( /\/hi\/(.*)/, function( name ) {
+		 *       var factoryResult = $.Deferred();
 		 *
-		 *   mw.using( 'mobile.HiOverlay', function() {
-		 *     var HiOverlay = M.require( 'HiOverlay' );
-		 *     factoryResult.resolve( new HiOverlay( { name: name } ) );
-		 *   } );
+		 *       mw.using( 'mobile.HiOverlay', function() {
+		 *         var HiOverlay = M.require( 'HiOverlay' );
+		 *         factoryResult.resolve( new HiOverlay( { name: name } ) );
+		 *       } );
 		 *
-		 *   return factoryResult;
-		 * } );
+		 *       return factoryResult;
+		 *     } );
 		 *
+		 * @method
 		 * @param {RegExp} route route regular expression, optionally with parameters.
 		 * @param {Function} factory a function returning an overlay or a $.Deferred
 		 * which resolves to an overlay.
@@ -152,8 +150,7 @@
 		 * URL. This is useful for when you want to switch overlays, but don't want to
 		 * change the back button or close box behavior.
 		 *
-		 * @name OverlayManager.prototype.replaceCurrent
-		 * @function
+		 * @method
 		 * @param {Object} overlay The overlay to display
 		*/
 		replaceCurrent: function( overlay ) {

@@ -1,12 +1,14 @@
 /* jshint loopfunc: true */
+/**
+ * @class Class
+ */
 ( function( M ) {
 
 	/**
 	 * Extends a class with new methods and member properties.
 	 *
-	 * @name Class.prototype.extend
 	 * @param {Object} prototype
-	 * @function
+	 * @method
 	 * @return {Class}
 	 */
 	function extend( prototype ) {
@@ -49,17 +51,12 @@
 		return Child;
 	}
 
-	/**
-	 * @name Class
-	 * @class
-	 */
 	function Class() {
 		this.initialize.apply( this, arguments );
 	}
 	/**
 	 * Constructor, if you override it, use _super().
-	 * @name Class.prototype.initialize
-	 * @function
+	 * @method
 	 */
 	Class.prototype.initialize = function() {};
 	Class.extend = extend;

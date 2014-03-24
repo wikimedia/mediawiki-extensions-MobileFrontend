@@ -5,9 +5,8 @@
 		Section;
 
 	/**
-	 * @class
+	 * @class Section
 	 * @extends View
-	 * @name Section
 	 */
 	Section = View.extend( {
 		template: mw.template.get( 'section' ),
