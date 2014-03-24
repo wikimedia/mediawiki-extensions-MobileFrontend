@@ -86,6 +86,8 @@ Given /^I am in alpha mode$/ do
 end
 
 Given(/^I am on the "(.+)" page$/) do |article|
+  # Ensure we do not cause a redirect
+  article = article.sub(/ /, '_')
   visit(ArticlePage, :using_params => {:article_name => article})
 end
 
