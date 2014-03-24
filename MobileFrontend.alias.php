@@ -77,6 +77,7 @@ $specialPageAliases['ce'] = array(
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'History' => array( 'Versionsgeschichte' ),
+	'MobileWebApp' => array( 'Mobile_Webanwendung' ),
 	'MobileOptions' => array( 'Mobile_Optionen' ),
 	'Uploads' => array( 'Hochgeladene_Dateien' ),
 	'MobileDiff' => array( 'Mobiler_Unterschied' ),
