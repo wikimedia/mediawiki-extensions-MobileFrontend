@@ -8,6 +8,7 @@
         ]
     },
     "beta-feature-geonotahack": "Осы бетке жақындар",
+    "beta-feature-geonotahack-description": "Сіз қазір оқып жатқан беттің мазмұнынан сізге географиялық тұрғыдан жақын орналасқан беттерді ашыңыз.",
     "mobile-frontend-account-create-captcha-placeholder": "Құптау кодын еңгізіңіз",
     "mobile-frontend-account-create-email-placeholder": "Email адресі (міндетті емес)",
     "mobile-frontend-account-create-submit": "Кіру",
