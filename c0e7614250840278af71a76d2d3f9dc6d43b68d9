@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_999fae06",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-03-25T07:38:28Z",
+      "side": 1,
+      "message": "Should this be \"... under the license $2.\"?",
+      "revId": "c0e7614250840278af71a76d2d3f9dc6d43b68d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_79861ac0",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-03-25T07:38:28Z",
+      "side": 1,
+      "message": "* Is the link description for $1 always \"terms of use\" or similar? If you, it\u0027s preferred to have the link text in this message.\n* Should this be \"... under the license $2.\"?",
+      "revId": "c0e7614250840278af71a76d2d3f9dc6d43b68d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
