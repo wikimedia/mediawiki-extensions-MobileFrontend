@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce09bb20_5baa7783",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-25T21:17:36Z",
+      "side": 1,
+      "message": "This change seems unrelated.. what was wrong with resp.error ?\nWhat if there is an error without a code (I don\u0027t trust the API enough to be sure there is always a code)",
+      "revId": "9a30288d3d2d4ba8016edd354c3e4fb9b6122e39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce09bb20_fb982b7e",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-25T21:17:36Z",
+      "side": 1,
+      "message": "Why not just change this to an else ?",
+      "revId": "9a30288d3d2d4ba8016edd354c3e4fb9b6122e39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
