@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce09bb20_7e640946",
+        "filename": "tests/browser/features/editor_wikitext_nosave.feature",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-25T23:38:42Z",
+      "side": 1,
+      "message": "Aren\u0027t we creating pages on enwiki in those features?\n\nAlso, I\u0027m not sure if we should write Selenium tests for things like that. It\u0027s not exactly a user feature. More importantly, Selenium tests are slow, so maybe mocking API response in a JS test would be better?",
+      "revId": "a4f095bc92b8e822f4288fa1de4d64c976fa60e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
