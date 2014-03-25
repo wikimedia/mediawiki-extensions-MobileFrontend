@@ -16,6 +16,24 @@
       "revId": "a4f095bc92b8e822f4288fa1de4d64c976fa60e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce09bb20_fe7a59b8",
+        "filename": "tests/browser/features/editor_wikitext_nosave.feature",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-25T23:58:57Z",
+      "side": 1,
+      "message": "Yes this should be in editor_wiktext_saving (note this patch _preceeds_ that one and rebasing is why it is here...I will move it to the appropriate place.\n\nAfter all the time I have invested in writing this patch and rebasing it there is no way in hell I am scrapping these tests and writing qunit tests for this. I originally considered it but decided there were too many layers that I wasn\u0027t confident a unit test would fully cover this issue. You\u0027ve reviewed this back on Mar 13 and you didn\u0027t bring this up here.\n\nPlease let\u0027s just get the underlying problem fixed that\u0027s the important thing here. The fact we have any sort of test that covers it should be a bonus and it has been sitting here for far too long.",
+      "parentUuid": "ce09bb20_7e640946",
+      "revId": "a4f095bc92b8e822f4288fa1de4d64c976fa60e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
