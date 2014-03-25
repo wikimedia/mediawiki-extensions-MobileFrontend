@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce09bb20_fe98197e",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-25T23:10:16Z",
+      "side": 1,
+      "message": "This will cause LiquidThreads enabled Talk pages to create blank talk pages which would be problematic. Only do this when code \u003d\u003d\u003d \u0027missingtitle\u0027",
+      "revId": "b5e6491b3efaf4739a7c5353d419b2c6f28d4290",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
