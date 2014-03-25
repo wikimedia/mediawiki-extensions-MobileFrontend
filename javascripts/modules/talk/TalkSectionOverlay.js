@@ -1,4 +1,4 @@
-( function( M ) {
+( function( M, $ ) {
 var
 	Overlay = M.require( 'OverlayNew' ),
 	popup = M.require( 'toast' ),
@@ -11,8 +11,23 @@ var
 		defaults: {
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
-			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
+		},
+		initialize: function( options ) {
+			// If terms of use is enabled, include it in the licensing message
+			if ( $( '#footer-places-terms-use' ).length > 0 ) {
+				options.licenseMsg = mw.msg(
+					'mobile-frontend-editor-licensing-with-terms',
+					$( '#footer-places-terms-use' ).html(),
+					mw.config.get( 'wgMFLicenseLink' )
+				);
+			} else {
+				options.licenseMsg = mw.msg(
+					'mobile-frontend-editor-licensing',
+					mw.config.get( 'wgMFLicenseLink' )
+				);
+			}
+			this._super( options );
 		},
 		postRender: function( options ) {
 			var self = this, $comment = this.$( '.comment' ),
@@ -62,4 +77,4 @@ var
 	} );
 
 	M.define( 'modules/talk/TalkSectionOverlay', TalkSectionOverlay );
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

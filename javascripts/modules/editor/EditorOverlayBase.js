@@ -13,7 +13,6 @@
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			keepEditingMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
-			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
 			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
@@ -100,7 +99,20 @@
 				options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			}
 			if ( options.isNewPage ) {
-				options.placeholder =  mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
+				options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
+			}
+			// If terms of use is enabled, include it in the licensing message
+			if ( $( '#footer-places-terms-use' ).length > 0 ) {
+				options.licenseMsg = mw.msg(
+					'mobile-frontend-editor-licensing-with-terms',
+					$( '#footer-places-terms-use' ).html(),
+					mw.config.get( 'wgMFLicenseLink' )
+				);
+			} else {
+				options.licenseMsg = mw.msg(
+					'mobile-frontend-editor-licensing',
+					mw.config.get( 'wgMFLicenseLink' )
+				);
 			}
 			this.editCount = user.getEditCount();
 			this.isNewPage = options.isNewPage;

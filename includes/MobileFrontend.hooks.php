@@ -277,6 +277,13 @@ class MobileFrontendHooks {
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
 		$vars['wgMFNearbyNamespace'] = $wgMFNearbyNamespace;
 		$vars['wgMFKeepGoing'] = $wgMFKeepGoing;
+
+		// Set the licensing agreement that is displayed in the editor.
+		$wgMFLicenseLink = SkinMinerva::getLicenseLink( 'editor' );
+		$vars['wgMFLicenseLink'] = $wgMFLicenseLink;
+		// Set the licensing agreement that is displayed in the uploading interface.
+		$wgMFUploadLicenseLink = SkinMinerva::getLicenseLink( 'upload' );
+		$vars['wgMFUploadLicenseLink'] = $wgMFUploadLicenseLink;
 		return true;
 	}
 

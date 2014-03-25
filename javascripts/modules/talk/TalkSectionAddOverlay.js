@@ -13,7 +13,6 @@
 			],
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
-			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-add-overlay-submit' ) + '</strong>',
 			topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
 			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' )
@@ -22,6 +21,19 @@
 			content: M.template.get( 'overlays/talkSectionAdd' )
 		},
 		initialize: function( options ) {
+			// If terms of use is enabled, include it in the licensing message
+			if ( $( '#footer-places-terms-use' ).length > 0 ) {
+				options.licenseMsg = mw.msg(
+					'mobile-frontend-editor-licensing-with-terms',
+					$( '#footer-places-terms-use' ).html(),
+					mw.config.get( 'wgMFLicenseLink' )
+				);
+			} else {
+				options.licenseMsg = mw.msg(
+					'mobile-frontend-editor-licensing',
+					mw.config.get( 'wgMFLicenseLink' )
+				);
+			}
 			this._super( options );
 			this.talkOverlay = options.parent;
 			this.title = options.title;

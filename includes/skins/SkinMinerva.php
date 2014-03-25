@@ -833,7 +833,7 @@ class SkinMinerva extends SkinTemplate {
 HTML;
 
 		// Generate the licensing text displayed in the footer of each page
-		$link = $this->getLicenseLink();
+		$link = self::getLicenseLink( 'footer' );
 		// The license message is displayed in the content language rather than the user
 		// language. See Skin::getCopyright.
 		if ( $link ) {
@@ -854,10 +854,12 @@ HTML;
 	 * For example:
 	 *   "<a title="Wikipedia:Copyright" href="/index.php/Wikipedia:Copyright">CC BY</a>"
 	 *
+	 * @param string $context The context in which the license link appears, e.g. footer,
+	 *   editor, talk, or upload.
 	 * @param array $attribs An associative array of extra HTML attributes to add to the link
 	 * @return string
 	 */
-	public function getLicenseLink( $attribs = array() ) {
+	public static function getLicenseLink( $context, $attribs = array() ) {
 		global $wgRightsPage, $wgRightsUrl, $wgRightsText;
 
 		// Construct the link to the licensing terms
@@ -892,6 +894,10 @@ HTML;
 		} else {
 			$link = '';
 		}
+
+		// Allow other extensions (for example, WikimediaMessages) to override
+		wfRunHooks( 'MobileLicenseLink', array( &$link, $context, $attribs ) );
+
 		return $link;
 	}
 

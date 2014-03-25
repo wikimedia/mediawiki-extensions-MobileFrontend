@@ -294,7 +294,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-continue',
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-keep-editing',
-			'mobile-frontend-editor-license' => array( 'parse' ),
+			'mobile-frontend-editor-licensing',
+			'mobile-frontend-editor-licensing-with-terms',
 			'mobile-frontend-editor-placeholder',
 			'mobile-frontend-editor-placeholder-new-page',
 			'mobile-frontend-editor-summary-placeholder',
@@ -412,7 +413,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-caption-placeholder',
 			'mobile-frontend-photo-submit',
 			'mobile-frontend-photo-upload-error-file-type',
-			'mobile-frontend-photo-license' => array( 'parse' ),
+			'mobile-frontend-photo-licensing',
+			'mobile-frontend-photo-licensing-with-terms',
 
 			// PhotoUploadProgress.js
 			'mobile-frontend-image-uploading' => array( 'parse' ),
@@ -571,7 +573,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-topic-feedback',
 			// @todo FIXME: Gets loaded twice if editor and talk both loaded.
 			'mobile-frontend-editor-cancel',
-			'mobile-frontend-editor-license' => array( 'parse' ),
+			'mobile-frontend-editor-licensing',
+			'mobile-frontend-editor-licensing-with-terms',
 		),
 	),
 

@@ -12,7 +12,6 @@
 
 	PhotoUploadOverlay = OverlayNew.extend( {
 		defaults: {
-			license: mw.msg( 'mobile-frontend-photo-license' ),
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),
 			help: mw.msg( 'mobile-frontend-photo-ownership-help' ),
 			ownerStatement: ownershipMessage,
@@ -62,6 +61,20 @@
 				// handle resubmitting after abusefilter message
 				self._save();
 			} );
+
+			// If terms of use is enabled, include it in the licensing message
+			if ( $( '#footer-places-terms-use' ).length > 0 ) {
+				options.license = mw.msg(
+					'mobile-frontend-photo-licensing-with-terms',
+					$( '#footer-places-terms-use' ).html(),
+					mw.config.get( 'wgMFUploadLicenseLink' )
+				);
+			} else {
+				options.license = mw.msg(
+					'mobile-frontend-photo-licensing',
+					mw.config.get( 'wgMFUploadLicenseLink' )
+				);
+			}
 
 			this._super( options );
 		},
