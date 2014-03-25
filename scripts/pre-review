@@ -41,7 +41,8 @@ for change in changes:
     # This patch is updating an existing one so let's allow it.
     if change["change_id"] in commit:
         revised_patch = True
-    if 'disliked' not in reviews and 'rejected' not in reviews and 'approved' not in reviews:
+    wip = 'WIP' in change['subject']
+    if 'disliked' not in reviews and 'rejected' not in reviews and 'approved' not in reviews and not wip:
         open_patches += 1
 
 if open_patches > 5 and not revised_patch:
