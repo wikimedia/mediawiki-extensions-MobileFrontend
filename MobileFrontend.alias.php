@@ -286,6 +286,7 @@ $specialPageAliases['vi'] = array(
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'History' => array( '历史' ),
+	'MobileWebApp' => array( '移动网页App' ),
 	'MobileOptions' => array( '移动版选项' ),
 	'Uploads' => array( '上传' ),
 	'MobileDiff' => array( '移动版差异' ),

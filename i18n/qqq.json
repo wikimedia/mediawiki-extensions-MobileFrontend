@@ -107,7 +107,7 @@
     "mobile-frontend-editor-unavailable-header": "When mobile editing is not supported, header of the warning.\n\nFollowed by {{msg-mw|Mobile-frontend-editor-unavailable}}.",
     "mobile-frontend-editor-undo-unsupported": "Shown when user attempts to do an undo which is currently not supported.",
     "mobile-frontend-editor-viewing-source-page": "A heading saying which page's source code is being viewed. All text should be wrapped in a STRONG tag except the page title itself.\n\nParameters:\n* $1 - page title\n{{Related|Mobile-frontend-editor-page}}",
-    "mobile-frontend-editor-visual-editor": "Label for button that switches to the 'visual editor' (a WYSIWYG editing interface). See http://www.mediawiki.org/wiki/VisualEditor.",
+    "mobile-frontend-editor-visual-editor": "Label for button that switches to the \"visual editor\" (a WYSIWYG editing interface). See http://www.mediawiki.org/wiki/VisualEditor.\n{{Identical|VisualEditor}}",
     "mobile-frontend-editor-wait": "Text that displays while a page edit is being saved.",
     "mobile-frontend-enable-images": "Unused at this time.\n\nSee also:\n* {{msg-mw|Mobile-frontend-disable-images}}",
     "mobile-frontend-expand-sections-description": "On settings page description for turning on/off expansion of all sections on page load.\n\nSee also:\n* {{msg-mw|Mobile-frontend-expand-sections-status}}",
