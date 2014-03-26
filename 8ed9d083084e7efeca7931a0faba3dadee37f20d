@@ -16,6 +16,24 @@
       "revId": "8ed9d083084e7efeca7931a0faba3dadee37f20d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_5a5f11e9",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-03-26T14:22:45Z",
+      "side": 1,
+      "message": "Discussion at http://thread.gmane.org/gmane.science.linguistics.wikipedia.technical/76270",
+      "parentUuid": "ee14bf34_01eb4978",
+      "revId": "8ed9d083084e7efeca7931a0faba3dadee37f20d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
