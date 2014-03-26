@@ -644,7 +644,10 @@ class MobileFrontendHooks {
 				'desc-message' => 'beta-feature-geonotahack-description',
 				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Nearby_Pages',
 				'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Nearby_Pages',
-				'screenshot' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/nearby-$dir.svg",
+				'screenshot' => array(
+					'ltr' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/nearby-ltr.svg",
+					'rtl' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/nearby-rtl.svg",
+				),
 			);
 		}
 
@@ -655,7 +658,10 @@ class MobileFrontendHooks {
 				'desc-message' => 'beta-feature-minerva-description',
 				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Minerva',
 				'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Minerva',
-				'screenshot' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva.svg",
+				'screenshot' => array(
+					'ltr' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-ltr.svg",
+					'rtl' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/minerva-rtl.svg",
+				),
 			);
 		}
 
