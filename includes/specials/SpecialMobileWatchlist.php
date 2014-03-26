@@ -54,7 +54,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			return;
 		}
 
-		if ( !$output->getProperty( 'disableSearchAndFooter' ) ) {
+		// Support the old style header in stable
+		// FIXME: Kill when new headers go to stable
+		if ( !$ctx->isBetaGroupMember() ) {
+			$output->setProperty( 'mobile.htmlHeader', $this->getWatchlistHeader() );
+		} else {
 			$output->addHtml( '<div class="content-header">' . $this->getWatchlistHeader() . '</div>' );
 		}
 
@@ -75,12 +79,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->updatePreference( self::VIEW_OPTION_NAME, $view );
 		if ( $this->optionsChanged ) {
 			$user->saveSettings();
-		}
-
-		// Support the old style header in stable
-		// FIXME: Kill when new headers go to stable
-		if ( !$ctx->isBetaGroupMember() ) {
-			$output->setProperty( 'mobile.htmlHeader', $this->getWatchlistHeader() );
 		}
 
 		wfProfileOut( __METHOD__ );
