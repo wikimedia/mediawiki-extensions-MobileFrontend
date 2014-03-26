@@ -11,8 +11,7 @@
 				funnel: funnel,
 				username: user.getName(),
 				isEditable: mw.config.get( 'wgIsPageEditable' ),
-				mobileMode: mw.config.get( 'wgMFMode' ),
-				userAgent: window.navigator.userAgent
+				mobileMode: mw.config.get( 'wgMFMode' )
 			}, data ) );
 		};
 	}
