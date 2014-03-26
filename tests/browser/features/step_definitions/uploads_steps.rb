@@ -41,10 +41,8 @@ Then(/^I can enter a description for my file upload$/) do
   on(ArticlePage).photo_description_element.when_present.should exist
 end
 
-When(/^I click the upload preview overlay close button and confirm$/) do
-  on(ArticlePage).confirm(true) do
-    on(ArticlePage).photo_overlay_close_button_element.click
-  end
+When(/^I click the upload preview overlay close button$/) do
+  on(ArticlePage).photo_overlay_close_button_element.click
 end
 
 Then(/^I don't see the upload preview$/) do

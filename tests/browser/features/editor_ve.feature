@@ -12,7 +12,7 @@ Scenario: Switch from VisualEditor to source editor
     And The VisualEditor overlay has an editor mode switcher button
     And I click the editor mode switcher button
   When I click the source editor button
-  Then I see the wikitext editor
+  Then I see the wikitext editor overlay
 
 Scenario: Ensure we load the correct section
   Given I am on the "Duel Masters" page

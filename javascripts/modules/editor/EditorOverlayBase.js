@@ -61,7 +61,11 @@
 
 			// FIXME: use generic method for following 3 lines
 			M.pageApi.invalidatePage( title );
-			new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
+			new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage ).
+				on( 'error', function() {
+					// Force refresh when something goes wrong (see bug 62175 for example)
+					window.location = mw.util.getUrl( title );
+				} );
 			M.router.navigate( '' );
 
 			if ( this.isNewPage ) {

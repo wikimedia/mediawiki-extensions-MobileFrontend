@@ -3,18 +3,16 @@ Feature: Wikitext Editor (TEST RUN ON WIKIPEDIA.ORG SO SHOULD NOT CAUSE SAVES)
 
   Background:
     Given I am logged into the mobile website
-      And I am on the "Nonexistent_page_ijewrcmhvg34773" page
+      And I am on a page that does not exist
     When I click the edit button
 
   Scenario: Opening editor
-    Then I see the wikitext editor
+    Then I see the wikitext editor overlay
 
   Scenario: Closing editor (overlay button)
-    When I click the editor overlay close button
-    Then I should not see the editor overlay
-      And The URL of the page should contain "Nonexistent_page_ijewrcmhvg34773"
+    When I click the wikitext editor overlay close button
+    Then I should not see the wikitext editor overlay
 
   Scenario: Closing editor (browser button)
     When I click the browser back button
-    Then I should not see the editor overlay
-      And The URL of the page should contain "Nonexistent_page_ijewrcmhvg34773"
+    Then I should not see the wikitext editor overlay
