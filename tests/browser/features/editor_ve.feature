@@ -18,7 +18,6 @@ Scenario: Ensure we load the correct section
   Given I am on the "Duel Masters" page
   When I click the edit button for section 1
   Then I see the VisualEditor overlay
-    And The URL of the page should contain "#/VisualEditor/1"
 
 Scenario: Toolbar VisualEditor
   Given I am on the "Selenium Edit Test" page

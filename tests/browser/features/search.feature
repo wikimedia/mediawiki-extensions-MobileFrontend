@@ -11,12 +11,10 @@ Feature: Search
   Scenario: Closing search (overlay button)
     When I click the search overlay close button
     Then I don't see the search overlay
-      And The URL of the page should contain "Main%20Page"
 
   Scenario: Closing search (browser button)
     When I click the browser back button
     Then I don't see the search overlay
-      And The URL of the page should contain "Main%20Page"
 
   Scenario: Search for partial text
     When I type into search box "bara"

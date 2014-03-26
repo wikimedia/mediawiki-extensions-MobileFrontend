@@ -96,15 +96,6 @@ Given(/^I am on a page that does not exist$/) do
   visit(ArticlePage, :using_params => {:article_name => name})
 end
 
-Then(/^The URL of the page should contain "(.+)"$/) do |article|
-  on(ArticlePage) do |page|
-    page.wait_until do
-      page.current_url.include? article
-    end
-    page.current_url.should match article
-  end
-end
-
 Given(/^I visit a protected page$/) do
   # FIXME: Assumes Barack Obama article is protected
   step 'I am on the "Barack_Obama" page'
