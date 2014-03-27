@@ -668,7 +668,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'wikitext/commons-upload',
-			'overlays/cleanup',
 			// SearchOverlay.js and Nearby.js
 			'articleList',
 			// PhotoUploaderButton.js
@@ -861,6 +860,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.issues' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
+		),
+		'templates' => array(
+			'overlays/cleanup',
 		),
 		'styles' => array(
 			'less/modules/issues.less',
