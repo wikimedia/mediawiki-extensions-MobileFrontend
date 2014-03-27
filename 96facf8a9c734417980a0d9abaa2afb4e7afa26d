@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_ca2c6692",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2014-03-27T18:03:00Z",
+      "side": 1,
+      "message": "I don\u0027t see how $from could not be \u003e\u003d 0, if it\u0027s intval()\u0027d from a substring that cannot contain \"-\" at the beginning because if it did you\u0027d get an empty string which resolves to 0.\n\nIs only the $from \u003c\u003d $sectionCount clause relevant?",
+      "revId": "96facf8a9c734417980a0d9abaa2afb4e7afa26d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
