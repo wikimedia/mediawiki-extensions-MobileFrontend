@@ -44,7 +44,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'fooo
 <div id="mp-itn">bar</div>
 <div id="mf-custom" title="custom">blah</div>',
-				'<div id="mainpage"><h2>In The News</h2><div id="mp-itn">bar</div>'
+				'<div id="mainpage"><h2>In the news</h2><div id="mp-itn">bar</div>'
 					. '<h2>custom</h2><div id="mf-custom">blah</div><br clear="all"></div>',
 				function ( MobileFormatter $mf ) {
 					$mf->setIsMainPage( true );
