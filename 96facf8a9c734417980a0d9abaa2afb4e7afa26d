@@ -16,6 +16,24 @@
       "revId": "96facf8a9c734417980a0d9abaa2afb4e7afa26d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_0ab01e3d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-03-27T18:15:33Z",
+      "side": 1,
+      "message": "Yes, and I knew about it when I wrote the code, however this condition makes it future-proof against possible changes in range handling.",
+      "parentUuid": "ae0e4726_ca2c6692",
+      "revId": "96facf8a9c734417980a0d9abaa2afb4e7afa26d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
