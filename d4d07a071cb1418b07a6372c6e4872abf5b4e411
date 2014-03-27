@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_940695d0",
+        "filename": "tests/browser/features/step_definitions/common_article_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2014-03-27T14:53:57Z",
+      "side": 1,
+      "message": "Trailing whitespace.",
+      "revId": "d4d07a071cb1418b07a6372c6e4872abf5b4e411",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
