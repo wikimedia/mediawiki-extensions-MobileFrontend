@@ -189,6 +189,7 @@ $specialPageAliases['ko'] = array(
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
 	'History' => array( 'Versiounen' ),
+	'MobileWebApp' => array( 'Mobil_Webapplikatioun' ),
 	'MobileOptions' => array( 'Mobil_Optiounen' ),
 	'Uploads' => array( 'Eropgeluede_Fichieren' ),
 	'MobileDiff' => array( 'Mobilen_Ënnerscheed' ),

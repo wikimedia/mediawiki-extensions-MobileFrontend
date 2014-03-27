@@ -7,6 +7,7 @@
         ]
     },
     "beta-feature-geonotahack": "Selle lehekülje lähikond",
+    "beta-feature-geonotahack-description": "Leia leheküljed, mis on geograafiliselt lähedal sisule, mille kohta parasjagu loed.",
     "mobile-frontend-account-create-captcha-placeholder": "Sisesta kinnituskood",
     "mobile-frontend-account-create-email-placeholder": "E-posti aadress (valikuline)",
     "mobile-frontend-account-create-submit": "Registreeru",
