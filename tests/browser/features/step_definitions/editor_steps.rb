@@ -17,7 +17,12 @@ When(/^I click the wikitext editor overlay close button$/) do
 end
 
 Then(/^I should not see the wikitext editor overlay$/) do
-  on(ArticlePage).editor_overlay_element.should_not be_visible
+  on(ArticlePage) do |page|
+    page.wait_until do
+      page.editor_overlay_element.visible? != true
+      end
+    page.editor_overlay_element.should_not be_visible
+  end
 end
 
 When(/^I clear the editor$/) do
