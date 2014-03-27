@@ -94,6 +94,8 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 			array( array( 0, 5, 7 ), array(), '0|references' ),
 			array( array( 1, 2 ), array( 11 ), '1|1|2|1|11|2|1' ),
 			array( array( 1, 3, 4, 5 ), array(), '1|3-5|4' ),
+			array( array( 10 ), array(), '10-' ),
+			array( array(), array( '20-' ), '20-' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=61868
 		);
 	}
 

@@ -223,6 +223,16 @@ class ApiMobileView extends ApiBase {
 		return trim( $html );
 	}
 
+	/**
+	 * Parses requested sections string into a list of sections
+	 *
+	 * @param string $str: String to parse
+	 * @param array $data: Processed parser output
+	 * @param array $missingSections: Upon return, contains the list of sections that were
+	 *                                requested but are not present in parser output
+	 *
+	 * @return array
+	 */
 	public static function parseSections( $str, $data, &$missingSections ) {
 		$str = trim( $str );
 		$sectionCount = count( $data['sections'] );
@@ -249,7 +259,7 @@ class ApiMobileView extends ApiBase {
 				$parts = explode( '-', $sec );
 				if ( count( $parts ) === 2 ) {
 					$from = intval( $parts[0] );
-					if ( strval( $from ) === $parts[0] ) {
+					if ( strval( $from ) === $parts[0] && $from >= 0 && $from <= $sectionCount ) {
 						if ( $parts[1] === '' ) {
 							$ret = array_merge( $ret, range( $from, $sectionCount ) );
 							continue;
