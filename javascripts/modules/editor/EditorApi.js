@@ -186,12 +186,7 @@
 
 			this.post( options ).done( function( resp ) {
 				if ( resp && resp.parse && resp.parse.text ) {
-					// FIXME: hacky
-					var $tmp = $( '<div>' ).html( resp.parse.text['*'] );
-					// remove heading from the parsed output
-					$tmp.find( 'h1, h2' ).eq( 0 ).remove();
-
-					result.resolve( $tmp.html() );
+					result.resolve( resp.parse.text['*'] );
 				} else {
 					result.reject();
 				}
