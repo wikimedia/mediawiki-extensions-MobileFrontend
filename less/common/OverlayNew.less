@@ -203,13 +203,15 @@
 		padding: @headerMargin @headerMargin 0;
 		.box-sizing(border-box);
 		background: #fff;
-		// FIXME: After this has been deployed for a while, remove the 'position-fixed'
-		// class from OverlayNew.html.
-		position: fixed;
+		// needed for _fixIosHeader method to work properly
+		position: absolute;
 		top: 0;
 		// make header reappearing less abrupt when scrolling on iOS with open
 		// keyboard
 		opacity: 0;
+		// prevent .page-list overlaping the header when scrolling
+		// needed for _fixIosHeader method to work properly
+		z-index: 5;
 
 		&.visible {
 			opacity: 1;
@@ -223,8 +225,6 @@
 			// (for unknown reasons left: 0 is mandatory in Android 2 for the
 			// element to be visible, right: 0 doesn't work)
 			right: 0;
-			// prevent .page-list overlaping the header when scrolling
-			z-index: 5;
 		}
 
 		// FIXME: Combine with .overlay-header above.
