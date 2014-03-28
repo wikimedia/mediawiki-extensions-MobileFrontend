@@ -40,7 +40,6 @@
     "mobile-frontend-editor-editing-page": "\u003Cstrong\u003EУређујете страницу\u003C/strong\u003E \u003Cspan\u003E $1\u003C/span\u003E",
     "mobile-frontend-editor-error": "Грешка, измена није сачувана.",
     "mobile-frontend-editor-keep-editing": "Настави уређивање",
-    "mobile-frontend-editor-license": "Кликом на дугме „Сачувај“ слажете се са [//wikimediafoundation.org/wiki/Terms_of_use Условима коришћења] и слажете се да објавите свој текст под лиценценцама [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0] и [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].",
     "mobile-frontend-editor-previewing-page": "\u003Cstrong\u003EПретпреглед\u003C/strong\u003E \u003Cspan\u003E $1\u003C/span\u003E",
     "mobile-frontend-editor-save": "Сачувај",
     "mobile-frontend-editor-success": "Ваша измена је сачувана!",

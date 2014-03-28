@@ -301,6 +301,7 @@ $specialPageAliases['zh-hans'] = array(
 /** Traditional Chinese (中文（繁體）‎) */
 $specialPageAliases['zh-hant'] = array(
 	'History' => array( '歷史' ),
+	'MobileWebApp' => array( '移動線上App' ),
 	'MobileOptions' => array( '移動版選項' ),
 	'Uploads' => array( '上載' ),
 	'MobileDiff' => array( '移動版差異' ),

@@ -57,7 +57,6 @@
     "mobile-frontend-editor-error-conflict": "Қате, бұл бетті басқа қатысушы өңдеген.",
     "mobile-frontend-editor-error-loading": "Қатеғ бөлім жүктелмеді.",
     "mobile-frontend-editor-keep-editing": "Өңдемені жалғастыру",
-    "mobile-frontend-editor-license": "Өзгертулерді сақтағаныңыз, біздің [//wikimediafoundation.org/wiki/Terms_of_use қолдану шарттарымен] және  [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 лицензиясы] және [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] аясында мәтініңізді жариялағаныңызға келіскеніңіз болып табылады.",
     "mobile-frontend-editor-new-page-confirm": "{{SITENAME}} сайтында жаңа бет {{GENDER:$1|бастағыңыз келе ме}}?",
     "mobile-frontend-editor-placeholder": "Бұл бөлім бос. Жетілдіру үшін бірінші болыңыз!",
     "mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} сайтында жаңа бет {{GENDER:$1|бастаудасыз}}!",
