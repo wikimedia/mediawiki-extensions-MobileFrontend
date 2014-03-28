@@ -192,33 +192,34 @@ class SkinMinerva extends SkinTemplate {
 	 * @param $tpl BaseTemplate
 	 */
 	protected function prepareUserButton( BaseTemplate $tpl ) {
+		// Set user button to empty string by default
+		$tpl->set( 'secondaryButton', '' );
+
 		$user = $this->getUser();
-		$currentTitle = $this->getTitle();
-		$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
 		// If Echo is available, the user is logged in, and they are not already on the
 		// notifications archive, show the notifications icon in the header.
-		if ( class_exists( 'MWEchoNotifUser' ) && $user->isLoggedIn()
-			&& $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText()
-		) {
-			// FIXME: cap higher counts
-			$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
+		if ( class_exists( 'MWEchoNotifUser' ) && $user->isLoggedIn() ) {
+			$currentTitle = $this->getTitle();
+			$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
+			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
+				// FIXME: cap higher counts
+				$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
 
-			$tpl->set( 'secondaryButton',
-				Html::openElement( 'a', array(
-					'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
-					'href' => $notificationsTitle->getLocalURL(
-						array( 'returnto' => $currentTitle->getPrefixedText() ) ),
-					'class' => 'user-button',
-					'id'=> 'secondary-button',
-				) ) .
-				Html::element(
-					'span',
-					array( 'class' => $count ? '' : 'zero' ),
-					$this->getLanguage()->formatNum( $count ) ) .
-				Html::closeElement( 'a' )
-			);
-		} else {
-			$tpl->set( 'secondaryButton', '' );
+				$tpl->set( 'secondaryButton',
+					Html::openElement( 'a', array(
+						'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
+						'href' => $notificationsTitle->getLocalURL(
+							array( 'returnto' => $currentTitle->getPrefixedText() ) ),
+						'class' => 'user-button',
+						'id'=> 'secondary-button',
+					) ) .
+					Html::element(
+						'span',
+						array( 'class' => $count ? '' : 'zero' ),
+						$this->getLanguage()->formatNum( $count ) ) .
+					Html::closeElement( 'a' )
+				);
+			}
 		}
 	}
 
