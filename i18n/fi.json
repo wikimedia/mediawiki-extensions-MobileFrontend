@@ -15,7 +15,7 @@
             "VezonThunder"
         ]
     },
-    "abusefilter-edit-builder-vars-user-mobile": "Riippumatta siitä muokkaako käyttäjä mobiilikäyttöliittymän kautta",
+    "abusefilter-edit-builder-vars-user-mobile": "Muokkaako käyttäjä mobiilikäyttöliittymän kautta",
     "beta-feature-geonotahack": "Lähellä tätä sivua",
     "beta-feature-geonotahack-description": "Tutustu sivuihin, jotka ovat maantieteellisesti lähellä sitä sivua, jota parhaillaan olet lukemassa.",
     "beta-feature-minerva": "Ota käyttöön mobiiliulkoasu (Minerva) työpöytäkäyttöliittymässä",
@@ -40,7 +40,7 @@
     "mobile-frontend-donate-image-anon": "Sinulla täytyy olla $1, jotta voisit nähdä tallennussivun.",
     "mobile-frontend-donate-image-heading": "Uusimmat muokkauksesi",
     "mobile-frontend-donate-image-login": "Sivustolla {{SITENAME}} oleva media on käyttäjien, kuten sinun lahjoittama.",
-    "mobile-frontend-donate-image-login-action": "Kirjaudu sisään jakaaksesi mediasi.",
+    "mobile-frontend-donate-image-login-action": "Voit jakaa mediaa sisäänkirjautumisen jälkeen.",
     "mobile-frontend-donate-image-nouploads": "Ei tallennettuja tiedostoja.",
     "mobile-frontend-donate-image-title": "Tallennukset",
     "mobile-frontend-drawer-cancel": "Peruuta",
@@ -141,7 +141,6 @@
     "mobile-frontend-password-placeholder": "Salasana",
     "mobile-frontend-photo-article-edit-comment": "Lisäsi kuvan sivulla käytettäväksi",
     "mobile-frontend-photo-caption-placeholder": "Lisää kuvaus tähän kuvaan (vaaditaan)",
-    "mobile-frontend-photo-license": "Kaikki kuvasi julkaistaan [//fi.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot CC-BY-SA 3.0 -lisenssillä].",
     "mobile-frontend-photo-ownership": "Minä, $1, tein tämän kuvan.",
     "mobile-frontend-photo-ownership-help": "Mitä tämä tarkoittaa?",
     "mobile-frontend-photo-submit": "Lähetä",
