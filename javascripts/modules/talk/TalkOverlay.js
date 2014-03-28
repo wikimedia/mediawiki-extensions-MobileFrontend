@@ -25,21 +25,20 @@
 
 				// FIXME: use Page's mechanisms for retrieving page data instead
 				M.pageApi.getPage( options.title ).fail( function( resp ) {
-					var code;
-					if ( resp.error ) {
-						code = resp.error.code;
-						if ( code === 'missingtitle' ) {
-							// Create an empty page for new pages
-							options.page = new Page( { title: options.title, sections: [] } );
-							_super.call( self, options );
-							self.show();
-						// FIXME: [LQT] remove when liquid threads is dead (see Bug 51586)
-						} else if ( code === 'lqt' ) {
-							// Force a visit to the page
-							window.location = mw.util.getUrl( options.title );
-						}
+					// If the API returns the error code 'missingtitle', that means the
+					// talk page doesn't exist yet.
+					if ( resp.error.code !== undefined && resp.error.code === 'missingtitle' ) {
+						// Create an empty page for new pages
+						options.page = new Page( { title: options.title, sections: [] } );
+						_super.call( self, options );
+						self.show();
+					} else {
+						// If the API request fails for any other reason, load the talk
+						// page manually rather than leaving the spinner spinning.
+						window.location = mw.util.getUrl( options.title );
 					}
 				} ).done( function( pageData ) {
+					// API request was successful so show the overlay with the talk page content
 					options.page = new Page( pageData );
 					_super.call( self, options );
 					self.show();
