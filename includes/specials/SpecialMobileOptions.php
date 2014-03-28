@@ -207,7 +207,10 @@ HTML;
 
 		if ( $request->getVal( 'token' ) != $context->getMobileToken() ) {
 			wfIncrStats( 'mobile.options.errors' );
-			wfDebugLog( 'mobile', __METHOD__ . "(): token mismatch" );
+			wfDebugLog( 'mobile', __METHOD__ . "(): token mismatch, "
+				. "received {$request->getVal( 'token' )} - expected "
+				. $context->getMobileToken()
+			);
 			$this->getOutput()->addHTML( '<div class="error">'
 				. $this->msg( "mobile-frontend-save-error" )->parse()
 				. '</div>'
