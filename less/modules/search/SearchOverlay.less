@@ -4,7 +4,8 @@
 .search-overlay {
 	background: rgba(255, 255, 255, .8);
 
-	.overlay-header, .results {
+	.overlay-header,
+	.results {
 		// don't use background to preserve .loading properties
 		background-color: #fff;
 	}
@@ -20,13 +21,19 @@
 		button {
 			background-image: url(../images/searchContent.png);
 		}
+
+		.caption {
+			padding: 0 @headerTitleMarginH;
+		}
 	}
 
 	.results {
-		box-shadow: 0 1px 5px 0 rgba(117, 117, 117, .5);
-
 		li {
 			padding-left: @headerHeight + @headerTitleMarginH;
+		}
+
+		li:last-child {
+			border-bottom: none;
 		}
 
 		.listThumb {
@@ -39,5 +46,9 @@
 		h2 {
 			font: inherit;
 		}
+	}
+
+	.search-overlay-contents {
+		box-shadow: 0 1px 5px 0 rgba(117, 117, 117, .5);
 	}
 }
