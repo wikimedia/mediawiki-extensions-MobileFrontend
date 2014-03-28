@@ -48,9 +48,13 @@ class MinervaTemplate extends BaseTemplate {
 			?>
 				<ul class="footer-<?php echo $category; ?>">
 					<?php
-						// @codingStandardsIgnoreStart Long line Siebrand has no clue how to break up correctly.
-						foreach( $links as $link ): if ( isset( $this->data[$link] ) ): ?><li><?php $this->html( $link ) ?></li><?php endif; endforeach;
-						// @codingStandardsIgnoreEnd
+						foreach( $links as $link ) {
+							if ( isset( $this->data[$link] ) ) {
+								echo Html::openElement( 'li', array( 'id' => "footer-{$category}-{$link}" ) );
+								$this->html( $link );
+								echo Html::closeElement( 'li' );
+							}
+						}
 					?>
 				</ul>
 			<?php
