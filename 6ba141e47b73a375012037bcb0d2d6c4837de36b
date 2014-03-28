@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_9e05877f",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-28T17:54:38Z",
+      "side": 0,
+      "message": "Removing this makes the toasts cover the menu. Steps to reproduce: watch/unwatch a page and open the menu. Since menu is not scrollable, there\u0027s no way to make the toast disappear either.",
+      "revId": "6ba141e47b73a375012037bcb0d2d6c4837de36b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
