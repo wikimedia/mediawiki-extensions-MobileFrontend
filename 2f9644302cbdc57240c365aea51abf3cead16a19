@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_81e64712",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-29T00:26:48Z",
+      "side": 1,
+      "message": "I\u0027m not sure about 1/3 if the work on other patches has not started yet. What if it ends up being 1/10? ;)",
+      "revId": "2f9644302cbdc57240c365aea51abf3cead16a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_8159a703",
+        "filename": "javascripts/common/navigation.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-29T00:26:48Z",
+      "side": 1,
+      "message": "How is this \"header\"? Should be \"navigation\", right?",
+      "revId": "2f9644302cbdc57240c365aea51abf3cead16a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_e1286334",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-29T00:26:48Z",
+      "side": 1,
+      "message": "What is vertical-drawer-overlay?",
+      "revId": "2f9644302cbdc57240c365aea51abf3cead16a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_61f573c7",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-29T00:26:48Z",
+      "side": 1,
+      "message": "!",
+      "revId": "2f9644302cbdc57240c365aea51abf3cead16a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_a1e14bfd",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-29T00:26:48Z",
+      "side": 1,
+      "message": "Did you ask designers about this?",
+      "revId": "2f9644302cbdc57240c365aea51abf3cead16a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
