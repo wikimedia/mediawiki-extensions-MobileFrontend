@@ -43,7 +43,7 @@
     "mobile-frontend-overlay-continue": "פֿארזעצן",
     "mobile-frontend-page-menu-contents": "אינהאַלט",
     "mobile-frontend-page-menu-history": "היסטאריע",
-    "mobile-frontend-page-saving": "\u003Cstrong\u003Eאויפֿהיטן\u003Cstrong\u003E \u003Cspan\u003E$1\u003C/span\u003E",
+    "mobile-frontend-page-saving": "<strong>אויפֿהיטן<strong> <span>$1</span>",
     "mobile-frontend-password": "פאסווארט:",
     "mobile-frontend-photo-caption-placeholder": "באשרייבן דאס בילד (באדארפט)",
     "mobile-frontend-photo-upload-error": "פֿעלער, פרובירט נאכאמאל.",

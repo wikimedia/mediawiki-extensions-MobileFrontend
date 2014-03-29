@@ -11,7 +11,7 @@
     "mobile-frontend-account-create-submit": "Magpatala",
     "mobile-frontend-back-to-top-of-section": "Tumalong Pabalik Ng Isang Seksyon",
     "mobile-frontend-clear-search": "Hawiin",
-    "mobile-frontend-copyright": "Makukuha ang teksto sa ilalim ng Lisensyang \u003Ca href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'\u003ECreative Commons Attribution/Share-Alike\u003C/a\u003E; maaaring ginagamitan ng karagdagang mga termino. Tingnan \u003Ca href='http://wikimediafoundation.org/wiki/Terms_of_Use'\u003EMga Termino ng Paggamit\u003C/a\u003E para sa mga detalye.\tAng {{SITENAME}} ay isang rehistradong tatak ng \u003Ca href='http://www.wikimediafoundation.org/'\u003EWikimedia Foundation, Inc.\u003C/a\u003E, isang hindi kumikinabang na organisasyon.",
+    "mobile-frontend-copyright": "Makukuha ang teksto sa ilalim ng Lisensyang <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; maaaring ginagamitan ng karagdagang mga termino. Tingnan <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Mga Termino ng Paggamit</a> para sa mga detalye.\tAng {{SITENAME}} ay isang rehistradong tatak ng <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, isang hindi kumikinabang na organisasyon.",
     "mobile-frontend-desc": "Frontend ng Mobile",
     "mobile-frontend-disable-images": "Huwag paganahin ang mga larawan sa sityong pantelepono",
     "mobile-frontend-dismiss-notification": "iwaksi ang pagpapabatid na ito",
