@@ -107,6 +107,8 @@
 		h2 {
 			display: table;
 			width: 100%;
+			// FIXME: should not be necessary, scope other h2s to .content
+			font-size: @headerTitleFontSize;
 
 			> * {
 				width: 1em;
@@ -137,11 +139,6 @@
 			li {
 				display: inline-block;
 			}
-		}
-
-		h2 {
-			// FIXME: should not be necessary, scope other h2s to .content
-			font-size: @headerTitleFontSize;
 		}
 
 		> ul, button {
