@@ -16,6 +16,24 @@
       "revId": "950877036140e9d59f59fc2698e096a3c2c57c35",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_818be71f",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-29T00:56:50Z",
+      "side": 1,
+      "message": "Hmm, for some reason I thought it was missing. Maybe I was looking at a different overlay :P",
+      "parentUuid": "ae0e4726_41e82fdd",
+      "revId": "950877036140e9d59f59fc2698e096a3c2c57c35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
