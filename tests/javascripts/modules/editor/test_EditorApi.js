@@ -370,7 +370,7 @@
 		editorApi.getPreview( { text: "test content" } ).done( doneSpy );
 
 		assert.ok( editorApi.post.calledWithMatch( { text: "test content" } ) );
-		assert.ok( doneSpy.calledWith( '<h2>Heading 2</h2><p>test content</p>' ) );
+		assert.ok( doneSpy.calledWith( '<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>' ) );
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
