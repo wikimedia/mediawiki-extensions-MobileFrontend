@@ -7,6 +7,9 @@
 			getPageImages: function( titles ) {
 				var result = $.Deferred();
 				this.abort();
+				if ( !titles.length ) {
+					return result.resolve( [] );
+				}
 				this.get( {
 					action: 'query',
 					prop: 'pageimages',
