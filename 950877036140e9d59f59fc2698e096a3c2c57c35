@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_41e82fdd",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-29T00:30:09Z",
+      "side": 1,
+      "message": "The label is there for me. Defaults have been inherited from a parent class for a while now (and OverlayNew has closeMsg).",
+      "revId": "950877036140e9d59f59fc2698e096a3c2c57c35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
