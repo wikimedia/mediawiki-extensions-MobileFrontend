@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_c11c2d6d",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-03-31T22:27:56Z",
+      "side": 1,
+      "message": "Why don\u0027t we reuse styling from left menu instead?\nbox-shadow: -5px 0 0 0 rgba(0,0,0,0.1)",
+      "revId": "7d1da51115973e58ec163dc061c0ec67d73bbff4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
