@@ -161,6 +161,8 @@ body.navigation-enabled {
 		background: #fff;
 		position: absolute;
 		height: 100%;
+		// Overriden in mainmenuAnimation
+		left: @menuWidth;
 		// set border here (#mw-mf-page-left doesn't expand height)
 		border-left: solid 1px #000;
 		box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.1);
@@ -171,41 +173,7 @@ body.navigation-enabled {
 		display: block;
 	}
 
-	.position-fixed,
-	#mw-mf-page-center {
+	.position-fixed {
 		left: @menuWidth !important;
 	}
 }
-
-// navigation enabled on bigger screens (tablets and desktop)
-@media (min-width: @wgMFDeviceWidthTablet) {
-	body.navigation-enabled.alpha,
-	body.navigation-enabled.beta {
-
-		background: #fff;
-
-		#mw-mf-page-center {
-			// override position: absolute from the general .navigation-enabled rule
-			// so that the main content is not clipped
-			position: relative;
-			width: 80%;
-		}
-
-		#mw-mf-page-left {
-			position: absolute;
-			width: 20%;
-		}
-
-		.position-fixed,
-		#mw-mf-page-center {
-			left: 20% !important;
-		}
-
-		#mw-mf-diffview {
-			#mw-mf-userinfo {
-				width: 80%;
-			}
-		}
-	}
-}
-

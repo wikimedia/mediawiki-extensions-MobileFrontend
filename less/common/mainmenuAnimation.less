@@ -53,10 +53,10 @@
 }
 
 #mw-mf-page-center {
-        min-height: 100%;
-        // We need to ensure the content has a white background - otherwise it will
-        // overlap the menu during the main menu reveal/hide animation
-        background-color: #fff;
+	min-height: 100%;
+	// We need to ensure the content has a white background - otherwise it will
+	// overlap the menu during the main menu reveal/hide animation
+	background-color: #fff;
 }
 
 .navigation-enabled {
@@ -64,34 +64,5 @@
 		// make menu scrollable when open (on small screens)
 		position: static;
 		visibility: visible;
-	}
-}
-
-// don't use translate3d for tablets as it may introduce slight blur and
-// we can't use % in it
-@media (min-width: @wgMFDeviceWidthTablet) {
-	#mw-mf-page-left {
-                width: 20%;
-        }
-
-	.animations {
-		.alpha,
-		.beta {
-			#mw-mf-page-center {
-				.transition(width @duration, left @duration, height 0s (@duration*2););
-			}
-		}
-
-		.navigation-enabled.alpha,
-		.navigation-enabled.alpha.rtl,
-		.navigation-enabled.beta,
-		.navigation-enabled.beta.rtl {
-			#mw-mf-page-center {
-				.transition(width @duration, left @duration;);
-				.transform(none);
-				left: 20% !important;
-				position: absolute;
-			}
-		}
 	}
 }
