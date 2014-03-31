@@ -16,6 +16,24 @@
       "revId": "0cd0d961f2f10be05b97d1534e4db14bee5bb323",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_f5492f6b",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-03-31T17:22:44Z",
+      "side": 1,
+      "message": "Checking in this function makes sure that no bogus request will be made no matter what the caller is. Fixing just one caller doesn\u0027t give such assurances.",
+      "parentUuid": "ae0e4726_75363fe6",
+      "revId": "0cd0d961f2f10be05b97d1534e4db14bee5bb323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
