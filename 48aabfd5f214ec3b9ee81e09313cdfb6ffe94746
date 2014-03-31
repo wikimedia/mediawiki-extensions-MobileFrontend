@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_c1b8ade4",
+        "filename": "tests/browser/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-03-31T23:13:25Z",
+      "side": 1,
+      "message": "arg1 should be article instead",
+      "revId": "48aabfd5f214ec3b9ee81e09313cdfb6ffe94746",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
