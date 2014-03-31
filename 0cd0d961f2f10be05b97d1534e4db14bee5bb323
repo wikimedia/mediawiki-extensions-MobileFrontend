@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_75363fe6",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-03-31T17:20:35Z",
+      "side": 1,
+      "message": "we probably want to resolve this.\ne.g. return result.resolve( [] );\n\nAlternatively and probably a better thing to do is exit earlier up the stack in renderPageImages to stop the call altogether.",
+      "revId": "0cd0d961f2f10be05b97d1534e4db14bee5bb323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
