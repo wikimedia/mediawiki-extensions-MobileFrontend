@@ -33,6 +33,20 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			Html::closeElement( 'div' )
 		);
 	}
+
+	/**
+	 * Saves a user preference that reflects the current state of the watchlist
+	 * e.g. whether it is the feed or A-Z view and which filters are currently applied.
+	 */
+	protected function updateStickyTabs() {
+		if ( $this->view === 'feed' ) {
+			// make filter stick on feed view
+			$this->updatePreference( self::FILTER_OPTION_NAME, $this->filter );
+		}
+		// make view sticky
+		$this->updatePreference( self::VIEW_OPTION_NAME, $this->view );
+	}
+
 	function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$ctx = MobileContext::singleton();
@@ -42,7 +56,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output = $this->getOutput();
 		$output->addModules( 'skins.minerva.special.watchlist.scripts' );
 		$req = $this->getRequest();
-		$view = $req->getVal( 'watchlistview', 'a-z' );
+		$this->view = $req->getVal( 'watchlistview', 'a-z' );
+		$this->filter = $req->getVal( 'filter', 'all' );
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
@@ -54,6 +69,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			return;
 		}
 
+		// This needs to be done before calling getWatchlistHeader
+		$this->updateStickyTabs();
+
 		// Support the old style header in stable
 		// FIXME: Kill when new headers go to stable
 		if ( !$ctx->isBetaGroupMember() ) {
@@ -62,21 +80,16 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			$output->addHtml( '<div class="content-header">' . $this->getWatchlistHeader() . '</div>' );
 		}
 
-		if ( $view === 'feed' ) {
-			$this->filter = $this->getRequest()->getVal( 'filter', 'all' );
+		if ( $this->view === 'feed' ) {
 			$this->showRecentChangesHeader();
 			$res = $this->doFeedQuery();
 			$this->showFeedResults( $res );
-			// make filter stick on feed view
-			$this->updatePreference( self::FILTER_OPTION_NAME, $this->filter );
 		} else {
 			$this->filter = $this->getRequest()->getVal( 'filter', 'articles' );
 			$res = $this->doListQuery();
 			$this->showListResults( $res );
 		}
 
-		// make view sticky
-		$this->updatePreference( self::VIEW_OPTION_NAME, $view );
 		if ( $this->optionsChanged ) {
 			$user->saveSettings();
 		}
