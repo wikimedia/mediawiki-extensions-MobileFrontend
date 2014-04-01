@@ -16,6 +16,24 @@
       "revId": "7d1da51115973e58ec163dc061c0ec67d73bbff4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_e1c85127",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-01T00:09:52Z",
+      "side": 1,
+      "message": "Because this doesn\u0027t make sense in this context.. the reason the box shadow / border thing works is because the left nav has a grey background. The right one doesn\u0027t.\n\nAlso this is how it looks like on the mock which is different.\nhttps://wikimedia.mingle.thoughtworks.com/projects/mobile/attachments/11023",
+      "parentUuid": "ae0e4726_c11c2d6d",
+      "revId": "7d1da51115973e58ec163dc061c0ec67d73bbff4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
