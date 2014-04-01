@@ -73,22 +73,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	// @todo FIXME: Kill module when no longer in cache.
-	'mobile.styles' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/common/reset.less',
-			'less/common/common.less',
-			'less/common/buttons.less',
-			'less/common/ui.less',
-			'less/common/typography.less',
-			'less/common/footer.less',
-			'less/modules/toggle.less',
-			'less/common/hacks.less',
-			'less/common/pageactions.less',
-		),
-		'position' => 'top',
-	),
-
 	'tablet.styles' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'styles' => array(
@@ -145,6 +129,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/common/common.less',
 			'less/common/typography.less',
 			'less/modules/toggle.less',
+			'less/common/hacks.less',
 		),
 		'position' => 'top',
 	),
