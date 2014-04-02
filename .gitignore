@@ -3,6 +3,8 @@
 *.kate-swp
 .*.swp
 .idea/
+/composer.phar
+/vendor/
 node_modules/
 tmp/
 docs/
