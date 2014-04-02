@@ -217,7 +217,7 @@
     "mobile-frontend-page-menu-contents": "table of contents link text in secondary menu.\n{{Identical|Content}}",
     "mobile-frontend-page-menu-history": "history link text in secondary menu.\n{{Identical|History}}",
     "mobile-frontend-page-menu-language-current": "the text of the language link text in secondary menu which when clicked allows the user to change the content language of a page\n\n{{optional}}",
-    "mobile-frontend-page-saving": "A heading saying what page will be saved after editing. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).\n\nParameters:\n* $1 - page title",
+    "mobile-frontend-page-saving": "A heading saying what page will be saved after editing. No part of the text should be outside &lt;span> and &lt;strong> tags (&lt;span> can contain text other than page title).\n\nParameters:\n* $1 - page title\n{{Identical|Saving}}",
     "mobile-frontend-password": "Field label for entry of password in Wikimedia mobile user interface.\n{{Identical|Password}}",
     "mobile-frontend-password-confirm-placeholder": "Placeholder for confirm password field.\n{{Identical|Confirm password}}",
     "mobile-frontend-password-placeholder": "placeholder text for password input box.\n{{Identical|Password}}",
