@@ -152,18 +152,30 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	function showDiff() {
 		$ctx = MobileContext::singleton();
-		if ( $this->prevRev ) {
-			$prevId = $this->prevRev->getId();
-			$contentHandler = $this->rev->getContentHandler();
-			$de = $contentHandler->createDifferenceEngine( $this->getContext(), $prevId, $this->revId );
-			// HACK:
-			if ( get_class( $de ) == 'DifferenceEngine' ) {
-				$de = new InlineDifferenceEngine( $this->getContext(), $prevId, $this->revId );
-			}
-			$diff = $de->getDiffBody();
-		} else {
-			$diff = '<ins>' . htmlspecialchars( $this->rev->getText() ) . '</ins>';
+
+		$prevId = $this->prevRev ? $this->prevRev->getId() : 0;
+		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
+		$contentHandler = $this->rev->getContentHandler();
+		$de = $contentHandler->createDifferenceEngine( $this->getContext(), $prevId, $this->revId );
+		// HACK:
+		if ( get_class( $de ) == 'DifferenceEngine' ) {
+			$de = new InlineDifferenceEngine(
+				$this->getContext(),
+				$prevId,
+				$this->revId,
+				0,
+				false,
+				$unhide
+			);
 		}
+		$diff = $de->getDiffBody();
+		if ( !$prevId ) {
+			$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
+			$diff = '<ins>'
+				. nl2br( htmlspecialchars( $this->rev->getText( $audience ) ) )
+				. '</ins>';
+		}
+
 		$warnings = $de->getWarningMessageText();
 		if ( $warnings ) {
 			$warnings = Html::openElement( 'div',
