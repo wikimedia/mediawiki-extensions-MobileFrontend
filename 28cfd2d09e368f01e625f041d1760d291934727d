@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_8806431f",
+        "filename": "tests/browser/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-02T17:24:17Z",
+      "side": 1,
+      "message": "Why sub? useformat\u003dform is unnecessary and this approach seems hackier then the more generic query string approach I suggest in the page object as part of https://gerrit.wikimedia.org/r/#/c/120938/2/tests/browser/features/step_definitions/watchlist_steps.rb.",
+      "revId": "28cfd2d09e368f01e625f041d1760d291934727d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
