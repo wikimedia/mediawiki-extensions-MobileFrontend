@@ -169,7 +169,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
 		'scripts' => array(
-			'javascripts/common/polyfills.js',
 			'javascripts/common/modules.js',
 			'javascripts/common/Class.js',
 			'javascripts/common/eventemitter.js',
