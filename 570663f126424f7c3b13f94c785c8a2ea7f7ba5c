@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_a52c9246",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-02T16:56:19Z",
+      "side": 1,
+      "message": "I think this input field should be in the template itself - I think hiding it in JavaScript makes it prone to difficulty. Appending here should not be necessary... Also I wonder if we should have a browser test for this...",
+      "revId": "570663f126424f7c3b13f94c785c8a2ea7f7ba5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
