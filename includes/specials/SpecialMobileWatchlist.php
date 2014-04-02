@@ -397,12 +397,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output = $this->getOutput();
 		$dir = $this->getLanguage()->isRTL() ? 'rtl' : 'ltr';
 
-		// FIXME: This is necessary until new nav pushed to beta
-		if ( MobileContext::singleton()->isBetaGroupMember() ) {
-			$imgUrl = $wgExtensionAssetsPath . "/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
-		} else {
-			$imgUrl = $wgExtensionAssetsPath . "/MobileFrontend/images/emptywatchlist-$dir.png";
-		}
+		$imgUrl = $wgExtensionAssetsPath . "/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
+
 		if ( $feed ) {
 			$msg = Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-feed-empty' )->plain() );
 		} else {
