@@ -228,8 +228,9 @@ class MinervaTemplate extends BaseTemplate {
 							<form action="<?php echo $data['wgScript'] ?>" class="search-box">
 							<?php
 							echo $this->makeSearchInput( $data['searchBox'] );
+							// FIXME: change this into a search icon instead of a text button
 							echo $this->makeSearchButton(
-								'go',
+								'fulltext',
 								array( 'class' => 'searchSubmit mw-ui-button mw-ui-progressive' )
 							);
 							?>
