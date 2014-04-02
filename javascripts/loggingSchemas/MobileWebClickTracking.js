@@ -47,7 +47,13 @@
 
 	// Add EventLogging to hamburger menu
 	$( function() {
+		var $profileLink;
 		if ( !M.isApp() ) {
+			$profileLink = $( '#mw-mf-last-modified a' ).
+				filter( function(){
+					return $( this ).children().length === 0;
+				} );
+
 			hijackLink( '#mw-mf-page-left .icon-home a', 'hamburger-home' );
 			hijackLink( '#mw-mf-page-left .icon-random a', 'hamburger-random' );
 			hijackLink( '#mw-mf-page-left .icon-nearby a', 'hamburger-nearby' );
@@ -57,6 +63,8 @@
 			hijackLink( '#mw-mf-page-left .icon-profile', 'hamburger-profile' );
 			hijackLink( '#mw-mf-page-left .icon-anon a', 'hamburger-login' );
 			hijackLink( '#mw-mf-page-left .icon-secondary-logout', 'hamburger-logout' );
+			hijackLink( $( '#mw-mf-last-modified a span' ).parent(), 'lastmodified-history' );
+			hijackLink( $profileLink, 'lastmodified-profile' );
 		}
 	} );
 } )( mw.mobileFrontend, jQuery );
