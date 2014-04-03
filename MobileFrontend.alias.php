@@ -257,6 +257,15 @@ $specialPageAliases['scn'] = array(
 	'MobileOptions' => array( 'OpzioniMobile' ),
 );
 
+/** Serbian (Cyrillic script) (српски (ћирилица)‎) */
+$specialPageAliases['sr-ec'] = array(
+	'History' => array( 'Историја' ),
+	'MobileOptions' => array( 'МобилнаПодешавања' ),
+	'Uploads' => array( 'Отпремања' ),
+	'MobileMenu' => array( 'МобилниМени' ),
+	'UserProfile' => array( 'КорисничкиПрофил' ),
+);
+
 /** Swedish (svenska) */
 $specialPageAliases['sv'] = array(
 	'Nearby' => array( 'Nära' ),
