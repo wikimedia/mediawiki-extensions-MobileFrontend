@@ -72,6 +72,11 @@ class SkinMinervaBeta extends SkinMinerva {
 		if ( $title->isSpecialPage() ) {
 			$styles['special'] = 'skins.minerva.special.styles';
 		}
+
+		$key = array_search( 'skins.minerva.buttons.styles', $styles );
+		unset( $styles[$key] );
+		$styles[] = 'mediawiki.ui.button';
+
 		return $styles;
 	}
 

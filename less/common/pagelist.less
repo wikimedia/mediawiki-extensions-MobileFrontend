@@ -1,13 +1,21 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-
+@itemPaddingV: 20px;
 @thumbGap: 15px;
 @thumbWidth: 70px;
 @thumbSpace: @thumbWidth + @thumbGap;
 @thumbOverlayWidth: @searchBarPaddingLeft;
 @thumbOverlaySpace: @thumbOverlayWidth + @thumbGap;
 
+
+.list-header {
+	font-weight: bold;
+	font-size: .85em;
+	padding: .5em @contentMargin .4em;
+	background-color: @grayLightest;
+	color: @grayMedium;
+}
 
 .listThumb {
 	background-repeat: no-repeat;
@@ -53,7 +61,7 @@
 		color: #666;
 		position: relative;
 		border-bottom: solid 1px @grayLightest;
-		padding: 18px @contentMargin;
+		padding: @itemPaddingV @contentMargin;
 		// avoid the gap between thumbnails
 		margin: -1px 0 0;
 		line-height: 1;
@@ -71,19 +79,27 @@
 		}
 	}
 
-	&.thumbs li {
-		padding-left: @thumbSpace;
+	&.thumbs,
+	&.side-list {
+		li {
+			padding-left: @thumbSpace;
+		}
+	}
+
+	&.thumbs {
+		.title {
+			// 22px is the width of the watchlist star, +2px for additional padding
+			padding-right: 24px;
+		}
 	}
 
 	.title {
-		// 22px is the width of the watchlist star, +2px for additional padding
-		padding-right: 24px;
-
-		h2 {
+		h3 {
 			.watchlist-heading();
 		}
 	}
 
+	// FIXME: rename to something more general, e.g. .side
 	.listThumb {
 		position: absolute;
 		width: @thumbWidth;
@@ -92,28 +108,36 @@
 		left: 0;
 	}
 
+	&.side-list .listThumb {
+		padding: @itemPaddingV @contentMargin;
+		color: @grayDark;
+
+		p {
+			line-height: 1.2;
+			margin: 0 0 .5em;
+		}
+	}
+
 	// something on watchlist that doesn't exist
-	.title.new h2 {
+	.title.new h3 {
 		color: @redBase;
 	}
 
-	div, p {
+	p {
 		font-size: .9em;
-		margin: 0;
-		color: #999b9e;
 	}
 
-	// mw-mf-comment
-	p {
-		line-height: 1;
+	// FIXME: remove when new watchlist in stable
+	.mw-mf-comment {
 		margin: .25em 0 0;
 	}
 
 	// FIXME: Add component class to all info classes in currently defined page-lists
 	.info,
 	.component {
-		color: #a6a6a6;
-		margin: .6em 0 0;
+		color: @grayMedium;
+		margin: .5em 0 0;
+		line-height: 1.3;
 	}
 
 	.info {

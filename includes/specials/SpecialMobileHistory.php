@@ -112,10 +112,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
 		if ( $userId === 0 ) {
 			$username = '';
-			$isAnon = true;
 		} else {
 			$username = $rev->getUserText( Revision::FOR_THIS_USER, $user );
-			$isAnon = false;
 		}
 
 		// FIXME: Style differently user comment when this is the case
@@ -148,7 +146,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		} else {
 			$title = $rev->getTitle();
 		}
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon );
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title );
 
 		wfProfileOut( __METHOD__ );
 	}

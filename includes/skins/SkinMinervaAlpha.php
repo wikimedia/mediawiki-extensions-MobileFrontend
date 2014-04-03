@@ -14,16 +14,6 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		return $modules;
 	}
 
-	protected function getSkinStyles() {
-		// This replaces MobileFrontend's button styles with MediaWiki UI button styles
-		// MediaWiki UI is in core so to be consistent with desktop these are preferable to use
-		$styles = parent::getSkinStyles();
-		$key = array_search( 'skins.minerva.buttons.styles', $styles );
-		unset( $styles[$key] );
-		$styles[] = 'mediawiki.ui.button';
-		return $styles;
-	}
-
 	protected function prepareQuickTemplate() {
 		$tpl = parent::prepareQuickTemplate();
 		$this->prepareTalkLabel( $tpl );

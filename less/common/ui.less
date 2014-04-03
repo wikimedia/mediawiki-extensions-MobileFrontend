@@ -208,4 +208,17 @@ input.search {
 	overflow: hidden;
 	-webkit-text-overflow: ellipsis;
 	text-overflow: ellipsis;
+
+	// FIXME: this works only in WebKit
+	&.multi-line {
+		white-space: normal;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+	}
+
+	&.two-line {
+		-webkit-line-clamp: 2;
+		// fallback for non-WebKit
+		max-height: 2.6em;
+	}
 }

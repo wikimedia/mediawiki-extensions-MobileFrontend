@@ -42,7 +42,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 *
 	 * @return String: HTML code
 	 */
-	protected function renderFeedItemHtml( $ts, $diffLink ='', $username = '', $comment = '',
+	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
 		$title = false, $isAnon = false ) {
 
 		$out = $this->getOutput();
@@ -60,16 +60,11 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$html .= Html::openElement( 'div', array( 'class' => 'title' ) );
 		}
 		if ( $title ) {
-			$html .= Html::element( 'h2', array(), $title->getPrefixedText() );
-			if ( $username ) {
-				$html .= Html::element( 'div', array( 'class' => $usernameClass ), $username );
-			}
-		} else {
-			$html .= Html::openElement( 'h2' ) .
-				Html::element( 'span', array( 'class' => $usernameClass ), $username ) .
-				Html::closeElement( 'h2' );
+			$html .= Html::element( 'h3', array(), $title->getPrefixedText() );
 		}
-
+		if ( $username ) {
+			$html .= Html::element( 'p', array( 'class' => $usernameClass ), $username );
+		}
 		$html .= Html::element( 'p', array( 'class' => 'mw-mf-comment truncated-text' ), $comment ) .
 			Html::element( 'div', array( 'class' => 'info' ), $ts->getHumanTimestamp() );
 

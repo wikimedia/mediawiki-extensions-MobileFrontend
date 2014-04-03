@@ -83,11 +83,20 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		if ( $this->view === 'feed' ) {
 			$this->showRecentChangesHeader();
 			$res = $this->doFeedQuery();
-			$this->showFeedResults( $res );
+
+			if ( $res->numRows() ) {
+				$this->showFeedResults( $res );
+			} else {
+				$this->showEmptyList( true );
+			}
 		} else {
 			$this->filter = $this->getRequest()->getVal( 'filter', 'articles' );
 			$res = $this->doListQuery();
-			$this->showListResults( $res );
+			if ( $res->numRows() ) {
+				$this->showListResults( $res );
+			} else {
+				$this->showEmptyList( false );
+			}
 		}
 
 		if ( $this->optionsChanged ) {
@@ -335,71 +344,67 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		return $res;
 	}
 
-	function showFeedResults( ResultWrapper $res ) {
+	protected function showFeedResults( ResultWrapper $res ) {
+		$output = $this->getOutput();
+		$output->addHtml(
+			Html::openElement( 'ul', array( 'class' => 'watchlist ' . 'page-list' ) )
+		);
+
 		$this->showResults( $res, true );
 	}
 
-	function showListResults( ResultWrapper $res ) {
+	protected function showListResults( ResultWrapper $res ) {
+		$output = $this->getOutput();
+		$output->addHtml(
+			Html::openElement( 'ul', array( 'class' => 'watchlist ' . 'page-list thumbs' ) )
+		);
+
 		$this->showResults( $res, false );
 	}
 
 	// FIXME: use templates/articleList.html to keep consistent with nearby view
-	function showResults( ResultWrapper $res, $feed ) {
+	protected function showResults( ResultWrapper $res, $feed ) {
 		wfProfileIn( __METHOD__ );
-
-		$empty = $res->numRows() === 0;
 
 		$output = $this->getOutput();
 
-		if ( $empty ) {
-			$this->showEmptyList( $feed );
+		$lookahead = 1;
+		$fromTitle = false;
+
+		if ( $feed ) {
+			foreach( $res as $row ) {
+				$this->showFeedResultRow( $row );
+			}
 		} else {
+			foreach( $res as $row ) {
+				if ( $lookahead <= self::LIMIT ) {
+					$this->showListResultRow( $row );
+				} else {
+					$fromTitle = Title::makeTitle( $row->wl_namespace, $row->wl_title );
+				}
+				$lookahead++;
+			}
+		}
+
+		$output->addHtml( '</ul>' );
+
+		if ( $fromTitle !== false ) {
 			$output->addHtml(
-				Html::openElement( 'ul',
+				Html::openElement( 'a',
 					array(
-						'class' => 'watchlist ' . ( $feed ? 'page-list' : 'page-list thumbs' ),
+						'href' => SpecialPage::getTitleFor( 'Watchlist' )->
+							getLocalUrl(
+								array(
+									'from' => $fromTitle->getPrefixedText(),
+									'filter' => $this->filter,
+								)
+							),
+						'class' => 'more',
 					)
-				)
+				) .
+				wfMessage( 'mobile-frontend-watchlist-more' )->escaped() .
+				Html::closeElement( 'a' )
 			);
-
-			$lookahead = 1;
-			$fromTitle = false;
-
-			if ( $feed ) {
-				foreach( $res as $row ) {
-					$this->showFeedResultRow( $row );
-				}
-			} else {
-				foreach( $res as $row ) {
-					if ( $lookahead <= self::LIMIT ) {
-						$this->showListResultRow( $row );
-					} else {
-						$fromTitle = Title::makeTitle( $row->wl_namespace, $row->wl_title );
-					}
-					$lookahead++;
-				}
-			}
-
-			$output->addHtml( '</ul>' );
-
-			if ( $fromTitle !== false ) {
-				$output->addHtml(
-					Html::openElement( 'a',
-						array(
-							'href' => SpecialPage::getTitleFor( 'Watchlist' )->
-								getLocalUrl(
-									array(
-										'from' => $fromTitle->getPrefixedText(),
-										'filter' => $this->filter,
-									)
-								),
-							'class' => 'more',
-						)
-					) .
-					wfMessage( 'mobile-frontend-watchlist-more' )->escaped() .
-					Html::closeElement( 'a' )
-				);
-			}
 		}
 
 		wfProfileOut( __METHOD__ );
@@ -493,6 +498,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			? htmlspecialchars( $row->rc_user_text )
 			: '';
 		$revId = $row->rc_this_oldid;
+		$isAnon = $row->rc_user == 0;
 
 		if ( $revId ) {
 			$diffTitle = SpecialPage::getTitleFor( 'MobileDiff', $revId );
@@ -502,7 +508,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalUrl();
 		}
 
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title );
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon );
 
 		wfProfileOut( __METHOD__ );
 	}
@@ -532,7 +538,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => $className ) ) .
 			$thumb['html'] .
-			Html::element( 'h2', array(), $titleText ).
+			Html::element( 'h3', array(), $titleText ).
 			Html::element( 'div', array( 'class' => 'info' ), $lastModified ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' )

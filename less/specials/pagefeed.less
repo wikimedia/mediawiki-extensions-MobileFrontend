@@ -3,23 +3,25 @@
 
 // FIXME [mediawiki ui] These rules should not be needed and are specifically for Watchlist
 // This should use another MediaWiki UI widget
-.alpha .content-header .mw-ui-button-group {
-	li.mw-ui-button {
-		padding: 0;
-	}
+.beta, .alpha {
+	.content-header .mw-ui-button-group {
+		li.mw-ui-button {
+			padding: 0;
+			min-width: 30%;
+		}
 
-	a:visited,
-	a:hover,
-	a {
-		padding: .5em 1em;
-		display: block;
-		color: inherit;
-		text-decoration: none;
+		a:visited,
+		a:hover,
+		a {
+			padding: .5em 1em;
+			display: block;
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 }
 
 .page-header-bar {
-
 	li,
 	div {
 		line-height: 1.5;
@@ -38,7 +40,7 @@
 
 		&.selected {
 			a {
-				border-bottom: solid 3px #3366bb;
+				border-bottom: solid 3px @blueBase;
 				font-weight: bold;
 			}
 		}
@@ -72,16 +74,15 @@
 }
 
 .mw-mf-user {
-	padding: 2px 0 0 20px;
-	line-height: 1;
+	padding: 1px 0 0 20px;
 	min-height: 16px;
-	color: #565656 !important;
+	color: @grayMediumDark;
 	background: url(images/user.png) 0 0 no-repeat;
 	.background-size(16px, auto);
 }
 
 .mw-mf-anon {
-	color: #b24242;
+	color: #dc2e16;
 	background-image: url(images/user-anon.png);
 }
 
@@ -89,4 +90,32 @@ a.more {
 	display: block;
 	margin-top: 1em;
 	text-align: center;
+}
+
+.mw-mf-bytesadded {
+	color: #00af88;
+}
+
+.mw-mf-bytesremoved {
+	color: #dc2e16;
+}
+
+// FIXME: move when new watchlist in stable
+.beta, .alpha {
+	.mw-mf-watchlist-selector {
+		margin-bottom: -1px;
+
+		li {
+			border-bottom: none;
+		}
+	}
+
+	.mw-mf-user {
+		.background-image-svg-quick("images/userNormal");
+	}
+
+	.mw-mf-anon {
+		color: inherit;
+		.background-image-svg-quick("images/userAnonymous");
+	}
 }
