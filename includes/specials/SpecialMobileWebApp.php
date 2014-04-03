@@ -80,8 +80,21 @@ class SpecialMobileWebApp extends MobileSpecialPage {
 		$styles = $out->getModuleStyles();
 		$ctx = new ResourceLoaderContext( $rl, new FauxRequest() );
 
+		$fr = new FauxRequest( array(
+			'debug' => false,
+			'lang' => $this->getLanguage()->getCode(),
+			'modules' => 'startup',
+			'only' => 'scripts',
+			'skin' => $out->getSkin()->getSkinName(),
+			'target' => $out->getTarget(),
+		));
+		$startupCtx = new ResourceLoaderContext( new ResourceLoader(), $fr );
+
+		$startupUrl = ResourceLoaderStartUpModule::getStartupModulesUrl( $startupCtx );
+		$startupUrl = $this->getRelativePath( $startupUrl );
+
 		// Add a ts parameter for cachebusting when things change
-		$urls = "$scriptUrls\n$styleUrls";
+		$urls = "\n$scriptUrls\n$styleUrls\n$startupUrl";
 		// TODO: add timestamp components in checksum calculation?
 		// Granted, it's used below. So maybe that's good enough,
 		// at least if we're totally confident in the timestamp logic.
