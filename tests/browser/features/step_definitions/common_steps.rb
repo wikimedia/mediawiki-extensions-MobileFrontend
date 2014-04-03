@@ -91,6 +91,10 @@ Given(/^I am on the "(.+)" page$/) do |article|
   visit(ArticlePage, :using_params => {:article_name => article})
 end
 
+Given(/^I am on the random page$/) do
+  visit(ArticlePage, :using_params => {:article_name => @random_string})
+end
+
 Given(/^I am on a page that does not exist$/) do
   name = 'NewPage' + Time.now.to_i.to_s
   visit(ArticlePage, :using_params => {:article_name => name})

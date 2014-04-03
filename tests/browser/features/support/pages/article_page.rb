@@ -45,6 +45,8 @@ class ArticlePage
 
   ## watch star
   a(:watch_link, css: "#ca-watch a")
+  a(:unwatch_link, css: "a.watch-this-article.watched")
+  button(:watch_confirm, class: "mw-htmlform-submit")
 
   # search
   button(:search_button, css: ".searchSubmit")
