@@ -30,7 +30,11 @@ class MobileContext extends ContextSource {
 	private $forceMobileView = false;
 	private $contentTransformations = true;
 	private $mobileView = null;
-
+	/**
+	 * Have we already checked for desktop/mobile view toggling?
+	 * @var bool
+	 */
+	private $toggleViewChecked = false;
 	private static $instance = null;
 
 	/**
@@ -256,6 +260,8 @@ class MobileContext extends ContextSource {
 			return $this->mobileView;
 		}
 		wfProfileIn( __METHOD__ );
+		// check if we need to toggle between mobile/desktop view
+		$this->checkToggleView();
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
 			$this->redirectMobileEnabledPages();
@@ -834,11 +840,14 @@ class MobileContext extends ContextSource {
 	 * Determine whether or not we need to toggle the view, and toggle it
 	 */
 	public function checkToggleView() {
-		$mobileAction = $this->getMobileAction();
-		if ( $mobileAction == 'toggle_view_desktop' ) {
-			$this->toggleView( 'desktop' );
-		} elseif ( $mobileAction == 'toggle_view_mobile' ) {
-			$this->toggleView( 'mobile' );
+		if ( !$this->toggleViewChecked ) {
+			$this->toggleViewChecked = true;
+			$mobileAction = $this->getMobileAction();
+			if ( $mobileAction == 'toggle_view_desktop' ) {
+				$this->toggleView( 'desktop' );
+			} elseif ( $mobileAction == 'toggle_view_mobile' ) {
+				$this->toggleView( 'mobile' );
+			}
 		}
 	}
 
