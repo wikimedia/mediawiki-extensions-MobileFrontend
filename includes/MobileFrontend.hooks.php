@@ -87,7 +87,7 @@ class MobileFrontendHooks {
 		$name = $context->getTitle()->getDBkey();
 		$inTestMode =
 			$name === SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getDBkey();
-		if ( $name === 'MobileWebApp' ) {
+		if ( $name === 'MobileWebApp' || $name === 'MobileWebApp/manifest' ) {
 			$skinName = $appSkinName;
 		} elseif ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) &&
 			class_exists( $alphaSkinName ) ) {
