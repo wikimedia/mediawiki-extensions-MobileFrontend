@@ -34,6 +34,24 @@
       "revId": "7d1da51115973e58ec163dc061c0ec67d73bbff4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_7c3531f3",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-03T02:52:58Z",
+      "side": 1,
+      "message": "It does make perfect sense. It\u0027s semitransparent in the mock which can\u0027t be achieved using border. Use box-shadow: -5px 0 0 0 rgba(0,0,0,0.3); It works. I tried.",
+      "parentUuid": "ae0e4726_e1c85127",
+      "revId": "7d1da51115973e58ec163dc061c0ec67d73bbff4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
