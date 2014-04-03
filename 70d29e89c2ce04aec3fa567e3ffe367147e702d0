@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_2bb76983",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 850,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-03T17:47:15Z",
+      "side": 1,
+      "message": "Move this above the checks.",
+      "revId": "70d29e89c2ce04aec3fa567e3ffe367147e702d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8bb8bd75",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 852,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-03T17:47:15Z",
+      "side": 1,
+      "message": "Stray return.",
+      "revId": "70d29e89c2ce04aec3fa567e3ffe367147e702d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
