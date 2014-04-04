@@ -44,11 +44,13 @@ jshint: nodecheck jshinttests
 checkless:
 	@php ../../maintenance/checkLess.php
 
-dependencies: nodecheck remotes
-	pear install PHP_CodeSniffer
+dependencies: nodecheck phpcheck remotes
 
-phplint:
+phpcheck:
 	@scripts/phpcheck.sh
+
+phplint: phpcheck
+	@scripts/phplint.sh
 
 phpunit:
 	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --configuration ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/mfe.suite.xml --group=MobileFrontend
