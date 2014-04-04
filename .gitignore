@@ -9,3 +9,5 @@ node_modules/
 tmp/
 docs/
 scripts/remotes
+vendor/
+composer.phar
