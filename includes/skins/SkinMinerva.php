@@ -537,10 +537,11 @@ class SkinMinerva extends SkinTemplate {
 
 	// Beware of HTML caching when using this function.
 	protected function prepareBanners( BaseTemplate $tpl ) {
-		global $wgMFEnableSiteNotice;
-		$banners = array();
-		if ( $wgMFEnableSiteNotice ) {
-			$banners[] = '<div id="siteNotice"></div>';
+		// Make sure Zero banner are always on top
+		$banners = array( '<div id="siteNotice"></div>' );
+		$siteNotice = $this->getSiteNotice();
+		if ( $siteNotice ) {
+			$banners[] = $siteNotice;
 		}
 		$tpl->set( 'banners', $banners );
 		// These banners unlike 'banners' show inside the main content chrome underneath the
