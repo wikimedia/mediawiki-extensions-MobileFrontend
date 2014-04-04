@@ -157,7 +157,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/modules.js',
 			'javascripts/common/Class.js',
 			'javascripts/common/eventemitter.js',
-			'javascripts/common/navigation.js',
+			'javascripts/common/mainmenu.js',
 			'javascripts/modules/lastEdited/time.js',
 		),
 		'position' => 'top',

@@ -111,8 +111,6 @@ var View = M.require( 'View' ),
 			if ( this.closeOnContentTap ) {
 				$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ), $.proxy( this, 'hide' ) );
 			}
-
-			$( 'body' ).removeClass( 'navigation-enabled' );
 		},
 		/**
 		 * Detach the overlay from the current view

@@ -207,7 +207,7 @@ class MinervaTemplate extends BaseTemplate {
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
-			<div id="mw-mf-page-left">
+			<div id="mw-mf-page-left" class="navigation-drawer">
 				<?php
 					$this->renderMainMenu( $data );
 				?>
