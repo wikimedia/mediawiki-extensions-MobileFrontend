@@ -52,6 +52,24 @@
       "revId": "7d1da51115973e58ec163dc061c0ec67d73bbff4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_9d8b641b",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T00:08:51Z",
+      "side": 1,
+      "message": "Maybe I\u0027m misunderstanding what you are asking for but this is what happens when I apply that rule.\nhttp://imgur.com/GuGgHAN\n\nI\u0027m also not sure what effect semi transparency will do - there is nothing underneath it that will show.\n\nIf it\u0027s simply semi-transparency of the grey line why not use a transparent border colour instead - why a box shadow?\n\nRegardless this seems like something that would be a good follow up patch to do by yourself - since I have no idea what you are referring to and this is wasting time :-/",
+      "parentUuid": "8e23439c_7c3531f3",
+      "revId": "7d1da51115973e58ec163dc061c0ec67d73bbff4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
