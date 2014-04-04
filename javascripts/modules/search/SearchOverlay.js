@@ -3,7 +3,7 @@
 	var
 		OverlayNew = M.require( 'OverlayNew' ),
 		SearchApi = M.require( 'modules/search/SearchApi' ),
-		SEARCH_DELAY = 500,
+		SEARCH_DELAY = 300,
 		SearchOverlay;
 
 	SearchOverlay = OverlayNew.extend( {
