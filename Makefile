@@ -41,9 +41,6 @@ jshinttests: nodecheck
 jshint: nodecheck jshinttests
 	@node_modules/.bin/jshint javascripts/* --config .jshintrc
 
-checkless:
-	@php ../../maintenance/checkLess.php
-
 dependencies: nodecheck phpcheck remotes
 
 phpcheck:
