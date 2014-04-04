@@ -36,20 +36,31 @@
 		search: function( query ) {
 			if ( !this.searchCache[query] ) {
 				this.searchCache[query] = this.get( {
-					search: query,
-					action: 'opensearch',
-					namespace: 0,
-					limit: 15
+					action: 'query',
+					generator: 'prefixsearch',
+					gpssearch: query,
+					gpsnamespace: 0,
+					gpslimit: 15,
+					prop: 'pageimages',
+					piprop: 'thumbnail',
+					pithumbsize: 80,
+					pilimit: 15
 				} ).then( function( data ) {
-					return {
-						query: data[0],
-						results: $.map( data[1], function( title ) {
-							return {
+					var results = [];
+					if ( data.query && data.query.pages ) {
+						$.each( data.query.pages, function( i, page ) {
+							var title = page.title;
+							results.push( {
 								heading: highlightSearchTerm( title, query ),
 								title: title,
-								url: mw.util.getUrl( title )
-							};
-						} )
+								url: mw.util.getUrl( title ),
+								thumbnail: page.thumbnail
+							} );
+						} );
+					}
+					return {
+						query: query,
+						results: results
 					};
 				} );
 			}
