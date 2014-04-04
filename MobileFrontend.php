@@ -398,12 +398,6 @@ $wgMFShowMobileViewToTablets = false;
 $wgMFPhotoUploadAppendToDesc = '';
 
 /**
- * Whether or not to display site notices
- * @var bool
- */
-$wgMFEnableSiteNotice = false;
-
-/**
  * Whether or not to enable the use of the X-Analytics HTTP response header
  *
  * This header is used for analytics purposes.
