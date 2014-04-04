@@ -61,6 +61,7 @@
 				var
 					loadingOverlay = new LoadingOverlay(),
 					result = $.Deferred();
+				loadingOverlay.show();
 
 				// Load VE init module
 				mw.loader.using( 'mobile.editor.ve', function () {
