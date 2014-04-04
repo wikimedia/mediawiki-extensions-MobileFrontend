@@ -17,6 +17,9 @@
 		<testsuite name="extensions">
 			<file>suites/ExtensionsTestSuite.php</file>
 		</testsuite>
+		<testsuite name="less">
+			<file>suites/LessTestSuite.php</file>
+		</testsuite>
 	</testsuites>
 	<groups>
 		<exclude>
