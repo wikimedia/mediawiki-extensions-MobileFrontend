@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_6ab1d1db",
+        "filename": "tests/browser/README.mediawiki",
+        "patchSetId": 10
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T23:01:26Z",
+      "side": 1,
+      "message": "As requested in earlier patchset. Please cleanup whitespace.",
+      "revId": "72ec9ca004ced8162e974cfc41ff375ac0affb44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_aab7e9d2",
+        "filename": "tests/browser/features/step_definitions/common_article_steps.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T23:01:26Z",
+      "side": 1,
+      "message": "As requested in earlier patchset. Please make this more generic and use the one above \"Then(/^I see a toast with message \"(.*)\"$/) do |text|\"",
+      "revId": "72ec9ca004ced8162e974cfc41ff375ac0affb44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8aac2d86",
+        "filename": "tests/browser/features/step_definitions/common_article_steps.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T23:01:26Z",
+      "side": 1,
+      "message": "As requested in earlier patchset. Please make this more generic and use the one above \"Then(/^I see a toast with message \"(.*)\"$/) do |text|\"",
+      "revId": "72ec9ca004ced8162e974cfc41ff375ac0affb44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_eaa5e19b",
+        "filename": "tests/browser/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T23:01:26Z",
+      "side": 1,
+      "message": "Please put this in watchstar_steps.rb",
+      "revId": "72ec9ca004ced8162e974cfc41ff375ac0affb44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_2ac3d93e",
+        "filename": "tests/browser/features/watchstar.feature",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T23:01:26Z",
+      "side": 1,
+      "message": "Given... the page is unwatched\nYou want this to be Given the page is watched.\n\nThis test currently correctly fails.",
+      "revId": "72ec9ca004ced8162e974cfc41ff375ac0affb44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
