@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_04eb740a",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T19:48:24Z",
+      "side": 1,
+      "message": "typo - \u0027supported\u0027\n\nAlso doesn\u0027t PHPDoc supports following type of syntax:\n\n@param array $wgMFCustomLogos Site logos\n  *\n  * @opt_param string copyright The copyright logo that appears in the footer.",
+      "revId": "ba11f52f010f881f4d12bded7f455393d879791f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
