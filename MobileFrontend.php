@@ -308,11 +308,9 @@ $wgMFRemovableClasses = array(
 /**
  * Make the logos configurable.
  *
- * 'logo' is the principle logo for your site, 'copyright' is the copyright
- * logo to be used in the footer of your site.
+ * Currently, only 'copyright' element is supported, which is the logo for your content license
  *
  * Example: array(
- * 	'logo' => 'mysite_logo.png',
  *	'copyright' => 'mysite_copyright_logo.png',
  * 	);
  */
