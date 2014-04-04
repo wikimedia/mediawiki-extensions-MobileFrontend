@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_04cc948b",
+        "filename": "tests/browser/features/step_definitions/common_article_steps.rb",
+        "patchSetId": 7
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T20:06:43Z",
+      "side": 1,
+      "message": "Can\u0027t we use \"I see a toast with message\" instead ?\nOr at least use the step inside this step.\nSeems like extra unnecessary code.",
+      "revId": "a8a6d2dc49bab7a30e9506ff2951a6b35d8ab69c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e4c87879",
+        "filename": "tests/browser/features/step_definitions/common_article_steps.rb",
+        "patchSetId": 7
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T20:06:43Z",
+      "side": 1,
+      "message": "See above comment.",
+      "revId": "a8a6d2dc49bab7a30e9506ff2951a6b35d8ab69c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_a4aa8080",
+        "filename": "tests/browser/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T20:06:43Z",
+      "side": 1,
+      "message": "This should be in watchstar_steps.rb",
+      "revId": "a8a6d2dc49bab7a30e9506ff2951a6b35d8ab69c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_24cf9084",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-04T20:06:43Z",
+      "side": 1,
+      "message": "Do we still need this? This is only for non-JavaScript users.",
+      "revId": "a8a6d2dc49bab7a30e9506ff2951a6b35d8ab69c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
