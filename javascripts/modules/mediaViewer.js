@@ -2,8 +2,22 @@
 	M.assertMode( [ 'alpha', 'beta', 'app' ] );
 
 	var Overlay = M.require( 'Overlay' ),
+		// use predefined buckets so that we don't pollute cache with random
+		// size images
+		sizeBuckets = [320, 640, 800, 1024, 1280, 1920, 2560, 2880],
 		Api = M.require( 'api' ).Api,
 		ImageApi, ImageOverlay, api;
+
+	/**
+	 * Gets the first size larger than or equal to the provided size.
+	 */
+	function findSizeBucket( size ) {
+		var i = 0;
+		while ( size > sizeBuckets[i] && i < sizeBuckets.length - 1 ) {
+			++i;
+		}
+		return sizeBuckets[i];
+	}
 
 	ImageApi = Api.extend( {
 		initialize: function() {
@@ -24,8 +38,8 @@
 					iiprop: ['url', 'extmetadata'],
 					// request an image two times bigger than the reported screen size
 					// for retina displays and zooming
-					iiurlwidth: $( window ).width() * 2,
-					iiurlheight: $( window ).height() * 2
+					iiurlwidth: findSizeBucket( $( window ).width() * 2 ),
+					iiurlheight: findSizeBucket( $( window ).height() * 2 )
 				} ).done( function( resp ) {
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: API
@@ -137,5 +151,9 @@
 	} );
 	M.on( 'section-rendered', init );
 	M.on( 'photo-loaded', init );
+
+	M.define( 'modules/mediaViewer', {
+		_findSizeBucket: findSizeBucket
+	} );
 
 }( mw.mobileFrontend, jQuery ) );
