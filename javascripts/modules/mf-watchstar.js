@@ -218,7 +218,7 @@ var api = M.require( 'api' ), w = ( function() {
 
 	function upgradeUI() {
 		M.on( 'search-results', function( overlay ) {
-			initWatchListIconList( overlay.$( 'ul' ) );
+			initWatchListIconList( overlay.$( 'ul.page-list' ) );
 		} );
 	}
 
