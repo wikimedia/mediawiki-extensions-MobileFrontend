@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_5d7b73eb",
+        "filename": "tests/browser/features/step_definitions/common_article_steps.rb",
+        "patchSetId": 13
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 77
+      },
+      "writtenOn": "2014-04-07T20:44:02Z",
+      "side": 1,
+      "message": "Sounds good to me",
+      "parentUuid": "8e23439c_d5b87d76",
+      "revId": "a67494c4cb5f4c9ebb9395fc14e875408a4393b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_35a9f121",
         "filename": "tests/browser/features/watchstar.feature",
         "patchSetId": 13
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_5d5ed318",
+        "filename": "tests/browser/features/watchstar.feature",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 77
+      },
+      "writtenOn": "2014-04-07T20:44:02Z",
+      "side": 1,
+      "message": "I like this in the background in order to make it explicit that ll the Scenarios start from the same state.",
+      "parentUuid": "8e23439c_35a9f121",
+      "revId": "a67494c4cb5f4c9ebb9395fc14e875408a4393b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_55ac6d32",
         "filename": "tests/browser/features/watchstar.feature",
         "patchSetId": 13
@@ -47,6 +83,24 @@
       "writtenOn": "2014-04-07T17:34:18Z",
       "side": 1,
       "message": "Isn\u0027t this a test about adding and removing an article from the watchlist now. I feel like \"When I click the watch star\" should be replaced with a Given step \"And the page is watched\"",
+      "revId": "a67494c4cb5f4c9ebb9395fc14e875408a4393b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_dde303d3",
+        "filename": "tests/browser/features/watchstar.feature",
+        "patchSetId": 13
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 77
+      },
+      "writtenOn": "2014-04-07T20:44:02Z",
+      "side": 1,
+      "message": "I thought about renaming this step, but when implementing the test I found that the default state of the watch star is no state, and only the \"watched\" state is noted, so this step description is actually more accurate.",
+      "parentUuid": "8e23439c_55ac6d32",
       "revId": "a67494c4cb5f4c9ebb9395fc14e875408a4393b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
