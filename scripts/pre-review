@@ -5,12 +5,12 @@ import subprocess
 import json
 
 def get_project():
-    command = "git remote -v | head -n1 | awk '{print $2}' | sed -e 's,.*:\(.*/\)\?,,' -e 's/\.git$//'"
+    command = "git remote -v | head -n1 | sed -e 's/.*\(ssh:.*\)\.git.*/\\1/'"
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 
     #Launch the shell command:
     output, error = process.communicate()
-    return "/".join( output.split('/')[-3:] ).replace( '\n', '' )
+    return "/".join(output.strip().split('/')[-3:])
 
 def get_last_commit():
     command = "git log -1"
