@@ -4,7 +4,8 @@
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
-		isVisualEditorEnabled = M.isWideScreen() && M.isAlphaGroupMember(),
+		isVisualEditorEnabled = M.isWideScreen() && M.isAlphaGroupMember() &&
+			mw.libs.ve && mw.libs.ve.isAvailable,
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		inNavSignupCampaign = M.query.campaign === 'leftNavSignup',
 		Section = M.require( 'Section' ),
