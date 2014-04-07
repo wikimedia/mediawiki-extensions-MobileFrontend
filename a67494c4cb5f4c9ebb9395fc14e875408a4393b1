@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_d5b87d76",
+        "filename": "tests/browser/features/step_definitions/common_article_steps.rb",
+        "patchSetId": 13
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-07T17:34:18Z",
+      "side": 1,
+      "message": "I\u0027m still not a big fan of these 2 rules. I\u0027d love to see a more generic rule which uses:\nThen(/^I see a toast with message \"(.*)\" $/) do |text|\n\nbut I guess this can be done in a follow up.",
+      "revId": "a67494c4cb5f4c9ebb9395fc14e875408a4393b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_35a9f121",
+        "filename": "tests/browser/features/watchstar.feature",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-07T17:34:18Z",
+      "side": 1,
+      "message": "Personally I\u0027d move this into the scenario \" Add an article to the watchlist",
+      "revId": "a67494c4cb5f4c9ebb9395fc14e875408a4393b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_55ac6d32",
+        "filename": "tests/browser/features/watchstar.feature",
+        "patchSetId": 13
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-07T17:34:18Z",
+      "side": 1,
+      "message": "Isn\u0027t this a test about adding and removing an article from the watchlist now. I feel like \"When I click the watch star\" should be replaced with a Given step \"And the page is watched\"",
+      "revId": "a67494c4cb5f4c9ebb9395fc14e875408a4393b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
