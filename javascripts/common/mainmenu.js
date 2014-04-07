@@ -53,7 +53,11 @@
 			} );
 		} else {
 			$( '#mw-mf-main-menu-button' ).click( function( ev ) {
-				openNavigationDrawer();
+				if ( isOpen() ) {
+					closeNavigationDrawers();
+				} else {
+					openNavigationDrawer();
+				}
 				ev.preventDefault();
 			} ).on( 'touchend mouseup', function( ev ) {
 				ev.stopPropagation();
