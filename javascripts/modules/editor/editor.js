@@ -20,11 +20,9 @@
 			content: mw.msg( 'mobile-frontend-editor-cta' )
 		} );
 
-	function addEditButton( section, container, page ) {
-		// Pages that contain JavaScript and CSS are not suitable for VisualEditor so check if wikitext.
-		var url = page.isWikiText() && isVisualEditorEnabled ? '#/VisualEditor/' + section : '#editor/' + section;
+	function addEditButton( section, container ) {
 		return $( '<a class="edit-page">' ).
-			attr( 'href', url ).
+			attr( 'href', '#editor/' + section ).
 			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
 			prependTo( container );
 	}
@@ -56,26 +54,6 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
-		if ( isVisualEditorEnabled ) {
-			M.overlayManager.add( /^\/VisualEditor\/(\d+)$/, function( sectionId ) {
-				var
-					loadingOverlay = new LoadingOverlay(),
-					result = $.Deferred();
-				loadingOverlay.show();
-
-				// Load VE init module
-				mw.loader.using( 'mobile.editor.ve', function () {
-					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
-					loadingOverlay.hide();
-					result.resolve( new VisualEditorOverlay( {
-						title: page.title,
-						sectionId: parseInt( sectionId, 10 )
-					} ) );
-				} );
-				return result;
-			} );
-		}
-
 		M.overlayManager.add( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
 			var
 				loadingOverlay = new LoadingOverlay(),
@@ -83,19 +61,33 @@
 			loadingOverlay.show();
 			sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
-			mw.loader.using( 'mobile.editor.overlay', function() {
-				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+			// Pages that contain JavaScript and CSS are not suitable for
+			// VisualEditor so check if wikitext
+			if ( page.isWikiText() && isVisualEditorEnabled ) {
+				mw.loader.using( 'mobile.editor.ve', function () {
+					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 
-				loadingOverlay.hide();
-				result.resolve( new EditorOverlay( {
-					title: page.title,
-					isNewPage: isNewPage,
-					isNewEditor: user.getEditCount() === 0,
-					sectionId: sectionId,
-					oldId: M.query.oldid,
-					funnel: funnel || 'article'
-				} ) );
-			} );
+					loadingOverlay.hide();
+					result.resolve( new VisualEditorOverlay( {
+						title: page.title,
+						sectionId: parseInt( sectionId, 10 )
+					} ) );
+				} );
+			} else {
+				mw.loader.using( 'mobile.editor.overlay', function() {
+					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+
+					loadingOverlay.hide();
+					result.resolve( new EditorOverlay( {
+						title: page.title,
+						isNewPage: isNewPage,
+						isNewEditor: user.getEditCount() === 0,
+						sectionId: sectionId,
+						oldId: M.query.oldid,
+						funnel: funnel || 'article'
+					} ) );
+				} );
+			}
 
 			return result;
 		} );
@@ -106,20 +98,13 @@
 			// FIXME: unfortunately the main page is special cased.
 			if ( mw.config.get( 'wgIsMainPage' ) || isNewPage || M.getLeadSection().text() ) {
 				// if lead section is not empty, open editor with lead section
-				addEditButton( 0, '#ca-edit', page );
+				addEditButton( 0, '#ca-edit' );
 			} else {
 				// if lead section is empty, open editor with first section
-				addEditButton( 1, '#ca-edit', page );
+				addEditButton( 1, '#ca-edit' );
 			}
 		}
 
-		if ( isVisualEditorEnabled ) {
-			// Point all section edit links to VE
-			$( '#content .edit-page' ).each( function() {
-				var $this = $( this );
-				$this.attr( 'href', '#/VisualEditor/' + $this.data( 'section' ) );
-			} );
-		}
 		// FIXME change when micro.tap.js in stable
 		$( '.edit-page' ).on( M.tapEvent( 'mouseup' ), function( ev ) {
 			// prevent folding section when clicking Edit
