@@ -24,7 +24,7 @@
 			var self = this;
 
 			// if hidden using overlay (not hardware) button, update the state
-			overlay.on( 'hide', function() {
+			overlay.on( 'hide-button', function() {
 				self.hidePrevious = false;
 				self.router.back();
 			} );
