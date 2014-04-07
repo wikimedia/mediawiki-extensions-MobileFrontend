@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_63520c6c",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-04-07T23:43:41Z",
+      "side": 1,
+      "message": "Checking mw.libs itself is redundant, that is part of mediawiki base module. Just like mw.loader and mw.config.",
+      "revId": "773b4cdcf26ac35c8d40e2ae1b30d65a3f30d94e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
