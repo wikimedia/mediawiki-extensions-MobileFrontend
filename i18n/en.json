@@ -231,7 +231,7 @@
     "mobile-frontend-profile-footer-months": "Joined over {{PLURAL:$2|1 month|$2 months}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].",
     "mobile-frontend-profile-footer-years": "Joined over {{PLURAL:$2|1 year|$2 years}} ago with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].",
     "mobile-frontend-profile-last-edit": "{{GENDER:$3|Edited}} the page [[:$1]], {{PLURAL:$2|yesterday|$2 days ago|0=earlier today}}.",
-    "mobile-frontend-profile-last-thank": "{{GENDER:$2|Thanked}} {{GENDER:$1|by}} [[Special:UserProfile/$1|$1]]",
+    "mobile-frontend-profile-last-thank": "{{GENDER:$2|Thanked}} {{GENDER:$1|by}} [[Special:UserProfile/$1|$1]].",
     "mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Uploaded}} {{PLURAL:$1|yesterday|$1 days ago|0=today}}.",
     "mobile-frontend-profile-noargs": "No username was given. Please provide a username to view a profile.",
     "mobile-frontend-profile-nouser": "No user with this name exists. Usernames are case sensitive so please check if it has been typed correctly.",
