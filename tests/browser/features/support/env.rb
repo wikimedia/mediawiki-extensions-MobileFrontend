@@ -1,4 +1,5 @@
 require "mediawiki_selenium"
+require "mediawiki_api"
 
 def set_cookie(browser)
   # we can set cookies only for current domain

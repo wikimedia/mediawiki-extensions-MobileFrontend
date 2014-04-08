@@ -81,6 +81,10 @@ In addition to this create another user which will be reserved for new uploads
 "Selenium_newuser". The password for this user should be the same as
 MEDIAWIKI_PASSWORD
 
+Tests that use the "Given I create a random page using the API" step need to set
+the MEDIAWIKI_API_URL environment variable, e.g.
+export MEDIAWIKI_API_URL=http://en.wikipedia.beta.wmflabs.org/w/api.php
+
 Run the tests from the MobileFrontend directory with:
 
   make cucumber
