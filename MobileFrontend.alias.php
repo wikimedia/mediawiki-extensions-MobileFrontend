@@ -159,7 +159,14 @@ $specialPageAliases['hi'] = array(
 
 /** Italian (italiano) */
 $specialPageAliases['it'] = array(
+	'History' => array( 'Cronologia' ),
 	'MobileOptions' => array( 'OpzioniMobile' ),
+	'Uploads' => array( 'Caricamenti' ),
+	'MobileDiff' => array( 'DiffMobile' ),
+	'MobileEditor' => array( 'EditorMobile' ),
+	'MobileMenu' => array( 'MenuMobile' ),
+	'MobileLanguages' => array( 'LingueMobile' ),
+	'Nearby' => array( 'NelleVicinanze' ),
 	'UserProfile' => array( 'ProfiloUtente' ),
 );
 
