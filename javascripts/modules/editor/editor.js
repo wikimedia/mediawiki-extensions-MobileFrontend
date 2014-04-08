@@ -6,9 +6,13 @@
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
-		// FIXME: Should we consider default site options and user prefs?
-		// FIXME: This also needs to check that VisualEditor is actually installed.
-		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha',
+
+		// Enable VisualEditor if in alpha mode and VE installed and should be enabled
+		// (see ve.init.mw.ViewPageTarget.init.js in mediawiki/extensions/VisualEditor
+		// for rules for `mw.libs.ve.isAvailable`)
+		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha' &&
+			mw.libs.ve && mw.libs.ve.isAvailable,
+
 		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
