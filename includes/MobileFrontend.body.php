@@ -1,6 +1,19 @@
 <?php
 
-class ExtMobileFrontend extends ContextSource {
+class ExtMobileFrontend {
+	/**
+	 * Uses EventLogging when available to record an event on server side
+	 *
+	 * @param string $schema The name of the schema
+	 * @param int $revision The revision of the schema
+	 * @param array $data The data to be recorded against the schema
+	 */
+	public static function eventLog( $schema, $revision, $data ) {
+		if ( function_exists( 'efLogServerSideEvent' ) ) {
+			efLogServerSideEvent( $schema, $revision, $data );
+		}
+	}
+
 	/**
 	 * @param OutputPage $out
 	 *

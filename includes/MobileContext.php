@@ -97,6 +97,10 @@ class MobileContext extends ContextSource {
 		return $this->contentFormat;
 	}
 
+	/**
+	 * Checks whether images are disabled for the current user
+	 * @return bool
+	 */
 	public function imagesDisabled() {
 		if ( is_null( $this->disableImages ) ) {
 			$this->disableImages = (bool)$this->getRequest()->getCookie( 'disableImages' );
