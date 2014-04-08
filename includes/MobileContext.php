@@ -218,7 +218,9 @@ class MobileContext extends ContextSource {
 			wfIncrStats( 'mobile.opt_in_cookie_unset' );
 		}
 		$this->mobileMode = $mode;
-		$this->getRequest()->response()->setcookie( 'optin', $mode, 0, '', $this->getBaseDomain() );
+		$this->getRequest()->response()->setcookie( 'optin', $mode, 0,
+			array( 'prefix' => '', 'domain' => $this->getBaseDomain() )
+		);
 		wfProfileOut( __METHOD__ );
 	}
 
