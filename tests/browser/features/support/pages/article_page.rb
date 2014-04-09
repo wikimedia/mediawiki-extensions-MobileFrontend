@@ -138,4 +138,8 @@ class ArticlePage
 
   # pagelist
   ul(:page_list, css: ".page-list")
+
+  # references
+  a(:reference, css: "sup.reference a")
+  a(:reference_drawer, css: ".drawer.references")
 end
