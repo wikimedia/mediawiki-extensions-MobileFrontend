@@ -23,6 +23,8 @@ class ArticlePage
   a(:edit_button) do |page|
     page.edit_button_holder_element.link_element(class: "edit-page")
   end
+  li(:upload_page_action, id: "ca-upload")
+
   a(:edit_link, text: "Edit")
   div(:editor_overlay, class: "editor-overlay")
   button(:editor_overlay_close_button) do |page|
