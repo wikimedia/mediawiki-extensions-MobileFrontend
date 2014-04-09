@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_abd232d3",
+        "filename": "tests/browser/features/uploads_lead.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-09T00:22:46Z",
+      "side": 1,
+      "message": "This is a completely different test that is covered in uploads_page.feature\n\nThe upload needs to happen on an article page without a lead photo.",
+      "revId": "de6c297b866d4006dc2a907b3495098d0c1e88db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
