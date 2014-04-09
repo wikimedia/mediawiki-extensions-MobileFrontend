@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_cbe44ea6",
+        "filename": "less/common/mainmenuAnimation.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T00:38:47Z",
+      "side": 1,
+      "message": "Not needed, .navigation-enabled already provides it.",
+      "revId": "e6a2d43a1671361cf8d0ffedd22db2686c666b85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8bfe5634",
+        "filename": "less/common/mainmenuAnimation.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T00:38:47Z",
+      "side": 1,
+      "message": "This can be merged with the rules above.",
+      "revId": "e6a2d43a1671361cf8d0ffedd22db2686c666b85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
