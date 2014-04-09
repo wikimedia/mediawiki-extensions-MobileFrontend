@@ -34,6 +34,7 @@
     "mobile-frontend-password": "Lozinka:",
     "mobile-frontend-placeholder": "Pretražite {{SITENAME}}",
     "mobile-frontend-privacy-link-text": "Privatnost",
+    "mobile-frontend-profile-last-thank": "[[Special:UserProfile/$1|$1]] {{GENDER:$2|mu|joj}} se {{GENDER:$1|zahvalio|zahvalila}}",
     "mobile-frontend-random-button": "Nasumice",
     "mobile-frontend-regular-site": "Desktop prikaz",
     "mobile-frontend-save-settings": "Sačuvaj",

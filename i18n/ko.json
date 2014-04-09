@@ -12,7 +12,8 @@
             "Priviet",
             "SEVEREN",
             "관인생략",
-            "아라"
+            "아라",
+            "Keysuck"
         ]
     },
     "abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -91,6 +92,7 @@
     "mobile-frontend-editor-unavailable-header": "편집기를 사용할 수 없음",
     "mobile-frontend-editor-undo-unsupported": "되돌리기는 현재 모바일 장치에서 지원하지 않습니다.",
     "mobile-frontend-editor-viewing-source-page": "<span>$1</span> <strong>문서의 원본을 보는 중</strong>",
+    "mobile-frontend-editor-visual-editor": "영상 편집기",
     "mobile-frontend-editor-wait": "편집을 저장하고 있습니다, 기다려주세요.",
     "mobile-frontend-enable-images": "그림을 표시하도록 설정",
     "mobile-frontend-expand-sections-description": "새 문서를 탐색할 때 항상 모든 문단 확장하기",
