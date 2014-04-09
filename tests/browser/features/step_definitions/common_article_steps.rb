@@ -1,3 +1,7 @@
+Then(/^I click on the page$/) do
+  on(ArticlePage).content_wrapper_element.click
+end
+
 Then /^I should see the edit icon$/ do
   on(ArticlePage).edit_button_holder_element.when_present.should be_visible
 end
