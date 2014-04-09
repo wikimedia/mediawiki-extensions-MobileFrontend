@@ -2,8 +2,8 @@
 Feature: VisualEditor
 
 Background:
-  Given I am in alpha mode
-    And I am logged into the mobile website
+  Given I am logged into the mobile website
+    And I am in alpha mode
 
 Scenario: Switch from VisualEditor to source editor
   Given I am on the "Selenium Edit Test" page

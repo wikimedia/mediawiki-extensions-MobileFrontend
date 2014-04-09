@@ -13,8 +13,8 @@ Scenario: Page loads without ajax in stable
 
 # In alpha mode pages are loaded via JavaScript and ajax.
 Scenario: Edit button updates when lazy load a page from search
-  Given I am in alpha mode
-    And I am logged in as a new user
+  Given I am logged in as a new user
+    And I am in alpha mode
     And I visit a protected page
     And I click the placeholder search box
     And I type into search box "Foo bar"
