@@ -16,6 +16,24 @@
       "revId": "42146bfeacba0c23793e4e4be79c8d73494b4bdc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_51922c58",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T17:18:09Z",
+      "side": 1,
+      "message": "Not documented and not used anywhere else which caused \"Anonymous user\" to never be displayed. Will fix.",
+      "parentUuid": "8e23439c_d133dcf1",
+      "revId": "42146bfeacba0c23793e4e4be79c8d73494b4bdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
