@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_aba0f23e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T01:12:01Z",
+      "side": 1,
+      "message": "That\u0027s fishy. We assign something that has a CSS class \".primary-button\" to something called \"secondaryButton\".",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8bac1634",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T01:12:01Z",
+      "side": 1,
+      "message": "Why is this not in the template?",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_0b6806f1",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T01:12:01Z",
+      "side": 1,
+      "message": "Why? If we use anything else than strong or span in an overlay header, things will break.",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_eb6caa07",
+        "filename": "less/common/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T01:12:01Z",
+      "side": 1,
+      "message": "FIXME",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_cb48ce8e",
+        "filename": "less/common/uiNew.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T01:12:01Z",
+      "side": 1,
+      "message": "Can you be more specific?",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_0b36c600",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-09T01:12:01Z",
+      "side": 1,
+      "message": "Why are those styles needed? Can\u0027t we reuse progressive button\u0027s styling?",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
