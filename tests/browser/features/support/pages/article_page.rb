@@ -142,4 +142,8 @@ class ArticlePage
   # references
   a(:reference, css: "sup.reference a")
   a(:reference_drawer, css: ".drawer.references")
+
+  # sections
+  h2(:first_section, css: ".section_heading")
+  div(:first_section_content, id: "content_block_0")
 end
