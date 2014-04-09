@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_1128342e",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-09T17:09:14Z",
+      "side": 1,
+      "message": "Can we rename this to I click on the lead photo upload button ?\nIt\u0027s too similar to I click on \"Upload\" in the main navigation menu\u0027",
+      "revId": "005104e425a98b4164fdf8b35fef339e4afe489b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_31233056",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-09T17:09:14Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "005104e425a98b4164fdf8b35fef339e4afe489b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
