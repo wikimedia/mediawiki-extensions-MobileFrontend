@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_d133dcf1",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-09T16:44:47Z",
+      "side": 1,
+      "message": "I suspect this change is what makes all my contributions on Special:Contributions/jdlrobson be credited to anonymous.\n\n(Although I see isAnon was not documented)",
+      "revId": "42146bfeacba0c23793e4e4be79c8d73494b4bdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
