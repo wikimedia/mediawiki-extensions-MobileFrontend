@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_6e1785a9",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-09T16:07:43Z",
+      "side": 1,
+      "message": "Agreed, but what would you suggest instead? I think the secondaryButton template variable is badly named. It should be primary-button-two.\n\nIs it worth changing all instances of this in the process?",
+      "parentUuid": "8e23439c_aba0f23e",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_8bac1634",
         "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_2e118db1",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-09T16:07:43Z",
+      "side": 1,
+      "message": "I thought this was less ugly as putting it in the template would add those horrible isBeta tags or I\u0027d have to clone the template. An alternative way would be to have A FIXME. I think on long term it should be in the template but whilst we are in this beta/stable situation no way seems elegant. Which do you prefer?",
+      "parentUuid": "8e23439c_8bac1634",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_0b6806f1",
         "filename": "less/common/OverlayNew.less",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2014-04-09T01:12:01Z",
       "side": 1,
       "message": "Why? If we use anything else than strong or span in an overlay header, things will break.",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_0e16d1a9",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-09T16:07:43Z",
+      "side": 1,
+      "message": "Do we have any use cases? The problem with the * selector is it wasn\u0027t clear what it was targeting. I tested all the existing overlays and all seemed to be using the strong tag.\n\nThe * is overly specific and must go regardless otherwise we will end up with a bunch of resets.",
+      "parentUuid": "8e23439c_0b6806f1",
       "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -98,6 +152,24 @@
       "writtenOn": "2014-04-09T01:12:01Z",
       "side": 1,
       "message": "Why are those styles needed? Can\u0027t we reuse progressive button\u0027s styling?",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_ae247d08",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-09T16:07:43Z",
+      "side": 1,
+      "message": "I\u0027m not sure I follow. This isn\u0027t a progressive button. In fact in the notification overlay if we want to be completely semantic it\u0027s not even a button it\u0027s an icon :)",
+      "parentUuid": "8e23439c_0b36c600",
       "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
