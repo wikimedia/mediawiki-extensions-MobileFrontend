@@ -39,3 +39,12 @@ Given(/^the page "(.*?)" exists$/) do |title|
   on(APIPage).create title, 'Test is used by Selenium web driver'
   step 'I am on the "' + title + '" page'
 end
+
+Given(/^I go to a page that has languages$/) do
+  wikitext = 'This page is used by Selenium to test language related features.
+
+[[es:Selenium language test page]]'
+
+  on(APIPage).create "Selenium language test page", wikitext
+  step 'I am on the "Selenium language test page" page'
+end

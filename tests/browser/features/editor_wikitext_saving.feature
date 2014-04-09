@@ -17,7 +17,7 @@ Feature: Wikitext Editor (Makes actual saves)
       And I do not see the read in another language button
 
   Scenario: Successful edit reloads language button
-    And I am on the "San Francisco" page
+    And I go to a page that has languages
     And I see the read in another language button
     When I click the edit button
       And I see the wikitext editor overlay
