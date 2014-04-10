@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_e4f046c6",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-10T21:55:21Z",
+      "side": 1,
+      "message": "We have multiple headers though so I think maybe .main-header-button - hope that works for you..?!",
+      "parentUuid": "8e23439c_74850b9f",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_8bac1634",
         "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
         "patchSetId": 3
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "A FIXME is fine.",
       "parentUuid": "8e23439c_2e118db1",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_c4bf8acc",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-10T21:55:21Z",
+      "side": 1,
+      "message": "Done. Also wrapped in isBetaGroupMember call as i messed up there.",
+      "parentUuid": "8e23439c_54820f98",
       "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -161,6 +197,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_a4c24e5b",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-10T21:55:21Z",
+      "side": 1,
+      "message": "Oh wait.. my bad. Originally I was trying to use the template and style it differently. Then I changed my approach (this is why I hack it in https://gerrit.wikimedia.org/r/#/c/124027/3/javascripts/modules/notifications/NotificationsOverlay.js) so this is no longer relevant. Sorry for confusion.",
+      "parentUuid": "8e23439c_f448fb8d",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_eb6caa07",
         "filename": "less/common/ui.less",
         "patchSetId": 3
@@ -178,6 +232,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_84b992e8",
+        "filename": "less/common/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-10T21:55:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_eb6caa07",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_cb48ce8e",
         "filename": "less/common/uiNew.less",
         "patchSetId": 3
@@ -189,6 +261,24 @@
       "writtenOn": "2014-04-09T01:12:01Z",
       "side": 1,
       "message": "Can you be more specific?",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_04a462ae",
+        "filename": "less/common/uiNew.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-10T21:55:21Z",
+      "side": 1,
+      "message": "Mm. Good point. I don\u0027t see why this is needed any more. I think my refactor must have alleviated this issue so removing.",
+      "parentUuid": "8e23439c_cb48ce8e",
       "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
