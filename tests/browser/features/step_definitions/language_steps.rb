@@ -17,3 +17,7 @@ end
 Then(/^I don't see the languages overlay$/) do
   on(ArticlePage).overlay_languages_element.should_not be_visible
 end
+
+Then(/^I do not see the read in another language button$/) do
+  on(ArticlePage).language_button_element.should_not be_visible
+end
