@@ -146,4 +146,7 @@ class ArticlePage
   # sections
   h2(:first_section, css: ".section_heading")
   div(:first_section_content, id: "content_block_0")
+
+  # issues
+  a(:issues_stamp, css:".mw-mf-cleanup")
 end
