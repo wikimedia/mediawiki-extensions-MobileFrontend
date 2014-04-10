@@ -5,6 +5,10 @@
         ]
     },
     "mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
+    "mobile-frontend-editor-licensing": "By saving changes, you agree to release your contribution under the $1 licence.",
+    "mobile-frontend-editor-licensing-with-terms": "By saving changes, you agree to the $1 and agree to release your contribution under the $2 licence.",
     "mobile-frontend-media-license-link": "Licence information",
+    "mobile-frontend-photo-licensing": "By uploading this image, you agree to release your image under the $1 licence.",
+    "mobile-frontend-photo-licensing-with-terms": "By uploading this image, you agree to the $1 and agree to release your image under the $2 licence.",
     "mobile-frontend-settings-description": "Customise your experience on your mobile device with these mobile specific site settings."
 }

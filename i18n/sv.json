@@ -10,7 +10,8 @@
             "MaxSem",
             "McDutchie",
             "Skalman",
-            "WikiPhoenix"
+            "WikiPhoenix",
+            "Hangsna"
         ]
     },
     "abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
@@ -316,7 +317,7 @@
     "mobile-frontend-watchlist-signup-action": "Registrera dig för att starta en nu.",
     "mobile-frontend-watchlist-view": "Visa din bevakningslista",
     "mobilefrontend-keepgoing-ask": "Bra jobbat! Du börjar får kläm på detta! Vill du prova att redigera en annan sida?",
-    "mobilefrontend-keepgoing-ask-first": "Grattis för din försa redigering! Vill du prova att redigera en annan sida?",
+    "mobilefrontend-keepgoing-ask-first": "Grattis till din första redigering! Vill du prova att redigera en annan sida?",
     "mobilefrontend-keepgoing-cancel": "Nej tack",
     "mobilefrontend-keepgoing-explain": "Jättebra! En annan användare sa att denna sida behöver hjälp. Prova den här, eller prova en annan.",
     "mobilefrontend-keepgoing-links-ask-again": "Fixa en annan sida?",
