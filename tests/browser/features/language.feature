@@ -15,5 +15,6 @@ Feature: Language selection
     Then I don't see the languages overlay
 
   Scenario: Closing language overlay (browser button)
+    And I see the language overlay
     When I click the browser back button
     Then I don't see the languages overlay
