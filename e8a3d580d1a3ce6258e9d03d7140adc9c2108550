@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_af5fd443",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-10T00:48:41Z",
+      "side": 1,
+      "message": "I clicked on history link and EL logged lastmodified-profile so this doesn\u0027t work.",
+      "revId": "e8a3d580d1a3ce6258e9d03d7140adc9c2108550",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_cf621006",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-10T00:48:41Z",
+      "side": 1,
+      "message": "This is not reliable. We don\u0027t load click tracking code on desktop and this link leads to desktop. So this will get logged only if the user goes back to mobile (and we don\u0027t know how often this happens)...",
+      "revId": "e8a3d580d1a3ce6258e9d03d7140adc9c2108550",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
