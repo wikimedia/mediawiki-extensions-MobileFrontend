@@ -123,7 +123,7 @@
 					mw.loader.using( 'mobile.special.nearby.beta', function() {
 						loader.hide();
 						// FIXME: [API] should be able to determine longitude/latitude from title
-						window.location.hash = '#preview/' + self.source + '/' + $a.data( 'latlng' ) + '/' + $a.find( 'h2' ).text();
+						window.location.hash = '#preview/' + self.source + '/' + $a.data( 'latlng' ) + '/' + $a.data( 'title' );
 					} );
 				}
 			} );
