@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_74850b9f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-10T17:31:39Z",
+      "side": 1,
+      "message": "I\u0027d keep secondary button. How about .header-button instead of .primary-button?",
+      "parentUuid": "8e23439c_6e1785a9",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_8bac1634",
         "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
         "patchSetId": 3
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_54820f98",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-10T17:31:39Z",
+      "side": 1,
+      "message": "A FIXME is fine.",
+      "parentUuid": "8e23439c_2e118db1",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_0b6806f1",
         "filename": "less/common/OverlayNew.less",
         "patchSetId": 3
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "Do we have any use cases? The problem with the * selector is it wasn\u0027t clear what it was targeting. I tested all the existing overlays and all seemed to be using the strong tag.\n\nThe * is overly specific and must go regardless otherwise we will end up with a bunch of resets.",
       "parentUuid": "8e23439c_0b6806f1",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_f448fb8d",
+        "filename": "less/common/OverlayNew.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-10T17:31:39Z",
+      "side": 1,
+      "message": "Why resets? It\u0027s targetting only direct children of h2 inside of .overlay-header.",
+      "parentUuid": "8e23439c_0e16d1a9",
       "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -170,6 +224,24 @@
       "side": 1,
       "message": "I\u0027m not sure I follow. This isn\u0027t a progressive button. In fact in the notification overlay if we want to be completely semantic it\u0027s not even a button it\u0027s an icon :)",
       "parentUuid": "8e23439c_0b36c600",
+      "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_b4628304",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-10T17:31:39Z",
+      "side": 1,
+      "message": "Not sure anymore what I meant here ;)",
+      "parentUuid": "8e23439c_ae247d08",
       "revId": "284ed7b6d1b43bb2937993df70ab8fffc81038e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
