@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_27264012",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T00:17:38Z",
+      "side": 1,
+      "message": "Let\u0027s store this color somewhere. Exactly the same value is used in SearchOverlay.less.",
+      "revId": "b78cd0eed90a50531b0e9f621329ae31ef46664c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
