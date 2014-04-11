@@ -5,6 +5,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	protected $specialPageName = 'Contributions';
 	/**  @var User */
 	protected $user;
+	/**  @var MWTimestamp */
+	protected $lastDate;
 
 	public function executeWhenAvailable( $par = '' ) {
 		wfProfileIn( __METHOD__ );
@@ -12,8 +14,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 			// enter article history view
 			$this->user = User::newFromName( $par );
 			if ( $this->user && $this->user->idForName() ) {
-				$this->renderHeaderBar( $this->msg( 'mobile-frontend-contribution-summary',
-					$this->user->getName() ), true );
+				$this->renderHeaderBar( $this->user->getUserPage() );
 				$res = $this->doQuery();
 				$this->showHistory( $res );
 				wfProfileOut( __METHOD__ );
@@ -36,11 +37,11 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	}
 
 	protected function renderFeedItemHtml( $ts, $diffLink ='', $username = '',
-		$comment = '', $title = false, $isAnon = false
+		$comment = '', $title = false, $isAnon = false, $bytes = 0
 	) {
 		// Stop username from being rendered
 		$username = false;
-		parent::renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title );
+		parent::renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, false, $bytes );
 	}
 
 }

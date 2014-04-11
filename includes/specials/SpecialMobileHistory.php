@@ -33,18 +33,15 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Adds HTML to render a header at the top of the feed
-	 * @param {Message} msg: A message to print in the header bar
-	 * @param {boolean} parse: Whether to parse the message or to escape it (defaults to escape)
-	 *
-	 * @return Array: List of conditions
+	 * @param {Title} title: The page to link to
 	 */
-	protected function renderHeaderBar( $msg, $parse=false ) {
-		$msg = $parse ? $msg->parse() : $msg->escaped();
+	protected function renderHeaderBar( $title ) {
 		$this->getOutput()->addHtml(
-			Html::openElement( 'div', array( 'class' => 'page-header-bar' ) ) .
-			Html::openElement( 'div' ) .
-			$msg .
-			Html::closeElement( 'div' ) .
+			Html::openElement( 'div', array( 'class' => 'content-header' ) ) .
+			Html::openElement( 'h2', array() ) .
+				Html::element( 'a', array( 'href' => $title->getLocalUrl() ),
+					$title->getText() ) .
+				Html::closeElement( 'h2' ) .
 			Html::closeElement( 'div' )
 		);
 	}
@@ -65,10 +62,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
-				$this->renderHeaderBar(
-					$this->msg( 'mobile-frontend-history-summary', $this->title->getText() ),
-					true
-				);
+				$this->renderHeaderBar( $this->title );
 				$res = $this->doQuery();
 				$this->showHistory( $res );
 				wfProfileOut( __METHOD__ );
@@ -111,9 +105,11 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$user = $this->getUser();
 		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
 		if ( $userId === 0 ) {
-			$username = '';
+			$username = IP::prettifyIP( $rev->getRawUserText() );
+			$isAnon = true;
 		} else {
 			$username = $rev->getUserText( Revision::FOR_THIS_USER, $user );
+			$isAnon = false;
 		}
 
 		// FIXME: Style differently user comment when this is the case
@@ -124,7 +120,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$comment = $this->msg( 'rev-deleted-comment' )->plain();
 		}
 
-		$ts = new MWTimestamp( $rev->getTimestamp() );
+		$ts = $rev->getTimestamp();
+		$this->renderListHeaderWhereNeeded( $this->getLanguage()->userDate( $ts, $this->getUser() ) );
+		$ts = new MWTimestamp( $ts );
 
 		$canSeeText = $rev->userCan( Revision::DELETED_TEXT, $user );
 		if ( $canSeeText && $prev && $prev->userCan( Revision::DELETED_TEXT, $user ) ) {
@@ -146,7 +144,12 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		} else {
 			$title = $rev->getTitle();
 		}
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title );
+		$bytes = $rev->getSize();
+		if ( $prev ) {
+			$bytes -= $prev->getSize();
+		}
+		// FIXME: When this function changes name to renderFeedItemHtml make sure you change it here too
+		$this->renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes );
 
 		wfProfileOut( __METHOD__ );
 	}
@@ -169,13 +172,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$rev1 = $rev2 = null;
 		$out = $this->getOutput();
 		if ( $numRows > 0 ) {
-			$out->addHtml(
-				Html::openElement( 'ul',
-					array(
-						'class' => 'page-list'
-					)
-				)
-			);
 
 			foreach ( $res as $row ) {
 				$rev1 = new Revision( $row );

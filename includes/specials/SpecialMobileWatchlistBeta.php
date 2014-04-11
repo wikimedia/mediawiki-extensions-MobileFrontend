@@ -29,18 +29,7 @@ class SpecialMobileWatchlistBeta extends SpecialMobileWatchlist {
 		$lang = $this->getLanguage();
 
 		$date = $lang->userDate( $row->rc_timestamp, $user );
-
-		if ( !isset( $this->lastDate ) || $date !== $this->lastDate ) {
-			if ( isset( $this->lastDate ) ) {
-				$output->addHtml(
-					Html::closeElement( 'ul' )
-				);
-			}
-			$output->addHtml(
-				Html::element( 'h2', array( 'class' => 'list-header' ), $date ) .
-				Html::openElement( 'ul', array( 'class' => 'page-list side-list' ) )
-			);
-		}
+		$this->renderListHeaderWhereNeeded( $date );
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
 		$comment = $this->formatComment( $row->rc_comment, $title );
@@ -61,66 +50,12 @@ class SpecialMobileWatchlistBeta extends SpecialMobileWatchlist {
 		}
 
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes );
-
-		$this->lastDate = $date;
 		wfProfileOut( __METHOD__ );
 	}
 
 	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
 		$title = false, $isAnon = false, $bytes = 0 ) {
-
-		wfProfileIn( __METHOD__ );
-		$output = $this->getOutput();
-		$user = $this->getUser();
-		$lang = $this->getLanguage();
-
-		if ( $isAnon ) {
-			$usernameClass = 'mw-mf-user mw-mf-anon';
-		} else {
-			$usernameClass = 'mw-mf-user';
-		}
-
-		$formattedBytes = $lang->formatNum( $bytes );
-		if ( $bytes > 0 ) {
-			$formattedBytes = '+' . $formattedBytes;
-			$bytesClass = 'mw-mf-bytesadded';
-		} else {
-			$bytesClass = 'mw-mf-bytesremoved';
-		}
-
-		$html = Html::openElement( 'li' );
-
-		if ( $diffLink ) {
-			$html .= Html::openElement( 'a', array( 'href' => $diffLink, 'class' => 'title' ) );
-		} else {
-			$html .= Html::openElement( 'div', array( 'class' => 'title' ) );
-		}
-
-		if ( $title ) {
-			$html .= Html::element( 'h3', array(), $title->getPrefixedText() );
-		}
-
-		$html .= Html::element( 'p', array( 'class' => $usernameClass ), $username ) .
-			Html::element(
-				'p', array( 'class' => 'component truncated-text multi-line two-line' ), $comment
-			) .
-			Html::openElement( 'div', array( 'class' => 'listThumb' ) ) .
-			Html::element( 'p', null, $lang->userTime( $ts, $user ) );
-
-		if ( $bytes !== 0 ) {
-			$html .= Html::element( 'p', array( 'class' => $bytesClass ), $formattedBytes );
-		}
-
-		$html .= Html::closeElement( 'div' );
-
-		if ( $diffLink ) {
-			$html .= Html::closeElement( 'a' );
-		} else {
-			$html .= Html::closeElement( 'div' );
-		}
-		$html .= Html::closeElement( 'li' );
-
-		$output->addHtml( $html );
-		wfProfileOut( __METHOD__ );
+			$this->renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment,
+				$title, $isAnon, $bytes );
 	}
 }
