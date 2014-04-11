@@ -85,6 +85,40 @@
       "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_47637c0a",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T00:44:12Z",
+      "side": 1,
+      "message": "When do we report \"error\"?",
+      "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_67431868",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T00:44:12Z",
+      "side": 1,
+      "message": "Why aren\u0027t those bool values which default to no value (null)?",
+      "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
