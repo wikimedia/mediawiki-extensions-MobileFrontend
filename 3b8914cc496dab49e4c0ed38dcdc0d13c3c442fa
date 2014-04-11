@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_5bc7d44a",
+        "filename": "tests/browser/features/editor_wikitext_saving.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T22:15:13Z",
+      "side": 1,
+      "message": "Not anymore? Or?",
+      "revId": "3b8914cc496dab49e4c0ed38dcdc0d13c3c442fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_7bb050d8",
+        "filename": "tests/browser/features/editor_wikitext_saving.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T22:15:13Z",
+      "side": 1,
+      "message": "Cucumber says this step doesn\u0027t exist.",
+      "revId": "3b8914cc496dab49e4c0ed38dcdc0d13c3c442fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
