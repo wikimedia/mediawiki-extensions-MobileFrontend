@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_fb6340a5",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T21:48:18Z",
+      "side": 1,
+      "message": "Although PHP doesn\u0027t seem to require this, I think it\u0027s a good idea to declare it at the top of the class as protected $lastDate (I know, I forgot to do it or worse, left $lastRow in watchlist\u0027s PHP).",
+      "revId": "13ce0a5c5fdfc0e55dcce51bffa14e383d66a9bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_7b41700d",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T21:48:18Z",
+      "side": 1,
+      "message": "This should show an IP. At least that\u0027s what Moiz/Kenan say. It looks weird having an icon without any label.",
+      "revId": "13ce0a5c5fdfc0e55dcce51bffa14e383d66a9bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_db5be4fb",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T21:48:18Z",
+      "side": 1,
+      "message": "Why don\u0027t we use *Beta version directly?",
+      "revId": "13ce0a5c5fdfc0e55dcce51bffa14e383d66a9bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_3b6ad87e",
+        "filename": "includes/specials/SpecialMobileWatchlistBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-11T21:48:18Z",
+      "side": 1,
+      "message": "Why not use it directly?",
+      "revId": "13ce0a5c5fdfc0e55dcce51bffa14e383d66a9bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
