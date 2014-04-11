@@ -39,7 +39,7 @@
 			loadModuleScript( 'mobile.notifications.overlay' ).done( function() {
 				var NotificationsOverlay = M.require( 'modules/notifications/NotificationsOverlay' );
 				result.resolve(
-					new NotificationsOverlay( { $badge: $btn, count: $btn.find( 'span' ).text() } )
+					new NotificationsOverlay( { $badge: $btn, count: parseInt( $btn.find( 'span' ).text(), 10 ) } )
 				);
 			} );
 
