@@ -3,8 +3,9 @@
  * with the Toast notifications defined by common/toast.js.
  */
 ( function( M, $ ) {
-	var LoadingOverlay = M.require( 'LoadingOverlayNew' ),
-		mainmenu = M.require( 'mainmenu' );
+	var
+		mainmenu = M.require( 'mainmenu' ),
+		$btn = $( '#secondary-button.user-button' );
 
 	/**
 	 * Loads a ResourceLoader module script. Shows ajax loader whilst loading.
@@ -14,12 +15,11 @@
 	 * @returns {jQuery.Deferred}
 	*/
 	function loadModuleScript( moduleName ) {
-		var d = $.Deferred(),
-			loadingOverlay = new LoadingOverlay();
-		loadingOverlay.$el.addClass( 'navigation-drawer' );
-		loadingOverlay.show();
+		var d = $.Deferred();
+
+		$btn.addClass( 'loading' );
 		mw.loader.using( moduleName, function() {
-			loadingOverlay.hide();
+			$btn.removeClass( 'loading' );
 			d.resolve();
 		} );
 		return d;
@@ -28,8 +28,8 @@
 	// Once the DOM is loaded hijack the notifications button to display an overlay rather
 	// than linking to Special:Notifications.
 	$( function () {
-		var $btn = $( '#secondary-button.user-button' ).on( M.tapEvent( 'click' ), function() {
-			window.location.hash = M.isBetaGroupMember() && M.isWideScreen() ? '#/notifications-drawer' : '#/notifications';
+		$btn.on( M.tapEvent( 'click' ), function() {
+			M.router.navigate( M.isBetaGroupMember() ? '#/notifications-drawer' : '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay
 			return false;
@@ -49,14 +49,17 @@
 		M.overlayManager.add( /^\/notifications$/, loadNotificationOverlay );
 		if ( M.isBetaGroupMember() ) {
 			M.overlayManager.add( /^\/notifications-drawer$/, function() {
-				mainmenu.openNavigationDrawer( 'secondary' );
-				$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ), function() {
-					mainmenu.closeNavigationDrawers();
-					window.location.hash = '';
-				} );
 				return loadNotificationOverlay().done( function( overlay ) {
+					mainmenu.openNavigationDrawer( 'secondary' );
 					overlay.$el.addClass( 'navigation-drawer' );
-					overlay.on( 'hide', mainmenu.closeNavigationDrawers );
+					overlay.on( 'hide', function() {
+						mainmenu.closeNavigationDrawers();
+						$( '#mw-mf-page-center' ).off( '.secondary' );
+					});
+
+					$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.secondary', function() {
+						M.router.back();
+					} );
 				} );
 			} );
 		}

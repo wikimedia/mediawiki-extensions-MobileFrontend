@@ -1,7 +1,11 @@
 (function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' );
 
-	QUnit.module( 'MobileFrontend: Overlay.js' );
+	QUnit.module( 'MobileFrontend: Overlay.js', {
+		setup: function() {
+			this.clock = this.sandbox.useFakeTimers();
+		}
+	} );
 
 	QUnit.test( 'Simple overlay', 1, function () {
 		var overlay = new Overlay( { heading: '<h2>Title</h2>', content: 'Text' } );
@@ -27,6 +31,7 @@
 		var overlay = new Overlay( { heading: '<h2>Title</h2>', content: 'Text' } );
 		overlay.show();
 		overlay.hide();
+		this.clock.tick( 1000 );
 		strictEqual( overlay.$el[0].parentNode, null, 'No longer in DOM' );
 	} );
 
@@ -36,6 +41,7 @@
 				parent: overlay } );
 		overlay.show();
 		overlayTwo.show();
+		this.clock.tick( 1000 );
 		strictEqual( $( 'html' ).hasClass( 'overlay-enabled' ), true, 'In overlay mode' );
 		strictEqual( overlayTwo.$el.is( ':visible' ), true,
 			'The second overlay is the active one' );
@@ -44,6 +50,7 @@
 
 		// now close the top stacked one...
 		overlayTwo.$( '.cancel' ).trigger( 'tap' );
+		this.clock.tick( 1000 );
 		strictEqual( overlayTwo.$el[0].parentNode, null, 'No longer in DOM' );
 		strictEqual( overlay.$el[0].parentNode, $( '#mw-mf-viewport' )[0], 'Still in DOM' );
 		strictEqual( $( 'html' ).hasClass( 'overlay-enabled' ), true, 'Still in overlay mode' );

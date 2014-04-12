@@ -9,8 +9,8 @@
 	// Upload Tutorial
 	M.overlayManager.add( /^\/upload-tutorial\/?(.*)$/, function( funnel ) {
 		var result = $.Deferred();
-		// FIXME: Use loadModuleScript function in notifications.js so that this shows a loader
-		// or make showing a loader part of OverlayManager
+		// FIXME: find a generic way of showing loading (make showing a loader
+		// part of OverlayManager?)
 		mw.loader.using( 'mobile.uploads', function() {
 			var UploadTutorialNew = M.require( 'modules/uploads/UploadTutorial' );
 			result.resolve( new UploadTutorialNew( { funnel: funnel || null } ) );
@@ -21,8 +21,8 @@
 	// Upload Preview
 	M.overlayManager.add( /^\/upload-preview\/?(.*)$/, function( funnel ) {
 		var result = $.Deferred();
-		// FIXME: Use loadModuleScript function in notifications.js so that this shows a loader
-		// or make showing a loader part of OverlayManager
+		// FIXME: find a generic way of showing loading (make showing a loader
+		// part of OverlayManager?)
 		mw.loader.using( 'mobile.uploads', function() {
 			var PhotoUploadOverlay = M.require( 'modules/uploads/PhotoUploadOverlay' );
 			result.resolve( new PhotoUploadOverlay( {

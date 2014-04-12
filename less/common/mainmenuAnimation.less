@@ -4,18 +4,38 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+@duration: .25s;
+@easing: ease-out;
 
-@duration: .1s;
-
-.animations .alpha {
+.animations .alpha,
+.animations .beta {
 	#mw-mf-page-center {
 		// *2 to avoid weird glitch of left nav flickering after closing
-		@transition: @duration, height 0s (@duration*2);
+		@transition: @duration @easing, height 0s (@duration*2);
 		.transition-transform(@transition);
 	}
 
 	#mw-mf-page-left {
 		.transition(visibility 0s @duration);
+	}
+
+	.notifications-overlay.navigation-drawer {
+		display: block;
+
+		// +2% to accommodate for the border/box-shadow
+		.transform(translate3d(102%, 0, 0));
+		.transition-transform(@duration @easing);
+
+		&.visible {
+			.transform(translate3d(0, 0, 0));
+		}
+	}
+
+	&.navigation-enabled {
+		.position-fixed,
+		#mw-mf-page-center {
+			.transition-transform(@duration @easing);
+		}
 	}
 
 	&.primary-navigation-enabled {
@@ -24,20 +44,43 @@
 			// override non-animated version
 			left: 0 !important;
 			.transform(translate3d(@menuWidth, 0, 0));
-			.transition-transform(@duration);
 		}
 
 		#mw-mf-page-left {
 			.transition(none);
 		}
 	}
-}
 
-.animations .alpha.rtl {
-	&.primary-navigation-enabled {
-		.position-fixed,
+	&.secondary-navigation-enabled {
 		#mw-mf-page-center {
-			.transform(translate3d(-@menuWidth, 0, 0));
+			// override non-animated version
+			left: 0 !important;
+			.transform(translate3d(-@rightDrawerWidth, 0, 0));
+			width: 100%;
+		}
+	}
+
+	&.rtl {
+		.notifications-overlay.navigation-drawer {
+			// +2% to accommodate for the border/box-shadow
+			.transform(translate3d(-102%, 0, 0));
+
+			&.visible {
+				.transform(translate3d(0, 0, 0));
+			}
+		}
+
+		&.primary-navigation-enabled {
+			.position-fixed,
+			#mw-mf-page-center {
+				.transform(translate3d(-@menuWidth, 0, 0));
+			}
+		}
+
+		&.secondary-navigation-enabled {
+			#mw-mf-page-center {
+				.transform(translate3d(@rightDrawerWidth, 0, 0));
+			}
 		}
 	}
 }

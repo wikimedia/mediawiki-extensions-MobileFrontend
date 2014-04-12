@@ -471,6 +471,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'less/modules/talk.less',
 			'less/modules/mediaViewer.less',
+			'less/common/mainmenuAnimation.less',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
@@ -586,9 +587,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for random.js
 			'mobilefrontend-random-explain',
 			'mobilefrontend-random-cancel',
-		),
-		'styles' => array(
-			'less/common/mainmenuAnimation.less',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-translator.js',

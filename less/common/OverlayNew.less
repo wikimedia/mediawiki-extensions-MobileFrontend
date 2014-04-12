@@ -99,6 +99,11 @@
 	z-index: 4;
 	.box-sizing(border-box);
 	padding-top: @headerHeight;
+	display: none;
+
+	&.visible {
+		display: block;
+	}
 
 	.overlay-header {
 		display: table;

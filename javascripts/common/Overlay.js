@@ -61,7 +61,7 @@ var View = M.require( 'View' ),
 				if ( self.closeOnBack ) {
 					window.history.back();
 				} else if ( self.hide() ) {
-					self.emit( 'hide' );
+					self.emit( 'hide-button' );
 				}
 			} );
 			// stop clicks in the overlay from propagating to the page
@@ -111,6 +111,8 @@ var View = M.require( 'View' ),
 			if ( this.closeOnContentTap ) {
 				$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ), $.proxy( this, 'hide' ) );
 			}
+
+			this.$el.addClass( 'visible' );
 		},
 		/**
 		 * Detach the overlay from the current view
@@ -121,9 +123,10 @@ var View = M.require( 'View' ),
 		 * @return {boolean}: Whether the overlay was successfully hidden or not
 		 */
 		hide: function( force ) {
+			var self = this;
+
 			// FIXME: allow zooming outside the overlay again
 			// M.unlockViewport();
-			this.$el.detach();
 			// FIXME: remove when OverlayManager used everywhere
 			if ( this.parent ) {
 				this.parent.show();
@@ -132,6 +135,15 @@ var View = M.require( 'View' ),
 				// return to last known scroll position
 				window.scrollTo( document.body.scrollLeft, this.scrollTop );
 			}
+
+			this.$el.removeClass( 'visible' );
+			// give time for animations to finish
+			setTimeout(function() {
+				self.$el.detach();
+			}, 1000 );
+
+			this.emit( 'hide' );
+
 			return true;
 		}
 	} );

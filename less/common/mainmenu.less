@@ -31,6 +31,15 @@
 	display: none; /* JS only */
 }
 
+// needs to be more specific than .overlay rules
+.notifications-overlay.navigation-drawer {
+	right: 0;
+
+	height: 100%;
+	width: auto;
+	box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
 #mw-mf-page-left ul {
 	background-color: @mainMenuBackgroundColor;
 	list-style: none;
@@ -148,7 +157,6 @@
 body.navigation-enabled {
 
 	#mw-mf-viewport {
-		margin-left: -@menuBorder;
 		// disable horizontal scrolling
 		overflow: hidden;
 		// the two following properties are needed to override the height set
@@ -191,6 +199,10 @@ body.navigation-enabled {
 	border-left: solid @menuBorder @menuBorderColor;
 	background: @mainMenuBackgroundColor;
 
+	#mw-mf-viewport {
+		margin-left: -@menuBorder;
+	}
+
 	#mw-mf-page-left {
 		width: @menuWidth;
 	}
@@ -201,25 +213,23 @@ body.navigation-enabled {
 }
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	@rightDrawerWidth: 60%;
 	@rightDrawerLeftOffset: 100% - @rightDrawerWidth;
-	.beta.secondary-navigation-enabled,
-	.alpha.secondary-navigation-enabled {
+	.beta,
+	.alpha {
+		&.secondary-navigation-enabled {
+			.user-button {
+				display: none;
+			}
 
-		.navigation-drawer,
-		.position-fixed {
-			left: @rightDrawerLeftOffset !important;
-			right: 0;
+			#mw-mf-page-center {
+				left: -@rightDrawerWidth !important;
+				right: @rightDrawerWidth !important;
+				width: auto;
+			}
 		}
 
-		.user-button {
-			display: none;
-		}
-
-		#mw-mf-page-center {
-			left: -@rightDrawerWidth !important;
-			right: @rightDrawerWidth !important;
-			width: auto;
+		.notifications-overlay.navigation-drawer {
+			left: @rightDrawerLeftOffset;
 		}
 	}
 }
