@@ -51,6 +51,7 @@
 					ev.preventDefault();
 				}
 			} );
+			$( '<div class="transparent-shield">' ).appendTo( '#mw-mf-page-center' );
 		} else {
 			$( '#mw-mf-main-menu-button' ).click( function( ev ) {
 				if ( isOpen() ) {
