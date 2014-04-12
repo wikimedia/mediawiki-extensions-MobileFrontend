@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_debf52cc",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-12T00:21:01Z",
+      "side": 1,
+      "message": "I guess this could be a static method somewhere so anything an use it.. Where would make sense for this to live?",
+      "parentUuid": "8e23439c_6fe89c0b",
+      "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_ef85cc5b",
         "filename": "includes/specials/MobileSpecialPage.php",
         "patchSetId": 1
@@ -105,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_ded8725a",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-12T00:21:01Z",
+      "side": 1,
+      "message": "See below.",
+      "parentUuid": "8e23439c_47637c0a",
+      "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_67431868",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 1
@@ -116,6 +152,24 @@
       "writtenOn": "2014-04-11T00:44:12Z",
       "side": 1,
       "message": "Why aren\u0027t those bool values which default to no value (null)?",
+      "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_1ef6eac2",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-12T00:21:01Z",
+      "side": 1,
+      "message": "there are 3 states - change to no, no change, change to yes\nA boolean wouldn\u0027t tell us what the state was before.\nI welcome a better schema if you can think of one - this didn\u0027t quite seem right to me but i couldnt\u0027 find a nicer way.",
+      "parentUuid": "8e23439c_67431868",
       "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
