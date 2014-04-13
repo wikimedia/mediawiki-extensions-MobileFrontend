@@ -17,7 +17,8 @@
             "Sjoerddebruin",
             "Southparkfan",
             "User555",
-            "Wiki13"
+            "Wiki13",
+            "TheDJ"
         ]
     },
     "abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -147,7 +148,7 @@
     "mobile-frontend-last-modified-minutes": "{{PLURAL:$1|Eén minuut|$1 minuten}} geleden gewijzigd",
     "mobile-frontend-last-modified-months": "{{PLURAL:$1|Eén maand|$1 maanden}} geleden gewijzigd",
     "mobile-frontend-last-modified-seconds": "{{PLURAL:$1|Eén seconde|$1 seconden}} geleden gewijzigd",
-    "mobile-frontend-last-modified-with-user-days": "[$4 {{PLURAL:$3|Eén dag geleden|$3 dagen gelden|2=Eergisteren}} voor het laatst {{GENDER:$1|bewerkt}}] door {{PLURAL:$5|[$6 $2]|0=een anonieme gebruiker}}",
+    "mobile-frontend-last-modified-with-user-days": "[$4 {{PLURAL:$3|Eén dag geleden|$3 dagen geleden|2=Eergisteren}} voor het laatst {{GENDER:$1|bewerkt}}] door {{PLURAL:$5|[$6 $2]|0=een anonieme gebruiker}}",
     "mobile-frontend-last-modified-with-user-hours": "[$4 {{PLURAL:$3|Eén uur|$3 uur}} geleden voor het laatst {{GENDER:$1|bewerkt}}] door {{PLURAL:$5|[$6 $2]|0=een anonieme gebruiker}}",
     "mobile-frontend-last-modified-with-user-just-now": "[$3 Zojuist voor het laatst {{GENDER:$1|bewerkt}}] door {{PLURAL:$4|[$5 $2]|0=een anonieme gebruiker}}",
     "mobile-frontend-last-modified-with-user-minutes": "[$4 {{PLURAL:$3|Eén minuut|$3 minuten}} geleden voor het laatst {{GENDER:$1|bewerkt}}] door {{PLURAL:$5|[$6 $2]|0=een anonieme gebruiker}}",
