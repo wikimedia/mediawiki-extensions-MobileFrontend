@@ -134,7 +134,7 @@ class ArticlePage
   #footer
   a(:desktop_link, text: "Desktop")
   a(:terms_link, text: "Terms of use")
-  a(:license_link, href: "//creativecommons.org/licenses/by-sa/3.0/")
+  a(:license_link, css: ".footer-info-mobile-license a")
   a(:privacy_link, text: "Privacy")
 
   # pagelist
