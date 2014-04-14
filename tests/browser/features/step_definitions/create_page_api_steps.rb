@@ -40,6 +40,15 @@ Given(/^the page "(.*?)" exists$/) do |title|
   step 'I am on the "' + title + '" page'
 end
 
+Given(/^I am on a page with geodata$/) do
+  wikitext = 'This page is used by Selenium to test geo related features.
+
+{{#coordinates:43|-75|primary}}
+'
+  on(APIPage).create "Selenium geo test page", wikitext
+  step 'I am on the "Selenium geo test page" page'
+end
+
 Given(/^I go to a page that has languages$/) do
   wikitext = 'This page is used by Selenium to test language related features.
 

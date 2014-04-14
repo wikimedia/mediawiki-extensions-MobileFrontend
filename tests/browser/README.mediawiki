@@ -15,10 +15,6 @@ an edit count of greater than 0
 <pre>
 INSERT INTO interwiki (iw_prefix, iw_url, iw_local, iw_trans) VALUES ("es", "http://wikifoo.org/es/index.php/$1", 0, 0);
 </pre>
-* Ensure the page "New York" exists and has content:
-<pre>
-{{#coordinates:43|-75|primary}}
-</pre>
 * Ensure an article called "Foo bar" (without quotes) exists and is not protected
 * A "Diff test" page is used by the test suite thus cannot be used for another purpose.
 * Ensure there is a page called "Duel Masters" which has at least 2 sections and is editable by MEDIAWIKI_USER
@@ -37,7 +33,7 @@ Howdy 3.
 * In LocalSettings.php place the following code:
 <pre>
   $wgRightsUrl = '//creativecommons.org/licenses/by-sa/3.0/';
-  $wgMFNearbyEndpoint = 'https://en.m.wikipedia.org/w/api.php';
+  $wgMFNearbyEndpoint = 'https://en.m.wikipedia.org/w/api.php'; // required for nearby.feature
 </pre>
 * Make sure that $wgRightsPage is not set in LocalSettings.php
 
