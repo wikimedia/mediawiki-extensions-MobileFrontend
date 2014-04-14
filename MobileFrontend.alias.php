@@ -129,6 +129,7 @@ $specialPageAliases['et'] = array(
 /** Persian (فارسی) */
 $specialPageAliases['fa'] = array(
 	'History' => array( 'تاریخچه' ),
+	'MobileWebApp' => array( 'برنامه_وبی_گوشی_همراه' ),
 	'MobileOptions' => array( 'گزینه‌های_گوشی_همراه' ),
 	'Uploads' => array( 'بارگذاری‌ها' ),
 	'MobileDiff' => array( 'تفاوت_گوشی_همراه' ),

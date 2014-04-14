@@ -64,6 +64,7 @@
     "mobile-frontend-placeholder-alpha": "Recercar sus {{SITENAME}} (Experimental)",
     "mobile-frontend-placeholder-beta": "Recercar {{SITENAME}} (Bèta)",
     "mobile-frontend-privacy-link-text": "Confidencialitat",
+    "mobile-frontend-profile-last-thank": "{{GENDER:$2|Mercejat}} {{GENDER:$1|per}} [[Special:UserProfile/$1|$1]]",
     "mobile-frontend-random-button": "A l'azard",
     "mobile-frontend-regular-site": "Desactivar la version mobil",
     "mobile-frontend-search-submit": "Consultar",

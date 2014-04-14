@@ -4,6 +4,8 @@
             "Iltever"
         ]
     },
+    "beta-feature-geonotahack": "Бу бетни джууугъундагъыла",
+    "beta-feature-geonotahack-description": "Сиз бусагъатда окъуй тургъан бетге география халда джууукъ болгъан бетлени кёрюгюз.",
     "mobile-frontend-back-to-top-of-section": "Бир бёлюмге артха атла",
     "mobile-frontend-changeslist-ip": "Аноним",
     "mobile-frontend-clear-search": "Кетер",
@@ -12,10 +14,12 @@
     "mobile-frontend-diffview-anonymous": "Аноним",
     "mobile-frontend-disable-images": "Мобил сайтда суратла кёрюнмезча эт",
     "mobile-frontend-dismiss-notification": "бу билдириуню джашыр",
+    "mobile-frontend-editor-visual-editor": "Визуал редактор",
     "mobile-frontend-enable-images": "Мобил сайтда суратла кёрюнюрча эт",
     "mobile-frontend-featured-article": "Бюгюннгю сайланнган статья",
     "mobile-frontend-footer-contact": "Контакт информация",
     "mobile-frontend-footer-sitename": "{{SITENAME}}",
+    "mobile-frontend-geonotahack": "Бу бетни джууугъундагъыла",
     "mobile-frontend-home-button": "Юйге",
     "mobile-frontend-images-status": "Суратла",
     "mobile-frontend-language-article-heading": "Башха тилде окъу",
