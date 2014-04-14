@@ -34,3 +34,8 @@ Given(/^I am on a page which has cleanup templates$/) do
     on(APIPage).create "Selenium page issues test page", wikitext
     step 'I am on the "Selenium page issues test page" page'
 end
+
+Given(/^the page "(.*?)" exists$/) do |title|
+  on(APIPage).create title, 'Test is used by Selenium web driver'
+  step 'I am on the "' + title + '" page'
+end

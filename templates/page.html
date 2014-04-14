@@ -31,7 +31,9 @@
 	{{/hasLanguages}}
 	{{/inBetaOrAlpha}}
 	{{^inBetaOrAlpha}}
+	{{#hasLanguages}}
 	<a href="{{languageUrl}}" class="mw-ui-button mw-ui-progressive button languageSelector">{{languageLabel}}</a>
+	{{/hasLanguages}}
 	<a href="{{historyUrl}}" id="mw-mf-last-modified" data-timestamp="{{lastModifiedTimestamp}}"
 		data-user-name="{{lastModifiedUserName}}" data-user-gender="{{lastModifiedUserGender}}"
 		></a>
