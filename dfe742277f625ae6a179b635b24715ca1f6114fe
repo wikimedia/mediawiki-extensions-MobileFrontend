@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_d5f5e8b6",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-14T20:22:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_af3354f2",
+      "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_6f441c4b",
         "filename": "includes/specials/MobileSpecialPage.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-04-09T23:36:44Z",
       "side": 1,
       "message": "We generally use string/array/int, including this file.",
+      "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_75c2945e",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-14T20:22:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_6f441c4b",
       "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -100,6 +136,24 @@
       "writtenOn": "2014-04-09T23:36:44Z",
       "side": 1,
       "message": "Check for existence of the function being called instead.",
+      "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_15d36031",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-14T20:22:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_ef85cc5b",
       "revId": "dfe742277f625ae6a179b635b24715ca1f6114fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
