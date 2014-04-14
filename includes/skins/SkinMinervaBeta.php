@@ -111,11 +111,13 @@ class SkinMinervaBeta extends SkinMinerva {
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['mobile'][] = 'mobile.head.beta';
+		$modules['talk'] = array( 'mobile.talk' );
 		$modules['beta'] = array( 'mobile.beta' );
 		$modules['beta'][] = 'mobile.geonotahack';
 		$modules['toggling'] = array( 'mobile.toggling.beta' );
 		// turn off stable only modules
 		$modules['stableonly'] = array();
+		wfRunHooks( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 		return $modules;
 	}
 

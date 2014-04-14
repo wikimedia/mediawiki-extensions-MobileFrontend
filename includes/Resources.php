@@ -462,7 +462,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		)
 	),
 
-	'mobile.beta' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.talk' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta.common',
@@ -470,13 +470,29 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'styles' => array(
 			'less/modules/talk.less',
+		),
+		'scripts' => array(
+			'javascripts/modules/talk/talk.js',
+		),
+		'messages' => array(
+			// for talk.js
+			'mobile-frontend-talk-overlay-header',
+		),
+	),
+
+	'mobile.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			'mobile.beta.common',
+			'mobile.overlays',
+		),
+		'styles' => array(
 			'less/modules/mediaViewer.less',
 			'less/common/mainmenuAnimation.less',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
-			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/mediaViewer.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
 			'javascripts/modules/languages/preferred.js',
@@ -486,9 +502,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'position' => 'bottom',
 		'messages' => array(
-			// for talk.js
-			'mobile-frontend-talk-overlay-header',
-
 			// mediaViewer.js
 			'mobile-frontend-media-details',
 			'mobile-frontend-media-license-link',
@@ -529,9 +542,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.talk' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.talk.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.beta',
+			'mobile.talk',
 			'mobile.templates',
 		),
 		'scripts' => array(

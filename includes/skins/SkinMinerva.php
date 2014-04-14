@@ -725,6 +725,8 @@ class SkinMinerva extends SkinTemplate {
 			$modules['toggling'] = array( 'mobile.toggling' );
 			$modules['eventlogging'] = array( 'mobile.loggingSchemas' );
 		}
+		// FIXME: Upstream?
+		wfRunHooks( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 		return $modules;
 	}
 

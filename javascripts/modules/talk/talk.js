@@ -9,7 +9,7 @@
 
 		ev.preventDefault();
 		loadingOverlay.show();
-		mw.loader.using( 'mobile.talk', function() {
+		mw.loader.using( 'mobile.talk.common', function() {
 			var TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
 
 			loadingOverlay.hide();
