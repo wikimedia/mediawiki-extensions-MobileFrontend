@@ -3,7 +3,8 @@ Feature: Page diff
 
   Scenario: Added and removed content
     Given I am logged into the mobile website
-      And I am on the "Diff test" page
+      And the page "Selenium diff test" exists
+      And I am on the "Selenium diff test" page
     When I click the edit button
       And I clear the editor
       And I type "ABC DEF" into the editor
