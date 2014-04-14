@@ -16,16 +16,6 @@ INSERT INTO interwiki (iw_prefix, iw_url, iw_local, iw_trans) VALUES ("es", "htt
 </pre>
 * Ensure an article called "Foo bar" (without quotes) exists and is not protected
 * A "Diff test" page is used by the test suite thus cannot be used for another purpose.
-* Ensure there is a page called "Duel Masters" which has at least 2 sections and is editable by MEDIAWIKI_USER
-Sample content:
-<pre>
-== Section 1 ==
-Howdy.
-== Section 2 ==
-Howdy 2.
-== Section 3 ==
-Howdy 3.
-</pre>
 * Ensure there is a Barack Obama article
 ** and it is a protected page
 * Edit MediaWiki:mobile-frontend-terms-text with text 'Terms of use'

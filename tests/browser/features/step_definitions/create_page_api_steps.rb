@@ -17,6 +17,8 @@ end
 Given(/^I go to a page that has sections$/) do
   wikitext = "==Section 1==
 Hello world
+== Section 2 ==
+Section 2.
 "
 
   on(APIPage).create "Selenium section test page", wikitext

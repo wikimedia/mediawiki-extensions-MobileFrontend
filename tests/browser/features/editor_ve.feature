@@ -15,7 +15,7 @@ Scenario: Switch from VisualEditor to source editor
   Then I see the wikitext editor overlay
 
 Scenario: Ensure we load the correct section
-  Given I am on the "Duel Masters" page
+  Given I go to a page that has sections
   When I click the edit button for section 1
   Then I see the VisualEditor overlay
 
