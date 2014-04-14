@@ -2,7 +2,8 @@
 Feature: Search
 
   Background:
-    Given I am on the "Main Page" page
+    Given the page "Selenium search test" exists
+      And I am on the "Main Page" page
     When I click the placeholder search box
 
   Scenario: Opening search
@@ -17,5 +18,5 @@ Feature: Search
     Then I don't see the search overlay
 
   Scenario: Search for partial text
-    When I type into search box "bara"
-    Then Search results should contain Barack Obama
+    When I type into search box "Selenium search tes"
+    Then Search results should contain "Selenium search test"
