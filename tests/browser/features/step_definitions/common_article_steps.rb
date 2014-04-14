@@ -77,7 +77,12 @@ Then(/^I see a toast error$/) do
 end
 
 Then(/^The text of the first heading is "(.*)"$/) do |title|
-  on(ArticlePage).first_heading_element.when_present.text.should match title
+   on(ArticlePage) do |page|
+    page.wait_until do
+      page.first_heading_element.when_present.text.include? title
+      end
+    page.first_heading_element.when_present.text.should match title
+  end
 end
 
 When(/^I click on the view edit history link$/) do
