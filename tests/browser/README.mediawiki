@@ -5,7 +5,6 @@ instance you run these tests against See
 
 These include:
 * GeoData extension must be installed for the purpose of the nearby tests
-* Sitename needs to be set to Wikipedia (for purpose of login_required_uploads.feature)
 * Ensure you have [//www.mediawiki.org/wiki/Extension:ConfirmEdit Extension:ConfirmEdit] installed
 ** and setup with FancyCaptcha
 * Create an account Selenium_newuser which has an edit count of 0
@@ -34,6 +33,7 @@ Howdy 3.
 <pre>
   $wgRightsUrl = '//creativecommons.org/licenses/by-sa/3.0/';
   $wgMFNearbyEndpoint = 'https://en.m.wikipedia.org/w/api.php'; // required for nearby.feature
+  $wgSiteName = 'Wikipedia'; // required for purpose of login_required_uploads.feature
 </pre>
 * Make sure that $wgRightsPage is not set in LocalSettings.php
 
