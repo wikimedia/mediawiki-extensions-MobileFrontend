@@ -2,8 +2,8 @@
 Feature: Encourage new users to Keep Going
 
   Scenario: I see a KeepGoing message after completing my edit
-    Given I am in beta mode
-      And I have just registered a new account
+    Given I have just registered a new account
+      And I am in beta mode
       And I am on the "Selenium Edit Test" page
     When I click the edit button
       And I type "ABCDEFG" into the editor
