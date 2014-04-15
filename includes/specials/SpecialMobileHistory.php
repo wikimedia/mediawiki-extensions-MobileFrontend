@@ -32,6 +32,17 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	}
 
 	/**
+	 * Gets HTML to place in the header bar
+	 * @param {Title} title: The page to link to
+	 * @return string: HTML representing the link in the header bar
+	 */
+	protected function getHeaderBarLink( $title ) {
+		return Html::element( 'a',
+			array( 'href' => $title->getLocalUrl() ),
+			$title->getText() );
+	}
+
+	/**
 	 * Adds HTML to render a header at the top of the feed
 	 * @param {Title} title: The page to link to
 	 */
@@ -39,8 +50,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$this->getOutput()->addHtml(
 			Html::openElement( 'div', array( 'class' => 'content-header' ) ) .
 			Html::openElement( 'h2', array() ) .
-				Html::element( 'a', array( 'href' => $title->getLocalUrl() ),
-					$title->getText() ) .
+				$this->getHeaderBarLink( $title ) .
 				Html::closeElement( 'h2' ) .
 			Html::closeElement( 'div' )
 		);

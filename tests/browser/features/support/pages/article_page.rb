@@ -17,6 +17,8 @@ class ArticlePage
   a(:about_link, text: "About Wikipedia")
   a(:disclaimer_link, text: "Disclaimers")
 
+  # last modified bar
+  a(:last_modified_bar_history_link, css: "#mw-mf-last-modified a", index: 0)
   # page actions
   ## edit
   li(:edit_button_holder, id: "ca-edit")

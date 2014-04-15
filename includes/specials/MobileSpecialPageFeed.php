@@ -143,12 +143,15 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$html .= Html::element( 'h3', array(), $title->getPrefixedText() );
 		}
 
-		$html .= Html::element( 'p', array( 'class' => $usernameClass ), $username ) .
-			Html::element(
-				'p', array( 'class' => 'component truncated-text multi-line two-line' ), $comment
+		if ( $username ) {
+			$html .= Html::element( 'p', array( 'class' => $usernameClass ), $username );
+		}
+
+		$html .= Html::element(
+				'p', array( 'class' => 'edit-summary component truncated-text multi-line two-line' ), $comment
 			) .
 			Html::openElement( 'div', array( 'class' => 'listThumb' ) ) .
-			Html::element( 'p', null, $lang->userTime( $ts, $user ) );
+			Html::element( 'p', array( 'class' => 'timestamp' ), $lang->userTime( $ts, $user ) );
 
 		if ( $bytes !== 0 ) {
 			$html .= Html::element( 'p', array( 'class' => $bytesClass ), $formattedBytes );
