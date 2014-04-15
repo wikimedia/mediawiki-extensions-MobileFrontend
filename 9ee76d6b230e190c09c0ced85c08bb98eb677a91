@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_47e7e3df",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-15T18:31:52Z",
+      "side": 1,
+      "message": "This spaghetti is hard to read. If you\u0027re not going to use a template, at least try to make the code readable. Putting everything on one line to save a var is a bad idea.\n\ndisplayCount \u003d options.count \u003e 98 ? mw.msg( \u0027echo-notification-count\u0027, 99 ) : options.count;\n$( tag ).text( displayCount ).appendTo( $badge );",
+      "revId": "9ee76d6b230e190c09c0ced85c08bb98eb677a91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
