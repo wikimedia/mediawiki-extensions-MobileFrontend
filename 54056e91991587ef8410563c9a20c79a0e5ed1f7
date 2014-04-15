@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_82a28639",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:34:50Z",
+      "side": 1,
+      "message": "It\u0027s not clear from the code why we need both. I\u0027d rename it and/or provide a comment.",
+      "revId": "54056e91991587ef8410563c9a20c79a0e5ed1f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
