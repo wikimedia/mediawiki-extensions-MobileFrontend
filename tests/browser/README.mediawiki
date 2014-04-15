@@ -15,7 +15,6 @@ an edit count of greater than 0
 INSERT INTO interwiki (iw_prefix, iw_url, iw_local, iw_trans) VALUES ("es", "http://wikifoo.org/es/index.php/$1", 0, 0);
 </pre>
 * Ensure an article called "Foo bar" (without quotes) exists and is not protected
-* A "Diff test" page is used by the test suite thus cannot be used for another purpose.
 * Ensure there is a Barack Obama article
 ** and it is a protected page
 * Edit MediaWiki:mobile-frontend-terms-text with text 'Terms of use'
