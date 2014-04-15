@@ -16,6 +16,24 @@
       "revId": "9ee76d6b230e190c09c0ced85c08bb98eb677a91",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e724af09",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-15T18:35:29Z",
+      "side": 1,
+      "message": "Yeh even with a template though we would have to compute the correct text and the correct class - max or zero.\n\nI\u0027m not sure how to make this more elegant.\n\nThe FIXME is actually now out of date. That should prboably be above the $badge",
+      "parentUuid": "8e23439c_47e7e3df",
+      "revId": "9ee76d6b230e190c09c0ced85c08bb98eb677a91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
