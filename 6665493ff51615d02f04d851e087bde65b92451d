@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_581104b0",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T21:47:54Z",
+      "side": 1,
+      "message": "Why not \u003e\u003d 99 and store the number in a variable?",
+      "revId": "6665493ff51615d02f04d851e087bde65b92451d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_d8d754f1",
+        "filename": "less/common/ui.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T21:47:54Z",
+      "side": 1,
+      "message": "?",
+      "revId": "6665493ff51615d02f04d851e087bde65b92451d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_d8ee34b1",
+        "filename": "less/common/ui.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T21:47:54Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this have a FIXME saying \"remove when new notifications in stable\"?",
+      "revId": "6665493ff51615d02f04d851e087bde65b92451d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
