@@ -63,6 +63,9 @@
 		fileSuffix = fileSuffix || '.jpg';
 		date = date || new Date();
 		name = description.replace( /[\x1B\n\x7f\.\[#<>\[\]\|\{\}\/:]/g, '-' );
+		// remove double spaces (bug 62241)
+		// also trim it in case it ends with a double space
+		name = $.trim( name ).replace( /  /g, ' ' );
 		// https://commons.wikimedia.org/wiki/MediaWiki:Titleblacklist-custom-double-apostrophe
 		name = name.replace( /''/g, '\'_' );
 
