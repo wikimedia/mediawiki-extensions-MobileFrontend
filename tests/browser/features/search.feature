@@ -20,3 +20,15 @@ Feature: Search
   Scenario: Search for partial text
     When I type into search box "Selenium search tes"
     Then Search results should contain "Selenium search test"
+
+  Scenario: Search with search in pages button
+    When I see the search overlay
+      And I type into search box "Test is used by Selenium web driver"
+      And I click the search in pages button
+    Then I see a list of search results
+
+  Scenario: Search with enter key
+    When I see the search overlay
+      And I type into search box "Test is used by Selenium web driver"
+      And I press the enter key
+    Then I see a list of search results
