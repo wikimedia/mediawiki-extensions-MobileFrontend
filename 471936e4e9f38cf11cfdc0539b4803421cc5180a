@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_58546401",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-15T20:57:23Z",
+      "side": 1,
+      "message": "This will pull in the styles twice (mediawiki.ui.button is added using getSkinStyles and putting it as a JavaScript dependency will also pull it in via JavaScript)",
+      "revId": "471936e4e9f38cf11cfdc0539b4803421cc5180a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_788a806f",
+        "filename": "javascripts/specials/mobilediff.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-15T20:57:23Z",
+      "side": 1,
+      "message": "This is a bad code smell. I\u0027d instead find a way to require a module that makes this information available.\n\nAt very least a FIXME - code duplication bad.",
+      "revId": "471936e4e9f38cf11cfdc0539b4803421cc5180a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_5881044e",
+        "filename": "less/specials/mobilediff.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-15T20:57:23Z",
+      "side": 1,
+      "message": "This is great. Could be done in a separate patch though!",
+      "revId": "471936e4e9f38cf11cfdc0539b4803421cc5180a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_3884085e",
+        "filename": "less/specials/mobilediff.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-15T20:57:23Z",
+      "side": 1,
+      "message": "\u0026:firstChild {} would be a more LESS way to do this.",
+      "revId": "471936e4e9f38cf11cfdc0539b4803421cc5180a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
