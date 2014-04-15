@@ -7,5 +7,5 @@ When(/^I click the nearby button$/) do
 end
 
 Then(/^I see the nearby overlay$/) do
-  on(ArticlePage).overlay_element.when_present.h2_element(:text => "Nearby").should be_visible
+  on(ArticlePage).overlay_heading_element.when_present.text.should match "Nearby"
 end

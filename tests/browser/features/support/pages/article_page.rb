@@ -100,6 +100,7 @@ class ArticlePage
   button(:overlay_close_button) do |page|
     page.overlay_element.button_element(class: "cancel")
   end
+  h2(:overlay_heading, :css => ".overlay-title h2")
 
   # visual editor
   div(:overlay_ve, css: ".editor-overlay-ve")
