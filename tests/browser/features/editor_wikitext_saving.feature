@@ -28,15 +28,16 @@ Feature: Wikitext Editor (Makes actual saves)
       And I see the read in another language button
 
   Scenario: Redirects
+    And the page "Selenium wikitext editor test" exists
     And I am on a page that does not exist
     When I click the edit button
       And I clear the editor
-      And I type "#REDIRECT [[Barack Obama]]" into the editor
+      And I type "#REDIRECT [[Selenium wikitext editor test]]" into the editor
       And I click continue
       And I click submit
       And I say OK in the confirm dialog
     Then I should not see the wikitext editor overlay
-      And The text of the first heading is "Barack Obama"
+      And The text of the first heading is "Selenium wikitext editor test"
 
   Scenario: Broken redirects
     And I am on a page that does not exist
