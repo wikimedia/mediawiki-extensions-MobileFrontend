@@ -23,7 +23,7 @@
 				"sections":[
 					{"id":0,"text":""},
 					{"level":"1","line":"1","anchor":"1","id":1,"text":"<p>Text of 1\n</p>"},
-					{"level":"2","line":"1.1","anchor":"1.1","id":2,"text":"<p>Text of 1.1\n</p>"},
+					{"level":"2","line":"<i>1.1</i>","anchor":"1.1","id":2,"text":"<p>Text of 1.1\n</p>"},
 					{"level":"1","line":"2","anchor":"2","id":3,"text":"<p>Text of 2\n</p>"},
 					{"level":"2","line":"2.1","anchor":"2.1","id":4,"text":"<p>Text of 2.1\n</p>"} ]
 			}
@@ -50,25 +50,29 @@
 					{
 						"level": "1",
 						"line": "1",
+						"lineText": "1",
 						"anchor": "1",
 						"id": 1,
-						"text": '<p>Text of 1\n</p><h2 id="1.1">1.1</h2><p>Text of 1.1\n</p>',
+						"text": '<p>Text of 1\n</p><h2 id="1.1"><i>1.1</i></h2><p>Text of 1.1\n</p>',
 						"children": [
-							{"level":"2","line":"1.1","anchor":"1.1","id":2,"text":"<p>Text of 1.1\n</p>", children: [] }
+							{"level":"2","lineText": "1.1", "line": "<i>1.1</i>",
+								"anchor":"1.1","id":2,"text":"<p>Text of 1.1\n</p>", children: [] }
 						]
 					},
 					{
 						"level": "1",
 						"line": "2",
+						"lineText": "2",
 						"anchor": "2",
 						"id": 3,
 						"text": '<p>Text of 2\n</p><h2 id="2.1">2.1</h2><p>Text of 2.1\n</p>',
 						"children": [
-							{"level":"2","line":"2.1","anchor":"2.1","id":4,"text":"<p>Text of 2.1\n</p>", children: [] }
+							{"level":"2","line":"2.1", "lineText":"2.1",
+								"anchor":"2.1","id":4,"text":"<p>Text of 2.1\n</p>", children: [] }
 						]
 					}
 				]
-			}, 'return lead and sections' );
+			}, 'return lead and sections test 1' );
 		} );
 		PageApi.prototype.get.restore();
 	} );
@@ -144,6 +148,7 @@
 					{
 						"level": "2",
 						"line": "Aaa section",
+						"lineText": "Aaa section",
 						"anchor": "Aaa_section",
 						"id": 1,
 						"text": 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>subaaa content',
@@ -151,6 +156,7 @@
 							{
 								"level": "3",
 								"line": "Subaaa section",
+								"lineText": "Subaaa section",
 								"anchor": "Subaaa_section",
 								"id": 2,
 								"text": "subaaa content",
@@ -161,6 +167,7 @@
 					{
 						"level": "2",
 						"line": "Bbb section",
+						"lineText": "Bbb section",
 						"anchor": "Bbb_section",
 						"id": 3,
 						"text": "bbb content",
@@ -169,6 +176,7 @@
 					{
 						"level": "2",
 						"line": "References",
+						"lineText": "References",
 						"references": "",
 						"anchor": "References",
 						"id": 4,
@@ -176,7 +184,7 @@
 						"children": []
 					}
 				]
-			}, 'return lead and sections' );
+			}, 'return lead and sections test 2' );
 		} );
 		pageApi.getPage( 'Test' );
 		assert.ok( pageApi.get.calledOnce, 'cache page' );
@@ -300,7 +308,7 @@
 		PageApi.prototype.get.restore();
 	} );
 
-	QUnit.test( '#getPage (html headings get stripped)', 1, function( assert ) {
+	QUnit.test( '#getPage (html headings get stripped)', 2, function( assert ) {
 		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
 				"id": -1,
@@ -319,7 +327,8 @@
 			}
 		} ) );
 		pageApi.getPage( 'Test' ).done( function( resp ) {
-			assert.strictEqual( resp.sections[0].line, 'html text heading' );
+			assert.strictEqual( resp.sections[0].lineText, 'html text heading' );
+			assert.strictEqual( resp.sections[0].line, '<i>html text heading</i>' );
 		} );
 		PageApi.prototype.get.restore();
 	} );
