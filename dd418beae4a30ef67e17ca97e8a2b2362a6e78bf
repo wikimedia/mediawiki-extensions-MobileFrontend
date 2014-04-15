@@ -1,0 +1,616 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_c2187e25",
+        "filename": "javascripts/common/LoadingOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Does class need a name or not? In Drawer.js the name is specified.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_a2f6a2c0",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "@class?",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_02bd56d1",
+        "filename": "javascripts/common/history-alpha.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "I don\u0027t think this is a class. You can\u0027t instantiate it with \"new\".",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_c2ce3e86",
+        "filename": "javascripts/common/mainmenu.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class either I guess.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_62a76abb",
+        "filename": "javascripts/common/modules.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Again, not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_42aa2e83",
+        "filename": "javascripts/common/settings.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_22b172f5",
+        "filename": "javascripts/common/templates.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e29a5a74",
+        "filename": "javascripts/common/user.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class. Also not mw.user (we don\u0027t touch mw.user, only use it to base our version on).",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e2a01a8f",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "That\u0027s probably not how we named classes in other files (since in most of them we have @class without parameters).\n\nShouldn\u0027t this be in line 4 (and the whole EditorApi \u003d ... moved out of the var statement)?",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_c29bde66",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Same as in EditorApi.js.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_62b40ad0",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_42b7ced3",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_22ae127e",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_22e5f2d7",
+        "filename": "javascripts/modules/keepgoing/KeepGoingDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "I think it\u0027s not the right place.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_02e8b6ad",
+        "filename": "javascripts/modules/keepgoing/KeepGoingOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_6202ca77",
+        "filename": "javascripts/modules/languages/languages.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_42058e7b",
+        "filename": "javascripts/modules/lastEdited/lastEdited.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e2f5ba80",
+        "filename": "javascripts/modules/lastEdited/lastEditedBeta.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_82ea869a",
+        "filename": "javascripts/modules/mainmenutweaks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class. Not to mention \".js\"",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_6231aa56",
+        "filename": "javascripts/modules/mediaViewer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_42346e46",
+        "filename": "javascripts/modules/mf-stop-mobile-redirect.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_223bb238",
+        "filename": "javascripts/modules/mf-watchstar.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_023e7626",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Wrong place?",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_a24ea2db",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Wrong place.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_0215569c",
+        "filename": "javascripts/modules/nearby/NearbyOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Wrong everything?",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_c2263e11",
+        "filename": "javascripts/modules/nearby/PagePreviewOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Wrong place.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_822046f3",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Wrong place.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_627f6ade",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_228972f0",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Wrong place.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e2725a0f",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_c26d1e2f",
+        "filename": "javascripts/modules/tutorials/ContentOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Naming? Explicit name or not?",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_62664a50",
+        "filename": "javascripts/modules/uploads/PhotoApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Wrong place.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_42690e1c",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Wrong place.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_2260522e",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Naming?",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_0263163c",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e2593a91",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-15T23:23:53Z",
+      "side": 1,
+      "message": "Not a class.",
+      "revId": "dd418beae4a30ef67e17ca97e8a2b2362a6e78bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
