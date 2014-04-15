@@ -108,7 +108,6 @@
     "mobile-frontend-history-404-desc": "Cannot look at history for a page that doesn't exist. It may have been deleted or you may have followed a bad link.",
     "mobile-frontend-history-404-title": "No such page",
     "mobile-frontend-history-no-results": "The filter provided no history matches.",
-    "mobile-frontend-history-summary": "Page history for [[:$1]]",
     "mobile-frontend-home-button": "Home",
     "mobile-frontend-image-cancel-confirm": "Cancel upload?",
     "mobile-frontend-image-heading-describe": "'''Describe''' image",

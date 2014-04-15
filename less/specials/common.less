@@ -9,8 +9,9 @@
 		border-bottom: 1px solid @headerBorderBottom;
 	}
 
+	@verticalPadding: .5em;
 	#section_0 {
-		padding: .5em 0;
+		padding: @verticalPadding 0;
 		text-align: center;
 		font-size: 1.25em;
 		font-weight: bold;
@@ -19,6 +20,16 @@
 
 	.pre-content {
 		border-bottom: none;
+	}
+
+	.content-header {
+		h2 {
+			padding: 0;
+			font-size: 1.1em;
+			font-weight: bold;
+			border-bottom: none;
+			text-align: center;
+		}
 	}
 
 	.content {
