@@ -153,6 +153,14 @@
 			'Check file name is description with appended date and numbers were padded' );
 	} );
 
+	QUnit.test( 'generateFileName double spaces', 1, function() {
+		var longDescription = 'double space  woop woop  ',
+			date = new Date( 2013, 2, 1, 12, 51 ), name;
+
+		name = photo.generateFileName( longDescription, '.jpg', date );
+		strictEqual( name, 'double space woop woop 2013-03-01 12-51.jpg' );
+	} );
+
 	QUnit.test( 'generateFileName long line', 2, function() {
 		var i,
 			longDescription = '',
