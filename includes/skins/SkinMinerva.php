@@ -8,7 +8,7 @@
 class SkinMinerva extends SkinTemplate {
 	/**
 	 * Describes whether reader is on a mobile device
-	 * @var boolean $isMobileMode
+	 * @var bool $isMobileMode
 	 */
 	protected $isMobileMode = false;
 	public $skinname = 'minerva';
@@ -97,7 +97,7 @@ class SkinMinerva extends SkinTemplate {
 	/**
 	 * Prepares the header and the content of a page
 	 * Stores in QuickTemplate prebodytext, postbodytext keys
-	 * @param QuickTemplate
+	 * @param QuickTemplate $tpl
 	 */
 	protected function preparePageContent( QuickTemplate $tpl ) {
 		$title = $this->getTitle();
@@ -127,8 +127,8 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Takes a title and returns classes to apply to the body tag
-	 * @param $title Title
-	 * @return String
+	 * @param Title $title
+	 * @return string
 	 */
 	public function getPageClasses( $title ) {
 		$className = $this->getMode();
@@ -150,7 +150,7 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * @return string: The current mode of the skin [stable|beta|alpha|app] that is running
+	 * @return string The current mode of the skin [stable|beta|alpha|app] that is running
 	 */
 	protected function getMode() {
 		return $this->mode;
@@ -163,7 +163,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * FIXME: This helper function is only truly needed whilst SkinMobileApp does not support login
-	 * @return Boolean: Whether the current user is authenticated or not.
+	 * @return bool Whether the current user is authenticated or not.
 	 */
 	protected function isAuthenticatedUser() {
 		return !$this->getUser()->isAnon();
@@ -176,7 +176,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Initializes output page and sets up skin-specific parameters
-	 * @param $out OutputPage object to initialize
+	 * @param OutputPage $out object to initialize
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
@@ -189,9 +189,9 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Prepares the user button.
-	 * @param $tpl BaseTemplate
+	 * @param QuickTemplate $tpl
 	 */
-	protected function prepareUserButton( BaseTemplate $tpl ) {
+	protected function prepareUserButton( QuickTemplate $tpl ) {
 		// Set user button to empty string by default
 		$tpl->set( 'secondaryButton', '' );
 
@@ -225,7 +225,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Prepares urls and links used by the page
-	 * @param QuickTemplate
+	 * @param QuickTemplate $tpl
 	 */
 	protected function preparePersonalTools( QuickTemplate $tpl ) {
 		$returnToTitle = $this->getTitle()->getPrefixedText();
@@ -290,7 +290,7 @@ class SkinMinerva extends SkinTemplate {
 	 *
 	 * FIXME: Remove when Special:Languages link goes stable
 	 *
-	 * @param QuickTemplate
+	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareLanguages( $tpl ) {
 		$lang = $this->getTitle()->getPageViewLanguage();
@@ -306,7 +306,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Prepares a list of links that have the purpose of discovery in the main navigation menu
-	 * @param QuickTemplate
+	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareDiscoveryTools( QuickTemplate $tpl ) {
 		global $wgMFNearby;
@@ -359,7 +359,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Creates a login or logout button
-	 * @return Array: Representation of button with text and href keys
+	 * @return array Representation of button with text and href keys
 	*/
 	protected function getLogInOutLink() {
 		global $wgSecureLogin;
@@ -649,7 +649,7 @@ class SkinMinerva extends SkinTemplate {
 	/**
 	 * Returns array of config variables that should be added only to this skin
 	 * for use in JavaScript.
-	 * @return Array
+	 * @return array
 	 */
 	public function getSkinConfigVariables() {
 		global $wgMFLeadPhotoUploadCssSelector, $wgMFEnableCssAnimations,
@@ -734,8 +734,8 @@ class SkinMinerva extends SkinTemplate {
 	/**
 	 * This will be called by OutputPage::headElement when it is creating the
 	 * "<body>" tag, - adds output property bodyClassName to the existing classes
-	 * @param $out OutputPage
-	 * @param $bodyAttrs Array
+	 * @param OutputPage $out
+	 * @param array $bodyAttrs
 	 */
 	public function addToBodyAttributes( $out, &$bodyAttrs ) {
 		// does nothing by default - used by Special:MobileMenu
@@ -757,7 +757,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Add skin-specific stylesheets
-	 * @param $out OutputPage
+	 * @param OutputPage $out
 	 */
 	public function setupSkinUserCss( OutputPage $out ) {
 		// Add common CSS ResourceLoader modules to the page output

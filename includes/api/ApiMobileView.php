@@ -175,7 +175,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Creates and validates a title
 	 *
-	 * @param string$name
+	 * @param string $name
 	 * @return Title
 	 */
 	protected function makeTitle( $name ) {
@@ -226,9 +226,9 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Parses requested sections string into a list of sections
 	 *
-	 * @param string $str: String to parse
-	 * @param array $data: Processed parser output
-	 * @param array $missingSections: Upon return, contains the list of sections that were
+	 * @param string $str String to parse
+	 * @param array $data Processed parser output
+	 * @param array $missingSections Upon return, contains the list of sections that were
 	 *                                requested but are not present in parser output
 	 *
 	 * @return array

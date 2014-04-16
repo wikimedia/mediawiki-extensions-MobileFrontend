@@ -29,8 +29,8 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Constructor
 	 *
-	 * @param string $html: Text to process
-	 * @param Title $title: Title to which $html belongs
+	 * @param string $html Text to process
+	 * @param Title $title Title to which $html belongs
 	 */
 	public function __construct( $html, $title ) {
 		parent::__construct( $html );
@@ -91,7 +91,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Removes content inappropriate for mobile devices
-	 * @param bool $removeDefaults: Whether default settings at $wgMFRemovableClasses should be used
+	 * @param bool $removeDefaults Whether default settings at $wgMFRemovableClasses should be used
 	 */
 	public function filterContent( $removeDefaults = true ) {
 		global $wgMFRemovableClasses;
@@ -149,7 +149,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Returns interface message text
-	 * @param string $key: Message key
+	 * @param string $key Message key
 	 * @return string Wiki text
 	 */
 	protected function msg( $key ) {
@@ -158,7 +158,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Performs transformations specific to main page
-	 * @param DOMDocument $mainPage: Tree to process
+	 * @param DOMDocument $mainPage Tree to process
 	 * @return DOMElement|null
 	 */
 	protected function parseMainPage( DOMDocument $mainPage ) {

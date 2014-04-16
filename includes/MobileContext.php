@@ -145,28 +145,28 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * @param $value bool: Whether mobile view should always be enforced
+	 * @param bool $value Whether mobile view should always be enforced
 	 */
 	public function setForceMobileView( $value ) {
 		$this->forceMobileView = $value;
 	}
 
 	/**
-	 * @return bool: Whether mobile view should always be enforced
+	 * @return bool Whether mobile view should always be enforced
 	 */
 	public function getForceMobileView() {
 		return $this->forceMobileView;
 	}
 
 	/**
-	 * @param $value bool: Whether content should be transformed to better suit mobile devices
+	 * @param bool $value Whether content should be transformed to better suit mobile devices
 	 */
 	public function setContentTransformations( $value ) {
 		$this->contentTransformations = $value;
 	}
 
 	/**
-	 * @return bool: Whether content should be transformed to better suit mobile devices
+	 * @return bool Whether content should be transformed to better suit mobile devices
 	 */
 	public function getContentTransformations() {
 		return $this->contentTransformations;
@@ -200,7 +200,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Sets testing group membership, both cookie and this class variables
-	 * @param string $mode: Mode to set
+	 * @param string $mode Mode to set
 	 */
 	public function setMobileMode( $mode ) {
 		wfProfileIn( __METHOD__ );
@@ -462,7 +462,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * @param $disable bool
+	 * @param bool $disable
 	 */
 	public function setDisableImagesCookie( $disable ) {
 		$this->getRequest()->response()->setcookie( 'disableImages', $disable ? '1' : '' );
@@ -594,8 +594,8 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Take a URL and return a copy that conforms to the mobile URL template
-	 * @param $url string
-	 * @param $forceHttps bool
+	 * @param string $url
+	 * @param bool $forceHttps
 	 * @return string
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
@@ -643,7 +643,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update host of given URL to conform to mobile URL template.
-	 * @param $parsedUrl array
+	 * @param array $parsedUrl
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlHost( &$parsedUrl ) {
@@ -674,7 +674,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update the host of a given URL to strip out any mobile tokens
-	 * @param $parsedUrl array
+	 * @param array $parsedUrl
 	 *		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlHost( &$parsedUrl ) {
@@ -690,7 +690,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Update the query portion of a given URL to remove any 'useformat' params
-	 * @param $parsedUrl array
+	 * @param array $parsedUrl
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlQuery( &$parsedUrl ) {
@@ -709,7 +709,7 @@ class MobileContext extends ContextSource {
 	 * this is intended to provide. This will hopefully be implemented someday
 	 * in the not to distant future.
 	 *
-	 * @param $parsedUrl array
+	 * @param array $parsedUrl
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlPath( &$parsedUrl ) {
@@ -737,8 +737,8 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Placeholder for potential future use of query string handling
-	 *
-	 * @param $parsedUrl
+	 * FIXME: Is this function needed?
+	 * @param array $parsedUrl
 	 */
 	protected function updateMobileUrlQueryString( &$parsedUrl ) {
 		return;
@@ -748,8 +748,8 @@ class MobileContext extends ContextSource {
 	 * Parse mobile URL template into its host and path components.
 	 *
 	 * Optionally specify which portion of the template you want returned.
-	 * @param $part string
-	 * @return Mixed
+	 * @param string $part
+	 * @return mixed
 	 */
 	public function parseMobileUrlTemplate( $part = null ) {
 		global $wgMobileUrlTemplate;
@@ -901,7 +901,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Take a key/val pair in string format and add it to $this->analyticsLogItems
 	 *
-	 * @param string $xanalytics_item: In the format key=value
+	 * @param string $xanalytics_item In the format key=value
 	 */
 	public function addAnalyticsLogItemFromXAnalytics( $xanalytics_item ) {
 		list( $key, $val ) = explode( '=', $xanalytics_item );

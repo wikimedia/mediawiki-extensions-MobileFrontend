@@ -75,7 +75,7 @@ class MinervaTemplate extends BaseTemplate {
 
 	/**
 	 * Outputs the 'Last edited' message, e.g. 'Last edited on...'
-	 * @param Array $data Data used to build the page
+	 * @param array $data Data used to build the page
 	 */
 	protected function renderHistoryLink( $data ) {
 		if ( isset( $data['historyLink'] ) ) {
@@ -88,7 +88,7 @@ class MinervaTemplate extends BaseTemplate {
 
 	/**
 	 * Renders history link at top of page
-	 * @param Array $data Data used to build the page
+	 * @param array $data Data used to build the page
 	 */
 	protected function renderHistoryLinkBottom( $data ) {
 		$this->renderHistoryLink( $data );
@@ -116,7 +116,7 @@ class MinervaTemplate extends BaseTemplate {
 
 	/**
 	 * Renders the content of a page
-	 * @param Array $data Data used to build the page
+	 * @param array $data Data used to build the page
 	 */
 	protected function renderContent( $data ) {
 		if ( !$data[ 'unstyledContent' ] ) {
