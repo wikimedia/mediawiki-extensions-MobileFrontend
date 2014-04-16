@@ -202,32 +202,63 @@ HTML;
 	}
 
 	private function submitSettingsForm() {
+		$schema = 'MobileOptionsTracking';
+		$schemaRevision = 8101982;
+		$schemaData = array(
+			'action' => 'success',
+			'images' => "nochange",
+			'beta' => "nochange",
+			'alpha' => "nochange",
+		);
 		$context = MobileContext::singleton();
 		$request = $this->getRequest();
 
 		if ( $request->getVal( 'token' ) != $context->getMobileToken() ) {
 			wfIncrStats( 'mobile.options.errors' );
-			wfDebugLog( 'mobile', __METHOD__ . "(): token mismatch, "
+			$errorMsg = __METHOD__ . "(): token mismatch, "
 				. "received {$request->getVal( 'token' )} - expected "
-				. $context->getMobileToken()
-			);
+				. $context->getMobileToken();
+
+			wfDebugLog( 'mobile', $errorMsg );
 			$this->getOutput()->addHTML( '<div class="error">'
 				. $this->msg( "mobile-frontend-save-error" )->parse()
 				. '</div>'
 			);
+			$schemaData['action'] = 'error';
+			$schemaData['errorText'] = $errorText;
+			ExtMobileFrontend::eventLog( $schema, $schemaRevision, $schemaData );
 			$this->getSettingsForm();
 			return;
 		}
 		wfIncrStats( 'mobile.options.saves' );
 		if ( $request->getBool( 'enableAlpha' ) ) {
 			$group = 'alpha';
+			// This request is to turn on alpha
+			if ( !$context->isAlphaGroupMember() ) {
+				$schemaData['alpha'] = "on";
+			}
 		} elseif ( $request->getBool( 'enableBeta' ) ) {
 			$group = 'beta';
+			if ( $context->isAlphaGroupMember() ) {
+				// This request was to turn off alpha
+				$schemaData['alpha'] = "off";
+			} elseif ( !$context->isBetaGroupMember() ) {
+				// The request was to turn on beta
+				$schemaData['beta'] = "on";
+			}
 		} else {
 			$group = '';
+			if ( $context->isBetaGroupMember() ) {
+				// beta was turned off
+				$schemaData['beta'] = "off";
+			}
 		}
 		$context->setMobileMode( $group );
 		$imagesDisabled = !$request->getBool( 'enableImages' );
+		if ( $context->imagesDisabled() !== $imagesDisabled ) {
+			// Only record when the state has changed
+			$schemaData['images'] = $imagesDisabled ? "off" : "on";
+		}
 		$context->setDisableImagesCookie( $imagesDisabled );
 
 		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
@@ -236,6 +267,7 @@ HTML;
 		} else {
 			$url = $this->getPageTitle()->getFullURL( 'success' );
 		}
+		ExtMobileFrontend::eventLog( $schema, $schemaRevision, $schemaData );
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
 	}
 
