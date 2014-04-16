@@ -51,6 +51,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private function getSettingsForm() {
 		$out = $this->getOutput();
 		$context = MobileContext::singleton();
+		$user = $this->getUser();
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
 
@@ -81,7 +82,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
 		);
 		$aboutMessage = $this->msg( 'mobile-frontend-settings-description' )->parse();
-		$token = Html::hidden( 'token', $context->getMobileToken() );
+		$token = $user->isLoggedIn() ? Html::hidden( 'token', $user->getEditToken() ) : '';
 		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
 
 		$alphaEnableMsg = wfMessage( 'mobile-frontend-settings-alpha' )->parse();
@@ -212,14 +213,11 @@ HTML;
 		);
 		$context = MobileContext::singleton();
 		$request = $this->getRequest();
+		$user = $this->getUser();
 
-		if ( $request->getVal( 'token' ) != $context->getMobileToken() ) {
+		if ( $user->isLoggedIn() && !$user->matchEditToken( $request->getVal( 'token' ) ) ) {
 			wfIncrStats( 'mobile.options.errors' );
-			$errorMsg = __METHOD__ . "(): token mismatch, "
-				. "received {$request->getVal( 'token' )} - expected "
-				. $context->getMobileToken();
-
-			wfDebugLog( 'mobile', $errorMsg );
+			wfDebugLog( 'mobile', __METHOD__ . "(): token mismatch" );
 			$this->getOutput()->addHTML( '<div class="error">'
 				. $this->msg( "mobile-frontend-save-error" )->parse()
 				. '</div>'
