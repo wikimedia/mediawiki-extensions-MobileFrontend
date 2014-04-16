@@ -509,7 +509,8 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
-		global $wgMFEnableXAnalyticsLogging, $wgMFAppPackageId, $wgMFAppScheme;
+		global $wgMFEnableXAnalyticsLogging, $wgMFAppPackageId, $wgMFAppScheme,
+			$wgMFEnableNearbyPagesBetaFeature;
 		wfProfileIn( __METHOD__ );
 
 		$context = MobileContext::singleton();
@@ -540,6 +541,7 @@ class MobileFrontendHooks {
 
 		if ( !$context->shouldDisplayMobileView() ) {
 			if ( class_exists( 'BetaFeatures' ) &&
+				$wgMFEnableNearbyPagesBetaFeature &&
 				BetaFeatures::isFeatureEnabled( $out->getSkin()->getUser(), 'betafeatures-geonotahack' ) ) {
 				// @todo FIXME: Remove need for this module
 				$out->addModules( array( 'mobile.bridge' ) );
@@ -637,11 +639,12 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
-		global $wgExtensionAssetsPath, $wgMFNearby, $wgMFEnableMinervaBetaFeature, $wgLang;
+		global $wgExtensionAssetsPath, $wgMFNearby, $wgMFEnableMinervaBetaFeature,
+			$wgLang, $wgMFEnableNearbyPagesBetaFeature;
 
 		$dir = $wgLang->getDir();
 
-		if ( $wgMFNearby ) {
+		if ( $wgMFNearby && $wgMFEnableNearbyPagesBetaFeature ) {
 			$preferences['betafeatures-geonotahack'] = array(
 				'requirements' => array(
 					'skins' => array( 'vector' ),
