@@ -192,6 +192,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 			'mobile.user',
 			'jquery.cookie',
+			'mobile.redlinks',
 		),
 		'templates' => array(
 			'page',
@@ -212,6 +213,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/settings.js',
 		),
 		'position' => 'bottom',
+	),
+
+	'mobile.redlinks' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.head',
+		),
+		'scripts' => array(
+			'javascripts/modules/redlinks/redlinks.js',
+		),
 	),
 
 	'mobile.user' => $wgMFMobileResourceBoilerplate + array(

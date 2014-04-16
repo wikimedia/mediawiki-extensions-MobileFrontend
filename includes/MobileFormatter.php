@@ -23,7 +23,6 @@ class MobileFormatter extends HtmlFormatter {
 	protected $expandableSections = false;
 	protected $mainPage = false;
 	protected $backToTopLink = true;
-	protected $flattenRedLinks = true;
 
 	protected $headings = 0;
 
@@ -58,8 +57,6 @@ class MobileFormatter extends HtmlFormatter {
 		$html = self::wrapHTML( $html );
 		$formatter = new MobileFormatter( $html, $title );
 		$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
-		// Only show red links to logged in users in beta or alpha mode
-		$formatter->flattenRedLinks( !$context->isBetaGroupMember() || $context->getUser()->isAnon() );
 
 		if ( $context->isBetaGroupMember() ) {
 			$formatter->disableBackToTop();
@@ -93,14 +90,6 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Sets whether red links should be flattened
-	 * @param bool $flag
-	 */
-	public function flattenRedLinks( $flag = true ) {
-		$this->flattenRedLinks = $flag;
-	}
-
-	/**
 	 * Removes content inappropriate for mobile devices
 	 * @param bool $removeDefaults: Whether default settings at $wgMFRemovableClasses should be used
 	 */
@@ -116,11 +105,6 @@ class MobileFormatter extends HtmlFormatter {
 			$this->doRemoveImages();
 		}
 		parent::filterContent();
-
-		// Handle red links
-		if ( $this->flattenRedLinks ) {
-			$this->doFlattenRedLinks();
-		}
 	}
 
 	/**
@@ -143,31 +127,6 @@ class MobileFormatter extends HtmlFormatter {
 			$replacement = $doc->createElement( 'span', htmlspecialchars( $alt ) );
 			$replacement->setAttribute( 'class', 'mw-mf-image-replacement' );
 			$element->parentNode->replaceChild( $replacement, $element );
-		}
-	}
-
-	/**
-	 * Replaces red links with plain text
-	 */
-	private function doFlattenRedLinks() {
-		$doc = $this->getDoc();
-		$xpath = new DOMXpath( $doc );
-		$redLinks = $xpath->query( '//a[@class="new"]' );
-		/** @var $redLink DOMElement */
-		foreach ( $redLinks as $redLink ) {
-			// PHP Bug #36795 — Inappropriate "unterminated entity reference"
-			$spanNode = $doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );
-
-			if ( $redLink->hasAttributes() ) {
-				$attributes = $redLink->attributes;
-				foreach ( $attributes as $attribute ) {
-					if ( $attribute->name != 'href' ) {
-						$spanNode->setAttribute( $attribute->name, $attribute->value );
-					}
-				}
-			}
-
-			$redLink->parentNode->replaceChild( $spanNode, $redLink );
 		}
 	}
 
