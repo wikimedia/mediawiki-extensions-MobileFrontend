@@ -52,6 +52,24 @@
       "revId": "54056e91991587ef8410563c9a20c79a0e5ed1f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_93c3ef8b",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T22:34:27Z",
+      "side": 1,
+      "message": "jdlrobson: jgonera: i don\u0027t think you are following on that\n[3:32pm] jdlrobson: so yes we could pass it down but i worry about side effects - as both .line, .lineHtml and .linePlain would be available\n[3:32pm] jdlrobson: which is even worse\n[3:33pm] jdlrobson: it gets passed to assignToParent which simply pushes it as is\n[3:33pm] jdlrobson: without delete section.line it is even more confusing as now you have 3 properties\n[3:33pm] jdlrobson: and using delete seems a bit nasty\n\nLet\u0027s discuss in person..",
+      "parentUuid": "8e23439c_53d67755",
+      "revId": "54056e91991587ef8410563c9a20c79a0e5ed1f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
