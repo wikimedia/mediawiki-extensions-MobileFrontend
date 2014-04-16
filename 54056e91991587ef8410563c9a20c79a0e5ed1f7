@@ -16,6 +16,24 @@
       "revId": "54056e91991587ef8410563c9a20c79a0e5ed1f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_4538f89a",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T00:23:37Z",
+      "side": 1,
+      "message": "So.. if I rename it to lineText it would mean adding an additional line to remove the original value. I\u0027d rather not do that but I\u0027d update the comment.\n\n   delete section.line",
+      "parentUuid": "8e23439c_82a28639",
+      "revId": "54056e91991587ef8410563c9a20c79a0e5ed1f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
