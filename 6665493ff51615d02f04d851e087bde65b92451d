@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_5ff44050",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T17:36:19Z",
+      "side": 1,
+      "message": "I\u0027ve now added a constant to top of JS file for you.",
+      "parentUuid": "8e23439c_42d90e82",
+      "revId": "6665493ff51615d02f04d851e087bde65b92451d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_d8d754f1",
         "filename": "less/common/ui.less",
         "patchSetId": 9
@@ -83,6 +101,24 @@
       "writtenOn": "2014-04-15T21:47:54Z",
       "side": 1,
       "message": "Shouldn\u0027t this have a FIXME saying \"remove when new notifications in stable\"?",
+      "revId": "6665493ff51615d02f04d851e087bde65b92451d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_7f7c9ce2",
+        "filename": "less/common/ui.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T17:36:19Z",
+      "side": 1,
+      "message": "Nope this is needed for the new styles too.",
+      "parentUuid": "8e23439c_d8ee34b1",
       "revId": "6665493ff51615d02f04d851e087bde65b92451d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
