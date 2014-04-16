@@ -34,6 +34,24 @@
       "revId": "54056e91991587ef8410563c9a20c79a0e5ed1f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_53d67755",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-16T22:31:31Z",
+      "side": 1,
+      "message": "I don\u0027t get it. Why would you remove? Just keep it:\n\nsection.linePlain \u003d $( \u0027\u003cdiv\u003e\u0027 ).html( section.line ).text();\n\nand then section.line would be what section.lineHtml is.",
+      "parentUuid": "8e23439c_4538f89a",
+      "revId": "54056e91991587ef8410563c9a20c79a0e5ed1f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
