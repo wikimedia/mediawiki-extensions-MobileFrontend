@@ -50,11 +50,12 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	}
 
 	protected function renderFeedItemHtmlBeta( $ts, $diffLink ='', $username = '',
-		$comment = '', $title = false, $isAnon = false, $bytes = 0
+		$comment = '', $title = false, $isAnon = false, $bytes = 0, $isMinor = false
 	) {
 		// Stop username from being rendered
 		$username = false;
-		parent::renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment, $title, false, $bytes );
+		parent::renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment, $title, false, $bytes,
+			$isMinor );
 	}
 
 }

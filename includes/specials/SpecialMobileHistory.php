@@ -158,8 +158,10 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		if ( $prev ) {
 			$bytes -= $prev->getSize();
 		}
+		$isMinor = $rev->isMinor();
 		// FIXME: When this function changes name to renderFeedItemHtml make sure you change it here too
-		$this->renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes );
+		$this->renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
+			$isMinor );
 
 		wfProfileOut( __METHOD__ );
 	}

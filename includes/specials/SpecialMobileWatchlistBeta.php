@@ -40,6 +40,7 @@ class SpecialMobileWatchlistBeta extends SpecialMobileWatchlist {
 		$revId = $row->rc_this_oldid;
 		$bytes = $row->rc_new_len - $row->rc_old_len;
 		$isAnon = $row->rc_user == 0;
+		$isMinor = $row->rc_minor != 0;
 
 		if ( $revId ) {
 			$diffTitle = SpecialPage::getTitleFor( 'MobileDiff', $revId );
@@ -49,13 +50,14 @@ class SpecialMobileWatchlistBeta extends SpecialMobileWatchlist {
 			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalUrl();
 		}
 
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes );
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
+			$isMinor );
 		wfProfileOut( __METHOD__ );
 	}
 
 	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
-		$title = false, $isAnon = false, $bytes = 0 ) {
+		$title = false, $isAnon = false, $bytes = 0, $isMinor = false ) {
 			$this->renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment,
-				$title, $isAnon, $bytes );
+				$title, $isAnon, $bytes, $isMinor );
 	}
 }

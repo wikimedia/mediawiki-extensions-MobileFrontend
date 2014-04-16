@@ -106,11 +106,14 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param {string} username: The username of the user that made the edit (absent if anonymous)
 	 * @param {string} comment: The edit summary
 	 * @param {Title} title: The title of the page that was edited
-	 *
+	 * @param {bool} isAnon: Is the edit anonymous?
+	 * @param {int} bytes: Net number of bytes changed
+	 * @param {bool} isMinor: Is the edit minor?
 	 * @return String: HTML code
 	 */
+	// FIXME: use an array as an argument?
 	protected function renderFeedItemHtmlBeta( $ts, $diffLink = '', $username = '', $comment = '',
-		$title = false, $isAnon = false, $bytes = 0 ) {
+		$title = false, $isAnon = false, $bytes = 0, $isMinor = false ) {
 
 		wfProfileIn( __METHOD__ );
 		$output = $this->getOutput();
@@ -148,10 +151,15 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		}
 
 		$html .= Html::element(
-				'p', array( 'class' => 'edit-summary component truncated-text multi-line two-line' ), $comment
-			) .
-			Html::openElement( 'div', array( 'class' => 'listThumb' ) ) .
-			Html::element( 'p', array( 'class' => 'timestamp' ), $lang->userTime( $ts, $user ) );
+			'p', array( 'class' => 'component truncated-text multi-line two-line' ), $comment
+		);
+
+		if ( $isMinor ) {
+			$html .= ChangesList::flag( 'minor' );
+		}
+
+		$html .= Html::openElement( 'div', array( 'class' => 'listThumb' ) ) .
+			Html::element( 'p', null, $lang->userTime( $ts, $user ) );
 
 		if ( $bytes !== 0 ) {
 			$html .= Html::element( 'p', array( 'class' => $bytesClass ), $formattedBytes );
