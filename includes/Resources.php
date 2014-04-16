@@ -951,6 +951,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'echo-none',
 			'notifications',
 			'echo-overlay-link',
+			'echo-notification-count',
 		),
 	),
 

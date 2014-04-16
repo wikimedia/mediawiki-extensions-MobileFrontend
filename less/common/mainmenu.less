@@ -217,14 +217,14 @@ body.navigation-enabled {
 	.beta,
 	.alpha {
 		&.secondary-navigation-enabled {
-			.user-button {
-				display: none;
-			}
 
 			#mw-mf-page-center {
 				left: -@rightDrawerWidth !important;
 				right: @rightDrawerWidth !important;
 				width: auto;
+				.main-header-button {
+					visibility: hidden;
+				}
 			}
 		}
 

@@ -50,55 +50,10 @@ body {
 		font-weight: bold;
 	}
 
-	// FIXME: use .icon class
-	#mw-mf-main-menu-button, #secondary-button {
-		height: @headerHeight - @headerMargin;
-		text-indent: -9999px;
-		background-repeat: no-repeat;
-		.background-size( 24px, auto );
-	}
-
 	#mw-mf-main-menu-button {
+		.background-size( 24px, auto );
 		background-position: 40% 40%;
 		.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
-	}
-
-	#secondary-button {
-		height: @headerHeight - 2 * @headerMargin;
-		background-position: 60% 40%;
-	}
-
-	// need to specify id or else other rules are more important
-	// FIXME: simplify when .icon class from OverlayNew used instead
-	#secondary-button.user-button {
-		text-indent: 0;
-		width: @headerHeight - 2 * @headerMargin;
-		padding-left: @headerMargin;
-		padding-bottom: @headerMargin;
-		text-align: center;
-
-		&:hover {
-			text-decoration: none;
-		}
-
-		&.loading span {
-			display: none;
-		}
-
-		span {
-			display: inline-block;
-			width: 24px;
-			height: 24px;
-			font-weight: bold;
-			color: #fff;
-			line-height: 24px;
-			background: #c91f2c;
-			border-radius: 2px;
-
-			&.zero {
-				background: @grayLight;
-			}
-		}
 	}
 
 	// FIXME: merge with SearchOverlay
@@ -200,10 +155,29 @@ input.search {
 	}
 }
 
-// Remove when/if page-secondary-actions are promoted to stable
 .stable {
+	// Remove when/if page-secondary-actions are promoted to stable
 	.languageSelector {
 		margin-top: 1em;
+	}
+
+	// FIXME: Remove when notification drawer goes to stable
+	.header {
+		#secondary-button.user-button {
+			span {
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
+			}
+		}
+
+		.overlay-header,
+		.header {
+			.user-button,
+			#secondary-button {
+				.background-size( 24px, auto );
+			}
+		}
 	}
 }
 
@@ -224,5 +198,55 @@ input.search {
 		-webkit-line-clamp: 2;
 		// fallback for non-WebKit
 		max-height: 2.6em;
+	}
+}
+
+// FIXME: Create generic class to represent both of these headers
+.overlay,
+.header {
+
+	.user-button {
+		height: @headerHeight - 2 * @headerMargin;
+		background-position: 60% 40%;
+	}
+
+	.main-header-button,
+	// FIXME: Kept for caching reasons. Remove when main-header-button available
+	.user-button,
+	#mw-mf-main-menu-button,
+	#secondary-button {
+		text-indent: -9999px;
+		background-repeat: no-repeat;
+	}
+
+	// need to specify id or else other rules are more important
+	// FIXME: simplify when .icon class from OverlayNew used instead
+	#secondary-button.user-button,
+	.user-button {
+		text-indent: 0;
+		width: @headerHeight - 2 * @headerMargin;
+		padding-left: @headerMargin;
+		padding-bottom: @headerMargin;
+		text-align: center;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&.loading span {
+			display: none;
+		}
+
+		span {
+			display: inline-block;
+			font-weight: bold;
+			color: #fff;
+			background: #c91f2c;
+			border-radius: 2px;
+
+			&.zero {
+				background: @grayLight;
+			}
+		}
 	}
 }

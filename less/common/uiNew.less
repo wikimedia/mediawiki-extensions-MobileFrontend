@@ -26,6 +26,34 @@
 	}
 }
 
+.user-button {
+	// Make sure count is positioned correctly in relation to bell icon
+	position: relative;
+	.background-image-svg-quick( 'images/bell' );
+	.background-size( 2.1em, auto );
+	// Fixes positioning in Firefox
+	display: inline-block;
+	float: right;
+
+	span {
+		position: absolute;
+		right: .2em;
+		top: .35em;
+		width: 1.2em;
+		height: 1.2em;
+		line-height: 1.2em;
+
+		// FIXME: There must be a better way of doing this
+		&.max {
+			right: 0;
+			width: 2em;
+			height: 2em;
+			line-height: 2em;
+			font-size: 0.7em;
+		}
+	}
+}
+
 // FIXME [mediawiki ui] These rules should not be needed in the mobile context
 .beta, .alpha {
 	.mw-ui-button-group {

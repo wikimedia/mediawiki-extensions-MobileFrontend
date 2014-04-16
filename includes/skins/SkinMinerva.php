@@ -210,7 +210,7 @@ class SkinMinerva extends SkinTemplate {
 						'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
 						'href' => $notificationsTitle->getLocalURL(
 							array( 'returnto' => $currentTitle->getPrefixedText() ) ),
-						'class' => 'user-button',
+						'class' => 'user-button main-header-button',
 						'id'=> 'secondary-button',
 					) ) .
 					Html::element(
@@ -530,6 +530,7 @@ class SkinMinerva extends SkinTemplate {
 			Html::element( 'a', array(
 			'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' ),
 			'href' => $url,
+			'class' => 'main-header-button',
 			'id'=> 'mw-mf-main-menu-button',
 			) )
 		);
