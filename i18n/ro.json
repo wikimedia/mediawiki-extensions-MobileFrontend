@@ -140,7 +140,7 @@
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 minut|$3 minute|$3 de minute}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 lună|$3 luni|$3 de luni}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 secundă|$3 secunde|$3 de secunde}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}",
-	"mobile-frontend-last-modified-with-user-years": "[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 un|$3 ani|$3 de ani}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.",
+	"mobile-frontend-last-modified-with-user-years": "[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 an|$3 ani|$3 de ani}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.",
 	"mobile-frontend-last-modified-years": "Ultima modificare acum {{PLURAL:$1|un an|$1 ani|$1 de ani}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Începeți să încărcați",
 	"mobile-frontend-lead-image-tutorial-summary": "Asigurați-vă că imaginea dumneavoastră poate ajuta la ilustrarea paginii. Ar trebui să fie o imagine creată de dumneavoastră și care nu încalcă drepturile de autor.",
