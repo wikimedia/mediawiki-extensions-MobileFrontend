@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_62e75f3c",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T18:13:08Z",
+      "side": 1,
+      "message": "I see we have been wrapping types in { in some places but not in others.\n\nIt seems like an anti-pattern\n\nhttp://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.param.pkg.html\n\nuses @param bool|string $foo sometimes a boolean, sometimes a string (or, could have just used \"mixed\")\n\nI\u0027ll post a follow up to fix all this but I just wanted to point this out.",
+      "revId": "9a4f93f468cf1208cfc28c9456eaad2a7475e859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_82527be0",
+        "filename": "less/specials/pagefeed.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T18:13:08Z",
+      "side": 1,
+      "message": "Should be minor-edit according to coding conventions.",
+      "revId": "9a4f93f468cf1208cfc28c9456eaad2a7475e859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_42c0e354",
+        "filename": "less/specials/pagefeed.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T18:13:08Z",
+      "side": 1,
+      "message": "It doesn\u0027t look bold in the mock (although that might just be the image quality or my eyes)\nhttps://wikimedia.mingle.thoughtworks.com/projects/mobile/cards/1538\n\nIs this intentional? Can we double check?",
+      "revId": "9a4f93f468cf1208cfc28c9456eaad2a7475e859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
