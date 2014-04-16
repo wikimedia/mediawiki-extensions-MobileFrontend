@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_7d15c43f",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-04-16T18:23:21Z",
+      "side": 1,
+      "message": "$ts and no colon. Same for most instances you updated.",
+      "revId": "03affa71a218243c47e1586a6ad91e58c690e71e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
