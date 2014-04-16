@@ -89,6 +89,10 @@ When(/^I click on the view edit history link$/) do
   on(ArticlePage).edit_history_link_element.when_present.click
 end
 
+When(/^I click on the history link in the last modified bar$/) do
+  on(ArticlePage).last_modified_bar_history_link_element.when_present.click
+end
+
 Then /^I see drawer with message "(.+)"$/ do |text|
   on(ArticlePage).drawer_element.when_present.text.should match text
 end

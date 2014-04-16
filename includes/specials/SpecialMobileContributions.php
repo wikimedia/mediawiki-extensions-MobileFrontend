@@ -8,6 +8,19 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	/**  @var MWTimestamp */
 	protected $lastDate;
 
+	/**
+	 * Gets HTML to place in the header bar
+	 * @param {Title} title: The page to link to
+	 * @return string: HTML representing the link in the header bar
+	 */
+	protected function getHeaderBarLink( $title ) {
+		return Html::element( 'a',
+			array(
+				'href' => SpecialPage::getTitleFor( 'UserProfile', $title->getText() )->getLocalUrl(),
+			),
+			$title->getText() );
+	}
+
 	public function executeWhenAvailable( $par = '' ) {
 		wfProfileIn( __METHOD__ );
 		if ( $par ) {
@@ -36,12 +49,12 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		return $conds;
 	}
 
-	protected function renderFeedItemHtml( $ts, $diffLink ='', $username = '',
+	protected function renderFeedItemHtmlBeta( $ts, $diffLink ='', $username = '',
 		$comment = '', $title = false, $isAnon = false, $bytes = 0
 	) {
 		// Stop username from being rendered
 		$username = false;
-		parent::renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, false, $bytes );
+		parent::renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment, $title, false, $bytes );
 	}
 
 }
