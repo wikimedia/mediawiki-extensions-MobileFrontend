@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_d3ade72f",
+        "filename": "less/specials/pagefeed.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-16T23:42:16Z",
+      "side": 1,
+      "message": "That would require a patch to core. ChangesList::flag( \u0027minor\u0027 ); unfortunately returns .minoredit.",
+      "parentUuid": "8e23439c_82527be0",
+      "revId": "9a4f93f468cf1208cfc28c9456eaad2a7475e859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_42c0e354",
         "filename": "less/specials/pagefeed.less",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2014-04-16T18:13:08Z",
       "side": 1,
       "message": "It doesn\u0027t look bold in the mock (although that might just be the image quality or my eyes)\nhttps://wikimedia.mingle.thoughtworks.com/projects/mobile/cards/1538\n\nIs this intentional? Can we double check?",
+      "revId": "9a4f93f468cf1208cfc28c9456eaad2a7475e859",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_93864fab",
+        "filename": "less/specials/pagefeed.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-16T23:42:16Z",
+      "side": 1,
+      "message": "Double checked. Moiz wants bold.",
+      "parentUuid": "8e23439c_42c0e354",
       "revId": "9a4f93f468cf1208cfc28c9456eaad2a7475e859",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
