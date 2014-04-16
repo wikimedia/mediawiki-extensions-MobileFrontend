@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_f30fc3e2",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-16T22:45:46Z",
+      "side": 1,
+      "message": "This throws a notice for me:\nDid not find alias for special page \u0027UserProfile/User:Kaldari\u0027",
+      "revId": "5ff84ba6cdd38272e1198feda9455e1882dd4510",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
