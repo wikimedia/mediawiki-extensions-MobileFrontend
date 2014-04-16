@@ -478,6 +478,11 @@ $wgMFMobileHeader = 'X-WAP';
 $wgMFEnableMinervaBetaFeature = false;
 
 /**
+ * Controls whether the "Nearby pages" beta feature is enabled
+ */
+$wgMFEnableNearbyPagesBetaFeature = false;
+
+/**
  * Controls whether to collapse sections by default.
  *
  * Leave at default true for "encyclopedia style", where the section 0 lead text will
