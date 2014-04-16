@@ -182,6 +182,9 @@
 		},
 
 		_switchToVisualEditor: function( options ) {
+			// Save a user setting indicating that this user prefers using the VisualEditor
+			M.settings.saveUserSetting( 'preferredEditor', 'VisualEditor', true );
+			// Load the VisualEditor and replace the SourceEditor overlay with it
 			mw.loader.using( 'mobile.editor.ve', function() {
 				var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 				M.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );

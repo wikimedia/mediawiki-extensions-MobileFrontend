@@ -30,6 +30,10 @@ Then(/^The VisualEditor overlay has an editor mode switcher button$/) do
   on(ArticlePage).overlay_editor_mode_switcher_element.when_present.should exist
 end
 
+Then(/^The wikitext editor overlay has an editor mode switcher button$/) do
+  on(ArticlePage).overlay_editor_mode_switcher_element.when_present.should exist
+end
+
 Given(/^I type "(.+)" into VisualEditor$/) do |text|
   on(ArticlePage) do |page|
     page.editor_ve_element.when_present(15).fire_event("onfocus")

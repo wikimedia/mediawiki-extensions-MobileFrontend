@@ -57,13 +57,15 @@
 		M.overlayManager.add( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
 			var
 				loadingOverlay = new LoadingOverlay(),
-				result = $.Deferred();
+				result = $.Deferred(),
+				preferredEditor = M.settings.getUserSetting( 'preferredEditor', true );
 			loadingOverlay.show();
 			sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
-			// Pages that contain JavaScript and CSS are not suitable for
-			// VisualEditor so check if wikitext
-			if ( page.isWikiText() && isVisualEditorEnabled ) {
+			// Pages that contain JavaScript and CSS are not suitable for VisualEditor so
+			// check if wikitext. Also don't load VisualEditor if user's preferred editor
+			// is the SourceEditor (set by the editor switcher).
+			if ( page.isWikiText() && isVisualEditorEnabled && preferredEditor !== 'SourceEditor' ) {
 				mw.loader.using( 'mobile.editor.ve', function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 
