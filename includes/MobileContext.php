@@ -237,18 +237,6 @@ class MobileContext extends ContextSource {
 		return $mode === 'beta' || $mode === 'alpha';
 	}
 
-	public function getMobileToken() {
-		$token = $this->getRequest()->getSessionData( 'wsMobileToken' );
-		if ( $token === null ) {
-			if ( $this->getUser()->isAnon() ) {
-				wfSetupSession();
-			}
-			$token = MWCryptRand::generateHex( 32 );
-			$this->getRequest()->setSessionData( 'wsMobileToken', $token );
-		}
-		return $token;
-	}
-
 	/**
 	 * Determine whether or not we should display the mobile view
 	 *
