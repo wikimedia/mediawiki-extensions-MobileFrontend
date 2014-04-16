@@ -7,8 +7,8 @@
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
 		// FIXME: Should we consider default site options and user prefs?
-		// FIXME: This also needs to check that VisualEditor is actually installed.
-		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha',
+		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha' &&
+			mw.config.get( 'wgVisualEditorConfig' ),
 		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
