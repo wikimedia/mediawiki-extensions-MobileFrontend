@@ -37,6 +37,10 @@ When(/^I click the source editor button$/) do
   on(ArticlePage).source_editor_button_element.when_present.click
 end
 
+When(/^I click the VisualEditor button$/) do
+  on(ArticlePage).visual_editor_button_element.when_present.click
+end
+
 Given(/^I type "(.+)" into the editor$/) do |text|
   on(ArticlePage).editor_textarea_element.when_present.send_keys(text)
 end

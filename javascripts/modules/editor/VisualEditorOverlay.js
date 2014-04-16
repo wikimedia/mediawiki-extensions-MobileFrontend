@@ -112,6 +112,9 @@
 			} );
 		},
 		switchToSourceEditor: function( options ) {
+			// Save a user setting indicating that this user prefers using the SourceEditor
+			M.settings.saveUserSetting( 'preferredEditor', 'SourceEditor', true );
+			// Load the SourceEditor and replace the VisualEditor overlay with it
 			mw.loader.using( 'mobile.editor.overlay', function() {
 				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
 				M.overlayManager.replaceCurrent( new EditorOverlay( options ) );
