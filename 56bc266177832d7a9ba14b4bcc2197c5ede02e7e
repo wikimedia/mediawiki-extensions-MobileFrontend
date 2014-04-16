@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_13b11ff5",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T22:59:04Z",
+      "side": 1,
+      "message": "Probably worth using M.settings.saveUserSetting - then you benefit from localStorage where available (Cookies impact response time) [1]\n\nAlso not sure we need to worry about expiring it.\n\n\n[1] http://www.yuiblog.com/blog/2007/03/01/performance-research-part-3/",
+      "revId": "56bc266177832d7a9ba14b4bcc2197c5ede02e7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_739f3363",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-16T22:59:04Z",
+      "side": 1,
+      "message": "Rather than using string \"SourceEditor\" maybe numbers would be sufficient\n0 \u003d source editor\n1 \u003d VisualEditor\n(i think you are right not to make assumptions that it\u0027s boolean as we could imagine other editors e.g. code editors)",
+      "revId": "56bc266177832d7a9ba14b4bcc2197c5ede02e7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
