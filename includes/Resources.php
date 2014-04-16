@@ -218,6 +218,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.redlinks' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
+			'mediawiki.user',
 		),
 		'scripts' => array(
 			'javascripts/modules/redlinks/redlinks.js',
