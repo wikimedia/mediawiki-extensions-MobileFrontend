@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "RajeshPandey"
-        ]
-    },
-    "mobile-frontend-search-submit": "जाउ",
-    "mobile-frontend-home-button": "गृह",
-    "mobile-frontend-random-button": "कुनै पनि एक",
-    "mobile-frontend-back-to-top-of-section": "एक खण्ड पछाडि जाने",
-    "mobile-frontend-regular-site": "यो पृष्ठलाई नियमित {{SITENAME}}मा हेर्ने",
-    "mobile-frontend-featured-article": "आजको जोडदिएको लेख",
-    "mobile-frontend-username": "प्रयोगकर्ता नाम:",
-    "mobile-frontend-copyright": "यी पाठहरु <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>;मा उपलब्ध छन् । थप सर्तहरु लागुहुन सक्छन् । थपजानकारीको लागि <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> मा हेर्नुहोस् । {{SITENAME}}  <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc. एक नाफा रहित संस्था , को एक दर्ता गरिएको ब्यापार संकेत हो </a>."
+	"@metadata": {
+		"authors": [
+			"RajeshPandey"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "एक खण्ड पछाडि जाने",
+	"mobile-frontend-copyright": "यी पाठहरु <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>;मा उपलब्ध छन् । थप सर्तहरु लागुहुन सक्छन् । थपजानकारीको लागि <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> मा हेर्नुहोस् । {{SITENAME}}  <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc. एक नाफा रहित संस्था , को एक दर्ता गरिएको ब्यापार संकेत हो </a>.",
+	"mobile-frontend-featured-article": "आजको जोडदिएको लेख",
+	"mobile-frontend-home-button": "गृह",
+	"mobile-frontend-random-button": "कुनै पनि एक",
+	"mobile-frontend-regular-site": "यो पृष्ठलाई नियमित {{SITENAME}}मा हेर्ने",
+	"mobile-frontend-search-submit": "जाउ",
+	"mobile-frontend-username": "प्रयोगकर्ता नाम:"
 }

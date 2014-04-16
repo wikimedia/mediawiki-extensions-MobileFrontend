@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Erdemaslancan"
-        ]
-    },
-    "mobile-frontend-search-submit": "Buşu",
-    "mobile-frontend-home-button": "Keye"
+	"@metadata": {
+		"authors": [
+			"Erdemaslancan"
+		]
+	},
+	"mobile-frontend-home-button": "Keye",
+	"mobile-frontend-search-submit": "Buşu"
 }

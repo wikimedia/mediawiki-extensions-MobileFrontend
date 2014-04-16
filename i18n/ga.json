@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "පසිඳු කාවින්ද"
-        ]
-    },
-    "mobile-frontend-username": "Ainm úsáideora:",
-    "mobile-frontend-password": "D'fhocal faire:",
-    "mobile-frontend-login": "Logáil isteach",
-    "mobile-frontend-footer-sitename": "{{SITENAME}}",
-    "mobile-frontend-main-menu-settings": "Sainroghanna",
-    "mobile-frontend-page-menu-history": "Stair"
+	"@metadata": {
+		"authors": [
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-login": "Logáil isteach",
+	"mobile-frontend-main-menu-settings": "Sainroghanna",
+	"mobile-frontend-page-menu-history": "Stair",
+	"mobile-frontend-password": "D'fhocal faire:",
+	"mobile-frontend-username": "Ainm úsáideora:"
 }

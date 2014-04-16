@@ -1,30 +1,28 @@
 {
-    "@metadata": {
-        "authors": [
-            "M G Harish",
-            "Nayvik",
-            "VASANTH S.N."
-        ]
-    },
-    "mobile-frontend-desc": "ಮೊಬೈಲ್ ಮುನ್ನೆಲೆ",
-    "mobile-frontend-search-submit": "ಹೋಗು",
-    "mobile-frontend-home-button": "ಮುಖ್ಯಪುಟ",
-    "mobile-frontend-random-button": "ಹೀಗೇ ಒಂದು ಪುಟ",
-    "mobile-frontend-back-to-top-of-section": "ಒಂದು ವಿಭಾಗ ಹಿಂದಕ್ಕೆ ಹೋಗಿ",
-    "mobile-frontend-regular-site": "ಮುಂತೆರೆ ನೋಟ",
-    "mobile-frontend-wml-continue": "ಮುಂದುವರೆಸು...",
-    "mobile-frontend-wml-back": "ಹಿಂದೆ...",
-    "mobile-frontend-view": "ಮೊಬೈಲ್ ವೀಕ್ಷಣೆ",
-    "mobile-frontend-opt-in-explain": "ಬೀಟಾವನ್ನು ಸೇರುವುದರಿಂದ, ದೋಷಗಳು ಮತ್ತು ವಿವಾದಾಂಶಗಳ ಅಪಾಯದೊಂದಿಗೆ, ನೀವು ಪ್ರಾಯೋಗಿಕ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಪಡೆಯುವಿರಿ.",
-    "mobile-frontend-disable-images": "ಮೊಬೈಲ್ ಜಾಲತಾಣದಲ್ಲಿ ಚಿತ್ರಗಳನ್ನು ಅಡಗಿಸು",
-    "mobile-frontend-enable-images": "ಮೊಬೈಲ್ ಜಾಲತಾಣದಲ್ಲಿ ಚಿತ್ರಗಳನ್ನು ತೋರಿಸು",
-    "mobile-frontend-featured-article": "ಇಂದಿನ ವಿಶೇಷ ಲೇಖನ",
-    "mobile-frontend-news-items": "ಸುದ್ದಿಯಲ್ಲಿ",
-    "mobile-frontend-username": "ಬಳಕೆದಾರ ಹೆಸರು:",
-    "mobile-frontend-password": "ಪ್ರವೇಶಪದ:",
-    "mobile-frontend-login": "ಒಳ ಬಾ",
-    "mobile-frontend-placeholder": "ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಇಲ್ಲಿ ನಮೂದಿಸಿ...",
-    "mobile-frontend-dismiss-notification": "ಈ ಅಧಿಸೂಚನೆಯನ್ನು ತೊಡೆದುಹಾಕಿ",
-    "mobile-frontend-clear-search": "ಅಳಿಸಿ",
-    "mobile-frontend-copyright": "ಈ ಮಾಹಿತಿ <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಶನ್ ಶೇರ್ ಅಲೈಕ್ ಲೈಸೆನ್ಸಿನಡಿ</a> ಲಭ್ಯವಿದೆ. ಕೆಲವು ಹೆಚ್ಚಿನ ನಿಬಂಧನೆಗಳು ಕೂಡ ಅನ್ವಯಿಸಬಹುದು. ಮಾಹಿತಿಗೆ <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>ಬಳಕೆಯ ನಿಬಂಧನೆಗಳು</a> ಪುಟ ನೋಡಿ. ವಿಕಿಪೀಡಿಯ <a href='http://www.wikimediafoundation.org/'>ವಿಕಿಮೀಡಿಯ ಫೌಂಡೇಶನ್</a> ಎಂಬ ಲಾಭರಹಿತ ಸಂಸ್ಥೆಯ ಟ್ರೇಡ್ ಮಾರ್ಕ್."
+	"@metadata": {
+		"authors": [
+			"M G Harish",
+			"Nayvik",
+			"VASANTH S.N."
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "ಒಂದು ವಿಭಾಗ ಹಿಂದಕ್ಕೆ ಹೋಗಿ",
+	"mobile-frontend-clear-search": "ಅಳಿಸಿ",
+	"mobile-frontend-copyright": "ಈ ಮಾಹಿತಿ <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಶನ್ ಶೇರ್ ಅಲೈಕ್ ಲೈಸೆನ್ಸಿನಡಿ</a> ಲಭ್ಯವಿದೆ. ಕೆಲವು ಹೆಚ್ಚಿನ ನಿಬಂಧನೆಗಳು ಕೂಡ ಅನ್ವಯಿಸಬಹುದು. ಮಾಹಿತಿಗೆ <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>ಬಳಕೆಯ ನಿಬಂಧನೆಗಳು</a> ಪುಟ ನೋಡಿ. ವಿಕಿಪೀಡಿಯ <a href='http://www.wikimediafoundation.org/'>ವಿಕಿಮೀಡಿಯ ಫೌಂಡೇಶನ್</a> ಎಂಬ ಲಾಭರಹಿತ ಸಂಸ್ಥೆಯ ಟ್ರೇಡ್ ಮಾರ್ಕ್.",
+	"mobile-frontend-desc": "ಮೊಬೈಲ್ ಮುನ್ನೆಲೆ",
+	"mobile-frontend-disable-images": "ಮೊಬೈಲ್ ಜಾಲತಾಣದಲ್ಲಿ ಚಿತ್ರಗಳನ್ನು ಅಡಗಿಸು",
+	"mobile-frontend-dismiss-notification": "ಈ ಅಧಿಸೂಚನೆಯನ್ನು ತೊಡೆದುಹಾಕಿ",
+	"mobile-frontend-enable-images": "ಮೊಬೈಲ್ ಜಾಲತಾಣದಲ್ಲಿ ಚಿತ್ರಗಳನ್ನು ತೋರಿಸು",
+	"mobile-frontend-featured-article": "ಇಂದಿನ ವಿಶೇಷ ಲೇಖನ",
+	"mobile-frontend-home-button": "ಮುಖ್ಯಪುಟ",
+	"mobile-frontend-login": "ಒಳ ಬಾ",
+	"mobile-frontend-news-items": "ಸುದ್ದಿಯಲ್ಲಿ",
+	"mobile-frontend-opt-in-explain": "ಬೀಟಾವನ್ನು ಸೇರುವುದರಿಂದ, ದೋಷಗಳು ಮತ್ತು ವಿವಾದಾಂಶಗಳ ಅಪಾಯದೊಂದಿಗೆ, ನೀವು ಪ್ರಾಯೋಗಿಕ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಪಡೆಯುವಿರಿ.",
+	"mobile-frontend-password": "ಪ್ರವೇಶಪದ:",
+	"mobile-frontend-placeholder": "ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಇಲ್ಲಿ ನಮೂದಿಸಿ...",
+	"mobile-frontend-random-button": "ಹೀಗೇ ಒಂದು ಪುಟ",
+	"mobile-frontend-regular-site": "ಮುಂತೆರೆ ನೋಟ",
+	"mobile-frontend-search-submit": "ಹೋಗು",
+	"mobile-frontend-username": "ಬಳಕೆದಾರ ಹೆಸರು:",
+	"mobile-frontend-view": "ಮೊಬೈಲ್ ವೀಕ್ಷಣೆ"
 }

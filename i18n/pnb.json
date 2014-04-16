@@ -1,24 +1,22 @@
 {
-    "@metadata": {
-        "authors": [
-            "Khalid Mahmood"
-        ]
-    },
-    "mobile-frontend-desc": "ہلن والا وکھالہ",
-    "mobile-frontend-search-submit": "چلو",
-    "mobile-frontend-home-button": "کعر",
-    "mobile-frontend-random-button": "الٹے پلٹے",
-    "mobile-frontend-back-to-top-of-section": "اک سیکشن پچھے چلو",
-    "mobile-frontend-regular-site": "ایس صفے نوں ریگولر {{ساغیٹناں}} تے ویکھو",
-    "mobile-frontend-wml-continue": "جاری رکھو",
-    "mobile-frontend-wml-back": "پچھے نوں۔۔۔۔۔۔۔۔۔۔۔",
-    "mobile-frontend-view": "ٹردی مورت",
-    "mobile-frontend-opt-in-explain": "بیٹا پسند کرن نال تسیں اج کم ہوندیاں تھانواں تے آؤگے جتھے مسلے تے بگز ہوسکدے نیں۔",
-    "mobile-frontend-disable-images": "موبائل آلی ویب سائٹ تے فوٹواں بند کرو",
-    "mobile-frontend-enable-images": "موبائل آلی ویب سائٹ تے فوٹواں آن کرو",
-    "mobile-frontend-featured-article": "اج دا چونواں آرٹیکل",
-    "mobile-frontend-news-items": "دساں چ",
-    "mobile-frontend-username": "ورتن والہ:",
-    "mobile-frontend-password": "کنجی:",
-    "mobile-frontend-login": "لاگ ان ہو جاو"
+	"@metadata": {
+		"authors": [
+			"Khalid Mahmood"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "اک سیکشن پچھے چلو",
+	"mobile-frontend-desc": "ہلن والا وکھالہ",
+	"mobile-frontend-disable-images": "موبائل آلی ویب سائٹ تے فوٹواں بند کرو",
+	"mobile-frontend-enable-images": "موبائل آلی ویب سائٹ تے فوٹواں آن کرو",
+	"mobile-frontend-featured-article": "اج دا چونواں آرٹیکل",
+	"mobile-frontend-home-button": "کعر",
+	"mobile-frontend-login": "لاگ ان ہو جاو",
+	"mobile-frontend-news-items": "دساں چ",
+	"mobile-frontend-opt-in-explain": "بیٹا پسند کرن نال تسیں اج کم ہوندیاں تھانواں تے آؤگے جتھے مسلے تے بگز ہوسکدے نیں۔",
+	"mobile-frontend-password": "کنجی:",
+	"mobile-frontend-random-button": "الٹے پلٹے",
+	"mobile-frontend-regular-site": "ایس صفے نوں ریگولر {{ساغیٹناں}} تے ویکھو",
+	"mobile-frontend-search-submit": "چلو",
+	"mobile-frontend-username": "ورتن والہ:",
+	"mobile-frontend-view": "ٹردی مورت"
 }

@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Jun Misugi"
-        ]
-    },
-    "mobile-frontend-languages-header": "Linghi",
-    "mobile-frontend-watchlist-filter-articles": "Pàgini",
-    "mobile-frontend-mainpage-cta-prompt": "Kistha pàgina ha bisognu d'aggiuddu tòiu"
+	"@metadata": {
+		"authors": [
+			"Jun Misugi"
+		]
+	},
+	"mobile-frontend-languages-header": "Linghi",
+	"mobile-frontend-mainpage-cta-prompt": "Kistha pàgina ha bisognu d'aggiuddu tòiu",
+	"mobile-frontend-watchlist-filter-articles": "Pàgini"
 }

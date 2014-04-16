@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dfoy",
-            "Rkupsala"
-        ]
-    },
-    "mobile-frontend-placeholder": "Sosa na {{SITENAME}}",
-    "mobile-frontend-placeholder-beta": "Sosa na {{SITENAME}} (Beta)"
+	"@metadata": {
+		"authors": [
+			"Dfoy",
+			"Rkupsala"
+		]
+	},
+	"mobile-frontend-placeholder": "Sosa na {{SITENAME}}",
+	"mobile-frontend-placeholder-beta": "Sosa na {{SITENAME}} (Beta)"
 }

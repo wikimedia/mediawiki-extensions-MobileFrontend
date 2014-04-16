@@ -1,22 +1,21 @@
 {
-    "@metadata": {
-        "authors": [
-            "George Animal",
-            "Ghybu",
-            "Gomada"
-        ]
-    },
-    "mobile-frontend-search-submit": "Biçe",
-    "mobile-frontend-home-button": "Mal",
-    "mobile-frontend-settings-beta": "Beta",
-    "mobile-frontend-random-button": "Ketober",
-    "mobile-frontend-regular-site": "Vê rûpelê di Wîkîpediya asayî de bibîne",
-    "mobile-frontend-wml-continue": "Didome ...",
-    "mobile-frontend-view": "Xuyakirina mobîl",
-    "mobile-frontend-username": "Navê bikarhêner:",
-    "mobile-frontend-password": "Şîfre:",
-    "mobile-frontend-username-placeholder": "Navê bikarhêner",
-    "mobile-frontend-footer-contact": "Têkilî",
-    "mobile-frontend-page-menu-contents": "naverok",
-    "mobile-frontend-editor-success": "Serkeftî! Guhertina te hate tomarkirin."
+	"@metadata": {
+		"authors": [
+			"George Animal",
+			"Ghybu",
+			"Gomada"
+		]
+	},
+	"mobile-frontend-editor-success": "Serkeftî! Guhertina te hate tomarkirin.",
+	"mobile-frontend-footer-contact": "Têkilî",
+	"mobile-frontend-home-button": "Mal",
+	"mobile-frontend-page-menu-contents": "naverok",
+	"mobile-frontend-password": "Şîfre:",
+	"mobile-frontend-random-button": "Ketober",
+	"mobile-frontend-regular-site": "Vê rûpelê di Wîkîpediya asayî de bibîne",
+	"mobile-frontend-search-submit": "Biçe",
+	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-username": "Navê bikarhêner:",
+	"mobile-frontend-username-placeholder": "Navê bikarhêner",
+	"mobile-frontend-view": "Xuyakirina mobîl"
 }

@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Явах",
-    "mobile-frontend-home-button": "Нүүр",
-    "mobile-frontend-random-button": "Санамсаргүй",
-    "mobile-frontend-back-to-top-of-section": "Өмнөх хэсэг руу буцах",
-    "mobile-frontend-regular-site": "Энэ хуудсыг ердийн Википедиа дээр үзэх",
-    "mobile-frontend-featured-article": "Өнөөдрийн онцлох өгүүлэл",
-    "mobile-frontend-copyright": "Текст нь <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>-ийн хувьд оршин буй; зарим нэг нэмэлт нөхцөл байж магадгүй. <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Хэрэглээний нөхцөл</a> хуудсаас илүү дэлгэрэнгүй мэдээлэл авна уу. Википедиа нь <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc. (Викимедиа сан)</a> ашгийн бус байгууллагын доор бүртгэлтэй таних тэмдэг болно."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Өмнөх хэсэг руу буцах",
+	"mobile-frontend-copyright": "Текст нь <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>-ийн хувьд оршин буй; зарим нэг нэмэлт нөхцөл байж магадгүй. <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Хэрэглээний нөхцөл</a> хуудсаас илүү дэлгэрэнгүй мэдээлэл авна уу. Википедиа нь <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc. (Викимедиа сан)</a> ашгийн бус байгууллагын доор бүртгэлтэй таних тэмдэг болно.",
+	"mobile-frontend-featured-article": "Өнөөдрийн онцлох өгүүлэл",
+	"mobile-frontend-home-button": "Нүүр",
+	"mobile-frontend-random-button": "Санамсаргүй",
+	"mobile-frontend-regular-site": "Энэ хуудсыг ердийн Википедиа дээр үзэх",
+	"mobile-frontend-search-submit": "Явах"
 }

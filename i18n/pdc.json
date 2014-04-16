@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Xqt"
-        ]
-    },
-    "mobile-frontend-search-submit": "Geh los",
-    "mobile-frontend-home-button": "Schtaert"
+	"@metadata": {
+		"authors": [
+			"Xqt"
+		]
+	},
+	"mobile-frontend-home-button": "Schtaert",
+	"mobile-frontend-search-submit": "Geh los"
 }

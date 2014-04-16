@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Basharh"
-        ]
-    },
-    "mobile-frontend-search-submit": "ܙܠ",
-    "mobile-frontend-home-button": "ܪܝܫܝܬܐ",
-    "mobile-frontend-random-button": "ܚܘܝܚܐܝܬ",
-    "mobile-frontend-regular-site": "ܚܘܝ ܐܝܟ ܚܫܘܒܬܐ",
-    "mobile-frontend-view": "ܓܠܚܐ ܒܙܥܘܩܐ ܟܘܪܝܐ (ܡܫܢܝܢܐ)",
-    "mobile-frontend-settings-site-header": "ܠܫܢ̈ܐ ܕ {{SITENAME}}"
+	"@metadata": {
+		"authors": [
+			"Basharh"
+		]
+	},
+	"mobile-frontend-home-button": "ܪܝܫܝܬܐ",
+	"mobile-frontend-random-button": "ܚܘܝܚܐܝܬ",
+	"mobile-frontend-regular-site": "ܚܘܝ ܐܝܟ ܚܫܘܒܬܐ",
+	"mobile-frontend-search-submit": "ܙܠ",
+	"mobile-frontend-settings-site-header": "ܠܫܢ̈ܐ ܕ {{SITENAME}}",
+	"mobile-frontend-view": "ܓܠܚܐ ܒܙܥܘܩܐ ܟܘܪܝܐ (ܡܫܢܝܢܐ)"
 }

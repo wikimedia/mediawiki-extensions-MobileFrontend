@@ -1,22 +1,22 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ilnur efende",
-            "Ильнар"
-        ]
-    },
-    "mobile-frontend-back-to-top-of-section": "Бер бүлеккә артка",
-    "mobile-frontend-copyright": "Текст \u003Ca href=\"http://creativecommons.org/licenses/by-sa/3.0/\"\u003ECreative Commons Attribution/Share-Alike\u003C/a\u003E лицензиясе шартларында ачык, махсус очракларда өстәмә шартлар кулланыла ала. Күбрәк \u003Ca href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'\u003EУсловия использования\u003C/a\u003E кара. «{{SITENAME}}» — \u003Ca href='http://www.wikimediafoundation.org/'\u003E«Викимедиа фонды»\u003C/a\u003E табышсыз оешманың теркәлгән сәүдә маркасы.",
-    "mobile-frontend-desc": "Мобиль интерфейс",
-    "mobile-frontend-featured-article": "Көннең сайланган мәкаләсе",
-    "mobile-frontend-home-button": "Өйгә",
-    "mobile-frontend-login": "Керү",
-    "mobile-frontend-main-menu-logout": "Чыгу",
-    "mobile-frontend-random-button": "Очраклы",
-    "mobile-frontend-regular-site": "Сәхифәне гади {{SITENAME}} сәхифәсендә карау",
-    "mobile-frontend-search-submit": "Күчү",
-    "mobile-frontend-sign-in-heading": "Керү",
-    "mobile-frontend-view": "Мобиль юрама",
-    "mobile-frontend-watchlist-cta-button-login": "Керү",
-    "mobilefrontend-keepgoing-links-title": "Сылтамалар өстәү"
+	"@metadata": {
+		"authors": [
+			"Ilnur efende",
+			"Ильнар"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Бер бүлеккә артка",
+	"mobile-frontend-copyright": "Текст <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензиясе шартларында ачык, махсус очракларда өстәмә шартлар кулланыла ала. Күбрәк <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Условия использования</a> кара. «{{SITENAME}}» — <a href='http://www.wikimediafoundation.org/'>«Викимедиа фонды»</a> табышсыз оешманың теркәлгән сәүдә маркасы.",
+	"mobile-frontend-desc": "Мобиль интерфейс",
+	"mobile-frontend-featured-article": "Көннең сайланган мәкаләсе",
+	"mobile-frontend-home-button": "Өйгә",
+	"mobile-frontend-login": "Керү",
+	"mobile-frontend-main-menu-logout": "Чыгу",
+	"mobile-frontend-random-button": "Очраклы",
+	"mobile-frontend-regular-site": "Сәхифәне гади {{SITENAME}} сәхифәсендә карау",
+	"mobile-frontend-search-submit": "Күчү",
+	"mobile-frontend-sign-in-heading": "Керү",
+	"mobile-frontend-view": "Мобиль юрама",
+	"mobile-frontend-watchlist-cta-button-login": "Керү",
+	"mobilefrontend-keepgoing-links-title": "Сылтамалар өстәү"
 }

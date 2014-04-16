@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Waihorace"
-        ]
-    },
-    "mobile-frontend-back-to-top-of-section": "番去上一章",
-    "mobile-frontend-regular-site": "喺正常嘅{{SITENAME}}睇呢版",
-    "mobile-frontend-view": "流動版",
-    "mobile-frontend-disable-images": "喺手機版唔睇圖"
+	"@metadata": {
+		"authors": [
+			"Waihorace"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "番去上一章",
+	"mobile-frontend-disable-images": "喺手機版唔睇圖",
+	"mobile-frontend-regular-site": "喺正常嘅{{SITENAME}}睇呢版",
+	"mobile-frontend-view": "流動版"
 }

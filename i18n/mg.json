@@ -1,18 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Jagwar",
-            "Krinkle"
-        ]
-    },
-    "mobile-frontend-back-to-top-of-section": "Hiverina any amina fizarana nialoha",
-    "mobile-frontend-featured-article": "Takelak'ity andro ity",
-    "mobile-frontend-generic-404-desc": "Tsy hia ilay pejy notadiavinao.",
-    "mobile-frontend-generic-404-title": "Hadisoana - tsy hita ilay pejy",
-    "mobile-frontend-home-button": "Fandraisana",
-    "mobile-frontend-page-saving": "\u003Cstrong\u003EMitahiry  an'i\u003C/strong\u003E \u003Cspan\u003E$1\u003C/span\u003E",
-    "mobile-frontend-profile-footer-ancient": "Nanao [[Special:Contributions/$1|{{PLURAL:$3|fanovana tokana |fanovana $3}}]] ary [[Special:Uploads/$1|{{PLURAL:$4|fampidiran-drakitra tokana |fampidiran-drakitra $4|500=fampidiran-drakitra mahery ny 500 }}]].",
-    "mobile-frontend-random-button": "Takelaka kisendra",
-    "mobile-frontend-regular-site": "Aseho amin'ny {{SITENAME}} tsotra ity pejy ity",
-    "mobile-frontend-search-submit": "Tsidiho"
+	"@metadata": {
+		"authors": [
+			"Jagwar",
+			"Krinkle"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Hiverina any amina fizarana nialoha",
+	"mobile-frontend-featured-article": "Takelak'ity andro ity",
+	"mobile-frontend-generic-404-desc": "Tsy hia ilay pejy notadiavinao.",
+	"mobile-frontend-generic-404-title": "Hadisoana - tsy hita ilay pejy",
+	"mobile-frontend-home-button": "Fandraisana",
+	"mobile-frontend-page-saving": "<strong>Mitahiry  an'i</strong> <span>$1</span>",
+	"mobile-frontend-profile-footer-ancient": "Nanao [[Special:Contributions/$1|{{PLURAL:$3|fanovana tokana |fanovana $3}}]] ary [[Special:Uploads/$1|{{PLURAL:$4|fampidiran-drakitra tokana |fampidiran-drakitra $4|500=fampidiran-drakitra mahery ny 500 }}]].",
+	"mobile-frontend-random-button": "Takelaka kisendra",
+	"mobile-frontend-regular-site": "Aseho amin'ny {{SITENAME}} tsotra ity pejy ity",
+	"mobile-frontend-search-submit": "Tsidiho"
 }

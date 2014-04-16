@@ -1,11 +1,9 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Lakat",
-    "mobile-frontend-home-button": "Balay",
-    "mobile-frontend-random-button": "Randum",
-    "mobile-frontend-regular-site": "Tan-awon ini nga pahina sa regular na Wikipedya",
-    "mobile-frontend-featured-article": "Subong nga Napili na Artikulo",
-    "mobile-frontend-copyright": "Ang ini nga teksto ay makita sa idalum <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; ang nadugang nga impormasyon ay pwede ma-aply. Tan-awa <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> para sa mga detalye. Ang Wikipedya ay rehistrado trademark sang <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, wala profidad nga organisasyon."
+	"@metadata": [],
+	"mobile-frontend-copyright": "Ang ini nga teksto ay makita sa idalum <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; ang nadugang nga impormasyon ay pwede ma-aply. Tan-awa <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> para sa mga detalye. Ang Wikipedya ay rehistrado trademark sang <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, wala profidad nga organisasyon.",
+	"mobile-frontend-featured-article": "Subong nga Napili na Artikulo",
+	"mobile-frontend-home-button": "Balay",
+	"mobile-frontend-random-button": "Randum",
+	"mobile-frontend-regular-site": "Tan-awon ini nga pahina sa regular na Wikipedya",
+	"mobile-frontend-search-submit": "Lakat"
 }

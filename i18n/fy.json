@@ -1,14 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Kening Aldgilles"
-        ]
-    },
-    "mobile-frontend-photo-cancel": "Ofbrekke",
-    "mobile-frontend-image-cancel-confirm": "Upload ôfbrekke?",
-    "mobile-frontend-editor-edit": "Bewurkje",
-    "mobile-frontend-editor-continue": "Trochgean",
-    "mobile-frontend-editor-save": "Fêstlizze",
-    "mobile-frontend-editor-cancel": "Ofbrekke",
-    "mobile-frontend-drawer-cancel": "Ofbrekke"
+	"@metadata": {
+		"authors": [
+			"Kening Aldgilles"
+		]
+	},
+	"mobile-frontend-drawer-cancel": "Ofbrekke",
+	"mobile-frontend-editor-cancel": "Ofbrekke",
+	"mobile-frontend-editor-continue": "Trochgean",
+	"mobile-frontend-editor-edit": "Bewurkje",
+	"mobile-frontend-editor-save": "Fêstlizze",
+	"mobile-frontend-image-cancel-confirm": "Upload ôfbrekke?"
 }

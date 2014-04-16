@@ -1,13 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Kghbln"
-        ]
-    },
-    "mobile-frontend-settings-description": "Passen Sie Ihr mobiles Endgerät mit diesen Einstellungen an Ihre Bedürfnisse an.",
-    "mobile-frontend-opt-in-explain": "Durch die Teilnahme am Beta-Test erhalten Sie Zugriff auf experimentelle Funktionen, die allerdings auch Probleme und Fehler verursachen können.",
-    "mobile-frontend-language-footer": "Hinweis: Dieser Artikel ist möglicherweise nicht in Ihrer Sprache geschrieben. Sie können einsehen, welche Sprachen {{SITENAME}} unterstützt, indem Sie hier klicken.",
-    "mobile-frontend-placeholder": "Geben Sie hier Ihre Suche ein ...",
-    "mobile-frontend-search-help": "Geben Sie oben den Suchbegriff ein. Passende Artikelnamen werden dann hier angezeigt.",
-    "mobile-frontend-search-noresults": "Kein Artikeltitel entspricht Ihrer Suche. Ändern sie Ihre Suche oder drücken Sie die Suchschaltfläche Ihrer Tastatur, um die Suche auf den Inhalt der Artikel auszuweiten."
+	"@metadata": {
+		"authors": [
+			"Kghbln"
+		]
+	},
+	"mobile-frontend-opt-in-explain": "Durch die Teilnahme am Beta-Test erhalten Sie Zugriff auf experimentelle Funktionen, die allerdings auch Probleme und Fehler verursachen können.",
+	"mobile-frontend-placeholder": "Geben Sie hier Ihre Suche ein ...",
+	"mobile-frontend-settings-description": "Passen Sie Ihr mobiles Endgerät mit diesen Einstellungen an Ihre Bedürfnisse an."
 }

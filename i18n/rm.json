@@ -1,18 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gion-andri",
-            "Kazu89"
-        ]
-    },
-    "mobile-frontend-search-submit": "Dai",
-    "mobile-frontend-home-button": "Chasa",
-    "mobile-frontend-random-button": "Casual",
-    "mobile-frontend-back-to-top-of-section": "Siglir enavos in chapitel",
-    "mobile-frontend-regular-site": "Visitar la pagina regulara da {{SITENAME}}",
-    "mobile-frontend-wml-continue": "Cuntinuar…",
-    "mobile-frontend-wml-back": "Enavos…",
-    "mobile-frontend-view": "Versiun mobila",
-    "mobile-frontend-featured-article": "Artitgels dal di",
-    "mobile-frontend-copyright": "Il text è disponibel sut la licenza <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; ulteriuras cundiziuns pon esser applitgablas. Detagls chattas ti en las <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>cundiziuns d'utilisaziun</a>. Vichipedia è ina marca registrada da la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, ina organisaziun senza finamira da profit."
+	"@metadata": {
+		"authors": [
+			"Gion-andri",
+			"Kazu89"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Siglir enavos in chapitel",
+	"mobile-frontend-copyright": "Il text è disponibel sut la licenza <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; ulteriuras cundiziuns pon esser applitgablas. Detagls chattas ti en las <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>cundiziuns d'utilisaziun</a>. Vichipedia è ina marca registrada da la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, ina organisaziun senza finamira da profit.",
+	"mobile-frontend-featured-article": "Artitgels dal di",
+	"mobile-frontend-home-button": "Chasa",
+	"mobile-frontend-random-button": "Casual",
+	"mobile-frontend-regular-site": "Visitar la pagina regulara da {{SITENAME}}",
+	"mobile-frontend-search-submit": "Dai",
+	"mobile-frontend-view": "Versiun mobila"
 }

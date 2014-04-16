@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Shimmin Beg"
-        ]
-    },
-    "mobile-frontend-search-submit": "Gow",
-    "mobile-frontend-home-button": "Balley",
-    "mobile-frontend-random-button": "Gyn tort",
-    "mobile-frontend-back-to-top-of-section": "Goll Erash Un Rheynn",
-    "mobile-frontend-regular-site": "Jeeagh er y duillag shoh er {{SITENAME}} chadjin",
-    "mobile-frontend-featured-article": "Reih art y laa",
-    "mobile-frontend-copyright": "Ta'n teks ry-gheddyn fo'n <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Chiedoonys Creative Commons Attribution/Share-Alike</a>; foddee dy vel tooilley conaantyn currit rish. Jeeagh er <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Conaantyn Ymmyd</a> son tooilley mynphoyntyn. She cowrey keirdey jeh'n reagheydys neu-vondeishagh <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> ee {{SITENAME}}."
+	"@metadata": {
+		"authors": [
+			"Shimmin Beg"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Goll Erash Un Rheynn",
+	"mobile-frontend-copyright": "Ta'n teks ry-gheddyn fo'n <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Chiedoonys Creative Commons Attribution/Share-Alike</a>; foddee dy vel tooilley conaantyn currit rish. Jeeagh er <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Conaantyn Ymmyd</a> son tooilley mynphoyntyn. She cowrey keirdey jeh'n reagheydys neu-vondeishagh <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> ee {{SITENAME}}.",
+	"mobile-frontend-featured-article": "Reih art y laa",
+	"mobile-frontend-home-button": "Balley",
+	"mobile-frontend-random-button": "Gyn tort",
+	"mobile-frontend-regular-site": "Jeeagh er y duillag shoh er {{SITENAME}} chadjin",
+	"mobile-frontend-search-submit": "Gow"
 }

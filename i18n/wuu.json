@@ -1,11 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Benojan",
-            "十弌"
-        ]
-    },
-    "mobile-frontend-editor-newpage-prompt": "箇頁朆見。怎兒弗膽大點去建起？",
-    "mobile-frontend-editor-license": "點著\"保存\", 說明爾同意我裏個 [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use 使用條款]，也同意用 [//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0 License] and [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL]發表爾個文字。",
-    "mobile-frontend-media-details": "零零碎碎"
+	"@metadata": {
+		"authors": [
+			"Benojan",
+			"十弌"
+		]
+	},
+	"mobile-frontend-editor-newpage-prompt": "箇頁朆見。怎兒弗膽大點去建起？",
+	"mobile-frontend-media-details": "零零碎碎"
 }

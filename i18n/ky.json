@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Chorobek"
-        ]
-    },
-    "mobile-frontend-username": "Колдонуучунун аты:",
-    "mobile-frontend-password": "Сырсөз:",
-    "mobile-frontend-login": "Кирүү",
-    "mobile-frontend-placeholder": "Издегениңизди бул жакка жазыңыз",
-    "mobile-frontend-privacy-link-text": "Купуялыкты сактоо"
+	"@metadata": {
+		"authors": [
+			"Chorobek"
+		]
+	},
+	"mobile-frontend-login": "Кирүү",
+	"mobile-frontend-password": "Сырсөз:",
+	"mobile-frontend-placeholder": "Издегениңизди бул жакка жазыңыз",
+	"mobile-frontend-privacy-link-text": "Купуялыкты сактоо",
+	"mobile-frontend-username": "Колдонуучунун аты:"
 }

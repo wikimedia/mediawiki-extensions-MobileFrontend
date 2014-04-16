@@ -1,17 +1,17 @@
 {
-    "@metadata": {
-        "authors": [
-            "Rachmat.Wahidi"
-        ]
-    },
-    "mobile-frontend-search-submit": "Jak u",
-    "mobile-frontend-home-button": "Keue",
-    "mobile-frontend-random-button": "Beurangkari",
-    "mobile-frontend-back-to-top-of-section": "Riwang u bagian sigoh nyoe",
-    "mobile-frontend-regular-site": "Eu on nyoe bak {{SITENAME}} biyasa",
-    "mobile-frontend-featured-article": "Teunuleh Peunileh Uroe Nyoe",
-    "mobile-frontend-copyright": "Teks na di yup <ahref='http://ace.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisensi Creative Commons Atribusi-PembagianSerupa</a>; syarat teunamah kadang na. Eu <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Cara Nguy</a> keu leubeh rinci. {{SITENAME}} nakeuh saboh cap meukat teudapeuta nibak <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, saboh teunuboh hana mita laba.",
-    "mobile-frontend-profile-last-upload-caption": "Peutamöng {{PLURAL:$1|baro|$1 uroe nyang ka leupah|0=uroe nyoe}}.",
-    "mobile-frontend-profile-usertalk": "Marit ngön $1",
-    "beta-feature-geonotahack": "Rab laman nyoe"
+	"@metadata": {
+		"authors": [
+			"Rachmat.Wahidi"
+		]
+	},
+	"beta-feature-geonotahack": "Rab laman nyoe",
+	"mobile-frontend-back-to-top-of-section": "Riwang u bagian sigoh nyoe",
+	"mobile-frontend-copyright": "Teks na di yup <ahref='http://ace.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisensi Creative Commons Atribusi-PembagianSerupa</a>; syarat teunamah kadang na. Eu <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Cara Nguy</a> keu leubeh rinci. {{SITENAME}} nakeuh saboh cap meukat teudapeuta nibak <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, saboh teunuboh hana mita laba.",
+	"mobile-frontend-featured-article": "Teunuleh Peunileh Uroe Nyoe",
+	"mobile-frontend-home-button": "Keue",
+	"mobile-frontend-profile-last-upload-caption": "Peutamöng {{PLURAL:$1|baro|$1 uroe nyang ka leupah|0=uroe nyoe}}.",
+	"mobile-frontend-profile-usertalk": "Marit ngön $1",
+	"mobile-frontend-random-button": "Beurangkari",
+	"mobile-frontend-regular-site": "Eu on nyoe bak {{SITENAME}} biyasa",
+	"mobile-frontend-search-submit": "Jak u"
 }

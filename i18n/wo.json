@@ -1,9 +1,7 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Ayca",
-    "mobile-frontend-home-button": " xët wu njëkk",
-    "mobile-frontend-regular-site": "Wone xët wi ci {{SITENAME}} wees baaxoo",
-    "mobile-frontend-featured-article": "Jukkib bés bi"
+	"@metadata": [],
+	"mobile-frontend-featured-article": "Jukkib bés bi",
+	"mobile-frontend-home-button": " xët wu njëkk",
+	"mobile-frontend-regular-site": "Wone xët wi ci {{SITENAME}} wees baaxoo",
+	"mobile-frontend-search-submit": "Ayca"
 }

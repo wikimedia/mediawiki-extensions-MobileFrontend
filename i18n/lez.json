@@ -1,14 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Migraghvi"
-        ]
-    },
-    "mobile-frontend-search-submit": "ЭлячIун",
-    "mobile-frontend-home-button": "КIвализ",
-    "mobile-frontend-random-button": "Дуьшуьшдин",
-    "mobile-frontend-wml-continue": "Давамун...",
-    "mobile-frontend-wml-back": "КЪулухъ...",
-    "mobile-frontend-username": "Уртахдин тlвар:",
-    "mobile-frontend-password": "Парол:"
+	"@metadata": {
+		"authors": [
+			"Migraghvi"
+		]
+	},
+	"mobile-frontend-home-button": "КIвализ",
+	"mobile-frontend-password": "Парол:",
+	"mobile-frontend-random-button": "Дуьшуьшдин",
+	"mobile-frontend-search-submit": "ЭлячIун",
+	"mobile-frontend-username": "Уртахдин тlвар:"
 }

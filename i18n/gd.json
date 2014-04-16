@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Akerbeltz"
-        ]
-    },
-    "mobile-frontend-search-submit": "Rach",
-    "mobile-frontend-home-button": "Dhachaigh",
-    "mobile-frontend-random-button": "Air thuaiream",
-    "mobile-frontend-back-to-top-of-section": "Leum earrann air ais",
-    "mobile-frontend-regular-site": "Sealladh desktop",
-    "mobile-frontend-view": "An sealladh mobile",
-    "mobile-frontend-featured-article": "Susbaint bhrosnaichte an latha an-diugh",
-    "mobile-frontend-copyright": "Tha an t-susbaint seo ri fhaighinn fo $1 mur eil an caochladh 'ga innse."
+	"@metadata": {
+		"authors": [
+			"Akerbeltz"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Leum earrann air ais",
+	"mobile-frontend-copyright": "Tha an t-susbaint seo ri fhaighinn fo $1 mur eil an caochladh 'ga innse.",
+	"mobile-frontend-featured-article": "Susbaint bhrosnaichte an latha an-diugh",
+	"mobile-frontend-home-button": "Dhachaigh",
+	"mobile-frontend-random-button": "Air thuaiream",
+	"mobile-frontend-regular-site": "Sealladh desktop",
+	"mobile-frontend-search-submit": "Rach",
+	"mobile-frontend-view": "An sealladh mobile"
 }

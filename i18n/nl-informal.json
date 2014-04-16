@@ -1,13 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Effeietsanders",
-            "Siebrand"
-        ]
-    },
-    "mobile-frontend-sign-in-why": "Als je een gebruiker hebt op {{SITENAME}}, dan kan hieronder aanmelden.",
-    "mobile-frontend-settings-description": "Pas je gebruikerservaring op je mobiele apparaat aan via deze instellingen.",
-    "mobile-frontend-opt-in-explain": "Als je meedoet met testen, krijg je toegang tot experimentele functionaliteit, met het risico op fouten en problemen.",
-    "mobile-frontend-language-footer": "Deze pagina is mogelijk niet beschikbaar in je voorkeurstaal. Je kunt hier klikken om alle taken die {{SITENAME}} ondersteunt te bekijken.",
-    "mobile-frontend-search-noresults": "Er zijn geen resultaten voor je zoekopdracht. Wijzig je zoekopdracht of klik op de zoekknop op het toetsenbord om binnen pagina's te zoeken."
+	"@metadata": {
+		"authors": [
+			"Effeietsanders",
+			"Siebrand"
+		]
+	},
+	"mobile-frontend-opt-in-explain": "Als je meedoet met testen, krijg je toegang tot experimentele functionaliteit, met het risico op fouten en problemen.",
+	"mobile-frontend-settings-description": "Pas je gebruikerservaring op je mobiele apparaat aan via deze instellingen.",
+	"mobile-frontend-sign-in-why": "Als je een gebruiker hebt op {{SITENAME}}, dan kan hieronder aanmelden."
 }

@@ -1,35 +1,34 @@
 {
-    "@metadata": {
-        "authors": [
-            "Noor2020",
-            "පසිඳු කාවින්ද"
-        ]
-    },
-    "mobile-frontend-desc": "موبائل پیشدید",
-    "mobile-frontend-search-submit": "چلو",
-    "mobile-frontend-home-button": "سرورق",
-    "mobile-frontend-logged-out": "لاگ ان نہیں",
-    "mobile-frontend-save-settings": "محفوظ کریں",
-    "mobile-frontend-random-button": "بےترتیب",
-    "mobile-frontend-back-to-top-of-section": "ایک قطعہ پیچھے جاؤ",
-    "mobile-frontend-close-section": "اس سیکشن میں بند",
-    "mobile-frontend-regular-site": "یہ صفحہ اصل ویکیپیڈیا پر ملاحظہ کیجئے",
-    "mobile-frontend-view": "موبائل دیکھیں",
-    "mobile-frontend-view-desktop": "ڈیسک ٹاپ",
-    "mobile-frontend-view-mobile": "موبائل",
-    "mobile-frontend-images-status": "تصویر",
-    "mobile-frontend-featured-article": "آج کا منتخب مقالہ",
-    "mobile-frontend-username": "صارف کا نام:",
-    "mobile-frontend-password": "پاس ورڈ:",
-    "mobile-frontend-login": "میں لاگ ان کریں",
-    "mobile-frontend-clear-search": "واضح",
-    "mobile-frontend-privacy-link-text": "پرائیویسی",
-    "mobile-frontend-footer-sitename": "{{SITENAME}}",
-    "mobile-frontend-copyright": "تمام متن <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>تخلیقی العام انتساب/مماثل-شراکت اجازہ</a> کے تحت دستیاب ہے; اِضافی شرائط عائد ہوسکتی ہیں. تفصیل کیلئے <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>استعمال کی شرائط</a> دیکھئے. ویکیپیڈیا <a href='http://www.wikimediafoundation.org/'>موسسۂ ویکیمیڈیا، متشرک.</a>، ایک غیر-منافع بخش تنظیم، کا ایک درج شدہ نشانِ تجارت ہے.",
-    "mobile-frontend-footer-contact": "سے رابطہ کریں",
-    "mobile-frontend-main-menu-featured": "نمایاں",
-    "mobile-frontend-main-menu-nearby": "قریبی",
-    "mobile-frontend-main-menu-settings": "ترتیبات",
-    "mobile-frontend-page-menu-history": "تاریخچہ",
-    "mobile-frontend-donate-image-title": "اثقالات"
+	"@metadata": {
+		"authors": [
+			"Noor2020",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "ایک قطعہ پیچھے جاؤ",
+	"mobile-frontend-clear-search": "واضح",
+	"mobile-frontend-copyright": "تمام متن <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>تخلیقی العام انتساب/مماثل-شراکت اجازہ</a> کے تحت دستیاب ہے; اِضافی شرائط عائد ہوسکتی ہیں. تفصیل کیلئے <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>استعمال کی شرائط</a> دیکھئے. ویکیپیڈیا <a href='http://www.wikimediafoundation.org/'>موسسۂ ویکیمیڈیا، متشرک.</a>، ایک غیر-منافع بخش تنظیم، کا ایک درج شدہ نشانِ تجارت ہے.",
+	"mobile-frontend-desc": "موبائل پیشدید",
+	"mobile-frontend-donate-image-title": "اثقالات",
+	"mobile-frontend-featured-article": "آج کا منتخب مقالہ",
+	"mobile-frontend-footer-contact": "سے رابطہ کریں",
+	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-home-button": "سرورق",
+	"mobile-frontend-images-status": "تصویر",
+	"mobile-frontend-logged-out": "لاگ ان نہیں",
+	"mobile-frontend-login": "میں لاگ ان کریں",
+	"mobile-frontend-main-menu-featured": "نمایاں",
+	"mobile-frontend-main-menu-nearby": "قریبی",
+	"mobile-frontend-main-menu-settings": "ترتیبات",
+	"mobile-frontend-page-menu-history": "تاریخچہ",
+	"mobile-frontend-password": "پاس ورڈ:",
+	"mobile-frontend-privacy-link-text": "پرائیویسی",
+	"mobile-frontend-random-button": "بےترتیب",
+	"mobile-frontend-regular-site": "یہ صفحہ اصل ویکیپیڈیا پر ملاحظہ کیجئے",
+	"mobile-frontend-save-settings": "محفوظ کریں",
+	"mobile-frontend-search-submit": "چلو",
+	"mobile-frontend-username": "صارف کا نام:",
+	"mobile-frontend-view": "موبائل دیکھیں",
+	"mobile-frontend-view-desktop": "ڈیسک ٹاپ",
+	"mobile-frontend-view-mobile": "موبائل"
 }

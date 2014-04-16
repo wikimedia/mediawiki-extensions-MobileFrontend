@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Ор",
-    "mobile-frontend-home-button": "Герт",
-    "mobile-frontend-random-button": "Уршг",
-    "mobile-frontend-back-to-top-of-section": "Хүвәр хәрү",
-    "mobile-frontend-regular-site": "Кирин Бикипедин халх хәләх",
-    "mobile-frontend-featured-article": "Өдрә суңһгдсн халх",
-    "mobile-frontend-copyright": "Бичг <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> зөвшлтин болзани орлһта, зәрм бәәдлт дәкәд болзан йоста бәәдг. Тодрхаһар <a href=\"http://wikimediafoundation.org/wiki/Terms_of_Use/ru\">Эдллһнә болзан</a> хәләтн. Бикипеди ({{SITENAME}}) бедрг уга <a href='http://www.wikimediafoundation.org/'>«Бикимедиа көрңг»</a> бүрдәцин бүртклсн гүүлглһнә темдг мөн."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Хүвәр хәрү",
+	"mobile-frontend-copyright": "Бичг <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> зөвшлтин болзани орлһта, зәрм бәәдлт дәкәд болзан йоста бәәдг. Тодрхаһар <a href=\"http://wikimediafoundation.org/wiki/Terms_of_Use/ru\">Эдллһнә болзан</a> хәләтн. Бикипеди ({{SITENAME}}) бедрг уга <a href='http://www.wikimediafoundation.org/'>«Бикимедиа көрңг»</a> бүрдәцин бүртклсн гүүлглһнә темдг мөн.",
+	"mobile-frontend-featured-article": "Өдрә суңһгдсн халх",
+	"mobile-frontend-home-button": "Герт",
+	"mobile-frontend-random-button": "Уршг",
+	"mobile-frontend-regular-site": "Кирин Бикипедин халх хәләх",
+	"mobile-frontend-search-submit": "Ор"
 }

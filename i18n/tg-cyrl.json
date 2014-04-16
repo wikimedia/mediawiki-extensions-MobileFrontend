@@ -1,19 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ibrahim"
-        ]
-    },
-    "mobile-frontend-search-submit": "Бирав",
-    "mobile-frontend-home-button": "Хона",
-    "mobile-frontend-random-button": "Тасодуфӣ",
-    "mobile-frontend-back-to-top-of-section": "Бозгашт Ба Қисмати A",
-    "mobile-frontend-regular-site": "Намоиши ин саҳифа дар Википедиаи маъмулӣ",
-    "mobile-frontend-view-desktop": "Компютер",
-    "mobile-frontend-view-mobile": "Мобил",
-    "mobile-frontend-off": "Хомӯш",
-    "mobile-frontend-on": "Равшан",
-    "mobile-frontend-featured-article": "Мақолаи Баргузидаи Имрӯз",
-    "mobile-frontend-footer-license": "Мӯҳтаво таҳти иҷозатномаи [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] дастрас аст.",
-    "mobile-frontend-copyright": "Ҳамаи навиштаҳо таҳти иҷозаномаи <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a> қобили дастрасӣ мебошанд; шартҳои изофӣ мумкин аст баъдан изофа шавад. Барои ҷузъиёти бештар нигаред <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Қавонин ва муқарароти истифода</a>. Википедиа як аломати тиҷории <a href='http://www.wikimediafoundation.org/'>Бунёди Викимедиа</a>, як созмони ғайри интифоӣ аст."
+	"@metadata": {
+		"authors": [
+			"Ibrahim"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Бозгашт Ба Қисмати A",
+	"mobile-frontend-copyright": "Ҳамаи навиштаҳо таҳти иҷозаномаи <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a> қобили дастрасӣ мебошанд; шартҳои изофӣ мумкин аст баъдан изофа шавад. Барои ҷузъиёти бештар нигаред <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Қавонин ва муқарароти истифода</a>. Википедиа як аломати тиҷории <a href='http://www.wikimediafoundation.org/'>Бунёди Викимедиа</a>, як созмони ғайри интифоӣ аст.",
+	"mobile-frontend-featured-article": "Мақолаи барҷастаи рӯз",
+	"mobile-frontend-home-button": "Хона",
+	"mobile-frontend-off": "Хомӯш",
+	"mobile-frontend-on": "Равшан",
+	"mobile-frontend-random-button": "Тасодуфӣ",
+	"mobile-frontend-regular-site": "Намоиши саримизӣ",
+	"mobile-frontend-search-submit": "Бирав",
+	"mobile-frontend-view-desktop": "Компютер",
+	"mobile-frontend-view-mobile": "Мобил"
 }

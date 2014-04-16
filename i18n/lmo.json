@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Inanz",
-    "mobile-frontend-home-button": "Pagina principala",
-    "mobile-frontend-random-button": "A cas",
-    "mobile-frontend-back-to-top-of-section": "Sàlta Indree d'una Sezión",
-    "mobile-frontend-regular-site": "Varda 'sta pagina chì in sü la {{SITENAME}} nurmala",
-    "mobile-frontend-featured-article": "Vedrína",
-    "mobile-frontend-copyright": "El test a l'è dispunìbil suta la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; pödass che s'àplichen anca cundizión adiziunaj. Varda <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> per i detaj. {{SITENAME}} a l'è un march argistraa de la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, un urganizazion non-profit."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Sàlta Indree d'una Sezión",
+	"mobile-frontend-copyright": "El test a l'è dispunìbil suta la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; pödass che s'àplichen anca cundizión adiziunaj. Varda <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> per i detaj. {{SITENAME}} a l'è un march argistraa de la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, un urganizazion non-profit.",
+	"mobile-frontend-featured-article": "Vedrína",
+	"mobile-frontend-home-button": "Pagina principala",
+	"mobile-frontend-random-button": "A cas",
+	"mobile-frontend-regular-site": "Varda 'sta pagina chì in sü la {{SITENAME}} nurmala",
+	"mobile-frontend-search-submit": "Inanz"
 }

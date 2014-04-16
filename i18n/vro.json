@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Mineq",
-    "mobile-frontend-home-button": "Pääleht",
-    "mobile-frontend-random-button": "Johuslinõ leht",
-    "mobile-frontend-back-to-top-of-section": "Mineq tagasi\t jakko A",
-    "mobile-frontend-regular-site": "Näütäq seod lehte hariligun Vikipeediän",
-    "mobile-frontend-featured-article": "Täämbädse päävä artikli",
-    "mobile-frontend-copyright": "Tekst om ilmutõt <a href=\"http://fi.wikipedia.org/wiki/{{SITENAME}}:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot\">Creative Commons Attribution/Share-Alike</a> litsendsi perrä; kost või löüdäq lisateedüst. Kaeq <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> ligembält siist. Vikipeediä om <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.:n</a>, mittetullosaamisütisüse kirjäpant kaubamärk."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Mineq tagasi\t jakko A",
+	"mobile-frontend-copyright": "Tekst om ilmutõt <a href=\"http://fi.wikipedia.org/wiki/{{SITENAME}}:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot\">Creative Commons Attribution/Share-Alike</a> litsendsi perrä; kost või löüdäq lisateedüst. Kaeq <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> ligembält siist. Vikipeediä om <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.:n</a>, mittetullosaamisütisüse kirjäpant kaubamärk.",
+	"mobile-frontend-featured-article": "Täämbädse päävä artikli",
+	"mobile-frontend-home-button": "Pääleht",
+	"mobile-frontend-random-button": "Johuslinõ leht",
+	"mobile-frontend-regular-site": "Näütäq seod lehte hariligun Vikipeediän",
+	"mobile-frontend-search-submit": "Mineq"
 }

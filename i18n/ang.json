@@ -1,22 +1,22 @@
 {
-    "@metadata": {
-        "authors": [
-            "Espreon"
-        ]
-    },
-    "mobile-frontend-logged-in-homepage-notification": "Wilcume, $1!",
-    "mobile-frontend-save-settings": "Hordian",
-    "mobile-frontend-username": "Brūcendnama:",
-    "mobile-frontend-password": "Þafungword:",
-    "mobile-frontend-username-placeholder": "Brūcendnama",
-    "mobile-frontend-password-placeholder": "Þafungword",
-    "mobile-frontend-login": "Inmeldian",
-    "mobile-frontend-main-menu-login": "Inmeldian",
-    "mobile-frontend-main-menu-logout": "Ūtmeldian",
-    "mobile-frontend-page-menu-history": "Stǣr",
-    "mobile-frontend-watchlist-cta-button-login": "Inmeldian",
-    "mobile-frontend-diffview-anonymous": "Uncūþ brūcend",
-    "mobile-frontend-editor-edit": "Adihtan",
-    "mobile-frontend-editor-save": "Hordian",
-    "mobile-frontend-talk-overlay-header": "Mōtung"
+	"@metadata": {
+		"authors": [
+			"Espreon"
+		]
+	},
+	"mobile-frontend-diffview-anonymous": "Uncūþ brūcend",
+	"mobile-frontend-editor-edit": "Adihtan",
+	"mobile-frontend-editor-save": "Hordian",
+	"mobile-frontend-logged-in-homepage-notification": "Wilcume, $1!",
+	"mobile-frontend-login": "Inmeldian",
+	"mobile-frontend-main-menu-login": "Inmeldian",
+	"mobile-frontend-main-menu-logout": "Ūtmeldian",
+	"mobile-frontend-page-menu-history": "Stǣr",
+	"mobile-frontend-password": "Þafungword:",
+	"mobile-frontend-password-placeholder": "Þafungword",
+	"mobile-frontend-save-settings": "Hordian",
+	"mobile-frontend-talk-overlay-header": "Mōtung",
+	"mobile-frontend-username": "Brūcendnama:",
+	"mobile-frontend-username-placeholder": "Brūcendnama",
+	"mobile-frontend-watchlist-cta-button-login": "Inmeldian"
 }

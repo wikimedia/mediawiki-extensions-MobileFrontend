@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Tassunngarit",
-    "mobile-frontend-home-button": "Angerlamut",
-    "mobile-frontend-random-button": "Nalaatsornikkut",
-    "mobile-frontend-back-to-top-of-section": "Immikkoortup qulaanut",
-    "mobile-frontend-regular-site": "Takutiguk {{SITENAME}} naliginnaasumut",
-    "mobile-frontend-featured-article": "Allaaserisaq ullumi",
-    "mobile-frontend-copyright": "Allatat ilaatinneqarput  <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike-licensen</a> ataani; allat piumasaqaatit atuutinneqarsinnaapput. Takuuk <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>brugsbetingelserne</a> paasissutissaanerusut. {{SITENAME}} nioqqutissiatut nalunaaqqutserneqarsimavoq suliniuteqarfittut una <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Immikkoortup qulaanut",
+	"mobile-frontend-copyright": "Allatat ilaatinneqarput  <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike-licensen</a> ataani; allat piumasaqaatit atuutinneqarsinnaapput. Takuuk <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>brugsbetingelserne</a> paasissutissaanerusut. {{SITENAME}} nioqqutissiatut nalunaaqqutserneqarsimavoq suliniuteqarfittut una <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>.",
+	"mobile-frontend-featured-article": "Allaaserisaq ullumi",
+	"mobile-frontend-home-button": "Angerlamut",
+	"mobile-frontend-random-button": "Nalaatsornikkut",
+	"mobile-frontend-regular-site": "Takutiguk {{SITENAME}} naliginnaasumut",
+	"mobile-frontend-search-submit": "Tassunngarit"
 }

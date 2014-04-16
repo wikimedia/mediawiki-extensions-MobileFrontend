@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Jung",
-    "mobile-frontend-home-button": "Tepas",
-    "mobile-frontend-random-button": "Acak",
-    "mobile-frontend-back-to-top-of-section": "Balik ka Bagian Saméméhna",
-    "mobile-frontend-regular-site": "Pidangkeun ieu kaca dina Wikipédia biasa",
-    "mobile-frontend-featured-article": "Artikel Petingan Poé Ieu",
-    "mobile-frontend-copyright": "Tulisan ditangtayungan ku <a href='http://id.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisénsi Creative Commons Atribusi-PembagianSerupa</a>; sarta bisa aya katangtuan émbohna. Pikeun lengkepna, mangga baca <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Katangtuan Maké</a>. Wikipédia mangrupakeun mérek dagang ti organisasi nirlaba <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Balik ka Bagian Saméméhna",
+	"mobile-frontend-copyright": "Tulisan ditangtayungan ku <a href='http://id.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisénsi Creative Commons Atribusi-PembagianSerupa</a>; sarta bisa aya katangtuan émbohna. Pikeun lengkepna, mangga baca <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Katangtuan Maké</a>. Wikipédia mangrupakeun mérek dagang ti organisasi nirlaba <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>.",
+	"mobile-frontend-featured-article": "Artikel Petingan Poé Ieu",
+	"mobile-frontend-home-button": "Tepas",
+	"mobile-frontend-random-button": "Acak",
+	"mobile-frontend-regular-site": "Pidangkeun ieu kaca dina Wikipédia biasa",
+	"mobile-frontend-search-submit": "Jung"
 }

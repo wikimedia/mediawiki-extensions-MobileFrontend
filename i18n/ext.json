@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Dil",
-    "mobile-frontend-home-button": "Encetu",
-    "mobile-frontend-random-button": "Aleatóriu",
-    "mobile-frontend-back-to-top-of-section": "Dil alatrás un apaltihu",
-    "mobile-frontend-regular-site": "Guipal esta páhina ena Güiquipeya estándal",
-    "mobile-frontend-featured-article": "Artículu destacau",
-    "mobile-frontend-copyright": "El testu está disponibri baju la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Licéncia Creative Commons Attribution/Share-Alike</a>; cláusulas adicionalis puén apricalsi. Guipai <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> pa conocel más detallis. Güiquipeya es una marca rustria la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, una olganización sin ánimu de lucru."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Dil alatrás un apaltihu",
+	"mobile-frontend-copyright": "El testu está disponibri baju la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Licéncia Creative Commons Attribution/Share-Alike</a>; cláusulas adicionalis puén apricalsi. Guipai <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> pa conocel más detallis. Güiquipeya es una marca rustria la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, una olganización sin ánimu de lucru.",
+	"mobile-frontend-featured-article": "Artículu destacau",
+	"mobile-frontend-home-button": "Encetu",
+	"mobile-frontend-random-button": "Aleatóriu",
+	"mobile-frontend-regular-site": "Guipal esta páhina ena Güiquipeya estándal",
+	"mobile-frontend-search-submit": "Dil"
 }

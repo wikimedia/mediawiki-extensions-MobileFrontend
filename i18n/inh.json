@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Amire80",
-            "Умар"
-        ]
-    },
-    "mobile-frontend-search-submit": "Дехьа гӀо",
-    "mobile-frontend-home-button": "ЦӀенга",
-    "mobile-frontend-regular-site": "Ер оагӀув Вкипадечу хьажа",
-    "mobile-frontend-featured-article": "Укх ден хьаржа йоазув"
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Умар"
+		]
+	},
+	"mobile-frontend-featured-article": "Укх ден хьаржа йоазув",
+	"mobile-frontend-home-button": "ЦӀенга",
+	"mobile-frontend-regular-site": "Ер оагӀув Вкипадечу хьажа",
+	"mobile-frontend-search-submit": "Дехьа гӀо"
 }

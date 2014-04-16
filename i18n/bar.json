@@ -1,28 +1,26 @@
 {
-    "@metadata": {
-        "authors": [
-            "Mucalexx",
-            "Schläsinger"
-        ]
-    },
-    "mobile-frontend-desc": "Daméglicht dé fyr móbile Endgräte óptimierde Dorstejung vah Seiten",
-    "mobile-frontend-search-submit": "Lós",
-    "mobile-frontend-home-button": "Start",
-    "mobile-frontend-random-button": "Zuafoi",
-    "mobile-frontend-back-to-top-of-section": "Oah Kapitel zruck springer",
-    "mobile-frontend-regular-site": "Za da klassischen {{SITENAME}}-Auhsicht wexeln",
-    "mobile-frontend-wml-continue": "Weider ...",
-    "mobile-frontend-wml-back": "Zruck ...",
-    "mobile-frontend-view": "Móbile Auhsicht",
-    "mobile-frontend-opt-in-explain": "Durch d' Teilnaum am Beta-Test dahoitst an Zuagrieff af experimenteje Funkzióner, dé dert owerraa Próbléme und Feeler vaursocher kennern.",
-    "mobile-frontend-disable-images": "Bijder a' da móbiln Auhsicht deaktiviern",
-    "mobile-frontend-enable-images": "Bijder a' da móbiln Auhsicht aktiviern",
-    "mobile-frontend-featured-article": "Artiké vam Toog",
-    "mobile-frontend-news-items": "A' d' Noochrichten",
-    "mobile-frontend-username": "Benutzernaum:",
-    "mobile-frontend-password": "Posswort:",
-    "mobile-frontend-login": "Auhmejn",
-    "mobile-frontend-placeholder": "Gib do deih Suach eih ...",
-    "mobile-frontend-dismiss-notification": "dé Benoochrichtigung schliassen",
-    "mobile-frontend-clear-search": "Laarn"
+	"@metadata": {
+		"authors": [
+			"Mucalexx",
+			"Schläsinger"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Oah Kapitel zruck springer",
+	"mobile-frontend-clear-search": "Laarn",
+	"mobile-frontend-desc": "Daméglicht dé fyr móbile Endgräte óptimierde Dorstejung vah Seiten",
+	"mobile-frontend-disable-images": "Bijder a' da móbiln Auhsicht deaktiviern",
+	"mobile-frontend-dismiss-notification": "dé Benoochrichtigung schliassen",
+	"mobile-frontend-enable-images": "Bijder a' da móbiln Auhsicht aktiviern",
+	"mobile-frontend-featured-article": "Artiké vam Toog",
+	"mobile-frontend-home-button": "Start",
+	"mobile-frontend-login": "Auhmejn",
+	"mobile-frontend-news-items": "A' d' Noochrichten",
+	"mobile-frontend-opt-in-explain": "Durch d' Teilnaum am Beta-Test dahoitst an Zuagrieff af experimenteje Funkzióner, dé dert owerraa Próbléme und Feeler vaursocher kennern.",
+	"mobile-frontend-password": "Posswort:",
+	"mobile-frontend-placeholder": "Gib do deih Suach eih ...",
+	"mobile-frontend-random-button": "Zuafoi",
+	"mobile-frontend-regular-site": "Za da klassischen {{SITENAME}}-Auhsicht wexeln",
+	"mobile-frontend-search-submit": "Lós",
+	"mobile-frontend-username": "Benutzernaum:",
+	"mobile-frontend-view": "Móbile Auhsicht"
 }

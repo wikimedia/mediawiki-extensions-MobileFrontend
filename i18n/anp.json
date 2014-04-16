@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "चलॊ",
-    "mobile-frontend-home-button": "मुखपृष्ठ",
-    "mobile-frontend-random-button": "बेतरतीब",
-    "mobile-frontend-back-to-top-of-section": "एक अनुभाग पीछू जा",
-    "mobile-frontend-regular-site": "इ पृष्ठ नियमित विकीपीडिया मॆ देखॊ",
-    "mobile-frontend-featured-article": "आजकॊ विशेष लेख",
-    "mobile-frontend-copyright": "लेख <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; नुसार उपलब्ध छै, अधिक अटॆ नै सकॆ छै. विशेष जानकारी लेली <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> देखॊ. विकीपिडीया <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> केरॊ एगॊ रजिस्टर्ड ट्रेडमार्क आरू स्वंयसेवी संस्था छेकै."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "एक अनुभाग पीछू जा",
+	"mobile-frontend-copyright": "लेख <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; नुसार उपलब्ध छै, अधिक अटॆ नै सकॆ छै. विशेष जानकारी लेली <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> देखॊ. विकीपिडीया <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> केरॊ एगॊ रजिस्टर्ड ट्रेडमार्क आरू स्वंयसेवी संस्था छेकै.",
+	"mobile-frontend-featured-article": "आजकॊ विशेष लेख",
+	"mobile-frontend-home-button": "मुखपृष्ठ",
+	"mobile-frontend-random-button": "बेतरतीब",
+	"mobile-frontend-regular-site": "इ पृष्ठ नियमित विकीपीडिया मॆ देखॊ",
+	"mobile-frontend-search-submit": "चलॊ"
 }

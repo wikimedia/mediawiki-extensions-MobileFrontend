@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Demmy"
-        ]
-    },
-    "mobile-frontend-search-submit": "Lọ",
-    "mobile-frontend-home-button": "Ibùdó",
-    "mobile-frontend-random-button": "Ojúewé àrìnnàkò",
-    "mobile-frontend-username": "Orúkọ oníṣe:",
-    "mobile-frontend-footer-sitename": "{{SITENAME}}",
-    "mobile-frontend-settings-site-header": "Àwọn èdè {{SITENAME}}"
+	"@metadata": {
+		"authors": [
+			"Demmy"
+		]
+	},
+	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-home-button": "Ibùdó",
+	"mobile-frontend-random-button": "Ojúewé àrìnnàkò",
+	"mobile-frontend-search-submit": "Lọ",
+	"mobile-frontend-settings-site-header": "Àwọn èdè {{SITENAME}}",
+	"mobile-frontend-username": "Orúkọ oníṣe:"
 }

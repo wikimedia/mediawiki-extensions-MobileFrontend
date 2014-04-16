@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dfoy"
-        ]
-    },
-    "mobile-frontend-placeholder": "Luka na {{SITENAME}}",
-    "mobile-frontend-placeholder-beta": "Luka na {{SITENAME}} (Beta)"
+	"@metadata": {
+		"authors": [
+			"Dfoy"
+		]
+	},
+	"mobile-frontend-placeholder": "Luka na {{SITENAME}}",
+	"mobile-frontend-placeholder-beta": "Luka na {{SITENAME}} (Beta)"
 }

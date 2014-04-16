@@ -1,26 +1,26 @@
 {
-    "@metadata": {
-        "authors": [
-            "Menachem.Moreira",
-            "Universal Life"
-        ]
-    },
-    "mobile-frontend-diffview-title": "Trocamientos",
-    "mobile-frontend-first-upload-wizard-new-page-3-ok": "Si!",
-    "mobile-frontend-footer-sitename": "{{SITENAME}}",
-    "mobile-frontend-home-button": "Kaza",
-    "mobile-frontend-language-heading": "\u003Cstrong\u003ELenguas\u003C/strong\u003E",
-    "mobile-frontend-language-site-choose": "Bushkar lengua",
-    "mobile-frontend-languages-header": "Lenguas",
-    "mobile-frontend-password": "Kóddiche:",
-    "mobile-frontend-password-placeholder": "Kóddiche",
-    "mobile-frontend-placeholder": "Bushka en {{SITENAME}}",
-    "mobile-frontend-placeholder-alpha": "Buska en {{SITENAME}}(Experimental)",
-    "mobile-frontend-placeholder-beta": "Bushka en {{SITENAME}}(Beta)",
-    "mobile-frontend-search-submit": "Ir",
-    "mobile-frontend-username": "Nombre de kullaneador:",
-    "mobile-frontend-username-placeholder": "Nombre de kullaneador",
-    "mobile-frontend-watchlist-filter-all": "Todos",
-    "mobile-frontend-watchlist-filter-articles": "Pajinas",
-    "mobile-frontend-watchlist-more": "mas"
+	"@metadata": {
+		"authors": [
+			"Menachem.Moreira",
+			"Universal Life"
+		]
+	},
+	"mobile-frontend-diffview-title": "Trocamientos",
+	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Si!",
+	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-home-button": "Kaza",
+	"mobile-frontend-language-heading": "<strong>Lenguas</strong>",
+	"mobile-frontend-language-site-choose": "Bushkar lengua",
+	"mobile-frontend-languages-header": "Lenguas",
+	"mobile-frontend-password": "Kóddiche:",
+	"mobile-frontend-password-placeholder": "Kóddiche",
+	"mobile-frontend-placeholder": "Bushka en {{SITENAME}}",
+	"mobile-frontend-placeholder-alpha": "Buska en {{SITENAME}}(Experimental)",
+	"mobile-frontend-placeholder-beta": "Bushka en {{SITENAME}}(Beta)",
+	"mobile-frontend-search-submit": "Ir",
+	"mobile-frontend-username": "Nombre de kullaneador:",
+	"mobile-frontend-username-placeholder": "Nombre de kullaneador",
+	"mobile-frontend-watchlist-filter-all": "Todos",
+	"mobile-frontend-watchlist-filter-articles": "Pajinas",
+	"mobile-frontend-watchlist-more": "mas"
 }

@@ -1,7 +1,5 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "So",
-    "mobile-frontend-random-button": "Rastamae"
+	"@metadata": [],
+	"mobile-frontend-random-button": "Rastamae",
+	"mobile-frontend-search-submit": "So"
 }

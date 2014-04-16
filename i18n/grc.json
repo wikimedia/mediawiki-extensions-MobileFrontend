@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Crazymadlover"
-        ]
-    },
-    "mobile-frontend-search-submit": "Ἰέναι",
-    "mobile-frontend-home-button": "Κυρία",
-    "mobile-frontend-username": "Ὄνομα χρωμένου:",
-    "mobile-frontend-password": "Σῆμα:"
+	"@metadata": {
+		"authors": [
+			"Crazymadlover"
+		]
+	},
+	"mobile-frontend-home-button": "Κυρία",
+	"mobile-frontend-password": "Σῆμα:",
+	"mobile-frontend-search-submit": "Ἰέναι",
+	"mobile-frontend-username": "Ὄνομα χρωμένου:"
 }

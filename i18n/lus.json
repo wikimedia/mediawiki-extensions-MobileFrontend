@@ -1,33 +1,28 @@
 {
-    "@metadata": {
-        "authors": [
-            "RMizo"
-        ]
-    },
-    "mobile-frontend-desc": "Biakhlatna hmanga thlìrna",
-    "mobile-frontend-search-submit": "Khai le",
-    "mobile-frontend-home-button": "Inpui",
-    "mobile-frontend-random-button": "Kahpah",
-    "mobile-frontend-back-to-top-of-section": "Hlawm khat zuan lêtna",
-    "mobile-frontend-close-section": "Hläwm khàrna",
-    "mobile-frontend-regular-site": "Hmaipui thlir",
-    "mobile-frontend-wml-continue": "Chhunzawmna...",
-    "mobile-frontend-wml-back": "Lêtna...",
-    "mobile-frontend-view": "Biakhlatna hmanga thlìrna",
-    "mobile-frontend-view-desktop": "Khawlthluaknei",
-    "mobile-frontend-view-mobile": "Biakhlatna",
-    "mobile-frontend-featured-article": "Tlangrèlthang...",
-    "mobile-frontend-news-items": "Chanchin thar",
-    "mobile-frontend-username": "Hmangtuhming:",
-    "mobile-frontend-password": "Thurûk:",
-    "mobile-frontend-login": "Luhna",
-    "mobile-frontend-placeholder": "I zawn duh hetah hian ziak rawh le. . .",
-    "mobile-frontend-dismiss-notification": "he hriattirna hi hnâwl rawh",
-    "mobile-frontend-clear-search": "Nawhrehna",
-    "mobile-frontend-privacy-link-text": "Inthupna",
-    "mobile-frontend-footer-sitename": "{{SITENAME}}",
-    "mobile-frontend-footer-license": "Thuziak leh thildang rëng rëng hi [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] dàn hmanga hman theih a ni.",
-    "mobile-frontend-footer-contact": "Biakna",
-    "mobile-frontend-search-noresults": "I thuzawnin thuziak mil pakhat mah a nei lo. I thuzawn i thlâk loh pawhin i khawlthluaknei chhutthlènga zawnna hmehkhep hmet la, thuziak chhúngah i zawng thei ang.",
-    "mobile-frontend-main-menu-featured": "Tlángrèlthang"
+	"@metadata": {
+		"authors": [
+			"RMizo"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Hlawm khat zuan lêtna",
+	"mobile-frontend-clear-search": "Nawhrehna",
+	"mobile-frontend-desc": "Biakhlatna hmanga thlìrna",
+	"mobile-frontend-dismiss-notification": "he hriattirna hi hnâwl rawh",
+	"mobile-frontend-featured-article": "Tlangrèlthang...",
+	"mobile-frontend-footer-contact": "Biakna",
+	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-home-button": "Inpui",
+	"mobile-frontend-login": "Luhna",
+	"mobile-frontend-main-menu-featured": "Tlángrèlthang",
+	"mobile-frontend-news-items": "Chanchin thar",
+	"mobile-frontend-password": "Thurûk:",
+	"mobile-frontend-placeholder": "I zawn duh hetah hian ziak rawh le. . .",
+	"mobile-frontend-privacy-link-text": "Inthupna",
+	"mobile-frontend-random-button": "Kahpah",
+	"mobile-frontend-regular-site": "Hmaipui thlir",
+	"mobile-frontend-search-submit": "Khai le",
+	"mobile-frontend-username": "Hmangtuhming:",
+	"mobile-frontend-view": "Biakhlatna hmanga thlìrna",
+	"mobile-frontend-view-desktop": "Khawlthluaknei",
+	"mobile-frontend-view-mobile": "Biakhlatna"
 }

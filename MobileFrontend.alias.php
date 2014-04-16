@@ -230,6 +230,11 @@ $specialPageAliases['ml'] = array(
 	'Nearby' => array( 'സമീപസ്ഥം' ),
 );
 
+/** Min Nan Chinese (Bân-lâm-gú) */
+$specialPageAliases['nan'] = array(
+	'Uploads' => array( 'Kā--ê_tóng-àn' ),
+);
+
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
 	'MobileOptions' => array( 'MobieleVoorkeuren' ),

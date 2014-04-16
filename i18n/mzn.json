@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Mehdi",
-            "محک"
-        ]
-    },
-    "mobile-frontend-view": "موبایلی هارشائن",
-    "mobile-frontend-copyright": "کل نوشتارون <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>موجوز Creative Commons Attribution/Share-Alike</a> اساس شمه دسترس درنه؛ مومکنه ای بعدن اته سری نو شرط و شروط ایضافه بوه. اگه اطلاعات ویشتری خواننی <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>قوانین و موقررات ایستفاده</a> ره هارشین. ویکی‌پدیا ، <a href='http://www.wikimediafoundation.org/'>ویکی‌مدیا بونیاد</a>اته تجاری علومت ثبت بئی هسه که اتا ناسودبر سازمون هسه."
+	"@metadata": {
+		"authors": [
+			"Mehdi",
+			"محک"
+		]
+	},
+	"mobile-frontend-copyright": "کل نوشتارون <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>موجوز Creative Commons Attribution/Share-Alike</a> اساس شمه دسترس درنه؛ مومکنه ای بعدن اته سری نو شرط و شروط ایضافه بوه. اگه اطلاعات ویشتری خواننی <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>قوانین و موقررات ایستفاده</a> ره هارشین. ویکی‌پدیا ، <a href='http://www.wikimediafoundation.org/'>ویکی‌مدیا بونیاد</a>اته تجاری علومت ثبت بئی هسه که اتا ناسودبر سازمون هسه.",
+	"mobile-frontend-view": "موبایلی هارشائن"
 }

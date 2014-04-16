@@ -1,31 +1,31 @@
 {
-    "@metadata": {
-        "authors": [
-            "John Reid"
-        ]
-    },
-    "beta-feature-minerva": "Enable mobile skin (Minerva) oan the desktap",
-    "beta-feature-minerva-description": "Mak the skin uised on mobile devices ae selectable desktop skin unner the appearance preferences tab.",
-    "mobile-frontend-app-title": "Mobile App",
-    "mobile-frontend-editor-licensing": "Bi hainin chynges, ye agree tae release yer contreebution unner the $1 license.",
-    "mobile-frontend-editor-licensing-with-terms": "Bi hainin chynges, ye agree til the $1 n agree tae release yer contreebution unner the $2 license.",
-    "mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye sair ye want tae cræft}} ae new page oan {{SITENAME}}?",
-    "mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Ye}} {{GENDER:$1|ar cræftin}} ae new page oan {{SITENAME}}!",
-    "mobile-frontend-editor-source-editor": "Soorce eediter",
-    "mobile-frontend-editor-success-new-page": "Congratulâtions oan cræftin ae new page!",
-    "mobile-frontend-editor-switch-confirm": "Ye maun hain yer eedit afore switchin til anither eeditin mode.",
-    "mobile-frontend-editor-switch-editor": "Switch eediter",
-    "mobile-frontend-editor-visual-editor": "Veesual eediter",
-    "mobile-frontend-nearby-to-page": "Naur $1:",
-    "mobile-frontend-news-items": "In the news",
-    "mobile-frontend-page-saving": "<strong>Hainin</strong><span> $1</span>",
-    "mobile-frontend-photo-licensing": "Bi uplaidin this eemage, ye agree tae release yer eemage unner the $1 license.",
-    "mobile-frontend-photo-licensing-with-terms": "Bi uplaidin this eemage, ye agree til the $1 n agree tae release yer eemage unner the $2 license.",
-    "mobile-frontend-placeholder-app": "Rake {{SITENAME}} (Wab App)",
-    "mobile-frontend-profile-footer-ancient": "Makit [[Special:Contributions/$1|{{PLURAL:$3|1 eedit|$3 eedits}}]] n [[Special:Uploads/$1|{{PLURAL:$4|1 uplaid|$4 uplaids|500=500+ uplaids}}]].",
-    "mobile-frontend-requires-mobile": "This page isna available oan desktap. Please clap the mobile luik-at airtin at the bottom o the page.",
-    "mobile-frontend-requires-title": "Page naw available",
-    "mobile-frontend-terms-text": "Terms o Uiss",
-    "mobilefrontend-keepgoing-links-example": "E.g. $1guitar$2 becomes $3guitar$4",
-    "mobilefrontend-keepgoing-links-explain": "Whuar the title o aen exeestin page is mentioned, enclaise it in dooble brackets"
+	"@metadata": {
+		"authors": [
+			"John Reid"
+		]
+	},
+	"beta-feature-minerva": "Enable mobile skin (Minerva) oan the desktap",
+	"beta-feature-minerva-description": "Mak the skin uised on mobile devices ae selectable desktop skin unner the appearance preferences tab.",
+	"mobile-frontend-app-title": "Mobile App",
+	"mobile-frontend-editor-licensing": "Bi hainin chynges, ye agree tae release yer contreebution unner the $1 license.",
+	"mobile-frontend-editor-licensing-with-terms": "Bi hainin chynges, ye agree til the $1 n agree tae release yer contreebution unner the $2 license.",
+	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye sair ye want tae cræft}} ae new page oan {{SITENAME}}?",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Ye}} {{GENDER:$1|ar cræftin}} ae new page oan {{SITENAME}}!",
+	"mobile-frontend-editor-source-editor": "Soorce eediter",
+	"mobile-frontend-editor-success-new-page": "Congratulâtions oan cræftin ae new page!",
+	"mobile-frontend-editor-switch-confirm": "Ye maun hain yer eedit afore switchin til anither eeditin mode.",
+	"mobile-frontend-editor-switch-editor": "Switch eediter",
+	"mobile-frontend-editor-visual-editor": "Veesual eediter",
+	"mobile-frontend-nearby-to-page": "Naur $1:",
+	"mobile-frontend-news-items": "In the news",
+	"mobile-frontend-page-saving": "<strong>Hainin</strong><span> $1</span>",
+	"mobile-frontend-photo-licensing": "Bi uplaidin this eemage, ye agree tae release yer eemage unner the $1 license.",
+	"mobile-frontend-photo-licensing-with-terms": "Bi uplaidin this eemage, ye agree til the $1 n agree tae release yer eemage unner the $2 license.",
+	"mobile-frontend-placeholder-app": "Rake {{SITENAME}} (Wab App)",
+	"mobile-frontend-profile-footer-ancient": "Makit [[Special:Contributions/$1|{{PLURAL:$3|1 eedit|$3 eedits}}]] n [[Special:Uploads/$1|{{PLURAL:$4|1 uplaid|$4 uplaids|500=500+ uplaids}}]].",
+	"mobile-frontend-requires-mobile": "This page isna available oan desktap. Please clap the mobile luik-at airtin at the bottom o the page.",
+	"mobile-frontend-requires-title": "Page naw available",
+	"mobile-frontend-terms-text": "Terms o Uiss",
+	"mobilefrontend-keepgoing-links-example": "E.g. $1guitar$2 becomes $3guitar$4",
+	"mobilefrontend-keepgoing-links-explain": "Whuar the title o aen exeestin page is mentioned, enclaise it in dooble brackets"
 }

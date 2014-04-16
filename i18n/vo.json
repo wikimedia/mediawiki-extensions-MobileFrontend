@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Malafaya"
-        ]
-    },
-    "mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Jafol}} padi nulik su {{SITENAME}}!"
+	"@metadata": {
+		"authors": [
+			"Malafaya"
+		]
+	},
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Jafol}} padi nulik su {{SITENAME}}!"
 }

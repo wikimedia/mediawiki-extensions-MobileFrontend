@@ -1,8 +1,6 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Yi",
-    "mobile-frontend-random-button": "Ɖesiaɖe ko",
-    "mobile-frontend-regular-site": "Kpɔ axa sia le {{SITENAME}} ŋutɔ dzi"
+	"@metadata": [],
+	"mobile-frontend-random-button": "Ɖesiaɖe ko",
+	"mobile-frontend-regular-site": "Kpɔ axa sia le {{SITENAME}} ŋutɔ dzi",
+	"mobile-frontend-search-submit": "Yi"
 }

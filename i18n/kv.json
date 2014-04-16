@@ -1,8 +1,6 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Выльлаö",
-    "mobile-frontend-home-button": "Керка",
-    "mobile-frontend-random-button": "Случайнöй"
+	"@metadata": [],
+	"mobile-frontend-home-button": "Керка",
+	"mobile-frontend-random-button": "Случайнöй",
+	"mobile-frontend-search-submit": "Выльлаö"
 }

@@ -1,16 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Tocaibon"
-        ]
-    },
-    "mobile-frontend-search-submit": "Va",
-    "mobile-frontend-home-button": "Cjase",
-    "mobile-frontend-random-button": "Casuâl",
-    "mobile-frontend-back-to-top-of-section": "Salte indaûr di une sezion",
-    "mobile-frontend-regular-site": "Viôt cheste pagjine te Vichipedie",
-    "mobile-frontend-featured-article": "Articul in vitrine di vuê",
-    "mobile-frontend-copyright": "Il test al è disponibil sot de <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; a podin aplicâsi altris tiermins. Cjale <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Tiermins dal ûs</a> pai detais. {{SITENAME}} e je une marcje regjistrade de <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, une organizazion cence fin di lucri.",
-    "mobile-frontend-generic-login": "{{SITENAME}} al è fat di int come te",
-    "mobile-frontend-editor-cta": "Jude a migliorâ cheste pagjine"
+	"@metadata": {
+		"authors": [
+			"Tocaibon"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Salte indaûr di une sezion",
+	"mobile-frontend-copyright": "Il test al è disponibil sot de <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; a podin aplicâsi altris tiermins. Cjale <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Tiermins dal ûs</a> pai detais. {{SITENAME}} e je une marcje regjistrade de <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, une organizazion cence fin di lucri.",
+	"mobile-frontend-editor-cta": "Jude a migliorâ cheste pagjine",
+	"mobile-frontend-featured-article": "Articul in vitrine di vuê",
+	"mobile-frontend-generic-login": "{{SITENAME}} al è fat di int come te",
+	"mobile-frontend-home-button": "Cjase",
+	"mobile-frontend-random-button": "Casuâl",
+	"mobile-frontend-regular-site": "Viôt cheste pagjine te Vichipedie",
+	"mobile-frontend-search-submit": "Va"
 }

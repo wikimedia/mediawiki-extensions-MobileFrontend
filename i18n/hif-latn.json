@@ -1,18 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Karthi.dr"
-        ]
-    },
-    "mobile-frontend-search-submit": "Jaao",
-    "mobile-frontend-home-button": "Pahila Panna",
-    "mobile-frontend-random-button": "Koi bhi",
-    "mobile-frontend-images-status": "Chhapa",
-    "mobile-frontend-featured-article": "Aaj ke featured article",
-    "mobile-frontend-username": "Sadasya ke naam:",
-    "mobile-frontend-login": "Log in karo",
-    "mobile-frontend-placeholder": "{{SITENAME}} khojo",
-    "mobile-frontend-privacy-link-text": "Gupt",
-    "mobile-frontend-settings-site-header": "{{SITENAME}} Bhasa",
-    "mobile-frontend-page-menu-history": "Itihaas"
+	"@metadata": {
+		"authors": [
+			"Karthi.dr"
+		]
+	},
+	"mobile-frontend-featured-article": "Aaj ke featured article",
+	"mobile-frontend-home-button": "Pahila Panna",
+	"mobile-frontend-images-status": "Chhapa",
+	"mobile-frontend-login": "Log in karo",
+	"mobile-frontend-page-menu-history": "Itihaas",
+	"mobile-frontend-placeholder": "{{SITENAME}} khojo",
+	"mobile-frontend-privacy-link-text": "Gupt",
+	"mobile-frontend-random-button": "Koi bhi",
+	"mobile-frontend-search-submit": "Jaao",
+	"mobile-frontend-settings-site-header": "{{SITENAME}} Bhasa",
+	"mobile-frontend-username": "Sadasya ke naam:"
 }

@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Ibok",
-    "mobile-frontend-home-button": "Damin",
-    "mobile-frontend-random-button": "Songko",
-    "mobile-frontend-back-to-top-of-section": "Poningguli Id Boogian A",
-    "mobile-frontend-regular-site": "Intaai bolikon koubasanan Wikipodia",
-    "mobile-frontend-featured-article": "Babasaon Tadau Diti",
-    "mobile-frontend-copyright": "Oguno o tik id siriba <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Tinimungan Pogiompinaian Gonsupu/Lisin Miagal-Mogiolos</a>; kikooturon poinruhang milo pokionuon. Intaai <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Kooturan Pomogunaan</a> montok kointalangan. Wikipodia nopo nga tanda poniagaan <a href='http://www.wikimediafoundation.org/'>Yayasan Wikimodia, Pinoingkakat.</a>, tinimungan awu mokiuntung."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Poningguli Id Boogian A",
+	"mobile-frontend-copyright": "Oguno o tik id siriba <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Tinimungan Pogiompinaian Gonsupu/Lisin Miagal-Mogiolos</a>; kikooturon poinruhang milo pokionuon. Intaai <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Kooturan Pomogunaan</a> montok kointalangan. Wikipodia nopo nga tanda poniagaan <a href='http://www.wikimediafoundation.org/'>Yayasan Wikimodia, Pinoingkakat.</a>, tinimungan awu mokiuntung.",
+	"mobile-frontend-featured-article": "Babasaon Tadau Diti",
+	"mobile-frontend-home-button": "Damin",
+	"mobile-frontend-random-button": "Songko",
+	"mobile-frontend-regular-site": "Intaai bolikon koubasanan Wikipodia",
+	"mobile-frontend-search-submit": "Ibok"
 }

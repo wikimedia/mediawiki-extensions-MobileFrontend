@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "ЕкIуэкIын",
-    "mobile-frontend-home-button": "ПэщIэдзэм",
-    "mobile-frontend-random-button": "ЗэрамыщIэкIэрэ",
-    "mobile-frontend-back-to-top-of-section": "Зы разделкIэ къэгъэзэжын",
-    "mobile-frontend-regular-site": "НапэкIуэцIым Википедиедыдэм щеплъын",
-    "mobile-frontend-featured-article": "Нобэ и статья хэхар",
-    "mobile-frontend-copyright": "Текстыр уи пащхьэ илъщ лицензэ <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a>-м теухуауэ, изыныкъуэхэм нэгъуэщI лицензэ иIэнкIи мэхъу. Нэхъ гурIуэгъуэу ухемэ еплъ <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Къызэрыбгъэсэбэпыным и щыхьэт</a>. «{{SITENAME}}» — зарегистрированнэ торговэ маркэ мыкоммерческэ зэIущIэныгъэм <a href='http://www.wikimediafoundation.org/'>«Викимедым и Фонд»</a>."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Зы разделкIэ къэгъэзэжын",
+	"mobile-frontend-copyright": "Текстыр уи пащхьэ илъщ лицензэ <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a>-м теухуауэ, изыныкъуэхэм нэгъуэщI лицензэ иIэнкIи мэхъу. Нэхъ гурIуэгъуэу ухемэ еплъ <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Къызэрыбгъэсэбэпыным и щыхьэт</a>. «{{SITENAME}}» — зарегистрированнэ торговэ маркэ мыкоммерческэ зэIущIэныгъэм <a href='http://www.wikimediafoundation.org/'>«Викимедым и Фонд»</a>.",
+	"mobile-frontend-featured-article": "Нобэ и статья хэхар",
+	"mobile-frontend-home-button": "ПэщIэдзэм",
+	"mobile-frontend-random-button": "ЗэрамыщIэкIэрэ",
+	"mobile-frontend-regular-site": "НапэкIуэцIым Википедиедыдэм щеплъын",
+	"mobile-frontend-search-submit": "ЕкIуэкIын"
 }

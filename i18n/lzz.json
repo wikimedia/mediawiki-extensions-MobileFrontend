@@ -1,12 +1,10 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "İgzali",
-    "mobile-frontend-home-button": "Dudi",
-    "mobile-frontend-random-button": "Randomi",
-    "mobile-frontend-back-to-top-of-section": "Ar burme uk'uni idi",
-    "mobile-frontend-regular-site": "Am but'k'a normaluri Vik'ip'edias ko3'iri",
-    "mobile-frontend-featured-article": "Dolonişi Favori St'at'ia",
-    "mobile-frontend-copyright": "Tekst'i <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike Lisansi</a>şi doloxe ren; çkva şeyepeti ixvenen. Detayepe şeni <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Oxmaruşi K'aidepe</a>s o3'k'edit. Vik'ip'edia mogapa na var ikips ar k'idala na ren <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>-şi tesciloni mark'a muşi ren."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Ar burme uk'uni idi",
+	"mobile-frontend-copyright": "Tekst'i <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike Lisansi</a>şi doloxe ren; çkva şeyepeti ixvenen. Detayepe şeni <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Oxmaruşi K'aidepe</a>s o3'k'edit. Vik'ip'edia mogapa na var ikips ar k'idala na ren <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>-şi tesciloni mark'a muşi ren.",
+	"mobile-frontend-featured-article": "Dolonişi Favori St'at'ia",
+	"mobile-frontend-home-button": "Dudi",
+	"mobile-frontend-random-button": "Randomi",
+	"mobile-frontend-regular-site": "Am but'k'a normaluri Vik'ip'edias ko3'iri",
+	"mobile-frontend-search-submit": "İgzali"
 }

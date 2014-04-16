@@ -1,10 +1,8 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-home-button": "Asbrk",
-    "mobile-frontend-back-to-top-of-section": "Urrid s yan wayyaw",
-    "mobile-frontend-regular-site": "Ml tasna yad ɣ wikipidya tamqrant",
-    "mobile-frontend-featured-article": "Isisfiwn f ...",
-    "mobile-frontend-copyright": "<a class='internal' href='/wiki/Wikip%C3%A9dia:Izrfan n umgay' title='Izrfan n umgay'>Izrfan n umgay</a> : Iṭṛiṣn rad tn taft ɣid  <a href='http://creativecommons.org/licenses/by-sa/3.0/deed.fr'>taragt n usnufl Commons tibḍit–baba iga zund</a> ;s tiwtilin lli f fllasn ittuyskarn. Zṛ f mayad ɣ <a href='http://wikimediafoundation.org/wiki/Conditions_d'utilisation'>tiwtlin  n uskr </a> bac a taft isisfin frurin yaḍn . {{SITENAME}}® est une marque déposée de la <a href='http://wikimediafoundation.org/wiki/Accueil' title='Wikimedia Foundation'>Wikimedia Foundation, Inc.</a>, tga yat tamaddast lli dar awttas bla tiɣrad."
+	"@metadata": [],
+	"mobile-frontend-back-to-top-of-section": "Urrid s yan wayyaw",
+	"mobile-frontend-copyright": "<a class='internal' href='/wiki/Wikip%C3%A9dia:Izrfan n umgay' title='Izrfan n umgay'>Izrfan n umgay</a> : Iṭṛiṣn rad tn taft ɣid  <a href='http://creativecommons.org/licenses/by-sa/3.0/deed.fr'>taragt n usnufl Commons tibḍit–baba iga zund</a> ;s tiwtilin lli f fllasn ittuyskarn. Zṛ f mayad ɣ <a href='http://wikimediafoundation.org/wiki/Conditions_d'utilisation'>tiwtlin  n uskr </a> bac a taft isisfin frurin yaḍn . {{SITENAME}}® est une marque déposée de la <a href='http://wikimediafoundation.org/wiki/Accueil' title='Wikimedia Foundation'>Wikimedia Foundation, Inc.</a>, tga yat tamaddast lli dar awttas bla tiɣrad.",
+	"mobile-frontend-featured-article": "Isisfiwn f ...",
+	"mobile-frontend-home-button": "Asbrk",
+	"mobile-frontend-regular-site": "Ml tasna yad ɣ wikipidya tamqrant"
 }

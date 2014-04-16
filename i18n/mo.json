@@ -1,7 +1,5 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "mobile-frontend-search-submit": "Ду-те",
-    "mobile-frontend-random-button": "Аляториу"
+	"@metadata": [],
+	"mobile-frontend-random-button": "Аляториу",
+	"mobile-frontend-search-submit": "Ду-те"
 }

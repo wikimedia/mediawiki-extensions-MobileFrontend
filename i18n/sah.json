@@ -1,28 +1,26 @@
 {
-    "@metadata": {
-        "authors": [
-            "HalanTul"
-        ]
-    },
-    "mobile-frontend-desc": "Мобильнай интерфейс",
-    "mobile-frontend-search-submit": "Таһаар",
-    "mobile-frontend-home-button": "Дьиэлээ",
-    "mobile-frontend-random-button": "Түбэспиччэ",
-    "mobile-frontend-back-to-top-of-section": "Биир салаанан кэнники бар",
-    "mobile-frontend-regular-site": "Көннөрү барыла",
-    "mobile-frontend-wml-continue": "Салгыы...",
-    "mobile-frontend-wml-back": "Төнүн...",
-    "mobile-frontend-view": "Мобил барыла",
-    "mobile-frontend-opt-in-explain": "Бета-тургутууга холбостоххуна сорох тургутуу кыахтары туһанар буолуоҥ, ол гынан баран алҕаһы көрсөрүҥ элбиэн сөп.",
-    "mobile-frontend-disable-images": "Мобил ситим-сир ойууларын араар",
-    "mobile-frontend-enable-images": "Мобил ситим-сир ойууларын холбоо",
-    "mobile-frontend-featured-article": "Бүгүҥҥү талыы ыстатыйа",
-    "mobile-frontend-news-items": "Сонуннар",
-    "mobile-frontend-username": "Кытааччы аата:",
-    "mobile-frontend-password": "Киирии тыла:",
-    "mobile-frontend-login": "Киир",
-    "mobile-frontend-placeholder": "Көрдөбүл устуруоката...",
-    "mobile-frontend-dismiss-notification": "бу биллэриини кистээ",
-    "mobile-frontend-clear-search": "Сот",
-    "mobile-frontend-copyright": "Бу тиэкис\t <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензиянан тарҕанар, сорох түбэлтэлэргэ эбии көрдөбүллэр баар буолуохтары сөп. Сиһилии <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Условия использования</a> көр. «{{SITENAME}}» — <a href='http://www.wikimediafoundation.org/'>«Викимедиа пуондата»</a> диэн барыыс киллэрбэт тэрилтэ бигэргэтиллибит тус бэйэтин бэлиэтэ."
+	"@metadata": {
+		"authors": [
+			"HalanTul"
+		]
+	},
+	"mobile-frontend-back-to-top-of-section": "Биир салаанан кэнники бар",
+	"mobile-frontend-clear-search": "Сот",
+	"mobile-frontend-copyright": "Бу тиэкис\t <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензиянан тарҕанар, сорох түбэлтэлэргэ эбии көрдөбүллэр баар буолуохтары сөп. Сиһилии <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Условия использования</a> көр. «{{SITENAME}}» — <a href='http://www.wikimediafoundation.org/'>«Викимедиа пуондата»</a> диэн барыыс киллэрбэт тэрилтэ бигэргэтиллибит тус бэйэтин бэлиэтэ.",
+	"mobile-frontend-desc": "Мобильнай интерфейс",
+	"mobile-frontend-disable-images": "Мобил ситим-сир ойууларын араар",
+	"mobile-frontend-dismiss-notification": "бу биллэриини кистээ",
+	"mobile-frontend-enable-images": "Мобил ситим-сир ойууларын холбоо",
+	"mobile-frontend-featured-article": "Бүгүҥҥү талыы ыстатыйа",
+	"mobile-frontend-home-button": "Дьиэлээ",
+	"mobile-frontend-login": "Киир",
+	"mobile-frontend-news-items": "Сонуннар",
+	"mobile-frontend-opt-in-explain": "Бета-тургутууга холбостоххуна сорох тургутуу кыахтары туһанар буолуоҥ, ол гынан баран алҕаһы көрсөрүҥ элбиэн сөп.",
+	"mobile-frontend-password": "Киирии тыла:",
+	"mobile-frontend-placeholder": "Көрдөбүл устуруоката...",
+	"mobile-frontend-random-button": "Түбэспиччэ",
+	"mobile-frontend-regular-site": "Көннөрү барыла",
+	"mobile-frontend-search-submit": "Таһаар",
+	"mobile-frontend-username": "Кытааччы аата:",
+	"mobile-frontend-view": "Мобил барыла"
 }

@@ -1,25 +1,24 @@
 {
-    "@metadata": {
-        "authors": [
-            "Joachim Mos"
-        ]
-    },
-    "mobile-frontend-search-submit": "Los",
-    "mobile-frontend-home-button": "Startsied",
-    "mobile-frontend-images-status": "Biller",
-    "mobile-frontend-missing-image": "Bild",
-    "mobile-frontend-username": "Brukernaam:",
-    "mobile-frontend-password": "Passwoord:",
-    "mobile-frontend-username-placeholder": "Brukernaam",
-    "mobile-frontend-password-placeholder": "Passwoord",
-    "mobile-frontend-login": "Anmellen",
-    "mobile-frontend-page-menu-contents": "Inholt",
-    "mobile-frontend-listed-image-no-description": "Keen Beschrieven",
-    "mobile-frontend-watchlist-a-z": "All",
-    "mobile-frontend-watchlist-filter-all": "All",
-    "mobile-frontend-watchlist-filter-talk": "Diskuschoon",
-    "mobile-frontend-watchlist-filter-other": "Annere",
-    "mobile-frontend-photo-submit": "Afschicken",
-    "mobile-frontend-photo-cancel": "Afbreken",
-    "mobile-frontend-drawer-cancel": "Afbreken"
+	"@metadata": {
+		"authors": [
+			"Joachim Mos"
+		]
+	},
+	"mobile-frontend-drawer-cancel": "Afbreken",
+	"mobile-frontend-home-button": "Startsied",
+	"mobile-frontend-images-status": "Biller",
+	"mobile-frontend-listed-image-no-description": "Keen Beschrieven",
+	"mobile-frontend-login": "Anmellen",
+	"mobile-frontend-missing-image": "Bild",
+	"mobile-frontend-page-menu-contents": "Inholt",
+	"mobile-frontend-password": "Passwoord:",
+	"mobile-frontend-password-placeholder": "Passwoord",
+	"mobile-frontend-photo-submit": "Afschicken",
+	"mobile-frontend-search-submit": "Los",
+	"mobile-frontend-username": "Brukernaam:",
+	"mobile-frontend-username-placeholder": "Brukernaam",
+	"mobile-frontend-watchlist-a-z": "All",
+	"mobile-frontend-watchlist-filter-all": "All",
+	"mobile-frontend-watchlist-filter-other": "Annere",
+	"mobile-frontend-watchlist-filter-talk": "Diskuschoon"
 }
