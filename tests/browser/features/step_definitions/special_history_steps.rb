@@ -25,3 +25,15 @@ end
 Then(/^The last contribution summary shows the time of the last edit$/) do
   on(SpecialHistoryPage).last_contribution_timestamp_element.should exist
 end
+
+Then(/^I see a more button$/) do
+  on(SpecialHistoryPage).more_link_element.should exist
+end
+
+When(/^I click the more link$/) do
+  on(SpecialHistoryPage).more_link_element.click
+end
+
+Then(/^I see a previous button$/) do
+  on(SpecialHistoryPage).previous_link_element.should exist
+end

@@ -26,6 +26,8 @@ class SpecialHistoryPage < ArticlePage
   p(:last_contribution_username) do |page|
     page.last_contribution_element.paragraph_element(index: 0, css: ".mw-mf-user")
   end
+  a(:more_link, css: ".more")
+  a(:previous_link, css: ".previous")
 end
 
 class SpecialContributionsPage < SpecialHistoryPage
