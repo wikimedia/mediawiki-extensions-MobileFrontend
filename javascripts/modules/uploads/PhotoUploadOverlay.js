@@ -1,3 +1,4 @@
+/* global EXIF */
 ( function( M, $ ) {
 	var popup = M.require( 'toast' ),
 		user = M.require( 'user' ),
@@ -36,6 +37,7 @@
 			var fileReader = new FileReader(), self = this;
 			this.log = schema.getLog( options.funnel );
 			this.file = options.file;
+
 			if ( this.file ) {
 				fileReader.readAsDataURL( options.file );
 				fileReader.onload = function() {
@@ -164,6 +166,25 @@
 			// Deal with case where user refreshes the page
 			if ( !self.file ) {
 				M.router.navigate( '#' );
+			}
+		},
+
+		show: function() {
+			var self = this;
+
+			this._super();
+
+			if ( this.file && M.isBetaGroupMember() ) {
+				EXIF.getData( this.file, function() {
+					if ( $.isEmptyObject( this.exifdata ) ) {
+						if ( window.confirm( mw.msg( 'mobile-frontend-photo-upload-copyvio' ) ) ) {
+							self.log( { action: 'copyvioOk' } );
+						} else {
+							self.log( { action: 'copyvioCancel' } );
+							self.hide( true );
+						}
+					}
+				} );
 			}
 		},
 

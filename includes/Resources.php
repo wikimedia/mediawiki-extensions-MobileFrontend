@@ -416,10 +416,32 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-upload-error-file-type',
 			'mobile-frontend-photo-licensing',
 			'mobile-frontend-photo-licensing-with-terms',
+			'mobile-frontend-photo-upload-copyvio',
 
 			// PhotoUploadProgress.js
 			'mobile-frontend-image-uploading' => array( 'parse' ),
 			'mobile-frontend-image-cancel-confirm' => array( 'parse' ),
+		),
+	),
+
+	// FIXME: move if EXIF checks go to stable
+	'mobile.uploads.exif' => $wgMFMobileResourceBoilerplate + array(
+		'scripts' => array(
+			'javascripts/externals/exif-js/binaryajax.js',
+			'javascripts/externals/exif-js/exif.js',
+		),
+	),
+
+	'mobile.uploads.stable' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.uploads',
+		),
+	),
+
+	'mobile.uploads.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.uploads.exif',
+			'mobile.uploads',
 		),
 	),
 

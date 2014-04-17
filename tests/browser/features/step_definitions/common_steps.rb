@@ -114,6 +114,10 @@ When(/^I say OK in the confirm dialog$/) do
   end
 end
 
+When(/^I say Cancel in the confirm dialog$/) do
+  on(ArticlePage).confirm(false) {}
+end
+
 Then(/^There is a red link with text "(.+)"$/) do |text|
   # FIXME: Switch to link_element when red links move to stable
   on(ArticlePage).content_wrapper_element.span_element(text: text).when_present(10).should be_visible
