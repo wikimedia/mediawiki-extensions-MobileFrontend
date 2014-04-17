@@ -167,6 +167,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				false,
 				$unhide
 			);
+		} else {
+			$de->showDiffPage();
+			return;
 		}
 		$diff = $de->getDiffBody();
 		if ( !$prevId ) {
