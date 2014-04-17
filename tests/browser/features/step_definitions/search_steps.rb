@@ -15,6 +15,11 @@ When(/^I type into search box "(.+)"$/) do |search_term|
   on(ArticlePage).search_box2=search_term
 end
 
+# FIXME: Is there a way to merge this rule into "I type into search box"?
+When(/^I type into search placeholder box "(.+)"$/) do |search_term|
+  on(ArticlePage).search_box_placeholder=search_term
+end
+
 Then(/^Search results should contain "(.+)"$/) do |text|
   on(ArticlePage).search_result_element.when_present.text.should == text
 end
@@ -33,4 +38,16 @@ end
 
 When(/^I click a search result$/) do
   on(ArticlePage).search_result_element.when_present.click
+end
+
+When(/^I click the search in pages button$/) do
+  on(ArticlePage).search_within_pages_element.when_present.click
+end
+
+When(/^I press the enter key$/) do
+  on(ArticlePage).search_box2_element.when_present.send_keys :enter
+end
+
+When(/^I click the search button$/) do
+  on(ArticlePage).search_button_element.when_present.click
 end
