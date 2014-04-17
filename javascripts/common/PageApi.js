@@ -158,8 +158,9 @@
 			// FIXME: "|| []" wouldn't be needed if API was more consistent
 			langlinks = pages[0] ? pages[0].langlinks || [] : [];
 
-			langlinks.forEach( function( item, i ) {
-				langlinks[ i ].langname = allAvailableLanguages[ item.lang ];
+			langlinks.forEach( function( item ) {
+				item.langname = allAvailableLanguages[ item.lang ];
+				item.title = item['*'] || false;
 			} );
 
 			return langlinks;
