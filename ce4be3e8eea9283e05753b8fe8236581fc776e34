@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_85395acd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-17T21:22:17Z",
+      "side": 1,
+      "message": "I was hesitating on this one. Finally I decided to be more explicit and fail if there\u0027s no image. This can be useful for detecting image being accidentally removed from the repo.",
+      "parentUuid": "8e23439c_ea9c5d14",
+      "revId": "ce4be3e8eea9283e05753b8fe8236581fc776e34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_0a9679f3",
         "filename": "tests/browser/features/step_definitions/login_steps.rb",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_2524c6ac",
+        "filename": "tests/browser/features/step_definitions/login_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-17T21:22:17Z",
+      "side": 1,
+      "message": "This might be a good idea.",
+      "parentUuid": "8e23439c_0a9679f3",
+      "revId": "ce4be3e8eea9283e05753b8fe8236581fc776e34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_ca9f6105",
         "filename": "tests/browser/features/support/env.rb",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2014-04-17T20:49:51Z",
       "side": 1,
       "message": "What do max_difference actually mean? Is the 0.1 pixel? I guess this is documented as part of the photographer gem but I think it would be useful to know in this test in case we need to tinker with it.\n\nAlso I\u0027m not sure what would be the acceptable value :)",
+      "revId": "ce4be3e8eea9283e05753b8fe8236581fc776e34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_c5575204",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-17T21:22:17Z",
+      "side": 1,
+      "message": "max_difference is maximum difference represented as a fraction (so it would be percentage if we multiplied by 100). Assume a snapshot (browser window) is 800x600, then it has 480000 pixels. If max_difference is 0.1, the test will fail if more than 480000*0.1 \u003d 48000 pixels changed.\n\nThere\u0027s no docs for photographer yet, I just put it together in a couple of hours on Wednesday evening.",
+      "parentUuid": "8e23439c_ca9f6105",
       "revId": "ce4be3e8eea9283e05753b8fe8236581fc776e34",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
