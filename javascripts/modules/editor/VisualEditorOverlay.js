@@ -126,6 +126,9 @@
 		onSave: function() {
 			this._super();
 			this.clearSpinner();
+			this.target.destroy();
+			this.target = null;
+			this.docToSave = null;
 		},
 		reportError: function ( msg ) {
 			popup.show( msg, 'toast error' );
