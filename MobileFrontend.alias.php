@@ -90,7 +90,7 @@ $specialPageAliases['de'] = array(
 
 /** Zazaki (Zazaki) */
 $specialPageAliases['diq'] = array(
-	'History' => array( 'Tariğ' ),
+	'History' => array( 'Tarix' ),
 	'MobileWebApp' => array( 'MobilWebDezge' ),
 	'MobileOptions' => array( 'MobilWeçenegi' ),
 	'Uploads' => array( 'Barkerdışi' ),
