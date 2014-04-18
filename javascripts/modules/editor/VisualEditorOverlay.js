@@ -19,6 +19,11 @@
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
 			this.initializeSwitcher();
 		},
+		destroyTarget: function () {
+			this.target.destroy();
+			this.target = null;
+			this.docToSave = null;
+		},
 		show: function() {
 			this._super();
 			if ( this.target === undefined ) {
@@ -52,6 +57,13 @@
 					serializeError: 'onSerializeError'
 				} );
 			}
+		},
+		hide: function( force ) {
+			var retval = this._super( force );
+			if ( retval ) {
+				this.destroyTarget();
+			}
+			return retval;
 		},
 		postRender: function( options ) {
 			var self = this;
@@ -129,9 +141,7 @@
 		onSave: function() {
 			this._super();
 			this.clearSpinner();
-			this.target.destroy();
-			this.target = null;
-			this.docToSave = null;
+			this.destroyTarget();
 		},
 		reportError: function ( msg ) {
 			popup.show( msg, 'toast error' );
