@@ -19,7 +19,7 @@ var
 		},
 		getPhotos: function() {
 			var self = this, result = $.Deferred();
-
+			// FIXME: Don't simply use this.endTimestamp as initially this value is undefined
 			if ( this.endTimestamp !== false ) {
 				this.get( {
 					action: 'query',
@@ -28,7 +28,7 @@ var
 					gaidir: 'descending',
 					gaiuser: userName,
 					gailimit: this.limit,
-					gaistart: this.endTimestamp,
+					gaicontinue: this.endTimestamp,
 					prop: 'imageinfo',
 					origin: corsUrl ? M.getOrigin() : undefined,
 					// FIXME: [API] have to request timestamp since api returns an object
@@ -45,7 +45,7 @@ var
 							return a.timestamp < b.timestamp ? 1 : -1;
 						} );
 						if ( resp['query-continue'] ) {
-							self.endTimestamp = resp['query-continue'].allimages.gaistart;
+							self.endTimestamp = resp['query-continue'].allimages.gaicontinue;
 						} else {
 							self.endTimestamp = false;
 						}
