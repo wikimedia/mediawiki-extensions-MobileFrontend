@@ -1,8 +1,8 @@
 <?php
 
 class SpecialMobileHistory extends MobileSpecialPageFeed {
-	const LIMIT = 50;
 	protected $mode = 'beta';
+	const LIMIT = 50;
 	/**  @var String|null timestamp to offset results from */
 	protected $offset;
 
@@ -159,8 +159,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$bytes -= $prev->getSize();
 		}
 		$isMinor = $rev->isMinor();
-		// FIXME: When this function changes name to renderFeedItemHtml make sure you change it here too
-		$this->renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
 			$isMinor );
 
 		wfProfileOut( __METHOD__ );

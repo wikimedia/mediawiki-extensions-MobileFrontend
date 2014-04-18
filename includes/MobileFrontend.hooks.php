@@ -307,7 +307,6 @@ class MobileFrontendHooks {
 				 * Special:Contributions without the bells and whistles.
 				 */
 				$list['Contributions'] = 'SpecialMobileContributions';
-				$list['Watchlist'] = 'SpecialMobileWatchlistBeta';
 			}
 
 			$list['Userlogin'] = 'SpecialMobileUserlogin';

@@ -345,11 +345,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	}
 
 	protected function showFeedResults( ResultWrapper $res ) {
-		$output = $this->getOutput();
-		$output->addHtml(
-			Html::openElement( 'ul', array( 'class' => 'watchlist ' . 'page-list' ) )
-		);
-
 		$this->showResults( $res, true );
 	}
 
@@ -490,15 +485,22 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		}
 
 		$output = $this->getOutput();
+		$user = $this->getUser();
+		$lang = $this->getLanguage();
+
+		$date = $lang->userDate( $row->rc_timestamp, $user );
+		$this->renderListHeaderWhereNeeded( $date );
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
 		$comment = $this->formatComment( $row->rc_comment, $title );
 		$ts = new MWTimestamp( $row->rc_timestamp );
-		$username = $row->rc_user != 0 && isset( $row->rc_user_text )
+		$username = $row->rc_user != 0
 			? htmlspecialchars( $row->rc_user_text )
-			: '';
+			: IP::prettifyIP( $row->rc_user_text );
 		$revId = $row->rc_this_oldid;
+		$bytes = $row->rc_new_len - $row->rc_old_len;
 		$isAnon = $row->rc_user == 0;
+		$isMinor = $row->rc_minor != 0;
 
 		if ( $revId ) {
 			$diffTitle = SpecialPage::getTitleFor( 'MobileDiff', $revId );
@@ -508,8 +510,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalUrl();
 		}
 
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon );
-
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
+			$isMinor );
 		wfProfileOut( __METHOD__ );
 	}
 
@@ -553,5 +555,14 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			$user->setOption( $name, $value );
 			$this->optionsChanged = true;
 		}
+	}
+
+	protected function formatComment( $comment, $title ) {
+		if ( $comment !== '' ) {
+			$comment = Linker::formatComment( $comment, $title );
+			// flatten back to text
+			$comment = Sanitizer::stripAllTags( $comment );
+		}
+		return $comment;
 	}
 }

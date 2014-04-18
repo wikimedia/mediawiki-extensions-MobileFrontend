@@ -1,9 +1,3 @@
-Given(/^the page is unwatched$/) do
-  unwatch_url = ENV["MEDIAWIKI_URL"] + @random_string + "?action=unwatch"
-  @browser.goto(unwatch_url)
-  on(ArticlePage).watch_confirm_element.when_present.click
-end
-
 When(/^I switch to the modified view of the watchlist$/) do
   on(WatchlistPage).feed_link_element.click
 end

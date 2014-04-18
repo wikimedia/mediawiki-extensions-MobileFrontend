@@ -33,52 +33,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	}
 
 	/**
-	 * Renders an item in the feed
-	 * @param MWTimestamp $ts The time the edit occurred
-	 * @param string $diffLink url to the diff for the edit
-	 * @param string $username The username of the user that made the edit (absent if anonymous)
-	 * @param string $comment The edit summary
-	 * @param Title $title The title of the page that was edited
-	 * @param bool $isAnon Whether the user for this edit was anonymous
-	 *
-	 * @return String: HTML code
-	 */
-	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
-		$title = false, $isAnon = false ) {
-
-		$out = $this->getOutput();
-		if ( $isAnon ) {
-			$username = $this->msg( 'mobile-frontend-changeslist-ip' )->plain();
-			$usernameClass = 'mw-mf-user mw-mf-anon';
-		} else {
-			$usernameClass = 'mw-mf-user';
-		}
-
-		$html = '<li>';
-		if ( $diffLink ) {
-			$html .= Html::openElement( 'a', array( 'href' => $diffLink, 'class' => 'title' ) );
-		} else {
-			$html .= Html::openElement( 'div', array( 'class' => 'title' ) );
-		}
-		if ( $title ) {
-			$html .= Html::element( 'h3', array(), $title->getPrefixedText() );
-		}
-		if ( $username ) {
-			$html .= Html::element( 'p', array( 'class' => $usernameClass ), $username );
-		}
-		$html .= Html::element( 'p', array( 'class' => 'mw-mf-comment truncated-text' ), $comment ) .
-			Html::element( 'div', array( 'class' => 'info' ), $ts->getHumanTimestamp() );
-
-		if ( $diffLink ) {
-			$html .= Html::closeElement( 'a' );
-		} else {
-			$html .= Html::closeElement( 'div' );
-		}
-		$html .= '</li>';
-		$out->addHtml( $html );
-	}
-
-	/**
 	 * Renders a date header when necessary.
 	 * FIXME: Juliusz won't like this function.
 	 * @param MWTimestamp date The date of the current item
@@ -113,7 +67,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @return string HTML code
 	 */
 	// FIXME: use an array as an argument?
-	protected function renderFeedItemHtmlBeta( $ts, $diffLink = '', $username = '', $comment = '',
+	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
 		$title = false, $isAnon = false, $bytes = 0, $isMinor = false ) {
 
 		wfProfileIn( __METHOD__ );
