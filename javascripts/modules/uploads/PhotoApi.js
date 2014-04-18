@@ -130,42 +130,42 @@
 				'mobile-frontend-photo-article-donate-comment';
 
 			function doUpload( token, caToken ) {
-				var formData = new FormData(),
+				var
 					uploadUrl = apiUrl + '?useformat=mobile&r=' + Math.random(),
 					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 ),
-					request;
+					request, data;
 
 				options.fileName = generateFileName( options.description, '.' + ext );
 
-				formData.append( 'action', 'upload' );
-				formData.append( 'format', 'json' );
+				data = {
+					action: 'upload',
+					filename: options.fileName,
+					comment: mw.msg( options.editSummaryMessage ),
+					file: options.file,
+					token: token,
+					text: M.template.get( 'wikitext/commons-upload' ).
+						render( {
+							suffix: mw.config.get( 'wgMFPhotoUploadAppendToDesc' ),
+							text: options.description,
+							username: user.getName()
+						} )
+				};
+
 				// add origin only when doing CORS
 				if ( endpoint ) {
 					uploadUrl += '&origin=' + M.getOrigin();
 					if ( caToken ) {
-						formData.append( 'centralauthtoken', caToken );
+						data.centralauthtoken = caToken;
 					}
 				}
-				formData.append( 'filename', options.fileName );
-				formData.append( 'comment', mw.msg( options.editSummaryMessage ) );
-				formData.append( 'file', options.file );
-				formData.append( 'token', token );
-				formData.append( 'text', M.template.get( 'wikitext/commons-upload' ).
-					render( {
-						suffix: mw.config.get( 'wgMFPhotoUploadAppendToDesc' ),
-						text: options.description,
-						username: user.getName()
-					} )
-				);
 
-				request = self.post( formData, {
+				request = self.post( data, {
 					// iOS seems to ignore the cache parameter so sending r parameter
 					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
 					url: uploadUrl,
+					contentType: 'multipart/form-data',
 					xhrFields: { 'withCredentials': true },
-					cache: false,
-					contentType: false,
-					processData: false
+					cache: false
 				} ).done( function( data ) {
 					var descriptionUrl = '',
 						warnings = data.upload ? data.upload.warnings : false,

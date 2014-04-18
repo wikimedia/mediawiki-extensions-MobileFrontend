@@ -2,7 +2,6 @@
 
 	var EventEmitter = M.require( 'eventemitter' ),
 		user = M.require( 'user' ),
-		apiUrl = mw.config.get( 'wgScriptPath', '' ) + '/api.php',
 		Api, api;
 
 	/**
@@ -11,17 +10,17 @@
 	 * @extends EventEmitter
 	 * @name Api
 	 */
-	Api = EventEmitter.extend( {
-		apiUrl: apiUrl,
+	Api = EventEmitter.extend( mw.Api.prototype ).extend( {
+		apiUrl: mw.util.wikiScript( 'api' ),
 
 		/**
 		 * Constructor, if you override it, use _super().
 		 *
 		 * @function
 		 * @name Api.prototype.initialize
-		 * @param {Object} options Object passed to the constructor.
 		 */
 		initialize: function() {
+			mw.Api.apply( this, arguments );
 			this.requests = [];
 			this.tokenCache = {};
 		},
@@ -50,13 +49,11 @@
 		 * @return {jQuery.Deferred} Object returned by $.ajax()
 		 */
 		ajax: function( data, options ) {
-			var key, request, self = this, isFormData;
-			options = $.extend( { url: apiUrl, dataType: 'json' }, options );
-			isFormData = typeof FormData !== 'undefined' && data instanceof FormData;
+			var key, request, self = this;
 
-			if ( isFormData ) {
-				data.append( 'format', 'json' );
-			} else if ( typeof data !== 'string' ) {
+			options = options || {};
+
+			if ( typeof data !== 'string' ) {
 				for ( key in data ) {
 					if ( data[key] === false ) {
 						delete data[key];
@@ -64,10 +61,9 @@
 						data[key] = data[key].join( '|' );
 					}
 				}
-				data = $.extend( { format: 'json' }, data );
 			}
-			options.data = data;
 
+			// FIXME: move to mw.Api (although no EventEmitter in core)?
 			options.xhr = function() {
 				var xhr = $.ajaxSettings.xhr();
 				if ( xhr.upload && ( mw.config.get( 'wgMFAjaxUploadProgressSupport' ) ) ) {
@@ -82,39 +78,9 @@
 				return xhr;
 			};
 
-			request = $.ajax( options );
+			request = mw.Api.prototype.ajax.call( this, data, options );
 			this.requests.push( request );
 			return request;
-		},
-
-		/**
-		 * A wrapper for $.ajax() to be used when calling server APIs.
-		 * Sends a GET request. See ajax() for details.
-		 *
-		 * @name Api.prototype.get
-		 * @function
-		 * @param {Object} data Data to be preprocessed and added to options
-		 * @param {Object} options Parameters passed to $.ajax()
-		 * @return {jQuery.Deferred} Object returned by $.ajax()
-		 */
-		get: function( data, options ) {
-			options = $.extend( {}, options, { type: 'GET' } );
-			return this.ajax( data, options );
-		},
-
-		/**
-		 * A wrapper for $.ajax() to be used when calling server APIs.
-		 * Sends a POST request. See ajax() for details.
-		 *
-		 * @name Api.prototype.post
-		 * @function
-		 * @param {Object} data Data to be preprocessed and added to options
-		 * @param {Object} options Parameters passed to $.ajax()
-		 * @return {jQuery.Deferred} Object returned by $.ajax()
-		 */
-		post: function( data, options ) {
-			options = $.extend( {}, options, { type: 'POST' } );
-			return this.ajax( data, options );
 		},
 
 		/**
@@ -123,6 +89,7 @@
 		 * @name Api.prototype.abort
 		 * @function
 		 */
+		// FIXME: move to mw.Api
 		abort: function() {
 			this.requests.forEach( function( request ) {
 				request.abort();
@@ -142,6 +109,7 @@
 		 * @return {jQuery.Deferred} Object returned by $.ajax(), callback will be passed
 		 *   the token string, false if the user is anon or undefined where not available or a warning is set
 		 */
+		// FIXME: consolidate with mw.Api
 		getToken: function( tokenType, endpoint, caToken ) {
 			var token, data, d = $.Deferred(), isCacheable,
 				// token types available from mw.user.tokens
@@ -209,11 +177,6 @@
 
 	api = new Api();
 	api.Api = Api;
-	// FIXME: Hack until bug 57629 is resolved.
-	// Substitute if absent
-	if ( typeof mw.Api === 'undefined' ) {
-		mw.Api = Api;
-	}
 
 	M.define( 'api', api );
 

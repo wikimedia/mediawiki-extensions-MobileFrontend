@@ -1,51 +1,25 @@
-( function ( $, W ) {
+( function ( $, M ) {
 
-var _ajax;
+var
+	W = M.require( 'watchstar' ),
+	api = M.require( 'api' );
+
 QUnit.module( 'MobileFrontend mf-watchlist.js', {
 	setup: function() {
 		this.sandbox.stub( mw.user, 'isAnon' ).returns( false );
-		_ajax = $.ajax;
-		// FIXME: horrible, use this.sandbox AKA sinon instead
-		$.ajax = function( options ) {
-			var d = new $.Deferred();
-			if ( options.data.action === 'tokens' ) {
-				d.resolve( { tokens: { watchtoken: ':D' } } );
-			} else if ( options.data.inprop === 'watched' ) {
-				if ( options.data.titles === 'Spongebob' ) {
-					d.resolve( {
-						query: {
-							pages: {
-								'1': { watched: '', title: 'Spongebob' } // presence of watched flag means article is watched
-							}
-						}
-					} );
-				} else if ( options.data.titles === 'Popeye|Spongebob' ) {
-					d.resolve( {
-						query: {
-							pages: {
-								'1': { watched: '', title: 'Spongebob' }, // presence of watched flag means article is watched
-								'2': { title: 'Popeye' } // presence of watched flag means article is watched
-							}
-						}
-					} );
-				} else {
-					d.resolve( { query: {
-							pages: {
-							'1': {}
-							}
-						} } );
-				}
-			}
-			return d;
-		};
-	},
-	teardown: function() {
-		$.ajax = _ajax;
+		this.sandbox.stub( api, 'getToken' ).returns( $.Deferred().resolve( ':D' ) );
 	}
 } );
 
 QUnit.test( 'init watched article', 2, function() {
 	var $container = $( '<div>' );
+	this.sandbox.stub( api, 'ajax' ).returns( $.Deferred().resolve( {
+		query: {
+			pages: {
+				'1': { watched: '', title: 'Spongebob' } // presence of watched flag means article is watched
+			}
+		}
+	} ) );
 	W.initWatchListIcon( $container[ 0 ], 'Spongebob' );
 	strictEqual( $container.find( '.watch-this-article' ).length, 1, 'button created' );
 	strictEqual( $container.find( '.watch-this-article' ).hasClass( 'watched' ), true, 'article is marked as watched' );
@@ -53,6 +27,13 @@ QUnit.test( 'init watched article', 2, function() {
 
 QUnit.test( 'init unwatched article', 2, function() {
 	var $container = $( '<div>' );
+	this.sandbox.stub( api, 'ajax' ).returns( $.Deferred().resolve( {
+		query: {
+			pages: {
+				'1': {}
+			}
+		}
+	} ) );
 	W.initWatchListIcon( $container[ 0 ], 'Popeye' );
 	strictEqual( $container.find( '.watch-this-article' ).length, 1, 'button created' );
 	strictEqual( $container.find( '.watch-this-article' ).hasClass( 'watched' ), false, 'article is not marked as watched' );
@@ -60,9 +41,17 @@ QUnit.test( 'init unwatched article', 2, function() {
 
 QUnit.test( 'initWatchListIconList', 2, function() {
 	var $container = $( '<ul><li title="Popeye"><li title="Spongebob"></ul>' );
+	this.sandbox.stub( api, 'ajax' ).returns( $.Deferred().resolve( {
+		query: {
+			pages: {
+				'1': { watched: '', title: 'Spongebob' }, // presence of watched flag means article is watched
+				'2': { title: 'Popeye' } // presence of watched flag means article is watched
+			}
+		}
+	} ) );
 	W.initWatchListIconList( $container );
 	strictEqual( $container.find( '.watch-this-article' ).length, 2, '2 buttons created' );
 	strictEqual( $container.find( '.watch-this-article.watched' ).length, 1, 'One article is watched' );
 } );
 
-}( jQuery, mw.mobileFrontend.require( 'watchstar' ) ) );
+}( jQuery, mw.mobileFrontend ) );
