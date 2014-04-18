@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_107fc7de",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-18T16:44:10Z",
+      "side": 1,
+      "message": "Bad rebase :(",
+      "revId": "80f06fb15da605eb6f7b79aaacacf94969c30e8b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
