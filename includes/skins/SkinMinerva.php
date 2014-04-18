@@ -180,10 +180,6 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
-		// Enable search header in beta
-		if ( $this->getTitle()->isSpecialPage() ) {
-			$out->setProperty( 'disableSearchAndFooter', true );
-		}
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
 
@@ -456,8 +452,6 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$out = $this->getOutput();
-		$disableSearchAndFooter = $out->getProperty( 'disableSearchAndFooter' );
-		$tpl->set( 'disableSearchAndFooter', $disableSearchAndFooter );
 		if ( $title->isMainPage() ) {
 			if ( $user->isLoggedIn() ) {
 				$pageTitle = wfMessage(
@@ -469,27 +463,15 @@ class SkinMinerva extends SkinTemplate {
 		}
 		$pageHeading = $out->getPageTitle();
 
-		if ( $title->isSpecialPage() ) {
-			if ( $disableSearchAndFooter ) {
-				$htmlHeader = $out->getProperty( 'mobile.htmlHeader' );
-				if ( !$htmlHeader ) {
-					$htmlHeader = Html::element( 'h1', array(), $pageHeading );
-				}
-				$tpl->set( 'specialPageHeader', $htmlHeader );
-			}
-		} else {
-			if ( $pageHeading ) {
-				$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading );
-			} else {
-				$preBodyText = '';
-			}
-			$tpl->set( 'prebodytext', $preBodyText );
-
+		if ( !$title->isSpecialPage() ) {
 			// If it's a page that exists, add last edited timestamp
 			if ( $this->getWikiPage()->exists() ) {
 				$tpl->set( 'historyLink', $this->getHistoryLink( $title ) );
 			}
 		}
+		$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ),
+			$this->getOutput()->getPageTitle() );
+		$tpl->set( 'prebodytext', $preBodyText );
 
 		// set defaults
 		if ( !isset( $tpl->data['postbodytext'] ) ) {
@@ -744,7 +726,8 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	protected function getSkinStyles() {
-		return array(
+		$title = $this->getTitle();
+		$styles = array(
 			'skins.minerva.chrome.styles',
 			'skins.minerva.buttons.styles',
 			'skins.minerva.content.styles',
@@ -753,6 +736,10 @@ class SkinMinerva extends SkinTemplate {
 			'mobile.styles.page',
 			'mobile.pagelist.styles',
 		);
+		if ( $title->isSpecialPage() ) {
+			$styles['special'] = 'skins.minerva.special.styles';
+		}
+		return $styles;
 	}
 
 	/**
