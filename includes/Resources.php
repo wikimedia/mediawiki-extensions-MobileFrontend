@@ -153,28 +153,20 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mediawiki.language',
+			'mediawiki.jqueryMsg',
+		),
 		'scripts' => array(
 			'javascripts/common/modules.js',
 			'javascripts/common/Class.js',
 			'javascripts/common/eventemitter.js',
 			'javascripts/common/mainmenu.js',
 			'javascripts/modules/lastEdited/time.js',
-		),
-		'position' => 'top',
-	),
-
-	'mobile.head.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.head',
-			'mediawiki.language',
-			'mediawiki.jqueryMsg',
-		),
-		'scripts' => array(
-			'javascripts/modules/lastEdited/lastEditedBeta.js',
-			'javascripts/common/matchMedia.js',
+			'javascripts/modules/lastEdited/lastEdited.js',
 		),
 		'messages' => array(
-			// LastEditedBeta.js
+			// lastEdited.js
 			'mobile-frontend-last-modified-with-user-seconds',
 			'mobile-frontend-last-modified-with-user-minutes',
 			'mobile-frontend-last-modified-with-user-hours',
@@ -182,6 +174,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-with-user-months',
 			'mobile-frontend-last-modified-with-user-years',
 			'mobile-frontend-last-modified-with-user-just-now',
+		),
+		'position' => 'top',
+	),
+
+	'mobile.head.beta' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.head',
+		),
+		'scripts' => array(
+			'javascripts/common/matchMedia.js',
 		),
 		'position' => 'top',
 	),
@@ -725,15 +727,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-with-user-date',
 			// mf-stop-mobile-redirect.js
 			'mobile-frontend-cookies-required',
-		),
-	),
-
-	'mobile.lastEdited.stable' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.stable',
-		),
-		'scripts' => array(
-			'javascripts/modules/lastEdited/lastEdited.js',
 		),
 	),
 

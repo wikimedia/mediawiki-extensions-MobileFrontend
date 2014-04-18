@@ -5,12 +5,18 @@ class MinervaTemplate extends BaseTemplate {
 	 */
 	protected $isSpecialPage;
 
+	/**
+	 * @var Boolean
+	 */
+	protected $isMainPage;
+
 	public function getPersonalTools() {
 		return $this->data['personal_urls'];
 	}
 
 	public function execute() {
 		$this->isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
+		$this->isMainPage = $this->getSkin()->getTitle()->isMainPage();
 		wfRunHooks( 'MinervaPreRender', array( $this ) );
 		$this->render( $this->data );
 	}
@@ -85,11 +91,23 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Renders history link at top of page
+	 * Renders history link at top of page if it isn't the main page
+	 * @param array $data Data used to build the page
+	 */
+	protected function renderHistoryLinkTop( $data ) {
+		if ( !$this->isMainPage ) {
+			$this->renderHistoryLink( $data );
+		}
+	}
+
+	/**
+	 * Renders history link at bottom of page if it is the main page
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderHistoryLinkBottom( $data ) {
-		$this->renderHistoryLink( $data );
+		if ( $this->isMainPage ) {
+			$this->renderHistoryLink( $data );
+		}
 	}
 
 	protected function renderMetaSections() {
@@ -164,6 +182,7 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	protected function renderContentWrapper( $data ) {
+		$this->renderHistoryLinkTop( $data );
 		?>
 		<script>
 			if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'header-loaded' ); }

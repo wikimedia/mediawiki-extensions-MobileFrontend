@@ -459,6 +459,10 @@ class SkinMinerva extends SkinTemplate {
 				$link['data-user-gender'] = 'unknown';
 			}
 		}
+		if ( !$title->isMainPage() ) {
+			$link['class'] = 'top-bar truncated-text';
+		}
+		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
 		return $link;
 	}
 
@@ -708,7 +712,7 @@ class SkinMinerva extends SkinTemplate {
 		$modules['notifications'] = array( 'mobile.notifications' );
 		$modules['watch'] = array();
 		$modules['search'] = array( 'mobile.search' );
-		$modules['stableonly'] = array( 'mobile.lastEdited.stable' );
+		$modules['stableonly'] = array();
 		$modules['issues'] = array( 'mobile.issues' );
 		$modules['editor'] = array( 'mobile.editor' );
 		$modules['languages'] = array( 'mobile.languages' );

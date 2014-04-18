@@ -12,7 +12,7 @@ Feature: Check UI components
 
   Scenario: Check existence of important UI components on other pages.
     Given I am on the "Barack Obama" page
-    Then I see the history link
+    Then I see the last modified bar history link
       And I see the switch to desktop link
       And I see the license link
       And I see a link to the terms of use

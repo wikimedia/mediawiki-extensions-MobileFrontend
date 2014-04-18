@@ -18,10 +18,6 @@ A file for css that optimises the Minerva skin on larger devices.
 			}
 		}
 
-		#mw-mf-last-modified {
-			padding: 5px @contentPaddingTablet;
-		}
-
 		.pre-content {
 			position: relative;
 			padding: 20px @contentPaddingTablet 0 @contentPaddingTablet;
@@ -98,5 +94,14 @@ A file for css that optimises the Minerva skin on larger devices.
 				display: table-row-group;
 			}
 		}
+
+		#mw-mf-last-modified {
+			padding: 5px 0;
+		}
+	}
+
+	// On most pages the last modified bar is outside the content div
+	#mw-mf-last-modified {
+		padding: 5px @contentPaddingTablet;
 	}
 }

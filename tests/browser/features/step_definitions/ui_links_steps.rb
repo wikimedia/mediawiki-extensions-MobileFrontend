@@ -2,6 +2,10 @@ Then(/^I see the history link$/) do
   on(ArticlePage).edit_history_link_element.should be_visible
 end
 
+Then(/^I see the last modified bar history link$/) do
+  on(ArticlePage).last_modified_bar_history_link_element.should be_visible
+end
+
 Then(/^I see the switch to desktop link$/) do
   on(ArticlePage).desktop_link_element.should be_visible
 end
