@@ -1,7 +1,6 @@
 <?php
 
 class SpecialUserProfile extends MobileSpecialPage {
-	protected $mode = 'beta';
 	protected $hasDesktopVersion = false;
 
 	/**
@@ -232,13 +231,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 	public function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
-		$this->addModules();
-		$out->addModuleStyles( 'skins.minerva.special.styles' );
-		$out->setProperty( 'unstyledContent', true );
+		$this->setHeaders();
 		$out->addJsConfigVars( array( 'wgMFMaxDescriptionChars' => self::MAX_DESCRIPTION_CHARS ) );
 		if ( $par ) {
 			$this->targetUser = User::newFromName( $par );
-			$pageTitle = $this->targetUser->getName();
+			$pageTitle = $this->targetUser ? $this->targetUser->getName() : $par;
 			$out->setPageTitle( $pageTitle );
 			// Make sure this is a valid registered user and not an invalid username (e.g. ip see bug 56822)
 			if ( $this->targetUser && $this->targetUser->getId() ) {

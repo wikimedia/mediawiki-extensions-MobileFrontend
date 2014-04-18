@@ -373,13 +373,30 @@ class SkinMinerva extends SkinTemplate {
 			$query[ 'returnto' ] = $title->getPrefixedText();
 		}
 
-		if ( $this->getUser()->isLoggedIn() ) {
+		$user = $this->getUser();
+		if ( $user->isLoggedIn() ) {
 			if ( !empty( $returntoquery ) ) {
 				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			}
 			$url = SpecialPage::getTitleFor( 'Userlogout' )->getFullURL( $query );
 			$url = $this->mobileContext->getMobileUrl( $url, $wgSecureLogin );
-			$text = wfMessage( 'mobile-frontend-main-menu-logout' )->escaped();
+			$username = $user->getName();
+
+			$loginLogoutLink = array(
+				'links' => array(
+					array(
+						'text' => $username,
+						'href' => SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
+						'class' => 'icon-profile truncated-text',
+					),
+					array(
+						'text' => wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
+						'href' => $url,
+						'class' => 'icon-secondary icon-secondary-logout',
+					),
+				),
+				'class' => 'icon-user',
+			);
 		} else {
 			// note returnto is not set for mobile (per product spec)
 			// note welcome=yes in returnto  allows us to detect accounts created from the left nav
@@ -388,14 +405,15 @@ class SkinMinerva extends SkinTemplate {
 			unset( $returntoquery['campaign'] );
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = $this->getLoginUrl( $query );
-			$text = wfMessage( 'mobile-frontend-main-menu-login' )->escaped();
+			$loginLogoutLink = array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
+				'href' => $url,
+				'class' => 'icon-anon',
+			);
 		}
+
 		wfProfileOut( __METHOD__ );
-		return array(
-			'text' => $text,
-			'href' => $url,
-			'class' => 'icon-loginout',
-		);
+		return $loginLogoutLink;
 	}
 
 	/**

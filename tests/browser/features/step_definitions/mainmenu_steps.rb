@@ -22,3 +22,7 @@ end
 Then(/^I see a link to the disclaimer$/) do
   on(ArticlePage).disclaimer_link_element.should be_visible
 end
+
+Then(/^I see a link to my user profile page in the main navigation menu$/) do
+  on(ArticlePage).navigation_element.link_element(text: ENV["MEDIAWIKI_USER"]).should_not be_visible
+end
