@@ -152,7 +152,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		}
 
 		$html .= Html::element(
-			'p', array( 'class' => 'component truncated-text multi-line two-line' ), $comment
+			'p', array( 'class' => 'edit-summary component truncated-text multi-line two-line' ), $comment
 		);
 
 		if ( $isMinor ) {
@@ -160,7 +160,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		}
 
 		$html .= Html::openElement( 'div', array( 'class' => 'listThumb' ) ) .
-			Html::element( 'p', null, $lang->userTime( $ts, $user ) );
+			Html::element( 'p', array( 'class' => 'timestamp' ), $lang->userTime( $ts, $user ) );
 
 		if ( $bytes !== 0 ) {
 			$html .= Html::element( 'p', array( 'class' => $bytesClass ), $formattedBytes );
