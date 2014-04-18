@@ -260,7 +260,7 @@
 	"mobile-frontend-profile-noargs": "未提供用户名。请提供用户名以查看资料。",
 	"mobile-frontend-profile-nouser": "不存在用户名为此的用户。用户名区分大小写，请检查是否输入正确。",
 	"mobile-frontend-profile-title": "用户资料",
-	"mobile-frontend-profile-userpage-link": "访问用户页。",
+	"mobile-frontend-profile-userpage-link": "访问用户页面。",
 	"mobile-frontend-profile-usertalk": "与$1讨论",
 	"mobile-frontend-random-button": "随机",
 	"mobile-frontend-regular-site": "桌面版视图",
