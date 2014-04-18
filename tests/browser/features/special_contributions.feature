@@ -3,7 +3,6 @@ Feature: Special:Contributions
 
   Background:
     Given I am logged into the mobile website
-      And I am in beta mode
       And I am on my contributions page
 
   Scenario: Check components in diff summary
