@@ -56,6 +56,18 @@
 			// doing obj.emit( 'something' )
 			$( this ).triggerHandler( event, args );
 			return this;
+		},
+
+		/**
+		 * Remove a callback.
+		 *
+		 * @name EventEmitter.prototype.off
+		 * @function
+		 * @param {string} event Event name.
+		 */
+		off: function( event ) {
+			$( this ).off( event );
+			return this;
 		}
 	} );
 

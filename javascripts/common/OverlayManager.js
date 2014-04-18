@@ -20,15 +20,28 @@
 			this.hidePrevious = true;
 		},
 
-		_showOverlay: function( overlay ) {
-			var self = this;
+		_onHideOverlay: function() {
+			this.hidePrevious = false;
+			this.router.back();
+		},
 
+		_showOverlay: function( overlay ) {
 			// if hidden using overlay (not hardware) button, update the state
-			overlay.on( 'hide-button', function() {
-				self.hidePrevious = false;
-				self.router.back();
-			} );
+			overlay.one( 'hide.overlay-manager', $.proxy( this, '_onHideOverlay' ) );
 			overlay.show();
+		},
+
+		_hideOverlay: function( overlay ) {
+			var result;
+
+			overlay.off( 'hide.overlay-manager' );
+			result = overlay.hide( this.stack.length > 1 );
+
+			if ( !result ) {
+				overlay.one( 'hide.overlay-manager', $.proxy( this, '_onHideOverlay' ) );
+			}
+
+			return result;
 		},
 
 		_processMatch: function( match ) {
@@ -68,7 +81,7 @@
 			if ( previous &&
 				previous.overlay !== undefined &&
 				this.hidePrevious &&
-				!previous.overlay.hide( this.stack.length > 1 )
+				!this._hideOverlay( previous.overlay )
 			) {
 				// if hide prevented, prevent route change event
 				ev.preventDefault();
@@ -147,7 +160,7 @@
 			if ( this.stack.length === 0 ) {
 				throw new Error( "Trying to replace OverlayManager's current overlay, but stack is empty" );
 			}
-			this.stack[0].overlay.hide();
+			this._hideOverlay( this.stack[0].overlay );
 			this.stack[0].overlay = overlay;
 			this._showOverlay( overlay );
 		}

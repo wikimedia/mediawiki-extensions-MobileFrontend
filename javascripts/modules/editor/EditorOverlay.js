@@ -246,7 +246,6 @@
 						} );
 					}
 					self.onSave();
-					self.hide();
 				} ).
 				fail( function( data ) {
 					var msg;
