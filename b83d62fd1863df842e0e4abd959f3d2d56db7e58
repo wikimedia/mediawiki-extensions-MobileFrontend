@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_6baf2cdf",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-18T18:09:14Z",
+      "side": 1,
+      "message": "Since this variable is not supposed  to  be modified, it should be a constant. However, I think it should be removed and database creation should just be be moved to a separate function, getDB().",
+      "revId": "b83d62fd1863df842e0e4abd959f3d2d56db7e58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
