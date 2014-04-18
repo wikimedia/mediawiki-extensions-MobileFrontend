@@ -8,7 +8,7 @@ class MobileUserInfo {
 	const LIMIT = 500;
 
 	/**
-	 * @var User: User whose information is retrieved
+	 * @var User User whose information is retrieved
 	 */
 	private $user;
 
@@ -22,8 +22,8 @@ class MobileUserInfo {
 	/**
 	 * Returns a count of the most recent edits since a given timestamp, not exceeding LIMIT
 	 *
-	 * @param Integer $fromDate Time to measure from
-	 * @return Integer the amount of edits
+	 * @param int $fromDate Time to measure from
+	 * @return int the amount of edits
 	 */
 	public function countRecentEdits( $fromDate ) {
 		wfProfileIn( __METHOD__ );
@@ -56,8 +56,8 @@ class MobileUserInfo {
 	 * Returns a count of the most recent uploads to $wgMFPhotoUploadWiki since
 	 * a given timestamp, not exceeding LIMIT.
 	 *
-	 * @param Integer $fromDate Time to measure from
-	 * @return Integer the amount of edits
+	 * @param int $fromDate Time to measure from
+	 * @return int the amount of edits
 	 */
 	public function countRecentUploads( $fromDate ) {
 		global $wgMFPhotoUploadWiki, $wgConf;

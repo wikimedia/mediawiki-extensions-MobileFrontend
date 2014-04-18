@@ -29,7 +29,7 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 	 * Does not call the parent's constructor to prevent overwriting
 	 * $this->data and $this->translatorobject since we're essentially
 	 * just hijacking the existing template and its data here.
-	 * @param QuickTemplate $template: The original template object to overwrite
+	 * @param QuickTemplate $template The original template object to overwrite
 	 */
 	public function __construct( $template ) {
 		$this->copyObjectProperties( $template );
@@ -68,10 +68,10 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 
 	/**
 	 * Copy public properties of one object to this one
-	 * @param object $obj: The object whose properties should be copied
+	 * @param QuickTemplate $tpl The object whose properties should be copied
 	 */
-	protected function copyObjectProperties( $obj ) {
-		foreach( get_object_vars( $obj ) as $prop => $value ) {
+	protected function copyObjectProperties( $tpl ) {
+		foreach( get_object_vars( $tpl ) as $prop => $value ) {
 			$this->$prop = $value;
 		}
 	}

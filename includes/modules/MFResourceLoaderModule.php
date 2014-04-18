@@ -52,7 +52,7 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	/**
 	 * Gets list of names of modules this module depends on.
 	 *
-	 * @return Array: List of module names
+	 * @return Array List of module names
 	 */
 	public function getDependencies() {
 		return $this->dependencies;
@@ -68,7 +68,7 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	}
 
 	/**
-	 * @param $name string: name of template
+	 * @param string $name of template
 	 * @return string
 	 */
 	protected function getLocalTemplatePath( $name ) {
@@ -78,7 +78,7 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	/**
 	 * Takes named templates by the module and adds them to the JavaScript output
 	 *
-	 * @return string: JavaScript
+	 * @return string JavaScript code
 	 */
 	function getTemplateScript() {
 		$js = '';
@@ -100,7 +100,7 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	/**
 	 * Processes messages which have been marked as needing parsing
 	 *
-	 * @return String: JavaScript code
+	 * @return string JavaScript code
 	 */
 	public function addParsedMessages() {
 		$js = "\n";
@@ -132,7 +132,7 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	/**
 	 * Gets list of message keys used by this module.
 	 *
-	 * @return Array: List of message keys
+	 * @return array List of message keys
 	 */
 	public function getMessages() {
 		return $this->messages;
@@ -141,8 +141,8 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	/**
 	 * Gets all scripts for a given context concatenated together including processed messages
 	 *
-	 * @param $context ResourceLoaderContext: Context in which to generate script
-	 * @return String: JavaScript code for $context
+	 * @param ResourceLoaderContext $context Context in which to generate script
+	 * @return string JavaScript code for $context
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
 		$script = parent::getScript( $context );
@@ -181,8 +181,8 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	/**
 	 * Checks whether any templates used by module have changed
 	 *
-	 * @param $context ResourceLoaderContext: Context in which to generate script
-	 * @return Integer: UNIX timestamp
+	 * @param ResourceLoaderContext $context Context in which to generate script
+	 * @return int UNIX timestamp
 	 */
 	public function getModifiedTimeTemplates( ResourceLoaderContext $context ) {
 		$hash = $context->getHash();
@@ -213,8 +213,8 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	/**
 	 * Checks whether any resources used by module have changed
 	 *
-	 * @param $context ResourceLoaderContext: Context in which to generate script
-	 * @return Integer: UNIX timestamp
+	 * @param ResourceLoaderContext $context in which to generate script
+	 * @return int UNIX timestamp
 	 */
 	public function getModifiedTime( ResourceLoaderContext $context ) {
 		return max( parent::getModifiedTime( $context ),

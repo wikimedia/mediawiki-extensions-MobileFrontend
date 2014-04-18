@@ -36,8 +36,8 @@ class MobileFrontendHooks {
 	 * RequestContextCreateSkin hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
 	 *
-	 * @param $context IContextSource
-	 * @param $skin Skin
+	 * @param IContextSource $context
+	 * @param Skin $skin
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
@@ -104,8 +104,8 @@ class MobileFrontendHooks {
 	 *
 	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
 	 *
-	 * @param $skin SkinTemplate
-	 * @param $tpl QuickTemplate
+	 * @param SkinTemplate $skin
+	 * @param QuickTemplate $tpl
 	 * @return bool
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
@@ -150,9 +150,9 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageRedirect
 	 *
 	 * Ensures URLs are handled properly for select special pages.
-	 * @param $out OutputPage
-	 * @param $redirect
-	 * @param $code
+	 * @param OutputPage $out
+	 * @param string $redirect
+	 * @param string $code
 	 * @return bool
 	 */
 	public static function onBeforePageRedirect( $out, &$redirect, &$code ) {
@@ -230,8 +230,8 @@ class MobileFrontendHooks {
 	 * GetCacheVaryCookies hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
 	 *
-	 * @param $out OutputPage
-	 * @param $cookies array
+	 * @param OutputPage $out
+	 * @param array $cookies
 	 * @return bool
 	 */
 	public static function onGetCacheVaryCookies( $out, &$cookies ) {
@@ -288,8 +288,8 @@ class MobileFrontendHooks {
 	/**
 	 * Hook for SpecialPage_initList in SpecialPageFactory.
 	 *
-	 * @param array &$list: list of special page classes
-	 * @return boolean hook return value
+	 * @param array &$list list of special page classes
+	 * @return bool hook return value
 	 */
 	public static function onSpecialPage_initList( &$list ) {
 		$ctx = MobileContext::singleton();
@@ -322,7 +322,7 @@ class MobileFrontendHooks {
 	/**
 	 * ListDefinedTags hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
-	 * @param $tags
+	 * @param array &$tags
 	 *
 	 * @return bool
 	 */
@@ -352,10 +352,12 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * AbuseFilter-getUserVars hook handler that adds a user_mobile variable.
+	 * AbuseFilter-GenerateUserVars hook handler that adds a user_mobile variable.
+	 * Altering the variables generated for a specific user
 	 *
-	 * @param $vars AbuseFilterVariableHolder object to add vars to
-	 * @param $user User object
+	 * @see hooks.txt in AbuseFilter extension
+	 * @param AbuseFilterVariableHolder $vars object to add vars to
+	 * @param User $user object
 	 * @return bool
 	 */
 	public static function onAbuseFilterGenerateUserVars( $vars, $user ) {
@@ -374,7 +376,7 @@ class MobileFrontendHooks {
 	 * AbuseFilter-builder hook handler that adds user_mobile variable to list
 	 *  of valid vars
 	 *
-	 * @param &$builder array Array in AbuseFilter::getBuilderValues to add to.
+	 * @param array &$builder Array in AbuseFilter::getBuilderValues to add to.
 	 * @return bool
 	 */
 	public static function onAbuseFilterBuilder( &$builder ) {
@@ -391,8 +393,8 @@ class MobileFrontendHooks {
 	 * $wgSecureLogin == true - but only when using the
 	 * mobile site.
 	 *
-	 * @param $special SpecialPage
-	 * @param $subpage string
+	 * @param SpecialPage $special
+	 * @param string $subpage
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
@@ -690,7 +692,7 @@ class MobileFrontendHooks {
 	 * UnitTestsList hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UnitTestsList
 	 *
-	 * @param $files array
+	 * @param array $files
 	 * @return bool
 	 */
 	public static function onUnitTestsList( &$files ) {
@@ -712,8 +714,9 @@ class MobileFrontendHooks {
 	 * CentralAuthLoginRedirectData hook handler
 	 * Saves mobile host so that the CentralAuth wiki could redirect back properly
 	 *
-	 * @param $centralUser
-	 * @param $data
+	 * @see CentralAuthHooks::doCentralLoginRedirect in CentralAuth extension
+	 * @param CentralAuthUser $centralUser
+	 * @param array $data
 	 *
 	 * @return bool
 	 */
@@ -729,10 +732,10 @@ class MobileFrontendHooks {
 	/**
 	 * CentralAuthSilentLoginRedirect hook handler
 	 * Points redirects from CentralAuth wiki to mobile domain if user has logged in from it
-	 *
-	 * @param $centralUser
-	 * @param $url
-	 * @param $info
+	 * @see SpecialCentralLogin in CentralAuth extension
+	 * @param CentralAuthUser $centralUser
+	 * @param string $url to redirect to
+	 * @param array $info token information
 	 *
 	 * @return bool
 	 */

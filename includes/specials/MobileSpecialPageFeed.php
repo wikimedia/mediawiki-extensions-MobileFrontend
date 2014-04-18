@@ -15,8 +15,8 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 	/**
 	 * Formats an edit comment
-	 * @param string $comment: The raw comment text
-	 * @param Title $title: The title of the page that was edited
+	 * @param string $comment The raw comment text
+	 * @param Title $title The title of the page that was edited
 	 * @fixme: Duplication with SpecialMobileWatchlist
 	 *
 	 * @return string: HTML code
@@ -34,11 +34,12 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 	/**
 	 * Renders an item in the feed
-	 * @param {MWTimestamp} ts: The time the edit occurred
-	 * @param {string} diffLink: url to the diff for the edit
-	 * @param {string} username: The username of the user that made the edit (absent if anonymous)
-	 * @param {string} comment: The edit summary
-	 * @param {Title} title: The title of the page that was edited
+	 * @param MWTimestamp $ts The time the edit occurred
+	 * @param string $diffLink url to the diff for the edit
+	 * @param string $username The username of the user that made the edit (absent if anonymous)
+	 * @param string $comment The edit summary
+	 * @param Title $title The title of the page that was edited
+	 * @param bool $isAnon Whether the user for this edit was anonymous
 	 *
 	 * @return String: HTML code
 	 */
@@ -80,7 +81,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	/**
 	 * Renders a date header when necessary.
 	 * FIXME: Juliusz won't like this function.
-	 * @param {MWTimestamp} date: The date of the current item
+	 * @param MWTimestamp date The date of the current item
 	 */
 	protected function renderListHeaderWhereNeeded( $date ) {
 		if ( !isset( $this->lastDate ) || $date !== $this->lastDate ) {
@@ -101,15 +102,15 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	/**
 	 * Renders an item in the feed
 	 * FIXME: Rename to renderFeedItemHtml when pushed to stable
-	 * @param {MWTimestamp} ts: The time the edit occurred
-	 * @param {string} diffLink: url to the diff for the edit
-	 * @param {string} username: The username of the user that made the edit (absent if anonymous)
-	 * @param {string} comment: The edit summary
-	 * @param {Title} title: The title of the page that was edited
-	 * @param {bool} isAnon: Is the edit anonymous?
-	 * @param {int} bytes: Net number of bytes changed
-	 * @param {bool} isMinor: Is the edit minor?
-	 * @return String: HTML code
+	 * @param MWTimestamp $ts The time the edit occurred
+	 * @param string $diffLink url to the diff for the edit
+	 * @param string $username The username of the user that made the edit (absent if anonymous)
+	 * @param string $comment The edit summary
+	 * @param Title $title The title of the page that was edited
+	 * @param bool $isAnon Is the edit anonymous?
+	 * @param int $bytes Net number of bytes changed
+	 * @param bool $isMinor Is the edit minor?
+	 * @return string HTML code
 	 */
 	// FIXME: use an array as an argument?
 	protected function renderFeedItemHtmlBeta( $ts, $diffLink = '', $username = '', $comment = '',

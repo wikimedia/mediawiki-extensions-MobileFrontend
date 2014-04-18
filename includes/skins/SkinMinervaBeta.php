@@ -6,7 +6,7 @@ class SkinMinervaBeta extends SkinMinerva {
 
 	/**
 	 * Initializes output page and sets up skin-specific parameters
-	 * @param $out OutputPage object to initialize
+	 * @param OutputPage $out object to initialize
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
