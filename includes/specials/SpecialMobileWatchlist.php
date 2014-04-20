@@ -430,7 +430,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		}
 
 		$output->addHtml(
-			Html::openElement( 'div', array( 'class' => 'info' ) ) .
+			Html::openElement( 'div', array( 'class' => 'info empty-page' ) ) .
 				$msg .
 				Html::element( 'a',
 					array( 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ),
