@@ -64,7 +64,7 @@
 	"mobile-frontend-settings-site-description": "Makukuha ang {{SITENAME}} sa $1 {{PLURAL:$1|wika|mga wika}}. Ang lahat ng mga bersiyon ay nakalista sa ibaba",
 	"mobile-frontend-settings-site-header": "Mga Wika sa {{SITENAME}}",
 	"mobile-frontend-sign-in-heading": "Lumagda",
-	"mobile-frontend-sign-in-why": "Kung may kuwenta ka sa {{SITENAME}}, maaari kang lumagda sa ibaba.",
+	"mobile-frontend-sign-in-why": "Kung may account ka sa {{SITENAME}}, maaari kang lumagda sa ibaba.",
 	"mobile-frontend-sign-up-heading": "Magpatala",
 	"mobile-frontend-user-button-tooltip": "Ipakita ang aking mga notipikasyon.",
 	"mobile-frontend-user-cta": "Mangyaring lumagda o magpatala upang makita ang inyong mga notipikasyon.",
