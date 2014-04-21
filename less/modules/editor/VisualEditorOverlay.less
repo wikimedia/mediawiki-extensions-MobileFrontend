@@ -47,24 +47,34 @@
 .editor-overlay-ve {
 	// Toolbar
 	.overlay-header-container {
-		.overlay-header > .toolbar {
-			padding: 0;
+		.overlay-header {
+			.icon.editor-switcher {
+				.background-image-svg-quick( 'images/edit-visual-normal' );
 
-			// FIXME: Remove most of these resets once oo-ui supports skinning
-			// and no longer loads Vector-like styles by default in MediaWiki.
-			.oo-ui-toolbar-bar {
-				background-color: transparent;
-				background-image: none;
-				border-bottom: none;
+				&.selected {
+					.background-image-svg-quick( 'images/edit-visual-select' );
+				}
+			}
+
+			> .toolbar {
 				padding: 0;
 
-				.oo-ui-toolGroup {
-					margin: 0;
-					border: none;
-				}
+				// FIXME: Remove most of these resets once oo-ui supports skinning
+				// and no longer loads Vector-like styles by default in MediaWiki.
+				.oo-ui-toolbar-bar {
+					background-color: transparent;
+					background-image: none;
+					border-bottom: none;
+					padding: 0;
 
-				.oo-ui-toolbar-shadow {
-					display: none;
+					.oo-ui-toolGroup {
+						margin: 0;
+						border: none;
+					}
+
+					.oo-ui-toolbar-shadow {
+						display: none;
+					}
 				}
 			}
 		}
