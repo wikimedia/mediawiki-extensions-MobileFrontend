@@ -5,6 +5,9 @@
  */
 
 abstract class MobileSpecialPageFeed extends MobileSpecialPage {
+	/**  @var bool Whether to show the username in results or not */
+	protected $showUsername = true;
+
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$out->addModuleStyles( 'mobile.special.pagefeed.styles' );
@@ -101,7 +104,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$html .= Html::element( 'h3', array(), $title->getPrefixedText() );
 		}
 
-		if ( $username ) {
+		if ( $username && $this->showUsername ) {
 			$html .= Html::element( 'p', array( 'class' => $usernameClass ), $username );
 		}
 

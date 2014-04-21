@@ -7,6 +7,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	protected $user;
 	/**  @var MWTimestamp */
 	protected $lastDate;
+	/**  @var bool Whether to show the username in results or not */
+	protected $showUsername = false;
 
 	/**
 	 * Gets HTML to place in the header bar
@@ -48,14 +50,4 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		}
 		return $conds;
 	}
-
-	protected function renderFeedItemHtmlBeta( $ts, $diffLink ='', $username = '',
-		$comment = '', $title = false, $isAnon = false, $bytes = 0, $isMinor = false
-	) {
-		// Stop username from being rendered
-		$username = false;
-		parent::renderFeedItemHtmlBeta( $ts, $diffLink, $username, $comment, $title, false, $bytes,
-			$isMinor );
-	}
-
 }
