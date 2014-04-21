@@ -60,8 +60,8 @@ var View = M.require( 'View' ),
 				ev.stopPropagation();
 				if ( self.closeOnBack ) {
 					window.history.back();
-				} else if ( self.hide() ) {
-					self.emit( 'hide-button' );
+				} else {
+					self.hide();
 				}
 			} );
 			// stop clicks in the overlay from propagating to the page

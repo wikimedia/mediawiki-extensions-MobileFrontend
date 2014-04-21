@@ -9,13 +9,18 @@
 			this.createFakeOverlay = function( options ) {
 				var fakeOverlay = new EventEmitter();
 				fakeOverlay.show = this.sandbox.spy();
-				fakeOverlay.hide = this.sandbox.stub().returns( true );
+				fakeOverlay.hide = function() {
+					this.emit( 'hide' );
+					return true;
+				};
+				this.sandbox.spy( fakeOverlay, 'hide' );
 				$.extend( fakeOverlay, options );
 				return fakeOverlay;
 			};
 
 			fakeRouter = new EventEmitter();
 			fakeRouter.getPath = this.sandbox.stub().returns( '' );
+			fakeRouter.back = this.sandbox.spy();
 			overlayManager = new OverlayManager( fakeRouter );
 		}
 	} );
@@ -97,6 +102,18 @@
 		assert.ok( fakeOverlay.hide.calledTwice, 'hide overlay' );
 		assert.ok( fakeOverlay.hide.getCall( 0 ).notCalledWith( true ), "don't force hide (first)" );
 		assert.ok( fakeOverlay.hide.getCall( 1 ).notCalledWith( true ), "don't force hide (second)" );
+	} );
+
+	QUnit.test( "go back (change route) if overlay hidden but not by route change", 1, function( assert ) {
+		var
+			fakeOverlay = this.createFakeOverlay(),
+			factoryStub = this.sandbox.stub().returns( fakeOverlay );
+
+		overlayManager.add( /^test$/, factoryStub );
+		fakeRouter.emit( 'route', $.Event( 'route', { path: 'test' } ) );
+		fakeOverlay.hide();
+
+		assert.ok( fakeRouter.back.calledOnce, "route back" );
 	} );
 
 	QUnit.test( 'stacked overlays', 7, function( assert ) {

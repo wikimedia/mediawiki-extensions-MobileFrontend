@@ -65,7 +65,6 @@
 					// Force refresh when something goes wrong (see bug 62175 for example)
 					window.location = mw.util.getUrl( title );
 				} );
-			M.router.navigate( '' );
 
 			if ( this.isNewPage ) {
 				msg = 'mobile-frontend-editor-success-new-page';
@@ -91,6 +90,7 @@
 			// the mobile interface.
 			$.cookie( 'mobileEditor', 'true', { expires: 30 } );
 			this._updateEditCount();
+			this.hide( true );
 		},
 		initialize: function( options ) {
 			if ( this.readOnly ) {
