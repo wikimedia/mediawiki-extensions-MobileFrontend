@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_7084adb4",
+        "filename": "javascripts/modules/lastEdited/lastEdited.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-21T21:14:52Z",
+      "side": 1,
+      "message": "I still don\u0027t get it. Why wouldn\u0027t $lastModified.html( mw.message.apply( this, args ).parse() ); do the job?\n\nWe\u0027re basically copying the id, class and putting it in the same place in DOM.",
+      "parentUuid": "8e23439c_0d19e2db",
+      "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_8df732d0",
         "filename": "less/common/common.less",
         "patchSetId": 10
