@@ -90,7 +90,7 @@ class ArticlePage
   div(:visual_editor_button, css: ".visual-editor")
 
   # editor
-  textarea(:editor_textarea, class:"wikitext-editor")
+  textarea(:editor_textarea, css: ".wikitext-editor")
   button(:escape_button, class:"back icon")
   button(:continue_button, class:"continue icon")
   button(:submit_button, class:"submit icon")

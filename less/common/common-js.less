@@ -1,7 +1,6 @@
 @import "minerva.variables";
 @import "minerva.mixins";
-
-
+@import "mediawiki.mixins.less";
 
 // Asynchronous loading
 //
@@ -18,7 +17,7 @@
 	}
 
 	// needs !important to override images from more specific rules
-	background-image: @ajaxLoadingImage !important;
+	.background-image(@ajaxLoadingImage) !important;
 	background-repeat: no-repeat;
 	background-position: center;
 	.background-size( 32px, auto );

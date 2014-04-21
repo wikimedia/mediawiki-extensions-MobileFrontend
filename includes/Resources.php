@@ -829,6 +829,25 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.watchstar' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			// Needs Drawer
+			'mobile.stable.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/watchstar/WatchstarApi.js',
+			'javascripts/modules/watchstar/Watchstar.js',
+			'javascripts/modules/watchstar/init.js',
+		),
+		'messages' => array(
+			// mf-watchstar.js
+			'mobile-frontend-watchlist-add',
+			'mobile-frontend-watchlist-removed',
+			'mobile-frontend-watchlist-cta',
+		),
+	),
+
 	'mobile.stable' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -840,11 +859,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.references',
 			'mediawiki.language',
 			'mobile.loggingSchemas',
+			'mobile.watchstar',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
+			// FIXME: The file should be split up and put in modules/watchstar
 			'javascripts/modules/mf-watchstar.js',
 		),
 		'messages' => array(

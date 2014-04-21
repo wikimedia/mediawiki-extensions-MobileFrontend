@@ -1,4 +1,4 @@
-// FIXME: This needs a big rewrite
+// FIXME: Break up this file and kill it
 ( function( M, $ ) {
 
 var api = M.require( 'api' ), w = ( function() {
@@ -216,25 +216,9 @@ var api = M.require( 'api' ), w = ( function() {
 		}
 	}
 
-	function upgradeUI() {
-		M.on( 'search-results', function( overlay ) {
-			initWatchListIconList( overlay.$( 'ul.page-list' ) );
-		} );
-	}
-
-	function init( page ) {
-		var $container = $container || $( '#ca-watch' ).removeClass( 'watched watch-this-article' ).empty();
-		// initialise on current page
-		if ( !M.inNamespace( 'special' ) ) {
-			initWatchListIcon( $container, page.title );
-		}
-		upgradeUI();
-	}
-
-	// bind to future page loads
-	M.on( 'page-loaded', init );
-	// wgPageName contains _ instead of spaces. Clean these up for readability here. (see bug 53078)
-	init( { title: mw.config.get( 'wgPageName' ).replace( /_/gi, ' ' ) } );
+	M.on( 'search-results', function( overlay ) {
+		initWatchListIconList( overlay.$( 'ul.page-list' ) );
+	} );
 
 	return {
 		initWatchListIcon: initWatchListIcon,
