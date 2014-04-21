@@ -461,7 +461,6 @@ class SkinMinerva extends SkinTemplate {
 			}
 			$out->setPageTitle( $pageTitle );
 		}
-		$pageHeading = $out->getPageTitle();
 
 		if ( !$title->isSpecialPage() ) {
 			// If it's a page that exists, add last edited timestamp
