@@ -2,7 +2,6 @@
 
 class SpecialUserProfile extends MobileSpecialPage {
 	protected $mode = 'beta';
-	protected $disableSearchAndFooter = false;
 	protected $hasDesktopVersion = false;
 
 	/**

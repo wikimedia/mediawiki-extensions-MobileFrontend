@@ -40,7 +40,6 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	protected function renderFooter( $data ) {
-		if ( !$data['disableSearchAndFooter'] ) {
 		?>
 		<div id="footer">
 			<?php
@@ -62,7 +61,6 @@ class MinervaTemplate extends BaseTemplate {
 			?>
 		</div>
 		<?php
-		}
 	}
 
 	protected function renderPageActions( $data ) {
@@ -221,10 +219,7 @@ class MinervaTemplate extends BaseTemplate {
 				<div class="header">
 					<?php
 						$this->html( 'menuButton' );
-						if ( $data['disableSearchAndFooter'] ) {
-							echo $data['specialPageHeader'];
-						} else {
-							?>
+					?>
 							<form action="<?php echo $data['wgScript'] ?>" class="search-box">
 							<?php
 							echo $this->makeSearchInput( $data['searchBox'] );
@@ -236,7 +231,6 @@ class MinervaTemplate extends BaseTemplate {
 							?>
 							</form>
 							<?php
-						}
 						echo $data['secondaryButton'];
 					?>
 				</div>

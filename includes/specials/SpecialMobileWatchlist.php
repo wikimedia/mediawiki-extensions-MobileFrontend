@@ -72,13 +72,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		// This needs to be done before calling getWatchlistHeader
 		$this->updateStickyTabs();
 
-		// Support the old style header in stable
-		// FIXME: Kill when new headers go to stable
-		if ( !$ctx->isBetaGroupMember() ) {
-			$output->setProperty( 'mobile.htmlHeader', $this->getWatchlistHeader() );
-		} else {
-			$output->addHtml( '<div class="content-header">' . $this->getWatchlistHeader() . '</div>' );
-		}
+		$output->addHtml( '<div class="content-header">' . $this->getWatchlistHeader() . '</div>' );
 
 		if ( $this->view === 'feed' ) {
 			$this->showRecentChangesHeader();

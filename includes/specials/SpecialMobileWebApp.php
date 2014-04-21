@@ -1,7 +1,6 @@
 <?php
 
 class SpecialMobileWebApp extends MobileSpecialPage {
-	protected $disableSearchAndFooter = false;
 	public function __construct() {
 		parent::__construct( 'MobileWebApp' );
 	}

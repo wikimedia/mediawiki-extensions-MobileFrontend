@@ -4,18 +4,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	public $template = 'MinervaTemplateBeta';
 	protected $mode = 'beta';
 
-	/**
-	 * Initializes output page and sets up skin-specific parameters
-	 * @param OutputPage $out object to initialize
-	 */
-	public function initPage( OutputPage $out ) {
-		parent::initPage( $out );
-		// Enable search header in beta
-		if ( $this->getTitle()->isSpecialPage() ) {
-			$out->setProperty( 'disableSearchAndFooter', false );
-		}
-	}
-
 	public function outputPage( OutputPage $out = null ) {
 		wfProfileIn( __METHOD__ );
 		if ( !$out ) {
@@ -68,9 +56,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		$styles[] = 'mobile.styles.beta';
 		if ( $title->isMainPage() ) {
 			$styles[] = 'mobile.styles.mainpage';
-		}
-		if ( $title->isSpecialPage() ) {
-			$styles['special'] = 'skins.minerva.special.styles';
 		}
 
 		$key = array_search( 'skins.minerva.buttons.styles', $styles );
@@ -233,12 +218,5 @@ class SkinMinervaBeta extends SkinMinerva {
 				$subtitle .
 				Html::closeElement( 'div' ) );
 		}
-	}
-
-	protected function prepareHeaderAndFooter( BaseTemplate $tpl ) {
-		parent::prepareHeaderAndFooter( $tpl );
-		$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ),
-			$this->getOutput()->getPageTitle() );
-		$tpl->set( 'prebodytext', $preBodyText );
 	}
 }
