@@ -1,7 +1,10 @@
 <?php
+/**  @var string the database table in which revisions are stored */
 
 class SpecialMobileHistory extends MobileSpecialPageFeed {
 	const LIMIT = 50;
+	const DB_REVISIONS_TABLE = 'revision';
+	protected $mode = 'beta';
 	/**  @var String|null timestamp to offset results from */
 	protected $offset;
 
@@ -24,7 +27,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$conds = array();
 		if ( $this->title ) {
 			$conds[ 'rev_page' ] = $this->title->getArticleID();
-		} elseif ( $this->offset ) {
+		}
+		if ( $this->offset ) {
+				$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
 				$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
 		}
 		return $conds;
@@ -85,8 +90,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	protected function doQuery() {
 		wfProfileIn( __METHOD__ );
-		$table = 'revision';
-		$dbr = wfGetDB( DB_SLAVE, $table );
+		$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
 		$conds = $this->getQueryConditions();
 		$options = array(
 			'ORDER BY' => 'rev_timestamp DESC'
@@ -94,7 +98,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 		$options['LIMIT'] = self::LIMIT + 1;
 
-		$tables = array( $table );
+		$tables = array( self::DB_REVISIONS_TABLE );
 		$fields = array( '*' );
 
 		wfProfileIn( __METHOD__ . '-query' );
@@ -174,7 +178,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				),
 			'class' => 'more',
 		);
-		return Html::element( 'a', $attrs, 'more' );
+		return Html::element( 'a', $attrs, $this->msg( 'pager-older-n', self::LIMIT ) );
 	}
 
 	protected function showHistory( ResultWrapper $res ) {
