@@ -16,6 +16,24 @@
       "revId": "33e9d58eb934d15533265f31423c34b34a7898c0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_23638da8",
+        "filename": "tests/javascripts/common/test_PageApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 574
+      },
+      "writtenOn": "2014-04-21T21:12:09Z",
+      "side": 1,
+      "message": "@Jdlrobson, well, IIRC, trailing commas are actually valid in ECMAScript 5. Setting `\"es3\": true` in the jshint config will warn you about this, but it\u0027ll also warn you about...well...any \"bad\" es3 you\u0027re using (which there definitely is in this repository).\n\nKrinkle recently helped me (and others, I think) get something get set up with jscs, a JavaScript *code style* checker. I don\u0027t know if the MobileFrontend team is interested in looking into that...but it does definitely have a `disallowTrailingComma` option :)\n\nSee also http://jshint.com/blog/jshint-3-plans/ and https://github.com/theopolisme/jquery-fullscreen/pull/9\n\nJust throwin\u0027 that out there.",
+      "parentUuid": "8e23439c_a0e796a6",
+      "revId": "33e9d58eb934d15533265f31423c34b34a7898c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
