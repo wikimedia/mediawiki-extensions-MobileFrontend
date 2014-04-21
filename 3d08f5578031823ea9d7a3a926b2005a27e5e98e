@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_0d19e2db",
+        "filename": "javascripts/modules/lastEdited/lastEdited.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-21T19:38:54Z",
+      "side": 1,
+      "message": "Because the \"top bar\" version has two links in it, while the original version still used on the main page consists of just a link.",
+      "parentUuid": "8e23439c_cd09aae1",
+      "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_8df732d0",
         "filename": "less/common/common.less",
         "patchSetId": 10
@@ -70,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_6dd616c9",
+        "filename": "less/common/ui.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-21T19:38:54Z",
+      "side": 1,
+      "message": "It has to be inside some ID selector, otherwise the anchor styles get overridden. The alternate would be to specify a:link, a:visited, etc.",
+      "parentUuid": "8e23439c_0da8c288",
+      "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_6d98567b",
         "filename": "less/tablet/common.less",
         "patchSetId": 10
@@ -81,6 +117,24 @@
       "writtenOn": "2014-04-21T19:15:27Z",
       "side": 1,
       "message": "Can we instead do .content with a comment that it\u0027s used on main page? I think it makes it more clear why we don\u0027t need @contentPaddingTablet.",
+      "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8d00523a",
+        "filename": "less/tablet/common.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-21T19:38:54Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "8e23439c_6d98567b",
       "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

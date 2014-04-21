@@ -16,6 +16,24 @@
       "revId": "e211f07540fc62c7d418b8bd218d336e7ed2c7dc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_6dfdf636",
+        "filename": "tests/browser/features/diff.feature",
+        "patchSetId": 10
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-21T19:38:54Z",
+      "side": 0,
+      "message": "ok",
+      "parentUuid": "8e23439c_6d9e165a",
+      "revId": "e211f07540fc62c7d418b8bd218d336e7ed2c7dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
