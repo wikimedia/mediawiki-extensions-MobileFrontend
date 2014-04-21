@@ -48,7 +48,7 @@ class MinervaTemplate extends BaseTemplate {
 				<ul class="footer-<?php echo $category; ?>">
 					<?php
 						foreach( $links as $link ) {
-							if ( isset( $this->data[$link] ) ) {
+							if ( isset( $this->data[$link] ) && $this->data[$link] !== '' ) {
 								echo Html::openElement( 'li', array( 'id' => "footer-{$category}-{$link}" ) );
 								$this->html( $link );
 								echo Html::closeElement( 'li' );
