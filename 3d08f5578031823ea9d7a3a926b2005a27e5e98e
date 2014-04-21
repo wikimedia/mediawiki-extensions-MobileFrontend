@@ -16,6 +16,74 @@
       "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_cd09aae1",
+        "filename": "javascripts/modules/lastEdited/lastEdited.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-21T19:15:27Z",
+      "side": 1,
+      "message": "Why do we create a new div instead of modifying the existing one? Not a big deal, just curious.",
+      "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8df732d0",
+        "filename": "less/common/common.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-21T19:15:27Z",
+      "side": 1,
+      "message": "So it\u0027s still different in beta?",
+      "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_0da8c288",
+        "filename": "less/common/ui.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-21T19:15:27Z",
+      "side": 1,
+      "message": "Does it have to be inside #content-wrapper? Do we have other top-bars?",
+      "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_6d98567b",
+        "filename": "less/tablet/common.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-21T19:15:27Z",
+      "side": 1,
+      "message": "Can we instead do .content with a comment that it\u0027s used on main page? I think it makes it more clear why we don\u0027t need @contentPaddingTablet.",
+      "revId": "3d08f5578031823ea9d7a3a926b2005a27e5e98e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

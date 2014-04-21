@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_6d9e165a",
+        "filename": "tests/browser/features/diff.feature",
+        "patchSetId": 10
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-21T19:15:27Z",
+      "side": 0,
+      "message": "This step doesn\u0027t seem to be used anywhere else, should be removed from common_article_steps.rb.",
+      "revId": "e211f07540fc62c7d418b8bd218d336e7ed2c7dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
