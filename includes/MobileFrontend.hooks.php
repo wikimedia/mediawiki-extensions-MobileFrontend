@@ -694,15 +694,23 @@ class MobileFrontendHooks {
 	public static function onUnitTestsList( &$files ) {
 		$dir = dirname( dirname( __FILE__ ) ) . '/tests';
 
-		$files[] = "$dir/ApiMobileViewTest.php";
-		$files[] = "$dir/ApiParseExtenderTest.php";
-		$files[] = "$dir/DeviceDetectionTest.php";
-		$files[] = "$dir/MobileContextTest.php";
-		$files[] = "$dir/MobileFormatterTest.php";
-		$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
-
-		// special page tests
-		$files[] = "$dir/specials/SpecialMobileDiffTest.php";
+		$callback = function( $file ) use ( $dir ) {
+			return "$dir/$file";
+		};
+		$files = array_merge( $files,
+			array_map( $callback,
+				array(
+					'ApiMobileViewTest.php',
+					'ApiParseExtenderTest.php',
+					'DeviceDetectionTest.php',
+					'MobileContextTest.php',
+					'MobileFormatterTest.php',
+					'modules/MFResourceLoaderModuleTest.php',
+					'specials/MobileSpecialPageTest.php',
+					'specials/SpecialMobileDiffTest.php',
+				)
+			)
+		);
 		return true;
 	}
 

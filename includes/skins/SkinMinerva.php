@@ -825,10 +825,13 @@ class SkinMinerva extends SkinTemplate {
 	protected function prepareMobileFooterLinks( $tpl ) {
 		$req = $this->getRequest();
 
-		$url = $this->mobileContext->getDesktopUrl( wfExpandUrl(
-			$req->appendQuery( 'mobileaction=toggle_view_desktop' )
-		) );
-		$url = htmlspecialchars( $url );
+		$url = $this->getOutput()->getProperty( 'desktopUrl' );
+		if ( $url ) {
+			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
+		} else {
+			$url = $req->appendQuery( 'mobileaction=toggle_view_desktop' );
+		}
+		$url = htmlspecialchars( $this->mobileContext->getDesktopUrl( wfExpandUrl( $url ) ) );
 
 		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
 		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();

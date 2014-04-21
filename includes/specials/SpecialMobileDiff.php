@@ -330,4 +330,17 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 		return false;
 	}
+
+	public function getDesktopUrl( $subPage ) {
+		$parts = explode( '...', $subPage );
+		if ( count( $parts ) > 1 ) {
+			$params = array( 'diff' => $parts[1], 'oldid' => $parts[0] );
+		} else {
+			$params = array( 'diff' => $parts[0] );
+		}
+		if ( $this->getRequest()->getVal( 'unhide' ) ) {
+			$params['unhide'] = 1;
+		}
+		return wfAppendQuery( wfScript(), $params );
+	}
 }
