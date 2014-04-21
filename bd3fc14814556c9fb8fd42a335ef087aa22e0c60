@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_46a7b7a4",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-21T23:27:43Z",
+      "side": 1,
+      "message": "Would prefer for this to have more visually balanced syntax:\nhijackLink(\n    $( \u0027#mw-mf-last-modified a\u0027 ).filter( function() {\n        return $( this ).children().length \u003d\u003d\u003d 0;\n    } ),\n    \u0027lastmodified-profile\u0027\n);\n\nOtherwise it\u0027s hard to keep track of what belongs to what.",
+      "revId": "bd3fc14814556c9fb8fd42a335ef087aa22e0c60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
