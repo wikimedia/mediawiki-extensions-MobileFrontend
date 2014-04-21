@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_a0e796a6",
+        "filename": "tests/javascripts/common/test_PageApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-21T16:52:56Z",
+      "side": 1,
+      "message": "Trailing comma - not sure why jshint didn\u0027t pick this up..",
+      "revId": "33e9d58eb934d15533265f31423c34b34a7898c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
