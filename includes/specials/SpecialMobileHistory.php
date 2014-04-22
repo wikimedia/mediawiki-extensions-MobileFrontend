@@ -4,7 +4,6 @@
 class SpecialMobileHistory extends MobileSpecialPageFeed {
 	const LIMIT = 50;
 	const DB_REVISIONS_TABLE = 'revision';
-	protected $mode = 'beta';
 	/**  @var String|null timestamp to offset results from */
 	protected $offset;
 
