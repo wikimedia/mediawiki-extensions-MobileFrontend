@@ -1,6 +1,9 @@
+/**
+ * @class mw.mobileFrontend.settings
+ * @singleton
+ */
 ( function( M, $ ) {
 
-/* @name M.settings */
 M.settings = ( function() {
 	var supportsLocalStorage;
 
@@ -35,7 +38,6 @@ M.settings = ( function() {
 	/**
 	 * Saves a user setting for a later browser settings via localStorage
 	 *
-	 * @name M.settings.saveUserSetting
 	 * @param {String} name The key to refer to this value
 	 * @param {String} value The value to store alongside the key
 	 * @param {Boolean} useCookieFallback Optional: When set this will use cookies when local storage not available.
@@ -52,7 +54,7 @@ M.settings = ( function() {
 	 *
 	 * @param {String} name The key to refer to this value
 	 * @param {Boolean} useCookieFallback Optional: When set this will use cookies when local storage not available.
-	 * @returns {String|False} Returns the associated value or False if nothing is found
+	 * @returns {String|Boolean} Returns the associated value or False if nothing is found
 	 */
 	function getUserSetting( name, useCookieFallback ) {
 		return supportsLocalStorage ? localStorage.getItem( name ) :

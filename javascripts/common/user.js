@@ -2,15 +2,14 @@
 	var user;
 
 	/**
-	 * @namespace
-	 * @name mw.user
-	 */
+	 * @class user
+	 * @singleton
+	*/
 	user = $.extend( {}, mw.user, {
 		/**
 		 * Find current users edit count
-		 * @name mw.user.getEditCount
-		 * @function
-		 * @returns {Integer} the edit count of the current user on the current wiki.
+		 * @method
+		 * @returns {Number} the edit count of the current user on the current wiki.
 		 */
 		getEditCount: function() {
 			return mw.config.get( 'wgUserEditCount' );

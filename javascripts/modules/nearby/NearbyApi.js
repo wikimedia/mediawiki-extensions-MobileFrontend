@@ -34,6 +34,10 @@
 		return distance;
 	}
 
+	/**
+	 * @class NearbyApi
+	 * @extends Api
+	 */
 	NearbyApi = Api.extend( {
 		_distanceMessage: function( d ) {
 			var msg = 'mobile-frontend-nearby-distance';
@@ -63,7 +67,7 @@
 		 * Renders an error in the existing view
 		 *
 		 * @param {Object} location: In form { latitude: 0, longitude: 2 }
-		 * @param {Integer} range: Number of meters to perform a geosearch for
+		 * @param {Number} range: Number of meters to perform a geosearch for
 		 * @param {String} exclude: Name of a title to exclude from the list of results
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */

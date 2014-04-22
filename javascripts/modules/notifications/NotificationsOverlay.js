@@ -4,6 +4,10 @@
 		api = M.require( 'api' ),
 		NotificationsOverlay;
 
+	/**
+	 * @class NotificationsOverlay
+	 * @extend OverlayNew
+	 */
 	NotificationsOverlay = Overlay.extend( {
 			active: false,
 			className: 'overlay notifications-overlay',

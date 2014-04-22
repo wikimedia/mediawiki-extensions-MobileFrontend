@@ -6,8 +6,7 @@ var Drawer = M.require( 'Drawer' ),
 	 * This creates the drawer at the bottom of the screen that appears when an anonymous
 	 * user tries to perform an action that requires being logged in. It presents the user
 	 * with options to log in or sign up for a new account.
-	 * @name CtaDrawer
-	 * @class
+	 * @class CtaDrawer
 	 * @extends Drawer
 	 */
 	CtaDrawer = Drawer.extend( {

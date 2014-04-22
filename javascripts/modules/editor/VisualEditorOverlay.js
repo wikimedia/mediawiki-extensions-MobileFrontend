@@ -4,6 +4,10 @@
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		VisualEditorOverlay;
 
+	/**
+	 * @class VisualEditorOverlay
+	 * @extends EditorOverlayBase
+	 */
 	VisualEditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
 			header: M.template.get( 'modules/editor/VisualEditorOverlayHeader' ),

@@ -42,7 +42,7 @@
 
 			// in form 37.783; -122.417 - take the first one
 			latLng = $( '.geo' ).eq( 0 ).text();
-			// Matches <number>;<optional space(s)}><number> where number can be negative or positive and a float or integer
+			// Matches <Number>;<optional space(s)}><Number> where Number can be negative or positive and a float or Number
 			latLng = latLng.match( /([\-]?[\-0-9]+[\.]?[0-9]*);[ ]*([\-]?[0-9]+[\.]?[0-9]*)/ );
 			if ( latLng ) {
 				lat = latLng[1];

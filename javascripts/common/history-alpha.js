@@ -1,3 +1,7 @@
+/**
+ * @class mw.mobileFrontend.history
+ * @singleton
+*/
 ( function( M, $ ) {
 	M.assertMode( [ 'alpha', 'app' ] );
 
@@ -9,7 +13,6 @@
 	 * Render a page in the DOM. Note this does not effect the users browser history. To do this use navigateToPage instead
 	 * Note you must provide your own failure callback
 	 *
-	 * @name M.history.updateQueryStringParameter
 	 * @param {String} url A relative or absolute url
 	 * @param {String} key The query string parameter key that should be updated
 	 * @param {String} value The new value of the query string parameter
@@ -69,9 +72,8 @@
 		 * By default this looks for the data attribute title (data-title).
 		 * Undefined when JavaScript History API not supported
 		 *
-		 * @name M.history.hijackLinks
-		 * @function
-		 * @param {jQuery.object} $container A container to hijack links
+		 * @method
+		 * @param {jQuery.Object} $container A container to hijack links
 		 * @param {Boolean} useFuzzyHijacking When set any link any links missing a data-title attribute are hijacked if they might be links
 		 * @param {Boolean} replaceState Replace current state instead of pushing
 		 * a new one.

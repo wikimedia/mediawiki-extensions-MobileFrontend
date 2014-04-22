@@ -4,7 +4,7 @@
 	 * Given a heading, toggle it and any of its children
 	 * emits a section-toggle event
 	 *
-	 * @param {jQuery object} $heading A heading belonging to a section
+	 * @param {jQuery.Object} $heading A heading belonging to a section
 	 */
 	function toggle( $heading ) {
 		var isCollapsed = $heading.is( '.openSection' );

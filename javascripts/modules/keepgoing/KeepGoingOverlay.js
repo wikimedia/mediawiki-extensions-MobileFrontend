@@ -1,7 +1,3 @@
-/**
- * This creates the overlay at the bottom of the screen that appears after a user
- * successfully completes their first edit. It encourages the user to edit another page.
- */
 ( function( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 
@@ -9,6 +5,12 @@
 		mobileWebCta = M.require( 'loggingSchemas/mobileWebCta' ),
 		KeepGoingOverlay;
 
+	/**
+	 * @class KeepGoingOverlay
+	 * @extends OverlayNew
+	 * This creates the overlay at the bottom of the screen that appears after a user
+	 * successfully completes their first edit. It encourages the user to edit another page.
+	 */
 	KeepGoingOverlay = Overlay.extend( {
 		defaults: {
 			// Step key: 1 = asking, 2 = explaining

@@ -7,6 +7,9 @@
 		device = 'unknown',
 		Page = M.require( 'Page' ),
 		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
+		/*
+		* @class PagePreviewOverlay
+		*/
 		PagePreviewOverlay = Overlay.extend( {
 			closeOnBack: true,
 			defaults: {

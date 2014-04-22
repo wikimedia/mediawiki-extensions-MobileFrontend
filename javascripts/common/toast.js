@@ -3,15 +3,13 @@
 
 	/**
 	 * @class
-	 * @name Toast
 	 * @extends Drawer
 	 */
 	Toast = Drawer.extend( {
 		className: 'toast position-fixed',
 		minHideDelay: 1000,
 		/**
-		 * @name Toast.prototype.show
-		 * @function
+		 * @method
 		 * @param {String} content
 		 * @param {String} className
 		 */

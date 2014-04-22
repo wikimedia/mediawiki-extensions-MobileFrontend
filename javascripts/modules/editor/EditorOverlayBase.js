@@ -6,6 +6,10 @@
 		toast = M.require( 'toast' ),
 		EditorOverlayBase;
 
+	/**
+	 * @extends OverlayNew
+	 * @class EditorOverlayBase
+	 */
 	EditorOverlayBase = OverlayNew.extend( {
 		defaults: {
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),

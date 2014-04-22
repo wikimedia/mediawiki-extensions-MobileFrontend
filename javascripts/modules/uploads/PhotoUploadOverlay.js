@@ -10,6 +10,10 @@
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', user.getName(), user ),
 		PhotoUploadOverlay;
 
+	/**
+	 * @class PhotoUploadOverlay
+	 * @extends OverlayNew
+	 */
 	PhotoUploadOverlay = OverlayNew.extend( {
 		defaults: {
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),

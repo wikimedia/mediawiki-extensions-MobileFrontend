@@ -1,6 +1,9 @@
 MW_INSTALL_PATH ?= ../..
 MEDIAWIKI_LOAD_URL ?= http://localhost/w/load.php
 
+gems:
+	bundle install
+
 clean:
 	rm -Rf scripts/remotes
 	rm -Rf docs
@@ -26,11 +29,11 @@ kss: nodecheck
 	@node_modules/.bin/kss-node less/ docs/styleguide/ --css $(KSS_MF_RL_TMP) -t styleguide-template
 	@rm $(KSS_MF_RL_TMP)
 
-jsdoc: nodecheck
+jsduck: gems
 	rm -rf docs/js
-	@node_modules/.bin/jsdoc -r --verbose javascripts/common/ javascripts/common/README.md -d docs/js/
+	jsduck javascripts/ --output docs/js/ --external=jQuery.Object,Hogan.Template,jQuery.Deferred --exclude=javascripts/external --ignore-global
 
-docs: kss jsdoc
+docs: kss jsduck
 
 nodecheck:
 	@scripts/nodecheck.sh

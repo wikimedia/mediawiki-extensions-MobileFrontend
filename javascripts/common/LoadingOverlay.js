@@ -2,8 +2,7 @@
 	var Overlay = M.require( 'Overlay' ), LoadingOverlay;
 
 	/**
-	 * @name LoadingOverlay
-	 * @class
+	 * @class LoadingOverlay
 	 * @extends Overlay
 	 */
 	LoadingOverlay = Overlay.extend( {

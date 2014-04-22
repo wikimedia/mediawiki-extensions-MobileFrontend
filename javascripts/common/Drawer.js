@@ -5,8 +5,7 @@ var View = M.require( 'View' ),
 
 	/**
 	 * A {@link View} that pops up from the bottom of the screen.
-	 * @name Drawer
-	 * @class
+	 * @class Drawer
 	 * @extends View
 	 */
 	Drawer = View.extend( {
@@ -32,8 +31,7 @@ var View = M.require( 'View' ),
 		},
 
 		/**
-		 * @name Drawer.prototype.show
-		 * @function
+		 * @method
 		 */
 		show: function() {
 			var self = this;
@@ -59,8 +57,7 @@ var View = M.require( 'View' ),
 		},
 
 		/**
-		 * @name Drawer.prototype.hide
-		 * @function
+		 * @method
 		 */
 		hide: function() {
 			var self = this;
@@ -76,16 +73,14 @@ var View = M.require( 'View' ),
 		},
 
 		/**
-		 * @name Drawer.prototype.isVisible
-		 * @function
+		 * @method
 		 */
 		isVisible: function() {
 			return this.$el.hasClass( 'visible' );
 		},
 
 		/**
-		 * @name Drawer.prototype.toggle
-		 * @function
+		 * @method
 		 */
 		toggle: function() {
 			if ( this.isVisible() ) {

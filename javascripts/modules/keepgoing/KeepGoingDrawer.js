@@ -1,8 +1,3 @@
-/**
- * This creates the drawer at the bottom of the screen that appears when an anonymous
- * user tries to perform an action that requires being logged in. It presents the user
- * with options to log in or sign up for a new account.
- */
 ( function( M ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 
@@ -11,6 +6,13 @@
 		KeepGoingDrawer,
 		api = M.require( 'api' );
 
+	/**
+	 * @class KeepGoingDrawer
+	 * @extends Drawer
+	 * This creates the drawer at the bottom of the screen that appears when an anonymous
+	 * user tries to perform an action that requires being logged in. It presents the user
+	 * with options to log in or sign up for a new account.
+	 */
 	KeepGoingDrawer = Drawer.extend( {
 		locked: true,
 		defaults: {

@@ -19,6 +19,10 @@
 		return sizeBuckets[i];
 	}
 
+	/**
+	 * @class ImageApi
+	 * @extends Api
+	 */
 	ImageApi = Api.extend( {
 		initialize: function() {
 			this._super();
@@ -55,6 +59,10 @@
 
 	api = new ImageApi();
 
+	/**
+	 * @class ImageOverlay
+	 * @extends Overlay
+	 */
 	ImageOverlay = Overlay.extend( {
 		className: 'mw-mf-overlay media-viewer',
 		template: M.template.get( 'modules/ImageOverlay' ),

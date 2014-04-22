@@ -19,21 +19,22 @@
 	}
 
 	/**
+	 * @class PhotoUploaderButton
+	 * @extends View
 	 * PhotoUploaderButton is a component for uploading images to the wiki.
 	 *
-	 * @example
-	 * <code>
-	 * var photoUploaderButton = new PhotoUploaderButton( {
-	 *     buttonCaption: 'Add a photo',
-	 * } );
-	 * photoUploaderButton.
-	 *     insertAfter( 'h1' ).
-	 *     on( 'upload', function( fileName, url ) {
-	 *         $( '.someImage' ).attr( 'src', url );
+	 *     @example
+	 *     <code>
+	 *     var photoUploaderButton = new PhotoUploaderButton( {
+	 *         buttonCaption: 'Add a photo',
 	 *     } );
-	 * </code>
+	 *     photoUploaderButton.
+	 *         insertAfter( 'h1' ).
+	 *         on( 'upload', function( fileName, url ) {
+	 *             $( '.someImage' ).attr( 'src', url );
+	 *         } );
+	 *     </code>
 	 *
-	 * @constructor
 	 * @param {Object} options Uploader options.
 	 * @param {string} options.buttonCaption Caption for the upload button.
 	 * @param {boolean} options.insertInPage If the image should be prepended
@@ -42,35 +43,6 @@
 	 * belongs (image name will be based on this) and to which it should be
 	 * prepended (if options.insertInPage is true).
 	 * @param {string} options.funnel Funnel for EventLogging.
-	 * @fires PhotoUploader#start
-	 * @fires PhotoUploader#success
-	 * @fires PhotoUploader#error
-	 * @fires PhotoUploader#cancel
-	 */
-	/**
-	 * Triggered when image upload starts.
-	 *
-	 * @event PhotoUploader#start
-	 */
-	/**
-	 * Triggered when image upload is finished successfully.
-	 *
-	 * @event PhotoUploader#success
-	 * @property {Object} data Uploaded image data.
-	 * @property {string} data.fileName Name of the uploaded image.
-	 * @property {string} data.description Name of the uploaded image.
-	 * @property {string} data.url URL to the uploaded image (can be a
-	 * local data URL).
-	 */
-	/**
-	 * Triggered when image upload fails.
-	 *
-	 * @event PhotoUploader#error
-	 */
-	/**
-	 * Triggered when image upload is cancelled.
-	 *
-	 * @event PhotoUploader#cancel
 	 */
 	PhotoUploaderButton = View.extend( {
 		template: M.template.get( 'uploads/PhotoUploaderButton' ),

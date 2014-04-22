@@ -1,6 +1,10 @@
 ( function( M, $ ) {
-
-	var Api = M.require( 'api' ).Api, EditorApi = Api.extend( {
+	var Api = M.require( 'api' ).Api, EditorApi;
+	/**
+	 * @class EditorApi
+	 * @extends Api
+	 */
+	EditorApi = Api.extend( {
 
 		initialize: function( options ) {
 			this._super( options );
@@ -80,10 +84,11 @@
 		/**
 		 * Save the new content of the section, previously set using #setContent.
 		 *
-		 * @param [options.summary] String Optional summary for the edit.
-		 * @param [options.captchaId] String If CAPTCHA was requested, ID of the
+		 * @param {Object} options
+		 *      [options.summary] String Optional summary for the edit.
+		 *     [options.captchaId] String If CAPTCHA was requested, ID of the
 		 * captcha.
-		 * @param [options.captchaWord] String If CAPTCHA was requested, term
+		 *     [options.captchaWord] String If CAPTCHA was requested, term
 		 * displayed in the CAPTCHA.
 		 * @return jQuery.Deferred On failure callback is passed an object with
 		 * `type` and `details` properties. `type` is a string describing the type
