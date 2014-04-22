@@ -89,7 +89,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	private function makeLangListItem( $langObject ) {
 		$html = Html::openElement( 'li' ) .
 			Html::element( 'a', array(
-				'href' => $langObject['url'],
+				'href' => MobileContext::singleton()->getMobileUrl( $langObject['url'] ),
 				'hreflang' => $langObject['lang'],
 				'lang' => $langObject['lang'],
 				'title' => isset( $langObject['*'] ) ? $langObject['*'] : $langObject['langname']
