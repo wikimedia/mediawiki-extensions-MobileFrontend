@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_a0abfd18",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2014-04-22T22:29:35Z",
+      "side": 1,
+      "message": "$req is defined and then never used?!",
+      "revId": "aadf2a7da51bf6fc0bdbc2c1224b39afaf67c3c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
