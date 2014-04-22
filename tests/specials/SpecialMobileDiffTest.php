@@ -77,6 +77,8 @@ class SpecialMobileDiffTest extends MediaWikiTestCase {
 			array( array( 'diff' => 'prev', 'oldid' => 201 ), '' ),
 			// weird edge case comparing identical things
 			array( array( 'oldid' => 101, 'diff' => 101 ), 'Special:MobileDiff/101...101' ),
+			// https://bugzilla.wikimedia.org/63999
+			array( array( 'oldid' => 'prev', 'diff' => 5 ), 'Special:MobileDiff/5' ),
 		);
 	}
 
