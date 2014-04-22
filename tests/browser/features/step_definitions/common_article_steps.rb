@@ -85,10 +85,6 @@ Then(/^The text of the first heading is "(.*)"$/) do |title|
   end
 end
 
-When(/^I click on the view edit history link$/) do
-  on(ArticlePage).edit_history_link_element.when_present.click
-end
-
 When(/^I click on the history link in the last modified bar$/) do
   on(ArticlePage).last_modified_bar_history_link_element.when_present.click
 end

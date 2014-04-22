@@ -72,15 +72,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		return $tpl;
 	}
 
-	protected function getHistoryLink( Title $title ) {
-		$link = parent::getHistoryLink( $title );
-		if ( !$title->isMainPage() ) {
-			$link['class'] = 'top-bar truncated-text';
-		}
-		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
-		return $link;
-	}
-
 	public function getSkinConfigVariables() {
 		$vars = parent::getSkinConfigVariables();
 		// Kill this when we fix the functionality in PageApi.js

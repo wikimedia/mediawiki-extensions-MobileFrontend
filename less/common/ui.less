@@ -18,6 +18,28 @@ body {
 
 #content_wrapper {
 	margin: 0 -@headerMargin;
+
+	.top-bar {
+		background-color: #F3F3F3;
+		padding: 5px @contentMargin;
+		display: block;
+		color: #666;
+		a {
+			color: #666;
+			// If browser supports
+			&:nth-child(2) {
+				font-weight: bold;
+			}
+		}
+
+		&.active {
+			background-color: #00AF8B;
+			color: #fff;
+			a {
+				color: #fff;
+			}
+		}
+	}
 }
 
 .header {

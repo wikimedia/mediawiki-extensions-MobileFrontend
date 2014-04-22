@@ -1,7 +1,5 @@
 ( function( M, $ ) {
 
-M.assertMode( [ 'stable' ] );
-var module = ( function() {
 	var time = M.require( 'modules/lastEdited/time' );
 
 	/**
@@ -14,34 +12,46 @@ var module = ( function() {
 	 */
 	function init() {
 		var $lastModified = $( '#mw-mf-last-modified' ),
+			historyUrl = $lastModified.attr( 'href' ),
 			ts = $lastModified.data( 'timestamp' ),
+			username = $lastModified.data( 'user-name' ) || false,
+			gender = $lastModified.data( 'user-gender' ),
 			keys = {
-				seconds: 'mobile-frontend-last-modified-seconds',
-				minutes: 'mobile-frontend-last-modified-minutes',
-				hours: 'mobile-frontend-last-modified-hours',
-				days: 'mobile-frontend-last-modified-days',
-				months: 'mobile-frontend-last-modified-months',
-				years: 'mobile-frontend-last-modified-years'
+				seconds: 'mobile-frontend-last-modified-with-user-seconds',
+				minutes: 'mobile-frontend-last-modified-with-user-minutes',
+				hours: 'mobile-frontend-last-modified-with-user-hours',
+				days: 'mobile-frontend-last-modified-with-user-days',
+				months: 'mobile-frontend-last-modified-with-user-months',
+				years: 'mobile-frontend-last-modified-with-user-years'
 			},
-			message, delta;
+			delta, args = [];
 
 		if ( ts ) {
 			delta = time.getTimeAgoDelta( parseInt( ts, 10 ) );
 			if ( time.isNow( delta ) ) {
-				message = mw.msg( 'mobile-frontend-last-modified-just-now' );
+				args = args.concat( [ 'mobile-frontend-last-modified-with-user-just-now', gender, username ] );
 			} else {
-				message = mw.msg( keys[ delta.unit ], mw.language.convertNumber( delta.value ) );
+				args = args.concat( [ keys[ delta.unit ], gender, username,
+						mw.language.convertNumber( delta.value ) ] );
 			}
-			$lastModified.text( message );
+			if ( time.isRecent( delta ) ) {
+				$lastModified.addClass( 'active' );
+			}
+
+			args = args.concat( [ historyUrl,
+					// Abuse PLURAL support to determine if the user is anonymous or not
+					mw.language.convertNumber( username ? 1 : 0 ),
+					// I'll abuse of PLURAL support means we have to pass the relative URL rather than construct it from a wikilink
+					username ? mw.util.getUrl( 'Special:UserProfile/' + username ) : '' ] );
+
+			$( '<div>' ).attr( 'id', 'mw-mf-last-modified' ).
+				attr( 'class', $lastModified.attr( 'class' ) ).
+				html( mw.message.apply( this, args ).parse() ).
+				insertBefore( $lastModified );
+			$lastModified.remove();
 		}
 	}
 	M.on( 'page-loaded', init );
-
-	return {
-		init: init
-	};
-}() );
-
-M.define( 'last-modified', module );
+	M.on( 'header-loaded', init );
 
 }( mw.mobileFrontend, jQuery ) );
