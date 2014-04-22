@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_654cd743",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-22T19:54:50Z",
+      "side": 0,
+      "message": "Should probably still do this for non-alpha users.",
+      "revId": "227fafbcf00e889952d67ee2d306118eed815c3a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_455d5bef",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-22T19:54:50Z",
+      "side": 0,
+      "message": "Can you fix https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d64257 in process?",
+      "revId": "227fafbcf00e889952d67ee2d306118eed815c3a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
