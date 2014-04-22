@@ -208,4 +208,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				$this->msg( 'mobile-frontend-history-no-results' ) ) );
 		}
 	}
+
+	public function getDesktopUrl( $subPage ) {
+		$params = array( 'title' => $subPage, 'action' => 'history' );
+		$offset = $this->getRequest()->getVal( 'offset' );
+		if ( $offset ) {
+			$params['offset'] = $offset;
+		}
+		return wfAppendQuery( wfScript(), $params );
+	}
 }

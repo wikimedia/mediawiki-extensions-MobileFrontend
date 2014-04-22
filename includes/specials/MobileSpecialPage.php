@@ -18,6 +18,7 @@ class MobileSpecialPage extends SpecialPage {
 
 	public function execute( $subPage ) {
 		$ctx = MobileContext::singleton();
+		$this->getOutput()->setProperty( 'desktopUrl', $this->getDesktopUrl( $subPage ) );
 		if ( !$ctx->shouldDisplayMobileView() && !$this->hasDesktopVersion ) {
 			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' ) );
 		} elseif ( $this->mode !== 'stable' ) {
@@ -85,5 +86,14 @@ class MobileSpecialPage extends SpecialPage {
 	protected function showPageNotFound() {
 		wfHttpError( 404, $this->msg( 'mobile-frontend-generic-404-title' )->text(),
 			$this->msg( 'mobile-frontend-generic-404-desc' )->text() );
+	}
+
+	/**
+	 * When overridden in a descendant class, returns desktop URL for this special page
+	 * @param string $subPage Subpage passed in URL
+	 * @return string|null Desktop URL for this special page or null if a standard one should be used
+	 */
+	public function getDesktopUrl( $subPage ) {
+		return null;
 	}
 }
