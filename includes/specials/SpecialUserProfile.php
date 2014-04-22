@@ -16,16 +16,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 * @var MobileUserInfo
 	 */
 	private $userInfo;
-	/**
-	 * The user's description of himself or herself
-	 * @var String
-	 */
-	public $userDescription;
-	/**
-	 * Whether or not the page is editable by the current user
-	 * @var Boolean
-	 */
-	private $editable = false;
 
 	public function __construct() {
 		parent::__construct( 'UserProfile' );
@@ -71,35 +61,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 			Html::closeElement( 'div' );
 		wfProfileOut( __METHOD__ );
 		return $img;
-	}
-
-	/**
-	 * Returns HTML to show the user's description as well as a hidden form for editing
-	 * the description.
-	 *
-	 * @return String HTML
-	 *
-	 */
-	protected function getUserSummary() {
-		$out = '';
-		if ( $this->editable || $this->userDescription ) {
-			$out = Html::openElement( 'div', array( 'class' => 'user-description-container' ) );
-				if ( $this->userDescription ) {
-					$out .= Html::openElement( 'p', array( 'class' => 'user-description' ) );
-					// FIXME: Use quotation-marks message
-					// NOTE: This outputs WikiText as raw text (not parsed). This is on
-					// purpose, but may be changed in the future.
-					$out .= htmlspecialchars( $this->userDescription );
-					$out .= Html::closeElement( 'p' );
-				} elseif ( $this->editable ) {
-					$out .= Html::openElement( 'p', array( 'class' => 'user-description-placeholder' ) );
-					$out .= $this->msg( 'mobile-frontend-profile-description-placeholder',
-						$this->targetUser );
-					$out .= Html::closeElement( 'p' );
-				}
-			$out .= Html::closeElement( 'div' );
-		}
-		return $out;
 	}
 
 	/**

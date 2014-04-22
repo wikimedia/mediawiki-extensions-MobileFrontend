@@ -25,49 +25,6 @@
 		font-size: 0.9em;
 	}
 
-	.user-description-container {
-		padding: 0 (@contentMargin * 2) 1.5em;
-		position: relative;
-
-		.user-description-placeholder,
-		.user-description {
-			display: inline;
-			font-family: @fontFamilyHeading;
-			font-style: italic;
-			font-size: 1.2em;
-			line-height: @contentLineHeight;
-		}
-
-		.edit-button {
-			display: inline-block;
-			vertical-align: middle;
-			background: url(images/profile/edit.png) 50% 30% no-repeat;
-			.background-size( 16px, auto );
-			text-indent: 9999px;
-			width: 32px;
-			height: 32px;
-			cursor: pointer;
-		}
-
-		.editor {
-			text-align: right;
-		}
-
-		textarea {
-			.box-sizing( border-box );
-			width: 100%;
-			height: 120px;
-			margin-bottom: 1em;
-		}
-
-		.character-counter {
-			margin-right: 1em;
-			&.warning {
-				color: @redBase;
-			}
-		}
-	}
-
 	h2 {
 		color: @grayLight;
 		text-transform: uppercase;
