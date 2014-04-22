@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_01c64971",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-22T02:04:28Z",
+      "side": 1,
+      "message": "Shouldn\u0027t the param be named something like $sub or $subPage instead of $par?",
+      "revId": "42eb49fedf48f5806ebc0f5a51100bfbdb9bd930",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_a1d43518",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-22T02:04:28Z",
+      "side": 1,
+      "message": "Needs to handle existing query string parameters like offset, otherwise they will be lost when you switch.",
+      "revId": "42eb49fedf48f5806ebc0f5a51100bfbdb9bd930",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
