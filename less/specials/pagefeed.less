@@ -32,11 +32,13 @@
 }
 
 .mw-mf-watchlist-selector {
+	margin-bottom: -1px;
 	li {
 		display: inline-block;
 		border-left: 1px solid #e2e2e2;
 		width: 25%;
 		margin: 0 0 0 -1px;
+		border-bottom: none;
 
 		&.selected {
 			a {
@@ -76,13 +78,15 @@
 .mw-mf-user {
 	padding: 1px 0 0 20px;
 	color: @grayMediumDark;
-	background: url(images/user.png) left center no-repeat;
+	background-position: left center;
+	background-repeat: no-repeat;
+	.background-image-svg-quick("images/userNormal");
 	.background-size(16px, auto);
 }
 
 .mw-mf-anon {
-	color: #dc2e16;
-	background-image: url(images/user-anon.png);
+	color: inherit;
+	.background-image-svg-quick("images/userAnonymous");
 }
 
 a.more {
@@ -105,24 +109,4 @@ a.more {
 	font-size: .9em;
 	font-weight: bold;
 	padding: 0 6px 1px;
-}
-
-// FIXME: move when new watchlist in stable
-.beta, .alpha {
-	.mw-mf-watchlist-selector {
-		margin-bottom: -1px;
-
-		li {
-			border-bottom: none;
-		}
-	}
-
-	.mw-mf-user {
-		.background-image-svg-quick("images/userNormal");
-	}
-
-	.mw-mf-anon {
-		color: inherit;
-		.background-image-svg-quick("images/userAnonymous");
-	}
 }
