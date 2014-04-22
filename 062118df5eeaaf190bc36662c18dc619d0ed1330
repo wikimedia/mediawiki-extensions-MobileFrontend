@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_0a041216",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 164
+      },
+      "writtenOn": "2014-04-22T18:31:59Z",
+      "side": 1,
+      "message": "This bug might not be the right one.",
+      "revId": "062118df5eeaaf190bc36662c18dc619d0ed1330",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
