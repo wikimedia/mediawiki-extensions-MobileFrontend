@@ -20,9 +20,11 @@
 			this.initializeSwitcher();
 		},
 		destroyTarget: function () {
-			this.target.destroy();
-			this.target = null;
-			this.docToSave = null;
+			if ( this.target ) {
+				this.target.destroy();
+				this.target = null;
+				this.docToSave = null;
+			}
 		},
 		show: function() {
 			this._super();
