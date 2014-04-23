@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_71db7325",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-23T23:01:49Z",
+      "side": 1,
+      "message": "Adding this straight to stable despite not always being needed makes me extremely nervous.\n\nI get no confidence from this library that it has ever been run on a mobile device so I have no idea if it\u0027s going to explode the upload workflow on certain phones.\n\nI really would suggest creating a clone of the module that pulls in the exif code so we can get a little more confidence about it.",
+      "revId": "65b3a81c354ef0eb9ef8e3fce0aecc858886fa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_31aa9b69",
+        "filename": "javascripts/externals/exif-js/binaryajax.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-23T23:01:49Z",
+      "side": 1,
+      "message": "Where is the license..?\nAny work done in this extension defaults to the GNU General Public Licence 2.0 or later\n\nI would suggest copying the license header above this to be safe.\n\nSee https://github.com/jseidelin/exif-js/blob/master/LICENSE.md\nWe are not meeting the license as we are not copying over \"The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\"",
+      "revId": "65b3a81c354ef0eb9ef8e3fce0aecc858886fa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_f1ce635e",
+        "filename": "javascripts/externals/exif-js/exif.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-23T23:01:49Z",
+      "side": 1,
+      "message": "See license comment in binaryajax. Same applies here.",
+      "revId": "65b3a81c354ef0eb9ef8e3fce0aecc858886fa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_11af9f79",
+        "filename": "javascripts/externals/exif-js/exif.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-23T23:01:49Z",
+      "side": 1,
+      "message": "License...?",
+      "revId": "65b3a81c354ef0eb9ef8e3fce0aecc858886fa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
