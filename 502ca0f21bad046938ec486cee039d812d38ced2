@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_a4ec2a8f",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-23T18:35:44Z",
+      "side": 1,
+      "message": "This should at least be part of MobileSpecialPages if not in core. Allowing a $param to contain whitespace on either side seems broken to me.",
+      "revId": "502ca0f21bad046938ec486cee039d812d38ced2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
