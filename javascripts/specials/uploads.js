@@ -183,7 +183,7 @@ var
 			$container = $( '.ctaUploadPhoto' );
 
 			if ( user.getEditCount() === 0 ) {
-				$a = $( '<a class="button photo">' ).
+				$a = $( '<a class="button photo mw-ui-button mw-ui-progressive">' ).
 					text( mw.msg( 'mobile-frontend-photo-upload-generic' ) ).
 					attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $container );
 				// FIXME: This is needed so the camera shows. Eww.
