@@ -2,6 +2,32 @@
 @import "minerva.variables.less";
 @import "minerva.mixins.less";
 
+// Reusable components
+//
+// Styleguide 6.
+
+// Cloaked element
+//
+// Use this for elements that are clickable but not visible
+// Examples: A file input who's parent is styled with an icon
+// A shield that covers the entire screen and is made more opaque
+// under a different circumstance
+//
+// Markup:
+// <div style="width:50px;height:50px;border: solid 1px red">
+// <input type="file" class="cloaked-element">
+// </div>
+//
+// Styleguide 6.1.
+.cloaked-element {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 // Deprecated rules
 .stable {
 	// this makes sure mobile browsers don't zoom on inputs (minimum resulting

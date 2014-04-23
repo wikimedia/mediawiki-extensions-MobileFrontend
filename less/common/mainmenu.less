@@ -25,6 +25,8 @@
 	.box-sizing( border-box );
 }
 
+// Transparent shield hidden by default
+.transparent-shield,
 // Kept for caching reasons
 #mw-mf-page-left,
 .navigation-drawer {
@@ -184,12 +186,9 @@ body.navigation-enabled {
 	}
 
 	.transparent-shield {
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		position: absolute;
+		display: block;
 		background: @semiTransparent;
+		opacity: 1;
 	}
 }
 
