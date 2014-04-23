@@ -431,8 +431,6 @@
 		supportsPositionFixed: supportsPositionFixed,
 		prettyEncodeTitle: prettyEncodeTitle,
 		query: deParam( qs ),
-		// FIXME: Replace all instances of M.template with mw.template
-		template: mw.template,
 		unlockViewport: unlockViewport,
 		/**
 		 * @type {Router}
