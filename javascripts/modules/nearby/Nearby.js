@@ -2,7 +2,7 @@
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		View = M.require( 'View' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
-		LoadingOverlay = M.require( 'LoadingOverlay' ),
+		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		loader = new LoadingOverlay(),
 		Nearby;
 

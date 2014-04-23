@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-	var Overlay = M.require( 'Overlay' ), ContentOverlay;
+	var Overlay = M.require( 'OverlayNew' ), ContentOverlay;
 
 	/**
 	 * An {@link Overlay} that points at an element on the page.
@@ -8,7 +8,7 @@
 	 * @extends Overlay
 	 */
 	ContentOverlay = Overlay.extend( {
-		className: 'content-overlay',
+		className: 'overlay content-overlay',
 		/**
 		 * @type Boolean
 		 */
