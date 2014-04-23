@@ -295,13 +295,6 @@ class MobileContext extends ContextSource {
 	private function shouldDisplayMobileViewInternal() {
 		global $wgMobileUrlTemplate, $wgMFMobileHeader;
 
-		$ctx = MobileContext::singleton();
-		$action = $this->getAction();
-
-		if ( $action === 'history' && !$ctx->isBetaGroupMember() ) {
-			return false;
-		}
-
 		// May be overridden programmatically
 		if ( $this->forceMobileView ) {
 			return true;
@@ -401,14 +394,6 @@ class MobileContext extends ContextSource {
 		}
 
 		return $this->mobileAction;
-	}
-
-	public function getAction() {
-		if ( is_null( $this->action ) ) {
-			$this->action = $this->getRequest()->getText( 'action' );
-		}
-
-		return $this->action;
 	}
 
 	public function getUseFormat() {

@@ -294,10 +294,8 @@ class MobileContextTest extends MediaWikiTestCase {
 			array( true, 'no', array() ),
 			array( false, 'yes', array( 'useformat' => 'desktop' ) ),
 			array( true, null, array( 'useformat' => 'mobile-wap' ) ),
-			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'history' ) ),
 			array( false, null, array( 'useformat' => 'desktop' ) ),
 			array( true, null, array( 'useformat' => 'mobile' ) ),
-			array( false, null, array( 'useformat' => 'mobile', 'action' => 'history' ) ),
 		);
 	}
 
@@ -319,27 +317,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		return array(
 			array( null ),
 			array( 'view_normal_site' ),
-		);
-	}
-
-	/**
-	 * @dataProvider getActionProvider
-	 */
-	public function testGetAction( $action = null ) {
-		if ( is_null( $action ) ) {
-			$assert = '';
-		} else {
-			MobileContext::singleton()->getRequest()->setVal( 'action', $action );
-			$assert = $action;
-		}
-
-		$this->assertEquals( $assert, MobileContext::singleton()->getAction() );
-	}
-
-	public function getActionProvider() {
-		return array(
-			array( null ),
-			array( 'edit' ),
 		);
 	}
 
