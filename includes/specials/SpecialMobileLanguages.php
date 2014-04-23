@@ -110,14 +110,14 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		}
 
 		$this->title = Title::newFromText( $pagename );
-		$titlename = $this->title->getPrefixedText();
 
 		$output = $this->getOutput();
 		$output->setPageTitle( $this->msg( 'mobile-frontend-languages-header' )->text() );
 
 		$html = Html::openElement( 'div', array( 'class' => 'content' ) );
 
-		if ( $this->title->exists() ) {
+		if ( $this->title && $this->title->exists() ) {
+			$titlename = $this->title->getPrefixedText();
 			$languages = $this->getLanguages();
 			$variants = $this->getLanguageVariants();
 			$languagesCount = count( $languages );
@@ -167,7 +167,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 			}
 		} else {
 			$html .= Html::element( 'p', array(),
-				$this->msg( 'mobile-frontend-languages-nonexistent-title' )->params( $titlename )->text() );
+				$this->msg( 'mobile-frontend-languages-nonexistent-title' )->params( $pagename )->text() );
 		}
 
 		$html .= Html::closeElement( 'div' );
