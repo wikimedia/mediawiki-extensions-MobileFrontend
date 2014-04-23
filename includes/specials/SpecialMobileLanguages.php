@@ -102,11 +102,12 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	public function executeWhenAvailable( $pagename ) {
 		wfProfileIn( __METHOD__ );
 
-		if ( !$pagename ) {
+		if ( $pagename === '' ) {
 			wfHttpError( 404, $this->msg( 'mobile-frontend-languages-404-title' )->text(),
 				$this->msg( 'mobile-frontend-languages-404-desc' )->text()
 			);
-			return false;
+			wfProfileOut( __METHOD__ );
+			return;
 		}
 
 		$this->title = Title::newFromText( $pagename );
