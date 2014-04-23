@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_4456760a",
+        "filename": "less/common/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-23T17:38:34Z",
+      "side": 1,
+      "message": "typo. opaque.",
+      "revId": "569cfbfea8558a8f40bc88e90f312aa786ecc587",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
