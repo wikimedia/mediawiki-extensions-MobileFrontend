@@ -1,25 +1,12 @@
 /*jshint unused:vars */
 ( function( M, $ ) {
 
-var View = M.require( 'View' ),
-	Overlay;
-
+	var View = M.require( 'View' ), Overlay;
 	/**
 	 * @class Overlay
 	 * @extends View
 	 */
 	Overlay = View.extend( {
-		defaults: {
-			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' )
-		},
-		/**
-		 * @type {Hogan.Template}
-		 */
-		template: M.template.get( 'overlay' ),
-		/**
-		 * @type {String}
-		 */
-		className: 'mw-mf-overlay',
 		/**
 		 * FIXME: remove when OverlayManager used everywhere
 		 * @type {Boolean}
@@ -28,24 +15,31 @@ var View = M.require( 'View' ),
 		/**
 		 * @type {Boolean}
 		 */
-		closeOnContentTap: false,
-		/**
-		 * @type {Boolean}
-		 */
 		fullScreen: true,
+
 		/**
 		 * use '#mw-mf-viewport' rather than 'body' - for some reasons this has
 		 * odd consequences on Opera Mobile (see bug 52361)
 		 * @type {String|jQuery.Object}
 		 */
 		appendTo: '#mw-mf-viewport',
-		initialize: function( options ) {
-			options = options || {};
-			this.parent = options.parent;
-			this.isOpened = false;
-			this._super( options );
+
+		/**
+		 * @type {String}
+		 */
+		className: 'overlay',
+		template: M.template.get( 'OverlayNew' ),
+		defaults: {
+			headerButtonsListClassName: 'v-border bottom-border',
+			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
+			fixedHeader: true
 		},
-		postRender: function() {
+		/**
+		 * @type {Boolean}
+		 */
+		closeOnContentTap: false,
+
+		postRender: function( options ) {
 			var self = this;
 			// FIXME change when micro.tap.js in stable
 			this.$( '.cancel, .confirm' ).on( M.tapEvent( 'click' ), function( ev ) {
@@ -62,6 +56,8 @@ var View = M.require( 'View' ),
 			this.$el.on( M.tapEvent( 'click' ), function( ev ) {
 				ev.stopPropagation();
 			} );
+
+			this._fixIosHeader( 'textarea, input' );
 		},
 
 		// FIXME: remove when OverlayManager used everywhere
@@ -82,13 +78,6 @@ var View = M.require( 'View' ),
 			// FIXME: remove when OverlayManager used everywhere
 			if ( this.closeOnBack ) {
 				this._hideOnRoute();
-			}
-
-			// FIXME: prevent zooming within overlays but don't break the rendering!
-			// M.lockViewport();
-			// FIXME: remove when OverlayManager used everywhere
-			if ( this.parent ) {
-				this.parent.hide( true );
 			}
 
 			this.$el.appendTo( this.appendTo );
@@ -136,9 +125,48 @@ var View = M.require( 'View' ),
 			this.emit( 'hide' );
 
 			return true;
+		},
+
+		_fixIosHeader: function( el ) {
+			var $header = this.$( '.overlay-header-container' ), $window = $( window );
+			// This is used to avoid position: fixed weirdness in mobile Safari when
+			// the keyboard is visible
+			if ( ( /ipad|iphone/i ).test( navigator.userAgent ) ) {
+				this.$( el ).
+					on( 'focus', function() {
+						$header.removeClass( 'position-fixed' );
+						// don't show fixed header on iPhone, it causes bug 62120
+						// (also, there is a Done button on the keyboard anyway)
+						if ( M.isWideScreen() ) {
+							$header.css( 'top', $window.scrollTop() );
+							$window.on( 'scroll.fixIosHeader', function() {
+								$header.css( 'top', $window.scrollTop() ).addClass( 'visible' );
+							} );
+							$window.on( 'touchmove.fixIosHeader', function() {
+								// don't hide header if we're at the top
+								if ( $window.scrollTop() > 0 ) {
+									$header.removeClass( 'visible' );
+								}
+							} );
+						}
+					} ).
+					on( 'blur', function() {
+						$header.css( 'top', 0 ).addClass( 'position-fixed visible' );
+						$window.off( '.fixIosHeader' );
+					} );
+			}
+		},
+
+		_showHidden: function( className ) {
+			// can't use jQuery's hide() and show() beause show() sets display: block
+			// and we want display: table for headers
+			this.$( '.hideable' ).addClass( 'hidden' );
+			this.$( className ).removeClass( 'hidden' );
 		}
 	} );
 
-M.define( 'Overlay', Overlay );
+	// FIXME: Deprecate OverlayNew
+	M.define( 'OverlayNew', Overlay );
+	M.define( 'Overlay', Overlay );
 
 }( mw.mobileFrontend, jQuery ) );

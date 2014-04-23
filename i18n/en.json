@@ -188,7 +188,6 @@
     "mobile-frontend-opt-in-explain": "By joining the beta, you will get access to experimental features, at the risk of encountering bugs and issues.",
     "mobile-frontend-overlay-close": "Close",
     "mobile-frontend-overlay-continue": "Continue",
-    "mobile-frontend-overlay-escape": "Go back",
     "mobile-frontend-page-menu-contents": "contents",
     "mobile-frontend-page-menu-history": "History",
     "mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",

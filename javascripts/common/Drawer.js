@@ -49,7 +49,7 @@ var View = M.require( 'View' ),
 							// FIXME change when micro.tap.js in stable
 							// can't use 'body' because the drawer will be closed when
 							// tapping on it and clicks will be prevented
-							$( '#mw-mf-page-center, .mw-mf-overlay' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
+							$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
 						}, self.minHideDelay );
 					}
 				}, 10 );
@@ -68,7 +68,7 @@ var View = M.require( 'View' ),
 				// .one() registers one callback for scroll and click independently
 				// if one fired, get rid of the other one
 				$( window ).off( '.drawer' );
-				$( '#mw-mf-page-center, .mw-mf-overlay' ).off( '.drawer' );
+				$( '#mw-mf-page-center' ).off( '.drawer' );
 			}, 10 );
 		},
 
