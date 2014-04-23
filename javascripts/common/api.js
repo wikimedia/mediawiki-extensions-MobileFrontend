@@ -19,6 +19,7 @@
 		 */
 		initialize: function() {
 			mw.Api.apply( this, arguments );
+			EventEmitter.prototype.initialize.apply( this, arguments );
 			this.requests = [];
 			this.tokenCache = {};
 		},

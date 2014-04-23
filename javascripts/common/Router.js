@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-	var EventEmitter = M.require( 'eventemitter' );
+	var EventEmitter = M.require( 'eventemitter' ), key;
 
 	// FIXME: remove when OverlayManager used everywhere
 	function matchRoute( hash, entry ) {
@@ -16,6 +16,7 @@
 	 * @class Router
 	 */
 	function Router() {
+		EventEmitter.prototype.initialize.apply( this, arguments );
 		var self = this;
 		// use an object instead of an array for routes so that we don't
 		// duplicate entries that already exist
@@ -47,7 +48,9 @@
 		} );
 	}
 
-	Router.prototype = new EventEmitter();
+	for( key in EventEmitter.prototype ) {
+		Router.prototype[ key ] = EventEmitter.prototype[ key ];
+	}
 
 	// FIXME: remove when OverlayManager used everywhere
 	/**

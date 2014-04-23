@@ -36,7 +36,7 @@
 
 		_showOverlay: function( overlay ) {
 			// if hidden using overlay (not hardware) button, update the state
-			overlay.one( 'hide.overlay-manager', $.proxy( this, '_onHideOverlay' ) );
+			overlay.one( 'hide', $.proxy( this, '_onHideOverlay' ) );
 
 			overlay.show();
 		},
@@ -46,13 +46,13 @@
 
 			// remove the callback for updating state when overlay closed using
 			// overlay close button
-			overlay.off( 'hide.overlay-manager' );
+			overlay.off( 'hide' );
 
 			result = overlay.hide( this.stack.length > 1 );
 
 			// if closing prevented, reattach the callback
 			if ( !result ) {
-				overlay.one( 'hide.overlay-manager', $.proxy( this, '_onHideOverlay' ) );
+				overlay.one( 'hide', $.proxy( this, '_onHideOverlay' ) );
 			}
 
 			return result;

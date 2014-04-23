@@ -83,13 +83,11 @@
 		defaults: {},
 
 		/**
-		 * Constructor, if you override it, use _super().
-		 *
 		 * @method
 		 * @param {Object} options Object passed to the constructor.
 		 */
 		initialize: function( options ) {
-			this._super();
+			EventEmitter.prototype.initialize.apply( this, arguments );
 			this.defaults = $.extend( {}, this._parent.defaults, this.defaults );
 			this.templatePartials = $.extend( {}, this._parent.templatePartials, this.templatePartials );
 			options = $.extend( {}, this.defaults, options );

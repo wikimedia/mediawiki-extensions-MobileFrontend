@@ -134,11 +134,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mediawiki.language',
 			'mediawiki.jqueryMsg',
+			'mobile.templates',
+			'ext.mantle.modules',
+			'ext.mantle.oo',
 		),
 		'scripts' => array(
 			'javascripts/common/modules.js',
-			'javascripts/common/Class.js',
-			'javascripts/common/eventemitter.js',
 			'javascripts/common/mainmenu.js',
 			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/lastEdited/lastEdited.js',
@@ -164,6 +165,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.api',
 			'jquery.cookie',
 			'mobile.redlinks',
+			'ext.mantle.views',
 		),
 		'templates' => array(
 			'page.hogan',
@@ -177,7 +179,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/OverlayManager.js',
 			'javascripts/common/api.js',
 			'javascripts/common/PageApi.js',
-			'javascripts/common/View.js',
 			'javascripts/common/Panel.js',
 			'javascripts/common/Section.js',
 			'javascripts/common/Page.js',
