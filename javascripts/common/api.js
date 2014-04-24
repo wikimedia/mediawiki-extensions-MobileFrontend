@@ -82,10 +82,9 @@
 
 		/**
 		 * Abort all unfinished requests issued by this Api object.
-		 *
+		 * FIXME: move to mw.Api
 		 * @method
 		 */
-		// FIXME: move to mw.Api
 		abort: function() {
 			this.requests.forEach( function( request ) {
 				request.abort();
@@ -94,6 +93,7 @@
 
 		/**
 		 * Retrieves a token for a given endpoint
+		 * FIXME: consolidate with mw.Api
 		 *
 		 * @method
 		 * @param {String} tokenType Name of the type of token needed e.g. edit, upload - defaults to edit
@@ -104,7 +104,6 @@
 		 * @return {jQuery.Deferred} Object returned by $.ajax(), callback will be passed
 		 *   the token string, false if the user is anon or undefined where not available or a warning is set
 		 */
-		// FIXME: consolidate with mw.Api
 		getToken: function( tokenType, endpoint, caToken ) {
 			var token, data, d = $.Deferred(), isCacheable,
 				// token types available from mw.user.tokens
