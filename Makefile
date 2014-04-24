@@ -31,7 +31,7 @@ kss: nodecheck
 
 jsduck: gems
 	rm -rf docs/js
-	jsduck javascripts/ --output docs/js/ --external=jQuery.Object,Hogan.Template,jQuery.Deferred --exclude=javascripts/external --ignore-global
+	jsduck javascripts/ --output docs/js/ --external=jQuery.Object,Hogan.Template,jQuery.Deferred,mw.user --exclude=javascripts/external --ignore-global
 
 docs: kss jsduck
 

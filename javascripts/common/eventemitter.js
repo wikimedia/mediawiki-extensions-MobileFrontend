@@ -57,8 +57,7 @@
 		/**
 		 * Remove a callback.
 		 *
-		 * @name EventEmitter.prototype.off
-		 * @function
+		 * @method
 		 * @param {string} event Event name.
 		 */
 		off: function( event ) {
