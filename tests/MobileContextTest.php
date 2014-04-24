@@ -4,8 +4,6 @@
  * @group MobileFrontend
  */
 class MobileContextTest extends MediaWikiTestCase {
-	private $savedGlobals;
-
 	/**
 	 * PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of
 	 * protected and private methods directly through the Reflection API
@@ -23,14 +21,12 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	protected function setUp() {
 		parent::setUp();
-		$this->savedGlobals = $GLOBALS;
 		$context = new DerivativeContext( RequestContext::getMain() );
 		$context->setRequest( new FauxRequest() );
 		MobileContext::singleton()->setContext( $context );
 	}
 
 	protected function tearDown() {
-		$GLOBALS = $this->savedGlobals;
 		MobileContext::setInstance( null ); //refresh it
 		parent::tearDown();
 	}
@@ -39,8 +35,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider getBaseDomainProvider
 	 */
 	public function testGetBaseDomain( $server, $baseDomain ) {
-		global $wgServer;
-		$wgServer = $server;
+		$this->setMwGlobals( 'wgServer', $server );
 		$this->assertEquals( $baseDomain, MobileContext::singleton()->getBaseDomain() );
 	}
 
@@ -55,21 +50,23 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	public function testGetMobileUrl() {
-		global $wgHooks;
-
-		$this->setMwGlobals( 'wgMFMobileHeader', 'X-WAP' );
-		$this->setMwGlobals( 'wgMobileUrlTemplate', '%h0.m.%h1.%h2' );
+		$this->setMwGlobals( array(
+			'wgMFMobileHeader' => 'X-WAP',
+			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2'
+		) );
 		$invokes = 0;
 		$context = MobileContext::singleton();
 		$asserter = $this;
-		$wgHooks['GetMobileUrl'][] = function ( &$string, $hookCtx ) use (
-			$asserter,
-			&$invokes,
-			$context
-		) {
-			$asserter->assertEquals( $context, $hookCtx );
-			$invokes++;
-		};
+		$this->setMwGlobals( 'wgHooks',
+			array( 'GetMobileUrl' => array( function ( &$string, $hookCtx ) use (
+					$asserter,
+					&$invokes,
+					$context
+				) {
+					$asserter->assertEquals( $context, $hookCtx );
+					$invokes++;
+			} )
+		) );
 		$context->getRequest()->setHeader( 'X-WAP', 'no' );
 		$this->assertEquals(
 			'http://en.m.wikipedia.org/wiki/Article',
@@ -83,9 +80,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	public function testParseMobileUrlTemplate() {
-		global $wgMobileUrlTemplate;
-
-		$wgMobileUrlTemplate = "%h0.m.%h1.%h2/path/morepath";
+		$this->setMwGlobals( 'wgMobileUrlTemplate', '%h0.m.%h1.%h2/path/morepath' );
 		$this->assertEquals(
 			'%h0.m.%h1.%h2',
 			MobileContext::singleton()->parseMobileUrlTemplate( 'host' )
@@ -104,10 +99,8 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider updateMobileUrlHostProvider
 	 */
 	public function testUpdateMobileUrlHost( $url, $expected, $urlTemplate ) {
-		global $wgMobileUrlTemplate;
-
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlHost" );
-		$wgMobileUrlTemplate = $urlTemplate;
+		$this->setMwGlobals( 'wgMobileUrlTemplate', $urlTemplate );
 		$parsedUrl = wfParseUrl( $url );
 		$updateMobileUrlHost->invokeArgs( MobileContext::singleton(), array( &$parsedUrl ) );
 		$this->assertEquals( $expected, wfAssembleUrl( $parsedUrl ) );
@@ -154,10 +147,11 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider updateDesktopUrlHostProvider
 	 */
 	public function testUpdateDesktopUrlHost( $mobile, $desktop, $server ) {
-		global $wgServer;
-
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
-		$wgServer = $server;
+		$this->setMwGlobals( array(
+			'wgServer' => $server,
+			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
+		) );
 		$parsedUrl = wfParseUrl( $mobile );
 		$updateMobileUrlHost->invokeArgs(
 			MobileContext::singleton(),
@@ -186,11 +180,11 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	public function testUpdateMobileUrlPath() {
-		global $wgMobileUrlTemplate, $wgScriptPath;
-
-		$wgScriptPath = '/wiki';
+		$this->setMwGlobals( array(
+			'wgScriptPath' => '/wiki',
+			'wgMobileUrlTemplate' => "/mobile/%p",
+		) );
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlPath" );
-		$wgMobileUrlTemplate = "/mobile/%p";
 
 		// check for constructing a templated URL
 		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/Gustavus_Airport" );
@@ -268,7 +262,10 @@ class MobileContextTest extends MediaWikiTestCase {
 	) {
 		$testMethod = ( $shouldDisplay ) ? 'assertTrue' : 'assertFalse';
 
-		$this->setMwGlobals( 'wgMFMobileHeader', 'X-WAP' );
+		$this->setMwGlobals( array(
+			'wgMFMobileHeader' => 'X-WAP',
+			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
+		) );
 		$request = MobileContext::singleton()->getRequest();
 		if ( count( $requestVal ) ) {
 			foreach ( $requestVal as $key => $val ) {
@@ -339,11 +336,11 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	public function testGetUseFormatCookieExpiry() {
-		global $wgCookieExpiration, $wgMobileFrontendFormatCookieExpiry;
+		global $wgCookieExpiration;
 		$getUseFormatCookieExpiry = self::getMethod( 'getUseFormatCookieExpiry' );
 
 		$startTime = time();
-		$wgMobileFrontendFormatCookieExpiry = 60;
+		$this->setMwGlobals( 'wgMobileFrontendFormatCookieExpiry', 60 );
 		$mfCookieExpected = $startTime + 60;
 		$this->assertTrue(
 			$mfCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
@@ -353,7 +350,7 @@ class MobileContextTest extends MediaWikiTestCase {
 			'Using MobileFrontend expiry.'
 		);
 
-		$wgMobileFrontendFormatCookieExpiry = null;
+		$this->setMwGlobals( 'wgMobileFrontendFormatCookieExpiry', null );
 		$defaultMWCookieExpected = $startTime + $wgCookieExpiration;
 		$this->assertTrue(
 			$defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
@@ -365,12 +362,13 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	public function testGetStopMobileRedirectCookieDomain() {
-		global $wgMFStopRedirectCookieHost, $wgServer;
 		$context = MobileContext::singleton();
-		$wgMFStopRedirectCookieHost = null;
-		$wgServer = 'http://en.wikipedia.org';
+		$this->setMwGlobals( array(
+			'wgMFStopRedirectCookieHost' => null,
+			'wgServer' => 'http://en.wikipedia.org',
+		) );
 		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), '.wikipedia.org' );
-		$wgMFStopRedirectCookieHost = 'foo.bar.baz';
+		$this->setMwGlobals( 'wgMFStopRedirectCookieHost', 'foo.bar.baz' );
 		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), 'foo.bar.baz' );
 	}
 
