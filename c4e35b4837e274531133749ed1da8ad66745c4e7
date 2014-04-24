@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_5b23f0b4",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-24T19:37:01Z",
+      "side": 1,
+      "message": "wrap in braces and same for all above.",
+      "revId": "c4e35b4837e274531133749ed1da8ad66745c4e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_fb119c5f",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-24T19:37:01Z",
+      "side": 1,
+      "message": "Just put this in the log statement. No need to create a variable.",
+      "revId": "c4e35b4837e274531133749ed1da8ad66745c4e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
