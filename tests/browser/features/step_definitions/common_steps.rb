@@ -1,5 +1,3 @@
-# FIXME: This is a hack and doesn't work with Cloudbees (bug 62512)
-# Add tags to no_javascript_site.feature when resolved
 Given /^I am using user agent "(.+)"$/ do |user_agent|
   @user_agent = user_agent
   @browser = browser(test_name(@scenario), {user_agent: user_agent})
