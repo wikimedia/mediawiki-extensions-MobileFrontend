@@ -28,8 +28,8 @@
 //
 // Markup:
 // <div class="overlay-enabled">
-//   <div class="overlay visible">
-//     <div class="overlay-header-container visible">
+//   <div class="overlay border-box visible">
+//     <div class="overlay-header-container border-box visible">
 //       <div class="overlay-header">
 //         <ul class="v-border bottom-border">
 //          <li><button class="cancel icon">Close</button></li>
@@ -49,8 +49,8 @@
 //
 // Markup:
 // <div class="overlay-enabled">
-//   <div class="overlay visible">
-//     <div class="overlay-header-container visible">
+//   <div class="overlay border-box visible">
+//     <div class="overlay-header-container border-box visible">
 //       <div class="overlay-header">
 //         <ul class="v-border bottom-border">
 //          <li><button class="cancel icon">Close</button></li>
@@ -73,8 +73,8 @@
 //
 // Markup:
 // <div class="overlay-enabled">
-//   <div class="overlay visible">
-//     <div class="overlay-header-container visible">
+//   <div class="overlay border-box visible">
+//     <div class="overlay-header-container border-box visible">
 //       <div class="overlay-header">
 //         <ul class="v-border bottom-border">
 //          <li><button class="cancel icon">Close</button></li>
@@ -97,7 +97,6 @@
 	width: 100%;
 	background: #fff;
 	z-index: 4;
-	.box-sizing(border-box);
 	padding-top: @headerHeight;
 	display: none;
 
@@ -203,7 +202,6 @@
 	.overlay-header-container {
 		width: 100%;
 		padding: @headerMargin @headerMargin 0;
-		.box-sizing(border-box);
 		background: #fff;
 		// needed for _fixIosHeader method to work properly
 		position: absolute;
@@ -263,7 +261,6 @@
 	.summary {
 		margin: 0 0 .7em;
 		width: 100%;
-		.box-sizing( border-box );
 	}
 
 	.wikitext-editor {
@@ -273,7 +270,6 @@
 		line-height: 1.5;
 		border: none;
 		resize: none;
-		.box-sizing( border-box );
 	}
 
 	.panel {
@@ -335,8 +331,8 @@
 // All types of overlays (progressive and constructive) apply here.
 //
 // Markup:
-// <div class="overlay overlay-bottom position-fixed visible">
-//   <div class="overlay-header-container visible">
+// <div class="overlay border-box overlay-bottom position-fixed visible">
+//   <div class="overlay-header-container border-box visible">
 //     <div class="overlay-header">
 //       <ul class="v-border bottom-border">
 //        <li><button class="cancel icon">Close</button></li>

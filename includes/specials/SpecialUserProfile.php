@@ -51,7 +51,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				'href' => $title->getLocalUrl() )
 			) .
 			$page->getMediumThumbnailHtml() .
-			Html::openElement( 'div', array( 'class' => 'caption' ) ) .
+			Html::openElement( 'div', array( 'class' => 'caption border-box' ) ) .
 			$this->msg( 'mobile-frontend-profile-last-upload-caption' )
 				->numParams( $daysAgo ) // $1
 				->params( $this->targetUser->getName() ) // $2
@@ -77,7 +77,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container' ) )
 				. MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-thanks' )
-				. Html::openElement( 'div', array( 'class' => 'caption' ) )
+				. Html::openElement( 'div', array( 'class' => 'caption border-box' ) )
 				. $this->msg( 'mobile-frontend-profile-last-thank',
 					$user,
 					$this->targetUser
@@ -109,7 +109,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container image' ) )
 				. $thumbnail
-				. Html::openElement( 'div', array( 'class' => 'caption' ) )
+				. Html::openElement( 'div', array( 'class' => 'caption border-box' ) )
 				. $this->msg( 'mobile-frontend-profile-last-edit',
 					$rev->getTitle(),
 					$daysAgo,

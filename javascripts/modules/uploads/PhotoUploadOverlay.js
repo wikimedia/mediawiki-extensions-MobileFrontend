@@ -27,7 +27,7 @@
 			]
 		},
 
-		className: 'overlay photo-overlay',
+		className: 'overlay photo-overlay border-box',
 
 		templatePartials: {
 			content: M.template.get( 'uploads/PhotoUploadOverlay' )

@@ -3,7 +3,7 @@
 	var View = M.require( 'View' ), ProgressBar;
 
 	ProgressBar = View.extend( {
-		className: 'progress-bar',
+		className: 'progress-bar border-box',
 
 		template: '<div class="value"></div>',
 

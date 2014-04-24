@@ -13,7 +13,7 @@
 			header: M.template.get( 'modules/editor/VisualEditorOverlayHeader' ),
 			content: M.template.get( 'modules/editor/VisualEditorOverlay' )
 		},
-		className: 'overlay editor-overlay editor-overlay-ve',
+		className: 'overlay editor-overlay editor-overlay-ve border-box',
 		initialize: function( options ) {
 			var self = this;
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-saving', options.title );

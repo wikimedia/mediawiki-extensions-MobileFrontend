@@ -122,7 +122,7 @@ class MinervaTemplate extends BaseTemplate {
 			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 
 			echo Html::element( 'a', array(
-				'class' => 'mw-ui-button mw-ui-progressive button languageSelector',
+				'class' => 'mw-ui-button mw-ui-progressive button languageSelector border-box',
 				'href' => $languageUrl
 			), $languageLabel );
 		}
@@ -224,12 +224,12 @@ class MinervaTemplate extends BaseTemplate {
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
-			<div id="mw-mf-page-left" class="navigation-drawer">
+			<div id="mw-mf-page-left" class="navigation-drawer border-box">
 				<?php
 					$this->renderMainMenu( $data );
 				?>
 			</div>
-			<div id='mw-mf-page-center'>
+			<div id='mw-mf-page-center' class="border-box">
 				<?php
 					foreach( $this->data['banners'] as $banner ):
 						echo $banner;

@@ -6,7 +6,7 @@
 	 * @extends Drawer
 	 */
 	Toast = Drawer.extend( {
-		className: 'toast position-fixed',
+		className: 'toast position-fixed border-box',
 		minHideDelay: 1000,
 		/**
 		 * @method

@@ -21,7 +21,7 @@
 
 		var $btn;
 		if ( M.router.isSupported() ) {
-			$btn = $( '<a class="mw-ui-button mw-ui-progressive button nearby">' ).attr( 'href', '#geonotahack' );
+			$btn = $( '<a class="mw-ui-button mw-ui-progressive button nearby border-box">' ).attr( 'href', '#geonotahack' );
 			M.router.route( /^geonotahack$/, loadGeoNotAHack );
 		} else {
 			$btn = $( '<button class="mw-ui-button mw-ui-progressive nearby">' ).on( 'click', loadGeoNotAHack );

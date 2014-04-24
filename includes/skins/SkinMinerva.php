@@ -466,6 +466,7 @@ class SkinMinerva extends SkinTemplate {
 		return $link;
 	}
 
+	// FIXME: Move to MinervaTemplate
 	protected function getSearchPlaceHolderText() {
 		return wfMessage( 'mobile-frontend-placeholder' )->text();
 	}
@@ -514,10 +515,11 @@ class SkinMinerva extends SkinTemplate {
 		}
 	}
 
+	// FIXME: Move to MinervaTemplate
 	protected function prepareSearch( BaseTemplate $tpl ) {
 		$searchBox = array(
 			'id' => 'searchInput',
-			'class' => 'search',
+			'class' => 'search border-box',
 			'autocomplete' => 'off',
 			// The placeholder gets fed to HTML::element later which escapes all
 			// attribute values, so no need to escape the string here.

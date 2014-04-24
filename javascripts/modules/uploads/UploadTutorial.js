@@ -8,7 +8,7 @@
 
 	UploadTutorial = Overlay.extend( {
 		template: M.template.get( 'uploads/UploadTutorial' ),
-		className: 'overlay carousel tutorial',
+		className: 'overlay carousel border-box tutorial',
 
 		defaults: {
 			pages: [
