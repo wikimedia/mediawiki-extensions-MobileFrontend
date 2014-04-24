@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_1b6695b8",
+        "filename": "javascripts/common/api.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-24T22:03:32Z",
+      "side": 1,
+      "message": "This change breaks uploading for me completely:\nNS_NOINTERFACE: Component does not have requested interface [nsIDOMBlob.slice]",
+      "revId": "e23344fe4dd39875d58c636779fea59b97fe9a01",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
