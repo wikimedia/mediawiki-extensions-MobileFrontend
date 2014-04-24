@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_b807a784",
+        "filename": "less/common/icons.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-24T20:56:36Z",
+      "side": 1,
+      "message": "I think we should deprecate this one, very close to 32px and seems less standard.",
+      "revId": "0809b68f92557341966256c093cf9b6eb50bac7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_d88ee332",
+        "filename": "less/common/icons.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-24T20:56:36Z",
+      "side": 1,
+      "message": "I don\u0027t quite get this comment. So all loaders will need to have icon-X class too?",
+      "revId": "0809b68f92557341966256c093cf9b6eb50bac7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_1878db24",
+        "filename": "less/minerva.less/minerva.variables.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-24T20:56:36Z",
+      "side": 1,
+      "message": "That\u0027s an odd name, considering we have icons that are 16px.",
+      "revId": "0809b68f92557341966256c093cf9b6eb50bac7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_d8026375",
+        "filename": "templates/page.html",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-24T20:56:36Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it be cleaner to do:\n\n\u003ca ...\u003e\n  {{languageLabel}}\n\u003c/a\u003e",
+      "revId": "0809b68f92557341966256c093cf9b6eb50bac7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
