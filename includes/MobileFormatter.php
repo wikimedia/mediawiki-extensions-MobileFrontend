@@ -92,6 +92,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Removes content inappropriate for mobile devices
 	 * @param bool $removeDefaults Whether default settings at $wgMFRemovableClasses should be used
+	 * @return array
 	 */
 	public function filterContent( $removeDefaults = true ) {
 		global $wgMFRemovableClasses;
@@ -104,7 +105,7 @@ class MobileFormatter extends HtmlFormatter {
 		if ( $this->removeMedia ) {
 			$this->doRemoveImages();
 		}
-		parent::filterContent();
+		return parent::filterContent();
 	}
 
 	/**

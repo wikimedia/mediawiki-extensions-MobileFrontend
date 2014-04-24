@@ -41,8 +41,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition,
-			$wgValidSkinNames, $wgMFEnableMinervaBetaFeature;
+		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition;
 
 		$mobileContext = MobileContext::singleton();
 
@@ -113,7 +112,6 @@ class MobileFrontendHooks {
 		wfProfileIn( __METHOD__ );
 
 		$title = $skin->getTitle();
-		$isSpecial = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 
 		if ( !$context->isBlacklistedPage() ) {
@@ -638,9 +636,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
 		global $wgExtensionAssetsPath, $wgMFNearby, $wgMFEnableMinervaBetaFeature,
-			$wgLang, $wgMFEnableNearbyPagesBetaFeature;
-
-		$dir = $wgLang->getDir();
+			$wgMFEnableNearbyPagesBetaFeature;
 
 		if ( $wgMFNearby && $wgMFEnableNearbyPagesBetaFeature ) {
 			$preferences['betafeatures-geonotahack'] = array(

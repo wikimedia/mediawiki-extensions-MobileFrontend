@@ -3,7 +3,6 @@
 class MobileContext extends ContextSource {
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	protected $mobileMode;
-	protected $contentFormat = '';
 	protected $disableImages;
 	protected $useFormat;
 	protected $blacklistedPage;
@@ -81,20 +80,6 @@ class MobileContext extends ContextSource {
 
 		wfProfileOut( __METHOD__ );
 		return $this->device;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getContentFormat() {
-		if ( $this->contentFormat ) {
-			return $this->contentFormat;
-		}
-		// honor useformat if it's set, otherwise determine by device
-		$device = $this->getDevice();
-		$viewFormat = ( $this->getUseFormat() != '' ) ? $this->getUseFormat() : $device->format();
-		$this->contentFormat = static::parseContentFormat( $viewFormat );
-		return $this->contentFormat;
 	}
 
 	/**
