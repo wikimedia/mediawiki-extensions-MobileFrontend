@@ -16,6 +16,24 @@
       "revId": "42972de01228a7d186899258bb286ce3eced98e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_bbde84dd",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-24T19:27:19Z",
+      "side": 1,
+      "message": "That would give you lots of ugly error messages like:\nundefined/undefined/undefined/error/404\n\nI\u0027ll add some comments to make the code more understandable.",
+      "parentUuid": "8e23439c_1be698e3",
+      "revId": "42972de01228a7d186899258bb286ce3eced98e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
