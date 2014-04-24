@@ -34,6 +34,24 @@
       "revId": "42972de01228a7d186899258bb286ce3eced98e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_3be27498",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-24T19:28:23Z",
+      "side": 1,
+      "message": "not if you use if statement.\nArguably though could it be useful to know that these are undefined?",
+      "parentUuid": "8e23439c_bbde84dd",
+      "revId": "42972de01228a7d186899258bb286ce3eced98e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
