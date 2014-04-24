@@ -237,7 +237,8 @@
 			}
 
 			function getToken() {
-				return self.getToken.apply( self, arguments ).fail( $.proxy( result, 'reject' ) );
+				return self.getToken.apply( self, arguments )
+					.fail( $.proxy( result, 'reject', { stage: 'upload', type: 'error', details: 'token' } ) );
 			}
 
 			if ( self.useCentralAuthToken && endpoint ) {
