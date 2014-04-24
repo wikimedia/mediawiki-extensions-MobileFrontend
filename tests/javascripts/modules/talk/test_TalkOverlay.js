@@ -5,7 +5,7 @@ var TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
 QUnit.module( 'MobileFrontend TalkOverlay', {
 	setup: function() {
 		this.sandbox.stub( M.pageApi, 'getPage' ).withArgs( 'Talk:No exist' ).returns(
-			$.Deferred().reject( { error: { code: 'missingtitle' } } )
+			$.Deferred().reject( 'missingtitle' )
 		);
 	}
 } );

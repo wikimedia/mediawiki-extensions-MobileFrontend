@@ -27,7 +27,7 @@
 				M.pageApi.getPage( options.title ).fail( function( resp ) {
 					// If the API returns the error code 'missingtitle', that means the
 					// talk page doesn't exist yet.
-					if ( resp.error.code !== undefined && resp.error.code === 'missingtitle' ) {
+					if ( resp === 'missingtitle' ) {
 						// Create an empty page for new pages
 						options.page = new Page( { title: options.title, sections: [] } );
 						_super.call( self, options );
