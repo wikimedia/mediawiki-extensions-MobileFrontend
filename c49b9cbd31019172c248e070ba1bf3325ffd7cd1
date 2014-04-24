@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_9b4748bf",
+        "filename": "javascripts/modules/uploads/UploadTutorial.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-24T19:26:35Z",
+      "side": 0,
+      "message": "mw-mf-overlay is dead. Long live new overlays!\n(we\u0027re moving away from this - overlay is the new class)",
+      "parentUuid": "8e23439c_3bf83479",
+      "revId": "c49b9cbd31019172c248e070ba1bf3325ffd7cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_3be154cb",
         "filename": "less/specials/nearby.less",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2014-04-24T19:17:09Z",
       "side": 0,
       "message": "Why is this removed? Don\u0027t see anything about it in the commit message.",
+      "revId": "c49b9cbd31019172c248e070ba1bf3325ffd7cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_3b5cb481",
+        "filename": "less/specials/nearby.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-24T19:26:35Z",
+      "side": 0,
+      "message": "Updating commit message.",
+      "parentUuid": "8e23439c_3be154cb",
       "revId": "c49b9cbd31019172c248e070ba1bf3325ffd7cd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
