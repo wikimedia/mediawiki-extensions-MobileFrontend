@@ -236,6 +236,7 @@
 	"mobile-frontend-photo-upload": "Ajouter une image à cette page",
 	"mobile-frontend-photo-upload-anon": "Veuillez vous connecter pour ajouter une image à cette page.",
 	"mobile-frontend-photo-upload-comment": "Image ajoutée à la page",
+	"mobile-frontend-photo-upload-copyvio": "Attention ! Cette photo semble suspecte. Si ce n’est pas une photo que vous avez prise, veuillez ne pas la télécharger. Voulez-vous toujours continuer quand même ?",
 	"mobile-frontend-photo-upload-disabled": "Aucune image n’est nécessaire sur cette page.",
 	"mobile-frontend-photo-upload-error": "Une erreur s'est produite, veuillez réessayer.",
 	"mobile-frontend-photo-upload-error-file-type": "Merci de ne télécharger que des images.",

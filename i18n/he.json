@@ -217,6 +217,7 @@
 	"mobile-frontend-photo-upload": "הוספת תמונה לדף הזה",
 	"mobile-frontend-photo-upload-anon": "נא להיכנס לחשבון כדי להוסיף תמונה לדף הזה.",
 	"mobile-frontend-photo-upload-comment": "נוספה תמונה לדף",
+	"mobile-frontend-photo-upload-copyvio": "אזהרה! הצילום הזה נראה חשוד. אם זה לא צילום שיצרת בעצמך, אין להעלות אותו. האם ברצונך להמשיך?",
 	"mobile-frontend-photo-upload-disabled": "אין צורך בתמונה בדף הזה.",
 	"mobile-frontend-photo-upload-error": "שגיאה, נא לנסות שוב.",
 	"mobile-frontend-photo-upload-error-file-type": "נא להעלות רק תמונות.",

@@ -208,6 +208,7 @@
 	"mobile-frontend-photo-upload": "Стави слика во страницава",
 	"mobile-frontend-photo-upload-anon": "Најавете се за да ставите слика на страницава.",
 	"mobile-frontend-photo-upload-comment": "Ставена слика во страница",
+	"mobile-frontend-photo-upload-copyvio": "Предупредување! Сликава изгледа сомнително. Ако не се ја направиле Вие, тогаш не ја подигајте. Дали сепак сакате да продолжите?",
 	"mobile-frontend-photo-upload-disabled": "На страницава не ѝ треба ниедна слика.",
 	"mobile-frontend-photo-upload-error": "Грешка. Обидете се повторно.",
 	"mobile-frontend-photo-upload-error-file-type": "Подигајте само слики.",

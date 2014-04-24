@@ -217,6 +217,7 @@
 	"mobile-frontend-photo-upload": "Ein Bild zu dieser Seite hinzufügen",
 	"mobile-frontend-photo-upload-anon": "Bitte melde dich an, um ein Bild dieser Seite hinzuzufügen.",
 	"mobile-frontend-photo-upload-comment": "Bild zur Seite hinzugefügt",
+	"mobile-frontend-photo-upload-copyvio": "Warnung! Dieses Foto sieht verdächtig aus. Falls dies kein selbst aufgenommenes Foto ist, lade es bitte nicht hoch. Möchtest du wirklich fortfahren?",
 	"mobile-frontend-photo-upload-disabled": "Auf dieser Seite wird kein Bild benötigt.",
 	"mobile-frontend-photo-upload-error": "Fehler. Bitte erneut versuchen.",
 	"mobile-frontend-photo-upload-error-file-type": "Bitte nur Bilder hochladen.",

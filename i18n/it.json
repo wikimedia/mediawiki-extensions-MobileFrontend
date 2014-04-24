@@ -215,6 +215,7 @@
 	"mobile-frontend-photo-upload": "Aggiungi un'immagine a questa pagina",
 	"mobile-frontend-photo-upload-anon": "Effettua l'accesso per aggiungere un'immagine a questa pagina.",
 	"mobile-frontend-photo-upload-comment": "Aggiungi questa immagine ad una pagina",
+	"mobile-frontend-photo-upload-copyvio": "Attenzione! Questa foto sembra sospetta; se non l'hai scattata tu non caricarla. Vuoi continuare ugualmente?",
 	"mobile-frontend-photo-upload-disabled": "Non è necessaria alcuna immagine in questa pagina.",
 	"mobile-frontend-photo-upload-error": "Errore, prova ancora.",
 	"mobile-frontend-photo-upload-error-file-type": "Si prega di caricare solo immagini.",
