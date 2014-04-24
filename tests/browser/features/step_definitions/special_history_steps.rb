@@ -1,3 +1,7 @@
+When(/^I open the latest diff$/) do
+  on(SpecialHistoryPage).last_contribution_link_element.click
+end
+
 Then(/^I see a list of page contributions$/) do
   on(SpecialHistoryPage).side_list_element.should exist
 end
