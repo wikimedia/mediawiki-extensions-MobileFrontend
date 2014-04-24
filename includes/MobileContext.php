@@ -756,23 +756,19 @@ class MobileContext extends ContextSource {
 	 * a mobile page), set the requested view for this particular request
 	 * and set a cookie to keep them on that view for subsequent requests.
 	 */
-	public function toggleView( $view, $temporary = false ) {
+	public function toggleView( $view ) {
 		global $wgMobileUrlTemplate;
 
 		$url = $this->getTitle()->getFullURL();
 
 		if ( $view == 'mobile' ) {
 			// unset stopMobileRedirect cookie
-			if ( !$temporary ) {
-				// @TODO is this necessary with unsetting the cookie via JS?
-				$this->unsetStopMobileRedirectCookie();
-			}
+			// @TODO is this necessary with unsetting the cookie via JS?
+			$this->unsetStopMobileRedirectCookie();
 
 			// if no mobileurl template, set mobile cookie
 			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
-				if ( !$temporary ) {
-					$this->setUseFormatCookie();
-				}
+				$this->setUseFormatCookie();
 				$this->setUseFormat( $view );
 			} else {
 				// else redirect to mobile domain
@@ -781,12 +777,10 @@ class MobileContext extends ContextSource {
 			}
 		} elseif ( $view == 'desktop' ) {
 			// set stopMobileRedirect cookie
-			if ( !$temporary ) {
-				$this->setStopMobileRedirectCookie();
-				// unset useformat cookie
-				if ( $this->getUseFormatCookie() == "true" ) {
-					$this->unsetUseFormatCookie();
-				}
+			$this->setStopMobileRedirectCookie();
+			// unset useformat cookie
+			if ( $this->getUseFormatCookie() == "true" ) {
+				$this->unsetUseFormatCookie();
 			}
 
 			// if no mobileurl template, unset useformat cookie
