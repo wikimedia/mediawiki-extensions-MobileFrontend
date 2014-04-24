@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_1be698e3",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-24T19:20:34Z",
+      "side": 1,
+      "message": "Would these ever be anything other than a string..? Seems like an overly cautious if statement.\n\n\nAlso I wonder if something like\nvar msg \u003d [];\nif ( error.stage ) msg.push( error.stage );\nif ( error.type ) msg.push( error.type );\nif ( error.details ) msg.push( error.details );\nif ( httpErrorThrown ) msg.push( httpErrorThrown );\nerrorText: msg.length ? msg.join(\u0027/\u0027) : \u0027unknown error\u0027\n\nmay be more readable?",
+      "revId": "42972de01228a7d186899258bb286ce3eced98e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
