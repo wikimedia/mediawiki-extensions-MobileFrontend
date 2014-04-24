@@ -55,8 +55,7 @@ class DeviceProperties implements IDeviceProperties {
 	private $userAgent,
 		$acceptHeader,
 		$isMobile = null,
-		$tablet = null,
-		$format = null;
+		$tablet = null;
 
 	public function __construct( $userAgent, $acceptHeader ) {
 		$this->userAgent = $userAgent;
