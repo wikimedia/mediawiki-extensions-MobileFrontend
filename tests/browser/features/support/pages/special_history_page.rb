@@ -11,6 +11,9 @@ class SpecialHistoryPage < ArticlePage
   li(:last_contribution) do |page|
     page.side_list_element.list_item_element(index: 0)
   end
+  a(:last_contribution_link) do |page|
+    page.last_contribution_element.link_element(index: 0)
+  end
   h3(:last_contribution_title) do |page|
     page.last_contribution_element.h3_element(index: 0)
   end
