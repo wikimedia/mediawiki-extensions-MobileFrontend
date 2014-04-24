@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_3bf83479",
+        "filename": "javascripts/modules/uploads/UploadTutorial.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-24T19:17:09Z",
+      "side": 0,
+      "message": "Why change the class here? We use mw-mf-overlay most other places.",
+      "revId": "c49b9cbd31019172c248e070ba1bf3325ffd7cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_3be154cb",
+        "filename": "less/specials/nearby.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-04-24T19:17:09Z",
+      "side": 0,
+      "message": "Why is this removed? Don\u0027t see anything about it in the commit message.",
+      "revId": "c49b9cbd31019172c248e070ba1bf3325ffd7cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
