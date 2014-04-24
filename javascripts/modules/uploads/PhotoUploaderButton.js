@@ -1,6 +1,5 @@
 ( function( M, $ ) {
 	var View = M.require( 'View' ),
-		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		PhotoUploaderButton;
 
 	function isSupported() {
@@ -52,16 +51,9 @@
 			var self = this, $input = this.$( 'input' );
 
 			function handleFile( file ) {
-				var loadingOverlay = new LoadingOverlay();
-
-				loadingOverlay.show();
-
-				mw.loader.using( 'mobile.uploads', function() {
-					loadingOverlay.hide();
-					// FIXME: this is hacky but it would be hard to pass a file in a route
-					M.emit( '_upload-preview', file );
-					M.router.navigate( '#/upload-preview/' + self.options.funnel );
-				} );
+				// FIXME: this is hacky but it would be hard to pass a file in a route
+				M.emit( '_upload-preview', file );
+				M.router.navigate( '#/upload-preview/' + self.options.funnel );
 			}
 
 			$input.

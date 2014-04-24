@@ -208,6 +208,7 @@
     "mobile-frontend-photo-upload": "Add an image to this page",
     "mobile-frontend-photo-upload-anon": "Please log in to add an image to this page.",
     "mobile-frontend-photo-upload-comment": "Added image to page",
+    "mobile-frontend-photo-upload-copyvio": "Warning! This photo looks suspicious. If it's not a photo that you took, please do not upload it. Do you still want to continue?",
     "mobile-frontend-photo-upload-disabled": "No image is needed on this page.",
     "mobile-frontend-photo-upload-error": "Error, try again.",
     "mobile-frontend-photo-upload-error-file-type": "Please only upload images.",

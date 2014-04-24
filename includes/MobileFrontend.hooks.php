@@ -767,7 +767,7 @@ class MobileFrontendHooks {
 		$mobileEventLoggingSchemas = array(
 			'mobile.uploads.schema' => array(
 				'schema' => 'MobileWebUploads',
-				'revision' => 7967082,
+				'revision' => 8209043,
 			),
 			'mobile.watchlist.schema' => array(
 				'schema' => 'MobileBetaWatchlist',

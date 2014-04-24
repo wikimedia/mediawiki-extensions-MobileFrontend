@@ -232,6 +232,7 @@
 	"mobile-frontend-photo-upload": "This appears on pages which have no photos and is a call to action to add the first image",
 	"mobile-frontend-photo-upload-anon": "Appears when an anonymous user clicks on the image upload button and without CTA enabled.\n{{Related|Mobile-frontend-login}}",
 	"mobile-frontend-photo-upload-comment": "Comment associated with the upload of an image",
+	"mobile-frontend-photo-upload-copyvio": "A message warning the user that the image they are trying to upload has been detected as a possible copyright violation.",
 	"mobile-frontend-photo-upload-disabled": "Appears when the user clicks on the image upload button when the page doesn't need an image.",
 	"mobile-frontend-photo-upload-error": "Text that displays when an image fails to upload",
 	"mobile-frontend-photo-upload-error-file-type": "Text that displays when user tries to preview something that cannot be rendered in an img tag (e.g. mp3 or video)",

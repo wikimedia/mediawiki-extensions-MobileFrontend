@@ -56,3 +56,7 @@ end
 Then(/^I see an upload progress bar$/) do
   on(ArticlePage).progress_header_element.should be_visible
 end
+
+When(/^I upload file "(.*?)"$/) do |file_name|
+  on(UploadPage).select_file = File.join(Dir.pwd, "features", "support", file_name)
+end
