@@ -115,18 +115,31 @@
 						url: self.imageUrl
 					} );
 				}
-			} ).fail( function( err, msg ) {
+			} ).fail( function( err, statusMessage, httpErrorThrown ) {
 				var errMsg;
 
 				if ( err.type === 'abusefilter' ) {
 					self.progressPopup.showAbuseFilter( err.details.type, err.details.message );
 				} else {
 					self.progressPopup.hide( true );
-					popup.show( msg || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
-
-					errMsg = err.stage + '/' + err.type;
-					if ( typeof err.details === 'string' ) {
-						errMsg += '/' + err.details;
+					popup.show( statusMessage || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
+					// If there is error information in API response, report that in the log
+					if ( err.stage !== undefined || err.type !== undefined ) {
+						errMsg = err.stage + '/' + err.type;
+						if ( typeof err.details === 'string' ) {
+							errMsg += '/' + err.details;
+						}
+					// Otherwise, record the stage as 'unknown' and record the type as the
+					// status message ("timeout", "error", "abort", etc. ) and include any
+					// HTTP error that was thrown.
+					} else {
+						errMsg = 'unknown';
+						if ( statusMessage ) {
+							errMsg += '/' + statusMessage;
+							if ( httpErrorThrown ) {
+								errMsg += '/' + httpErrorThrown;
+							}
+						}
 					}
 					self.log( { action: 'error', errorText: errMsg } );
 				}
