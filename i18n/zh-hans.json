@@ -65,7 +65,7 @@
 	"mobile-frontend-donate-photo-first-upload-success": "成功！感谢你的首次贡献！",
 	"mobile-frontend-donate-photo-upload-success": "成功！你的图像现在可以在{{SITENAME}}使用！",
 	"mobile-frontend-drawer-cancel": "取消",
-	"mobile-frontend-edit-login": "帮助改善页面$1。",
+	"mobile-frontend-edit-login": "帮助改善$1页面。",
 	"mobile-frontend-edit-login-action": "登录以编辑。",
 	"mobile-frontend-edit-signup-action": "注册以编辑。",
 	"mobile-frontend-editor-abusefilter-disallow": "因为我们检测到的问题此次编辑无法保存。",

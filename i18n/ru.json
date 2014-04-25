@@ -226,6 +226,7 @@
 	"mobile-frontend-photo-upload": "Добавить на эту страницу изображение",
 	"mobile-frontend-photo-upload-anon": "Пожалуйста, представьтесь системе, чтобы добавить изображение на эту страницу.",
 	"mobile-frontend-photo-upload-comment": "Добавлено изображение на страницу",
+	"mobile-frontend-photo-upload-copyvio": "Внимание! Это изображение выглядит подозрительно. Если это не фотография, которую вы сделали сами, пожалуйста, не загружайте её. Вы все ещё хотите продолжить?",
 	"mobile-frontend-photo-upload-disabled": "Для этой страницы не нужно изображение.",
 	"mobile-frontend-photo-upload-error": "Ошибка, попробуйте заново.",
 	"mobile-frontend-photo-upload-error-file-type": "Пожалуйста, загружайте только изображения.",

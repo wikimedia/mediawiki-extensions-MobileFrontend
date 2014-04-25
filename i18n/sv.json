@@ -218,6 +218,7 @@
 	"mobile-frontend-photo-upload": "Lägg till en bild på denna sida",
 	"mobile-frontend-photo-upload-anon": "Var god logga in för att lägga till en bild på denna sida.",
 	"mobile-frontend-photo-upload-comment": "Lade till bild på sidan",
+	"mobile-frontend-photo-upload-copyvio": "Varning! Detta foto ser misstänkt ut. Om det inte är ett foto du tagit, ladda inte upp det. Vill du fortfarande fortsätta?",
 	"mobile-frontend-photo-upload-disabled": "Det behövs ingen bild på denna sida.",
 	"mobile-frontend-photo-upload-error": "Fel, försök igen.",
 	"mobile-frontend-photo-upload-error-file-type": "Var god ladda upp bara bilder.",
