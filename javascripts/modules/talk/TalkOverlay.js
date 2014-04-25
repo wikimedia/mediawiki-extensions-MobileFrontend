@@ -56,15 +56,13 @@
 				this._super( options );
 			},
 			postRender: function( options ) {
-				var self = this,
-					$add = this.$( 'button.add' ),
+				var $add = this.$( 'button.add' ),
 					page = options.page;
 
 				this._super( options );
 				if ( !user.isAnon() ) {
 					$add.click( function() {
 						var overlay = new TalkSectionAddOverlay( {
-							parent: self,
 							title: options.title
 						} );
 						overlay.show();
@@ -82,7 +80,6 @@
 						},
 						section = id === 0 ? leadSection : page.getSubSection( id ),
 						childOverlay = new TalkSectionOverlay( {
-							parent: self,
 							title: page.title,
 							section: section
 						} );

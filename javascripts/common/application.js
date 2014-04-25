@@ -157,11 +157,11 @@
 					// special case when we're at the beginning of the page and many
 					// browsers (e.g. Android 2.x) return wrong window height because
 					// of the URL bar
-					$viewport.add( '.mw-mf-overlay' ).height( '100%' );
+					$viewport.add( '.overlay' ).height( '100%' );
 				} else {
 					// keep expanding the viewport until the end of the page reached
 					// #notification has bottom: 0 and sticks to the end of the viewport
-					$viewport.add( '.mw-mf-overlay' ).height( scrollBottom );
+					$viewport.add( '.overlay' ).height( scrollBottom );
 				}
 			} );
 		}

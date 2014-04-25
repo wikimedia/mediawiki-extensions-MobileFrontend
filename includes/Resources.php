@@ -682,28 +682,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 		),
 		'scripts' => array(
-			// @todo FIXME: remove when all new overlays moved to stable
 			'javascripts/common/Overlay.js',
-
-			'javascripts/common/OverlayNew.js',
 			'javascripts/common/LoadingOverlayNew.js',
 		),
 		'messages' => array(
 			'mobile-frontend-overlay-close',
 			'mobile-frontend-overlay-continue',
-			// @todo FIXME: remove when all new overlays moved to stable
-			'mobile-frontend-overlay-escape',
 		),
 		'templates' => array(
 			'OverlayNew',
 			'LoadingOverlay',
-			// @todo FIXME: remove when all new overlays moved to stable
-			'overlay',
 		),
 		'styles' => array(
 			'less/common/OverlayNew.less',
-			// @todo FIXME: remove when all new overlays moved to stable
-			'less/common/overlays.less',
 		)
 	),
 
