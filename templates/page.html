@@ -4,8 +4,9 @@
 <div class="pre-content">
 	<h1 id="section_0">{{displayTitle}}</h1>
 	<ul id="page-actions" class="hlist">
-		<li id="ca-edit"></li><li id="ca-upload">
-		</li><li id="ca-talk" class="{{#isTalkPage}}selected{{/isTalkPage}}"><a href="{{talkLink}}" id="talk">{{talkLabel}}</a>
+		<li id="ca-edit" class="icon icon-edit icon-32px"></li><li id="ca-upload" class="icon icon-32px">
+		</li><li id="ca-talk"
+			class="{{#isTalkPage}}selected{{/isTalkPage}} icon icon-32px icon-talk"><a href="{{talkLink}}" id="talk">{{talkLabel}}</a>
 		</li><li id="ca-watch"></li>
 	</ul>
 </div>
@@ -14,7 +15,7 @@
 	{{#sections}}
 	<h2 data-id="{{id}}">
 		<span id="{{anchor}}">{{{line}}}</span>
-		<a href="#editor/{{id}}" data-section="{{id}}" class="edit-page">{{editLabel}}</a>
+		<a href="#editor/{{id}}" data-section="{{id}}" class="edit-page icon icon-edit enabled icon-32px">{{editLabel}}</a>
 	</h2>
 	<div
 		data-references="{{isReferences}}"
@@ -24,13 +25,19 @@
 	{{#inBetaOrAlpha}}
 	{{#hasLanguages}}
 	<div id="page-secondary-actions">
-		<a href="{{languageUrl}}" class="mw-ui-button mw-ui-progressive button languageSelector border-box">{{languageLabel}}</a>
+		<a href="{{languageUrl}}"
+			class="mw-ui-button mw-ui-progressive button languageSelector border-box icon icon-32px icon-text">
+			{{languageLabel}}
+		</a>
 	</div>
 	{{/hasLanguages}}
 	{{/inBetaOrAlpha}}
 	{{^inBetaOrAlpha}}
 	{{#hasLanguages}}
-	<a href="{{languageUrl}}" class="mw-ui-button mw-ui-progressive button languageSelector border-box">{{languageLabel}}</a>
+	<a href="{{languageUrl}}"
+		class="mw-ui-button mw-ui-progressive button languageSelector border-box icon icon-32px icon-text">
+		{{languageLabel}}
+	</a>
 	{{/hasLanguages}}
 	{{/inBetaOrAlpha}}
 </div>

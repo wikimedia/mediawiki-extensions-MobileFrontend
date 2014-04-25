@@ -50,12 +50,12 @@
 								} )[0].thumbnail;
 								if ( thumb ) {
 									options.imageUrl = thumb.source;
-									options.imgClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
+									options.imgClass = thumb.width > thumb.height ? 'icon icon-max-y' : 'icon icon-max-x';
 								} else {
-									options.imgClass = 'needsPhoto';
+									options.imgClass = 'needsPhoto icon icon-max-x';
 								}
 							} else {
-								options.imgClass = 'needsPhoto';
+								options.imgClass = 'needsPhoto icon icon-max-x';
 							}
 							loader.hide();
 							self.render( options ).show();

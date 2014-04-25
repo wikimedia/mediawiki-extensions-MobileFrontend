@@ -54,7 +54,6 @@
 			vertical-align: middle;
 
 			&.list-thumb-placeholder {
-				.background-size( 32px, auto );
 				padding: @captionPadding 0;
 				background-color: @grayLightest;
 				min-height: @wgMFThumbnailTiny;
@@ -83,12 +82,13 @@
 		clear: both;
 		padding: 2em 0 0;
 
-		.talk {
+		.icon-talk-blue {
 			margin-top: 1.5em;
 			color: @blueBase;
 			padding-left: 40px;
-			background: url(images/profile/talk.png) left 10px center no-repeat;
-			.background-size( 24px, auto );
+			.background-image('images/profile/talk.png');
+			background-color: #FFF;
+			background-position: left 10px center;
 		}
 	}
 }
@@ -103,6 +103,7 @@
 			.listThumb {
 
 				&.list-thumb-placeholder {
+					// FIXME: Make this a generic responsive class in icons.less
 					.background-size( 64px, auto );
 					min-height: @wgMFThumbnailSmall;
 				}

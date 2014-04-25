@@ -113,7 +113,7 @@
 					}
 
 					// FIXME: Move this code to template when moved from beta to stable
-					$badge = $( '<a href="#" class="user-button">' ).appendTo( this.$el );
+					$badge = $( '<a href="#" class="user-button icon icon-32px">' ).appendTo( this.$el );
 					$( '<span>' ).addClass( className ).text( badgeText ).appendTo( $badge );
 				}
 

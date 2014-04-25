@@ -36,7 +36,7 @@ class MobilePage {
 
 	static function getPlaceHolderThumbnailHtml( $className ) {
 		return Html::element( 'div', array(
-			'class' => 'listThumb list-thumb-placeholder ' . $className,
+			'class' => 'listThumb list-thumb-placeholder icon icon-32px ' . $className,
 		) );
 	}
 
@@ -71,8 +71,8 @@ class MobilePage {
 				if ( $thumb && $thumb->getUrl() ) {
 					$className = 'listThumb ';
 					$className .= $thumb->getWidth() > $thumb->getHeight()
-						? 'listThumbH'
-						: 'listThumbV';
+						? 'icon icon-max-y'
+						: 'icon icon-max-x';
 					$props = array(
 						'class' => $className,
 					);

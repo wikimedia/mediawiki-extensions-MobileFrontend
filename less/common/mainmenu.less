@@ -54,6 +54,58 @@
 		}
 	}
 
+	li.icon-home a,
+	// FIXME: Remove above when cache clear and weaken below
+	a.icon-home {
+		.background-image('images/menu/home.png');
+	}
+
+	li.icon-random a,
+	// FIXME: Remove above when cache clear and weaken below
+	a.icon-random {
+		.background-image('images/menu/random.png');
+	}
+
+	li.icon-watchlist a,
+	// FIXME: Remove above when cache clear and weaken below
+	a.icon-watchlist {
+		.background-image('images/menu/watchlist.png');
+	}
+
+	li.icon-uploads a,
+	// FIXME: Remove above when cache clear and weaken below
+	a.icon-uploads {
+		.background-image('images/menu/uploads.png');
+	}
+
+	li.icon-nearby a,
+	// FIXME: Remove above when cache clear and weaken below
+	a.icon-nearby {
+		.background-image('images/menu/nearby.png');
+	}
+
+	li.icon-settings a,
+	// FIXME: Remove above when cache clear and weaken below
+	a.icon-settings {
+		.background-image('images/menu/settings.png');
+	}
+
+	.icon-secondary-logout {
+		// FIXME: Kill this line when cache clears alongside rules in icons.less
+		background-position: center center;
+		.background-image('images/menu/loginout.png');
+	}
+
+	.icon-profile {
+		.background-image('images/menu/user.png');
+	}
+
+	li.icon-anon a,
+	// FIXME: Remove above when cache clear and weaken below
+	a.icon-anon {
+		.background-image('images/menu/anon.png');
+	}
+
 	li {
 		position: relative; // ensure the logout link in beta can be position absolute
 		font-size: 1.2em;
@@ -67,16 +119,12 @@
 			margin-left: -@menuBorder;
 		}
 
-		// for beta logout button
 		.icon-secondary {
 			border: none;
 			position: absolute;
 			right: 0;
 			top: 0;
-			background-position: center center;
-			background-size: 18px 18px;
-			text-indent: -999px;
-			overflow: hidden;
+			bottom: 0;
 			padding-right: 0;
 			width: 0; // rely on padding
 			border-left: 1px solid #717171;
@@ -91,50 +139,10 @@
 			display: block;
 			padding: 13px 10px 11px 34px;
 			line-height: 22px;
-			background-repeat: no-repeat;
-			.background-size(24px, 24px);
-			background-position: left center;
 			margin-left: 9px;
 			&:hover {
 				text-decoration: none;
 			}
-		}
-
-		&.icon-home a {
-			.background-image('images/menu/home.png');
-		}
-
-		&.icon-random a {
-			.background-image('images/menu/random.png');
-		}
-
-		&.icon-watchlist a {
-			.background-image('images/menu/watchlist.png');
-		}
-
-		&.icon-uploads a {
-			.background-image('images/menu/uploads.png');
-		}
-
-		&.icon-nearby a {
-			.background-image('images/menu/nearby.png');
-		}
-
-		&.icon-settings a {
-			.background-image('images/menu/settings.png');
-		}
-
-		&.icon-user .icon-secondary-logout,
-		&.icon-loginout a {
-			.background-image('images/menu/loginout.png');
-		}
-
-		&.icon-user a {
-			.background-image('images/menu/user.png');
-		}
-
-		&.icon-anon a {
-			.background-image('images/menu/anon.png');
 		}
 	}
 

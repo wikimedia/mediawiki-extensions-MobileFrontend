@@ -1,5 +1,7 @@
 <?php
 class MinervaTemplate extends BaseTemplate {
+	// FIXME: Remove variable when secondary page actions menu moves to stable
+	protected $languageButtonClassName = 'mw-ui-button mw-ui-progressive button languageSelector';
 	/**
 	 * @var Boolean
 	 */
@@ -122,7 +124,7 @@ class MinervaTemplate extends BaseTemplate {
 			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 
 			echo Html::element( 'a', array(
-				'class' => 'mw-ui-button mw-ui-progressive button languageSelector border-box',
+				'class' => $this->languageButtonClassName,
 				'href' => $languageUrl
 			), $languageLabel );
 		}

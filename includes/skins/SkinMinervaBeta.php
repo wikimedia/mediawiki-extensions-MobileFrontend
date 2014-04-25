@@ -1,6 +1,8 @@
 <?php
 
 class SkinMinervaBeta extends SkinMinerva {
+	// FIXME: Kill use of this variable when notification drawer goes to stable
+	protected $echoButtonClass = 'user-button icon icon-32px main-header-button';
 	public $template = 'MinervaTemplateBeta';
 	protected $mode = 'beta';
 

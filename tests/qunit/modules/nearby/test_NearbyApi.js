@@ -44,9 +44,9 @@ QUnit.test( '#getPages', 6, function( assert ) {
 	m.getPages( { latitude: 37.786825199999996, longitude: -122.4 } ).done( function( pages ) {
 		assert.strictEqual( pages.length, 3 );
 		assert.strictEqual( pages[0].title, 'The Montgomery (San Francisco)' );
-		assert.strictEqual( pages[0].pageimageClass, 'listThumbV' );
+		assert.strictEqual( pages[0].pageimageClass, 'icon icon-max-x' );
 		assert.strictEqual( pages[2].title, 'W San Francisco' );
-		assert.strictEqual( pages[2].pageimageClass, 'needsPhoto' );
+		assert.strictEqual( pages[2].pageimageClass, 'needsPhoto icon icon-max-x' );
 		assert.strictEqual( pages[2].dist, 23.376927175788786 );
 	} );
 } );

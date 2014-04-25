@@ -138,6 +138,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'skins.minerva.content.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/common.less',
+			'less/common/icons.less',
 			'less/common/typography.less',
 			'less/modules/toggle.less',
 			'less/common/hacks.less',
@@ -1074,6 +1075,7 @@ $wgMobileSpecialPageModules = array(
 		),
 		'skinStyles' => array(
 			'vector' => 'less/desktop/special/nearby.less',
+			'monobook' => 'less/desktop/special/nearby.less',
 		),
 	),
 

@@ -50,7 +50,7 @@
 		if ( $page.find( 'h1' ).length > 0 ) {
 			tagName = 'h1';
 		}
-		$page.find( tagName ).addClass( 'section_heading' );
+		$page.find( tagName ).addClass( 'section_heading icon icon-text icon-15px' );
 		$headings = $page.find( '.section_heading' );
 		$headings.next( 'div' ).addClass( 'content_block' );
 

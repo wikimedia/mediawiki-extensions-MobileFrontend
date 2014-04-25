@@ -13,23 +13,11 @@ body.navigation-full-screen {
 	}
 }
 
-#mw-mf-page-left ul {
-	li {
-		// low-res icons for old phones that don't support background-size
-		&.icon-home a {
-			background-image: url(images/menu/lowres/home.png);
-		}
-
-		&.icon-random a {
-			background-image: url(images/menu/lowres/random.png);
-		}
-
-		&.icon-settings a {
-			background-image: url(images/menu/lowres/settings.png);
-		}
-
-		&.icon-loginout a {
-			background-image: url(images/menu/lowres/loginout.png);
+.client-nojs {
+	#mw-mf-page-left {
+		.icon {
+			background-image: none;
+			padding-left: 0;
 		}
 	}
 }

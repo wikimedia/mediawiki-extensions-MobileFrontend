@@ -11,9 +11,11 @@
 			if ( page.thumbnail ) {
 				thumb = page.thumbnail;
 				page.listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
-				page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
+				// Note: .icon class is added in the template
+				page.pageimageClass = thumb.width > thumb.height ? 'icon-max-y' : 'icon-max-x';
 			} else {
-				page.pageimageClass = 'needsPhoto';
+				// Note: .icon class is added in the template
+				page.pageimageClass = 'needsPhoto icon-max-x';
 			}
 			pages[page.title] = page;
 		} );

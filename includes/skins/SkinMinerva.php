@@ -6,6 +6,8 @@
  * @ingroup Skins
  */
 class SkinMinerva extends SkinTemplate {
+	// FIXME: Kill use of this variable when notification drawer goes to stable
+	protected $echoButtonClass = 'user-button main-header-button';
 	/**
 	 * Describes whether reader is on a mobile device
 	 * @var bool $isMobileMode
@@ -121,7 +123,7 @@ class SkinMinerva extends SkinTemplate {
 		return Html::element( 'a', array(
 			'href' => '#editor/' . $section,
 			'data-section' => $section,
-			'class' => 'edit-page'
+			'class' => 'edit-page icon icon-32px icon-edit enabled'
 		), $message );
 	}
 
@@ -206,7 +208,7 @@ class SkinMinerva extends SkinTemplate {
 						'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
 						'href' => $notificationsTitle->getLocalURL(
 							array( 'returnto' => $currentTitle->getPrefixedText() ) ),
-						'class' => 'user-button main-header-button',
+						'class' => $this->echoButtonClass,
 						'id'=> 'secondary-button',
 					) ) .
 					Html::element(
@@ -244,34 +246,48 @@ class SkinMinerva extends SkinTemplate {
 
 		$items = array(
 			'watchlist' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
-				'href' => $this->getUser()->isLoggedIn() ?
-					$watchTitle->getLocalUrl( $watchlistQuery ) :
-					$this->getLoginUrl( array( 'returnto' => $watchTitle ) ),
-				'class' => 'icon-watchlist',
+				'links' => array(
+					array(
+						'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
+						'href' => $this->getUser()->isLoggedIn() ?
+							$watchTitle->getLocalUrl( $watchlistQuery ) :
+							$this->getLoginUrl( array( 'returnto' => $watchTitle ) ),
+						'class' => 'icon-watchlist icon icon-text',
+					),
+				),
 			)
 		);
 		if ( $this->isMobileMode ) {
 			$items['uploads'] = array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
-				'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
-					$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
-				'class' => 'icon-uploads jsonly',
+				'links' => array(
+					array(
+						'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
+						'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
+							$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
+						'class' => 'icon-uploads jsonly icon icon-text',
+					),
+				),
 			);
 			$items['settings'] = array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
-					getLocalUrl( array( 'returnto' => $returnToTitle ) ),
-				'class' => 'icon-settings',
+				'links' => array(
+					array(
+						'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
+						'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
+							getLocalUrl( array( 'returnto' => $returnToTitle ) ),
+						'class' => 'icon-settings icon icon-text',
+					),
+				),
 			);
 		} else {
 			$prefUrl = SpecialPage::getTitleFor( 'Preferences' )->
 				getLocalUrl( array( 'returnto' => $returnToTitle ) );
 			$items['preferences'] = array(
-				'text' => wfMessage( 'preferences' )->escaped(),
-				'href' => $this->getUser()->isLoggedIn() ? $prefUrl :
-					$this->getLoginUrl( array( 'returnto' => $prefUrl ) ),
-				'class' => 'icon-settings',
+				'links' => array(
+					'text' => wfMessage( 'preferences' )->escaped(),
+					'href' => $this->getUser()->isLoggedIn() ? $prefUrl :
+						$this->getLoginUrl( array( 'returnto' => $prefUrl ) ),
+					'class' => 'icon-settings icon icon-text',
+				),
 			);
 		}
 		$items['auth'] = $this->getLogInOutLink();
@@ -309,21 +325,33 @@ class SkinMinerva extends SkinTemplate {
 
 		$items = array(
 			'home' => array(
-				'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
-				'href' => Title::newMainPage()->getLocalUrl(),
-				'class' => 'icon-home',
+				'links' => array(
+					array(
+						'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
+						'href' => Title::newMainPage()->getLocalUrl(),
+						'class' => 'icon-home icon icon-text',
+					),
+				),
 			),
 			'random' => array(
-				'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl(
-					array( 'campaign' => 'random' ) ),
-				'class' => 'icon-random',
-				'id' => 'randomButton',
+				'links' => array(
+					array(
+						'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
+						'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl(
+							array( 'campaign' => 'random' ) ),
+						'class' => 'icon-random icon icon-text',
+						'id' => 'randomButton',
+					),
+				),
 			),
 			'nearby' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
-				'class' => 'icon-nearby jsonly',
+				'links' => array(
+					array(
+						'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
+						'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
+						'class' => 'icon-nearby jsonly icon icon-text',
+					),
+				),
 			),
 		);
 		if ( !$wgMFNearby ) {
@@ -387,15 +415,14 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => $username,
 						'href' => SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
-						'class' => 'icon-profile truncated-text',
+						'class' => 'icon icon-profile truncated-text icon-text',
 					),
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
 						'href' => $url,
-						'class' => 'icon-secondary icon-secondary-logout',
+						'class' => 'icon icon-16px icon-secondary icon-secondary-logout',
 					),
 				),
-				'class' => 'icon-user',
 			);
 		} else {
 			// note returnto is not set for mobile (per product spec)
@@ -406,9 +433,13 @@ class SkinMinerva extends SkinTemplate {
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = $this->getLoginUrl( $query );
 			$loginLogoutLink = array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
-				'href' => $url,
-				'class' => 'icon-anon',
+				'links' => array(
+					array(
+						'text' => wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
+						'href' => $url,
+						'class' => 'icon icon-anon icon-text',
+					),
+				),
 			);
 		}
 
@@ -536,7 +567,7 @@ class SkinMinerva extends SkinTemplate {
 			Html::element( 'a', array(
 			'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' ),
 			'href' => $url,
-			'class' => 'main-header-button',
+			'class' => 'main-header-button icon',
 			'id'=> 'mw-mf-main-menu-button',
 			) )
 		);
@@ -596,14 +627,17 @@ class SkinMinerva extends SkinTemplate {
 		$actions = $tpl->data['content_navigation']['actions'];
 
 		// empty placeholder for edit and photos which both require js
-		$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '' );
-		$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '' );
+		$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '',
+			'class' => 'icon icon-32px icon-edit' );
+		$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
+			'class' => 'icon icon-32px' );
 
 		// FIXME [core]: This seems unnecessary..
 		$subjectId = $title->getNamespaceKey( '' );
 		$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
 		if ( isset( $namespaces[$talkId] ) ) {
 			$menu['talk'] = $namespaces[$talkId];
+			$menu['talk']['class'] = 'icon icon-32px icon-talk';
 		}
 
 		if ( isset( $menu['talk'] ) ) {
@@ -618,7 +652,7 @@ class SkinMinerva extends SkinTemplate {
 
 		$watchTemplate = array(
 			'id' => 'ca-watch',
-			'class' => 'watch-this-article',
+			'class' => 'watch-this-article icon icon-32px',
 		);
 		// standardise watch article into one menu item
 		if ( isset( $actions['watch'] ) ) {

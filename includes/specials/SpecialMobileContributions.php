@@ -18,7 +18,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	protected function getHeaderBarLink( $title ) {
 		return Html::element( 'a',
 			array(
-				'class' => 'mw-mf-user',
+				'class' => 'mw-mf-user icon icon-16px icon-text',
 				'href' => SpecialPage::getTitleFor( 'UserProfile', $title->getText() )->getLocalUrl(),
 			),
 			$title->getText() );

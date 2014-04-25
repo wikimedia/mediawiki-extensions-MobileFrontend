@@ -1,3 +1,4 @@
+@import "mediawiki.mixins";
 @import "minerva.variables";
 @import "minerva.mixins";
 
@@ -9,12 +10,11 @@
 	padding-left: 44px;
 	text-align: left; /* override text-align center - chrome not clickable */
 
-	// separate <div> to avoid overriding button's gradient
-	div {
+	.icon {
+		.background-image('../images/camera.png');
 		// Note: Use left to ensure it flips in RTL mode
-		background: url(../images/camera.png) left 45% no-repeat;
+		background-position: left 45%;
 		margin: 0 10px;
-		.background-size( 24px, auto );
 	}
 
 	input {
