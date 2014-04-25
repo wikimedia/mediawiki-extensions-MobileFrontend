@@ -108,18 +108,11 @@ When(/^I click the browser back button$/) do
 end
 
 When(/^I say OK in the confirm dialog$/) do
-  # FIXME: we don't specify the action that triggers the dialog in the block so
-  # we need to wait just in case the browser didn't have enough time to show
-  # the dialog
-  sleep 1
-  on(ArticlePage).confirm(true) {}
+  on(ArticlePage).confirm(true) do
+  end
 end
 
 When(/^I say Cancel in the confirm dialog$/) do
-  # FIXME: we don't specify the action that triggers the dialog in the block so
-  # we need to wait just in case the browser didn't have enough time to show
-  # the dialog
-  sleep 1
   on(ArticlePage).confirm(false) {}
 end
 
