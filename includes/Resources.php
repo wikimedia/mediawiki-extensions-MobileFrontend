@@ -525,25 +525,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 		),
 		'styles' => array(
-			'less/modules/mediaViewer.less',
 			'less/common/mainmenuAnimation.less',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
-			'javascripts/modules/mediaViewer.js',
+			'javascripts/modules/mediaViewer/init.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
 			'javascripts/modules/languages/preferred.js',
 		),
-		'templates' => array(
-			'modules/ImageOverlay',
-		),
 		'position' => 'bottom',
-		'messages' => array(
-			// mediaViewer.js
-			'mobile-frontend-media-details',
-			'mobile-frontend-media-license-link',
-		),
 	),
 
 	'mobile.search' => $wgMFMobileResourceBoilerplate + array(
@@ -624,6 +615,30 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/externals/epoch.js',
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/lazyload.js',
+		),
+	),
+
+	'mobile.mediaViewer' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+			// for Api.js
+			'mobile.startup',
+			'mobile.templates',
+		),
+		'styles' => array(
+			'less/modules/mediaViewer.less',
+		),
+		'scripts' => array(
+			'javascripts/modules/mediaViewer/ImageApi.js',
+			'javascripts/modules/mediaViewer/ImageOverlay.js',
+		),
+		'templates' => array(
+			'modules/ImageOverlay',
+		),
+		'messages' => array(
+			// mediaViewer.js
+			'mobile-frontend-media-details',
+			'mobile-frontend-media-license-link',
 		),
 	),
 
