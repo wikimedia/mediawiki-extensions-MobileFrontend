@@ -1,14 +1,14 @@
 ( function( M, $ ) {
 
 	var
-		Overlay = M.require( 'Overlay' ),
+		Overlay = M.require( 'OverlayNew' ),
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		buttonMsg = mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
 		UploadTutorial;
 
 	UploadTutorial = Overlay.extend( {
 		template: M.template.get( 'uploads/UploadTutorial' ),
-		className: 'mw-mf-overlay carousel tutorial',
+		className: 'overlay carousel tutorial',
 
 		defaults: {
 			pages: [

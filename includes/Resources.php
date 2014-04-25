@@ -669,7 +669,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			// @todo FIXME: remove when all new overlays moved to stable
 			'javascripts/common/Overlay.js',
-			'javascripts/common/LoadingOverlay.js',
 
 			'javascripts/common/OverlayNew.js',
 			'javascripts/common/LoadingOverlayNew.js',
