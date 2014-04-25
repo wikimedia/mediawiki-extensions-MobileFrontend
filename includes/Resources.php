@@ -447,16 +447,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 		),
 		'templates' => array(
-			'keepgoing/KeepGoingDrawer',
 			'keepgoing/KeepGoingOverlay',
 		),
 		'messages' => array(
-			'mobilefrontend-keepgoing-suggest',
-			'mobilefrontend-keepgoing-suggest-again',
 			'mobilefrontend-keepgoing-cancel',
-			'mobilefrontend-keepgoing-ask',
-			'mobilefrontend-keepgoing-ask-first',
-			'mobilefrontend-keepgoing-explain',
 			'mobilefrontend-keepgoing-saved-title',
 			'mobilefrontend-keepgoing-links-title',
 			'mobilefrontend-keepgoing-links-ask-first',
@@ -466,8 +460,26 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/loggingSchemas/mobileWebCta.js',
-			'javascripts/modules/keepgoing/KeepGoingDrawer.js',
 			'javascripts/modules/keepgoing/KeepGoingOverlay.js',
+		),
+	),
+
+	'mobile.random' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.templates',
+			// Drawer.js
+			'mobile.stable.common',
+		),
+		'templates' => array(
+			'modules/random/RandomDrawer',
+		),
+		'messages' => array(
+			'mobilefrontend-random-tryanother',
+			'mobilefrontend-random-explain',
+			'mobilefrontend-random-cancel',
+		),
+		'scripts' => array(
+			'javascripts/modules/random/RandomDrawer.js',
 		),
 	),
 
@@ -632,13 +644,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.beta',
 			'mobile.ajaxpages',
-			// For random.js
-			'mobile.keepgoing',
-		),
-		'messages' => array(
-			// for random.js
-			'mobilefrontend-random-explain',
-			'mobilefrontend-random-cancel',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-translator.js',

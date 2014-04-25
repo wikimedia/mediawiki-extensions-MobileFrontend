@@ -2,12 +2,11 @@
 	M.assertMode( [ 'alpha' ] );
 
 	if ( M.query.campaign === 'random' ) {
-		mw.loader.using( 'mobile.keepgoing', function() {
-			var KeepGoingDrawer = M.require( 'modules/keepgoing/KeepGoingDrawer' );
-			new KeepGoingDrawer( {
+		mw.loader.using( 'mobile.random', function() {
+			var RandomDrawer = M.require( 'modules/random/RandomDrawer' );
+			new RandomDrawer( {
 				campaign: 'random',
-				msg: mw.msg( 'mobilefrontend-random-explain' ),
-				cancel: mw.msg( 'mobilefrontend-random-cancel' )
+				heading: M.getCurrentPage().title
 			} );
 		} );
 	}
