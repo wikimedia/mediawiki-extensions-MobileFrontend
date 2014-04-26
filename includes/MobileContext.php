@@ -588,7 +588,6 @@ class MobileContext extends ContextSource {
 
 		$parsedUrl = wfParseUrl( $url );
 		$this->updateMobileUrlHost( $parsedUrl );
-		$this->updateMobileUrlQueryString( $parsedUrl );
 		if ( $forceHttps ) {
 			$parsedUrl['scheme'] = 'https';
 			$parsedUrl['delimiter'] = '://';
@@ -703,15 +702,6 @@ class MobileContext extends ContextSource {
 		// the "+ 1" removes the preceding "/" from the path sans $wgScriptPath
 		$pathSansScriptPath = substr( $parsedUrl[ 'path' ], $scriptPathLength + 1 );
 		$parsedUrl[ 'path' ] = $wgScriptPath . $templatePathSansToken . $pathSansScriptPath;
-	}
-
-	/**
-	 * Placeholder for potential future use of query string handling
-	 * FIXME: Is this function needed?
-	 * @param array $parsedUrl
-	 */
-	protected function updateMobileUrlQueryString( &$parsedUrl ) {
-		return;
 	}
 
 	/**

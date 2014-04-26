@@ -22,7 +22,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param Title $title The title of the page that was edited
 	 * @fixme: Duplication with SpecialMobileWatchlist
 	 *
-	 * @return string: HTML code
+	 * @return string HTML code
 	 */
 	protected function formatComment( $comment, $title ) {
 		if ( $comment === '' ) {
@@ -38,7 +38,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	/**
 	 * Renders a date header when necessary.
 	 * FIXME: Juliusz won't like this function.
-	 * @param MWTimestamp date The date of the current item
+	 * @param string $date The date of the current item
 	 */
 	protected function renderListHeaderWhereNeeded( $date ) {
 		if ( !isset( $this->lastDate ) || $date !== $this->lastDate ) {
@@ -63,7 +63,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param string $diffLink url to the diff for the edit
 	 * @param string $username The username of the user that made the edit (absent if anonymous)
 	 * @param string $comment The edit summary
-	 * @param Title $title The title of the page that was edited
+	 * @param bool|Title $title The title of the page that was edited
 	 * @param bool $isAnon Is the edit anonymous?
 	 * @param int $bytes Net number of bytes changed
 	 * @param bool $isMinor Is the edit minor?

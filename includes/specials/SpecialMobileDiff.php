@@ -9,8 +9,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	private $prevRev;
 	/** @var Title */
 	private $targetTitle;
-	/** @var boolean */
-	private $useThanks = false;
 
 	public function __construct() {
 		parent::__construct( 'MobileDiff' );
@@ -28,8 +26,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Takes 2 ids/keywords and validates them returning respective revisions
 	 *
-	 * @param Array Array of revision ids currently limited to 2 elements
-	 * @return Array of previous and next revision. The next revision is null if
+	 * @param int[] $revids Array of revision ids currently limited to 2 elements
+	 * @return Revision[] Array of previous and next revision. The next revision is null if
 	 *   a bad parameter is passed
 	 */
 	public function getRevisionsToCompare( $revids ) {

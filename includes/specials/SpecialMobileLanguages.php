@@ -85,6 +85,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 * Generates a <li> element for a particular language/variant
 	 *
 	 * @param array $langObject Array of data about the language link
+	 * @return string
 	 */
 	private function makeLangListItem( $langObject ) {
 		$html = Html::openElement( 'li' ) .

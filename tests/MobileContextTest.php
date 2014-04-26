@@ -204,33 +204,6 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider updateMobileUrlQueryStringProvider
-	 */
-	public function testUpdateMobileUrlQueryString( $assert, $useFormat ) {
-		$testMethod = ( $assert ) ? 'assertTrue' : 'assertFalse';
-		$url = 'http://en.wikipedia.org/wiki/Article/?something=bananas';
-		if ( !empty( $useFormat ) ) $url .= "&useformat=" . $useFormat;
-		$context = MobileContext::singleton();
-		$context->setUseFormat( $useFormat );
-
-		$parsedUrl = wfParseUrl( $url );
-
-		$updateMobileUrlQueryString = self::getMethod( 'updateMobileUrlQueryString' );
-		$updateMobileUrlQueryString->invokeArgs( $context, array( &$parsedUrl ) );
-
-		$targetUrl = wfAssembleUrl( $parsedUrl );
-		$this->$testMethod( $url == $targetUrl, $targetUrl );
-	}
-
-	public function updateMobileUrlQueryStringProvider() {
-		return array(
-			array( true, 'mobile' ),
-			array( true, 'mobile-wap' ),
-			array( true, '' ),
-		);
-	}
-
-	/**
 	 * @dataProvider isFauxMobileDeviceProvider
 	 */
 	public function testIsFauxMobileDevice( $isFauxDevice, $msg, $useformat = null ) {
