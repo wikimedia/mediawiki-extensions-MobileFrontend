@@ -1,17 +1,6 @@
 ( function( M, $ ) {
 
-	var LanguageOverlay = M.require( 'languages/LanguageOverlay' ),
-		$cachedHeading = $( '#section_language' ), label;
-	// FIXME: Remove after 30 days.
-	if ( $cachedHeading.length > 0 ) {
-		label = $cachedHeading.text();
-		$( '<a class="mw-ui-button mw-ui-progressive button languageSelector">' ).
-			text( label ).
-			appendTo(
-				$( '<div id="page-secondary-actions"></div>' ).insertBefore( '#mw-mf-language-section' )
-			);
-		$( '#mw-mf-language-section' ).remove();
-	}
+	var LanguageOverlay = M.require( 'languages/LanguageOverlay' );
 
 	M.overlayManager.add( /^\/languages$/, function() {
 		var LoadingOverlay = M.require( 'LoadingOverlayNew' ),
