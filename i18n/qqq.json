@@ -212,7 +212,6 @@
 	"mobile-frontend-opt-in-explain": "Used as description for the \"Beta\" in [[Special:MobileOptions]], if the beta is not enabled.",
 	"mobile-frontend-overlay-close": "Text for the button in an overlay that, when clicked, dismisses the overlay.\n{{Identical|Close}}",
 	"mobile-frontend-overlay-continue": "Text for the button in an overlay that, when clicked, continues to the next screen or step.\n{{Identical|Continue}}",
-	"mobile-frontend-overlay-escape": "Text for the button to the left of search / an overlay that when clicked exits the overlay to the previous screen\n{{Identical|Go back}}",
 	"mobile-frontend-page-menu-contents": "table of contents link text in secondary menu.\n{{Identical|Content}}",
 	"mobile-frontend-page-menu-history": "history link text in secondary menu.\n{{Identical|History}}",
 	"mobile-frontend-page-menu-language-current": "the text of the language link text in secondary menu which when clicked allows the user to change the content language of a page\n\n{{optional}}",

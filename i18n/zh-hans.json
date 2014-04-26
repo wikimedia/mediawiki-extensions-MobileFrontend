@@ -213,7 +213,6 @@
 	"mobile-frontend-opt-in-explain": "加入测试版，你将可以使用实验特性，但可能遇到漏洞和问题。",
 	"mobile-frontend-overlay-close": "关闭",
 	"mobile-frontend-overlay-continue": "继续",
-	"mobile-frontend-overlay-escape": "返回",
 	"mobile-frontend-page-menu-contents": "目录",
 	"mobile-frontend-page-menu-history": "历史",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",

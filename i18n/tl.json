@@ -43,7 +43,6 @@
 	"mobile-frontend-off": "PATAYIN",
 	"mobile-frontend-on": "PAGANAHIN",
 	"mobile-frontend-opt-in-explain": "Sa pagsali sa beta, magkakaroon ka ng pagkanakakapunta sa mga tampok na ineeksperimento, na maaaring makipagsapalaran sa pagharap sa mga sira at mga suliranin.",
-	"mobile-frontend-overlay-escape": "Bumalik",
 	"mobile-frontend-page-menu-contents": "mga nilalaman",
 	"mobile-frontend-page-menu-history": "Kasaysayan",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",

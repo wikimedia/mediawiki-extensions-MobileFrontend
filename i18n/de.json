@@ -197,7 +197,6 @@
 	"mobile-frontend-opt-in-explain": "Durch die Teilnahme am Beta-Test erhältst du Zugriff auf experimentelle Funktionen, die allerdings auch Probleme und Fehler verursachen können.",
 	"mobile-frontend-overlay-close": "Schließen",
 	"mobile-frontend-overlay-continue": "Fortfahren",
-	"mobile-frontend-overlay-escape": "Zurück",
 	"mobile-frontend-page-menu-contents": "Inhalte",
 	"mobile-frontend-page-menu-history": "Versionsgeschichte",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",
