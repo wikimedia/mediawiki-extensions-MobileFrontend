@@ -233,10 +233,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $user->getOption( 'gender' ),
 			);
-			$inBeta = MobileContext::singleton()->isBetaGroupMember();
-			$userLink = $inBeta
-				? SpecialPage::getTitleFor( 'UserProfile', $user->getName() )
-				: $user->getUserPage();
+			$userLink = SpecialPage::getTitleFor( 'UserProfile', $user->getName() );
 			$output->addHtml(
 				Html::openElement( 'div', $attrs ) .
 				Linker::link(
