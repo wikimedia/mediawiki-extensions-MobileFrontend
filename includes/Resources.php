@@ -931,7 +931,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.language',
 			'mobile.templates',
 			'mobile.loggingSchemas',
-			// FIXME: Make Nearby view extend PageList
 			'mobile.pagelist.scripts',
 		),
 		'messages' => array(

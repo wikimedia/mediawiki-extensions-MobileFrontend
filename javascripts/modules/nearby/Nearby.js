@@ -1,29 +1,16 @@
 ( function( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
-		View = M.require( 'View' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		loader = new LoadingOverlay(),
+		PageList = M.require( 'modules/PageList' ),
 		Nearby;
 
 	/**
-	 * FIXME: Rewrite as extension of PageList class
 	 * @extends View
 	 * @class Nearby
 	 */
-	Nearby = View.extend( {
-		template: M.template.get( 'articleList' ),
-		/**
-		 * Renders an error in the existing view
-		 *
-		 * @param {String} type A string that identifies a particular type of error message
-		 */
-		renderError: function( type ) {
-			this.render( { error: this.errorMessages[ type ] } );
-		},
-		defaults: {
-			loadingMessage: mw.msg( 'mobile-frontend-nearby-loading' )
-		},
+	Nearby = PageList.extend( {
 		errorMessages: {
 			empty: {
 				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
@@ -46,67 +33,103 @@
 				guidance: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
 			}
 		},
-		loadFromCurrentLocation: function() {
-			var self = this;
+		getCurrentPosition: function() {
+			var result = $.Deferred();
 			if ( M.supportsGeoLocation() ) {
-				this.render( { showLoader: true } );
-				navigator.geolocation.getCurrentPosition( function( geo ) {
-					var lat = geo.coords.latitude, lng = geo.coords.longitude;
-					self.location = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268
-					self.render( { location: self.location } );
-					self.emit( 'end-load-from-current-location' );
+			navigator.geolocation.getCurrentPosition(
+				function( geo ) {
+					result.resolve( { latitude: geo.coords.latitude, longitude: geo.coords.longitude } );
 				},
 				function( err ) {
 					// see https://developer.mozilla.org/en-US/docs/Web/API/PositionError
 					if ( err.code === 1 ) {
-						self.renderError( 'permission' );
+						err = 'permission';
 					} else {
-						self.renderError( 'location' );
+						err = 'location';
 					}
-					self.emit( 'end-load-from-current-location' );
+					result.reject( err );
 				},
 				{
 					timeout: 10000,
 					enableHighAccuracy: true
 				} );
 			} else {
-				self.renderError( 'incompatible' );
+				result.reject( 'incompatible' );
 			}
+			return result;
 		},
 		initialize: function( options ) {
+			var self = this, _super = this._super;
+
+			options.loadingMessage = mw.msg( 'mobile-frontend-nearby-loading' );
+
 			this.range = options.range || mw.config.get( 'wgMFNearbyRange' ) || 1000;
-			if ( options.location ) {
-				this.location = options.location;
-			}
 			this.source = options.source || 'nearby';
-			this.api = new NearbyApi();
+			this.nearbyApi = new NearbyApi();
+
+			if ( options.errorType ) {
+				options.error = this.errorMessages[ options.errorType ];
+			}
+
+			// Re-run after api/geolocation request
+			if ( options.useCurrentLocation ) {
+				// Flush any existing list of pages
+				options.pages = [];
+
+				// Get some new pages
+				this.getCurrentPosition().done( function( coordOptions ) {
+					$.extend( options, coordOptions );
+					self._find( options ).done( function( options ) {
+						_super.call( self, options );
+					} );
+				} ).fail( function( errorType ) {
+					options.errorType = errorType;
+					_super.call( self, options );
+				} );
+			} else if ( options.latitude && options.longitude ) {
+				// Flush any existing list of pages
+				options.pages = [];
+
+				// Get some new pages
+				this._find( options ).done( function( options ) {
+					_super.call( self, options );
+				} );
+			}
+
+			// Run it once for loader etc
+			this._isLoading = true;
 			this._super( options );
 		},
-		preRender: function( options ) {
-			if ( options.pages && options.pages.length === 0 ) {
-				options.error = this.errorMessages.empty;
-			}
-		},
-		postRender: function( options ) {
-			var self = this;
-			if ( options.showLoader ) {
-				this.$( '.loading' ).show();
-			} else if ( !options.pages && !options.error && options.location ) {
-				this.$( '.loading' ).show();
-				this.api.getPages( options.location, this.range, options.exclude ).done( function( pages ) {
-					self.emit( 'searchResult', pages );
-					if ( pages.length > 0 ) {
-						self.render( { pages: pages } );
-					} else {
-						self.renderError( 'empty' );
-					}
+		_find: function( options ) {
+			var result = $.Deferred(), self = this;
+			if ( options.latitude && options.longitude ) {
+				this.nearbyApi.getPages( { latitude: options.latitude, longitude: options.longitude },
+					this.range, options.exclude ).done( function( pages ) {
+						options.pages = pages;
+						if ( pages && pages.length === 0 ) {
+							options.error = self.errorMessages.empty;
+						}
+						self._isLoading = false;
+						result.resolve( options );
 				} ).fail( function() {
-					self.renderError( 'server' );
+					self._isLoading = false;
+					options.error = self.errorMessages.server;
+					result.resolve( options );
 				} );
 			} else {
-				this.$( '.loading' ).hide();
-				this._postRenderLinks();
+				if ( options.errorType ) {
+					options.error = this.errorMessages[ options.errorType ];
+				}
+				result.resolve( options );
 			}
+			return result;
+		},
+		postRender: function( options ) {
+			if ( !this._isLoading ) {
+				this.$( '.loading' ).hide();
+			}
+			this._super( options );
+			this._postRenderLinks();
 		},
 		_postRenderLinks: function() {
 			var self = this;

@@ -30,7 +30,8 @@
 					range: 2000,
 					parentOverlay: this,
 					exclude: options.title,
-					location: { longitude: options.longitude, latitude: options.latitude },
+					longitude: options.longitude,
+					latitude: options.latitude,
 					el: this.$( '.container' )
 				} );
 			}

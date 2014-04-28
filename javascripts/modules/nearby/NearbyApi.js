@@ -123,6 +123,7 @@
 						page.longitude = coords.lon;
 						page.proximity = self._distanceMessage( page.dist );
 					}
+					page.id = page.pageid;
 					page.heading = page.title;
 					if ( exclude !== page.title ) {
 						return page;
