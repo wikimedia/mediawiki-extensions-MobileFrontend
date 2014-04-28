@@ -12,7 +12,9 @@ class MobileSpecialPage extends SpecialPage {
 	 */
 	protected $unstyledContent = true;
 
-	/* Executes the page when available in the current $mode */
+	/**
+	 * Executes the page when available in the current $mode
+	 */
 	public function executeWhenAvailable( $subPage ) {
 	}
 

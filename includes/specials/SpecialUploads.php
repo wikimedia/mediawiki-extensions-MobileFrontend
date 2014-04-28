@@ -13,7 +13,6 @@ class SpecialUploads extends MobileSpecialPage {
 		$this->setHeaders();
 		$output = $this->getOutput();
 		$output->addJsConfigVars( 'wgMFPhotoUploadEndpoint',  $wgMFPhotoUploadEndpoint );
-		$output->htmlClass = 'galleryPage';
 		$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
 		// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?

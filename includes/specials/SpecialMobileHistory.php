@@ -20,7 +20,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/**
 	 * Returns a list of query conditions that should be run against the revision table
 	 *
-	 * @return Array List of conditions
+	 * @return array List of conditions
 	 */
 	protected function getQueryConditions() {
 		$conds = array();
@@ -36,8 +36,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Gets HTML to place in the header bar
-	 * @param {Title} title: The page to link to
-	 * @return string: HTML representing the link in the header bar
+	 * @param Title $title The page to link to
+	 * @return string HTML representing the link in the header bar
 	 */
 	protected function getHeaderBarLink( $title ) {
 		return Html::element( 'a',

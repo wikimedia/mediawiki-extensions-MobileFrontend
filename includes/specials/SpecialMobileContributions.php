@@ -12,8 +12,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	/**
 	 * Gets HTML to place in the header bar
-	 * @param {Title} title: The page to link to
-	 * @return string: HTML representing the link in the header bar
+	 * @param Title $title The page to link to
+	 * @return string HTML representing the link in the header bar
 	 */
 	protected function getHeaderBarLink( $title ) {
 		return Html::element( 'a',

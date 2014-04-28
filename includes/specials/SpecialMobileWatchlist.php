@@ -6,6 +6,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	const VIEW_OPTION_NAME = 'mfWatchlistView';
 	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
 
+	/** @var string */
+	private $view;
+
 	public function __construct() {
 		parent::__construct( 'Watchlist' );
 	}
@@ -478,7 +481,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			return;
 		}
 
-		$output = $this->getOutput();
 		$user = $this->getUser();
 		$lang = $this->getLanguage();
 

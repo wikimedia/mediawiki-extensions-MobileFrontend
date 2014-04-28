@@ -14,10 +14,17 @@ class MobilePage {
 	 * @var Title: Title for page
 	 */
 	private $title;
+	/**
+	 * @var File
+	 */
 	private $file;
 	private $content;
 	private $usePageImages;
 
+	/**
+	 * @param Title $title
+	 * @param File|bool $file
+	 */
 	public function __construct( Title $title, $file = false ) {
 		$this->title = $title;
 		// @todo FIXME: check existence

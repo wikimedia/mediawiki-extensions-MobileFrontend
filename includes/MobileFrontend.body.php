@@ -9,8 +9,8 @@ class ExtMobileFrontend {
 	 * @param array $data The data to be recorded against the schema
 	 */
 	public static function eventLog( $schema, $revision, $data ) {
-		if ( function_exists( 'efLogServerSideEvent' ) ) {
-			efLogServerSideEvent( $schema, $revision, $data );
+		if ( is_callable( 'EventLogging::logEvent' ) ) {
+			EventLogging::logEvent( $schema, $revision, $data );
 		}
 	}
 
