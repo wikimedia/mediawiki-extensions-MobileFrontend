@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_ff73a8e2",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-29T23:05:28Z",
+      "side": 1,
+      "message": "This is kind of hacky... Is there no cleaner way of doing this?",
+      "revId": "e1102045e44698617a32c7eed7776fe568794bb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_ffb4c87d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 661,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-29T23:05:28Z",
+      "side": 1,
+      "message": "Please add details about caveats (IP blocks, titleblacklist and whatever else that might not be included in the value of this property) to the docs.",
+      "revId": "e1102045e44698617a32c7eed7776fe568794bb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
