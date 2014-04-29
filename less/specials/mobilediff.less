@@ -1,6 +1,10 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+// FIXME: Not a long term solution (see bug 64607) - footers and position fixed elements do not play well
+#footer {
+	display: none;
+}
 
 #mw-mf-diffview {
 	@userInfoHeight: 5em;
