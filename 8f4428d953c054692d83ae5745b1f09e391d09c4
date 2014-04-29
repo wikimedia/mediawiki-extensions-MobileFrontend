@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_1fac2483",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-29T22:25:39Z",
+      "side": 1,
+      "message": "Let\u0027s change \"new language design\" to \"secondary page actions\".",
+      "revId": "8f4428d953c054692d83ae5745b1f09e391d09c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_ffae087b",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-29T22:25:39Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "8f4428d953c054692d83ae5745b1f09e391d09c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_bfc41045",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-29T22:25:39Z",
+      "side": 1,
+      "message": "New notifications drawer?",
+      "revId": "8f4428d953c054692d83ae5745b1f09e391d09c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_bf9d305d",
+        "filename": "less/common/icons.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-29T22:25:39Z",
+      "side": 1,
+      "message": "icon-12px -\u003e icon-15px",
+      "revId": "8f4428d953c054692d83ae5745b1f09e391d09c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_bfd09022",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-04-29T22:25:39Z",
+      "side": 1,
+      "message": "You mean port those classes to ooui?",
+      "revId": "8f4428d953c054692d83ae5745b1f09e391d09c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
