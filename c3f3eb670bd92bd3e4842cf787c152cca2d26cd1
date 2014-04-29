@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_cbb6f23b",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-29T16:33:00Z",
+      "side": 1,
+      "message": "Please use PhpStorm.",
+      "revId": "c3f3eb670bd92bd3e4842cf787c152cca2d26cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
