@@ -16,6 +16,24 @@
       "revId": "c3f3eb670bd92bd3e4842cf787c152cca2d26cd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_2bf446ed",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-04-29T17:31:37Z",
+      "side": 1,
+      "message": "As suggested before we should install a git hook or update the codesniffer config to check for this - including in Jenkins.\n\nPhpstorm is not part of my workflow. I don\u0027t use IDEs. This is the exact problem we had before jshint was introduced :)",
+      "parentUuid": "8e23439c_cbb6f23b",
+      "revId": "c3f3eb670bd92bd3e4842cf787c152cca2d26cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
