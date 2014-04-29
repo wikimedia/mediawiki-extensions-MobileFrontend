@@ -219,6 +219,7 @@
 	"mobile-frontend-photo-upload": "이 문서에 그림 추가",
 	"mobile-frontend-photo-upload-anon": "이 문서에 그림을 추가하려면 로그인하세요.",
 	"mobile-frontend-photo-upload-comment": "문서에 그림을 추가했습니다",
+	"mobile-frontend-photo-upload-copyvio": "경고! 이 사진은 의심스러워 보입니다. 만약 이 사진이 당신이 찍은 사진이 아니라면, 올리지 마십시오. 계속하시겠습니까?",
 	"mobile-frontend-photo-upload-disabled": "이 문서에는 그림이 필요 없습니다.",
 	"mobile-frontend-photo-upload-error": "오류가 발생했습니다, 다시 시도하세요.",
 	"mobile-frontend-photo-upload-error-file-type": "올릴 그림뿐입니다.",

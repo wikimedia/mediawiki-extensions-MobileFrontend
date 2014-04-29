@@ -59,7 +59,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "因我們檢測到問題，是次編輯不能保存。",
 	"mobile-frontend-editor-abusefilter-read-more": "閱讀更多",
 	"mobile-frontend-editor-abusefilter-warning": "警告：您確信要保存此次編輯？這可能會出現問題。",
-	"mobile-frontend-editor-blocked": "您的賬戶被封禁編輯。",
+	"mobile-frontend-editor-blocked": "您的帳號已被封鎖，無法編輯。",
 	"mobile-frontend-editor-cancel": "取消",
 	"mobile-frontend-editor-cancel-confirm": "你確認要放棄你的編輯？",
 	"mobile-frontend-editor-captcha-try-again": "確認碼錯誤，請重試。",
