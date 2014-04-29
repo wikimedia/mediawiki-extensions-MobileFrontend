@@ -47,7 +47,7 @@ var
 						self.$( '.loading' ).show();
 						// sign and add newline to front
 						val = '\n\n' + val + ' ~~~~';
-						api.getToken().done( function( token ) {
+						api.getTokenWithEndpoint().done( function( token ) {
 							api.post( {
 								action: 'edit',
 								title: options.title,

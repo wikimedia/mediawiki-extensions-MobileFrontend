@@ -93,7 +93,8 @@
 
 		/**
 		 * Retrieves a token for a given endpoint
-		 * FIXME: consolidate with mw.Api
+		 * FIXME: consolidate with mw.Api.getToken
+		 * use postWithToken / getToken where possible
 		 *
 		 * @method
 		 * @param {String} tokenType Name of the type of token needed e.g. edit, upload - defaults to edit
@@ -104,7 +105,7 @@
 		 * @return {jQuery.Deferred} Object returned by $.ajax(), callback will be passed
 		 *   the token string, false if the user is anon or undefined where not available or a warning is set
 		 */
-		getToken: function( tokenType, endpoint, caToken ) {
+		getTokenWithEndpoint: function( tokenType, endpoint, caToken ) {
 			var token, data, d = $.Deferred(), isCacheable,
 				// token types available from mw.user.tokens
 				easyTokens = [ 'edit', 'watch', 'patrol' ];

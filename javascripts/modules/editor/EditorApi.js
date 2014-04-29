@@ -102,14 +102,13 @@
 				throw new Error( 'No changes to save' );
 			}
 
-			function saveContent( token ) {
+			function saveContent() {
 				var apiOptions = {
 					action: 'edit',
 					title: self.title,
 					summary: options.summary,
 					captchaid: options.captchaId,
 					captchaword: options.captchaWord,
-					token: token,
 					basetimestamp: self.timestamp,
 					starttimestamp: self.timestamp
 				};
@@ -124,7 +123,7 @@
 					apiOptions.section = self.sectionId;
 				}
 
-				self.post( apiOptions ).done( function( data ) {
+				self.postWithToken( 'edit', apiOptions ).done( function( data ) {
 					var code, warning;
 
 					if ( data && data.edit && data.edit.result === 'Success' ) {
@@ -169,8 +168,7 @@
 				} ).fail( $.proxy( result, 'reject', { type: 'error', details: 'http' } ) );
 			}
 
-			this.getToken().done( saveContent ).fail( $.proxy( result, 'reject' ) );
-
+			saveContent();
 			return result;
 		},
 

@@ -60,7 +60,7 @@
 				this.confirm.prop( 'disabled', true );
 				this.$( '.content' ).empty().addClass( 'loading' );
 				this.$( '.buttonBar' ).hide();
-				api.getToken().done( function( token ) {
+				api.getTokenWithEndpoint().done( function( token ) {
 					api.post( {
 						action: 'edit',
 						section: 'new',

@@ -85,7 +85,7 @@
 				}
 			},
 			markAllAsRead: function() {
-				api.getToken( 'edit' ).done( function( token ) {
+				api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
 					api.post( {
 						action : 'echomarkread',
 						all : true,
