@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_2bcb1b76",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-30T20:37:38Z",
+      "side": 1,
+      "message": "No. I was breaking my head around it for quite a while, but quickUserCan() is a generic function that can\u0027t be hacked into accepting $returnBlockStatusUnlessUserIsAnon :(",
+      "parentUuid": "8e23439c_ff73a8e2",
+      "revId": "e1102045e44698617a32c7eed7776fe568794bb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_ffb4c87d",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 4
