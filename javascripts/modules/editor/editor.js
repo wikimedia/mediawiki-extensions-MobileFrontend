@@ -44,6 +44,22 @@
 	}
 
 	/**
+	 * Retrieve the user's preferred editor setting. If none is set, return the default
+	 * editor for this wiki.
+	 *
+	 * @return {string} Either 'VisualEditor' or 'SourceEditor'
+	 */
+	function getPreferredEditor() {
+		var preferredEditor = M.settings.getUserSetting( 'preferredEditor', true ),
+			visualEditorDefault = mw.config.get( 'wgVisualEditorConfig' ).defaultUserOptions.enable;
+		if ( preferredEditor === null ) {
+			return visualEditorDefault ? 'VisualEditor' : 'SourceEditor';
+		} else {
+			return preferredEditor;
+		}
+	}
+
+	/**
 	 * Initialize the edit button so that it launches the editor interface when clicked.
 	 *
 	 * @param {Page} page The page to edit.
@@ -58,14 +74,27 @@
 			var
 				loadingOverlay = new LoadingOverlay(),
 				result = $.Deferred(),
-				preferredEditor = M.settings.getUserSetting( 'preferredEditor', true );
+				preferredEditor = getPreferredEditor(),
+				visualEditorNamespaces = mw.config.get( 'wgVisualEditorConfig' ).namespaces;
 			loadingOverlay.show();
 			sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
-			// Pages that contain JavaScript and CSS are not suitable for VisualEditor so
-			// check if wikitext. Also don't load VisualEditor if user's preferred editor
-			// is the SourceEditor (set by the editor switcher).
-			if ( page.isWikiText() && isVisualEditorEnabled && preferredEditor !== 'SourceEditor' ) {
+			// Check whether VisualEditor should be loaded
+			if ( isVisualEditorEnabled &&
+
+				// Only for pages with a wikitext content model
+				page.isWikiText() &&
+
+				// Only in enabled namespaces
+				visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) > -1 &&
+
+				// Not on pages which are outputs of the Page Translation feature
+				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
+
+				// If the user prefers the VisualEditor or the user has no preference and
+				// the VisualEditor is the default editor for this wiki
+				preferredEditor === 'VisualEditor'
+			) {
 				mw.loader.using( 'mobile.editor.ve', function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 
