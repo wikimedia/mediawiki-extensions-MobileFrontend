@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_0dff4cfe",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2014-05-01T21:56:25Z",
+      "side": 1,
+      "message": "targets is already in $wgMFMobileResourceBoilerplate",
+      "revId": "f5f6d27f1e4af001ee0458850c910f9bbc4c67ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
