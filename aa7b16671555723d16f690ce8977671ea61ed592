@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_a612bd59",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-01T00:58:15Z",
+      "side": 1,
+      "message": "The 2nd param isn\u0027t a fallback value, it\u0027s a flag for whether or not to look at cookies if nothing turns up in local storage. There is no default value. If nothing is found, it gets set to null.",
+      "parentUuid": "8e23439c_e33e67d6",
+      "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_033cc3dd",
         "filename": "javascripts/modules/editor/editor.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-05-01T00:51:10Z",
       "side": 1,
       "message": "As a personal preference can you stick these in variables for more readbility - also no need for \u003e -1 since you are using inArray - why not use indexOf instead if this is what you want to do :)",
+      "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_860d813b",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-01T00:58:15Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "8e23439c_033cc3dd",
       "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_6618257a",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-01T00:58:15Z",
+      "side": 1,
+      "message": "Will do.",
+      "parentUuid": "8e23439c_a32cefaa",
+      "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_63325707",
         "filename": "less/modules/editor/editor.less",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2014-05-01T00:51:10Z",
       "side": 1,
       "message": "Maybe we should start getting into the habit of using classes to manage z-index? or at least start using less variables instead\n\n@z-index-article\n@z-index-overlay\n@z-index-overlay-widget\n\nhttp://css-tricks.com/handling-z-index/\n\nz-index\u0027s can be a pain to manage.",
+      "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_06297184",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-01T00:58:15Z",
+      "side": 1,
+      "message": "I agree. At some point we should go over our z-indexes and turn them into something managable.",
+      "parentUuid": "8e23439c_63325707",
       "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
