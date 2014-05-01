@@ -120,7 +120,7 @@ class ArticlePage
   span(:overlay_ve_header_toolbar_italic_button) do |page|
     page.overlay_ve_header_element.span_element(class: "oo-ui-iconedElement-icon oo-ui-icon-italic-i")
   end
-  div(:editor_ve, class: "ve-ce-documentNode ve-ce-branchNode")
+  div(:editor_ve, css: ".ve-ce-documentNode.ve-ce-branchNode")
   div(:spinner_loading, class: "spinner loading")
 
   # toast
