@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_6d45a017",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T22:41:25Z",
+      "side": 1,
+      "message": "Make this use M.supportsLocalStorage",
+      "revId": "a63ca94dc9a0f31a476d9f7ddd873e2198f88562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_cd5394e0",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T22:41:25Z",
+      "side": 1,
+      "message": "Can we refactor M.settings.saveUserSetting in some way so that we have a single method for  both of these functions?",
+      "revId": "a63ca94dc9a0f31a476d9f7ddd873e2198f88562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_ed6090a1",
+        "filename": "javascripts/common/settings.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T22:41:25Z",
+      "side": 1,
+      "message": "move this into M.supportsLocalStorage",
+      "revId": "a63ca94dc9a0f31a476d9f7ddd873e2198f88562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
