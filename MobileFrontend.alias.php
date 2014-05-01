@@ -119,11 +119,15 @@ $specialPageAliases['es'] = array(
 
 /** Estonian (eesti) */
 $specialPageAliases['et'] = array(
+	'History' => array( 'Ajalugu' ),
 	'MobileOptions' => array( 'Mobiili_suvandid' ),
 	'Uploads' => array( 'Üleslaaditud_failid' ),
 	'MobileDiff' => array( 'Mobiilierinevus' ),
+	'MobileEditor' => array( 'Mobiiliredaktor' ),
 	'MobileMenu' => array( 'Mobiili_menüü' ),
+	'MobileLanguages' => array( 'Mobiilikeeled' ),
 	'Nearby' => array( 'Lähikond' ),
+	'UserProfile' => array( 'Kasutaja_profiil' ),
 );
 
 /** Persian (فارسی) */

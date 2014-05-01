@@ -13,7 +13,8 @@
 			"Silvonen",
 			"Stryn",
 			"VezonThunder",
-			"Syreeni"
+			"Syreeni",
+			"Pxos"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Muokkaako käyttäjä mobiilikäyttöliittymän kautta",
@@ -46,7 +47,7 @@
 	"mobile-frontend-donate-image-anon": "Sinulla täytyy olla $1, jotta voisit nähdä tallennussivun.",
 	"mobile-frontend-donate-image-heading": "Tuoreimmat muokkauksesi",
 	"mobile-frontend-donate-image-login": "Sivustolla {{SITENAME}} oleva media on käyttäjien, kuten sinun lahjoittamaa.",
-	"mobile-frontend-donate-image-login-action": "Voit jakaa kuvia sisäänkirjautumisen jälkeen.",
+	"mobile-frontend-donate-image-login-action": "Voit jakaa mediaa sisäänkirjautumisen jälkeen.",
 	"mobile-frontend-donate-image-nouploads": "Ei tallennettuja tiedostoja.",
 	"mobile-frontend-donate-image-signup-action": "Kirjaudu sisään jakaaksesi kuvia.",
 	"mobile-frontend-donate-image-title": "Tallennukset",
@@ -127,7 +128,7 @@
 	"mobile-frontend-image-uploading": "'''Ladataan''' kuvaa...",
 	"mobile-frontend-images-status": "Kuvat",
 	"mobile-frontend-language-article-heading": "Lue toisella kielellä",
-	"mobile-frontend-language-header": "Tämä sivu on saatavilla $1 {{PLURAL:$1|kielellä|kielellä}}",
+	"mobile-frontend-language-header": "Tämä sivu on saatavilla $1 {{PLURAL:$1|kielellä}}",
 	"mobile-frontend-language-heading": "<strong>Kielet</strong>",
 	"mobile-frontend-language-site-choose": "Etsi kieltä",
 	"mobile-frontend-language-variant-header": "Valitse kielen {{#language:{{CONTENTLANG}}}} kielimuoto",
@@ -135,7 +136,7 @@
 	"mobile-frontend-languages-404-title": "Kielten virhe",
 	"mobile-frontend-languages-header": "Kielet",
 	"mobile-frontend-languages-nonexistent-title": "Sivua \"$1\" ei ole.",
-	"mobile-frontend-languages-text": "$1 on saatavilla {{PLURAL:$2|kielellä|kielellä}}.",
+	"mobile-frontend-languages-text": "$1 on saatavilla {{PLURAL:$2|kielellä}}.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} kielimuodot",
 	"mobile-frontend-last-modified-date": "Sivua on viimeksi muokattu $1 kello $2",
 	"mobile-frontend-last-modified-days": "Sivua on viimeksi muokattu {{PLURAL:$1|päivä|$1 päivää}} sitten",
@@ -265,7 +266,7 @@
 	"mobile-frontend-settings-alpha-description": "Lähde epävakaalle ja tutkimattomalle mobiilialueelle. Saat vielä enemmän kokeellisia toimintoja, mutta virheiden vaara on suurempi.",
 	"mobile-frontend-settings-beta": "Beeta",
 	"mobile-frontend-settings-description": "Mukauta mobiilisivuston asetuksia erityisillä mobiilisivuasetuksilla.",
-	"mobile-frontend-settings-site-description": "{{SITENAME}} on saatavilla {{PLURAL:$1|kielellä|kielellä}}. Kaikki saatavilla olevat kieliversiot on listattu alla.",
+	"mobile-frontend-settings-site-description": "{{SITENAME}} on saatavilla {{PLURAL:$1|kielellä}}. Kaikki saatavilla olevat kieliversiot on listattu alla.",
 	"mobile-frontend-settings-site-header": "Sivuston {{SITENAME}} kielet",
 	"mobile-frontend-sign-in-error-heading": "Hups",
 	"mobile-frontend-sign-in-heading": "Kirjaudu sisään",
@@ -333,5 +334,5 @@
 	"mobilefrontend-random-explain": "Kiinnostaako tämä satunnainen sivu sinua?",
 	"nearby": "Sivut lähellä sinua",
 	"tag-mobile_edit": "Mobiilimuokkaus",
-	"tag-mobile_edit-description": "Muutos, joka on tehty mobiilisivustolta"
+	"tag-mobile_edit-description": "Muokkaus, joka on tehty mobiilisivustolta"
 }
