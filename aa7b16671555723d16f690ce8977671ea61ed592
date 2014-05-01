@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_e33e67d6",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T00:51:10Z",
+      "side": 1,
+      "message": "instead of falling back to true fallback to some logic using mw.config.get( \u0027wgVisualEditor\nConfig\u0027 )",
+      "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_033cc3dd",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T00:51:10Z",
+      "side": 1,
+      "message": "As a personal preference can you stick these in variables for more readbility - also no need for \u003e -1 since you are using inArray - why not use indexOf instead if this is what you want to do :)",
+      "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_a32cefaa",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T00:51:10Z",
+      "side": 1,
+      "message": "Can you move this logic to to the top rather than making this if statement?\na unit test may be useful too...",
+      "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_63325707",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T00:51:10Z",
+      "side": 1,
+      "message": "Maybe we should start getting into the habit of using classes to manage z-index? or at least start using less variables instead\n\n@z-index-article\n@z-index-overlay\n@z-index-overlay-widget\n\nhttp://css-tricks.com/handling-z-index/\n\nz-index\u0027s can be a pain to manage.",
+      "revId": "aa7b16671555723d16f690ce8977671ea61ed592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
