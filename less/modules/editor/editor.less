@@ -51,6 +51,8 @@
 			display: none;
 			position: absolute;
 			top: @headerHeight;
+			// Needs to float above any elements in the toolbar
+			z-index: 1;
 			// FIXME: Negative margin is needed in Chrome and Safari to match our negative
 			// margins on the buttons, but this breaks the layout in Firefox and IE :(
 			// Spent a very long time trying to find a CSS solution that worked in all
