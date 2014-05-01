@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_830e933c",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T00:53:14Z",
+      "side": 1,
+      "message": "Don\u0027t entirely follow this comment.",
+      "revId": "b9c2c2ead9cebd2e63e46284c9de27fa4d7cac4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_a313cf66",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 590,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-01T00:53:14Z",
+      "side": 1,
+      "message": "Instead of canedit could we use editable\nThe word \u0027can\u0027 just seems out of place here.",
+      "revId": "b9c2c2ead9cebd2e63e46284c9de27fa4d7cac4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
