@@ -22,6 +22,15 @@
 		isIPhone5 = isAppleDevice && /OS 5_/.test( ua ),
 		isAndroid2 = /Android 2/.test( ua );
 
+	// See if local storage is supported
+	try {
+		localStorage.setItem( 'localStorageTest', 'localStorageTest' );
+		localStorage.removeItem( 'localStorageTest' );
+		M.supportsLocalStorage = true;
+	} catch ( e ) {
+		M.supportsLocalStorage = false;
+	}
+
 	// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
 	// https://github.com/Modernizr/Modernizr/issues/167
 	// http://mobilehtml5.org/
@@ -284,13 +293,14 @@
 	 * Retrieve and, if not present, generate a random session ID
 	 * (32 alphanumeric characters).
 	 * FIXME: Use mw.user
+	 * FIXME: Fall back to using cookies if localStorage isn't supported
 	 *
 	 * @method
 	 * @return {string}
 	 */
 	function getSessionId() {
 		var sessionId;
-		if ( typeof localStorage === 'undefined' ) {
+		if ( !M.supportsLocalStorage ) {
 			return null;
 		}
 		sessionId = localStorage.getItem( 'sessionId' );
