@@ -5,14 +5,6 @@
 ( function( M, $ ) {
 
 M.settings = ( function() {
-	var supportsLocalStorage;
-
-	// using feature detection used by http://diveintohtml5.info/storage.html
-	try {
-		supportsLocalStorage = 'localStorage' in window && window.localStorage !== null;
-	} catch ( e ) {
-		supportsLocalStorage = false;
-	}
 
 	function cookiesEnabled() {
 		// If session cookie already set, return true
@@ -44,7 +36,7 @@ M.settings = ( function() {
 	 * @returns {Boolean} Whether the save was successful or not
 	 */
 	function saveUserSetting( name, value, useCookieFallback ) {
-		return supportsLocalStorage ?
+		return M.supportsLocalStorage ?
 			localStorage.setItem( name, value ) :
 				( useCookieFallback ? writeCookie( name, value, 1 ) : false );
 	}
@@ -57,7 +49,7 @@ M.settings = ( function() {
 	 * @returns {String|Boolean} Returns the associated value or False if nothing is found
 	 */
 	function getUserSetting( name, useCookieFallback ) {
-		return supportsLocalStorage ? localStorage.getItem( name ) :
+		return M.supportsLocalStorage ? localStorage.getItem( name ) :
 			( useCookieFallback ? readCookie( name ) : false );
 	}
 
@@ -65,7 +57,6 @@ M.settings = ( function() {
 		getUserSetting: getUserSetting,
 		readCookie: readCookie,
 		saveUserSetting: saveUserSetting,
-		supportsLocalStorage: supportsLocalStorage,
 		writeCookie: writeCookie,
 		cookiesEnabled: cookiesEnabled
 	};
