@@ -403,11 +403,14 @@
 	}
 
 	function loadCurrentPage() {
+		var permissions = mw.config.get( 'wgRestrictionEdit', [] );
+		if ( permissions.length === 0 ) {
+			permissions.push( '*' );
+		}
 		currentPage = new Page( {
 			title: mw.config.get( 'wgPageName' ).replace( /_/g, ' ' ),
 			protection: {
-				// FIXME: Make this pull the actual permissions of the current page
-				edit: mw.config.get( 'wgIsPageEditable' ) ? [ '*' ] : [ 'unknown' ]
+				edit: permissions
 			},
 			lead: getLeadSection().html(),
 			isMainPage: mw.config.get( 'wgIsMainPage' ),

@@ -156,15 +156,21 @@
 	/**
 	 * Initialize the edit button so that it launches a login call-to-action when clicked.
 	 */
-	function initCta() {
-		// FIXME change when micro.tap.js in stable
-		$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
-			drawer.render().show();
-		} );
+	function initCta( page ) {
+		page.isEditable( user ).done( function( isEditable ) {
+			if ( isEditable ) {
+				// FIXME change when micro.tap.js in stable
+				$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
+					drawer.render().show();
+				} );
 
-		$( '.edit-page' ).each( function() {
-			var $a = $( this ), anchor = '#' + $( this ).parent().find( '[id]' ).attr( 'id' );
-			makeCta( $a, anchor );
+				$( '.edit-page' ).each( function() {
+					var $a = $( this ), anchor = '#' + $( this ).parent().find( '[id]' ).attr( 'id' );
+					makeCta( $a, anchor );
+				} );
+			} else {
+				showSorryToast( 'mobile-frontend-editor-disabled' );
+			}
 		} );
 	}
 
@@ -186,7 +192,7 @@
 	} else {
 		if ( user.isAnon() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
 			// Set edit button to launch login CTA
-			initCta();
+			initCta( M.getCurrentPage() );
 			M.on( 'page-loaded', initCta );
 		} else {
 			if ( mw.config.get( 'wgMFIsLoggedInUserBlocked' ) ) {

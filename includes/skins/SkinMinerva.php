@@ -679,6 +679,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFEnableCssAnimations' => $wgMFEnableCssAnimations,
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
+			// FIXME: Kill variable in favour of $wgRestrictionEdit
 			'wgIsPageEditable' => $title->quickUserCan( 'edit', $user ) || $userCanCreatePage,
 			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
 			'wgMFMode' => $this->getMode(),
