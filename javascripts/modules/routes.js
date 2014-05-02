@@ -18,7 +18,7 @@
 		// FIXME: find a generic way of showing loading (make showing a loader
 		// part of OverlayManager?)
 		loadingOverlay.show();
-		mw.loader.using( M.isBetaGroupMember() ? 'mobile.uploads.beta' : 'mobile.uploads.stable', function() {
+		mw.loader.using( 'mobile.uploads', function() {
 			loadingOverlay.hide();
 			var UploadTutorialNew = M.require( 'modules/uploads/UploadTutorial' );
 			result.resolve( new UploadTutorialNew( { funnel: funnel || null } ) );
@@ -35,7 +35,7 @@
 		// FIXME: find a generic way of showing loading (make showing a loader
 		// part of OverlayManager?)
 		loadingOverlay.show();
-		mw.loader.using( M.isBetaGroupMember() ? 'mobile.uploads.beta' : 'mobile.uploads.stable', function() {
+		mw.loader.using( 'mobile.uploads', function() {
 			loadingOverlay.hide();
 			var PhotoUploadOverlay = M.require( 'modules/uploads/PhotoUploadOverlay' );
 			result.resolve( new PhotoUploadOverlay( {
