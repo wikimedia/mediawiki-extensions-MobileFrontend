@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_0dbcec66",
+        "filename": "javascripts/modules/mf-watchstar.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-02T00:56:11Z",
+      "side": 1,
+      "message": "Just execute this code directly and kill the function.",
+      "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_ad4a9881",
+        "filename": "javascripts/modules/watchstar/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-02T00:56:11Z",
+      "side": 1,
+      "message": "The code below (next 16 lines) seems overly complicated for what it does. What about:\n\n$( function() {\n    if ( !M.inNamespace( \u0027special\u0027 ) ) {\n        new Watchstar( {\n            el: $( \u0027#ca-watch\u0027 ),\n            isWatched: $( \u0027#ca-watch\u0027 ).hasClass( \u0027watched\u0027 ),\n            page: M.getCurrentPage(),\n            isAnon: user.isAnon()\n        } );\n    }\n} );",
+      "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
