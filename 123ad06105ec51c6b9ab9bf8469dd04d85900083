@@ -33,6 +33,24 @@
       "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_cd15d44e",
+        "filename": "javascripts/modules/watchstar/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-02T00:58:11Z",
+      "side": 1,
+      "message": "Oops, nevermind. I didn\u0027t notice the M.on( \u0027page-loaded\u0027, init ) line.",
+      "parentUuid": "8e23439c_ad4a9881",
+      "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
