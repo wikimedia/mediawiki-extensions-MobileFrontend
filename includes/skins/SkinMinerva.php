@@ -714,7 +714,6 @@ class SkinMinerva extends SkinTemplate {
 		$modules['notifications'] = array( 'mobile.notifications' );
 		$modules['watch'] = array();
 		$modules['search'] = array( 'mobile.search' );
-		$modules['stableonly'] = array();
 		$modules['issues'] = array( 'mobile.issues' );
 		$modules['editor'] = array( 'mobile.editor' );
 		$modules['languages'] = array( 'mobile.languages' );

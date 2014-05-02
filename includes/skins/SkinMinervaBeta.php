@@ -91,8 +91,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		$modules['beta'] = array( 'mobile.beta' );
 		$modules['beta'][] = 'mobile.geonotahack';
 		$modules['toggling'] = array( 'mobile.toggling.beta' );
-		// turn off stable only modules
-		$modules['stableonly'] = array();
 		wfRunHooks( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 		return $modules;
 	}
