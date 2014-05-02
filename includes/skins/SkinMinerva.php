@@ -421,6 +421,7 @@ class SkinMinerva extends SkinTemplate {
 	 * 2013, at 23:31'. This message is different for the main page since main page
 	 * content is typically transcuded rather than edited directly.
 	 * @param Title $title The Title object of the page being viewed
+	 * @return array
 	 */
 	protected function getHistoryLink( Title $title ) {
 		$user = $this->getUser();

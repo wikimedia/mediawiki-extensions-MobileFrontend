@@ -7,8 +7,6 @@ class SkinMinervaApp extends SkinMinervaBeta {
 	}
 
 	public function getHtmlElementAttributes() {
-		global $wgScriptPath, $wgScriptExtension;
-
 		$attrs = parent::getHtmlElementAttributes();
 		$skin = $this->skinname;
 		$out = $this->getOutput();

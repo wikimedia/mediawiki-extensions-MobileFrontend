@@ -335,9 +335,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/editor/VisualEditorOverlay.js',
 		),
-		'styles' => array(
-			'less/modules/editor/VisualEditorOverlay.less',
-		),
 		'templates' => array(
 			'modules/editor/VisualEditorOverlayHeader',
 			'modules/editor/VisualEditorOverlay',
