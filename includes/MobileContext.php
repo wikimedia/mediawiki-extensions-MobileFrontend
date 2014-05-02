@@ -394,13 +394,15 @@ class MobileContext extends ContextSource {
 	}
 
 	public function setStopMobileRedirectCookie( $expiry = null ) {
-		global $wgCookiePath, $wgCookieSecure;
 		if ( is_null( $expiry ) ) {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
 
-		setcookie( 'stopMobileRedirect', 'true', $expiry, $wgCookiePath,
-			$this->getStopMobileRedirectCookieDomain(), $wgCookieSecure );
+		$this->getRequest()->response()->setcookie( 'stopMobileRedirect', 'true', $expiry,
+			array(
+				'domain' => $this->getStopMobileRedirectCookieDomain(),
+			)
+		);
 	}
 
 	public function unsetStopMobileRedirectCookie() {
@@ -749,7 +751,16 @@ class MobileContext extends ContextSource {
 	public function toggleView( $view ) {
 		global $wgMobileUrlTemplate;
 
-		$url = $this->getTitle()->getFullURL();
+		$url = $this->getRequest()->getFullRequestURL();
+		$parsed = wfParseUrl( $url );
+		$query = wfCgiToArray( $parsed['query'] );
+		unset( $query['mobileaction'] );
+		unset( $query['useformat'] );
+		$parsed['query'] = wfArrayToCgi( $query );
+		if ( $parsed['query'] === '' ) {
+			unset( $parsed['query'] );
+		}
+		$url = wfAssembleUrl( $parsed );
 
 		if ( $view == 'mobile' ) {
 			// unset stopMobileRedirect cookie
