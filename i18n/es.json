@@ -228,6 +228,7 @@
 	"mobile-frontend-sign-up-heading": "Registrarse",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "¿Qué es lo que piensas?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Asunto del tema",
+	"mobile-frontend-talk-add-overlay-submit": "Añadir discusión",
 	"mobile-frontend-talk-back-to-page": "Regresar a la página \"$1\".",
 	"mobile-frontend-talk-explained": "Las siguientes conversaciones están actualmente activas",
 	"mobile-frontend-talk-explained-empty": "No hay ninguna conversación sobre esta página.",
