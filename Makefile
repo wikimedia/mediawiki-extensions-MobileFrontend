@@ -39,7 +39,7 @@ nodecheck:
 	@scripts/nodecheck.sh
 
 jshinttests: nodecheck
-	@node_modules/.bin/jshint tests/javascripts/* --config .jshintrc
+	@node_modules/.bin/jshint tests/qunit/* --config .jshintrc
 
 jshint: nodecheck jshinttests
 	@node_modules/.bin/jshint javascripts/* --config .jshintrc
@@ -53,7 +53,7 @@ phplint: phpcheck
 	@scripts/phplint.sh
 
 phpunit:
-	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --configuration ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/mfe.suite.xml --group=MobileFrontend
+	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --configuration ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit/mfe.suite.xml --group=MobileFrontend
 
 qunit:
 	@scripts/qunit.sh
