@@ -51,6 +51,23 @@
       "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_08261ab6",
+        "filename": "javascripts/modules/watchstar/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-02T01:04:48Z",
+      "side": 1,
+      "message": "Doesn\u0027t this need the page and isWatched data passed to the handler? Alternatively, you could just retrieve them from within init() itself.",
+      "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
