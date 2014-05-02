@@ -9,14 +9,12 @@ These include:
 ** and setup with FancyCaptcha
 * Create an account Selenium_newuser which has an edit count of 0
 * Create an account and store the username in MEDIAWIKI_USER which has
-an edit count of greater than 0
+** an edit count of greater than 0
 ** Ensure user has bureaucrat and admin rights (set via Special:UserRights)
 * Setup a Spanish Interwiki link using sql:
 <pre>
 INSERT INTO interwiki (iw_prefix, iw_url, iw_local, iw_trans) VALUES ("es", "http://wikifoo.org/es/index.php/$1", 0, 0);
 </pre>
-* Ensure there is a Barack Obama article
-** and it is a protected page
 * In LocalSettings.php place the following code:
 <pre>
   $wgMFNearbyEndpoint = 'https://en.m.wikipedia.org/w/api.php'; // required for nearby.feature

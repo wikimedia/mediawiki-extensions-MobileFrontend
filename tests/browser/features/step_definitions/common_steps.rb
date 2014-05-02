@@ -89,6 +89,19 @@ Given(/^I am on the "(.+)" page$/) do |article|
   visit(ArticlePage, :using_params => {:article_name => article})
 end
 
+Given(/^The "(.*?)" page is protected\.$/) do |page|
+  step 'I am logged into the mobile website'
+  step 'I am on the "' + page + '" page'
+  step 'I switch to desktop'
+  if not on(DesktopArticlePage).unprotect_element.exists?
+    step 'I click the protect link on the desktop skin'
+    step 'I select Allow only administrators on the protection page'
+    step 'I click the submit button on the protection page'
+  end
+  step 'I switch to the mobile site'
+  step 'I click on "Log out" in the main navigation menu'
+end
+
 Given(/^I am on the random page$/) do
   visit(ArticlePage, :using_params => {:article_name => @random_string})
 end
@@ -96,11 +109,6 @@ end
 Given(/^I am on a page that does not exist$/) do
   name = 'NewPage' + Time.now.to_i.to_s
   visit(ArticlePage, :using_params => {:article_name => name})
-end
-
-Given(/^I visit a protected page$/) do
-  # FIXME: Assumes Barack Obama article is protected
-  step 'I am on the "Barack_Obama" page'
 end
 
 When(/^I click the browser back button$/) do
