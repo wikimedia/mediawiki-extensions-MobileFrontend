@@ -16,6 +16,24 @@
       "revId": "7e71214235c88c7d351aada37c5768ec98443fc3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_78cf9d2c",
+        "filename": "javascripts/common/settings.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-02T18:15:05Z",
+      "side": 1,
+      "message": "That should never happen, but I\u0027ll move it anyway.",
+      "parentUuid": "8e23439c_f5da96e8",
+      "revId": "7e71214235c88c7d351aada37c5768ec98443fc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
