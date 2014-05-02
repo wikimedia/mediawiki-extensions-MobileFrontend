@@ -40,7 +40,10 @@
 			}
 			ev.preventDefault();
 			ev.stopPropagation();
-		} );
+		// Hack: See bug 64669 iOS has a hover bug
+		// Adding an empty touchend event seems to fix this
+		// FIXME: Remove when using tapEvent in stable
+		} ).on( 'touchend', function() {} );
 
 		// close navigation if content tapped
 		$( '#mw-mf-page-center' ).on( tapEvent, function(ev) {
