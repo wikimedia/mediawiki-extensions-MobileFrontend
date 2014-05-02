@@ -178,6 +178,17 @@ Text 2
 					),
 				),
 			),
+			array(
+				array(
+					'page' => 'Main Page',
+					'sections' => 1,
+					'onlyrequestedsections' => ''
+				) + $baseIn,
+				array(
+					'mainpage' => '',
+					'sections' => array(),
+				),
+			),
 		);
 	}
 }

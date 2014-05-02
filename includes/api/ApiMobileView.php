@@ -103,7 +103,12 @@ class ApiMobileView extends ApiBase {
 		$result = array();
 		$missingSections = array();
 		if ( $this->mainPage ) {
-			$requestedSections = array( 0 );
+			if ( $onlyRequestedSections ) {
+				$requestedSections =
+					self::parseSections( $params['sections'], $data, $missingSections );
+			} else {
+				$requestedSections = array( 0 );
+			}
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'mainpage' => '' )
 			);
