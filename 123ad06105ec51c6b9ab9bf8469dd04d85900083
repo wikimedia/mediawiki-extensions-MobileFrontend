@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_b5f09e62",
+        "filename": "javascripts/modules/mf-watchstar.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-02T16:37:12Z",
+      "side": 1,
+      "message": "I kill the file in the next commit but sure :)",
+      "parentUuid": "8e23439c_0dbcec66",
+      "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_ad4a9881",
         "filename": "javascripts/modules/watchstar/init.js",
         "patchSetId": 9
@@ -65,6 +83,24 @@
       "writtenOn": "2014-05-02T01:04:48Z",
       "side": 1,
       "message": "Doesn\u0027t this need the page and isWatched data passed to the handler? Alternatively, you could just retrieve them from within init() itself.",
+      "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_35fc8e3a",
+        "filename": "javascripts/modules/watchstar/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-02T16:37:12Z",
+      "side": 1,
+      "message": "It\u0027s unknown at page-loaded event. I\u0027ll add some comments.",
+      "parentUuid": "8e23439c_08261ab6",
       "revId": "123ad06105ec51c6b9ab9bf8469dd04d85900083",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
