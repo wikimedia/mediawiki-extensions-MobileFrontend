@@ -129,22 +129,26 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 		$this->getOutput()->addHtml(
-			Html::openElement( 'div', array( 'id' => 'mw-mf-diff-info' ) ) .
-				Html::openElement( 'h2', array() ) .
-				Html::element( 'a',
+			Html::openElement( 'div', array( 'id' => 'mw-mf-diff-info' ) )
+				. Html::openElement( 'h2', array() )
+				. Html::element( 'a',
 					array(
 						'href' => $title->getLocalURL(),
 					),
 					$title->getPrefixedText()
-				).
-				Html::closeElement( 'h2' ) .
-				Html::element( 'span', array( 'class' => $sizeClass ),
-					$this->msg( $changeMsg )->numParams( $bytesChanged )->text()
-				) .
-				$this->msg( 'comma-separator' )->text() .
-				Html::element( 'span', array( 'class' => 'mw-mf-diff-date meta' ), $ts->getHumanTimestamp() ) .
-			Html::closeElement( 'div' ) .
-			Html::element( 'div', array( 'id' => 'mw-mf-diff-comment' ), $this->rev->getComment() )
+				)
+				. Html::closeElement( 'h2' )
+				. $this->msg( 'mobile-frontend-diffview-comma' )->rawParams(
+					Html::element( 'span', array( 'class' => $sizeClass ),
+						$this->msg( $changeMsg )->numParams( $bytesChanged )->text()
+					),
+					Html::element(
+						'span', array( 'class' => 'mw-mf-diff-date meta' ),
+						$ts->getHumanTimestamp()
+					)
+				)->text()
+			. Html::closeElement( 'div' )
+			. Html::element( 'div', array( 'id' => 'mw-mf-diff-comment' ), $this->rev->getComment() )
 		);
 	}
 
