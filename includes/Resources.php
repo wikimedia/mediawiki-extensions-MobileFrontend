@@ -75,6 +75,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	'mobile.pagelist.scripts' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.watchstar',
+		),
+		'scripts' => array(
+			'javascripts/modules/PageList.js',
+		),
+	),
+
 	'tablet.styles' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'styles' => array(
@@ -536,8 +545,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.search' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			// Make sure we have articleList template
-			'mobile.stable.common',
+			'mobile.pagelist.scripts',
 			'mobile.overlays'
 		),
 		'styles' => array(
@@ -857,13 +865,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.language',
 			'mobile.loggingSchemas',
 			'mobile.watchstar',
+			'mobile.pagelist.scripts',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
-			// FIXME: The file should be split up and put in modules/watchstar
-			'javascripts/modules/mf-watchstar.js',
 		),
 		'messages' => array(
 			// lastEdited.js
@@ -882,11 +889,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-upload-anon',
 			'mobile-frontend-photo-upload-unavailable',
 			'mobile-frontend-photo-upload',
-
-			// mf-watchstar.js
-			'mobile-frontend-watchlist-add',
-			'mobile-frontend-watchlist-removed',
-			'mobile-frontend-watchlist-cta',
 		),
 	),
 
@@ -931,7 +933,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
 		'templates' => array(
-			'articleList',
 			'overlays/pagePreview',
 		),
 		'dependencies' => array(
@@ -942,6 +943,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.language',
 			'mobile.templates',
 			'mobile.loggingSchemas',
+			// FIXME: Make Nearby view extend PageList
+			'mobile.pagelist.scripts',
 		),
 		'messages' => array(
 			// NearbyApi.js
@@ -1233,7 +1236,8 @@ $wgMinervaSpecialPageModules = array(
 	'skins.minerva.special.watchlist.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.loggingSchemas',
-			'mobile.stable',
+			'mobile.startup',
+			'mobile.pagelist.scripts',
 		),
 		'scripts' => array(
 			'javascripts/specials/watchlist.js',

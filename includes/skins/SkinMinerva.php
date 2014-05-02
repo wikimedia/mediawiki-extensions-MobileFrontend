@@ -686,9 +686,6 @@ class SkinMinerva extends SkinTemplate {
 		), $this->getSkinConfigMobileVariables() );
 
 		if ( $this->isAuthenticatedUser() ) {
-			$vars['wgWatchedPageCache'] = array(
-				$title->getPrefixedDBkey() => $user->isWatched( $title ),
-			);
 			$vars['wgMFIsLoggedInUserBlocked'] = $user->isBlocked();
 		}
 		// mobile specific config variables

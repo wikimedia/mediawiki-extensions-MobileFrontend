@@ -9,7 +9,7 @@
 {{/loadingMessage}}
 <ul class="page-list thumbs actionable">
 	{{#pages}}
-	<li title="{{title}}">
+	<li title="{{title}}" data-id="{{id}}">
 		<a href="{{url}}" class="title" name="{{anchor}}" data-latlng="{{latitude}},{{longitude}}" data-title="{{title}}">
 			<div class="listThumb {{pageimageClass}}" style="{{listThumbStyleAttribute}}"></div>
 			<h3>{{{heading}}}</h3>

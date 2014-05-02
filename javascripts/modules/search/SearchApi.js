@@ -55,6 +55,7 @@
 						$.each( data.query.pages, function( i, page ) {
 							var title = page.title;
 							results.push( {
+								id: page.pageid,
 								heading: highlightSearchTerm( title, query ),
 								title: title,
 								url: mw.util.getUrl( title ),

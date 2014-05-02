@@ -533,7 +533,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$thumb = $this->renderThumb( $row );
 
 		$output->addHtml(
-			Html::openElement( 'li', array( 'title' => $titleText ) ) .
+			Html::openElement( 'li', array( 'title' => $titleText, 'data-id' => $title->getArticleId() ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => $className ) ) .
 			$thumb['html'] .
 			Html::element( 'h3', array(), $titleText ).
