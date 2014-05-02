@@ -1,6 +1,4 @@
 ( function( M, $ ) {
-	var
-		moved = false;
 
 	function isOpen() {
 		return $( 'body' ).hasClass( 'navigation-enabled' );
@@ -27,51 +25,33 @@
 	}
 
 	function initialize() {
+		// FIXME: duplicate code in application.js which is not available here.
+		var tapEvent = M.isBetaGroupMember() ? 'tap' : 'mousedown';
+
+		// make the input readonly to avoid accidental focusing when closing menu
+		// (when JS is on, this input should not be used for typing anyway)
+		$( '#searchInput' ).prop( 'readonly', true );
 		// FIXME change when micro.tap.js in stable
+		$( '#mw-mf-main-menu-button' ).on( tapEvent, function( ev ) {
+			if ( isOpen() ) {
+				closeNavigationDrawers();
+			} else {
+				openNavigationDrawer();
+			}
+			ev.preventDefault();
+			ev.stopPropagation();
+		} );
+
+		// close navigation if content tapped
+		$( '#mw-mf-page-center' ).on( tapEvent, function(ev) {
+			if ( isOpen() ) {
+				closeNavigationDrawers();
+				ev.preventDefault();
+			}
+		} );
 		if ( M.isBetaGroupMember() ) {
-			// make the input readonly to avoid accidental focusing when closing menu
-			// (when JS is on, this input should not be used for typing anyway)
-			$( '#searchInput' ).prop( 'readonly', true );
-			$( '#mw-mf-main-menu-button' ).on( 'tap', function( ev ) {
-				if ( isOpen() ) {
-					closeNavigationDrawers();
-				} else {
-					openNavigationDrawer();
-				}
-				ev.preventDefault();
-				ev.stopPropagation();
-			} );
-
-			// close navigation if content tapped
-			$( '#mw-mf-page-center' ).on( 'tap', function(ev) {
-				if ( isOpen() ) {
-					closeNavigationDrawers();
-					ev.preventDefault();
-				}
-			} );
+			// Move when notification drawer in stable
 			$( '<div class="transparent-shield cloaked-element">' ).appendTo( '#mw-mf-page-center' );
-		} else {
-			$( '#mw-mf-main-menu-button' ).click( function( ev ) {
-				if ( isOpen() ) {
-					closeNavigationDrawers();
-				} else {
-					openNavigationDrawer();
-				}
-				ev.preventDefault();
-			} ).on( 'touchend mouseup', function( ev ) {
-				ev.stopPropagation();
-			} );
-
-			// close navigation if content tapped
-			$( '#mw-mf-page-center' ).
-				on( 'touchend mouseup', function() {
-					if ( isOpen() && !moved ) {
-						closeNavigationDrawers();
-					}
-				} ).
-				// but don't close if scrolled
-				on( 'touchstart', function() { moved = false; } ).
-				on( 'touchmove', function() { moved = true; } );
 		}
 	}
 
