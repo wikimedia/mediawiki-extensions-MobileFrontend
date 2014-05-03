@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_6c4a3b2c",
+        "filename": "javascripts/common/store.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2014-05-03T06:06:55Z",
+      "side": 1,
+      "message": "The order of iteration of for..in (and thus $.each, which uses for..in) is not defined (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in).\n\nThe order of testing drivers is pretty critical (e.g. cookies and localStorage have very different performance characteristics), since the first one available, where init also succeeds, will be used.\n\nIt can be made well-defined by keeping the keys (driver names) in an array in desired order.\n\nThis fallback order should also be clearly documented, since it is relevant to potential users of the library.",
+      "revId": "5e7730bdc0fe4bc10fa91600a30ad76822973bfa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
