@@ -100,7 +100,7 @@
 	"mobile-frontend-editor-unavailable-header": "Tekstbewerker niet beschikbaar",
 	"mobile-frontend-editor-undo-unsupported": "Ongedaan maken is op het moment niet mogelijk op mobiele apparaten.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Broktekst bekijken van</strong><span> $1</span>",
-	"mobile-frontend-editor-visual-editor": "Visuele tekstbewerker",
+	"mobile-frontend-editor-visual-editor": "Visuele tekstverwerker",
 	"mobile-frontend-editor-wait": "Een moment geduld. De bewerking wordt opgeslagen.",
 	"mobile-frontend-enable-images": "Afbeeldingen op de mobiele site inschakelen",
 	"mobile-frontend-expand-sections-description": "Altijd alle secties van een pagina uitklappen.",

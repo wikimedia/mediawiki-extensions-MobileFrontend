@@ -193,7 +193,7 @@
 	"mobile-frontend-nearby-permission-guidance": "Salli sijantipalveluiden käyttäminen. Tarkita selaimen sijaintipalveluiden asetukset.",
 	"mobile-frontend-nearby-refresh": "Sijaintisi on tarkentunut. Paina tästä ladataksesi lähistöllä olevat sivut",
 	"mobile-frontend-nearby-requirements": "Selaimesi ei tue sivuston {{SITENAME}} Lähistöllä-toimintoa.",
-	"mobile-frontend-nearby-requirements-guidance": "Kokeile eri selainta tai ota JavaScriptin käyttöön jos se on kytketty pois.",
+	"mobile-frontend-nearby-requirements-guidance": "Kokeile eri selainta tai ota JavaScriptin käyttöön, jos se on kytketty pois.",
 	"mobile-frontend-nearby-title": "Lähistöllä",
 	"mobile-frontend-nearby-to-page": "Lähellä sivua $1:",
 	"mobile-frontend-news-items": "Uutisissa",
