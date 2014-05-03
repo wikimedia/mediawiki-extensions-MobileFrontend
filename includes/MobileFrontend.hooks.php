@@ -196,7 +196,7 @@ class MobileFrontendHooks {
 		// additional frameworks and fixtures we use in tests
 		$testModules['qunit']['mobile.tests.base'] = $testModuleBoilerplate + array(
 			'scripts' => array(
-				'tests/javascripts/fixtures.js',
+				'tests/qunit/fixtures.js',
 			),
 		);
 
@@ -206,6 +206,7 @@ class MobileFrontendHooks {
 				$testFiles = array();
 				foreach ( $module['scripts'] as $script ) {
 					$testFile = 'tests/' . dirname( $script ) . '/test_' . basename( $script );
+					$testFile = str_replace( 'tests/javascripts/', 'tests/qunit/', $testFile );
 					// if a test file exists for a given JS file, add it
 					if ( file_exists( $testModuleBoilerplate['localBasePath'] . '/' . $testFile ) ) {
 						$testFiles[] = $testFile;
@@ -688,7 +689,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUnitTestsList( &$files ) {
-		$dir = dirname( dirname( __FILE__ ) ) . '/tests';
+		$dir = dirname( dirname( __FILE__ ) ) . '/tests/phpunit';
 
 		$callback = function( $file ) use ( $dir ) {
 			return "$dir/$file";
