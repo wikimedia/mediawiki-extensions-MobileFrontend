@@ -241,7 +241,7 @@
 	"mobile-frontend-profile-footer-ancient": "做出[[Special:Contributions/$1|$3次編輯]]與[[Special:Uploads/$1|$4次上載]]。",
 	"mobile-frontend-profile-footer-days": "已於$2天前加入並做出[[Special:Contributions/$1|$3次編輯]]和[[Special:Uploads/$1|$4次上載]]。",
 	"mobile-frontend-profile-footer-months": "已於至少$2月前加入並做出[[Special:Contributions/$1|$3次編輯]]和[[Special:Uploads/$1|$4次上載]]。",
-	"mobile-frontend-profile-footer-years": "已於至少$2年前加入並做出[[Special:Contributions/$1|$3次編輯]]和[[Special:Uploads/$1|$4次上載]]。",
+	"mobile-frontend-profile-footer-years": "已於至少$2年前加入並做出[[Special:Contributions/$1|$3次編輯]]和[[Special:Uploads/$1|{{PLURAL:$4|$4|500=500+}}次上載]]。",
 	"mobile-frontend-profile-last-edit": "用戶$3於{{PLURAL:$2|昨日|$2天前|0=今日較日前}}編輯頁面[[:$1]]。",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|已由}}[[Special:UserProfile/$1|$1]]感謝。",
 	"mobile-frontend-profile-last-upload-caption": "於{{PLURAL:$1|昨日|$1日前|0=今日}}{{GENDER:$2|上載}}。",

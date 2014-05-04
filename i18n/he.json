@@ -10,7 +10,8 @@
 			"Orsa",
 			"Ypnypn",
 			"אור שפירא",
-			"ערן"
+			"ערן",
+			"איתן96"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
@@ -123,7 +124,7 @@
 	"mobile-frontend-image-heading-describe": "נא '''לתאר''' את התמונה",
 	"mobile-frontend-image-uploading": "'''העלאת''' התמונה...",
 	"mobile-frontend-images-status": "להציג תמונות",
-	"mobile-frontend-language-article-heading": "לקרוא בשפה אחרת",
+	"mobile-frontend-language-article-heading": "לקריאה בשפה אחרת",
 	"mobile-frontend-language-header": "הדף הזה זמין {{PLURAL:$1|בשפה אחת|ב־$1 שפות}}",
 	"mobile-frontend-language-heading": "<strong>שפות</strong>",
 	"mobile-frontend-language-site-choose": "חיפוש שפה",
@@ -235,9 +236,9 @@
 	"mobile-frontend-profile-activity-heading": "פעילות לאחרונה",
 	"mobile-frontend-profile-error": "אבוי!",
 	"mobile-frontend-profile-footer-ancient": "{{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מ־500 קבצים}}]].",
-	"mobile-frontend-profile-footer-days": "{{GENDER:$1|הצרטרף|הצרטרפה}} לפני {{PLURAL:$2|יום אחד|יומיים|$2 ימים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].",
-	"mobile-frontend-profile-footer-months": "{{GENDER:$1|הצרטרף|הצרטרפה}} לפני {{PLURAL:$2|חודש אחד|חודשיים|$2 חודשים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].",
-	"mobile-frontend-profile-footer-years": "{{GENDER:$1|הצרטרף|הצרטרפה}} לפני {{PLURAL:$2|שנה אחת|שנתיים|$2 שנים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].",
+	"mobile-frontend-profile-footer-days": "{{GENDER:$1|הצטרף|הצטרפה}} לפני {{PLURAL:$2|יום אחד|יומיים|$2 ימים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].",
+	"mobile-frontend-profile-footer-months": "{{GENDER:$1|הצטרף|הצטרפה}} לפני {{PLURAL:$2|חודש אחד|חודשיים|$2 חודשים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].",
+	"mobile-frontend-profile-footer-years": "{{GENDER:$1|הצטרף|הצטרפה}} לפני {{PLURAL:$2|שנה אחת|שנתיים|$2 שנים}}, {{GENDER:$1|עשה|עשתה}} [[Special:Contributions/$1|{{PLURAL:$3|עריכה אחת|$3 עריכות}}]] {{GENDER:$1|והעלה|והעלתה}} [[Special:Uploads/$1|{{PLURAL:$4|קובץ אחד|$4 קבצים|500=יותר מחמש מאות קבצים}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|ערך|ערכה}} את הדף [[:$1]] {{PLURAL:$2|אתמול|לפני יומיים|לפני $2 ימים|0=מוקדם יותר היום}}.",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|קיבל|קיבלה}} הודעת תודה מאת [[Special:UserProfile/$1|$1]].",
 	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|העלה|העלתה}} {{PLURAL:$1|אתמול|לפני יומיים|לפני $1 ימים|0=היום}}.",
