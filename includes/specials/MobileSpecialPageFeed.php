@@ -120,7 +120,14 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			Html::element( 'p', array( 'class' => 'timestamp' ), $lang->userTime( $ts, $user ) );
 
 		if ( $bytes !== 0 ) {
-			$html .= Html::element( 'p', array( 'class' => $bytesClass ), $formattedBytes );
+			$html .= Html::element(
+				'p',
+				array(
+					'class' => $bytesClass,
+					'dir' => 'ltr',
+				),
+				$formattedBytes
+			);
 		}
 
 		$html .= Html::closeElement( 'div' );
