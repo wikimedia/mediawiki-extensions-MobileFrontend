@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_e3176e48",
+        "filename": "tests/browser/features/support/pages/article_page_desktop.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-05T21:30:37Z",
+      "side": 1,
+      "message": "Whitespace",
+      "revId": "2f1f83e89d814450489a3ee55cd9d1a1289d24e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
