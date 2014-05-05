@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_237446fa",
+        "filename": "tests/javascripts/modules/nearby/test_Nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-05T21:55:35Z",
+      "side": 1,
+      "message": "Let\u0027s indent what\u0027s inside the closure.",
+      "revId": "6bcc4249b4086c01babfd8b50bec5491690250f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_c37472fa",
+        "filename": "tests/javascripts/modules/nearby/test_Nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-05T21:55:35Z",
+      "side": 1,
+      "message": "Similarly to the other patch, let\u0027s use module name:\n\nMobileFrontend modules/nearby/Nearby, when there are no results",
+      "revId": "6bcc4249b4086c01babfd8b50bec5491690250f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
