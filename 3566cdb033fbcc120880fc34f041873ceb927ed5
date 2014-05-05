@@ -16,6 +16,24 @@
       "revId": "3566cdb033fbcc120880fc34f041873ceb927ed5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_80355044",
+        "filename": "javascripts/common/mainmenu.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-05T20:33:44Z",
+      "side": 1,
+      "message": "There\u0027s not a solution to link to... this is a new solution I proposed. It seemed the cleanest to me.\n\nI tried the various approaches this not very well documented problem proposed - removing hover, making hover events trigger touchend but I couldn\u0027t get these to work or look nice.\n\nDidn\u0027t use  -webkit-overflow-scrolling: touch as I wanted to avoid due to this bug I found a while back - http://jonrobson.me.uk/development/overflow-scrolling/",
+      "parentUuid": "8e23439c_1e79a6c2",
+      "revId": "3566cdb033fbcc120880fc34f041873ceb927ed5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
