@@ -43,7 +43,7 @@ When(/^I click the unwatch star$/) do
 end
 
 Then /^The watch star is selected$/ do
-  on(ArticlePage).watch_link_element.class_name.should match "watched"
+  on(ArticlePage).watch_link_element.parent.class_name.should match "watched"
 end
 
 Then /^The watch star is not selected$/ do
