@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_83043d18",
+        "filename": "less/tablet/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-05T17:44:06Z",
+      "side": 1,
+      "message": "Overlay code shouldn\u0027t be in common tablet code.\n\nEither add to Overlay css in a media query or add a FIXME\n(I\u0027d prefer former)",
+      "revId": "b1e7ea57ee310a1c1690980220d2a3ca190e390d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
