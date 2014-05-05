@@ -64,3 +64,19 @@ Given(/^The wiki has a terms of use$/) do
   on(APIPage).create "MediaWiki:mobile-frontend-terms-url", "Terms_of_use"
   on(APIPage).create "MediaWiki:mobile-frontend-terms-text", "Terms of use"
 end
+
+Given(/^the page "(.*?)" exists and has at least (\d+) edits$/) do |title, min_edit_count|
+  # Page must first exist before we can get edit count information
+  step 'the page "' + title + '" exists'
+  min_edit_count = min_edit_count.to_i
+  visit(ArticlePage, :using_params => {:article_name => title + '?action=info'})
+  # Open the third section which contains the edit count
+  on(ArticlePage).third_section_element.when_present.click
+  on(ArticlePage) do |page|
+    edit_count = page.edit_count_element.text.to_i
+    while edit_count < min_edit_count
+      edit_count += 1
+      on(APIPage).create title, "Test is used by Selenium web driver edit #" + edit_count.to_s
+    end
+  end
+end

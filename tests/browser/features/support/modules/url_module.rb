@@ -5,6 +5,6 @@ module URL
     else
       mediawiki_url = "http://127.0.0.1:80/w/index.php"
     end
-    "#{mediawiki_url}#{name}?useformat=mobile"
+    "#{mediawiki_url}#{name}"
   end
 end
