@@ -383,6 +383,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/uploads/UploadTutorial.js',
 			'javascripts/modules/uploads/PhotoUploadProgress.js',
 			'javascripts/modules/uploads/PhotoUploadOverlay.js',
+			'javascripts/externals/exif-js/binaryajax.js',
+			'javascripts/externals/exif-js/exif.js',
 		),
 		'styles' => array(
 			'less/modules/uploads/UploadTutorial.less',
@@ -427,27 +429,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// PhotoUploadProgress.js
 			'mobile-frontend-image-uploading' => array( 'parse' ),
 			'mobile-frontend-image-cancel-confirm' => array( 'parse' ),
-		),
-	),
-
-	// FIXME: move if EXIF checks go to stable
-	'mobile.uploads.exif' => $wgMFMobileResourceBoilerplate + array(
-		'scripts' => array(
-			'javascripts/externals/exif-js/binaryajax.js',
-			'javascripts/externals/exif-js/exif.js',
-		),
-	),
-
-	'mobile.uploads.stable' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.uploads',
-		),
-	),
-
-	'mobile.uploads.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.uploads.exif',
-			'mobile.uploads',
 		),
 	),
 

@@ -187,7 +187,7 @@
 
 			this._super();
 
-			if ( this.file && M.isBetaGroupMember() ) {
+			if ( this.file ) {
 				EXIF.getData( this.file, function() {
 					if ( $.isEmptyObject( this.exifdata ) ) {
 						if ( window.confirm( mw.msg( 'mobile-frontend-photo-upload-copyvio' ) ) ) {

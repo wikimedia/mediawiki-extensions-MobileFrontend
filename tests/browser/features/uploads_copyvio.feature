@@ -3,8 +3,7 @@
 Feature: Image uploads copyvio notice
 
   Background:
-    Given I am in beta mode
-      And I am logged in as a user with a > 0 edit count
+    Given I am logged in as a user with a > 0 edit count
       And I am on the "Nonexistent_page_abc" page
       And I click on the lead photo upload button
 
