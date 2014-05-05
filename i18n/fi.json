@@ -79,7 +79,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Luodaanko}} uusi sivu {{SITENAME}} sivustoon?",
 	"mobile-frontend-editor-newpage-prompt": "Sivua ei ole olemassa. Miksi juuri sinä et lisäisi sitä?",
 	"mobile-frontend-editor-placeholder": "Tämä kohta on tyhjä. Ole ensimmäinen joka luo sisältöä tähän!",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Olet luomassa}} uutta sivua {{SITENAME}} sivustoon!",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Olet luomassa}} uutta sivua sivustolle {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<strong>Esikatsellaan</strong><span> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Uudelleenohjataan editoriin...",
 	"mobile-frontend-editor-save": "Tallenna",
