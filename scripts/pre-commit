@@ -3,6 +3,12 @@
 # $ ln -s $PWD/scripts/pre-commit .git/hooks/pre-commit
 make jshint || exit 1
 
+# check for trailing whitespace
+if [[ `git diff --cached --check` ]]; then
+	git diff --cached --check
+	exit 1
+fi
+
 if git diff --name-only --cached | grep -P '\.js$' ; then
 	make qunit || exit 1
 fi
