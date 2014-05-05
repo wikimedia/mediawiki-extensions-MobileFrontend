@@ -33,6 +33,24 @@
       "revId": "054d9ea8bd5c3c05baf75d138ecf6fbf6e87f7f1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_c3d0f2f9",
+        "filename": "javascripts/common/Drawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-05T21:35:08Z",
+      "side": 1,
+      "message": "Nevermind. Works in stable.",
+      "parentUuid": "8e23439c_e3a1ae9f",
+      "revId": "054d9ea8bd5c3c05baf75d138ecf6fbf6e87f7f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
