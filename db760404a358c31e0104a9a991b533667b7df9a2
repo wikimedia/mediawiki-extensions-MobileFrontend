@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_63b121f3",
+        "filename": "tests/javascripts/modules/test_PageList.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-05T18:26:06Z",
+      "side": 1,
+      "message": "Let\u0027s use module path instead of file name (as in test_EditorApi.js). It\u0027s guaranteed to be unique.\n\nAlso, I thought we agreed on indenting inside the main closure.",
+      "revId": "db760404a358c31e0104a9a991b533667b7df9a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_83855d0d",
+        "filename": "tests/javascripts/modules/test_PageList.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-05T18:26:06Z",
+      "side": 1,
+      "message": "It\u0027s already within a module, so writing \"check watchlist status\" is enough.",
+      "revId": "db760404a358c31e0104a9a991b533667b7df9a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_237e8914",
+        "filename": "tests/javascripts/modules/test_PageList.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-05T18:26:06Z",
+      "side": 1,
+      "message": "Oops",
+      "revId": "db760404a358c31e0104a9a991b533667b7df9a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
