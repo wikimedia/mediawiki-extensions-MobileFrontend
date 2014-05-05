@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_1e79a6c2",
+        "filename": "javascripts/common/mainmenu.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-05T20:17:51Z",
+      "side": 1,
+      "message": "Please link to where the solution comes from in the comment. One of the links in the bug report mentions -webkit-overflow-scrolling: touch; Would it be cleaner?",
+      "revId": "3566cdb033fbcc120880fc34f041873ceb927ed5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
