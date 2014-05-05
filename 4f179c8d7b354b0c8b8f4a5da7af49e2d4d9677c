@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_43d065fa",
+        "filename": "less/minerva.less/minerva.variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-05T18:28:00Z",
+      "side": 1,
+      "message": "I\u0027ll pretend I didn\u0027t see this unrelated change ;-)",
+      "revId": "4f179c8d7b354b0c8b8f4a5da7af49e2d4d9677c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
