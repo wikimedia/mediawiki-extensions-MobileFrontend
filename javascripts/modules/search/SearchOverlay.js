@@ -3,6 +3,7 @@
 	var
 		OverlayNew = M.require( 'OverlayNew' ),
 		SearchApi = M.require( 'modules/search/SearchApi' ),
+		PageList = M.require( 'modules/PageList' ),
 		SEARCH_DELAY = 300,
 		SearchOverlay;
 
@@ -109,8 +110,8 @@
 									filter( data.results.length ? '.with-results' : '.without-results' ).
 									show();
 								$results.
-									removeClass( 'loading' ).
-									html( M.template.get( 'articleList' ).render( { pages: data.results } ) );
+									removeClass( 'loading' );
+								new PageList( { pages: data.results, el: $results } );
 								M.emit( 'search-results', self, data.results );
 							}
 						} );

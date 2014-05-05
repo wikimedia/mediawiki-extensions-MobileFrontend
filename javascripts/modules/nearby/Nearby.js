@@ -7,6 +7,7 @@
 		Nearby;
 
 	/**
+	 * FIXME: Rewrite as extension of PageList class
 	 * @extends View
 	 * @class Nearby
 	 */
@@ -131,13 +132,6 @@
 					} );
 				}
 			} );
-
-			// Load watch stars in alpha
-			if ( M.isAlphaGroupMember() ) {
-				mw.loader.using( 'mobile.stable', function() {
-					M.require( 'watchstar' ).initWatchListIconList( self.$( 'ul' ) );
-				} );
-			}
 		}
 	} );
 
