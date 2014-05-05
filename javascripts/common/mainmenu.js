@@ -26,7 +26,7 @@
 
 	function initialize() {
 		// FIXME: duplicate code in application.js which is not available here.
-		var tapEvent = M.isBetaGroupMember() ? 'tap' : 'mousedown';
+		var tapEvent = M.isBetaGroupMember() ? 'tap' : 'click';
 
 		// make the input readonly to avoid accidental focusing when closing menu
 		// (when JS is on, this input should not be used for typing anyway)
