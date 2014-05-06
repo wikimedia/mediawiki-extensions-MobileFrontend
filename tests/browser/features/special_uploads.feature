@@ -12,7 +12,7 @@ Feature: Special:Uploads uploads
     Given I am logged into the mobile website
       And I click on "Uploads" in the main navigation menu
       And I can see the uploads interface
-    When upload file image.png
+    When I upload file "exif.jpg"
       And I type a description
       And I click Submit
     Then I see an upload progress bar
