@@ -189,7 +189,7 @@
 
 			if ( this.file ) {
 				EXIF.getData( this.file, function() {
-					if ( $.isEmptyObject( this.exifdata ) ) {
+					if ( $.isEmptyObject( self.exifdata ) ) {
 						if ( window.confirm( mw.msg( 'mobile-frontend-photo-upload-copyvio' ) ) ) {
 							self.log( { action: 'copyvioOk' } );
 						} else {
