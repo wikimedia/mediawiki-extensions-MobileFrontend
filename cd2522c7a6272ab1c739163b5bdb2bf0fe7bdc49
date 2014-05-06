@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_87255fab",
+        "filename": "javascripts/common/store.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2014-05-06T18:00:24Z",
+      "side": 1,
+      "message": "Should use wgCookiePrefix.  Otherwise, callers need to do that manually.",
+      "revId": "cd2522c7a6272ab1c739163b5bdb2bf0fe7bdc49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_f52600c8",
+        "filename": "javascripts/common/store.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2014-05-06T18:00:24Z",
+      "side": 1,
+      "message": "Can you explain why cookies are in the fallback chain?\n\nIs it because localStorage is expected to be present, but may often be full?\n\nAlso, not including globalStorage is a limitation here, but I\u0027m not sure how relevant it is for mobile.",
+      "revId": "cd2522c7a6272ab1c739163b5bdb2bf0fe7bdc49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_07394fd3",
+        "filename": "javascripts/common/store.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2014-05-06T18:00:24Z",
+      "side": 1,
+      "message": "Missing init, which will cause error.",
+      "revId": "cd2522c7a6272ab1c739163b5bdb2bf0fe7bdc49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
