@@ -1,5 +1,5 @@
 Given(/^VisualEditor has loaded$/) do
-  on(ArticlePage).editor_ve_element.when_present.should exist
+  on(ArticlePage).editor_ve_element.when_present(20).should exist
 end
 
 Then(/^I see the VisualEditor$/) do
