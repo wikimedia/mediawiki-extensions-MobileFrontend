@@ -339,9 +339,8 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'Randompage',
-							MWNamespace::getCanonicalName( $wgMFContentNamespace ) )->getLocalUrl(
-								array( 'campaign' => 'random' )
-							),
+							MWNamespace::getCanonicalName( $wgMFContentNamespace ) )->getLocalUrl() .
+								'#/random',
 						'class' => 'icon-random icon icon-text',
 						'id' => 'randomButton',
 					),

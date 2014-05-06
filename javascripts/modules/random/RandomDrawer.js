@@ -14,7 +14,6 @@
 	RandomDrawer = Drawer.extend( {
 		locked: true,
 		defaults: {
-			campaign: 'random',
 			msg: mw.msg( 'mobilefrontend-random-explain' ),
 			cancel: mw.msg( 'mobilefrontend-random-cancel' ),
 			nextLabel: mw.msg( 'mobilefrontend-random-tryanother' )
@@ -26,7 +25,7 @@
 
 			api.get( { action: 'query', list: 'random', rnnamespace: '0', rnlimit: 1 } ).done( function( resp ) {
 				var page = resp.query.random[0],
-					url = mw.util.getUrl( page.title, { campaign: options.campaign } );
+					url = mw.util.getUrl( page.title ) + '#/random';
 
 				options.nextUrl = url;
 				_super.call( self, options );
