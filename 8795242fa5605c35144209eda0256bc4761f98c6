@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_0983abad",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-05-06T06:21:00Z",
+      "side": 1,
+      "message": "Rename this key here, but remote it in en.json? That doesn\u0027t appear to make sense.",
+      "revId": "8795242fa5605c35144209eda0256bc4761f98c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
