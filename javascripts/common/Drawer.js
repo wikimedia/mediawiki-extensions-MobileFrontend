@@ -35,6 +35,10 @@ var View = M.require( 'View' ),
 		 */
 		show: function() {
 			var self = this;
+			// Allow the drawer itself to be clickable (e.g. for copying and pasting references / clicking links in reference)
+			this.$el.on( M.tapEvent( 'click' ), function( ev ) {
+				ev.stopPropagation();
+			} );
 
 			if ( !self.isVisible() ) {
 				// use setTimeout to allow the browser to redraw if render() was called
@@ -45,6 +49,7 @@ var View = M.require( 'View' ),
 					if ( !self.locked ) {
 						// ignore a possible click that called show()
 						setTimeout( function() {
+							$( 'body' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
 							$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
 							// FIXME change when micro.tap.js in stable
 							// can't use 'body' because the drawer will be closed when
