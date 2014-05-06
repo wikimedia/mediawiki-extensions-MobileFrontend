@@ -42,42 +42,43 @@ body {
 	}
 }
 
+// FIXME: Id's for styling are bad m'kay?
+#secondary-button {
+	border-left: 1px solid @grayLight;
+}
+
+// FIXME: Id's for styling are bad m'kay?
+#mw-mf-main-menu-button {
+	border-right: 1px solid @grayLight;
+	background-position: 40% 40%;
+	.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
+}
+
 .header {
 	display: table;
 	width: 100%;
 	white-space: nowrap;
 	border-bottom: 1px solid @grayLight;
 
-	> * {
+	> a {
 		width: @headerHeight - @headerMargin;
-		display: table-cell;
-		vertical-align: middle;
-
-		&:first-child {
-			border-right: 1px solid @grayLight;
-		}
-
-		&:nth-child(3) {
-			border-left: 1px solid @grayLight;
-		}
 	}
 
-	> h1, > form, > ul {
+	// Left and right menu links
+	> a,
+	// Search field
+	> form {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	// Search
+	> form {
 		padding: (@headerTitleMarginV - @headerMargin) @headerTitleMarginH;
 		width: auto;
 	}
 
-	h1 {
-		text-align: center;
-		font-weight: bold;
-	}
-
-	#mw-mf-main-menu-button {
-		background-position: 40% 40%;
-		.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
-	}
-
-	// FIXME: merge with SearchOverlay
+	// FIXME: Overrides rules in common.less for input area that are present in reset.less - should be unnecessary
 	.search {
 		border: none;
 		padding: 0;
