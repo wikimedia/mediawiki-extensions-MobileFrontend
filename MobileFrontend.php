@@ -240,11 +240,11 @@ $wgMFPhotoUploadEndpoint = '';
 $wgMFNearbyEndpoint = '';
 
 /**
- * Namespace(s) where Special:Nearby should search. Should be one or more of
- * NS_* constants, pipe-separated.
+ * The content namespace(s) that Special:Nearby and Special:Random should use.
+ * Should be one or more of NS_* constants, pipe-separated.
  * @var int|string
  */
-$wgMFNearbyNamespace = NS_MAIN;
+$wgMFContentNamespace = NS_MAIN;
 
 /**
  * The wiki id/dbname for where photos are uploaded, if photos are uploaded to

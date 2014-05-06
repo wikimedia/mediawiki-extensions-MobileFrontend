@@ -2,7 +2,7 @@
 	var
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		limit = 50,
-		ns = mw.config.get( 'wgMFNearbyNamespace' ),
+		ns = mw.config.get( 'wgMFContentNamespace' ),
 		Api = M.require( 'api' ).Api,
 		NearbyApi;
 

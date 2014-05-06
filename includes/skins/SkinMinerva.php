@@ -322,7 +322,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareDiscoveryTools( QuickTemplate $tpl ) {
-		global $wgMFNearby;
+		global $wgMFNearby, $wgMFContentNamespace;
 
 		$items = array(
 			'home' => array(
@@ -338,8 +338,10 @@ class SkinMinerva extends SkinTemplate {
 				'links' => array(
 					array(
 						'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
-						'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl(
-							array( 'campaign' => 'random' ) ),
+						'href' => SpecialPage::getTitleFor( 'Randompage',
+							MWNamespace::getCanonicalName( $wgMFContentNamespace ) )->getLocalUrl(
+								array( 'campaign' => 'random' )
+							),
 						'class' => 'icon-random icon icon-text',
 						'id' => 'randomButton',
 					),

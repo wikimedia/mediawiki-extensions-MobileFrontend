@@ -262,7 +262,7 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgCookiePath, $wgMFNearbyEndpoint, $wgMFNearbyNamespace, $wgMFKeepGoing;
+		global $wgCookiePath, $wgMFNearbyEndpoint, $wgMFContentNamespace, $wgMFKeepGoing;
 		$ctx = MobileContext::singleton();
 		$wgStopMobileRedirectCookie = array(
 			'name' => 'stopMobileRedirect',
@@ -272,7 +272,7 @@ class MobileFrontendHooks {
 		);
 		$vars['wgStopMobileRedirectCookie'] = $wgStopMobileRedirectCookie;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
-		$vars['wgMFNearbyNamespace'] = $wgMFNearbyNamespace;
+		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
 		$vars['wgMFKeepGoing'] = $wgMFKeepGoing;
 
 		// Set the licensing agreement that is displayed in the editor.
