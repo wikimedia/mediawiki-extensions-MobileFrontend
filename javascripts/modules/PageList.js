@@ -37,6 +37,8 @@
 				api.load( pages ).done( function() {
 					$li.each( function() {
 						var page = new Page( {
+							// FIXME: Set sections so we don't hit the api (hacky)
+							sections: [],
 							title: $( this ).attr( 'title' ),
 							id: $( this ).data( 'id' )
 						} );

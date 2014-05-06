@@ -82,6 +82,7 @@
 		},
 
 		// FIXME: This assumes only one page can be rendered at one time - emits a page-loaded event and sets wgArticleId
+		// FIXME: The Page object is pretty central and used more like a model at times than a view. Time to introduce Models?
 		render: function( options ) {
 			var pageTitle = options.title, self = this,
 				$el = this.$el, _super = self._super;
