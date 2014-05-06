@@ -16,6 +16,24 @@
       "revId": "8795242fa5605c35144209eda0256bc4761f98c6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_b5a2c890",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-06T17:12:21Z",
+      "side": 1,
+      "message": "Let me clarify - mobilefrontend-keepgoing-explain got removed and mobilefrontend-random-explain got added but they are the same thing.\n\nFixing.",
+      "parentUuid": "8e23439c_0983abad",
+      "revId": "8795242fa5605c35144209eda0256bc4761f98c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
