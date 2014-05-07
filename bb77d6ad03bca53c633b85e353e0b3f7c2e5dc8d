@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_9fbd9f00",
+        "filename": "less/common/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-07T23:23:12Z",
+      "side": 1,
+      "message": "Need to add \u0027box-sizing: border-box;\u0027 if we\u0027re going to have 100% width + padding.",
+      "revId": "bb77d6ad03bca53c633b85e353e0b3f7c2e5dc8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
