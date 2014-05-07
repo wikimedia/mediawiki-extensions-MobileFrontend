@@ -8,21 +8,16 @@
 		margin-top: 45px;
 		button,
 		.button {
-			// FIXME: These is becoming a common pattern. Generalise.
-			text-indent: -9999px;
 			width: 70px;
 			// buttons are inline-block so ensure that we avoid the whitespace above 2nd button due to default value baseline
 			vertical-align: top;
-			.background-size(30px, auto);
-			background-repeat: no-repeat;
-			background-position: center center;
 
 			&.nearby {
-				background-image: url(images/secondaryPageActions/geo.png);
+				.background-image('images/secondaryPageActions/geo.png');
 			}
 
 			&.languageSelector {
-				background-image: url(images/secondaryPageActions/languages.png);
+				.background-image('images/secondaryPageActions/languages.png');
 				// FIXME: Temporary override of one in languages.less
 				margin-top: 0;
 			}

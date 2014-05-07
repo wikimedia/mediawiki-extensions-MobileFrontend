@@ -36,7 +36,7 @@ var module = (function() {
 			}
 		} );
 
-		$link = $( '<a class="mw-mf-cleanup">' ).attr( 'href', '#/issues' );
+		$link = $( '<a class="mw-mf-cleanup icon icon-text">' ).attr( 'href', '#/issues' );
 		M.overlayManager.add( /^\/issues$/, function() {
 			return new CleanupOverlay( { issues: issues } );
 		} );

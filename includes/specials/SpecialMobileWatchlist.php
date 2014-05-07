@@ -439,7 +439,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		if ( $this->usePageImages ) {
 			$needsPhoto = true;
 			$props = array(
-				'class' => 'listThumb needsPhoto',
+				'class' => 'listThumb needsPhoto icon icon-max-x',
 			);
 			if ( !is_null( $row->pp_value ) ) {
 				$file = wfFindFile( $row->pp_value );
@@ -453,8 +453,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 						$needsPhoto = false;
 						$props = array(
 							'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight()
-								? 'listThumbH'
-								: 'listThumbV' ),
+								? 'icon icon-max-y'
+								: 'icon icon-max-x' ),
 							'style' => 'background-image: url("' .
 								wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
 						);

@@ -79,17 +79,17 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$lang = $this->getLanguage();
 
 		if ( $isAnon ) {
-			$usernameClass = 'mw-mf-user mw-mf-anon';
+			$usernameClass = 'mw-mf-user mw-mf-anon icon icon-text icon-16px';
 		} else {
-			$usernameClass = 'mw-mf-user';
+			$usernameClass = 'mw-mf-user icon icon-16px icon-text';
 		}
 
 		$formattedBytes = $lang->formatNum( $bytes );
 		if ( $bytes > 0 ) {
 			$formattedBytes = '+' . $formattedBytes;
-			$bytesClass = 'mw-mf-bytesadded';
+			$bytesClass = 'mw-mf-bytesadded icon icon-text icon-12px';
 		} else {
-			$bytesClass = 'mw-mf-bytesremoved';
+			$bytesClass = 'mw-mf-bytesremoved icon icon-text icon-12px';
 		}
 
 		$html = Html::openElement( 'li' );

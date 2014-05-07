@@ -120,10 +120,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 		if ( $bytesChanged >= 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
-			$sizeClass = 'mw-mf-bytesadded meta';
+			$sizeClass = 'mw-mf-bytesadded meta icon icon-12px icon-text';
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
-			$sizeClass = 'mw-mf-bytesremoved meta';
+			$sizeClass = 'mw-mf-bytesremoved meta icon icon-12px icon-text';
 			$bytesChanged = abs( $bytesChanged );
 		}
 
@@ -230,7 +230,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$user = User::newFromId( $userId );
 			$edits = $user->getEditCount();
 			$attrs = array(
-				'class' => 'mw-mf-user',
+				'class' => 'mw-mf-user icon icon-16px icon-text',
 				'data-revision-id' => $this->revId,
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $user->getOption( 'gender' ),
@@ -258,7 +258,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$ipAddr = $this->rev->getUserText();
 			$userPage = Title::makeTitle( NS_USER, $ipAddr );
 			$output->addHtml(
-				'<div class="mw-mf-user mw-mf-anon">' .
+				'<div class="mw-mf-user mw-mf-anon icon icon-16px icon-text">' .
 					$this->msg( 'mobile-frontend-diffview-anonymous' )->escaped() .
 				'</div>' .
 				'<div>' .

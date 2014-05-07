@@ -16,7 +16,7 @@
 //
 // Markup:
 // <div class="drawer visible">
-//  <a class='cancel'>close</a>
+//  <a class='cancel icon'>close</a>
 //  <p>hello</p>
 // </div>
 //
@@ -41,10 +41,10 @@
 		padding: 0 0 1.2em;
 		display: block;
 		overflow: hidden;
-		text-indent: -9999px;
 		width: 100%;
 		height: 16px;
-		background: url(../modules/images/show.png) 50% 8px no-repeat;
+		.background-image('../modules/images/show.png');
+		background-position: 50% 8px;
 	}
 
 	a.button {

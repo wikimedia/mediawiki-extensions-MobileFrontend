@@ -43,10 +43,6 @@
 	// FIXME: Remove when pre-content in cache
 	border-bottom: solid 1px @grayMediumLight;
 
-	li,
-	.watch-this-article {
-		.background-size( auto, 30px );
-	}
 	li {
 		// Needed for non-JavaScript users
 		position: relative;
@@ -55,9 +51,7 @@
 		vertical-align: top;
 		height: 30px;
 		width: 40px;
-		text-indent: -9999px;
 		background-position: 50% 0;
-		background-repeat: no-repeat;
 
 		// FIXME: use .cloaked class
 		// file inputs are notoriously difficult to style
@@ -79,34 +73,21 @@
 }
 
 #ca-edit {
-	background-image: url(images/pagemenu/edit-locked.png);
 	margin-right: 17px;
-	&.enabled {
-		background-image: url(images/pagemenu/edit.png);
-	}
 }
 
 #ca-talk {
 	margin-right: 14px;
-	// FIXME: remove in favour of using .talk class
-	background-image: url(images/pagemenu/talk.png);
-	text-indent: -999px;
-}
-
-.talk {
-	background: url(images/pagemenu/talk.png) 50% 50% no-repeat;
-	overflow: hidden;
 }
 
 #ca-upload {
 	margin-right: 19px;
-	background-image: url(images/pagemenu/upload-locked.png);
-	overflow: hidden;
+	.background-image('images/pagemenu/upload-locked.png');
 	input {
 		display: none;
 	}
 	&.enabled {
-		background-image: url(images/pagemenu/upload.png);
+		.background-image('images/pagemenu/upload.png');
 		input {
 			display: block;
 		}

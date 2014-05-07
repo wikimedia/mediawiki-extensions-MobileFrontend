@@ -108,9 +108,10 @@
 					if ( page.thumbnail ) {
 						thumb = page.thumbnail;
 						page.listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
-						page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
+						page.pageimageClass = thumb.width > thumb.height ? 'icon icon-max-y' : 'icon icon-max-x';
 					} else {
-						page.pageimageClass = 'needsPhoto';
+						// FIXME: Rename needsPhoto to needs-photo
+						page.pageimageClass = 'needsPhoto icon icon-max-x';
 					}
 					page.anchor = 'item_' + i;
 					page.url = mw.util.getUrl( page.title );

@@ -187,7 +187,7 @@ var
 					text( mw.msg( 'mobile-frontend-photo-upload-generic' ) ).
 					attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $container );
 				// FIXME: This is needed so the camera shows. Eww.
-				$( '<div>' ).appendTo( $a );
+				$( '<div class="icon icon-24px">' ).appendTo( $a );
 			} else {
 				createButton( $container );
 			}

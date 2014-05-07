@@ -8,22 +8,9 @@
 .mw-mf-cleanup {
 	display: block;
 	padding: 10px 15px 10px (@smallIconSize + 20px);
-	background-image: url(images/issues/blue.png);
-	.background-size( @smallIconSize, @smallIconSize );
-	background-repeat: no-repeat;
+	.background-image('images/issues/blue.png');
 	margin-bottom: 4px;
 	background-position: 10px center;
-}
-
-.stable {
-	.mw-mf-cleanup {
-		&:hover {
-			background-image: url(images/issues/gray.png);
-			text-decoration: none;
-			color: #565656;
-			background-color: #f0f0f0;
-		}
-	}
 }
 
 .app,
@@ -43,9 +30,7 @@
 			.issue-notice {
 				padding: (@smallIconSize * 2.5) @headerMargin @smallIconSize @headerMargin;
 				.background-image-svg( 'images/issues/gray-triangle.svg', 'images/issues/gray-triangle.png' );
-				.background-size( @smallIconSize, @smallIconSize );
 				background-position: center @smallIconSize;
-				background-repeat: no-repeat;
 			}
 		}
 	}
@@ -60,6 +45,7 @@
 					.issue-notice {
 						padding: 2em 1em 2em (@largeIconSize + 10px);
 						margin: 0 1em 0 3em;
+						// FIXME: move to generic icon.less class e.g. icon-responsive
 						.background-size( @largeIconSize, @largeIconSize );
 						background-position: left center;
 					}

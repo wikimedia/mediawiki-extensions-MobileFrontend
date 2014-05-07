@@ -17,7 +17,7 @@
 			page: M.getCurrentPage()
 		},
 		tagName: 'div',
-		className: 'watch-this-article',
+		className: 'icon icon-32px watch-this-article',
 		template: M.template.compile( '<a>' ),
 		initialize: function( options ) {
 			var self = this, _super = this._super,

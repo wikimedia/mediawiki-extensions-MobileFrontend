@@ -1,0 +1,206 @@
+// FIXME: Standardise on all our icon sizes
+@import "minerva.variables";
+@import "minerva.mixins";
+@import "mediawiki.mixins";
+
+// Icons
+//
+// Styleguide 8.
+
+
+// Icon
+//
+// Use the icon class whenever you are using an icon - whether it be in
+// a button, link or other input field. All icons should be 24px width and
+// centered by default and will hide any text in the element.
+//
+// Markup:
+// <div class="icon icon-edit">edit</div>
+//
+// Styleguide 8.1.
+.loading,
+// FIXME: Make the ajax loader a View with the icon class
+#page-actions li,
+h2 .edit-page,
+#mw-mf-page-left ul li a,
+#mw-mf-main-menu-button,
+// FIXME: Kill above when cache clear
+.mw-ui-button.mw-ui-progressive.icon,
+.profile .icon-talk-blue,
+// FIXME: Kill above when mediawiki ui buttons does not use background declaration
+.icon {
+	background-repeat: no-repeat;
+	.background-size( 24px, auto );
+	cursor: pointer;
+	background-position: center center;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+// Icon (text)
+//
+// When used in conjunction with the icon class, this will
+// show any text within the icon element. Note currently the caller
+// must also specify left padding to avoid overlay with the text.
+//
+// Markup:
+// <div class="icon icon-text icon-edit" style="padding-left: 30px;">edit</div>
+//
+// Styleguide 8.2.
+#mw-mf-page-left ul li a,
+// FIXME: Remove above when cache is clear
+.stable #page-secondary-actions .mw-ui-button.mw-ui-progressive.icon,
+// FIXME: Kill above rule when mediawiki ui stops using background property and cache is clear
+.profile .icon-talk-blue,
+// FIXME: Kill above rule when mediawiki ui buttons stops using background property
+.icon-text {
+	text-indent: 0;
+	background-position: left center;
+}
+
+// FIXME: Replace all instances of icon-12px with icon-16px
+.icon-12px {
+	.background-size( auto, 12px );
+}
+
+// FIXME: Replace all instances of icon-15px with icon-16px
+.icon-15px {
+	.background-size( 15px, auto );
+}
+
+// Icon (16px)
+//
+// When used in conjunction with the icon class, this will
+// shrink the icon to 16px
+//
+// Markup:
+// <div class="icon icon-16px icon-edit">edit</div>
+//
+// Styleguide 8.1.1
+.icon-16px {
+	.background-size( 16px, auto );
+}
+
+// FIXME: Replace all instances of icon-18px with icon-16px
+.icon-18px {
+	.background-size( 18px, 18px );
+}
+
+// FIXME: Replace all instances of these icons with icon-16px or icon-24px
+.icon-20px {
+	.background-size( auto, 20px );
+}
+
+
+// Icon (32px)
+//
+// When used in conjunction with the icon class, this will
+// increase the icon size to 32px
+//
+// Markup:
+// <div class="icon icon-32px icon-edit" style="width:32px;height:32px;">edit</div>
+//
+// Styleguide 8.1.2.
+.loading,
+// FIXME: Make the ajax loader a View with the icon-32px class
+#page-actions li,
+h2 .edit-page,
+// FIXME: Kill above when cache clear
+.mw-ui-button.mw-ui-progressive.icon-32px,
+// FIXME: Kill above when mediawiki ui buttons does not use background declaration
+.icon-32px {
+	.background-size( 32px, auto );
+}
+
+// Icon (max-x)
+//
+// When used in conjunction with the icon class, this will
+// render the icon so it fills the width of its container.
+//
+// Markup:
+// <div class="icon icon-max-x icon-edit" style="width:100px;height:100px;">edit</div>
+//
+// Styleguide 8.1.3.
+.icon-max-x {
+	.background-size( 100%, auto );
+}
+
+// Icon (max-y)
+//
+// When used in conjunction with the icon class, this will
+// render the icon so it fills the height of its container.
+//
+// Markup:
+// <div class="icon icon-max-y icon-edit" style="width:100px;height:100px;">edit</div>
+//
+// Styleguide 8.1.4.
+.icon-max-y {
+	.background-size( auto, 100% );
+}
+
+
+// Icon (edit)
+//
+// Renders a locked edit icon
+//
+// Markup:
+// <div class="icon icon-edit">edit</div>
+//
+// Styleguide 8.3.1.
+#content .edit-page,
+#ca-edit,
+// FIXME: Remove above when cache is clear
+.icon-edit {
+	.background-image('images/pagemenu/edit-locked.png');
+
+	// Icon (enabled edit)
+	//
+	// Renders an enabled edit icon
+	//
+	// Markup:
+	// <div class="icon icon-edit enabled">edit</div>
+	//
+	// Styleguide 8.3.2.
+	&.enabled {
+		.background-image('images/pagemenu/edit.png');
+	}
+}
+
+// Icon (talk)
+//
+// Renders a talk icon
+//
+// Markup:
+// <div class="icon icon-talk">talk</div>
+//
+// Styleguide 8.3.3.
+#ca-talk,
+// FIXME: Remove above when cache is clear
+.icon-talk {
+	.background-image('images/pagemenu/talk.png');
+}
+
+// Icon (watch)
+//
+// Renders a watch icon where the page is not watched.
+//
+// Markup:
+// <div class="icon watch-this-article">watch</div>
+//
+// Styleguide 8.3.4.
+// FIXME: Rename to watch-icon for consistency
+.watch-this-article {
+	.background-image('images/watch.png');
+
+	// Icon (watched)
+	//
+	// Renders a watch icon where the page is watched.
+	//
+	// Markup:
+	// <div class="icon watch-this-article watched">watch</div>
+	//
+	// Styleguide 8.3.4.
+	&.watched {
+		.background-image('images/watched.png');
+	}
+}

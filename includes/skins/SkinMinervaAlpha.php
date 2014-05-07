@@ -41,10 +41,10 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 			}
 			if ( $numTopics ) {
 				$talkLabel = $this->getLanguage()->formatNum( $numTopics );
-				$class = 'count';
+				$class = 'count icon icon-32px icon-talk';
 			} else {
 				$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
-				$class = '';
+				$class = 'icon icon-32px icon-talk';
 			}
 			$menu = $tpl->data['page_actions'];
 			if ( isset( $menu['talk'] ) ) {

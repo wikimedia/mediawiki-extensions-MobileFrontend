@@ -10,17 +10,20 @@
 // <div class="loading spinner"></div>
 //
 // Styleguide 6.2.
+
+// FIXME: Rename to icon-loader
+.loading,
+// FIXME: Standardise on a loading class (update ConfirmEdit extension)
+.fancycaptcha-reload-loading {
+	// FIXME: Review use of !important
+	.background-image('images/ajax-loader.gif') !important;
+}
+
 .loading {
 
 	&.spinner {
 		height: 100px;
 	}
-
-	// needs !important to override images from more specific rules
-	.background-image(@ajaxLoadingImage) !important;
-	background-repeat: no-repeat;
-	background-position: center;
-	.background-size( 32px, auto );
 
 	// FIXME: Merge rules with spinner?
 	&.content {

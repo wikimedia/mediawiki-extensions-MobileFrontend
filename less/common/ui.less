@@ -73,7 +73,6 @@ body {
 	}
 
 	#mw-mf-main-menu-button {
-		.background-size( 24px, auto );
 		background-position: 40% 40%;
 		.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
 	}
@@ -143,9 +142,7 @@ input.search {
 	.edit-page {
 		display: none;
 		position: absolute;
-		background: url(../common/images/pagemenu/edit.png) 100% @headingMargin no-repeat;
-		.background-size( auto, 30px );
-		text-indent: -9999px;
+		background-position: 100% @headingMargin;
 		border-left: solid 1px @sectionBorderColor;
 		width: @sectionIconWidth + 5px;
 		top: 0;
@@ -166,16 +163,6 @@ input.search {
 	display: block;
 }
 
-// FIXME: this is here only because non-JS version doesn't load watchstar.less
-.watch-this-article {
-	background: url(../common/images/watch.png) 50% 50% no-repeat;
-	text-indent: -9999px;
-
-	&.watched {
-		background-image: url(../common/images/watched.png);
-	}
-}
-
 .stable {
 	// Remove when/if page-secondary-actions are promoted to stable
 	.languageSelector {
@@ -189,14 +176,6 @@ input.search {
 				width: 24px;
 				height: 24px;
 				line-height: 24px;
-			}
-		}
-
-		.overlay-header,
-		.header {
-			.user-button,
-			#secondary-button {
-				.background-size( 24px, auto );
 			}
 		}
 	}
@@ -231,20 +210,10 @@ input.search {
 		background-position: 60% 40%;
 	}
 
-	.main-header-button,
-	// FIXME: Kept for caching reasons. Remove when main-header-button available
-	.user-button,
-	#mw-mf-main-menu-button,
-	#secondary-button {
-		text-indent: -9999px;
-		background-repeat: no-repeat;
-	}
-
 	// need to specify id or else other rules are more important
 	// FIXME: simplify when .icon class from OverlayNew used instead
 	#secondary-button.user-button,
 	.user-button {
-		text-indent: 0;
 		width: @headerHeight - 2 * @headerMargin;
 		padding-left: @headerMargin;
 		padding-bottom: @headerMargin;
@@ -259,6 +228,7 @@ input.search {
 		}
 
 		span {
+			text-indent: 0;
 			display: inline-block;
 			font-weight: bold;
 			color: #fff;

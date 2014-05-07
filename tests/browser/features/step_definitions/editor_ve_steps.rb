@@ -42,5 +42,5 @@ Given(/^I type "(.+)" into VisualEditor$/) do |text|
 end
 
 Given(/^I click the edit button for section (\d+)$/) do |arg1|
-  on(ArticlePage).link_element(class: "edit-page", index: arg1.to_i).when_present.click
+  on(ArticlePage).link_element(css: ".edit-page", index: arg1.to_i).when_present.click
 end
