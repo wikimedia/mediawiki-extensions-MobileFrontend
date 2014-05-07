@@ -1,3 +1,7 @@
+Given(/^I switch to desktop$/) do
+  on(ArticlePage).desktop_link_element.click
+end
+
 Then(/^I click on the page$/) do
   on(ArticlePage).content_wrapper_element.click
 end
