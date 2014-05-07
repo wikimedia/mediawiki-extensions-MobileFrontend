@@ -4,8 +4,12 @@
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
-		isVisualEditorEnabled = M.isWideScreen() && M.isAlphaGroupMember() &&
-			mw.config.get( 'wgVisualEditorConfig' ),
+		isVisualEditorEnabled = M.isWideScreen() &&
+			M.isAlphaGroupMember() &&
+			mw.config.get( 'wgVisualEditorConfig' ) &&
+			mw.config.get( 'wgVisualEditorConfig' ).namespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) > -1 &&
+			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
+			mw.config.get( 'wgPageContentModel' ) === 'wikitext',
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		inNavSignupCampaign = M.query.campaign === 'leftNavSignup',
 		Section = M.require( 'Section' ),
@@ -75,9 +79,10 @@
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
 
+			// If the user tries to switch to the VisualEditor, check if any changes have
+			// been made, and if so, tell the user they have to save first.
 			if ( isVisualEditorEnabled ) {
 				this.$( '.visual-editor' ).on( 'click', function() {
-					// If changes have been made tell the user they have to save first
 					if ( !self.api.hasChanged ) {
 						MobileWebClickTracking.log( 'editor-switch-to-visual', options.title );
 						self._switchToVisualEditor( options );
