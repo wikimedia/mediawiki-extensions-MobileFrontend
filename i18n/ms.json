@@ -120,7 +120,6 @@
 	"mobile-frontend-opt-in-explain": "Dengan menyertai beta ini, anda akan mendapat capaian kepada ciri-ciri percubaan, tetapi anda mungkin akan berdepan dengan pepijat dan masalah-masalah yang seumpamanya.",
 	"mobile-frontend-overlay-close": "Tutup",
 	"mobile-frontend-overlay-continue": "Sambung",
-	"mobile-frontend-overlay-escape": "Kembali",
 	"mobile-frontend-page-menu-contents": "kandungan",
 	"mobile-frontend-page-menu-history": "Sejarah",
 	"mobile-frontend-page-saving": "Menyimpan $1",
@@ -212,6 +211,7 @@
 	"mobilefrontend-keepgoing-links-explain": "Cari lebih banyak perkataan yang boleh dijadikan pautan. Bubuh tanda kurungan siku berganda di awal dan akhir perkataan.",
 	"mobilefrontend-keepgoing-links-title": "Tambah pautan",
 	"mobilefrontend-keepgoing-saved-title": "Suntingan disimpan!",
+	"mobilefrontend-random-tryanother": "Cari satu lagi laman",
 	"nearby": "Halaman berdekatan anda",
 	"tag-mobile_edit": "Suntingan mobil",
 	"tag-mobile_edit-description": "Suntingan dari tapak mobil"

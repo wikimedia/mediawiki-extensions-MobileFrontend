@@ -343,7 +343,7 @@
 	"mobilefrontend-keepgoing-wikify-category": "{{notranslate}}Category used for searching pages that need wikification",
 	"mobilefrontend-random-cancel": "Allows the reader to start reading the current page.\n\nSee also:\n* {{msg-mw|Mobilefrontend-random-explain}}",
 	"mobilefrontend-random-explain": "Message explaining that they are viewing a random page. Gives them the option to try another.",
-	"mobilefrontend-random-tryanother": "Label for button that user can answer question posed {{msg-mw|Mobilefrontend-random-explain}} when they would prefer another page.",
+	"mobilefrontend-random-tryanother": "\"Another\" refers to a page. This is a label for a button that the user can press to answer the question in the message {{msg-mw|Mobilefrontend-random-explain}} when they prefer to read another random page.",
 	"nearby": "{{doc-special|Nearby}}",
 	"tag-mobile_edit": "Short change tag name that appears e.g. in [[Special:RecentChanges]].\n\nSee also:\n* {{msg-mw|tag-mobile_edit-description}}",
 	"tag-mobile_edit-description": "Change tag description e.g. in [[Special:Tags]], see also {{msg-mw|tag-mobile_edit}}"
