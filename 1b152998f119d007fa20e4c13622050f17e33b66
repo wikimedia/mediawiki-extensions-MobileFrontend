@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_561a54d1",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 22
+      },
+      "lineNbr": 442,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_36aeb896",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_d6cd448b",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 22
@@ -30,6 +48,24 @@
       "writtenOn": "2014-05-07T18:11:36Z",
       "side": 1,
       "message": "This should be \u0027icon icon-max-x\u0027",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_7615509f",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 22
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_d6cd448b",
       "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_d6254406",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "It\u0027s added in the template. I\u0027ll clarify this here with a comment.",
+      "parentUuid": "8e23439c_96bb4cba",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_76d8b028",
         "filename": "javascripts/modules/search/pageImages.js",
         "patchSetId": 22
@@ -64,6 +118,24 @@
       "writtenOn": "2014-05-07T18:30:16Z",
       "side": 1,
       "message": "Don\u0027t you need \u0027icon\u0027 here as well?",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_f62840e0",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "It\u0027s added in the template. I\u0027ll clarify this here with a comment.",
+      "parentUuid": "8e23439c_76d8b028",
       "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_b622c8fa",
+        "filename": "less/common/icons.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "I\u0027m still not sure. Let\u0027s review later.",
+      "parentUuid": "8e23439c_b61408ef",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_f6cba04d",
         "filename": "less/common/mainmenu.less",
         "patchSetId": 22
@@ -98,6 +188,24 @@
       "writtenOn": "2014-05-07T18:30:16Z",
       "side": 1,
       "message": "Do we want to keep all of these limited to li tags?",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_767c30e9",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "Yep - the idea is for these to work on cached pages. See the FIXME below.",
+      "parentUuid": "8e23439c_f6cba04d",
       "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_7663103f",
+        "filename": "less/common/ui.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "Done. Also moving to icons.less so it has a more logical home.",
+      "parentUuid": "8e23439c_56049480",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_36f9187f",
         "filename": "less/common/ui.less",
         "patchSetId": 22
@@ -138,6 +264,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_9676ac00",
+        "filename": "less/common/ui.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "Done. Also moving to icons.less so it has a more logical home.",
+      "parentUuid": "8e23439c_36f9187f",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_b6ec08ba",
         "filename": "less/specials/mobilediff.less",
         "patchSetId": 22
@@ -149,6 +293,24 @@
       "writtenOn": "2014-05-07T18:30:16Z",
       "side": 1,
       "message": "We\u0027re trying to standardize on using multipliers for line-heights, e.g. \u00270.9\u0027",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_16d17cd0",
+        "filename": "less/specials/mobilediff.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 1,
+      "message": "Looks like it\u0027s not actually needed!",
+      "parentUuid": "8e23439c_b6ec08ba",
       "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

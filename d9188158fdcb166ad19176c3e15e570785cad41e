@@ -34,6 +34,24 @@
       "revId": "d9188158fdcb166ad19176c3e15e570785cad41e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_3638f839",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-07T18:41:11Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "8e23439c_f67e0015",
+      "revId": "d9188158fdcb166ad19176c3e15e570785cad41e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
