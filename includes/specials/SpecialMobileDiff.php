@@ -129,7 +129,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 		$this->getOutput()->addHtml(
-			Html::openElement( 'div', array( 'id' => 'mw-mf-diff-info' ) )
+			Html::openElement( 'div', array( 'id' => 'mw-mf-diff-info', 'class' => 'page-summary' ) )
 				. Html::openElement( 'h2', array() )
 				. Html::element( 'a',
 					array(
