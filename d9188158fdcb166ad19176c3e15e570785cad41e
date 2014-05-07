@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_f67e0015",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-07T18:16:36Z",
+      "side": 0,
+      "message": "Isn\u0027t this a needed class for element selection elsewhere in editor.js?",
+      "revId": "d9188158fdcb166ad19176c3e15e570785cad41e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
