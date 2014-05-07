@@ -36,6 +36,40 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_96bb4cba",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-07T18:30:16Z",
+      "side": 1,
+      "message": "Don\u0027t you need \u0027icon\u0027 here as well?",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_76d8b028",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-07T18:30:16Z",
+      "side": 1,
+      "message": "Don\u0027t you need \u0027icon\u0027 here as well?",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_b61408ef",
         "filename": "less/common/icons.less",
         "patchSetId": 22
@@ -47,6 +81,74 @@
       "writtenOn": "2014-05-07T18:05:01Z",
       "side": 1,
       "message": "Add a fixme about killing this per:\nhttp://luigimontanez.com/2010/stop-using-text-indent-css-trick/\nhttp://maileohye.com/html-text-indent-not-messing-up-your-rankings/\n(That 2nd blog post is by a Google Senior Developer Programs Engineer.)",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_f6cba04d",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-07T18:30:16Z",
+      "side": 1,
+      "message": "Do we want to keep all of these limited to li tags?",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_56049480",
+        "filename": "less/common/ui.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-07T18:30:16Z",
+      "side": 1,
+      "message": "use single-quotes for consistency.",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_36f9187f",
+        "filename": "less/common/ui.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-07T18:30:16Z",
+      "side": 1,
+      "message": "use single-quotes for consistency.",
+      "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_b6ec08ba",
+        "filename": "less/specials/mobilediff.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-07T18:30:16Z",
+      "side": 1,
+      "message": "We\u0027re trying to standardize on using multipliers for line-heights, e.g. \u00270.9\u0027",
       "revId": "1b152998f119d007fa20e4c13622050f17e33b66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
