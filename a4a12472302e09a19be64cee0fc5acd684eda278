@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_abe6d93d",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-08T20:41:58Z",
+      "side": 1,
+      "message": "Just include \u0027.box-sizing(border-box);\u0027 here so it isn\u0027t confusing.\n\nPersonally, I think we should get rid of the border-box class, as we shouldn\u0027t have classes that are actually just a single CSS rule with no semantic meaning. That leads to us basically recreating inline styles:\n\u003cdiv class\u003d\"border-box padding-10px red-border\"\u003e\nvs.\n\u003cdiv class\u003d\"warning\"\u003e",
+      "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
