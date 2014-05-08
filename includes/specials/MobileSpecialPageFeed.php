@@ -63,15 +63,15 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param string $diffLink url to the diff for the edit
 	 * @param string $username The username of the user that made the edit (absent if anonymous)
 	 * @param string $comment The edit summary
-	 * @param bool|Title $title The title of the page that was edited
+	 * @param Title|null $title The title of the page that was edited
 	 * @param bool $isAnon Is the edit anonymous?
-	 * @param int $bytes Net number of bytes changed
+	 * @param int|null $bytes Net number of bytes changed or null if not applicable
 	 * @param bool $isMinor Is the edit minor?
 	 * @return string HTML code
 	 */
 	// FIXME: use an array as an argument?
 	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
-		$title = false, $isAnon = false, $bytes = 0, $isMinor = false ) {
+		$title = null, $isAnon = false, $bytes = 0, $isMinor = false ) {
 
 		wfProfileIn( __METHOD__ );
 		$output = $this->getOutput();
@@ -82,14 +82,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$usernameClass = 'mw-mf-user mw-mf-anon icon icon-text icon-16px';
 		} else {
 			$usernameClass = 'mw-mf-user icon icon-16px icon-text';
-		}
-
-		$formattedBytes = $lang->formatNum( $bytes );
-		if ( $bytes > 0 ) {
-			$formattedBytes = '+' . $formattedBytes;
-			$bytesClass = 'mw-mf-bytesadded icon icon-text icon-12px';
-		} else {
-			$bytesClass = 'mw-mf-bytesremoved icon icon-text icon-12px';
 		}
 
 		$html = Html::openElement( 'li' );
@@ -119,7 +111,14 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$html .= Html::openElement( 'div', array( 'class' => 'listThumb' ) ) .
 			Html::element( 'p', array( 'class' => 'timestamp' ), $lang->userTime( $ts, $user ) );
 
-		if ( $bytes !== 0 ) {
+		if ( $bytes ) {
+			$formattedBytes = $lang->formatNum( $bytes );
+			if ( $bytes > 0 ) {
+				$formattedBytes = '+' . $formattedBytes;
+				$bytesClass = 'mw-mf-bytesadded icon icon-text icon-12px';
+			} else {
+				$bytesClass = 'mw-mf-bytesremoved icon icon-text icon-12px';
+			}
 			$html .= Html::element(
 				'p',
 				array(

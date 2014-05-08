@@ -152,7 +152,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 		// When the page is named there is no need to print it in output
 		if ( $this->title ) {
-			$title = false;
+			$title = null;
 		} else {
 			$title = $rev->getTitle();
 		}
