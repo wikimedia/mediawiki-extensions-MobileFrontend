@@ -51,4 +51,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		}
 		return $conds;
 	}
+
+	public function getDesktopUrl( $subPage ) {
+		return null;
+	}
 }
