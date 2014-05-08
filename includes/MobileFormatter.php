@@ -199,7 +199,8 @@ class MobileFormatter extends HtmlFormatter {
 					$sectionTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
 					if( $sectionTitle !== '' ) {
 						$element->removeAttribute( 'title' );
-						$h2UnknownMobileSection = $mainPage->createElement( 'h2', $sectionTitle );
+						$h2UnknownMobileSection =
+							$mainPage->createElement( 'h2', htmlspecialchars( $sectionTitle ) );
 						$content->appendChild( $h2UnknownMobileSection );
 					}
 					$br = $mainPage->createElement( 'br' );
