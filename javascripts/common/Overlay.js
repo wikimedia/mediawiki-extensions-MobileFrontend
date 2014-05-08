@@ -41,6 +41,8 @@
 
 		postRender: function( options ) {
 			var self = this;
+			// Truncate any text inside in the overlay header.
+			this.$( '.overlay-header h2 span' ).addClass( 'truncated-text' );
 			// FIXME change when micro.tap.js in stable
 			this.$( '.cancel, .confirm' ).on( M.tapEvent( 'click' ), function( ev ) {
 				ev.preventDefault();
