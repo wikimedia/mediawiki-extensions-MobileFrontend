@@ -86,7 +86,7 @@
 	 * Mark notifications as read.
 	 */
 	function markAsRead( unread ) {
-		api.getToken( 'edit' ).done( function( token ) {
+		api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
 			api.post( {
 				action : 'echomarkread',
 				list : unread.join( '|' ),

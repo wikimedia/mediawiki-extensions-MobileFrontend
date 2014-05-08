@@ -373,4 +373,26 @@
 		assert.ok( doneSpy.calledWith( '<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>' ) );
 	} );
 
+	QUnit.module( 'MobileFrontend modules/editor/EditorApi expired tokens', {
+		setup: function() {
+			this.editorApi = new EditorApi( { title: 'MediaWiki:Test.css' } );
+
+			this.sandbox.stub( this.editorApi, 'post' ).
+				onFirstCall().returns( $.Deferred().reject( "badtoken" ) ).
+				onSecondCall().returns( $.Deferred().resolve( {"edit":{"result":"Success"}} ) );
+
+			this.sandbox.stub( this.editorApi, 'getToken' ).
+				onFirstCall().returns( $.Deferred().resolve( 'cachedbadtoken' ) ).
+				onSecondCall().returns( $.Deferred().resolve( 'goodtoken' ) );
+		}
+	} );
+
+	QUnit.test( '#save when token has expired', 2, function( assert ) {
+		this.editorApi.getContent();
+		this.editorApi.setContent( 'section 1' );
+		this.editorApi.save();
+		assert.ok( this.editorApi.getToken.calledTwice, true, 'check the spy was called twice' );
+		assert.ok( this.editorApi.post.calledTwice, true, 'check the spy was called twice' );
+	} );
+
 }( mw.mobileFrontend, jQuery ) );

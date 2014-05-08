@@ -107,41 +107,41 @@ QUnit.module( 'MobileFrontend api.getToken', {
 	}
 } );
 
-QUnit.test( '#getToken - successful edit token', 1, function() {
-	this.api.getToken( 'edit' ).done( function( token ) {
+QUnit.test( '#getTokenWithEndpoint - successful edit token', 1, function() {
+	this.api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
 		strictEqual( token, '123', 'Got token' );
 	} );
 } );
 
-QUnit.test( '#getToken - load from cache', 2, function() {
-	this.api.getToken( 'edit' );
-	this.api.getToken( 'edit' ).done( function( token ) { // this comes via cache
+QUnit.test( '#getTokenWithEndpoint - load from cache', 2, function() {
+	this.api.getTokenWithEndpoint( 'edit' );
+	this.api.getTokenWithEndpoint( 'edit' ).done( function( token ) { // this comes via cache
 		strictEqual( token, '123', 'Test for bad token name' );
 	} );
 
 	strictEqual( stub.getCall( 1 ), null, 'Ajax stub was only called once' );
 } );
 
-QUnit.test( '#getToken - cors edit token', 1, function() {
-	this.api.getToken( 'watch', 'http://commons.wikimedia.org/w/api.php' ).done( function( token ) {
+QUnit.test( '#getTokenWithEndpoint - cors edit token', 1, function() {
+	this.api.getTokenWithEndpoint( 'watch', 'http://commons.wikimedia.org/w/api.php' ).done( function( token ) {
 		strictEqual( token, 'zyx', 'Correctly passed via cors' );
 	} );
 } );
 
-QUnit.test( '#getToken - default to edit', 1, function() {
-	this.api.getToken().done( function( token ) {
+QUnit.test( '#getTokenWithEndpoint - default to edit', 1, function() {
+	this.api.getTokenWithEndpoint().done( function( token ) {
 		strictEqual( token, '123', 'We get an edit token by default (most common)' );
 	} );
 } );
 
-QUnit.test( '#getToken - get anon token', 1, function() {
-	this.api.getToken( 'upload' ).fail( function( msg ) {
+QUnit.test( '#getTokenWithEndpoint - get anon token', 1, function() {
+	this.api.getTokenWithEndpoint( 'upload' ).fail( function( msg ) {
 		strictEqual( msg, 'Anonymous token.', 'No token given - user must be anon' );
 	} );
 } );
 
 QUnit.test( '#getToken - bad type of token', 1, function() {
-	this.api.getToken( 'rainbows' ).fail( function( msg ) {
+	this.api.getTokenWithEndpoint( 'rainbows' ).fail( function( msg ) {
 		strictEqual( msg, 'Bad token name.', 'Test for bad token name' );
 	} );
 } );

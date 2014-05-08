@@ -237,7 +237,7 @@
 			}
 
 			function getToken() {
-				return self.getToken.apply( self, arguments )
+				return self.getTokenWithEndpoint.apply( self, arguments )
 					.fail( $.proxy( result, 'reject', { stage: 'upload', type: 'error', details: 'token' } ) );
 			}
 
