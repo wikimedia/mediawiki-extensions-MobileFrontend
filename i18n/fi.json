@@ -148,7 +148,7 @@
 	"mobile-frontend-last-modified-with-user-days": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 päivä|$3 päivää}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 tunti|$3 tuntia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Viimeksi {{GENDER:$1|muokannut}}] juuri äsken {{PLURAL:$4|[$5 $2]|0=anonyymi käyttäjä}}",
-	"mobile-frontend-last-modified-with-user-minutes": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 minuutti|$3 minutia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
+	"mobile-frontend-last-modified-with-user-minutes": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 minuutti|$3 minuuttia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 kuukausi|$3 kuukautta}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 sekunti|$3 sekuntia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 vuosi|$3 vuotta}} sitten ] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",

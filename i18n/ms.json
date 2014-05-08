@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Anakmalaysia"
+			"Anakmalaysia",
+			"Aurora"
 		]
 	},
 	"beta-feature-minerva": "Bolehkan kulit mudah alih (Minerva) di desktop",
@@ -212,7 +213,7 @@
 	"mobilefrontend-keepgoing-links-title": "Tambah pautan",
 	"mobilefrontend-keepgoing-saved-title": "Suntingan disimpan!",
 	"mobilefrontend-random-tryanother": "Cari satu lagi laman",
-	"nearby": "Halaman berdekatan anda",
+	"nearby": "Laman berdekatan anda",
 	"tag-mobile_edit": "Suntingan mobil",
 	"tag-mobile_edit-description": "Suntingan dari tapak mobil"
 }
