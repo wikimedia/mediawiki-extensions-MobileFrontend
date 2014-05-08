@@ -6,6 +6,10 @@
 class MobileFormatterTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getHtmlData
+	 *
+	 * @param $input
+	 * @param $expected
+	 * @param callable|bool $callback
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false ) {
 		$t = Title::newFromText( 'Mobile' );
@@ -26,6 +30,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$longLine = "\n" . str_repeat( 'A', 5000 );
 		$removeImages = function( MobileFormatter $f ) {
 			$f->setRemoveMedia();
+		};
+		$mainPage = function( MobileFormatter $f ) {
+			$f->setIsMainPage( true );
 		};
 
 		return array(
@@ -95,6 +102,11 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!' .
 					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
 				$removeImages,
+			),
+			array(
+				'<div id="mf-foo" title="A &amp; B">test</div>',
+				'<div id="mainpage"><h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all"></div>',
+				$mainPage,
 			),
 		);
 	}
