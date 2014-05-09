@@ -177,6 +177,11 @@ var
 	function init() {
 		var $container, userGallery, $a;
 
+		// Don't attempt to display the gallery if PHP displayed an error
+		if ( $( '.error' ).length ) {
+			return;
+		}
+
 		userGallery = new PhotoList().appendTo( '#content_wrapper' );
 
 		if ( PhotoUploaderButton.isSupported && currentUserName === userName ) {

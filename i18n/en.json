@@ -214,6 +214,7 @@
     "mobile-frontend-photo-upload-error-file-type": "Please only upload images.",
     "mobile-frontend-photo-upload-error-filename": "Error, please provide a more descriptive summary.",
     "mobile-frontend-photo-upload-generic": "Contribute an image",
+    "mobile-frontend-photo-upload-invalid-user": "User \"$1\" is not registered.",
     "mobile-frontend-photo-upload-protected": "You do not have permission to add an image to this page.",
     "mobile-frontend-photo-upload-success-article": "Success! Your image is now live on this page.",
     "mobile-frontend-photo-upload-unavailable": "Your browser does not support image uploads.",

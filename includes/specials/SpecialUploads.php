@@ -8,49 +8,71 @@ class SpecialUploads extends MobileSpecialPage {
 
 	public function executeWhenAvailable( $par = '' ) {
 		global $wgMFPhotoUploadEndpoint;
-		$user = $par ? User::newFromName( $par ) : $this->getUser();
 
 		$this->setHeaders();
 		$output = $this->getOutput();
 		$output->addJsConfigVars( 'wgMFPhotoUploadEndpoint',  $wgMFPhotoUploadEndpoint );
 		$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
-		// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
-		if( $user->isAnon() ) {
-			$returnTo = $this->getPageTitle()->getPrefixedText();
-			$loginLink = Linker::link(
-				SpecialPage::getTitleFor( 'UserLogin' ),
-				wfMessage( 'mobile-frontend-user-account' )->plain(),
-				array(),
-				array( 'returnto' => $returnTo )
-			);
-			$html = '<div class="alert error">' .
-				$this->msg( 'mobile-frontend-donate-image-anon' )->rawParams( $loginLink )->parse() .
-				'</div>';
+		if ( $par !== '' && $par !== null ) {
+			$user = User::newFromName( $par );
+			if ( !$user || $user->isAnon() ) {
+				// User provided, but is invalid or not registered
+				$html = '<div class="alert error">'
+					. $this->msg( 'mobile-frontend-photo-upload-invalid-user', $par )->parse()
+					. '</div>';
+			} else {
+				$html = $this->getUserUploadsPageHtml( $user );
+			}
 		} else {
-			$uploadCount = $this->getUserUploadCount( $user->getName() );
-			$html = '';
-			$attrs = array();
-			if ( $uploadCount !== false ) {
-				$threshold = $this->getUploadCountThreshold();
-				$html .= '<div class="ctaUploadPhoto content">';
-				if ( $uploadCount > $threshold ) {
-					$msg = $this->msg(
-						'mobile-frontend-photo-upload-user-count-over-limit'
-					)->text();
-				} else {
-					$msg = $this->msg(
-						'mobile-frontend-photo-upload-user-count'
-					)->numParams( $uploadCount )->parse();
-					if ( $uploadCount === 0 ) {
-						$attrs = array( 'style' => 'display:none' );
-					}
-				}
-				$html .= Html::openElement( 'h2', $attrs ) . $msg . Html::closeElement( 'h2' );
-				$html .= '</div>';
+			$user = $this->getUser();
+			if ( $user->isAnon() ) {
+				// Should show current user's uploads, but they're not registered
+				$returnTo = $this->getPageTitle()->getPrefixedText();
+				$loginLink = Linker::link(
+					SpecialPage::getTitleFor( 'Userlogin' ),
+					wfMessage( 'mobile-frontend-user-account' )->plain(),
+					array(),
+					array( 'returnto' => $returnTo )
+				);
+				$html = '<div class="alert error">' .
+					$this->msg( 'mobile-frontend-donate-image-anon' )->rawParams( $loginLink )->parse() .
+					'</div>';
+			} else {
+				// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
+				$html = $this->getUserUploadsPageHtml( $user );
 			}
 		}
 		$output->addHTML( $html );
+	}
+	/**
+	 * Generates HTML for the uploads page for the passed user.
+	 *
+	 * @param User $user
+	 */
+	public function getUserUploadsPageHtml( User $user ) {
+		$uploadCount = $this->getUserUploadCount( $user->getName() );
+		$html = '';
+		$attrs = array();
+		if ( $uploadCount !== false ) {
+			$threshold = $this->getUploadCountThreshold();
+			$html .= '<div class="ctaUploadPhoto content">';
+			if ( $uploadCount > $threshold ) {
+				$msg = $this->msg(
+					'mobile-frontend-photo-upload-user-count-over-limit'
+				)->text();
+			} else {
+				$msg = $this->msg(
+					'mobile-frontend-photo-upload-user-count'
+				)->numParams( $uploadCount )->parse();
+				if ( $uploadCount === 0 ) {
+					$attrs = array( 'style' => 'display:none' );
+				}
+			}
+			$html .= Html::openElement( 'h2', $attrs ) . $msg . Html::closeElement( 'h2' );
+			$html .= '</div>';
+		}
+		return $html;
 	}
 
 	/**

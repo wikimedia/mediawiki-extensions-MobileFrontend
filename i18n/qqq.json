@@ -238,6 +238,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "Text that displays when user tries to preview something that cannot be rendered in an img tag (e.g. mp3 or video)",
 	"mobile-frontend-photo-upload-error-filename": "Text that displays when an image fails to upload due to filename",
 	"mobile-frontend-photo-upload-generic": "Label on button on Special:Uploads.",
+	"mobile-frontend-photo-upload-invalid-user": "Used on Special:Uploads when specified user does not exist or username is invalid.\n* $1 - username in question",
 	"mobile-frontend-photo-upload-protected": "Appears when the user clicks the image upload button when the page is protected.",
 	"mobile-frontend-photo-upload-success-article": "Text that displays when an image has been successfully added to a page.",
 	"mobile-frontend-photo-upload-unavailable": "Appears when the user clicks the image upload button when photo uploads are not supported.",
