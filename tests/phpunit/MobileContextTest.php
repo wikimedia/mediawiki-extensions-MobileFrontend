@@ -132,6 +132,11 @@ class MobileContextTest extends MediaWikiTestCase {
 				'https://m.wikimediafoundation.org/wiki/FAQ',
 				'm.%h0.%h1',
 			),
+			array(
+				'https://127.0.0.1/wiki/Test',
+				'https://127.0.0.1/wiki/Test',
+				'%h0.m.%h1.%h2',
+			),
 		);
 	}
 

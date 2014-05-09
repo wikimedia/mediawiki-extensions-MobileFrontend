@@ -618,6 +618,9 @@ class MobileContext extends ContextSource {
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlHost( &$parsedUrl ) {
+		if ( IP::isIPAddress( $parsedUrl['host'] ) ) {
+			return; // Do not update host when IP is used
+		}
 		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 		if ( !strlen( $mobileUrlHostTemplate ) ) {
 			return;
