@@ -635,12 +635,12 @@ class SkinMinerva extends SkinTemplate {
 		// FIXME [core]: This seems unnecessary..
 		$subjectId = $title->getNamespaceKey( '' );
 		$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
-		if ( isset( $namespaces[$talkId] ) ) {
+		if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
 			$menu['talk'] = $namespaces[$talkId];
-			$menu['talk']['class'] = 'icon icon-32px icon-talk';
 		}
 
 		if ( isset( $menu['talk'] ) ) {
+			$menu['talk']['class'] = 'icon icon-32px icon-talk';
 			if ( isset( $tpl->data['_talkdata'] ) ) {
 				$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
 				$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
