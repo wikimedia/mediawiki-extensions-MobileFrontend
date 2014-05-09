@@ -642,7 +642,8 @@ class ApiMobileView extends ApiBase {
 				' text            - HTML of selected section(s)',
 				' sections        - information about all sections on page',
 				' normalizedtitle - normalized page title',
-				' lastmodified    - MW timestamp for when the page was last modified, e.g. "20130730174438"',
+				' lastmodified    - ISO 8601 timestamp for when the page was last modified, '
+					. 'e.g. "2014-04-13T22:42:14Z"',
 				' lastmodifiedby  - information about the user who modified the page last',
 				' revision        - return the current revision id of the page',
 				' protection      - information about protection level',
