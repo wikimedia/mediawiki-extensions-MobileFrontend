@@ -264,9 +264,10 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
 						'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
 							$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
-						'class' => 'icon-uploads jsonly icon icon-text',
+						'class' => 'icon-uploads icon icon-text',
 					),
 				),
+				'class' => 'jsonly',
 			);
 			$items['settings'] = array(
 				'links' => array(
@@ -349,9 +350,10 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
-						'class' => 'icon-nearby jsonly icon icon-text',
+						'class' => 'icon-nearby icon icon-text',
 					),
 				),
+				'class' => 'jsonly',
 			),
 		);
 		if ( !$wgMFNearby ) {
