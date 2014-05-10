@@ -16,6 +16,24 @@
       "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_195e3949",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-10T19:42:35Z",
+      "side": 1,
+      "message": "I\u0027ve been fighting this small battle with Jon for a while now ;) Jon, can you once again explain to us what is the benefit of this? Or point us to a good resource?\n\nAnd \"reducing the number of rules\" should not be a reason in itself, it can be a mean of achieving something (smaller page size, easier maintenance).",
+      "parentUuid": "8e23439c_abe6d93d",
+      "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
