@@ -52,6 +52,24 @@
       "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_44c2813a",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-11T14:05:47Z",
+      "side": 1,
+      "message": "PS. I am also totally up for making every single element border-box in future\nhttp://www.impressivewebs.com/css-the-bad-parts/",
+      "parentUuid": "8e23439c_6498dd7c",
+      "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
