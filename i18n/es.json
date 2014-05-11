@@ -209,6 +209,7 @@
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|Hablar con $1}}",
 	"mobile-frontend-random-button": "Aleatorio",
 	"mobile-frontend-regular-site": "Vista del escritorio",
+	"mobile-frontend-requires-mobile": "Esta página solo está disponible para dispositivos móviles. Pulsa en el enlace de vista móvil en la parte inferior de la página.",
 	"mobile-frontend-requires-title": "Página no disponible",
 	"mobile-frontend-save-error": "Error al guardar la configuración. Por favor, asegúrate que tienes las cookies habilitadas.",
 	"mobile-frontend-save-settings": "Guardar",
