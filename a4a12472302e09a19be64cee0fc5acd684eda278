@@ -34,6 +34,24 @@
       "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_6498dd7c",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-11T14:03:35Z",
+      "side": 1,
+      "message": "Okay... let me dump my brain.\n\nI actually dislike this inline comment and I\u0027d like to remove it. I\u0027ll try to explain more. In summary, I think if we take a strict approach to reuse we will write better CSS.\n\n\"Dumb code duplication is dumb\"\nhttp://blog.millermedeiros.com/the-problem-with-css-pre-processors/\n\nI actually think the border box mixin is terrible and should die - we only ever use it with border-box and we should identify when we use it in this way and simply apply it to these elements (which we have done with the border-box class). This actually makes it a bad mixin which takes no arguments. We shouldn\u0027t have to ever think about the box model in our code. I\u0027m not 100% attached to the idea of a border-box class - but I see it at least as a half way house towards a better solution. I think it will become more clear if we were to move towards using OOCSS (see bottom).\n\nMaybe it becomes something like this:\npre,\ntextarea,\nform *,\n.warning {\nbox-sizing: border-box;\n}\n\n( \"My rule of thumb is: mixins without arguments smell\"\nhttp://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do )\n\n\"Duplication isn\u0027t all bad, but we often write duplicated CSS unknowingly. When I see duplicated CSS, it forces me to think about my rules and structure. It forces me to ask myself several questions about my code.\"\nhttp://connectionrequired.com/blog/2013/04/why-csscss-doesnt-remove-duplication-for-you/\n\nIn this case I think for mobile a textarea taking up the full size of the screen and with 100% width is useful and highly reusable. I can\u0027t see a situation where we\u0027d not want this and we shouldn\u0027t have to think about it. We shouldn\u0027t have to care about the box model - that should be implied - if I\u0027m using width 100% and padding its pretty clear it should be a border box.\n\n\"CSS transfer size has the highest correlation to render time\"\nhttp://www.jonathanklein.net/2013/01/how-much-css-should-you-have.html\n\nWe should get in the habit of being totally anal about this point imo. If we aren\u0027t strict we run the risk of creating lots of repetition. I\u0027m already seeing lots of it, and it\u0027s an opportunity.\n\nOOCSS is what i\u0027d like to see us move towards. THis is a big subject in itself but basically it has the idea of creating reusable modules and moving towards shallow selectors without nesting:\nhttp://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/\n\"This refers to the fact that every time you reuse something in your CSS, you’re essentially creating new styled elements with zero lines of CSS code.\"\n\nMore reading:\nhttps://github.com/stubbornella/oocss/wiki",
+      "parentUuid": "8e23439c_195e3949",
+      "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
