@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_b0f18f00",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-12T14:04:33Z",
+      "side": 1,
+      "message": "This if statement could be written a lot better and is very confusing...\nif ( !$user || $user-\u003eisAnon() || $user-\u003egetId() \u003d\u003d\u003d 0 ) \n[surely $par is surpluous to requirements at this point...]",
+      "revId": "4cffcce9947ddf3aea0c23b3a9c0a441c1ef6314",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_90f693f5",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-12T14:04:33Z",
+      "side": 1,
+      "message": "Should be wrapped in an element with class \u0027error alert\u0027 to have consistent styling.",
+      "revId": "4cffcce9947ddf3aea0c23b3a9c0a441c1ef6314",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_907fb363",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-12T14:04:33Z",
+      "side": 1,
+      "message": "Comment not useful.",
+      "revId": "4cffcce9947ddf3aea0c23b3a9c0a441c1ef6314",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
