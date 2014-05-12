@@ -70,6 +70,24 @@
       "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_3dbc37b1",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-12T22:19:43Z",
+      "side": 1,
+      "message": "I agree with pretty much everything you said, but I still think \u0027.box-sizing(border-box);\u0027 (or \u0027box-sizing: border-box;\u0027) should be included in the existing textarea block rather than splitting it into two blocks. Your version only saves about a dozen characters, but it fragments the CSS and makes it harder to read and maintain (as evidenced by your comment).\n\nRegarding the border-box class, this reduces duplication in the CSS, but leads to less optimized HTML (since you\u0027re adding classes for individual CSS rules rather than applying CSS semantically). This change didn\u0027t introduce the border-box class, so you don\u0027t actually need to get rid of it here, but it seems like a bad idea in the long run. Mostly I was just thinking out loud, so feel free to disregard the original comment about the border-box class.",
+      "parentUuid": "8e23439c_6498dd7c",
+      "revId": "a4a12472302e09a19be64cee0fc5acd684eda278",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
