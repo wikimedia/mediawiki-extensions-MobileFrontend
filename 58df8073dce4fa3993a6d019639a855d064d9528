@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_1d2f3bf5",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-12T22:53:03Z",
+      "side": 1,
+      "message": "Can you add a comment here saying something like:\n\"This is hacky, but currently there is no way to check all permissions except blocked status from the Title class.\"",
+      "revId": "58df8073dce4fa3993a6d019639a855d064d9528",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
