@@ -50,24 +50,22 @@
 					{
 						"level": "1",
 						"line": "1",
-						"lineText": "1",
 						"anchor": "1",
 						"id": 1,
 						"text": '<p>Text of 1\n</p><h2 id="1.1"><i>1.1</i></h2><p>Text of 1.1\n</p>',
 						"children": [
-							{"level":"2","lineText": "1.1", "line": "<i>1.1</i>",
+							{"level":"2","line": "<i>1.1</i>",
 								"anchor":"1.1","id":2,"text":"<p>Text of 1.1\n</p>", children: [] }
 						]
 					},
 					{
 						"level": "1",
 						"line": "2",
-						"lineText": "2",
 						"anchor": "2",
 						"id": 3,
 						"text": '<p>Text of 2\n</p><h2 id="2.1">2.1</h2><p>Text of 2.1\n</p>',
 						"children": [
-							{"level":"2","line":"2.1", "lineText":"2.1",
+							{"level":"2","line":"2.1",
 								"anchor":"2.1","id":4,"text":"<p>Text of 2.1\n</p>", children: [] }
 						]
 					}
@@ -148,7 +146,6 @@
 					{
 						"level": "2",
 						"line": "Aaa section",
-						"lineText": "Aaa section",
 						"anchor": "Aaa_section",
 						"id": 1,
 						"text": 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>subaaa content',
@@ -156,7 +153,6 @@
 							{
 								"level": "3",
 								"line": "Subaaa section",
-								"lineText": "Subaaa section",
 								"anchor": "Subaaa_section",
 								"id": 2,
 								"text": "subaaa content",
@@ -167,7 +163,6 @@
 					{
 						"level": "2",
 						"line": "Bbb section",
-						"lineText": "Bbb section",
 						"anchor": "Bbb_section",
 						"id": 3,
 						"text": "bbb content",
@@ -176,7 +171,6 @@
 					{
 						"level": "2",
 						"line": "References",
-						"lineText": "References",
 						"references": "",
 						"anchor": "References",
 						"id": 4,
@@ -311,33 +305,8 @@
 		PageApi.prototype.get.restore();
 	} );
 
-	QUnit.test( '#getPage (html headings get stripped)', 2, function( assert ) {
-		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
-			"mobileview": {
-				"id": -1,
-				protection: [],
-				"lastmodifiedby": {
-					"user": {
-						"name": "",
-						"gender": "unknown"
-					},
-					"timestamp": "1383071742"
-				},
-				"sections":[
-					{"id":0,"text":""},
-					{"level":"1","line":"<i>html text heading</i>","anchor":"1","id":1,"text":"<p>Text of 1\n</p>"}
-				]
-			}
-		} ) );
-		pageApi.getPage( 'Test' ).done( function( resp ) {
-			assert.strictEqual( resp.sections[0].lineText, 'html text heading' );
-			assert.strictEqual( resp.sections[0].line, '<i>html text heading</i>' );
-		} );
-		PageApi.prototype.get.restore();
-	} );
-
 	QUnit.test( '#_getAPIResponseFromHTML', 1, function( assert ) {
-		var resp = pageApi._getAPIResponseFromHTML( $( '<div><h1><span id="1.0">A1</span></h1><h2><span>A2.1<span></h2><h2><span>A2.2<span></h2><h1><span>A2<span></h1><h2><span>A2.1<span></h2></div>' ) );
+		var resp = pageApi._getAPIResponseFromHTML( $( '<div><h1><span id="1.0">A1</span></h1><h2><span>A2.1</span></h2><h2><span>A2.2</span></h2><h1><span>A2</span></h1><h2><span>A2.1</span></h2></div>' ) );
 		assert.deepEqual( resp, [
 			{ line: 'A1', level: '1', anchor: '1.0', text: '' },
 			{ line: 'A2.1', level: '2', anchor: '', text: '' },

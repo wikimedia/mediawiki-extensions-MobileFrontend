@@ -25,9 +25,9 @@
 			result = [], $tmpContainer = $( '<div>' );
 
 		$.each( sections, function( i, section ) {
-			// Store text version so users of API do not have to worry about styling e.g. Table of Contents
-			// FIXME: [API] should probably do this for us - we want to be able to control the styling of these headings - no inline styles!
-			section.lineText = $( '<div>' ).html( section.line ).text();
+			if ( section.line !== undefined ) {
+				section.line = section.line.replace( /<\/?a\b[^>]*>/g, '' );
+			}
 			section.children = [];
 			if ( !section.level || section.level === collapseLevel ) {
 				result.push( section );
@@ -236,7 +236,7 @@
 				var level = $( this )[0].tagName.substr( 1 ),
 					$span = $( this ).find( 'span' );
 
-				sections.push( { level: level, line: $span.text(), anchor: $span.attr( 'id' ) || '', text: '' } );
+				sections.push( { level: level, line: $span.html(), anchor: $span.attr( 'id' ) || '', text: '' } );
 			} );
 			return sections;
 		},
