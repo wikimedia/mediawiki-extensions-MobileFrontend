@@ -305,7 +305,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$conds['wl_user'] = $user->getId();
 		$tables = array( 'watchlist', 'page', 'revision' );
 		$fields = array(
-			$dbr->tableName( 'watchlist' ) . '.*',
+			'wl_namespace','wl_title',
 			// get the timestamp of the last change only
 			'MAX(' . $dbr->tableName( 'revision' ) . '.rev_timestamp) AS rev_timestamp'
 		);
