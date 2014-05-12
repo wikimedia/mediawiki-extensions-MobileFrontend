@@ -154,6 +154,24 @@ class ApiMobileView extends ApiBase {
 		if ( isset( $prop['protection'] ) ) {
 			$this->addProtection( $title );
 		}
+		if ( isset( $prop['editable'] ) ) {
+			$user = $this->getUser();
+			if ( $user->isAnon() ) {
+				// HACK: Anons receive cached information, so don't check blocked status for them
+				// to avoid them receiving false positives. Currently there is no way to check
+				// all permissions except blocked status from the Title class.
+				$req = new FauxRequest();
+				$req->setIP( '127.0.0.1' );
+				$user = User::newFromSession( $req );
+			}
+			$editable = $title->quickUserCan( 'edit', $user );
+			if ( $isXml ) {
+				$editable = intval( $editable );
+			}
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'editable' => $editable )
+			);
+		}
 		// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
 		// Inform ppl if the page is infested with LiquidThreads but that's the
 		// only thing we support about it.
@@ -576,6 +594,7 @@ class ApiMobileView extends ApiBase {
 					'lastmodifiedby',
 					'revision',
 					'protection',
+					'editable',
 					'languagecount',
 					'hasvariants',
 					'displaytitle',
@@ -647,6 +666,8 @@ class ApiMobileView extends ApiBase {
 				' lastmodifiedby  - information about the user who modified the page last',
 				' revision        - return the current revision id of the page',
 				' protection      - information about protection level',
+				' editable        - whether current user can edit this page. This includes '
+					. 'all factors for logged-in users but not blocked status for anons.',
 				' languagecount   - number of languages that the page is available in',
 				' hasvariants     - whether or not the page is available in other language variants',
 				' displaytitle    - the rendered title of the page, with {{DISPLAYTITLE}} and such applied'
