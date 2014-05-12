@@ -32,7 +32,7 @@ class SkinMinervaApp extends SkinMinervaBeta {
 		return false;
 	}
 
-	protected function prepareUserButton( BaseTemplate $tpl ) {
+	protected function prepareUserButton( QuickTemplate $tpl ) {
 		$tpl->set( 'secondaryButton', '' );
 	}
 
