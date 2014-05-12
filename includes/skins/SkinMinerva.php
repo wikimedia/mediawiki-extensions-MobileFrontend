@@ -554,7 +554,7 @@ class SkinMinerva extends SkinTemplate {
 	protected function prepareSearch( BaseTemplate $tpl ) {
 		$searchBox = array(
 			'id' => 'searchInput',
-			'class' => 'search border-box',
+			'class' => 'search',
 			'autocomplete' => 'off',
 			// The placeholder gets fed to HTML::element later which escapes all
 			// attribute values, so no need to escape the string here.

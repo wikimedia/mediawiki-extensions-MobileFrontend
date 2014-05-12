@@ -27,7 +27,7 @@
 		/**
 		 * @type {String}
 		 */
-		className: 'overlay border-box',
+		className: 'overlay',
 		template: M.template.get( 'OverlayNew' ),
 		defaults: {
 			headerButtonsListClassName: 'bottom-border',

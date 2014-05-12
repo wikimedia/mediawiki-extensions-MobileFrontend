@@ -222,7 +222,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$output->addHtml(
 			Html::openElement( 'div', array( 'id' => 'mw-mf-userinfo',
-				'class' => 'buttonBar position-fixed border-box' ) )
+				'class' => 'buttonBar position-fixed' ) )
 		);
 
 		$userId = $this->rev->getUser();

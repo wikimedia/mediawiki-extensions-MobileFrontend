@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import "minerva.mixins";
 
 html, body, div, span,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -21,6 +22,7 @@ audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	background: none;
+	.box-sizing(border-box);
 }
 button {
 	border: none;

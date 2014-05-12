@@ -226,12 +226,12 @@ class MinervaTemplate extends BaseTemplate {
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
-			<div id="mw-mf-page-left" class="navigation-drawer border-box">
+			<div id="mw-mf-page-left" class="navigation-drawer">
 				<?php
 					$this->renderMainMenu( $data );
 				?>
 			</div>
-			<div id='mw-mf-page-center' class="border-box">
+			<div id="mw-mf-page-center">
 				<?php
 					foreach( $this->data['banners'] as $banner ):
 						echo $banner;

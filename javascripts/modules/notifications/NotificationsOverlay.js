@@ -10,7 +10,7 @@
 	 */
 	NotificationsOverlay = Overlay.extend( {
 			active: false,
-			className: 'overlay notifications-overlay border-box',
+			className: 'overlay notifications-overlay',
 			templatePartials: {
 				content: M.template.get( 'modules/notifications/NotificationsOverlay' )
 			},

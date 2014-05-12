@@ -68,14 +68,14 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 				'class' => 'inputs-box',
 			) ) .
 			Html::input( 'wpName', $username, 'text',
-				array( 'class' => 'loginText border-box',
+				array( 'class' => 'loginText',
 					'placeholder' => wfMessage( 'mobile-frontend-username-placeholder' )->text(),
 					'id' => 'wpName1',
 					'tabindex' => '1',
 					'size' => '20',
 					'required' ) ) .
 			Html::input( 'wpPassword', null, 'password',
-				array( 'class' => 'loginPassword border-box',
+				array( 'class' => 'loginPassword',
 					'placeholder' => wfMessage( 'mobile-frontend-password-placeholder' )->text(),
 					'id' => 'wpPassword1',
 					'tabindex' => '2',

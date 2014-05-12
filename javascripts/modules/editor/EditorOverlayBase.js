@@ -26,7 +26,7 @@
 			sourceEditorMsg: mw.msg( 'mobile-frontend-editor-source-editor' ),
 		},
 		template: M.template.get( 'modules/editor/EditorOverlayBase' ),
-		className: 'overlay editor-overlay border-box',
+		className: 'overlay editor-overlay',
 
 		_updateEditCount: function() {
 			this.editCount += 1;
