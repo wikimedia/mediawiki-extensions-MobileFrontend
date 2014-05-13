@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_3470cca2",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-13T20:20:41Z",
+      "side": 1,
+      "message": "Do you realize that isAnon() and getId() \u003d\u003d\u003d 0 are synonymous? ;)",
+      "parentUuid": "8e23439c_b0f18f00",
+      "revId": "4cffcce9947ddf3aea0c23b3a9c0a441c1ef6314",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_90f693f5",
         "filename": "includes/specials/SpecialUploads.php",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_f46934bd",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-13T20:20:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_90f693f5",
+      "revId": "4cffcce9947ddf3aea0c23b3a9c0a441c1ef6314",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_907fb363",
         "filename": "includes/specials/SpecialUploads.php",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2014-05-12T14:04:33Z",
       "side": 1,
       "message": "Comment not useful.",
+      "revId": "4cffcce9947ddf3aea0c23b3a9c0a441c1ef6314",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_d46e38c4",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-13T20:20:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_907fb363",
       "revId": "4cffcce9947ddf3aea0c23b3a9c0a441c1ef6314",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
