@@ -34,6 +34,24 @@
       "revId": "e2e48cdb30da35c59a8f4b545cf1b6d8843d30c9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_af3c85bd",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-13T22:37:31Z",
+      "side": 1,
+      "message": "I swear I read somewhere on Smashing magazine along time ago that all pseudo selectors are less performant but I can\u0027t find such an article. I can only find these 2 references (not sure of there credibility):\n* http://stackoverflow.com/questions/4082077/first-child-is-too-slow-alternatives/4082105#4082105\n* http://www.onextrapixel.com/2012/05/03/css-tricks-how-to-speed-up-css-rendering/\n\nI think the main thing I would say is whilst integrating with VE we should avoid them where possible. Use of first-child might invite us to use last-child and other selectors based on the idea. I do think we should be avoid nth-of-type and nth-child at all costs but I\u0027d expect first-child and last-child to be less evil!\n\nThat said browsers are getting better and better these days and we could just make the decision that we will use them and wait for browsers and VE to catch up.\n\nAs tech lead, let me know what approach you want us to take. Happy either way. Please can we get the outcome documented on the coding guidelines page?",
+      "parentUuid": "8e23439c_f4e014f9",
+      "revId": "e2e48cdb30da35c59a8f4b545cf1b6d8843d30c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
