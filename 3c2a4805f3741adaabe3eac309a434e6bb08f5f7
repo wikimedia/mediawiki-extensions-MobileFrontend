@@ -16,6 +16,24 @@
       "revId": "3c2a4805f3741adaabe3eac309a434e6bb08f5f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_ceb347fc",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-13T17:16:40Z",
+      "side": 1,
+      "message": "Negative.. this is needed for IE10 and becomes irrelevant at IE11 as they have adopted the Firefox/Chrome versioning practices.\nhttp://msdn.microsoft.com/en-us/library/ie/hh869301%28v\u003dvs.85%29.aspx\n\nMax is right though this should have some tests.",
+      "parentUuid": "8e23439c_aed12b29",
+      "revId": "3c2a4805f3741adaabe3eac309a434e6bb08f5f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
