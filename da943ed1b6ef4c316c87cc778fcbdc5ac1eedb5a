@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_34332cc2",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-13T20:36:07Z",
+      "side": 1,
+      "message": "Your explanation in this review made this issue make clearer. Could we add a comment to that effect?\n\nI was curious about exploring the expanding of tables and increasing the browser width at some point in future and I\u0027m worried without this comment I might in future try and kill it :-).\n\nsuggested\n// opening nav and animation can introduce a horizontal scrollbar without this.\n\nSorry to be so scrupulous here :-)",
+      "revId": "da943ed1b6ef4c316c87cc778fcbdc5ac1eedb5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
