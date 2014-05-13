@@ -21,10 +21,10 @@ end
 
 Then(/^my image is on the Uploads page$/) do
   on(UploadPage) do |page|
-	page.wait_until(10) do
+    page.wait_until(10) do
       page.text.include? "#{@random_string}" #Chrome needs this, FF does not
     end
-    page.uploaded_image_link_element.when_present.attribute( 'href' ).should match "#{@random_string}"
+    page.uploaded_image_link_element.when_present.attribute( 'alt' ).should match "#{@random_string}"
   end
 end
 
