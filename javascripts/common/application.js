@@ -36,23 +36,22 @@
 	// http://mobilehtml5.org/
 	/**
 	 * @method
+	 * @param {String} userAgent - an optional user agent to test against. Defaults to current browser user agent.
 	 * @return {Boolean}
 	 */
-	function supportsPositionFixed() {
+	function supportsPositionFixed( userAgent ) {
 		var support = false;
 		[
 			// Webkit 534+
-			// FIXME: this will fail if Webkit goes past 599 and for Blink
-			// (http://www.chromium.org/blink)
-			/AppleWebKit\/(53[4-9]|5[4-9]\d?|[6-9])\d?\d?/,
+			/AppleWebKit\/(53[4-9]|5[4-9]\d?|[6-9])\d?\d?|AppleWebKit\/\d\d\d\d/,
 			// Android 2+ (we lockViewport for Android 2 meaning we can support it)
 			/Android [2-9]/,
 			// any Firefox
 			/Firefox/,
-			// MSIE 10+
-			/MSIE 1\d/
+			// Trident (IE 10+)
+			/Trident\/[6-9]|Trident\/1\d[\d\.]+/
 		].forEach( function( item ) {
-			if ( item.test( navigator.userAgent ) ) {
+			if ( item.test( userAgent || navigator.userAgent ) ) {
 				support = true;
 			}
 		} );
