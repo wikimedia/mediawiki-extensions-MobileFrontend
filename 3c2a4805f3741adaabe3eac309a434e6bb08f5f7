@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_aed12b29",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-13T17:08:59Z",
+      "side": 1,
+      "message": "Might be better to use \\d\\d since Explorer will eventually hit version 20 long after people have forgotten about this code (or sooner if they ever adopt the Firefox/Chrome versioning practices).",
+      "revId": "3c2a4805f3741adaabe3eac309a434e6bb08f5f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
