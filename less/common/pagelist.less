@@ -1,7 +1,7 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-@itemPaddingV: 20px;
+@itemPaddingV: 12px;
 @thumbGap: 15px;
 @thumbWidth: 70px;
 @thumbSpace: @thumbWidth + @thumbGap;
@@ -114,8 +114,9 @@
 
 		h3,
 		.mw-mf-user,
-		.component {
-			margin-bottom: .5em;
+		.component,
+		.info {
+			margin: .5em 0;
 		}
 	}
 
@@ -134,7 +135,12 @@
 
 		p {
 			line-height: 1.2;
-			margin: 0 0 .5em;
+			margin: .5em 0;
+		}
+
+		.timestamp {
+			// accommodate for higher font-size of h3 to the right of timestamp
+			margin-bottom: .65em;
 		}
 	}
 
