@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_6f50add9",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-13T22:43:13Z",
+      "side": 1,
+      "message": "I still don\u0027t get why $par is needed here..",
+      "revId": "ab9ddc77a463ee132097e50954615c354b693c35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8f430915",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-13T22:43:13Z",
+      "side": 1,
+      "message": "I still don\u0027t get why $par is needed here..",
+      "revId": "ab9ddc77a463ee132097e50954615c354b693c35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
