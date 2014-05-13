@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_34ed6c23",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-13T20:29:04Z",
+      "side": 1,
+      "message": "I\u0027m weary of the bug with VE.. and think we should be moving away from these types of selectors.\n\nInstead, I would suggest adding a class to the element with .side-list for the situations where elements in the list have only one element e.g. .single-meta-element-list (You\u0027re better at naming though... :-))",
+      "revId": "e2e48cdb30da35c59a8f4b545cf1b6d8843d30c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
