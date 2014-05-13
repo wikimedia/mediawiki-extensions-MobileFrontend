@@ -16,6 +16,24 @@
       "revId": "e2e48cdb30da35c59a8f4b545cf1b6d8843d30c9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_f4e014f9",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-13T20:46:18Z",
+      "side": 1,
+      "message": "Wait, so first-child is also bad? I\u0027m pretty sure I\u0027ve seen it in OOUI\u0027s CSS.",
+      "parentUuid": "8e23439c_34ed6c23",
+      "revId": "e2e48cdb30da35c59a8f4b545cf1b6d8843d30c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
