@@ -34,6 +34,23 @@
       "revId": "3c2a4805f3741adaabe3eac309a434e6bb08f5f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_41f70557",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2014-05-14T11:41:32Z",
+      "side": 1,
+      "message": "Maybe replacing this line with /Trident\\/([6-9]|\\d{2,})/ works.",
+      "revId": "3c2a4805f3741adaabe3eac309a434e6bb08f5f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
