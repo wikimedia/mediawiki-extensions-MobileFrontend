@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_979f9f06",
+        "filename": "javascripts/modules/Storer-light.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-14T17:20:13Z",
+      "side": 1,
+      "message": "Also this should be part of MobileFrontend - there is no need - it doesn\u0027t use mw or mw.mobileFrontend.\n\nIf anything it should be a library that mobile.startup depends on and initiates and should basically be the library provided by Storer.js if we decide to add it to our repository.\n\nAlso no closures used here...",
+      "revId": "c9a1f84c10a265380c9d5c4ae55788067d7870fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
