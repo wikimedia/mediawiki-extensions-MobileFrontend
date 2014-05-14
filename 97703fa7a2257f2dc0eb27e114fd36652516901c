@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_44095333",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2014-05-14T15:42:48Z",
+      "side": 1,
+      "message": "gr what\u0027s this?\n\n/^[\\d+\\.]$/.test(\u0027+\u0027) \u003d\u003d true",
+      "revId": "97703fa7a2257f2dc0eb27e114fd36652516901c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
