@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_44a273a5",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2014-05-14T13:50:09Z",
+      "side": 1,
+      "message": "[5]?",
+      "revId": "c4b5a3a515d07b3c1d5eb2218316551f9d13a125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_84988b7d",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2014-05-14T13:50:09Z",
+      "side": 1,
+      "message": "No not 1\\d\\d+. Trident/10.0 doesn\u0027t match this pattern.",
+      "revId": "c4b5a3a515d07b3c1d5eb2218316551f9d13a125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
