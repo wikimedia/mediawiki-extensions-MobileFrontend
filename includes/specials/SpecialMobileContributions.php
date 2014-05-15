@@ -28,6 +28,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	public function executeWhenAvailable( $par = '' ) {
 		wfProfileIn( __METHOD__ );
+		$this->offset = $this->getRequest()->getVal( 'offset', false );
 		if ( $par ) {
 			// enter article history view
 			$this->user = User::newFromName( $par );
@@ -133,6 +134,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 			);
 		} else {
 			$conds = array();
+		}
+		if ( $this->offset ) {
+			$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
+			$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
 		}
 		return $conds;
 	}
