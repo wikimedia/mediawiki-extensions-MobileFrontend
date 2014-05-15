@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_6f38cd9b",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-15T23:56:44Z",
+      "side": 1,
+      "message": "comments should go above.",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_afbee5f8",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-15T23:56:44Z",
+      "side": 1,
+      "message": "? Really needed? This seems odd..",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_8f3329c0",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-15T23:56:44Z",
+      "side": 1,
+      "message": "Use the gray in variables.less",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_efc4dd96",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-15T23:56:44Z",
+      "side": 1,
+      "message": "Can we reuse another of our boxshadows definitions?",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_cf5001dc",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-15T23:56:44Z",
+      "side": 1,
+      "message": "Did you mean to rename this?",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_8f5a09f8",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-15T23:56:44Z",
+      "side": 1,
+      "message": "Did you mean to move this up?",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
