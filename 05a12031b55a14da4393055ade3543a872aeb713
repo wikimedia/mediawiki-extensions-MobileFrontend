@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_6f00cd04",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-15T23:39:44Z",
+      "side": 1,
+      "message": "I know it wasn\u0027t introduced in this patch, but shouldn\u0027t we use one of our grey variables here? Either @grayDark or @grayMediumDark maybe? Just a thought.\n\nIf you don\u0027t want to change it in this patch, I\u0027m fine with that too. Just -1ing to get a reply :)",
+      "revId": "05a12031b55a14da4393055ade3543a872aeb713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
