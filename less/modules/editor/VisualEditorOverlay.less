@@ -57,72 +57,89 @@
 			}
 
 			> .toolbar {
-				padding: 0;
 
-				// FIXME: Remove most of these resets once oo-ui supports skinning
-				// and no longer loads Vector-like styles by default in MediaWiki.
 				.oo-ui-toolbar-bar {
-					background-color: transparent;
-					background-image: none;
-					border-bottom: none;
-					padding: 0;
-
 					.oo-ui-toolGroup {
+						// FIXME: This resets oo-ui css and shouldn't be needed. Fix should be applied in oo-ui minerva skin
 						margin: 0;
-						border: none;
 					}
 
-					.oo-ui-toolbar-shadow {
-						display: none;
+					.oo-ui-popupToolGroup {
+						&.oo-ui-iconedElement {
+							height: @headerHeight;
+							margin: -@headerMargin 0 0 1em;
+						}
+
+						.oo-ui-toolGroup-tools {
+							// Position the dropdown underneath the icon
+							top: @headerHeight;
+							// FIXME: This should probably be in oo-ui minerva skin
+							background-color: white;
+							border: 1px solid @grayLight;
+							box-shadow: 0 .1em .2em rgba(0, 0, 0, .2);
+						}
+
+						.oo-ui-tool-title {
+							color: @grayDark;
+						}
 					}
 				}
 			}
 		}
 
-		.oo-ui-tool {
-			height: @headerHeight;
-			display: block;
-			float: left;
-			text-indent: -999px;
-			width: 24px;
-			padding: 0 12px;
-			position: relative;
-			// FIXME: Remove this reset once oo-ui supports skinning
-			border: none;
-			// FIXME: Remove this reset once oo-ui supports skinning
-			border-radius: 0;
-			margin: -@headerMargin 0 0 1em;
+		.oo-ui-listToolGroup {
+			.oo-ui-tool {
+				display: block;
+				width: auto;
+			}
+			.oo-ui-tool-link {
+				display: block;
+				padding: 0 1em 0 .1em;
+			}
+		}
 
-			&.oo-ui-tool-active {
-				background-color: #EDF4FF;
+		.oo-ui-barToolGroup {
+			.oo-ui-tool {
+				display: block;
+				float: left;
+				position: relative;
+
+				&.oo-ui-iconedElement {
+					height: @headerHeight;
+					margin: -@headerMargin 0 0 1em;
+					min-width: 24px;
+				}
+
+				&.oo-ui-tool-active {
+					background-color: #EDF4FF;
+				}
 			}
 
-			* {
-				position: absolute;
-				right: 0;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				display: block;
+			.oo-ui-tool-link {
+				padding: 0; // reset
+
+				// Hide labels for buttons in the toolbar
+				.oo-ui-tool-title {
+					display: none;
+				}
 			}
 		}
 
 		// We may want to move these to an oojs-ui theme at some point. The down-side is
 		// that we wouldn't be able to use the @headerHeight LESS variable.
-		.oo-ui-barToolGroup {
+		.oo-ui-toolbar-tools {
 			.oo-ui-tool-link {
 				height: 100%;
-				padding: 0;
 				.box-sizing( border-box );
+			}
 
-				// FIXME: Merge with icon and icon-32px classes
-				.oo-ui-iconedElement-icon {
-					width: @headerTitleFontSize + @headerTitleMarginV * 2;
-					height: @headerTitleFontSize + @headerTitleMarginV * 2;
-					margin-top: @headerMargin;
-					// FIXME: Somehow consolidate ooui classes with icon and icon-32px classes so this rule is unnecessary
-					.background-size( 32px, 32px );
-				}
+			// FIXME: Merge with icon and icon-32px classes
+			.oo-ui-iconedElement-icon {
+				width: @headerTitleFontSize + @headerTitleMarginV * 2;
+				height: @headerTitleFontSize + @headerTitleMarginV * 2;
+				margin-top: @headerMargin;
+				// FIXME: Somehow consolidate ooui classes with icon and icon-32px classes so this rule is unnecessary
+				.background-size( 32px, 32px );
 			}
 		}
 
