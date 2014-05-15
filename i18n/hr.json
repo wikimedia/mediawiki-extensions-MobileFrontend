@@ -58,7 +58,6 @@
 	"mobile-frontend-off": "isključeno",
 	"mobile-frontend-on": "uključeno",
 	"mobile-frontend-opt-in-explain": "Rabeći beta inačicu, dobivate pristup eksperimentalnim mogućnosti, ali uz rizik mogućih pogrješaka i problema.",
-	"mobile-frontend-overlay-escape": "Povratak",
 	"mobile-frontend-page-menu-contents": "sadržaj",
 	"mobile-frontend-page-menu-history": "Povijest stranice",
 	"mobile-frontend-page-saving": "Snimam $1",
@@ -105,5 +104,6 @@
 	"mobile-frontend-watchlist-filter-talk": "Razgovor",
 	"mobile-frontend-watchlist-removed": "Stranica $1 uklonjena je s popisa praćenih stranica",
 	"mobile-frontend-watchlist-view": "Pregled popisa praćenih stranica",
-	"tag-mobile_edit": "Uređivanje s mobilnog uređaja"
+	"tag-mobile_edit": "uređivanje s mobilnog uređaja",
+	"tag-mobile_edit-description": "Uređivanje napravljeno na inačici wikipedije za mobilne uređaje"
 }
