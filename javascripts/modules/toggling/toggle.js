@@ -31,9 +31,12 @@
 		// jQuery will throw for hashes containing certain characters which can break toggling
 		try {
 			$target = $( M.escapeHash( selector ) );
-			$heading = $target.closest( '.section_heading' ).eq( 0 );
-
-			if ( $heading.length > 0 && !$heading.hasClass( 'openSection' ) ) {
+			$heading = $target.parents( '.section_heading' );
+			// The heading is not a section heading, check if in a content block!
+			if ( !$heading.length ) {
+				$heading = $target.parents( '.content_block' ).prev( '.section_heading' );
+			}
+			if ( $heading.length && !$heading.hasClass( 'openSection' ) ) {
 				toggle( $heading );
 				// scroll again after opening section (opening section makes the page longer)
 				window.scrollTo( 0, $target.offset().top );

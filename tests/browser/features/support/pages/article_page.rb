@@ -2,7 +2,7 @@ class ArticlePage
   include PageObject
 
   include URL
-  page_url URL.url("<%=params[:article_name]%>")
+  page_url URL.url("<%=params[:article_name]%>#<%=params[:hash]%>")
 
   # UI elements
   a(:mainmenu_button, id: "mw-mf-main-menu-button")
@@ -149,7 +149,7 @@ class ArticlePage
   a(:reference_drawer, css: ".drawer.references")
 
   # sections
-  h2(:first_section, css: ".section_heading")
+  h2(:first_section, css: ".section_heading", index: 0)
   div(:first_section_content, id: "content_block_0")
   h2(:third_section, css: ".section_heading", index: 2)
 

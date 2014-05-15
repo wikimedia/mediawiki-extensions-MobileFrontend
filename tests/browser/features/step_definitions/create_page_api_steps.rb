@@ -19,6 +19,8 @@ Given(/^I go to a page that has sections$/) do
 Hello world
 == Section 2 ==
 Section 2.
+=== Section 2A ===
+Section 2A
 "
 
   on(APIPage).create "Selenium section test page", wikitext
