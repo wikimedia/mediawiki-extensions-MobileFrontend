@@ -8,8 +8,6 @@
 #mw-mf-viewport {
 	position: relative;
 	height: 100%;
-	// opening nav transition can introduce a horizontal scrollbar without this
-	overflow-x: hidden;
 }
 
 #mw-mf-page-center {
@@ -164,7 +162,7 @@
 body.navigation-enabled {
 
 	#mw-mf-viewport {
-		// disable scrolling
+		// disable horizontal scrolling
 		overflow: hidden;
 		// the two following properties are needed to override the height set
 		// by position: fixed fallback on scroll event
