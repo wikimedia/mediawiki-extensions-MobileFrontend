@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_ef7cdd1d",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-16T00:12:28Z",
+      "side": 1,
+      "message": ":P",
+      "parentUuid": "6e20cf91_6f38cd9b",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_afbee5f8",
         "filename": "less/modules/editor/VisualEditorOverlay.less",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-05-15T23:56:44Z",
       "side": 1,
       "message": "? Really needed? This seems odd..",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_efce1d86",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-16T00:12:28Z",
+      "side": 1,
+      "message": "Yeah, it\u0027s transparent otherwise. This really only matters for the popupToolGroups, so maybe I should move it there.",
+      "parentUuid": "6e20cf91_afbee5f8",
       "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_8fa569b4",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-16T00:12:28Z",
+      "side": 1,
+      "message": "Doh!",
+      "parentUuid": "6e20cf91_8f3329c0",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_efc4dd96",
         "filename": "less/modules/editor/VisualEditorOverlay.less",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2014-05-15T23:56:44Z",
       "side": 1,
       "message": "Can we reuse another of our boxshadows definitions?",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_4faf5192",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-16T00:12:28Z",
+      "side": 1,
+      "message": "I\u0027ll check.",
+      "parentUuid": "6e20cf91_efc4dd96",
       "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_4f86311a",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-16T00:12:28Z",
+      "side": 1,
+      "message": "Yes, it needs to apply to a slightly broader set of elements (which we didn\u0027t have before).",
+      "parentUuid": "6e20cf91_cf5001dc",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_8f5a09f8",
         "filename": "less/modules/editor/VisualEditorOverlay.less",
         "patchSetId": 2
@@ -98,6 +188,24 @@
       "writtenOn": "2014-05-15T23:56:44Z",
       "side": 1,
       "message": "Did you mean to move this up?",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_0f8039f8",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-16T00:12:28Z",
+      "side": 1,
+      "message": "I believe so, but I\u0027ll double check.",
+      "parentUuid": "6e20cf91_8f5a09f8",
       "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
