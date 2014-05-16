@@ -370,14 +370,21 @@ pre {
 	font-size: .9em;
 }
 
+// FIXME: Remove this rule when cache is clear
+.client-js .searchSubmit,
+.client-js .no-js-only,
 // FIXME: Use generic rule for print stylesheets
 .printfooter,
 .jsonly {
 	display: none;
 }
 
+
+// FIXME: Remove this rule when cache is clear
+.searchSubmit,
+.no-js-only,
 .client-js .jsonly {
-	display: block;
+	display: inherit;
 }
 
 .position-fixed {
