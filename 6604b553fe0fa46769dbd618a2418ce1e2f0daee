@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_af2025f3",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-16T00:38:12Z",
+      "side": 1,
+      "message": "Would be good to have either a more descriptive function name or comments explaining what the function is for.",
+      "revId": "6604b553fe0fa46769dbd618a2418ce1e2f0daee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

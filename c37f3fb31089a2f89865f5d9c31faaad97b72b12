@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_0ff4b982",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-16T00:38:12Z",
+      "side": 0,
+      "message": "If we\u0027re dropping this test (which I assume is because all modern browsers support navigator.geolocation), we should also remove the code in application.js as it isn\u0027t used anywhere else.",
+      "revId": "c37f3fb31089a2f89865f5d9c31faaad97b72b12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
