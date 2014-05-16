@@ -41,6 +41,17 @@ class MockWikiPage extends WikiPage {
 	public function getLatest() {
 		return 123;
 	}
+
+	public function isRedirect() {
+		return $this->getTitle()->getPrefixedText() === 'Redirected';
+	}
+
+	public function getRedirectTarget() {
+		if ( $this->getTitle()->getPrefixedText() === 'Redirected' ) {
+			return SpecialPage::getTitleFor( 'Blankpage' );
+		}
+		return null;
+	}
 }
 
 /**
@@ -116,7 +127,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 			isset( $result['mobileview'] ),
 			'API output should be encloded in mobileview element'
 		);
-		$this->assertArrayEquals( $expected, $result['mobileview'] );
+		$this->assertArrayEquals( $expected, $result['mobileview'], false, true );
 	}
 
 	public function provideView() {
@@ -187,6 +198,16 @@ Text 2
 				array(
 					'mainpage' => '',
 					'sections' => array(),
+				),
+			),
+			array(
+				array(
+					'page' => 'Redirected',
+					'redirect' => 'yes',
+				) + $baseIn,
+				array(
+					'redirected' => 'Special:BlankPage',
+					'viewable' => 'no',
 				),
 			),
 		);
