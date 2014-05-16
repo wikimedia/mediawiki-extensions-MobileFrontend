@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_bed3b804",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-16T11:17:00Z",
+      "side": 1,
+      "message": "Fixed it for you and added a FIXME. Reseting stuff is a bad code smell.\nThis needs to be fixed in OOUI minerva skin.",
+      "parentUuid": "6e20cf91_ef7cdd1d",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_afbee5f8",
         "filename": "less/modules/editor/VisualEditorOverlay.less",
         "patchSetId": 2
@@ -90,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_1e43ccb7",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-16T11:17:00Z",
+      "side": 1,
+      "message": "Added documentation for you.",
+      "parentUuid": "6e20cf91_8f8b291b",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_8f3329c0",
         "filename": "less/modules/editor/VisualEditorOverlay.less",
         "patchSetId": 2
@@ -125,6 +161,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_ded674f6",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-16T11:17:00Z",
+      "side": 1,
+      "message": "Fixed this for you.",
+      "parentUuid": "6e20cf91_8fa569b4",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_efc4dd96",
         "filename": "less/modules/editor/VisualEditorOverlay.less",
         "patchSetId": 2
@@ -154,6 +208,24 @@
       "side": 1,
       "message": "I\u0027ll check.",
       "parentUuid": "6e20cf91_efc4dd96",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_fec93056",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-16T11:17:00Z",
+      "side": 1,
+      "message": "I had a look. We have a lot of them which are all very similar but nothing quite like this. Guess we should create some standard reusable box shadows...",
+      "parentUuid": "6e20cf91_4faf5192",
       "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -224,6 +296,24 @@
       "side": 1,
       "message": "I believe so, but I\u0027ll double check.",
       "parentUuid": "6e20cf91_8f5a09f8",
+      "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_de7af4e6",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-16T11:17:00Z",
+      "side": 1,
+      "message": "I checked and yeh it\u0027s necessary as the citation tool is not inside a oo-ui-tool-link",
+      "parentUuid": "6e20cf91_0f8039f8",
       "revId": "037782287b62a862304f397d7aeb00ce6be0e68e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
