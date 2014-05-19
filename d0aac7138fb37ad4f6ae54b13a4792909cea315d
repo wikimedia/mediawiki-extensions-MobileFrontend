@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_2c0d3542",
+        "filename": "less/common/common.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-19T13:05:23Z",
+      "side": 1,
+      "message": "Basically all rules override reset.less... That\u0027s what it\u0027s for, right?",
+      "revId": "d0aac7138fb37ad4f6ae54b13a4792909cea315d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
