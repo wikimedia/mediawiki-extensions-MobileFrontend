@@ -16,6 +16,24 @@
       "revId": "d90f8da312bf77202b1797a39feeb795959172d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_af95b237",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-19T21:49:14Z",
+      "side": 1,
+      "message": "Proof read page needs to add an image to the editor overlay and a button that toggles it on or off. You can get proofread page on Vagrant if you want to see this in action.\n\nI\u0027m too not sure what the best approach is here without completely rewriting the editor or creating a new javascript module that somehow swaps out our entire edit module (which is probably not the best idea)\n\nIt would need to write it\u0027s own route and EditorOverlay instance as well as template (which would mean making it dependant on MobileFrontend). All this seems like overkill but without any other examples to go by it\u0027s hard to know what\u0027s the best way to allow customisation of the editor...",
+      "parentUuid": "6e20cf91_7816475c",
+      "revId": "d90f8da312bf77202b1797a39feeb795959172d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
