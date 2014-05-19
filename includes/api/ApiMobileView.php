@@ -117,38 +117,45 @@ class ApiMobileView extends ApiBase {
 		} else {
 			$requestedSections = array();
 		}
-		if ( isset( $prop['sections'] ) ) {
-			$sectionCount = count( $data['sections'] );
-			for ( $i = 0; $i <= $sectionCount; $i++ ) {
-				if ( !isset( $requestedSections[$i] ) && $onlyRequestedSections ) {
-					continue;
+		if ( isset( $data['sections'] ) ) {
+			if ( isset( $prop['sections'] ) ) {
+				$sectionCount = count( $data['sections'] );
+				for ( $i = 0; $i <= $sectionCount; $i++ ) {
+					if ( !isset( $requestedSections[$i] ) && $onlyRequestedSections ) {
+						continue;
+					}
+					$section = array();
+					if ( $i > 0 ) {
+						$section = array_intersect_key( $data['sections'][$i - 1], $sectionProp );
+					}
+					$section['id'] = $i;
+					if ( isset( $prop['text'] )
+						&& isset( $requestedSections[$i] )
+						&& isset( $data['text'][$i] )
+					) {
+						$section[$textElement] = $this->stringSplitter( $this->prepareSection( $data['text'][$i] ) );
+						unset( $requestedSections[$i] );
+					}
+					if ( isset( $data['refsections'][$i] ) ) {
+						$section['references'] = '';
+					}
+					$result[] = $section;
 				}
-				$section = array();
-				if ( $i > 0 ) {
-					$section = array_intersect_key( $data['sections'][$i - 1], $sectionProp );
+				$missingSections = array_keys( $requestedSections );
+			} else {
+				foreach ( array_keys( $requestedSections ) as $index ) {
+					$section = array( 'id' => $index );
+					if ( isset( $data['text'][$index] ) ) {
+						$section[$textElement] =
+							$this->stringSplitter( $this->prepareSection( $data['text'][$index] ) );
+					} else {
+						$missingSections[] = $index;
+					}
+					$result[] = $section;
 				}
-				$section['id'] = $i;
-				if ( isset( $prop['text'] ) && isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
-					$section[$textElement] = $this->stringSplitter( $this->prepareSection( $data['text'][$i] ) );
-					unset( $requestedSections[$i] );
-				}
-				if ( isset( $data['refsections'][$i] ) ) {
-					$section['references'] = '';
-				}
-				$result[] = $section;
 			}
-			$missingSections = array_keys( $requestedSections );
-		} else {
-			foreach ( array_keys( $requestedSections ) as $index ) {
-				$section = array( 'id' => $index );
-				if ( isset( $data['text'][$index] ) ) {
-					$section[$textElement] =
-						$this->stringSplitter( $this->prepareSection( $data['text'][$index] ) );
-				} else {
-					$missingSections[] = $index;
-				}
-				$result[] = $section;
-			}
+			$this->getResult()->setIndexedTagName( $result, 'section' );
+			$this->getResult()->addValue( null, $this->getModuleName(), array( 'sections' => $result ) );
 		}
 
 		if ( isset( $prop['protection'] ) ) {
@@ -189,8 +196,6 @@ class ApiMobileView extends ApiBase {
 				array( 'continue-offset' => $params['offset'] + $params['maxlen'] )
 			);
 		}
-		$this->getResult()->setIndexedTagName( $result, 'section' );
-		$this->getResult()->addValue( null, $this->getModuleName(), array( 'sections' => $result ) );
 
 		wfProfileOut( __METHOD__ );
 	}
@@ -258,6 +263,9 @@ class ApiMobileView extends ApiBase {
 	 */
 	public static function parseSections( $str, $data, &$missingSections ) {
 		$str = trim( $str );
+		if ( !isset( $data['sections'] ) ) {
+			return array();
+		}
 		$sectionCount = count( $data['sections'] );
 		if ( $str === 'all' ) {
 			return range( 0, $sectionCount );
@@ -353,11 +361,18 @@ class ApiMobileView extends ApiBase {
 		if ( $this->followRedirects && $wp->isRedirect() ) {
 			$newTitle = $wp->getRedirectTarget();
 			if ( $newTitle ) {
-				$wp = $this->makeWikiPage( $newTitle );
-				$this->getResult()->addValue( null, $this->getModuleName(),
-					array( 'redirected' => $newTitle->getPrefixedText() )
-				);
 				$title = $newTitle;
+				$this->getResult()->addValue( null, $this->getModuleName(),
+					array( 'redirected' => $title->getPrefixedText() )
+				);
+				if ( $title->getNamespace() < 0 ) {
+					$this->getResult()->addValue( null, $this->getModuleName(),
+						array( 'viewable' => 'no' )
+					);
+					wfProfileOut( __METHOD__ );
+					return array();
+				}
+				$wp = $this->makeWikiPage( $title );
 			}
 		}
 		$latest = $wp->getLatest();
