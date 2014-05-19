@@ -11,7 +11,8 @@ Feature: Check UI components
       And I see a link to the privacy page
 
   Scenario: Check existence of important UI components on other pages.
-    Given I am on the "Barack Obama" page
+    Given the page "Selenium UI test" exists
+      And I am on the "Selenium UI test" page
     Then I see the last modified bar history link
       And I see the switch to desktop link
       And I see the license link
