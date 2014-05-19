@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_7816475c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-19T19:55:38Z",
+      "side": 1,
+      "message": "I\u0027m a bit scared of this. Giving external code too much flexibility might end not so well. It reminds me of how extensions and gadgets modify desktop skins by simply relying on DOM structure. We\u0027re trying to get away from it there, let\u0027s not introduce it here.\n\nWhat is it exactly that ProofReadPage needs?",
+      "revId": "d90f8da312bf77202b1797a39feeb795959172d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
