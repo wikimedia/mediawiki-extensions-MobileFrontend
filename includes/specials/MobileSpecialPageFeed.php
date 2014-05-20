@@ -58,7 +58,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 	/**
 	 * Renders an item in the feed
-	 * FIXME: Rename to renderFeedItemHtml when pushed to stable
 	 * @param MWTimestamp $ts The time the edit occurred
 	 * @param string $diffLink url to the diff for the edit
 	 * @param string $username The username of the user that made the edit (absent if anonymous)
@@ -84,7 +83,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$usernameClass = 'mw-mf-user icon icon-16px icon-text';
 		}
 
-		$html = Html::openElement( 'li' );
+		$html = Html::openElement( 'li', array( 'class' => 'page-summary' ) );
 
 		if ( $diffLink ) {
 			$html .= Html::openElement( 'a', array( 'href' => $diffLink, 'class' => 'title' ) );
