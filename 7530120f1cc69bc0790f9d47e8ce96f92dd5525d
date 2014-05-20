@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_fc912153",
+        "filename": "tests/browser/features/step_definitions/toggling_steps.rb",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-20T21:01:22Z",
+      "side": 1,
+      "message": "I still don\u0027t think it should start with a capital letter. You don\u0027t have capital letters in a middle of a sentence:\n\nThen The heading element is visible. - weird\nThen the heading element is visible. - normal\n\nThis should not be a coding guideline. It\u0027s English guideline.\nAlso, other projects don\u0027t capitalize step definitions:\nhttps://www.relishapp.com/cucumber/cucumber/docs/background\nhttps://github.com/cucumber/cucumber/blob/master/features/lib/step_definitions/cucumber_steps.rb\n(those are Cucumber steps for Cucumber, so I guess they have some idea of what it\u0027s supposed to look like).",
+      "revId": "7530120f1cc69bc0790f9d47e8ce96f92dd5525d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
