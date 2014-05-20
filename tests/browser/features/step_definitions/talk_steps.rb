@@ -6,6 +6,6 @@ Then(/^I see the talk overlay$/) do
   on(ArticlePage).overlay_heading_element.when_present.text.should match "Talk"
 end
 
-Then(/^There is no talk button$/) do
+Then(/^there is no talk button$/) do
   on(ArticlePage).talk_element.should_not be_visible
 end

@@ -1,4 +1,4 @@
-Then(/^The edit button is enabled$/) do
+Then(/^the edit button is enabled$/) do
   on(ArticlePage).wait_until(5, "Edit button not enabled") do
     on(ArticlePage).edit_button_holder_element.when_present.class_name.should match "enabled"
   end

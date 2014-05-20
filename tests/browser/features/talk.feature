@@ -5,7 +5,7 @@ Feature: Talk
 
   Scenario: Talk doesn't show on talk pages
     Given the page "Talk:Selenium talk test page" exists
-    Then There is no talk button
+    Then there is no talk button
 
   Scenario: Talk on a page that does exist
     Given the page "Talk:Selenium talk test page" exists

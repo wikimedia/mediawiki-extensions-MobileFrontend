@@ -95,7 +95,7 @@ When(/^I visit the page "(.*?)" with hash "(.*?)"$/) do |article, hash|
   visit(ArticlePage, :using_params => {:article_name => article, :hash => hash })
 end
 
-Given(/^The "(.*?)" page is protected\.$/) do |page|
+Given(/^the "(.*?)" page is protected\.$/) do |page|
   step 'I am logged into the mobile website'
   step 'I am on the "' + page + '" page'
   step 'I switch to desktop'
@@ -130,7 +130,7 @@ When(/^I say Cancel in the confirm dialog$/) do
   on(ArticlePage).confirm(false) {}
 end
 
-Then(/^There is a red link with text "(.+)"$/) do |text|
+Then(/^there is a red link with text "(.+)"$/) do |text|
   # FIXME: Switch to link_element when red links move to stable
   on(ArticlePage).content_wrapper_element.span_element(text: text).when_present(10).should be_visible
 end

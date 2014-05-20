@@ -3,7 +3,7 @@ Feature: Check UI components
 
   Scenario: Check existence of important UI components on the main page
     Given I am on the "Main Page" page
-      And The wiki has a terms of use
+      And the wiki has a terms of use
     Then I see the history link
       And I see the switch to desktop link
       And I see the license link

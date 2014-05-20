@@ -22,4 +22,4 @@ Feature: Special:Uploads uploads
       And I click Submit
     Then I see an upload progress bar
       And my image is on the Uploads page
-      And The Contribute an image button is visible
+      And the Contribute an image button is visible

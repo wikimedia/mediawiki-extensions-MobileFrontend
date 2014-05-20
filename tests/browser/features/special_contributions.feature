@@ -12,8 +12,8 @@ Feature: Special:Contributions
   Scenario: Check components in diff summary
     Then I see a list of my contributions
       And I see a summary of my last contribution
-      And The last contribution summary shows the title of the page edited
-      And The last contribution summary shows the edit summary
-      And The last contribution summary shows the time of the last edit
-      And The last contribution summary does not show the username
+      And the last contribution summary shows the title of the page edited
+      And the last contribution summary shows the edit summary
+      And the last contribution summary shows the time of the last edit
+      And the last contribution summary does not show the username
 

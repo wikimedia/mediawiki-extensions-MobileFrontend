@@ -7,7 +7,7 @@ Feature: Special:UserProfile
   Scenario: Check components in profile page
     Then I am on my user profile page
       And I can see my last edit
-      And There is a link to my talk page
-      And There is a link to my contributions
-      And There is a link to my uploads
-      And There is a link to my user page
+      And there is a link to my talk page
+      And there is a link to my contributions
+      And there is a link to my uploads
+      And there is a link to my user page

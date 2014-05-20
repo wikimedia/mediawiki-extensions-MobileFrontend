@@ -46,11 +46,11 @@ When(/^I click the unwatch star$/) do
   on(ArticlePage).unwatch_link_element.when_present.click
 end
 
-Then /^The watch star is selected$/ do
+Then /^the watch star is selected$/ do
   on(ArticlePage).watch_link_element.parent.class_name.should match "watched"
 end
 
-Then /^The watch star is not selected$/ do
+Then /^the watch star is not selected$/ do
   on(ArticlePage).watch_link_element.should exist
 end
 
@@ -80,7 +80,7 @@ Then(/^I see a toast error$/) do
   on(ArticlePage).toast_element.when_present.class_name.should match "error"
 end
 
-Then(/^The text of the first heading is "(.*)"$/) do |title|
+Then(/^the text of the first heading is "(.*)"$/) do |title|
    on(ArticlePage) do |page|
     page.wait_until do
       page.first_heading_element.when_present.text.include? title
