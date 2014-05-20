@@ -46,9 +46,15 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			$query['campaign'] = $campaign;
 		}
 
-		$signupLink = Linker::link( SpecialPage::getTitleFor( 'Userlogin' ),
-			wfMessage( 'mobile-frontend-main-menu-account-create' )->text(),
-			array( 'class'=> 'mw-mf-create-account mw-ui-block' ), $query );
+		// Check for permission to create new account first
+		$user = $this->getRequestContext()->getUser();
+		if ( $user->isAllowed( 'createaccount' ) ) {
+			$signupLink = Linker::link( SpecialPage::getTitleFor( 'Userlogin' ),
+				wfMessage( 'mobile-frontend-main-menu-account-create' )->text(),
+				array( 'class'=> 'mw-mf-create-account mw-ui-block' ), $query );
+		} else {
+			$signupLink = '';
+		}
 
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login', 'class' => 'content' ) );
 
