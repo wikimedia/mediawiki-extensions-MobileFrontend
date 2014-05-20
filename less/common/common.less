@@ -124,40 +124,6 @@ input:not([type=submit]), textarea {
 	min-width: 80%;
 }
 
-a.external {
-	.background-image-svg( 'images/external-link-ltr-icon.svg', 'images/external-link-ltr-icon.png' );
-	background-repeat: no-repeat;
-	background-position: center right;
-	padding-right: 13px;
-}
-
-/* Galleries */
-/* FIXME: Doesn't support parameters in https://en.wikipedia.org/wiki/Help:Gallery_tag */
-/* See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
-ul.gallery {
-	li.gallerybox {
-		display: inline-block;
-
-		div.thumb {
-
-			img {
-				display: block;
-				margin: 0 auto;
-			}
-		}
-
-		div.gallerytext {
-			overflow: hidden;
-			padding: 2px 4px;
-			word-wrap: break-word;
-		}
-	}
-}
-
-pre {
-	white-space: pre-wrap;
-}
-
 a {
 	text-decoration: none;
 	color: #002bb8;
@@ -181,26 +147,11 @@ a.new:hover {
 	color: @redBase;
 }
 
-img.thumbborder {
-	border: 1px solid #ccc;
-}
-
-
 /* Plainlinks - this can be used to switch
  * off special external link styling */
 .plainlinks a {
 	background: none !important;
 	padding: 0 !important;
-}
-
-strong,
-b {
-	font-weight: bold;
-}
-
-em,
-i {
-	font-style: italic;
 }
 
 fieldset {
@@ -228,135 +179,6 @@ ul.hlist {
 	li {
 		display: inline-block;
 		margin-right: 8px;
-	}
-}
-
-// Code
-//
-// Use this solely for blocks of computer code.
-//
-// Markup:
-// <code>
-// body {
-//   color:red;
-// }
-// </code>
-//
-// Styleguide 1.4.
-code,
-// Preformatted text
-//
-// Use on text where whitespace is significant and the content should not be formatted.
-//
-// Markup:
-// <pre>
-// body {
-//   color:red;
-// }
-// </pre>
-//
-// Styleguide 1.5.
-pre {
-	padding: 0.2em 0.5em;
-	font-family: monospace;
-	border: solid 1px #CCC;
-}
-
-pre {
-	padding: 1em;
-}
-
-.content {
-	// Deal with long links (bug 60387)
-	word-wrap: break-word;
-
-	// Linker.php
-	.thumb {
-		.thumbinner {
-			margin: 5px auto;
-			max-width: 100%;
-
-			> div {
-				float: none !important;
-				width: auto !important;
-				clear: both !important;
-			}
-		}
-
-		.thumbcaption {
-			margin: 5px 10px 0;
-			text-align: center;
-			width: auto !important;
-		}
-
-		/* bug 20030 */
-		.noresize {
-			width: 100%;
-			overflow-x: auto;
-
-			img {
-				max-width: none !important;
-			}
-		}
-	}
-
-	// Prevent inline styles on images in wikitext
-	// Note we restrict to img's to avoid conflicts with VisualEditor shields
-	// See bug 62460
-	a > img {
-		// make sure that images in articles don't cause a horizontal scrollbar
-		// on small screens
-		max-width: 100% !important;
-		height: auto !important;
-	}
-
-	ul {
-		list-style: square inside;
-	}
-
-	ol {
-		list-style: decimal inside;
-	}
-
-	table {
-		margin: 1em 0;
-
-		/* following 4 rules are needed for scrolling */
-		overflow: auto; /* for browsers that don't support overflow-y */
-		overflow-y: hidden;
-		overflow-x: auto;
-		display: block;
-		width: 100% !important;
-
-		td,
-		th {
-			padding: 3px;
-			border: 1px @grayLight solid;
-		}
-
-		th {
-			font-weight: bold;
-			background-color: #f2f2f2;
-			text-align: center;
-		}
-
-		caption {
-			display: block;
-			text-align: left;
-		}
-	}
-
-	// Hide the image magnification icon normally displayed in image captions
-	div.magnify {
-		display: none;
-	}
-
-	// Generic class name needed
-	.return-link,
-	#mw-mf-last-modified {
-		display: block;
-		font-size: .9em;
-		margin-top: 1.5em;
 	}
 }
 
