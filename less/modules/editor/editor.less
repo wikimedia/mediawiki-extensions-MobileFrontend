@@ -40,14 +40,14 @@
 		.switcher-container {
 			padding: 0;
 			// Have to set an explicit width since we're using display:table-cell
-			width: 5em;
+			width: 4em;
 			vertical-align: middle;
-			border-right: 1px solid @grayLight;
 			position: relative;
 		}
 
 		.icon.editor-switcher {
-			width: 5em;
+			width: 4em;
+			margin: 0 0 0 1em;
 		}
 
 		.icon.editor-switcher:focus {
@@ -60,11 +60,7 @@
 			top: @headerHeight;
 			// Needs to float above any elements in the toolbar
 			z-index: 1;
-			// FIXME: Negative margin is needed in Chrome and Safari to match our negative
-			// margins on the buttons, but this breaks the layout in Firefox and IE :(
-			// Spent a very long time trying to find a CSS solution that worked in all
-			// four browsers, but no luck.
-			margin-top: -@headerMargin;
+			box-shadow: 0 .1em .2em rgba(0, 0, 0, .2);
 			// We have to use margin-left instead of left due to a rendering bug in
 			// Firefox. Firefox sets the wrong horizontal positioning frame for
 			// children of elements with position:relative and display:table-cell.

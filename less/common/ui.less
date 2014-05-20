@@ -11,14 +11,7 @@ body {
 	height: 100%;
 }
 
-// FIXME: refactor all the below and reuse OverlayNew header styling
-#mw-mf-page-center {
-	padding: @headerMargin @headerMargin 0;
-}
-
 #content_wrapper {
-	margin: 0 -@headerMargin;
-
 	.top-bar {
 		background-color: #F3F3F3;
 		padding: 5px @contentMargin;
@@ -43,25 +36,20 @@ body {
 }
 
 // FIXME: Id's for styling are bad m'kay?
-#secondary-button {
-	border-left: 1px solid @grayLight;
-}
-
-// FIXME: Id's for styling are bad m'kay?
 #mw-mf-main-menu-button {
-	border-right: 1px solid @grayLight;
-	background-position: 40% 40%;
+	background-position: 50% 50%;
 	.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
 }
 
 .header {
 	display: table;
 	width: 100%;
+	height: @headerHeight;
 	white-space: nowrap;
 	border-bottom: 1px solid @grayLight;
 
 	> a {
-		width: @headerHeight - @headerMargin;
+		width: @headerHeight;
 	}
 
 	// Left and right menu links
@@ -74,7 +62,7 @@ body {
 
 	// Search
 	> form {
-		padding: (@headerTitleMarginV - @headerMargin) @headerTitleMarginH;
+		padding: .15em @headerTitlePaddingH 0;
 		width: auto;
 	}
 
@@ -207,17 +195,15 @@ input.search {
 .header {
 
 	.user-button {
-		height: @headerHeight - 2 * @headerMargin;
-		background-position: 60% 40%;
+		height: @headerHeight;
+		background-position: 50% 50%;
 	}
 
 	// need to specify id or else other rules are more important
 	// FIXME: simplify when .icon class from OverlayNew used instead
 	#secondary-button.user-button,
 	.user-button {
-		width: @headerHeight - 2 * @headerMargin;
-		padding-left: @headerMargin;
-		padding-bottom: @headerMargin;
+		width: @headerHeight;
 		text-align: center;
 
 		&:hover {
