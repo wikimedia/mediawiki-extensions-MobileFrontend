@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_99d7dfc4",
+        "filename": "includes/models/MobileFrontendEdit.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-20T22:05:14Z",
+      "side": 1,
+      "message": "\"Edit\" seems non-standard... \"Change\"? \"Diff\"? \"DiffInfo\" is the best methinks.",
+      "revId": "b486891d302017c9884a05376c0b7250e9675439",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_22d779f4",
+        "filename": "includes/models/MobileFrontendEdit.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-20T22:05:14Z",
+      "side": 1,
+      "message": "UI-related comment in a supposedly backend class.",
+      "revId": "b486891d302017c9884a05376c0b7250e9675439",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_7f6183cf",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-20T22:05:14Z",
+      "side": 1,
+      "message": "Please document that it\u0027s an override.",
+      "revId": "b486891d302017c9884a05376c0b7250e9675439",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
