@@ -53,7 +53,7 @@ class ArticlePage
   button(:watch_confirm, class: "mw-htmlform-submit")
 
   # search
-  button(:search_button, css: ".searchSubmit")
+  button(:search_button, css: ".search-box input[type=submit]")
   p(:search_within_pages, css: ".without-results")
   text_field(:search_box_placeholder, name: "search", index: 0)
   text_field(:search_box2, name: "search", index: 1)
