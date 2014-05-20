@@ -697,8 +697,8 @@ class MobileFrontendHooks {
 		$files = array_merge( $files,
 			array_map( $callback,
 				array(
-					'ApiMobileViewTest.php',
-					'ApiParseExtenderTest.php',
+					'api/ApiMobileViewTest.php',
+					'api/ApiParseExtenderTest.php',
 					'DeviceDetectionTest.php',
 					'MobileContextTest.php',
 					'MobileFormatterTest.php',
