@@ -24,11 +24,10 @@
 // overlay styles
 .overlay {
 	.cleanup {
-		margin: 0 @headerMargin;
 		li {
 			border-bottom: solid 1px @grayLight;
 			.issue-notice {
-				padding: (@smallIconSize * 2.5) @headerMargin @smallIconSize @headerMargin;
+				padding: (@smallIconSize * 2.5) @contentMargin @smallIconSize @contentMargin;
 				.background-image-svg( 'images/issues/gray-triangle.svg', 'images/issues/gray-triangle.png' );
 				background-position: center @smallIconSize;
 			}
@@ -44,7 +43,7 @@
 				li {
 					.issue-notice {
 						padding: 2em 1em 2em (@largeIconSize + 10px);
-						margin: 0 1em 0 3em;
+						margin: 0 1em 0 @headerHeight;
 						// FIXME: move to generic icon.less class e.g. icon-responsive
 						.background-size( @largeIconSize, @largeIconSize );
 						background-position: left center;

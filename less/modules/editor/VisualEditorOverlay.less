@@ -51,6 +51,8 @@
 			> .toolbar {
 
 				.oo-ui-toolbar-bar {
+					position: static;
+
 					.oo-ui-toolGroup {
 						// FIXME: This resets oo-ui css and shouldn't be needed. Fix should be applied in oo-ui minerva skin
 						margin: 0;
@@ -59,7 +61,7 @@
 					.oo-ui-popupToolGroup {
 						&.oo-ui-iconedElement {
 							height: @headerHeight;
-							margin: -@headerMargin 0 0 1em;
+							margin: 0 0 0 1em;
 						}
 
 						.oo-ui-toolGroup-tools {
@@ -98,7 +100,7 @@
 
 				&.oo-ui-iconedElement {
 					height: @headerHeight;
-					margin: -@headerMargin 0 0 1em;
+					margin: 0 0 0 1em;
 					min-width: 24px;
 				}
 
@@ -127,9 +129,8 @@
 
 			// FIXME: Merge with icon and icon-32px classes
 			.oo-ui-iconedElement-icon {
-				width: @headerTitleFontSize + @headerTitleMarginV * 2;
-				height: @headerTitleFontSize + @headerTitleMarginV * 2;
-				margin-top: @headerMargin;
+				width: @headerHeight;
+				height: @headerHeight;
 				// FIXME: Somehow consolidate ooui classes with icon and icon-32px classes so this rule is unnecessary
 				.background-size( 32px, 32px );
 			}

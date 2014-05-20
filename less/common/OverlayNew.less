@@ -31,7 +31,7 @@
 //   <div class="overlay border-box visible">
 //     <div class="overlay-header-container border-box visible">
 //       <div class="overlay-header">
-//         <ul class="v-border bottom-border">
+//         <ul class="bottom-border">
 //          <li><button class="cancel icon">Close</button></li>
 //         </ul>
 //         <div class="overlay-title bottom-border"><h2>Overlay</h2></div>
@@ -52,11 +52,11 @@
 //   <div class="overlay border-box visible">
 //     <div class="overlay-header-container border-box visible">
 //       <div class="overlay-header">
-//         <ul class="v-border bottom-border">
+//         <ul class="bottom-border">
 //          <li><button class="cancel icon">Close</button></li>
 //         </ul>
 //         <div class="overlay-title bottom-border"><h2>Overlay</h2></div>
-//         <ul class="v-border bottom-border">
+//         <ul class="bottom-border">
 //          <li><button class="continue icon">Continue</button></li>
 //         </ul>
 //       </div>
@@ -76,11 +76,11 @@
 //   <div class="overlay border-box visible">
 //     <div class="overlay-header-container border-box visible">
 //       <div class="overlay-header">
-//         <ul class="v-border bottom-border">
+//         <ul class="bottom-border">
 //          <li><button class="cancel icon">Close</button></li>
 //         </ul>
 //         <div class="overlay-title bottom-border"><h2>Overlay</h2></div>
-//         <ul class="v-border bottom-border">
+//         <ul class="bottom-border">
 //          <li><button class="submit icon">Submit</button></li>
 //         </ul>
 //       </div>
@@ -139,27 +139,19 @@
 
 		> ul {
 			li {
-				display: inline-block;
+				display: block;
 			}
 		}
 
 		> ul, button {
-			width: @headerHeight - @headerMargin;
+			width: @headerHeight;
 		}
 
 		button {
-			padding: @headerTitleMarginV @headerTitleMarginH;
 			width: @headerHeight;
 			border-radius: 0;
 			min-height: @headerHeight;
-		}
-
-		.v-border:first-child {
-			border-right: 1px solid @grayLight;
-		}
-
-		.v-border:last-child li:last-child {
-			border-left: 1px solid @grayLight;
+			display: block;
 		}
 
 		.icon {
@@ -194,7 +186,6 @@
 
 	.overlay-header-container {
 		width: 100%;
-		padding: @headerMargin @headerMargin 0;
 		background: #fff;
 		// needed for _fixIosHeader method to work properly
 		position: absolute;
@@ -226,21 +217,12 @@
 
 			.overlay-title,
 			.overlay-search {
-				padding: 0 @headerTitleMarginH;
+				padding: .15em @headerTitlePaddingH 0;
 			}
 
 			button {
-				margin-top: -@headerMargin;
 				// Line up with rest of header that has 1px bottom-border
 				margin-bottom: -1px;
-			}
-
-			> ul:first-child li:first-child button {
-				margin-left: -@headerMargin;
-			}
-
-			> ul:last-child li:last-child button {
-				margin-right: -@headerMargin;
 			}
 		}
 	}
@@ -327,11 +309,11 @@
 // <div class="overlay border-box overlay-bottom position-fixed visible">
 //   <div class="overlay-header-container border-box visible">
 //     <div class="overlay-header">
-//       <ul class="v-border bottom-border">
+//       <ul class="bottom-border">
 //        <li><button class="cancel icon">Close</button></li>
 //       </ul>
 //       <div class="overlay-title bottom-border"><h2>Overlay</h2></div>
-//       <ul class="v-border bottom-border">
+//       <ul class="bottom-border">
 //        <li><button class="submit icon">Submit</button></li>
 //       </ul>
 //     </div>
