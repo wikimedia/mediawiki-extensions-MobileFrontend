@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_76b1b3db",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-20T16:27:18Z",
+      "side": 1,
+      "message": "Use RequestContext instead of globals, e,g, $this-\u003egetRequestContext()-\u003egetUser()",
+      "revId": "1748be255862f040ea613a1e27f882b816fe57d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
