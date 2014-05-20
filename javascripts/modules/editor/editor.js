@@ -6,9 +6,10 @@
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
+		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha' &&
-			mw.config.get( 'wgVisualEditorConfig' ),
+			veConfig,
 		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
@@ -51,7 +52,7 @@
 	 */
 	function getPreferredEditor() {
 		var preferredEditor = M.settings.getUserSetting( 'preferredEditor', true ),
-			visualEditorDefault = mw.config.get( 'wgVisualEditorConfig' ).defaultUserOptions.enable;
+			visualEditorDefault = veConfig && veConfig.defaultUserOptions && veConfig.defaultUserOptions.enable;
 		if ( preferredEditor === null ) {
 			return visualEditorDefault ? 'VisualEditor' : 'SourceEditor';
 		} else {
