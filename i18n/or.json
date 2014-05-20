@@ -77,7 +77,6 @@
 	"mobile-frontend-off": "ବନ୍ଦ",
 	"mobile-frontend-on": "ଚାଲୁ",
 	"mobile-frontend-opt-in-explain": "betaରେ ଯୋଗ ଦେଇ , ଆପଣଙ୍କୁ ପରଖ ପାଇଁ ଅନୁମତି ମିଳିଥାଏ ଯାହା ବଗ୍ ଓ ଅସୁବିଧାସବୁର ସମ୍ମୁଖୀନ ହେବାକୁ ପଡ଼ିପାରେ ।",
-	"mobile-frontend-overlay-escape": "ପଛକୁ ଫେରିବେ",
 	"mobile-frontend-page-menu-contents": "ବିଷୟସୂଚୀ",
 	"mobile-frontend-page-menu-history": "ଇତିହାସ",
 	"mobile-frontend-page-saving": "$1 ସାଇତା ଯାଉଛି",
@@ -137,6 +136,6 @@
 	"mobile-frontend-watchlist-more": "ଅଧିକ",
 	"mobile-frontend-watchlist-removed": "$1କୁ ଆପଣଙ୍କ ଦେଖଣାତାଲିକାରୁ ହଟାଇବେ",
 	"mobile-frontend-watchlist-view": "ଆପଣଙ୍କ ଦେଖଣାତାଲିକା ଦେଖିବେ",
-	"tag-mobile_edit": "ମୋବାଇଲ ବଦଳ",
+	"tag-mobile_edit": "ମୋବାଇଲ ସମ୍ପାଦନା",
 	"tag-mobile_edit-description": "ମୋବାଇଲ ସାଇଟଦ୍ଵାରା ହେଇଥିବା ବଦଳଗୁଡିକ"
 }

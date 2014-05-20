@@ -43,6 +43,7 @@
 	"mobile-frontend-editor-editing-page": "Lehekülje \"<span>$1</span>\" <strong>redigeerimine</strong>",
 	"mobile-frontend-editor-error": "Tõrge, muudatust ei salvestatud.",
 	"mobile-frontend-editor-keep-editing": "Jätka redigeerimist",
+	"mobile-frontend-editor-licensing": "Kui salvestad, nõustud oma kaastöö avaldamisega litsentsi $1 all.",
 	"mobile-frontend-editor-newpage-prompt": "Sellist lehekülge pole. Miks mitte hakkajalt seda alustada?",
 	"mobile-frontend-editor-placeholder": "See alaosa on tühi. Ole esimene, kes siia kirjutab!",
 	"mobile-frontend-editor-previewing-page": "Lehekülje \"<span>$1</span>\" <strong>eelvaade</strong>",
@@ -144,6 +145,7 @@
 	"mobile-frontend-photo-upload": "Lisa selle lehekülje juurde pilt",
 	"mobile-frontend-photo-upload-anon": "Palun logi sisse, et sellele leheküljele pilt lisada.",
 	"mobile-frontend-photo-upload-comment": "Leheküljele lisati pilt",
+	"mobile-frontend-photo-upload-copyvio": "Hoiatus! See foto on kahtlane. Kui sa ei teinud seda pilti ise, siis palun ära seda üles laadi. Kas tahad ikkagi jätkata?",
 	"mobile-frontend-photo-upload-disabled": "Sellel leheküljel pole pilti tarvis.",
 	"mobile-frontend-photo-upload-error": "Tõrge. Proovi uuesti.",
 	"mobile-frontend-photo-upload-generic": "Laadi üles pilt",
@@ -225,6 +227,7 @@
 	"mobile-frontend-watchlist-view": "Vaata oma jälgimisloendit",
 	"mobilefrontend-random-cancel": "Las ma loen!",
 	"mobilefrontend-random-explain": "Kas see juhuslik lehekülg huvitab sind?",
+	"mobilefrontend-random-tryanother": "Leia teine",
 	"nearby": "Leheküljed sinu lähedal",
 	"tag-mobile_edit": "Mobiilimuudatus",
 	"tag-mobile_edit-description": "Mobiilisaidil tehtud muudatus"
