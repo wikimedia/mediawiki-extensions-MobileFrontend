@@ -89,6 +89,12 @@ Given(/^I am on the "(.+)" page$/) do |article|
   visit(ArticlePage, :using_params => {:article_name => article})
 end
 
+When(/^I visit the page "(.*?)" with hash "(.*?)"$/) do |article, hash|
+  # Ensure we do not cause a redirect
+  article = article.sub(/ /, '_')
+  visit(ArticlePage, :using_params => {:article_name => article, :hash => hash })
+end
+
 Given(/^The "(.*?)" page is protected\.$/) do |page|
   step 'I am logged into the mobile website'
   step 'I am on the "' + page + '" page'
