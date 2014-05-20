@@ -76,7 +76,7 @@
 				loadingOverlay = new LoadingOverlay(),
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
-				visualEditorNamespaces = mw.config.get( 'wgVisualEditorConfig' ).namespaces;
+				visualEditorNamespaces = veConfig && veConfig.namespaces;
 			loadingOverlay.show();
 			sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
