@@ -2,7 +2,7 @@ class ArticlePage
   include PageObject
 
   include URL
-  page_url URL.url("<%=params[:article_name]%>#<%=params[:hash]%>")
+  page_url URL.url("<%=params[:article_name]%><%=params[:hash]%>")
 
   # UI elements
   a(:mainmenu_button, id: "mw-mf-main-menu-button")
