@@ -158,4 +158,8 @@ class ArticlePage
 
   # page info (action=info)
   td(:edit_count, css: "#mw-pageinfo-edits td", index: 1)
+
+  # error and warning boxes
+  div(:warning_box, css: ".warning")
+  div(:error_message, css: ".error")
 end

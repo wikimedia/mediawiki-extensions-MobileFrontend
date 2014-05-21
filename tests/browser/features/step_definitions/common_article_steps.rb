@@ -96,3 +96,7 @@ end
 Then /^I see drawer with message "(.+)"$/ do |text|
   on(ArticlePage).drawer_element.when_present.text.should match text
 end
+
+Then(/^I should see the error box message "(.+)"$/) do |error_message|
+  on(ArticlePage).error_message.should match (error_message)
+end

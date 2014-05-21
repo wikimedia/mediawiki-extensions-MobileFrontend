@@ -8,12 +8,12 @@ end
 Given /^I am logged into the mobile website$/ do
   step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
-  on(LoginPage) do |page|
+  on(SpecialUserLoginPage) do |page|
   page.login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
   if page.text.include? "There is no user by the name "
     puts ENV["MEDIAWIKI_USER"] + " does not exist... trying to add user"
-    on(LoginPage).create_account_element.when_present.click
-    on(LoginPage) do |page|
+    on(SpecialUserLoginPage).create_account_element.when_present.click
+    on(SpecialUserLoginPage) do |page|
       page.username_element.element.when_present.set ENV["MEDIAWIKI_USER"]
       page.signup_password_element.element.when_present.set ENV["MEDIAWIKI_PASSWORD"]
       page.confirm_password_element.element.when_present.set ENV["MEDIAWIKI_PASSWORD"]
@@ -30,14 +30,14 @@ Given(/^I register a new account with a random username$/) do
   username = 'NewUser' + Time.now.to_i.to_s
   #the call to Random creates a long string of the form "0.10879935166988186"
   pwd = Random.new.rand.to_s
-  visit(CreateAccountPage) do |page|
+  visit(SpecialUserLoginPage) do |page|
     # undo auto complete
-    page.username_field_element.when_present.send_keys(username)
-    page.password_field_element.when_present.send_keys(pwd)
-    page.confirm_password_field_element.when_present.send_keys(pwd)
-    page.sign_up_element.when_present.click
+    page.username_element.when_present.send_keys(username)
+    page.password_element.when_present.send_keys(pwd)
+    page.confirm_password_element.when_present.send_keys(pwd)
+    page.signup_submit_element.when_present.click
     step 'I am on the "Special:UserLogout" page'
-    visit(LoginPage) do |page|
+    visit(SpecialUserLoginPage) do |page|
       page.login_with(username, pwd)
     end
   end
@@ -55,14 +55,14 @@ Given /^I am logged in as a new user$/ do
   step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
   # FIXME: Actually create a new user instead of using an existing one
-  on(LoginPage).login_with("Selenium_newuser", ENV["MEDIAWIKI_PASSWORD"])
+  on(SpecialUserLoginPage).login_with("Selenium_newuser", ENV["MEDIAWIKI_PASSWORD"])
 end
 
 Given(/^I am logged in as a user with a > (\d+) edit count$/) do |arg1|
   step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
   # FIXME: Guarantee that MEDIAWIKI_USER has an edit count of > 0
-  on(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
+  on(SpecialUserLoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
 end
 
 Given /^I am in beta mode$/ do
