@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_82ebdfda",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-21T18:07:18Z",
+      "side": 1,
+      "message": "Mm...\nHow about:\n\"You must upload a photo to enable editing.\"\n\nWe can always tweak it later.",
+      "parentUuid": "6e20cf91_4e8cd3db",
+      "revId": "b37cf186d5b071f05ac0db955cad551997818c29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_ae2a47d5",
         "filename": "javascripts/modules/uploads/PhotoApi.js",
         "patchSetId": 1
