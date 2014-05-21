@@ -1,5 +1,4 @@
 ( function( M ) {
-	M.assertMode( [ 'beta', 'alpha' ] );
 	var View = M.require( 'View' ), TableOfContents,
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		toggle = M.require( 'toggle' );

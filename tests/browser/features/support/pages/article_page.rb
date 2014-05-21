@@ -84,6 +84,9 @@ class ArticlePage
   a(:talk, css: "#ca-talk a")
   a(:nearby_button, css: "#page-secondary-actions .nearby")
 
+  # toc
+  div(:toc, css: ".toc-mobile")
+
   # editor (common)
   button(:overlay_editor_mode_switcher, css: ".editor-switcher")
   div(:source_editor_button, css: ".source-editor")

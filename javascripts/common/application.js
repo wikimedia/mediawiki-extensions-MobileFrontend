@@ -117,7 +117,7 @@
 	function loadWideScreenModules() {
 		var modules = [];
 		if ( !inWideScreenMode && isWideScreen() &&
-			$( 'body' ).hasClass( 'skin-minerva' ) && M.isBetaGroupMember() ) {
+			mw.config.get( 'skin' ) === 'minerva' ) {
 			// Adjust screen for tablets
 			if ( inNamespace( '' ) ) {
 				modules.push( 'tablet.scripts' );

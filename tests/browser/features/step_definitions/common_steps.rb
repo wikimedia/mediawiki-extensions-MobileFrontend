@@ -112,6 +112,14 @@ Given(/^the "(.*?)" page is protected\.$/) do |page|
   step 'I click on "Log out" in the main navigation menu'
 end
 
+Given(/^I am viewing the site in tablet mode$/) do
+  @browser.window.resize_to(768, 1024)
+end
+
+Given(/^I am viewing the site in mobile mode$/) do
+  @browser.window.resize_to(320, 480)
+end
+
 Given(/^I am on the random page$/) do
   visit(ArticlePage, :using_params => {:article_name => @random_string})
 end
