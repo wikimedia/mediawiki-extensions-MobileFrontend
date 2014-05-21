@@ -108,6 +108,7 @@
 	"mobile-frontend-editor-unavailable": "Message that appears when a user attempts to edit with an unsupported/incapable browser.\n\nPreceded by the header {{msg-mw|Mobile-frontend-editor-unavailable-header}}.",
 	"mobile-frontend-editor-unavailable-header": "When mobile editing is not supported, header of the warning.\n\nFollowed by {{msg-mw|Mobile-frontend-editor-unavailable}}.",
 	"mobile-frontend-editor-undo-unsupported": "Shown when user attempts to do an undo which is currently not supported.",
+	"mobile-frontend-editor-uploadenable": "Shown when try to edit a new file page.",
 	"mobile-frontend-editor-viewing-source-page": "A heading saying which page's source code is being viewed. All text should be wrapped in a STRONG tag except the page title itself.\n\nParameters:\n* $1 - page title\n{{Related|Mobile-frontend-editor-page}}",
 	"mobile-frontend-editor-visual-editor": "Label for button that switches to the \"visual editor\" (a WYSIWYG editing interface). See http://www.mediawiki.org/wiki/VisualEditor.\n{{Identical|VisualEditor}}",
 	"mobile-frontend-editor-wait": "Text that displays while a page edit is being saved.",
