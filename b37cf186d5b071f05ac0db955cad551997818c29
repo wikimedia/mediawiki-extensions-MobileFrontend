@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_4e8cd3db",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-21T16:59:42Z",
+      "side": 1,
+      "message": "Yeah, sorry, i forgot. For design consistency i prefer to showToast, but with which message? Editor disabled isn\u0027t the best in my opinion, maybe a new message? Or maybe mobile-frontend-photo-upload-error-file-type (Please upload only pictures...)?",
+      "parentUuid": "6e20cf91_2e307752",
+      "revId": "b37cf186d5b071f05ac0db955cad551997818c29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_ae2a47d5",
         "filename": "javascripts/modules/uploads/PhotoApi.js",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e20cf91_ceb7c380",
+        "filename": "javascripts/modules/uploads/PhotoApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-21T16:59:42Z",
+      "side": 1,
+      "message": "Yes, you\u0027re right. Done",
+      "parentUuid": "6e20cf91_ae2a47d5",
+      "revId": "b37cf186d5b071f05ac0db955cad551997818c29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e20cf91_4e2173f5",
         "filename": "javascripts/modules/uploads/lead-photo-init.js",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2014-05-21T16:32:39Z",
       "side": 1,
       "message": "I think this would be more readable like so:\n\n} else if ( !M.inNamespace( \u0027file\u0027 ) ){\n  if ( !isEditable ) {\n\n  } else if ( !validNamespace || mw.util.getParamValue( \u0027action\u0027 ) || etc.. ) {\n\n }",
+      "revId": "b37cf186d5b071f05ac0db955cad551997818c29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_2e6877f1",
+        "filename": "javascripts/modules/uploads/lead-photo-init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-21T16:59:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e20cf91_4e2173f5",
       "revId": "b37cf186d5b071f05ac0db955cad551997818c29",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
