@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_d7a89e1f",
+        "filename": "i18n/de.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-21T21:27:18Z",
+      "side": 1,
+      "message": "Please remove this change.",
+      "revId": "e96aa75ab9e72de7f2e9c684a986190d2cb1aab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_57bdae62",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-21T21:27:18Z",
+      "side": 1,
+      "message": "You\u0027ll need to add this message key to the ResourceLoader module mobile.editor",
+      "revId": "e96aa75ab9e72de7f2e9c684a986190d2cb1aab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
