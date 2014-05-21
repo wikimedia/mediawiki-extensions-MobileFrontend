@@ -222,6 +222,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "Bitte nur Bilder hochladen.",
 	"mobile-frontend-photo-upload-error-filename": "Fehler. Bitte eine aussagekräftigere Zusammenfassung angeben.",
 	"mobile-frontend-photo-upload-generic": "Ein Bild beitragen",
+	"mobile-frontend-photo-upload-invalid-user": "Der Benutzer „$1“ ist nicht registriert.",
 	"mobile-frontend-photo-upload-protected": "Du hast keine Berechtigung, um ein Bild dieser Seite hinzuzufügen.",
 	"mobile-frontend-photo-upload-success-article": "Erfolgreich! Dein Bild ist jetzt auf dieser Seite.",
 	"mobile-frontend-photo-upload-unavailable": "Das Hochladen von Bildern wird von deinem Browser nicht unterstützt.",
