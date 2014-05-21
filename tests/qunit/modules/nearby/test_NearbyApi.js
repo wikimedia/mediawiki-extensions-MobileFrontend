@@ -47,7 +47,7 @@ QUnit.test( '#getPages', 6, function( assert ) {
 		assert.strictEqual( pages[0].pageimageClass, 'icon icon-max-x' );
 		assert.strictEqual( pages[2].title, 'W San Francisco' );
 		assert.strictEqual( pages[2].pageimageClass, 'needsPhoto icon icon-max-x' );
-		assert.strictEqual( pages[2].dist, 23.376927175788786 );
+		assert.strictEqual( pages[2].dist.toPrecision( 6 ), "23.3769" );
 	} );
 } );
 
