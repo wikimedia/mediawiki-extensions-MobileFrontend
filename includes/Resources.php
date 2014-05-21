@@ -96,6 +96,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.templates',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/modules/toc/toc.js',
