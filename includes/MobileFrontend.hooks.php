@@ -766,10 +766,6 @@ class MobileFrontendHooks {
 				'schema' => 'MobileWebUploads',
 				'revision' => 8209043,
 			),
-			'mobile.watchlist.schema' => array(
-				'schema' => 'MobileBetaWatchlist',
-				'revision' => 5281061,
-			),
 			'mobile.editing.schema' => array(
 				'schema' => 'MobileWebEditing',
 				'revision' => 7675117,
