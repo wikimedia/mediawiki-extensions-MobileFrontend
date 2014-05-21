@@ -189,11 +189,11 @@ var
 
 			if ( $container.length ) {
 				if ( user.getEditCount() === 0 ) {
-					$a = $( '<a class="button photo mw-ui-button mw-ui-progressive">' ).
+					$a = $( '<a class="button icon icon-photo icon-text mw-ui-button mw-ui-progressive">' ).
 						text( mw.msg( 'mobile-frontend-photo-upload-generic' ) ).
 						attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $container );
 					// FIXME: This is needed so the camera shows. Eww.
-					$( '<div class="icon icon-24px">' ).appendTo( $a );
+					$( '<div class="icon icon icon-24px">' ).appendTo( $a );
 				} else {
 					createButton( $container );
 				}

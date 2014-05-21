@@ -2,38 +2,29 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-// Restrict to content to avoid interference with rules in button.less
-.content .button.photo {
-	position: relative;
-	display: table;
-	margin: 0 auto;
-	padding-left: 44px;
-	text-align: left; /* override text-align center - chrome not clickable */
-
-	.icon {
-		.background-image('../images/camera.png');
+.ctaUploadPhoto {
+	.icon-photo {
 		// Note: Use left to ensure it flips in RTL mode
-		background-position: left 45%;
-		margin: 0 10px;
-	}
+		// FIXME: !important needed to override icon-text rule in icons.less
+		background-position: left 10px center !important;
+		display: table;
+		position: relative;
+		margin: 0 auto;
+		padding-left: 44px;
 
-	input {
-		opacity: 0;
-		z-index: 2;
-	}
+		input {
+			opacity: 0;
+			z-index: 2;
+		}
 
-	input, div {
-		cursor: pointer;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		input, div {
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
-}
-
-#content > .button.photo {
-	display: block;
-	margin-bottom: 10px;
 }
 

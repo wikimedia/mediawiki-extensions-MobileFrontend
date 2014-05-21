@@ -16,15 +16,13 @@
 	@paddingVertical: 1em;
 	@fontSize: .8em;
 	h2 {
-		font-family: @fontFamily;
-		line-height: @iconSize;
 		margin-left: @leftMargin;
 		margin-right: @leftMargin;
 		background-position: right center;
-		font-size: @fontSize;
 		font-weight: bold;
+		// Resetting heading styles seems bad.
 		padding: @paddingVertical 0 @paddingVertical @iconSize + @iconHeadingGap;
-		border-bottom: none;
+		font-size: @fontSize;
 
 		.icon {
 			.background-image('images/contents.png');

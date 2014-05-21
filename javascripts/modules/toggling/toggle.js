@@ -11,6 +11,11 @@
 		var isCollapsed = $heading.is( '.openSection' );
 
 		$heading.toggleClass( 'openSection' );
+		if ( $heading.hasClass( 'openSection' ) ) {
+			$heading.addClass( 'icon-arrow-up' ).removeClass( 'icon-arrow-down' );
+		} else {
+			$heading.removeClass( 'icon-arrow-up' ).addClass( 'icon-arrow-down' );
+		}
 		$heading.next()
 			.toggleClass( 'openSection' )
 			.attr( {
@@ -70,7 +75,8 @@
 		$( 'html' ).removeClass( 'stub' );
 		$firstHeading = $page.find( 'h1,h2,h3,h4,h5,h6' ).eq(0);
 		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
-		$page.find( tagName ).addClass( 'section_heading icon icon-text icon-15px' );
+		$page.find( tagName ).addClass( 'section_heading icon icon-text icon-15px  icon-arrow-down' );
+
 		$headings = $page.find( '.section_heading' );
 		$headings.next( 'div' ).addClass( 'content_block' );
 
