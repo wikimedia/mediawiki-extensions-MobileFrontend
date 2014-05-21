@@ -68,15 +68,17 @@
 			// Older WebKit based browsers
 			'AppleWebKit/400',
 			'AppleWebKit/20',
-			'AppleWebKit/533'
+			'AppleWebKit/533',
+			'AppleWebKit/54',
+			'AppleWebKit/6'
 		];
 		QUnit.expect( userAgents.length + userAgentsFail.length );
 
 		$.each( userAgents, function( i, ua ) {
-			assert.strictEqual( M.supportsPositionFixed( ua ), true, 'Success test case ' + i );
+			assert.strictEqual( M.supportsPositionFixed( ua ), true, 'Success test case ' + ua );
 		} );
 		$.each( userAgentsFail, function( i, ua ) {
-			assert.strictEqual( M.supportsPositionFixed( ua ), false, 'Failure test case ' + i );
+			assert.strictEqual( M.supportsPositionFixed( ua ), false, 'Failure test case ' + ua );
 		} );
 	} );
 }( jQuery, mw.mobileFrontend ) );
