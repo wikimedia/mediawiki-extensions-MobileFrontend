@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4e1dcb5b_092a79d7",
+        "filename": "less/modules/search/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-22T18:46:22Z",
+      "side": 1,
+      "message": "I could create a whole new class for page summaries that are supposed to have small thumbnails (i.e. not on special pages). Are there any places where that is the case besides the search overlay?",
+      "parentUuid": "4e1dcb5b_681b2bd5",
+      "revId": "9abdf5e2536a4717297f823ca24bca7434ab3a16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e1dcb5b_a9bca5b2",
         "filename": "less/modules/search/SearchOverlay.less",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "writtenOn": "2014-05-22T18:22:25Z",
       "side": 1,
       "message": "This kind of works but is fragile. If we change margins for h3 in lists, everything will be misaligned. We need to ensure that the content of .page-summary is vertically centered somehow.",
+      "revId": "9abdf5e2536a4717297f823ca24bca7434ab3a16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_a9ddc5e3",
+        "filename": "less/modules/search/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-22T18:46:22Z",
+      "side": 1,
+      "message": "Actually this isn\u0027t that fragile.\n\nSee .results li above:\npadding-left: @headerHeight + @headerTitlePaddingH;\n\nThis should make the alignment less fragile as they will now be based on the same 2 variables.\n\nI don\u0027t imagine we would ever add horizontal margins directly to h3s in lists. Headers pretty much never have horizontal margins assigned to them directly. And if we did, I\u0027m sure we would mess up a lot of other layout in the process.",
+      "parentUuid": "4e1dcb5b_a9bca5b2",
       "revId": "9abdf5e2536a4717297f823ca24bca7434ab3a16",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
