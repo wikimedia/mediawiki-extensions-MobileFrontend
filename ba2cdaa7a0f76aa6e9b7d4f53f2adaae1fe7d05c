@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e1dcb5b_c95b6156",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 825,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-22T18:55:03Z",
+      "side": 1,
+      "message": "Ah yeah, I didn\u0027t think about that. Otherwise we\u0027ll have some pages being responsive and some not. Moving it to a RL module is probably the best solution for now.",
+      "parentUuid": "4e1dcb5b_c8791f2c",
+      "revId": "ba2cdaa7a0f76aa6e9b7d4f53f2adaae1fe7d05c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e1dcb5b_888b271b",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 4
@@ -47,6 +65,24 @@
       "writtenOn": "2014-05-22T08:35:38Z",
       "side": 1,
       "message": "Confused by this comment. We can just delete this now no?\nAlso it\u0027s not a FIXME.",
+      "revId": "ba2cdaa7a0f76aa6e9b7d4f53f2adaae1fe7d05c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_297655d6",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-22T18:55:03Z",
+      "side": 1,
+      "message": "You\u0027re right. I was being overly cautious.",
+      "parentUuid": "4e1dcb5b_68b7abd4",
       "revId": "ba2cdaa7a0f76aa6e9b7d4f53f2adaae1fe7d05c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
