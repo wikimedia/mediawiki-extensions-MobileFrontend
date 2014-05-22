@@ -16,6 +16,41 @@
       "revId": "9abdf5e2536a4717297f823ca24bca7434ab3a16",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_a9a5c59c",
+        "filename": "less/modules/search/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-22T18:22:25Z",
+      "side": 1,
+      "message": ".actionable should die as it is not used for anything. We don\u0027t have non-actionable lists.",
+      "parentUuid": "4e1dcb5b_681b2bd5",
+      "revId": "9abdf5e2536a4717297f823ca24bca7434ab3a16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_a9bca5b2",
+        "filename": "less/modules/search/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-22T18:22:25Z",
+      "side": 1,
+      "message": "This kind of works but is fragile. If we change margins for h3 in lists, everything will be misaligned. We need to ensure that the content of .page-summary is vertically centered somehow.",
+      "revId": "9abdf5e2536a4717297f823ca24bca7434ab3a16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
