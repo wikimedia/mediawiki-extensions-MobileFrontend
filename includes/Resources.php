@@ -131,17 +131,32 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/common/ui.less',
 			'less/common/pageactions.less',
 			'less/common/footer.less',
+			'less/common/common.less',
+			'less/common/icons.less',
+			'less/modules/toggle.less',
 		),
 		'position' => 'top',
 	),
 
 	'skins.minerva.content.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'less/common/common.less',
-			'less/common/icons.less',
-			'less/common/typography.less',
-			'less/modules/toggle.less',
-			'less/common/hacks.less',
+			'less/content/main.less',
+			'less/content/hacks.less',
+		),
+		'position' => 'top',
+	),
+
+	'skins.minerva.chrome.styles.beta' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/common/uiNew.less',
+			'less/common/secondaryPageActions.less',
+		),
+		'position' => 'top',
+	),
+
+	'skins.minerva.content.styles.beta' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/content/mainNew.less',
 		),
 		'position' => 'top',
 	),
@@ -149,15 +164,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'skins.minerva.drawers.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/drawer.less',
-		),
-		'position' => 'top',
-	),
-
-	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/common/uiNew.less',
-			'less/common/typographyNew.less',
-			'less/common/secondaryPageActions.less',
 		),
 		'position' => 'top',
 	),
