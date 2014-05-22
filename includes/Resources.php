@@ -785,7 +785,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toggling',
 		),
 		'scripts' => array(
-			'javascripts/modules/toggling/accessibility.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 		),
 	),
