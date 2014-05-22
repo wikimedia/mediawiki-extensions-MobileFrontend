@@ -26,7 +26,9 @@ class MobileFrontendHooks {
 					$numTopics += 1;
 				}
 			}
-			$lu->mProperties['page_top_level_section_count'] = $numTopics;
+			if ( $numTopics ) {
+				$lu->mProperties['page_top_level_section_count'] = $numTopics;
+			}
 		}
 
 		return true;
