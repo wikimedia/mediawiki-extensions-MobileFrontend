@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_c8791f2c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 825,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-22T08:35:38Z",
+      "side": 1,
+      "message": "This ain\u0027t gonna work without a cache refresh.... I suspect since we only use one style it\u0027s better to add a RL module to the head of the document which does this.",
+      "revId": "ba2cdaa7a0f76aa6e9b7d4f53f2adaae1fe7d05c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_888b271b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 837,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-22T08:35:38Z",
+      "side": 1,
+      "message": "See FIXME :)",
+      "revId": "ba2cdaa7a0f76aa6e9b7d4f53f2adaae1fe7d05c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_68b7abd4",
+        "filename": "less/common/commonNew.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-22T08:35:38Z",
+      "side": 1,
+      "message": "Confused by this comment. We can just delete this now no?\nAlso it\u0027s not a FIXME.",
+      "revId": "ba2cdaa7a0f76aa6e9b7d4f53f2adaae1fe7d05c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_28ff7364",
+        "filename": "less/common/typographyNew.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-22T08:35:38Z",
+      "side": 1,
+      "message": "Same.. why?",
+      "revId": "ba2cdaa7a0f76aa6e9b7d4f53f2adaae1fe7d05c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
