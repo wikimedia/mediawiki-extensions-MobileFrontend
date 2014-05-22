@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e1dcb5b_91222ba1",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-22T22:14:07Z",
+      "side": 1,
+      "message": "its due to how toggle code works. I can write a comment if not clear from the toggle code.\n\nIf you look at the toggle code it binds to mouseup and prevents the click event. I thought about adding a comment here but I always worry when a comment refers to code elsewhere that might be moved. alternatively we could explore binding to a toggle event... thoughts?",
+      "parentUuid": "4e1dcb5b_c9e00196",
+      "revId": "47bb1273e7ffb7ee5f918982a82a89a0f2e56832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e1dcb5b_29a0953d",
         "filename": "javascripts/modules/toc/toc.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-05-22T18:48:42Z",
       "side": 1,
       "message": "Shouldn\u0027t we specify here if it\u0027s an open or close event?",
+      "revId": "47bb1273e7ffb7ee5f918982a82a89a0f2e56832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_d118a37c",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-22T22:14:07Z",
+      "side": 1,
+      "message": "it doesn\u0027t say so in the card. (if this is important it should be in the card). what is the answer we are trying to work out.... whether people use it or how they use it? if the former this should be sufficient.",
+      "parentUuid": "4e1dcb5b_29a0953d",
       "revId": "47bb1273e7ffb7ee5f918982a82a89a0f2e56832",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
