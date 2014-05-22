@@ -22,6 +22,44 @@ html {
 		p {
 			margin: .5em 0 1em 0;
 		}
+
+		// Thumbnails
+		//
+		// Thumbnail images should be rendered within a thumb class
+		//
+		// Markup:
+		// <div class="content">
+		//   <div class="thumb"><img src="common/images/arrow-left.png"></div>
+		// </div>
+		//
+		// Styleguide 1.6.
+		.thumb {
+			margin: .6em 0;
+			/* resets */
+			border: none;
+			border-radius: 0;
+			background-color: transparent;
+			text-align: inherit;
+
+			.thumbinner {
+				margin: 0 auto;
+			}
+		}
+
+		// Although .thumbcaption is normally inside .thumb, it isn't in VisualEditor
+		.thumbcaption {
+			margin: 0;
+			font-size: .8em;
+			line-height: 1.5;
+			text-align: left;
+			padding: 0 !important;
+			color: @grayMedium;
+		}
+
+		// Avoid line-height issues caused by sup
+		.sup {
+			line-height: 0;
+		}
 	}
 
 	blockquote {

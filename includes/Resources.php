@@ -156,7 +156,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/uiNew.less',
-			'less/common/commonNew.less',
 			'less/common/typographyNew.less',
 			'less/common/secondaryPageActions.less',
 		),

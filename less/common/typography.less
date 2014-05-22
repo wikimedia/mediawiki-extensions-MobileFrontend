@@ -32,6 +32,8 @@ body {
 
 .content {
 	margin: .8em @contentMargin 0;
+	// Deal with long links (bug 60387)
+	word-wrap: break-word;
 
 	// Headings in mobile
 	//
@@ -80,6 +82,38 @@ body {
 		border-radius: 5px;
 		background: #f9f9f9;
 		text-align: center;
+
+		// Linker.php
+		.thumbinner {
+			margin: 5px auto;
+			max-width: 100%;
+
+			> div {
+				float: none !important;
+				width: auto !important;
+				clear: both !important;
+			}
+		}
+
+		.thumbcaption {
+			margin: 5px 10px 0;
+			text-align: center;
+			width: auto !important;
+		}
+
+		/* bug 20030 */
+		.noresize {
+			width: 100%;
+			overflow-x: auto;
+
+			img {
+				max-width: none !important;
+			}
+		}
+	}
+
+	.thumbborder {
+		border: 1px solid #ccc;
 	}
 
 	ol,
@@ -89,6 +123,143 @@ body {
 			margin-left: 1em;
 		}
 	}
+
+	// Prevent inline styles on images in wikitext
+	// Note we restrict to img's to avoid conflicts with VisualEditor shields
+	// See bug 62460
+	a > img {
+		// make sure that images in articles don't cause a horizontal scrollbar
+		// on small screens
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	ul {
+		list-style: square inside;
+	}
+
+	ol {
+		list-style: decimal inside;
+	}
+
+	table {
+		margin: 1em 0;
+
+		/* following 4 rules are needed for scrolling */
+		overflow: auto; /* for browsers that don't support overflow-y */
+		overflow-y: hidden;
+		overflow-x: auto;
+		display: block;
+		width: 100% !important;
+
+		td,
+		th {
+			padding: 3px;
+			border: 1px @grayLight solid;
+		}
+
+		th {
+			font-weight: bold;
+			background-color: #f2f2f2;
+			text-align: center;
+		}
+
+		caption {
+			display: block;
+			text-align: left;
+		}
+	}
+
+	// Hide the image magnification icon normally displayed in image captions
+	div.magnify {
+		display: none;
+	}
+
+	// Generic class name needed
+	.return-link,
+	#mw-mf-last-modified {
+		display: block;
+		font-size: .9em;
+		margin-top: 1.5em;
+	}
+}
+
+strong,
+b {
+	font-weight: bold;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+a.external {
+	.background-image-svg( 'images/external-link-ltr-icon.svg', 'images/external-link-ltr-icon.png' );
+	background-repeat: no-repeat;
+	background-position: center right;
+	padding-right: 13px;
+}
+
+// Galleries
+//
+// FIXME: Doesn't support parameters in https://en.wikipedia.org/wiki/Help:Gallery_tag */
+// See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
+//
+// Styleguide 1.3.
+ul.gallery {
+	.gallerybox {
+		display: inline-block;
+
+		.thumb {
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		.gallerytext {
+			overflow: hidden;
+			padding: 2px 4px;
+			word-wrap: break-word;
+		}
+	}
+}
+
+// Code
+//
+// Use this solely for blocks of computer code.
+//
+// Markup:
+// <code>
+// body {
+//   color:red;
+// }
+// </code>
+//
+// Styleguide 1.4.
+code,
+// Preformatted text
+//
+// Use on text where whitespace is significant and the content should not be formatted.
+//
+// Markup:
+// <pre>
+// body {
+//   color:red;
+// }
+// </pre>
+//
+// Styleguide 1.5.
+pre {
+	padding: 0.2em 0.5em;
+	font-family: monospace;
+	border: solid 1px #CCC;
+}
+
+pre {
+	white-space: pre-wrap;
+	padding: 1em;
 }
 
 dl {
@@ -147,7 +318,7 @@ sup {
 // Markup:
 // <blockquote>In the end, it's not the years in your life that count. It's the life in your years.</blockquote>
 //
-// Styleguide 1.3.
+// Styleguide 1.6.
 blockquote {
 	quotes: "\201C" "\201D";
 	padding: 1em 0 1em 10px;
