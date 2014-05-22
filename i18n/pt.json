@@ -223,6 +223,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "Por favor, carregue imagens apenas.",
 	"mobile-frontend-photo-upload-error-filename": "Erro, forneça um resumo mais descritivo por favor.",
 	"mobile-frontend-photo-upload-generic": "Contribuir com uma imagem",
+	"mobile-frontend-photo-upload-invalid-user": "A conta de utilizador \"$1\" não está registada.",
 	"mobile-frontend-photo-upload-protected": "Não possui privilégios para adicionar uma imagem a esta página.",
 	"mobile-frontend-photo-upload-success-article": "Sucesso! A sua imagem está agora inserida nesta página.",
 	"mobile-frontend-photo-upload-unavailable": "O seu navegador não suporta o carregamento de ficheiros.",

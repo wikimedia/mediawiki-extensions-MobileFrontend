@@ -220,6 +220,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "Si prega di caricare solo immagini.",
 	"mobile-frontend-photo-upload-error-filename": "Errore, per favore fornisci un riassunto più descrittivo.",
 	"mobile-frontend-photo-upload-generic": "Carica un'immagine",
+	"mobile-frontend-photo-upload-invalid-user": "L'utente \"$1\" non è registrato.",
 	"mobile-frontend-photo-upload-protected": "Non si dispone dei permessi necessari per aggiungere un'immagine a questa pagina.",
 	"mobile-frontend-photo-upload-success-article": "Finito! La tua immagine è ora visibile su questa pagina.",
 	"mobile-frontend-photo-upload-unavailable": "Il tuo browser non supporta il caricamento di immagini.",

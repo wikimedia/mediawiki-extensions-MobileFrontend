@@ -189,6 +189,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "Luet w.e.g. nëmme Biller erop.",
 	"mobile-frontend-photo-upload-error-filename": "Feeler, gitt w.e.g. e Resumé un dee eng besser Beschreiwung ass.",
 	"mobile-frontend-photo-upload-generic": "E Bild bäidroen",
+	"mobile-frontend-photo-upload-invalid-user": "De Benotzer \"$1\" ass net registréiert.",
 	"mobile-frontend-photo-upload-protected": "Dir hutt net déi néideg Rechter fir op dës Säit e Bild derbäizesetzen.",
 	"mobile-frontend-photo-upload-success-article": "Et huet geklappt! Äert Bild ass elo op dëser Säit drop.",
 	"mobile-frontend-photo-upload-unavailable": "Äre Browser ënnerstëtzt d'Eropluede vu Biller net.",

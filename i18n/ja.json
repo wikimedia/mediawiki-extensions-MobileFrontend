@@ -209,6 +209,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "アップロードできるのは画像のみです。",
 	"mobile-frontend-photo-upload-error-filename": "エラーです。説明的な要約を入力してください。",
 	"mobile-frontend-photo-upload-generic": "画像を投稿する",
+	"mobile-frontend-photo-upload-invalid-user": "利用者「$1」は登録されていません。",
 	"mobile-frontend-photo-upload-protected": "あなたにはこのページに画像を追加する権限がありません。",
 	"mobile-frontend-photo-upload-success-article": "完了しました! 画像をこのページに追加しました。",
 	"mobile-frontend-photo-upload-unavailable": "ご使用中のブラウザーは画像のアップロードに対応していません。",

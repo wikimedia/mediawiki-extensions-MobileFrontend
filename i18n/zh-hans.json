@@ -238,6 +238,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "请只上传图像。",
 	"mobile-frontend-photo-upload-error-filename": "出错，请提供更具描述性的摘要。",
 	"mobile-frontend-photo-upload-generic": "贡献图像",
+	"mobile-frontend-photo-upload-invalid-user": "用户“$1”尚未注册。",
 	"mobile-frontend-photo-upload-protected": "你没有权限添加图像至本页面。",
 	"mobile-frontend-photo-upload-success-article": "成功！您的图像已添加至本页面。",
 	"mobile-frontend-photo-upload-unavailable": "你的浏览器不支持图像上传。",
