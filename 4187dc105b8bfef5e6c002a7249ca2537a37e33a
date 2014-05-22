@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "4e1dcb5b_11717b0b",
+        "filename": "javascripts/externals/Storer-light.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1374
+      },
+      "writtenOn": "2014-05-22T23:48:05Z",
+      "side": 1,
+      "message": "Correct. I should update this text to reflect that.",
+      "parentUuid": "4e1dcb5b_5dc38f61",
+      "revId": "4187dc105b8bfef5e6c002a7249ca2537a37e33a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e1dcb5b_3db8d3e1",
         "filename": "javascripts/externals/Storer-light.js",
         "patchSetId": 7
@@ -47,6 +65,24 @@
       "writtenOn": "2014-05-22T03:43:22Z",
       "side": 1,
       "message": "Obsolete reference to userData.",
+      "revId": "4187dc105b8bfef5e6c002a7249ca2537a37e33a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_91646b47",
+        "filename": "javascripts/externals/Storer-light.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 1374
+      },
+      "writtenOn": "2014-05-22T23:48:05Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "4e1dcb5b_3db8d3e1",
       "revId": "4187dc105b8bfef5e6c002a7249ca2537a37e33a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
