@@ -16,6 +16,23 @@
       "revId": "47bb1273e7ffb7ee5f918982a82a89a0f2e56832",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_29a0953d",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-22T18:48:42Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we specify here if it\u0027s an open or close event?",
+      "revId": "47bb1273e7ffb7ee5f918982a82a89a0f2e56832",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
