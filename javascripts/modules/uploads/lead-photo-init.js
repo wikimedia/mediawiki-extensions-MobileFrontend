@@ -28,14 +28,16 @@
 		var
 			// FIXME: not updated on dynamic page loads
 			isEditable = mw.config.get( 'wgIsPageEditable' ),
-			validNamespace = ( M.inNamespace( '' ) || M.inNamespace( 'user' ) );
+			validNamespace = ( M.inNamespace( '' ) || M.inNamespace( 'user' ) || M.inNamespace( 'file' ) );
 
 		if ( user.isAnon() ) {
 			return makeDisabledButton( 'mobile-frontend-photo-upload-anon' );
-		} else if ( !isEditable ) {
-			return makeDisabledButton( 'mobile-frontend-photo-upload-protected' );
-		} else if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( M.getLeadSection() ) || mw.config.get( 'wgIsMainPage' ) ) {
-			return makeDisabledButton();
+		} else if ( !M.inNamespace( 'file' ) ) {
+			if ( !isEditable ) {
+				return makeDisabledButton( 'mobile-frontend-photo-upload-protected' );
+			} else if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( M.getLeadSection() ) || mw.config.get( 'wgIsMainPage' ) ) {
+				return makeDisabledButton();
+			}
 		}
 
 		if ( user.getEditCount() === 0 ) {

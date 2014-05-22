@@ -129,7 +129,11 @@
 		 * containing error message).
 		 */
 		save: function( options ) {
-			var self = this, result = $.Deferred(), apiUrl = endpoint || this.apiUrl;
+			var isNewPage = mw.config.get( 'wgArticleId' ) === 0,
+			isNewFile = M.inNamespace( 'file' ) && isNewPage,
+			self = this,
+			result = $.Deferred(),
+			apiUrl = endpoint || this.apiUrl;
 
 			options.editSummaryMessage = options.insertInPage ?
 				'mobile-frontend-photo-article-edit-comment' :
@@ -141,7 +145,11 @@
 					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 ),
 					request, data;
 
-				options.fileName = generateFileName( options.description, '.' + ext );
+				if ( !isNewFile ) {
+					options.fileName = generateFileName( options.description, '.' + ext );
+				} else {
+					options.fileName = mw.config.get( 'wgTitle' );
+				}
 
 				data = {
 					action: 'upload',
@@ -208,7 +216,7 @@
 						descriptionUrl = data.upload.imageinfo.descriptionurl;
 					}
 
-					if ( self.editorApi ) {
+					if ( self.editorApi && !isNewFile ) {
 						self.editorApi.setPrependText( '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n' );
 						self.editorApi.save( { summary: mw.msg( 'mobile-frontend-photo-upload-comment' ) } ).
 							done( function() {
@@ -218,6 +226,8 @@
 								err.stage = 'edit';
 								result.reject( err );
 							} );
+					} else if ( isNewFile ) {
+						window.location.reload();
 					} else {
 						result.resolve( options.fileName, descriptionUrl );
 					}

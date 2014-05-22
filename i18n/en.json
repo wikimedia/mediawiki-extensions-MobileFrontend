@@ -84,6 +84,7 @@
     "mobile-frontend-editor-unavailable": "Mobile editing is not currently available on your browser. Please try a different browser.",
     "mobile-frontend-editor-unavailable-header": "Editor unavailable",
     "mobile-frontend-editor-undo-unsupported": "Undo is not currently supported on mobile devices.",
+    "mobile-frontend-editor-uploadenable": "Please upload a photo first to enable editing.",
     "mobile-frontend-editor-viewing-source-page": "<strong>Viewing source of</strong><span> $1</span>",
     "mobile-frontend-editor-visual-editor": "Visual editor",
     "mobile-frontend-editor-wait": "Saving edit, please wait.",

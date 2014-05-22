@@ -6,6 +6,8 @@
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
+		isNewPage = M.getCurrentPage().options.id === 0,
+		isNewFile = M.inNamespace( 'file' ) && isNewPage,
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha' &&
@@ -190,7 +192,10 @@
 	if ( !isEditingSupported ) {
 		// Editing is disabled (or browser is blacklisted)
 		showSorryToast( 'mobile-frontend-editor-unavailable' );
-	} else {
+	} else if (isNewFile) {
+		// Is a new file page (enable upload image only) Bug 58311
+		showSorryToast( 'mobile-frontend-editor-uploadenable' );
+	} else	{
 		if ( user.isAnon() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
 			// Set edit button to launch login CTA
 			initCta( M.getCurrentPage() );
