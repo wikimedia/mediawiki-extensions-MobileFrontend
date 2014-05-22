@@ -31,6 +31,8 @@
 					self.$( '.container' ).removeClass( 'loading' );
 				}
 
+				self.thumbWidth = data.thumbwidth;
+				self.thumbHeight = data.thumbheight;
 				self.imgRatio = data.thumbwidth / data.thumbheight;
 				$img = $( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', options.caption );
 				self.$( '.container div' ).append( $img );
@@ -61,20 +63,25 @@
 		_positionImage: function() {
 			var windowWidth = $( window ).width(),
 				windowHeight = $( window ).height(),
-				windowRatio = windowWidth / windowHeight;
+				windowRatio = windowWidth / windowHeight,
+				$img = this.$( 'img' );
 
 			// display: table (which we use for vertical centering) makes the overlay
 			// expand so simply setting width/height to 100% doesn't work
 			if ( this.imgRatio > windowRatio ) {
-				this.$( 'img' ).css( {
-					width: windowWidth,
-					height: 'auto'
-				} );
+				if ( windowWidth < this.thumbWidth ) {
+					$img.css( {
+						width: windowWidth,
+						height: 'auto'
+					} );
+				}
 			} else {
-				this.$( 'img' ).css( {
-					width: 'auto',
-					height: windowHeight
-				} );
+				if ( windowHeight < this.thumbHeight ) {
+					$img.css( {
+						width: 'auto',
+						height: windowHeight
+					} );
+				}
 			}
 		}
 	} );
