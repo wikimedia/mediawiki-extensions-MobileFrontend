@@ -16,6 +16,24 @@
       "revId": "c37f3fb31089a2f89865f5d9c31faaad97b72b12",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_eafe08ab",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-23T15:21:58Z",
+      "side": 0,
+      "message": "Done. Not dropping it - Special:Nearby runs on desktop remember :)",
+      "parentUuid": "6e20cf91_0ff4b982",
+      "revId": "c37f3fb31089a2f89865f5d9c31faaad97b72b12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
