@@ -51,6 +51,24 @@
       "revId": "7dc05ea6e30679df1d9e6a910104c724ae36b76b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_a66cc806",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-23T22:09:52Z",
+      "side": 1,
+      "message": "I talked with Ori about this and he thinks that it would be best just to load the tablet CSS unconditionally, as it is small enough to not be worth the extra layer of complexity.",
+      "parentUuid": "4e1dcb5b_2ff41283",
+      "revId": "7dc05ea6e30679df1d9e6a910104c724ae36b76b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
