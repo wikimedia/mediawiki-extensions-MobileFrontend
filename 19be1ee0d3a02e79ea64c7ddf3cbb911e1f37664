@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_8ad9d485",
+        "filename": "less/common/icons.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-23T15:14:22Z",
+      "side": 1,
+      "message": "What about other icon sizes? There\u0027s something that feels wrong about adding padding by default... And it makes the upload button in Special:Uploads taller than it used to be in beta.\n\nMaybe min-width and min-height instead? What about icon-15px?",
+      "revId": "19be1ee0d3a02e79ea64c7ddf3cbb911e1f37664",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
