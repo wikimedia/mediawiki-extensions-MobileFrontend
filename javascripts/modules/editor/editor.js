@@ -82,6 +82,7 @@
 			loadingOverlay.show();
 			sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
+			funnel = funnel || 'article';
 			// Check whether VisualEditor should be loaded
 			if ( isVisualEditorEnabled &&
 
@@ -104,7 +105,8 @@
 					loadingOverlay.hide();
 					result.resolve( new VisualEditorOverlay( {
 						title: page.title,
-						sectionId: parseInt( sectionId, 10 )
+						sectionId: parseInt( sectionId, 10 ),
+						funnel: funnel
 					} ) );
 				} );
 			} else {
@@ -118,7 +120,7 @@
 						isNewEditor: user.getEditCount() === 0,
 						sectionId: sectionId,
 						oldId: M.query.oldid,
-						funnel: funnel || 'article'
+						funnel: funnel
 					} ) );
 				} );
 			}
