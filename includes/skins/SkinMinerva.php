@@ -862,9 +862,7 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	public function setupSkinUserCss( OutputPage $out ) {
 		// Add common CSS ResourceLoader modules to the page output
-		// FIXME: Once we start using mediawiki.ui.button more widely on mobile, change
-		// this to just parent::setupSkinUserCss( $out ).
-		$out->addModuleStyles( array( 'mediawiki.legacy.shared', 'mediawiki.legacy.commonPrint' ) );
+		parent::setupSkinUserCss( $out );
 		// Add Minerva-specific ResourceLoader modules to the page output
 		$out->addModuleStyles( $this->getSkinStyles() );
 	}

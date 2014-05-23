@@ -120,13 +120,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// @todo FIXME: Remove in favour of mediawiki ui
-	'skins.minerva.buttons.styles' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/common/buttons.less',
-		),
-	),
-
 	'skins.minerva.chrome.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/reset.less',

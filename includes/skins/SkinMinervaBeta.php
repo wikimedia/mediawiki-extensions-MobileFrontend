@@ -40,10 +40,6 @@ class SkinMinervaBeta extends SkinMinerva {
 			$styles[] = 'mobile.styles.mainpage';
 		}
 
-		$key = array_search( 'skins.minerva.buttons.styles', $styles );
-		unset( $styles[$key] );
-		$styles[] = 'mediawiki.ui.button';
-
 		return $styles;
 	}
 
