@@ -33,6 +33,24 @@
       "revId": "0188b970a36556cb1e1455aa6d5ee9d96461a855",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_c62fc4f2",
+        "filename": "less/minerva.less/minerva.variables.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-23T21:23:02Z",
+      "side": 1,
+      "message": "You\u0027re right, I\u0027ll move this to a different commit.",
+      "parentUuid": "4e1dcb5b_cfbebefa",
+      "revId": "0188b970a36556cb1e1455aa6d5ee9d96461a855",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
