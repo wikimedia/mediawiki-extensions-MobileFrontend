@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e1dcb5b_ef673ab3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-23T12:04:32Z",
+      "side": 1,
+      "message": "I\u0027d skip mention of part 2 of 2 - what if there is a 3rd part we have forgotten about. I think this commit is still useful without this information.",
+      "revId": "7dc05ea6e30679df1d9e6a910104c724ae36b76b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e1dcb5b_6f3d6a8a",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 1
