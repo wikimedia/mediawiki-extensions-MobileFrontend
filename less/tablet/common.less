@@ -9,79 +9,71 @@ A file for css that optimises the Minerva skin on larger devices.
 @contentMaxWidth: 890px + (@contentPaddingTablet * 2);
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	.beta, .alpha {
-		#content_wrapper {
-			.content_block {
-				width: auto;
-				clear: none;
-			}
-		}
-
-		.pre-content {
-			position: relative;
-			padding: 20px @contentPaddingTablet 0 @contentPaddingTablet;
-			border: none;
-
-			h1#section_0 {
-				border-bottom: 1px solid @sectionBorderColor;
-				// FIXME: After this and the new page-action CSS below are promoted to stable,
-				// move page-actions before the h1 in the DOM, remove the 220px padding on the
-				// header, and change the absolute positioning of page-actions to float.
-				padding: 12px 220px 7px 0;
-			}
-
-			#page-actions {
-				padding: 40px @contentPaddingTablet 0 0;
-				position: absolute;
-				right: 0;
-				top: 0;
-				li:last-child {
-					margin-right: 0 !important;
-				}
-			}
-		}
-
-		// FIXME: Have a class that identifies all 4 of these
-		.drawer,
-		.pre-content,
-		.content,
-		.content-overlay {
-			max-width: @contentMaxWidth;
-			margin: 0 auto;
-		}
-
-		.content {
-			padding: 1.6em @contentPaddingTablet 0 @contentPaddingTablet;
-			// Classes added by thumbnails
-			// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
-			.thumb {
-				&.tleft {
-					float: left;
-					clear: left;
-					margin-right: 1.4em;
-				}
-
-				&.tright {
-					float: right;
-					clear: right;
-					margin-left: 1.4em;
-				}
-			}
-
-			// Blockquotes
-			blockquote {
-				// Increase horizontal padding
-				padding-right: @blockquotePaddingRight + 10px;
-				padding-left: @blockquotePaddingLeft + 10px;
-			}
-		}
-
-		#footer {
-			padding: 2em @contentPaddingTablet 1.5em @contentPaddingTablet;
+	#content_wrapper {
+		.content_block {
+			width: auto;
+			clear: none;
 		}
 	}
 
+	.pre-content {
+		position: relative;
+		padding: 20px @contentPaddingTablet 0 @contentPaddingTablet;
+		border: none;
+
+		h1#section_0 {
+			border-bottom: 1px solid @sectionBorderColor;
+			// FIXME: After this and the new page-action CSS below are promoted to stable,
+			// move page-actions before the h1 in the DOM, remove the 220px padding on the
+			// header, and change the absolute positioning of page-actions to float.
+			padding: 12px 220px 7px 0;
+		}
+
+		#page-actions {
+			padding: 40px @contentPaddingTablet 0 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			li:last-child {
+				margin-right: 0 !important;
+			}
+		}
+	}
+
+	// FIXME: Have a class that identifies all 4 of these
+	.drawer,
+	.pre-content,
+	.content,
+	.content-overlay {
+		max-width: @contentMaxWidth;
+		margin: 0 auto;
+	}
+
 	.content {
+		padding: 1.6em @contentPaddingTablet 0 @contentPaddingTablet;
+		// Classes added by thumbnails
+		// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
+		.thumb {
+			&.tleft {
+				float: left;
+				clear: left;
+				margin-right: 1.4em;
+			}
+
+			&.tright {
+				float: right;
+				clear: right;
+				margin-left: 1.4em;
+			}
+		}
+
+		// Blockquotes
+		blockquote {
+			// Increase horizontal padding
+			padding-right: @blockquotePaddingRight + 10px;
+			padding-left: @blockquotePaddingLeft + 10px;
+		}
+
 		// Override rules in common/common.less
 		table {
 			display: table;
@@ -94,9 +86,14 @@ A file for css that optimises the Minerva skin on larger devices.
 			}
 		}
 
+		// For Main Page
 		#mw-mf-last-modified {
 			padding: 5px 0;
 		}
+	}
+
+	#footer {
+		padding: 2em @contentPaddingTablet 1.5em @contentPaddingTablet;
 	}
 
 	// On most pages the last modified bar is outside the content div

@@ -792,6 +792,7 @@ class SkinMinerva extends SkinTemplate {
 			'skins.minerva.buttons.styles',
 			'skins.minerva.content.styles',
 			'skins.minerva.drawers.styles',
+			'skins.minerva.tablet.styles',
 			// FIXME: Rename to use skins.minerva prefix - don't break cache in process
 			'mobile.styles.page',
 			'mobile.pagelist.styles',

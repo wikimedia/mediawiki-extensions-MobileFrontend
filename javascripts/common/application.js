@@ -115,7 +115,7 @@
 	 * @method
 	 */
 	function loadWideScreenModules() {
-		var modules = [ 'tablet.styles' ];
+		var modules = [];
 		if ( !inWideScreenMode && isWideScreen() &&
 			$( 'body' ).hasClass( 'skin-minerva' ) && M.isBetaGroupMember() ) {
 			// Adjust screen for tablets
