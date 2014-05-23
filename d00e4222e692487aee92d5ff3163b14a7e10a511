@@ -51,6 +51,24 @@
       "revId": "d00e4222e692487aee92d5ff3163b14a7e10a511",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_2ae1a029",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-23T15:03:29Z",
+      "side": 1,
+      "message": "Usually in click tracking we use destination to show that a link has been made somewhere. In here the link is the hash (e.g. for link in navigation menus we use this to track if there is a returnto parameter)\n\nSee: https://meta.wikimedia.org/wiki/Schema:MobileWebClickTracking\n\"URL that the link points to. If undefined it was not a link.\"\n\nAgain it comes down to what question we are trying to answer. If the question is \"What is the most popular page to use table of contents on?\" Then page id or page title will be needed to answer that question.\n\nIs there any reasons you think sending this information would be useful?\nWe could send no link as the second parameter if you prefer as I\u0027m not convinced the hash gives us anything - I just added it inline with the schema documentation.",
+      "parentUuid": "4e1dcb5b_ca90ec9a",
+      "revId": "d00e4222e692487aee92d5ff3163b14a7e10a511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
