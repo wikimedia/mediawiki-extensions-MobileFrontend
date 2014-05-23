@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_6f3d6a8a",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-23T12:02:50Z",
+      "side": 1,
+      "message": "No.. this loads tablet styles ___unconditionally__ for mobile users too which will never be used.\n\nI\u0027m not sure if it\u0027s better to\n1) increase payload for all mobile users and tablet users\nOR\n2) keep payload same for mobile users, and add an additional HTTP request for tablet users\n\nI think 2) is the better solution - especially considering the tablet scripts can be requested alongside other scripts.\n\nPlease can you ask Ori/Aaron?\n\nInstead I would recommend using matchMedia but running it inside some kind of startup script.",
+      "revId": "7dc05ea6e30679df1d9e6a910104c724ae36b76b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

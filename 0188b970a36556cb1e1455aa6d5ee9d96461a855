@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_4f42ae14",
+        "filename": "javascripts/common/matchMedia.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-23T12:02:50Z",
+      "side": 0,
+      "message": "I think this file is still useful and can avoid us loading a bunch of CSS on mobile devices that will never be used - please see my comments in other commit.",
+      "revId": "0188b970a36556cb1e1455aa6d5ee9d96461a855",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
