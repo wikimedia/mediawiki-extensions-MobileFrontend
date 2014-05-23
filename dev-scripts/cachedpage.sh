@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#usage ./scripts/cachedpage.sh 1bd5bc53ebb04fff7f508712a29fdf1f1d7fe14f San_Francisco
+#usage ./dev-scripts/cachedpage.sh 1bd5bc53ebb04fff7f508712a29fdf1f1d7fe14f San_Francisco
 
 if
 ! git diff --exit-code --quiet # check for unstaged changes
