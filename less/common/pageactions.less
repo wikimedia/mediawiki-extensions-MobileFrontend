@@ -29,19 +29,12 @@
 .pre-content {
 	// FIXME: Use a gray defined in variables e.g. @grayMediumLight
 	border-bottom: solid 1px #CACACA;
-	// FIXME: Remove when pre-content in cache
-	#page-actions {
-		border-bottom: none;
-	}
 }
 
 #page-actions {
 	@verticalMargin: 8px;
 
 	padding: @verticalMargin @contentMargin @verticalMargin @contentMargin - 8;
-	// end hacks
-	// FIXME: Remove when pre-content in cache
-	border-bottom: solid 1px @grayMediumLight;
 
 	li {
 		// Needed for non-JavaScript users
