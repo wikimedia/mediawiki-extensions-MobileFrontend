@@ -12,7 +12,14 @@ When(/^I click the placeholder search box$/) do
 end
 
 When(/^I type into search box "(.+)"$/) do |search_term|
-  on(ArticlePage).search_box2=search_term
+  on(ArticlePage) do |page|
+    if page.search_box2_element.exists?
+      # Type in JavaScript mode
+      page.search_box2 = search_term
+    else
+      page.search_box_placeholder = search_term
+    end
+  end
 end
 
 # FIXME: Is there a way to merge this rule into "I type into search box"?
