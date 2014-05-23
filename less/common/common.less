@@ -147,39 +147,12 @@ a.new:hover {
 	color: @redBase;
 }
 
-/* Plainlinks - this can be used to switch
- * off special external link styling */
-.plainlinks a {
-	background: none !important;
-	padding: 0 !important;
-}
-
 fieldset {
 	border: 1px solid @blueBase;
 	margin: 1em 0 1em 0;
 	padding: 0 1em 1em;
 	line-height: 1.5em;
 	display: block;
-}
-
-.hlist > ul, // FIXME: to support hlists on enwiki projects - this should be deprecated
-
-// Horizontal Lists
-//
-// Use hlist class when dealing with lists where items should be horizontal.
-//
-// Markup:
-// <ul class="hlist">
-// <li>item 1</li>
-// <li>item 2</li>
-// </ul>
-//
-// Styleguide 1.6.
-ul.hlist {
-	li {
-		display: inline-block;
-		margin-right: 8px;
-	}
 }
 
 // Make sure last modified link has correct font size (it is outside of the content div)
@@ -230,8 +203,4 @@ ul.hlist {
 	:focus {
 		outline: 0;
 	}
-}
-
-.nomobile {
-	display: none;
 }

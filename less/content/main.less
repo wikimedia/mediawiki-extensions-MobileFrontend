@@ -226,6 +226,26 @@ ul.gallery {
 	}
 }
 
+.hlist > ul, // FIXME: to support hlists on enwiki projects - this should be deprecated
+
+	// Horizontal Lists
+	//
+	// Use hlist class when dealing with lists where items should be horizontal.
+	//
+	// Markup:
+	// <ul class="hlist">
+	// <li>item 1</li>
+	// <li>item 2</li>
+	// </ul>
+	//
+	// Styleguide 1.6.
+ul.hlist {
+	li {
+		display: inline-block;
+		margin-right: 8px;
+	}
+}
+
 // Code
 //
 // Use this solely for blocks of computer code.
@@ -336,4 +356,15 @@ blockquote {
 		right: 0;
 		bottom: 0;
 	}
+}
+
+.nomobile {
+	display:none;
+}
+
+/* Plainlinks - this can be used to switch
+ * off special external link styling */
+.plainlinks a {
+	background: none !important;
+	padding: 0 !important;
 }
