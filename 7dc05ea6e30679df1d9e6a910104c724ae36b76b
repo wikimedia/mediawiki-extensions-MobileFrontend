@@ -33,6 +33,24 @@
       "revId": "7dc05ea6e30679df1d9e6a910104c724ae36b76b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_2ff41283",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-23T13:28:20Z",
+      "side": 1,
+      "message": "Honestly, I think it\u0027s a premature optimization at this point. Total weight of a small page on mobile (infobox, one image) is a bit over 100KB [1], big pages (featured articles, popular articles) can be 300KB to over 1MB [2][3]. Introducing a new mechanism of loading styles (which is something you have to maintain and keep bug-free) for saving 1.2KB [4] seems a little bit of an overkill. Oh, subtract 254 bytes from 1.2KB because that\u0027s uglified matchMedia.js size ;)\n\n[1] http://en.m.wikipedia.org/wiki/Brake_Gangwayed\n[2] http://en.m.wikipedia.org/wiki/Coonskin_(film)\n[3] http://en.m.wikipedia.org/wiki/San_Francisco\n[4] http://127.0.0.1:8080/w/load.php?debug\u003dfalse\u0026lang\u003den\u0026modules\u003dtablet.styles\u0026only\u003dstyles\u0026skin\u003dminerva",
+      "parentUuid": "4e1dcb5b_6f3d6a8a",
+      "revId": "7dc05ea6e30679df1d9e6a910104c724ae36b76b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
