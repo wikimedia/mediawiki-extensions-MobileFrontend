@@ -9,7 +9,8 @@
 			"Se4598",
 			"Suriyaa Kudo",
 			"Umherirrender",
-			"Wnme"
+			"Wnme",
+			"ChrisiPK"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet",
@@ -92,7 +93,7 @@
 	"mobile-frontend-editor-unavailable": "Das mobile Bearbeiten ist derzeit für deinen Browser nicht verfügbar. Bitte versuche einen anderen Browser.",
 	"mobile-frontend-editor-unavailable-header": "Editor nicht verfügbar",
 	"mobile-frontend-editor-undo-unsupported": "Das Rückgängigmachen wird derzeit von mobilen Geräten nicht unterstützt.",
-	"mobile-frontend-editor-uploadenable": "Bitte lade zuerst ein Foto zur Aktivierung der Bearbeitung hoch.",
+	"mobile-frontend-editor-uploadenable": "Bitte lade zuerst ein Foto hoch, damit du die Seite bearbeiten kannst.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Quelltext betrachten von</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "Visueller Editor",
 	"mobile-frontend-editor-wait": "Speichere Bearbeitung. Bitte warten.",

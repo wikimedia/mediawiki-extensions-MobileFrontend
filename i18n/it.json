@@ -91,6 +91,7 @@
 	"mobile-frontend-editor-unavailable": "La modifica attraverso dispositivo mobile non è attualmente disponibile sul tuo browser. Prova un browser diverso.",
 	"mobile-frontend-editor-unavailable-header": "Editor non disponibile",
 	"mobile-frontend-editor-undo-unsupported": "L'annullamento non è attualmente supportato sui dispositivi mobili.",
+	"mobile-frontend-editor-uploadenable": "Caricare una foto per poter abilitare alla modifica.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Visualizza sorgente di</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "VisualEditor",
 	"mobile-frontend-editor-wait": "Stiamo salvando la tua modifica, attendi.",
