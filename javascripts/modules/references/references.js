@@ -17,9 +17,14 @@
 			title: $( this ).text(),
 			text: getReference( $( this ).attr( 'href' ) )
 		} );
-		// use setTimeout so that browser calculates dimensions before show()
-		setTimeout( $.proxy( drawer, 'show' ), 0 );
 		ev.preventDefault();
+		//don't hide drawer (stop propagation of click) if it is already shown (e.g. click another reference)
+		if ( drawer.isVisible() ) {
+			ev.stopPropagation();
+		} else {
+			// use setTimeout so that browser calculates dimensions before show()
+			setTimeout( $.proxy( drawer, 'show' ), 0 );
+		}
 	}
 
 	function setup( $container ) {
