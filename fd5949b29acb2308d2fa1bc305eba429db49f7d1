@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_60e9f07a",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-25T16:14:25Z",
+      "side": 1,
+      "message": "Insufficient spacing.",
+      "revId": "fd5949b29acb2308d2fa1bc305eba429db49f7d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_40fef436",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-05-25T16:14:25Z",
+      "side": 1,
+      "message": "Instead of replacing here, use a capturing group in the first  rregex?",
+      "revId": "fd5949b29acb2308d2fa1bc305eba429db49f7d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
