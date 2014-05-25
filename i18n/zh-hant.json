@@ -226,6 +226,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "僅限圖片上載。",
 	"mobile-frontend-photo-upload-error-filename": "錯誤：請提供更具描述性的摘要。",
 	"mobile-frontend-photo-upload-generic": "貢獻圖片",
+	"mobile-frontend-photo-upload-invalid-user": "使用者「$1」未註冊。",
 	"mobile-frontend-photo-upload-protected": "您並無權限于此頁面插入圖像。",
 	"mobile-frontend-photo-upload-success-article": "完成！您的圖像已被添加到頁面中。",
 	"mobile-frontend-photo-upload-unavailable": "您的瀏覽器不支援圖像上載。",

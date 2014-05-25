@@ -227,11 +227,16 @@ $specialPageAliases['mk'] = array(
 
 /** Malayalam (മലയാളം) */
 $specialPageAliases['ml'] = array(
+	'History' => array( 'ഹിസ്റ്ററി' ),
+	'MobileWebApp' => array( 'മൊബൈൽവെബ്ആപ്' ),
 	'MobileOptions' => array( 'മൊബൈൽഐച്ഛികങ്ങൾ' ),
 	'Uploads' => array( 'അപ്‌ലോഡുകൾ' ),
 	'MobileDiff' => array( 'മൊബൈൽവ്യത്യാസം' ),
+	'MobileEditor' => array( 'മൊബൈൽതിരുത്തൽ' ),
 	'MobileMenu' => array( 'മൊബൈൽമെനു' ),
+	'MobileLanguages' => array( 'മൊബൈൽഭാഷകൾ' ),
 	'Nearby' => array( 'സമീപസ്ഥം' ),
+	'UserProfile' => array( 'ഉപയോക്തൃവിവരങ്ങൾ' ),
 );
 
 /** Min Nan Chinese (Bân-lâm-gú) */
