@@ -20,6 +20,7 @@
 			content: M.template.get( 'modules/editor/EditorOverlay.hogan' )
 		},
 		editor: 'SourceEditor',
+		sectionLine: '',
 
 		initialize: function( options ) {
 			this.api = new EditorApi( {
@@ -134,7 +135,9 @@
 			if ( mw.config.get( 'wgIsMainPage' ) ) {
 				params.mainpage = 1; // Setting it to 0 will have the same effect
 			}
-			this.api.getPreview( params ).done( function( parsedText ) {
+			this.api.getPreview( params ).done( function( parsedText, parsedSectionLine ) {
+				// On desktop edit summaries strip tags. Mimic this behavior on mobile devices
+				self.sectionLine = $( '<div/>' ).html( parsedSectionLine ).text();
 				new Section( {
 					el: self.$preview,
 					content: parsedText
@@ -225,6 +228,9 @@
 			var self = this,
 				options = { summary: this.$( '.summary' ).val() };
 
+			if ( self.sectionLine !== '' ) {
+				options.summary = '/* ' + self.sectionLine + ' */' + options.summary;
+			}
 			this._super();
 			if ( this.confirmAborted ) {
 				return;

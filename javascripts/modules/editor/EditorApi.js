@@ -173,7 +173,7 @@
 		},
 
 		getPreview: function( options ) {
-			var result = $.Deferred();
+			var result = $.Deferred(), sectionLine = '', self = this;
 
 			$.extend( options, {
 				action: 'parse',
@@ -184,12 +184,19 @@
 				// Output mobile HTML (bug 54243)
 				mobileformat: true,
 				title: this.title,
-				prop: 'text'
+				prop: ['text', 'sections']
 			} );
 
 			this.post( options ).done( function( resp ) {
 				if ( resp && resp.parse && resp.parse.text ) {
-					result.resolve( resp.parse.text['*'] );
+					// section 0 haven't a section name so skip
+					if ( self.sectionId !== 0 &&
+						resp.parse.sections &&
+						resp.parse.sections[0].line !== undefined
+					) {
+						sectionLine = resp.parse.sections[0].line;
+					}
+					result.resolve( resp.parse.text['*'], sectionLine );
 				} else {
 					result.reject();
 				}
