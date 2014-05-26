@@ -17,6 +17,8 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-home-button": "Pàggina principali",
 	"mobile-frontend-login": "Trasi",
+	"mobile-frontend-main-menu-login": "Trasi",
+	"mobile-frontend-main-menu-logout": "Nesci",
 	"mobile-frontend-news-items": "Attualitati",
 	"mobile-frontend-off": "OFF",
 	"mobile-frontend-on": "ON",
