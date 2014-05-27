@@ -284,10 +284,12 @@ class SkinMinerva extends SkinTemplate {
 				getLocalUrl( array( 'returnto' => $returnToTitle ) );
 			$items['preferences'] = array(
 				'links' => array(
-					'text' => wfMessage( 'preferences' )->escaped(),
-					'href' => $this->getUser()->isLoggedIn() ? $prefUrl :
-						$this->getLoginUrl( array( 'returnto' => $prefUrl ) ),
-					'class' => 'icon-settings icon icon-text',
+					array(
+						'text' => wfMessage( 'preferences' )->escaped(),
+						'href' => $this->getUser()->isLoggedIn() ? $prefUrl :
+							$this->getLoginUrl( array( 'returnto' => $prefUrl ) ),
+						'class' => 'icon-settings icon icon-text',
+					),
 				),
 			);
 		}
