@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e1dcb5b_4cebc3a0",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-27T21:26:07Z",
+      "side": 1,
+      "message": "You mean only for beta users (and logged in?) redlinks will not removed? Then: +1 :)\nBut why then set an own config var, then all can be like now, am i right? Actually redlinks will only removed if:\n1) user is anonym (not logged in)\nOR\n2) user is beta-group member\n(!M.isBetaGroupMember() || mw.user.isAnon())\n\nSo, this change/commit is \"absurd\" :)",
+      "parentUuid": "4e1dcb5b_6ccc3f8d",
+      "revId": "e8b3efe8e1d2679142119b568a020eb9a9d27944",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e1dcb5b_4c13c305",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4e1dcb5b_0c926b57",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 771,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-27T21:26:07Z",
+      "side": 1,
+      "message": "I can\u0027t remember to add this, so older base i think :) will delete later.",
+      "parentUuid": "4e1dcb5b_4c13c305",
+      "revId": "e8b3efe8e1d2679142119b568a020eb9a9d27944",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e1dcb5b_ccbd93d3",
         "filename": "javascripts/modules/redlinks/redlinks.js",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2014-05-27T21:09:29Z",
       "side": 1,
       "message": "This changes behaviour.\n\nmw.config.get( \u0027wgMFRemoveRedlinks\u0027 ) should be true only if:\nThis is not true - in a hook you will want to set this to false\n1) the user is currently running stable mode\nOR\n2) the user is anonymous\n\nCurrently it is always true.",
+      "revId": "e8b3efe8e1d2679142119b568a020eb9a9d27944",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_6c7b1fec",
+        "filename": "javascripts/modules/redlinks/redlinks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-27T21:26:07Z",
+      "side": 1,
+      "message": "Look at my comment in redlinks.js, i think we have to clarify first, what we want :D",
+      "parentUuid": "4e1dcb5b_ccbd93d3",
       "revId": "e8b3efe8e1d2679142119b568a020eb9a9d27944",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
