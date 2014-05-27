@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_124de7e0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-27T14:29:10Z",
+      "side": 1,
+      "message": "Can we change the message a bit? This commit actually moves mediawiki.ui styles to stable, which I consider the main change, and removes old code.",
+      "revId": "c9bd7205727f96788f201097494a4ca53ecd8e64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
