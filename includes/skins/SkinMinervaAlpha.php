@@ -29,7 +29,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 			$talkTitle = $title->getTalkPage();
 			if ( $talkTitle->getArticleID() ) {
 				$dbr = wfGetDB( DB_SLAVE );
-				$numTopics = $dbr->selectField( 'page_props', 'pp_value',
+				$numTopics = (int)$dbr->selectField( 'page_props', 'pp_value',
 					array(
 						'pp_page' => $talkTitle->getArticleID(),
 						'pp_propname' => 'page_top_level_section_count'
