@@ -15,7 +15,7 @@ Please follow the coding conventions of MobileFrontend:
 https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions
 
 ==== Git hooks ====
-Git hooks are provided in the scripts directory to assist with adhering
+Git hooks are provided in the dev-scripts directory to assist with adhering
 to JavaScript code standards, optimizing PNG files, etc. Install like
 so:
 

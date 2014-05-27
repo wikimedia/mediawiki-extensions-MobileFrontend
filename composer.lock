@@ -24,8 +24,8 @@
                 "php": ">=5.1.2"
             },
             "bin": [
-                "scripts/phpcs",
-                "scripts/phpcbf"
+                "dev-scripts/phpcs",
+                "dev-scripts/phpcbf"
             ],
             "type": "library",
             "extra": {

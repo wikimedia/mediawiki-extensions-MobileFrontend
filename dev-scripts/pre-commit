@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Enable this pre-commit hook by executing the following from the project root directory
-# $ ln -s $PWD/scripts/pre-commit .git/hooks/pre-commit
+# $ ln -s $PWD/dev-scripts/pre-commit .git/hooks/pre-commit
 
 # check for trailing whitespace
 if [[ `git diff --cached --check` ]]; then

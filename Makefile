@@ -5,21 +5,21 @@ gems:
 	bundle install
 
 clean:
-	rm -Rf scripts/remotes
+	rm -Rf dev-scripts/remotes
 	rm -Rf docs
 
 remotes:
-	@scripts/remotecheck.sh
+	@dev-scripts/remotecheck.sh
 
 message:
-	@scripts/message.py
+	@dev-scripts/message.py
 
 # Requires GERRIT_USERNAME to be defined - lists patchsets you need to amend
 mygerrit: remotes
-	@scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --byuser ${GERRIT_USERNAME} --ltscore 0
+	@dev-scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --byuser ${GERRIT_USERNAME} --ltscore 0
 
 gerrit: remotes
-	@scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1
+	@dev-scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1
 
 kss: nodecheck
 	mkdir -p docs
@@ -36,7 +36,7 @@ jsduck: gems
 docs: kss jsduck
 
 nodecheck:
-	@scripts/nodecheck.sh
+	@dev-scripts/nodecheck.sh
 
 jshinttests: nodecheck
 	@node_modules/.bin/jshint tests/qunit/* --config .jshintrc
@@ -47,34 +47,34 @@ jshint: nodecheck jshinttests
 dependencies: nodecheck phpcheck remotes
 
 phpcheck:
-	@scripts/phpcheck.sh
+	@dev-scripts/phpcheck.sh
 
 phplint: phpcheck
-	@scripts/phplint.sh
+	@dev-scripts/phplint.sh
 
 phpunit:
 	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --configuration ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit/mfe.suite.xml --group=MobileFrontend
 
 qunit:
-	@scripts/qunit.sh
+	@dev-scripts/qunit.sh
 
 qunitdebug:
-	@scripts/qunit.sh 'MobileFrontend&debug=true'
+	@dev-scripts/qunit.sh 'MobileFrontend&debug=true'
 
 tests: jshint phpunit qunit
 
 cucumber:
-	@scripts/cucumber.sh
+	@dev-scripts/cucumber.sh
 
 checkcucumber:
-	@scripts/cucumber_check.sh
+	@dev-scripts/cucumber_check.sh
 
 lint: jshint phplint checkcucumber
 
 installhooks:
-	ln -sf ${PWD}/scripts/pre-commit .git/hooks/pre-commit
-	ln -sf ${PWD}/scripts/pre-review .git/hooks/pre-review
+	ln -sf ${PWD}/dev-scripts/pre-commit .git/hooks/pre-commit
+	ln -sf ${PWD}/dev-scripts/pre-review .git/hooks/pre-review
 
 # user must create W3CValidationTest wiki page with text 'Hello world' for this to work
 validatehtml:
-	@scripts/validatehtml.sh
+	@dev-scripts/validatehtml.sh
