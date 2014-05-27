@@ -153,8 +153,16 @@ $specialPageAliases['gl'] = array(
 
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = array(
+	'History' => array( 'היסטוריה' ),
+	'MobileWebApp' => array( 'יישום_וב_נייד' ),
 	'MobileOptions' => array( 'הגדרות_נייד', 'הגדרות_פלאפון', 'הגדרות_סלולרי' ),
+	'Uploads' => array( 'העלאות' ),
+	'MobileDiff' => array( 'השוואה_ניידת' ),
+	'MobileEditor' => array( 'עריכה_ניידת' ),
+	'MobileMenu' => array( 'תפריט_נייד' ),
+	'MobileLanguages' => array( 'שפות_בנייד' ),
 	'Nearby' => array( 'בסביבה', 'קרוב' ),
+	'UserProfile' => array( 'פרופיל_משתמש' ),
 );
 
 /** Hindi (हिन्दी) */
