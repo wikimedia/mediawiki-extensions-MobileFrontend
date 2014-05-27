@@ -123,6 +123,24 @@
       "revId": "9abdf5e2536a4717297f823ca24bca7434ab3a16",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_9b80f3fa",
+        "filename": "less/modules/search/SearchOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-27T17:59:24Z",
+      "side": 1,
+      "message": "I was talking about adding/changing vertical margin for h3. Then text won\u0027t be vertically centered anymore. Or even worse, by setting fixed height, if the heading spans over 2 lines it will look bad too. Try adding more text to the heading in inspector.",
+      "parentUuid": "4e1dcb5b_a9ddc5e3",
+      "revId": "9abdf5e2536a4717297f823ca24bca7434ab3a16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
