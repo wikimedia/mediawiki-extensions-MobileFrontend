@@ -17,6 +17,7 @@
 }
 
 #mw-mf-page-left {
+	font-size: 90%;
 	float: left;
 	min-height: 100%;
 	background: @mainMenuBackgroundColor;
@@ -216,29 +217,18 @@ body.navigation-enabled {
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
 	@rightDrawerLeftOffset: 100% - @rightDrawerWidth;
-	.beta,
-	.alpha {
-		&.secondary-navigation-enabled {
-
-			#mw-mf-page-center {
-				left: -@rightDrawerWidth !important;
-				right: @rightDrawerWidth !important;
-				width: auto;
-				.main-header-button {
-					visibility: hidden;
-				}
+	.secondary-navigation-enabled {
+		#mw-mf-page-center {
+			left: -@rightDrawerWidth !important;
+			right: @rightDrawerWidth !important;
+			width: auto;
+			.main-header-button {
+				visibility: hidden;
 			}
 		}
-
-		.notifications-overlay.navigation-drawer {
-			left: @rightDrawerLeftOffset;
-		}
 	}
-}
 
-.beta, .alpha {
-	#mw-mf-page-left {
-		// FIXME: Move this rule when new typography in stable
-		font-size: 90%;
+	.notifications-overlay.navigation-drawer {
+		left: @rightDrawerLeftOffset;
 	}
 }

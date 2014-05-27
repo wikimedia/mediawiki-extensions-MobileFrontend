@@ -153,13 +153,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'skins.minerva.content.styles.beta' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/content/mainNew.less',
-		),
-		'position' => 'top',
-	),
-
 	'skins.minerva.drawers.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/drawer.less',

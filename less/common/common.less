@@ -28,32 +28,6 @@
 	bottom: 0;
 }
 
-// Deprecated rules
-.stable {
-	// this makes sure mobile browsers don't zoom on inputs (minimum resulting
-	// font size has to be 16px)
-	// header font size is kept the same to make it consistent with the search input
-	input,
-	textarea,
-	.header,
-	.overlay-header {
-		font-size: round( 1em / @fontScalingFactor, 2 );
-	}
-
-	input.search {
-	  // reset font size set for search input in .header
-	  font-size: 1em;
-	}
-
-	.content {
-		p,
-		li,
-		dl {
-			line-height: 1.65;
-		}
-	}
-}
-
 #content_wrapper {
 	.error {
 		color: #C85353;

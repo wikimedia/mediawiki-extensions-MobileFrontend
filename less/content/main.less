@@ -31,6 +31,7 @@ body {
 }
 
 .content {
+	line-height: @contentLineHeight;
 	margin: .8em @contentMargin 0;
 	// Deal with long links (bug 60387)
 	word-wrap: break-word;
@@ -63,7 +64,7 @@ body {
 	}
 
 	p {
-		margin-bottom: .7em;
+		margin: .5em 0 1em 0;
 	}
 
 	// Thumbnails
@@ -77,15 +78,11 @@ body {
 	//
 	// Styleguide 1.2.
 	.thumb {
-		margin: 15px 0 15px 0;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		background: #f9f9f9;
-		text-align: center;
+		margin: .6em 0;
 
 		// Linker.php
 		.thumbinner {
-			margin: 5px auto;
+			margin: 0 auto;
 			max-width: 100%;
 
 			> div {
@@ -93,12 +90,6 @@ body {
 				width: auto !important;
 				clear: both !important;
 			}
-		}
-
-		.thumbcaption {
-			margin: 5px 10px 0;
-			text-align: center;
-			width: auto !important;
 		}
 
 		/* bug 20030 */
@@ -110,6 +101,16 @@ body {
 				max-width: none !important;
 			}
 		}
+	}
+
+	.thumbcaption {
+		margin: 0;
+		font-size: .8em;
+		line-height: 1.5;
+		text-align: left;
+		padding: 0 !important;
+		color: @grayMedium;
+		width: auto !important;
 	}
 
 	.thumbborder {
@@ -259,7 +260,7 @@ ul.hlist {
 // </code>
 //
 // Styleguide 1.4.
-code,
+
 // Preformatted text
 //
 // Use on text where whitespace is significant and the content should not be formatted.
@@ -272,15 +273,12 @@ code,
 // </pre>
 //
 // Styleguide 1.5.
+code,
 pre {
-	padding: 0.2em 0.5em;
+	padding: 1em;
 	font-family: monospace;
 	border: solid 1px #CCC;
-}
-
-pre {
 	white-space: pre-wrap;
-	padding: 1em;
 }
 
 dl {
@@ -293,7 +291,7 @@ dl {
 .pre-content h1,
 .content h1 {
 	font-family: @fontFamilyHeading;
-	font-size: 1.8em;
+	font-size: 1.7em;
 }
 
 h2 {
@@ -320,6 +318,8 @@ sub {
 sub,
 sup {
 	font-size: 0.75em;
+	// Avoid line-height issues caused by sup and sub
+	line-height: 1;
 }
 
 @media all and (max-width: @wgMFDeviceWidthMobileSmall) {
@@ -341,18 +341,24 @@ sup {
 //
 // Styleguide 1.6.
 blockquote {
+	font-family: @fontFamilyHeading;
+	font-size: 1.1em;
 	quotes: "\201C" "\201D";
-	padding: 1em 0 1em 10px;
+	padding: 1em @blockquotePaddingRight 1em @blockquotePaddingLeft;
 	position: relative;
 
 	&:before {
 		content: open-quote;
 		font-size: 3em;
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 
 	&:after {
-		font-size: 3em;
 		content: close-quote;
+		font-size: 3em;
+		line-height: 1;
 		position: absolute;
 		right: 0;
 		bottom: 0;
