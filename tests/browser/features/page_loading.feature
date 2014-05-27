@@ -10,8 +10,8 @@ Scenario: Page loads without ajax in stable
     And I click the placeholder search box
     And I type into search box "Selenium page loading test"
   When I click a search result
-  Then The edit button is enabled
-    And The text of the first heading is "Selenium page loading test"
+  Then the edit button is enabled
+    And the text of the first heading is "Selenium page loading test"
 
 Scenario: Edit button updates when lazy load a page from search via JavaScript
   Given I visit a protected page
@@ -20,5 +20,5 @@ Scenario: Edit button updates when lazy load a page from search via JavaScript
     And I click the placeholder search box
     And I type into search box "Selenium page loading test"
   When I click a search result
-  Then The edit button is enabled
-    And The text of the first heading is "Selenium page loading test"
+  Then the edit button is enabled
+    And the text of the first heading is "Selenium page loading test"

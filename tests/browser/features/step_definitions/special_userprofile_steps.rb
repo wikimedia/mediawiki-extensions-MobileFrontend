@@ -10,18 +10,18 @@ Then(/^I can see my last edit$/) do
   on(SpecialUserProfilePage).last_edit_element.should exist
 end
 
-Then(/^There is a link to my user page$/) do
+Then(/^there is a link to my user page$/) do
   on(SpecialUserProfilePage).user_page_link_element.should exist
 end
 
-Then(/^There is a link to my talk page$/) do
+Then(/^there is a link to my talk page$/) do
   on(SpecialUserProfilePage).talk_link_element.should exist
 end
 
-Then(/^There is a link to my contributions$/) do
+Then(/^there is a link to my contributions$/) do
   on(SpecialUserProfilePage).contributions_link_element.should exist
 end
 
-Then(/^There is a link to my uploads$/) do
+Then(/^there is a link to my uploads$/) do
   on(SpecialUserProfilePage).uploads_link_element.should exist
 end

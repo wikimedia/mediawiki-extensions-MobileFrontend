@@ -27,7 +27,7 @@ When(/^I type into search placeholder box "(.+)"$/) do |search_term|
   on(ArticlePage).search_box_placeholder=search_term
 end
 
-Then(/^Search results should contain "(.+)"$/) do |text|
+Then(/^search results should contain "(.+)"$/) do |text|
   on(ArticlePage).search_result_element.when_present.text.should == text
 end
 

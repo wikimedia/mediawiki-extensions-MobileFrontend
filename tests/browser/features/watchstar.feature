@@ -11,11 +11,11 @@ Feature: Manage Watchlist
     When I click the watch star
     Then I see a toast notification
       And I see a toast with message about adding the random page
-      And The watch star is selected
+      And the watch star is selected
 
   Scenario: Remove an article from the watchlist
     When I click the watch star
       And I click the unwatch star
     Then I see a toast notification
       And I see a toast with message about removing the random page
-      And The watch star is not selected
+      And the watch star is not selected

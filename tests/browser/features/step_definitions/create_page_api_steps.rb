@@ -62,7 +62,7 @@ Given(/^I go to a page that has languages$/) do
   step 'I am on the "Selenium language test page" page'
 end
 
-Given(/^The wiki has a terms of use$/) do
+Given(/^the wiki has a terms of use$/) do
   on(APIPage).create "MediaWiki:mobile-frontend-terms-url", "Terms_of_use"
   on(APIPage).create "MediaWiki:mobile-frontend-terms-text", "Terms of use"
 end

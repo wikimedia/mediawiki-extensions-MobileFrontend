@@ -14,10 +14,10 @@ When(/^I click the link in the header bar$/) do
   on(SpecialContributionsPage).content_header_bar_link_element.click
 end
 
-Then(/^The last contribution summary shows the title of the page edited$/) do
+Then(/^the last contribution summary shows the title of the page edited$/) do
   on(SpecialContributionsPage).last_contribution_title_element.should exist
 end
 
-Then(/^The last contribution summary does not show the username$/) do
+Then(/^the last contribution summary does not show the username$/) do
   on(SpecialHistoryPage).last_contribution_username_element.should_not exist
 end

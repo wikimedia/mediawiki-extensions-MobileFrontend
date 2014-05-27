@@ -18,19 +18,19 @@ Then(/^I see a toolbar in the overlay header$/) do
   on(ArticlePage).overlay_ve_header_toolbar_element.when_present.should exist
 end
 
-Then(/^The VisualEditor toolbar has a bold button$/) do
+Then(/^the VisualEditor toolbar has a bold button$/) do
   on(ArticlePage).overlay_ve_header_toolbar_bold_button_element.when_present.should exist
 end
 
-Then(/^The VisualEditor toolbar has an italic button$/) do
+Then(/^the VisualEditor toolbar has an italic button$/) do
   on(ArticlePage).overlay_ve_header_toolbar_italic_button_element.when_present.should exist
 end
 
-Then(/^The VisualEditor overlay has an editor mode switcher button$/) do
+Then(/^the VisualEditor overlay has an editor mode switcher button$/) do
   on(ArticlePage).overlay_editor_mode_switcher_element.when_present.should exist
 end
 
-Then(/^The wikitext editor overlay has an editor mode switcher button$/) do
+Then(/^the wikitext editor overlay has an editor mode switcher button$/) do
   on(ArticlePage).overlay_editor_mode_switcher_element.when_present.should exist
 end
 

@@ -28,11 +28,11 @@ Then(/^my image is on the Uploads page$/) do
   end
 end
 
-Then(/^The Contribute an image button is visible$/) do
+Then(/^the Contribute an image button is visible$/) do
   on(UploadPage).contribute_image_element.should be_visible
 end
 
-Then(/^The upload button links to the tutorial$/) do
+Then(/^the upload button links to the tutorial$/) do
   # use should match as href will be relative/absolute url
   on(UploadPage).tutorial_link_element.when_present.attribute( 'href' ).should match "#/upload-tutorial/uploads$"
 end

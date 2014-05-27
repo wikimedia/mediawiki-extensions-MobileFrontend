@@ -17,7 +17,7 @@ Feature: Encourage new users to Keep Going
       And I am on the "Selenium Edit Test" page
     When I click the edit button
       And I see the wikitext editor overlay
-      And The wikitext editor overlay has an editor mode switcher button
+      And the wikitext editor overlay has an editor mode switcher button
       And I click the editor mode switcher button
       And I click the VisualEditor button
       And VisualEditor has loaded

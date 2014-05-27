@@ -9,14 +9,14 @@ Scenario: Switch from source editor to VisualEditor and back (with editor sticki
   Given I am on the "Selenium Edit Test" page
     And I click the edit button
     And I see the wikitext editor overlay
-    And The wikitext editor overlay has an editor mode switcher button
+    And the wikitext editor overlay has an editor mode switcher button
     And I click the editor mode switcher button
     And I click the VisualEditor button
     And I see the VisualEditor overlay
     And I am on the "Selenium Edit Test" page
     And I click the edit button
     And I see the VisualEditor overlay
-    And The VisualEditor overlay has an editor mode switcher button
+    And the VisualEditor overlay has an editor mode switcher button
     And I click the editor mode switcher button
   When I click the source editor button
   Then I see the wikitext editor overlay
@@ -25,19 +25,19 @@ Scenario: Toolbar VisualEditor
   Given I am on the "Selenium Edit Test" page
     And I click the edit button
     And I see the wikitext editor overlay
-    And The wikitext editor overlay has an editor mode switcher button
+    And the wikitext editor overlay has an editor mode switcher button
     And I click the editor mode switcher button
   When I click the VisualEditor button
   Then I see the VisualEditor overlay
     And I see a toolbar in the overlay header
-    And The VisualEditor toolbar has a bold button
-    And The VisualEditor toolbar has an italic button
+    And the VisualEditor toolbar has a bold button
+    And the VisualEditor toolbar has an italic button
 
 Scenario: I can edit a page using VisualEditor
   Given I am on the "Selenium Edit Test" page
     And I click the edit button
     And I see the wikitext editor overlay
-    And The wikitext editor overlay has an editor mode switcher button
+    And the wikitext editor overlay has an editor mode switcher button
     And I click the editor mode switcher button
     And I click the VisualEditor button
     And VisualEditor has loaded
@@ -51,7 +51,7 @@ Scenario: Going back from save screen in VisualEditor
   Given I am on the "Selenium Edit Test" page
     And I click the edit button
     And I see the wikitext editor overlay
-    And The wikitext editor overlay has an editor mode switcher button
+    And the wikitext editor overlay has an editor mode switcher button
     And I click the editor mode switcher button
     And I click the VisualEditor button
     And VisualEditor has loaded

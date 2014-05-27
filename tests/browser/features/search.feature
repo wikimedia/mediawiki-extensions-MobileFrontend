@@ -19,7 +19,7 @@ Feature: Search
 
   Scenario: Search for partial text
     When I type into search box "Selenium search tes"
-    Then Search results should contain "Selenium search test"
+    Then search results should contain "Selenium search test"
 
   Scenario: Search with search in pages button
     When I see the search overlay
