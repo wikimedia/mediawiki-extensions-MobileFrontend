@@ -37,15 +37,18 @@
 		}
 
 		.listThumb {
-			// for @headerHeight to work properly
-			// FIXME: why is this needed?
-			font-size: 1em;
 			width: @headerHeight;
 		}
 
 		h2 {
 			font: inherit;
 		}
+	}
+
+	.page-summary {
+		// Ensure that thumbs scale to the same size as buttons in the header. We apply
+		// this here instead of to listThumb because listThumb is absolutely positioned.
+		height: @headerHeight;
 	}
 
 	.search-overlay-contents {
