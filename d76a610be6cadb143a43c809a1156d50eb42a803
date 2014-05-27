@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_329c635f",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-27T14:08:59Z",
+      "side": 1,
+      "message": "Why isn\u0027t editor an enum in https://meta.wikimedia.org/wiki/Schema:MobileWebEditing ?\n\nAlso, funnel field suggests that value should start with a lowercase letter.",
+      "revId": "d76a610be6cadb143a43c809a1156d50eb42a803",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
