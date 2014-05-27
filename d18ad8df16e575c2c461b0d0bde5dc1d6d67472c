@@ -16,6 +16,23 @@
       "revId": "d18ad8df16e575c2c461b0d0bde5dc1d6d67472c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_8163eb3a",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-27T04:23:41Z",
+      "side": 1,
+      "message": "Why load summary after preview showed? Damn. I will upload a patch set to load the summary first and then show the preview.",
+      "revId": "d18ad8df16e575c2c461b0d0bde5dc1d6d67472c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
