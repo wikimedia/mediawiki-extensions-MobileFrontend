@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_18ebc978",
+        "filename": "less/specials/search.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-27T16:29:44Z",
+      "side": 0,
+      "message": "Please don\u0027t remove this rule for #search. Although it\u0027s not a table anymore, it\u0027s still not styled correctly.",
+      "revId": "f1d78cf6c4646af09fd9218c6b800e01cc677af4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_d8cd5136",
+        "filename": "javascripts/modules/redlinks/redlinks.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-27T16:29:44Z",
+      "side": 1,
+      "message": "This should be inside the main closure.",
+      "revId": "79f60662bc904496659cb374396ae82ec4448250",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_18c4e910",
+        "filename": "javascripts/modules/redlinks/redlinks.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-05-27T16:29:44Z",
+      "side": 1,
+      "message": "Please configure your editor so that it strips trailing whitespace.",
+      "revId": "79f60662bc904496659cb374396ae82ec4448250",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
