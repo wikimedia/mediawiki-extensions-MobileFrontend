@@ -133,7 +133,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/common/footer.less',
 			'less/common/common.less',
 			'less/common/icons.less',
-			'less/modules/toggle.less',
 		),
 		'position' => 'top',
 	),
@@ -779,6 +778,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.toggling' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+		),
+		'styles' => array(
+			'less/modules/toggle.less',
 		),
 		'scripts' => array(
 			'javascripts/modules/toggling/toggle.js',
