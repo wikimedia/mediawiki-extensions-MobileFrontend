@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_1b362301",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 794,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-27T18:25:56Z",
+      "side": 1,
+      "message": "This will require a cache flush.\nAre we okay with some pages loading tablet styles and some not?\n\nAlso we  should use the skin minerva prefix here to avoid the need for the FIXME.",
+      "revId": "849da249b9f764555387c1ff0c462c4640f64f86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
