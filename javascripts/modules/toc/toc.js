@@ -1,6 +1,7 @@
 ( function( M ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 	var View = M.require( 'View' ), TableOfContents,
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		toggle = M.require( 'toggle' );
 
 	TableOfContents = View.extend( {
@@ -12,7 +13,18 @@
 		},
 		tagName: 'div',
 		className: 'toc-mobile',
-		template: mw.template.get( 'modules/toc/toc' )
+		template: mw.template.get( 'modules/toc/toc' ),
+		postRender: function( options ) {
+			var log = MobileWebClickTracking.log;
+			this._super( options );
+			// Click tracking for table of contents so we can see if people interact with it
+			this.$( 'h2' ).on( toggle.eventName, function() {
+				log( 'page-toc-toggle' );
+			} );
+			this.$( 'a' ).on( 'click', function() {
+				log( 'page-toc-link' );
+			} );
+		}
 	} );
 	M.define( 'modules/toc/TableOfContents', TableOfContents );
 
