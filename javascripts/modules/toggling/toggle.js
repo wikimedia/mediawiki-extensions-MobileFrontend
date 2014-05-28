@@ -22,6 +22,22 @@
 	}
 
 	/**
+	 * Enables toggling via enter and space keys
+	 *
+	 * @param {jQuery.Object} $heading
+	 */
+	function enableKeyboardActions( $heading ) {
+		$heading.on( 'keypress', function( ev ) {
+			if ( ev.which === 13 || ev.which === 32 ) {
+				// Only handle keypresses on the "Enter" or "Space" keys
+				toggle( $( this ) );
+			}
+		} ).find( 'a' ).on( 'keypress mouseup', function( ev ) {
+			ev.stopPropagation();
+		} );
+	}
+
+	/**
 	 * Reveals an element and its parent section as identified by it's id
 	 *
 	 * @param {String} selector A css selector that identifies a single element
@@ -91,6 +107,7 @@
 				toggle( $( this ) );
 			} );
 
+			enableKeyboardActions( $elem );
 			if ( ( M.isWideScreen() && M.isBetaGroupMember() ) || expandSections ) {
 				// Expand sections by default on wide screen devices (in beta and alpha), or if the expand sections setting is set (alpha only)
 				toggle( $elem );
@@ -105,7 +122,6 @@
 		}
 		checkHash();
 		$( '#content_wrapper a' ).on( 'click', checkHash );
-		M.emit( 'toggling-enabled', $headings );
 	}
 
 	// avoid this running on Watchlist
