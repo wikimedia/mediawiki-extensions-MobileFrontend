@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_b21cec19",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-28T00:46:52Z",
+      "side": 1,
+      "message": "Added an extra newline here :P",
+      "revId": "6590dd637b29021b69bfe3ee98c7fb3766c74788",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
