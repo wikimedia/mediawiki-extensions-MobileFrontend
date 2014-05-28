@@ -83,13 +83,12 @@
 					isNewPage: isNewPage,
 					isNewEditor: user.getEditCount() === 0,
 					oldId: M.query.oldid,
-					funnel: funnel
+					funnel: funnel || 'article'
 				},
 				visualEditorNamespaces = veConfig && veConfig.namespaces;
 			loadingOverlay.show();
 			editorOptions.sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
-			funnel = funnel || 'article';
 			// Check whether VisualEditor should be loaded
 			if ( isVisualEditorEnabled &&
 
