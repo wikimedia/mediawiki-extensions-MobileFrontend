@@ -23,15 +23,17 @@
 	// alpha does it differently in lazyload.js
 	if ( !M.isAlphaGroupMember() && !M.isApp() ) {
 		M.on( 'search-results', function( overlay ) {
-			overlay.$( '.results a' ).on( 'click', function( ev ) {
+			overlay.$( '.results a' ).on( 'click', function() {
 				var href = $( this ).attr( 'href' );
-				ev.preventDefault();
 				window.history.back();
 
 				// give browser a tick to update its history and redirect
 				setTimeout( function() {
 					window.location.href = href;
 				}, 0 );
+				// Prevent the link from working and prevent the closing of the overlay
+				// by an event upstream which would trigger browser back on the clicked link
+				return false;
 			} );
 		} );
 	}
