@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_72f534b5",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-28T01:04:21Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we include a $ here? I know it\u0027ll work without it (since we\u0027re mapping jQuery to $ globally, but it\u0027s standard practice in MediaWiki to include it in the closure if you\u0027re using it.",
+      "revId": "7b079bd6c989d0d41bf0fbe5678d088a7fd8a1ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_f2e144fc",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-05-28T01:04:21Z",
+      "side": 1,
+      "message": "Seems a bit odd to create a shortcut for a function that is only called twice, but whatever :)",
+      "revId": "7b079bd6c989d0d41bf0fbe5678d088a7fd8a1ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
