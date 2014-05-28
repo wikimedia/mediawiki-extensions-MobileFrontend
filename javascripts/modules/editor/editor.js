@@ -78,9 +78,16 @@
 				loadingOverlay = new LoadingOverlay(),
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
+				editorOptions = {
+					title: page.title,
+					isNewPage: isNewPage,
+					isNewEditor: user.getEditCount() === 0,
+					oldId: M.query.oldid,
+					funnel: funnel
+				},
 				visualEditorNamespaces = veConfig && veConfig.namespaces;
 			loadingOverlay.show();
-			sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
+			editorOptions.sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
 			funnel = funnel || 'article';
 			// Check whether VisualEditor should be loaded
@@ -103,25 +110,14 @@
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 
 					loadingOverlay.hide();
-					result.resolve( new VisualEditorOverlay( {
-						title: page.title,
-						sectionId: parseInt( sectionId, 10 ),
-						funnel: funnel
-					} ) );
+					result.resolve( new VisualEditorOverlay( editorOptions ) );
 				} );
 			} else {
 				mw.loader.using( 'mobile.editor.overlay', function() {
 					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
 
 					loadingOverlay.hide();
-					result.resolve( new EditorOverlay( {
-						title: page.title,
-						isNewPage: isNewPage,
-						isNewEditor: user.getEditCount() === 0,
-						sectionId: sectionId,
-						oldId: M.query.oldid,
-						funnel: funnel
-					} ) );
+					result.resolve( new EditorOverlay( editorOptions ) );
 				} );
 			}
 
