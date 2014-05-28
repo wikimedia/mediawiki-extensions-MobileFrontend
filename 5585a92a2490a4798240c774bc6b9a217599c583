@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_2ea3d440",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "I\u0027d suggest adding a static function isAllowedPageAction to the skin rather than using in_array in case the implementation of this ever changes.",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_0e6818f1",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 639,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "See above comment.",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_ee6cbc07",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 644,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "See above comment.",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_ce7100df",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "ws\n\nNote if you run make installhooks\nthis should prevent you committing code with trailing whitespace and save you some time.",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_6e78acbf",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "I\u0027d actually remove this function and instead due to the check in SkinMinerva::getDefaultModules\nYou can simply remove the JavaScript ResourceLoader module altogether.",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_ee539c41",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "Put this check in the init function or even better in SkinMinerva simply don\u0027t add the JavaScript to the page in the first place :)\n\n(See getDefaultModules)",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_ae4da49d",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "Simply don\u0027t add the talk page module in getDefaultModules",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_8e62e804",
+        "filename": "javascripts/modules/uploads/lead-photo-init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "Simply don\u0027t add the talk page module in getDefaultModules",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_6e5f8c45",
+        "filename": "javascripts/modules/watchstar/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-28T21:53:00Z",
+      "side": 1,
+      "message": "Simply don\u0027t add the talk page module in getDefaultModules",
+      "revId": "5585a92a2490a4798240c774bc6b9a217599c583",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
