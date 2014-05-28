@@ -1,8 +1,5 @@
 ( function( M, $ ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
-		popup = M.require( 'toast' ),
-		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		inBetaOrAlpha = M.isBetaGroupMember(),
 		isVisualEditorEnabled = M.isWideScreen() &&
 			M.isAlphaGroupMember() &&
@@ -27,18 +24,7 @@
 			header: M.template.get( 'modules/editor/EditorOverlayHeader' ),
 			content: M.template.get( 'modules/editor/EditorOverlay' )
 		},
-		log: function( action, errorText ) {
-			var
-				data = {
-					action: action,
-					section: this.sectionId,
-					funnel: this.funnel
-				};
-			if ( errorText ) {
-				data.errorText = errorText;
-			}
-			schema.log( data );
-		},
+		editor: 'SourceEditor',
 
 		initialize: function( options ) {
 			this.api = new EditorApi( {
@@ -48,7 +34,6 @@
 				isNewPage: options.isNewPage
 			} );
 			this.readOnly = options.oldId ? true : false; // If old revision, readOnly mode
-			this.funnel = options.funnel;
 			if ( isVisualEditorEnabled ) {
 				options.editSwitcher = true;
 			}
@@ -69,13 +54,9 @@
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .submit' ).prop( 'disabled', false );
 				} );
-			this.$( '.continue' ).on( M.tapEvent( 'click' ), $.proxy( this, '_showPreview' ) );
+			this.$( '.continue' ).on( M.tapEvent( 'click' ), $.proxy( this, '_prepareForSave' ) );
 			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( this, '_hidePreview' ) );
 			this.$( '.submit' ).on( M.tapEvent( 'click' ), $.proxy( this, '_save' ) );
-			this.$( '.cancel' ).on( M.tapEvent( 'click' ), function() {
-				// log cancel attempt
-				self.log( 'cancel' );
-			} );
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
 
@@ -84,11 +65,10 @@
 			if ( isVisualEditorEnabled ) {
 				this.$( '.visual-editor' ).on( 'click', function() {
 					if ( !self.api.hasChanged ) {
-						MobileWebClickTracking.log( 'editor-switch-to-visual', options.title );
 						self._switchToVisualEditor( options );
 					} else {
 						if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-							self._showPreview();
+							self._prepareForSave();
 						}
 					}
 				} );
@@ -102,8 +82,6 @@
 			}
 
 			this._loadContent();
-			// log section edit attempt
-			self.log( 'attempt' );
 			if ( inNavSignupCampaign ) {
 				// Log edit page impression
 				mobileLeftNavbarEditCTA.log( {
@@ -123,11 +101,10 @@
 			}
 		},
 
-		_showPreview: function() {
+		_prepareForSave: function() {
 			var self = this, params = { text: this.$content.val() };
 
-			// log save button click
-			this.log( 'save' );
+			this._super();
 			this._showHidden( '.save-header, .save-panel' );
 
 			this.scrollTop = $( 'body' ).scrollTop();
@@ -184,13 +161,12 @@
 					self.$spinner.hide();
 				} ).
 				fail( function( error ) {
-					popup.show( mw.msg( 'mobile-frontend-editor-error-loading' ), 'toast error' );
-					// log error that occurred in retrieving section
-					self.log( 'error', error );
+					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), error );
 				} );
 		},
 
 		_switchToVisualEditor: function( options ) {
+			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the VisualEditor
 			M.settings.saveUserSetting( 'preferredEditor', 'VisualEditor', true );
 			// Load the VisualEditor and replace the SourceEditor overlay with it
@@ -220,17 +196,12 @@
 			var self = this,
 				options = { summary: this.$( '.summary' ).val() };
 
-			// Ask for confirmation in some cases
-			if ( !this.confirmSave() ) {
-				return;
-			}
-
+			this._super();
 			if ( this.captchaId ) {
 				options.captchaId = this.captchaId;
 				options.captchaWord = this.$( '.captcha-word' ).val();
 			}
 
-			self.log( 'submit' );
 			if ( inNavSignupCampaign ) {
 				mobileLeftNavbarEditCTA.log( {
 					action: 'page-save-attempt',
@@ -247,8 +218,6 @@
 						return;
 					}
 
-					// log success!
-					self.log( 'success' );
 					if ( inNavSignupCampaign ) {
 						mobileLeftNavbarEditCTA.log( {
 							action: 'page-save-success',
@@ -271,10 +240,8 @@
 							msg = mw.msg( 'mobile-frontend-editor-error' );
 						}
 
-						popup.show( msg, 'toast error' );
+						self.reportError( msg, data.details );
 						self._showHidden( '.save-header, .save-panel' );
-						// log error that occurred in retrieving section
-						self.log( 'error', data.details );
 					}
 				} );
 		},

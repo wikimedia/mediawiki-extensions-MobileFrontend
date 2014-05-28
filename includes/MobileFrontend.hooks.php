@@ -770,7 +770,7 @@ class MobileFrontendHooks {
 			),
 			'mobile.editing.schema' => array(
 				'schema' => 'MobileWebEditing',
-				'revision' => 7675117,
+				'revision' => 8599025,
 			),
 			'schema.MobileWebCta' => array(
 				'schema' => 'MobileWebCta',

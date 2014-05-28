@@ -1,7 +1,5 @@
 ( function( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
-		popup = M.require( 'toast' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		VisualEditorOverlay;
 
 	/**
@@ -14,6 +12,7 @@
 			content: M.template.get( 'modules/editor/VisualEditorOverlay' )
 		},
 		className: 'overlay editor-overlay editor-overlay-ve',
+		editor: 'VisualEditor',
 		initialize: function( options ) {
 			var self = this;
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-saving', options.title );
@@ -74,13 +73,12 @@
 		postRender: function( options ) {
 			var self = this;
 			// Save button
-			this.$( '.continue' ).on( 'click', $.proxy( this, 'prepareForSave' ) );
-			this.$( '.submit' ).on( 'click', $.proxy( this, 'save' ) );
+			this.$( '.continue' ).on( 'click', $.proxy( this, '_prepareForSave' ) );
+			this.$( '.submit' ).on( 'click', $.proxy( this, '_save' ) );
 			this.$( '.back' ).on( 'click', $.proxy( this, 'switchToEditor' ) );
 			this.$( '.source-editor' ).on( 'click', function() {
 				// If changes have been made tell the user they have to save first
 				if ( !self.hasChanged ) {
-					MobileWebClickTracking.log( 'editor-switch-to-source', options.title );
 					self.switchToSourceEditor( options );
 				} else {
 					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
@@ -95,22 +93,19 @@
 			this.$( '.surface' ).show();
 			this.docToSave = false;
 		},
-		prepareForSave: function() {
+		_prepareForSave: function() {
+			this._super();
 			this.$( '.surface' ).hide();
 			this._showHidden( '.save-header, .save-panel' );
 		},
-		save: function() {
+		_save: function() {
 			var
 				self = this,
 				doc = this.target.surface.getModel().getDocument(),
 				summary = this.$( '.save-panel input' ).val(),
 				options = { summary: summary };
 
-			// Ask for confirmation in some cases
-			if ( !this.confirmSave() ) {
-				return;
-			}
-
+			this._super();
 			this._showHidden( '.saving-header' );
 			// Stop the confirmation message from being thrown when you hit save.
 			this.hasChanged = false;
@@ -130,6 +125,7 @@
 			} );
 		},
 		switchToSourceEditor: function( options ) {
+			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the SourceEditor
 			M.settings.saveUserSetting( 'preferredEditor', 'SourceEditor', true );
 			// Load the SourceEditor and replace the VisualEditor overlay with it
@@ -149,9 +145,6 @@
 			this.clearSpinner();
 			this.destroyTarget();
 		},
-		reportError: function ( msg ) {
-			popup.show( msg, 'toast error' );
-		},
 		onSurfaceReady: function () {
 			this.clearSpinner();
 			this.target.surface.getModel().getDocument().connect( this, { 'transact': 'onTransact' } );
@@ -169,19 +162,19 @@
 			this.$continueBtn.prop( 'disabled', false );
 		},
 		onLoadError: function () {
-			this.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );
+			this.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), 've-load-error' );
 		},
 		onSerializeError: function ( jqXHR, status ) {
-			this.reportError( mw.msg( 'visualeditor-serializeerror', status ) );
+			this.reportError( mw.msg( 'visualeditor-serializeerror', status ), 've-serialize-error' );
 		},
 		onConflictError: function () {
-			this.reportError( mw.msg( 'mobile-frontend-editor-error-conflict' ) );
+			this.reportError( mw.msg( 'mobile-frontend-editor-error-conflict' ), 've-conflict-error' );
 		},
 		onShowChangesError: function () {
-			this.reportError( mw.msg( 'visualeditor-differror' ) );
+			this.reportError( mw.msg( 'visualeditor-differror' ), 've-show-changes-error' );
 		},
 		onSaveError: function () {
-			this.reportError( mw.msg( 'mobile-frontend-editor-error' ) );
+			this.reportError( mw.msg( 'mobile-frontend-editor-error' ), 've-save-error' );
 		},
 		onSaveErrorCaptcha: function ( editApi ) {
 			this.captchaId = editApi.captcha.id;

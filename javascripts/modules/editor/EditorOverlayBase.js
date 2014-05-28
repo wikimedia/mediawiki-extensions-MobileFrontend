@@ -1,9 +1,10 @@
 ( function( M, $ ) {
 	var OverlayNew = M.require( 'OverlayNew' ),
 		Page = M.require( 'Page' ),
+		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
-		user = M.require( 'user' ),
 		toast = M.require( 'toast' ),
+		user = M.require( 'user' ),
 		EditorOverlayBase;
 
 	/**
@@ -27,6 +28,19 @@
 		},
 		template: M.template.get( 'modules/editor/EditorOverlayBase' ),
 		className: 'overlay editor-overlay',
+		log: function( action, errorText ) {
+			var
+				data = {
+					action: action,
+					section: this.sectionId,
+					editor: this.editor,
+					funnel: this.funnel
+				};
+			if ( errorText ) {
+				data.errorText = errorText;
+			}
+			schema.log( data );
+		},
 
 		_updateEditCount: function() {
 			this.editCount += 1;
@@ -59,6 +73,7 @@
 		 * messages, and setting mobile edit cookie.
 		 */
 		onSave: function() {
+			this.log( 'success' );
 			var title = this.options.title,
 				extraToastClasses = '', msg;
 
@@ -126,6 +141,7 @@
 			this.isNewPage = options.isNewPage;
 			this.isNewEditor = options.isNewEditor;
 			this.sectionId = options.sectionId;
+			this.funnel = options.funnel;
 
 			// pre-fetch keep going with expectation user will go on to save
 			if ( this._shouldShowKeepGoingOverlay() ) {
@@ -134,7 +150,29 @@
 
 			this._super( options );
 		},
+		reportError: function ( msg, errorText ) {
+			this.log( 'error', errorText );
+			toast.show( msg, 'toast error' );
+		},
+		_prepareForSave: function() {
+			this.log( 'save' );
+		},
+		_save: function() {
+			// Ask for confirmation in some cases
+			if ( !this.confirmSave() ) {
+				return;
+			}
+			this.log( 'submit' );
+		},
 		postRender: function( options ) {
+			var self = this;
+			// log edit attempt
+			this.log( 'attempt' );
+
+			this.$( '.cancel' ).on( M.tapEvent( 'click' ), function() {
+				// log cancel attempt
+				self.log( 'cancel' );
+			} );
 			this._super( options );
 			this._showHidden( '.initial-header' );
 		},
