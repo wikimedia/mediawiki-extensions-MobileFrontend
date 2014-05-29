@@ -385,6 +385,11 @@ $wgMFMinCachedPageSize = 64 * 1024;
 $wgMFAutodetectMobileView = false;
 
 /**
+ * Controls whether site notices should be shown.
+ */
+$wgMFEnableSiteNotice = false;
+
+/**
  * Controls whether tablets should be shown the mobile site. Works only if
  * $wgMFAutodetectMobileView is true.
  */
