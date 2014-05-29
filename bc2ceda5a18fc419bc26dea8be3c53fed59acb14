@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_7febada0",
+        "filename": "composer.lock",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-29T21:22:52Z",
+      "side": 0,
+      "message": "?",
+      "revId": "bc2ceda5a18fc419bc26dea8be3c53fed59acb14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_df43e1b4",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-29T21:22:52Z",
+      "side": 0,
+      "message": "unrelated whitespace change please remove.",
+      "revId": "bc2ceda5a18fc419bc26dea8be3c53fed59acb14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_9f4d69e3",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-29T21:22:52Z",
+      "side": 0,
+      "message": "unrelated whitespace change please remove.",
+      "revId": "bc2ceda5a18fc419bc26dea8be3c53fed59acb14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_7f4a8dc9",
+        "filename": "javascripts/modules/uploads/lead-photo-init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-29T21:22:52Z",
+      "side": 0,
+      "message": "unrelated whitespace change please remove.",
+      "revId": "bc2ceda5a18fc419bc26dea8be3c53fed59acb14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
