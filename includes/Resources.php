@@ -84,12 +84,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'tablet.styles' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup' ),
+	'skins.minerva.tablet.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/tablet/common.less',
 			'less/tablet/hacks.less',
 		),
+		'position' => 'top',
 	),
 
 	'mobile.toc' => $wgMFMobileResourceBoilerplate + array(
@@ -184,16 +184,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-with-user-months',
 			'mobile-frontend-last-modified-with-user-years',
 			'mobile-frontend-last-modified-with-user-just-now',
-		),
-		'position' => 'top',
-	),
-
-	'mobile.head.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.head',
-		),
-		'scripts' => array(
-			'javascripts/common/matchMedia.js',
 		),
 		'position' => 'top',
 	),

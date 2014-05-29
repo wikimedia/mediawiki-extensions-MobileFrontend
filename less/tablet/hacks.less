@@ -14,41 +14,29 @@ FIXME: Review all of these hacks to see if they still apply.
 
 /* Tablet specific styling */
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-
 	.content {
 		// Revert to showing nav boxes on tablet/desktop
 		.navbox, .vertical-navbox {
 			display: inherit;
 		}
-
-		// Infobox styling
-		.infobox {
-			margin-left: 1em !important;
-			width: 23em !important;
-			float: right !important;
-			clear: right;
-		}
 	}
 
-	.beta, .alpha {
-		#content_wrapper {
+	#content_wrapper {
+		// Float infoboxes to the right of the page
+		table.infobox {
+			margin: .5em 0 .5em 1em !important;
+			// Note this is fixed to ensure that we leave enough space for the sections to the infoboxes left
+			max-width: @infoboxWidth;
+			// FIXME [Templates]: Inline styles force us to use !important
+			width: auto !important;
+			float: right !important;
+			margin-left: @contentMargin !important;
+			clear: right !important;
+		}
 
-			// Float infoboxes to the right of the page
-			table.infobox {
-				margin: .5em 0 .5em 1em !important;
-				// Note this is fixed to ensure that we leave enough space for the sections to the infoboxes left
-				max-width: @infoboxWidth;
-				// FIXME [Templates]: Inline styles force us to use !important
-				width: auto !important;
-				float: right !important;
-				margin-left: @contentMargin !important;
-				clear: right !important;
-			}
-
-			// Match caption styling from MediaWiki:Common.css
-			caption {
-				font-weight: bold;
-			}
+		// Match caption styling from MediaWiki:Common.css
+		caption {
+			font-weight: bold;
 		}
 	}
 }
