@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_110cadef",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-29T22:44:40Z",
+      "side": 1,
+      "message": "related to change Ia2ddca666c42762378e4c2bfe8e6a82ee3e43420 this module/line must be deleted, too.",
+      "revId": "58d7851cb4dc0aa48ae67fce45372404f45ff289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
