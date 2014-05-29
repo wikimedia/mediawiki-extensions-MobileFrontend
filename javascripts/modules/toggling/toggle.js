@@ -108,8 +108,8 @@
 			} );
 
 			enableKeyboardActions( $elem );
-			if ( ( M.isWideScreen() && M.isBetaGroupMember() ) || expandSections ) {
-				// Expand sections by default on wide screen devices (in beta and alpha), or if the expand sections setting is set (alpha only)
+			if ( M.isWideScreen() || expandSections ) {
+				// Expand sections by default on wide screen devices or if the expand sections setting is set (alpha only)
 				toggle( $elem );
 			}
 		} );
