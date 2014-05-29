@@ -26,6 +26,7 @@
 	"mobile-frontend-editor-newpage-prompt": "ای بلگه نئیش. سی چی گپ نبا و راستش نمی کید؟",
 	"mobile-frontend-editor-save": "ذخيره كردن",
 	"mobile-frontend-editor-success-landmark-1": "موارک با، ایسه شما یه گل ویرایشتگر{{نوم سیلجا}} هئیت",
+	"mobile-frontend-first-upload-wizard-new-page-1": "عسگیایی که هان{{نوم دیارگه}} د  ویکی رسانه هومبئری گرته بیه",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "روئه دش؟",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "هری!",
 	"mobile-frontend-footer-contact": "تماس",
@@ -113,7 +114,6 @@
 	"mobile-frontend-watchlist-login-action": "اومائن سی ددیئن وه",
 	"mobile-frontend-watchlist-more": "بیشتر",
 	"mobilefrontend-keepgoing-cancel": "نه منمون",
-	"mobilefrontend-keepgoing-suggest": "هری لطف بكيد",
 	"mobilefrontend-random-explain": "د کوم بلگه بختکی خوشتو میا؟",
 	"nearby": "بلگه نزيكتو",
 	"tag-mobile_edit-description": "ویرایشت سی سیلجا هومدرونگ راس بیه"

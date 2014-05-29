@@ -3,7 +3,8 @@
 		"authors": [
 			"AivoK",
 			"Avjoska",
-			"Pikne"
+			"Pikne",
+			"Lyrixn"
 		]
 	},
 	"beta-feature-geonotahack": "Selle lehekülje lähikond",
@@ -53,6 +54,7 @@
 	"mobile-frontend-editor-success": "Korras! Sinu muudatus salvestati.",
 	"mobile-frontend-editor-summary-placeholder": "Kirjuta, mida muutsid (valikuline)",
 	"mobile-frontend-editor-switch-confirm": "Enne kui vahetad redigeerimisrežiimi, pead muudatused salvestama.",
+	"mobile-frontend-editor-uploadenable": "Muudatuste lubamiseks laadige esmalt üks pilt üles.",
 	"mobile-frontend-editor-visual-editor": "Visuaalredaktor",
 	"mobile-frontend-editor-wait": "Muudatuse salvestamine, palun oota.",
 	"mobile-frontend-enable-images": "Luba mobiilivaates pildid",
@@ -149,6 +151,7 @@
 	"mobile-frontend-photo-upload-disabled": "Sellel leheküljel pole pilti tarvis.",
 	"mobile-frontend-photo-upload-error": "Tõrge. Proovi uuesti.",
 	"mobile-frontend-photo-upload-generic": "Laadi üles pilt",
+	"mobile-frontend-photo-upload-invalid-user": "Kasutaja \"$1\" pole registreeritud.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>Üks</span> üleslaadimine|<span>$1</span> üleslaadimist}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "Üle 500 üleslaadimise",
 	"mobile-frontend-placeholder": "Otsi {{GRAMMAR:elative|{{SITENAME}}}}",
