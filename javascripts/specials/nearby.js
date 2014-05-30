@@ -1,4 +1,3 @@
-// FIXME: Refactor to use modules/nearby/Nearby
 ( function( M, $ ) {
 var
 	Nearby = M.require( 'modules/nearby/Nearby' );

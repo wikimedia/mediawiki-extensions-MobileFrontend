@@ -66,10 +66,6 @@ mw.mobileFrontend = {
 			throw new Error( 'Module already exists: ' + id );
 		}
 		this._modules[ id ] = obj;
-		// FIXME: modules should not self initialise
-		if ( obj.init && !this.testMode ) {
-			obj.init();
-		}
 	}
 };
 

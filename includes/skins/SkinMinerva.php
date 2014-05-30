@@ -56,9 +56,6 @@ class SkinMinerva extends SkinTemplate {
 				)
 			)
 		);
-		$out->addHeadItem( 'loadingscript', Html::inlineScript(
-			"document.documentElement.className += ' page-loading';"
-		) );
 		if ( $wgMFNoindexPages ) {
 			$out->setRobotPolicy( 'noindex,nofollow' );
 		}
@@ -84,13 +81,7 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareDiscoveryTools( $tpl );
 		$this->preparePersonalTools( $tpl );
 		$this->prepareLanguages( $tpl );
-		// FIXME: Remove need for a page-loading class
-		$bottomScripts = Html::inlineScript(
-			"document.documentElement.className = " .
-				"document.documentElement.className.replace( 'page-loading', '' );"
-		);
-		$bottomScripts .= $this->bottomScripts();
-		$tpl->set( 'bottomscripts', $bottomScripts );
+		$tpl->set( 'bottomscripts', $this->bottomScripts() );
 		if ( $this->isMobileMode ) {
 			$tpl->set( 'bodytext', $html );
 			$this->prepareMobileFooterLinks( $tpl );

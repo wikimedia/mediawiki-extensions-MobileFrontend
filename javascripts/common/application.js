@@ -139,8 +139,6 @@
 			$doc = $( 'html' ),
 			$viewport = $( '#mw-mf-viewport' );
 
-		$doc.removeClass( 'page-loading' ); // FIXME: Kill with fire. This is here for historic reasons in case old HTML is cached
-
 		$( '<div id="notifications">' ).appendTo( $viewport );
 
 		if ( !supportsPositionFixed( navigator.userAgent ) ) {

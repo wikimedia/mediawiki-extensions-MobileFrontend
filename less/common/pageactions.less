@@ -1,23 +1,14 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-
 // FIXME: hide in stable till talk code is stable
 .mw-mobile-mode.stable #ca-talk,
-// FIXME: Remove when mw-mobile-skin class is present in cached pages
-.stable #ca-talk,
 // hide menu items when not possible to use
 .client-nojs #ca-watch.cta,
 .client-nojs #ca-edit,
 .client-nojs #ca-upload,
 #ca-talk.selected {
 	display: none;
-}
-
-// Restore talk link for the desktop skin.
-// FIXME: Remove when mw-mobile-skin class is present in cached pages
-.mw-desktop-mode #ca-talk {
-	display: inline-block;
 }
 
 #section_0 {

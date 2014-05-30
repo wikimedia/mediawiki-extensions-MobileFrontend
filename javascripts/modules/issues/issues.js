@@ -2,7 +2,6 @@
 
 var module = (function() {
 	var
-		// FIXME: Promote to stable
 		Overlay = M.require( 'Overlay' ),
 		// FIXME: Separate into separate file
 		CleanupOverlay = Overlay.extend( {
