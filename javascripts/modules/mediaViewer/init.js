@@ -37,7 +37,6 @@
 	M.on( 'page-loaded', function( page ) {
 		init( page.$el );
 	} );
-	M.on( 'section-rendered', init );
 	M.on( 'photo-loaded', init );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -8,9 +8,7 @@
 	if ( history.hijackLinks ) {
 		history.hijackLinks( $( '#content' ), useFuzzyLinkHijacking );
 
-		M.on( 'section-rendered', function( $container ) {
-			history.hijackLinks( $container, useFuzzyLinkHijacking );
-		} ).on( 'page-loaded', function( page ) {
+		M.on( 'page-loaded', function( page ) {
 			var title = M.prettyEncodeTitle( page.title );
 
 			// Change UI to reflect new current page - Fix menu item returnto link
