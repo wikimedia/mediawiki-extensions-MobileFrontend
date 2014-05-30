@@ -4,6 +4,8 @@
 			"Kghbln"
 		]
 	},
+	"mobile-frontend-editor-success": "Erfolgreich! Ihre Bearbeitung wurde gespeichert.",
+	"mobile-frontend-editor-success-landmark-1": "Herzlichen Glückwunsch! Sie sind jetzt ein {{SITENAME}}-Autor!",
 	"mobile-frontend-opt-in-explain": "Durch die Teilnahme am Beta-Test erhalten Sie Zugriff auf experimentelle Funktionen, die allerdings auch Probleme und Fehler verursachen können.",
 	"mobile-frontend-placeholder": "Geben Sie hier Ihre Suche ein ...",
 	"mobile-frontend-settings-description": "Passen Sie Ihr mobiles Endgerät mit diesen Einstellungen an Ihre Bedürfnisse an."
