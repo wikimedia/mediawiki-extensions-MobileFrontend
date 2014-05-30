@@ -16,6 +16,24 @@
       "revId": "e44e3a4405cdb347a057dff94ff350c5e4feeb73",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_65a0bb9a",
+        "filename": "javascripts/common/jquery.loader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-30T17:59:18Z",
+      "side": 1,
+      "message": "It\u0027s a little bit more complicated as other classes can conflict with the loading icon and sometimes the loading icon is on a child node, and sometimes on an element with parents.\n\nI guess I could explain my motivation a bit better by rewriting more of the existing code.",
+      "parentUuid": "4e1dcb5b_c7cd5764",
+      "revId": "e44e3a4405cdb347a057dff94ff350c5e4feeb73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
