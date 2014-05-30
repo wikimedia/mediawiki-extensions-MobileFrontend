@@ -16,6 +16,24 @@
       "revId": "28b5084a2df631941fb514ab14c91514b94fefb6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_c580affb",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-05-30T18:02:24Z",
+      "side": 1,
+      "message": "Yeah, i thought about it, but, if we expand the conditions later, we must only change one line :) What is better (for next time) to do it so, or only return the in_array() value?",
+      "parentUuid": "4e1dcb5b_e5b4cbe6",
+      "revId": "28b5084a2df631941fb514ab14c91514b94fefb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
