@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_857ab71d",
+        "filename": "less/modules/editor/images/editSourceNormal.svg",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-05-30T18:04:32Z",
+      "side": 1,
+      "message": "Why the switch to camel case?\nI notice this is not noted in https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions#Icons but all our existing icons bar 3 (chevronLeft.png, chevronRight.png, searchContent.png, userAnonymous.png, userNormal.png) use hyphens.\n\nWe should either decide to shift all of them over to this convention or use hyphens and get this documented.\n\nI\u0027m tempted to lean towards hyphens since that requires less renames.",
+      "revId": "c2c2812fb9d783e432a0dc5a3d5e86d0b5cf2f4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
