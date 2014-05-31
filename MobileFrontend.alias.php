@@ -303,11 +303,13 @@ $specialPageAliases['sv'] = array(
 
 /** Ukrainian (українська) */
 $specialPageAliases['uk'] = array(
+	'History' => array( 'Історія' ),
 	'MobileOptions' => array( 'Налаштування_мобільної_версії' ),
 	'Uploads' => array( 'Мобільне_Завантаження' ),
 	'MobileDiff' => array( 'Мобільна_різниця_версій' ),
 	'MobileMenu' => array( 'Мобільне_меню' ),
 	'Nearby' => array( 'Поблизу' ),
+	'UserProfile' => array( 'Профіль_користувача' ),
 );
 
 /** Vietnamese (Tiếng Việt) */
