@@ -633,8 +633,11 @@ class MobileContext extends ContextSource {
 		foreach ( $templateHostParts as $key => $templateHostPart ) {
 			if ( strstr( $templateHostPart, '%h' ) ) {
 				$parsedHostPartKey = substr( $templateHostPart, 2 );
-				$targetHostParts[ $key ] = $parsedHostParts[$parsedHostPartKey];
-			} elseif ( isset( $parsedHostParts[ $key ] )
+				if ( !array_key_exists( $parsedHostPartKey, $parsedHostParts ) ) {
+					return; // invalid pattern for this host, ignore
+				}
+				$targetHostParts[$key] = $parsedHostParts[$parsedHostPartKey];
+			} elseif ( isset( $parsedHostParts[$key] )
 				&& $templateHostPart == $parsedHostParts[$key] ) {
 				$targetHostParts = $parsedHostParts;
 				break;

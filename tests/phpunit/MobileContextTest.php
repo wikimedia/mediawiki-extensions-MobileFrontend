@@ -59,6 +59,7 @@ class MobileContextTest extends MediaWikiTestCase {
 			array( '//en.m.wikipedia.org', '.wikipedia.org' ),
 			array( 'http://127.0.0.1', '127.0.0.1' ),
 			array( 'http://127.0.0.1:8080', '127.0.0.1' ),
+			array( 'http://localhost', 'localhost' ),
 		);
 	}
 
