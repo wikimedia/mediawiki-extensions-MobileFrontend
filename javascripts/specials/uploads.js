@@ -187,14 +187,16 @@ var
 		if ( PhotoUploaderButton.isSupported && currentUserName === userName ) {
 			$container = $( '.ctaUploadPhoto' );
 
-			if ( user.getEditCount() === 0 ) {
-				$a = $( '<a class="button photo mw-ui-button mw-ui-progressive">' ).
-					text( mw.msg( 'mobile-frontend-photo-upload-generic' ) ).
-					attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $container );
-				// FIXME: This is needed so the camera shows. Eww.
-				$( '<div class="icon icon-24px">' ).appendTo( $a );
-			} else {
-				createButton( $container );
+			if ( $container.length ) {
+				if ( user.getEditCount() === 0 ) {
+					$a = $( '<a class="button photo mw-ui-button mw-ui-progressive">' ).
+						text( mw.msg( 'mobile-frontend-photo-upload-generic' ) ).
+						attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $container );
+					// FIXME: This is needed so the camera shows. Eww.
+					$( '<div class="icon icon-24px">' ).appendTo( $a );
+				} else {
+					createButton( $container );
+				}
 			}
 
 			// FIXME: Please find a way to do this without a global event.
