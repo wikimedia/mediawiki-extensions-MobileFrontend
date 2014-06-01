@@ -16,6 +16,24 @@
       "revId": "c2c2812fb9d783e432a0dc5a3d5e86d0b5cf2f4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_300b1828",
+        "filename": "less/modules/editor/images/editSourceNormal.svg",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-01T13:13:40Z",
+      "side": 1,
+      "message": "It is in our conventions: https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions#File_names",
+      "parentUuid": "4e1dcb5b_857ab71d",
+      "revId": "c2c2812fb9d783e432a0dc5a3d5e86d0b5cf2f4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
