@@ -9,6 +9,9 @@
 	"mobile-frontend-editor-success": "Serkeftî! Guhertina te hate tomarkirin.",
 	"mobile-frontend-footer-contact": "Têkilî",
 	"mobile-frontend-home-button": "Mal",
+	"mobile-frontend-main-menu-account-create": "Hesabekî çêke",
+	"mobile-frontend-main-menu-login": "Têkeve",
+	"mobile-frontend-main-menu-logout": "Derkeve",
 	"mobile-frontend-page-menu-contents": "naverok",
 	"mobile-frontend-password": "Şîfre:",
 	"mobile-frontend-random-button": "Ketober",
@@ -17,5 +20,6 @@
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-username": "Navê bikarhêner:",
 	"mobile-frontend-username-placeholder": "Navê bikarhêner",
-	"mobile-frontend-view": "Xuyakirina mobîl"
+	"mobile-frontend-view": "Xuyakirina mobîl",
+	"mobile-frontend-watchlist-cta-button-login": "Têkeve"
 }
