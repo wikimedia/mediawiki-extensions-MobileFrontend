@@ -85,6 +85,6 @@ end
 
 Given(/^I visit a protected page$/) do
   on(APIPage).create "Selenium protected test 2", "Test is used by Selenium web driver"
-  step 'The "Selenium protected test 2" page is protected.'
+  step 'the "Selenium protected test 2" page is protected.'
   step 'I am on the "Selenium protected test 2" page'
 end
