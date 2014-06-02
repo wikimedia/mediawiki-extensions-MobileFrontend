@@ -1,18 +1,21 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+// no fallback mixin for those SVGs (VE doesn't work on browsers without SVG
+// support anyway)
 .icon-edit-source {
-	.background-image-svg-quick( 'images/edit-source-normal' );
+	background-image: embed( 'images/editSourceNormal.svg' );
+
 	&.selected {
-		.background-image-svg-quick( 'images/edit-source-select' );
+		background-image: embed( 'images/editSourceSelect.svg' );
 	}
 }
 
 .icon-edit-ve {
-	.background-image-svg-quick( 'images/edit-visual-normal' );
+	background-image: embed( 'images/editVeNormal.svg' );
 
 	&.selected {
-		.background-image-svg-quick( 'images/edit-visual-select' );
+		background-image: embed( 'images/editVeSelect.svg' );
 	}
 }
 
@@ -38,7 +41,6 @@
 
 	.overlay-header {
 		.switcher-container {
-			padding: 0;
 			// Have to set an explicit width since we're using display:table-cell
 			width: 4em;
 			vertical-align: middle;
@@ -46,7 +48,6 @@
 		}
 
 		.icon.editor-switcher {
-			width: 4em;
 			margin: 0 0 0 1em;
 		}
 
@@ -68,21 +69,27 @@
 			border: 1px solid @grayLight;
 			white-space: nowrap;
 
+			// FIXME: change class when mediawiki.ui has proper tabs/toggle buttons
 			> .mw-ui-button {
 				display: inline-block;
 				border: none;
 				border-right: 1px solid @grayLight;
 				border-radius: 0;
-				line-height: 2em;
-				padding: 0.5em 1.4em 0.5em 1em;
+				padding: 0 2em 0 1em;
 
 				.icon {
-					background-position: left center;
 					display: inline-block;
-					margin-right: 10px;
-					width: 30px;
-					height: 30px;
+					width: 3.35em;
+					height: 3.35em;
 					vertical-align: middle;
+				}
+
+				&.mw-ui-progressive .icon-edit-source {
+					background-image: embed( 'images/editSourceToggle.svg' );
+				}
+
+				&.mw-ui-progressive .icon-edit-ve {
+					background-image: embed( 'images/editVeToggle.svg' );
 				}
 			}
 
