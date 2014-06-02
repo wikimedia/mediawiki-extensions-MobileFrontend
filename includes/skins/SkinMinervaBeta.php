@@ -58,7 +58,9 @@ class SkinMinervaBeta extends SkinMinerva {
 
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
-		$modules['talk'] = array( 'mobile.talk' );
+		if ( $this->isAllowedPageAction( 'talk' ) ) {
+			$modules['talk'] = array( 'mobile.talk' );
+		}
 		$modules['beta'] = array( 'mobile.beta' );
 		$modules['beta'][] = 'mobile.geonotahack';
 		$modules['toggling'] = array( 'mobile.toggling.beta' );

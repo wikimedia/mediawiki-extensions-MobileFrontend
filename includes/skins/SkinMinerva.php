@@ -115,16 +115,32 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns true, if the pageaction is configured to be displayed.
+	 * @param string $action
+	 * @return boolean
+	 */
+	protected function isAllowedPageAction( $action ) {
+		global $wgMFPageActions;
+		if ( in_array( $action, $wgMFPageActions ) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
 	 * Overrides Skin::doEditSectionLink
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
-		$lang = wfGetLangObj( $lang );
-		$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
-		return Html::element( 'a', array(
-			'href' => '#editor/' . $section,
-			'data-section' => $section,
-			'class' => 'edit-page icon icon-32px icon-edit enabled'
-		), $message );
+		if ( $this->isAllowedPageAction( 'edit' ) ) {
+			$lang = wfGetLangObj( $lang );
+			$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
+			return Html::element( 'a', array(
+				'href' => '#editor/' . $section,
+				'data-section' => $section,
+				'class' => 'edit-page icon icon-32px icon-edit enabled'
+			), $message );
+		}
 	}
 
 	/**
@@ -632,45 +648,54 @@ class SkinMinerva extends SkinTemplate {
 		$actions = $tpl->data['content_navigation']['actions'];
 
 		// empty placeholder for edit and photos which both require js
-		$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '',
-			'class' => 'icon icon-32px icon-edit' );
-		$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
-			'class' => 'icon icon-32px' );
-
-		// FIXME [core]: This seems unnecessary..
-		$subjectId = $title->getNamespaceKey( '' );
-		$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
-		if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
-			$menu['talk'] = $namespaces[$talkId];
+		if ( $this->isAllowedPageAction( 'edit' ) ) {
+			$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '',
+				'class' => 'icon icon-32px icon-edit' );
 		}
 
-		if ( isset( $menu['talk'] ) ) {
-			$menu['talk']['class'] = 'icon icon-32px icon-talk';
-			if ( isset( $tpl->data['_talkdata'] ) ) {
-				$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
-				$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
+		if ( $this->isAllowedPageAction( 'upload' ) ) {
+			$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
+				'class' => 'icon icon-32px' );
+		}
+
+		if ( $this->isAllowedPageAction( 'talk' ) ) {
+			// FIXME [core]: This seems unnecessary..
+			$subjectId = $title->getNamespaceKey( '' );
+			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
+			if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
+				$menu['talk'] = $namespaces[$talkId];
 			}
-		}
-		// sanitize to avoid invalid HTML5 markup being produced
-		unset( $menu['talk']['primary'] );
-		unset( $menu['talk']['context'] );
 
-		$watchTemplate = array(
-			'id' => 'ca-watch',
-			'class' => 'watch-this-article icon icon-32px',
-		);
-		// standardise watch article into one menu item
-		if ( isset( $actions['watch'] ) ) {
-			$menu['watch'] = array_merge( $actions['watch'], $watchTemplate );
-		} elseif ( isset( $actions['unwatch'] ) ) {
-			$menu['watch'] = array_merge( $actions['unwatch'], $watchTemplate );
-			$menu['watch']['class'] .= ' watched';
-		} else {
-			// placeholder for not logged in
-			$menu['watch'] = $watchTemplate;
-			// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
-			$menu['watch']['text'] = '';
-			$menu['watch']['href'] = $this->getLoginUrl( array( 'returnto' => $title ) );
+			if ( isset( $menu['talk'] ) ) {
+				$menu['talk']['class'] = 'icon icon-32px icon-talk';
+				if ( isset( $tpl->data['_talkdata'] ) ) {
+					$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
+					$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
+				}
+			}
+			// sanitize to avoid invalid HTML5 markup being produced
+			unset( $menu['talk']['primary'] );
+			unset( $menu['talk']['context'] );
+		}
+
+		if ( $this->isAllowedPageAction( 'watch' ) ) {
+			$watchTemplate = array(
+				'id' => 'ca-watch',
+				'class' => 'watch-this-article icon icon-32px',
+			);
+			// standardise watch article into one menu item
+			if ( isset( $actions['watch'] ) ) {
+				$menu['watch'] = array_merge( $actions['watch'], $watchTemplate );
+			} elseif ( isset( $actions['unwatch'] ) ) {
+				$menu['watch'] = array_merge( $actions['unwatch'], $watchTemplate );
+				$menu['watch']['class'] .= ' watched';
+			} else {
+				// placeholder for not logged in
+				$menu['watch'] = $watchTemplate;
+				// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
+				$menu['watch']['text'] = '';
+				$menu['watch']['href'] = $this->getLoginUrl( array( 'returnto' => $title ) );
+			}
 		}
 
 		$tpl->set( 'page_actions', $menu );
@@ -750,10 +775,14 @@ class SkinMinerva extends SkinTemplate {
 		);
 
 		$modules['notifications'] = array( 'mobile.notifications' );
-		$modules['watch'] = array();
+		if ( $this->isAllowedPageAction( 'watch' ) ) {
+			$modules['watch'] = array();
+		}
 		$modules['search'] = array( 'mobile.search' );
 		$modules['issues'] = array( 'mobile.issues' );
-		$modules['editor'] = array( 'mobile.editor' );
+		if ( $this->isAllowedPageAction( 'edit' ) ) {
+			$modules['editor'] = array( 'mobile.editor' );
+		}
 		$modules['languages'] = array( 'mobile.languages' );
 		$modules['newusers'] = array( 'mobile.newusers' );
 
