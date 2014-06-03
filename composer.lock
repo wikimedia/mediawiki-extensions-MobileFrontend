@@ -3,29 +3,34 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "301722ae41aa323b788f33ada8c32dc3",
+    "hash": "ded1afe63be163acfad0d51504544944",
     "packages": [
+
+    ],
+    "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "dev-phpcs-fixer",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "228750a544d220c0bc5443dcdd4a7a1a5766f52a"
+                "reference": "396178ada8499ec492363587f037125bf7b07fcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/228750a544d220c0bc5443dcdd4a7a1a5766f52a",
-                "reference": "228750a544d220c0bc5443dcdd4a7a1a5766f52a",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/396178ada8499ec492363587f037125bf7b07fcc",
+                "reference": "396178ada8499ec492363587f037125bf7b07fcc",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
                 "php": ">=5.1.2"
             },
+            "suggest": {
+                "phpunit/php-timer": "dev-master"
+            },
             "bin": [
-                "dev-scripts/phpcs",
-                "dev-scripts/phpcbf"
+                "scripts/phpcs"
             ],
             "type": "library",
             "extra": {
@@ -39,12 +44,12 @@
                     "CodeSniffer/CLI.php",
                     "CodeSniffer/Exception.php",
                     "CodeSniffer/File.php",
-                    "CodeSniffer/Fixer.php",
                     "CodeSniffer/Report.php",
                     "CodeSniffer/Reporting.php",
                     "CodeSniffer/Sniff.php",
                     "CodeSniffer/Tokens.php",
                     "CodeSniffer/Reports/",
+                    "CodeSniffer/CommentParser/",
                     "CodeSniffer/Tokenizers/",
                     "CodeSniffer/DocGenerators/",
                     "CodeSniffer/Standards/AbstractPatternSniff.php",
@@ -76,19 +81,16 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2014-04-02 00:29:22"
+            "time": "2014-05-01 03:07:07"
         }
-    ],
-    "packages-dev": [
-
     ],
     "aliases": [
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "squizlabs/php_codesniffer": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": [
 
     ],
