@@ -33,7 +33,12 @@ jsduck: gems
 	rm -rf docs/js
 	jsduck javascripts/ --output docs/js/ --external=jQuery.Object,Hogan.Template,jQuery.Deferred,mw.user --exclude=javascripts/external --ignore-global
 
-docs: kss jsduck
+phpdoc: nodecheck
+	mkdir -p docs
+	rm -rf docs/php
+	@php node_modules/grunt-phpdocumentor/bin/phpDocumentor.phar -d ./ -t ./docs/php -i vendor/
+
+docs: kss jsduck phpdoc
 
 nodecheck:
 	@dev-scripts/nodecheck.sh
