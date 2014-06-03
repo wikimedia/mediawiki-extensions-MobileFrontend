@@ -6,7 +6,8 @@
 			"Ravichandra",
 			"Veeven",
 			"Wellwisher",
-			"రహ్మానుద్దీన్"
+			"రహ్మానుద్దీన్",
+			"Kiranmayee"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "ఒక విభాగం వెనక్కి గెంతండి",
@@ -43,6 +44,7 @@
 	"mobile-frontend-page-saving": "<span>$1 ను</span><strong>భద్రపరుస్తున్నాం</strong>",
 	"mobile-frontend-password": "సంకేతపదం:",
 	"mobile-frontend-photo-upload-generic": "ఓ బొమ్మను ఇవ్వండి",
+	"mobile-frontend-photo-upload-invalid-user": "వాడుకరి \"$1\" నమోదుకాలేదు.",
 	"mobile-frontend-photo-upload-protected": "ఈ పేజీలో బొమ్మను చేర్చే అనుమతి మీకు లేదు.",
 	"mobile-frontend-photo-upload-unavailable": "మీ బ్రౌజరు బొమ్మల ఎక్కింపుకు అనుకూలం కాదు.",
 	"mobile-frontend-placeholder": "మీ శోధనపదమును ఇక్కడ రాయుము",

@@ -141,6 +141,7 @@
 	"mobile-frontend-photo-upload-anon": "Морате бити пријављени да би додали слику на ову страницу.",
 	"mobile-frontend-photo-upload-disabled": "На овој страници није потребна слика.",
 	"mobile-frontend-photo-upload-error": "Грешка, покушајте поново.",
+	"mobile-frontend-photo-upload-invalid-user": "Корисник „$1“ није регистрован.",
 	"mobile-frontend-photo-upload-protected": "Немате дозволу да додате слику на ову страницу.",
 	"mobile-frontend-photo-upload-unavailable": "Ваш веб прегледач не подржава слање слика.",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ отпремања",

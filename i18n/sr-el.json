@@ -34,6 +34,7 @@
 	"mobile-frontend-page-menu-contents": "sadržaj",
 	"mobile-frontend-page-menu-history": "Istorija",
 	"mobile-frontend-password": "Lozinka:",
+	"mobile-frontend-photo-upload-invalid-user": "Korisnik „$1“ nije registrovan.",
 	"mobile-frontend-placeholder": "Pretražite {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Privatnost",
 	"mobile-frontend-profile-last-thank": "[[Special:UserProfile/$1|$1]] {{GENDER:$2|mu|joj}} se {{GENDER:$1|zahvalio|zahvalila}}.",
