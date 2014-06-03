@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_a77732fd",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-03T18:57:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_c7bfcea6",
+      "revId": "061966c98ef813fec1c83b0d1d115dcb02d5ac1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_67deba16",
         "filename": "includes/skins/UserLoginMobileTemplate.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-06-03T18:44:17Z",
       "side": 1,
       "message": "Missing -\u003etext()\nShould probably be explicit here.",
+      "revId": "061966c98ef813fec1c83b0d1d115dcb02d5ac1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_87643647",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-03T18:57:16Z",
+      "side": 1,
+      "message": "Totally right :) Done",
+      "parentUuid": "2e1a5767_67deba16",
       "revId": "061966c98ef813fec1c83b0d1d115dcb02d5ac1e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
