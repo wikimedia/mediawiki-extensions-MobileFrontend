@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e1a5767_c7bfcea6",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-03T18:44:17Z",
+      "side": 1,
+      "message": "In core\n$this-\u003edata[\u0027useemail\u0027] \u0026\u0026 $this-\u003edata[\u0027canreset\u0027] \u0026\u0026 $this-\u003edata[\u0027resetlink\u0027] \u003d\u003d\u003d true\n\nWe should this probably check resetlink as well?",
+      "revId": "061966c98ef813fec1c83b0d1d115dcb02d5ac1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_67deba16",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-03T18:44:17Z",
+      "side": 1,
+      "message": "Missing -\u003etext()\nShould probably be explicit here.",
+      "revId": "061966c98ef813fec1c83b0d1d115dcb02d5ac1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
