@@ -56,6 +56,17 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			$signupLink = '';
 		}
 
+		// Check for permission to reset password first
+		if ( $this->data['canreset'] && $this->data['useemail'] && $this->data['resetlink'] === true ) {
+			$passwordReset = Html::element( 'a', array(
+				'class' => 'mw-userlogin-help mw-ui-block',
+				'href' => SpecialPage::getTitleFor( 'PasswordReset' )->getLocalUrl(),
+			),
+			wfMessage( 'passwordreset' )->text() );
+		} else {
+			$passwordReset = '';
+		}
+
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login', 'class' => 'content' ) );
 
 		$form = Html::openElement( 'div', array() ) .
@@ -90,11 +101,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::input( 'watch', $watchArticle, 'hidden' ) .
 			$stickHTTPS .
 			Html::closeElement( 'form' ) .
-			Html::element( 'a', array(
-					'class' => 'mw-userlogin-help mw-ui-block',
-					'href' => SpecialPage::getTitleFor( 'PasswordReset' )->getLocalUrl(),
-				),
-				wfMessage( 'passwordreset' ) ) .
+			$passwordReset .
 			$signupLink .
 			Html::closeElement( 'div' );
 		echo $login;
