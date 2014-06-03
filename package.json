@@ -3,6 +3,8 @@
 	"description": "Node.js dependencies used in MobileFrontend",
 	"version": "0.0.1",
 	"dependencies": {
+		"grunt": "~0.4.4",
+		"grunt-phpdocumentor": "~0.4.1",
 		"jshint": ">=1.1.0",
 		"jsdoc": "<=3.3.0",
 		"kss": ">=0.3.6",
