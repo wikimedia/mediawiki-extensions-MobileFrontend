@@ -3,6 +3,10 @@ class MinervaTemplate extends BaseTemplate {
 	// FIXME: Remove variable when secondary page actions menu moves to stable
 	protected $languageButtonClassName = 'mw-ui-button mw-ui-progressive button languageSelector';
 	/**
+	 * @var string $searchPlaceHolderMsg Message used as placeholder in search input
+	 */
+	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder';
+	/**
 	 * @var Boolean
 	 */
 	protected $isSpecialPage;
@@ -45,6 +49,18 @@ class MinervaTemplate extends BaseTemplate {
 
 	public function getFooterLinks( $option = null ) {
 		return $this->data['footerlinks'];
+	}
+
+	protected function getSearchAttributes() {
+		$searchBox = array(
+			'id' => 'searchInput',
+			'class' => 'search',
+			'autocomplete' => 'off',
+			// The placeholder gets fed to HTML::element later which escapes all
+			// attribute values, so no need to escape the string here.
+			'placeholder' =>  wfMessage( $this->searchPlaceHolderMsg )->text(),
+		);
+		return $searchBox;
 	}
 
 	protected function renderFooter( $data ) {
@@ -243,7 +259,7 @@ class MinervaTemplate extends BaseTemplate {
 					?>
 							<form action="<?php echo $data['wgScript'] ?>" class="search-box">
 							<?php
-							echo $this->makeSearchInput( $data['searchBox'] );
+							echo $this->makeSearchInput( $this->getSearchAttributes() );
 							// FIXME: change this into a search icon instead of a text button
 							echo $this->makeSearchButton(
 								'fulltext',

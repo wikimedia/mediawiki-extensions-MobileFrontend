@@ -71,7 +71,6 @@ class SkinMinerva extends SkinTemplate {
 
 		$this->preparePageContent( $tpl );
 		$this->prepareHeaderAndFooter( $tpl );
-		$this->prepareSearch( $tpl );
 		$this->prepareMenuButton( $tpl );
 		$this->prepareBanners( $tpl );
 		$this->prepareSiteLinks( $tpl );
@@ -519,11 +518,6 @@ class SkinMinerva extends SkinTemplate {
 		return $link;
 	}
 
-	// FIXME: Move to MinervaTemplate
-	protected function getSearchPlaceHolderText() {
-		return wfMessage( 'mobile-frontend-placeholder' )->text();
-	}
-
 	protected function prepareHeaderAndFooter( BaseTemplate $tpl ) {
 		$title = $this->getTitle();
 		$user = $this->getUser();
@@ -566,19 +560,6 @@ class SkinMinerva extends SkinTemplate {
 				),
 			) );
 		}
-	}
-
-	// FIXME: Move to MinervaTemplate
-	protected function prepareSearch( BaseTemplate $tpl ) {
-		$searchBox = array(
-			'id' => 'searchInput',
-			'class' => 'search',
-			'autocomplete' => 'off',
-			// The placeholder gets fed to HTML::element later which escapes all
-			// attribute values, so no need to escape the string here.
-			'placeholder' =>  $this->getSearchPlaceHolderText(),
-		);
-		$tpl->set( 'searchBox', $searchBox );
 	}
 
 	protected function prepareMenuButton( BaseTemplate $tpl ) {

@@ -1,5 +1,10 @@
 <?php
 class MinervaTemplateAlpha extends MinervaTemplateBeta {
+	/**
+	 * @var string $searchPlaceHolderMsg Message used as placeholder in search input
+	 */
+	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder-alpha';
+
 	protected function renderCategories() {
 		$skin = $this->getSkin();
 		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );
