@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e1a5767_853f84d3",
+        "filename": "less/common/common-js.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-04T20:46:27Z",
+      "side": 1,
+      "message": "Maybe use .icon-loader ? So initLoader has a spelling reference to icon-loader",
+      "revId": "c22c9e8690dde223e287905f2ef9780e426d41c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
