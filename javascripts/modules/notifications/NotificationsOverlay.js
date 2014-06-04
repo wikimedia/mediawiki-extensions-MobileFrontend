@@ -1,6 +1,5 @@
 ( function( M, $ ) {
 	var Overlay = M.require( 'OverlayNew' ),
-		MAXIMUM_NOTIFICATIONS = 99,
 		api = M.require( 'api' ),
 		NotificationsOverlay;
 
@@ -23,14 +22,8 @@
 				// Fall back to notifications archive page.
 				window.location.href = this.$badge.attr( 'href' );
 			},
-			updateCount: function ( newCount ) {
-				var $count = this.$badge.find( 'span' );
-				$count.text( newCount );
-				if ( newCount === 0 ) {
-					$count.addClass( 'zero' );
-				} else {
-					$count.removeClass( 'zero' );
-				}
+			markAsRead: function () {
+				this.$badge.find( 'span' ).remove();
 			},
 			initialize: function( options ) {
 				var self = this;
@@ -95,32 +88,19 @@
 			},
 			preRender: function( options ) {
 				var heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
+				// FIXME: Remove when moving new notification overlay style to stable
 				if ( !M.isBetaGroupMember() ) {
 					heading += '<span>' + options.count + '</span>';
 				}
 				options.heading = heading;
 			},
 			postRender: function( options ) {
-				var $badge, className, badgeText;
 				this._super( options );
-				if ( M.isBetaGroupMember() ) {
-					if ( options.count >= MAXIMUM_NOTIFICATIONS ) {
-						className = 'max';
-						badgeText = mw.msg( 'echo-notification-count', MAXIMUM_NOTIFICATIONS );
-					} else {
-						badgeText = options.count;
-						className = options.count ? '' : 'zero';
-					}
-
-					// FIXME: Move this code to template when moved from beta to stable
-					$badge = $( '<a href="#" class="user-button icon icon-32px">' ).appendTo( this.$el );
-					$( '<span>' ).addClass( className ).text( badgeText ).appendTo( $badge );
-				}
 
 				if ( options.notifications || options.errorMessage ) {
 					this.$( '.loading' ).remove();
 					// Reset the badge
-					this.updateCount( 0 );
+					this.markAsRead();
 				}
 			}
 	} );
