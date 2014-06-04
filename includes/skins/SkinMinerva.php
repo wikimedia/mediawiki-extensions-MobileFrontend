@@ -732,7 +732,7 @@ class SkinMinerva extends SkinTemplate {
 		), $this->getSkinConfigMobileVariables() );
 
 		if ( $this->isAuthenticatedUser() ) {
-			$vars['wgMFIsLoggedInUserBlocked'] = $user->isBlocked();
+			$vars['wgMFIsLoggedInUserBlocked'] = $user->isBlocked() && $user->isBlockedFrom( $title );
 		}
 		// mobile specific config variables
 		if ( $this->mobileContext->shouldDisplayMobileView() ) {
