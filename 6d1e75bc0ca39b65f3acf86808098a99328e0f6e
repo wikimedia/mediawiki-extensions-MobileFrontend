@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e1a5767_060dbf41",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-04T17:55:02Z",
+      "side": 1,
+      "message": "I would suggest removing this function and using a protected variable instead for the message.",
+      "revId": "6d1e75bc0ca39b65f3acf86808098a99328e0f6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_2610bb5a",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-04T17:55:02Z",
+      "side": 1,
+      "message": "Personally I would rename this to getSearchAttributes() - it\u0027s much clearer. It\u0027s not actually preparing anything and setting a template variable now - the idea with prepare prefix was to hint it was preparing template variables for use later :)",
+      "revId": "6d1e75bc0ca39b65f3acf86808098a99328e0f6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
