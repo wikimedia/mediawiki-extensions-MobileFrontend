@@ -845,7 +845,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
-			'javascripts/modules/uploads/lead-photo-init.js',
+			'javascripts/modules/uploads/init.js',
 			'javascripts/modules/mainmenutweaks.js',
 		),
 		'messages' => array(

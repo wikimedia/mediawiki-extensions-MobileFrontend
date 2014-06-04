@@ -2,10 +2,9 @@
 
 	var
 		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
-		user = M.require( 'user' ),
-		popup = M.require( 'toast' ),
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/LeadPhotoUploaderButton' ),
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
+		user = M.require( 'user' ),
 		isSupported = PhotoUploaderButton.isSupported;
 
 	function needsPhoto( $container ) {
@@ -17,12 +16,6 @@
 		$.cookie( 'mwUploadsFunnel', null );
 	}
 
-	function makeDisabledButton( msg ) {
-		$( '#ca-upload' ).on( 'click', function() {
-			popup.show( mw.msg( msg || 'mobile-frontend-photo-upload-disabled' ), 'toast' );
-		} );
-	}
-
 	function initialize() {
 		// FIXME: make some general function for that (or a page object with a method)
 		var
@@ -30,13 +23,13 @@
 			isEditable = mw.config.get( 'wgIsPageEditable' ),
 			validNamespace = ( M.inNamespace( '' ) || M.inNamespace( 'user' ) || M.inNamespace( 'file' ) );
 
-		if ( user.isAnon() ) {
-			return makeDisabledButton( 'mobile-frontend-photo-upload-anon' );
-		} else if ( !M.inNamespace( 'file' ) ) {
-			if ( !isEditable ) {
-				return makeDisabledButton( 'mobile-frontend-photo-upload-protected' );
-			} else if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( M.getLeadSection() ) || mw.config.get( 'wgIsMainPage' ) ) {
-				return makeDisabledButton();
+		if ( !M.inNamespace( 'file' ) ) {
+			if ( !isEditable || !validNamespace ||
+				// FIXME: Anonymous users cannot upload but really this should also check rights of user via getRights
+				// (without triggering an additional HTTP request)
+					user.isAnon() ||
+					mw.util.getParamValue( 'action' ) || !needsPhoto( M.getLeadSection() ) || mw.config.get( 'wgIsMainPage' ) ) {
+				$( '#ca-upload' ).remove();
 			}
 		}
 
@@ -48,8 +41,6 @@
 		M.on( 'page-loaded', function() {
 			initialize();
 		} );
-	} else {
-		makeDisabledButton( 'mobile-frontend-photo-upload-unavailable' );
 	}
 
 	M.define( 'modules/uploads/_leadphoto', {
