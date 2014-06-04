@@ -329,6 +329,8 @@
 	"mobile-frontend-watchlist-login-action": "Call to action that follows {{msg-mw|mobile-frontend-watchlist-purpose}} asking them to login.",
 	"mobile-frontend-watchlist-modified": "Text saying how long ago a page in watchlist was updated.\n* $1 - output of {{msg-mw|ago}} (e.g. \"15 days ago\", \"7 hours ago\").",
 	"mobile-frontend-watchlist-more": "Label for link that shows more pages of the watchlist a-z view.\n{{Identical|More}}",
+	"mobile-frontend-watchlist-please-wait": "Shows if watch action is taking longer than 500ms.",
+  "mobile-frontend-watchlist-error": "Shows if an error occurred whilst trying to watch the page.",
 	"mobile-frontend-watchlist-purpose": "Shows on [[Special:UserLogin]] explains why someone would want to login to see a watchlist.",
 	"mobile-frontend-watchlist-removed": "Notification message when you remove a age from your watchlist\n*$1 - the title of the article",
 	"mobile-frontend-watchlist-signup-action": "Call to action that follows {{msg-mw|mobile-frontend-watchlist-purpose}} asking them to signup.",
