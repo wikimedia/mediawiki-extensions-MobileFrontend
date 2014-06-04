@@ -154,6 +154,13 @@ $wgSpecialPages = array_merge( $wgSpecialPages, array(
 // Register Minerva as a valid skin
 $wgValidSkinNames['minerva'] = "Minerva";
 
+// Which users should see an upload button on pageviews?
+$wgAvailableRights[] = 'mf-uploadbutton';
+$wgGroupPermissions['*']['mf-uploadbutton'] = false;
+$wgGroupPermissions['autoconfirmed']['mf-uploadbutton'] = true;
+$wgGroupPermissions['sysop']['mf-uploadbutton'] = true;
+
+
 function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
 		$wgResourceLoaderLESSImportPaths,
