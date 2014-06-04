@@ -4,10 +4,6 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	public $template = 'MinervaTemplateAlpha';
 	protected $mode = 'alpha';
 
-	protected function getSearchPlaceHolderText() {
-		return wfMessage( 'mobile-frontend-placeholder-alpha' )->text();
-	}
-
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['alpha'] = array( 'mobile.alpha' );

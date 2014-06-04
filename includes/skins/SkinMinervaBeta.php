@@ -17,10 +17,6 @@ class SkinMinervaBeta extends SkinMinerva {
 		parent::outputPage( $out );
 	}
 
-	protected function getSearchPlaceHolderText() {
-		return wfMessage( 'mobile-frontend-placeholder-beta' )->text();
-	}
-
 	protected function getSkinStyles() {
 		$title = $this->getTitle();
 
