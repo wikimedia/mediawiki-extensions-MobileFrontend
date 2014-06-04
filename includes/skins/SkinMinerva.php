@@ -6,8 +6,6 @@
  * @ingroup Skins
  */
 class SkinMinerva extends SkinTemplate {
-	// FIXME: Kill use of this variable when notification drawer goes to stable
-	protected $echoButtonClass = 'user-button main-header-button';
 	/**
 	 * Describes whether reader is on a mobile device
 	 * @var bool $isMobileMode
@@ -223,7 +221,7 @@ class SkinMinerva extends SkinTemplate {
 						'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
 						'href' => $notificationsTitle->getLocalURL(
 							array( 'returnto' => $currentTitle->getPrefixedText() ) ),
-						'class' => $this->echoButtonClass,
+						'class' => 'user-button icon icon-32px main-header-button',
 						'id'=> 'secondary-button',
 					) ) .
 					Html::element(

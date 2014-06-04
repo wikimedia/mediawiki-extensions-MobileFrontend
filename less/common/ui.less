@@ -147,17 +147,6 @@ input.search {
 	.languageSelector {
 		margin-top: 1em;
 	}
-
-	// FIXME: Remove when notification drawer goes to stable
-	.header {
-		#secondary-button.user-button {
-			span {
-				width: 24px;
-				height: 24px;
-				line-height: 24px;
-			}
-		}
-	}
 }
 
 .truncated-text {
@@ -195,10 +184,13 @@ input.search {
 	.user-button {
 		width: @headerHeight;
 		text-align: center;
+		// Make sure count is positioned correctly in relation to bell icon
+		position: relative;
+		.background-image-svg-quick( 'images/bell' );
+		// Fixes positioning in Firefox
+		display: inline-block;
+		float: right;
 
-		&:hover {
-			text-decoration: none;
-		}
 
 		&.loading span {
 			display: none;
@@ -211,9 +203,24 @@ input.search {
 			color: #fff;
 			background: #c91f2c;
 			border-radius: 2px;
+			position: absolute;
+			right: .6em;
+			top: .6em;
+			width: 1.2em;
+			height: 1.2em;
+			line-height: 1.2em;
 
 			&.zero {
-				background: @grayLight;
+				display: none;
+			}
+
+			// FIXME: There must be a better way of doing this
+			&.max {
+				right: .2em;
+				width: 2em;
+				height: 2em;
+				line-height: 2em;
+				font-size: 0.7em;
 			}
 		}
 	}

@@ -29,11 +29,12 @@
 	// than linking to Special:Notifications.
 	$( function () {
 		$btn.on( M.tapEvent( 'click' ), function() {
-			M.router.navigate( M.isBetaGroupMember() ? '#/notifications-drawer' : '#/notifications' );
+			M.router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay
 			return false;
 		} );
+
 		function loadNotificationOverlay() {
 			var result = $.Deferred();
 			loadModuleScript( 'mobile.notifications.overlay' ).done( function() {
@@ -46,22 +47,18 @@
 			return result;
 		}
 
-		M.overlayManager.add( /^\/notifications$/, loadNotificationOverlay );
-		if ( M.isBetaGroupMember() ) {
-			M.overlayManager.add( /^\/notifications-drawer$/, function() {
-				return loadNotificationOverlay().done( function( overlay ) {
-					mainmenu.openNavigationDrawer( 'secondary' );
-					overlay.$el.addClass( 'navigation-drawer' );
-					overlay.on( 'hide', function() {
-						mainmenu.closeNavigationDrawers();
-						$( '#mw-mf-page-center' ).off( '.secondary' );
-					});
+		M.overlayManager.add( /^\/notifications$/, function() {
+			return loadNotificationOverlay().done( function( overlay ) {
+				mainmenu.openNavigationDrawer( 'secondary' );
+				overlay.on( 'hide', function() {
+					mainmenu.closeNavigationDrawers();
+					$( '#mw-mf-page-center' ).off( '.secondary' );
+				});
 
-					$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.secondary', function() {
-						M.router.back();
-					} );
+				$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.secondary', function() {
+					M.router.back();
 				} );
 			} );
-		}
+		} );
 	} );
 }( mw.mobileFrontend, jQuery ) );

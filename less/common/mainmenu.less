@@ -1,5 +1,7 @@
 // Component of ui.less
 // FIXME: Move to components/
+@import "minerva.variables";
+@import "minerva.mixins";
 
 /* Left menu */
 @menuBorder: 12px;
@@ -26,10 +28,11 @@
 
 // Transparent shield hidden by default
 .transparent-shield,
-// Kept for caching reasons
-#mw-mf-page-left,
 .navigation-drawer {
-	display: none; /* JS only */
+	// don't use display: none because it's not animatable
+	position: absolute;
+	z-index: 0;
+	visibility: hidden;
 }
 
 // needs to be more specific than .overlay rules
@@ -184,13 +187,11 @@ body.navigation-enabled {
 	}
 
 	.navigation-drawer,
-	// Kept for caching reasons
-	#mw-mf-page-left {
-		display: block;
+	.transparent-shield {
+		visibility: visible;
 	}
 
 	.transparent-shield {
-		display: block;
 		background: @semiTransparent;
 		opacity: 1;
 	}
@@ -230,5 +231,99 @@ body.navigation-enabled {
 
 	.notifications-overlay.navigation-drawer {
 		left: @rightDrawerLeftOffset;
+	}
+}
+
+// animated version
+// FIXME: doesn't work in Firefox due to https://bugzilla.mozilla.org/show_bug.cgi?id=625289
+// do we want to work around it?
+
+.animations {
+	@duration: .25s;
+	@easing: ease-out;
+
+	#mw-mf-page-center {
+		min-height: 100%;
+		// We need to ensure the content has a white background - otherwise it will
+		// overlap the menu during the main menu reveal/hide animation
+		background-color: #fff;
+
+		// *2 to avoid weird glitch of left nav flickering after closing
+		@transition: @duration @easing, height 0s (@duration*2);
+		.transition-transform(@transition);
+	}
+
+	#mw-mf-page-left {
+		width: @menuWidth;
+
+		.transition(visibility 0s @duration);
+	}
+
+	.notifications-overlay.navigation-drawer {
+		display: block;
+
+		// +2% to accommodate for the border/box-shadow
+		.transform(translate3d(102%, 0, 0));
+		.transition-transform(@duration @easing, visibility 0s @duration;);
+
+		&.visible {
+			.transform(translate3d(0, 0, 0));
+		}
+	}
+
+	.navigation-enabled {
+		.position-fixed,
+		#mw-mf-page-center {
+			.transition-transform(@duration @easing);
+		}
+	}
+
+	.primary-navigation-enabled {
+		.position-fixed,
+		#mw-mf-page-center {
+			// override non-animated version
+			left: 0 !important;
+			.transform(translate3d(@menuWidth, 0, 0));
+		}
+
+		#mw-mf-page-left {
+			// make menu scrollable when open (on small screens)
+			position: static;
+
+			.transition(none);
+		}
+	}
+
+	.secondary-navigation-enabled {
+		#mw-mf-page-center {
+			// override non-animated version
+			left: 0 !important;
+			.transform(translate3d(-@rightDrawerWidth, 0, 0));
+			width: 100%;
+		}
+	}
+
+	.rtl {
+		.notifications-overlay.navigation-drawer {
+			// +2% to accommodate for the border/box-shadow
+			.transform(translate3d(-102%, 0, 0));
+
+			&.visible {
+				.transform(translate3d(0, 0, 0));
+			}
+		}
+
+		&.primary-navigation-enabled {
+			.position-fixed,
+			#mw-mf-page-center {
+				.transform(translate3d(-@menuWidth, 0, 0));
+			}
+		}
+
+		&.secondary-navigation-enabled {
+			#mw-mf-page-center {
+				.transform(translate3d(@rightDrawerWidth, 0, 0));
+			}
+		}
 	}
 }

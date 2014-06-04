@@ -513,9 +513,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta.common',
 			'mobile.overlays',
 		),
-		'styles' => array(
-			'less/common/mainmenuAnimation.less',
-		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/mf-toggle-dynamic.js',

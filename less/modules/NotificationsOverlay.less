@@ -2,98 +2,100 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-.overlay {
+.notifications-overlay {
+	// position: fixed + sliding drawer causes weird rendering bugs in Android
+	// Browser (tested on 4.0.4 and 4.2.1)
+	padding-top: 0;
+
+	.overlay-header-container {
+		position: static !important;
+	}
+
 	.mw-mf-notifications {
 		padding-bottom: 0;
+		bottom: @headerHeight;
+		top: @headerHeight;
+		overflow-y: auto;
 	}
+
 	.mw-echo-icon {
 		width: 30px;
 		height: 30px;
 		float: left;
 		margin: 0 10px 0 0;
 	}
+
 	.mw-echo-content {
 		margin-left: 40px;
+		font-size: .9em;
+		line-height: 1.4;
 	}
+
 	.mw-echo-notification-footer {
-		font-size: .75em;
+		margin-top: .6em;
+		font-size: .9em;
 	}
+
 	.mw-echo-notification-primary-link {
 		display: none;
 	}
+
 	.mw-echo-notification {
 		padding: 1.2em 1em 1em;
 		border-bottom: 1px solid #eee;
+		// FIXME: ARgghghghg more grays - think of the children!
+		background: #F8F8F8;
 
 		&:hover {
 			// FIXME: Yet another gray..
 			background-color: #F9F9F9;
 		}
 	}
+
 	.mw-echo-linked-notification {
 		cursor: pointer;
 	}
+
 	.notifications-archive-link {
 		display: block;
 		// The 1em bottom whitespace is applied as padding since Chrome and Safari ignore
 		// it otherwise. The 10px padding corresponds with the icon margin.
-		margin: 1em 1em 0 1em;
-		padding: 0 1em 1em 10px;
+		padding: 1em 1em 1em 10px;
+		border-top: 1px solid @grayLight;
+		background-color: #FFF;
+		text-align: center;
+		bottom: 0;
 	}
-}
 
-.alpha,
-.beta {
-	.notifications-overlay{
-		.mw-echo-notification {
-			// FIXME: ARgghghghg more grays - think of the children!
-			background: #F8F8F8;
-		}
+	.mw-mf-notifications,
+	.notifications-archive-link {
+		position: absolute;
+		right: 0;
+		left: 0;
+	}
 
-		.mw-mf-notifications,
-		.notifications-archive-link {
-			position: absolute;
-			right: 0;
-			left: 0;
-		}
+	.mw-echo-title {
+		font-size: 1em;
+		line-height: 1.4;
+	}
 
-		.mw-mf-notifications {
-			bottom: @headerHeight;
-			top: @headerHeight;
-			overflow-y: auto;
-		}
+	.mw-echo-payload {
+		margin-top: .4em
+	}
 
-		.notifications-archive-link {
-			border-top: 1px solid @grayLight;
-			background-color: #FFF;
-			text-align: center;
-			bottom: 0;
-			margin: 0;
-			padding-top: 1em;
-		}
-
-		.mw-echo-title {
-			font-size: 1em;
-			line-height: 1.4;
-		}
-		.mw-echo-content {
-			font-size: .9em;
-			line-height: 1.4;
-		}
-		.mw-echo-payload {
-			margin-top: .4em
-		}
-		.mw-echo-notification-footer {
-			margin-top: .6em;
-			font-size: .9em;
-		}
+	.user-button {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding-right: 0;
+		z-index: 5;
 	}
 }
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
 	.notifications-overlay {
 		.mw-echo-notification {
-			padding: 1.75em 2.75em;
+			padding: 1.75em @contentPaddingTablet;
 		}
 	}
 }

@@ -9,7 +9,7 @@
 	 */
 	NotificationsOverlay = Overlay.extend( {
 			active: false,
-			className: 'overlay notifications-overlay',
+			className: 'overlay notifications-overlay navigation-drawer',
 			templatePartials: {
 				content: M.template.get( 'modules/notifications/NotificationsOverlay' )
 			},
@@ -87,12 +87,7 @@
 				} );
 			},
 			preRender: function( options ) {
-				var heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
-				// FIXME: Remove when moving new notification overlay style to stable
-				if ( !M.isBetaGroupMember() ) {
-					heading += '<span>' + options.count + '</span>';
-				}
-				options.heading = heading;
+				options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
 			},
 			postRender: function( options ) {
 				this._super( options );

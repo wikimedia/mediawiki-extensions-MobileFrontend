@@ -52,10 +52,8 @@
 				ev.preventDefault();
 			}
 		} );
-		if ( M.isBetaGroupMember() ) {
-			// Move when notification drawer in stable
-			$( '<div class="transparent-shield cloaked-element">' ).appendTo( '#mw-mf-page-center' );
-		}
+
+		$( '<div class="transparent-shield cloaked-element">' ).appendTo( '#mw-mf-page-center' );
 	}
 
 	M.define( 'mainmenu', {
