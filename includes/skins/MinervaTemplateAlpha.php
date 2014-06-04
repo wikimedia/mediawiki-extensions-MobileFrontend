@@ -1,10 +1,17 @@
 <?php
+/**
+ * Alternative Minerva template sent to users who have opted into the
+ * experimental (alpha) mode via Special:MobileOptions
+ */
 class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	/**
 	 * @var string $searchPlaceHolderMsg Message used as placeholder in search input
 	 */
 	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder-alpha';
 
+	/**
+	 * Show/Render categories as section in alpha mode
+	 */
 	protected function renderCategories() {
 		$skin = $this->getSkin();
 		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );
@@ -22,6 +29,9 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 		}
 	}
 
+	/**
+	 * Add categories section to Meta section in page
+	 */
 	protected function renderMetaSections() {
 		$this->renderCategories();
 		parent::renderMetaSections();

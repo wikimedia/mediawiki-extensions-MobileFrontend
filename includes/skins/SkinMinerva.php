@@ -1,25 +1,27 @@
 <?php
-
 /**
  * Minerva: Born from the godhead of Jupiter with weapons!
  * A skin that works on both desktop and mobile
  * @ingroup Skins
  */
 class SkinMinerva extends SkinTemplate {
-	/**
-	 * Describes whether reader is on a mobile device
-	 * @var bool $isMobileMode
-	 */
+	/** @var boolean $isMobileMode Describes whether reader is on a mobile device */
 	protected $isMobileMode = false;
+	/** @var string $skinname Name of this skin */
 	public $skinname = 'minerva';
+	/** @var string $template Name of this used template */
 	public $template = 'MinervaTemplate';
+	/** @var boolean $useHeadElement Specify whether show head elements */
 	public $useHeadElement = true;
-	/**
-	 * Describes 'stability' of the skin - alpha, beta, stable
-	 * @var string $mode
-	 */
+	/** @var string $mode Describes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'stable';
+	/** @var MobileContext $mobileContext Safes an instance of MobileContext */
+	protected $mobileContext;
 
+	/**
+	 * initialize various variables and generate the template
+	 * @return QuickTemplate
+	 */
 	protected function prepareQuickTemplate() {
 		global $wgAppleTouchIcon, $wgMFNoindexPages;
 		wfProfileIn( __METHOD__ );
@@ -127,6 +129,11 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Overrides Skin::doEditSectionLink
+	 * @param Title $nt
+	 * @param string $section
+	 * @param string $tooltip
+	 * @param string $lang
+	 * @return string
 	 */
 	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
@@ -165,25 +172,25 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * @return string The current mode of the skin [stable|beta|alpha|app] that is running
+	 * Get the current mode of the skin [stable|beta|alpha|app] that is running
+	 * @return string
 	 */
 	protected function getMode() {
 		return $this->mode;
 	}
 
 	/**
-	 * @var MobileContext
-	 */
-	protected $mobileContext;
-
-	/**
-	 * FIXME: This helper function is only truly needed whilst SkinMobileApp does not support login
-	 * @return bool Whether the current user is authenticated or not.
+	 * Check whether the current user is authenticated or not.
+	 * @todo This helper function is only truly needed whilst SkinMobileApp does not support login
+	 * @return bool
 	 */
 	protected function isAuthenticatedUser() {
 		return !$this->getUser()->isAnon();
 	}
 
+	/**
+	 * Initiate class
+	 */
 	public function __construct() {
 		$this->mobileContext = MobileContext::singleton();
 		$this->isMobileMode = $this->mobileContext->shouldDisplayMobileView();
@@ -316,8 +323,7 @@ class SkinMinerva extends SkinTemplate {
 	 * other than languages
 	 * See bug 57094.
 	 *
-	 * FIXME: Remove when Special:Languages link goes stable
-	 *
+	 * @todo Remove when Special:Languages link goes stable
 	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareLanguages( $tpl ) {
@@ -402,7 +408,7 @@ class SkinMinerva extends SkinTemplate {
 	/**
 	 * Creates a login or logout button
 	 * @return array Representation of button with text and href keys
-	*/
+	 */
 	protected function getLogInOutLink() {
 		global $wgSecureLogin;
 		wfProfileIn( __METHOD__ );
@@ -516,6 +522,10 @@ class SkinMinerva extends SkinTemplate {
 		return $link;
 	}
 
+	/**
+	 * Create and prepare header and footer content
+	 * @param BaseTemplate $tpl
+	 */
 	protected function prepareHeaderAndFooter( BaseTemplate $tpl ) {
 		$title = $this->getTitle();
 		$user = $this->getUser();
@@ -560,6 +570,10 @@ class SkinMinerva extends SkinTemplate {
 		}
 	}
 
+	/**
+	 * Prepare the button opens the main side menu
+	 * @param BaseTemplate $tpl
+	 */
 	protected function prepareMenuButton( BaseTemplate $tpl ) {
 		// menu button
 		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl();
@@ -573,7 +587,12 @@ class SkinMinerva extends SkinTemplate {
 		);
 	}
 
-	// Beware of HTML caching when using this function.
+	/**
+	 * Load internal banner content to show in pre content in template
+	 * Beware of HTML caching when using this function.
+	 * Content set as "internalbanner"
+	 * @param BaseTemplate $tpl
+	 */
 	protected function prepareBanners( BaseTemplate $tpl ) {
 		global $wgMFEnableSiteNotice;
 
@@ -591,6 +610,10 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'internalBanner', '' );
 	}
 
+	/**
+	 * Prepare site links in footer
+	 * @param BaseTemplate $tpl
+	 */
 	protected function prepareSiteLinks( BaseTemplate $tpl ) {
 		$aboutPageTitleText = $this->msg( 'aboutpage' )->inContentLanguage()->text();
 		$disclaimerPageTitleText = $this->msg( 'disclaimerpage' )->inContentLanguage()->text();
@@ -612,6 +635,10 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'site_urls', $urls );
 	}
 
+	/**
+	 * Prepare warnings for mobile output
+	 * @param BaseTemplate $tpl
+	 */
 	protected function prepareWarnings( BaseTemplate $tpl ) {
 		$out = $this->getOutput();
 		if ( $out->getRequest()->getText( 'oldid' ) ) {
@@ -623,6 +650,10 @@ class SkinMinerva extends SkinTemplate {
 		}
 	}
 
+	/**
+	 * Prepare configured and available page actions
+	 * @param BaseTemplate $tpl
+	 */
 	protected function preparePageActions( BaseTemplate $tpl ) {
 		$title = $this->getTitle();
 		// Reuse template data variable from SkinTemplate to construct page menu
@@ -686,6 +717,10 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'page_actions', $menu );
 	}
 
+	/**
+	 * Get various skin specific configuration.
+	 * @return array
+	 */
 	private function getSkinConfigMobileVariables() {
 		$vars = array();
 		if ( $this->isMobileMode ) {
@@ -745,6 +780,10 @@ class SkinMinerva extends SkinTemplate {
 		return $vars;
 	}
 
+	/**
+	 * Returns the javascript modules to load.
+	 * @return array
+	 */
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		// flush unnecessary modules
@@ -799,6 +838,10 @@ class SkinMinerva extends SkinTemplate {
 		$bodyAttrs[ 'class' ] .= ' ' . $classes;
 	}
 
+	/**
+	 * Get the needed styles for this skin
+	 * @return array
+	 */
 	protected function getSkinStyles() {
 		$title = $this->getTitle();
 		$styles = array(
@@ -830,6 +873,10 @@ class SkinMinerva extends SkinTemplate {
 		$out->addModuleStyles( $this->getSkinStyles() );
 	}
 
+	/**
+	 * initialize various variables and generate the template
+	 * @param OutputPage $out optional parameter: The OutputPage Obj.
+	 */
 	public function outputPage( OutputPage $out = null ) {
 		wfProfileIn( __METHOD__ );
 
@@ -856,6 +903,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Returns the site name for the footer, either as a text or <img> tag
+	 * @return string
 	 */
 	protected function getSitename() {
 		global $wgMFCustomLogos, $wgMFTrademarkSitename;

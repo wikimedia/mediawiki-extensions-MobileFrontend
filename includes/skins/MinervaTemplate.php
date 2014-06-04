@@ -1,25 +1,33 @@
 <?php
+/**
+ * Extended Template class of BaseTemplate for mobile devices
+ */
 class MinervaTemplate extends BaseTemplate {
-	// FIXME: Remove variable when secondary page actions menu moves to stable
+	/**
+	 * @var string $languageButtonClassName Class names of language selector
+	 * @todo: Remove variable when secondary page actions menu moves to stable
+	 */
 	protected $languageButtonClassName = 'mw-ui-button mw-ui-progressive button languageSelector';
-	/**
-	 * @var string $searchPlaceHolderMsg Message used as placeholder in search input
-	 */
+	/** @var string $searchPlaceHolderMsg Message used as placeholder in search input */
 	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder';
-	/**
-	 * @var Boolean
-	 */
+
+	/** @var boolean Specify whether the page is a special page */
 	protected $isSpecialPage;
 
-	/**
-	 * @var Boolean
-	 */
+	/** @var boolean Specify whether the page is main page */
 	protected $isMainPage;
 
+	/**
+	 * Get elements for personal toolbar
+	 * @return array
+	 */
 	public function getPersonalTools() {
 		return $this->data['personal_urls'];
 	}
 
+	/**
+	 * Start render the page in template
+	 */
 	public function execute() {
 		$this->isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		$this->isMainPage = $this->getSkin()->getTitle()->isMainPage();
@@ -27,30 +35,59 @@ class MinervaTemplate extends BaseTemplate {
 		$this->render( $this->data );
 	}
 
+	/**
+	 * Returns the available languages for this page
+	 * @return array
+	 */
 	public function getLanguageVariants() {
 		return $this->data['content_navigation']['variants'];
 	}
 
+	/**
+	 * Get the language links for this page
+	 * @return array
+	 */
 	public function getLanguages() {
 		return $this->data['language_urls'];
 	}
 
+	/**
+	 * Returns main sidebar menu elements
+	 * @return array
+	 */
 	public function getDiscoveryTools() {
 		return $this->data['discovery_urls'];
 	}
 
+	/**
+	 * Returns sidebar footer links
+	 * @return array
+	 */
 	public function getSiteLinks() {
 		return $this->data['site_urls'];
 	}
 
+	/**
+	 * Returns available page actions
+	 * @return array
+	 */
 	public function getPageActions() {
 		return $this->data['page_actions'];
 	}
 
+	/**
+	 * Returns footer links
+	 * @param string $option
+	 * @return array
+	 */
 	public function getFooterLinks( $option = null ) {
 		return $this->data['footerlinks'];
 	}
 
+	/**
+	 * Get attributes to create search input
+	 * @return array Array with attributes for search bar
+	 */
 	protected function getSearchAttributes() {
 		$searchBox = array(
 			'id' => 'searchInput',
@@ -63,6 +100,10 @@ class MinervaTemplate extends BaseTemplate {
 		return $searchBox;
 	}
 
+	/**
+	 * Render Footer elements
+	 * @param array $data Data used to build the footer
+	 */
 	protected function renderFooter( $data ) {
 		?>
 		<div id="footer">
@@ -87,6 +128,10 @@ class MinervaTemplate extends BaseTemplate {
 		<?php
 	}
 
+	/**
+	 * Render available page actions
+	 * @param array $data Data used to build page actions
+	 */
 	protected function renderPageActions( $data ) {
 		?><ul id="page-actions" class="hlist"><?php
 		foreach( $this->getPageActions() as $key => $val ):
@@ -128,6 +173,9 @@ class MinervaTemplate extends BaseTemplate {
 		}
 	}
 
+	/**
+	 * Render secondary page actions like language selector
+	 */
 	protected function renderMetaSections() {
 		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
 
@@ -176,6 +224,10 @@ class MinervaTemplate extends BaseTemplate {
 		}
 	}
 
+	/**
+	 * Renders pre-content (e.g. heading)
+	 * @param array $data Data used to build the page
+	 */
 	protected function renderPreContent( $data ) {
 		$internalBanner = $data[ 'internalBanner' ];
 		$isSpecialPage = $this->isSpecialPage;
@@ -199,6 +251,10 @@ class MinervaTemplate extends BaseTemplate {
 		}
 	}
 
+	/**
+	 * Render wrapper for loading content
+	 * @param array $data Data used to build the page
+	 */
 	protected function renderContentWrapper( $data ) {
 		$this->renderHistoryLinkTop( $data );
 		?>
@@ -210,6 +266,10 @@ class MinervaTemplate extends BaseTemplate {
 			$this->renderContent( $data );
 	}
 
+	/**
+	 * Render side menu as lists
+	 * @param array $data Data used to build the page
+	 */
 	protected function renderMainMenu( $data ) {
 		?>
 		<ul>
@@ -236,7 +296,12 @@ class MinervaTemplate extends BaseTemplate {
 		<?php
 	}
 
-	protected function render( $data ) { // FIXME: replace with template engines
+	/**
+	 * Render the entire page
+	 * @param array $data Data used to build the page
+	 * @todo replace with template engines
+	 */
+	protected function render( $data ) {
 
 		// begin rendering
 		echo $data[ 'headelement' ];

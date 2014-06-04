@@ -3,19 +3,22 @@
  * Provides a custom account creation form for mobile devices
  */
 class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
+	/** @var array $actionMessages Message keys for page actions */
 	protected $actionMessages = array(
 		'watch' => 'mobile-frontend-watchlist-signup-action',
 		'edit' => 'mobile-frontend-edit-signup-action',
 		'signup-edit' => 'mobile-frontend-edit-signup-action',
 		'' => 'mobile-frontend-generic-signup-action',
 	);
+	/** @var array $actionMessages Message keys for site links */
 	protected $pageMessages = array(
 		'Uploads' => 'mobile-frontend-donate-image-signup-action',
 		'Watchlist' => 'mobile-frontend-watchlist-signup-action',
 	);
 
 	/**
-	 * @TODO refactor this into parent template
+	 * Render Login/Create specific template
+	 * @todo refactor this into parent template
 	 */
 	public function execute() {
 		$action = $this->data['action'];
@@ -93,8 +96,8 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 	 * a display an input field for the user to enter captcha info, without
 	 * the additinal cruft.
 	 *
-	 * @TODO move this into ConfirmEdit extension when MW is context aware
-	 * @param string
+	 * @todo move this into ConfirmEdit extension when MW is context aware
+	 * @param string $header
 	 * @return string
 	 */
 	protected function handleCaptcha( $header ) {

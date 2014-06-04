@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template overloader for user login and account cration templates
  *
@@ -8,12 +7,15 @@
  * special mobile-specific magic.
  */
 abstract class UserLoginAndCreateTemplate extends QuickTemplate {
+	/** @var array $actionMessagesHeaders Message keys for site links */
 	protected $pageMessageHeaders = array(
 		'Uploads' => 'mobile-frontend-donate-image-login',
 		'Watchlist' => 'mobile-frontend-watchlist-purpose',
 	);
+	/** @var array $actionMessages Message keys for site links */
 	protected $pageMessages = array();
 
+	/** @var array $actionMessagesHeaders Message keys for page actions */
 	protected $actionMessageHeaders = array(
 		'watch' => 'mobile-frontend-watchlist-purpose',
 		'edit' => 'mobile-frontend-edit-login',
@@ -21,6 +23,10 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		'' => 'mobile-frontend-generic-login',
 	);
 
+	/**
+	 * Message keys for page actions
+	 * @var array $actionMessages
+	 */
 	protected $actionMessages = array();
 
 	/**
@@ -35,6 +41,9 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		$this->copyObjectProperties( $template );
 	}
 
+	/**
+	 * Render message box with system messages, e.g. errors or already logged-in notices
+	 */
 	protected function renderMessageHtml() {
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 
@@ -86,6 +95,7 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 
 	/**
 	 * Prepare template data if an anon is attempting to log in after watching an article
+	 * @return string
 	 */
 	protected function getArticleTitleToWatch() {
 		$ret = '';
@@ -173,6 +183,9 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		}
 	}
 
+	/**
+	 * Display Mobile Frontend specific logo over login form.
+	 */
 	protected function getLogoHtml() {
 		global $wgMobileFrontendLogo;
 

@@ -1,21 +1,38 @@
 <?php
-
+/**
+ * Alpha-Implementation of stable class SkinMinervaBeta
+ */
 class SkinMinervaAlpha extends SkinMinervaBeta {
+	/** @var string Name of the template */
 	public $template = 'MinervaTemplateAlpha';
+	/** @var stringDescribes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'alpha';
 
+	/**
+	 * Returns the javascript modules to load.
+	 * @return array
+	 */
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['alpha'] = array( 'mobile.alpha' );
 		return $modules;
 	}
 
+	/**
+	 * initialize various variables and generate the template
+	 * @return QuickTemplate
+	 */
 	protected function prepareQuickTemplate() {
 		$tpl = parent::prepareQuickTemplate();
 		$this->prepareTalkLabel( $tpl );
 		return $tpl;
 	}
 
+	/**
+	 * Add the talk page link for logged in alpha users to template
+	 * @param BaseTemplate $tpl an instance of BaseTemplate
+	 * @return QuickTemplate
+	 */
 	protected function prepareTalkLabel( BaseTemplate $tpl ) {
 		$title = $this->getTitle();
 		$isSpecialPage = $title->isSpecialPage();

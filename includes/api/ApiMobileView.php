@@ -1,26 +1,46 @@
 <?php
-
+/**
+ * Extends Api of MediaWiki with actions for mobile devices. For further information see
+ * https://www.mediawiki.org/wiki/Extension:MobileFrontend#API
+ */
 class ApiMobileView extends ApiBase {
 	/**
 	 * Increment this when changing the format of cached data
 	 */
 	const CACHE_VERSION = 7;
 
-	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant, $offset, $maxlen,
-		$usePageImages;
-
-	/**
-	 * @var File
-	 */
+	/** @var boolean Saves whether redirects has to be followed or not */
+	private $followRedirects;
+	/** @var boolean Saves whether sections have the header name or not */
+	private $noHeadings;
+	/** @var boolean Saves whether the requested page is the main page */
+	private $mainPage;
+	/** @var boolean Saves whether the output is formatted or not */
+	private $noTransform;
+	/** @var boolean Saves whether page images should be added or not */
+	private $usePageImages;
+	/** @var string Saves in which language the content should be output */
+	private $variant;
+	/** @var Integer Saves at which character the section content start at */
+	private $offset;
+	/** @var Integer Saves value to specify the max length of a sections content */
+	private $maxlen;
+	/** @var file|boolean Saves a File Object, or false if no file exist */
 	private $file;
 
+	/**
+	 * Run constructor of ApiBase
+	 * @param ApiMain $main Instance of class ApiMain
+	 * @param string $action Name of this module
+	 */
 	public function __construct( $main, $action ) {
 		$this->usePageImages = defined( 'PAGE_IMAGES_INSTALLED' );
 		parent::__construct( $main, $action );
 	}
 
 	/**
-	 * FIXME: Write some unit tests for API results
+	 * Execute the requested Api actions.
+	 * @todo: Write some unit tests for API results
 	 */
 	public function execute() {
 		wfProfileIn( __METHOD__ );
@@ -202,7 +222,6 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Creates and validates a title
-	 *
 	 * @param string $name
 	 * @return Title
 	 */
@@ -220,6 +239,11 @@ class ApiMobileView extends ApiBase {
 		return $title;
 	}
 
+	/**
+	 * Splits a string (using $offset and $maxlen)
+	 * @param string $text The text to split
+	 * @return string
+	 */
 	private function stringSplitter( $text ) {
 		if ( $this->offset < 0  ) {
 			return $text; // NOOP - string splitting mode is off
@@ -244,6 +268,11 @@ class ApiMobileView extends ApiBase {
 		return '';
 	}
 
+	/**
+	 * Delete headings from page html
+	 * @param string $html Page content
+	 * @return string
+	 */
 	private function prepareSection( $html ) {
 		if ( $this->noHeadings ) {
 			$html = preg_replace( '#<(h[1-6])\b.*?<\s*/\s*\\1>#', '', $html );
@@ -253,12 +282,10 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Parses requested sections string into a list of sections
-	 *
 	 * @param string $str String to parse
 	 * @param array $data Processed parser output
 	 * @param array $missingSections Upon return, contains the list of sections that were
-	 *                                requested but are not present in parser output
-	 *
+	 * requested but are not present in parser output
 	 * @return array
 	 */
 	public static function parseSections( $str, $data, &$missingSections ) {
@@ -312,7 +339,6 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Performs a page parse
-	 *
 	 * @param WikiPage $wp
 	 * @param ParserOptions $parserOptions
 	 * @return ParserOutput
@@ -334,7 +360,6 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Creates a WikiPage from title
-	 *
 	 * @param Title $title
 	 * @return WikiPage
 	 */
@@ -344,15 +369,19 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Creates a ParserOptions instance
-	 *
 	 * @param WikiPage $wp
-	 *
 	 * @return ParserOptions
 	 */
 	protected function makeParserOptions( WikiPage $wp ) {
 		return $wp->makeParserOptions( $this );
 	}
 
+	/**
+	 * Get data of requested article.
+	 * @param Title $title
+	 * @param boolean $noImages
+	 * @return array
+	 */
 	private function getData( Title $title, $noImages ) {
 		global $wgMemc, $wgUseTidy, $wgMFTidyMobileViewSections, $wgMFMinCachedPageSize;
 
@@ -510,6 +539,11 @@ class ApiMobileView extends ApiBase {
 		return $data;
 	}
 
+	/**
+	 * Get a Filepage as parsed HTML
+	 * @param Title $title
+	 * @return string
+	 */
 	private function getFilePage( Title $title ) {
 		//HACK: HACK: HACK:
 		wfProfileIn( __METHOD__ );
@@ -523,10 +557,10 @@ class ApiMobileView extends ApiBase {
 	}
 
 	/**
-	 * Adds PageImages information
-	 * @param array $data: whatever getData() returned
-	 * @param array $prop: prop parameter value
-	 * @param int $size: thumbnail size
+	 * Adds Image information to Api result.
+	 * @param array $data whatever getData() returned
+	 * @param array $prop prop parameter value
+	 * @param int $size thumbnail size
 	 */
 	private function addPageImage( array $data, array $prop, $size ) {
 		if ( !isset( $prop['image'] ) && !isset( $prop['thumb'] ) ) {
@@ -569,7 +603,7 @@ class ApiMobileView extends ApiBase {
 	}
 
 	/**
-	 * Adds protection information
+	 * Adds protection information to the Api result
 	 * @param Title $title
 	 */
 	private function addProtection( Title $title ) {
@@ -587,6 +621,10 @@ class ApiMobileView extends ApiBase {
 		);
 	}
 
+	/**
+	 * Get allowed Api parameters.
+	 * @return array
+	 */
 	public function getAllowedParams() {
 		$res = array(
 			'page' => array(
@@ -659,6 +697,10 @@ class ApiMobileView extends ApiBase {
 		return $res;
 	}
 
+	/**
+	 * Get the description for Api parameters.
+	 * @return array
+	 */
 	public function getParamDescription() {
 		$res = array(
 			'id' => 'Id of the page',
@@ -705,10 +747,18 @@ class ApiMobileView extends ApiBase {
 		return $res;
 	}
 
+	/**
+	 * Get description of this Api.
+	 * @return string
+	 */
 	public function getDescription() {
 		return 'Returns data needed for mobile views';
 	}
 
+	/**
+	 * Returns some Api request examples for mobile Api.
+	 * @return array
+	 */
 	public function getExamples() {
 		return array(
 			'api.php?action=mobileview&page=Doom_metal&sections=0',
@@ -717,6 +767,10 @@ class ApiMobileView extends ApiBase {
 		);
 	}
 
+	/**
+	 * Returns the Help URL for this Api
+	 * @return string
+	 */
 	public function getHelpUrls() {
 		return 'https://www.mediawiki.org/wiki/Extension:MobileFrontend#action.3Dmobileview';
 	}

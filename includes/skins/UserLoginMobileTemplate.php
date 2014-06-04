@@ -3,17 +3,20 @@
  * Provides a custom login form for mobile devices
  */
 class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
+	/** @var array $actionMessages Message keys for page actions */
 	protected $actionMessages = array(
 		'watch' => 'mobile-frontend-watchlist-login-action',
 		'edit' => 'mobile-frontend-edit-login-action',
 		'' => 'mobile-frontend-generic-login-action',
 	);
+	/** @var array $actionMessages Message keys for site links */
 	protected $pageMessages = array(
 		'Uploads' => 'mobile-frontend-donate-image-login-action',
 		'Watchlist' => 'mobile-frontend-watchlist-login-action',
 	);
 
 	/**
+	 * Build the login page
 	 * @todo Refactor this into parent template
 	 */
 	public function execute() {

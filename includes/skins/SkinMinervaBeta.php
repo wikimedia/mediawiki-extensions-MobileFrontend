@@ -1,9 +1,17 @@
 <?php
-
+/**
+ * Beta-Implementation of stable class SkinMinerva
+ */
 class SkinMinervaBeta extends SkinMinerva {
+	/** @var string $template Name of this template */
 	public $template = 'MinervaTemplateBeta';
+	/** @var string $mode Describes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'beta';
 
+	/**
+	 * initialize various variables and generate the template
+	 * @param OutputPage $out optional parameter: The OutputPage Obj.
+	 */
 	public function outputPage( OutputPage $out = null ) {
 		wfProfileIn( __METHOD__ );
 		if ( !$out ) {
@@ -15,6 +23,10 @@ class SkinMinervaBeta extends SkinMinerva {
 		parent::outputPage( $out );
 	}
 
+	/**
+	 * Get the needed styles for this skin
+	 * @return array
+	 */
 	protected function getSkinStyles() {
 		$title = $this->getTitle();
 
@@ -31,6 +43,10 @@ class SkinMinervaBeta extends SkinMinerva {
 		return $styles;
 	}
 
+	/**
+	 * initialize various variables and generate the template
+	 * @return QuickTemplate
+	 */
 	protected function prepareQuickTemplate() {
 		$tpl = parent::prepareQuickTemplate();
 		// Move last modified link to top as long as it is not the main page
@@ -38,6 +54,10 @@ class SkinMinervaBeta extends SkinMinerva {
 		return $tpl;
 	}
 
+	/**
+	 * Get various skin specific configuration.
+	 * @return array
+	 */
 	public function getSkinConfigVariables() {
 		$vars = parent::getSkinConfigVariables();
 		// Kill this when we fix the functionality in PageApi.js
@@ -50,6 +70,10 @@ class SkinMinervaBeta extends SkinMinerva {
 		return $vars;
 	}
 
+	/**
+	 * Returns the javascript modules to load.
+	 * @return array
+	 */
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		if ( $this->isAllowedPageAction( 'talk' ) ) {
@@ -62,6 +86,11 @@ class SkinMinervaBeta extends SkinMinerva {
 		return $modules;
 	}
 
+	/**
+	 * Load internal banner content to show in pre content in template
+	 * Content set as "internalbanner"
+	 * @param BaseTemplate $tpl
+	 */
 	protected function prepareBanners( BaseTemplate $tpl ) {
 		global $wgMFKeepGoing;
 
@@ -116,6 +145,10 @@ class SkinMinervaBeta extends SkinMinerva {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Handles new pages to show error message and print message, that page does not exist.
+	 * @param OutputPage $out
+	 */
 	protected function handleNewPages( OutputPage $out ) {
 		# Show error message
 		$title = $this->getTitle();
@@ -133,6 +166,10 @@ class SkinMinervaBeta extends SkinMinerva {
 		}
 	}
 
+	/**
+	 * Prepare warnings for mobile devices
+	 * @param BaseTemplate $tpl
+	 */
 	protected function prepareWarnings( BaseTemplate $tpl ) {
 		parent::prepareWarnings( $tpl );
 		$out = $this->getOutput();
