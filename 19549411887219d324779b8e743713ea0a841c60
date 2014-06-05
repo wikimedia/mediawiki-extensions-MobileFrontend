@@ -16,6 +16,24 @@
       "revId": "19549411887219d324779b8e743713ea0a841c60",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_8e3fa1d3",
+        "filename": "javascripts/modules/uploads/lead-photo-init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T06:28:40Z",
+      "side": 1,
+      "message": "Maybe extend SkinMinerva::isAllowedPageAction()",
+      "parentUuid": "2e1a5767_6e4d659b",
+      "revId": "19549411887219d324779b8e743713ea0a841c60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
