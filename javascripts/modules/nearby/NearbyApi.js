@@ -122,6 +122,8 @@
 						page.latitude = coords.lat;
 						page.longitude = coords.lon;
 						page.proximity = self._distanceMessage( page.dist );
+					} else {
+						page.dist = 0;
 					}
 					page.id = page.pageid;
 					page.heading = page.title;
