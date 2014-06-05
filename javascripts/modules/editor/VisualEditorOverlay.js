@@ -18,7 +18,6 @@
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-saving', options.title );
 			this._super( options );
 			this.hasChanged = false;
-			this.$spinner = self.$( '.spinner' );
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
 			this.initializeSwitcher();
 		},
@@ -125,20 +124,18 @@
 			} );
 		},
 		switchToSourceEditor: function( options ) {
+			var self = this;
 			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the SourceEditor
 			M.settings.saveUserSetting( 'preferredEditor', 'SourceEditor', true );
+			this.showSpinner();
+			this.$( '.surface' ).hide();
 			// Load the SourceEditor and replace the VisualEditor overlay with it
 			mw.loader.using( 'mobile.editor.overlay', function() {
 				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+				self.clearSpinner();
 				M.overlayManager.replaceCurrent( new EditorOverlay( options ) );
 			} );
-		},
-		showSpinner: function () {
-			this.$spinner.show();
-		},
-		clearSpinner: function() {
-			this.$spinner.hide();
 		},
 		onSave: function() {
 			this._super();

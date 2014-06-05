@@ -41,6 +41,20 @@
 			}
 			schema.log( data );
 		},
+		/**
+		 * Reveals a spinner at the top of the overlay.
+		 * @method
+		 */
+		showSpinner: function () {
+			this.$spinner.show();
+		},
+		/**
+		 * Hides a spinner at the top of the overlay.
+		 * @method
+		 */
+		clearSpinner: function() {
+			this.$spinner.hide();
+		},
 
 		_updateEditCount: function() {
 			this.editCount += 1;
@@ -166,6 +180,7 @@
 		},
 		postRender: function( options ) {
 			var self = this;
+			this.$spinner = self.$( '.spinner' );
 			// log edit attempt
 			this.log( 'attempt' );
 

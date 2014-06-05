@@ -47,7 +47,6 @@
 			var self = this;
 			this._super( options );
 
-			this.$spinner = this.$( '.spinner' );
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( 'textarea' ).
 				on( 'input', function() {
@@ -109,7 +108,7 @@
 
 			this.scrollTop = $( 'body' ).scrollTop();
 			this.$content.hide();
-			this.$spinner.show();
+			this.showSpinner();
 
 			// pre-fetch keep going with expectation user will go on to save
 			if ( this._shouldShowKeepGoingOverlay() ) {
@@ -131,14 +130,14 @@
 			} ).fail( function() {
 				self.$preview.addClass( 'error' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
 			} ).always( function() {
-				self.$spinner.hide();
+				self.clearSpinner();
 				self.$preview.show();
 			} );
 		},
 
 		_hidePreview: function() {
 			this.api.abort();
-			this.$spinner.hide();
+			this.clearSpinner();
 			this.$preview.removeClass( 'error' ).hide();
 			this.$content.show();
 			window.scrollTo( 0, this.scrollTop );
@@ -150,7 +149,7 @@
 			var self = this;
 
 			this.$content.hide();
-			this.$spinner.show();
+			this.showSpinner();
 
 			this.api.getContent().
 				done( function( content ) {
@@ -158,7 +157,7 @@
 						show().
 						val( content ).
 						microAutosize();
-					self.$spinner.hide();
+					self.clearSpinner();
 				} ).
 				fail( function( error ) {
 					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), error );
@@ -166,12 +165,16 @@
 		},
 
 		_switchToVisualEditor: function( options ) {
+			var self = this;
 			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the VisualEditor
 			M.settings.saveUserSetting( 'preferredEditor', 'VisualEditor', true );
 			// Load the VisualEditor and replace the SourceEditor overlay with it
+			this.showSpinner();
+			this.$content.hide();
 			mw.loader.using( 'mobile.editor.ve', function() {
 				var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
+				self.clearSpinner();
 				M.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
 			} );
 		},
