@@ -7,7 +7,6 @@
  * For intance, the hook handler for the 'RequestContextCreateSkin' would be called:
  *	onRequestContextCreateSkin()
  */
-
 class MobileFrontendHooks {
 	/**
 	 * LinksUpdate hook handler - saves a count of h2 elements that occur in the WikiPage
@@ -289,7 +288,7 @@ class MobileFrontendHooks {
 	/**
 	 * Hook for SpecialPage_initList in SpecialPageFactory.
 	 *
-	 * @param array &$list list of special page classes
+	 * @param array $list list of special page classes
 	 * @return bool hook return value
 	 */
 	public static function onSpecialPage_initList( &$list ) {
@@ -319,7 +318,7 @@ class MobileFrontendHooks {
 	/**
 	 * ListDefinedTags hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
-	 * @param array &$tags
+	 * @param array $tags
 	 *
 	 * @return bool
 	 */
@@ -373,7 +372,7 @@ class MobileFrontendHooks {
 	 * AbuseFilter-builder hook handler that adds user_mobile variable to list
 	 *  of valid vars
 	 *
-	 * @param array &$builder Array in AbuseFilter::getBuilderValues to add to.
+	 * @param array $builder Array in AbuseFilter::getBuilderValues to add to.
 	 * @return bool
 	 */
 	public static function onAbuseFilterBuilder( &$builder ) {
@@ -465,7 +464,7 @@ class MobileFrontendHooks {
 		return true;
 	}
 
-	/*
+	/**
 	 * UserLoginForm hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserLoginForm
 	 *
