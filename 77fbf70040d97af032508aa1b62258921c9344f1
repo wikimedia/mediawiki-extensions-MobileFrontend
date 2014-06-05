@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e1a5767_22ebf90a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T21:36:07Z",
+      "side": 1,
+      "message": "Please remove copyright warning :)",
+      "revId": "77fbf70040d97af032508aa1b62258921c9344f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_e2d4e14d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T21:36:07Z",
+      "side": 1,
+      "message": "Please remove copyright warning :)",
+      "revId": "77fbf70040d97af032508aa1b62258921c9344f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_02e8fd09",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T21:36:07Z",
+      "side": 1,
+      "message": "Please drop this. The comment below is more descriptive.",
+      "revId": "77fbf70040d97af032508aa1b62258921c9344f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_c2d9e584",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T21:36:07Z",
+      "side": 1,
+      "message": "You should drop this comment. Not useful.",
+      "revId": "77fbf70040d97af032508aa1b62258921c9344f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_62c8d1aa",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T21:36:07Z",
+      "side": 1,
+      "message": "Drop this - the comment below seems to be more descriptive.",
+      "revId": "77fbf70040d97af032508aa1b62258921c9344f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_a2cee9b7",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T21:36:07Z",
+      "side": 1,
+      "message": "Merge with comment below.",
+      "revId": "77fbf70040d97af032508aa1b62258921c9344f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
