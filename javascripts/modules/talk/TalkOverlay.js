@@ -2,8 +2,8 @@
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var
-		Overlay = M.require( 'OverlayNew' ),
-		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
+		Overlay = M.require( 'Overlay' ),
+		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		Page = M.require( 'Page' ),
 		TalkSectionAddOverlay = M.require( 'modules/talk/TalkSectionAddOverlay' ),
 		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),

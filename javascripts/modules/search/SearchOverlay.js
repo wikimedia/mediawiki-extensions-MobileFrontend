@@ -1,13 +1,13 @@
 ( function( M, $ ) {
 
 	var
-		OverlayNew = M.require( 'OverlayNew' ),
+		Overlay = M.require( 'Overlay' ),
 		SearchApi = M.require( 'modules/search/SearchApi' ),
 		PageList = M.require( 'modules/PageList' ),
 		SEARCH_DELAY = 300,
 		SearchOverlay;
 
-	SearchOverlay = OverlayNew.extend( {
+	SearchOverlay = Overlay.extend( {
 		className: 'overlay search-overlay',
 		template: M.template.get( 'modules/search/SearchOverlay' ),
 		defaults: {

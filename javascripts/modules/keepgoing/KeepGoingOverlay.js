@@ -1,13 +1,13 @@
 ( function( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 
-	var Overlay = M.require( 'OverlayNew' ),
+	var Overlay = M.require( 'Overlay' ),
 		mobileWebCta = M.require( 'loggingSchemas/mobileWebCta' ),
 		KeepGoingOverlay;
 
 	/**
 	 * @class KeepGoingOverlay
-	 * @extends OverlayNew
+	 * @extends Overlay
 	 * This creates the overlay at the bottom of the screen that appears after a user
 	 * successfully completes their first edit. It encourages the user to edit another page.
 	 */

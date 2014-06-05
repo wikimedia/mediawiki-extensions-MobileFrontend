@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	var OverlayNew = M.require( 'OverlayNew' ),
+	var Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
@@ -8,10 +8,10 @@
 		EditorOverlayBase;
 
 	/**
-	 * @extends OverlayNew
+	 * @extends Overlay
 	 * @class EditorOverlayBase
 	 */
-	EditorOverlayBase = OverlayNew.extend( {
+	EditorOverlayBase = Overlay.extend( {
 		defaults: {
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),

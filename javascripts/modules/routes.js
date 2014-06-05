@@ -1,7 +1,7 @@
 /* Defines all possible routes in MobileFrontend and where to find the code to provide them. */
 ( function( M, $ ) {
 	var
-		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
+		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		lastFile;
 
 	// FIXME: this is hacky but it would be hard to pass a file in a route

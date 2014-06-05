@@ -1,12 +1,12 @@
 ( function( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha', 'desktop-beta' ] );
-	var Overlay = M.require( 'OverlayNew' ),
+	var Overlay = M.require( 'Overlay' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		api = M.require( 'api' ),
 		ua = window.navigator.userAgent,
 		device = 'unknown',
 		Page = M.require( 'Page' ),
-		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
+		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		/*
 		* @class PagePreviewOverlay
 		*/

@@ -1,9 +1,9 @@
 ( function( M, $ ) {
 
-	var OverlayNew = M.require( 'OverlayNew' ),
+	var Overlay = M.require( 'Overlay' ),
 		LanguageOverlay;
 
-	LanguageOverlay = OverlayNew.extend( {
+	LanguageOverlay = Overlay.extend( {
 		defaults: {
 			heading: mw.msg( 'mobile-frontend-language-heading' ),
 			placeholder: mw.msg( 'mobile-frontend-language-site-choose' )

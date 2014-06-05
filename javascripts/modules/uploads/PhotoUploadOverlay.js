@@ -2,7 +2,7 @@
 ( function( M, $ ) {
 	var popup = M.require( 'toast' ),
 		user = M.require( 'user' ),
-		OverlayNew = M.require( 'OverlayNew' ),
+		Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
@@ -13,9 +13,9 @@
 
 	/**
 	 * @class PhotoUploadOverlay
-	 * @extends OverlayNew
+	 * @extends Overlay
 	 */
-	PhotoUploadOverlay = OverlayNew.extend( {
+	PhotoUploadOverlay = Overlay.extend( {
 		defaults: {
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),
 			help: mw.msg( 'mobile-frontend-photo-ownership-help' ),

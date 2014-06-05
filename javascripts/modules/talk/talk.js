@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	var LoadingOverlay = M.require( 'LoadingOverlayNew' );
+	var LoadingOverlay = M.require( 'LoadingOverlay' );
 
 	M.assertMode( [ 'beta', 'alpha', 'app' ] );
 

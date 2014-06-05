@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 var
-	Overlay = M.require( 'OverlayNew' ),
+	Overlay = M.require( 'Overlay' ),
 	popup = M.require( 'toast' ),
 	api = M.require( 'api' ),
 	user = M.require( 'user' ),

@@ -1,11 +1,11 @@
 ( function( M, $ ) {
-	var Overlay = M.require( 'OverlayNew' ),
+	var Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
 		NotificationsOverlay;
 
 	/**
 	 * @class NotificationsOverlay
-	 * @extend OverlayNew
+	 * @extend Overlay
 	 */
 	NotificationsOverlay = Overlay.extend( {
 			active: false,
