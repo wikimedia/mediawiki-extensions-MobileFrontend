@@ -113,7 +113,8 @@ Given(/^the "(.*?)" page is protected\.$/) do |page|
 end
 
 Given(/^I am viewing the site in tablet mode$/) do
-  @browser.window.resize_to(768, 1024)
+  # Use numbers significantly larger than 768px to account for browser chrome
+  @browser.window.resize_to(1280, 1024)
 end
 
 Given(/^I am viewing the site in mobile mode$/) do
