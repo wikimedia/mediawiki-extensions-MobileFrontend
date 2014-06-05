@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e1a5767_c491f553",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T19:57:24Z",
+      "side": 1,
+      "message": "This is actually badly documented. It actually disables the rendering of images in articles (e.g. Special:MobileOptions when you click images off)\n\nThe contribute an image button is in Special:Uploads",
+      "revId": "bda1271c99baef6f4b13a95be65771b47847e88e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
