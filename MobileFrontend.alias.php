@@ -198,10 +198,14 @@ $specialPageAliases['ja'] = array(
 
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
+	'History' => array( '역사' ),
+	'MobileWebApp' => array( '모바일웹앱' ),
 	'MobileOptions' => array( '모바일설정' ),
 	'Uploads' => array( '올린파일' ),
 	'MobileDiff' => array( '모바일차이' ),
+	'MobileEditor' => array( '모바일편집기' ),
 	'MobileMenu' => array( '모바일메뉴' ),
+	'MobileLanguages' => array( '모바일언어' ),
 	'Nearby' => array( '근처' ),
 	'UserProfile' => array( '사용자프로필' ),
 );
