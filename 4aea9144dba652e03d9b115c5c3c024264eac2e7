@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_0716cf4d",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_0477ed36",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_449cc55f",
         "filename": "includes/DeviceDetection.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-06-05T20:09:03Z",
       "side": 1,
       "message": "Might be worth elaborating. Suggested:\nCheck if device is a mobile device based on current user agent string.",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_a71cbb6b",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_449cc55f",
       "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_c727b7b0",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_649fc156",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_84ff7d62",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2014-06-05T20:09:03Z",
       "side": 1,
       "message": "I\u0027d explain what it is doing outside scope of this class.\ne.g. Turns on the support for marking up of sections in the document.",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_c74e9772",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_84ff7d62",
       "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_476167cf",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_a4e399d3",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_c4de9514",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2014-06-05T20:09:03Z",
       "side": 1,
       "message": "This is not relevant to this function :)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_e786336a",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_c4de9514",
       "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_e7d4f34d",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_04eb6da1",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_84153d9f",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 1
@@ -132,6 +258,24 @@
       "writtenOn": "2014-06-05T20:09:03Z",
       "side": 1,
       "message": "Transforms content to be mobile friendly version. Filters out various elements and runs the MobileFormatter.\n\n(It does other things rather than remove)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_07e80f0a",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_84153d9f",
       "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_07bfeff7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_642a21d9",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_04212df6",
         "filename": "includes/MobilePage.php",
         "patchSetId": 1
@@ -166,6 +328,24 @@
       "writtenOn": "2014-06-05T20:09:03Z",
       "side": 1,
       "message": "(again)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_6747c323",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_04212df6",
       "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -189,6 +369,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_0765afaa",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_e47d11e6",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_a48719dc",
         "filename": "includes/MobilePage.php",
         "patchSetId": 1
@@ -200,6 +398,24 @@
       "writtenOn": "2014-06-05T20:09:03Z",
       "side": 1,
       "message": "@return missing",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_27cc2b8c",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_a48719dc",
       "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -223,6 +439,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_87b41fe6",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_848c1d01",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_446e052c",
         "filename": "includes/MobilePage.php",
         "patchSetId": 1
@@ -234,6 +468,24 @@
       "writtenOn": "2014-06-05T20:09:03Z",
       "side": 1,
       "message": "Instead of create I\u0027d say get :)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_27a9cb78",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_446e052c",
       "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -257,6 +509,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_a795db37",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_6471010b",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_04780dec",
         "filename": "includes/MobileUserInfo.php",
         "patchSetId": 1
@@ -274,6 +544,24 @@
     },
     {
       "key": {
+        "uuid": "2e1a5767_27ee6bb2",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_04780dec",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e1a5767_e464f147",
         "filename": "includes/MobileUserInfo.php",
         "patchSetId": 1
@@ -285,6 +573,24 @@
       "writtenOn": "2014-06-05T20:09:03Z",
       "side": 1,
       "message": "@throws MWException when used on anonymous user.",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_47d4c7be",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-05T20:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e1a5767_e464f147",
       "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
