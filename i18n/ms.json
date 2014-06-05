@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
-			"Aurora"
+			"Aurora",
+			"Pizza1016"
 		]
 	},
 	"beta-feature-minerva": "Bolehkan kulit mudah alih (Minerva) di desktop",
@@ -169,14 +170,14 @@
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Apa pendapat anda?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tajuk topik",
 	"mobile-frontend-talk-add-overlay-submit": "Tambah perbincangan",
-	"mobile-frontend-talk-edit-summary": "Bahagian perbualan baru: $1",
+	"mobile-frontend-talk-edit-summary": "Bahagian perbincangan baru: $1",
 	"mobile-frontend-talk-explained": "Yang berikut adalah penukaran-penukaran yang sedang giat dijalankan",
 	"mobile-frontend-talk-explained-empty": "Tiada penukaran berkenaan halaman ini.",
-	"mobile-frontend-talk-overlay-header": "Perbualan",
+	"mobile-frontend-talk-overlay-header": "Perbincangan",
 	"mobile-frontend-talk-overlay-lead-header": "Perbincangan tanpa nama",
 	"mobile-frontend-talk-reply": "Balas",
 	"mobile-frontend-talk-reply-info": "Sila ambil perhatian bahawa balasan anda akan ditandatangani secara automatik dengan nama pengguna anda.",
-	"mobile-frontend-talk-reply-success": "Balasan anda berjaya disimpan dalam halaman perbualan.",
+	"mobile-frontend-talk-reply-success": "Balasan anda berjaya disimpan di laman perbincangan.",
 	"mobile-frontend-thanked-notice": "$1 telah diberitahu bahawa anda menyukai suntingan{{GENDER:$2|nya}}.",
 	"mobile-frontend-user-account": "Akaun pengguna",
 	"mobile-frontend-user-button-tooltip": "Paparkan pemberitahuan untuk saya",
@@ -200,7 +201,7 @@
 	"mobile-frontend-watchlist-filter-all": "Semua",
 	"mobile-frontend-watchlist-filter-articles": "Rencana",
 	"mobile-frontend-watchlist-filter-other": "Lain-lain",
-	"mobile-frontend-watchlist-filter-talk": "Perbualan",
+	"mobile-frontend-watchlist-filter-talk": "Perbincangan",
 	"mobile-frontend-watchlist-login-action": "Log masuk untuk melihatnya.",
 	"mobile-frontend-watchlist-modified": "Diubah $1",
 	"mobile-frontend-watchlist-more": "lagi",
