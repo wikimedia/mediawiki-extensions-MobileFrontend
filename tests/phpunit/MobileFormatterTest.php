@@ -68,6 +68,30 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<div>' . $longLine . '</div>',
 				$enableSections
 			),
+			// \n</h3> in headers
+			array(
+				'<h3><span>h3</span></h3>'
+					. $longLine
+					. '<h4><span>h4</span></h4>'
+					. 'h4 text.',
+				'<div></div>'
+					. '<h3><span>h3</span></h3>'
+					. '<div>'
+					. $longLine
+					. '<h4><span>h4</span></h4>'
+					. 'h4 text.'
+					. '</div>',
+				$enableSections
+			),
+			// \n</h6> in headers
+			array(
+				'<h6><span>h6</span></h6>'
+					. $longLine,
+				'<div></div>'
+					. '<h6><span>h6</span></h6>'
+					. '<div>' . $longLine . '</div>',
+				$enableSections
+			),
 			// Bug 36670
 			array(
 				'<h2><span class="mw-headline" id="History"><span id="Overview"></span>'

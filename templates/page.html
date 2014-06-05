@@ -13,10 +13,10 @@
 <div id="content" class="content">
 	<div>{{{lead}}}</div>
 	{{#sections}}
-	<h2 data-id="{{id}}">
+	<{{tag}} data-id="{{id}}">
 		<span id="{{anchor}}">{{{line}}}</span>
 		<a href="#editor/{{id}}" data-section="{{id}}" class="edit-page icon icon-edit enabled icon-32px">{{editLabel}}</a>
-	</h2>
+	</{{tag}}>
 	<div
 		data-references="{{isReferences}}"
 		data-content="{{text}}">
