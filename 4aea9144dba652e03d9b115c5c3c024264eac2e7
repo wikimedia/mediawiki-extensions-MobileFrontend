@@ -1,0 +1,293 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e1a5767_0477ed36",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "You\u0027ll want to document each of these separately like you have in MobileContext\n\nFeel free to split into lines.\ne.g.\nprivate $userAgent;\nprivate $acceptHeader;\n\ne.g. @var string $userAgent\n@var string $acceptHeader",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_449cc55f",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "Might be worth elaborating. Suggested:\nCheck if device is a mobile device based on current user agent string.",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_649fc156",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "Might be worth elaborating. Suggested:\nCheck if device is a tablet device based on current user agent string.",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_84ff7d62",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "I\u0027d explain what it is doing outside scope of this class.\ne.g. Turns on the support for marking up of sections in the document.",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_a4e399d3",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "I think this function can be killed with fire now along with the other use in this function - it seems to do nothing :)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_c4de9514",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "This is not relevant to this function :)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_04eb6da1",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "No need for copyright, license or link here. We just put that in MobileFrontend.",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_84153d9f",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "Transforms content to be mobile friendly version. Filters out various elements and runs the MobileFormatter.\n\n(It does other things rather than remove)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_642a21d9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "^ again not needed",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_04212df6",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "(again)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_e47d11e6",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "What is this file though?\nSuggested:\nAssociated page image file (see PageImages extension)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_a48719dc",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "@return missing",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_848c1d01",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "@return missing",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_446e052c",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "Instead of create I\u0027d say get :)",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_6471010b",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "@return missing",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_04780dec",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "!",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e1a5767_e464f147",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-05T20:09:03Z",
+      "side": 1,
+      "message": "@throws MWException when used on anonymous user.",
+      "revId": "4aea9144dba652e03d9b115c5c3c024264eac2e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
