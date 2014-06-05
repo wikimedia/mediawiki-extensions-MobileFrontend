@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e1a5767_6e4d659b",
+        "filename": "javascripts/modules/uploads/lead-photo-init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 169
+      },
+      "writtenOn": "2014-06-05T06:03:44Z",
+      "side": 1,
+      "message": "In the commit comment you mentioned \"flash of unstyled content\" because of this.\n\nCan\u0027t you determine much of this up front in php and just not add that button at all in SkinMinerva.php? That would avoid this problem altogether, wouldn\u0027t it?",
+      "revId": "19549411887219d324779b8e743713ea0a841c60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
