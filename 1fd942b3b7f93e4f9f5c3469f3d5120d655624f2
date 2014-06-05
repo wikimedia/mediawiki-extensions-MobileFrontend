@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e1a5767_c421f5ad",
+        "filename": "javascripts/common/history-alpha.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-05T20:25:13Z",
+      "side": 1,
+      "message": "I think this could really benefit from a comment...\n\nvar title \u003d mw.config.get( \u0027wgPageName\u0027 ), query, currentUrl;\n\n// Remove title param from query string before appending to URL\nquery \u003d $.extend( {}, M.query );\ndelete query.title;\ncurrentUrl \u003d mw.util.getUrl( title, query );",
+      "revId": "1fd942b3b7f93e4f9f5c3469f3d5120d655624f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
