@@ -2,7 +2,7 @@
 @import "minerva.mixins";
 
 
-ul.mobileUserGallery {
+.image-list {
 	margin: 20px @contentMargin 0;
 
 	li {
@@ -31,10 +31,12 @@ ul.mobileUserGallery {
 }
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	.beta, .alpha {
-		.ctaUploadPhoto {
-			border-bottom: none;
-			background: none;
-		}
+	.image-list {
+		margin: auto;
+	}
+
+	.ctaUploadPhoto {
+		border-bottom: none;
+		background: none;
 	}
 }
