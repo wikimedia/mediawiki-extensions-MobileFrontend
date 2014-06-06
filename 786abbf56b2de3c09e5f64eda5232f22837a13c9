@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e3593d1_55effe82",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-06T18:43:49Z",
+      "side": 1,
+      "message": "Just return \u0027h6\u0027 here.",
+      "revId": "786abbf56b2de3c09e5f64eda5232f22837a13c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_f5fdd239",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-06T18:43:49Z",
+      "side": 1,
+      "message": "Inconsistency with PHP which processes h6 too.",
+      "revId": "786abbf56b2de3c09e5f64eda5232f22837a13c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
