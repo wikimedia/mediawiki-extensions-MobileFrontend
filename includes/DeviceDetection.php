@@ -130,6 +130,7 @@ class DeviceProperties implements IDeviceProperties {
 			'sec-',
 			'sendo',
 			'sharp',
+			'silk',
 			'softbank',
 			'symbian',
 			'teleca',
@@ -154,11 +155,21 @@ class DeviceProperties implements IDeviceProperties {
 	private function detectTablet() {
 		wfProfileIn( __METHOD__ );
 
-		$pattern = '/(iPad|Android.3|Tablet|PlayBook|Wii)/i'; // @todo: Kindle?
-		$result = (bool)preg_match( $pattern, $this->userAgent );
+		// The only way to distinguish Android browsers on tablet from Android browsers on
+		// mobile is that Android browsers on tablet usually don't include the word
+		// "mobile". We look for "mobi" instead of "mobile" due to Opera Mobile. Note that
+		// this test fails to detect some obscure tablets such as older Xoom tablets and
+		// Portablet tablets. See http://stackoverflow.com/questions/5341637.
+		$isAndroid = (bool)preg_match( '/Android/i', $this->userAgent );
+		if ( $isAndroid ) {
+			$isTablet = !(bool)preg_match( '/mobi/i', $this->userAgent );
+		} else {
+			$pattern = '/(iPad|Tablet|PlayBook|Wii|Silk)/i';
+			$isTablet = (bool)preg_match( $pattern, $this->userAgent );
+		}
 
 		wfProfileOut( __METHOD__ );
-		return $result;
+		return $isTablet;
 	}
 }
 

@@ -43,16 +43,26 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 		array( 'KDDI-KC31 UP.Browser/6.2.0.5 (GUI) MMP/2.0', 'text/bullshit, text/vnd.wap.wml' ),
 	);
 	private $tablets = array(
+		// iPad
 		'Mozilla/5.0 (iPad; CPU OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A501 Safari/9537.53',
-		'Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2',
+		// Motorola Xoom
+		'Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13',
+		// Opera Mobile running on a tablet
 		'Opera/9.80 (Android 4.0.4; Linux; Opera Tablet/ADR-1301080958) Presto/2.11.355 Version/12.10',
+		// Firefox running on a tablet
 		'Mozilla/5.0 (Android; Tablet; rv:24.0) Gecko/24.0 Firefox/24.0',
-		'Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; Portablet 01 Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
+		// Nintendo Wii
 		'Opera/9.00 (Nintendo Wii; U; ; 1309-9; en)',
 		'Mozilla/5.0 (Nintendo WiiU) AppleWebKit/536.28 (KHTML, like Gecko) NX/3.0.3.12.6 NintendoBrowser/2.0.0.9362.EU',
+		// Samsung Galaxy Tab
+		'Mozilla/5.0 (Linux; U; Android 4.2.2; nl-nl; GT-P5210 Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30',
+		// Kindle Fire, Silk browser operating in "desktop" mode
+		// (Silk operating in "mobile" mode will only be detected as a mobile device.)
+		'Mozilla/5.0 (Linux; U; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Safari/535.19 Silk-Accelerated=true',
 		// @todo:
 		//'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML, like Gecko) Version/7.2.1.0 Safari/536.2+',
 		//'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MDDR; .NET4.0C; .NET4.0E; .NET CLR 1.1.4322; Tablet PC 2.0); 360Spider',
+		//'Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; Portablet 01 Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
 	);
 	// @codingStandardsIgnoreEnd
 
