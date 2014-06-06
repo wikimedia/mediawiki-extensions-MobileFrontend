@@ -300,7 +300,7 @@
 	function getSessionId() {
 		var sessionId;
 		if ( !M.supportsLocalStorage ) {
-			return null;
+			return '';
 		}
 		sessionId = localStorage.getItem( 'sessionId' );
 
