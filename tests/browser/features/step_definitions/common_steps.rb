@@ -110,6 +110,7 @@ Given(/^the "(.*?)" page is protected\.$/) do |page|
   end
   step 'I switch to the mobile site'
   step 'I click on "Log out" in the main navigation menu'
+  step 'I am on the "Special:UserLogout" page'
 end
 
 Given(/^I am viewing the site in tablet mode$/) do
