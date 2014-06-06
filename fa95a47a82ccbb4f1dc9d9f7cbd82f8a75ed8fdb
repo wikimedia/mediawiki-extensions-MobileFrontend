@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e3593d1_124d0c9c",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-06T16:07:14Z",
+      "side": 1,
+      "message": "Example of what I said when +2ing.. above text should be part of line below.",
+      "revId": "fa95a47a82ccbb4f1dc9d9f7cbd82f8a75ed8fdb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
