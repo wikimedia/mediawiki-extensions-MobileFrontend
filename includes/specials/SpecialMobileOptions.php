@@ -217,7 +217,9 @@ HTML;
 
 		if ( !$user->matchEditToken( $request->getVal( 'token' ), 'mobile' ) ) {
 			wfIncrStats( 'mobile.options.errors' );
-			$errorText = __METHOD__ . "(): token mismatch";
+			$errorText = __METHOD__ . '(): token mismatch, user is '
+				. ( $user->isLoggedIn() ? '' : 'not ' )
+				. 'logged in';
 			wfDebugLog( 'mobile', $errorText );
 			$this->getOutput()->addHTML( '<div class="error">'
 				. $this->msg( "mobile-frontend-save-error" )->parse()
