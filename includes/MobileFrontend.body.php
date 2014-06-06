@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Implements additional functions to use in MobileFrontend
+ */
 class ExtMobileFrontend {
 	/**
 	 * Uses EventLogging when available to record an event on server side
@@ -15,6 +17,8 @@ class ExtMobileFrontend {
 	}
 
 	/**
+	 * Transforms content to be mobile friendly version.
+	 * Filters out various elements and runs the MobileFormatter.
 	 * @param OutputPage $out
 	 *
 	 * @return string

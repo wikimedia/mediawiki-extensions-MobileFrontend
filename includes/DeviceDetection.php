@@ -28,6 +28,7 @@
  */
 interface IDeviceProperties {
 	/**
+	 * Default implementation of isMobileDevice()
 	 * @return bool
 	 */
 	function isMobileDevice();
@@ -39,8 +40,12 @@ interface IDeviceProperties {
 	function isTablet();
 }
 
+/**
+ * Base for classes for device detection
+ */
 interface IDeviceDetector {
 	/**
+	 * default implementation of detectDeviceProperties()
 	 * @param string $userAgent
 	 * @param string $acceptHeader
 	 * @return IDeviceProperties
@@ -52,17 +57,40 @@ interface IDeviceDetector {
  * MobileFrontend's default IDeviceProperties implementation
  */
 class DeviceProperties implements IDeviceProperties {
-	private $userAgent,
-		$acceptHeader,
-		$isMobile = null,
-		$tablet = null;
+	/**
+	 * The user gaent string of current device
+	 * @var string
+	 */
+	private $userAgent;
+	/**
+	 * Stores the accept headers of current browser.
+	 * @var string
+	 */
+	private $acceptHeader;
+	/**
+	 * Is this device is a mobile device?
+	 * @var boolean
+	 */
+	private $isMobile = null;
+	/**
+	 * Stores the answer: Is this device a tablet?
+	 * @var boolean
+	 */
+	private $tablet = null;
 
+	/**
+	 * Set parameters to class variables
+	 *
+	 * @param string $userAgent UserAgent string
+	 * @param string $acceptHeader Accept Header
+	 */
 	public function __construct( $userAgent, $acceptHeader ) {
 		$this->userAgent = $userAgent;
 		$this->acceptHeader = $acceptHeader;
 	}
 
 	/**
+	 * Check if device is a mobile device based on current user agent string.
 	 * @return bool
 	 */
 	public function isMobileDevice() {
@@ -73,6 +101,7 @@ class DeviceProperties implements IDeviceProperties {
 	}
 
 	/**
+	 * Check if device is a tablet based on current user agent string.
 	 * @return bool
 	 */
 	public function isTablet() {
@@ -83,6 +112,7 @@ class DeviceProperties implements IDeviceProperties {
 	}
 
 	/**
+	 * Detect mobile devices using useragent string
 	 * @return bool
 	 */
 	private function detectMobileDevice() {
@@ -152,6 +182,10 @@ class DeviceProperties implements IDeviceProperties {
 		return $isMobile;
 	}
 
+	/**
+	 * Detect mobile devices using useragent string
+	 * @return bool
+	 */
 	private function detectTablet() {
 		wfProfileIn( __METHOD__ );
 
@@ -173,18 +207,25 @@ class DeviceProperties implements IDeviceProperties {
 	}
 }
 
+/**
+ * This class's descendants should only be instantiated with $wgMFAutodetectMobileView set to true,
+ * otherwise all attempts to check for tabletness will lie
+ */
 abstract class PredefinedDeviceProperties implements IDeviceProperties {
 	/**
-	 * This class's descendants should only be instantiated with $wgMFAutodetectMobileView set to true,
-	 * otherwise all attempts to check for tabletness will lie
+	 * Overrides isTablet function to create MWException.
 	 */
 	function isTablet() {
 		throw new MWException( __METHOD__ . '() called!' );
 	}
 }
 
+/**
+ * implementation of PredefinedDeviceProperties
+ */
 class HtmlDeviceProperties extends PredefinedDeviceProperties {
 	/**
+	 * Returns always true
 	 * @return bool
 	 */
 	function isMobileDevice() {
@@ -214,6 +255,7 @@ class DeviceDetection implements IDeviceDetector {
 	}
 
 	/**
+	 * Create instance of DeviceProperties
 	 * @param string $userAgent
 	 * @param string $acceptHeader
 	 * @return IDeviceProperties

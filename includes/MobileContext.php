@@ -1,10 +1,28 @@
 <?php
-
+/**
+ * Provide various request-dependant methods to use in mobile context
+ */
 class MobileContext extends ContextSource {
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
+	/**
+	 * Saves the testing mode user has opted in: 'alpha', 'beta' or 'stable'
+	 * @var string $mobileMode
+	 */
 	protected $mobileMode;
+	/**
+	 * Save whether images are disabled for the current user
+	 * @var boolean $disableImages
+	 */
 	protected $disableImages;
+	/**
+	 * Save explicitly requested format
+	 * @var string $useFormat
+	 */
 	protected $useFormat;
+	/**
+	 * Save whether current page is blacklisted from displaying in mobile view
+	 * @var boolean $blacklistedPage
+	 */
 	protected $blacklistedPage;
 
 	/**
@@ -13,30 +31,48 @@ class MobileContext extends ContextSource {
 	 */
 	protected $analyticsLogItems = array();
 
-	/** @var IDeviceProperties */
+	/** @var IDeviceProperties $device Saves current device description */
 	private $device;
 
 	/**
-	 * @var string MediaWiki 'action'
+	 * @var string $action MediaWiki 'action'
 	 */
 	protected $action;
 
 	/**
-	 * @var string
+	 * Saves requested Mobile action
+	 * @var string $mobileAction
 	 */
 	protected $mobileAction;
 
+	/**
+	 * Save whether mobile view is explicity requested
+	 * @var boolean $forceMobileView
+	 */
 	private $forceMobileView = false;
+	/**
+	 * Save whether content should be transformed to better suit mobile devices
+	 * @var boolean $contentTransformations
+	 */
 	private $contentTransformations = true;
+	/**
+	 * Save whether or not we should display the mobile view
+	 * @var boolean $mobileView
+	 */
 	private $mobileView = null;
 	/**
 	 * Have we already checked for desktop/mobile view toggling?
-	 * @var bool
+	 * @var boolean $toggleViewChecked
 	 */
 	private $toggleViewChecked = false;
+	/**
+	 * Save an instance of this class
+	 * @var MobileContext $instance
+	 */
 	private static $instance = null;
 
 	/**
+	 * Returns the actual MobileContext Instance or create a new if no exists
 	 * @return MobileContext
 	 */
 	public static function singleton() {
@@ -46,10 +82,19 @@ class MobileContext extends ContextSource {
 		return self::$instance;
 	}
 
+	/**
+	 * Set $this->instance to the given instance of MobileContext or null
+	 * @param MobileContext|null $instance MobileContext instance or null to set
+	 * @return MobileContext|null
+	 */
 	public static function setInstance( /* MobileContext|null */ $instance ) {
 		self::$instance = $instance;
 	}
 
+	/**
+	 * Set the IontextSource Object
+	 * @param IContextSource $context The IContextSource Object has to set
+	 */
 	protected function __construct( IContextSource $context ) {
 		$this->setContext( $context );
 	}
@@ -94,6 +139,10 @@ class MobileContext extends ContextSource {
 		return $this->disableImages;
 	}
 
+	/**
+	 * Check whether the device is a mobile device
+	 * @return bool
+	 */
 	public function isMobileDevice() {
 		global $wgMFAutodetectMobileView, $wgMFShowMobileViewToTablets;
 
@@ -130,33 +179,41 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * @param bool $value Whether mobile view should always be enforced
+	 * Save whether mobile view should always be enforced
+	 * @param bool $value
 	 */
 	public function setForceMobileView( $value ) {
 		$this->forceMobileView = $value;
 	}
 
 	/**
-	 * @return bool Whether mobile view should always be enforced
+	 * Whether mobile view should always be enforced
+	 * @return bool
 	 */
 	public function getForceMobileView() {
 		return $this->forceMobileView;
 	}
 
 	/**
-	 * @param bool $value Whether content should be transformed to better suit mobile devices
+	 * Whether content should be transformed to better suit mobile devices
+	 * @param bool $value
 	 */
 	public function setContentTransformations( $value ) {
 		$this->contentTransformations = $value;
 	}
 
 	/**
-	 * @return bool Whether content should be transformed to better suit mobile devices
+	 * Whether content should be transformed to better suit mobile devices
+	 * @return bool
 	 */
 	public function getContentTransformations() {
 		return $this->contentTransformations;
 	}
 
+	/**
+	 * Wether useformat is mobile
+	 * @return bool
+	 */
 	protected function isFauxMobileDevice() {
 		$useFormat = $this->getUseFormat();
 		if ( $useFormat !== 'mobile' && $useFormat !== 'mobile-wap' ) {
@@ -213,10 +270,18 @@ class MobileContext extends ContextSource {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Wether user is Alpha group member
+	 * @return boolean
+	 */
 	public function isAlphaGroupMember() {
 		return $this->getMobileMode() === 'alpha';
 	}
 
+	/**
+	 * Wether user is Beta group member
+	 * @return boolean
+	 */
 	public function isBetaGroupMember() {
 		$mode = $this->getMobileMode();
 		return $mode === 'beta' || $mode === 'alpha';
@@ -275,7 +340,8 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * @return bool Value for shouldDisplayMobileView()
+	 * Value for shouldDisplayMobileView()
+	 * @return bool
 	 */
 	private function shouldDisplayMobileViewInternal() {
 		global $wgMobileUrlTemplate, $wgMFMobileHeader;
@@ -344,6 +410,10 @@ class MobileContext extends ContextSource {
 		return $this->blacklistedPage;
 	}
 
+	/**
+	 * Value for isBlacklistedPage()
+	 * @return bool
+	 */
 	private function isBlacklistedPageInternal() {
 		global $wgMFNoMobileCategory, $wgMFNoMobilePages;
 		// Check for blacklisted category membership
@@ -373,6 +443,10 @@ class MobileContext extends ContextSource {
 		return false;
 	}
 
+	/**
+	 * Get requested mobile action
+	 * @return string
+	 */
 	public function getMobileAction() {
 		if ( is_null( $this->mobileAction ) ) {
 			$this->mobileAction = $this->getRequest()->getText( 'mobileaction' );
@@ -381,6 +455,10 @@ class MobileContext extends ContextSource {
 		return $this->mobileAction;
 	}
 
+	/**
+	 * Get useformat from request for e.g. for isFauxMobileDevice()
+	 * @return string
+	 */
 	public function getUseFormat() {
 		if ( !isset( $this->useFormat ) ) {
 			$useFormat = $this->getRequest()->getText( 'useformat' );
@@ -389,10 +467,18 @@ class MobileContext extends ContextSource {
 		return $this->useFormat;
 	}
 
+	/**
+	 * Set useformat as var
+	 * @param string $useFormat The useformat value to set
+	 */
 	public function setUseFormat( $useFormat ) {
 		$this->useFormat = $useFormat;
 	}
 
+	/**
+	 * Set Cookie to stop automatically redirect to mobile page
+	 * @param integer $expiry Expire time of cookie
+	 */
 	public function setStopMobileRedirectCookie( $expiry = null ) {
 		if ( is_null( $expiry ) ) {
 			$expiry = $this->getUseFormatCookieExpiry();
@@ -405,6 +491,10 @@ class MobileContext extends ContextSource {
 		);
 	}
 
+	/**
+	 * Remove cookie and continue automatic redirect to mobile page
+	 * @return string
+	 */
 	public function unsetStopMobileRedirectCookie() {
 		if ( is_null( $this->getStopMobileRedirectCookie() ) ) {
 			return;
@@ -413,6 +503,10 @@ class MobileContext extends ContextSource {
 		$this->setStopMobileRedirectCookie( $expire );
 	}
 
+	/**
+	 * Read cookie for stop automatic mobile redirect
+	 * @return string
+	 */
 	public function getStopMobileRedirectCookie() {
 		$stopMobileRedirectCookie = $this->getRequest()->getCookie( 'stopMobileRedirect', '' );
 
@@ -434,6 +528,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Set cookie to disable images on pages
 	 * @param bool $disable
 	 */
 	public function setDisableImagesCookie( $disable ) {
@@ -441,6 +536,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Return the basic second level domain or just IP adress
 	 * @return string
 	 */
 	public function getBaseDomain() {
@@ -503,6 +599,9 @@ class MobileContext extends ContextSource {
 		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
 	}
 
+	/**
+	 * Remove cookie based saved useformat value
+	 */
 	public function unsetUseFormatCookie() {
 		if ( is_null( $this->getUseFormatCookie() ) ) {
 			return;
@@ -601,7 +700,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Take a URL and return a copy that removes any mobile tokens
-	 * @param string
+	 * @param string $url
 	 * @return string
 	 */
 	public function getDesktopUrl( $url ) {
@@ -753,6 +852,8 @@ class MobileContext extends ContextSource {
 	 * If a user has requested a particular view (eg clicked 'Desktop' from
 	 * a mobile page), set the requested view for this particular request
 	 * and set a cookie to keep them on that view for subsequent requests.
+	 *
+	 * @param string $view user requested particular view
 	 */
 	public function toggleView( $view ) {
 		global $wgMobileUrlTemplate;
@@ -819,7 +920,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Determine whether or not a given URL is local
 	 *
-	 * @param string $url: URL to check against
+	 * @param string $url URL to check against
 	 * @return bool
 	 */
 	public static function isLocalUrl( $url ) {
@@ -841,6 +942,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Read key/value pairs for analytics purposes from $this->analyticsLogItems
 	 * @return array
 	 */
 	public function getAnalyticsLogItems() {

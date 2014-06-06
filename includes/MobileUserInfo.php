@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Retrieves information about a user for Special:MobileProfile
  */
@@ -12,6 +11,12 @@ class MobileUserInfo {
 	 */
 	private $user;
 
+	/**
+	 * Construct the class
+	 *
+	 * @param User $user A User object
+	 * @throws MWException when used on anonymous user.
+	 */
 	public function __construct( User $user ) {
 		if ( $user->isAnon() ) {
 			throw new MWException( __CLASS__ . ' is intended for logged in users only' );

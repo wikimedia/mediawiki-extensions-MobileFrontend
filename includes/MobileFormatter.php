@@ -1,29 +1,48 @@
 <?php
-
 /**
  * Converts HTML into a mobile-friendly version
  */
 class MobileFormatter extends HtmlFormatter {
-	/*
-		String prefixes to be applied at start and end of output from Parser
-	*/
+	/** @var string $pageTransformStart String prefixes to be
+		applied at start and end of output from Parser */
 	protected $pageTransformStart = '<div>';
+	/** @var string $pageTransformEnd String prefixes to be
+		applied at start and end of output from Parser */
 	protected $pageTransformEnd = '</div>';
-	/*
-		String prefixes to be applied before and after section content.
-	*/
+	/** @var string $headingTransformStart String prefixes to be
+		applied before and after section content. */
 	protected $headingTransformStart = '</div>';
+	/** @var string $headingTransformEnd String prefixes to be
+		applied before and after section content. */
 	protected $headingTransformEnd = '<div>';
 
 	/**
-	 * @var Title
+	 * Saves a Title Object
+	 * @var Title $title
 	 */
 	protected $title;
 
+	/**
+	 * Are sections expandable?
+	 * @var boolean $expandableSections
+	 */
 	protected $expandableSections = false;
+	/**
+	 * Whether actual page is the main page
+	 * @var boolean $mainPage
+	 */
 	protected $mainPage = false;
+	/**
+	 * Whether show back to top link
+	 * @var boolean $backToTopLink
+	 */
 	protected $backToTopLink = true;
 
+	/**
+	 * Headings
+	 * @todo better summary for var
+	 * @var integer $headings
+	 */
 	protected $headings = 0;
 
 	/**
@@ -58,9 +77,6 @@ class MobileFormatter extends HtmlFormatter {
 		$formatter = new MobileFormatter( $html, $title );
 		$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
 
-		if ( $context->isBetaGroupMember() ) {
-			$formatter->disableBackToTop();
-		}
 		$formatter->setIsMainPage( $isMainPage );
 		if ( $context->getContentTransformations() && !$isFilePage ) {
 			$formatter->setRemoveMedia( $context->imagesDisabled() );
@@ -71,7 +87,8 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * @todo: kill with fire when there will be minimum of pre-1.1 app users remaining
+	 * Set support of page for expandable sections to $flag (standard: true)
+	 * @todo kill with fire when there will be minimum of pre-1.1 app users remaining
 	 * @param bool $flag
 	 */
 	public function enableExpandableSections( $flag = true ) {
@@ -79,12 +96,9 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * @todo: kill with fire when dynamic sections in production
+	 * Change mainPage (is this the main page) to $value (standard: true)
+	 * @param boolean $value
 	 */
-	public function disableBackToTop() {
-		$this->backToTopLink = false;
-	}
-
 	public function setIsMainPage( $value = true ) {
 		$this->mainPage = $value;
 	}
@@ -238,6 +252,11 @@ class MobileFormatter extends HtmlFormatter {
 		return $s;
 	}
 
+	/**
+	 * Call headingTransform if needed
+	 *
+	 * @param string $html
+	 */
 	protected function onHtmlReady( $html ) {
 		wfProfileIn( __METHOD__ );
 		if ( $this->expandableSections ) {
