@@ -21,15 +21,22 @@
 
 	figure[typeof*='mw:Image'] {
 		&.mw-halign-left {
-			margin-right: 1.4em;
+			margin: .6em 1.4em .6em 0;
 		}
 
 		&.mw-halign-right {
-			margin-left: 1.4em;
+			margin: .6em 0 .6em 1.4em;
 		}
 
-		.ve-ce-mwBlockImageNode-thumbimage {
+		img {
 			border: none;
+		}
+
+		figcaption {
+			font-size: .8em;
+			line-height: 1.5;
+			padding: 0;
+			color: @grayMedium;
 		}
 	}
 

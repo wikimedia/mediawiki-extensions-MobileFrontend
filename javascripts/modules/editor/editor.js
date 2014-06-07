@@ -10,7 +10,7 @@
 		isNewFile = M.inNamespace( 'file' ) && isNewPage,
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
-		isVisualEditorEnabled = M.isWideScreen() && mw.config.get( 'wgMFMode' ) === 'alpha' &&
+		isVisualEditorEnabled = M.isWideScreen() && M.isBetaGroupMember() &&
 			veConfig,
 		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
