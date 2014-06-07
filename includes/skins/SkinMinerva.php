@@ -632,7 +632,9 @@ class SkinMinerva extends SkinTemplate {
 				'class' => 'icon icon-32px icon-edit' );
 		}
 
-		if ( $this->isAllowedPageAction( 'upload' ) ) {
+		if ( $this->isAllowedPageAction( 'upload' )
+			&& $this->getUser()->isAllowed( 'mf-uploadbutton' ) )
+		{
 			$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
 				'class' => 'icon icon-32px' );
 		}
