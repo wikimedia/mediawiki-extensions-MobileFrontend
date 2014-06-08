@@ -308,6 +308,7 @@
 	"mobile-frontend-thanked-notice": "{{doc-singularthey}}\nPop-up message that is displayed after a user has thanked another user for their edit.\n\nParameters:\n* $1 - the username of the user that was thanked\n* $2 - the gender of the user that was thanked",
 	"mobile-frontend-user-account": "Text for a link to the user login page. Displayed as <code>$1</code> in {{msg-mw|mobile-frontend-donate-image-anon}}.\n{{Identical|User account}}",
 	"mobile-frontend-user-button-tooltip": "Title tooltip for the user notifications button",
+	"mobile-frontend-user-newmessages": "Tooltip for new messages on the users talk page (if no Extension:Echo installed).",
 	"mobile-frontend-user-cta": "Appears when you click user icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.",
 	"mobile-frontend-username": "Field label for entry of username in Wikimedia mobile user interface.\n\n{{Identical|Username}}",
 	"mobile-frontend-username-placeholder": "placeholder text for username input box.\n{{Identical|Username}}",

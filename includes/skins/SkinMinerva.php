@@ -215,38 +215,55 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns, if Extension:Echo should be used.
+	 * return boolean
+	 */
+	protected function useEcho() {
+		return class_exists( 'MWEchoNotifUser' );
+	}
+
+	/**
 	 * Prepares the user button.
 	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareUserButton( QuickTemplate $tpl ) {
 		// Set user button to empty string by default
 		$tpl->set( 'secondaryButton', '' );
+		$notificationsTitle = '';
+		$count = '';
 
 		$user = $this->getUser();
+		$newtalks = $this->getNewtalks();
+		$currentTitle = $this->getTitle();
 		// If Echo is available, the user is logged in, and they are not already on the
 		// notifications archive, show the notifications icon in the header.
-		if ( class_exists( 'MWEchoNotifUser' ) && $user->isLoggedIn() ) {
-			$currentTitle = $this->getTitle();
+		if ( $this->useEcho() && $user->isLoggedIn() ) {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
+			$notificationsMsg = wfMessage( 'mobile-frontend-user-button-tooltip' );
 			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
 				// FIXME: cap higher counts
 				$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
-
-				$tpl->set( 'secondaryButton',
-					Html::openElement( 'a', array(
-						'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
-						'href' => $notificationsTitle->getLocalURL(
-							array( 'returnto' => $currentTitle->getPrefixedText() ) ),
-						'class' => 'user-button icon icon-32px main-header-button',
-						'id'=> 'secondary-button',
-					) ) .
-					Html::element(
-						'span',
-						array( 'class' => $count ? '' : 'zero' ),
-						$this->getLanguage()->formatNum( $count ) ) .
-					Html::closeElement( 'a' )
-				);
 			}
+		} elseif ( !empty( $newtalks ) ) {
+			$notificationsTitle = SpecialPage::getTitleFor( 'Mytalk' );
+			$notificationsMsg = wfMessage( 'mobile-frontend-user-newmessages' )->text();
+		}
+
+		if ( $notificationsTitle ) {
+			$tpl->set( 'secondaryButton',
+				Html::openElement( 'a', array(
+					'title' => $notificationsMsg,
+					'href' => $notificationsTitle->getLocalURL(
+						array( 'returnto' => $currentTitle->getPrefixedText() ) ),
+					'class' => 'user-button icon icon-32px main-header-button',
+					'id'=> 'secondary-button',
+				) ) .
+				Html::element(
+					'span',
+					array( 'class' => $count ? '' : 'zero' ),
+					$this->getLanguage()->formatNum( $count ) ) .
+				Html::closeElement( 'a' )
+			);
 		}
 	}
 
@@ -833,7 +850,9 @@ class SkinMinerva extends SkinTemplate {
 			'mobile.stable',
 		);
 
-		$modules['notifications'] = array( 'mobile.notifications' );
+		if ( $this->useEcho() && $this->getUser()->isLoggedIn() ) {
+			$modules['notifications'] = array( 'mobile.notifications' );
+		}
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
 			$modules['watch'] = array();
 		}
