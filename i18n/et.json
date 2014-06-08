@@ -159,7 +159,7 @@
 	"mobile-frontend-photo-upload-generic": "Laadi üles pilt",
 	"mobile-frontend-photo-upload-invalid-user": "Kasutaja \"$1\" pole registreeritud.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>Üks</span> üleslaadimine|<span>$1</span> üleslaadimist}}",
-	"mobile-frontend-photo-upload-user-count-over-limit": "Üle 500 üleslaadimise",
+	"mobile-frontend-photo-upload-user-count-over-limit": "Üle 500 üleslaaditud faili",
 	"mobile-frontend-placeholder": "Otsi {{GRAMMAR:elative|{{SITENAME}}}}",
 	"mobile-frontend-placeholder-alpha": "Otsi {{GRAMMAR:elative|{{SITENAME}}}} (katseline)",
 	"mobile-frontend-placeholder-beta": "Otsi {{GRAMMAR:elative|{{SITENAME}}}} (beeta)",
