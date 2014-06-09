@@ -1,9 +1,12 @@
 <?php
-
+/**
+ * Extends the basic DifferenceEngine from core to enable inline difference view
+ * using only one column instead of two column diff system.
+ */
 class InlineDifferenceEngine extends DifferenceEngine {
 	/**
 	 * Checks whether the given Revision was deleted
-	 * FIXME: Upstream to DifferenceEngine - refactor showDiffPage
+	 * @todo FIXME: Upstream to DifferenceEngine - refactor showDiffPage
 	 *
 	 * @return boolean
 	 */
@@ -26,7 +29,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	/**
 	 * Checks whether the current user has permission to view the old
 	 * and current revisions.
-	 * FIXME: Upstream to DifferenceEngine - refactor showDiffPage
+	 * @todo FIXME: Upstream to DifferenceEngine - refactor showDiffPage
 	 *
 	 * @return boolean
 	 */
@@ -45,7 +48,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * Checks whether the diff should be hidden from the current user
 	 * This is based on whether the user is allowed to see it and whether
 	 * the flag unhide is set to allow viewing deleted revisions.
-	 * FIXME: Upstream to DifferenceEngine - refactor showDiffPage
+	 * @todo FIXME: Upstream to DifferenceEngine - refactor showDiffPage
 	 *
 	 * @return boolean
 	 */
@@ -118,7 +121,12 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	}
 
 	/**
+	 * Reimplements getDiffBodyCacheKey from DifferenceEngine
+	 * Returns the cache key for diff body text or content.
+	 *
+	 * @throws MWException when no mOldid and mNewid is set
 	 * @see DifferenceEngine:getDiffBodyCacheKey
+	 * @return string
 	 */
 	protected function getDiffBodyCacheKey() {
 		if ( !$this->mOldid || !$this->mNewid ) {
