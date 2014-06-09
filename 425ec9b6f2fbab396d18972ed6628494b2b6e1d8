@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e3593d1_40fe0c37",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-09T19:14:37Z",
+      "side": 1,
+      "message": "This line is from core and not checked:\nhttps://github.com/wikimedia/mediawiki-core/blob/0f6609447e8cbd1d371e40b3fdd919bf71c3f5df/includes/SkinTemplate.php#L1244\nBut if i see this right, the check if true is unnecessary.",
+      "parentUuid": "0e3593d1_80b874e3",
+      "revId": "425ec9b6f2fbab396d18972ed6628494b2b6e1d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e3593d1_20cf8884",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2014-06-09T18:53:03Z",
       "side": 1,
       "message": "Unneeded parentheses.",
+      "revId": "425ec9b6f2fbab396d18972ed6628494b2b6e1d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_00a6c450",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-09T19:14:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e3593d1_20cf8884",
       "revId": "425ec9b6f2fbab396d18972ed6628494b2b6e1d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
