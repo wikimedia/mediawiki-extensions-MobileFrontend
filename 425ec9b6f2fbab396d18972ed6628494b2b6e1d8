@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e3593d1_80b874e3",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-09T18:53:03Z",
+      "side": 1,
+      "message": "\u003d\u003d\u003d true?",
+      "revId": "425ec9b6f2fbab396d18972ed6628494b2b6e1d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_20cf8884",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-09T18:53:03Z",
+      "side": 1,
+      "message": "Unneeded parentheses.",
+      "revId": "425ec9b6f2fbab396d18972ed6628494b2b6e1d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
