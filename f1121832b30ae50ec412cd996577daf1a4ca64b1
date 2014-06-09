@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e3593d1_80163459",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-09T19:26:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e3593d1_a069381f",
+      "revId": "f1121832b30ae50ec412cd996577daf1a4ca64b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e3593d1_805e347a",
         "filename": "includes/diff/InlineDiffFormatter.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-06-09T19:05:35Z",
       "side": 1,
       "message": "What type are these?",
+      "revId": "f1121832b30ae50ec412cd996577daf1a4ca64b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_200d4842",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-09T19:26:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e3593d1_805e347a",
       "revId": "f1121832b30ae50ec412cd996577daf1a4ca64b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0e3593d1_000a4429",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-09T19:26:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e3593d1_6063503c",
+      "revId": "f1121832b30ae50ec412cd996577daf1a4ca64b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e3593d1_20554853",
         "filename": "includes/modules/MFResourceLoaderModule.php",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2014-06-09T19:05:35Z",
       "side": 1,
       "message": "You can use @example for this :)\nhttp://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.example.pkg.html",
+      "revId": "f1121832b30ae50ec412cd996577daf1a4ca64b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_a3002205",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-09T19:26:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e3593d1_20554853",
       "revId": "f1121832b30ae50ec412cd996577daf1a4ca64b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
