@@ -11,7 +11,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Increment this when changing the format of cached data
 	 */
-	const CACHE_VERSION = 7;
+	const CACHE_VERSION = 8;
 
 	/** @var boolean Saves whether redirects has to be followed or not */
 	private $followRedirects;
@@ -119,6 +119,18 @@ class ApiMobileView extends ApiBase {
 		if ( isset( $prop['displaytitle'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'displaytitle' => $data['displaytitle'] )
+			);
+		}
+		if ( isset( $prop['pageprops'] ) ) {
+			$propNames = $params['pageprops'];
+			if ( $propNames == '*' ) {
+				$pageProps = $data['pageprops'];
+			} else {
+				$propNames = explode( '|', $propNames );
+				$pageProps = array_intersect_key( $data['pageprops'], array_flip( $propNames ) );
+			}
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'pageprops' => $pageProps )
 			);
 		}
 		if ( $this->usePageImages ) {
@@ -520,18 +532,17 @@ class ApiMobileView extends ApiBase {
 		if ( $parserOutput ) {
 			$languages = $parserOutput->getLanguageLinks();
 			$data['languagecount'] = count( $languages );
+			$data['displaytitle'] = $parserOutput->getDisplayTitle();
+			// @fixme: Does no work for some extension properties that get added in LinksUpdate
+			$data['pageprops'] = $parserOutput->getProperties();
 		} else {
 			$data['languagecount'] = 0;
+			$data['displaytitle'] = $title->getPrefixedText();
+			$data['pageprops'] = array();
 		}
 
 		if ( $title->getPageLanguage()->hasVariants() ) {
 			$data['hasvariants'] = true;
-		}
-
-		if ( $parserOutput ) {
-			$data['displaytitle'] = $parserOutput->getDisplayTitle();
-		} else {
-			$data['displaytitle'] = $title->getPrefixedText();
 		}
 
 		// Don't store small pages to decrease cache size requirements
@@ -655,6 +666,7 @@ class ApiMobileView extends ApiBase {
 					'languagecount',
 					'hasvariants',
 					'displaytitle',
+					'pageprops',
 				)
 			),
 			'sectionprop' => array(
@@ -669,6 +681,10 @@ class ApiMobileView extends ApiBase {
 				),
 				ApiBase::PARAM_ISMULTI => true,
 				ApiBase::PARAM_DFLT => 'toclevel|line',
+			),
+			'pageprops' => array(
+				ApiBase::PARAM_TYPE => 'string',
+				ApiBase::PARAM_DFLT => 'notoc|noeditsection|wikibase_item'
 			),
 			'variant' => array(
 				ApiBase::PARAM_TYPE => 'string',
@@ -731,9 +747,12 @@ class ApiMobileView extends ApiBase {
 					. 'all factors for logged-in users but not blocked status for anons.',
 				' languagecount   - number of languages that the page is available in',
 				' hasvariants     - whether or not the page is available in other language variants',
-				' displaytitle    - the rendered title of the page, with {{DISPLAYTITLE}} and such applied'
+				' displaytitle    - the rendered title of the page, with {{DISPLAYTITLE}} and such applied',
+				' pageprops       - page properties',
 			),
 			'sectionprop' => 'What information about sections to get',
+			'pageprops' => 'What page properties to return, a pipe (|) separated list or * for'
+				. ' all properties',
 			'variant' => "Convert content into this language variant",
 			'noimages' => 'Return HTML without images',
 			'noheadings' => "Don't include headings in output",
