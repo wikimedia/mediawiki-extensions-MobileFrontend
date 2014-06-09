@@ -5,7 +5,13 @@
 	 * @class user
 	 * @singleton
 	*/
-	user = $.extend( {}, mw.user, {
+	user = {
+		/* @see mediaWiki.user */
+		tokens: mw.user.tokens,
+		/* @see mediaWiki.user */
+		isAnon: mw.user.isAnon,
+		/* @see mediaWiki.user */
+		getName: mw.user.getName,
 		/**
 		 * Find current users edit count
 		 * @method
@@ -23,7 +29,7 @@
 		getGroups: function() {
 			return $.Deferred().resolve( mw.config.get( 'wgUserGroups' ) );
 		}
-	} );
+	};
 	M.define( 'user', user );
 
 }( mw.mobileFrontend, jQuery ) );
