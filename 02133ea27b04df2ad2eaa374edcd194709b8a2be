@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e3593d1_06cc9c8b",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T20:55:01Z",
+      "side": 1,
+      "message": "Just move this to the top.\nI assume something cannot be .mw-halign-center  and .mw-halign-right ?",
+      "revId": "02133ea27b04df2ad2eaa374edcd194709b8a2be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_a6c39060",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T20:55:01Z",
+      "side": 1,
+      "message": "This is not necessary if above is changed no?",
+      "revId": "02133ea27b04df2ad2eaa374edcd194709b8a2be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
