@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e3593d1_466e2495",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T20:51:48Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem like the right approach to me... This makes it seem like there is a global variable in MobileFrontend.php that can be overridden in LocalSettings.php",
+      "revId": "9521518325178cf0c890ecd44a535f878ac419db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_66100805",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T20:51:48Z",
+      "side": 1,
+      "message": "Instead of doing this you could actually edit specials/SpecialUploads.php and only add ctaUploadPhoto element when needed.\n\nThis if statement could then become \nif ( $container.length ) {",
+      "revId": "9521518325178cf0c890ecd44a535f878ac419db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
