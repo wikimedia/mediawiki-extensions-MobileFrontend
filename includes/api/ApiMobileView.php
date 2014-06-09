@@ -1,5 +1,9 @@
 <?php
 /**
+ * ApiMobileView.php
+ */
+
+/**
  * Extends Api of MediaWiki with actions for mobile devices. For further information see
  * https://www.mediawiki.org/wiki/Extension:MobileFrontend#API
  */
