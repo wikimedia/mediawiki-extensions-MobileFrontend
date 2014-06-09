@@ -19,13 +19,28 @@
 		border-bottom: solid 1px @sectionBorderColor;
 	}
 
+	// Styling for images (affects both thumbnailed images and framed images)
 	figure[typeof*='mw:Image'] {
+		max-width: 100%;
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		font-size: inherit;
+		// Defaults to right alignment when not explicitly set. Should be flippable.
+		margin: .6em 0 .6em 1.4em;
+
 		&.mw-halign-left {
+			/* @noflip */
 			margin: .6em 1.4em .6em 0;
 		}
 
 		&.mw-halign-right {
+			/* @noflip */
 			margin: .6em 0 .6em 1.4em;
+		}
+
+		&.mw-halign-center {
+			margin: .6em auto .6em auto;
 		}
 
 		img {
@@ -38,16 +53,6 @@
 			padding: 0;
 			color: @grayMedium;
 		}
-	}
-
-	figure[typeof='mw:Image/Thumb'],
-	figure[typeof='mw:Image/Frame'] {
-		margin: 0.6em 0;
-		max-width: 100%;
-		background-color: transparent;
-		border: none;
-		padding: 0;
-		font-size: inherit;
 	}
 }
 
