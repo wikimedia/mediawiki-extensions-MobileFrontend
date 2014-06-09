@@ -40,7 +40,7 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 		$api->execute();
 		$data = $api->getResultData();
 		$this->assertFalse( isset( $data['errors'] ) );
-		$text = preg_replace( "/[\r\n]/", '', trim( $data['parse']['text'] ) );
+		$text = preg_replace( "/[\r\n]/", '', trim( $data['parse']['text']['*'] ) );
 		$expected = preg_replace( "/[\r\n]/", '', trim( $expected ) );
 		$this->assertEquals( $expected, $text );
 	}
@@ -49,7 +49,7 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 		return array(
 			array(
 				array(
-					'mobileformat' => 'html',
+					'mobileformat' => '',
 					'text' => "I exist\n\n<span class='nomobile'>I don't</span>"
 				),
 				'<div><p>I exist</p><p></p></div>' ),
