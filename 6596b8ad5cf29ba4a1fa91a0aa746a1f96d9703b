@@ -1,0 +1,735 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e3593d1_3eb1eedc",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "No copyright notice please! :)",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_9eb21ae3",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "This should be @var [Type] [\u003cdescription\u003e]",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_7eb776d4",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "This should be @var [Type] [\u003cdescription\u003e]",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5eacb284",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "This should be @var [Type] [\u003cdescription\u003e]",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5ee392d4",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "You forgot to separate $offset and $maxlength - it is thus not clear what the documentation relates to.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_bed39e04",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Missing the type of the variables",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_deed42b6",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Type comes first\n@param [Type] [name] [\u003cdescription\u003e]",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_fef00690",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Type comes first\n@param [Type] [name] [\u003cdescription\u003e]",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_9e2fbaf3",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "I\u0027m not sure the p tag is necessary here?",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_de4c22e7",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please remove copyright notice.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_be495ed5",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please remove copyright notice.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_de2302ff",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "spelling mistake in \u0027wether\u0027 - should be \u0027whether\u0027",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_3e156e9d",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Specify whether the page is the main page.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_3e8c4eff",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Are you sure this is a variant and not an array? (I haven\u0027t checked)",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_fe548658",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "This is not true :)",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_de51c266",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please remove the copyright.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_9ec33a0a",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Something like - Alternative skin template sent to users who have opted into the alpha experimental mode via Special:MobileOptions",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_3ed20ed6",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Not true.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5ecdd233",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please remove copyright.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_fed366d5",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "See my comment on MinervaTemplateAlpha-  this can be more descriptive :)",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_9eea1a72",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please remove copyright",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_fefa463f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_1efe2a36",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_3ee9ee7b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5ee4b2a3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_7eef7683",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Description should be after $mobileContext",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_9e91fafd",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Remove copyright.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_7e9656f5",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5e9b921b",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_fe8126a5",
+        "filename": "includes/skins/SkinMinervaApp.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please remove copyright.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_be8b9ec3",
+        "filename": "includes/skins/SkinMinervaApp.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_9eb8da75",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Remove.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5eb27293",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "rm",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_3eb7ae83",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_1eacea31",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5e7152dc",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "rm",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_3e768ed6",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_fe77e6cd",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_1e7bcabe",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_de8422a6",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5e48328c",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "rm copyright please",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_fe5ec647",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_1e62aa06",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T18:25:30Z",
+      "side": 1,
+      "message": "Please combine above 2 lines.",
+      "revId": "6596b8ad5cf29ba4a1fa91a0aa746a1f96d9703b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
