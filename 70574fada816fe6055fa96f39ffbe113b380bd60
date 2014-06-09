@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e3593d1_89865f17",
+        "filename": "tests/browser/features/editor_ve.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-09T22:32:52Z",
+      "side": 1,
+      "message": "Since this hasn\u0027t been pushed to stable you should use the @wip tag to indicate that this is expected to fail.\n\nI\u0027d also suggest adding\nAnd I am viewing the site in tablet mode\nto be sure that we test under the right circumstances\n\nAlso check keepgoing.feature\nthis may break as it expects the wikitext editor to load when in beta mode \nI\u0027d add a given statement there -  I am viewing the site in mobile mode",
+      "revId": "70574fada816fe6055fa96f39ffbe113b380bd60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
