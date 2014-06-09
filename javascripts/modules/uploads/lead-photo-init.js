@@ -40,12 +40,7 @@
 			}
 		}
 
-		if ( user.getEditCount() === 0 ) {
-			$( '#ca-upload' ).addClass( 'enabled' );
-			$( '<a>' ).attr( 'href', '#/upload-tutorial/' + funnel ).appendTo( '#ca-upload' );
-		} else {
-			new LeadPhotoUploaderButton( { funnel: funnel } );
-		}
+		new LeadPhotoUploaderButton( { funnel: funnel } );
 	}
 
 	if ( isSupported ) {
