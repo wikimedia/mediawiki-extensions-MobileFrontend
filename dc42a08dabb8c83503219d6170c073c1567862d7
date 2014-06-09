@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e3593d1_a30145bb",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-09T17:54:25Z",
+      "side": 1,
+      "message": "Overcapitalization.",
+      "revId": "dc42a08dabb8c83503219d6170c073c1567862d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_c3fb29b9",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-09T17:54:25Z",
+      "side": 1,
+      "message": "No types, inconsistent capitalization.",
+      "revId": "dc42a08dabb8c83503219d6170c073c1567862d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_43273960",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-09T17:54:25Z",
+      "side": 1,
+      "message": "Type should go first.",
+      "revId": "dc42a08dabb8c83503219d6170c073c1567862d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_be439e42",
+        "filename": "includes/diff/InlineDiffFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-09T17:54:25Z",
+      "side": 1,
+      "message": "Final dot inconsistent with other comments.",
+      "revId": "dc42a08dabb8c83503219d6170c073c1567862d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_9e70daa4",
+        "filename": "includes/diff/InlineDifferenceEngine.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-09T17:54:25Z",
+      "side": 1,
+      "message": "Is it really needed?",
+      "revId": "dc42a08dabb8c83503219d6170c073c1567862d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e3593d1_5e6a72b2",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-09T17:54:25Z",
+      "side": 1,
+      "message": "@return",
+      "revId": "dc42a08dabb8c83503219d6170c073c1567862d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
