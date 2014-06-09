@@ -3,6 +3,7 @@ Feature: Encourage new users to Keep Going
 
   Scenario: I see a KeepGoing message after completing my edit
     Given I have just registered a new account
+      And I am viewing the site in mobile mode
       And I am in beta mode
       And I am on the "Selenium Edit Test" page
     When I click the edit button
@@ -13,7 +14,8 @@ Feature: Encourage new users to Keep Going
 
   Scenario: I see a KeepGoing message after completing my VisualEditor edit
     Given I have just registered a new account
-      And I am in alpha mode
+      And I am viewing the site in tablet mode
+      And I am in beta mode
       And I am on the "Selenium Edit Test" page
     When I click the edit button
       And I see the wikitext editor overlay
