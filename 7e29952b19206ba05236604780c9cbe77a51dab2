@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_f1704809",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-10T07:28:48Z",
+      "side": 1,
+      "message": "better to use\n/^anon-edit-warning\\/(\\d+)\\/?([^\\/]*)$/\n\nto avoid go back one more time in history if you click X on editor and warning (use case: user accept warning (is in editor) clicks X to close editor (comes again to warning) and click X again to go back to site but will be on page before the site he want to edit). Just a thinking: It\u0027s better to close anon-warning when close editor?!\n\n(only a notice for someone, who wants to amend this change :)).",
+      "revId": "7e29952b19206ba05236604780c9cbe77a51dab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
