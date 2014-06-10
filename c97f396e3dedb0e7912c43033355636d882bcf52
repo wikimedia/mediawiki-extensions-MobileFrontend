@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_85677222",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T17:35:31Z",
+      "side": 1,
+      "message": "Don\u0027t do this. Let them use the same id.",
+      "revId": "c97f396e3dedb0e7912c43033355636d882bcf52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
