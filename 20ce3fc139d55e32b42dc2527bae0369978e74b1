@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_4be199fa",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T19:07:44Z",
+      "side": 1,
+      "message": "You don\u0027t want to rename this :-)\n\nHaving documentation would help here, but the getPreview function is used elsewhere in various places so changing the signature of this module this will cause lots of breakage in the editor :)",
+      "revId": "20ce3fc139d55e32b42dc2527bae0369978e74b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_2bbd35d2",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T19:07:44Z",
+      "side": 1,
+      "message": "What Juliusz was saying is you can simply do prop: [\u0027sections\u0027, \u0027text\u0027 ] to get both properties.",
+      "revId": "20ce3fc139d55e32b42dc2527bae0369978e74b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_ebe72d0c",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T19:07:44Z",
+      "side": 1,
+      "message": "Resolve this with resp.parse.text[\u0027*\u0027], sec.line so that the caller can get the preview html and the name of the section.",
+      "revId": "20ce3fc139d55e32b42dc2527bae0369978e74b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_2be65514",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T19:07:44Z",
+      "side": 1,
+      "message": "Use a second argument\ne.g.\nparsedText, sectionName",
+      "revId": "20ce3fc139d55e32b42dc2527bae0369978e74b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
