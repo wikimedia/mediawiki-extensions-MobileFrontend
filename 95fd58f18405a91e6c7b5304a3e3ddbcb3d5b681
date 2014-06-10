@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_a54dd641",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-10T16:50:09Z",
+      "side": 1,
+      "message": "Maybe better to use a variable for that? Maybe not a class, but a function var?",
+      "revId": "95fd58f18405a91e6c7b5304a3e3ddbcb3d5b681",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
