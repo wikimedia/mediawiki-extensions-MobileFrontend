@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_05626206",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T17:37:55Z",
+      "side": 1,
+      "message": "Please add FIXME keyword since it sounds like this is temporary.\n\nSide note, I really dislike this. I wonder if we should port these CSS rules into Parsoid itself and use skinStyles mechanism to serve mobile specific styles.",
+      "revId": "af1a1d0aede73a002433a7d9134a90e45e740aff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
