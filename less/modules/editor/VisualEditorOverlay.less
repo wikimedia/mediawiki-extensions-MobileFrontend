@@ -19,7 +19,11 @@
 		border-bottom: solid 1px @sectionBorderColor;
 	}
 
-	// Styling for images (affects both thumbnailed images and framed images)
+	// Styling for images (as output by Parsiod)
+	// These styles are mostly derived from content.parsoid.less, which the Minerva skin
+	// opts out of (since the styles are largely Vectorish).
+	// FIXME: Once Parser and Parsoid output are synchronized, we'll want to move these
+	// from here into the regular Minerva content styles.
 	figure[typeof*='mw:Image'] {
 		max-width: 100%;
 		background-color: transparent;
@@ -32,15 +36,25 @@
 		&.mw-halign-left {
 			/* @noflip */
 			margin: .6em 1.4em .6em 0;
+			/* @noflip */
+			clear: left;
+			/* @noflip */
+			float: left;
 		}
 
 		&.mw-halign-right {
 			/* @noflip */
 			margin: .6em 0 .6em 1.4em;
+			/* @noflip */
+			clear: right;
+			/* @noflip */
+			float: right;
 		}
 
 		&.mw-halign-center {
 			margin: .6em auto .6em auto;
+			clear: none;
+			float: none;
 		}
 
 		img {
