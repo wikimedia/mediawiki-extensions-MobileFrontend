@@ -16,6 +16,24 @@
       "revId": "95fd58f18405a91e6c7b5304a3e3ddbcb3d5b681",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_6506ced3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T16:53:46Z",
+      "side": 1,
+      "message": "Mmm... actually this looks exactly like the if statement above.\n\nI guess we should break this out and set notificationsTitle in the if statement\n\ne.g. $notificationsTitle \u003d SpecialPage::getTitleFor( \u0027Notifications\u0027 );\n$count \u003d MWEchoNotifUser::newFromUser( $user )-\u003egetNotificationCount();\n\n} elseif ( !empty( $newtalks ) ) {\n$notificationsTitle \u003d SpecialPage::getTitleFor( \u0027MyTalk\u0027 );\n$count \u003d 0;\n}\n\nif ( $notificationsTitle ) {\n$tpl-\u003eset( \u0027secondaryButton\u0027,\netc...\n}",
+      "parentUuid": "ee391fd1_a54dd641",
+      "revId": "95fd58f18405a91e6c7b5304a3e3ddbcb3d5b681",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
