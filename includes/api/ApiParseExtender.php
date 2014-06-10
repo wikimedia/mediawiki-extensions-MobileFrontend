@@ -1,5 +1,9 @@
 <?php
 /**
+ * ApiParseExtender.php
+ */
+
+/**
  * Extends API action=parse with mobile goodies
  * See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Extended_action.3Dparse
  */
