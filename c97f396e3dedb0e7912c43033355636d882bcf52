@@ -16,6 +16,24 @@
       "revId": "c97f396e3dedb0e7912c43033355636d882bcf52",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_c018c87c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-10T17:43:07Z",
+      "side": 1,
+      "message": "If i do that, notification.js will navigate to #/notifications automatically and abort loading of talk page :) So, we can use a different ID (set the Suffix to \u0027\u0027 in init) or i don\u0027t know adhoc :)",
+      "parentUuid": "ee391fd1_85677222",
+      "revId": "c97f396e3dedb0e7912c43033355636d882bcf52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
