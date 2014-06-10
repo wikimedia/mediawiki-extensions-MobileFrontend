@@ -6,6 +6,9 @@
 class DeviceDetectionTest extends MediaWikiTestCase {
 	// @codingStandardsIgnoreStart Ignore long lines.
 	private $mobiles = array(
+		// Android
+		'Mozilla/5.0 (Linux; U; Android 2.3.3; zh-tw; HTC_Pyramid Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1',
+		'Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
 		// Firefox OS (bug 40919)
 		'Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0',
 		'Mozilla/5.0 (Android; Mobile; rv:20.0) Gecko/20.0 Firefox/20.0',
