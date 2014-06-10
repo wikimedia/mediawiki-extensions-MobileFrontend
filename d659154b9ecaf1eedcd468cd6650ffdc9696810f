@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_45806a4b",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T16:46:07Z",
+      "side": 1,
+      "message": "typo",
+      "revId": "d659154b9ecaf1eedcd468cd6650ffdc9696810f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_c5933aa5",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T16:46:07Z",
+      "side": 1,
+      "message": "I\u0027m going to add spaces between all these comments.",
+      "revId": "d659154b9ecaf1eedcd468cd6650ffdc9696810f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
