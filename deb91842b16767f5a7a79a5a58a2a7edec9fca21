@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_25d32663",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T16:50:05Z",
+      "side": 1,
+      "message": "No longer needed :)",
+      "revId": "deb91842b16767f5a7a79a5a58a2a7edec9fca21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_c5c1fa84",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-10T16:50:05Z",
+      "side": 1,
+      "message": "I\u0027d just use $isAllowed here.",
+      "revId": "deb91842b16767f5a7a79a5a58a2a7edec9fca21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
