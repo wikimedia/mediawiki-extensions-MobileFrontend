@@ -1,5 +1,9 @@
 <?php
 /**
+ * MobileFormatter.php
+ */
+
+/**
  * Converts HTML into a mobile-friendly version
  */
 class MobileFormatter extends HtmlFormatter {

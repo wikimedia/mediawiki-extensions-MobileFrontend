@@ -1,5 +1,9 @@
 <?php
 /**
+ * InlineDiffFormatter.php
+ */
+
+/**
  * Extends standard Table-formatted DiffFormatter of core to enable Inline-Diff
  * format of MF with only one column.
  */

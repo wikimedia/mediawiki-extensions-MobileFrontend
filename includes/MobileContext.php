@@ -1,5 +1,9 @@
 <?php
 /**
+ * MobileContext.php
+ */
+
+/**
  * Provide various request-dependant methods to use in mobile context
  */
 class MobileContext extends ContextSource {

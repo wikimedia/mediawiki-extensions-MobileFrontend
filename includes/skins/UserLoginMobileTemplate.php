@@ -1,5 +1,9 @@
 <?php
 /**
+ * UserLoginMobileTemplate.php
+ */
+
+/**
  * Provides a custom login form for mobile devices
  */
 class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {

@@ -1,5 +1,9 @@
 <?php
 /**
+ * MFRessourceLoaderModule.php
+ */
+
+/**
  * ResourceLoaderModule subclass for mobile
  * Allows basic parsing of messages without arguments
  */

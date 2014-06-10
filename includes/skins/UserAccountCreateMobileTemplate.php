@@ -1,5 +1,9 @@
 <?php
 /**
+ * UserAccountCreateMobileTemplate.php
+ */
+
+/**
  * Provides a custom account creation form for mobile devices
  */
 class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {

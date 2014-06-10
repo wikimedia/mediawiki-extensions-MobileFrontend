@@ -1,5 +1,9 @@
 <?php
 /**
+ * MobileSiteModule.php
+ */
+
+/**
  * Extends ResourceLoaderSiteModule (Module for site customizations).
  */
 class MobileSiteModule extends ResourceLoaderSiteModule {

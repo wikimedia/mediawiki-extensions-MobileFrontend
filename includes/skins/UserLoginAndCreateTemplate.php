@@ -1,5 +1,9 @@
 <?php
 /**
+ * UserLoginAndCreateTemplate.php
+ */
+
+/**
  * Template overloader for user login and account cration templates
  *
  * Facilitates hijacking existing account creation/login template objects

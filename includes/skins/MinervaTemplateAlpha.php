@@ -1,5 +1,9 @@
 <?php
 /**
+ * MinervaTemplateAlpha.php
+ */
+
+/**
  * Alternative Minerva template sent to users who have opted into the
  * experimental (alpha) mode via Special:MobileOptions
  */

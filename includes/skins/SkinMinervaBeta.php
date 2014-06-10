@@ -1,5 +1,9 @@
 <?php
 /**
+ * SkinMinervaBeta.php
+ */
+
+/**
  * Beta-Implementation of stable class SkinMinerva
  */
 class SkinMinervaBeta extends SkinMinerva {

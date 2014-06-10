@@ -1,5 +1,9 @@
 <?php
 /**
+ * MobileUserInfo.php
+ */
+
+/**
  * Retrieves information about a user for Special:MobileProfile
  */
 class MobileUserInfo {

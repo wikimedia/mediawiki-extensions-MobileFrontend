@@ -1,5 +1,9 @@
 <?php
 /**
+ * MinervaTemplate.php
+ */
+
+/**
  * Extended Template class of BaseTemplate for mobile devices
  */
 class MinervaTemplate extends BaseTemplate {

@@ -1,5 +1,9 @@
 <?php
 /**
+ * SkinMinerva.php
+ */
+
+/**
  * Minerva: Born from the godhead of Jupiter with weapons!
  * A skin that works on both desktop and mobile
  * @ingroup Skins

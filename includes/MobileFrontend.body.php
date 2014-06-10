@@ -1,5 +1,9 @@
 <?php
 /**
+ * MobileFrontend.body.php
+ */
+
+/**
  * Implements additional functions to use in MobileFrontend
  */
 class ExtMobileFrontend {

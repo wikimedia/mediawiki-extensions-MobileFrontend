@@ -1,5 +1,9 @@
 <?php
 /**
+ * MobileFrontend.hooks.php
+ */
+
+/**
  * Hook handlers for MobileFrontend extension
  *
  * Hook handler method names should be in the form of:
