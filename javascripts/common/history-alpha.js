@@ -34,8 +34,11 @@
 	// do not run more than once
 	function init() {
 		// use wgPageName to ensure we keep the namespace prefix
-		var title = mw.config.get( 'wgPageName' ),
-			currentUrl = mw.util.getUrl( title, M.query );
+		var title = mw.config.get( 'wgPageName' ), query = $.extend( {}, M.query ), currentUrl;
+
+		// Remove title query string parameter for situations where user navigated to non-canonical URL
+		delete query.title;
+		currentUrl = mw.util.getUrl( title, query );
 		// initial history state does not contain title
 		// run before binding to avoid nasty surprises
 		History.replaceState( null, title, currentUrl + location.hash );
