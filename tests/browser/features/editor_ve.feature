@@ -3,7 +3,8 @@ Feature: VisualEditor
 
 Background:
   Given I am logged into the mobile website
-    And I am in alpha mode
+    And I am viewing the site in tablet mode
+    And I am in beta mode
 
 Scenario: Switch from source editor to VisualEditor and back (with editor stickiness)
   Given I am on the "Selenium Edit Test" page
