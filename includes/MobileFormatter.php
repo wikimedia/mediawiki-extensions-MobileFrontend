@@ -36,11 +36,6 @@ class MobileFormatter extends HtmlFormatter {
 	 * @var boolean $mainPage
 	 */
 	protected $mainPage = false;
-	/**
-	 * Whether show back to top link
-	 * @var boolean $backToTopLink
-	 */
-	protected $backToTopLink = true;
 
 	/**
 	 * Headings
