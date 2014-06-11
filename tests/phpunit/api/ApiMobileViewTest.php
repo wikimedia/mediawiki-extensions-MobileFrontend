@@ -210,6 +210,16 @@ Text 2
 					'viewable' => 'no',
 				),
 			),
+			array(
+				array(
+					'text' => '__NOTOC__',
+					'prop' => 'pageprops',
+				) + $baseIn,
+				array(
+					'sections' => array(),
+					'pageprops' => array( 'notoc' => '' ),
+				),
+			),
 		);
 	}
 }
