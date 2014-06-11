@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_5fe6ed14",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-11T19:19:38Z",
+      "side": 1,
+      "message": "$count is not always defined. Add this element conditionally and ensure $count is already defined.",
+      "revId": "8e457209518ebf42f8b4771e03a3c4dc25afbf26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
