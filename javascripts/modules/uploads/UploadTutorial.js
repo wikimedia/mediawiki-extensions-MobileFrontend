@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 
 	var
-		Overlay = M.require( 'OverlayNew' ),
+		Overlay = M.require( 'Overlay' ),
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		buttonMsg = mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
 		UploadTutorial;

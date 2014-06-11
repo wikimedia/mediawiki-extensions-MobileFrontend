@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 	var
-		Overlay = M.require( 'OverlayNew' ),
+		Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
 		toast = M.require( 'toast' ),
 		TalkSectionAddOverlay;

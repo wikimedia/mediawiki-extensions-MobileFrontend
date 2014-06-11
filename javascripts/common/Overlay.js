@@ -28,7 +28,7 @@
 		 * @type {String}
 		 */
 		className: 'overlay',
-		template: M.template.get( 'OverlayNew' ),
+		template: M.template.get( 'Overlay' ),
 		defaults: {
 			headerButtonsListClassName: 'bottom-border',
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
@@ -167,8 +167,6 @@
 		}
 	} );
 
-	// FIXME: Deprecate OverlayNew
-	M.define( 'OverlayNew', Overlay );
 	M.define( 'Overlay', Overlay );
 
 }( mw.mobileFrontend, jQuery ) );

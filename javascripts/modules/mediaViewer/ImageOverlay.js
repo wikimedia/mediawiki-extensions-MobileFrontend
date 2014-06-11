@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	M.assertMode( [ 'alpha', 'beta', 'app' ] );
 
-	var Overlay = M.require( 'OverlayNew' ),
+	var Overlay = M.require( 'Overlay' ),
 		ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
 		ImageOverlay, api;
 

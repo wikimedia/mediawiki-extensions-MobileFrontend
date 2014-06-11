@@ -661,18 +661,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/common/Overlay.js',
-			'javascripts/common/LoadingOverlayNew.js',
+			'javascripts/common/LoadingOverlay.js',
 		),
 		'messages' => array(
 			'mobile-frontend-overlay-close',
 			'mobile-frontend-overlay-continue',
 		),
 		'templates' => array(
-			'OverlayNew',
+			'Overlay',
 			'LoadingOverlay',
 		),
 		'styles' => array(
-			'less/common/OverlayNew.less',
+			'less/common/Overlay.less',
 		)
 	),
 

@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
-		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
+		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		loader = new LoadingOverlay(),
 		PageList = M.require( 'modules/PageList' ),
 		Nearby;

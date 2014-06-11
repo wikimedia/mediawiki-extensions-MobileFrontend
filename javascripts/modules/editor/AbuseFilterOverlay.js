@@ -1,6 +1,6 @@
 ( function ( M ) {
-	var OverlayNew = M.require( 'OverlayNew' ), AbuseFilterOverlay;
-	AbuseFilterOverlay = OverlayNew.extend( {
+	var Overlay = M.require( 'Overlay' ), AbuseFilterOverlay;
+	AbuseFilterOverlay = Overlay.extend( {
 		defaults: {
 			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
 		},

@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-	var Overlay = M.require( 'OverlayNew' ), ContentOverlay;
+	var Overlay = M.require( 'Overlay' ), ContentOverlay;
 
 	/**
 	 * An {@link Overlay} that points at an element on the page.

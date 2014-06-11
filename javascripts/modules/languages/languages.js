@@ -3,7 +3,7 @@
 	var LanguageOverlay = M.require( 'languages/LanguageOverlay' );
 
 	M.overlayManager.add( /^\/languages$/, function() {
-		var LoadingOverlay = M.require( 'LoadingOverlayNew' ),
+		var LoadingOverlay = M.require( 'LoadingOverlay' ),
 			loadingOverlay = new LoadingOverlay(),
 			result = $.Deferred();
 

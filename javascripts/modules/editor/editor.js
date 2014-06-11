@@ -12,7 +12,7 @@
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = M.isWideScreen() && M.isBetaGroupMember() &&
 			veConfig,
-		LoadingOverlay = M.require( 'LoadingOverlayNew' ),
+		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			queryParams: {

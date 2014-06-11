@@ -1,10 +1,10 @@
 ( function( M, $ ) {
-	var OverlayNew = M.require( 'OverlayNew' ),
+	var Overlay = M.require( 'Overlay' ),
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		PhotoUploadProgress;
 
-	PhotoUploadProgress = OverlayNew.extend( {
+	PhotoUploadProgress = Overlay.extend( {
 		defaults: {
 			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' ),
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' )
