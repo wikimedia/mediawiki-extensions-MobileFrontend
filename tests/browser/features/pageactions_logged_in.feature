@@ -9,11 +9,7 @@ Feature: Page actions menu when logged in
     Then I should see the edit icon
 
   Scenario: I cannot upload a lead photo to the Main Page
-    When I click on the upload icon
-    # Note the message of this toast varies depending on whether there is a photo on the main page
-    # So we just check for existence.
-    # This is still not perfect as MEDIAWIKI_USER may have permission to upload an image to Main Page
-    Then I see a toast notification
+    Then there is not an upload an image to this page button
 
   Scenario: I can add the Main Page to my watchlist
     When I click on watchlist icon

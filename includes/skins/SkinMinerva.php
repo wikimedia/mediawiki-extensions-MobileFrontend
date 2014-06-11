@@ -672,6 +672,7 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $this->isAllowedPageAction( 'upload' )
+			&& !$title->isMainPage()
 			&& $this->getUser()->isAllowed( 'mf-uploadbutton' ) )
 		{
 			$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
