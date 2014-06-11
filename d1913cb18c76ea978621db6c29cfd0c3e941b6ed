@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_25de7871",
+        "filename": "javascripts/modules/uploads/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-11T21:13:25Z",
+      "side": 1,
+      "message": "It doesn\u0027t make sense to me that we have an upload page action from file pages, especially since using this button doesn\u0027t actually replace the current image, but creates an entirely new file page (something a page action should never do). I realize, however, that you aren\u0027t changing the behavior in this patch, so I guess I\u0027ll just file a bug about it instead.",
+      "revId": "d1913cb18c76ea978621db6c29cfd0c3e941b6ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
