@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_68e8d5af",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-11T23:36:51Z",
+      "side": 1,
+      "message": "Why would we return h6 here if it should be already returned by the above code?",
+      "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_c800e16f",
+        "filename": "javascripts/common/LoadingOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-11T23:36:51Z",
+      "side": 1,
+      "message": "I don\u0027t get this. This file exists on master.",
+      "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_8839b940",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-11T23:36:51Z",
+      "side": 1,
+      "message": "I\u0027d rather use .prop(\"tagName\");\nAlso, doesn\u0027t this return capitalized string by default?",
+      "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_88fad971",
+        "filename": "templates/Overlay.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-11T23:36:51Z",
+      "side": 1,
+      "message": "I don\u0027t get this. This file exists on master.",
+      "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
