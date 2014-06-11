@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee391fd1_f3183a7c",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-11T23:39:38Z",
+      "side": 1,
+      "message": "If there is no tag... (note the headingTransform also wraps a lead section so needs to run regardless)",
+      "parentUuid": "ee391fd1_68e8d5af",
+      "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee391fd1_c800e16f",
         "filename": "javascripts/common/LoadingOverlay.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2014-06-11T23:36:51Z",
       "side": 1,
       "message": "I don\u0027t get this. This file exists on master.",
+      "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_9327aeb1",
+        "filename": "javascripts/common/LoadingOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-11T23:39:38Z",
+      "side": 1,
+      "message": "MM.. weird. Let me rebase probably checked in by accident.",
+      "parentUuid": "ee391fd1_c800e16f",
       "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee391fd1_3336c2e5",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-11T23:39:38Z",
+      "side": 1,
+      "message": "Using prop makes sense will change.\n\nDoes capitalized string matter? Not sure I follow significance.",
+      "parentUuid": "ee391fd1_8839b940",
+      "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee391fd1_88fad971",
         "filename": "templates/Overlay.html",
         "patchSetId": 4
@@ -64,6 +118,24 @@
       "writtenOn": "2014-06-11T23:36:51Z",
       "side": 1,
       "message": "I don\u0027t get this. This file exists on master.",
+      "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_1333bef4",
+        "filename": "templates/Overlay.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-11T23:39:38Z",
+      "side": 1,
+      "message": "Again. Guess something went wrong here.",
+      "parentUuid": "ee391fd1_88fad971",
       "revId": "76a0a21f834105a1032002fd9fcb4ea4c4fa443a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
