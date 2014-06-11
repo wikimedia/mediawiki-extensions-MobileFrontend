@@ -32,6 +32,12 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		return $tpl;
 	}
 
+	public function getSkinConfigVariables() {
+		$vars = parent::getSkinConfigVariables();
+		$vars['wgMFAnonymousEditing'] = true;
+		return $vars;
+	}
+
 	/**
 	 * Add the talk page link for logged in alpha users to template
 	 * @param BaseTemplate $tpl an instance of BaseTemplate

@@ -655,6 +655,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-uploadenable',
 			'mobile-frontend-editor-blocked',
 			'mobile-frontend-editor-cta',
+			'mobile-frontend-editor-anon',
 			'mobile-frontend-editor-edit',
 			'mobile-frontend-editor-undo-unsupported',
 			// modules/editor/EditorOverlay.js

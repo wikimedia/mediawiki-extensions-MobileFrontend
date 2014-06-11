@@ -5,6 +5,7 @@
 		popup = M.require( 'toast' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
+		allowAnonymous = false,
 		isEditingSupported = M.router.isSupported() && !blacklisted,
 		isNewPage = M.getCurrentPage().options.id === 0,
 		isNewFile = M.inNamespace( 'file' ) && isNewPage,
@@ -16,7 +17,6 @@
 		drawer = new CtaDrawer( {
 			queryParams: {
 				campaign: 'mobile_editPageActionCta',
-				returntoquery: 'article_action=edit'
 			},
 			signupQueryParams: { returntoquery: 'article_action=signup-edit' },
 			content: mw.msg( 'mobile-frontend-editor-cta' )
@@ -29,7 +29,15 @@
 			prependTo( container );
 	}
 
-	function makeCta( $el, hash ) {
+	function makeCta( $el, section, allowAnonymous ) {
+		var options = { queryParams: {
+			returnto: mw.config.get( 'wgPageName' ),
+			returntoquery: 'action=edit&section=' + section
+		} };
+		if ( allowAnonymous ) {
+			options.links = [ { label: mw.msg( 'mobile-frontend-editor-anon' ),
+				href: $el[0].href, selector: 'edit-anon' } ];
+		}
 		$el.
 			// FIXME change when micro.tap.js in stable
 			on( M.tapEvent( 'mouseup' ), function( ev ) {
@@ -38,7 +46,7 @@
 				ev.stopPropagation();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
 				drawer.
-					render( { queryParams: { returnto: mw.config.get( 'wgPageName' ) + hash } } ).
+					render( options ).
 					toggle();
 			} ).
 			// needed until we use tap everywhere to prevent the link from being followed
@@ -161,22 +169,24 @@
 
 	/**
 	 * Initialize the edit button so that it launches a login call-to-action when clicked.
+	 * @param {boolean} allowAnonymous Whether the drawer has to include an edit anonymously link
 	 */
-	function initCta( page ) {
-		page.isEditable( user ).done( function( isEditable ) {
-			if ( isEditable ) {
-				// FIXME change when micro.tap.js in stable
-				$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
-					drawer.render().show();
-				} );
-
-				$( '.edit-page' ).each( function() {
-					var $a = $( this ), anchor = '#' + $( this ).parent().find( '[id]' ).attr( 'id' );
-					makeCta( $a, anchor );
-				} );
-			} else {
-				showSorryToast( 'mobile-frontend-editor-disabled' );
+	function initCta( allowAnonymous ) {
+		if ( allowAnonymous ) {
+			// init the editor
+			init( M.getCurrentPage() );
+		} else {
+			// FIXME: change when micro.tap.js in stable
+			$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
+				drawer.render().show();
+			});
+		}
+		$( '.edit-page' ).each( function() {
+			var $a = $( this ), section = 0;
+			if ( $( this ).data( 'section' ) !== undefined ) {
+				section = $( this ).data( 'section' );
 			}
+			makeCta( $a, section, allowAnonymous );
 		} );
 	}
 
@@ -199,9 +209,12 @@
 		// Is a new file page (enable upload image only) Bug 58311
 		showSorryToast( 'mobile-frontend-editor-uploadenable' );
 	} else	{
-		if ( user.isAnon() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
+		if ( user.isAnon() ) {
 			// Set edit button to launch login CTA
-			initCta( M.getCurrentPage() );
+			if ( mw.config.get( 'wgMFAnonymousEditing' ) ) {
+				allowAnonymous = true;
+			}
+			initCta( allowAnonymous );
 			M.on( 'page-loaded', initCta );
 		} else {
 			if ( mw.config.get( 'wgMFIsLoggedInUserBlocked' ) ) {

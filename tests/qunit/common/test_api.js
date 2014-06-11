@@ -134,11 +134,19 @@ QUnit.test( '#getTokenWithEndpoint - default to edit', 1, function() {
 	} );
 } );
 
-QUnit.test( '#getTokenWithEndpoint - get anon token', 1, function() {
+QUnit.test( '#getTokenWithEndpoint - get anon token (stable)', 1, function() {
+	mw.config.set( 'wgMFAnonymousEditing', false );
 	this.api.getTokenWithEndpoint( 'upload' ).fail( function( msg ) {
 		strictEqual( msg, 'Anonymous token.', 'No token given - user must be anon' );
 	} );
 } );
+
+QUnit.test ( '#getTokenWithEndpoint - get anon token (alpha)', 1, function() {
+	mw.config.set( 'wgMFAnonymousEditing', true );
+	this.api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
+		strictEqual( token, '123', 'Got a token for anonymous editing' );
+	} );
+});
 
 QUnit.test( '#getToken - bad type of token', 1, function() {
 	this.api.getTokenWithEndpoint( 'rainbows' ).fail( function( msg ) {
