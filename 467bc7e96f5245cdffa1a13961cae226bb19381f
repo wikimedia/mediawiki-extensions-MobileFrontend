@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_dfa2dd3a",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-11T20:25:46Z",
+      "side": 1,
+      "message": "You should also remove \u0027icon-arrow-down\u0027, otherwise both classes are applied (which technically works as long as icon-arrow-up is last, but is confusing nonetheless).",
+      "revId": "467bc7e96f5245cdffa1a13961cae226bb19381f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_9f533543",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-11T20:25:46Z",
+      "side": 1,
+      "message": "add \u0027icon-arrow-down\u0027 per above.",
+      "revId": "467bc7e96f5245cdffa1a13961cae226bb19381f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_5fe94d7a",
+        "filename": "less/common/icons.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-11T20:25:46Z",
+      "side": 1,
+      "message": "No longer a need for this FIXME comment",
+      "revId": "467bc7e96f5245cdffa1a13961cae226bb19381f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
