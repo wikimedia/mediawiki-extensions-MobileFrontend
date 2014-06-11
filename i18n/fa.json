@@ -149,7 +149,7 @@
 	"mobile-frontend-last-modified-with-user-days": "آخرین ویرایش {{PLURAL:$3|$3 روز}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",
 	"mobile-frontend-last-modified-with-user-hours": "آخرین ویرایش {{PLURAL:$3|$3 ساعت}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",
 	"mobile-frontend-last-modified-with-user-just-now": "آخرین ویرایش همین الآن توسط {{PLURAL:$4|[$5 $2]|0=an کاربر ناشناس}} [$3 {{GENDER:$1|انجام شده‌است}}].",
-	"mobile-frontend-last-modified-with-user-minutes": "آخرین ویرایش {{PLURAL:$3|$3 دقیقه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}].",
+	"mobile-frontend-last-modified-with-user-minutes": "آخرین ویرایش {{PLURAL:$3|$3 دقیقه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",
 	"mobile-frontend-last-modified-with-user-months": "آخرین ویرایش {{PLURAL:$3|$3 ماه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",
 	"mobile-frontend-last-modified-with-user-seconds": "آخرین ویرایش {{PLURAL:$3|$3 ثانیه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",
 	"mobile-frontend-last-modified-with-user-years": "آخرین ویرایش {{PLURAL:$3|$3 سال}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",

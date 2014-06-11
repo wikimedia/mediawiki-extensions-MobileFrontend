@@ -28,7 +28,7 @@
 	"mobile-frontend-dismiss-notification": "склони ово обавештење",
 	"mobile-frontend-donate-image-anon": "$1 је потребан да би сте видели ову страницу",
 	"mobile-frontend-donate-image-heading": "Ваши скорашњи доприноси",
-	"mobile-frontend-donate-image-login": "Слике на пројекту {{SITENAME}} су дониране од стрне људи попут вас.",
+	"mobile-frontend-donate-image-login": "Слике на пројекту {{SITENAME}} су дониране од стрaне људи попут вас.",
 	"mobile-frontend-donate-image-title": "Отпремања",
 	"mobile-frontend-drawer-cancel": "Откажи",
 	"mobile-frontend-editor-abusefilter-read-more": "Прочитајте више",
