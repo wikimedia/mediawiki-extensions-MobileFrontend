@@ -33,6 +33,24 @@
       "revId": "c9c8b40d0f5ea1249298c4c698d9c0701019aa31",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_01a6bfa7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2014-06-12T20:54:37Z",
+      "side": 1,
+      "message": "That is already done in Extension:MobileApp",
+      "parentUuid": "ee391fd1_01659faa",
+      "revId": "c9c8b40d0f5ea1249298c4c698d9c0701019aa31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
