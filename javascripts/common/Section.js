@@ -17,6 +17,7 @@
 		},
 		initialize: function( options ) {
 			var self = this;
+			options.tag = 'h' + options.level;
 			this.line = options.line;
 			this.text = options.text;
 			this.hasReferences = options.hasReferences || false;

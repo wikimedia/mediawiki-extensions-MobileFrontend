@@ -252,6 +252,23 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
+	 * Finds the first heading in the page and uses that to determine top level sections.
+	 * When a page contains no headings returns h6.
+	 *
+	 * @param string $html
+	 * @return string the tag name for the top level headings
+	 */
+	protected function findTopHeading( $html ) {
+		$tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
+		foreach( $tags as $tag ) {
+			if ( strpos( $html, '<' . $tag ) !== false ) {
+				return $tag;
+			}
+		}
+		return 'h6';
+	}
+
+	/**
 	 * Call headingTransform if needed
 	 *
 	 * @param string $html
@@ -259,7 +276,7 @@ class MobileFormatter extends HtmlFormatter {
 	protected function onHtmlReady( $html ) {
 		wfProfileIn( __METHOD__ );
 		if ( $this->expandableSections ) {
-			$tagName = strrpos( $html, '<h1' ) !== false ? 'h1' : 'h2';
+			$tagName = $this->findTopHeading( $html );
 			$html = $this->headingTransform( $html, $tagName );
 		}
 		wfProfileOut( __METHOD__ );

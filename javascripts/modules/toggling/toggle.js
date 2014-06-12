@@ -62,14 +62,14 @@
 	}
 
 	function init( $page ) {
-		var tagName = 'h2', $headings, expandSections,
+		var tagName, $headings, expandSections,
+			$firstHeading,
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 		$page = $page || $( '#content' );
 
 		$( 'html' ).removeClass( 'stub' );
-		if ( $page.find( 'h1' ).length > 0 ) {
-			tagName = 'h1';
-		}
+		$firstHeading = $page.find( 'h1,h2,h3,h4,h5,h6' ).eq(0);
+		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
 		$page.find( tagName ).addClass( 'section_heading icon icon-text icon-15px' );
 		$headings = $page.find( '.section_heading' );
 		$headings.next( 'div' ).addClass( 'content_block' );
