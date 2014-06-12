@@ -34,6 +34,24 @@
       "revId": "30bfc85ed0c6b182b39e0e8dac91cb0b4bf8b19d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_9e80ce4c",
+        "filename": "less/common/drawer.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T22:05:59Z",
+      "side": 0,
+      "message": "Fixed.",
+      "parentUuid": "ee391fd1_139cde5e",
+      "revId": "30bfc85ed0c6b182b39e0e8dac91cb0b4bf8b19d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
