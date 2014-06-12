@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_01659faa",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-12T20:38:32Z",
+      "side": 1,
+      "message": "Maybe its a good idea to don\u0027t disable tag, but change tag, e.g. \"mobile edit\" for Web edit, and \"app edit\" or \"mobile app\" or \"mobile app edit\" for edits with the mobile app?",
+      "revId": "c9c8b40d0f5ea1249298c4c698d9c0701019aa31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
