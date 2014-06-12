@@ -1,10 +1,23 @@
 <?php
+/**
+ * SpecialMobileWebApp.php
+ */
 
+/**
+ * Get raw mobile formatted content for App
+ */
 class SpecialMobileWebApp extends MobileSpecialPage {
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'MobileWebApp' );
 	}
 
+	/**
+	 * Render the special page
+	 * @param string|null $par Special page to load (for now only "manifest")
+	 */
 	public function executeWhenAvailable( $par ) {
 		if ( $par === 'manifest' ) {
 			$this->generateManifest();
@@ -15,6 +28,10 @@ class SpecialMobileWebApp extends MobileSpecialPage {
 		}
 	}
 
+	/**
+	 * Show the App cache manifest
+	 * @see genAppCache()
+	 */
 	public function generateManifest() {
 		$this->getOutput()->disable();
 		$this->genAppCache();

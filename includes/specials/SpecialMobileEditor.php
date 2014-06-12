@@ -1,11 +1,24 @@
 <?php
+/**
+ * SpecialMobileEditor.php
+ */
 
+/**
+ * Provides a special page to redirect to the editor of an article page
+ */
 class SpecialMobileEditor extends MobileSpecialPage {
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'MobileEditor' );
 		$this->listed = false;
 	}
 
+	/**
+	 * Render the special page and redirect the user to the editor (if page exists)
+	 * @param string $subpage The name of the page to edit
+	 */
 	public function executeWhenAvailable( $subpage ) {
 		wfProfileIn( __METHOD__ );
 

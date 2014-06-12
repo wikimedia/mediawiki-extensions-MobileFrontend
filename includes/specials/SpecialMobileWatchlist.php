@@ -1,25 +1,43 @@
 <?php
+/**
+ * SpecialMobileWatchlist.php
+ */
 
+/**
+ * Implements the Watchlist special page
+ */
 class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	const LIMIT = 50; // Performance-safe value with PageImages
 	const THUMB_SIZE = 150;
 	const VIEW_OPTION_NAME = 'mfWatchlistView';
 	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
 
-	/** @var string */
+	/** @var string $view Saves, how the watchlist is sorted: a-z or as a feed */
 	private $view;
 
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'Watchlist' );
 	}
+	/** @var string $filter Saves the actual used filter in feed view */
+	private $filter;
+	/** @var boolean $usePageImages Saves whether display images or not */
+	private $usePageImages;
+	/**
+	 * @var boolean $optionsChanged Set true, when the user changed the
+	 *	view or feed of watchlist to save the new settings
+	 */
+	private $optionsChanged = false;
 
-	private $filter,
-		$usePageImages,
-		$optionsChanged = false;
-
-	/** @var Title */
+	/** @var Title $fromPageTitle Saves the Title object of the page list starts from */
 	private $fromPageTitle;
 
+	/**
+	 * Render an information box, that the anonymous user must login to see
+	 * his Watchlist
+	 */
 	protected function renderAnonBanner() {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'watchnologin' ) );
@@ -50,6 +68,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->updatePreference( self::VIEW_OPTION_NAME, $this->view );
 	}
 
+	/**
+	 * Render the special page
+	 * @param string $par parameter submitted as subpage
+	 */
 	function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$ctx = MobileContext::singleton();
@@ -105,7 +127,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Returns an array of conditions restricting namespace in queries
-	 * @param string $column
+	 * @param string $column Namespace db key
 	 *
 	 * @return array
 	 */
@@ -164,6 +186,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		);
 	}
 
+	/**
+	 * Get the header for the watchlist page
+	 * @return string Parsed HTML
+	 */
 	protected function getWatchlistHeader() {
 		$user = $this->getUser();
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
@@ -201,6 +227,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		return $html;
 	}
 
+	/**
+	 * Render "second" header for filter in feed view of watchlist
+	 */
 	function showRecentChangesHeader() {
 		$filters = array(
 			'all' => 'mobile-frontend-watchlist-filter-all',
@@ -239,6 +268,13 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		);
 	}
 
+	/**
+	 * Get watchlist items for feed view
+	 * @return ResultWrapper
+	 *
+	 * @see getNSConditions()
+	 * @see doPageImages()
+	 */
 	protected function doFeedQuery() {
 		wfProfileIn( __METHOD__ );
 
@@ -294,6 +330,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		return $res;
 	}
 
+	/**
+	 * Get watchlist items for a-z view
+	 * @return ResultWrapper
+	 *
+	 * @see doPageImages()
+	 */
 	function doListQuery() {
 		wfProfileIn( __METHOD__ );
 
@@ -341,10 +383,22 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		return $res;
 	}
 
+	/**
+	 * Show results of doFeedQuery
+	 * @param ResultWrapper $res ResultWrapper returned from db
+	 *
+	 * @see showResults()
+	 */
 	protected function showFeedResults( ResultWrapper $res ) {
 		$this->showResults( $res, true );
 	}
 
+	/**
+	 * Show results of doListQuery after an ul element added
+	 * @param ResultWrapper $res ResultWrapper returned from db
+	 *
+	 * @see showResults()
+	 */
 	protected function showListResults( ResultWrapper $res ) {
 		$output = $this->getOutput();
 		$output->addHtml(
@@ -354,7 +408,13 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->showResults( $res, false );
 	}
 
-	// FIXME: use templates/articleList.html to keep consistent with nearby view
+	/**
+	 * Render the Watchlist items.
+	 * When ?from not set, adds a link "more" to see the other watchlist items.
+	 * @param ResultWrapper $res ResultWrapper from db
+	 * @param boolean $feed Render as feed (true) or list (false) view?
+	 * @todo FIXME: use templates/articleList.html to keep consistent with nearby view
+	 */
 	protected function showResults( ResultWrapper $res, $feed ) {
 		wfProfileIn( __METHOD__ );
 
@@ -402,6 +462,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * If the user doesn't watch any page, show information how to watch some.
+	 * @param boolean $feed Render as feed (true) or list (false) view?
+	 */
 	function showEmptyList( $feed ) {
 		global $wgExtensionAssetsPath;
 		$output = $this->getOutput();
@@ -432,7 +496,13 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		);
 	}
 
-	// FIXME: Refactor to use MobilePage
+	/**
+	 * Render a thumbnail returned from db as PageImage or a needsPhoto placeholder to add a picture
+	 * @param object $row a row of the returned db result
+	 * @return array
+	 *
+	 * @todo FIXME: Refactor to use MobilePage
+	 */
 	private function renderThumb( $row ) {
 		wfProfileIn( __METHOD__ );
 
@@ -473,6 +543,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		);
 	}
 
+	/**
+	 * Render a result row in feed view
+	 * @param object $row a row of db result
+	 */
 	protected function showFeedResultRow( $row ) {
 		wfProfileIn( __METHOD__ );
 
@@ -511,6 +585,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Render a result row in list view
+	 * @param object $row a row of db result
+	 */
 	protected function showListResultRow( $row ) {
 		wfProfileIn( __METHOD__ );
 
@@ -549,6 +627,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Save the settings for the watchlist, so if the user comes back
+	 * later he see the same filter and list view
+	 * @param string $name The name of the option to set
+	 * @param string|boolean $value The value for the option to set
+	 */
 	private function updatePreference( $name, $value ) {
 		$user = $this->getUser();
 		if ( $user->getOption( $name ) != $value ) {
@@ -557,6 +641,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		}
 	}
 
+	/**
+	 * Formats a comment of revision via Linker:formatComment and Sanitizer::stripAllTags
+	 * @param string $comment the comment
+	 * @param string $title the title object of comments page
+	 * @return string formatted comment
+	 */
 	protected function formatComment( $comment, $title ) {
 		if ( $comment !== '' ) {
 			$comment = Linker::formatComment( $comment, $title );

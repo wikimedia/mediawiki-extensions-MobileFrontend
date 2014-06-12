@@ -1,18 +1,26 @@
 <?php
-/**  @var string the database table in which revisions are stored */
+/**
+ * SpecialMobileHistory.php
+ */
 
+/**
+ * Mobile formatted history of of a page
+ */
 class SpecialMobileHistory extends MobileSpecialPageFeed {
 	const LIMIT = 50;
 	const DB_REVISIONS_TABLE = 'revision';
-	/**  @var String|null timestamp to offset results from */
+	/** @var string|null $offset timestamp to offset results from */
 	protected $offset;
 
-	/**  @var String name of the special page */
+	/** @var string $specialPageName name of the special page */
 	protected $specialPageName = 'History';
 
-	/**  @var Title|null if no title passed */
+	/** @var Title|null $title Null if no title passed */
 	protected $title;
 
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( $this->specialPageName );
 	}
@@ -59,12 +67,19 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		);
 	}
 
+	/**
+	 * Show an error page, if page not found
+	 */
 	protected function showPageNotFound() {
 		wfHttpError( 404, $this->msg( 'mobile-frontend-history-404-title' )->text(),
 			$this->msg( 'mobile-frontend-history-404-desc' )->text()
 		);
 	}
 
+	/**
+	 * Render the special page
+	 * @param string $par parameter as subpage of specialpage
+	 */
 	public function executeWhenAvailable( $par = '' ) {
 		wfProfileIn( __METHOD__ );
 
@@ -87,6 +102,11 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Executes the database query and returns the result.
+	 * @see getQueryConditions()
+	 * @return ResultWrapper
+	 */
 	protected function doQuery() {
 		wfProfileIn( __METHOD__ );
 		$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
@@ -109,8 +129,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	}
 
 	/**
-	 * @param Revision $rev
-	 * @param Revision|null $prev
+	 * Show a row in history, including:
+	 * time of edit
+	 * changed bytes
+	 * name of editor
+	 * comment of edit
+	 * @param Revision $rev Revision id of the row wants to show
+	 * @param Revision|null $prev Revision id of previous Revision to display the difference
 	 */
 	protected function showRow( Revision $rev, $prev ) {
 		wfProfileIn( __METHOD__ );
@@ -167,6 +192,11 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Get a button to show more entries of history
+	 * @param integer $ts The offset to start the history list from
+	 * @return string
+	 */
 	protected function getMoreButton( $ts ) {
 		$attrs = array(
 			'href' => $this->getContext()->getTitle()->
@@ -180,6 +210,12 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		return Html::element( 'a', $attrs, $this->msg( 'pager-older-n', self::LIMIT ) );
 	}
 
+	/**
+	 * Render the history list
+	 * @see showRow()
+	 * @see doQuery()
+	 * @param ResultWrapper $res The result of doQuery
+	 */
 	protected function showHistory( ResultWrapper $res ) {
 		$numRows = $res->numRows();
 		$rev1 = $rev2 = null;
@@ -208,6 +244,11 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		}
 	}
 
+	/**
+	 * Returns desktop URL for this special page
+	 * @param string $subPage Subpage passed in URL
+	 * @return string
+	 */
 	public function getDesktopUrl( $subPage ) {
 		$params = array( 'title' => $subPage, 'action' => 'history' );
 		$offset = $this->getRequest()->getVal( 'offset' );
