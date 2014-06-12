@@ -33,6 +33,24 @@
       "revId": "1b6ade1b61e7f497ed67dc16e0fbbe380d8800da",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_0bf5be4c",
+        "filename": "javascripts/modules/redlinks/redlinks.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-12T17:54:56Z",
+      "side": 1,
+      "message": "You mean no configuration? I understand you so:\nstable: redlinks enabled if always and wgMFRemoveRedlinks \u003d false; (standard false?)\nbeta: enabled, if user is anon or wgMFRemoveRedlinks \u003d false;\nalpha: like beta",
+      "parentUuid": "ee391fd1_8b6f6ec0",
+      "revId": "1b6ade1b61e7f497ed67dc16e0fbbe380d8800da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
