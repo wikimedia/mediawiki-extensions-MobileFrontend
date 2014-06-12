@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee391fd1_f3a83a76",
+        "filename": "less/common/icons.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T00:28:02Z",
+      "side": 1,
+      "message": "whoops.",
+      "parentUuid": "ee391fd1_93aa0e81",
+      "revId": "4d0a15e861f1823fffd790af6367469d14d69ad3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee391fd1_d39f7661",
         "filename": "less/modules/uploads/PhotoUploaderButton.less",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2014-06-12T00:17:29Z",
       "side": 1,
       "message": "Do we need a selector that specific?",
+      "revId": "4d0a15e861f1823fffd790af6367469d14d69ad3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_73ac4a85",
+        "filename": "less/modules/uploads/PhotoUploaderButton.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T00:28:02Z",
+      "side": 1,
+      "message": "Yeh unfortunately :-( it\u0027s because of how mw-ui-progressive uses background. I\u0027ll add a FIXME tomorrow to try and make this all clearer.",
+      "parentUuid": "ee391fd1_d39f7661",
       "revId": "4d0a15e861f1823fffd790af6367469d14d69ad3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
