@@ -3,6 +3,10 @@
 @import "minerva.mixins";
 @import "mediawiki.mixins";
 
+.default-icon-size( @size ) {
+	min-height: @size;
+	min-width: @size;
+}
 // Icons
 //
 // Styleguide 8.
@@ -35,6 +39,11 @@ h2 .edit-page,
 	background-position: center center;
 	text-indent: -9999px;
 	overflow: hidden;
+	.default-icon-size( 24px );
+
+	&[disabled] {
+		opacity: .5;
+	}
 }
 
 // Icon (text)
@@ -52,7 +61,8 @@ h2 .edit-page,
 .stable #page-secondary-actions .mw-ui-button.mw-ui-progressive.icon,
 // FIXME: Kill above rule when mediawiki ui stops using background property and cache is clear
 .profile .icon-talk-blue,
-// FIXME: Kill above rule when mediawiki ui buttons stops using background property
+.mw-ui-button.mw-ui-progressive.icon.icon-text,
+// FIXME: Kill above 2 rules when mediawiki ui buttons stops using background property
 .icon-text {
 	text-indent: 0;
 	background-position: left center;
@@ -61,6 +71,7 @@ h2 .edit-page,
 // FIXME: Replace all instances of icon-12px with icon-16px
 .icon-12px {
 	.background-size( auto, 12px );
+	.default-icon-size( 12px );
 }
 
 // FIXME: Replace all instances of icon-15px with icon-16px
@@ -78,6 +89,7 @@ h2 .edit-page,
 //
 // Styleguide 8.1.1
 .icon-16px {
+	.default-icon-size( 16px );
 	.background-size( 16px, auto );
 }
 
@@ -110,6 +122,7 @@ h2 .edit-page,
 // FIXME: Kill above when mediawiki ui buttons does not use background declaration
 .icon-32px {
 	.background-size( 32px, auto );
+	.default-icon-size( 32px );
 }
 
 // Icon (max-x)
@@ -219,4 +232,61 @@ h2 .edit-page,
 	height: 24px;
 	background-color: #FFF;
 	.background-image-svg-quick('images/magnifying-glass');
+}
+
+// Icon (cancel)
+//
+// Renders a cancel icon to escape a Drawer or Overlay
+//
+// Markup:
+// <div class="icon icon-cancel">cancel</div>
+//
+// Styleguide 8.3.6.
+.icon-cancel {
+	.background-image('images/cancel.png');
+}
+
+// Icon (cancel light)
+//
+// Renders a cancel icon to escape a Drawer or Overlay for a dark background
+//
+// Markup:
+// <div class="icon icon-cancel-light">cancel</div>
+//
+// Styleguide 8.3.7.
+.icon-cancel-light {
+	.background-image('images/close-button-beta.png');
+}
+
+
+.icon-photo {
+	.background-image('images/camera.png') !important;
+}
+
+.icon-clear {
+	.background-image('images/clear.png');
+}
+
+.icon-submit {
+	.background-image('images/check.png');
+	// FIXME: This should be inherited from mw-ui-constructive class
+	background-color: #00af8b;
+}
+
+.icon-continue {
+	.background-image('images/continue-ltr.png');
+	// FIXME: This should be inherited from mw-ui-progressive class
+	background-color: #2f81f0;
+}
+
+.icon-back {
+	.background-image('images/back-ltr.png');
+}
+
+.icon-arrow-down {
+	.background-image('images/show.png');
+}
+
+.icon-arrow-up {
+	.background-image('images/hide.png');
 }

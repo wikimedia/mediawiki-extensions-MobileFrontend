@@ -23,7 +23,7 @@
 			heading: mw.msg( 'mobile-frontend-image-heading-describe' ),
 			headerButtonsListClassName: '',
 			headerButtons: [
-				{ className: 'submit icon', msg: mw.msg( 'mobile-frontend-photo-submit' ) }
+				{ className: 'submit icon-submit icon', msg: mw.msg( 'mobile-frontend-photo-submit' ) }
 			]
 		},
 

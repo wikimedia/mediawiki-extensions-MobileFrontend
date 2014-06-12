@@ -45,7 +45,7 @@
 	 */
 	PhotoUploaderButton = View.extend( {
 		template: M.template.get( 'uploads/PhotoUploaderButton' ),
-		className: 'mw-ui-progressive mw-ui-button button photo',
+		className: 'mw-ui-progressive mw-ui-button button icon-photo icon icon-text',
 
 		postRender: function() {
 			var self = this, $input = this.$( 'input' );

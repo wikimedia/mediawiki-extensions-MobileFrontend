@@ -2,18 +2,18 @@
 	{{>header}}
 	<div class="overlay-header save-header hideable hidden">
 		<ul class="bottom-border">
-			<li><button class="back icon-24px icon">{{keepEditingMsg}}</button></li>
+			<li><button class="back icon-24px icon icon-cancel">{{keepEditingMsg}}</button></li>
 		</ul>
 		<div class="overlay-title bottom-border">
 			<h2>{{{previewingMsg}}}</h2>
 		</div>
 		<ul>
-			<li><button class="submit icon">{{saveMsg}}</button></li>
+			<li><button class="submit icon-submit icon">{{saveMsg}}</button></li>
 		</ul>
 	</div>
 	<div class="overlay-header saving-header hideable hidden">
 		<ul class="bottom-border">
-			<li><button class="cancel icon" disabled>{{closeMsg}}</button></li>
+			<li><button class="cancel icon icon-cancel" disabled>{{closeMsg}}</button></li>
 		</ul>
 		<div class="overlay-title bottom-border">
 			<h2>{{{waitMsg}}}</h2>

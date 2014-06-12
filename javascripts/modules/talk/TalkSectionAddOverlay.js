@@ -9,7 +9,7 @@
 	TalkSectionAddOverlay = Overlay.extend( {
 		defaults: {
 			headerButtons: [
-				{ className: 'submit icon confirm-save', msg: mw.msg( 'mobile-frontend-editor-continue' ) }
+				{ className: 'submit icon icon-submit confirm-save', msg: mw.msg( 'mobile-frontend-editor-continue' ) }
 			],
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
