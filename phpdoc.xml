@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+	<title>Extension:MobileFrontend</title>
+	<parser>
+		<target>docs/php</target>
+		<markers>
+			<item>TODO</item>
+			<item>FIXME</item>
+		</markers>
+	</parser>
+	<transformer>
+		<target>docs/php</target>
+	</transformer>
+	<logging>
+		<level>debug</level>
+		<paths>
+			<default>docs/php/log/{DATE}.log</default>
+			<errors>docs/php/log/{DATE}.errors.log</errors>
+		</paths>
+	</logging>
+	<files>
+		<directory>./</directory>
+		<ignore>vendor/*</ignore>
+		<ignore>tests/*</ignore>
+		<ignore>node_modules/*</ignore>
+	</files>
+</phpdoc>
