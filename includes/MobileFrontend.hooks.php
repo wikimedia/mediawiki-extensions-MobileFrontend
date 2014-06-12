@@ -325,6 +325,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onListDefinedTags( &$tags ) {
 		$tags[] = 'mobile edit';
+		$tags[] = 'mobile web edit';
 		return true;
 	}
 
@@ -337,6 +338,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onRecentChange_save( RecentChange $rc ) {
 		$context = MobileContext::singleton();
+		$userAgent = $context->getRequest()->getHeader( "User-agent" );
 		$logType = $rc->getAttribute( 'rc_log_type' );
 		// Only log edits and uploads
 		if ( $context->shouldDisplayMobileView() && ( $logType === 'upload' || is_null( $logType ) ) ) {
@@ -344,6 +346,10 @@ class MobileFrontendHooks {
 			$revId = $rc->getAttribute( 'rc_this_oldid' );
 			$logId = $rc->getAttribute( 'rc_logid' );
 			ChangeTags::addTags( 'mobile edit', $rcId, $revId, $logId );
+			// Tag as mobile web edit specifically, if it isn't coming from the apps
+			if ( strpos( $userAgent, 'WikipediaApp/' ) !== 0 ) {
+				ChangeTags::addTags( 'mobile web edit', $rcId, $revId, $logId );
+			}
 		}
 		return true;
 	}
