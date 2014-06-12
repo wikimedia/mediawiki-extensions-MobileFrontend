@@ -19,7 +19,8 @@
 			"Ole Yves",
 			"Rave",
 			"ShinePhantom",
-			"Александр Сигачёв"
+			"Александр Сигачёв",
+			"Agilight"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -116,7 +117,7 @@
 	"mobile-frontend-first-upload-wizard-new-page-2-header": "Ваши изображения помогают образованию людей во всём мире.",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "Понятно?",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Да!",
-	"mobile-frontend-footer-contact": "Контактная информация",
+	"mobile-frontend-footer-contact": "Контакт",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-404-desc": "Не удалось найти страницу, которую вы ищете.",
 	"mobile-frontend-generic-404-title": "Ошибкаː страница не найдена",
@@ -227,13 +228,11 @@
 	"mobile-frontend-photo-upload-anon": "Пожалуйста, представьтесь системе, чтобы добавить изображение на эту страницу.",
 	"mobile-frontend-photo-upload-comment": "Добавлено изображение на страницу",
 	"mobile-frontend-photo-upload-copyvio": "Внимание! Это изображение выглядит подозрительно. Если это не фотография, которую вы сделали сами, пожалуйста, не загружайте её. Вы все ещё хотите продолжить?",
-	"mobile-frontend-photo-upload-disabled": "Для этой страницы не нужно изображение.",
 	"mobile-frontend-photo-upload-error": "Ошибка, попробуйте заново.",
 	"mobile-frontend-photo-upload-error-file-type": "Пожалуйста, загружайте только изображения.",
 	"mobile-frontend-photo-upload-error-filename": "Ошибка, просьба представить более детальное описание.",
 	"mobile-frontend-photo-upload-generic": "Пожертвовать изображение",
 	"mobile-frontend-photo-upload-invalid-user": "Участник «$1» не зарегистрирован.",
-	"mobile-frontend-photo-upload-protected": "У вас недостаточно прав для добавления изображения на эту страницу.",
 	"mobile-frontend-photo-upload-success-article": "Загрузка удалась! Теперь ваше изображение размещено на этой странице.",
 	"mobile-frontend-photo-upload-unavailable": "Ваш браузер не поддерживает загрузку изображений.",
 	"mobile-frontend-photo-upload-user-count": "<span>$1</span> {{PLURAL:$1|загрузка|загрузок|загрузки}}",
