@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_6b644ae2",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T17:03:01Z",
+      "side": 1,
+      "message": "Move this to the skin code. It depends on the mode and the user anon status as well.",
+      "revId": "1b6ade1b61e7f497ed67dc16e0fbbe380d8800da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_8b6f6ec0",
+        "filename": "javascripts/modules/redlinks/redlinks.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T17:03:01Z",
+      "side": 1,
+      "message": "Red links should be enabled when !M.isBetaGroupMember() || mw.user.isAnon() is true. You\u0027ll want to set this in Skin code.",
+      "revId": "1b6ade1b61e7f497ed67dc16e0fbbe380d8800da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
