@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_b3a512b4",
+        "filename": "less/common/drawer.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-12T00:17:29Z",
+      "side": 0,
+      "message": "It seems that removes the image from the CTA drawer icon (the hide arrow thing). To test, log out, and click edit icon, the bottom drawer doesn\u0027t have the icon there.",
+      "revId": "30bfc85ed0c6b182b39e0e8dac91cb0b4bf8b19d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
