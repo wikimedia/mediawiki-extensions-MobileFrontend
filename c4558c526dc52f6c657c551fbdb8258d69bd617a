@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_cb1b36d3",
+        "filename": "phpdoc.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T17:44:09Z",
+      "side": 1,
+      "message": "Can you remove the \\r characters?",
+      "revId": "c4558c526dc52f6c657c551fbdb8258d69bd617a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
