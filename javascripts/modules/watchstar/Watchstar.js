@@ -45,6 +45,7 @@
 		},
 		postRender: function( options ) {
 			var self = this, callback,
+				checker,
 				page = options.page,
 				$el = self.$el;
 
@@ -52,9 +53,11 @@
 				if ( user.isAnon() ) {
 					self.drawer.show();
 				} else {
-					$el.addClass( 'loading' );
+					checker = setInterval( function() {
+						toast.show( mw.msg( 'mobile-frontend-watchlist-please-wait' ) );
+					}, 1000 );
 					api.toggleStatus( page ).always( function() {
-						$el.removeClass( 'loading' );
+						clearInterval( checker );
 					} ).done( function() {
 						if ( api.isWatchedPage( page ) ) {
 							$el.addClass( 'watched' );
@@ -63,6 +66,8 @@
 							$el.removeClass( 'watched' );
 							toast.show( mw.msg( 'mobile-frontend-watchlist-removed', page.title ) );
 						}
+					} ).fail( function() {
+						toast.show( 'mobile-frontend-watchlist-error', 'error' );
 					} );
 				}
 			};

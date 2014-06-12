@@ -303,6 +303,8 @@
     "mobile-frontend-watchlist-login-action": "Log in to see it.",
     "mobile-frontend-watchlist-modified": "Modified $1",
     "mobile-frontend-watchlist-more": "more",
+    "mobile-frontend-watchlist-please-wait": "Please wait, watch action is taking longer than expected.",
+    "mobile-frontend-watchlist-error": "There was a problem watching this page. Please try again.",
     "mobile-frontend-watchlist-purpose": "A watchlist helps you bookmark pages and keep track of changes to them.",
     "mobile-frontend-watchlist-removed": "Removed $1 from your watchlist",
     "mobile-frontend-watchlist-signup-action": "Sign up to start one now.",

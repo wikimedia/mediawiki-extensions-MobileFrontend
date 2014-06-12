@@ -35,7 +35,7 @@ QUnit.module( 'MobileFrontend: Watchstar.js', {
 	}
 } );
 
-QUnit.test( 'Logged in user watches article', 4, function( assert ) {
+QUnit.test( 'Logged in user watches article', 3, function( assert ) {
 	var
 		w = new Watchstar( {
 			isWatched: false,
@@ -48,12 +48,11 @@ QUnit.test( 'Logged in user watches article', 4, function( assert ) {
 		action: 'watch',
 		pageids: 42
 	} ), 'The watch happened' );
-	assert.strictEqual( $el.hasClass( 'loading' ), false, "The loader got cleared" );
 	assert.strictEqual( $el.hasClass( 'watched' ), true, "After successful watch has watched class" );
 	assert.strictEqual( $( '.toast' ).is( ':visible' ), true, "A toast is shown" );
 } );
 
-QUnit.test( 'Logged in user unwatches article', 3, function( assert ) {
+QUnit.test( 'Logged in user unwatches article', 2, function( assert ) {
 	var
 		w = new Watchstar( {
 			isWatched: true,
@@ -67,7 +66,6 @@ QUnit.test( 'Logged in user unwatches article', 3, function( assert ) {
 		unwatch: true,
 		pageids: 42
 	} ), 'The watch happened' );
-	assert.strictEqual( $el.hasClass( 'watched' ), false, "After successful unwatch doesn't have watched class" );
 	assert.strictEqual( $( '.toast' ).is( ':visible' ), true, "A toast is shown" );
 } );
 
