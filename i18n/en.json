@@ -324,5 +324,7 @@
     "mobilefrontend-random-tryanother": "Find another",
     "nearby": "Pages near you",
     "tag-mobile_edit": "Mobile edit",
-    "tag-mobile_edit-description": "Edit made from mobile site"
+    "tag-mobile_edit-description": "Edit made from mobile (web or app)",
+    "tag-mobile_web_edit": "Mobile web edit",
+    "tag-mobile_web_edit-description": "Edit made from mobile web site"
 }
