@@ -159,7 +159,7 @@ HTML;
 		{$betaSetting}
 		{$alphaSetting}
 		<li>
-			<input type="submit" class="mw-ui-progressive mw-ui-button" id="mw-mf-settings-save" value="{$saveSettings}">
+			<input type="submit" class="mw-ui-constructive mw-ui-button" id="mw-mf-settings-save" value="{$saveSettings}">
 		</li>
 	</ul>
 	$token
