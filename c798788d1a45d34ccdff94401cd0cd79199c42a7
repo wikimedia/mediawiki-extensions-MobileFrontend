@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_14972495",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-12T12:57:12Z",
+      "side": 0,
+      "message": "Hope i don\u0027t oversee anything, but this var is never used, am i right?",
+      "revId": "c798788d1a45d34ccdff94401cd0cd79199c42a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
