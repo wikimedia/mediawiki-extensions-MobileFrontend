@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_6bcd6a62",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T17:42:34Z",
+      "side": 1,
+      "message": "Seems to return true.\nIt shouldn\u0027t return anything though...",
+      "revId": "8d7b32717845fef7f0cfb21cf9c78addbcd16607",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_0bd49eeb",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T17:42:34Z",
+      "side": 1,
+      "message": "Seems to return string or boolean",
+      "revId": "8d7b32717845fef7f0cfb21cf9c78addbcd16607",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_2bee42b2",
+        "filename": "includes/specials/SpecialMobileNotifications.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T17:42:34Z",
+      "side": 1,
+      "message": "Not quite true. It might be used in future. It\u0027s actually the name of the subpage.",
+      "revId": "8d7b32717845fef7f0cfb21cf9c78addbcd16607",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_cb345649",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 648,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T17:42:34Z",
+      "side": 1,
+      "message": "@return string formatted comment",
+      "revId": "8d7b32717845fef7f0cfb21cf9c78addbcd16607",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_ab391240",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-12T17:42:34Z",
+      "side": 1,
+      "message": "Again it might be used in future - document what it is.",
+      "revId": "8d7b32717845fef7f0cfb21cf9c78addbcd16607",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
