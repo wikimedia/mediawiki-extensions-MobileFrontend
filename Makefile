@@ -36,7 +36,8 @@ jsduck: gems
 phpdoc: nodecheck
 	mkdir -p docs
 	rm -rf docs/php
-	@php node_modules/grunt-phpdocumentor/bin/phpDocumentor.phar -d ./ -t ./docs/php -i vendor/ -i tests/
+	mkdir -p docs/php/log
+	@php node_modules/grunt-phpdocumentor/bin/phpDocumentor.phar -c phpdoc.xml
 
 docs: kss jsduck phpdoc
 
