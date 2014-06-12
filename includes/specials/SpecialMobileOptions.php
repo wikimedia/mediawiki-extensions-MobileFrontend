@@ -1,21 +1,34 @@
 <?php
+/**
+ * SpecialMobileOptions.php
+ */
 
+/**
+ * Adds a special page with mobile specific preferences
+ */
 class SpecialMobileOptions extends MobileSpecialPage {
-	/**
-	 * @var Title
-	 */
+	/** @var Title The title of page to return to after save */
 	private $returnToTitle;
-	private $subpage;
+	/** @var boolean $hasDesktopVersion Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
+	/** @var array $options Array of options */
 	private $options = array(
 		'Language' => array( 'get' => 'chooseLanguage' ),
 	);
+	/** @var boolean Whether the special page's content should be wrapped in div.content */
 	protected $unstyledContent = false;
 
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'MobileOptions' );
 	}
 
+	/**
+	 * Render the special page
+	 * @param string|null $par Parameter submitted as subpage
+	 */
 	public function execute( $par = '' ) {
 		parent::execute( $par );
 		$context = MobileContext::singleton();
@@ -30,7 +43,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$context->setForceMobileView( true );
 		$context->setContentTransformations( false );
 		if ( isset( $this->options[$par] ) ) {
-			$this->subpage = $par;
 			$option = $this->options[$par];
 
 			if ( $this->getRequest()->wasPosted() && isset( $option['post'] ) ) {
@@ -48,6 +60,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		}
 	}
 
+	/**
+	 * Render the settings form (with actual set settings) to display to user
+	 */
 	private function getSettingsForm() {
 		$out = $this->getOutput();
 		$context = MobileContext::singleton();
@@ -155,6 +170,10 @@ HTML;
 		$out->addHTML( $html );
 	}
 
+	/**
+	 * Get a list of languages available for this project
+	 * @return string parsed Html
+	 */
 	private function getSiteSelector() {
 		global $wgLanguageCode;
 
@@ -196,12 +215,19 @@ HTML;
 		return $selector;
 	}
 
+	/**
+	 * Render the language selector special page
+	 */
 	private function chooseLanguage() {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'mobile-frontend-settings-site-header' )->escaped() );
 		$out->addHTML( $this->getSiteSelector() );
 	}
 
+	/**
+	 * Saves the settings submitted by the settings form. Redirects the user to the destination
+	 * of returnto or, if not set, back to this special page
+	 */
 	private function submitSettingsForm() {
 		$schema = 'MobileOptionsTracking';
 		$schemaRevision = 8101982;
@@ -272,6 +298,14 @@ HTML;
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
 	}
 
+	/**
+	 * Get the URL of this special page
+	 * @param string|null $option Subpage string, or false to not use a subpage
+	 * @param Title $returnTo Destination to returnto after successfully action on the page returned
+	 * @param boolean $fullUrl Whether to get the local url, or the full url
+	 *
+	 * @return string
+	 */
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
 		$t = SpecialPage::getTitleFor( 'MobileOptions', $option );
 		$params = array();

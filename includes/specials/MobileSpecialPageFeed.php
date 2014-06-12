@@ -1,13 +1,20 @@
 <?php
 /**
+ * MobileSpecialPageFeed.php
+ */
+
+/**
  * This is an abstract class intended for use by special pages that consist primarily of
  * a list of pages, for example, Special:Watchlist or Special:History.
  */
-
 abstract class MobileSpecialPageFeed extends MobileSpecialPage {
-	/**  @var bool Whether to show the username in results or not */
+	/**  @var boolean $showUsername Whether to show the username in results or not */
 	protected $showUsername = true;
 
+	/**
+	 * Render the special page content
+	 * @param string $par parameters submitted as subpage
+	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$out->addModuleStyles( 'mobile.special.pagefeed.styles' );
@@ -67,8 +74,9 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param int|null $bytes Net number of bytes changed or null if not applicable
 	 * @param bool $isMinor Is the edit minor?
 	 * @return string HTML code
+	 *
+	 * @todo FIXME: use an array as an argument?
 	 */
-	// FIXME: use an array as an argument?
 	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
 		$title = null, $isAnon = false, $bytes = 0, $isMinor = false ) {
 

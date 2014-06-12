@@ -160,7 +160,9 @@ $wgGroupPermissions['*']['mf-uploadbutton'] = false;
 $wgGroupPermissions['autoconfirmed']['mf-uploadbutton'] = true;
 $wgGroupPermissions['sysop']['mf-uploadbutton'] = true;
 
-
+/**
+ * Setup MobileFrontend, load global components
+ */
 function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
 		$wgResourceLoaderLESSImportPaths,

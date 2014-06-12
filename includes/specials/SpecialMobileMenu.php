@@ -1,12 +1,18 @@
 <?php
 /**
+ * SpecialNearby.php
+ */
+
+/**
  * Special page designed for rendering a skin's menu without an article
  * Used for skins where the menu is hidden via JavaScript by default.
- *
+ * @todo FIXME: Rename from MobileMenu to NavigationMenu
  * @ingroup SpecialPage
  */
-// FIXME: Rename from MobileMenu to NavigationMenu
 class SpecialMobileMenu extends MobileSpecialPage {
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'MobileMenu' );
 		$supported = array( 'vector', 'minerva' );
@@ -16,6 +22,10 @@ class SpecialMobileMenu extends MobileSpecialPage {
 		}
 	}
 
+	/**
+	 * Render the navigation menu
+	 * @param string $par never used
+	 */
 	public function executeWhenAvailable( $par = '' ) {
 		$this->setHeaders();
 		$out = $this->getOutput();

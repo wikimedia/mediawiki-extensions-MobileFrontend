@@ -1,11 +1,23 @@
 <?php
+/**
+ * SpecialUploads.php
+ */
 
+/**
+ * Provides a special page with a list of uploaded items/images of a User
+ */
 class SpecialUploads extends MobileSpecialPage {
-
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'Uploads' );
 	}
 
+	/**
+	 * Render the special page
+	 * @param string|null $par Username to get uploads from
+	 */
 	public function executeWhenAvailable( $par = '' ) {
 		global $wgMFPhotoUploadEndpoint;
 
@@ -49,6 +61,7 @@ class SpecialUploads extends MobileSpecialPage {
 	 * Generates HTML for the uploads page for the passed user.
 	 *
 	 * @param User $user
+	 * @return string
 	 */
 	public function getUserUploadsPageHtml( User $user ) {
 		global $wgMFPhotoUploadEndpoint;

@@ -1,15 +1,25 @@
 <?php
+/**
+ * SpecialMobileLanguages.php
+ */
 
+/**
+ * Provides a list of languages available for a page
+ */
 class SpecialMobileLanguages extends MobileSpecialPage {
-	/** @var Title */
+	/** @var Title $title Saves the title object to get languages for */
 	private $title;
 
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'MobileLanguages' );
 	}
 
 	/**
 	 * Returns an array of languages that the page is available in
+	 * @return array
 	 */
 	private function getLanguages() {
 		$api = new ApiMain(
@@ -53,6 +63,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 
 	/**
 	 * Returns an array of language variants that the page is available in
+	 * @return array
 	 */
 	private function getLanguageVariants() {
 		$pageLang = $this->title->getPageLanguage();
@@ -100,6 +111,10 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		return $html;
 	}
 
+	/**
+	 * Render the page with a list of languages the page is available in
+	 * @param string $pagename The name of the page
+	 */
 	public function executeWhenAvailable( $pagename ) {
 		wfProfileIn( __METHOD__ );
 

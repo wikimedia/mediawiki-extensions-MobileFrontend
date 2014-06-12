@@ -1,23 +1,42 @@
 <?php
+/**
+ * SpecialMobileDiff.php
+ */
 
+/**
+ * Show the difference between two revisions of a page
+ */
 class SpecialMobileDiff extends MobileSpecialPage {
+	/** @var boolean $hasDesktopVersion Does this special page has a desktop version? */
 	protected $hasDesktopVersion = true;
+	/** @var integer $revId Saves the actual revision ID */
 	private $revId;
-	/** @var Revision */
+	/** @var Revision $rev Saves the revision Object of actual revision */
 	private $rev;
-	/** @var Revision */
+	/** @var Revision $prevRev Saves the previous revision */
 	private $prevRev;
-	/** @var Title */
+	/** @var Title Saves the title of the actual revision */
 	private $targetTitle;
 
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'MobileDiff' );
 	}
 
+	/**
+	 * Get the revision object from ID
+	 * @param integer $id ID of the wanted revision
+	 * @return Revision
+	 */
 	public static function getRevision( $id ) {
 		return Revision::newFromId( $id );
 	}
 
+	/**
+	 * Generate a 404 Error message, that revisions can not be found
+	 */
 	public function executeBadQuery() {
 		wfHttpError( 404, $this->msg( 'mobile-frontend-diffview-404-title' )->text(),
 			$this->msg( 'mobile-frontend-diffview-404-desc' )->text() );
@@ -64,6 +83,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		return array( $prev, $rev );
 	}
 
+	/**
+	 * Render the diff page
+	 * @return boolean false when revision not exist
+	 * @param string $par Revision IDs separated by three points (e.g. 123...124)
+	 */
 	function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$ctx = MobileContext::singleton();
@@ -110,6 +134,13 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		return true;
 	}
 
+	/**
+	 * Render the header of a diff page including:
+	 * Name with url to page
+	 * Bytes added/removed
+	 * Day and time of edit
+	 * Edit Comment
+	 */
 	function showHeader() {
 		$title = $this->targetTitle;
 
@@ -152,6 +183,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		);
 	}
 
+	/**
+	 * Render the inline difference between two revisions
+	 * using InlineDiffEngine
+	 */
 	function showDiff() {
 		$ctx = MobileContext::singleton();
 
@@ -217,6 +252,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 	}
 
+	/**
+	 * Render the footer including userinfos (Name, Role, Editcount)
+	 */
 	function showFooter() {
 		$output = $this->getOutput();
 
@@ -272,6 +310,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		);
 	}
 
+	/**
+	 * Get the list of groups of user
+	 * @param User $user The user object to get the list from
+	 * @return string comma separated list of user groups
+	 */
 	function listGroups( User $user ) {
 		# Get groups to which the user belongs
 		$userGroups = $user->getGroups();
@@ -287,6 +330,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		return $this->getLanguage()->commaList( $userMembers );
 	}
 
+	/**
+	 * Get the url for the mobile diff special page to use in Desktop footer
+	 * @return boolean|string Return URL or false when revision id's not set
+	 */
 	public static function getMobileUrlFromDesktop() {
 		$req = MobileContext::singleton()->getRequest();
 		$rev2 = $req->getText( 'diff' );
@@ -333,6 +380,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		return false;
 	}
 
+	/**
+	 * Get the URL for Desktop version of difference view
+	 * @param string $subPage URL of mobile diff page
+	 * @return string Url to mobile diff page
+	 */
 	public function getDesktopUrl( $subPage ) {
 		$parts = explode( '...', $subPage );
 		if ( count( $parts ) > 1 ) {

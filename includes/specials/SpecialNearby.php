@@ -1,12 +1,27 @@
 <?php
+/**
+ * SpecialNearby.php
+ */
 
+/**
+ * Provide the Special page "Nearby" with location based articles
+ */
 class SpecialNearby extends MobileSpecialPage {
+	/** @var boolean $hasDesktopVersion Does this special page has a desktop version? */
 	protected $hasDesktopVersion = true;
+
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'Nearby' );
 		$this->listed = true;
 	}
 
+	/**
+	 * Render Special Page Nearby
+	 * @param string $par Parameter submitted as subpage
+	 */
 	public function executeWhenAvailable( $par = '' ) {
 		global $wgMFNearbyRange;
 

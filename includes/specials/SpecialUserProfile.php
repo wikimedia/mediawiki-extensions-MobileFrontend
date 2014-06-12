@@ -1,6 +1,13 @@
 <?php
+/**
+ * SpecialUserProfile.php
+ */
 
+/**
+ * Show a mobile specific user profile page
+ */
 class SpecialUserProfile extends MobileSpecialPage {
+	/** @var boolean $hasDesktopVersion Whether this special page has or has not a desktop version */
 	protected $hasDesktopVersion = false;
 
 	/**
@@ -8,19 +15,23 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 */
 	const MAX_DESCRIPTION_CHARS = 255;
 
-	/**
-	 * @var User
-	 */
+	/** @var User $targetUser The user object of the user to show on page */
 	private $targetUser;
-	/**
-	 * @var MobileUserInfo
-	 */
+	/** @var MobileUserInfo $userInfo MobileUserInfo with informationen about the user */
 	private $userInfo;
 
+	/**
+	 * Construct function
+	 */
 	public function __construct() {
 		parent::__construct( 'UserProfile' );
 	}
 
+	/**
+	 * Get the difference between now and the timestamp provided
+	 * @param MWTimestamp $ts The timstamp
+	 * @return integer The difference in days
+	 */
 	protected function getDaysAgo( MWTimestamp $ts ) {
 		$now = new MWTimestamp();
 		$diff = $ts->diff( $now );
@@ -126,6 +137,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return $html;
 	}
 
+	/**
+	 * Get the link to users talk page
+	 * @return string
+	 */
 	protected function getTalkLink() {
 		// replace secondary icon
 		$attrs = array(
@@ -141,6 +156,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 		);
 	}
 
+	/**
+	 * Get Html to show, that the user does not exist, or no user provided
+	 * @return string
+	 */
 	protected function getHtmlNoUser() {
 		$html = Html::openElement( 'div', array( 'class' => 'alert error' ) );
 		$html .= Html::element( 'h2', array(), $this->msg( 'mobile-frontend-profile-error' ) );
@@ -149,6 +168,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return $html;
 	}
 
+	/**
+	 * Get the footer with user information (when joined, how
+	 * many edits/uploads, visit user page and talk page)
+	 * @return string
+	 */
 	protected function getUserFooterHtml() {
 		$fromDate = $this->targetUser->getRegistration();
 		$ts = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
@@ -189,6 +213,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 			. $this->getTalkLink();
 	}
 
+	/**
+	 * Render the page
+	 * @param string $par The username of the user to display
+	 */
 	public function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();

@@ -1,23 +1,32 @@
 <?php
+/**
+ * MobileSpecialPage.php
+ */
 
+/**
+ * Basic mobile implementation of SpecialPage to use in specific mobile special pages
+ */
 class MobileSpecialPage extends SpecialPage {
+	/** @var boolean $hasDesktopVersion Whether the mobile special page has a desktop special page */
 	protected $hasDesktopVersion = false;
+	/** @var string $mode Saves the actual mode used by user (stable|beta|alpha) */
 	protected $mode = 'stable';
-	/**
-	 * @var bool: Whether this special page should appear on Special:SpecialPages
-	 */
+	/** @var boolean $listed Whether this special page should appear on Special:SpecialPages */
 	protected $listed = false;
-	/**
-	 * @var bool Whether the special page's content should be wrapped in div.content
-	 */
+	/** @var boolean Whether the special page's content should be wrapped in div.content */
 	protected $unstyledContent = true;
 
 	/**
 	 * Executes the page when available in the current $mode
+	 * @param string $subPage parameter as subpage of specialpage
 	 */
 	public function executeWhenAvailable( $subPage ) {
 	}
 
+	/**
+	 * Checks the availability of the special page in actual mode and display the page, if available
+	 * @param string $subPage parameter submitted as "subpage"
+	 */
 	public function execute( $subPage ) {
 		$ctx = MobileContext::singleton();
 		$this->getOutput()->setProperty( 'desktopUrl', $this->getDesktopUrl( $subPage ) );
@@ -38,6 +47,9 @@ class MobileSpecialPage extends SpecialPage {
 		}
 	}
 
+	/**
+	 * Add modules to headers and wrap content in div.content if unstyledContent = true
+	 */
 	public function setHeaders() {
 		parent::setHeaders();
 		$this->addModules();
@@ -50,7 +62,7 @@ class MobileSpecialPage extends SpecialPage {
 	/**
 	 * Renders a banner telling the user the page is unavailable
 	 *
-	 * $msg String Message to display
+	 * @param string $msg Message to display
 	 */
 	protected function renderUnavailableBanner( $msg ) {
 		$out = $this->getOutput();
@@ -62,6 +74,9 @@ class MobileSpecialPage extends SpecialPage {
 		);
 	}
 
+	/**
+	 * Add mobile special page specific modules (styles and scripts)
+	 */
 	protected function addModules() {
 		$out = $this->getOutput();
 		$rl = $out->getResourceLoader();
@@ -81,10 +96,17 @@ class MobileSpecialPage extends SpecialPage {
 		}
 	}
 
+	/**
+	 * Returns if this page is listed on Special:SpecialPages
+	 * @return boolean
+	 */
 	public function isListed() {
 		return $this->listed;
 	}
 
+	/**
+	 * Render mobile specific error page, when special page can not be found
+	 */
 	protected function showPageNotFound() {
 		wfHttpError( 404, $this->msg( 'mobile-frontend-generic-404-title' )->text(),
 			$this->msg( 'mobile-frontend-generic-404-desc' )->text() );

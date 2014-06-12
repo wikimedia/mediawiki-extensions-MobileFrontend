@@ -1,13 +1,27 @@
 <?php
-// FIXME: On Special:Contributions add ability to filter a la desktop
+/**
+ * SpecialMobileContributions.php
+ */
+
+/**
+ * A special page to show the contributions of a user
+ * @todo FIXME: On Special:Contributions add ability to filter a la desktop
+ */
 class SpecialMobileContributions extends SpecialMobileHistory {
-	// Note we do not redirect to Special:History/$par to allow the parameter to be used for usernames
+	/**
+	 * @var string $specialPageName The Name of the special page
+	 *		(Note we do not redirect to Special:History/$par to
+	 *		allow the parameter to be used for usernames)
+	 */
 	protected $specialPageName = 'Contributions';
-	/**  @var User */
+	/**  @var User $user Saves the userobject*/
 	protected $user;
-	/**  @var MWTimestamp */
+	/**
+	 * @var MWTimestamp $lastDate A timestamp used for
+	 *		MobileSpecialPageFeed::renderListHeaderWhereNeeded
+	 */
 	protected $lastDate;
-	/**  @var bool Whether to show the username in results or not */
+	/**  @var bool $showUsername Whether to show the username in results or not */
 	protected $showUsername = false;
 	/** @var array Lengths of previous revisions */
 	protected $prevLengths = array();
@@ -26,6 +40,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 			$title->getText() );
 	}
 
+	/**
+	 * Render the special page boddy
+	 * @param string $par The username
+	 */
 	public function executeWhenAvailable( $par = '' ) {
 		wfProfileIn( __METHOD__ );
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
@@ -44,6 +62,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Render the contributions of user to page
+	 * @param ResultWrapper $res
+	 */
 	protected function showContributions( ResultWrapper $res ) {
 		$numRows = $res->numRows();
 		$rev = null;
@@ -78,6 +100,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	}
 
 	/**
+	 * Render the contribution of the pagerevision (time, bytes added/deleted, pagename comment)
 	 * @param Revision $rev
 	 */
 	protected function showContributionsRow( Revision $rev ) {
@@ -127,6 +150,9 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Returns a list of query conditions that should be run against the revision table
+	 */
 	protected function getQueryConditions() {
 		if ( $this->user ) {
 			$conds = array(
@@ -142,6 +168,11 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		return $conds;
 	}
 
+	/**
+	 * Get the URL to go to desktop site of this page
+	 * @param string $subPage URL of mobile diff page
+	 * @return null
+	 */
 	public function getDesktopUrl( $subPage ) {
 		return null;
 	}
