@@ -15,17 +15,16 @@ FIXME: Rename section_heading to section-heading and content_block to section-co
 .client-js {
 	.section_heading,
 	.content_block {
-		border-bottom: solid 1px @sectionBorderColor;
 		clear: both;
 	}
 
 	.section_heading {
 		position: relative;
 		padding-left: 24px;
+		border-bottom: solid 1px @sectionBorderColor;
 
 		&.openSection {
 			padding-right: @sectionIconWidth + 15px;
-			border-bottom: solid 1px @sectionBorderColor;
 			margin-bottom: @headingMargin;
 		}
 	}

@@ -1,9 +1,11 @@
 @import "minerva.mixins";
 @import "minerva.variables";
 
-@leftMargin: 1.5em;
-@iconSize: 1em;
-@iconHeadingGap: 1em;
+@paddingHorizontal: 24px;
+@iconSize: 16px;
+@iconHeadingGap: 12px;
+@paddingVertical: 16px;
+@fontSize: .8em;
 
 .client-js .toc-mobile {
 	// FIXME: Use predefined colors?
@@ -11,18 +13,18 @@
 	border: solid 1px @grayLightest;
 	font-size: 1.3em;
 	float: left;
-	width: @wgMFDeviceWidthTablet - @infoboxWidth;
+	margin: 1em 0;
 
-	@paddingVertical: 1em;
-	@fontSize: .8em;
 	h2 {
-		margin-left: @leftMargin;
-		margin-right: @leftMargin;
+		font-family: @fontFamily;
+		font-size: @fontSize;
+		line-height: @iconSize;
 		background-position: right center;
 		font-weight: bold;
-		// Resetting heading styles seems bad.
-		padding: @paddingVertical 0 @paddingVertical @iconSize + @iconHeadingGap;
-		font-size: @fontSize;
+		padding: @paddingVertical @paddingHorizontal @paddingVertical (@paddingHorizontal + @iconSize + @iconHeadingGap);
+		border-bottom: none;
+		// add right padding to the chevron without reducing tapable area
+		border-right: @paddingHorizontal solid transparent;
 
 		.icon {
 			.background-image('images/contents.png');
@@ -30,7 +32,7 @@
 			height: @iconSize;
 			display: block;
 			position: absolute;
-			left: 0;
+			left: @paddingVertical;
 			top: @paddingVertical;
 		}
 	}
@@ -38,8 +40,8 @@
 	.content_block {
 		// Override default toggle styles
 		border-bottom: none;
-		margin-left: @leftMargin + @iconSize + @iconHeadingGap;
-		margin-right: @leftMargin;
+		margin-left: @paddingHorizontal + @iconSize + @iconHeadingGap;
+		margin-right: @paddingHorizontal;
 		font-size: (7 * @fontSize) / 8;
 
 		> ul {
