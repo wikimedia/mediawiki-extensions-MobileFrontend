@@ -51,6 +51,24 @@
       "revId": "1b6ade1b61e7f497ed67dc16e0fbbe380d8800da",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_76442a1d",
+        "filename": "javascripts/modules/redlinks/redlinks.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-13T18:26:19Z",
+      "side": 1,
+      "message": "The current if statement is confusing:\nIf in stable OR anonymous user then remove red links.\n\nMaybe the easiest thing here is to have two variables:\n\n$wgMFRemoveRedlinks \u003d true; // Add a note saying this only applies in the stable mode of the site and is a temporary variable.\n\n$wgMFRemoveRedlinksAnons \u003d true;\n\nand then here:\n\nif ( ( !M.isBetaGroupMember() \u0026\u0026 $wgMFRemoveRedlinks ) ||\n     ( mw.user.isAnon() \u0026\u0026 $wgMFRemoveRedlinksAnons )\n) {",
+      "parentUuid": "ee391fd1_0bf5be4c",
+      "revId": "1b6ade1b61e7f497ed67dc16e0fbbe380d8800da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
