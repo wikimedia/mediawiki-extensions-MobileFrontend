@@ -328,5 +328,7 @@
 	"mobilefrontend-random-tryanother": "Trova un'altra",
 	"nearby": "Pagine nelle vicinanze",
 	"tag-mobile_edit": "Modifica da mobile",
-	"tag-mobile_edit-description": "Modifica apportata dal sito per dispositivi mobili"
+	"tag-mobile_edit-description": "Modifica apportata da dispositivo mobile (web o applicazione)",
+	"tag-mobile_web_edit": "Modifica da web per mobile",
+	"tag-mobile_web_edit-description": "Modifica apportata dal sito web per dispositivi mobili"
 }

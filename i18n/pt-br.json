@@ -10,7 +10,8 @@
 			"Rafael Vargas",
 			"Rodrigo codignoli",
 			"Tuliouel",
-			"555"
+			"555",
+			"Helder.wiki"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se um usuário está ou não editando através da interface móvel",
@@ -154,7 +155,6 @@
 	"mobile-frontend-off": "NÃO",
 	"mobile-frontend-on": "SIM",
 	"mobile-frontend-opt-in-explain": "Ao participar dos testes, você terá acesso a recursos experimentais, correndo o risco de encontrar erros e problemas.",
-	"mobile-frontend-overlay-escape": "Voltar",
 	"mobile-frontend-page-menu-contents": "conteúdo",
 	"mobile-frontend-page-menu-history": "Histórico",
 	"mobile-frontend-page-saving": "<strong>Salvando</strong><span> $1</span>",
@@ -171,12 +171,10 @@
 	"mobile-frontend-photo-upload": "Adicione uma imagem a esta página",
 	"mobile-frontend-photo-upload-anon": "Por favor autentifique-se para adicionar uma imagem a essa página.",
 	"mobile-frontend-photo-upload-comment": "Adicionar imagem à página",
-	"mobile-frontend-photo-upload-disabled": "Nenhum imagem é necessária nessa página.",
 	"mobile-frontend-photo-upload-error": "Erro, tente novamente",
 	"mobile-frontend-photo-upload-error-file-type": "Por favor apenas envie imagens.",
 	"mobile-frontend-photo-upload-error-filename": "Erro, por favor fornece uma sumário mais descritivo.",
 	"mobile-frontend-photo-upload-generic": "Contribuir com uma imagem",
-	"mobile-frontend-photo-upload-protected": "Você não tem permissão para adicionar uma imagem a esta página.",
 	"mobile-frontend-photo-upload-success-article": "Sucesso! Sua imagem já está disponível na página.",
 	"mobile-frontend-photo-upload-unavailable": "Seu navegador não suporta o envio de imagens.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> envio|<span>$1</span> envios}}",
@@ -259,15 +257,11 @@
 	"mobile-frontend-watchlist-more": "mais",
 	"mobile-frontend-watchlist-removed": "Remover $1 da lista de páginas vigiadas",
 	"mobile-frontend-watchlist-view": "Veja sua lista de páginas vigiadas",
-	"mobilefrontend-keepgoing-ask": "Muito bem! Você está pegando o jeito! Deseja tentar editar outra página?",
-	"mobilefrontend-keepgoing-ask-first": "Parabéns pela sua primeira edição! Deseja tentar editar outra página?",
 	"mobilefrontend-keepgoing-cancel": "Não, obrigado",
-	"mobilefrontend-keepgoing-explain": "Legal! Outro usuário disse que essa página precisa de ajuda. Tente essa, ou escolha outra.",
-	"mobilefrontend-keepgoing-suggest": "Sim, por favor",
-	"mobilefrontend-keepgoing-suggest-again": "Tente outra",
 	"mobilefrontend-random-cancel": "Deixe-me ler!",
 	"mobilefrontend-random-explain": "Essa página aleatória te interessa?",
 	"nearby": "Páginas próximas a você",
 	"tag-mobile_edit": "Edição móvel",
-	"tag-mobile_edit-description": "Edição feita através do site mobile"
+	"tag-mobile_edit-description": "Edição feita através do sítio ou aplicativo para celulares",
+	"tag-mobile_web_edit-description": "Edição feita através do sítio para celulares"
 }

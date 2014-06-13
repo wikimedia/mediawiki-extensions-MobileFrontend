@@ -346,5 +346,7 @@
 	"mobilefrontend-random-tryanother": "寻找其它",
 	"nearby": "您附近的页面",
 	"tag-mobile_edit": "移动版编辑",
-	"tag-mobile_edit-description": "来自移动版网站的编辑"
+	"tag-mobile_edit-description": "从移动版（web或应用程序）所做的编辑",
+	"tag-mobile_web_edit": "移动网页编辑",
+	"tag-mobile_web_edit-description": "来自移动网站的编辑"
 }

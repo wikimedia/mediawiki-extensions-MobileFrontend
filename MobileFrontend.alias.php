@@ -258,9 +258,12 @@ $specialPageAliases['nan'] = array(
 
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
+	'History' => array( 'Geschiedenis' ),
 	'MobileOptions' => array( 'MobieleVoorkeuren' ),
 	'MobileDiff' => array( 'MobielVerschillen' ),
+	'MobileEditor' => array( 'MobielBewerken' ),
 	'MobileMenu' => array( 'MobielMenu' ),
+	'MobileLanguages' => array( 'MobielTalen' ),
 	'Nearby' => array( 'InDeBuurt' ),
 	'UserProfile' => array( 'Gebruikersprofiel' ),
 );

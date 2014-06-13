@@ -50,7 +50,6 @@
 	"mobile-frontend-off": "UUT",
 	"mobile-frontend-on": "AN",
 	"mobile-frontend-opt-in-explain": "A'j meedoon mit anproberen, dan krie'j toegang tot experimentele funksies, mit t risiko op fouten en problemen.",
-	"mobile-frontend-overlay-escape": "Gao weerumme",
 	"mobile-frontend-page-menu-contents": "inhoud",
 	"mobile-frontend-page-menu-history": "Geschiedenisse",
 	"mobile-frontend-page-saving": "$1 an t opslaon",
@@ -91,5 +90,7 @@
 	"mobile-frontend-watchlist-more": "meer",
 	"nearby": "Ziejen bie joe in de buurte",
 	"tag-mobile_edit": "Bewarking via mobiel",
-	"tag-mobile_edit-description": "Bewarking edaon via mobiele webstee"
+	"tag-mobile_edit-description": "Bewarking edaon (web of app)",
+	"tag-mobile_web_edit": "Mobiele-webstee-bewarking",
+	"tag-mobile_web_edit-description": "Bewarking edaon via de mobiele webstee"
 }

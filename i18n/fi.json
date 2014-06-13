@@ -221,12 +221,10 @@
 	"mobile-frontend-photo-upload-anon": "Kuvan lisääminen tähän sivuun vaatii sisäänkirjautumisen.",
 	"mobile-frontend-photo-upload-comment": "Lisäsi kuvan sivulle",
 	"mobile-frontend-photo-upload-copyvio": "Varoitus! Tähän valokuvaan on tunnistettu liittyvän mahdollisesti olemassaoleva tekijänoikeus. Jos sinulla ei ole tekijänoikeutta valokuvaan, älä lataa sitä. Jatketaanko?",
-	"mobile-frontend-photo-upload-disabled": "Tällä sivulla ei tarvita kuvia.",
 	"mobile-frontend-photo-upload-error": "Virhe. Yritä uudelleen.",
 	"mobile-frontend-photo-upload-error-file-type": "Lisää vain kuvatiedostoja.",
 	"mobile-frontend-photo-upload-error-filename": "Virhe. Anna kuvaavampi yhteenveto.",
 	"mobile-frontend-photo-upload-generic": "Lahjoita kuva",
-	"mobile-frontend-photo-upload-protected": "Sinulla ei ole käyttöoikeuksia lisätä kuvaa tähän sivuun.",
 	"mobile-frontend-photo-upload-success-article": "Valmis! Kuvasi on nyt julkaistu sivulla.",
 	"mobile-frontend-photo-upload-unavailable": "Selaimesi ei tule kuvien lataamista.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> lataus|<span>$1</span> latausta}}",
@@ -329,5 +327,7 @@
 	"mobilefrontend-random-explain": "Kiinnostaako tämä satunnainen sivu sinua?",
 	"nearby": "Sivut lähellä sinua",
 	"tag-mobile_edit": "Mobiilimuokkaus",
-	"tag-mobile_edit-description": "Muokkaus, joka on tehty mobiilisivustolta"
+	"tag-mobile_edit-description": "Muokkaus, joka on tehty mobiilisivustolta",
+	"tag-mobile_web_edit": "mobiilisivusto-muokkaus",
+	"tag-mobile_web_edit-description": "Muokkaus, joka on tehty mobiiliverkkosivulta"
 }

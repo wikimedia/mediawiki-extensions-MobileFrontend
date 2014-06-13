@@ -347,8 +347,8 @@
 	"mobilefrontend-random-explain": "Message explaining that they are viewing a random page. Gives them the option to try another.",
 	"mobilefrontend-random-tryanother": "\"Another\" refers to a page. This is a label for a button that the user can press to answer the question in the message {{msg-mw|Mobilefrontend-random-explain}} when they prefer to read another random page.",
 	"nearby": "{{doc-special|Nearby}}",
-	"tag-mobile_edit": "Short change tag name for edits coming  from mobile (web or apps). See also {{msg-mw|tag-mobile_edit-description}}",
-	"tag-mobile_edit-description": "Short change tag description. for edits coming from mobile (web or apps). See also {{msg-mw|tag-mobile_edit}}",
-	"tag-mobile_web_edit": "Short change tag name for edits coming directly from the mobile website. See also {{msg-mw|tag-mobile_web_edit-description}}",
-	"tag-mobile_web_edit-description": "Short change tag description. for edits coming directly from the mobile website. See also {{msg-mw|tag-mobile_web_edit}}"
+	"tag-mobile_edit": "Short change tag name for edits coming  from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit-description}}",
+	"tag-mobile_edit-description": "Short change tag description. for edits coming from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit}}",
+	"tag-mobile_web_edit": "Short change tag name for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit-description}}",
+	"tag-mobile_web_edit-description": "Short change tag description. for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit}}"
 }

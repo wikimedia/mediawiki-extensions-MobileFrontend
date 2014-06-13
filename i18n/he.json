@@ -331,5 +331,7 @@
 	"mobilefrontend-random-tryanother": "למצוא אחד אחר",
 	"nearby": "דפים לידך",
 	"tag-mobile_edit": "עריכה ממכשיר נייד",
-	"tag-mobile_edit-description": "העריכה בוצעה מהאתר למכשירים ניידים"
+	"tag-mobile_edit-description": "העריכה שנעשתה ממכשר נייד (דרך אתר או יישום)",
+	"tag-mobile_web_edit": "עריכה דרך האתר הנייד",
+	"tag-mobile_web_edit-description": "עריכה שנעשתה מהאתר הנייד"
 }

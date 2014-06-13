@@ -321,5 +321,7 @@
 	"mobilefrontend-random-tryanother": "Најди друга",
 	"nearby": "Страници во ваша близина",
 	"tag-mobile_edit": "Мобилно уредување",
-	"tag-mobile_edit-description": "Уредување извршено од мобилната варијанта на викито"
+	"tag-mobile_edit-description": "Уредување од мобилен (мреж. страница или прилог)",
+	"tag-mobile_web_edit": "Мобилно семрежно уредување",
+	"tag-mobile_web_edit-description": "Уредување напревено од мобилно мрежно место"
 }

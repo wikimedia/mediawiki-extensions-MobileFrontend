@@ -90,5 +90,7 @@
 	"mobile-frontend-watchlist-filter-articles": "Lapok",
 	"mobile-frontend-watchlist-filter-other": "Egyéb",
 	"mobile-frontend-watchlist-filter-talk": "Vitalap",
-	"mobile-frontend-watchlist-removed": "$1 eltávolítva a figyelőlistádról"
+	"mobile-frontend-watchlist-removed": "$1 eltávolítva a figyelőlistádról",
+	"tag-mobile_web_edit": "Mobil web szerkesztés",
+	"tag-mobile_web_edit-description": "Mobil weboldalról szerkesztve"
 }

@@ -220,12 +220,10 @@
 	"mobile-frontend-photo-upload": "Voeg een afbeelding toe aan deze pagina",
 	"mobile-frontend-photo-upload-anon": "Meld u aan om een afbeelding toe te voegen aan deze pagina.",
 	"mobile-frontend-photo-upload-comment": "De afbeelding is toegevoegd aan de pagina",
-	"mobile-frontend-photo-upload-disabled": "Er is geen afbeelding nodig voor deze pagina.",
 	"mobile-frontend-photo-upload-error": "Er is een fout opgetreden. Probeer het opnieuw.",
 	"mobile-frontend-photo-upload-error-file-type": "Upload alstublieft alleen afbeeldingen.",
 	"mobile-frontend-photo-upload-error-filename": "Fout. Geef een meer beschrijvende samenvatting op.",
 	"mobile-frontend-photo-upload-generic": "Afbeelding bijdragen",
-	"mobile-frontend-photo-upload-protected": "U hebt geen rechten om een afbeelding toe te voegen aan deze pagina.",
 	"mobile-frontend-photo-upload-success-article": "Uw afbeelding is nu zichtbaar op deze pagina.",
 	"mobile-frontend-photo-upload-unavailable": "Uw browser ondersteunt het uploaden van afbeeldingen niet.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}",
@@ -328,5 +326,6 @@
 	"mobilefrontend-random-explain": "Is deze willekeurige pagina interessant?",
 	"nearby": "Pagina's in de buurt",
 	"tag-mobile_edit": "Bewerking via mobiel",
-	"tag-mobile_edit-description": "Bewerking gemaakt via mobiele site"
+	"tag-mobile_edit-description": "Bewerking gemaakt via mobiele site",
+	"tag-mobile_web_edit": "Mobiele site bewerking"
 }

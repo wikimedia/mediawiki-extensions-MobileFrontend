@@ -331,5 +331,7 @@
 	"mobilefrontend-random-tryanother": "Eine andere finden",
 	"nearby": "Seiten in deiner Nähe",
 	"tag-mobile_edit": "Mobile Bearbeitung",
-	"tag-mobile_edit-description": "Bearbeitet von der mobilen Website"
+	"tag-mobile_edit-description": "Mobil bearbeitet (Web oder App)",
+	"tag-mobile_web_edit": "Mobile Web-Bearbeitung",
+	"tag-mobile_web_edit-description": "Bearbeitet von der mobilen Website"
 }
