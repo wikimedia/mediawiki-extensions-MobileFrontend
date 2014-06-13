@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @firefox @login @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org
 Feature: Table of contents
 
   Scenario: Don't show table of contents on mobile
