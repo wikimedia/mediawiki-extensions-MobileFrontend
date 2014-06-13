@@ -7,7 +7,7 @@ class UploadPage < ArticlePage
 
   div(:contribute_image, css: ".ctaUploadPhoto button")
   # This may seem confusing but one is a DIV and one is an A tag
-  a(:tutorial_link, class: "button photo")
+  a(:tutorial_link, href: "#/upload-tutorial/uploads")
   file_field(:select_file, name: 'file')
   button(:submit_button, text: "Submit")
   a(:uploaded_image_link, class: "image")
