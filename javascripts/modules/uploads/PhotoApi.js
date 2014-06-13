@@ -73,9 +73,9 @@
 			return Number < 10 ? '0' + Number : Number;
 		}
 
-		suffix = ' ' + date.getFullYear() + '-' +
-			pad( date.getMonth() + 1 ) + '-' + pad( date.getDate() ) + ' ' +
-			pad( date.getHours() ) + '-' + pad( date.getMinutes() ) + fileSuffix;
+		suffix = ' ' + date.getUTCFullYear() + '-' +
+			pad( date.getUTCMonth() + 1 ) + '-' + pad( date.getUTCDate() ) + ' ' +
+			pad( date.getUTCHours() ) + '-' + pad( date.getUTCMinutes() ) + fileSuffix;
 
 		allowedLength -= suffix.length;
 		return trimUtf8String( name, allowedLength ) + suffix;
