@@ -53,6 +53,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 			$languages = $page['langlinks'];
 			foreach ( $languages as &$langObject ) {
 				$langObject['langname'] = $languageMap[$langObject['lang']];
+				$langObject['url'] = MobileContext::singleton()->getMobileUrl( $langObject['url'] );
 			}
 			return $languages;
 		} else {
@@ -101,7 +102,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	private function makeLangListItem( $langObject ) {
 		$html = Html::openElement( 'li' ) .
 			Html::element( 'a', array(
-				'href' => MobileContext::singleton()->getMobileUrl( $langObject['url'] ),
+				'href' => $langObject['url'],
 				'hreflang' => $langObject['lang'],
 				'lang' => $langObject['lang'],
 				'title' => isset( $langObject['*'] ) ? $langObject['*'] : $langObject['langname']
