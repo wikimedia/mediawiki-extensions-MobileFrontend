@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_9610ae5c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 778,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-13T20:07:37Z",
+      "side": 1,
+      "message": "On close inspection, problematically, this config variable is in the HTML, so in cached pages will not be present and will have the effect of enabling red links everywhere on production :-(.\n\nAs a result it\u0027s probably easier to reverse these to $wgMFShowRedLinks and $wgMFShowRedLinksAnon PS. note the camel case on red links :)",
+      "revId": "6dd4ed78ae566d5a3c0cd0ffd1b45c09250a89e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
