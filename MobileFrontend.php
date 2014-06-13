@@ -521,3 +521,15 @@ $wgMFAppScheme = 'http';
  * edit, talk, upload, watch
  */
 $wgMFPageActions = array( 'edit', 'talk', 'upload', 'watch' );
+
+/**
+ * Specify whether to show redlinks (page doesn't exist) for users using stable mode.
+ * This hasn't any effect to beta and alpha mode!
+ * This variable is temporary only.
+ */
+$wgMFShowRedLinks = false;
+
+/**
+ * Specify whether show redlinks (page doesn't exist) for anonymous users.
+ */
+$wgMFShowRedLinksAnon = false;
