@@ -222,13 +222,11 @@
 	"mobile-frontend-photo-upload-anon": "請登錄以於此頁面插入圖像。",
 	"mobile-frontend-photo-upload-comment": "已添加照片到頁面上",
 	"mobile-frontend-photo-upload-copyvio": "警告！此圖像來源可疑。如果此圖像並非出於閣下之手，請勿上載之。您希望繼續？",
-	"mobile-frontend-photo-upload-disabled": "此頁面不需要圖像。",
 	"mobile-frontend-photo-upload-error": "上傳錯誤，請重試。",
 	"mobile-frontend-photo-upload-error-file-type": "僅限圖片上載。",
 	"mobile-frontend-photo-upload-error-filename": "錯誤：請提供更具描述性的摘要。",
 	"mobile-frontend-photo-upload-generic": "貢獻圖片",
 	"mobile-frontend-photo-upload-invalid-user": "使用者「$1」未註冊。",
-	"mobile-frontend-photo-upload-protected": "您並無權限于此頁面插入圖像。",
 	"mobile-frontend-photo-upload-success-article": "完成！您的圖像已被添加到頁面中。",
 	"mobile-frontend-photo-upload-unavailable": "您的瀏覽器不支援圖像上載。",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span>個上載|<span>$1</span>個上載}}",
@@ -316,6 +314,8 @@
 	"mobile-frontend-watchlist-login-action": "登錄以查看。",
 	"mobile-frontend-watchlist-modified": "$1前修改",
 	"mobile-frontend-watchlist-more": "更多",
+	"mobile-frontend-watchlist-please-wait": "監視操作比預期的時間長。請稍等。",
+	"mobile-frontend-watchlist-error": "監視此頁時出錯。請重試。",
 	"mobile-frontend-watchlist-purpose": "監視列表幫助收藏頁面及追蹤它們修改。",
 	"mobile-frontend-watchlist-removed": "已從您的監視列表移除$1",
 	"mobile-frontend-watchlist-signup-action": "註冊以建立監視列表。",
@@ -334,5 +334,7 @@
 	"mobilefrontend-random-tryanother": "找尋其它",
 	"nearby": "您附近的頁面",
 	"tag-mobile_edit": "手機編輯",
-	"tag-mobile_edit-description": "從手機版所作的編輯"
+	"tag-mobile_edit-description": "從手機版所作的編輯（web或應用程式）",
+	"tag-mobile_web_edit": "移動網頁編輯",
+	"tag-mobile_web_edit-description": "從手機版所作的編輯"
 }
