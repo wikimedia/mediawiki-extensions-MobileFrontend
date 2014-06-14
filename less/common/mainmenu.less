@@ -15,7 +15,7 @@
 #mw-mf-page-center {
 	width: 100%;
 	position: relative;
-	z-index: 3;
+	z-index: @z-indexMain;
 }
 
 #mw-mf-page-left {
@@ -31,7 +31,7 @@
 .navigation-drawer {
 	// don't use display: none because it's not animatable
 	position: absolute;
-	z-index: 0;
+	z-index: @z-indexBase;
 	visibility: hidden;
 }
 
