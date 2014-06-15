@@ -274,6 +274,7 @@
 	"mobile-frontend-watchlist-login-action": "Iniciar sesión para ver esto.",
 	"mobile-frontend-watchlist-modified": "Modificado $1",
 	"mobile-frontend-watchlist-more": "más",
+	"mobile-frontend-watchlist-please-wait": "Espera, la acción está tomando más tiempo del esperado.",
 	"mobile-frontend-watchlist-error": "Ocurrió un problema al añadir esta página a la lista de seguimiento. Inténtalo de nuevo.",
 	"mobile-frontend-watchlist-removed": "Se ha eliminado el artículo $1 de tu lista de seguimiento",
 	"mobile-frontend-watchlist-view": "Ver tu lista de seguimiento",
@@ -289,5 +290,5 @@
 	"mobilefrontend-random-tryanother": "Encontrar otro",
 	"nearby": "Páginas cercanas",
 	"tag-mobile_edit": "Edición desde móvil",
-	"tag-mobile_edit-description": "Edición realizada desde el sitio móvil"
+	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)"
 }

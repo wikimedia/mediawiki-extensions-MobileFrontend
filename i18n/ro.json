@@ -321,5 +321,7 @@
 	"mobilefrontend-random-tryanother": "Găsește o alta",
 	"nearby": "Pagini în apropierea dumneavoastră",
 	"tag-mobile_edit": "Modificare mobilă",
-	"tag-mobile_edit-description": "Modificare efectuată de pe site-ul mobil"
+	"tag-mobile_edit-description": "Modificare efectuată prin platforma mobilă (web sau aplicație)",
+	"tag-mobile_web_edit": "Modificare de pe webul mobil",
+	"tag-mobile_web_edit-description": "Modificare efectuată prin site-ul web mobil"
 }

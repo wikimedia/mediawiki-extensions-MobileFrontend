@@ -336,5 +336,7 @@
 	"mobilefrontend-random-tryanother": "Найти другую",
 	"nearby": "Страницы об объектах поблизости",
 	"tag-mobile_edit": "Правка с моб. устройства",
-	"tag-mobile_edit-description": "Правки, сделанные через мобильную версию сайта"
+	"tag-mobile_edit-description": "Правки с мобильного устройства (через сайт или приложение)",
+	"tag-mobile_web_edit": "Правка через мобильную версию сайта",
+	"tag-mobile_web_edit-description": "Правка, сделанная через мобильную версию сайта"
 }

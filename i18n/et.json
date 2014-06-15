@@ -241,5 +241,7 @@
 	"mobilefrontend-random-tryanother": "Leia teine",
 	"nearby": "Leheküljed sinu lähedal",
 	"tag-mobile_edit": "Mobiilimuudatus",
-	"tag-mobile_edit-description": "Mobiilisaidil tehtud muudatus"
+	"tag-mobile_edit-description": "Mobiilisaidil tehtud muudatus (veebis või rakenduses)",
+	"tag-mobile_web_edit": "Mobiiliveebi kaudu",
+	"tag-mobile_web_edit-description": "Mobiili veebisaidi kaudu tehtud muudatus"
 }

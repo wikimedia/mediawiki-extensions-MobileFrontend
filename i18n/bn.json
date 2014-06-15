@@ -121,7 +121,7 @@
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} বৈকল্পিক",
 	"mobile-frontend-last-modified-date": "সর্বশেষ পরিবর্তন $2, $1 তারিখে",
 	"mobile-frontend-last-modified-days": "সর্বশেষ পরিবর্তন {{PLURAL:$1|$1 দিন}} আগে",
-	"mobile-frontend-last-modified-hours": "সর্বশেষ পরিবর্তন {{PLURAL:$1|$1 ঘন্টা}} আগে",
+	"mobile-frontend-last-modified-hours": "সর্বশেষ পরিবর্তন {{PLURAL:$1|$1 ঘণ্টা}} আগে",
 	"mobile-frontend-last-modified-just-now": "সর্বশেষ পরিবর্তন এইমাত্র হয়েছে",
 	"mobile-frontend-last-modified-minutes": "সর্বশেষ পরিবর্তন {{PLURAL:$1|$1 মিনিট}} আগে",
 	"mobile-frontend-last-modified-months": "সর্বশেষ পরিবর্তন {{PLURAL:$1|$1 মাস}} আগে",
