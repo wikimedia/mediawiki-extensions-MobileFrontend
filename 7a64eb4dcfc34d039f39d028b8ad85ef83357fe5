@@ -50,6 +50,24 @@
       "revId": "7a64eb4dcfc34d039f39d028b8ad85ef83357fe5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_9e19d780",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2014-06-16T18:53:49Z",
+      "side": 1,
+      "message": "Actually don\u0027t parse(). You won\u0027t want a title [[\u0027\u0027\u0027a\u0027\u0027\u0027]] to become \u003cb\u003ea\u003c/b\u003e.",
+      "parentUuid": "ee391fd1_bb782dc0",
+      "revId": "7a64eb4dcfc34d039f39d028b8ad85ef83357fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
