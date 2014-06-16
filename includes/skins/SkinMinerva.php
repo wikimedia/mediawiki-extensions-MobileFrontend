@@ -744,7 +744,8 @@ class SkinMinerva extends SkinTemplate {
 			$wgMFAjaxUploadProgressSupport,
 			$wgMFAnonymousEditing,
 			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc,
-			$wgMFCollapseSectionsByDefault;
+			$wgMFCollapseSectionsByDefault, $wgMFShowRedLinksAnon,
+			$wgMFShowRedLinks;
 
 		$title = $this->getTitle();
 		$user = $this->getUser();
@@ -773,6 +774,8 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->mobileContext->shouldDisplayMobileView() ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
 		}
+		$vars['wgMFShowRedLinksAnon'] = $wgMFShowRedLinksAnon;
+		$vars['wgMFShowRedLinks'] = $wgMFShowRedLinks;
 		return $vars;
 	}
 
