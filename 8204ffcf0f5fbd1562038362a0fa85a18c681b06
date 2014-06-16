@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_9b8fa9d1",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-16T18:32:08Z",
+      "side": 1,
+      "message": "Please use camelCase for variable name and $this-\u003euser-\u003egetName() for its content.",
+      "revId": "8204ffcf0f5fbd1562038362a0fa85a18c681b06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
