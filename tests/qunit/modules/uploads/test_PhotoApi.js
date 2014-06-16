@@ -135,21 +135,21 @@
 	QUnit.module( 'MobileFrontend photo: filenames' );
 
 	QUnit.test( 'generateFileName', 1, function() {
-		var date = new Date( 2010, 9, 15, 12, 9 ),
+		var date = new Date( Date.UTC( 2010, 9, 15, 12, 9 ) ),
 			name = photo.generateFileName( 'Jon eating bacon next to an armadillo', '.jpg', date );
 		strictEqual( name, 'Jon eating bacon next to an armadillo 2010-10-15 12-09.jpg',
 			'Check file name is description with appended date' );
 	} );
 
 	QUnit.test( 'generateFileName with double apostrophes', 1, function() {
-		var date = new Date( 2010, 9, 15, 12, 9 ),
+		var date = new Date( Date.UTC( 2010, 9, 15, 12, 9 ) ),
 			name = photo.generateFileName( "Image of '' the double apostrophe", '.jpg', date );
 		strictEqual( name, 'Image of \'_ the double apostrophe 2010-10-15 12-09.jpg',
 			'Check double apostrophe stripped out' );
 	} );
 
 	QUnit.test( 'generateFileName test padding', 1, function() {
-		var date = new Date( 2013, 2, 1, 12, 51 ), // note 0 = january
+		var date = new Date( Date.UTC( 2013, 2, 1, 12, 51 ) ), // note 0 = january
 			name = photo.generateFileName( 'Tomasz eating bacon next to a dinosaur', '.jpg', date );
 		strictEqual( name, 'Tomasz eating bacon next to a dinosaur 2013-03-01 12-51.jpg',
 			'Check file name is description with appended date and numbers were padded' );
@@ -157,7 +157,7 @@
 
 	QUnit.test( 'generateFileName double spaces', 1, function() {
 		var longDescription = 'double space  woop woop  ',
-			date = new Date( 2013, 2, 1, 12, 51 ), name;
+			date = new Date( Date.UTC( 2013, 2, 1, 12, 51 ) ), name;
 
 		name = photo.generateFileName( longDescription, '.jpg', date );
 		strictEqual( name, 'double space woop woop 2013-03-01 12-51.jpg' );
@@ -166,7 +166,7 @@
 	QUnit.test( 'generateFileName long line', 2, function() {
 		var i,
 			longDescription = '',
-			date = new Date( 2013, 2, 1, 12, 51 ), name;
+			date = new Date( Date.UTC( 2013, 2, 1, 12, 51 ) ), name;
 
 		for ( i = 0; i < 240; i++ ) {
 			longDescription += 'a';
@@ -179,7 +179,7 @@
 	QUnit.test( 'generateFileName with new lines', 1, function() {
 		var
 			description = 'One\nTwo\nThree',
-			date = new Date( 2013, 2, 1, 12, 51 ), name;
+			date = new Date( Date.UTC( 2013, 2, 1, 12, 51 ) ), name;
 
 		name = photo.generateFileName( description, '.jpg', date );
 		strictEqual( name, 'One-Two-Three 2013-03-01 12-51.jpg', 'New lines converted' );
