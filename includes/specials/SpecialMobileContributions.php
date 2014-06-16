@@ -51,6 +51,14 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 			// enter article history view
 			$this->user = User::newFromName( $par );
 			if ( $this->user && $this->user->idForName() ) {
+				// set page title as on desktop site - bug 66656
+				$username = $this->user->getName();
+				$out = $this->getOutput();
+				$out->setHTMLTitle( $this->msg(
+					'pagetitle',
+					$this->msg( 'contributions-title', $username )->plain()
+				)->inContentLanguage() );
+
 				$this->renderHeaderBar( $this->user->getUserPage() );
 				$res = $this->doQuery();
 				$this->showContributions( $res );
