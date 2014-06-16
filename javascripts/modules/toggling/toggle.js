@@ -3,7 +3,6 @@
 
 	/**
 	 * Given a heading, toggle it and any of its children
-	 * emits a section-toggle event
 	 *
 	 * @param {jQuery.Object} $heading A heading belonging to a section
 	 */
@@ -22,8 +21,6 @@
 				'aria-pressed': !isCollapsed,
 				'aria-expanded': !isCollapsed
 			} );
-
-		M.emit( 'section-toggle', $heading );
 	}
 
 	/**
@@ -139,18 +136,6 @@
 		// don't pass page-loaded parameter
 		init();
 	} );
-
-	// FIXME: Temporary workaround while toggle-dynamic is not in stable
-	// (needed for dynamic section loading after editing)
-	if ( !M.isAlphaGroupMember() || !M.isApp() ) {
-		M.on( 'section-toggle', function( $section ) {
-			var $content = $section.next(),
-				content = $content.data( 'content' );
-			if ( content ) {
-				$content.html( content ).data( 'content', false );
-			}
-		} );
-	}
 
 	M.define( 'toggle', {
 		eventName: eventName,

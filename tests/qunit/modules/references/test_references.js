@@ -10,7 +10,9 @@ QUnit.module( "MobileFrontend references.js", {
 });
 
 QUnit.test( 'Standard', 2, function( assert ) {
-	R.setup( $( '#mfe-test-references' ) );
+	R.setup( {
+		$el: $( '#mfe-test-references' )
+	} );
 	$("#mfe-test-references sup a").trigger("click");
 	assert.strictEqual( $( '#notifications .references h3' ).text(), '[1]' );
 	assert.strictEqual( $( '#notifications .references a' ).text(), 'test reference' );

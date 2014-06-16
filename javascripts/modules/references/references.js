@@ -27,8 +27,8 @@
 		}
 	}
 
-	function setup( $container ) {
-		$container = $container || $( '#content' );
+	function setup( page ) {
+		var $container = page ? page.$el : $( '#content' );
 		$container.find( 'sup a' ).off( 'click' ).on( 'click', showReference );
 		$container.find( '.mw-cite-backlink a' ).off( 'click' );
 	}
@@ -37,7 +37,7 @@
 		drawer = new ReferencesDrawer();
 		setup();
 	} );
-	M.on( 'section-rendered references-loaded', setup );
+	M.on( 'page-loaded', setup );
 
 	M.define( 'references', { setup: setup } );
 

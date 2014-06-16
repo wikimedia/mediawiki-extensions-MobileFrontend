@@ -508,7 +508,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
-			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/mediaViewer/init.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
 			'javascripts/modules/languages/preferred.js',
@@ -759,15 +758,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/toggling/toggle.js',
-		),
-	),
-
-	'mobile.toggling.beta' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.toggling',
-		),
-		'scripts' => array(
-			'javascripts/modules/mf-toggle-dynamic.js',
 		),
 	),
 
