@@ -303,5 +303,7 @@
 	"mobilefrontend-random-tryanother": "আরেকটি খুঁজুন",
 	"nearby": "আপনার কাছাকাছি পাতাসমূহ",
 	"tag-mobile_edit": "মোবাইল সম্পাদনা",
-	"tag-mobile_edit-description": "মোবাইল সাইট থেকে সম্পাদনা করা হয়েছে"
+	"tag-mobile_edit-description": "মোবাইল থেকে সম্পাদনা করা হয়েছে (ওয়েব বা অ্যাপ)",
+	"tag-mobile_web_edit": "মোবাইল ওয়েব সম্পাদনা",
+	"tag-mobile_web_edit-description": "মোবাইল ওয়েব সাইট থেকে সম্পাদনা করা হয়েছে"
 }

@@ -214,13 +214,11 @@
 	"mobile-frontend-photo-upload-anon": "Xin vui lòng đăng nhập để thêm hình vào trang này.",
 	"mobile-frontend-photo-upload-comment": "Đã thêm hình vào trang",
 	"mobile-frontend-photo-upload-copyvio": "Coi chừng! Hình ảnh này đáng ngờ. Nếu nó không phải do bạn chụp hình, xin đừng tải nó lên. Bạn có muốn tiếp tục?",
-	"mobile-frontend-photo-upload-disabled": "Trang này không cần hình ảnh.",
 	"mobile-frontend-photo-upload-error": "Đã xuất hiện lỗi; hãy thử lại.",
 	"mobile-frontend-photo-upload-error-file-type": "Xin vui lòng chỉ tải lên hình ảnh.",
 	"mobile-frontend-photo-upload-error-filename": "Lỗi: Xin vui lòng tóm tắt một cách rõ hơn.",
 	"mobile-frontend-photo-upload-generic": "Đóng góp một hình ảnh",
 	"mobile-frontend-photo-upload-invalid-user": "Chưa có tài khoản với tên “$1”.",
-	"mobile-frontend-photo-upload-protected": "Bạn không có quyền thêm hình vào trang này.",
 	"mobile-frontend-photo-upload-success-article": "Xong rồi, trang này hiện có hình ảnh của bạn.",
 	"mobile-frontend-photo-upload-unavailable": "Trình duyệt của bạn không hỗ trợ tải hình ảnh lên.",
 	"mobile-frontend-photo-upload-user-count": "<span>$1</span> tải lên",
@@ -308,6 +306,8 @@
 	"mobile-frontend-watchlist-login-action": "Hãy đăng nhập để xem nó.",
 	"mobile-frontend-watchlist-modified": "Được sửa đổi $1",
 	"mobile-frontend-watchlist-more": "thêm",
+	"mobile-frontend-watchlist-please-wait": "Xin chờ đợi, tác vụ theo dõi lần này hơi chậm.",
+	"mobile-frontend-watchlist-error": "Việc theo dõi trang này bị thất bại. Xin hãy thử lại.",
 	"mobile-frontend-watchlist-purpose": "Danh sách theo dõi cho phép bạn đánh dấu trang và theo dõi các sửa đổi tại nó.",
 	"mobile-frontend-watchlist-removed": "Đã dời $1 khỏi danh sách theo dõi của bạn",
 	"mobile-frontend-watchlist-signup-action": "Hãy mở tài khoản để tạo ra nó.",
@@ -326,5 +326,7 @@
 	"mobilefrontend-random-tryanother": "Tìm trang khác",
 	"nearby": "Trang gần bạn",
 	"tag-mobile_edit": "Sửa đổi di động",
-	"tag-mobile_edit-description": "Trang được sửa đổi dùng trang di động"
+	"tag-mobile_edit-description": "Sửa đổi di động (trang Web hoặc ứng dụng)",
+	"tag-mobile_web_edit": "Sửa đổi từ trang di động",
+	"tag-mobile_web_edit-description": "Sửa đổi từ trang Web di động"
 }

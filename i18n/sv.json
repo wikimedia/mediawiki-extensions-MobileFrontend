@@ -219,13 +219,11 @@
 	"mobile-frontend-photo-upload-anon": "Var god logga in för att lägga till en bild på denna sida.",
 	"mobile-frontend-photo-upload-comment": "Lade till bild på sidan",
 	"mobile-frontend-photo-upload-copyvio": "Varning! Detta foto ser misstänkt ut. Om det inte är ett foto du tagit, ladda inte upp det. Vill du fortfarande fortsätta?",
-	"mobile-frontend-photo-upload-disabled": "Det behövs ingen bild på denna sida.",
 	"mobile-frontend-photo-upload-error": "Fel, försök igen.",
 	"mobile-frontend-photo-upload-error-file-type": "Var god ladda upp bara bilder.",
 	"mobile-frontend-photo-upload-error-filename": "Fel, ge en mer beskrivande sammanfattning.",
 	"mobile-frontend-photo-upload-generic": "Bidra med en bild",
 	"mobile-frontend-photo-upload-invalid-user": "Användare \"$1\" inte är registrerad.",
-	"mobile-frontend-photo-upload-protected": "Du har inte behörighet att lägga till en bild på denna sida.",
 	"mobile-frontend-photo-upload-success-article": "Framgång! Din bild är nu publicerad på denna sida.",
 	"mobile-frontend-photo-upload-unavailable": "Din webbläsare stöder inte bilduppladdningar.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> uppladdning|<span>$1</span> uppladdningar}}",
@@ -313,6 +311,8 @@
 	"mobile-frontend-watchlist-login-action": "Logga in för att se den.",
 	"mobile-frontend-watchlist-modified": "Redigerades för $1",
 	"mobile-frontend-watchlist-more": "mer",
+	"mobile-frontend-watchlist-please-wait": "Vänligen vänta, bevakningsåtgärden tar längre tid än väntat.",
+	"mobile-frontend-watchlist-error": "Ett problem uppstod under bevakningen av denna sida. Vänligen försök igen.",
 	"mobile-frontend-watchlist-purpose": "En bevakningslista bokmärker sidor och hjälper dig hålla reda på ändringar som görs på dem.",
 	"mobile-frontend-watchlist-removed": "Tog bort $1 från din bevakningslista",
 	"mobile-frontend-watchlist-signup-action": "Registrera dig för att starta en nu.",
@@ -329,5 +329,7 @@
 	"mobilefrontend-random-tryanother": "Hitta en annan",
 	"nearby": "Sidor nära dig",
 	"tag-mobile_edit": "Mobilredigering",
-	"tag-mobile_edit-description": "Redigering gjordes från mobilsidan"
+	"tag-mobile_edit-description": "Redigering gjord från mobil (webb eller app)",
+	"tag-mobile_web_edit": "Mobil webbredigering",
+	"tag-mobile_web_edit-description": "Redigering gjord från den mobila webbplatsen"
 }

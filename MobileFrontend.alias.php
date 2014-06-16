@@ -170,6 +170,20 @@ $specialPageAliases['hi'] = array(
 	'MobileOptions' => array( 'मोबाइल_विकल्प' ),
 );
 
+/** Upper Sorbian (hornjoserbsce) */
+$specialPageAliases['hsb'] = array(
+	'History' => array( 'Stawizny' ),
+	'MobileWebApp' => array( 'Mobilne_webnałoženje' ),
+	'MobileOptions' => array( 'Mobilne_opcije' ),
+	'Uploads' => array( 'Nahrate_dataje' ),
+	'MobileDiff' => array( 'Mobilny_rozdźěl' ),
+	'MobileEditor' => array( 'Mobilny_editor' ),
+	'MobileMenu' => array( 'Mobilny_meni' ),
+	'MobileLanguages' => array( 'Mobilne_rěče' ),
+	'Nearby' => array( 'W_bliskosći' ),
+	'UserProfile' => array( 'Wužiwarski_profil' ),
+);
+
 /** Italian (italiano) */
 $specialPageAliases['it'] = array(
 	'History' => array( 'Cronologia' ),
@@ -322,6 +336,7 @@ $specialPageAliases['uk'] = array(
 /** Vietnamese (Tiếng Việt) */
 $specialPageAliases['vi'] = array(
 	'History' => array( 'Lịch_sử' ),
+	'MobileWebApp' => array( 'Ứng_dụng_Web_di_động', 'Ứng_dụng_di_động_Web' ),
 	'MobileOptions' => array( 'Tùy_chọn_di_động' ),
 	'Uploads' => array( 'Tập_tin_tải_lên' ),
 	'MobileDiff' => array( 'So_sánh_di_động' ),
