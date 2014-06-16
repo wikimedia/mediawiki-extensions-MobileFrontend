@@ -1,7 +1,6 @@
 // Flatten red links in JavaScript
 ( function( M, $ ) {
-	if ( ( !M.isBetaGroupMember() && !mw.config.get( 'wgMFShowRedLinks' ) ) ||
-			( !mw.config.get( 'wgMFShowRedLinksAnon' ) && mw.user.isAnon() ) ) {
+	if ( !mw.config.get( 'wgMFShowRedLinks' ) ) {
 		$( function() {
 			$( '#content a.new' ).each( function() {
 				// Use html since links might contain sup or sub elements

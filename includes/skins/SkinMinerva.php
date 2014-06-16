@@ -774,8 +774,8 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->mobileContext->shouldDisplayMobileView() ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
 		}
-		$vars['wgMFShowRedLinksAnon'] = $wgMFShowRedLinksAnon;
-		$vars['wgMFShowRedLinks'] = $wgMFShowRedLinks;
+		$vars['wgMFShowRedLinks'] = ( $this->mobileContext->isBetaGroupMember() && $wgMFShowRedLinks )
+			|| ( $wgMFShowRedLinksAnon && $user->isAnon() );
 		return $vars;
 	}
 
