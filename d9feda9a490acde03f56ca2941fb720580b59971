@@ -16,6 +16,24 @@
       "revId": "d9feda9a490acde03f56ca2941fb720580b59971",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_5e348fa7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-16T18:56:30Z",
+      "side": 1,
+      "message": "Like i said in PS5:\nhttps://gerrit.wikimedia.org/r/#/c/138229/5/includes/skins/SkinMinerva.php\n\nif i do that, then the load of Talk page will abort and #/notifications for echo will be loaded :) We can investigate to disable the load of overlay, if echo isn\u0027t installed, or use a legacy id for the bell link :) Am i right? :)",
+      "parentUuid": "ee391fd1_fefc63d7",
+      "revId": "d9feda9a490acde03f56ca2941fb720580b59971",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
