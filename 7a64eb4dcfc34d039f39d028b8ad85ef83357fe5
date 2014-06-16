@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_9ba6894f",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-16T18:34:39Z",
+      "side": 1,
+      "message": "Overcapitalized.",
+      "revId": "7a64eb4dcfc34d039f39d028b8ad85ef83357fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_7ba3e53f",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-16T18:34:39Z",
+      "side": 1,
+      "message": "Please use camelCase.",
+      "revId": "7a64eb4dcfc34d039f39d028b8ad85ef83357fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_bb782dc0",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-16T18:34:39Z",
+      "side": 1,
+      "message": "You don\u0027t need to escape the title here, parsing will do it for you.",
+      "revId": "7a64eb4dcfc34d039f39d028b8ad85ef83357fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
