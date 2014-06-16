@@ -16,6 +16,24 @@
       "revId": "0d260a04ff18aade31901e6897aa2bd1c903b00d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_fb6fd5be",
+        "filename": "less/minerva.less/minerva.variables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-16T16:53:46Z",
+      "side": 1,
+      "message": "you mean @z-index-Base or @zindexBase? I prefer the last one? :)",
+      "parentUuid": "ee391fd1_db3651e4",
+      "revId": "0d260a04ff18aade31901e6897aa2bd1c903b00d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
