@@ -34,6 +34,24 @@
       "revId": "0d260a04ff18aade31901e6897aa2bd1c903b00d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_7bde45e0",
+        "filename": "less/minerva.less/minerva.variables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-06-16T18:21:15Z",
+      "side": 1,
+      "message": "Yeh the reason I suggested hyphens was z-index uses hyphens.\n\nI personally would go for z-indexBase but I guess we should wait for a response from Juliusz first.\n\nOn a side note Juliusz, in core all the LESS variables are hyphens - maybe it\u0027s worth changing our convention here to keep consistency?",
+      "parentUuid": "ee391fd1_fb6fd5be",
+      "revId": "0d260a04ff18aade31901e6897aa2bd1c903b00d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
