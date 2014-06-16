@@ -123,6 +123,7 @@
     "mobile-frontend-languages-404-desc": "A valid title must be specified.",
     "mobile-frontend-languages-404-title": "Languages error",
     "mobile-frontend-languages-header": "Languages",
+    "mobile-frontend-languages-header-page": "$1 - Languages",
     "mobile-frontend-languages-nonexistent-title": "The page \"$1\" does not exist.",
     "mobile-frontend-languages-text": "$1 is available in $2 {{PLURAL:$2|language|languages}}.",
     "mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} variants",

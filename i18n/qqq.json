@@ -147,6 +147,7 @@
 	"mobile-frontend-languages-404-desc": "The title for this message is {{msg-mw|Mobile-frontend-languages-404-title}}.",
 	"mobile-frontend-languages-404-title": "Used as title for the description {{msg-mw|Mobile-frontend-languages-404-desc}}.",
 	"mobile-frontend-languages-header": "{{Identical|Language}}",
+	"mobile-frontend-languages-header-page": "Header used for list of alternate languages that a page is available in.\n* $1 - The name of the page\n{{Related|Mobile-frontend-languages-header}}",
 	"mobile-frontend-languages-nonexistent-title": "Shown as error message on [[Special:MobileLanguages]] when the title parameter given does not map to an existing page.\n\nParameters:\n* $1 - page title",
 	"mobile-frontend-languages-text": "Parameters:\n* $1 - page title\n* $2 - number of languages\nSee also:\n* {{msg-mw|Mobile-frontend-languages-header|page title}}",
 	"mobile-frontend-languages-variant-header": "See also:\n* {{msg-mw|Mobile-frontend-language-variant-header}}",
