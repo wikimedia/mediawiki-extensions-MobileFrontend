@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_1b1df966",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-16T16:41:38Z",
+      "side": 1,
+      "message": "I agree with Kaldari that those comments are not clear. Can we rephrase them?",
+      "revId": "d45cd0ab6b65d1add0a71a112fab9e0d0e907db8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
