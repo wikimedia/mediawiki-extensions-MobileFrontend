@@ -75,7 +75,8 @@ class ApiMobileView extends ApiBase {
 		}
 
 		$title = $this->makeTitle( $params['page'] );
-		$this->mainPage = $title->isMainPage();
+		// See whether the actual page (or if enabled, the redirect target) is the main page
+		$this->mainPage = $this->isMainPage( $title );
 		if ( $this->mainPage && $this->noHeadings ) {
 			$this->noHeadings = false;
 			$this->setWarning( "``noheadings'' makes no sense on the main page, ignoring" );
@@ -253,6 +254,23 @@ class ApiMobileView extends ApiBase {
 			$this->dieUsageMsg( array( 'notanarticle', $name ) );
 		}
 		return $title;
+	}
+
+	/**
+	 * Check if page is the main page after follow redirect when followRedirects is true.
+	 *
+	 * @param Title $title Title object to check
+	 * @return boolean
+	 */
+	protected function isMainPage( $title ) {
+		if ( $title->isRedirect() && $this->followRedirects ) {
+			// Title::newFromRedirect is deprecated since 1.21, so go over WikiPage
+			$wp = $this->makeWikiPage( $title );
+
+			return $wp->getRedirectTarget()->isMainPage();
+		} else {
+			return $title->isMainPage();
+		}
 	}
 
 	/**
