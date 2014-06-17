@@ -36,9 +36,6 @@ class SkinMinervaBeta extends SkinMinerva {
 
 		$styles = parent::getSkinStyles();
 		$styles[] = 'skins.minerva.chrome.styles.beta';
-		if ( $title->isMainPage() ) {
-			$styles[] = 'mobile.styles.mainpage';
-		}
 
 		return $styles;
 	}

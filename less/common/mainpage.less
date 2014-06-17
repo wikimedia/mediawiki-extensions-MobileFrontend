@@ -1,10 +1,20 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-
 .page-Main_Page {
 	#section_0 {
 		border: none;
+	}
+
+	#page-actions,
+	.pre-content {
+		display: none;
+	}
+
+	&.is-authenticated {
+		.pre-content {
+			display: block;
+		}
 	}
 
 	.page-banner {

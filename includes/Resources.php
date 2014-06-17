@@ -61,10 +61,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	// FIXME: remove this when cache is clear --2014/06/17
 	'mobile.styles.mainpage' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/common/mainpage.less'
-		),
+		'styles' => array(),
 		'group' => 'other',
 	),
 
@@ -128,6 +127,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/common/footer.less',
 			'less/common/common.less',
 			'less/common/icons.less',
+			'less/common/mainpage.less',
 		),
 		'position' => 'top',
 	),
