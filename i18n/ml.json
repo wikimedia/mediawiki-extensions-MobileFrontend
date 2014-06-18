@@ -312,6 +312,8 @@
 	"mobile-frontend-watchlist-removed": "$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിൽ നിന്ന് നീക്കി",
 	"mobile-frontend-watchlist-signup-action": "ഒരെണ്ണം തുടങ്ങാൻ പേരുചേർക്കുക.",
 	"mobile-frontend-watchlist-view": "താങ്കൾ ശ്രദ്ധിക്കുന്നവയുടെ പട്ടിക കാണുക",
+	"mobile.css": "/* ഇവിടെ നൽകുന്ന സി.എസ്.എസ്. മൊബൈൽ സൈറ്റ് ഉപയോഗിക്കുന്നവർക്ക് ബാധകമായിരിക്കും */",
+	"mobile.js": "/* ഇവിടെ നൽകുന്ന ജാവാസ്ക്രിപ്റ്റ് മൊബൈൽ സൈറ്റ് ഉപയോഗിക്കുന്നവർക്ക് ബാധകമായിരിക്കും */",
 	"mobilefrontend-keepgoing-cancel": "വേണ്ട, നന്ദി",
 	"mobilefrontend-keepgoing-links-ask-again": "മറ്റൊരു താൾ ശരിയാക്കാം?",
 	"mobilefrontend-keepgoing-links-ask-first": "അദ്യതിരുത്തിന് അഭിനന്ദനങ്ങൾ! ഇപ്പോൾ സൃഷ്ടിച്ച താളിലേയ്ക്ക് കണ്ണികൾ ചേർക്കാൻ ആഗ്രഹിക്കുന്നോ?",
@@ -324,5 +326,7 @@
 	"mobilefrontend-random-tryanother": "മറ്റൊന്ന് കണ്ടെത്തുക",
 	"nearby": "താങ്കളുടെ സമീപസ്ഥവിഷയങ്ങളെക്കുറിച്ചുള്ള താളുകൾ",
 	"tag-mobile_edit": "മൊബൈൽ സൈറ്റ്",
-	"tag-mobile_edit-description": "മൊബൈൽ സൈറ്റ് വഴി വരുത്തിയ തിരുത്തുകൾ"
+	"tag-mobile_edit-description": "മൊബൈൽ വഴി ചെയ്ത തിരുത്ത് (വെബ് അല്ലെങ്കിൽ ആപ്)",
+	"tag-mobile_web_edit": "മൊബൈൽ വെബിലെ തിരുത്ത്",
+	"tag-mobile_web_edit-description": "മൊബൈൽ വെബ് സൈറ്റ് വഴി ചെയ്ത തിരുത്ത്"
 }
