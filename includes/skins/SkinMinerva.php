@@ -1018,11 +1018,14 @@ HTML;
 
 	/**
 	 * Returns HTML of terms of use link or null if it shouldn't be displayed
+	 * Note: This is called by a hook in the WikimediaMessages extension.
+	 *
+	 * @param $urlMsgKey Key of i18n message containing terms of use URL (optional)
 	 *
 	 * @return null|string
 	 */
-	public function getTermsLink() {
-		$urlMsg = $this->msg( 'mobile-frontend-terms-url' )->inContentLanguage();
+	public function getTermsLink( $urlMsgKey = 'mobile-frontend-terms-url' ) {
+		$urlMsg = $this->msg( $urlMsgKey )->inContentLanguage();
 		if ( $urlMsg->isDisabled() ) {
 			return null;
 		}
