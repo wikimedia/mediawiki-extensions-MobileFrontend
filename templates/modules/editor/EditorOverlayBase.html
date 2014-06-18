@@ -1,24 +1,22 @@
 <div class="overlay-header-container visible position-fixed">
 	{{>header}}
 	<div class="overlay-header save-header hideable hidden">
-		<ul class="bottom-border">
+		<ul>
 			<li><button class="back icon-24px icon icon-cancel">{{keepEditingMsg}}</button></li>
 		</ul>
-		<div class="overlay-title bottom-border">
+		<div class="overlay-title">
 			<h2>{{{previewingMsg}}}</h2>
 		</div>
-		<ul>
-			<li><button class="submit icon-submit icon">{{saveMsg}}</button></li>
-		</ul>
+		<div class="overlay-action"><button class="submit">{{saveMsg}}</button></div>
 	</div>
 	<div class="overlay-header saving-header hideable hidden">
-		<ul class="bottom-border">
+		<ul>
 			<li><button class="cancel icon icon-cancel" disabled>{{closeMsg}}</button></li>
 		</ul>
-		<div class="overlay-title bottom-border">
+		<div class="overlay-title">
 			<h2>{{{waitMsg}}}</h2>
 		</div>
-		<ul class="bottom-border">
+		<ul>
 			<li><button class="loading icon">{{waitMsg}}</button></li>
 		</ul>
 	</div>

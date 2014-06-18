@@ -30,7 +30,7 @@
 		className: 'overlay',
 		template: M.template.get( 'Overlay' ),
 		defaults: {
-			headerButtonsListClassName: 'bottom-border',
+			headerButtonsListClassName: '',
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
 			fixedHeader: true
 		},

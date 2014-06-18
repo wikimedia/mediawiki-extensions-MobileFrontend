@@ -21,9 +21,9 @@
 			help: mw.msg( 'mobile-frontend-photo-ownership-help' ),
 			ownerStatement: ownershipMessage,
 			heading: mw.msg( 'mobile-frontend-image-heading-describe' ),
-			headerButtonsListClassName: '',
+			headerButtonsListClassName: 'overlay-action',
 			headerButtons: [
-				{ className: 'submit icon-submit icon', msg: mw.msg( 'mobile-frontend-photo-submit' ) }
+				{ className: 'submit', msg: mw.msg( 'mobile-frontend-photo-submit' ) }
 			]
 		},
 
