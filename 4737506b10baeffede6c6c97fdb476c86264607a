@@ -16,6 +16,24 @@
       "revId": "4737506b10baeffede6c6c97fdb476c86264607a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_c910ba06",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-18T04:27:36Z",
+      "side": 1,
+      "message": "Hmm, thought to clarify, why not follow redirect in makeTitle, but you\u0027re right, it\u0027s too much :P will edit it.",
+      "parentUuid": "ee391fd1_ce9a0066",
+      "revId": "4737506b10baeffede6c6c97fdb476c86264607a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
