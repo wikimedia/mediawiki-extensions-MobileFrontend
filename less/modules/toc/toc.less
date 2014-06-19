@@ -27,7 +27,8 @@
 		border-right: @paddingHorizontal solid transparent;
 
 		.icon {
-			.background-image('images/contents.png');
+			// @todo: switch to .background-image() when 66091 is fixed
+			background-image:url('images/contents-ltr.png');
 			width: @iconSize;
 			height: @iconSize;
 			display: block;
