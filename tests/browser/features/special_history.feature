@@ -3,7 +3,6 @@ Feature: Special:History (Note test may take a long time to run on first run)
 
   Background:
     Given the page "Selenium diff test" exists and has at least 51 edits
-      And I am in beta mode
       And I am on the "Selenium diff test" page
     When I click on the history link in the last modified bar
 
