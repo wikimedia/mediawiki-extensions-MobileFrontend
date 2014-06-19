@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_ebf36867",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2014-06-19T07:56:52Z",
+      "side": 1,
+      "message": "-\u003etext() or -\u003eescaped()?",
+      "revId": "50a3087021926ffd7151c6e65cf6a17d4b8b14f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
