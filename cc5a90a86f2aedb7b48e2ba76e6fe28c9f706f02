@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_3d5f7179",
+        "filename": "javascripts/common/eventemitter.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-19T21:00:02Z",
+      "side": 1,
+      "message": "\u0027Views\u0027 should be plural not possessive.",
+      "revId": "cc5a90a86f2aedb7b48e2ba76e6fe28c9f706f02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_9d765d00",
+        "filename": "javascripts/common/eventemitter.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-19T21:00:02Z",
+      "side": 1,
+      "message": "I assume s\u003dself is a typo.",
+      "revId": "cc5a90a86f2aedb7b48e2ba76e6fe28c9f706f02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
