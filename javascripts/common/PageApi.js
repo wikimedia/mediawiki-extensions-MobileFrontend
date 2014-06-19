@@ -66,7 +66,8 @@
 		 * @return {jQuery.Deferred} with parameter page data that can be passed to a Page view
 		 */
 		getPage: function( title, endpoint, leadOnly ) {
-			var options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {}, page, timestamp;
+			var options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {}, page, timestamp,
+				protection = { edit:[ '*' ] };
 
 			if ( !this.cache[title] ) {
 				page = this.cache[title] = $.Deferred();
@@ -95,13 +96,19 @@
 						// change to seconds to be consistent with PHP
 						timestamp = new Date( mv.lastmodified ).getTime() / 1000;
 						lastModified = mv.lastmodifiedby;
+
+						// FIXME: [API] the API sometimes returns an object and sometimes an array
+						// There are various quirks with the format of protection level as returned by api.
+						// Also it is usually incomplete - if something is missing this means that it has
+						// no protection level. When an array this means there is no protection level set.
+						// So to keep the data type consistent either use the predefined protection level, or
+						// extend it with what is returned by API.
+						protection = $.isArray( mv.protection ) ? protection : $.extend( protection, mv.protection );
 						resolveObj = {
 							title: title,
 							id: mv.id,
 							revId: mv.revId,
-							// FIXME: [API] the API sometimes returns an object and sometimes an array
-							// (Array seems to be a shorthand for apply this to everything)
-							protection: $.isArray( mv.protection ) ? { edit:[ '*' ] } : mv.protection,
+							protection: protection,
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
 							isMainPage: mv.hasOwnProperty( 'mainpage' ) ? true : false,

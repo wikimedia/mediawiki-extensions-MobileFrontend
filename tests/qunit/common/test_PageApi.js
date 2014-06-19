@@ -316,4 +316,32 @@
 		] );
 	} );
 
+	QUnit.test( '#getPage (move protected page)', 1, function( assert ) {
+		var expected = {
+			edit: [ '*' ],
+			move: [ 'sysop' ]
+		};
+		this.sandbox.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+			"mobileview": {
+				"id": -1,
+				displaytitle: 'Test',
+				revId: 42,
+				"lastmodifiedby": {
+					"name": "bob",
+					"gender": "unknown"
+				},
+				"protection": { "move":["sysop"] },
+				"lastmodified": "2013-10-28T18:49:56Z",
+				"languagecount": 10,
+				"sections":[
+					{"id":0,"text":""}
+				]
+			}
+		} ) );
+
+		pageApi.getPage( 'Test' ).done( function( resp ) {
+			assert.deepEqual( resp.protection, expected );
+		} );
+	} );
+
 }( mw.mobileFrontend, jQuery ) );
