@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_4b7cb4b4",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-06-19T08:03:41Z",
+      "side": 1,
+      "message": "Do you really have to change the key? Just changing the contents should be okay, and from what I can see, Continue and Next (and especially existing translations) do not add a need for the key change, because they are \"compatible\".",
+      "revId": "30eaca3a998870863cced4d0877d596d199fd150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
