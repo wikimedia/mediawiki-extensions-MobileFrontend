@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_97f07ec5",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-19T17:24:44Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this variable be called $username instead of $pageTitle?",
+      "revId": "a28805c81519d35710bc4cfcccf2d6790265412f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
