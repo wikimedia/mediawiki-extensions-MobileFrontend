@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
-	var LanguageOverlay = M.require( 'languages/LanguageOverlay' );
+	var LanguageOverlay = M.require( 'languages/LanguageOverlay' ),
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
 	M.overlayManager.add( /^\/languages$/, function() {
 		var LoadingOverlay = M.require( 'LoadingOverlay' ),
@@ -28,6 +29,7 @@
 		$( '#page-secondary-actions .languageSelector' ).on( M.tapEvent( 'click' ), function( ev ) {
 			ev.preventDefault();
 			M.router.navigate( '/languages' );
+			MobileWebClickTracking.log( 'languages' );
 		} );
 	}
 
