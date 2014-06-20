@@ -174,10 +174,9 @@
 
 		$viewportMeta = $( 'meta[name="viewport"]' );
 		viewport = $viewportMeta.attr( 'content' );
-		// FIXME: If minimum-scale and maximum-scale are not set locking viewport will prevent a reset
-		if ( viewport && viewport.indexOf( 'minimum-scale' ) === -1 ) {
-			viewport += ', minimum-scale=0.25, maximum-scale=1.6';
-		}
+		// FIXME: remove when cache updates (a month)
+		$viewportMeta.attr( 'content', 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0' );
+
 
 		// when rotating to landscape stop page zooming on ios
 		// allow disabling of transitions in android ics 4.0.2
