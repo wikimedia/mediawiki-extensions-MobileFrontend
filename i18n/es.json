@@ -17,7 +17,8 @@
 			"Sethladan",
 			"Vivaelcelta",
 			"VegaDark",
-			"Macofe"
+			"Macofe",
+			"Themasterriot"
 		]
 	},
 	"beta-feature-geonotahack": "Cerca de esta página",
@@ -278,6 +279,7 @@
 	"mobile-frontend-watchlist-please-wait": "Espera, la acción está tomando más tiempo del esperado.",
 	"mobile-frontend-watchlist-error": "Ocurrió un problema al añadir esta página a la lista de seguimiento. Inténtalo de nuevo.",
 	"mobile-frontend-watchlist-removed": "Se ha eliminado el artículo $1 de tu lista de seguimiento",
+	"mobile-frontend-watchlist-signup-action": "Regístrese para comenzar uno ahora.",
 	"mobile-frontend-watchlist-view": "Ver tu lista de seguimiento",
 	"mobilefrontend-keepgoing-cancel": "No, gracias",
 	"mobilefrontend-keepgoing-links-ask-again": "¿Arreglar otra página?",
