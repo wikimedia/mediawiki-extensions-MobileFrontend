@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_39fe5c67",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-20T22:04:20Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "3a0c912815f75f7f396550fa7bdde7cc3402632a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_19f5d87f",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-20T22:04:20Z",
+      "side": 1,
+      "message": "Manual wikitext parsing is never gonna work: what if this magic word is commented out, for example?",
+      "revId": "3a0c912815f75f7f396550fa7bdde7cc3402632a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
