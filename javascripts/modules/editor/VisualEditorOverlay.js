@@ -147,6 +147,8 @@
 			this.target.surface.getModel().getDocument().connect( this, { 'transact': 'onTransact' } );
 			this.target.surface.$element.addClass( 'content' );
 
+			// make _fixIosHeader work with mobile context (2nd line toolbar)
+			this.$( '.ve-ui-mobileContext' ).addClass( 'overlay-header-container position-fixed visible' );
 			// for some reason the first time contenteditables are focused, focus
 			// event doesn't fire if we don't blur them first
 			this.$( '[contenteditable]' ).blur();

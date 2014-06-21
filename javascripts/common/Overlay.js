@@ -140,7 +140,10 @@
 						// don't show fixed header on iPhone, it causes bug 62120
 						// (also, there is a Done button on the keyboard anyway)
 						if ( M.isWideScreen() ) {
-							$header.css( 'top', $window.scrollTop() );
+							// wait for the keyboard opening animation to finish
+							setTimeout( function() {
+								$header.css( 'top', $window.scrollTop() );
+							}, 300 );
 							$window.on( 'scroll.fixIosHeader', function() {
 								$header.css( 'top', $window.scrollTop() ).addClass( 'visible' );
 							} );

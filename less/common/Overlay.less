@@ -274,7 +274,8 @@
 
 	&.visible {
 		opacity: 1;
-		.transition( opacity .2s );
+		// transform for elements that slide down (VE second toolbar)
+		.transition-transform( .3s, opacity .3s; );
 	}
 
 	&.position-fixed {
