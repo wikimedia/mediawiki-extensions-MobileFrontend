@@ -42,13 +42,20 @@
 	.overlay-header {
 		.switcher-container {
 			// Have to set an explicit width since we're using display:table-cell
-			width: 4em;
+			width: @headerHeight;
 			vertical-align: middle;
 			position: relative;
 		}
 
 		.icon.editor-switcher {
-			margin: 0 0 0 1em;
+			margin: 0;
+			background-image: embed( 'images/editToggle.svg' );
+			background-size: 44px 32px;
+			margin-right: 1em;
+
+			&.selected {
+				background-image: embed( 'images/editToggleActive.svg' );
+			}
 		}
 
 		.icon.editor-switcher:focus {
@@ -59,23 +66,19 @@
 			display: none;
 			position: absolute;
 			top: @headerHeight;
+			right: -1px;
 			// Needs to float above any elements in the toolbar
 			z-index: 1;
 			box-shadow: 0 .1em .2em rgba(0, 0, 0, .2);
-			// We have to use margin-left instead of left due to a rendering bug in
-			// Firefox. Firefox sets the wrong horizontal positioning frame for
-			// children of elements with position:relative and display:table-cell.
-			margin-left: -1px;
 			border: 1px solid @grayLight;
 			white-space: nowrap;
 
 			// FIXME: change class when mediawiki.ui has proper tabs/toggle buttons
 			> .mw-ui-button {
-				display: inline-block;
+				display: block;
 				border: none;
-				border-right: 1px solid @grayLight;
 				border-radius: 0;
-				padding: 0 2em 0 1em;
+				padding: 0 1.5em 0 .5em;
 
 				.icon {
 					display: inline-block;

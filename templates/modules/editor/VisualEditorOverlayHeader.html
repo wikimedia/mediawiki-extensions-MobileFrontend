@@ -2,17 +2,15 @@
 	<ul>
 		<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
 	</ul>
-
+	<div class="toolbar"></div>
 	<div class="switcher-container">
-		<button class="editor-switcher icon icon-edit-ve icon-32px">{{switchMsg}}</button>
+		<button class="editor-switcher icon">{{switchMsg}}</button>
 		<div class="switcher-drop-down">
 			<div class="mw-ui-button mw-ui-progressive visual-editor"><span
 				class="icon icon-32px icon-edit-ve selected"></span>{{visualEditorMsg}}</div><!--
 			--><div class="mw-ui-button source-editor"><span class="icon icon-32px icon-edit-source"></span>{{sourceEditorMsg}}</div>
 		</div>
 	</div>
-
-	<div class="toolbar"></div>
 	{{^readOnly}}
 	<div class="overlay-action"><button class="continue" disabled>{{continueMsg}}</button></div>
 	{{/readOnly}}
