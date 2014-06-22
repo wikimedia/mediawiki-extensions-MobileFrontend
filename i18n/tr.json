@@ -13,7 +13,8 @@
 			"Rapsar",
 			"Suelnur",
 			"Trncmvsr",
-			"Sucsuzz"
+			"Sucsuzz",
+			"Sayginer"
 		]
 	},
 	"beta-feature-geonotahack": "Bu sayfanın yakınındakiler",
@@ -158,7 +159,6 @@
 	"mobile-frontend-opt-in-explain": "Deneme sürümüne katılarak, deneysel özellikleri kullanacaksınız. Bundan dolayı hata ve sorunlar ile karşılaşma riskini de aldığınızı unutmayın.",
 	"mobile-frontend-overlay-close": "Kapat",
 	"mobile-frontend-overlay-continue": "Devam et",
-	"mobile-frontend-overlay-escape": "Geri dön",
 	"mobile-frontend-page-menu-contents": "içerik",
 	"mobile-frontend-page-menu-history": "Geçmiş",
 	"mobile-frontend-page-saving": "$1 kaydediliyor",
@@ -174,12 +174,10 @@
 	"mobile-frontend-photo-upload": "Bu sayfaya bir resim ekle",
 	"mobile-frontend-photo-upload-anon": "Bu sayfaya bir görüntü ekleyebilmek için oturum açmış olmanız gerekli.",
 	"mobile-frontend-photo-upload-comment": "Sayfaya resim eklendi",
-	"mobile-frontend-photo-upload-disabled": "Bu sayfa için bir resim gerekli.",
 	"mobile-frontend-photo-upload-error": "Hata, tekrar deneyin.",
 	"mobile-frontend-photo-upload-error-file-type": "Lütfen sadece resim yükleyiniz.",
 	"mobile-frontend-photo-upload-error-filename": "Hata, lütfen daha açıklayıcı bir özet giriniz.",
 	"mobile-frontend-photo-upload-generic": "Bir görüntü ekleyin",
-	"mobile-frontend-photo-upload-protected": "Bu sayfaya bir görüntü eklemek için yetkiniz yok.",
 	"mobile-frontend-photo-upload-success-article": "Başarılı! Resminiz artık bu sayfada gösteriliyor.",
 	"mobile-frontend-photo-upload-unavailable": "Tarayıcınız görüntü yüklemesini desteklemiyor.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> yükleme|<span>$1</span> yükleme}}",
@@ -261,15 +259,13 @@
 	"mobile-frontend-watchlist-more": "daha fazla",
 	"mobile-frontend-watchlist-removed": "$1, izleme listenizden çıkarıldı",
 	"mobile-frontend-watchlist-view": "İzleme listesini göster",
-	"mobilefrontend-keepgoing-ask-first": "İlk düzenlemenizi yaptınız, tebrikler! Başka bir sayfada düzenleme yapmayı denemek istiyor musun?",
 	"mobilefrontend-keepgoing-cancel": "Hayır, teşekkürler",
 	"mobilefrontend-keepgoing-links-title": "Bağlantı ekle",
 	"mobilefrontend-keepgoing-saved-title": "Düzenleme kaydedildi!",
-	"mobilefrontend-keepgoing-suggest": "Evet, lütfen",
-	"mobilefrontend-keepgoing-suggest-again": "Bir tane daha dene",
 	"mobilefrontend-random-cancel": "Bana oku!",
 	"mobilefrontend-random-explain": "Bu rastgele sayfa ilginizi çekti mi?",
 	"nearby": "Yakınınızdaki sayfalar",
 	"tag-mobile_edit": "Mobil değişiklik",
-	"tag-mobile_edit-description": "Mobil siteden yapılan düzenleme"
+	"tag-mobile_edit-description": "Mobil siteden yapılan düzenleme",
+	"tag-mobile_web_edit": "Mobil web değişikliği"
 }

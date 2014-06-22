@@ -204,13 +204,11 @@
 	"mobile-frontend-photo-upload": "このページに画像を追加する",
 	"mobile-frontend-photo-upload-anon": "このページに画像を追加するにはログインしてください。",
 	"mobile-frontend-photo-upload-comment": "ページに画像を追加しました",
-	"mobile-frontend-photo-upload-disabled": "このページでは画像は不要です。",
 	"mobile-frontend-photo-upload-error": "エラーです。もう一度試してください。",
 	"mobile-frontend-photo-upload-error-file-type": "アップロードできるのは画像のみです。",
 	"mobile-frontend-photo-upload-error-filename": "エラーです。説明的な要約を入力してください。",
 	"mobile-frontend-photo-upload-generic": "画像を投稿する",
 	"mobile-frontend-photo-upload-invalid-user": "利用者「$1」は登録されていません。",
-	"mobile-frontend-photo-upload-protected": "あなたにはこのページに画像を追加する権限がありません。",
 	"mobile-frontend-photo-upload-success-article": "完了しました! 画像をこのページに追加しました。",
 	"mobile-frontend-photo-upload-unavailable": "ご使用中のブラウザーは画像のアップロードに対応していません。",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|アップロード <span>$1</span> 件}}",
@@ -314,5 +312,7 @@
 	"mobilefrontend-random-explain": "このページを見つけましたが読みますか?",
 	"nearby": "付近のページ",
 	"tag-mobile_edit": "モバイル編集",
-	"tag-mobile_edit-description": "モバイル版から行われた編集"
+	"tag-mobile_edit-description": "モバイル版から行われた編集",
+	"tag-mobile_web_edit": "モバイルウェブ編集",
+	"tag-mobile_web_edit-description": "携帯機器版ウェブサイトから行われた編集"
 }
