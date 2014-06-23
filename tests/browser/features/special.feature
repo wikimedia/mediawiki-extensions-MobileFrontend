@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @en.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
 Feature: Generic special page features
 
   Background:

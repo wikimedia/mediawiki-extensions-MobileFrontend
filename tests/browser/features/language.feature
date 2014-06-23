@@ -1,5 +1,5 @@
 # FIXME: this assumes that the main page has more than one language
-@chrome @en.m.wikipedia.beta.wmflabs.org @en.m.wikipedia.org @firefox @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
 Feature: Language selection
 
   Background:
