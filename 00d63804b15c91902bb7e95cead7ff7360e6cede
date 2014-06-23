@@ -33,6 +33,24 @@
       "revId": "00d63804b15c91902bb7e95cead7ff7360e6cede",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_243743fe",
+        "filename": "templates/modules/editor/EditorOverlayBase.html",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-23T21:37:50Z",
+      "side": 1,
+      "message": "Yeah, I thought about that, but would rather do it as a separate hygiene commit.",
+      "parentUuid": "ee391fd1_5aba256e",
+      "revId": "00d63804b15c91902bb7e95cead7ff7360e6cede",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
