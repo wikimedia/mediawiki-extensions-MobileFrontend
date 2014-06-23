@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_baa8f11d",
+        "filename": "less/common/Overlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-23T17:32:41Z",
+      "side": 1,
+      "message": "Should this go somewhere in the KSS docs?",
+      "revId": "00d63804b15c91902bb7e95cead7ff7360e6cede",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_5aba256e",
+        "filename": "templates/modules/editor/EditorOverlayBase.html",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-23T17:32:41Z",
+      "side": 1,
+      "message": "Can we somehow make it consistent and get rid of \u003cul\u003e everywhere if we don\u0027t think there will be more than one action? Possibly for the cancel/back icon too.",
+      "revId": "00d63804b15c91902bb7e95cead7ff7360e6cede",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
