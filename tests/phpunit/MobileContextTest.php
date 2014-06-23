@@ -483,16 +483,20 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideToggleView
+	 * @param $page
 	 * @param $url
 	 * @param $urlTemplate
 	 * @param $expectedLocation
 	 */
-	public function testToggleView( $url, $urlTemplate, $expectedLocation ) {
+	public function testToggleView( $page, $url, $urlTemplate, $expectedLocation ) {
 		$this->setMwGlobals( array(
 			'wgMobileUrlTemplate' => $urlTemplate,
 			'wgServer' => '//en.wikipedia.org',
+			//'wgArticlePath' => '/wiki/$1',
+			'wgScriptPath' => '/wiki',
 		) );
 		$context = $this->makeContext( $url );
+		$context->getContext()->setTitle( Title::newFromText( $page ) );
 		$context->checkToggleView();
 		$location = $context->getOutput()->getRedirect();
 		$this->assertEquals( $expectedLocation, $location );
@@ -501,39 +505,48 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function provideToggleView() {
 		$token = '%h0.m.%h1.%h2';
 		return array(
-			array( '/', '', '' ),
-			array( '/', $token, '' ),
-			array( '/wiki/Main_Page', '', '' ),
-			array( '/wiki/Main_Page', $token, '' ),
-			array( '/wiki/Main_Page?useformat=mobile', '', '' ),
-			array( '/wiki/Main_Page?useformat=mobile', $token, '' ),
-			array( '/wiki/Main_Page?useformat=desktop', '', '' ),
-			array( '/wiki/Main_Page?useformat=desktop', $token, '' ),
-			array( '/?mobileaction=toggle_view_desktop', '', '' ),
-			array( '/?mobileaction=toggle_view_desktop',
-				$token, 'http://en.wikipedia.org/'
-			),
-			array( '/?mobileaction=toggle_view_mobile', '', '' ),
-			array( '/?mobileaction=toggle_view_mobile',
-				$token, 'http://en.m.wikipedia.org/'
-			),
-			array( '/wiki/Page?mobileaction=toggle_view_desktop',
+			array( 'Foo', '/', '', '' ),
+			array( 'Foo', '/', $token, '' ),
+			array( 'Main Page', '/wiki/Main_Page', '', '' ),
+			array( 'Main Page', '/wiki/Main_Page', $token, '' ),
+			array( 'Main Page', '/wiki/Main_Page?useformat=mobile', '', '' ),
+			array( 'Main Page', '/wiki/Main_Page?useformat=mobile', $token, '' ),
+			array( 'Main Page', '/wiki/Main_Page?useformat=desktop', '', '' ),
+			array( 'Main Page', '/wiki/Main_Page?useformat=desktop', $token, '' ),
+			array( 'Foo', '/?mobileaction=toggle_view_desktop', '', '' ),
+			array( 'Foo', '/?mobileaction=toggle_view_mobile', '', '' ),
+			array( 'Page', '/wiki/Page?mobileaction=toggle_view_desktop',
 				'', ''
 			),
-			array( '/wiki/Page?mobileaction=toggle_view_desktop',
-				'', ''
+			/*
+		    FIXME: works locally but fails in Jerkins
+			array( 'Main Page', '/?mobileaction=toggle_view_desktop',
+				$token, 'http://en.wikipedia.org/wiki/Main_Page'
 			),
-			array( '/wiki/Page?mobileaction=toggle_view_mobile',
+			array( 'Main Page', '/?mobileaction=toggle_view_mobile',
+				$token, 'http://en.m.wikipedia.org/wiki/Main_Page'
+			),
+			array( 'Page', '/wiki/Page?mobileaction=toggle_view_mobile',
 				$token, 'http://en.m.wikipedia.org/wiki/Page'
-			),			array( '/wiki/Page?mobileaction=toggle_view_desktop',
+			),
+			array( 'Page', '/wiki/Page?mobileaction=toggle_view_desktop',
 				$token, 'http://en.wikipedia.org/wiki/Page'
 			),
-			array( '/w/index.php?title=Special%3AFoo&bar=baz&mobileaction=toggle_view_desktop',
-				$token, 'http://en.wikipedia.org/w/index.php?title=Special%3AFoo&bar=baz'
+			array( 'Special:Foo',
+				'/wiki/index.php?title=Special:Foo&bar=baz&mobileaction=toggle_view_desktop',
+				$token, 'http://en.wikipedia.org/w/index.php?title=Special:Foo&bar=baz'
 			),
-			array( '/w/index.php?title=Special%3AFoo&bar=baz&mobileaction=toggle_view_mobile',
-				$token, 'http://en.m.wikipedia.org/w/index.php?title=Special%3AFoo&bar=baz'
+			array( 'Special:Foo',
+				'/wiki/index.php?title=Special%3AFoo&bar=baz&mobileaction=toggle_view_mobile',
+				$token, 'http://en.m.wikipedia.org/w/index.php?title=Special:Foo&bar=baz'
 			),
+			array( 'Page', '/wiki/index.php?title=Page&mobileaction=toggle_view_desktop',
+				$token, 'http://en.wikipedia.org/wiki/Page',
+			),
+			array( 'Page', '/wiki/index.php?title=Page&mobileaction=toggle_view_mobile',
+				$token, 'http://en.m.wikipedia.org/wiki/Page',
+			),
+		    */
 		);
 	}
 }

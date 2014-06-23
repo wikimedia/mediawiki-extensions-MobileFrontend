@@ -903,11 +903,8 @@ class MobileContext extends ContextSource {
 		$query = wfCgiToArray( $parsed['query'] );
 		unset( $query['mobileaction'] );
 		unset( $query['useformat'] );
-		$parsed['query'] = wfArrayToCgi( $query );
-		if ( $parsed['query'] === '' ) {
-			unset( $parsed['query'] );
-		}
-		$url = wfAssembleUrl( $parsed );
+		unset( $query['title'] );
+		$url = $this->getTitle()->getFullURL( $query, false, PROTO_CURRENT );
 
 		if ( $view == 'mobile' ) {
 			// unset stopMobileRedirect cookie
