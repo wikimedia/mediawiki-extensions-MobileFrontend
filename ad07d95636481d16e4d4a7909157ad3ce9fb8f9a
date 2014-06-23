@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_79b97b28",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-23T08:02:37Z",
+      "side": 1,
+      "message": "This actually allows direct access to editor using #editor/0...n in beta and stable mode as anonymous -\u003e not good.",
+      "revId": "ad07d95636481d16e4d4a7909157ad3ce9fb8f9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
