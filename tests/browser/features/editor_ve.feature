@@ -9,6 +9,7 @@ Background:
 Scenario: Switch from VisualEditor to source editor
   Given I am on the "Selenium Edit Test" page
     And I click the edit button
+    And I switch to VisualEditor
     And I see the VisualEditor overlay
     And I am on the "Selenium Edit Test" page
     And I click the edit button
@@ -21,6 +22,7 @@ Scenario: Switch from VisualEditor to source editor
 Scenario: Toolbar VisualEditor
   Given I am on the "Selenium Edit Test" page
     And I click the edit button
+    And I switch to VisualEditor
   Then I see the VisualEditor overlay
     And I see a toolbar in the overlay header
     And the VisualEditor toolbar has a bold button
@@ -29,6 +31,7 @@ Scenario: Toolbar VisualEditor
 Scenario: I can edit a page using VisualEditor
   Given I am on the "Selenium Edit Test" page
     And I click the edit button
+    And I switch to VisualEditor
     And VisualEditor has loaded
     And I type "ABCDEFG" into VisualEditor
     And I click continue
@@ -39,6 +42,7 @@ Scenario: I can edit a page using VisualEditor
 Scenario: Going back from save screen in VisualEditor
   Given I am on the "Selenium Edit Test" page
     And I click the edit button
+    And I switch to VisualEditor
     And VisualEditor has loaded
     And I type "ABCDEFG" into VisualEditor
     And I click continue
