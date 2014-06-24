@@ -44,3 +44,10 @@ end
 Given(/^I click the edit button for section (\d+)$/) do |arg1|
   on(ArticlePage).link_element(css: ".edit-page", index: arg1.to_i).when_present.click
 end
+
+Given(/^I switch to VisualEditor$/) do
+  step "I see the wikitext editor overlay"
+	step "the wikitext editor overlay has an editor mode switcher button"
+	step "I click the editor mode switcher button"
+	step "I click the VisualEditor button"
+end
