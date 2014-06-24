@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee391fd1_bdc7c649",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-24T07:31:14Z",
+      "side": 1,
+      "message": "{{msg-mw}} -\u003e Done.\n\nThe seperate key for the case, that a user opens Special:MobileLanguages seperate or Special:MobileLanguages/Site and Site does not exist (maybe deleted and site requested via history or bookmark) :)",
+      "parentUuid": "ee391fd1_fa431965",
+      "revId": "d35deb930d97d1565e4b2bae22405a428d8b07b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee391fd1_ae10b253",
         "filename": "includes/specials/SpecialMobileLanguages.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2014-06-23T17:41:35Z",
       "side": 1,
       "message": "In what situation this is not true? Instead of creating a new if/else block, you should move the code to the one below (L143).",
+      "revId": "d35deb930d97d1565e4b2bae22405a428d8b07b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_7dc15e32",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-24T07:31:14Z",
+      "side": 1,
+      "message": "Moved to existing if/else block.",
+      "parentUuid": "ee391fd1_ae10b253",
       "revId": "d35deb930d97d1565e4b2bae22405a428d8b07b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
