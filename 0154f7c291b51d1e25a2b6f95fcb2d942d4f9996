@@ -16,6 +16,24 @@
       "revId": "0154f7c291b51d1e25a2b6f95fcb2d942d4f9996",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_3ece95ba",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-06-24T20:15:57Z",
+      "side": 1,
+      "message": "O RLY? Browser caching can\u0027t mess with two-domain configuration because, well... domains are different. Wasn\u0027t it the other way around?",
+      "parentUuid": "ae43a74e_982fd99c",
+      "revId": "0154f7c291b51d1e25a2b6f95fcb2d942d4f9996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
