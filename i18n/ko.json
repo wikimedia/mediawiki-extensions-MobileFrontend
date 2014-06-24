@@ -96,6 +96,7 @@
 	"mobile-frontend-editor-unavailable": "모바일 편집은 현재 사용 중인 브라우저에서 사용할 수 없습니다. 다른 브라우저로 다시 시도하세요.",
 	"mobile-frontend-editor-unavailable-header": "편집기를 사용할 수 없음",
 	"mobile-frontend-editor-undo-unsupported": "되돌리기는 현재 모바일 장치에서 지원하지 않습니다.",
+	"mobile-frontend-editor-uploadenable": "편집을 활성화하기 위해 사진을 올려 주시기 바랍니다.",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1</span> <strong>문서의 원본을 보는 중</strong>",
 	"mobile-frontend-editor-visual-editor": "시각 편집기",
 	"mobile-frontend-editor-wait": "편집을 저장하고 있습니다, 기다려주세요.",
@@ -224,6 +225,7 @@
 	"mobile-frontend-photo-upload-error-file-type": "올릴 그림뿐입니다.",
 	"mobile-frontend-photo-upload-error-filename": "오류가 발생했습니다, 더 자세한 요약을 제공하세요.",
 	"mobile-frontend-photo-upload-generic": "그림 기여",
+	"mobile-frontend-photo-upload-invalid-user": "\"$1\" 사용자 계정은 등록되어 있지 않습니다.",
 	"mobile-frontend-photo-upload-success-article": "성공했습니다! 그림은 지금 이 문서에 있습니다.",
 	"mobile-frontend-photo-upload-unavailable": "사용 중인 브라우저는 그림 올리기를 지원하지 않습니다.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|올리기 <span>1</span>개|올리기 <span>$1</span>개}}",
@@ -311,6 +313,8 @@
 	"mobile-frontend-watchlist-login-action": "목록을 보려면 로그인하세요.",
 	"mobile-frontend-watchlist-modified": "$1에 수정됨",
 	"mobile-frontend-watchlist-more": "더 보기",
+	"mobile-frontend-watchlist-please-wait": "잠시 기다려 주세요, 주시문서에 목록을 추가하는 것이 예상보다 오래 걸리고 있습니다.",
+	"mobile-frontend-watchlist-error": "이 문서를 주시문서에 추가하는 중 오류가 발생했습니다. 다시 시도해 주세요.",
 	"mobile-frontend-watchlist-purpose": "주시문서 목록은 문서를 북마크하고 그들의 바뀜을 추적하는 것을 돕습니다.",
 	"mobile-frontend-watchlist-removed": "내 주시문서 목록에서 $1 문서를 제거했습니다",
 	"mobile-frontend-watchlist-signup-action": "지금 시작하려면 가입하세요.",
@@ -326,7 +330,10 @@
 	"mobilefrontend-keepgoing-saved-title": "편집 저장됨!",
 	"mobilefrontend-random-cancel": "읽어 봅시다!",
 	"mobilefrontend-random-explain": "이 문서가 당신의 관심을 끕니까?",
+	"mobilefrontend-random-tryanother": "다른 글 찾기",
 	"nearby": "근처 문서",
 	"tag-mobile_edit": "모바일 편집",
-	"tag-mobile_edit-description": "모바일 사이트에서 편집"
+	"tag-mobile_edit-description": "모바일 (앱 혹은 웹)에서 편집",
+	"tag-mobile_web_edit": "모바일 웹 편집",
+	"tag-mobile_web_edit-description": "모바일 웹 사이트에서 편집"
 }
