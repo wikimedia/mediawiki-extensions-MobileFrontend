@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_982fd99c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2014-06-24T19:15:17Z",
+      "side": 1,
+      "message": "the JS unsetting was introduced due to the browser caching pages - iirc, the problem presented itself when using a separate mobile domain (meaning, currently hard to test locally). anyway, i\u0027m not sure canonical-ness had anything to do with it.",
+      "revId": "0154f7c291b51d1e25a2b6f95fcb2d942d4f9996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
