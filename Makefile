@@ -11,8 +11,8 @@ clean:
 remotes:
 	@dev-scripts/remotecheck.sh
 
-message:
-	@dev-scripts/message.py
+message: remotes
+	@python dev-scripts/remotes/message.py
 
 # Requires GERRIT_USERNAME to be defined - lists patchsets you need to amend
 mygerrit: remotes
