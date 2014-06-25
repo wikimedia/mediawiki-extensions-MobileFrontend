@@ -95,8 +95,8 @@ class ArticlePage
   # editor
   textarea(:editor_textarea, css: ".wikitext-editor")
   button(:escape_button, css:".back.icon")
-  button(:continue_button, css:".continue.icon")
-  button(:submit_button, css:".submit.icon")
+  button(:continue_button, css:".continue")
+  button(:submit_button, css:".submit")
 
   # drawer
   div(:keep_going, class:'overlay-bottom')
