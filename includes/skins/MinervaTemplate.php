@@ -221,8 +221,8 @@ class MinervaTemplate extends BaseTemplate {
 				$this->renderMetaSections();
 				$this->renderHistoryLinkBottom( $data );
 			?>
-		</div>
-		<?php
+			</div>
+			<?php
 		} else {
 			echo $data[ 'bodytext' ];
 		}
