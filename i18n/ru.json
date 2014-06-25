@@ -20,7 +20,8 @@
 			"Rave",
 			"ShinePhantom",
 			"Александр Сигачёв",
-			"Agilight"
+			"Agilight",
+			"Logins"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -70,7 +71,7 @@
 	"mobile-frontend-editor-cancel": "Отмена",
 	"mobile-frontend-editor-cancel-confirm": "Вы действительно хотите отказаться от ваши изменений?",
 	"mobile-frontend-editor-captcha-try-again": "Неверный код, попробуйте еще раз.",
-	"mobile-frontend-editor-continue": "Продолжить",
+	"mobile-frontend-editor-continue": "Далее",
 	"mobile-frontend-editor-cta": "Помогите улучшить эту страницу!",
 	"mobile-frontend-editor-disabled": "Эта страница защищена ради предотвращения вандализма.",
 	"mobile-frontend-editor-edit": "Править",
@@ -223,7 +224,7 @@
 	"mobile-frontend-photo-ownership": "Я, $1, создал это изображение.",
 	"mobile-frontend-photo-ownership-confirm": "Понятно!",
 	"mobile-frontend-photo-ownership-help": "Что это значит?",
-	"mobile-frontend-photo-submit": "Отправить",
+	"mobile-frontend-photo-submit": "Загрузить",
 	"mobile-frontend-photo-upload": "Добавить на эту страницу изображение",
 	"mobile-frontend-photo-upload-anon": "Пожалуйста, представьтесь системе, чтобы добавить изображение на эту страницу.",
 	"mobile-frontend-photo-upload-comment": "Добавлено изображение на страницу",

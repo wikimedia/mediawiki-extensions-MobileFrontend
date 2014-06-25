@@ -3,7 +3,8 @@
 		"authors": [
 			"Firilacroco",
 			"MaxSem",
-			"Minisarm"
+			"Minisarm",
+			"Danutz"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Dacă un utilizator modifică sau nu prin intermediul interfeței mobile",
@@ -53,7 +54,7 @@
 	"mobile-frontend-editor-cancel": "Revocare",
 	"mobile-frontend-editor-cancel-confirm": "Doriți, într-adevăr, să vă abandonați modificarea?",
 	"mobile-frontend-editor-captcha-try-again": "Cod eronat; reîncercați.",
-	"mobile-frontend-editor-continue": "Continuă",
+	"mobile-frontend-editor-continue": "Înainte",
 	"mobile-frontend-editor-cta": "Ajutați la îmbunătățirea acestei pagini!",
 	"mobile-frontend-editor-disabled": "Această pagină este protejată pentru a preveni vandalismul.",
 	"mobile-frontend-editor-edit": "Modificare",
@@ -150,7 +151,7 @@
 	"mobile-frontend-logged-in-toast-notification": "Autentificat ca $1.",
 	"mobile-frontend-logged-out": "Neautentificat",
 	"mobile-frontend-login": "Autentificare",
-	"mobile-frontend-main-menu-account-create": "Creează cont",
+	"mobile-frontend-main-menu-account-create": "Creare cont",
 	"mobile-frontend-main-menu-button-tooltip": "Deschide meniul principal",
 	"mobile-frontend-main-menu-featured": "De calitate",
 	"mobile-frontend-main-menu-login": "Autentificare",
@@ -206,7 +207,7 @@
 	"mobile-frontend-photo-ownership": "Eu, $1, am creat această imagine.",
 	"mobile-frontend-photo-ownership-confirm": "Am înțeles!",
 	"mobile-frontend-photo-ownership-help": "Ce înseamnă acest lucru?",
-	"mobile-frontend-photo-submit": "Trimite",
+	"mobile-frontend-photo-submit": "Încarcă",
 	"mobile-frontend-photo-upload": "Adăugați o imagine pentru această pagină",
 	"mobile-frontend-photo-upload-anon": "Autentificați-vă pentru a adăuga o imagine în această pagină.",
 	"mobile-frontend-photo-upload-comment": "Adăugat imagine în pagină",
