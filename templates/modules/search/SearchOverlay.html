@@ -1,25 +1,25 @@
 <div class="search-overlay-contents">
 	<div class="overlay-header-container visible position-fixed">
 		<div class="overlay-header">
-			<ul class="bottom-border">
+			<ul>
 				<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
 			</ul>
-			<div class="overlay-search bottom-border">
+			<div class="overlay-search">
 				<form method="get" action="{{action}}">
 					<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}">
 					<input type="hidden" name="fulltext" value="search">
 				</form>
 			</div>
-			<ul class="bottom-border">
+			<ul>
 				<li><button class="clear icon icon-clear">{{clearMsg}}</button></li>
 			</ul>
 		</div>
 	</div>
 	<div class="search-content overlay-header">
-		<ul class="bottom-border">
+		<ul>
 			<li><button class="icon">{{searchContentMsg}}</button></li>
 		</ul>
-		<div class="caption bottom-border">
+		<div class="caption">
 			<p class="with-results">{{searchContentMsg}}</p>
 			<p class="without-results">{{noResultsMsg}}</p>
 			<p class="without-results">{{{searchContentNoResultsMsg}}}</p>

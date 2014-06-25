@@ -75,7 +75,7 @@
 	"mobile-frontend-editor-cancel": "Caption for cancel button on edit form.\n{{Identical|Cancel}}",
 	"mobile-frontend-editor-cancel-confirm": "Question asking user if they are positive about abandoning unsaved edit.",
 	"mobile-frontend-editor-captcha-try-again": "A message shown when user enters wrong CAPTCHA and a new one is displayed.",
-	"mobile-frontend-editor-continue": "Caption for the continue button on edit form which takes you to the screen that shows a preview and license information.\n{{Identical|Continue}}",
+	"mobile-frontend-editor-continue": "Caption for the next button on edit form which takes you to the screen that shows a preview and license information.\n{{Identical|Continue}}",
 	"mobile-frontend-editor-cta": "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)\n{{Identical|Help improve this page}}",
 	"mobile-frontend-editor-disabled": "Toast message that appears when a user is unable to edit a page and clicks edit icon.",
 	"mobile-frontend-editor-edit": "Caption for the link showing edit form.\n{{Identical|Edit}}",

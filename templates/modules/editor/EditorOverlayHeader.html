@@ -1,9 +1,9 @@
 <div class="overlay-header initial-header hideable hidden">
-	<ul class="bottom-border">
+	<ul>
 		<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
 	</ul>
 	{{#editSwitcher}}
-	<div class="switcher-container bottom-border">
+	<div class="switcher-container">
 		<button class="editor-switcher icon icon-edit-source icon-32px">{{switchMsg}}</button>
 		<div class="switcher-drop-down">
 			<div class="mw-ui-button visual-editor"><span class="icon icon-32px icon-edit-ve"></span>{{visualEditorMsg}}</div><!--
@@ -11,12 +11,10 @@
 		</div>
 	</div>
 	{{/editSwitcher}}
-	<div class="overlay-title bottom-border">
+	<div class="overlay-title">
 		<h2>{{{editingMsg}}}</h2>
 	</div>
 	{{^readOnly}}
-	<ul>
-		<li><button class="continue icon icon-continue" disabled>{{continueMsg}}</button></li>
-	</ul>
+	<div class="overlay-action"><button class="continue" disabled>{{continueMsg}}</button></div>
 	{{/readOnly}}
 </div>

@@ -1,9 +1,9 @@
 <div class="overlay-header-container visible position-fixed">
 	<div class="overlay-header progress-header hideable">
-		<ul class="bottom-border">
+		<ul>
 			<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
 		</ul>
-		<div class="bottom-border">
+		<div>
 			<h2 class="uploading">{{{uploadingMsg}}}</h2>
 		</div>
 		<ul class="{{headerButtonsListClassName}}">
@@ -11,13 +11,11 @@
 		</ul>
 	</div>
 	<div class="overlay-header save-header hideable hidden">
-		<ul class="bottom-border">
+		<ul>
 			<li><button class="cancel icon">{{closeMsg}}</button></li>
 		</ul>
-		<div class="bottom-border">
+		<div>
 		</div>
-		<ul>
-			<li><button class="submit icon icon-submit">{{saveMsg}}</button></li>
-		</ul>
+		<div class="overlay-action"><button class="submit">{{saveMsg}}</button></div>
 	</div>
 </div>

@@ -1,9 +1,9 @@
 <div class="overlay-header initial-header hideable hidden">
-	<ul class="bottom-border">
+	<ul>
 		<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
 	</ul>
 
-	<div class="switcher-container bottom-border">
+	<div class="switcher-container">
 		<button class="editor-switcher icon icon-edit-ve icon-32px">{{switchMsg}}</button>
 		<div class="switcher-drop-down">
 			<div class="mw-ui-button mw-ui-progressive visual-editor"><span
@@ -12,10 +12,8 @@
 		</div>
 	</div>
 
-	<div class="toolbar bottom-border"></div>
+	<div class="toolbar"></div>
 	{{^readOnly}}
-	<ul>
-		<li><button class="continue icon icon-continue" disabled>{{continueMsg}}</button></li>
-	</ul>
+	<div class="overlay-action"><button class="continue" disabled>{{continueMsg}}</button></div>
 	{{/readOnly}}
 </div>

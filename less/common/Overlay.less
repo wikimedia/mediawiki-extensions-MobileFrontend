@@ -30,10 +30,10 @@
 //   <div class="overlay visible">
 //     <div class="overlay-header-container visible">
 //       <div class="overlay-header">
-//         <ul class="bottom-border">
+//         <ul>
 //          <li><button class="cancel icon">Close</button></li>
 //         </ul>
-//         <div class="overlay-title bottom-border"><h2>Overlay</h2></div>
+//         <div class="overlay-title"><h2>Overlay</h2></div>
 //       </div>
 //     </div>
 //     <div class="content">Overlay with no icon.</div>
@@ -51,11 +51,11 @@
 //   <div class="overlay visible">
 //     <div class="overlay-header-container visible">
 //       <div class="overlay-header">
-//         <ul class="bottom-border">
+//         <ul>
 //          <li><button class="cancel icon">Close</button></li>
 //         </ul>
-//         <div class="overlay-title bottom-border"><h2>Overlay</h2></div>
-//         <ul class="bottom-border">
+//         <div class="overlay-title"><h2>Overlay</h2></div>
+//         <ul>
 //          <li><button class="continue icon">Continue</button></li>
 //         </ul>
 //       </div>
@@ -75,13 +75,11 @@
 //   <div class="overlay visible">
 //     <div class="overlay-header-container visible">
 //       <div class="overlay-header">
-//         <ul class="bottom-border">
+//         <ul>
 //          <li><button class="cancel icon">Close</button></li>
 //         </ul>
-//         <div class="overlay-title bottom-border"><h2>Overlay</h2></div>
-//         <ul class="bottom-border">
-//          <li><button class="submit icon">Submit</button></li>
-//         </ul>
+//         <div class="overlay-title"><h2>Overlay</h2></div>
+//         <div class="overlay-action"><button class="submit">Submit</button></div>
 //       </div>
 //     </div>
 //     <div class="content">Overlay with completion action.</div>
@@ -106,6 +104,38 @@
 	.overlay-header {
 		display: table;
 		width: 100%;
+		border-spacing: 0;
+		border-collapse: collapse;
+
+		.overlay-title {
+			// Expand the title as wide as possible to limit the size of the
+			// overlay-action. (Both are displayed as table-cells.)
+			width: 100%;
+		}
+
+		.overlay-action {
+			button {
+				width: auto !important;
+				padding: 0 1.2em;
+				font-weight: bold;
+
+				&[disabled] {
+					opacity: .5;
+				}
+			}
+		}
+
+		.continue {
+			color: white;
+			// FIXME: This should import color from mw-ui-progressive class
+			background-color: #4091ed;
+		}
+
+		.submit {
+			color: white;
+			// FIXME: This should import color from mw-ui-constructive class
+			background-color: #00af89;
+		}
 
 		h2 {
 			display: table;
@@ -132,10 +162,6 @@
 			vertical-align: middle;
 		}
 
-		.bottom-border {
-			border-bottom: 1px solid @grayLight;
-		}
-
 		> ul {
 			li {
 				display: block;
@@ -151,11 +177,13 @@
 			border-radius: 0;
 			min-height: @headerHeight;
 			display: block;
+			cursor: pointer;
 		}
 	}
 
 	.overlay-header-container {
 		width: 100%;
+		border-bottom: 1px solid @grayLight;
 		background: #fff;
 		// needed for _fixIosHeader method to work properly
 		position: absolute;
@@ -188,11 +216,6 @@
 			.overlay-title,
 			.overlay-search {
 				padding: .15em @headerTitlePaddingH 0;
-			}
-
-			button {
-				// Line up with rest of header that has 1px bottom-border
-				margin-bottom: -1px;
 			}
 		}
 	}
@@ -277,11 +300,11 @@
 // <div class="overlay overlay-bottom position-fixed visible">
 //   <div class="overlay-header-container visible">
 //     <div class="overlay-header">
-//       <ul class="bottom-border">
+//       <ul>
 //        <li><button class="cancel icon">Close</button></li>
 //       </ul>
-//       <div class="overlay-title bottom-border"><h2>Overlay</h2></div>
-//       <ul class="bottom-border">
+//       <div class="overlay-title"><h2>Overlay</h2></div>
+//       <ul>
 //        <li><button class="submit icon">Submit</button></li>
 //       </ul>
 //     </div>
