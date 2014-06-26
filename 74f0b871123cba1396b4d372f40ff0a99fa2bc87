@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_5e470223",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-26T22:43:11Z",
+      "side": 1,
+      "message": "I think the qqq message needs a bit more explanation as this is a confusing translation. Maybe something like...\n\"Part of a heading saying what page is being edited (for example, \u0027Editing United Nations\u0027). This message does not include the page title, however, since that is displayed in a separate element.\"",
+      "revId": "74f0b871123cba1396b4d372f40ff0a99fa2bc87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
