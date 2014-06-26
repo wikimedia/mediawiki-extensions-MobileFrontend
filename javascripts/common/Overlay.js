@@ -1,7 +1,12 @@
 /*jshint unused:vars */
 ( function( M, $ ) {
 
-	var View = M.require( 'View' ), Overlay;
+	var
+		View = M.require( 'View' ),
+		// how long it takes for iOS keyboard to open/close
+		IOS_KEYBOARD_DELAY = 300,
+		Overlay;
+
 	/**
 	 * @class Overlay
 	 * @extends View
@@ -143,7 +148,7 @@
 							// wait for the keyboard opening animation to finish
 							setTimeout( function() {
 								$header.css( 'top', $window.scrollTop() );
-							}, 300 );
+							}, IOS_KEYBOARD_DELAY );
 							$window.on( 'scroll.fixIosHeader', function() {
 								$header.css( 'top', $window.scrollTop() ).addClass( 'visible' );
 							} );
@@ -156,7 +161,10 @@
 						}
 					} ).
 					on( 'blur', function() {
-						$header.css( 'top', 0 ).addClass( 'position-fixed visible' );
+						// wait for the keyboard closing animation to finish
+						setTimeout( function() {
+							$header.css( 'top', 0 ).addClass( 'position-fixed visible' );
+						}, IOS_KEYBOARD_DELAY );
 						$window.off( '.fixIosHeader' );
 					} );
 			}

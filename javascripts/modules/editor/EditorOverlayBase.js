@@ -170,6 +170,11 @@
 		},
 		_prepareForSave: function() {
 			this.log( 'save' );
+			// Scroll to the top of the page, so that the summary input is visible
+			// (even if overlay was scrolled down when editing) and weird iOS header
+			// problems are avoided (header position not updating to the top of the
+			// screen, instead staying lower until a subsequent scroll event).
+			window.scrollTo( 0, 1 );
 		},
 		_save: function() {
 			// Ask for confirmation in some cases

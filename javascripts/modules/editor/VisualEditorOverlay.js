@@ -23,6 +23,8 @@
 		},
 		destroyTarget: function () {
 			if ( this.target ) {
+				// keyboard stays open on iOS when we close the editor if we don't blur
+				this.$( '[contenteditable]' ).blur();
 				this.target.destroy();
 				this.target = null;
 				this.docToSave = null;
@@ -93,9 +95,11 @@
 			this.docToSave = false;
 		},
 		_prepareForSave: function() {
-			this._super();
+			// need to blur contenteditable to be sure that keyboard is properly closed
+			this.$( '[contenteditable]' ).blur();
 			this.$( '.surface' ).hide();
 			this._showHidden( '.save-header, .save-panel' );
+			this._super();
 		},
 		_save: function() {
 			var

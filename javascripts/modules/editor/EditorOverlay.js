@@ -103,7 +103,6 @@
 		_prepareForSave: function() {
 			var self = this, params = { text: this.$content.val() };
 
-			this._super();
 			this._showHidden( '.save-header, .save-panel' );
 
 			this.scrollTop = $( 'body' ).scrollTop();
@@ -133,6 +132,8 @@
 				self.clearSpinner();
 				self.$preview.show();
 			} );
+
+			this._super();
 		},
 
 		_hidePreview: function() {
