@@ -264,13 +264,13 @@ class ApiMobileView extends ApiBase {
 	 */
 	protected function isMainPage( $title ) {
 		if ( $title->isRedirect() && $this->followRedirects ) {
-			// Title::newFromRedirect is deprecated since 1.21, so go over WikiPage
 			$wp = $this->makeWikiPage( $title );
-
-			return $wp->getRedirectTarget()->isMainPage();
-		} else {
-			return $title->isMainPage();
+			$target = $wp->getRedirectTarget();
+			if ( $target ) {
+				return $target->isMainPage();
+			}
 		}
+		return $title->isMainPage();
 	}
 
 	/**
