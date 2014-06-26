@@ -13,6 +13,9 @@
 		},
 		className: 'overlay editor-overlay editor-overlay-ve',
 		editor: 'VisualEditor',
+		defaults: {
+			editingMsg: mw.msg( 'mobile-frontend-editor-editing' )
+		},
 		initialize: function( options ) {
 			var self = this;
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-saving', options.title );
@@ -85,6 +88,7 @@
 					}
 				}
 			} );
+			this.$( '.surface' ).hide();
 			this._super( options );
 		},
 		switchToEditor: function() {
@@ -144,6 +148,7 @@
 		},
 		onSurfaceReady: function () {
 			this.clearSpinner();
+			this.$( '.surface' ).show();
 			this.target.surface.getModel().getDocument().connect( this, { 'transact': 'onTransact' } );
 			this.target.surface.$element.addClass( 'content' );
 
