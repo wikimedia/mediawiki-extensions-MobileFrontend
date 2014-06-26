@@ -61,15 +61,24 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $this->isMobileMode ) {
-			// @FIXME: This needs to occur before prepareQuickTemplate which wraps the body text in an
-			// element with id mw-content-text
-			// Otherwise we end up with an unnecessary div.
+			// Filter out various content elements for Mobile view.
+			// We do this before executing parent::prepareQuickTemplate() since the parent
+			// overwrites $out->mBodytext, adding an mw-content-text div which is
+			// redundant to our own content div. By defining the bodytext HTML before
+			// $out->mBodytext is overwritten, we avoid including the mw-content-text div.
+			// FIXME: Git rid of our content div and consolidate this line with the other
+			// isMobileMode lines below. This will bring us more in line with core DOM.
 			$html = ExtMobileFrontend::DOMParse( $out );
 		}
-		// Generate template after doing the above...
+
+		// Generate skin template
 		$tpl = parent::prepareQuickTemplate();
+
+		// Set whether or not the page content should be wrapped in div.content (for
+		// example, on a special page)
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 
+		// Construct various Minerva-specific interface elements
 		$this->preparePageContent( $tpl );
 		$this->prepareHeaderAndFooter( $tpl );
 		$this->prepareMenuButton( $tpl );
@@ -81,11 +90,15 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareDiscoveryTools( $tpl );
 		$this->preparePersonalTools( $tpl );
 		$this->prepareLanguages( $tpl );
-		$tpl->set( 'bottomscripts', $this->bottomScripts() );
+
+		// Perform a few extra changes if we are in mobile mode
 		if ( $this->isMobileMode ) {
+			// Set our own bodytext that has been filtered by MobileFormatter
 			$tpl->set( 'bodytext', $html );
+			// Construct mobile-friendly footer
 			$this->prepareMobileFooterLinks( $tpl );
 		}
+
 		wfProfileOut( __METHOD__ );
 		return $tpl;
 	}
