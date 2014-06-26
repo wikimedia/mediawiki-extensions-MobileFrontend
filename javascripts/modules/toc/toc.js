@@ -28,8 +28,11 @@
 	M.define( 'modules/toc/TableOfContents', TableOfContents );
 
 	function init( page ) {
-		var toc, sections = page.getSubSections();
-		if ( sections.length > 0 && !page.isMainPage() ) {
+		var toc, sections = page.getSubSections(), enableToc = mw.config.get( 'wgTOC' );
+		if ( enableToc ||
+			// Fallback for old cached HTML, added 26 June, 2014
+			( enableToc === null && sections.length > 0 && !page.isMainPage() ) )
+		{
 			toc = new TableOfContents( {
 				sections: sections
 			} );

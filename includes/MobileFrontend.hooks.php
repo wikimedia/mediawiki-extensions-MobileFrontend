@@ -835,13 +835,15 @@ class MobileFrontendHooks {
 	 * OutputPageParserOutput hook handler
 	 * Disables TOC in output before it grabs HTML
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
-	 * @param OutputPage $outputPage
 	 *
+	 * @param OutputPage $outputPage
+	 * @param ParserOutput $po
 	 * @return bool
 	 */
-	public static function onOutputPageParserOutput( $outputPage ) {
+	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
 			$outputPage->enableTOC( false );
+			$outputPage->setProperty( 'MinervaTOC', $po->getTOCHTML() !== '' );
 		}
 		return true;
 	}
