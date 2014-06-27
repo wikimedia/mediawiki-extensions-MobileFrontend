@@ -789,6 +789,7 @@ class SkinMinerva extends SkinTemplate {
 		}
 		$vars['wgMFShowRedLinks'] = ( $this->mobileContext->isBetaGroupMember() && $wgMFShowRedLinks )
 			|| ( $wgMFShowRedLinksAnon && $user->isAnon() );
+		$vars['wgTOC'] = $this->getOutput()->getProperty( 'MinervaTOC' );
 		return $vars;
 	}
 
