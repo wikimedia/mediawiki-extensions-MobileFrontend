@@ -25,12 +25,13 @@
 		M.on( 'search-results', function( overlay ) {
 			overlay.$( '.results a' ).on( 'click', function() {
 				var href = $( this ).attr( 'href' );
-				window.history.back();
+				M.router.back();
 
-				// give browser a tick to update its history and redirect
+				// give browser a few ms after M.router.back() to update its history
+				// and then redirect
 				setTimeout( function() {
 					window.location.href = href;
-				}, 0 );
+				}, 10 );
 				// Prevent the link from working and prevent the closing of the overlay
 				// by an event upstream which would trigger browser back on the clicked link
 				return false;
