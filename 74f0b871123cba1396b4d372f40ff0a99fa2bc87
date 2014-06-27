@@ -34,6 +34,24 @@
       "revId": "74f0b871123cba1396b4d372f40ff0a99fa2bc87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_d9d9cc2d",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-27T00:38:22Z",
+      "side": 1,
+      "message": "That sounds reasonable.",
+      "parentUuid": "ae43a74e_b94e0871",
+      "revId": "74f0b871123cba1396b4d372f40ff0a99fa2bc87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
