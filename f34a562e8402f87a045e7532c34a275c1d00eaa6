@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_b9ef2882",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-27T01:06:21Z",
+      "side": 1,
+      "message": "Since this is an very unintuitive change, would it be possible to either reference a bug # with further details or provide a more specific description of the problem this solves? I imagine one day Apple may fix whatever bug is causing this, but without a clear idea of what the issue was, it will be difficult to know if it\u0027s safe to remove this code.",
+      "revId": "f34a562e8402f87a045e7532c34a275c1d00eaa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
