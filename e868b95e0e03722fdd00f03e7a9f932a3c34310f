@@ -16,6 +16,24 @@
       "revId": "e868b95e0e03722fdd00f03e7a9f932a3c34310f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_baa0313f",
+        "filename": "tests/browser/features/step_definitions/editor_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 77
+      },
+      "writtenOn": "2014-06-27T23:25:07Z",
+      "side": 1,
+      "message": "Because we want to have the descriptions of elements in the page in the Page Object itself.  Putting a check for the class of a page element in the test step instead of in the Page Object breaks the abstraction that the Page Object affords us.\n\nAdded Zeljko to the review list.",
+      "parentUuid": "ae43a74e_5a52656b",
+      "revId": "e868b95e0e03722fdd00f03e7a9f932a3c34310f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
