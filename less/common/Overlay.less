@@ -101,125 +101,6 @@
 		display: block;
 	}
 
-	.overlay-header {
-		display: table;
-		width: 100%;
-		border-spacing: 0;
-		border-collapse: collapse;
-
-		.overlay-title {
-			// Expand the title as wide as possible to limit the size of the
-			// overlay-action. (Both are displayed as table-cells.)
-			width: 100%;
-		}
-
-		.overlay-action {
-			button {
-				width: auto !important;
-				padding: 0 1.2em;
-				font-weight: bold;
-
-				&[disabled] {
-					opacity: .5;
-				}
-			}
-		}
-
-		.continue {
-			color: white;
-			// FIXME: This should import color from mw-ui-progressive class
-			background-color: #4091ed;
-		}
-
-		.submit {
-			color: white;
-			// FIXME: This should import color from mw-ui-constructive class
-			background-color: #00af89;
-		}
-
-		h2 {
-			display: table;
-			width: 100%;
-			// FIXME: should not be necessary, scope other h2s to .content
-			font-size: @headerTitleFontSize;
-
-			> * {
-				width: 1em;
-				display: table-cell;
-				// padding instead of spaces between words
-				padding-right: .4em;
-			}
-
-			span {
-				width: auto;
-				// required for text-overflow to work
-				max-width: 1em;
-			}
-		}
-
-		> ul, > div {
-			display: table-cell;
-			vertical-align: middle;
-		}
-
-		> ul {
-			li {
-				display: block;
-			}
-		}
-
-		> ul, button {
-			width: @headerHeight;
-		}
-
-		button {
-			width: @headerHeight;
-			border-radius: 0;
-			min-height: @headerHeight;
-			display: block;
-			cursor: pointer;
-		}
-	}
-
-	.overlay-header-container {
-		width: 100%;
-		border-bottom: 1px solid @grayLight;
-		background: #fff;
-		// needed for _fixIosHeader method to work properly
-		position: absolute;
-		top: 0;
-		// make header reappearing less abrupt when scrolling on iOS with open
-		// keyboard
-		opacity: 0;
-		// prevent .page-list overlaping the header when scrolling
-		// needed for _fixIosHeader method to work properly
-		z-index: 5;
-
-		&.visible {
-			opacity: 1;
-			.transition( opacity .2s );
-		}
-
-		&.position-fixed {
-			// both top and left required for Android 2 for the element to be visible
-			left: 0;
-			// the following right: 0 is converted to left: 0 for RTL languages
-			// (for unknown reasons left: 0 is mandatory in Android 2 for the
-			// element to be visible, right: 0 doesn't work)
-			right: 0;
-		}
-
-		// FIXME: Combine with .overlay-header above.
-		.overlay-header {
-			white-space: nowrap;
-
-			.overlay-title,
-			.overlay-search {
-				padding: .15em @headerTitlePaddingH 0;
-			}
-		}
-	}
-
 	input, textarea {
 		padding: .5em;
 	}
@@ -288,6 +169,121 @@
 		border-bottom: 1px solid #e2e2e2;
 		padding: 20px @contentMargin;
 		line-height: inherit;
+	}
+}
+
+.overlay-header {
+	display: table;
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+	white-space: nowrap;
+
+	.overlay-title {
+		// Expand the title as wide as possible to limit the size of the
+		// overlay-action. (Both are displayed as table-cells.)
+		width: 100%;
+	}
+
+	.overlay-title,
+	.overlay-search {
+		padding: .15em @headerTitlePaddingH 0;
+	}
+
+	.overlay-action {
+		button {
+			width: auto !important;
+			padding: 0 1.2em;
+			font-weight: bold;
+
+			&[disabled] {
+				opacity: .5;
+			}
+		}
+	}
+
+	.continue {
+		color: white;
+		// FIXME: This should import color from mw-ui-progressive class
+		background-color: #4091ed;
+	}
+
+	.submit {
+		color: white;
+		// FIXME: This should import color from mw-ui-constructive class
+		background-color: #00af89;
+	}
+
+	h2 {
+		display: table;
+		width: 100%;
+		// FIXME: should not be necessary, scope other h2s to .content
+		font-size: @headerTitleFontSize;
+
+		> * {
+			width: 1em;
+			display: table-cell;
+			// padding instead of spaces between words
+			padding-right: .4em;
+		}
+
+		span {
+			width: auto;
+			// required for text-overflow to work
+			max-width: 1em;
+		}
+	}
+
+	> ul, > div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	> ul {
+		li {
+			display: block;
+		}
+	}
+
+	> ul, button {
+		width: @headerHeight;
+	}
+
+	button {
+		width: @headerHeight;
+		border-radius: 0;
+		min-height: @headerHeight;
+		display: block;
+		cursor: pointer;
+	}
+}
+
+.overlay-header-container {
+	width: 100%;
+	border-bottom: 1px solid @grayLight;
+	background: #fff;
+	// needed for _fixIosHeader method to work properly
+	position: absolute;
+	top: 0;
+	// make header reappearing less abrupt when scrolling on iOS with open
+	// keyboard
+	opacity: 0;
+	// prevent .page-list overlaping the header when scrolling
+	// needed for _fixIosHeader method to work properly
+	z-index: 5;
+
+	&.visible {
+		opacity: 1;
+		.transition( opacity .2s );
+	}
+
+	&.position-fixed {
+		// both top and left required for Android 2 for the element to be visible
+		left: 0;
+		// the following right: 0 is converted to left: 0 for RTL languages
+		// (for unknown reasons left: 0 is mandatory in Android 2 for the
+		// element to be visible, right: 0 doesn't work)
+		right: 0;
 	}
 }
 
