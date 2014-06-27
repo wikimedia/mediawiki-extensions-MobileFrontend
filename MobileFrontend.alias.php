@@ -291,6 +291,7 @@ $specialPageAliases['nn'] = array(
 
 /** Polish (polski) */
 $specialPageAliases['pl'] = array(
+	'History' => array( 'Historia' ),
 	'Nearby' => array( 'W_pobliżu' ),
 );
 

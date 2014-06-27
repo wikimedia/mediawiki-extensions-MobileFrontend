@@ -74,7 +74,7 @@
 	"mobile-frontend-editor-keep-editing": "Seguir editando",
 	"mobile-frontend-editor-newpage-prompt": "Esta página no existe. ¿Te animas a crearla?",
 	"mobile-frontend-editor-placeholder": "Esta sección está vacía. ¡Sé el primero en ampliarla!",
-	"mobile-frontend-editor-placeholder-new-page": "¡Estás por crear una página nueva en {{SITENAME}}!",
+	"mobile-frontend-editor-placeholder-new-page": "¡Estás creando una página nueva en {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<strong>Previsualización</strong><span>de «$1»</span>",
 	"mobile-frontend-editor-redirect-title": "Redirigiendo al editor…",
 	"mobile-frontend-editor-save": "Guardar",
