@@ -4,29 +4,21 @@
  * @group MobileFrontend
  */
 class ApiParseExtenderTest extends MediaWikiTestCase {
-	private $savedGlobals;
-
-	public function setUp() {
-		$this->savedGlobals = $GLOBALS;
-		parent::setUp();
-	}
-
-	public function tearDown() {
-		$GLOBALS = $this->savedGlobals;
-		$this->savedGlobals = null;
-		parent::tearDown();
-	}
-
 	/**
 	 * @dataProvider getData
 	 */
 	public function testApi( array $params, $expected ) {
-		global $wgUseTidy, $wgMFRemovableClasses;
+		global $wgUseTidy;
 
-		$wgMFRemovableClasses['HTML'][] = '.nomobile';
+		$this->setMwGlobals( 'wgMFRemovableClasses',
+			array(
+				'base' => array(),
+				'HTML' => array( '.nomobile' )
+			)
+		);
 		if ( $wgUseTidy ) {
 			// Should work both with Tidy and without it
-			$wgUseTidy = false;
+			$this->setMwGlobals( 'wgUseTidy', false );
 			$this->doTest( $params, $expected );
 			$wgUseTidy = true;
 		}

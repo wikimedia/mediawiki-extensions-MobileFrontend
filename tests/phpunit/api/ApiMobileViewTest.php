@@ -58,18 +58,6 @@ class MockWikiPage extends WikiPage {
  * @group MobileFrontend
  */
 class ApiMobileViewTest extends MediaWikiTestCase {
-	private $savedGlobals;
-
-	public function setUp() {
-		$this->savedGlobals = $GLOBALS;
-		parent::setUp();
-	}
-
-	public function tearDown() {
-		parent::tearDown();
-		$GLOBALS = $this->savedGlobals;
-	}
-
 	/**
 	 * @dataProvider provideSections
 	 */
@@ -114,8 +102,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	 * @dataProvider provideView
 	 */
 	public function testView( array $input, array $expected ) {
-		global $wgAPIModules;
-		$wgAPIModules['mobileview'] = 'MockApiMobileView';
+		$this->setMwGlobals( 'wgAPIModules', array( 'mobileview' => 'MockApiMobileView' ) );
 
 		$request = new FauxRequest( $input );
 		$context = new RequestContext();
