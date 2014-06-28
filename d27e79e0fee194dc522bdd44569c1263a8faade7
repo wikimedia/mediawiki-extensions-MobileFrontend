@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_e5805e4d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-28T00:05:15Z",
+      "side": 1,
+      "message": "It\u0027s a bit weird to have a method with the same name as in MobileContext but accepting a completely different argument. Also the name of this method is really confusing here, if anything it sets TOC to disabled, not enabled.",
+      "revId": "d27e79e0fee194dc522bdd44569c1263a8faade7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_45e84a0b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-28T00:05:15Z",
+      "side": 1,
+      "message": "Why do we need this? Why wouldn\u0027t we just do $vars[\u0027wgMFDisableTOC\u0027] \u003d !$context-\u003eisTOCEnabled()?\n\nOr even better, $vars[\u0027wgMFEnableTOC\u0027] \u003d $context-\u003eisTOCEnabled().\n\n(also, it should be wgMF[Capital letter]...)",
+      "revId": "d27e79e0fee194dc522bdd44569c1263a8faade7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_c5d31a60",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-28T00:05:15Z",
+      "side": 1,
+      "message": "This comment needs rewording, it\u0027s not very clear. Also, wrap long comments after 80 characters.",
+      "revId": "d27e79e0fee194dc522bdd44569c1263a8faade7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
