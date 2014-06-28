@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "ae43a74e_65c22e8a",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-28T00:12:24Z",
+      "side": 1,
+      "message": "Oh right :) That function is from one of my first patchset\u0027s if i\u0027m right, and you are right, can be used directly in $vars :)",
+      "parentUuid": "ae43a74e_45e84a0b",
+      "revId": "d27e79e0fee194dc522bdd44569c1263a8faade7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae43a74e_c5d31a60",
         "filename": "javascripts/modules/toc/toc.js",
         "patchSetId": 9
