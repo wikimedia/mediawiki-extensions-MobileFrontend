@@ -55,6 +55,7 @@
     "mobile-frontend-editor-cta": "Help improve this page!",
     "mobile-frontend-editor-disabled": "This page is protected to prevent vandalism.",
     "mobile-frontend-editor-edit": "Edit",
+    "mobile-frontend-editor-editing": "Editing",
     "mobile-frontend-editor-editing-page": "<strong>Editing</strong><span> $1</span>",
     "mobile-frontend-editor-error": "Error, edit not saved.",
     "mobile-frontend-editor-error-conflict": "Error, another user has edited this page.",

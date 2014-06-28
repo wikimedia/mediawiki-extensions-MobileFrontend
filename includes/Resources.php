@@ -333,6 +333,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			'mobile-frontend-page-saving',
+			'mobile-frontend-editor-editing',
 		),
 	),
 

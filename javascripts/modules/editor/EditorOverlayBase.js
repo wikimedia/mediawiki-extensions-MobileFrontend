@@ -126,12 +126,6 @@
 			this.hide( true );
 		},
 		initialize: function( options ) {
-			if ( this.readOnly ) {
-				options.readOnly = true;
-				options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
-			} else {
-				options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
-			}
 			if ( !options.previewingMsg ) {
 				options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			}

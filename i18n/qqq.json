@@ -79,6 +79,7 @@
 	"mobile-frontend-editor-cta": "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)\n{{Identical|Help improve this page}}",
 	"mobile-frontend-editor-disabled": "Toast message that appears when a user is unable to edit a page and clicks edit icon.",
 	"mobile-frontend-editor-edit": "Caption for the link showing edit form.\n{{Identical|Edit}}",
+	"mobile-frontend-editor-editing": "A heading indicating that the user is currently editing.",
 	"mobile-frontend-editor-editing-page": "A heading saying what page is being edited. All text should be wrapped in a STRONG tag except the page title itself.\n\nParameters:\n* $1 - page title\n{{Related|Mobile-frontend-editor-page}}",
 	"mobile-frontend-editor-error": "Text that displays when there have been errors when saving a page edit.\n\nUsed as \"toast\" error message.",
 	"mobile-frontend-editor-error-conflict": "Text that displays when there has been edit conflict when saving a page edit.\n\nUsed as \"toast\" error message.",
