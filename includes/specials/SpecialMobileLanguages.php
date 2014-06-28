@@ -130,11 +130,12 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		$this->title = Title::newFromText( $pagename );
 
 		$output = $this->getOutput();
-		$output->setPageTitle( $this->msg( 'mobile-frontend-languages-header' )->text() );
 
 		$html = Html::openElement( 'div', array( 'class' => 'content' ) );
 
 		if ( $this->title && $this->title->exists() ) {
+			$pageTitle = $this->msg( 'mobile-frontend-languages-header-page',
+				$this->title->getText() )->text();
 			$titlename = $this->title->getPrefixedText();
 			$languages = $this->getLanguages();
 			$variants = $this->getLanguageVariants();
@@ -184,12 +185,14 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				}
 			}
 		} else {
+			$pageTitle = $this->msg( 'mobile-frontend-languages-header' )->text();
 			$html .= Html::element( 'p', array(),
 				$this->msg( 'mobile-frontend-languages-nonexistent-title' )->params( $pagename )->text() );
 		}
 
 		$html .= Html::closeElement( 'div' );
 
+		$output->setPageTitle( $pageTitle );
 		$output->addHTML( $html );
 		wfProfileOut( __METHOD__ );
 	}
