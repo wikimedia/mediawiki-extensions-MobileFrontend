@@ -121,6 +121,7 @@
 	"mobile-frontend-languages-404-desc": "有効なページ名を指定してください。",
 	"mobile-frontend-languages-404-title": "言語エラー",
 	"mobile-frontend-languages-header": "言語",
+	"mobile-frontend-languages-header-page": "$1 - 言語",
 	"mobile-frontend-languages-nonexistent-title": "ページ「$1」は存在しません。",
 	"mobile-frontend-languages-text": "$1 は $2 {{PLURAL:$2|言語}}で提供されています。",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}}の言語変種",

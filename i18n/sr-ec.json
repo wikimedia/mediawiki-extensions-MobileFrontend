@@ -43,6 +43,7 @@
 	"mobile-frontend-editor-editing-page": "<strong>Уређујете страницу</strong> <span> $1</span>",
 	"mobile-frontend-editor-error": "Грешка, измена није сачувана.",
 	"mobile-frontend-editor-keep-editing": "Настави уређивање",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Правите}} нову страницу на сајту {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<strong>Претпреглед</strong> <span> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Преусмеравање на уређивач...",
 	"mobile-frontend-editor-save": "Сачувај",

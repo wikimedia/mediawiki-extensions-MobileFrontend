@@ -23,7 +23,8 @@
 			"Umherirrender",
 			"Wellwisher",
 			"Yekrats",
-			"아라"
+			"아라",
+			"Robby"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
@@ -79,7 +80,7 @@
 	"mobile-frontend-editor-cta": "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)\n{{Identical|Help improve this page}}",
 	"mobile-frontend-editor-disabled": "Toast message that appears when a user is unable to edit a page and clicks edit icon.",
 	"mobile-frontend-editor-edit": "Caption for the link showing edit form.\n{{Identical|Edit}}",
-	"mobile-frontend-editor-editing": "A heading indicating that the user is currently editing.",
+	"mobile-frontend-editor-editing": "A heading indicating that the user is currently editing.\n{{Identical|Editing}}",
 	"mobile-frontend-editor-editing-page": "A heading saying what page is being edited. All text should be wrapped in a STRONG tag except the page title itself.\n\nParameters:\n* $1 - page title\n{{Related|Mobile-frontend-editor-page}}",
 	"mobile-frontend-editor-error": "Text that displays when there have been errors when saving a page edit.\n\nUsed as \"toast\" error message.",
 	"mobile-frontend-editor-error-conflict": "Text that displays when there has been edit conflict when saving a page edit.\n\nUsed as \"toast\" error message.",
@@ -148,7 +149,7 @@
 	"mobile-frontend-languages-404-desc": "The title for this message is {{msg-mw|Mobile-frontend-languages-404-title}}.",
 	"mobile-frontend-languages-404-title": "Used as title for the description {{msg-mw|Mobile-frontend-languages-404-desc}}.",
 	"mobile-frontend-languages-header": "{{Identical|Language}}",
-	"mobile-frontend-languages-header-page": "Header used for list of alternate languages that a page is available in.\n* $1 - The name of the page\n{{Related|Mobile-frontend-languages-header}}",
+	"mobile-frontend-languages-header-page": "Header used for list of alternate languages that a page is available in.\n\nParameters:\n* $1 - The name of the page\n{{Identical|Language}}",
 	"mobile-frontend-languages-nonexistent-title": "Shown as error message on [[Special:MobileLanguages]] when the title parameter given does not map to an existing page.\n\nParameters:\n* $1 - page title",
 	"mobile-frontend-languages-text": "Parameters:\n* $1 - page title\n* $2 - number of languages\nSee also:\n* {{msg-mw|Mobile-frontend-languages-header|page title}}",
 	"mobile-frontend-languages-variant-header": "See also:\n* {{msg-mw|Mobile-frontend-language-variant-header}}",
