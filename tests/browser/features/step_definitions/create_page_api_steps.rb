@@ -20,7 +20,9 @@ Hello world
 == Section 2 ==
 Section 2.
 === Section 2A ===
-Section 2A
+Section 2A.
+== Section 3 ==
+Section 3.
 "
 
   on(APIPage).create "Selenium section test page", wikitext
