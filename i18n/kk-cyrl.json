@@ -4,7 +4,8 @@
 			"Arystanbek",
 			"GaiJin",
 			"Kaztrans",
-			"Wikibilim"
+			"Wikibilim",
+			"Eldar zh96"
 		]
 	},
 	"beta-feature-geonotahack": "Осы бетке жақындар",
@@ -52,6 +53,7 @@
 	"mobile-frontend-editor-cta": "Бұл бетті жетілдіруге көмектесіңіз!",
 	"mobile-frontend-editor-disabled": "Бұл бет бұзақылыққа кедергі жасау үшін қорғалған.",
 	"mobile-frontend-editor-edit": "Өңдеу",
+	"mobile-frontend-editor-editing": "Өңдеу",
 	"mobile-frontend-editor-editing-page": "<span>$1</span> <strong>өңделуде</strong>",
 	"mobile-frontend-editor-error": "Қате, өңдеме сақталмады.",
 	"mobile-frontend-editor-error-conflict": "Қате, бұл бетті басқа қатысушы өңдеген.",
@@ -109,6 +111,7 @@
 	"mobile-frontend-language-variant-header": "{{#language:{{CONTENTLANG}}}} нұсқасын таңданыңыз",
 	"mobile-frontend-languages-404-title": "Қате тіл",
 	"mobile-frontend-languages-header": "Тілдер",
+	"mobile-frontend-languages-header-page": "$1 тіл",
 	"mobile-frontend-languages-nonexistent-title": "$1 беті жоқ.",
 	"mobile-frontend-languages-text": "$1 дегенді $2 {{PLURAL:$2|тілде|тілде}} оқуға болады.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} нұсқасы",
@@ -180,10 +183,8 @@
 	"mobile-frontend-photo-upload": "Бұл бетке сурет қосу",
 	"mobile-frontend-photo-upload-anon": "Бұл бетке сурет қосу үшін кіріңіз.",
 	"mobile-frontend-photo-upload-comment": "Бетке қосылған сурет",
-	"mobile-frontend-photo-upload-disabled": "Бұл бетте суреттер қосылмаған.",
 	"mobile-frontend-photo-upload-error": "Қате, қайтадан көріңіз.",
 	"mobile-frontend-photo-upload-error-file-type": "Тек суреттерді ғана жүктеңіз.",
-	"mobile-frontend-photo-upload-protected": "Бұл бетке сурет қосу рұқсатыңыз жоқ.",
 	"mobile-frontend-photo-upload-unavailable": "Сіздің шолғышыңыз сурет жүктеуді қолдамайды.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> енгізілім|<span>$1</span> еңгізілім}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ еңгізілім",

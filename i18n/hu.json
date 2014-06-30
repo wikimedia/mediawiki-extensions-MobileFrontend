@@ -7,7 +7,8 @@
 			"Ltrlg",
 			"Misibacsi",
 			"Tacsipacsi",
-			"Csega"
+			"Csega",
+			"ViDam"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e.",
@@ -32,6 +33,7 @@
 	"mobile-frontend-disable-images": "Képek letiltása mobil nézetben",
 	"mobile-frontend-dismiss-notification": "figyelmeztetés elutasítása",
 	"mobile-frontend-editor-continue": "Következő",
+	"mobile-frontend-editor-editing": "Szerkesztés",
 	"mobile-frontend-enable-images": "Képek engedélyezése mobil nézetben",
 	"mobile-frontend-featured-article": "A nap kiemelt tartalma",
 	"mobile-frontend-footer-contact": "Kapcsolatfelvétel",
@@ -41,6 +43,7 @@
 	"mobile-frontend-language-article-heading": "Olvasd el más nyelven",
 	"mobile-frontend-language-header": "Ez a lap $1 {{PLURAL:$1|nyelven|nyelven}} elérhető",
 	"mobile-frontend-language-site-choose": "Nyelv keresése",
+	"mobile-frontend-languages-header-page": "$1 - Nyelvek",
 	"mobile-frontend-logged-in-homepage-notification": "Üdvözlünk $1!",
 	"mobile-frontend-logged-in-toast-notification": "Be vagy jelentkezve $1 néven.",
 	"mobile-frontend-logged-out": "Nem vagy bejelentkezve",

@@ -13,7 +13,8 @@
 			"StephDC",
 			"Waihorace",
 			"Xiaomingyan",
-			"Yfdyh000"
+			"Yfdyh000",
+			"LNDDYL"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用戶是否通過行動電話編輯",
@@ -335,6 +336,6 @@
 	"nearby": "您附近的頁面",
 	"tag-mobile_edit": "手機編輯",
 	"tag-mobile_edit-description": "從手機版所作的編輯（web或應用程式）",
-	"tag-mobile_web_edit": "移動網頁編輯",
+	"tag-mobile_web_edit": "手機網頁編輯",
 	"tag-mobile_web_edit-description": "從手機版所作的編輯"
 }
