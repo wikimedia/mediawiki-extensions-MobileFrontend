@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_e0fe0235",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-30T18:17:05Z",
+      "side": 1,
+      "message": "That seems to be a very ugly workaround? :/",
+      "revId": "6128e6be47a22b69391bf7b0dcecc3692bf4fe9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
