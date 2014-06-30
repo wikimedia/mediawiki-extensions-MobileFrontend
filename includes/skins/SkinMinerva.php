@@ -61,7 +61,8 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $this->isMobileMode ) {
-			// Filter out various content elements for Mobile view.
+			// Customize page content for mobile view, e.g. add togglable sections, filter
+			// out various elements.
 			// We do this before executing parent::prepareQuickTemplate() since the parent
 			// overwrites $out->mBodytext, adding an mw-content-text div which is
 			// redundant to our own content div. By defining the bodytext HTML before
@@ -778,18 +779,22 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
 			'wgMFMode' => $this->getMode(),
 			'wgMFCollapseSectionsByDefault' => $wgMFCollapseSectionsByDefault,
+			'wgTOC' => $this->getOutput()->getProperty( 'MinervaTOC' ),
+			'wgMFPageSections' => $this->isMobileMode
 		), $this->getSkinConfigMobileVariables() );
 
 		if ( $this->isAuthenticatedUser() ) {
 			$vars['wgMFIsLoggedInUserBlocked'] = $user->isBlocked() && $user->isBlockedFrom( $title );
 		}
+
+		$vars['wgMFShowRedLinks'] = ( $this->mobileContext->isBetaGroupMember() && $wgMFShowRedLinks )
+			|| ( $wgMFShowRedLinksAnon && $user->isAnon() );
+
 		// mobile specific config variables
 		if ( $this->mobileContext->shouldDisplayMobileView() ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
 		}
-		$vars['wgMFShowRedLinks'] = ( $this->mobileContext->isBetaGroupMember() && $wgMFShowRedLinks )
-			|| ( $wgMFShowRedLinksAnon && $user->isAnon() );
-		$vars['wgTOC'] = $this->getOutput()->getProperty( 'MinervaTOC' );
+
 		return $vars;
 	}
 

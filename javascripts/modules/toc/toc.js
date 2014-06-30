@@ -36,7 +36,16 @@
 			toc = new TableOfContents( {
 				sections: sections
 			} );
-			toc.appendTo( M.getLeadSection() );
+			if ( mw.config.get( 'wgMFPageSections' ) ) {
+				toc.appendTo( M.getLeadSection() );
+			} else {
+				// don't show toc at end of page, when no sections there
+				toc.insertAfter( '#toc' );
+				// remove the original parser toc
+				this.$( '#toc' ).remove();
+				// prevent to float text right of toc
+				this.$( '.toc-mobile' ).after( '<div style="clear:both;"></div>' );
+			}
 			toggle.enable( toc.$el );
 		}
 	}
