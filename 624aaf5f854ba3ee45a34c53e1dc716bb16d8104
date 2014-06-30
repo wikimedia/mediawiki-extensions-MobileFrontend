@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_2049aa90",
+        "filename": "includes/models/MobileFrontendChange.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-30T18:23:49Z",
+      "side": 1,
+      "message": "That\u0027s a noble cause, but how would this blend with other solutions already in core like https://www.mediawiki.org/wiki/Manual:ORMTable ? Would it phase them out? Would it work together?",
+      "revId": "624aaf5f854ba3ee45a34c53e1dc716bb16d8104",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_e043a2b4",
+        "filename": "includes/models/MobileFrontendChange.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-30T18:23:49Z",
+      "side": 1,
+      "message": "If this is a change, how come previous revision is optional? Is it for the corner case of the first revision to the page?",
+      "revId": "624aaf5f854ba3ee45a34c53e1dc716bb16d8104",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_c0277e0c",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-06-30T18:23:49Z",
+      "side": 1,
+      "message": "So how does this MobileFrontendChange work if we provide no previous revision?",
+      "revId": "624aaf5f854ba3ee45a34c53e1dc716bb16d8104",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
