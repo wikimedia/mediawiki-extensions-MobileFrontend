@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_0c3a5d33",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-06-30T23:10:45Z",
+      "side": 1,
+      "message": "With the use of this, we prevent to rewrite the init function and mess up the code to enable toggling for sections and toc, if i see this right, a good solution :) But it\u0027s late, maybe someone find a better solution :P",
+      "revId": "d46c5d366679df5d468b259ea0c0657e8b972e08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
