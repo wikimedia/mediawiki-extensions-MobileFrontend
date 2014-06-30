@@ -129,12 +129,16 @@
 
 	// avoid this running on Watchlist
 	if ( !M.inNamespace( 'special' ) && !mw.config.get( 'wgIsMainPage' ) ) {
-		init();
+		if ( mw.config.get( 'wgMFPageSections' ) ) {
+			init();
+		}
 	}
 
 	M.on( 'page-loaded', function() {
-		// don't pass page-loaded parameter
-		init();
+		if ( mw.config.get( 'wgMFPageSections' ) ) {
+			// don't pass page-loaded parameter
+			init();
+		}
 	} );
 
 	M.define( 'toggle', {
