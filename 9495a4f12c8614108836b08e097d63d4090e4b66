@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_ecd279d4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 793,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-30T23:25:22Z",
+      "side": 1,
+      "message": "Looks like you lost the changes from patchset 2.",
+      "revId": "9495a4f12c8614108836b08e097d63d4090e4b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
