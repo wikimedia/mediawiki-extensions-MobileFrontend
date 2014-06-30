@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "ae43a74e_06fd9ed1",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 793,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-30T20:27:12Z",
+      "side": 1,
+      "message": "It\u0027s usually better to name boolean variables in the positive (i.e. wgToggleSections), so that you don\u0027t have to deal with double negatives, which are confusing and lead to more bugs.\n\nAlso, since what we\u0027re really testing for is existence of page sections (rather than the toggling functionality), I would suggest renaming the variable to something like wgPageSections.",
+      "revId": "6128e6be47a22b69391bf7b0dcecc3692bf4fe9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_466046a0",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-30T20:27:12Z",
+      "side": 1,
+      "message": "If you invert the boolean (as I suggest in the previous comment), be sure to remove the bang (!) here.",
+      "revId": "6128e6be47a22b69391bf7b0dcecc3692bf4fe9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae43a74e_e0fe0235",
         "filename": "javascripts/modules/toc/toc.js",
         "patchSetId": 1
@@ -13,6 +47,24 @@
       "writtenOn": "2014-06-30T18:17:05Z",
       "side": 1,
       "message": "That seems to be a very ugly workaround? :/",
+      "revId": "6128e6be47a22b69391bf7b0dcecc3692bf4fe9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_06111e08",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-06-30T20:27:12Z",
+      "side": 1,
+      "message": "It works for now :)",
+      "parentUuid": "ae43a74e_e0fe0235",
       "revId": "6128e6be47a22b69391bf7b0dcecc3692bf4fe9d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
