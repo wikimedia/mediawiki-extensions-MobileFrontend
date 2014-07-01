@@ -137,6 +137,7 @@
 	"mobile-frontend-languages-404-desc": "Er moet een geldige paginanaam opgegeven worden.",
 	"mobile-frontend-languages-404-title": "Fout in talen",
 	"mobile-frontend-languages-header": "Talen",
+	"mobile-frontend-languages-header-page": "$1 - talen",
 	"mobile-frontend-languages-nonexistent-title": "De pagina \"$1\" bestaat niet.",
 	"mobile-frontend-languages-text": "$1 is beschikbaar in $2 {{PLURAL:$2|taal|talen}}.",
 	"mobile-frontend-languages-variant-header": "Varianten van {{#language:{{CONTENTLANG}}}}",
