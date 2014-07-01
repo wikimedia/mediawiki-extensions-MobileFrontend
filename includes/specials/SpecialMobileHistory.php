@@ -207,7 +207,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				),
 			'class' => 'more',
 		);
-		return Html::element( 'a', $attrs, $this->msg( 'pager-older-n', self::LIMIT ) );
+		return Html::element( 'a', $attrs, $this->msg( 'pager-older-n' )->numParams( self::LIMIT ) );
 	}
 
 	/**
