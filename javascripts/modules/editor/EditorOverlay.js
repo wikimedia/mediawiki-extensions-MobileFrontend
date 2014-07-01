@@ -37,15 +37,15 @@
 			if ( isVisualEditorEnabled ) {
 				options.editSwitcher = true;
 			}
-			this._super( options );
-			if ( isVisualEditorEnabled ) {
-				this.initializeSwitcher();
-			}
 			if ( this.readOnly ) {
 				options.readOnly = true;
 				options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
 			} else {
 				options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
+			}
+			this._super( options );
+			if ( isVisualEditorEnabled ) {
+				this.initializeSwitcher();
 			}
 		},
 
