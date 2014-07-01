@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_92a304a8",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-01T08:09:32Z",
+      "side": 1,
+      "message": "Maybe use VE langcode (visualeditor-ca-editsource), instead of own?",
+      "revId": "551d6882ec2d808b71d3895063a58f4430a87d7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_d2cd0c64",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-01T08:09:32Z",
+      "side": 1,
+      "message": "Use editlink Messagekey instead?",
+      "revId": "551d6882ec2d808b71d3895063a58f4430a87d7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
