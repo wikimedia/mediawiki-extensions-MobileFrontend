@@ -630,8 +630,10 @@ class MobileFrontendHooks {
 		) {
 			// Preference key/values are backwards. The value is the name of the skin. The
 			// key is the text+links to display.
-			$key = array_search( 'minerva', $preferences['skin']['options'] );
-			unset( $preferences['skin']['options'][$key] );
+			if ( !empty( $preferences['skin']['options'] ) ) {
+				$key = array_search( 'minerva', $preferences['skin']['options'] );
+				unset( $preferences['skin']['options'][$key] );
+			}
 		}
 
 		return true;
