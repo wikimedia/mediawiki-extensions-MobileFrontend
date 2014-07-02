@@ -29,32 +29,6 @@ Given /^I am logged into the mobile website$/ do
   end
 end
 
-# Note: Used by "I have just registered a new account"
-Given(/^I register a new account with a random username$/) do
-  username = 'NewUser' + Time.now.to_i.to_s
-  #the call to Random creates a long string of the form "0.10879935166988186"
-  pwd = Random.new.rand.to_s
-  on(SpecialUserLoginPage) do |page|
-    # undo auto complete
-    page.username_element.when_present.send_keys(username)
-    page.password_element.when_present.send_keys(pwd)
-    page.confirm_password_element.when_present.send_keys(pwd)
-    page.signup_submit_element.when_present.click
-    step 'I am on the "Special:UserLogout" page'
-    visit(SpecialUserLoginPage) do |page|
-      page.login_with(username, pwd)
-    end
-  end
-end
-
-Given(/^I have just registered a new account$/) do
-  # Note the fact that we log in first means we can avoid needing to fill in a captcha
-  step 'I am logged into the mobile website'
-  step 'I am on the "Special:Userlogin" page'
-  step 'I click Create Account'
-  step 'I register a new account with a random username'
-end
-
 Given /^I am logged in as a new user$/ do
   step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
