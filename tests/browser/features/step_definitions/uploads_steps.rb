@@ -7,8 +7,8 @@ Given(/^I click on the lead photo upload button$/) do
   on(ArticlePage).upload_page_action_element.when_present.click
 end
 
-When(/^I click Submit$/) do
-  on(UploadPage).submit_button_element.when_present.click
+When(/^I click Upload$/) do
+  on(UploadPage).upload_button_element.when_present.click
 end
 
 When(/^I go to uploads page$/) do

@@ -9,6 +9,6 @@ class UploadPage < ArticlePage
   # This may seem confusing but one is a DIV and one is an A tag
   a(:tutorial_link, href: "#/upload-tutorial/uploads")
   file_field(:select_file, name: 'file')
-  button(:submit_button, text: "Submit")
+  button(:upload_button, text: "Upload")
   a(:uploaded_image_link, class: "image")
 end

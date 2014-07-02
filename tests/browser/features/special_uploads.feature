@@ -31,7 +31,7 @@ Feature: Special:Uploads uploads
       And I can see the uploads interface
     When I upload file "exif.jpg"
       And I type a description
-      And I click Submit
+      And I click Upload
     Then I see an upload progress bar
       And my image is on the Uploads page
       And the Contribute an image button is visible
