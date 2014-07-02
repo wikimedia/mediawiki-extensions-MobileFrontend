@@ -38,7 +38,9 @@ do
 	make nodecheck
 	echo "Compressing $file"
 	if [ -f $file ]; then
-		node_modules/.bin/svgo --config=.svgo.yml "$file"
+		# If anyone can figure out how to get the pretty option to work from the config
+		# file, feel free to remove it here.
+		node_modules/.bin/svgo --config=.svgo.yml "$file" --pretty
 		git add "$file"
 	else
 		echo 'file was removed'
