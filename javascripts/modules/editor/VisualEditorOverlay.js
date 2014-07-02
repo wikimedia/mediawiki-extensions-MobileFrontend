@@ -13,12 +13,10 @@
 		},
 		className: 'overlay editor-overlay editor-overlay-ve',
 		editor: 'VisualEditor',
-		defaults: {
-			editingMsg: mw.msg( 'mobile-frontend-editor-editing' )
-		},
 		initialize: function( options ) {
 			var self = this;
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-saving', options.title );
+			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
 			this._super( options );
 			this.hasChanged = false;
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
