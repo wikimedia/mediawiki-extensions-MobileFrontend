@@ -1,6 +1,6 @@
 <?php
 /**
- * SpecialNearby.php
+ * SpecialMobileMenu.php
  */
 
 /**
