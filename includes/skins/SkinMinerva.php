@@ -287,17 +287,19 @@ class SkinMinerva extends SkinTemplate {
 			)
 		);
 		if ( $this->isMobileMode ) {
-			$items['uploads'] = array(
-				'links' => array(
-					array(
-						'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
-						'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
-							$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
-						'class' => 'icon-uploads icon icon-text',
+			if ( $user->isAllowed( 'mf-uploadbutton' ) ) {
+				$items['uploads'] = array(
+					'links' => array(
+						array(
+							'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
+							'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
+								$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
+							'class' => 'icon-uploads icon icon-text',
+						),
 					),
-				),
-				'class' => 'jsonly',
-			);
+					'class' => 'jsonly',
+				);
+			}
 			$items['settings'] = array(
 				'links' => array(
 					array(
