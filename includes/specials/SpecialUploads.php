@@ -66,12 +66,13 @@ class SpecialUploads extends MobileSpecialPage {
 	public function getUserUploadsPageHtml( User $user ) {
 		global $wgMFPhotoUploadEndpoint;
 		$uploadCount = $this->getUserUploadCount( $user->getName() );
+		$mobileContext = MobileContext::singleton();
 		// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
 		$isAllowed =
 			(
 				UploadBase::isEnabled() &&
 				UploadBase::isallowed( $user ) &&
-				$user->isAllowed( 'mf-uploadbutton' )
+				$mobileContext->userCanUpload()
 			) || !empty( $wgMFPhotoUploadEndpoint );
 		$html = '';
 		$attrs = array();
