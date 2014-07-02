@@ -26,7 +26,7 @@ Given(/^I click continue$/) do
   on(ArticlePage).continue_button_element.when_present.click
 end
 
-Given(/^I click submit$/) do 
+Given(/^I click submit$/) do
   on(ArticlePage) do |page|
     page.spinner_loading_element.when_not_present
     page.submit_button_element.when_present.click
