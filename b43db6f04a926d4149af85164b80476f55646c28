@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_9372d7e0",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 672,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-02T20:40:40Z",
+      "side": 1,
+      "message": "It think the actual hanling is terrible for performance, and i don\u0027t know what is, if some Wikipedia get in trouble (long loading time e.g.), and go through all accounts at every request? For now i don\u0027t know how CentralAuth saves the edit count of the local wikis (decentral in each wiki -\u003e each wiki must called to get the local edit count?) or on all centralauth wiki\u0027s (call \"only\" the database?) or central at the central wiki, so performance is much better?",
+      "revId": "b43db6f04a926d4149af85164b80476f55646c28",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
