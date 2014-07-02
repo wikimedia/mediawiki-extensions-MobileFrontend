@@ -99,7 +99,6 @@ class ArticlePage
   button(:submit_button, css:".submit")
 
   # drawer
-  div(:keep_going, class:'overlay-bottom')
   div(:drawer, class:"drawer position-fixed visible")
 
   # overlay
