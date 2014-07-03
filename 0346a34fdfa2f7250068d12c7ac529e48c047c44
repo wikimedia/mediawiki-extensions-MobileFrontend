@@ -51,6 +51,24 @@
       "revId": "0346a34fdfa2f7250068d12c7ac529e48c047c44",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_28e5ed9f",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-03T22:39:52Z",
+      "side": 1,
+      "message": "Actually, since we want the loading indicator to disappear at the last possible moment, I think I\u0027m going to move the 1st one instead.",
+      "parentUuid": "ae43a74e_a852fd67",
+      "revId": "0346a34fdfa2f7250068d12c7ac529e48c047c44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
