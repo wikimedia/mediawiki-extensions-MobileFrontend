@@ -16,6 +16,24 @@
       "revId": "c31770044fcd3707139de952a27c6889c1ffc70f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_28b04df0",
+        "filename": "dev-scripts/pre-commit",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-03T22:01:38Z",
+      "side": 1,
+      "message": "Yeah, that\u0027s probably a better idea...",
+      "parentUuid": "ae43a74e_4805d1c3",
+      "revId": "c31770044fcd3707139de952a27c6889c1ffc70f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
