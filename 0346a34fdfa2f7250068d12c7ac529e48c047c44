@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_e86485e3",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-03T21:24:00Z",
+      "side": 1,
+      "message": "Maybe move loadingOverlay.hide() to else branch before call loadSourceEditor. For now, if an Exception in VE occur you call .hide() twice. For now there isn\u0027t a problem if i\u0027m right, but what is when :P\n\nWhat you mean?",
+      "revId": "0346a34fdfa2f7250068d12c7ac529e48c047c44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_c85f8113",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-03T21:24:00Z",
+      "side": 1,
+      "message": "I mean here (see above comment) :)",
+      "revId": "0346a34fdfa2f7250068d12c7ac529e48c047c44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
