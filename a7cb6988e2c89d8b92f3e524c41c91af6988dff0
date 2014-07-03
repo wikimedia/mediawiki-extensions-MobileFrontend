@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_c8ef81ad",
+        "filename": "dev-scripts/pre-commit",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-03T22:18:45Z",
+      "side": 1,
+      "message": "I wasn\u0027t able to get this option to work from the config file :(",
+      "revId": "a7cb6988e2c89d8b92f3e524c41c91af6988dff0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
