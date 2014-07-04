@@ -241,6 +241,7 @@ $specialPageAliases['lb'] = array(
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'History' => array( 'Историја' ),
+	'MobileWebApp' => array( 'МобиленСемреженПрилог' ),
 	'MobileOptions' => array( 'МобилниПоставки' ),
 	'Uploads' => array( 'Подигања' ),
 	'MobileDiff' => array( 'МобилнаРазлика' ),
