@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_13625a37",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 763,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-04T00:15:00Z",
+      "side": 1,
+      "message": "We still need toggle.js to be available on desktop since the TOC code uses it for toggling the table of contents (regardless of whether page sections exist).",
+      "revId": "d24dcf0ddd10368076c1f42d7913c7e00585dd7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
