@@ -626,22 +626,28 @@ class SkinMinerva extends SkinTemplate {
 	 * @param BaseTemplate $tpl
 	 */
 	protected function prepareSiteLinks( BaseTemplate $tpl ) {
-		$aboutPageTitleText = $this->msg( 'aboutpage' )->inContentLanguage()->text();
-		$disclaimerPageTitleText = $this->msg( 'disclaimerpage' )->inContentLanguage()->text();
+		$siteLinks = array(
+			array(
+				'title' => 'aboutpage',
+				'msg' => 'aboutsite',
+			),
+			array(
+				'title' => 'disclaimerpage',
+				'msg' => 'disclaimers',
+			),
+		);
 		$urls = array();
-		$t = Title::newFromText( $aboutPageTitleText );
-		if ( $t ) {
-			$urls[] = array(
-				'href' => $t->getLocalUrl(),
-				'text'=> $this->msg( 'aboutsite' )->text(),
+		foreach ( $siteLinks as $param ) {
+			$title = Title::newFromText(
+				$this->msg( $param['title'] )->inContentLanguage()->text()
 			);
-		}
-		$t = Title::newFromText( $disclaimerPageTitleText );
-		if ( $t ) {
-			$urls[] = array(
-				'href' => $t->getLocalUrl(),
-				'text'=> $this->msg( 'disclaimers' )->text(),
-			);
+			$msg = $this->msg( $param['msg'] );
+			if ( $title && !$msg->isDisabled() ) {
+				$urls[] = array(
+					'href' => $title->getLocalUrl(),
+					'text'=> $msg->text(),
+				);
+			}
 		}
 		$tpl->set( 'site_urls', $urls );
 	}
