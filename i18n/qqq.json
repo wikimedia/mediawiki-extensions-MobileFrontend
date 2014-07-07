@@ -49,6 +49,7 @@
 	"mobile-frontend-diffview-404-title": "Heading on 404 page when bad revision id parameter is passed",
 	"mobile-frontend-diffview-anonymous": "Label to indicate anonymous user in common mobile diff/change view.\n{{Identical|Anonymous user}}",
 	"mobile-frontend-diffview-bytesadded": "Edit byte-changed counter for common mobile diff/change view when change adds bytes.\n\nParameters:\n* $1 - byte count; may use PLURAL",
+	"mobile-frontend-diffview-bytesnochange": "Edit byte-changed counter for common mobile diff/change view when change no bytes.",
 	"mobile-frontend-diffview-bytesremoved": "Edit byte-changed counter for common mobile diff/change view when change removes bytes.\n\nParameters:\n* $1 - byte count; may use PLURAL",
 	"mobile-frontend-diffview-comma": "{{optional}}\nSeparator in diff view, for example in '123 bytes added, 2 days ago':\n* $1 stands for bytes added/removed part;\n* $2 is the time ago part.",
 	"mobile-frontend-diffview-editcount": "Edit count of user in common mobile diff/change view. Parameters:\n* $1 - the count, may use PLURAL\nEnsure number is wrapped in a div element.",
