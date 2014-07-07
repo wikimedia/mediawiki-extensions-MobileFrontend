@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_694d2d3f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 641,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-07T17:48:43Z",
+      "side": 1,
+      "message": "With a few exceptions, one and two letter variable names are discouraged in MediaWiki. $title is usually used for Title objects.",
+      "revId": "ca8b192bc5676422c7c1f08d764c25c9b362adf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
