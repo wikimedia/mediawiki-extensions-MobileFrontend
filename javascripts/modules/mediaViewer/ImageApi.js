@@ -1,6 +1,4 @@
 ( function( M, $ ) {
-	M.assertMode( [ 'alpha', 'beta', 'app' ] );
-
 	var sizeBuckets = [320, 640, 800, 1024, 1280, 1920, 2560, 2880],
 		ImageApi,
 		Api = M.require( 'api' ).Api;

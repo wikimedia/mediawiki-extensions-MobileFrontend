@@ -1,26 +1,34 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-
 .overlay.media-viewer {
 	background: #000;
 	padding-top: 0;
 
-	&.visible {
-		// http://stackoverflow.com/a/10910802/36523i8
-		// http://www.w3.org/Style/Examples/007/center.en.html#vertical
-		display: table;
+	.main {
+		height: auto;
+		position: relative;
+		width: 100%;
 	}
 
-	.container {
+	.image-wrapper {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+
+	.image-inner-wrapper {
 		width: 100%;
 		height: 100%;
-		display: table-row;
+		display: table;
 		text-align: center;
 
-		div {
+		.image {
 			display: table-cell;
 			vertical-align: middle;
+			height: 100%;
+			width: 100%;
 		}
 	}
 
@@ -45,19 +53,14 @@
 		right: 10px;
 		top: 10px;
 	}
-
 	.details {
-		// override cloaked-element default
-		top: auto;
+		bottom: 0;
+		height: auto;
+		position: fixed;
+		width: 100%;
 		padding: 8px 10px;
 		margin: 0;
-		opacity: 0;
-		color: #ccc;
-		background: rgba(0, 0, 0, .5);
-
-		&.visible {
-			opacity: 1;
-		}
+		background: white;
 
 		.button {
 			float: right;
