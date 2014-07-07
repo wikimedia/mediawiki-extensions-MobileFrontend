@@ -16,6 +16,24 @@
       "revId": "581dc7b9efda1f1b02575405a685f14b4046b2b7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_49882976",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 983,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-07T17:44:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae43a74e_e64caca1",
+      "revId": "581dc7b9efda1f1b02575405a685f14b4046b2b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
