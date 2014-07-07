@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_d2d39e2e",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-07-07T22:43:42Z",
+      "side": 1,
+      "message": "use camelCase",
+      "revId": "68ca9d0cc9d536620e4efd9d6e7425986cfb262d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
