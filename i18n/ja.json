@@ -296,7 +296,7 @@
 	"mobile-frontend-watchlist-login-action": "閲覧するにはログインしてください。",
 	"mobile-frontend-watchlist-modified": "$1に変更",
 	"mobile-frontend-watchlist-more": "続き",
-	"mobile-frontend-watchlist-purpose": "ウォッチリストにページを追加しておくと、そのページの変更を追跡しやすくなります。",
+	"mobile-frontend-watchlist-purpose": "ウォッチリストではページをブックマークでき、ページの変更を追うことができます。",
 	"mobile-frontend-watchlist-removed": "$1 をウォッチリストから除去しました",
 	"mobile-frontend-watchlist-signup-action": "今すぐ始めるには利用者登録をしてください。",
 	"mobile-frontend-watchlist-view": "ウォッチリストを表示",
