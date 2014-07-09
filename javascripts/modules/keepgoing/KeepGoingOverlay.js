@@ -21,9 +21,9 @@
 			contentClass: 'content vertical-margin',
 			campaign: 'mobile-keepgoing',
 			fixedHeader: false,
-			headerButtonsListClassName: '',
+			headerButtonsListClassName: 'overlay-action',
 			headerButtons: [
-				{ className: 'continue icon', msg: mw.msg( 'mobile-frontend-overlay-continue' ) }
+				{ className: 'continue', msg: mw.msg( 'mobile-frontend-overlay-continue' ) }
 			]
 		},
 		className: 'overlay overlay-bottom position-fixed',
