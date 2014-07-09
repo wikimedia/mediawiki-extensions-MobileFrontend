@@ -98,6 +98,7 @@
 	"mobile-frontend-language-header": "Bu sayfa $1 {{PLURAL:$1|dilde|dilde}} mevcuttur",
 	"mobile-frontend-language-site-choose": "Arama dili",
 	"mobile-frontend-language-variant-header": "Dilin {{#language:{{CONTENTLANG}}}} lehçesini seçin",
+	"mobile-frontend-languages-header-page": "$1 - Diller",
 	"mobile-frontend-last-modified-date": "Son değişiklik $1, $2 tarihinde yapıldı",
 	"mobile-frontend-last-modified-days": "Son değişiklik {{PLURAL:$1|$1 gün|$1 gün}} önce yapıldı",
 	"mobile-frontend-last-modified-hours": "Son değişiklik {{PLURAL:$1|$1 saat|$1 saat}} önce yapıldı",

@@ -92,7 +92,7 @@
 	"mobile-frontend-editor-previewing-page": "<strong>Предварительный просмотр</strong> <span>$1</span>",
 	"mobile-frontend-editor-redirect-title": "Перенаправление в редактор…",
 	"mobile-frontend-editor-save": "Сохранить",
-	"mobile-frontend-editor-source-editor": "Править текст",
+	"mobile-frontend-editor-source-editor": "Править викитекст",
 	"mobile-frontend-editor-success": "Успешно! Ваша правка была сохранена.",
 	"mobile-frontend-editor-success-landmark-1": "Поздравляем, теперь вы — редактор сайта {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Поздравляем с созданием новой страницы!",

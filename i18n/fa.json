@@ -46,6 +46,7 @@
 	"mobile-frontend-diffview-anonymous": "کاربر گمنام",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|بایت}} اضافه‌شده",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|بایت|بایت}} حذف‌شده",
+	"mobile-frontend-diffview-comma": "$1، $2",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|ویرایش}}",
 	"mobile-frontend-diffview-explained": "خطوط زیر اضافه شده (+) و برداشته شده (-):",
 	"mobile-frontend-diffview-title": "ویرایش‌ها",
