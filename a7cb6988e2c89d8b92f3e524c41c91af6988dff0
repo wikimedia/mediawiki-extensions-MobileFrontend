@@ -16,6 +16,24 @@
       "revId": "a7cb6988e2c89d8b92f3e524c41c91af6988dff0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_0b9f1257",
+        "filename": "dev-scripts/pre-commit",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-09T02:54:58Z",
+      "side": 1,
+      "message": "Add this comment in the file itself ;)",
+      "parentUuid": "ae43a74e_c8ef81ad",
+      "revId": "a7cb6988e2c89d8b92f3e524c41c91af6988dff0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
