@@ -28,8 +28,10 @@
 		border-right: @paddingHorizontal solid transparent;
 
 		.icon {
-			// @todo: switch to .background-image() when 66091 is fixed
-			background-image:url('images/contents-ltr.png');
+			// @todo: switch to .background-image-svg() when bug 66091 is fixed
+			background-image: url('images/contents-ltr.png');
+			background-image: -webkit-linear-gradient(transparent, transparent), url('images/contents-ltr.svg');
+			background-image: linear-gradient(transparent, transparent), url('images/contents-ltr.svg');
 			width: @iconSize;
 			height: @iconSize;
 			display: block;
