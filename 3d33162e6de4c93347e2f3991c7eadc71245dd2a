@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_6b90d646",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-09T02:47:15Z",
+      "side": 1,
+      "message": "Maybe we could enclose this in M.overlayManager.add\u0027s callback (L85)? This way it\u0027s closer to the place where it\u0027s used and we don\u0027t have to pass any arguments. Performance hit for redeclaring it on every #editor route hit should be negligible.",
+      "revId": "3d33162e6de4c93347e2f3991c7eadc71245dd2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
