@@ -4,7 +4,8 @@
  */
 
 /**
- * App-Implementation of stable class SkinMinerva
+ * An implementation of the Minerva skin designed for mobile web apps (e.g. Firefox OS).
+ * Used by SpecialMobileWebApp.
  */
 class SkinMinervaApp extends SkinMinervaBeta {
 	/** @var string $mode Describes 'stability' of the skin - alpha, beta, stable */
