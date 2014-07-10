@@ -3,6 +3,7 @@
         "authors": []
     },
     "abusefilter-edit-builder-vars-user-mobile": "Whether or not a user is editing through the mobile interface",
+    "action-mf-uploadbutton": "use the upload button on mobile pages.",
     "beta-feature-geonotahack": "Near this page",
     "beta-feature-geonotahack-description": "Discover pages which are geographically nearby to the content page you are currently reading.",
     "beta-feature-minerva": "Enable mobile skin (Minerva) on desktop",
@@ -325,6 +326,7 @@
     "mobilefrontend-random-explain": "Does this random page interest you?",
     "mobilefrontend-random-tryanother": "Find another",
     "nearby": "Pages near you",
+    "right-mf-uploadbutton": "Use the upload button on mobile pages",
     "tag-mobile_edit": "Mobile edit",
     "tag-mobile_edit-description": "Edit made from mobile (web or app)",
     "tag-mobile_web_edit": "Mobile web edit",
