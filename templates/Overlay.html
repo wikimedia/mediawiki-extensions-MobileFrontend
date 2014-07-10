@@ -1,4 +1,4 @@
-<div class="overlay-header-container visible {{#fixedHeader}} position-fixed{{/fixedHeader}}">
+<div class="overlay-header-container {{#fixedHeader}} position-fixed{{/fixedHeader}}">
 	<div class="overlay-header">
 		<ul>
 			<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
@@ -15,4 +15,9 @@
 		{{/headerButtons}}
 	</div>
 </div>
-{{>content}}
+<div class="overlay-content">
+	{{>content}}
+</div>
+<div class="overlay-footer-container position-fixed">
+	{{>footer}}
+</div>

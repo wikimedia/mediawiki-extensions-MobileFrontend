@@ -11,7 +11,8 @@
 			active: false,
 			className: 'overlay notifications-overlay navigation-drawer',
 			templatePartials: {
-				content: M.template.get( 'modules/notifications/NotificationsOverlay' )
+				content: M.template.get( 'modules/notifications/NotificationsOverlayContent' ),
+				footer: M.template.get( 'modules/notifications/NotificationsOverlayFooter' )
 			},
 			defaults: {
 				heading: mw.msg( 'notifications' ),

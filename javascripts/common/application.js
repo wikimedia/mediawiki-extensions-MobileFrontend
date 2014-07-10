@@ -16,10 +16,10 @@
 		currentPage,
 		inWideScreenMode = false,
 		ua = window.navigator.userAgent,
-		isAppleDevice = /ipad|iphone/i.test( ua ),
-		isIPhone4 = isAppleDevice && /OS 4_/.test( ua ),
-		isOldIPhone = isAppleDevice && /OS [4]_[0-2]|OS [3]_/.test( ua ),
-		isIPhone5 = isAppleDevice && /OS 5_/.test( ua ),
+		isIos = /ipad|iphone/i.test( ua ),
+		isIPhone4 = isIos && /OS 4_/.test( ua ),
+		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua ),
+		isIPhone5 = isIos && /OS 5_/.test( ua ),
 		isAndroid2 = /Android 2/.test( ua );
 
 	// See if local storage is supported
@@ -140,6 +140,10 @@
 			$viewport = $( '#mw-mf-viewport' );
 
 		$( '<div id="notifications">' ).appendTo( $viewport );
+
+		if ( isIos ) {
+			$body.addClass( 'ios' );
+		}
 
 		if ( !supportsPositionFixed( navigator.userAgent ) ) {
 			$doc.addClass( 'no-position-fixed' );
@@ -429,6 +433,7 @@
 		reloadPage: reloadPage,
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
+		isIos: isIos,
 		prettyEncodeTitle: prettyEncodeTitle,
 		query: deParam( qs ),
 		unlockViewport: unlockViewport,

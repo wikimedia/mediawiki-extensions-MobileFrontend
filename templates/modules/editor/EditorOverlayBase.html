@@ -1,4 +1,4 @@
-<div class="overlay-header-container visible position-fixed">
+<div class="overlay-header-container position-fixed">
 	{{>header}}
 	<div class="overlay-header save-header hideable hidden">
 		<ul>
@@ -22,20 +22,20 @@
 	</div>
 </div>
 
-<div class="panels">
-	<div class="save-panel panel hideable hidden">
-		<p class="summary-request">{{{summaryRequestMsg}}}</p>
-		<textarea rows="2" class="summary" placeholder="{{summaryMsg}}"></textarea>
-		<p class="license">{{{licenseMsg}}}</p>
-	</div>
-	<div class="captcha-panel panel hideable hidden">
-		<div class="inputs-box">
-			<img src="">
-			<input class="captcha-word" placeholder="{{captchaMsg}}" />
+<div class="overlay-content">
+	<div class="panels">
+		<div class="save-panel panel hideable hidden">
+			<p class="summary-request">{{{summaryRequestMsg}}}</p>
+			<textarea rows="2" class="summary" placeholder="{{summaryMsg}}"></textarea>
+			<p class="license">{{{licenseMsg}}}</p>
+		</div>
+		<div class="captcha-panel panel hideable hidden">
+			<div class="inputs-box">
+				<img src="">
+				<input class="captcha-word" placeholder="{{captchaMsg}}" />
+			</div>
 		</div>
 	</div>
+	<div class="spinner loading"></div>
+	{{>content}}
 </div>
-
-<div class="spinner loading"></div>
-
-{{>content}}

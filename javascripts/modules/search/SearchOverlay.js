@@ -78,12 +78,13 @@
 				} );
 
 			// tapping on background only should hide the overlay
-			this.$el.on( M.tapEvent( 'click' ), function() {
-				window.history.back();
-			} );
-			this.$( '> div' ).on( M.tapEvent( 'click' ), function( ev ) {
-				ev.stopPropagation();
-			} );
+			this.$overlayContent
+				.on( M.tapEvent( 'click' ), function() {
+					window.history.back();
+				} )
+				.find( '> div' ).on( M.tapEvent( 'click' ), function( ev ) {
+					ev.stopPropagation();
+				} );
 
 			// hide the keyboard when scrolling starts (avoid weird situation when
 			// user taps on an item, the keyboard hides and wrong item is clicked)

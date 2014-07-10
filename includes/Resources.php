@@ -899,7 +899,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/NotificationsOverlay.less',
 		),
 		'templates' => array(
-			'modules/notifications/NotificationsOverlay',
+			'modules/notifications/NotificationsOverlayContent',
+			'modules/notifications/NotificationsOverlayFooter',
 		),
 		'messages' => array(
 			// defined in Echo

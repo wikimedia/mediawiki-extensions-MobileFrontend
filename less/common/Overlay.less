@@ -242,24 +242,12 @@
 	}
 }
 
-.overlay-header-container {
+.overlay-header-container,
+.overlay-footer-container {
 	width: 100%;
 	background: #fff;
-	// needed for _fixIosHeader method to work properly
-	position: absolute;
-	top: 0;
-	// make header reappearing less abrupt when scrolling on iOS with open
-	// keyboard
-	opacity: 0;
-	// prevent .page-list overlaping the header when scrolling
-	// needed for _fixIosHeader method to work properly
+	// prevent .page-list or VE surface overlaping the header when scrolling
 	z-index: 5;
-
-	&.visible {
-		opacity: 1;
-		// transform for elements that slide down (VE second toolbar)
-		.transition-transform( .3s, opacity .3s; );
-	}
 
 	&.position-fixed {
 		// both top and left required for Android 2 for the element to be visible
@@ -269,6 +257,14 @@
 		// element to be visible, right: 0 doesn't work)
 		right: 0;
 	}
+}
+
+.overlay-header-container {
+	top: 0;
+}
+
+.overlay-footer-container {
+	bottom: 0;
 }
 
 // Bottom Overlays
@@ -302,6 +298,21 @@
 
 	.overlay-header-container {
 		background: #f3f3f3;
+	}
+}
+
+.ios {
+	.overlay-header-container {
+		position: absolute !important;
+	}
+
+	.overlay-footer-container {
+		position: absolute !important;
+	}
+
+	.overlay-content {
+		overflow-y: scroll; // has to be scroll, not auto
+		-webkit-overflow-scrolling: touch;
 	}
 }
 

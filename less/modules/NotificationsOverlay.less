@@ -11,11 +11,15 @@
 		position: static !important;
 	}
 
-	.mw-mf-notifications {
-		padding-bottom: 0;
-		bottom: @headerHeight;
+	.overlay-content {
+		// this is needed not only on iOS, that's why we repeat it here even though
+		// it's in Overlay.less too
+		overflow-y: scroll; // has to be scroll, not auto
+		-webkit-overflow-scrolling: touch;
+		position: absolute;
 		top: @headerHeight;
-		overflow-y: auto;
+		bottom: @headerHeight;
+		width: 100%;
 		margin-top: 1px;
 	}
 
@@ -65,14 +69,6 @@
 		border-top: 1px solid @grayLight;
 		background-color: #FFF;
 		text-align: center;
-		bottom: 0;
-	}
-
-	.mw-mf-notifications,
-	.notifications-archive-link {
-		position: absolute;
-		right: 0;
-		left: 0;
 	}
 
 	.mw-echo-title {
