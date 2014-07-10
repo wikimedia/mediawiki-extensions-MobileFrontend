@@ -984,6 +984,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
  * suffixed by '.styles' or '.scripts'
  */
 $wgMobileSpecialPageModules = array(
+	// For mobile web apps (e.g. Firefox OS). See SkinMinervaApp and SpecialMobileWebApp.
 	'mobile.special.app.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.ajaxpages',
@@ -997,6 +998,7 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
+	// For mobile web apps (e.g. Firefox OS). See SkinMinervaApp and SpecialMobileWebApp.
 	'mobile.special.app.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/app/common.less',
