@@ -57,6 +57,19 @@
 	}
 }
 
+// On small devices that don't support Javascript, hide the page actions bar
+@media all and (max-width: @wgMFDeviceWidthMobileSmall) {
+	.client-nojs {
+		#page-actions {
+			display: none;
+		}
+
+		#section_0 {
+			border: none;
+		}
+	}
+}
+
 #ca-upload {
 	.background-image('images/pagemenu/upload-locked.png');
 	input {

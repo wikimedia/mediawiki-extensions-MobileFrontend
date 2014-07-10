@@ -71,6 +71,22 @@ body {
 		border: none;
 		padding: 0;
 	}
+
+	.fulltext-search {
+		margin: 0 .2em 0 .5em;
+		float: right;
+	}
+}
+
+// Make search input more visible for users on small screens.
+// Opera Mini doesn't support placeholders.
+@media all and (max-width: @wgMFDeviceWidthMobileSmall) {
+	.header {
+		.search {
+			border: 1px solid @grayLight;
+			padding: .3em .1em;
+		}
+	}
 }
 
 // Used for messages on login screen, page lists and uploads and when showing old revisions
@@ -95,7 +111,7 @@ body {
 .client-nojs {
 	.search-box input.search {
 		// FIXME: This should not be necessary
-		width: 80%;
+		width: 75%;
 	}
 }
 
