@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_32eb4ca2",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-07-10T18:54:56Z",
+      "side": 1,
+      "message": "I think this should be:\n\n use the upload button on mobile page\n\nSee phrasing of other action messages.",
+      "revId": "69d64bcad7a31a66d15ffeb70305d4ed7432b0ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_d239a83f",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-07-10T18:54:56Z",
+      "side": 1,
+      "message": "Rephrase suggestion, to be consistent with the action message:\n\n Use the upload button on mobile pages",
+      "revId": "69d64bcad7a31a66d15ffeb70305d4ed7432b0ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
