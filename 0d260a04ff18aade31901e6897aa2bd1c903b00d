@@ -52,6 +52,24 @@
       "revId": "0d260a04ff18aade31901e6897aa2bd1c903b00d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_b9f28a01",
+        "filename": "less/minerva.less/minerva.variables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-10T10:19:29Z",
+      "side": 1,
+      "message": "Juliusz? Can you say someting to that in a free minute? :) Thx",
+      "parentUuid": "ee391fd1_7bde45e0",
+      "revId": "0d260a04ff18aade31901e6897aa2bd1c903b00d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
