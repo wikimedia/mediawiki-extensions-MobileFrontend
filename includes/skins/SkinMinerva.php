@@ -455,7 +455,7 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
 						'href' => $url,
-						'class' => 'icon icon-16px icon-secondary icon-secondary-logout',
+						'class' => 'icon icon-24px icon-secondary icon-secondary-logout',
 					),
 				),
 			);
