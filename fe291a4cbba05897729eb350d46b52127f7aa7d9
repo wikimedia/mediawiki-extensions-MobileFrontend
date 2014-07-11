@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_6dcfaa83",
+        "filename": "less/modules/mediaViewer.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-11T21:08:15Z",
+      "side": 1,
+      "message": "So if details get longer, then they\u0027ll cover the image. Maybe we should show an ellipsis if the text is too long?",
+      "revId": "fe291a4cbba05897729eb350d46b52127f7aa7d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
