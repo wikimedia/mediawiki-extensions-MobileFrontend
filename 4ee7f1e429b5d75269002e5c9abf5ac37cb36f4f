@@ -16,6 +16,23 @@
       "revId": "4ee7f1e429b5d75269002e5c9abf5ac37cb36f4f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_cdfa1e73",
+        "filename": "less/modules/search/SearchOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-11T21:39:54Z",
+      "side": 1,
+      "message": "Is this one necessary? I think that if JS works then the placeholder probably works too.",
+      "revId": "4ee7f1e429b5d75269002e5c9abf5ac37cb36f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
