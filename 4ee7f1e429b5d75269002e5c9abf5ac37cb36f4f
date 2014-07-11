@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_88476422",
+        "filename": "less/common/icons.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-11T22:27:22Z",
+      "side": 1,
+      "message": "Oh yeah, now I remember why I did it this way. There are multiple rules that are making the watchstar display: inline-block (see hlist rules). So we would need slightly more complicated CSS to do the reverse.",
+      "parentUuid": "8e28a382_2891909c",
+      "revId": "4ee7f1e429b5d75269002e5c9abf5ac37cb36f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_cdfa1e73",
         "filename": "less/modules/search/SearchOverlay.less",
         "patchSetId": 2
