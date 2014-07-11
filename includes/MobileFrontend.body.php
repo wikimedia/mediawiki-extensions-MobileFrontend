@@ -42,6 +42,10 @@ class ExtMobileFrontend {
 
 		wfProfileIn( __METHOD__ . '-filter' );
 		$specialPage = $out->getTitle()->isSpecialPage();
+		$formatter->enableExpandableSections(
+			$out->isArticleRelated()
+			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
+		);
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise
 			$formatter->filterContent( /* remove defaults */ !$specialPage );
