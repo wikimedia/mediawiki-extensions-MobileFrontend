@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_485e1c19",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-11T22:05:08Z",
+      "side": 1,
+      "message": "See commit message.",
+      "revId": "6e49b3c0c56a3ebdbfc9cd03ebb913bf89815990",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
