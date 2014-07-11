@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_2891909c",
+        "filename": "less/common/icons.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-11T22:10:17Z",
+      "side": 1,
+      "message": "Yeah, I went back and forth on this. I guess I\u0027ll do it the other way around.",
+      "parentUuid": "8e28a382_5c3a66c1",
+      "revId": "4ee7f1e429b5d75269002e5c9abf5ac37cb36f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_cdfa1e73",
         "filename": "less/modules/search/SearchOverlay.less",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-07-11T21:39:54Z",
       "side": 1,
       "message": "Is this one necessary? I think that if JS works then the placeholder probably works too.",
+      "revId": "4ee7f1e429b5d75269002e5c9abf5ac37cb36f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_4894dc8d",
+        "filename": "less/modules/search/SearchOverlay.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-11T22:10:17Z",
+      "side": 1,
+      "message": "Opera Mini doesn\u0027t support placeholders :(\nhttp://caniuse.com/input-placeholder",
+      "parentUuid": "8e28a382_cdfa1e73",
       "revId": "4ee7f1e429b5d75269002e5c9abf5ac37cb36f4f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
