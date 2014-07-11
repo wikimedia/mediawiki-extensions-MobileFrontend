@@ -985,6 +985,9 @@ HTML;
 			$licenseText = '';
 		}
 
+		// Enable extensions to add links to footer in Mobile view, too - bug 66350
+		wfRunHooks( 'SkinMinervaOutputPageBeforeExec', array( &$this, &$tpl ) );
+
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'mobile-license', $licenseText );
 		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
