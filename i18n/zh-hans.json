@@ -29,6 +29,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
+	"action-mf-uploadbutton": "在移动页面使用上传按钮。",
 	"beta-feature-geonotahack": "附近页面",
 	"beta-feature-geonotahack-description": "发现你正在阅读的页面在地理上邻近的页面。",
 	"beta-feature-minerva": "在桌面版上启用移动版皮肤（Minerva）",
@@ -347,6 +348,7 @@
 	"mobilefrontend-random-explain": "你对该随机页面感兴趣吗？",
 	"mobilefrontend-random-tryanother": "寻找其它",
 	"nearby": "您附近的页面",
+	"right-mf-uploadbutton": "在移动页面使用上传按钮",
 	"tag-mobile_edit": "移动版编辑",
 	"tag-mobile_edit-description": "从移动版（web或应用程序）所做的编辑",
 	"tag-mobile_web_edit": "移动网页编辑",

@@ -14,6 +14,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet",
+	"action-mf-uploadbutton": "die Hochlade-Schaltfläche auf mobilen Seiten zu benutzen.",
 	"beta-feature-geonotahack": "In der Nähe",
 	"beta-feature-geonotahack-description": "Entdecke Seiten mit geografischer Nachbarschaft zur aktuell gelesenen Inhaltsseite.",
 	"beta-feature-minerva": "Die mobile Benutzeroberfläche „Minerva“ auf dem Desktop aktivieren",
@@ -332,6 +333,7 @@
 	"mobilefrontend-random-explain": "Interessiert dich diese zufällige Seite?",
 	"mobilefrontend-random-tryanother": "Eine andere finden",
 	"nearby": "Seiten in deiner Nähe",
+	"right-mf-uploadbutton": "Die Hochlade-Schaltfläche auf mobilen Seiten benutzen",
 	"tag-mobile_edit": "Mobile Bearbeitung",
 	"tag-mobile_edit-description": "Mobil bearbeitet (Web oder App)",
 	"tag-mobile_web_edit": "Mobile Web-Bearbeitung",
