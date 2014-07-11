@@ -86,6 +86,15 @@
 					funnel: funnel || 'article'
 				},
 				visualEditorNamespaces = veConfig && veConfig.namespaces;
+
+			function loadSourceEditor() {
+				mw.loader.using( 'mobile.editor.overlay', function() {
+					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+					loadingOverlay.hide();
+					result.resolve( new EditorOverlay( editorOptions ) );
+				} );
+			}
+
 			loadingOverlay.show();
 			editorOptions.sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
@@ -107,17 +116,11 @@
 			) {
 				mw.loader.using( 'mobile.editor.ve', function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
-
 					loadingOverlay.hide();
 					result.resolve( new VisualEditorOverlay( editorOptions ) );
-				} );
+				}, loadSourceEditor );
 			} else {
-				mw.loader.using( 'mobile.editor.overlay', function() {
-					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
-
-					loadingOverlay.hide();
-					result.resolve( new EditorOverlay( editorOptions ) );
-				} );
+				loadSourceEditor();
 			}
 
 			return result;

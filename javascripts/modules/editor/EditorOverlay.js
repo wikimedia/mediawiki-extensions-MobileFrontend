@@ -179,11 +179,20 @@
 			// Load the VisualEditor and replace the SourceEditor overlay with it
 			this.showSpinner();
 			this.$content.hide();
-			mw.loader.using( 'mobile.editor.ve', function() {
-				var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
-				self.clearSpinner();
-				M.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
-			} );
+			mw.loader.using(
+				'mobile.editor.ve',
+				function() {
+					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
+					self.clearSpinner();
+					M.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
+				},
+				function() {
+					self.clearSpinner();
+					self.$content.show();
+					// FIXME: We should show an error notification, but right now toast
+					// notifications are not dismissible when shown within the editor.
+				}
+			);
 		},
 
 		_updateEditCount: function() {
