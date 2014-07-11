@@ -1,6 +1,4 @@
 ( function( M, $ ) {
-	M.assertMode( [ 'alpha', 'beta', 'app' ] );
-
 	var Overlay = M.require( 'Overlay' ),
 		ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
 		ImageOverlay, api;
@@ -28,14 +26,14 @@
 
 			api.getThumb( options.title ).done( function( data ) {
 				function removeLoader() {
-					self.$( '.container' ).removeClass( 'loading' );
+					self.$( '.image-wrapper' ).removeClass( 'loading' );
 				}
 
 				self.thumbWidth = data.thumbwidth;
 				self.thumbHeight = data.thumbheight;
 				self.imgRatio = data.thumbwidth / data.thumbheight;
 				$img = $( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', options.caption );
-				self.$( '.container div' ).append( $img );
+				self.$( '.image' ).append( $img );
 
 				if ( $img.prop( 'complete' ) ) {
 					// if the image is loaded from browser cache, "load" event may not fire
@@ -45,24 +43,25 @@
 					// remove the loader when the image is loaded
 					$img.on( 'load', removeLoader );
 				}
-
 				self._positionImage();
 				self.$( '.details a' ).attr( 'href', data.descriptionurl );
 				if ( data.extmetadata && data.extmetadata.LicenseShortName ) {
 					self.$( '.license a' ).text( data.extmetadata.LicenseShortName.value );
 				}
-
-				self.$el.on( M.tapEvent( 'click' ), function() {
-					self.$( '.details' ).toggleClass( 'visible' );
-				} );
 			} );
 
 			$( window ).on( 'resize', $.proxy( this, '_positionImage' ) );
 		},
 
+		show: function() {
+			this._super();
+			this._positionImage();
+		},
+
 		_positionImage: function() {
-			var windowWidth = $( window ).width(),
-				windowHeight = $( window ).height(),
+			var detailsHeight = this.$( '.details' ).height(),
+				windowWidth = $( window ).width(),
+				windowHeight = $( window ).height() - detailsHeight,
 				windowRatio = windowWidth / windowHeight,
 				$img = this.$( 'img' );
 
@@ -83,6 +82,7 @@
 					} );
 				}
 			}
+			$( '.image-wrapper' ).css( 'bottom', detailsHeight );
 		}
 	} );
 	M.define( 'modules/mediaViewer/ImageOverlay', ImageOverlay );

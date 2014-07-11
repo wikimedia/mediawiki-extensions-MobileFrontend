@@ -509,7 +509,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
-			'javascripts/modules/mediaViewer/init.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
 			'javascripts/modules/languages/preferred.js',
 		),
@@ -831,6 +830,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/externals/micro.autosize.js',
 			'javascripts/modules/uploads/init.js',
 			'javascripts/modules/mainmenutweaks.js',
+			'javascripts/modules/mediaViewer/init.js',
 		),
 		'messages' => array(
 			// lastEdited.js

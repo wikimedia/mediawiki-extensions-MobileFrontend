@@ -1,17 +1,18 @@
 ( function( M, $ ) {
-	M.assertMode( [ 'alpha', 'beta', 'app' ] );
-
 	function init( $el ) {
-		$el.find( 'a.image, a.thumbimage' ).each( function() {
-			var $a = $( this ), match = $a.attr( 'href' ).match( /[^\/]+$/ );
+		if ( !mw.config.get( 'wgImagesDisabled' ) ) {
+			$el.find( 'a.image, a.thumbimage' ).each( function() {
+				var $a = $( this ), match = $a.attr( 'href' ).match( /[^\/]+$/ );
 
-			if ( match ) {
-				$a.on( M.tapEvent( 'click' ), function( ev ) {
-					ev.preventDefault();
-					M.router.navigate( '#/image/' + match[0] );
-				} );
-			}
-		} );
+				if ( match ) {
+					$a.off();
+					$a.on( M.tapEvent( 'click' ), function( ev ) {
+						ev.preventDefault();
+						M.router.navigate( '#/image/' + match[0] );
+					} );
+				}
+			} );
+		}
 	}
 
 	// Add route

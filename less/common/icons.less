@@ -240,7 +240,9 @@
 //
 // Styleguide 8.3.7.
 .icon-cancel-light {
-	.background-image('images/close-button-beta.png');
+	// FIXME: delete unused close-button-beta.png after cache clears
+	.background-image-svg-quick( 'images/cancel-light' );
+	opacity: .75;
 }
 
 .icon-photo {
