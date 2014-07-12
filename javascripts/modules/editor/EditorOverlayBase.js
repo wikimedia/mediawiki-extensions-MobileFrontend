@@ -17,6 +17,7 @@
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			keepEditingMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
+			summaryRequestMsg: mw.msg( 'mobile-frontend-editor-summary-request' ),
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),

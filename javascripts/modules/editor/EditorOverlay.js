@@ -54,7 +54,7 @@
 			this._super( options );
 
 			this.$preview = this.$( '.preview' );
-			this.$content = this.$( 'textarea' ).
+			this.$content = this.$( '.wikitext-editor' ).
 				on( 'input', function() {
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .submit' ).prop( 'disabled', false );
