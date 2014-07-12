@@ -15,6 +15,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
+	"action-mf-uploadbutton": "להשתמש בכפתור העלאה בדפים ניידים.",
 	"beta-feature-geonotahack": "בסביבות הדף הזה",
 	"beta-feature-geonotahack-description": "זה מאפשר לך לראות דפים שקרובים גאוגרפית לדפים שקראת.",
 	"beta-feature-minerva": "הפעלת העיצוב למכשירים ניידים (מינרווה) במחשב",
@@ -332,6 +333,7 @@
 	"mobilefrontend-random-explain": "האם הדף האקראי הזה מעניין אותך?",
 	"mobilefrontend-random-tryanother": "למצוא אחד אחר",
 	"nearby": "דפים לידך",
+	"right-mf-uploadbutton": "שימוש בכפתור העלאה בדפים ניידים",
 	"tag-mobile_edit": "עריכה ממכשיר נייד",
 	"tag-mobile_edit-description": "העריכה שנעשתה ממכשר נייד (דרך אתר או יישום)",
 	"tag-mobile_web_edit": "עריכה דרך האתר הנייד",

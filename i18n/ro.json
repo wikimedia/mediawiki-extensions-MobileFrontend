@@ -8,6 +8,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Dacă un utilizator modifică sau nu prin intermediul interfeței mobile",
+	"action-mf-uploadbutton": "utilizați butonul de încărcare pe paginile mobile.",
 	"beta-feature-geonotahack": "În apropierea acestei pagini",
 	"beta-feature-geonotahack-description": "Descoperă pagini care sunt, din punct de vedere geografic, în apropierea conținutului paginii pe care o lecturați acum.",
 	"beta-feature-minerva": "Activează interfața mobilă (Minerva) pe desktop",
@@ -323,6 +324,7 @@
 	"mobilefrontend-random-explain": "Această pagină aleatoare vă interesează?",
 	"mobilefrontend-random-tryanother": "Găsește o alta",
 	"nearby": "Pagini în apropierea dumneavoastră",
+	"right-mf-uploadbutton": "Utilizează butonul de încărcare pe paginile mobile.",
 	"tag-mobile_edit": "Modificare mobilă",
 	"tag-mobile_edit-description": "Modificare efectuată prin platforma mobilă (web sau aplicație)",
 	"tag-mobile_web_edit": "Modificare de pe webul mobil",

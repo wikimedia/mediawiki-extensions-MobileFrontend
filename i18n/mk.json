@@ -5,6 +5,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Дали корисникот уредува од мобилниот посредник",
+	"action-mf-uploadbutton": "употреба на копчето за подигање на мобилни страници.",
 	"beta-feature-geonotahack": "Во околина на страницава",
 	"beta-feature-geonotahack-description": "Откријте други поврзани страници со слични координатни податоци како оние што ги гледате.",
 	"beta-feature-minerva": "Вклучи го мобилното руво (Минерва) како обично",
@@ -322,6 +323,7 @@
 	"mobilefrontend-random-explain": "Дали ве интересира оваа случајна страница?",
 	"mobilefrontend-random-tryanother": "Најди друга",
 	"nearby": "Страници во ваша близина",
+	"right-mf-uploadbutton": "Употреба на копчето за подигање на мобилни страници",
 	"tag-mobile_edit": "Мобилно уредување",
 	"tag-mobile_edit-description": "Уредување од мобилен (мреж. страница или прилог)",
 	"tag-mobile_web_edit": "Мобилно семрежно уредување",
