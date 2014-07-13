@@ -226,7 +226,7 @@
 	"mobile-frontend-profile-footer-years": "{{PLURAL:$2|$2年}}前から参加、編集回数[[Special:Contributions/$1|{{PLURAL:$3|$3回}}]]、アップロード[[Special:Uploads/$1|{{PLURAL:$4|$4件|500=500件以上}}]]。",
 	"mobile-frontend-profile-last-edit": "{{PLURAL:$2|昨日|$2日前|0=今日}}、ページ [[:$1]] を{{GENDER:$3|編集しました}}。",
 	"mobile-frontend-profile-last-thank": "[[Special:UserProfile/$1|$1]] {{GENDER:$1|から}}{{GENDER:$2|感謝を示されました}}。",
-	"mobile-frontend-profile-last-upload-caption": "{{PLURAL:$1|昨日|$1 日前に|0=今日}}{{GENDER:$2|アップロードされました}}。",
+	"mobile-frontend-profile-last-upload-caption": "{{PLURAL:$1|昨日|$1 日前に|0=今日}}{{GENDER:$2|アップロードしました}}。",
 	"mobile-frontend-profile-noargs": "利用者名を入力していません。プロフィールを表示する利用者名を指定してください。",
 	"mobile-frontend-profile-nouser": "この利用者名の利用者は存在しません。利用者名の大文字小文字は区別されます。正しく入力したか確認してください。",
 	"mobile-frontend-profile-title": "利用者情報",

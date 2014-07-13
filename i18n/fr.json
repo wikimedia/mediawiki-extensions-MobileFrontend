@@ -33,6 +33,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
+	"action-mf-uploadbutton": "utiliser le bouton de téléchargement sur les pages de mobile.",
 	"beta-feature-geonotahack": "Proche de cette page",
 	"beta-feature-geonotahack-description": "Découvrir des pages qui sont proches géographiquement du contenu de la page que vous êtes en train de regarder.",
 	"beta-feature-minerva": "Activer le thème mobile (Minerve) sur le bureau",
@@ -350,6 +351,7 @@
 	"mobilefrontend-random-explain": "Cette page au hasard vous intéresse-t-elle ?",
 	"mobilefrontend-random-tryanother": "Trouver un autre",
 	"nearby": "Pages près de vous",
+	"right-mf-uploadbutton": "Utiliser le bouton de téléchargement sur les pages de mobile",
 	"tag-mobile_edit": "Modification par mobile",
 	"tag-mobile_edit-description": "Modification effectuée depuis un mobile (web ou application)",
 	"tag-mobile_web_edit": "Modification par le web mobile",
