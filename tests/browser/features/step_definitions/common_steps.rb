@@ -74,17 +74,7 @@ When(/^I visit the page "(.*?)" with hash "(.*?)"$/) do |article, hash|
 end
 
 Given(/^the "(.*?)" page is protected\.$/) do |page|
-  step 'I am logged into the mobile website'
-  step 'I am on the "' + page + '" page'
-  step 'I switch to desktop'
-  if not on(DesktopArticlePage).unprotect_element.exists?
-    step 'I click the protect link on the desktop skin'
-    step 'I select Allow only administrators on the protection page'
-    step 'I click the submit button on the protection page'
-  end
-  step 'I switch to the mobile site'
-  step 'I click on "Log out" in the main navigation menu'
-  step 'I am on the "Special:UserLogout" page'
+  on(APIPage).protect(page, "MobileFrontend Selenium test protected this page")
 end
 
 Given(/^I am viewing the site in tablet mode$/) do
