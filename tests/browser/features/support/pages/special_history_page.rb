@@ -32,5 +32,5 @@ end
 
 class SpecialContributionsPage < SpecialHistoryPage
   include URL
-  page_url URL.url("Special:Contributions/" + ENV["MEDIAWIKI_USER"])
+  page_url URL.url("Special:Contributions/#{ENV['MEDIAWIKI_USER']}")
 end
