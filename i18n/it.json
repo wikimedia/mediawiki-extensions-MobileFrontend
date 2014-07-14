@@ -12,6 +12,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
+	"action-mf-uploadbutton": "usare il pulsante per il caricamento nei dispositivi mobili",
 	"beta-feature-geonotahack": "Vicino a questa pagina",
 	"beta-feature-geonotahack-description": "Scopri le pagine che sono geograficamente vicine alla pagina di contenuto che stai attualmente leggendo.",
 	"beta-feature-minerva": "Abilita la skin mobile (Minerva) sul desktop",
@@ -329,6 +330,7 @@
 	"mobilefrontend-random-explain": "Ti interessa questa pagina casuale?",
 	"mobilefrontend-random-tryanother": "Trova un'altra",
 	"nearby": "Pagine nelle vicinanze",
+	"right-mf-uploadbutton": "Usa il pulsante per il caricamento nei dispositivi mobili",
 	"tag-mobile_edit": "Modifica da mobile",
 	"tag-mobile_edit-description": "Modifica apportata da dispositivo mobile (web o applicazione)",
 	"tag-mobile_web_edit": "Modifica da web per mobile",

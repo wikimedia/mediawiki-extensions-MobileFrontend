@@ -10,6 +10,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
+	"action-mf-uploadbutton": "sử dụng nút tải lên trên các trang di động.",
 	"beta-feature-geonotahack": "Lân cận trang này",
 	"beta-feature-geonotahack-description": "Khám phá các trang lân cận với nội dung mà bạn đang đọc.",
 	"beta-feature-minerva": "Sử dụng giao diện di động (Minerva) trên máy tính để bàn",
@@ -328,6 +329,7 @@
 	"mobilefrontend-random-explain": "Bạn có quan tâm đến trang ngẫu nhiên này?",
 	"mobilefrontend-random-tryanother": "Tìm trang khác",
 	"nearby": "Trang gần bạn",
+	"right-mf-uploadbutton": "Sử dụng nút tải lên trên các trang di động",
 	"tag-mobile_edit": "Sửa đổi di động",
 	"tag-mobile_edit-description": "Sửa đổi di động (trang Web hoặc ứng dụng)",
 	"tag-mobile_web_edit": "Sửa đổi từ trang di động",

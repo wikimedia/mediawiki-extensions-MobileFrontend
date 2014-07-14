@@ -28,7 +28,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
-	"action-mf-uploadbutton": "The error message, if the user don't have the right to see the upload button on mobile pages.",
+	"action-mf-uploadbutton": "The error message, if the user don't have the right to see the upload button on mobile pages.\n\n{{Doc-action|mf-uploadbutton}}",
 	"beta-feature-geonotahack": "Title for near this page beta feature.\n{{Identical|Near this page}}",
 	"beta-feature-geonotahack-description": "Description for near this page beta feature.",
 	"beta-feature-minerva": "Name of the Minerva beta feature.\n\nUsed as checkbox label.\n\nSee also:\n* {{msg-mw|Beta-feature-minerva-description}}",
@@ -351,7 +351,7 @@
 	"mobilefrontend-random-explain": "Message explaining that they are viewing a random page. Gives them the option to try another.",
 	"mobilefrontend-random-tryanother": "\"Another\" refers to a page. This is a label for a button that the user can press to answer the question in the message {{msg-mw|Mobilefrontend-random-explain}} when they prefer to read another random page.",
 	"nearby": "{{doc-special|Nearby}}",
-	"right-mf-uploadbutton": "Description of right to see the upload button on mobile pages.",
+	"right-mf-uploadbutton": "Description of right to see the upload button on mobile pages.\n\n{{Doc-right|mf-uploadbutton}}",
 	"tag-mobile_edit": "Short change tag name for edits coming  from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit-description}}",
 	"tag-mobile_edit-description": "Short change tag description. for edits coming from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit}}",
 	"tag-mobile_web_edit": "Short change tag name for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit-description}}",
