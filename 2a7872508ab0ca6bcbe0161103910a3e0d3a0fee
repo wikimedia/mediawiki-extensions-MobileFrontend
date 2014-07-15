@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_292aa18f",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-15T05:31:50Z",
+      "side": 1,
+      "message": "Moved before the api request, to avoid a redirect to a page, after the user entered a new search query, but the connection is slow and the api request can not be finished, before the user hit enter.",
+      "revId": "2a7872508ab0ca6bcbe0161103910a3e0d3a0fee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
