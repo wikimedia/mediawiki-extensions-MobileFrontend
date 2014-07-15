@@ -33,9 +33,11 @@ $specialPageAliases['af'] = array(
 /** Arabic (العربية) */
 $specialPageAliases['ar'] = array(
 	'History' => array( 'تاريخ' ),
+	'MobileWebApp' => array( 'تطبيق_ويب_المحمول' ),
 	'MobileOptions' => array( 'خيارات_المحمول' ),
 	'Uploads' => array( 'مرفوعات' ),
 	'MobileDiff' => array( 'فرق_المحمول' ),
+	'MobileEditor' => array( 'محرر_المحمول' ),
 	'MobileMenu' => array( 'قائمة_المحمول' ),
 	'MobileLanguages' => array( 'لغات_المحمول' ),
 	'Nearby' => array( 'قريب' ),
@@ -45,6 +47,7 @@ $specialPageAliases['ar'] = array(
 /** Egyptian Spoken Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'History' => array( 'تاريخ' ),
+	'MobileWebApp' => array( 'تطبيق_ويب_الموبايل' ),
 	'MobileOptions' => array( 'خيارات_الموبايل' ),
 	'Uploads' => array( 'مرفوعات' ),
 	'MobileDiff' => array( 'فرق_الموبايل' ),

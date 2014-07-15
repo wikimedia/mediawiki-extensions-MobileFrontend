@@ -198,7 +198,6 @@
 	"mobile-frontend-page-menu-contents": "clàr-innse",
 	"mobile-frontend-page-menu-history": "Eachdraidh",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-page-saving": "<strong>A' sàbhaladh</strong><span> $1</span>",
 	"mobile-frontend-password": "Facal-faire:",
 	"mobile-frontend-password-confirm-placeholder": "Dearbhaich am facal-faire",
 	"mobile-frontend-password-placeholder": "Facal-faire",

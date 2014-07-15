@@ -189,7 +189,6 @@
 	"mobile-frontend-page-menu-contents": "目次",
 	"mobile-frontend-page-menu-history": "履歴",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-page-saving": "<span>$1</span> を<strong>保存中</strong>",
 	"mobile-frontend-password": "パスワード:",
 	"mobile-frontend-password-confirm-placeholder": "パスワード再入力",
 	"mobile-frontend-password-placeholder": "パスワード",
