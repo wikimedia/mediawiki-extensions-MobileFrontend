@@ -52,6 +52,24 @@
       "revId": "e868b95e0e03722fdd00f03e7a9f932a3c34310f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_0f0c8544",
+        "filename": "tests/browser/features/step_definitions/editor_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2014-07-15T14:35:53Z",
+      "side": 1,
+      "message": "Not related, but this change introduces two leading spaces.",
+      "parentUuid": "8e28a382_2f2aa18f",
+      "revId": "e868b95e0e03722fdd00f03e7a9f932a3c34310f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
