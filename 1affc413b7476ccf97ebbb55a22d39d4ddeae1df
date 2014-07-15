@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_2963c10b",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-15T05:31:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e28a382_71a9b577",
+      "revId": "1affc413b7476ccf97ebbb55a22d39d4ddeae1df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_b19f1d55",
         "filename": "javascripts/modules/search/SearchOverlay.js",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2014-07-14T22:00:06Z",
       "side": 1,
       "message": "Comment needs to be updated to say \"on submit\" instead of \"on keypress return\".",
+      "revId": "1affc413b7476ccf97ebbb55a22d39d4ddeae1df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_893995f1",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-15T05:31:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e28a382_b19f1d55",
       "revId": "1affc413b7476ccf97ebbb55a22d39d4ddeae1df",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
