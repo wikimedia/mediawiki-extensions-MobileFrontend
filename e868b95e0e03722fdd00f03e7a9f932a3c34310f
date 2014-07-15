@@ -34,6 +34,24 @@
       "revId": "e868b95e0e03722fdd00f03e7a9f932a3c34310f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_2f2aa18f",
+        "filename": "tests/browser/features/step_definitions/editor_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2014-07-15T14:33:10Z",
+      "side": 1,
+      "message": "I think page object pattern was not violated. I do not think the code is better if we define another page object for when the element is enabled.",
+      "parentUuid": "ae43a74e_baa0313f",
+      "revId": "e868b95e0e03722fdd00f03e7a9f932a3c34310f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
