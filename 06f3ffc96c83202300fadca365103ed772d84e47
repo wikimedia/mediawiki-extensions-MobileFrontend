@@ -50,6 +50,24 @@
       "revId": "06f3ffc96c83202300fadca365103ed772d84e47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_895e35eb",
+        "filename": "templates/modules/editor/EditorOverlayBase.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-15T01:18:12Z",
+      "side": 1,
+      "message": "Well, it\u0027s big like a heading, but semanticly it\u0027s more like an input label than a heading.",
+      "parentUuid": "8e28a382_a61d9e7a",
+      "revId": "06f3ffc96c83202300fadca365103ed772d84e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
