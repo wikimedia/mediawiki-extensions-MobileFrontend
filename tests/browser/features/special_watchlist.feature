@@ -5,6 +5,7 @@ Feature: Manage Watchlist
     Given I am logged into the mobile website
       And I am on the "Special:Watchlist" page
     When I switch to the modified view of the watchlist
+      And I click the Pages tab
     Then I see a list of diff summary links
       And the modified button is selected
 
