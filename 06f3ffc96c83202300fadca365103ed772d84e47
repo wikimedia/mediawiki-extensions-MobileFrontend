@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_461a7a7f",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-15T00:35:22Z",
+      "side": 1,
+      "message": "I\u0027d replace \"the editor\" with \"the user\" to be consistent and avoid confusion.",
+      "revId": "06f3ffc96c83202300fadca365103ed772d84e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_e633a608",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-15T00:35:22Z",
+      "side": 1,
+      "message": "This should be summaryRequestMsg",
+      "revId": "06f3ffc96c83202300fadca365103ed772d84e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_a61d9e7a",
+        "filename": "templates/modules/editor/EditorOverlayBase.html",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-15T00:35:22Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be a heading? No strong opinion here though.",
+      "revId": "06f3ffc96c83202300fadca365103ed772d84e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
