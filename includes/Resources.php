@@ -291,6 +291,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-licensing-with-terms',
 			'mobile-frontend-editor-placeholder',
 			'mobile-frontend-editor-placeholder-new-page',
+			'mobile-frontend-editor-summary-request',
 			'mobile-frontend-editor-summary-placeholder',
 			'mobile-frontend-editor-cancel-confirm',
 			'mobile-frontend-editor-new-page-confirm',
@@ -332,7 +333,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'modules/editor/VisualEditorOverlay',
 		),
 		'messages' => array(
-			'mobile-frontend-page-saving',
+			'mobile-frontend-page-edit-summary',
 			'mobile-frontend-editor-editing',
 		),
 	),

@@ -15,7 +15,7 @@
 		editor: 'VisualEditor',
 		initialize: function( options ) {
 			var self = this;
-			options.previewingMsg = mw.msg( 'mobile-frontend-page-saving', options.title );
+			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
 			this._super( options );
 			this.hasChanged = false;
