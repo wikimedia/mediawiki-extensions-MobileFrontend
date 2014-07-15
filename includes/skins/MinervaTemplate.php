@@ -332,7 +332,7 @@ class MinervaTemplate extends BaseTemplate {
 							// FIXME: change this into a search icon instead of a text button
 							echo $this->makeSearchButton(
 								'fulltext',
-								array( 'class' => 'no-js-only icon icon-search' )
+								array( 'class' => 'fulltext-search no-js-only icon icon-search' )
 							);
 							?>
 							</form>
