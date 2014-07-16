@@ -15,6 +15,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
+	"action-mf-uploadbutton": "använd uppladdningsknappen på mobila sidor",
 	"beta-feature-geonotahack": "Nära denna sida",
 	"beta-feature-geonotahack-description": "Upptäck sidor som är geografiskt närliggande till innehållssidan du för tillfället läser.",
 	"beta-feature-minerva": "Aktivera mobilt utseende (Minerva) på stationära datorer",
@@ -86,6 +87,7 @@
 	"mobile-frontend-editor-success-landmark-1": "Grattis, du är nu en redaktör på {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Grattis till att ha skapat en ny sida!",
 	"mobile-frontend-editor-summary-placeholder": "Exempel: Rättade stavfel, lagt till innehåll",
+	"mobile-frontend-editor-summary-request": "Hur förbättrade du sidan?",
 	"mobile-frontend-editor-switch-confirm": "Du måste spara din redigering innan du byter till ett annan redigeringsläge.",
 	"mobile-frontend-editor-switch-editor": "Byt redigerare",
 	"mobile-frontend-editor-tutorial-alt-summary": "Varför inte förbättra $1? Var inte rädd för koden!",
@@ -204,6 +206,7 @@
 	"mobile-frontend-overlay-continue": "Fortsätt",
 	"mobile-frontend-page-menu-contents": "innehåll",
 	"mobile-frontend-page-menu-history": "Historik",
+	"mobile-frontend-page-edit-summary": "<strong>Redigeringssammanfattning</strong><span> $1</span>",
 	"mobile-frontend-password": "Lösenord:",
 	"mobile-frontend-password-confirm-placeholder": "Bekräfta lösenord",
 	"mobile-frontend-password-placeholder": "Lösenord",
