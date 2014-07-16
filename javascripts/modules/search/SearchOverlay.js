@@ -39,13 +39,24 @@
 				$clear = this.$( '.clear' ),
 				$form = this.$( 'form' );
 
+			// Make sure search overlay lines up with search header when the overlay is
+			// rendered. This is necessary to prevent bug 67140 while sitenotices are
+			// displayed.
+			this.$( '.overlay-header-container' ).css( 'top', $( '.header' ).offset().top );
+
 			this._super( options );
 
 			this.$input = this.$( 'input' ).on( 'input', function() {
+				// Make sure search header is docked to the top of the screen when the
+				// user begins typing so that there is adequate space for search results
+				// above the keyboard. (This is only a potential issue when sitenotices
+				// are displayed.)
+				self.$( '.overlay-header-container' ).css( 'top', 0 );
 				self.performSearch();
 				$clear.toggle( self.$input.val() !== '' );
 			} );
 
+			// initialize the button that clears the search field
 			$clear.hide().on( M.tapEvent( 'click' ), function() {
 				self.$input.val( '' ).focus();
 				self.performSearch();
