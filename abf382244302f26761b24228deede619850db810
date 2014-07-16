@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_37f1cfda",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2014-07-16T14:02:51Z",
+      "side": 1,
+      "message": "Is there a reason you are not using the usual format?\n\nBug: 67987",
+      "revId": "abf382244302f26761b24228deede619850db810",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
