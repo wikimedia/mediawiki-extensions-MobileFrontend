@@ -2,7 +2,6 @@
 	var Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
-		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		EditorOverlayBase;
@@ -61,16 +60,6 @@
 			this.editCount += 1;
 			mw.config.set( 'wgUserEditCount', this.editCount );
 		},
-		_shouldShowKeepGoingOverlay: function() {
-			if ( M.isBetaGroupMember() &&
-				mw.config.get( 'wgMFKeepGoing' ) &&
-				( this.editCount === 0 || inKeepGoingCampaign )
-			) {
-				return true;
-			} else {
-				return false;
-			}
-		},
 		/**
 		 * If this is a new article, require confirmation before saving.
 		 */
@@ -109,16 +98,8 @@
 				msg = 'mobile-frontend-editor-success';
 			}
 
-			if ( this._shouldShowKeepGoingOverlay() ) {
-				// Show KeepGoing overlay at step 1 (ask)
-				mw.loader.using( 'mobile.keepgoing', function() {
-					var KeepGoingOverlay = M.require( 'modules/keepgoing/KeepGoingOverlay' );
-					new KeepGoingOverlay( { step: 1, isNewEditor: true } ).show();
-				} );
-			} else {
-				// just show a toast
-				toast.show( mw.msg( msg ), extraToastClasses );
-			}
+			// show a toast notification
+			toast.show( mw.msg( msg ), extraToastClasses );
 
 			// Set a cookie for 30 days indicating that this user has edited from
 			// the mobile interface.
@@ -151,11 +132,6 @@
 			this.isNewEditor = options.isNewEditor;
 			this.sectionId = options.sectionId;
 			this.funnel = options.funnel;
-
-			// pre-fetch keep going with expectation user will go on to save
-			if ( this._shouldShowKeepGoingOverlay() ) {
-				mw.loader.using( 'mobile.keepgoing' );
-			}
 
 			this._super( options );
 		},

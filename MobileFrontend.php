@@ -468,12 +468,6 @@ $wgMFDeviceWidthTablet = 768;
 $wgMFDeviceWidthMobileSmall = 280;
 
 /**
- * Whether or not to use the KeepGoing feature
- * See https://www.mediawiki.org/wiki/Extension:MobileFrontend/KeepGoing
- */
-$wgMFKeepGoing = false;
-
-/**
  * Controls whether API action=mobileview should have every HTML section tidied for invalid markup
  */
 $wgMFTidyMobileViewSections = true;
