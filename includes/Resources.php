@@ -24,13 +24,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-/**
- * A boilerplate for RL script modules
-*/
-$wgMFMobileSpecialPageResourceScriptBoilerplate = $wgMFMobileSpecialPageResourceBoilerplate + array(
-	'dependencies' => array( 'mobile.stable' ),
-);
-
 $wgResourceModules = array_merge( $wgResourceModules, array(
 	// @todo FIXME: Upstream to core
 	'mobile.templates' => $wgMFMobileResourceBoilerplate + array(
@@ -1101,7 +1094,10 @@ $wgMobileSpecialPageModules = array(
 		'position' => 'top',
 	),
 
-	'mobile.special.notifications.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+	'mobile.special.notifications.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable'
+		),
 		'scripts' => array(
 			'javascripts/specials/notifications.js',
 		),
@@ -1119,10 +1115,7 @@ $wgMobileSpecialPageModules = array(
 
 	'mobile.special.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable.styles',
-			'mobile.stable.common',
-			'mobile.templates',
-			'mobile.loggingSchemas',
+			'mobile.stable'
 		),
 		'templates' => array(
 			'specials/uploads/photo',
