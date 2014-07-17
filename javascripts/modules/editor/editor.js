@@ -53,10 +53,14 @@
 	 * @return {string} Either 'VisualEditor' or 'SourceEditor'
 	 */
 	function getPreferredEditor() {
-		var preferredEditor = M.settings.getUserSetting( 'preferredEditor', true ),
-			visualEditorDefault = veConfig && veConfig.defaultUserOptions && veConfig.defaultUserOptions.enable;
+		var preferredEditor = M.settings.getUserSetting( 'preferredEditor', true );
 		if ( preferredEditor === null ) {
-			return visualEditorDefault ? 'VisualEditor' : 'SourceEditor';
+			// For now, we are going to ignore which editor is set as the default for the
+			// wiki and always default to the source editor. Once we decide to honor the
+			// default editor setting for the wiki, we'll want to use:
+			// visualEditorDefault = veConfig && veConfig.defaultUserOptions && veConfig.defaultUserOptions.enable;
+			// return visualEditorDefault ? 'VisualEditor' : 'SourceEditor';
+			return 'SourceEditor';
 		} else {
 			return preferredEditor;
 		}
