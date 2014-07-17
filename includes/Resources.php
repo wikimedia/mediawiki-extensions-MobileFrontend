@@ -1122,6 +1122,7 @@ $wgMobileSpecialPageModules = array(
 			'mobile.stable.styles',
 			'mobile.stable.common',
 			'mobile.templates',
+			'mobile.loggingSchemas',
 		),
 		'templates' => array(
 			'specials/uploads/photo',
