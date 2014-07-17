@@ -1,3 +1,7 @@
+When(/^I click the Pages tab$/) do
+  on(WatchlistPage).pages_tab_link_element.when_present.click
+end
+
 When(/^I switch to the modified view of the watchlist$/) do
   on(WatchlistPage).feed_link_element.click
 end
