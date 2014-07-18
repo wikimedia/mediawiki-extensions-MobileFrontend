@@ -5,7 +5,7 @@ Given(/^I create a random page using the API$/) do
 end
 
 Given(/^I go to a page that has references$/) do
-  wikitext = "MobileFrontend is a MediaWiki extension.<ref>[http://mediawiki.org/wiki/Extension:MobileFrontend Extension:MobileFrontend]</ref>
+  wikitext = "MobileFrontend is a MediaWiki extension.<ref>Test reference</ref>
 
 ==References==
 <references />"
