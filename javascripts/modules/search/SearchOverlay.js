@@ -5,8 +5,7 @@
 		SearchApi = M.require( 'modules/search/SearchApi' ),
 		PageList = M.require( 'modules/PageList' ),
 		SEARCH_DELAY = 300,
-		SearchOverlay,
-		directRedirectUrl;
+		SearchOverlay;
 
 	SearchOverlay = Overlay.extend( {
 		className: 'overlay search-overlay',
@@ -47,23 +46,23 @@
 				$clear.toggle( self.$input.val() !== '' );
 			} );
 
-			// bind the document.submit event to check where we want to redirect to (page or serach results)
-			$form.submit( function( ev ) {
-				self.checkDirectRedirect( ev );
-			});
-
 			$clear.hide().on( M.tapEvent( 'click' ), function() {
 				self.$input.val( '' ).focus();
 				self.performSearch();
 				$clear.hide();
 			} );
 
+			// Initialize 'search within pages' functionality
 			this.$searchContent = this.$( '.search-content' ).
 				hide().
 				// can't use $.proxy because it would pass ev to submit() which would
 				// be treated as alternative form data
 				on( M.tapEvent( 'click' ), function() {
 					window.history.back();
+					// Add fulltext input to force fulltext search
+					$( '<input>' )
+						.attr( { type: 'hidden', name: 'fulltext', value: 'search' } )
+						.appendTo( $form );
 					$form.submit();
 				} );
 
@@ -104,16 +103,8 @@
 				if ( query.length ) {
 					$results.addClass( 'loading' );
 
-					// clear directRedirectUrl to avoid redirecting to old search result
-					directRedirectUrl = '';
 					this.timer = setTimeout( function() {
 						self.api.search( query ).done( function( data ) {
-							// check if we can redirect directly to a page on submit
-							$.each( data.results, function( index, value ) {
-								if ( query === value.title ) {
-									directRedirectUrl = value.url;
-								}
-							} );
 							// check if we're getting the rights response in case of out of
 							// order responses (need to get the current value of the input)
 							if ( data.query === self.$input.val() ) {
@@ -135,16 +126,6 @@
 				}
 
 				this.lastQuery = query;
-			}
-		},
-
-		checkDirectRedirect: function( ev ) {
-			if ( directRedirectUrl.length > 0 ) {
-				// stop propagation of submit event to enable redirect
-				ev.preventDefault();
-				ev.stopPropagation();
-				// simple redirect to the destination page
-				window.location = directRedirectUrl;
 			}
 		}
 	} );
