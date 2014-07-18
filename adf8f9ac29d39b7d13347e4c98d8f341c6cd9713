@@ -16,6 +16,24 @@
       "revId": "adf8f9ac29d39b7d13347e4c98d8f341c6cd9713",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_65f42151",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-18T21:58:39Z",
+      "side": 1,
+      "message": "Yes, that\u0027s exactly what\u0027s happening. I tried a couple strategies for avoiding the ghost click, but wasn\u0027t able to get rid of it. If you know a way to eliminate it, I\u0027m fine with changing this. (The ghost click only happens on touch devices.)",
+      "parentUuid": "8e28a382_e5d131d1",
+      "revId": "adf8f9ac29d39b7d13347e4c98d8f341c6cd9713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
