@@ -267,7 +267,7 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgCookiePath, $wgMFNearbyEndpoint, $wgMFContentNamespace, $wgMFKeepGoing;
+		global $wgCookiePath, $wgMFNearbyEndpoint, $wgMFContentNamespace;
 		$ctx = MobileContext::singleton();
 		$wgStopMobileRedirectCookie = array(
 			'name' => 'stopMobileRedirect',
@@ -278,7 +278,6 @@ class MobileFrontendHooks {
 		$vars['wgStopMobileRedirectCookie'] = $wgStopMobileRedirectCookie;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
 		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
-		$vars['wgMFKeepGoing'] = $wgMFKeepGoing;
 
 		// Set the licensing agreement that is displayed in the editor.
 		$wgMFLicenseLink = SkinMinerva::getLicenseLink( 'editor' );

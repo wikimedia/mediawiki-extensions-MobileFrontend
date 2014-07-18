@@ -83,65 +83,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * Load internal banner content to show in pre content in template
-	 * Content set as "internalbanner"
-	 * @param BaseTemplate $tpl
-	 */
-	protected function prepareBanners( BaseTemplate $tpl ) {
-		global $wgMFKeepGoing;
-
-		wfProfileIn( __METHOD__ );
-		parent::prepareBanners( $tpl );
-		$user = $this->getUser();
-		$msg = $this->msg( 'mobilefrontend-keepgoing-wikify-category' )->inContentLanguage();
-		if ( $wgMFKeepGoing && $this->getTitle()->isMainPage()
-			&& $user->isLoggedIn()
-			&& $user->getEditCount() > 1
-			&& !$msg->isDisabled()
-		) {
-			$category = Title::newFromText( $msg->text(), NS_CATEGORY );
-			if ( !$category ) {
-				wfProfileOut( __METHOD__ );
-				return;
-			}
-			// Weird stuff like Category:Wikipedia:Foo
-			if ( !$category->inNamespace( NS_CATEGORY ) ) {
-				$category = Title::makeTitleSafe( NS_CATEGORY, $category->getText() );
-			}
-			$rc = new SpecialRandomInCategory();
-			$rc->setCategory( $category );
-			$title = $rc->getRandomTitle();
-			if ( !$title ) {
-				wfProfileOut( __METHOD__ );
-				return;
-			}
-			$page = new MobilePage( $title );
-			$thumb = $page->getSmallThumbnailHtml( true );
-			$html = Html::openElement(
-					'ul',
-					array( 'class' => 'page-list page-banner' . ( $thumb ? ' thumbs' : '' ) )
-				) .
-				Html::openElement( 'li', array( 'class' => 'title' ) ) .
-				$thumb .
-				Html::element( 'h2', array(), $title->getPrefixedText() ) .
-				Html::element( 'p', array( 'class' => 'content component' ),
-					$this->msg( 'mobile-frontend-mainpage-cta-prompt' )->text() ) .
-				Html::openElement( 'p', array( 'class' => 'content component' ) ) .
-				Html::element( 'a', array(
-					'class' => 'mw-ui-button mw-ui-progressive button',
-					'href' => $title->getLocalUrl(
-						array( 'campaign' => 'mobile-mainpage-keepgoing-links'  )
-					),
-				), $this->msg( 'mobile-frontend-mainpage-cta-button' )->text() ) .
-				Html::closeElement( 'p' ) .
-				Html::closeElement( 'li' ) .
-				Html::closeElement( 'ul' );
-			$tpl->set( 'internalBanner', $html );
-		}
-		wfProfileOut( __METHOD__ );
-	}
-
-	/**
 	 * Handles new pages to show error message and print message, that page does not exist.
 	 * @param OutputPage $out
 	 */

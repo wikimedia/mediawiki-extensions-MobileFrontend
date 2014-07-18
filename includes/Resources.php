@@ -418,49 +418,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.keepgoing' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.beta',
-			'mobile.templates',
-			'mobile.overlays',
-		),
-		'templates' => array(
-			'keepgoing/KeepGoingOverlay',
-		),
-		'messages' => array(
-			'mobilefrontend-keepgoing-cancel',
-			'mobilefrontend-keepgoing-saved-title',
-			'mobilefrontend-keepgoing-links-title',
-			'mobilefrontend-keepgoing-links-ask-first',
-			'mobilefrontend-keepgoing-links-ask-again',
-			'mobilefrontend-keepgoing-links-explain',
-			'mobilefrontend-keepgoing-links-example'
-		),
-		'scripts' => array(
-			'javascripts/loggingSchemas/mobileWebCta.js',
-			'javascripts/modules/keepgoing/KeepGoingOverlay.js',
-		),
-	),
-
-	'mobile.random' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.templates',
-			// Drawer.js
-			'mobile.stable.common',
-		),
-		'templates' => array(
-			'modules/random/RandomDrawer',
-		),
-		'messages' => array(
-			'mobilefrontend-random-tryanother',
-			'mobilefrontend-random-explain',
-			'mobilefrontend-random-cancel',
-		),
-		'scripts' => array(
-			'javascripts/modules/random/RandomDrawer.js',
-		),
-	),
-
 	'mobile.geonotahack' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -503,7 +460,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
-			'javascripts/modules/keepgoing/keepgoing.js',
 			'javascripts/modules/languages/preferred.js',
 		),
 		'position' => 'bottom',
@@ -620,7 +576,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-translator.js',
-			'javascripts/modules/random/random.js',
 		),
 	),
 

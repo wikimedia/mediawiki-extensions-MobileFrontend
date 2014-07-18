@@ -1,13 +1,11 @@
 ( function( M, $ ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
-		inBetaOrAlpha = M.isBetaGroupMember(),
 		isVisualEditorEnabled = M.isWideScreen() &&
 			M.isBetaGroupMember() &&
 			mw.config.get( 'wgVisualEditorConfig' ) &&
 			mw.config.get( 'wgVisualEditorConfig' ).namespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) > -1 &&
 			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 			mw.config.get( 'wgPageContentModel' ) === 'wikitext',
-		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		inNavSignupCampaign = M.query.campaign === 'leftNavSignup',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
@@ -95,17 +93,6 @@
 			}
 		},
 
-		_shouldShowKeepGoingOverlay: function() {
-			if ( inBetaOrAlpha &&
-				mw.config.get( 'wgMFKeepGoing' ) &&
-				( this.editCount === 0 || inKeepGoingCampaign )
-			) {
-				return true;
-			} else {
-				return false;
-			}
-		},
-
 		_prepareForSave: function() {
 			var self = this, params = { text: this.$content.val() };
 
@@ -114,12 +101,6 @@
 			this.scrollTop = $( 'body' ).scrollTop();
 			this.$content.hide();
 			this.showSpinner();
-
-			// pre-fetch keep going with expectation user will go on to save
-			if ( this._shouldShowKeepGoingOverlay() ) {
-				this._keepgoing = true;
-				mw.loader.using( 'mobile.keepgoing' );
-			}
 
 			if ( mw.config.get( 'wgIsMainPage' ) ) {
 				params.mainpage = 1; // Setting it to 0 will have the same effect
