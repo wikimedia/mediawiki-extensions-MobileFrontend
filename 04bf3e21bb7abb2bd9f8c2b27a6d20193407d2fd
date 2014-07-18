@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_8525cd05",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-18T21:46:58Z",
+      "side": 1,
+      "message": "You should use empty(). We don\u0027t need to iterate through all the elements.",
+      "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
