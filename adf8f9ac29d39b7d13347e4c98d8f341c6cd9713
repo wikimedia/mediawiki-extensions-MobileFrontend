@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_e5d131d1",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-18T21:54:02Z",
+      "side": 1,
+      "message": "Seems a bit nasty. So what exactly is going on there? We tap on the search field on the page, the overlay shows up but higher than the original input. Is there some weird ghost click happening on the overlay background?",
+      "revId": "adf8f9ac29d39b7d13347e4c98d8f341c6cd9713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
