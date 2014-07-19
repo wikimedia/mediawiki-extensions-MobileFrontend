@@ -205,12 +205,6 @@
 	"mobile-frontend-watchlist-more": "више",
 	"mobile-frontend-watchlist-removed": "Страница $1 је уклоњена са вашег списка надгледања",
 	"mobile-frontend-watchlist-view": "Види списак надгледања",
-	"mobilefrontend-keepgoing-cancel": "Не, хвала",
-	"mobilefrontend-keepgoing-links-title": "Додај везе",
-	"mobilefrontend-keepgoing-saved-title": "Измена сачувана!",
-	"mobilefrontend-random-cancel": "Да",
-	"mobilefrontend-random-explain": "Да ли вам је ова случајна страница интересантна?",
-	"mobilefrontend-random-tryanother": "Нађи другу",
 	"tag-mobile_edit-description": "Измена начињена са мобилног телефона",
 	"tag-mobile_web_edit-description": "Измена начињена са мобилне верзије сајта"
 }
