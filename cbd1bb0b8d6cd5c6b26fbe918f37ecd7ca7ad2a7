@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_f86b17ec",
+        "filename": "javascripts/specials/redirectmobileeditor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-19T19:11:45Z",
+      "side": 1,
+      "message": "That\u0027s only a suggestion :)",
+      "revId": "cbd1bb0b8d6cd5c6b26fbe918f37ecd7ca7ad2a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
