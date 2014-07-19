@@ -44,6 +44,7 @@ class ExtMobileFrontend {
 		$specialPage = $out->getTitle()->isSpecialPage();
 		$formatter->enableExpandableSections(
 			$out->isArticleRelated()
+			&& $out->canUseWikiPage()
 			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
 		);
 		if ( $context->getContentTransformations() ) {
