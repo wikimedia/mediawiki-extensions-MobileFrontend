@@ -377,5 +377,5 @@ $specialPageAliases['zh-hant'] = array(
 	'MobileMenu' => array( '移動版選單' ),
 	'MobileLanguages' => array( '移動版語言' ),
 	'Nearby' => array( '附近' ),
-	'UserProfile' => array( '用戶資訊' ),
+	'UserProfile' => array( '使用者資訊' ),
 );
