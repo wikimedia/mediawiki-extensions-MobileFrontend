@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_b87224e0",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-21T17:53:10Z",
+      "side": 1,
+      "message": "No need to make this so complicated. Just do:\n$formatter-\u003eenableExpandableSections(\n    $out-\u003eisArticleRelated()\n    \u0026\u0026 $out-\u003ecanUseWikiPage()\n    \u0026\u0026 $out-\u003egetWikiPage()-\u003egetContentModel() \u003d\u003d CONTENT_MODEL_WIKITEXT\n);\n\nThe statement will evaluate to false as soon as one of the conditions fails.",
+      "revId": "8017d1bbc9ed9e13a2234e1354341ae5f833cfb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
