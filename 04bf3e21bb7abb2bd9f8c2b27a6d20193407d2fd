@@ -70,6 +70,24 @@
       "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_0977a8fe",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-21T20:35:59Z",
+      "side": 1,
+      "message": "OK, I\u0027m just against using count() when you don\u0027t need the count ;)\nI\u0027m also against changing the patch myself in such situations, not because I\u0027m lazy but because the same thing might repeat in future patches if I don\u0027t point it out.",
+      "parentUuid": "8e28a382_2925c403",
+      "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
