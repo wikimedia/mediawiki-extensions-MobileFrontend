@@ -34,6 +34,24 @@
       "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_49ddb072",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-07-21T20:01:04Z",
+      "side": 1,
+      "message": "I\u0027d just go with if ( $actions )",
+      "parentUuid": "8e28a382_582580bb",
+      "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
