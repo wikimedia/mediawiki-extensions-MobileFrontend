@@ -88,6 +88,24 @@
       "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_7eca61a4",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-07-21T23:14:54Z",
+      "side": 1,
+      "message": "the count vs empty vs if ( array() ) test is one I keep hitting in MediaWiki land so I think it\u0027s a good conversation to have at least as a team.\n\nI\u0027m saying I\u0027m against using empty as it\u0027s ambiguous - take a look at everything that empty returns true on - even \"0\" !!! - http://php.net/manual/en/function.empty.php\nI think use of count is more clear from a code point of view, and readability.\n\nThe one that most worries me most out of things that empty returns true on is if if we were to rename $wgPageActions or repurpose it to be a boolean or if someone in another extension was to accidentally set it to false. If it\u0027s undefined or false, this would take out page actions everywhere. I\u0027m sure we\u0027d be more careful but it\u0027s worth considering :)\n\nSo what I\u0027m asking for is clarification on /when/ we deem it acceptable to use empty (I usually avoid using it entirely) to avoid future discussions/-1s about its use. Thoughts?",
+      "parentUuid": "8e28a382_0977a8fe",
+      "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
