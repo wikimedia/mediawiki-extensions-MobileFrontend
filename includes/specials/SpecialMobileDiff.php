@@ -149,9 +149,12 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		} else {
 			$bytesChanged = $this->rev->getSize();
 		}
-		if ( $bytesChanged >= 0 ) {
+		if ( $bytesChanged > 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
 			$sizeClass = 'mw-mf-bytesadded meta icon icon-12px icon-text';
+		} elseif ( $bytesChanged == 0 ) {
+			$changeMsg = 'mobile-frontend-diffview-bytesnochange';
+			$sizeClass = 'mw-mf-bytesneutral meta icon icon-12px icon-text';
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
 			$sizeClass = 'mw-mf-bytesremoved meta icon icon-12px icon-text';
