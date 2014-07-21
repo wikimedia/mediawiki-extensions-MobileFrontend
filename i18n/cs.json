@@ -10,7 +10,8 @@
 			"Paxt",
 			"Reaperman",
 			"Utar",
-			"Vks"
+			"Vks",
+			"Matěj Suchánek"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Zda uživatel edituje prostřednictvím mobilního rozhraní",
@@ -167,7 +168,6 @@
 	"mobile-frontend-overlay-continue": "Pokračovat",
 	"mobile-frontend-page-menu-contents": "obsah",
 	"mobile-frontend-page-menu-history": "Historie",
-	"mobile-frontend-page-saving": "<strong>Ukládání</strong><span> $1</span>",
 	"mobile-frontend-password": "Heslo:",
 	"mobile-frontend-password-confirm-placeholder": "Potvrďte heslo",
 	"mobile-frontend-password-placeholder": "Heslo",
@@ -232,7 +232,7 @@
 	"mobile-frontend-talk-overlay-header": "Diskuse",
 	"mobile-frontend-talk-overlay-lead-header": "Nepojmenovaná diskuse",
 	"mobile-frontend-talk-reply": "Odpovědět",
-	"mobile-frontend-talk-reply-info": "Uvědomte si, že vaše reakce bude automaticky podepsána vašim uživatelským jménem.",
+	"mobile-frontend-talk-reply-info": "Uvědomte si, že vaše reakce bude automaticky podepsána vaším uživatelským jménem.",
 	"mobile-frontend-talk-reply-success": "Vaše reakce byla úspěšně vložena do diskuse.",
 	"mobile-frontend-talk-topic-feedback": "Do diskuse přidáno nové téma!",
 	"mobile-frontend-terms-text": "Podmínky užití",
@@ -267,15 +267,6 @@
 	"mobile-frontend-watchlist-purpose": "Seznam sledovaných stránek Vám umožňuje mít přehled o změnách stránek, jež Vás zajímají.",
 	"mobile-frontend-watchlist-removed": "Stránka $1 odebrána ze sledovaných",
 	"mobile-frontend-watchlist-view": "Zobrazit seznam sledovaných stránek",
-	"mobilefrontend-keepgoing-cancel": "Ne, děkuji",
-	"mobilefrontend-keepgoing-links-ask-again": "Opravit další stránku?",
-	"mobilefrontend-keepgoing-links-ask-first": "Gratulujeme k první editaci! Chcete pomoci s přidáváním odkazů na nedávno založenou stránku?",
-	"mobilefrontend-keepgoing-links-example": "např. z $1kytara$2 se stane $3kytara$4",
-	"mobilefrontend-keepgoing-links-explain": "Na místech, kde je zmiňován název existující stránky, ho uzavřete do dvojitých hranatých závorek",
-	"mobilefrontend-keepgoing-links-title": "Přidat odkazy",
-	"mobilefrontend-keepgoing-saved-title": "Editace uložena!",
-	"mobilefrontend-random-cancel": "Nechte mě číst!",
-	"mobilefrontend-random-explain": "Zaujala vás tato náhodná stránka?",
 	"nearby": "Stránky blízko vás",
 	"tag-mobile_edit": "Mobilní editace",
 	"tag-mobile_edit-description": "Editace provedená z mobilu (web nebo aplikace)"
