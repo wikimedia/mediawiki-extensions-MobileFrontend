@@ -16,6 +16,24 @@
       "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_582580bb",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-07-21T18:04:26Z",
+      "side": 1,
+      "message": "Oh no...! not the count vs empty debate...! :-(\n\nCount was made for arrays. empty is more general and can be applied to other types.\n\nI think the performance gains are tiny here, considering at most this variable can have 4 values.\n\nIf you feel really strongly, feel free to change it yourself, I\u0027m not ready to context switch right now, otherwise I\u0027ll come back to this tomorrow.",
+      "parentUuid": "8e28a382_8525cd05",
+      "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
