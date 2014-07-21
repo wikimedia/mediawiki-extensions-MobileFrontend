@@ -52,6 +52,24 @@
       "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_2925c403",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-21T20:31:36Z",
+      "side": 1,
+      "message": "I agree with Max, no reason to use count or empty here. Empty arrays evaluate to false in PHP.",
+      "parentUuid": "8e28a382_49ddb072",
+      "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
