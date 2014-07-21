@@ -43,8 +43,7 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ . '-filter' );
 		$specialPage = $out->getTitle()->isSpecialPage();
 		$formatter->enableExpandableSections(
-			$out->isArticleRelated()
-			&& $out->canUseWikiPage()
+			$out->canUseWikiPage()
 			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
 		);
 		if ( $context->getContentTransformations() ) {
