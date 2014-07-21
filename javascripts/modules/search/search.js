@@ -11,11 +11,7 @@
 	// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
 	$( '#searchInput' ).on( M.tapEvent( 'touchend mouseup' ), function() {
 		new SearchOverlay().show();
-		// without this delay, the keyboard will not show up on Android...
-		// (tested in Chrome for Android)
-		setTimeout( function() {
-			M.router.navigate( '/search' );
-		}, 300 );
+		M.router.navigate( '/search' );
 	} );
 
 	// FIXME: ugly hack that removes search from browser history when navigating
