@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_04778dfe",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-07-21T22:08:35Z",
+      "side": 1,
+      "message": "You could also do {{PLURAL:$1|0\u003dNo bytes|$1 byte|$1 bytes}} added but this is completely okay.",
+      "revId": "d32dbc08b6258907eb7c741c26b8cc6dcc37c9dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
