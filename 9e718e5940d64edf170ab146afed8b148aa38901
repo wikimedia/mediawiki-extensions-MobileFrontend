@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_d3514612",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-22T18:23:43Z",
+      "side": 1,
+      "message": "will work, if you make $wgSkipSkins global in this function :)",
+      "revId": "9e718e5940d64edf170ab146afed8b148aa38901",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
