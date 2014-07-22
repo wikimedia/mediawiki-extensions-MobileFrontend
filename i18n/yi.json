@@ -9,6 +9,7 @@
 	"mobile-frontend-clear-search": "רייניקן",
 	"mobile-frontend-copyright": "דער אינהאַלט איז פֿאַראַן אונטער $1 ווען נישט באוויזן אנדערש.",
 	"mobile-frontend-desc": "מאבייל אויסשטעלונג",
+	"mobile-frontend-diffview-bytesnochange": "קיין בייטן נישט געענדערט",
 	"mobile-frontend-disable-images": "אומאקטיווירן בילדער פאר מאביילן",
 	"mobile-frontend-dismiss-notification": "באהאלטן דעם קאמוניקאט",
 	"mobile-frontend-drawer-cancel": "אַנולירן",
@@ -45,7 +46,6 @@
 	"mobile-frontend-overlay-continue": "פֿארזעצן",
 	"mobile-frontend-page-menu-contents": "אינהאַלט",
 	"mobile-frontend-page-menu-history": "היסטאריע",
-	"mobile-frontend-page-saving": "<strong>אויפֿהיטן<strong> <span>$1</span>",
 	"mobile-frontend-password": "פאסווארט:",
 	"mobile-frontend-photo-caption-placeholder": "באשרייבן דאס בילד (באדארפט)",
 	"mobile-frontend-photo-upload-error": "פֿעלער, פרובירט נאכאמאל.",
@@ -71,7 +71,7 @@
 	"mobile-frontend-watchlist-add": "צוגעלייגט $1 צו אייער אויפפאסונג ליסטע",
 	"mobile-frontend-watchlist-removed": "אראפגענומען $1 פון אייער אויפפאסונג ליסטע",
 	"mobile-frontend-watchlist-view": "באקוקן אייער אויפפאסונג ליסטע",
-	"mobilefrontend-keepgoing-links-title": "צולייגן לינקען",
-	"mobilefrontend-keepgoing-saved-title": "רעדאקטירונג אויפגעהיטן",
-	"tag-mobile_edit": "מאביל־רעדאקטערונג"
+	"tag-mobile_edit": "מאביל־רעדאַקטירונג",
+	"tag-mobile_edit-description": "רעדאַקטירט פון מאביל (וועב אדער אַפ)",
+	"tag-mobile_web_edit": "מאביל וועב־רעדאקטירונג"
 }

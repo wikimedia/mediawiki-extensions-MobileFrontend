@@ -50,6 +50,7 @@
 	"mobile-frontend-diffview-404-title": "错误版本",
 	"mobile-frontend-diffview-anonymous": "匿名用户",
 	"mobile-frontend-diffview-bytesadded": "添加$1字节",
+	"mobile-frontend-diffview-bytesnochange": "没有更改字节数",
 	"mobile-frontend-diffview-bytesremoved": "删除$1字节",
 	"mobile-frontend-diffview-editcount": "<div>$1</div>个编辑",
 	"mobile-frontend-diffview-explained": "以下行是添加（+）和删除（-）的内容：",
