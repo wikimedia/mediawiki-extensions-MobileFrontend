@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_f3f1e266",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-22T20:09:33Z",
+      "side": 1,
+      "message": "$user is not defined here.",
+      "revId": "efa00be641215ec6756689469d3a7fcdc63ce5c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
