@@ -16,6 +16,40 @@
       "revId": "efa00be641215ec6756689469d3a7fcdc63ce5c1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_73285295",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-22T20:22:26Z",
+      "side": 1,
+      "message": "And $wgMFEnableMinervaBetaFeature is missing as global var, too.",
+      "revId": "efa00be641215ec6756689469d3a7fcdc63ce5c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_5331d6ff",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 616,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-22T20:22:26Z",
+      "side": 1,
+      "message": "No need for this global :)",
+      "revId": "efa00be641215ec6756689469d3a7fcdc63ce5c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
