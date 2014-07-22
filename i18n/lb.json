@@ -24,6 +24,7 @@
 	"mobile-frontend-diffview-404-title": "Schlecht Versioun",
 	"mobile-frontend-diffview-anonymous": "Anonyme Benotzer",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|Byte|Byten}} derbäigesat",
+	"mobile-frontend-diffview-bytesnochange": "Keng Ännerung an der Gréisst",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|Byte|Byten}} ewechgeholl",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|Ännerung|Ännerungen}}",
 	"mobile-frontend-diffview-explained": "Dës Linne goufen derbäigesat (+) an ewechgeholl (-):",

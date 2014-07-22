@@ -54,6 +54,7 @@
 	"mobile-frontend-diffview-404-title": "Mauvaise révision",
 	"mobile-frontend-diffview-anonymous": "Utilisateur anonyme",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|octet ajouté|octets ajoutés}}",
+	"mobile-frontend-diffview-bytesnochange": "Aucun octet modifié",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|octet supprimé|octets supprimés}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|modification|modifications}}",
 	"mobile-frontend-diffview-explained": "Les lignes suivantes ont été ajoutées (+) et supprimées (-):",

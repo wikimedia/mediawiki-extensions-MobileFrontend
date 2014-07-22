@@ -26,6 +26,7 @@
 	"mobile-frontend-diffview-404-title": "Неисправна преработка",
 	"mobile-frontend-diffview-anonymous": "Анонимен корисник",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Додаден $1 бајт|Додадени $1 бајти}}",
+	"mobile-frontend-diffview-bytesnochange": "Нема измена во големината",
 	"mobile-frontend-diffview-bytesremoved": "{{PLURAL:$1|Одземен $1 бајт|Одземени $1 бајти}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|уредување|уредувања}}",
 	"mobile-frontend-diffview-explained": "Следниве редови се додадени (+) и отстранети (-):",
