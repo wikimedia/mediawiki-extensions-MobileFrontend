@@ -25,7 +25,7 @@
     "mobile-frontend-diffview-404-title": "Bad revision",
     "mobile-frontend-diffview-anonymous": "Anonymous user",
     "mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte|bytes}} added",
-    "mobile-frontend-diffview-bytesnochange": "No bytes changed",
+    "mobile-frontend-diffview-bytesnochange": "No change in size",
     "mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|byte|bytes}} removed",
     "mobile-frontend-diffview-comma": "$1, $2",
     "mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|edit|edits}}",
