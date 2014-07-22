@@ -124,6 +124,24 @@
       "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_45a4699e",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-07-22T21:16:23Z",
+      "side": 1,
+      "message": "Ok thanks for clarification. I will switch to if ( $actions ) in this case. (fricking phppp ;-))",
+      "parentUuid": "8e28a382_9e250d59",
+      "revId": "04bf3e21bb7abb2bd9f8c2b27a6d20193407d2fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
