@@ -152,7 +152,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		if ( $bytesChanged > 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
 			$sizeClass = 'mw-mf-bytesadded meta icon icon-12px icon-text';
-		} elseif ( $bytesChanged == 0 ) {
+		} elseif ( $bytesChanged === 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesnochange';
 			$sizeClass = 'mw-mf-bytesneutral meta icon icon-12px icon-text';
 		} else {
