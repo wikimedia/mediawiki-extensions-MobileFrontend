@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_fe02c60b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-22T23:59:46Z",
+      "side": 1,
+      "message": "This will load the template code in \u003chead\u003e but nothing else uses it in \u003chead\u003e. It might slow down page loads a little bit on slow connections. We could add a small script to mobile.templates that would do the M.template \u003d mw.mantle.template assignment instead.",
+      "revId": "9cfcf7f589729312d0d97a1cb7bfb3b3d0522595",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
