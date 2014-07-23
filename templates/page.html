@@ -4,8 +4,8 @@
 <div class="pre-content">
 	<h1 id="section_0">{{displayTitle}}</h1>
 	<ul id="page-actions" class="hlist">
-		<li id="ca-edit" class="icon icon-edit icon-32px"></li><li id="ca-upload" class="icon icon-32px">
-		</li><li id="ca-talk"
+		<li id="ca-edit" class="icon icon-edit icon-32px"></li>{{#userCanUpload}}<li id="ca-upload" class="icon icon-32px">
+		</li>{{/userCanUpload}}<li id="ca-talk"
 			class="{{#isTalkPage}}selected{{/isTalkPage}} icon icon-32px icon-talk"><a href="{{talkLink}}" id="talk">{{talkLabel}}</a>
 		</li><li id="ca-watch"></li>
 	</ul>
