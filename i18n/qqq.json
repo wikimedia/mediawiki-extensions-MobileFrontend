@@ -346,5 +346,6 @@
 	"tag-mobile_edit": "Short change tag name for edits coming  from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit-description}}",
 	"tag-mobile_edit-description": "Short change tag description. for edits coming from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit}}",
 	"tag-mobile_web_edit": "Short change tag name for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit-description}}",
-	"tag-mobile_web_edit-description": "Short change tag description. for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit}}"
+	"tag-mobile_web_edit-description": "Short change tag description. for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit}}",
+	"skinname-minerva": "{{optional}}"
 }

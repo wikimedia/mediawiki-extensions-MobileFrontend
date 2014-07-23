@@ -6,8 +6,8 @@
     "action-mf-uploadbutton": "use the upload button on mobile pages.",
     "beta-feature-geonotahack": "Near this page",
     "beta-feature-geonotahack-description": "Discover pages which are geographically nearby to the content page you are currently reading.",
-    "beta-feature-minerva": "Enable mobile skin (Minerva) on desktop",
-    "beta-feature-minerva-description": "Make the skin used on mobile devices a selectable desktop skin under the appearance preferences tab.",
+    "beta-feature-minerva": "Enable mobile skin ({{int:skinname-minerva}}) on desktop",
+    "beta-feature-minerva-description": "Make the skin used on mobile devices a selectable desktop skin under the \"{{int:prefs-rendering}}\" preferences tab.",
     "mobile-frontend-account-create-captcha-placeholder": "Enter confirmation code",
     "mobile-frontend-account-create-email-placeholder": "Email address (optional)",
     "mobile-frontend-account-create-submit": "Sign up",
@@ -321,5 +321,6 @@
     "tag-mobile_edit": "Mobile edit",
     "tag-mobile_edit-description": "Edit made from mobile (web or app)",
     "tag-mobile_web_edit": "Mobile web edit",
-    "tag-mobile_web_edit-description": "Edit made from mobile web site"
+    "tag-mobile_web_edit-description": "Edit made from mobile web site",
+    "skinname-minerva": "Minerva"
 }
