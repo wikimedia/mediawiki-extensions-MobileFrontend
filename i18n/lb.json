@@ -175,6 +175,7 @@
 	"mobile-frontend-overlay-continue": "Viru fueren",
 	"mobile-frontend-page-menu-contents": "Inhalter",
 	"mobile-frontend-page-menu-history": "Versiounen",
+	"mobile-frontend-page-edit-summary": "<strong>Resumé vun der Ännerung</strong><span> $1</span>",
 	"mobile-frontend-password": "Passwuert:",
 	"mobile-frontend-password-confirm-placeholder": "Passwuert confirméieren",
 	"mobile-frontend-password-placeholder": "Passwuert",

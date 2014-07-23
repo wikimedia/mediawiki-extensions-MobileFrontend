@@ -86,7 +86,6 @@
 	"mobile-frontend-on": "UKLJUČENO",
 	"mobile-frontend-overlay-close": "Zatvori",
 	"mobile-frontend-overlay-continue": "Nastavi",
-	"mobile-frontend-overlay-escape": "Idi nazad",
 	"mobile-frontend-page-menu-contents": "sadržaj",
 	"mobile-frontend-page-menu-history": "Historija",
 	"mobile-frontend-password": "Lozinka/šifra:",
@@ -127,5 +126,5 @@
 	"mobile-frontend-watchlist-filter-talk": "Razgovor",
 	"mobile-frontend-watchlist-more": "više",
 	"mobile-frontend-watchlist-view": "Pogledaj svoj spisak praćenih stranica",
-	"mobilefrontend-random-explain": "Da li Vam je ova slučajnа stranica interesantna?"
+	"tag-mobile_web_edit": "Web izmjena mobilnim uređajem"
 }

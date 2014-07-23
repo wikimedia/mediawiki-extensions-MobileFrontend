@@ -36,7 +36,7 @@
 	"mobile-frontend-diffview-404-title": "גרסה בלתי־תקינה",
 	"mobile-frontend-diffview-anonymous": "משתמש אלמוני",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|נוסף בית אחד|נוספו $1 בתים}}",
-	"mobile-frontend-diffview-bytesnochange": "לא שונו בתים",
+	"mobile-frontend-diffview-bytesnochange": "אין שינוי בגודל",
 	"mobile-frontend-diffview-bytesremoved": "{{PLURAL:$1|הוסר בית אחד|הוסרו $1 בתים}}",
 	"mobile-frontend-diffview-editcount": "{{PLURAL:$1|עריכה אחד|<div>$1</div> עריכות}}",
 	"mobile-frontend-diffview-explained": "השורות הבאות נוספו (+) והוסרו (-):",

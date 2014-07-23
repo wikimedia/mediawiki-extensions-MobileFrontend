@@ -29,7 +29,7 @@
 	"mobile-frontend-diffview-404-title": "Versiune defectuoasă",
 	"mobile-frontend-diffview-anonymous": "Utilizator anonim",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|octet adăugat|octeți adăugați|de octeți adăugați}}",
-	"mobile-frontend-diffview-bytesnochange": "Niciun octet modificat",
+	"mobile-frontend-diffview-bytesnochange": "Nicio modificare în dimensiune",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|octet șters|octeți șterși|de octeți șterși}}",
 	"mobile-frontend-diffview-editcount": "{{PLURAL:$1|o modificare|$1 modificări|$1 de modificări}}",
 	"mobile-frontend-diffview-explained": "Următoarele rânduri au fost adăugate (+) și șterse (-):",

@@ -10,7 +10,8 @@
 			"Suriyaa Kudo",
 			"Umherirrender",
 			"Wnme",
-			"ChrisiPK"
+			"ChrisiPK",
+			"Robby"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet",
@@ -35,7 +36,7 @@
 	"mobile-frontend-diffview-404-title": "Ungültige Version",
 	"mobile-frontend-diffview-anonymous": "Anonymer Benutzer",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Ein Byte|$1 Byte}} hinzugefügt",
-	"mobile-frontend-diffview-bytesnochange": "Keine Bytes geändert",
+	"mobile-frontend-diffview-bytesnochange": "Keine Änderung der Größe",
 	"mobile-frontend-diffview-bytesremoved": "{{PLURAL:$1|Ein Byte|$1 Byte}} entfernt",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|Eine Bearbeitung|Bearbeitungen}}",
 	"mobile-frontend-diffview-explained": "Die folgenden Zeilen wurden hinzugefügt (+) und entfernt (−):",
