@@ -137,11 +137,14 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build page actions
 	 */
 	protected function renderPageActions( $data ) {
-		?><ul id="page-actions" class="hlist"><?php
-		foreach( $this->getPageActions() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		?></ul><?php
+		$actions = $this->getPageActions();
+		if ( $actions ) {
+			?><ul id="page-actions" class="hlist"><?php
+			foreach( $actions as $key => $val ):
+				echo $this->makeListItem( $key, $val );
+			endforeach;
+			?></ul><?php
+		}
 	}
 
 	/**
