@@ -16,6 +16,24 @@
       "revId": "9cfcf7f589729312d0d97a1cb7bfb3b3d0522595",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_9e706270",
+        "filename": "includes/Resources.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-07-23T00:27:06Z",
+      "side": 1,
+      "message": "Yeh.. the problem with this is View.js in mobile.startup needs it. I could add a lightweight wrapper, I wasn\u0027t so keen on this, but I guess your right.",
+      "parentUuid": "8e28a382_fe02c60b",
+      "revId": "9cfcf7f589729312d0d97a1cb7bfb3b3d0522595",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
