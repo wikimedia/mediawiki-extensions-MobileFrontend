@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_1edc721b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-23T00:44:25Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to be necessary anymore.",
+      "revId": "f2cd0e32660efe49056167f33149f45915c7d061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_fee086c9",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-07-23T00:44:25Z",
+      "side": 1,
+      "message": "I\u0027d rather put it in mobile.templates to group common functionality and make mobile.templates depend on mobile.head (so that M is present).",
+      "revId": "f2cd0e32660efe49056167f33149f45915c7d061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
