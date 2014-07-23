@@ -73,6 +73,7 @@ $autoloadClasses = array (
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
+	'SpecialMobileEditWatchlist' => 'specials/SpecialMobileEditWatchlist',
 	'SpecialMobileContributions' => 'specials/SpecialMobileContributions',
 	'SpecialNearby' => 'specials/SpecialNearby',
 	'SpecialMobileLanguages' => 'specials/SpecialMobileLanguages',

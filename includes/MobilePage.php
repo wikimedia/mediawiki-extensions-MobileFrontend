@@ -47,10 +47,12 @@ class MobilePage {
 	/**
 	 * Get a placeholder div container for thumbnails
 	 * @param string $className
+	 * @param string $iconClassName controls size of thumbnail, defaults to icon-32px
+	 * @return string
 	 */
-	static function getPlaceHolderThumbnailHtml( $className ) {
+	public static function getPlaceHolderThumbnailHtml( $className, $iconClassName = 'icon-32px' ) {
 		return Html::element( 'div', array(
-			'class' => 'listThumb list-thumb-placeholder icon icon-32px ' . $className,
+			'class' => 'listThumb list-thumb-placeholder icon ' . $iconClassName . ' ' . $className,
 		) );
 	}
 
