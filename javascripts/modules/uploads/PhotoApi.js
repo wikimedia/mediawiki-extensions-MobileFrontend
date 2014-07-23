@@ -157,7 +157,7 @@
 					comment: mw.msg( options.editSummaryMessage ),
 					file: options.file,
 					token: token,
-					text: M.template.get( 'wikitext/commons-upload' ).
+					text: M.template.get( 'wikitext/commons-upload.hogan' ).
 						render( {
 							suffix: mw.config.get( 'wgMFPhotoUploadAppendToDesc' ),
 							text: options.description,

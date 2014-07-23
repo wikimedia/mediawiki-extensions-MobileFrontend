@@ -21,7 +21,7 @@
 			this.api = new WatchstarApi( options );
 			this._super( options );
 		},
-		template: M.template.get( 'articleList' ),
+		template: M.template.get( 'articleList.hogan' ),
 		postRender: function( options ) {
 			this._super( options );
 			var pages = [], $li = this.$( 'li' ),

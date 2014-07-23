@@ -12,7 +12,7 @@
 	 */
 	ImageOverlay = Overlay.extend( {
 		className: 'overlay media-viewer',
-		template: M.template.get( 'modules/ImageOverlay' ),
+		template: M.template.get( 'modules/ImageOverlay.hogan' ),
 		closeOnBack: true,
 
 		defaults: {

@@ -8,8 +8,8 @@
 	 */
 	VisualEditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
-			header: M.template.get( 'modules/editor/VisualEditorOverlayHeader' ),
-			content: M.template.get( 'modules/editor/VisualEditorOverlay' )
+			header: M.template.get( 'modules/editor/VisualEditorOverlayHeader.hogan' ),
+			content: M.template.get( 'modules/editor/VisualEditorOverlay.hogan' )
 		},
 		className: 'overlay editor-overlay editor-overlay-ve',
 		editor: 'VisualEditor',

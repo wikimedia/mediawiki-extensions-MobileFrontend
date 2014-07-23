@@ -6,7 +6,7 @@ var
 	user = M.require( 'user' ),
 	TalkSectionOverlay = Overlay.extend( {
 		templatePartials: {
-			content: M.template.get( 'talkSection' )
+			content: M.template.get( 'talkSection.hogan' )
 		},
 		defaults: {
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),

@@ -31,7 +31,7 @@
 	}
 
 	Checkbox = View.extend( {
-		template: M.template.get( 'specials/mobileoptions/checkbox' ),
+		template: M.template.get( 'specials/mobileoptions/checkbox.hogan' ),
 		tagName: 'li',
 		defaults: {
 			onMsg: mw.msg( 'mobile-frontend-on' ),

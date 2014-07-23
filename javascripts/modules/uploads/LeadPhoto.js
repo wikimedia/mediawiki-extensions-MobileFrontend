@@ -3,7 +3,7 @@
 	var View = M.require( 'View' ), LeadPhoto;
 
 	LeadPhoto = View.extend( {
-		template: M.template.get( 'uploads/LeadPhoto' ),
+		template: M.template.get( 'uploads/LeadPhoto.hogan' ),
 
 		animate: function() {
 			this.$el.hide().slideDown();

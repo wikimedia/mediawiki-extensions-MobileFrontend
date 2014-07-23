@@ -18,7 +18,7 @@
 			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' )
 		},
 		templatePartials: {
-			content: M.template.get( 'overlays/talkSectionAdd' )
+			content: M.template.get( 'overlays/talkSectionAdd.hogan' )
 		},
 		initialize: function( options ) {
 			// If terms of use is enabled, include it in the licensing message

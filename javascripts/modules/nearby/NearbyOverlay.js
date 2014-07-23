@@ -11,7 +11,7 @@
 			active: false,
 			closeOnBack: true,
 			templatePartials: {
-				content: M.template.get( 'overlays/nearby' )
+				content: M.template.get( 'overlays/nearby.hogan' )
 			},
 			defaults: {
 				heading: mw.message( 'mobile-frontend-nearby-title' )

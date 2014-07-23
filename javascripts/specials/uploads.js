@@ -63,12 +63,12 @@ var
 	} );
 
 	PhotoItem = View.extend( {
-		template: M.template.get( 'specials/uploads/photo' ),
+		template: M.template.get( 'specials/uploads/photo.hogan' ),
 		tagName: 'li'
 	} );
 
 	PhotoList = View.extend( {
-		template: M.template.get( 'specials/uploads/userGallery' ),
+		template: M.template.get( 'specials/uploads/userGallery.hogan' ),
 		initialize: function() {
 			// how close a spinner needs to be to the viewport to trigger loading (px)
 			this.threshold = 1000;

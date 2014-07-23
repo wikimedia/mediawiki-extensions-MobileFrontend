@@ -4,7 +4,7 @@
 		LeadPhotoUploaderButton;
 
 	LeadPhotoUploaderButton = PhotoUploaderButton.extend( {
-		template: M.template.get( 'uploads/LeadPhotoUploaderButton' ),
+		template: M.template.get( 'uploads/LeadPhotoUploaderButton.hogan' ),
 		className: 'enabled',
 
 		defaults: {

@@ -67,8 +67,8 @@
 		 *     // {{>content}}
 		 *
 		 *     var SomeView = View.extend( {
-		 *     template: M.template.get( 'some' ),
-		 *     templatePartials: { content: M.template.get( 'sub' ) }
+		 *     template: M.template.get( 'some.hogan' ),
+		 *     templatePartials: { content: M.template.get( 'sub.hogan' ) }
 		 *     }
 		 *
 		 * @type {Object}

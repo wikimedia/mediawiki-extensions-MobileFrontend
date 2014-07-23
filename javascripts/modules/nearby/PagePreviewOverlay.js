@@ -16,7 +16,7 @@
 				source: 'nearby'
 			},
 			templatePartials: {
-				content: M.template.get( 'overlays/pagePreview' )
+				content: M.template.get( 'overlays/pagePreview.hogan' )
 			},
 			initialize: function( options ) {
 				var self = this, loader = new LoadingOverlay(),

@@ -19,7 +19,7 @@
 
 		TestOverlay = Overlay.extend( {
 			templatePartials: {
-				content: M.template.compile( '<div class="content">YO</div>' )
+				content: M.template.compile( '<div class="content">YO</div>', 'hogan' )
 			}
 		} );
 		overlay = new TestOverlay( { heading: 'Awesome' } );

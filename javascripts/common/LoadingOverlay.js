@@ -6,7 +6,7 @@
 	 * @extends Overlay
 	 */
 	LoadingOverlay = Overlay.extend( {
-		template: M.template.get( 'LoadingOverlay' )
+		template: M.template.get( 'LoadingOverlay.hogan' )
 	} );
 
 	M.define( 'LoadingOverlay', LoadingOverlay );

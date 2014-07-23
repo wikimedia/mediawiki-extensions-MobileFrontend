@@ -10,7 +10,7 @@
 		},
 		className: 'language-overlay overlay',
 		templatePartials: {
-			content: M.template.get( 'modules/languages/LanguageOverlay' )
+			content: M.template.get( 'modules/languages/LanguageOverlay.hogan' )
 		},
 
 		initialize: function( options ) {

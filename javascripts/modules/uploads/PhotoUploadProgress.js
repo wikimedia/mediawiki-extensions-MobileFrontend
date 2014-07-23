@@ -9,7 +9,7 @@
 			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' ),
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' )
 		},
-		template: M.template.get( 'uploads/PhotoUploadProgress' ),
+		template: M.template.get( 'uploads/PhotoUploadProgress.hogan' ),
 		fullScreen: false,
 
 		initialize: function( options ) {

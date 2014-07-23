@@ -32,7 +32,7 @@
 		 * @type {String}
 		 */
 		className: 'overlay',
-		template: M.template.get( 'Overlay' ),
+		template: M.template.get( 'Overlay.hogan' ),
 		defaults: {
 			headerButtonsListClassName: '',
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),

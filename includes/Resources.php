@@ -99,8 +99,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/toc/toc.less',
 		),
 		'templates' => array(
-			'modules/toc/toc',
-			'modules/toc/tocHeading'
+			'modules/toc/toc.hogan',
+			'modules/toc/tocHeading.hogan'
 		),
 		'messages' => array(
 			'toc'
@@ -186,8 +186,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.redlinks',
 		),
 		'templates' => array(
-			'page',
-			'section',
+			'page.hogan',
+			'section.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-language-article-heading',
@@ -247,8 +247,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/AbuseFilterPanel.js',
 		),
 		'templates' => array(
-			'modules/editor/AbuseFilterOverlay',
-			'modules/editor/AbuseFilterPanel',
+			'modules/editor/AbuseFilterOverlay.hogan',
+			'modules/editor/AbuseFilterPanel.hogan',
 		),
 		'messages' => array(
 			// AbuseFilterOverlay
@@ -274,7 +274,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/editor/editor.less',
 		),
 		'templates' => array(
-			'modules/editor/EditorOverlayBase',
+			'modules/editor/EditorOverlayBase.hogan',
 		),
 		'messages' => array(
 			// modules/editor/EditorOverlay.js
@@ -323,8 +323,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/VisualEditorOverlay.js',
 		),
 		'templates' => array(
-			'modules/editor/VisualEditorOverlayHeader',
-			'modules/editor/VisualEditorOverlay',
+			'modules/editor/VisualEditorOverlayHeader.hogan',
+			'modules/editor/VisualEditorOverlay.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-page-edit-summary',
@@ -341,8 +341,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/EditorOverlay.js',
 		),
 		'templates' => array(
-			'modules/editor/EditorOverlayHeader',
-			'modules/editor/EditorOverlay',
+			'modules/editor/EditorOverlayHeader.hogan',
+			'modules/editor/EditorOverlay.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-editor-viewing-source-page',
@@ -370,10 +370,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/uploads/PhotoUploadOverlay.less',
 		),
 		'templates' => array(
-			'uploads/LeadPhoto',
-			'uploads/UploadTutorial',
-			'uploads/PhotoUploadOverlay',
-			'uploads/PhotoUploadProgress',
+			'uploads/LeadPhoto.hogan',
+			'uploads/UploadTutorial.hogan',
+			'uploads/PhotoUploadOverlay.hogan',
+			'uploads/PhotoUploadProgress.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-success-article',
@@ -481,7 +481,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/search/pageImages.js',
 		),
 		'templates' => array(
-			'modules/search/SearchOverlay',
+			'modules/search/SearchOverlay.hogan',
 		),
 		'messages' => array(
 			// for search.js
@@ -511,9 +511,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			// talk.js
-			'overlays/talk',
-			'overlays/talkSectionAdd',
-			'talkSection',
+			'overlays/talk.hogan',
+			'overlays/talkSectionAdd.hogan',
+			'talkSection.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-talk-explained',
@@ -561,7 +561,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mediaViewer/ImageOverlay.js',
 		),
 		'templates' => array(
-			'modules/ImageOverlay',
+			'modules/ImageOverlay.hogan',
 		),
 		'messages' => array(
 			// mediaViewer.js
@@ -610,8 +610,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-overlay-continue',
 		),
 		'templates' => array(
-			'Overlay',
-			'LoadingOverlay',
+			'Overlay.hogan',
+			'LoadingOverlay.hogan',
 		),
 		'styles' => array(
 			'less/common/Overlay.less',
@@ -629,17 +629,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 		),
 		'templates' => array(
-			'wikitext/commons-upload',
+			'wikitext/commons-upload.hogan',
 			// SearchOverlay.js and Nearby.js
-			'articleList',
+			'articleList.hogan',
 			// PhotoUploaderButton.js
 			// For new page action menu
-			'uploads/LeadPhotoUploaderButton',
+			'uploads/LeadPhotoUploaderButton.hogan',
 			// @todo FIXME: this should be in special.uploads (need to split
 			// code in PhotoUploaderButton.js into separate files too)
-			'uploads/PhotoUploaderButton',
+			'uploads/PhotoUploaderButton.hogan',
 
-			'ctaDrawer',
+			'ctaDrawer.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/routes.js',
@@ -692,7 +692,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			// references.js
-			'ReferencesDrawer',
+			'ReferencesDrawer.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/references/references.js',
@@ -720,7 +720,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 		),
 		'templates' => array(
-			'modules/tutorials/PageActionOverlay',
+			'modules/tutorials/PageActionOverlay.hogan',
 		),
 	),
 
@@ -811,7 +811,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/languages/languages.js',
 		),
 		'templates' => array(
-			'modules/languages/LanguageOverlay',
+			'modules/languages/LanguageOverlay.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-language-heading',
@@ -826,7 +826,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 		),
 		'templates' => array(
-			'overlays/cleanup',
+			'overlays/cleanup.hogan',
 		),
 		'styles' => array(
 			'less/modules/issues.less',
@@ -843,7 +843,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
 		'templates' => array(
-			'overlays/pagePreview',
+			'overlays/pagePreview.hogan',
 		),
 		'dependencies' => array(
 			'mobile.stable.common',
@@ -899,8 +899,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/NotificationsOverlay.less',
 		),
 		'templates' => array(
-			'modules/notifications/NotificationsOverlayContent',
-			'modules/notifications/NotificationsOverlayFooter',
+			'modules/notifications/NotificationsOverlayContent.hogan',
+			'modules/notifications/NotificationsOverlayFooter.hogan',
 		),
 		'messages' => array(
 			// defined in Echo
@@ -979,7 +979,7 @@ $wgMobileSpecialPageModules = array(
 			'javascripts/specials/mobileoptions.js',
 		),
 		'templates' => array(
-			'specials/mobileoptions/checkbox',
+			'specials/mobileoptions/checkbox.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-off',
@@ -1016,7 +1016,7 @@ $wgMobileSpecialPageModules = array(
 			'mobile-frontend-nearby-link',
 		),
 		'templates' => array(
-			'overlays/nearby',
+			'overlays/nearby.hogan',
 		),
 		'dependencies' => array(
 			'mobile.stable.common',
@@ -1075,8 +1075,8 @@ $wgMobileSpecialPageModules = array(
 			'mobile.stable'
 		),
 		'templates' => array(
-			'specials/uploads/photo',
-			'specials/uploads/userGallery',
+			'specials/uploads/photo.hogan',
+			'specials/uploads/userGallery.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-donate-image-nouploads',

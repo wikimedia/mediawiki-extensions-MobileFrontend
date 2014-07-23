@@ -5,7 +5,7 @@
 			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
 		},
 		templatePartials: {
-			content: M.template.get( 'modules/editor/AbuseFilterOverlay' )
+			content: M.template.get( 'modules/editor/AbuseFilterOverlay.hogan' )
 		},
 		className: 'overlay abusefilter-overlay',
 

@@ -9,7 +9,7 @@ var module = (function() {
 				heading: '<strong>' + mw.msg( 'mobile-frontend-meta-data-issues-header' ) + '</strong>'
 			} ),
 			templatePartials: {
-				content: M.template.get( 'overlays/cleanup' )
+				content: M.template.get( 'overlays/cleanup.hogan' )
 			}
 		} );
 

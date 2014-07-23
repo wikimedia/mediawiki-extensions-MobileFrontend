@@ -19,8 +19,8 @@
 	 */
 	EditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
-			header: M.template.get( 'modules/editor/EditorOverlayHeader' ),
-			content: M.template.get( 'modules/editor/EditorOverlay' )
+			header: M.template.get( 'modules/editor/EditorOverlayHeader.hogan' ),
+			content: M.template.get( 'modules/editor/EditorOverlay.hogan' )
 		},
 		editor: 'SourceEditor',
 

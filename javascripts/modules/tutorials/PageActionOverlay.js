@@ -7,7 +7,7 @@
 	 * @extends ContentOverlay
 	 */
 	PageActionOverlay = ContentOverlay.extend( {
-		template: M.template.get( 'modules/tutorials/PageActionOverlay' ),
+		template: M.template.get( 'modules/tutorials/PageActionOverlay.hogan' ),
 		defaults: {
 			cancelMsg: mw.msg( 'cancel' )
 		}

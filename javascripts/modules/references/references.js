@@ -3,7 +3,7 @@
 
 	ReferencesDrawer = Drawer.extend( {
 		className: 'drawer position-fixed text references',
-		template: M.template.get( 'ReferencesDrawer' )
+		template: M.template.get( 'ReferencesDrawer.hogan' )
 	} );
 
 	function getReference( id ) {

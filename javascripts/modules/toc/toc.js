@@ -5,14 +5,14 @@
 
 	TableOfContents = View.extend( {
 		templatePartials: {
-			tocHeading: M.template.get( 'modules/toc/tocHeading' )
+			tocHeading: M.template.get( 'modules/toc/tocHeading.hogan' )
 		},
 		defaults: {
 			contentsMsg: mw.msg( 'toc' )
 		},
 		tagName: 'div',
 		className: 'toc-mobile',
-		template: M.template.get( 'modules/toc/toc' ),
+		template: M.template.get( 'modules/toc/toc.hogan' ),
 		postRender: function( options ) {
 			var log = MobileWebClickTracking.log;
 			this._super( options );

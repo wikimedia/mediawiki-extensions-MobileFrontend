@@ -49,7 +49,7 @@ QUnit.test( 'View.extend, with defined template', 4, function() {
 	var ChildView, view;
 	ChildView = View.extend( {
 		className: 'my-class',
-		template: M.template.compile( '<h1>{{title}}</h1><p>{{content}}</p>' ),
+		template: M.template.compile( '<h1>{{title}}</h1><p>{{content}}</p>', 'hogan' ),
 		title: function() {
 			return this.$( 'h1' ).text();
 		},
@@ -69,12 +69,12 @@ QUnit.test( 'View.extend, with partials', 2, function( assert ) {
 	var ParentView, ChildView, view;
 
 	ParentView = View.extend( {
-		template: M.template.compile( '<h1>{{title}}</h1>{{>content}}' )
+		template: M.template.compile( '<h1>{{title}}</h1>{{>content}}', 'hogan' )
 	} );
 
 	ChildView = ParentView.extend( {
 		templatePartials: {
-			content: M.template.compile( '<p>{{text}}</p>' )
+			content: M.template.compile( '<p>{{text}}</p>', 'hogan' )
 		}
 	} );
 
@@ -128,7 +128,7 @@ QUnit.test( 'View.extend, extending defaults', 1, function( assert ) {
 QUnit.test( 'View#preRender', 1, function() {
 	var ChildView, view;
 	ChildView = View.extend( {
-		template: M.template.compile( '<p>{{something}}</p>' ),
+		template: M.template.compile( '<p>{{something}}</p>', 'hogan' ),
 		preRender: function( options ) {
 			options.something = 'hello';
 		}

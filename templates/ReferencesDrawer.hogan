@@ -1,4 +1,3 @@
 <button class="cancel icon icon-cancel icon-12px"></button>
 <h3>{{title}}</h3>
 {{{text}}}
-

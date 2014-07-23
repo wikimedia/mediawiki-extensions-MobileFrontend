@@ -9,7 +9,7 @@
 
 	SearchOverlay = Overlay.extend( {
 		className: 'overlay search-overlay',
-		template: M.template.get( 'modules/search/SearchOverlay' ),
+		template: M.template.get( 'modules/search/SearchOverlay.hogan' ),
 		defaults: {
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
 			clearMsg: mw.msg( 'mobile-frontend-clear-search' ),

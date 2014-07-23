@@ -10,7 +10,7 @@
 		user = M.require( 'user' ),
 		TalkOverlay = Overlay.extend( {
 			templatePartials: {
-				content: M.template.get( 'overlays/talk' )
+				content: M.template.get( 'overlays/talk.hogan' )
 			},
 			defaults: {
 				addTopicLabel: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),

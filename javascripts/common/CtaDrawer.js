@@ -14,7 +14,7 @@ var Drawer = M.require( 'Drawer' ),
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
 			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
 		},
-		template: M.template.get( 'ctaDrawer' ),
+		template: M.template.get( 'ctaDrawer.hogan' ),
 
 		preRender: function( options ) {
 			var params = $.extend( {
