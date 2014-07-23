@@ -180,6 +180,45 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * DiffViewHeader hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/DiffViewHeader
+	 *
+	 * Redirect Diff page to mobile version if appropriate
+	 *
+	 * @param DifferenceEngine $diff DifferenceEngine object that's calling
+	 * @param Revision $oldRev Revision object of the "old" revision (may be null/invalid)
+	 * @param Revision $newRev Revision object of the "new" revision
+	 * @return bool
+	 */
+	public static function onDiffViewHeader( $diff, $oldRev, $newRev ) {
+		$context = MobileContext::singleton();
+
+		// Only do redirects to MobileDiff if user is in mobile view
+		if ( $context->shouldDisplayMobileView() ) {
+			$output = $context->getOutput();
+			$newRevId = $newRev->getId();
+
+			// The MobileDiff page currently only supports showing a single revision, so
+			// only redirect to MobileDiff if we are sure this isn't a multi-revision diff.
+			if ( $oldRev ) {
+				// Get the revision immediately before the new revision
+				$prevRev = $newRev->getPrevious();
+				if ( $prevRev ) {
+					$prevRevId = $prevRev->getId();
+					$oldRevId = $oldRev->getId();
+					if ( $prevRevId === $oldRevId ) {
+						$output->redirect( SpecialPage::getTitleFor( 'MobileDiff', $newRevId )->getFullURL() );
+					}
+				}
+			} else {
+				$output->redirect( SpecialPage::getTitleFor( 'MobileDiff', $newRevId )->getFullURL() );
+			}
+		}
+
+		return true;
+	}
+
+	/**
 	 * ResourceLoaderTestModules hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
 	 *
