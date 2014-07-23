@@ -68,7 +68,3 @@ mw.mobileFrontend = {
 		this._modules[ id ] = obj;
 	}
 };
-
-// Load tablet style module
-// FIXME: Remove this after cache clears for skins.minerva.tablet.styles
-mw.loader.using( 'skins.minerva.tablet.styles', jQuery.noop );
