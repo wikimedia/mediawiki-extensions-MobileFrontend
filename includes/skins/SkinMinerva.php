@@ -801,6 +801,7 @@ class SkinMinerva extends SkinTemplate {
 		// mobile specific config variables
 		if ( $this->mobileContext->shouldDisplayMobileView() ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
+			$vars['wgUserCanUpload'] = $user->isAllowed( 'mf-uploadbutton' );
 		}
 
 		return $vars;

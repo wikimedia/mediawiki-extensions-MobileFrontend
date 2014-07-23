@@ -27,6 +27,7 @@
 			},
 			inBetaOrAlpha: M.isBetaGroupMember(),
 			isMainPage: false,
+			userCanUpload: mw.config.get( 'wgUserCanUpload' ),
 			talkLabel: mw.msg( 'mobile-frontend-talk-overlay-header' ),
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' ),
 			languageLabel: mw.msg( 'mobile-frontend-language-article-heading' )
