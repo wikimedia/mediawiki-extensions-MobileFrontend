@@ -34,14 +34,14 @@
 		show: function() {
 			this._super();
 			if ( this.target === undefined ) {
-				// FIXME: MobileViewTarget does not accept a second argument
 				// FIXME: we have to initialize MobileViewTarget after this.$el
 				// is attached to DOM, maybe we should attach it earlier and hide
 				// overlays in a different way?
 				this.target = new ve.init.mw.MobileViewTarget( this.$( '.surface' ), {
 					// || undefined so that scrolling is not triggered for the lead (0) section
 					// (which has no header to scroll to)
-					section: this.options.sectionId || undefined
+					section: this.options.sectionId || undefined,
+					isIos: M.isIos
 				} );
 				this.target.activating = true;
 				this.target.load();

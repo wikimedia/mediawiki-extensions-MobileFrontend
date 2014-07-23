@@ -311,8 +311,14 @@
 	}
 
 	.overlay-content {
-		overflow-y: scroll; // has to be scroll, not auto
+		// has to be scroll, not auto
+		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
+		// prevent disappearing after scrolling when -webkit-overflow-scrolling: touch
+		// is used (http://stackoverflow.com/a/10170170)
+		* {
+			-webkit-transform: translate3d(0,0,0);
+		}
 	}
 }
 
