@@ -18,11 +18,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	echo "This is a MediaWiki extension and cannot run standalone.\n";
 	die( -1 );
 }
-// Depends on Mantle extension
-if ( !class_exists( 'MantleHooks' ) ) {
-	echo "Please install the Mantle MediaWiki extension.\n";
-	die( -1 );
-}
 
 // Too many people are trying to use master MF with stable MediaWiki releases
 if ( version_compare( $wgVersion, '1.23c', '<' ) ) {
@@ -66,6 +61,7 @@ $autoloadClasses = array (
 	'InlineDiffFormatter' => 'diff/InlineDiffFormatter',
 	'InlineDifferenceEngine' => 'diff/InlineDifferenceEngine',
 
+	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
 	'MobileSiteModule' => 'modules/MobileSiteModule',
 
 	'SpecialMobileWebApp' => 'specials/SpecialMobileWebApp',
@@ -195,7 +191,7 @@ function efMobileFrontend_Setup() {
 // ResourceLoader modules
 
 /**
- * A boilerplate for RL modules that do not support templates
+ * A boilerplate for the MFResourceLoaderModule that does not support templates
  * Agnostic to whether desktop or mobile specific.
  */
 $wgMFResourceBoilerplate = array(
@@ -203,12 +199,11 @@ $wgMFResourceBoilerplate = array(
 	'remoteExtPath' => 'MobileFrontend',
 );
 /**
- * A boilerplate for the ResourceLoaderTemplateModule that supports templates
+ * A boilerplate for the MFResourceLoaderModule that supports templates
  */
 $wgMFMobileResourceBoilerplate = $wgMFResourceBoilerplate + array(
 	'localTemplateBasePath' => __DIR__ . '/templates',
-	'class' => 'ResourceLoaderTemplateModule',
-	'targets' => array( 'mobile', 'desktop' ),
+	'class' => 'MFResourceLoaderModule',
 );
 
 /**

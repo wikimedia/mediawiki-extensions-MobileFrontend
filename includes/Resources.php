@@ -25,12 +25,11 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
+	// @todo FIXME: Upstream to core
 	'mobile.templates' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'ext.mantle.hogan',
-		),
 		'scripts' => array(
-			'javascripts/common/template.js',
+			'javascripts/externals/hogan.js',
+			'javascripts/common/templates.js'
 		),
 		'targets' => array( 'mobile', 'desktop' ),
 	),

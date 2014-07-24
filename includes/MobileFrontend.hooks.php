@@ -714,6 +714,7 @@ class MobileFrontendHooks {
 					'DeviceDetectionTest.php',
 					'MobileContextTest.php',
 					'MobileFormatterTest.php',
+					'modules/MFResourceLoaderModuleTest.php',
 					'specials/MobileSpecialPageTest.php',
 					'specials/SpecialMobileDiffTest.php',
 				)

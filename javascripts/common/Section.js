@@ -9,7 +9,7 @@
 	 * @extends View
 	 */
 	Section = View.extend( {
-		template: M.template.get( 'section' ),
+		template: mw.template.get( 'section' ),
 		defaults: {
 			line: '',
 			text: '',

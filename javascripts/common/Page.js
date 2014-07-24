@@ -10,7 +10,7 @@
 	 * @extends View
 	 */
 	Page = View.extend( {
-		template: M.template.get( 'page' ),
+		template: mw.template.get( 'page' ),
 		defaults: {
 			// id defaults to 0 which represents a new page. Be sure to override to avoid side effects.
 			id: 0,
