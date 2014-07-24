@@ -23,11 +23,14 @@
 			"Vuh",
 			"WTM",
 			"Woytecr",
-			"Alan ffm"
+			"Alan ffm",
+			"Pio387"
 		]
 	},
 	"beta-feature-geonotahack": "W pobliżu",
 	"beta-feature-geonotahack-description": "Umożliwia wyszukanie artykułów opisujących miejsca położone niedaleko miejsca, o którym czytasz.",
+	"beta-feature-minerva": "Udostępnij skórkę mobilną ({{int:skinname-minerva}}) na pulpicie",
+	"beta-feature-minerva-description": "Pozwala wybrać mobilną skórkę jako domyślną (w zakładce preferencji „Wygląd”) i używać jej podczas normalnego przeglądania.",
 	"mobile-frontend-account-create-captcha-placeholder": "Wprowadź kod potwierdzenia",
 	"mobile-frontend-account-create-email-placeholder": "Adres e-mail (opcjonalnie)",
 	"mobile-frontend-account-create-submit": "Zarejestruj się",
@@ -80,6 +83,7 @@
 	"mobile-frontend-editor-previewing-page": "<strong>Podgląd</strong><span> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Przekierowanie do edytora...",
 	"mobile-frontend-editor-save": "Zapisz",
+	"mobile-frontend-editor-source-editor": "Edytuj kod źródłowy",
 	"mobile-frontend-editor-success": "Powiodło się! Twoja edycja została zapisana.",
 	"mobile-frontend-editor-success-landmark-1": "Gratulacje, od teraz jesteś edytorem {{GRAMMAR:D.lp|{{SITENAME}}}}!",
 	"mobile-frontend-editor-success-new-page": "Gratulacje, stworzyłeś nową stronę!",
@@ -106,6 +110,7 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-404-desc": "Nie można odnaleźć strony, której szukasz.",
 	"mobile-frontend-generic-404-title": "Błąd - nie znaleziono strony",
+	"mobile-frontend-generic-login": "{{grammar:B.lp|{{SITENAME}}}} tworzą ludzie tacy jak Ty.",
 	"mobile-frontend-history": "Zobacz historię zmian tej strony.",
 	"mobile-frontend-history-404-desc": "Nie można zobaczyć historii strony, która nie istnieje. Może została usunięta bądź wybrano błędny link.",
 	"mobile-frontend-history-404-title": "Nie ma takiej strony",
@@ -285,5 +290,6 @@
 	"tag-mobile_edit": "Z internetu mobilnego",
 	"tag-mobile_edit-description": "Edycja z mobile web lub z aplikacji mobilnej",
 	"tag-mobile_web_edit": "edycja z mobile web",
-	"tag-mobile_web_edit-description": "Edycja z mobile web"
+	"tag-mobile_web_edit-description": "Edycja z mobile web",
+	"skinname-minerva": "Minerwa"
 }

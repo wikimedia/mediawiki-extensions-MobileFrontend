@@ -8,7 +8,7 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob e Benotzer de mobilen Interface benotzt fir z'änneren",
 	"beta-feature-geonotahack": "No bei dëser Säit",
-	"beta-feature-minerva": "Mobilt Ausgesinn (Minerva) um Desktop aktivéieren",
+	"beta-feature-minerva": "Mobilt Ausgesinn ({{int:skinname-minerva}}) um Desktop aktivéieren",
 	"mobile-frontend-account-create-captcha-placeholder": "Confirmatiounscode aginn",
 	"mobile-frontend-account-create-email-placeholder": "E-Mailadress (fakultativ)",
 	"mobile-frontend-account-create-submit": "Schreift Iech an",

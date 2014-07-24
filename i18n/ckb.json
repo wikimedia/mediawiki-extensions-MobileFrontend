@@ -27,10 +27,8 @@
 	"mobile-frontend-main-menu-watchlist": "پێرستی چاودێری",
 	"mobile-frontend-missing-image": "وێنە",
 	"mobile-frontend-news-items": "لە ھەواڵەکاندا",
-	"mobile-frontend-overlay-escape": "بگەڕێوە",
 	"mobile-frontend-page-menu-contents": "ناوەرۆکەکان",
 	"mobile-frontend-page-menu-history": "مێژوو",
-	"mobile-frontend-page-saving": "<strong>پاشەکەوتی</strong><span> $1</span>",
 	"mobile-frontend-password": "تێپەڕوشە:",
 	"mobile-frontend-password-placeholder": "تێپەڕوشە",
 	"mobile-frontend-random-button": "بە ھەڵکەوت",
@@ -45,5 +43,6 @@
 	"mobile-frontend-watchlist-filter-articles": "پەڕەکان",
 	"mobile-frontend-watchlist-filter-other": "دیکە",
 	"mobile-frontend-watchlist-filter-talk": "لێدوان",
+	"right-mf-uploadbutton": "بەکارھێنانی دوگمەی بارکردن لە پەڕەکانی مۆبایلدا",
 	"tag-mobile_edit": "دەستکاریی مۆبایل"
 }
