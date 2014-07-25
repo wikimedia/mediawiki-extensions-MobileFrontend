@@ -16,6 +16,24 @@
       "revId": "9891c8a9d394db7e7770019b0503214998e10da4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_0ced4cee",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-25T20:12:11Z",
+      "side": 1,
+      "message": "Sure, thought, that \"canUseUpload\" indicates a user action, but you\u0027re right, that it\u0027s maybe not enough :) And i have no problem to change it :P",
+      "parentUuid": "8e28a382_6cde1046",
+      "revId": "9891c8a9d394db7e7770019b0503214998e10da4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
