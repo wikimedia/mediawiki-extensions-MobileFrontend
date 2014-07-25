@@ -6,7 +6,8 @@
 			"M hamlet",
 			"Pandukht",
 			"Vadgt",
-			"Xelgen"
+			"Xelgen",
+			"Arman musikyan"
 		]
 	},
 	"beta-feature-geonotahack": "Մոտակայքում",
@@ -25,6 +26,7 @@
 	"mobile-frontend-diffview-404-title": "Սխալ տարբերակի համար։",
 	"mobile-frontend-diffview-anonymous": "Անանուն մասնակից",
 	"mobile-frontend-diffview-bytesadded": "Ավելացվել է $1 բայտ",
+	"mobile-frontend-editor-abusefilter-read-more": "Իմանալ ավելին",
 	"mobile-frontend-editor-editing-page": "<strong>Խմբագրում</strong> <span>$1</span>",
 	"mobile-frontend-editor-previewing-page": "<strong>Նախադիտում</strong> <span>$1</span>",
 	"mobile-frontend-featured-article": "Օրվա ընտրված հոդվածը",
@@ -39,10 +41,6 @@
 	"mobile-frontend-view": "Տեսքը բջջայինով",
 	"mobile-frontend-view-mobile": "Հեռախոս",
 	"mobile-frontend-watchlist-filter-articles": "Հոդվածների էջեր",
-	"mobilefrontend-keepgoing-cancel": "Ոչ,շնորհակալություն:",
-	"mobilefrontend-keepgoing-links-ask-again": "Ուղղե՞լ մեկ այլ էջ։",
-	"mobilefrontend-keepgoing-links-ask-first": "Շնորհավորո՜ւմ ենք Ձեր առաջին խմբագրման կապակցությամբ։ Կցանկանա՞ք օգնել, հղումներ ավելացնելով նորաստեղծ էջում։",
-	"mobilefrontend-keepgoing-links-title": "Հղումներ ավելացնել",
-	"mobilefrontend-keepgoing-saved-title": "Խմբագրումը պահպանված է:",
+	"mobile-frontend-watchlist-more": "Ավելին",
 	"nearby": "Էջեր մոտակա օբյեկտների մասին։"
 }

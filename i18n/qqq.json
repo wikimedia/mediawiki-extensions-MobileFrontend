@@ -31,7 +31,7 @@
 	"action-mf-uploadbutton": "The error message, if the user don't have the right to see the upload button on mobile pages.\n\n{{Doc-action|mf-uploadbutton}}",
 	"beta-feature-geonotahack": "Title for near this page beta feature.\n{{Identical|Near this page}}",
 	"beta-feature-geonotahack-description": "Description for near this page beta feature.",
-	"beta-feature-minerva": "Name of the Minerva beta feature.\n\nUsed as checkbox label.\n\nSee also:\n* {{msg-mw|Beta-feature-minerva-description}}",
+	"beta-feature-minerva": "Name of the Minerva beta feature. Used as checkbox label.\n\nRefers to {{msg-mw|Skinname-minerva}}.\n\nSee also:\n* {{msg-mw|Beta-feature-minerva-description}}",
 	"beta-feature-minerva-description": "Describe the Minerva beta feature - it makes a new skin available.\n\nThis description is for the label {{msg-mw|Beta-feature-minerva}}.",
 	"mobile-frontend-account-create-captcha-placeholder": "Placeholder for captcha input field",
 	"mobile-frontend-account-create-email-placeholder": "Placeholder for email address field",

@@ -236,6 +236,8 @@
 	"mobile-frontend-watchlist-removed": "\"$1\" on sinu jälgimisloendist eemaldatud.",
 	"mobile-frontend-watchlist-signup-action": "Registreeru, et alustada oma jälgimisloendit.",
 	"mobile-frontend-watchlist-view": "Vaata oma jälgimisloendit",
+	"mobile.css": "/* Siin asuv kaskaadilaadistik puudutab kõiki mobiilisaidi kasutajaid. */",
+	"mobile.js": "/* Siin asuv JavaScript laaditakse kõigi mobiilisaidi kasutajate jaoks. */",
 	"nearby": "Leheküljed sinu lähedal",
 	"tag-mobile_edit": "Mobiilimuudatus",
 	"tag-mobile_edit-description": "Mobiilisaidil tehtud muudatus (veebis või rakenduses)",
