@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_6cde1046",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-25T20:09:44Z",
+      "side": 1,
+      "message": "Can we rename this \u0027userCanUpload\u0027 so that it is clear in the skin code that this is specifically related to the user (rather than the page or wiki)?",
+      "revId": "9891c8a9d394db7e7770019b0503214998e10da4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
