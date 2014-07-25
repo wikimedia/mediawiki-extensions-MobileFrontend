@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_8c8edc31",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-25T20:17:04Z",
+      "side": 1,
+      "message": "Yes, it is clear that it is a user action, but I meant we should make it more clear that the permission is related to the user. Not sure what the best name would be.",
+      "parentUuid": "8e28a382_0ced4cee",
+      "revId": "9891c8a9d394db7e7770019b0503214998e10da4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_6cacd09d",
         "filename": "includes/MobileContext.php",
         "patchSetId": 5
