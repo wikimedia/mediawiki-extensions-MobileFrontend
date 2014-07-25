@@ -59,7 +59,7 @@
 		},
 
 		_positionImage: function() {
-			var detailsHeight = this.$( '.details' ).height(),
+			var detailsHeight = this.$( '.details' ).outerHeight(),
 				windowWidth = $( window ).width(),
 				windowHeight = $( window ).height() - detailsHeight,
 				windowRatio = windowWidth / windowHeight,
