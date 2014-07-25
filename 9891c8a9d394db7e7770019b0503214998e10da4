@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_acbab8b3",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-25T20:24:37Z",
+      "side": 1,
+      "message": "Yeah, userCanUpload() sounds good to me (plus it is similar to the pseudo-global var we are using). Let\u0027s use that.",
+      "parentUuid": "8e28a382_4c935452",
+      "revId": "9891c8a9d394db7e7770019b0503214998e10da4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_6cacd09d",
         "filename": "includes/MobileContext.php",
         "patchSetId": 5
