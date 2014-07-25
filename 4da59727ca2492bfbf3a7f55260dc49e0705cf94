@@ -16,6 +16,24 @@
       "revId": "4da59727ca2492bfbf3a7f55260dc49e0705cf94",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_0c454cb9",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-25T20:54:07Z",
+      "side": 1,
+      "message": "oops, I mean...\nif (\n!$this-\u003eshouldDisplayMobileView() ||\n( $user-\u003eisAllowed( \u0027mf-uploadbutton\u0027 ) \u0026\u0026 $user-\u003egetEditCount() \u003e\u003d $wgMFUploadMinEdits )\n)",
+      "parentUuid": "8e28a382_8c313c59",
+      "revId": "4da59727ca2492bfbf3a7f55260dc49e0705cf94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
