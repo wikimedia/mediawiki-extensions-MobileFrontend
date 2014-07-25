@@ -532,3 +532,8 @@ $wgMFShowRedLinks = false;
  * Specify whether show redlinks (page doesn't exist) for anonymous users.
  */
 $wgMFShowRedLinksAnon = false;
+
+/**
+ * Set the minimum edits the user needs before they can upload images in mobile mode
+ */
+$wgMFUploadMinEdits = 0;
