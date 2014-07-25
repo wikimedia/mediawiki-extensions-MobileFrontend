@@ -34,6 +34,23 @@
       "revId": "9891c8a9d394db7e7770019b0503214998e10da4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_6cacd09d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-25T20:15:08Z",
+      "side": 1,
+      "message": "We should change it so that these two conditions only apply if the user is in mobileMode. If someone is using the Minerva skin in desktop mode, the normal upload conditions should apply instead.",
+      "revId": "9891c8a9d394db7e7770019b0503214998e10da4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
