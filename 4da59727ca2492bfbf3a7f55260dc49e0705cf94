@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_8c313c59",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-25T20:52:53Z",
+      "side": 1,
+      "message": "This will prohibit all users in desktop mode from uploading. Needs to be something like...\nif (\n  !$this-\u003eshouldDisplayMobileView() ||\n  ( $user-\u003eisAllowed( \u0027mf-uploadbutton\u0027 ) \u0026\u0026 $this-\u003eshouldDisplayMobileView() )\n)",
+      "revId": "4da59727ca2492bfbf3a7f55260dc49e0705cf94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
