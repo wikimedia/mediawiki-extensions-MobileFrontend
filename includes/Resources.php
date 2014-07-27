@@ -1166,3 +1166,8 @@ $wgMinervaSpecialPageModules = array(
 
 $wgResourceModules = array_merge( $wgResourceModules, $wgMobileSpecialPageModules );
 $wgResourceModules = array_merge( $wgResourceModules, $wgMinervaSpecialPageModules );
+
+// Module customizations
+$wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
+	'mediawiki.skinning.content.parsoid' => array(),
+);
