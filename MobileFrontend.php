@@ -18,11 +18,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	echo "This is a MediaWiki extension and cannot run standalone.\n";
 	die( -1 );
 }
-// Depends on Mantle extension
-if ( !class_exists( 'MantleHooks' ) ) {
-	echo "Please install the Mantle MediaWiki extension.\n";
-	die( -1 );
-}
 
 // Too many people are trying to use master MF with stable MediaWiki releases
 if ( version_compare( $wgVersion, '1.23c', '<' ) ) {
@@ -171,6 +166,12 @@ function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
 		$wgResourceLoaderLESSImportPaths,
 		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall;
+
+	// Depends on Mantle extension
+	if ( !class_exists( 'MantleHooks' ) ) {
+		echo "Please install the Mantle MediaWiki extension.\n";
+		die( -1 );
+	}
 
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
