@@ -137,26 +137,6 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Whether the user is allowed to upload
-	 * @return boolean
-	 */
-	public function userCanUpload() {
-		global $wgMFUploadMinEdits, $wgEnableUploads;
-		$user = $this->getUser();
-
-		if ( $wgEnableUploads ) {
-			// Make sure the user is either in desktop mode or meets the special
-			// conditions necessary for uploading in mobile mode.
-			if ( !$this->mobileContext->shouldDisplayMobileView() ||
-				( $user->isAllowed( 'mf-uploadbutton' ) && $user->getEditCount() >= $wgMFUploadMinEdits )
-			) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	/**
 	 * Overrides Skin::doEditSectionLink
 	 * @param Title $nt
 	 * @param string $section
@@ -307,7 +287,7 @@ class SkinMinerva extends SkinTemplate {
 			)
 		);
 		if ( $this->isMobileMode ) {
-			if ( $this->userCanUpload() ) {
+			if ( $this->mobileContext->userCanUpload() ) {
 				$items['uploads'] = array(
 					'links' => array(
 						array(
@@ -707,7 +687,7 @@ class SkinMinerva extends SkinTemplate {
 		if (
 			$this->isAllowedPageAction( 'upload' )
 			&& !$title->isMainPage()
-			&& $this->userCanUpload()
+			&& $this->mobileContext->userCanUpload()
 		) {
 			$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
 				'class' => 'icon icon-32px' );
@@ -822,7 +802,7 @@ class SkinMinerva extends SkinTemplate {
 		// mobile specific config variables
 		if ( $this->mobileContext->shouldDisplayMobileView() ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
-			$vars['wgUserCanUpload'] = $this->userCanUpload();
+			$vars['wgUserCanUpload'] = $this->mobileContext->userCanUpload();
 		}
 
 		return $vars;

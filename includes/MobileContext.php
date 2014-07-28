@@ -144,6 +144,26 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Whether the user is allowed to upload
+	 * @return boolean
+	 */
+	public function userCanUpload() {
+		global $wgMFUploadMinEdits, $wgEnableUploads;
+		$user = $this->getUser();
+
+		if ( $wgEnableUploads ) {
+			// Make sure the user is either in desktop mode or meets the special
+			// conditions necessary for uploading in mobile mode.
+			if ( !$this->shouldDisplayMobileView() ||
+				( $user->isAllowed( 'mf-uploadbutton' ) && $user->getEditCount() >= $wgMFUploadMinEdits )
+			) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
 	 * Check whether the device is a mobile device
 	 * @return bool
 	 */
