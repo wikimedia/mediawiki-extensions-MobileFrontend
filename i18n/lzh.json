@@ -42,7 +42,7 @@
 	"mobile-frontend-languages-header": "語言",
 	"mobile-frontend-languages-header-page": "$1 - 語言",
 	"mobile-frontend-languages-nonexistent-title": "$1之頁無存也。",
-	"mobile-frontend-logged-in-homepage-notification": "歡迎，好[//zh-classical.m.wikipedia.org/wiki/文言 文言]者$1！",
+	"mobile-frontend-logged-in-homepage-notification": "歡迎，好文言之人$1！",
 	"mobile-frontend-logged-out": "未登簿",
 	"mobile-frontend-login": "登簿",
 	"mobile-frontend-main-menu-account-create": "增簿",

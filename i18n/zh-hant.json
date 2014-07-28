@@ -22,7 +22,7 @@
 	"beta-feature-geonotahack": "此頁面附近",
 	"beta-feature-geonotahack-description": "發現您閱讀中頁面於地理中臨近頁面。",
 	"beta-feature-minerva": "於桌面版啟用手機版皮膚（{{int:skinname-minerva}}）",
-	"beta-feature-minerva-description": "使行動裝置皮膚可在桌面版的外觀設定頁「{{int:prefs-rendering}}」上選擇。",
+	"beta-feature-minerva-description": "使手機裝置皮膚可在桌面版的外觀設定頁「{{int:prefs-rendering}}」上選擇。",
 	"mobile-frontend-account-create-captcha-placeholder": "鍵入確認碼",
 	"mobile-frontend-account-create-email-placeholder": "電郵位址（可選）",
 	"mobile-frontend-account-create-submit": "註冊",
