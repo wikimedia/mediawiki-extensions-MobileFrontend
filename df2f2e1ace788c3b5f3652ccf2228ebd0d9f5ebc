@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_99fdf56b",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-07-28T01:55:04Z",
+      "side": 1,
+      "message": "This is not how you express dependencies upon other extensions, it broke Mantle qunit tests ironically.\n\nIf you absolutely must, use $wgExtensionFunctions to avoid requiring a specific load order.",
+      "revId": "df2f2e1ace788c3b5f3652ccf2228ebd0d9f5ebc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
