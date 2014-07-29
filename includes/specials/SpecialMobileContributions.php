@@ -49,8 +49,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
 		if ( $par ) {
 			// enter article history view
-			$this->user = User::newFromName( $par );
-			if ( $this->user && $this->user->idForName() ) {
+			$this->user = User::newFromName( $par, false );
+			if ( $this->user && ( $this->user->idForName() || User::isIP( $par ) ) ) {
 				// set page title as on desktop site - bug 66656
 				$username = $this->user->getName();
 				$out = $this->getOutput();
@@ -59,7 +59,11 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 					$this->msg( 'contributions-title', $username )->plain()
 				)->inContentLanguage() );
 
-				$this->renderHeaderBar( $this->user->getUserPage() );
+				$userPage = htmlspecialchars( $par );
+				if ( !User::isIP( $par ) ) {
+					$userPage = $this->user->getUserPage();
+				}
+				$this->renderHeaderBar( $userPage );
 				$res = $this->doQuery();
 				$this->showContributions( $res );
 				wfProfileOut( __METHOD__ );

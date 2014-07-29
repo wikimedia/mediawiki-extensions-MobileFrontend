@@ -55,13 +55,23 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Adds HTML to render a header at the top of the feed
-	 * @param Title $title The page to link to
+	 * @param Title|string $title The page to link to or a string to show
 	 */
 	protected function renderHeaderBar( $title ) {
+		if ( $title instanceof Title ) {
+			$headerTitle = $this->getHeaderBarLink( $title );
+		} else {
+			// manually style it as a userlink
+			$headerTitle = Html::element(
+				'span',
+				array( 'class' => 'mw-mf-user icon icon-16px icon-text'),
+				$title
+			);
+		}
 		$this->getOutput()->addHtml(
 			Html::openElement( 'div', array( 'class' => 'content-header' ) ) .
 			Html::openElement( 'h2', array() ) .
-				$this->getHeaderBarLink( $title ) .
+				$headerTitle .
 				Html::closeElement( 'h2' ) .
 			Html::closeElement( 'div' )
 		);
