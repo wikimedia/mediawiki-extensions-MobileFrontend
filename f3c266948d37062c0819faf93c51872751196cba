@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_80131f5c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 708,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T22:28:51Z",
+      "side": 1,
+      "message": "Need a space after hidden. Would probably be cleaner to just do:\nif ( $menu[\u0027talk\u0027][\u0027class\u0027] \u003d\u003d\u003d \u0027new\u0027 ) {\n  $menu[\u0027talk\u0027][\u0027class\u0027] \u003d \u0027hidden icon icon-32px icon-talk\u0027;\n} else {\n  $menu[\u0027talk\u0027][\u0027class\u0027] \u003d \u0027icon icon-32px icon-talk\u0027;\n}",
+      "revId": "f3c266948d37062c0819faf93c51872751196cba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_604dd375",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T22:28:51Z",
+      "side": 1,
+      "message": "Can you add a FIXME comment above the .hidden rule in common-js.less to remove it after the cache has cleared? If we have the rule here, we won\u0027t need it in common-js.less.",
+      "revId": "f3c266948d37062c0819faf93c51872751196cba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
