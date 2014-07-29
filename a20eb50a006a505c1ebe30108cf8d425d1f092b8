@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_415ae785",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 706,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T00:53:20Z",
+      "side": 1,
+      "message": "Please break this out into an if...else statement so it is easier to read, per https://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Ternary_operator",
+      "revId": "a20eb50a006a505c1ebe30108cf8d425d1f092b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_e11e73bd",
+        "filename": "less/common/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T00:53:20Z",
+      "side": 1,
+      "message": "This is already in less/common/common-js.less.",
+      "revId": "a20eb50a006a505c1ebe30108cf8d425d1f092b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
