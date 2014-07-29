@@ -33,6 +33,7 @@
 	"mobile-frontend-diffview-404-title": "Errore versione",
 	"mobile-frontend-diffview-anonymous": "Utente anonimo",
 	"mobile-frontend-diffview-bytesadded": "$1 byte {{PLURAL:$1|aggiunto|aggiunti}}",
+	"mobile-frontend-diffview-bytesnochange": "Nessun cambiamento nella dimensione",
 	"mobile-frontend-diffview-bytesremoved": "$1 byte {{PLURAL:$1|rimosso|rimossi}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|contributo|contributi}}",
 	"mobile-frontend-diffview-explained": "Le righe seguenti sono stati aggiunte (+) e rimosse (-):",
