@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_76bc881a",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 706,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-29T06:20:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e28a382_415ae785",
+      "revId": "a20eb50a006a505c1ebe30108cf8d425d1f092b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_e11e73bd",
         "filename": "less/common/common.less",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-07-29T00:53:20Z",
       "side": 1,
       "message": "This is already in less/common/common-js.less.",
+      "revId": "a20eb50a006a505c1ebe30108cf8d425d1f092b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_960db43b",
+        "filename": "less/common/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-29T06:20:09Z",
+      "side": 1,
+      "message": "But it won\u0027t load on desktop browsers (and tablets) at least in my test environment?!",
+      "parentUuid": "8e28a382_e11e73bd",
       "revId": "a20eb50a006a505c1ebe30108cf8d425d1f092b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
