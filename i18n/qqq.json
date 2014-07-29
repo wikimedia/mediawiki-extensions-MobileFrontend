@@ -106,7 +106,6 @@
 	"mobile-frontend-editor-summary-request": "Header above edit summary input field asking the user to summarize the changes they made to the page.",
 	"mobile-frontend-editor-switch-confirm": "Warning message telling the user they must save their changes before switching to a different editing interface.",
 	"mobile-frontend-editor-switch-editor": "Label for button that allows the user to switch between two different editing interfaces",
-	"mobile-frontend-editor-tutorial-alt-summary": "Identical to {{msg-mw|Mobile-frontend-editor-tutorial-confirm}}, however shows when the user has not expressed an intent to edit so language is more suggestive.\n\nParameters:\n* $1 - page title\nSee also:\n* {{msg-mw|Mobile-frontend-editor-tutorial-summary}}",
 	"mobile-frontend-editor-tutorial-cancel": "Label for button that user can click if they do not want to edit.\n{{Identical|No thanks}}",
 	"mobile-frontend-editor-tutorial-confirm": "Text for the button a user clicks after they have read the editing tutorial and are ready to edit the page.\n\nSee also:\n* {{msg-mw|Mobile-frontend-editor-tutorial-summary}}",
 	"mobile-frontend-editor-tutorial-summary": "Text for tutorial overlay presented to a user the first time they try to edit a page.\n\nParameters:\n* $1 - page title\nSee also:\n* {{msg-mw|Mobile-frontend-editor-tutorial-alt-summary}}",
