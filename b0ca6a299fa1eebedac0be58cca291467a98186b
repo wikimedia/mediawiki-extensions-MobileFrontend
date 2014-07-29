@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_6a4c97cb",
+        "filename": "javascripts/modules/redlinks/redlinks.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-07-29T18:09:15Z",
+      "side": 1,
+      "message": "This involves various hazards:\n\nPerformance:\n\n* Requests DOM to serialise the live node into flattened HTML (remember a browser window has no concept of HTML, it is a live node tree, requesting HTML is like JSON.stringify for HTML).\n* Requests DOM to parse HTML. Basically a rather obfuscated way to clone a node, there is clone() if that\u0027s what you want.\n* Extra objects created and destructed.\n\n\nBug:\n\n* Loses any active state.\n* Any references to these nodes will now be pointing at a detached ghost.\n* HTML does not cleanly roundtrip, certain side effects are known to occur including security issues.\n\nReally what you want here is just to wrap the link in a span and/or create a span and append the original links\u0027 text or child nodes to the span. Simply do that then. No need for serialising, parsing or cloning:\n\n $( \u0027\u003cspan class\u003d\"new\"\u003e\u003c/span\u003e\u0027 ).append( this.childNodes );\n\nOr, if you prefer jQuery abstraction:\n\n $( \u0027\u003cspan class\u003d\"new\"\u003e\u003c/span\u003e\u0027 ).append( $( this ).contents() );\n\n\nAlso, $( \u0027\u003cspan class\u003d\"new\"\u003e\u0027 ) is invalid html. Use create element $(\u0027\u003cspan\u003e\u0027) and addClass or valid html like \u0027\u003cspan class\u003d\"new\"\u003e\u003c/span\u003e\u0027.",
+      "revId": "b0ca6a299fa1eebedac0be58cca291467a98186b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
