@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_608a7370",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T22:44:44Z",
+      "side": 1,
+      "message": "Need a tab in front of these.",
+      "revId": "99595b65b8c2a5539e5ad97f43a4dfa2c830b8f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_2080eb49",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T22:44:44Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be inside the \"if ( M.isIos ) {}\" block above?",
+      "revId": "99595b65b8c2a5539e5ad97f43a4dfa2c830b8f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_40f417ee",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T22:44:44Z",
+      "side": 1,
+      "message": "Would be great to add a comment describing what _fixIosHeader() does.",
+      "revId": "99595b65b8c2a5539e5ad97f43a4dfa2c830b8f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
