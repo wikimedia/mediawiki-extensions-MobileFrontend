@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_80755ff6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T23:23:45Z",
+      "side": 1,
+      "message": "I don\u0027t think this is correct way to check for a one version diff. Adjacent rev IDs often differ by more than 1 (since IDs are per wiki, not per article).",
+      "revId": "ff38cd2c7c1a410dc159b6df60bd2887155193c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
