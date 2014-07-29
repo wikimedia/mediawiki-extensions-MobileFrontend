@@ -512,6 +512,7 @@ class MobileContext extends ContextSource {
 			array(
 				'domain' => $this->getStopMobileRedirectCookieDomain(),
 				'prefix' => '',
+				'secure' => false,
 			)
 		);
 		// Bug 66888: cookies were set with current wiki's prefix instead of an empty prefix.
