@@ -23,6 +23,8 @@
 		var talkPrefix = mw.config.get( 'wgFormattedNamespaces' )[ mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
 		// FIXME change when micro.tap.js in stable
 		$( '#ca-talk' ).on( M.tapEvent( 'click' ), onTalkClick ).data( 'title', talkPrefix + title );
+		// enable Talk button (only to hide when JS disabled)
+		$( '#ca-talk' ).removeClass( 'hidden' );
 	}
 
 	init( mw.config.get( 'wgTitle' ) );

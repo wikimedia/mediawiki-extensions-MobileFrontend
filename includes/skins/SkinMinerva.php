@@ -702,7 +702,14 @@ class SkinMinerva extends SkinTemplate {
 			}
 
 			if ( isset( $menu['talk'] ) ) {
-				$menu['talk']['class'] = 'icon icon-32px icon-talk';
+				// It's only possible for a user to create a new talk page if they have
+				// Javascript, so if the talk page hasn't been created yet, add a 'hidden'
+				// CSS class which will be removed later via Javascript.
+				if ( $menu['talk']['class'] === 'new' ) {
+					$menu['talk']['class'] = 'hidden icon icon-32px icon-talk';
+				} else {
+					$menu['talk']['class'] = 'icon icon-32px icon-talk';
+				}
 				if ( isset( $tpl->data['_talkdata'] ) ) {
 					$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
 					$menu['talk']['class'] = $tpl->data['_talkdata']['class'];

@@ -61,7 +61,9 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 				$class = 'count icon icon-32px icon-talk';
 			} else {
 				$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
-				$class = 'icon icon-32px icon-talk';
+				// add hidden css class to hide talk button, when no content there. Adding content
+				// isn't possible without JS, so remove the class in talk.js
+				$class = 'hidden icon icon-32px icon-talk';
 			}
 			$menu = $tpl->data['page_actions'];
 			if ( isset( $menu['talk'] ) ) {
