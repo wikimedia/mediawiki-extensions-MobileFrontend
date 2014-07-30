@@ -68,8 +68,13 @@
 								// Set up event logging for each notification
 								mw.echo.setupNotificationLogging( $notification, 'mobile-overlay', true );
 							} );
-
-							self.markAllAsRead();
+							// Only fire 'mark as read' API call when unread notification
+							// count is not zero.  Question: why does this fire an API call
+							// for 'mark all as read', the overlay may not load all unread
+							// notifications
+							if ( result.query.notifications.rawcount !== 0 ) {
+								self.markAllAsRead();
+							}
 						} else {
 							self.onError();
 						}
