@@ -46,7 +46,8 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition;
+		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition,
+			$wgHTMLFormAllowTableFormat, $wgUseMediaWikiUIEverywhere;
 
 		$mobileContext = MobileContext::singleton();
 
@@ -60,6 +61,12 @@ class MobileFrontendHooks {
 			}
 			return true;
 		}
+
+		// Force non-table based layouts (see bug 63428)
+		$wgHTMLFormAllowTableFormat = false;
+		// Turn on MediaWiki UI styles so special pages with form are styled.
+		// FIXME: Remove when this becomes the default.
+		$wgUseMediaWikiUIEverywhere = true;
 
 		// FIXME: Remove hack around Universal Language selector bug 57091
 		$wgULSPosition = 'none';
