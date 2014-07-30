@@ -297,7 +297,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			);
 		} else {
 			$ipAddr = $this->rev->getUserText();
-			$userPage = Title::makeTitle( NS_USER, $ipAddr );
+			$userPage = SpecialPage::getTitleFor( 'Contributions', $ipAddr );
 			$output->addHtml(
 				'<div class="mw-mf-user mw-mf-anon icon icon-16px icon-text">' .
 					$this->msg( 'mobile-frontend-diffview-anonymous' )->escaped() .
