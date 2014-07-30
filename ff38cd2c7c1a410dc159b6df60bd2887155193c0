@@ -16,6 +16,24 @@
       "revId": "ff38cd2c7c1a410dc159b6df60bd2887155193c0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_964c89e5",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-07-30T05:36:04Z",
+      "side": 1,
+      "message": "Hmm, right. Just another solution, must be test and verified (i can do it later):\n( $prev \u003d\u003d\u003d $newRev-\u003egetPrevious()-\u003egetId() || $prev \u003d\u003d\u003d null )",
+      "parentUuid": "8e28a382_80755ff6",
+      "revId": "ff38cd2c7c1a410dc159b6df60bd2887155193c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
