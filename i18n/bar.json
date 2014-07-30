@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mucalexx",
-			"Schläsinger"
+			"Schläsinger",
+			"LNDDYL"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Oah Kapitel zruck springer",
@@ -17,7 +18,7 @@
 	"mobile-frontend-news-items": "A' d' Noochrichten",
 	"mobile-frontend-opt-in-explain": "Durch d' Teilnaum am Beta-Test dahoitst an Zuagrieff af experimenteje Funkzióner, dé dert owerraa Próbléme und Feeler vaursocher kennern.",
 	"mobile-frontend-password": "Posswort:",
-	"mobile-frontend-placeholder": "Gib do deih Suach eih ...",
+	"mobile-frontend-placeholder": "Suach {{SITENAME}}",
 	"mobile-frontend-random-button": "Zuafoi",
 	"mobile-frontend-regular-site": "Za da klassischen {{SITENAME}}-Auhsicht wexeln",
 	"mobile-frontend-search-submit": "Lós",
