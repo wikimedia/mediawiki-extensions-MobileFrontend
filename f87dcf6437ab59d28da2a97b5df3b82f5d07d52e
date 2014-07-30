@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_582767c5",
+        "filename": "includes/MobilePage.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-07-30T23:38:15Z",
+      "side": 1,
+      "message": "Spacing.",
+      "revId": "f87dcf6437ab59d28da2a97b5df3b82f5d07d52e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_b8152b4f",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-07-30T23:38:15Z",
+      "side": 1,
+      "message": "???",
+      "revId": "f87dcf6437ab59d28da2a97b5df3b82f5d07d52e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
