@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_b3d0b722",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-07-30T00:17:47Z",
+      "side": 1,
+      "message": "We should only add this conditionally. We should add a php test for the existence of the cookie and that the user is logged in and include it in that situation.",
+      "revId": "c20d9f42266827b72c65a7fbef9d09f6f5ee59bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_53c2b35e",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-07-30T00:17:47Z",
+      "side": 1,
+      "message": "We should add a comment to this to explain what it\u0027s for and when it should be removed.",
+      "revId": "c20d9f42266827b72c65a7fbef9d09f6f5ee59bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_f3e3df00",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-07-30T00:17:47Z",
+      "side": 1,
+      "message": "why the move?",
+      "revId": "c20d9f42266827b72c65a7fbef9d09f6f5ee59bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
