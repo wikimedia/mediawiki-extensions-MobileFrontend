@@ -885,8 +885,7 @@ class SkinMinerva extends SkinTemplate {
 			'skins.minerva.content.styles',
 			'skins.minerva.drawers.styles',
 			'skins.minerva.tablet.styles',
-			// FIXME: Rename to use skins.minerva prefix - don't break cache in process
-			'mobile.styles.page',
+			// FIXME: This module should be loaded by any special page that needs it, not here
 			'mobile.pagelist.styles',
 		);
 		if ( $title->isSpecialPage() ) {
