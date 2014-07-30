@@ -50,6 +50,24 @@
       "revId": "c20d9f42266827b72c65a7fbef9d09f6f5ee59bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_73a36f97",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-30T00:23:52Z",
+      "side": 1,
+      "message": "Just wanted to make sure the cookie was saved regardless of whether we\u0027re using lazy-loading or not. Since we\u0027re only doing limited testing of non-lazy-loading though, I guess there\u0027s really no reason to move it. I\u0027ll put it back :)",
+      "parentUuid": "8e28a382_f3e3df00",
+      "revId": "c20d9f42266827b72c65a7fbef9d09f6f5ee59bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
