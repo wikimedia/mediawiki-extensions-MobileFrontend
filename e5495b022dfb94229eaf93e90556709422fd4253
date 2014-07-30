@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_53ee3388",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-07-30T00:55:36Z",
+      "side": 1,
+      "message": "Use context for retrieving cookies.",
+      "revId": "e5495b022dfb94229eaf93e90556709422fd4253",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
