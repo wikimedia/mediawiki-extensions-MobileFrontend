@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_b39aec14",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-31T01:16:16Z",
+      "side": 1,
+      "message": "1. $oldRev can be null, so this can cause an error\n2. This should be renamed to something like $oldRevId, since it\u0027s not necessarily the previous rev.",
+      "revId": "95c6933f26d2d3cdafd0caa20320f3e392764a20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_939db00f",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-31T01:16:16Z",
+      "side": 1,
+      "message": "$newRev-\u003egetPrevious() can be null, so this can cause an error.",
+      "revId": "95c6933f26d2d3cdafd0caa20320f3e392764a20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
