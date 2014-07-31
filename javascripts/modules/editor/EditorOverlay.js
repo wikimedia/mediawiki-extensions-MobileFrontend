@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		isVisualEditorEnabled = M.isWideScreen() &&
-			M.isBetaGroupMember() &&
 			mw.config.get( 'wgVisualEditorConfig' ) &&
 			mw.config.get( 'wgVisualEditorConfig' ).namespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) > -1 &&
 			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
