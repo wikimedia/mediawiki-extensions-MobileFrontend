@@ -34,6 +34,24 @@
       "revId": "d9feda9a490acde03f56ca2941fb720580b59971",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_9aa25c94",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-07-31T21:27:26Z",
+      "side": 1,
+      "message": "The overlay shouldn\u0027t be loaded at all if Echo is not installed...\n\nIn getDefaultModules()\n$modules[\u0027notifications\u0027] \u003d array( \u0027mobile.notifications\u0027 ); should only be added if Echo is installed. This is an oversight.",
+      "parentUuid": "ee391fd1_5e348fa7",
+      "revId": "d9feda9a490acde03f56ca2941fb720580b59971",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
