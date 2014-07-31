@@ -312,7 +312,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.editor.ve' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'ext.visualEditor.mobileViewTarget',
-			'mobile.beta',
+			'mobile.stable',
 			'mobile.editor.common',
 			'mobile.stable.common',
 		),
