@@ -10,7 +10,8 @@
 			"Sodabottle",
 			"Surya Prakash.S.A.",
 			"கௌசிக் பிரபு",
-			"மதனாஹரன்"
+			"மதனாஹரன்",
+			"ElangoRamanujam"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "பாதுகாப்புக் குறியீட்டை உள்ளிடவும்",
@@ -24,6 +25,7 @@
 	"mobile-frontend-desc": "கைபேசி முகப்பு",
 	"mobile-frontend-diffview-anonymous": "அடையாளம் காட்டாத பயனர்",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|பைட்டு|பைட்டுகள்}} சேர்க்கப்பட்டது",
+	"mobile-frontend-diffview-bytesnochange": "அளவில் மாற்றமில்லை",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|பைட்டு|பைட்டுகள்}} நீக்கப்பட்டது",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|தொகுப்பு|தொகுப்புகள்}}",
 	"mobile-frontend-diffview-title": "மாற்றங்கள்",
@@ -73,10 +75,8 @@
 	"mobile-frontend-news-items": "செய்திகளில்",
 	"mobile-frontend-off": "அணை",
 	"mobile-frontend-on": "இயங்குகிறது",
-	"mobile-frontend-overlay-escape": "பின் செல்லவும்",
 	"mobile-frontend-page-menu-contents": "பொருளடக்கம்",
 	"mobile-frontend-page-menu-history": "வரலாறு",
-	"mobile-frontend-page-saving": "<span>$1 </span><strong>சேமிக்கப்படுகிறது</strong>",
 	"mobile-frontend-password": "கடவுச்சொல்:",
 	"mobile-frontend-password-confirm-placeholder": "கடவுச்சொல்லை உறுதிசெய்",
 	"mobile-frontend-password-placeholder": "கடவுச்சொல்",

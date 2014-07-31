@@ -241,6 +241,11 @@ $specialPageAliases['lb'] = array(
 	'UserProfile' => array( 'Benotzerprofil' ),
 );
 
+/** Literary Chinese (文言) */
+$specialPageAliases['lzh'] = array(
+	'Nearby' => array( '近郊' ),
+);
+
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'History' => array( 'Историја' ),
@@ -370,12 +375,12 @@ $specialPageAliases['zh-hans'] = array(
 $specialPageAliases['zh-hant'] = array(
 	'History' => array( '歷史' ),
 	'MobileWebApp' => array( '移動線上App' ),
-	'MobileOptions' => array( '移動版選項' ),
+	'MobileOptions' => array( '手機版選項' ),
 	'Uploads' => array( '上載' ),
-	'MobileDiff' => array( '移動版差異' ),
-	'MobileEditor' => array( '移動版編輯器' ),
-	'MobileMenu' => array( '移動版選單' ),
-	'MobileLanguages' => array( '移動版語言' ),
+	'MobileDiff' => array( '手機版差異' ),
+	'MobileEditor' => array( '手機版編輯器' ),
+	'MobileMenu' => array( '手機版選單' ),
+	'MobileLanguages' => array( '手機版語言' ),
 	'Nearby' => array( '附近' ),
 	'UserProfile' => array( '使用者資訊' ),
 );

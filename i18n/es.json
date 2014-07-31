@@ -23,7 +23,7 @@
 	},
 	"beta-feature-geonotahack": "Cerca de esta página",
 	"beta-feature-geonotahack-description": "Descubre páginas que se encuentran geográficamente cerca del artículo que estás leyendo.",
-	"beta-feature-minerva": "Activar la interfaz para móviles (Minerva) en el escritorio",
+	"beta-feature-minerva": "Activar la interfaz para móviles ({{int:skinname-minerva}}) en el escritorio",
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
 	"mobile-frontend-account-create-email-placeholder": "Dirección de correo electrónico (opcional)",
 	"mobile-frontend-account-create-submit": "Registrarse",

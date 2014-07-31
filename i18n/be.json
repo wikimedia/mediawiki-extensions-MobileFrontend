@@ -45,5 +45,12 @@
 	"mobile-frontend-privacy-link-text": "Прыватнасць",
 	"mobile-frontend-save-settings": "Запісаць",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Мовы",
-	"mobile-frontend-terms-text": "Умовы карыстання"
+	"mobile-frontend-terms-text": "Умовы карыстання",
+	"mobile-frontend-watchlist-a-z": "Спіс",
+	"mobile-frontend-watchlist-feed": "Змяненні",
+	"mobile-frontend-watchlist-feed-empty": "Няма старонак з нядаўнімі зменамі.",
+	"mobile-frontend-watchlist-filter-all": "Усё",
+	"mobile-frontend-watchlist-filter-articles": "Старонкі",
+	"mobile-frontend-watchlist-filter-other": "Іншае",
+	"mobile-frontend-watchlist-filter-talk": "Размовы"
 }
