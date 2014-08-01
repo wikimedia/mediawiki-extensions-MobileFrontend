@@ -55,12 +55,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// FIXME: remove this when cache is clear --2014/06/17
-	'mobile.styles.mainpage' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(),
-		'group' => 'other',
-	),
-
 	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/pagelist.less',
@@ -489,13 +483,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-search-content',
 			'mobile-frontend-search-no-results',
 			'mobile-frontend-search-content-no-results' => array( 'parse' ),
-		),
-	),
-
-	// @todo FIXME: remove when cache expires
-	'mobile.search.stable' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.search'
 		),
 	),
 
