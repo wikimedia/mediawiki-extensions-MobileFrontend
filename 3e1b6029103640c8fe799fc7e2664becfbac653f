@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_210d7139",
+        "filename": "less/common/Overlay.less",
+        "patchSetId": 14
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-02T00:01:39Z",
+      "side": 1,
+      "message": "Note this causes a major accessibility issue in ios5 (not sure if we still care about this browser) - it will stop the user from double clicking the browser chrome header to jump to the top of the page.\n\nhttp://jonrobson.me.uk/development/overflow-scrolling/",
+      "revId": "3e1b6029103640c8fe799fc7e2664becfbac653f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
