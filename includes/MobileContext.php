@@ -148,10 +148,16 @@ class MobileContext extends ContextSource {
 	 * @return boolean
 	 */
 	public function userCanUpload() {
-		global $wgMFUploadMinEdits, $wgEnableUploads;
+		global $wgMFUploadMinEdits, $wgMFPhotoUploadEndpoint;
 		$user = $this->getUser();
 
-		if ( $wgEnableUploads ) {
+		// check if upload is enabled local or to remote location (to commons e.g.)
+		// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
+		$uploadEnabled = ( UploadBase::isEnabled() &&
+			UploadBase::isallowed( $user )
+		) || $wgMFPhotoUploadEndpoint;
+
+		if ( $uploadEnabled ) {
 			// Make sure the user is either in desktop mode or meets the special
 			// conditions necessary for uploading in mobile mode.
 			if ( !$this->shouldDisplayMobileView() ||
