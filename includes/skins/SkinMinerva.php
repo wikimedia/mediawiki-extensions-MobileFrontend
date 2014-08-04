@@ -900,7 +900,6 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		$styles = array(
 			'skins.minerva.chrome.styles',
-			'skins.minerva.buttons.styles',
 			'skins.minerva.content.styles',
 			'skins.minerva.drawers.styles',
 			'skins.minerva.tablet.styles',
