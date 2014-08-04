@@ -1010,7 +1010,7 @@ class MobileContext extends ContextSource {
 	 * @param string $xanalytics_item In the format key=value
 	 */
 	public function addAnalyticsLogItemFromXAnalytics( $xanalytics_item ) {
-		list( $key, $val ) = explode( '=', $xanalytics_item );
+		list( $key, $val ) = explode( '=', $xanalytics_item, 2 );
 		$this->addAnalyticsLogItem( urldecode( $key ), urldecode( $val ));
 	}
 
