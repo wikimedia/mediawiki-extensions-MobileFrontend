@@ -117,7 +117,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>查看</strong><span>$1</span><strong>的源代码</strong>",
 	"mobile-frontend-editor-visual-editor": "编辑",
 	"mobile-frontend-editor-wait": "正在保存编辑，请稍候。",
-	"mobile-frontend-enable-images": "启用移动版网站的图像",
+	"mobile-frontend-enable-images": "启用手机版版网站的图像",
 	"mobile-frontend-expand-sections-description": "导航至新页面时总是展开所有部分。",
 	"mobile-frontend-expand-sections-status": "展开所有部分",
 	"mobile-frontend-featured-article": "特色内容",
@@ -345,5 +345,5 @@
 	"tag-mobile_edit": "移动版编辑",
 	"tag-mobile_edit-description": "从移动版（web或应用程序）所做的编辑",
 	"tag-mobile_web_edit": "移动网页编辑",
-	"tag-mobile_web_edit-description": "来自移动网站的编辑"
+	"tag-mobile_web_edit-description": "来自手机版网站的编辑"
 }
