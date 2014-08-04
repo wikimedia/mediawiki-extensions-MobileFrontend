@@ -7,7 +7,7 @@ Background:
     And I am in beta mode
 
 Scenario: Switch from VisualEditor to source editor
-  Given I am on the "Selenium Edit Test" page
+  Given the page "Selenium Edit Test" exists
     And I click the edit button
     And I switch to VisualEditor
     And I see the VisualEditor overlay
@@ -20,7 +20,7 @@ Scenario: Switch from VisualEditor to source editor
   Then I see the wikitext editor overlay
 
 Scenario: Toolbar VisualEditor
-  Given I am on the "Selenium Edit Test" page
+  Given the page "Selenium Edit Test" exists
     And I click the edit button
     And I switch to VisualEditor
   Then I see the VisualEditor overlay
@@ -29,7 +29,7 @@ Scenario: Toolbar VisualEditor
     And the VisualEditor toolbar has an italic button
 
 Scenario: I can edit a page using VisualEditor
-  Given I am on the "Selenium Edit Test" page
+  Given the page "Selenium Edit Test" exists
     And I click the edit button
     And I switch to VisualEditor
     And VisualEditor has loaded
@@ -40,7 +40,7 @@ Scenario: I can edit a page using VisualEditor
     And I see a toast notification
 
 Scenario: Going back from save screen in VisualEditor
-  Given I am on the "Selenium Edit Test" page
+  Given the page "Selenium Edit Test" exists
     And I click the edit button
     And I switch to VisualEditor
     And VisualEditor has loaded
