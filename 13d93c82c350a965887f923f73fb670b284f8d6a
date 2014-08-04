@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_5d5df57c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-04T23:56:47Z",
+      "side": 1,
+      "message": "I\u0027d keep $user-\u003eisLoggedIn() out of it, leaving it in L241 and then having two subcases: Echo vs. non-Echo. This way it\u0027s easier to understand that we do nothing if the user is not logged in.\n\nIn this case, I\u0027m not sure if useEcho() method would be needed anymore. I\u0027d use only class_exists( \u0027MWEchoNotifUser\u0027 ). Too bad MW doesn\u0027t seem to have an elegant way of checking whether an extension is loaded.",
+      "revId": "13d93c82c350a965887f923f73fb670b284f8d6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
