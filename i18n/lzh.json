@@ -5,7 +5,7 @@
 			"LNDDYL"
 		]
 	},
-	"mobile-frontend-account-create-email-placeholder": "電郵址（可免寫）",
+	"mobile-frontend-account-create-email-placeholder": "電郵 （可選）",
 	"mobile-frontend-account-create-submit": "增簿",
 	"mobile-frontend-app-title": "手機軟件，手機軟體",
 	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[Special:UserProfile/$1|$1]]}}之全纂",
@@ -79,7 +79,7 @@
 	"mobile-frontend-sign-in-heading": "增簿",
 	"mobile-frontend-sign-up-heading": "增簿",
 	"mobile-frontend-talk-add-overlay-submit": "增議",
-	"mobile-frontend-talk-back-to-page": "返至「$1」之頁。",
+	"mobile-frontend-talk-back-to-page": "返「$1」。",
 	"mobile-frontend-talk-overlay-header": "議",
 	"mobile-frontend-talk-reply": "答",
 	"mobile-frontend-terms-text": "使用条款",
