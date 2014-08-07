@@ -72,6 +72,23 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_2239c8cb",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2014-08-07T17:06:16Z",
+      "side": 1,
+      "message": "You can put this kind of one-time initialization in an AfterConfiguration cucumber hook.",
+      "revId": "ce4be3e8eea9283e05753b8fe8236581fc776e34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_ca9f6105",
         "filename": "tests/browser/features/support/env.rb",
         "patchSetId": 1
