@@ -1,10 +1,10 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org
-Feature: Wikitext Editor (TEST RUN ON WIKIPEDIA SO SHOULD NOT CAUSE SAVES)
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
+Feature: Wikitext Editor
 
   Background:
     Given I am logged into the mobile website
       And I am on a page that does not exist
-    When I click the edit button
+      And I click the edit button
 
   Scenario: Opening editor
     Then I see the wikitext editor overlay

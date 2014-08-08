@@ -1,4 +1,4 @@
-Given /^I am using user agent "(.+)"$/ do |user_agent|
+Given(/^I am using user agent "(.+)"$/) do |user_agent|
   @user_agent = user_agent
   @browser = browser(test_name(@scenario), {user_agent: user_agent})
   @browser.window.resize_to(480, 800)
@@ -9,24 +9,25 @@ Given(/^I am viewing the basic non-JavaScript site$/) do
   step 'I am using user agent "Opera/9.80 (J2ME/MIDP; Opera Mini/9.80 (S60; SymbOS; Opera Mobi/23.348; U; en) Presto/2.5.25 Version/10.54"'
 end
 
-Given /^I am logged into the mobile website$/ do
-  step 'I am on the "Main Page" page'
-  step 'I click on "Log in" in the main navigation menu'
-  on(SpecialUserLoginPage) do |page|
-  page.login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
-  if page.text.include? "There is no user by the name "
-    puts ENV["MEDIAWIKI_USER"] + " does not exist... trying to add user"
-    on(SpecialUserLoginPage).create_account_element.when_present.click
-    on(SpecialUserLoginPage) do |page|
-      page.username_element.element.when_present.set ENV["MEDIAWIKI_USER"]
-      page.signup_password_element.element.when_present.set ENV["MEDIAWIKI_PASSWORD"]
-      page.confirm_password_element.element.when_present.set ENV["MEDIAWIKI_PASSWORD"]
-      page.signup_submit_element.element.when_present.click
-      page.text.should include "Welcome, " + ENV["MEDIAWIKI_USER"] + "!"
-      #Can't get around captcha in order to create a user
-    end
+Given(/^I am logged into the mobile website$/) do
+  step "I am using the mobile site"
+  visit(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"], false)
+end
+
+Given(/^I am using the mobile site$/) do
+  visit(MainPage)
+  @browser.cookies.add 'mf_useformat', 'true'
+  on(MainPage).refresh
+end
+
+Given(/^I am on the sign-up page$/) do
+  visit(SpecialUserLoginPage) do |page|
+    page.create_account_link_element.when_present.click
   end
-  end
+end
+
+Given(/^I choose to create an account$/) do
+  on(SpecialUserLoginPage).create_account_link_element.when_present.click
 end
 
 Given /^I am logged in as a new user$/ do

@@ -1,8 +1,9 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @vagrant
 Feature: Generic special page features
 
   Background:
-    Given I am on the "Main Page" page
+    Given I am using the mobile site
+      And I am on the "Main Page" page
 
   Scenario: Search from Uploads
     Given I am logged into the mobile website

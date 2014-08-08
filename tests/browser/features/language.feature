@@ -3,7 +3,8 @@
 Feature: Language selection
 
   Background:
-    Given I am on the "Main Page" page
+    Given I am using the mobile site
+      And I am on the "Main Page" page
       And I see the read in another language button
     When I click the language button
 
@@ -15,6 +16,6 @@ Feature: Language selection
     Then I don't see the languages overlay
 
   Scenario: Closing language overlay (browser button)
-    And I see the language overlay
+    Given I see the language overlay
     When I click the browser back button
     Then I don't see the languages overlay

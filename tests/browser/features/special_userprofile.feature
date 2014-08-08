@@ -1,8 +1,9 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
 Feature: Special:UserProfile
 
   Background:
-    Given I visit my user profile page
+    Given I am logged into the mobile website
+      And I visit my user profile page
 
   Scenario: Check components in profile page
     Then I am on my user profile page

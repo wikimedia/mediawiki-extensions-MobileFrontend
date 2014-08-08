@@ -1,5 +1,7 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @login @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @login @test2.m.wikipedia.org @vagrant
 Feature: Special:Uploads uploads
+  Background:
+    Given I am using the mobile site
 
 # The progress bar may or may not appear based on browser capability.
 # The progress bar does not appear for Firefox as of May 2014

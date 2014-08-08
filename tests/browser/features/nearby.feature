@@ -1,5 +1,9 @@
+@firefox @vagrant
 Feature: Nearby page (mobile interface)
   Test currently only works with Firefox
+
+  Background:
+    Given I am using the mobile site
 
   Scenario: Nearby exists
     When I click on "Nearby" in the main navigation menu

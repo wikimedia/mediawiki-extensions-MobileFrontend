@@ -1,5 +1,8 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @vagrant
 Feature: Reference popup drawer
+
+  Background:
+    Given I am using the mobile site
 
   Scenario: Opening the reference drawer
     Given I go to a page that has references

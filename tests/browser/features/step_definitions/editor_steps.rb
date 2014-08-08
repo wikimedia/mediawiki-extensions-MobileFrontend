@@ -8,6 +8,10 @@ When(/^I click the edit button$/) do
   on(ArticlePage).edit_link_element.when_present.click
 end
 
+Then(/^I see the wikitext editor$/) do
+  on(ArticlePage).editor_textarea_element.when_present.should be_visible
+end
+
 Then(/^I see the wikitext editor overlay$/) do
   on(ArticlePage).editor_textarea_element.when_present.should be_visible
 end
@@ -18,9 +22,7 @@ end
 
 Then(/^I should not see the wikitext editor overlay$/) do
   on(ArticlePage) do |page|
-    page.wait_until do
-      page.editor_overlay_element.visible? != true
-      end
+    page.wait_until { !page.editor_overlay_element.visible? }
     page.editor_overlay_element.should_not be_visible
   end
 end
