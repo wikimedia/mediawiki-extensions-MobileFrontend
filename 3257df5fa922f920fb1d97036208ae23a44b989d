@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_f6a702a3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 923,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-08-08T10:36:37Z",
+      "side": 1,
+      "message": "Typo in Resource",
+      "revId": "3257df5fa922f920fb1d97036208ae23a44b989d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
