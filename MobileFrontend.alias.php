@@ -274,6 +274,11 @@ $specialPageAliases['ml'] = array(
 	'UserProfile' => array( 'ഉപയോക്തൃവിവരങ്ങൾ' ),
 );
 
+/** Marathi (मराठी) */
+$specialPageAliases['mr'] = array(
+	'History' => array( 'इतिहास' ),
+);
+
 /** Min Nan Chinese (Bân-lâm-gú) */
 $specialPageAliases['nan'] = array(
 	'Uploads' => array( 'Kā--ê_tóng-àn' ),

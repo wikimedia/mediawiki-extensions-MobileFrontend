@@ -32,7 +32,7 @@
 	"mobile-frontend-editor-cancel": "Otkaži",
 	"mobile-frontend-editor-cancel-confirm": "Da li zaista želite da napustite stranicu, vaše izmene nisu sačuvane?",
 	"mobile-frontend-editor-captcha-try-again": "Pogrešan kod, pokušajte ponovo.",
-	"mobile-frontend-editor-continue": "Nastavi",
+	"mobile-frontend-editor-continue": "Sledeće",
 	"mobile-frontend-editor-cta": "Pomozite nam da poboljšamo stranicu!",
 	"mobile-frontend-editor-disabled": "Ova stranica je zaštićena da bi se sprečio vandalizam.",
 	"mobile-frontend-editor-edit": "Uredi",
@@ -47,7 +47,7 @@
 	"mobile-frontend-editor-summary-placeholder": "Opis izmene (nije obavezno)",
 	"mobile-frontend-editor-tutorial-cancel": "Ne, hvala",
 	"mobile-frontend-editor-unavailable": "Vaš veb pregledač ne podržava mobilno uređivanje. Pokušajte sa nekim drugim veb pregledačem.",
-	"mobile-frontend-editor-visual-editor": "Vizuelni uređivač",
+	"mobile-frontend-editor-visual-editor": "Uredi",
 	"mobile-frontend-editor-wait": "Čuvanje izmene, molimo sačekajte.",
 	"mobile-frontend-enable-images": "Omogući slike na mobilnim stranicama",
 	"mobile-frontend-expand-sections-description": "Uvek proširi sve sekcije kada prelazim na novu stranicu.",
@@ -117,8 +117,6 @@
 	"mobile-frontend-view": "Mobilni prikaz",
 	"mobile-frontend-view-desktop": "Običan",
 	"mobile-frontend-view-mobile": "Mobilni",
-	"mobilefrontend-random-explain": "Da li vam je ova slučajna stranica interesantna?",
-	"mobilefrontend-random-tryanother": "Nađi drugu",
 	"tag-mobile_edit-description": "Izmena načinjena sa mobilnog telefona",
 	"tag-mobile_web_edit-description": "Izmena načinjena sa mobilne verzije sajta"
 }
