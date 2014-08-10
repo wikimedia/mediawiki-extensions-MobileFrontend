@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_598158a3",
+        "filename": "templates/modules/talk/talkSectionAddHeader.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-10T18:57:10Z",
+      "side": 1,
+      "message": "Grrr \\r",
+      "revId": "915fe4ffe0b901af98272a66efffd1640514453f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
