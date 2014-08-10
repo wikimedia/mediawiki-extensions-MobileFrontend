@@ -8,17 +8,15 @@
 
 	TalkSectionAddOverlay = Overlay.extend( {
 		defaults: {
-			headerButtons: [
-				{ className: 'submit icon icon-submit confirm-save', msg: mw.msg( 'mobile-frontend-editor-continue' ) }
-			],
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
-			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-add-overlay-submit' ) + '</strong>',
 			topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
-			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' )
+			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' ),
+			editingMsg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
 		},
+		template: M.template.get( 'modules/talk/talkSectionAdd.hogan' ),
 		templatePartials: {
-			content: M.template.get( 'overlays/talkSectionAdd.hogan' )
+			header: M.template.get( 'modules/talk/talkSectionAddHeader.hogan' )
 		},
 		initialize: function( options ) {
 			// If terms of use is enabled, include it in the licensing message
@@ -41,6 +39,7 @@
 		postRender: function( options ) {
 			var self = this;
 			this._super( options );
+			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( self, 'hide' ) );
 			this.confirm = this.$( 'button.confirm-save' );
 			this.confirm.on( 'click', function() {
 				if ( !$( this ).prop( 'disabled' ) ) {
@@ -71,8 +70,6 @@
 						text: text + ' ~~~~'
 					} ).done( function() {
 						self.hide();
-						// close the list of topics overlay as well
-						self.parent.hide();
 						M.pageApi.invalidatePage( self.title );
 						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
 					} );

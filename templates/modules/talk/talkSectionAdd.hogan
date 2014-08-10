@@ -1,3 +1,7 @@
+<div class="overlay-header-container position-fixed">
+	{{>header}}
+</div>
+
 <div class="save-panel panel">
 	<p class="license">{{{licenseMsg}}}</p>
 </div>

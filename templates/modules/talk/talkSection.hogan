@@ -1,6 +1,8 @@
-<div class="content talk-section">
-	<h2>{{section.line}}</h2>
+<div class="overlay-header-container position-fixed">
+	{{>header}}
+</div>
 
+<div class="content talk-section">
 	{{{section.text}}}
 	<div class="loading"></div>
 	<div class="comment">

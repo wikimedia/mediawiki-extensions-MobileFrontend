@@ -1,0 +1,9 @@
+<div class="overlay-header initial-header hideable">
+	<ul>
+		<li><button class="back icon icon-back">{{closeMsg}}</button></li>
+	</ul>
+	<div class="overlay-title">
+		<h2>{{editingMsg}}</h2>
+	</div>
+	<div class="overlay-action"><button class="submit confirm-save">{{confirmMsg}}</button></div>
+</div>
