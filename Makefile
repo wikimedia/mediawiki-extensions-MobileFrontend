@@ -21,7 +21,7 @@ mygerrit: remotes
 gerrit: remotes
 	@dev-scripts/remotes/gerrit.py --project 'mediawiki/extensions/MobileFrontend' --gtscore -1
 
-kss: nodecheck
+kss: kssnodecheck
 	mkdir -p docs
 	# FIXME: Use more up to date Ruby version
 	$(eval KSS_MF_RL_TMP := $(shell mktemp /tmp/tmp.XXXXXXXXXX))
@@ -42,6 +42,9 @@ phpdoc: nodecheck
 
 docs: kss jsduck phpdoc
 
+kssnodecheck:
+	@dev-scripts/kss-node-check.sh
+
 nodecheck:
 	@dev-scripts/nodecheck.sh
 
@@ -51,7 +54,7 @@ jshinttests: nodecheck
 jshint: nodecheck jshinttests
 	@node_modules/.bin/jshint javascripts/* --config .jshintrc
 
-dependencies: nodecheck phpcheck remotes
+dependencies: nodecheck kssnodecheck phpcheck remotes
 
 phpcheck:
 	@dev-scripts/phpcheck.sh
