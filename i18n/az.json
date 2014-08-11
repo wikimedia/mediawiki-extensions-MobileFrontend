@@ -3,7 +3,8 @@
 		"authors": [
 			"Cekli829",
 			"Interfase",
-			"Vugar 1981"
+			"Vugar 1981",
+			"Dağlı95"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Bir bölüm geriyə dön",
@@ -17,7 +18,15 @@
 	"mobile-frontend-featured-article": "Günün seçilmiş məqaləsi",
 	"mobile-frontend-history": "Bu səhifənin dəyişikliklər tarixinə bax",
 	"mobile-frontend-home-button": "Ana səhifə",
+	"mobile-frontend-language-article-heading": "Başqa dillərdə oxuyun",
 	"mobile-frontend-languages-header": "Dillər",
+	"mobile-frontend-languages-header-page": "$1 - Dillər",
+	"mobile-frontend-last-modified-days": "Bu səhifə sonuncu dəfə $1 gün əvvəl redaktə edilib.",
+	"mobile-frontend-last-modified-hours": "$1 saat əvvəl redaktə edilib.",
+	"mobile-frontend-last-modified-minutes": "Bu səhifə sonuncu dəfə $1 dəqiqə əvvəl redaktə edilib.",
+	"mobile-frontend-last-modified-months": "Bu səhifə sonuncu dəfə $1 ay əvvəl redaktə edilib.",
+	"mobile-frontend-last-modified-seconds": "Bu səhifə sonuncu dəfə $1 saniyə əvvəl redaktə edilib.",
+	"mobile-frontend-last-modified-years": "Bu səhifə sonuncu dəfə $1 il əvvəl redaktə edilib.",
 	"mobile-frontend-login": "Daxil ol",
 	"mobile-frontend-main-menu-login": "Daxil ol",
 	"mobile-frontend-main-menu-logout": "Çıxış",
@@ -27,12 +36,14 @@
 	"mobile-frontend-missing-image": "Şəkil",
 	"mobile-frontend-password": "Parol:",
 	"mobile-frontend-password-placeholder": "Parol",
+	"mobile-frontend-placeholder": "{{SITENAME}} saytında axtarış",
 	"mobile-frontend-random-button": "Təsadüfi",
 	"mobile-frontend-regular-site": "Bu səhifəni normal {{SITENAME}} görüntülə",
 	"mobile-frontend-search-submit": "Get",
 	"mobile-frontend-username": "İstifadəçi adı:",
 	"mobile-frontend-username-placeholder": "İstifadəçinin adı",
 	"mobile-frontend-view": "Mobil görüntü",
+	"mobile-frontend-view-mobile": "Mobil",
 	"mobile-frontend-watchlist-a-z": "Siyahı",
 	"mobile-frontend-watchlist-cta-button-login": "Daxil ol",
 	"mobile-frontend-watchlist-cta-button-signup": "Qeydiyyatdan keç",
@@ -40,10 +51,5 @@
 	"mobile-frontend-watchlist-filter-articles": "Səhifələr",
 	"mobile-frontend-watchlist-filter-other": "Digər",
 	"mobile-frontend-watchlist-filter-talk": "Müzakirə",
-	"mobile-frontend-watchlist-modified": "Dəyişdirilib $1",
-	"mobilefrontend-keepgoing-cancel": "Yox, sağ olun",
-	"mobilefrontend-keepgoing-links-title": "Keçidlər daxil et",
-	"mobilefrontend-keepgoing-saved-title": "Redaktə qeydə alındı!",
-	"mobilefrontend-keepgoing-suggest": "Bəli",
-	"mobilefrontend-keepgoing-suggest-again": "Digərini yoxla"
+	"mobile-frontend-watchlist-modified": "Dəyişdirilib $1"
 }
