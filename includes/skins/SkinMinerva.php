@@ -920,7 +920,7 @@ class SkinMinerva extends SkinTemplate {
 		$out->setTarget( 'mobile' );
 		if ( $this->isMobileMode ) {
 			// FIXME: Merge these hooks?
-			// EnableMobileModules is deprecated; Use RessourceLoader instead,
+			// EnableMobileModules is deprecated; Use ResourceLoader instead,
 			// see https://www.mediawiki.org/wiki/ResourceLoader#Mobile
 			wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
 			wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
