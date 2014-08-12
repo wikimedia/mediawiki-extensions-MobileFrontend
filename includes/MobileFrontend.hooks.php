@@ -789,15 +789,10 @@ class MobileFrontendHooks {
 				'schema' => 'MobileWebClickTracking',
 				'revision' => 5929948,
 			),
-			'schema.MobileLeftNavbarEditCTA' => array(
-				'schema' => 'MobileLeftNavbarEditCTA',
-				'revision' => 7074652,
-			),
 		);
 
 		$scripts = array(
 			'javascripts/loggingSchemas/mobileWebEditing.js',
-			'javascripts/loggingSchemas/mobileLeftNavbarEditCTA.js',
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
 		);
 		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {

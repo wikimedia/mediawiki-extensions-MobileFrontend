@@ -724,7 +724,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// newbieEditor.js
 			'mobile-frontend-editor-tutorial-summary',
-			'mobile-frontend-editor-tutorial-alt-summary',
 			'mobile-frontend-editor-tutorial-confirm',
 			'mobile-frontend-editor-tutorial-cancel',
 		),

@@ -42,7 +42,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 		if ( isset( $actionQuery['returntoquery'] ) ) {
 			$query['returntoquery'] = $actionQuery['returntoquery'];
 			// Allow us to distinguish sign ups from the left nav to logins.
-			// This allows us to apply story 1402 A/B test.
+			// This allows us to show them an edit tutorial when they return to the page.
 			if ( $query['returntoquery'] === 'welcome=yes' ) {
 				$query['returntoquery'] = 'campaign=leftNavSignup';
 			}

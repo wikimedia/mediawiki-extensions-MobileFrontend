@@ -5,11 +5,9 @@
 			mw.config.get( 'wgVisualEditorConfig' ).namespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) > -1 &&
 			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 			mw.config.get( 'wgPageContentModel' ) === 'wikitext',
-		inNavSignupCampaign = M.query.campaign === 'leftNavSignup',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
-		mobileLeftNavbarEditCTA = M.require( 'loggingSchemas/mobileLeftNavbarEditCTA' ),
 		EditorOverlay;
 
 	/**
@@ -84,12 +82,6 @@
 			}
 
 			this._loadContent();
-			if ( inNavSignupCampaign ) {
-				// Log edit page impression
-				mobileLeftNavbarEditCTA.log( {
-					action: 'page-edit-impression'
-				} );
-			}
 		},
 
 		_prepareForSave: function() {
@@ -201,11 +193,6 @@
 				options.captchaWord = this.$( '.captcha-word' ).val();
 			}
 
-			if ( inNavSignupCampaign ) {
-				mobileLeftNavbarEditCTA.log( {
-					action: 'page-save-attempt',
-				} );
-			}
 			this._showHidden( '.saving-header' );
 
 			this.api.save( options ).
@@ -217,11 +204,6 @@
 						return;
 					}
 
-					if ( inNavSignupCampaign ) {
-						mobileLeftNavbarEditCTA.log( {
-							action: 'page-save-success',
-						} );
-					}
 					self.onSave();
 				} ).
 				fail( function( data ) {
