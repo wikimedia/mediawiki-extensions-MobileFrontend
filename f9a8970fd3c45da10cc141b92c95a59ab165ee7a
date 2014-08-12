@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_a9c1ff84",
+        "filename": "tests/browser/features/editor_wikitext_saving.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2014-08-12T18:45:32Z",
+      "side": 1,
+      "message": "I agree that it\u0027s difficult to maintain. What about just indenting \u0027And\u0027 steps an extra level and leaving Given/When/Then left-aligned?\n\nGiven some test exists\n  And it has clear indentation\nWhen I reopen it days later\n  And I read it\n  And I edit it\nThen my editor cooperates\n  And I don\u0027t lose my mind",
+      "parentUuid": "8e28a382_5e95b641",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_7e9e325b",
         "filename": "tests/browser/features/step_definitions/nearby_steps.rb",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_34756693",
+        "filename": "tests/browser/features/step_definitions/nearby_steps.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2014-08-12T18:45:32Z",
+      "side": 1,
+      "message": "That may have been a bug. AFAICT, `class:` selects elements which _includes_ the given class. I couldn\u0027t find a good reference to this in the Watir documentation, but I was able to verify it by digging into `Watir::ElementLocator`.",
+      "parentUuid": "8e28a382_7e9e325b",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_5e9b7668",
         "filename": "tests/browser/features/support/env.rb",
         "patchSetId": 4
@@ -47,6 +83,24 @@
       "writtenOn": "2014-08-12T00:02:02Z",
       "side": 1,
       "message": "Why do we need those two?",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_b46036cd",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2014-08-12T18:45:32Z",
+      "side": 1,
+      "message": "The `require \"rubygems\"` is a bit superfluous as it\u0027s loaded by default in Ruby 1.9 and up, but the bundler/setup should be required to set up the right bundler load paths. In fact, we should probably replace the subsequent includes to just use `Bundler.require(:default)` which will require everything mentioned in the Gemfile.",
+      "parentUuid": "8e28a382_5e9b7668",
       "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
