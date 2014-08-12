@@ -75,6 +75,7 @@
 	"mobile-frontend-editor-success-landmark-1": "অভিনন্দন, আপনি এখন একজন {{SITENAME}} সম্পাদক!",
 	"mobile-frontend-editor-success-new-page": "একটি নতুন পাতা তৈরি করায় অভিনন্দন!",
 	"mobile-frontend-editor-summary-placeholder": "কি পরিবর্তন করেছেন তা আমাদের বলুন (ঐচ্ছিক)",
+	"mobile-frontend-editor-summary-request": "কীভাবে আপনি পাতাটির উন্নতি করেছেন?",
 	"mobile-frontend-editor-switch-confirm": "অন্য সম্পাদনা মোডে যাওয়ার আগে আপনাকে আপনার সম্পাদনা সংরক্ষণ করতে হবে।",
 	"mobile-frontend-editor-tutorial-alt-summary": "কেন $1'র উন্নয়ন করছেন না? মার্কআপ নিয়ে শঙ্কিত হবেন না!",
 	"mobile-frontend-editor-tutorial-cancel": "না, ধন্যবাদ",
