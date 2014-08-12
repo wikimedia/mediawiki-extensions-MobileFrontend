@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_af969f95",
+        "filename": "tests/browser/features/editor_wikitext_saving.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-12T19:49:19Z",
+      "side": 1,
+      "message": "That\u0027s fine. I think this is the way it used to be.",
+      "parentUuid": "8e28a382_a9c1ff84",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_7e9e325b",
         "filename": "tests/browser/features/step_definitions/nearby_steps.rb",
         "patchSetId": 4
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "8e28a382_8f93e3a5",
+        "filename": "tests/browser/features/step_definitions/nearby_steps.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-12T19:49:19Z",
+      "side": 1,
+      "message": "I see. If it works, then it\u0027s fine.",
+      "parentUuid": "8e28a382_34756693",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e28a382_5e9b7668",
         "filename": "tests/browser/features/support/env.rb",
         "patchSetId": 4
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "The `require \"rubygems\"` is a bit superfluous as it\u0027s loaded by default in Ruby 1.9 and up, but the bundler/setup should be required to set up the right bundler load paths. In fact, we should probably replace the subsequent includes to just use `Bundler.require(:default)` which will require everything mentioned in the Gemfile.",
       "parentUuid": "8e28a382_5e9b7668",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_6f90b798",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-12T19:49:19Z",
+      "side": 1,
+      "message": "Interesting, I didn\u0027t know that.",
+      "parentUuid": "8e28a382_b46036cd",
       "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
