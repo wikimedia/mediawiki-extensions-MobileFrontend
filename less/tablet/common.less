@@ -53,16 +53,24 @@ A file for css that optimises the Minerva skin on larger devices.
 		padding: 1.6em @contentPaddingTablet 0 @contentPaddingTablet;
 		// Classes added by thumbnails
 		// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
+		// We use @noflip because we still want .tleft to be on the left and
+		// .tright to be on the right in RTL languages.
 		.thumb {
 			&.tleft {
+				/* @noflip */
 				float: left;
+				/* @noflip */
 				clear: left;
+				/* @noflip */
 				margin-right: 1.4em;
 			}
 
 			&.tright {
+				/* @noflip */
 				float: right;
+				/* @noflip */
 				clear: right;
+				/* @noflip */
 				margin-left: 1.4em;
 			}
 		}
