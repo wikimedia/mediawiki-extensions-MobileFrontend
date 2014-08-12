@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_6fe7973c",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-12T19:54:10Z",
+      "side": 1,
+      "message": "That shouldn\u0027t be necessary. We lock the viewport only in VE overlay and unlock it when it\u0027s closed. Let me double check later.",
+      "revId": "1089c7f7f258bc4f68281c43de94b1968ebe2ee6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
