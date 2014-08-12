@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_29b2af92",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-12T17:52:01Z",
+      "side": 1,
+      "message": "Changes to this file are no longer needed.",
+      "revId": "ce549d54749eeaae7e14fa48fbdc5cc447e45da2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_09b7f382",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-12T17:52:01Z",
+      "side": 1,
+      "message": "Changes to this file are no longer needed.",
+      "revId": "ce549d54749eeaae7e14fa48fbdc5cc447e45da2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_49bdfb62",
+        "filename": "less/common/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-12T17:52:01Z",
+      "side": 1,
+      "message": "er.. I think you want to use the mixin here.\nAlso the rename to mw-ui-text-truncated is no longer needed.",
+      "revId": "ce549d54749eeaae7e14fa48fbdc5cc447e45da2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
