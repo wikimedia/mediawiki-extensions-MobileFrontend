@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_3ea8aa73",
+        "filename": "tests/browser/features/support/hooks.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-12T00:02:02Z",
+      "side": 0,
+      "message": "Does it work now without this file?",
+      "revId": "7c23de44f6b4d0e79f5f4427c5863d07a2d49305",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_5e95b641",
+        "filename": "tests/browser/features/editor_wikitext_saving.feature",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-12T00:02:02Z",
+      "side": 1,
+      "message": "I\u0027m not convinced about this indentation. It does look nicer but will be harder to maintain for people who use different editors than a typical 2 spaces indent.",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_7e9e325b",
+        "filename": "tests/browser/features/step_definitions/nearby_steps.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-12T00:02:02Z",
+      "side": 1,
+      "message": "I think \"class\" only finds elements with that specific class. That means that \"title other-class\" won\u0027t match. That\u0027s why we switched to \"css\" in a few places.",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_5e9b7668",
+        "filename": "tests/browser/features/support/env.rb",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-12T00:02:02Z",
+      "side": 1,
+      "message": "Why do we need those two?",
+      "revId": "f9a8970fd3c45da10cc141b92c95a59ab165ee7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
