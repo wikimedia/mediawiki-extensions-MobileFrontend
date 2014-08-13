@@ -79,7 +79,6 @@
 	"mobile-frontend-editor-success": "Succes! Din redigering blev gemt.",
 	"mobile-frontend-editor-success-landmark-1": "Tillykke, du er nu en {{SITENAME}} redaktør!",
 	"mobile-frontend-editor-summary-placeholder": "Fortæl os, hvad du har ændret (valgfrit)",
-	"mobile-frontend-editor-tutorial-alt-summary": "Hvorfor ikke forbedre $1? Du skal ikke være bange for opmærkningen!",
 	"mobile-frontend-editor-tutorial-cancel": "Nej tak",
 	"mobile-frontend-editor-tutorial-confirm": "Begynd at redigere",
 	"mobile-frontend-editor-tutorial-summary": "Vær ikke bange for markup. Prøv at forbedre siden $1.",
