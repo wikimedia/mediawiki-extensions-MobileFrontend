@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox
+@chrome @en.m.wikipedia.beta.wmflabs.org @extension-geodata @firefox
 Feature: Nearby pages
 
   Background:

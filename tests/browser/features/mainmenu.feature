@@ -15,6 +15,7 @@ Feature: Menus open correct page for anonymous users
       And I see a link to "Watchlist" in the main navigation menu
       And I see a link to "Log in" in the main navigation menu
 
+  @extension-geodata
   Scenario: Nearby link in menu
     Given at least one article with geodata exists
     When I click on the main navigation button

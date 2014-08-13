@@ -17,6 +17,7 @@ Feature: Generic special page features
       And I click the placeholder search box
     Then I see the search overlay
 
+  @extension-geodata
   Scenario: Search from Nearby
     When I click on "Nearby" in the main navigation menu
       And I click the placeholder search box
