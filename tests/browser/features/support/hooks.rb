@@ -1,2 +1,2 @@
 # Needed for cucumber --dry-run -f stepdefs
-require 'page-object'
+require_relative "env"

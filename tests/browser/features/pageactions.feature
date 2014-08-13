@@ -1,9 +1,9 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @vagrant
 Feature: Page actions menu when anonymous
 
   Background:
-    Given I am on the "Main Page" page
-       And I click on "Random" in the main navigation menu
+    Given I am using the mobile site
+      And I am viewing an article
 
   Scenario: Receive notification message - Edit Icon
     When I click the edit icon holder

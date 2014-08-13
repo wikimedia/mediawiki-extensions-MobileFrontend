@@ -1,9 +1,10 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @vagrant
 Feature: Search
 
   Background:
-    Given the page "Selenium search test" exists
+    Given I am using the mobile site
       And I am on the "Main Page" page
+      And the page "Selenium search test" exists
     When I click the placeholder search box
 
   Scenario: Opening search

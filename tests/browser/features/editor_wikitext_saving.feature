@@ -5,8 +5,8 @@ Feature: Wikitext Editor (Makes actual saves)
     Given I am logged into the mobile website
 
   Scenario: Successful edit on page without languages shows no language button [bug 63675]
-    And the page "Selenium no languages test page" exists
-    And I do not see the read in another language button
+    Given the page "Selenium no languages test page" exists
+      And I do not see the read in another language button
     When I click the edit button
       And I see the wikitext editor overlay
       And I type "ABC GHI" into the editor
@@ -17,8 +17,8 @@ Feature: Wikitext Editor (Makes actual saves)
       And I do not see the read in another language button
 
   Scenario: Successful edit reloads language button
-    And I go to a page that has languages
-    And I see the read in another language button
+    Given I go to a page that has languages
+      And I see the read in another language button
     When I click the edit button
       And I see the wikitext editor overlay
       And I type "ABC GHI" into the editor
@@ -28,8 +28,8 @@ Feature: Wikitext Editor (Makes actual saves)
       And I see the read in another language button
 
   Scenario: Redirects
-    And the page "Selenium wikitext editor test" exists
-    And I am on a page that does not exist
+    Given the page "Selenium wikitext editor test" exists
+      And I am on a page that does not exist
     When I click the edit button
       And I clear the editor
       And I type "#REDIRECT [[Selenium wikitext editor test]]" into the editor
@@ -40,7 +40,7 @@ Feature: Wikitext Editor (Makes actual saves)
       And the text of the first heading is "Selenium wikitext editor test"
 
   Scenario: Broken redirects
-    And I am on a page that does not exist
+    Given I am on a page that does not exist
     When I click the edit button
       And I clear the editor
       And I type "#REDIRECT [[AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]" into the editor

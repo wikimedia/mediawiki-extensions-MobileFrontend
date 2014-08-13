@@ -12,10 +12,10 @@ class ArticlePage
   a(:edit_history_link, id: "mw-mf-last-modified")
 
   # left nav
-  div(:navigation, css:"#mw-mf-page-left")
-  a(:watchlist_link, css:"#mw-mf-page-left .icon-watchlist a")
-  a(:about_link, text: "About Wikipedia")
-  a(:disclaimer_link, text: "Disclaimers")
+  div(:navigation, css: "#mw-mf-page-left")
+  a(:watchlist_link, css: "#mw-mf-page-left .icon-watchlist a")
+  a(:about_link) { |page| page.navigation_element.link_element(text: /^About/) }
+  a(:disclaimer_link) { |page| page.navigation_element.link_element(text: "Disclaimers") }
 
   # last modified bar
   a(:last_modified_bar_history_link, css: "#mw-mf-last-modified a", index: 0)
@@ -93,10 +93,10 @@ class ArticlePage
   div(:visual_editor_button, css: ".visual-editor")
 
   # editor
-  textarea(:editor_textarea, css: ".wikitext-editor")
-  button(:escape_button, css:".back.icon")
-  button(:continue_button, css:".continue")
-  button(:submit_button, css:".submit")
+  textarea(:editor_textarea, class: "wikitext-editor")
+  button(:escape_button, class: "icon-back")
+  button(:continue_button, class: "continue")
+  button(:submit_button, class: "submit")
 
   # drawer
   div(:drawer, class:"drawer position-fixed visible")
@@ -126,10 +126,11 @@ class ArticlePage
   div(:spinner_loading, class: "spinner loading")
 
   # toast
-  div(:toast, css: ".toast")
+  div(:toast, class: "toast")
 
   #loader
-  div(:content_wrapper, id:'content_wrapper')
+  div(:content_wrapper, id: 'content_wrapper')
+  div(:content, id: 'content')
 
   # secondary menu
   ## languages
@@ -164,4 +165,17 @@ class ArticlePage
   # error and warning boxes
   div(:warning_box, css: ".warning")
   div(:error_message, css: ".error")
+
+  # Enters the given or random text into the given element. Note that a click
+  # event is used over focus to properly handle content-editable elements.
+  #
+  def type_into(element_name, text = nil)
+    text ||= "text-#{rand(32 ** 8).to_s(32)}"
+
+    element = send("#{element_name}_element")
+    element.click
+    element.send_keys(:enter, text)
+
+    text
+  end
 end

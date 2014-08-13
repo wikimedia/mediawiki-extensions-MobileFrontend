@@ -5,7 +5,7 @@ class UploadPage < ArticlePage
   include URL
   page_url URL.url("Special:Uploads")
 
-  div(:contribute_image, css: ".ctaUploadPhoto button")
+  div(:contribute_image, class: "ctaUploadPhoto")
   # This may seem confusing but one is a DIV and one is an A tag
   a(:tutorial_link, href: "#/upload-tutorial/uploads")
   file_field(:select_file, name: 'file')

@@ -2,7 +2,8 @@
 Feature: Page actions menu when anonymous
 
   Background:
-    Given I visit a protected page
+    Given I am using the mobile site
+      And I visit a protected page
 
   Scenario: I cannot edit a protected page when anonymous
     When I click the edit icon holder

@@ -46,12 +46,16 @@ Given(/^the page "(.*?)" exists$/) do |title|
   step 'I am on the "' + title + '" page'
 end
 
-Given(/^I am on a page with geodata$/) do
-  wikitext = 'This page is used by Selenium to test geo related features.
+Given(/^at least one article with geodata exists$/) do
+  on(APIPage).create "Selenium geo test page", <<-end
+This page is used by Selenium to test geo related features.
 
 {{#coordinates:43|-75|primary}}
-'
-  on(APIPage).create "Selenium geo test page", wikitext
+  end
+end
+
+Given(/^I am on a page with geodata$/) do
+  step 'at least one article exists with geodata'
   step 'I am on the "Selenium geo test page" page'
 end
 
@@ -77,11 +81,8 @@ Given(/^the page "(.*?)" exists and has at least (\d+) edits$/) do |title, min_e
   # Open the third section which contains the edit count
   on(ArticlePage).third_section_element.when_present.click
   on(ArticlePage) do |page|
-    # Clean up edit count, removing any commas.
-    edit_count = page.edit_count_element.text.sub!(',', '').to_i
-    while edit_count < min_edit_count
-      edit_count += 1
-      on(APIPage).create title, "Test is used by Selenium web driver edit #" + edit_count.to_s
+    (page.edit_count.gsub(',', '').to_i + 1).upto(min_edit_count) do |n|
+      on(APIPage).create title, "Test is used by Selenium web driver edit ##{n}"
     end
   end
 end

@@ -1,5 +1,8 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @vagrant
 Feature: Login
+
+  Background:
+    Given I am using the mobile site
 
   Scenario: Not logged in
     Given I am on the "Main Page" page

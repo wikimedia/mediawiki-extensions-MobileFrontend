@@ -1,50 +1,28 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login
-Feature: VisualEditor
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @vagrant
+Feature: VisualEditor Mobile
 
-Background:
-  Given I am logged into the mobile website
-    And I am viewing the site in tablet mode
-    And I am in beta mode
+  Background:
+    Given I am logged into the mobile website
+      And I am in beta mode
+      And I am editing a new article with VisualEditor
 
-Scenario: Switch from VisualEditor to source editor
-  Given the page "Selenium Edit Test" exists
-    And I click the edit button
-    And I switch to VisualEditor
-    And I see the VisualEditor overlay
-    And I am on the "Selenium Edit Test" page
-    And I click the edit button
-    And I see the VisualEditor overlay
-    And the VisualEditor overlay has an editor mode switcher button
-    And I click the editor mode switcher button
-  When I click the source editor button
-  Then I see the wikitext editor overlay
+  Scenario: Switch from VisualEditor to source editor
+    When I switch to editing the source
+    Then I see the wikitext editor
 
-Scenario: Toolbar VisualEditor
-  Given the page "Selenium Edit Test" exists
-    And I click the edit button
-    And I switch to VisualEditor
-  Then I see the VisualEditor overlay
-    And I see a toolbar in the overlay header
-    And the VisualEditor toolbar has a bold button
-    And the VisualEditor toolbar has an italic button
+  Scenario: VisualEditor provides bold
+    When I look at the VisualEditor toolbar
+    Then I see a bold button
 
-Scenario: I can edit a page using VisualEditor
-  Given the page "Selenium Edit Test" exists
-    And I click the edit button
-    And I switch to VisualEditor
-    And VisualEditor has loaded
-    And I type "ABCDEFG" into VisualEditor
-    And I click continue
-  When I click submit
-  Then I do not see the VisualEditor overlay
-    And I see a toast notification
+  Scenario: VisualEditor provides italicize
+    When I look at the VisualEditor toolbar
+    Then I see an italicize button
 
-Scenario: Going back from save screen in VisualEditor
-  Given the page "Selenium Edit Test" exists
-    And I click the edit button
-    And I switch to VisualEditor
-    And VisualEditor has loaded
-    And I type "ABCDEFG" into VisualEditor
-    And I click continue
-  When I click the escape button
-  Then I see the VisualEditor
+  Scenario: I can edit a page using VisualEditor
+    When I edit the article using VisualEditor
+    Then I see the edit reflected in the article content
+
+  Scenario: Going back from save screen in VisualEditor
+    When I click the escape button
+    Then I see the article content
+      But I no longer see the VisualEditor

@@ -1,9 +1,9 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @vagrant
 Feature: Menus open correct page for anonymous users
 
   Background:
-    Given I am on the "Main Page" page
-      And  I am logged into the mobile website
+    Given I am logged into the mobile website
+      And I am on the "Main Page" page
 
   Scenario: Check links in menu
     When I click on the main navigation button
@@ -16,4 +16,8 @@ Feature: Menus open correct page for anonymous users
       And I see a link to "Settings" in the main navigation menu
       And I see a link to "Watchlist" in the main navigation menu
       And I see a link to "Uploads" in the main navigation menu
-      And I see a link to "Nearby" in the main navigation menu
+
+  Scenario: Nearby link in menu
+    Given at least one article with geodata exists
+    When I click on the main navigation button
+    Then I see a link to "Nearby" in the main navigation menu

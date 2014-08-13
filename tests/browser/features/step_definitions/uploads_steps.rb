@@ -1,4 +1,3 @@
-
 Given(/^I can see the uploads interface$/) do
   on(UploadPage).contribute_image_element.when_present
 end

@@ -1,53 +1,61 @@
+Given(/^I am editing a new article with VisualEditor$/) do
+  api.create_page "Selenium Test Edit", ""
+  step 'I am on the "Selenium Test Edit" page'
+  step "I click the edit button"
+  step "I click the editor mode switcher button"
+  step "I click the VisualEditor button"
+  step "VisualEditor has loaded"
+end
+
 Given(/^VisualEditor has loaded$/) do
-  on(ArticlePage).editor_ve_element.when_present(20).should exist
+  expect(on(ArticlePage).editor_ve_element.when_present(20)).to exist
 end
 
-Then(/^I see the VisualEditor$/) do
-  on(ArticlePage).editor_ve_element.when_present.should exist
+When(/^I switch to editing the source$/) do
+  step "I click the editor mode switcher button"
+  step "I click the source editor button"
 end
 
-Then(/^I see the VisualEditor overlay$/) do
-  on(ArticlePage).overlay_ve_element.when_present.should exist
+When(/^I look at the VisualEditor toolbar$/) do
+  expect(on(ArticlePage).overlay_ve_header_toolbar_element).to exist
 end
 
-Then(/^I do not see the VisualEditor overlay$/) do
-  on(ArticlePage).overlay_ve_element.when_not_present(15)
+Then(/^I see a bold button$/) do
+  expect(on(ArticlePage).overlay_ve_header_toolbar_bold_button_element).to exist
 end
 
-Then(/^I see a toolbar in the overlay header$/) do
-  on(ArticlePage).overlay_ve_header_toolbar_element.when_present.should exist
+Then(/^I see an italicize button$/) do
+  expect(on(ArticlePage).overlay_ve_header_toolbar_italic_button_element).to exist
 end
 
-Then(/^the VisualEditor toolbar has a bold button$/) do
-  on(ArticlePage).overlay_ve_header_toolbar_bold_button_element.when_present.should exist
-end
-
-Then(/^the VisualEditor toolbar has an italic button$/) do
-  on(ArticlePage).overlay_ve_header_toolbar_italic_button_element.when_present.should exist
-end
-
-Then(/^the VisualEditor overlay has an editor mode switcher button$/) do
-  on(ArticlePage).overlay_editor_mode_switcher_element.when_present.should exist
-end
-
-Then(/^the wikitext editor overlay has an editor mode switcher button$/) do
-  on(ArticlePage).overlay_editor_mode_switcher_element.when_present.should exist
-end
-
-Given(/^I type "(.+)" into VisualEditor$/) do |text|
+When(/^I edit the article using VisualEditor$/) do
   on(ArticlePage) do |page|
-    page.editor_ve_element.when_present(15).fire_event("onfocus")
-    page.editor_ve_element.when_present.send_keys(text)
+    @article_text = page.type_into(:editor_ve)
+
+    expect(page.editor_ve).to include(@article_text)
+
+    page.wait_until { page.continue_button_element.enabled? }
+    page.continue_button
+
+    page.wait_until { page.submit_button_element.enabled? }
+    page.confirm(true) { page.submit_button }
   end
 end
 
-Given(/^I click the edit button for section (\d+)$/) do |arg1|
-  on(ArticlePage).link_element(css: ".edit-page", index: arg1.to_i).when_present.click
+Then(/^I see the edit reflected in the article content$/) do
+  on(ArticlePage) do |page|
+    page.wait_until { page.toast.include?("Your edit was saved") }
+    page.wait_until { page.content_element.visible? }
+
+    expect(page.content).to include(@article_text)
+  end
 end
 
-Given(/^I switch to VisualEditor$/) do
-  step "I see the wikitext editor overlay"
-	step "the wikitext editor overlay has an editor mode switcher button"
-	step "I click the editor mode switcher button"
-	step "I click the VisualEditor button"
+Then(/^I see the article content$/) do
+  expect(on(ArticlePage).content_element.when_present).to exist
 end
+
+Then(/^I no longer see the VisualEditor$/) do
+  expect(on(ArticlePage).editor_ve_element).to_not exist
+end
+

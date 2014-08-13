@@ -33,6 +33,10 @@ Given(/^I click submit$/) do
   end
 end
 
+Given(/^I am viewing an article$/) do
+  step "I am at a random page"
+end
+
 # Watch star
 Then(/^I see the watch star$/) do
   on(ArticlePage).watch_link_element.should be_visible
@@ -63,19 +67,6 @@ Then(/^I see a toast with message "(.*)"$/) do |text|
   on(ArticlePage).toast_element.when_present.text.should match text
 end
 
-Then(/^I see a toast with message about adding the random page$/) do
-  on(ArticlePage).toast_element.when_present.text.should match "Added #{@random_string} to your watchlist"
-end
-
-Then(/^I see a toast with message about removing the random page$/) do
-  on(ArticlePage) do |page|
-    page.wait_until do
-      page.text.include? "Removed" #Chrome needs this, FF does not
-    end
-    page.toast_element.when_present.text.should match "Removed #{@random_string} from your watchlist"
-  end
-end
-
 Then(/^I see a toast error$/) do
   on(ArticlePage).toast_element.when_present.class_name.should match "error"
 end
@@ -84,7 +75,7 @@ Then(/^the text of the first heading is "(.*)"$/) do |title|
    on(ArticlePage) do |page|
     page.wait_until do
       page.first_heading_element.when_present.text.include? title
-      end
+    end
     page.first_heading_element.when_present.text.should match title
   end
 end
@@ -100,3 +91,4 @@ end
 Then(/^I should see the error box message "(.+)"$/) do |error_message|
   on(ArticlePage).error_message.should match (error_message)
 end
+

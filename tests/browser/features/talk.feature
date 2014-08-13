@@ -1,15 +1,17 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
 Feature: Talk
   Background:
-    Given I am in beta mode
+    Given I am using the mobile site
+      And I am in beta mode
 
   Scenario: Talk doesn't show on talk pages
-    Given the page "Talk:Selenium talk test page" exists
+    Given the page "Talk:Selenium talk test" exists
+      And I am on the "Talk:Selenium talk test" page
     Then there is no talk button
 
   Scenario: Talk on a page that does exist
-    Given the page "Talk:Selenium talk test page" exists
-      And the page "Selenium talk test page" exists
+    Given the page "Talk:Selenium talk test" exists
+      And the page "Selenium talk test" exists
     When I click the talk button
     Then I see the talk overlay
 

@@ -1,9 +1,12 @@
 @chrome @en.m.wikipedia.beta.wmflabs.org @firefox
 Feature: Check UI components
 
+  Background:
+    Given I am using the mobile site
+
   Scenario: Check existence of important UI components on the main page
-    Given I am on the "Main Page" page
-      And the wiki has a terms of use
+    Given the wiki has a terms of use
+      And I am on the "Main Page" page
     Then I see the history link
       And I see the switch to desktop link
       And I see the license link
