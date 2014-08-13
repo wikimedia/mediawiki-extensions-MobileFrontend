@@ -614,6 +614,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.util',
 			'mobile.templates',
 			'mobile.overlays',
+			'jquery.cookie',
 		),
 		'templates' => array(
 			'wikitext/commons-upload.hogan',

@@ -14,8 +14,7 @@
 
 ( function( M, $ ) {
 
-	var writeCookie = M.settings.writeCookie,
-		cookiesEnabled = M.settings.cookiesEnabled,
+	var cookiesEnabled = M.settings.cookiesEnabled,
 		popup = M.require( 'toast' );
 
 	function desktopViewClick() {
@@ -34,12 +33,14 @@
 			redirectCookie = mw.config.get( 'wgStopMobileRedirectCookie' );
 
 		// expire the cookie defined by wgUseFormatCookie
-		writeCookie( useFormatCookie.name, '', useFormatCookie.duration,
-			useFormatCookie.path, useFormatCookie.domain );
+		$.cookie( useFormatCookie.name, '',
+			{ path: useFormatCookie.path, expires: useFormatCookie.duration,
+			domain: useFormatCookie.domain } );
 
 		// set the stopMobileRedirect cookie
-		writeCookie( redirectCookie.name, 'true', redirectCookie.duration,
-			redirectCookie.path, redirectCookie.domain );
+		$.cookie( redirectCookie.name, 'true',
+			{ path: redirectCookie.path, expires: redirectCookie.duration,
+			domain: redirectCookie.domain } );
 	}
 
 	$( '#mw-mf-display-toggle' ).on( 'click', desktopViewClick );
