@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_509a29be",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-14T22:44:16Z",
+      "side": 1,
+      "message": "Note sure about this logic.\n\nIsn\u0027t this essentially what this should be saying?:\n\n\n// upload to local wiki case\n(UploadBase::isEnabled() \u0026\u0026UploadBase::isallowed( $user ) )\n||\n// upload to endpoint case\n!empty( $wgMFPhotoUploadEndpoint ) \u0026\u0026\n$mobileContext-\u003euserCanUpload()",
+      "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
