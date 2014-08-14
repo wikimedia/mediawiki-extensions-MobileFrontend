@@ -532,6 +532,11 @@ $wgMFShowRedLinksAnon = false;
 $wgMFUploadMinEdits = 0;
 
 /**
+ * Controls whether the WikiGrok feature is enabled
+ */
+$wgMFEnableWikiGrok = false;
+
+/**
  * Whether beta and alpha modes are enabled
  */
 $wgMFEnableBeta = false;
