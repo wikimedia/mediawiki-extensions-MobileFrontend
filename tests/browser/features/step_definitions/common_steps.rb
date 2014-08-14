@@ -15,9 +15,12 @@ Given(/^I am logged into the mobile website$/) do
 end
 
 Given(/^I am using the mobile site$/) do
-  visit(MainPage)
-  @browser.cookies.add 'mf_useformat', 'true'
-  on(MainPage).refresh
+  on(MainPage) do |page|
+    page.goto
+    # A domain is explicitly given to avoid a bug in earlier versions of Chrome
+    page.browser.cookies.add 'mf_useformat', 'true', domain: URI.parse(page.page_url_value).host
+    page.refresh
+  end
 end
 
 Given(/^I am on the sign-up page$/) do
