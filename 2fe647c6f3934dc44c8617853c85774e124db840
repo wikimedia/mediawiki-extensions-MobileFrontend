@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_5561fe30",
+        "filename": "tests/browser/features/login.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-14T18:29:54Z",
+      "side": 0,
+      "message": "Keep this scenario but I think \"I am logged into the mobile website\" step should be removed. (We should have the test for password reset but it should only apply when I am anonymous.",
+      "revId": "2fe647c6f3934dc44c8617853c85774e124db840",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
