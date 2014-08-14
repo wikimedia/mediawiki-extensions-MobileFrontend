@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"StephDC",
-			"LNDDYL"
+			"LNDDYL",
+			"Jason924tw"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "電郵 （可選）",
@@ -76,13 +77,13 @@
 	"mobile-frontend-search-no-results": "無本題之頁。",
 	"mobile-frontend-settings-beta": "試灶",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} 語言",
-	"mobile-frontend-sign-in-heading": "增簿",
+	"mobile-frontend-sign-in-heading": "登簿",
 	"mobile-frontend-sign-up-heading": "增簿",
 	"mobile-frontend-talk-add-overlay-submit": "增議",
 	"mobile-frontend-talk-back-to-page": "返「$1」。",
 	"mobile-frontend-talk-overlay-header": "議",
 	"mobile-frontend-talk-reply": "答",
-	"mobile-frontend-terms-text": "使用条款",
+	"mobile-frontend-terms-text": "免責宣",
 	"mobile-frontend-view": "掌中卷",
 	"mobile-frontend-view-desktop": "桌上卷",
 	"mobile-frontend-view-mobile": "掌中卷",
