@@ -17,7 +17,7 @@ Then(/^I see the wikitext editor overlay$/) do
 end
 
 When(/^I click the wikitext editor overlay close button$/) do
-  on(ArticlePage).editor_overlay_close_button_element.click
+  on(ArticlePage).editor_overlay_close_button_element.when_present.click
 end
 
 Then(/^I should not see the wikitext editor overlay$/) do
