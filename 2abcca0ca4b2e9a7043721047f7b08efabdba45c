@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_52290999",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-15T22:48:51Z",
+      "side": 1,
+      "message": "This isn\u0027t needed. Html::element handles the HTML escaping for you. Generally in MediaWiki, we try to escape the output as close to the generation of the actual output as possible, to make security easier to check for.",
+      "revId": "2abcca0ca4b2e9a7043721047f7b08efabdba45c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
