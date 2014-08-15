@@ -52,6 +52,24 @@
       "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_704be588",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-15T00:34:38Z",
+      "side": 1,
+      "message": "\u003e but when $wgMFPhotoUploadEndpoint  is empty this means uploads go to the local wiki\n\nE.g. on commons directly :) There all images goes to the local wiki, and there we wan\u0027t to have the restriction to edits, too. Maybe this little integer example helps to understand what i think :)\n\u003e Maybe clarifying the if function with some nicely named variables\nYou mean in code?\n\n(first condition says if the user can upload to local wiki, second says that the upload goes to commons, third means the user is allowed (or not) to use mobile uploads.\n\nExamples:\nenwiki (local uploads are allowed but goes to commons):\ntrue \u0026\u0026\ntrue ||\nfalse\n\nreturns true\n(should return false, user isn\u0027t allowed (editcount))\n\nenwiki2:\ntrue \u0026\u0026\ntrue ||\ntrue\n\nreturns true\n(should return true)\n\ncommonswiki:\ntrue \u0026\u0026\nfalse ||\nfalse;\n\nreturns false\n(should return false)\n\ncommonswiki2:\ntrue \u0026\u0026\nfalse ||\ntrue;\n\nreturns true\n(should return true)",
+      "parentUuid": "8e28a382_f08915cc",
+      "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
