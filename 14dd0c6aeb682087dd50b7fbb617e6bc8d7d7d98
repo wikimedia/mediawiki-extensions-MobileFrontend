@@ -16,6 +16,24 @@
       "revId": "14dd0c6aeb682087dd50b7fbb617e6bc8d7d7d98",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_34542ac9",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-15T23:17:25Z",
+      "side": 1,
+      "message": "but this will not remove the parsed html?!",
+      "parentUuid": "8e28a382_34530a1c",
+      "revId": "14dd0c6aeb682087dd50b7fbb617e6bc8d7d7d98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
