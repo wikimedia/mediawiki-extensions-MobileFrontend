@@ -16,6 +16,24 @@
       "revId": "369f94e8f93b895fbeca1df7cfb7bb33bed7726c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_7422b2a3",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-15T22:54:11Z",
+      "side": 1,
+      "message": "it get\u0027s checked in UploadBase::isEnabled(), so no need to double check :)",
+      "parentUuid": "8e28a382_f204751c",
+      "revId": "369f94e8f93b895fbeca1df7cfb7bb33bed7726c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
