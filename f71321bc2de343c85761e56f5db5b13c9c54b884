@@ -16,6 +16,24 @@
       "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_908771dc",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-15T00:21:03Z",
+      "side": 1,
+      "message": "I think no.\n\nI will use:\nendpoint \u003d $wgMFPhotoUploadEndpoint\ncontext \u003d $mobileContext-\u003euserCanUpload()\nuploadbase \u003d UploadBase::isEnabled() \u0026\u0026UploadBase::isallowed( $user )\n\nJust to clarify.\n\nIn your example you combine endpoint and context, but not uploadbase and context. This would allow all users to upload on Commons through Special:Uploads (no endpoint, uploadbase true), still when context say no (false). We need to combine context right check with endpoint AND uploadbase :) So we must check if ( uploadbase is true OR endpoint isn\u0027t empty ) AND context right is true. If context right is false, there is (for our check) no matter, if uploadbase or endpoint is true (or both).",
+      "parentUuid": "8e28a382_509a29be",
+      "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
