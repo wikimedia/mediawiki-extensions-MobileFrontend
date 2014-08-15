@@ -34,6 +34,24 @@
       "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_f08915cc",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-15T00:23:49Z",
+      "side": 1,
+      "message": "I can\u0027t realy think straight today but when $wgMFPhotoUploadEndpoint  is empty this means uploads go to the local wiki. I\u0027m not sure what the behaviour there should be.\n\nMaybe clarifying the if function with some nicely named variables will make things less confusing.",
+      "parentUuid": "8e28a382_908771dc",
+      "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
