@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_f204751c",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-15T22:52:10Z",
+      "side": 1,
+      "message": "What happened to $wgEnableUploads ?",
+      "revId": "369f94e8f93b895fbeca1df7cfb7bb33bed7726c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
