@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_34530a1c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-15T22:57:00Z",
+      "side": 1,
+      "message": "No need for / symbol\njust do \u0027\u003cdiv\u003e\u0027\n\nBit concerned about use of html here. I think simply self.sectionLine \u003d parsedSectionLine  should be enough, given how it is used.",
+      "revId": "14dd0c6aeb682087dd50b7fbb617e6bc8d7d7d98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
