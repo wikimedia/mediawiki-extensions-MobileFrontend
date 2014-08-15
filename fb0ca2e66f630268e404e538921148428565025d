@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_f46d8297",
+        "filename": "i18n/en.json",
+        "patchSetId": 18
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-15T23:18:27Z",
+      "side": 1,
+      "message": "indent noooooo",
+      "revId": "fb0ca2e66f630268e404e538921148428565025d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
