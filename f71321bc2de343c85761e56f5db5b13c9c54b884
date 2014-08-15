@@ -70,6 +70,24 @@
       "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_230ab522",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-15T00:51:13Z",
+      "side": 1,
+      "message": "Sorry, my fault, the correct conditions:\n\nenwiki:\ntrue || true \u0026\u0026 false\n\nreturns true\n(should return false, user has no 75 edit counts),\n\nenwiki2:\nfalse || true \u0026\u0026 false\n\nreturns false\n(should return false),\n\nenwiki3:\ntrue || true \u0026\u0026 true\n\nreturns true\n(should return true),\n\ncommons:\ntrue || false \u0026\u0026 true\n\nreturns true\n(should return true),\n\ncommons:\ntrue || false \u0026\u0026 false\n\nreturns true\n(should return false, user has no 75 edits),\n\ncommons:\nfalse || false \u0026\u0026 false\n\nreturns false\n(should return false),\n\nIt\u0027s very confusing :/",
+      "parentUuid": "8e28a382_704be588",
+      "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
