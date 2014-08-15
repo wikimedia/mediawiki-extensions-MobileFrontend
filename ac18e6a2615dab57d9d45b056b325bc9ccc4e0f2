@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_f49902c9",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-15T23:05:06Z",
+      "side": 1,
+      "message": "Same problem. This will potentially cause double-escaping.",
+      "revId": "ac18e6a2615dab57d9d45b056b325bc9ccc4e0f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
