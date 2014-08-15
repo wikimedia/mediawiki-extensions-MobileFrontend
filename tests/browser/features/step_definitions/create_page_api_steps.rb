@@ -30,14 +30,20 @@ Section 3.
 end
 
 Given(/^I am on a page which has cleanup templates$/) do
-    wikitext = 'This page is used by Selenium to test MediaWiki functionality.
+    wikitext = <<-END.gsub(/^ */, '')
+      This page is used by Selenium to test MediaWiki functionality.
 
-<table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
-<tr><td class="mbox-image">[[File:Question_book-new.svg|thumb]]</td>
-<td class="mbox-text"><span class="mbox-text-span">This article \'\'\'needs additional citations for [[Wikipedia:Verifiability|verification]]\'\'\'. <span class="hide-when-compact">Please help [//en.wikipedia.org/w/index.php?title=Doomsday_device&amp;action=edit improve this article] by [[Help:Introduction_to_referencing/1|adding citations to reliable sources]]. Unsourced material may be challenged and removed.</span> <small><i>(October 2012)</i></small></span></td>
-</tr></table>'
+      <table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
+        <tr>
+          <td class="mbox-image">[[File:Question_book-new.svg|thumb]]</td>
+          <td class="mbox-text">
+            <span class="mbox-text-span">This article \'\'\'needs additional citations for [[Wikipedia:Verifiability|verification]]\'\'\'. <span class="hide-when-compact">Please help [[Selenium page issues test page#editor/0|improve this article]] by [[Help:Introduction_to_referencing/1|adding citations to reliable sources]]. Unsourced material may be challenged and removed.</span> <small><i>(October 2012)</i></small></span>
+          </td>
+        </tr>
+      </table>
+    END
 
-    on(APIPage).create "Selenium page issues test page", wikitext
+    api.create_page "Selenium page issues test page", wikitext
     step 'I am on the "Selenium page issues test page" page'
 end
 
