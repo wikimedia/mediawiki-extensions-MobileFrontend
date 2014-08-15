@@ -59,11 +59,11 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 					$this->msg( 'contributions-title', $username )->plain()
 				)->inContentLanguage() );
 
-				$userPage = htmlspecialchars( $par );
-				if ( !User::isIP( $par ) ) {
-					$userPage = $this->user->getUserPage();
+				if ( User::isIP( $par ) ) {
+					$this->renderHeaderBar( $par );
+				} else {
+					$this->renderHeaderBar( $this->user->getUserPage() );
 				}
-				$this->renderHeaderBar( $userPage );
 				$res = $this->doQuery();
 				$this->showContributions( $res );
 				wfProfileOut( __METHOD__ );
