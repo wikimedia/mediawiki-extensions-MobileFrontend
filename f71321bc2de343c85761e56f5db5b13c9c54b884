@@ -88,6 +88,23 @@
       "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_32c8bd50",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-15T21:57:47Z",
+      "side": 1,
+      "message": "This is just too complicated to have as a single line variable declaration. It needs to be exploded into multiple if statements with copious comments, so that the logic is clear to anyone looking at it. Also, we should get rid of the empty() call while we\u0027re at it. Just do a simple boolean check of $wgMFPhotoUploadEndpoint.",
+      "revId": "f71321bc2de343c85761e56f5db5b13c9c54b884",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
