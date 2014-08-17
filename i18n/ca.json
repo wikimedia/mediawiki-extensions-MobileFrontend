@@ -8,7 +8,8 @@
 			"Paucabot",
 			"QuimGil",
 			"Toniher",
-			"Vriullop"
+			"Vriullop",
+			"Fitoschido"
 		]
 	},
 	"beta-feature-geonotahack": "A prop d'aquesta pàgina",
@@ -74,10 +75,9 @@
 	"mobile-frontend-editor-success-new-page": "Enhorabona per la creació d'una nova pàgina!",
 	"mobile-frontend-editor-summary-placeholder": "Expliqueu què heu canviat (opcional)",
 	"mobile-frontend-editor-switch-editor": "Canvia d'editor",
-	"mobile-frontend-editor-tutorial-alt-summary": "Per què no milloreu $1? No tingueu por de la sintaxi wiki!",
 	"mobile-frontend-editor-tutorial-cancel": "No, gràcies",
 	"mobile-frontend-editor-tutorial-confirm": "Comença a editar",
-	"mobile-frontend-editor-tutorial-summary": "No tingueu por de la sintaxi wiki. Ajudeu a millorar la pàgina $1.",
+	"mobile-frontend-editor-tutorial-summary": "Ajudeu a millorar la pàgina $1. No tingueu por de la sintaxi wiki.",
 	"mobile-frontend-editor-unavailable": "L'edició mòbil no està disponible actualment en el teu navegador. Si us plau prova amb un navegador diferent.",
 	"mobile-frontend-editor-unavailable-header": "Editor no disponible",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Codi font de</strong><span> $1</span>",

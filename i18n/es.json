@@ -18,7 +18,8 @@
 			"Vivaelcelta",
 			"VegaDark",
 			"Macofe",
-			"Themasterriot"
+			"Themasterriot",
+			"Amitie 10g"
 		]
 	},
 	"beta-feature-geonotahack": "Cerca de esta página",
@@ -86,10 +87,9 @@
 	"mobile-frontend-editor-summary-request": "¿En qué forma mejoraste la página?",
 	"mobile-frontend-editor-switch-confirm": "Debes guardar la modificación antes de cambiar a otro modo de edición.",
 	"mobile-frontend-editor-switch-editor": "Cambiar de editor",
-	"mobile-frontend-editor-tutorial-alt-summary": "¿Por qué no mejorar $1? ¡No le temas al código!",
 	"mobile-frontend-editor-tutorial-cancel": "No, gracias",
 	"mobile-frontend-editor-tutorial-confirm": "Empezar a editar",
-	"mobile-frontend-editor-tutorial-summary": "No le temas al código. Ayuda a mejorar la página $1.",
+	"mobile-frontend-editor-tutorial-summary": "Ayuda a mejorar la página $1. No le temas al código.",
 	"mobile-frontend-editor-unavailable": "La edición a través del móvil no está disponible en este navegador. Prueba con otro.",
 	"mobile-frontend-editor-unavailable-header": "Editor no disponible",
 	"mobile-frontend-editor-undo-unsupported": "Actualmente no se admite la función Deshacer en los dispositivos móviles.",

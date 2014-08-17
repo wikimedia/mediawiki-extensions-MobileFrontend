@@ -301,6 +301,7 @@
 	"mobile-frontend-thanked-notice": "$1 {{GENDER:$2|был оповещён|была оповещена|были оповещены}}, что вам понравилась {{GENDER:$2|его|её|их}} правка.",
 	"mobile-frontend-user-account": "учётная запись",
 	"mobile-frontend-user-button-tooltip": "Показать мои уведомления",
+	"mobile-frontend-user-newmessages": "У вас есть новые сообщения на вашей странице обсуждения",
 	"mobile-frontend-user-cta": "Пожалуйста, войдите или зарегистрируйтесь, чтобы увидеть ваши уведомления.",
 	"mobile-frontend-username": "Имя участника:",
 	"mobile-frontend-username-placeholder": "Имя участника",

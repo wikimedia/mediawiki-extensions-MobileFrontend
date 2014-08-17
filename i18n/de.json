@@ -291,6 +291,7 @@
 	"mobile-frontend-thanked-notice": "$1 wurde gesagt, dass du {{GENDER:$2|seine|ihre|die}} Bearbeitung magst.",
 	"mobile-frontend-user-account": "Benutzerkonto",
 	"mobile-frontend-user-button-tooltip": "Meine Benachrichtigungen anzeigen",
+	"mobile-frontend-user-newmessages": "Du hast neue Nachrichten auf deiner Diskussionsseite",
 	"mobile-frontend-user-cta": "Bitte melde dich an oder registriere dich, um deine Benachrichtigungen anzusehen.",
 	"mobile-frontend-username": "Benutzername:",
 	"mobile-frontend-username-placeholder": "Benutzername",

@@ -290,6 +290,7 @@
 	"mobile-frontend-thanked-notice": "סיפרנו ל־$1 שאהבת עריכה {{GENDER:$2|שלו|שלה|שלהם}}.",
 	"mobile-frontend-user-account": "חשבון משתמש",
 	"mobile-frontend-user-button-tooltip": "הצגת ההודעות שלי",
+	"mobile-frontend-user-newmessages": "יש לך הודעות חדשות בדף השיחה",
 	"mobile-frontend-user-cta": "נא להיכנס או להירשם כדי לראות את ההודעות שלך.",
 	"mobile-frontend-username": "שם משתמש:",
 	"mobile-frontend-username-placeholder": "שם המשתמש",

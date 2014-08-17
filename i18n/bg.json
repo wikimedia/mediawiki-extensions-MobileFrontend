@@ -7,7 +7,8 @@
 			"Spiritia",
 			"Stanqo",
 			"Vladimir Penov",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Gazimagomedov"
 		]
 	},
 	"mobile-frontend-account-create-submit": "Регистриране",
@@ -40,7 +41,7 @@
 	"mobile-frontend-main-menu-logout": "Излизане",
 	"mobile-frontend-main-menu-nearby": "Наблизо",
 	"mobile-frontend-main-menu-page-title": "Навигация на сайта",
-	"mobile-frontend-main-menu-settings": "Настройки",
+	"mobile-frontend-main-menu-settings": "Рекъезаби",
 	"mobile-frontend-main-menu-settings-heading": "Настройки за мобилен сайт",
 	"mobile-frontend-missing-image": "Изображение",
 	"mobile-frontend-news-items": "В новините",
@@ -48,7 +49,6 @@
 	"mobile-frontend-on": "ВКЛ.",
 	"mobile-frontend-page-menu-contents": "съдържание",
 	"mobile-frontend-page-menu-history": "История",
-	"mobile-frontend-page-saving": "<strong>Съхраняване на</strong><span> $1</span>",
 	"mobile-frontend-password": "Парола:",
 	"mobile-frontend-password-placeholder": "Парола",
 	"mobile-frontend-placeholder": "Търсене в {{SITENAME}}",
@@ -68,6 +68,5 @@
 	"mobile-frontend-watchlist-cta-button-signup": "Регистриране",
 	"mobile-frontend-watchlist-filter-all": "Всички",
 	"mobile-frontend-watchlist-filter-other": "Други",
-	"mobile-frontend-watchlist-filter-talk": "Беседа",
-	"mobilefrontend-keepgoing-cancel": "Не, благодаря"
+	"mobile-frontend-watchlist-filter-talk": "Беседа"
 }

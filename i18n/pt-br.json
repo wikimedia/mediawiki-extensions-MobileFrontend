@@ -68,7 +68,7 @@
 	"mobile-frontend-editor-success-landmark-1": "Parabéns, agora você é um editor da {{SITENAME}}!",
 	"mobile-frontend-editor-summary-placeholder": "Nos diga o que você mudou (opicional)",
 	"mobile-frontend-editor-tutorial-confirm": "Começar a editar",
-	"mobile-frontend-editor-tutorial-summary": "Não fique com medo de editar. Tente melhorar a página $1.",
+	"mobile-frontend-editor-tutorial-summary": "Tente melhorar a página $1. Não fique com medo de editar.",
 	"mobile-frontend-editor-unavailable": "Edições mobile não estão disponíveis para seu navegador. Por favor tente com outro navegador.",
 	"mobile-frontend-editor-undo-unsupported": "Desfazer não está disponível para dispositivos móveis.",
 	"mobile-frontend-editor-wait": "Salvando edição, por favor aguarde.",
