@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_1ef819e1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-18T23:15:32Z",
+      "side": 1,
+      "message": "$prevId and $oldRevId don\u0027t necessarily exist. This will throw an error if they don\u0027t.",
+      "revId": "fa3492bfcee3b4d4fedf649066ff93db617d546b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
