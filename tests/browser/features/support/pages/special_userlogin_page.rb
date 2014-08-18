@@ -4,10 +4,10 @@ class SpecialUserLoginPage < ArticlePage
 
   page_url URL.url("Special:UserLogin")
 
-  h1(:first_heading, id: "firstHeading")
+  h1(:first_heading, id: "section_0")
   div(:login_head_message, class: "headmsg")
 
-  div(:feedback, class: "errorbox")
+  div(:feedback, class: "alert error")
   button(:login, id: "wpLoginAttempt")
   text_field(:username, name: "wpName")
   text_field(:password, name: "wpPassword")
