@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_5330da52",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-18T21:45:58Z",
+      "side": 1,
+      "message": "Could you be a bit more explicit about what this changes? (You could just copy the commit message here.)",
+      "revId": "ec5addaadd10346d8dc17c9ea630b2c0503304e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
