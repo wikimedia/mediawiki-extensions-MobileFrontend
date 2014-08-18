@@ -280,6 +280,7 @@
 	"mobile-frontend-thanked-notice": "$1 доби известие дека ви се допаѓа {{GENDER:$2|неговото|нејзиното|направеното}} уредување.",
 	"mobile-frontend-user-account": "корисничка сметка",
 	"mobile-frontend-user-button-tooltip": "Прикажи ги моите известувања",
+	"mobile-frontend-user-newmessages": "Имате нови пораки на вашата страница за разговор",
 	"mobile-frontend-user-cta": "Најавете се или регистрирајте се за да ги погледате вашите известувања",
 	"mobile-frontend-username": "Корисничко име:",
 	"mobile-frontend-username-placeholder": "Корисничко име",

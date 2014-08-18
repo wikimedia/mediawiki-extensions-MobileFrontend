@@ -306,6 +306,7 @@
 	"mobile-frontend-thanked-notice": "$1已被告知你喜欢{{GENDER:$2|他|她|他们}}的编辑。",
 	"mobile-frontend-user-account": "用户账户",
 	"mobile-frontend-user-button-tooltip": "显示我的通知",
+	"mobile-frontend-user-newmessages": "您的讨论页有您的新消息",
 	"mobile-frontend-user-cta": "请登录或注册以查看你的通知。",
 	"mobile-frontend-username": "用户名：",
 	"mobile-frontend-username-placeholder": "用户名",

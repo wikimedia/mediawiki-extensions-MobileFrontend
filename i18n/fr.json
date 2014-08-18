@@ -309,6 +309,7 @@
 	"mobile-frontend-thanked-notice": "$1 a été averti que vous avez aimé {{GENDER:$2|sa}} modification.",
 	"mobile-frontend-user-account": "compte utilisateur",
 	"mobile-frontend-user-button-tooltip": "Afficher mes notifications",
+	"mobile-frontend-user-newmessages": "Vous avez de nouveaux messages sur votre page de discussion",
 	"mobile-frontend-user-cta": "Veuillez vous connecter ou vous inscrire pour voir vos notifications.",
 	"mobile-frontend-username": "Nom d’utilisateur :",
 	"mobile-frontend-username-placeholder": "Nom d'utilisateur",

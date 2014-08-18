@@ -283,6 +283,7 @@
 	"mobile-frontend-thanked-notice": "$1 {{GENDER:$2|a|a|au}} fost {{GENDER:$2|informat|informată|informați}} că {{GENDER:$2|i|i|le}}-ați apreciat modificarea.",
 	"mobile-frontend-user-account": "cont de utilizator",
 	"mobile-frontend-user-button-tooltip": "Arată-mi notificări",
+	"mobile-frontend-user-newmessages": "Aveți mesaje noi pe pagina dumneavoastră de discuție",
 	"mobile-frontend-user-cta": "Vă rugăm să vă autentificați sau să vă creați un cont pentru a vizualiza notificările.",
 	"mobile-frontend-username": "Nume de utilizator:",
 	"mobile-frontend-username-placeholder": "Nume de utilizator",
