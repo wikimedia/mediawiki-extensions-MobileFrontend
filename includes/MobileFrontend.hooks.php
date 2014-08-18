@@ -782,6 +782,7 @@ class MobileFrontendHooks {
 					'DeviceDetectionTest.php',
 					'MobileContextTest.php',
 					'MobileFormatterTest.php',
+					'skins/SkinMinervaTest.php',
 					'specials/MobileSpecialPageTest.php',
 					'specials/SpecialMobileDiffTest.php',
 				)
