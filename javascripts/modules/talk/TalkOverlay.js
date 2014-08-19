@@ -60,6 +60,8 @@
 					page = options.page, self = this;
 
 				this._super( options );
+				// FIXME: Make the add button work again. bug 69763
+				$add.remove();
 				if ( !user.isAnon() ) {
 					$add.click( function() {
 						var overlay = new TalkSectionAddOverlay( {
