@@ -112,6 +112,7 @@ $wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::onRequestContextC
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] =
 	'MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec';
 $wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::onBeforePageRedirect';
+$wgHooks['DiffViewHeader'][] = 'MobileFrontendHooks::onDiffViewHeader';
 $wgHooks['ResourceLoaderTestModules'][] = 'MobileFrontendHooks::onResourceLoaderTestModules';
 $wgHooks['GetCacheVaryCookies'][] = 'MobileFrontendHooks::onGetCacheVaryCookies';
 $wgHooks['ResourceLoaderGetConfigVars'][] = 'MobileFrontendHooks::onResourceLoaderGetConfigVars';
