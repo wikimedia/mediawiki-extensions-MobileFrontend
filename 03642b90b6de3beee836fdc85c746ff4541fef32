@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_20a3a7fe",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-19T22:45:05Z",
+      "side": 1,
+      "message": "Please don\u0027t use id\u0027s in this way.",
+      "revId": "03642b90b6de3beee836fdc85c746ff4541fef32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_c0b3c34a",
+        "filename": "templates/ctaDrawer.html",
+        "patchSetId": 19
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-19T22:45:05Z",
+      "side": 1,
+      "message": "Please don\u0027t allow ids in templates. Remember that an id must be unique. \n\nTemplates are designed to be generic and reused and the introduction of an id conflicts with this.\ne.g. what if two CtaDrawers use the same id on a link?\n\nIds rarely need to be used these days. A class would be better here if it needs to be distinguished.",
+      "revId": "03642b90b6de3beee836fdc85c746ff4541fef32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
