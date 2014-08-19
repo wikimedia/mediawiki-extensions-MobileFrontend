@@ -17,16 +17,6 @@ M.settings = ( function() {
 		}
 	}
 
-	// FIXME: Deprecate - use $.cookie instead
-	function writeCookie( name, value, days, path, domain ) {
-		$.cookie( name, value, { path: path, expires: days, domain: domain } );
-	}
-
-	// FIXME: Deprecate - use $.cookie instead
-	function readCookie( name ) {
-		return $.cookie( name );
-	}
-
 	/**
 	 * Saves a user setting for a later browser settings via localStorage
 	 *
@@ -38,7 +28,7 @@ M.settings = ( function() {
 	function saveUserSetting( name, value, useCookieFallback ) {
 		return M.supportsLocalStorage ?
 			localStorage.setItem( name, value ) :
-				( useCookieFallback ? writeCookie( name, value, 1 ) : false );
+				( useCookieFallback ? $.cookie( name, value, { expires: 1 } ) : false );
 	}
 
 	/**
@@ -50,14 +40,12 @@ M.settings = ( function() {
 	 */
 	function getUserSetting( name, useCookieFallback ) {
 		return M.supportsLocalStorage ? localStorage.getItem( name ) :
-			( useCookieFallback ? readCookie( name ) : false );
+			( useCookieFallback ? $.cookie( name ) : false );
 	}
 
 	return {
 		getUserSetting: getUserSetting,
-		readCookie: readCookie,
 		saveUserSetting: saveUserSetting,
-		writeCookie: writeCookie,
 		cookiesEnabled: cookiesEnabled
 	};
 }());
