@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_60e64f41",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 823,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-19T22:50:55Z",
+      "side": 1,
+      "message": "Doesn\u0027t this break $wgMFShowRedLinksAnon? According to definition \"Specify whether show redlinks (page doesn\u0027t exist) for anonymous users.\"\nIt doesn\u0027t mention anything about having no effect in certain modes.\n\nHowever when:\n$wgMFShowRedLinksAnon \u003d false\nand isBetaGroupMember is true\nwe enable red links.",
+      "revId": "60707f5e5d218b6524fa8e9b4d882e390d00241a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
