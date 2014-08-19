@@ -52,6 +52,24 @@
       "revId": "14dd0c6aeb682087dd50b7fbb617e6bc8d7d7d98",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_85a38da7",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-19T21:36:45Z",
+      "side": 1,
+      "message": "Yes, this i mean :) ok\nDone",
+      "parentUuid": "8e28a382_e5e4910c",
+      "revId": "14dd0c6aeb682087dd50b7fbb617e6bc8d7d7d98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
