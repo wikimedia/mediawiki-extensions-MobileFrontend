@@ -34,6 +34,24 @@
       "revId": "14dd0c6aeb682087dd50b7fbb617e6bc8d7d7d98",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_e5e4910c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-19T21:25:49Z",
+      "side": 1,
+      "message": "What are the examples of parsed HTML that can happen there? You mean someone making a section heading a link or adding \u003ci\u003e or \u003cb\u003e to it?\n\nIf yes, then change the comment from \"strip all HTML entities\" to \"strip all HTML tags\".",
+      "parentUuid": "8e28a382_34542ac9",
+      "revId": "14dd0c6aeb682087dd50b7fbb617e6bc8d7d7d98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
