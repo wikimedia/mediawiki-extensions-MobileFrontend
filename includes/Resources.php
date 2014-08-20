@@ -521,6 +521,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	// FIXME: Remove this module and associated code unless it is going to be used by the
+	// Firefox app.
 	'mobile.ajaxpages' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			// Requires the Page.js JavaScript file
@@ -560,7 +562,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.beta',
-			'mobile.ajaxpages',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-translator.js',
