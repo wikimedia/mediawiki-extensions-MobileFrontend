@@ -47,6 +47,7 @@
 	"mobile-frontend-editor-cta": "Aita seda lehekülge täiustada!",
 	"mobile-frontend-editor-disabled": "See lehekülg on kaitstud, et ennetada vandalismi.",
 	"mobile-frontend-editor-edit": "Redigeeri",
+	"mobile-frontend-editor-editing": "Redigeerimine",
 	"mobile-frontend-editor-editing-page": "Lehekülje \"<span>$1</span>\" <strong>redigeerimine</strong>",
 	"mobile-frontend-editor-error": "Tõrge, muudatust ei salvestatud.",
 	"mobile-frontend-editor-keep-editing": "Jätka redigeerimist",

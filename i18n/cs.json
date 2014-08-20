@@ -273,6 +273,8 @@
 	"mobile-frontend-watchlist-removed": "Stránka $1 odebrána ze sledovaných",
 	"mobile-frontend-watchlist-view": "Zobrazit seznam sledovaných stránek",
 	"nearby": "Stránky blízko vás",
-	"tag-mobile_edit": "Mobilní editace",
-	"tag-mobile_edit-description": "Editace provedená z mobilu (web nebo aplikace)"
+	"tag-mobile_edit": "editace z mobilu",
+	"tag-mobile_edit-description": "Editace provedená z mobilu (web nebo aplikace)",
+	"tag-mobile_web_edit": "editace z mobilního webu",
+	"tag-mobile_web_edit-description": "Editace provedená z webových stránek pro mobily"
 }
