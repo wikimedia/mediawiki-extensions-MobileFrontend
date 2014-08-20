@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e252fa8_6da595b1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "Add trailing comma - will help give cleaner diffs in future.",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e252fa8_2daf8d93",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "use isAnon to hint that this is a boolean to the reader of your code.",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e252fa8_6d8c753b",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "Use chaining here..\neg. on( ).prop(",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e252fa8_4d91b951",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "likewise chaining here.",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e252fa8_0d9a9166",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "Move this to a variable at top of function.",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e252fa8_4d909946",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "make this isAnon",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e252fa8_ed7f4510",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "Although not well documented the event page-loaded only takes one argument, so anonymous will also be false on pages loaded via JavaScript.\n\nUse a variable inside the function\u0027s scope. e.g. right at the top of the closure. It\u0027s not going to change.",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e252fa8_ad793d2c",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "Don\u0027t add this parameter",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e252fa8_cd7c891e",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-20T20:12:58Z",
+      "side": 1,
+      "message": "Don\u0027t add this parameter",
+      "revId": "fedb411a405ac7d31df0164dc9c20bb6ccf90063",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
