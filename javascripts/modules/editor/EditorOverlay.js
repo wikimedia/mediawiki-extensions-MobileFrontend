@@ -54,7 +54,12 @@
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .submit' ).prop( 'disabled', false );
 				} );
-			this.$( '.continue' ).on( M.tapEvent( 'click' ), $.proxy( this, '_prepareForSave' ) );
+			if ( options.isAnon ) {
+				this.$anonWarning = this.$( '.anonwarning' );
+				this._showAnonWarning();
+			} else {
+				this.$( '.continue' ).on( M.tapEvent( 'click' ), $.proxy( this, '_prepareForSave' ) );
+			}
 			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( this, '_hidePreview' ) );
 			this.$( '.submit' ).on( M.tapEvent( 'click' ), $.proxy( this, '_save' ) );
 			// make license links open in separate tabs
@@ -81,6 +86,27 @@
 				this.$content.prop( 'readonly', true );
 			}
 
+			if ( !options.isAnon ) {
+				this._loadContent();
+			}
+		},
+
+		_showAnonWarning: function() {
+			this.$content.hide();
+			this.showSpinner();
+			this.$anonWarning.html( mw.config.get( 'wgMFAnonEditWarning' ) ).show();
+			this.$( '.continue' ).prop( 'disabled', false ).on(
+				M.tapEvent( 'click' ), $.proxy( this, '_showEditorafterWarning' )
+			);
+			this.clearSpinner();
+		},
+
+		_showEditorafterWarning: function() {
+			this.showSpinner();
+			this.$anonWarning.hide();
+			this.$( '.continue' ).prop( 'disabled', true ).on(
+				M.tapEvent( 'click' ), $.proxy( this, '_prepareForSave' )
+			);
 			this._loadContent();
 		},
 

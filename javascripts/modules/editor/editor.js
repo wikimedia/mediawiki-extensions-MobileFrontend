@@ -91,6 +91,7 @@
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
 					title: page.title,
+					isAnon: user.isAnon(),
 					isNewPage: isNewPage,
 					isNewEditor: user.getEditCount() === 0,
 					oldId: M.query.oldid,

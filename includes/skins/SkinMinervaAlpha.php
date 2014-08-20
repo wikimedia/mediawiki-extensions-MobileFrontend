@@ -33,6 +33,19 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	}
 
 	/**
+	 * Get various skin specific configuration.
+	 * @return array
+	 */
+	public function getSkinConfigVariables() {
+		$vars = parent::getSkinConfigVariables();
+		// Parse the anoneditwarning in PHP. JavaScript parser has problems with contents like
+		// {{FULLPAGENAME}}.
+		$vars['wgMFAnonEditWarning'] = wfMessage( 'anoneditwarning' )->parse();
+		$vars['wgMFAnonymousEditing'] = true;
+		return $vars;
+	}
+
+	/**
 	 * Add the talk page link for logged in alpha users to template
 	 * @param BaseTemplate $tpl an instance of BaseTemplate
 	 * @return QuickTemplate
