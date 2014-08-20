@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_6f5a2dfb",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-20T20:59:47Z",
+      "side": 1,
+      "message": "that\u0027s unformatted wiki syntax :/",
+      "revId": "9fcd3aa0d12abf4178b16a20392c70cea2f24f1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
