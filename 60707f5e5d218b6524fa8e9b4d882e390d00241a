@@ -16,6 +16,24 @@
       "revId": "60707f5e5d218b6524fa8e9b4d882e390d00241a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_80a6db4e",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 823,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-20T01:07:07Z",
+      "side": 1,
+      "message": "No, that rules are all connected with or, so it is enough, if one is true, that means:\nbetagroupmember -\u003e show redlinks\nwgMFShowRedLinks \u003d true -\u003e show redlinks\nwgMFShowRedLinksAnon and user is anonymous -\u003e show redlinks\n\nNo matter what the other rules say :)",
+      "parentUuid": "8e28a382_60e64f41",
+      "revId": "60707f5e5d218b6524fa8e9b4d882e390d00241a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
