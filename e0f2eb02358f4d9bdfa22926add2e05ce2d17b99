@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_aca82375",
+        "filename": "tests/qunit/modules/talk/test_TalkSectionAddOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-20T20:38:18Z",
+      "side": 1,
+      "message": "status can\u0027t read if api request was ok, it is undefined. Needs a rework, i can\u0027t figure out, why atm :(",
+      "revId": "e0f2eb02358f4d9bdfa22926add2e05ce2d17b99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_2cb8b3e1",
+        "filename": "tests/qunit/modules/talk/test_TalkSectionAddOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-20T20:38:18Z",
+      "side": 1,
+      "message": "needs a new line at the end of file",
+      "revId": "e0f2eb02358f4d9bdfa22926add2e05ce2d17b99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
