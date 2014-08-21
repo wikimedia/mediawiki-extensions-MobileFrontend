@@ -1003,13 +1003,11 @@ class SkinMinerva extends SkinTemplate {
 </ul>
 HTML;
 
-		// Generate the licensing text displayed in the footer of each page
+		// Generate the licensing text displayed in the footer of each page.
+		// See Skin::getCopyright for desktop equivalent.
 		$link = self::getLicenseLink( 'footer' );
-		// The license message is displayed in the content language rather than the user
-		// language. See Skin::getCopyright.
 		if ( $link ) {
-			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams(
-				$link )->inContentLanguage()->text();
+			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $link )->text();
 		} else {
 			$licenseText = '';
 		}
