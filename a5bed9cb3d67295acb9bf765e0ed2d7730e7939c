@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_812f68f3",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-21T16:37:58Z",
+      "side": 1,
+      "message": "I would suggest to not activate this feature by default. Third-party-wikis normally doesn\u0027t have any benefit of it, but have to disable it manually. So i think it\u0027s better to set it as false here and enable it wiki mediawiki-config in operations for the wmf cluster.",
+      "revId": "a5bed9cb3d67295acb9bf765e0ed2d7730e7939c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
