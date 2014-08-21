@@ -148,8 +148,10 @@
 			window.scrollTo( 0, 1 );
 		},
 		_save: function() {
+			this.confirmAborted = false;
 			// Ask for confirmation in some cases
 			if ( !this.confirmSave() ) {
+				this.confirmAborted = true;
 				return;
 			}
 			this.log( 'submit' );

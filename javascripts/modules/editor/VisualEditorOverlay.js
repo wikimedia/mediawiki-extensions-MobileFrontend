@@ -111,6 +111,9 @@
 				options = { summary: summary };
 
 			this._super();
+			if ( this.confirmAborted ) {
+				return;
+			}
 			this._showHidden( '.saving-header' );
 			// Stop the confirmation message from being thrown when you hit save.
 			this.hasChanged = false;

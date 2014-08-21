@@ -188,6 +188,9 @@
 				options = { summary: this.$( '.summary' ).val() };
 
 			this._super();
+			if ( this.confirmAborted ) {
+				return;
+			}
 			if ( this.captchaId ) {
 				options.captchaId = this.captchaId;
 				options.captchaWord = this.$( '.captcha-word' ).val();
