@@ -498,9 +498,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			// talk.js
-			'overlays/talk.hogan',
-			'overlays/talkSectionAdd.hogan',
-			'talkSection.hogan',
+			'modules/talk/talk.hogan',
+			'modules/talk/talkSectionAdd.hogan',
+			'modules/talk/talkSectionAddHeader.hogan',
+			'modules/talk/talkSection.hogan',
+			'modules/talk/talkSectionHeader.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-talk-explained',

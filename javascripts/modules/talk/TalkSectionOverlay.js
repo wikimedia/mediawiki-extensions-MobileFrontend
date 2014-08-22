@@ -5,8 +5,9 @@ var
 	api = M.require( 'api' ),
 	user = M.require( 'user' ),
 	TalkSectionOverlay = Overlay.extend( {
+		template: M.template.get( 'modules/talk/talkSection.hogan' ),
 		templatePartials: {
-			content: M.template.get( 'talkSection.hogan' )
+			header: M.template.get( 'modules/talk/talkSectionHeader.hogan' ),
 		},
 		defaults: {
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
@@ -33,6 +34,7 @@ var
 			var self = this, $comment = this.$( '.comment' ),
 				$textarea = $comment.find( 'textarea' );
 			this._super( options );
+			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( self, 'hide' ) );
 			this.$( '.loading' ).remove();
 			if ( user.isAnon() || !M.isAlphaGroupMember() ) {
 				$comment.remove();

@@ -10,7 +10,7 @@
 		user = M.require( 'user' ),
 		TalkOverlay = Overlay.extend( {
 			templatePartials: {
-				content: M.template.get( 'overlays/talk.hogan' )
+				content: M.template.get( 'modules/talk/talk.hogan' )
 			},
 			defaults: {
 				addTopicLabel: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
@@ -57,7 +57,7 @@
 			},
 			postRender: function( options ) {
 				var $add = this.$( 'button.add' ),
-					page = options.page;
+					page = options.page, self = this;
 
 				this._super( options );
 				if ( !user.isAnon() ) {
@@ -66,6 +66,11 @@
 							title: options.title
 						} );
 						overlay.show();
+						overlay.on( 'hide', function() {
+							// re-enable TalkOverlay (it's closed by hide event (in Overlay)
+							// from TalkSectionAddOverlay)
+							self.show();
+						} );
 					} );
 				} else {
 					$add.remove();
@@ -84,6 +89,10 @@
 							section: section
 						} );
 					childOverlay.show();
+					childOverlay.on( 'hide', function() {
+						// re-enable TalkOverlay (it's closed by hide event (in Overlay) from TalkSectionOverlay)
+						self.show();
+					} );
 				} );
 				if ( !$.trim( page.lead ) ) {
 					this.$( '.lead-discussion' ).remove();
