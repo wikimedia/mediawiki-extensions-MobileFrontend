@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_4464e4e1",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-22T21:02:50Z",
+      "side": 1,
+      "message": "I think the default probably should be false..\nCan you also add documentation to mediawiki.org and update the wmflabs config files?",
+      "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_a4a4a805",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-22T21:02:50Z",
+      "side": 1,
+      "message": "Should be \u0027stable\u0027",
+      "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
