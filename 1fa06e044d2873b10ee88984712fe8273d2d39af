@@ -52,6 +52,24 @@
       "revId": "1fa06e044d2873b10ee88984712fe8273d2d39af",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_6110f204",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-22T20:12:46Z",
+      "side": 1,
+      "message": "Yeah, i mean to to check in one if claus, if \"data.extmetadata\" is there (checked in both if clauses) and in two \"new\" ones to check for license and one for author. Let me show, what i mean :)\n\nif ( data.extmetadata ) {\n\t// add license information\n\tif ( data.extmetadata.LicenseShortName ) {\n\t\tself.$( \u0027.license a\u0027 ).text( data.extmetadata.LicenseShortName.value );\n\t}\n\t// Add author information\n\tif ( data.extmetadata.Artist ) {\n\t\t// Strip any tags\n\t\tauthor \u003d data.extmetadata.Artist.value.replace( /\u003c.*?\u003e/g, \u0027\u0027 );\n\t\tself.$( \u0027.license .author\u0027 ).text( author );\n\t} else {\n\t\tself.$( \u0027.license .author\u0027 )\n\t\t\t.text( mw.msg( \u0027mobile-frontend-media-author-unknown\u0027 ));\n\t}\n}",
+      "parentUuid": "4e322bf2_61591201",
+      "revId": "1fa06e044d2873b10ee88984712fe8273d2d39af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
