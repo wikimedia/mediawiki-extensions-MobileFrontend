@@ -25,6 +25,8 @@
 			this._super( options );
 
 			api.getThumb( options.title ).done( function( data ) {
+				var author;
+
 				function removeLoader() {
 					self.$( '.image-wrapper' ).removeClass( 'loading' );
 				}
@@ -45,8 +47,17 @@
 				}
 				self._positionImage();
 				self.$( '.details a' ).attr( 'href', data.descriptionurl );
-				if ( data.extmetadata && data.extmetadata.LicenseShortName ) {
-					self.$( '.license a' ).text( data.extmetadata.LicenseShortName.value );
+				if ( data.extmetadata ) {
+					// Add license information
+					if ( data.extmetadata.LicenseShortName ) {
+						self.$( '.license a' ).text( data.extmetadata.LicenseShortName.value );
+					}
+					// Add author information
+					if ( data.extmetadata.Artist ) {
+						// Strip any tags
+						author = data.extmetadata.Artist.value.replace( /<.*?>/g, '' );
+						self.$( '.license' ).prepend( author + ' &bull; ' );
+					}
 				}
 			} );
 
