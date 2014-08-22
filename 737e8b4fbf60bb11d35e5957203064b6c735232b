@@ -16,6 +16,24 @@
       "revId": "737e8b4fbf60bb11d35e5957203064b6c735232b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_e4c87079",
+        "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-22T21:27:49Z",
+      "side": 1,
+      "message": "Argh :) I thought about how i can use the message itself, but never had the idea to just check if there is content or not :) Will change, thanks!",
+      "parentUuid": "4e322bf2_44d2a42d",
+      "revId": "737e8b4fbf60bb11d35e5957203064b6c735232b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
