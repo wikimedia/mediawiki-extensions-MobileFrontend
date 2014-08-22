@@ -280,6 +280,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-placeholder',
 			'mobile-frontend-editor-placeholder-new-page',
 			'mobile-frontend-editor-summary-request',
+			'summary',
 			'mobile-frontend-editor-summary-placeholder',
 			'mobile-frontend-editor-cancel-confirm',
 			'mobile-frontend-editor-new-page-confirm',
