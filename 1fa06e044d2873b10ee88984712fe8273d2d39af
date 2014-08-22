@@ -16,6 +16,24 @@
       "revId": "1fa06e044d2873b10ee88984712fe8273d2d39af",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_61591201",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-22T20:08:53Z",
+      "side": 1,
+      "message": "We might do that eventually, but right now the license parsing is a bit fragile. It\u0027s entirely possible for it to fail to read the license, but successfully read the author. In those cases, we still want to at least show the author information.",
+      "parentUuid": "4e322bf2_21442a1c",
+      "revId": "1fa06e044d2873b10ee88984712fe8273d2d39af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
