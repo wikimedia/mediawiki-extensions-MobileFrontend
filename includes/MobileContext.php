@@ -258,6 +258,11 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	protected function getMobileMode() {
+		global $wgMFEnableBeta;
+
+		if ( !$wgMFEnableBeta ) {
+			return '';
+		}
 		if ( is_null( $this->mobileMode ) ) {
 			$mobileAction = $this->getMobileAction();
 			if ( $mobileAction === 'alpha' || $mobileAction === 'beta' || $mobileAction === 'stable' ) {

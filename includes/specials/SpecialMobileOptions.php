@@ -64,6 +64,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 * Render the settings form (with actual set settings) to display to user
 	 */
 	private function getSettingsForm() {
+		global $wgMFEnableBeta;
+
 		$out = $this->getOutput();
 		$context = MobileContext::singleton();
 		$user = $this->getUser();
@@ -139,6 +141,10 @@ HTML;
 			</div>
 		</li>
 HTML;
+		}
+
+		if ( !$wgMFEnableBeta ) {
+			$alphaSetting = $betaSetting = '';
 		}
 
 		// @codingStandardsIgnoreStart Long line
