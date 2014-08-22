@@ -34,6 +34,24 @@
       "revId": "1fa06e044d2873b10ee88984712fe8273d2d39af",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_e164e2b0",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-22T20:09:44Z",
+      "side": 1,
+      "message": "Nevermind, I think I misread your comment :)",
+      "parentUuid": "4e322bf2_61591201",
+      "revId": "1fa06e044d2873b10ee88984712fe8273d2d39af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
