@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_21442a1c",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-22T20:04:36Z",
+      "side": 1,
+      "message": "I would add this into the same if statement as for the license text (if ( data.extmetadata \u0026\u0026 data.extmetadata.LicenseShortName ) {) and move the check for data.extmetadata.LicenseShortName into a new if statement (with a commentar \"Add license\" ? :)",
+      "revId": "1fa06e044d2873b10ee88984712fe8273d2d39af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
