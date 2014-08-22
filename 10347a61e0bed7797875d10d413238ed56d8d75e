@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_04bdbc16",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-08-22T21:04:19Z",
+      "side": 1,
+      "message": "wmflabs but not prod? :P",
+      "parentUuid": "4e322bf2_4464e4e1",
+      "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_a4a4a805",
         "filename": "includes/MobileContext.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-08-22T21:02:50Z",
       "side": 1,
       "message": "Should be \u0027stable\u0027",
+      "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_64aec0e6",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-08-22T21:04:19Z",
+      "side": 1,
+      "message": "Nope, see $this-\u003emobileMode \u003d $req-\u003egetCookie( \u0027optin\u0027, \u0027\u0027 ) below.",
+      "parentUuid": "4e322bf2_a4a4a805",
       "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
