@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_01336e0b",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2014-08-22T20:52:26Z",
+      "side": 1,
+      "message": "This is incorrect. It\u0027s not unknown, it\u0027s unknown to US. Files without an author on Commons are not allowed. For those unknown, it will explicitly mention: \"Unknown\" already.\n\nIn case where we don\u0027t have reliable information, we should show nothing more than \"More details\" and just link to the information on the original file page (as ugly as it is).\n\nDon\u0027t repeat MMV mistakes...",
+      "revId": "23c252cbf5e1ae4506a914fa7439a67eeb76880c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
