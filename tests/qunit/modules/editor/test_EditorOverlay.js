@@ -28,4 +28,9 @@
 		assert.ok( apiSpy.calledWithMatch( { title: 'test.css', isNewPage: undefined, oldId: undefined, sectionId: undefined } ), 'initialize EditorApi without a section' );
 	} );
 
+	QUnit.test( '#initialize, as anonymous', 1, function( assert ) {
+		var editorOverlay = new EditorOverlay( { title: 'Main_page', isAnon: true } );
+
+		assert.ok( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
+	} );
 }( mw.mobileFrontend, jQuery ) );

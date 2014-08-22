@@ -1,2 +1,3 @@
 <textarea class="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
 <div class="preview content"></div>
+<div class="anonwarning content"></div>
