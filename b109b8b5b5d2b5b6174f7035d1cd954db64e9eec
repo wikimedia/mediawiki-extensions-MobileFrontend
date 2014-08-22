@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_017a4e1f",
+        "filename": "includes/MobileUserInfo.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-22T20:25:00Z",
+      "side": 1,
+      "message": "I\u0027m not sure that they comments are useful...\n\nTested against Special:Userprofile/X though and it works fine",
+      "revId": "b109b8b5b5d2b5b6174f7035d1cd954db64e9eec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
