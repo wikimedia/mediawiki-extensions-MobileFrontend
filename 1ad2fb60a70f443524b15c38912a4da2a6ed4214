@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_b27066a4",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-23T00:10:27Z",
+      "side": 1,
+      "message": "as discussed i don\u0027t like this but okay. sigh.",
+      "revId": "1ad2fb60a70f443524b15c38912a4da2a6ed4214",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
