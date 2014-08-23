@@ -56,7 +56,7 @@
 				} );
 			if ( options.isAnon ) {
 				this.$anonWarning = this.$( '.anonwarning' );
-				this._showAnonWarning();
+				this._showAnonWarning( options );
 			} else {
 				this.$( '.continue' ).on( M.tapEvent( 'click' ), $.proxy( this, '_prepareForSave' ) );
 			}
@@ -91,10 +91,22 @@
 			}
 		},
 
-		_showAnonWarning: function() {
+		_showAnonWarning: function( options ) {
+			var params = $.extend( {
+				// use wgPageName as this includes the namespace if outside Main
+				returnto: options.returnTo || mw.config.get( 'wgPageName' )
+			}, options.queryParams ),
+			signupParams = $.extend( { type: 'signup' }, options.signupQueryParams );
+
 			this.$content.hide();
 			this.showSpinner();
-			this.$anonWarning.html( mw.config.get( 'wgMFAnonEditWarning' ) ).show();
+			this.$anonWarning.html(
+				mw.message(
+					'mobile-frontend-editor-anoneditwarning',
+					mw.util.getUrl( 'Special:UserLogin', params ),
+					mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) )
+				).parse()
+			).show();
 			this.$( '.continue' ).prop( 'disabled', false ).on(
 				M.tapEvent( 'click' ), $.proxy( this, '_showEditorafterWarning' )
 			);

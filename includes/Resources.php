@@ -300,6 +300,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-visual-editor',
 			'mobile-frontend-editor-source-editor',
 			'mobile-frontend-editor-switch-editor',
+			'mobile-frontend-editor-anoneditwarning',
 		),
 	),
 
