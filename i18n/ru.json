@@ -22,7 +22,8 @@
 			"Александр Сигачёв",
 			"Agilight",
 			"Logins",
-			"Sunpriat"
+			"Sunpriat",
+			"Nirovulf"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -70,6 +71,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Эта правка не может быть сохранена, поскольку мы обнаружили проблему.",
 	"mobile-frontend-editor-abusefilter-read-more": "Читать подробнее",
 	"mobile-frontend-editor-abusefilter-warning": "Предупреждение: Вы уверены, что вы хотите сохранить эту правку? С этим могут возникнуть проблемы.",
+	"mobile-frontend-editor-anon": "Редактировать анонимно",
 	"mobile-frontend-editor-blocked": "Для вашей учётной записи внесение правок запрещено.",
 	"mobile-frontend-editor-cancel": "Отмена",
 	"mobile-frontend-editor-cancel-confirm": "Вы действительно хотите отказаться от ваши изменений?",

@@ -74,6 +74,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "因为我们检测到的问题此次编辑无法保存。",
 	"mobile-frontend-editor-abusefilter-read-more": "阅读更多",
 	"mobile-frontend-editor-abusefilter-warning": "警告：您确信要保存此次编辑么？这可能将产生一些问题。",
+	"mobile-frontend-editor-anon": "匿名编辑",
 	"mobile-frontend-editor-blocked": "您的账户被封禁编辑。",
 	"mobile-frontend-editor-cancel": "取消",
 	"mobile-frontend-editor-cancel-confirm": "你真的想要放弃你的编辑？",

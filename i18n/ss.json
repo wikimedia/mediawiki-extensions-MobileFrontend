@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bobbyshabangu"
+		]
+	},
+	"abusefilter-edit-builder-vars-user-mobile": "Nobe ngabe umhleli usebentisa lucingo lwamakhala ekhukhwini lwe interface",
+	"action-mf-uploadbutton": "sebentisa inkinobho yeku uploda kumakhasi amakhala ekhukhwini",
+	"beta-feature-geonotahack": "Eceleni kwalelikhasi",
+	"beta-feature-geonotahack-description": "Tfola emakhasi laseceleni nendzawo yelikhasi lolifundzako",
+	"beta-feature-minerva": "Yenta kutsi makhala ekhukhwini wakho  ({{int:skinname-minerva}}) etukwa ngcondvomshini",
+	"beta-feature-minerva-description": "Yenta likhasi lamakhala ekhukhwini wakho kutsi likhone kusebenta njenga ngcondvomshini \"{{int:prefs-rendering}}\" emapreferensi.",
+	"mobile-frontend-back-to-top-of-section": "Phindzela esigamini sasemuva",
+	"mobile-frontend-changeslist-ip": "Umhleli lofihlakele",
+	"mobile-frontend-changeslist-nocomment": "kute lokuhleliwe",
+	"mobile-frontend-clear-search": "Kuyavakala"
+}

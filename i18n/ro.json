@@ -52,6 +52,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Modificarea nu poate fi salvată întrucât am detectat o problemă.",
 	"mobile-frontend-editor-abusefilter-read-more": "Citiți mai mult",
 	"mobile-frontend-editor-abusefilter-warning": "Atenție: Sunteți sigur(ă) că doriți să salvați această modificare? Este posibil ca aceasta să prezinte probleme.",
+	"mobile-frontend-editor-anon": "Modificare ca anonim",
 	"mobile-frontend-editor-blocked": "Contul dumneavoastră este blocat de la modificare.",
 	"mobile-frontend-editor-cancel": "Revocare",
 	"mobile-frontend-editor-cancel-confirm": "Doriți, într-adevăr, să vă abandonați modificarea?",

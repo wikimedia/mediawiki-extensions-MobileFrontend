@@ -6,7 +6,8 @@
 			"Thushara",
 			"පසිඳු කාවින්ද",
 			"බිඟුවා",
-			"ශ්වෙත"
+			"ශ්වෙත",
+			"Indunil Chamara"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ආරක්ෂක පාඨය ඇතුළු කරන්න",
@@ -25,6 +26,7 @@
 	"mobile-frontend-dismiss-notification": "මෙම නිවේදනය නොසලකන්න",
 	"mobile-frontend-donate-image-heading": "ඔබේ මෑත දායකත්වයන්",
 	"mobile-frontend-donate-image-title": "පින්තූරයක් පරිත්‍යාග කරන්න",
+	"mobile-frontend-editor-anon": "නිර්නාමිකව සංස්කරණය කරන්න",
 	"mobile-frontend-enable-images": "ජංගම අඩවියෙහි පින්තුර සක්‍රීය කරන්න",
 	"mobile-frontend-featured-article": "අද විශේෂාංග ලිපිය",
 	"mobile-frontend-footer-contact": "සම්බන්ධ කරන්න",
@@ -57,10 +59,8 @@
 	"mobile-frontend-off": "අක්‍රිය",
 	"mobile-frontend-on": "සක්‍රිය",
 	"mobile-frontend-opt-in-explain": "බීටා වෙත එක් වීමෙන්, ඔබ හට දෝෂ සහ වාදපද හමුවෙන අනතුරක් වියහැකි, පරීක්ෂාත්මක මුහුණුවර වෙත ප්‍රවේශ වීමේ හැකියාව ඇත.",
-	"mobile-frontend-overlay-escape": "ආපසු යන්න",
 	"mobile-frontend-page-menu-contents": "අන්තර්ගතයන්",
 	"mobile-frontend-page-menu-history": "ඉතිහාසය",
-	"mobile-frontend-page-saving": "<strong>සුරකිමින්</strong><span> $1</span>",
 	"mobile-frontend-password": "මුරපදය:",
 	"mobile-frontend-password-confirm-placeholder": "මුරපදය තහවුරු කරන්න",
 	"mobile-frontend-password-placeholder": "මුරපදය",

@@ -6,7 +6,8 @@
 			"Geraki",
 			"Glavkos",
 			"Protnet",
-			"ZaDiak"
+			"ZaDiak",
+			"Nikosguard"
 		]
 	},
 	"beta-feature-geonotahack": "Κοντά σε αυτή τη σελίδα",
@@ -39,6 +40,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Αυτή η επεξεργασία δεν μπορεί να αποθηκευτεί, διότι εντοπίσαμε ένα ζήτημα.",
 	"mobile-frontend-editor-abusefilter-read-more": "Διαβάστε περισσότερα",
 	"mobile-frontend-editor-abusefilter-warning": "Προειδοποίηση: Είστε βέβαιοι ότι θέλετε να αποθηκεύσετε αυτή την επεξεργασία; Μπορεί να υπάρχει ένα ζήτημα με αυτή.",
+	"mobile-frontend-editor-anon": "Επεξεργαστείτε ανώνυμα",
 	"mobile-frontend-editor-cancel": "Ακύρωση",
 	"mobile-frontend-editor-cancel-confirm": "Θέλετε πραγματικά να εγκαταλείψετε την επεξεργασία;",
 	"mobile-frontend-editor-captcha-try-again": "Λάθος κωδικός, προσπαθήστε ξανά.",
@@ -174,6 +176,7 @@
 	"mobile-frontend-talk-reply-success": "Η απάντησή σας αποθηκεύτηκε με επιτυχία στη σελίδα συζήτησης.",
 	"mobile-frontend-terms-text": "Όροι χρήσης",
 	"mobile-frontend-user-account": "λογαριασμός χρήστη",
+	"mobile-frontend-user-newmessages": "Έχετε νέα μηνύματα στη σελίδα συζήτησής σας",
 	"mobile-frontend-username": "Όνομα χρήστη:",
 	"mobile-frontend-username-placeholder": "Όνομα χρήστη",
 	"mobile-frontend-view": "Προβολή κινητού",

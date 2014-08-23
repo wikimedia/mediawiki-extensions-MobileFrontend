@@ -51,6 +51,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "No s'ha pogut desar aquesta edició perquè hi hem detectat un problema.",
 	"mobile-frontend-editor-abusefilter-read-more": "Més informació",
 	"mobile-frontend-editor-abusefilter-warning": "Avís: esteu segurs que voleu desar aquesta edició? Pot haver-hi un problema.",
+	"mobile-frontend-editor-anon": "Edició anònima",
 	"mobile-frontend-editor-blocked": "El vostre compte està bloquejat per editar.",
 	"mobile-frontend-editor-cancel": "Cancel·la",
 	"mobile-frontend-editor-cancel-confirm": "Realment voleu abandonar la vostra edició?",

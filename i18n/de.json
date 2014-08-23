@@ -59,6 +59,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Diese Bearbeitung konnte nicht gespeichert werden, da ein Problem festgestellt wurde.",
 	"mobile-frontend-editor-abusefilter-read-more": "Mehr lesen",
 	"mobile-frontend-editor-abusefilter-warning": "Warnung: Willst du diese Bearbeitung wirklich speichern? Mit dieser könnte es ein Problem geben.",
+	"mobile-frontend-editor-anon": "Anonym bearbeiten",
 	"mobile-frontend-editor-blocked": "Dein Benutzerkonto ist für das Bearbeiten gesperrt.",
 	"mobile-frontend-editor-cancel": "Abbrechen",
 	"mobile-frontend-editor-cancel-confirm": "Willst du wirklich deine Bearbeitung verwerfen?",

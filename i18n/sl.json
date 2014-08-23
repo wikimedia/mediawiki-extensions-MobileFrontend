@@ -57,7 +57,7 @@
 	"mobile-frontend-editor-success-landmark-1": "Čestitamo, zdaj ste urejevalec projekta {{SITENAME}}!",
 	"mobile-frontend-editor-summary-placeholder": "Primer: Popravljena tipkarska napaka, dodana vsebina",
 	"mobile-frontend-editor-tutorial-confirm": "Začetek urejanja",
-	"mobile-frontend-editor-tutorial-summary": "Ne bojte se označevanja. Poskusite izboljšati stran $1.",
+	"mobile-frontend-editor-tutorial-summary": "Poskusite izboljšati stran $1. Ne bojte se označevanja.",
 	"mobile-frontend-editor-unavailable": "Na vašem brskalniku mobilno urejanje trenutno ni mogoče. Poskusite z drugim brskalnikom.",
 	"mobile-frontend-editor-undo-unsupported": "Razveljavljanje trenutno ni podprto na mobilnih napravah.",
 	"mobile-frontend-editor-wait": "Shranjujem urejanje, prosimo, počakajte.",

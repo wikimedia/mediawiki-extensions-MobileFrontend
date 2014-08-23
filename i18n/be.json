@@ -63,5 +63,8 @@
 	"mobile-frontend-watchlist-filter-all": "Усё",
 	"mobile-frontend-watchlist-filter-articles": "Старонкі",
 	"mobile-frontend-watchlist-filter-other": "Іншае",
-	"mobile-frontend-watchlist-filter-talk": "Размовы"
+	"mobile-frontend-watchlist-filter-talk": "Размовы",
+	"mobile-frontend-watchlist-modified": "Зменена $1",
+	"mobile-frontend-watchlist-more": "яшчэ",
+	"nearby": "Старонкі побач з вамі"
 }
