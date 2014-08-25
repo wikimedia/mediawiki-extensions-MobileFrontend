@@ -8,7 +8,7 @@ When(/^I sign up with two different passwords$/) do
 end
 
 Then(/^I see an error indicating they do not match$/) do
-  expect(on(SpecialUserLoginPage).feedback).to match("The passwords you entered do not match")
+  expect(on(SpecialUserLoginPage).create_account_status).to match("The passwords you entered do not match")
 end
 
 Then(/^I should still be on the sign-up page$/) do
