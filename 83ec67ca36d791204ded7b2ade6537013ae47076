@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_fe811493",
+        "filename": "i18n/en.json",
+        "patchSetId": 21
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-08-25T10:28:33Z",
+      "side": 1,
+      "message": "Editing white not logged in is not anonymous editing. Should this be \"Edit without logging in\"?",
+      "revId": "83ec67ca36d791204ded7b2ade6537013ae47076",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
