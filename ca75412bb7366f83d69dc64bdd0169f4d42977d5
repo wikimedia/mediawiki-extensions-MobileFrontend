@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_140a7f29",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-08-25T14:58:29Z",
+      "side": 1,
+      "message": "Logging should be lower case.",
+      "revId": "ca75412bb7366f83d69dc64bdd0169f4d42977d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
