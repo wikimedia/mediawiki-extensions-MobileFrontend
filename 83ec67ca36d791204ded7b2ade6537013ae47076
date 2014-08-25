@@ -16,6 +16,24 @@
       "revId": "83ec67ca36d791204ded7b2ade6537013ae47076",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_d97d52e6",
+        "filename": "i18n/en.json",
+        "patchSetId": 21
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-25T12:23:41Z",
+      "side": 1,
+      "message": "I thinkk you refer to:\nWikipedia:IP_edits_are_not_anonymous\n???\nI think you\u0027re right with this. I will change the message in this follow up change I33e550a4489339861029f431ad416ad948d47202",
+      "parentUuid": "4e322bf2_fe811493",
+      "revId": "83ec67ca36d791204ded7b2ade6537013ae47076",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
