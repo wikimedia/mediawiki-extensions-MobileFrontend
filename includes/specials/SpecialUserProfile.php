@@ -200,14 +200,16 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$uploadCount = 500;
 		}
 
+		$username = $this->targetUser->getName();
+
 		return Html::openElement( 'div', array( 'class' => 'footer' ) )
 			. Html::openElement( 'div' )
-			. $this->msg( $msg, $this->targetUser->getName() )->
+			. $this->msg( $msg, $username )->
 				numParams( $units, $editCount, $uploadCount )->parse()
 			. Html::closeElement( 'div' )
 			. Html::openElement( 'div' )
 			. Linker::link( $this->targetUser->getUserPage(),
-				$this->msg( 'mobile-frontend-profile-userpage-link' )->escaped()
+				$this->msg( 'mobile-frontend-profile-userpage-link', $username )->escaped()
 			)
 			. Html::closeElement( 'div' )
 			. $this->getTalkLink();
