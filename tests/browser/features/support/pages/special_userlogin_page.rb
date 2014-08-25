@@ -4,9 +4,10 @@ class SpecialUserLoginPage < ArticlePage
 
   page_url URL.url("Special:UserLogin")
 
-  h1(:first_heading, id: "firstHeading")
+  h1(:first_heading, id: "section_0")
   div(:login_head_message, class: "headmsg")
 
+  div(:feedback, class: "alert error")
   button(:login, id: "wpLoginAttempt")
   text_field(:username, name: "wpName")
   text_field(:password, name: "wpPassword")
@@ -19,8 +20,7 @@ class SpecialUserLoginPage < ArticlePage
 
   # signup specific
   text_field(:confirmation_field, id: "wpCaptchaWord")
-  div(:refresh_captcha, id: "mf-captcha-reload-container")
-  div(:create_account_status, id: "mw-createacct-status-area")
+  div(:refresh_captcha, id:"mf-captcha-reload-container")
 
   def login_with(username, password)
     # deal with autocomplete
