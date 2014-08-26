@@ -31,11 +31,6 @@ Then(/^the Contribute an image button is visible$/) do
   on(UploadPage).contribute_image_element.should be_visible
 end
 
-Then(/^the upload button links to the tutorial$/) do
-  # use should match as href will be relative/absolute url
-  on(UploadPage).tutorial_link_element.when_present.attribute( 'href' ).should match "#/upload-tutorial/uploads$"
-end
-
 Then(/^I see the upload preview$/) do
   on(ArticlePage).photo_overlay_element.when_present.should be_visible
 end
