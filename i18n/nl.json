@@ -245,7 +245,7 @@
 	"mobile-frontend-profile-noargs": "Er is geen gebruikersnaam opgegeven. Geef een gebruikernaam op om een profiel te bekijken.",
 	"mobile-frontend-profile-nouser": "Er bestaat geen gebruiker met deze naam. Gebruikersnamen zijn hoofdlettergevoelig. Controleer uw invoer.",
 	"mobile-frontend-profile-title": "Gebruikersprofiel",
-	"mobile-frontend-profile-userpage-link": "Gebruikerspagina bekijken.",
+	"mobile-frontend-profile-userpage-link": "{{GENDER:$1|Gebruiker}}spagina bekijken.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|Overleg met $1}}",
 	"mobile-frontend-random-button": "Willekeurig",
 	"mobile-frontend-regular-site": "Standaardweergave",

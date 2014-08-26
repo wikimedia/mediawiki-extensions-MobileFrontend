@@ -240,7 +240,7 @@
 	"mobile-frontend-profile-noargs": "Нема наведено корисничко име. Укажете го за да го погледате профилот.",
 	"mobile-frontend-profile-nouser": "Нема корисник со тоа име. Проверете дали сте го внеле правилно, вклучувајќи големи и мали букви.",
 	"mobile-frontend-profile-title": "Кориснички профил",
-	"mobile-frontend-profile-userpage-link": "Посетете ја корисничката страница",
+	"mobile-frontend-profile-userpage-link": "Посетете ја {{GENDER:$1|корисничката}} страница",
 	"mobile-frontend-profile-usertalk": "Разговарајте со {{GENDER:$1|$1}}",
 	"mobile-frontend-random-button": "Случајна",
 	"mobile-frontend-regular-site": "Обичен изглед",

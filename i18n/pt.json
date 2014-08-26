@@ -247,7 +247,7 @@
 	"mobile-frontend-profile-noargs": "Não foi fornecido nenhum nome de utilizador. Por favor, forneça um nome de utilizador para exibir um perfil.",
 	"mobile-frontend-profile-nouser": "Não existe nenhum utilizador com esse nome. Os nomes de utilizador são sensíveis a maiúsculas, verifique portanto se digitou de forma correcta.",
 	"mobile-frontend-profile-title": "Dados de utilizador",
-	"mobile-frontend-profile-userpage-link": "Ver página de utilizador.",
+	"mobile-frontend-profile-userpage-link": "Ver página de {{GENDER:$1|utilizador|utilizadora|utilizador(a)}}.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|Página de discussão de $1}}",
 	"mobile-frontend-random-button": "Aleatório",
 	"mobile-frontend-regular-site": "Versão normal",

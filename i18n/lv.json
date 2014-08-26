@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"GreenZeb",
-			"Papuass"
+			"Papuass",
+			"Edgars2007"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Ievadiet apstiprinājuma kodu",
@@ -90,7 +91,7 @@
 	"mobile-frontend-save-settings": "Saglabāt",
 	"mobile-frontend-search-submit": "Meklēt",
 	"mobile-frontend-settings-alpha": "Eksperimentālais režīms",
-	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-settings-beta": "Testa funkcijas",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} ir pieejams $1 {{PLURAL:$1|valodā|valodās}}. Visas pieejamās versijas ir uzskaitītas zemāk",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Valodas",
 	"mobile-frontend-sign-in-heading": "Pieslēgties",

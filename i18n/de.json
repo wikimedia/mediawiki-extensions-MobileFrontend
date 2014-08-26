@@ -251,7 +251,7 @@
 	"mobile-frontend-profile-noargs": "Es wurde kein Benutzername angegeben. Bitte gib einen Benutzernamen an, um ein Profil anzusehen.",
 	"mobile-frontend-profile-nouser": "Es ist kein Benutzer mit diesem Namen vorhanden. Bei Benutzernamen wird zwischen Groß- und Kleinschreibung unterschieden. Überprüfe bitte, ob er korrekt eingegeben wurde.",
 	"mobile-frontend-profile-title": "Benutzerprofil",
-	"mobile-frontend-profile-userpage-link": "Benutzerseite besuchen.",
+	"mobile-frontend-profile-userpage-link": "{{GENDER:$1|Benutzerseite}} besuchen.",
 	"mobile-frontend-profile-usertalk": "Mit {{GENDER:$1|$1}} diskutieren",
 	"mobile-frontend-random-button": "Zufall",
 	"mobile-frontend-regular-site": "Klassische Ansicht",
