@@ -34,6 +34,24 @@
       "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_71e89c0b",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 77
+      },
+      "writtenOn": "2014-08-27T19:54:09Z",
+      "side": 1,
+      "message": "When this test was written, the \"progress bar\" appeared in Chrome but did not appear in FF, apparently because it only appears in browsers with particular capabilities. The MF team at the time would rather run the test in Chrome only than not test the progress bar at all.",
+      "parentUuid": "4e322bf2_88ebe19f",
+      "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
