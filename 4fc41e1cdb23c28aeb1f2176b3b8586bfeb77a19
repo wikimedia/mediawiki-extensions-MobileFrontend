@@ -52,6 +52,24 @@
       "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_5136c001",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2014-08-27T20:52:14Z",
+      "side": 1,
+      "message": "Got it. In that case, I\u0027ll see if I can reimplement the step reliably for Chrome and remove the FF tag.\n\nSorry, Juliusz mentioned to me that FF support in MF tests isn\u0027t all that important because it doesn\u0027t represent most mobile browsers (oh, poor FF OS). That begs the question, why do we try to run MF BTs using FF at all?",
+      "parentUuid": "4e322bf2_71e89c0b",
+      "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
