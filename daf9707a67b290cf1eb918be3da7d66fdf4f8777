@@ -16,6 +16,24 @@
       "revId": "daf9707a67b290cf1eb918be3da7d66fdf4f8777",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_6b878f67",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-27T17:58:41Z",
+      "side": 1,
+      "message": "Yes, it is escaped, but still there :) That\u0027s the problem. Let me cite kaldari\u0027s comment to PS10 from july 18:\n\"I tested this out and it seems to work fine. There is still one difference from desktop, however. While desktop strips any tags or markup from the section title, this patch simply escapes them. For example, if you were editing a section titled:\n\u0027\u0027\u0027Bold\u0027\u0027\u0027 \u003ci\u003etitle\u003c/i\u003e\nOn desktop you would get /* Bold title */, while on mobile you would get /* \u003cb\u003eBold\u003c/b\u003e \u003ci\u003etitle\u003c/i\u003e */\nI\u0027m not sure if this is important enough to worry about, but perhaps we should try to strip them.\"\n\nIf it\u0027s too much, i\u0027m ok with removing it, but like kaldari said, it\u0027s not desktop behavior :)",
+      "parentUuid": "4e322bf2_884ac1c6",
+      "revId": "daf9707a67b290cf1eb918be3da7d66fdf4f8777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
