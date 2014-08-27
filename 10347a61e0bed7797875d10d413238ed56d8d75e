@@ -105,6 +105,24 @@
       "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_d7c6204e",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-08-27T23:21:30Z",
+      "side": 1,
+      "message": "This function is not public.",
+      "parentUuid": "4e322bf2_97a9b87a",
+      "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
