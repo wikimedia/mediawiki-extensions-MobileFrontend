@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_f79a3c65",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 546,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-27T23:20:41Z",
+      "side": 1,
+      "message": "Sorry. Of course I meant the config file for production :)\nI just wanted to make the point that a 3rd party user probably doesn\u0027t want these. They are very Wikimedia specific.",
+      "parentUuid": "4e322bf2_04bdbc16",
+      "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_a4a4a805",
         "filename": "includes/MobileContext.php",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Nope, see $this-\u003emobileMode \u003d $req-\u003egetCookie( \u0027optin\u0027, \u0027\u0027 ) below.",
       "parentUuid": "4e322bf2_a4a4a805",
+      "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_97a9b87a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-08-27T23:20:41Z",
+      "side": 1,
+      "message": "Mm.. I guess what\u0027s confusing me is that SkinMinerva-\u003egetMode returns \u0027stable\u0027, \u0027beta\u0027 or \u0027alpha\u0027 :-S",
+      "parentUuid": "4e322bf2_64aec0e6",
       "revId": "10347a61e0bed7797875d10d413238ed56d8d75e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
