@@ -70,6 +70,24 @@
       "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_1ccf2fb7",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 77
+      },
+      "writtenOn": "2014-08-27T21:11:23Z",
+      "side": 1,
+      "message": "I think because a) FF is still a respectable share of views (not sure about that, but I think so) and b) because a *lot* of people run the Mobile view of Wikipedia in desktop browsers because they prefer it.  Jon just the other day posted a handful of Twitter notes to that effect.",
+      "parentUuid": "4e322bf2_5136c001",
+      "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
