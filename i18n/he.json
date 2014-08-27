@@ -250,7 +250,7 @@
 	"mobile-frontend-profile-noargs": "לא ניתן שם משתמש. נא לתת שם משתמש כדי להציג פרופיל.",
 	"mobile-frontend-profile-nouser": "לא קיים משתמש עם שם כזה. שמות המשתמשים הם תלויי רישיות, אז נא לבדוק שהם הוקלדו נכון.",
 	"mobile-frontend-profile-title": "פרופיל משתמש",
-	"mobile-frontend-profile-userpage-link": "לבקר בדף המשתמש.",
+	"mobile-frontend-profile-userpage-link": "לבקר בדף {{GENDER:$1|המשתמש|המשתמשת}}.",
 	"mobile-frontend-profile-usertalk": "לדבר עם $1",
 	"mobile-frontend-random-button": "דף אקראי",
 	"mobile-frontend-regular-site": "תצוגה למחשבים",

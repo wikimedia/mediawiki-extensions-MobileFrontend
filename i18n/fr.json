@@ -269,7 +269,7 @@
 	"mobile-frontend-profile-noargs": "Aucun utilisateur n’a été indiqué. Veuillez indiquer un nom d’utilisateur pour afficher un profil.",
 	"mobile-frontend-profile-nouser": "Il n’existe pas d’utilisateur avec ce nom. Les noms d’utilisateur sont sensibles à la casse, veuillez donc vérifier si vous l’avez bien tapé.",
 	"mobile-frontend-profile-title": "Profil utilisateur",
-	"mobile-frontend-profile-userpage-link": "Visiter la page de l’utilisateur.",
+	"mobile-frontend-profile-userpage-link": "Visiter la page de l’{{GENDER:$1|utilisateur|utilisatrice}}.",
 	"mobile-frontend-profile-usertalk": "Parler à {{GENDER:$1|$1}}",
 	"mobile-frontend-random-button": "Au hasard",
 	"mobile-frontend-regular-site": "Désactiver la version mobile",

@@ -218,7 +218,7 @@
 	"mobile-frontend-profile-noargs": "No se proporcionó un nombre de usuario. Proporciona un nombre de usuario para ver el perfil.",
 	"mobile-frontend-profile-nouser": "No existe ningún usuario con ese nombre. Los nombres de usuario distinguen mayúsculas de minúsculas, así que por favor verifique si ha sido escrito correctamente.",
 	"mobile-frontend-profile-title": "Perfil de usuario",
-	"mobile-frontend-profile-userpage-link": "Visitar página de usuario.",
+	"mobile-frontend-profile-userpage-link": "Visitar la página {{GENDER:$1|del usuario|de la usuaria}}.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|Hablar con $1}}",
 	"mobile-frontend-random-button": "Aleatorio",
 	"mobile-frontend-regular-site": "Vista del escritorio",

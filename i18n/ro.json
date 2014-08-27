@@ -243,7 +243,7 @@
 	"mobile-frontend-profile-noargs": "Nu s-a specificat niciun nume de utilizator. Furnizați un nume de utilizator pentru a vizualiza un profil.",
 	"mobile-frontend-profile-nouser": "Nu există niciun utilizator cu acest nume. Numele de utilizator sunt sensibile la majuscule, drept pentru care verificați dacă ați tastat corect.",
 	"mobile-frontend-profile-title": "Profil utilizator",
-	"mobile-frontend-profile-userpage-link": "Vizitează pagina de utilizator.",
+	"mobile-frontend-profile-userpage-link": "Vizitează pagina de {{GENDER:$1|utilizator}}.",
 	"mobile-frontend-profile-usertalk": "Discutați cu {{GENDER:$1|$1}}",
 	"mobile-frontend-random-button": "Aleatoriu",
 	"mobile-frontend-regular-site": "Versiune desktop",

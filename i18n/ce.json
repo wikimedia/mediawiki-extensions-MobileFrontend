@@ -169,7 +169,7 @@
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Баркалла аьлла}} [[Special:UserProfile/$1|$1]]",
 	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Чуяьккхина}} {{PLURAL:$1|селхана|$1 де хьалха|0=тахана}}.",
 	"mobile-frontend-profile-title": "Декъашхочун профиль",
-	"mobile-frontend-profile-userpage-link": "Декъашхочун агӀоне хьажа.",
+	"mobile-frontend-profile-userpage-link": "{{GENDER:$1|декъашхочун}} агӀоне хьажа.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|Дийца цу $1}}",
 	"mobile-frontend-random-button": "Нисделларг",
 	"mobile-frontend-regular-site": "Хьажа гуттаралера Википеди агӀоне",

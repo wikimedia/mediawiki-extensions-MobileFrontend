@@ -229,7 +229,7 @@
 	"mobile-frontend-profile-noargs": "利用者名を入力していません。プロフィールを表示する利用者名を指定してください。",
 	"mobile-frontend-profile-nouser": "この利用者名の利用者は存在しません。利用者名の大文字小文字は区別されます。正しく入力したか確認してください。",
 	"mobile-frontend-profile-title": "利用者情報",
-	"mobile-frontend-profile-userpage-link": "利用者ページを閲覧",
+	"mobile-frontend-profile-userpage-link": "{{GENDER:$1|利用者}}ページを閲覧",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|$1 のトークページ}}",
 	"mobile-frontend-random-button": "おまかせ表示",
 	"mobile-frontend-regular-site": "デスクトップビュー",
