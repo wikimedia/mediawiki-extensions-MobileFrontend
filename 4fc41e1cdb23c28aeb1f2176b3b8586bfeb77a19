@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_a1e8fdaf",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-27T00:56:13Z",
+      "side": 1,
+      "message": "Is this a common practice?",
+      "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
