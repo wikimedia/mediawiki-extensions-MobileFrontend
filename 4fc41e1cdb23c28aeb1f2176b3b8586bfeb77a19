@@ -16,6 +16,24 @@
       "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_88ebe19f",
+        "filename": "tests/browser/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2014-08-27T19:21:20Z",
+      "side": 1,
+      "message": "I honestly can\u0027t say, but it seemed better to leave it then to remove it completely. I\u0027m coming from the standpoint that Cucumber is meant to document features as much as it\u0027s meant to run tests—I know this isn\u0027t how we\u0027re utilizing it.\n\nMaybe we should get a third opinion here.",
+      "parentUuid": "4e322bf2_a1e8fdaf",
+      "revId": "4fc41e1cdb23c28aeb1f2176b3b8586bfeb77a19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
