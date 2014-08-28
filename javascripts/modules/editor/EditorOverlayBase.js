@@ -24,7 +24,7 @@
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
 			visualEditorMsg: mw.msg( 'mobile-frontend-editor-visual-editor' ),
-			sourceEditorMsg: mw.msg( 'mobile-frontend-editor-source-editor' ),
+			sourceEditorMsg: mw.msg( 'mobile-frontend-editor-source-editor' )
 		},
 		template: M.template.get( 'modules/editor/EditorOverlayBase.hogan' ),
 		className: 'overlay editor-overlay',
