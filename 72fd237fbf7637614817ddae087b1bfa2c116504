@@ -16,6 +16,24 @@
       "revId": "72fd237fbf7637614817ddae087b1bfa2c116504",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_caa226a4",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-08-28T23:22:36Z",
+      "side": 1,
+      "message": "So I thought it was too until Roan sent me a link to the specification. Apparently it isn\u0027t: http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#timers",
+      "parentUuid": "4e322bf2_096b70b6",
+      "revId": "72fd237fbf7637614817ddae087b1bfa2c116504",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
