@@ -5,7 +5,7 @@ Given(/^I am using user agent "(.+)"$/) do |user_agent|
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end
 
-Given(/^I am viewing the basic non-JavaScript site$/) do
+Given(/^my browser doesn't support JavaScript$/) do
   step 'I am using user agent "Opera/9.80 (J2ME/MIDP; Opera Mini/9.80 (S60; SymbOS; Opera Mobi/23.348; U; en) Presto/2.5.25 Version/10.54"'
 end
 

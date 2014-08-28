@@ -2,8 +2,8 @@
 Feature: Basic site for legacy devices
 
   Background:
-    Given I am using the mobile site
-      And I am viewing the basic non-JavaScript site
+    Given my browser doesn't support JavaScript
+      And I am using the mobile site
       And I am on the "Main Page" page
 
   # FIXME: Add scenario to check search actually works
