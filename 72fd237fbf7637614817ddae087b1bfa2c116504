@@ -34,6 +34,24 @@
       "revId": "72fd237fbf7637614817ddae087b1bfa2c116504",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_6ade9216",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-28T23:31:24Z",
+      "side": 1,
+      "message": "Interesting. I wonder if that changed recently. Regardless, it still seems risky, especially since Mozilla\u0027s documentation says its required: https://developer.mozilla.org/en-US/docs/Web/API/Window.setTimeout",
+      "parentUuid": "2e2fb78d_caa226a4",
+      "revId": "72fd237fbf7637614817ddae087b1bfa2c116504",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
