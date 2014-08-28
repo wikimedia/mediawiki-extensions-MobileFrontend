@@ -539,3 +539,8 @@ $wgMFShowRedLinksAnon = false;
  * Set the minimum edits the user needs before they can upload images in mobile mode
  */
 $wgMFUploadMinEdits = 0;
+
+/**
+ * Whether beta and alpha modes are enabled
+ */
+$wgMFEnableBeta = false;
