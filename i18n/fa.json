@@ -257,7 +257,7 @@
 	"mobile-frontend-profile-noargs": "هیچ نام کاربری داده نشده است. لطفاً یک نام کاربری برای نمایش مشخصات بدهید.",
 	"mobile-frontend-profile-nouser": "هیچ کاربری با این نام وجود ندارد. نام‌‌کاربری به بزرگی و کوچکی حروف حساس است پس لطفاً بررسی کنید که آیا درست تایپ شده است.",
 	"mobile-frontend-profile-title": "مشخصات کاربر",
-	"mobile-frontend-profile-userpage-link": "نمایش صفحه کاربری.",
+	"mobile-frontend-profile-userpage-link": "از صفحه {{GENDER:$1|کاربر}} بازدید کنید.",
 	"mobile-frontend-profile-usertalk": "بحث با {{GENDER:$1|$1}}",
 	"mobile-frontend-random-button": "تصادفی",
 	"mobile-frontend-regular-site": "نمایش دسکتاپ",

@@ -247,7 +247,7 @@
 	"mobile-frontend-profile-noargs": "Non è stato indicato alcun nome utente. Inserisci un nome utente per vedere un profilo.",
 	"mobile-frontend-profile-nouser": "Non esiste alcun utente con questo nome. I nomi utente tengono conto delle maiuscole\\minuscole, controlla se è stato digitato correttamente.",
 	"mobile-frontend-profile-title": "Profilo utente",
-	"mobile-frontend-profile-userpage-link": "Visita la pagina utente.",
+	"mobile-frontend-profile-userpage-link": "Visita la pagina {{GENDER:$1|utente}}.",
 	"mobile-frontend-profile-usertalk": "Pagina di discussione di {{GENDER:$1|$1}}",
 	"mobile-frontend-random-button": "Una pagina a caso",
 	"mobile-frontend-regular-site": "Vista desktop",

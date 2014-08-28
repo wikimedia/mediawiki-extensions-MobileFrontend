@@ -210,7 +210,7 @@
 	"mobile-frontend-profile-noargs": "Et gouf kee Benotzernumm uginn. Gitt w.e.g. e Benotzernumm u fir ee Profil ze gesinn.",
 	"mobile-frontend-profile-nouser": "Et gëtt kee Benotzernumm mat dësem Numm. Bei Benotzernimm gëtt tëscht groussen a kleng Buschtawen ënnerscheed, kuckt dofir no ob de Benotzernumm richteg geschriwwen ass.",
 	"mobile-frontend-profile-title": "Benotzerprofil",
-	"mobile-frontend-profile-userpage-link": "Benotzersäit besichen.",
+	"mobile-frontend-profile-userpage-link": "{{GENDER:$1|Benotzersäit}} besichen.",
 	"mobile-frontend-profile-usertalk": "Mam {{GENDER:$1|$1}} schwätzen",
 	"mobile-frontend-random-button": "Zoufall",
 	"mobile-frontend-regular-site": "Desktop-Vue",
