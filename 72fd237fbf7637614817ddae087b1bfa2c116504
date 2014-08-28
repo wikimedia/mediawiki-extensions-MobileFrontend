@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_096b70b6",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-08-28T00:37:56Z",
+      "side": 1,
+      "message": "A time param is required for setTimeout. You can set it to 0 though.",
+      "revId": "72fd237fbf7637614817ddae087b1bfa2c116504",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
