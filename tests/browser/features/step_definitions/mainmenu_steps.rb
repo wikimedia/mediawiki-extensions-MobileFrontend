@@ -4,7 +4,7 @@ end
 
 When(/^I click on "(.*?)" in the main navigation menu$/) do |text|
   step 'I click on the main navigation button'
-  on(ArticlePage).navigation_element.link_element(text: text).click
+  on(ArticlePage).navigation_element.link_element(text: text).when_visible.click
 end
 
 Then(/^I see a link to "(.*?)" in the main navigation menu$/) do |text|
