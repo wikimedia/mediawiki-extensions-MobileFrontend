@@ -4,6 +4,7 @@
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
+		isTestA = M.isTestA,
 		EditorOverlayBase;
 
 	/**
@@ -79,27 +80,36 @@
 		onSave: function() {
 			this.log( 'success' );
 			var title = this.options.title,
-				extraToastClasses = '', msg;
+				msg;
 
 			// FIXME: use generic method for following 3 lines
 			M.pageApi.invalidatePage( title );
+
+			if ( this.isNewPage ) {
+				msg = 'mobile-frontend-editor-success-new-page';
+			} else if ( this.isNewEditor ) {
+				msg = 'mobile-frontend-editor-success-landmark-1';
+			} else {
+				msg = 'mobile-frontend-editor-success';
+			}
+			msg = mw.msg( msg );
+
+			// FIXME: Remove when A/B test has run its course.
+			// Does reloading page via JavaScript after edit encourage more editing?
+			if ( isTestA ) {
+				M.settings.saveUserSetting( 'mobile-pending-toast', msg );
+				window.location = mw.util.getUrl( title );
+				return;
+			}
+
 			new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage ).
 				on( 'error', function() {
 					// Force refresh when something goes wrong (see bug 62175 for example)
 					window.location = mw.util.getUrl( title );
 				} );
 
-			if ( this.isNewPage ) {
-				msg = 'mobile-frontend-editor-success-new-page';
-			} else if ( this.isNewEditor ) {
-				extraToastClasses = 'landmark';
-				msg = 'mobile-frontend-editor-success-landmark-1';
-			} else {
-				msg = 'mobile-frontend-editor-success';
-			}
-
 			// show a toast notification
-			toast.show( mw.msg( msg ), extraToastClasses );
+			toast.show( msg );
 
 			// Set a cookie for 30 days indicating that this user has edited from
 			// the mobile interface.

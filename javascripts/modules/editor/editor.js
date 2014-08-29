@@ -14,6 +14,8 @@
 		isVisualEditorEnabled = M.isWideScreen() && veConfig,
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
+		toast = M.require( 'toast' ),
+		pendingToast = M.settings.getUserSetting( 'mobile-pending-toast' ),
 		drawer = new CtaDrawer( {
 			queryParams: {
 				campaign: 'mobile_editPageActionCta',
@@ -21,6 +23,12 @@
 			signupQueryParams: { returntoquery: 'article_action=signup-edit' },
 			content: mw.msg( 'mobile-frontend-editor-cta' )
 		} );
+
+	if ( pendingToast ) {
+		// delete the pending toast
+		M.settings.saveUserSetting( 'mobile-pending-toast', '' );
+		toast.show( pendingToast );
+	}
 
 	function addEditButton( section, container ) {
 		return $( '<a class="edit-page">' ).
