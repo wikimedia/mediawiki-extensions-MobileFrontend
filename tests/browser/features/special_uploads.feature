@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @login @test2.m.wikipedia.org @vagrant
+@chrome @login @vagrant
 Feature: Special:Uploads uploads
   Background:
     Given I am using the mobile site
