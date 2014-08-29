@@ -15,7 +15,6 @@ Feature: Menus open correct page for anonymous users
       And I see a link to "Random" in the main navigation menu
       And I see a link to "Settings" in the main navigation menu
       And I see a link to "Watchlist" in the main navigation menu
-      And I see a link to "Uploads" in the main navigation menu
 
   @extension-geodata
   Scenario: Nearby link in menu

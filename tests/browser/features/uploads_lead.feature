@@ -1,4 +1,4 @@
-@en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
+@firefox @login @vagrant
 Feature: Lead image uploads
 
   Background:

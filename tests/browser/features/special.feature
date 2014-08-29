@@ -5,12 +5,6 @@ Feature: Generic special page features
     Given I am using the mobile site
       And I am on the "Main Page" page
 
-  Scenario: Search from Uploads
-    Given I am logged into the mobile website
-    When I click on "Uploads" in the main navigation menu
-      And I click the placeholder search box
-    Then I see the search overlay
-
   Scenario: Search from Watchlist
     Given I am logged into the mobile website
     When I click on "Watchlist" in the main navigation menu
