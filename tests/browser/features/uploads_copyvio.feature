@@ -1,5 +1,5 @@
 # FIXME: Get this working on Chrome (bug 64397)
-@en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org
+@en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
 Feature: Image uploads copyvio notice
 
   Background:
