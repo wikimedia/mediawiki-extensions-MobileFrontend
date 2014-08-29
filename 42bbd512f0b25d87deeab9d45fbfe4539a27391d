@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_c6357af5",
+        "filename": "javascripts/modules/editor/EditorOverlayBeta.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-29T23:51:31Z",
+      "side": 1,
+      "message": "This works fine in Firefox, but Chrome Desktop wraps new line text in new divs, don\u0027t using br or \\n. And Safari i don\u0027t know :/",
+      "revId": "42bbd512f0b25d87deeab9d45fbfe4539a27391d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
