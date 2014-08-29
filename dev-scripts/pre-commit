@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Enable this pre-commit hook by executing the following from the project root directory
-# $ ln -s $PWD/dev-scripts/pre-commit .git/hooks/pre-commit
+# Enable this pre-commit hook by running 'make installhooks'
 
 # check for trailing whitespace
 if [[ `git diff --cached --check` ]]; then
