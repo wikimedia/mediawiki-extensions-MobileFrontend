@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrisportelli"
+			"Chrisportelli",
+			"Leli Forte"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "Indirizz elettroniku (opzjonali)",
@@ -23,6 +24,7 @@
 	"mobile-frontend-donate-image-title": "Agħti stampa",
 	"mobile-frontend-editor-cta": "Trid tkun dħalt fil-kont tiegħek qabel ma tkun tista' timmodifika paġni fuq il-mowbajl.",
 	"mobile-frontend-editor-disabled": "M'intix permess li timmodifika din il-paġna.",
+	"mobile-frontend-editor-tutorial-summary": "Ipprova tejjeb il-paġna $1. Tibżax mill-markup.",
 	"mobile-frontend-enable-images": "Attiva l-istampi fuq is-sit għall-mowbajl",
 	"mobile-frontend-featured-article": "Vetrina",
 	"mobile-frontend-footer-contact": "Kuntatt",
@@ -59,10 +61,8 @@
 	"mobile-frontend-off": "OFF",
 	"mobile-frontend-on": "ON",
 	"mobile-frontend-opt-in-explain": "Billi tipparteċipa fil-verżjoni beta, se jkollok aċċess il-funzjonalità sperimentali, bir-riskju li tiltaqa' ma' żbalji u problemi.",
-	"mobile-frontend-overlay-escape": "Mur lura",
 	"mobile-frontend-page-menu-contents": "werrej",
 	"mobile-frontend-page-menu-history": "Kronoloġija",
-	"mobile-frontend-page-saving": "Qiegħed jiġi salvat $1",
 	"mobile-frontend-password": "Password:",
 	"mobile-frontend-password-confirm-placeholder": "Ikkonferma l-password",
 	"mobile-frontend-password-placeholder": "Password",

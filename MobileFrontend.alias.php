@@ -379,13 +379,13 @@ $specialPageAliases['zh-hans'] = array(
 /** Traditional Chinese (中文（繁體）‎) */
 $specialPageAliases['zh-hant'] = array(
 	'History' => array( '歷史' ),
-	'MobileWebApp' => array( '移動線上App' ),
-	'MobileOptions' => array( '手機版選項' ),
+	'MobileWebApp' => array( '行動網頁App' ),
+	'MobileOptions' => array( '行動版選項' ),
 	'Uploads' => array( '上載' ),
-	'MobileDiff' => array( '手機版差異' ),
-	'MobileEditor' => array( '手機版編輯器' ),
-	'MobileMenu' => array( '手機版選單' ),
-	'MobileLanguages' => array( '手機版語言' ),
+	'MobileDiff' => array( '行動版差異' ),
+	'MobileEditor' => array( '行動版編輯器' ),
+	'MobileMenu' => array( '行動版選單' ),
+	'MobileLanguages' => array( '行動版語言' ),
 	'Nearby' => array( '附近' ),
 	'UserProfile' => array( '使用者資訊' ),
 );

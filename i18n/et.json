@@ -176,7 +176,7 @@
 	"mobile-frontend-profile-noargs": "Kasutajanimi puudub. Palun määra profiili vaatamiseks kasutajanimi.",
 	"mobile-frontend-profile-nouser": "Sellise nimega kasutajat pole. Kasutajanimed on tõstutundlikud, seega kontrolli, kas see on õigesti sisestatud.",
 	"mobile-frontend-profile-title": "Kasutajaprofiil",
-	"mobile-frontend-profile-userpage-link": "Vaata kasutajalehekülge.",
+	"mobile-frontend-profile-userpage-link": "Vaata {{GENDER:$1|kasutajalehekülge}}.",
 	"mobile-frontend-profile-usertalk": "Arutelu kasutajaga {{GENDER:$1|$1}}",
 	"mobile-frontend-random-button": "Juhuslik",
 	"mobile-frontend-regular-site": "Tavavaade",

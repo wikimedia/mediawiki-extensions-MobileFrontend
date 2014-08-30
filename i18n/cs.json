@@ -227,7 +227,7 @@
 	"mobile-frontend-profile-noargs": "Nebylo uvedeno uživatelské jméno. Pokud si chcete prohlédnout profil, musíte zadat uživatelské jméno.",
 	"mobile-frontend-profile-nouser": "Neexistuje žádný uživatel s tímto jménem. Uživatelská jména rozlišují velikost písmen, tak prosím zkontrolujte, jestli bylo zadáno správně.",
 	"mobile-frontend-profile-title": "Uživatelský profil",
-	"mobile-frontend-profile-userpage-link": "Navštívit uživatelskou stránku.",
+	"mobile-frontend-profile-userpage-link": "Navštívit {{GENDER:$1|uživatelovu|uživatelčinu|uživatelskou}} stránku.",
 	"mobile-frontend-profile-usertalk": "Komunikovat s {{GENDER:$1|uživatelem|uživatelkou}} $1",
 	"mobile-frontend-random-button": "Náhodně",
 	"mobile-frontend-regular-site": "Klasické zobrazení",
