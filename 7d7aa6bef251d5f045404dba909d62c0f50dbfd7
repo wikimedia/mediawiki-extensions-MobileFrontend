@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_97067ad0",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-30T20:46:59Z",
+      "side": 1,
+      "message": "ToDo: It will be \"false\" in phpunit, should true. If i test it in browser (all settings like the test data) it is true, hmm.",
+      "revId": "7d7aa6bef251d5f045404dba909d62c0f50dbfd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_77b8aee2",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-08-30T20:46:59Z",
+      "side": 1,
+      "message": "ToDo: It will be \"true\" in phpunit, should false. If i test it in browser (all settings like the test data) it is false, hmm.",
+      "revId": "7d7aa6bef251d5f045404dba909d62c0f50dbfd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
