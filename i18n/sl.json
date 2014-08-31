@@ -177,7 +177,7 @@
 	"mobile-frontend-profile-noargs": "Podali niste nobenega uporabniškega imena. Prosimo, vnesite uporabniško ime za ogled profila.",
 	"mobile-frontend-profile-nouser": "Uporabnik s tem imenom ne obstaja. Uporabniška imena so občutljiva na velikost črk, zato preverite, če ste ga vtipkali pravilno.",
 	"mobile-frontend-profile-title": "Podatki o uporabniku",
-	"mobile-frontend-profile-userpage-link": "Obiščite uporabnikovo stran.",
+	"mobile-frontend-profile-userpage-link": "Obiščite {{GENDER:$1|uporabnikovo|uporabničino}} stran.",
 	"mobile-frontend-profile-usertalk": "Pogovorite se z {{GENDER:$1|uporabnikom|uporabnico}} $1",
 	"mobile-frontend-random-button": "Naključno",
 	"mobile-frontend-regular-site": "Pogled namizja",
