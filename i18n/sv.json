@@ -250,7 +250,7 @@
 	"mobile-frontend-profile-noargs": "Inget användarnamn angavs. Var god ange ett användarnamn för att visa en profil.",
 	"mobile-frontend-profile-nouser": "Det finns ingen användare med detta namn. Användarnamn är skiftlägeskänsliga, så kontrollera om det har skrivits korrekt.",
 	"mobile-frontend-profile-title": "Användarprofil",
-	"mobile-frontend-profile-userpage-link": "Besök användarsidan.",
+	"mobile-frontend-profile-userpage-link": "Besök {{GENDER:$1|användarsidan}}.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|Diskutera med $1}}",
 	"mobile-frontend-random-button": "Slumpartikel",
 	"mobile-frontend-regular-site": "Skrivbordsvy",

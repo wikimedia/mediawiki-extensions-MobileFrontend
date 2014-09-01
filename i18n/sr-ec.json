@@ -156,7 +156,7 @@
 	"mobile-frontend-profile-noargs": "Корисничко име није наведено. Наведите корисничко име да би сте видели профил.",
 	"mobile-frontend-profile-nouser": "Нема корисника са тим именом. Корисничка имена су осетљива на велика и мала слова па стога проверите да ли сте их правилно укуцали.",
 	"mobile-frontend-profile-title": "Кориснички профил",
-	"mobile-frontend-profile-userpage-link": "Види корисничку страницу.",
+	"mobile-frontend-profile-userpage-link": "Види {{GENDER:$1|корисничку}} страницу.",
 	"mobile-frontend-profile-usertalk": "Напиши поруку {{GENDER:$1|кориснику|корисници}} $1",
 	"mobile-frontend-random-button": "Насумице",
 	"mobile-frontend-regular-site": "Десктоп приказ",

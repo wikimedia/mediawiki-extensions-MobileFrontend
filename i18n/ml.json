@@ -245,7 +245,7 @@
 	"mobile-frontend-profile-noargs": "ഉപയോക്തൃനാമം നൽകിയിട്ടില്ല. ഉപയോക്തൃവിവരങ്ങൾ കാണാനായി ഒരു ഉപയോക്തൃനാമം നൽകുക.",
 	"mobile-frontend-profile-nouser": "ഈ പേരിൽ ഒരു ഉപയോക്താവുമില്ല. ഉപയോക്തൃനാമങ്ങൾ കേസ് സെൻസിറ്റീവ് ആയതിനാൽ താങ്കൾ ടൈപ്പ് ചെയ്തത് ശരിയാണോയെന്ന് ദയവായി പരിശോധിക്കുക.",
 	"mobile-frontend-profile-title": "എന്നെപ്പറ്റി",
-	"mobile-frontend-profile-userpage-link": "ഉപയോക്തൃതാൾ കാണുക.",
+	"mobile-frontend-profile-userpage-link": "{{GENDER:$1|ഉപയോക്തൃതാൾ}} കാണുക.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|$1 എന്ന ഉപയോക്താവിനോട് സംവദിക്കുക}}",
 	"mobile-frontend-random-button": "ക്രമരഹിതം",
 	"mobile-frontend-regular-site": "ഡെസ്ക്ടോപ്പ് രൂപം",

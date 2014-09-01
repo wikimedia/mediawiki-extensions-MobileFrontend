@@ -75,6 +75,7 @@
 	"mobile-frontend-placeholder": "Fittex fil-{{SITENAME}}",
 	"mobile-frontend-placeholder-beta": "Fittex fuq {{SITENAME}} (Beta)",
 	"mobile-frontend-privacy-link-text": "Privatezza",
+	"mobile-frontend-profile-userpage-link": "Żur il-paġna tal-{{GENDER:$1|utent|utenta}}.",
 	"mobile-frontend-random-button": "Paġna kwalunkwe",
 	"mobile-frontend-regular-site": "Verżjoni għad-desktop",
 	"mobile-frontend-save-settings": "Salva",
