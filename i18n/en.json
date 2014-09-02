@@ -49,7 +49,7 @@
     "mobile-frontend-editor-abusefilter-disallow": "This edit cannot be saved because we have detected an issue.",
     "mobile-frontend-editor-abusefilter-read-more": "Read more",
     "mobile-frontend-editor-abusefilter-warning": "Warning: Are you sure you want to save this edit? There may be an issue with it.",
-    "mobile-frontend-editor-anon": "Edit anonymously",
+    "mobile-frontend-editor-anon": "Edit without logging in",
     "mobile-frontend-editor-blocked": "Your account is blocked from editing.",
     "mobile-frontend-editor-cancel": "Cancel",
     "mobile-frontend-editor-cancel-confirm": "Do you really want to abandon your edit?",
