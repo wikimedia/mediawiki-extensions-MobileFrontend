@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_3852046b",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-02T23:46:39Z",
+      "side": 1,
+      "message": "Just in case, make sure the regex matches only at the end.",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_78d76cc5",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-02T23:46:39Z",
+      "side": 1,
+      "message": "You might want to initialize this variable immediately.",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_f8911cfc",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-02T23:46:39Z",
+      "side": 1,
+      "message": "Why is this not in mobile.wikigrok?",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
