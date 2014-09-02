@@ -825,6 +825,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/issues.less',
 		),
 		'scripts' => array(
+			'javascripts/modules/issues/CleanupOverlay.js',
 			'javascripts/modules/issues/issues.js',
 		),
 		'messages' => array(

@@ -3,17 +3,7 @@
 var module = (function() {
 	var
 		inBeta = M.isBetaGroupMember(),
-		Overlay = M.require( 'Overlay' ),
-		// FIXME: Separate into separate file
-		CleanupOverlay = Overlay.extend( {
-			templatePartials: {
-				content: M.template.get( 'overlays/cleanup.hogan' )
-			},
-			initialize: function( options ) {
-				options.heading = '<strong>' + options.headingText + '</strong>';
-				this._super( options );
-			}
-		} );
+		CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' );
 
 	function extractMessage( $box ) {
 		var selector = '.mbox-text, .ambox-text',
