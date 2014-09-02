@@ -906,13 +906,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array( 'mobile.startup' ),
 		'class' => 'MobileSiteModule',
 	),
-
-	// Resources to be loaded on desktop version of site
-	'mobile.desktop' => $wgMFResourceBoilerplate + array(
-		'scripts' => array( 'javascripts/desktop/unset_stopmobileredirect.js' ),
-		'dependencies' => array( 'jquery.cookie' ),
-		'targets' => 'desktop',
-	),
 ) );
 
 /**

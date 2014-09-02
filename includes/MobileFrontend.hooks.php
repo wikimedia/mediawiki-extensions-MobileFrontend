@@ -46,19 +46,14 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass, $wgULSPosition,
-			$wgHTMLFormAllowTableFormat, $wgUseMediaWikiUIEverywhere;
+		global $wgMFDefaultSkinClass, $wgULSPosition, $wgHTMLFormAllowTableFormat,
+			$wgUseMediaWikiUIEverywhere;
 
 		$mobileContext = MobileContext::singleton();
 
 		if ( !$mobileContext->shouldDisplayMobileView()
 			|| $mobileContext->isBlacklistedPage()
 		) {
-			// add any necessary resources for desktop view, if enabled
-			if ( $wgMFEnableDesktopResources ) {
-				$out = $context->getOutput();
-				$out->addModules( 'mobile.desktop' );
-			}
 			return true;
 		}
 
@@ -120,7 +115,6 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
-		global $wgMobileUrlTemplate;
 		wfProfileIn( __METHOD__ );
 
 		$title = $skin->getTitle();
@@ -131,14 +125,8 @@ class MobileFrontendHooks {
 			$args = $tpl->getSkin()->getRequest()->getValues();
 			// avoid title being set twice
 			unset( $args['title'] );
-
-			/**
-			 * Adds query string to force mobile view if we're not using $wgMobileUrlTemplate
-			 * This is to preserve pretty/canonical links for a happy cache where possible (eg WMF cluster)
-			 */
-			if ( !strlen( $wgMobileUrlTemplate ) ) {
-				$args['mobileaction'] = 'toggle_view_mobile';
-			}
+			unset( $args['useformat'] );
+			$args['mobileaction'] = 'toggle_view_mobile';
 
 			$mobileViewUrl = $title->getFullURL( $args );
 			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( $mobileViewUrl );
@@ -313,15 +301,7 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgCookiePath, $wgMFNearbyEndpoint, $wgMFContentNamespace;
-		$ctx = MobileContext::singleton();
-		$wgStopMobileRedirectCookie = array(
-			'name' => 'stopMobileRedirect',
-			'duration' => $ctx->getUseFormatCookieDuration() / ( 24 * 60 * 60 ), // in days
-			'domain' => $ctx->getStopMobileRedirectCookieDomain(),
-			'path' => $wgCookiePath,
-		);
-		$vars['wgStopMobileRedirectCookie'] = $wgStopMobileRedirectCookie;
+		global $wgMFNearbyEndpoint, $wgMFContentNamespace;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
 		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
 

@@ -349,15 +349,6 @@ $wgMFNoindexPages = true;
 $wgMFStopRedirectCookieHost = null;
 
 /**
- * Whether or not to load desktop-specific ResourceLoader resources
- *
- * Current usecase is for deciding whether or not to load JS for unsetting
- * the stopMobileRedirect cookie
- * @var bool
- */
-$wgMFEnableDesktopResources = false;
-
-/**
  * Whether to append ™ to the sitename in page footer, or
  * ® to the sitename for alt text in footer if using a custom copyright logo.
  *
