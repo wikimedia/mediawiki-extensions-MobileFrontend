@@ -1,4 +1,4 @@
-<div class="surface">
+<div class="surface" lang="{{contentLang}}" dir="{{contentDir}}">
   <div class="pre-content">
     <strong>{{editingMsg}}</strong>
     <h1 id="section_0">{{title}}</h1>

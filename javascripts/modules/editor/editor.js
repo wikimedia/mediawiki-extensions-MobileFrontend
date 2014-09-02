@@ -103,7 +103,9 @@
 					isNewPage: isNewPage,
 					isNewEditor: user.getEditCount() === 0,
 					oldId: M.query.oldid,
-					funnel: funnel || 'article'
+					funnel: funnel || 'article',
+					contentLang: $( '#content' ).attr( 'lang' ),
+					contentDir: $( '#content' ).attr( 'dir' )
 				},
 				visualEditorNamespaces = veConfig && veConfig.namespaces;
 
