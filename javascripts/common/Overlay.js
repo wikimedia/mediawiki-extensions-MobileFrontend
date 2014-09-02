@@ -4,11 +4,6 @@
 	var
 		View = M.require( 'View' ),
 		$window = $( window ),
-		// Delay needed to properly calculate available height when virtual
-		// keyboard opens on iOS. In many cases 0 is enough, but it seems that
-		// when the page is more complex, a small delay is needed.
-		// Try adjusting if problems with disappearing overlay header persist.
-		IOS_KEYBOARD_DELAY = 50,
 		Overlay;
 
 	/**
@@ -217,7 +212,7 @@
 							$window.scrollTop( 0 );
 
 							self._resizeContent( $window.height() - keyboardHeight );
-						}, IOS_KEYBOARD_DELAY );
+						} );
 					} )
 					.on( 'blur', function() {
 						self._resizeContent( $window.height() );
