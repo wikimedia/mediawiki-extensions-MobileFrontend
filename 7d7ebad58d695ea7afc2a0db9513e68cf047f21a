@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e2fb78d_43ba8a1f",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-02T18:31:19Z",
+      "side": 1,
+      "message": "Lacks spacing between functions.",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_c36f9abf",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 1
@@ -47,6 +64,23 @@
       "writtenOn": "2014-09-02T18:29:59Z",
       "side": 1,
       "message": "This public function doesn\u0027t do anything but call a private function. Is there a reason they need to be separate?",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_837d121a",
+        "filename": "javascripts/modules/editor/EditorOverlayBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-02T18:31:19Z",
+      "side": 1,
+      "message": "Lacks spacing between functions.",
       "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
