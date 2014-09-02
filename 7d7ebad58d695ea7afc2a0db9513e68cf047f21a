@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_c36f9abf",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-02T18:29:59Z",
+      "side": 1,
+      "message": "What is microAutosize for? I couldn\u0027t find any documentation for it, other than \"Autoresizing textareas.\"",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_43bf2af7",
+        "filename": "javascripts/modules/editor/EditorOverlayBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-02T18:29:59Z",
+      "side": 1,
+      "message": "This needs to be a bit smarter for links. For external links, we should grey out the url as well. For piped links, we should grey out everything except the label text.",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_434e0a3e",
+        "filename": "javascripts/modules/editor/EditorOverlayBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-02T18:29:59Z",
+      "side": 1,
+      "message": "This public function doesn\u0027t do anything but call a private function. Is there a reason they need to be separate?",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_23a65ebf",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-02T18:29:59Z",
+      "side": 1,
+      "message": "typo: \u0027but but\u0027",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_e3af3690",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-02T18:29:59Z",
+      "side": 1,
+      "message": "\u0027checks to see confirms\u0027 is redundant. wether is misspelled.",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_c3b43ae7",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-02T18:29:59Z",
+      "side": 1,
+      "message": "2 spaces",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_63cc668d",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-02T18:29:59Z",
+      "side": 1,
+      "message": "The difference between #252525 and #666 is virtually unnoticeable to me. I would recommend creating a new semantic LESS variable for @colorMarkupText and setting it to something like #aaa.",
+      "revId": "7d7ebad58d695ea7afc2a0db9513e68cf047f21a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
