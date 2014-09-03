@@ -56,7 +56,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Questa modifica non può essere salvata perché è stato rilevato un problema.",
 	"mobile-frontend-editor-abusefilter-read-more": "Per saperne di più",
 	"mobile-frontend-editor-abusefilter-warning": "Attenzione: sei sicuro di voler salvare questa modifica? Potrebbe esserci un problema con essa.",
-	"mobile-frontend-editor-anon": "Modifica in modo anonimo",
+	"mobile-frontend-editor-anon": "Modifica senza effettuare l'accesso",
 	"mobile-frontend-editor-blocked": "La tua utenza è bloccata alle modifiche.",
 	"mobile-frontend-editor-cancel": "Annulla",
 	"mobile-frontend-editor-cancel-confirm": "Vuoi davvero abbandonare la tua modifica?",

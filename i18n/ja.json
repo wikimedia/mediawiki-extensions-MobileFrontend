@@ -52,7 +52,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "この編集内容で問題点が検出されたため、保存できません。",
 	"mobile-frontend-editor-abusefilter-read-more": "続きを読む",
 	"mobile-frontend-editor-abusefilter-warning": "警告: この編集内容を本当に保存しますか? 問題点を含んでいるおそれがあります。",
-	"mobile-frontend-editor-anon": "匿名で編集",
+	"mobile-frontend-editor-anon": "ログインせずに編集",
 	"mobile-frontend-editor-blocked": "あなたのアカウントは編集ブロックされています。",
 	"mobile-frontend-editor-cancel": "キャンセル",
 	"mobile-frontend-editor-cancel-confirm": "編集内容を本当に破棄しますか?",

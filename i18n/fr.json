@@ -78,7 +78,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Cette modification ne peut pas être enregistrée parce que nous avons détecté un problème.",
 	"mobile-frontend-editor-abusefilter-read-more": "En savoir plus",
 	"mobile-frontend-editor-abusefilter-warning": "Attention : Êtes-vous sûr de vouloir enregistrer cette modification ? Elle pourrait présenter un problème.",
-	"mobile-frontend-editor-anon": "Modifier de façon anonyme",
+	"mobile-frontend-editor-anon": "Modifier sans se connecter",
 	"mobile-frontend-editor-blocked": "Votre compte est bloqué en modification.",
 	"mobile-frontend-editor-cancel": "Annuler",
 	"mobile-frontend-editor-cancel-confirm": "Voulez-vous vraiment abandonner votre modification ?",

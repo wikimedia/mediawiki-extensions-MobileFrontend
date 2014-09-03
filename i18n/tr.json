@@ -50,6 +50,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Bu düzenleme kaydedilemiyor çünkü bir sorun saptadık.",
 	"mobile-frontend-editor-abusefilter-read-more": "Daha fazla bilgi edinin",
 	"mobile-frontend-editor-abusefilter-warning": "Uyarı: Bu düzenlemeyi kaydetmek istediğinizden emin misiniz? Bu bir sorun olabilir.",
+	"mobile-frontend-editor-anon": "Giriş yapmadan düzenle",
 	"mobile-frontend-editor-cancel": "İptal",
 	"mobile-frontend-editor-cancel-confirm": "Düzenlemelerinizi bırakmak gerçekten istiyor musunuz?",
 	"mobile-frontend-editor-captcha-try-again": "Yanlış kod, tekrar deneyiniz.",

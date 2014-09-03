@@ -50,6 +50,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "এই সম্পাদনা সংরক্ষণ করা যাবে না কারণ আমরা একটি সমস্যা সনাক্ত করেছি।",
 	"mobile-frontend-editor-abusefilter-read-more": "আরও পড়ুন",
 	"mobile-frontend-editor-abusefilter-warning": "সতর্কবার্তা: আপনি কি এই সম্পাদনা সংরক্ষণ করার ব্যাপারে নিশ্চিত? এটিতে সম্ভবত কোন সমস্যা রয়েছে।",
+	"mobile-frontend-editor-anon": "প্রবেশ করা ছাড়াই সম্পাদনা করছেন",
 	"mobile-frontend-editor-blocked": "আপনার অ্যাকাউন্ট সম্পাদনা করা থেকে অবরুদ্ধ করা হয়েছে।",
 	"mobile-frontend-editor-cancel": "বাতিল",
 	"mobile-frontend-editor-cancel-confirm": "আপনি কি সত্যিই আপনার সম্পাদনা পরিত্যাগ করতে চান?",
