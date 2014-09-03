@@ -50,6 +50,24 @@
       "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_1b5bc227",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-03T00:39:40Z",
+      "side": 1,
+      "message": "Good point. No sense loading this extra code if we might not need it.",
+      "parentUuid": "2e2fb78d_f8911cfc",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
