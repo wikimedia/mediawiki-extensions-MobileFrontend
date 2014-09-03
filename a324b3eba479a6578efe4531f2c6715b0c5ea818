@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_84baae1c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 909,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-03T23:29:31Z",
+      "side": 1,
+      "message": "No specific dependency actually lives in the alpha module, I just thought it would be less confusing to depend on mobile.alpha than mobile.stable. Alternately, I could list all the specific dependencies, but it might be a bit verbose. I\u0027ve seen both styles in practice. Do we prefer one over the other?",
+      "parentUuid": "2e2fb78d_812180f8",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_21e52ca0",
         "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
         "patchSetId": 11
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_640222c0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-03T23:29:31Z",
+      "side": 1,
+      "message": "I agree, but I think I\u0027ll do that as part of the next iteration on it (since it will need to be called from multiple interfaces then).",
+      "parentUuid": "2e2fb78d_21e52ca0",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_01647041",
         "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
         "patchSetId": 11
@@ -47,6 +83,24 @@
       "writtenOn": "2014-09-03T23:13:49Z",
       "side": 1,
       "message": "Where is the source code of this file? Why does the URL end with \"?\"?",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_0486be67",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-03T23:29:31Z",
+      "side": 1,
+      "message": "It\u0027s on Github. I\u0027ll add a comment with a link. I\u0027ll also remove the question mark.",
+      "parentUuid": "2e2fb78d_01647041",
       "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -122,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_44f3a607",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-03T23:29:31Z",
+      "side": 1,
+      "message": "You\u0027re right, that makes more sense.",
+      "parentUuid": "2e2fb78d_01d350da",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_419718f0",
         "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
         "patchSetId": 11
@@ -139,6 +211,24 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_446046a0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-03T23:29:31Z",
+      "side": 1,
+      "message": "Yeah, that looks like a better place for it.",
+      "parentUuid": "2e2fb78d_419718f0",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_e185e4b2",
         "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
         "patchSetId": 11
@@ -150,6 +240,24 @@
       "writtenOn": "2014-09-03T23:13:49Z",
       "side": 1,
       "message": "Shouldn\u0027t this be in wikigrok.js? Why would we even load all this code if the user opted out?",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_c444361f",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-03T23:29:31Z",
+      "side": 1,
+      "message": "Actually we should have it in both places. We need it here since opting-out is done in the middle of the workflow (all of which is done within a single page view).",
+      "parentUuid": "2e2fb78d_e185e4b2",
       "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -220,6 +328,24 @@
       "writtenOn": "2014-09-03T23:13:49Z",
       "side": 1,
       "message": "Why the wg- prefix? In case it gets moved to a separate extension?",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_e4f5f2c8",
+        "filename": "templates/modules/wikigrok/WikiGrokDrawer.hogan",
+        "patchSetId": 11
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-03T23:29:31Z",
+      "side": 1,
+      "message": "Yes, and also if we use the regular \u0027header\u0027 class, it gets all the header CSS applied to it.",
+      "parentUuid": "2e2fb78d_c1a9c822",
       "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
