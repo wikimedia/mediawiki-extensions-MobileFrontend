@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e2fb78d_812180f8",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 909,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "Not that it does any harm, but why?",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_21e52ca0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "I think you might want to create a simple class for the API you\u0027re using here. I\u0027m not saying that it has to be based on our Api class, but it would be nice to encapsulate it in a separate class rather than have those nested $.ajax calls and processing of the data they return in the view.",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_01647041",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "Where is the source code of this file? Why does the URL end with \"?\"?",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_3852046b",
         "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
         "patchSetId": 11
@@ -30,6 +81,75 @@
       "writtenOn": "2014-09-02T23:46:39Z",
       "side": 1,
       "message": "You might want to initialize this variable immediately.",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_e1d724c3",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "2e2fb78d_78d76cc5",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_01d350da",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "initialize() serves as a constructor in our Class implementation. You should not call it manually, instead you should have a separate method which you can call here and in the constructor.",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_419718f0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "It looks like all of this should be in postRender().",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_e185e4b2",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDrawer.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be in wikigrok.js? Why would we even load all this code if the user opted out?",
       "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -65,6 +185,41 @@
       "side": 1,
       "message": "Good point. No sense loading this extra code if we might not need it.",
       "parentUuid": "2e2fb78d_f8911cfc",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_61b9f477",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "2e2fb78d_1b5bc227",
+      "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_c1a9c822",
+        "filename": "templates/modules/wikigrok/WikiGrokDrawer.hogan",
+        "patchSetId": 11
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2014-09-03T23:13:49Z",
+      "side": 1,
+      "message": "Why the wg- prefix? In case it gets moved to a separate extension?",
       "revId": "a324b3eba479a6578efe4531f2c6715b0c5ea818",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
