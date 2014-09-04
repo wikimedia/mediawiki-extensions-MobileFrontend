@@ -48,18 +48,26 @@
 					prop: 'pageimages',
 					piprop: 'thumbnail',
 					pithumbsize: 80,
-					pilimit: 15
+					pilimit: 15,
+					list: 'prefixsearch',
+					pssearch: query,
+					pslimit: 15
 				} ).then( function( data ) {
-					var results = [];
-					if ( data.query && data.query.pages ) {
-						$.each( data.query.pages, function( i, page ) {
+					var results = [], info = {};
+					if ( data.query && data.query.pages && data.query.prefixsearch ) {
+						// We loop through the prefixsearch results (rather than the pages
+						// results) here in order to maintain the correct order.
+						$.each( data.query.prefixsearch, function( i, page ) {
 							var title = page.title;
+							if ( page.pageid && data.query.pages[page.pageid] ) {
+								info = data.query.pages[page.pageid];
+							}
 							results.push( {
 								id: page.pageid,
 								heading: highlightSearchTerm( title, query ),
 								title: title,
 								url: mw.util.getUrl( title ),
-								thumbnail: page.thumbnail
+								thumbnail: info.thumbnail
 							} );
 						} );
 					}
