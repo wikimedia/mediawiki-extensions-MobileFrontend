@@ -28,6 +28,7 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public static function DOMParse( OutputPage $out ) {
+		global $wgMFNamespacesWithoutCollapsibleSections;
 		wfProfileIn( __METHOD__ );
 
 		$html = $out->getHTML();
@@ -41,14 +42,20 @@ class ExtMobileFrontend {
 		wfRunHooks( 'MobileFrontendBeforeDOM', array( $context, $formatter ) );
 
 		wfProfileIn( __METHOD__ . '-filter' );
-		$specialPage = $out->getTitle()->isSpecialPage();
+		$title = $out->getTitle();
+		$isSpecialPage = $title->isSpecialPage();
 		$formatter->enableExpandableSections(
+			// Don't collapse sections e.g. on JS pages
 			$out->canUseWikiPage()
 			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
+			// And not in certain namespaces
+			&& array_search( $title->getNamespace(), $wgMFNamespacesWithoutCollapsibleSections ) === false
+			// And not when what's shown is not actually article text
+			&& $context->getRequest()->getText( 'action', 'view' ) == 'view'
 		);
 		if ( $context->getContentTransformations() ) {
 			// Remove images if they're disabled from special pages, but don't transform otherwise
-			$formatter->filterContent( /* remove defaults */ !$specialPage );
+			$formatter->filterContent( /* remove defaults */ !$isSpecialPage );
 		}
 		wfProfileOut( __METHOD__ . '-filter' );
 

@@ -540,3 +540,17 @@ $wgMFEnableWikiGrok = false;
  * Whether beta and alpha modes are enabled
  */
 $wgMFEnableBeta = false;
+
+/**
+ * In which namespaces sections shoudn't be collapsed
+ */
+$wgMFNamespacesWithoutCollapsibleSections = array(
+	// Authorship and licensing information should be visible initially
+	NS_FILE,
+	// Otherwise category contents will be hidden
+	NS_CATEGORY,
+	// Don't collapse various forms
+	NS_SPECIAL,
+	// Just don't
+	NS_MEDIA,
+);
