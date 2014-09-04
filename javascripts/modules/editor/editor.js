@@ -187,10 +187,16 @@
 			// init the editor
 			init( M.getCurrentPage() );
 		} else {
-			// FIXME: change when micro.tap.js in stable
-			$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
-				drawer.render().show();
-			});
+			M.getCurrentPage().isEditable( user ).done( function( isEditable ) {
+				if ( isEditable ) {
+					// FIXME: change when micro.tap.js in stable
+					$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
+						drawer.render().show();
+					});
+				} else {
+					showSorryToast( 'mobile-frontend-editor-disabled' );
+				}
+			} );
 		}
 		$( '.edit-page' ).each( function() {
 			var $a = $( this ), section = 0;
