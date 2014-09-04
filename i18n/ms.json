@@ -15,7 +15,7 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kod pengesahan",
 	"mobile-frontend-account-create-email-placeholder": "Alamat e-mel (pilihan)",
 	"mobile-frontend-account-create-submit": "Daftar diri",
-	"mobile-frontend-app-title": "Perisian Mudah Alih",
+	"mobile-frontend-app-title": "Perisian Bimbit",
 	"mobile-frontend-back-to-top-of-section": "Undur Satu Bahagian",
 	"mobile-frontend-changeslist-ip": "Pengguna awanama",
 	"mobile-frontend-changeslist-nocomment": "tiada ringkasan suntingan",
@@ -270,7 +270,7 @@
 	"mobile-frontend-username-placeholder": "Nama pengguna",
 	"mobile-frontend-view": "Paparan mudah alih",
 	"mobile-frontend-view-desktop": "Atas meja",
-	"mobile-frontend-view-mobile": "Mudah alih",
+	"mobile-frontend-view-mobile": "Bimbit",
 	"mobile-frontend-view-source": "Lihat sumber",
 	"mobile-frontend-watch-login": "Tambah $1 dalam senarai pantau anda.",
 	"mobile-frontend-watchlist-a-z": "Senarai",
@@ -297,8 +297,8 @@
 	"mobile-frontend-watchlist-view": "Lihat senarai pantau anda",
 	"nearby": "Laman berdekatan anda",
 	"right-mf-uploadbutton": "Menggunakan butang muat naik melalui laman versi mudah alih",
-	"tag-mobile_edit": "Suntingan mudah alih",
-	"tag-mobile_edit-description": "Suntingan dibuat melalui antara muka mudah alih (web atau perisian)",
-	"tag-mobile_web_edit": "Suntingan web mudah alih",
-	"tag-mobile_web_edit-description": "Suntingan dibuat melalui tapak web mudah alih"
+	"tag-mobile_edit": "Suntingan telefon bimbit",
+	"tag-mobile_edit-description": "Suntingan dibuat dari telefon bimbit (web atau perisian)",
+	"tag-mobile_web_edit": "Suntingan web telefon bimbit",
+	"tag-mobile_web_edit-description": "Suntingan dibuat melalui tapak web untuk telefon bimbit"
 }

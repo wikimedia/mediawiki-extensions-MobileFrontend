@@ -50,7 +50,7 @@
 	"mobile-frontend-editor-save": "Сачувај",
 	"mobile-frontend-editor-source-editor": "Изворно уређивање",
 	"mobile-frontend-editor-success": "Ваша измена је сачувана!",
-	"mobile-frontend-editor-summary-placeholder": "Опис измене (није обавезно)",
+	"mobile-frontend-editor-summary-placeholder": "Пример: исправљене граматичке грешке, додат садржај",
 	"mobile-frontend-editor-summary-request": "Како сте унапредили страницу?",
 	"mobile-frontend-editor-tutorial-cancel": "Не, хвала",
 	"mobile-frontend-editor-unavailable": "Ваш веб прегледач не подржава мобилно уређивање. Покушајте са неким другим веб прегледачем.",
