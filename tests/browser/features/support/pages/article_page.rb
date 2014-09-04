@@ -117,10 +117,10 @@ class ArticlePage
     page.overlay_ve_header_element.div_element(css: ".oo-ui-toolbar-bar")
   end
   span(:overlay_ve_header_toolbar_bold_button) do |page|
-    page.overlay_ve_header_element.span_element(class: "oo-ui-iconedElement-icon oo-ui-icon-bold-b")
+    page.overlay_ve_header_element.span_element(class: "oo-ui-iconElement-icon oo-ui-icon-bold-b")
   end
   span(:overlay_ve_header_toolbar_italic_button) do |page|
-    page.overlay_ve_header_element.span_element(class: "oo-ui-iconedElement-icon oo-ui-icon-italic-i")
+    page.overlay_ve_header_element.span_element(class: "oo-ui-iconElement-icon oo-ui-icon-italic-i")
   end
   div(:editor_ve, css: ".ve-ce-documentNode")
   div(:spinner_loading, class: "spinner loading")
