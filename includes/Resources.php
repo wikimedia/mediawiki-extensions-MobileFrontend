@@ -567,6 +567,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-translator.js',
+			'javascripts/modules/wikigrok/wikigrok.js',
 		),
 	),
 
@@ -899,6 +900,23 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'notifications',
 			'echo-overlay-link',
 			'echo-notification-count',
+		),
+	),
+
+	// See https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok
+	'mobile.wikigrok' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.alpha',
+		),
+		'templates' => array(
+			'modules/wikigrok/WikiGrokDrawer.hogan',
+		),
+		'scripts' => array(
+			'javascripts/modules/wikigrok/wikigrokeval.js',
+			'javascripts/modules/wikigrok/WikiGrokDrawer.js',
+		),
+		'styles' => array(
+			'less/modules/wikigrok/WikiGrokDrawer.less',
 		),
 	),
 

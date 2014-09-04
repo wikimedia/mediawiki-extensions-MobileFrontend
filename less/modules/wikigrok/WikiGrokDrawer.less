@@ -1,0 +1,47 @@
+@import "minerva.mixins";
+@import "minerva.variables";
+
+.wikigrok {
+	position: relative;
+
+	.wg-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.wg-header {
+		color: @grayMedium;
+		font-size: 95%;
+		text-align: left;
+	}
+
+	.wg-content {
+		font-size: 120%;
+		line-height: 1.2;
+		font-weight: bold;
+		margin-bottom: .8em;
+		text-align: left;
+	}
+
+	.wg-buttons {
+
+		// Extra space between the buttons
+		// FIXME: Consider pushing this into ui.less
+		.mw-ui-button {
+			margin-left: .4em;
+		}
+
+		// For enwiki prototype only
+		.cancel,
+		.proceed {
+			width: 130px;
+		}
+
+		// For enwiki prototype only
+		.yes,
+		.no {
+			width: 75px;
+		}
+	}
+}
