@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e2fb78d_84218ef8",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-04T00:02:05Z",
+      "side": 1,
+      "message": "Needs to provide current page title, otherwise will break e.g. on enwiki.",
+      "revId": "e0ec4722cc8de5137c29bb0a82937ea22554b10a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_a4e12a99",
         "filename": "javascripts/modules/editor/EditorApi.js",
         "patchSetId": 6
@@ -13,6 +30,23 @@
       "writtenOn": "2014-09-03T23:57:35Z",
       "side": 1,
       "message": "It might make more sense for us to use our own mobile-specific message for this, since there\u0027s no telling what crazy stuff is added in the desktop version (and whether the links will redirect properly).",
+      "revId": "e0ec4722cc8de5137c29bb0a82937ea22554b10a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_a47b6aea",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-04T00:02:05Z",
+      "side": 1,
+      "message": "You don\u0027t even need the message itself which can be quite huge - just parse \u0027{{int:anoneditwarning}}\u0027.",
       "revId": "e0ec4722cc8de5137c29bb0a82937ea22554b10a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
