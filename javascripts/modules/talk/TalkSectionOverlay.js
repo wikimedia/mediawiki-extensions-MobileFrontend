@@ -63,7 +63,7 @@ var
 									$textarea.addClass( 'error' );
 								} else {
 									self.hide();
-									self.parent.hide();
+									options.parent.hide();
 									popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
 									// invalidate the cache
 									M.pageApi.invalidatePage( options.title );
