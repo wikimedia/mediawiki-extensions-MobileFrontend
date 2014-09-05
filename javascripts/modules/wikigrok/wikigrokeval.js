@@ -19,8 +19,8 @@
 		dataType: 'jsonp',
 		success: function( data ) {
 			var instanceClaims,
-				loadWikiGrokDrawer = false,
-				WikiGrokDrawer;
+				loadWikiGrokDialog = false,
+				WikiGrokDialog;
 
 			// See if the page has any 'instance of' claims.
 			if ( data.entities !== undefined && data.entities[wikidataID].claims.P31 !== undefined ) {
@@ -30,21 +30,15 @@
 					if ( claim.mainsnak.datavalue.value['numeric-id'] === 5 ) {
 						// Make sure there are no existing occupation claims.
 						if ( data.entities[wikidataID].claims.P106 === undefined ) {
-							loadWikiGrokDrawer = true;
+							loadWikiGrokDialog = true;
 						}
 						// Break each loop.
 						return false;
 					}
 				} );
-				if ( loadWikiGrokDrawer ) {
-					WikiGrokDrawer = M.require( 'modules/wikigrok/WikiGrokDrawer' );
-					// Instantiate a new WikiGrokDrawer when the user scrolls down.
-					$( window ).on( 'scroll', function() {
-						if ( window.pageYOffset > 300 ) {
-							$( window ).off( 'scroll' );
-							new WikiGrokDrawer( { itemId: wikidataID } );
-						}
-					} );
+				if ( loadWikiGrokDialog ) {
+					WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' );
+					new WikiGrokDialog( { itemId: wikidataID } );
 				}
 			}
 		}

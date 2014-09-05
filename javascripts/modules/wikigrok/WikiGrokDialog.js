@@ -1,25 +1,25 @@
 ( function( M, $ ) {
 	M.assertMode( [ 'alpha' ] );
 
-	var Drawer = M.require( 'Drawer' ),
-		WikiGrokDrawer;
+	var InlineDialog = M.require( 'InlineDialog' ),
+		WikiGrokDialog;
 
 	/**
-	 * @class WikiGrokDrawer
-	 * @extends Drawer
+	 * @class WikiGrokDialog
+	 * @extends InlineDialog
 	 * THIS IS AN EXPERIMENTAL FEATURE THAT MAY BE MOVED TO A SEPARATE EXTENSION.
-	 * This creates the drawer at the bottom of the screen that appears when a user
+	 * This creates the dialog at the bottom of the lead section that appears when a user
 	 * scrolls past the lead. It asks the user to confirm metadata information for use
 	 * in Wikidata (https://www.wikidata.org).
 	 */
-	WikiGrokDrawer = Drawer.extend( {
+	WikiGrokDialog = InlineDialog.extend( {
 		locked: true,
 		defaults: {
 			beginQuestions: false,
 			thankUser: false,
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
 			headerMsg: 'Help Wikipedia',
-			contentMsg: 'Wikipedia needs your help with some information…',
+			contentMsg: 'Improve Wikipedia by tagging information on this page',
 			// Other ideas:
 			// Can you help improve Wikipedia?
 			// Play a game to help Wikipedia!
@@ -27,9 +27,10 @@
 			buttons: [
 				{ classes: 'cancel inline mw-ui-button', label: 'No, thanks' },
 				{ classes: 'proceed inline mw-ui-button mw-ui-progressive', label: 'Okay!' }
-			]
+			],
+			noticeMsg: '<a class="wg-notice-link" href="#moreinfo">Tell me more</a>'
 		},
-		template: M.template.get( 'modules/wikigrok/WikiGrokDrawer.hogan' ),
+		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
 
 		askWikidataQuestion: function( options ) {
 			var self = this;
@@ -86,6 +87,7 @@
 										{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
 										{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
 									];
+									options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#moreinfo">released freely</a>';
 									self.render( options );
 								}
 							}
@@ -114,68 +116,96 @@
 				},
 				dataType: 'jsonp',
 				success: function() {
-					// Re-render with new content for 'Thanks' step
-					options.thankUser = true;
-					options.contentMsg = 'You just made Wikipedia a little better!';
-					options.buttons = [
-						{ classes: 'quit inline mw-ui-button mw-ui-progressive', label: 'Great!' }
-					];
-					self.render( options );
+					self.thankUser( options, true );
 				}
 			} );
 		},
 
+		thankUser: function( options, claimRecorded ) {
+			options.thankUser = true;
+			if ( claimRecorded ) {
+				options.contentMsg = 'You just made Wikipedia a little better, thanks!';
+				options.buttons = [
+					{ classes: 'quit inline mw-ui-button mw-ui-progressive', label: 'Great!' }
+				];
+			} else {
+				options.contentMsg = "That's OK, thanks for taking the time.";
+				options.buttons = [
+					{ classes: 'quit inline mw-ui-button mw-ui-progressive', label: 'Done' }
+				];
+			}
+			options.noticeMsg = '<a class="wg-notice-link" href="#moreinfo">Tell me more</a>';
+			// Re-render with new content for 'Thanks' step
+			this.render( options );
+		},
+
 		postRender: function( options ) {
-			var self = this;
+			var self = this,
+				WikiGrokMoreInfo = M.require( 'modules/wikigrok/WikiGrokMoreInfo' );
 
 			// If the user hasn't opted-out of WikiGrok, load the interface.
 			if ( !localStorage.getItem( 'mfHideWikiGrok' ) ) {
-				this._super.call( this, options );
-				// For final 'Thanks' step
+
+				// Insert the dialog into the page
+				$( function() {
+					// If there is a table of contents, insert before it.
+					if ( $( '.toc-mobile' ).length ) {
+						self.insertBefore( '.toc-mobile' );
+					} else {
+						self.appendTo( M.getLeadSection() );
+					}
+				} );
+
+				// Initialize all the buttons and links
+				// ...for final 'Thanks' step
 				if ( options.thankUser ) {
 					this.$( '.wg-buttons .quit' ).on( 'click', function() {
 						self.hide();
 					} );
-				// For intermediate 'Question' step
+				// ...for intermediate 'Question' step
 				} else if ( options.beginQuestions ) {
 					this.$( '.wg-buttons .yes' ).on( 'click', function() {
-						self.hide();
 						options.claimIsCorrect = 1;
 						self.recordClaim( options );
 					} );
 					this.$( '.wg-buttons .not-sure' ).on( 'click', function() {
-						// Do nothing.
-						self.hide();
+						self.thankUser( options, false );
 					} );
 					this.$( '.wg-buttons .no' ).on( 'click', function() {
-						self.hide();
 						options.claimIsCorrect = 0;
 						self.recordClaim( options );
 					} );
-				// For initial 'Intro' step
+				// ...for initial 'Intro' step
 				} else {
 					this.$( '.wg-buttons .cancel' ).on( 'click', function() {
-						// Hiding is already bound to all cancel buttons, so we don't have
-						// bind it here.
+						self.hide();
 						// Set a localStorage value to keep WikiGrok hidden for this user.
 						// We test for locaStorage support in wikigrok.js.
-						// Older browsers can only store strings in localStorage (not booleans).
+						// Older browsers can only store strings in localStorage (not
+						// booleans).
 						localStorage.setItem( 'mfHideWikiGrok', 'true' );
 					} );
 					this.$( '.wg-buttons .proceed' ).on( 'click', function() {
-						self.hide();
 						// Proceed with asking the user a metadata question.
 						self.askWikidataQuestion( options );
 					} );
+					// Make OverlayManager handle '#moreinfo' links. We only need to do
+					// this once.
+					M.overlayManager.add( /^moreinfo$/, function() {
+						// Load the More Info overlay when the link is clicked.
+						return new WikiGrokMoreInfo();
+					} );
 				}
+
 				// render() does a "deep copy" $.extend() on the template data, so we need
 				// to reset the buttons after each step (since some steps have fewer
 				// buttons than the initial default).
 				self.options.buttons = [];
+
 				this.show();
 			}
 		}
 	} );
 
-	M.define( 'modules/wikigrok/WikiGrokDrawer', WikiGrokDrawer );
+	M.define( 'modules/wikigrok/WikiGrokDialog', WikiGrokDialog );
 }( mw.mobileFrontend, jQuery ) );
