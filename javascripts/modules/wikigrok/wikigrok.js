@@ -1,7 +1,16 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
 ( function( M ) {
-	var wikidataID = mw.config.get( 'wgWikibaseItemId' );
-	//var wikidataID = 'Q508703';
+	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+		idOverride;
+
+	// Allow query string override for testing, for example, '?wikidataid=Q508703'
+	if ( !wikidataID ) {
+		idOverride = window.location.search.match( /wikidataid=([^&]*)/ );
+		if ( idOverride ) {
+			mw.config.set( 'wgWikibaseItemId', idOverride[1] );
+			wikidataID = idOverride[1];
+		}
+	}
 
 	// Only run in alpha mode
 	M.assertMode( [ 'alpha' ] );

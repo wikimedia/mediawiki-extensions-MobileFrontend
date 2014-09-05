@@ -1,6 +1,5 @@
 ( function( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' );
-	//var wikidataID = 'Q508703';
 
 	// Get existing Wikidata claims about this page so we can decide if it's appropriate
 	// to display the WikiGrok interface.
@@ -24,7 +23,7 @@
 				WikiGrokDrawer;
 
 			// See if the page has any 'instance of' claims.
-			if ( data.entities[wikidataID].claims.P31 !== undefined ) {
+			if ( data.entities !== undefined && data.entities[wikidataID].claims.P31 !== undefined ) {
 				instanceClaims = data.entities[wikidataID].claims.P31;
 				$.each( instanceClaims, function( id, claim ) {
 					// See if any of the claims state that the topic is a human.
