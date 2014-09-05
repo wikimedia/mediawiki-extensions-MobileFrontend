@@ -63,6 +63,7 @@
 				if ( !user.isAnon() ) {
 					$add.click( function() {
 						var overlay = new TalkSectionAddOverlay( {
+							parent: self,
 							title: options.title
 						} );
 						overlay.show();
@@ -85,6 +86,7 @@
 						},
 						section = id === 0 ? leadSection : page.getSubSection( id ),
 						childOverlay = new TalkSectionOverlay( {
+							parent: self,
 							title: page.title,
 							section: section
 						} );
