@@ -18,7 +18,8 @@
 			"Southparkfan",
 			"User555",
 			"Wiki13",
-			"TheDJ"
+			"TheDJ",
+			"Romaine"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -64,7 +65,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Deze bewerking kan niet worden opgeslagen omdat er een probleem is ontdekt.",
 	"mobile-frontend-editor-abusefilter-read-more": "Meer lezen",
 	"mobile-frontend-editor-abusefilter-warning": "Waarschuwing: weet u zeker dat u deze bewerking wilt opslaan? Er is wellicht iets mee mis.",
-	"mobile-frontend-editor-anon": "Bewerken zonder aan te melden",
+	"mobile-frontend-editor-anon": "Bewerken zonder in te loggen",
 	"mobile-frontend-editor-blocked": "Met uw gebruiker kunt u niet bewerken.",
 	"mobile-frontend-editor-cancel": "Annuleren",
 	"mobile-frontend-editor-cancel-confirm": "Wilt u uw bewerking echt niet opslaan?",
