@@ -25,7 +25,7 @@
 			this._super( options );
 
 			api.getThumb( options.title ).done( function( data ) {
-				var author;
+				var author, url = data.descriptionurl + '#mw-jump-to-license';
 
 				function removeLoader() {
 					self.$( '.image-wrapper' ).removeClass( 'loading' );
@@ -46,11 +46,13 @@
 					$img.on( 'load', removeLoader );
 				}
 				self._positionImage();
-				self.$( '.details a' ).attr( 'href', data.descriptionurl );
+				self.$( '.details a' ).attr( 'href', url );
 				if ( data.extmetadata ) {
 					// Add license information
 					if ( data.extmetadata.LicenseShortName ) {
-						self.$( '.license a' ).text( data.extmetadata.LicenseShortName.value );
+						self.$( '.license a' )
+							.text( data.extmetadata.LicenseShortName.value )
+							.attr( 'href', url );
 					}
 					// Add author information
 					if ( data.extmetadata.Artist ) {
