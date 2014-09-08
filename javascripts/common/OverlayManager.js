@@ -5,6 +5,9 @@
 		OverlayManager;
 
 	/**
+	 * Manages opening and closing overlays when the URL hash changes to one
+	 * of the registered values (see OverlayManager#add).
+	 *
 	 * @class OverlayManager
 	 * @extends Class
 	 */
@@ -15,27 +18,36 @@
 			// use an object instead of an array for entries so that we don't
 			// duplicate entries that already exist
 			this.entries = {};
+			// stack of all the open overlays, stack[0] is the latest one
 			this.stack = [];
-			this.hidePrevious = true;
+			this.hideCurrent = true;
 		},
 
 		_onHideOverlay: function() {
-			this.hidePrevious = false;
+			// don't try to hide the active overlay on a route change event triggered
+			// by hiding another overlay
+			this.hideCurrent = false;
+
 			this.router.back();
 		},
 
 		_showOverlay: function( overlay ) {
 			// if hidden using overlay (not hardware) button, update the state
 			overlay.one( 'hide.overlay-manager', $.proxy( this, '_onHideOverlay' ) );
+
 			overlay.show();
 		},
 
 		_hideOverlay: function( overlay ) {
 			var result;
 
+			// remove the callback for updating state when overlay closed using
+			// overlay close button
 			overlay.off( 'hide.overlay-manager' );
+
 			result = overlay.hide( this.stack.length > 1 );
 
+			// if closing prevented, reattach the callback
 			if ( !result ) {
 				overlay.one( 'hide.overlay-manager', $.proxy( this, '_onHideOverlay' ) );
 			}
@@ -48,8 +60,11 @@
 
 			if ( match ) {
 				if ( match.overlay ) {
+					// if the match is an overlay that was previously opened, reuse it
 					self._showOverlay( match.overlay );
 				} else {
+					// else create an overlay using the factory function result (either
+					// a promise or an overlay)
 					factoryResult = match.factoryResult;
 					// http://stackoverflow.com/a/13075985/365238
 					if ( $.isFunction( factoryResult.promise ) ) {
@@ -65,22 +80,29 @@
 			}
 		},
 
+		/**
+		 * A callback for Router's `route` event.
+		 *
+		 * @param {$.Event} ev Event object.
+		 */
 		_checkRoute: function( ev ) {
 			var
 				self = this,
-				previous = this.stack[0],
+				current = this.stack[0],
 				match;
 
 			$.each( this.entries, function( id, entry ) {
 				match = self._matchRoute( ev.path, entry );
+				// if matched (match not equal to null), break out of the loop
 				return match === null;
 			} );
 
-			// force hide only if more overlays in stack
-			if ( previous &&
-				previous.overlay !== undefined &&
-				this.hidePrevious &&
-				!this._hideOverlay( previous.overlay )
+			// if there is an overlay in the stack and it's opened, try to close it
+			if (
+				current &&
+				current.overlay !== undefined &&
+				this.hideCurrent &&
+				!this._hideOverlay( current.overlay )
 			) {
 				// if hide prevented, prevent route change event
 				ev.preventDefault();
@@ -89,28 +111,37 @@
 				this.stack = [];
 			}
 
-			this.hidePrevious = true;
+			this.hideCurrent = true;
 			this._processMatch( match );
 		},
 
+		/**
+		 * Check if a given path matches one of the entries.
+		 *
+		 * @param {string} path Path (hash) to check.
+		 * @param {object} entry Entry object created in OverlayManager#add.
+		 * @return {object|null} Match object with factory function's result
+		 * or null if no match.
+		 */
 		_matchRoute: function( path, entry ) {
 			var
 				match = path.match( entry.route ),
 				previous = this.stack[1],
-				current;
+				next;
 
 			if ( match ) {
 				// if previous stacked overlay's path matches, assume we're going back
+				// and reuse a previously opened overlay
 				if ( previous && previous.path === path ) {
 					this.stack.shift();
 					return previous;
 				} else {
-					current = {
+					next = {
 						path: path,
 						factoryResult: entry.factory.apply( this, match.slice( 1 ) )
 					};
-					this.stack.unshift( current );
-					return current;
+					this.stack.unshift( next );
+					return next;
 				}
 			}
 
