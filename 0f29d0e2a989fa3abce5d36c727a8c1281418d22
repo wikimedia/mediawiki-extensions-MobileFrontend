@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_1bd159d0",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-08T23:32:23Z",
+      "side": 1,
+      "message": "Two problems:\n1. array_search() can return 0 so you would need \u0027\u003d\u003d\u003d false\u0027; better to use in_array().\n2. I think you need a bang at the beginning since you\u0027re negating.",
+      "revId": "0f29d0e2a989fa3abce5d36c727a8c1281418d22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
