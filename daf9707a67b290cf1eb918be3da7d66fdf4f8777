@@ -34,6 +34,24 @@
       "revId": "daf9707a67b290cf1eb918be3da7d66fdf4f8777",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_c18f5f77",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-09T20:22:22Z",
+      "side": 1,
+      "message": "Update comment to say // On desktop edit summaries strip tags. Mimic this behavior on desktop.\n\nAlso use $( \u0027\u003cdiv\u003e\u0027 ) - standard coding convention.",
+      "parentUuid": "4e322bf2_6b878f67",
+      "revId": "daf9707a67b290cf1eb918be3da7d66fdf4f8777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
