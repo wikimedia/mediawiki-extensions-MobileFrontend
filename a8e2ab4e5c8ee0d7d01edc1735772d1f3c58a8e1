@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_705aaa23",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-10T23:52:43Z",
+      "side": 1,
+      "message": "Protocol-relative URL?",
+      "revId": "a8e2ab4e5c8ee0d7d01edc1735772d1f3c58a8e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_50a1eef3",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-10T23:52:43Z",
+      "side": 1,
+      "message": "HTTPS?",
+      "revId": "a8e2ab4e5c8ee0d7d01edc1735772d1f3c58a8e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
