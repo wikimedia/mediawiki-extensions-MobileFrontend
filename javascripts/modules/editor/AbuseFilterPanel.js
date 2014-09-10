@@ -12,7 +12,7 @@
 		className: 'panel hidden',
 
 		initialize: function() {
-			this._super();
+			View.prototype.initialize.apply( this, arguments );
 			this.isDisallowed = false;
 		},
 

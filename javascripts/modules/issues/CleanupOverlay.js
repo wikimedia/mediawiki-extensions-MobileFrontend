@@ -6,7 +6,7 @@
 		},
 		initialize: function( options ) {
 			options.heading = '<strong>' + options.headingText + '</strong>';
-			this._super( options );
+			Overlay.prototype.initialize.call( this, options );
 		}
 	} );
 	M.define( 'modules/issues/CleanupOverlay', CleanupOverlay );

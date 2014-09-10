@@ -12,13 +12,13 @@
 		template: M.template.get( 'uploads/PhotoUploadProgress.hogan' ),
 		fullScreen: false,
 
-		initialize: function( options ) {
-			this._super( options );
+		initialize: function() {
+			Overlay.prototype.initialize.apply( this, arguments );
 			this.progressBar = new ProgressBar();
 		},
 
 		postRender: function() {
-			this._super();
+			Overlay.prototype.postRender.apply( this, arguments );
 			this.$( '.submit' ).on( M.tapEvent( 'click' ), $.proxy( this, 'emit', 'submit' ) );
 		},
 
@@ -28,11 +28,12 @@
 		},
 
 		hide: function( force ) {
+			var _super = Overlay.prototype.hide;
 			if ( force ) {
-				return this._super();
+				return _super.apply( this, arguments );
 			} else if ( window.confirm( mw.msg( 'mobile-frontend-image-cancel-confirm' ) ) ) {
 				this.emit( 'cancel' );
-				return this._super();
+				return _super.apply( this, arguments );
 			} else {
 				return false;
 			}

@@ -33,7 +33,7 @@
 
 	SearchApi = Api.extend( {
 		initialize: function() {
-			this._super();
+			Api.prototype.initialize.apply( this, arguments );
 			this.searchCache = {};
 		},
 

@@ -15,7 +15,7 @@
 
 		initialize: function( options ) {
 			options.pageTitle = mw.config.get( 'wgPageName' );
-			this._super( options );
+			PhotoUploaderButton.prototype.initialize.apply( this, arguments );
 		}
 	} );
 

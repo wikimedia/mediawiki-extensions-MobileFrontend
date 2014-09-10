@@ -39,7 +39,7 @@
 			// Surface the display title for M.reloadPage
 			this.displayTitle = options.displayTitle;
 			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
-			this._super( options );
+			View.prototype.initialize.apply( this, arguments );
 		},
 
 		/**
@@ -86,7 +86,7 @@
 		// FIXME: The Page object is pretty central and used more like a model at times than a view. Time to introduce Models?
 		render: function( options ) {
 			var pageTitle = options.title, self = this,
-				$el = this.$el, _super = self._super;
+				$el = this.$el;
 			// prevent talk icon being re-rendered after an edit to a talk page
 			options.isTalkPage = self.isTalkPage();
 
@@ -100,7 +100,7 @@
 					// Resurface the display title for M.reloadPage
 					self.displayTitle = options.displayTitle;
 
-					_super.call( self, options );
+					View.prototype.render.apply( self, arguments );
 
 					// reset loader
 					$el.removeClass( 'spinner loading' );
@@ -108,7 +108,7 @@
 					self.emit( 'ready', self );
 				} ).fail( $.proxy( self, 'emit', 'error' ) );
 			} else {
-				self._super( options );
+				View.prototype.render.apply( self, arguments );
 			}
 		},
 

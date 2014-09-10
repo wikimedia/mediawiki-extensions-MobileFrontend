@@ -147,7 +147,7 @@
 			this.sectionId = options.sectionId;
 			this.funnel = options.funnel;
 
-			this._super( options );
+			Overlay.prototype.initialize.apply( this, arguments );
 		},
 		reportError: function ( msg, errorText ) {
 			this.log( 'error', errorText );
@@ -170,7 +170,7 @@
 			}
 			this.log( 'submit' );
 		},
-		postRender: function( options ) {
+		postRender: function() {
 			var self = this;
 			this.$spinner = self.$( '.spinner' );
 			// log edit attempt
@@ -180,7 +180,7 @@
 				// log cancel attempt
 				self.log( 'cancel' );
 			} );
-			this._super( options );
+			Overlay.prototype.postRender.apply( this, arguments );
 			this._showHidden( '.initial-header' );
 		},
 		/**
@@ -209,7 +209,7 @@
 		hide: function( force ) {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 			if ( force || !this._hasChanged() || window.confirm( confirmMessage ) ) {
-				return this._super();
+				return Overlay.prototype.hide.apply( this, arguments );
 			} else {
 				return false;
 			}

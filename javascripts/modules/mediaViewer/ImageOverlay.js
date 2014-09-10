@@ -24,7 +24,7 @@
 
 		postRender: function( options ) {
 			var self = this, $img;
-			this._super( options );
+			Overlay.prototype.postRender.apply( this, arguments );
 
 			api.getThumb( options.title ).done( function( data ) {
 				var author, url = data.descriptionurl + '#mw-jump-to-license';
@@ -69,7 +69,7 @@
 		},
 
 		show: function() {
-			this._super();
+			Overlay.prototype.show.apply( this, arguments );
 			this._positionImage();
 		},
 

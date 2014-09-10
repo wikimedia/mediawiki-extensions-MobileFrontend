@@ -19,7 +19,7 @@
 				removeAttr( 'class' ).
 				addClass( this.className ).
 				addClass( className );
-			this._super();
+			Drawer.prototype.show.apply( this, arguments );
 		}
 	} );
 

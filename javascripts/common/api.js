@@ -13,8 +13,6 @@
 		apiUrl: mw.util.wikiScript( 'api' ),
 
 		/**
-		 * Constructor, if you override it, use _super().
-		 *
 		 * @method
 		 */
 		initialize: function() {

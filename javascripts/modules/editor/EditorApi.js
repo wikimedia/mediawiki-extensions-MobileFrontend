@@ -7,7 +7,7 @@
 	EditorApi = Api.extend( {
 
 		initialize: function( options ) {
-			this._super( options );
+			Api.prototype.initialize.apply( this, arguments );
 			this.title = options.title;
 			this.sectionId = options.sectionId;
 			this.oldId = options.oldId;

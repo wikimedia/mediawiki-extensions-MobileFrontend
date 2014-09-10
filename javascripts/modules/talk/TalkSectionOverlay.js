@@ -32,12 +32,12 @@ var
 					mw.config.get( 'wgMFLicenseLink' )
 				);
 			}
-			this._super( options );
+			Overlay.prototype.initialize.apply( this, arguments );
 		},
 		postRender: function( options ) {
 			var self = this, $comment = this.$( '.comment' ),
 				$textarea = $comment.find( 'textarea' );
-			this._super( options );
+			Overlay.prototype.postRender.apply( this, arguments );
 			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( self, 'hide' ) );
 			this.$( '.loading' ).remove();
 			if ( user.isAnon() || !M.isAlphaGroupMember() ) {

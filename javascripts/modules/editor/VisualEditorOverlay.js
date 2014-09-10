@@ -17,7 +17,7 @@
 			var self = this;
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
-			this._super( options );
+			EditorOverlayBase.prototype.initialize.apply( this, arguments );
 			this.hasChanged = false;
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
 			this.initializeSwitcher();
@@ -32,7 +32,7 @@
 			}
 		},
 		show: function() {
-			this._super();
+			EditorOverlayBase.prototype.show.apply( this, arguments );
 			if ( this.target === undefined ) {
 				// FIXME: we have to initialize MobileViewTarget after this.$el
 				// is attached to DOM, maybe we should attach it earlier and hide
@@ -65,8 +65,8 @@
 				} );
 			}
 		},
-		hide: function( force ) {
-			var retval = this._super( force );
+		hide: function() {
+			var retval = EditorOverlayBase.prototype.hide.apply( this, arguments );
 			if ( retval ) {
 				this.destroyTarget();
 			}
@@ -89,7 +89,7 @@
 				}
 			} );
 			this.$( '.surface' ).hide();
-			this._super( options );
+			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 		},
 		switchToEditor: function() {
 			this._showHidden( '.initial-header' );
@@ -101,7 +101,7 @@
 			this.$( '[contenteditable]' ).blur();
 			this.$( '.surface' ).hide();
 			this._showHidden( '.save-header, .save-panel' );
-			this._super();
+			EditorOverlayBase.prototype._prepareForSave.apply( this, arguments );
 		},
 		_save: function() {
 			var
@@ -110,7 +110,7 @@
 				summary = this.$( '.save-panel input' ).val(),
 				options = { summary: summary };
 
-			this._super();
+			EditorOverlayBase.prototype._save.apply( this, arguments );
 			if ( this.confirmAborted ) {
 				return;
 			}
@@ -147,7 +147,7 @@
 			} );
 		},
 		onSave: function() {
-			this._super();
+			EditorOverlayBase.prototype.onSave.apply( this, arguments );
 			this.clearSpinner();
 			this.destroyTarget();
 		},

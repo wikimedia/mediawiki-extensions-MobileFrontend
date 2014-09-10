@@ -23,7 +23,7 @@
 		appendTo: '#mw-mf-page-center',
 		postRender: function( options ) {
 			var self = this, $target;
-			this._super( options );
+			Overlay.prototype.postRender.apply( this, arguments );
 			if ( options.target ) {
 				$target = $( options.target );
 				// Ensure we position the overlay correctly but do not show the arrow

@@ -21,7 +21,7 @@
 				options.variantHeader = mw.msg( 'mobile-frontend-language-variant-header' );
 			}
 			M.emit( 'language-overlay-initialize', options );
-			this._super( options );
+			Overlay.prototype.initialize.apply( this, arguments );
 		},
 
 		filterLists: function( val ) {
@@ -43,9 +43,9 @@
 			}
 		},
 
-		postRender: function( options ) {
+		postRender: function() {
 			var self = this;
-			this._super( options );
+			Overlay.prototype.postRender.apply( this, arguments );
 
 			this.$( 'ul' ).find( 'a' ).on( 'click', function() {
 				M.emit( 'language-select', $( this ).attr( 'lang' ) );
