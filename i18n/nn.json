@@ -120,6 +120,7 @@
 	"mobile-frontend-save-settings": "Lagra",
 	"mobile-frontend-saving-exit-page": "Bidraget ditt vert framleis lagra. Fer du bort no vil bidraget ditt verta tapt. Er du viss på at du ynskjer å forlata?",
 	"mobile-frontend-search-content": "Søk i sider",
+	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' for å sjå om denne formuleringa dukkar opp nokon stad.",
 	"mobile-frontend-search-no-results": "Inga side har denne tittelen.",
 	"mobile-frontend-search-submit": "Gå",
 	"mobile-frontend-settings-alpha": "Eksperimentell modus",

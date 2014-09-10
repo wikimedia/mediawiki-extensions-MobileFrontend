@@ -389,3 +389,8 @@ $specialPageAliases['zh-hant'] = array(
 	'Nearby' => array( '附近' ),
 	'UserProfile' => array( '使用者資訊' ),
 );
+
+/** Chinese (Hong Kong) (中文（香港）‎) */
+$specialPageAliases['zh-hk'] = array(
+	'MobileWebApp' => array( '流動網頁App' ),
+);
