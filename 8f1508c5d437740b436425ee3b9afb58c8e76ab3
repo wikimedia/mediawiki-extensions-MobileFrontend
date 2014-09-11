@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_66178ff3",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-11T20:20:49Z",
+      "side": 1,
+      "message": ".text() is preferred over .html() when possible (to minimize XSS vulnerabilities).",
+      "revId": "8f1508c5d437740b436425ee3b9afb58c8e76ab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
