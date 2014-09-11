@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_66be6f15",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-11T20:12:00Z",
+      "side": 1,
+      "message": "Argh, right. The first thought was to add the possibility to link to a specific discussion. E.g. talk/1 for the first discussion on the talk page. But i have removed it for now, so this regex can be deleted, too :)",
+      "parentUuid": "2e2fb78d_a637b7df",
+      "revId": "67bba4b6dd0f871cd3d3fd7c44caf2581c35f137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_661aef74",
         "filename": "javascripts/modules/talk/talk.js",
         "patchSetId": 21
@@ -30,6 +48,24 @@
       "writtenOn": "2014-09-11T20:09:57Z",
       "side": 1,
       "message": "What\u0027s the /0 for? It isn\u0027t used in the OverlayManager call.",
+      "revId": "67bba4b6dd0f871cd3d3fd7c44caf2581c35f137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_068b2b73",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-11T20:12:00Z",
+      "side": 1,
+      "message": "See above",
+      "parentUuid": "2e2fb78d_661aef74",
       "revId": "67bba4b6dd0f871cd3d3fd7c44caf2581c35f137",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
