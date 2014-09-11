@@ -263,8 +263,10 @@
 	background-color: @blueBase;
 }
 
+// We don't use .background-image() here since that mix-in breaks flippability.
+// See Bug 70144 and Bug 70742.
 .icon-back {
-	.background-image('images/back-ltr.png');
+	background-image: url('images/back-ltr.png');
 }
 
 .icon-arrow-down {
