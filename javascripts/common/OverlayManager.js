@@ -6,7 +6,10 @@
 
 	/**
 	 * Manages opening and closing overlays when the URL hash changes to one
-	 * of the registered values (see OverlayManager#add).
+	 * of the registered values (see OverlayManager.add()).
+	 *
+	 * This allows overlays to function like real pages, with similar browser back/forward
+	 * behavior.
 	 *
 	 * @class OverlayManager
 	 * @extends Class
@@ -149,10 +152,13 @@
 		},
 
 		/**
-		 * Add an overlay that should be shown on a specific route.
+		 * Add an overlay that should be shown for a specific fragment identifier.
+		 *
+		 * The following code will display an overlay whenever a user visits a URL that
+		 * end with '#hi/<name>'. The value of <name> will be passed to the overlay.
 		 *
 		 *     @example
-		 *     overlayManager.add( /\/hi\/(.*)/, function( name ) {
+		 *     overlayManager.add( /hi\/(.*)/, function( name ) {
 		 *       var factoryResult = $.Deferred();
 		 *
 		 *       mw.using( 'mobile.HiOverlay', function() {
