@@ -16,10 +16,11 @@
 	M.assertMode( [ 'alpha' ] );
 
 	// Only load if WikiGrok is enabled, Wikibase is active, we're not on the Main Page,
-	// we're in Main namespace, the browser supports localStorage, and the user has not
-	// opted out of WikiGrok previously.
+	// we're in 'view' mode, we're in Main namespace, the browser supports localStorage,
+	// and the user has not opted out of WikiGrok previously.
 	if ( mw.config.get( 'wgMFEnableWikiGrok' ) &&
 		!mw.config.get( 'wgIsMainPage' ) &&
+		mw.config.get( 'wgAction' ) === 'view' &&
 		wikidataID &&
 		mw.config.get( 'wgNamespaceNumber' ) === 0 &&
 		M.supportsLocalStorage &&
