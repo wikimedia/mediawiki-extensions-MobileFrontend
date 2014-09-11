@@ -75,6 +75,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "阅读更多",
 	"mobile-frontend-editor-abusefilter-warning": "警告：您确信要保存此次编辑么？这可能将产生一些问题。",
 	"mobile-frontend-editor-anon": "未登录编辑",
+	"mobile-frontend-editor-anoneditwarning": "<b>警告：</b>您没有登录。您的IP地址在您作出任何编辑后将公开可见。如果您<b>[$1 登录]</b>或<b>[$2 注册一个账户]</b>，您的编辑将归属于您的用户名，以及有其他的好处。",
 	"mobile-frontend-editor-blocked": "您的账户被封禁编辑。",
 	"mobile-frontend-editor-cancel": "取消",
 	"mobile-frontend-editor-cancel-confirm": "你真的想要放弃你的编辑？",
