@@ -2,20 +2,44 @@
 
 var module = (function() {
 	var
+		inBeta = M.isBetaGroupMember(),
 		Overlay = M.require( 'Overlay' ),
 		// FIXME: Separate into separate file
 		CleanupOverlay = Overlay.extend( {
-			defaults: $.extend( {}, Overlay.prototype.defaults, {
-				heading: '<strong>' + mw.msg( 'mobile-frontend-meta-data-issues-header' ) + '</strong>'
-			} ),
 			templatePartials: {
 				content: M.template.get( 'overlays/cleanup.hogan' )
+			},
+			initialize: function( options ) {
+				options.heading = '<strong>' + options.headingText + '</strong>';
+				this._super( options );
 			}
 		} );
 
-	function run( $container ) {
+	function extractMessage( $box ) {
+		var selector = '.mbox-text, .ambox-text',
+			$container = $( '<div>' );
+
+		$box.find( selector ).each( function() {
+			var contents,
+				$this = $( this );
+			if ( $this.find( selector ).length ) {
+				contents = extractMessage( $this );
+			} else {
+				// Clean up talk page boxes
+				$this.find( 'table, .noprint' ).remove();
+				contents = $this.html();
+			}
+			if ( contents ) {
+				$( '<p>' ).html( contents ).appendTo( $container );
+			}
+		} );
+		return $container.html();
+	}
+
+	function createBanner( $container, labelText, headingText ) {
 		$container = $container || M.getLeadSection();
-		var $metadata = $container.find( 'table.ambox' ),
+		var selector = 'table.ambox, table.tmbox',
+			$metadata = $container.find( selector ),
 			issues = [],
 			$link;
 
@@ -23,30 +47,41 @@ var module = (function() {
 		$metadata.find( '.NavFrame' ).remove();
 
 		$metadata.each( function() {
-			var $this = $( this ), issue;
+			var issue, content,
+				$this = $( this );
 
-			if ( $( this ).find( 'table.ambox' ).length === 0 ) {
+			if ( $this.find( selector ).length === 0 ) {
 				// FIXME: [templates] might be inconsistent
+				content = inBeta ? extractMessage( $this ) :
+						$this.find( '.mbox-text, .ambox-text' ).html();
 				issue = {
 					// .ambox- is used e.g. on eswiki
-					text: $this.find( '.mbox-text, .ambox-text' ).html()
+					text: content
 				};
-				issues.push( issue );
+				if ( content ) {
+					issues.push( issue );
+				}
 			}
 		} );
 
 		$link = $( '<a class="mw-mf-cleanup icon icon-text">' ).attr( 'href', '#/issues' );
 		M.overlayManager.add( /^\/issues$/, function() {
-			return new CleanupOverlay( { issues: issues } );
+			return new CleanupOverlay( { issues: issues, headingText: headingText } );
 		} );
 
-		$link.text( mw.msg( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
+		$link.text( labelText ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
 	}
 
 	function initPageIssues( $container ) {
-		if ( mw.config.get( 'wgNamespaceNumber' ) === 0 ) {
-			run( $container );
+		var ns = mw.config.get( 'wgNamespaceNumber' );
+		if ( ns === 0 ) {
+			createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues' ),
+			 mw.msg( 'mobile-frontend-meta-data-issues-header' ) );
+		// Create a banner for talk pages (namespace 1) in beta mode to make them more readable.
+		} else if ( ns === 1 && inBeta ) {
+			createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues-talk' ),
+			 mw.msg( 'mobile-frontend-meta-data-issues-header-talk' ) );
 		}
 	}
 
@@ -59,7 +94,7 @@ var module = (function() {
 	} );
 
 	return {
-		run: run
+		createBanner: createBanner
 	};
 }() );
 
