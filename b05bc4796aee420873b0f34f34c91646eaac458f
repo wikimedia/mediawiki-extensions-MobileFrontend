@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_06aa0b82",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-11T20:29:47Z",
+      "side": 1,
+      "message": "Need to update comment as well.",
+      "revId": "b05bc4796aee420873b0f34f34c91646eaac458f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
