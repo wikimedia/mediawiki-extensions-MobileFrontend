@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_bce57f08",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T18:57:43Z",
+      "side": 1,
+      "message": "This isn\u0027t really needed. When you use addModuleStyles this happens automatically.\n\nbut why are you using addModuleStyles anyhow since this is JS only?\nAdd this as a dependency to mobile.beta.common as the css is only needed on wikigrok",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_5cf69bc3",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T18:57:43Z",
+      "side": 1,
+      "message": "This opens up a whole load of caching problems. Load it via JS if possible.",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_1c025376",
+        "filename": "javascripts/common/InlineDialog.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T18:57:43Z",
+      "side": 1,
+      "message": "This entire fire is very similar to Drawer.js\nWe should abstract it. e.g. Panel?\n\nI encourage you to think careful how these two things are different and how we can share code/reuse between them?",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_fca9c78d",
+        "filename": "javascripts/common/InlineDialog.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T18:57:43Z",
+      "side": 1,
+      "message": "Put inline comments above the line they correspond to.\nAlso use jsdoc syntax instead so they show up in documentation.",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_3cbcefb0",
+        "filename": "javascripts/common/InlineDialog.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T18:57:43Z",
+      "side": 1,
+      "message": "This function is identical to Drawer:postRender except we append to #content rather than #notifications\n\nLet\u0027s create an abstraction for both Drawers and InlineDialog\n(but naming stuff is hard..)\n\nUnrelated to this patch:\nI also noticed confusingly appendTo on Overlay is both a property and a function.. :-S",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_1c313357",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T18:57:43Z",
+      "side": 1,
+      "message": "Err... i18n!?",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
