@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_adb30bfc",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T23:20:11Z",
+      "side": 1,
+      "message": "We don\u0027t tend to return early for code readability.",
+      "revId": "cd886ab163f3e6dbc04e7d93957766bbc3f065dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_cd965742",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T23:20:11Z",
+      "side": 1,
+      "message": "Move callback and failure callback into functions and move this above into the else if and if statement\n\nthis.nearbyApi.getPagesFromTitle( \u0027Foo\u0027 ).done( doneCallback ).fail( failCallback );\n\n\nthis.nearbyApi.getPagesFromLocation( location ).done( doneCallback ).fail( failCallback );",
+      "revId": "cd886ab163f3e6dbc04e7d93957766bbc3f065dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_ad8aeb19",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T23:20:11Z",
+      "side": 1,
+      "message": "No.. this optional parameter makes the class confusing and complex. A title is not a location.\n\nI would suggest having 2 explicit functions:\n\n* getPagesFromTitle\n* getPagesFromLocation\n\nand a generic\n* getPagesWithData which the above 2 call",
+      "revId": "cd886ab163f3e6dbc04e7d93957766bbc3f065dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_4d7b8723",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T23:20:11Z",
+      "side": 1,
+      "message": "We should find a way to use Router as this could have effects on other pieces of code. I\u0027m not sure why it would be incompatible with Router.",
+      "revId": "cd886ab163f3e6dbc04e7d93957766bbc3f065dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_0d8d7f2e",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-12T23:20:11Z",
+      "side": 1,
+      "message": "This isn\u0027t the most descriptive hash - page could mean many things.\nAlthough it is run on the Special:Nearby page we should write this code on the basis that it could be run elsewhere - in which place page could mean a lot of things.\n\nSuggested would be:\n#/nearby/coords/42,4\nand\n#/nearby/title/San Francisco",
+      "revId": "cd886ab163f3e6dbc04e7d93957766bbc3f065dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
