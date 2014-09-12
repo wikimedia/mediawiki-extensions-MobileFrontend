@@ -168,23 +168,18 @@ class MobileUserInfo {
 		$thank = false;
 		// Check that the Thank Extension and Echo extension are both installed
 		// before doing this (bug 56825).
-		if ( class_exists( 'MWEchoDbFactory' ) && class_exists( 'ApiThank' ) ) {
-			$dbr = MWEchoDbFactory::getDB( DB_SLAVE );
-			$rows = $dbr->select(
-				array( 'echo_event', 'echo_notification' ),
-				'event_agent_id, notification_timestamp',
-				array(
-					'notification_user' => $this->user->getId(),
-					'event_id=notification_event',
-					'event_type' => 'edit-thank' ),
-				__METHOD__,
-				array( 'ORDER BY' => 'notification_timestamp DESC' )
+		if ( class_exists( 'EchoNotificationMapper' ) && class_exists( 'ApiThank' ) ) {
+			// @FIXME - Inject the instance into the class for unittest?
+			$mapper = new EchoNotificationMapper();
+			$notifs = $mapper->fetchByUser(
+				$this->user, 1, null, array( 'edit-thank' )
 			);
-			$row = $rows->fetchObject();
-			if ( $row ) {
-				$thank = array(
-					'user' => User::newFromId( $row->event_agent_id ),
-				);
+			if ( $notifs ) {
+				$notif = reset( $notifs );
+				$agent = $notif->getEvent()->getAgent();
+				if ( $agent ) {
+					$thank = array( 'user' => $agent );
+				}
 			}
 		}
 		wfProfileOut( __METHOD__ );
