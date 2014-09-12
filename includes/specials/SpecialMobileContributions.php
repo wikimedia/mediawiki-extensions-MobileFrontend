@@ -166,12 +166,13 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 * Returns a list of query conditions that should be run against the revision table
 	 */
 	protected function getQueryConditions() {
+		$conds = array();
 		if ( $this->user ) {
-			$conds = array(
-				'rev_user' => $this->user->getID(),
-			);
-		} else {
-			$conds = array();
+			if ( $this->user->getId() ) {
+				$conds['rev_user'] = $this->user->getId();
+			} else {
+				$conds['rev_user_text'] = $this->user->getName();
+			}
 		}
 		if ( $this->offset ) {
 			$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
