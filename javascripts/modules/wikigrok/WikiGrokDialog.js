@@ -112,6 +112,7 @@
 					'occupation': options.occupation,
 					'page_name': mw.config.get( 'wgPageName' ),
 					'correct': options.claimIsCorrect,
+					'user_id': mw.config.get( 'wgUserId' ),
 					'source': 'mobile A'
 				},
 				dataType: 'jsonp',
