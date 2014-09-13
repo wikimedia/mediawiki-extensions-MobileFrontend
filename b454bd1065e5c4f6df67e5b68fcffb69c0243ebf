@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_c8f885e4",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-13T00:45:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e2fb78d_bce57f08",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_5cf69bc3",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 7
@@ -47,6 +65,24 @@
       "writtenOn": "2014-09-12T19:00:26Z",
       "side": 1,
       "message": "Maryana also says this is supposed to be in alpha?!",
+      "parentUuid": "2e2fb78d_5cf69bc3",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_e8f101ff",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-13T00:45:08Z",
+      "side": 1,
+      "message": "Done",
       "parentUuid": "2e2fb78d_5cf69bc3",
       "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
@@ -116,6 +152,24 @@
       "writtenOn": "2014-09-12T18:57:43Z",
       "side": 1,
       "message": "Err... i18n!?",
+      "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_28902997",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-13T00:45:08Z",
+      "side": 1,
+      "message": "WikiGrok is English only for now, so Agile dictates no i18n.",
+      "parentUuid": "2e2fb78d_1c313357",
       "revId": "b454bd1065e5c4f6df67e5b68fcffb69c0243ebf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
