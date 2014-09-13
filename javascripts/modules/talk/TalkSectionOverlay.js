@@ -14,6 +14,10 @@ var
 			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		},
+		// FIXME: Use Router for TalkSectionOverlay
+		hide: function() {
+			this.remove();
+		},
 		initialize: function( options ) {
 			// If terms of use is enabled, include it in the licensing message
 			if ( $( '#footer-places-terms-use' ).length > 0 ) {

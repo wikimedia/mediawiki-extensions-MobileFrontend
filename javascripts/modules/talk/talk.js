@@ -1,35 +1,34 @@
 ( function( M, $ ) {
-	var LoadingOverlay = M.require( 'LoadingOverlay' );
+	var LoadingOverlay = M.require( 'LoadingOverlay' ),
+		talkPrefix = mw.config.get( 'wgFormattedNamespaces' )[ mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
 
 	M.assertMode( [ 'beta', 'alpha', 'app' ] );
 
-	function onTalkClick( ev ) {
-		var talkPage = $( this ).data( 'title' ),
+	M.overlayManager.add( /^\/talk$/, function() {
+		var result = $.Deferred(),
+			talkOptions = {
+				title: talkPrefix + M.getCurrentPage().title
+			},
 			loadingOverlay = new LoadingOverlay();
 
-		ev.preventDefault();
 		loadingOverlay.show();
 		mw.loader.using( 'mobile.talk.common', function() {
 			var TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
 
 			loadingOverlay.hide();
-			new TalkOverlay( {
-				title: talkPage
-			} );
+			result.resolve( new TalkOverlay( talkOptions ) );
 		} );
-	}
+		return result;
+	} );
 
-	function init( title ) {
-		var talkPrefix = mw.config.get( 'wgFormattedNamespaces' )[ mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
-		// FIXME change when micro.tap.js in stable
-		$( '#ca-talk' ).on( M.tapEvent( 'click' ), onTalkClick ).data( 'title', talkPrefix + title );
+	function init() {
+		$( '#ca-talk a' ).
+			attr( 'href', '#/talk' );
 		// enable Talk button (only to hide when JS disabled)
 		$( '#ca-talk' ).removeClass( 'hidden' );
 	}
 
-	init( mw.config.get( 'wgTitle' ) );
-	M.on( 'page-loaded', function( page ) {
-		init( page.title );
-	} );
+	init();
+	M.on( 'page-loaded', init );
 
 }( mw.mobileFrontend, jQuery ) );

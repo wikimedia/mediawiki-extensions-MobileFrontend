@@ -17,6 +17,17 @@
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
 			},
+			show: function() {
+				var self = this, _super = Overlay.prototype.show;
+				if ( this._isReady ) {
+					_super.apply( this, arguments );
+				} else {
+					// If _isReady is not set then postRender is yet to run and show has been called before it is in the dom. Delay showing.
+					this.one( 'ready', function() {
+						_super.apply( self, arguments );
+					} );
+				}
+			},
 			initialize: function( options ) {
 				var self = this,
 					_super = this._super;
@@ -31,7 +42,6 @@
 						// Create an empty page for new pages
 						options.page = new Page( { title: options.title, sections: [] } );
 						_super.call( self, options );
-						self.show();
 					} else {
 						// If the API request fails for any other reason, load the talk
 						// page manually rather than leaving the spinner spinning.
@@ -41,7 +51,6 @@
 					// API request was successful so show the overlay with the talk page content
 					options.page = new Page( pageData );
 					_super.call( self, options );
-					self.show();
 				} );
 			},
 			preRender: function( options ) {
@@ -59,6 +68,8 @@
 				var $add = this.$( 'button.add' ),
 					page = options.page, self = this;
 
+				this._isReady = true;
+				this.emit( 'ready' );
 				this._super( options );
 				// FIXME: Make the add button work again. bug 69763
 				$add.remove();
@@ -79,6 +90,7 @@
 					$add.remove();
 				}
 
+				// FIXME: Use Router instead for this
 				this.$( 'a' ).on( 'click', function() {
 					var id = parseFloat( $( this ).data( 'id' ), 10 ),
 						leadSection = {
@@ -93,9 +105,9 @@
 							section: section
 						} );
 					childOverlay.show();
-					childOverlay.on( 'hide', function() {
-						// re-enable TalkOverlay (it's closed by hide event (in Overlay) from TalkSectionOverlay)
-						self.show();
+					// When closing this overlay, also close the child section overlay
+					self.on( 'hide', function() {
+						childOverlay.remove();
 					} );
 				} );
 				if ( !$.trim( page.lead ) ) {
