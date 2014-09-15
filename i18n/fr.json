@@ -79,6 +79,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "En savoir plus",
 	"mobile-frontend-editor-abusefilter-warning": "Attention : Êtes-vous sûr de vouloir enregistrer cette modification ? Elle pourrait présenter un problème.",
 	"mobile-frontend-editor-anon": "Modifier sans se connecter",
+	"mobile-frontend-editor-anoneditwarning": "<b>Attention :</b> vous êtes déconnecté. Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous <b>[$1 vous connectez]</b> ou <b>[$2 créer un compte]</b>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
 	"mobile-frontend-editor-blocked": "Votre compte est bloqué en modification.",
 	"mobile-frontend-editor-cancel": "Annuler",
 	"mobile-frontend-editor-cancel-confirm": "Voulez-vous vraiment abandonner votre modification ?",
