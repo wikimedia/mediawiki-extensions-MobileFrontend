@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_07f1d3c7",
+        "filename": "javascripts/common/Drawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-15T17:10:48Z",
+      "side": 1,
+      "message": "I\u0027m still not 100% sure why we use the visible class but I think it is something to do with css3 animations/position fixed.\n\nIt would be good to use that class here rather than divert from it and repeat ourselves with code.\n\nWith a bit of git blaming we can probably work it out and document this better but let\u0027s stick with it until we know better.",
+      "revId": "6db2a2abac928ef093c12a6a99fffc87adfc4f89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_e7d8075a",
+        "filename": "javascripts/common/InlineDialog.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-15T17:10:48Z",
+      "side": 1,
+      "message": "show on Panel is identical to InlineDialog so let\u0027s just inherit here.",
+      "revId": "6db2a2abac928ef093c12a6a99fffc87adfc4f89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_a7e2fffd",
+        "filename": "javascripts/common/InlineDialog.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-15T17:10:48Z",
+      "side": 1,
+      "message": "Same as above.",
+      "revId": "6db2a2abac928ef093c12a6a99fffc87adfc4f89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_87e5c308",
+        "filename": "javascripts/common/InlineDialog.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-15T17:10:48Z",
+      "side": 1,
+      "message": "and again.",
+      "revId": "6db2a2abac928ef093c12a6a99fffc87adfc4f89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
