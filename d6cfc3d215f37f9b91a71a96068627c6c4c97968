@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_2475e82c",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:50:16Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be needed. Use M.on( \u0027page-loaded\u0027 ) instead.",
+      "revId": "d6cfc3d215f37f9b91a71a96068627c6c4c97968",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_048e6c2b",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:50:16Z",
+      "side": 1,
+      "message": "See my note in the bug report about preview. Should check with maryana first.\nIf this is the required behaviour use events.",
+      "revId": "d6cfc3d215f37f9b91a71a96068627c6c4c97968",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_249e0867",
+        "filename": "javascripts/modules/redlinks/redlinks.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:50:16Z",
+      "side": 1,
+      "message": "no no no.\nFirstly, not the best name for a function :)\nSecondly this pollutes the mw.mobileFrontend namespace.\n\nIn JavaScript world this would work better using events (a bit like PHP hooks )\n\nThis shouldn\u0027t be needed. Use M.on( \u0027page-loaded\u0027 ) instead which runs every time a page is re-rendered. Since we might remove this ajax code, we could also hold off and see how the spike gets resolved.\nhttps://trello.com/c/2fedOF4f/5-spike-analyze-ajax-pageloading-a-b-test",
+      "revId": "d6cfc3d215f37f9b91a71a96068627c6c4c97968",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
