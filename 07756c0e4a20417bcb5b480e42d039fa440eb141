@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_6463f0d9",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:03:26Z",
+      "side": 1,
+      "message": "i18n",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_445c741e",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:03:26Z",
+      "side": 1,
+      "message": "i18n",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_e477e099",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:03:26Z",
+      "side": 1,
+      "message": "i18n?",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_04a2ecf9",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:03:26Z",
+      "side": 1,
+      "message": "i18n",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_2459682d",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:03:26Z",
+      "side": 1,
+      "message": "i18n",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_04730cb1",
+        "filename": "javascripts/modules/wikigrok/WikiGrokMoreInfo.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:03:26Z",
+      "side": 1,
+      "message": "i18n?",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_c4a74407",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:03:26Z",
+      "side": 1,
+      "message": "i18n",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
