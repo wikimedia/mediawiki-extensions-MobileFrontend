@@ -1,12 +1,10 @@
-<div class="wikigrok">
-	<p class="wg-header">{{headerMsg}}</p>
-	<p class="wg-content">{{contentMsg}}</p>
-	<p class="wg-buttons">
-		{{#buttons}}
-		<button class="{{classes}}">{{label}}</button>
-		{{/buttons}}
-	</p>
-	{{#noticeMsg}}
-	<p class="wg-notice">{{{noticeMsg}}}</p>
-	{{/noticeMsg}}
-</div>
+<p class="wg-header">{{headerMsg}}</p>
+<p class="wg-content">{{contentMsg}}</p>
+<p class="wg-buttons">
+	{{#buttons}}
+	<button class="{{classes}}">{{label}}</button>
+	{{/buttons}}
+</p>
+{{#noticeMsg}}
+<p class="wg-notice">{{{noticeMsg}}}</p>
+{{/noticeMsg}}

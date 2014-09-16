@@ -1,20 +1,18 @@
 ( function( M, $ ) {
 
 var View = M.require( 'View' ),
-	InlineDialog;
+	Panel;
 
 	/**
-	 * A {@link View} that gets inserted within the page content (inline)
-	 * @class InlineDialog
+	 * An abstract class for a {@link View} that comprises a simple panel.
+	 * @class Panel
 	 * @extends View
 	 */
-	InlineDialog = View.extend( {
-		defaults: {
-			// Reuse drawer message since this is a similar interface
-			cancelMessage: mw.msg( 'mobile-frontend-drawer-cancel' )
-		},
-		className: 'inline-dialog',
-		minHideDelay: 0, // ms
+	Panel = View.extend( {
+		className: 'panel',
+		// in milliseconds
+		minHideDelay: 10,
+		appendToElement: '#content',
 
 		postRender: function() {
 			var self = this;
@@ -22,11 +20,10 @@ var View = M.require( 'View' ),
 				ev.preventDefault();
 				self.hide();
 			} );
-			// Append the dialog to a DOM element
-			// This module might be loaded at the top of the page, thus ensure we wait for
-			// the DOM to be loaded before appending.
+			// This module might be loaded at the top of the page e.g. Special:Uploads
+			// Thus ensure we wait for the DOM to be loaded
 			$( function() {
-				self.appendTo( '#content' );
+				self.appendTo( self.appendToElement );
 			} );
 		},
 
@@ -41,8 +38,9 @@ var View = M.require( 'View' ),
 				// just before show(); this is important for animations to work
 				// (0ms doesn't work on Firefox, 10ms is enough)
 				setTimeout( function() {
-					self.$el.show();
-				}, 10 );
+					self.$el.addClass( 'visible' );
+					self.emit( 'show' );
+				}, self.minHideDelay );
 			}
 		},
 
@@ -54,15 +52,16 @@ var View = M.require( 'View' ),
 
 			// see comment in show()
 			setTimeout( function() {
-				self.$el.hide();
-			}, 10 );
+				self.$el.removeClass( 'visible' );
+				self.emit( 'hide' );
+			}, self.minHideDelay );
 		},
 
 		/**
 		 * @method
 		 */
 		isVisible: function() {
-			return this.$el.is( ':visible' );
+			return this.$el.hasClass( 'visible' );
 		},
 
 		/**
@@ -77,6 +76,6 @@ var View = M.require( 'View' ),
 		}
 	} );
 
-M.define( 'InlineDialog', InlineDialog );
+M.define( 'Panel', Panel );
 
 }( mw.mobileFrontend, jQuery ) );

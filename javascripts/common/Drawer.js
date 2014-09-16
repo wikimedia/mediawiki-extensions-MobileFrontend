@@ -1,97 +1,42 @@
 ( function( M, $ ) {
 
-var View = M.require( 'View' ),
+var Panel = M.require( 'Panel' ),
 	Drawer;
 
 	/**
 	 * A {@link View} that pops up from the bottom of the screen.
 	 * @class Drawer
-	 * @extends View
+	 * @extends Panel
 	 */
-	Drawer = View.extend( {
-		defaults: {
-			cancelMessage: mw.msg( 'mobile-frontend-drawer-cancel' )
-		},
+	Drawer = Panel.extend( {
 		className: 'drawer position-fixed',
-		minHideDelay: 0, // ms
+		appendToElement: '#notifications',
 
 		postRender: function() {
 			var self = this;
-			this.$( '.cancel' ).click( function( ev ) {
-				ev.preventDefault();
-				self.hide();
-			} );
-			// This module might be loaded at the top of the page e.g. Special:Uploads
-			// Thus ensure we wait for the DOM to be loaded
-			// FIXME: This should be moved out of Drawer.js. Caller should actually append to DOM.
-			$( function() {
-				self.appendTo( '#notifications' );
-			} );
-		},
-
-		/**
-		 * @method
-		 */
-		show: function() {
-			var self = this;
-			// Allow the drawer itself to be clickable (e.g. for copying and pasting references / clicking links in reference)
-			this.$el.on( M.tapEvent( 'click' ), function( ev ) {
-				ev.stopPropagation();
-			} );
-
-			if ( !self.isVisible() ) {
-				// use setTimeout to allow the browser to redraw if render() was called
-				// just before show(); this is important for animations to work
-				// (0ms doesn't work on Firefox, 10ms is enough)
+			Panel.prototype.postRender.apply( this, arguments );
+			this.on( 'show', function() {
 				setTimeout( function() {
-					self.$el.addClass( 'visible' );
-					if ( !self.locked ) {
-						// ignore a possible click that called show()
-						setTimeout( function() {
-							$( 'body' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
-							$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
-							// FIXME change when micro.tap.js in stable
-							// can't use 'body' because the drawer will be closed when
-							// tapping on it and clicks will be prevented
-							$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
-						}, self.minHideDelay );
-					}
-				}, 10 );
-			}
-		},
+					$( 'body' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
+					$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
+					// FIXME change when micro.tap.js in stable
+					// can't use 'body' because the drawer will be closed when
+					// tapping on it and clicks will be prevented
+					$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
+				}, self.minHideDelay );
+			} );
 
-		/**
-		 * @method
-		 */
-		hide: function() {
-			var self = this;
-
-			// see comment in show()
-			setTimeout( function() {
-				self.$el.removeClass( 'visible' );
+			this.on( 'hide', function() {
 				// .one() registers one callback for scroll and click independently
 				// if one fired, get rid of the other one
 				$( window ).off( '.drawer' );
 				$( '#mw-mf-page-center' ).off( '.drawer' );
-			}, 10 );
-		},
+			} );
 
-		/**
-		 * @method
-		 */
-		isVisible: function() {
-			return this.$el.hasClass( 'visible' );
-		},
-
-		/**
-		 * @method
-		 */
-		toggle: function() {
-			if ( this.isVisible() ) {
-				this.hide();
-			} else {
-				this.show();
-			}
+			// Allow the drawer itself to be clickable (e.g. for copying and pasting references / clicking links in reference)
+			this.$el.on( M.tapEvent( 'click' ), function( ev ) {
+				ev.stopPropagation();
+			} );
 		}
 	} );
 

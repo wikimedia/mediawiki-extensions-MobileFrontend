@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	M.assertMode( [ 'alpha' ] );
 
-	var InlineDialog = M.require( 'InlineDialog' ),
+	var Panel = M.require( 'Panel' ),
 		WikiGrokDialog;
 
 	/**
@@ -12,8 +12,8 @@
 	 * scrolls past the lead. It asks the user to confirm metadata information for use
 	 * in Wikidata (https://www.wikidata.org).
 	 */
-	WikiGrokDialog = InlineDialog.extend( {
-		locked: true,
+	WikiGrokDialog = Panel.extend( {
+		className: 'wikigrok',
 		defaults: {
 			beginQuestions: false,
 			thankUser: false,

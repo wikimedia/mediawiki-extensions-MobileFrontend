@@ -143,13 +143,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'skins.minerva.inlinedialog.styles' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/common/inlinedialog.less',
-		),
-		'position' => 'top',
-	),
-
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
@@ -199,6 +192,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/api.js',
 			'javascripts/common/PageApi.js',
 			'javascripts/common/View.js',
+			'javascripts/common/Panel.js',
 			'javascripts/common/Section.js',
 			'javascripts/common/Page.js',
 			'javascripts/common/application.js',
@@ -419,12 +413,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.common',
 			'mobile.loggingSchemas',
 			'mobile.templates',
-		),
-		'scripts' => array(
-			'javascripts/common/InlineDialog.js',
-		),
-		'styles' => array(
-			'less/common/inlinedialog.less',
 		),
 	),
 

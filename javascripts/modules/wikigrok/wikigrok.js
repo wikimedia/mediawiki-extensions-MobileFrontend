@@ -19,6 +19,7 @@
 	// we're in 'view' mode, we're in Main namespace, the browser supports localStorage,
 	// and the user has not opted out of WikiGrok previously.
 	if ( mw.config.get( 'wgMFEnableWikiGrok' ) &&
+		!mw.user.isAnon() &&
 		!mw.config.get( 'wgIsMainPage' ) &&
 		mw.config.get( 'wgAction' ) === 'view' &&
 		wikidataID &&

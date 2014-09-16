@@ -2,7 +2,15 @@
 @import "minerva.variables";
 
 .wikigrok {
-	position: relative;
+	margin-top: 1em;
+	text-align: center;
+	padding: 1em @contentMargin;
+	background-color: @grayLightest;
+	display: none;
+
+	&.visible {
+		display: block;
+	}
 
 	.wg-close {
 		position: absolute;
