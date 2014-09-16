@@ -104,6 +104,40 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_849c9cb9",
+        "filename": "less/common/inlinedialog.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:06:07Z",
+      "side": 1,
+      "message": "Why don\u0027t we just Use mw-ui-block ?",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_6499b0c6",
+        "filename": "less/common/inlinedialog.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:06:07Z",
+      "side": 1,
+      "message": "This is part of core no?\nhttp://tools.wmflabs.org/styleguide/desktop/section-2.html#section-2.1.5",
+      "revId": "07756c0e4a20417bcb5b480e42d039fa440eb141",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_c4a74407",
         "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
         "patchSetId": 8
