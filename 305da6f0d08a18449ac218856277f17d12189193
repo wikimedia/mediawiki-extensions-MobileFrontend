@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_7de01a24",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-16T18:24:44Z",
+      "side": 1,
+      "message": "Maybe we should follow the editor hash:\n/^talk$/\n\n(no trailing slash) :)",
+      "revId": "305da6f0d08a18449ac218856277f17d12189193",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
