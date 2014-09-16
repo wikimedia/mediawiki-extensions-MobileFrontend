@@ -32,7 +32,7 @@
 
 	function addEditButton( section, container ) {
 		return $( '<a class="edit-page">' ).
-			attr( 'href', '#editor/' + section ).
+			attr( 'href', '#/editor/' + section ).
 			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
 			prependTo( container );
 	}
@@ -92,7 +92,7 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
-		M.overlayManager.add( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
+		M.overlayManager.add( /^\/editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
 			var
 				loadingOverlay = new LoadingOverlay(),
 				result = $.Deferred(),

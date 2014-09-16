@@ -15,7 +15,7 @@
 	{{#sections}}
 	<{{tag}} data-id="{{id}}">
 		<span id="{{anchor}}">{{{line}}}</span>
-		<a href="#editor/{{id}}" data-section="{{id}}" class="edit-page icon icon-edit enabled icon-32px">{{editLabel}}</a>
+		<a href="#/editor/{{id}}" data-section="{{id}}" class="edit-page icon icon-edit enabled icon-32px">{{editLabel}}</a>
 	</{{tag}}>
 	<div>{{{text}}}</div>
 	{{/sections}}

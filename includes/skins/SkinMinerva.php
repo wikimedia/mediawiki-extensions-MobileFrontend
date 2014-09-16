@@ -149,7 +149,7 @@ class SkinMinerva extends SkinTemplate {
 			$lang = wfGetLangObj( $lang );
 			$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
 			return Html::element( 'a', array(
-				'href' => '#editor/' . $section,
+				'href' => '#/editor/' . $section,
 				'data-section' => $section,
 				'class' => 'edit-page icon icon-32px icon-edit enabled'
 			), $message );

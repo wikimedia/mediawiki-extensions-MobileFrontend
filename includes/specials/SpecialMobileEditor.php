@@ -40,7 +40,7 @@ class SpecialMobileEditor extends MobileSpecialPage {
 
 		$context = MobileContext::singleton();
 		$articleUrl = $context->getMobileUrl( $title->getFullURL( $data ) );
-		$targetUrl = $articleUrl . '#editor/' . $section;
+		$targetUrl = $articleUrl . '#/editor/' . $section;
 
 		$html =
 			Html::openElement( 'div',
