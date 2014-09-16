@@ -137,6 +137,7 @@ $wgHooks['CentralAuthSilentLoginRedirect'][] =
 $wgHooks['ResourceLoaderRegisterModules'][] =
 	'MobileFrontendHooks::onResourceLoaderRegisterModules';
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
+$wgHooks['HTMLFileCache::useFileCache'][] = 'onHTMLFileCache_useFileCache';
 
 // use array_merge to ensure we do not override existing values set by core
 $wgSpecialPages = array_merge( $wgSpecialPages, array(
