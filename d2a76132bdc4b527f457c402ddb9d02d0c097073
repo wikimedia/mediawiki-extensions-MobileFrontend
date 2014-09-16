@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_f3e1dbcb",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T22:38:19Z",
+      "side": 1,
+      "message": "As discussed this is a bad practice and I\u0027m sorry.",
+      "revId": "d2a76132bdc4b527f457c402ddb9d02d0c097073",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_33b523cc",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T22:38:19Z",
+      "side": 1,
+      "message": "Don\u0027t reference anything outside the overlay.",
+      "revId": "d2a76132bdc4b527f457c402ddb9d02d0c097073",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_939e1757",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T22:38:19Z",
+      "side": 1,
+      "message": "Use options.initialValue",
+      "revId": "d2a76132bdc4b527f457c402ddb9d02d0c097073",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
