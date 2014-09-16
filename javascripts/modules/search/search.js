@@ -10,7 +10,7 @@
 	// from user context event, so using it in route callback won't work
 	// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
 	$( '#searchInput' ).on( M.tapEvent( 'touchend mouseup' ), function() {
-		new SearchOverlay().show();
+		new SearchOverlay( { searchTerm: $( this ).val() } ).show();
 		M.router.navigate( '/search' );
 	} );
 
