@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_6498907b",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-16T00:42:44Z",
+      "side": 1,
+      "message": "Based on earlier reversion you should make it clear that this can only be plaintext  unlike \u0027summary\u0027. It should probably also make reference to summary. e.g. plain text version of [[mw-msg:summary]",
+      "revId": "26ae4e8f187ffcec2ae1b8728a5208660a0ce540",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
