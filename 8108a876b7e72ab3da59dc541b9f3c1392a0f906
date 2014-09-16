@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_188ec482",
+        "filename": "javascripts/common/Drawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-16T20:36:28Z",
+      "side": 1,
+      "message": "I don\u0027t understand this comment. Do you have any idea what it\u0027s talking about?",
+      "revId": "8108a876b7e72ab3da59dc541b9f3c1392a0f906",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
