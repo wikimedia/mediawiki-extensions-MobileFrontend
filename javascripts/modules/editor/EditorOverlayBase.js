@@ -124,6 +124,10 @@
 			if ( options.isNewPage ) {
 				options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
 			}
+			// change the message to request a summary when not in article namespace
+			if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
+				options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
+			}
 			// If terms of use is enabled, include it in the licensing message
 			if ( $( '#footer-places-terms-use' ).length > 0 ) {
 				options.licenseMsg = mw.msg(

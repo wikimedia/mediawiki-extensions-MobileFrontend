@@ -81,6 +81,7 @@
     "mobile-frontend-editor-success-new-page": "Congratulations on creating a new page!",
     "mobile-frontend-editor-summary-placeholder": "Example: Fixed typo, added content",
     "mobile-frontend-editor-summary-request": "How did you improve the page?",
+    "mobile-frontend-editor-summary": "Summary:",
     "mobile-frontend-editor-switch-confirm": "You must save your edit before switching to another editing mode.",
     "mobile-frontend-editor-switch-editor": "Switch editor",
     "mobile-frontend-editor-tutorial-cancel": "No, thanks",

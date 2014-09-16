@@ -279,6 +279,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-licensing-with-terms',
 			'mobile-frontend-editor-placeholder',
 			'mobile-frontend-editor-placeholder-new-page',
+			'mobile-frontend-editor-summary',
 			'mobile-frontend-editor-summary-request',
 			'mobile-frontend-editor-summary-placeholder',
 			'mobile-frontend-editor-cancel-confirm',
