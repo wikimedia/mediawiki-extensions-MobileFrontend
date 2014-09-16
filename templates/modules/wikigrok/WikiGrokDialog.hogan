@@ -1,7 +1,4 @@
 <div class="wikigrok">
-	<div class="wg-close">
-		<button class="cancel icon icon-16px icon-cancel">{{closeMsg}}</button>
-	</div>
 	<p class="wg-header">{{headerMsg}}</p>
 	<p class="wg-content">{{contentMsg}}</p>
 	<p class="wg-buttons">
@@ -9,4 +6,7 @@
 		<button class="{{classes}}">{{label}}</button>
 		{{/buttons}}
 	</p>
+	{{#noticeMsg}}
+	<p class="wg-notice">{{{noticeMsg}}}</p>
+	{{/noticeMsg}}
 </div>

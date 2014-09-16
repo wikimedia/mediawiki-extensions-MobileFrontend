@@ -143,6 +143,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	'skins.minerva.inlinedialog.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/common/inlinedialog.less',
+		),
+		'position' => 'top',
+	),
+
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
@@ -412,6 +419,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.common',
 			'mobile.loggingSchemas',
 			'mobile.templates',
+		),
+		'scripts' => array(
+			'javascripts/common/InlineDialog.js',
+		),
+		'styles' => array(
+			'less/common/inlinedialog.less',
 		),
 	),
 
@@ -914,14 +927,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.alpha',
 		),
 		'templates' => array(
-			'modules/wikigrok/WikiGrokDrawer.hogan',
+			'modules/wikigrok/WikiGrokDialog.hogan',
+			'modules/wikigrok/WikiGrokMoreInfo.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/wikigrok/wikigrokeval.js',
-			'javascripts/modules/wikigrok/WikiGrokDrawer.js',
+			'javascripts/modules/wikigrok/WikiGrokDialog.js',
+			'javascripts/modules/wikigrok/WikiGrokMoreInfo.js',
 		),
 		'styles' => array(
-			'less/modules/wikigrok/WikiGrokDrawer.less',
+			'less/modules/wikigrok/WikiGrokDialog.less',
+			'less/modules/wikigrok/WikiGrokMoreInfo.less',
 		),
 	),
 
