@@ -155,10 +155,10 @@
 		 * Add an overlay that should be shown for a specific fragment identifier.
 		 *
 		 * The following code will display an overlay whenever a user visits a URL that
-		 * end with '#hi/<name>'. The value of <name> will be passed to the overlay.
+		 * end with '#/hi/<name>'. The value of <name> will be passed to the overlay.
 		 *
 		 *     @example
-		 *     overlayManager.add( /hi\/(.*)/, function( name ) {
+		 *     overlayManager.add( /\/hi\/(.*)/, function( name ) {
 		 *       var factoryResult = $.Deferred();
 		 *
 		 *       mw.using( 'mobile.HiOverlay', function() {
