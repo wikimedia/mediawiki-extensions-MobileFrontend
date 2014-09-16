@@ -12,6 +12,11 @@
 	 */
 	Overlay = View.extend( {
 		/**
+		 * Identify whether the element contains position fixed elements
+		 * @type {Boolean}
+		 */
+		hasFixedHeader: true,
+		/**
 		 * FIXME: remove when OverlayManager used everywhere
 		 * @type {Boolean}
 		 */
@@ -67,7 +72,7 @@
 				ev.stopPropagation();
 			} );
 
-			if ( M.isIos ) {
+			if ( M.isIos && this.hasFixedHeader ) {
 				$overlayContent
 				.on( 'touchstart', function( ev ) {
 					startY = ev.originalEvent.touches[0].pageY;
@@ -130,7 +135,7 @@
 			}
 
 			// prevent scrolling and bouncing outside of .overlay-content
-			if ( M.isIos ) {
+			if ( M.isIos && this.hasFixedHeader ) {
 				$window
 					.on( 'touchmove.ios', function( ev ) {
 						ev.preventDefault();

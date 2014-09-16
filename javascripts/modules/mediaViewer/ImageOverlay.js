@@ -11,6 +11,8 @@
 	 * @extends Overlay
 	 */
 	ImageOverlay = Overlay.extend( {
+		// allow pinch zooming
+		hasFixedHeader: false,
 		className: 'overlay media-viewer',
 		template: M.template.get( 'modules/ImageOverlay.hogan' ),
 		closeOnBack: true,
