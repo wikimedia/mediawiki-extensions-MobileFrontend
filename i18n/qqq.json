@@ -192,8 +192,6 @@
 	"mobile-frontend-main-menu-settings-heading": "{{doc-special|MobileOptions|unlisted=1}}\n{{Identical|Settings}}",
 	"mobile-frontend-main-menu-upload": "Uploads link text in main menu.\n{{Identical|Upload}}",
 	"mobile-frontend-main-menu-watchlist": "Text for watchlist link in main menu.\n{{Identical|Watchlist}}",
-	"mobile-frontend-mainpage-cta-button": "Used as label for button.\n\nPreceded by {{msg-mw|Mobile-frontend-mainpage-cta-prompt}}.",
-	"mobile-frontend-mainpage-cta-prompt": "Shows on main page to logged in users prompting them to edit.\n\nFollowed by the button {{msg-mw|Mobile-frontend-mainpage-cta-button}}.",
 	"mobile-frontend-media-details": "Caption for a button leading to the details of a media file (e.g. an image) in a preview.\n{{Identical|Detail}}",
 	"mobile-frontend-media-license-link": "Link to license information in media viewer.\n{{Identical|License information}}",
 	"mobile-frontend-meta-data-issues": "This should be several words and should explain that a page has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}",
