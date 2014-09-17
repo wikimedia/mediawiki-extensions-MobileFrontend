@@ -60,11 +60,6 @@ This page is used by Selenium to test geo related features.
   end
 end
 
-Given(/^I am on a page with geodata$/) do
-  step 'at least one article exists with geodata'
-  step 'I am on the "Selenium geo test page" page'
-end
-
 Given(/^I go to a page that has languages$/) do
   wikitext = 'This page is used by Selenium to test language related features.
 

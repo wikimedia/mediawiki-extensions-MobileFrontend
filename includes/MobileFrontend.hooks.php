@@ -543,8 +543,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
-		global $wgMFEnableXAnalyticsLogging, $wgMFAppPackageId, $wgMFAppScheme,
-			$wgMFEnableNearbyPagesBetaFeature;
+		global $wgMFEnableXAnalyticsLogging, $wgMFAppPackageId, $wgMFAppScheme;
 		wfProfileIn( __METHOD__ );
 
 		$context = MobileContext::singleton();
@@ -574,15 +573,6 @@ class MobileFrontendHooks {
 		}
 
 		if ( !$context->shouldDisplayMobileView() ) {
-			if ( class_exists( 'BetaFeatures' ) &&
-				$wgMFEnableNearbyPagesBetaFeature &&
-				BetaFeatures::isFeatureEnabled( $out->getSkin()->getUser(), 'betafeatures-geonotahack' ) ) {
-				// @todo FIXME: Remove need for this module
-				$out->addModules( array( 'mobile.bridge' ) );
-				// @todo FIXME: Find better way to deal with wgMFMode in desktop
-				// (maybe standardise BetaFeatures to use the same variable).
-				$out->addJsConfigVars( 'wgMFMode', 'desktop-beta' );
-			}
 			wfProfileOut( __METHOD__);
 			return true;
 		}
@@ -675,24 +665,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetBetaFeaturePreferences( $user, &$preferences ) {
-		global $wgExtensionAssetsPath, $wgMFNearby, $wgMFEnableMinervaBetaFeature,
-			$wgMFEnableNearbyPagesBetaFeature;
-
-		if ( $wgMFNearby && $wgMFEnableNearbyPagesBetaFeature ) {
-			$preferences['betafeatures-geonotahack'] = array(
-				'requirements' => array(
-					'skins' => array( 'vector' ),
-				),
-				'label-message' => 'beta-feature-geonotahack',
-				'desc-message' => 'beta-feature-geonotahack-description',
-				'info-link' => '//www.mediawiki.org/wiki/Beta_Features/Nearby_Pages',
-				'discussion-link' => '//www.mediawiki.org/wiki/Talk:Beta_Features/Nearby_Pages',
-				'screenshot' => array(
-					'ltr' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/nearby-ltr.svg",
-					'rtl' => "$wgExtensionAssetsPath/MobileFrontend/images/BetaFeatures/nearby-rtl.svg",
-				),
-			);
-		}
+		global $wgExtensionAssetsPath, $wgMFEnableMinervaBetaFeature;
 
 		if ( $wgMFEnableMinervaBetaFeature ) {
 			// Enable the mobile skin on desktop

@@ -7,11 +7,6 @@
  * Extended Template class of BaseTemplate for mobile devices
  */
 class MinervaTemplate extends BaseTemplate {
-	/**
-	 * @var string $languageButtonClassName Class names of language selector
-	 * @todo: Remove variable when secondary page actions menu moves to stable
-	 */
-	protected $languageButtonClassName = 'mw-ui-button mw-ui-progressive button languageSelector';
 	/** @var string $searchPlaceHolderMsg Message used as placeholder in search input */
 	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder';
 
@@ -195,7 +190,7 @@ class MinervaTemplate extends BaseTemplate {
 			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 
 			echo Html::element( 'a', array(
-				'class' => $this->languageButtonClassName,
+				'class' => 'mw-ui-button mw-ui-progressive button languageSelector',
 				'href' => $languageUrl
 			), $languageLabel );
 		}

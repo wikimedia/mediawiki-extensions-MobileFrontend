@@ -1,8 +1,5 @@
 ( function( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
-		LoadingOverlay = M.require( 'LoadingOverlay' ),
-		loader = new LoadingOverlay(),
 		PageList = M.require( 'modules/PageList' ),
 		Nearby;
 
@@ -132,28 +129,10 @@
 			this._postRenderLinks();
 		},
 		_postRenderLinks: function() {
-			var self = this;
 			this.$( 'a' ).on( 'click', function( ev ) {
-				var $a = $( ev.currentTarget ),
-					title = $a.find( 'h2' ).text();
-
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
-				// Note router support required for page previews in beta
-				if ( !M.isBetaGroupMember() || !M.router.isSupported() ) {
-					window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
-				} else {
-					ev.preventDefault();
-
-					// Trigger preview mode ensure preview code has fully loaded first!
-					MobileWebClickTracking.log( self.source + '-preview', title );
-					loader.show();
-					mw.loader.using( 'mobile.special.nearby.beta', function() {
-						loader.hide();
-						// FIXME: [API] should be able to determine longitude/latitude from title
-						window.location.hash = '#preview/' + self.source + '/' + $a.data( 'latlng' ) + '/' + $a.data( 'title' );
-					} );
-				}
+				window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
 			} );
 		}
 	} );
