@@ -4,7 +4,7 @@ Feature: Language selection
 
   Background:
     Given I am using the mobile site
-      And I am on the "Main Page" page
+      And I go to a page that has languages
       And I see the read in another language button
     When I click the language button
 
