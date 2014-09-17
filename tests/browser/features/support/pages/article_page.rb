@@ -165,17 +165,4 @@ class ArticlePage
   # error and warning boxes
   div(:warning_box, css: ".warning")
   div(:error_message, css: ".error")
-
-  # Enters the given or random text into the given element. Note that a click
-  # event is used over focus to properly handle content-editable elements.
-  #
-  def type_into(element_name, text = nil)
-    text ||= "text-#{rand(32 ** 8).to_s(32)}"
-
-    element = send("#{element_name}_element")
-    element.click
-    element.send_keys(:enter, text)
-
-    text
-  end
 end

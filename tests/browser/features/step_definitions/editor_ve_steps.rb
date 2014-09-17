@@ -30,24 +30,21 @@ end
 
 When(/^I edit the article using VisualEditor$/) do
   on(ArticlePage) do |page|
-    @article_text = page.type_into(:editor_ve)
-
-    expect(page.editor_ve).to include(@article_text)
-
+    @text_to_type = "text-#{rand(32 ** 8).to_s(32)}"
+    page.editor_ve_element.when_present.send_keys(" ")
+    page.editor_ve_element.send_keys(@text_to_type)
     page.wait_until { page.continue_button_element.enabled? }
     page.continue_button
-
     page.wait_until { page.submit_button_element.enabled? }
     page.confirm(true) { page.submit_button }
+    page.wait_until { page.toast.include?("Your edit was saved") }
+    page.wait_until { page.content_element.visible? }
   end
 end
 
 Then(/^I see the edit reflected in the article content$/) do
   on(ArticlePage) do |page|
-    page.wait_until { page.toast.include?("Your edit was saved") }
-    page.wait_until { page.content_element.visible? }
-
-    expect(page.content).to include(@article_text)
+    expect(page.content).to include(@text_to_type)
   end
 end
 
@@ -58,4 +55,3 @@ end
 Then(/^I no longer see the VisualEditor$/) do
   expect(on(ArticlePage).editor_ve_element).to_not exist
 end
-
