@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e5e732b_ca60e3ce",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-17T21:42:18Z",
+      "side": 1,
+      "message": "Nice.\nI think we\u0027ll probably want something like AjaxOverlay that deals with this since we now also have this in EditorOverlayBase\n\nThis abstraction would be useful but can be done in a follow up.",
+      "revId": "1ad586eed04aa0881817d1b1193400caaec13aca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
