@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e5e732b_8a430b43",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-17T21:36:44Z",
+      "side": 1,
+      "message": "The problem with doing this is you\u0027ll have to fix the indenting below. I\u0027d recommend for time being just keeping in defined at top\n\ne.g.\n» user \u003d M.require( \u0027user\u0027 ),\n» /**\n»   * @extends Overlay\t13\n»   * @class TalkOverlay\t14\n» */\n» TalkOverlay \u003d Overlay.extend( {",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e5e732b_6a70d7a3",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-17T21:36:44Z",
+      "side": 1,
+      "message": "Please document saveHit\nIt looks like this should be an internal property and prefixed with a _ as it is private.\nSet in initalize\ne.g.\nthis._saveHit \u003d false;",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e5e732b_4a751392",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-17T21:36:44Z",
+      "side": 1,
+      "message": "Overriding hide without calling parent class hide function feels wrong.\nI\u0027m not sure I completely understand the meaning of saveHit though",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e5e732b_2a6adfb1",
+        "filename": "templates/modules/talk/talk.hogan",
+        "patchSetId": 12
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-17T21:36:44Z",
+      "side": 1,
+      "message": "The header should be a templatePartial.\nTake a look at how EditorOverlay does this.",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e5e732b_0a6f1bc2",
+        "filename": "tests/qunit/modules/talk/test_TalkSectionAddOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-17T21:36:44Z",
+      "side": 1,
+      "message": "\\o/ :D :D :D makes me so happy.",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
