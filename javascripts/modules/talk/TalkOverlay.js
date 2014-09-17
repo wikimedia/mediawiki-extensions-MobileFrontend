@@ -3,7 +3,6 @@
 
 	var
 		Overlay = M.require( 'Overlay' ),
-		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		Page = M.require( 'Page' ),
 		TalkSectionAddOverlay = M.require( 'modules/talk/TalkSectionAddOverlay' ),
 		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
@@ -17,22 +16,38 @@
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
 			},
-			show: function() {
-				var self = this, _super = Overlay.prototype.show;
-				if ( this._isReady ) {
-					_super.apply( this, arguments );
-				} else {
-					// If _isReady is not set then postRender is yet to run and show has been called before it is in the dom. Delay showing.
-					this.one( 'ready', function() {
-						_super.apply( self, arguments );
-					} );
-				}
+			postRender: function( options ) {
+				this._super( options );
+				this.$board = this.$( '.board' );
+				this._loadContent( options );
 			},
-			initialize: function( options ) {
-				var self = this,
-					_super = this._super;
-				this.loadingOverlay = new LoadingOverlay();
-				this.loadingOverlay.show();
+			/**
+			 * Show a loading spinner
+			 * @method
+			 */
+			showSpinner: function () {
+				this.$board.hide();
+				this.$( '.spinner' ).show();
+			},
+
+			/**
+			 * Hide the loading spinner
+			 * @method
+			 */
+			clearSpinner: function() {
+				this.$( '.spinner' ).hide();
+				this.$board.show();
+			},
+
+			/**
+			 * Load content of the talk page via PageApi
+			 * @method
+			 */
+			_loadContent: function( options ) {
+				var self = this;
+
+				// show a spinner
+				this.showSpinner();
 
 				// FIXME: use Page's mechanisms for retrieving page data instead
 				M.pageApi.getPage( options.title ).fail( function( resp ) {
@@ -40,44 +55,63 @@
 					// talk page doesn't exist yet.
 					if ( resp === 'missingtitle' ) {
 						// Create an empty page for new pages
-						options.page = new Page( { title: options.title, sections: [] } );
-						_super.call( self, options );
+						self._addContent( { title: options.title, sections: [] } );
 					} else {
 						// If the API request fails for any other reason, load the talk
 						// page manually rather than leaving the spinner spinning.
 						window.location = mw.util.getUrl( options.title );
 					}
 				} ).done( function( pageData ) {
-					// API request was successful so show the overlay with the talk page content
-					options.page = new Page( pageData );
-					_super.call( self, options );
+					self._addContent( pageData );
 				} );
 			},
-			preRender: function( options ) {
-				this.loadingOverlay.hide();
-				var page = options.page,
-					sections = page.getSubSections(),
-					explanation = sections.length > 0 ? mw.msg( 'mobile-frontend-talk-explained' ) :
-						mw.msg( 'mobile-frontend-talk-explained-empty' );
 
-				options.sections = sections;
-				options.explanation = explanation;
-				this._super( options );
-			},
-			postRender: function( options ) {
-				var $add = this.$( 'button.add' ),
-					page = options.page, self = this;
+			/**
+			 * Adds the content received from _loadContent to the Overlay
+			 * @method
+			 */
+			_addContent: function( pageData ) {
+				var $add = this.$( 'button.add' ), page, sections, self = this;
+				// API request was successful so show the talk page content
+				page = new Page( pageData );
+				// used for TalkSectionOverlay to access page sections
+				this.page = page;
 
-				this._isReady = true;
-				this.emit( 'ready' );
-				this._super( options );
+				this.$content = this.$( '.overlay-content' );
+
+				// clear actual content, if any
+				this.$( '.page-list.actionable' ).empty().prepend(
+					'<li class="lead-discussion">' +
+						'<a data-id="0">' + self.defaults.leadHeading + '</a>' +
+					'</li>'
+				);
+				sections = page.getSubSections();
+
+				// Add content header explanation
+				this.$( '.content-header' ).prepend(
+					sections.length > 0 ? mw.msg( 'mobile-frontend-talk-explained' ) :
+					mw.msg( 'mobile-frontend-talk-explained-empty' )
+				);
+
+				// Write down talk sections
+				$.each( sections, function( id, el ) {
+					self.$( '.page-list.actionable' ).prepend(
+						'<li>' +
+							'<a data-id="' + el.id + '">' + el.line + '</a>' +
+						'</li>'
+					);
+				} );
+
+				// content is there, hide the spinner
+				this.clearSpinner();
+
 				// FIXME: Make the add button work again. bug 69763
 				$add.remove();
 				if ( !user.isAnon() ) {
 					$add.click( function() {
 						var overlay = new TalkSectionAddOverlay( {
 							parent: self,
-							title: options.title
+							title: page.title
 						} );
 						overlay.show();
 						overlay.on( 'hide', function() {

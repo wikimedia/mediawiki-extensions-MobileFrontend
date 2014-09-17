@@ -12,7 +12,7 @@ QUnit.module( 'MobileFrontend TalkOverlay', {
 
 QUnit.test( '#TalkOverlay (new page)', 2, function( assert ) {
 	var overlay = new TalkOverlay( { title: 'Talk:No exist' } ),
-		page = overlay.options.page;
+		page = overlay.page;
 
 	assert.strictEqual( page.title, 'Talk:No exist', 'Title set' );
 	assert.strictEqual( page.getSubSections().length, 0, 'A page was setup with no sections' );
