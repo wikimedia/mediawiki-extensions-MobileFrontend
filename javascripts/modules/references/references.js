@@ -7,15 +7,19 @@
 	} );
 
 	function getReference( id ) {
-		// escape dots in id so that jQuery doesn't treat them as CSS classes
-		id = id.replace( /\./g, '\\.' );
-		return $( 'ol.references li' + id ).html();
+		// Escape (almost) all CSS selector meta characters
+		// see http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
+		var meta = /[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g;
+		id = id.replace( meta, '\\$&' );
+		// Use find rather than string concatenation
+		return $( 'ol.references' ).find( id );
 	}
 
 	function showReference( ev ) {
+		var $dest = $( this );
 		drawer.render( {
-			title: $( this ).text(),
-			text: getReference( $( this ).attr( 'href' ) )
+			title: $dest.text(),
+			text: getReference( $dest.attr( 'href' ) ).html()
 		} );
 		ev.preventDefault();
 		//don't hide drawer (stop propagation of click) if it is already shown (e.g. click another reference)
