@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_2e193adc",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-17T00:08:38Z",
+      "side": 1,
+      "message": "We\u0027ll need to test how this works on IE8 and Android 2.3 before merging\n\n* http://stackoverflow.com/questions/10978825/why-the-setselectionrange-cant-work-on-android-2-3-platform-browser,\n* https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement.setSelectionRange",
+      "revId": "82a73284b996e769d715eea246944976531a4b4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
