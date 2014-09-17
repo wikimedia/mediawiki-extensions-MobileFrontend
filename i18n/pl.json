@@ -89,6 +89,7 @@
 	"mobile-frontend-editor-success-landmark-1": "Gratulacje, od teraz jesteś edytorem {{GRAMMAR:D.lp|{{SITENAME}}}}!",
 	"mobile-frontend-editor-success-new-page": "Gratulacje, stworzyłeś nową stronę!",
 	"mobile-frontend-editor-summary-placeholder": "Na przykład: poprawiona literówka, poszerzono treść",
+	"mobile-frontend-editor-summary": "Podsumowanie:",
 	"mobile-frontend-editor-switch-confirm": "Musisz zapisać zmiany przed przejściem do innego trybu edycji.",
 	"mobile-frontend-editor-switch-editor": "Przełącz edytor",
 	"mobile-frontend-editor-tutorial-cancel": "Nie, dziękuję",
