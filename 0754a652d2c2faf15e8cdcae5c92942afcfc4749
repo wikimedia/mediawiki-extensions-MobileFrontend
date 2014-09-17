@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_a9c13d85",
+        "filename": "templates/page.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-17T22:01:03Z",
+      "side": 0,
+      "message": "Removing this stops the geonotahack icon rendering after an edit when pages are reloaded via ajax.\n\nCan you remove that code as well, since that is also something we want to kill? https://trello.com/c/NdTdZdxI",
+      "revId": "0754a652d2c2faf15e8cdcae5c92942afcfc4749",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
