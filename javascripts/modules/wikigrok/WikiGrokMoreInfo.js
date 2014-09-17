@@ -1,5 +1,5 @@
 ( function( M ) {
-	M.assertMode( [ 'alpha' ] );
+	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Overlay = M.require( 'Overlay' ),
 		WikiGrokMoreInfo;

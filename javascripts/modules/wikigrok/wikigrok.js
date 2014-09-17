@@ -13,7 +13,7 @@
 	}
 
 	// Only run in alpha mode
-	M.assertMode( [ 'alpha' ] );
+	M.assertMode( [ 'beta', 'alpha' ] );
 
 	if (
 		// WikiGrok is enabled
@@ -34,6 +34,6 @@
 		M.supportsLocalStorage &&
 		!localStorage.getItem( 'mfHideWikiGrok' )
 	) {
-		mw.loader.load( 'mobile.wikigrok' );
+		mw.loader.load( 'mobile.wikigrok.dialog' );
 	}
 }( mw.mobileFrontend ) );

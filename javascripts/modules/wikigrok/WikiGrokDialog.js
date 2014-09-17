@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	M.assertMode( [ 'alpha' ] );
+	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Panel = M.require( 'Panel' ),
 		WikiGrokDialog;

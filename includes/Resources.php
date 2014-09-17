@@ -455,6 +455,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable',
 			'mobile.beta.common',
 			'mobile.overlays',
+			'mobile.wikigrok',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
@@ -570,6 +571,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-translator.js',
+		),
+	),
+
+	'mobile.wikigrok' => $wgMFMobileResourceBoilerplate + array(
+		'scripts' => array(
 			'javascripts/modules/wikigrok/wikigrok.js',
 		),
 	),
@@ -910,7 +916,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	// See https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok
-	'mobile.wikigrok' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.wikigrok.dialog' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.alpha',
 		),
