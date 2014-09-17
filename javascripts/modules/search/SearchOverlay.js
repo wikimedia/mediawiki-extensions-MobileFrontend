@@ -11,6 +11,7 @@
 		className: 'overlay search-overlay',
 		template: M.template.get( 'modules/search/SearchOverlay.hogan' ),
 		defaults: {
+			searchTerm: '',
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
 			clearMsg: mw.msg( 'mobile-frontend-clear-search' ),
 			searchContentMsg: mw.msg( 'mobile-frontend-search-content' ),
@@ -94,8 +95,13 @@
 		},
 
 		show: function() {
+			var len = this.$input.val().length;
 			this._super();
 			this.$input.focus();
+			// Cursor to the end of the input
+			if ( this.$input[0].setSelectionRange ) {
+				this.$input[0].setSelectionRange( len, len );
+			}
 		},
 
 		performSearch: function() {

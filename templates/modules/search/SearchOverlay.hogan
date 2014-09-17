@@ -5,7 +5,7 @@
 		</ul>
 		<div class="overlay-search">
 			<form method="get" action="{{action}}">
-				<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}">
+				<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" value="{{searchTerm}}">
 			</form>
 		</div>
 		<ul>
