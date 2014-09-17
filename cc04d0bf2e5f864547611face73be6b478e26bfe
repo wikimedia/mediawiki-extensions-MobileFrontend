@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_41a214fb",
+        "filename": "tests/browser/features/step_definitions/editor_ve_steps.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2014-09-17T18:34:37Z",
+      "side": 1,
+      "message": "Missing spaces around the assignment operator.",
+      "revId": "cc04d0bf2e5f864547611face73be6b478e26bfe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
