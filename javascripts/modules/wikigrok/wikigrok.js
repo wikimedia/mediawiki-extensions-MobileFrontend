@@ -15,15 +15,22 @@
 	// Only run in alpha mode
 	M.assertMode( [ 'alpha' ] );
 
-	// Only load if WikiGrok is enabled, Wikibase is active, we're not on the Main Page,
-	// we're in 'view' mode, we're in Main namespace, the browser supports localStorage,
-	// and the user has not opted out of WikiGrok previously.
-	if ( mw.config.get( 'wgMFEnableWikiGrok' ) &&
+	if (
+		// WikiGrok is enabled
+		mw.config.get( 'wgMFEnableWikiGrok' ) &&
+		// User is logged in
 		!mw.user.isAnon() &&
+		// We're not on the Main Page
 		!mw.config.get( 'wgIsMainPage' ) &&
+		// We're not on a tablet
+		!M.isWideScreen() &&
+		// We're in 'view' mode
 		mw.config.get( 'wgAction' ) === 'view' &&
+		// Wikibase is active and this page has an item ID
 		wikidataID &&
+		// We're in Main namespace,
 		mw.config.get( 'wgNamespaceNumber' ) === 0 &&
+		// The user has not opted out of WikiGrok previously
 		M.supportsLocalStorage &&
 		!localStorage.getItem( 'mfHideWikiGrok' )
 	) {
