@@ -2,6 +2,7 @@
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Panel = M.require( 'Panel' ),
+		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
 		WikiGrokDialog;
 
 	/**
@@ -31,6 +32,14 @@
 			noticeMsg: '<a class="wg-notice-link" href="#/moreinfo">Tell me more</a>'
 		},
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
+
+		log: function( action ) {
+			var data = {
+				action: action,
+				version: 'version a'
+			};
+			schema.log( data );
+		},
 
 		askWikidataQuestion: function( options ) {
 			var self = this;
@@ -166,20 +175,25 @@
 				// ...for intermediate 'Question' step
 				} else if ( options.beginQuestions ) {
 					this.$( '.wg-buttons .yes' ).on( 'click', function() {
+						self.log( 'success' );
 						options.claimIsCorrect = 1;
 						self.recordClaim( options );
 					} );
 					this.$( '.wg-buttons .not-sure' ).on( 'click', function() {
+						self.log( 'notsure' );
 						self.thankUser( options, false );
 					} );
 					this.$( '.wg-buttons .no' ).on( 'click', function() {
+						self.log( 'success' );
 						options.claimIsCorrect = 0;
 						self.recordClaim( options );
 					} );
 				// ...for initial 'Intro' step
 				} else {
+					this.log( 'view' );
 					this.$( '.wg-buttons .cancel' ).on( 'click', function() {
 						self.hide();
+						self.log( 'nothanks' );
 						// Set a localStorage value to keep WikiGrok hidden for this user.
 						// We test for locaStorage support in wikigrok.js.
 						// Older browsers can only store strings in localStorage (not
@@ -187,12 +201,14 @@
 						localStorage.setItem( 'mfHideWikiGrok', 'true' );
 					} );
 					this.$( '.wg-buttons .proceed' ).on( 'click', function() {
+						self.log( 'attempt' );
 						// Proceed with asking the user a metadata question.
 						self.askWikidataQuestion( options );
 					} );
 					// Make OverlayManager handle '#/moreinfo' links. We only need to do
 					// this once.
 					M.overlayManager.add( /^\/moreinfo$/, function() {
+						self.log( 'moreinfo' );
 						// Load the More Info overlay when the link is clicked.
 						return new WikiGrokMoreInfo();
 					} );

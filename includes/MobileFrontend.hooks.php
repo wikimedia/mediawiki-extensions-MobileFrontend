@@ -816,6 +816,10 @@ class MobileFrontendHooks {
 				'schema' => 'MobileWebClickTracking',
 				'revision' => 5929948,
 			),
+			'schema.MobileWebWikiGrok' => array(
+				'schema' => 'MobileWebWikiGrok',
+				'revision' => 9913839,
+			),
 		);
 
 		$scripts = array(
