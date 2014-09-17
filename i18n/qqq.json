@@ -306,6 +306,7 @@
 	"mobile-frontend-talk-reply-info": "Inform the user their talk reply will be automatically signed.",
 	"mobile-frontend-talk-reply-success": "Toast message when you have saved a reply successfully.",
 	"mobile-frontend-talk-topic-feedback": "Feedback when a topic has been added to talk page.",
+	"mobile-frontend-talk-topic-error": "Error message when topic could not be added. $1 - contains error details",
 	"mobile-frontend-terms-text": "\"Terms of use\" link text at the bottom of every page.\n{{Identical|Terms of use}}",
 	"mobile-frontend-terms-url": "Terms of use URL. Do not localise",
 	"mobile-frontend-thanked-notice": "{{doc-singularthey}}\nPop-up message that is displayed after a user has thanked another user for their edit.\n\nParameters:\n* $1 - the username of the user that was thanked\n* $2 - the gender of the user that was thanked",

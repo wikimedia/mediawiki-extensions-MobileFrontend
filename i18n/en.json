@@ -280,6 +280,7 @@
     "mobile-frontend-talk-reply-info": "Note your reply will be automatically signed with your username.",
     "mobile-frontend-talk-reply-success": "Your reply was successfully saved to the talk page.",
     "mobile-frontend-talk-topic-feedback": "New topic added to talk page!",
+    "mobile-frontend-talk-topic-error": "The topic can't be added. Error: $1",
     "mobile-frontend-terms-text": "Terms of Use",
     "mobile-frontend-terms-url": "",
     "mobile-frontend-thanked-notice": "$1 was told that you liked {{GENDER:$2|his|her|their}} edit.",

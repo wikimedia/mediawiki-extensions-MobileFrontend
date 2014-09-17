@@ -1,12 +1,17 @@
-<div class="board">
-	<p class="content-header">{{explanation}}<br>
-		<button class="add mw-ui-button mw-ui-progressive">{{addTopicLabel}}</button>
-	</p>
-	<ul class="page-list actionable">
-		<li class="lead-discussion">
-			<a data-id="0">{{leadHeading}}</a>
-		</li>
-	</ul>
+<div class="overlay-header-container position-fixed">
+	{{>header}}
 </div>
-<div class="spinner loading"></div>
+
+<div class="overlay-content">
+	<div class="board">
+		<p class="content-header">
+			{{explanation}}
+		</p>
+		<ul class="page-list actionable">
+			<li class="lead-discussion">
+				<a data-id="0">{{leadHeading}}</a>
+			</li>
+		</ul>
+	</div>
+	<div class="spinner loading"></div>
 </div>

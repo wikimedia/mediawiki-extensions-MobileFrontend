@@ -7,20 +7,28 @@
 		TalkSectionAddOverlay = M.require( 'modules/talk/TalkSectionAddOverlay' ),
 		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
 		user = M.require( 'user' ),
+		/**
+		 * @extends Overlay
+		 * @class TalkOverlay
+		 */
 		TalkOverlay = Overlay.extend( {
+			template: M.template.get( 'modules/talk/talk.hogan' ),
 			templatePartials: {
-				content: M.template.get( 'modules/talk/talk.hogan' )
+				header: M.template.get( 'modules/talk/talkHeader.hogan' )
 			},
 			defaults: {
 				addTopicLabel: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
 			},
+
 			postRender: function( options ) {
 				this._super( options );
 				this.$board = this.$( '.board' );
 				this._loadContent( options );
+				this._showHidden( '.initial-header' );
 			},
+
 			/**
 			 * Show a loading spinner
 			 * @method
@@ -62,7 +70,7 @@
 						window.location = mw.util.getUrl( options.title );
 					}
 				} ).done( function( pageData ) {
-					self._addContent( pageData );
+					self._addContent( pageData, options );
 				} );
 			},
 
@@ -70,14 +78,12 @@
 			 * Adds the content received from _loadContent to the Overlay
 			 * @method
 			 */
-			_addContent: function( pageData ) {
+			_addContent: function( pageData, options ) {
 				var $add = this.$( 'button.add' ), page, sections, self = this;
 				// API request was successful so show the talk page content
 				page = new Page( pageData );
-				// used for TalkSectionOverlay to access page sections
+				// FIXME: just for tests
 				this.page = page;
-
-				this.$content = this.$( '.overlay-content' );
 
 				// clear actual content, if any
 				this.$( '.page-list.actionable' ).empty().prepend(
@@ -88,7 +94,7 @@
 				sections = page.getSubSections();
 
 				// Add content header explanation
-				this.$( '.content-header' ).prepend(
+				this.$( '.content-header' ).text(
 					sections.length > 0 ? mw.msg( 'mobile-frontend-talk-explained' ) :
 					mw.msg( 'mobile-frontend-talk-explained-empty' )
 				);
@@ -105,19 +111,24 @@
 				// content is there, hide the spinner
 				this.clearSpinner();
 
-				// FIXME: Make the add button work again. bug 69763
-				$add.remove();
 				if ( !user.isAnon() ) {
+					$add.removeClass( 'hidden' );
 					$add.click( function() {
 						var overlay = new TalkSectionAddOverlay( {
-							parent: self,
 							title: page.title
 						} );
 						overlay.show();
-						overlay.on( 'hide', function() {
+						overlay.on( 'talk-discussion-added', function() {
+							// reload the content
+							self._loadContent( options );
+						} ).on( 'hide', function() {
 							// re-enable TalkOverlay (it's closed by hide event (in Overlay)
 							// from TalkSectionAddOverlay)
 							self.show();
+						} );
+						// When closing this overlay, also close the child section overlay
+						self.on( 'hide', function() {
+							overlay.remove();
 						} );
 					} );
 				} else {

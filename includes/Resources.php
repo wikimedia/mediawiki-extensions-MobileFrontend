@@ -503,6 +503,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			// talk.js
 			'modules/talk/talk.hogan',
+			'modules/talk/talkHeader.hogan',
 			'modules/talk/talkSectionAdd.hogan',
 			'modules/talk/talkSectionAddHeader.hogan',
 			'modules/talk/talkSection.hogan',
@@ -520,8 +521,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-reply',
 			'mobile-frontend-talk-reply-info',
 			'mobile-frontend-talk-topic-feedback',
+			'mobile-frontend-talk-topic-error',
 			// @todo FIXME: Gets loaded twice if editor and talk both loaded.
 			'mobile-frontend-editor-cancel',
+			'mobile-frontend-editor-cancel-confirm',
 			'mobile-frontend-editor-licensing',
 			'mobile-frontend-editor-licensing-with-terms',
 		),
