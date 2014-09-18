@@ -53,11 +53,29 @@
 							self.hide();
 						}
 					} ).fail( function( error ) {
+						var editMsg = 'mobile-frontend-talk-topic-error';
+
 						self.confirm.prop( 'disabled', false );
-						toast.show(
-							mw.msg( 'mobile-frontend-talk-topic-error', error.details ),
-							'toast error'
-						);
+						switch ( error.details ) {
+							case "protectedpage":
+								editMsg = 'mobile-frontend-talk-topic-error-protected';
+								break;
+							case "noedit":
+							case "blocked":
+								editMsg = 'mobile-frontend-talk-topic-error-permission';
+								break;
+							case "spamdetected":
+								editMsg = 'mobile-frontend-talk-topic-error-spam';
+								break;
+							case "badtoken":
+								editMsg = 'mobile-frontend-talk-topic-error-badtoken';
+								break;
+							default:
+								editMsg = 'mobile-frontend-talk-topic-error';
+								break;
+						}
+
+						toast.show( mw.msg( editMsg ), 'toast error' );
 					} );
 				}
 			} );

@@ -1,17 +1,11 @@
-<div class="overlay-header-container position-fixed">
-	{{>header}}
+<div class="board">
+	<p class="content-header">
+		{{explanation}}
+	</p>
+	<ul class="page-list actionable">
+		<li class="lead-discussion">
+			<a data-id="0">{{leadHeading}}</a>
+		</li>
+	</ul>
 </div>
-
-<div class="overlay-content">
-	<div class="board">
-		<p class="content-header">
-			{{explanation}}
-		</p>
-		<ul class="page-list actionable">
-			<li class="lead-discussion">
-				<a data-id="0">{{leadHeading}}</a>
-			</li>
-		</ul>
-	</div>
-	<div class="spinner loading"></div>
-</div>
+<div class="spinner loading"></div>

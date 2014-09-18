@@ -492,6 +492,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-reply-info',
 			'mobile-frontend-talk-topic-feedback',
 			'mobile-frontend-talk-topic-error',
+			'mobile-frontend-talk-topic-error-protected',
+			'mobile-frontend-talk-topic-error-permission',
+			'mobile-frontend-talk-topic-error-spam',
+			'mobile-frontend-talk-topic-error-badtoken',
 			// @todo FIXME: Gets loaded twice if editor and talk both loaded.
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-cancel-confirm',
