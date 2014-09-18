@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_43b29a93",
+        "filename": "i18n/en.json",
+        "patchSetId": 14
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T17:49:13Z",
+      "side": 1,
+      "message": "Don\u0027t surface error codes to users :)\ne.g. The topic can\u0027t be added. Error: badtoken doesn\u0027t make sense to anyone non-technical.\n\nActions for follow up patch:\ne.g. remove the $1, simply say something user friendly like \"An error occurred\". For bonus points, describe it in a way they understand e.g. there was something wrong on the server. Try refreshing your browser...\n\nThe error details is useful but only from a server side perspective. It might be time to setup some EventLogging for errors from the talk overlay (or some generic error event logging)\n\nSee https://www.mediawiki.org/wiki/Extension:EventLogging/Programming\n\nThis patch does more good than bad though hence my +2 :)",
+      "revId": "6f6b5fe2dbe69c67c7502a15494db8bc4c32e0f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_beea8d03",
+        "filename": "templates/modules/talk/talk.hogan",
+        "patchSetId": 14
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T17:49:13Z",
+      "side": 1,
+      "message": "Would be great if we could reuse Overlay.hogan a little more.",
+      "revId": "6f6b5fe2dbe69c67c7502a15494db8bc4c32e0f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_c3a56a45",
+        "filename": "templates/modules/talk/talk.hogan",
+        "patchSetId": 14
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T17:49:13Z",
+      "side": 1,
+      "message": "Could you not just use the default Overlay.hogan file and use {{content}}  here?",
+      "revId": "6f6b5fe2dbe69c67c7502a15494db8bc4c32e0f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
