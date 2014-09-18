@@ -16,6 +16,24 @@
       "revId": "1ad586eed04aa0881817d1b1193400caaec13aca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_8f49d9d5",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-18T05:38:23Z",
+      "side": 1,
+      "message": "Sounds good, for a follow up :)",
+      "parentUuid": "0e5e732b_ca60e3ce",
+      "revId": "1ad586eed04aa0881817d1b1193400caaec13aca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
