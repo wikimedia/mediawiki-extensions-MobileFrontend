@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_d5f75f55",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "spelling",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_b5062b22",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "location is no longer defined.\nJSHint doesn\u0027t complain about it as location is also on window :/",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_759673f5",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "You don\u0027t need to define useCurrentLocation here, it can be defined below and left undefined until then.",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_35a0fb3d",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "indent comment",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_3576bbd6",
+        "filename": "tests/qunit/modules/nearby/test_Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "There is another setup function below that needs to be changed in a similar way.",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_88fb0a11",
+        "filename": "tests/qunit/modules/nearby/test_Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "This needs to be updated to reflect the signature of getPagesAroundPoint",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_6800d604",
+        "filename": "tests/qunit/modules/nearby/test_Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "likewise",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_280ade24",
+        "filename": "tests/qunit/modules/nearby/test_Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "likewise",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_157bb7be",
+        "filename": "tests/qunit/modules/nearby/test_NearbyApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-18T21:09:08Z",
+      "side": 1,
+      "message": "Don\u0027t change this.",
+      "revId": "7e7d94c887dfcb6c50aa80719cec9af6b50dab59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
