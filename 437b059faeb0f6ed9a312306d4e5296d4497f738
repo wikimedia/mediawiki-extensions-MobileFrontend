@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee62ffec_6f9105fb",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-18T10:01:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e5e732b_8a430b43",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e5e732b_6a70d7a3",
         "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
         "patchSetId": 12
@@ -30,6 +48,24 @@
       "writtenOn": "2014-09-17T21:36:44Z",
       "side": 1,
       "message": "Please document saveHit\nIt looks like this should be an internal property and prefixed with a _ as it is private.\nSet in initalize\ne.g.\nthis._saveHit \u003d false;",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_4fef6183",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-18T10:01:04Z",
+      "side": 1,
+      "message": "Correct -\u003e Done.",
+      "parentUuid": "0e5e732b_6a70d7a3",
       "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee62ffec_8ff43952",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-18T10:01:04Z",
+      "side": 1,
+      "message": "saveHit: I added a (i think to long) description into the next ps, in the hope it\u0027s much clearer then :)\n\nWith _super: This will cause the problem described in bug 67442, so i used the \"solution\" of TalkOverlay (https://gerrit.wikimedia.org/r/#/c/160565/2/javascripts/modules/talk/TalkSectionOverlay.js) as a workaround. But you\u0027re right, not the best :/ Will change this in next PS.",
+      "parentUuid": "0e5e732b_4a751392",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e5e732b_2a6adfb1",
         "filename": "templates/modules/talk/talk.hogan",
         "patchSetId": 12
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "ee62ffec_afa5bd45",
+        "filename": "templates/modules/talk/talk.hogan",
+        "patchSetId": 12
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-18T10:01:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e5e732b_2a6adfb1",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e5e732b_0a6f1bc2",
         "filename": "tests/qunit/modules/talk/test_TalkSectionAddOverlay.js",
         "patchSetId": 12
@@ -81,6 +153,24 @@
       "writtenOn": "2014-09-17T21:36:44Z",
       "side": 1,
       "message": "\\o/ :D :D :D makes me so happy.",
+      "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_4f9641f5",
+        "filename": "tests/qunit/modules/talk/test_TalkSectionAddOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-18T10:01:04Z",
+      "side": 1,
+      "message": "Yeah :D",
+      "parentUuid": "0e5e732b_0a6f1bc2",
       "revId": "437b059faeb0f6ed9a312306d4e5296d4497f738",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
