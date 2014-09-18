@@ -290,6 +290,7 @@
 	"mobile-frontend-talk-reply-info": "Deine Antwort wird automatisch mit deinem Benutzernamen signiert.",
 	"mobile-frontend-talk-reply-success": "Deine Antwort wurde erfolgreich auf der Diskussionsseite gespeichert.",
 	"mobile-frontend-talk-topic-feedback": "Es wurde ein neues Thema der Diskussionsseite hinzugefügt!",
+	"mobile-frontend-talk-topic-error": "Das Thema konnte nicht hinzugefügt werden. Fehler: $1",
 	"mobile-frontend-terms-text": "Nutzungsbedingungen",
 	"mobile-frontend-thanked-notice": "$1 wurde gesagt, dass du {{GENDER:$2|seine|ihre|die}} Bearbeitung magst.",
 	"mobile-frontend-user-account": "Benutzerkonto",
