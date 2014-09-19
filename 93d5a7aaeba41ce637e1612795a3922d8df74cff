@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_77dc334c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 826,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-19T18:10:25Z",
+      "side": 1,
+      "message": "I guess we can remove this now?\nNo point in using event logging if we don\u0027t have the feature any more...",
+      "revId": "93d5a7aaeba41ce637e1612795a3922d8df74cff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
