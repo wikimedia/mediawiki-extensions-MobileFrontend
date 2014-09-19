@@ -32,7 +32,7 @@
 			} );
 
 			if ( user.isAnon() ) {
-				this._super( options );
+				_super.call( self, options );
 			} else if ( options.isWatched === undefined ) {
 				api.load( page.getId() ).done( function() {
 					options.isWatched = api.isWatchedPage( page );
