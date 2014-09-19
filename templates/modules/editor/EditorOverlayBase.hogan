@@ -11,7 +11,7 @@
 	</div>
 	<div class="overlay-header saving-header hideable hidden">
 		<ul>
-			<li><button class="cancel icon icon-cancel" disabled>{{closeMsg}}</button></li>
+			<li>{{>cancelButton}}</li>
 		</ul>
 		<div class="overlay-title">
 			<h2>{{{waitMsg}}}</h2>

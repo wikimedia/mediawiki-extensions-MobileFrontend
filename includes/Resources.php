@@ -583,6 +583,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-overlay-continue',
 		),
 		'templates' => array(
+			'cancelButton.hogan',
 			'Overlay.hogan',
 			'LoadingOverlay.hogan',
 		),

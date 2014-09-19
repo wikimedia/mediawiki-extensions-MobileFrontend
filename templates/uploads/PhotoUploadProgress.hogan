@@ -1,7 +1,7 @@
 <div class="overlay-header-container visible position-fixed">
 	<div class="overlay-header progress-header hideable">
 		<ul>
-			<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
+			<li>{{>cancelButton}}</li>
 		</ul>
 		<div>
 			<h2 class="uploading">{{{uploadingMsg}}}</h2>
