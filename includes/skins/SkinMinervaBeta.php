@@ -77,7 +77,6 @@ class SkinMinervaBeta extends SkinMinerva {
 			$modules['talk'] = array( 'mobile.talk' );
 		}
 		$modules['beta'] = array( 'mobile.beta' );
-		$modules['beta'][] = 'mobile.geonotahack';
 		wfRunHooks( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 		return $modules;
 	}

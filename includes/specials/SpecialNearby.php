@@ -31,15 +31,8 @@ class SpecialNearby extends MobileSpecialPage {
 
 		// set config
 		$output->addJsConfigVars( 'wgMFNearbyRange', $wgMFNearbyRange );
-
-		// add previews to mobile only
-		$ctx = MobileContext::singleton();
-		if ( $ctx->shouldDisplayMobileView() && $ctx->isBetaGroupMember() ) {
-			$output->addModules( 'mobile.special.nearby.beta' );
-		} else {
-			// Only the Minerva skin loads this module so make sure we load it for desktop
-			$output->addModuleStyles( 'mobile.pagelist.styles' );
-		}
+		// Only the Minerva skin loads this module so make sure we load it for desktop
+		$output->addModuleStyles( 'mobile.pagelist.styles' );
 
 		$output->setPageTitle( wfMessage( 'mobile-frontend-nearby-title' )->escaped() );
 

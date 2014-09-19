@@ -35,19 +35,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'targets' => array( 'mobile', 'desktop' ),
 	),
 
-	// @todo FIXME: Remove need for this module
-	// Mobile Bridge - Tweaks the desktop UI so mobile code can run on it
-	'mobile.bridge' => $wgMFMobileResourceBoilerplate + array(
-		'skinStyles' => array(
-			'vector' => array(
-				'less/desktop/mobileBridge.less',
-			),
-		),
-		'scripts' => array(
-			'javascripts/desktop/mobileBridge.js',
-		),
-	),
-
 	'mobile.file.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'scripts' => array(
@@ -131,7 +118,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'skins.minerva.chrome.styles.beta' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/uiNew.less',
-			'less/common/secondaryPageActions.less',
 		),
 		'position' => 'top',
 	),
@@ -414,22 +400,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 			'mobile.templates',
 		),
-	),
-
-	'mobile.geonotahack' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.loggingSchemas',
-			// Needs LoadingOverlay
-			'mobile.stable.common',
-			'mobile.overlays',
-		),
-		'messages' => array(
-			'mobile-frontend-geonotahack',
-		),
-		'scripts' => array(
-			'javascripts/modules/nearbypages.js',
-		)
 	),
 
 	'mobile.talk' => $wgMFMobileResourceBoilerplate + array(
@@ -1023,31 +993,6 @@ $wgMobileSpecialPageModules = array(
 			'vector' => 'less/desktop/special/nearby.less',
 			'monobook' => 'less/desktop/special/nearby.less',
 		),
-	),
-
-	// @todo FIXME: Merge with mobile.nearby when geonotahack moves to  stable
-	'mobile.special.nearby.beta' => $wgMFMobileResourceBoilerplate + array(
-		'messages' => array(
-			// NearbyOverlay.js
-			'mobile-frontend-nearby-to-page',
-			'mobile-frontend-nearby-title',
-
-			// PagePreviewOverlay
-			'mobile-frontend-nearby-directions',
-			'mobile-frontend-nearby-link',
-		),
-		'templates' => array(
-			'overlays/nearby.hogan',
-		),
-		'dependencies' => array(
-			'mobile.stable.common',
-			'mobile.nearby',
-			'mobile.beta.common',
-		),
-		'scripts' => array(
-			'javascripts/modules/nearby/PagePreviewOverlay.js',
-			'javascripts/modules/nearby/NearbyOverlay.js',
-		)
 	),
 
 	'mobile.special.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
