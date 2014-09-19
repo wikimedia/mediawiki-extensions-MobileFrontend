@@ -139,7 +139,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'ext.mantle.oo',
 		),
 		'scripts' => array(
-			'javascripts/common/modules.js',
+			'javascripts/common/modes.js',
 			'javascripts/common/mainmenu.js',
 			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/lastEdited/lastEdited.js',
