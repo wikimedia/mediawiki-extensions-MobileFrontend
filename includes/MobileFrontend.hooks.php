@@ -873,4 +873,15 @@ class MobileFrontendHooks {
 		}
 		return true;
 	}
+
+	/**
+	 * HTMLFileCache::useFileCache hook handler
+	 * Disables file caching for mobile pageviews
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/HTMLFileCache::useFileCache
+	 *
+	 * @return bool
+	 */
+	public static function onHTMLFileCache_useFileCache() {
+		return !MobileContext::singleton()->shouldDisplayMobileView();
+	}
 }
