@@ -339,7 +339,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.editor.api',
 		),
 		'scripts' => array(
-			'javascripts/loggingSchemas/mobileWebUploads.js',
 			'javascripts/modules/uploads/PhotoApi.js',
 			'javascripts/modules/uploads/LeadPhoto.js',
 			'javascripts/modules/uploads/UploadTutorial.js',
@@ -901,7 +900,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/wikigrok/wikigrokeval.js',
 			'javascripts/modules/wikigrok/WikiGrokDialog.js',
 			'javascripts/modules/wikigrok/WikiGrokMoreInfo.js',
-			'javascripts/loggingSchemas/mobileWebWikiGrok.js',
 		),
 		'styles' => array(
 			'less/modules/wikigrok/WikiGrokDialog.less',

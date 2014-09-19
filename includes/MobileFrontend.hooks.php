@@ -796,8 +796,10 @@ class MobileFrontendHooks {
 		);
 
 		$scripts = array(
+			'javascripts/loggingSchemas/mobileWebUploads.js',
 			'javascripts/loggingSchemas/mobileWebEditing.js',
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
+			'javascripts/loggingSchemas/mobileWebWikiGrok.js',
 		);
 		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
 			foreach ( $mobileEventLoggingSchemas as $module => $properties ) {
