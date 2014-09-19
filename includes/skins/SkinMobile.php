@@ -193,7 +193,7 @@ class SkinMobile extends SkinMinerva {
 		$bottomScripts = Html::inlineScript(
 			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
 		);
-		$bottomScripts .= $out->getBottomScripts();
+		$bottomScripts .= $this->bottomScripts();
 		$tpl->set( 'bottomscripts', $bottomScripts );
 
 		wfProfileOut( __METHOD__ );
