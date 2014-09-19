@@ -94,7 +94,7 @@
 		 * for inserting images in a page.
 		 */
 		initialize: function( options ) {
-			this._super();
+			Api.prototype.initialize.apply( this, arguments );
 			options = options || {};
 			this.editorApi = options.editorApi;
 		},

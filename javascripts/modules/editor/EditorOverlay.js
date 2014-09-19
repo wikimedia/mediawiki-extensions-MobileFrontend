@@ -39,7 +39,7 @@
 			} else {
 				options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
 			}
-			this._super( options );
+			EditorOverlayBase.prototype.initialize.apply( this, arguments );
 			if ( isVisualEditorEnabled ) {
 				this.initializeSwitcher();
 			}
@@ -47,7 +47,7 @@
 
 		postRender: function( options ) {
 			var self = this;
-			this._super( options );
+			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( '.wikitext-editor' ).
@@ -152,7 +152,7 @@
 				self.$preview.show();
 			} );
 
-			this._super();
+			EditorOverlayBase.prototype._prepareForSave.apply( this, arguments );
 		},
 
 		_hidePreview: function() {
@@ -231,7 +231,7 @@
 			if ( self.sectionLine !== '' ) {
 				options.summary = '/* ' + self.sectionLine + ' */' + options.summary;
 			}
-			this._super();
+			EditorOverlayBase.prototype._save.apply( this, arguments );
 			if ( this.confirmAborted ) {
 				return;
 			}

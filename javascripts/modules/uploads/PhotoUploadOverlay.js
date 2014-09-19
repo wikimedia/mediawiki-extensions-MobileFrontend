@@ -82,7 +82,7 @@
 				);
 			}
 
-			this._super( options );
+			Overlay.prototype.initialize.apply( this, arguments );
 		},
 
 		_save: function() {
@@ -157,7 +157,7 @@
 		postRender: function() {
 			var self = this, $submitButton;
 
-			this._super();
+			Overlay.prototype.initialize.apply( this, arguments );
 
 			$submitButton = this.$( '.submit' ).
 				prop( 'disabled', true ).
@@ -185,7 +185,7 @@
 		show: function() {
 			var self = this;
 
-			this._super();
+			Overlay.prototype.show.apply( this, arguments );
 
 			if ( this.file ) {
 				EXIF.getData( this.file, function() {
@@ -202,13 +202,14 @@
 		},
 
 		hide: function( force ) {
+			var _super = Overlay.prototype.hide;
 			// In the case of a missing file force close
 			if ( force || !this.file ) {
-				return this._super();
+				return _super.apply( this, arguments );
 			} else if ( window.confirm( mw.msg( 'mobile-frontend-image-cancel-confirm' ) ) ) {
 				this.emit( 'cancel' );
 				this.log( { action: 'previewCancel' } );
-				return this._super();
+				return _super.apply( this, arguments );
 			} else {
 				return false;
 			}

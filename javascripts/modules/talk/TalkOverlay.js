@@ -23,7 +23,7 @@
 			},
 
 			postRender: function( options ) {
-				this._super( options );
+				Overlay.prototype.postRender.apply( this, arguments );
 				this.$board = this.$( '.board' );
 				this._loadContent( options );
 				this._showHidden( '.initial-header' );

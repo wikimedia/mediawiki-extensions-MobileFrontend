@@ -27,7 +27,7 @@
 			$.each( options.children || [], function() {
 				self.children.push( new Section( this ) );
 			} );
-			this._super( options );
+			View.prototype.initialize.apply( self, arguments );
 		}
 	} );
 	M.define( 'Section', Section );

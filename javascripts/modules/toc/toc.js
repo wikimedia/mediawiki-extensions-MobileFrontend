@@ -13,9 +13,9 @@
 		tagName: 'div',
 		className: 'toc-mobile',
 		template: M.template.get( 'modules/toc/toc.hogan' ),
-		postRender: function( options ) {
+		postRender: function() {
 			var log = MobileWebClickTracking.log;
-			this._super( options );
+			View.prototype.postRender.apply( this, arguments );
 			// Click tracking for table of contents so we can see if people interact with it
 			this.$( 'h2' ).on( toggle.eventName, function() {
 				log( 'page-toc-toggle' );

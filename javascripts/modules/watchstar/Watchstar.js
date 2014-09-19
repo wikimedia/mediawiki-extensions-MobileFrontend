@@ -20,7 +20,7 @@
 		className: 'icon icon-32px watch-this-article',
 		template: M.template.compile( '<a>', 'hogan' ),
 		initialize: function( options ) {
-			var self = this, _super = this._super,
+			var self = this, _super = View.prototype.initialize,
 				page = options.page;
 
 			this.drawer = new CtaDrawer( {
@@ -40,7 +40,7 @@
 				} );
 			} else {
 				api.setWatchedPage( options.page, options.isWatched );
-				this._super( options );
+				_super.call( self, options );
 			}
 		},
 		postRender: function( options ) {

@@ -33,8 +33,8 @@ var Drawer = M.require( 'Drawer' ),
 			if ( self.$( '.edit-anon' ) ) {
 				self.$( '.edit-anon' ).click( $.proxy( self, 'hide' ) );
 			}
-			self._super();
-		},
+			Drawer.prototype.postRender.apply( self, arguments );
+		}
 	} );
 
 M.define( 'CtaDrawer', CtaDrawer );

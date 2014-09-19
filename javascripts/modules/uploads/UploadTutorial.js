@@ -50,7 +50,7 @@
 
 			this._showCurrentPage();
 
-			this._super( options );
+			Overlay.prototype.postRender.apply( this, arguments );
 		},
 
 		_showCurrentPage: function() {

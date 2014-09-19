@@ -23,7 +23,7 @@
 
 		initialize: function( options ) {
 			var self = this;
-			this._super( options );
+			Overlay.prototype.initialize.call( this, options );
 			this.api = new SearchApi();
 
 			// FIXME: horrible, remove when we get overlay manager
@@ -45,7 +45,7 @@
 			// displayed.
 			this.$( '.overlay-header-container' ).css( 'top', $( '.header' ).offset().top );
 
-			this._super( options );
+			Overlay.prototype.postRender.call( this, options );
 
 			this.$input = this.$( 'input' ).on( 'input', function() {
 				// Make sure search header is docked to the top of the screen when the
@@ -96,7 +96,7 @@
 
 		show: function() {
 			var len = this.$input.val().length;
-			this._super();
+			Overlay.prototype.show.apply( this, arguments );
 			this.$input.focus();
 			// Cursor to the end of the input
 			if ( this.$input[0].setSelectionRange ) {

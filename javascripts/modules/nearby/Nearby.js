@@ -56,7 +56,8 @@
 			return result;
 		},
 		initialize: function( options ) {
-			var self = this, _super = this._super;
+			var self = this,
+				_super = PageList.prototype.initialize;
 
 			options.loadingMessage = mw.msg( 'mobile-frontend-nearby-loading' );
 
@@ -95,7 +96,7 @@
 
 			// Run it once for loader etc
 			this._isLoading = true;
-			this._super( options );
+			_super.apply( this, arguments );
 		},
 		_find: function( options ) {
 			var result = $.Deferred(), self = this;
@@ -121,11 +122,11 @@
 			}
 			return result;
 		},
-		postRender: function( options ) {
+		postRender: function() {
 			if ( !this._isLoading ) {
 				this.$( '.loading' ).hide();
 			}
-			this._super( options );
+			PageList.prototype.postRender.apply( this, arguments );
 			this._postRenderLinks();
 		},
 		_postRenderLinks: function() {

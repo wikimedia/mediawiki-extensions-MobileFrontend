@@ -32,7 +32,7 @@
 					mw.config.get( 'wgMFLicenseLink' )
 				);
 			}
-			this._super( options );
+			Overlay.prototype.initialize.apply( this, arguments );
 			this.title = options.title;
 			// Variable to indicate, if the overlay will be closed by the save function or by the user. If this is false and there is content in the input fields,
 			// the user will be asked, if he want to abandon his changes before we close the Overlay, otherwise the Overlay will be closed without any question.
@@ -40,7 +40,7 @@
 		},
 		postRender: function( options ) {
 			var self = this;
-			this._super( options );
+			Overlay.prototype.postRender.call( this, options );
 			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( self, 'hide' ) );
 			this.confirm = this.$( 'button.confirm-save' );
 			this.confirm.on( 'click', function() {
@@ -66,7 +66,7 @@
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' ), empty;
 			empty = ( !this.$( '.summary' ).val() && !this.$( '.wikitext-editor' ).val() );
 			if ( this._saveHit || empty || window.confirm( confirmMessage ) ) {
-				return this._super();
+				return Overlay.prototype.hide.apply( this, arguments );
 			} else {
 				return false;
 			}

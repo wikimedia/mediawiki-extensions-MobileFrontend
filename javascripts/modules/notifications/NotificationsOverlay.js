@@ -28,7 +28,7 @@
 			},
 			initialize: function( options ) {
 				var self = this;
-				this._super( options );
+				Overlay.prototype.initialize.apply( this, options );
 				// Anchor tag that corresponds to a notifications badge
 				this.$badge = options.$badge;
 				// On error use the url as a fallback
@@ -96,7 +96,7 @@
 				options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
 			},
 			postRender: function( options ) {
-				this._super( options );
+				Overlay.prototype.postRender.apply( this, options );
 
 				if ( options.notifications || options.errorMessage ) {
 					this.$( '.loading' ).remove();

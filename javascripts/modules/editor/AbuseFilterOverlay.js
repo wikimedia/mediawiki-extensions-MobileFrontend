@@ -10,7 +10,7 @@
 		className: 'overlay abusefilter-overlay',
 
 		postRender: function () {
-			this._super();
+			Overlay.prototype.postRender.apply( this, arguments );
 			// make links open in separate tabs
 			this.$( 'a' ).attr( 'target', '_blank' );
 		}
