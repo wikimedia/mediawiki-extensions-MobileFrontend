@@ -972,8 +972,6 @@ $wgMobileSpecialPageModules = array(
 			'specials/mobileoptions/checkbox.hogan',
 		),
 		'messages' => array(
-			'mobile-frontend-off',
-			'mobile-frontend-on',
 			'mobile-frontend-expand-sections-description',
 			'mobile-frontend-expand-sections-status',
 		),

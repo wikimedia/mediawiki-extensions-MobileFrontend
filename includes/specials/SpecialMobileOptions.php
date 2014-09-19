@@ -84,16 +84,12 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 		$imagesChecked = $context->imagesDisabled() ? '' : 'checked'; // images are off when disabled
 		$imagesBeta = $betaEnabled ? 'checked' : '';
+		$imagesDescriptionMsg = $this->msg( 'mobile-frontend-settings-images-explain' )->parse();
 		$disableMsg = $this->msg( 'mobile-frontend-images-status' )->parse();
 		$betaEnableMsg = $this->msg( 'mobile-frontend-settings-beta' )->parse();
 		$betaDescriptionMsg = $this->msg( 'mobile-frontend-opt-in-explain' )->parse();
 
 		$saveSettings = $this->msg( 'mobile-frontend-save-settings' )->escaped();
-		$onoff = '<span class="mw-mf-settings-on">' .
-			$this->msg( 'mobile-frontend-on' )->escaped() .
-			'</span><span class="mw-mf-settings-off">' .
-			$this->msg( 'mobile-frontend-off' )->escaped() .
-			'</span>';
 		$action = $this->getPageTitle()->getLocalURL();
 		$html = Html::openElement( 'form',
 			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
@@ -106,71 +102,74 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$alphaChecked = $alphaEnabled ? 'checked' : '';
 		$alphaDescriptionMsg = wfMessage( 'mobile-frontend-settings-alpha-description' )->text();
 
-		$betaSetting = <<<HTML
-	<li>
-		<div class="option-name">
-			{$betaEnableMsg}
-			<div class="mw-mf-checkbox-css3" id="enable-beta-toggle">
-				<input type="checkbox" name="enableBeta"
-				{$imagesBeta}>{$onoff}
-			</div>
-		</div>
-		<div class="option-description">
-				{$betaDescriptionMsg}
-		</div>
-	</li>
-HTML;
-		$alphaSetting = '';
-		if ( $betaEnabled ) {
+		// array to save the data of options, which should be displayed here
+		$options = array();
 
-			if ( $alphaEnabled ) {
-				$betaSetting = '<input type="hidden" name="enableBeta" value="checked">';
+		// image settings
+		$options['images'] = array(
+			'checked' => $imagesChecked,
+			'label' => $disableMsg,
+			'description' => $imagesDescriptionMsg,
+			'name' => 'enableImages',
+			'id' => 'enable-images-toggle',
+		);
+
+		// beta settings
+		if ( $wgMFEnableBeta ) {
+			$options['beta'] = array(
+				'checked' => $imagesBeta,
+				'label' => $betaEnableMsg,
+				'description' => $betaDescriptionMsg,
+				'name' => 'enableBeta',
+				'id' => 'enable-beta-toggle',
+			);
+			// alpha settings
+			if ( $betaEnabled ) {
+				if ( $alphaEnabled ) {
+					$options['beta']['checked'] = 'checked';
+					$options['beta']['type'] = 'hidden';
+				}
+				$options['alpha'] = array(
+					'checked' => $alphaChecked,
+					'label' => $alphaEnableMsg,
+					'description' => $alphaDescriptionMsg,
+					'name' => 'enableAlpha',
+					'id' => 'enable-alpha-toggle'
+				);
 			}
-
-			$alphaSetting .= <<<HTML
-		<li>
-			<div class="option-name">
-				{$alphaEnableMsg}
-				<div class="mw-mf-checkbox-css3" id="enable-alpha-toggle">
-					<input type="checkbox" name="enableAlpha"
-					{$alphaChecked}>{$onoff}
-				</div>
-			</div>
-			<div class="option-description">
-					{$alphaDescriptionMsg}
-			</div>
-		</li>
-HTML;
-		}
-
-		if ( !$wgMFEnableBeta ) {
-			$alphaSetting = $betaSetting = '';
 		}
 
 		// @codingStandardsIgnoreStart Long line
 		$html .= <<<HTML
-	<p>
-		{$aboutMessage}
-	</p>
-	<ul>
-		<li>
-			<div class="option-name">
-			{$disableMsg}
-			<span class="mw-mf-checkbox-css3" id="enable-images-toggle">
-				<input type="checkbox" name="enableImages"
-				{$imagesChecked}>{$onoff}
-			</span>
-			</div>
-		</li>
-		{$betaSetting}
-		{$alphaSetting}
-		<li>
-			<input type="submit" class="mw-ui-constructive mw-ui-button" id="mw-mf-settings-save" value="{$saveSettings}">
-		</li>
-	</ul>
-	$token
-	$returnto
-</form>
+		<p>
+			{$aboutMessage}
+		</p>
+HTML;
+		foreach( $options as $key => $data ) {
+			if ( isset( $data['type'] ) && $data['type'] === 'hidden' ) {
+				$html .= '<input type="hidden" name="' . $data['name'] . '" id="' . $data['id'] . '"
+					' . $data['checked'] . '>';
+			} else {
+				$html .= '
+					<div class="mobileoption">
+						<div class="mw-ui-checkbox">
+							<input type="checkbox" name="' . $data['name'] . '" id="' . $data['id'] . '"
+								' . $data['checked'] . '>
+							<label for="' . $data['id'] . '">
+								' . $data['label'] . '
+							</label>
+							<div class="option-description">
+								' . $data['description'] . '
+							</div>
+						</div>
+					</div>';
+			}
+		}
+		$html .= <<<HTML
+		<input type="submit" class="mw-ui-constructive mw-ui-button" id="mw-mf-settings-save" value="{$saveSettings}">
+		$token
+		$returnto
+	</form>
 HTML;
 		// @codingStandardsIgnoreEnd
 		$out->addHTML( $html );

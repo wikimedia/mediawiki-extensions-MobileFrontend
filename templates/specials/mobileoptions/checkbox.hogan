@@ -1,10 +1,11 @@
-<div class="option-name">
-	{{enableMsg}}
-	<div class="mw-mf-checkbox-css3">
-		<input type="checkbox" name="{{name}}">
-		<span class="mw-mf-settings-on">{{onMsg}}</span><span class="mw-mf-settings-off">{{offMsg}}</span>
+<div class="mobileoption">
+	<div class="mw-ui-checkbox">
+		<input type="checkbox" name="{{name}}" id="{{name}}-toggle" {$imagesChecked}>
+		<label for="{{name}}-toggle">
+			{{enableMsg}}
+		</label>
+		<div class="option-description">
+			{{descriptionMsg}}
+		</div>
 	</div>
-</div>
-<div class="option-description">
-	{{descriptionMsg}}
 </div>
