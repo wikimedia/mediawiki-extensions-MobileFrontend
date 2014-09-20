@@ -277,6 +277,7 @@
 	"mobile-frontend-talk-reply-info": "Note que a sua reposta será assinada automaticamente com o seu nome de utilizador(a).",
 	"mobile-frontend-talk-reply-success": "A sua resposta foi guardada com sucesso na página de discussão.",
 	"mobile-frontend-talk-topic-feedback": "Novo tópico adicionado à página de discussão!",
+	"mobile-frontend-talk-topic-error": "O tópico não pode ser acrescentado. Erro: $1",
 	"mobile-frontend-terms-text": "Termos de Uso",
 	"mobile-frontend-thanked-notice": "$1 foi {{GENDER:$2|informado|informada}} de que gostou da sua edição.",
 	"mobile-frontend-user-account": "conta de utilizador",

@@ -239,7 +239,7 @@
 	"mobile-frontend-profile-footer-months": "Liittynyt yli {{PLURAL:$2|1 kuukausi|$2 kuukautta}} sitten. [[Special:Contributions/$1|{{PLURAL:$3|1 muokkaus|$3 muokkausta}}]] ja [[Special:Uploads/$1|{{PLURAL:$4|1 tiedostotallennus|$4 tiedostotallennusta|500=500+ tiedostotallennusta}}]].",
 	"mobile-frontend-profile-footer-years": "Liittynyt yli {{PLURAL:$2|1 vuosi|$2 vuotta}} sitten. [[Special:Contributions/$1|{{PLURAL:$3|1 muokkaus|$3 muokkausta}}]] ja [[Special:Uploads/$1|{{PLURAL:$4|1 tiedostotallennus|$4 tiedostotallennusta|500=500+ tiedostotallennusta}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|Muokkasi}} sivua [[:$1]], {{PLURAL:$2|eilen|$2 päivää sitten|0=aikaisemmin tänään}}.",
-	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Kiitetty käyttäjää}} {{GENDER:$1|, kiittäjänä}} [[Special:UserProfile/$1|$1]].",
+	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Kiitetty käyttäjää}}{{GENDER:$1|, kiittäjänä}} [[Special:UserProfile/$1|$1]].",
 	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Lisätty}} {{PLURAL:$1|eilen|$1 päivää sitten|0=tänään}}.",
 	"mobile-frontend-profile-noargs": "Käyttäjätunnusta ei annettu. Ole hyvä ja anna käyttäjätunnus nähdäksesi profiilin.",
 	"mobile-frontend-profile-nouser": "Tämän nimistä käyttäjää ei löydy. Käyttäjänimissä huomioidaan isot- ja pienet kirjaimet, joten tarkista että nimi on kirjoitettu oikein.",
