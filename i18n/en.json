@@ -249,7 +249,7 @@
     "mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' to see if this phrase appears anywhere.",
     "mobile-frontend-search-no-results": "No page with this title.",
     "mobile-frontend-search-submit": "Go",
-    "mobile-frontend-settings-images-explain": "You can consider, if you want to load images in pages, or not.",
+    "mobile-frontend-settings-images-explain": "Load all image content that appears in a page.",
     "mobile-frontend-settings-alpha": "Experimental mode",
     "mobile-frontend-settings-alpha-description": "Enter dangerous and unexplored mobile territory. Get even more experimental features, but with more danger of bugs.",
     "mobile-frontend-settings-beta": "Beta",
