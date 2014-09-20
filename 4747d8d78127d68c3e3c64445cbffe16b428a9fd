@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_2bfe4f36",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-09-20T12:18:17Z",
+      "side": 1,
+      "message": "Please use \"page\" instead of of \"article\".",
+      "revId": "4747d8d78127d68c3e3c64445cbffe16b428a9fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
