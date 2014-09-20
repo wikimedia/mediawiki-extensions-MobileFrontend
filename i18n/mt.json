@@ -91,6 +91,7 @@
 	"mobile-frontend-sign-in-why": "Jekk għandek kont ta' {{SITENAME}}, tista' tidħol billi timla l-formola t'hawn taħt.",
 	"mobile-frontend-sign-up-heading": "Irreġistra",
 	"mobile-frontend-talk-explained-empty": "M'hemm l-ebda konverżazzjoni fuq din il-paġna.",
+	"mobile-frontend-talk-topic-error": "Is-suġġett ma jistax jiġi miżjud. Żball:$1",
 	"mobile-frontend-user-cta": "Idħol fil-kont jew irreġistra sabiex tara n-notifiki tiegħek.",
 	"mobile-frontend-username": "Isem tal-utent:",
 	"mobile-frontend-username-placeholder": "Isem tal-utent",
