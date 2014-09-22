@@ -9,6 +9,8 @@
 		if ( idOverride ) {
 			mw.config.set( 'wgWikibaseItemId', idOverride[1] );
 			wikidataID = idOverride[1];
+			// Reset opt out
+			localStorage.removeItem( 'mfHideWikiGrok' );
 		}
 	}
 
