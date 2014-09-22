@@ -34,6 +34,24 @@
       "revId": "eee45bcd2fd5da3bf8dc16c9de5293cfbfd7ec05",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_cb5e857b",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-22T21:49:38Z",
+      "side": 1,
+      "message": "I would change the message to simply \"Load all image content that appears in a page.\"",
+      "parentUuid": "ee62ffec_744d439b",
+      "revId": "eee45bcd2fd5da3bf8dc16c9de5293cfbfd7ec05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
