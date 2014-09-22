@@ -40,7 +40,7 @@
 			if ( errorText ) {
 				data.errorText = errorText;
 			}
-			schema.log( data );
+			return schema.log( data );
 		},
 		/**
 		 * Reveals a spinner at the top of the overlay.
@@ -78,7 +78,6 @@
 		 * messages, and setting mobile edit cookie.
 		 */
 		onSave: function() {
-			this.log( 'success' );
 			var title = this.options.title,
 				msg;
 
@@ -98,8 +97,14 @@
 			// Does reloading page via JavaScript after edit encourage more editing?
 			if ( isTestA ) {
 				M.settings.saveUserSetting( 'mobile-pending-toast', msg );
-				window.location = mw.util.getUrl( title );
+
+				// Ensure we don't lose this event when logging
+				this.log( 'success' ).always( function() {
+					window.location = mw.util.getUrl( title );
+				} );
 				return;
+			} else {
+				this.log( 'success' );
 			}
 
 			new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage ).
