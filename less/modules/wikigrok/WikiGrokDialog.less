@@ -5,9 +5,12 @@
 	clear: both;
 	margin-top: 1em;
 	text-align: center;
-	padding: 1em @contentMargin;
 	background-color: @grayLightest;
 	display: none;
+
+	.content {
+		padding: 1em @contentMargin;
+	}
 
 	&.visible {
 		display: block;
@@ -26,12 +29,23 @@
 		text-align: left;
 	}
 
+	@bottomMargin: .8em;
 	.wg-content {
 		font-size: 120%;
 		line-height: 1.2;
 		font-weight: bold;
-		margin-bottom: .8em;
+		margin-bottom: @bottomMargin;
 		text-align: left;
+	}
+
+	.final-pane {
+			@imageSize: 8em;
+			padding-bottom: @imageSize;
+			margin-bottom: @bottomMargin;
+			background-repeat: no-repeat;
+			.background-size( auto, @imageSize );
+			background-position: center bottom;
+			.background-image-svg-quick('images/heart');
 	}
 
 	.wg-buttons {
@@ -49,5 +63,31 @@
 		font-size: 90%;
 		margin-bottom: 0;
 		text-align: left;
+	}
+
+	.footer {
+		min-height: 2.8em;
+		padding: .6em 1em;
+		position: relative;
+		text-align: left;
+		background: @colorGray13;
+
+		span {
+			padding: 0 1em;
+		}
+
+		.mw-ui-button {
+			top: 0;
+			right: 0;
+			position: absolute;
+		}
+
+		&.mw-ui-button-group {
+			padding: 0;
+			.mw-ui-button {
+				width: 50%;
+				position: relative;
+			}
+		}
 	}
 }

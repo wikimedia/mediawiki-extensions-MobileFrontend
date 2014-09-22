@@ -1,0 +1,53 @@
+@import "minerva.mixins";
+@import "minerva.variables";
+
+.ui-checkbox-button {
+	position: relative;
+	padding-left: 2em;
+	text-align: left;
+
+	input {
+		position: absolute;
+		left: .3em;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		visibility: hidden;
+	}
+
+	// the pseudo before element of the label after the checkbox now looks like a checkbox
+	input + label {
+		font-size: 0.8em;
+
+		&::before {
+			content: '';
+			width: 2em;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			display: inline-block;
+			.background-image-svg-quick('images/unchecked');
+			.background-size( 1em, auto );
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+
+	// when the input is checked, style the label pseudo before element that followed as a checked checkbox
+	input:checked + label {
+		&::before {
+			background-color: @colorProgressive;
+			.background-image-svg-quick('images/checked');
+		}
+	}
+
+	label {
+		margin-left: .3em;
+		display: block;
+	}
+
+	strong {
+		display: block;
+	}
+}

@@ -881,6 +881,22 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.wikigrok.dialog.b' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.wikigrok.dialog',
+			'mediawiki.ui.checkbox',
+		),
+		'styles' => array(
+			'less/modules/wikigrok/checkboxButton.less',
+		),
+		'templates' => array(
+			'modules/wikigrok/WikiGrokDialogB.hogan',
+		),
+		'scripts' => array(
+			'javascripts/modules/wikigrok/WikiGrokDialogB.js',
+		),
+	),
+
 	// See https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok
 	'mobile.wikigrok.dialog' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(

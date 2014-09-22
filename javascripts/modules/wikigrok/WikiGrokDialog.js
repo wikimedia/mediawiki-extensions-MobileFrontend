@@ -16,6 +16,7 @@
 	 * in Wikidata (https://www.wikidata.org).
 	 */
 	WikiGrokDialog = Panel.extend( {
+		version: 'a',
 		className: 'wikigrok',
 		defaults: {
 			beginQuestions: false,
@@ -36,7 +37,9 @@
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
 
 		initialize: function( options ) {
-			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId } );
+			// Remove any disambiguation parentheticals from the title.
+			options.name = options.title.replace( / \(.+\)$/, '' );
+			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId, subject: options.name } );
 			this.apiWikiData = new WikiDataApi( { itemId: options.itemId } );
 			Panel.prototype.initialize.apply( this, arguments );
 		},
@@ -44,7 +47,7 @@
 		log: function( action ) {
 			var data = {
 				action: action,
-				version: 'version a'
+				version: 'version ' + this.version
 			};
 			schema.log( data );
 		},
@@ -62,8 +65,6 @@
 			if ( occupationArray.length ) {
 				// Choose a random occupation from the list of possible occupations.
 				options.occupationId = this.chooseRandomItemFromArray( occupationArray );
-				// Remove any disambiguation parentheticals from the title.
-				options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
 
 				// Get the name of the occupation from Wikidata.
 				self.apiWikiData.getLabel( options.occupationId ).done( function( label ) {
@@ -101,7 +102,7 @@
 		// Eventually answers will be recorded directly to Wikidata.
 		recordClaim: function( options ) {
 			var self = this,
-				args = [ options.name, options.occupationId,
+				args = [ options.occupationId,
 					options.occupation, options.claimIsCorrect ];
 
 			this.apiWikiGrok.recordOccupation.apply( this.apiWikiGrok, args ).done( function() {

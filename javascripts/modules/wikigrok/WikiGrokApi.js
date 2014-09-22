@@ -10,13 +10,14 @@
 
 		initialize: function( options ) {
 			this.subjectId = options.itemId;
+			this.subject = options.subject;
 			Api.prototype.initialize.apply( this, arguments );
 		},
-		recordOccupation: function( subject, occupationId, occupation, claimIsCorrect ) {
+		recordOccupation: function( occupationId, occupation, claimIsCorrect ) {
 			return this.ajax( {
 					action: 'record_answer',
 					subject_id: this.subjectId,
-					subject: subject,
+					subject: this.subject,
 					occupation_id: occupationId,
 					occupation: occupation,
 					page_name: mw.config.get( 'wgPageName' ),

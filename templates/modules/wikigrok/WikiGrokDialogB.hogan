@@ -1,0 +1,17 @@
+<!-- note English language only! -->
+<div class="initial-pane content">
+	<p class="wg-content">{{contentMsg}}</p>
+	<div class="spinner loading"></div>
+	<p class="wg-buttons"></p>
+</div>
+<div class="initial-pane footer">
+	<span>All submissions are <a>released freely</a>.</span>
+	<button class="mw-ui-button mw-ui-constructive" disabled>next</button>
+</div>
+<div class="final-pane content">
+	<p class="wg-content">You just made Wikipedia a little better, thanks!</p>
+</div>
+<div class="final-pane footer mw-ui-button-group">
+	<button class="mw-ui-button mw-ui-quiet cancel">Don't show again
+	</button><a href="#/wikigrok/about" class="mw-ui-button mw-ui-progressive">Tell me more</a>
+</div>
