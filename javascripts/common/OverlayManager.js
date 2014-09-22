@@ -9,7 +9,7 @@
 	 * of the registered values (see OverlayManager.add()).
 	 *
 	 * This allows overlays to function like real pages, with similar browser back/forward
-	 * behavior.
+	 * and refresh behavior.
 	 *
 	 * @class OverlayManager
 	 * @extends Class

@@ -1,5 +1,6 @@
 ( function( M, $ ) {
-	var wikidataID = mw.config.get( 'wgWikibaseItemId' );
+	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+		WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' );
 
 	// Get existing Wikidata claims about this page so we can decide if it's appropriate
 	// to display the WikiGrok interface.
@@ -19,8 +20,7 @@
 		dataType: 'jsonp',
 		success: function( data ) {
 			var instanceClaims,
-				loadWikiGrokDialog = false,
-				WikiGrokDialog;
+				loadWikiGrokDialog = false;
 
 			// See if the page has any 'instance of' claims.
 			if ( data.entities !== undefined && data.entities[wikidataID].claims.P31 !== undefined ) {
@@ -37,10 +37,10 @@
 					}
 				} );
 				if ( loadWikiGrokDialog ) {
-					WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' );
 					new WikiGrokDialog( { itemId: wikidataID } );
 				}
 			}
 		}
 	} );
+
 }( mw.mobileFrontend, jQuery ) );

@@ -29,7 +29,7 @@
 				{ classes: 'cancel inline mw-ui-button', label: 'No, thanks' },
 				{ classes: 'proceed inline mw-ui-button mw-ui-progressive', label: 'Okay!' }
 			],
-			noticeMsg: '<a class="wg-notice-link" href="#/moreinfo">Tell me more</a>'
+			noticeMsg: '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>'
 		},
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
 
@@ -96,7 +96,7 @@
 										{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
 										{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
 									];
-									options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/moreinfo">released freely</a>';
+									options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
 									self.render( options );
 								}
 							}
@@ -144,14 +144,13 @@
 					{ classes: 'quit inline mw-ui-button mw-ui-progressive', label: 'Done' }
 				];
 			}
-			options.noticeMsg = '<a class="wg-notice-link" href="#/moreinfo">Tell me more</a>';
+			options.noticeMsg = '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>';
 			// Re-render with new content for 'Thanks' step
 			this.render( options );
 		},
 
 		postRender: function( options ) {
-			var self = this,
-				WikiGrokMoreInfo = M.require( 'modules/wikigrok/WikiGrokMoreInfo' );
+			var self = this;
 
 			// If the user hasn't opted-out of WikiGrok, load the interface.
 			if ( !localStorage.getItem( 'mfHideWikiGrok' ) ) {
@@ -205,12 +204,9 @@
 						// Proceed with asking the user a metadata question.
 						self.askWikidataQuestion( options );
 					} );
-					// Make OverlayManager handle '#/moreinfo' links. We only need to do
-					// this once.
-					M.overlayManager.add( /^\/moreinfo$/, function() {
+					// Log more info clicks
+					this.$( '.wg-notice-link' ).on( 'click', function() {
 						self.log( 'moreinfo' );
-						// Load the More Info overlay when the link is clicked.
-						return new WikiGrokMoreInfo();
 					} );
 				}
 
