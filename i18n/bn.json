@@ -218,7 +218,7 @@
 	"mobile-frontend-placeholder-app": "{{SITENAME}} অনুসন্ধান (ওয়েব অ্যাপ)",
 	"mobile-frontend-placeholder-beta": "{{SITENAME}} অনুসন্ধান (বিটা)",
 	"mobile-frontend-privacy-link-text": "গোপনীয়তা",
-	"mobile-frontend-profile-activity-heading": "সাম্প্রতিক কার্য্যক্রম",
+	"mobile-frontend-profile-activity-heading": "সাম্প্রতিক কার্যক্রম",
 	"mobile-frontend-profile-error": "ওহো না!",
 	"mobile-frontend-profile-footer-ancient": "[[Special:Contributions/$1|{{PLURAL:$3|১টি সম্পাদনা|$3টি সম্পাদনা}}]] ও [[Special:Uploads/$1|{{PLURAL:$4|১টি আপলোড|$4টি আপলোড|0=০টি আপলোড|500=৫০০+ আপলোড}}]] করেছেন।",
 	"mobile-frontend-profile-footer-days": "{{PLURAL:$2|১ দিন|$2 দিন}} আগে যোগ দিয়েছেন, [[Special:Contributions/$1|{{PLURAL:$3|১টি সম্পাদনা|$3টি সম্পাদনা}}]] ও [[Special:Uploads/$1|{{PLURAL:$4|১টি আপলোড|$4টি আপলোড|0=০টি আপলোড|500=৫০০+ আপলোড}}]] করেছেন।",
