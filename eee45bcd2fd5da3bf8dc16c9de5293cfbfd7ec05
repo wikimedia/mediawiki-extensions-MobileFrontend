@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_748c2300",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-09-22T12:34:20Z",
+      "side": 1,
+      "message": "Does this need a comma before \"whether\"?",
+      "revId": "eee45bcd2fd5da3bf8dc16c9de5293cfbfd7ec05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
