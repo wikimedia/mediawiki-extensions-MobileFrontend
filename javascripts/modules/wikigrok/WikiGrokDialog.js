@@ -152,71 +152,63 @@
 		postRender: function( options ) {
 			var self = this;
 
-			// If the user hasn't opted-out of WikiGrok, load the interface.
-			if ( !localStorage.getItem( 'mfHideWikiGrok' ) ) {
-
-				// Insert the dialog into the page
-				$( function() {
-					// If there is a table of contents, insert before it.
-					if ( $( '.toc-mobile' ).length ) {
-						self.insertBefore( '.toc-mobile' );
-					} else {
-						self.appendTo( M.getLeadSection() );
-					}
-				} );
-
-				// Initialize all the buttons and links
-				// ...for final 'Thanks' step
-				if ( options.thankUser ) {
-					this.$( '.wg-buttons .quit' ).on( 'click', function() {
-						self.hide();
-					} );
-				// ...for intermediate 'Question' step
-				} else if ( options.beginQuestions ) {
-					this.$( '.wg-buttons .yes' ).on( 'click', function() {
-						self.log( 'success' );
-						options.claimIsCorrect = 1;
-						self.recordClaim( options );
-					} );
-					this.$( '.wg-buttons .not-sure' ).on( 'click', function() {
-						self.log( 'notsure' );
-						self.thankUser( options, false );
-					} );
-					this.$( '.wg-buttons .no' ).on( 'click', function() {
-						self.log( 'success' );
-						options.claimIsCorrect = 0;
-						self.recordClaim( options );
-					} );
-				// ...for initial 'Intro' step
+			// Insert the dialog into the page
+			$( function() {
+				// If there is a table of contents, insert before it.
+				if ( $( '.toc-mobile' ).length ) {
+					self.insertBefore( '.toc-mobile' );
 				} else {
-					this.log( 'view' );
-					this.$( '.wg-buttons .cancel' ).on( 'click', function() {
-						self.hide();
-						self.log( 'nothanks' );
-						// Set a localStorage value to keep WikiGrok hidden for this user.
-						// We test for locaStorage support in wikigrok.js.
-						// Older browsers can only store strings in localStorage (not
-						// booleans).
-						localStorage.setItem( 'mfHideWikiGrok', 'true' );
-					} );
-					this.$( '.wg-buttons .proceed' ).on( 'click', function() {
-						self.log( 'attempt' );
-						// Proceed with asking the user a metadata question.
-						self.askWikidataQuestion( options );
-					} );
-					// Log more info clicks
-					this.$( '.wg-notice-link' ).on( 'click', function() {
-						self.log( 'moreinfo' );
-					} );
+					self.appendTo( M.getLeadSection() );
 				}
+			} );
 
-				// render() does a "deep copy" $.extend() on the template data, so we need
-				// to reset the buttons after each step (since some steps have fewer
-				// buttons than the initial default).
-				self.options.buttons = [];
-
-				this.show();
+			// Initialize all the buttons and links
+			// ...for final 'Thanks' step
+			if ( options.thankUser ) {
+				this.$( '.wg-buttons .quit' ).on( 'click', function() {
+					self.hide();
+				} );
+			// ...for intermediate 'Question' step
+			} else if ( options.beginQuestions ) {
+				this.$( '.wg-buttons .yes' ).on( 'click', function() {
+					self.log( 'success' );
+					options.claimIsCorrect = 1;
+					self.recordClaim( options );
+				} );
+				this.$( '.wg-buttons .not-sure' ).on( 'click', function() {
+					self.log( 'notsure' );
+					self.thankUser( options, false );
+				} );
+				this.$( '.wg-buttons .no' ).on( 'click', function() {
+					self.log( 'success' );
+					options.claimIsCorrect = 0;
+					self.recordClaim( options );
+				} );
+			// ...for initial 'Intro' step
+			} else {
+				this.log( 'view' );
+				this.$( '.wg-buttons .cancel' ).on( 'click', function() {
+					self.hide();
+					self.log( 'nothanks' );
+					M.settings.saveUserSetting( 'mfHideWikiGrok', 'true' );
+				} );
+				this.$( '.wg-buttons .proceed' ).on( 'click', function() {
+					self.log( 'attempt' );
+					// Proceed with asking the user a metadata question.
+					self.askWikidataQuestion( options );
+				} );
+				// Log more info clicks
+				this.$( '.wg-notice-link' ).on( 'click', function() {
+					self.log( 'moreinfo' );
+				} );
 			}
+
+			// render() does a "deep copy" $.extend() on the template data, so we need
+			// to reset the buttons after each step (since some steps have fewer
+			// buttons than the initial default).
+			self.options.buttons = [];
+
+			this.show();
 		}
 	} );
 
