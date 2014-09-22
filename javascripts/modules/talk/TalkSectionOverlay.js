@@ -16,6 +16,9 @@ var
 		},
 		// FIXME: Use Router for TalkSectionOverlay
 		hide: function() {
+			if ( this.$board ) {
+				this.$board.show();
+			}
 			this.remove();
 		},
 		initialize: function( options ) {
@@ -32,6 +35,7 @@ var
 					mw.config.get( 'wgMFLicenseLink' )
 				);
 			}
+			this.$board = options.parent.$board;
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
 		postRender: function( options ) {

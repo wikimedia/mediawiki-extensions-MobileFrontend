@@ -12,14 +12,17 @@
 		 * @class TalkOverlay
 		 */
 		TalkOverlay = Overlay.extend( {
-			template: M.template.get( 'modules/talk/talk.hogan' ),
 			templatePartials: {
-				header: M.template.get( 'modules/talk/talkHeader.hogan' )
+				content: M.template.get( 'modules/talk/talk.hogan' )
 			},
 			defaults: {
-				addTopicLabel: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
-				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
+				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
+				headerButtonsListClassName: 'overlay-action',
+				headerButtons: [ {
+					className: 'add continue hidden',
+					msg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
+				} ]
 			},
 
 			postRender: function( options ) {
@@ -63,7 +66,7 @@
 					// talk page doesn't exist yet.
 					if ( resp === 'missingtitle' ) {
 						// Create an empty page for new pages
-						self._addContent( { title: options.title, sections: [] } );
+						self._addContent( { title: options.title, sections: [] }, options );
 					} else {
 						// If the API request fails for any other reason, load the talk
 						// page manually rather than leaving the spinner spinning.
@@ -117,7 +120,9 @@
 						var overlay = new TalkSectionAddOverlay( {
 							title: page.title
 						} );
-						overlay.show();
+						// Hide discussion list to disable scrolling - bug 70989
+						// FIXME: Kill when OverlayManager is used for TalkSectionAdd
+						self.$board.hide();
 						overlay.on( 'talk-discussion-added', function() {
 							// reload the content
 							self._loadContent( options );
@@ -125,7 +130,9 @@
 							// re-enable TalkOverlay (it's closed by hide event (in Overlay)
 							// from TalkSectionAddOverlay)
 							self.show();
-						} );
+							// FIXME: Kill when OverlayManager is used for TalkSectionAdd
+							self.$board.show();
+						} ).show();
 						// When closing this overlay, also close the child section overlay
 						self.on( 'hide', function() {
 							overlay.remove();
@@ -149,6 +156,9 @@
 							title: page.title,
 							section: section
 						} );
+					// Hide discussion list to disable scrolling - bug 70989
+					// FIXME: Kill when OverlayManager is used for TalkSections
+					self.$board.hide();
 					childOverlay.show();
 					// When closing this overlay, also close the child section overlay
 					self.on( 'hide', function() {
