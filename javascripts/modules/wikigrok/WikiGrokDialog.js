@@ -2,6 +2,7 @@
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Panel = M.require( 'Panel' ),
+		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
 		WikiGrokDialog;
 
@@ -32,6 +33,11 @@
 			noticeMsg: '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>'
 		},
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
+
+		initialize: function() {
+			this.apiWikiData = new WikiDataApi();
+			Panel.prototype.initialize.apply( this, arguments );
+		},
 
 		log: function( action ) {
 			var data = {
@@ -69,36 +75,25 @@
 						options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
 
 						// Get the name of the occupation from Wikidata.
-						$.ajax( {
-							type: 'get',
-							url: 'https://www.wikidata.org/w/api.php',
-							data: {
-								'action': 'wbgetentities',
-								'props': 'labels',
-								'ids': options.occupationId,
-								'format': 'json'
-							},
-							dataType: 'jsonp',
-							success: function( data ) {
-								var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
-								if ( data.entities[options.occupationId].labels.en.value !== undefined ) {
-									// Re-render with new content for 'Question' step
-									options.beginQuestions = true;
-									options.occupation = data.entities[options.occupationId].labels.en.value;
-									// Hack for English prototype
-									if ( $.inArray( options.occupation.charAt(0), vowels ) === -1 ) {
-										options.contentMsg = 'Was ' + options.name + ' a ' + options.occupation + '?';
-									} else {
-										options.contentMsg = 'Was ' + options.name + ' an ' + options.occupation + '?';
-									}
-									options.buttons = [
-										{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
-										{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
-										{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
-									];
-									options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
-									self.render( options );
+						self.apiWikiData.getOccupations( options.occupationId ).done( function( data ) {
+							var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
+							if ( data.entities[options.occupationId].labels.en.value !== undefined ) {
+								// Re-render with new content for 'Question' step
+								options.beginQuestions = true;
+								options.occupation = data.entities[options.occupationId].labels.en.value;
+								// Hack for English prototype
+								if ( $.inArray( options.occupation.charAt(0), vowels ) === -1 ) {
+									options.contentMsg = 'Was ' + options.name + ' a ' + options.occupation + '?';
+								} else {
+									options.contentMsg = 'Was ' + options.name + ' an ' + options.occupation + '?';
 								}
+								options.buttons = [
+									{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
+									{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
+									{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
+								];
+								options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
+								self.render( options );
 							}
 						} );
 					}
