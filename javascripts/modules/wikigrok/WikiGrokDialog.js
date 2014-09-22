@@ -35,8 +35,8 @@
 		},
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
 
-		initialize: function() {
-			this.apiWikiGrok = new WikiGrokApi();
+		initialize: function( options ) {
+			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId } );
 			this.apiWikiData = new WikiDataApi();
 			Panel.prototype.initialize.apply( this, arguments );
 		},
@@ -52,8 +52,7 @@
 		askWikidataQuestion: function( options ) {
 			var self = this;
 
-			// Get potential occupations for the person.
-			this.apiWikiGrok.getPossibleOccupations( options.itemId ).done( function( data ) {
+			this.apiWikiGrok.getPossibleOccupations().done( function( data ) {
 				var occupationArray;
 
 				// If there are potential occupations for this person, select one at
@@ -94,25 +93,12 @@
 		// Record answer in temporary database for analysis.
 		// Eventually answers will be recorded directly to Wikidata.
 		recordClaim: function( options ) {
-			var self = this;
-			$.ajax( {
-				type: 'get',
-				url: 'https://tools.wmflabs.org/wikigrok/api.php',
-				data: {
-					'action': 'record_answer',
-					'subject_id': options.itemId,
-					'subject': options.name,
-					'occupation_id': options.occupationId,
-					'occupation': options.occupation,
-					'page_name': mw.config.get( 'wgPageName' ),
-					'correct': options.claimIsCorrect,
-					'user_id': mw.config.get( 'wgUserId' ),
-					'source': 'mobile A'
-				},
-				dataType: 'jsonp',
-				success: function() {
-					self.thankUser( options, true );
-				}
+			var self = this,
+				args = [ options.name, options.occupationId,
+					options.occupation, options.claimIsCorrect ];
+
+			this.apiWikiGrok.recordOccupation.apply( this.apiWikiGrok, args ).done( function() {
+				self.thankUser( options, true );
 			} );
 		},
 
