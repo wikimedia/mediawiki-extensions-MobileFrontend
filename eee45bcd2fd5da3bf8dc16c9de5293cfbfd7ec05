@@ -16,6 +16,24 @@
       "revId": "eee45bcd2fd5da3bf8dc16c9de5293cfbfd7ec05",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_744d439b",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-22T13:24:35Z",
+      "side": 1,
+      "message": "I would say yes, but i\u0027m not a native, so it\u0027s possible, that this comma is out of place? :)",
+      "parentUuid": "ee62ffec_748c2300",
+      "revId": "eee45bcd2fd5da3bf8dc16c9de5293cfbfd7ec05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
