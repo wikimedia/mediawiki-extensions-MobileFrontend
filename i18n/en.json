@@ -274,7 +274,7 @@
     "mobile-frontend-talk-reply-success": "Your reply was successfully saved to the talk page.",
     "mobile-frontend-talk-topic-feedback": "New topic added to talk page!",
     "mobile-frontend-talk-topic-error": "The topic can't be added due to an unknown Error.",
-    "mobile-frontend-talk-topic-error-protected": "This Talk page is protected, you don't have the permission to add topics to it.",
+    "mobile-frontend-talk-topic-error-protected": "This talk page is protected, you don't have the permission to add topics to it.",
     "mobile-frontend-talk-topic-error-permission": "The topic can't be added. You don't have the permission to edit pages.",
     "mobile-frontend-talk-topic-error-spam": "The topic was refused because it contained a spam fragment.",
     "mobile-frontend-talk-topic-error-badtoken": "There was an error on the server. Your edit can't be saved. Try reloading this page.",
