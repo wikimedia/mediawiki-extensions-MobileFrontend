@@ -4,14 +4,6 @@ class MobileOptions
   include URL
   page_url URL.url("Special:MobileOptions")
 
-  div(:beta_parent, id: "enable-beta-toggle")
-  div(:alpha_parent, id: "enable-alpha-toggle")
-
-  span(:beta) do |page|
-    page.beta_parent_element.span_element(class: "mw-mf-settings-off")
-  end
-  span(:alpha) do |page|
-    page.alpha_parent_element.span_element(class: "mw-mf-settings-off")
-  end
+  label(:beta, css: "div.mobileoption:nth-child(3) > div:nth-child(1) > label:nth-child(2)")
   button(:save_settings, id:"mw-mf-settings-save")
 end

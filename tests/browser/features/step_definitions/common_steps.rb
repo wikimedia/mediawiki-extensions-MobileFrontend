@@ -54,17 +54,6 @@ Given /^I am in beta mode$/ do
   end
 end
 
-Given /^I am in alpha mode$/ do
-  visit(MobileOptions) do |page|
-    page.beta_element.when_present.click
-    page.save_settings_element.when_present.click
-    visit(MobileOptions) do |page|
-      page.alpha_element.when_present.click
-      page.save_settings_element.when_present.click
-    end
-  end
-end
-
 Given(/^I am on the "(.+)" page$/) do |article|
   # Ensure we do not cause a redirect
   article = article.sub(/ /, '_')
