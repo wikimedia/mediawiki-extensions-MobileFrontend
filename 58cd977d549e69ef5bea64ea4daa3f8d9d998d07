@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_ee4ef29a",
+        "filename": "less/content/hacks.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-23T18:03:20Z",
+      "side": 1,
+      "message": "Could you add a comment to explain why you chose @wgMFDeviceWidthTablet/2 rather than @wgMFDeviceWidthTablet?",
+      "revId": "58cd977d549e69ef5bea64ea4daa3f8d9d998d07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
