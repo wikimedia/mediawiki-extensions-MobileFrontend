@@ -37,7 +37,7 @@
 
 		initialize: function( options ) {
 			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId } );
-			this.apiWikiData = new WikiDataApi();
+			this.apiWikiData = new WikiDataApi( { itemId: options.itemId } );
 			Panel.prototype.initialize.apply( this, arguments );
 		},
 

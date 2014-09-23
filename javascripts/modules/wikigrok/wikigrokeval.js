@@ -1,25 +1,15 @@
 ( function( M, $ ) {
-	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+	var api,
+		wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' );
 
 	// Get existing Wikidata claims about this page so we can decide if it's appropriate
 	// to display the WikiGrok interface.
 	if ( !M.settings.getUserSetting( 'mfHideWikiGrok' ) ) {
-		$.ajax( {
-			type: 'get',
-			url: 'https://www.wikidata.org/w/api.php',
-			data: {
-				'action': 'wbgetentities',
-				'ids': wikidataID,
-				'props': 'claims',
-				'format': 'json'
-			},
-			// Using JSONP so we aren't restricted by cross-site rules. This isn't
-			// strictly needed on the Wikimedia cluster since it has CORS exceptions
-			// for requests from other Wikimedia sites, but this makes it easy to
-			// test locally.
-			dataType: 'jsonp',
-			success: function( data ) {
+		api = new WikiDataApi( { itemId: wikidataID });
+		api.getClaims().done(
+			function( data ) {
 				var instanceClaims,
 					loadWikiGrokDialog = false;
 
@@ -42,7 +32,7 @@
 					}
 				}
 			}
-		} );
+		);
 	}
 
 }( mw.mobileFrontend, jQuery ) );
