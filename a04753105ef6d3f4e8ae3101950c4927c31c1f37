@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee62ffec_02fc7707",
+        "filename": "templates/modules/editor/EditorOverlayHeader.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-23T20:07:42Z",
+      "side": 0,
+      "message": "I think these were all originally cancel buttons and then changed to back buttons. Don\u0027t the buttons currently have to have a cancel or confirm class to actually have the behavior bound to them?",
+      "parentUuid": "ee62ffec_b1e3bfd3",
+      "revId": "a04753105ef6d3f4e8ae3101950c4927c31c1f37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee62ffec_51ca434b",
         "filename": "templates/modules/editor/VisualEditorOverlayHeader.hogan",
         "patchSetId": 2
