@@ -1,5 +1,5 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
-( function( M ) {
+( function( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		idOverride;
 
@@ -37,5 +37,15 @@
 		!localStorage.getItem( 'mfHideWikiGrok' )
 	) {
 		mw.loader.load( 'mobile.wikigrok.dialog' );
+
+		// Make OverlayManager handle '#/wikigrok/about' links.
+		M.overlayManager.add( /^\/wikigrok\/about$/, function() {
+			var d = $.Deferred();
+			mw.loader.using( 'mobile.wikigrok.dialog' ).done( function() {
+				var WikiGrokMoreInfo = M.require( 'modules/wikigrok/WikiGrokMoreInfo' );
+				d.resolve( new WikiGrokMoreInfo() );
+			} );
+			return d;
+		} );
 	}
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );
