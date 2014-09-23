@@ -38,6 +38,7 @@
 		 */
 		className: 'overlay',
 		templatePartials: {
+			backButton: M.template.get( 'backButton.hogan' ),
 			cancelButton: M.template.get( 'cancelButton.hogan' )
 		},
 		template: M.template.get( 'Overlay.hogan' ),
@@ -60,7 +61,8 @@
 			// Truncate any text inside in the overlay header.
 			this.$( '.overlay-header h2 span' ).addClass( 'truncated-text' );
 			// FIXME change when micro.tap.js in stable
-			this.$( '.cancel, .confirm' ).on( M.tapEvent( 'click' ), function( ev ) {
+			// FIXME: Remove .initial-header selector when bug 71203 resolved.
+			this.$( '.cancel, .confirm, .initial-header .back' ).on( M.tapEvent( 'click' ), function( ev ) {
 				ev.preventDefault();
 				ev.stopPropagation();
 				if ( self.closeOnBack ) {

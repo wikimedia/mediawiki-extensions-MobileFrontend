@@ -1,6 +1,6 @@
 <div class="overlay-header initial-header hideable hidden">
 	<ul>
-		<li><button class="cancel icon icon-back">{{closeMsg}}</button></li>
+		<li>{{>backButton}}</li>
 	</ul>
 	<div class="overlay-title">
 		<h2>{{{editingMsg}}}</h2>

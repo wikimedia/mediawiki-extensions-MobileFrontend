@@ -16,7 +16,7 @@
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
-			keepEditingMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
+			closeMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
 			summaryRequestMsg: mw.msg( 'mobile-frontend-editor-summary-request' ),
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
@@ -181,7 +181,8 @@
 			// log edit attempt
 			this.log( 'attempt' );
 
-			this.$( '.cancel' ).on( M.tapEvent( 'click' ), function() {
+			// FIXME: This should be .close (see bug 71203)
+			this.$( '.back' ).eq( 0 ).on( M.tapEvent( 'click' ), function() {
 				// log cancel attempt
 				self.log( 'cancel' );
 			} );
