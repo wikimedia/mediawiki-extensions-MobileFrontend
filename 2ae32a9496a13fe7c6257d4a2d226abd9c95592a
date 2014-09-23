@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_b3ce1fb8",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-23T23:36:40Z",
+      "side": 1,
+      "message": "It would be better to add this in the template itself...\nSo all our templates are laid out in the /templates/ folder \n\nThe template property on an Overlay (or View class) points to the filename and the templates are arranged in a consistent way with the JavaScript\n\nThis could also effect the license when done in this way...",
+      "revId": "2ae32a9496a13fe7c6257d4a2d226abd9c95592a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
