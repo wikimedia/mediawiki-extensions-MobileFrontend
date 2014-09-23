@@ -16,6 +16,24 @@
       "revId": "5e4dd87370040461ec303d630d8697b0f8312159",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_02b357e9",
+        "filename": "javascripts/modules/issues/issues.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-23T20:41:29Z",
+      "side": 1,
+      "message": "Urgh, you\u0027re right, the more i think about it, the more the more i see no sense in this :/\n\nNow the other question is: Why it works now (at least for my local example)? I will take a deeper look into it :)",
+      "parentUuid": "ee62ffec_4e55fe51",
+      "revId": "5e4dd87370040461ec303d630d8697b0f8312159",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
