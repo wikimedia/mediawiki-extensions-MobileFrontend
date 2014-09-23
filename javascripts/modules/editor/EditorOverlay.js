@@ -2,7 +2,7 @@
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		isVisualEditorEnabled = M.isWideScreen() &&
 			mw.config.get( 'wgVisualEditorConfig' ) &&
-			mw.config.get( 'wgVisualEditorConfig' ).namespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) > -1 &&
+			$.inArray( mw.config.get( 'wgNamespaceNumber' ), mw.config.get( 'wgVisualEditorConfig' ).namespaces ) > -1 &&
 			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 			mw.config.get( 'wgPageContentModel' ) === 'wikitext',
 		Section = M.require( 'Section' ),

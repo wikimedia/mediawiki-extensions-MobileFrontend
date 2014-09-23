@@ -72,7 +72,7 @@
 			user.getGroups().done( function( groups ) {
 				var editable = false;
 				$.each( groups, function( i, group ) {
-					if ( editProtection.indexOf( group ) > -1 ) {
+					if ( $.inArray( group, editProtection ) > -1 ) {
 						editable = true;
 						return false;
 					}

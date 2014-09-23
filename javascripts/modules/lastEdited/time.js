@@ -1,4 +1,4 @@
-( function( M ) {
+( function( M, $ ) {
 	var units = ['seconds', 'minutes', 'hours', 'days', 'months', 'years'],
 		limits = [1, 60, 3600, 86400, 2592000, 31536000];
 
@@ -18,7 +18,7 @@
 
 	function isRecent( delta ) {
 		var u = delta.unit;
-		return [ 'seconds', 'minutes', 'hours' ].indexOf( u ) > -1;
+		return $.inArray( u, [ 'seconds', 'minutes', 'hours' ] ) > -1;
 	}
 
 	function isNow( delta ) {
@@ -32,4 +32,4 @@
 		isRecent: isRecent
 	} );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

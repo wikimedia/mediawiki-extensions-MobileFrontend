@@ -127,7 +127,7 @@
 				page.isWikiText() &&
 
 				// Only in enabled namespaces
-				visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) > -1 &&
+				$.inArray( mw.config.get( 'wgNamespaceNumber' ), visualEditorNamespaces ) > -1 &&
 
 				// Not on pages which are outputs of the Page Translation feature
 				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&

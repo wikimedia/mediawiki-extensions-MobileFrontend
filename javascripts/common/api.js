@@ -126,7 +126,7 @@
 			} else if ( isCacheable && this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
 				return this.tokenCache[ endpoint ][ tokenType ];
 			// If the token is available from mw.user.tokens, get it from there.
-			} else if ( easyTokens.indexOf( tokenType ) > -1 && !endpoint && !caToken ) {
+			} else if ( $.inArray( tokenType, easyTokens ) > -1 && !endpoint && !caToken ) {
 				token = user.tokens.get( tokenType + 'Token' );
 				if ( token && ( token !== '+\\' || mw.config.get( 'wgMFAnonymousEditing' ) ) ) {
 					d.resolve( token );
