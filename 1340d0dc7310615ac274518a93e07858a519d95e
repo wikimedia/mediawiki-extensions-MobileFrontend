@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_517da316",
+        "filename": "javascripts/modules/wikigrok/wikigrokeval.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-23T18:31:56Z",
+      "side": 1,
+      "message": "This seems like a weird place to put this code. I definitely wouldn\u0027t look for it here. Why not leave it in WikiGrokDialog.js, since it\u0027s only relevant to that interface? If you want to remove it from postRender (to avoid potential code duplication), you can just put it in a separate function.",
+      "revId": "1340d0dc7310615ac274518a93e07858a519d95e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
