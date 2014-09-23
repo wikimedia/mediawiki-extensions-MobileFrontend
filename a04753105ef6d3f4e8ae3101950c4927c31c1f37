@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_b1e3bfd3",
+        "filename": "templates/modules/editor/EditorOverlayHeader.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-23T18:34:12Z",
+      "side": 0,
+      "message": "Need to check why this has cancel class and back icon. This doesn\u0027t know what it is.",
+      "revId": "a04753105ef6d3f4e8ae3101950c4927c31c1f37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_51ca434b",
+        "filename": "templates/modules/editor/VisualEditorOverlayHeader.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-23T18:34:12Z",
+      "side": 0,
+      "message": "Same.. are you a back or a cancel button sir!?!",
+      "revId": "a04753105ef6d3f4e8ae3101950c4927c31c1f37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_31d7cff4",
+        "filename": "templates/modules/talk/talkHeader.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-23T18:34:12Z",
+      "side": 0,
+      "message": "Same again.",
+      "revId": "a04753105ef6d3f4e8ae3101950c4927c31c1f37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
