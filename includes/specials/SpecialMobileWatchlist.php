@@ -42,17 +42,26 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'watchnologin' ) );
 		$out->setRobotPolicy( 'noindex,nofollow' );
+		$out->addHTML(
+			self::getAnonBannerHtml( $this->getPageTitle() )
+		);
+	}
+
+	/**
+	 * Get HTML representing a banner prompting you to login.
+	 * @param Title $pageTitle
+	 * @return string html
+	 */
+	public static function getAnonBannerHtml( $pageTitle ) {
 		$link = Linker::linkKnown(
 			SpecialPage::getTitleFor( 'Userlogin' ),
-			$this->msg( 'loginreqlink' )->escaped(),
+			wfMessage( 'loginreqlink' )->escaped(),
 			array(),
-			array( 'returnto' => $this->getPageTitle()->getPrefixedText() )
+			array( 'returnto' => $pageTitle->getPrefixedText() )
 		);
-		$out->addHTML(
-			Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
-			$this->msg( 'watchlistanontext' )->rawParams( $link )->parse() .
-			Html::closeElement( 'div' )
-		);
+		return Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
+			wfMessage( 'watchlistanontext' )->rawParams( $link )->parse() .
+				Html::closeElement( 'div' );
 	}
 
 	/**
@@ -96,10 +105,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		// This needs to be done before calling getWatchlistHeader
 		$this->updateStickyTabs();
-
-		$output->addHtml( '<div class="content-header">' . $this->getWatchlistHeader() . '</div>' );
+		if ( $this->optionsChanged ) {
+			$user->saveSettings();
+		}
 
 		if ( $this->view === 'feed' ) {
+			$output->addHtml( $this->getWatchlistHeader( $user ) );
 			$this->showRecentChangesHeader();
 			$res = $this->doFeedQuery();
 
@@ -109,17 +120,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				$this->showEmptyList( true );
 			}
 		} else {
-			$this->filter = $this->getRequest()->getVal( 'filter', 'articles' );
-			$res = $this->doListQuery();
-			if ( $res->numRows() ) {
-				$this->showListResults( $res );
-			} else {
-				$this->showEmptyList( false );
-			}
-		}
-
-		if ( $this->optionsChanged ) {
-			$user->saveSettings();
+			$output->redirect( SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL() );
 		}
 
 		wfProfileOut( __METHOD__ );
@@ -154,44 +155,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	}
 
 	/**
-	 * Add thumbs to a query, if installed and other preconditions are met
-	 *
-	 * @param array $tables
-	 * @param array $fields
-	 * @param array $join_conds
-	 * @param $baseTable
-	 *
-	 * @return void
-	 */
-	protected function doPageImages( array &$tables, array &$fields, array &$join_conds, $baseTable ) {
-		if ( !$this->usePageImages ) {
-			return;
-		}
-		if ( $baseTable === 'page' ) {
-			if ( !in_array( 'page', $tables ) ) {
-				$tables[] = 'page';
-			}
-			$idField = 'page_id';
-		} else { // recentchanges
-			$idField = 'rc_cur_id';
-		}
-		$tables[] = 'page_props';
-		$fields[] = 'pp_value';
-		$join_conds['page_props'] = array(
-			'LEFT JOIN',
-			array(
-				"pp_page=$idField",
-				'pp_propname' => 'page_image',
-			),
-		);
-	}
-
-	/**
 	 * Get the header for the watchlist page
+	 * @param User user
 	 * @return string Parsed HTML
 	 */
-	protected function getWatchlistHeader() {
-		$user = $this->getUser();
+	public static function getWatchlistHeader( User $user ) {
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
 		$attrsList = $attrsFeed = array();
 		$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
@@ -224,7 +192,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			Html::closeElement( 'li' ) .
 			Html::closeElement( 'ul' );
 
-		return $html;
+		return '<div class="content-header">' . $html . '</div>';
 	}
 
 	/**
@@ -331,59 +299,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	}
 
 	/**
-	 * Get watchlist items for a-z view
-	 * @return ResultWrapper
-	 *
-	 * @see doPageImages()
-	 */
-	function doListQuery() {
-		wfProfileIn( __METHOD__ );
-
-		$user = $this->getUser();
-		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
-
-		# Possible where conditions
-		$conds = $this->getNSConditions( 'wl_namespace' );
-		$conds['wl_user'] = $user->getId();
-		$tables = array( 'watchlist', 'page', 'revision' );
-		$fields = array(
-			'wl_namespace','wl_title',
-			// get the timestamp of the last change only
-			'MAX(' . $dbr->tableName( 'revision' ) . '.rev_timestamp) AS rev_timestamp'
-		);
-		$joinConds = array(
-			'page' => array( 'LEFT JOIN', array(
-				'wl_namespace = page_namespace',
-				'wl_title = page_title'
-			)	),
-			'revision' => array( 'LEFT JOIN', array(
-				'page_id = rev_page'
-			) )
-		);
-		$options = array(
-			'GROUP BY' => 'wl_namespace, wl_title',
-			'ORDER BY' => 'wl_namespace, wl_title'
-		);
-
-		$this->doPageImages( $tables, $fields, $joinConds, 'page' );
-
-		$options['LIMIT'] = self::LIMIT + 1; // add one to decide whether to show the more button
-
-		if ( $this->fromPageTitle ) {
-			$ns = $this->fromPageTitle->getNamespace();
-			$titleQuoted = $dbr->addQuotes( $this->fromPageTitle->getDBkey() );
-			$conds[] = "wl_namespace > $ns OR (wl_namespace = $ns AND wl_title >= $titleQuoted)";
-		}
-
-		wfProfileIn( __METHOD__ . '-query' );
-		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $joinConds );
-		wfProfileOut( __METHOD__ . '-query' );
-
-		wfProfileOut( __METHOD__ );
-		return $res;
-	}
-
-	/**
 	 * Show results of doFeedQuery
 	 * @param ResultWrapper $res ResultWrapper returned from db
 	 *
@@ -391,21 +306,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 */
 	protected function showFeedResults( ResultWrapper $res ) {
 		$this->showResults( $res, true );
-	}
-
-	/**
-	 * Show results of doListQuery after an ul element added
-	 * @param ResultWrapper $res ResultWrapper returned from db
-	 *
-	 * @see showResults()
-	 */
-	protected function showListResults( ResultWrapper $res ) {
-		$output = $this->getOutput();
-		$output->addHtml(
-			Html::openElement( 'ul', array( 'class' => 'watchlist ' . 'page-list thumbs' ) )
-		);
-
-		$this->showResults( $res, false );
 	}
 
 	/**
@@ -420,44 +320,13 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$output = $this->getOutput();
 
-		$lookahead = 1;
-		$fromTitle = false;
-
 		if ( $feed ) {
 			foreach( $res as $row ) {
 				$this->showFeedResultRow( $row );
 			}
-		} else {
-			foreach( $res as $row ) {
-				if ( $lookahead <= self::LIMIT ) {
-					$this->showListResultRow( $row );
-				} else {
-					$fromTitle = Title::makeTitle( $row->wl_namespace, $row->wl_title );
-				}
-				$lookahead++;
-			}
 		}
 
 		$output->addHtml( '</ul>' );
-
-		if ( $fromTitle !== false ) {
-			$output->addHtml(
-				Html::openElement( 'a',
-					array(
-						'href' => SpecialPage::getTitleFor( 'Watchlist' )->
-							getLocalUrl(
-								array(
-									'from' => $fromTitle->getPrefixedText(),
-									'filter' => $this->filter,
-								)
-							),
-						'class' => 'more',
-					)
-				) .
-				wfMessage( 'mobile-frontend-watchlist-more' )->escaped() .
-				Html::closeElement( 'a' )
-			);
-		}
 
 		wfProfileOut( __METHOD__ );
 	}
@@ -467,9 +336,19 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * @param boolean $feed Render as feed (true) or list (false) view?
 	 */
 	function showEmptyList( $feed ) {
+		$this->getOutput()->addHtml( self::getEmptyListHtml( $feed, $this->getLanguage() ) );
+	}
+
+	/**
+	 * Get the HTML needed to show if a user doesn't watch any page, show information
+	 * how to watch pages where no pages have been watched.
+	 * @param boolean $feed Render as feed (true) or list (false) view?
+	 * @param Language $lang The language of the current mode
+	 * @return string
+	 */
+	public static function getEmptyListHtml( $feed, $lang ) {
 		global $wgExtensionAssetsPath;
-		$output = $this->getOutput();
-		$dir = $this->getLanguage()->isRTL() ? 'rtl' : 'ltr';
+		$dir = $lang->isRTL() ? 'rtl' : 'ltr';
 
 		$imgUrl = $wgExtensionAssetsPath . "/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
 
@@ -485,62 +364,13 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			) );
 		}
 
-		$output->addHtml(
-			Html::openElement( 'div', array( 'class' => 'info empty-page' ) ) .
+		return Html::openElement( 'div', array( 'class' => 'info empty-page' ) ) .
 				$msg .
 				Html::element( 'a',
 					array( 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ),
 					wfMessage( 'mobile-frontend-watchlist-back-home' )->plain()
 				) .
-				Html::closeElement( 'div' )
-		);
-	}
-
-	/**
-	 * Render a thumbnail returned from db as PageImage or a needsPhoto placeholder to add a picture
-	 * @param object $row a row of the returned db result
-	 * @return array
-	 *
-	 * @todo FIXME: Refactor to use MobilePage
-	 */
-	private function renderThumb( $row ) {
-		wfProfileIn( __METHOD__ );
-
-		if ( $this->usePageImages ) {
-			$needsPhoto = true;
-			$props = array(
-				'class' => 'listThumb needsPhoto icon icon-max-x',
-			);
-			if ( !is_null( $row->pp_value ) ) {
-				$file = wfFindFile( $row->pp_value );
-				if ( $file ) {
-					$thumb = $file->transform( array(
-						'width' => self::THUMB_SIZE,
-						'height' => self::THUMB_SIZE )
-					);
-
-					if ( $thumb ) {
-						$needsPhoto = false;
-						$props = array(
-							'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight()
-								? 'icon icon-max-y'
-								: 'icon icon-max-x' ),
-							'style' => 'background-image: url("' .
-								wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
-						);
-					}
-				}
-			}
-			return array(
-				'html' => Html::element( 'div', $props ),
-				'needsPhoto' => $needsPhoto,
-			);
-		}
-
-		wfProfileOut( __METHOD__ );
-		return array(
-			'html' => '',
-		);
+				Html::closeElement( 'div' );
 	}
 
 	/**
@@ -582,48 +412,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
 			$isMinor );
-		wfProfileOut( __METHOD__ );
-	}
-
-	/**
-	 * Render a result row in list view
-	 * @param object $row a row of db result
-	 */
-	protected function showListResultRow( $row ) {
-		wfProfileIn( __METHOD__ );
-
-		$output = $this->getOutput();
-		$title = Title::makeTitle( $row->wl_namespace, $row->wl_title );
-		$titleText = $title->getPrefixedText();
-		$ts = $row->rev_timestamp;
-		if ( $ts ) {
-			$ts = new MWTimestamp( $ts );
-			$lastModified = wfMessage(
-				'mobile-frontend-watchlist-modified',
-				$ts->getHumanTimestamp()
-			)->text();
-			$className = 'title';
-		} else {
-			$className = 'title new';
-			$lastModified = '';
-		}
-
-		$thumb = $this->renderThumb( $row );
-
-		$output->addHtml(
-			Html::openElement( 'li', array(
-				'class' => 'page-summary',
-				'title' => $titleText,
-				'data-id' => $title->getArticleId()
-			) ) .
-			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => $className ) ) .
-			$thumb['html'] .
-			Html::element( 'h3', array(), $titleText ).
-			Html::element( 'div', array( 'class' => 'info' ), $lastModified ) .
-			Html::closeElement( 'a' ) .
-			Html::closeElement( 'li' )
-		);
-
 		wfProfileOut( __METHOD__ );
 	}
 
