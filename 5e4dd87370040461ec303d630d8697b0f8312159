@@ -34,6 +34,24 @@
       "revId": "5e4dd87370040461ec303d630d8697b0f8312159",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_fd86a669",
+        "filename": "javascripts/modules/issues/issues.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-23T21:21:11Z",
+      "side": 1,
+      "message": "@Jon: Maybe it\u0027s too late (so i\u0027m not fully concentrated anymore), but here my thoughts:\n\nIs there a reason why you added this call to extractMessage? If i see this right it\u0027s correct, that there are some messages twice, they are processed twice. The first time in the call from createBanner(), which includes all mbox-text class elements, no matter which hirarchie level, and the second time when you call extractMessage again to get the content of the nested tables (in the .each() function. For my local example (a copy of the example from the bug report) it\u0027s the easiest solution to just detele the if-branch. But maybe i overlook something :) I will upload my patchset in few minutes.",
+      "parentUuid": "ee62ffec_02b357e9",
+      "revId": "5e4dd87370040461ec303d630d8697b0f8312159",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
