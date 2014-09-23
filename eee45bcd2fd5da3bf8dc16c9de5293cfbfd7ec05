@@ -52,6 +52,24 @@
       "revId": "eee45bcd2fd5da3bf8dc16c9de5293cfbfd7ec05",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_f4d92a84",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-23T05:38:12Z",
+      "side": 1,
+      "message": "This sounds to be the best solution fo this :)",
+      "parentUuid": "ee62ffec_cb5e857b",
+      "revId": "eee45bcd2fd5da3bf8dc16c9de5293cfbfd7ec05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
