@@ -27,26 +27,6 @@ FIXME: Review all of these hacks to see if they still apply.
 	}
 }
 
-/* Galleries */
-/* See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
-
-ul.gallery {
-	width: 100% !important;
-	max-width: 100% !important;
-
-	li.gallerybox {
-		width: auto !important;
-
-		> div {
-			width: auto !important;
-
-			> div.thumb {
-				width: auto !important;
-			}
-		}
-	}
-}
-
 // FIXME: Remove when filetoc is stripped from file pages a la table of contents (toc)
 #filetoc,
 // FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
@@ -113,4 +93,18 @@ ul.gallery {
 .quotebox {
 	margin: 0 0 0.8em !important;
 	width: auto !important;
+}
+
+// Hacks to render galleries better on mobile
+@media all and (max-width: @wgMFDeviceWidthTablet) {
+	// Center images that might be less than the screen width.
+	// Image will appear centered and caption will take up full screen.
+	.gallery {
+		.gallerybox {
+			width: 100% !important;
+			div {
+				width: 100% !important;
+			}
+		}
+	}
 }
