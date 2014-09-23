@@ -16,6 +16,24 @@
       "revId": "29281f16168e6aa94c440c2727678adbc5751711",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_2ea64a51",
+        "filename": "javascripts/common/modes.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-23T17:58:26Z",
+      "side": 1,
+      "message": "First argument is the thing you are looking for, second is the choices.\nHere modes is an array (plural) and mode is the current mode (single) so this is correct.",
+      "parentUuid": "ee62ffec_8eb77681",
+      "revId": "29281f16168e6aa94c440c2727678adbc5751711",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
