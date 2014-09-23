@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_6244531d",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-23T20:18:26Z",
+      "side": 1,
+      "message": "13:14 jdlrobson: okay so the mobile skin (called Minerva) is all mobile first\n13:14 jdlrobson: so what we tend to do is style first for mobile and then tweak it for tablets (which also gives a nicer experience for desktop users)\n13:15 jdlrobson: so the margin in the profile page is likely to be there for a reason\n13:15 jdlrobson: i thought this would be a good way to introduce you to @wgMFDeviceWidthTablet :)\n13:15 jdlrobson: so this is a configurable variable which basically means - your device has the minimum width to be considered a tablet\n13:16 jdlrobson: if you look at the bottom of the stylesheet you\u0027ll notice we have a bunch of css in a media query\n13:16 bmansurov: yes\n13:16 jdlrobson: so the fix is correct in a way, but we should probably preserve the margin on mobile and just remove it on tablet/desktop\n13:17 jdlrobson: If you however think the margin is wrong and worth discussing you can also feel free to grab a designer and argue with them but for something so small it\u0027s probably not worth taking up their time",
+      "revId": "d59796b7d120a319c7f7f3d37876588d5e9ad488",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
