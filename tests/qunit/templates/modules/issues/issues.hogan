@@ -1,0 +1,23 @@
+<table class="tmbox">
+	<tr>
+		<td class="mbox-text">Level 1</td>
+	</tr>
+</table>
+<table class="tmbox">
+	<tr>
+		<td class="mbox-text"><table>
+				<tr>
+					<td class="mbox-text">Nested 1</td>
+				</tr>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td class="mbox-text">Nested-nested 1</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+		</table></td>
+	</tr>
+</table>

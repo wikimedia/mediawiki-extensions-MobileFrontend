@@ -12,13 +12,10 @@ var module = (function() {
 		$box.find( selector ).each( function() {
 			var contents,
 				$this = $( this );
-			if ( $this.find( selector ).length ) {
-				contents = extractMessage( $this );
-			} else {
-				// Clean up talk page boxes
-				$this.find( 'table, .noprint' ).remove();
-				contents = $this.html();
-			}
+			// Clean up talk page boxes
+			$this.find( 'table, .noprint' ).remove();
+			contents = $this.html();
+
 			if ( contents ) {
 				$( '<p>' ).html( contents ).appendTo( $container );
 			}
@@ -84,7 +81,8 @@ var module = (function() {
 	} );
 
 	return {
-		createBanner: createBanner
+		createBanner: createBanner,
+		_extractMessage: extractMessage
 	};
 }() );
 

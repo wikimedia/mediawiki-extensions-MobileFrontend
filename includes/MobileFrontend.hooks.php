@@ -230,6 +230,8 @@ class MobileFrontendHooks {
 		$testModuleBoilerplate = array(
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
+			'localTemplateBasePath' => dirname( __DIR__ ) . '/tests/qunit/templates',
+			'class' => 'ResourceLoaderTemplateModule',
 			'targets' => array( 'mobile' ),
 		);
 
@@ -244,6 +246,7 @@ class MobileFrontendHooks {
 		foreach ( $wgResourceModules as $key => $module ) {
 			if ( substr( $key, 0, 7 ) === 'mobile.' && isset( $module['scripts'] ) ) {
 				$testFiles = array();
+				$templates = array();
 				foreach ( $module['scripts'] as $script ) {
 					$testFile = 'tests/' . dirname( $script ) . '/test_' . basename( $script );
 					$testFile = str_replace( 'tests/javascripts/', 'tests/qunit/', $testFile );
@@ -251,12 +254,40 @@ class MobileFrontendHooks {
 					if ( file_exists( $testModuleBoilerplate['localBasePath'] . '/' . $testFile ) ) {
 						$testFiles[] = $testFile;
 					}
+
+					// save the relative name of the template directory
+					$templateDir = str_replace( 'javascripts/', '', dirname( $script ) );
+					// absolute filepath to the template dir (for several checks)
+					$templateAbsoluteDir = $testModuleBoilerplate['localTemplateBasePath']
+						. '/' . $templateDir;
+
+					// check, if there is a template directory to load templates from
+					if ( file_exists( $templateAbsoluteDir ) && is_dir( $templateAbsoluteDir ) ) {
+						// open the template directory
+						$templateHandle = opendir( $templateAbsoluteDir );
+						// read and process all files in this directory
+						while( $template = readdir( $templateHandle ) ) {
+							// only files can be loaded and every template should only be loaded once
+							if (
+								!is_file( $templateAbsoluteDir . '/' . $template ) ||
+								in_array( $template, $templates )
+							) {
+								continue;
+							}
+							// add this template to the templates array
+							$templates[] = $templateDir . '/' . $template;
+						}
+						// close the directory handle
+						closedir( $templateHandle );
+					}
 				}
+
 				// if test files exist for given module, create a corresponding test module
 				if ( !empty( $testFiles ) ) {
 					$testModules['qunit']["$key.tests"] = $testModuleBoilerplate + array(
 						'dependencies' => array( 'mobile.tests.base', $key ),
 						'scripts' => $testFiles,
+						'templates' => $templates,
 					);
 				}
 			}
