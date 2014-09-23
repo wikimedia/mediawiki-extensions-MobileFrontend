@@ -37,6 +37,9 @@
 		 * @type {String}
 		 */
 		className: 'overlay',
+		templatePartials: {
+			cancelButton: M.template.get( 'cancelButton.hogan' )
+		},
 		template: M.template.get( 'Overlay.hogan' ),
 		defaults: {
 			headerButtonsListClassName: '',

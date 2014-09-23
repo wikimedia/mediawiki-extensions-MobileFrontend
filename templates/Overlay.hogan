@@ -1,7 +1,7 @@
 <div class="overlay-header-container {{#fixedHeader}} position-fixed{{/fixedHeader}}">
 	<div class="overlay-header">
 		<ul>
-			<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
+			<li>{{>cancelButton}}</li>
 		</ul>
 		<div class="overlay-title">
 			<h2>{{{heading}}}</h2>

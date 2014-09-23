@@ -1,7 +1,7 @@
 <div class="overlay-header-container position-fixed">
 	<div class="overlay-header">
 		<ul>
-			<li><button class="cancel icon icon-cancel">{{closeMsg}}</button></li>
+			<li>{{>cancelButton}}</li>
 		</ul>
 		<div class="overlay-search">
 			<form method="get" action="{{action}}">

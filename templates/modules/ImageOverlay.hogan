@@ -4,7 +4,7 @@
 			<div class="image"></div>
 		</div>
 	</div>
-	<button class="cancel icon icon-cancel-light">{{closeMsg}}</button>
+	{{>cancelButton}}
 	<div class="details">
 		<a class="mw-ui-button mw-ui-progressive button" href="#">{{detailsMsg}}</a>
 		<p>{{caption}}</p>
