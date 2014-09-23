@@ -256,6 +256,7 @@
 	"mobile-frontend-talk-reply": "Odpowiedz",
 	"mobile-frontend-talk-reply-info": "Zwróć uwagę, że twoja odpowiedź zostanie automatycznie podpisana twoją nazwą użytkownika.",
 	"mobile-frontend-talk-reply-success": "Twoja odpowiedź została zapisana na stronie dyskusji.",
+	"mobile-frontend-talk-topic-error-badtoken": "Na serwerze wystąpił błąd. Nie można zapisać edycji. Spróbuj przeładować tę stronę.",
 	"mobile-frontend-terms-text": "Warunki użytkowania",
 	"mobile-frontend-thanked-notice": "$1 {{GENDER:$2|został powiadomiony|została powiadomiona}} o twoim podziękowaniu za {{GENDER:$2|jego|jej}} edycję.",
 	"mobile-frontend-user-account": "konto użytkownika",

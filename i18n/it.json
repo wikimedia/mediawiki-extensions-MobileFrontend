@@ -279,7 +279,7 @@
 	"mobile-frontend-talk-reply-info": "La risposta sarà firmata automaticamente con il tuo nome utente.",
 	"mobile-frontend-talk-reply-success": "La tua risposta è stata salvata correttamente nella pagina di discussione.",
 	"mobile-frontend-talk-topic-feedback": "Nuova discussione aggiunta alla pagina di discussione!",
-	"mobile-frontend-talk-topic-error": "L'argomento non può essere aggiunto. Errore: $1",
+	"mobile-frontend-talk-topic-error": "L'argomento non può essere aggiunto a causa di un errore sconosciuto.",
 	"mobile-frontend-terms-text": "Condizioni d'uso",
 	"mobile-frontend-thanked-notice": "Hai detto a $1 che ti piace {{GENDER:$2|la sua}} modifica.",
 	"mobile-frontend-user-account": "utenza",

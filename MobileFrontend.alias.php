@@ -334,7 +334,12 @@ $specialPageAliases['sr-ec'] = array(
 
 /** Swedish (svenska) */
 $specialPageAliases['sv'] = array(
+	'History' => array( 'Historik' ),
+	'MobileDiff' => array( 'Mobil_diff' ),
+	'MobileMenu' => array( 'Mobil_meny' ),
+	'MobileLanguages' => array( 'Mobil_språk' ),
 	'Nearby' => array( 'Nära' ),
+	'UserProfile' => array( 'Användarprofil' ),
 );
 
 /** Ukrainian (українська) */
