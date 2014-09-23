@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_7d8076f9",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-23T21:42:09Z",
+      "side": 1,
+      "message": "Typo. Should be M.settings",
+      "revId": "707bd2cb68eaf20249dca107b17783111be80603",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
