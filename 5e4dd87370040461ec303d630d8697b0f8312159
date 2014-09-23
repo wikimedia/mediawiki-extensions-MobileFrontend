@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_4e55fe51",
+        "filename": "javascripts/modules/issues/issues.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-23T17:45:30Z",
+      "side": 1,
+      "message": "So I guess the purpose this is now to run the remove statement below?\nIt seems strange running the extractMessage when it does other things.",
+      "revId": "5e4dd87370040461ec303d630d8697b0f8312159",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
