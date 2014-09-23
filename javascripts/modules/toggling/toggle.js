@@ -57,6 +57,8 @@
 			}
 			if ( $heading.length && !$heading.hasClass( 'openSection' ) ) {
 				toggle( $heading );
+			}
+			if ( $heading.length ) {
 				// scroll again after opening section (opening section makes the page longer)
 				window.scrollTo( 0, $target.offset().top );
 			}
@@ -118,9 +120,15 @@
 		} );
 
 		function checkHash() {
-			var hash = window.location.hash;
+			var internalRedirect = mw.config.get( 'wgInternalRedirectTargetUrl' ),
+				hash = window.location.hash;
+
 			if ( hash.indexOf( '#' ) === 0 ) {
 				reveal( hash );
+			} else if ( internalRedirect ) {
+				internalRedirect = '#' + internalRedirect.split( '#' )[1];
+				window.location.hash = internalRedirect;
+				reveal( internalRedirect );
 			}
 		}
 		checkHash();
