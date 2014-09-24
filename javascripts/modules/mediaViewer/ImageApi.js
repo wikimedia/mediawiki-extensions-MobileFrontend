@@ -25,7 +25,8 @@
 		},
 
 		getThumb: function( title ) {
-			var result = this._cache[title];
+			var result = this._cache[title],
+				imageSizeMultiplier = ( window.devicePixelRatio && window.devicePixelRatio > 1 ) ? window.devicePixelRatio : 1;
 
 			if ( !result ) {
 				this._cache[title] = result = $.Deferred();
@@ -35,10 +36,10 @@
 					prop: 'imageinfo',
 					titles: title,
 					iiprop: ['url', 'extmetadata'],
-					// request an image two times bigger than the reported screen size
+					// request an image devicePixelRatio times bigger than the reported screen size
 					// for retina displays and zooming
-					iiurlwidth: findSizeBucket( $( window ).width() * 2 ),
-					iiurlheight: findSizeBucket( $( window ).height() * 2 )
+					iiurlwidth: findSizeBucket( $( window ).width() * imageSizeMultiplier ),
+					iiurlheight: findSizeBucket( $( window ).height() * imageSizeMultiplier )
 				} ).done( function( resp ) {
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: API
