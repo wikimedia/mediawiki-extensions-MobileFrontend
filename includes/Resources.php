@@ -473,7 +473,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			// talk.js
 			'modules/talk/talk.hogan',
-			'modules/talk/talkHeader.hogan',
 			'modules/talk/talkSectionAdd.hogan',
 			'modules/talk/talkSectionAddHeader.hogan',
 			'modules/talk/talkSection.hogan',
