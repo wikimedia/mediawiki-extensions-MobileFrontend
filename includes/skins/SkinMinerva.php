@@ -241,8 +241,8 @@ class SkinMinerva extends SkinTemplate {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
 			$notificationsMsg = wfMessage( 'mobile-frontend-user-button-tooltip' );
 			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
-				// FIXME: cap higher counts
 				$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
+				$count = EchoNotificationController::formatNotificationCount( $count );
 			}
 		} elseif ( !empty( $newtalks ) ) {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Mytalk' );

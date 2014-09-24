@@ -198,7 +198,7 @@ input.search {
 	#secondary-button.user-button,
 	.user-button {
 		width: @headerHeight;
-		text-align: center;
+		text-align: right;
 		// Make sure count is positioned correctly in relation to bell icon
 		position: relative;
 		.background-image-svg-quick( 'images/bell' );
@@ -218,12 +218,12 @@ input.search {
 			color: #fff;
 			background: #c91f2c;
 			border-radius: 2px;
-			position: absolute;
-			right: .6em;
-			top: .6em;
-			width: 1.2em;
 			height: 1.2em;
 			line-height: 1.2em;
+			min-width: 1em;
+			margin: .6em .6em 0 0;
+			padding: 0 0.1em;
+			text-align: center;
 
 			&.zero {
 				display: none;
