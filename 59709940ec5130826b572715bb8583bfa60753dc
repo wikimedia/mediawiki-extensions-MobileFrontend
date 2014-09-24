@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_276d4402",
+        "filename": "javascripts/modules/mediaViewer/ImageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-24T18:15:07Z",
+      "side": 1,
+      "message": "spelling mistake :-S",
+      "revId": "59709940ec5130826b572715bb8583bfa60753dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
