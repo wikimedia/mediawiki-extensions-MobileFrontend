@@ -6,16 +6,11 @@
 	 */
 	WikiDataApi = Api.extend( {
 		apiUrl: 'https://www.wikidata.org/w/api.php',
+		useJsonp: true,
 
 		initialize: function( options ) {
 			this.itemId = options.itemId;
 			Api.prototype.initialize.apply( this, arguments );
-		},
-		ajax: function( data, options ) {
-			options = options || {};
-			options.url = this.apiUrl;
-			options.dataType = 'jsonp';
-			return Api.prototype.ajax.call( this, data, options );
 		},
 		getClaims: function() {
 			return this.ajax( {
