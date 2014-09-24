@@ -274,7 +274,7 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}'''以显示该词语是否出现于其他地方。",
 	"mobile-frontend-search-no-results": "没有页面使用此标题。",
 	"mobile-frontend-search-submit": "搜索",
-	"mobile-frontend-settings-images-explain": "如果您希望在页面中加载图片，您可以考虑，或者不需要。",
+	"mobile-frontend-settings-images-explain": "加载页面中出现的所有图片内容。",
 	"mobile-frontend-settings-alpha": "实验版",
 	"mobile-frontend-settings-alpha-description": "使用实验中的移动版。可以获得更多实验特性，但遇到漏洞的风险更高。",
 	"mobile-frontend-settings-beta": "测试",

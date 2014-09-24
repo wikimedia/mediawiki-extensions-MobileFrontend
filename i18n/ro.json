@@ -251,7 +251,7 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' pentru a vedea dacă această expresie apare undeva.",
 	"mobile-frontend-search-no-results": "Nicio pagină cu acest titlu.",
 	"mobile-frontend-search-submit": "Du-te",
-	"mobile-frontend-settings-images-explain": "Puteți opta pentru încărcarea sau nu a imaginilor în fiecare pagină.",
+	"mobile-frontend-settings-images-explain": "Încarcă orice imagine care apare într-o pagină.",
 	"mobile-frontend-settings-alpha": "Mod experimental",
 	"mobile-frontend-settings-alpha-description": "Intrați pe teritoriul periculos și neexplorat al experienței mobile. Beneficiați de și mai multe caracteristici experimentale, însă cu un risc mai mare de erori.",
 	"mobile-frontend-settings-beta": "Beta",
