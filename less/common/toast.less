@@ -12,7 +12,7 @@
 	height: 0;
 	// needed for Android 4.x
 	position: absolute;
-	z-index: 5;
+	z-index: @z-indexOverOverlay;
 	// needed for MSIE 9 (Windows Phone 7)
 	width: 100%;
 }
@@ -36,7 +36,7 @@
 	box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
 	word-wrap: break-word;
 	// needs to be higher than for overlays to show on top of overlays
-	z-index: 5;
+	z-index: @z-indexOverOverlay;
 	// don't use visibility: hidden in old browsers that don't support animations
 	display: none;
 
