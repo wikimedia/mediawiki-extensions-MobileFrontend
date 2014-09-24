@@ -9,36 +9,16 @@
 	if ( !M.settings.getUserSetting( 'mfHideWikiGrok' ) ) {
 		api = new WikiDataApi( { itemId: wikidataID });
 		api.getClaims().done(
-			function( data ) {
-				var instanceClaims,
-					dialog,
-					loadWikiGrokDialog = false;
+			function( claims ) {
+				var dialog;
 
-				// See if the page has any 'instance of' claims.
-				if ( data.entities !== undefined && data.entities[wikidataID].claims.P31 !== undefined ) {
-					instanceClaims = data.entities[wikidataID].claims.P31;
-					$.each( instanceClaims, function( id, claim ) {
-						// See if any of the claims state that the topic is a human.
-						if ( claim.mainsnak.datavalue.value['numeric-id'] === 5 ) {
-							// Make sure there are no existing occupation claims.
-							if ( data.entities[wikidataID].claims.P106 === undefined ) {
-								loadWikiGrokDialog = true;
-							}
-							// Break each loop.
-							return false;
-						}
-					} );
-					if ( loadWikiGrokDialog ) {
-						dialog = new WikiGrokDialog( { itemId: wikidataID } );
-						// Insert the dialog into the page
-						$( function() {
-							// If there is a table of contents, insert before it.
-							if ( $( '.toc-mobile' ).length ) {
-								dialog.insertBefore( '.toc-mobile' );
-							} else {
-								dialog.appendTo( M.getLeadSection() );
-							}
-						} );
+				if ( claims && !claims.hasOccupation ) {
+					dialog = new WikiGrokDialog( { itemId: wikidataID } );
+					// If there is a table of contents, insert before it.
+					if ( $( '.toc-mobile' ).length ) {
+						dialog.insertBefore( '.toc-mobile' );
+					} else {
+						dialog.appendTo( M.getLeadSection() );
 					}
 				}
 			}
