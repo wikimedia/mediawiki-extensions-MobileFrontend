@@ -987,7 +987,9 @@ class SkinMinerva extends SkinTemplate {
 		if ( $url ) {
 			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
 		} else {
-			$url = $req->appendQuery( 'mobileaction=toggle_view_desktop' );
+			$url = $this->getTitle()->getLocalUrl(
+				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop', true )
+			);
 		}
 		$url = htmlspecialchars( $this->mobileContext->getDesktopUrl( wfExpandUrl( $url ) ) );
 
