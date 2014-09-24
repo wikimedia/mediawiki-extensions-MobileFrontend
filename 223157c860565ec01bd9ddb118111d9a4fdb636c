@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_6277aa36",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-24T18:47:25Z",
+      "side": 1,
+      "message": "I would replace this with padding-left: 10px;\nI think magically then it will work on both RTL and LTR (as in RTL it gets transformed to padding-right: 10px)\ngive it a go?",
+      "revId": "223157c860565ec01bd9ddb118111d9a4fdb636c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_a29c8260",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-24T18:47:25Z",
+      "side": 1,
+      "message": "We try to avoid using html[dir\u003d\"rtl\"] wherever possible. Note there is a .rtl or .ltr class.\n\nWhen using these rules (which should only be used as a last resort you\u0027ll also need to include the /* @noflip */ annotation which tells ResourceLoader (the thing that serves our CSS) to not flip it :)",
+      "revId": "223157c860565ec01bd9ddb118111d9a4fdb636c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
