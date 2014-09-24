@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_078800eb",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-24T18:07:32Z",
+      "side": 0,
+      "message": "This changes it from 1 to 3 (@z-indexContent: 3;)\n\n@z-indexContent should probably be 1.",
+      "revId": "a2c8c742cfd7b1c6a05cfe80e8c98539d45a1ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
