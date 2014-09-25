@@ -28,19 +28,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * Get the needed styles for this skin
-	 * @return array
-	 */
-	protected function getSkinStyles() {
-		$title = $this->getTitle();
-
-		$styles = parent::getSkinStyles();
-		$styles[] = 'skins.minerva.chrome.styles.beta';
-
-		return $styles;
-	}
-
-	/**
 	 * initialize various variables and generate the template
 	 * @return QuickTemplate
 	 */
