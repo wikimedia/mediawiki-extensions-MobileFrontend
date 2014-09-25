@@ -2,6 +2,7 @@
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Panel = M.require( 'Panel' ),
+		WikiGrokApi = M.require( 'modules/wikigrok/WikiGrokApi' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
 		WikiGrokDialog;
@@ -35,6 +36,7 @@
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
 
 		initialize: function() {
+			this.apiWikiGrok = new WikiGrokApi();
 			this.apiWikiData = new WikiDataApi();
 			Panel.prototype.initialize.apply( this, arguments );
 		},
@@ -51,52 +53,40 @@
 			var self = this;
 
 			// Get potential occupations for the person.
-			// FIXME: Create a client-side API class for interacting with the WikiGrok API
-			$.ajax( {
-				type: 'get',
-				// https://github.com/kaldari/WikiGrokAPI
-				url: 'https://tools.wmflabs.org/wikigrok/api.php',
-				data: {
-					'action': 'get_potential_occupations',
-					// Strip the Q out of the Wikibase item ID
-					'item': options.itemId.replace( 'Q' , '' )
-				},
-				dataType: 'jsonp',
-				success: function( data ) {
-					var occupationArray;
+			this.apiWikiGrok.getPossibleOccupations( options.itemId ).done( function( data ) {
+				var occupationArray;
 
-					// If there are potential occupations for this person, select one at
-					// random and ask if it is a correct occupation for the person.
-					if ( data.occupations !== undefined ) {
-						occupationArray = data.occupations.split( ',' );
-						// Choose a random occupation from the list of possible occupations.
-						options.occupationId = 'Q' + occupationArray[ Math.floor( Math.random() * occupationArray.length ) ];
-						// Remove any disambiguation parentheticals from the title.
-						options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
+				// If there are potential occupations for this person, select one at
+				// random and ask if it is a correct occupation for the person.
+				if ( data.occupations !== undefined ) {
+					occupationArray = data.occupations.split( ',' );
+					// Choose a random occupation from the list of possible occupations.
+					options.occupationId = 'Q' + occupationArray[ Math.floor( Math.random() * occupationArray.length ) ];
+					// Remove any disambiguation parentheticals from the title.
+					options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
 
-						// Get the name of the occupation from Wikidata.
-						self.apiWikiData.getOccupations( options.occupationId ).done( function( data ) {
-							var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
-							if ( data.entities[options.occupationId].labels.en.value !== undefined ) {
-								// Re-render with new content for 'Question' step
-								options.beginQuestions = true;
-								options.occupation = data.entities[options.occupationId].labels.en.value;
-								// Hack for English prototype
-								if ( $.inArray( options.occupation.charAt(0), vowels ) === -1 ) {
-									options.contentMsg = 'Was ' + options.name + ' a ' + options.occupation + '?';
-								} else {
-									options.contentMsg = 'Was ' + options.name + ' an ' + options.occupation + '?';
-								}
-								options.buttons = [
-									{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
-									{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
-									{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
-								];
-								options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
-								self.render( options );
+					// Get the name of the occupation from Wikidata.
+					self.apiWikiData.getOccupations( options.occupationId ).done( function( data ) {
+						var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
+						if ( data.entities[options.occupationId].labels.en.value !== undefined ) {
+							// Re-render with new content for 'Question' step
+							options.beginQuestions = true;
+							options.occupation = data.entities[options.occupationId].labels.en.value;
+							// Hack for English prototype
+							if ( $.inArray( options.occupation.charAt(0), vowels ) === -1 ) {
+								options.contentMsg = 'Was ' + options.name + ' a ' + options.occupation + '?';
+							} else {
+								options.contentMsg = 'Was ' + options.name + ' an ' + options.occupation + '?';
 							}
-						} );
-					}
+							options.buttons = [
+								{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
+								{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
+								{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
+							];
+							options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
+							self.render( options );
+						}
+					} );
 				}
 			} );
 		},
