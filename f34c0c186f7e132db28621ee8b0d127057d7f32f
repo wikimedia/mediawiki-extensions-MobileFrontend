@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_7a874515",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-25T23:03:46Z",
+      "side": 1,
+      "message": "You can remove the parameter here now.",
+      "revId": "f34c0c186f7e132db28621ee8b0d127057d7f32f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
