@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee62ffec_a2f12294",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-09-25T19:03:22Z",
+      "side": 1,
+      "message": "Don\u0027t we want padding-left on both RTL and LTR? RTL padding left value should just be higher, no?",
+      "parentUuid": "ee62ffec_6277aa36",
+      "revId": "223157c860565ec01bd9ddb118111d9a4fdb636c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee62ffec_a29c8260",
         "filename": "less/modules/talk.less",
         "patchSetId": 1
