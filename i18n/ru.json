@@ -294,6 +294,7 @@
 	"mobile-frontend-talk-reply-success": "Ваш ответ был успешно сохранён на странице обсуждения.",
 	"mobile-frontend-talk-topic-feedback": "Новая тема добавлена на страницу обсуждения!",
 	"mobile-frontend-talk-topic-error": "Тема не может быть добавлена из-за неизвестной ошибки.",
+	"mobile-frontend-talk-topic-error-protected": "Эта страница обсуждения защищена. У вас нет разрешения на добавление новой темы на неё.",
 	"mobile-frontend-terms-text": "Условия использования",
 	"mobile-frontend-thanked-notice": "$1 {{GENDER:$2|был оповещён|была оповещена|были оповещены}}, что вам понравилась {{GENDER:$2|его|её|их}} правка.",
 	"mobile-frontend-user-account": "учётная запись",

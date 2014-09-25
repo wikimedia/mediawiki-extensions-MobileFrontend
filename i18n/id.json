@@ -14,7 +14,7 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kode konfirmasi",
-	"mobile-frontend-account-create-email-placeholder": "Alamat surel (opsional)",
+	"mobile-frontend-account-create-email-placeholder": "Alamat surel/email (dianjurkan untuk diisi)",
 	"mobile-frontend-account-create-submit": "Mendaftar",
 	"mobile-frontend-back-to-top-of-section": "Kembali ke bagian sebelumnya",
 	"mobile-frontend-changeslist-ip": "Pengguna anonim",
