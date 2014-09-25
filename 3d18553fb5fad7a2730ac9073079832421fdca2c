@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_143262ef",
+        "filename": "includes/Resources.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 809,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-25T19:27:08Z",
+      "side": 1,
+      "message": "This not only looks stupid, it would load every time, there is an issue box on the page, but is only used for tests.\n\nI wonder, if testModules supports templates :/",
+      "revId": "3d18553fb5fad7a2730ac9073079832421fdca2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_f430eee6",
+        "filename": "tests/qunit/modules/issues/test_issues.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-25T19:27:08Z",
+      "side": 1,
+      "message": "grrr",
+      "revId": "3d18553fb5fad7a2730ac9073079832421fdca2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
