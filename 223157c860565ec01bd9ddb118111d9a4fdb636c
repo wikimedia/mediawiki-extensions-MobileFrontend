@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ee62ffec_741d1e66",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-25T19:24:52Z",
+      "side": 1,
+      "message": "I\u0027m not sure what the correct value should be here.\n\nYou might be right in which case /*@noflip*/ annotation might be what is needed.\n\nWhatever you do, just make sure the number should appear in the same position for RTL and LTR. Use LTR as the basis, and make sure in RTL it lines up in some position.",
+      "parentUuid": "ee62ffec_a2f12294",
+      "revId": "223157c860565ec01bd9ddb118111d9a4fdb636c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee62ffec_a29c8260",
         "filename": "less/modules/talk.less",
         "patchSetId": 1
