@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_40b4eee4",
+        "filename": "javascripts/modules/wikigrok/wikigrokeval.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-26T19:07:33Z",
+      "side": 1,
+      "message": "Can we add a FIXME here that this will run an api request on every page view. We should be careful here as I\u0027m pretty sure this won\u0027t fly in production (stable) and we should remind ourselves that for the future",
+      "revId": "ba895f1ea55f080eee70bc2d76ad348bf3323d27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
