@@ -324,5 +324,7 @@
 	"tag-mobile_edit-description": "Edit made from mobile (web or app)",
 	"tag-mobile_web_edit": "Mobile web edit",
 	"tag-mobile_web_edit-description": "Edit made from mobile web site",
-	"skinname-minerva": "Minerva"
+	"skinname-minerva": "Minerva",
+	"mobile-frontend-pageaction-edit-tooltip": "Edit the lead section of this page.",
+	"mobile-frontend-pageaction-upload-tooltip": "Upload a lead photo to this page."
 }
