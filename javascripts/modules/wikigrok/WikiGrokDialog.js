@@ -123,16 +123,6 @@
 		postRender: function( options ) {
 			var self = this;
 
-			// Insert the dialog into the page
-			$( function() {
-				// If there is a table of contents, insert before it.
-				if ( $( '.toc-mobile' ).length ) {
-					self.insertBefore( '.toc-mobile' );
-				} else {
-					self.appendTo( M.getLeadSection() );
-				}
-			} );
-
 			// Initialize all the buttons and links
 			// ...for final 'Thanks' step
 			if ( options.thankUser ) {

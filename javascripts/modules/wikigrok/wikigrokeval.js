@@ -11,6 +11,7 @@
 		api.getClaims().done(
 			function( data ) {
 				var instanceClaims,
+					dialog,
 					loadWikiGrokDialog = false;
 
 				// See if the page has any 'instance of' claims.
@@ -28,7 +29,16 @@
 						}
 					} );
 					if ( loadWikiGrokDialog ) {
-						new WikiGrokDialog( { itemId: wikidataID } );
+						dialog = new WikiGrokDialog( { itemId: wikidataID } );
+						// Insert the dialog into the page
+						$( function() {
+							// If there is a table of contents, insert before it.
+							if ( $( '.toc-mobile' ).length ) {
+								dialog.insertBefore( '.toc-mobile' );
+							} else {
+								dialog.appendTo( M.getLeadSection() );
+							}
+						} );
 					}
 				}
 			}
