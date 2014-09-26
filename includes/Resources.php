@@ -552,6 +552,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.wikigrok' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
+			'mobile.startup',
 			'mobile.user',
 		),
 		'scripts' => array(
