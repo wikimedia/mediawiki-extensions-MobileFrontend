@@ -65,12 +65,12 @@
 					options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
 
 					// Get the name of the occupation from Wikidata.
-					self.apiWikiData.getOccupations( options.occupationId ).done( function( data ) {
+					self.apiWikiData.getLabel( options.occupationId ).done( function( label ) {
 						var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
-						if ( data.entities[options.occupationId].labels.en.value !== undefined ) {
+						if ( label ) {
 							// Re-render with new content for 'Question' step
 							options.beginQuestions = true;
-							options.occupation = data.entities[options.occupationId].labels.en.value;
+							options.occupation = label;
 							// Hack for English prototype
 							if ( $.inArray( options.occupation.charAt(0), vowels ) === -1 ) {
 								options.contentMsg = 'Was ' + options.name + ' a ' + options.occupation + '?';
