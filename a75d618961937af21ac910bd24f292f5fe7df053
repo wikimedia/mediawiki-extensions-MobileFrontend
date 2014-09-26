@@ -16,6 +16,24 @@
       "revId": "a75d618961937af21ac910bd24f292f5fe7df053",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_c5877265",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-26T00:17:45Z",
+      "side": 1,
+      "message": "Agreed with Florian... just remove the function.",
+      "parentUuid": "ee62ffec_52bd93ac",
+      "revId": "a75d618961937af21ac910bd24f292f5fe7df053",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
