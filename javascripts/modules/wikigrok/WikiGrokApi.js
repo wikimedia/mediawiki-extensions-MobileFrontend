@@ -30,6 +30,14 @@
 					action: 'get_potential_occupations',
 					// Strip the Q out of the Wikibase item ID
 					item: this.itemId.replace( 'Q' , '' )
+				} ).then( function( data ) {
+					if ( data.occupations !== undefined ) {
+						return data.occupations.split( ',' ).map( function( item ) {
+							return 'Q' + item;
+						} );
+					} else {
+						return [];
+					}
 				} );
 		}
 	} );
