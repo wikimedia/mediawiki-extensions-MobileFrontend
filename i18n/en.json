@@ -285,6 +285,7 @@
 	"mobile-frontend-user-button-tooltip": "Show my notifications",
 	"mobile-frontend-user-newmessages": "You have new messages on your talk page",
 	"mobile-frontend-user-cta": "Please log in or sign up to see your notifications.",
+	"mobile-frontend-userlogin-loggedin-register": "You are already logged in as {{GENDER:$1|$1}}.\nUse the form below to create another user.",
 	"mobile-frontend-username": "Username:",
 	"mobile-frontend-username-placeholder": "Username",
 	"mobile-frontend-view": "Mobile view",
