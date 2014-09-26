@@ -49,6 +49,10 @@
 			schema.log( data );
 		},
 
+		chooseRandomItemFromArray: function( array ) {
+			return array[ Math.floor( Math.random() * array.length ) ];
+		},
+
 		askWikidataQuestion: function( options ) {
 			var self = this,
 				occupationArray = options.occupations;
@@ -57,7 +61,7 @@
 			// random and ask if it is a correct occupation for the person.
 			if ( occupationArray.length ) {
 				// Choose a random occupation from the list of possible occupations.
-				options.occupationId = occupationArray[ Math.floor( Math.random() * occupationArray.length ) ];
+				options.occupationId = this.chooseRandomItemFromArray( occupationArray );
 				// Remove any disambiguation parentheticals from the title.
 				options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
 
