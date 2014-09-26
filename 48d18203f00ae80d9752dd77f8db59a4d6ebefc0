@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_66b82a75",
+        "filename": "javascripts/modules/issues/issues.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-26T22:09:54Z",
+      "side": 1,
+      "message": "Ähm, yeah, that\u0027s possible, too :)\n-\u003e Done",
+      "parentUuid": "ce8c5bf9_a015baeb",
+      "revId": "48d18203f00ae80d9752dd77f8db59a4d6ebefc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_80dc364d",
         "filename": "tests/qunit/modules/issues/test_issues.js",
         "patchSetId": 7
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_46a0863e",
+        "filename": "tests/qunit/modules/issues/test_issues.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-26T22:09:54Z",
+      "side": 1,
+      "message": "oops, there i lost myself i think :D",
+      "parentUuid": "ce8c5bf9_80dc364d",
+      "revId": "48d18203f00ae80d9752dd77f8db59a4d6ebefc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_e0f422ce",
         "filename": "tests/templates/test_issues.hogan",
         "patchSetId": 7
@@ -64,6 +100,24 @@
       "writtenOn": "2014-09-26T19:04:26Z",
       "side": 1,
       "message": "I\u0027m near positive this template can be made smaller to be a minimum test case. It doesn\u0027t need to be an exact clone of something in production.",
+      "revId": "48d18203f00ae80d9752dd77f8db59a4d6ebefc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_e6843ab8",
+        "filename": "tests/templates/test_issues.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-26T22:09:54Z",
+      "side": 1,
+      "message": "Hmm, i think you\u0027re right, i\u0027ll take a look.",
+      "parentUuid": "ce8c5bf9_e0f422ce",
       "revId": "48d18203f00ae80d9752dd77f8db59a4d6ebefc0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
