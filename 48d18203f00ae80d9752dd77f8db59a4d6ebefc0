@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_a0f4daba",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-26T19:04:26Z",
+      "side": 1,
+      "message": "This feels very wrong... let me think about this some more.",
+      "revId": "48d18203f00ae80d9752dd77f8db59a4d6ebefc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_a015baeb",
+        "filename": "javascripts/modules/issues/issues.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-26T19:04:26Z",
+      "side": 1,
+      "message": "Why not just surface extractMessage instead?\n_extractMessage: extractMessage\n\n(The leading prefix means don\u0027t use this outside tests)",
+      "revId": "48d18203f00ae80d9752dd77f8db59a4d6ebefc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_80dc364d",
+        "filename": "tests/qunit/modules/issues/test_issues.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-26T19:04:26Z",
+      "side": 1,
+      "message": "no expletives in code please.. :P",
+      "revId": "48d18203f00ae80d9752dd77f8db59a4d6ebefc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_e0f422ce",
+        "filename": "tests/templates/test_issues.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-26T19:04:26Z",
+      "side": 1,
+      "message": "I\u0027m near positive this template can be made smaller to be a minimum test case. It doesn\u0027t need to be an exact clone of something in production.",
+      "revId": "48d18203f00ae80d9752dd77f8db59a4d6ebefc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
