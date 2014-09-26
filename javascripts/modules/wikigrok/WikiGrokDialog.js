@@ -9,7 +9,7 @@
 
 	/**
 	 * @class WikiGrokDialog
-	 * @extends InlineDialog
+	 * @extends Panel
 	 * THIS IS AN EXPERIMENTAL FEATURE THAT MAY BE MOVED TO A SEPARATE EXTENSION.
 	 * This creates the dialog at the bottom of the lead section that appears when a user
 	 * scrolls past the lead. It asks the user to confirm metadata information for use
@@ -50,41 +50,47 @@
 		},
 
 		askWikidataQuestion: function( options ) {
-			var self = this;
+			var self = this,
+				occupationArray = options.occupations;
 
-			this.apiWikiGrok.getPossibleOccupations().done( function( occupationArray ) {
-				// If there are potential occupations for this person, select one at
-				// random and ask if it is a correct occupation for the person.
-				if ( occupationArray.length ) {
-					// Choose a random occupation from the list of possible occupations.
-					options.occupationId = occupationArray[ Math.floor( Math.random() * occupationArray.length ) ];
-					// Remove any disambiguation parentheticals from the title.
-					options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
+			// If there are potential occupations for this person, select one at
+			// random and ask if it is a correct occupation for the person.
+			if ( occupationArray.length ) {
+				// Choose a random occupation from the list of possible occupations.
+				options.occupationId = occupationArray[ Math.floor( Math.random() * occupationArray.length ) ];
+				// Remove any disambiguation parentheticals from the title.
+				options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
 
-					// Get the name of the occupation from Wikidata.
-					self.apiWikiData.getLabel( options.occupationId ).done( function( label ) {
-						var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
-						if ( label ) {
-							// Re-render with new content for 'Question' step
-							options.beginQuestions = true;
-							options.occupation = label;
-							// Hack for English prototype
-							if ( $.inArray( options.occupation.charAt(0), vowels ) === -1 ) {
-								options.contentMsg = 'Was ' + options.name + ' a ' + options.occupation + '?';
-							} else {
-								options.contentMsg = 'Was ' + options.name + ' an ' + options.occupation + '?';
-							}
-							options.buttons = [
-								{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
-								{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
-								{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
-							];
-							options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
-							self.render( options );
+				// Get the name of the occupation from Wikidata.
+				self.apiWikiData.getLabel( options.occupationId ).done( function( label ) {
+					var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
+					if ( label ) {
+						// Re-render with new content for 'Question' step
+						options.beginQuestions = true;
+						options.occupation = label;
+						// Hack for English prototype
+						if ( $.inArray( options.occupation.charAt(0), vowels ) === -1 ) {
+							options.contentMsg = 'Was ' + options.name + ' a ' + options.occupation + '?';
+						} else {
+							options.contentMsg = 'Was ' + options.name + ' an ' + options.occupation + '?';
 						}
-					} );
-				}
-			} );
+						options.buttons = [
+							{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
+							{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
+							{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
+						];
+						options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
+						self.render( options );
+					}
+					options.buttons = [
+						{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
+						{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
+						{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
+					];
+					options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
+					self.render( options );
+				} );
+			}
 		},
 
 		// Record answer in temporary database for analysis.
@@ -119,6 +125,8 @@
 
 		postRender: function( options ) {
 			var self = this;
+
+			// If you're wondering where the DOM insertion happens, look in wikigrokeval.js.
 
 			// Initialize all the buttons and links
 			// ...for final 'Thanks' step

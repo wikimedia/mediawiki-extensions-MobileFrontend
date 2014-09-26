@@ -9,13 +9,13 @@
 		useJsonp: true,
 
 		initialize: function( options ) {
-			this.itemId = options.itemId;
+			this.subjectId = options.itemId;
 			Api.prototype.initialize.apply( this, arguments );
 		},
 		recordOccupation: function( subject, occupationId, occupation, claimIsCorrect ) {
 			return this.ajax( {
 					action: 'record_answer',
-					subject_id: this.itemId,
+					subject_id: this.subjectId,
 					subject: subject,
 					occupation_id: occupationId,
 					occupation: occupation,
@@ -29,9 +29,9 @@
 			return this.ajax( {
 					action: 'get_potential_occupations',
 					// Strip the Q out of the Wikibase item ID
-					item: this.itemId.replace( 'Q' , '' )
+					item: this.subjectId.replace( 'Q' , '' )
 				} ).then( function( data ) {
-					if ( data.occupations !== undefined ) {
+					if ( data.occupations !== undefined && data.occupations ) {
 						return data.occupations.split( ',' ).map( function( item ) {
 							return 'Q' + item;
 						} );
