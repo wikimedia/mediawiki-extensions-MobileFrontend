@@ -277,7 +277,7 @@
 	"mobile-frontend-talk-reply-success": "Uw antwoord is opgeslagen op de overlegpagina.",
 	"mobile-frontend-talk-topic-feedback": "Nieuw onderwerp aan de overlegpagina toegevoegd!",
 	"mobile-frontend-terms-text": "Gebruiksvoorwaarden",
-	"mobile-frontend-thanked-notice": "$1 heeft een bericht ontvangen dat u {{GENDER:$2|zijn|haar|zijn/haar}} bewerking leuk vindt.",
+	"mobile-frontend-thanked-notice": "$1 heeft een bericht ontvangen dat u {{GENDER:$2|hem|haar|hem/haar}} heeft bedankt voor {{GENDER:$2|zijn|haar|zijn/haar}} bewerking.",
 	"mobile-frontend-user-account": "gebruiker",
 	"mobile-frontend-user-button-tooltip": "Uw meldingen weergeven",
 	"mobile-frontend-user-newmessages": "U heeft nieuwe berichten op uw overlegpagina",
