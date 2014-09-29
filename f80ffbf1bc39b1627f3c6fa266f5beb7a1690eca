@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_56958934",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-09-29T18:23:27Z",
+      "side": 1,
+      "message": "Double escaping.",
+      "revId": "f80ffbf1bc39b1627f3c6fa266f5beb7a1690eca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
