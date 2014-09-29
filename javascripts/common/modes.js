@@ -36,7 +36,7 @@ mw.mobileFrontend = $.extend( {
 	 */
 	assertMode: function( modes ) {
 		var mode = mw.config.get( 'wgMFMode' );
-		if ( modes.indexOf( mode ) === -1 ) {
+		if ( $.inArray( mode, modes ) === -1 ) {
 			throw new Error( 'Attempt to run module outside declared environment mode ' + mode  );
 		}
 	}
