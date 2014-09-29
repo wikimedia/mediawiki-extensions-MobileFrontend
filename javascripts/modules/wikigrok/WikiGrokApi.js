@@ -6,6 +6,7 @@
 	 */
 	WikiGrokApi = Api.extend( {
 		apiUrl: 'https://tools.wmflabs.org/wikigrok/api.php',
+		useJsonp: true,
 
 		initialize: function( options ) {
 			this.itemId = options.itemId;
@@ -22,10 +23,6 @@
 					correct: claimIsCorrect,
 					user_id: mw.user.getId(),
 					source: 'mobile A'
-				},
-				{
-					url: this.apiUrl,
-					dataType: 'jsonp'
 				} );
 		},
 		getPossibleOccupations: function() {
@@ -33,10 +30,6 @@
 					action: 'get_potential_occupations',
 					// Strip the Q out of the Wikibase item ID
 					item: this.itemId.replace( 'Q' , '' )
-				},
-				{
-					url: this.apiUrl,
-					dataType: 'jsonp'
 				} );
 		}
 	} );

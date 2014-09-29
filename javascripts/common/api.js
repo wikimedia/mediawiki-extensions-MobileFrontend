@@ -11,6 +11,11 @@
 	 */
 	Api = EventEmitter.extend( mw.Api.prototype ).extend( {
 		apiUrl: mw.util.wikiScript( 'api' ),
+		/**
+		 * Whether to use jsonp or not.
+		 * @type {Boolean}
+		 */
+		useJsonp: false,
 
 		/**
 		 * @method
@@ -48,6 +53,10 @@
 			var key, request, self = this;
 
 			options = options || {};
+			if ( this.useJsonp ) {
+				options.url = this.apiUrl;
+				options.dataType = 'jsonp';
+			}
 
 			if ( typeof data !== 'string' ) {
 				for ( key in data ) {
