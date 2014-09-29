@@ -52,15 +52,12 @@
 		askWikidataQuestion: function( options ) {
 			var self = this;
 
-			this.apiWikiGrok.getPossibleOccupations().done( function( data ) {
-				var occupationArray;
-
+			this.apiWikiGrok.getPossibleOccupations().done( function( occupationArray ) {
 				// If there are potential occupations for this person, select one at
 				// random and ask if it is a correct occupation for the person.
-				if ( data.occupations !== undefined ) {
-					occupationArray = data.occupations.split( ',' );
+				if ( occupationArray.length ) {
 					// Choose a random occupation from the list of possible occupations.
-					options.occupationId = 'Q' + occupationArray[ Math.floor( Math.random() * occupationArray.length ) ];
+					options.occupationId = occupationArray[ Math.floor( Math.random() * occupationArray.length ) ];
 					// Remove any disambiguation parentheticals from the title.
 					options.name = mw.config.get( 'wgTitle' ).replace( / \(.+\)$/, '' );
 
