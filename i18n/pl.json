@@ -24,7 +24,8 @@
 			"WTM",
 			"Woytecr",
 			"Alan ffm",
-			"Pio387"
+			"Pio387",
+			"Darellur"
 		]
 	},
 	"beta-feature-minerva": "Udostępnij skórkę mobilną ({{int:skinname-minerva}}) na pulpicie",
@@ -234,6 +235,7 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' aby sprawdzić czy gdzieś nie pojawia się to wyrażenie.",
 	"mobile-frontend-search-no-results": "Nie istnieje strona o takim tytule.",
 	"mobile-frontend-search-submit": "Przejdź",
+	"mobile-frontend-settings-images-explain": "Pobierz wszystkie obrazy, które znajdują się na stronie.",
 	"mobile-frontend-settings-alpha": "Tryb eksperymentalny",
 	"mobile-frontend-settings-alpha-description": "Wkrocz do niebezpiecznego i niezbadanego terytorium mobilnego. Korzystaj z jeszcze bardziej eksperymentalnych funkcji, ale z wyższym ryzykiem wystąpienia błędów.",
 	"mobile-frontend-settings-beta": "Beta",
@@ -256,6 +258,10 @@
 	"mobile-frontend-talk-reply": "Odpowiedz",
 	"mobile-frontend-talk-reply-info": "Zwróć uwagę, że twoja odpowiedź zostanie automatycznie podpisana twoją nazwą użytkownika.",
 	"mobile-frontend-talk-reply-success": "Twoja odpowiedź została zapisana na stronie dyskusji.",
+	"mobile-frontend-talk-topic-error": "Nie można dodać tematu z powodu nieznanego błędu.",
+	"mobile-frontend-talk-topic-error-protected": "Ta strona dyskusji jest chroniona. Nie masz uprawnień do dodawania nowych tematów na nią.",
+	"mobile-frontend-talk-topic-error-permission": "Temat nie może być dodany. Nie masz uprawnień do edycji stron.",
+	"mobile-frontend-talk-topic-error-spam": "Temat został odrzucony ponieważ zawierał spam.",
 	"mobile-frontend-talk-topic-error-badtoken": "Na serwerze wystąpił błąd. Nie można zapisać edycji. Spróbuj przeładować tę stronę.",
 	"mobile-frontend-terms-text": "Warunki użytkowania",
 	"mobile-frontend-thanked-notice": "$1 {{GENDER:$2|został powiadomiony|została powiadomiona}} o twoim podziękowaniu za {{GENDER:$2|jego|jej}} edycję.",
