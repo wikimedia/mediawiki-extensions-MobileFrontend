@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_56fa6974",
+        "filename": "javascripts/modules/wikigrok/WikiGrokApi.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-09-29T18:34:22Z",
+      "side": 1,
+      "message": "This bit is backwards. Should check for undefined first.",
+      "revId": "24710de78ba9d7ddf679091585fd62e079e8dee3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
