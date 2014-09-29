@@ -51,6 +51,7 @@ class MobileFrontendHooks {
 
 		$mobileContext = MobileContext::singleton();
 
+		$mobileContext->doToggling();
 		if ( !$mobileContext->shouldDisplayMobileView()
 			|| $mobileContext->isBlacklistedPage()
 		) {

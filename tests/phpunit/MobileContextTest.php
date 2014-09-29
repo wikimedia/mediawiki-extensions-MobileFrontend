@@ -503,6 +503,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$context = $this->makeContext( $url );
 		$context->getContext()->setTitle( Title::newFromText( $page ) );
 		$context->checkToggleView();
+		$context->doToggling();
 		$location = $context->getOutput()->getRedirect();
 		$this->assertEquals( $expectedLocation, $location );
 	}
@@ -553,6 +554,20 @@ class MobileContextTest extends MediaWikiTestCase {
 			),
 		    */
 		);
+	}
+
+	public function testBug71329() {
+		SpecialPageFactory::resetList();
+		RequestContext::resetMain();
+		$req = new FauxRequest(
+			array( 'title' => 'Special:Search', 'mobileaction' => 'toggle_view_mobile' )
+		);
+		$req->setRequestURL( '/w/index.php?title=Special:Search&mobileaction=toggle_view_mobile' );
+		RequestContext::getMain()->setRequest( $req );
+		MobileContext::setInstance( null );
+		$this->setMwGlobals( 'wgTitle', null );
+		SpecialPage::getTitleFor( 'Search' );
+		$this->assertTrue( true, 'In case of failure this test just crashes' );
 	}
 }
 

@@ -74,6 +74,10 @@ class MobileContext extends ContextSource {
 	 * @var MobileContext $instance
 	 */
 	private static $instance = null;
+	/**
+	 * @var string What to switch the view to
+	 */
+	private $viewChange = '';
 
 	/**
 	 * Returns the actual MobileContext Instance or create a new if no exists
@@ -898,10 +902,26 @@ class MobileContext extends ContextSource {
 	 * a mobile page), set the requested view for this particular request
 	 * and set a cookie to keep them on that view for subsequent requests.
 	 *
-	 * @param string $view user requested particular view
+	 * @param string $view User requested particular view
 	 */
 	public function toggleView( $view ) {
 		global $wgMobileUrlTemplate;
+
+		$this->viewChange = $view;
+		if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
+			$this->setUseFormat( $view );
+		}
+	}
+
+	/**
+	 * Performs view change as requested vy toggleView()
+	 */
+	public function doToggling() {
+		global $wgMobileUrlTemplate;
+
+		if ( !$this->viewChange ) {
+			return;
+		}
 
 		$url = $this->getRequest()->getFullRequestURL();
 		$parsed = wfParseUrl( $url );
@@ -911,7 +931,7 @@ class MobileContext extends ContextSource {
 		unset( $query['title'] );
 		$url = $this->getTitle()->getFullURL( $query, false, PROTO_CURRENT );
 
-		if ( $view == 'mobile' ) {
+		if ( $this->viewChange == 'mobile' ) {
 			// unset stopMobileRedirect cookie
 			// @TODO is this necessary with unsetting the cookie via JS?
 			$this->unsetStopMobileRedirectCookie();
@@ -919,13 +939,12 @@ class MobileContext extends ContextSource {
 			// if no mobileurl template, set mobile cookie
 			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
 				$this->setUseFormatCookie();
-				$this->setUseFormat( $view );
 			} else {
 				// else redirect to mobile domain
 				$mobileUrl = $this->getMobileUrl( $url );
 				$this->getOutput()->redirect( $mobileUrl, 301 );
 			}
-		} elseif ( $view == 'desktop' ) {
+		} elseif ( $this->viewChange == 'desktop' ) {
 			// set stopMobileRedirect cookie
 			$this->setStopMobileRedirectCookie();
 			// unset useformat cookie
@@ -933,10 +952,7 @@ class MobileContext extends ContextSource {
 				$this->unsetUseFormatCookie();
 			}
 
-			// if no mobileurl template, unset useformat cookie
-			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
-				$this->setUseFormat( $view );
-			} else {
+			if ( strlen( trim( $wgMobileUrlTemplate ) ) ) {
 				// if mobileurl template, redirect to desktop domain
 				$desktopUrl = $this->getDesktopUrl( $url );
 				$this->getOutput()->redirect( $desktopUrl, 301 );
