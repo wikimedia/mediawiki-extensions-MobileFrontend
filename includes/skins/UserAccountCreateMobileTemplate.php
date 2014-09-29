@@ -87,7 +87,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::closeElement( 'form' );
 		echo Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate', 'class' => 'content' ) );
 		$this->renderGuiderMessage();
-		$this->renderMessageHtml();
+		$this->renderMessageHtml( true );
 		echo $form;
 		echo Html::closeElement( 'div' );
 	}
