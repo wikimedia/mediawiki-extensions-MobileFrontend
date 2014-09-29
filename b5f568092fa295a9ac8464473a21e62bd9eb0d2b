@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_ea9f1861",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-29T08:06:46Z",
+      "side": 1,
+      "message": "[[Special:UserLogin]] is false, use: [[Special:CreateAccount]] instead :)",
+      "revId": "b5f568092fa295a9ac8464473a21e62bd9eb0d2b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
