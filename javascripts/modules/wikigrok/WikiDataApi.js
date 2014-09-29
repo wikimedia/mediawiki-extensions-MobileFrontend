@@ -37,11 +37,26 @@
 				}
 			} );
 		},
-		getOccupations: function( occupationId ) {
+		/**
+		 * Get labels for an item from Wikidata
+		 * See: https://www.wikidata.org/wiki/Help:Label
+		 *
+		 * @param {int} itemId for item in Wikidata
+		 * @return {jQuery.Deferred} Object returned by ajax call
+		 */
+		getLabel: function( itemId ) {
 			return this.ajax( {
 					action: 'wbgetentities',
 					props: 'labels',
-					ids: occupationId
+					// FIXME: change this to a parameter
+					languages: 'en',
+					ids: itemId
+				} ).then( function( data ) {
+					if ( data.entities[itemId].labels.en.value !== undefined ) {
+						return data.entities[itemId].labels.en.value;
+					} else {
+						return false;
+					}
 				} );
 		}
 	} );
