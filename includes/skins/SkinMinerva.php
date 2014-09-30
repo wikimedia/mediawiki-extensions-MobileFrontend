@@ -371,7 +371,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareDiscoveryTools( QuickTemplate $tpl ) {
-		global $wgMFNearby, $wgMFContentNamespace;
+		global $wgMFNearby, $wgMFNearbyEndpoint, $wgMFContentNamespace;
 
 		$items = array(
 			'home' => array(
@@ -406,7 +406,7 @@ class SkinMinerva extends SkinTemplate {
 				'class' => 'jsonly',
 			),
 		);
-		if ( !$wgMFNearby ) {
+		if ( !$wgMFNearby || ( !$wgMFNearbyEndpoint && !class_exists( 'GeoData' ) ) ) {
 			unset( $items['nearby'] );
 		}
 		$tpl->set( 'discovery_urls', $items );
