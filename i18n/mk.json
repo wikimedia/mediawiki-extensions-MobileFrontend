@@ -283,6 +283,7 @@
 	"mobile-frontend-user-button-tooltip": "Прикажи ги моите известувања",
 	"mobile-frontend-user-newmessages": "Имате нови пораки на вашата страница за разговор",
 	"mobile-frontend-user-cta": "Најавете се или регистрирајте се за да ги погледате вашите известувања",
+	"mobile-frontend-userlogin-loggedin-register": "Веќе сте најавени како {{GENDER:$1|$1}}.\nСо образецот подолу можете да направите друг корисник.",
 	"mobile-frontend-username": "Корисничко име:",
 	"mobile-frontend-username-placeholder": "Корисничко име",
 	"mobile-frontend-view": "Мобилен изглед",

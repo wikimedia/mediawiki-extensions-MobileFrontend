@@ -309,6 +309,7 @@
 	"mobile-frontend-user-button-tooltip": "显示我的通知",
 	"mobile-frontend-user-newmessages": "您的讨论页有您的新消息",
 	"mobile-frontend-user-cta": "请登录或注册以查看你的通知。",
+	"mobile-frontend-userlogin-loggedin-register": "您已作为{{GENDER:$1|$1}}登录。使用下面的表单创建另一用户。",
 	"mobile-frontend-username": "用户名：",
 	"mobile-frontend-username-placeholder": "用户名",
 	"mobile-frontend-view": "手机版查看",

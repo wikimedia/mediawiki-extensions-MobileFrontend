@@ -25,7 +25,8 @@
 			"Yekrats",
 			"아라",
 			"Robby",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Baffo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
@@ -311,7 +312,7 @@
 	"mobile-frontend-user-button-tooltip": "Title tooltip for the user notifications button",
 	"mobile-frontend-user-newmessages": "Tooltip for new messages on the users talk page (if no Extension:Echo installed).",
 	"mobile-frontend-user-cta": "Appears when you click user icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.",
-	"mobile-frontend-userlogin-loggedin-register": "Used as warning on [[Special:CreateAccount]] when the current user is already logged in.\n\nFollowed by the Registration form.\n\nSee example: [[Special:CreateAccount]].\n\nParameters:\n* $1 - user name (used for display and for gender support)",
+	"mobile-frontend-userlogin-loggedin-register": "Usted se ha conectado como {{GENDER:$1|$1}}. \nUtilice el siguiente formulario para crear otro usuario.",
 	"mobile-frontend-username": "Field label for entry of username in Wikimedia mobile user interface.\n\n{{Identical|Username}}",
 	"mobile-frontend-username-placeholder": "placeholder text for username input box.\n{{Identical|Username}}",
 	"mobile-frontend-view": "This is a link that appears at the bottom of a desktop view wiki page near {{msg-mw|privacy}} and {{msg-mw|disclaimers}}. Clicking it takes the user to a mobile view of the page.",

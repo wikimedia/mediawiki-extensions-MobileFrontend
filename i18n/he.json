@@ -293,6 +293,7 @@
 	"mobile-frontend-user-button-tooltip": "הצגת ההודעות שלי",
 	"mobile-frontend-user-newmessages": "יש לך הודעות חדשות בדף השיחה",
 	"mobile-frontend-user-cta": "נא להיכנס או להירשם כדי לראות את ההודעות שלך.",
+	"mobile-frontend-userlogin-loggedin-register": "כבר נכנסת בתור $1.\n{{GENDER:$1|השתמש|השתמשי}} בטופס להלן כדי ליצור משתמש אחר.",
 	"mobile-frontend-username": "שם משתמש:",
 	"mobile-frontend-username-placeholder": "שם המשתמש",
 	"mobile-frontend-view": "תצוגה למכשירים ניידים",

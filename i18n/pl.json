@@ -269,6 +269,7 @@
 	"mobile-frontend-user-button-tooltip": "Pokaż powiadomienia",
 	"mobile-frontend-user-newmessages": "Masz nowe wiadomości na stronie dyskusji",
 	"mobile-frontend-user-cta": "Zaloguj się lub zarejestruj, aby zobaczyć swoje powiadomienia.",
+	"mobile-frontend-userlogin-loggedin-register": "Jesteś już zalogowany jako  {{GENDER:$1|$1}}.\nPoniższy formularz umożliwia tworzenie innego użytkownika.",
 	"mobile-frontend-username": "Nazwa użytkownika:",
 	"mobile-frontend-username-placeholder": "Nazwa użytkownika",
 	"mobile-frontend-view": "Wersja dla urządzeń mobilnych",

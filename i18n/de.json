@@ -294,6 +294,7 @@
 	"mobile-frontend-user-button-tooltip": "Meine Benachrichtigungen anzeigen",
 	"mobile-frontend-user-newmessages": "Du hast neue Nachrichten auf deiner Diskussionsseite",
 	"mobile-frontend-user-cta": "Bitte melde dich an oder registriere dich, um deine Benachrichtigungen anzusehen.",
+	"mobile-frontend-userlogin-loggedin-register": "Du bist bereits als {{GENDER:$1|$1}} angemeldet.\nNutze das unten stehende Formular, um einen anderen Benutzer zu erstellen.",
 	"mobile-frontend-username": "Benutzername:",
 	"mobile-frontend-username-placeholder": "Benutzername",
 	"mobile-frontend-view": "Mobile Ansicht",

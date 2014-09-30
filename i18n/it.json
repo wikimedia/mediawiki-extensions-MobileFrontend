@@ -290,6 +290,7 @@
 	"mobile-frontend-user-button-tooltip": "Mostra le mie notifiche",
 	"mobile-frontend-user-newmessages": "Hai nuovi messaggi sulla tua pagina di discussione",
 	"mobile-frontend-user-cta": "Effettua l'accesso o registrati per vedere le tue notifiche.",
+	"mobile-frontend-userlogin-loggedin-register": "Sei già connesso come {{GENDER:$1|$1}}.\nUsa il modulo sottostante per creare un altro utente.",
 	"mobile-frontend-username": "Nome utente:",
 	"mobile-frontend-username-placeholder": "Nome utente",
 	"mobile-frontend-view": "Versione mobile",

@@ -307,6 +307,7 @@
 	"mobile-frontend-user-button-tooltip": "نمایش اعلان‌های من",
 	"mobile-frontend-user-newmessages": "پیام‌های جدیدی در صفحۀ بحث خود دارید",
 	"mobile-frontend-user-cta": "برای مشاهدهٔ اعلان‌ها لطفاً به سامانه وارد شوید یا ثبت‌نام کنید.",
+	"mobile-frontend-userlogin-loggedin-register": "شما به‌عنوان {{GENDER:$1|$1}} وارد شده‌اید.\nاز فرم زیر برای ایجاد حسابی دیگر استفاده کنید.",
 	"mobile-frontend-username": "نام کاربری:",
 	"mobile-frontend-username-placeholder": "نام کاربری",
 	"mobile-frontend-view": "نمای تلفن همراه",
