@@ -2,6 +2,91 @@
   "comments": [
     {
       "key": {
+        "uuid": "ce8c5bf9_d9d78227",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-30T20:04:42Z",
+      "side": 1,
+      "message": "rather than templateModule work out the templates array to add to the test.",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_591cd218",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-30T20:04:42Z",
+      "side": 1,
+      "message": "dirname( __DIR__ ) . \u0027templates/\u0027 should be enough.\nThis can also be moved to the boiler plate unconditionally.",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_b9e63e12",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-30T20:04:42Z",
+      "side": 1,
+      "message": "This can be moved to the boiler plate.",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_59eb72db",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-30T20:04:42Z",
+      "side": 1,
+      "message": "What if I want other templates.\nI think we should just scan the directory the JS uses in the context of the tests folder tests/qunit/templates/modules/issues/",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_99e1fafd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-30T20:04:42Z",
+      "side": 1,
+      "message": "Instead of this I\u0027d just add \u0027templates\u0027 \u003d\u003e $templates",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_8900e105",
         "filename": "tests/templates/test_issues.hogan",
         "patchSetId": 9
@@ -13,6 +98,24 @@
       "writtenOn": "2014-09-26T22:36:57Z",
       "side": 1,
       "message": "That doesn\u0027t looks beautiful, but with right indentation we need to filter this in the javascript output. This template is only for tests, so i think it\u0027s ok?",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_79e8b6dd",
+        "filename": "tests/templates/test_issues.hogan",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-09-30T20:04:42Z",
+      "side": 1,
+      "message": "I\u0027m not sure what you mean about this.. Why can\u0027t you put on a new line? What will break?",
+      "parentUuid": "ce8c5bf9_8900e105",
       "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
