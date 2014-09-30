@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_bc270c5f",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-30T21:44:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce8c5bf9_d9d78227",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_591cd218",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2014-09-30T20:04:42Z",
       "side": 1,
       "message": "dirname( __DIR__ ) . \u0027templates/\u0027 should be enough.\nThis can also be moved to the boiler plate unconditionally.",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_5c1cc018",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-30T21:44:05Z",
+      "side": 1,
+      "message": "right :)",
+      "parentUuid": "ce8c5bf9_591cd218",
       "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_7c198426",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-30T21:44:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce8c5bf9_b9e63e12",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_59eb72db",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 9
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_fcdcb44d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-30T21:44:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce8c5bf9_59eb72db",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_99e1fafd",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 9
@@ -81,6 +153,24 @@
       "writtenOn": "2014-09-30T20:04:42Z",
       "side": 1,
       "message": "Instead of this I\u0027d just add \u0027templates\u0027 \u003d\u003e $templates",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_9ce1e8fd",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-30T21:44:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce8c5bf9_99e1fafd",
       "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -116,6 +206,24 @@
       "side": 1,
       "message": "I\u0027m not sure what you mean about this.. Why can\u0027t you put on a new line? What will break?",
       "parentUuid": "ce8c5bf9_8900e105",
+      "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_7c966451",
+        "filename": "tests/templates/test_issues.hogan",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-09-30T21:44:05Z",
+      "side": 1,
+      "message": "\u003e Why can\u0027t you put on a new line? What will break?\n\nQUnit will interpret this line breaks and they are missing in the reference i check against (in test_issues.js), so the test will say, that this is a false text extraction (which is incorrect).",
+      "parentUuid": "ce8c5bf9_79e8b6dd",
       "revId": "daea08d33d89b4eea8f4afc214003979b4017b5d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
