@@ -152,9 +152,9 @@ class ArticlePage
   a(:reference_drawer, css: ".drawer.references")
 
   # sections
-  h2(:first_section, css: ".section_heading", index: 0)
-  div(:first_section_content, id: "content_block_0")
-  h2(:third_section, css: ".section_heading", index: 2)
+  h2(:first_section, css: ".collapsible-heading", index: 0)
+  div(:first_section_content, id: "collapsible-block-0")
+  h2(:third_section, css: ".collapsible-block", index: 2)
 
   # issues
   a(:issues_stamp, css:".mw-mf-cleanup")

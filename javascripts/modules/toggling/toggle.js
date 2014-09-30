@@ -7,16 +7,16 @@
 	 * @param {jQuery.Object} $heading A heading belonging to a section
 	 */
 	function toggle( $heading ) {
-		var isCollapsed = $heading.is( '.openSection' );
+		var isCollapsed = $heading.is( '.open-block' );
 
-		$heading.toggleClass( 'openSection' );
-		if ( $heading.hasClass( 'openSection' ) ) {
+		$heading.toggleClass( 'open-block' );
+		if ( $heading.hasClass( 'open-block' ) ) {
 			$heading.addClass( 'icon-arrow-up' ).removeClass( 'icon-arrow-down' );
 		} else {
 			$heading.removeClass( 'icon-arrow-up' ).addClass( 'icon-arrow-down' );
 		}
 		$heading.next()
-			.toggleClass( 'openSection' )
+			.toggleClass( 'open-block' )
 			.attr( {
 				'aria-pressed': !isCollapsed,
 				'aria-expanded': !isCollapsed
@@ -50,12 +50,12 @@
 		// jQuery will throw for hashes containing certain characters which can break toggling
 		try {
 			$target = $( M.escapeHash( selector ) );
-			$heading = $target.parents( '.section_heading' );
+			$heading = $target.parents( '.collapsible-heading' );
 			// The heading is not a section heading, check if in a content block!
 			if ( !$heading.length ) {
-				$heading = $target.parents( '.content_block' ).prev( '.section_heading' );
+				$heading = $target.parents( '.collapsible-block' ).prev( '.collapsible-heading' );
 			}
-			if ( $heading.length && !$heading.hasClass( 'openSection' ) ) {
+			if ( $heading.length && !$heading.hasClass( 'open-block' ) ) {
 				toggle( $heading );
 			}
 			if ( $heading.length ) {
@@ -65,7 +65,7 @@
 		} catch ( e ) {}
 	}
 
-	function init( $page ) {
+	function enable( $page ) {
 		var tagName, $headings, expandSections,
 			$firstHeading,
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
@@ -74,10 +74,10 @@
 		$( 'html' ).removeClass( 'stub' );
 		$firstHeading = $page.find( 'h1,h2,h3,h4,h5,h6' ).eq(0);
 		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
-		$page.find( tagName ).addClass( 'section_heading icon icon-text icon-15px  icon-arrow-down' );
+		$page.find( tagName ).addClass( 'collapsible-heading icon icon-text icon-15px icon-arrow-down' );
 
-		$headings = $page.find( '.section_heading' );
-		$headings.next( 'div' ).addClass( 'content_block' );
+		$headings = $page.find( '.collapsible-heading' );
+		$headings.next( 'div' ).addClass( 'collapsible-block' );
 
 		if ( collapseSectionsByDefault === undefined ) {
 			// Old default behavior if on cached output
@@ -87,9 +87,9 @@
 
 		$headings.each( function ( i ) {
 			var $elem = $( this ),
-				id = 'content_block_' + i;
+				id = 'collapsible-block-' + i;
 
-			$elem.next( '.content_block' ).eq(0)
+			$elem.next( '.collapsible-block' ).eq(0)
 				.attr( {
 					// We need to give each content block a unique id as that's
 					// the only way we can tell screen readers what element we're
@@ -135,6 +135,12 @@
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 	}
 
+	function init( $container ) {
+		// distinguish headings in content from other headings
+		$( '#content' ).find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
+		enable( $container );
+	}
+
 	// avoid this running on Watchlist
 	if ( !M.inNamespace( 'special' ) && !mw.config.get( 'wgIsMainPage' ) ) {
 		if ( mw.config.get( 'wgMFPageSections' ) ) {
@@ -153,7 +159,7 @@
 		eventName: eventName,
 		reveal: reveal,
 		toggle: toggle,
-		enable: init
+		enable: enable
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

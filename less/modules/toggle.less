@@ -1,38 +1,37 @@
 /* Styling of sections and toggling
 moved from beta_common.css in
 Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
-
-FIXME: Rename section_heading to section-heading and content_block to section-content (Avoid caching problems)
 */
 @import "minerva.variables";
 @import "minerva.mixins";
 
 
-.content_block {
-	width: 100%; // bug 41401 - without this content doesn't always take up whole width
-}
 
 .client-js {
-	.section_heading,
-	.content_block {
+	.collapsible-heading,
+	.collapsible-block {
 		clear: both;
 	}
 
-	.section_heading {
+	.collapsible-heading {
 		position: relative;
 		padding-left: 24px;
 		border-bottom: solid 1px @sectionBorderColor;
+	}
 
-		&.openSection {
+	.section-heading {
+		&.open-block {
 			padding-right: @sectionIconWidth + 15px;
 			margin-bottom: @headingMargin;
 		}
 	}
 
-	.content_block {
+	.collapsible-block {
+		// bug 41401 - without this content doesn't always take up whole width
+		width: 100%;
 		display: none;
 
-		&.openSection {
+		&.open-block {
 			display: block;
 		}
 	}

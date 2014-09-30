@@ -21,13 +21,11 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );
 		if ( $categories ) {
 		?>
-			<div class="section">
-				<h2 class="section_heading" id="section_categories">
-					<span><?php $this->msg( 'categories' ) ?></span>
-				</h2>
-				<div class="content_block" id="content_categories">
-					<?php echo $categories ?>
-				</div>
+			<h2 id="collapsible-heading-categories">
+				<span><?php $this->msg( 'categories' ) ?></span>
+			</h2>
+			<div id="collapsible-block-categories">
+				<?php echo $categories ?>
 			</div>
 		<?php
 		}
