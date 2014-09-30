@@ -827,7 +827,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.common',
 			// @todo FIXME: Kill this dependency!
 			'mobile.special.nearby.styles',
-			'jquery.json',
 			'mediawiki.language',
 			'mobile.templates',
 			'mobile.loggingSchemas',
