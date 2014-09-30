@@ -35,13 +35,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'targets' => array( 'mobile', 'desktop' ),
 	),
 
-	'mobile.file.scripts' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup' ),
-		'scripts' => array(
-			'javascripts/file/filepage.js'
-		),
-	),
-
 	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/common/pagelist.less',

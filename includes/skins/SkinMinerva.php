@@ -864,13 +864,6 @@ class SkinMinerva extends SkinTemplate {
 		$modules['languages'] = array( 'mobile.languages' );
 		$modules['newusers'] = array( 'mobile.newusers' );
 
-		$title = $this->getTitle();
-
-		// specific to current context
-		if ( $title->inNamespace( NS_FILE ) ) {
-			$modules['file'] = array( 'mobile.file.scripts' );
-		}
-
 		if ( $this->isMobileMode ) {
 			$modules['toggling'] = array( 'mobile.toggling' );
 			$modules['eventlogging'] = array( 'mobile.loggingSchemas' );
