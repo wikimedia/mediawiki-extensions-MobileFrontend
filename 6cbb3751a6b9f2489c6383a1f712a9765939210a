@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_fc334dbe",
+        "filename": "javascripts/common/settings.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "this can be in one line, right?",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_1cdab178",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "one whitespace",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_7c641de2",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "false indent",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_9c44811e",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "$headline can be in first line, too. I suggest to leave a blank line between var definitions and start of your code, so it\u0027s much easier to see when what starts/ends :)",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_9c61e1d2",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "false indent, and try the following code:\nif (\n\tM.settings.getUserSetting( storagePrefix + $headline.attr( \u0027id\u0027 ), true )\n) {",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_1cf39108",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "one whitespace, not two",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_7ce17d28",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "false indent:\nif (\n  settings.hasOwnProperty( key ) \u0026\u0026\n  key.indexOf( \u0027toggle_\u0027 ) \u003d\u003d\u003d 0\n) {",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_5ce8390b",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "false indent",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_9cc56193",
+        "filename": "tests/qunit/modules/toggling/test_toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T19:53:32Z",
+      "side": 1,
+      "message": "wrong indention (for all :))",
+      "revId": "6cbb3751a6b9f2489c6383a1f712a9765939210a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
