@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_42ccd28c",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 26
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-01T22:28:56Z",
+      "side": 1,
+      "message": "2.8em doesn\u0027t seem to be tall enough to contain the button. Looks like the button is 2.8em + 2px (border). Might need to switch the box-model to match it.",
+      "revId": "09b902c85f299d8aeb9df99c07662cb62451377e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
