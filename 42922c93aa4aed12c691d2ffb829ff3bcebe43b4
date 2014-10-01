@@ -16,6 +16,24 @@
       "revId": "42922c93aa4aed12c691d2ffb829ff3bcebe43b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_9216af59",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-01T04:27:19Z",
+      "side": 0,
+      "message": "Ähhhh....arghhh, that can only be a rebase problem.",
+      "parentUuid": "ce8c5bf9_2f8c20db",
+      "revId": "42922c93aa4aed12c691d2ffb829ff3bcebe43b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
