@@ -29,6 +29,7 @@ QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	teardown: function() {
 		window.location.hash = "#";
 		$container.remove();
+		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 });
 
@@ -117,6 +118,7 @@ QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	teardown: function() {
 		window.location.hash = "#";
 		$container.remove();
+		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 } );
 
@@ -140,6 +142,7 @@ QUnit.module( 'MobileFrontend toggle.js: user setting', {
 		window.location.hash = "#";
 		$container.remove();
 		M.settings.saveUserSetting('expandSections', '', true);
+		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 } );
 
@@ -192,5 +195,122 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', 2, fu
 	$section.find( '> a' ).eq( 0 ).trigger( 'mouseup' );
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is still being hidden after clicking on the link' );
 } );
+
+
+QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
+	setup: function() {
+		this.$container = makeSections();
+		toggle.enable();
+		this.$section = this.$container.find( 'h2' );
+		this.headline = this.$section.find( 'span' ).attr ( 'id' );
+		this.pageTitle = toggle._currentPageTitle;
+		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	},
+	teardown: function() {
+		window.location.hash = "#";
+		this.$container.remove();
+		M.settings.deleteUserSetting( 'expandedSections', false );
+	}
+} );
+
+QUnit.test( 'Toggling a section stores its state.', 3, function( assert ) {
+	assert.strictEqual( $.isEmptyObject( this.expandedSections[this.pageTitle] ),
+		true,
+		'no user setting about an expanded section exists already'
+	);
+
+	toggle.toggle( this.$section );
+	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	assert.strictEqual( typeof this.expandedSections[this.pageTitle][this.headline],
+		'number',
+		'the just toggled section state has been saved'
+	);
+
+	toggle.toggle( this.$section );
+	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	assert.strictEqual( this.expandedSections[this.pageTitle][this.headline],
+		undefined,
+		'the just toggled section state has been removed'
+	);
+} );
+
+
+QUnit.test( 'Check for and remove obsolete stored sections.', 2, function( assert ) {
+	this.expandedSections[this.pageTitle][this.headline] = ( new Date( 1990, 1, 1 ) ).getTime();
+	M.settings.saveUserSetting( 'expandedSections',
+		JSON.stringify( this.expandedSections )
+	);
+	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	assert.strictEqual( typeof this.expandedSections[this.pageTitle][this.headline],
+		'number',
+		'manually created section state has been saved correctly'
+	);
+
+	toggle._cleanObsoleteStoredSections();
+	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	assert.strictEqual( this.expandedSections[this.pageTitle][this.headline],
+		undefined,
+		'section, whose store time is manually changed to an older date,' +
+		'has been removed from storage correctly'
+	);
+} );
+
+QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
+	setup: function() {
+		// can't use makeSections because the resulting html is wrapped in a div
+		// it should not be because of the direct children selector in toggle.init
+		this.$content = $( '#content' );
+
+		this.$content.append(
+			'<h2 class="test"><span id="First_Section">First Section</span></h2>' +
+			'<div class="test"><p>Text</p></div>' +
+
+			'<h2 id="section_1" class="test"><a href="#foo">Dummy Link</a></h2>' +
+			'<div class="test"></div>'
+		);
+
+		this.$section = this.$content.find( 'h2' );
+		this.headline = this.$section.find( 'span' ).attr ( 'id' );
+		this.pageTitle = toggle._currentPageTitle;
+		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	},
+	teardown: function() {
+		window.location.hash = "#";
+		this.$content.remove( '.test' );
+		M.settings.deleteUserSetting( 'expandedSections', false );
+	}
+} );
+
+QUnit.test( 'Expand stored sections.', 5, function( assert ) {
+	assert.strictEqual( this.$section.hasClass( 'open-block' ), false, 'Section is collapsed.' );
+
+	assert.strictEqual( $.isEmptyObject( this.expandedSections[this.pageTitle] ),
+		true,
+		'no user setting about an expanded section exists already'
+	);
+
+	// save a toggle state manually
+	this.expandedSections[this.pageTitle][this.headline] = ( new Date() ).getTime();
+	M.settings.saveUserSetting( 'expandedSections', JSON.stringify( this.expandedSections ), false );
+	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	assert.strictEqual( typeof this.expandedSections[this.pageTitle][this.headline],
+		'number',
+		'manually created section state has been saved correctly'
+	);
+
+	toggle.enable();
+
+	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	assert.strictEqual( typeof this.expandedSections[this.pageTitle][this.headline],
+		'number',
+		'manually created section state is still active after toggle.init()'
+	);
+
+	assert.strictEqual( this.$section.hasClass( 'open-block' ), true, 'Saved section has been auto expanded.' );
+
+} );
+
+
+
 
 }( mw.mobileFrontend, jQuery ) );

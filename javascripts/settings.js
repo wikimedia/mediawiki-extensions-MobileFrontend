@@ -43,9 +43,22 @@ M.settings = ( function() {
 			( useCookieFallback ? $.cookie( name ) : false );
 	}
 
+	/**
+	 * Deletes a user setting from a previous browser setting
+	 *
+	 * @param {String} name The key to refer to this value
+	 * @param {Boolean} useCookieFallback Optional: When set this will use cookies when local storage not available.
+	 * @returns {Boolean} Whether the delete was successful or not
+	 */
+	function deleteUserSetting( name, useCookieFallback ) {
+		return M.supportsLocalStorage ? localStorage.removeItem( name ) :
+			( useCookieFallback ? $.removeCookie( name ) : false );
+	}
+
 	return {
 		getUserSetting: getUserSetting,
 		saveUserSetting: saveUserSetting,
+		deleteUserSetting: deleteUserSetting,
 		cookiesEnabled: cookiesEnabled
 	};
 }());
