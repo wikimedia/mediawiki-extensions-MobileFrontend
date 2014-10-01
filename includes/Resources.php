@@ -162,10 +162,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.redlinks',
 			'ext.mantle.views',
 		),
-		'templates' => array(
-			'page.hogan',
-			'section.hogan',
-		),
 		'messages' => array(
 			'mobile-frontend-language-article-heading',
 		),
@@ -496,20 +492,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-cancel-confirm',
 			'mobile-frontend-editor-licensing',
 			'mobile-frontend-editor-licensing-with-terms',
-		),
-	),
-
-	// FIXME: Remove this module and associated code unless it is going to be used by the
-	// Firefox app.
-	'mobile.ajaxpages' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			// Requires the Page.js JavaScript file
-			'mobile.startup',
-		),
-		'scripts' => array(
-			'javascripts/externals/epoch.js',
-			'javascripts/history-alpha.js',
-			'javascripts/modules/lazyload.js',
 		),
 	),
 
@@ -947,27 +929,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
  * suffixed by '.styles' or '.scripts'
  */
 $wgMobileSpecialPageModules = array(
-	// For mobile web apps (e.g. Firefox OS). See SkinMinervaApp and SpecialMobileWebApp.
-	'mobile.special.app.scripts' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.ajaxpages',
-			'mobile.startup',
-			'mobile.search',
-			// Make sure loader styles etc are present
-			'mobile.stable.styles',
-		),
-		'scripts' => array(
-			'javascripts/app/startup.js',
-		),
-	),
-
-	// For mobile web apps (e.g. Firefox OS). See SkinMinervaApp and SpecialMobileWebApp.
-	'mobile.special.app.styles' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'less/app/common.less',
-		),
-	),
-
 	'mobile.special.mobilemenu.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/mobilemenu.less',

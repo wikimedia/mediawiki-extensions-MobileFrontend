@@ -51,6 +51,5 @@
 	}
 
 	init( M.getCurrentPage() );
-	M.on( 'page-loaded', init );
 
 }( mw.mobileFrontend ) );

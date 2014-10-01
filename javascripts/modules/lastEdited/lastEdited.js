@@ -51,7 +51,6 @@
 			$lastModified.remove();
 		}
 	}
-	M.on( 'page-loaded', init );
 	M.on( 'header-loaded', init );
 
 }( mw.mobileFrontend, jQuery ) );

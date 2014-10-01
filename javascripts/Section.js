@@ -9,7 +9,6 @@
 	 * @extends View
 	 */
 	Section = View.extend( {
-		template: M.template.get( 'section.hogan' ),
 		defaults: {
 			line: '',
 			text: '',

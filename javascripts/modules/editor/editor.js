@@ -232,14 +232,12 @@
 				allowAnonymous = true;
 			}
 			initCta( allowAnonymous );
-			M.on( 'page-loaded', initCta );
 		} else {
 			if ( mw.config.get( 'wgMFIsLoggedInUserBlocked' ) ) {
 				// User is blocked. Both anonymous and logged in users can be blocked.
 				showSorryToast( 'mobile-frontend-editor-blocked' );
 			} else {
 				init( M.getCurrentPage() );
-				M.on( 'page-loaded', init );
 			}
 		}
 	}

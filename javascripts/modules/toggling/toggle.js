@@ -148,13 +148,6 @@
 		}
 	}
 
-	M.on( 'page-loaded', function() {
-		if ( mw.config.get( 'wgMFPageSections' ) ) {
-			// don't pass page-loaded parameter
-			init();
-		}
-	} );
-
 	M.define( 'toggle', {
 		eventName: eventName,
 		reveal: reveal,

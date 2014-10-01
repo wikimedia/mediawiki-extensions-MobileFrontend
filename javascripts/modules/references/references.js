@@ -41,7 +41,6 @@
 		drawer = new ReferencesDrawer();
 		setup();
 	} );
-	M.on( 'page-loaded', setup );
 
 	M.define( 'references', { setup: setup } );
 

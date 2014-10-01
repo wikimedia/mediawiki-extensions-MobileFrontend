@@ -29,6 +29,5 @@
 	}
 
 	init();
-	M.on( 'page-loaded', init );
 
 }( mw.mobileFrontend, jQuery ) );

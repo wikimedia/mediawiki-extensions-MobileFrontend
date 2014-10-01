@@ -10,7 +10,6 @@
 	 * @extends View
 	 */
 	Page = View.extend( {
-		template: M.template.get( 'page.hogan' ),
 		defaults: {
 			// id defaults to 0 which represents a new page. Be sure to override to avoid side effects.
 			id: 0,
@@ -25,6 +24,7 @@
 			protection: {
 				edit: [ '*' ]
 			},
+			sections: [],
 			inBetaOrAlpha: M.isBetaGroupMember(),
 			isMainPage: false,
 			userCanUpload: mw.config.get( 'wgUserCanUpload' ),
@@ -32,19 +32,15 @@
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' ),
 			languageLabel: mw.msg( 'mobile-frontend-language-article-heading' )
 		},
-
 		initialize: function( options ) {
 			// Fallback if no displayTitle provided
 			options.displayTitle = options.displayTitle || options.title;
-			// Surface the display title for M.reloadPage
-			this.displayTitle = options.displayTitle;
 			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 			View.prototype.initialize.apply( this, arguments );
 		},
 
 		/**
 		 * @method
-		 * FIXME: Make this update with ajax page loads
 		 * @return {Boolean}
 		 */
 		isWikiText: function() {
@@ -80,36 +76,6 @@
 				resp.resolve( editable );
 			} );
 			return resp;
-		},
-
-		// FIXME: This assumes only one page can be rendered at one time - emits a page-loaded event and sets wgArticleId
-		// FIXME: The Page object is pretty central and used more like a model at times than a view. Time to introduce Models?
-		render: function( options ) {
-			var pageTitle = options.title, self = this,
-				$el = this.$el;
-			// prevent talk icon being re-rendered after an edit to a talk page
-			options.isTalkPage = self.isTalkPage();
-
-			// FIXME: this is horrible, because it makes preRender run _during_ render...
-			if ( !options.sections ) {
-				$el.empty().addClass( 'spinner loading' );
-				// FIXME: api response should also return last modified timestamp and page_top_level_section_count property
-				M.pageApi.getPage( pageTitle ).done( function( pageData ) {
-					options = $.extend( options, pageData );
-					options.hasLanguages = pageData.languageCount > 0 || pageData.hasVariants;
-					// Resurface the display title for M.reloadPage
-					self.displayTitle = options.displayTitle;
-
-					View.prototype.render.apply( self, arguments );
-
-					// reset loader
-					$el.removeClass( 'spinner loading' );
-
-					self.emit( 'ready', self );
-				} ).fail( $.proxy( self, 'emit', 'error' ) );
-			} else {
-				View.prototype.render.apply( self, arguments );
-			}
 		},
 
 		/**
