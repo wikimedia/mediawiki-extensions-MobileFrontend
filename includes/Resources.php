@@ -37,7 +37,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'less/common/pagelist.less',
+			'less/pagelist.less',
 		),
 		'position' => 'top',
 	),
@@ -89,13 +89,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'skins.minerva.chrome.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'less/common/reset.less',
-			'less/common/ui.less',
-			'less/common/pageactions.less',
-			'less/common/footer.less',
-			'less/common/common.less',
-			'less/common/icons.less',
-			'less/common/mainpage.less',
+			'less/reset.less',
+			'less/ui.less',
+			'less/pageactions.less',
+			'less/footer.less',
+			'less/common.less',
+			'less/icons.less',
+			'less/mainpage.less',
 		),
 		'position' => 'top',
 	),
@@ -110,7 +110,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'skins.minerva.drawers.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'less/common/drawer.less',
+			'less/drawer.less',
 		),
 		'position' => 'top',
 	),
@@ -548,14 +548,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.toast.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'less/common/toast.less',
+			'less/toast.less',
 		),
 		'position' => 'top',
 	),
 
 	'mobile.stable.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'less/common/common-js.less',
+			'less/common-js.less',
 			'less/modules/watchstar.less',
 			'less/modules/tutorials.less',
 		),
@@ -581,7 +581,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'LoadingOverlay.hogan',
 		),
 		'styles' => array(
-			'less/common/Overlay.less',
+			'less/Overlay.less',
 		)
 	),
 
