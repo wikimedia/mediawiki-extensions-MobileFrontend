@@ -30,6 +30,11 @@
 				guidance: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
 			}
 		},
+		templatePartials: {
+			spinner: M.template.get( 'spinner.hogan' ),
+			articleList: M.template.get( 'modules/articleList.hogan' )
+		},
+		template: M.template.get( 'modules/nearby/nearby.hogan' ),
 		getCurrentPosition: function() {
 			var result = $.Deferred();
 			if ( M.supportsGeoLocation() ) {
@@ -124,7 +129,7 @@
 		},
 		postRender: function() {
 			if ( !this._isLoading ) {
-				this.$( '.loading' ).hide();
+				this.$( '.spinner' ).hide();
 			}
 			PageList.prototype.postRender.apply( this, arguments );
 			this._postRenderLinks();

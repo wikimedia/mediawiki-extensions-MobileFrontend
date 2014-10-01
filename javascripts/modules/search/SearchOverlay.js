@@ -44,6 +44,8 @@
 			// rendered. This is necessary to prevent bug 67140 while sitenotices are
 			// displayed.
 			this.$( '.overlay-header-container' ).css( 'top', $( '.header' ).offset().top );
+			// No search happening by default
+			this.$( '.spinner' ).hide();
 
 			Overlay.prototype.postRender.call( this, options );
 
@@ -119,7 +121,7 @@
 				$results.empty();
 
 				if ( query.length ) {
-					$results.addClass( 'loading' );
+					this.$( '.spinner' ).show();
 
 					this.timer = setTimeout( function() {
 						self.api.search( query ).done( function( data ) {
@@ -132,15 +134,14 @@
 									hide().
 									filter( data.results.length ? '.with-results' : '.without-results' ).
 									show();
-								$results.
-									removeClass( 'loading' );
+								self.$( '.spinner' ).hide();
 								new PageList( { pages: data.results, el: $results } );
 								M.emit( 'search-results', self, data.results );
 							}
 						} );
 					}, this.api.isCached( query ) ? 0 : SEARCH_DELAY );
 				} else {
-					$results.removeClass( 'loading' );
+					self.$( '.spinner' ).hide();
 				}
 
 				this.lastQuery = query;

@@ -24,5 +24,6 @@
 			<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
 		</div>
 	</div>
-	<div class="results spinner"></div>
+	{{>spinner}}
+	<div class="results"></div>
 </div>

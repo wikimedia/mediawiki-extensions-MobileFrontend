@@ -1,7 +1,9 @@
 <div class="main">
-	<div class="image-wrapper loading">
+	<div class="image-wrapper">
 		<div class="image-inner-wrapper">
-			<div class="image"></div>
+			<div class="image">
+				{{>spinner}}
+			</div>
 		</div>
 	</div>
 	{{>cancelButton}}
