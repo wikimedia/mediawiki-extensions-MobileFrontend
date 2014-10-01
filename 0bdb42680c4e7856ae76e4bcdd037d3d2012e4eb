@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_626556aa",
+        "filename": "javascripts/common/settings.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-01T22:01:06Z",
+      "side": 1,
+      "message": "I\u0027m not sure about this function. It\u0027s too powerful and unnecessary.\nWhy not just store a JSON?\nsaveUserSetting( \u0027foo\u0027, \u0027{}\u0027 )",
+      "revId": "0bdb42680c4e7856ae76e4bcdd037d3d2012e4eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_62e8f60b",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-01T22:01:06Z",
+      "side": 1,
+      "message": "I feel uncomfortable putting such a large chunk of code straight into stable.\n\nUsually we put big chunks of work like this into beta first but I\u0027ll defer that to Kaldari.",
+      "revId": "0bdb42680c4e7856ae76e4bcdd037d3d2012e4eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_02d56a47",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-01T22:01:06Z",
+      "side": 1,
+      "message": "no need for space after Date - it\u0027s a function.\nThe space is only needed to differentiate if/for from functions",
+      "revId": "0bdb42680c4e7856ae76e4bcdd037d3d2012e4eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_82473a22",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-01T22:01:06Z",
+      "side": 1,
+      "message": "Use $.each",
+      "revId": "0bdb42680c4e7856ae76e4bcdd037d3d2012e4eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_22daee78",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-01T22:01:06Z",
+      "side": 1,
+      "message": "Why make it wait - what\u0027s the benefit?",
+      "revId": "0bdb42680c4e7856ae76e4bcdd037d3d2012e4eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
