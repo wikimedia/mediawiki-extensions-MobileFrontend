@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_bf87f7db",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 24
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-01T21:10:54Z",
+      "side": 1,
+      "message": "It looks like this will only record the first claim that is checked.",
+      "revId": "8d3a9ba30c8f9da80b128ee92e15c7c6dd70737d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
