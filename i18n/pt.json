@@ -287,6 +287,7 @@
 	"mobile-frontend-user-button-tooltip": "Mostrar as minhas notificações",
 	"mobile-frontend-user-newmessages": "Tem novas mensagens na sua página de discussão",
 	"mobile-frontend-user-cta": "Por favor, autentique-se ou registe-se para ver as suas notificações.",
+	"mobile-frontend-userlogin-loggedin-register": "Já tem sessão iniciada como {{GENDER:$1|$1}}.\nUse o formulário abaixo para criar outra conta.",
 	"mobile-frontend-username": "Nome de utilizador:",
 	"mobile-frontend-username-placeholder": "Nome de utilizador",
 	"mobile-frontend-view": "Versão móvel",

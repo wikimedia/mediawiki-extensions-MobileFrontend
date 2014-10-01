@@ -8,7 +8,8 @@
 			"Nemo bis",
 			"Raoli",
 			"Una giornata uggiosa '94",
-			"Ximo17"
+			"Ximo17",
+			"Elitre"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -96,7 +97,7 @@
 	"mobile-frontend-editor-unavailable-header": "Editor non disponibile",
 	"mobile-frontend-editor-undo-unsupported": "L'annullamento non è attualmente supportato sui dispositivi mobili.",
 	"mobile-frontend-editor-uploadenable": "Caricare una foto per poter abilitare alla modifica.",
-	"mobile-frontend-editor-viewing-source-page": "<strong>Visualizza sorgente di</strong><span> $1</span>",
+	"mobile-frontend-editor-viewing-source-page": "<strong>Visualizza wikitesto di</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "Modifica",
 	"mobile-frontend-editor-wait": "Stiamo salvando la tua modifica, attendi.",
 	"mobile-frontend-enable-images": "Abilita le immagini sul sito per dispositivi mobili",
@@ -296,7 +297,7 @@
 	"mobile-frontend-view": "Versione mobile",
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-view-mobile": "Cellulare",
-	"mobile-frontend-view-source": "Visualizza sorgente",
+	"mobile-frontend-view-source": "Visualizza wikitesto",
 	"mobile-frontend-watch-login": "Aggiungi $1 ai tuoi osservati speciali.",
 	"mobile-frontend-watchlist-a-z": "Elenco",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Attualmente non c'è alcuna pagina fra i tuoi osservati speciali. Gli osservati speciali ti aiutano a tenere traccia delle voci di tuo interesse. Puoi aggiungerle toccando l'icona a forma di stella.",
