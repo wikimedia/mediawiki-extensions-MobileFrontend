@@ -588,6 +588,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 			'mobile.overlays',
 			'jquery.cookie',
+			'mediawiki.ui.anchor',
 		),
 		'templates' => array(
 			'modules/uploads/commons-upload.hogan',

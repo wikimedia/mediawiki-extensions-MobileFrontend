@@ -44,7 +44,7 @@
 		} };
 		if ( allowAnonymous ) {
 			options.links = [ { label: mw.msg( 'mobile-frontend-editor-anon' ),
-				href: $el[0].href, selector: 'edit-anon' } ];
+				href: $el[0].href, selector: 'edit-anon mw-ui-progressive' } ];
 		}
 		$el.
 			on( 'tap', function( ev ) {
