@@ -53,6 +53,7 @@ $autoloadClasses = array (
 	'MobileContext' => 'MobileContext',
 	'MobileFormatter' => 'MobileFormatter',
 	'MobilePage' => 'MobilePage',
+	'MobileUI' => 'MobileUI',
 	'MobileUserInfo' => 'MobileUserInfo',
 
 	'ApiMobileView' => 'api/ApiMobileView',

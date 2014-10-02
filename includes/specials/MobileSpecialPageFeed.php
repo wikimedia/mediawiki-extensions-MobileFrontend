@@ -86,9 +86,9 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$lang = $this->getLanguage();
 
 		if ( $isAnon ) {
-			$usernameClass = 'mw-mf-user mw-mf-anon icon icon-text icon-16px';
+			$usernameClass = MobileUI::iconClass( 'anonymous', 'before', 'icon-16px mw-mf-user mw-mf-anon' );
 		} else {
-			$usernameClass = 'mw-mf-user icon icon-16px icon-text';
+			$usernameClass = MobileUI::iconClass( 'user', 'before', 'icon-16px mw-mf-user' );
 		}
 
 		$html = Html::openElement( 'li', array( 'class' => 'page-summary' ) );
@@ -122,9 +122,9 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$formattedBytes = $lang->formatNum( $bytes );
 			if ( $bytes > 0 ) {
 				$formattedBytes = '+' . $formattedBytes;
-				$bytesClass = 'mw-mf-bytesadded icon icon-text icon-12px';
+				$bytesClass = MobileUI::iconClass( 'bytesadded', 'before', 'icon-12px mw-mf-bytesadded' );
 			} else {
-				$bytesClass = 'mw-mf-bytesremoved icon icon-text icon-12px';
+				$bytesClass = MobileUI::iconClass( 'bytesremoved', 'before', 'icon-12px mw-mf-bytesremoved' );
 			}
 			$html .= Html::element(
 				'p',

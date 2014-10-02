@@ -151,13 +151,15 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 		if ( $bytesChanged > 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
-			$sizeClass = 'mw-mf-bytesadded meta icon icon-12px icon-text';
+			$sizeClass = MobileUI::iconClass( 'bytesadded', 'before', 'icon-12px meta mw-mf-bytesadded' );
 		} elseif ( $bytesChanged === 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesnochange';
-			$sizeClass = 'mw-mf-bytesneutral meta icon icon-12px icon-text';
+			$sizeClass = MobileUI::iconClass( 'bytesneutral', 'before',
+				'icon-12px meta mw-mf-bytesneutral' );
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
-			$sizeClass = 'mw-mf-bytesremoved meta icon icon-12px icon-text';
+			$sizeClass = MobileUI::iconClass( 'bytesremoved', 'before',
+				'icon-12px meta mw-mf-bytesremoved' );
 			$bytesChanged = abs( $bytesChanged );
 		}
 
@@ -271,7 +273,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$user = User::newFromId( $userId );
 			$edits = $user->getEditCount();
 			$attrs = array(
-				'class' => 'mw-mf-user icon icon-16px icon-text',
+				'class' => MobileUI::iconClass( 'user', 'before', 'mw-mf-user icon-16px' ),
 				'data-revision-id' => $this->revId,
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $user->getOption( 'gender' ),
@@ -299,9 +301,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$ipAddr = $this->rev->getUserText();
 			$userPage = SpecialPage::getTitleFor( 'Contributions', $ipAddr );
 			$output->addHtml(
-				'<div class="mw-mf-user mw-mf-anon icon icon-16px icon-text">' .
-					$this->msg( 'mobile-frontend-diffview-anonymous' )->escaped() .
-				'</div>' .
+				Html::element( 'div', array(
+					'class' =>  MobileUI::iconClass( 'anonymous', 'before', 'mw-mf-user icon-16px mw-mf-anon' ),
+				), $this->msg( 'mobile-frontend-diffview-anonymous' ) ) .
 				'<div>' .
 					Linker::link( $userPage, htmlspecialchars( $ipAddr ) ) .
 				'</div>'

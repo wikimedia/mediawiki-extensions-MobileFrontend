@@ -140,7 +140,7 @@ class SkinMinerva extends SkinTemplate {
 				'href' => '#/editor/' . $section,
 				'title' => wfMessage( 'editsectionhint', $tooltip )->inLanguage( $lang ),
 				'data-section' => $section,
-				'class' => 'edit-page icon icon-32px icon-edit enabled'
+				'class' => MobileUI::iconClass( 'edit', 'element', 'edit-page enabled icon-32px' ),
 			), $message );
 		}
 	}
@@ -244,7 +244,8 @@ class SkinMinerva extends SkinTemplate {
 					'title' => $notificationsMsg,
 					'href' => $notificationsTitle->getLocalURL(
 						array( 'returnto' => $currentTitle->getPrefixedText() ) ),
-					'class' => 'user-button icon icon-32px main-header-button',
+					'class' => MobileUI::iconClass( 'notifications', 'element',
+						'user-button main-header-button icon-32px' ),
 					'id'=> 'secondary-button',
 				) ) .
 				Html::element(
@@ -287,7 +288,7 @@ class SkinMinerva extends SkinTemplate {
 						'href' => $this->getUser()->isLoggedIn() ?
 							$watchTitle->getLocalUrl( $watchlistQuery ) :
 							$this->getLoginUrl( array( 'returnto' => $watchTitle ) ),
-						'class' => 'icon-watchlist icon icon-text',
+						'class' => MobileUI::iconClass( 'watchlist', 'before' ),
 					),
 				),
 			)
@@ -300,7 +301,7 @@ class SkinMinerva extends SkinTemplate {
 							'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
 							'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
 								$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
-							'class' => 'icon-uploads icon icon-text',
+							'class' => MobileUI::iconClass( 'uploads', 'before' ),
 						),
 					),
 					'class' => 'jsonly',
@@ -312,7 +313,7 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
 							getLocalUrl( array( 'returnto' => $returnToTitle ) ),
-						'class' => 'icon-settings icon icon-text',
+						'class' => MobileUI::iconClass( 'settings', 'before' ),
 					),
 				),
 			);
@@ -325,7 +326,7 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'preferences' )->escaped(),
 						'href' => $this->getUser()->isLoggedIn() ? $prefUrl :
 							$this->getLoginUrl( array( 'returnto' => $prefUrl ) ),
-						'class' => 'icon-settings icon icon-text',
+						'class' => MobileUI::iconClass( 'settings', 'before' ),
 					),
 				),
 			);
@@ -368,7 +369,7 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
 						'href' => Title::newMainPage()->getLocalUrl(),
-						'class' => 'icon-home icon icon-text',
+						'class' => MobileUI::iconClass( 'home', 'before' ),
 					),
 				),
 			),
@@ -379,7 +380,7 @@ class SkinMinerva extends SkinTemplate {
 						'href' => SpecialPage::getTitleFor( 'Randompage',
 							MWNamespace::getCanonicalName( $wgMFContentNamespace ) )->getLocalUrl() .
 								'#/random',
-						'class' => 'icon-random icon icon-text',
+						'class' => MobileUI::iconClass( 'random', 'before' ),
 						'id' => 'randomButton',
 					),
 				),
@@ -389,7 +390,7 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
-						'class' => 'icon-nearby icon icon-text',
+						'class' => MobileUI::iconClass( 'nearby', 'before' ),
 					),
 				),
 				'class' => 'jsonly',
@@ -456,12 +457,12 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => $username,
 						'href' => SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
-						'class' => 'icon icon-profile truncated-text icon-text',
+						'class' => MobileUI::iconClass( 'profile', 'before', 'truncated-text' ),
 					),
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
 						'href' => $url,
-						'class' => 'icon icon-24px icon-secondary icon-secondary-logout',
+						'class' => MobileUI::iconClass( 'secondary-logout', 'element', 'icon-24px icon-secondary' ),
 					),
 				),
 			);
@@ -478,7 +479,7 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
 						'href' => $url,
-						'class' => 'icon icon-anon icon-text',
+						'class' => MobileUI::iconClass( 'anon', 'before' ),
 					),
 				),
 			);
@@ -598,7 +599,7 @@ class SkinMinerva extends SkinTemplate {
 			Html::element( 'a', array(
 			'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' ),
 			'href' => $url,
-			'class' => 'main-header-button icon',
+			'class' => MobileUI::iconClass( 'mainmenu' ),
 			'id'=> 'mw-mf-main-menu-button',
 			) )
 		);
@@ -688,7 +689,8 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '',
 				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-edit-tooltip' ),
-				'class' => 'icon icon-32px icon-edit' );
+				'class' => MobileUI::iconClass( 'edit', 'element', 'icon-32px' ),
+			);
 		}
 
 		if (
@@ -698,7 +700,8 @@ class SkinMinerva extends SkinTemplate {
 		) {
 			$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
 				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-upload-tooltip' ),
-				'class' => 'icon icon-32px' );
+				'class' => MobileUI::iconClass( 'addimage', 'element', 'icon-32px' ),
+			);
 		}
 
 		if ( $this->isAllowedPageAction( 'talk' ) ) {
@@ -710,7 +713,7 @@ class SkinMinerva extends SkinTemplate {
 			}
 
 			if ( isset( $menu['talk'] ) ) {
-				$menu['talk']['class'] = 'icon icon-32px icon-talk';
+				$menu['talk']['class'] = MobileUI::iconClass( 'talk', 'element', 'icon-32px' );
 				if ( isset( $tpl->data['_talkdata'] ) ) {
 					$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
 					$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
@@ -724,7 +727,7 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
 			$watchTemplate = array(
 				'id' => 'ca-watch',
-				'class' => 'watch-this-article icon icon-32px',
+				'class' => MobileUI::iconClass( 'watch', 'element', 'icon-32px watch-this-article' ),
 			);
 			// standardise watch article into one menu item
 			if ( isset( $actions['watch'] ) ) {

@@ -64,7 +64,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// manually style it as a userlink
 			$headerTitle = Html::element(
 				'span',
-				array( 'class' => 'mw-mf-user icon icon-16px icon-text'),
+				array( 'class' => MobileUI::iconClass( 'user', 'before', 'mw-mf-user icon-16px' ) ),
 				$title
 			);
 		}
