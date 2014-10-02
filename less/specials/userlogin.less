@@ -1,8 +1,6 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-@fancycaptchaReloadColor: #787878;
-
 // This serves no purpose on the login screen as you are not logged in so cannot use.
 #user-button {
 	display: none;
@@ -62,7 +60,7 @@ form.user-login {
 
 	// FIXME: Make use of icon classes
 	.fancycaptcha-reload {
-		color: @fancycaptchaReloadColor;
+		color: @colorGray7;
 		font-weight: bold;
 		background-image: url(images/login/refresh.png);
 		background-repeat: no-repeat;
