@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_316d5602",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-02T19:51:21Z",
+      "side": 1,
+      "message": "That the message is an error you can indicate with an error toast, so a better message can be \"This wiki currently is in read-only mode.\"",
+      "revId": "e19752476a736a27c2628167e672acdb93fa9a05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
