@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_b16166d2",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-02T18:02:35Z",
+      "side": 1,
+      "message": "*facepalm* thanks for the hint\n-\u003e Done",
+      "parentUuid": "ce8c5bf9_913d42bb",
+      "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_71443e4b",
         "filename": "javascripts/modules/talk/TalkOverlay.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-02T17:51:33Z",
       "side": 1,
       "message": "This can probably be reduced to .page-list - not sure why actionable is necessary in current code.",
+      "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_51949a8d",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-02T18:02:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce8c5bf9_71443e4b",
       "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_71919e9b",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-02T18:02:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce8c5bf9_117132a7",
+      "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_3176b6a0",
         "filename": "templates/modules/talk/talk.hogan",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2014-10-02T17:51:33Z",
       "side": 1,
       "message": "Is talk-fullpage element needed?\nCan\u0027t we just have a link with its own class?",
+      "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_91b3024c",
+        "filename": "templates/modules/talk/talk.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-02T18:02:35Z",
+      "side": 1,
+      "message": "we could, i thought it looks much better with an own div :)\n\n-\u003e removed",
+      "parentUuid": "ce8c5bf9_3176b6a0",
       "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
