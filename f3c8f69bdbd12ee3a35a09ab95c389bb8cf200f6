@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_c3e6a113",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 490,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-02T20:41:34Z",
+      "side": 1,
+      "message": "Add icon-secondary class here.",
+      "revId": "f3c8f69bdbd12ee3a35a09ab95c389bb8cf200f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_63eb15dc",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-02T20:41:34Z",
+      "side": 1,
+      "message": "should be before",
+      "revId": "f3c8f69bdbd12ee3a35a09ab95c389bb8cf200f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
