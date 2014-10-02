@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_913d42bb",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-02T17:51:33Z",
+      "side": 1,
+      "message": "You\u0027ll need a qqq code to go with this.",
+      "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_71443e4b",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-02T17:51:33Z",
+      "side": 1,
+      "message": "This can probably be reduced to .page-list - not sure why actionable is necessary in current code.",
+      "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_117132a7",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-02T17:51:33Z",
+      "side": 1,
+      "message": "This is probably overly specific. Use .page-list a\n\nNot sure why actionable is necessary in current code.",
+      "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_3176b6a0",
+        "filename": "templates/modules/talk/talk.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-02T17:51:33Z",
+      "side": 1,
+      "message": "Is talk-fullpage element needed?\nCan\u0027t we just have a link with its own class?",
+      "revId": "335cc82215a3efc0b021ad28d29b72cb5fee45e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
