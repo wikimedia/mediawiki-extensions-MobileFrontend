@@ -1,5 +1,9 @@
 /**
  * micro.tap
+ * Makes tap event available in jQuery.
+ * This can be used to beat the 300ms delay that plagues iOS Safari.
+ * @see https://developers.google.com/mobile/articles/fast_buttons
+ * Note: Surplus in Chrome 32 (http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away)
  * https://github.com/jgonera/micro.tap
  */
 

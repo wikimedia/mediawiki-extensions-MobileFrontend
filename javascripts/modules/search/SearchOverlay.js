@@ -58,7 +58,7 @@
 			} );
 
 			// initialize the button that clears the search field
-			$clear.hide().on( M.tapEvent( 'click' ), function() {
+			$clear.hide().on( 'tap', function() {
 				self.$input.val( '' ).focus();
 				self.performSearch();
 				$clear.hide();
@@ -69,7 +69,7 @@
 				hide().
 				// can't use $.proxy because it would pass ev to submit() which would
 				// be treated as alternative form data
-				on( M.tapEvent( 'click' ), function() {
+				on( 'tap', function() {
 					window.history.back();
 					// Add fulltext input to force fulltext search
 					$( '<input>' )
@@ -80,10 +80,10 @@
 
 			// tapping on background only should hide the overlay
 			this.$overlayContent
-				.on( M.tapEvent( 'click' ), function() {
+				.on( 'tap', function() {
 					window.history.back();
 				} )
-				.find( '> div' ).on( M.tapEvent( 'click' ), function( ev ) {
+				.find( '> div' ).on( 'tap', function( ev ) {
 					ev.stopPropagation();
 				} );
 

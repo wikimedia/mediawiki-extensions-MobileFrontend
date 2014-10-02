@@ -42,7 +42,7 @@ var
 			var self = this, $comment = this.$( '.comment' ),
 				$textarea = $comment.find( 'textarea' );
 			Overlay.prototype.postRender.apply( this, arguments );
-			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( self, 'hide' ) );
+			this.$( '.back' ).on( 'tap', $.proxy( self, 'hide' ) );
 			this.$( '.loading' ).remove();
 			if ( user.isAnon() || !M.isAlphaGroupMember() ) {
 				$comment.remove();

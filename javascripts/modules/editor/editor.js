@@ -47,8 +47,7 @@
 				href: $el[0].href, selector: 'edit-anon' } ];
 		}
 		$el.
-			// FIXME change when micro.tap.js in stable
-			on( M.tapEvent( 'mouseup' ), function( ev ) {
+			on( 'tap', function( ev ) {
 				ev.preventDefault();
 				// prevent folding section when clicking Edit
 				ev.stopPropagation();
@@ -161,8 +160,7 @@
 			}
 		}
 
-		// FIXME change when micro.tap.js in stable
-		$( '.edit-page' ).on( M.tapEvent( 'mouseup' ), function( ev ) {
+		$( '.edit-page' ).on( 'tap', function( ev ) {
 			// prevent folding section when clicking Edit
 			ev.stopPropagation();
 		} );
@@ -189,8 +187,7 @@
 		} else {
 			M.getCurrentPage().isEditable( user ).done( function( isEditable ) {
 				if ( isEditable ) {
-					// FIXME: change when micro.tap.js in stable
-					$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
+					$( '#ca-edit' ).addClass( 'enabled' ).on( 'tap', function() {
 						drawer.render().show();
 					});
 				} else {
@@ -213,7 +210,7 @@
 	 * @param {string} msg Message key for sorry message
 	 */
 	function showSorryToast( msg ) {
-		$( '#ca-edit, .edit-page' ).on( M.tapEvent( 'click' ), function( ev ) {
+		$( '#ca-edit, .edit-page' ).on( 'tap', function( ev ) {
 			popup.show( mw.msg( msg ), 'toast' );
 			ev.preventDefault();
 		} );

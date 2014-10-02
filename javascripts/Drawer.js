@@ -17,12 +17,11 @@ var Panel = M.require( 'Panel' ),
 			Panel.prototype.postRender.apply( this, arguments );
 			this.on( 'show', function() {
 				setTimeout( function() {
-					$( 'body' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
+					$( 'body' ).one( 'tap.drawer', $.proxy( self, 'hide' ) );
 					$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
-					// FIXME change when micro.tap.js in stable
 					// can't use 'body' because the drawer will be closed when
 					// tapping on it and clicks will be prevented
-					$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
+					$( '#mw-mf-page-center' ).one( 'tap.drawer', $.proxy( self, 'hide' ) );
 				}, self.minHideDelay );
 			} );
 
@@ -34,7 +33,7 @@ var Panel = M.require( 'Panel' ),
 			} );
 
 			// Allow the drawer itself to be clickable (e.g. for copying and pasting references / clicking links in reference)
-			this.$el.on( M.tapEvent( 'click' ), function( ev ) {
+			this.$el.on( 'tap', function( ev ) {
 				ev.stopPropagation();
 			} );
 		}

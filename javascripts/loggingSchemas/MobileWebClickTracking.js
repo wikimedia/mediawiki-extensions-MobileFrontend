@@ -23,7 +23,7 @@
 	}
 
 	function hijackLink( selector, name ) {
-		$( selector ).on( M.tapEvent( 'click' ), function() {
+		$( selector ).on( 'tap', function() {
 			futureLog( name, $( this ).attr( 'href' ) );
 		} );
 	}

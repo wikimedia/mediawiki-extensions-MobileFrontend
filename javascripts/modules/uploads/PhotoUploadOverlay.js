@@ -161,7 +161,7 @@
 
 			$submitButton = this.$( '.submit' ).
 				prop( 'disabled', true ).
-				on( M.tapEvent( 'click' ), function() {
+				on( 'tap', function() {
 					self.log( { action: 'previewSubmit' } );
 					self._submit();
 				} );

@@ -456,16 +456,7 @@
 		/**
 		 * @type {Boolean}
 		 */
-		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0,
-		// FIXME: get rid off this (grep M.tapEvent) when micro.tap.js is in stable
-		/**
-		 * @method
-		 * @param {String} fallbackEvent
-		 * @return {String}
-		 */
-		tapEvent: function( fallbackEvent ) {
-			return M.isBetaGroupMember() ? 'tap' : fallbackEvent;
-		}
+		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0
 	} );
 
 	// Initialize
