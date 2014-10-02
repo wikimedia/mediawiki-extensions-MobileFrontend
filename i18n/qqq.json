@@ -287,6 +287,7 @@
 	"mobile-frontend-sign-in-heading": "Header for login page.\n{{Identical|Sign in}}",
 	"mobile-frontend-sign-in-why": "Short summary before login page explaining why someone should bother signing in",
 	"mobile-frontend-sign-up-heading": "Header for sign up page.\n{{Identical|Sign up}}",
+	"mobile-frontend-talk-fullpage": "Used as label for link to the talk page (Talk:ArticleName) in Talk Overlay.",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Placeholder text to prompt user to add content to talk page content",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Placeholder text to prompt user to add a talk page topic subject",
 	"mobile-frontend-talk-add-overlay-submit": "Label for button which submits a new talk page topic",

@@ -260,6 +260,7 @@
 	"mobile-frontend-sign-in-heading": "Sign in",
 	"mobile-frontend-sign-in-why": "If you have a {{SITENAME}} account, you may sign in below.",
 	"mobile-frontend-sign-up-heading": "Sign up",
+	"mobile-frontend-talk-fullpage": "Read as wiki page",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "What is on your mind?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Topic subject",
 	"mobile-frontend-talk-add-overlay-submit": "Add discussion",

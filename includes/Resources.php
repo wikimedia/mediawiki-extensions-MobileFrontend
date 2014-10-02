@@ -465,6 +465,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'modules/talk/talkSectionHeader.hogan',
 		),
 		'messages' => array(
+			'mobile-frontend-talk-fullpage',
 			'mobile-frontend-talk-explained',
 			'mobile-frontend-talk-explained-empty',
 			'mobile-frontend-talk-overlay-lead-header',

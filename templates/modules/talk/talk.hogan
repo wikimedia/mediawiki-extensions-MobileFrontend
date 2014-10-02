@@ -2,10 +2,10 @@
 	<p class="content-header">
 		{{explanation}}
 	</p>
-	<ul class="page-list actionable">
-		<li class="lead-discussion">
-			<a data-id="0">{{leadHeading}}</a>
-		</li>
+	<ul class="page-list">
 	</ul>
+	<a class="mw-ui-progressive mw-ui-button mw-ui-quiet mw-ui-block hidden talk-fullpage" href="{{talkLink}}">
+		{{talkMessage}}
+	</a>
 </div>
 <div class="spinner loading"></div>

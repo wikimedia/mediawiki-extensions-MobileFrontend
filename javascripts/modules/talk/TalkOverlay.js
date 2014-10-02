@@ -22,12 +22,15 @@
 				headerButtons: [ {
 					className: 'add continue hidden',
 					msg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
-				} ]
+				} ],
+				talkMessage: mw.msg( 'mobile-frontend-talk-fullpage' )
 			},
 
 			postRender: function( options ) {
 				Overlay.prototype.postRender.apply( this, arguments );
 				this.$board = this.$( '.board' );
+				this.$( '.talk-fullpage' ).attr( 'href', mw.util.getUrl( options.title ) )
+					.removeClass( 'hidden' );
 				this._loadContent( options );
 				this._showHidden( '.initial-header' );
 			},
@@ -89,11 +92,7 @@
 				this.page = page;
 
 				// clear actual content, if any
-				this.$( '.page-list.actionable' ).empty().prepend(
-					'<li class="lead-discussion">' +
-						'<a data-id="0">' + self.defaults.leadHeading + '</a>' +
-					'</li>'
-				);
+				this.$( '.page-list' ).empty();
 				sections = page.getSubSections();
 
 				// Add content header explanation
@@ -104,7 +103,7 @@
 
 				// Write down talk sections
 				$.each( sections, function( id, el ) {
-					self.$( '.page-list.actionable' ).prepend(
+					self.$( '.page-list' ).prepend(
 						'<li>' +
 							'<a data-id="' + el.id + '">' + el.line + '</a>' +
 						'</li>'
@@ -143,7 +142,7 @@
 				}
 
 				// FIXME: Use Router instead for this
-				this.$( 'a' ).on( 'click', function() {
+				this.$( '.page-list a' ).on( 'click', function() {
 					var id = parseFloat( $( this ).data( 'id' ), 10 ),
 						leadSection = {
 							content: page.lead,
@@ -165,9 +164,6 @@
 						childOverlay.remove();
 					} );
 				} );
-				if ( !$.trim( page.lead ) ) {
-					this.$( '.lead-discussion' ).remove();
-				}
 			}
 		} );
 
