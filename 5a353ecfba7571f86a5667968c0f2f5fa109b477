@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_237aed1f",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-02T20:52:04Z",
+      "side": 1,
+      "message": "This changes the title, but not the contents of the anchor link. Also, might be good to break these into separate lines, so it doesn\u0027t become spaghetti when that is added.",
+      "revId": "5a353ecfba7571f86a5667968c0f2f5fa109b477",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_639f9556",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-02T20:52:04Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "5a353ecfba7571f86a5667968c0f2f5fa109b477",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
