@@ -5,6 +5,8 @@
 // FIXME: Separate imported folders into a components directory
 @import 'mainmenu';
 
+@topBarBackgroundColor: #F3F3F3;
+
 html,
 body {
 	// Ensure overlays take up full screen
@@ -13,12 +15,12 @@ body {
 
 #content_wrapper {
 	.top-bar {
-		background-color: #F3F3F3;
+		background-color: @topBarBackgroundColor;
 		padding: 5px @contentMargin;
 		display: block;
-		color: #666;
+		color: @colorGray6;
 		a {
-			color: #666;
+			color: @colorGray6;
 			// If browser supports
 			&:nth-child(2) {
 				font-weight: bold;

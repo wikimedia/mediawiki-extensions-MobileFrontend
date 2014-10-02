@@ -2,6 +2,9 @@
 @import "minerva.variables.less";
 @import "minerva.mixins.less";
 
+@imageReplacementColor: #706E6E;
+@inputsBoxBorderColor: #e1e1e1;
+
 // Reusable components
 //
 // Styleguide 6.
@@ -37,16 +40,16 @@
 
 .mw-mf-image-replacement {
 	font-style: italic;
-	color: #706E6E;
+	color: @imageReplacementColor;
 	text-decoration: underline;
-	border: dotted 1px #CCC;
+	border: dotted 1px @colorGray12;
 	padding: 10px;
 	display: inline-block;
 }
 
 .inputs-box {
 	padding: 1px;
-	border: solid 1px #e1e1e1;
+	border: solid 1px @inputsBoxBorderColor;
 	border-radius: 5px;
 	background: #fff;
 	margin: 0 0 .8em;
@@ -54,7 +57,7 @@
 
 	input:not([type=submit]), img {
 		border: none;
-		border-top: solid 1px #e1e1e1;
+		border-top: solid 1px @inputsBoxBorderColor;
 
 		&:first-child {
 			border-top: none;
@@ -77,7 +80,7 @@ textarea {
 
 input:not([type=submit]), textarea {
 	background: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid @colorGray12;
 	border-radius: 3px;
 	padding: 5px;
 }

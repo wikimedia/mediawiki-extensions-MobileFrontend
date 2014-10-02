@@ -1,6 +1,10 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+@userinfoBackgroundColor: #f0f0f0;
+@userinfoBorderColor: #c0c0c0;
+@diffDateColor: #c6c6c6;
+
 // FIXME: Not a long term solution (see bug 64607) - footers and position fixed elements do not play well
 #footer {
 	display: none;
@@ -31,7 +35,7 @@
 	}
 
 	.mw-mf-diff-date {
-		color: #c6c6c6;
+		color: @diffDateColor;
 	}
 
 	#mw-mf-diffarea {
@@ -57,8 +61,8 @@
 		min-height: @userInfoHeight;
 		width: 100%;
 		padding: 1em;
-		background-color: #f0f0f0;
-		border-top: solid 1px #c0c0c0;
+		background-color: @userinfoBackgroundColor;
+		border-top: solid 1px @userinfoBorderColor;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -71,14 +75,14 @@
 			display: inline-block;
 			text-align: left;
 			margin-top: 1.2em;
-			color: #333;
+			color: @colorGray3;
 			line-height: 1;
 
 			/* the edit count number */
 			div {
 				text-align: center;
 				font-size: 1.85em;
-				color: #888;
+				color: @colorGray8;
 			}
 		}
 	}

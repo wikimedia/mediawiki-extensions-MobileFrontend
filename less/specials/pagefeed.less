@@ -1,6 +1,10 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+@pageHeaderBarBorderColor: #e2e2e2;
+@watchlistSelectorBorderColor: #e2e2e2;
+@watchlistSelectorLinkColor: #58595b;
+
 // FIXME [mediawiki ui] These rules should not be needed and are specifically for Watchlist
 // This should use another MediaWiki UI widget
 .content-header .mw-ui-button-group {
@@ -24,7 +28,7 @@
 	div {
 		line-height: 1.5;
 		padding: 5px 0 0;
-		border-bottom: 1px solid #e2e2e2;
+		border-bottom: 1px solid @pageHeaderBarBorderColor;
 		text-align: center;
 	}
 }
@@ -33,7 +37,7 @@
 	margin-bottom: -1px;
 	li {
 		display: inline-block;
-		border-left: 1px solid #e2e2e2;
+		border-left: 1px solid @watchlistSelectorBorderColor;
 		width: 25%;
 		margin: 0 0 0 -1px;
 		border-bottom: none;
@@ -47,7 +51,7 @@
 
 		a {
 			display: block;
-			color: #58595b;
+			color: @watchlistSelectorLinkColor;
 			margin: 0 1px 0 0;
 			border-bottom: 3px solid transparent;
 		}

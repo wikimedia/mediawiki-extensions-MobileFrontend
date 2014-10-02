@@ -7,6 +7,10 @@
 @menuBorder: 12px;
 @menuBorderColor: #252525;
 
+@pageLeftListDarkBorderColor: #3e3e3e;
+@pageLeftListMediumBorderColor: #5C5C5C;
+@pageLeftListLightBorderColor: #717171;
+
 #mw-mf-viewport {
 	position: relative;
 	height: 100%;
@@ -95,11 +99,11 @@
 		position: relative; // ensure the logout link in beta can be position absolute
 		font-size: 1.2em;
 		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
-		border-bottom: 1px solid #3e3e3e;
-		border-top: 1px solid #717171;
+		border-bottom: 1px solid @pageLeftListDarkBorderColor;
+		border-top: 1px solid @pageLeftListLightBorderColor;
 
 		&:hover {
-			background-color: #5C5C5C;
+			background-color: @pageLeftListMediumBorderColor;
 			border-left: solid @menuBorder #3366BB;
 			margin-left: -@menuBorder;
 		}
@@ -112,7 +116,7 @@
 			bottom: 0;
 			padding-right: 0;
 			width: 0; // rely on padding
-			border-left: 1px solid #717171;
+			border-left: 1px solid @pageLeftListLightBorderColor;
 		}
 
 		.icon-profile {
@@ -138,7 +142,7 @@
 			border: none;
 
 			a {
-				color: #ccc;
+				color: @colorGray12;
 				border: none;
 				padding: .7em 12px;
 				margin-left: 0;
