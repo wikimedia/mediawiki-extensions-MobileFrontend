@@ -210,6 +210,7 @@
 	"mobile-frontend-user-account": "akun pengguna",
 	"mobile-frontend-user-button-tooltip": "Tampilkan pemberitahuan saya",
 	"mobile-frontend-user-cta": "Silakan masuk log atau mendaftar untuk melihat pemberitahuan Anda.",
+	"mobile-frontend-userlogin-loggedin-register": "Anda telah masuk sebagai {{GENDER:$1|}}.\nGunakan form di bawah untuk membuat user lain.",
 	"mobile-frontend-username": "Nama pengguna:",
 	"mobile-frontend-username-placeholder": "Nama pengguna",
 	"mobile-frontend-view": "Tampilan seluler",

@@ -266,6 +266,7 @@
 	"mobile-frontend-sign-in-heading": "Kirjaudu sisään",
 	"mobile-frontend-sign-in-why": "Voit kirjautua sisään alla, jos sinulla on jo käyttäjätunnus sivustolle {{SITENAME}}.",
 	"mobile-frontend-sign-up-heading": "Luo tunnus",
+	"mobile-frontend-talk-fullpage": "Lue wikisivuna",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Mitä on mielessäsi?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Keskustelun aihe",
 	"mobile-frontend-talk-add-overlay-submit": "Lisää keskustelu",
