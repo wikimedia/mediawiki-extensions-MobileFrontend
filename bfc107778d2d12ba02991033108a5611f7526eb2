@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_63c6b550",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-02T20:55:50Z",
+      "side": 1,
+      "message": "This fixes the formatting in WikiGrok A, but breaks it in WikiGrok B.",
+      "revId": "bfc107778d2d12ba02991033108a5611f7526eb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
