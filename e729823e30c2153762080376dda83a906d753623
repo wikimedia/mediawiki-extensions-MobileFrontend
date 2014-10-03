@@ -16,6 +16,23 @@
       "revId": "e729823e30c2153762080376dda83a906d753623",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_d9ed3024",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-03T00:10:29Z",
+      "side": 1,
+      "message": "What florian said, but also JSON.stringify( expandedSections )\n\nThis whitespace stuff seems to be confusing you... grab me for clarification.\nThe only ___only__ time you add the space /before/ parenthesis is for `if` and `for` statements. These are /not/ functions.",
+      "revId": "e729823e30c2153762080376dda83a906d753623",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
