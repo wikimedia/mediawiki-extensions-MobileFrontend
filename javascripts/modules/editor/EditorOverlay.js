@@ -253,7 +253,7 @@
 
 					self.onSave();
 				} ).
-				fail( function( data ) {
+				fail( function( data, code, response ) {
 					var msg;
 
 					if ( data.type === 'captcha' ) {
@@ -264,6 +264,8 @@
 					} else {
 						if ( data.details === 'editconflict' ) {
 							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
+						} else if ( response.error && response.error.code === 'readonly' ) {
+							msg = response.error.info;
 						} else {
 							msg = mw.msg( 'mobile-frontend-editor-error' );
 						}
