@@ -18,7 +18,7 @@
 		},
 		tagName: 'div',
 		className: 'icon icon-32px watch-this-article',
-		template: M.template.compile( '<a>', 'hogan' ),
+		template: M.template.compile( '<a title="{{tooltip}}">{{tooltip}}</a>', 'hogan' ),
 		initialize: function( options ) {
 			var self = this, _super = View.prototype.initialize,
 				page = options.page;
@@ -43,6 +43,9 @@
 				_super.call( self, options );
 			}
 		},
+		preRender: function( options ) {
+			options.tooltip = options.isWatched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
+		},
 		postRender: function( options ) {
 			var self = this, callback,
 				checker,
@@ -60,10 +63,12 @@
 						clearInterval( checker );
 					} ).done( function() {
 						if ( api.isWatchedPage( page ) ) {
-							$el.addClass( 'watched' );
+							options.isWatched = true;
+							self.render( options );
 							toast.show( mw.msg( 'mobile-frontend-watchlist-add', page.title ) );
 						} else {
-							$el.removeClass( 'watched' );
+							options.isWatched = false;
+							self.render( options );
 							toast.show( mw.msg( 'mobile-frontend-watchlist-removed', page.title ) );
 						}
 					} ).fail( function() {
@@ -71,7 +76,12 @@
 					} );
 				}
 			};
-			this.$el.on( 'click', callback );
+
+			if ( !this._initialised ) {
+				this.$el.on( 'click', callback );
+				this._initialised = true;
+			}
+
 			// Disable clicks on original link
 			this.$( 'a' ).on( 'click', function( ev ) {
 				ev.preventDefault();
@@ -80,6 +90,8 @@
 			// Add watched class if necessary
 			if ( !user.isAnon() && api.isWatchedPage( page ) ) {
 				$el.addClass( 'watched' );
+			} else {
+				$el.removeClass( 'watched' );
 			}
 		}
 	} );

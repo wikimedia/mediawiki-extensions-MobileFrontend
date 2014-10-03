@@ -150,6 +150,7 @@ class SkinMinerva extends SkinTemplate {
 			$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
 			return Html::element( 'a', array(
 				'href' => '#/editor/' . $section,
+				'title' => wfMessage( 'editsectionhint', $tooltip )->inLanguage( $lang ),
 				'data-section' => $section,
 				'class' => 'edit-page icon icon-32px icon-edit enabled'
 			), $message );
@@ -698,6 +699,7 @@ class SkinMinerva extends SkinTemplate {
 		// empty placeholder for edit and photos which both require js
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '',
+				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-edit-tooltip' ),
 				'class' => 'icon icon-32px icon-edit' );
 		}
 
@@ -707,6 +709,7 @@ class SkinMinerva extends SkinTemplate {
 			&& $this->mobileContext->userCanUpload()
 		) {
 			$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
+				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-upload-tooltip' ),
 				'class' => 'icon icon-32px' );
 		}
 

@@ -649,6 +649,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-with-user-date',
 			// mf-stop-mobile-redirect.js
 			'mobile-frontend-cookies-required',
+			// LeadPhotoUploaderButton.js
+			'mobile-frontend-photo-upload',
 		),
 	),
 
@@ -725,6 +727,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/watchstar/init.js',
 		),
 		'messages' => array(
+			'watchthispage',
+			'unwatchthispage',
 			// mf-watchstar.js
 			'mobile-frontend-watchlist-add',
 			'mobile-frontend-watchlist-removed',
@@ -768,7 +772,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-upload-protected',
 			'mobile-frontend-photo-upload-anon',
 			'mobile-frontend-photo-upload-unavailable',
-			'mobile-frontend-photo-upload',
 		),
 	),
 
