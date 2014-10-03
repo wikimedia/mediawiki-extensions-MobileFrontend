@@ -1,12 +1,12 @@
 <!-- note English language only! -->
 <div class="initial-pane content">
 	<p class="wg-content">{{contentMsg}}</p>
-	<div class="spinner loading"></div>
 	<p class="wg-buttons"></p>
 </div>
 <div class="initial-pane footer">
-	<span>All submissions are <a>released freely</a>.</span>
-	<button class="mw-ui-button mw-ui-constructive" disabled>next</button>
+	<span class="license">All submissions are <a href="#/wikigrok/about">released freely</a>.</span>
+	<button class="mw-ui-button mw-ui-constructive" disabled>Next</button>
+	<div class="spinner loading"></div>
 </div>
 <div class="final-pane content">
 	<p class="wg-content">You just made Wikipedia a little better, thanks!</p>

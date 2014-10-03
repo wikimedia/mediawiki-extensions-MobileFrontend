@@ -17,6 +17,8 @@
 
 	// the pseudo before element of the label after the checkbox now looks like a checkbox
 	input + label {
+		text-transform: none;
+		font-weight: normal;
 		font-size: 0.8em;
 
 		&::before {
@@ -43,6 +45,7 @@
 	}
 
 	label {
+		text-transform: capitalize;
 		margin-left: .3em;
 		display: block;
 	}
