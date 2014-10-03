@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_cec801ad",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-03T21:31:05Z",
+      "side": 1,
+      "message": "I think it\u0027s not necessary, localStorage should cover most of the user base. No?",
+      "parentUuid": "ce8c5bf9_0eaa69d1",
+      "revId": "c06fe3c81e740311dfa5efc91305d0c42bb83935",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_4ea071f1",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-03T21:27:42Z",
       "side": 1,
       "message": "Might want to wrap this with M.isBetaGroupMember so we can test it out first. Depends how confident you are :)",
+      "revId": "c06fe3c81e740311dfa5efc91305d0c42bb83935",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_aebfbdf5",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-03T21:31:05Z",
+      "side": 1,
+      "message": "Sure, that\u0027s a good idea.",
+      "parentUuid": "ce8c5bf9_4ea071f1",
       "revId": "c06fe3c81e740311dfa5efc91305d0c42bb83935",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
