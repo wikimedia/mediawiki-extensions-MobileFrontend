@@ -766,6 +766,11 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	private function getSkinConfigMobileVariables() {
 		$vars = array();
+		$vars['wgMFThumbnailSizes'] = array(
+			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
+			'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
+			'medium' => MobilePage::MEDIUM_IMAGE_WIDTH
+		);
 		if ( $this->isMobileMode ) {
 			global $wgCookiePath;
 			$wgUseFormatCookie = array(

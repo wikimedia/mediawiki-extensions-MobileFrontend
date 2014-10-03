@@ -9,7 +9,7 @@ var
 	pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 	currentUserName = user.getName(),
 	userName = pageParams[1] ? pageParams[1] : currentUserName,
-	IMAGE_WIDTH = 320,
+	IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).medium,
 	UserGalleryApi, PhotoItem, PhotoList;
 
 	UserGalleryApi = Api.extend( {
