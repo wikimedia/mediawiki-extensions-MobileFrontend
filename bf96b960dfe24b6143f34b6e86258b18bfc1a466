@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_0e3ee987",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-03T21:30:54Z",
+      "side": 1,
+      "message": "this seems to be the false message key ;)\n\n(the comment is false too). Damn copy paste :P",
+      "revId": "bf96b960dfe24b6143f34b6e86258b18bfc1a466",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
