@@ -1,6 +1,9 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+@overlayBottomBackgroundColor: #f3f3f3;
+@contentHeaderBorderColor: #e2e2e2;
+
 
 .overlay-enabled {
 	#mw-mf-page-center {
@@ -151,7 +154,7 @@
 	// Only used on overlays in beta (nearby pages)- may not want to push to stable
 	.content-header {
 		background: @searchBoxColorTo;
-		border-bottom: 1px solid #e2e2e2;
+		border-bottom: 1px solid @contentHeaderBorderColor;
 		padding: 20px @contentMargin;
 		line-height: inherit;
 	}
@@ -294,10 +297,10 @@
 	top: auto;
 	bottom: 0;
 	height: auto !important;
-	background: #f3f3f3;
+	background: @overlayBottomBackgroundColor;
 
 	.overlay-header-container {
-		background: #f3f3f3;
+		background: @overlayBottomBackgroundColor;
 	}
 }
 

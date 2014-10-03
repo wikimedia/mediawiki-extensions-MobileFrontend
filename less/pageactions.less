@@ -1,6 +1,8 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+@borderBottomColor: #CACACA;
+
 // FIXME: hide in stable till talk code is stable
 .mw-mobile-mode.stable #ca-talk,
 // hide menu items when not possible to use
@@ -14,13 +16,13 @@
 #section_0 {
 	padding: 12px @contentMargin 7px;
 	// FIXME: Use a gray defined in variables e.g. @grayMediumLight
-	border-bottom: dotted 1px #CACACA;
+	border-bottom: dotted 1px @borderBottomColor;
 }
 
 #page-actions {
 	@verticalMargin: 8px;
 	// FIXME: Use a gray defined in variables e.g. @grayMediumLight
-	border-bottom: solid 1px #CACACA;
+	border-bottom: solid 1px @borderBottomColor;
 
 	padding: @verticalMargin @contentMargin @verticalMargin @contentMargin - 8;
 

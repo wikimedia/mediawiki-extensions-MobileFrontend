@@ -1,7 +1,6 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-
 // Content formatting and typography
 //
 // Our content is predominately text, hence visual hierarchy must be clear.
@@ -16,11 +15,12 @@ html {
 
 @bodyLineHeight: 1.4;
 @headingLineHeight: 1.3;
+@tableHeadBackgroundColor: #F2F2F2;
 
 body {
 	font-family: @fontFamily;
 	line-height: @bodyLineHeight;
-	color: #252525;
+	color: @grayDark;
 	background: #fff;
 }
 
@@ -113,7 +113,7 @@ body {
 	}
 
 	.thumbborder {
-		border: 1px solid #ccc;
+		border: 1px solid @colorGray12;
 	}
 
 	// Full-size images
@@ -202,7 +202,7 @@ body {
 
 		th {
 			font-weight: bold;
-			background-color: #f2f2f2;
+			background-color: @tableHeadBackgroundColor;
 			text-align: center;
 		}
 
@@ -331,7 +331,7 @@ code,
 pre {
 	padding: 1em;
 	font-family: monospace;
-	border: solid 1px #CCC;
+	border: solid 1px @colorGray12;
 	white-space: pre-wrap;
 }
 

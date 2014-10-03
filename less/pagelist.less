@@ -7,6 +7,7 @@
 @thumbSpace: @thumbWidth + @thumbGap;
 @thumbOverlayWidth: @searchBarPaddingLeft;
 @thumbOverlaySpace: @thumbOverlayWidth + @thumbGap;
+@pageSummaryHeaderColor: #404040;
 
 // Pages
 //
@@ -30,7 +31,7 @@
 		font: inherit;
 		font-weight: bold;
 		// FIXME: Use one of the grays defined in variables.less
-		color: #404040;
+		color: @pageSummaryHeaderColor;
 		a {
 			color: inherit;
 		}
@@ -75,7 +76,7 @@
 	overflow: hidden;
 
 	li {
-		color: #666;
+		color: @colorGray6;
 		position: relative;
 		border-bottom: solid 1px @grayLightest;
 		padding: @itemPaddingV @contentMargin;
@@ -85,13 +86,13 @@
 
 		> a {
 			display: block;
-			color: #666;
+			color: @colorGray6;
 
 			&:active,
 			&:hover,
 			&:visited {
 				text-decoration: none;
-				color: #666;
+				color: @colorGray6;
 			}
 		}
 	}
