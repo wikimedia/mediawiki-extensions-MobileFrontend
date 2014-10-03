@@ -4,18 +4,18 @@
 // no fallback mixin for those SVGs (VE doesn't work on browsers without SVG
 // support anyway)
 .icon-edit-source {
-	background-image: embed( 'images/editSourceNormal.svg' );
+	.background-image( 'images/editSourceNormal.svg' );
 
 	&.selected {
-		background-image: embed( 'images/editSourceSelect.svg' );
+		.background-image( 'images/editSourceSelect.svg' );
 	}
 }
 
 .icon-edit-ve {
-	background-image: embed( 'images/editVeNormal.svg' );
+	.background-image( 'images/editVeNormal.svg' );
 
 	&.selected {
-		background-image: embed( 'images/editVeSelect.svg' );
+		.background-image( 'images/editVeSelect.svg' );
 	}
 }
 
@@ -56,12 +56,12 @@
 
 		.icon.editor-switcher {
 			margin: 0;
-			background-image: embed( 'images/editToggle.svg' );
+			.background-image( 'images/editToggle.svg' );
 			background-size: 44px 32px;
 			margin-right: 1em;
 
 			&.selected {
-				background-image: embed( 'images/editToggleActive.svg' );
+				.background-image( 'images/editToggleActive.svg' );
 			}
 		}
 
@@ -96,11 +96,11 @@
 				}
 
 				&.mw-ui-progressive .icon-edit-source {
-					background-image: embed( 'images/editSourceToggle.svg' );
+					.background-image( 'images/editSourceToggle.svg' );
 				}
 
 				&.mw-ui-progressive .icon-edit-ve {
-					background-image: embed( 'images/editVeToggle.svg' );
+					.background-image( 'images/editVeToggle.svg' );
 				}
 			}
 
