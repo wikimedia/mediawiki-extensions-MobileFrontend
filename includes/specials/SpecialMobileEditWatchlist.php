@@ -49,18 +49,14 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	}
 
 	public function execute( $par ) {
+		// Anons don't get a watchlist edit
+		$this->requireLogin( 'watchlistanontext' );
+
 		$out = $this->getOutput();
 		// turn off #content element
 		$out->setProperty( 'unstyledContent', true );
-		if( $this->getUser()->isAnon() ) {
-			// No watchlist for you.
-			$out->setPageTitle( $this->msg( 'watchnologin' ) );
-			$out->setRobotPolicy( 'noindex,nofollow' );
-			$out->addHTML( SpecialMobileWatchlist::getAnonBannerHtml( $this->getPageTitle() ) );
-		} else {
-			parent::execute( $par );
-			$out->setPageTitle( $this->msg( 'watchlist' ) );
-		}
+		parent::execute( $par );
+		$out->setPageTitle( $this->msg( 'watchlist' ) );
 	}
 
 	protected function executeViewEditWatchlist() {

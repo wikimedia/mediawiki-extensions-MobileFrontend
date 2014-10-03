@@ -34,35 +34,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/** @var Title $fromPageTitle Saves the Title object of the page list starts from */
 	private $fromPageTitle;
 
-	/**
-	 * Render an information box, that the anonymous user must login to see
-	 * his Watchlist
-	 */
-	protected function renderAnonBanner() {
-		$out = $this->getOutput();
-		$out->setPageTitle( $this->msg( 'watchnologin' ) );
-		$out->setRobotPolicy( 'noindex,nofollow' );
-		$out->addHTML(
-			self::getAnonBannerHtml( $this->getPageTitle() )
-		);
-	}
-
-	/**
-	 * Get HTML representing a banner prompting you to login.
-	 * @param Title $pageTitle
-	 * @return string html
-	 */
-	public static function getAnonBannerHtml( $pageTitle ) {
-		$link = Linker::linkKnown(
-			SpecialPage::getTitleFor( 'Userlogin' ),
-			wfMessage( 'loginreqlink' )->escaped(),
-			array(),
-			array( 'returnto' => $pageTitle->getPrefixedText() )
-		);
-		return Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
-			wfMessage( 'watchlistanontext' )->rawParams( $link )->parse() .
-				Html::closeElement( 'div' );
-	}
 
 	/**
 	 * Saves a user preference that reflects the current state of the watchlist
@@ -82,6 +53,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * @param string $par parameter submitted as subpage
 	 */
 	function executeWhenAvailable( $par ) {
+		// Anons don't get a watchlist
+		$this->requireLogin( 'watchlistanontext' );
+
 		wfProfileIn( __METHOD__ );
 		$ctx = MobileContext::singleton();
 		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
@@ -95,13 +69,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
-
-		if( $user->isAnon() ) {
-			// No watchlist for you.
-			$this->renderAnonBanner();
-			wfProfileOut( __METHOD__ );
-			return;
-		}
 
 		// This needs to be done before calling getWatchlistHeader
 		$this->updateStickyTabs();

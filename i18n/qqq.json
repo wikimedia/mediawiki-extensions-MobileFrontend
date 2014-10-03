@@ -58,7 +58,7 @@
 	"mobile-frontend-diffview-title": "Header for common mobile diff/change view. Parameters:\n* $1 - (Optional) page title (for backwards compatibility)\n{{Identical|Change}}",
 	"mobile-frontend-disable-images": "Unused at this time.\n\nSee also:\n* {{msg-mw|Mobile-frontend-enable-images}}",
 	"mobile-frontend-dismiss-notification": "Phrase used to dismiss the top banner notification",
-	"mobile-frontend-donate-image-anon": "Message shown to user who visits the [[Special:Uploads]] page without a user account.\n\nParameters:\n* $1 - link to the user login page. Its link text is {{msg-mw|mobile-frontend-user-account}}.\n{{Related|Mobile-frontend-login}}",
+	"mobile-frontend-donate-image-anon": "Message shown to user who visits the [[Special:Uploads]] page without a user account.\n\n{{Related|Mobile-frontend-login}}",
 	"mobile-frontend-donate-image-heading": "heading for a list of recent contributions",
 	"mobile-frontend-donate-image-login": "Title for [[Special:UserLogin]] when being redirected to [[Special:Uploads]].\n\nUsed when the user is not logged in.\n{{Related|Mobile-frontend-login}}",
 	"mobile-frontend-donate-image-login-action": "Call to action to login to donate images.",

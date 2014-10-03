@@ -196,6 +196,11 @@ function efMobileFrontend_Setup() {
 			'wgMFThumbnailMedium' => MobilePage::MEDIUM_IMAGE_WIDTH . 'px',
 		)
 	);
+	// FIXME: move out of this file. See bug 71769.
+	array_push(
+		LoginForm::$validErrorMessages,
+		'mobile-frontend-donate-image-anon'
+	);
 }
 
 // ResourceLoader modules

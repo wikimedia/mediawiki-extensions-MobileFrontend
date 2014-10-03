@@ -31,7 +31,7 @@
 	"mobile-frontend-diffview-title": "Changes",
 	"mobile-frontend-disable-images": "Disable images on mobile site",
 	"mobile-frontend-dismiss-notification": "dismiss this notification",
-	"mobile-frontend-donate-image-anon": "A $1 is required to view the uploads page.",
+	"mobile-frontend-donate-image-anon": "Please log in to view the uploads page.",
 	"mobile-frontend-donate-image-heading": "Your recent contributions",
 	"mobile-frontend-donate-image-login": "Media on {{SITENAME}} is donated by people like you.",
 	"mobile-frontend-donate-image-login-action": "Log in to share your media.",

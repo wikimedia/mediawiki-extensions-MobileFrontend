@@ -19,6 +19,9 @@ class SpecialUploads extends MobileSpecialPage {
 	 * @param string|null $par Username to get uploads from
 	 */
 	public function executeWhenAvailable( $par = '' ) {
+		// Anons don't get to see this page
+		$this->requireLogin( 'mobile-frontend-donate-image-anon' );
+
 		global $wgMFPhotoUploadEndpoint;
 
 		$this->setHeaders();
@@ -38,22 +41,8 @@ class SpecialUploads extends MobileSpecialPage {
 			}
 		} else {
 			$user = $this->getUser();
-			if ( $user->isAnon() ) {
-				// Should show current user's uploads, but they're not registered
-				$returnTo = $this->getPageTitle()->getPrefixedText();
-				$loginLink = Linker::link(
-					SpecialPage::getTitleFor( 'Userlogin' ),
-					wfMessage( 'mobile-frontend-user-account' )->plain(),
-					array(),
-					array( 'returnto' => $returnTo )
-				);
-				$html = '<div class="alert error">' .
-					$this->msg( 'mobile-frontend-donate-image-anon' )->rawParams( $loginLink )->parse() .
-					'</div>';
-			} else {
-				// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
-				$html = $this->getUserUploadsPageHtml( $user );
-			}
+			// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
+			$html = $this->getUserUploadsPageHtml( $user );
 		}
 		$output->addHTML( $html );
 	}
