@@ -121,14 +121,14 @@
 
 		function checkHash() {
 			var internalRedirect = mw.config.get( 'wgInternalRedirectTargetUrl' ),
+				internalRedirectHash = internalRedirect ? internalRedirect.split( '#' )[1] : false,
 				hash = window.location.hash;
 
 			if ( hash.indexOf( '#' ) === 0 ) {
 				reveal( hash );
-			} else if ( internalRedirect ) {
-				internalRedirect = '#' + internalRedirect.split( '#' )[1];
-				window.location.hash = internalRedirect;
-				reveal( internalRedirect );
+			} else if ( internalRedirectHash ) {
+				window.location.hash = internalRedirectHash;
+				reveal( internalRedirectHash );
 			}
 		}
 		checkHash();
