@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_82eba808",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-05T13:48:55Z",
+      "side": 1,
+      "message": "This would result into the following message:\nA $1 is required to view the uploads page.\n\n(This message key expect a parameter $1, containing a link to the user login page and the value of user-account message key, which you can\u0027t give here, so it will just return the plain parameter name ($1)) :)\n\nThe next point is, that mobile-frontend-donate-image-anon isn\u0027t a valid message for login page redirection. Background: SpecialPage::requireLogin() will result into a new UserNotLoggedIn exception. UserNotLoggedIn::report() will check, if the provided message key (-donate-image-anon) is in the list of valid messages of LoginForm (LoginForm::$validErrorMessages) [1][2]. Our message isn\u0027t in the list, so there will be no redirect and \"only\" an error page :)\n\nBecause there is no easy way to add a message key out of an extension, i suggest to just use the generic message key (exception-nologin-text) with a @todo to revisit later, when (maybe) a way was implemented.\n\n[1] https://github.com/wikimedia/mediawiki-core/blob/87b169260c66921d5c5652a4c5c1228f1bcb50ea/includes/exception/UserNotLoggedIn.php#L80\n[2] https://github.com/wikimedia/mediawiki-core/blob/master/includes/specials/SpecialUserlogin.php#L59",
+      "revId": "8e22c968a8d3a363a7aebb669ec531ee2e54e7b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
