@@ -7,8 +7,8 @@
 	},
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Staje a crià}} na pàggena nnova ncopp'a {{SITENAME}}!",
 	"mobile-frontend-editor-tutorial-summary": "Prova a migliurà 'a paggena 'e $1. Nun avé appaura d' 'e mmarche wiki.",
-	"mobile-frontend-mainpage-cta-prompt": "Chista paggena tene bisogno 'e ll'ajùto vuosto !",
 	"mobile-frontend-profile-usertalk": "Paggena 'e discussione 'e {{GENDER:$1|$1}}",
+	"mobile-frontend-talk-fullpage": "Liegge comme fosse na paggena wiki",
 	"mobile-frontend-talk-topic-feedback": "Novo sugietto aggiunto ad 'a paggena 'e discussione !",
 	"mobile-frontend-user-newmessages": "Tiene mmasciate nnove ncopp'â paggena 'e chiàcchiera tua",
 	"mobile-frontend-watchlist-filter-articles": "Paggene"

@@ -288,6 +288,7 @@
 	"mobile-frontend-sign-in-heading": "Connexion",
 	"mobile-frontend-sign-in-why": "Si vous avez un compte sur {{SITENAME}}, vous pouvez vous connecter ci-dessous.",
 	"mobile-frontend-sign-up-heading": "Inscrivez-vous",
+	"mobile-frontend-talk-fullpage": "Lire comme une page wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Qu’avez-vous à l’esprit?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Sujet de la rubrique",
 	"mobile-frontend-talk-add-overlay-submit": "Ajouter une discussion",

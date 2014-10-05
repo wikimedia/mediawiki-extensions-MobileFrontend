@@ -264,6 +264,7 @@
 	"mobile-frontend-user-account": "uživatelský účet",
 	"mobile-frontend-user-button-tooltip": "Zobrazit má upozornění",
 	"mobile-frontend-user-cta": "Abyste mohli vidět svá upozornění, musíte se přihlásit.",
+	"mobile-frontend-userlogin-loggedin-register": "Již jste {{GENDER:$1|přihlášen jako|přihlášena jako|přihlášen jako uživatel}} $1.\nPomocí formuláře níže můžete založit další uživatelský účet.",
 	"mobile-frontend-username": "Uživatelské jméno:",
 	"mobile-frontend-username-placeholder": "Uživatelské jméno",
 	"mobile-frontend-view": "Mobilní verze",

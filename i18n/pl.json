@@ -246,6 +246,7 @@
 	"mobile-frontend-sign-in-heading": "Zaloguj się",
 	"mobile-frontend-sign-in-why": "Jeśli masz konto w {{GRAMMAR:D.lp|{{SITENAME}}}} możesz zalogować się poniżej.",
 	"mobile-frontend-sign-up-heading": "Zarejestruj się",
+	"mobile-frontend-talk-fullpage": "Przeczytaj jak stronę wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Co chcesz przekazać?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Temat",
 	"mobile-frontend-talk-add-overlay-submit": "Dodaj nowy wątek w dyskusji",

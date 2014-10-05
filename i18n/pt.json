@@ -264,6 +264,7 @@
 	"mobile-frontend-sign-in-heading": "Autenticar",
 	"mobile-frontend-sign-in-why": "Se tem uma conta {{SITENAME}}, pode autenticar-se abaixo.",
 	"mobile-frontend-sign-up-heading": "Registar-se",
+	"mobile-frontend-talk-fullpage": "Ler como página wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "No que está a pensar?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Assunto do tópico",
 	"mobile-frontend-talk-back-to-page": "Regressar à página $1.",

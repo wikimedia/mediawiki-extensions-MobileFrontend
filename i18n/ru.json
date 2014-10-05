@@ -23,7 +23,8 @@
 			"Agilight",
 			"Logins",
 			"Sunpriat",
-			"Nirovulf"
+			"Nirovulf",
+			"Striking Blue"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -270,7 +271,7 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''', чтобы увидеть, встречается ли где-то эта фраза.",
 	"mobile-frontend-search-no-results": "Нет страниц с таким названием.",
 	"mobile-frontend-search-submit": "Перейти",
-	"mobile-frontend-settings-images-explain": "Загружать все изображения, которое присутствуют на странице.",
+	"mobile-frontend-settings-images-explain": "Загрузить все изображения, которые присутствуют на странице.",
 	"mobile-frontend-settings-alpha": "Экспериментальный режим",
 	"mobile-frontend-settings-alpha-description": "Войдите в опасную и неиследованную мобильную территорию. Получите ещё больше экспериментальных возможностей, но и большую опасность возникновения ошибок.",
 	"mobile-frontend-settings-beta": "Бета-версия",
@@ -281,6 +282,7 @@
 	"mobile-frontend-sign-in-heading": "Войти",
 	"mobile-frontend-sign-in-why": "Если у вас уже есть учётная запись в проекте {{SITENAME}}, вы можете представиться системе ниже.",
 	"mobile-frontend-sign-up-heading": "Зарегистрироваться",
+	"mobile-frontend-talk-fullpage": "Читать как вики-страницу",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Что вы хотите написать?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Заголовок темы",
 	"mobile-frontend-talk-add-overlay-submit": "Добавить обсуждение",
@@ -305,7 +307,7 @@
 	"mobile-frontend-user-button-tooltip": "Показать мои уведомления",
 	"mobile-frontend-user-newmessages": "У вас есть новые сообщения на вашей странице обсуждения",
 	"mobile-frontend-user-cta": "Пожалуйста, войдите или зарегистрируйтесь, чтобы увидеть ваши уведомления.",
-	"mobile-frontend-userlogin-loggedin-register": "Вы уже вошли как {{GENDER:$1|$1}}.\nИспользуйте форму ниже, чтобы войти под другой учётной записью.",
+	"mobile-frontend-userlogin-loggedin-register": "Вы уже вошли как {{GENDER:$1|$1}}.\nИспользуйте форму ниже, чтобы создать другого пользователя.",
 	"mobile-frontend-username": "Имя участника:",
 	"mobile-frontend-username-placeholder": "Имя участника",
 	"mobile-frontend-view": "Мобильная версия",

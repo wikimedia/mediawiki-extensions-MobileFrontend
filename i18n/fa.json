@@ -24,7 +24,8 @@
 			"پسر یاس",
 			"Omid.koli",
 			"Alirezaaa",
-			"Bersam"
+			"Bersam",
+			"Hosseinblue"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
@@ -283,6 +284,7 @@
 	"mobile-frontend-sign-in-heading": "ورود",
 	"mobile-frontend-sign-in-why": "اگر در {{SITENAME}} حساب کاربری دارید، می‌توانید در پائین وارد شوید.",
 	"mobile-frontend-sign-up-heading": "ثبت نام",
+	"mobile-frontend-talk-fullpage": "به عنوان صفحه ویکی بخوانید",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "در ذهن شما چیست؟",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "عنوان موضوع",
 	"mobile-frontend-talk-add-overlay-submit": "اضافه کردن بحث",

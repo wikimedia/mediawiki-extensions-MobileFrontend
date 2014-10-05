@@ -270,6 +270,7 @@
 	"mobile-frontend-sign-in-heading": "Anmelden",
 	"mobile-frontend-sign-in-why": "Falls du ein {{SITENAME}}-Benutzerkonto hast, kannst du dich unten anmelden.",
 	"mobile-frontend-sign-up-heading": "Registrieren",
+	"mobile-frontend-talk-fullpage": "Als Wikiseite lesen",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Wo drückt der Schuh?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Thema",
 	"mobile-frontend-talk-add-overlay-submit": "Diskussion hinzufügen",
@@ -332,5 +333,7 @@
 	"tag-mobile_edit": "Mobile Bearbeitung",
 	"tag-mobile_edit-description": "Mobil bearbeitet (Web oder App)",
 	"tag-mobile_web_edit": "Mobile Web-Bearbeitung",
-	"tag-mobile_web_edit-description": "Bearbeitet von der mobilen Website"
+	"tag-mobile_web_edit-description": "Bearbeitet von der mobilen Website",
+	"mobile-frontend-pageaction-edit-tooltip": "Bearbeite den Einführungsabschnitt für diese Seite.",
+	"mobile-frontend-pageaction-upload-tooltip": "Lade ein Einführungsfoto für diese Seite hoch."
 }

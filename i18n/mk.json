@@ -259,6 +259,7 @@
 	"mobile-frontend-sign-in-heading": "Најава",
 	"mobile-frontend-sign-in-why": "Ако имате сметка на {{SITENAME}}, тогаш најавете се подолу.",
 	"mobile-frontend-sign-up-heading": "Регистрација",
+	"mobile-frontend-talk-fullpage": "Читај како викистраница",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Што имате на ум?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Тема",
 	"mobile-frontend-talk-add-overlay-submit": "Додај расправа",
@@ -322,5 +323,7 @@
 	"tag-mobile_edit-description": "Уредување од мобилен (мреж. страница или прилог)",
 	"tag-mobile_web_edit": "Мобилно семрежно уредување",
 	"tag-mobile_web_edit-description": "Уредување напревено од мобилно мрежно место",
-	"skinname-minerva": "Минерва"
+	"skinname-minerva": "Минерва",
+	"mobile-frontend-pageaction-edit-tooltip": "Уредете го воведниот пасус на страницава",
+	"mobile-frontend-pageaction-upload-tooltip": "Подигнете воведна слика на страницава."
 }
