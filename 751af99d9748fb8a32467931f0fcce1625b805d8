@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_c9f230df",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T19:17:27Z",
+      "side": 1,
+      "message": "I\u0027d be more comfortable if this ran inside the isBetaGroupMember check if possible.",
+      "revId": "751af99d9748fb8a32467931f0fcce1625b805d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_89fc28b3",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T19:17:27Z",
+      "side": 1,
+      "message": "This is a function not a boolean confusingly. We might want to rethink this function in both php and javascript..",
+      "revId": "751af99d9748fb8a32467931f0fcce1625b805d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_09433818",
+        "filename": "tests/qunit/modules/toggling/test_toggle.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T19:17:27Z",
+      "side": 1,
+      "message": "Pass assert as an argument.",
+      "revId": "751af99d9748fb8a32467931f0fcce1625b805d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_e93db48b",
+        "filename": "tests/qunit/modules/toggling/test_toggle.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T19:17:27Z",
+      "side": 1,
+      "message": "Use assert.strictEqual here\nSee https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d71714",
+      "revId": "751af99d9748fb8a32467931f0fcce1625b805d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
