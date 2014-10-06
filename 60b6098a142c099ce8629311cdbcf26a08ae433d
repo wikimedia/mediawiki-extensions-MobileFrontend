@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_28e95db3",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-06T07:21:10Z",
+      "side": 0,
+      "message": "SpecialMobileEditWatchlist.php uses this function, too, which results into an fatal error (call to undefined function) on L59 (index.php?title\u003dSpecial:EditWatchlist)",
+      "revId": "60b6098a142c099ce8629311cdbcf26a08ae433d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

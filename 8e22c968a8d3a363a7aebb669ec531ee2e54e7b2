@@ -34,6 +34,24 @@
       "revId": "8e22c968a8d3a363a7aebb669ec531ee2e54e7b2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_88d749f2",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-06T07:21:10Z",
+      "side": 1,
+      "message": "Forget it, the message is checked in UserNotLoggedIn and in LoginForm, so my first sentence seems to be right: \"there is no easy way to add a message key\"",
+      "parentUuid": "ce8c5bf9_a82d6d8d",
+      "revId": "8e22c968a8d3a363a7aebb669ec531ee2e54e7b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
