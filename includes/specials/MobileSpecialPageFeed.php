@@ -115,7 +115,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$html .= ChangesList::flag( 'minor' );
 		}
 
-		$html .= Html::openElement( 'div', array( 'class' => 'listThumb' ) ) .
+		$html .= Html::openElement( 'div', array( 'class' => 'list-thumb' ) ) .
 			Html::element( 'p', array( 'class' => 'timestamp' ), $lang->userTime( $ts, $user ) );
 
 		if ( $bytes ) {

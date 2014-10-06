@@ -83,7 +83,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 						$thumb = $mobilePage->getSmallThumbnailHtml();
 					}
 					if ( !$thumb ) {
-						$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'needsPhoto', 'icon-max-x' );
+						$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
 					}
 					$total += 1;
 					$html .= self::getLineHtml( $title, $title->getTouched(), $thumb );

@@ -31,19 +31,17 @@
 	.results {
 		box-shadow: 0 3px 3px 0 rgba(117, 117, 117, .3);
 
+		// Since search results only contain one line, shrink the space taken up by the thumbnails
 		li {
 			padding-left: @headerHeight + @headerTitlePaddingH;
+
+			.list-thumb {
+				width: @headerHeight;
+			}
 		}
 
 		li:last-child {
 			border-bottom: none;
-		}
-
-		.listThumb {
-			// for @headerHeight to work properly
-			// FIXME: why is this needed?
-			font-size: 1em;
-			width: @headerHeight;
 		}
 
 		h2 {
