@@ -52,6 +52,24 @@
       "revId": "8e22c968a8d3a363a7aebb669ec531ee2e54e7b2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_a821edf7",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-06T07:47:56Z",
+      "side": 1,
+      "message": "Sorry for the spam :(\n\nAlso, you can use the \"solution\" in my second command, if you set it into the Setup-function of MobileFrontend :)",
+      "parentUuid": "ce8c5bf9_88d749f2",
+      "revId": "8e22c968a8d3a363a7aebb669ec531ee2e54e7b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
