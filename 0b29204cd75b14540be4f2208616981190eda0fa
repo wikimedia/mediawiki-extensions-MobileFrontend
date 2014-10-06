@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_9f29b69c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 778,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T23:43:41Z",
+      "side": 1,
+      "message": "If we\u0027re potentially going to be using these more widely, like for search result thumbnails, they will need to be defined regardless of whether we are in mobile mode or not, so please move this outside of the \"if ( $this-\u003eisMobileMode ) {\" condition above. When you do this, please grab me so I can explain in more detail in person.",
+      "revId": "0b29204cd75b14540be4f2208616981190eda0fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
