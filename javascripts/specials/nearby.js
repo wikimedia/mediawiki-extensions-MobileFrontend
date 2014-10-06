@@ -20,8 +20,10 @@ $( function() {
 	if ( $btn.length ) {
 		$btn.remove();
 	}
-	// FIXME: i18n
+
 	$btn = $( '<a class="icon-refresh main-header-button icon" id="secondary-button">' ).
+		text( mw.msg( 'mobile-frontend-nearby-refresh' ) ).
+		attr( 'title', mw.msg( 'mobile-frontend-nearby-refresh' ) ).
 		on( 'click', refresh ).appendTo( '.header' );
 	refresh();
 } );

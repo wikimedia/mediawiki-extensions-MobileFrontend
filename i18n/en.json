@@ -181,7 +181,7 @@
 	"mobile-frontend-nearby-noresults-guidance": "Try creating a new page or adding location to an existing one",
 	"mobile-frontend-nearby-permission": "{{SITENAME}} Nearby doesn't have permission to access your location.",
 	"mobile-frontend-nearby-permission-guidance": "Please ensure you give permission to show where you are. You may need to check your browser location settings.",
-	"mobile-frontend-nearby-refresh": "We found a more accurate location for you. Click here to refresh the list of nearby pages",
+	"mobile-frontend-nearby-refresh": "Refresh location",
 	"mobile-frontend-nearby-requirements": "Sorry! Your web browser doesn't support {{SITENAME}} Nearby.",
 	"mobile-frontend-nearby-requirements-guidance": "Try a different browser or enable JavaScript if you've disabled it.",
 	"mobile-frontend-nearby-title": "Nearby",
