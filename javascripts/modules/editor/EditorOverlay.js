@@ -208,11 +208,6 @@
 			);
 		},
 
-		_updateEditCount: function() {
-			this.editCount += 1;
-			mw.config.set( 'wgUserEditCount', this.editCount );
-		},
-
 		_showAbuseFilter: function( type, message ) {
 			this.abuseFilterPanel.show( type, message );
 			this._showHidden( '.save-header' );

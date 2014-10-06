@@ -1,10 +1,8 @@
 ( function( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
-		Page = M.require( 'Page' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
-		isTestA = M.isTestA,
 		EditorOverlayBase;
 
 	/**
@@ -57,10 +55,6 @@
 			this.$spinner.hide();
 		},
 
-		_updateEditCount: function() {
-			this.editCount += 1;
-			mw.config.set( 'wgUserEditCount', this.editCount );
-		},
 		/**
 		 * If this is a new article, require confirmation before saving.
 		 */
@@ -93,34 +87,16 @@
 			}
 			msg = mw.msg( msg );
 
-			// FIXME: Remove when A/B test has run its course.
-			// Does reloading page via JavaScript after edit encourage more editing?
-			if ( isTestA ) {
-				M.settings.saveUserSetting( 'mobile-pending-toast', msg );
+			M.settings.saveUserSetting( 'mobile-pending-toast', msg );
 
-				// Ensure we don't lose this event when logging
-				this.log( 'success' ).always( function() {
-					window.location = mw.util.getUrl( title );
-				} );
-				return;
-			} else {
-				this.log( 'success' );
-			}
-
-			new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage ).
-				on( 'error', function() {
-					// Force refresh when something goes wrong (see bug 62175 for example)
-					window.location = mw.util.getUrl( title );
-				} );
-
-			// show a toast notification
-			toast.show( msg );
+			// Ensure we don't lose this event when logging
+			this.log( 'success' ).always( function() {
+				window.location = mw.util.getUrl( title );
+			} );
 
 			// Set a cookie for 30 days indicating that this user has edited from
 			// the mobile interface.
 			$.cookie( 'mobileEditor', 'true', { expires: 30 } );
-			this._updateEditCount();
-			this.hide( true );
 		},
 		initialize: function( options ) {
 			if ( !options.previewingMsg ) {
