@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_ce555654",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T18:10:31Z",
+      "side": 1,
+      "message": "Let\u0027s leave this at 80px for now until we can discuss further in the bug.",
+      "revId": "d82dcdd076922d115a9ae68bb65258fe4d4bd14b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
