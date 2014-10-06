@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_0b4ed098",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T16:57:33Z",
+      "side": 1,
+      "message": "Rename is probably unnecessary. Prefixing with int made me think that sometimes it was an integer...",
+      "revId": "7ccd2fe3c0dc1fbe0c26e28dd6585e6ee0535878",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
