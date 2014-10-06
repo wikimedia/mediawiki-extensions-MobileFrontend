@@ -262,6 +262,7 @@
 	"mobile-frontend-sign-in-heading": "Autentificare",
 	"mobile-frontend-sign-in-why": "Dacă aveți un cont la {{SITENAME}}, vă puteți autentifica mai jos.",
 	"mobile-frontend-sign-up-heading": "Înregistrare",
+	"mobile-frontend-talk-fullpage": "Lecturează ca pagină wiki",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Ce aveți de spus?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Subiectul rubricii",
 	"mobile-frontend-talk-add-overlay-submit": "Adăugare discuție",
@@ -322,5 +323,7 @@
 	"tag-mobile_edit": "Modificare mobilă",
 	"tag-mobile_edit-description": "Modificare efectuată prin platforma mobilă (web sau aplicație)",
 	"tag-mobile_web_edit": "Modificare de pe webul mobil",
-	"tag-mobile_web_edit-description": "Modificare efectuată prin site-ul web mobil"
+	"tag-mobile_web_edit-description": "Modificare efectuată prin site-ul web mobil",
+	"mobile-frontend-pageaction-edit-tooltip": "Modifică secțiunea de început a acestei pagini.",
+	"mobile-frontend-pageaction-upload-tooltip": "Încarcă o fotografie principală în această pagină."
 }

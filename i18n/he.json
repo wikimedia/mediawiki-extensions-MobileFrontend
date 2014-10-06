@@ -332,5 +332,7 @@
 	"tag-mobile_edit": "עריכה ממכשיר נייד",
 	"tag-mobile_edit-description": "העריכה נעשתה ממכשיר נייד (דרך אתר או יישום)",
 	"tag-mobile_web_edit": "עריכה דרך האתר הנייד",
-	"tag-mobile_web_edit-description": "עריכה שנעשתה מהאתר הנייד"
+	"tag-mobile_web_edit-description": "עריכה שנעשתה מהאתר הנייד",
+	"mobile-frontend-pageaction-edit-tooltip": "עריכת הפסקה הראשונה בדף.",
+	"mobile-frontend-pageaction-upload-tooltip": "העלאת תמונה לראש הדף."
 }

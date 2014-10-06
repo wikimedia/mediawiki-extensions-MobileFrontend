@@ -330,5 +330,7 @@
 	"tag-mobile_edit": "Modifica da mobile",
 	"tag-mobile_edit-description": "Modifica apportata da dispositivo mobile (web o applicazione)",
 	"tag-mobile_web_edit": "Modifica da web per mobile",
-	"tag-mobile_web_edit-description": "Modifica apportata dal sito web per dispositivi mobili"
+	"tag-mobile_web_edit-description": "Modifica apportata dal sito web per dispositivi mobili",
+	"mobile-frontend-pageaction-edit-tooltip": "Modifica la sezione iniziale di questa pagina.",
+	"mobile-frontend-pageaction-upload-tooltip": "Carica una foto iniziale per questa pagina."
 }
