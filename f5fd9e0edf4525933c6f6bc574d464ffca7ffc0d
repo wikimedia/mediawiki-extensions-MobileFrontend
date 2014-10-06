@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_099b386b",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T19:24:51Z",
+      "side": 1,
+      "message": "We should use a config variable for this, otherwise we can\u0027t call it standard.\n\ne.g. mw.config.get( \u0027wgMFThumbnailMedium\u0027 ),\n\nIt should also derive it\u0027s value from the same place includes/MobilePage.php does.",
+      "revId": "f5fd9e0edf4525933c6f6bc574d464ffca7ffc0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
