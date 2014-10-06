@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_7f4f12c1",
+        "filename": "less/modules/wikigrok/WikiGrokMoreInfo.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T23:01:07Z",
+      "side": 1,
+      "message": "You can just delete this file now.",
+      "revId": "3407ead36bb36040a3ff83c6c5754753e411c6cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_ff632239",
+        "filename": "less/modules/wikigrok/WikiGrokMoreInfo.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T23:01:07Z",
+      "side": 1,
+      "message": "I have no idea why the text should be bigger. You introduced this rule in this changeset :)",
+      "revId": "3407ead36bb36040a3ff83c6c5754753e411c6cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_9f58d68d",
+        "filename": "less/modules/wikigrok/WikiGrokMoreInfo.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T23:01:07Z",
+      "side": 1,
+      "message": "This is no longer needed since .content applies the same rule.",
+      "revId": "3407ead36bb36040a3ff83c6c5754753e411c6cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
