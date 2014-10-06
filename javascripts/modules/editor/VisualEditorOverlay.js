@@ -8,6 +8,7 @@
 	 */
 	VisualEditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
+			switcher: M.template.get( 'modules/editor/switcher.hogan' ),
 			header: M.template.get( 'modules/editor/VisualEditorOverlayHeader.hogan' ),
 			content: M.template.get( 'modules/editor/VisualEditorOverlay.hogan' )
 		},
@@ -15,6 +16,7 @@
 		editor: 'VisualEditor',
 		initialize: function( options ) {
 			var self = this;
+			options.isVisualEditor = true;
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );

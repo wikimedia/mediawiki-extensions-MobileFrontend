@@ -16,6 +16,7 @@
 	 */
 	EditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
+			switcher: M.template.get( 'modules/editor/switcher.hogan' ),
 			header: M.template.get( 'modules/editor/EditorOverlayHeader.hogan' ),
 			content: M.template.get( 'modules/editor/EditorOverlay.hogan' )
 		},
@@ -39,6 +40,8 @@
 			} else {
 				options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
 			}
+			// be explicit here. This may have been initialized from VE.
+			options.isVisualEditor = false;
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
 			if ( isVisualEditorEnabled ) {
 				this.initializeSwitcher();

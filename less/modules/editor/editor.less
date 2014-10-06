@@ -5,18 +5,10 @@
 // support anyway)
 .icon-edit-source {
 	.background-image( 'images/editSourceNormal.svg' );
-
-	&.selected {
-		.background-image( 'images/editSourceSelect.svg' );
-	}
 }
 
 .icon-edit-ve {
 	.background-image( 'images/editVeNormal.svg' );
-
-	&.selected {
-		.background-image( 'images/editVeSelect.svg' );
-	}
 }
 
 .editor-overlay {
@@ -59,10 +51,6 @@
 			.background-image( 'images/editToggle.svg' );
 			background-size: 44px 32px;
 			margin-right: 1em;
-
-			&.selected {
-				.background-image( 'images/editToggleActive.svg' );
-			}
 		}
 
 		.icon.editor-switcher:focus {
@@ -95,12 +83,8 @@
 					vertical-align: middle;
 				}
 
-				&.mw-ui-progressive .icon-edit-source {
-					.background-image( 'images/editSourceToggle.svg' );
-				}
-
-				&.mw-ui-progressive .icon-edit-ve {
-					.background-image( 'images/editVeToggle.svg' );
+				&.selected {
+					background: @selectedBackgroundColor;
 				}
 			}
 

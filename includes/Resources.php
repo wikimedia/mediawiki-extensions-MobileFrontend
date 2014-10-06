@@ -247,6 +247,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/editor/editor.less',
 		),
 		'templates' => array(
+			'modules/editor/switcher.hogan',
 			'modules/editor/EditorOverlayBase.hogan',
 		),
 		'messages' => array(
