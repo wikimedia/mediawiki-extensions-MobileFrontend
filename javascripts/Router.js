@@ -24,6 +24,10 @@
 		this._enabled = true;
 		this._oldHash = this.getPath();
 
+		$( window ).on( 'popstate', function () {
+			self.emit( 'popstate' );
+		} );
+
 		$( window ).on( 'hashchange', function() {
 			// ev.originalEvent.newURL is undefined on Android 2.x
 			var routeEv;
@@ -101,9 +105,24 @@
 	/**
 	 * Navigate to the previous route. This is a wrapper for window.history.back
 	 * @method
+	 * @return {jQuery.Deferred}
 	 */
 	Router.prototype.back = function() {
+		var deferredRequest = new $.Deferred;
+		this.once( 'popstate', function () {
+			deferredRequest.resolve();
+		} );
+
+		// Check for onpopstate for older browser compatibility (ie8/9)
+		// Otherwise, deferred request is resolved in onpopstate
+		if ( !( 'onpopstate' in window ) ) {
+			// give browser a few ms to update its history
+			setTimeout( function() {
+				deferredRequest.resolve();
+			}, 50 );
+		}
 		window.history.back();
+		return deferredRequest;
 	};
 
 	/**
