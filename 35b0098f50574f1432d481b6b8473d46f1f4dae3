@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_84e88d0c",
+        "filename": "javascripts/Router.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T20:20:49Z",
+      "side": 1,
+      "message": "* Also what is advantage of using popstate over hashchange?\n* deferredRequest should be part of the Router itself in case there are multiple Router\u0027s being used\n* This might lead to events being lost\ne.g. if I do \nM \u003d mw.mobileFrontend\nRouter \u003d M.require( \u0027Router\u0027 )\nrouter \u003d new Router()\nwindow.location.hash \u003d \u0027#foo\u0027\nwindow.location.hash \u003d \u0027#bar\u0027\nwindow.location.hash \u003d \u0027#hello\u0027\nrouter.back().done( function() { alert(0); } )\nrouter.back().done( function() { alert(1); } )\nI will get 1 alerted but no 0 even though that completed...\n\nMaybe using EventEmitter and `one`/`once` function would be a better idea here?",
+      "revId": "35b0098f50574f1432d481b6b8473d46f1f4dae3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
