@@ -12,6 +12,7 @@
  *	onRequestContextCreateSkin()
  */
 class MobileFrontendHooks {
+
 	/**
 	 * LinksUpdate hook handler - saves a count of h2 elements that occur in the WikiPage
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/LinksUpdate
@@ -796,37 +797,76 @@ class MobileFrontendHooks {
 
 	/**
 	 * ResourceLoaderRegisterModules hook handler
-	 * Registering our EventLogging schema modules
+	 *
+	 * Registers the mobile.loggingSchemas module without a dependency on the
+	 * ext.EventLogging module so that calls to the various log functions are
+	 * effectively NOPs.
+	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
 	 *
 	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
 	 * @return bool Always true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
+		self::registerMobileLoggingSchemasModule();
+
+		return true;
+	}
+
+	/**
+	 * EventLoggingRegisterSchemas hook handler.
+	 *
+	 * Registers our EventLogging schemas so that they can be converted to
+	 * ResourceLoaderSchemaModules by the EventLogging extension as the
+	 * mobile.loggingSchemas module.
+	 *
+	 * If the module has already been registered in
+	 * onResourceLoaderRegisterModules, then it is overwritten.
+	 *
+	 * @param array &schemas The schemas currently registered with the EventLogging
+	 *  extension
+	 * @return bool Always true
+	 */
+	public static function onEventLoggingRegisterSchemas( &$schemas ) {
+		$mobileEventLoggingSchemas = array(
+			'MobileWebUploads'       => 8209043,
+			'MobileWebEditing'       => 8599025,
+			'MobileWebCta'           => 5972684,
+			'MobileWebClickTracking' => 5929948,
+			'MobileWebWikiGrok'      => 9913839,
+		);
+
+		$schemas += $mobileEventLoggingSchemas;
+
+		$additionalDependencies = array_map(
+			function ( $schema ) {
+				return "schema.{$schema}";
+			},
+			array_keys( $mobileEventLoggingSchemas )
+		);
+		self::registerMobileLoggingSchemasModule( $additionalDependencies, true );
+
+		return true;
+	}
+
+	/**
+	 * Registers the mobile.loggingSchemas module with any additional
+	 * dependencies.
+	 *
+	 * @param array $additionalDependencies Additional dependencies that the module
+	 *  depends on. Defaults to empty array
+	 * @param boolean $overwrite Whether or not to re-register the module if it has
+	 *  already been registered. Defaults to false
+	 */
+	private static function registerMobileLoggingSchemasModule(
+		$additionalDependencies = array(),
+		$overwrite = false
+	) {
 		global $wgResourceModules, $wgMFMobileResourceBoilerplate;
 
-		$mobileEventLoggingSchemas = array(
-			'mobile.uploads.schema' => array(
-				'schema' => 'MobileWebUploads',
-				'revision' => 8209043,
-			),
-			'mobile.editing.schema' => array(
-				'schema' => 'MobileWebEditing',
-				'revision' => 8599025,
-			),
-			'schema.MobileWebCta' => array(
-				'schema' => 'MobileWebCta',
-				'revision' => 5972684,
-			),
-			'schema.MobileWebClickTracking' => array(
-				'schema' => 'MobileWebClickTracking',
-				'revision' => 5929948,
-			),
-			'schema.MobileWebWikiGrok' => array(
-				'schema' => 'MobileWebWikiGrok',
-				'revision' => 9913839,
-			),
-		);
+		if ( isset( $wgResourceModules['mobile.loggingSchemas'] ) && !$overwrite ) {
+			return;
+		}
 
 		$scripts = array(
 			'javascripts/loggingSchemas/mobileWebUploads.js',
@@ -834,35 +874,13 @@ class MobileFrontendHooks {
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
 			'javascripts/loggingSchemas/mobileWebWikiGrok.js',
 		);
-		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
-			foreach ( $mobileEventLoggingSchemas as $module => $properties ) {
-				$wgResourceModules[ $module ] = array(
-					'class'  => 'ResourceLoaderSchemaModule',
-					'schema' => $properties['schema'],
-					'revision' => $properties['revision'],
-					'targets' => 'mobile',
-				);
-			}
-			$wgResourceModules['mobile.loggingSchemas'] = $wgMFMobileResourceBoilerplate + array(
-				'dependencies' => array_merge( array_keys( $mobileEventLoggingSchemas ), array(
-					'mobile.startup',
-					'ext.eventLogging',
-				) ),
-				'scripts' => $scripts,
-			);
-		} else {
-			// Define a module without the EventLogging dependency
-			// Note the log function will be benign and do nothing but available as if exists for purpose
-			// of modules that want to log.
-			$wgResourceModules['mobile.loggingSchemas'] = $wgMFMobileResourceBoilerplate + array(
-				'dependencies' => array(
-					'mobile.startup',
-				),
-				'scripts' => $scripts,
-			);
-		}
 
-		return true;
+		$wgResourceModules['mobile.loggingSchemas'] = $wgMFMobileResourceBoilerplate + array(
+			'dependencies' => array_merge( $additionalDependencies, array(
+				'mobile.startup',
+			) ),
+			'scripts' => $scripts,
+		);
 	}
 
 	/**
