@@ -16,6 +16,24 @@
       "revId": "35b0098f50574f1432d481b6b8473d46f1f4dae3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_04a1dd41",
+        "filename": "javascripts/Router.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-06T21:24:06Z",
+      "side": 1,
+      "message": "\"The popstate event is only triggered by doing a browser action such as a clicking on the back button (or calling history.back() in JavaScript). \"\nhttps://developer.mozilla.org/en-US/docs/WindowEventHandlers.onpopstate\n\nI guess the advantage is that pushState and replaceState won\u0027t trigger it so it is better targeted.  I will make deferredRequest belong to Router and test for event loss",
+      "parentUuid": "ce8c5bf9_84e88d0c",
+      "revId": "35b0098f50574f1432d481b6b8473d46f1f4dae3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
