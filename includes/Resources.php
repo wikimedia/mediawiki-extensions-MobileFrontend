@@ -1013,7 +1013,6 @@ $wgMobileSpecialPageModules = array(
 			'mobile.nearby',
 		),
 		'messages' => array(
-			// specials/nearby.js
 			'mobile-frontend-nearby-refresh',
 		),
 		'scripts' => array(

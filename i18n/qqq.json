@@ -208,7 +208,7 @@
 	"mobile-frontend-nearby-noresults-guidance": "Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-noresults}}",
 	"mobile-frontend-nearby-permission": "Error message shown when location was not found due to browser settings/permissions.",
 	"mobile-frontend-nearby-permission-guidance": "Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-permission}}",
-	"mobile-frontend-nearby-refresh": "Text of toast notification message shown when user moved and the list can be refreshed.",
+	"mobile-frontend-nearby-refresh": "Tooltip and label (hidden) for the refresh button on the nearby interface.",
 	"mobile-frontend-nearby-requirements": "Message shown to users who have no JavaScript or a browser that is not capable",
 	"mobile-frontend-nearby-requirements-guidance": "Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-requirements}}",
 	"mobile-frontend-nearby-title": "Title of [[Special:Nearby]].\n{{Identical|Nearby}}",
