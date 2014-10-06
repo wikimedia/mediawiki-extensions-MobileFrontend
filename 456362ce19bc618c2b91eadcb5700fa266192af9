@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_ee5e1a7b",
+        "filename": "javascripts/modules/search/search.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T18:10:13Z",
+      "side": 1,
+      "message": "\"history.back/forward/go are now asynchronous when jumping to a new URL that differs only by a fragment identifier.\" [1]\n\nI think a more reliable longer term solution here would be to bind to the statechange/hashchange  event and use the timeout as a fallback when \u0027statechange\u0027 is not available. What say ye?\n\n[1] http://www.opera.com/docs/specs/presto28/sessionhistorynav/",
+      "revId": "456362ce19bc618c2b91eadcb5700fa266192af9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
