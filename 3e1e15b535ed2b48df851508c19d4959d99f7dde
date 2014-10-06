@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_2e8c0232",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T17:51:52Z",
+      "side": 1,
+      "message": "Not sure I understand this comment.",
+      "revId": "3e1e15b535ed2b48df851508c19d4959d99f7dde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_6e7a0a21",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T17:51:52Z",
+      "side": 1,
+      "message": "This seems dangerous. Span is an extremely common tag and could potentially be used within the buttons at some point. Could we change this to either be restricted to direct children (\"\u003e span\") or specify a class? I know this isn\u0027t related to this patch, but I missed it earlier since I only did a quick review of the first version (so it could ride the train).",
+      "revId": "3e1e15b535ed2b48df851508c19d4959d99f7dde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_6ea9aa77",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T17:51:52Z",
+      "side": 1,
+      "message": "Doesn\u0027t this nullify the CSS in WikiGrokMoreInfo.less? Maybe it should be \"wg-moreinfo content\".",
+      "revId": "3e1e15b535ed2b48df851508c19d4959d99f7dde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
