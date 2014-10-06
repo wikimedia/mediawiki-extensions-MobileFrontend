@@ -1,6 +1,6 @@
 <div class="overlay-header initial-header hideable hidden">
 	<ul>
-		<li>{{>backButton}}></li>
+		<li>{{>backButton}}</li>
 	</ul>
 	<div class="toolbar"></div>
 	<div class="switcher-container">
