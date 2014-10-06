@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_aed2522a",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-06T17:44:33Z",
+      "side": 1,
+      "message": "Forgot to remove comment.",
+      "revId": "3f71b6404aea5afeae675cd17a762481a05f264c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
