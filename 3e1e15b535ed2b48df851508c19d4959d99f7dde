@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_2eeba278",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T18:21:42Z",
+      "side": 1,
+      "message": "Whoops this should have been removed.",
+      "parentUuid": "ce8c5bf9_2e8c0232",
+      "revId": "3e1e15b535ed2b48df851508c19d4959d99f7dde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_6e7a0a21",
         "filename": "less/modules/wikigrok/WikiGrokDialog.less",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ce8c5bf9_4ef06662",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T18:21:42Z",
+      "side": 1,
+      "message": "Switched to .license for you",
+      "parentUuid": "ce8c5bf9_6e7a0a21",
+      "revId": "3e1e15b535ed2b48df851508c19d4959d99f7dde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce8c5bf9_6ea9aa77",
         "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2014-10-06T17:51:52Z",
       "side": 1,
       "message": "Doesn\u0027t this nullify the CSS in WikiGrokMoreInfo.less? Maybe it should be \"wg-moreinfo content\".",
+      "revId": "3e1e15b535ed2b48df851508c19d4959d99f7dde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_aefed233",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-06T18:21:42Z",
+      "side": 1,
+      "message": "Agreed. I\u0027ve added a note about killing that less file though. It shouldn\u0027t need custom styles. It\u0027s an overlay and should be no different from other overlays.",
+      "parentUuid": "ce8c5bf9_6ea9aa77",
       "revId": "3e1e15b535ed2b48df851508c19d4959d99f7dde",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
