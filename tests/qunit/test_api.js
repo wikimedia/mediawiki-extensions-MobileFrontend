@@ -59,7 +59,7 @@ QUnit.test( '#abort', 2, function() {
 	this.api.get( { a: 1 } );
 	this.api.post( { b: 2 } );
 	this.api.abort();
-	this.requests.forEach( function( request, i ) {
+	$.each( this.requests, function( i, request ) {
 		ok( request.abort.calledOnce, 'abort request number ' + i );
 	} );
 } );

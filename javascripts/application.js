@@ -41,7 +41,7 @@
 	 */
 	function supportsPositionFixed( userAgent ) {
 		var support = false;
-		[
+		$.each( [
 			// Webkit 534+
 			/AppleWebKit\/(53[4-9]|5[4-9]\d|[6-9]\d\d|\d{4,})/,
 			// Android 2+ (we lockViewport for Android 2 meaning we can support it)
@@ -50,7 +50,7 @@
 			/Firefox/,
 			// Trident (IE 10+)
 			/Trident\/[6-9]|Trident\/1\d[\d\.]+/
-		].forEach( function( item ) {
+		], function( index, item ) {
 			if ( item.test( userAgent ) ) {
 				support = true;
 			}
@@ -329,7 +329,7 @@
 	function deParam( qs ) {
 		var params = {};
 		if ( qs ) {
-			qs.split( '&' ).forEach( function( p ) {
+			$.each( qs.split( '&' ), function ( index, p ) {
 				p = p.split( '=' );
 				params[ p[0] ] = p[1];
 			} );

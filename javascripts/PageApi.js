@@ -153,7 +153,7 @@
 		_getLanguagesFromApiResponse: function( data ) {
 			// allAvailableLanguages is a mapping of all codes to language names
 			var pages, langlinks, allAvailableLanguages = {};
-			data.query.languages.forEach( function( item ) {
+			$.each( data.query.languages, function ( index, item ) {
 				allAvailableLanguages[ item.code ] = item[ '*' ];
 			} );
 
@@ -162,7 +162,7 @@
 			// FIXME: "|| []" wouldn't be needed if API was more consistent
 			langlinks = pages[0] ? pages[0].langlinks || [] : [];
 
-			langlinks.forEach( function( item ) {
+			$.each( langlinks, function ( index, item ) {
 				item.langname = allAvailableLanguages[ item.lang ];
 				item.title = item['*'] || false;
 			} );
@@ -188,7 +188,7 @@
 			}
 
 			// Create the data object for each variant and store it
-			generalData.variants.forEach( function( item ) {
+			$.each( generalData.variants, function ( index, item ) {
 				var variant = {
 					langname: item.name,
 					lang: item.code
