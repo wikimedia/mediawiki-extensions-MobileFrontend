@@ -1,1 +1,1 @@
-<a href="{{archiveLink}}" class="notifications-archive-link">{{archiveLinkMsg}}</a>
+<a href="{{archiveLink}}" class="mw-ui-progressive mw-ui-button mw-ui-quiet notifications-archive-link">{{archiveLinkMsg}}</a>
