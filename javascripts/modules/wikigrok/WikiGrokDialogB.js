@@ -85,6 +85,7 @@
 						true
 					] );
 				} );
+				$( this ).hide();
 				self.$( '.spinner' ).show();
 				// FIXME: This only saves the answer to the occupation question. We'll need to rethink this api
 				// as soon as there are multiple choices.

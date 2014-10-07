@@ -40,7 +40,7 @@
 	}
 
 	.final-pane {
-			@imageSize: 8em;
+			@imageSize: 6em;
 			padding-bottom: @imageSize;
 			margin-bottom: @bottomMargin;
 			background-repeat: no-repeat;
@@ -67,27 +67,38 @@
 	}
 
 	.footer {
-		min-height: 2.8em;
 		padding: .6em 1em;
 		position: relative;
 		text-align: left;
 		background: @colorGray13;
 
-		span {
-			padding: 0 1em;
+		.license {
+			margin-right: 4em;
+			font-size: .8em;
 		}
 
+		.spinner,
 		.mw-ui-button {
 			top: 0;
 			right: 0;
 			position: absolute;
+			bottom: 0;
+		}
+
+		.spinner {
+			height: auto;
 		}
 
 		&.mw-ui-button-group {
 			padding: 0;
 			.mw-ui-button {
 				width: 50%;
+				font-size: .9em;
 				position: relative;
+
+				&.mw-ui-quiet {
+					font-size: .7em;
+				}
 			}
 		}
 	}

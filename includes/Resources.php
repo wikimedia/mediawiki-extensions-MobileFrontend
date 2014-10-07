@@ -920,7 +920,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'styles' => array(
 			'less/modules/wikigrok/WikiGrokDialog.less',
-			'less/modules/wikigrok/WikiGrokMoreInfo.less',
 		),
 	),
 
