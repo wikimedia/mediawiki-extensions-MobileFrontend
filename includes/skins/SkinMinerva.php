@@ -752,30 +752,6 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Get various skin specific configuration.
-	 * @return array
-	 */
-	private function getSkinConfigMobileVariables() {
-		$vars = array();
-		$vars['wgMFThumbnailSizes'] = array(
-			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
-			'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
-			'medium' => MobilePage::MEDIUM_IMAGE_WIDTH
-		);
-		if ( $this->isMobileMode ) {
-			global $wgCookiePath;
-			$wgUseFormatCookie = array(
-				'name' => MobileContext::USEFORMAT_COOKIE_NAME,
-				'duration' => -1, // in days
-				'path' => $wgCookiePath,
-				'domain' => $this->getRequest()->getHeader( 'Host' ),
-			);
-			$vars['wgUseFormatCookie'] = $wgUseFormatCookie;
-		}
-		return $vars;
-	}
-
-	/**
 	 * Returns array of config variables that should be added only to this skin
 	 * for use in JavaScript.
 	 * @return array
@@ -794,7 +770,7 @@ class SkinMinerva extends SkinTemplate {
 		$user = $this->getUser();
 		$userCanCreatePage = !$title->exists() && $title->quickUserCan( 'create', $user );
 
-		$vars = array_merge( array(
+		$vars = array(
 			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
 			'wgMFAjaxUploadProgressSupport' => $wgMFAjaxUploadProgressSupport,
 			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,
@@ -810,7 +786,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFCollapseSectionsByDefault' => $wgMFCollapseSectionsByDefault,
 			'wgTOC' => $this->getOutput()->getProperty( 'MinervaTOC' ),
 			'wgMFPageSections' => $this->isMobileMode
-		), $this->getSkinConfigMobileVariables() );
+		);
 
 		if ( $this->isAuthenticatedUser() ) {
 			$vars['wgMFIsLoggedInUserBlocked'] = $user->isBlocked() && $user->isBlockedFrom( $title );
@@ -819,8 +795,14 @@ class SkinMinerva extends SkinTemplate {
 		$vars['wgMFShowRedLinks'] = ( $this->mobileContext->isBetaGroupMember() && $wgMFShowRedLinks )
 			|| ( $wgMFShowRedLinksAnon && $user->isAnon() );
 
-		// mobile specific config variables
-		if ( $this->mobileContext->shouldDisplayMobileView() ) {
+		$vars['wgMFThumbnailSizes'] = array(
+			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
+			'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
+			'medium' => MobilePage::MEDIUM_IMAGE_WIDTH
+		);
+
+		// Get variables that are only needed in mobile mode
+		if ( $this->isMobileMode ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
 			$vars['wgUserCanUpload'] = $this->mobileContext->userCanUpload();
 		}
