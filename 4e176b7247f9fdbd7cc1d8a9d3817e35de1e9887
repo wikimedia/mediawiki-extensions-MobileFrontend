@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_c75e90ec",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 769,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-07T17:58:36Z",
+      "side": 1,
+      "message": "Oops, looks like I gave you bad advice :)\n\nThe skin vars that aren\u0027t intended to be mobile-specific are set in SkinMinerva::getSkinConfigVariables(). I would suggest moving this there. Sorry for the run-around! I\u0027ll update the function descriptions, as right now they aren\u0027t very helpful.",
+      "revId": "4e176b7247f9fdbd7cc1d8a9d3817e35de1e9887",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
