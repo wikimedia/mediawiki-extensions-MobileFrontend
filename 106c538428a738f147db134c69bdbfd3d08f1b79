@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_fab490e6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 843,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-07T00:34:27Z",
+      "side": 1,
+      "message": "What is the module schema.MobileWebUploads ? Isn\u0027t this taken care of by the module?",
+      "revId": "106c538428a738f147db134c69bdbfd3d08f1b79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_dab8ace4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 847,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-07T00:34:27Z",
+      "side": 1,
+      "message": "Is this needed? \nI believe this is an automatic dependency of a ResourceLoaderSchemaModule",
+      "revId": "106c538428a738f147db134c69bdbfd3d08f1b79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
