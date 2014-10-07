@@ -16,6 +16,41 @@
       "revId": "a67d3a385b67eac2517a6fb3c6bc306b4e5a1f72",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_a734aca8",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-07T17:55:30Z",
+      "side": 1,
+      "message": "It feels icky having this in MobileFrontend.php as well.. should be in a hook.",
+      "parentUuid": "ce8c5bf9_2c63a30b",
+      "revId": "a67d3a385b67eac2517a6fb3c6bc306b4e5a1f72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_c73770aa",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-07T17:55:30Z",
+      "side": 1,
+      "message": "Maybe reuse what is on Special:Upload",
+      "revId": "a67d3a385b67eac2517a6fb3c6bc306b4e5a1f72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
