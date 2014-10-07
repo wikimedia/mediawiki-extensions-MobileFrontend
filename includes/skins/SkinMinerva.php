@@ -44,18 +44,6 @@ class SkinMinerva extends SkinTemplate {
 				)
 			)
 		);
-		// hide chrome on bookmarked sites
-		$out->addHeadItem( 'apple-mobile-web-app-capable',
-			Html::element( 'meta', array( 'name' => 'apple-mobile-web-app-capable', 'content' => 'yes' ) )
-		);
-		$out->addHeadItem( 'apple-mobile-web-app-status-bar-style',
-			Html::element(
-				'meta', array(
-					'name' => 'apple-mobile-web-app-status-bar-style',
-					'content' => 'black',
-				)
-			)
-		);
 		if ( $wgMFNoindexPages ) {
 			$out->setRobotPolicy( 'noindex,nofollow' );
 		}
