@@ -40,7 +40,7 @@
 						$.each( claims, function( key, claim ) {
 							var btnLabel, choice, $chk,
 								id = 'chk-' + key;
-							if ( !claim ) {
+							if ( !claim && suggestions[key] !== undefined ) {
 								choice = self.chooseRandomItemFromArray( suggestions[key] );
 								self.apiWikiData.getLabel( choice ).done( function( label ) {
 									// oohhh let's find a claim and some suggestions
