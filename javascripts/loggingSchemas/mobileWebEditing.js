@@ -9,7 +9,7 @@
 				userEditCount: user.getEditCount() || 0,
 				isTestA: M.isTestA,
 				pageId: mw.config.get( 'wgArticleId' ),
-				username: user.getName(),
+				username: user.getName() || '',
 				mobileMode: mw.config.get( 'wgMFMode' )
 			};
 		return M.log( 'MobileWebEditing', $.extend( options, data ) );
