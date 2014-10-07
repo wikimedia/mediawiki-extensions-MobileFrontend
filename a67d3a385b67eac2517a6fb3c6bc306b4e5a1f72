@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_2c63a30b",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-07T17:34:40Z",
+      "side": 1,
+      "message": "This message key contains a link \"log in\", which is not the best on the login page :) It should be a message like:\nPlease login to view your uploaded images.\n\n(like watchlistanontext)",
+      "revId": "a67d3a385b67eac2517a6fb3c6bc306b4e5a1f72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
