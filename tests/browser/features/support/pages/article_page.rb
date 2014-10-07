@@ -30,7 +30,7 @@ class ArticlePage
   a(:edit_link, text: "Edit")
   div(:editor_overlay, class: "editor-overlay")
   button(:editor_overlay_close_button) do |page|
-    page.editor_overlay_element.button_element(class: "cancel")
+    page.editor_overlay_element.button_element(css: ".back")
   end
 
   ## upload
