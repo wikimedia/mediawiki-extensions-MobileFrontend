@@ -137,6 +137,8 @@ $wgHooks['CentralAuthSilentLoginRedirect'][] =
 	'MobileFrontendHooks::onCentralAuthSilentLoginRedirect';
 $wgHooks['ResourceLoaderRegisterModules'][] =
 	'MobileFrontendHooks::onResourceLoaderRegisterModules';
+$wgHooks['EventLoggingRegisterSchemas'][] =
+	'MobileFrontendHooks::onEventLoggingRegisterSchemas';
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
 $wgHooks['HTMLFileCache::useFileCache'][] = 'onHTMLFileCache_useFileCache';
 
