@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_0790f896",
+        "filename": "javascripts/loggingSchemas/mobileWebEditing.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-07T17:51:09Z",
+      "side": 1,
+      "message": "or just use \u0027\u0027",
+      "revId": "518e7b6c3ece6958a59ae38c94bdbf1b45d72907",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
