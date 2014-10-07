@@ -51,6 +51,24 @@
       "revId": "a67d3a385b67eac2517a6fb3c6bc306b4e5a1f72",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_0dc81976",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-07T23:15:59Z",
+      "side": 1,
+      "message": "I\u0027ve changed the error message text to something more meaningful. This message was being used in one page only.",
+      "parentUuid": "ce8c5bf9_c73770aa",
+      "revId": "a67d3a385b67eac2517a6fb3c6bc306b4e5a1f72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
