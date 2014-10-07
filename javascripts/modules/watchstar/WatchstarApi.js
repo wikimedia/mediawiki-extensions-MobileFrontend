@@ -22,19 +22,27 @@
 		 * Loads the watch status for a given list of page ids in bulk
 		 * @method
 		 * @param {array} ids A list of page ids
+		 * @param {boolean} markAsAllWatched When true will assume all given ids are watched without a lookup.
 		 * @return {jQuery.Deferred}
 		 */
-		load: function( ids ) {
+		load: function( ids, markAsAllWatched ) {
 			var result = new $.Deferred(), self = this;
-			this.get( {
-				action: 'query',
-				prop: 'info',
-				inprop: 'watched',
-				pageids: ids
-			} ).done( function( resp ) {
-				self._loadIntoCache( resp );
+			if ( markAsAllWatched ) {
+				$.each( ids, function ( i, id ) {
+					self._cache[ id ] = true;
+				} );
 				result.resolve();
-			} );
+			} else {
+				this.get( {
+					action: 'query',
+					prop: 'info',
+					inprop: 'watched',
+					pageids: ids
+				} ).done( function( resp ) {
+					self._loadIntoCache( resp );
+					result.resolve();
+				} );
+			}
 			return result;
 		},
 
@@ -71,11 +79,17 @@
 		 * @return {jQuery.Deferred}
 		 */
 		toggleStatus: function( page ) {
-			var self = this, data;
+			var self = this, data,
+				id = page.getId();
 			data = {
-				action: 'watch',
-				pageids: page.getId()
+				action: 'watch'
 			};
+			if ( id !== 0 ) {
+				data.pageids = id;
+			} else {
+				// it's a new page use title instead
+				data.title = page.getTitle();
+			}
 
 			if ( this.isWatchedPage( page ) ) {
 				data.unwatch = true;
