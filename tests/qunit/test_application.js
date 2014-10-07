@@ -12,7 +12,7 @@
 		);
 	} );
 
-	QUnit.test( 'require()', 2, function () {
+	QUnit.test( 'require()', 2, function ( assert ) {
 		QUnit.throws(
 			function () {
 				M.require( 'dummy' );
@@ -21,23 +21,23 @@
 			"throws an error when module doesn't exist"
 		);
 		M.define( 'testModule2', 'test module 2' );
-		strictEqual( M.require( 'testModule2' ), 'test module 2' );
+		assert.strictEqual( M.require( 'testModule2' ), 'test module 2' );
 	} );
 
 	QUnit.module( 'MobileFrontend common functions' );
 
-	QUnit.test( '#getSessionId', 3, function () {
+	QUnit.test( '#getSessionId', 3, function ( assert ) {
 		var sessionId = M.getSessionId();
-		strictEqual( typeof sessionId, 'string', 'session ID is a string' );
-		strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
-		strictEqual( M.getSessionId(), sessionId, 'session ID is not regenerated if present' );
+		assert.strictEqual( typeof sessionId, 'string', 'session ID is a string' );
+		assert.strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
+		assert.strictEqual( M.getSessionId(), sessionId, 'session ID is not regenerated if present' );
 	} );
 
-	QUnit.test( '#getSessionId', 3, function () {
+	QUnit.test( '#getSessionId', 3, function ( assert ) {
 		var sessionId = M.getSessionId();
-		strictEqual( typeof sessionId, 'string', 'session ID is a string' );
-		strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
-		strictEqual( M.getSessionId(), sessionId, 'session ID is not regenerated if present' );
+		assert.strictEqual( typeof sessionId, 'string', 'session ID is a string' );
+		assert.strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
+		assert.strictEqual( M.getSessionId(), sessionId, 'session ID is not regenerated if present' );
 	} );
 
 	QUnit.test( 'supportsPositionFixed()', function( assert ) {

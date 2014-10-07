@@ -7,23 +7,23 @@ QUnit.module( 'MobileFrontend api', {
 		var self = this, server = this.sandbox.useFakeServer();
 		server.xhr.onCreate = function( xhr ) {
 			// FIXME: smelly, sinon.extend and sinon.EventTarget are not public interface
-			xhr.upload = sinon.extend( {}, sinon.EventTarget );
+			xhr.upload = window.sinon.extend( {}, window.sinon.EventTarget );
 			self.lastXhr = xhr;
 		};
 	}
 } );
 
-QUnit.test( 'default instance', 1, function() {
-	ok( M.require( 'api' ) instanceof Api, 'return default instance' );
+QUnit.test( 'default instance', 1, function( assert ) {
+	assert.ok( M.require( 'api' ) instanceof Api, 'return default instance' );
 } );
 
-QUnit.test( 'progress event', 1, function() {
+QUnit.test( 'progress event', 1, function( assert ) {
 	var spy = this.sandbox.spy(), api = new Api(), request;
 
 	api.on( 'progress', spy );
 	request = api.post();
 	this.lastXhr.upload.dispatchEvent( { type: 'progress', lengthComputable: true, loaded: 1, total: 2 } );
-	ok( spy.calledWith( request, 0.5 ),  'emit progress event' );
+	assert.ok( spy.calledWith( request, 0.5 ),  'emit progress event' );
 } );
 
 QUnit.module( 'MobileFrontend api.Api', {
@@ -38,14 +38,14 @@ QUnit.module( 'MobileFrontend api.Api', {
 	}
 } );
 
-QUnit.test( '#ajax', 1, function() {
+QUnit.test( '#ajax', 1, function( assert ) {
 	this.api.ajax( {
 		falseBool: false,
 		trueBool: true,
 		list: [ 'one', 2, 'three' ],
 		normal: 'test'
 	} );
-	ok(
+	assert.ok(
 		mw.Api.prototype.ajax.calledWithMatch( {
 			trueBool: true,
 			list: 'one|2|three',
@@ -55,12 +55,12 @@ QUnit.test( '#ajax', 1, function() {
 	);
 } );
 
-QUnit.test( '#abort', 2, function() {
+QUnit.test( '#abort', 2, function( assert ) {
 	this.api.get( { a: 1 } );
 	this.api.post( { b: 2 } );
 	this.api.abort();
 	$.each( this.requests, function( i, request ) {
-		ok( request.abort.calledOnce, 'abort request number ' + i );
+		assert.ok( request.abort.calledOnce, 'abort request number ' + i );
 	} );
 } );
 
@@ -107,50 +107,50 @@ QUnit.module( 'MobileFrontend api.getToken', {
 	}
 } );
 
-QUnit.test( '#getTokenWithEndpoint - successful edit token', 1, function() {
+QUnit.test( '#getTokenWithEndpoint - successful edit token', 1, function( assert ) {
 	this.api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
-		strictEqual( token, '123', 'Got token' );
+		assert.strictEqual( token, '123', 'Got token' );
 	} );
 } );
 
-QUnit.test( '#getTokenWithEndpoint - load from cache', 2, function() {
+QUnit.test( '#getTokenWithEndpoint - load from cache', 2, function( assert ) {
 	this.api.getTokenWithEndpoint( 'edit' );
 	this.api.getTokenWithEndpoint( 'edit' ).done( function( token ) { // this comes via cache
-		strictEqual( token, '123', 'Test for bad token name' );
+		assert.strictEqual( token, '123', 'Test for bad token name' );
 	} );
 
-	strictEqual( stub.getCall( 1 ), null, 'Ajax stub was only called once' );
+	assert.strictEqual( stub.getCall( 1 ), null, 'Ajax stub was only called once' );
 } );
 
-QUnit.test( '#getTokenWithEndpoint - cors edit token', 1, function() {
+QUnit.test( '#getTokenWithEndpoint - cors edit token', 1, function( assert ) {
 	this.api.getTokenWithEndpoint( 'watch', 'http://commons.wikimedia.org/w/api.php' ).done( function( token ) {
-		strictEqual( token, 'zyx', 'Correctly passed via cors' );
+		assert.strictEqual( token, 'zyx', 'Correctly passed via cors' );
 	} );
 } );
 
-QUnit.test( '#getTokenWithEndpoint - default to edit', 1, function() {
+QUnit.test( '#getTokenWithEndpoint - default to edit', 1, function( assert ) {
 	this.api.getTokenWithEndpoint().done( function( token ) {
-		strictEqual( token, '123', 'We get an edit token by default (most common)' );
+		assert.strictEqual( token, '123', 'We get an edit token by default (most common)' );
 	} );
 } );
 
-QUnit.test( '#getTokenWithEndpoint - get anon token (stable)', 1, function() {
+QUnit.test( '#getTokenWithEndpoint - get anon token (stable)', 1, function( assert ) {
 	mw.config.set( 'wgMFAnonymousEditing', false );
 	this.api.getTokenWithEndpoint( 'upload' ).fail( function( msg ) {
-		strictEqual( msg, 'Anonymous token.', 'No token given - user must be anon' );
+		assert.strictEqual( msg, 'Anonymous token.', 'No token given - user must be anon' );
 	} );
 } );
 
-QUnit.test ( '#getTokenWithEndpoint - get anon token (alpha)', 1, function() {
+QUnit.test ( '#getTokenWithEndpoint - get anon token (alpha)', 1, function( assert ) {
 	mw.config.set( 'wgMFAnonymousEditing', true );
 	this.api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
-		strictEqual( token, '123', 'Got a token for anonymous editing' );
+		assert.strictEqual( token, '123', 'Got a token for anonymous editing' );
 	} );
 });
 
-QUnit.test( '#getToken - bad type of token', 1, function() {
+QUnit.test( '#getToken - bad type of token', 1, function( assert ) {
 	this.api.getTokenWithEndpoint( 'rainbows' ).fail( function( msg ) {
-		strictEqual( msg, 'Bad token name.', 'Test for bad token name' );
+		assert.strictEqual( msg, 'Bad token name.', 'Test for bad token name' );
 	} );
 } );
 

@@ -233,13 +233,6 @@ class MobileFrontendHooks {
 			'targets' => array( 'mobile' ),
 		);
 
-		// additional frameworks and fixtures we use in tests
-		$testModules['qunit']['mobile.tests.base'] = $testModuleBoilerplate + array(
-			'scripts' => array(
-				'tests/qunit/fixtures.js',
-			),
-		);
-
 		// find test files for every RL module
 		foreach ( $wgResourceModules as $key => $module ) {
 			if ( substr( $key, 0, 7 ) === 'mobile.' && isset( $module['scripts'] ) ) {
@@ -283,7 +276,7 @@ class MobileFrontendHooks {
 				// if test files exist for given module, create a corresponding test module
 				if ( !empty( $testFiles ) ) {
 					$testModules['qunit']["$key.tests"] = $testModuleBoilerplate + array(
-						'dependencies' => array( 'mobile.tests.base', $key ),
+						'dependencies' => array( $key ),
 						'scripts' => $testFiles,
 						'templates' => $templates,
 					);

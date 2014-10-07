@@ -37,11 +37,11 @@ QUnit.module( 'MobileFrontend photo', {
 	}
 } );
 
-QUnit.test( '#needsPhoto', function() {
+QUnit.test( '#needsPhoto', function( assert ) {
 	QUnit.expect( articles.length );
 	var i;
 	for ( i = 0; i < articles.length; i++ ) {
-		strictEqual( photo.needsPhoto( articles[ i ][ 0 ] ), articles[ i ][ 1 ], 'article ' + i );
+		assert.strictEqual( photo.needsPhoto( articles[ i ][ 0 ] ), articles[ i ][ 1 ], 'article ' + i );
 	}
 } );
 

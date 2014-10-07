@@ -134,36 +134,36 @@
 
 	QUnit.module( 'MobileFrontend photo: filenames' );
 
-	QUnit.test( 'generateFileName', 1, function() {
+	QUnit.test( 'generateFileName', 1, function( assert ) {
 		var date = new Date( Date.UTC( 2010, 9, 15, 12, 9 ) ),
 			name = photo.generateFileName( 'Jon eating bacon next to an armadillo', '.jpg', date );
-		strictEqual( name, 'Jon eating bacon next to an armadillo 2010-10-15 12-09.jpg',
+		assert.strictEqual( name, 'Jon eating bacon next to an armadillo 2010-10-15 12-09.jpg',
 			'Check file name is description with appended date' );
 	} );
 
-	QUnit.test( 'generateFileName with double apostrophes', 1, function() {
+	QUnit.test( 'generateFileName with double apostrophes', 1, function( assert ) {
 		var date = new Date( Date.UTC( 2010, 9, 15, 12, 9 ) ),
 			name = photo.generateFileName( "Image of '' the double apostrophe", '.jpg', date );
-		strictEqual( name, 'Image of \'_ the double apostrophe 2010-10-15 12-09.jpg',
+		assert.strictEqual( name, 'Image of \'_ the double apostrophe 2010-10-15 12-09.jpg',
 			'Check double apostrophe stripped out' );
 	} );
 
-	QUnit.test( 'generateFileName test padding', 1, function() {
+	QUnit.test( 'generateFileName test padding', 1, function( assert ) {
 		var date = new Date( Date.UTC( 2013, 2, 1, 12, 51 ) ), // note 0 = january
 			name = photo.generateFileName( 'Tomasz eating bacon next to a dinosaur', '.jpg', date );
-		strictEqual( name, 'Tomasz eating bacon next to a dinosaur 2013-03-01 12-51.jpg',
+		assert.strictEqual( name, 'Tomasz eating bacon next to a dinosaur 2013-03-01 12-51.jpg',
 			'Check file name is description with appended date and numbers were padded' );
 	} );
 
-	QUnit.test( 'generateFileName double spaces', 1, function() {
+	QUnit.test( 'generateFileName double spaces', 1, function( assert ) {
 		var longDescription = 'double space  woop woop  ',
 			date = new Date( Date.UTC( 2013, 2, 1, 12, 51 ) ), name;
 
 		name = photo.generateFileName( longDescription, '.jpg', date );
-		strictEqual( name, 'double space woop woop 2013-03-01 12-51.jpg' );
+		assert.strictEqual( name, 'double space woop woop 2013-03-01 12-51.jpg' );
 	} );
 
-	QUnit.test( 'generateFileName long line', 2, function() {
+	QUnit.test( 'generateFileName long line', 2, function( assert ) {
 		var i,
 			longDescription = '',
 			date = new Date( Date.UTC( 2013, 2, 1, 12, 51 ) ), name;
@@ -172,24 +172,24 @@
 			longDescription += 'a';
 		}
 		name = photo.generateFileName( longDescription, '.jpg', date );
-		strictEqual( name.length, 230, 'Check file name was shortened to the minimum length' );
-		strictEqual( name.substr( 223, 7 ), '-51.jpg', 'ends with date' );
+		assert.strictEqual( name.length, 230, 'Check file name was shortened to the minimum length' );
+		assert.strictEqual( name.substr( 223, 7 ), '-51.jpg', 'ends with date' );
 	} );
 
-	QUnit.test( 'generateFileName with new lines', 1, function() {
+	QUnit.test( 'generateFileName with new lines', 1, function( assert ) {
 		var
 			description = 'One\nTwo\nThree',
 			date = new Date( Date.UTC( 2013, 2, 1, 12, 51 ) ), name;
 
 		name = photo.generateFileName( description, '.jpg', date );
-		strictEqual( name, 'One-Two-Three 2013-03-01 12-51.jpg', 'New lines converted' );
+		assert.strictEqual( name, 'One-Two-Three 2013-03-01 12-51.jpg', 'New lines converted' );
 	} );
 
-	QUnit.test( 'trimUtf8String', 4, function() {
-		strictEqual( photo.trimUtf8String( 'Just a string', 20 ), 'Just a string', 'ascii string fits' );
-		strictEqual( photo.trimUtf8String( 'Just a string', 10 ), 'Just a str', 'ascii string truncated' );
-		strictEqual( photo.trimUtf8String( 'Júst á stríng', 10 ), 'Júst á s', 'latin1 string truncated' );
-		strictEqual( photo.trimUtf8String( 'こんにちは', 10 ), 'こんに', 'CJK string truncated' );
+	QUnit.test( 'trimUtf8String', 4, function( assert ) {
+		assert.strictEqual( photo.trimUtf8String( 'Just a string', 20 ), 'Just a string', 'ascii string fits' );
+		assert.strictEqual( photo.trimUtf8String( 'Just a string', 10 ), 'Just a str', 'ascii string truncated' );
+		assert.strictEqual( photo.trimUtf8String( 'Júst á stríng', 10 ), 'Júst á s', 'latin1 string truncated' );
+		assert.strictEqual( photo.trimUtf8String( 'こんにちは', 10 ), 'こんに', 'CJK string truncated' );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );

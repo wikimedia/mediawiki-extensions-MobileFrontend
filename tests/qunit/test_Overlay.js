@@ -7,14 +7,14 @@
 		}
 	} );
 
-	QUnit.test( 'Simple overlay', 1, function () {
+	QUnit.test( 'Simple overlay', 1, function ( assert ) {
 		var overlay = new Overlay( { heading: '<h2>Title</h2>', content: 'Text' } );
 		overlay.show();
-		strictEqual( overlay.$el[0].parentNode, $( '#mw-mf-viewport' )[0], 'In DOM' );
+		assert.strictEqual( overlay.$el[0].parentNode, $( '#mw-mf-viewport' )[0], 'In DOM' );
 		overlay.hide();
 	} );
 
-	QUnit.test( 'HTML overlay', 2, function () {
+	QUnit.test( 'HTML overlay', 2, function ( assert ) {
 		var TestOverlay, overlay;
 
 		TestOverlay = Overlay.extend( {
@@ -23,15 +23,15 @@
 			}
 		} );
 		overlay = new TestOverlay( { heading: 'Awesome' } );
-		strictEqual( overlay.$el.find( 'h2' ).html(), 'Awesome' );
-		strictEqual( overlay.$el.find( '.content' ).text(), 'YO' );
+		assert.strictEqual( overlay.$el.find( 'h2' ).html(), 'Awesome' );
+		assert.strictEqual( overlay.$el.find( '.content' ).text(), 'YO' );
 	} );
 
-	QUnit.test( 'Close overlay', 1, function () {
+	QUnit.test( 'Close overlay', 1, function ( assert ) {
 		var overlay = new Overlay( { heading: '<h2>Title</h2>', content: 'Text' } );
 		overlay.show();
 		overlay.hide();
 		this.clock.tick( 1000 );
-		strictEqual( overlay.$el[0].parentNode, null, 'No longer in DOM' );
+		assert.strictEqual( overlay.$el[0].parentNode, null, 'No longer in DOM' );
 	} );
 })( mw.mobileFrontend, jQuery );

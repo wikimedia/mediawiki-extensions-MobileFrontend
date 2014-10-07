@@ -13,6 +13,11 @@ function makeSections() {
 		);
 }
 
+/**
+ * Mobile toggling
+ *
+ *
+**/
 QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	setup: function() {
 		$container = makeSections();
@@ -27,9 +32,10 @@ QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	}
 });
 
-QUnit.test( 'Toggle section', 5, function() {
+QUnit.test( 'Toggle section', 5, function( assert ) {
 	var $section = this.$section0,
-		$content = $( '#collapsible-block-0' );
+		$content = $( '#collapsible-block-0' ),
+		strictEqual = assert.strictEqual;
 
 	strictEqual( $section.hasClass( 'open-block' ), true, 'open-block class present' );
 	toggle.toggle( $section );
@@ -42,26 +48,30 @@ QUnit.test( 'Toggle section', 5, function() {
 	strictEqual( $section.hasClass( 'open-block' ), true, 'check section has reopened' );
 } );
 
-QUnit.test( 'Clicking a hash link to reveal an already open section', 2, function() {
+QUnit.test( 'Clicking a hash link to reveal an already open section', 2, function( assert ) {
+	var strictEqual = assert.strictEqual;
 	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 	toggle.reveal( 'First_Section' );
 	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is still open' );
 } );
 
-QUnit.test( 'Reveal element', 2, function() {
+QUnit.test( 'Reveal element', 2, function( assert ) {
+	var strictEqual = assert.strictEqual;
 	toggle.reveal( 'First_Section' );
 	strictEqual( $( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
 	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 } );
 
-QUnit.test( 'Clicking hash links', 2, function() {
+QUnit.test( 'Clicking hash links', 2, function( assert ) {
+	var strictEqual = assert.strictEqual;
 	$( '[href=#First_Section]' ).trigger( 'click' );
 	strictEqual( $( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
 	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 } );
 
-QUnit.test( 'Mouseup on a heading toggles it', 2, function() {
-	var $content = $( '#collapsible-block-1' );
+QUnit.test( 'Mouseup on a heading toggles it', 2, function( assert ) {
+	var $content = $( '#collapsible-block-1' ),
+		strictEqual = assert.strictEqual;
 
 	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
@@ -70,9 +80,10 @@ QUnit.test( 'Mouseup on a heading toggles it', 2, function() {
 	strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown on a toggle' );
 } );
 
-QUnit.test( 'Verify aria attributes', 9, function () {
+QUnit.test( 'Verify aria attributes', 9, function ( assert ) {
 	var $section = $( '#section_1' ),
-		$content = $( '#collapsible-block-1' );
+		$content = $( '#collapsible-block-1' ),
+		strictEqual = assert.strictEqual;
 
 	// Test the initial state produced by the init function
 	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
@@ -92,6 +103,11 @@ QUnit.test( 'Verify aria attributes', 9, function () {
 	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );
 } );
 
+/**
+ * Tablet toggling
+ *
+ *
+**/
 QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	setup: function() {
 		$container = makeSections();
@@ -104,9 +120,15 @@ QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	}
 } );
 
-QUnit.test( 'Open by default', 1, function() {
-	strictEqual( $( '#collapsible-block-1' ).hasClass( 'open-block' ), true, 'check section is visible at start' );
+QUnit.test( 'Open by default', 1, function( assert ) {
+	assert.strictEqual( $( '#collapsible-block-1' ).hasClass( 'open-block' ), true, 'check section is visible at start' );
 } );
+
+/**
+ * Expand sections user setting
+ *
+ *
+**/
 
 QUnit.module( 'MobileFrontend toggle.js: user setting', {
 	setup: function() {
@@ -121,8 +143,54 @@ QUnit.module( 'MobileFrontend toggle.js: user setting', {
 	}
 } );
 
-QUnit.test( 'Open by default', 1, function() {
-	strictEqual( $( '#collapsible-block-1' ).hasClass( 'open-block' ), true, 'check section is visible at start' );
+QUnit.test( 'Open by default', 1, function( assert ) {
+	assert.strictEqual( $( '#collapsible-block-1' ).hasClass( 'open-block' ), true, 'check section is visible at start' );
+} );
+
+/**
+ * Accessibility
+ *
+ *
+**/
+
+QUnit.module( 'MobileFrontend toggle.js: accessibility', {
+	setup: function() {
+		$container = makeSections();
+		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
+		toggle.enable();
+	},
+	teardown: function() {
+		window.location.hash = "#";
+		$container.remove();
+	}
+} );
+
+QUnit.test( 'Pressing space/ enter toggles a heading', 3, function ( assert ) {
+	var $section = $( '#section_1' ),
+		$content = $( '#collapsible-block-1' ),
+		ev = jQuery.Event( 'keypress' );
+
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
+
+	// Open the section with pressing space
+	ev.which = 32;
+	$section.trigger( ev );
+	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown after pressing space' );
+
+	// Enter should close the section again
+	ev.which = 13;
+	$section.trigger( ev );
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after pressing enter' );
+} );
+
+QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', 2, function ( assert ) {
+	var $section = $( '#section_1' ),
+		$content = $( '#collapsible-block-1' );
+
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
+
+	$section.find( '> a' ).eq( 0 ).trigger( 'mouseup' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is still being hidden after clicking on the link' );
 } );
 
 }( mw.mobileFrontend, jQuery ) );
