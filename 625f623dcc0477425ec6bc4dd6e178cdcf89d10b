@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_daa98cdd",
+        "filename": "templates/ctaDrawer.hogan",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-07T00:10:29Z",
+      "side": 1,
+      "message": "mw-ui-block doesn\u0027t have any effect on anything besides buttons (currently), so you\u0027ll need to either add some extra CSS somewhere or a \u003cbr/\u003e tag after this.",
+      "revId": "625f623dcc0477425ec6bc4dd6e178cdcf89d10b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_ba97e892",
+        "filename": "templates/ctaDrawer.hogan",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-07T00:10:29Z",
+      "side": 1,
+      "message": "\"mw-ui-anchor mw-ui-quiet\" has the same problem as \"mw-ui-button mw-ui-quiet\", i.e. it isn\u0027t apparent that it\u0027s a link on mobile. I would suggest just making this progressive as well.",
+      "revId": "625f623dcc0477425ec6bc4dd6e178cdcf89d10b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
