@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_5896e543",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-07T05:42:17Z",
+      "side": 1,
+      "message": "watchnologin? I would say \"watchlistanontext\" is the right one :)",
+      "revId": "14e81139d1bf32c4c5112e6c7da19340b6380267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_387c411b",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-07T05:42:17Z",
+      "side": 1,
+      "message": "This message doesn\u0027t exist, the correct one is:\nexception-nologin-text",
+      "revId": "14e81139d1bf32c4c5112e6c7da19340b6380267",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
