@@ -191,7 +191,7 @@
 	"mobile-frontend-nearby-noresults-guidance": "Versuche eine neue Seite zu erstellen oder den Standort für eine vorhandene hinzuzufügen",
 	"mobile-frontend-nearby-permission": "„In der Nähe“ von {{SITENAME}} hat keine Berechtigung, um auf deinen Standort zuzugreifen.",
 	"mobile-frontend-nearby-permission-guidance": "Bitte stelle sicher, dass du eine Berechtigung zum Anzeigen deines Standortes gegeben hast. Überprüfe die Standorteinstellungen deines Browsers.",
-	"mobile-frontend-nearby-refresh": "Wir haben für dich einen passenderen Standort gefunden. Klicke hier, um die Liste zu aktualisieren.",
+	"mobile-frontend-nearby-refresh": "Standort aktualisieren",
 	"mobile-frontend-nearby-requirements": "Leider unterstützt dein Webbrowser nicht „In der Nähe“ von {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Versuche einen anderen Browser oder aktiviere JavaScript, falls deaktiviert.",
 	"mobile-frontend-nearby-title": "In der Nähe",

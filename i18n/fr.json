@@ -210,7 +210,7 @@
 	"mobile-frontend-nearby-noresults-guidance": "Essayez de créer une nouvelle page ou d’ajouter un emplacement à une déjà existante",
 	"mobile-frontend-nearby-permission": "{{SITENAME}} Le voisinage n’a pas le droit d’accéder à votre emplacement.",
 	"mobile-frontend-nearby-permission-guidance": "Veuillez vous assurer d’avoir donné le droit d’afficher où vous êtes. Vous devriez peut-être vérifier les paramètres de localisation de votre navigateur.",
-	"mobile-frontend-nearby-refresh": "Nous vous avons localisé plus précisément. Cliquez ici pour rafraîchir la liste des pages à proximité.",
+	"mobile-frontend-nearby-refresh": "Rafraîchir l’emplacement",
 	"mobile-frontend-nearby-requirements": "Désolé ! Votre navigateur web ne reconnaît pas {{SITENAME}} à proximité.",
 	"mobile-frontend-nearby-requirements-guidance": "Essayez un autre navigateur ou activez JavaScript si vous l'avez désactivé.",
 	"mobile-frontend-nearby-title": "À proximité",
