@@ -88,6 +88,24 @@
       "revId": "8e22c968a8d3a363a7aebb669ec531ee2e54e7b2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_f89ed965",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-07T05:42:24Z",
+      "side": 1,
+      "message": "Sorry for the confusion :)\n\nSo, our goal is, to pomote our error message to be valid for Login redirection. For this we need to push the message key into LoginForm::$validErrorMessages in an early setup process of MediaWiki. For this we can/should use the setup function in MobileFrontend.php (efMobileFrontend_Setup()). Just add\n\narray_push(\n   LoginForm::$validErrorMessages,\n   \u0027mobile-frontend-donate-image-anon\u0027\n);\n\ninto it. After this, you should be able to use it here.",
+      "parentUuid": "ce8c5bf9_9ff45685",
+      "revId": "8e22c968a8d3a363a7aebb669ec531ee2e54e7b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
