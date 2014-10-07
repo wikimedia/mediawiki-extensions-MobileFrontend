@@ -72,4 +72,14 @@
 		} );
 	} );
 
+	QUnit.asyncTest( 'on back', 2, function( assert ) {
+		router.back().done( function () {
+			assert.ok( true, 'back 1 complete' );
+		} );
+		router.back().done( function () {
+			assert.ok( true, 'back 2 complete' );
+		} );
+		QUnit.start();
+	} );
+
 }( mw.mobileFrontend, jQuery ) );
