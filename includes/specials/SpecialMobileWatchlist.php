@@ -8,7 +8,7 @@
  */
 class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	const LIMIT = 50; // Performance-safe value with PageImages
-	const THUMB_SIZE = 150;
+	const THUMB_SIZE = MobilePage::SMALL_IMAGE_WIDTH;
 	const VIEW_OPTION_NAME = 'mfWatchlistView';
 	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
 

@@ -11,7 +11,7 @@
 class MobilePage {
 	const MEDIUM_IMAGE_WIDTH = 300;
 	const SMALL_IMAGE_WIDTH = 150;
-	const TINY_IMAGE_WIDTH = 50;
+	const TINY_IMAGE_WIDTH = 80;
 
 	/**
 	 * @var Title: Title for page

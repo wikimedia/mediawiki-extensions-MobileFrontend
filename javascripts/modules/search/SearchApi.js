@@ -47,7 +47,7 @@
 					gpslimit: 15,
 					prop: 'pageimages',
 					piprop: 'thumbnail',
-					pithumbsize: 80,
+					pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).tiny,
 					pilimit: 15,
 					list: 'prefixsearch',
 					pssearch: query,

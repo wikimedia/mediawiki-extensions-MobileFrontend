@@ -77,7 +77,7 @@
 				action: 'query',
 				colimit: 'max',
 				prop: 'pageimages|coordinates',
-				pithumbsize: 180,
+				pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).small,
 				pilimit: limit,
 				generator: 'geosearch',
 				ggscoord: [ location.latitude, location.longitude ],
