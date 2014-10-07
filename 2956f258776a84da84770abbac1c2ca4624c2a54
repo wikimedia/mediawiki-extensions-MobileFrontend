@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_1fa59c9a",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-07T21:31:23Z",
+      "side": 1,
+      "message": "ehhh, i think this is the token type? This should be the first parameter for postWithToken(). Now it will throw an uncaught error (missing second parameter \"params\") or something else.\n\n(And only one fail() should be enough? :/)",
+      "revId": "2956f258776a84da84770abbac1c2ca4624c2a54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_7f0ce8f0",
+        "filename": "tests/qunit/modules/talk/test_TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-07T21:31:23Z",
+      "side": 1,
+      "message": "tab???",
+      "revId": "2956f258776a84da84770abbac1c2ca4624c2a54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
