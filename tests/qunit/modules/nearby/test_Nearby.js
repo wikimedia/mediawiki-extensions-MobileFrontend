@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
+		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 		Nearby = M.require( 'modules/nearby/Nearby' );
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (1 - no results)', {
@@ -22,6 +23,10 @@
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (2 - has results)', {
 		setup: function() {
+			var resp = { query: { pages: { 2: { watched: "" }, 3: {}, 4: {} } } };
+			// prevent hits to api due to watch status lookup
+			this.sandbox.stub( WatchstarApi.prototype, 'get' ).returns( $.Deferred().resolve( resp ) );
+
 			this.getLocation = this.sandbox.stub( Nearby.prototype, 'getCurrentPosition' ).
 				returns( $.Deferred().resolve( { latitude: 37.7, longitude: -122 } ) );
 			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' ).

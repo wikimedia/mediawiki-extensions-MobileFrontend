@@ -105,20 +105,15 @@
 				this.confirm.prop( 'disabled', true );
 				this.$( '.content' ).empty().addClass( 'loading' );
 				this.$( '.buttonBar' ).hide();
-				api.getTokenWithEndpoint().done( function( token ) {
-					api.post( {
-						action: 'edit',
-						section: 'new',
-						sectiontitle: heading,
-						title: self.title,
-						token: token,
-						summary: mw.msg( 'mobile-frontend-talk-edit-summary', heading ),
-						text: text + ' ~~~~'
-					} ).done( function() {
-						result.resolve( 'ok' );
-					} ).fail( function( msg ) {
-						result.reject( { type: 'error', details: msg } );
-					} );
+				api.postWithToken( 'edit', {
+					action: 'edit',
+					section: 'new',
+					sectiontitle: heading,
+					title: self.title,
+					summary: mw.msg( 'mobile-frontend-talk-edit-summary', heading ),
+					text: text + ' ~~~~'
+				} ).done( function() {
+					result.resolve( 'ok' );
 				} ).fail( function( msg ) {
 					result.reject( { type: 'error', details: msg } );
 				} );

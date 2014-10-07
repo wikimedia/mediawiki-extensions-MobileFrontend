@@ -8,6 +8,8 @@
 		setup: function() {
 			apiSpy = this.sandbox.spy( EditorApi.prototype, 'initialize' );
 
+			// prevent event logging requests
+			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
 			this.sandbox.stub( EditorApi.prototype, 'getContent' ).
 				returns( $.Deferred().resolve( 'section 0' ) );
 		}

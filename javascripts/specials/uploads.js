@@ -221,7 +221,7 @@ var
 		}
 	}
 
-	if ( userName && !M.testMode ) {
+	if ( userName && mw.config.get( 'wgCanonicalSpecialPageName' ) === 'Uploads' ) {
 		$( init );
 	}
 
