@@ -217,12 +217,19 @@
 							var keyboardHeight;
 
 							// detect virtual keyboard height
-							$window.scrollTop( 999 );
-							keyboardHeight = $window.scrollTop();
-							$window.scrollTop( 0 );
+							if ( !M.isIos8 ) {
+								// this method does not work in iOS 8.02
+								$window.scrollTop( 999 );
+								keyboardHeight = $window.scrollTop();
+								$window.scrollTop( 0 );
+							} else {
+								// FIXME: implement a solution from https://devforums.apple.com/message/1050636#1050636
+							}
 
-							self._resizeContent( $window.height() - keyboardHeight );
-						} );
+							if ( $window.height() > keyboardHeight ) {
+								self._resizeContent($window.height() - keyboardHeight);
+							}
+						}, 0 );
 					} )
 					.on( 'blur', function() {
 						self._resizeContent( $window.height() );
