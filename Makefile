@@ -32,7 +32,7 @@ kss: kssnodecheck
 jsduck: gems
 	rm -rf docs/js
 	mkdir -p docs
-	jsduck javascripts/ --output docs/js/ --external=jQuery.Object,Hogan.Template,jQuery.Deferred,mw.user --exclude=javascripts/external --ignore-global
+	jsduck ${MW_INSTALL_PATH}/extensions/Mantle/javascripts/ javascripts/ --output docs/js/ --external=OO.EventEmitter,jQuery.Object,Hogan.Template,HandleBars.Template,jQuery.Deferred,mw.user --exclude=javascripts/external --ignore-global
 
 phpdoc: nodecheck
 	mkdir -p docs
