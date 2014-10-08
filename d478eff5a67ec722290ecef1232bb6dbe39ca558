@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_c21d1b7a",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-08T00:14:44Z",
+      "side": 1,
+      "message": "Curious what the advantage of using css over class is here.",
+      "revId": "d478eff5a67ec722290ecef1232bb6dbe39ca558",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
