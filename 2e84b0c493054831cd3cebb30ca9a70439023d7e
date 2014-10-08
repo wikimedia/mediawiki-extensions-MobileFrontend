@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_0d256fbc",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-08T21:51:42Z",
+      "side": 1,
+      "message": "Create and use !M.isIos8 here or something similar so code that is needed is run.",
+      "revId": "2e84b0c493054831cd3cebb30ca9a70439023d7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
