@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_98622236",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-08T10:11:00Z",
+      "side": 1,
+      "message": "This is an unfortunate (but currently necessary) binding between the MobileSpecialPage and the SkinMinerva skin class. Should the iconClass helper method be moved out into another class which is separate from both?",
+      "revId": "6596aa547b877528b64f480a2ccbb31361a215ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
