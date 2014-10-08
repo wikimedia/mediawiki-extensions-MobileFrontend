@@ -823,7 +823,7 @@ class MobileFrontendHooks {
 	 * If the module has already been registered in
 	 * onResourceLoaderRegisterModules, then it is overwritten.
 	 *
-	 * @param array &schemas The schemas currently registered with the EventLogging
+	 * @param array $schemas The schemas currently registered with the EventLogging
 	 *  extension
 	 * @return bool Always true
 	 */
