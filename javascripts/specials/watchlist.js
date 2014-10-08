@@ -10,7 +10,7 @@
 
 		// FIXME: find more elegant way to not show watchlist stars on recent changes
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
-			new PageList( { el: $watchlist, enhance: true } );
+			new PageList( { el: $watchlist, enhance: true, isWatchList: true } );
 			$watchlist.find( 'a.title' ).on( 'mousedown', function() {
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'watchlist', { expires: new Date( new Date().getTime() + 60000 ) } );

@@ -22,7 +22,7 @@
 			View.prototype.initialize.apply( this, arguments );
 		},
 		template: M.template.get( 'articleList.hogan' ),
-		postRender: function() {
+		postRender: function( options ) {
 			View.prototype.postRender.apply( this, arguments );
 			var pages = [], $li = this.$( 'li' ),
 				api = this.api;
@@ -34,7 +34,7 @@
 
 			// Create watch stars for each entry in list
 			if ( !user.isAnon() && pages.length > 0 ) {
-				api.load( pages ).done( function() {
+				api.load( pages, options.isWatchList ).done( function() {
 					$li.each( function() {
 						var page = new Page( {
 							// FIXME: Set sections so we don't hit the api (hacky)

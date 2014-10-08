@@ -123,6 +123,14 @@
 
 		/**
 		 * @method
+		 * @return {string}
+		 */
+		getTitle: function() {
+			return this.options.title;
+		},
+
+		/**
+		 * @method
 		 * @return {Number}
 		 */
 		getId: function() {
