@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_0e348cf0",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-08T16:04:21Z",
+      "side": 1,
+      "message": "This should be only an example for now. Problem: LoginForm adds the messages escaped :/",
+      "revId": "cba4904f0a08269140ea13a3a23f8f27839ee6e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

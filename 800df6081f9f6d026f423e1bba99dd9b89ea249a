@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_4e11345e",
+        "filename": "less/specials/userlogin.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-08T16:04:21Z",
+      "side": 0,
+      "message": "Hint: until the user create form is still a custom template, mw-mf-accountcreate needs to be here",
+      "revId": "800df6081f9f6d026f423e1bba99dd9b89ea249a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
