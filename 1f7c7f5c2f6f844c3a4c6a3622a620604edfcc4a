@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_8eb97ce8",
+        "filename": "i18n/en.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-10-08T15:13:49Z",
+      "side": 1,
+      "message": "If you remove a parameter like this, existing translations no longer work correctly, because they do still use $1. The key should have been changed, so that translations were reset. See https://www.mediawiki.org/wiki/I18n#Changing_existing_messages for details.",
+      "revId": "1f7c7f5c2f6f844c3a4c6a3622a620604edfcc4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
