@@ -16,6 +16,24 @@
       "revId": "6596aa547b877528b64f480a2ccbb31361a215ce",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_094ec6dd",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-08T17:40:52Z",
+      "side": 1,
+      "message": "I think you\u0027ll like the new approach in https://gerrit.wikimedia.org/r/#/c/164409/9",
+      "parentUuid": "ce8c5bf9_98622236",
+      "revId": "6596aa547b877528b64f480a2ccbb31361a215ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
