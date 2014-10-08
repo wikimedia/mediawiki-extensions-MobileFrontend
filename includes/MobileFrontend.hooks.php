@@ -124,7 +124,7 @@ class MobileFrontendHooks {
 
 		if ( !$context->isBlacklistedPage() ) {
 			$footerlinks = $tpl->data['footerlinks'];
-			$args = $tpl->getSkin()->getRequest()->getValues();
+			$args = $skin->getRequest()->getQueryValues();
 			// avoid title being set twice
 			unset( $args['title'] );
 			unset( $args['useformat'] );
