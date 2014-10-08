@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_8454fb02",
+        "filename": "templates/modules/editor/switcher.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-08T18:20:27Z",
+      "side": 1,
+      "message": "This looks false, i think it should be #isVisualEditor here and ^isVisualEditor for EditSource",
+      "revId": "3a5187c3825cec4e571a5059f0ab52780088b149",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
