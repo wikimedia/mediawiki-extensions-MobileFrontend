@@ -179,7 +179,7 @@
 	"mobile-frontend-nearby-noresults": "Jesteś w szczerym polu… Nic nie znaleziono w pobliżu.",
 	"mobile-frontend-nearby-noresults-guidance": "Spróbuj utworzyć nową stronę albo uzupełnić współrzędne geograficzne na już istniejącej stronie",
 	"mobile-frontend-nearby-permission": "„{{SITENAME}} – W pobliżu ciebie” nie ma dostępu do twojej lokalizacji.",
-	"mobile-frontend-nearby-refresh": "Określiliśmy dokładniej twojej położenie. Kliknij tutaj, aby odświeżyć listę stron w pobliżu",
+	"mobile-frontend-nearby-refresh": "Odśwież lokalizację",
 	"mobile-frontend-nearby-requirements": "Przepraszamy! Twoja przeglądarka nie obsługuje „{{SITENAME}} - W pobliżu ciebie”.",
 	"mobile-frontend-nearby-requirements-guidance": "Spróbuj innej przeglądarki lub włącz obsługę JavaScript, jeżeli masz teraz wyłączoną.",
 	"mobile-frontend-nearby-title": "W pobliżu",

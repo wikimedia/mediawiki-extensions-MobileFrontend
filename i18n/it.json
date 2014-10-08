@@ -39,7 +39,7 @@
 	"mobile-frontend-diffview-title": "Modifiche",
 	"mobile-frontend-disable-images": "Disabilita le immagini sul sito per dispositivi mobili",
 	"mobile-frontend-dismiss-notification": "ignora questa notifica",
-	"mobile-frontend-donate-image-anon": "Per visualizzare la pagina di caricamento è necessario un $1.",
+	"mobile-frontend-donate-image-anon": "Effettua l'accesso per visualizzare la pagina di caricamento.",
 	"mobile-frontend-donate-image-heading": "I tuoi contributi recenti",
 	"mobile-frontend-donate-image-login": "I file su {{SITENAME}} sono donati da persone come te.",
 	"mobile-frontend-donate-image-login-action": "Accedi per condividere i file multimediali.",

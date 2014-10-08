@@ -175,7 +175,7 @@
 	"mobile-frontend-nearby-noresults-guidance": "Zkuste vytvořit novou stránku nebo přidat souřadnice k již existující stránce",
 	"mobile-frontend-nearby-permission": "Poblíž {{grammar:2sg|{{SITENAME}}}} nemá oprávnění zjistit vaši polohu.",
 	"mobile-frontend-nearby-permission-guidance": "Ujistěte se, že jste souhlasili s prozrazením vašeho umístění. Možná si budete muset zkontrolovat nastavení lokalizace v prohlížeči.",
-	"mobile-frontend-nearby-refresh": "Upřesnili jsme vaši polohu. Kliknutím sem můžete aktualizovat seznam blízkých stránek",
+	"mobile-frontend-nearby-refresh": "Aktualizovat polohu",
 	"mobile-frontend-nearby-requirements": "Je nám líto! Váš prohlížeč nepodporuje funkcionalitu Poblíž {{grammar:2sg|{{SITENAME}}}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Zkuste jiný prohlížeč nebo si zapněte JavaScript, pokud ho máte vypnutý.",
 	"mobile-frontend-nearby-title": "Poblíž",

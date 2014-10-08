@@ -60,7 +60,7 @@
 	"mobile-frontend-diffview-title": "Modifications",
 	"mobile-frontend-disable-images": "Désactiver les images en version mobile",
 	"mobile-frontend-dismiss-notification": "rejeter cette notification",
-	"mobile-frontend-donate-image-anon": "Un $1 est nécessaire pour voir la page des téléchargements.",
+	"mobile-frontend-donate-image-anon": "Prière de vous identifier pour voir la page des téléchargements.",
 	"mobile-frontend-donate-image-heading": "Vos dernières contributions",
 	"mobile-frontend-donate-image-login": "Les fichiers média sur {{SITENAME}} ont été donnés par des gens comme vous.",
 	"mobile-frontend-donate-image-login-action": "Connectez-vous pour partager vos fichiers média.",

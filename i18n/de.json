@@ -41,7 +41,7 @@
 	"mobile-frontend-diffview-title": "Änderungen",
 	"mobile-frontend-disable-images": "Bilder in der mobilen Ansicht deaktivieren",
 	"mobile-frontend-dismiss-notification": "diese Benachrichtigung schließen",
-	"mobile-frontend-donate-image-anon": "Für das Ansehen der hochgeladenen Dateien ist ein $1 erforderlich.",
+	"mobile-frontend-donate-image-anon": "Bitte melde dich an, um die hochgeladenen Dateien anzusehen.",
 	"mobile-frontend-donate-image-heading": "Deine letzten Beiträge",
 	"mobile-frontend-donate-image-login": "Medien auf {{SITENAME}} werden von Menschen wie dir gespendet.",
 	"mobile-frontend-donate-image-login-action": "Melde dich an, um deine Medien zu teilen.",
