@@ -44,7 +44,7 @@
 	 * @param {string} options.funnel Funnel for EventLogging.
 	 */
 	PhotoUploaderButton = View.extend( {
-		template: M.template.get( 'uploads/PhotoUploaderButton.hogan' ),
+		template: M.template.get( 'modules/uploads/PhotoUploaderButton.hogan' ),
 		className: 'mw-ui-progressive mw-ui-button button icon-photo icon icon-text',
 
 		postRender: function() {

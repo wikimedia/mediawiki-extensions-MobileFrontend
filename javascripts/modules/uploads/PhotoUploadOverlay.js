@@ -30,7 +30,7 @@
 		className: 'overlay photo-overlay',
 
 		templatePartials: {
-			content: M.template.get( 'uploads/PhotoUploadOverlay.hogan' )
+			content: M.template.get( 'modules/uploads/PhotoUploadOverlay.hogan' )
 		},
 
 		initialize: function( options ) {

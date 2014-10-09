@@ -2,7 +2,7 @@
 	var Overlay = M.require( 'Overlay' ),
 	CleanupOverlay = Overlay.extend( {
 		templatePartials: {
-			content: M.template.get( 'overlays/cleanup.hogan' )
+			content: M.template.get( 'modules/issues/cleanup.hogan' )
 		},
 		initialize: function( options ) {
 			options.heading = '<strong>' + options.headingText + '</strong>';
