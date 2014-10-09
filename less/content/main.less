@@ -110,14 +110,6 @@ body {
 			text-align: left;
 		}
 	}
-
-	// Generic class name needed
-	.return-link,
-	#mw-mf-last-modified {
-		display: block;
-		font-size: .9em;
-		margin-top: 1.5em;
-	}
 }
 
 strong,
@@ -128,14 +120,6 @@ b {
 em,
 i {
 	font-style: italic;
-}
-
-a.external {
-	/* @embed */
-	.background-image-svg( 'images/external-link-ltr-icon.svg', 'images/external-link-ltr-icon.png' );
-	background-repeat: no-repeat;
-	background-position: center right;
-	padding-right: 13px;
 }
 
 .hlist > ul, // FIXME: to support hlists on enwiki projects - this should be deprecated
@@ -278,11 +262,4 @@ blockquote {
 
 .nomobile {
 	display:none;
-}
-
-/* Plainlinks - this can be used to switch
- * off special external link styling */
-.plainlinks a {
-	background: none !important;
-	padding: 0 !important;
 }

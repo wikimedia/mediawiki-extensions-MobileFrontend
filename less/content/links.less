@@ -1,0 +1,51 @@
+@import "mediawiki.mixins.less";
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+
+a {
+	text-decoration: none;
+	color: @linkColor;
+
+	&:visited {
+		color: #5a3696;
+	}
+
+	&:active {
+		color: #faa700;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&.new,
+	&.new:visited,
+	&.new:hover {
+		color: @redBase;
+	}
+
+	&.external {
+		/* @embed */
+		.background-image-svg( 'images/external-link-ltr-icon.svg', 'images/external-link-ltr-icon.png' );
+		background-repeat: no-repeat;
+		background-position: center right;
+		padding-right: 13px;
+	}
+}
+
+.content {
+	// Generic class name needed
+	.return-link,
+	#mw-mf-last-modified {
+		display: block;
+		font-size: .9em;
+		margin-top: 1.5em;
+	}
+}
+
+/* Plainlinks - this can be used to switch
+ * off special external link styling */
+.plainlinks a {
+	background: none !important;
+	padding: 0 !important;
+}
