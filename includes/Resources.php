@@ -818,9 +818,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
-		'templates' => array(
-			'modules/nearby/pagePreview.hogan',
-		),
 		'dependencies' => array(
 			'mobile.stable.common',
 			// @todo FIXME: Kill this dependency!

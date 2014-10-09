@@ -1,9 +1,0 @@
-<p class="message content-header">
-	<a href="{{url}}" class="read-in-full">{{readMoreLink}}</a>
-	{{#directionUrl}}<a href="{{directionUrl}}">{{directionLabel}}</a>{{/directionUrl}}
-</p>
-<div class="content">
-	<div class="listThumb {{imgClass}}" {{#imageUrl}}style="background-image: url({{imageUrl}})"{{/imageUrl}}></div>
-	<div class="preview">{{{preview}}}</div>
-	<p><a href="{{url}}">{{readMoreLink}}</a></p>
-</div>
