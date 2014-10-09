@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_14f56f7f",
+        "filename": "less/content/links.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-09T20:01:09Z",
+      "side": 1,
+      "message": "Can we use nesting all these rules for better readability?",
+      "revId": "e6b44e8868c105560ced746fa08526c76b3e02dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
