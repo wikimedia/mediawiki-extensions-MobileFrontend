@@ -110,6 +110,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/content/blockquotes.less',
 			'less/content/lists.less',
 			'less/content/links.less',
+			'less/content/text.less',
 			'less/content/tables.less',
 			'less/content/hacks.less',
 		),
