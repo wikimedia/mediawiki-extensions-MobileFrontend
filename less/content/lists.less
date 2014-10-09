@@ -1,0 +1,47 @@
+@import "mediawiki.mixins.less";
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+
+.content {
+	ol,
+	ul {
+		ol,
+		ul {
+			margin-left: 1em;
+		}
+	}
+	ul {
+		list-style: square inside;
+	}
+
+	ol {
+		list-style: decimal inside;
+	}
+}
+
+dl {
+	margin-left: 1em;
+	dt {
+		font-weight: bold;
+	}
+}
+// FIXME: to support hlists on enwiki projects - this should be deprecated
+.hlist > ul,
+
+// Horizontal Lists
+//
+// Use hlist class when dealing with lists where items should be horizontal.
+//
+// Markup:
+// <ul class="hlist">
+// <li>item 1</li>
+// <li>item 2</li>
+// </ul>
+//
+// Styleguide 1.5.
+ul.hlist {
+	li {
+		display: inline-block;
+		margin-right: 8px;
+	}
+}

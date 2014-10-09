@@ -33,22 +33,6 @@ body {
 		margin: .5em 0 1em 0;
 	}
 
-	ol,
-	ul {
-		ol,
-		ul {
-			margin-left: 1em;
-		}
-	}
-
-	ul {
-		list-style: square inside;
-	}
-
-	ol {
-		list-style: decimal inside;
-	}
-
 	table {
 		margin: 1em 0;
 
@@ -88,26 +72,6 @@ i {
 	font-style: italic;
 }
 
-.hlist > ul, // FIXME: to support hlists on enwiki projects - this should be deprecated
-
-	// Horizontal Lists
-	//
-	// Use hlist class when dealing with lists where items should be horizontal.
-	//
-	// Markup:
-	// <ul class="hlist">
-	// <li>item 1</li>
-	// <li>item 2</li>
-	// </ul>
-	//
-	// Styleguide 1.5.
-ul.hlist {
-	li {
-		display: inline-block;
-		margin-right: 8px;
-	}
-}
-
 // Code
 //
 // Use this solely for blocks of computer code.
@@ -139,13 +103,6 @@ pre {
 	font-family: monospace;
 	border: solid 1px @colorGray12;
 	white-space: pre-wrap;
-}
-
-dl {
-	margin-left: 1em;
-	dt {
-		font-weight: bold;
-	}
 }
 
 sup {
