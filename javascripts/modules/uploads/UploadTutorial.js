@@ -2,6 +2,7 @@
 
 	var
 		Overlay = M.require( 'Overlay' ),
+		Icon = M.require( 'Icon' ),
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		buttonMsg = mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
 		UploadTutorial;
@@ -11,6 +12,11 @@
 		className: 'overlay carousel tutorial',
 
 		defaults: {
+			slideLeftButton: new Icon( { name: 'previous',
+				additionalClassNames: 'slider-button prev' } ).toHtmlString(),
+			slideRightButton: new Icon( { name: 'next',
+				additionalClassNames: 'slider-button next' } ).toHtmlString(),
+			inBeta: M.isBetaGroupMember(),
 			pages: [
 				{
 					caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1-header' ),

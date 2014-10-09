@@ -2,7 +2,7 @@
 	{{>header}}
 	<div class="overlay-header save-header hideable hidden">
 		<ul>
-			<li>{{>backButton}}</li>
+			<li>{{{backButton}}}</li>
 		</ul>
 		<div class="overlay-title">
 			<h2>{{{previewingMsg}}}</h2>
@@ -11,7 +11,7 @@
 	</div>
 	<div class="overlay-header saving-header hideable hidden">
 		<ul>
-			<li>{{>cancelButton}}</li>
+			<li>{{{cancelButton}}}</li>
 		</ul>
 		<div class="overlay-title">
 			<h2>{{{waitMsg}}}</h2>

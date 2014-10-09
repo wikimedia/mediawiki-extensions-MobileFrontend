@@ -3,6 +3,7 @@
 
 	var
 		View = M.require( 'View' ),
+		Icon = M.require( 'Icon' ),
 		$window = $( window ),
 		Overlay;
 
@@ -38,14 +39,19 @@
 		 */
 		className: 'overlay',
 		templatePartials: {
-			backButton: M.template.get( 'backButton.hogan' ),
-			cancelButton: M.template.get( 'cancelButton.hogan' ),
 			spinner: M.template.get( 'spinner.hogan' )
 		},
 		template: M.template.get( 'Overlay.hogan' ),
 		defaults: {
+			cancelButton: new Icon( { tagName: 'button',
+					name: 'cancel', additionalClassNames: 'cancel',
+					label: mw.msg( 'mobile-frontend-overlay-close' )
+				} ).toHtmlString(),
+			backButton: new Icon( { tagName: 'button',
+					name: 'back', additionalClassNames: 'back',
+					label: mw.msg( 'mobile-frontend-overlay-close' )
+				} ).toHtmlString(),
 			headerButtonsListClassName: '',
-			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
 			fixedHeader: true
 		},
 		/**

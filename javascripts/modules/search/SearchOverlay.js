@@ -3,6 +3,7 @@
 	var
 		Overlay = M.require( 'Overlay' ),
 		SearchApi = M.require( 'modules/search/SearchApi' ),
+		Icon = M.require( 'Icon' ),
 		PageList = M.require( 'modules/PageList' ),
 		SEARCH_DELAY = 300,
 		SearchOverlay;
@@ -11,6 +12,7 @@
 		className: 'overlay search-overlay',
 		template: M.template.get( 'modules/search/SearchOverlay.hogan' ),
 		defaults: {
+			clearIcon: new Icon( { tagName: 'button', name: 'clear', additionalClassNames: 'clear' } ).toHtmlString(),
 			searchTerm: '',
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
 			clearMsg: mw.msg( 'mobile-frontend-clear-search' ),

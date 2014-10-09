@@ -1,7 +1,8 @@
 <div class="switcher-container">
-	<button class="editor-switcher icon">{{switchMsg}}</button>
+	{{{switcherButton}}}
 	<div class="switcher-drop-down">
-		<div class="mw-ui-button visual-editor {{#isVisualEditor}}selected{{/isVisualEditor}}"><span class="icon icon-32px icon-edit-ve "></span>{{visualEditorMsg}}</div><!--
-		--><div class="mw-ui-button source-editor {{^isVisualEditor}}selected{{/isVisualEditor}}"><span class="icon icon-32px icon-edit-source"></span>{{sourceEditorMsg}}</div>
+		<div class="mw-ui-button visual-editor {{#isVisualEditor}}selected{{/isVisualEditor}}">
+		{{{veButton}}}{{visualEditorMsg}}</div><!--
+		--><div class="mw-ui-button source-editor {{^isVisualEditor}}selected{{/isVisualEditor}}">{{{sourceButton}}}</span>{{sourceEditorMsg}}</div>
 	</div>
 </div>

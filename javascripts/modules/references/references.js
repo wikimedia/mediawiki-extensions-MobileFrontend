@@ -1,7 +1,19 @@
 ( function( M, $ ) {
-	var Drawer = M.require( 'Drawer' ), ReferencesDrawer, drawer;
+	var Drawer = M.require( 'Drawer' ),
+		Icon = M.require( 'Icon' ),
+		ReferencesDrawer, drawer;
 
+	/**
+	 * @class ReferencesDrawer
+	 * @extends Drawer
+	 */
 	ReferencesDrawer = Drawer.extend( {
+		defaults: {
+			cancelButton: new Icon( {
+				name: 'cancel', additionalClassNames: 'cancel',
+				label: mw.msg( 'mobile-frontend-overlay-close' )
+			} ).toHtmlString()
+		},
 		className: 'drawer position-fixed text references',
 		template: M.template.get( 'modules/references/ReferencesDrawer.hogan' )
 	} );

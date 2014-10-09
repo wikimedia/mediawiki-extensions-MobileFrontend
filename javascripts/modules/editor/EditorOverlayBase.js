@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
+		Icon = M.require( 'Icon' ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		EditorOverlayBase;
@@ -11,7 +12,11 @@
 	 * @class EditorOverlayBase
 	 */
 	EditorOverlayBase = Overlay.extend( {
-		defaults: {
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
+			switcherButton: new Icon( { tagName: 'button',
+				name: 'edit-source', additionalClassNames: 'editor-switcher' } ).toHtmlString(),
+			sourceButton: new Icon( { name: 'edit-source', additionalClassNames: 'icon-32px' } ).toHtmlString(),
+			veButton: new Icon( { name: 'edit-ve', additionalClassNames: 'icon-32px' } ).toHtmlString(),
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
@@ -25,7 +30,7 @@
 			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
 			visualEditorMsg: mw.msg( 'mobile-frontend-editor-visual-editor' ),
 			sourceEditorMsg: mw.msg( 'mobile-frontend-editor-source-editor' )
-		},
+		} ),
 		template: M.template.get( 'modules/editor/EditorOverlayBase.hogan' ),
 		className: 'overlay editor-overlay',
 		log: function( action, errorText ) {

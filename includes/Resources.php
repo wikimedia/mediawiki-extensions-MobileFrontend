@@ -171,12 +171,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			'mobile-frontend-language-article-heading',
 		),
+		'templates' => array(
+			'icon.hogan',
+		),
 		'scripts' => array(
 			'javascripts/Router.js',
 			'javascripts/OverlayManager.js',
 			// FIXME: Remove api code to mobile.ajax
 			'javascripts/api.js',
 			'javascripts/PageApi.js',
+			'javascripts/Icon.js',
 			'javascripts/Panel.js',
 			'javascripts/Section.js',
 			'javascripts/Page.js',
@@ -578,8 +582,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-overlay-continue',
 		),
 		'templates' => array(
-			'backButton.hogan',
-			'cancelButton.hogan',
 			'Overlay.hogan',
 			'LoadingOverlay.hogan',
 		),

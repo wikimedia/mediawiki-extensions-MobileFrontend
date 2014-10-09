@@ -1,5 +1,6 @@
 ( function( M ) {
 	var View = M.require( 'View' ), TableOfContents,
+		Icon = M.require( 'Icon' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		toggle = M.require( 'toggle' );
 
@@ -8,6 +9,9 @@
 			tocHeading: M.template.get( 'modules/toc/tocHeading.hogan' )
 		},
 		defaults: {
+			tocIcon: new Icon( { tagName: 'span',
+				name: 'toc', additionalClasses: 'icon-16px'
+			} ).toHtmlString(),
 			contentsMsg: mw.msg( 'toc' )
 		},
 		tagName: 'div',

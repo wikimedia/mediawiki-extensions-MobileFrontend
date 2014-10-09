@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 var Drawer = M.require( 'Drawer' ),
+	Icon = M.require( 'Icon' ),
 	CtaDrawer;
 
 	/**
@@ -11,6 +12,7 @@ var Drawer = M.require( 'Drawer' ),
 	 */
 	CtaDrawer = Drawer.extend( {
 		defaults: {
+			collapseButton: new Icon( { name: 'arrow-down', additionalClassNames: 'cancel' } ).toHtmlString(),
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
 			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
 		},

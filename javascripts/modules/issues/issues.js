@@ -2,6 +2,7 @@
 
 var module = (function() {
 	var
+		Icon = M.require( 'Icon' ),
 		inBeta = M.isBetaGroupMember(),
 		CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' );
 
@@ -51,7 +52,9 @@ var module = (function() {
 			}
 		} );
 
-		$link = $( '<a class="mw-mf-cleanup icon icon-text">' ).attr( 'href', '#/issues' );
+		$link = new Icon( { tagName: 'a', name: 'cleanup', hasText: true } ).
+			$el.children().eq( 0 ).attr( 'href', '#/issues' );
+
 		M.overlayManager.add( /^\/issues$/, function() {
 			return new CleanupOverlay( { issues: issues, headingText: headingText } );
 		} );

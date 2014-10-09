@@ -1,7 +1,7 @@
 <div class="overlay-header-container position-fixed">
 	<div class="overlay-header">
 		<ul>
-			<li>{{>cancelButton}}</li>
+			<li>{{{cancelButton}}}</li>
 		</ul>
 		<div class="overlay-search">
 			<form method="get" action="{{action}}">
@@ -9,7 +9,7 @@
 			</form>
 		</div>
 		<ul>
-			<li><button class="clear icon icon-clear">{{clearMsg}}</button></li>
+			<li>{{{clearIcon}}}</li>
 		</ul>
 	</div>
 </div>
