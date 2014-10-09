@@ -1,0 +1,63 @@
+// Full-size images
+//
+// Inline and floated full-size images will be styled like so.
+//
+// Example wikitext:
+// This is an [[File:Book.png]] inline image.
+// [[File:Book.png|left]]Left-aligned image
+// [[File:Book.png|right]]Right-aligned image
+//
+// Markup:
+// <div class="content">
+//   <p>This is an <img src="images/arrow-left.png"> inline image.</p>
+//   <div class="floatleft"><img src="images/arrow-left.png">Left-aligned image</div>
+//   <div class="floatright"><img src="images/arrow-left.png">Right-aligned image</div>
+// </div>
+//
+// Styleguide 1.3.
+@import "mediawiki.mixins.less";
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+
+.content {
+
+	img {
+		// Matches commonElements.css
+		vertical-align: middle;
+	}
+
+	// Applied to divs containing aligned, full-size images
+	.floatright {
+		/* @noflip */
+		clear: right;
+		/* @noflip */
+		float: right;
+		/* @noflip */
+		margin: 0 0 .6em .6em;
+	}
+
+	// Applied to divs containing aligned, full-size images
+	.floatleft {
+		/* @noflip */
+		clear: left;
+		/* @noflip */
+		float: left;
+		/* @noflip */
+		margin: 0 .6em .6em 0;
+	}
+
+	// Prevent inline styles on images in wikitext
+	// Note we restrict to img's to avoid conflicts with VisualEditor shields
+	// See bug 62460
+	a > img {
+		// make sure that images in articles don't cause a horizontal scrollbar
+		// on small screens
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	// Hide the image magnification icon normally displayed in image captions
+	div.magnify {
+		display: none;
+	}
+}
