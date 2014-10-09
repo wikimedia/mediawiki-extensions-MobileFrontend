@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae91e70e_9f1573ec",
+        "filename": "less/content/links.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-09T21:02:59Z",
+      "side": 1,
+      "message": "So far the only thing I can tell is text-decoration needs to be out of the content nest, otherwise links in the navigation-drawer will be underlined.\n\nAlso color needs to be defined for links outside of the .content element\nfor example: last-modified container",
+      "revId": "11754e483dcc8061bf6980091413ddd1c623c896",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
