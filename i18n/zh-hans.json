@@ -27,7 +27,8 @@
 			"Zhuyifei1999",
 			"乌拉跨氪",
 			"LNDDYL",
-			"Duolaimi"
+			"Duolaimi",
+			"Gaoxuewei"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -350,5 +351,6 @@
 	"tag-mobile_edit-description": "从移动版（web或应用程序）所做的编辑",
 	"tag-mobile_web_edit": "移动网页编辑",
 	"tag-mobile_web_edit-description": "来自手机版网站的编辑",
-	"mobile-frontend-pageaction-edit-tooltip": "编辑此页面的序言章节。"
+	"mobile-frontend-pageaction-edit-tooltip": "编辑此页面的序言章节。",
+	"mobile-frontend-pageaction-upload-tooltip": "上传自定义背景图片"
 }

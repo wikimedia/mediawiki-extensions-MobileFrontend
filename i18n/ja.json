@@ -277,6 +277,7 @@
 	"mobile-frontend-talk-reply-info": "返信にあなたの利用者名の署名が自動的に付くことにご注意ください。",
 	"mobile-frontend-talk-reply-success": "返信をトークページに保存しました。",
 	"mobile-frontend-talk-topic-feedback": "トークページに新しい話題が追加されました!",
+	"mobile-frontend-talk-topic-error": "不明なエラーが発生したため、話題を追加できません。",
 	"mobile-frontend-talk-topic-error-protected": "このトークページは保護されているため、あなたには話題を追加する権限がありません。",
 	"mobile-frontend-talk-topic-error-permission": "話題を追加できません。あなたにはページを編集する権限がありません。",
 	"mobile-frontend-talk-topic-error-badtoken": "サーバーでエラーが発生しました。編集内容を保存できません。このページの再読み込みをお試しください。",

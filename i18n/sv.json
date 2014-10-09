@@ -41,7 +41,7 @@
 	"mobile-frontend-diffview-title": "Ändringar",
 	"mobile-frontend-disable-images": "Inaktivera bilder på mobilsidan",
 	"mobile-frontend-dismiss-notification": "avfärda detta meddelande",
-	"mobile-frontend-donate-image-anon": "Ett $1 krävs för att visa uppladdningssidan",
+	"mobile-frontend-donate-image-anon": "Logga in för att visa uppladdningssidan.",
 	"mobile-frontend-donate-image-heading": "Dina senaste bidrag",
 	"mobile-frontend-donate-image-login": "Media på {{SITENAME}} doneras av människor som du.",
 	"mobile-frontend-donate-image-login-action": "Logga in för att dela din media.",
@@ -191,7 +191,7 @@
 	"mobile-frontend-nearby-noresults-guidance": "Prova att skapa en ny sida eller lägga till en plats till en befintlig",
 	"mobile-frontend-nearby-permission": "{{SITENAME}} i närheten har inte behörighet att komma åt din plats.",
 	"mobile-frontend-nearby-permission-guidance": "Var god kontrollera att du ger behörighet att visa var du befinner dig. Du kanske behöver kontrollera dina webbläsarinställningar.",
-	"mobile-frontend-nearby-refresh": "Vi hittade en mer exakt plats för dig. Klicka här för att uppdatera listan över närliggande sidor",
+	"mobile-frontend-nearby-refresh": "Uppdatera plats",
 	"mobile-frontend-nearby-requirements": "Tyvärr stödjer inte din webbläsare {{SITENAME}}s funktion \"Närliggande\".",
 	"mobile-frontend-nearby-requirements-guidance": "Prova en annan webbläsare eller aktivera JavaScript om du har inaktiverat det.",
 	"mobile-frontend-nearby-title": "I närheten",
@@ -269,6 +269,7 @@
 	"mobile-frontend-sign-in-heading": "Logga in",
 	"mobile-frontend-sign-in-why": "Om du har ett {{SITENAME}}konto kan du logga in nedan.",
 	"mobile-frontend-sign-up-heading": "Skapa ett konto",
+	"mobile-frontend-talk-fullpage": "Läs som wikisida",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Vad tänker du på?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Ämne",
 	"mobile-frontend-talk-add-overlay-submit": "Lägg till diskussion",
@@ -293,6 +294,7 @@
 	"mobile-frontend-user-button-tooltip": "Visa mina meddelanden",
 	"mobile-frontend-user-newmessages": "Du har nya meddelanden på din diskussionssida",
 	"mobile-frontend-user-cta": "Var god logga in eller registrera dig för att se dina meddelanden.",
+	"mobile-frontend-userlogin-loggedin-register": "Du är redan inloggad som {{GENDER:$1|$1}}.\nAnvänd formuläret nedan för att skapa ett annat konto.",
 	"mobile-frontend-username": "Användarnamn:",
 	"mobile-frontend-username-placeholder": "Användarnamn",
 	"mobile-frontend-view": "Mobilformat",
@@ -328,5 +330,7 @@
 	"tag-mobile_edit": "Mobilredigering",
 	"tag-mobile_edit-description": "Redigering gjord från mobil (webb eller app)",
 	"tag-mobile_web_edit": "Mobil webbredigering",
-	"tag-mobile_web_edit-description": "Redigering gjord från den mobila webbplatsen"
+	"tag-mobile_web_edit-description": "Redigering gjord från den mobila webbplatsen",
+	"mobile-frontend-pageaction-edit-tooltip": "Redigera huvudavsnittet på denna sida.",
+	"mobile-frontend-pageaction-upload-tooltip": "Ladda upp ett huvudfoto till denna sida."
 }
