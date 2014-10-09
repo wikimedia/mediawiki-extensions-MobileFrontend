@@ -14,7 +14,6 @@ html {
 }
 
 @bodyLineHeight: 1.4;
-@tableHeadBackgroundColor: #F2F2F2;
 
 body {
 	font-family: @fontFamily;
@@ -31,34 +30,6 @@ body {
 
 	p {
 		margin: .5em 0 1em 0;
-	}
-
-	table {
-		margin: 1em 0;
-
-		/* following 4 rules are needed for scrolling */
-		overflow: auto; /* for browsers that don't support overflow-y */
-		overflow-y: hidden;
-		overflow-x: auto;
-		display: block;
-		width: 100% !important;
-
-		td,
-		th {
-			padding: 3px;
-			border: 1px @grayLight solid;
-		}
-
-		th {
-			font-weight: bold;
-			background-color: @colorGray14;
-			text-align: center;
-		}
-
-		caption {
-			display: block;
-			text-align: left;
-		}
 	}
 }
 

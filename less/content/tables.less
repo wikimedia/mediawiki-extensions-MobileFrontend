@@ -1,0 +1,34 @@
+// Tables
+@import "mediawiki.mixins.less";
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+
+.content {
+	table {
+		margin: 1em 0;
+
+		/* following 4 rules are needed for scrolling */
+		overflow: auto; /* for browsers that don't support overflow-y */
+		overflow-y: hidden;
+		overflow-x: auto;
+		display: block;
+		width: 100% !important;
+
+		td,
+		th {
+			padding: 3px;
+			border: 1px @grayLight solid;
+		}
+
+		th {
+			font-weight: bold;
+			background-color: @colorGray14;
+			text-align: center;
+		}
+
+		caption {
+			display: block;
+			text-align: left;
+		}
+	}
+}
