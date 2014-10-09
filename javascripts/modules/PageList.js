@@ -21,7 +21,7 @@
 			this.api = new WatchstarApi( options );
 			View.prototype.initialize.apply( this, arguments );
 		},
-		template: M.template.get( 'articleList.hogan' ),
+		template: M.template.get( 'modules/articleList.hogan' ),
 		postRender: function( options ) {
 			View.prototype.postRender.apply( this, arguments );
 			var pages = [], $li = this.$( 'li' ),

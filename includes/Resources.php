@@ -339,10 +339,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/uploads/PhotoUploadOverlay.less',
 		),
 		'templates' => array(
-			'uploads/LeadPhoto.hogan',
-			'uploads/UploadTutorial.hogan',
-			'uploads/PhotoUploadOverlay.hogan',
-			'uploads/PhotoUploadProgress.hogan',
+			'modules/uploads/LeadPhoto.hogan',
+			'modules/uploads/UploadTutorial.hogan',
+			'modules/uploads/PhotoUploadOverlay.hogan',
+			'modules/uploads/PhotoUploadProgress.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-success-article',
@@ -519,7 +519,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mediaViewer/ImageOverlay.js',
 		),
 		'templates' => array(
-			'modules/ImageOverlay.hogan',
+			'modules/mediaViewer/ImageOverlay.hogan',
 		),
 		'messages' => array(
 			// mediaViewer.js
@@ -599,15 +599,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'jquery.cookie',
 		),
 		'templates' => array(
-			'wikitext/commons-upload.hogan',
+			'modules/uploads/commons-upload.hogan',
 			// SearchOverlay.js and Nearby.js
-			'articleList.hogan',
+			'modules/articleList.hogan',
 			// PhotoUploaderButton.js
 			// For new page action menu
-			'uploads/LeadPhotoUploaderButton.hogan',
+			'modules/uploads/LeadPhotoUploaderButton.hogan',
 			// @todo FIXME: this should be in special.uploads (need to split
 			// code in PhotoUploaderButton.js into separate files too)
-			'uploads/PhotoUploaderButton.hogan',
+			'modules/uploads/PhotoUploaderButton.hogan',
 
 			'ctaDrawer.hogan',
 		),
@@ -665,7 +665,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			// references.js
-			'ReferencesDrawer.hogan',
+			'modules/references/ReferencesDrawer.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/references/references.js',
@@ -799,7 +799,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 		),
 		'templates' => array(
-			'overlays/cleanup.hogan',
+			'modules/issues/cleanup.hogan',
 		),
 		'styles' => array(
 			'less/modules/issues.less',
@@ -819,7 +819,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
 		'templates' => array(
-			'overlays/pagePreview.hogan',
+			'modules/nearby/pagePreview.hogan',
 		),
 		'dependencies' => array(
 			'mobile.stable.common',
@@ -985,7 +985,7 @@ $wgMobileSpecialPageModules = array(
 			'javascripts/specials/mobileoptions.js',
 		),
 		'templates' => array(
-			'specials/mobileoptions/checkbox.hogan',
+			'specials/checkbox.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-expand-sections-description',
@@ -1053,8 +1053,8 @@ $wgMobileSpecialPageModules = array(
 			'mobile.stable'
 		),
 		'templates' => array(
-			'specials/uploads/photo.hogan',
-			'specials/uploads/userGallery.hogan',
+			'specials/photo.hogan',
+			'specials/userGallery.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-donate-image-nouploads',

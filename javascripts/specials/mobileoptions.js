@@ -2,7 +2,7 @@
 	var View = M.require( 'View' ), Checkbox;
 
 	Checkbox = View.extend( {
-		template: M.template.get( 'specials/mobileoptions/checkbox.hogan' ),
+		template: M.template.get( 'specials/checkbox.hogan' ),
 		save: function() {
 			M.settings.saveUserSetting( this.options.name, this.cb.prop( 'checked' ) ? 'true' : 'false', true );
 		},
