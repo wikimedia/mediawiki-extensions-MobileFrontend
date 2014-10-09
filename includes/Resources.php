@@ -105,6 +105,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/content/main.less',
 			'less/content/thumbnails.less',
 			'less/content/images.less',
+			'less/content/galleries.less',
 			'less/content/hacks.less',
 		),
 		'position' => 'top',

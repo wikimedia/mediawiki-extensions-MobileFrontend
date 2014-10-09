@@ -1,0 +1,40 @@
+@import "mediawiki.mixins.less";
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+// Galleries
+//
+// FIXME: Doesn't support parameters in https://en.wikipedia.org/wiki/Help:Gallery_tag */
+// See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
+//
+// Styleguide 1.4.
+ul.gallery {
+	list-style: none;
+	max-width: 100%;
+
+	.gallerybox {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 100%;
+
+		.thumb {
+			img {
+				display: block;
+			}
+		}
+
+		> div {
+			max-width: 100%;
+
+			> .thumb {
+				max-width: 100%;
+			}
+		}
+
+		.gallerytext {
+			overflow: hidden;
+			padding: 2px 4px;
+			word-wrap: break-word;
+			font-size: .8em;
+		}
+	}
+}
