@@ -214,7 +214,7 @@
 				$( el )
 					.on( 'focus', function() {
 						setTimeout( function() {
-							var keyboardHeight;
+							var keyboardHeight = 0;
 
 							// detect virtual keyboard height
 							if ( !M.isIos8 ) {
