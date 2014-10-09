@@ -1,0 +1,37 @@
+// Blockquotes
+//
+// Use the blockquote tag for quoted text.
+//
+// Markup:
+// <blockquote>In the end, it's not the years in your life that count. It's the life in your years.</blockquote>
+//
+// Styleguide 1.8.
+@import "mediawiki.mixins.less";
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+
+blockquote {
+	font-family: @fontFamilyHeading;
+	font-size: 1.1em;
+	quotes: "\201C" "\201D";
+	padding: 1em @blockquotePaddingRight 1em @blockquotePaddingLeft;
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: open-quote;
+		font-size: 3em;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&:after {
+		content: close-quote;
+		font-size: 3em;
+		line-height: 1;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
