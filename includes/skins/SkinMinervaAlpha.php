@@ -73,6 +73,8 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 				$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
 				// add hidden css class to hide talk button, when no content there. Adding content
 				// isn't possible without JS, so remove the class in talk.js
+				// FIXME: What, if the talk page uses Flow (appears as new and don't
+				// run talk.js, so it will be hidden with JS enabled)
 				$class = 'hidden icon icon-32px icon-talk';
 			}
 			$menu = $tpl->data['page_actions'];
