@@ -67,55 +67,6 @@ body {
 		margin: .5em 0 1em 0;
 	}
 
-	// Thumbnails
-	//
-	// Thumbnail images should be rendered within a thumb class
-	//
-	// Markup:
-	// <div class="content">
-	//   <div class="thumb"><img src="images/arrow-left.png"></div>
-	// </div>
-	//
-	// Styleguide 1.2.
-	.thumb {
-		margin: .6em 0;
-
-		// Linker.php
-		.thumbinner {
-			margin: 0 auto;
-			max-width: 100%;
-
-			> div {
-				float: none !important;
-				width: auto !important;
-				clear: both !important;
-			}
-		}
-
-		/* bug 20030 */
-		.noresize {
-			width: 100%;
-			overflow-x: auto;
-
-			img {
-				max-width: none !important;
-			}
-		}
-	}
-
-	.thumbcaption {
-		margin: .5em 0 0;
-		font-size: .8em;
-		line-height: 1.5;
-		padding: 0 !important;
-		color: @grayMediumDark;
-		width: auto !important;
-	}
-
-	.thumbborder {
-		border: 1px solid @colorGray12;
-	}
-
 	// Full-size images
 	//
 	// Inline and floated full-size images will be styled like so.

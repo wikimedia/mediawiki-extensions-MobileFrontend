@@ -103,6 +103,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'skins.minerva.content.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/content/main.less',
+			'less/content/thumbnails.less',
 			'less/content/hacks.less',
 		),
 		'position' => 'top',
