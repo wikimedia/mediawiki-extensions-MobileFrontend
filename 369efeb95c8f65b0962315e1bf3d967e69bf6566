@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_1fcfcdb6",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-09T18:12:56Z",
+      "side": 1,
+      "message": "missing space after comma",
+      "revId": "369efeb95c8f65b0962315e1bf3d967e69bf6566",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
