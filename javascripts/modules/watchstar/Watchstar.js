@@ -18,7 +18,7 @@
 		},
 		tagName: 'div',
 		className: 'icon icon-32px watch-this-article',
-		template: M.template.compile( '<a title="{{tooltip}}">{{tooltip}}</a>', 'hogan' ),
+		template: M.template.compile( '<a>{{tooltip}}</a>', 'hogan' ),
 		initialize: function( options ) {
 			var self = this, _super = View.prototype.initialize,
 				page = options.page;
@@ -51,6 +51,9 @@
 				checker,
 				page = options.page,
 				$el = self.$el;
+
+			// add tooltip to the div, not the <a> inside because that the <a> doesn't have dimensions
+			this.$el.attr('title', options.tooltip);
 
 			callback = function() {
 				if ( user.isAnon() ) {
