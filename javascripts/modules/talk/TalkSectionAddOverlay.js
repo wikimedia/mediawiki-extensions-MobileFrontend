@@ -74,10 +74,15 @@
 				if ( !$( this ).prop( 'disabled' ) ) {
 					self.save().done( function ( status ) {
 						if ( status === 'ok' ) {
-							M.pageApi.invalidatePage( self.title );
-							toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
-							M.emit( 'talk-discussion-added' );
-							self.hide();
+							// Check if the user was previously on the talk overlay
+							if ( options.title !== mw.config.get( 'wgPageName' ) ) {
+								M.pageApi.invalidatePage( self.title );
+								toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
+								M.emit( 'talk-discussion-added' );
+								self.hide();
+							} else {
+								M.emit( 'talk-added-wo-overlay' );
+							}
 						}
 					} ).fail( function ( error ) {
 						var editMsg = 'mobile-frontend-talk-topic-error';
