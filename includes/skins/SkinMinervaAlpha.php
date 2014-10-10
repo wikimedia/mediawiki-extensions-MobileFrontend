@@ -71,11 +71,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 				$class = MobileUI::iconClass( 'talk', 'element', 'count icon-32px' );
 			} else {
 				$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
-				// add hidden css class to hide talk button, when no content there. Adding content
-				// isn't possible without JS, so remove the class in talk.js
-				// FIXME: What, if the talk page uses Flow (appears as new and don't
-				// run talk.js, so it will be hidden with JS enabled)
-				$class = MobileUI::iconClass( 'talk', 'element', 'hidden icon-32px' );
+				$class = MobileUI::iconClass( 'talk', 'element', 'icon-32px' );
 			}
 			$menu = $tpl->data['page_actions'];
 			if ( isset( $menu['talk'] ) ) {

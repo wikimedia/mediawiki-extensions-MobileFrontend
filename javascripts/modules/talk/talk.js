@@ -24,8 +24,6 @@
 	function init() {
 		$( '#ca-talk a' ).
 			attr( 'href', '#/talk' );
-		// enable Talk button (only to hide when JS disabled)
-		$( '#ca-talk' ).removeClass( 'hidden' );
 	}
 
 	init();
