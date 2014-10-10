@@ -29,7 +29,7 @@
 	"mobile-frontend-diffview-title": "Muudatused",
 	"mobile-frontend-disable-images": "Keela mobiilivaates pildid",
 	"mobile-frontend-dismiss-notification": "ära näita seda teadet",
-	"mobile-frontend-donate-image-anon": "Üleslaadimiste lehekülje vaatamiseks on vaja $1.",
+	"mobile-frontend-donate-image-anon": "Palun logi sisse, et üleslaadimiste lehekülge vaadata.",
 	"mobile-frontend-donate-image-heading": "Sinu viimased muudatused",
 	"mobile-frontend-donate-image-login": "Meediafailid on {{GRAMMAR:illative|{{SITENAME}}}} üles laadinud sinusugused inimesed.",
 	"mobile-frontend-donate-image-login-action": "Logi sisse, et oma meediafaile jagada.",

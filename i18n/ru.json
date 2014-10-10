@@ -54,7 +54,7 @@
 	"mobile-frontend-diffview-title": "Изменения",
 	"mobile-frontend-disable-images": "Отключить изображения на мобильном сайте",
 	"mobile-frontend-dismiss-notification": "скрыть это уведомление",
-	"mobile-frontend-donate-image-anon": "Для просмотра страницы закачек требуется $1.",
+	"mobile-frontend-donate-image-anon": "Войдите, чтоб посмотреть страницу закачек.",
 	"mobile-frontend-donate-image-heading": "Ваши последние правки",
 	"mobile-frontend-donate-image-login": "Медиафайлы проекту «{{SITENAME}}» дарят такие же люди, как и вы.",
 	"mobile-frontend-donate-image-login-action": "Войдите, чтоб поделиться своими мультимедиа-файлами.",
@@ -204,7 +204,7 @@
 	"mobile-frontend-nearby-noresults-guidance": "Попробуйте создать новую страницу или добавить местоположение к уже существующей",
 	"mobile-frontend-nearby-permission": "{{SITENAME}} не имеет разрешения на доступ к определению вашего местоположения",
 	"mobile-frontend-nearby-permission-guidance": "Пожалуйста, убедитесь, что вы даёте разрешение на показ своего местоположения. Возможно, вам нужно проверить настройки определения местоположения вашего браузера.",
-	"mobile-frontend-nearby-refresh": "Мы определили ваше местоположение точнее. Нажмите здесь, чтобы обновить список ближайших страниц",
+	"mobile-frontend-nearby-refresh": "Обновить местоположение",
 	"mobile-frontend-nearby-requirements": "Извините! Ваш браузер не поддерживает работу с {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Попробуйте использовать другой браузер или включите JavaScript, если вы отключили его.",
 	"mobile-frontend-nearby-title": "Рядом",
@@ -343,5 +343,7 @@
 	"tag-mobile_edit": "Правка с моб. устройства",
 	"tag-mobile_edit-description": "Правки с мобильного устройства (через сайт или приложение)",
 	"tag-mobile_web_edit": "Правка через мобильную версию сайта",
-	"tag-mobile_web_edit-description": "Правка, сделанная через мобильную версию сайта"
+	"tag-mobile_web_edit-description": "Правка, сделанная через мобильную версию сайта",
+	"mobile-frontend-pageaction-edit-tooltip": "Редактировать ведущий раздел страницы.",
+	"mobile-frontend-pageaction-upload-tooltip": "Загрузить основное фото на эту страницу."
 }
