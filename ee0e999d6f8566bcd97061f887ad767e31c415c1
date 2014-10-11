@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_e88b9cc2",
+        "filename": "templates/modules/talk/talkFooter.hogan",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-11T17:07:25Z",
+      "side": 1,
+      "message": "ehhh",
+      "revId": "ee0e999d6f8566bcd97061f887ad767e31c415c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
