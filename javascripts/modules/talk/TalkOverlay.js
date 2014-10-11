@@ -13,7 +13,8 @@
 		 */
 		TalkOverlay = Overlay.extend( {
 			templatePartials: {
-				content: M.template.get( 'modules/talk/talk.hogan' )
+				content: M.template.get( 'modules/talk/talk.hogan' ),
+				footer: M.template.get( 'OverlayFooterLink.hogan' )
 			},
 			defaults: {
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
@@ -23,7 +24,8 @@
 					className: 'add continue hidden',
 					msg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
 				} ],
-				talkMessage: mw.msg( 'mobile-frontend-talk-fullpage' )
+				linkMsg: mw.msg( 'mobile-frontend-talk-fullpage' ),
+				linkClass: 'talk-fullpage'
 			},
 
 			postRender: function( options ) {

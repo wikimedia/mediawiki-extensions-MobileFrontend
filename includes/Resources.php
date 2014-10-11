@@ -455,6 +455,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.talk',
 			'mobile.templates',
+			'mediawiki.ui.anchor',
 		),
 		'scripts' => array(
 			'javascripts/modules/talk/TalkSectionOverlay.js',
@@ -464,6 +465,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			// talk.js
 			'modules/talk/talk.hogan',
+			'OverlayFooterLink.hogan',
 			'modules/talk/talkSectionAdd.hogan',
 			'modules/talk/talkSectionAddHeader.hogan',
 			'modules/talk/talkSection.hogan',
@@ -865,7 +867,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'modules/notifications/NotificationsOverlayContent.hogan',
-			'modules/notifications/NotificationsOverlayFooter.hogan',
+			'OverlayFooterLink.hogan',
 		),
 		'messages' => array(
 			// defined in Echo

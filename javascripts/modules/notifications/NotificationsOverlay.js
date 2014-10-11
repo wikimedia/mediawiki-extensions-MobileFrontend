@@ -12,12 +12,13 @@
 			className: 'overlay notifications-overlay navigation-drawer',
 			templatePartials: {
 				content: M.template.get( 'modules/notifications/NotificationsOverlayContent.hogan' ),
-				footer: M.template.get( 'modules/notifications/NotificationsOverlayFooter.hogan' )
+				footer: M.template.get( 'OverlayFooterLink.hogan' )
 			},
 			defaults: {
 				heading: mw.msg( 'notifications' ),
-				archiveLink: mw.util.getUrl( 'Special:Notifications' ),
-				archiveLinkMsg: mw.msg( 'echo-overlay-link' )
+				link: mw.util.getUrl( 'Special:Notifications' ),
+				linkMsg: mw.msg( 'echo-overlay-link' ),
+				linkClass: 'notifications-archive-link'
 			},
 			onError: function() {
 				// Fall back to notifications archive page.
