@@ -1,8 +1,24 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Babanwalia"
+		]
+	},
 	"mobile-frontend-back-to-top-of-section": "A ਸ਼ੈਕਸ਼ਨ ਉੱਤੇ ਵਾਪਸ ਜਾਉ",
+	"mobile-frontend-donate-image-anon": "ਚੜ੍ਹਾਈਆਂ ਦਾ ਸਫ਼ਾ ਵੇਖਣ ਵਾਸਤੇ ਦਾਖ਼ਲ ਹੋਵੋ ਜੀ।",
+	"mobile-frontend-editor-summary": "ਸਾਰ:",
 	"mobile-frontend-featured-article": "ਅੱਜ ਦੇ ਖਾਸ ਲੇਖ",
 	"mobile-frontend-home-button": "ਘਰ",
+	"mobile-frontend-meta-data-issues-talk": "ਇਸ ਗੱਲਬਾਤ ਸਫ਼ੇ ਬਾਬਤ",
+	"mobile-frontend-meta-data-issues-header-talk": "ਇਸ ਸਫ਼ੇ ਬਾਬਤ",
+	"mobile-frontend-nearby-refresh": "ਟਿਕਾਣਾ ਮੁੜ-ਤਾਜ਼ਾ ਕਰੋ",
 	"mobile-frontend-regular-site": "ਇਹ ਸਫ਼ਾ ਪੂਰੇ ਵਿਕਿਪੀਡਿਆ ਉੱਤੇ ਵੇਖੋ",
-	"mobile-frontend-search-submit": "ਜਾਓ"
+	"mobile-frontend-search-submit": "ਜਾਓ",
+	"mobile-frontend-talk-fullpage": "ਵਿਕੀ ਦੇ ਸਫ਼ੇ ਵਜੋਂ ਪੜ੍ਹੋ",
+	"mobile-frontend-talk-topic-error": "ਕਿਸੇ ਓਪਰੇ ਦੋਸ਼ ਕਰਕੇ ਇਹ ਵਿਸ਼ਾ ਜੋੜਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ।",
+	"mobile-frontend-talk-topic-error-protected": "ਇਹ ਗੱਲਬਾਤ ਸਫ਼ਾ ਸੁਰੱਖਿਅਤ ਹੈ, ਤੁਹਾਡੇ ਕੋਲ਼ ਇਸ ਵਿੱਚ ਵਿਸ਼ੇ ਜੋੜਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+	"mobile-frontend-talk-topic-error-spam": "ਇਹ ਵਿਸ਼ਾ ਮਨਜ਼ੂਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਕਿਉਂਕਿ ਇਸ ਵਿੱਚ ਕੋਈ ਫ਼ਜ਼ੂਲ ਟੋਟਾ ਸੀ।",
+	"mobile-frontend-talk-topic-error-badtoken": "ਸਰਵਰ 'ਤੇ ਕੋਈ ਦੋਸ਼ ਆ ਗਿਆ ਸੀ। ਤੁਹਾਡੀ ਸੋਧ ਸਾਂਭੀ ਨਹੀਂ ਜਾ ਸਕਦੀ। ਇਸ ਸਫ਼ੇ ਨੂੰ ਮੁੜ ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+	"mobile-frontend-pageaction-edit-tooltip": "ਇਸ ਸਫ਼ੇ ਦਾ ਅਗੇਤਰਾ ਹਿੱਸਾ ਸੋਧੋ।",
+	"mobile-frontend-pageaction-upload-tooltip": "ਇਸ ਸਫ਼ੇ 'ਤੇ ਕੋਈ ਆਗੂ ਤਸਵੀਰ ਚੜ੍ਹਾਉ।"
 }

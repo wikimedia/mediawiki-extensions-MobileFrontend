@@ -85,6 +85,7 @@
 	"mobile-frontend-editor-success-new-page": "新しいページの作成おめでとうございます ！",
 	"mobile-frontend-editor-summary-placeholder": "例：誤字修正、内容追加",
 	"mobile-frontend-editor-summary-request": "どのようにこのページを改善しましたか？",
+	"mobile-frontend-editor-summary": "要約:",
 	"mobile-frontend-editor-switch-confirm": "別の編集モードに切り替えるには、まず編集内容を保存してください。",
 	"mobile-frontend-editor-switch-editor": "エディターを切り替え",
 	"mobile-frontend-editor-tutorial-cancel": "遠慮します",

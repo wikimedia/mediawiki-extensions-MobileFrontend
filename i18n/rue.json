@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gazeb"
+			"Gazeb",
+			"Tkalyn"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Вернути ся о секцію назад",
@@ -16,7 +17,9 @@
 	"mobile-frontend-home-button": "Домів",
 	"mobile-frontend-images-status": "Образчікы",
 	"mobile-frontend-language-header": "Статя доступна в $1 {{PLURAL:$1|языцї|языках}}",
+	"mobile-frontend-language-heading": "<strong>Языкы</strong>",
 	"mobile-frontend-language-site-choose": "Гляданя языка",
+	"mobile-frontend-languages-header": "Языкы",
 	"mobile-frontend-logged-out": "Неприголошеный(а)",
 	"mobile-frontend-login": "Приголосити ся",
 	"mobile-frontend-main-menu-featured": "Выбране",
@@ -24,8 +27,6 @@
 	"mobile-frontend-main-menu-settings": "Наставлїня",
 	"mobile-frontend-main-menu-settings-heading": "Наштелёваня мобілной верзії",
 	"mobile-frontend-news-items": "Новины",
-	"mobile-frontend-off": "ВЫП",
-	"mobile-frontend-on": "ЗАП",
 	"mobile-frontend-opt-in-explain": "Припоїнём к бетатесту здобудете доступ к експеріменталным функціям, але з різіком, же трафите на хыбы і проблемы.",
 	"mobile-frontend-page-menu-contents": "обсяг",
 	"mobile-frontend-page-menu-history": "Історія",
