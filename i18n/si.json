@@ -7,7 +7,8 @@
 			"පසිඳු කාවින්ද",
 			"බිඟුවා",
 			"ශ්වෙත",
-			"Indunil Chamara"
+			"Indunil Chamara",
+			"Susith Chandira Gts"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ආරක්ෂක පාඨය ඇතුළු කරන්න",
@@ -24,6 +25,7 @@
 	"mobile-frontend-diffview-title": "වෙනස්කම්",
 	"mobile-frontend-disable-images": "ජංගම අඩවියෙහි පින්තුර අක්‍රීය කරන්න",
 	"mobile-frontend-dismiss-notification": "මෙම නිවේදනය නොසලකන්න",
+	"mobile-frontend-donate-image-anon": "උඩුගතකිරීම් පිටුව පෙන්වීම සදහා කරුණාකර ප්‍රවිෂ්ට වන්න.",
 	"mobile-frontend-donate-image-heading": "ඔබේ මෑත දායකත්වයන්",
 	"mobile-frontend-donate-image-title": "පින්තූරයක් පරිත්‍යාග කරන්න",
 	"mobile-frontend-editor-anon": "නිර්නාමිකව සංස්කරණය කරන්න",
@@ -51,13 +53,11 @@
 	"mobile-frontend-main-menu-settings": "සැකසුම්",
 	"mobile-frontend-main-menu-settings-heading": "ජංගම අඩවි සැකසුම්",
 	"mobile-frontend-main-menu-watchlist": "මුරලැයිස්තුව",
-	"mobile-frontend-mainpage-cta-prompt": "මෙම පිටුවට (වැඩි දියුණු කිරීමට) ඔබගේ උපකාරය උවමනායි.",
 	"mobile-frontend-meta-data-issues": "මෙම පිටුව සතුව සමහරක් වාදපද ඇත",
 	"mobile-frontend-meta-data-issues-header": "වාදපද",
 	"mobile-frontend-missing-image": "පිංතූරය",
+	"mobile-frontend-nearby-refresh": "ස්ථානය නැවත අලුත් කරන්න",
 	"mobile-frontend-news-items": "පුවත් වලින්",
-	"mobile-frontend-off": "අක්‍රිය",
-	"mobile-frontend-on": "සක්‍රිය",
 	"mobile-frontend-opt-in-explain": "බීටා වෙත එක් වීමෙන්, ඔබ හට දෝෂ සහ වාදපද හමුවෙන අනතුරක් වියහැකි, පරීක්ෂාත්මක මුහුණුවර වෙත ප්‍රවේශ වීමේ හැකියාව ඇත.",
 	"mobile-frontend-page-menu-contents": "අන්තර්ගතයන්",
 	"mobile-frontend-page-menu-history": "ඉතිහාසය",
