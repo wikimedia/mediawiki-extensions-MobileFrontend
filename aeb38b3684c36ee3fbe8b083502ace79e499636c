@@ -16,6 +16,24 @@
       "revId": "aeb38b3684c36ee3fbe8b083502ace79e499636c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_d686736a",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-14T22:26:21Z",
+      "side": 0,
+      "message": "I think the intention was to use the same style as the pagelist (to avoid double code).",
+      "parentUuid": "8e96e304_c6348449",
+      "revId": "aeb38b3684c36ee3fbe8b083502ace79e499636c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
