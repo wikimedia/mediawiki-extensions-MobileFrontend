@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e96e304_16193b7e",
+        "filename": "less/Overlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-14T22:19:54Z",
+      "side": 1,
+      "message": "Öhm, jap :P",
+      "parentUuid": "8e96e304_863e7c25",
+      "revId": "fc3d2945cfeb4105f11aaf5a39b92dcc209d0627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_e64c20e7",
         "filename": "less/Overlay.less",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-14T17:47:28Z",
       "side": 1,
       "message": "This rule should probably be on .overlay-footer-container",
+      "revId": "fc3d2945cfeb4105f11aaf5a39b92dcc209d0627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_3616b74e",
+        "filename": "less/Overlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-14T22:19:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e96e304_e64c20e7",
       "revId": "fc3d2945cfeb4105f11aaf5a39b92dcc209d0627",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -65,6 +101,24 @@
       "side": 1,
       "message": "Yeh these two overlays should share the same template modules/OverlayFooterLink.hogan makes sense",
       "parentUuid": "8e96e304_5b7131dc",
+      "revId": "fc3d2945cfeb4105f11aaf5a39b92dcc209d0627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_f627efaf",
+        "filename": "templates/modules/talk/talkFooter.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-14T22:19:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e96e304_a61618ab",
       "revId": "fc3d2945cfeb4105f11aaf5a39b92dcc209d0627",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
