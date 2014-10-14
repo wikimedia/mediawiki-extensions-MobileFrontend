@@ -11,11 +11,9 @@
 			if ( page.thumbnail ) {
 				thumb = page.thumbnail;
 				page.listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
-				// Note: .icon class is added in the template
-				page.pageimageClass = thumb.width > thumb.height ? 'icon-max-y' : 'icon-max-x';
+				page.pageimageClass = thumb.width > thumb.height ? 'list-thumb-y' : 'list-thumb-x';
 			} else {
-				// Note: .icon class is added in the template
-				page.pageimageClass = 'needsPhoto icon-max-x';
+				page.pageimageClass = 'list-thumb-none list-thumb-x';
 			}
 			pages[page.title] = page;
 		} );
@@ -27,7 +25,7 @@
 				page = pages[title];
 
 			if ( page ) {
-				$li.find( '.listThumb' ).addClass( page.pageimageClass )
+				$li.find( '.list-thumb' ).addClass( page.pageimageClass )
 					.attr( 'style', page.listThumbStyleAttribute );
 			}
 		} );
