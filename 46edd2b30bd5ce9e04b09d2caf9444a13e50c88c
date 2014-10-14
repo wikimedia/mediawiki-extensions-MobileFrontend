@@ -16,6 +16,24 @@
       "revId": "46edd2b30bd5ce9e04b09d2caf9444a13e50c88c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_e6d660f6",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-14T17:39:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e96e304_5b1cd16a",
+      "revId": "46edd2b30bd5ce9e04b09d2caf9444a13e50c88c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
