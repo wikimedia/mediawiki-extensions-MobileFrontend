@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_db8461a6",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-14T15:55:32Z",
+      "side": 1,
+      "message": "This comment isn\u0027t relevant any more.",
+      "revId": "32a2a25c4d395e43d1dd3cfd6d54fc321061472f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
