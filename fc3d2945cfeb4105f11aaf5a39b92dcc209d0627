@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_5b7131dc",
+        "filename": "templates/modules/talk/talkFooter.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-14T15:34:34Z",
+      "side": 1,
+      "message": "hmm, with NotificationOverlayFooter.hogan this can be an own tamplate (like OverlayFooterLink.hogan) with parameter className, link and message?!",
+      "revId": "fc3d2945cfeb4105f11aaf5a39b92dcc209d0627",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
