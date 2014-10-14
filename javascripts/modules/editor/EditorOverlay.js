@@ -11,6 +11,7 @@
 		EditorOverlay;
 
 	/**
+	 * Overlay that shows an editor
 	 * @class EditorOverlay
 	 * @extends EditorOverlayBase
 	 */

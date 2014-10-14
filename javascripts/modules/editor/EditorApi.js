@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 	var Api = M.require( 'api' ).Api, EditorApi;
 	/**
+	 * API that helps save and retrieve page content
 	 * @class EditorApi
 	 * @extends Api
 	 */

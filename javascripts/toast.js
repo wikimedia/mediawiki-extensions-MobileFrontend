@@ -2,6 +2,7 @@
 	var Drawer = M.require( 'Drawer' ), Toast;
 
 	/**
+	 * Auto-expiring notification.
 	 * @class
 	 * @extends Drawer
 	 */
