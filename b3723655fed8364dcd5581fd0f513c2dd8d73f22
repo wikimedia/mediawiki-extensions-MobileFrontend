@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_1b0f2935",
+        "filename": "templates/spinner.hogan",
+        "patchSetId": 16
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-14T14:31:52Z",
+      "side": 1,
+      "message": "I\u0027d be interested to hear your thoughts on whether the spinner should have the \"status\" ARIA role.",
+      "revId": "b3723655fed8364dcd5581fd0f513c2dd8d73f22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
