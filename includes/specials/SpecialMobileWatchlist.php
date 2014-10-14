@@ -110,12 +110,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				$conds[] = "$column = 0"; // Has to be unquoted or MySQL will filesort for wl_namespace
 				break;
 			case 'talk':
-				// @fixme associate with content namespaces? or all talks?
-				$conds[] = "$column = 1";
+				// check project talk, user talk and talk pages
+				$conds[] = "$column IN (1, 3, 5)";
 				break;
 			case 'other':
 				// @fixme
-				$conds[] = "$column IN (2, 4)";
+				$conds[] = "$column NOT IN (0, 1, 3, 5)";
 				break;
 		}
 		return $conds;
