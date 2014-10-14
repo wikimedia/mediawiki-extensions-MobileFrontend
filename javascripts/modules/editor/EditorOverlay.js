@@ -59,10 +59,10 @@
 				this.$anonWarning = this.$( '.anonwarning' );
 				this._showAnonWarning( options );
 			} else {
-				this.$( '.continue' ).on( M.tapEvent( 'click' ), $.proxy( this, '_prepareForSave' ) );
+				this.$( '.continue' ).on( 'tap', $.proxy( this, '_prepareForSave' ) );
 			}
-			this.$( '.back' ).on( M.tapEvent( 'click' ), $.proxy( this, '_hidePreview' ) );
-			this.$( '.submit' ).on( M.tapEvent( 'click' ), $.proxy( this, '_save' ) );
+			this.$( '.back' ).on( 'tap', $.proxy( this, '_hidePreview' ) );
+			this.$( '.submit' ).on( 'tap', $.proxy( this, '_save' ) );
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
 
@@ -108,8 +108,7 @@
 					mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) )
 				).parse()
 			).show();
-			this.$( '.continue' ).prop( 'disabled', false ).on(
-				M.tapEvent( 'click' ), $.proxy( this, '_showEditorafterWarning' )
+			this.$( '.continue' ).prop( 'disabled', false ).on( 'tap', $.proxy( this, '_showEditorafterWarning' )
 			);
 			this.clearSpinner();
 		},
@@ -117,8 +116,7 @@
 		_showEditorafterWarning: function() {
 			this.showSpinner();
 			this.$anonWarning.hide();
-			this.$( '.continue' ).prop( 'disabled', true ).on(
-				M.tapEvent( 'click' ), $.proxy( this, '_prepareForSave' )
+			this.$( '.continue' ).prop( 'disabled', true ).on( 'tap', $.proxy( this, '_prepareForSave' )
 			);
 			this._loadContent();
 		},

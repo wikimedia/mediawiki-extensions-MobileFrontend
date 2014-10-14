@@ -423,7 +423,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.wikigrok',
 		),
 		'scripts' => array(
-			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/languages/preferred.js',
 		),
 		'position' => 'bottom',
@@ -621,6 +620,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'ctaDrawer.hogan',
 		),
 		'scripts' => array(
+			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/routes.js',
 			'javascripts/Drawer.js',
 			'javascripts/CtaDrawer.js',

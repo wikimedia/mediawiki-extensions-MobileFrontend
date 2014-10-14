@@ -1,6 +1,4 @@
 ( function( M, $ ) {
-	var eventName = M.tapEvent( 'mouseup' );
-
 	/**
 	 * Given a heading, toggle it and any of its children
 	 *
@@ -105,8 +103,7 @@
 				'aria-haspopup': 'true',
 				'aria-controls': id
 			} )
-			// FIXME change when micro.tap.js in stable
-			.on( eventName, function( ev ) {
+			.on( 'tap', function( ev ) {
 				// prevent taps/clicks on edit button after toggling (bug 56209)
 				ev.preventDefault();
 				toggle( $( this ) );
@@ -156,7 +153,6 @@
 	} );
 
 	M.define( 'toggle', {
-		eventName: eventName,
 		reveal: reveal,
 		toggle: toggle,
 		enable: enable

@@ -54,7 +54,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 		editOverlay.show();
 		$( '#ca-edit' ).on( 'mousedown', $.proxy( editOverlay, 'hide' ) );
 		// Initialize the 'Start editing' button
-		editOverlay.$( '.actionable' ).on( M.tapEvent( 'click' ), function() {
+		editOverlay.$( '.actionable' ).on( 'tap', function() {
 			// Hide the tutorial
 			editOverlay.hide();
 			// Load the editing interface by changing the URL hash

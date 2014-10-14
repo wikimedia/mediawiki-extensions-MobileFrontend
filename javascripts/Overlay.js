@@ -60,9 +60,8 @@
 
 			// Truncate any text inside in the overlay header.
 			this.$( '.overlay-header h2 span' ).addClass( 'truncated-text' );
-			// FIXME change when micro.tap.js in stable
 			// FIXME: Remove .initial-header selector when bug 71203 resolved.
-			this.$( '.cancel, .confirm, .initial-header .back' ).on( M.tapEvent( 'click' ), function( ev ) {
+			this.$( '.cancel, .confirm, .initial-header .back' ).on( 'tap', function( ev ) {
 				ev.preventDefault();
 				ev.stopPropagation();
 				if ( self.closeOnBack ) {
@@ -73,7 +72,7 @@
 			} );
 			// stop clicks in the overlay from propagating to the page
 			// (prevents non-fullscreen overlays from being closed when they're tapped)
-			this.$el.on( M.tapEvent( 'click' ), function( ev ) {
+			this.$el.on( 'tap', function( ev ) {
 				ev.stopPropagation();
 			} );
 
@@ -136,7 +135,7 @@
 			}
 
 			if ( this.closeOnContentTap ) {
-				$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ), $.proxy( this, 'hide' ) );
+				$( '#mw-mf-page-center' ).one( 'tap', $.proxy( this, 'hide' ) );
 			}
 
 			// prevent scrolling and bouncing outside of .overlay-content

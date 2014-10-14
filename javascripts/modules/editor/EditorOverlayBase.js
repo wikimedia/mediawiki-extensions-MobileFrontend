@@ -158,7 +158,7 @@
 			this.log( 'attempt' );
 
 			// FIXME: This should be .close (see bug 71203)
-			this.$( '.back' ).eq( 0 ).on( M.tapEvent( 'click' ), function() {
+			this.$( '.back' ).eq( 0 ).on( 'tap', function() {
 				// log cancel attempt
 				self.log( 'cancel' );
 			} );

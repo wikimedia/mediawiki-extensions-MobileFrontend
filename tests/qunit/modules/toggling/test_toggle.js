@@ -65,7 +65,7 @@ QUnit.test( 'Mouseup on a heading toggles it', 2, function() {
 
 	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
-	$( '#section_1' ).trigger( M.tapEvent( 'mouseup' ) );
+	$( '#section_1' ).trigger( 'tap' );
 
 	strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown on a toggle' );
 } );
@@ -80,13 +80,13 @@ QUnit.test( 'Verify aria attributes', 9, function () {
 	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start' );
 
 	// Test what the toggle() function gives us when hiding the section
-	$section.trigger( M.tapEvent( 'mouseup' ) );
+	$section.trigger( 'tap' );
 	strictEqual( $content.hasClass( 'open-block' ), true, 'check content is visible after toggling' );
 	strictEqual( $content.attr( 'aria-pressed' ), 'true', 'check aria-pressed is true after toggling' );
 	strictEqual( $content.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling' );
 
 	// Test what the toggle() function gives us when showing the section
-	$section.trigger( M.tapEvent( 'mouseup' ) );
+	$section.trigger( 'tap' );
 	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after toggling' );
 	strictEqual( $content.attr( 'aria-pressed' ), 'false', 'check aria-pressed is false after toggling' );
 	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );

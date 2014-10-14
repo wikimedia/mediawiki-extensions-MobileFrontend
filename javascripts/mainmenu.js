@@ -25,14 +25,10 @@
 	}
 
 	function initialize() {
-		// FIXME: duplicate code in application.js which is not available here.
-		var tapEvent = M.isBetaGroupMember() ? 'tap' : 'click';
-
 		// make the input readonly to avoid accidental focusing when closing menu
 		// (when JS is on, this input should not be used for typing anyway)
 		$( '#searchInput' ).prop( 'readonly', true );
-		// FIXME change when micro.tap.js in stable
-		$( '#mw-mf-main-menu-button' ).on( tapEvent, function( ev ) {
+		$( '#mw-mf-main-menu-button' ).on( 'tap', function( ev ) {
 			if ( isOpen() ) {
 				closeNavigationDrawers();
 			} else {
@@ -40,13 +36,10 @@
 			}
 			ev.preventDefault();
 			ev.stopPropagation();
-		// Hack: See bug 64669 iOS has a hover bug
-		// Adding an empty touchend event seems to fix this
-		// FIXME: Remove when using tapEvent in stable
-		} ).on( 'touchend', function() {} );
+		} );
 
 		// close navigation if content tapped
-		$( '#mw-mf-page-center' ).on( tapEvent, function(ev) {
+		$( '#mw-mf-page-center' ).on( 'tap', function(ev) {
 			if ( isOpen() ) {
 				closeNavigationDrawers();
 				ev.preventDefault();

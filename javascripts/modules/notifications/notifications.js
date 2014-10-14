@@ -28,7 +28,7 @@
 	// Once the DOM is loaded hijack the notifications button to display an overlay rather
 	// than linking to Special:Notifications.
 	$( function () {
-		$btn.on( M.tapEvent( 'click' ), function() {
+		$btn.on( 'tap', function() {
 			M.router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay
@@ -55,7 +55,7 @@
 					$( '#mw-mf-page-center' ).off( '.secondary' );
 				});
 
-				$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.secondary', function() {
+				$( '#mw-mf-page-center' ).one( 'tap.secondary', function() {
 					M.router.back();
 				} );
 			} );

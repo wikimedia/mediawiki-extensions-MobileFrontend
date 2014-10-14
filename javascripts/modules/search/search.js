@@ -9,7 +9,7 @@
 	// focus() (see SearchOverlay#show) opens virtual keyboard only if triggered
 	// from user context event, so using it in route callback won't work
 	// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
-	$( '#searchInput' ).on( M.tapEvent( 'touchend mouseup' ), function() {
+	$( '#searchInput' ).on( 'tap', function() {
 		new SearchOverlay( { searchTerm: $( this ).val() } ).show();
 		M.router.navigate( '/search' );
 	} );

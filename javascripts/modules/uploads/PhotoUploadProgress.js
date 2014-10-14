@@ -19,7 +19,7 @@
 
 		postRender: function() {
 			Overlay.prototype.postRender.apply( this, arguments );
-			this.$( '.submit' ).on( M.tapEvent( 'click' ), $.proxy( this, 'emit', 'submit' ) );
+			this.$( '.submit' ).on( 'tap', $.proxy( this, 'emit', 'submit' ) );
 		},
 
 		showAbuseFilter: function( type, message ) {
