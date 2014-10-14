@@ -16,6 +16,24 @@
       "revId": "32a2a25c4d395e43d1dd3cfd6d54fc321061472f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_66fa5075",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-14T17:40:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e96e304_db8461a6",
+      "revId": "32a2a25c4d395e43d1dd3cfd6d54fc321061472f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
