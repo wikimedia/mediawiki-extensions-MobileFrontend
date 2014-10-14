@@ -238,7 +238,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		);
 		$prev = $this->rev->getPrevious();
 		$next = $this->rev->getNext();
-		if ( $ctx->isBetaGroupMember() && (  $prev || $next ) ) {
+		if ( $prev || $next ) {
 			$history = Html::openElement( 'ul', array( 'class' => 'hlist revision-history-links' ) );
 			if ( $prev ) {
 				$history .= Html::openElement( 'li' ) .
