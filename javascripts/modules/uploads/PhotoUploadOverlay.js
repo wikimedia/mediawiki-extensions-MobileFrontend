@@ -3,7 +3,6 @@
 	var popup = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		Overlay = M.require( 'Overlay' ),
-		Page = M.require( 'Page' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
 		PhotoUploadProgress = M.require( 'modules/uploads/PhotoUploadProgress' ),
@@ -95,17 +94,14 @@
 				};
 
 			this.api.save( saveOptions ).done( function( fileName, descriptionUrl ) {
-				var title = self.options.pageTitle;
-
 				self.progressPopup.hide( true );
 
 				self.log( { action: 'success' } );
 				if ( self.options.insertInPage ) {
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
 
-					// FIXME: add helper M.refreshPage function
-					M.pageApi.invalidatePage( title );
-					new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
+					// reload the page
+					window.location.reload();
 				} else {
 					// FIXME: handle Special:Uploads case - find more generic way of doing this
 					M.emit( '_file-upload', {

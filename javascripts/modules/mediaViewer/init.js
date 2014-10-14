@@ -33,11 +33,8 @@
 	}
 	M.overlayManager.add( /^\/image\/(.+)$/, loadImageOverlay );
 
-	// FIXME: this should bind to only 1-2 events
 	init( $( '#content_wrapper' ) );
-	M.on( 'page-loaded', function( page ) {
-		init( page.$el );
-	} );
+	// for Special:Uploads
 	M.on( 'photo-loaded', init );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -43,9 +43,6 @@
 
 	if ( isSupported ) {
 		$( initialize );
-		M.on( 'page-loaded', function() {
-			initialize();
-		} );
 	}
 
 	M.define( 'modules/uploads/_leadphoto', {

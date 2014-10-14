@@ -73,9 +73,6 @@ var module = (function() {
 	}
 
 	initPageIssues();
-	M.on( 'page-loaded', function() {
-		initPageIssues();
-	} );
 	M.on( 'edit-preview', function( overlay ) {
 		initPageIssues( overlay.$el );
 	} );

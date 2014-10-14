@@ -255,7 +255,6 @@
 		$( loadWideScreenModules );
 		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
 		M.on( 'resize', loadWideScreenModules );
-		loadCurrentPage();
 	}
 
 	/**
@@ -350,31 +349,6 @@
 	}
 
 	/**
-	 * Sets the JavaScript configuration and HTML environment for a given page
-	 * Emits a page-loaded event that modules can subscribe to, so that they can
-	 * re-initialize
-	 *
-	 * @method
-	 */
-	function reloadPage( page ) {
-		currentPage = page;
-		var parts = page.title.split( ':' );
-
-		// VisualEditor amongst other things relies on these variables to reflect current state of document
-		// FIXME: Why are there so many of these!?
-		// wgTitle does not have a namespace prefix. e.g. Talk:Foo -> Foo, Foo -> Foo
-		mw.config.set( 'wgTitle', parts[1] || parts[0] );
-		// wgPageName has namespace prefix
-		mw.config.set( 'wgPageName', page.title.replace( / /g, '_' ) );
-		mw.config.set( 'wgRelevantPageName', page.title );
-		mw.config.set( 'wgArticleId', page.getId() );
-		mw.config.set( 'wgRevisionId', page.getRevisionId() );
-		M.emit( 'page-loaded', page );
-		// Update page title with the displayTitle
-		document.title = page.displayTitle;
-	}
-
-	/**
 	 *
 	 * @method
 	 * @return {Boolean}
@@ -389,8 +363,11 @@
 	 * @return {Page}
 	 */
 	function getCurrentPage() {
-		// FIXME: Currently returns undefined when a page has not been rendered via JavaScript
-		return currentPage;
+		if ( currentPage ) {
+			return currentPage;
+		} else {
+			return loadCurrentPage();
+		}
 	}
 
 	/**
@@ -415,9 +392,11 @@
 			},
 			lead: getLeadSection().html(),
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
+			isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
 			sections: pageApi.getSectionsFromHTML( $( '#content' ) ),
 			id: mw.config.get( 'wgArticleId' )
 		} );
+		return currentPage;
 	}
 
 	$.extend( M, {
@@ -431,7 +410,6 @@
 		isWideScreen: isWideScreen,
 		lockViewport: lockViewport,
 		log: log,
-		reloadPage: reloadPage,
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
 		isIos: isIos,

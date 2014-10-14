@@ -34,6 +34,5 @@
 	}
 
 	$( initButton );
-	M.on( 'page-loaded', initButton );
 
 }( mw.mobileFrontend, jQuery ) );
