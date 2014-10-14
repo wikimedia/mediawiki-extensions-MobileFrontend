@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_c6348449",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-14T17:49:40Z",
+      "side": 0,
+      "message": "Why is Talk Overlay using a page list? It shouldn\u0027t be... it\u0027s a list of headings not pages.",
+      "revId": "aeb38b3684c36ee3fbe8b083502ace79e499636c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
