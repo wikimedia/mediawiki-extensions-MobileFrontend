@@ -16,6 +16,24 @@
       "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_5ddefe71",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-15T17:55:01Z",
+      "side": 1,
+      "message": "I think browsers only support the first role. I think only the headline, not its wrapper should be \u0027button\u0027.",
+      "parentUuid": "ce8c5bf9_501a2a7f",
+      "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
