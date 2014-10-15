@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_fda26aa3",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T18:17:53Z",
+      "side": 1,
+      "message": "Note for future- we might want to explore using jquery.throttle-debounce in core for this.\nMaybe add a FIXME to that effect\n\nIt\u0027s also probably better here since it\u0027s a function to define it inline\ne.g.\nfunction keyDownThrottle() {\n}",
+      "revId": "d945a3d97608df0b08417e9c8521ce293c32b4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_dd91ae53",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T18:17:53Z",
+      "side": 1,
+      "message": "Whitespace needed around parameters",
+      "revId": "d945a3d97608df0b08417e9c8521ce293c32b4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_7d865a1a",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T18:17:53Z",
+      "side": 1,
+      "message": "Whitespace needed around parameters for outerHeight\n\nAlso this line is a little long I\u0027d recommend caching the variable to make the if statement easier to read.",
+      "revId": "d945a3d97608df0b08417e9c8521ce293c32b4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_ddb76ed2",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T18:17:53Z",
+      "side": 1,
+      "message": "Make this smaller. In current form the delay is far too long and it looks strange. 0 should be fine.",
+      "revId": "d945a3d97608df0b08417e9c8521ce293c32b4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
