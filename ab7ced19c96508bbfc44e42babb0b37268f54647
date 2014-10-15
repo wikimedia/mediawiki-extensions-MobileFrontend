@@ -34,6 +34,24 @@
       "revId": "ab7ced19c96508bbfc44e42babb0b37268f54647",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_6226b5cb",
+        "filename": "templates/modules/editor/AbuseFilterOverlay.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:26:51Z",
+      "side": 1,
+      "message": "Yeh this is a little confusing and probably needs to be rethought. Maybe ask one of the designers. It\u0027s kind of progressive but doesn\u0027t take you to a place you can resolve the issue so I think neutral is probably correct here. It\u0027s a sad overlay to end up on.\n\nGet some consensus on the bug and then let\u0027s revisit this bug.\n\n(For background phuedx the cancel class is used to cancel the overlay. We might want to rethink the class name since it is confusing in this context)",
+      "parentUuid": "8e96e304_876af3af",
+      "revId": "ab7ced19c96508bbfc44e42babb0b37268f54647",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
