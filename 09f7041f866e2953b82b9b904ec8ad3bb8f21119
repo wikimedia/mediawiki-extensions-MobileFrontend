@@ -33,6 +33,23 @@
       "revId": "09f7041f866e2953b82b9b904ec8ad3bb8f21119",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_82cd0137",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-15T17:01:38Z",
+      "side": 1,
+      "message": "Suggestion: In addition to throttling, set the value to $overlayHeader in your if keyCode block.",
+      "revId": "09f7041f866e2953b82b9b904ec8ad3bb8f21119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
