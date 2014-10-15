@@ -32,7 +32,6 @@ $specialPageAliases['af'] = array(
 /** Arabic (العربية) */
 $specialPageAliases['ar'] = array(
 	'History' => array( 'تاريخ' ),
-	'MobileWebApp' => array( 'تطبيق_ويب_المحمول' ),
 	'MobileOptions' => array( 'خيارات_المحمول' ),
 	'Uploads' => array( 'مرفوعات' ),
 	'MobileDiff' => array( 'فرق_المحمول' ),
@@ -46,7 +45,6 @@ $specialPageAliases['ar'] = array(
 /** Egyptian Spoken Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'History' => array( 'تاريخ' ),
-	'MobileWebApp' => array( 'تطبيق_ويب_الموبايل' ),
 	'MobileOptions' => array( 'خيارات_الموبايل' ),
 	'Uploads' => array( 'مرفوعات' ),
 	'MobileDiff' => array( 'فرق_الموبايل' ),
@@ -79,7 +77,6 @@ $specialPageAliases['ce'] = array(
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'History' => array( 'Versionsgeschichte' ),
-	'MobileWebApp' => array( 'Mobile_Webanwendung' ),
 	'MobileOptions' => array( 'Mobile_Optionen' ),
 	'Uploads' => array( 'Hochgeladene_Dateien' ),
 	'MobileDiff' => array( 'Mobiler_Unterschied' ),
@@ -93,7 +90,6 @@ $specialPageAliases['de'] = array(
 /** Zazaki (Zazaki) */
 $specialPageAliases['diq'] = array(
 	'History' => array( 'Tarix' ),
-	'MobileWebApp' => array( 'MobilWebDezge' ),
 	'MobileOptions' => array( 'MobilWeçenegi' ),
 	'Uploads' => array( 'Barkerdışi' ),
 	'MobileDiff' => array( 'MobilVer' ),
@@ -135,7 +131,6 @@ $specialPageAliases['et'] = array(
 /** Persian (فارسی) */
 $specialPageAliases['fa'] = array(
 	'History' => array( 'تاریخچه' ),
-	'MobileWebApp' => array( 'برنامه_وبی_گوشی_همراه' ),
 	'MobileOptions' => array( 'گزینه‌های_گوشی_همراه' ),
 	'Uploads' => array( 'بارگذاری‌ها' ),
 	'MobileDiff' => array( 'تفاوت_گوشی_همراه' ),
@@ -156,7 +151,6 @@ $specialPageAliases['gl'] = array(
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = array(
 	'History' => array( 'היסטוריה' ),
-	'MobileWebApp' => array( 'יישום_וב_נייד' ),
 	'MobileOptions' => array( 'הגדרות_נייד', 'הגדרות_פלאפון', 'הגדרות_סלולרי' ),
 	'Uploads' => array( 'העלאות' ),
 	'MobileDiff' => array( 'השוואה_ניידת' ),
@@ -175,7 +169,6 @@ $specialPageAliases['hi'] = array(
 /** Upper Sorbian (hornjoserbsce) */
 $specialPageAliases['hsb'] = array(
 	'History' => array( 'Stawizny' ),
-	'MobileWebApp' => array( 'Mobilne_webnałoženje' ),
 	'MobileOptions' => array( 'Mobilne_opcije' ),
 	'Uploads' => array( 'Nahrate_dataje' ),
 	'MobileDiff' => array( 'Mobilny_rozdźěl' ),
@@ -215,7 +208,6 @@ $specialPageAliases['ja'] = array(
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
 	'History' => array( '역사' ),
-	'MobileWebApp' => array( '모바일웹앱' ),
 	'MobileOptions' => array( '모바일설정' ),
 	'Uploads' => array( '올린파일' ),
 	'MobileDiff' => array( '모바일차이' ),
@@ -229,7 +221,6 @@ $specialPageAliases['ko'] = array(
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
 	'History' => array( 'Versiounen' ),
-	'MobileWebApp' => array( 'Mobil_Webapplikatioun' ),
 	'MobileOptions' => array( 'Mobil_Optiounen' ),
 	'Uploads' => array( 'Eropgeluede_Fichieren' ),
 	'MobileDiff' => array( 'Mobilen_Ënnerscheed' ),
@@ -248,7 +239,6 @@ $specialPageAliases['lzh'] = array(
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'History' => array( 'Историја' ),
-	'MobileWebApp' => array( 'МобиленСемреженПрилог' ),
 	'MobileOptions' => array( 'МобилниПоставки' ),
 	'Uploads' => array( 'Подигања' ),
 	'MobileDiff' => array( 'МобилнаРазлика' ),
@@ -262,7 +252,6 @@ $specialPageAliases['mk'] = array(
 /** Malayalam (മലയാളം) */
 $specialPageAliases['ml'] = array(
 	'History' => array( 'ഹിസ്റ്ററി' ),
-	'MobileWebApp' => array( 'മൊബൈൽവെബ്ആപ്' ),
 	'MobileOptions' => array( 'മൊബൈൽഐച്ഛികങ്ങൾ' ),
 	'Uploads' => array( 'അപ്‌ലോഡുകൾ' ),
 	'MobileDiff' => array( 'മൊബൈൽവ്യത്യാസം' ),
@@ -355,7 +344,6 @@ $specialPageAliases['uk'] = array(
 /** Vietnamese (Tiếng Việt) */
 $specialPageAliases['vi'] = array(
 	'History' => array( 'Lịch_sử' ),
-	'MobileWebApp' => array( 'Ứng_dụng_Web_di_động', 'Ứng_dụng_di_động_Web' ),
 	'MobileOptions' => array( 'Tùy_chọn_di_động' ),
 	'Uploads' => array( 'Tập_tin_tải_lên' ),
 	'MobileDiff' => array( 'So_sánh_di_động' ),
@@ -369,7 +357,6 @@ $specialPageAliases['vi'] = array(
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'History' => array( '历史' ),
-	'MobileWebApp' => array( '移动网页App' ),
 	'MobileOptions' => array( '移动版选项' ),
 	'Uploads' => array( '上传' ),
 	'MobileDiff' => array( '移动版差异' ),
@@ -383,7 +370,6 @@ $specialPageAliases['zh-hans'] = array(
 /** Traditional Chinese (中文（繁體）‎) */
 $specialPageAliases['zh-hant'] = array(
 	'History' => array( '歷史' ),
-	'MobileWebApp' => array( '行動網頁App' ),
 	'MobileOptions' => array( '行動版選項' ),
 	'Uploads' => array( '上載' ),
 	'MobileDiff' => array( '行動版差異' ),
@@ -392,9 +378,4 @@ $specialPageAliases['zh-hant'] = array(
 	'MobileLanguages' => array( '行動版語言' ),
 	'Nearby' => array( '附近' ),
 	'UserProfile' => array( '使用者資訊' ),
-);
-
-/** Chinese (Hong Kong) (中文（香港）‎) */
-$specialPageAliases['zh-hk'] = array(
-	'MobileWebApp' => array( '流動網頁App' ),
 );

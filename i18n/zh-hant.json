@@ -249,7 +249,7 @@
 	"mobile-frontend-profile-noargs": "未提供使用者名稱。請提供使用者名稱以檢視使用者基本資料。",
 	"mobile-frontend-profile-nouser": "使用此名稱的使用者不存在。 使用者名稱區分大小寫，請檢查是否輸入正確。",
 	"mobile-frontend-profile-title": "使用者基本資料",
-	"mobile-frontend-profile-userpage-link": "造訪{{GENDER:$1|使用者}}頁面。",
+	"mobile-frontend-profile-userpage-link": "造訪{{GENDER:$1|使用者}}頁面",
 	"mobile-frontend-profile-usertalk": "與 $1 對話",
 	"mobile-frontend-random-button": "隨機",
 	"mobile-frontend-regular-site": "電腦版檢視",
