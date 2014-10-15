@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "8e96e304_78ce68bb",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-15T19:16:20Z",
+      "side": 1,
+      "message": "So since expanded sections are related to pages, I think it\u0027s logical and necessary to rely on the page object. I believe I need to improve the tests and make sure that the page object exists in tests too.",
+      "parentUuid": "8e96e304_9dfc86d7",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_5d335ef3",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 15
@@ -138,6 +156,24 @@
       "side": 1,
       "message": "saveUserSetting checks for localStorage support.",
       "parentUuid": "8e96e304_7d3dfa89",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_18bf24f8",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-15T19:16:20Z",
+      "side": 1,
+      "message": "So there is a shim for JSON.stringify as James pointed out: https://www.mail-archive.com/wikitech-l%40lists.wikimedia.org/msg78108.html",
+      "parentUuid": "8e96e304_fdf4aabb",
       "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
