@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_c586b018",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T21:51:20Z",
+      "side": 1,
+      "message": "... but why is it covered? What causes that to happen?",
+      "revId": "e94c14996be82acef0c9448b60f4cc6aa79ae610",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_2592f457",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T21:51:20Z",
+      "side": 1,
+      "message": "Oh wait. You can do self.$( \u0027.overlay-header-container\u0027 ) here.",
+      "revId": "e94c14996be82acef0c9448b60f4cc6aa79ae610",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
