@@ -16,6 +16,24 @@
       "revId": "ab7ced19c96508bbfc44e42babb0b37268f54647",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_876af3af",
+        "filename": "templates/modules/editor/AbuseFilterOverlay.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-15T14:02:36Z",
+      "side": 1,
+      "message": "Also, why does a confirmation button (implied by \"confirmMessage\") have a class called \"cancel\"?",
+      "parentUuid": "8e96e304_a91b4881",
+      "revId": "ab7ced19c96508bbfc44e42babb0b37268f54647",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
