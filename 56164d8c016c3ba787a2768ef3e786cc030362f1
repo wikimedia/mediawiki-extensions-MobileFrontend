@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8e96e304_9dfc86d7",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:55:18Z",
+      "side": 1,
+      "message": "That sounds like another bug. There\u0027s no reason it shouldn\u0027t.\n\nYou should probably pass title as a parameter to all the functions anyway and not rely on the page object.",
+      "parentUuid": "8e96e304_5db03e3e",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_5d335ef3",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 15
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Or maybe use json2? https://github.com/douglascrockford/JSON-js",
       "parentUuid": "8e96e304_5d335ef3",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_ddf20e03",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:55:18Z",
+      "side": 1,
+      "message": "I think json2 might be overkill. I\u0027d rather we just didn\u0027t give the functionality. It\u0027s not essential.",
+      "parentUuid": "8e96e304_bd862269",
       "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -153,6 +189,24 @@
       "side": 1,
       "message": "This is also two lines. Why is the above not good?",
       "parentUuid": "8e96e304_9d6fa6c0",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_1de8760a",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:55:18Z",
+      "side": 1,
+      "message": "This is 3 lines ;-)\n\nPersonally I feel using an if statements that simply set undefined variables is wrong when you can use the || syntax. I just find those easier to understand when skimming through code.\n\nAlso the repetition of expandedSections[currentPageTitle] becomes more readable when dealing with a single variable.",
+      "parentUuid": "8e96e304_3d9a12be",
       "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
