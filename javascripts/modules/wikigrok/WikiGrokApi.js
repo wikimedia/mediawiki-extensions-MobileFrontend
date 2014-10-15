@@ -5,7 +5,7 @@
 	 * @extends Api
 	 */
 	WikiGrokApi = Api.extend( {
-		apiUrl: 'https://tools.wmflabs.org/wikigrok/api.php',
+		apiUrl: 'https://tools.wmflabs.org/wikigrok/api2.php',
 		useJsonp: true,
 
 		initialize: function( options ) {
@@ -14,18 +14,33 @@
 			this.version = options.version;
 			Api.prototype.initialize.apply( this, arguments );
 		},
-		recordOccupation: function( occupationId, occupation, claimIsCorrect ) {
+		/**
+		 * Saves claims to the wikigrok api server
+		 * @method
+		 * @param {array} claims a list of claims. Each claim must have correct, prop, propid, value and valueid set
+		 * @return {jQuery.Deferred}
+		 */
+		recordClaims: function( claims ) {
 			return this.ajax( {
 					action: 'record_answer',
 					subject_id: this.subjectId,
 					subject: this.subject,
-					occupation_id: occupationId,
-					occupation: occupation,
+					claims: JSON.stringify( claims ),
 					page_name: mw.config.get( 'wgPageName' ),
-					correct: claimIsCorrect,
 					user_id: mw.user.getId(),
 					source: 'mobile ' + this.version
 				} );
+		},
+		recordOccupation: function( occupationId, occupation, claimIsCorrect ) {
+			var claim = {
+				correct: claimIsCorrect,
+				prop: 'occupation',
+				propid: 'P106',
+				value: occupation,
+				valueid: occupationId
+			};
+
+			return this.recordClaims( [ claim ] );
 		},
 		getPossibleOccupations: function() {
 			return this.ajax( {

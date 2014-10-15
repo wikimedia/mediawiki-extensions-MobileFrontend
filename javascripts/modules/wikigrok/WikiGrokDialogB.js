@@ -37,35 +37,35 @@
 								hasOccupation: 'Profession:'
 							};
 
-						$.each( claims, function( key, claim ) {
-							var btnLabel, choice, $chk,
-								id = 'chk-' + key;
-							if ( !claim && suggestions[key] !== undefined ) {
-								choice = self.chooseRandomItemFromArray( suggestions[key] );
-								self.apiWikiData.getLabel( choice ).done( function( label ) {
-									// oohhh let's find a claim and some suggestions
-									$chk = $( '<div class="ui-checkbox-button mw-ui-button">' ).
-										on( 'click', function() {
-											var $chkBox = $( this ).find( 'input' );
-											$chkBox.prop( 'checked', !$chkBox.prop( 'checked' ) );
-											setTimeout( function() {
-												self.$save.prop( 'disabled', self.$( '.initial-pane input:checked' ).length === 0 );
-											}, 100 );
-										} ).appendTo( self.$( '.wg-buttons' ) );
+						$.each( claims, function( key ) {
+							if ( suggestions[key] !== undefined ) {
+								self.apiWikiData.getLabels( suggestions[key] ).done( function( labels ) {
+									$.each( labels, function( itemId, label ) {
+										var btnLabel, $chk,
+											id = 'chk-' + key + '-' + itemId;
 
-									$( '<input type="checkbox">' ).
-										attr( 'id', id ).
-										data( 'choice', choice ).
-										data( 'readable', label ).
-										appendTo( $chk );
+										$chk = $( '<div class="ui-checkbox-button mw-ui-button">' ).
+											on( 'click', function() {
+												var $chkBox = $( this ).find( 'input' );
+												$chkBox.prop( 'checked', !$chkBox.prop( 'checked' ) );
+												setTimeout( function() {
+													self.$save.prop( 'disabled', self.$( '.initial-pane input:checked' ).length === 0 );
+												}, 100 );
+											} ).appendTo( self.$( '.wg-buttons' ) );
 
-									$( '<label>' ).
-										text( questions[key] ).appendTo( $chk );
+										$( '<input type="checkbox">' ).
+											attr( 'id', id ).
+											data( 'itemId', itemId ).
+											data( 'readable', label ).
+											appendTo( $chk );
 
-									$( '<label>' ).
-										text( label ).
-										html( btnLabel ).appendTo( $chk );
+										$( '<label>' ).
+											text( questions[key] ).appendTo( $chk );
 
+										$( '<label>' ).
+											text( label ).
+											html( btnLabel ).appendTo( $chk );
+									} );
 
 									self.$( '.spinner' ).hide();
 									self.show();
@@ -79,17 +79,17 @@
 			this.$save.on( 'click', function() {
 				var answers = [];
 				self.$( '.ui-checkbox-button input:checked' ).hide().each( function() {
-					answers.push( [
-						$( this ).data( 'choice' ),
-						$( this ).data( 'readable' ),
-						true
-					] );
+					answers.push( {
+						correct: true,
+						prop: 'occupation',
+						propid: 'P106',
+						value: $( this ).data( 'readable' ),
+						valueid: $( this ).data( 'itemId' )
+					} );
 				} );
 				$( this ).hide();
 				self.$( '.spinner' ).show();
-				// FIXME: This only saves the answer to the occupation question. We'll need to rethink this api
-				// as soon as there are multiple choices.
-				self.apiWikiGrok.recordOccupation.apply( self.apiWikiGrok, answers[0] ).done( function() {
+				self.apiWikiGrok.recordClaims( answers ).done( function() {
 					self.$( '.spinner' ).hide();
 					self.$( '.initial-pane' ).hide();
 					self.$( '.final-pane' ).show();

@@ -68,8 +68,10 @@
 				options.occupationId = this.chooseRandomItemFromArray( occupationArray );
 
 				// Get the name of the occupation from Wikidata.
-				self.apiWikiData.getLabel( options.occupationId ).done( function( label ) {
-					var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
+				self.apiWikiData.getLabels( [ options.occupationId ] ).done( function( labels ) {
+					var vowels = [ 'a', 'e', 'i', 'o', 'u' ],
+						label = labels[options.occupationId];
+
 					if ( label ) {
 						// Re-render with new content for 'Question' step
 						options.beginQuestions = true;

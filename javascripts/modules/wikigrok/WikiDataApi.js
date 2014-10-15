@@ -7,6 +7,7 @@
 	WikiDataApi = Api.extend( {
 		apiUrl: 'https://www.wikidata.org/w/api.php',
 		useJsonp: true,
+		language: 'en',
 
 		initialize: function( options ) {
 			this.subjectId = options.itemId;
@@ -45,22 +46,26 @@
 		 * Get labels for an item from Wikidata
 		 * See: https://www.wikidata.org/wiki/Help:Label
 		 *
-		 * @param {int} itemId for item in Wikidata
+		 * @param {array} itemIds for items in Wikidata
 		 * @return {jQuery.Deferred} Object returned by ajax call
 		 */
-		getLabel: function( itemId ) {
+		getLabels: function( itemIds ) {
+			var lang = this.language;
 			return this.ajax( {
 					action: 'wbgetentities',
 					props: 'labels',
-					// FIXME: change this to a parameter
-					languages: 'en',
-					ids: itemId
+					languages: lang,
+					ids: itemIds
 				} ).then( function( data ) {
-					if ( data.entities[itemId].labels.en.value !== undefined ) {
-						return data.entities[itemId].labels.en.value;
-					} else {
-						return false;
-					}
+					var map = {};
+					$.each( itemIds, function( i, itemId ) {
+						if ( data.entities[itemId].labels[lang].value !== undefined ) {
+							map[itemId] = data.entities[itemId].labels[lang].value;
+						} else {
+							map[itemId] = null;
+						}
+					} );
+					return map;
 				} );
 		}
 	} );
