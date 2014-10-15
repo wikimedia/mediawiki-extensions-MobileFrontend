@@ -6,6 +6,7 @@
 		EditorOverlayBase;
 
 	/**
+	 * Base class for EditorOverlay
 	 * @extends Overlay
 	 * @class EditorOverlayBase
 	 */

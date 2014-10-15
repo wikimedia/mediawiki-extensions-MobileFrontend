@@ -4,6 +4,11 @@
 		AbuseFilterOverlay = M.require( 'modules/editor/AbuseFilterOverlay' ),
 		AbuseFilterPanel;
 
+	/**
+	 * Panel that shows an error message related to the abusefilter extension.
+	 * @class AbuseFilterPanel
+	 * @extends View
+	 */
 	AbuseFilterPanel = View.extend( {
 		defaults: {
 			readMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
