@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_e21ba5d2",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T16:57:10Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "09f7041f866e2953b82b9b904ec8ad3bb8f21119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_422a99d8",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T16:57:10Z",
+      "side": 1,
+      "message": "Can you document why this is here?\nAlso I\u0027m a little worried about this. This will fire an event for every single key press. This could cause some performance issues due to the height calculations and should be throttled.",
+      "revId": "09f7041f866e2953b82b9b904ec8ad3bb8f21119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
