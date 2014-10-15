@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_45ee20b3",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T22:02:59Z",
+      "side": 1,
+      "message": "I really don\u0027t like this. Please work out why this doesn\u0027t exist and let\u0027s get it fixed as a dependency of this patch. It\u0027s concerning.",
+      "revId": "e08efbc4c5c9d8b3bae6525a5da2cd8c5adc1a73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_0501f870",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T22:02:59Z",
+      "side": 1,
+      "message": "No space! I think we need to go over this again...\nspaces /only/ around parameters and after keywords",
+      "revId": "e08efbc4c5c9d8b3bae6525a5da2cd8c5adc1a73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
