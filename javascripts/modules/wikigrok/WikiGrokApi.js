@@ -1,7 +1,7 @@
 ( function( M ) {
 	var Api = M.require( 'api' ).Api, WikiGrokApi;
 	/**
-	 * @class EditorApi
+	 * @class WikiGrokApi
 	 * @extends Api
 	 */
 	WikiGrokApi = Api.extend( {
