@@ -39,7 +39,8 @@
 		initialize: function( options ) {
 			// Remove any disambiguation parentheticals from the title.
 			options.name = options.title.replace( / \(.+\)$/, '' );
-			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId, subject: options.name } );
+			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId, subject: options.name,
+				version: this.version } );
 			this.apiWikiData = new WikiDataApi( { itemId: options.itemId } );
 			Panel.prototype.initialize.apply( this, arguments );
 		},

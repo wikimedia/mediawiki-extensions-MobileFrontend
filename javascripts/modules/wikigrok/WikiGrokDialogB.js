@@ -78,7 +78,7 @@
 
 			this.$save.on( 'click', function() {
 				var answers = [];
-				self.$( '.mw-ui-checkbox input[checked]' ).hide().each( function() {
+				self.$( '.ui-checkbox-button input:checked' ).hide().each( function() {
 					answers.push( [
 						$( this ).data( 'choice' ),
 						$( this ).data( 'readable' ),

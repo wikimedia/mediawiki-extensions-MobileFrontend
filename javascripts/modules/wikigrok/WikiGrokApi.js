@@ -11,6 +11,7 @@
 		initialize: function( options ) {
 			this.subjectId = options.itemId;
 			this.subject = options.subject;
+			this.version = options.version;
 			Api.prototype.initialize.apply( this, arguments );
 		},
 		recordOccupation: function( occupationId, occupation, claimIsCorrect ) {
@@ -23,7 +24,7 @@
 					page_name: mw.config.get( 'wgPageName' ),
 					correct: claimIsCorrect,
 					user_id: mw.user.getId(),
-					source: 'mobile A'
+					source: 'mobile ' + this.version
 				} );
 		},
 		getPossibleOccupations: function() {
