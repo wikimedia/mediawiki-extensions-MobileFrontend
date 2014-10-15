@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e96e304_85d748c4",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-15T22:17:46Z",
+      "side": 1,
+      "message": "The overlay header is \u0027absolute\u0027 positioned so the content goes underneath it.",
+      "parentUuid": "8e96e304_c586b018",
+      "revId": "e94c14996be82acef0c9448b60f4cc6aa79ae610",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_2592f457",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 5
