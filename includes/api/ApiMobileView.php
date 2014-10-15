@@ -547,7 +547,7 @@ class ApiMobileView extends ApiBase {
 		}
 		$data['revision'] = $title->getLatestRevID();
 
-		if ( $parserOutput ) {
+		if ( isset( $parserOutput ) ) {
 			$languages = $parserOutput->getLanguageLinks();
 			$data['languagecount'] = count( $languages );
 			$data['displaytitle'] = $parserOutput->getDisplayTitle();
