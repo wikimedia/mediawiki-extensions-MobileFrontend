@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_1d2dd68b",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:42:37Z",
+      "side": 1,
+      "message": "Why wouldn\u0027t currentPage exist? If it doesn\u0027t that sounds like a bug. Plus all pages should have a title!",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_5d335ef3",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:42:37Z",
+      "side": 1,
+      "message": "Note JSON.stringify is not available in Android \u003c 2.3\nWe\u0027ll probably need to protect against that exploding with some feature detection.\n\nI notice mf-translator.js has the same problem so maybe we could update saveUserSettings to handle saving javascript objects?",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_1d44f649",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:42:37Z",
+      "side": 1,
+      "message": "Seems overly verbose. $heading.find( \u0027span\u0027 ).attr( \u0027id\u0027 ) should be enough no?",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_bd7062a4",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:42:37Z",
+      "side": 1,
+      "message": "Personally I don\u0027t like returning early in functions. I\u0027d rather have no return and wrap the code conditionally for readability but this is a personal preference.\n\n  if ( headline ) {\n  }  else {\n  }\n}",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_9d6fa6c0",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:42:37Z",
+      "side": 1,
+      "message": "why not do var sectionStatus \u003d expandedSections[currentPageTitle] || {}\nThen \nexpandedSections[currentPageTitle] \u003d sectionStatus\nat end",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_5d611ecf",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-15T17:42:37Z",
+      "side": 1,
+      "message": "why eq( 0 ) ?\nThere will only be one section heading no?",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
