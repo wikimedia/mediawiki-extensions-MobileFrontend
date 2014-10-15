@@ -108,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "8e96e304_7d3dfa89",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-15T18:00:17Z",
+      "side": 1,
+      "message": "I don\u0027t think localStorage is also available in Android \u003c 2.3. So the page breaks even without JSON.stringify, no?",
+      "parentUuid": "8e96e304_ddf20e03",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_1d44f649",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 15
@@ -207,6 +225,24 @@
       "side": 1,
       "message": "This is 3 lines ;-)\n\nPersonally I feel using an if statements that simply set undefined variables is wrong when you can use the || syntax. I just find those easier to understand when skimming through code.\n\nAlso the repetition of expandedSections[currentPageTitle] becomes more readable when dealing with a single variable.",
       "parentUuid": "8e96e304_3d9a12be",
+      "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_1d4e363d",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-15T18:00:17Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "8e96e304_1de8760a",
       "revId": "56164d8c016c3ba787a2768ef3e786cc030362f1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
