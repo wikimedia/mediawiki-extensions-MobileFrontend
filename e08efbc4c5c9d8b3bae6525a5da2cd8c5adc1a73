@@ -33,6 +33,24 @@
       "revId": "e08efbc4c5c9d8b3bae6525a5da2cd8c5adc1a73",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_05eb3878",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-15T22:20:01Z",
+      "side": 1,
+      "message": "I think jshint needs to catch this. It\u0027s really easy to overlook this.",
+      "parentUuid": "8e96e304_0501f870",
+      "revId": "e08efbc4c5c9d8b3bae6525a5da2cd8c5adc1a73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
