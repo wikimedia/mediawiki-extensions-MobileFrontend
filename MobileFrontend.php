@@ -539,6 +539,11 @@ $wgMFUploadMinEdits = 0;
 $wgMFEnableWikiGrok = false;
 
 /**
+ * Controls whether the WikiGrok is permitted on all devices
+ */
+$wgMFEnableWikiGrokOnAllDevices = false;
+
+/**
  * Whether beta and alpha modes are enabled
  */
 $wgMFEnableBeta = false;

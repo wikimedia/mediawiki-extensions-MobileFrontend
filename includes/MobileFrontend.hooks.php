@@ -324,10 +324,12 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgMFNearbyEndpoint, $wgMFContentNamespace, $wgMFEnableWikiGrok;
+		global $wgMFNearbyEndpoint, $wgMFContentNamespace, $wgMFEnableWikiGrok,
+			$wgMFEnableWikiGrokOnAllDevices;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
 		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
 		$vars['wgMFEnableWikiGrok'] = $wgMFEnableWikiGrok;
+		$vars['wgMFEnableWikiGrokOnAllDevices'] = $wgMFEnableWikiGrokOnAllDevices;
 
 		// Set the licensing agreement that is displayed in the editor.
 		$wgMFLicenseLink = SkinMinerva::getLicenseLink( 'editor' );

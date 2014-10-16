@@ -1,6 +1,7 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
 ( function( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !M.isWideScreen(),
 		idOverride;
 
 	// Allow query string override for testing, for example, '?wikidataid=Q508703'
@@ -24,8 +25,8 @@
 		!mw.user.isAnon() &&
 		// We're not on the Main Page
 		!mw.config.get( 'wgIsMainPage' ) &&
-		// We're not on a tablet
-		!M.isWideScreen() &&
+		// Permitted on this device
+		permittedOnThisDevice &&
 		// We're in 'view' mode
 		mw.config.get( 'wgAction' ) === 'view' &&
 		// Wikibase is active and this page has an item ID
