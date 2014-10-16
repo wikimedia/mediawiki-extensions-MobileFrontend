@@ -28,6 +28,7 @@
 					claims: JSON.stringify( claims ),
 					page_name: mw.config.get( 'wgPageName' ),
 					user_id: mw.user.getId(),
+					version: 2,
 					source: 'mobile ' + this.version
 				} );
 		},
@@ -42,20 +43,42 @@
 
 			return this.recordClaims( [ claim ] );
 		},
-		getPossibleOccupations: function() {
+		/**
+		 * Get suggestions for the current person.
+		 * Currently 50% of time returns occupations, 50% of time nationalities
+		 * FIXME: In future it should look for both.
+		 * @method
+		 * @return {jQuery.Deferred} where parameter is a set of key value pairs
+		 */
+		getSuggestions: function() {
+			return this.action( 'get_suggestions', 'suggestions' );
+		},
+		/**
+		 * Performs an api action on wikigrok
+		 * @method
+		 * @param {string} action A valid action as documented on https://github.com/kaldari/WikiGrokAPI/blob/master/README.md
+		 * @param {string} key of data to return
+		 * @return {jQuery.Deferred} where parameter of callback is a list of wikidata ids;
+		 */
+		action: function( action, key ) {
 			return this.ajax( {
-					action: 'get_potential_occupations',
-					// Strip the Q out of the Wikibase item ID
+					action: action,
 					item: this.subjectId.replace( 'Q' , '' )
 				} ).then( function( data ) {
-					if ( data.occupations !== undefined && data.occupations ) {
-						return data.occupations.split( ',' ).map( function( item ) {
-							return 'Q' + item;
-						} );
-					} else {
-						return [];
+					if ( key ) {
+						if ( data[key] !== undefined ) {
+							return data[key];
+						} else {
+							return [];
+						}
 					}
 				} );
+		},
+		getPossibleNationalities: function() {
+			return this.action( 'get_potential_nationality', 'nationality' );
+		},
+		getPossibleOccupations: function() {
+			return this.action( 'get_potential_occupations', 'occupations' );
 		}
 	} );
 

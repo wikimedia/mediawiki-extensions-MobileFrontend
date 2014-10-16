@@ -19,70 +19,101 @@
 			options.contentMsg = 'Which of these tags best describe ' + options.title + '?';
 			WikiGrokDialog.prototype.initialize.apply( this, arguments );
 		},
+		/**
+		 * Renders a set of checkbox buttons to the panel
+		 * Shows panel to user when there are suggestions.
+		 * @method
+		 * @param {array} suggestions as returned by WikiGrokApi.getSuggestions
+		 */
+		_renderSuggestions: function( suggestions ) {
+			var
+				self = this,
+				suggestionsList = [],
+				// Maps item ids to a key in i18n file
+				lookupProp = {},
+				i18n = {
+					dob: 'Born on:',
+					dod: 'Died on:',
+					nationality: 'Home country:',
+					occupations: 'Profession:'
+				};
+
+			$.each( suggestions, function( type, data ) {
+				var prop = {
+						name: data.name,
+						id: data.id
+					};
+
+				suggestionsList = suggestionsList.concat( data.list );
+				// Make sure it's easy to look up the property later.
+				$.each( data.list, function( i, itemId ) {
+					lookupProp[itemId] = prop;
+				} );
+			} );
+
+			// Now work out the labels if we have some suggestions
+			if ( suggestionsList.length ) {
+				self.apiWikiData.getLabels( suggestionsList ).done( function( labels ) {
+					$.each( labels, function( itemId, label ) {
+						var btnLabel, $chk,
+							prop = lookupProp[itemId],
+							id = 'chk-' + itemId;
+
+						$chk = $( '<div class="ui-checkbox-button mw-ui-button">' ).
+							on( 'click', function() {
+								var $chkBox = $( this ).find( 'input' );
+								$chkBox.prop( 'checked', !$chkBox.prop( 'checked' ) );
+								setTimeout( function() {
+									self.$save.prop( 'disabled', self.$( '.initial-pane input:checked' ).length === 0 );
+								}, 100 );
+							} ).appendTo( self.$( '.wg-buttons' ) );
+
+						// FIXME: Use a template for this magic.
+						$( '<input type="checkbox">' ).
+							attr( 'id', id ).
+							data( 'propName', prop.name ).
+							data( 'propId', prop.id ).
+							data( 'itemId', itemId ).
+							data( 'readable', label ).
+							appendTo( $chk );
+
+						$( '<label>' ).
+							text( i18n[prop.name] ).appendTo( $chk );
+
+						$( '<label>' ).
+							text( label ).
+							html( btnLabel ).appendTo( $chk );
+					} );
+
+					// only show the panel when we have created at least one checkbox button
+					if ( self.$( '.ui-checkbox-button' ).length ) {
+						self.$( '.spinner' ).hide();
+						self.show();
+					}
+				} );
+			}
+		},
 		postRender: function() {
 			var self = this;
 			this.$save = this.$( '.mw-ui-constructive' );
-			WikiGrokDialog.prototype.postRender.apply( this, arguments );
 			// hide the completion screen
 			self.$( '.final-pane' ).hide();
 
 			this.hide();
-			this.apiWikiGrok.getPossibleOccupations().done( function( suggestionList ) {
-				if ( suggestionList.length ) {
-					self.apiWikiData.getClaims().done( function( claims ) {
-						var suggestions = {
-								hasOccupation: suggestionList
-							},
-							questions = {
-								hasOccupation: 'Profession:'
-							};
-
-						$.each( claims, function( key ) {
-							if ( suggestions[key] !== undefined ) {
-								self.apiWikiData.getLabels( suggestions[key] ).done( function( labels ) {
-									$.each( labels, function( itemId, label ) {
-										var btnLabel, $chk,
-											id = 'chk-' + key + '-' + itemId;
-
-										$chk = $( '<div class="ui-checkbox-button mw-ui-button">' ).
-											on( 'click', function() {
-												var $chkBox = $( this ).find( 'input' );
-												$chkBox.prop( 'checked', !$chkBox.prop( 'checked' ) );
-												setTimeout( function() {
-													self.$save.prop( 'disabled', self.$( '.initial-pane input:checked' ).length === 0 );
-												}, 100 );
-											} ).appendTo( self.$( '.wg-buttons' ) );
-
-										$( '<input type="checkbox">' ).
-											attr( 'id', id ).
-											data( 'itemId', itemId ).
-											data( 'readable', label ).
-											appendTo( $chk );
-
-										$( '<label>' ).
-											text( questions[key] ).appendTo( $chk );
-
-										$( '<label>' ).
-											text( label ).
-											html( btnLabel ).appendTo( $chk );
-									} );
-
-									self.$( '.spinner' ).hide();
-									self.show();
-								} );
-							}
-						} );
+			self.apiWikiData.getClaims().done( function( claims ) {
+				if ( claims.isHuman ) {
+					self.apiWikiGrok.getSuggestions().done( function( suggestions ) {
+						self._renderSuggestions( suggestions );
 					} );
 				}
 			} );
-
 			this.$save.on( 'click', function() {
 				var answers = [];
 				self.$( '.ui-checkbox-button input:checked' ).hide().each( function() {
 					answers.push( {
 						correct: true,
-						prop: 'occupation',
-						propid: 'P106',
+						prop: $( this ).data( 'propName' ),
+						propid: $( this ).data( 'propId' ),
 						value: $( this ).data( 'readable' ),
 						valueid: $( this ).data( 'itemId' )
 					} );
