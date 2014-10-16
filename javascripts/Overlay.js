@@ -39,7 +39,8 @@
 		className: 'overlay',
 		templatePartials: {
 			backButton: M.template.get( 'backButton.hogan' ),
-			cancelButton: M.template.get( 'cancelButton.hogan' )
+			cancelButton: M.template.get( 'cancelButton.hogan' ),
+			spinner: M.template.get( 'spinner.hogan' )
 		},
 		template: M.template.get( 'Overlay.hogan' ),
 		defaults: {

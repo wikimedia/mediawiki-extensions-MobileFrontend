@@ -219,7 +219,7 @@
 			var self = this, $preview = this.$( '.preview' );
 
 			this.imageUrl = url;
-			$preview.removeClass( 'loading' );
+			this.$( '.spinner' ).hide();
 			this.$( '.help' ).on( 'click', function() {
 				self.log( { action: 'whatDoesThisMean' } );
 			} );

@@ -4,9 +4,6 @@
 	<p>{{guidance}}</p>
 </div>
 {{/error}}
-{{#loadingMessage}}
-<div class="content loading">{{loadingMessage}}</div>
-{{/loadingMessage}}
 <ul class="page-list thumbs actionable">
 	{{#pages}}
 	<li title="{{title}}" data-id="{{id}}" class="page-summary">

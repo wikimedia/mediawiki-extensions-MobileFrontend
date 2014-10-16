@@ -152,6 +152,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	'mobile.ajax' => $wgMFMobileResourceBoilerplate + array(
+		'templates' => array(
+			'spinner.hogan',
+		),
+	),
+
 	'mobile.startup' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
@@ -168,6 +174,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/Router.js',
 			'javascripts/OverlayManager.js',
+			// FIXME: Remove api code to mobile.ajax
 			'javascripts/api.js',
 			'javascripts/PageApi.js',
 			'javascripts/Panel.js',
@@ -560,6 +567,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.templates',
 			'mobile.startup',
+			'mobile.ajax',
 		),
 		'scripts' => array(
 			'javascripts/Overlay.js',
@@ -813,6 +821,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
+			'mobile.ajax',
 			'mobile.stable.common',
 			// @todo FIXME: Kill this dependency!
 			'mobile.special.nearby.styles',
@@ -841,6 +850,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/nearby/NearbyApi.js',
 			'javascripts/modules/nearby/Nearby.js',
+		),
+		'templates' => array(
+			'modules/nearby/nearby.hogan',
 		),
 	),
 

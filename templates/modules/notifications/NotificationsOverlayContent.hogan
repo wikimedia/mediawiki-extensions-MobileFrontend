@@ -1,4 +1,4 @@
-<div class="spinner loading"></div>
+{{>spinner}}
 {{#errorMessage}}<div class="content">{{errorMessage}}</div>{{/errorMessage}}
 <ul class="mw-mf-notifications">
 	{{#notifications}}

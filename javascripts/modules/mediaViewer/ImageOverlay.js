@@ -30,7 +30,7 @@
 				var author, url = data.descriptionurl + '#mw-jump-to-license';
 
 				function removeLoader() {
-					self.$( '.image-wrapper' ).removeClass( 'loading' );
+					self.$( '.spinner' ).hide();
 				}
 
 				self.thumbWidth = data.thumbwidth;

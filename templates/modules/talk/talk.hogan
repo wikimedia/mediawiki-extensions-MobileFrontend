@@ -5,4 +5,4 @@
 	<ul class="page-list">
 	</ul>
 </div>
-<div class="spinner loading"></div>
+{{>spinner}}

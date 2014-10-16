@@ -4,7 +4,7 @@
 
 <div class="content talk-section">
 	{{{section.text}}}
-	<div class="loading"></div>
+	{{>spinner}}
 	<div class="comment">
 		<div class="list-header">{{reply}}</div>
 		<div class="comment-content">
