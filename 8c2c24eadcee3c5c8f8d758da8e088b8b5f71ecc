@@ -34,6 +34,24 @@
       "revId": "8c2c24eadcee3c5c8f8d758da8e088b8b5f71ecc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_a2a90fde",
+        "filename": "tests/qunit/modules/toggling/test_toggle.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-16T23:05:19Z",
+      "side": 1,
+      "message": "use a setup to store the correct sections.\nThen run toggle.init() on the element returned by makeSections",
+      "parentUuid": "8e96e304_5f626807",
+      "revId": "8c2c24eadcee3c5c8f8d758da8e088b8b5f71ecc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
