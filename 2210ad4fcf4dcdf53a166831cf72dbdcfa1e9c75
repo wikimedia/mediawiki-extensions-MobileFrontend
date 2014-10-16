@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_69621208",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-16T19:19:46Z",
+      "side": 1,
+      "message": "This selector is wrong. Use section-heading span",
+      "revId": "2210ad4fcf4dcdf53a166831cf72dbdcfa1e9c75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_295c0a4e",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-16T19:19:46Z",
+      "side": 1,
+      "message": "just use var $headline \u003d $( this ) and drop the second parameter to the callback",
+      "revId": "2210ad4fcf4dcdf53a166831cf72dbdcfa1e9c75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_895f5e44",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-16T19:19:46Z",
+      "side": 1,
+      "message": "Same",
+      "revId": "2210ad4fcf4dcdf53a166831cf72dbdcfa1e9c75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_4959565c",
+        "filename": "tests/qunit/modules/toggling/test_toggle.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-16T19:19:46Z",
+      "side": 1,
+      "message": "No need to use eq( 0 ) for above two lines.",
+      "revId": "2210ad4fcf4dcdf53a166831cf72dbdcfa1e9c75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
