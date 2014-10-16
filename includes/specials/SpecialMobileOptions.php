@@ -155,19 +155,10 @@ HTML;
 					)
 				);
 			} else {
-				$html .= '
-					<div class="mobileoption">
-						<div class="mw-ui-checkbox">
-							<input type="checkbox" name="' . $data['name'] . '" id="' . $data['id'] . '"
-								' . $data['checked'] . '>
-							<label for="' . $data['id'] . '">
-								' . $data['label'] . '
-							</label>
-							<div class="option-description">
-								' . $data['description'] . '
-							</div>
-						</div>
-					</div>';
+				$html .= Html::openElement( 'div', array( 'class' => 'mobileoption' ) ) .
+					Xml::checkLabel( $data['label'], $data['name'], $data['id'], $data['checked'] ) .
+					Html::element( 'div', array( 'class' => 'option-description' ), $data['description'] ) .
+					Html::closeElement( 'div' );
 			}
 		}
 		$html .= <<<HTML
