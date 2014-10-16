@@ -219,7 +219,7 @@ class SkinMinerva extends SkinTemplate {
 		// Set user button to empty string by default
 		$tpl->set( 'secondaryButton', '' );
 		$notificationsTitle = '';
-		$count = '';
+		$countLabel = '';
 		$isZero = true;
 
 		$user = $this->getUser();
@@ -233,7 +233,7 @@ class SkinMinerva extends SkinTemplate {
 			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
 				$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
 				$isZero = $count === 0;
-				$count = EchoNotificationController::formatNotificationCount( $count );
+				$countLabel = EchoNotificationController::formatNotificationCount( $count );
 			}
 		} elseif ( !empty( $newtalks ) ) {
 			$notificationsTitle = SpecialPage::getTitleFor( 'Mytalk' );
@@ -253,7 +253,7 @@ class SkinMinerva extends SkinTemplate {
 				Html::element(
 					'span',
 					array( 'class' => $isZero ? 'zero' : '' ),
-					$count
+					$countLabel
 				) .
 				Html::closeElement( 'a' )
 			);
