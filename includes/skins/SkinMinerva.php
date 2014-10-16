@@ -220,6 +220,7 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'secondaryButton', '' );
 		$notificationsTitle = '';
 		$count = '';
+		$isZero = true;
 
 		$user = $this->getUser();
 		$newtalks = $this->getNewtalks();
@@ -231,6 +232,7 @@ class SkinMinerva extends SkinTemplate {
 			$notificationsMsg = wfMessage( 'mobile-frontend-user-button-tooltip' );
 			if ( $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText() ) {
 				$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
+				$isZero = $count === 0;
 				$count = EchoNotificationController::formatNotificationCount( $count );
 			}
 		} elseif ( !empty( $newtalks ) ) {
@@ -246,12 +248,13 @@ class SkinMinerva extends SkinTemplate {
 						array( 'returnto' => $currentTitle->getPrefixedText() ) ),
 					'class' => MobileUI::iconClass( 'notifications', 'element',
 						'user-button main-header-button icon-32px' ),
-					'id'=> 'secondary-button',
+					'id' => 'secondary-button',
 				) ) .
 				Html::element(
 					'span',
-					array( 'class' => $count ? '' : 'zero' ),
-					$this->getLanguage()->formatNum( $count ) ) .
+					array( 'class' => $isZero ? 'zero' : '' ),
+					$count
+				) .
 				Html::closeElement( 'a' )
 			);
 		}
