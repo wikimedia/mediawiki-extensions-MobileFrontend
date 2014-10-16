@@ -126,7 +126,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			// alpha settings
 			if ( $betaEnabled ) {
 				if ( $alphaEnabled ) {
-					$options['beta']['checked'] = 'checked';
+					$options['beta']['value'] = '1';
 					$options['beta']['type'] = 'hidden';
 				}
 				$options['alpha'] = array(
@@ -147,8 +147,13 @@ class SpecialMobileOptions extends MobileSpecialPage {
 HTML;
 		foreach( $options as $key => $data ) {
 			if ( isset( $data['type'] ) && $data['type'] === 'hidden' ) {
-				$html .= '<input type="hidden" name="' . $data['name'] . '" id="' . $data['id'] . '"
-					' . $data['checked'] . '>';
+				$html .= Html::element( 'input',
+					array(
+						'type' => 'hidden',
+						'name' => $data['name'],
+						'value' => $data['checked'],
+					)
+				);
 			} else {
 				$html .= '
 					<div class="mobileoption">
