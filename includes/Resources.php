@@ -921,7 +921,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/wikigrok/WikiGrokApi.js',
 			'javascripts/modules/wikigrok/WikiGrokDialog.js',
 			'javascripts/modules/wikigrok/WikiGrokMoreInfo.js',
-			'javascripts/modules/wikigrok/wikigrokeval.js',
 		),
 		'styles' => array(
 			'less/modules/wikigrok/WikiGrokDialog.less',
