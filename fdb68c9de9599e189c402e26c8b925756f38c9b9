@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_09010e08",
+        "filename": "templates/ctaDrawer.hogan",
+        "patchSetId": 24
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-16T18:06:15Z",
+      "side": 1,
+      "message": "mw-ui-block doesn\u0027t have any effect on anchors. You should do one of the following:\n* remove mw-ui-block here\n* not remove the .mw-ui-block rules in drawer.less\n* add \u0027display:block;\u0027 to .mw-ui-button-group .mw-ui-block in ui.less\n* add .mw-ui-anchor.mw-ui-block { display:block; } to anchors.less in core\n\nPersonally, I don\u0027t really think anchors should be block elements, but others may disagree.",
+      "revId": "fdb68c9de9599e189c402e26c8b925756f38c9b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
