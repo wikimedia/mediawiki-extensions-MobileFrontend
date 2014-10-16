@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_0817cfa9",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-16T00:10:20Z",
+      "side": 1,
+      "message": "We should probably make these use Xml::checkLabel here",
+      "revId": "74851d68451ad33b8496bdbd3437d77eff67d695",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
