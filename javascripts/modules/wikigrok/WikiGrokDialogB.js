@@ -96,11 +96,9 @@
 				} );
 			} );
 
-			// FIXME: This shoud be shared with WikiGrokDialog.js
-			this.$( '.cancel' ).on( 'click', function() {
+			// hide this Dialog when the user reads more about Wikigrok
+			this.$( '.tell-more' ).on( 'click', function() {
 				self.hide();
-				self.log( 'nothanks' );
-				M.settings.saveUserSetting( 'mfHideWikiGrok', 'true' );
 			} );
 		}
 	} );
