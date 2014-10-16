@@ -16,6 +16,24 @@
       "revId": "f5b0d2d7e4ab4f3d7695b6f7cf6de16f66c88f6b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_49139605",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-16T18:43:12Z",
+      "side": 0,
+      "message": "It\u0027s done in EchoNotificationController::formatNotificationCount() already",
+      "parentUuid": "8e96e304_69f532c7",
+      "revId": "f5b0d2d7e4ab4f3d7695b6f7cf6de16f66c88f6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
