@@ -25,7 +25,8 @@
 			"Woytecr",
 			"Alan ffm",
 			"Pio387",
-			"Darellur"
+			"Darellur",
+			"Py64"
 		]
 	},
 	"beta-feature-minerva": "Udostępnij skórkę mobilną ({{int:skinname-minerva}}) na pulpicie",
@@ -50,6 +51,7 @@
 	"mobile-frontend-diffview-title": "Zmiany",
 	"mobile-frontend-disable-images": "Wyłącz wyświetlanie grafik w wersji mobilnej",
 	"mobile-frontend-dismiss-notification": "odrzuć to powiadomienie",
+	"mobile-frontend-donate-image-anon": "Zaloguj się, żeby zobaczyć strony wysyłania plików.",
 	"mobile-frontend-donate-image-heading": "Niedawny wkład",
 	"mobile-frontend-donate-image-login": "Multimedia w {{GRAMMAR:MS.lp|{{SITENAME}}}} zostały podarowane przez ludzi takich jak ty.",
 	"mobile-frontend-donate-image-nouploads": "Nic nie przesłano.",
