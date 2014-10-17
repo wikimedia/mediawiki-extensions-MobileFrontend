@@ -1,7 +1,7 @@
 <!-- note English language only! -->
 <div class="initial-pane content">
 	<p class="wg-content">{{contentMsg}}</p>
-	<p class="wg-buttons"></p>
+	<p class="wg-buttons ui-checkbox-button-group"></p>
 </div>
 <div class="initial-pane footer">
 	<span class="license">All submissions are <a href="#/wikigrok/about">released freely</a>.</span>
@@ -12,7 +12,5 @@
 	<p class="wg-content">You just made Wikipedia a little better, thanks!</p>
 </div>
 <div class="final-pane footer">
-	<p>
-		<a href="#/wikigrok/about" class="mw-ui-button mw-ui-progressive mw-ui-block tell-more">Tell me more</a>
-	</p>
+	<a href="#/wikigrok/about" class="mw-ui-button mw-ui-progressive mw-ui-block tell-more">Tell me more</a>
 </div>
