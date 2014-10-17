@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_99ffa5a7",
+        "filename": "javascripts/modules/wikigrok/WikiGrokApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-17T22:35:59Z",
+      "side": 1,
+      "message": "Missing the names of the parameters. See https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript#Documentation.",
+      "revId": "40ecfeadfa290d76c86eec036296ed814e7420e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_9916c5f5",
+        "filename": "javascripts/modules/wikigrok/WikiGrokApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-17T22:35:59Z",
+      "side": 1,
+      "message": "Here too. Also, isn\u0027t referring to \u0027ids\u0027 a bit specific for such a generic function? Maybe it should say \u0027Key of data to return\u0027.",
+      "revId": "40ecfeadfa290d76c86eec036296ed814e7420e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_d9ebedd9",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-17T22:35:59Z",
+      "side": 1,
+      "message": "Would be good to have a function description for such a long function. For example, \u0027Add tags to panel and show panel if tags are present\u0027",
+      "revId": "40ecfeadfa290d76c86eec036296ed814e7420e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_39be91cf",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-17T22:35:59Z",
+      "side": 1,
+      "message": "Might be good to split the checkbox building into a separate function, but just a suggestion.",
+      "revId": "40ecfeadfa290d76c86eec036296ed814e7420e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_39b531e1",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-17T22:35:59Z",
+      "side": 1,
+      "message": "Might want to clarify \u0027buttons\u0027 as \u0027tag buttons\u0027",
+      "revId": "40ecfeadfa290d76c86eec036296ed814e7420e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
