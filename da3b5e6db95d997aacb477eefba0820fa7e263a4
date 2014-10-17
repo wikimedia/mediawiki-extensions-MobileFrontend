@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_10b04af0",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-17T18:09:35Z",
+      "side": 1,
+      "message": "Shouldn\u0027t .initial-pane be outside of .footer?",
+      "revId": "da3b5e6db95d997aacb477eefba0820fa7e263a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
