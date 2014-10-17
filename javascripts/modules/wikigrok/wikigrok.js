@@ -40,31 +40,21 @@
 		!localStorage.getItem( 'mfHideWikiGrok' )
 	) {
 		mw.loader.using( rlModuleName ).done( function() {
-			var WikiGrokApi = M.require( 'modules/wikigrok/WikiGrokApi' ),
-				moduleName = useDialogB ? 'modules/wikigrok/WikiGrokDialogB' :
+			var moduleName = useDialogB ? 'modules/wikigrok/WikiGrokDialogB' :
 					'modules/wikigrok/WikiGrokDialog',
-				WikiGrokDialog = M.require( moduleName ),
-				apiWikiGrok;
+				WikiGrokDialog = M.require( moduleName );
 
 			// See if there are potential occupation claims about this person so we can decide if
 			// it's appropriate to display the WikiGrok interface.
 			function init() {
-				apiWikiGrok = new WikiGrokApi( { itemId: wikidataID } );
-				// FIXME: This fires an API request on every page load. We may need to do
-				// something different if this is promoted to stable.
-				apiWikiGrok.getPossibleOccupations().done( function( occupations ) {
-					var dialog;
-					if ( occupations.length ) {
-						dialog = new WikiGrokDialog( { itemId: wikidataID,
-							title: mw.config.get( 'wgTitle' ),
-							occupations: occupations } );
-						if ( $( '.toc-mobile' ).length ) {
-							dialog.insertBefore( '.toc-mobile' );
-						} else {
-							dialog.appendTo( M.getLeadSection() );
-						}
-					}
-				} );
+				var dialog = new WikiGrokDialog( { itemId: wikidataID,
+						title: mw.config.get( 'wgTitle' ) } );
+
+				if ( $( '.toc-mobile' ).length ) {
+					dialog.insertBefore( '.toc-mobile' );
+				} else {
+					dialog.appendTo( M.getLeadSection() );
+				}
 			}
 
 			if ( !M.settings.getUserSetting( 'mfHideWikiGrok' ) ) {

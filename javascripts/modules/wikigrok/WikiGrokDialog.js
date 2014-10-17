@@ -185,7 +185,16 @@
 			// buttons than the initial default).
 			self.options.buttons = [];
 
-			this.show();
+			this.reveal( options );
+		},
+		reveal: function( options ) {
+			var self = this;
+			this.apiWikiGrok.getPossibleOccupations().done( function( occupations ) {
+				if ( occupations.length ) {
+					options.occupations = occupations;
+					self.show();
+				}
+			} );
 		}
 	} );
 
