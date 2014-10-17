@@ -832,7 +832,7 @@ class MobileFrontendHooks {
 			'MobileWebEditing'       => 8599025,
 			'MobileWebCta'           => 5972684,
 			'MobileWebClickTracking' => 5929948,
-			'MobileWebWikiGrok'      => 9913839,
+			'MobileWebWikiGrok'      => 10286500,
 		);
 
 		$schemas += $mobileEventLoggingSchemas;

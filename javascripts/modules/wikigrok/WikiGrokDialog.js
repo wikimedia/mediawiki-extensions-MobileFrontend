@@ -5,7 +5,9 @@
 		WikiGrokApi = M.require( 'modules/wikigrok/WikiGrokApi' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
-		WikiGrokDialog;
+		WikiGrokDialog,
+		timer = null,
+		$window = $( window );
 
 	/**
 	 * @class WikiGrokDialog
@@ -20,6 +22,7 @@
 		className: 'wikigrok',
 		defaults: {
 			beginQuestions: false,
+			taskToken: mw.user.generateRandomSessionId(),
 			thankUser: false,
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
 			headerMsg: 'Help Wikipedia',
@@ -36,19 +39,33 @@
 		},
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
 
-		initialize: function ( options ) {
+		initialize: function( options ) {
+			var self = this;
+
 			// Remove any disambiguation parentheticals from the title.
 			options.name = options.title.replace( / \(.+\)$/, '' );
 			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId, subject: options.name,
 				version: this.version } );
 			this.apiWikiData = new WikiDataApi( { itemId: options.itemId } );
 			Panel.prototype.initialize.apply( this, arguments );
+
+			// log page impression and widget impression when the widget is shown
+			this.on( 'show', function() {
+				self.logPageImpression();
+				self.initializeWidgetImpressionLogging();
+
+			} );
 		},
 
 		log: function ( action ) {
 			var data = {
 				action: action,
-				version: 'version ' + this.version
+				taskType: 'version ' + this.version,
+				taskToken: this.defaults.taskToken,
+				// the position of the top of the widget in viewports (as a unit)
+				widgetOffset: ( this.$el.offset().top / $window.height() ).toFixed( 2 ),
+				// top of the document - top of the viewport in viewports (as a unit)
+				scrollOffset: ( $window.scrollTop() / $window.height() ).toFixed( 2 )
 			};
 			schema.log( data );
 		},
@@ -157,6 +174,88 @@
 			options.noticeMsg = '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>';
 			// Re-render with new content for 'Thanks' step
 			this.render( options );
+			this.log( 'widget-impression-success' );
+		},
+
+		/**
+		 * Check if at least half of the element's height and half of its width are in viewport
+		 * @method
+		 * @param $el {jQuery.Object}
+		 * @return {boolean}
+		 */
+		isElementInViewport: function( $el ) {
+			var windowHeight = $window.height(),
+				windowWidth = $window.width(),
+				windowScrollLeft = $window.scrollLeft(),
+				windowScrollTop = $window.scrollTop(),
+				elHeight = $el.height(),
+				elWidth = $el.width(),
+				elOffset = $el.offset();
+			return (
+				( elHeight > 0 && elWidth > 0 ) &&
+				( windowScrollTop + windowHeight >= elOffset.top + elHeight / 2 ) &&
+				( windowScrollLeft + windowWidth >= elOffset.left + elWidth / 2 ) &&
+				( windowScrollTop <= elOffset.top + elHeight / 2 )
+			);
+		},
+		/**
+		 * Log widget-impression if the widget is in viewport.
+		 * Stop listening to events that are namespaced with the taskToken.
+		 * @param {jQuery.Object} $el WikiGrokDialog element
+		 */
+		logWidgetImpression: function( $el ) {
+			// detect whether the dialog is in viewport, and
+			// record it if yes
+			if ( !this.isWidgetImpressionLogged ) {
+				if ( this.isElementInViewport( $el ) ) {
+					this.isWidgetImpressionLogged = true;
+					$window.off( '.' + this.defaults.taskToken );
+					this.log( 'widget-impression' );
+				}
+			}
+		},
+
+		/**
+		 * Create namespaced window.resize and window.scroll events.
+		 * The namespace is a unique taskToken. Log widget-impression once and
+		 * stop listening to events that are namespaced with the taskToken.
+		 * This method is intended to be run only once because we don't want
+		 * to create and listen to the same events more than once.
+		 * @method
+		 */
+		initializeWidgetImpressionLogging: function() {
+			var self = this;
+			if ( !this.isLogWidgetImpressionInitialized && !this.isWidgetImpressionLogged ) {
+				// widget specific event listener because there may be more than
+				// one widget on the page
+				// FIXME: listen to page zoom/pinch too?
+				$window.on(
+					'resize.' + self.defaults.taskToken +
+					' scroll.' + self.defaults.taskToken,
+					// debounce
+					function() {
+						clearTimeout( timer );
+						timer = setTimeout( function() {
+							self.logWidgetImpression( self.$el );
+						}, 250 );
+					}
+				);
+				this.isLogWidgetImpressionInitialized = true;
+			}
+			// widget may be in the viewport already
+			this.logWidgetImpression( self.$el );
+		},
+
+		/**
+		 * Log page-impression once
+		 * @method
+		 */
+		logPageImpression: function() {
+			// record page impression
+			if ( !this.isPageImpressionLogged ) {
+				this.isPageImpressionLogged = true;
+				this.log( 'page-impression' );
+			}
 		},
 
 		postRender: function ( options ) {
@@ -173,35 +272,34 @@
 			// ...for intermediate 'Question' step
 			} else if ( options.beginQuestions ) {
 				this.$( '.wg-buttons .yes' ).on( 'click', function () {
-					self.log( 'success' );
+					self.log( 'widget-click-submit' );
 					options.claimIsCorrect = 1;
 					self.recordClaim( options );
 				} );
 				this.$( '.wg-buttons .not-sure' ).on( 'click', function () {
-					self.log( 'notsure' );
+					self.log( 'widget-click-submit' );
 					self.thankUser( options, false );
 				} );
 				this.$( '.wg-buttons .no' ).on( 'click', function () {
-					self.log( 'success' );
+					self.log( 'widget-click-submit' );
 					options.claimIsCorrect = 0;
 					self.recordClaim( options );
 				} );
 			// ...for initial 'Intro' step
 			} else {
-				this.log( 'view' );
 				this.$( '.wg-buttons .cancel' ).on( 'click', function () {
 					self.hide();
-					self.log( 'nothanks' );
+					self.log( 'widget-click-nothanks' );
 					M.settings.saveUserSetting( 'mfHideWikiGrok', 'true' );
 				} );
 				this.$( '.wg-buttons .proceed' ).on( 'click', function () {
-					self.log( 'attempt' );
+					self.log( 'widget-click-accept' );
 					// Proceed with asking the user a metadata question.
 					self.askWikidataQuestion( options );
 				} );
 				// Log more info clicks
 				this.$( '.wg-notice-link' ).on( 'click', function () {
-					self.log( 'moreinfo' );
+					self.log( 'widget-click-moreinfo' );
 				} );
 			}
 

@@ -15,9 +15,18 @@
 	WikiGrokDialogB = WikiGrokDialog.extend( {
 		version: 'b',
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialogB.hogan' ),
-		initialize: function ( options ) {
+		initialize: function( options ) {
+			var self = this;
+
 			options.contentMsg = 'Which of these tags best describe ' + options.title + '?';
 			WikiGrokDialog.prototype.initialize.apply( this, arguments );
+
+			// log page impression and widget impression when the widget is shown
+			this.on( 'show', function() {
+				self.logPageImpression();
+				self.initializeWidgetImpressionLogging();
+
+			} );
 		},
 		/**
 		 * Renders a set of checkbox buttons to the panel
@@ -127,6 +136,7 @@
 					self.$( '.spinner' ).hide();
 					self.$( '.initial-pane' ).hide();
 					self.$( '.final-pane' ).show();
+					self.log( 'widget-click-submit' );
 				} );
 			} );
 
