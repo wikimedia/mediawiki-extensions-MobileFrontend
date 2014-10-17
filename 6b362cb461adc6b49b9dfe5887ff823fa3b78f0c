@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_b0771635",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-17T18:13:27Z",
+      "side": 1,
+      "message": "I don\u0027t think this is the right place to fix the bug. This function should return a string. The reason it\u0027s failing is because when the host is localhost the function must return \u0027localhost\u0027",
+      "revId": "6b362cb461adc6b49b9dfe5887ff823fa3b78f0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
