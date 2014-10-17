@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_305a26f7",
+        "filename": "tests/qunit/modules/toggling/test_toggle.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-17T17:51:33Z",
+      "side": 1,
+      "message": "This isn\u0027t actually true. The toggle.init function adds these classes.\n\nA lot of the tests actually check if this class was added\nHence we use find( \u0027h2\u0027 ) so that we catch those cases where it is not added as expected.",
+      "revId": "fd384ce72c2eee7a6c72f56beeff9db5604437b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
