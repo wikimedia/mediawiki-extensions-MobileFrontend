@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_b353a319",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-17T11:32:50Z",
+      "side": 1,
+      "message": "Is this how we\u0027re doing i18n now? ;)",
+      "revId": "55d8a8d854fb457b87a2f6844563a86bbc5a55be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_134ff76f",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-17T11:32:50Z",
+      "side": 1,
+      "message": "If claims.isHuman is false, then the apiWikiGrok.getSuggestions call is wasted. Only make the call when necessary.",
+      "revId": "55d8a8d854fb457b87a2f6844563a86bbc5a55be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
