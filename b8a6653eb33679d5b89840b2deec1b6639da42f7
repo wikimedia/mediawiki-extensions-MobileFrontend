@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_78589a8c",
+        "filename": "javascripts/CtaDrawer.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-17T10:13:52Z",
+      "side": 1,
+      "message": "Two issues with this line:\n\n* \"down\" should be \"arrow-down\"\n* missing .toHtmlString()",
+      "revId": "b8a6653eb33679d5b89840b2deec1b6639da42f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_98556655",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-17T10:13:52Z",
+      "side": 1,
+      "message": "Two issues with this line: both \"back\"s should be \"cancel\".",
+      "revId": "b8a6653eb33679d5b89840b2deec1b6639da42f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_584fdec0",
+        "filename": "javascripts/modules/references/references.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-17T10:13:52Z",
+      "side": 1,
+      "message": "Both \"back\"s should be \"cancel\".",
+      "revId": "b8a6653eb33679d5b89840b2deec1b6639da42f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_3852126b",
+        "filename": "javascripts/modules/references/references.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-17T10:13:52Z",
+      "side": 1,
+      "message": "Missing .toHtmlString().",
+      "revId": "b8a6653eb33679d5b89840b2deec1b6639da42f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
