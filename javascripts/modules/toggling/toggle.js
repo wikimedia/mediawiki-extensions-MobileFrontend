@@ -48,10 +48,10 @@
 	/*
 	 * Expand sections that were previously expanded before leaving this page.
 	 */
-	function expandStoredSections() {
-		var expandedSections = getExpandedSections(),
-			$headlines = $( '.section-heading span' ), $headline,
-			$sectionHeading;
+	function expandStoredSections( $container ) {
+		var $sectionHeading,
+			expandedSections = getExpandedSections(),
+			$headlines = $container.find( '.section-heading span' ), $headline;
 
 		$headlines.each( function () {
 			$headline = $( this );
@@ -133,13 +133,14 @@
 	 * Reveals an element and its parent section as identified by it's id
 	 *
 	 * @param {String} selector A css selector that identifies a single element
+	 * @param {Object} $container jQuery element to search in
 	 */
-	function reveal( selector ) {
+	function reveal( selector, $container ) {
 		var $target, $heading;
 
 		// jQuery will throw for hashes containing certain characters which can break toggling
 		try {
-			$target = $( M.escapeHash( selector ) );
+			$target = $container.find( M.escapeHash( selector ) );
 			$heading = $target.parents( '.collapsible-heading' );
 			// The heading is not a section heading, check if in a content block!
 			if ( !$heading.length ) {
@@ -155,19 +156,19 @@
 		} catch ( e ) {}
 	}
 
-	function enable( $page ) {
+	function enable( $container ) {
 		var tagName, $headings, expandSections,
 			$firstHeading,
 			iconClass = iconDown.getClassName(),
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
-		$page = $page || $( '#content' );
+		$container = $container || $( '#content' );
 
 		$( 'html' ).removeClass( 'stub' );
-		$firstHeading = $page.find( 'h1,h2,h3,h4,h5,h6' ).eq(0);
+		$firstHeading = $container.find( 'h1,h2,h3,h4,h5,h6' ).eq(0);
 		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
-		$page.find( tagName ).addClass( 'collapsible-heading ' + iconClass );
+		$container.find( tagName ).addClass( 'collapsible-heading ' + iconClass );
 
-		$headings = $page.find( '.collapsible-heading' );
+		$headings = $container.find( '.collapsible-heading' );
 		$headings.next( 'div' ).addClass( 'collapsible-block' );
 
 		if ( collapseSectionsByDefault === undefined ) {
@@ -215,17 +216,17 @@
 				hash = window.location.hash;
 
 			if ( hash.indexOf( '#' ) === 0 ) {
-				reveal( hash );
+				reveal( hash, $container );
 			} else if ( internalRedirectHash ) {
 				window.location.hash = internalRedirectHash;
-				reveal( internalRedirectHash );
+				reveal( internalRedirectHash, $container );
 			}
 		}
 		checkHash();
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 
 		if ( M.isBetaGroupMember() && !M.isWideScreen() ) {
-			expandStoredSections();
+			expandStoredSections( $container );
 			cleanObsoleteStoredSections();
 		}
 	}

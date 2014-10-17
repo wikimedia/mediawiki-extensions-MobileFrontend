@@ -1,41 +1,30 @@
 ( function ( M, $ ) {
 
-var $container,
+var sectionHtml = M.template.get( 'modules/toggling/section.hogan' ).render(),
 	toggle = M.require( 'toggle' );
-
-function makeSections() {
-	return $( '<div>' ).appendTo( '#content' ).html(
-			'<h2><span id="First_Section">First Section</span></h2>' +
-			'<div><p>Text</p></div>' +
-
-			'<h2 id="section_1"><a href="#foo">Dummy Link</a></h2>' +
-			'<div></div>'
-		);
-}
 
 /**
  * Mobile toggling
  *
  *
 **/
-QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
+QUnit.module( 'MobileFrontend toggle.js: Mobile mode.', {
 	setup: function() {
-		$container = makeSections();
-		this.$section0 = $container.find( 'h2' ).eq( 0 );
+		this.$container = $( '<div>' ).html( sectionHtml );
+		this.$section0 = this.$container.find( 'h2' ).eq( 0 );
 		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
-		toggle.enable();
+		toggle.enable( this.$container );
 		toggle.toggle( this.$section0 );
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		$container.remove();
 		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 });
 
 QUnit.test( 'Toggle section', 5, function( assert ) {
 	var $section = this.$section0,
-		$content = $( '#collapsible-block-0' ),
+		$content = this.$container.find( '#collapsible-block-0' ),
 		strictEqual = assert.strictEqual;
 
 	strictEqual( $section.hasClass( 'open-block' ), true, 'open-block class present' );
@@ -52,38 +41,38 @@ QUnit.test( 'Toggle section', 5, function( assert ) {
 QUnit.test( 'Clicking a hash link to reveal an already open section', 2, function( assert ) {
 	var strictEqual = assert.strictEqual;
 	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
-	toggle.reveal( 'First_Section' );
+	toggle.reveal( 'First_Section', this.$container );
 	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is still open' );
 } );
 
 QUnit.test( 'Reveal element', 2, function( assert ) {
 	var strictEqual = assert.strictEqual;
 	toggle.reveal( 'First_Section' );
-	strictEqual( $( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
+	strictEqual( this.$container.find( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
 	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 } );
 
 QUnit.test( 'Clicking hash links', 2, function( assert ) {
 	var strictEqual = assert.strictEqual;
-	$( '[href=#First_Section]' ).trigger( 'click' );
-	strictEqual( $( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
+	this.$container.find( '[href=#First_Section]' ).trigger( 'click' );
+	strictEqual( this.$container.find( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
 	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 } );
 
-QUnit.test( 'Mouseup on a heading toggles it', 2, function( assert ) {
-	var $content = $( '#collapsible-block-1' ),
+QUnit.test( 'Tap event toggles section', 2, function( assert ) {
+	var $content = this.$container.find( '#collapsible-block-1' ),
 		strictEqual = assert.strictEqual;
 
 	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
-	$( '#section_1' ).trigger( 'tap' );
+	this.$container.find( '#section_1' ).trigger( 'tap' );
 
 	strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown on a toggle' );
 } );
 
 QUnit.test( 'Verify aria attributes', 9, function ( assert ) {
-	var $section = $( '#section_1' ),
-		$content = $( '#collapsible-block-1' ),
+	var $section = this.$container.find( '#section_1' ),
+		$content = this.$container.find( '#collapsible-block-1' ),
 		strictEqual = assert.strictEqual;
 
 	// Test the initial state produced by the init function
@@ -111,19 +100,19 @@ QUnit.test( 'Verify aria attributes', 9, function ( assert ) {
 **/
 QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	setup: function() {
-		$container = makeSections();
+		this.$container = $( '<div>' ).html( sectionHtml );
 		this.sandbox.stub( M, 'isWideScreen' ).returns( true );
-		toggle.enable();
+		toggle.enable( this.$container );
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		$container.remove();
 		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 } );
 
 QUnit.test( 'Open by default', 1, function( assert ) {
-	assert.strictEqual( $( '#collapsible-block-1' ).hasClass( 'open-block' ), true, 'check section is visible at start' );
+	assert.strictEqual( this.$container.find( '#collapsible-block-1' ).hasClass( 'open-block' ),
+		true, 'check section is visible at start' );
 } );
 
 /**
@@ -135,19 +124,18 @@ QUnit.test( 'Open by default', 1, function( assert ) {
 QUnit.module( 'MobileFrontend toggle.js: user setting', {
 	setup: function() {
 		M.settings.saveUserSetting('expandSections', 'true', true);
-		$container = makeSections();
-		toggle.enable();
+		this.$container = $( '<div>' ).html( sectionHtml );
+		toggle.enable( this.$container );
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		$container.remove();
 		M.settings.saveUserSetting('expandSections', '', true);
 		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 } );
 
 QUnit.test( 'Open by default', 1, function( assert ) {
-	assert.strictEqual( $( '#collapsible-block-1' ).hasClass( 'open-block' ), true, 'check section is visible at start' );
+	assert.strictEqual( this.$container.find( '#collapsible-block-1' ).hasClass( 'open-block' ), true, 'check section is visible at start' );
 } );
 
 /**
@@ -158,19 +146,18 @@ QUnit.test( 'Open by default', 1, function( assert ) {
 
 QUnit.module( 'MobileFrontend toggle.js: accessibility', {
 	setup: function() {
-		$container = makeSections();
+		this.$container = $( '<div>' ).html( sectionHtml );
 		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
-		toggle.enable();
+		toggle.enable( this.$container );
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		$container.remove();
 	}
 } );
 
 QUnit.test( 'Pressing space/ enter toggles a heading', 3, function ( assert ) {
-	var $section = $( '#section_1' ),
-		$content = $( '#collapsible-block-1' ),
+	var $section = this.$container.find( '#section_1' ),
+		$content = this.$container.find( '#collapsible-block-1' ),
 		ev = jQuery.Event( 'keypress' );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
@@ -199,8 +186,8 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', 2, fu
 
 QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
 	setup: function() {
-		this.$container = makeSections();
-		toggle.enable();
+		this.$container = $( '<div>' ).html( sectionHtml );
+		toggle.enable( this.$container );
 		this.$section = this.$container.find( 'h2' );
 		this.headline = this.$section.find( 'span' ).attr ( 'id' );
 		this.pageTitle = toggle._currentPageTitle;
@@ -208,7 +195,6 @@ QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		this.$container.remove();
 		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 } );
@@ -283,7 +269,7 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', 5, functio
 		'manually revealed section state has been correctly saved in localStorage'
 	);
 
-	toggle._expandStoredSections();
+	toggle._expandStoredSections( this.$container );
 
 	assert.strictEqual(
 		this.$section.hasClass( 'open-block' ),
@@ -294,26 +280,16 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', 5, functio
 
 QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
 	setup: function() {
-		// can't use makeSections because the resulting html is wrapped in a div
-		// it should not be because of the direct children selector in toggle.init
-		this.$content = $( '#content' );
-
-		this.$content.append(
-			'<h2 class="test"><span id="First_Section">First Section</span></h2>' +
-			'<div class="test"><p>Text</p></div>' +
-
-			'<h2 id="section_1" class="test"><a href="#foo">Dummy Link</a></h2>' +
-			'<div class="test"></div>'
-		);
-
-		this.$section = this.$content.find( 'h2' );
-		this.headline = this.$section.find( 'span' ).attr ( 'id' );
+		this.$container = $( '<div>' ).html( sectionHtml );
+		// Restore expanded sections only works on headings that are also section headings
+		this.$container.find( 'h2' ).addClass( 'section-heading' );
+		this.$section = this.$container.find( 'h2' ).eq( 0 );
+		this.headline = 'First_Section';
 		this.pageTitle = toggle._currentPageTitle;
 		this.expandedSections = toggle._getExpandedSections( this.pageTitle );
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		this.$content.remove( '.test' );
 		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 } );
@@ -335,15 +311,15 @@ QUnit.test( 'Expand stored sections.', 5, function( assert ) {
 		'manually created section state has been saved correctly'
 	);
 
-	toggle.enable();
+	toggle.enable( this.$container );
 
 	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
 	assert.strictEqual( typeof this.expandedSections[this.pageTitle][this.headline],
 		'number',
 		'manually created section state is still active after toggle.init()'
 	);
-
-	assert.strictEqual( this.$section.hasClass( 'open-block' ), true, 'Saved section has been auto expanded.' );
+	assert.strictEqual( this.$section.hasClass( 'open-block' ), true,
+	 'Saved section has been auto expanded.' );
 
 } );
 

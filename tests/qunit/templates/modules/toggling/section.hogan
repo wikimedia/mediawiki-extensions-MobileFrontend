@@ -1,0 +1,10 @@
+<h2>
+	<span id="First_Section">First Section</span>
+</h2>
+<div>
+	<p>Text</p>
+</div>
+<h2 id="section_1">
+	<a href="#foo">Dummy Link</a>
+</h2>
+<div></div>
