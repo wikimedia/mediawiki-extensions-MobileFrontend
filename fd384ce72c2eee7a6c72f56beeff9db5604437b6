@@ -16,6 +16,24 @@
       "revId": "fd384ce72c2eee7a6c72f56beeff9db5604437b6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_100ccaef",
+        "filename": "tests/qunit/modules/toggling/test_toggle.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-17T17:55:24Z",
+      "side": 1,
+      "message": "You\u0027re right. And yes, there should be tests to check if \u0027.section-heading\u0027 class has been added.",
+      "parentUuid": "8e96e304_305a26f7",
+      "revId": "fd384ce72c2eee7a6c72f56beeff9db5604437b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
