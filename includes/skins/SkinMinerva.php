@@ -102,9 +102,23 @@ class SkinMinerva extends SkinTemplate {
 
 		// If it's a talk page, add a link to the main namespace page
 		if ( $title->isTalkPage() ) {
+			// if it's a talk page for which we have a special message, use it
+			switch( $title->getNamespace() ) {
+				case 3: // User NS
+					$msg = 'mobile-frontend-talk-back-to-userpage';
+					break;
+				case 5: // Project NS
+					$msg = 'mobile-frontend-talk-back-to-projectpage';
+					break;
+				case 7: // File NS
+					$msg = 'mobile-frontend-talk-back-to-filepage';
+					break;
+				default: // generic (all other NS)
+					$msg = 'mobile-frontend-talk-back-to-page';
+			}
 			$tpl->set( 'subject-page', Linker::link(
 				$title->getSubjectPage(),
-				wfMessage( 'mobile-frontend-talk-back-to-page', $title->getText() ),
+				wfMessage( $msg, $title->getText() ),
 				array( 'class' => 'return-link' )
 			) );
 		}
