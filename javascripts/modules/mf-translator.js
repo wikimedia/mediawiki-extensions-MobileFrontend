@@ -1,6 +1,6 @@
 ( function( M ) {
 
-	var supported = M.settings.supportsLocalStorage,
+	var supported = M.supportsLocalStorage,
 		langMap,
 		curLanguage = mw.config.get( 'wgContentLanguage' );
 
@@ -10,12 +10,15 @@
 	}
 
 	function profileLanguage( language ) {
-		var count;
-		count = langMap[ language ] || 0;
-		count += 1;
-		// cap at 100 as this is enough data to work on
-		langMap[ language ] = count > 100 ? 100 : count;
-		M.settings.saveUserSetting( 'langMap', JSON.stringify( langMap ) );
+		// if not supported, don't do anything
+		if ( supported && langMap ) {
+			var count;
+			count = langMap[ language ] || 0;
+			count += 1;
+			// cap at 100 as this is enough data to work on
+			langMap[ language ] = count > 100 ? 100 : count;
+			M.settings.saveUserSetting( 'langMap', JSON.stringify( langMap ) );
+		}
 	}
 
 	function initProfiler() {
