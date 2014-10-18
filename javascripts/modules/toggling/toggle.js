@@ -1,4 +1,81 @@
 ( function( M, $ ) {
+	var currentPageTitle =  M.getCurrentPage().title;
+
+	function getExpandedSections() {
+		var expandedSections = $.parseJSON(
+			M.settings.getUserSetting( 'expandedSections', false ) || '{}'
+		);
+		expandedSections[currentPageTitle] = expandedSections[currentPageTitle] || {};
+		return expandedSections;
+	}
+
+	/**
+	 * Save expandedSections to localStorage
+	 */
+	function saveExpandedSections( expandedSections ) {
+		M.settings.saveUserSetting(
+			'expandedSections', JSON.stringify( expandedSections ), false
+		);
+	}
+
+	/**
+	 * Given an expanded heading, store it to localStorage.
+	 * If the heading is collapsed, remove it from localStorage.
+	 *
+	 * @param {jQuery.Object} $heading - A heading belonging to a section
+	 */
+	function storeSectionToggleState( $heading ) {
+		var headline = $heading.find( 'span' ).attr( 'id' ),
+			isSectionOpen = $heading.hasClass( 'open-block'),
+			expandedSections = getExpandedSections();
+
+		if ( headline ) {
+			if ( isSectionOpen ) {
+				expandedSections[currentPageTitle][headline] = ( new Date() ).getTime();
+			} else {
+				delete expandedSections[currentPageTitle][headline];
+			}
+
+			saveExpandedSections( expandedSections );
+		}
+	}
+
+	/**
+	 * Expand sections that were previously expanded before leaving this page.
+	 */
+	function expandStoredSections() {
+		var expandedSections = getExpandedSections(),
+			$headlines = $( '.section-heading span' ), $headline;
+
+		$headlines.each( function () {
+			$headline = $( this );
+			if ( expandedSections[currentPageTitle][$headline.attr( 'id' )] ) {
+				toggle( $headline.parents( '.section-heading' ) );
+			}
+		} );
+	}
+
+	/*
+	 * Clean obsolete (saved more than a day ago) expanded sections from
+	 * localStorage.
+	 */
+	function cleanObsoleteStoredSections() {
+		var now = ( new Date() ).getTime(),
+			expandedSections = getExpandedSections(),
+			// the number of days between now and the time a setting was saved
+			daysDifference;
+		$.each( expandedSections, function ( page, sections ) {
+			// clean the setting if it is more than a day old
+			$.each( sections, function ( section, timestamp ) {
+				daysDifference = Math.floor( ( now - timestamp ) / 1000 / 60 / 60 / 24 );
+				if ( daysDifference >= 1 ) {
+					delete expandedSections[page][section];
+				}
+			} );
+		} );
+		saveExpandedSections( expandedSections );
+	}
+
 	/**
 	 * Given a heading, toggle it and any of its children
 	 *
@@ -19,6 +96,10 @@
 				'aria-pressed': !isCollapsed,
 				'aria-expanded': !isCollapsed
 			} );
+
+		if ( M.isBetaGroupMember && !M.isWideScreen() ) {
+			storeSectionToggleState( $heading );
+		}
 	}
 
 	/**
@@ -130,6 +211,11 @@
 		}
 		checkHash();
 		$( '#content_wrapper a' ).on( 'click', checkHash );
+
+		if ( M.isBetaGroupMember && !M.isWideScreen() ) {
+			expandStoredSections();
+			cleanObsoleteStoredSections();
+		}
 	}
 
 	function init( $container ) {
@@ -148,7 +234,12 @@
 	M.define( 'toggle', {
 		reveal: reveal,
 		toggle: toggle,
-		enable: enable
+		enable: init,
+		// for tests
+		_currentPageTitle: currentPageTitle,
+		_getExpandedSections: getExpandedSections,
+		_expandStoredSections: expandStoredSections,
+		_cleanObsoleteStoredSections: cleanObsoleteStoredSections
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
