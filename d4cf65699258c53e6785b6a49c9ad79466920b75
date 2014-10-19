@@ -34,6 +34,24 @@
       "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_4587ea66",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2014-10-19T12:47:18Z",
+      "side": 1,
+      "message": "I know of no browser/screenreader that supports \"heading button\", and they actually break on it, but when they break they will safely fallback to the natural role of the h2 element, which already is heading and the tab index will cause it to be actionable.\n\nSo yes, it should be \"heading button\" (to encourage browser/screenreader builders to fix this) or it should be totally removed.\n\nThe PROPER way to fix this, is something the likes of: https://gerrit.wikimedia.org/r/158087\nbut then for MF",
+      "parentUuid": "8e96e304_5ddefe71",
+      "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
