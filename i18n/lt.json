@@ -5,7 +5,8 @@
 			"Mantak111",
 			"Reedy",
 			"Robotukas11",
-			"Vogone"
+			"Vogone",
+			"Hugo.arg"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Peršokti atgal sekcija",
@@ -28,12 +29,9 @@
 	"mobile-frontend-main-menu-settings": "Nustatymai",
 	"mobile-frontend-main-menu-settings-heading": "Mobiliosios svetainės nustatymai",
 	"mobile-frontend-news-items": "Naujienose",
-	"mobile-frontend-off": "IŠJUNGTI",
-	"mobile-frontend-on": "IJUNGTI",
 	"mobile-frontend-opt-in-explain": "Prisijungiant prie beta, jūs gausite prieigą prie dar tik bandomų galimybių, rizikuodami puslapio klaidomis.",
 	"mobile-frontend-page-menu-contents": "turinys",
 	"mobile-frontend-page-menu-history": "Istorija",
-	"mobile-frontend-page-saving": "<strong>Saugojama</strong><span> $1</span>",
 	"mobile-frontend-password": "Slaptažodis:",
 	"mobile-frontend-placeholder": "Ieškoti {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Privatumas",
@@ -48,5 +46,6 @@
 	"mobile-frontend-username": "Naudotojo vardas:",
 	"mobile-frontend-view": "Mobili peržiūra",
 	"mobile-frontend-view-desktop": "Darbalaukis",
-	"mobile-frontend-view-mobile": "Mobilus"
+	"mobile-frontend-view-mobile": "Mobilus",
+	"tag-mobile_edit": "Keitimas mob. telefonu"
 }
