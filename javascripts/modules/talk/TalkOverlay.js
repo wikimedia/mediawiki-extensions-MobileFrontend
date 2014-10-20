@@ -65,6 +65,9 @@
 				// show a spinner
 				this.showSpinner();
 
+				// clear actual content, if any
+				this.$( '.page-list' ).empty();
+
 				// FIXME: use Page's mechanisms for retrieving page data instead
 				M.pageApi.getPage( options.title ).fail( function( resp ) {
 					// If the API returns the error code 'missingtitle', that means the
@@ -93,8 +96,6 @@
 				// FIXME: just for tests
 				this.page = page;
 
-				// clear actual content, if any
-				this.$( '.page-list' ).empty();
 				sections = page.getSubSections();
 
 				// Add content header explanation
