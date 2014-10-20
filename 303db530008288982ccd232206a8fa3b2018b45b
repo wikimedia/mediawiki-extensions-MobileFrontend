@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_764c18a0",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-10-20T21:50:20Z",
+      "side": 1,
+      "message": "* Edit should be lower case. Replace with \"changes\"?\n* Please add message documentation when adding messages. See https://www.mediawiki.org/wiki/I18n#Message_documentation for details.",
+      "revId": "303db530008288982ccd232206a8fa3b2018b45b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
