@@ -303,8 +303,14 @@ class MobileContext extends ContextSource {
 			wfIncrStats( 'mobile.opt_in_cookie_unset' );
 		}
 		$this->mobileMode = $mode;
+
+		$host = $this->getBaseDomain();
+		// Deal with people running off localhost. see http://curl.haxx.se/rfc/cookie_spec.html
+		if ( strpos( $host, '.' ) === false ) {
+			$host = false;
+		}
 		$this->getRequest()->response()->setcookie( 'optin', $mode, 0,
-			array( 'prefix' => '', 'domain' => $this->getBaseDomain() )
+			array( 'prefix' => '', 'domain' => $host )
 		);
 		wfProfileOut( __METHOD__ );
 	}
@@ -599,8 +605,7 @@ class MobileContext extends ContextSource {
 			$domainParts = array_reverse( $domainParts );
 			// Although some browsers will accept cookies without the initial .,
 			// » RFC 2109 requires it to be included.
-			wfProfileOut( __METHOD__ );
-			return count( $domainParts ) >= 2 ? '.' . $domainParts[1] . '.' . $domainParts[0] : $host;
+			$host = count( $domainParts ) >= 2 ? '.' . $domainParts[1] . '.' . $domainParts[0] : $host;
 		}
 		wfProfileOut( __METHOD__ );
 		return $host;
