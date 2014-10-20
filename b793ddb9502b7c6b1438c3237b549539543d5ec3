@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_b633805e",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-10-20T21:28:04Z",
+      "side": 1,
+      "message": "Error should be lower case.",
+      "revId": "b793ddb9502b7c6b1438c3237b549539543d5ec3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_563a3c34",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-10-20T21:28:04Z",
+      "side": 1,
+      "message": "Talk should be lower case.",
+      "revId": "b793ddb9502b7c6b1438c3237b549539543d5ec3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
