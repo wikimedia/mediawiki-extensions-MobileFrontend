@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_81a63fa6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-20T18:45:17Z",
+      "side": 1,
+      "message": "No :) This variable means, that Beta is enabled (so the user can choose, if he want to be in Beta mode), not that the user IS in beta mode. Use MobileContext::isBetaGroupMember()",
+      "revId": "94ab395cae3fefbfd881bc1eebe03325966c9c80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
