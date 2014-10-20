@@ -34,6 +34,24 @@
       "revId": "98c1e2850664d43c62ec2ea361b0450c1aa1a4a2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_c65f7d43",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-10-20T18:15:21Z",
+      "side": 1,
+      "message": "I don\u0027t speak all languages that use GENDER, so I don\u0027t know which would require it, but this would work for all languages and properly announce the availability of GENDER:\n\n Return to the user page of \\\"{{GENDER:$1|$1}}\\\".",
+      "parentUuid": "8e96e304_c6821da9",
+      "revId": "98c1e2850664d43c62ec2ea361b0450c1aa1a4a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
