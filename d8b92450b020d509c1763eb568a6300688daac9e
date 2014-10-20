@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_791acb7f",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-20T23:25:56Z",
+      "side": 1,
+      "message": "I\u0027d rather we found a way to reuse WikiGrokDialog::chooseRandomItemFromArray in some way and make that function more generic.",
+      "revId": "d8b92450b020d509c1763eb568a6300688daac9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
