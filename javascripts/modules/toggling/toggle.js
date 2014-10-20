@@ -225,7 +225,11 @@
 	}
 
 	// avoid this running on Watchlist
-	if ( !M.inNamespace( 'special' ) && !mw.config.get( 'wgIsMainPage' ) ) {
+	if (
+		!M.inNamespace( 'special' ) &&
+		!mw.config.get( 'wgIsMainPage' ) &&
+		mw.config.get( 'wgAction' ) === 'view'
+	) {
 		if ( mw.config.get( 'wgMFPageSections' ) ) {
 			init();
 		}
