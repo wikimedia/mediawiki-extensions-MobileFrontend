@@ -115,6 +115,7 @@
 		performSearch: function () {
 			var
 				self = this,
+				pageList,
 				query = this.$input.val(),
 				$results = this.$( '.results' );
 
@@ -141,7 +142,8 @@
 									filter( data.results.length ? '.with-results' : '.without-results' ).
 									show();
 								self.$( '.spinner' ).hide();
-								new PageList( { pages: data.results, el: $results } );
+								pageList = new PageList( { pages: data.results, el: $results } );
+								pageList.renderPageImages();
 								M.emit( 'search-results', self, data.results );
 							}
 						} );

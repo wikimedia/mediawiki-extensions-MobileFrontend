@@ -455,7 +455,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/search/SearchApi.js',
 			'javascripts/modules/search/SearchOverlay.js',
 			'javascripts/modules/search/search.js',
-			'javascripts/modules/search/pageImages.js',
 		),
 		'templates' => array(
 			'modules/search/SearchOverlay.hogan',
