@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_a6f4b184",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-10-20T17:49:00Z",
+      "side": 1,
+      "message": "This needs explicit GENDER support. It can use $1 if that is the plain text username.",
+      "revId": "98c1e2850664d43c62ec2ea361b0450c1aa1a4a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
