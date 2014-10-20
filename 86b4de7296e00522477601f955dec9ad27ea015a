@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_197ce7b3",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-20T23:20:04Z",
+      "side": 1,
+      "message": "Use wgMF\nthe wg prefix is only used for variables available across the site and introduced by core.\n\nBy our own naming convention we prefix with wgMF",
+      "revId": "86b4de7296e00522477601f955dec9ad27ea015a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_994f9797",
+        "filename": "javascripts/application.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-20T23:20:04Z",
+      "side": 1,
+      "message": "Please don\u0027t add this here. We don\u0027t want application.js to become a dumping ground for code.\n\nPlease put this in WikiGrokDialog since it\u0027s the only code that currently uses it. We can rethink where to put it later if we need this code elsewhere.",
+      "revId": "86b4de7296e00522477601f955dec9ad27ea015a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_59490f8f",
+        "filename": "javascripts/loggingSchemas/mobileWebWikiGrok.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-20T23:20:04Z",
+      "side": 1,
+      "message": "wgMFUserNameHash",
+      "revId": "86b4de7296e00522477601f955dec9ad27ea015a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_794c0ba0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-20T23:20:04Z",
+      "side": 1,
+      "message": "Document :)",
+      "revId": "86b4de7296e00522477601f955dec9ad27ea015a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_1963870b",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-20T23:20:04Z",
+      "side": 1,
+      "message": "Document :)",
+      "revId": "86b4de7296e00522477601f955dec9ad27ea015a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_395e8349",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-20T23:20:04Z",
+      "side": 1,
+      "message": "Document :)",
+      "revId": "86b4de7296e00522477601f955dec9ad27ea015a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
