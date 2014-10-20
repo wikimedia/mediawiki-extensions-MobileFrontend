@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_bc27e40c",
+        "filename": "README.mediawiki",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-20T20:23:42Z",
+      "side": 1,
+      "message": "I liek it that way!",
+      "revId": "77dcde20fd677b53d2ae48c137ab3b01502495e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
