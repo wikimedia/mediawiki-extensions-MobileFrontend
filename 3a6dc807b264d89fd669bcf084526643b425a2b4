@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_418cb789",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-20T18:23:21Z",
+      "side": 1,
+      "message": "It would be nice to put this only into vars, if WikiGrok is enabled and the user is at least in beta (WikiGrok is in beta now, right?), so we don\u0027t have a useless 64 char string to load every time :)",
+      "revId": "3a6dc807b264d89fd669bcf084526643b425a2b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
