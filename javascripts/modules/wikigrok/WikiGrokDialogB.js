@@ -28,7 +28,7 @@
 		_renderSuggestions: function( suggestions ) {
 			var
 				self = this,
-				suggestionsList = [],
+				allSuggestions = [], suggestionsList = [],
 				// Maps item ids to a key in i18n file
 				lookupProp = {},
 				i18n = {
@@ -44,12 +44,15 @@
 						id: data.id
 					};
 
-				suggestionsList = suggestionsList.concat( data.list );
+				allSuggestions = allSuggestions.concat( data.list );
 				// Make sure it's easy to look up the property later.
 				$.each( data.list, function( i, itemId ) {
 					lookupProp[itemId] = prop;
 				} );
 			} );
+
+			// randomly pick 6 suggestions
+			suggestionsList = self.chooseRandomItemsFromArray( allSuggestions, 6 );
 
 			// Now work out the labels if we have some suggestions
 			if ( suggestionsList.length ) {

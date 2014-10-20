@@ -52,9 +52,34 @@
 			};
 			schema.log( data );
 		},
+		/**
+		 * Return a new array from 'array' with 'count' randomly selected elements.
+		 * @param array - Array from which random elements are selected
+		 * @param count - Positive number of random elements to select
+		 * @returns {Array}
+		 */
+		chooseRandomItemsFromArray: function( array, count ) {
+			var result = [], arrayCopy, arrayLength = array.length,
+				randomIndex;
 
-		chooseRandomItemFromArray: function( array ) {
-			return array[ Math.floor( Math.random() * array.length ) ];
+			if ( arrayLength >= 1 ) {
+				count = ( count > arrayLength ) ? arrayLength : count;
+
+				// only clone the array if we need to return more than one element
+				if ( count > 1 ) {
+					arrayCopy = array.slice();
+					// with each iteration the arrayCopy size decreases by 1.
+					for ( var i = 1; i <= count; i++ ) {
+						randomIndex = Math.round( Math.random() * ( arrayLength - i ) );
+						result = result.concat( arrayCopy.splice( randomIndex, 1 ) );
+					}
+				} else {
+					randomIndex = Math.round( Math.random() * ( arrayLength - 1 ) );
+					result.push( array[ randomIndex ] );
+				}
+
+			}
+			return result;
 		},
 
 		askWikidataQuestion: function( options ) {
@@ -65,7 +90,7 @@
 			// random and ask if it is a correct occupation for the person.
 			if ( occupationArray.length ) {
 				// Choose a random occupation from the list of possible occupations.
-				options.occupationId = this.chooseRandomItemFromArray( occupationArray );
+				options.occupationId = this.chooseRandomItemsFromArray( occupationArray, 1 )[0];
 
 				// Get the name of the occupation from Wikidata.
 				self.apiWikiData.getLabels( [ options.occupationId ] ).done( function( labels ) {
