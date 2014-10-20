@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "8e96e304_f98a5bbf",
+        "filename": "includes/EventLogger.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-10-20T23:34:40Z",
+      "side": 1,
+      "message": "We have ExtMobileFrontend::eventLog() for this.",
+      "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_d933df08",
+        "filename": "includes/api/ApiWikiGrokResponse.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-10-20T23:34:40Z",
+      "side": 1,
+      "message": "These are class constants, no need for prefixes.",
+      "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_b92053a9",
+        "filename": "includes/api/ApiWikiGrokResponse.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-10-20T23:34:40Z",
+      "side": 1,
+      "message": "This is a very particular technical detail, a more general description would be appreciated, especially since at some point we might want to change the backend and store this information somewhere else, or just update Wikidata directly with this API.",
+      "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_f9f33b67",
         "filename": "tests/phpunit/api/ApiWikiGrokResponseTest.php",
         "patchSetId": 7
