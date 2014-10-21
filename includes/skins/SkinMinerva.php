@@ -808,12 +808,6 @@ class SkinMinerva extends SkinTemplate {
 		$vars['wgMFShowRedLinks'] = ( $this->mobileContext->isBetaGroupMember() && $wgMFShowRedLinks )
 			|| ( $wgMFShowRedLinksAnon && $user->isAnon() );
 
-		$vars['wgMFThumbnailSizes'] = array(
-			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
-			'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
-			'medium' => MobilePage::MEDIUM_IMAGE_WIDTH
-		);
-
 		// Get variables that are only needed in mobile mode
 		if ( $this->isMobileMode ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();

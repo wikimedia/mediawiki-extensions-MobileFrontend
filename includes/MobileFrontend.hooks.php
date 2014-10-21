@@ -327,6 +327,11 @@ class MobileFrontendHooks {
 		global $wgMFNearbyEndpoint, $wgMFContentNamespace, $wgMFEnableWikiGrok,
 			$wgMFEnableWikiGrokOnAllDevices;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
+		$vars['wgMFThumbnailSizes'] = array(
+			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
+			'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
+			'medium' => MobilePage::MEDIUM_IMAGE_WIDTH
+		);
 		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
 		$vars['wgMFEnableWikiGrok'] = $wgMFEnableWikiGrok;
 		$vars['wgMFEnableWikiGrokOnAllDevices'] = $wgMFEnableWikiGrokOnAllDevices;
