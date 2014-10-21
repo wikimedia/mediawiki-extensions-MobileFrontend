@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_91d9ec85",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T23:06:57Z",
+      "side": 1,
+      "message": "When there count \u003e array.length it returns a bunch of undefined items.\nAlso chooseRandomItemsFromArray( [], 1 )\n\nAdd some tests?",
+      "revId": "f6996fcc00c732a3181b63d6bc5d5982cc35ff42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_51d36461",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T23:06:57Z",
+      "side": 1,
+      "message": "This is unnecessary, it doesn\u0027t say in the documentation this is optional.",
+      "revId": "f6996fcc00c732a3181b63d6bc5d5982cc35ff42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_715a20fb",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T23:06:57Z",
+      "side": 1,
+      "message": "This line is difficult to read. I\u0027d suggest caching the variable.",
+      "revId": "f6996fcc00c732a3181b63d6bc5d5982cc35ff42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_915face8",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T23:06:57Z",
+      "side": 1,
+      "message": "This line is difficult to read. I\u0027d suggest caching the variable.",
+      "revId": "f6996fcc00c732a3181b63d6bc5d5982cc35ff42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
