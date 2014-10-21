@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_60ed6c22",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T19:56:47Z",
+      "side": 1,
+      "message": "Don\u0027t use pixels! Use ems :)\nAlso where do these magic numbers come from? I assume the container.\n\nWhat if the footer changes? These should be more coupled somehow.\n\nMaybe using margins can help here?",
+      "revId": "f244a72e3a837cc237df4b5539a62860080c750f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
