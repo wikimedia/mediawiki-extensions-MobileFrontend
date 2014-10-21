@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_b18e68d4",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-21T23:53:05Z",
+      "side": 1,
+      "message": "The name of this method is confusing since it sounds like it should do something similar to logPageImpression, but it is very different. Maybe initializeWidgetImpressionLogging()?",
+      "revId": "3681dd80f565aad692df0357f8b86b3af38d6cc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_71b8e074",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-21T23:53:05Z",
+      "side": 1,
+      "message": "What if the widget is already in the viewport when the user loads the page and they never scroll or resize?",
+      "revId": "3681dd80f565aad692df0357f8b86b3af38d6cc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
