@@ -45,12 +45,18 @@
 	 */
 	function expandStoredSections() {
 		var expandedSections = getExpandedSections(),
-			$headlines = $( '.section-heading span' ), $headline;
+			$headlines = $( '.section-heading span' ), $headline,
+			$sectionHeading;
 
 		$headlines.each( function () {
 			$headline = $( this );
-			if ( expandedSections[currentPageTitle][$headline.attr( 'id' )] ) {
-				toggle( $headline.parents( '.section-heading' ) );
+			$sectionHeading = $headline.parents( '.section-heading' );
+			// toggle only if the section is not already expanded
+			if (
+				expandedSections[currentPageTitle][$headline.attr( 'id' )] &&
+				!$sectionHeading.hasClass( 'open-block' )
+			) {
+				toggle( $sectionHeading );
 			}
 		} );
 	}

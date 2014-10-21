@@ -255,6 +255,43 @@ QUnit.test( 'Check for and remove obsolete stored sections.', 2, function( asser
 	);
 } );
 
+QUnit.test( 'Expanding already expanded section does not toggle it.', 5, function( assert ) {
+	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	assert.strictEqual( $.isEmptyObject( this.expandedSections[this.pageTitle] ),
+		true,
+		'no expanded sections are stored in localStorage yet'
+	);
+
+	assert.strictEqual(
+		this.$section.hasClass( 'open-block' ),
+		false,
+		'section does not have open-block class'
+	);
+
+	// manually toggle the second section
+	toggle.toggle( this.$section );
+
+	assert.strictEqual(
+		this.$section.hasClass( 'open-block' ),
+		true,
+		'revealed section has open-block class'
+	);
+
+	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
+	assert.strictEqual( typeof this.expandedSections[this.pageTitle][this.headline],
+		'number',
+		'manually revealed section state has been correctly saved in localStorage'
+	);
+
+	toggle._expandStoredSections();
+
+	assert.strictEqual(
+		this.$section.hasClass( 'open-block' ),
+		true,
+		'already revealed section still has open-block class after expanding sections'
+	);
+} );
+
 QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
 	setup: function() {
 		// can't use makeSections because the resulting html is wrapped in a div
