@@ -89,16 +89,19 @@
 						];
 						options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
 						self.render( options );
+					} else {
+						self.showError( options, "There was an error retrieving tag labels." );
 					}
-					options.buttons = [
-						{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
-						{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
-						{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
-					];
-					options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
-					self.render( options );
 				} );
 			}
+		},
+
+		showError: function( options, errorMsg ) {
+			options.contentMsg = errorMsg;
+			options.buttons = [
+				{ classes: 'cancel inline mw-ui-button mw-ui-progressive', label: 'OK' },
+			];
+			this.render( options );
 		},
 
 		// Record answer in temporary database for analysis.
