@@ -28,7 +28,6 @@
 					claims: JSON.stringify( claims ),
 					page_name: mw.config.get( 'wgPageName' ),
 					user_id: mw.user.getId(),
-					version: 2,
 					source: 'mobile ' + this.version
 				} );
 		},
