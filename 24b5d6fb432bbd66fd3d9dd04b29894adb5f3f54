@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_3148188c",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T23:58:32Z",
+      "side": 1,
+      "message": "Only section-headings should be sticky.\nWe don\u0027t want this to impact things like the table of contents.\nI haven\u0027t changed this line in my patchset.",
+      "parentUuid": "6e936f18_f16390d8",
+      "revId": "24b5d6fb432bbd66fd3d9dd04b29894adb5f3f54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_b15d081d",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-21T23:06:25Z",
       "side": 1,
       "message": ".section-heading should be replaced with .collapsible-heading",
+      "revId": "24b5d6fb432bbd66fd3d9dd04b29894adb5f3f54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_91532c43",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T23:58:32Z",
+      "side": 1,
+      "message": "Only section-headings should be sticky.\nWe don\u0027t want this to impact things like the table of contents.\n\nI haven\u0027t changed this line in my patchset.",
+      "parentUuid": "6e936f18_b15d081d",
       "revId": "24b5d6fb432bbd66fd3d9dd04b29894adb5f3f54",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_3171f8dd",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T23:58:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_f13cf0be",
+      "revId": "24b5d6fb432bbd66fd3d9dd04b29894adb5f3f54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_516fe4c0",
         "filename": "javascripts/modules/toggling/toggle.js",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2014-10-21T23:06:25Z",
       "side": 1,
       "message": "no need for this line",
+      "revId": "24b5d6fb432bbd66fd3d9dd04b29894adb5f3f54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_f17ab0b8",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-21T23:58:32Z",
+      "side": 1,
+      "message": "This line is needed to distinguish section headings from all collapsible sections",
+      "parentUuid": "6e936f18_516fe4c0",
       "revId": "24b5d6fb432bbd66fd3d9dd04b29894adb5f3f54",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
