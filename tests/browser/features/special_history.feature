@@ -3,7 +3,7 @@ Feature: Special:History (Note test may take a long time to run on first run)
 
   Background:
     Given I am using the mobile site
-      And the page "Selenium diff test" exists and has at least 51 edits
+      And the page "Selenium diff test" exists and has at least "51" edits
       And I am on the "Selenium diff test" page
     When I click on the history link in the last modified bar
 
