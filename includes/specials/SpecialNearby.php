@@ -44,7 +44,7 @@ class SpecialNearby extends MobileSpecialPage {
 			) .
 			Html::openElement( 'div',
 				array(
-					'class' => 'noscript error alert',
+					'class' => 'noscript errorbox',
 				)
 			) .
 			Html::openElement( 'div',

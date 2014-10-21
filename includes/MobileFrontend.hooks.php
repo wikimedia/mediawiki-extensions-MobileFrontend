@@ -362,7 +362,9 @@ class MobileFrontendHooks {
 			 * Special:Contributions without the bells and whistles.
 			 */
 			$list['Contributions'] = 'SpecialMobileContributions';
-			$list['Userlogin'] = 'SpecialMobileUserlogin';
+			if ( !$ctx->isAlphaGroupMember() ) {
+				$list['Userlogin'] = 'SpecialMobileUserlogin';
+			}
 
 			if ( class_exists( 'MWEchoNotifUser' ) ) {
 				$list['Notifications'] = 'SpecialMobileNotifications';
@@ -536,7 +538,7 @@ class MobileFrontendHooks {
 	public static function onUserLoginForm( &$template ) {
 		wfProfileIn( __METHOD__ );
 		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() ) {
+		if ( $context->shouldDisplayMobileView() && !$context->isAlphaGroupMember() ) {
 			$template = new UserLoginMobileTemplate( $template );
 		}
 		wfProfileOut( __METHOD__ );
@@ -553,7 +555,7 @@ class MobileFrontendHooks {
 	public static function onUserCreateForm( &$template ) {
 		wfProfileIn( __METHOD__ );
 		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() ) {
+		if ( $context->shouldDisplayMobileView() && !$context->isAlphaGroupMember() ) {
 			$template = new UserAccountCreateMobileTemplate( $template );
 		}
 		wfProfileOut( __METHOD__ );
