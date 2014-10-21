@@ -16,6 +16,23 @@
       "revId": "f244a72e3a837cc237df4b5539a62860080c750f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c04d6041",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-21T20:00:15Z",
+      "side": 1,
+      "message": "Not even sure how padding got here. supposed to be width.  Footer container is 45px tall. So using those dimensions for footer makes it perfect as the comment suggests.  Will be rethinking this.",
+      "revId": "f244a72e3a837cc237df4b5539a62860080c750f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
