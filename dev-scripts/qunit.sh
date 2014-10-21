@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Running QUnit tests..."
 if command -v phantomjs > /dev/null ; then
-  URL=${MEDIAWIKI_URL:-"http://127.0.0.1:80/w/index.php/"}
+  URL=${MEDIAWIKI_URL:-"http://127.0.0.1:8080/w/index.php/"}
   if [ -z "$1" ]; then
     FILTER=""
   else
