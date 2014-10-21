@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e96e304_1f65a7dd",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-21T05:36:27Z",
+      "side": 1,
+      "message": "-\u003e I8961d0b9bd79d647a5ec9e0454534b1d8a13b5fe",
+      "parentUuid": "8e96e304_b633805e",
+      "revId": "b793ddb9502b7c6b1438c3237b549539543d5ec3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_563a3c34",
         "filename": "i18n/en.json",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-20T21:28:04Z",
       "side": 1,
       "message": "Talk should be lower case.",
+      "revId": "b793ddb9502b7c6b1438c3237b549539543d5ec3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_3f60a3cb",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-21T05:36:27Z",
+      "side": 1,
+      "message": "Fixed already in Ibe798286c89b346cff7e6875cd9219f29a77b687",
+      "parentUuid": "8e96e304_563a3c34",
       "revId": "b793ddb9502b7c6b1438c3237b549539543d5ec3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
