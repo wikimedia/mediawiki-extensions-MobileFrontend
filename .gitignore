@@ -1,6 +1,5 @@
 .svn
 *~
-Gemfile.lock
 *.kate-swp
 .*.swp
 .idea/
