@@ -7,6 +7,8 @@
 ( function( M, $ ) {
 	var Router = M.require( 'Router' ),
 		OverlayManager = M.require( 'OverlayManager' ),
+		Icon = M.require( 'Icon' ),
+		watchIcon = new Icon( { name: 'watched' } ),
 		qs = window.location.search.split( '?' )[1],
 		PageApi = M.require( 'PageApi' ),
 		pageApi = new PageApi(),
@@ -392,7 +394,7 @@
 			},
 			lead: getLeadSection().html(),
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
-			isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
+			isWatched: $( '#ca-watch' ).hasClass( watchIcon.getGlyphClassName() ),
 			sections: pageApi.getSectionsFromHTML( $( '#content' ) ),
 			id: mw.config.get( 'wgArticleId' )
 		} );

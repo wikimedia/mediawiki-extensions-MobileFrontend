@@ -4,6 +4,8 @@ var Watchstar = M.require( 'modules/watchstar/Watchstar' ),
 	WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 	CtaDrawer = M.require( 'CtaDrawer' ),
 	toast = M.require( 'toast' ),
+	Icon = M.require( 'Icon' ),
+	watchIcon = new Icon( { name: 'watched' } ),
 	user = M.require( 'user' ),
 	Page = M.require( 'Page' );
 
@@ -48,7 +50,8 @@ QUnit.test( 'Logged in user watches article', 3, function( assert ) {
 		action: 'watch',
 		pageids: 42
 	} ), 'The watch happened' );
-	assert.strictEqual( $el.hasClass( 'watched' ), true, "After successful watch has watched class" );
+	assert.strictEqual( $el.hasClass( watchIcon.getGlyphClassName() ),
+		true, "After successful watch has watched class" );
 	assert.strictEqual( $( '.toast' ).is( ':visible' ), true, "A toast is shown" );
 } );
 

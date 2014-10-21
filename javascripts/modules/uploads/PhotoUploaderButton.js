@@ -1,5 +1,8 @@
 ( function( M, $ ) {
 	var View = M.require( 'View' ),
+		Icon = M.require( 'Icon' ),
+		photoIcon = new Icon( { name: 'photo', hasText: true,
+			additionalClassNames: 'mw-ui-progressive mw-ui-button button' } ),
 		PhotoUploaderButton;
 
 	function isSupported() {
@@ -45,7 +48,7 @@
 	 */
 	PhotoUploaderButton = View.extend( {
 		template: M.template.get( 'modules/uploads/PhotoUploaderButton.hogan' ),
-		className: 'mw-ui-progressive mw-ui-button button icon-photo icon icon-text',
+		className: photoIcon.getClassName(),
 
 		postRender: function() {
 			var self = this, $input = this.$( 'input' );

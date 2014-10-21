@@ -1,6 +1,11 @@
 ( function( M, $ ) {
 
 	var
+		Icon = M.require( 'Icon' ),
+		disabledEditIcon = new Icon( { name: 'edit' } ),
+		enabledEditIcon = new Icon( { name: 'edit-enabled' } ),
+		enabledClass = enabledEditIcon.getGlyphClassName(),
+		disabledClass = disabledEditIcon.getGlyphClassName(),
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
 		// FIXME: Disable on IE < 10 for time being
@@ -146,7 +151,7 @@
 
 			return result;
 		} );
-		$( '#ca-edit' ).addClass( 'enabled' );
+		$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
 
 		// Make sure we never create two edit links by accident
 		if ( $( '#ca-edit .edit-page' ).length === 0 ) {
@@ -187,9 +192,10 @@
 		} else {
 			M.getCurrentPage().isEditable( user ).done( function( isEditable ) {
 				if ( isEditable ) {
-					$( '#ca-edit' ).addClass( 'enabled' ).on( 'tap', function() {
-						drawer.render().show();
-					});
+					$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass ).
+						on( 'tap', function() {
+							drawer.render().show();
+						} );
 				} else {
 					showSorryToast( 'mobile-frontend-editor-disabled' );
 				}

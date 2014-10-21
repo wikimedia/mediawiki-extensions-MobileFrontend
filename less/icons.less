@@ -126,18 +126,18 @@
 // Styleguide 8.3.1.
 .icon-edit {
 	.background-image('images/pagemenu/edit-locked.png');
+}
 
-	// Icon (enabled edit)
-	//
-	// Renders an enabled edit icon
-	//
-	// Markup:
-	// <div class="icon icon-edit enabled">edit</div>
-	//
-	// Styleguide 8.3.2.
-	&.enabled {
-		.background-image('images/pagemenu/edit.png');
-	}
+// Icon (enabled edit)
+//
+// Renders an enabled edit icon
+//
+// Markup:
+// <div class="icon icon-edit-enabled">edit</div>
+//
+// Styleguide 8.3.2.
+.icon-edit-enabled {
+	.background-image('images/pagemenu/edit.png');
 }
 
 // Icon (talk)
@@ -172,7 +172,9 @@
 	// <div class="icon watch-this-article watched">watch</div>
 	//
 	// Styleguide 8.3.4.
-	&.watched {
+	&.watched,
+	// FIXME: Remove above when cache clears
+	&.icon-watched {
 		.background-image('images/watched.png');
 	}
 }

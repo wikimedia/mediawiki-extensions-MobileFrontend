@@ -2,6 +2,8 @@
 
 	var PageList = M.require( 'modules/PageList' ),
 		user = M.require( 'user' ),
+		Icon = M.require( 'Icon' ),
+		watchIcon = new Icon( { name: 'watched' } ),
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' );
 
 	QUnit.module( 'MobileFrontend modules/PageList', {
@@ -24,14 +26,14 @@
 			pageids: [ 30, 50 ]
 		} ), 'A request to API was made to retrieve the statuses' );
 		assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 2, "2 articles have watch stars" );
-		assert.strictEqual( pl.$el.find( '.watched' ).length, 1, "1 of articles is marked as watched" );
+		assert.strictEqual( pl.$el.find( '.' + watchIcon.getGlyphClassName() ).length, 1, "1 of articles is marked as watched" );
 	} );
 
 	QUnit.test( 'In watched mode', 3, function( assert ) {
 		var pl = new PageList( { pages: [ { id: 30 }, { id: 50 }, { id: 60 } ], isWatchList: true } );
 		assert.ok( this.spy.notCalled, 'Callback avoided' );
 		assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 3, "3 articles have watch stars..." );
-		assert.strictEqual( pl.$el.find( '.watched' ).length, 3, "...and all are marked as watched." );
+		assert.strictEqual( pl.$el.find( '.' + watchIcon.getGlyphClassName() ).length, 3, "...and all are marked as watched." );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );

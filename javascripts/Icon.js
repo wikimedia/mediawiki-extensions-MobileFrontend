@@ -16,6 +16,22 @@
 			name: '',
 			modifier: ''
 		},
+		/**
+		 * Return the full class name that is required for the icon to render
+		 * @method
+		 * @return {string}
+		 */
+		getClassName: function() {
+			return this.$el.children( 0 ).attr( 'class' );
+		},
+		/**
+		 * Return the class that relates to the icon glyph
+		 * @method
+		 * @return {string}
+		 */
+		getGlyphClassName: function() {
+			return this.options.base + '-' + this.options.name;
+		},
 		initialize: function( options ) {
 			if ( options.hasText ) {
 				options.modifier = 'icon-text';

@@ -2,6 +2,9 @@
 
 	var View = M.require( 'View' ), Watchstar,
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
+		Icon = M.require( 'Icon' ),
+		watchIcon = new Icon( { name: 'watch', additionalClassNames: 'icon-32px watch-this-article' } ),
+		watchedIcon = new Icon( { name: 'watched', additionalClassNames: 'icon-32px watch-this-article' } ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		api = new WatchstarApi(),
@@ -17,7 +20,7 @@
 			page: M.getCurrentPage()
 		},
 		tagName: 'div',
-		className: 'icon icon-32px watch-this-article',
+		className: watchIcon.getClassName(),
 		template: M.template.compile( '<a>{{tooltip}}</a>', 'hogan' ),
 		initialize: function( options ) {
 			var self = this, _super = View.prototype.initialize,
@@ -48,6 +51,8 @@
 		},
 		postRender: function( options ) {
 			var self = this, callback,
+				unwatchedClass = watchIcon.getGlyphClassName(),
+				watchedClass = watchedIcon.getGlyphClassName(),
 				checker,
 				page = options.page,
 				$el = self.$el;
@@ -92,9 +97,9 @@
 
 			// Add watched class if necessary
 			if ( !user.isAnon() && api.isWatchedPage( page ) ) {
-				$el.addClass( 'watched' );
+				$el.addClass( watchedClass ).removeClass( unwatchedClass );
 			} else {
-				$el.removeClass( 'watched' );
+				$el.addClass( unwatchedClass ).removeClass( watchedClass );
 			}
 		}
 	} );
