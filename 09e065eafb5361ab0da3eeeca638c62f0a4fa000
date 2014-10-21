@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_30d8d0f3",
+        "filename": "javascripts/application.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 395,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-21T17:34:43Z",
+      "side": 1,
+      "message": "It feels like this should be put behind a lower level API. I\u0027m having trouble coming up with a name though…\n\nMaybe we should mirror the idea of the Skin?",
+      "revId": "09e065eafb5361ab0da3eeeca638c62f0a4fa000",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_f0a6e84f",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-21T17:34:43Z",
+      "side": 1,
+      "message": "isAlphaGroupMember on this line, L154, and L158.",
+      "revId": "09e065eafb5361ab0da3eeeca638c62f0a4fa000",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_cb053dc6",
+        "filename": "less/iconsNew.less",
+        "patchSetId": 12
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-21T17:34:43Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be mixin-mw-ui-icon-bgimage?",
+      "revId": "09e065eafb5361ab0da3eeeca638c62f0a4fa000",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
