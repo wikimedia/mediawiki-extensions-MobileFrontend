@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e96e304_d0d88c81",
+        "filename": "includes/EventLogger.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-21T15:38:09Z",
+      "side": 1,
+      "message": "Though this class also does was ExtMobileFront::eventLog does, it was introduced to get rid of the coupling between ApiWikiGrokResponse#execute and EventLogging::logEvent.",
+      "parentUuid": "8e96e304_f98a5bbf",
+      "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_d933df08",
         "filename": "includes/api/ApiWikiGrokResponse.php",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-20T23:34:40Z",
       "side": 1,
       "message": "These are class constants, no need for prefixes.",
+      "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_f05108de",
+        "filename": "includes/api/ApiWikiGrokResponse.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-21T15:38:09Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "8e96e304_d933df08",
       "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8e96e304_f0ffc8a5",
+        "filename": "includes/api/ApiWikiGrokResponse.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-21T15:38:09Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "8e96e304_b92053a9",
+      "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e96e304_f9f33b67",
         "filename": "tests/phpunit/api/ApiWikiGrokResponseTest.php",
         "patchSetId": 7
@@ -64,6 +118,24 @@
       "writtenOn": "2014-10-20T23:09:07Z",
       "side": 1,
       "message": "We tend to use FIXME in mobilefrontend (and sometimes @todo notation) to make these kind of things easy to find.",
+      "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_7023b854",
+        "filename": "tests/phpunit/api/ApiWikiGrokResponseTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-21T15:38:09Z",
+      "side": 1,
+      "message": "Done. I changed the TODO in ApiWikiGrokResponse as well.",
+      "parentUuid": "8e96e304_f9f33b67",
       "revId": "ef475e200dca857ff87f323192bfd2db9874627d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
