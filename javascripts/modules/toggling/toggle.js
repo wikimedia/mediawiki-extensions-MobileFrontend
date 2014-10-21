@@ -97,7 +97,7 @@
 				'aria-expanded': !isCollapsed
 			} );
 
-		if ( M.isBetaGroupMember && !M.isWideScreen() ) {
+		if ( M.isBetaGroupMember() && !M.isWideScreen() ) {
 			storeSectionToggleState( $heading );
 		}
 	}
@@ -212,7 +212,7 @@
 		checkHash();
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 
-		if ( M.isBetaGroupMember && !M.isWideScreen() ) {
+		if ( M.isBetaGroupMember() && !M.isWideScreen() ) {
 			expandStoredSections();
 			cleanObsoleteStoredSections();
 		}
