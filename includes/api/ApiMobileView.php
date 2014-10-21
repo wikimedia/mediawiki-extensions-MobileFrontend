@@ -94,7 +94,9 @@ class ApiMobileView extends ApiBase {
 		}
 		if ( isset( $prop['lastmodifiedby'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'lastmodifiedby' => $data['lastmodifiedby'] )
+				array(
+					'lastmodifiedby' => $data['lastmodifiedby'],
+				)
 			);
 		}
 		if ( isset( $prop['revision'] ) ) {
@@ -544,6 +546,8 @@ class ApiMobileView extends ApiBase {
 				'name' => $wp->getUserText(),
 				'gender' => $user->getOption( 'gender' ),
 			);
+		} else {
+			$data['lastmodifiedby'] = null;
 		}
 		$data['revision'] = $title->getLatestRevID();
 
