@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 mkdir -p tmp
 TITLE=${1:-"W3CValidationTest"}
-URL=${MEDIAWIKI_URL:-"http://127.0.0.1:80/w/index.php/"}
+URL=${MEDIAWIKI_URL:-"http://127.0.0.1:8080/w/index.php/"}
 curl -sG "$URL$TITLE?useformat=mobile" > tmp/validate.html
 curl -sF "uploaded_file=@tmp/validate.html;type=text/html" -F output=json http://validator.w3.org/check > tmp/validate.json
 

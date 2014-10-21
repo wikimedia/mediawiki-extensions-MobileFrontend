@@ -1,5 +1,5 @@
 MW_INSTALL_PATH ?= ../..
-MEDIAWIKI_LOAD_URL ?= http://localhost/w/load.php
+MEDIAWIKI_LOAD_URL ?= http://localhost:8080/w/load.php
 
 # From https://gist.github.com/prwhite/8168133
 help:					## Show this help message
