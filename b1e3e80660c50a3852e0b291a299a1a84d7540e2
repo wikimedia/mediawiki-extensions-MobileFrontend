@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_4c7667d7",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-22T01:32:53Z",
+      "side": 1,
+      "message": "We probably want to have a debounce function handling this to prevent any browser performance degradation. Jon might have some other comments on that.",
+      "revId": "b1e3e80660c50a3852e0b291a299a1a84d7540e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
