@@ -1,6 +1,10 @@
 ( function( M, $ ) {
 	var View = M.require( 'View' ), Checkbox;
 
+	/**
+	 * @class Checkbox
+	 * @extends View
+	 */
 	Checkbox = View.extend( {
 		template: M.template.get( 'specials/checkbox.hogan' ),
 		save: function() {

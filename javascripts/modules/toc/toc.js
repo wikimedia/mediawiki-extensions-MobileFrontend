@@ -4,6 +4,10 @@
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		toggle = M.require( 'toggle' );
 
+	/**
+	 * @class TableOfContents
+	 * @extends View
+	 */
 	TableOfContents = View.extend( {
 		templatePartials: {
 			tocHeading: M.template.get( 'modules/toc/tocHeading.hogan' )

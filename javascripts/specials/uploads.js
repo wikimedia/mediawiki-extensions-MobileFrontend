@@ -12,6 +12,10 @@ var
 	IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).medium,
 	UserGalleryApi, PhotoItem, PhotoList;
 
+	/**
+	 * @class UserGalleryApi
+	 * @extends Api
+	 */
 	UserGalleryApi = Api.extend( {
 		initialize: function() {
 			Api.prototype.initialize.apply( this, arguments );
@@ -62,11 +66,19 @@ var
 		}
 	} );
 
+	/**
+	 * @class PhotoItem
+	 * @extends View
+	 */
 	PhotoItem = View.extend( {
 		template: M.template.get( 'specials/photo.hogan' ),
 		tagName: 'li'
 	} );
 
+	/**
+	 * @class PhotoList
+	 * @extends View
+	 */
 	PhotoList = View.extend( {
 		template: M.template.get( 'specials/userGallery.hogan' ),
 		templatePartials: {

@@ -3,6 +3,10 @@
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		LeadPhotoUploaderButton;
 
+	/**
+	 * @class LeadPhotoUploaderButton
+	 * @extends PhotoUploaderButton
+	 */
 	LeadPhotoUploaderButton = PhotoUploaderButton.extend( {
 		template: M.template.get( 'modules/uploads/LeadPhotoUploaderButton.hogan' ),
 		className: 'enabled',

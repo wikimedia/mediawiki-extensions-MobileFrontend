@@ -6,6 +6,10 @@
 		toast = M.require( 'toast' ),
 		TalkSectionAddOverlay;
 
+	/**
+	 * @class TalkSectionAddOverlay
+	 * @extends Overlay
+	 */
 	TalkSectionAddOverlay = Overlay.extend( {
 		defaults: {
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),

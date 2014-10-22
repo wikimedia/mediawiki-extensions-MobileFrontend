@@ -5,8 +5,8 @@
 		WikiGrokDialogB;
 
 	/**
-	 * @class WikiGrokDialog
-	 * @extends InlineDialog
+	 * @class WikiGrokDialogB
+	 * @extends WikiGrokDialog
 	 * THIS IS AN EXPERIMENTAL FEATURE THAT MAY BE MOVED TO A SEPARATE EXTENSION.
 	 * This creates the dialog at the bottom of the lead section that appears when a user
 	 * scrolls past the lead. It asks the user to confirm metadata information for use

@@ -4,6 +4,10 @@
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		PhotoUploadProgress;
 
+	/**
+	 * @class PhotoUploadProgress
+	 * @extends Overlay
+	 */
 	PhotoUploadProgress = Overlay.extend( {
 		defaults: {
 			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' ),

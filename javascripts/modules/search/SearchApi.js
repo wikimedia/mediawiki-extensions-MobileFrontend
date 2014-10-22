@@ -31,6 +31,10 @@
 		return label.replace( createSearchRegEx( term ),'<strong>$1</strong>' );
 	}
 
+	/**
+	 * @class SearchApi
+	 * @extends Api
+	 */
 	SearchApi = Api.extend( {
 		initialize: function() {
 			Api.prototype.initialize.apply( this, arguments );

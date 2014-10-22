@@ -3,6 +3,10 @@
 	var Overlay = M.require( 'Overlay' ),
 		LanguageOverlay;
 
+	/**
+	 * @class LanguageOverlay
+	 * @extends Overlay
+	 */
 	LanguageOverlay = Overlay.extend( {
 		defaults: {
 			heading: mw.msg( 'mobile-frontend-language-heading' ),

@@ -8,6 +8,10 @@
 		SEARCH_DELAY = 300,
 		SearchOverlay;
 
+	/**
+	 * @class SearchOverlay
+	 * @extends Overlay
+	 */
 	SearchOverlay = Overlay.extend( {
 		className: 'overlay search-overlay',
 		template: M.template.get( 'modules/search/SearchOverlay.hogan' ),

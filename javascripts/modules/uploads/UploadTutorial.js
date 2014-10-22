@@ -7,6 +7,10 @@
 		buttonMsg = mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
 		UploadTutorial;
 
+	/**
+	 * @class UploadTutorial
+	 * @extends Overlay
+	 */
 	UploadTutorial = Overlay.extend( {
 		template: M.template.get( 'modules/uploads/UploadTutorial.hogan' ),
 		className: 'overlay carousel tutorial',
