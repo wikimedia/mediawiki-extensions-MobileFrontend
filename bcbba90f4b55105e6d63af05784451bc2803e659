@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_f735c0d8",
+        "filename": "javascripts/modules/wikigrok/WikiGrokResponseApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-22T01:46:31Z",
+      "side": 1,
+      "message": "Need to add testing into dialog.",
+      "revId": "bcbba90f4b55105e6d63af05784451bc2803e659",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_17338cf4",
+        "filename": "javascripts/modules/wikigrok/WikiGrokResponseApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-22T01:46:31Z",
+      "side": 1,
+      "message": "Don\u0027t quite know how were are to generate this yet",
+      "revId": "bcbba90f4b55105e6d63af05784451bc2803e659",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
