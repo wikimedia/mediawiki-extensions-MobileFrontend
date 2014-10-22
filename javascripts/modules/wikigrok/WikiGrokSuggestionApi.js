@@ -1,12 +1,12 @@
 // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 ( function ( M ) {
-	var Api = M.require( 'api' ).Api, WikiGrokApi;
+	var Api = M.require( 'api' ).Api, WikiGrokSuggestionApi;
 	/**
-	 * Records claims, gets suggestions, nationalities, occupations from the API
-	 * @class WikiGrokApi
+	 * Gets suggestions, nationalities, occupations from the API
+	 * @class WikiGrokSuggestionApi
 	 * @extends Api
 	 */
-	WikiGrokApi = Api.extend( {
+	WikiGrokSuggestionApi = Api.extend( {
 		apiUrl: 'https://tools.wmflabs.org/wikigrok/api2.php',
 		useJsonp: true,
 
@@ -15,23 +15,6 @@
 			this.subject = options.subject;
 			this.version = options.version;
 			Api.prototype.initialize.apply( this, arguments );
-		},
-		/**
-		 * Saves claims to the wikigrok api server
-		 * @method
-		 * @param {Array} claims a list of claims. Each claim must have correct, prop, propid, value and valueid set
-		 * @return {jQuery.Deferred}
-		 */
-		recordClaims: function ( claims ) {
-			return this.ajax( {
-					action: 'record_answer',
-					subject_id: this.subjectId,
-					subject: this.subject,
-					claims: JSON.stringify( claims ),
-					page_name: mw.config.get( 'wgPageName' ),
-					user_id: mw.user.getId(),
-					source: 'mobile ' + this.version
-				} );
 		},
 		/**
 		 * Get suggestions for the current person.
@@ -72,6 +55,6 @@
 		}
 	} );
 
-	M.define( 'modules/wikigrok/WikiGrokApi', WikiGrokApi );
+	M.define( 'modules/wikigrok/WikiGrokSuggestionApi', WikiGrokSuggestionApi );
 
 }( mw.mobileFrontend ) );

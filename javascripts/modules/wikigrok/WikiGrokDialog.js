@@ -2,7 +2,8 @@
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Panel = M.require( 'Panel' ),
-		WikiGrokApi = M.require( 'modules/wikigrok/WikiGrokApi' ),
+		WikiGrokSuggestionApi = M.require( 'modules/wikigrok/WikiGrokSuggestionApi' ),
+		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
 		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
@@ -45,8 +46,18 @@
 
 			// Remove any disambiguation parentheticals from the title.
 			options.name = options.title.replace( / \(.+\)$/, '' );
-			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId, subject: options.name,
-				version: this.version } );
+			this.apiWikiGrokSuggestion = new WikiGrokSuggestionApi( {
+				itemId: options.itemId,
+				subject: options.name,
+				version: this.version
+			} );
+			this.apiWikiGrokResponse = new WikiGrokResponseApi( {
+				itemId: options.itemId,
+				subject: options.name,
+				version: this.version,
+				userToken: options.userToken,
+				taskToken: this.defaults.taskToken
+			} );
 			this.apiWikiData = new WikiDataApi( { itemId: options.itemId } );
 			Panel.prototype.initialize.apply( this, arguments );
 
@@ -203,7 +214,7 @@
 				claim.prop = 'nationality';
 			}
 
-			this.apiWikiGrok.recordClaims( [ claim ] ).done( function () {
+			this.apiWikiGrokResponse.recordClaims( [ claim ] ).done( function () {
 				options.claimRecorded = true;
 				self.thankUser( options, options.claimRecorded );
 			} ).fail(function () {
@@ -374,7 +385,7 @@
 				options.suggestions = [];
 				self.apiWikiData.getClaims().done( function ( claims ) {
 					if ( claims.isHuman ) {
-						self.apiWikiGrok.getSuggestions().fail( function () {
+						self.apiWikiGrokSuggestion.getSuggestions().fail( function () {
 							self.logError( 'no-impression-cannot-fetch-suggestions' );
 						} ).done( function ( suggestions ) {
 							// FIXME: add support for DOB and DOD
