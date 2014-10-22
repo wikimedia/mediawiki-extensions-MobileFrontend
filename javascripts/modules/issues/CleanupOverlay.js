@@ -1,5 +1,9 @@
 ( function( M ) {
 	var Overlay = M.require( 'Overlay' ),
+	/**
+	 * @class CleanupOverlay
+	 * @extends Overlay
+	 */
 	CleanupOverlay = Overlay.extend( {
 		templatePartials: {
 			content: M.template.get( 'modules/issues/cleanup.hogan' )

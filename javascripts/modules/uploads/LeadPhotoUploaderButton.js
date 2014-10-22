@@ -5,6 +5,10 @@
 		uploadIcon = new Icon( { name: 'addimage-enabled', additionalClassNames: 'enabled' } ),
 		LeadPhotoUploaderButton;
 
+	/**
+	 * @class LeadPhotoUploaderButton
+	 * @extends PhotoUploaderButton
+	 */
 	LeadPhotoUploaderButton = PhotoUploaderButton.extend( {
 		template: M.template.get( 'modules/uploads/LeadPhotoUploaderButton.hogan' ),
 		className: uploadIcon.getClassName(),

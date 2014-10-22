@@ -4,6 +4,10 @@ var
 	popup = M.require( 'toast' ),
 	api = M.require( 'api' ),
 	user = M.require( 'user' ),
+	/**
+	 * @class TalkSectionOverlay
+	 * @extends Overlay
+	 */
 	TalkSectionOverlay = Overlay.extend( {
 		template: M.template.get( 'modules/talk/talkSection.hogan' ),
 		templatePartials: {

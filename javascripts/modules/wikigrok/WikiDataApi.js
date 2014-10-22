@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	var Api = M.require( 'api' ).Api, WikiDataApi;
 	/**
-	 * @class EditorApi
+	 * @class WikiDataApi
 	 * @extends Api
 	 */
 	WikiDataApi = Api.extend( {
