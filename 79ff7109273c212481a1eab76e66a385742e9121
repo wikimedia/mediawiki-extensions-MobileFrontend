@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_26969750",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-22T13:44:18Z",
+      "side": 1,
+      "message": "window.location.reload() :)",
+      "revId": "79ff7109273c212481a1eab76e66a385742e9121",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
