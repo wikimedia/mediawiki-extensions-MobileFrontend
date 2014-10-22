@@ -14,7 +14,8 @@
 			tagName: 'div',
 			base: 'icon',
 			name: '',
-			modifier: ''
+			modifier: '',
+			title: ''
 		},
 		/**
 		 * Return the full class name that is required for the icon to render

@@ -1,1 +1,3 @@
-<{{tagName}} class="{{base}} {{base}}-{{name}} {{modifier}} {{additionalClassNames}}">{{label}}</{{tagName}}>
+<{{tagName}} class="{{base}} {{base}}-{{name}} {{modifier}} {{additionalClassNames}}"
+	{{#id}}id="{{id}}"{{/id}}
+	{{#title}}title="{{title}}"{{/title}}>{{label}}</{{tagName}}>
