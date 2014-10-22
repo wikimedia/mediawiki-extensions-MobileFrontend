@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_fc4280b1",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-22T17:43:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_a634e747",
+      "revId": "e45ba4918d60fcc4dd383c16b9d4e58ada9d6aa4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_86d76b28",
         "filename": "less/icons.less",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-22T14:33:22Z",
       "side": 1,
       "message": "icon-edit-enabled.",
+      "revId": "e45ba4918d60fcc4dd383c16b9d4e58ada9d6aa4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_3c39c83e",
+        "filename": "less/icons.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-22T17:43:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_86d76b28",
       "revId": "e45ba4918d60fcc4dd383c16b9d4e58ada9d6aa4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
