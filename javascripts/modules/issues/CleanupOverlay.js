@@ -1,5 +1,8 @@
 ( function( M ) {
 	var Overlay = M.require( 'Overlay' ),
+	Icon = M.require( 'Icon' ),
+	icon = new Icon( { name: 'cleanup-gray', additionalClassNames: 'issue-notice', hasText: true } ),
+
 	/**
 	 * @class CleanupOverlay
 	 * @extends Overlay
@@ -7,6 +10,9 @@
 	CleanupOverlay = Overlay.extend( {
 		templatePartials: {
 			content: M.template.get( 'modules/issues/cleanup.hogan' )
+		},
+		defaults: {
+			className: icon.getClassName()
 		},
 		initialize: function( options ) {
 			options.heading = '<strong>' + options.headingText + '</strong>';
