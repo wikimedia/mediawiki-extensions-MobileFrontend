@@ -3,11 +3,13 @@
 
 // no fallback mixin for those SVGs (VE doesn't work on browsers without SVG
 // support anyway)
-.icon-edit-source {
+// FIXME: Remove when mw-ui-icon in stable
+.icon.icon-edit-source {
 	.background-image( 'images/editSourceNormal.svg' );
 }
 
-.icon-edit-ve {
+// FIXME: Remove when mw-ui-icon in stable
+.icon.icon-edit-ve {
 	.background-image( 'images/editVeNormal.svg' );
 }
 
@@ -73,9 +75,13 @@
 				display: block;
 				border: none;
 				border-radius: 0;
-				padding: 0 1.5em 0 .5em;
 				text-align: left;
 
+				&.mw-ui-icon {
+					padding-right: 4em;
+				}
+
+				// FIXME: Remove when mw-ui-icon in stable
 				.icon {
 					display: inline-block;
 					width: 3.35em;
@@ -83,8 +89,14 @@
 					vertical-align: middle;
 				}
 
+
 				&.selected {
 					background: @selectedBackgroundColor;
+				}
+
+				// FIXME: Remove when mw-ui-icon in stable
+				&:not(.mw-ui-icon) {
+					padding: 0 1.5em 0 .5em;
 				}
 			}
 

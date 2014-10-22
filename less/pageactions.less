@@ -30,12 +30,6 @@
 		// Needed for non-JavaScript users
 		position: relative;
 		cursor: pointer;
-		// FIXME: why is this necessary?
-		vertical-align: top;
-		height: 30px;
-		width: 40px;
-		background-position: 50% 0;
-		margin: 0 16px 0 0;
 
 		// FIXME: use .cloaked class
 		// file inputs are notoriously difficult to style
@@ -52,6 +46,20 @@
 			height: 100%;
 			// needed for ContentOverlay pointer arrow
 			margin: 0 0 @verticalMargin;
+		}
+
+		// FIXME: Remove when mw-ui-icon moved to stable
+		&.icon {
+			vertical-align: top;
+			height: 30px;
+			width: 40px;
+			background-position: 50% 0;
+			margin: 0 16px 0 0;
+		}
+
+		&.mw-ui-icon {
+			font-size: 1.3em;
+			margin-right: 0;
 		}
 	}
 }
@@ -70,12 +78,19 @@
 }
 
 #ca-upload {
-	.background-image('images/pagemenu/upload-locked.png');
+	// FIXME: Remove when cache clears
+	&.icon {
+		.background-image('images/pagemenu/upload-locked.png');
+	}
+
 	input {
 		display: none;
 	}
 	&.enabled {
-		.background-image('images/pagemenu/upload.png');
+		// FIXME: Remove when cache clears
+		&.icon {
+			.background-image('images/pagemenu/upload.png');
+		}
 		input {
 			display: block;
 		}

@@ -43,11 +43,21 @@
 		margin-bottom: 1em;
 	}
 
-	a.cancel {
-		display: block;
-		width: 100%;
-		height: 32px;
-		background-position: 50% 8px;
+	&.drawer-cta {
+		.cancel {
+			display: block;
+			margin: auto;
+
+			// FIXME: Remove when mw-ui-icon in stable
+			&.icon {
+				height: 32px;
+				background-position: 50% 8px;
+			}
+
+			&:before {
+				background-position: 50% 8px;
+			}
+		}
 	}
 
 	.progress-bar {

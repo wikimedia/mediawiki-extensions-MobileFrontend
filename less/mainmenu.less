@@ -91,7 +91,8 @@
 		.background-image('images/menu/user.png');
 	}
 
-	.icon-anon {
+	// FIXME: Remove when mw-ui-icon in stable
+	.icon.icon-anon {
 		.background-image('images/menu/anon.png');
 	}
 
@@ -113,8 +114,17 @@
 			top: 0;
 			bottom: 0;
 			padding-right: 0;
-			width: 0; // rely on padding
 			border-left: 1px solid @colorGray7;
+
+			// FIXME: Remove when cache cleared and using mw-ui-icon
+			&.icon {
+				width: 0;
+			}
+
+			&.mw-ui-icon {
+				padding: 0;
+				margin: 0;
+			}
 		}
 
 		.icon-profile {
@@ -124,8 +134,14 @@
 		a {
 			color: white;
 			display: block;
-			padding: 13px 10px 11px 34px;
-			line-height: 22px;
+			padding: 13px 10px 11px 0;
+
+			// FIXME: Remove when cache cleared
+			&.icon {
+				padding: 13px 10px 11px 34px;
+				line-height: 22px;
+			}
+
 			margin-left: 9px;
 			&:hover {
 				text-decoration: none;
