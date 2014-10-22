@@ -8,7 +8,7 @@
 		setup: function() {
 			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' ).
 				returns( $.Deferred().resolve( [
-				] ) );
+			] ) );
 		}
 	} );
 
@@ -76,6 +76,19 @@
 		assert.strictEqual( $el.find( '.error' ).length, 1, 'Check error got rendered' );
 		assert.strictEqual( $el.find( '.error h2' ).text(),
 			n.errorMessages.server.heading, 'Check it is the correct heading' );
+	} );
+
+	QUnit.module( 'MobileFrontend modules/nearby/Nearby (4 - Around page)', {
+		setup: function() {
+			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPagesAroundPage' ).
+				returns( $.Deferred().reject() );
+		}
+	} );
+
+	QUnit.test( '#getting a title will trigger a different API method', 1, function( assert ) {
+		var $el = $( '<div>' ), pageTitle = 'Hello Friends!';
+		new Nearby( { pageTitle: pageTitle, range: 1000, el: $el } );
+		assert.ok( this.spy.calledWithMatch( pageTitle, 1000  ), 'Check API got called' );
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

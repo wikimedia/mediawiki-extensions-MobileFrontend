@@ -51,4 +51,13 @@ QUnit.test( '#getPages', 6, function( assert ) {
 	} );
 } );
 
+QUnit.test( '#getPagesAroundPage', 4, function( assert ) {
+	m.getPagesAroundPage( 'The Montgomery (San Francisco)' ).done( function( pages ) {
+		assert.strictEqual( pages.length, 2 );
+		assert.strictEqual( pages[1].title, 'W San Francisco' );
+		assert.strictEqual( pages[1].pageimageClass, 'list-thumb-none list-thumb-x' );
+		assert.strictEqual( pages[1].dist.toPrecision( 6 ), "22.2639" );
+	} );
+} );
+
 }( mw.mobileFrontend, jQuery ) );
