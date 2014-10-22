@@ -1,4 +1,4 @@
-/**
+/*
  * Warn people if they're trying to switch to desktop but have cookies disabled.
  */
 

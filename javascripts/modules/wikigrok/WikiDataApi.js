@@ -46,7 +46,7 @@
 		 * Get labels for an item from Wikidata
 		 * See: https://www.wikidata.org/wiki/Help:Label
 		 *
-		 * @param {array} itemIds for items in Wikidata
+		 * @param {Array} itemIds for items in Wikidata
 		 * @return {jQuery.Deferred} Object returned by ajax call
 		 */
 		getLabels: function( itemIds ) {

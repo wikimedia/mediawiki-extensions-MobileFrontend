@@ -86,7 +86,7 @@
 		/**
 		 * A callback for Router's `route` event.
 		 *
-		 * @param {$.Event} ev Event object.
+		 * @param {jQuery.Event} ev Event object.
 		 */
 		_checkRoute: function( ev ) {
 			var
@@ -122,8 +122,8 @@
 		 * Check if a given path matches one of the entries.
 		 *
 		 * @param {string} path Path (hash) to check.
-		 * @param {object} entry Entry object created in OverlayManager#add.
-		 * @return {object|null} Match object with factory function's result
+		 * @param {Object} entry Entry object created in OverlayManager#add.
+		 * @return {Object} Match object with factory function's result. Returns null if no match.
 		 * or null if no match.
 		 */
 		_matchRoute: function( path, entry ) {
@@ -155,7 +155,7 @@
 		 * Add an overlay that should be shown for a specific fragment identifier.
 		 *
 		 * The following code will display an overlay whenever a user visits a URL that
-		 * end with '#/hi/<name>'. The value of <name> will be passed to the overlay.
+		 * end with '#/hi/name'. The value of `name` will be passed to the overlay.
 		 *
 		 *     @example
 		 *     overlayManager.add( /\/hi\/(.*)/, function( name ) {

@@ -21,7 +21,7 @@
 		/**
 		 * Loads the watch status for a given list of page ids in bulk
 		 * @method
-		 * @param {array} ids A list of page ids
+		 * @param {Array} ids A list of page ids
 		 * @param {boolean} markAsAllWatched When true will assume all given ids are watched without a lookup.
 		 * @return {jQuery.Deferred}
 		 */

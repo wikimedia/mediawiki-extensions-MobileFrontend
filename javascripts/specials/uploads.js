@@ -142,7 +142,7 @@ var
 		}
 	} );
 
-	/**
+	/*
 	 * Returns a description based on the file name using
 	 * a regular expression that strips the file type suffix,
 	 * namespace prefix and any

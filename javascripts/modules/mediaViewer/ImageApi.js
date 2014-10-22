@@ -3,7 +3,7 @@
 		ImageApi,
 		Api = M.require( 'api' ).Api;
 
-	/**
+	/*
 	 * Gets the first size larger than or equal to the provided size.
 	 */
 	function findSizeBucket( size ) {

@@ -9,7 +9,7 @@
 		return expandedSections;
 	}
 
-	/**
+	/*
 	 * Save expandedSections to localStorage
 	 */
 	function saveExpandedSections( expandedSections ) {
@@ -18,7 +18,7 @@
 		);
 	}
 
-	/**
+	/*
 	 * Given an expanded heading, store it to localStorage.
 	 * If the heading is collapsed, remove it from localStorage.
 	 *
@@ -40,7 +40,7 @@
 		}
 	}
 
-	/**
+	/*
 	 * Expand sections that were previously expanded before leaving this page.
 	 */
 	function expandStoredSections() {
@@ -82,7 +82,7 @@
 		saveExpandedSections( expandedSections );
 	}
 
-	/**
+	/*
 	 * Given a heading, toggle it and any of its children
 	 *
 	 * @param {jQuery.Object} $heading A heading belonging to a section
@@ -108,7 +108,7 @@
 		}
 	}
 
-	/**
+	/*
 	 * Enables toggling via enter and space keys
 	 *
 	 * @param {jQuery.Object} $heading
@@ -124,7 +124,7 @@
 		} );
 	}
 
-	/**
+	/*
 	 * Reveals an element and its parent section as identified by it's id
 	 *
 	 * @param {String} selector A css selector that identifies a single element

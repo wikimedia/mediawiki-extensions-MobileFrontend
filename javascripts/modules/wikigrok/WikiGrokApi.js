@@ -17,7 +17,7 @@
 		/**
 		 * Saves claims to the wikigrok api server
 		 * @method
-		 * @param {array} claims a list of claims. Each claim must have correct, prop, propid, value and valueid set
+		 * @param {Array} claims a list of claims. Each claim must have correct, prop, propid, value and valueid set
 		 * @return {jQuery.Deferred}
 		 */
 		recordClaims: function( claims ) {

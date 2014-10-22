@@ -2,7 +2,7 @@
 
 	var time = M.require( 'modules/lastEdited/time' );
 
-	/**
+	/*
 	 * Initialisation function for last modified module.
 	 *
 	 * Enhances #mw-mf-last-modified element

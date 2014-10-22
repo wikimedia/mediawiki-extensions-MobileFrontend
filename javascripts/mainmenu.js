@@ -4,7 +4,7 @@
 		return $( 'body' ).hasClass( 'navigation-enabled' );
 	}
 
-	/**
+	/*
 	 * Closes all open navigation drawers
 	 */
 	function closeNavigationDrawers() {
@@ -13,7 +13,7 @@
 			removeClass( 'primary-navigation-enabled' );
 	}
 
-	/**
+	/*
 	 * @param {String} drawerType A name that identifies the navigation drawer that should be toggled open
 	 */
 	function openNavigationDrawer( drawerType ) {

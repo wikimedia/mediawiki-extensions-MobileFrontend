@@ -45,7 +45,7 @@
 		return str;
 	}
 
-	/**
+	/*
 	 * Generates a file name from a description and a date
 	 * Removes illegal characters
 	 * Respects maximum file name length (240 bytes)

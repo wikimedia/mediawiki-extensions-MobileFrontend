@@ -60,7 +60,7 @@
 			on( 'click', false );
 	}
 
-	/**
+	/*
 	 * Retrieve the user's preferred editor setting. If none is set, return the default
 	 * editor for this wiki.
 	 *
@@ -80,7 +80,7 @@
 		}
 	}
 
-	/**
+	/*
 	 * Initialize the edit button so that it launches the editor interface when clicked.
 	 *
 	 * @param {Page} page The page to edit.
@@ -176,7 +176,7 @@
 		} );
 	}
 
-	/**
+	/*
 	 * Initialize the edit button so that it launches a login call-to-action when clicked.
 	 * @param {boolean} allowAnonymous Whether the drawer has to include an edit anonymously link
 	 */
@@ -204,7 +204,7 @@
 		} );
 	}
 
-	/**
+	/*
 	 * Show a toast message with sincere condolences.
 	 *
 	 * @param {string} msg Message key for sorry message

@@ -1,4 +1,4 @@
-/**
+/*
  * This code loads the necessary modules for the notifications overlay, not to be confused
  * with the Toast notifications defined by common/toast.js.
  */
@@ -7,7 +7,7 @@
 		mainmenu = M.require( 'mainmenu' ),
 		$btn = $( '#secondary-button.user-button' );
 
-	/**
+	/*
 	 * Loads a ResourceLoader module script. Shows ajax loader whilst loading.
 	 *
 	 * FIXME: Upstream to mw.mobileFrontend and reuse elsewhere

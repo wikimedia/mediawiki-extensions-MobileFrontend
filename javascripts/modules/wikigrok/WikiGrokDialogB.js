@@ -23,7 +23,7 @@
 		 * Renders a set of checkbox buttons to the panel
 		 * Shows panel to user when there are suggestions.
 		 * @method
-		 * @param {array} suggestions as returned by WikiGrokApi.getSuggestions
+		 * @param {Array} suggestions as returned by WikiGrokApi.getSuggestions
 		 */
 		_renderSuggestions: function( suggestions ) {
 			var

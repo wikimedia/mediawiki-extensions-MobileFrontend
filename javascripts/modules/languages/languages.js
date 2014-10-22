@@ -21,7 +21,7 @@
 		return result;
 	} );
 
-	/**
+	/*
 	 * Hijack the Special:Languages link and replace it with a trigger to a LanguageOverlay
 	 * that displays the same data
 	 */
