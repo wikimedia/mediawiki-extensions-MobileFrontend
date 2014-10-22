@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e936f18_aca5ab45",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-22T01:33:51Z",
+      "side": 1,
+      "message": "See documentation - \"This should be used for variables which vary with the html and for variables this should work cross skin\"\n\nThis doesn\u0027t meet either of these criteria, thus this should be defined in SkinMinervaBeta::getSkinConfigVariables",
+      "revId": "b1e3e80660c50a3852e0b291a299a1a84d7540e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_6c67a323",
+        "filename": "javascripts/loggingSchemas/mobileWebWikiGrok.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-22T01:33:51Z",
+      "side": 1,
+      "message": "You are still logging to \u0027MobileWebWikiGrok\u0027      revision 9913839,\n\nPlease update the onEventLoggingRegisterSchemas function in hooks.\n\nThe latest revision appears to be 10278582",
+      "revId": "b1e3e80660c50a3852e0b291a299a1a84d7540e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2c719bdd",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-22T01:33:51Z",
+      "side": 1,
+      "message": "This needs to be debounced.\n\nRead http://ejohn.org/blog/learning-from-twitter/ for more\nBasically you\u0027ll end up slowing down overall scrolling.\nNasty.",
+      "revId": "b1e3e80660c50a3852e0b291a299a1a84d7540e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_4c7667d7",
         "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
         "patchSetId": 12
@@ -13,6 +64,23 @@
       "writtenOn": "2014-10-22T01:32:53Z",
       "side": 1,
       "message": "We probably want to have a debounce function handling this to prevent any browser performance degradation. Jon might have some other comments on that.",
+      "revId": "b1e3e80660c50a3852e0b291a299a1a84d7540e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cca2773b",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-22T01:33:51Z",
+      "side": 1,
+      "message": "For safety set this first in case this.log throws some kind of exception.",
       "revId": "b1e3e80660c50a3852e0b291a299a1a84d7540e2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
