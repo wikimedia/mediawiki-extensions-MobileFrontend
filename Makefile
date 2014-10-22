@@ -32,7 +32,12 @@ kss: kssnodecheck			## Build the styleguide
 jsduck: gems				## Build the JavaScript documentation
 	rm -rf docs/js
 	mkdir -p docs
-	jsduck ${MW_INSTALL_PATH}/extensions/Mantle/javascripts/ javascripts/ --output docs/js/ --external=OO.EventEmitter,jQuery.Object,Hogan.Template,HandleBars.Template,jQuery.Deferred,jQuery.Event,mw.user --exclude=javascripts/external --ignore-global
+	jsduck ${MW_INSTALL_PATH}/extensions/Mantle/javascripts/ javascripts/ \
+		--output docs/js/ \
+		--external=OO.EventEmitter,jQuery.Object,Hogan.Template,HandleBars.Template,jQuery.Deferred,jQuery.Event,mw.user \
+		--exclude=javascripts/external \
+		--ignore-global \
+		--warnings=nodoc,nodocmember
 
 phpdoc: nodecheck			## Build the PHP documentation
 	mkdir -p docs
