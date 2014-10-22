@@ -14,7 +14,8 @@
 			tagName: 'div',
 			base: 'icon',
 			name: '',
-			modifier: ''
+			modifier: '',
+			title: ''
 		},
 		initialize: function( options ) {
 			if ( options.hasText ) {

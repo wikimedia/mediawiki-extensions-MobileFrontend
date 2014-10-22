@@ -1,5 +1,6 @@
 ( function( M, $ ) {
-var
+var icon,
+	Icon = M.require( 'Icon' ),
 	Nearby = M.require( 'modules/nearby/Nearby' );
 
 $( function() {
@@ -21,10 +22,16 @@ $( function() {
 		$btn.remove();
 	}
 
-	$btn = $( '<a class="icon-refresh main-header-button icon" id="secondary-button">' ).
-		text( mw.msg( 'mobile-frontend-nearby-refresh' ) ).
-		attr( 'title', mw.msg( 'mobile-frontend-nearby-refresh' ) ).
-		on( 'click', refresh ).appendTo( '.header' );
+	icon = new Icon( { name: 'refresh',
+		id: 'secondary-button',
+		additionalClassNames: 'main-header-button',
+		tagName: 'a',
+		title: mw.msg( 'mobile-frontend-nearby-refresh' ),
+		label: mw.msg( 'mobile-frontend-nearby-refresh' )
+	} );
+	$( icon.toHtmlString() ).on( 'click', refresh ).
+		appendTo( '.header' );
+
 	refresh();
 } );
 
