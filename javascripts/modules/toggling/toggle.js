@@ -1,5 +1,10 @@
 ( function( M, $ ) {
-	var currentPageTitle =  M.getCurrentPage().title;
+	var currentPageTitle =  M.getCurrentPage().title,
+		Icon = M.require( 'Icon' ),
+		iconUp = new Icon( { name: 'arrow-up', hasText: true } ),
+		iconDown = new Icon( { name: 'arrow-down', hasText: true, additionalClassNames: 'icon-15px' } ),
+		classOpen = iconUp.getGlyphClassName(),
+		classClosed = iconDown.getGlyphClassName();
 
 	function getExpandedSections() {
 		var expandedSections = $.parseJSON(
@@ -92,9 +97,9 @@
 
 		$heading.toggleClass( 'open-block' );
 		if ( $heading.hasClass( 'open-block' ) ) {
-			$heading.addClass( 'icon-arrow-up' ).removeClass( 'icon-arrow-down' );
+			$heading.addClass( classOpen ).removeClass( classClosed );
 		} else {
-			$heading.removeClass( 'icon-arrow-up' ).addClass( 'icon-arrow-down' );
+			$heading.removeClass( classOpen ).addClass( classClosed );
 		}
 		$heading.next()
 			.toggleClass( 'open-block' )
@@ -153,13 +158,14 @@
 	function enable( $page ) {
 		var tagName, $headings, expandSections,
 			$firstHeading,
+			iconClass = iconDown.getClassName(),
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 		$page = $page || $( '#content' );
 
 		$( 'html' ).removeClass( 'stub' );
 		$firstHeading = $page.find( 'h1,h2,h3,h4,h5,h6' ).eq(0);
 		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
-		$page.find( tagName ).addClass( 'collapsible-heading icon icon-text icon-15px icon-arrow-down' );
+		$page.find( tagName ).addClass( 'collapsible-heading ' + iconClass );
 
 		$headings = $page.find( '.collapsible-heading' );
 		$headings.next( 'div' ).addClass( 'collapsible-block' );

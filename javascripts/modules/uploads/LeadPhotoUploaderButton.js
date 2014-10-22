@@ -1,11 +1,13 @@
 ( function( M ) {
 	var
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
+		Icon = M.require( 'Icon' ),
+		uploadIcon = new Icon( { name: 'addimage-enabled', additionalClassNames: 'enabled' } ),
 		LeadPhotoUploaderButton;
 
 	LeadPhotoUploaderButton = PhotoUploaderButton.extend( {
 		template: M.template.get( 'modules/uploads/LeadPhotoUploaderButton.hogan' ),
-		className: 'enabled',
+		className: uploadIcon.getClassName(),
 
 		defaults: {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
