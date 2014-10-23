@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_d4d42f4e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-23T22:43:23Z",
+      "side": 1,
+      "message": "We ended up changing this to \u0027WikiGrok\\Api\\ApiResponse\u0027 to fit the naming convention of all the other Api classes (they always begin with \u0027Api\u0027). The code is actually merged now, so hopefully it won\u0027t change again ;)",
+      "revId": "5dace4d400b0d434b9f4d443f56292eacc5c6966",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
