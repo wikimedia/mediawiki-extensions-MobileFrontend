@@ -1,0 +1,7 @@
+{
+  "preset": "wikimedia",
+  "requireMultipleVarDecl": "onevar",
+  "requireBlocksOnNewline": true,
+  "disallowDanglingUnderscores": null,
+  "excludeFiles": ["javascripts/externals/*","javascripts/externals/*/*"]
+}

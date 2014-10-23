@@ -56,6 +56,9 @@ gems:
 nodecheck:
 	@dev-scripts/nodecheck.sh
 
+jscs: nodecheck			## Check the JavaScript coding style
+	@node_modules/.bin/jscs javascripts/* --config .jscs.json
+
 jshinttests: nodecheck			## Lint the QUnit tests
 	@node_modules/.bin/jshint tests/qunit/* --config .jshintrc
 
