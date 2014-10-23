@@ -50,7 +50,7 @@
 		var $profileLink;
 		if ( !M.isApp() ) {
 			$profileLink = $( '#mw-mf-last-modified a' ).
-				filter( function (){
+				filter( function () {
 					return $( this ).children().length === 0;
 				} );
 
