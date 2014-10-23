@@ -202,7 +202,7 @@
 						.replace( '$1', title )
 						.replace( '$2', item.code );
 				} else {
-					variant.url = mw.util.getUrl( title, { 'variant' : item.code } );
+					variant.url = mw.util.getUrl( title, { variant: item.code } );
 				}
 				variants.push( variant );
 			} );

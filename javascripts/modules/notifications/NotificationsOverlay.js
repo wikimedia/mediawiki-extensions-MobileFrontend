@@ -37,10 +37,10 @@
 					this.onError();
 				} else {
 					api.get( {
-						action : 'query',
-						meta : 'notifications',
-						notformat : 'flyout',
-						notprop : 'index|list|count'
+						action: 'query',
+						meta: 'notifications',
+						notformat: 'flyout',
+						notprop: 'index|list|count'
 					} ).done( function ( result ) {
 						var notifications;
 						if ( result.query && result.query.notifications ) {
