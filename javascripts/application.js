@@ -188,7 +188,7 @@
 		// allow disabling of transitions in android ics 4.0.2
 		function fixBrowserBugs() {
 			// see http://adactio.com/journal/4470/ (fixed in ios 6)
-			if( $viewportMeta[0] && ( isIPhone4 || isIPhone5 ) ) {
+			if ( $viewportMeta[0] && ( isIPhone4 || isIPhone5 ) ) {
 				lockViewport();
 				document.addEventListener( 'gesturestart', function () {
 					lockViewport();

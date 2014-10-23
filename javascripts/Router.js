@@ -52,7 +52,7 @@
 		} );
 	}
 
-	for( key in EventEmitter.prototype ) {
+	for ( key in EventEmitter.prototype ) {
 		Router.prototype[ key ] = EventEmitter.prototype[ key ];
 	}
 

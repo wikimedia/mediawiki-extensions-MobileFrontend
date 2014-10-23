@@ -17,7 +17,7 @@
 			haversinLat, haversinLng,
 			radius = 6378; // radius of Earth in km
 
-		if( from.latitude === to.latitude && from.longitude === to.longitude ) {
+		if ( from.latitude === to.latitude && from.longitude === to.longitude ) {
 			distance = 0;
 		} else {
 			deltaLat = ( to.longitude - from.longitude ) * toRadians;
