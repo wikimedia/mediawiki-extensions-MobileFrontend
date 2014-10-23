@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_80d2e2d3",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-23T22:06:17Z",
+      "side": 1,
+      "message": "Yes",
+      "parentUuid": "6e936f18_e07ac6e6",
+      "revId": "6fbc9773dbbe13aa6377e8f5c624636eae67b63c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_007812ec",
         "filename": "javascripts/modules/wikigrok/WikiGrokSuggestionApi.js",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-23T22:02:01Z",
       "side": 1,
       "message": "So suggestions api will still use tools labs?",
+      "revId": "6fbc9773dbbe13aa6377e8f5c624636eae67b63c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_20d74ec6",
+        "filename": "javascripts/modules/wikigrok/WikiGrokSuggestionApi.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-23T22:06:17Z",
+      "side": 1,
+      "message": "Yes for now, this patch just takes care of the response.",
+      "parentUuid": "6e936f18_007812ec",
       "revId": "6fbc9773dbbe13aa6377e8f5c624636eae67b63c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
