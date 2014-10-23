@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 var
 	PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 	user = M.require( 'user' ),
@@ -17,11 +17,11 @@ var
 	 * @extends Api
 	 */
 	UserGalleryApi = Api.extend( {
-		initialize: function() {
+		initialize: function () {
 			Api.prototype.initialize.apply( this, arguments );
 			this.limit = 10;
 		},
-		getPhotos: function() {
+		getPhotos: function () {
 			var self = this, result = $.Deferred();
 			// FIXME: Don't simply use this.endTimestamp as initially this value is undefined
 			if ( this.endTimestamp !== false ) {
@@ -42,10 +42,10 @@ var
 				}, {
 					url: corsUrl || this.apiUrl,
 					xhrFields: { withCredentials: true }
-				} ).done( function( resp ) {
+				} ).done( function ( resp ) {
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
-						var photos = $.map( resp.query.pages, getImageDataFromPage ).sort( function( a, b ) {
+						var photos = $.map( resp.query.pages, getImageDataFromPage ).sort( function ( a, b ) {
 							return a.timestamp < b.timestamp ? 1 : -1;
 						} );
 						if ( resp['query-continue'] ) {
@@ -84,14 +84,14 @@ var
 		templatePartials: {
 			spinner: M.template.get( 'spinner.hogan' )
 		},
-		initialize: function() {
+		initialize: function () {
 			// how close a spinner needs to be to the viewport to trigger loading (px)
 			this.threshold = 1000;
 			this.shouldLoad = true;
 			this.api = new UserGalleryApi();
 			View.prototype.initialize.apply( this, arguments );
 		},
-		postRender: function() {
+		postRender: function () {
 			this.$end = this.$( '.end' );
 			this.$list = this.$( 'ul' );
 
@@ -101,40 +101,40 @@ var
 			// e.g. http://benalman.com/projects/jquery-throttle-debounce-plugin/
 			$( window ).on( 'scroll', $.proxy( this, '_loadPhotos' ) );
 		},
-		isEmpty: function() {
+		isEmpty: function () {
 			return this.$list.find( 'li' ).length === 0;
 		},
-		showEmptyMessage: function() {
+		showEmptyMessage: function () {
 			$( '<p class="content empty">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) ).
 				insertBefore( this.$list );
 		},
-		hideEmptyMessage: function() {
+		hideEmptyMessage: function () {
 			this.$( '.empty' ).remove();
 		},
-		prependPhoto: function( photoData ) {
+		prependPhoto: function ( photoData ) {
 			var photoItem = new PhotoItem( photoData ).prependTo( this.$list );
 			this.hideEmptyMessage();
 			M.emit( 'photo-loaded', photoItem.$el );
 		},
-		appendPhoto: function( photoData ) {
+		appendPhoto: function ( photoData ) {
 			var photoItem = new PhotoItem( photoData ).appendTo( this.$list );
 			this.hideEmptyMessage();
 			M.emit( 'photo-loaded', photoItem.$el );
 		},
-		_isEndNear: function() {
+		_isEndNear: function () {
 			var scrollBottom = $( window ).scrollTop() + $( window ).height();
 			return scrollBottom + this.threshold > this.$end.offset().top;
 		},
-		_loadPhotos: function() {
+		_loadPhotos: function () {
 			var self = this;
 
 			if ( this.shouldLoad && this._isEndNear() ) {
 				// don't try to load more until current request is finished
 				this.shouldLoad = false;
 
-				this.api.getPhotos().done( function( photos ) {
+				this.api.getPhotos().done( function ( photos ) {
 					if ( photos.length ) {
-						$.each( photos, function() {
+						$.each( photos, function () {
 							self.appendPhoto( this );
 						} );
 						// try loading more when end is near only if we got photos last time
@@ -146,7 +146,7 @@ var
 							self.showEmptyMessage();
 						}
 					}
-				} ).fail( function() {
+				} ).fail( function () {
 					// try loading again if request failed
 					self.shouldLoad = true;
 				} );
@@ -215,7 +215,7 @@ var
 			}
 
 			// FIXME: Please find a way to do this without a global event.
-			M.on( '_file-upload', function( image ) {
+			M.on( '_file-upload', function ( image ) {
 				var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount, msgKey;
 
 				if ( userGallery.isEmpty() ) {

@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var
 		View = M.require( 'View' ),
@@ -32,7 +32,7 @@
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' ),
 			languageLabel: mw.msg( 'mobile-frontend-language-article-heading' )
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			// Fallback if no displayTitle provided
 			options.displayTitle = options.displayTitle || options.title;
 			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
@@ -43,7 +43,7 @@
 		 * @method
 		 * @return {Boolean}
 		 */
-		isWikiText: function() {
+		isWikiText: function () {
 			return mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 		},
 
@@ -51,7 +51,7 @@
 		 * @method
 		 * @return {Boolean}
 		 */
-		isMainPage: function() {
+		isMainPage: function () {
 			return this.options.isMainPage;
 		},
 
@@ -61,13 +61,13 @@
 		 * @param {mw.user} Object representing a user
 		 * @return {jQuery.Deferred} With parameter boolean
 		 */
-		isEditable: function( user ) {
+		isEditable: function ( user ) {
 			var editProtection = this.options.protection.edit,
 				resp = $.Deferred();
 
-			user.getGroups().done( function( groups ) {
+			user.getGroups().done( function ( groups ) {
 				var editable = false;
-				$.each( groups, function( i, group ) {
+				$.each( groups, function ( i, group ) {
 					if ( $.inArray( group, editProtection ) > -1 ) {
 						editable = true;
 						return false;
@@ -83,7 +83,7 @@
 		 * @method
 		 * @return {Number}
 		 */
-		getRevisionId: function() {
+		getRevisionId: function () {
 			return this.options.revId;
 		},
 
@@ -91,7 +91,7 @@
 		 * @method
 		 * @return {string}
 		 */
-		getTitle: function() {
+		getTitle: function () {
 			return this.options.title;
 		},
 
@@ -99,7 +99,7 @@
 		 * @method
 		 * @return {Number}
 		 */
-		getId: function() {
+		getId: function () {
 			return this.options.id;
 		},
 
@@ -107,7 +107,7 @@
 		 * @method
 		 * @return {Number} namespace Number
 		 */
-		getNamespaceId: function() {
+		getNamespaceId: function () {
 			var args = this.options.title.split( ':' ), nsId;
 			if ( args[1] ) {
 				nsId = mw.config.get( 'wgNamespaceIds' )[ args[0].toLowerCase().replace( ' ', '_' ) ] || 0;
@@ -121,20 +121,20 @@
 		 * @method
 		 * @return {Boolean} Whether the page is a talk page or not
 		 */
-		isTalkPage: function() {
+		isTalkPage: function () {
 			var ns = this.getNamespaceId();
 			// all talk pages are odd Numbers (except the case of special pages)
 			return ns > 0 && ns % 2 === 1;
 		},
 
-		preRender: function( options ) {
+		preRender: function ( options ) {
 			var self = this;
 			this.sections = [];
 			this._sectionLookup = {};
 			this.title = options.title;
 			this.lead = options.lead;
 
-			$.each( options.sections, function() {
+			$.each( options.sections, function () {
 				var section = new Section( this );
 				self.sections.push( section );
 				self._sectionLookup[section.id] = section;
@@ -144,7 +144,7 @@
 		/**
 		 * @method
 		 */
-		getReferenceSection: function() {
+		getReferenceSection: function () {
 			return this._referenceLookup;
 		},
 
@@ -154,7 +154,7 @@
 		 * @method
 		 * @return {Section}
 		 */
-		getSubSection: function( id ) {
+		getSubSection: function ( id ) {
 			return this._sectionLookup[ id ];
 		},
 
@@ -164,7 +164,7 @@
 		 * @method
 		 * @return Array
 		 */
-		getSubSections: function() {
+		getSubSections: function () {
 			return this.sections;
 		}
 	} );

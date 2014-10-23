@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 	var Api = M.require( 'api' ).Api, WikiGrokApi;
 	/**
 	 * @class WikiGrokApi
@@ -8,7 +8,7 @@
 		apiUrl: 'https://tools.wmflabs.org/wikigrok/api2.php',
 		useJsonp: true,
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			this.subjectId = options.itemId;
 			this.subject = options.subject;
 			this.version = options.version;
@@ -20,7 +20,7 @@
 		 * @param {Array} claims a list of claims. Each claim must have correct, prop, propid, value and valueid set
 		 * @return {jQuery.Deferred}
 		 */
-		recordClaims: function( claims ) {
+		recordClaims: function ( claims ) {
 			return this.ajax( {
 					action: 'record_answer',
 					subject_id: this.subjectId,
@@ -31,7 +31,7 @@
 					source: 'mobile ' + this.version
 				} );
 		},
-		recordOccupation: function( occupationId, occupation, claimIsCorrect ) {
+		recordOccupation: function ( occupationId, occupation, claimIsCorrect ) {
 			var claim = {
 				correct: claimIsCorrect,
 				prop: 'occupation',
@@ -49,7 +49,7 @@
 		 * @method
 		 * @return {jQuery.Deferred} where parameter is a set of key value pairs
 		 */
-		getSuggestions: function() {
+		getSuggestions: function () {
 			return this.action( 'get_suggestions', 'suggestions' );
 		},
 		/**
@@ -59,11 +59,11 @@
 		 * @param {string} key of data to return
 		 * @return {jQuery.Deferred} where parameter of callback is a list of wikidata ids;
 		 */
-		action: function( action, key ) {
+		action: function ( action, key ) {
 			return this.ajax( {
 					action: action,
 					item: this.subjectId.replace( 'Q' , '' )
-				} ).then( function( data ) {
+				} ).then( function ( data ) {
 					if ( key ) {
 						if ( data[key] !== undefined ) {
 							return data[key];
@@ -73,10 +73,10 @@
 					}
 				} );
 		},
-		getPossibleNationalities: function() {
+		getPossibleNationalities: function () {
 			return this.action( 'get_potential_nationality', 'nationality' );
 		},
-		getPossibleOccupations: function() {
+		getPossibleOccupations: function () {
 			return this.action( 'get_potential_occupations', 'occupations' );
 		}
 	} );

@@ -1,5 +1,5 @@
 /* global EXIF */
-( function( M, $ ) {
+( function ( M, $ ) {
 	var popup = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		Overlay = M.require( 'Overlay' ),
@@ -32,14 +32,14 @@
 			content: M.template.get( 'modules/uploads/PhotoUploadOverlay.hogan' )
 		},
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			var fileReader = new FileReader(), self = this;
 			this.log = schema.getLog( options.funnel );
 			this.file = options.file;
 
 			if ( this.file ) {
 				fileReader.readAsDataURL( options.file );
-				fileReader.onload = function() {
+				fileReader.onload = function () {
 					var dataUri = fileReader.result;
 					// add mimetype if not present (some browsers need it, e.g. Android browser)
 					dataUri = dataUri.replace( /^data:base64/, 'data:image/jpeg;base64' );
@@ -55,14 +55,14 @@
 			} else {
 				this.api = new PhotoApi();
 			}
-			this.api.on( 'uploadProgress', function( value ) {
+			this.api.on( 'uploadProgress', function ( value ) {
 				self.progressPopup.setValue( value );
 			} );
 
-			this.progressPopup = new PhotoUploadProgress().on( 'cancel', function() {
+			this.progressPopup = new PhotoUploadProgress().on( 'cancel', function () {
 				self.api.abort();
 				self.log( { action: 'cancel' } );
-			} ).on( 'submit', function() {
+			} ).on( 'submit', function () {
 				// handle resubmitting after abusefilter message
 				self._save();
 			} );
@@ -84,7 +84,7 @@
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
 
-		_save: function() {
+		_save: function () {
 			var
 				self = this,
 				description = this.getDescription(),
@@ -93,7 +93,7 @@
 					description: description
 				};
 
-			this.api.save( saveOptions ).done( function( fileName, descriptionUrl ) {
+			this.api.save( saveOptions ).done( function ( fileName, descriptionUrl ) {
 				self.progressPopup.hide( true );
 
 				self.log( { action: 'success' } );
@@ -111,7 +111,7 @@
 						url: self.imageUrl
 					} );
 				}
-			} ).fail( function( err, statusMessage, httpErrorThrown ) {
+			} ).fail( function ( err, statusMessage, httpErrorThrown ) {
 				var errMsg;
 
 				if ( err.type === 'abusefilter' ) {
@@ -142,7 +142,7 @@
 			} );
 		},
 
-		_submit: function() {
+		_submit: function () {
 			this.hide( true );
 
 			this.progressPopup.show();
@@ -150,14 +150,14 @@
 			this._save();
 		},
 
-		postRender: function() {
+		postRender: function () {
 			var self = this, $submitButton;
 
 			Overlay.prototype.postRender.apply( this, arguments );
 
 			$submitButton = this.$( '.submit' ).
 				prop( 'disabled', true ).
-				on( 'tap', function() {
+				on( 'tap', function () {
 					self.log( { action: 'previewSubmit' } );
 					self._submit();
 				} );
@@ -165,7 +165,7 @@
 				microAutosize().
 				// use input event too, Firefox doesn't fire keyup on many devices:
 				// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
-				on( 'keyup input', function() {
+				on( 'keyup input', function () {
 					$submitButton.prop( 'disabled', self.$description.val() === '' );
 				} );
 
@@ -178,13 +178,13 @@
 			}
 		},
 
-		show: function() {
+		show: function () {
 			var self = this;
 
 			Overlay.prototype.show.apply( this, arguments );
 
 			if ( this.file ) {
-				EXIF.getData( this.file, function() {
+				EXIF.getData( this.file, function () {
 					if ( $.isEmptyObject( this.exifdata ) ) {
 						if ( window.confirm( mw.msg( 'mobile-frontend-photo-upload-copyvio' ) ) ) {
 							self.log( { action: 'copyvioOk' } );
@@ -197,7 +197,7 @@
 			}
 		},
 
-		hide: function( force ) {
+		hide: function ( force ) {
 			var _super = Overlay.prototype.hide;
 			// In the case of a missing file force close
 			if ( force || !this.file ) {
@@ -211,22 +211,22 @@
 			}
 		},
 
-		getDescription: function() {
+		getDescription: function () {
 			return this.$description.val();
 		},
 
-		setImageUrl: function( url ) {
+		setImageUrl: function ( url ) {
 			var self = this, $preview = this.$( '.preview' );
 
 			this.imageUrl = url;
 			this.$( '.spinner' ).hide();
-			this.$( '.help' ).on( 'click', function() {
+			this.$( '.help' ).on( 'click', function () {
 				self.log( { action: 'whatDoesThisMean' } );
 			} );
 			$( '<img>' ).
 				attr( 'src', url ).
 				appendTo( $preview ).
-				on( 'error', function() {
+				on( 'error', function () {
 					// When using a bad filetype close the overlay
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
 					self.hide( true );

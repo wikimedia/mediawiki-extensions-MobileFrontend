@@ -1,5 +1,5 @@
 /*jshint unused:vars */
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var
 		View = M.require( 'View' ),
@@ -59,7 +59,7 @@
 		 */
 		closeOnContentTap: false,
 
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var
 				self = this,
 				$overlayContent = this.$overlayContent = this.$( '.overlay-content' ),
@@ -68,7 +68,7 @@
 			// Truncate any text inside in the overlay header.
 			this.$( '.overlay-header h2 span' ).addClass( 'truncated-text' );
 			// FIXME: Remove .initial-header selector when bug 71203 resolved.
-			this.$( '.cancel, .confirm, .initial-header .back' ).on( 'tap', function( ev ) {
+			this.$( '.cancel, .confirm, .initial-header .back' ).on( 'tap', function ( ev ) {
 				ev.preventDefault();
 				ev.stopPropagation();
 				if ( self.closeOnBack ) {
@@ -79,16 +79,16 @@
 			} );
 			// stop clicks in the overlay from propagating to the page
 			// (prevents non-fullscreen overlays from being closed when they're tapped)
-			this.$el.on( 'tap', function( ev ) {
+			this.$el.on( 'tap', function ( ev ) {
 				ev.stopPropagation();
 			} );
 
 			if ( M.isIos && this.hasFixedHeader ) {
 				$overlayContent
-				.on( 'touchstart', function( ev ) {
+				.on( 'touchstart', function ( ev ) {
 					startY = ev.originalEvent.touches[0].pageY;
 				} )
-				.on( 'touchmove', function( ev ) {
+				.on( 'touchmove', function ( ev ) {
 					var
 						y = ev.originalEvent.touches[0].pageY,
 						contentLenght = $overlayContent.prop( 'scrollHeight' ) - $overlayContent.outerHeight();
@@ -104,16 +104,16 @@
 				} );
 
 				// wait for things to render before doing any calculations
-				setTimeout( function() {
+				setTimeout( function () {
 					self._fixIosHeader( 'textarea, input' );
 				}, 0 );
 			}
 		},
 
 		// FIXME: remove when OverlayManager used everywhere
-		_hideOnRoute: function() {
+		_hideOnRoute: function () {
 			var self = this;
-			M.router.one( 'route', function( ev ) {
+			M.router.one( 'route', function ( ev ) {
 				if ( !self.hide() ) {
 					ev.preventDefault();
 					self._hideOnRoute();
@@ -124,7 +124,7 @@
 		/**
 		 * @method
 		 */
-		show: function() {
+		show: function () {
 			var self = this;
 
 			// FIXME: remove when OverlayManager used everywhere
@@ -148,10 +148,10 @@
 			// prevent scrolling and bouncing outside of .overlay-content
 			if ( M.isIos && this.hasFixedHeader ) {
 				$window
-					.on( 'touchmove.ios', function( ev ) {
+					.on( 'touchmove.ios', function ( ev ) {
 						ev.preventDefault();
 					} )
-					.on( 'resize.ios', function() {
+					.on( 'resize.ios', function () {
 						self._resizeContent( $window.height() );
 					} );
 			}
@@ -165,7 +165,7 @@
 		 * @param {boolean} force: Whether the overlay should be closed regardless of state (see PhotoUploadProgress)
 		 * @return {boolean}: Whether the overlay was successfully hidden or not
 		 */
-		hide: function( force ) {
+		hide: function ( force ) {
 			var self = this;
 
 			// FIXME: allow zooming outside the overlay again
@@ -181,7 +181,7 @@
 
 			this.$el.removeClass( 'visible' );
 			// give time for animations to finish
-			setTimeout(function() {
+			setTimeout(function () {
 				self.$el.detach();
 			}, 1000 );
 
@@ -194,7 +194,7 @@
 			return true;
 		},
 
-		_resizeContent: function( windowHeight ) {
+		_resizeContent: function ( windowHeight ) {
 			this.$overlayContent.height( windowHeight - this.$( '.overlay-header-container' ).outerHeight() - this.$( '.overlay-footer-container' ).outerHeight() );
 		},
 
@@ -212,14 +212,14 @@
 		 * @param {string} el CSS selector for elements that may trigger virtual
 		 * keyboard (usually inputs, textareas, contenteditables).
 		 */
-		_fixIosHeader: function( el ) {
+		_fixIosHeader: function ( el ) {
 			var self = this;
 
 			if ( M.isIos ) {
 				this._resizeContent( $( window ).height() );
 				$( el )
-					.on( 'focus', function() {
-						setTimeout( function() {
+					.on( 'focus', function () {
+						setTimeout( function () {
 							var keyboardHeight = 0;
 
 							// detect virtual keyboard height
@@ -237,13 +237,13 @@
 							}
 						}, 0 );
 					} )
-					.on( 'blur', function() {
+					.on( 'blur', function () {
 						self._resizeContent( $window.height() );
 					} );
 			}
 		},
 
-		_showHidden: function( className ) {
+		_showHidden: function ( className ) {
 			// can't use jQuery's hide() and show() beause show() sets display: block
 			// and we want display: table for headers
 			this.$( '.hideable' ).addClass( 'hidden' );

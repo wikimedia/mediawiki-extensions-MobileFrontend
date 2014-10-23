@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 
 	var View = M.require( 'View' ),
 		Icon;
@@ -22,7 +22,7 @@
 		 * @method
 		 * @return {string}
 		 */
-		getClassName: function() {
+		getClassName: function () {
 			return this.$el.children( 0 ).attr( 'class' );
 		},
 		/**
@@ -30,16 +30,16 @@
 		 * @method
 		 * @return {string}
 		 */
-		getGlyphClassName: function() {
+		getGlyphClassName: function () {
 			return this.options.base + '-' + this.options.name;
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			if ( options.hasText ) {
 				options.modifier = 'icon-text';
 			}
 			View.prototype.initialize.call( this, options );
 		},
-		toHtmlString: function() {
+		toHtmlString: function () {
 			return this.$el.html();
 		},
 		template: M.template.get( 'icon.hogan' )

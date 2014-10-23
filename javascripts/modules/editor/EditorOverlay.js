@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		isVisualEditorEnabled = M.isWideScreen() &&
 			mw.config.get( 'wgVisualEditorConfig' ) &&
@@ -24,7 +24,7 @@
 		editor: 'SourceEditor',
 		sectionLine: '',
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			this.api = new EditorApi( {
 				title: options.title,
 				sectionId: options.sectionId,
@@ -49,13 +49,13 @@
 			}
 		},
 
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this;
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( '.wikitext-editor' ).
-				on( 'input', function() {
+				on( 'input', function () {
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .submit' ).prop( 'disabled', false );
 				} );
@@ -73,7 +73,7 @@
 			// If the user tries to switch to the VisualEditor, check if any changes have
 			// been made, and if so, tell the user they have to save first.
 			if ( isVisualEditorEnabled ) {
-				this.$( '.visual-editor' ).on( 'click', function() {
+				this.$( '.visual-editor' ).on( 'click', function () {
 					if ( !self.api.hasChanged ) {
 						self._switchToVisualEditor( options );
 					} else {
@@ -96,7 +96,7 @@
 			}
 		},
 
-		_showAnonWarning: function( options ) {
+		_showAnonWarning: function ( options ) {
 			var params = $.extend( {
 				// use wgPageName as this includes the namespace if outside Main
 				returnto: options.returnTo || mw.config.get( 'wgPageName' )
@@ -117,7 +117,7 @@
 			this.clearSpinner();
 		},
 
-		_showEditorafterWarning: function() {
+		_showEditorafterWarning: function () {
 			this.showSpinner();
 			this.$anonWarning.hide();
 			this.$( '.continue' ).prop( 'disabled', true ).on( 'tap', $.proxy( this, '_prepareForSave' )
@@ -125,7 +125,7 @@
 			this._loadContent();
 		},
 
-		_prepareForSave: function() {
+		_prepareForSave: function () {
 			var self = this, params = { text: this.$content.val() };
 
 			this._showHidden( '.save-header, .save-panel' );
@@ -137,7 +137,7 @@
 			if ( mw.config.get( 'wgIsMainPage' ) ) {
 				params.mainpage = 1; // Setting it to 0 will have the same effect
 			}
-			this.api.getPreview( params ).done( function( parsedText, parsedSectionLine ) {
+			this.api.getPreview( params ).done( function ( parsedText, parsedSectionLine ) {
 				// On desktop edit summaries strip tags. Mimic this behavior on mobile devices
 				self.sectionLine = $( '<div/>' ).html( parsedSectionLine ).text();
 				new Section( {
@@ -147,9 +147,9 @@
 				} ).$( 'a' ).on( 'click', false );
 				// Emit event so we can perform enhancements to page
 				M.emit( 'edit-preview', self );
-			} ).fail( function() {
+			} ).fail( function () {
 				self.$preview.addClass( 'error' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
-			} ).always( function() {
+			} ).always( function () {
 				self.clearSpinner();
 				self.$preview.show();
 			} );
@@ -157,7 +157,7 @@
 			EditorOverlayBase.prototype._prepareForSave.apply( this, arguments );
 		},
 
-		_hidePreview: function() {
+		_hidePreview: function () {
 			this.api.abort();
 			this.clearSpinner();
 			this.$preview.removeClass( 'error' ).hide();
@@ -167,26 +167,26 @@
 			this.abuseFilterPanel.hide();
 		},
 
-		_loadContent: function() {
+		_loadContent: function () {
 			var self = this;
 
 			this.$content.hide();
 			this.showSpinner();
 
 			this.api.getContent().
-				done( function( content ) {
+				done( function ( content ) {
 					self.$content.
 						show().
 						val( content ).
 						microAutosize();
 					self.clearSpinner();
 				} ).
-				fail( function( error ) {
+				fail( function ( error ) {
 					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), error );
 				} );
 		},
 
-		_switchToVisualEditor: function( options ) {
+		_switchToVisualEditor: function ( options ) {
 			var self = this;
 			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the VisualEditor
@@ -196,12 +196,12 @@
 			this.$content.hide();
 			mw.loader.using(
 				'mobile.editor.ve',
-				function() {
+				function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 					self.clearSpinner();
 					M.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
 				},
-				function() {
+				function () {
 					self.clearSpinner();
 					self.$content.show();
 					// FIXME: We should show an error notification, but right now toast
@@ -210,7 +210,7 @@
 			);
 		},
 
-		_showAbuseFilter: function( type, message ) {
+		_showAbuseFilter: function ( type, message ) {
 			this.abuseFilterPanel.show( type, message );
 			this._showHidden( '.save-header' );
 			// disable continue and save buttons, reenabled when user changes content
@@ -221,7 +221,7 @@
 		 * Executed when the editor clicks the save button. Handles logging and submitting
 		 * the save action to the editor API.
 		 */
-		_save: function() {
+		_save: function () {
 			var self = this,
 				options = { summary: this.$( '.summary' ).val() };
 
@@ -240,7 +240,7 @@
 			this._showHidden( '.saving-header' );
 
 			this.api.save( options ).
-				done( function() {
+				done( function () {
 					var title = self.options.title;
 					// Special case behaviour of main page
 					if ( mw.config.get( 'wgIsMainPage' ) ) {
@@ -250,7 +250,7 @@
 
 					self.onSave();
 				} ).
-				fail( function( data, code, response ) {
+				fail( function ( data, code, response ) {
 					var msg;
 
 					if ( data.type === 'captcha' ) {

@@ -1,6 +1,6 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
-var module = (function() {
+var module = (function () {
 	var
 		Icon = M.require( 'Icon' ),
 		inBeta = M.isBetaGroupMember(),
@@ -10,7 +10,7 @@ var module = (function() {
 		var selector = '.mbox-text, .ambox-text',
 			$container = $( '<div>' );
 
-		$box.find( selector ).each( function() {
+		$box.find( selector ).each( function () {
 			var contents,
 				$this = $( this );
 			// Clean up talk page boxes
@@ -34,7 +34,7 @@ var module = (function() {
 		// clean it up a little
 		$metadata.find( '.NavFrame' ).remove();
 
-		$metadata.each( function() {
+		$metadata.each( function () {
 			var issue, content,
 				$this = $( this );
 
@@ -57,7 +57,7 @@ var module = (function() {
 			additionalClassNames: 'mw-mf-cleanup' } ).
 			$el.children().eq( 0 ).attr( 'href', '#/issues' );
 
-		M.overlayManager.add( /^\/issues$/, function() {
+		M.overlayManager.add( /^\/issues$/, function () {
 			return new CleanupOverlay( { issues: issues, headingText: headingText } );
 		} );
 
@@ -78,7 +78,7 @@ var module = (function() {
 	}
 
 	initPageIssues();
-	M.on( 'edit-preview', function( overlay ) {
+	M.on( 'edit-preview', function ( overlay ) {
 		initPageIssues( overlay.$el );
 	} );
 

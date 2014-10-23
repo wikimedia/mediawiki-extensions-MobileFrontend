@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var Overlay = M.require( 'Overlay' ), ContentOverlay;
 
@@ -21,7 +21,7 @@
 		 * @type String
 		 */
 		appendTo: '#mw-mf-page-center',
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this, $target;
 			Overlay.prototype.postRender.apply( this, arguments );
 			if ( options.target ) {
@@ -30,7 +30,7 @@
 				self._position( $target );
 				// Ensure that any reflows due to tablet styles have happened before showing
 				// the arrow.
-				setTimeout( function() {
+				setTimeout( function () {
 					self.addPointerArrow( $target );
 					M.on( 'resize', $.proxy( self, 'refreshPointerArrow', options.target ) );
 				}, 0 );
@@ -40,14 +40,14 @@
 		 * Refreshes the pointer arrow.
 		 * @method
 		 */
-		refreshPointerArrow: function( target ) {
+		refreshPointerArrow: function ( target ) {
 			this.$pointer.remove();
 			this.addPointerArrow( $( target ) );
 		},
 		/**
 		 * @param {jQuery.Object} $pa An element that should be pointed at by the overlay
 		 */
-		_position: function( $pa ) {
+		_position: function ( $pa ) {
 			var paOffset = $pa.offset(),
 				h = $pa.outerHeight( true );
 
@@ -57,7 +57,7 @@
 		 * @method
 		 * @param {jQuery.Object} $pa An element that should be pointed at by the overlay
 		 */
-		addPointerArrow: function( $pa ) {
+		addPointerArrow: function ( $pa ) {
 			var tb = 'solid 10px transparent',
 				paOffset = $pa.offset(),
 				overlayOffset = this.$el.offset();

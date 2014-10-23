@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var
 		Class = M.require( 'Class' ),
@@ -15,7 +15,7 @@
 	 * @extends Class
 	 */
 	OverlayManager = Class.extend( {
-		initialize: function( router ) {
+		initialize: function ( router ) {
 			router.on( 'route', $.proxy( this, '_checkRoute' ) );
 			this.router = router;
 			// use an object instead of an array for entries so that we don't
@@ -26,7 +26,7 @@
 			this.hideCurrent = true;
 		},
 
-		_onHideOverlay: function() {
+		_onHideOverlay: function () {
 			// don't try to hide the active overlay on a route change event triggered
 			// by hiding another overlay
 			this.hideCurrent = false;
@@ -34,14 +34,14 @@
 			this.router.back();
 		},
 
-		_showOverlay: function( overlay ) {
+		_showOverlay: function ( overlay ) {
 			// if hidden using overlay (not hardware) button, update the state
 			overlay.one( 'hide', $.proxy( this, '_onHideOverlay' ) );
 
 			overlay.show();
 		},
 
-		_hideOverlay: function( overlay ) {
+		_hideOverlay: function ( overlay ) {
 			var result;
 
 			// remove the callback for updating state when overlay closed using
@@ -58,7 +58,7 @@
 			return result;
 		},
 
-		_processMatch: function( match ) {
+		_processMatch: function ( match ) {
 			var self = this, factoryResult;
 
 			if ( match ) {
@@ -71,7 +71,7 @@
 					factoryResult = match.factoryResult;
 					// http://stackoverflow.com/a/13075985/365238
 					if ( $.isFunction( factoryResult.promise ) ) {
-						factoryResult.done( function( overlay ) {
+						factoryResult.done( function ( overlay ) {
 							match.overlay = overlay;
 							self._showOverlay( overlay );
 						} );
@@ -88,13 +88,13 @@
 		 *
 		 * @param {jQuery.Event} ev Event object.
 		 */
-		_checkRoute: function( ev ) {
+		_checkRoute: function ( ev ) {
 			var
 				self = this,
 				current = this.stack[0],
 				match;
 
-			$.each( this.entries, function( id, entry ) {
+			$.each( this.entries, function ( id, entry ) {
 				match = self._matchRoute( ev.path, entry );
 				// if matched (match not equal to null), break out of the loop
 				return match === null;
@@ -126,7 +126,7 @@
 		 * @return {Object} Match object with factory function's result. Returns null if no match.
 		 * or null if no match.
 		 */
-		_matchRoute: function( path, entry ) {
+		_matchRoute: function ( path, entry ) {
 			var
 				match = path.match( entry.route ),
 				previous = this.stack[1],
@@ -158,10 +158,10 @@
 		 * end with '#/hi/name'. The value of `name` will be passed to the overlay.
 		 *
 		 *     @example
-		 *     overlayManager.add( /\/hi\/(.*)/, function( name ) {
+		 *     overlayManager.add( /\/hi\/(.*)/, function ( name ) {
 		 *       var factoryResult = $.Deferred();
 		 *
-		 *       mw.using( 'mobile.HiOverlay', function() {
+		 *       mw.using( 'mobile.HiOverlay', function () {
 		 *         var HiOverlay = M.require( 'HiOverlay' );
 		 *         factoryResult.resolve( new HiOverlay( { name: name } ) );
 		 *       } );
@@ -174,7 +174,7 @@
 		 * @param {Function} factory a function returning an overlay or a $.Deferred
 		 * which resolves to an overlay.
 		 */
-		add: function( route, factory ) {
+		add: function ( route, factory ) {
 			var entry = { route: route, factory: factory };
 
 			this.entries[route] = entry;
@@ -190,7 +190,7 @@
 		 * @method
 		 * @param {Object} overlay The overlay to display
 		*/
-		replaceCurrent: function( overlay ) {
+		replaceCurrent: function ( overlay ) {
 			if ( this.stack.length === 0 ) {
 				throw new Error( "Trying to replace OverlayManager's current overlay, but stack is empty" );
 			}

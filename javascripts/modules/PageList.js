@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var View = M.require( 'View' ),
 		PageList,
@@ -12,7 +12,7 @@
 			pages: [],
 			enhance: false
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			// FIXME: Find more elegant standard way to allow enhancement of views already in DOM
 			if ( options.enhance ) {
 				this.template = false;
@@ -22,20 +22,20 @@
 			View.prototype.initialize.apply( this, arguments );
 		},
 		template: M.template.get( 'modules/articleList.hogan' ),
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			View.prototype.postRender.apply( this, arguments );
 			var pages = [], $li = this.$( 'li' ),
 				api = this.api;
 
 			// Check what we have in the page list
-			$li.each( function() {
+			$li.each( function () {
 				pages.push( $( this ).data( 'id' ) );
 			} );
 
 			// Create watch stars for each entry in list
 			if ( !user.isAnon() && pages.length > 0 ) {
-				api.load( pages, options.isWatchList ).done( function() {
-					$li.each( function() {
+				api.load( pages, options.isWatchList ).done( function () {
+					$li.each( function () {
 						var page = new Page( {
 							// FIXME: Set sections so we don't hit the api (hacky)
 							sections: [],

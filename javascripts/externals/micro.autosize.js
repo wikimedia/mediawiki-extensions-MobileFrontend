@@ -3,7 +3,7 @@
  * https://github.com/jgonera/micro.js
  */
 
-;(function($) {
+;(function ($) {
   var $window = $(window);
 
   function resize() {
@@ -19,7 +19,7 @@
     }
   }
 
-  $.fn.microAutosize = function() {
+  $.fn.microAutosize = function () {
     // setTimeout to let the textarea redraw if used just after val()
     setTimeout($.proxy(resize, this), 0);
     this.on('input', resize);

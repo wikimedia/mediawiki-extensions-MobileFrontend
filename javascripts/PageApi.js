@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Api = M.require( 'api' ).Api, PageApi;
 
 	function assignToParent( listOfSections, child ) {
@@ -20,11 +20,11 @@
 
 	function transformSections( sections ) {
 		var
-			collapseLevel = Math.min.apply( this, $.map( sections, function( s ) { return s.level; } ) ) + '',
+			collapseLevel = Math.min.apply( this, $.map( sections, function ( s ) { return s.level; } ) ) + '',
 			lastSection,
 			result = [], $tmpContainer = $( '<div>' );
 
-		$.each( sections, function( i, section ) {
+		$.each( sections, function ( i, section ) {
 			if ( section.line !== undefined ) {
 				section.line = section.line.replace( /<\/?a\b[^>]*>/g, '' );
 			}
@@ -51,7 +51,7 @@
 	 * @extends Api
 	 */
 	PageApi = Api.extend( {
-		initialize: function() {
+		initialize: function () {
 			Api.prototype.initialize.apply( this, arguments );
 			this.cache = {};
 		},
@@ -65,7 +65,7 @@
 		 * @param {boolean} leadOnly When set only the lead section content is returned
 		 * @return {jQuery.Deferred} with parameter page data that can be passed to a Page view
 		 */
-		getPage: function( title, endpoint, leadOnly ) {
+		getPage: function ( title, endpoint, leadOnly ) {
 			var options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {}, page, timestamp,
 				protection = { edit:[ '*' ] };
 
@@ -81,7 +81,7 @@
 					noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 					sectionprop: 'level|line|anchor',
 					sections: leadOnly ? 0 : 'all'
-				}, options ).done( function( resp ) {
+				}, options ).done( function ( resp ) {
 					var sections, lastModified, resolveObj, mv;
 
 					if ( resp.error || !resp.mobileview.sections ) {
@@ -139,7 +139,7 @@
 		 * @method
 		 * @param {string} title the title of the page who's cache you want to invalidate
 		 */
-		invalidatePage: function( title ) {
+		invalidatePage: function ( title ) {
 			delete this.cache[title];
 		},
 
@@ -150,7 +150,7 @@
 		 * @param  {Object} data Data from API
 		 * @return {Array} List of language objects
 		 */
-		_getLanguagesFromApiResponse: function( data ) {
+		_getLanguagesFromApiResponse: function ( data ) {
 			// allAvailableLanguages is a mapping of all codes to language names
 			var pages, langlinks, allAvailableLanguages = {};
 			$.each( data.query.languages, function ( index, item ) {
@@ -158,7 +158,7 @@
 			} );
 
 			// FIXME: API returns an object when a list makes much more sense
-			pages = $.map( data.query.pages, function( v ) { return v; } );
+			pages = $.map( data.query.pages, function ( v ) { return v; } );
 			// FIXME: "|| []" wouldn't be needed if API was more consistent
 			langlinks = pages[0] ? pages[0].langlinks || [] : [];
 
@@ -178,7 +178,7 @@
 		 * @param  {Object} data Data from API
 		 * @return {Array} List of language variant objects
 		 */
-		_getLanguageVariantsFromApiResponse: function( title, data ) {
+		_getLanguageVariantsFromApiResponse: function ( title, data ) {
 			var generalData = data.query.general,
 				variantPath = generalData.variantarticlepath,
 				variants = [];
@@ -213,7 +213,7 @@
 		 * @param {string} title the title of the page languages should be retrieved for
 		 * @return {jQuery.Deferred} which is called with an object containing langlinks and variant links
 		 */
-		getPageLanguages: function( title ) {
+		getPageLanguages: function ( title ) {
 			var self = this, result = $.Deferred();
 
 			self.get( {
@@ -224,7 +224,7 @@
 					llurl: true,
 					lllimit: 'max',
 					titles: title
-				} ).done( function( resp ) {
+				} ).done( function ( resp ) {
 					result.resolve( {
 						languages: self._getLanguagesFromApiResponse( resp ),
 						variants: self._getLanguageVariantsFromApiResponse( title, resp )
@@ -235,11 +235,11 @@
 		},
 
 		// FIXME: Where's a better place for these two functions to live?
-		_getAPIResponseFromHTML: function( $el ) {
+		_getAPIResponseFromHTML: function ( $el ) {
 			var $headings = $el.find( 'h1,h2,h3,h4,h5,h6' ),
 				sections = [];
 
-			$headings.each( function() {
+			$headings.each( function () {
 				var level = $( this )[0].tagName.substr( 1 ),
 					$span = $( this ).find( 'span' );
 
@@ -248,7 +248,7 @@
 			return sections;
 		},
 
-		getSectionsFromHTML: function( $el ) {
+		getSectionsFromHTML: function ( $el ) {
 			return transformSections( this._getAPIResponseFromHTML( $el ) );
 		}
 	} );

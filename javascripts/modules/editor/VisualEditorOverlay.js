@@ -1,4 +1,4 @@
-( function( M, $, ve ) {
+( function ( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		VisualEditorOverlay;
 
@@ -14,7 +14,7 @@
 		},
 		className: 'overlay editor-overlay editor-overlay-ve',
 		editor: 'VisualEditor',
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			var self = this;
 			options.isVisualEditor = true;
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
@@ -33,7 +33,7 @@
 				this.docToSave = null;
 			}
 		},
-		show: function() {
+		show: function () {
 			EditorOverlayBase.prototype.show.apply( this, arguments );
 			if ( this.target === undefined ) {
 				// FIXME: we have to initialize MobileViewTarget after this.$el
@@ -67,20 +67,20 @@
 				} );
 			}
 		},
-		hide: function() {
+		hide: function () {
 			var retval = EditorOverlayBase.prototype.hide.apply( this, arguments );
 			if ( retval ) {
 				this.destroyTarget();
 			}
 			return retval;
 		},
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this;
 			// Save button
 			this.$( '.continue' ).on( 'click', $.proxy( this, '_prepareForSave' ) );
 			this.$( '.submit' ).on( 'click', $.proxy( this, '_save' ) );
 			this.$( '.back' ).on( 'click', $.proxy( this, 'switchToEditor' ) );
-			this.$( '.source-editor' ).on( 'click', function() {
+			this.$( '.source-editor' ).on( 'click', function () {
 				// If changes have been made tell the user they have to save first
 				if ( !self.hasChanged ) {
 					self.switchToSourceEditor( options );
@@ -93,19 +93,19 @@
 			this.$( '.surface' ).hide();
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 		},
-		switchToEditor: function() {
+		switchToEditor: function () {
 			this._showHidden( '.initial-header' );
 			this.$( '.surface' ).show();
 			this.docToSave = false;
 		},
-		_prepareForSave: function() {
+		_prepareForSave: function () {
 			// need to blur contenteditable to be sure that keyboard is properly closed
 			this.$( '[contenteditable]' ).blur();
 			this.$( '.surface' ).hide();
 			this._showHidden( '.save-header, .save-panel' );
 			EditorOverlayBase.prototype._prepareForSave.apply( this, arguments );
 		},
-		_save: function() {
+		_save: function () {
 			var
 				self = this,
 				doc = this.target.surface.getModel().getDocument(),
@@ -134,7 +134,7 @@
 				self.target.save( self.docToSave, options );
 			} );
 		},
-		switchToSourceEditor: function( options ) {
+		switchToSourceEditor: function ( options ) {
 			var self = this;
 			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the SourceEditor
@@ -142,13 +142,13 @@
 			this.showSpinner();
 			this.$( '.surface' ).hide();
 			// Load the SourceEditor and replace the VisualEditor overlay with it
-			mw.loader.using( 'mobile.editor.overlay', function() {
+			mw.loader.using( 'mobile.editor.overlay', function () {
 				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
 				self.clearSpinner();
 				M.overlayManager.replaceCurrent( new EditorOverlay( options ) );
 			} );
 		},
-		onSave: function() {
+		onSave: function () {
 			EditorOverlayBase.prototype.onSave.apply( this, arguments );
 			this.clearSpinner();
 			this.destroyTarget();

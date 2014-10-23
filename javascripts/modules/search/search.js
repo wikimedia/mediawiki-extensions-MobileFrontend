@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var SearchOverlay = M.require( 'modules/search/SearchOverlay' );
 
@@ -9,7 +9,7 @@
 	// focus() (see SearchOverlay#show) opens virtual keyboard only if triggered
 	// from user context event, so using it in route callback won't work
 	// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
-	$( '#searchInput' ).on( 'tap', function() {
+	$( '#searchInput' ).on( 'tap', function () {
 		new SearchOverlay( { searchTerm: $( this ).val() } ).show();
 		M.router.navigate( '/search' );
 	} );
@@ -18,8 +18,8 @@
 	// to search results (we can't rely on History API yet)
 	// alpha does it differently in lazyload.js
 	if ( !M.isAlphaGroupMember() && !M.isApp() ) {
-		M.on( 'search-results', function( overlay ) {
-			overlay.$( '.results a' ).on( 'click', function() {
+		M.on( 'search-results', function ( overlay ) {
+			overlay.$( '.results a' ).on( 'click', function () {
 				var href = $( this ).attr( 'href' );
 				M.router.back().done( function () {
 					window.location.href = href;

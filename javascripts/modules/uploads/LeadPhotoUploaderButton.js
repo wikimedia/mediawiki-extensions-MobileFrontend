@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 	var
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		Icon = M.require( 'Icon' ),
@@ -19,7 +19,7 @@
 			el: '#ca-upload',
 		},
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			options.pageTitle = mw.config.get( 'wgPageName' );
 			PhotoUploaderButton.prototype.initialize.apply( this, arguments );
 		}

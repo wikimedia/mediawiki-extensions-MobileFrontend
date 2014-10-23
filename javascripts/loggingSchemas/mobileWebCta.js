@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	function log( status, campaign, step ) {
 		var
@@ -29,7 +29,7 @@
 			} else {
 				href = $( this ).attr( 'href' );
 			}
-			log( status, campaign, step ).always( function() {
+			log( status, campaign, step ).always( function () {
 				window.location.href = href;
 			} );
 		}

@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Api = M.require( 'api' ).Api, WikiDataApi;
 	/**
 	 * @class WikiDataApi
@@ -9,18 +9,18 @@
 		useJsonp: true,
 		language: 'en',
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			this.subjectId = options.itemId;
 			Api.prototype.initialize.apply( this, arguments );
 		},
-		getClaims: function() {
+		getClaims: function () {
 			var id = this.subjectId;
 			return this.ajax( {
 				action: 'wbgetentities',
 				ids: id,
 				props: 'claims',
 				format: 'json'
-			} ).then( function( data ) {
+			} ).then( function ( data ) {
 				var instanceClaims, entityClaims,
 					claims = {};
 				// See if the page has any 'instance of' claims.
@@ -29,7 +29,7 @@
 					instanceClaims = entityClaims.P31;
 
 					// Examine claims closely
-					$.each( instanceClaims, function( i, claim ) {
+					$.each( instanceClaims, function ( i, claim ) {
 						claims.isHuman = claim.mainsnak.datavalue.value['numeric-id'] === 5 ? true : false;
 						claims.hasOccupation = entityClaims.P106 ? true : false;
 						claims.hasCountryOfCitizenship = entityClaims.P27 ? true : false;
@@ -49,16 +49,16 @@
 		 * @param {Array} itemIds for items in Wikidata
 		 * @return {jQuery.Deferred} Object returned by ajax call
 		 */
-		getLabels: function( itemIds ) {
+		getLabels: function ( itemIds ) {
 			var lang = this.language;
 			return this.ajax( {
 					action: 'wbgetentities',
 					props: 'labels',
 					languages: lang,
 					ids: itemIds
-				} ).then( function( data ) {
+				} ).then( function ( data ) {
 					var map = {};
-					$.each( itemIds, function( i, itemId ) {
+					$.each( itemIds, function ( i, itemId ) {
 						if ( data.entities[itemId].labels[lang].value !== undefined ) {
 							map[itemId] = data.entities[itemId].labels[lang].value;
 						} else {

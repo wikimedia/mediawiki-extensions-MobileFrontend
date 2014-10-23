@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 
 	var supported = M.supportsLocalStorage,
 		langMap,

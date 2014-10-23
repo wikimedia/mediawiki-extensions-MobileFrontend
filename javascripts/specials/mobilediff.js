@@ -1,4 +1,4 @@
-( function( $, M ) {
+( function ( $, M ) {
 	var schema = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
 	// EventLogging events

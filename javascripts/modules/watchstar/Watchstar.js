@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 
 	var View = M.require( 'View' ), Watchstar,
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
@@ -22,7 +22,7 @@
 		tagName: 'div',
 		className: watchIcon.getClassName(),
 		template: M.template.compile( '<a>{{tooltip}}</a>', 'hogan' ),
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			var self = this, _super = View.prototype.initialize,
 				page = options.page;
 
@@ -37,7 +37,7 @@
 			if ( user.isAnon() ) {
 				_super.call( self, options );
 			} else if ( options.isWatched === undefined ) {
-				api.load( page.getId() ).done( function() {
+				api.load( page.getId() ).done( function () {
 					options.isWatched = api.isWatchedPage( page );
 					_super.call( self, options );
 				} );
@@ -46,10 +46,10 @@
 				_super.call( self, options );
 			}
 		},
-		preRender: function( options ) {
+		preRender: function ( options ) {
 			options.tooltip = options.isWatched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
 		},
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this, callback,
 				unwatchedClass = watchIcon.getGlyphClassName(),
 				watchedClass = watchedIcon.getGlyphClassName(),
@@ -60,16 +60,16 @@
 			// add tooltip to the div, not the <a> inside because that the <a> doesn't have dimensions
 			this.$el.attr('title', options.tooltip);
 
-			callback = function() {
+			callback = function () {
 				if ( user.isAnon() ) {
 					self.drawer.show();
 				} else {
-					checker = setInterval( function() {
+					checker = setInterval( function () {
 						toast.show( mw.msg( 'mobile-frontend-watchlist-please-wait' ) );
 					}, 1000 );
-					api.toggleStatus( page ).always( function() {
+					api.toggleStatus( page ).always( function () {
 						clearInterval( checker );
-					} ).done( function() {
+					} ).done( function () {
 						if ( api.isWatchedPage( page ) ) {
 							options.isWatched = true;
 							self.render( options );
@@ -79,7 +79,7 @@
 							self.render( options );
 							toast.show( mw.msg( 'mobile-frontend-watchlist-removed', page.title ) );
 						}
-					} ).fail( function() {
+					} ).fail( function () {
 						toast.show( 'mobile-frontend-watchlist-error', 'error' );
 					} );
 				}
@@ -91,7 +91,7 @@
 			}
 
 			// Disable clicks on original link
-			this.$( 'a' ).on( 'click', function( ev ) {
+			this.$( 'a' ).on( 'click', function ( ev ) {
 				ev.preventDefault();
 			} );
 

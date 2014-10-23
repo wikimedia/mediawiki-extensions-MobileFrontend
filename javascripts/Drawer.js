@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 var Panel = M.require( 'Panel' ),
 	Drawer;
@@ -12,11 +12,11 @@ var Panel = M.require( 'Panel' ),
 		className: 'drawer position-fixed',
 		appendToElement: '#notifications',
 
-		postRender: function() {
+		postRender: function () {
 			var self = this;
 			Panel.prototype.postRender.apply( this, arguments );
-			this.on( 'show', function() {
-				setTimeout( function() {
+			this.on( 'show', function () {
+				setTimeout( function () {
 					$( 'body' ).one( 'tap.drawer', $.proxy( self, 'hide' ) );
 					$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
 					// can't use 'body' because the drawer will be closed when
@@ -25,7 +25,7 @@ var Panel = M.require( 'Panel' ),
 				}, self.minHideDelay );
 			} );
 
-			this.on( 'hide', function() {
+			this.on( 'hide', function () {
 				// .one() registers one callback for scroll and click independently
 				// if one fired, get rid of the other one
 				$( window ).off( '.drawer' );
@@ -33,7 +33,7 @@ var Panel = M.require( 'Panel' ),
 			} );
 
 			// Allow the drawer itself to be clickable (e.g. for copying and pasting references / clicking links in reference)
-			this.$el.on( 'tap', function( ev ) {
+			this.$el.on( 'tap', function ( ev ) {
 				ev.stopPropagation();
 			} );
 		}

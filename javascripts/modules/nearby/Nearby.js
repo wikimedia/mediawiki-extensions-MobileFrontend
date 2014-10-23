@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		PageList = M.require( 'modules/PageList' ),
 		Nearby;
@@ -35,14 +35,14 @@
 			articleList: M.template.get( 'modules/articleList.hogan' )
 		},
 		template: M.template.get( 'modules/nearby/nearby.hogan' ),
-		getCurrentPosition: function() {
+		getCurrentPosition: function () {
 			var result = $.Deferred();
 			if ( M.supportsGeoLocation() ) {
 			navigator.geolocation.getCurrentPosition(
-				function( geo ) {
+				function ( geo ) {
 					result.resolve( { latitude: geo.coords.latitude, longitude: geo.coords.longitude } );
 				},
-				function( err ) {
+				function ( err ) {
 					// see https://developer.mozilla.org/en-US/docs/Web/API/PositionError
 					if ( err.code === 1 ) {
 						err = 'permission';
@@ -60,7 +60,7 @@
 			}
 			return result;
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			var self = this,
 				_super = PageList.prototype.initialize;
 
@@ -80,12 +80,12 @@
 				options.pages = [];
 
 				// Get some new pages
-				this.getCurrentPosition().done( function( coordOptions ) {
+				this.getCurrentPosition().done( function ( coordOptions ) {
 					$.extend( options, coordOptions );
-					self._find( options ).done( function( options ) {
+					self._find( options ).done( function ( options ) {
 						_super.call( self, options );
 					} );
-				} ).fail( function( errorType ) {
+				} ).fail( function ( errorType ) {
 					options.errorType = errorType;
 					_super.call( self, options );
 				} );
@@ -94,7 +94,7 @@
 				options.pages = [];
 
 				// Get some new pages
-				this._find( options ).done( function( options ) {
+				this._find( options ).done( function ( options ) {
 					_super.call( self, options );
 				} );
 			}
@@ -103,18 +103,18 @@
 			this._isLoading = true;
 			_super.apply( this, arguments );
 		},
-		_find: function( options ) {
+		_find: function ( options ) {
 			var result = $.Deferred(), self = this;
 			if ( options.latitude && options.longitude ) {
 				this.nearbyApi.getPages( { latitude: options.latitude, longitude: options.longitude },
-					this.range, options.exclude ).done( function( pages ) {
+					this.range, options.exclude ).done( function ( pages ) {
 						options.pages = pages;
 						if ( pages && pages.length === 0 ) {
 							options.error = self.errorMessages.empty;
 						}
 						self._isLoading = false;
 						result.resolve( options );
-				} ).fail( function() {
+				} ).fail( function () {
 					self._isLoading = false;
 					options.error = self.errorMessages.server;
 					result.resolve( options );
@@ -127,15 +127,15 @@
 			}
 			return result;
 		},
-		postRender: function() {
+		postRender: function () {
 			if ( !this._isLoading ) {
 				this.$( '.spinner' ).hide();
 			}
 			PageList.prototype.postRender.apply( this, arguments );
 			this._postRenderLinks();
 		},
-		_postRenderLinks: function() {
-			this.$( 'a' ).on( 'click', function( ev ) {
+		_postRenderLinks: function () {
+			this.$( 'a' ).on( 'click', function ( ev ) {
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
 				window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );

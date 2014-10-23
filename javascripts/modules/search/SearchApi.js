@@ -2,7 +2,7 @@
  * @extends Api
  * @class SearchApi
  */
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var Api = M.require( 'api' ).Api, SearchApi;
 
@@ -36,12 +36,12 @@
 	 * @extends Api
 	 */
 	SearchApi = Api.extend( {
-		initialize: function() {
+		initialize: function () {
 			Api.prototype.initialize.apply( this, arguments );
 			this.searchCache = {};
 		},
 
-		search: function( query ) {
+		search: function ( query ) {
 			if ( !this.searchCache[query] ) {
 				this.searchCache[query] = this.get( {
 					action: 'query',
@@ -56,12 +56,12 @@
 					list: 'prefixsearch',
 					pssearch: query,
 					pslimit: 15
-				} ).then( function( data ) {
+				} ).then( function ( data ) {
 					var results = [], info = {};
 					if ( data.query && data.query.pages && data.query.prefixsearch ) {
 						// We loop through the prefixsearch results (rather than the pages
 						// results) here in order to maintain the correct order.
-						$.each( data.query.prefixsearch, function( i, page ) {
+						$.each( data.query.prefixsearch, function ( i, page ) {
 							var title = page.title;
 							if ( page.pageid && data.query.pages[page.pageid] ) {
 								info = data.query.pages[page.pageid];
@@ -85,7 +85,7 @@
 			return this.searchCache[query];
 		},
 
-		isCached: function( query ) {
+		isCached: function ( query ) {
 			return !!this.searchCache[query];
 		}
 	} );

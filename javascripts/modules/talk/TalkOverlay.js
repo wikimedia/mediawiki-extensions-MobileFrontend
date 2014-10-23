@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var
@@ -28,7 +28,7 @@
 				linkClass: 'talk-fullpage'
 			},
 
-			postRender: function( options ) {
+			postRender: function ( options ) {
 				Overlay.prototype.postRender.apply( this, arguments );
 				this.$board = this.$( '.board' );
 				this.$( '.talk-fullpage' ).attr( 'href', mw.util.getUrl( options.title ) )
@@ -50,7 +50,7 @@
 			 * Hide the loading spinner
 			 * @method
 			 */
-			clearSpinner: function() {
+			clearSpinner: function () {
 				this.$( '.spinner' ).hide();
 				this.$board.show();
 			},
@@ -59,7 +59,7 @@
 			 * Load content of the talk page via PageApi
 			 * @method
 			 */
-			_loadContent: function( options ) {
+			_loadContent: function ( options ) {
 				var self = this;
 
 				// show a spinner
@@ -69,7 +69,7 @@
 				this.$( '.page-list' ).empty();
 
 				// FIXME: use Page's mechanisms for retrieving page data instead
-				M.pageApi.getPage( options.title ).fail( function( resp ) {
+				M.pageApi.getPage( options.title ).fail( function ( resp ) {
 					// If the API returns the error code 'missingtitle', that means the
 					// talk page doesn't exist yet.
 					if ( resp === 'missingtitle' ) {
@@ -80,7 +80,7 @@
 						// page manually rather than leaving the spinner spinning.
 						window.location = mw.util.getUrl( options.title );
 					}
-				} ).done( function( pageData ) {
+				} ).done( function ( pageData ) {
 					self._addContent( pageData, options );
 				} );
 			},
@@ -89,7 +89,7 @@
 			 * Adds the content received from _loadContent to the Overlay
 			 * @method
 			 */
-			_addContent: function( pageData, options ) {
+			_addContent: function ( pageData, options ) {
 				var $add = this.$( 'button.add' ), page, sections, self = this;
 				// API request was successful so show the talk page content
 				page = new Page( pageData );
@@ -105,7 +105,7 @@
 				);
 
 				// Write down talk sections
-				$.each( sections, function( id, el ) {
+				$.each( sections, function ( id, el ) {
 					self.$( '.page-list' ).prepend(
 						'<li>' +
 							'<a data-id="' + el.id + '">' + el.line + '</a>' +
@@ -118,17 +118,17 @@
 
 				if ( !user.isAnon() ) {
 					$add.removeClass( 'hidden' );
-					$add.click( function() {
+					$add.click( function () {
 						var overlay = new TalkSectionAddOverlay( {
 							title: page.title
 						} );
 						// Hide discussion list to disable scrolling - bug 70989
 						// FIXME: Kill when OverlayManager is used for TalkSectionAdd
 						self.$board.hide();
-						overlay.on( 'talk-discussion-added', function() {
+						overlay.on( 'talk-discussion-added', function () {
 							// reload the content
 							self._loadContent( options );
-						} ).on( 'hide', function() {
+						} ).on( 'hide', function () {
 							// re-enable TalkOverlay (it's closed by hide event (in Overlay)
 							// from TalkSectionAddOverlay)
 							self.show();
@@ -136,7 +136,7 @@
 							self.$board.show();
 						} ).show();
 						// When closing this overlay, also close the child section overlay
-						self.on( 'hide', function() {
+						self.on( 'hide', function () {
 							overlay.remove();
 						} );
 					} );
@@ -145,7 +145,7 @@
 				}
 
 				// FIXME: Use Router instead for this
-				this.$( '.page-list a' ).on( 'click', function() {
+				this.$( '.page-list a' ).on( 'click', function () {
 					var id = parseFloat( $( this ).data( 'id' ), 10 ),
 						leadSection = {
 							content: page.lead,
@@ -163,7 +163,7 @@
 					self.$board.hide();
 					childOverlay.show();
 					// When closing this overlay, also close the child section overlay
-					self.on( 'hide', function() {
+					self.on( 'hide', function () {
 						childOverlay.remove();
 					} );
 				} );

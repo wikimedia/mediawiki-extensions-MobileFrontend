@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var
 		Icon = M.require( 'Icon' ),
@@ -52,7 +52,7 @@
 				href: $el[0].href, selector: 'edit-anon mw-ui-progressive' } ];
 		}
 		$el.
-			on( 'tap', function( ev ) {
+			on( 'tap', function ( ev ) {
 				ev.preventDefault();
 				// prevent folding section when clicking Edit
 				ev.stopPropagation();
@@ -96,7 +96,7 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
-		M.overlayManager.add( /^\/editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
+		M.overlayManager.add( /^\/editor\/(\d+)\/?([^\/]*)$/, function ( sectionId, funnel ) {
 			var
 				loadingOverlay = new LoadingOverlay(),
 				result = $.Deferred(),
@@ -114,7 +114,7 @@
 				visualEditorNamespaces = veConfig && veConfig.namespaces;
 
 			function loadSourceEditor() {
-				mw.loader.using( 'mobile.editor.overlay', function() {
+				mw.loader.using( 'mobile.editor.overlay', function () {
 					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
 					loadingOverlay.hide();
 					result.resolve( new EditorOverlay( editorOptions ) );
@@ -165,14 +165,14 @@
 			}
 		}
 
-		$( '.edit-page' ).on( 'tap', function( ev ) {
+		$( '.edit-page' ).on( 'tap', function ( ev ) {
 			// prevent folding section when clicking Edit
 			ev.stopPropagation();
 		} );
 	}
 
 	function init( page ) {
-		page.isEditable( user ).done( function( isEditable ) {
+		page.isEditable( user ).done( function ( isEditable ) {
 			if ( isEditable ) {
 				setupEditor( page );
 			} else {
@@ -190,10 +190,10 @@
 			// init the editor
 			init( M.getCurrentPage() );
 		} else {
-			M.getCurrentPage().isEditable( user ).done( function( isEditable ) {
+			M.getCurrentPage().isEditable( user ).done( function ( isEditable ) {
 				if ( isEditable ) {
 					$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass ).
-						on( 'tap', function() {
+						on( 'tap', function () {
 							drawer.render().show();
 						} );
 				} else {
@@ -201,7 +201,7 @@
 				}
 			} );
 		}
-		$( '.edit-page' ).each( function() {
+		$( '.edit-page' ).each( function () {
 			var $a = $( this ), section = 0;
 			if ( $( this ).data( 'section' ) !== undefined ) {
 				section = $( this ).data( 'section' );
@@ -216,7 +216,7 @@
 	 * @param {string} msg Message key for sorry message
 	 */
 	function showSorryToast( msg ) {
-		$( '#ca-edit, .edit-page' ).on( 'tap', function( ev ) {
+		$( '#ca-edit, .edit-page' ).on( 'tap', function ( ev ) {
 			popup.show( mw.msg( msg ), 'toast' );
 			ev.preventDefault();
 		} );

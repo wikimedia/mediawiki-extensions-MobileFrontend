@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	function isOpen() {
 		return $( 'body' ).hasClass( 'navigation-enabled' );
@@ -28,7 +28,7 @@
 		// make the input readonly to avoid accidental focusing when closing menu
 		// (when JS is on, this input should not be used for typing anyway)
 		$( '#searchInput' ).prop( 'readonly', true );
-		$( '#mw-mf-main-menu-button' ).on( 'tap', function( ev ) {
+		$( '#mw-mf-main-menu-button' ).on( 'tap', function ( ev ) {
 			if ( isOpen() ) {
 				closeNavigationDrawers();
 			} else {
@@ -39,7 +39,7 @@
 		} );
 
 		// close navigation if content tapped
-		$( '#mw-mf-page-center' ).on( 'tap', function(ev) {
+		$( '#mw-mf-page-center' ).on( 'tap', function (ev) {
 			if ( isOpen() ) {
 				closeNavigationDrawers();
 				ev.preventDefault();

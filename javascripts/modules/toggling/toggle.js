@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var currentPageTitle =  M.getCurrentPage().title,
 		Icon = M.require( 'Icon' ),
 		iconUp = new Icon( { name: 'arrow-up', hasText: true } ),
@@ -119,12 +119,12 @@
 	 * @param {jQuery.Object} $heading
 	 */
 	function enableKeyboardActions( $heading ) {
-		$heading.on( 'keypress', function( ev ) {
+		$heading.on( 'keypress', function ( ev ) {
 			if ( ev.which === 13 || ev.which === 32 ) {
 				// Only handle keypresses on the "Enter" or "Space" keys
 				toggle( $( this ) );
 			}
-		} ).find( 'a' ).on( 'keypress mouseup', function( ev ) {
+		} ).find( 'a' ).on( 'keypress mouseup', function ( ev ) {
 			ev.stopPropagation();
 		} );
 	}
@@ -196,7 +196,7 @@
 				'aria-haspopup': 'true',
 				'aria-controls': id
 			} )
-			.on( 'tap', function( ev ) {
+			.on( 'tap', function ( ev ) {
 				// prevent taps/clicks on edit button after toggling (bug 56209)
 				ev.preventDefault();
 				toggle( $( this ) );

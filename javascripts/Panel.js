@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 var View = M.require( 'View' ),
 	Panel;
@@ -14,15 +14,15 @@ var View = M.require( 'View' ),
 		minHideDelay: 10,
 		appendToElement: '#content',
 
-		postRender: function() {
+		postRender: function () {
 			var self = this;
-			this.$( '.cancel' ).click( function( ev ) {
+			this.$( '.cancel' ).click( function ( ev ) {
 				ev.preventDefault();
 				self.hide();
 			} );
 			// This module might be loaded at the top of the page e.g. Special:Uploads
 			// Thus ensure we wait for the DOM to be loaded
-			$( function() {
+			$( function () {
 				self.appendTo( self.appendToElement );
 			} );
 		},
@@ -30,14 +30,14 @@ var View = M.require( 'View' ),
 		/**
 		 * @method
 		 */
-		show: function() {
+		show: function () {
 			var self = this;
 
 			if ( !self.isVisible() ) {
 				// use setTimeout to allow the browser to redraw if render() was called
 				// just before show(); this is important for animations to work
 				// (0ms doesn't work on Firefox, 10ms is enough)
-				setTimeout( function() {
+				setTimeout( function () {
 					self.$el.addClass( 'visible' );
 					self.emit( 'show' );
 				}, self.minHideDelay );
@@ -47,11 +47,11 @@ var View = M.require( 'View' ),
 		/**
 		 * @method
 		 */
-		hide: function() {
+		hide: function () {
 			var self = this;
 
 			// see comment in show()
-			setTimeout( function() {
+			setTimeout( function () {
 				self.$el.removeClass( 'visible' );
 				self.emit( 'hide' );
 			}, self.minHideDelay );
@@ -60,14 +60,14 @@ var View = M.require( 'View' ),
 		/**
 		 * @method
 		 */
-		isVisible: function() {
+		isVisible: function () {
 			return this.$el.hasClass( 'visible' );
 		},
 
 		/**
 		 * @method
 		 */
-		toggle: function() {
+		toggle: function () {
 			if ( this.isVisible() ) {
 				this.hide();
 			} else {

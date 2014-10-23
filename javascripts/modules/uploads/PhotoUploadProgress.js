@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
@@ -16,22 +16,22 @@
 		template: M.template.get( 'modules/uploads/PhotoUploadProgress.hogan' ),
 		fullScreen: false,
 
-		initialize: function() {
+		initialize: function () {
 			Overlay.prototype.initialize.apply( this, arguments );
 			this.progressBar = new ProgressBar();
 		},
 
-		postRender: function() {
+		postRender: function () {
 			Overlay.prototype.postRender.apply( this, arguments );
 			this.$( '.submit' ).on( 'tap', $.proxy( this, 'emit', 'submit' ) );
 		},
 
-		showAbuseFilter: function( type, message ) {
+		showAbuseFilter: function ( type, message ) {
 			new AbuseFilterPanel().appendTo( this.$( '.overlay-header-container' ) ).show( type, message );
 			this._showHidden( '.save-header' );
 		},
 
-		hide: function( force ) {
+		hide: function ( force ) {
 			var _super = Overlay.prototype.hide;
 			if ( force ) {
 				return _super.apply( this, arguments );
@@ -43,7 +43,7 @@
 			}
 		},
 
-		setValue: function( value ) {
+		setValue: function ( value ) {
 			var $uploading = this.$( '.uploading' );
 			// only add progress bar if we're getting progress events
 			if ( $uploading.length && $uploading.text() !== '' ) {

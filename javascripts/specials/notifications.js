@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var api = M.require( 'api' ),
 		notContinue = null,
@@ -18,7 +18,7 @@
 			} );
 		notContinue = mw.config.get( 'wgEchoNextContinue' );
 		header = mw.config.get( 'wgEchoDateHeader' );
-		mw.loader.using( 'ext.echo.base', function() {
+		mw.loader.using( 'ext.echo.base', function () {
 			$( '.mw-echo-notification' ).each( function () {
 				mw.echo.setupNotificationLogging( $( this ), 'mobile-archive', true );
 			} );
@@ -67,7 +67,7 @@
 					$li.addClass( 'mw-echo-unread' );
 					unread.push( id );
 				}
-				mw.loader.using( 'ext.echo.base', function() {
+				mw.loader.using( 'ext.echo.base', function () {
 					mw.echo.setupNotificationLogging( $li, 'mobile-archive', true );
 				} );
 			} );
@@ -88,7 +88,7 @@
 	 * @method
 	 */
 	function markAsRead( unread ) {
-		api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
+		api.getTokenWithEndpoint( 'edit' ).done( function ( token ) {
 			api.post( {
 				action: 'echomarkread',
 				list: unread.join( '|' ),

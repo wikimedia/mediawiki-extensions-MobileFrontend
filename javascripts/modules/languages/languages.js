@@ -1,9 +1,9 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var LanguageOverlay = M.require( 'languages/LanguageOverlay' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
-	M.overlayManager.add( /^\/languages$/, function() {
+	M.overlayManager.add( /^\/languages$/, function () {
 		var LoadingOverlay = M.require( 'LoadingOverlay' ),
 			loadingOverlay = new LoadingOverlay(),
 			result = $.Deferred();
@@ -26,7 +26,7 @@
 	 * that displays the same data
 	 */
 	function initButton() {
-		$( '#page-secondary-actions .languageSelector' ).on( 'tap', function( ev ) {
+		$( '#page-secondary-actions .languageSelector' ).on( 'tap', function ( ev ) {
 			ev.preventDefault();
 			M.router.navigate( '/languages' );
 			MobileWebClickTracking.log( 'languages' );

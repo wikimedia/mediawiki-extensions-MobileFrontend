@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var user = M.require( 'user' );
 
 	function log( data ) {

@@ -4,7 +4,7 @@
  * @class mw.mobileFrontend
  * @singleton
  */
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Router = M.require( 'Router' ),
 		OverlayManager = M.require( 'OverlayManager' ),
 		Icon = M.require( 'Icon' ),
@@ -53,7 +53,7 @@
 			/Firefox/,
 			// Trident (IE 10+)
 			/Trident\/[6-9]|Trident\/1\d[\d\.]+/
-		], function( index, item ) {
+		], function ( index, item ) {
 			if ( item.test( userAgent ) ) {
 				support = true;
 			}
@@ -126,7 +126,7 @@
 				modules.push( 'tablet.scripts' );
 			}
 			inWideScreenMode = true;
-			mw.loader.using( modules, function() {
+			mw.loader.using( modules, function () {
 				M.emit( 'resize' );
 			} );
 		}
@@ -151,7 +151,7 @@
 		if ( !supportsPositionFixed( navigator.userAgent ) ) {
 			$doc.addClass( 'no-position-fixed' );
 
-			$( window ).on( 'scroll', function() {
+			$( window ).on( 'scroll', function () {
 				var scrollTop = $( window ).scrollTop(),
 					windowHeight = $( window ).height(),
 					activeElement = document.activeElement,
@@ -191,7 +191,7 @@
 			// see http://adactio.com/journal/4470/ (fixed in ios 6)
 			if( $viewportMeta[0] && ( isIPhone4 || isIPhone5 ) ) {
 				lockViewport();
-				document.addEventListener( 'gesturestart', function() {
+				document.addEventListener( 'gesturestart', function () {
 					lockViewport();
 				}, false );
 			}

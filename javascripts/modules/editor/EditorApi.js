@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Api = M.require( 'api' ).Api, EditorApi;
 	/**
 	 * API that helps save and retrieve page content
@@ -7,7 +7,7 @@
 	 */
 	EditorApi = Api.extend( {
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			Api.prototype.initialize.apply( this, arguments );
 			this.title = options.title;
 			this.sectionId = options.sectionId;
@@ -17,7 +17,7 @@
 			this.hasChanged = false;
 		},
 
-		getContent: function() {
+		getContent: function () {
 			var self = this, result = $.Deferred(), options;
 
 			if ( this.content !== undefined ) {
@@ -37,7 +37,7 @@
 				if ( $.isNumeric( this.sectionId ) ) {
 					options.rvsection = this.sectionId;
 				}
-				this.get( options ).done( function( resp ) {
+				this.get( options ).done( function ( resp ) {
 					var revision;
 
 					if ( resp.error ) {
@@ -46,7 +46,7 @@
 					}
 
 					// FIXME: MediaWiki API, seriously?
-					revision = $.map( resp.query.pages, function( page ) {
+					revision = $.map( resp.query.pages, function ( page ) {
 						return page;
 					} )[0].revisions[0];
 
@@ -66,7 +66,7 @@
 		 *
 		 * @param content String New section content.
 		 */
-		setContent: function( content ) {
+		setContent: function ( content ) {
 			this.content = content;
 			this.hasChanged = true;
 		},
@@ -77,7 +77,7 @@
 		 *
 		 * @param text String Text to be prepended.
 		 */
-		setPrependText: function( text ) {
+		setPrependText: function ( text ) {
 			this.prependtext = text;
 			this.hasChanged = true;
 		},
@@ -95,7 +95,7 @@
 		 * `type` and `details` properties. `type` is a string describing the type
 		 * of error, `details` can be any object (usually error message).
 		 */
-		save: function( options ) {
+		save: function ( options ) {
 			var self = this, result = $.Deferred();
 			options = options || {};
 
@@ -124,7 +124,7 @@
 					apiOptions.section = self.sectionId;
 				}
 
-				self.postWithToken( 'edit', apiOptions ).done( function( data ) {
+				self.postWithToken( 'edit', apiOptions ).done( function ( data ) {
 					var code, warning;
 
 					if ( data && data.edit && data.edit.result === 'Success' ) {
@@ -173,7 +173,7 @@
 			return result;
 		},
 
-		getPreview: function( options ) {
+		getPreview: function ( options ) {
 			var result = $.Deferred(), sectionLine = '', self = this;
 
 			$.extend( options, {
@@ -188,7 +188,7 @@
 				prop: ['text', 'sections']
 			} );
 
-			this.post( options ).done( function( resp ) {
+			this.post( options ).done( function ( resp ) {
 				if ( resp && resp.parse && resp.parse.text ) {
 					// section 0 haven't a section name so skip
 					if ( self.sectionId !== 0 &&

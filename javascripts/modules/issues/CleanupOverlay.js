@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 	var Overlay = M.require( 'Overlay' ),
 	Icon = M.require( 'Icon' ),
 	icon = new Icon( { name: 'cleanup-gray', additionalClassNames: 'issue-notice', hasText: true } ),
@@ -14,7 +14,7 @@
 		defaults: {
 			className: icon.getClassName()
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			options.heading = '<strong>' + options.headingText + '</strong>';
 			Overlay.prototype.initialize.call( this, options );
 		}

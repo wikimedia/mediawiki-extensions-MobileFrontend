@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 	var Overlay = M.require( 'Overlay' ), LoadingOverlay;
 
 	/**

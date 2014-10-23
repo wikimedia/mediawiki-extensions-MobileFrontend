@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		limit = 50,
@@ -39,7 +39,7 @@
 	 * @extends Api
 	 */
 	NearbyApi = Api.extend( {
-		_distanceMessage: function( d ) {
+		_distanceMessage: function ( d ) {
 			var msg = 'mobile-frontend-nearby-distance';
 			if ( d < 1 ) {
 				d *= 100;
@@ -71,7 +71,7 @@
 		 * @param {String} exclude: Name of a title to exclude from the list of results
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
-		getPages: function( location, range, exclude ) {
+		getPages: function ( location, range, exclude ) {
 			var d = $.Deferred(), self = this;
 			this.get( {
 				action: 'query',
@@ -88,7 +88,7 @@
 			{
 				dataType: endpoint ? 'jsonp' : 'json',
 				url: endpoint || this.apiUrl
-			} ).then( function( resp ) {
+			} ).then( function ( resp ) {
 				var pages;
 				// FIXME: API bug 48512
 				if ( !resp || resp.error ) {
@@ -99,10 +99,10 @@
 					pages = {};
 				}
 				// FIXME: API returns object when array would make much sense
-				pages = $.map( pages , function( i ) {
+				pages = $.map( pages , function ( i ) {
 					return i;
 				} );
-				pages = $.map( pages, function( page, i ) {
+				pages = $.map( pages, function ( page, i ) {
 					var coords, lngLat, thumb;
 
 					if ( page.thumbnail ) {
@@ -131,7 +131,7 @@
 					}
 				} );
 
-				pages.sort( function( a, b ) {
+				pages.sort( function ( a, b ) {
 					return a.dist > b.dist ? 1 : -1;
 				} );
 				d.resolve( pages );

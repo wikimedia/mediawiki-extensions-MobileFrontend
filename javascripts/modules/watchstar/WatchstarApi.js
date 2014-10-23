@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var Api = M.require( 'api' ).Api,
 		WatchstarApi;
@@ -10,10 +10,10 @@
 	WatchstarApi = Api.extend( {
 		_cache: {},
 
-		_loadIntoCache: function( resp ) {
+		_loadIntoCache: function ( resp ) {
 			var self = this;
 			if ( resp.query && resp.query.pages ) {
-				$.each( resp.query.pages, function( id ) {
+				$.each( resp.query.pages, function ( id ) {
 					self._cache[ id ] = resp.query.pages[ id ].hasOwnProperty( 'watched' );
 				} );
 			}
@@ -25,7 +25,7 @@
 		 * @param {boolean} markAsAllWatched When true will assume all given ids are watched without a lookup.
 		 * @return {jQuery.Deferred}
 		 */
-		load: function( ids, markAsAllWatched ) {
+		load: function ( ids, markAsAllWatched ) {
 			var result = new $.Deferred(), self = this;
 			if ( markAsAllWatched ) {
 				$.each( ids, function ( i, id ) {
@@ -38,7 +38,7 @@
 					prop: 'info',
 					inprop: 'watched',
 					pageids: ids
-				} ).done( function( resp ) {
+				} ).done( function ( resp ) {
 					self._loadIntoCache( resp );
 					result.resolve();
 				} );
@@ -52,7 +52,7 @@
 		 * @param {Page} page
 		 * @param {Boolean} isWatched
 		 */
-		setWatchedPage: function( page, isWatched ) {
+		setWatchedPage: function ( page, isWatched ) {
 			this._cache[ page.getId() ] = isWatched;
 		},
 
@@ -63,7 +63,7 @@
 		 * @return {boolean}
 		 * @throws Error when the status of the page has not been loaded.
 		 */
-		isWatchedPage: function( page ) {
+		isWatchedPage: function ( page ) {
 			var id = page.getId();
 			if ( this._cache.hasOwnProperty( id ) ) {
 				return this._cache[id];
@@ -78,7 +78,7 @@
 		 * @param {Page} page
 		 * @return {jQuery.Deferred}
 		 */
-		toggleStatus: function( page ) {
+		toggleStatus: function ( page ) {
 			var self = this, data,
 				id = page.getId();
 			data = {
@@ -94,7 +94,7 @@
 			if ( this.isWatchedPage( page ) ) {
 				data.unwatch = true;
 			}
-			return this.postWithToken( 'watch', data ).done( function() {
+			return this.postWithToken( 'watch', data ).done( function () {
 				var newStatus = !self.isWatchedPage( page );
 				self.setWatchedPage( page, newStatus );
 				M.emit( 'watched', page, newStatus );

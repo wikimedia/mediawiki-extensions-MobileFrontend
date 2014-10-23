@@ -2,9 +2,9 @@
  * @class mw.mobileFrontend.settings
  * @singleton
  */
-( function( M, $ ) {
+( function ( M, $ ) {
 
-M.settings = ( function() {
+M.settings = ( function () {
 
 	function cookiesEnabled() {
 		// If session cookie already set, return true

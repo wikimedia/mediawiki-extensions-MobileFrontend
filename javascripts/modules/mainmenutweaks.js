@@ -1,7 +1,7 @@
 /*
  * Disables functionality that is not supported by the app
  */
-( function( M, $ ) {
+( function ( M, $ ) {
 	var photo = M.require( 'modules/uploads/PhotoUploaderButton' );
 
 	if ( !photo.isSupported ) {

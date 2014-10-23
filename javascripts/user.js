@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var user;
 
 	/**
@@ -17,7 +17,7 @@
 		 * @method
 		 * @returns {Number} the edit count of the current user on the current wiki.
 		 */
-		getEditCount: function() {
+		getEditCount: function () {
 			return mw.config.get( 'wgUserEditCount' );
 		},
 		/**
@@ -26,7 +26,7 @@
 		 * The information this returns is identical to the content of the config variable.
 		 * To avoid an unnecessary ajax request on every page view simply use config variable.
 		 */
-		getGroups: function() {
+		getGroups: function () {
 			return $.Deferred().resolve( mw.config.get( 'wgUserGroups' ) );
 		}
 	};

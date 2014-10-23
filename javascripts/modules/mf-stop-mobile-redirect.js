@@ -2,7 +2,7 @@
  * Warn people if they're trying to switch to desktop but have cookies disabled.
  */
 
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var cookiesEnabled = M.settings.cookiesEnabled,
 		popup = M.require( 'toast' );

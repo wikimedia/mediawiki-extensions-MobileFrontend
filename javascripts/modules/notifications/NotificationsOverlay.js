@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
 		NotificationsOverlay;
@@ -20,14 +20,14 @@
 				linkMsg: mw.msg( 'echo-overlay-link' ),
 				linkClass: 'notifications-archive-link'
 			},
-			onError: function() {
+			onError: function () {
 				// Fall back to notifications archive page.
 				window.location.href = this.$badge.attr( 'href' );
 			},
 			markAsRead: function () {
 				this.$badge.find( 'span' ).remove();
 			},
-			initialize: function( options ) {
+			initialize: function ( options ) {
 				var self = this;
 				Overlay.prototype.initialize.apply( this, options );
 				// Anchor tag that corresponds to a notifications badge
@@ -44,9 +44,9 @@
 					} ).done( function ( result ) {
 						var notifications;
 						if ( result.query && result.query.notifications ) {
-							notifications = $.map( result.query.notifications.list, function( a ) {
+							notifications = $.map( result.query.notifications.list, function ( a ) {
 								return { message: a['*'], timestamp: a.timestamp.mw };
-							} ).sort( function( a, b ) {
+							} ).sort( function ( a, b ) {
 								return a.timestamp < b.timestamp ? 1 : -1;
 							} );
 							if ( notifications.length ) {
@@ -56,13 +56,13 @@
 							}
 
 							self.render( options );
-							self.$( '.mw-echo-notification' ).each( function() {
+							self.$( '.mw-echo-notification' ).each( function () {
 								var $notification = $( this ),
 									$primaryLink = $notification.find( '.mw-echo-notification-primary-link' );
 								// If there is a primary link, make the entire notification clickable.
 								if ( $primaryLink.length ) {
 									$notification.addClass( 'mw-echo-linked-notification' );
-									$notification.on( 'click', function() {
+									$notification.on( 'click', function () {
 										window.location.href = $primaryLink.attr( 'href' );
 									} );
 								}
@@ -84,8 +84,8 @@
 					} );
 				}
 			},
-			markAllAsRead: function() {
-				api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
+			markAllAsRead: function () {
+				api.getTokenWithEndpoint( 'edit' ).done( function ( token ) {
 					api.post( {
 						action: 'echomarkread',
 						all: true,
@@ -93,10 +93,10 @@
 					} );
 				} );
 			},
-			preRender: function( options ) {
+			preRender: function ( options ) {
 				options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
 			},
-			postRender: function( options ) {
+			postRender: function ( options ) {
 				Overlay.prototype.postRender.apply( this, options );
 
 				if ( options.notifications || options.errorMessage ) {

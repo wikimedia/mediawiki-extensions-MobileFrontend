@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 	var ContentOverlay = M.require( 'modules/tutorials/ContentOverlay' ),
 		PageActionOverlay;
 

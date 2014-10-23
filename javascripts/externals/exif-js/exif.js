@@ -1,5 +1,5 @@
 
-var EXIF = (function() {
+var EXIF = (function () {
 
     var debug = false;
 
@@ -309,13 +309,13 @@ var EXIF = (function() {
         }
 
         if (img instanceof Image || img instanceof HTMLImageElement) {
-            BinaryAjax(img.src, function(http) {
+            BinaryAjax(img.src, function (http) {
                 handleBinaryFile(http.binaryResponse);
             });
         } else if (window.FileReader && img instanceof window.File) {
             var fileReader = new FileReader();
 
-            fileReader.onload = function(e) {
+            fileReader.onload = function (e) {
 				if (debug) console.log("Got file of length " + e.target.result.byteLength);
                 handleBinaryFile(e.target.result);
             };

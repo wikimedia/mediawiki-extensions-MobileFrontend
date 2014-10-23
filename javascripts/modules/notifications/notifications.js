@@ -2,7 +2,7 @@
  * This code loads the necessary modules for the notifications overlay, not to be confused
  * with the Toast notifications defined by common/toast.js.
  */
-( function( M, $ ) {
+( function ( M, $ ) {
 	var
 		mainmenu = M.require( 'mainmenu' ),
 		$btn = $( '#secondary-button.user-button' );
@@ -18,7 +18,7 @@
 		var d = $.Deferred();
 
 		$btn.addClass( 'loading' );
-		mw.loader.using( moduleName, function() {
+		mw.loader.using( moduleName, function () {
 			$btn.removeClass( 'loading' );
 			d.resolve();
 		} );
@@ -28,7 +28,7 @@
 	// Once the DOM is loaded hijack the notifications button to display an overlay rather
 	// than linking to Special:Notifications.
 	$( function () {
-		$btn.on( 'tap', function() {
+		$btn.on( 'tap', function () {
 			M.router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay
@@ -37,7 +37,7 @@
 
 		function loadNotificationOverlay() {
 			var result = $.Deferred();
-			loadModuleScript( 'mobile.notifications.overlay' ).done( function() {
+			loadModuleScript( 'mobile.notifications.overlay' ).done( function () {
 				var NotificationsOverlay = M.require( 'modules/notifications/NotificationsOverlay' );
 				result.resolve(
 					new NotificationsOverlay( { $badge: $btn, count: parseInt( $btn.find( 'span' ).text(), 10 ) } )
@@ -47,15 +47,15 @@
 			return result;
 		}
 
-		M.overlayManager.add( /^\/notifications$/, function() {
-			return loadNotificationOverlay().done( function( overlay ) {
+		M.overlayManager.add( /^\/notifications$/, function () {
+			return loadNotificationOverlay().done( function ( overlay ) {
 				mainmenu.openNavigationDrawer( 'secondary' );
-				overlay.on( 'hide', function() {
+				overlay.on( 'hide', function () {
 					mainmenu.closeNavigationDrawers();
 					$( '#mw-mf-page-center' ).off( '.secondary' );
 				});
 
-				$( '#mw-mf-page-center' ).one( 'tap.secondary', function() {
+				$( '#mw-mf-page-center' ).one( 'tap.secondary', function () {
 					M.router.back();
 				} );
 			} );

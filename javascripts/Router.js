@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var EventEmitter = M.require( 'eventemitter' ), key;
 
@@ -28,7 +28,7 @@
 			self.emit( 'popstate' );
 		} );
 
-		$( window ).on( 'hashchange', function() {
+		$( window ).on( 'hashchange', function () {
 			// ev.originalEvent.newURL is undefined on Android 2.x
 			var routeEv;
 
@@ -61,10 +61,10 @@
 	 * Check the current route and run appropriate callback if it matches.
 	 * @method
 	 */
-	Router.prototype.checkRoute = function() {
+	Router.prototype.checkRoute = function () {
 		var hash = this.getPath();
 
-		$.each( this.routes, function( id, entry ) {
+		$.each( this.routes, function ( id, entry ) {
 			return !matchRoute( hash, entry );
 		} );
 	};
@@ -74,15 +74,15 @@
 	 * FIXME: remove when OverlayManager used everywhere
 	 *
 	 *     @example
-	 *     route( 'alert', function() { alert( 'something' ); } );
-	 *     route( /hi-(.*)/, function( name ) { alert( 'Hi ' + name ) } );
+	 *     route( 'alert', function () { alert( 'something' ); } );
+	 *     route( /hi-(.*)/, function ( name ) { alert( 'Hi ' + name ) } );
 	 *
 	 * @method
 	 * @param {Object} path String or RegExp to match.
 	 * @param {Function} callback Callback to be run when hash changes to one
 	 * that matches.
 	 */
-	Router.prototype.route = function( path, callback ) {
+	Router.prototype.route = function ( path, callback ) {
 		var entry = {
 			path: typeof path === 'string' ? new RegExp( '^' + path + '$' ) : path,
 			callback: callback
@@ -98,7 +98,7 @@
 	 * @method
 	 * @param {string} path String with a route (hash without #).
 	 */
-	Router.prototype.navigate = function( path ) {
+	Router.prototype.navigate = function ( path ) {
 		window.location.hash = path;
 	};
 
@@ -107,7 +107,7 @@
 	 * @method
 	 * @return {jQuery.Deferred}
 	 */
-	Router.prototype.back = function() {
+	Router.prototype.back = function () {
 		var deferredRequest = new $.Deferred;
 		this.once( 'popstate', function () {
 			deferredRequest.resolve();
@@ -117,7 +117,7 @@
 		// Otherwise, deferred request is resolved in onpopstate
 		if ( !( 'onpopstate' in window ) ) {
 			// give browser a few ms to update its history
-			setTimeout( function() {
+			setTimeout( function () {
 				deferredRequest.resolve();
 			}, 50 );
 		}
@@ -131,7 +131,7 @@
 	 * @method
 	 * @return {string} Current path.
 	 */
-	Router.prototype.getPath = function() {
+	Router.prototype.getPath = function () {
 		return window.location.hash.slice( 1 );
 	};
 
@@ -139,7 +139,7 @@
 	 * @method
 	 * @return {Boolean}
 	 */
-	Router.prototype.isSupported = function() {
+	Router.prototype.isSupported = function () {
 		return 'onhashchange' in window;
 	};
 

@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
 		ImageOverlay, api;
@@ -22,11 +22,11 @@
 			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' )
 		},
 
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this, $img;
 			Overlay.prototype.postRender.apply( this, arguments );
 
-			api.getThumb( options.title ).done( function( data ) {
+			api.getThumb( options.title ).done( function ( data ) {
 				var author, url = data.descriptionurl + '#mw-jump-to-license';
 
 				function removeLoader() {
@@ -68,12 +68,12 @@
 			$( window ).on( 'resize', $.proxy( this, '_positionImage' ) );
 		},
 
-		show: function() {
+		show: function () {
 			Overlay.prototype.show.apply( this, arguments );
 			this._positionImage();
 		},
 
-		_positionImage: function() {
+		_positionImage: function () {
 			var detailsHeight = this.$( '.details' ).outerHeight(),
 				windowWidth = $( window ).width(),
 				windowHeight = $( window ).height() - detailsHeight,

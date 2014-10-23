@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Drawer = M.require( 'Drawer' ),
 		Icon = M.require( 'Icon' ),
 		ReferencesDrawer, drawer;
@@ -49,7 +49,7 @@
 		$container.find( '.mw-cite-backlink a' ).off( 'click' );
 	}
 
-	$( function() {
+	$( function () {
 		drawer = new ReferencesDrawer();
 		setup();
 	} );

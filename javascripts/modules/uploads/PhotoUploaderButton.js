@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var View = M.require( 'View' ),
 		Icon = M.require( 'Icon' ),
 		photoIcon = new Icon( { name: 'photo', hasText: true,
@@ -32,7 +32,7 @@
 	 *     } );
 	 *     photoUploaderButton.
 	 *         insertAfter( 'h1' ).
-	 *         on( 'upload', function( fileName, url ) {
+	 *         on( 'upload', function ( fileName, url ) {
 	 *             $( '.someImage' ).attr( 'src', url );
 	 *         } );
 	 *     </code>
@@ -50,7 +50,7 @@
 		template: M.template.get( 'modules/uploads/PhotoUploaderButton.hogan' ),
 		className: photoIcon.getClassName(),
 
-		postRender: function() {
+		postRender: function () {
 			var self = this, $input = this.$( 'input' );
 
 			function handleFile( file ) {
@@ -60,7 +60,7 @@
 			}
 
 			$input.
-				on( 'change', function() {
+				on( 'change', function () {
 					handleFile( $input[0].files[0] );
 					// clear so that change event is fired again when user selects the same file
 					$input.val( '' );

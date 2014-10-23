@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 	var
 		Overlay = M.require( 'Overlay' ),
@@ -22,7 +22,7 @@
 		templatePartials: {
 			header: M.template.get( 'modules/talk/talkSectionAddHeader.hogan' )
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			// If terms of use is enabled, include it in the licensing message
 			if ( $( '#footer-places-terms-use' ).length > 0 ) {
 				options.licenseMsg = mw.msg(
@@ -42,21 +42,21 @@
 			// the user will be asked, if he want to abandon his changes before we close the Overlay, otherwise the Overlay will be closed without any question.
 			this._saveHit = false;
 		},
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this;
 			Overlay.prototype.postRender.call( this, options );
 			this.$( '.back' ).on( 'tap', $.proxy( self, 'hide' ) );
 			this.confirm = this.$( 'button.confirm-save' );
-			this.confirm.on( 'click', function() {
+			this.confirm.on( 'click', function () {
 				if ( !$( this ).prop( 'disabled' ) ) {
-					self.save().done( function( status ) {
+					self.save().done( function ( status ) {
 						if ( status === 'ok' ) {
 							M.pageApi.invalidatePage( self.title );
 							toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
 							self.emit( 'talk-discussion-added' );
 							self.hide();
 						}
-					} ).fail( function( error ) {
+					} ).fail( function ( error ) {
 						var editMsg = 'mobile-frontend-talk-topic-error';
 
 						self.confirm.prop( 'disabled', false );
@@ -84,7 +84,7 @@
 				}
 			} );
 		},
-		hide: function() {
+		hide: function () {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' ), empty;
 			empty = ( !this.$( '.summary' ).val() && !this.$( '.wikitext-editor' ).val() );
 			if ( this._saveHit || empty || window.confirm( confirmMessage ) ) {
@@ -93,7 +93,7 @@
 				return false;
 			}
 		},
-		save: function() {
+		save: function () {
 			var $subject = this.$( 'input' ),
 				$ta = this.$( 'textarea' ),
 				heading = $subject.val(),
@@ -116,9 +116,9 @@
 					title: self.title,
 					summary: mw.msg( 'mobile-frontend-talk-edit-summary', heading ),
 					text: text + ' ~~~~'
-				} ).done( function() {
+				} ).done( function () {
 					result.resolve( 'ok' );
-				} ).fail( function( msg ) {
+				} ).fail( function ( msg ) {
 					result.reject( { type: 'error', details: msg } );
 				} );
 			} else {

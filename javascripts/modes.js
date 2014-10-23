@@ -3,14 +3,14 @@
  * @class mw.mobileFrontend
  * @singleton
  */
-( function( $ ) {
+( function ( $ ) {
 mw.mobileFrontend = $.extend( {
 
 	/**
 	 * @method
 	 * @return {Boolean}
 	 */
-	isAlphaGroupMember: function() {
+	isAlphaGroupMember: function () {
 		return mw.config.get( 'wgMFMode' ) === 'alpha';
 	},
 
@@ -18,7 +18,7 @@ mw.mobileFrontend = $.extend( {
 	 * @method
 	 * @return {Boolean}
 	 */
-	isBetaGroupMember: function() {
+	isBetaGroupMember: function () {
 		return mw.config.get( 'wgMFMode' ) === 'beta' || this.isAlphaGroupMember();
 	},
 
@@ -26,7 +26,7 @@ mw.mobileFrontend = $.extend( {
 	 * @method
 	 * @return {Boolean}
 	 */
-	isApp: function() {
+	isApp: function () {
 		return mw.config.get( 'wgMFMode' ) === 'app';
 	},
 
@@ -34,7 +34,7 @@ mw.mobileFrontend = $.extend( {
 	 * @method
 	 * @throws Error when a module is run out of its allowed modes
 	 */
-	assertMode: function( modes ) {
+	assertMode: function ( modes ) {
 		var mode = mw.config.get( 'wgMFMode' );
 		if ( $.inArray( mode, modes ) === -1 ) {
 			throw new Error( 'Attempt to run module outside declared environment mode ' + mode  );

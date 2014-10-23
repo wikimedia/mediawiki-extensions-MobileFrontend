@@ -1,7 +1,7 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var user = M.require( 'user' );
 	function getLog( funnel ) {
-		return function( data ) {
+		return function ( data ) {
 			if ( mw.config.get( 'wgArticleId', -1 ) !== -1 ) {
 				data.pageId = mw.config.get( 'wgArticleId' );
 			}

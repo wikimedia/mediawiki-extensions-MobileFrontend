@@ -1,5 +1,5 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
-( function( M, $ ) {
+( function ( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !M.isWideScreen(),
 		useDialogB = M.isAlphaGroupMember(),
@@ -39,7 +39,7 @@
 		M.supportsLocalStorage &&
 		!localStorage.getItem( 'mfHideWikiGrok' )
 	) {
-		mw.loader.using( rlModuleName ).done( function() {
+		mw.loader.using( rlModuleName ).done( function () {
 			var moduleName = useDialogB ? 'modules/wikigrok/WikiGrokDialogB' :
 					'modules/wikigrok/WikiGrokDialog',
 				WikiGrokDialog = M.require( moduleName );
@@ -63,9 +63,9 @@
 		} );
 
 		// Make OverlayManager handle '#/wikigrok/about' links.
-		M.overlayManager.add( /^\/wikigrok\/about$/, function() {
+		M.overlayManager.add( /^\/wikigrok\/about$/, function () {
 			var d = $.Deferred();
-			mw.loader.using( 'mobile.wikigrok.dialog' ).done( function() {
+			mw.loader.using( 'mobile.wikigrok.dialog' ).done( function () {
 				var WikiGrokMoreInfo = M.require( 'modules/wikigrok/WikiGrokMoreInfo' );
 				d.resolve( new WikiGrokMoreInfo() );
 			} );

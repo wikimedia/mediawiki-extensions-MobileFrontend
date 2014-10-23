@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 
 	var View = M.require( 'View' ), LeadPhoto;
 
@@ -9,7 +9,7 @@
 	LeadPhoto = View.extend( {
 		template: M.template.get( 'modules/uploads/LeadPhoto.hogan' ),
 
-		animate: function() {
+		animate: function () {
 			this.$el.hide().slideDown();
 		}
 	} );

@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var
 		Overlay = M.require( 'Overlay' ),
@@ -37,7 +37,7 @@
 			]
 		},
 
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this, $button = this.$( '.button' );
 
 			if ( options.funnel ) {
@@ -46,7 +46,7 @@
 					buttonCaption: buttonMsg,
 					funnel: options.funnel
 				} );
-				$button.on( 'click', function() {
+				$button.on( 'click', function () {
 					// need timeout for the file dialog to open
 					setTimeout( $.proxy( self, 'hide' ), 0 );
 					setTimeout( $.proxy( self, 'emit', 'hide' ), 0 );
@@ -63,18 +63,18 @@
 			Overlay.prototype.postRender.apply( this, arguments );
 		},
 
-		_showCurrentPage: function() {
+		_showCurrentPage: function () {
 			this.$( '.slide' ).removeClass( 'active' ).eq( this.page ).addClass( 'active' );
 			this.$( '.prev' ).toggle( this.page > 0 );
 			this.$( '.next' ).toggle( this.page < this.totalPages - 1 );
 		},
 
-		next: function() {
+		next: function () {
 			this.page += 1;
 			this._showCurrentPage();
 		},
 
-		previous: function() {
+		previous: function () {
 			this.page -= 1;
 			this._showCurrentPage();
 		}

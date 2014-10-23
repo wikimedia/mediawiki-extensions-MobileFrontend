@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Api = M.require( 'api' ).Api,
 		user = M.require( 'user' ),
 		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
@@ -93,17 +93,17 @@
 		 *     [options.editorApi] EditorApi An API instance that will be used
 		 * for inserting images in a page.
 		 */
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			Api.prototype.initialize.apply( this, arguments );
 			options = options || {};
 			this.editorApi = options.editorApi;
 		},
 
 		// FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
-		_handleWarnings: function( result, warnings ) {
+		_handleWarnings: function ( result, warnings ) {
 			var err = { stage: 'upload', type: 'warning' }, humanErrorMsg;
 
-			warnings = $.map( warnings, function( value, code ) {
+			warnings = $.map( warnings, function ( value, code ) {
 				return code + '/' + value;
 			} );
 			err.details = warnings[0] || 'unknown';
@@ -128,7 +128,7 @@
 		 * the type of error, `details` can be any object (usually a string
 		 * containing error message).
 		 */
-		save: function( options ) {
+		save: function ( options ) {
 			var isNewPage = mw.config.get( 'wgArticleId' ) === 0,
 			isNewFile = M.inNamespace( 'file' ) && isNewPage,
 			self = this,
@@ -180,7 +180,7 @@
 					contentType: 'multipart/form-data',
 					xhrFields: { 'withCredentials': true },
 					cache: false
-				} ).done( function( data ) {
+				} ).done( function ( data ) {
 					var descriptionUrl = '',
 						warnings = data.upload ? data.upload.warnings : false,
 						err = { stage: 'upload', type: 'error' };
@@ -219,10 +219,10 @@
 					if ( self.editorApi && !isNewFile ) {
 						self.editorApi.setPrependText( '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n' );
 						self.editorApi.save( { summary: mw.msg( 'mobile-frontend-photo-upload-comment' ) } ).
-							done( function() {
+							done( function () {
 								result.resolve( options.fileName, descriptionUrl );
 							} ).
-							fail( function( err ) {
+							fail( function ( err ) {
 								err.stage = 'edit';
 								result.reject( err );
 							} );
@@ -232,14 +232,14 @@
 						result.resolve( options.fileName, descriptionUrl );
 					}
 
-				} ).fail( function() {
+				} ).fail( function () {
 					// error on the server side (abort happens when user cancels the upload)
 					if ( status !== 'abort' ) {
 						result.reject( { stage: 'upload', type: 'error', details: 'http' } );
 					}
 				} );
 
-				self.on( 'progress', function( req, progress ) {
+				self.on( 'progress', function ( req, progress ) {
 					if ( req === request ) {
 						self.emit( 'uploadProgress', progress );
 					}
@@ -253,11 +253,11 @@
 
 			if ( self.useCentralAuthToken && endpoint ) {
 				// get caToken for obtaining the edit token from external wiki (the one we want to upload to)
-				getToken( 'centralauth' ).done( function( caTokenForEditToken ) {
+				getToken( 'centralauth' ).done( function ( caTokenForEditToken ) {
 					// request edit token using the caToken
-					getToken( 'edit', endpoint, caTokenForEditToken ).done( function( token ) {
+					getToken( 'edit', endpoint, caTokenForEditToken ).done( function ( token ) {
 						// tokens are only valid for one go so let's get another one for the upload itself
-						getToken( 'centralauth' ).done( function( caTokenForUpload ) {
+						getToken( 'centralauth' ).done( function ( caTokenForUpload ) {
 							doUpload( token, caTokenForUpload );
 						} );
 					} );

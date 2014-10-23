@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 
 	var View = M.require( 'View' ), ProgressBar;
 
@@ -7,7 +7,7 @@
 
 		template: M.template.compile( '<div class="value"></div>', 'hogan' ),
 
-		setValue: function( value ) {
+		setValue: function ( value ) {
 			this.$( '.value' ).css( 'width', value * 100 + '%' );
 		}
 	} );

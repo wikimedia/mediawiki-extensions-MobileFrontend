@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Panel = M.require( 'Panel' ),
@@ -36,7 +36,7 @@
 		},
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			// Remove any disambiguation parentheticals from the title.
 			options.name = options.title.replace( / \(.+\)$/, '' );
 			this.apiWikiGrok = new WikiGrokApi( { itemId: options.itemId, subject: options.name,
@@ -45,7 +45,7 @@
 			Panel.prototype.initialize.apply( this, arguments );
 		},
 
-		log: function( action ) {
+		log: function ( action ) {
 			var data = {
 				action: action,
 				version: 'version ' + this.version
@@ -58,7 +58,7 @@
 		 * @param count - Positive number of random elements to select
 		 * @returns {Array}
 		 */
-		chooseRandomItemsFromArray: function( array, count ) {
+		chooseRandomItemsFromArray: function ( array, count ) {
 			var result = [], arrayCopy, arrayLength = array.length,
 				randomIndex;
 
@@ -82,7 +82,7 @@
 			return result;
 		},
 
-		askWikidataQuestion: function( options ) {
+		askWikidataQuestion: function ( options ) {
 			var self = this,
 				occupationArray = options.occupations;
 
@@ -93,7 +93,7 @@
 				options.occupationId = this.chooseRandomItemsFromArray( occupationArray, 1 )[0];
 
 				// Get the name of the occupation from Wikidata.
-				self.apiWikiData.getLabels( [ options.occupationId ] ).done( function( labels ) {
+				self.apiWikiData.getLabels( [ options.occupationId ] ).done( function ( labels ) {
 					var vowels = [ 'a', 'e', 'i', 'o', 'u' ],
 						label = labels[options.occupationId];
 
@@ -121,7 +121,7 @@
 			}
 		},
 
-		showError: function( options, errorMsg ) {
+		showError: function ( options, errorMsg ) {
 			options.contentMsg = errorMsg;
 			options.buttons = [
 				{ classes: 'cancel inline mw-ui-button mw-ui-progressive', label: 'OK' },
@@ -131,17 +131,17 @@
 
 		// Record answer in temporary database for analysis.
 		// Eventually answers will be recorded directly to Wikidata.
-		recordClaim: function( options ) {
+		recordClaim: function ( options ) {
 			var self = this,
 				args = [ options.occupationId,
 					options.occupation, options.claimIsCorrect ];
 
-			this.apiWikiGrok.recordOccupation.apply( this.apiWikiGrok, args ).done( function() {
+			this.apiWikiGrok.recordOccupation.apply( this.apiWikiGrok, args ).done( function () {
 				self.thankUser( options, true );
 			} );
 		},
 
-		thankUser: function( options, claimRecorded ) {
+		thankUser: function ( options, claimRecorded ) {
 			options.thankUser = true;
 			if ( claimRecorded ) {
 				options.contentMsg = 'You just made Wikipedia a little better, thanks!';
@@ -159,7 +159,7 @@
 			this.render( options );
 		},
 
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this;
 
 			// If you're wondering where the DOM insertion happens, look in wikigrokeval.js.
@@ -167,21 +167,21 @@
 			// Initialize all the buttons and links
 			// ...for final 'Thanks' step
 			if ( options.thankUser ) {
-				this.$( '.wg-buttons .quit' ).on( 'click', function() {
+				this.$( '.wg-buttons .quit' ).on( 'click', function () {
 					self.hide();
 				} );
 			// ...for intermediate 'Question' step
 			} else if ( options.beginQuestions ) {
-				this.$( '.wg-buttons .yes' ).on( 'click', function() {
+				this.$( '.wg-buttons .yes' ).on( 'click', function () {
 					self.log( 'success' );
 					options.claimIsCorrect = 1;
 					self.recordClaim( options );
 				} );
-				this.$( '.wg-buttons .not-sure' ).on( 'click', function() {
+				this.$( '.wg-buttons .not-sure' ).on( 'click', function () {
 					self.log( 'notsure' );
 					self.thankUser( options, false );
 				} );
-				this.$( '.wg-buttons .no' ).on( 'click', function() {
+				this.$( '.wg-buttons .no' ).on( 'click', function () {
 					self.log( 'success' );
 					options.claimIsCorrect = 0;
 					self.recordClaim( options );
@@ -189,18 +189,18 @@
 			// ...for initial 'Intro' step
 			} else {
 				this.log( 'view' );
-				this.$( '.wg-buttons .cancel' ).on( 'click', function() {
+				this.$( '.wg-buttons .cancel' ).on( 'click', function () {
 					self.hide();
 					self.log( 'nothanks' );
 					M.settings.saveUserSetting( 'mfHideWikiGrok', 'true' );
 				} );
-				this.$( '.wg-buttons .proceed' ).on( 'click', function() {
+				this.$( '.wg-buttons .proceed' ).on( 'click', function () {
 					self.log( 'attempt' );
 					// Proceed with asking the user a metadata question.
 					self.askWikidataQuestion( options );
 				} );
 				// Log more info clicks
-				this.$( '.wg-notice-link' ).on( 'click', function() {
+				this.$( '.wg-notice-link' ).on( 'click', function () {
 					self.log( 'moreinfo' );
 				} );
 			}
@@ -212,9 +212,9 @@
 
 			this.reveal( options );
 		},
-		reveal: function( options ) {
+		reveal: function ( options ) {
 			var self = this;
-			this.apiWikiGrok.getPossibleOccupations().done( function( occupations ) {
+			this.apiWikiGrok.getPossibleOccupations().done( function ( occupations ) {
 				if ( occupations.length ) {
 					options.occupations = occupations;
 					self.show();

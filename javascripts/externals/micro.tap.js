@@ -7,7 +7,7 @@
  * https://github.com/jgonera/micro.tap
  */
 
-;(function($) {
+;(function ($) {
   var $window = $(window), moved, tapEv;
 
   function handleTap(ev) {
@@ -16,7 +16,7 @@
   }
 
   // FIXME: jQuery's on() doesn't allow useCapture argument (last argument, true)
-  window.addEventListener('click', function(ev) {
+  window.addEventListener('click', function (ev) {
     // a tap event might be fired programmatically so ensure tapEv has been defined
     if (tapEv && tapEv.isDefaultPrevented()) {
       ev.stopPropagation();
@@ -26,10 +26,10 @@
 
   if ('ontouchstart' in window) {
     $window.
-      on('touchstart', function(ev) {
+      on('touchstart', function (ev) {
         moved = false;
       }).
-      on('touchmove', function() {
+      on('touchmove', function () {
         moved = true;
       }).
       on('touchend', handleTap);

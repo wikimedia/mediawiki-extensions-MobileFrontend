@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' ),
@@ -15,7 +15,7 @@
 	WikiGrokDialogB = WikiGrokDialog.extend( {
 		version: 'b',
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialogB.hogan' ),
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			options.contentMsg = 'Which of these tags best describe ' + options.title + '?';
 			WikiGrokDialog.prototype.initialize.apply( this, arguments );
 		},
@@ -25,7 +25,7 @@
 		 * @method
 		 * @param {Array} suggestions as returned by WikiGrokApi.getSuggestions
 		 */
-		_renderSuggestions: function( suggestions ) {
+		_renderSuggestions: function ( suggestions ) {
 			var
 				self = this,
 				allSuggestions = [], suggestionsList = [],
@@ -38,7 +38,7 @@
 					occupations: 'Profession:'
 				};
 
-			$.each( suggestions, function( type, data ) {
+			$.each( suggestions, function ( type, data ) {
 				var prop = {
 						name: data.name,
 						id: data.id
@@ -46,7 +46,7 @@
 
 				allSuggestions = allSuggestions.concat( data.list );
 				// Make sure it's easy to look up the property later.
-				$.each( data.list, function( i, itemId ) {
+				$.each( data.list, function ( i, itemId ) {
 					lookupProp[itemId] = prop;
 				} );
 			} );
@@ -56,17 +56,17 @@
 
 			// Now work out the labels if we have some suggestions
 			if ( suggestionsList.length ) {
-				self.apiWikiData.getLabels( suggestionsList ).done( function( labels ) {
-					$.each( labels, function( itemId, label ) {
+				self.apiWikiData.getLabels( suggestionsList ).done( function ( labels ) {
+					$.each( labels, function ( itemId, label ) {
 						var btnLabel, $chk,
 							prop = lookupProp[itemId],
 							id = 'chk-' + itemId;
 
 						$chk = $( '<div class="ui-checkbox-button mw-ui-button">' ).
-							on( 'click', function() {
+							on( 'click', function () {
 								var $chkBox = $( this ).find( 'input' );
 								$chkBox.prop( 'checked', !$chkBox.prop( 'checked' ) );
-								setTimeout( function() {
+								setTimeout( function () {
 									self.$save.prop( 'disabled', self.$( '.initial-pane input:checked' ).length === 0 );
 								}, 100 );
 							} ).appendTo( self.$( '.wg-buttons' ) );
@@ -96,23 +96,23 @@
 				} );
 			}
 		},
-		postRender: function() {
+		postRender: function () {
 			var self = this;
 			this.$save = this.$( '.mw-ui-constructive' );
 			// hide the completion screen
 			self.$( '.final-pane' ).hide();
 
 			this.hide();
-			self.apiWikiData.getClaims().done( function( claims ) {
+			self.apiWikiData.getClaims().done( function ( claims ) {
 				if ( claims.isHuman ) {
-					self.apiWikiGrok.getSuggestions().done( function( suggestions ) {
+					self.apiWikiGrok.getSuggestions().done( function ( suggestions ) {
 						self._renderSuggestions( suggestions );
 					} );
 				}
 			} );
-			this.$save.on( 'click', function() {
+			this.$save.on( 'click', function () {
 				var answers = [];
-				self.$( '.ui-checkbox-button input:checked' ).hide().each( function() {
+				self.$( '.ui-checkbox-button input:checked' ).hide().each( function () {
 					answers.push( {
 						correct: true,
 						prop: $( this ).data( 'propName' ),
@@ -123,7 +123,7 @@
 				} );
 				$( this ).hide();
 				self.$( '.spinner' ).show();
-				self.apiWikiGrok.recordClaims( answers ).done( function() {
+				self.apiWikiGrok.recordClaims( answers ).done( function () {
 					self.$( '.spinner' ).hide();
 					self.$( '.initial-pane' ).hide();
 					self.$( '.final-pane' ).show();
@@ -131,7 +131,7 @@
 			} );
 
 			// hide this Dialog when the user reads more about Wikigrok
-			this.$( '.tell-more' ).on( 'click', function() {
+			this.$( '.tell-more' ).on( 'click', function () {
 				self.hide();
 			} );
 		}

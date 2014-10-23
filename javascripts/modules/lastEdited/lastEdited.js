@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var time = M.require( 'modules/lastEdited/time' );
 

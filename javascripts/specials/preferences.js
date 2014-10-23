@@ -1,4 +1,4 @@
-jQuery( function( $ ) {
+jQuery( function ( $ ) {
 var $header, $tabHeadings, $tabs, $activeBtn, val,
 	$form = $( '#mw-prefs-form' ),
 	action = $form.attr( 'action' ),
@@ -24,7 +24,7 @@ function handler( ev ) {
 	$form.attr( 'action', action + hash );
 }
 
-$tabs.each( function() {
+$tabs.each( function () {
 	var $this = $( this ),
 		legend = $this.find( 'legend' ).eq( 0 ),
 		$li = $( '<li>' ).appendTo( $tabHeadings ),

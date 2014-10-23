@@ -1,9 +1,9 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 var icon,
 	Icon = M.require( 'Icon' ),
 	Nearby = M.require( 'modules/nearby/Nearby' );
 
-$( function() {
+$( function () {
 	var
 		nearby,
 		options = { el: $( '#mw-mf-nearby' ), useCurrentLocation: true },

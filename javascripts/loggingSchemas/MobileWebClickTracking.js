@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var s = M.settings, name, href;
 
 	function log( name, destination ) {
@@ -23,7 +23,7 @@
 	}
 
 	function hijackLink( selector, name ) {
-		$( selector ).on( 'tap', function() {
+		$( selector ).on( 'tap', function () {
 			futureLog( name, $( this ).attr( 'href' ) );
 		} );
 	}
@@ -46,11 +46,11 @@
 	} );
 
 	// Add EventLogging to hamburger menu
-	$( function() {
+	$( function () {
 		var $profileLink;
 		if ( !M.isApp() ) {
 			$profileLink = $( '#mw-mf-last-modified a' ).
-				filter( function(){
+				filter( function (){
 					return $( this ).children().length === 0;
 				} );
 

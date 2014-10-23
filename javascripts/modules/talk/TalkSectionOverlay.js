@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 var
 	Overlay = M.require( 'Overlay' ),
 	popup = M.require( 'toast' ),
@@ -19,13 +19,13 @@ var
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		},
 		// FIXME: Use Router for TalkSectionOverlay
-		hide: function() {
+		hide: function () {
 			if ( this.$board ) {
 				this.$board.show();
 			}
 			this.remove();
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			// If terms of use is enabled, include it in the licensing message
 			if ( $( '#footer-places-terms-use' ).length > 0 ) {
 				options.licenseMsg = mw.msg(
@@ -42,7 +42,7 @@ var
 			this.$board = options.parent.$board;
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var self = this, $comment = this.$( '.comment' ),
 				$textarea = $comment.find( 'textarea' );
 			Overlay.prototype.postRender.apply( this, arguments );
@@ -51,24 +51,24 @@ var
 			if ( user.isAnon() || !M.isAlphaGroupMember() ) {
 				$comment.remove();
 			} else {
-				$textarea.on( 'focus', function() {
+				$textarea.on( 'focus', function () {
 					$textarea.removeClass( 'error' );
 				} );
-				$comment.find( 'button' ).on( 'click', function() {
+				$comment.find( 'button' ).on( 'click', function () {
 					var val = $textarea.val();
 					if ( val ) {
 						$comment.hide();
 						self.$( '.loading' ).show();
 						// sign and add newline to front
 						val = '\n\n' + val + ' ~~~~';
-						api.getTokenWithEndpoint().done( function( token ) {
+						api.getTokenWithEndpoint().done( function ( token ) {
 							api.post( {
 								action: 'edit',
 								title: options.title,
 								section: options.section.id,
 								token: token,
 								appendtext: val
-							} ).done( function( data ) {
+							} ).done( function ( data ) {
 								self.$( '.loading' ).hide();
 								$comment.show();
 								if ( data.error ) {

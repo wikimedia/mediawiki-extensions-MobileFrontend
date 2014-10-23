@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var
 		Overlay = M.require( 'Overlay' ),
@@ -27,20 +27,20 @@
 		},
 		closeOnBack: false,
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			var self = this;
 			Overlay.prototype.initialize.call( this, options );
 			this.api = new SearchApi();
 
 			// FIXME: horrible, remove when we get overlay manager
 			// we need this because of the focus/delay hack in search.js
-			M.router.one( 'route', function() {
+			M.router.one( 'route', function () {
 				self.closeOnBack = true;
 				self._hideOnRoute();
 			} );
 		},
 
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var
 				self = this,
 				$clear = this.$( '.clear' ),
@@ -55,7 +55,7 @@
 
 			Overlay.prototype.postRender.call( this, options );
 
-			this.$input = this.$( 'input' ).on( 'input', function() {
+			this.$input = this.$( 'input' ).on( 'input', function () {
 				// Make sure search header is docked to the top of the screen when the
 				// user begins typing so that there is adequate space for search results
 				// above the keyboard. (This is only a potential issue when sitenotices
@@ -66,7 +66,7 @@
 			} );
 
 			// initialize the button that clears the search field
-			$clear.hide().on( 'tap', function() {
+			$clear.hide().on( 'tap', function () {
 				self.$input.val( '' ).focus();
 				self.performSearch();
 				$clear.hide();
@@ -77,7 +77,7 @@
 				hide().
 				// can't use $.proxy because it would pass ev to submit() which would
 				// be treated as alternative form data
-				on( 'tap', function() {
+				on( 'tap', function () {
 					window.history.back();
 					// Add fulltext input to force fulltext search
 					$( '<input>' )
@@ -88,21 +88,21 @@
 
 			// tapping on background only should hide the overlay
 			this.$overlayContent
-				.on( 'tap', function() {
+				.on( 'tap', function () {
 					window.history.back();
 				} )
-				.find( '> div' ).on( 'tap', function( ev ) {
+				.find( '> div' ).on( 'tap', function ( ev ) {
 					ev.stopPropagation();
 				} );
 
 			// hide the keyboard when scrolling starts (avoid weird situation when
 			// user taps on an item, the keyboard hides and wrong item is clicked)
-			this.$( '.results' ).on( 'touchstart mousedown', function() {
+			this.$( '.results' ).on( 'touchstart mousedown', function () {
 				self.$input.blur();
 			} );
 		},
 
-		show: function() {
+		show: function () {
 			var len = this.$input.val().length;
 			Overlay.prototype.show.apply( this, arguments );
 			this.$input.focus();
@@ -112,7 +112,7 @@
 			}
 		},
 
-		performSearch: function() {
+		performSearch: function () {
 			var
 				self = this,
 				query = this.$input.val(),
@@ -129,8 +129,8 @@
 				if ( query.length ) {
 					this.$( '.spinner' ).show();
 
-					this.timer = setTimeout( function() {
-						self.api.search( query ).done( function( data ) {
+					this.timer = setTimeout( function () {
+						self.api.search( query ).done( function ( data ) {
 							// check if we're getting the rights response in case of out of
 							// order responses (need to get the current value of the input)
 							if ( data.query === self.$input.val() ) {

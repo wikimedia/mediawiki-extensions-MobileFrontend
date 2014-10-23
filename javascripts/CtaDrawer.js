@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 var Drawer = M.require( 'Drawer' ),
 	Icon = M.require( 'Icon' ),
 	CtaDrawer;
@@ -18,7 +18,7 @@ var Drawer = M.require( 'Drawer' ),
 		},
 		template: M.template.get( 'ctaDrawer.hogan' ),
 
-		preRender: function( options ) {
+		preRender: function ( options ) {
 			var params = $.extend( {
 				// use wgPageName as this includes the namespace if outside Main
 				returnto: options.returnTo || mw.config.get( 'wgPageName' )
@@ -30,7 +30,7 @@ var Drawer = M.require( 'Drawer' ),
 		},
 
 		// redefine from Drawer to allow to close drawer after user clicks edit-anon link
-		postRender: function() {
+		postRender: function () {
 			var self = this;
 			if ( self.$( '.edit-anon' ) ) {
 				self.$( '.edit-anon' ).click( $.proxy( self, 'hide' ) );

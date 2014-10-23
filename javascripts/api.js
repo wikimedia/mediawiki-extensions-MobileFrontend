@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var EventEmitter = M.require( 'eventemitter' ),
 		user = M.require( 'user' ),
@@ -20,7 +20,7 @@
 		/**
 		 * @method
 		 */
-		initialize: function() {
+		initialize: function () {
 			mw.Api.apply( this, arguments );
 			EventEmitter.prototype.initialize.apply( this, arguments );
 			this.requests = [];
@@ -49,7 +49,7 @@
 		 * @param {Object} options Parameters passed to $.ajax()
 		 * @return {jQuery.Deferred} Object returned by $.ajax()
 		 */
-		ajax: function( data, options ) {
+		ajax: function ( data, options ) {
 			var key, request, self = this;
 
 			options = options || {};
@@ -69,12 +69,12 @@
 			}
 
 			// FIXME: move to mw.Api (although no EventEmitter in core)?
-			options.xhr = function() {
+			options.xhr = function () {
 				var xhr = $.ajaxSettings.xhr();
 				if ( xhr.upload && ( mw.config.get( 'wgMFAjaxUploadProgressSupport' ) ) ) {
 					// need to bind this event before we open the connection (see note at
 					// https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
-					xhr.upload.addEventListener( 'progress', function( ev ) {
+					xhr.upload.addEventListener( 'progress', function ( ev ) {
 						if ( ev.lengthComputable ) {
 							self.emit( 'progress', request, ev.loaded / ev.total );
 						}
@@ -93,7 +93,7 @@
 		 * FIXME: move to mw.Api
 		 * @method
 		 */
-		abort: function() {
+		abort: function () {
 			$.each( this.requests, function ( index, request ) {
 				request.abort();
 			} );
@@ -113,7 +113,7 @@
 		 * @return {jQuery.Deferred} Object returned by $.ajax(), callback will be passed
 		 *   the token string, false if the user is anon or undefined where not available or a warning is set
 		 */
-		getTokenWithEndpoint: function( tokenType, endpoint, caToken ) {
+		getTokenWithEndpoint: function ( tokenType, endpoint, caToken ) {
 			var token, data, d = $.Deferred(), isCacheable,
 				// token types available from mw.user.tokens
 				easyTokens = [ 'edit', 'watch', 'patrol' ];
@@ -157,7 +157,7 @@
 				this.ajax( data, {
 					url: endpoint || this.apiUrl,
 					xhrFields: { withCredentials: true }
-				} ).done( function( tokenData ) {
+				} ).done( function ( tokenData ) {
 					if ( tokenData && tokenData.tokens && !tokenData.warnings ) {
 						token = tokenData.tokens[ tokenType + 'token' ];
 						if ( token && ( token !== '+\\' || mw.config.get( 'wgMFAnonymousEditing' ) ) ) {
@@ -168,7 +168,7 @@
 					} else {
 						d.reject( 'Bad token name.' );
 					}
-				} ).fail( function() {
+				} ).fail( function () {
 					d.reject( 'Failed to retrieve token.' );
 				} );
 			}

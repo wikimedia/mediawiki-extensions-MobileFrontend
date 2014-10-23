@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 	var
 		View = M.require( 'View' ),
 		AbuseFilterOverlay = M.require( 'modules/editor/AbuseFilterOverlay' ),
@@ -16,16 +16,16 @@
 		template: M.template.get( 'modules/editor/AbuseFilterPanel.hogan' ),
 		className: 'panel hidden',
 
-		initialize: function() {
+		initialize: function () {
 			View.prototype.initialize.apply( this, arguments );
 			this.isDisallowed = false;
 		},
 
-		show: function( type, message ) {
+		show: function ( type, message ) {
 			var msg;
 
 			// OverlayManager will replace previous instance of the route if present
-			M.overlayManager.add( /^\/abusefilter$/, function() {
+			M.overlayManager.add( /^\/abusefilter$/, function () {
 				return new AbuseFilterOverlay( { message: message } );
 			} );
 
@@ -40,7 +40,7 @@
 			this.$el.removeClass( 'hidden' );
 		},
 
-		hide: function() {
+		hide: function () {
 			this.$el.addClass( 'hidden' );
 		}
 	} );

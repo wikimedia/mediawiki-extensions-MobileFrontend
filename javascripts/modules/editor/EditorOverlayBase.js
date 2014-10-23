@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		Icon = M.require( 'Icon' ),
@@ -33,7 +33,7 @@
 		} ),
 		template: M.template.get( 'modules/editor/EditorOverlayBase.hogan' ),
 		className: 'overlay editor-overlay',
-		log: function( action, errorText ) {
+		log: function ( action, errorText ) {
 			var
 				data = {
 					action: action,
@@ -57,14 +57,14 @@
 		 * Hides a spinner at the top of the overlay.
 		 * @method
 		 */
-		clearSpinner: function() {
+		clearSpinner: function () {
 			this.$spinner.hide();
 		},
 
 		/**
 		 * If this is a new article, require confirmation before saving.
 		 */
-		confirmSave: function() {
+		confirmSave: function () {
 			if ( this.isNewPage &&
 				!window.confirm( mw.msg( 'mobile-frontend-editor-new-page-confirm', mw.user ) )
 			) {
@@ -77,7 +77,7 @@
 		 * Executed when page save is complete. Handles reloading the page, showing toast
 		 * messages, and setting mobile edit cookie.
 		 */
-		onSave: function() {
+		onSave: function () {
 			var title = this.options.title,
 				msg;
 
@@ -96,7 +96,7 @@
 			M.settings.saveUserSetting( 'mobile-pending-toast', msg );
 
 			// Ensure we don't lose this event when logging
-			this.log( 'success' ).always( function() {
+			this.log( 'success' ).always( function () {
 				window.location = mw.util.getUrl( title );
 			} );
 
@@ -104,7 +104,7 @@
 			// the mobile interface.
 			$.cookie( 'mobileEditor', 'true', { expires: 30 } );
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			if ( !options.previewingMsg ) {
 				options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			}
@@ -140,7 +140,7 @@
 			this.log( 'error', errorText );
 			toast.show( msg, 'toast error' );
 		},
-		_prepareForSave: function() {
+		_prepareForSave: function () {
 			this.log( 'save' );
 			// Scroll to the top of the page, so that the summary input is visible
 			// (even if overlay was scrolled down when editing) and weird iOS header
@@ -148,7 +148,7 @@
 			// screen, instead staying lower until a subsequent scroll event).
 			window.scrollTo( 0, 1 );
 		},
-		_save: function() {
+		_save: function () {
 			this.confirmAborted = false;
 			// Ask for confirmation in some cases
 			if ( !this.confirmSave() ) {
@@ -157,14 +157,14 @@
 			}
 			this.log( 'submit' );
 		},
-		postRender: function() {
+		postRender: function () {
 			var self = this;
 			this.$spinner = self.$( '.spinner' );
 			// log edit attempt
 			this.log( 'attempt' );
 
 			// FIXME: This should be .close (see bug 71203)
-			this.$( '.back' ).eq( 0 ).on( 'tap', function() {
+			this.$( '.back' ).eq( 0 ).on( 'tap', function () {
 				// log cancel attempt
 				self.log( 'cancel' );
 			} );
@@ -175,8 +175,8 @@
 		 * Set up the editor switching interface
 		 * The actual behavior of the editor buttons is initialized in postRender()
 		 */
-		initializeSwitcher: function() {
-			this.$( '.editor-switcher' ).on( 'click', function( ev ) {
+		initializeSwitcher: function () {
+			this.$( '.editor-switcher' ).on( 'click', function ( ev ) {
 				var $self = $( this );
 				ev.preventDefault();
 				// Prevent double toggling
@@ -188,13 +188,13 @@
 				$self.toggleClass( 'selected' );
 				$( '.switcher-drop-down' ).toggle();
 				// If you click outside the drop-down, hide the drop-down
-				$( document ).one( 'click', function() {
+				$( document ).one( 'click', function () {
 					$( '.switcher-drop-down' ).hide();
 					$self.removeClass( 'selected' );
 				} );
 			} );
 		},
-		hide: function( force ) {
+		hide: function ( force ) {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 			if ( force || !this._hasChanged() || window.confirm( confirmMessage ) ) {
 				return Overlay.prototype.hide.apply( this, arguments );
@@ -202,13 +202,13 @@
 				return false;
 			}
 		},
-		_showCaptcha: function( url ) {
+		_showCaptcha: function ( url ) {
 			var self = this, $input = this.$( '.captcha-word' );
 
 			if ( this.captchaShown ) {
 				$input.val( '' );
 				$input.attr( 'placeholder', this.options.captchaTryAgainMsg );
-				setTimeout( function() {
+				setTimeout( function () {
 					$input.attr( 'placeholder', self.options.captchaMsg );
 				}, 2000 );
 			}

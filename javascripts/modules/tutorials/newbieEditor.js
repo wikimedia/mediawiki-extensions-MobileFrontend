@@ -10,7 +10,7 @@ editing. You can replicate this by appending campaign=leftNavSignup to the URL o
 editable page whilst logged in, although you must be in test group A to see the CTA.
 */
 
-( function( M, $ ) {
+( function ( M, $ ) {
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
 		user = M.require( 'user' ),
 		escapeHash = M.escapeHash,
@@ -54,7 +54,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 		editOverlay.show();
 		$( '#ca-edit' ).on( 'mousedown', $.proxy( editOverlay, 'hide' ) );
 		// Initialize the 'Start editing' button
-		editOverlay.$( '.actionable' ).on( 'tap', function() {
+		editOverlay.$( '.actionable' ).on( 'tap', function () {
 			// Hide the tutorial
 			editOverlay.hide();
 			// Load the editing interface by changing the URL hash

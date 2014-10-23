@@ -1,5 +1,5 @@
 // Convenience wrapper for Mantle
-( function( $ ) {
+( function ( $ ) {
 	$.extend( mw.mobileFrontend, {
 		template: mw.mantle.template
 	} );

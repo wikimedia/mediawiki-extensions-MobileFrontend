@@ -1,4 +1,4 @@
-( function( M ) {
+( function ( M ) {
 	var Drawer = M.require( 'Drawer' ), Toast;
 
 	/**
@@ -14,7 +14,7 @@
 		 * @param {String} content
 		 * @param {String} className
 		 */
-		show: function( content, className ) {
+		show: function ( content, className ) {
 			this.$el.
 				html( content ).
 				removeAttr( 'class' ).

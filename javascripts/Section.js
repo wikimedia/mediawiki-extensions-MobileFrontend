@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var
 		View = M.require( 'View' ),
@@ -14,7 +14,7 @@
 			text: '',
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' )
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			var self = this;
 			options.tag = 'h' + options.level;
 			this.line = options.line;
@@ -23,7 +23,7 @@
 			this.id = options.id || null;
 			this.anchor = options.anchor;
 			this.children = [];
-			$.each( options.children || [], function() {
+			$.each( options.children || [], function () {
 				self.children.push( new Section( this ) );
 			} );
 			View.prototype.initialize.apply( self, arguments );

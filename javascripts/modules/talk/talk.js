@@ -1,10 +1,10 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 	var LoadingOverlay = M.require( 'LoadingOverlay' ),
 		talkPrefix = mw.config.get( 'wgFormattedNamespaces' )[ mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
 
 	M.assertMode( [ 'beta', 'alpha', 'app' ] );
 
-	M.overlayManager.add( /^\/talk$/, function() {
+	M.overlayManager.add( /^\/talk$/, function () {
 		var result = $.Deferred(),
 			talkOptions = {
 				title: talkPrefix + M.getCurrentPage().title
@@ -12,7 +12,7 @@
 			loadingOverlay = new LoadingOverlay();
 
 		loadingOverlay.show();
-		mw.loader.using( 'mobile.talk.common', function() {
+		mw.loader.using( 'mobile.talk.common', function () {
 			var TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
 
 			loadingOverlay.hide();

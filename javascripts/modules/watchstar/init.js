@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var Watchstar = M.require( 'modules/watchstar/Watchstar' ),
 		user = M.require( 'user' );

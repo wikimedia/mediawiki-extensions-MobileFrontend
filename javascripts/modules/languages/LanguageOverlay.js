@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function ( M, $ ) {
 
 	var Overlay = M.require( 'Overlay' ),
 		LanguageOverlay;
@@ -17,7 +17,7 @@
 			content: M.template.get( 'modules/languages/LanguageOverlay.hogan' )
 		},
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			if ( options.languages && options.languages.length ) {
 				options.header = mw.msg( 'mobile-frontend-language-header', options.languages.length );
 			}
@@ -28,12 +28,12 @@
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
 
-		filterLists: function( val ) {
+		filterLists: function ( val ) {
 			var $items = this.$( '.page-list li' ), $subheaders = this.$( 'h3' );
 
 			if ( val ) {
 				$subheaders.hide();
-				$items.each( function() {
+				$items.each( function () {
 					var $item = $( this );
 					if ( $item.find( 'span' ).text().toLowerCase().indexOf( val ) > -1 ) {
 						$item.show();
@@ -47,14 +47,14 @@
 			}
 		},
 
-		postRender: function() {
+		postRender: function () {
 			var self = this;
 			Overlay.prototype.postRender.apply( this, arguments );
 
-			this.$( 'ul' ).find( 'a' ).on( 'click', function() {
+			this.$( 'ul' ).find( 'a' ).on( 'click', function () {
 				M.emit( 'language-select', $( this ).attr( 'lang' ) );
 			} );
-			this.$( '.search' ).on( 'input', function() {
+			this.$( '.search' ).on( 'input', function () {
 				self.filterLists( $( this ).val().toLowerCase() );
 			} );
 		}
