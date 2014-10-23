@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_ab1b48d3",
+        "filename": "javascripts/modes.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-23T05:37:33Z",
+      "side": 1,
+      "message": "I would suggest to change this in a seperate change and use these function in loggingSchemas, too :)",
+      "revId": "3c664b94a2986d36ab7ee33a02d2161b585c0189",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
