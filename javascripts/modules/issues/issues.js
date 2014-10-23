@@ -69,11 +69,11 @@
 			var ns = mw.config.get( 'wgNamespaceNumber' );
 			if ( ns === 0 ) {
 				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues' ),
-				 mw.msg( 'mobile-frontend-meta-data-issues-header' ) );
+					mw.msg( 'mobile-frontend-meta-data-issues-header' ) );
 			// Create a banner for talk pages (namespace 1) in beta mode to make them more readable.
 			} else if ( ns === 1 && inBeta ) {
 				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues-talk' ),
-				 mw.msg( 'mobile-frontend-meta-data-issues-header-talk' ) );
+					mw.msg( 'mobile-frontend-meta-data-issues-header-talk' ) );
 			}
 		}
 

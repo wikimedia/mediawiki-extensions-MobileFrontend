@@ -1,9 +1,11 @@
 ( function ( M, $ ) {
-var
-	Overlay = M.require( 'Overlay' ),
-	popup = M.require( 'toast' ),
-	api = M.require( 'api' ),
-	user = M.require( 'user' ),
+	var
+		Overlay = M.require( 'Overlay' ),
+		popup = M.require( 'toast' ),
+		api = M.require( 'api' ),
+		user = M.require( 'user' ),
+		TalkSectionOverlay;
+
 	/**
 	 * @class TalkSectionOverlay
 	 * @extends Overlay

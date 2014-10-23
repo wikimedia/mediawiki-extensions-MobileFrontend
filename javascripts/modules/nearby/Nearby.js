@@ -113,11 +113,11 @@
 						}
 						self._isLoading = false;
 						result.resolve( options );
-				} ).fail( function () {
-					self._isLoading = false;
-					options.error = self.errorMessages.server;
-					result.resolve( options );
-				} );
+					} ).fail( function () {
+						self._isLoading = false;
+						options.error = self.errorMessages.server;
+						result.resolve( options );
+					} );
 			} else {
 				if ( options.errorType ) {
 					options.error = this.errorMessages[ options.errorType ];

@@ -231,7 +231,7 @@
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
 					self.hide( true );
 				} );
-			}
+		}
 	} );
 
 	M.define( 'modules/uploads/PhotoUploadOverlay', PhotoUploadOverlay );

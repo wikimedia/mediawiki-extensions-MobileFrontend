@@ -3,7 +3,6 @@
 		ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
 		ImageOverlay, api;
 
-
 	api = new ImageApi();
 
 	/**
