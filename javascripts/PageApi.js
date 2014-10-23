@@ -20,7 +20,9 @@
 
 	function transformSections( sections ) {
 		var
-			collapseLevel = Math.min.apply( this, $.map( sections, function ( s ) { return s.level; } ) ) + '',
+			collapseLevel = Math.min.apply( this, $.map( sections, function ( s ) {
+				return s.level;
+			} ) ) + '',
 			lastSection,
 			result = [], $tmpContainer = $( '<div>' );
 
@@ -158,7 +160,9 @@
 			} );
 
 			// FIXME: API returns an object when a list makes much more sense
-			pages = $.map( data.query.pages, function ( v ) { return v; } );
+			pages = $.map( data.query.pages, function ( v ) {
+				return v;
+			} );
 			// FIXME: "|| []" wouldn't be needed if API was more consistent
 			langlinks = pages[0] ? pages[0].langlinks || [] : [];
 

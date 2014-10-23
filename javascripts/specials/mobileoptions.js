@@ -14,7 +14,7 @@
 			var cbview = this;
 			this.cb = this.$( 'input[type=checkbox]' );
 			this.cb.prop( 'checked', M.settings.getUserSetting( this.options.name, true ) === 'true' );
-			$( 'form.mw-mf-settings' ).on( 'submit', function () { cbview.save(); } );
+			$( 'form.mw-mf-settings' ).on( 'submit', $.proxy( cbview, 'save' ) );
 		},
 	} );
 
