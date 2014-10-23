@@ -244,7 +244,7 @@
 
 			$iframe.remove();
 
-			return has3d !== undefined && has3d.length > 0 && has3d !== "none";
+			return has3d !== undefined && has3d.length > 0 && has3d !== 'none';
 		}
 
 		if ( mw.config.get( 'wgMFEnableCssAnimations' ) && supportsAnimations() ) {

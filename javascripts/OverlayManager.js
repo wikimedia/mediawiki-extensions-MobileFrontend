@@ -192,7 +192,7 @@
 		*/
 		replaceCurrent: function ( overlay ) {
 			if ( this.stack.length === 0 ) {
-				throw new Error( "Trying to replace OverlayManager's current overlay, but stack is empty" );
+				throw new Error( 'Trying to replace OverlayManager\'s current overlay, but stack is empty' );
 			}
 			this._hideOverlay( this.stack[0].overlay );
 			this.stack[0].overlay = overlay;

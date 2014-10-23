@@ -61,17 +61,17 @@
 
 						self.confirm.prop( 'disabled', false );
 						switch ( error.details ) {
-							case "protectedpage":
+							case 'protectedpage':
 								editMsg = 'mobile-frontend-talk-topic-error-protected';
 								break;
-							case "noedit":
-							case "blocked":
+							case 'noedit':
+							case 'blocked':
 								editMsg = 'mobile-frontend-talk-topic-error-permission';
 								break;
-							case "spamdetected":
+							case 'spamdetected':
 								editMsg = 'mobile-frontend-talk-topic-error-spam';
 								break;
-							case "badtoken":
+							case 'badtoken':
 								editMsg = 'mobile-frontend-talk-topic-error-badtoken';
 								break;
 							default:

@@ -115,7 +115,7 @@
 						options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
 						self.render( options );
 					} else {
-						self.showError( options, "There was an error retrieving tag labels." );
+						self.showError( options, 'There was an error retrieving tag labels.' );
 					}
 				} );
 			}
@@ -149,7 +149,7 @@
 					{ classes: 'quit inline mw-ui-button mw-ui-progressive', label: 'Great!' }
 				];
 			} else {
-				options.contentMsg = "That's OK, thanks for taking the time.";
+				options.contentMsg = 'That\'s OK, thanks for taking the time.';
 				options.buttons = [
 					{ classes: 'quit inline mw-ui-button mw-ui-progressive', label: 'Done' }
 				];
