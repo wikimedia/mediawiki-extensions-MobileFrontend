@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_718772dd",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-23T17:07:01Z",
+      "side": 1,
+      "message": "Please define variables at the top of the file. Note I\u0027m looking at integrating a code style command line checker to help with this stuff.",
+      "revId": "b7408ff052bc19db6136e4ee086817147940013a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
