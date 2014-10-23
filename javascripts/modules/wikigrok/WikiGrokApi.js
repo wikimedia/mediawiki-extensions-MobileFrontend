@@ -1,3 +1,4 @@
+// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 ( function ( M ) {
 	var Api = M.require( 'api' ).Api, WikiGrokApi;
 	/**
