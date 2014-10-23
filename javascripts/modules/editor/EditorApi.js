@@ -64,7 +64,7 @@
 		 * Mark content as modified and set changes to be submitted when #save
 		 * is invoked.
 		 *
-		 * @param content String New section content.
+		 * @param {string} content New section content.
 		 */
 		setContent: function ( content ) {
 			this.content = content;
@@ -75,7 +75,7 @@
 		 * Mark content as modified and set text that should be prepended to given
 		 * section when #save is invoked.
 		 *
-		 * @param text String Text to be prepended.
+		 * @param {string} text Text to be prepended.
 		 */
 		setPrependText: function ( text ) {
 			this.prependtext = text;
