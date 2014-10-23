@@ -48,7 +48,8 @@
 			// it's appropriate to display the WikiGrok interface.
 			function init() {
 				var dialog = new WikiGrokDialog( { itemId: wikidataID,
-						title: mw.config.get( 'wgTitle' ) } );
+						title: mw.config.get( 'wgTitle' ),
+						testing: ( idOverride ) ? true : false } );
 
 				if ( $( '.toc-mobile' ).length ) {
 					dialog.insertBefore( '.toc-mobile' );
