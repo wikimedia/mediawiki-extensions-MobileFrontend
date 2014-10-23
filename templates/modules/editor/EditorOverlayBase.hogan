@@ -26,7 +26,7 @@
 	<div class="panels">
 		<div class="save-panel panel hideable hidden">
 			<p class="summary-request">{{{summaryRequestMsg}}}</p>
-			<textarea rows="2" class="summary" placeholder="{{summaryMsg}}"></textarea>
+			<textarea rows="2" class="mw-ui-input summary" placeholder="{{summaryMsg}}"></textarea>
 			<p class="license">{{{licenseMsg}}}</p>
 		</div>
 		<div class="captcha-panel panel hideable hidden">
