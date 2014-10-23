@@ -33,10 +33,10 @@
 		var notifications, data, container, $li, unread = [];
 
 		api.get( {
-			action : 'query',
-			meta : 'notifications',
-			notformat : 'html',
-			notprop : 'index|list',
+			action: 'query',
+			meta: 'notifications',
+			notformat: 'html',
+			notprop: 'index|list',
 			notcontinue: notContinue,
 			notlimit: mw.config.get( 'wgEchoDisplayNum' )
 		} ).done( function ( result ) {
@@ -90,9 +90,9 @@
 	function markAsRead( unread ) {
 		api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
 			api.post( {
-				action : 'echomarkread',
-				list : unread.join( '|' ),
-				token : token
+				action: 'echomarkread',
+				list: unread.join( '|' ),
+				token: token
 			} ).done( onSuccess ).fail( onError );
 		} ).fail( onError );
 	}

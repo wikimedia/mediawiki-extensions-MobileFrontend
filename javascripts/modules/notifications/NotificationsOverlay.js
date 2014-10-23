@@ -87,9 +87,9 @@
 			markAllAsRead: function() {
 				api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
 					api.post( {
-						action : 'echomarkread',
-						all : true,
-						token : token
+						action: 'echomarkread',
+						all: true,
+						token: token
 					} );
 				} );
 			},
