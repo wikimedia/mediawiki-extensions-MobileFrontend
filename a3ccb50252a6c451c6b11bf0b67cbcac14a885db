@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_3f19b127",
+        "filename": "javascripts/modules/wikigrok/WikiGrokMoreInfo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2014-10-23T18:37:55Z",
+      "side": 1,
+      "message": "Hard coded text. Should this be i18n-ed?",
+      "revId": "a3ccb50252a6c451c6b11bf0b67cbcac14a885db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
