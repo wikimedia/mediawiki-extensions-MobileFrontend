@@ -124,6 +124,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	'skins.minerva.icons.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/iconsNew.less',
+		),
+		'position' => 'top',
+	),
+
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(

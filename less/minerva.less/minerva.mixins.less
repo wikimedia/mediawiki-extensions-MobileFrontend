@@ -5,6 +5,24 @@
 	.background-image-svg( ~"@{url}.svg", ~"@{url}.png" );
 }
 
+.m-background-image( @url ) {
+	&:after,
+	&:before {
+		.background-image(@url)
+	}
+}
+
+.m-background-image-svg( @svg, @fallback ) {
+	&:after,
+	&:before {
+		.background-image-svg( @svg, @fallback );
+	}
+}
+
+.m-background-image-svg-quick( @url ) {
+	.m-background-image-svg( ~"@{url}.svg", ~"@{url}.png" );
+}
+
 .box-sizing( @value ) {
 	-moz-box-sizing: @value;
 	-webkit-box-sizing: @value;

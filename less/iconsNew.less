@@ -1,0 +1,178 @@
+// FIXME: This file should be shared across repositories
+@import "minerva.variables";
+@import "minerva.mixins";
+@import "mediawiki.mixins";
+
+// FIXME: BEGIN: Find svg versions of all of these and add to icons folder
+// UI set
+.mw-ui-icon-talk {
+	.m-background-image('images/pagemenu/talk.png');
+}
+
+.mw-ui-icon-watch {
+	.m-background-image('images/watch.png');
+}
+
+.mw-ui-icon-edit {
+	.m-background-image('images/pagemenu/edit-locked.png');
+}
+
+.mw-ui-icon-edit-enabled {
+	.m-background-image('images/pagemenu/edit.png');
+}
+
+.mw-ui-icon-arrow-down {
+	.m-background-image('images/show.png');
+}
+
+.mw-ui-icon-arrow-up {
+	.m-background-image('images/hide.png');
+}
+
+.mw-ui-icon-watched {
+	.m-background-image('images/watched.png');
+}
+
+// Menu set
+.mw-ui-icon-home {
+	.m-background-image('images/menu/home.png');
+}
+
+.mw-ui-icon-random {
+	.m-background-image('images/menu/random.png');
+}
+
+.mw-ui-icon-watchlist {
+	.m-background-image('images/menu/watchlist.png');
+}
+
+.mw-ui-icon-uploads {
+	.m-background-image('images/menu/uploads.png');
+}
+
+.mw-ui-icon-nearby {
+	.m-background-image('images/menu/nearby.png');
+}
+
+.mw-ui-icon-settings {
+	.m-background-image('images/menu/settings.png');
+}
+
+.mw-ui-icon-secondary-logout {
+	.m-background-image('images/menu/loginout.png');
+}
+
+.mw-ui-icon-profile {
+	.m-background-image('images/menu/user.png');
+}
+
+// FIXME: This should use mw-ui-icon-anonymous in some clever way since they are essentially the same icon
+.mw-ui-icon-anonymous-white {
+	.m-background-image('images/menu/anon.png');
+}
+
+// overlay set
+
+.mw-ui-icon-cancel {
+	.m-background-image('images/cancel.png');
+}
+
+.mw-ui-icon-clear {
+	.m-background-image('images/clear.png');
+}
+
+
+// Uploads set
+.mw-ui-icon-addimage {
+	.m-background-image('images/pagemenu/upload-locked.png');
+}
+
+.mw-ui-icon-addimage-enabled {
+	.m-background-image('images/pagemenu/upload.png');
+}
+
+.mw-ui-icon-photo {
+	.m-background-image('images/camera.png');
+}
+
+.mw-ui-icon-previous {
+	.m-background-image('modules/images/uploads/chevronLeft.png');
+}
+
+.mw-ui-icon-next {
+	.m-background-image('modules/images/uploads/chevronRight.png');
+}
+
+// Diffs set
+.mw-ui-icon-bytesadded {
+	.m-background-image('special/images/positive.png');
+}
+
+.mw-ui-icon-bytesremoved {
+	.m-background-image('special/images/negative.png');
+}
+
+.mw-ui-icon-bytesneutral {
+	.m-background-image('special/images/neutral.png');
+}
+
+.mw-ui-icon-back {
+	.m-background-image('images/back-ltr.png');
+}
+// FIXME: END
+
+.mw-ui-icon-toc {
+	.m-background-image-svg-quick( 'images/icons/contents-ltr' );
+}
+
+.mw-ui-icon-cleanup {
+	.m-background-image-svg-quick( 'images/icons/blue-triangle' );
+}
+
+.mw-ui-icon-cleanup-gray {
+	.m-background-image-svg-quick( 'images/icons/gray-triangle' );
+}
+
+.mw-ui-icon-mainmenu {
+	.m-background-image-svg-quick( 'images/icons/hamburger' );
+}
+
+.mw-ui-icon-notifications {
+	.m-background-image-svg-quick( 'images/icons/bell' );
+}
+
+.mw-ui-icon-user {
+	.m-background-image-svg-quick('images/icons/userNormal');
+}
+
+.mw-ui-icon-anonymous {
+	.m-background-image-svg-quick('images/icons/userAnonymous');
+}
+
+// no fallback mixin for those SVGs (VE doesn't work on browsers without SVG
+// support anyway)
+.mw-ui-icon-edit-source {
+	.m-background-image-svg-quick( 'images/icons/editSourceNormal' );
+}
+
+.mw-ui-icon-edit-ve {
+	.m-background-image-svg-quick( 'images/icons/editVeNormal' );
+}
+
+.mw-ui-icon-edit-switch {
+	.m-background-image-svg-quick( 'images/icons/editToggle' );
+}
+
+// FIXME: Find better workaround for this
+span.mw-ui-icon {
+	// a block inside an inline element is never a good idea - effects line height of mobile diff bytesadded class
+	display: inline-block;
+}
+
+// FIXME: Upstream to mediawiki ui
+.mw-ui-icon {
+	&:before {
+		background-position: 50% 50%;
+		height: 100%;
+	}
+}
