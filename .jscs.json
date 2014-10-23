@@ -3,5 +3,5 @@
   "requireMultipleVarDecl": "onevar",
   "requireBlocksOnNewline": true,
   "disallowDanglingUnderscores": null,
-  "excludeFiles": ["javascripts/externals/*","javascripts/externals/*/*"]
+  "excludeFiles": ["javascripts/externals/*","javascripts/externals/*/*", "javascripts/README.md"]
 }
