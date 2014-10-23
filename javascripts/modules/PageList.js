@@ -16,15 +16,15 @@
 		 * Render page images for the existing page list. Assumes no page images have been loaded.
 		 * Only load when wgImagesDisabled has not been activated via Special:MobileOptions.
 		 */
-		renderPageImages: function() {
+		renderPageImages: function () {
 			var self = this,
 				pages = {},
 				$ul = this.$( '.page-list' ),
 				delay = M.isWideScreen() ? 0 : 1000;
 
 			if ( !mw.config.get( 'wgImagesDisabled' ) ) {
-				window.setTimeout( function() {
-					$.each( self.options.pages, function( i, page ) {
+				window.setTimeout( function () {
+					$.each( self.options.pages, function ( i, page ) {
 						var thumb;
 						if ( page.thumbnail ) {
 							thumb = page.thumbnail;
@@ -37,7 +37,7 @@
 					} );
 
 					// Render page images
-					$ul.find( 'li' ).each( function() {
+					$ul.find( 'li' ).each( function () {
 						var $li = $( this ),
 							title = $li.attr( 'title' ),
 							page = pages[title];
@@ -50,7 +50,7 @@
 				}, delay );
 			}
 		},
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			// FIXME: Find more elegant standard way to allow enhancement of views already in DOM
 			if ( options.enhance ) {
 				this.template = false;

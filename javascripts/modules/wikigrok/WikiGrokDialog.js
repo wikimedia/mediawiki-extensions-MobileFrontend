@@ -39,7 +39,7 @@
 		},
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
 
-		initialize: function( options ) {
+		initialize: function ( options ) {
 			var self = this;
 
 			// Remove any disambiguation parentheticals from the title.
@@ -50,7 +50,7 @@
 			Panel.prototype.initialize.apply( this, arguments );
 
 			// log page impression and widget impression when the widget is shown
-			this.on( 'show', function() {
+			this.on( 'show', function () {
 				self.logPageImpression();
 				self.initializeWidgetImpressionLogging();
 
@@ -183,7 +183,7 @@
 		 * @param $el {jQuery.Object}
 		 * @return {boolean}
 		 */
-		isElementInViewport: function( $el ) {
+		isElementInViewport: function ( $el ) {
 			var windowHeight = $window.height(),
 				windowWidth = $window.width(),
 				windowScrollLeft = $window.scrollLeft(),
@@ -203,7 +203,7 @@
 		 * Stop listening to events that are namespaced with the taskToken.
 		 * @param {jQuery.Object} $el WikiGrokDialog element
 		 */
-		logWidgetImpression: function( $el ) {
+		logWidgetImpression: function ( $el ) {
 			// detect whether the dialog is in viewport, and
 			// record it if yes
 			if ( !this.isWidgetImpressionLogged ) {
@@ -223,7 +223,7 @@
 		 * to create and listen to the same events more than once.
 		 * @method
 		 */
-		initializeWidgetImpressionLogging: function() {
+		initializeWidgetImpressionLogging: function () {
 			var self = this;
 			if ( !this.isLogWidgetImpressionInitialized && !this.isWidgetImpressionLogged ) {
 				// widget specific event listener because there may be more than
@@ -233,9 +233,9 @@
 					'resize.' + self.defaults.taskToken +
 					' scroll.' + self.defaults.taskToken,
 					// debounce
-					function() {
+					function () {
 						clearTimeout( timer );
-						timer = setTimeout( function() {
+						timer = setTimeout( function () {
 							self.logWidgetImpression( self.$el );
 						}, 250 );
 					}
@@ -250,7 +250,7 @@
 		 * Log page-impression once
 		 * @method
 		 */
-		logPageImpression: function() {
+		logPageImpression: function () {
 			// record page impression
 			if ( !this.isPageImpressionLogged ) {
 				this.isPageImpressionLogged = true;
