@@ -35,7 +35,7 @@
 					action: 'query',
 					prop: 'imageinfo',
 					titles: title,
-					iiprop: ['url', 'extmetadata'],
+					iiprop: [ 'url', 'extmetadata' ],
 					// request an image devicePixelRatio times bigger than the reported screen size
 					// for retina displays and zooming
 					iiurlwidth: findSizeBucket( $( window ).width() * imageSizeMultiplier ),
@@ -43,7 +43,9 @@
 				} ).done( function ( resp ) {
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: API
-						var data = $.map( resp.query.pages, function ( v ) { return v; } )[0].imageinfo[0];
+						var data = $.map( resp.query.pages, function ( v ) {
+							return v;
+						} )[0].imageinfo[0];
 						result.resolve( data );
 					}
 				} );

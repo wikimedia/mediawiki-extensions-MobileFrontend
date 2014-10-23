@@ -228,9 +228,7 @@
 								$window.scrollTop( 999 );
 								keyboardHeight = $window.scrollTop();
 								$window.scrollTop( 0 );
-							} else {
-								// FIXME: implement a solution from https://devforums.apple.com/message/1050636#1050636
-							}
+							} // FIXME: implement a solution from https://devforums.apple.com/message/1050636#1050636
 
 							if ( $window.height() > keyboardHeight ) {
 								self._resizeContent($window.height() - keyboardHeight);
