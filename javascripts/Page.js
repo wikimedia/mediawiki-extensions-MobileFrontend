@@ -58,7 +58,7 @@
 		/**
 		 * Checks whether the given user can edit the page.
 		 * @method
-		 * @param {mw.user} Object representing a user
+		 * @param {mw.user} user Object representing a user
 		 * @return {jQuery.Deferred} With parameter boolean
 		 */
 		isEditable: function ( user ) {

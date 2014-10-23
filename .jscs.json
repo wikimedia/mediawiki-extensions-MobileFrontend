@@ -3,5 +3,10 @@
   "requireMultipleVarDecl": "onevar",
   "requireBlocksOnNewline": true,
   "disallowDanglingUnderscores": null,
+  "validateJSDoc": {
+    "checkParamNames": true,
+    "requireParamTypes": true,
+    "checkRedundantParams": true
+  },
   "excludeFiles": ["javascripts/externals/*","javascripts/externals/*/*", "javascripts/README.md"]
 }
