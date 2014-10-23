@@ -52,6 +52,24 @@
       "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_9410ec05",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-23T17:47:09Z",
+      "side": 1,
+      "message": "Is there any reason why you don\u0027t want your patch (https://gerrit.wikimedia.org/r/#/c/158087/) merged?\n\nAlso removing the \u0027role: \"heading\"\u0027 from the h2 element and just adding the \u0027role: \"button\"\u0027 to the span inside the h2 element should fix the problem without merging your patch, no? It would look something like this:\n\n\u003ch2 class\u003d\"section-heading\"\u003e\n    \u003cspan class\u003d\"mw-headline\" id\u003d\"Early_life\" role\u003d\"button\"\u003eEarly life\u003c/span\u003e\n    \u003ca href\u003d\"#/editor/1\" title\u003d\"Edit section: Early life\" data-section\u003d\"1\" class\u003d\"icon icon-edit edit-page enabled icon-32px\"\u003eEdit\u003c/a\u003e\n\u003c/h2\u003e\n\nThis way the header will behave like a header, and the span inside will behave like a button.",
+      "parentUuid": "8e96e304_4587ea66",
+      "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
