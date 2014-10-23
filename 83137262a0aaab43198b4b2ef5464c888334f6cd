@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_a016feaa",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-23T21:54:45Z",
+      "side": 1,
+      "message": "So one downside of this approach is if I run\nwindow.location.hash \u003d \u0027#/page/New York\u0027 in JS\non \u0027#/page/San Francisco\u0027\nThe page doesn\u0027t re-render.\n\nWe can use Router to do this.",
+      "revId": "83137262a0aaab43198b4b2ef5464c888334f6cd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
