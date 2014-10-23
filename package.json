@@ -6,6 +6,7 @@
 		"grunt": "~0.4.4",
 		"grunt-phpdocumentor": "~0.4.1",
 		"jshint": ">=1.1.0",
+    "jscs": ">=1.7.3",
 		"jsdoc": "<=3.3.0",
 		"kss": ">=0.3.6",
 		"svgo": ">=0.4.4"
