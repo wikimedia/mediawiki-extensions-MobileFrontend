@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
-var Panel = M.require( 'Panel' ),
-	Drawer;
+	var Panel = M.require( 'Panel' ),
+		Drawer;
 
 	/**
 	 * A {@link View} that pops up from the bottom of the screen.
@@ -39,6 +39,6 @@ var Panel = M.require( 'Panel' ),
 		}
 	} );
 
-M.define( 'Drawer', Drawer );
+	M.define( 'Drawer', Drawer );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -38,8 +38,7 @@
 		getCurrentPosition: function () {
 			var result = $.Deferred();
 			if ( M.supportsGeoLocation() ) {
-			navigator.geolocation.getCurrentPosition(
-				function ( geo ) {
+				navigator.geolocation.getCurrentPosition( function ( geo ) {
 					result.resolve( { latitude: geo.coords.latitude, longitude: geo.coords.longitude } );
 				},
 				function ( err ) {

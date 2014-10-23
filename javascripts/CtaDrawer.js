@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
-var Drawer = M.require( 'Drawer' ),
-	Icon = M.require( 'Icon' ),
-	CtaDrawer;
+	var Drawer = M.require( 'Drawer' ),
+		Icon = M.require( 'Icon' ),
+		CtaDrawer;
 
 	/**
 	 * This creates the drawer at the bottom of the screen that appears when an anonymous
@@ -39,6 +39,6 @@ var Drawer = M.require( 'Drawer' ),
 		}
 	} );
 
-M.define( 'CtaDrawer', CtaDrawer );
+	M.define( 'CtaDrawer', CtaDrawer );
 
 }( mw.mobileFrontend, jQuery ) );

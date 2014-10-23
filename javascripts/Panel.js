@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
-var View = M.require( 'View' ),
-	Panel;
+	var View = M.require( 'View' ),
+		Panel;
 
 	/**
 	 * An abstract class for a {@link View} that comprises a simple panel.
@@ -76,6 +76,6 @@ var View = M.require( 'View' ),
 		}
 	} );
 
-M.define( 'Panel', Panel );
+	M.define( 'Panel', Panel );
 
 }( mw.mobileFrontend, jQuery ) );

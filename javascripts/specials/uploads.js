@@ -1,16 +1,16 @@
 ( function ( M, $ ) {
-var
-	PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
-	user = M.require( 'user' ),
-	popup = M.require( 'toast' ),
-	Api = M.require( 'api' ).Api,
-	View = M.require( 'View' ),
-	corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
-	pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
-	currentUserName = user.getName(),
-	userName = pageParams[1] ? pageParams[1] : currentUserName,
-	IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).medium,
-	UserGalleryApi, PhotoItem, PhotoList;
+	var
+		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
+		user = M.require( 'user' ),
+		popup = M.require( 'toast' ),
+		Api = M.require( 'api' ).Api,
+		View = M.require( 'View' ),
+		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
+		pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
+		currentUserName = user.getName(),
+		userName = pageParams[1] ? pageParams[1] : currentUserName,
+		IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).medium,
+		UserGalleryApi, PhotoItem, PhotoList;
 
 	/**
 	 * @class UserGalleryApi
