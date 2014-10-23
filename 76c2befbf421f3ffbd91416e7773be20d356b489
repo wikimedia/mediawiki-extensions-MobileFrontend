@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_b4b72381",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-23T23:34:11Z",
+      "side": 1,
+      "message": "In a follow up patchset we should do mw.mobileFrontend.router.navigate( \u0027#/mylocation\u0027 ) or something similar and change the refresh icon to be a link to this. This will mean we don\u0027t need the refreshCurrentLocation function on the click event for the refresh icon.\n\nBinding to everything seems like it might cause us issues in the future, in different browsers e.g. running this route instead of the page/PageTitle one",
+      "revId": "76c2befbf421f3ffbd91416e7773be20d356b489",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
