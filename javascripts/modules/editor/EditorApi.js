@@ -185,7 +185,7 @@
 				// Output mobile HTML (bug 54243)
 				mobileformat: true,
 				title: this.title,
-				prop: ['text', 'sections']
+				prop: [ 'text', 'sections' ]
 			} );
 
 			this.post( options ).done( function ( resp ) {
