@@ -218,10 +218,8 @@
 		function supportsAnimations() {
 			var el = $( '<p>' )[0], $iframe = $( '<iframe>' ), has3d, t,
 			transforms = {
-				'webkitTransform': '-webkit-transform',
-				//'OTransform': '-o-transform',
-				//'msTransform': '-ms-transform',
-				'transform': 'transform'
+				webkitTransform: '-webkit-transform',
+				transform: 'transform'
 			};
 
 			// don't trust Android 2.x, really

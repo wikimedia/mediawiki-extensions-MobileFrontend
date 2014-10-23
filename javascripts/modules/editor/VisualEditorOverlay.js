@@ -156,7 +156,7 @@
 		onSurfaceReady: function () {
 			this.clearSpinner();
 			this.$( '.surface' ).show();
-			this.target.surface.getModel().getDocument().connect( this, { 'transact': 'onTransact' } );
+			this.target.surface.getModel().getDocument().connect( this, { transact: 'onTransact' } );
 			this.target.surface.$element.addClass( 'content' );
 
 			// we have to do it here because contenteditable elements still do not

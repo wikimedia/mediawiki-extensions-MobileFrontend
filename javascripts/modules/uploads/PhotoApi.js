@@ -178,7 +178,7 @@
 					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
 					url: uploadUrl,
 					contentType: 'multipart/form-data',
-					xhrFields: { 'withCredentials': true },
+					xhrFields: { withCredentials: true },
 					cache: false
 				} ).done( function ( data ) {
 					var descriptionUrl = '',
