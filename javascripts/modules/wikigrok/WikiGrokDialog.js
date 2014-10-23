@@ -60,7 +60,7 @@
 		 */
 		chooseRandomItemsFromArray: function ( array, count ) {
 			var result = [], arrayCopy, arrayLength = array.length,
-				randomIndex;
+				i, randomIndex;
 
 			if ( arrayLength >= 1 ) {
 				count = ( count > arrayLength ) ? arrayLength : count;
@@ -69,7 +69,7 @@
 				if ( count > 1 ) {
 					arrayCopy = array.slice();
 					// with each iteration the arrayCopy size decreases by 1.
-					for ( var i = 1; i <= count; i++ ) {
+					for ( i = 1; i <= count; i++ ) {
 						randomIndex = Math.round( Math.random() * ( arrayLength - i ) );
 						result = result.concat( arrayCopy.splice( randomIndex, 1 ) );
 					}
