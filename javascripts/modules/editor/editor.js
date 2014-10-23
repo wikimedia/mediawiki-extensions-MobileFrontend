@@ -225,7 +225,7 @@
 	if ( !isEditingSupported ) {
 		// Editing is disabled (or browser is blacklisted)
 		showSorryToast( 'mobile-frontend-editor-unavailable' );
-	} else if (isNewFile) {
+	} else if ( isNewFile ) {
 		// Is a new file page (enable upload image only) Bug 58311
 		showSorryToast( 'mobile-frontend-editor-uploadenable' );
 	} else	{
