@@ -124,7 +124,7 @@
 		showError: function ( options, errorMsg ) {
 			options.contentMsg = errorMsg;
 			options.buttons = [
-				{ classes: 'cancel inline mw-ui-button mw-ui-progressive', label: 'OK' },
+				{ classes: 'cancel inline mw-ui-button mw-ui-progressive', label: 'OK' }
 			];
 			this.render( options );
 		},

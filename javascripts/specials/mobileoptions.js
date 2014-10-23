@@ -15,7 +15,7 @@
 			this.cb = this.$( 'input[type=checkbox]' );
 			this.cb.prop( 'checked', M.settings.getUserSetting( this.options.name, true ) === 'true' );
 			$( 'form.mw-mf-settings' ).on( 'submit', $.proxy( cbview, 'save' ) );
-		},
+		}
 	} );
 
 	function initLocalStorageCheckboxes() {
@@ -24,7 +24,7 @@
 			cb = new Checkbox( {
 				name: 'expandSections',
 				enableMsg: mw.msg( 'mobile-frontend-expand-sections-status' ),
-				descriptionMsg: mw.msg( 'mobile-frontend-expand-sections-description' ),
+				descriptionMsg: mw.msg( 'mobile-frontend-expand-sections-description' )
 			} );
 			cb.insertBefore( saveLI );
 		}

@@ -10,7 +10,7 @@
 	 */
 	WikiGrokMoreInfo = Overlay.extend( {
 		defaults: {
-			heading: '<strong>About</strong>',
+			heading: '<strong>About</strong>'
 		},
 		templatePartials: {
 			content: M.template.get( 'modules/wikigrok/WikiGrokMoreInfo.hogan' )

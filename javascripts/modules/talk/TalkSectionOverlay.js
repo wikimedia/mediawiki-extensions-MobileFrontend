@@ -11,7 +11,7 @@ var
 	TalkSectionOverlay = Overlay.extend( {
 		template: M.template.get( 'modules/talk/talkSection.hogan' ),
 		templatePartials: {
-			header: M.template.get( 'modules/talk/talkSectionHeader.hogan' ),
+			header: M.template.get( 'modules/talk/talkSectionHeader.hogan' )
 		},
 		defaults: {
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),

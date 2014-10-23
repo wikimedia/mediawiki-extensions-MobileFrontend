@@ -16,7 +16,7 @@
 		defaults: {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
-			el: '#ca-upload',
+			el: '#ca-upload'
 		},
 
 		initialize: function ( options ) {

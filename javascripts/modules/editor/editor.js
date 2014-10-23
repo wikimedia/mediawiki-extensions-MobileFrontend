@@ -23,7 +23,7 @@
 		pendingToast = M.settings.getUserSetting( 'mobile-pending-toast' ),
 		drawer = new CtaDrawer( {
 			queryParams: {
-				campaign: 'mobile_editPageActionCta',
+				campaign: 'mobile_editPageActionCta'
 			},
 			signupQueryParams: { returntoquery: 'article_action=signup-edit' },
 			content: mw.msg( 'mobile-frontend-editor-cta' )
