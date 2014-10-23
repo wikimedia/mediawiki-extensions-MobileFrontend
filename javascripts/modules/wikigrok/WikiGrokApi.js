@@ -63,7 +63,7 @@
 		action: function ( action, key ) {
 			return this.ajax( {
 					action: action,
-					item: this.subjectId.replace( 'Q' , '' )
+					item: this.subjectId.replace( 'Q', '' )
 				} ).then( function ( data ) {
 					if ( key ) {
 						if ( data[key] !== undefined ) {

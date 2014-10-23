@@ -99,7 +99,7 @@
 					pages = {};
 				}
 				// FIXME: API returns object when array would make much sense
-				pages = $.map( pages , function ( i ) {
+				pages = $.map( pages, function ( i ) {
 					return i;
 				} );
 				pages = $.map( pages, function ( page, i ) {

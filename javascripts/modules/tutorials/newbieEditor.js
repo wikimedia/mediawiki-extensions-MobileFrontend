@@ -15,7 +15,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
 		user = M.require( 'user' ),
 		escapeHash = M.escapeHash,
-		inEditor = window.location.hash.indexOf( '#editor/' ) > - 1,
+		inEditor = window.location.hash.indexOf( '#editor/' ) > -1,
 		hash = window.location.hash,
 		// Whether or not the user should see the leftNav guider
 		shouldShowLeftNavEditTutorial = !user.isAnon() &&

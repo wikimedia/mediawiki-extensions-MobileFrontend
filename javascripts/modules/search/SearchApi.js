@@ -13,7 +13,7 @@
 	 */
 	function createSearchRegEx( str ) {
 		str = str.replace( /[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&' );
-		return new RegExp( '^(' + str + ')' , 'ig' );
+		return new RegExp( '^(' + str + ')', 'ig' );
 	}
 
 	/**
@@ -28,7 +28,7 @@
 		label = $( '<span>' ).text( label ).html();
 		term = $( '<span>' ).text( term ).html();
 
-		return label.replace( createSearchRegEx( term ),'<strong>$1</strong>' );
+		return label.replace( createSearchRegEx( term ), '<strong>$1</strong>' );
 	}
 
 	/**
