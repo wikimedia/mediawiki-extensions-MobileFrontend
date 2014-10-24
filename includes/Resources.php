@@ -222,6 +222,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.stable.common',
 			'mobile.overlays',
+			'mediawiki.ui.input',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/editor.js',
