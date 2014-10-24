@@ -67,6 +67,9 @@
 				// top of the document - top of the viewport in viewports (as a unit)
 				scrollOffset: ( $window.scrollTop() / $window.height() ).toFixed( 2 )
 			};
+			if ( this.options.testing ) {
+				data.testing = true;
+			}
 			schema.log( data );
 		},
 		/**
