@@ -32,17 +32,6 @@
 					source: 'mobile ' + this.version
 				} );
 		},
-		recordOccupation: function ( occupationId, occupation, claimIsCorrect ) {
-			var claim = {
-				correct: claimIsCorrect,
-				prop: 'occupation',
-				propid: 'P106',
-				value: occupation,
-				valueid: occupationId
-			};
-
-			return this.recordClaims( [ claim ] );
-		},
 		/**
 		 * Get suggestions for the current person.
 		 * Currently 50% of time returns occupations, 50% of time nationalities

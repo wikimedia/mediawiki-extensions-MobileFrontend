@@ -22,7 +22,7 @@
 			WikiGrokDialog.prototype.initialize.apply( this, arguments );
 
 			// log page impression and widget impression when the widget is shown
-			this.on( 'show', function () {
+			this.once( 'show', function () {
 				self.logPageImpression();
 				self.initializeWidgetImpressionLogging();
 

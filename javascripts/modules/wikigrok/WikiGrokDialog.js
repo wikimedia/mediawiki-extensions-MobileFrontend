@@ -50,7 +50,7 @@
 			Panel.prototype.initialize.apply( this, arguments );
 
 			// log page impression and widget impression when the widget is shown
-			this.on( 'show', function () {
+			this.once( 'show', function () {
 				self.logPageImpression();
 				self.initializeWidgetImpressionLogging();
 
@@ -74,8 +74,8 @@
 		},
 		/**
 		 * Return a new array from 'array' with 'count' randomly selected elements.
-		 * @param {array} array Array from which random elements are selected
-		 * @param {integer} count - Positive number of random elements to select
+		 * @param {Array} array Array from which random elements are selected
+		 * @param {Integer} count - Positive number of random elements to select
 		 * @returns {Array}
 		 */
 		chooseRandomItemsFromArray: function ( array, count ) {
@@ -97,36 +97,45 @@
 					randomIndex = Math.round( Math.random() * ( arrayLength - 1 ) );
 					result.push( array[ randomIndex ] );
 				}
-
 			}
 			return result;
 		},
 
 		askWikidataQuestion: function ( options ) {
 			var self = this,
-				occupationArray = options.occupations;
+				vowels = [ 'a', 'e', 'i', 'o', 'u' ],
+				theCountries = [ 'United States', 'United Kingdom', 'Philippines',
+					'Marshall Islands', 'Central African Republic' ];
 
-			// If there are potential occupations for this person, select one at
-			// random and ask if it is a correct occupation for the person.
-			if ( occupationArray.length ) {
-				// Choose a random occupation from the list of possible occupations.
-				options.occupationId = this.chooseRandomItemsFromArray( occupationArray, 1 )[0];
+			if ( options.suggestions.length ) {
+				// choose a suggestion category (dob, dod, occupation, or nationality) randomly
+				options.suggestion = this.chooseRandomItemsFromArray( options.suggestions, 1 )[0];
+				// pick a claim randomly
+				options.claimId = this.chooseRandomItemsFromArray( options.suggestion.list, 1 )[0];
 
-				// Get the name of the occupation from Wikidata.
-				self.apiWikiData.getLabels( [ options.occupationId ] ).done( function ( labels ) {
-					var vowels = [ 'a', 'e', 'i', 'o', 'u' ],
-						label = labels[options.occupationId];
+				// Get the name of the claim from Wikidata.
+				self.apiWikiData.getLabels( [ options.claimId ] ).done( function ( labels ) {
+					options.claimLabel = labels[ options.claimId ];
+					if ( options.claimLabel ) {
+						// ask if it is a correct occupation for the person.
+						// FIXME: add support for DOB and DOD
+						if ( options.suggestion.name === 'occupations' ) {
+							// Hack for English prototype
+							if ( $.inArray( options.claimLabel.charAt(0), vowels ) === -1 ) {
+								options.contentMsg = 'Was ' + options.name + ' a ' + options.claimLabel + '?';
+							} else {
+								options.contentMsg = 'Was ' + options.name + ' an ' + options.claimLabel + '?';
+							}
+						} else if ( options.suggestion.name === 'nationality' ) {
+							if ( $.inArray( options.claimLabel, theCountries ) === -1 ) {
+								options.contentMsg = 'Was ' + options.name + ' a citizen of ' + options.claimLabel + '?';
+							} else {
+								options.contentMsg = 'Was ' + options.name + ' a citizen of the ' + options.claimLabel + '?';
+							}
+						}
 
-					if ( label ) {
 						// Re-render with new content for 'Question' step
 						options.beginQuestions = true;
-						options.occupation = label;
-						// Hack for English prototype
-						if ( $.inArray( options.occupation.charAt(0), vowels ) === -1 ) {
-							options.contentMsg = 'Was ' + options.name + ' a ' + options.occupation + '?';
-						} else {
-							options.contentMsg = 'Was ' + options.name + ' an ' + options.occupation + '?';
-						}
 						options.buttons = [
 							{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
 							{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
@@ -153,11 +162,23 @@
 		// Eventually answers will be recorded directly to Wikidata.
 		recordClaim: function ( options ) {
 			var self = this,
-				args = [ options.occupationId,
-					options.occupation, options.claimIsCorrect ];
+				claim = {
+					valueid: options.claimId,
+					value: options.claimLabel,
+					correct: options.claimIsCorrect,
+					propid: options.suggestion.id
+				};
 
-			this.apiWikiGrok.recordOccupation.apply( this.apiWikiGrok, args ).done( function () {
-				self.thankUser( options, true );
+			// FIXME: add support for DOB and DOD
+			if ( options.suggestion.name === 'occupations' ) {
+				claim.prop = 'occupation';
+			} else if ( options.suggestion.name === 'nationality' ) {
+				claim.prop = 'nationality';
+			}
+
+			this.apiWikiGrok.recordClaims( [ claim ] ).done( function () {
+				options.claimRecorded = true;
+				self.thankUser( options, options.claimRecorded );
 			} );
 		},
 
@@ -315,12 +336,29 @@
 		},
 		reveal: function ( options ) {
 			var self = this;
-			this.apiWikiGrok.getPossibleOccupations().done( function ( occupations ) {
-				if ( occupations.length ) {
-					options.occupations = occupations;
-					self.show();
-				}
-			} );
+
+			// fetch suggestions only if we didn't try loading suggestions before
+			if ( options.suggestions ) {
+				self.show();
+			} else {
+				options.suggestions = [];
+				self.apiWikiData.getClaims().done( function ( claims ) {
+					if ( claims.isHuman ) {
+						self.apiWikiGrok.getSuggestions().done( function ( suggestions ) {
+							// FIXME: add support for DOB and DOD
+							if ( suggestions.occupations.list.length ) {
+								options.suggestions.push( suggestions.occupations );
+							}
+							if ( suggestions.nationalities.list.length ) {
+								options.suggestions.push( suggestions.nationalities );
+							}
+							if ( options.suggestions.length ) {
+								self.show();
+							}
+						} );
+					}
+				} );
+			}
 		}
 	} );
 
