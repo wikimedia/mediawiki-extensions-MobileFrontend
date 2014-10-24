@@ -38,6 +38,7 @@
 	}
 
 	p,
+	a:not(:last-child),
 	.mw-ui-button {
 		margin-bottom: 1em;
 	}
@@ -51,6 +52,12 @@
 
 	.progress-bar {
 		margin: .9em 0 0;
+	}
+
+	// Special handling of CtaDrawer for anonymous editing
+	// FIXME: remove when mw-ui-block allowed for anchors
+	.mw-ui-block {
+		display: block;
 	}
 }
 
