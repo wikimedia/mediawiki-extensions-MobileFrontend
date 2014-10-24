@@ -32,7 +32,7 @@
 		},
 		templatePartials: {
 			spinner: M.template.get( 'spinner.hogan' ),
-			articleList: M.template.get( 'modules/articleList.hogan' )
+			pageList: PageList.prototype.template
 		},
 		template: M.template.get( 'modules/nearby/nearby.hogan' ),
 		getCurrentPosition: function () {
