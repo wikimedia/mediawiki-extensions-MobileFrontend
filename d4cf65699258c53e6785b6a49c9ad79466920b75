@@ -70,6 +70,24 @@
       "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_d905407e",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-24T21:44:21Z",
+      "side": 1,
+      "message": "I guess we should remove this code then until we\u0027ve fixed it in core?",
+      "parentUuid": "6e936f18_9410ec05",
+      "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
