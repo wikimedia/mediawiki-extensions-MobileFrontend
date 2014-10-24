@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_216aea12",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-24T23:07:15Z",
+      "side": 1,
+      "message": "This should be once. OO.EventEmitter defines once\nWe need to ween ourself of the use of one.",
+      "revId": "614cf5c379ab26af263680ebde54d90661f779c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
