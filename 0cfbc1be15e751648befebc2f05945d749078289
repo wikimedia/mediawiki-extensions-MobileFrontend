@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_3e29aa9a",
+        "filename": "Gruntfile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-24T20:26:11Z",
+      "side": 1,
+      "message": "If we need this move it to the .jscs.json",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_be35baf5",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-24T20:26:11Z",
+      "side": 1,
+      "message": "I would set this one like the \"grunt\" dependency in devDependencies \"0.4.5\" with no tildes",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_9e4d5e9e",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-24T20:26:11Z",
+      "side": 1,
+      "message": "Duplicated, remove",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_fe84a2a5",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-24T20:26:11Z",
+      "side": 1,
+      "message": "Using grunt-jscs 0.8.1 it works properly!\nhttps://gist.github.com/joakin/8cd9d6964c4f7c1a18a1",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
