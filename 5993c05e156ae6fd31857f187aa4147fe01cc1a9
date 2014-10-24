@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_a1ca7a48",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-24T23:02:13Z",
+      "side": 1,
+      "message": "I think this is supposed to be .one, not .once.",
+      "revId": "5993c05e156ae6fd31857f187aa4147fe01cc1a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_41d7f6f2",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-24T23:02:13Z",
+      "side": 1,
+      "message": "same here.",
+      "revId": "5993c05e156ae6fd31857f187aa4147fe01cc1a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
