@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_01024ebe",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-24T22:40:05Z",
+      "side": 1,
+      "message": "resetting the hash would be a much nicer way of doing this.\n\nvar hash \u003d window.location.hash;\nwindow.location.hash \u003d \u0027\u0027;\nwindow.location.hash \u003d hash;",
+      "revId": "870dd57f49e7130afe488abb0223f97b38fdeb71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
