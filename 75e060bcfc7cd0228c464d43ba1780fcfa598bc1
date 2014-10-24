@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_be705aa4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-24T19:32:54Z",
+      "side": 1,
+      "message": "Can we add a comment above this as I am a little confused with why they default to enabled. What happens when the page is protected?\n\nI\u0027m guessing we hide these or remove for protected page so that\u0027s why they can default to edit-enabled but I can\u0027t find the code but it would be good to explain why here.",
+      "revId": "75e060bcfc7cd0228c464d43ba1780fcfa598bc1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
