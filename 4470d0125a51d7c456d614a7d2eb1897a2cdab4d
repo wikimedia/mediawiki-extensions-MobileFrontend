@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_d9c8e027",
+        "filename": "javascripts/Router.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-24T22:44:10Z",
+      "side": 1,
+      "message": "Ok",
+      "parentUuid": "6e936f18_f9c11c84",
+      "revId": "4470d0125a51d7c456d614a7d2eb1897a2cdab4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_b93394bf",
         "filename": "javascripts/modules/nearby/Nearby.js",
         "patchSetId": 11
