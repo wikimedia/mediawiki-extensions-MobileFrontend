@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_04d57c47",
+        "filename": ".jscs.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-24T23:49:27Z",
+      "side": 1,
+      "message": "I\u0027d suggest doing these in a separate commit as this makes me impossible to merge any new code (as it complains about errors :))",
+      "revId": "d7bb9b8d099f9086931a097030afa36548abd66e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
