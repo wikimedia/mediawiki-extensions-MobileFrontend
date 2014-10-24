@@ -154,7 +154,9 @@ class SkinMinerva extends SkinTemplate {
 				'href' => '#/editor/' . $section,
 				'title' => wfMessage( 'editsectionhint', $tooltip )->inLanguage( $lang ),
 				'data-section' => $section,
-				'class' => MobileUI::iconClass( 'edit', 'element', 'edit-page enabled icon-32px' ),
+				// Note visibility of the edit section link button is controlled by .edit-page in ui.less so
+				// we default to enabled even though this may not be true.
+				'class' => MobileUI::iconClass( 'edit-enabled', 'element', 'edit-page icon-32px' ),
 			), $message );
 		}
 	}
