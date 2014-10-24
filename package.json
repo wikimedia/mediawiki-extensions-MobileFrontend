@@ -13,6 +13,7 @@
 	},
 	"devDependencies": {
 		"grunt-contrib-jshint": "0.10.0",
-		"grunt-jscs": "0.8.1"
+		"grunt-jscs": "0.8.1",
+		"js-beautify": "^1.5.4"
 	}
 }
