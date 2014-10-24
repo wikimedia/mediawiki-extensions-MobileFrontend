@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_e163a239",
+        "filename": "Gruntfile.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-24T23:08:11Z",
+      "side": 1,
+      "message": "Oh irony .. jshint doesn\u0027t like this line. Any ideas?",
+      "revId": "ca5cc3c2391d0205394e338f66660ffce33ccead",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
