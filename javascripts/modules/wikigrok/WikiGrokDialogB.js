@@ -49,6 +49,7 @@
 
 			$.each( suggestions, function ( type, data ) {
 				var prop = {
+						type: type,
 						name: data.name,
 						id: data.id
 					};
@@ -90,7 +91,7 @@
 							appendTo( $chk );
 
 						$( '<label>' ).
-							text( i18n[prop.name] ).appendTo( $chk );
+							text( i18n[prop.type] ).appendTo( $chk );
 
 						$( '<label>' ).
 							text( label ).
