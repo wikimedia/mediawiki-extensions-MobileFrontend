@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_6191d29b",
+        "filename": "Gruntfile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-24T22:42:19Z",
+      "side": 1,
+      "message": "I believe that this is reading the .jshintrc file on its own.",
+      "parentUuid": "6e936f18_f9791c2b",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_3e29aa9a",
         "filename": "Gruntfile.js",
         "patchSetId": 3
@@ -54,6 +72,42 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_c1f786f1",
+        "filename": "Gruntfile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-24T22:42:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_3e29aa9a",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_e1fc02d8",
+        "filename": "Gruntfile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-24T22:42:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_b98b941a",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_be35baf5",
         "filename": "package.json",
         "patchSetId": 3
@@ -65,6 +119,24 @@
       "writtenOn": "2014-10-24T20:26:11Z",
       "side": 1,
       "message": "I would set this one like the \"grunt\" dependency in devDependencies \"0.4.5\" with no tildes",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_61fc72b2",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-24T22:42:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_be35baf5",
       "revId": "0cfbc1be15e751648befebc2f05945d749078289",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -88,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_0129ee35",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-24T22:42:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_9e4d5e9e",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_fe84a2a5",
         "filename": "package.json",
         "patchSetId": 3
@@ -99,6 +189,24 @@
       "writtenOn": "2014-10-24T20:26:11Z",
       "side": 1,
       "message": "Using grunt-jscs 0.8.1 it works properly!\nhttps://gist.github.com/joakin/8cd9d6964c4f7c1a18a1",
+      "revId": "0cfbc1be15e751648befebc2f05945d749078289",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_212e6a3f",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-10-24T22:42:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_fe84a2a5",
       "revId": "0cfbc1be15e751648befebc2f05945d749078289",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
