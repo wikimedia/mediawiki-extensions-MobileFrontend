@@ -8,5 +8,6 @@
     "requireParamTypes": true,
     "checkRedundantParams": true
   },
+  "validateIndentation": "\t",
   "excludeFiles": ["javascripts/externals/*","javascripts/externals/*/*", "javascripts/README.md"]
 }
