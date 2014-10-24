@@ -316,6 +316,18 @@
 		] );
 	} );
 
+	QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', 1, function( assert ) {
+		var resp = pageApi.getSectionsFromHTML(
+			$( '<div><h2><span id="1.0">A1</span></h2><h3><span>A2.1</span></h3><h2><span>A2.2</span></h2><h1><span>A2</span></h1><h2><span>A2.1</span></h2></div>' ) );
+		assert.deepEqual( resp, [
+			{ line: 'A1', level: '2', anchor: '1.0', text: '<h3 id="">A2.1</h3>', children: [{
+				line: 'A2.1', level: '3', anchor: '', text: '', children: [] }] },
+			{ line: 'A2.2', level: '2', anchor: '', text: '', children: [] },
+			{ line: 'A2', level: '1', anchor: '', text: '<h2 id="">A2.1</h2>', children: [{
+				line: 'A2.1', level: '2', anchor: '', text: '', children: [] }] }
+		] );
+	} );
+
 	QUnit.test( '#getPage (move protected page)', 1, function( assert ) {
 		var expected = {
 			edit: [ '*' ],

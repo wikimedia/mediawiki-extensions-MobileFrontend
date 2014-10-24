@@ -180,6 +180,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'icon.hogan',
+			'section.hogan',
 		),
 		'scripts' => array(
 			'javascripts/Router.js',
