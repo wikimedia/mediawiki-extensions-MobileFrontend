@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_b9edd424",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-24T20:48:31Z",
+      "side": 1,
+      "message": "We\u0027re going to have to do some more grammar hacking here. If options.claimLabel is United States, United Kingdom, Philippines, Marshall Islands, or Central African Republic, we need to add \u0027the\u0027 in front of it in the question.",
+      "revId": "2fc7df580c18e9fd6d72f7d21c9423f74e0cda52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_7980ac4b",
         "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
         "patchSetId": 1
