@@ -923,7 +923,7 @@ class SkinMinerva extends SkinTemplate {
 			wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
 			wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
 		}
-		parent::outputPage( $out );
+		parent::outputPage();
 		wfProfileOut( __METHOD__ );
 	}
 
