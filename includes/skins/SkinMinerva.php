@@ -833,6 +833,7 @@ class SkinMinerva extends SkinTemplate {
 			'mobile.head',
 			'mobile.startup',
 			'mobile.site',
+			'mobile.usermodule',
 			// FIXME: separate mobile.stable into more meaningful groupings
 			'mobile.stable',
 		);
