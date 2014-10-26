@@ -94,7 +94,7 @@
 	"mobile-frontend-editor-licensing": "通过保存更改，您同意将您的贡献根据$1许可协议发布。",
 	"mobile-frontend-editor-licensing-with-terms": "通过保存更改，您同意$1并同意将您的贡献根据$2许可协议发布。",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您是否想}}在{{SITENAME}}创建一个新页面？",
-	"mobile-frontend-editor-newpage-prompt": "此页面不存在。为什么不勇敢地创建它呢？",
+	"mobile-frontend-editor-newpage-prompt": "此页面不存在，为什么不勇敢地创建它呢？",
 	"mobile-frontend-editor-placeholder": "这个章节还是空的。成为第一个充实它的人吧！",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在{{SITENAME}}创建一个新页面！",
 	"mobile-frontend-editor-previewing-page": "<strong>预览</strong><span>$1</span>",
