@@ -88,6 +88,24 @@
       "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_aa5faf43",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2014-10-26T12:28:33Z",
+      "side": 1,
+      "message": "Actually the role\u003dbutton on .mw-headline is incorrect. mw-headline doesn\u0027t have a JS trigger attached to it (other then through accidental bubbling).\n\nAlso that is a span, so it\u0027s not fullwidth, like the header is. Just remove the role all together, the tabindex will work just as well in this case because of the tabindex. We don\u0027t need the broken progressive enhancement approach (role) for this case if it\u0027s breaking more than it is worth.\n\nGo left or go right, don\u0027t use the muddy road in between.",
+      "parentUuid": "6e936f18_9410ec05",
+      "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
