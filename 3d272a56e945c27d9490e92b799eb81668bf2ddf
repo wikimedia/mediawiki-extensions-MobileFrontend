@@ -34,6 +34,24 @@
       "revId": "3d272a56e945c27d9490e92b799eb81668bf2ddf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_dbb20f92",
+        "filename": "includes/modules/MobileUserModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-27T07:18:53Z",
+      "side": 1,
+      "message": "Actually the username returned by $context-\u003egetUser() is originally set by a WebRequest value, so there\u0027s no guarantee it\u0027s legitimate. See ResourceLoaderContext.php around line 62.",
+      "parentUuid": "6e936f18_bbfb8343",
+      "revId": "3d272a56e945c27d9490e92b799eb81668bf2ddf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
