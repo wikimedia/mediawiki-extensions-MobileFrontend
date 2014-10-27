@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_8febd708",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-27T22:40:12Z",
+      "side": 1,
+      "message": "Unrelated to this patchset but shouldn\u0027t this be in the else statement?",
+      "revId": "99f4b26eb1a81caa7fc243f018bac4d059fc3842",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
