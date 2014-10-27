@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_2330a5e4",
+        "filename": "javascripts/modules/PageList.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-27T18:35:13Z",
+      "side": 1,
+      "message": "uses WatchStart and WatchStarApi too",
+      "revId": "2862eef6f5937922d2933e765a5bda20902209fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c36f81bf",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-27T18:35:13Z",
+      "side": 1,
+      "message": "also uses EditorApi, AbuseFilterPanel, VisualEditorOverlay,",
+      "revId": "2862eef6f5937922d2933e765a5bda20902209fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_e39f1db8",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-27T18:35:13Z",
+      "side": 1,
+      "message": "also uses Icon and SearchApi",
+      "revId": "2862eef6f5937922d2933e765a5bda20902209fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_63b30d4d",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-27T18:35:13Z",
+      "side": 1,
+      "message": "also uses TalkSectionAddOverlay and TalkSectionOverlay",
+      "revId": "2862eef6f5937922d2933e765a5bda20902209fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
