@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_2394258d",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-27T18:38:44Z",
+      "side": 1,
+      "message": "Does \u0027resp.parse\u0027 always contain the \u0027sections\u0027 property?",
+      "revId": "5c1fed9b773d33eea99220198fd6446602f7999d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
