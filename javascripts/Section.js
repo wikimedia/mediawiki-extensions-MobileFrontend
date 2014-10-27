@@ -9,9 +9,9 @@
 	 * @extends View
 	 */
 	Section = View.extend( {
-		template: M.template.get( 'section.hogan' ),
+		template: M.template.get( 'Section.hogan' ),
 		defaults: {
-			line: '',
+			line: undefined,
 			text: '',
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' )
 		},

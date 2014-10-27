@@ -52,7 +52,7 @@
 						"line": "1",
 						"anchor": "1",
 						"id": 1,
-						"text": '<p>Text of 1\n</p><h2 id="1.1"><i>1.1</i></h2><p>Text of 1.1\n</p>',
+						"text": '<p>Text of 1\n</p><h2 id="1.1"><i>1.1</i></h2>\n<p>Text of 1.1\n</p>\n',
 						"children": [
 							{"level":"2","line": "<i>1.1</i>",
 								"anchor":"1.1","id":2,"text":"<p>Text of 1.1\n</p>", children: [] }
@@ -63,7 +63,7 @@
 						"line": "2",
 						"anchor": "2",
 						"id": 3,
-						"text": '<p>Text of 2\n</p><h2 id="2.1">2.1</h2><p>Text of 2.1\n</p>',
+						"text": '<p>Text of 2\n</p><h2 id="2.1">2.1</h2>\n<p>Text of 2.1\n</p>\n',
 						"children": [
 							{"level":"2","line":"2.1",
 								"anchor":"2.1","id":4,"text":"<p>Text of 2.1\n</p>", children: [] }
@@ -148,7 +148,7 @@
 						"line": "Aaa section",
 						"anchor": "Aaa_section",
 						"id": 1,
-						"text": 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>subaaa content',
+						"text": 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>\nsubaaa content\n',
 						"children": [
 							{
 								"level": "3",
@@ -320,10 +320,10 @@
 		var resp = pageApi.getSectionsFromHTML(
 			$( '<div><h2><span id="1.0">A1</span></h2><h3><span>A2.1</span></h3><h2><span>A2.2</span></h2><h1><span>A2</span></h1><h2><span>A2.1</span></h2></div>' ) );
 		assert.deepEqual( resp, [
-			{ line: 'A1', level: '2', anchor: '1.0', text: '<h3 id="">A2.1</h3>', children: [{
+			{ line: 'A1', level: '2', anchor: '1.0', text: '<h3 id="">A2.1</h3>\n\n', children: [{
 				line: 'A2.1', level: '3', anchor: '', text: '', children: [] }] },
 			{ line: 'A2.2', level: '2', anchor: '', text: '', children: [] },
-			{ line: 'A2', level: '1', anchor: '', text: '<h2 id="">A2.1</h2>', children: [{
+			{ line: 'A2', level: '1', anchor: '', text: '<h2 id="">A2.1</h2>\n\n', children: [{
 				line: 'A2.1', level: '2', anchor: '', text: '', children: [] }] }
 		] );
 	} );
