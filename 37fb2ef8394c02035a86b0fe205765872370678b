@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_600f8334",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-27T17:27:38Z",
+      "side": 0,
+      "message": "Why have you removed line default?\nTalkOverlay seems to use this indirectly.",
+      "revId": "37fb2ef8394c02035a86b0fe205765872370678b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
