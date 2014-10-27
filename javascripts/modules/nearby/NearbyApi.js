@@ -64,28 +64,55 @@
 			return mw.msg( msg, mw.language.convertNumber( d ) );
 		},
 		/**
-		 * Renders an error in the existing view
+		 * Returns a list of pages around a given point
 		 *
-		 * @param {Object} location: In form { latitude: 0, longitude: 2 }
+		 * @param {Object} coords: In form { latitude: 0, longitude: 2 }
 		 * @param {Number} range: Number of meters to perform a geosearch for
 		 * @param {String} exclude: Name of a title to exclude from the list of results
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
-		getPages: function ( location, range, exclude ) {
-			var d = $.Deferred(), self = this;
-			this.get( {
+		getPages: function ( coords, range, exclude ) {
+			return this._search( {
+				ggscoord: [ coords.latitude, coords.longitude ]
+			}, range, exclude );
+		},
+
+		/**
+		 * Gets the pages around a page. It excludes itself from the search
+		 *
+		 * @param {String} page: Page title like "W_San_Francisco"
+		 * @param {Number} range: Number of meters to perform a geosearch for
+		 * @return {jQuery.Deferred} Object taking list of pages as argument
+		 */
+		getPagesAroundPage: function ( page, range ) {
+			return this._search( { ggspage: page }, range, page );
+		},
+
+		/**
+		 * Searches for pages nearby
+		 *
+		 * @param {Object} params: Parameters to use for searching
+		 * @param {Number} range: Number of meters to perform a geosearch for
+		 * @param {String} exclude: Name of a title to exclude from the list of results
+		 * @return {jQuery.Deferred} Object taking list of pages as argument
+		 */
+		_search: function ( params, range, exclude ) {
+			var d = $.Deferred(), self = this, loc, requestParams;
+
+			requestParams = {
 				action: 'query',
 				colimit: 'max',
 				prop: 'pageimages|coordinates',
 				pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).small,
 				pilimit: limit,
 				generator: 'geosearch',
-				ggscoord: [ location.latitude, location.longitude ],
 				ggsradius: range,
 				ggsnamespace: ns,
 				ggslimit: limit
-			},
-			{
+			};
+			$.extend( requestParams, params);
+
+			this.get( requestParams, {
 				dataType: endpoint ? 'jsonp' : 'json',
 				url: endpoint || this.apiUrl
 			} ).then( function ( resp ) {
@@ -98,10 +125,31 @@
 				} else {
 					pages = {};
 				}
+
 				// FIXME: API returns object when array would make much sense
 				pages = $.map( pages, function ( i ) {
 					return i;
 				} );
+
+				// If we have coordinates then set them so that the results are sorted by
+				// distance
+				if ( params.ggscoord ) {
+					loc = { latitude: params.ggscoord[0], longitude: params.ggscoord[1] };
+				}
+				// If we have no coords (searching for a page's nearby), find the
+				// page in the results and get its coords.
+				if ( params.ggspage ) {
+					$.each( pages, function ( i, page ) {
+						if ( params.ggspage === page.title ) {
+							loc = {
+								latitude: page.coordinates[0].lat,
+								longitude: page.coordinates[0].lon
+							};
+						}
+					} );
+				}
+
+				// Process the pages
 				pages = $.map( pages, function ( page, i ) {
 					var coords, lngLat, thumb;
 
@@ -114,10 +162,10 @@
 					}
 					page.anchor = 'item_' + i;
 					page.url = mw.util.getUrl( page.title );
-					if ( page.coordinates ) { // FIXME: protect against bug 47133 (remove when resolved)
+					if ( page.coordinates && loc ) { // FIXME: protect against bug 47133 (remove when resolved)
 						coords = page.coordinates[0];
 						lngLat = { latitude: coords.lat, longitude: coords.lon };
-						page.dist = calculateDistance( location, lngLat );
+						page.dist = calculateDistance( loc, lngLat );
 						page.latitude = coords.lat;
 						page.longitude = coords.lon;
 						page.proximity = self._distanceMessage( page.dist );
@@ -136,8 +184,10 @@
 				} );
 				d.resolve( pages );
 			} );
+
 			return d;
 		}
+
 	} );
 
 	M.define( 'modules/nearby/NearbyApi', NearbyApi );

@@ -88,7 +88,7 @@
 					options.errorType = errorType;
 					_super.call( self, options );
 				} );
-			} else if ( options.latitude && options.longitude ) {
+			} else if ( ( options.latitude && options.longitude ) || options.pageTitle ) {
 				// Flush any existing list of pages
 				options.pages = [];
 
@@ -103,21 +103,37 @@
 			_super.apply( this, arguments );
 		},
 		_find: function ( options ) {
-			var result = $.Deferred(), self = this;
+			var result = $.Deferred(), self = this,
+				pagesSuccess, pagesError;
+
+			// Handler for successful query
+			pagesSuccess = function ( pages ) {
+				options.pages = pages;
+				if ( pages && pages.length === 0 ) {
+					options.error = self.errorMessages.empty;
+				}
+				self._isLoading = false;
+				result.resolve( options );
+			};
+
+			// Handler for failed queries
+			pagesError = function () {
+				self._isLoading = false;
+				options.error = self.errorMessages.server;
+				result.resolve( options );
+			};
+
 			if ( options.latitude && options.longitude ) {
-				this.nearbyApi.getPages( { latitude: options.latitude, longitude: options.longitude },
-					this.range, options.exclude ).done( function ( pages ) {
-						options.pages = pages;
-						if ( pages && pages.length === 0 ) {
-							options.error = self.errorMessages.empty;
-						}
-						self._isLoading = false;
-						result.resolve( options );
-					} ).fail( function () {
-						self._isLoading = false;
-						options.error = self.errorMessages.server;
-						result.resolve( options );
-					} );
+				this.nearbyApi.getPages(
+					{ latitude: options.latitude, longitude: options.longitude },
+					this.range, options.exclude
+				)
+				.done( pagesSuccess )
+				.fail( pagesError );
+			} else if ( options.pageTitle ) {
+				this.nearbyApi.getPagesAroundPage( options.pageTitle, this.range)
+				.done( pagesSuccess )
+				.fail( pagesError );
 			} else {
 				if ( options.errorType ) {
 					options.error = this.errorMessages[ options.errorType ];
@@ -134,10 +150,9 @@
 			this._postRenderLinks();
 		},
 		_postRenderLinks: function () {
-			this.$( 'a' ).on( 'click', function ( ev ) {
+			this.$( 'a' ).on( 'click', function () {
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
-				window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
 			} );
 		}
 	} );
