@@ -10,6 +10,7 @@
  * @author Max Semenik
  * @author Patrick Reilly
  * @author Ryan Kaldari
+ * @author Florian Schmidt
  * @licence GNU General Public Licence 2.0 or later
  */
 
@@ -35,7 +36,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'MobileFrontend',
 	'author' => array( 'Patrick Reilly', 'Max Semenik', 'Jon Robson', 'Arthur Richards',
-		'Brion Vibber', 'Juliusz Gonera', 'Ryan Kaldari' ),
+		'Brion Vibber', 'Juliusz Gonera', 'Ryan Kaldari', 'Florian Schmidt' ),
 	'descriptionmsg' => 'mobile-frontend-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
