@@ -8,9 +8,27 @@
 .mw-mf-cleanup {
 	display: inline-block;
 	padding: 10px 15px 10px (@smallIconSize + 20px);
-	.background-image-svg-quick( 'images/issues/blue-triangle' );
 	margin-bottom: 4px;
-	background-position: 10px center;
+}
+
+// FIXME: remove when mw-ui-icon in stable
+.beta,
+.stable {
+	.mw-mf-cleanup {
+		.background-image-svg-quick( 'images/issues/blue-triangle' );
+		background-position: 10px center;
+	}
+
+	.overlay {
+		.cleanup {
+			li {
+				.issue-notice {
+					.background-image-svg-quick( 'images/issues/gray-triangle' );
+					background-position: center @smallIconSize;
+				}
+			}
+		}
+	}
 }
 
 // overlay styles
@@ -20,25 +38,37 @@
 			border-bottom: solid 1px @grayLight;
 			.issue-notice {
 				padding: (@smallIconSize * 2.5) @contentMargin @smallIconSize @contentMargin;
-				.background-image-svg( 'images/issues/gray-triangle.svg', 'images/issues/gray-triangle.png' );
-				background-position: center @smallIconSize;
+
+				// on mobile move the icon above the content
+				&:before {
+					top: @smallIconSize;
+					left: 50%;
+					position: absolute;
+					height: auto;
+				}
 			}
 		}
 	}
 }
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	.alpha,
-	.beta {
-		.overlay {
-			.cleanup {
-				li {
-					.issue-notice {
-						padding: 2em 1em 2em (@largeIconSize + 10px);
-						margin: 0 1em 0 @headerHeight;
-						// FIXME: move to generic icon.less class e.g. icon-responsive
+	.overlay {
+		.cleanup {
+			li {
+				.issue-notice {
+					padding: 2em 1em 2em (@largeIconSize + 10px);
+					margin: 0 1em 0 @headerHeight;
+					// FIXME: Remove when mw-ui-icon in stable
+					&.icon {
 						.background-size( @largeIconSize, @largeIconSize );
-						background-position: left center;
+						 background-position: left center;
+					}
+
+					&:before {
+						top: 0;
+						left: 0;
+						height: 100%;
+						width: @largeIconSize;
 					}
 				}
 			}

@@ -12,14 +12,24 @@
 		bottom: 0;
 		z-index: @z-indexOverlay;
 
+		&:before {
+			top: 0;
+		}
+
 		&.prev {
 			left: 0;
-			background-image: url(../images/uploads/chevronLeft.png);
+			// FIXME: Remove when mw-ui-icon in stable
+			&.icon {
+				background-image: url(../images/uploads/chevronLeft.png);
+			}
 		}
 
 		&.next {
 			right: 0;
-			background-image: url(../images/uploads/chevronRight.png);
+			// FIXME: Remove when mw-ui-icon in stable
+			&.icon {
+				background-image: url(../images/uploads/chevronRight.png);
+			}
 		}
 	}
 

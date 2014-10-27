@@ -4,7 +4,7 @@
 @paddingHorizontal: 24px;
 @iconSize: 16px;
 @iconHeadingGap: 12px;
-@paddingVertical: 16px;
+@paddingVertical: 1.4em;
 @fontSize: .8em;
 
 .client-js .toc-mobile {
@@ -16,17 +16,20 @@
 	clear: left;
 	margin: 1em 0;
 
-	h2 {
+	.collapsible-heading {
 		font-family: @fontFamily;
 		font-size: @fontSize;
-		line-height: @iconSize;
+		line-height: ( @paddingVertical * 2 ) + @fontSize;
 		background-position: right center;
 		font-weight: bold;
-		padding: @paddingVertical @paddingHorizontal @paddingVertical (@paddingHorizontal + @iconSize + @iconHeadingGap);
+		padding: 0 @paddingHorizontal 0 (@paddingHorizontal + @iconSize + @iconHeadingGap);
 		border-bottom: none;
-		// add right padding to the chevron without reducing tapable area
-		border-right: @paddingHorizontal solid transparent;
+		&.icon {
+			// add right padding to the chevron without reducing tapable area
+			border-right: @paddingHorizontal solid transparent;
+		}
 
+		// FIXME:  Remove when new icons used in stable
 		.icon {
 			// @todo: switch to .background-image-svg() when bug 66091 is fixed
 			background-image: url('images/contents-ltr.png');
@@ -36,8 +39,24 @@
 			height: @iconSize;
 			display: block;
 			position: absolute;
-			left: @paddingVertical;
-			top: @paddingVertical;
+			left: 1em;
+			top: 1em;
+		}
+
+		// In table of contents the collapsing caret is on the right
+		&.mw-ui-icon {
+			&:before {
+				float: right;
+				// Note font size of .client-js .collapsible-heading:before is currently .4em
+				height: ( @paddingVertical * 2 ) / .4em;
+				margin-left: 1em;
+			}
+		}
+
+		.mw-ui-icon {
+			position: absolute;
+			left: 0;
+			top: 1em;
 		}
 	}
 

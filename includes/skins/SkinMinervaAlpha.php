@@ -12,6 +12,13 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	/** @var stringDescribes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'alpha';
 
+	protected function getSkinStyles() {
+		$styles = parent::getSkinStyles();
+		$styles[] = 'mediawiki.ui.icon';
+		$styles[] = 'skins.minerva.icons.styles';
+		return $styles;
+	}
+
 	/**
 	 * Returns the javascript modules to load.
 	 * @return array
@@ -68,10 +75,11 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 			}
 			if ( $numTopics ) {
 				$talkLabel = $this->getLanguage()->formatNum( $numTopics );
-				$class = MobileUI::iconClass( 'talk', 'element', 'count icon-32px' );
+
+				$class = MobileUI::iconClass( 'talk', 'element', 'count' );
 			} else {
 				$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
-				$class = MobileUI::iconClass( 'talk', 'element', 'icon-32px' );
+				$class = MobileUI::iconClass( 'talk', 'element' );
 			}
 			$menu = $tpl->data['page_actions'];
 			if ( isset( $menu['talk'] ) ) {

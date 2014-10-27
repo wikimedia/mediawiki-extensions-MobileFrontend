@@ -15,7 +15,16 @@
 }
 
 .animations {
-	.watch-this-article {
+	.mw-ui-icon-watch {
+		.transition-transform( .5s );
+	}
+
+	.mw-ui-icon-watched {
+		.transform( rotate(72deg) );
+	}
+
+	// FIXME: Remove when mw-ui-icon in stable
+	.icon.watch-this-article {
 		.transition-transform( .5s );
 
 		&.icon-watched {

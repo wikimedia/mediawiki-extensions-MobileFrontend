@@ -39,8 +39,20 @@ body {
 
 // FIXME: Id's for styling are bad m'kay?
 #mw-mf-main-menu-button {
-	background-position: 50% 50%;
-	.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
+	// FIXME: Remove when cache clears.
+	&.icon {
+		background-position: 50% 50%;
+		.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
+	}
+}
+
+// FIXME: remove when mw-ui-icon in stable
+.stable {
+	.header {
+		> a {
+			vertical-align: middle;
+		}
+	}
 }
 
 .header {
@@ -59,13 +71,13 @@ body {
 	// Search field
 	> form {
 		display: table-cell;
-		vertical-align: middle;
 	}
 
 	// Search
 	> form {
 		padding: .15em @headerTitlePaddingH 0;
 		width: auto;
+		vertical-align: middle;
 	}
 
 	// FIXME: Overrides rules in common.less for input area that are present in reset.less - should be unnecessary
@@ -139,11 +151,15 @@ input.search {
 	.edit-page {
 		display: none;
 		position: absolute;
-		background-position: 100% @headingMargin;
-		width: @sectionIconWidth + 5px;
 		top: 0;
 		bottom: 0;
 		right: 0;
+
+		// FIXME: remove when cache clears
+		&.icon {
+			background-position: 100% @headingMargin;
+			width: @sectionIconWidth + 5px;
+		}
 	}
 
 	.open-block {
@@ -191,22 +207,29 @@ input.search {
 .header {
 
 	.user-button {
-		height: @headerHeight;
-		background-position: 50% 50%;
+		// FIXME: Remove when cache clears
+		&.icon {
+			height: @headerHeight;
+			background-position: 50% 50%;
+		}
 	}
 
 	// need to specify id or else other rules are more important
 	// FIXME: simplify when .icon class from Overlay used instead
 	#secondary-button.user-button,
 	.user-button {
-		width: @headerHeight;
-		text-align: right;
 		// Make sure count is positioned correctly in relation to bell icon
 		position: relative;
-		.background-image-svg-quick( 'images/bell' );
-		// Fixes positioning in Firefox
-		display: inline-block;
-		float: right;
+
+		// FIXME: Remove when cache is cleared.
+		&.icon {
+			width: @headerHeight;
+			text-align: right;
+			.background-image-svg-quick( 'images/bell' );
+			// Fixes positioning in Firefox
+			display: inline-block;
+			float: right;
+		}
 
 		&.loading span {
 			display: none;

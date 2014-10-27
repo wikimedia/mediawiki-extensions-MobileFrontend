@@ -1,6 +1,7 @@
 ( function ( M ) {
 
 	var View = M.require( 'View' ),
+		useMediaWikiUI = M.isAlphaGroupMember(),
 		Icon;
 
 	/**
@@ -12,9 +13,9 @@
 		defaults: {
 			hasText: false,
 			tagName: 'div',
-			base: 'icon',
+			base: useMediaWikiUI ? 'mw-ui-icon' : 'icon',
 			name: '',
-			modifier: '',
+			modifier: useMediaWikiUI ? 'mw-ui-icon-element' : '',
 			title: ''
 		},
 		/**
@@ -35,7 +36,7 @@
 		},
 		initialize: function ( options ) {
 			if ( options.hasText ) {
-				options.modifier = 'icon-text';
+				options.modifier = useMediaWikiUI ? 'mw-ui-icon-before' : 'icon-text';
 			}
 			View.prototype.initialize.call( this, options );
 		},

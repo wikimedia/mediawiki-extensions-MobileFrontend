@@ -78,14 +78,22 @@
 }
 
 .mw-mf-user {
-	padding: 1px 0 0 20px;
 	color: @grayMediumDark;
-	.background-image-svg-quick("images/userNormal");
+
+	// FIXME: Remove when mw-ui-icon in stable
+	&.icon {
+		padding: 1px 0 0 20px;
+		.background-image-svg-quick("images/userNormal");
+	}
 }
 
 .mw-mf-anon {
 	color: inherit;
-	.background-image-svg-quick("images/userAnonymous");
+
+	// FIXME: Remove when mw-ui-icon in stable
+	&.icon {
+		.background-image-svg-quick("images/userAnonymous");
+	}
 }
 
 a.more {

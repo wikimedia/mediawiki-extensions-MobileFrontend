@@ -498,7 +498,7 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
 						'href' => $url,
-						'class' => MobileUI::iconClass( 'anon', 'before' ),
+						'class' => MobileUI::iconClass( 'anonymous-white', 'before', 'icon-anon' ),
 					),
 				),
 			);
