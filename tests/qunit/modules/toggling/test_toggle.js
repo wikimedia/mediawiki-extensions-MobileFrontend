@@ -152,6 +152,8 @@ QUnit.module( 'MobileFrontend toggle.js: accessibility', {
 	},
 	teardown: function() {
 		window.location.hash = "#";
+		M.settings.deleteUserSetting('expandSections', true);
+		M.settings.deleteUserSetting( 'expandedSections', false );
 	}
 } );
 
@@ -186,6 +188,9 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', 2, fu
 
 QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
 	setup: function() {
+		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
+		this.sandbox.stub( M, 'isBetaGroupMember' ).returns( true );
+		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
 		this.$container = $( '<div>' ).html( sectionHtml );
 		toggle.enable( this.$container );
 		this.$section = this.$container.find( 'h2' );
@@ -196,6 +201,7 @@ QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
 	teardown: function() {
 		window.location.hash = "#";
 		M.settings.deleteUserSetting( 'expandedSections', false );
+		M.settings.deleteUserSetting('expandSections', true);
 	}
 } );
 
@@ -280,6 +286,9 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', 5, functio
 
 QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
 	setup: function() {
+		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
+		this.sandbox.stub( M, 'isBetaGroupMember' ).returns( true );
+		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
 		this.$container = $( '<div>' ).html( sectionHtml );
 		// Restore expanded sections only works on headings that are also section headings
 		this.$container.find( 'h2' ).addClass( 'section-heading' );
@@ -291,6 +300,7 @@ QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
 	teardown: function() {
 		window.location.hash = "#";
 		M.settings.deleteUserSetting( 'expandedSections', false );
+		M.settings.deleteUserSetting('expandSections', true);
 	}
 } );
 
