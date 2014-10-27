@@ -47,6 +47,7 @@
 			returnto: mw.config.get( 'wgPageName' ),
 			returntoquery: 'action=edit&section=' + section
 		} };
+
 		if ( allowAnonymous ) {
 			options.links = [ { label: mw.msg( 'mobile-frontend-editor-anon' ),
 				href: $el[0].href, selector: 'edit-anon mw-ui-progressive' } ];
@@ -186,27 +187,33 @@
 	 * @param {boolean} allowAnonymous Whether the drawer has to include an edit anonymously link
 	 */
 	function initCta( allowAnonymous ) {
+		// If anonymous editing is allowed, init the editor now to be useable for the "Edit w/o login" link in cta drawer
 		if ( allowAnonymous ) {
 			// init the editor
 			init( M.getCurrentPage() );
-		} else {
-			M.getCurrentPage().isEditable( user ).done( function ( isEditable ) {
-				if ( isEditable ) {
-					$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass ).
-						on( 'tap', function () {
-							drawer.render().show();
-						} );
-				} else {
-					showSorryToast( 'mobile-frontend-editor-disabled' );
-				}
-			} );
 		}
-		$( '.edit-page' ).each( function () {
-			var $a = $( this ), section = 0;
-			if ( $( this ).data( 'section' ) !== undefined ) {
-				section = $( this ).data( 'section' );
+
+		// Initialize edit button links (to show Cta) only, if page is editable, otherwise show an error toast
+		M.getCurrentPage().isEditable( user ).done( function ( isEditable ) {
+			if ( isEditable ) {
+				$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
+				// Init #ca-edit only, if anonymous editing is disabled, if enabled, there is a link with .edit-page inside
+				if ( !allowAnonymous ) {
+					// Init lead section edit button
+					makeCta( $( '#ca-edit' ), 0, allowAnonymous );
+				}
+
+				// Init all edit links (including lead section, if anonymous editing is enabled)
+				$( '.edit-page' ).each( function () {
+					var $a = $( this ), section = 0;
+					if ( $( this ).data( 'section' ) !== undefined ) {
+						section = $( this ).data( 'section' );
+					}
+					makeCta( $a, section, allowAnonymous );
+				} );
+			} else {
+				showSorryToast( 'mobile-frontend-editor-disabled' );
 			}
-			makeCta( $a, section, allowAnonymous );
 		} );
 	}
 
