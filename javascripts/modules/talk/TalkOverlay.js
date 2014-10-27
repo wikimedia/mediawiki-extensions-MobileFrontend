@@ -10,6 +10,9 @@
 		/**
 		 * @extends Overlay
 		 * @class TalkOverlay
+		 * @uses Page
+		 * @uses TalkSectionOverlay
+		 * @uses TalkSectionAddOverlay
 		 */
 		TalkOverlay = Overlay.extend( {
 			templatePartials: {

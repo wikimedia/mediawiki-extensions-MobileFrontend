@@ -7,6 +7,14 @@
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' );
 
+	/**
+	 * Overlay that shows an editor
+	 * @class PageList
+	 * @uses Page
+	 * @uses WatchstarApi
+	 * @uses Watchstar
+	 * @extends View
+	 */
 	PageList = View.extend( {
 		defaults: {
 			pages: [],
