@@ -7,6 +7,7 @@
 
 	/**
 	 * @class Page
+	 * @uses Section
 	 * @extends View
 	 */
 	Page = View.extend( {

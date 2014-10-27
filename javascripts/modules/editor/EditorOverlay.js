@@ -13,6 +13,10 @@
 	/**
 	 * Overlay that shows an editor
 	 * @class EditorOverlay
+	 * @uses Section
+	 * @uses AbuseFilterPanel
+	 * @uses EditorApi
+	 * @uses VisualEditorOverlay
 	 * @extends EditorOverlayBase
 	 */
 	EditorOverlay = EditorOverlayBase.extend( {

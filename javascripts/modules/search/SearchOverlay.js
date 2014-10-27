@@ -11,6 +11,9 @@
 	/**
 	 * @class SearchOverlay
 	 * @extends Overlay
+	 * @uses PageList
+	 * @uses SearchApi
+	 * @uses Icon
 	 */
 	SearchOverlay = Overlay.extend( {
 		className: 'overlay search-overlay',
