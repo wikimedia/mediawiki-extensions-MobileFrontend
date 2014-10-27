@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_d921b29b",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-27T19:23:55Z",
+      "side": 0,
+      "message": "line: undefined would be better I guess. We should document these parameters using jsdoc so it\u0027s easy to know what each of the possible ones do.",
+      "revId": "f937dec06b385d5c02b974b9a28cb4e3d1ee7c45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
