@@ -12,6 +12,8 @@
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
 			this.sandbox.stub( EditorApi.prototype, 'getContent' ).
 				returns( $.Deferred().resolve( 'section 0' ) );
+			this.sandbox.stub( EditorApi.prototype, 'getPreview' ).
+				returns( $.Deferred().resolve( 'previewtest' ) );
 		}
 	} );
 
@@ -21,6 +23,13 @@
 		assert.ok( apiSpy.calledOnce, 'initialize EditorApi once' );
 		assert.ok( apiSpy.calledWithMatch( { title: 'test', isNewPage: undefined, oldId: undefined, sectionId: 0} ), 'initialize EditorApi with correct pageTitle' );
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
+	} );
+
+	QUnit.test( '#preview', 1, function( assert ) {
+		var editorOverlay = new EditorOverlay( { title: 'test', sectionId: 0 } );
+
+		editorOverlay._prepareForSave();
+		assert.strictEqual( editorOverlay.$preview.text(), '\npreviewtest\n', 'preview loaded correctly' );
 	} );
 
 	QUnit.test( '#initialize, without a section', 2, function( assert ) {
