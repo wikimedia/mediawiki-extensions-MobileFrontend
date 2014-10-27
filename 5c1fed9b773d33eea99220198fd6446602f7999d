@@ -16,6 +16,24 @@
       "revId": "5c1fed9b773d33eea99220198fd6446602f7999d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_23ff45a9",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-27T18:49:56Z",
+      "side": 1,
+      "message": "jap, if there are no sections, it\u0027s an empty array :)",
+      "parentUuid": "6e936f18_2394258d",
+      "revId": "5c1fed9b773d33eea99220198fd6446602f7999d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
