@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var Api = M.require( 'api' ).Api, PageApi,
-		sectionTemplate = M.template.get( 'section.hogan' );
+		sectionTemplate = M.template.get( 'Section.hogan' );
 
 	/**
 	 * Add child to listOfSections if the level of child is the same as the last
