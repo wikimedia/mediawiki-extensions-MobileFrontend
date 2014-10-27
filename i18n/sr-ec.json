@@ -121,8 +121,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-title": "У близини",
 	"mobile-frontend-news-items": "Вести",
-	"mobile-frontend-off": "искључено",
-	"mobile-frontend-on": "укључено",
 	"mobile-frontend-opt-in-explain": "Користећи бета верзију, добијате приступ до пробних могућности, али с ризиком да дође до грешака и проблема.",
 	"mobile-frontend-overlay-close": "Затвори",
 	"mobile-frontend-overlay-continue": "Настави",

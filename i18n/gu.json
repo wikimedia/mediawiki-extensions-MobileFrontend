@@ -10,7 +10,6 @@
 		]
 	},
 	"action-mf-uploadbutton": "મોબાઇલ પેગ પરનો અપલોડ બટન વાપરો",
-	"beta-feature-geonotahack": "આ પાનાંની નજીક",
 	"mobile-frontend-account-create-captcha-placeholder": "ખાતરી કોડ દાખલ કરો",
 	"mobile-frontend-account-create-email-placeholder": "ઇમેલ સરનામું (વૈકલ્પિક)",
 	"mobile-frontend-account-create-submit": "સાઇન અપ કરો",
@@ -77,8 +76,6 @@
 	"mobile-frontend-main-menu-settings-heading": "ગોઠવણીઓ",
 	"mobile-frontend-nearby-requirements-guidance": "અન્ય બ્રાઉઝર પર પ્રયાસ કરો અથવા તમે જાવાસ્ક્રિપ્ટ અક્રિય કરી હોય તો તેને સક્રિય કરો.",
 	"mobile-frontend-news-items": "સમાચારમાં",
-	"mobile-frontend-off": "બંધ",
-	"mobile-frontend-on": "ચાલુ",
 	"mobile-frontend-opt-in-explain": "બીટામાં જોડાઈને તમે પ્રાયોગિક ધોરણે કાર્યાન્વીત થયેલી સેવા પામી શકશો. આમાં ત્રુટી, ક્ષતિ અનુભવી શકો છો.",
 	"mobile-frontend-page-menu-contents": "વિષયસૂચિ",
 	"mobile-frontend-page-menu-history": "ઇતિહાસ",

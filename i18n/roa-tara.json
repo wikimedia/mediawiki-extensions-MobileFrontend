@@ -65,15 +65,11 @@
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-news-items": "Jndr'à le notizie",
-	"mobile-frontend-off": "Stute",
-	"mobile-frontend-on": "Appizzeche",
 	"mobile-frontend-opt-in-explain": "Trasenne jndr'à beta, tu puè ausà le funzionalità sperimendale, rischianne de acchià errore e casine varie.",
 	"mobile-frontend-overlay-close": "Achiude",
 	"mobile-frontend-overlay-continue": "Condinue",
-	"mobile-frontend-overlay-escape": "Tuèrne rrete",
 	"mobile-frontend-page-menu-contents": "condenute",
 	"mobile-frontend-page-menu-history": "Cunde",
-	"mobile-frontend-page-saving": "Stoche a reggìstre $1",
 	"mobile-frontend-password": "Passuord:",
 	"mobile-frontend-password-confirm-placeholder": "Conferme 'a passuord",
 	"mobile-frontend-password-placeholder": "Passuord",
@@ -114,6 +110,5 @@
 	"mobile-frontend-watchlist-modified": "Cangiate $1",
 	"mobile-frontend-watchlist-more": "de cchiù",
 	"mobile-frontend-watchlist-removed": "Luate $1 da l'elenghe de le pàggene condrollate",
-	"mobile-frontend-watchlist-view": "'Ndruche le pàggene condrollate tune",
-	"mobilefrontend-random-cancel": "Lassame leggere!"
+	"mobile-frontend-watchlist-view": "'Ndruche le pàggene condrollate tune"
 }
