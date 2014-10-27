@@ -106,6 +106,24 @@
       "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_59d4c2ec",
+        "filename": "javascripts/modules/toggling/toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-27T19:31:03Z",
+      "side": 1,
+      "message": "How about listening to \u0027eventName\u0027 on \u0027.mw-headline\u0027 and making span full width? This should fix the problem, no?",
+      "parentUuid": "6e936f18_aa5faf43",
+      "revId": "d4cf65699258c53e6785b6a49c9ad79466920b75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
