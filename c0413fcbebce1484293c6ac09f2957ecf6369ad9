@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_ef64dc47",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-27T22:15:47Z",
+      "side": 1,
+      "message": "rather than checking for all possible fail cases maybe the whole \u0027if\u0027 block should be inside try-catch?",
+      "revId": "c0413fcbebce1484293c6ac09f2957ecf6369ad9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
