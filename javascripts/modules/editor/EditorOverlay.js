@@ -142,7 +142,7 @@
 				self.sectionLine = $( '<div/>' ).html( parsedSectionLine ).text();
 				new Section( {
 					el: self.$preview,
-					content: parsedText
+					text: parsedText
 				// bug 49218: stop links from being clickable (note user can still hold down to navigate to them)
 				} ).$( 'a' ).on( 'click', false );
 				// Emit event so we can perform enhancements to page
