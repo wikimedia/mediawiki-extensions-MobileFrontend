@@ -5,7 +5,6 @@
 			"Cedric31"
 		]
 	},
-	"beta-feature-geonotahack-description": "Descobrir de paginas que son pròchas geograficament del contengut de la pagina que sètz legir.",
 	"mobile-frontend-account-create-captcha-placeholder": "Entratz lo còde de confirmacion",
 	"mobile-frontend-account-create-email-placeholder": "Adreça de corrièl (facultativa)",
 	"mobile-frontend-account-create-submit": "Inscrivètz-vos",
@@ -50,12 +49,8 @@
 	"mobile-frontend-meta-data-issues-header": "Problèmas",
 	"mobile-frontend-missing-image": "Imatge",
 	"mobile-frontend-news-items": "Actualitats",
-	"mobile-frontend-off": "OFF",
-	"mobile-frontend-on": "ON",
-	"mobile-frontend-overlay-escape": "Retorn en arrièr",
 	"mobile-frontend-page-menu-contents": "contenguts",
 	"mobile-frontend-page-menu-history": "Istoric",
-	"mobile-frontend-page-saving": "<strong>Enregistrament</strong><span> de $1</span>",
 	"mobile-frontend-password": "Senhal :",
 	"mobile-frontend-password-confirm-placeholder": "Confirmatz lo senhal",
 	"mobile-frontend-password-placeholder": "Senhal",

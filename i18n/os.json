@@ -20,8 +20,6 @@
 	"mobile-frontend-login": "Бахизын",
 	"mobile-frontend-missing-image": "Ныв",
 	"mobile-frontend-news-items": "Нæуæг хабæртты",
-	"mobile-frontend-off": "ХИЦӔН",
-	"mobile-frontend-on": "ИУ",
 	"mobile-frontend-opt-in-explain": "Мобилон бетамæ иу гæнгæйæ, ды эксперименталон функцитæм бавналæн исыс, фæлæтас у исты баг кæнæ рæдыдыл фембæлын.",
 	"mobile-frontend-password": "Пароль:",
 	"mobile-frontend-placeholder": "{{grammar:genitive|{{SITENAME}}}} агурын",
