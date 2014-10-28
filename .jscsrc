@@ -9,5 +9,5 @@
     "checkRedundantParams": true
   },
   "validateIndentation": "\t",
-  "excludeFiles": ["javascripts/externals/*","javascripts/externals/*/*", "javascripts/README.md"]
+  "excludeFiles": ["javascripts/externals/**/*.js", "javascripts/README.md"]
 }

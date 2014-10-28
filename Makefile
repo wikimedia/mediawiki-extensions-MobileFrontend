@@ -60,7 +60,7 @@ jsbeautify: nodecheck			## Check the JavaScript coding style
 	@find javascripts -type f -name "*.js" -not -path "**externals**" -exec node_modules/.bin/js-beautify -r {} \;
 
 jscs: nodecheck			## Check the JavaScript coding style
-	@node_modules/.bin/jscs javascripts/* --config .jscs.json
+	@node_modules/.bin/jscs javascripts/* --config .jscsrc
 
 jshinttests: nodecheck			## Lint the QUnit tests
 	@node_modules/.bin/jshint tests/qunit/* --config .jshintrc
