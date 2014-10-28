@@ -39,14 +39,18 @@
 		text-align: left;
 	}
 
-	.final-pane {
-			@imageSize: 6em;
-			padding-bottom: @imageSize;
-			margin-bottom: @bottomMargin;
-			background-repeat: no-repeat;
-			.background-size( auto, @imageSize );
-			background-position: center bottom;
-			.background-image-svg-quick('images/heart');
+    .wg-link {
+		@imageSize: 6em;
+		padding-top: @imageSize;
+		margin-bottom: @bottomMargin;
+		background-repeat: no-repeat;
+		.background-size( auto, @imageSize );
+		background-position: center top;
+		.background-image-svg-quick('images/heart');
+
+		a {
+			margin-top: 1em;
+		}
 	}
 
 	.wg-buttons {
@@ -69,27 +73,18 @@
 	.footer {
 		position: relative;
 		text-align: left;
-		background: @colorGray13;
+		padding: .6em 0;
 
-		&.initial-pane {
-			padding: .6em 1em;
-
-			.spinner,
-			.mw-ui-button {
-				top: 0;
-				right: 0;
-				position: absolute;
-				bottom: 0;
-			}
-		}
-
-		&.final-pane {
-			padding: 0;
+		.spinner,
+		.mw-ui-button {
+			top: 0;
+			right: 0;
+			position: absolute;
+			bottom: 0;
 		}
 
 		.license {
 			margin-right: 4.2em;
-			font-size: .8em;
 		}
 
 		.spinner {

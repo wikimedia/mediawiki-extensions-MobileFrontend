@@ -187,16 +187,10 @@
 			options.thankUser = true;
 			if ( claimRecorded ) {
 				options.contentMsg = 'You just made Wikipedia a little better, thanks!';
-				options.buttons = [
-					{ classes: 'quit inline mw-ui-button mw-ui-progressive', label: 'Great!' }
-				];
 			} else {
 				options.contentMsg = 'That\'s OK, thanks for taking the time.';
-				options.buttons = [
-					{ classes: 'quit inline mw-ui-button mw-ui-progressive', label: 'Done' }
-				];
 			}
-			options.noticeMsg = '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>';
+			options.noticeMsg = '';
 			// Re-render with new content for 'Thanks' step
 			this.render( options );
 			this.log( 'widget-impression-success' );
@@ -282,17 +276,24 @@
 				this.log( 'page-impression' );
 			}
 		},
-
+		/**
+		 * @inheritdoc
+		 */
 		postRender: function ( options ) {
 			var self = this;
+
+			self.$( '.wg-link' ).hide();
 
 			// If you're wondering where the DOM insertion happens, look in wikigrokeval.js.
 
 			// Initialize all the buttons and links
 			// ...for final 'Thanks' step
 			if ( options.thankUser ) {
-				this.$( '.wg-buttons .quit' ).on( 'click', function () {
+				self.$('.wg-buttons' ).hide();
+				self.$('.wg-link' ).show();
+				this.$( '.wg-link .tell-more' ).on( 'click', function () {
 					self.hide();
+					self.log( 'widget-click-moreinfo' );
 				} );
 			// ...for intermediate 'Question' step
 			} else if ( options.beginQuestions ) {
@@ -315,7 +316,6 @@
 				this.$( '.wg-buttons .cancel' ).on( 'click', function () {
 					self.hide();
 					self.log( 'widget-click-nothanks' );
-					M.settings.saveUserSetting( 'mfHideWikiGrok', 'true' );
 				} );
 				this.$( '.wg-buttons .proceed' ).on( 'click', function () {
 					self.log( 'widget-click-accept' );
@@ -335,6 +335,7 @@
 
 			this.reveal( options );
 		},
+
 		reveal: function ( options ) {
 			var self = this;
 
