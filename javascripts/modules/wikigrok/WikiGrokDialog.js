@@ -5,6 +5,7 @@
 		WikiGrokApi = M.require( 'modules/wikigrok/WikiGrokApi' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
+		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
 		WikiGrokDialog,
 		timer = null,
 		$window = $( window );
@@ -57,6 +58,11 @@
 			} );
 		},
 
+		/**
+		 * Log data to the schema
+		 * @method
+		 * @param {string} action
+		 */
 		log: function ( action ) {
 			var data = {
 				action: action,
@@ -73,6 +79,26 @@
 			}
 			schema.log( data );
 		},
+
+		/**
+		 * Log data to the error schema
+		 * @method
+		 * @param {string} error
+		 */
+		logError: function ( error ) {
+			var data = {
+				error: error,
+				taskType: 'version ' + this.version,
+				taskToken: this.defaults.taskToken,
+				userToken: this.options.userToken,
+				isLoggedIn: !mw.user.isAnon()
+			};
+			if ( this.options.testing ) {
+				data.testing = true;
+			}
+			errorSchema.log( data );
+		},
+
 		/**
 		 * Return a new array from 'array' with 'count' randomly selected elements.
 		 * @param {Array} array Array from which random elements are selected
@@ -180,6 +206,8 @@
 			this.apiWikiGrok.recordClaims( [ claim ] ).done( function () {
 				options.claimRecorded = true;
 				self.thankUser( options, options.claimRecorded );
+			} ).fail(function () {
+				self.logError( 'no-response-cannot-record-user-input' );
 			} );
 		},
 
@@ -346,16 +374,21 @@
 				options.suggestions = [];
 				self.apiWikiData.getClaims().done( function ( claims ) {
 					if ( claims.isHuman ) {
-						self.apiWikiGrok.getSuggestions().done( function ( suggestions ) {
+						self.apiWikiGrok.getSuggestions().fail( function () {
+							self.logError( 'no-impression-cannot-fetch-suggestions' );
+						} ).done( function ( suggestions ) {
 							// FIXME: add support for DOB and DOD
-							if ( suggestions.occupations.list.length ) {
+							if ( suggestions.occupations && suggestions.occupations.list.length ) {
 								options.suggestions.push( suggestions.occupations );
 							}
-							if ( suggestions.nationalities.list.length ) {
+							if ( suggestions.nationalities && suggestions.nationalities.list.length ) {
 								options.suggestions.push( suggestions.nationalities );
 							}
 							if ( options.suggestions.length ) {
 								self.show();
+							} else {
+								// FIXME: remove this before deploying to stable
+								self.logError( 'no-impression-not-enough-suggestions' );
 							}
 						} );
 					}

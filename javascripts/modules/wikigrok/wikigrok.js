@@ -1,16 +1,19 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
 ( function ( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
 		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !M.isWideScreen(),
 		idOverride,
 		versions = {
 			A: {
 				module: 'mobile.wikigrok.dialog',
-				view: 'modules/wikigrok/WikiGrokDialog'
+				view: 'modules/wikigrok/WikiGrokDialog',
+				name: 'a'
 			},
 			B: {
 				module: 'mobile.wikigrok.dialog.b',
-				view: 'modules/wikigrok/WikiGrokDialogB'
+				view: 'modules/wikigrok/WikiGrokDialogB',
+				name: 'b'
 			}
 		},
 		version,
@@ -146,6 +149,20 @@
 			}
 
 			init();
+		} ).fail( function () {
+			var data = {
+				error: 'no-impression-cannot-load-interface',
+				itemId: wikidataID,
+				title: mw.config.get( 'wgTitle' ),
+				taskType: 'version ' + version.name,
+				taskToken: mw.user.generateRandomSessionId(),
+				userToken: getUserToken(),
+				isLoggedIn: !mw.user.isAnon()
+			};
+			if ( idOverride ) {
+				data.testing = true;
+			}
+			errorSchema.log( data );
 		} );
 
 		// Make OverlayManager handle '#/wikigrok/about' links.

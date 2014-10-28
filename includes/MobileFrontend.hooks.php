@@ -833,6 +833,7 @@ class MobileFrontendHooks {
 			'MobileWebCta'           => 5972684,
 			'MobileWebClickTracking' => 5929948,
 			'MobileWebWikiGrok'      => 10352247,
+			'MobileWebWikiGrokError' => 10352248,
 		);
 
 		$schemas += $mobileEventLoggingSchemas;
@@ -872,6 +873,7 @@ class MobileFrontendHooks {
 			'javascripts/loggingSchemas/mobileWebEditing.js',
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
 			'javascripts/loggingSchemas/mobileWebWikiGrok.js',
+			'javascripts/loggingSchemas/mobileWebWikiGrokError.js',
 		);
 
 		$wgResourceModules['mobile.loggingSchemas'] = $wgMFMobileResourceBoilerplate + array(

@@ -29,8 +29,12 @@
 				var description, instanceClaims, entityClaims, instanceOf,
 					claims = {};
 				// See if the page has any 'instance of' claims.
-				if ( data.entities !== undefined && data.entities[ id ].claims.P31 !== undefined ) {
-					entityClaims = data.entities[ id ].claims;
+				if (
+					data.entities !== undefined &&
+					data.entities[id].claims !== undefined &&
+					data.entities[id].claims.P31 !== undefined
+				) {
+					entityClaims = data.entities[id].claims;
 					instanceClaims = entityClaims.P31;
 
 					// Examine claims closely
@@ -69,8 +73,11 @@
 					}
 					return claims;
 				} else {
+					self.logError( 'no-impression-cannot-fetch-claims' );
 					return false;
 				}
+			} ).fail( function () {
+				self.logError( 'no-impression-cannot-fetch-claims' );
 			} );
 		},
 		/**
