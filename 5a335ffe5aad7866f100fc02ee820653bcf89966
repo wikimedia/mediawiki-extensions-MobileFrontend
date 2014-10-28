@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_95852aa2",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-28T07:07:21Z",
+      "side": 1,
+      "message": "Wait, that isn\u0027t correct at all. Let me rethink this :)",
+      "revId": "5a335ffe5aad7866f100fc02ee820653bcf89966",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
