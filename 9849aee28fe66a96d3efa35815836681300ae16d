@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_875bb325",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:28:59Z",
+      "side": 1,
+      "message": "This is pretty hacky (not your fault Kaldari wrote it :))\nI\u0027d suggest refactoring how thankUser works in the this.$( \u0027.wg-buttons .not-sure\u0027 ).on( \u0027click\u0027 event so that it only sets the values it needs to avoid this mess (plus the mess with options.thankUser \u003d true at the top)",
+      "parentUuid": "6e936f18_5176cda0",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_110b6529",
         "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
         "patchSetId": 1
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "There is a note in the trello card saying that we should leave the code for saving the user setting there.",
       "parentUuid": "6e936f18_b10f1133",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_67478751",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:28:59Z",
+      "side": 1,
+      "message": "I moaned to Kaldari and he said to remove it. Commented out lines of code are nasty.\nCan you however update wikigrok.js to have a FIXME comment saying that the mfHideWikiGrok setting is currently not being used and we should revisit this code before pushing to stable.",
+      "parentUuid": "6e936f18_1170459f",
       "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
