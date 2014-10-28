@@ -14,12 +14,11 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.initConfig( {
-		pkg: grunt.file.readJSON( 'package.json' ),
 		URL: process.env.URL || 'http://127.0.0.1:8080/w/index.php/',
 		QUNIT_FILTER: (process.env.QUNIT_FILTER && '&filter='+process.env.QUNIT_FILTER) || '',
 		files: {
 			js: 'javascripts/**/*.js',
-			jsTests: 'tests/qunit/**/*.js',
+			jsTests: 'tests/qunit/**/*.js'
 		},
 		jshint: {
 			options: {
@@ -31,10 +30,7 @@ module.exports = function ( grunt ) {
 			]
 		},
 		jscs: {
-			src: '<%= jshint.all %>',
-			options: {
-				config: '.jscs.json'
-			}
+			src: '<%= jshint.all %>'
 		},
 		qunit: {
 			all: {
