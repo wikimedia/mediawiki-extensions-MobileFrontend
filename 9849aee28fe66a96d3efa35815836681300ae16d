@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_5176cda0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-28T20:46:27Z",
+      "side": 1,
+      "message": "so that we clear the old noticeMsg",
+      "parentUuid": "6e936f18_f1059914",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_110b6529",
         "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_b164f1e2",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-28T20:46:27Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "6e936f18_110b6529",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_b10f1133",
         "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2014-10-28T20:43:03Z",
       "side": 1,
       "message": "Nope. Don\u0027t comment out code!",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_1170459f",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-28T20:46:27Z",
+      "side": 1,
+      "message": "There is a note in the trello card saying that we should leave the code for saving the user setting there.",
+      "parentUuid": "6e936f18_b10f1133",
       "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -149,6 +203,24 @@
       "writtenOn": "2014-10-28T20:43:03Z",
       "side": 1,
       "message": "Please don\u0027t use target\u003d\"_blank\" ever or a fairy dies :)\nThis should be up to the user imo but then I\u0027m a purist...",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_f1a919dd",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-28T20:46:27Z",
+      "side": 1,
+      "message": "ok, it just breaks the user\u0027s flow.",
+      "parentUuid": "6e936f18_f1535918",
       "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
