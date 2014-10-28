@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_d89c4262",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T17:46:35Z",
+      "side": 1,
+      "message": "When not logged in there is no link inside #ca-edit",
+      "revId": "79a4e23ae5a8fa0052b0d429c7a2bc6110f2f36e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
