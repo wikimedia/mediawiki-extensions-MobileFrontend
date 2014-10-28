@@ -192,7 +192,6 @@
 				} );
 
 			$elem.attr( {
-				role: 'button',
 				tabindex: 0,
 				'aria-haspopup': 'true',
 				'aria-controls': id
