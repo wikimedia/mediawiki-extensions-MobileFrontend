@@ -46,7 +46,7 @@
 		postRender: function ( options ) {
 			var self = this;
 			Overlay.prototype.postRender.call( this, options );
-			this.$( '.back' ).on( 'tap', $.proxy( self, 'hide' ) );
+			this.$( '.back' ).on( 'click', $.proxy( self, 'hide' ) );
 			this.confirm = this.$( 'button.confirm-save' );
 			this.confirm.on( 'click', function () {
 				if ( !$( this ).prop( 'disabled' ) ) {

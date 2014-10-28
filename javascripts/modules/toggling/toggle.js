@@ -196,7 +196,7 @@
 				'aria-haspopup': 'true',
 				'aria-controls': id
 			} )
-			.on( 'tap', function ( ev ) {
+			.on( 'click', function ( ev ) {
 				// prevent taps/clicks on edit button after toggling (bug 56209)
 				ev.preventDefault();
 				toggle( $( this ) );

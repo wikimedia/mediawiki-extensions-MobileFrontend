@@ -53,7 +53,7 @@
 				href: $el[0].href, selector: 'edit-anon mw-ui-progressive' } ];
 		}
 		$el.
-			on( 'tap', function ( ev ) {
+			on( 'click', function ( ev ) {
 				ev.preventDefault();
 				// prevent folding section when clicking Edit
 				ev.stopPropagation();
@@ -166,7 +166,7 @@
 			}
 		}
 
-		$( '.edit-page' ).on( 'tap', function ( ev ) {
+		$( '.edit-page' ).on( 'click', function ( ev ) {
 			// prevent folding section when clicking Edit
 			ev.stopPropagation();
 		} );
@@ -223,7 +223,7 @@
 	 * @param {string} msg Message key for sorry message
 	 */
 	function showSorryToast( msg ) {
-		$( '#ca-edit, .edit-page' ).on( 'tap', function ( ev ) {
+		$( '#ca-edit, .edit-page' ).on( 'click', function ( ev ) {
 			popup.show( mw.msg( msg ), 'toast' );
 			ev.preventDefault();
 		} );

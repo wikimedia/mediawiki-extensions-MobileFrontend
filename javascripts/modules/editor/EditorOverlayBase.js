@@ -164,7 +164,7 @@
 			this.log( 'attempt' );
 
 			// FIXME: This should be .close (see bug 71203)
-			this.$( '.back' ).eq( 0 ).on( 'tap', function () {
+			this.$( '.back' ).eq( 0 ).on( 'click', function () {
 				// log cancel attempt
 				self.log( 'cancel' );
 			} );

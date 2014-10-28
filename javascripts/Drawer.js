@@ -33,7 +33,7 @@
 			} );
 
 			// Allow the drawer itself to be clickable (e.g. for copying and pasting references / clicking links in reference)
-			this.$el.on( 'tap', function ( ev ) {
+			this.$el.on( 'click', function ( ev ) {
 				ev.stopPropagation();
 			} );
 		}

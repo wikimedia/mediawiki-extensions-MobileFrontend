@@ -625,7 +625,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'ctaDrawer.hogan',
 		),
 		'scripts' => array(
-			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/routes.js',
 			'javascripts/Drawer.js',
 			'javascripts/CtaDrawer.js',

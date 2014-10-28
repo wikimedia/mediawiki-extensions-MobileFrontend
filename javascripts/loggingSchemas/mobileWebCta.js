@@ -33,7 +33,7 @@
 				window.location.href = href;
 			} );
 		}
-		$el.on( 'tap', linkHandler );
+		$el.on( 'click', linkHandler );
 	}
 
 	M.define( 'loggingSchemas/mobileWebCta', {

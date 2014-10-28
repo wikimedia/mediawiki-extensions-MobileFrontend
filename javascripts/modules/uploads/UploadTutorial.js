@@ -56,8 +56,8 @@
 
 			this.page = 0;
 			this.totalPages = options.pages.length;
-			this.$( '.prev' ).on( 'tap', $.proxy( this, 'previous' ) );
-			this.$( '.next' ).on( 'tap', $.proxy( this, 'next' ) );
+			this.$( '.prev' ).on( 'click', $.proxy( this, 'previous' ) );
+			this.$( '.next' ).on( 'click', $.proxy( this, 'next' ) );
 
 			this._showCurrentPage();
 

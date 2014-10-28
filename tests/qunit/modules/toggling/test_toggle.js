@@ -65,7 +65,7 @@ QUnit.test( 'Tap event toggles section', 2, function( assert ) {
 
 	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
-	this.$container.find( '#section_1' ).trigger( 'tap' );
+	this.$container.find( '#section_1' ).trigger( 'click' );
 
 	strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown on a toggle' );
 } );
@@ -81,13 +81,13 @@ QUnit.test( 'Verify aria attributes', 9, function ( assert ) {
 	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start' );
 
 	// Test what the toggle() function gives us when hiding the section
-	$section.trigger( 'tap' );
+	$section.trigger( 'click' );
 	strictEqual( $content.hasClass( 'open-block' ), true, 'check content is visible after toggling' );
 	strictEqual( $content.attr( 'aria-pressed' ), 'true', 'check aria-pressed is true after toggling' );
 	strictEqual( $content.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling' );
 
 	// Test what the toggle() function gives us when showing the section
-	$section.trigger( 'tap' );
+	$section.trigger( 'click' );
 	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after toggling' );
 	strictEqual( $content.attr( 'aria-pressed' ), 'false', 'check aria-pressed is false after toggling' );
 	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );
