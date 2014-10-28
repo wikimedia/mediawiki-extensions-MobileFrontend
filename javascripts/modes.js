@@ -1,4 +1,5 @@
 /**
+ * Mobile mode helper class
  *
  * @class mw.mobileFrontend
  * @singleton
@@ -7,6 +8,7 @@
 	mw.mobileFrontend = $.extend( {
 
 		/**
+		 * Determines if mobile mode is alpha
 		 * @method
 		 * @return {Boolean}
 		 */
@@ -15,6 +17,7 @@
 		},
 
 		/**
+		 * Determines if mobile mode is beta or alpha
 		 * @method
 		 * @return {Boolean}
 		 */
@@ -23,6 +26,7 @@
 		},
 
 		/**
+		 * Determines if we are running mobile application
 		 * @method
 		 * @return {Boolean}
 		 */
@@ -31,7 +35,9 @@
 		},
 
 		/**
+		 * Detect module being run outside allowed mode
 		 * @method
+		 * @param {Array} modes Array of allowed mode names
 		 * @throws Error when a module is run out of its allowed modes
 		 */
 		assertMode: function ( modes ) {

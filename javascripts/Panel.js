@@ -28,6 +28,7 @@
 		},
 
 		/**
+		 * Shows panel after a slight delay
 		 * @method
 		 */
 		show: function () {
@@ -45,6 +46,7 @@
 		},
 
 		/**
+		 * Hides panel
 		 * @method
 		 */
 		hide: function () {
@@ -58,6 +60,7 @@
 		},
 
 		/**
+		 * Determines if panel is visible
 		 * @method
 		 */
 		isVisible: function () {
@@ -65,6 +68,7 @@
 		},
 
 		/**
+		 * Shows or hides panel
 		 * @method
 		 */
 		toggle: function () {

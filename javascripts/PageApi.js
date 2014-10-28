@@ -8,7 +8,7 @@
 	 * section of listOfSections. If listOfSections is empty, just add child to it.
 	 * @method
 	 * @private
-	 * @param {Array} listOfSections
+	 * @param {Array} listOfSections - Array of section ids
 	 * @param {Object} child - Section to be added to listOfSections
 	 */
 	function assignToParent( listOfSections, child ) {
@@ -32,7 +32,7 @@
 	 * Order sections hierarchically
 	 * @method
 	 * @private
-	 * @param {Array} sections
+	 * @param {Array} sections Array of section objects created from response HTML
 	 * @returns {Array}
 	 */
 	function transformSections( sections ) {
@@ -80,6 +80,7 @@
 	}
 
 	/**
+	 * API for providing Page data
 	 * @class PageApi
 	 * @extends Api
 	 */
