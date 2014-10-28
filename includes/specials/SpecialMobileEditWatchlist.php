@@ -8,6 +8,17 @@
  * The mobile version of the watchlist editing page.
  */
 class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
+	/** @var string $offsetTitle The name of the title to begin listing the watchlist from */
+	protected $offsetTitle;
+
+	/**
+	 * Construct function
+	 */
+	public function __construct() {
+		$req = $this->getRequest();
+		$this->offsetTitle = $req->getVal( 'from', '' );
+		parent::__construct( 'EditWatchlist' );
+	}
 
 	/**
 	 * Renders the subheader.
@@ -82,6 +93,8 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$html = '';
 		$total = 0;
 		$images = array();
+		$limit = SpecialMobileWatchlist::LIMIT;
+
 		$watchlist = $this->getWatchlistInfo();
 		if ( !MobileContext::singleton()->imagesDisabled() ) {
 			wfRunHooks( 'SpecialMobileEditWatchlist::images', array(
@@ -91,10 +104,35 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				)
 			);
 		}
+
 		foreach ( $watchlist as $ns => $pages ) {
 			if ( $ns === NS_MAIN ) {
 				$html .= '<ul class="watchlist page-list thumbs">';
-				foreach ( array_keys( $pages ) as $dbkey ) {
+				$total = count( $pages );
+
+				// Make format more sensible. Sigh MediaWiki.
+				$pages = array_keys( $pages );
+
+				if ( $this->offsetTitle ) {
+					$offset = array_search( $this->offsetTitle, $pages );
+					// Deal with cases where invalid title given
+					if ( $offset === false ) {
+						$offset = 0;
+					}
+				} else {
+					$offset = 0;
+				}
+
+				// Work out if we need a more button and where to start from
+				if ( $total > $offset + $limit ) {
+					$from = $pages[$offset + $limit + 1];
+				} else {
+					$from = false;
+				}
+
+				// Get the slice we are going to display and display it
+				$pages = array_slice( $pages, $offset, $limit );
+				foreach ( $pages as $dbkey ) {
 					$title = Title::makeTitleSafe( $ns, $dbkey );
 					$thumb = '';
 					if ( isset( $images[$ns][$dbkey] ) ) {
@@ -110,8 +148,18 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				$html .= '</ul>';
 			}
 		}
+
 		if ( $total === 0 ) {
 			$html .= SpecialMobileWatchlist::getEmptyListHtml( false, $this->getLanguage() );
+		} elseif ( $from ) {
+			// show more link if there are more items to show
+			$qs = array( 'from' => $from );
+			$html .= Html::element( 'a',
+				array(
+					'class' => 'mw-ui-anchor mw-ui-progressive more',
+					'href' => SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL( $qs ),
+				),
+				$this->msg( 'mobile-frontend-watchlist-more' ) );
 		}
 		$out = $this->getOutput();
 		$out->addHtml( $html );
