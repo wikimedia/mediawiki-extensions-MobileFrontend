@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_7852ce6b",
+        "filename": ".jscs.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-10-28T17:59:57Z",
+      "side": 1,
+      "message": "Simplify to \n\n \"excludeFiles\": [\"javascripts/externals/**/*.js\"]\n\n** means current and all subdirectories, so no need for * and */*.",
+      "revId": "9a4f0a5ec02aa6550b801adf2879aae034296caf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_38652642",
+        "filename": "Gruntfile.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-10-28T17:59:57Z",
+      "side": 1,
+      "message": "Remove pgk as it\u0027s is not used anywhere. This is meant for when you want to embed package.json values in a templated string (to avoid duplication).\n\nE.g.\n\n uglifyjs.banner: \u0027/!* \u003c%\u003d pkg.title %\u003e v\u003c%\u003d pkg.version %\u003e */\u0027",
+      "revId": "9a4f0a5ec02aa6550b801adf2879aae034296caf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_984f9ac0",
+        "filename": "Gruntfile.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-10-28T17:59:57Z",
+      "side": 1,
+      "message": "Single quotes.",
+      "revId": "9a4f0a5ec02aa6550b801adf2879aae034296caf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
