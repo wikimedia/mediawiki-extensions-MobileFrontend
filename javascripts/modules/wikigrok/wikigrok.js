@@ -13,7 +13,7 @@
 	 *
 	 * @return {string}
 	 */
-	function getUserToken () {
+	function getUserToken() {
 		var cookieName = mw.config.get( 'wgCookiePrefix' ) + '-wikiGrokUserToken',
 			storedToken = $.cookie( cookieName ),
 			generatedToken;
@@ -31,7 +31,6 @@
 
 		return generatedToken;
 	}
-
 
 	// Allow query string override for testing, for example, '?wikidataid=Q508703'
 	if ( !wikidataID ) {
