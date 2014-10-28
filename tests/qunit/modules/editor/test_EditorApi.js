@@ -373,6 +373,39 @@
 		assert.ok( doneSpy.calledWith( '<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>' ) );
 	} );
 
+	QUnit.test( '#getPreview, check without sectionLine', 1, function( assert ) {
+		var editorApi = new EditorApi( { title: 'Test', sectionId: 1 } );
+		this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
+			"parse": {
+				"title": "test",
+				"text": { "*": "test content" },
+				"sections": {}
+			}
+		} ) );
+
+		editorApi.getPreview( { text: "test content" } ).done( function( text, sectionLine ) {
+			assert.strictEqual( sectionLine, '', 'Ok, no section line returned' );
+		} );
+	} );
+
+	QUnit.test( '#getPreview, check with sectionLine', 1, function( assert ) {
+		var editorApi = new EditorApi( { title: 'Test', sectionId: 1 } );
+		this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
+			"parse": {
+				"title": "test",
+				"text": { "*": "test content" },
+				"sections": {
+					0: { "line": "Testsection" },
+					1: { "line": "Testsection2" }
+				}
+			}
+		} ) );
+
+		editorApi.getPreview( { text: "test content" } ).done( function( text, sectionLine ) {
+			assert.strictEqual( sectionLine, 'Testsection', 'Ok, section line returned' );
+		} );
+	} );
+
 	QUnit.test( '#save, when token has expired', 2, function( assert ) {
 		var editorApi = new EditorApi( { title: 'MediaWiki:Test.css' } );
 

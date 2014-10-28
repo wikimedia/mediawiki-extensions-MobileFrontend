@@ -192,7 +192,8 @@
 				if ( resp && resp.parse && resp.parse.text ) {
 					// section 0 haven't a section name so skip
 					if ( self.sectionId !== 0 &&
-						resp.parse.sections &&
+						resp.parse.sections !== undefined &&
+						resp.parse.sections[0] !== undefined &&
 						resp.parse.sections[0].line !== undefined
 					) {
 						sectionLine = resp.parse.sections[0].line;
