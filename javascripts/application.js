@@ -1,6 +1,7 @@
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 /**
+ * mobileFrontend namespace
  * @class mw.mobileFrontend
  * @singleton
  */
@@ -38,6 +39,7 @@
 	// https://github.com/Modernizr/Modernizr/issues/167
 	// http://mobilehtml5.org/
 	/**
+	 * Detect if fixed position is supported in browser
 	 * @method
 	 * @param {String} userAgent User agent to test against.
 	 * @return {Boolean}
@@ -62,6 +64,7 @@
 	}
 
 	/**
+	 * Detect if browser supports geolocation
 	 * @method
 	 * @return {Boolean}
 	 */
@@ -132,8 +135,8 @@
 		}
 	}
 
-	// TODO: separate main menu navigation code into separate module
 	/**
+	 * Initialize viewport
 	 * @method
 	 */
 	function init() {
@@ -267,6 +270,7 @@
 	}
 
 	/**
+	 * Tidy up a page title
 	 * @method
 	 * @return {String}
 	 */
@@ -337,7 +341,7 @@
 	}
 
 	/**
-	 *
+	 * Determine if a device has a widescreen.
 	 * @method
 	 * @return {Boolean}
 	 */
@@ -348,8 +352,9 @@
 	}
 
 	/**
-	 *
+	 * Determine if current page is in a specified namespace
 	 * @method
+	 * @param {string} namespace Name of namespace
 	 * @return {Boolean}
 	 */
 	function inNamespace( namespace ) {
@@ -357,6 +362,7 @@
 	}
 
 	/**
+	 * Get current page view object
 	 *
 	 * @method
 	 * @return {Page}
@@ -417,20 +423,24 @@
 		query: deParam( qs ),
 		unlockViewport: unlockViewport,
 		/**
+		 * Navigation router instance
 		 * @type {Router}
 		 */
 		router: router,
 		/**
+		 * OverlayManager instance
 		 * @type {OverlayManager}
 		 */
 		overlayManager: new OverlayManager( router ),
 		/**
+		 * PageApi instance
 		 * @type {PageApi}
 		 */
 		pageApi: pageApi,
 		deParam: deParam,
-		// for A/B testing (we want this to be the same everywhere)
 		/**
+		 * User Bucketing for A/B testing
+		 ** (we want this to be the same everywhere)
 		 * @type {Boolean}
 		 */
 		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0
