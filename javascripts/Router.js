@@ -13,6 +13,7 @@
 	}
 
 	/**
+	 * Provides navigation routing and location information
 	 * @class Router
 	 */
 	function Router() {
@@ -136,6 +137,7 @@
 	};
 
 	/**
+	 * Determine if current browser supports onhashchange event
 	 * @method
 	 * @return {Boolean}
 	 */

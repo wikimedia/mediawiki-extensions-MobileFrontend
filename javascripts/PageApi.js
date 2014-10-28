@@ -2,10 +2,12 @@
 	var Api = M.require( 'api' ).Api, PageApi,
 		sectionTemplate = M.template.get( 'Section.hogan' );
 
-	/**
+	/*
 	 * Add child to listOfSections if the level of child is the same as the last
 	 * child of listOfSections, otherwise add it to the children of the last
 	 * section of listOfSections. If listOfSections is empty, just add child to it.
+	 * @method
+	 * @private
 	 * @param {Array} listOfSections
 	 * @param {Object} child - Section to be added to listOfSections
 	 */
@@ -26,8 +28,10 @@
 		}
 	}
 
-	/**
+	/*
 	 * Order sections hierarchically
+	 * @method
+	 * @private
 	 * @param {Array} sections
 	 * @returns {Array}
 	 */

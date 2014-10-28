@@ -4,6 +4,8 @@
 		WatchstarApi;
 
 	/**
+	 * API for managing clickable watchstar
+	 *
 	 * @class WatchstarApi
 	 * @extends Api
 	 */
@@ -49,8 +51,8 @@
 		/**
 		 * Marks whether a given page is watched or not to avoid an API call
 		 * @method
-		 * @param {Page} page
-		 * @param {Boolean} isWatched
+		 * @param {Page} page Page view object
+		 * @param {Boolean} isWatched True if page is watched
 		 */
 		setWatchedPage: function ( page, isWatched ) {
 			this._cache[ page.getId() ] = isWatched;
@@ -59,7 +61,7 @@
 		/**
 		 * Check if a given page is watched
 		 * @method
-		 * @param {Page} page
+		 * @param {Page} page Page view object
 		 * @return {boolean}
 		 * @throws Error when the status of the page has not been loaded.
 		 */
@@ -75,7 +77,7 @@
 		/**
 		 * Toggle the watch status of a known page
 		 * @method
-		 * @param {Page} page
+		 * @param {Page} page Page view object
 		 * @return {jQuery.Deferred}
 		 */
 		toggleStatus: function ( page ) {

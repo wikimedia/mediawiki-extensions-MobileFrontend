@@ -18,7 +18,7 @@
 		useJsonp: false,
 
 		/**
-		 * @method
+		 * @inheritdoc
 		 */
 		initialize: function () {
 			mw.Api.apply( this, arguments );

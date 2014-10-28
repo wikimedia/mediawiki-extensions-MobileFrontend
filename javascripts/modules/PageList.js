@@ -23,6 +23,8 @@
 		/**
 		 * Render page images for the existing page list. Assumes no page images have been loaded.
 		 * Only load when wgImagesDisabled has not been activated via Special:MobileOptions.
+		 *
+		 * @method
 		 */
 		renderPageImages: function () {
 			var self = this,
@@ -58,6 +60,9 @@
 				}, delay );
 			}
 		},
+		/**
+		 * @inheritDoc
+		 */
 		initialize: function ( options ) {
 			// FIXME: Find more elegant standard way to allow enhancement of views already in DOM
 			if ( options.enhance ) {

@@ -6,6 +6,8 @@
 		Page;
 
 	/**
+	 * Mobile page view object
+	 *
 	 * @class Page
 	 * @uses Section
 	 * @extends View
@@ -33,6 +35,10 @@
 			editLabel: mw.msg( 'mobile-frontend-editor-edit' ),
 			languageLabel: mw.msg( 'mobile-frontend-language-article-heading' )
 		},
+
+		/**
+		 * @inheritDoc
+		 */
 		initialize: function ( options ) {
 			// Fallback if no displayTitle provided
 			options.displayTitle = options.displayTitle || options.title;

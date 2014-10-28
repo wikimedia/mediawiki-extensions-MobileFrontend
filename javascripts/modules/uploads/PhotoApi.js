@@ -82,6 +82,8 @@
 	}
 
 	/**
+	 * API to handle photo uploads
+	 *
 	 * @class PhotoApi
 	 * @extends Api
 	 */
@@ -89,6 +91,7 @@
 		useCentralAuthToken: mw.config.get( 'wgMFUseCentralAuthToken' ),
 
 		/**
+		 * @inheritdoc
 		 * @param {Object} options
 		 *     [options.editorApi] EditorApi An API instance that will be used
 		 * for inserting images in a page.
