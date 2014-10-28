@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_cc6ec02a",
+        "filename": "javascripts/modes.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:00:14Z",
+      "side": 1,
+      "message": "This statement is not quite true.",
+      "revId": "4fa4f009b37a565e06642ab6307b9ddd8b419295",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
