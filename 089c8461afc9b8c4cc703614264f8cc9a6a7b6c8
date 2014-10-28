@@ -33,6 +33,24 @@
       "revId": "089c8461afc9b8c4cc703614264f8cc9a6a7b6c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_d53652e4",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-10-28T01:17:36Z",
+      "side": 1,
+      "message": "And while you\u0027re at it, dots should be in the beginning of lines, not the end.",
+      "parentUuid": "6e936f18_75017e07",
+      "revId": "089c8461afc9b8c4cc703614264f8cc9a6a7b6c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
