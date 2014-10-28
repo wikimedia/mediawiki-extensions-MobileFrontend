@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_955c4a50",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-28T07:27:21Z",
+      "side": 1,
+      "message": "allowAnonymous should only handle, if the editor get\u0027s initialized or not (so the edit without login link works), not, if the Cta is setup or not.\n\n(This will cause a Cta still when wgMFAnonymousEditing is true)",
+      "revId": "1173245fc26abf4800b529900d0507af5d6cee89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_d529729b",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-28T07:27:21Z",
+      "side": 1,
+      "message": "The cta should be setup always, no matter, if anon editing is enabled or not (the link \"edit w/o login\" is handled by makeCta())",
+      "revId": "1173245fc26abf4800b529900d0507af5d6cee89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
