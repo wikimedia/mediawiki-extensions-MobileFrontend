@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_cc556054",
+        "filename": "javascripts/LoadingOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "Better description would be useful here.",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2ceba478",
+        "filename": "javascripts/modules/mediaViewer/ImageApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "...image thumbnails for a given page.",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2c92c400",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "We should avoid the phrase media viewer\nHow about \"Displays images in full screen overlay.\"",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_ac8574b3",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "Wrong extends here.",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_0ca10842",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "It actually does more than this. We should document in addition to this about this function as it is pretty complicated.",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_4cbe3062",
+        "filename": "javascripts/modules/tutorials/PageActionOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "You might want to elaborate this one. I can\u0027t even remember what this does :)",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_0cb82870",
+        "filename": "javascripts/modules/uploads/LeadPhoto.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "This will need documenting either in follow up or this patchset.",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2c6884f1",
+        "filename": "javascripts/modules/uploads/PhotoUploadProgress.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "Overlay displaying photo upload progress bar. Appears at top of the page does not cover display.",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_ec713cde",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:06:45Z",
+      "side": 1,
+      "message": "Mention of user settings is probably not needed here. It\u0027s pretty generic and it\u0027s likely to be used elsewhere soon.\n\nWrapper for checkboxes styled as in MediaWiki UI style guide",
+      "revId": "cbbf12d08f25b0da633664465dccc08147ed7dfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
