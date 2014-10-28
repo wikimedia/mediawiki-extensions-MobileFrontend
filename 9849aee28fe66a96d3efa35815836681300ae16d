@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_f1059914",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "Why is this needed at all?",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_110b6529",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "Can we not just turn .wg-buttons .quit into a link to avoid this line?",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_b10f1133",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "Nope. Don\u0027t comment out code!",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_d10c1d40",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "This bTemplate idea is hacky. templatePartials are your friend.",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_d133bdf1",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "Add documentation whilst you are here :)",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_b13631e3",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "This looks like a code styling error. Not sure why this wasn\u0027t picked up by jscs\nthis.$el.html(this.bTemplate.render( options ) );\n-\u003e\nthis.$el.html( this.bTemplate.render( options ) );",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_7130a9e5",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "Missing @inheritdoc documentation",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_912d358e",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "ergggg",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_f1535918",
+        "filename": "templates/modules/wikigrok/WikiGrokMoreInfo.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T20:43:03Z",
+      "side": 1,
+      "message": "Please don\u0027t use target\u003d\"_blank\" ever or a fairy dies :)\nThis should be up to the user imo but then I\u0027m a purist...",
+      "revId": "9849aee28fe66a96d3efa35815836681300ae16d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
