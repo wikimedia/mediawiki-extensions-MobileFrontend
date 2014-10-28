@@ -29,11 +29,4 @@
 		assert.strictEqual( pl.$el.find( '.' + watchIcon.getGlyphClassName() ).length, 1, "1 of articles is marked as watched" );
 	} );
 
-	QUnit.test( 'In watched mode', 3, function( assert ) {
-		var pl = new PageList( { pages: [ { id: 30 }, { id: 50 }, { id: 60 } ], isWatchList: true } );
-		assert.ok( this.spy.notCalled, 'Callback avoided' );
-		assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 3, "3 articles have watch stars..." );
-		assert.strictEqual( pl.$el.find( '.' + watchIcon.getGlyphClassName() ).length, 3, "...and all are marked as watched." );
-	} );
-
 }( jQuery, mw.mobileFrontend ) );

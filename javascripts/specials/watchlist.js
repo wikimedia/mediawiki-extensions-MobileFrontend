@@ -1,7 +1,10 @@
 ( function ( M, $ ) {
-	var PageList = M.require( 'modules/PageList' ),
+	var watchlist,
+		WatchList = M.require( 'modules/watchlist/WatchList' ),
 		schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
-		pageName = mw.config.get( 'wgCanonicalSpecialPageName' ) === 'Watchlist' ? 'watchlist' : 'diff',
+		canonicalName = mw.config.get( 'wgCanonicalSpecialPageName' ),
+		pageName = canonicalName === 'EditWatchlist' || canonicalName === 'Watchlist' ?
+			'watchlist' : 'diff',
 		subPageName = M.query.watchlistview || 'a-z';
 
 	function init() {
@@ -10,10 +13,12 @@
 
 		// FIXME: find more elegant way to not show watchlist stars on recent changes
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
-			new PageList( { el: $watchlist, enhance: true, isWatchList: true } );
-			$watchlist.find( 'a.title' ).on( 'mousedown', function () {
-				// name funnel for watchlists to catch subsequent uploads
-				$.cookie( 'mwUploadsFunnel', 'watchlist', { expires: new Date( new Date().getTime() + 60000 ) } );
+			watchlist = new WatchList( { el: $watchlist, enhance: true } );
+			watchlist.on( 'unwatch', function () {
+				schema.log( actionNamePrefix + 'unwatch' );
+			} );
+			watchlist.on( 'watch', function () {
+				schema.log( actionNamePrefix + 'watch' );
 			} );
 		}
 
@@ -22,11 +27,6 @@
 		schema.hijackLink( '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
 		schema.hijackLink( '.page-list .title', actionNamePrefix + 'view' );
 		schema.hijackLink( '.more', actionNamePrefix + 'more' );
-
-		M.on( 'watched', function ( page, isWatched ) {
-			var action = isWatched ? 'watch' : 'unwatch';
-			schema.log( actionNamePrefix + action );
-		} );
 	}
 
 	$( function () {

@@ -73,9 +73,19 @@
 						if ( api.isWatchedPage( page ) ) {
 							options.isWatched = true;
 							self.render( options );
+							/**
+							 * @event watch
+							 * Fired when the watch star is changed to watched status
+							 */
+							self.emit( 'watch' );
 							toast.show( mw.msg( 'mobile-frontend-watchlist-add', page.title ) );
 						} else {
 							options.isWatched = false;
+							/**
+							 * @event unwatch
+							 * Fired when the watch star is changed to unwatched status
+							 */
+							self.emit( 'unwatch' );
 							self.render( options );
 							toast.show( mw.msg( 'mobile-frontend-watchlist-removed', page.title ) );
 						}

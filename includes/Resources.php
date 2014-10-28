@@ -1130,6 +1130,7 @@ $wgMinervaSpecialPageModules = array(
 			'mobile.pagelist.scripts',
 		),
 		'scripts' => array(
+			'javascripts/modules/watchlist/WatchList.js',
 			'javascripts/specials/watchlist.js',
 		),
 	),

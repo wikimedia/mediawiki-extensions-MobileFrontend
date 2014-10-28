@@ -72,11 +72,32 @@
 			this.api = new WatchstarApi( options );
 			View.prototype.initialize.apply( this, arguments );
 		},
+		/**
+		 * @inheritdoc
+		 */
 		template: M.template.get( 'modules/PageList.hogan' ),
-		postRender: function ( options ) {
-			View.prototype.postRender.apply( this, arguments );
-			var pages = [], $li = this.$( 'li' ),
+		/**
+		 * Retrieve pages
+		 *
+		 * @method
+		 * @param {Array} ids a list of page ids
+		 * @return jQuery.deferred
+		 */
+		getPages: function( ids ) {
+			return this.api.load( ids );
+		},
+		/**
+		 * @inheritdoc
+		 * Loads watch stars for each page.
+		 */
+		postRender: function () {
+			var $li,
+				self = this,
+				pages = [],
 				api = this.api;
+
+			View.prototype.postRender.apply( this, arguments );
+			$li = this.$( 'li' );
 
 			// Check what we have in the page list
 			$li.each( function () {
@@ -85,21 +106,32 @@
 
 			// Create watch stars for each entry in list
 			if ( !user.isAnon() && pages.length > 0 ) {
-				api.load( pages, options.isWatchList ).done( function () {
+				self.getPages( pages ).done( function () {
 					$li.each( function () {
-						var page = new Page( {
-							// FIXME: Set sections so we don't hit the api (hacky)
-							sections: [],
-							title: $( this ).attr( 'title' ),
-							id: $( this ).data( 'id' )
-						} );
+						var watchstar,
+							page = new Page( {
+								// FIXME: Set sections so we don't hit the api (hacky)
+								sections: [],
+								title: $( this ).attr( 'title' ),
+								id: $( this ).data( 'id' )
+							} );
 
-						new Watchstar( {
+						watchstar = new Watchstar( {
 							isAnon: false,
 							isWatched: api.isWatchedPage( page ),
 							page: page,
 							el: $( '<div>' ).appendTo( this )
 						} );
+						/**
+						 * @event watch
+						 * Fired when an article in the PageList is watched.
+						 */
+						watchstar.on( 'watch', $.proxy( self, 'emit', 'watch' ) );
+						/**
+						 * @event unwatch
+						 * Fired when an article in the PageList is watched.
+						 */
+						watchstar.on( 'unwatch', $.proxy( self, 'emit', 'unwatch' ) );
 					} );
 				} );
 			}
