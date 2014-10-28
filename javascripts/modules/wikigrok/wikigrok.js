@@ -6,6 +6,33 @@
 		rlModuleName = useDialogB ? 'mobile.wikigrok.dialog.b' : 'mobile.wikigrok.dialog',
 		idOverride;
 
+	/**
+	 * Gets the user's token from 'cookie prefix' + "-wikiGrokUserToken"
+	 * cookie. If the cookie isn't set, then a token is generated,
+	 * stored in the cookie for 90 days, and then returned.
+	 *
+	 * @return {string}
+	 */
+	function getUserToken () {
+		var cookieName = mw.config.get( 'wgCookiePrefix' ) + '-wikiGrokUserToken',
+			storedToken = $.cookie( cookieName ),
+			generatedToken;
+
+		if ( storedToken ) {
+			return storedToken;
+		}
+
+		generatedToken = mw.user.generateRandomSessionId();
+
+		$.cookie( cookieName, generatedToken, {
+			expires: 90, // (days)
+			path: '/'
+		} );
+
+		return generatedToken;
+	}
+
+
 	// Allow query string override for testing, for example, '?wikidataid=Q508703'
 	if ( !wikidataID ) {
 		idOverride = window.location.search.match( /wikidataid=([^&]*)/ );
@@ -49,6 +76,7 @@
 			function init() {
 				var dialog = new WikiGrokDialog( { itemId: wikidataID,
 						title: mw.config.get( 'wgTitle' ),
+						userToken: getUserToken(),
 						testing: ( idOverride ) ? true : false } );
 
 				if ( $( '.toc-mobile' ).length ) {

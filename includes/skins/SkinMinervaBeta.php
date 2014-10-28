@@ -43,15 +43,11 @@ class SkinMinervaBeta extends SkinMinerva {
 	 * @return array
 	 */
 	public function getSkinConfigVariables() {
-		global $wgMFEnableWikiGrok;
 		$vars = parent::getSkinConfigVariables();
 		// Kill this when we fix the functionality in PageApi.js
 		$user = $this->getUser();
 		if ( $user->isLoggedIn() ) {
 			$vars['wgMFUserGender'] = $this->getUser()->getOption( 'gender' );
-			if ( $wgMFEnableWikiGrok ) {
-				$vars['wgMFUserNameHash'] = hash( 'sha256', $user->getName() );
-			}
 		} else {
 			$vars['wgMFUserGender'] = 'unknown';
 		}
