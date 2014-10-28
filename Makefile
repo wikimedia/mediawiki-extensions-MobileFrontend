@@ -57,7 +57,7 @@ nodecheck:
 	@dev-scripts/nodecheck.sh
 
 jsbeautify: nodecheck			## Check the JavaScript coding style
-	find javascripts/ -type f -not -path "javascripts/externals" -name "*.js" -exec @node_modules/.bin/js-beautify -r {} \;
+	@find javascripts -type f -name "*.js" -not -path "**externals**" -exec node_modules/.bin/js-beautify -r {} \;
 
 jscs: nodecheck			## Check the JavaScript coding style
 	@node_modules/.bin/jscs javascripts/* --config .jscs.json
