@@ -64,9 +64,9 @@
 				taskToken: this.defaults.taskToken,
 				userToken: this.options.userToken,
 				// the position of the top of the widget in viewports (as a unit)
-				widgetOffset: ( this.$el.offset().top / $window.height() ).toFixed( 2 ),
+				widgetOffset: parseFloat( ( this.$el.offset().top / $window.height() ).toFixed( 2 ) ),
 				// top of the document - top of the viewport in viewports (as a unit)
-				scrollOffset: ( $window.scrollTop() / $window.height() ).toFixed( 2 )
+				scrollOffset: parseFloat( ( $window.scrollTop() / $window.height() ).toFixed( 2 ) )
 			};
 			if ( this.options.testing ) {
 				data.testing = true;
