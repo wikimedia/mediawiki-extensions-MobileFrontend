@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_c7b0db40",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T23:38:30Z",
+      "side": 1,
+      "message": "$el[0] !\u003d\u003d undefined looks nasty. Not clear why this is necessary. makeCta shouldn\u0027t be called in first place.",
+      "revId": "b530416a08ed077fdd96dccb1961fed0436ec044",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
