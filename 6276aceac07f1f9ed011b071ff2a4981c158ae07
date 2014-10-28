@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_f81c9e6c",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T17:27:46Z",
+      "side": 1,
+      "message": "Try catch blocks are nasty let\u0027s not do this (Google to find out why)\n\nAlso adding a test for this condition would be great!",
+      "revId": "6276aceac07f1f9ed011b071ff2a4981c158ae07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
