@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_1bfdc4d1",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-10-28T18:30:53Z",
+      "side": 1,
+      "message": "Hm.. The exclusion for readme should be removed, too. If that really gets included, let me know and I\u0027ll help you track down what causes that. It doesn\u0027t do that by default.",
+      "revId": "972eb2296a10add33db9d80fdb9e9bde300cc1b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
