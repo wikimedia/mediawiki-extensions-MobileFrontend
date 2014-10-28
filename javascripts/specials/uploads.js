@@ -13,6 +13,7 @@
 		UserGalleryApi, PhotoItem, PhotoList;
 
 	/**
+	 * API for retrieving gallery photos
 	 * @class UserGalleryApi
 	 * @extends Api
 	 */
@@ -67,6 +68,7 @@
 	} );
 
 	/**
+	 * Single photo item in gallery
 	 * @class PhotoItem
 	 * @extends View
 	 */
@@ -76,7 +78,9 @@
 	} );
 
 	/**
+	 * Creates a list of photo items
 	 * @class PhotoList
+	 * @uses UserGalleryApi
 	 * @extends View
 	 */
 	PhotoList = View.extend( {

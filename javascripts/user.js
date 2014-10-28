@@ -2,6 +2,7 @@
 	var user;
 
 	/**
+	 * Utility library for looking up details on the current user
 	 * @class user
 	 * @singleton
 	*/

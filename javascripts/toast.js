@@ -10,9 +10,10 @@
 		className: 'toast position-fixed',
 		minHideDelay: 1000,
 		/**
+		 * Show the toast message with a given class and content
 		 * @method
-		 * @param {String} content
-		 * @param {String} className
+		 * @param {String} content Content to be placed in element
+		 * @param {String} className class to add to elemenet
 		 */
 		show: function ( content, className ) {
 			this.$el.
