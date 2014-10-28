@@ -9,7 +9,6 @@
 		// If the user is logged in, record username and edit count
 		if ( !user.isAnon() ) {
 			options.userEditCount = user.getEditCount();
-			options.userToken = mw.config.get( 'wgMFUserNameHash' );
 		}
 		return M.log( 'MobileWebWikiGrok', $.extend( options, data ) );
 	}

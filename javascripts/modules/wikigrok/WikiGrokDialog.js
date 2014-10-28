@@ -62,6 +62,7 @@
 				action: action,
 				taskType: 'version ' + this.version,
 				taskToken: this.defaults.taskToken,
+				userToken: this.options.userToken,
 				// the position of the top of the widget in viewports (as a unit)
 				widgetOffset: ( this.$el.offset().top / $window.height() ).toFixed( 2 ),
 				// top of the document - top of the viewport in viewports (as a unit)
