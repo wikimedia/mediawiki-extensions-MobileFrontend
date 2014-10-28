@@ -43,7 +43,7 @@
 				i18n = {
 					dob: 'Born on:',
 					dod: 'Died on:',
-					nationality: 'Home country:',
+					nationalities: 'Home country:',
 					occupations: 'Profession:'
 				};
 
