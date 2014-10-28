@@ -40,6 +40,10 @@ module.exports = function ( grunt ) {
 			}
 		},
 		watch: {
+			lint: {
+				files: [ '<%= files.js %>', '<%= files.jsTests %>' ],
+				tasks: [ 'lint' ]
+			},
 			scripts: {
 				files: [ '<%= files.js %>', '<%= files.jsTests %>' ],
 				tasks: [ 'test' ]
@@ -53,8 +57,9 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
+	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
 	// Jenkins automatically runs grunt test for us
-	grunt.registerTask( 'test', [ 'jshint', 'jscs', 'qunit' ] );
+	grunt.registerTask( 'test', [ 'lint', 'qunit' ] );
 	grunt.registerTask( 'default', [ 'test' ] );
 
 };
