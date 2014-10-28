@@ -51,6 +51,24 @@
       "revId": "089c8461afc9b8c4cc703614264f8cc9a6a7b6c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_a4f5924e",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-28T17:09:20Z",
+      "side": 1,
+      "message": "In this case I guess the code is badly indented because the dot is at the end.",
+      "parentUuid": "6e936f18_d53652e4",
+      "revId": "089c8461afc9b8c4cc703614264f8cc9a6a7b6c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
