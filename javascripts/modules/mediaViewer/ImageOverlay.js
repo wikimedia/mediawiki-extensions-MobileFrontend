@@ -6,6 +6,7 @@
 	api = new ImageApi();
 
 	/**
+	 * Displays images in full screen overlay
 	 * @class ImageOverlay
 	 * @extends Overlay
 	 */

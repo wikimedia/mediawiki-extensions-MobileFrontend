@@ -7,6 +7,7 @@
 		TalkSectionAddOverlay;
 
 	/**
+	 * Overlay for adding a talk section
 	 * @class TalkSectionAddOverlay
 	 * @extends Overlay
 	 */

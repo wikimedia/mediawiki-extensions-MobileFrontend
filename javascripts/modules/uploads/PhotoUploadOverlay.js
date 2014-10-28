@@ -11,6 +11,7 @@
 		PhotoUploadOverlay;
 
 	/**
+	 * Overlay for photo upload
 	 * @class PhotoUploadOverlay
 	 * @extends Overlay
 	 */

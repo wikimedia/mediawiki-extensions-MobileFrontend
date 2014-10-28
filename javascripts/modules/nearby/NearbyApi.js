@@ -35,6 +35,7 @@
 	}
 
 	/**
+	 * API for retrieving nearby pages
 	 * @class NearbyApi
 	 * @extends Api
 	 */

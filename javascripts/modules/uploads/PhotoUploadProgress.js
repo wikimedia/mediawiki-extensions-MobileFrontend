@@ -5,6 +5,8 @@
 		PhotoUploadProgress;
 
 	/**
+	 * Overlay displaying photo upload progress bar.
+	 ** Appears at top of the page does not cover display.
 	 * @class PhotoUploadProgress
 	 * @extends Overlay
 	 */

@@ -8,6 +8,7 @@
 		UploadTutorial;
 
 	/**
+	 * Overlay for displaying upload tutorial
 	 * @class UploadTutorial
 	 * @extends Overlay
 	 */

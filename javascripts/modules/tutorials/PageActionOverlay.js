@@ -3,6 +3,7 @@
 		PageActionOverlay;
 
 	/**
+	 * Page overlay prompting a user for given action
 	 * @class PageActionOverlay
 	 * @extends ContentOverlay
 	 */

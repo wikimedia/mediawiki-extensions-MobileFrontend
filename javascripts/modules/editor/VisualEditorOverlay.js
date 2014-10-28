@@ -3,6 +3,7 @@
 		VisualEditorOverlay;
 
 	/**
+	 * Overlay for VisualEditor view
 	 * @class VisualEditorOverlay
 	 * @extends EditorOverlayBase
 	 */

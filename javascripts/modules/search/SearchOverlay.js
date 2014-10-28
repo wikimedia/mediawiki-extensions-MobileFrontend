@@ -9,6 +9,7 @@
 		SearchOverlay;
 
 	/**
+	 * Overlay displaying search results
 	 * @class SearchOverlay
 	 * @extends Overlay
 	 * @uses PageList

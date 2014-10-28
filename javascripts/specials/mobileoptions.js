@@ -2,6 +2,7 @@
 	var View = M.require( 'View' ), Checkbox;
 
 	/**
+	 * Wrapper for checkboxes styled as in MediaWiki UI style guide
 	 * @class Checkbox
 	 * @extends View
 	 */

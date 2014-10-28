@@ -4,6 +4,7 @@
 	icon = new Icon( { name: 'cleanup-gray', additionalClassNames: 'issue-notice', hasText: true } ),
 
 	/**
+	 * Overlay for displaying page issues
 	 * @class CleanupOverlay
 	 * @extends Overlay
 	 */

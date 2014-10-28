@@ -6,6 +6,7 @@
 		LeadPhotoUploaderButton;
 
 	/**
+	 * Component for uploading lead photo
 	 * @class LeadPhotoUploaderButton
 	 * @extends PhotoUploaderButton
 	 */

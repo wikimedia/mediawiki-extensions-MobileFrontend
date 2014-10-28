@@ -1,4 +1,5 @@
 /**
+ * API for search
  * @extends Api
  * @class SearchApi
  */

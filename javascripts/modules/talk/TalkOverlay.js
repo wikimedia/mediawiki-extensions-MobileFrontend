@@ -8,6 +8,7 @@
 		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
 		user = M.require( 'user' ),
 		/**
+		 * Overlay for talk page
 		 * @extends Overlay
 		 * @class TalkOverlay
 		 * @uses Page

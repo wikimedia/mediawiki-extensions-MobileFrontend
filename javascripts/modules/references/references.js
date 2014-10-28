@@ -4,6 +4,7 @@
 		ReferencesDrawer, drawer;
 
 	/**
+	 * Drawer for references
 	 * @class ReferencesDrawer
 	 * @extends Drawer
 	 */

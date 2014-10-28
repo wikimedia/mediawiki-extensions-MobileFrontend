@@ -4,8 +4,11 @@
 		Nearby;
 
 	/**
-	 * @extends View
+	 * List of nearby pages
+
 	 * @class Nearby
+	 * @uses NearbyApi
+	 * @extends PageList
 	 */
 	Nearby = PageList.extend( {
 		errorMessages: {
@@ -59,6 +62,10 @@
 			}
 			return result;
 		},
+		/**
+		 * Get pages within a nearby range of current location
+		 * @inheritDoc
+		 */
 		initialize: function ( options ) {
 			var self = this,
 				_super = PageList.prototype.initialize;

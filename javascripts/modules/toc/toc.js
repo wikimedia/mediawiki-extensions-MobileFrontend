@@ -5,6 +5,7 @@
 		toggle = M.require( 'toggle' );
 
 	/**
+	 * View for table of contents
 	 * @class TableOfContents
 	 * @extends View
 	 */

@@ -4,6 +4,7 @@
 		NotificationsOverlay;
 
 	/**
+	 * Overlay for notifications
 	 * @class NotificationsOverlay
 	 * @extend Overlay
 	 */

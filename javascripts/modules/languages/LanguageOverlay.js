@@ -4,6 +4,7 @@
 		LanguageOverlay;
 
 	/**
+	 * Overlay displaying list of languages for a page
 	 * @class LanguageOverlay
 	 * @extends Overlay
 	 */

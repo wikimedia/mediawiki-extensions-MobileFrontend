@@ -3,6 +3,7 @@
 	var View = M.require( 'View' ), LeadPhoto;
 
 	/**
+	 * Class for showing lead photo
 	 * @class LeadPhoto
 	 * @extends View
 	 */

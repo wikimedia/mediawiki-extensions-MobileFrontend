@@ -15,6 +15,7 @@
 	}
 
 	/**
+	 * API for retrieving image thumbnails for a given page
 	 * @class ImageApi
 	 * @extends Api
 	 */
