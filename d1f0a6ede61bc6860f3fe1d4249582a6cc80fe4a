@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_d1273d0c",
+        "filename": "javascripts/settings.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T21:35:14Z",
+      "side": 1,
+      "message": "It\u0027s actually a helper library for managing user and device specific settings making use of localStorage and cookies as a fallback.",
+      "revId": "d1f0a6ede61bc6860f3fe1d4249582a6cc80fe4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_71242908",
+        "filename": "javascripts/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T21:35:14Z",
+      "side": 1,
+      "message": "The word init is probably misleading.\nShow the toast message with a given class and content.",
+      "revId": "d1f0a6ede61bc6860f3fe1d4249582a6cc80fe4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_51832dd1",
+        "filename": "javascripts/user.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-28T21:35:14Z",
+      "side": 1,
+      "message": "it\u0027s not really a class so this is misleading. Maybe instead say this is a utility library for looking up details on the current user?",
+      "revId": "d1f0a6ede61bc6860f3fe1d4249582a6cc80fe4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
