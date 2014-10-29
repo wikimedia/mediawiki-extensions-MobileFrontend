@@ -59,6 +59,9 @@
 		}
 	}
 
-	init( M.getCurrentPage() );
+	// add a ToC only for "view" action (user is reading a page)
+	if ( mw.config.get( 'wgAction' ) === 'view' ) {
+		init( M.getCurrentPage() );
+	}
 
 }( mw.mobileFrontend ) );
