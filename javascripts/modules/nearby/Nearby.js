@@ -157,10 +157,26 @@
 			this._postRenderLinks();
 		},
 		_postRenderLinks: function () {
-			this.$( 'a' ).on( 'click', function () {
+			var offset,
+				hash = window.location.hash;
+
+			this.$( 'a' ).each( function ( i ) {
+				// FIXME: not unique if multiple Nearby objects on same page
+				$( this ).attr( 'id', 'nearby-page-list-item-' + i );
+			} ).on( 'tap', function () {
+				window.location.hash = $( this ).attr( 'id' );
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
 			} );
+
+			// Restore the offset
+			if ( hash.indexOf( '/' ) === -1 ) {
+				offset = $( window.location.hash ).offset();
+				if ( offset ) {
+					// Don't reset the hash here as we don't want to trigger another Route
+					$( window ).scrollTop( offset.top );
+				}
+			}
 		}
 	} );
 
