@@ -938,9 +938,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	// Custom ResourceLoaderModule classes
 	'mobile.site' => array(
 		'dependencies' => array( 'mobile.startup' ),
 		'class' => 'MobileSiteModule',
+	),
+	'mobile.usermodule' => array(
+		'dependencies' => array( 'mobile.startup' ),
+		'class' => 'MobileUserModule',
 	),
 ) );
 

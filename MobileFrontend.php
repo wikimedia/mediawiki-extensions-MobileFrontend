@@ -64,6 +64,7 @@ $autoloadClasses = array (
 	'InlineDifferenceEngine' => 'diff/InlineDifferenceEngine',
 
 	'MobileSiteModule' => 'modules/MobileSiteModule',
+	'MobileUserModule' => 'modules/MobileUserModule',
 
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialUserProfile' => 'specials/SpecialUserProfile',
