@@ -1,0 +1,34 @@
+@import "minerva.mixins";
+@import "minerva.variables";
+
+.ui-tag-button-group {
+	.ui-tag-button {
+		margin: 0 .25em .25em 0;
+		line-height: 1.2em;
+	}
+}
+
+.ui-tag-button {
+	position: relative;
+	text-align: left;
+
+	label: {
+		line-height: 0.8em;
+	}
+
+	label:first-child {
+		vertical-align: top;
+		text-transform: none;
+		font-weight: normal;
+		font-size: 0.8em;
+	}
+
+	label:last-child {
+		text-transform: capitalize;
+		display: block;
+	}
+
+	strong {
+		display: block;
+	}
+}

@@ -908,7 +908,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.ui.checkbox',
 		),
 		'styles' => array(
-			'less/modules/wikigrok/checkboxButton.less',
+			'less/modules/wikigrok/tagButton.less',
 		),
 		'templates' => array(
 			'modules/wikigrok/WikiGrokDialogB.hogan',

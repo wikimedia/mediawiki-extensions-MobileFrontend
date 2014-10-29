@@ -41,10 +41,10 @@
 				// Maps item ids to a key in i18n file
 				lookupProp = {},
 				i18n = {
-					dob: 'Born on:',
-					dod: 'Died on:',
-					nationalities: 'Home country:',
-					occupations: 'Profession:'
+					dob: 'Born on',
+					dod: 'Died on',
+					nationalities: 'Home country',
+					occupations: 'Profession'
 				};
 
 			$.each( suggestions, function ( type, data ) {
@@ -68,38 +68,41 @@
 			if ( suggestionsList.length ) {
 				self.apiWikiData.getLabels( suggestionsList ).done( function ( labels ) {
 					$.each( labels, function ( itemId, label ) {
-						var btnLabel, $chk,
+						var btnLabel, $tag,
 							prop = lookupProp[itemId],
-							id = 'chk-' + itemId;
+							id = 'tag-' + itemId;
 
-						$chk = $( '<div class="ui-checkbox-button mw-ui-button">' ).
+						$tag = $( '<div class="ui-tag-button mw-ui-button">' ).
 							on( 'click', function () {
-								var $chkBox = $( this ).find( 'input' );
-								$chkBox.prop( 'checked', !$chkBox.prop( 'checked' ) );
+								$( this ).toggleClass( 'mw-ui-progressive' );
+								// Update save button
 								setTimeout( function () {
-									self.$save.prop( 'disabled', self.$( '.initial-pane input:checked' ).length === 0 );
+									self.$save.prop( 'disabled', self.$( '.initial-pane .mw-ui-progressive' ).length === 0 );
 								}, 100 );
 							} ).appendTo( self.$( '.wg-buttons' ) );
 
 						// FIXME: Use a template for this magic.
-						$( '<input type="checkbox">' ).
-							attr( 'id', id ).
+						$tag.attr( 'id', id ).
 							data( 'propName', prop.name ).
 							data( 'propId', prop.id ).
 							data( 'itemId', itemId ).
-							data( 'readable', label ).
-							appendTo( $chk );
+							data( 'readable', label );
 
 						$( '<label>' ).
-							text( i18n[prop.type] ).appendTo( $chk );
+							text( i18n[prop.type] ).appendTo( $tag );
 
 						$( '<label>' ).
 							text( label ).
-							html( btnLabel ).appendTo( $chk );
+							html( btnLabel ).appendTo( $tag );
+
+						// Limit to 4 results by breaking out of .each
+						if ( self.$( '.initial-pane .ui-tag-button' ).length === 4 ) {
+							return false;
+						}
 					} );
 
-					// only show the panel when we have created at least one checkbox button
-					if ( self.$( '.ui-checkbox-button' ).length ) {
+					// only show the panel when we have created at least one button
+					if ( self.$( '.ui-tag-button' ).length ) {
 						self.$( '.spinner' ).hide();
 						self.show();
 					}
@@ -122,7 +125,7 @@
 			} );
 			this.$save.on( 'click', function () {
 				var answers = [];
-				self.$( '.ui-checkbox-button input:checked' ).hide().each( function () {
+				self.$( '.initial-pane .mw-ui-progressive' ).hide().each( function () {
 					answers.push( {
 						correct: true,
 						prop: $( this ).data( 'propName' ),
