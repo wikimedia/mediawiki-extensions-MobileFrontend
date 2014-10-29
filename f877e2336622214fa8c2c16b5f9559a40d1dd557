@@ -16,6 +16,23 @@
       "revId": "f877e2336622214fa8c2c16b5f9559a40d1dd557",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_b8904d4f",
+        "filename": "javascripts/modules/PageList.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-29T16:36:53Z",
+      "side": 1,
+      "message": "Should we document events that are emitted by classes? That\u0027d be useful.",
+      "revId": "f877e2336622214fa8c2c16b5f9559a40d1dd557",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
