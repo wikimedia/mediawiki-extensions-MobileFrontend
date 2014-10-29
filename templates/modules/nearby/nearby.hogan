@@ -1,2 +1,2 @@
 {{>spinner}}
-{{>articleList}}
+{{>pageList}}

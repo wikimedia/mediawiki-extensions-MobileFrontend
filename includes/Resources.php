@@ -46,6 +46,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.watchstar',
 		),
+		'templates' => array(
+			'modules/PageList.hogan',
+		),
 		'scripts' => array(
 			'javascripts/modules/PageList.js',
 		),
@@ -612,8 +615,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'modules/uploads/commons-upload.hogan',
-			// SearchOverlay.js and Nearby.js
-			'modules/articleList.hogan',
 			// PhotoUploaderButton.js
 			// For new page action menu
 			'modules/uploads/LeadPhotoUploaderButton.hogan',
