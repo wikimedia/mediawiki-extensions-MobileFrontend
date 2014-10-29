@@ -93,7 +93,7 @@
 			// tapping on background only should hide the overlay
 			this.$overlayContent
 				.on( 'tap', function () {
-					window.history.back();
+					self.$( '.cancel' ).trigger( 'tap' );
 				} )
 				.find( '> div' ).on( 'tap', function ( ev ) {
 					ev.stopPropagation();
