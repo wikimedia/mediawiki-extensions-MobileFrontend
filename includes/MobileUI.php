@@ -1,6 +1,13 @@
 <?php
 
+/**
+ * MobileUI.php
+ */
+
 // FIXME: Use OOUI PHP when available.
+/**
+ * Helper methods for generating parts of the UI.
+ */
 class MobileUI {
 
 	/**

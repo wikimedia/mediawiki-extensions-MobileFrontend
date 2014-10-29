@@ -1,18 +1,28 @@
 <?php
+
 /**
- * Represents a mobile version of Special:EditWatchlist
+ * SpecialMobileEditWatchlist.php
  */
 
+/**
+ * The mobile version of the watchlist editing page.
+ */
 class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
+
+	/**
+	 * Renders the subheader.
+	 */
 	protected function outputSubtitle() {
 		$user = $this->getUser();
 		$this->getOutput()->addHtml( SpecialMobileWatchlist::getWatchlistHeader( $user ) );
 	}
 
 	/**
-	 * @param Title $title
-	 * @param int $ts
-	 * @param string $thumb
+	 * Gets the HTML fragment for a watched page.
+	 *
+	 * @param Title $title The title of the watched page
+	 * @param int $ts When the page was last touched
+	 * @param string $thumb An HTML fragment for the page's thumbnaiL
 	 * @return string
 	 */
 	public static function getLineHtml( Title $title, $ts, $thumb ) {
@@ -48,17 +58,26 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		return $html;
 	}
 
-	public function execute( $par ) {
+	/**
+	 * The main entry point for the page.
+	 *
+	 * @param int $mode Whether the user is viewing, editing, or clearing their
+	 *  watchlist
+	 */
+	public function execute( $mode ) {
 		// Anons don't get a watchlist edit
 		$this->requireLogin( 'watchlistanontext' );
 
 		$out = $this->getOutput();
 		// turn off #content element
 		$out->setProperty( 'unstyledContent', true );
-		parent::execute( $par );
+		parent::execute( $mode );
 		$out->setPageTitle( $this->msg( 'watchlist' ) );
 	}
 
+	/**
+	 * Renders the view/edit (normal) mode of the watchlist.
+	 */
 	protected function executeViewEditWatchlist() {
 		$html = '';
 		$total = 0;

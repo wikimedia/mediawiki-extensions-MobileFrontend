@@ -47,6 +47,8 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 
 	/**
 	 * Render message box with system messages, e.g. errors or already logged-in notices
+	 *
+	 * @param bool $register Whether the user can register an account
 	 */
 	protected function renderMessageHtml( $register = false ) {
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
