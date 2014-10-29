@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_a7990f82",
+        "filename": "javascripts/Icon.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-29T00:08:46Z",
+      "side": 1,
+      "message": "I just noticed this line to. See https://gerrit.wikimedia.org/r/169628 for suggested text (or just merge it)",
+      "revId": "1157edfdb95df28b1ed0f364a2b2fe10d51bf047",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
