@@ -29,7 +29,7 @@
 			} );
 		},
 		/**
-		 * Renders a set of checkbox buttons to the panel
+		 * Renders a set of buttons to the panel
 		 * Shows panel to user when there are suggestions.
 		 * @method
 		 * @param {Array} suggestions as returned by WikiGrokApi.getSuggestions
