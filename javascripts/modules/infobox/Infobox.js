@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Infobox,
+		md5fn = M.require( 'hex_md5' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		View = M.require( 'View' );
 	/**
@@ -7,6 +8,7 @@
 	 * FIXME: This currently requires 2 hits to the Wikidata API on every page load.
 	 * @class Infobox
 	 * @extends View
+	 * @fires photo-loaded when all ajax requests have completed
 	 */
 	Infobox = View.extend( {
 		template: mw.template.get( 'mobile.infobox', 'Infobox.hogan' ),
@@ -108,6 +110,28 @@
 			}
 		},
 		/**
+		 * Given a title work out the url to the thumbnail for that image
+		 * FIXME: This should not make its way into stable.
+		 * @param {String} title of file page without File: prefix
+		 * @return {String} url corresponding to thumbnail (size 160px)
+		 */
+		getImageUrl: function ( title ) {
+			var md5, filename, source,
+				path = 'https://upload.wikimedia.org/wikipedia/commons/';
+
+			// uppercase first letter in file name
+			filename = title.charAt( 0 ).toUpperCase() + title.substr( 1 );
+			// replace spaces with underscores
+			filename = filename.replace(/ /g, '_');
+			md5 = md5fn( filename );
+			source = md5.charAt( 0 ) + '/' + md5.substr( 0, 2 ) + '/' + filename;
+			if ( filename.substr( filename.length - 3 ) !== 'svg' ) {
+				return path + 'thumb/' + source + '/160px-' + filename;
+			} else {
+				return path + source;
+			}
+		},
+		/**
 		 * Parses a list of claims
 		 *
 		 * @private
@@ -116,7 +140,7 @@
 		 * @return {Array} List of values matching that claim
 		 */
 		_getValues: function ( claims ) {
-			var values = [];
+			var values = [], self = this;
 
 			$.each( claims, function ( i, claim ) {
 				var snak = claim.mainsnak,
@@ -128,8 +152,7 @@
 				} else if ( snak.datatype === 'commonsMedia' ) {
 					values.push( {
 						url: mw.util.getUrl( 'File:' + value.value ),
-						// FIXME: Map this to the image src
-						value: value.value
+						src: self.getImageUrl( value.value )
 					} );
 				} else if ( value.type === 'string' ) {
 					values.push( {
@@ -260,6 +283,7 @@
 				self._mapLabels( rows ).done( function ( rows ) {
 					options.rows = rows;
 					_super.call( self, options );
+					M.emit( 'photo-loaded', self.$el );
 				} );
 			} ).fail( function () {
 				// remove spinner

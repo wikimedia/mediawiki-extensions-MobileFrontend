@@ -963,6 +963,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'Infobox.hogan' => 'templates/modules/infobox/Infobox.hogan',
 		),
 		'scripts' => array(
+			// FIXME: This library shouldn't be needed. Wikidata api
+			// should return these thumbnail urls for us.
+			'javascripts/externals/md5.js',
 			'javascripts/modules/infobox/Infobox.js',
 		),
 		'styles' => array(

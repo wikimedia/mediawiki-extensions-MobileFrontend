@@ -7,11 +7,19 @@
 	border: solid 1px @grayLight;
 	border-top: none;
 	background-color: @grayLightest;
+
+	img {
+		max-width: 100px;
+	}
 }
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
 	.wikidata-infobox {
 		max-width: 893px;
 		margin: 0 auto;
+
+		img {
+			max-width: none;
+		}
 	}
 }

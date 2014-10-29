@@ -4,11 +4,15 @@
 {{/rows}}
 {{{spinner}}}
 {{#rows}}
-<div>
+<div class="{{className}}">
 	{{^isEmpty}}{{#label}}<strong>{{label}}</strong>: {{/label}}{{/isEmpty}}
 	{{#values}}
-	{{#url}}<a href="{{url}}">{{value}}</a>{{/url}}
-	{{^url}}{{value}}{{/url}}
+	{{#url}}<a href="{{url}}" data-wikidata-id={{id}}
+		{{#src}}class="image"{{/src}}
+		>{{/url}}
+	{{#src}}<img src="{{src}}" width="160px">{{/src}}
+	{{value}}
+	{{#url}}</a>{{/url}}
 	{{/values}}
 </div>
 {{/rows}}
