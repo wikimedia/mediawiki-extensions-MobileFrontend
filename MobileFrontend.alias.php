@@ -350,7 +350,7 @@ $specialPageAliases['vi'] = array(
 	'MobileEditor' => array( 'Sửa_đổi_di_động' ),
 	'MobileMenu' => array( 'Trình_đơn_di_động' ),
 	'MobileLanguages' => array( 'Ngôn_ngữ_di_động' ),
-	'Nearby' => array( 'Kề_bên' ),
+	'Nearby' => array( 'Lân_cận', 'Kề_bên' ),
 	'UserProfile' => array( 'Hồ_sơ_cá_nhân' ),
 );
 
