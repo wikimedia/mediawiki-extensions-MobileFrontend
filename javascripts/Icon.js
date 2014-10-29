@@ -5,9 +5,9 @@
 		Icon;
 
 	/**
-	 * A {@link View} that pops up from the bottom of the screen.
-	 * @class Drawer
-	 * @extends Panel
+	 * A wrapper for creating an icon.
+	 * @class Icon
+	 * @extends View
 	 */
 	Icon = View.extend( {
 		defaults: {
