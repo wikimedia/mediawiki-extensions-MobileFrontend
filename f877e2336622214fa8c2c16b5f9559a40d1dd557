@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_78e5e505",
+        "filename": "javascripts/modules/PageList.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-29T16:16:44Z",
+      "side": 1,
+      "message": "The api.load part of this line should be moved into its own method, perhaps `loadPages`. Then you can override the method in the WatchList class.\n\nThe advantage of this approach is that you don\u0027t duplicate information conveyed by the type of the class in the class itself, i.e. the WatchList class doesn\u0027t have an internal variable called isWatchList, which is always true.",
+      "revId": "f877e2336622214fa8c2c16b5f9559a40d1dd557",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
