@@ -1,7 +1,7 @@
 <!-- note English language only! -->
 <div class="initial-pane content">
 	<p class="wg-content">{{contentMsg}}</p>
-	<p class="wg-buttons ui-checkbox-button-group"></p>
+	<p class="wg-buttons ui-tag-button-group"></p>
 </div>
 <div class="initial-pane footer">
 	<span class="license">All submissions are <a href="#/wikigrok/about">released freely</a>.</span>
