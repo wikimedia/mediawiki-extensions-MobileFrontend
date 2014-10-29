@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Api = M.require( 'api' ).Api, WikiDataApi;
 	/**
+	 * Gets claims and labels from the WikiData API
 	 * @class WikiDataApi
 	 * @extends Api
 	 */
