@@ -741,6 +741,7 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Get the description for Api parameters.
+	 * @deprecated since MediaWiki core 1.25
 	 * @return array
 	 */
 	public function getParamDescription() {
@@ -794,6 +795,7 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Get description of this Api.
+	 * @deprecated since MediaWiki core 1.25
 	 * @return string
 	 */
 	public function getDescription() {
@@ -802,6 +804,7 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Returns some Api request examples for mobile Api.
+	 * @deprecated since MediaWiki core 1.25
 	 * @return array
 	 */
 	public function getExamples() {
@@ -809,6 +812,20 @@ class ApiMobileView extends ApiBase {
 			'api.php?action=mobileview&page=Doom_metal&sections=0',
 			'api.php?action=mobileview&page=Candlemass&sections=0|references',
 			'api.php?action=mobileview&page=Candlemass&sections=1-|references',
+		);
+	}
+
+	/**
+	 * @see ApiBase::getExamplesMessages()
+	 */
+	protected function getExamplesMessages() {
+		return array(
+			'action=mobileview&page=Doom_metal&sections=0'
+				=> 'apihelp-mobileview-example-1',
+			'action=mobileview&page=Candlemass&sections=0|references'
+				=> 'apihelp-mobileview-example-2',
+			'action=mobileview&page=Candlemass&sections=1-|references'
+				=> 'apihelp-mobileview-example-3',
 		);
 	}
 
