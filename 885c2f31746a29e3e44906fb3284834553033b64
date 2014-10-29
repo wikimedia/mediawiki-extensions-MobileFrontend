@@ -34,6 +34,24 @@
       "revId": "885c2f31746a29e3e44906fb3284834553033b64",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_fef31d67",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-29T19:55:29Z",
+      "side": 1,
+      "message": "no, just a note :) (that\u0027s why i leave my +1 :P)",
+      "parentUuid": "6e936f18_7e62ad38",
+      "revId": "885c2f31746a29e3e44906fb3284834553033b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
