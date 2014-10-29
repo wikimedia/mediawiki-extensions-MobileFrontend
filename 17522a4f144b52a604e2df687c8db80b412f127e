@@ -16,6 +16,24 @@
       "revId": "17522a4f144b52a604e2df687c8db80b412f127e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_788ba5e8",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-29T16:58:40Z",
+      "side": 1,
+      "message": "I\u0027m not sure either, I think it\u0027s ok for it to be there for consistency.",
+      "parentUuid": "6e936f18_07a1e341",
+      "revId": "17522a4f144b52a604e2df687c8db80b412f127e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
