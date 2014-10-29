@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_6f5f5578",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 911,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-29T22:15:02Z",
+      "side": 0,
+      "message": "Delete less/modules/wikigrok/checkboxButton.less !",
+      "revId": "249b46b949d6d023ab85ca2c6afea1e4cb96e88c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
