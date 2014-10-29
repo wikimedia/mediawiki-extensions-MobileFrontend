@@ -22,7 +22,7 @@
 				props: 'claims',
 				format: 'json'
 			} ).then( function ( data ) {
-				var instanceClaims, entityClaims,
+				var instanceClaims, entityClaims, instanceOf,
 					claims = {};
 				// See if the page has any 'instance of' claims.
 				if ( data.entities !== undefined && data.entities[id].claims.P31 !== undefined ) {
@@ -31,12 +31,18 @@
 
 					// Examine claims closely
 					$.each( instanceClaims, function ( i, claim ) {
-						claims.isHuman = claim.mainsnak.datavalue.value['numeric-id'] === 5 ? true : false;
-						claims.hasOccupation = entityClaims.P106 ? true : false;
-						claims.hasCountryOfCitizenship = entityClaims.P27 ? true : false;
-						claims.hasDateOfBirth = entityClaims.P569 ? true : false;
-						claims.hasDateOfDeath = entityClaims.P570 ? true : false;
+						instanceOf = claim.mainsnak.datavalue.value['numeric-id'];
+						if ( instanceOf === 5 ) {
+							claims.isHuman = true;
+						}
 					} );
+
+					// set some claims
+					claims.hasOccupation = entityClaims.P106 ? true : false;
+					claims.hasCountryOfCitizenship = entityClaims.P27 ? true : false;
+					claims.hasDateOfBirth = entityClaims.P569 ? true : false;
+					claims.hasDateOfDeath = entityClaims.P570 ? true : false;
+
 					return claims;
 				} else {
 					return false;
