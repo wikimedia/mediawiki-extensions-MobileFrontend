@@ -16,6 +16,24 @@
       "revId": "b530416a08ed077fdd96dccb1961fed0436ec044",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5de1fc95",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-29T12:35:12Z",
+      "side": 1,
+      "message": "\u003e looks nasty\n...and is pretty useless, if anon editing is enabled there is always a link :)",
+      "parentUuid": "6e936f18_c7b0db40",
+      "revId": "b530416a08ed077fdd96dccb1961fed0436ec044",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
