@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_cac77714",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 943,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-29T23:33:21Z",
+      "side": 1,
+      "message": "Yes.\nThe question is what environment should we provide for editors of Mobile.js\nI think they should at least be able to expect mw.mobileFrontend to exist.",
+      "revId": "37fc7dd6ea50b10f89cd7df938d7c1b8d05978a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
