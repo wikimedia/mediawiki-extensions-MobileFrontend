@@ -16,6 +16,24 @@
       "revId": "4642b16587c576f09204d6d2815494333342ae5e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_87ebb39f",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-29T00:24:42Z",
+      "side": 1,
+      "message": "An anonymous user should be randomly assigned to see either WikiGrok v. A or v. B (via 90 day cookie) and should see that version of the interface consistently.",
+      "parentUuid": "6e936f18_07e9e3b2",
+      "revId": "4642b16587c576f09204d6d2815494333342ae5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
