@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_0716c3a9",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-29T00:30:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_a7434fb5",
+      "revId": "4642b16587c576f09204d6d2815494333342ae5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_07e9e3b2",
         "filename": "javascripts/modules/wikigrok/wikigrok.js",
         "patchSetId": 3
