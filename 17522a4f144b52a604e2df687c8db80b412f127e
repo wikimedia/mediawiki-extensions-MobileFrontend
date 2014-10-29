@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e936f18_fb056f17",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-29T22:53:23Z",
+      "side": 1,
+      "message": "you added a line but didn\u0027t document..?! ;P",
+      "revId": "17522a4f144b52a604e2df687c8db80b412f127e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_07a1e341",
         "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
         "patchSetId": 3
