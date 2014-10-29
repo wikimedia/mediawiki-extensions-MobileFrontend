@@ -2,6 +2,7 @@
 ( function ( M ) {
 	var Api = M.require( 'api' ).Api, WikiGrokApi;
 	/**
+	 * Records claims, gets suggestions, nationalities, occupations from the API
 	 * @class WikiGrokApi
 	 * @extends Api
 	 */

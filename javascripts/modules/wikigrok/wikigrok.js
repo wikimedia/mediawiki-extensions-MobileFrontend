@@ -15,7 +15,7 @@
 		},
 		version;
 
-	/**
+	/*
 	 * Gets the version of wikigrok to use.
 	 *
 	 * If logged in:
@@ -24,8 +24,9 @@
 	 * If anonymous:
 	 *   * If it had any particular version assigned, use that one.
 	 *   * Else, assign randomly a wikigrok version to use.
+	 * @return {Object}
 	 */
-	function getWikigrokVersion() {
+	function getWikiGrokVersion() {
 		var cookieName = mw.config.get( 'wgCookiePrefix' ) + '-wikiGrokAnonymousVersion',
 			anonVersion = $.cookie( cookieName );
 
@@ -49,7 +50,7 @@
 		}
 	}
 
-	/**
+	/*
 	 * Gets the user's token from 'cookie prefix' + "-wikiGrokUserToken"
 	 * cookie. If the cookie isn't set, then a token is generated,
 	 * stored in the cookie for 90 days, and then returned.
@@ -108,7 +109,7 @@
 	) {
 
 		// Load the required module and view based on the version for the user
-		version = getWikigrokVersion();
+		version = getWikiGrokVersion();
 		mw.loader.using( version.module ).done( function () {
 			var WikiGrokDialog = M.require( version.view );
 

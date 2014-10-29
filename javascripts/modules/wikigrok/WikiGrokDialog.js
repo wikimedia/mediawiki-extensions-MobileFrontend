@@ -76,7 +76,7 @@
 		/**
 		 * Return a new array from 'array' with 'count' randomly selected elements.
 		 * @param {Array} array Array from which random elements are selected
-		 * @param {Integer} count - Positive number of random elements to select
+		 * @param {number} count - Positive number of random elements to select
 		 * @returns {Array}
 		 */
 		chooseRandomItemsFromArray: function ( array, count ) {
@@ -205,7 +205,7 @@
 		/**
 		 * Check if at least half of the element's height and half of its width are in viewport
 		 * @method
-		 * @param {jQuery.Object} $el
+		 * @param {jQuery.Object} $el - element that's being tested
 		 * @return {boolean}
 		 */
 		isElementInViewport: function ( $el ) {

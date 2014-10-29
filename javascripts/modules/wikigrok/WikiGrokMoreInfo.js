@@ -5,6 +5,7 @@
 		WikiGrokMoreInfo;
 
 	/**
+	 * Show more info about the wikigrok
 	 * @class WikiGrokMoreInfo
 	 * @extends Overlay
 	 */
