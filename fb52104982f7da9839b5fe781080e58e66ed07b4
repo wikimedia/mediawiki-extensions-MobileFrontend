@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_c2976992",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 946,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-10-29T01:43:12Z",
+      "side": 1,
+      "message": "Is it strictly needed?",
+      "revId": "fb52104982f7da9839b5fe781080e58e66ed07b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_0286b167",
+        "filename": "includes/modules/MobileUserModule.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-10-29T01:43:12Z",
+      "side": 1,
+      "message": "????",
+      "revId": "fb52104982f7da9839b5fe781080e58e66ed07b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
