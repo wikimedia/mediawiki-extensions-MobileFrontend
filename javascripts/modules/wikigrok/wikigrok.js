@@ -2,9 +2,52 @@
 ( function ( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !M.isWideScreen(),
-		useDialogB = M.isAlphaGroupMember(),
-		rlModuleName = useDialogB ? 'mobile.wikigrok.dialog.b' : 'mobile.wikigrok.dialog',
-		idOverride;
+		idOverride,
+		versions = {
+			A: {
+				module: 'mobile.wikigrok.dialog',
+				view: 'modules/wikigrok/WikiGrokDialog'
+			},
+			B: {
+				module: 'mobile.wikigrok.dialog.b',
+				view: 'modules/wikigrok/WikiGrokDialogB'
+			}
+		},
+		version;
+
+	/**
+	 * Gets the version of wikigrok to use.
+	 *
+	 * If logged in:
+	 *   * If Alpha, use B
+	 *   * Otherwise use A
+	 * If anonymous:
+	 *   * If it had any particular version assigned, use that one.
+	 *   * Else, assign randomly a wikigrok version to use.
+	 */
+	function getWikigrokVersion() {
+		var cookieName = mw.config.get( 'wgCookiePrefix' ) + '-wikiGrokAnonymousVersion',
+			anonVersion = $.cookie( cookieName );
+
+		if ( !mw.user.isAnon() ) {
+			if ( M.isAlphaGroupMember() ) {
+				return versions.B;
+			} else {
+				return versions.A;
+			}
+		} else {
+			if ( anonVersion ) {
+				return versions[anonVersion];
+			} else {
+				anonVersion = Math.round( Math.random() ) ? 'A' : 'B';
+				$.cookie( cookieName, anonVersion, {
+					expires: 90, // (days)
+					path: '/'
+				} );
+				return versions[anonVersion];
+			}
+		}
+	}
 
 	/**
 	 * Gets the user's token from 'cookie prefix' + "-wikiGrokUserToken"
@@ -49,8 +92,6 @@
 	if (
 		// WikiGrok is enabled
 		mw.config.get( 'wgMFEnableWikiGrok' ) &&
-		// User is logged in
-		!mw.user.isAnon() &&
 		// We're not on the Main Page
 		!mw.config.get( 'wgIsMainPage' ) &&
 		// Permitted on this device
@@ -65,10 +106,11 @@
 		M.supportsLocalStorage &&
 		!localStorage.getItem( 'mfHideWikiGrok' )
 	) {
-		mw.loader.using( rlModuleName ).done( function () {
-			var moduleName = useDialogB ? 'modules/wikigrok/WikiGrokDialogB' :
-					'modules/wikigrok/WikiGrokDialog',
-				WikiGrokDialog = M.require( moduleName );
+
+		// Load the required module and view based on the version for the user
+		version = getWikigrokVersion();
+		mw.loader.using( version.module ).done( function () {
+			var WikiGrokDialog = M.require( version.view );
 
 			// See if there are potential occupation claims about this person so we can decide if
 			// it's appropriate to display the WikiGrok interface.
