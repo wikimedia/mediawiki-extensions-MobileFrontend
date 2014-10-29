@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_af8c7d33",
+        "filename": "less/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-29T22:01:29Z",
+      "side": 1,
+      "message": "I think you also need to add -.7em to this 24px. That number comes from the .fulltext-search left and right margins. Otherwise there is a horizontal scroll on the page.",
+      "revId": "defb51c5c910ffc34cf7fb55c25e07b497f8fb88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
