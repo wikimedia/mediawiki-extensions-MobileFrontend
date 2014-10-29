@@ -47,6 +47,7 @@
 		},
 
 		/**
+		 * Determines if content model is wikitext
 		 * @method
 		 * @return {Boolean}
 		 */
@@ -55,6 +56,7 @@
 		},
 
 		/**
+		 * Checks whether the current page is the main page
 		 * @method
 		 * @return {Boolean}
 		 */
@@ -95,6 +97,7 @@
 		},
 
 		/**
+		 * Return prefixed page title
 		 * @method
 		 * @return {string}
 		 */
@@ -103,6 +106,7 @@
 		},
 
 		/**
+		 * Return page id
 		 * @method
 		 * @return {Number}
 		 */
@@ -111,6 +115,7 @@
 		},
 
 		/**
+		 * return namespace id
 		 * @method
 		 * @return {Number} namespace Number
 		 */
@@ -125,6 +130,7 @@
 		},
 
 		/**
+		 * Determines if current page is a talk page
 		 * @method
 		 * @return {Boolean} Whether the page is a talk page or not
 		 */
@@ -134,6 +140,9 @@
 			return ns > 0 && ns % 2 === 1;
 		},
 
+		/**
+		 * @inheritDoc
+		 */
 		preRender: function ( options ) {
 			var self = this;
 			this.sections = [];
@@ -149,6 +158,7 @@
 		},
 
 		/**
+		 * Return reference section
 		 * @method
 		 */
 		getReferenceSection: function () {

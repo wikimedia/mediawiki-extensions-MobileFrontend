@@ -8,6 +8,7 @@
 		Overlay;
 
 	/**
+	 * Mobile modal window
 	 * @class Overlay
 	 * @extends View
 	 */
@@ -23,6 +24,7 @@
 		 */
 		closeOnBack: false,
 		/**
+		 * Is overlay fullscreen
 		 * @type {Boolean}
 		 */
 		fullScreen: true,
@@ -35,6 +37,7 @@
 		appendTo: '#mw-mf-viewport',
 
 		/**
+		 * Default classname
 		 * @type {String}
 		 */
 		className: 'overlay',
@@ -55,6 +58,7 @@
 			fixedHeader: true
 		},
 		/**
+		 * Flag overlay to close on content tap
 		 * @type {Boolean}
 		 */
 		closeOnContentTap: false,
@@ -122,6 +126,7 @@
 		},
 
 		/**
+		 * Attach overlay to current view
 		 * @method
 		 */
 		show: function () {
