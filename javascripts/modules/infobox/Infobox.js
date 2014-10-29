@@ -24,6 +24,76 @@
 		},
 		typeDefaults: {
 			// FIXME: In future this should be configurable by Wikipedia admins
+			country: {
+				rows: [
+					{
+						// image
+						id: 'P18'
+					},
+					{
+						label: 'Flag',
+						id: 'P41'
+					},
+					{
+						label: 'Coat of arms',
+						id: 'P94'
+					},
+					// FIXME: add motto
+					{
+						label: 'Anthem',
+						id: 'P85'
+					},
+					{
+						label: 'Location',
+						id: 'P242'
+					},
+					{
+						label: 'Languages',
+						id: 'P37'
+					},
+					{
+						label: 'Capital',
+						id: 'P36'
+					},
+					// FIXME: Add ethnic groups
+					{
+						label: 'Basic form of government',
+						id: 'P122'
+					},
+					{
+						label: 'Legislature',
+						id: 'P194'
+					},
+					// FIXME: Add Area
+					{
+						label: 'Population',
+						id: 'P1082'
+					},
+					// GDP
+					{
+						label: 'Currency',
+						id: 'P38'
+					},
+					{
+						label: 'Timezone',
+						id: 'P421'
+					},
+					// FIXME: add Date format
+					// FIXME: add Drives on the (left/right)
+					{
+						label: 'Country calling code',
+						id: 'P474'
+					},
+					{
+						label: 'ISO 3166 code',
+						id: 'P297'
+					},
+					{
+						label: 'Internet TLD',
+						id: 'P78'
+					}
+				]
+			},
 			city: {
 				rows: [
 					{
@@ -277,6 +347,8 @@
 				return this.typeDefaults.human;
 			} else if ( claims.isCity ) {
 				return this.typeDefaults.city;
+			} else if ( claims.isCountry ) {
+				return this.typeDefaults.country;
 			} else {
 				return this.typeDefaults.default;
 			}
