@@ -13,6 +13,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-notify' );
+	grunt.loadNpmTasks( 'grunt-svg2png' );
 
 	grunt.initConfig( {
 		URL: process.env.URL || 'http://127.0.0.1:8080/w/index.php/',
@@ -20,6 +21,11 @@ module.exports = function ( grunt ) {
 		files: {
 			js: 'javascripts/**/*.js',
 			jsTests: 'tests/qunit/**/*.js'
+		},
+		svg2png: {
+			dist: {
+				src: 'less/images/icons/*.svg'
+			}
 		},
 		jshint: {
 			options: {
@@ -62,5 +68,5 @@ module.exports = function ( grunt ) {
 	// Jenkins automatically runs grunt test for us
 	grunt.registerTask( 'test', [ 'lint', 'qunit' ] );
 	grunt.registerTask( 'default', [ 'test' ] );
-
+	grunt.registerTask( 'build-icons', [ 'svg2png' ] );
 };

@@ -12,6 +12,7 @@
 		"svgo": ">=0.4.4"
 	},
 	"devDependencies": {
+		"grunt-svg2png": "0.2.5",
 		"grunt-contrib-jshint": "0.10.0",
 		"grunt-jscs": "0.8.1",
 		"js-beautify": "^1.5.4",
