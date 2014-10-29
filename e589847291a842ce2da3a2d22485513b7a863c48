@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_bd44c01d",
+        "filename": "javascripts/modules/wikigrok/WikiGrokSuggestionApi.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-29T10:33:04Z",
+      "side": 0,
+      "message": "Why don\u0027t we resurrect this method so that we have two APIs for recording claims, this one and the new WikiGrokResponseApi one. If the WikiGrok\\Api\\ResponseApi class exists, then we use the latter, otherwise we use the former. This\u0027ll allow us to get this merged and migrate the APIs seamlessly.\n\nThoughts?",
+      "revId": "e589847291a842ce2da3a2d22485513b7a863c48",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
