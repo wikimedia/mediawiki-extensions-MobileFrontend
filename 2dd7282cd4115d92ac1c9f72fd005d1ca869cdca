@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_7e54e801",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-30T00:05:42Z",
+      "side": 1,
+      "message": "Please don\u0027t use !important unless you are in hacks.less it\u0027s nearly always a sign some css needs to be refactored.\n\nit doesn\u0027t look like it\u0027s needed here.",
+      "revId": "2dd7282cd4115d92ac1c9f72fd005d1ca869cdca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_be4a705d",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-30T00:05:42Z",
+      "side": 1,
+      "message": "? I can\u0027t logout now :(\n\nLooks like as part of this patch you\u0027ll need to fix up the logout icon to have a label in non-js mode.",
+      "revId": "2dd7282cd4115d92ac1c9f72fd005d1ca869cdca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
