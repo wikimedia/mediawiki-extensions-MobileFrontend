@@ -190,9 +190,9 @@
 			} else {
 				options.contentMsg = 'That\'s OK, thanks for taking the time.';
 			}
-			options.noticeMsg = '';
 			// Re-render with new content for 'Thanks' step
 			this.render( options );
+			this.$( '.wg-notice' ).hide();
 			this.log( 'widget-impression-success' );
 		},
 

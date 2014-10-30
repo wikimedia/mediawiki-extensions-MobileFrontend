@@ -60,8 +60,8 @@
 				} );
 			} );
 
-			// randomly pick 6 suggestions
-			suggestionsList = self.chooseRandomItemsFromArray( allSuggestions, 6 );
+			// randomly pick 4 suggestions
+			suggestionsList = self.chooseRandomItemsFromArray( allSuggestions, 4 );
 
 			// Now work out the labels if we have some suggestions
 			if ( suggestionsList.length ) {
@@ -94,11 +94,6 @@
 						$( '<label>' ).
 							text( label ).
 							html( btnLabel ).appendTo( $tag );
-
-						// Limit to 4 results by breaking out of .each
-						if ( self.$( '.initial-pane .ui-tag-button' ).length === 4 ) {
-							return false;
-						}
 					} );
 
 					// only show the panel when we have created at least one button
@@ -120,7 +115,7 @@
 
 			self.$( '.wg-notice' ).hide();
 			self.$( '.wg-buttons' ).html( '<div class="spinner loading"></div>' );
-			self.$( 'wg-content' ).text( 'Which of these tags best describe ' + options.title + '?' );
+			self.$( '.wg-content' ).text( 'Which of these tags best describe ' + options.title + '?' );
 			self.$( '.footer' ).show();
 
 			self._renderSuggestions( options.suggestions );
