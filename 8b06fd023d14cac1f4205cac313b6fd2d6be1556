@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_8d06641f",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-30T18:05:22Z",
+      "side": 1,
+      "message": "isn\u0027t (for value.type) a switch case/break construct a better solution?",
+      "revId": "8b06fd023d14cac1f4205cac313b6fd2d6be1556",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_125d954a",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-30T18:05:22Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we try to use a better human readable date? E.g. \"Fri Mar 14 1879\" instead of \"Fri Mar 14 1879 01:00:00 GMT+0100 (Mitteleuropäische Zeit)\" ?",
+      "revId": "8b06fd023d14cac1f4205cac313b6fd2d6be1556",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_8daae4cf",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-30T18:05:22Z",
+      "side": 1,
+      "message": "on failure it should remove itself (to avoid a permanently spinning loading circle)",
+      "revId": "8b06fd023d14cac1f4205cac313b6fd2d6be1556",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
