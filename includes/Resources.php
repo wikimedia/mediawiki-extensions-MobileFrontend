@@ -62,7 +62,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'mobile.toc' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.toc' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.templates',
@@ -76,8 +76,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/toc/toc.less',
 		),
 		'templates' => array(
-			'modules/toc/toc.hogan',
-			'modules/toc/tocHeading.hogan'
+			'toc.hogan' => 'templates/modules/toc/toc.hogan',
+			'heading.hogan' => 'templates/modules/toc/tocHeading.hogan'
 		),
 		'messages' => array(
 			'toc'

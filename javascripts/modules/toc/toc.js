@@ -11,7 +11,7 @@
 	 */
 	TableOfContents = View.extend( {
 		templatePartials: {
-			tocHeading: M.template.get( 'modules/toc/tocHeading.hogan' )
+			tocHeading: mw.template.get( 'mobile.toc', 'heading.hogan' )
 		},
 		defaults: {
 			tocIcon: new Icon( { tagName: 'span',
@@ -21,7 +21,7 @@
 		},
 		tagName: 'div',
 		className: 'toc-mobile',
-		template: M.template.get( 'modules/toc/toc.hogan' ),
+		template: mw.template.get( 'mobile.toc', 'toc.hogan' ),
 		postRender: function () {
 			var log = MobileWebClickTracking.log;
 			View.prototype.postRender.apply( this, arguments );

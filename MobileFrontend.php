@@ -213,8 +213,18 @@ $wgMFResourceBoilerplate = array(
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'MobileFrontend',
 );
+
 /**
- * A boilerplate for the ResourceLoaderTemplateModule that supports templates
+ * A mobile enabled ResourceLoaderFileModule template
+ */
+$wgMFResourceFileModuleBoilerplate = $wgMFResourceBoilerplate + array(
+	'targets' => array( 'mobile', 'desktop' ),
+);
+
+/**
+ * A boilerplate for the ResourceLoaderTemplateModule that supports templates using
+ * the mechanism prior to templates being in core.
+ * @deprecated
  */
 $wgMFMobileResourceBoilerplate = $wgMFResourceBoilerplate + array(
 	'localTemplateBasePath' => __DIR__ . '/templates',
