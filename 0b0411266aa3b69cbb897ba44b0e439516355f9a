@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_a6e1fe98",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-30T23:46:03Z",
+      "side": 1,
+      "message": "I think the results should be limited above, in here:\n\n// randomly pick 6 suggestions\nsuggestionsList \u003d self.chooseRandomItemsFromArray( allSuggestions, 6 );",
+      "revId": "0b0411266aa3b69cbb897ba44b0e439516355f9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
