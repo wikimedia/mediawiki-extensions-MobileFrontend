@@ -83,7 +83,7 @@
 		 * @param {Array} ids a list of page ids
 		 * @return jQuery.deferred
 		 */
-		getPages: function( ids ) {
+		getPages: function ( ids ) {
 			return this.api.load( ids );
 		},
 		/**
