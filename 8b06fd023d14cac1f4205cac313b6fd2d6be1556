@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e936f18_4de29c2f",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-30T18:09:52Z",
+      "side": 1,
+      "message": "I would like to have this as a configuration variable, but it\u0027s much code :/\n\nbackground: Maybe there are other Wikiprojects, which uses a wikidata based central data project, so it would be great, if they can configure this.\n\n(it\u0027s just an idea :P)",
+      "revId": "8b06fd023d14cac1f4205cac313b6fd2d6be1556",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_8d06641f",
         "filename": "javascripts/modules/infobox/Infobox.js",
         "patchSetId": 7
@@ -47,6 +64,23 @@
       "writtenOn": "2014-10-30T18:05:22Z",
       "side": 1,
       "message": "on failure it should remove itself (to avoid a permanently spinning loading circle)",
+      "revId": "8b06fd023d14cac1f4205cac313b6fd2d6be1556",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cdd54c49",
+        "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-30T18:09:52Z",
+      "side": 1,
+      "message": "combined with my comment on Infobox.js: This should be a config, too :)",
       "revId": "8b06fd023d14cac1f4205cac313b6fd2d6be1556",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
