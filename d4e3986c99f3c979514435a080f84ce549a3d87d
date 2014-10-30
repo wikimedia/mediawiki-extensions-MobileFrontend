@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e936f18_66921602",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-30T23:49:02Z",
+      "side": 1,
+      "message": "this will break when offset is not a number",
+      "revId": "d4e3986c99f3c979514435a080f84ce549a3d87d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_8633a25e",
         "filename": "includes/specials/SpecialMobileEditWatchlist.php",
         "patchSetId": 4
