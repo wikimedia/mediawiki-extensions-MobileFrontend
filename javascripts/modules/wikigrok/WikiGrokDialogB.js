@@ -15,10 +15,9 @@
 	WikiGrokDialogB = WikiGrokDialog.extend( {
 		version: 'b',
 		template: M.template.get( 'modules/wikigrok/WikiGrokDialogB.hogan' ),
-		initialize: function ( options ) {
+		initialize: function () {
 			var self = this;
 
-			options.contentMsg = 'Which of these tags best describe ' + options.title + '?';
 			WikiGrokDialog.prototype.initialize.apply( this, arguments );
 
 			// log page impression and widget impression when the widget is shown
@@ -67,6 +66,7 @@
 			// Now work out the labels if we have some suggestions
 			if ( suggestionsList.length ) {
 				self.apiWikiData.getLabels( suggestionsList ).done( function ( labels ) {
+					self.$( '.wg-buttons' ).html('');
 					$.each( labels, function ( itemId, label ) {
 						var btnLabel, $tag,
 							prop = lookupProp[itemId],
@@ -77,7 +77,7 @@
 								$( this ).toggleClass( 'mw-ui-progressive' );
 								// Update save button
 								setTimeout( function () {
-									self.$save.prop( 'disabled', self.$( '.initial-pane .mw-ui-progressive' ).length === 0 );
+									self.$save.prop( 'disabled', self.$( '.wg-buttons .mw-ui-progressive' ).length === 0 );
 								}, 100 );
 							} ).appendTo( self.$( '.wg-buttons' ) );
 
@@ -109,23 +109,26 @@
 				} );
 			}
 		},
-		postRender: function () {
+		/**
+		 * Fetch suggestions from the server and show them to the user.
+		 * Also record claims when the user hits the save button.
+		 * @method
+		 * @param {Object} options
+		 */
+		askWikidataQuestion: function ( options ) {
 			var self = this;
-			this.$save = this.$( '.mw-ui-constructive' );
-			// hide the completion screen
-			self.$( '.final-pane' ).hide();
 
-			this.hide();
-			self.apiWikiData.getClaims().done( function ( claims ) {
-				if ( claims.isHuman ) {
-					self.apiWikiGrok.getSuggestions().done( function ( suggestions ) {
-						self._renderSuggestions( suggestions );
-					} );
-				}
-			} );
+			self.$( '.wg-notice' ).hide();
+			self.$( '.wg-buttons' ).html( '<div class="spinner loading"></div>' );
+			self.$( 'wg-content' ).text( 'Which of these tags best describe ' + options.title + '?' );
+			self.$( '.footer' ).show();
+
+			self._renderSuggestions( options.suggestions );
+
+			this.$save = this.$( '.mw-ui-constructive' );
 			this.$save.on( 'click', function () {
 				var answers = [];
-				self.$( '.initial-pane .mw-ui-progressive' ).hide().each( function () {
+				self.$( '.wg-buttons .mw-ui-progressive' ).each( function () {
 					answers.push( {
 						correct: true,
 						prop: $( this ).data( 'propName' ),
@@ -134,12 +137,12 @@
 						valueid: $( this ).data( 'itemId' )
 					} );
 				} );
-				$( this ).hide();
+
 				self.$( '.spinner' ).show();
 				self.apiWikiGrok.recordClaims( answers ).done( function () {
-					self.$( '.spinner' ).hide();
-					self.$( '.initial-pane' ).hide();
-					self.$( '.final-pane' ).show();
+					self.$( '.wg-buttons, .footer' ).hide();
+					self.$( '.wg-content' ).text( 'You just made Wikipedia a little better, thanks!' );
+					self.$( '.wg-link' ).show();
 					self.log( 'widget-click-submit' );
 				} );
 			} );
@@ -147,6 +150,52 @@
 			// hide this Dialog when the user reads more about Wikigrok
 			this.$( '.tell-more' ).on( 'click', function () {
 				self.hide();
+				self.log( 'widget-click-moreinfo' );
+			} );
+		},
+		/**
+		 * @inheritdoc
+		 */
+		postRender: function ( options ) {
+			var self = this;
+
+			// hide the completion screen and the spinner
+			self.$( '.wg-link, .footer, .spinner' ).hide();
+
+			// show the welcome screen once
+			if ( !options.beginQuestions ) {
+				options.beginQuestions = true;
+				this.$( '.wg-buttons .cancel' ).on( 'click', function () {
+					self.hide();
+					self.log( 'widget-click-nothanks' );
+				} );
+				this.$( '.wg-buttons .proceed' ).on( 'click', function () {
+					self.log( 'widget-click-accept' );
+					// Proceed with asking the user a metadata question.
+					self.askWikidataQuestion( options );
+				} );
+				// Log more info clicks
+				this.$( '.wg-notice-link' ).on( 'click', function () {
+					self.log( 'widget-click-moreinfo' );
+				} );
+
+				this.reveal( options );
+			}
+		},
+
+		reveal: function ( options ) {
+			var self = this;
+
+			options.suggestions = {};
+			self.apiWikiData.getClaims().done( function ( claims ) {
+				if ( claims.isHuman ) {
+					self.apiWikiGrok.getSuggestions().done( function ( suggestions ) {
+						if ( !$.isEmptyObject( suggestions ) ) {
+							options.suggestions = suggestions;
+							self.show();
+						}
+					} );
+				}
 			} );
 		}
 	} );

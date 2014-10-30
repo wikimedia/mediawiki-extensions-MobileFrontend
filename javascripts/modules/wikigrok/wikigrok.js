@@ -128,9 +128,7 @@
 				}
 			}
 
-			if ( !M.settings.getUserSetting( 'mfHideWikiGrok' ) ) {
-				init();
-			}
+			init();
 		} );
 
 		// Make OverlayManager handle '#/wikigrok/about' links.
