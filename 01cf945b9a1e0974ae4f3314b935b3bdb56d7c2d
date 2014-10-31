@@ -16,6 +16,24 @@
       "revId": "01cf945b9a1e0974ae4f3314b935b3bdb56d7c2d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5268f4f1",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-10-31T18:07:30Z",
+      "side": 1,
+      "message": "The code is in an \u0027if\u0027 statement, so I think it\u0027s fine.",
+      "parentUuid": "6e936f18_f2f9004c",
+      "revId": "01cf945b9a1e0974ae4f3314b935b3bdb56d7c2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
