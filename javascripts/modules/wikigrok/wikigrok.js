@@ -13,7 +13,8 @@
 				view: 'modules/wikigrok/WikiGrokDialogB'
 			}
 		},
-		version;
+		version,
+		DEFAULT_VERSION = 'A';
 
 	/*
 	 * Gets the version of wikigrok to use.
@@ -24,11 +25,27 @@
 	 * If anonymous:
 	 *   * If it had any particular version assigned, use that one.
 	 *   * Else, assign randomly a wikigrok version to use.
+	 *
+	 * The `wikigrokversion` query parameter can be used to override this logic,
+	 * `wikigrokversion=a` means that A will always be used. If the override
+	 * version doesn't exist, then the default version (currently A) will be used.
+	 *
 	 * @return {Object}
 	 */
 	function getWikiGrokVersion() {
 		var cookieName = mw.config.get( 'wgCookiePrefix' ) + '-wikiGrokAnonymousVersion',
-			anonVersion = $.cookie( cookieName );
+			anonVersion = $.cookie( cookieName ),
+			versionOverride;
+
+		if ( M.query.wikigrokversion ) {
+			versionOverride = M.query.wikigrokversion.toUpperCase();
+
+			if ( versions.hasOwnProperty( versionOverride ) ) {
+				return versions[versionOverride];
+			}
+
+			return versions[DEFAULT_VERSION];
+		}
 
 		if ( !mw.user.isAnon() ) {
 			if ( M.isAlphaGroupMember() ) {
