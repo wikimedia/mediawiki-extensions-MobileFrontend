@@ -54,9 +54,9 @@
 		router.route( 'testprevent', spy );
 
 		// try preventing second route (#testprevent)
-		router.one( 'route', function() {
+		router.once( 'route', function() {
 			setHash( '#testprevent' );
-			router.one( 'route', function( ev ) {
+			router.once( 'route', function( ev ) {
 				ev.preventDefault();
 			} );
 		} );

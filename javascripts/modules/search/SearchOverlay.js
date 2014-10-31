@@ -38,7 +38,7 @@
 
 			// FIXME: horrible, remove when we get overlay manager
 			// we need this because of the focus/delay hack in search.js
-			M.router.one( 'route', function () {
+			M.router.once( 'route', function () {
 				self.closeOnBack = true;
 				self._hideOnRoute();
 			} );
