@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_f2f9004c",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-31T17:58:58Z",
+      "side": 1,
+      "message": "M.query.wikigrokversion might not exist...  in which case you are uppercasing an undefined variable.\n\nversionOverride \u003d M.query.wikigrokversion || \u0027A\u0027",
+      "revId": "01cf945b9a1e0974ae4f3314b935b3bdb56d7c2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
