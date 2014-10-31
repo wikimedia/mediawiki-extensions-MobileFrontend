@@ -15,7 +15,7 @@
 		},
 		className: 'language-overlay overlay',
 		templatePartials: {
-			content: M.template.get( 'modules/languages/LanguageOverlay.hogan' )
+			content: mw.template.get( 'mobile.languages', 'LanguageOverlay.hogan' )
 		},
 
 		initialize: function ( options ) {

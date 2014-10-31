@@ -256,7 +256,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.editor.common' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.editor.common' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
@@ -270,8 +271,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/editor/editor.less',
 		),
 		'templates' => array(
-			'modules/editor/switcher.hogan',
-			'modules/editor/EditorOverlayBase.hogan',
+			'switcher.hogan' => 'templates/modules/editor/switcher.hogan',
+			'EditorOverlayBase.hogan' => 'templates/modules/editor/EditorOverlayBase.hogan',
 		),
 		'messages' => array(
 			// modules/editor/EditorOverlay.js
@@ -348,7 +349,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.uploads' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.uploads' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
@@ -368,10 +370,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/uploads/PhotoUploadOverlay.less',
 		),
 		'templates' => array(
-			'modules/uploads/LeadPhoto.hogan',
-			'modules/uploads/UploadTutorial.hogan',
-			'modules/uploads/PhotoUploadOverlay.hogan',
-			'modules/uploads/PhotoUploadProgress.hogan',
+			'LeadPhoto.hogan' => 'templates/modules/uploads/LeadPhoto.hogan',
+			'UploadTutorial.hogan' => 'templates/modules/uploads/UploadTutorial.hogan',
+			'PhotoUploadOverlay.hogan' => 'templates/modules/uploads/PhotoUploadOverlay.hogan',
+			'PhotoUploadProgress.hogan' => 'templates/modules/uploads/PhotoUploadProgress.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-success-article',
@@ -448,10 +450,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'bottom',
 	),
 
-	'mobile.search' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.search' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
 			'mobile.pagelist.scripts',
-			'mobile.overlays'
+			'mobile.overlays',
+			'mobile.templates',
 		),
 		'styles' => array(
 			'less/modules/search/SearchOverlay.less',
@@ -462,7 +466,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/search/search.js',
 		),
 		'templates' => array(
-			'modules/search/SearchOverlay.hogan',
+			'SearchOverlay.hogan' => 'templates/modules/search/SearchOverlay.hogan',
 		),
 		'messages' => array(
 			// for search.js
@@ -791,15 +795,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.languages' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.languages' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
 			'mobile.overlays',
+			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/modules/languages/LanguageOverlay.js',
 		),
 		'templates' => array(
-			'modules/languages/LanguageOverlay.hogan',
+			'LanguageOverlay.hogan' => 'templates/modules/languages/LanguageOverlay.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-language-heading',

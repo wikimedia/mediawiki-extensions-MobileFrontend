@@ -8,7 +8,7 @@
 	 * @extends View
 	 */
 	LeadPhoto = View.extend( {
-		template: M.template.get( 'modules/uploads/LeadPhoto.hogan' ),
+		template: mw.template.get( 'mobile.uploads', 'LeadPhoto.hogan' ),
 
 		animate: function () {
 			this.$el.hide().slideDown();

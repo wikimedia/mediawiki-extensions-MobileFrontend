@@ -15,7 +15,7 @@
 			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' ),
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' )
 		},
-		template: M.template.get( 'modules/uploads/PhotoUploadProgress.hogan' ),
+		template: mw.template.get( 'mobile.uploads', 'PhotoUploadProgress.hogan' ),
 		fullScreen: false,
 
 		initialize: function () {

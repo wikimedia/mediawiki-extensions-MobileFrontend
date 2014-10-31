@@ -31,7 +31,7 @@
 			visualEditorMsg: mw.msg( 'mobile-frontend-editor-visual-editor' ),
 			sourceEditorMsg: mw.msg( 'mobile-frontend-editor-source-editor' )
 		} ),
-		template: M.template.get( 'modules/editor/EditorOverlayBase.hogan' ),
+		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
 		className: 'overlay editor-overlay',
 		log: function ( action, errorText ) {
 			var

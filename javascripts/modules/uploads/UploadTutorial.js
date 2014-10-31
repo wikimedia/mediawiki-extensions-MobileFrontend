@@ -13,7 +13,7 @@
 	 * @extends Overlay
 	 */
 	UploadTutorial = Overlay.extend( {
-		template: M.template.get( 'modules/uploads/UploadTutorial.hogan' ),
+		template: mw.template.get( 'mobile.uploads', 'UploadTutorial.hogan' ),
 		className: 'overlay carousel tutorial',
 
 		defaults: {

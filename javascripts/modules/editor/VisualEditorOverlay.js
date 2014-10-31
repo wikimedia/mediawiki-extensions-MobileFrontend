@@ -9,7 +9,7 @@
 	 */
 	VisualEditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
-			switcher: M.template.get( 'modules/editor/switcher.hogan' ),
+			switcher: mw.template.get( 'mobile.editor.common', 'switcher.hogan' ),
 			header: M.template.get( 'modules/editor/VisualEditorOverlayHeader.hogan' ),
 			content: M.template.get( 'modules/editor/VisualEditorOverlay.hogan' )
 		},

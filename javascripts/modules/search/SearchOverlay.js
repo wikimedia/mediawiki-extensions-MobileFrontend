@@ -18,7 +18,7 @@
 	 */
 	SearchOverlay = Overlay.extend( {
 		className: 'overlay search-overlay',
-		template: M.template.get( 'modules/search/SearchOverlay.hogan' ),
+		template: mw.template.get( 'mobile.search', 'SearchOverlay.hogan' ),
 		defaults: {
 			clearIcon: new Icon( { tagName: 'button', name: 'clear', additionalClassNames: 'clear' } ).toHtmlString(),
 			searchTerm: '',
