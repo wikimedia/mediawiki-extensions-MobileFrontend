@@ -770,6 +770,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/uploads/init.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/mediaViewer/init.js',
+			'javascripts/modules/languages/languages.js',
 		),
 		'messages' => array(
 			// lastEdited.js
@@ -796,8 +797,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/languages/LanguageOverlay.js',
-			// FIXME: Move to mobile.stable
-			'javascripts/modules/languages/languages.js',
 		),
 		'templates' => array(
 			'modules/languages/LanguageOverlay.hogan',
