@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_7ddb8154",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-10-31T19:09:23Z",
+      "side": 1,
+      "message": "Also, this margin needs to be a tiny bit larger to prevent the button from ever overlapping. Looks like 4.5em works well.",
+      "revId": "1e64bf2a82c54826a6c4821a92f4e29149f4e223",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
