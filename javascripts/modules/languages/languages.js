@@ -1,23 +1,21 @@
 ( function ( M, $ ) {
 
-	var LanguageOverlay = M.require( 'languages/LanguageOverlay' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+	var MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
 	M.overlayManager.add( /^\/languages$/, function () {
-		var LoadingOverlay = M.require( 'LoadingOverlay' ),
-			loadingOverlay = new LoadingOverlay(),
-			result = $.Deferred();
+		var result = $.Deferred();
 
-		loadingOverlay.show();
+		M.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
+			var LanguageOverlay = M.require( 'languages/LanguageOverlay' );
 
-		M.pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
-			loadingOverlay.hide();
-			result.resolve( new LanguageOverlay( {
-				languages: data.languages,
-				variants: data.variants
-			} ) );
+			M.pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
+				loadingOverlay.hide();
+				result.resolve( new LanguageOverlay( {
+					languages: data.languages,
+					variants: data.variants
+				} ) );
+			} );
 		} );
-
 		return result;
 	} );
 
