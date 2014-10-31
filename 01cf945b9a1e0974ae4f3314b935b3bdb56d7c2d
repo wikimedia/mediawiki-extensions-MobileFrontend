@@ -127,6 +127,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_5da005f1",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-10-31T18:28:45Z",
+      "side": 1,
+      "message": "Done for half of these comments.",
+      "parentUuid": "6e936f18_5d2325a6",
+      "revId": "01cf945b9a1e0974ae4f3314b935b3bdb56d7c2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_f2a7c04b",
         "filename": "javascripts/modules/wikigrok/wikigrok.js",
         "patchSetId": 2
