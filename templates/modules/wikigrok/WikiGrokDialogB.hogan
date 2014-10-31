@@ -16,7 +16,7 @@
 
 	<div class="footer">
 		<span class="license">All submissions are <a href="#/wikigrok/about">released freely</a>.</span>
-		<button class="mw-ui-button mw-ui-constructive save" disabled>Next</button>
+		<button class="mw-ui-button mw-ui-constructive save">Next</button>
 		<div class="spinner loading"></div>
 	</div>
 </div>
