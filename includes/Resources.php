@@ -587,6 +587,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/Overlay.js',
 			'javascripts/LoadingOverlay.js',
+			'javascripts/moduleLoader.js',
 		),
 		'messages' => array(
 			'mobile-frontend-overlay-close',
@@ -795,6 +796,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/languages/LanguageOverlay.js',
+			// FIXME: Move to mobile.stable
 			'javascripts/modules/languages/languages.js',
 		),
 		'templates' => array(
