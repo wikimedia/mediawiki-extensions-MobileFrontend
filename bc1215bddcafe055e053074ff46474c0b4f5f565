@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_bdfa69b4",
+        "filename": "javascripts/loggingSchemas/mobileWebWikiGrokError.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-31T19:10:26Z",
+      "side": 1,
+      "message": "I\u0027m getting a jscs error but there doesn\u0027t seem to be one :S does this happen to you?\n\nRunning \"jscs:src\" (jscs) task\nMultiple line break at javascripts/loggingSchemas/mobileWebWikiGrokError.js :\n    11 |\n    12 |} )( mw.mobileFrontend, jQuery );\n    13 |\n--------^\n    14 |\n\u003e\u003e 1 code style errors found!",
+      "revId": "bc1215bddcafe055e053074ff46474c0b4f5f565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5d29e534",
+        "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-31T19:10:26Z",
+      "side": 1,
+      "message": "Extra space!\n\nCan data.entities[id] be undefined?\n\nAlso long ifs should be something like this:\n\n\tif (\n\t\tdata.entities !\u003d\u003d undefined \u0026\u0026\n\t\tdata.entities[ id ].claims !\u003d\u003d undefined \u0026\u0026\n\t\tdata.entities[ id ].claims.P31 !\u003d\u003d undefined\n\t) {\n\n\nhttps://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript",
+      "revId": "bc1215bddcafe055e053074ff46474c0b4f5f565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
