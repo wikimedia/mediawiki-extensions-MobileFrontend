@@ -32,10 +32,43 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	}
 
 	/**
-	 * Add categories section to Meta section in page
+	 * Render secondary page actions
 	 */
-	protected function renderMetaSections() {
+	protected function renderSecondaryActions() {
+		// FIXME: This should be a button like language button (bug 73008)
 		$this->renderCategories();
-		parent::renderMetaSections();
+
+		parent::renderSecondaryActions();
+	}
+
+	/**
+	 * Get button information to link to Special:Nearby to find articles
+	 * (geographically) related to this
+	 */
+	public function getNearbyButton() {
+		global $wgMFNearby;
+		$title = $this->getSkin()->getTitle();
+		$result = array();
+
+		if ( $wgMFNearby && class_exists( 'GeoData' ) && GeoData::getPageCoordinates( $title ) ) {
+			$result['nearby'] = array(
+				'url' => SpecialPage::getTitleFor( 'Nearby' )->getFullUrl() . '#/page/' . $title->getText(),
+				'class' => 'nearbyButton',
+				'label' => wfMessage( 'mobile-frontend-nearby-sectiontext' )->text()
+			);
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Get page secondary actions
+	 */
+	protected function getSecondaryActions() {
+		$result = parent::getSecondaryActions();
+
+		$result += $this->getNearbyButton();
+
+		return $result;
 	}
 }

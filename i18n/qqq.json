@@ -212,6 +212,7 @@
 	"mobile-frontend-nearby-requirements": "Message shown to users who have no JavaScript or a browser that is not capable",
 	"mobile-frontend-nearby-requirements-guidance": "Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-requirements}}",
 	"mobile-frontend-nearby-title": "Title of [[Special:Nearby]].\n{{Identical|Nearby}}",
+	"mobile-frontend-nearby-sectiontext": "Name of the link, which links the user to [[Special:Nearby]] if the article has coordinates.",
 	"mobile-frontend-news-items": "The title that will appear before the element with the mf-itn selector.",
 	"mobile-frontend-opt-in-explain": "Used as description for the \"Beta\" in [[Special:MobileOptions]], if the beta is not enabled.",
 	"mobile-frontend-overlay-close": "Text for the button in an overlay that, when clicked, dismisses the overlay.\n{{Identical|Close}}",
