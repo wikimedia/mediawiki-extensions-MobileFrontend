@@ -109,6 +109,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_5d2325a6",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-31T18:22:27Z",
+      "side": 1,
+      "message": "Then don\u0027t make versionOverride \u003d M.query.wikigrokversion || \u0027A\u0027 default to a existing version, just let it be undefined or something else",
+      "parentUuid": "6e936f18_9233dc09",
+      "revId": "01cf945b9a1e0974ae4f3314b935b3bdb56d7c2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_f2a7c04b",
         "filename": "javascripts/modules/wikigrok/wikigrok.js",
         "patchSetId": 2
