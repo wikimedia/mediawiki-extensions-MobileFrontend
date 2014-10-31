@@ -24,6 +24,30 @@
 		},
 		typeDefaults: {
 			// FIXME: In future this should be configurable by Wikipedia admins
+			taxon: {
+				rows: [
+					{
+						// image
+						id: 'P18'
+					},
+					{
+						label: 'Conservation status',
+						id: 'P141'
+					},
+					{
+						label: 'Genus',
+						id: 'P171'
+					},
+					{
+						label: 'Species',
+						id: 'P225'
+					},
+					{
+						label: 'Geographic distribution',
+						id: 'P181'
+					}
+				]
+			},
 			country: {
 				rows: [
 					{
@@ -349,6 +373,8 @@
 				return this.typeDefaults.city;
 			} else if ( claims.isCountry ) {
 				return this.typeDefaults.country;
+			} else if ( claims.isTaxon ) {
+				return this.typeDefaults.taxon;
 			} else {
 				return this.typeDefaults.default;
 			}
