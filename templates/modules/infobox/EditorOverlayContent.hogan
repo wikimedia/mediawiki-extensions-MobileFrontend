@@ -1,0 +1,7 @@
+<div class="content">
+	{{{spinner}}}
+	<div class="editor-interface hidden">
+		{{{descriptionLabel}}}
+		<input class="mw-ui-input mw-ui-block description" value="{{description}}">
+	</div>
+</div>

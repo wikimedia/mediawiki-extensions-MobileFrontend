@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var Api = M.require( 'api' ).Api,
+	var api = M.require( 'api' ),
+		Api = api.Api,
 		WikiDataApi;
 	/**
 	 * Gets claims and labels from the WikiData API
@@ -7,10 +8,63 @@
 	 * @extends Api
 	 */
 	WikiDataApi = Api.extend( {
-		apiUrl: 'https://www.wikidata.org/w/api.php',
+		apiUrl: mw.config.get( 'wgMFWikiDataEndpoint' ),
 		useJsonp: true,
 		language: mw.config.get( 'wgUserLanguage' ),
+		/**
+		 * Get a central auth token from the current host for use on the foreign api.
+		 * @return {jQuery.Deferred}
+		 */
+		getCentralAuthToken: function () {
+			var data = {
+				action: 'centralauthtoken'
+			};
+			return api.get( data ).then( function ( resp ) {
+				return resp.centralauthtoken.centralauthtoken;
+			} );
+		},
+		/**
+		 * Get a token from a foreign API
+		 * @param {String} type of token you want to retrieve
+		 * @param {String} centralAuthToken to help get it
+		 * @return {jQuery.Deferred}
+		 */
+		getToken: function ( type, centralAuthToken ) {
+			var data = {
+				action: 'query',
+				meta: 'tokens',
+				origin: this.getOrigin(),
+				centralauthtoken: centralAuthToken,
+				type: type
+			};
+			return this.get( data ).then( function ( resp ) {
+				return resp.query.tokens[type + 'token'];
+			} );
+		},
+		/**
+		 * Post with support for central auth tokens
+		 * @inheritdoc
+		 */
+		post: function ( data ) {
+			var self = this,
+				d = $.Deferred();
 
+			// first let's sort out the token
+			self.getCentralAuthToken().done( function ( centralAuthTokenOne ) {
+				self.getToken( 'csrf', centralAuthTokenOne ).done( function ( editToken ) {
+					self.getCentralAuthToken().done( function ( centralAuthTokenTwo ) {
+						data.format = 'json';
+						data.centralauthtoken = centralAuthTokenTwo;
+						data.token = editToken;
+						data.origin = self.getOrigin();
+						$.post( self.apiUrl, data ).done( function ( resp ) {
+							d.resolve( resp );
+						} );
+					} );
+				} );
+			} );
+			return d;
+		},
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			this.subjectId = options.itemId;
@@ -112,6 +166,48 @@
 					}
 				} );
 				return map;
+			} );
+		},
+
+		/**
+		 * Store description.
+		 *
+		 * @param {string} value of new description
+		 * @return {jQuery.Deferred} Object returned by ajax call
+		 */
+		saveDescription: function ( value ) {
+			var self = this,
+				d = $.Deferred();
+
+			this.getInfo().done( function ( info ) {
+				self.post( {
+						action: 'wbsetdescription',
+						id: self.subjectId,
+						value: value,
+						summary: 'MobileFrontend Infobox alpha edit',
+						language: self.language,
+						baserevid: info.lastrevid,
+						bot: 1
+				} ).done( function ( resp ) {
+					d.resolve( resp );
+				} );
+			} );
+			return d;
+		},
+		/**
+		 * Get information about current wikidata entity
+		 *
+		 * FIXME: add error handling.
+		 * @inheritdoc
+		 */
+		getInfo: function () {
+			var id = this.subjectId;
+			return this.get( {
+				action: 'wbgetentities',
+				ids: id,
+				props: 'info'
+			} ).then( function ( resp ) {
+				return resp.entities[id];
 			} );
 		},
 		/**

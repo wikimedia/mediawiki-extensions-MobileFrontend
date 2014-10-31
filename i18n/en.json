@@ -360,5 +360,6 @@
 	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
 	"apihelp-parse-param-noimages": "Disable images in mobile output.",
 	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",
-	"mobile-frontend-donate-button-label": "Donate"
+	"mobile-frontend-donate-button-label": "Donate",
+	"mobile-frontend-wikidata-editor-description-label": "Describe ''$1'' in a single sentence:"
 }

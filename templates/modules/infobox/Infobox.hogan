@@ -17,4 +17,7 @@
 	{{/values}}
 </div>
 {{/rows}}
-<a href="https://m.wikidata.org/wiki/{{itemId}}">View on WikiData</a>
+<ul class="hlist">
+	<li><a href="https://m.wikidata.org/wiki/{{itemId}}" class="hidden">View on WikiData</a></li>
+	<li><a href='#/infobox/editor' class="hidden edit">Edit this information</a></li>
+</ul>

@@ -1007,6 +1007,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.infobox' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
 			'mobile.wikigrok.api',
 			'mobile.ajax',
@@ -1014,9 +1015,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'Infobox.hogan' => 'templates/modules/infobox/Infobox.hogan',
+			'EditorOverlayHeader.hogan' => 'templates/modules/infobox/EditorOverlayHeader.hogan',
+			'EditorOverlayContent.hogan' => 'templates/modules/infobox/EditorOverlayContent.hogan',
+		),
+		'messages' => array(
+			'mobile-frontend-wikidata-editor-description-label' => array( 'parse' ),
 		),
 		'scripts' => array(
 			'javascripts/modules/infobox/Infobox.js',
+			'javascripts/modules/infobox/InfoboxEditorOverlay.js',
 		),
 		'styles' => array(
 			'less/modules/infobox.less',

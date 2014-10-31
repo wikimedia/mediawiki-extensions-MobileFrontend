@@ -3,6 +3,7 @@
 		md5fn = M.require( 'hex_md5' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		View = M.require( 'View' ),
+		user = M.require( 'user' ),
 		icons = M.require( 'icons' );
 
 	/**
@@ -15,7 +16,7 @@
 	Infobox = View.extend( {
 		template: mw.template.get( 'mobile.infobox', 'Infobox.hogan' ),
 
-		className: 'wikidata-infobox',
+		className: 'wikidata-infobox pre-content',
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.spinner HTML of the spinner icon.
@@ -328,7 +329,6 @@
 				]
 			},
 			default: {
-				description: undefined,
 				rows: [
 					{
 						id: 'P18'
@@ -475,26 +475,49 @@
 			}
 		},
 		/**
+		 * Get the deferred object associated with the infobox
+		 *
+		 * @return {jQuery.Deferred}
+		 */
+		getDeferred: function () {
+			return this.$deferred;
+		},
+		/**
 		 * @inheritdoc
 		 */
 		initialize: function ( options ) {
+			this.$deferred = $.Deferred();
 			this.api = new WikiDataApi( {
 				itemId: options.itemId
 			} );
 
 			View.prototype.initialize.apply( this, arguments );
+			this.on( 'load', $.proxy( this, '_loadRest', options ) );
+		},
+		/**
+		 * Get an instance of the wikidata api
+		 *
+		 * @return {WikiDataApi}
+		 */
+		getApi: function () {
+			return this.api;
 		},
 		/**
 		 * @inheritdoc
 		 */
 		postRender: function ( options ) {
-			var _loadRest = this._loadRest,
+			var _postRender = this.postRender,
+				_emit = this.emit,
 				self = this;
 
+			if ( user.isAnon() ) {
+				this.$( '.edit' ).remove();
+			}
 			this.$( '.spinner' ).hide();
 			this.$( '.more' ).on( 'click', function () {
 				$( this ).remove();
-				_loadRest.call( self, options );
+				_emit.call( self, 'load' );
+				_postRender.call( self, options );
 			} );
 		},
 		/**
@@ -511,8 +534,10 @@
 			this.api.getClaims().done( function ( claims ) {
 				var rows;
 				options = $.extend( options, self.getDefaultsFromClaims( claims ) );
-				options.description = claims.description;
 				rows = options.rows;
+				if ( claims.description ) {
+					options.description = claims.description;
+				}
 				$.each( rows, function ( i, row ) {
 					if ( claims.entities && claims.entities[ row.id ] ) {
 						row.values = self._getValues( claims.entities[ row.id ] );
@@ -524,7 +549,10 @@
 
 				self._mapLabels( rows ).done( function ( rows ) {
 					options.rows = rows;
+					self.options = options;
+					self.$deferred.resolve();
 					_super.call( self, options );
+					self.$( '.hidden' ).removeClass( 'hidden' );
 					M.emit( 'photo-loaded', self.$el );
 				} );
 			} ).fail( function () {
