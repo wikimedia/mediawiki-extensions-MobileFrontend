@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var Api = M.require( 'api' ).Api, WikiDataApi;
+	var Api = M.require( 'api' ).Api,
+		WikiDataApi;
 	/**
 	 * Gets claims and labels from the WikiData API
 	 * @class WikiDataApi
@@ -8,25 +9,28 @@
 	WikiDataApi = Api.extend( {
 		apiUrl: 'https://www.wikidata.org/w/api.php',
 		useJsonp: true,
-		language: 'en',
+		language: mw.config.get( 'wgUserLanguage' ),
 
 		initialize: function ( options ) {
 			this.subjectId = options.itemId;
 			Api.prototype.initialize.apply( this, arguments );
 		},
 		getClaims: function () {
-			var id = this.subjectId;
+			var self = this,
+				id = this.subjectId;
+
 			return this.ajax( {
 				action: 'wbgetentities',
 				ids: id,
-				props: 'claims',
+				languages: this.language,
+				props: [ 'descriptions', 'claims' ],
 				format: 'json'
 			} ).then( function ( data ) {
-				var instanceClaims, entityClaims, instanceOf,
+				var description, instanceClaims, entityClaims, instanceOf,
 					claims = {};
 				// See if the page has any 'instance of' claims.
-				if ( data.entities !== undefined && data.entities[id].claims.P31 !== undefined ) {
-					entityClaims = data.entities[id].claims;
+				if ( data.entities !== undefined && data.entities[ id ].claims.P31 !== undefined ) {
+					entityClaims = data.entities[ id ].claims;
 					instanceClaims = entityClaims.P31;
 
 					// Examine claims closely
@@ -43,6 +47,14 @@
 					claims.hasDateOfBirth = entityClaims.P569 ? true : false;
 					claims.hasDateOfDeath = entityClaims.P570 ? true : false;
 
+					claims.entities = entityClaims;
+					description = data.entities[ id ];
+
+					if ( description ) {
+						if ( description.descriptions[ self.language ] ) {
+							claims.description = description.descriptions[ self.language ].value;
+						}
+					}
 					return claims;
 				} else {
 					return false;
@@ -59,21 +71,23 @@
 		getLabels: function ( itemIds ) {
 			var lang = this.language;
 			return this.ajax( {
-					action: 'wbgetentities',
-					props: 'labels',
-					languages: lang,
-					ids: itemIds
-				} ).then( function ( data ) {
-					var map = {};
-					$.each( itemIds, function ( i, itemId ) {
-						if ( data.entities[itemId].labels[lang].value !== undefined ) {
-							map[itemId] = data.entities[itemId].labels[lang].value;
-						} else {
-							map[itemId] = null;
-						}
-					} );
-					return map;
+				action: 'wbgetentities',
+				props: 'labels',
+				languages: lang,
+				ids: itemIds
+			} ).then( function ( data ) {
+				var map = {};
+				$.each( itemIds, function ( i, itemId ) {
+					if ( data.entities[ itemId ].labels &&
+						data.entities[ itemId ].labels[ lang ] !== undefined
+					) {
+						map[ itemId ] = data.entities[ itemId ].labels[ lang ].value;
+					} else {
+						map[ itemId ] = null;
+					}
 				} );
+				return map;
+			} );
 		}
 	} );
 
