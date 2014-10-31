@@ -849,6 +849,7 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$modules['editor'] = array( 'mobile.editor' );
 		}
+		// FIXME: This shouldn't be needed, LanguageOverlay should be loaded on demand.
 		$modules['languages'] = array( 'mobile.languages' );
 		$modules['newusers'] = array( 'mobile.newusers' );
 

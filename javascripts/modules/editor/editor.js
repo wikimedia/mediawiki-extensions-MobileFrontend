@@ -17,7 +17,6 @@
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = M.isWideScreen() && veConfig,
-		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		toast = M.require( 'toast' ),
 		pendingToast = M.settings.getUserSetting( 'mobile-pending-toast' ),
@@ -99,7 +98,6 @@
 
 		M.overlayManager.add( /^\/editor\/(\d+)\/?([^\/]*)$/, function ( sectionId, funnel ) {
 			var
-				loadingOverlay = new LoadingOverlay(),
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),
 				editorOptions = {
@@ -115,14 +113,12 @@
 				visualEditorNamespaces = veConfig && veConfig.namespaces;
 
 			function loadSourceEditor() {
-				mw.loader.using( 'mobile.editor.overlay', function () {
+				M.loadModule( 'mobile.editor.overlay' ).done( function () {
 					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
-					loadingOverlay.hide();
 					result.resolve( new EditorOverlay( editorOptions ) );
 				} );
 			}
 
-			loadingOverlay.show();
 			editorOptions.sectionId = page.isWikiText() ? parseInt( sectionId, 10 ) : null;
 
 			// Check whether VisualEditor should be loaded
@@ -141,11 +137,10 @@
 				// the VisualEditor is the default editor for this wiki
 				preferredEditor === 'VisualEditor'
 			) {
-				mw.loader.using( 'mobile.editor.ve', function () {
+				M.loadModule( 'mobile.editor.ve' ).done( function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
-					loadingOverlay.hide();
 					result.resolve( new VisualEditorOverlay( editorOptions ) );
-				}, loadSourceEditor );
+				} ).fail( loadSourceEditor );
 			} else {
 				loadSourceEditor();
 			}
