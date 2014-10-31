@@ -40,7 +40,8 @@ class SkinMinerva extends SkinTemplate {
 			Html::element(
 				'meta', array(
 					'name' => 'viewport',
-					'content' => 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0',
+					'content' => 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, ' .
+						'maximum-scale=5.0, width=device-width',
 				)
 			)
 		);

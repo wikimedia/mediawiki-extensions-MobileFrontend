@@ -184,8 +184,6 @@
 
 		$viewportMeta = $( 'meta[name="viewport"]' );
 		viewport = $viewportMeta.attr( 'content' );
-		// FIXME: remove when cache updates (a month)
-		$viewportMeta.attr( 'content', 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0' );
 
 		// when rotating to landscape stop page zooming on ios
 		// allow disabling of transitions in android ics 4.0.2
