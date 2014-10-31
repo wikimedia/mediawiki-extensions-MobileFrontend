@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_784dcf74",
+        "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-10-31T20:31:53Z",
+      "side": 1,
+      "message": "I would go for a switch here, are we anti-switch?",
+      "revId": "24adf830bf4f946cc787ba181f2223700c71d2d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
