@@ -6,7 +6,7 @@
 
 				if ( match ) {
 					$a.off();
-					$a.on( 'tap', function ( ev ) {
+					$a.on( 'click', function ( ev ) {
 						ev.preventDefault();
 						M.router.navigate( '#/image/' + match[0] );
 					} );

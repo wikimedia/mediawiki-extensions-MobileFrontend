@@ -28,7 +28,7 @@
 	// Once the DOM is loaded hijack the notifications button to display an overlay rather
 	// than linking to Special:Notifications.
 	$( function () {
-		$btn.on( 'tap', function () {
+		$btn.on( 'click', function () {
 			M.router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay

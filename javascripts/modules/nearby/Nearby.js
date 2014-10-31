@@ -163,7 +163,7 @@
 			this.$( 'a' ).each( function ( i ) {
 				// FIXME: not unique if multiple Nearby objects on same page
 				$( this ).attr( 'id', 'nearby-page-list-item-' + i );
-			} ).on( 'tap', function () {
+			} ).on( 'click', function () {
 				window.location.hash = $( this ).attr( 'id' );
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
