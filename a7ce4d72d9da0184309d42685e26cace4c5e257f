@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_2c6aa87e",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-31T22:29:04Z",
+      "side": 1,
+      "message": "Check $wgMFNearby as well. Some projects might have Geodata installed but not nearby.",
+      "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cc51c4de",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-31T22:29:04Z",
+      "side": 1,
+      "message": "Use Html::element for this kind of thing",
+      "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_8c02dcbc",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-31T22:29:04Z",
+      "side": 1,
+      "message": "All this seems like overkill - why not just have a link that is an mw-ui-button?",
+      "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_6c41900d",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-31T22:29:04Z",
+      "side": 1,
+      "message": "Use Html::element / Html::openElement for this kind of thing",
+      "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
