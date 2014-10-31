@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_3d09792f",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-31T18:21:40Z",
+      "side": 1,
+      "message": "I stand corrected :)",
+      "parentUuid": "6e936f18_9233dc09",
+      "revId": "01cf945b9a1e0974ae4f3314b935b3bdb56d7c2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_f2a7c04b",
         "filename": "javascripts/modules/wikigrok/wikigrok.js",
         "patchSetId": 2
@@ -102,6 +120,24 @@
       "writtenOn": "2014-10-31T18:08:21Z",
       "side": 1,
       "message": "We may need an else clause here, to be consistent with the behavior above (weird wikigrokversion param will go to default wikigrok version).\n\nIf we make the default version to A, create a var like defaultVersion \u003d \u0027A\u0027 close to where `versions` is defined, and down here in this else clause return `versions[defaultVersion]`",
+      "revId": "01cf945b9a1e0974ae4f3314b935b3bdb56d7c2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_dd0f3532",
+        "filename": "javascripts/modules/wikigrok/wikigrok.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-10-31T18:21:40Z",
+      "side": 1,
+      "message": "Yeh I\u0027d be happy with this too. It makes the function as a whole easier to scan.",
+      "parentUuid": "6e936f18_f2a7c04b",
       "revId": "01cf945b9a1e0974ae4f3314b935b3bdb56d7c2d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
