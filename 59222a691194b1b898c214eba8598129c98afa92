@@ -16,6 +16,24 @@
       "revId": "59222a691194b1b898c214eba8598129c98afa92",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_4f17e656",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-01T15:25:21Z",
+      "side": 1,
+      "message": "This is not needed at all, that\u0027s my fault :/ The username will truncated already, but the padding-right will be override by mw-ui-icon class (L139).",
+      "parentUuid": "6e936f18_ec1120fd",
+      "revId": "59222a691194b1b898c214eba8598129c98afa92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
