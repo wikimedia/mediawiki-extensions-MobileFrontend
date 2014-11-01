@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_8f364eff",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-01T15:02:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_2c6aa87e",
+      "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_cc51c4de",
         "filename": "includes/skins/MinervaTemplateAlpha.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-10-31T22:29:04Z",
       "side": 1,
       "message": "Use Html::element for this kind of thing",
+      "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2f25babc",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-01T15:02:05Z",
+      "side": 1,
+      "message": "removed :)",
+      "parentUuid": "6e936f18_cc51c4de",
       "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_6f43c267",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-01T15:02:05Z",
+      "side": 1,
+      "message": "That\u0027s a great idea, i will move the button to page-secondary-actions, ok? :)",
+      "parentUuid": "6e936f18_8c02dcbc",
+      "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_6c41900d",
         "filename": "includes/skins/MinervaTemplateAlpha.php",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2014-10-31T22:29:04Z",
       "side": 1,
       "message": "Use Html::element / Html::openElement for this kind of thing",
+      "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_0f2a3e8f",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-01T15:02:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_6c41900d",
       "revId": "a7ce4d72d9da0184309d42685e26cace4c5e257f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
