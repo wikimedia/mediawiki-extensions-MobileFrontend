@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_cf0a1629",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-01T15:27:02Z",
+      "side": 1,
+      "message": "Selfnote: Look at the line frist, before adding some new stuff! Truncated text already added by iconClass.",
+      "revId": "dd748b9d04084df735517d9df262a39d2a25af82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
