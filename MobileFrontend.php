@@ -142,6 +142,7 @@ $wgHooks['EventLoggingRegisterSchemas'][] =
 	'MobileFrontendHooks::onEventLoggingRegisterSchemas';
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
 $wgHooks['HTMLFileCache::useFileCache'][] = 'onHTMLFileCache_useFileCache';
+$wgHooks['LoginFormValidErrorMessages'][] = 'MobileFrontendHooks::onLoginFormValidErrorMessages';
 
 // use array_merge to ensure we do not override existing values set by core
 $wgSpecialPages = array_merge( $wgSpecialPages, array(
@@ -195,11 +196,6 @@ function efMobileFrontend_Setup() {
 			'wgMFThumbnailSmall' =>  MobilePage::SMALL_IMAGE_WIDTH . 'px',
 			'wgMFThumbnailMedium' => MobilePage::MEDIUM_IMAGE_WIDTH . 'px',
 		)
-	);
-	// FIXME: move out of this file. See bug 71769.
-	array_push(
-		LoginForm::$validErrorMessages,
-		'mobile-frontend-donate-image-anon'
 	);
 }
 
