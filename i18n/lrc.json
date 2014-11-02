@@ -37,6 +37,7 @@
 	"mobile-frontend-editor-editing-page": "<strong>ویرایشت</strong><span> $1</span>",
 	"mobile-frontend-editor-error": "خطا، ویرایشت اماییه نبی.",
 	"mobile-frontend-editor-error-conflict": "خطا، یه گل کاریار هنی ای بلگه نه ویرایشت دئه.",
+	"mobile-frontend-editor-error-loading": "خطا، نبوئه ای بهر نه سوار بکیت.",
 	"mobile-frontend-editor-keep-editing": "ویرایشت نه ادامه بئیت.",
 	"mobile-frontend-editor-newpage-prompt": "ای بلگه نئیش. سی چی گپ نبا و راستش نمی کید؟",
 	"mobile-frontend-editor-save": "اماییه كردن",
@@ -51,6 +52,7 @@
 	"mobile-frontend-editor-visual-editor": "ویرایشت",
 	"mobile-frontend-editor-wait": "د حال اماییه کردن ویرایشت، لطف آهره داری بکیت.",
 	"mobile-frontend-enable-images": "کنشتگر کردن عسگ د دیارگه موبایلی",
+	"mobile-frontend-expand-sections-status": "وا کردن همه جابئریا",
 	"mobile-frontend-first-upload-wizard-new-page-1": "عسگیایی که هان{{نوم دیارگه}} د  ویکی رسانه هومبئری گرته بیه",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "روئه دش؟",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "هری!",
@@ -155,6 +157,7 @@
 	"mobile-frontend-settings-site-header": "{{نوم مالگه}} زونا",
 	"mobile-frontend-sign-in-heading": "اومائن",
 	"mobile-frontend-sign-up-heading": "ثوت نام كردن",
+	"mobile-frontend-talk-add-overlay-submit": "اضاف کردن چک چنه",
 	"mobile-frontend-talk-overlay-header": "چك چنه",
 	"mobile-frontend-talk-reply": "جؤاو ده ئن",
 	"mobile-frontend-user-account": "حساو کاروری",
@@ -175,6 +178,9 @@
 	"mobile-frontend-watchlist-filter-talk": "چك چنه",
 	"mobile-frontend-watchlist-login-action": "اومائن سی ددیئن وه",
 	"mobile-frontend-watchlist-more": "بیشتر",
+	"mobile-frontend-watchlist-view": "سیل برگ خوتونه بوینیت",
 	"nearby": "بلگه نزيكتو",
-	"tag-mobile_edit-description": "ویرایشت سی سیلجا هومدرونگ راس بیه"
+	"tag-mobile_edit": "ویرایشت موبایلی",
+	"tag-mobile_edit-description": "ویرایشت سی سیلجا هومدرونگ راس بیه",
+	"tag-mobile_web_edit": "ویرایشت تیارگه موبایلی"
 }
