@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_595fafe8",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-03T17:57:23Z",
+      "side": 1,
+      "message": "Unnecessary when you see my other comment.",
+      "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_392ae32b",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-03T17:57:23Z",
+      "side": 1,
+      "message": "The function is called render but returns a string.. :) simply echo out!",
+      "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_d9f17fdb",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-03T17:57:23Z",
+      "side": 1,
+      "message": "renderMetaSections should work like renderCategories and actually render. Don\u0027t pass it to renderMetaSections.",
+      "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
