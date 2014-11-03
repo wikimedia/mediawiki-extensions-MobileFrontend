@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-var sectionHtml = M.template.get( 'modules/toggling/section.hogan' ).render(),
+var sectionHtml = mw.template.get( 'mobile.toggling.tests', 'section.hogan' ).render(),
 	toggle = M.require( 'toggle' );
 
 /**

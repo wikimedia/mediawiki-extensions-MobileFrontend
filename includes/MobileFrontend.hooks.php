@@ -260,11 +260,10 @@ class MobileFrontendHooks {
 	) {
 		global $wgResourceModules;
 
+		$baseTemplateDir = 'tests/qunit/templates/';
 		$testModuleBoilerplate = array(
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
-			'localTemplateBasePath' => dirname( __DIR__ ) . '/tests/qunit/templates',
-			'class' => 'ResourceLoaderTemplateModule',
 			'targets' => array( 'mobile' ),
 		);
 
@@ -281,11 +280,11 @@ class MobileFrontendHooks {
 						$testFiles[] = $testFile;
 					}
 
+					// FIXME: Rewrite/cleanup the template logic
 					// save the relative name of the template directory
 					$templateDir = str_replace( 'javascripts/', '', dirname( $script ) );
 					// absolute filepath to the template dir (for several checks)
-					$templateAbsoluteDir = $testModuleBoilerplate['localTemplateBasePath']
-						. '/' . $templateDir;
+					$templateAbsoluteDir = dirname( __DIR__ ) . '/' . $baseTemplateDir . $templateDir;
 
 					// check, if there is a template directory to load templates from
 					if ( file_exists( $templateAbsoluteDir ) && is_dir( $templateAbsoluteDir ) ) {
@@ -301,7 +300,7 @@ class MobileFrontendHooks {
 								continue;
 							}
 							// add this template to the templates array
-							$templates[] = $templateDir . '/' . $template;
+							$templates[$template] = $baseTemplateDir . $templateDir . '/' . $template;
 						}
 						// close the directory handle
 						closedir( $templateHandle );

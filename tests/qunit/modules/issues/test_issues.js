@@ -5,7 +5,7 @@ var cleanuptemplates = M.require( 'cleanuptemplates' );
 QUnit.module( 'MobileFrontend issues', {
 	setup: function() {
 		$( '<div id="mfe-test-issues">' +
-			M.template.get( 'modules/issues/issues.hogan' ).text +
+			mw.template.get( 'mobile.issues.tests', 'issues.hogan' ).text +
 			'</div>' ).appendTo( '#qunit-fixture' );
 	},
 	teardown: function() {
