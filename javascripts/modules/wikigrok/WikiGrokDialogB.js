@@ -66,7 +66,8 @@
 			// Now work out the labels if we have some suggestions
 			if ( suggestionsList.length ) {
 				self.apiWikiData.getLabels( suggestionsList ).done( function ( labels ) {
-					self.$( '.wg-buttons' ).html('');
+					self.$( '.wg-buttons' ).hide();
+					self.$( '.tags' ).show();
 					$.each( labels, function ( itemId, label ) {
 						var btnLabel, $tag,
 							prop = lookupProp[itemId],
@@ -75,7 +76,7 @@
 						$tag = $( '<div class="ui-tag-button mw-ui-button">' ).
 							on( 'click', function () {
 								$( this ).toggleClass( 'mw-ui-progressive' );
-							} ).appendTo( self.$( '.wg-buttons' ) );
+							} ).appendTo( self.$( '.tags' ) );
 
 						// FIXME: Use a template for this magic.
 						$tag.attr( 'id', id ).
@@ -131,7 +132,7 @@
 
 				self.$( '.spinner' ).show();
 				self.apiWikiGrokResponse.recordClaims( answers ).done( function () {
-					self.$( '.wg-buttons, .footer' ).hide();
+					self.$( '.tags, .footer' ).hide();
 					self.$( '.wg-content' ).text( 'You just made Wikipedia a little better, thanks!' );
 					self.$( '.wg-link' ).show();
 				} );
@@ -150,8 +151,7 @@
 		postRender: function ( options ) {
 			var self = this;
 
-			// hide the completion screen and the spinner
-			self.$( '.wg-link, .footer, .spinner' ).hide();
+			self.$( '.tags, .wg-link, .footer, .spinner' ).hide();
 
 			// show the welcome screen once
 			if ( !options.beginQuestions ) {
