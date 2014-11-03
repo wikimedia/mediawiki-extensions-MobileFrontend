@@ -233,18 +233,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.editor.api' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.abusefilter' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable',
-		),
-		'scripts' => array(
-			'javascripts/modules/editor/EditorApi.js',
-			'javascripts/modules/editor/AbuseFilterOverlay.js',
-			'javascripts/modules/editor/AbuseFilterPanel.js',
+			'mobile.overlays',
+			'mobile.startup',
+			'mobile.templates',
 		),
 		'templates' => array(
-			'modules/editor/AbuseFilterOverlay.hogan',
-			'modules/editor/AbuseFilterPanel.hogan',
+			'Overlay.hogan' => 'templates/modules/editor/AbuseFilterOverlay.hogan',
+			'Panel.hogan' => 'templates/modules/editor/AbuseFilterPanel.hogan',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/AbuseFilterOverlay.js',
+			'javascripts/modules/editor/AbuseFilterPanel.js',
 		),
 		'messages' => array(
 			// AbuseFilterOverlay
@@ -253,6 +254,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-abusefilter-warning',
 			'mobile-frontend-editor-abusefilter-disallow',
 			'mobile-frontend-editor-abusefilter-read-more',
+		),
+	),
+
+	'mobile.editor.api' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			'mobile.abusefilter',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/EditorApi.js',
 		),
 	),
 

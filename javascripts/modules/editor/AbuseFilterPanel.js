@@ -13,7 +13,7 @@
 		defaults: {
 			readMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
 		},
-		template: M.template.get( 'modules/editor/AbuseFilterPanel.hogan' ),
+		template: mw.template.get( 'mobile.abusefilter', 'Panel.hogan' ),
 		className: 'panel hidden',
 
 		initialize: function () {
