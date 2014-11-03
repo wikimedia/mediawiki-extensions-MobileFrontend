@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_0d60fd2d",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-03T22:49:55Z",
+      "side": 1,
+      "message": "Whilst you\u0027re here use .empty() instead of .html(\u0027\u0027) also tags class should be in the template markup itself.",
+      "revId": "51c544e07c143200b8ddc17b74dcbe8a414e50d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cd59b591",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-03T22:49:55Z",
+      "side": 1,
+      "message": "Adding and removing this class seems wrong. Really we should only be showing/hiding/removing content in the template not changing its presentation - it makes things harder to debug.",
+      "revId": "51c544e07c143200b8ddc17b74dcbe8a414e50d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
