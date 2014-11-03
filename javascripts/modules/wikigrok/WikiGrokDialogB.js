@@ -75,10 +75,6 @@
 						$tag = $( '<div class="ui-tag-button mw-ui-button">' ).
 							on( 'click', function () {
 								$( this ).toggleClass( 'mw-ui-progressive' );
-								// Update save button
-								setTimeout( function () {
-									self.$save.prop( 'disabled', self.$( '.wg-buttons .mw-ui-progressive' ).length === 0 );
-								}, 100 );
 							} ).appendTo( self.$( '.wg-buttons' ) );
 
 						// FIXME: Use a template for this magic.
@@ -138,8 +134,8 @@
 					self.$( '.wg-buttons, .footer' ).hide();
 					self.$( '.wg-content' ).text( 'You just made Wikipedia a little better, thanks!' );
 					self.$( '.wg-link' ).show();
-					self.log( 'widget-click-submit' );
 				} );
+				self.log( 'widget-click-submit' );
 			} );
 
 			// hide this Dialog when the user reads more about Wikigrok
