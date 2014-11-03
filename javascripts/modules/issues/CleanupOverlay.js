@@ -10,7 +10,7 @@
 	 */
 	CleanupOverlay = Overlay.extend( {
 		templatePartials: {
-			content: M.template.get( 'modules/issues/cleanup.hogan' )
+			content: mw.template.get( 'mobile.issues', 'OverlayContent.hogan' )
 		},
 		defaults: {
 			className: icon.getClassName()

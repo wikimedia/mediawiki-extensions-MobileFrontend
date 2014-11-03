@@ -828,12 +828,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.issues' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.issues' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
 		),
 		'templates' => array(
-			'modules/issues/cleanup.hogan',
+			'OverlayContent.hogan' => 'templates/modules/issues/cleanup.hogan',
 		),
 		'styles' => array(
 			'less/modules/issues.less',
