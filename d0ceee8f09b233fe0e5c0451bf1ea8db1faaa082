@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_79906bf1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-03T18:36:03Z",
+      "side": 0,
+      "message": "You need to keep this otherwise pages like Special:PrefixIndex lose their styling :(\n\nCreate a convenience function called enableMediaWikiUI and call it in both places (yucky I know)",
+      "revId": "d0ceee8f09b233fe0e5c0451bf1ea8db1faaa082",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
