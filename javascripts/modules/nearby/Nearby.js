@@ -37,7 +37,7 @@
 			spinner: M.template.get( 'spinner.hogan' ),
 			pageList: PageList.prototype.template
 		},
-		template: M.template.get( 'modules/nearby/nearby.hogan' ),
+		template: mw.template.get( 'mobile.nearby', 'Nearby.hogan' ),
 		getCurrentPosition: function () {
 			var result = $.Deferred();
 			if ( M.supportsGeoLocation() ) {

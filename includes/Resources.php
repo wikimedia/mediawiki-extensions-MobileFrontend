@@ -851,7 +851,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.nearby' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.ajax',
 			'mobile.stable.common',
@@ -884,7 +884,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/nearby/Nearby.js',
 		),
 		'templates' => array(
-			'modules/nearby/nearby.hogan',
+			'Nearby.hogan' => 'templates/modules/nearby/nearby.hogan',
 		),
 	),
 
