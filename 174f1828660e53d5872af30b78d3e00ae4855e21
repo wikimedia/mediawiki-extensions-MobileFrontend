@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e936f18_8f1dee7a",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-03T18:14:01Z",
+      "side": 1,
+      "message": "I\u0027m not sure, if this is the best label for the button :/",
+      "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_595fafe8",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 3
@@ -30,6 +47,24 @@
       "writtenOn": "2014-11-03T17:57:23Z",
       "side": 1,
       "message": "The function is called render but returns a string.. :) simply echo out!",
+      "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_99d3f704",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-03T18:14:01Z",
+      "side": 1,
+      "message": "Yeah, that\u0027s correct, but the goal is to have both (category and nearby link) in page-secondary-actions, or do you think it\u0027s unneeded? :)",
+      "parentUuid": "6e936f18_392ae32b",
       "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
