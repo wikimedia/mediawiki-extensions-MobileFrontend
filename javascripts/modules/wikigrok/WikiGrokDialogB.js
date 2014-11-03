@@ -130,7 +130,7 @@
 				} );
 
 				self.$( '.spinner' ).show();
-				self.apiWikiGrok.recordClaims( answers ).done( function () {
+				self.apiWikiGrokResponse.recordClaims( answers ).done( function () {
 					self.$( '.wg-buttons, .footer' ).hide();
 					self.$( '.wg-content' ).text( 'You just made Wikipedia a little better, thanks!' );
 					self.$( '.wg-link' ).show();
@@ -180,7 +180,7 @@
 			options.suggestions = {};
 			self.apiWikiData.getClaims().done( function ( claims ) {
 				if ( claims.isHuman ) {
-					self.apiWikiGrok.getSuggestions().done( function ( suggestions ) {
+					self.apiWikiGrokSuggestion.getSuggestions().done( function ( suggestions ) {
 						if ( !$.isEmptyObject( suggestions ) ) {
 							options.suggestions = suggestions;
 							self.show();

@@ -333,7 +333,8 @@ class MobileFrontendHooks {
 			'medium' => MobilePage::MEDIUM_IMAGE_WIDTH
 		);
 		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
-		$vars['wgMFEnableWikiGrok'] = $wgMFEnableWikiGrok;
+		// Requires WikiGrok extension
+		$vars['wgMFEnableWikiGrok'] = $wgMFEnableWikiGrok && class_exists( 'WikiGrok\Api\ApiResponse' );
 		$vars['wgMFEnableWikiGrokOnAllDevices'] = $wgMFEnableWikiGrokOnAllDevices;
 
 		// Set the licensing agreement that is displayed in the editor.
