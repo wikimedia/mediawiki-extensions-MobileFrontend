@@ -8,7 +8,7 @@
 	 * @extends Overlay
 	 */
 	LoadingOverlay = Overlay.extend( {
-		template: M.template.get( 'LoadingOverlay.hogan' )
+		template: mw.template.get( 'mobile.overlays', 'LoadingOverlay.hogan' )
 	} );
 
 	M.define( 'LoadingOverlay', LoadingOverlay );

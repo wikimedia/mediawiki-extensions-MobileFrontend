@@ -44,7 +44,7 @@
 		templatePartials: {
 			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' )
 		},
-		template: M.template.get( 'Overlay.hogan' ),
+		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),
 		defaults: {
 			cancelButton: new Icon( { tagName: 'button',
 					name: 'cancel', additionalClassNames: 'cancel',
