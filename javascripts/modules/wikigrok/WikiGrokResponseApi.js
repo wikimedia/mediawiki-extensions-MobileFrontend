@@ -33,7 +33,7 @@
 				// TODO: Change 'source' to 'taskType' for consistency
 				// Change needs to be also made in WikiGrok::ApiResponse
 				source: this.taskType,
-				mobile_mode: mw.config.get( 'wgMFMode' ),
+				mobile_mode: M.getMode(),
 				testing: this.testing,
 				claims: JSON.stringify( claims )
 			} );

@@ -4,7 +4,7 @@
 	function log( data ) {
 		var options = {
 			pageId: mw.config.get( 'wgArticleId' ),
-			mobileMode: mw.config.get( 'wgMFMode' ),
+			mobileMode: M.getMode(),
 			isLoggedIn: !user.isAnon()
 		};
 		// If the user is logged in, record username and edit count

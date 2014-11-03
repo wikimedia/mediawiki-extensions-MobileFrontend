@@ -2,7 +2,7 @@
 	function log( data ) {
 		var options = {
 			pageId: mw.config.get( 'wgArticleId' ),
-			mobileMode: mw.config.get( 'wgMFMode' )
+			mobileMode: M.getMode()
 		};
 		return M.log( 'MobileWebWikiGrokError', $.extend( options, data ) );
 	}

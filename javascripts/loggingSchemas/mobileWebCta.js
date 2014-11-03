@@ -8,7 +8,7 @@
 				status: status,
 				campaign: campaign || M.query.campaign,
 				campaignStep: step,
-				mobileMode: mw.config.get( 'wgMFMode' )
+				mobileMode: M.getMode()
 			};
 
 		if ( username ) {
