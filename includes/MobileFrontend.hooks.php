@@ -947,4 +947,11 @@ class MobileFrontendHooks {
 	public static function onHTMLFileCache_useFileCache() {
 		return !MobileContext::singleton()->shouldDisplayMobileView();
 	}
+
+	/**
+	 * LoginFormValidErrorMessages hook handler to promote MF specific error message be valid.
+	 */
+	public static function onLoginFormValidErrorMessages( &$messages ) {
+		$messages[] = 'mobile-frontend-donate-image-anon';
+	}
 }
