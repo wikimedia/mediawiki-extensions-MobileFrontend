@@ -117,7 +117,7 @@
 		// FIXME: remove when OverlayManager used everywhere
 		_hideOnRoute: function () {
 			var self = this;
-			M.router.one( 'route', function ( ev ) {
+			M.router.once( 'route', function ( ev ) {
 				if ( !self.hide() ) {
 					ev.preventDefault();
 					self._hideOnRoute();
