@@ -111,6 +111,7 @@ $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 
 $wgHooks['LinksUpdate'][] = 'MobileFrontendHooks::onLinksUpdate';
 $wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::onRequestContextCreateSkin';
+$wgHooks['MediaWikiPerformAction'][] = 'MobileFrontendHooks::onMediaWikiPerformAction';
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] =
 	'MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec';
 $wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::onBeforePageRedirect';

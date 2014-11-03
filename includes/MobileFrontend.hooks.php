@@ -39,6 +39,24 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Enables the global booleans $wgHTMLFormAllowTableFormat and $wgUseMediaWikiUIEverywhere
+	 * for mobile users.
+	 */
+	private static function enableMediaWikiUI() {
+		global $wgHTMLFormAllowTableFormat, $wgUseMediaWikiUIEverywhere;
+
+		$mobileContext = MobileContext::singleton();
+
+		if ( $mobileContext->shouldDisplayMobileView() && !$mobileContext->isBlacklistedPage() ) {
+			// Force non-table based layouts (see bug 63428)
+			$wgHTMLFormAllowTableFormat = false;
+			// Turn on MediaWiki UI styles so special pages with form are styled.
+			// FIXME: Remove when this becomes the default.
+			$wgUseMediaWikiUIEverywhere = true;
+		}
+	}
+
+	/**
 	 * RequestContextCreateSkin hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
 	 *
@@ -47,8 +65,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFDefaultSkinClass, $wgULSPosition, $wgHTMLFormAllowTableFormat,
-			$wgUseMediaWikiUIEverywhere;
+		global $wgMFDefaultSkinClass, $wgULSPosition;
 
 		$mobileContext = MobileContext::singleton();
 
@@ -59,11 +76,8 @@ class MobileFrontendHooks {
 			return true;
 		}
 
-		// Force non-table based layouts (see bug 63428)
-		$wgHTMLFormAllowTableFormat = false;
-		// Turn on MediaWiki UI styles so special pages with form are styled.
-		// FIXME: Remove when this becomes the default.
-		$wgUseMediaWikiUIEverywhere = true;
+		// enable wgUseMediaWikiUIEverywhere
+		self::enableMediaWikiUI();
 
 		// FIXME: Remove hack around Universal Language selector bug 57091
 		$wgULSPosition = 'none';
@@ -101,6 +115,27 @@ class MobileFrontendHooks {
 		$skin = new $skinName( $context );
 
 		return false;
+	}
+
+	/**
+	 * MediaWikiPerformAction hook handler (enable mwui for all pages)
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MediaWikiPerformAction
+	 *
+	 * @param OutputPage $output
+	 * @param Article $article
+	 * @param Title $title
+	 * @param User $user
+	 * @param RequestContext $request
+	 * @param MediaWiki $wiki
+	 * @return bool
+	 */
+	public static function onMediaWikiPerformAction( $output, $article, $title,
+		$user, $request, $wiki
+	) {
+		self::enableMediaWikiUI();
+
+		// don't prevent performAction to do anything
+		return true;
 	}
 
 	/**
