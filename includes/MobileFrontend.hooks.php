@@ -898,7 +898,7 @@ class MobileFrontendHooks {
 		$additionalDependencies = array(),
 		$overwrite = false
 	) {
-		global $wgResourceModules, $wgMFMobileResourceBoilerplate;
+		global $wgResourceModules, $wgMFResourceFileModuleBoilerplate;
 
 		if ( isset( $wgResourceModules['mobile.loggingSchemas'] ) && !$overwrite ) {
 			return;
@@ -912,7 +912,7 @@ class MobileFrontendHooks {
 			'javascripts/loggingSchemas/mobileWebWikiGrokError.js',
 		);
 
-		$wgResourceModules['mobile.loggingSchemas'] = $wgMFMobileResourceBoilerplate + array(
+		$wgResourceModules['mobile.loggingSchemas'] = $wgMFResourceFileModuleBoilerplate + array(
 			'dependencies' => array_merge( $additionalDependencies, array(
 				'mobile.startup',
 			) ),
