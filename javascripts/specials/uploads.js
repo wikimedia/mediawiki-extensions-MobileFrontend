@@ -73,7 +73,7 @@
 	 * @extends View
 	 */
 	PhotoItem = View.extend( {
-		template: M.template.get( 'specials/photo.hogan' ),
+		template: mw.template.get( 'mobile.special.uploads.scripts', 'PhotoItem.hogan' ),
 		tagName: 'li'
 	} );
 
@@ -84,7 +84,7 @@
 	 * @extends View
 	 */
 	PhotoList = View.extend( {
-		template: M.template.get( 'specials/userGallery.hogan' ),
+		template: mw.template.get( 'mobile.special.uploads.scripts', 'PhotoList.hogan' ),
 		templatePartials: {
 			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' )
 		},

@@ -1067,13 +1067,13 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
-	'mobile.special.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable'
 		),
 		'templates' => array(
-			'specials/photo.hogan',
-			'specials/userGallery.hogan',
+			'PhotoItem.hogan' => 'templates/specials/photo.hogan',
+			'PhotoList.hogan' => 'templates/specials/userGallery.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-donate-image-nouploads',
