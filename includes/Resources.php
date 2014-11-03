@@ -715,7 +715,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.contentOverlays' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.contentOverlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
 		),
@@ -724,7 +724,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 		),
 		'templates' => array(
-			'modules/tutorials/PageActionOverlay.hogan',
+			'PageActionOverlay.hogan' => 'templates/modules/tutorials/PageActionOverlay.hogan',
 		),
 	),
 
