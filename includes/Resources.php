@@ -168,7 +168,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.startup' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.startup' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
 			'mobile.templates',
@@ -182,8 +182,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-language-article-heading',
 		),
 		'templates' => array(
-			'icon.hogan',
-			'Section.hogan',
+			'icon.hogan' => 'templates/icon.hogan',
+			'Section.hogan' => 'templates/Section.hogan',
 		),
 		'scripts' => array(
 			'javascripts/Router.js',

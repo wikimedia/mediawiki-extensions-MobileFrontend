@@ -10,7 +10,7 @@
 	 * @extends View
 	 */
 	Section = View.extend( {
-		template: M.template.get( 'Section.hogan' ),
+		template: mw.template.get( 'mobile.startup', 'Section.hogan' ),
 		defaults: {
 			line: undefined,
 			text: '',

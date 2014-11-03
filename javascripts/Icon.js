@@ -43,7 +43,7 @@
 		toHtmlString: function () {
 			return this.$el.html();
 		},
-		template: M.template.get( 'icon.hogan' )
+		template: mw.template.get( 'mobile.startup', 'icon.hogan' )
 	} );
 
 	M.define( 'Icon', Icon );
