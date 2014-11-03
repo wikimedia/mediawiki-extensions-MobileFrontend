@@ -16,6 +16,24 @@
       "revId": "2e40fc3b44db8805e39a27520c91e4a324c17fa1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_99be97f9",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-03T17:53:53Z",
+      "side": 1,
+      "message": "Damn, this i haven\u0027t seen :/ The whole solution looks hacky and i\u0027m happy, when mwui is enabled in core by default, but i will test this way (it\u0027s better as to have mwui buttons sometimes and sometimes not).",
+      "parentUuid": "6e936f18_d9965f97",
+      "revId": "2e40fc3b44db8805e39a27520c91e4a324c17fa1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
