@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_d9965f97",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-03T17:49:42Z",
+      "side": 1,
+      "message": "Uuhhh ohh.  This will enable these on desktop too!\nbut thanks for confirming this is indeed an issue. I thought I was going mad on Friday.\n\nWe need to find a hook which has MobileContext that runs early enough...\nVectorBeta uses ::onMediaWikiPerformAction onRequestContextCreateSkin\n\nIt\u0027s hacky but it should address this.",
+      "revId": "2e40fc3b44db8805e39a27520c91e4a324c17fa1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
