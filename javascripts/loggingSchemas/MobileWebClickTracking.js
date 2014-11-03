@@ -8,7 +8,7 @@
 			data = {
 				name: name,
 				destination: destination,
-				mobileMode: mw.config.get( 'wgMFMode' )
+				mobileMode: M.getMode()
 			};
 
 		if ( username ) {

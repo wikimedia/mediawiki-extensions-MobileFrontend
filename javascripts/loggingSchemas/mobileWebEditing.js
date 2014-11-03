@@ -10,7 +10,7 @@
 				isTestA: M.isTestA,
 				pageId: mw.config.get( 'wgArticleId' ),
 				username: user.getName() || '',
-				mobileMode: mw.config.get( 'wgMFMode' )
+				mobileMode: M.getMode()
 			};
 		return M.log( 'MobileWebEditing', $.extend( options, data ) );
 	}
