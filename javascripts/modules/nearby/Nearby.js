@@ -34,7 +34,7 @@
 			}
 		},
 		templatePartials: {
-			spinner: M.template.get( 'spinner.hogan' ),
+			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' ),
 			pageList: PageList.prototype.template
 		},
 		template: mw.template.get( 'mobile.nearby', 'Nearby.hogan' ),

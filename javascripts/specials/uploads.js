@@ -86,7 +86,7 @@
 	PhotoList = View.extend( {
 		template: M.template.get( 'specials/userGallery.hogan' ),
 		templatePartials: {
-			spinner: M.template.get( 'spinner.hogan' )
+			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' )
 		},
 		initialize: function () {
 			// how close a spinner needs to be to the viewport to trigger loading (px)

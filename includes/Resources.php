@@ -162,9 +162,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'mobile.ajax' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.ajax' => $wgMFResourceFileModuleBoilerplate + array(
 		'templates' => array(
-			'spinner.hogan',
+			'spinner.hogan' => 'templates/spinner.hogan',
 		),
 	),
 

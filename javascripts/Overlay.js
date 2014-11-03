@@ -42,7 +42,7 @@
 		 */
 		className: 'overlay',
 		templatePartials: {
-			spinner: M.template.get( 'spinner.hogan' )
+			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' )
 		},
 		template: M.template.get( 'Overlay.hogan' ),
 		defaults: {
