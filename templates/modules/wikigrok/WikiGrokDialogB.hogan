@@ -10,6 +10,10 @@
 			<button class="{{classes}}">{{label}}</button>
 		{{/buttons}}
 	</p>
+
+	<p class="tags">
+	</p>
+
 	{{#noticeMsg}}
 	<p class="wg-notice">{{{noticeMsg}}}</p>
 	{{/noticeMsg}}
