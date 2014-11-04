@@ -21,7 +21,7 @@
 		},
 		tagName: 'div',
 		className: watchIcon.getClassName(),
-		template: M.template.compile( '<a>{{tooltip}}</a>', 'hogan' ),
+		template: mw.template.compile( '<a>{{tooltip}}</a>', 'hogan' ),
 		initialize: function ( options ) {
 			var self = this, _super = View.prototype.initialize,
 				page = options.page;

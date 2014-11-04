@@ -5,7 +5,7 @@
 	ProgressBar = View.extend( {
 		className: 'progress-bar',
 
-		template: M.template.compile( '<div class="value"></div>', 'hogan' ),
+		template: mw.template.compile( '<div class="value"></div>', 'hogan' ),
 
 		setValue: function ( value ) {
 			this.$( '.value' ).css( 'width', value * 100 + '%' );

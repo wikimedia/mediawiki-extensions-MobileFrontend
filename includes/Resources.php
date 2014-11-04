@@ -737,6 +737,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.watchstar' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.templates',
 			// Needs Drawer
 			'mobile.stable.common',
 		),
