@@ -9,7 +9,7 @@
 				title: talkPrefix + M.getCurrentPage().title
 			};
 
-		M.loadModule( 'mobile.talk.common' ).done( function () {
+		M.loadModule( 'mobile.talk.overlays' ).done( function () {
 			var TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
 
 			result.resolve( new TalkOverlay( talkOptions ) );

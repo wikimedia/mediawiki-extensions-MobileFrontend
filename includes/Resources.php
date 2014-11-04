@@ -499,7 +499,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.talk.common' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.talk.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.talk',
 			'mobile.templates',
@@ -512,11 +512,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			// talk.js
-			'modules/talk/talk.hogan',
-			'modules/talk/talkSectionAdd.hogan',
-			'modules/talk/talkSectionAddHeader.hogan',
-			'modules/talk/talkSection.hogan',
-			'modules/talk/talkSectionHeader.hogan',
+			'content.hogan' => 'templates/modules/talk/talk.hogan',
+			'SectionAddOverlay/header.hogan' => 'templates/modules/talk/talkSectionAddHeader.hogan',
+			'SectionAddOverlay.hogan' => 'templates/modules/talk/talkSectionAdd.hogan',
+			'Section/header.hogan' => 'templates/modules/talk/talkSectionHeader.hogan',
+			'SectionOverlay.hogan' => 'templates/modules/talk/talkSection.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-talk-fullpage',
@@ -544,7 +544,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.mediaViewer' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.mediaViewer' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
 			// for Api.js
@@ -559,7 +559,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mediaViewer/ImageOverlay.js',
 		),
 		'templates' => array(
-			'modules/mediaViewer/ImageOverlay.hogan',
+			'Overlay.hogan' => 'templates/modules/mediaViewer/ImageOverlay.hogan',
 		),
 		'messages' => array(
 			// mediaViewer.js

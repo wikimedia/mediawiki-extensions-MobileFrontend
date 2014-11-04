@@ -14,7 +14,7 @@
 		// allow pinch zooming
 		hasFixedHeader: false,
 		className: 'overlay media-viewer',
-		template: M.template.get( 'modules/mediaViewer/ImageOverlay.hogan' ),
+		template: mw.template.get( 'mobile.mediaViewer', 'Overlay.hogan' ),
 		closeOnBack: true,
 
 		defaults: {
