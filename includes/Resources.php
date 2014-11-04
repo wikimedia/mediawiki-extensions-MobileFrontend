@@ -24,6 +24,66 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
+// An array of modules that should be loaded at the top of the page. These should not contain
+// any scripts or templates.
+$wgMinervaStyleModules = array(
+	'skins.minerva.chrome.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/reset.less',
+			'less/ui.less',
+			'less/pageactions.less',
+			'less/footer.less',
+			'less/common.less',
+			'less/icons.less',
+			'less/mainpage.less',
+		),
+	),
+	'skins.minerva.content.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/content/main.less',
+			'less/content/thumbnails.less',
+			'less/content/images.less',
+			'less/content/galleries.less',
+			'less/content/headings.less',
+			'less/content/blockquotes.less',
+			'less/content/lists.less',
+			'less/content/links.less',
+			'less/content/text.less',
+			'less/content/tables.less',
+			'less/content/hacks.less',
+		),
+	),
+	'skins.minerva.drawers.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/drawer.less',
+		),
+	),
+	'mobile.pagelist.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/pagelist.less',
+		),
+	),
+	'skins.minerva.tablet.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/tablet/common.less',
+			'less/tablet/hacks.less',
+		),
+	),
+	'skins.minerva.icons.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/iconsNew.less',
+		),
+	),
+	// FIXME: Explore whether this needs to exist.
+	'mobile.stable.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/common-js.less',
+			'less/modules/watchstar.less',
+			'less/modules/tutorials.less',
+		),
+	),
+);
+
 $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
@@ -32,13 +92,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/template.js',
 		),
-	),
-
-	'mobile.pagelist.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/pagelist.less',
-		),
-		'position' => 'top',
 	),
 
 	'mobile.pagelist.scripts' => $wgMFResourceFileModuleBoilerplate + array(
@@ -51,14 +104,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/PageList.js',
 		),
-	),
-
-	'skins.minerva.tablet.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/tablet/common.less',
-			'less/tablet/hacks.less',
-		),
-		'position' => 'top',
 	),
 
 	'mobile.toc' => $wgMFResourceFileModuleBoilerplate + array(
@@ -87,49 +132,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.toc',
 		),
-	),
-
-	'skins.minerva.chrome.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/reset.less',
-			'less/ui.less',
-			'less/pageactions.less',
-			'less/footer.less',
-			'less/common.less',
-			'less/icons.less',
-			'less/mainpage.less',
-		),
-		'position' => 'top',
-	),
-
-	'skins.minerva.content.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/content/main.less',
-			'less/content/thumbnails.less',
-			'less/content/images.less',
-			'less/content/galleries.less',
-			'less/content/headings.less',
-			'less/content/blockquotes.less',
-			'less/content/lists.less',
-			'less/content/links.less',
-			'less/content/text.less',
-			'less/content/tables.less',
-			'less/content/hacks.less',
-		),
-	),
-
-	'skins.minerva.drawers.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/drawer.less',
-		),
-		'position' => 'top',
-	),
-
-	'skins.minerva.icons.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/iconsNew.less',
-		),
-		'position' => 'top',
 	),
 
 	// Important: This module is loaded on both mobile and desktop skin
@@ -588,22 +590,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.toast.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/toast.less',
-		),
-		'position' => 'top',
-	),
-
-	'mobile.stable.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/common-js.less',
-			'less/modules/watchstar.less',
-			'less/modules/tutorials.less',
-		),
-		'position' => 'top',
-	),
-
 	'mobile.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
@@ -654,6 +640,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/toast.js',
 		),
+		'styles' => array(
+			'less/toast.less',
+		),
 	),
 
 	// FIXME: Only load this when uploads are enabled
@@ -703,7 +692,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.stable.common' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'mobile.toast.styles',
 			'mediawiki.jqueryMsg',
 			'mediawiki.util',
 			'mobile.templates',
@@ -1189,6 +1177,7 @@ $wgMinervaSpecialPageModules = array(
 
 $wgResourceModules = array_merge( $wgResourceModules, $wgMobileSpecialPageModules );
 $wgResourceModules = array_merge( $wgResourceModules, $wgMinervaSpecialPageModules );
+$wgResourceModules = array_merge( $wgResourceModules, $wgMinervaStyleModules );
 
 // Module customizations
 $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
