@@ -52,6 +52,24 @@
       "revId": "5227d92379f45f3376f961903cb737e3a60e00d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_8cfba6b9",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-04T21:48:59Z",
+      "side": 1,
+      "message": "I sent a mail to mailing list.",
+      "parentUuid": "6e936f18_b85ee446",
+      "revId": "5227d92379f45f3376f961903cb737e3a60e00d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
