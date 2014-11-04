@@ -16,6 +16,24 @@
       "revId": "5227d92379f45f3376f961903cb737e3a60e00d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_18d9185c",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-04T16:42:51Z",
+      "side": 1,
+      "message": "We should talk about this in irc/email. Mobile has historically done the \u0027.\u0027 notation at the end but we might want to revisit that as it is inconsistent with most other projects...",
+      "parentUuid": "6e936f18_183598a3",
+      "revId": "5227d92379f45f3376f961903cb737e3a60e00d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
