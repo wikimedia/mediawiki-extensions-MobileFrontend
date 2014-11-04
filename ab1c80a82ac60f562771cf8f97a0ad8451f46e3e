@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e936f18_45bd7962",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-04T16:02:13Z",
+      "side": 1,
+      "message": "Is the child combinator really necessary here?",
+      "revId": "ab1c80a82ac60f562771cf8f97a0ad8451f46e3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_c2e73f0c",
         "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
         "patchSetId": 1
