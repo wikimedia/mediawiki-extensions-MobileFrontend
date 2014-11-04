@@ -16,6 +16,24 @@
       "revId": "ab1c80a82ac60f562771cf8f97a0ad8451f46e3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_05a0d13c",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-04T16:00:30Z",
+      "side": 1,
+      "message": "According to the schema, yes: https://meta.wikimedia.org/wiki/Schema:MobileWebWikiGrokResponse",
+      "parentUuid": "6e936f18_c2e73f0c",
+      "revId": "ab1c80a82ac60f562771cf8f97a0ad8451f46e3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
