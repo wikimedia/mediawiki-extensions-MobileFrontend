@@ -7,7 +7,7 @@
 	 * @extends View
 	 */
 	Checkbox = View.extend( {
-		template: M.template.get( 'specials/checkbox.hogan' ),
+		template: mw.template.get( 'mobile.special.mobileoptions.scripts', 'Checkbox.hogan' ),
 		save: function () {
 			M.settings.saveUserSetting( this.options.name, this.cb.prop( 'checked' ) ? 'true' : 'false', true );
 		},

@@ -1035,7 +1035,7 @@ $wgMobileSpecialPageModules = array(
 			'less/specials/mobileoptions.less',
 		),
 	),
-	'mobile.special.mobileoptions.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.special.mobileoptions.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
 		'dependencies' => array(
 			'mobile.startup',
@@ -1045,7 +1045,7 @@ $wgMobileSpecialPageModules = array(
 			'javascripts/specials/mobileoptions.js',
 		),
 		'templates' => array(
-			'specials/checkbox.hogan',
+			'Checkbox.hogan' => 'templates/specials/checkbox.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-expand-sections-description',
