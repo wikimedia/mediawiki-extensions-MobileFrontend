@@ -41,12 +41,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'mobile.pagelist.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.pagelist.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.watchstar',
 		),
 		'templates' => array(
-			'modules/PageList.hogan',
+			'PageList.hogan' => 'templates/modules/PageList.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/PageList.js',

@@ -75,7 +75,7 @@
 		/**
 		 * @inheritdoc
 		 */
-		template: M.template.get( 'modules/PageList.hogan' ),
+		template: mw.template.get( 'mobile.pagelist.scripts', 'PageList.hogan' ),
 		/**
 		 * Retrieve pages
 		 *
