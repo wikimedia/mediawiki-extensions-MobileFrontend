@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_183598a3",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-04T16:39:33Z",
+      "side": 1,
+      "message": "I\u0027ve had max grunt at me because of this dot chaining style. It was probably there before, but can you fix it please?\nhttps://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript#Creating_elements",
+      "revId": "5227d92379f45f3376f961903cb737e3a60e00d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
