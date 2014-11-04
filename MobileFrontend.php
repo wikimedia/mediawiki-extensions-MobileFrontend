@@ -219,17 +219,6 @@ $wgMFResourceFileModuleBoilerplate = $wgMFResourceBoilerplate + array(
 );
 
 /**
- * A boilerplate for the ResourceLoaderTemplateModule that supports templates using
- * the mechanism prior to templates being in core.
- * @deprecated
- */
-$wgMFMobileResourceBoilerplate = $wgMFResourceBoilerplate + array(
-	'localTemplateBasePath' => __DIR__ . '/templates',
-	'class' => 'ResourceLoaderTemplateModule',
-	'targets' => array( 'mobile', 'desktop' ),
-);
-
-/**
  * A boilerplate containing common properties for all RL modules served to mobile site special pages
  * Restricted to mobile site.
  */
