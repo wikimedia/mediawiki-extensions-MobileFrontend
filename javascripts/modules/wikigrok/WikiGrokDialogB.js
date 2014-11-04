@@ -14,7 +14,7 @@
 	 */
 	WikiGrokDialogB = WikiGrokDialog.extend( {
 		version: 'b',
-		template: M.template.get( 'modules/wikigrok/WikiGrokDialogB.hogan' ),
+		template: mw.template.get( 'mobile.wikigrok.dialog.b', 'Dialog.hogan' ),
 		initialize: function () {
 			var self = this;
 

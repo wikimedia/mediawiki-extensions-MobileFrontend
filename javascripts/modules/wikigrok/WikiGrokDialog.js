@@ -39,7 +39,7 @@
 			],
 			noticeMsg: '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>'
 		},
-		template: M.template.get( 'modules/wikigrok/WikiGrokDialog.hogan' ),
+		template: mw.template.get( 'mobile.wikigrok.dialog', 'Dialog.hogan' ),
 
 		initialize: function ( options ) {
 			var self = this;

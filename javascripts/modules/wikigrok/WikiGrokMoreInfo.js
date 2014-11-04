@@ -14,7 +14,7 @@
 			heading: '<strong>About</strong>'
 		},
 		templatePartials: {
-			content: M.template.get( 'modules/wikigrok/WikiGrokMoreInfo.hogan' )
+			content: mw.template.get( 'mobile.wikigrok.dialog', 'WikiGrokMoreInfo/content.hogan' )
 		}
 	} );
 

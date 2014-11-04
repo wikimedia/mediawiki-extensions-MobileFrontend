@@ -963,7 +963,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.wikigrok.dialog.b' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.wikigrok.dialog.b' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.wikigrok.dialog',
 			'mediawiki.ui.checkbox',
@@ -972,7 +972,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/wikigrok/tagButton.less',
 		),
 		'templates' => array(
-			'modules/wikigrok/WikiGrokDialogB.hogan',
+			'Dialog.hogan' => 'templates/modules/wikigrok/WikiGrokDialogB.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/wikigrok/WikiGrokDialogB.js',
@@ -980,13 +980,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	// See https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok
-	'mobile.wikigrok.dialog' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.wikigrok.dialog' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.alpha',
 		),
 		'templates' => array(
-			'modules/wikigrok/WikiGrokDialog.hogan',
-			'modules/wikigrok/WikiGrokMoreInfo.hogan',
+			'Dialog.hogan' => 'templates/modules/wikigrok/WikiGrokDialog.hogan',
+			'WikiGrokMoreInfo/content.hogan' => 'templates/modules/wikigrok/WikiGrokMoreInfo.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/wikigrok/WikiDataApi.js',
