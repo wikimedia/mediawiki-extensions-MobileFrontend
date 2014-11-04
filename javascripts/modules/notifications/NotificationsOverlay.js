@@ -12,7 +12,7 @@
 			active: false,
 			className: 'overlay notifications-overlay navigation-drawer',
 			templatePartials: {
-				content: M.template.get( 'modules/notifications/NotificationsOverlayContent.hogan' ),
+				content: mw.template.get( 'mobile.notifications.overlay', 'content.hogan' ),
 				footer: mw.template.get( 'mobile.overlays', 'OverlayFooterLink.hogan' )
 			},
 			defaults: {

@@ -940,7 +940,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.notifications.overlay' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.notifications.overlay' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'ext.echo.base',
@@ -952,7 +952,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/NotificationsOverlay.less',
 		),
 		'templates' => array(
-			'modules/notifications/NotificationsOverlayContent.hogan',
+			'content.hogan' => 'templates/modules/notifications/NotificationsOverlayContent.hogan',
 		),
 		'messages' => array(
 			// defined in Echo
