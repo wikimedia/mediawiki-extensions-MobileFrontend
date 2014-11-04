@@ -503,7 +503,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			// talk.js
 			'modules/talk/talk.hogan',
-			'OverlayFooterLink.hogan',
 			'modules/talk/talkSectionAdd.hogan',
 			'modules/talk/talkSectionAddHeader.hogan',
 			'modules/talk/talkSection.hogan',
@@ -595,7 +594,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'mobile.overlays' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
 			'mobile.startup',
@@ -611,8 +610,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-overlay-continue',
 		),
 		'templates' => array(
-			'Overlay.hogan',
-			'LoadingOverlay.hogan',
+			'Overlay.hogan' => 'templates/Overlay.hogan',
+			'LoadingOverlay.hogan' => 'templates/LoadingOverlay.hogan',
+			'OverlayFooterLink.hogan' => 'templates/OverlayFooterLink.hogan',
 		),
 		'styles' => array(
 			'less/Overlay.less',
@@ -912,7 +912,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'modules/notifications/NotificationsOverlayContent.hogan',
-			'OverlayFooterLink.hogan',
 		),
 		'messages' => array(
 			// defined in Echo

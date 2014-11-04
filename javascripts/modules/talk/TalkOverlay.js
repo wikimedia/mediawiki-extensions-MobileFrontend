@@ -18,7 +18,7 @@
 		TalkOverlay = Overlay.extend( {
 			templatePartials: {
 				content: M.template.get( 'modules/talk/talk.hogan' ),
-				footer: M.template.get( 'OverlayFooterLink.hogan' )
+				footer: mw.template.get( 'mobile.overlays', 'OverlayFooterLink.hogan' )
 			},
 			defaults: {
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
