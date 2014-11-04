@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_275f0cea",
+        "filename": "javascripts/modules/references/references.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-04T22:51:41Z",
+      "side": 1,
+      "message": "When we\u0027ve done this previously we tend to create\nReferencesDrawerBeta \u003d ReferencesDrawer.extend( ...\n\nThis method is a little neater and avoids the duplication you\u0027ve created in defaults.\n\nIt would also be a good opportunity to separate this out into ReferencesDrawer.js :)\n\nWe should make minimal changes to the existing references code in stable. The point of beta is to test things out sandboxed from the status quo and polish them before shipping them. This change risks breaking stable in the process.",
+      "revId": "9825b7591d07457ea9a15df3bafb1cdce8189597",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_674d143f",
+        "filename": "javascripts/modules/references/references.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-04T22:51:41Z",
+      "side": 1,
+      "message": "Here you can do if ( M.isBetaGroupMember) { new ReferencesDrawerBeta(); } else {\nnew ReferencesDrawer();\n}",
+      "revId": "9825b7591d07457ea9a15df3bafb1cdce8189597",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_272dcc41",
+        "filename": "less/modules/references/references.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-04T22:51:41Z",
+      "side": 1,
+      "message": "No need to put this in the references folder. When there is only one file we skip using a directory and just name the file the same as the directory.",
+      "revId": "9825b7591d07457ea9a15df3bafb1cdce8189597",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
