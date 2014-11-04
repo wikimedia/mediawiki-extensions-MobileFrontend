@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_b3f4cc51",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 847,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-04T06:37:17Z",
+      "side": 1,
+      "message": "You doesn\u0027t have any else condition here, so i suggest to put these three if statements into one:\n\nif ( $user-\u003eisLoggedIn() \u0026\u0026 $this-\u003eisCurrentPageEditable() \u0026\u0026 ( $action \u003d\u003d\u003d \u0027signup-edit\u0027 || $campaign \u003d\u003d\u003d \u0027leftNavSignup\u0027 ) {\n// stuff\n}\n\nor at least the first two into one:\n\nif ( $user-\u003eisLoggedIn() \u0026\u0026 $this-\u003eisCurrentPageEditable() ) {\nif ($action \u003d\u003d\u003d \u0027signup-edit\u0027 || $campaign \u003d\u003d\u003d \u0027leftNavSignup\u0027 ) {\n// stuff\n}\n}",
+      "revId": "10cdcf1d363b7f5ae23f3388820b3e76091ff3f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
