@@ -77,12 +77,6 @@ $wgMinervaStyleModules = array(
 			'less/iconsNew.less',
 		),
 	),
-	// FIXME: Explore whether this needs to exist.
-	'mobile.stable.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/common-js.less',
-		),
-	),
 );
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
@@ -166,6 +160,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.ajax' => $wgMFResourceFileModuleBoilerplate + array(
 		'templates' => array(
 			'spinner.hogan' => 'templates/spinner.hogan',
+		),
+		'styles' => array(
+			'less/spinner.less',
 		),
 	),
 
@@ -394,6 +391,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'less/modules/uploads/UploadTutorial.less',
 			'less/modules/uploads/PhotoUploadOverlay.less',
+			'less/modules/uploads/PhotoUploadProgress.less',
 		),
 		'templates' => array(
 			'LeadPhoto.hogan' => 'templates/modules/uploads/LeadPhoto.hogan',
@@ -651,6 +649,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.upload.ui' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.ajax',
 		),
 		'templates' => array(
 			// FIXME: This should not be a hogan template. Use a txt template.
@@ -812,7 +811,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.user',
 			'mobile.stable.common',
 			'mediawiki.util',
-			'mobile.stable.styles',
 			'mobile.templates',
 			'mobile.references',
 			'mediawiki.language',
