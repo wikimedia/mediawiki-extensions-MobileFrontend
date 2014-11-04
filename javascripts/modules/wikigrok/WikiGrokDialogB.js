@@ -120,13 +120,14 @@
 			this.$save = this.$( '.mw-ui-constructive' );
 			this.$save.on( 'click', function () {
 				var answers = [];
-				self.$( '.wg-buttons .mw-ui-progressive' ).each( function () {
+				self.$( '.wg-buttons .mw-ui-button' ).each( function () {
+					var $this = $( this );
 					answers.push( {
-						correct: true,
-						prop: $( this ).data( 'propName' ),
-						propid: $( this ).data( 'propId' ),
-						value: $( this ).data( 'readable' ),
-						valueid: $( this ).data( 'itemId' )
+						correct: $this.is( '.mw-ui-progressive' ) ? true : null,
+						prop: $this.data( 'propName' ),
+						propid: $this.data( 'propId' ),
+						value: $this.data( 'readable' ),
+						valueid: $this.data( 'itemId' )
 					} );
 				} );
 
