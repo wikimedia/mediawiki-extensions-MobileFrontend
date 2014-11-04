@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kening Aldgilles"
+			"Kening Aldgilles",
+			"Robin0van0der0vliet"
 		]
 	},
 	"mobile-frontend-drawer-cancel": "Ofbrekke",
@@ -9,5 +10,6 @@
 	"mobile-frontend-editor-continue": "Trochgean",
 	"mobile-frontend-editor-edit": "Bewurkje",
 	"mobile-frontend-editor-save": "Fêstlizze",
-	"mobile-frontend-image-cancel-confirm": "Upload ôfbrekke?"
+	"mobile-frontend-image-cancel-confirm": "Upload ôfbrekke?",
+	"mobile-frontend-missing-image": "Ôfbylding"
 }

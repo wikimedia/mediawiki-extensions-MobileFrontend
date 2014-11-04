@@ -130,6 +130,7 @@
 	"mobile-frontend-nearby-lookup-ui-error-guidance": "Proovi avatud ala, kus on parem signaal.",
 	"mobile-frontend-nearby-noresults": "Valitseb tühjus… Läheduses ei leidu ühtegi lehekülge.",
 	"mobile-frontend-nearby-noresults-guidance": "Proovi alustada uue leheküljega või lisada olemasolevale asukoht.",
+	"mobile-frontend-nearby-refresh": "Värskenda asukohta",
 	"mobile-frontend-nearby-requirements": "Kahjuks ei toeta sinu võrgulehitseja {{GRAMMAR:genitive|{{SITENAME}}}} funktsiooni \"Lähikond\".",
 	"mobile-frontend-nearby-title": "Lähikond",
 	"mobile-frontend-news-items": "Päevakajaline",

@@ -280,7 +280,7 @@
 	"mobile-frontend-settings-alpha": "实验版",
 	"mobile-frontend-settings-alpha-description": "使用实验中的移动版。可以获得更多实验特性，但遇到漏洞的风险更高。",
 	"mobile-frontend-settings-beta": "测试",
-	"mobile-frontend-settings-description": "用这些移动版网站设置自定义你的移动设备体验。",
+	"mobile-frontend-settings-description": "用这些移动版网站设置自定义你的移动设备体验。<br />[[Special:Preferences|桌面版设置]]",
 	"mobile-frontend-settings-site-description": "{{SITENAME}}有$1种语言版本。下面列出了所有语言版本",
 	"mobile-frontend-settings-site-header": "{{SITENAME}}语言",
 	"mobile-frontend-sign-in-error-heading": "糟糕",
@@ -355,5 +355,9 @@
 	"tag-mobile_web_edit": "移动网页编辑",
 	"tag-mobile_web_edit-description": "来自手机版网站的编辑",
 	"mobile-frontend-pageaction-edit-tooltip": "编辑此页面的序言章节。",
-	"mobile-frontend-pageaction-upload-tooltip": "上传自定义背景图片"
+	"mobile-frontend-pageaction-upload-tooltip": "上传自定义背景图片",
+	"apihelp-mobileview-param-noimages": "返回不带图片的HTML。",
+	"apihelp-mobileview-example-1": "获取有关[[Doom metal]]的第0章节的信息",
+	"apihelp-parse-param-noimages": "在移动输出中禁用图片。",
+	"apihelp-parse-param-mainpage": "应用移动首页转换。"
 }
