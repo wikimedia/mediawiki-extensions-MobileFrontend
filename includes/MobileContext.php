@@ -1021,7 +1021,9 @@ class MobileContext extends ContextSource {
 	 * @return string|bool
 	 */
 	public function getXAnalyticsHeader() {
-		$logItems = $this->getAnalyticsLogItems();
+		$currentHeader = $this->getRequest()->response()->getheader( 'X-Analytics' );
+		parse_str( preg_replace( '/; */', '&', $currentHeader ), $logItems );
+		$logItems += $this->getAnalyticsLogItems();
 		if ( count( $logItems ) ) {
 			$xanalytics_items = array();
 			foreach ( $logItems as $key => $val ) {
