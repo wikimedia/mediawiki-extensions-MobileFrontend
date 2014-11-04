@@ -184,6 +184,8 @@
 					} else {
 						self.showError( options, 'There was an error retrieving tag labels.' );
 					}
+				} ).fail(function () {
+					self.logError( 'no-impression-cannot-fetch-labels' );
 				} );
 			}
 		},
