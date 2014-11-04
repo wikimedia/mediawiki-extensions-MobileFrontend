@@ -1,11 +1,7 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-/* Tutorial overlay styling */
 
-// For upload tutorial
-.overlay.tutorial,
-// For page action overlay
 .content-overlay {
 	position: absolute;
 	top: 0;
@@ -14,7 +10,6 @@
 	padding: 1em @contentMargin;
 	line-height: 1.4;
 	font-size: .9em;
-	background: @colorTutorial;
 	color: #fff;
 	text-align: center;
 	box-shadow: 0 1px 5px 0 rgba(117, 117, 117, .8);
@@ -37,5 +32,9 @@
 	.cancel.inline {
 		background: none;
 		color: #fff;
+	}
+
+	&.content-overlay {
+		background: @colorTutorial;
 	}
 }

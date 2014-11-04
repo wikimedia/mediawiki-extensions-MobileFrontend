@@ -14,7 +14,7 @@
 	 */
 	UploadTutorial = Overlay.extend( {
 		template: mw.template.get( 'mobile.uploads', 'UploadTutorial.hogan' ),
-		className: 'overlay carousel tutorial',
+		className: 'overlay carousel tutorial content-overlay',
 
 		defaults: {
 			slideLeftButton: new Icon( { name: 'previous',
