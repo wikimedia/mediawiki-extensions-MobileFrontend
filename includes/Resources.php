@@ -178,6 +178,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			'mobile-frontend-language-article-heading',
+			// Page.js and TalkOverlay.js
+			'mobile-frontend-talk-overlay-header',
 		),
 		'templates' => array(
 			'icon.hogan' => 'templates/icon.hogan',
@@ -225,6 +227,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.common',
 			'mobile.overlays',
 			'mediawiki.ui.input',
+		),
+		'messages' => array(
+			// editor.js
+			'mobile-frontend-editor-disabled',
+			'mobile-frontend-editor-unavailable',
+			'mobile-frontend-editor-uploadenable',
+			'mobile-frontend-editor-blocked',
+			'mobile-frontend-editor-cta',
+			'mobile-frontend-editor-anon',
+			'mobile-frontend-editor-undo-unsupported',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/editor.js',
@@ -617,8 +629,78 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		)
 	),
 
+	'mobile.drawers' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'templates' => array(
+			'Cta.hogan' => 'templates/ctaDrawer.hogan',
+		),
+		'scripts' => array(
+			'javascripts/Drawer.js',
+			'javascripts/CtaDrawer.js',
+		),
+		'messages' => array(
+			// CtaDrawer.js
+			'mobile-frontend-watchlist-cta-button-signup',
+			'mobile-frontend-watchlist-cta-button-login',
+		),
+	),
+
+	'mobile.toast' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.drawers',
+		),
+		'scripts' => array(
+			'javascripts/toast.js',
+		),
+	),
+
+	// FIXME: Only load this when uploads are enabled
+	'mobile.upload.ui' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'templates' => array(
+			// FIXME: This should not be a hogan template. Use a txt template.
+			'template.hogan' => 'templates/modules/uploads/commons-upload.hogan',
+			// PhotoUploaderButton.js
+			'LeadButton.hogan' => 'templates/modules/uploads/LeadPhotoUploaderButton.hogan',
+			// @todo FIXME: this should be in special.uploads (need to split
+			// code in PhotoUploaderButton.js into separate files too)
+			'Button.hogan' => 'templates/modules/uploads/PhotoUploaderButton.hogan',
+		),
+		'scripts' => array(
+			'javascripts/widgets/progress-bar.js',
+			'javascripts/modules/uploads/PhotoUploaderButton.js',
+			'javascripts/modules/uploads/LeadPhotoUploaderButton.js',
+			// FIXME: this seems to be uploads only, code should be moved to uploads folder.
+			'javascripts/modules/routes.js',
+		),
+		'messages' => array(
+			// LeadPhotoUploaderButton.js
+			'mobile-frontend-photo-upload',
+		),
+	),
+
+	// This module remembers that desktop site is your preference for viewing on a mobile phone
+	'mobile.redirect' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.toast',
+		),
+		'scripts' => array(
+			'javascripts/modules/mf-stop-mobile-redirect.js',
+		),
+		'messages' => array(
+			// mf-stop-mobile-redirect.js
+			'mobile-frontend-cookies-required',
+		),
+	),
+
 	// Important: This module is loaded on both mobile and desktop skin
-	'mobile.stable.common' => $wgMFMobileResourceBoilerplate + array(
+	// FIXME: Do not add anything to this module and please remove it
+	'mobile.stable.common' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.toast.styles',
@@ -628,58 +710,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 			'jquery.cookie',
 			'mediawiki.ui.anchor',
+			'mobile.drawers',
+			'mobile.toast',
+			'mobile.upload.ui',
+			'mobile.redirect',
 		),
-		'templates' => array(
-			'modules/uploads/commons-upload.hogan',
-			// PhotoUploaderButton.js
-			// For new page action menu
-			'modules/uploads/LeadPhotoUploaderButton.hogan',
-			// @todo FIXME: this should be in special.uploads (need to split
-			// code in PhotoUploaderButton.js into separate files too)
-			'modules/uploads/PhotoUploaderButton.hogan',
-
-			'ctaDrawer.hogan',
-		),
-		'scripts' => array(
-			'javascripts/modules/routes.js',
-			'javascripts/Drawer.js',
-			'javascripts/CtaDrawer.js',
-			'javascripts/widgets/progress-bar.js',
-			'javascripts/toast.js',
-			'javascripts/modules/uploads/PhotoUploaderButton.js',
-			'javascripts/modules/uploads/LeadPhotoUploaderButton.js',
-			'javascripts/modules/mf-stop-mobile-redirect.js',
-		),
+		// FIXME: Move these messages to a more appropriate place.
 		'messages' => array(
-			// mf-navigation.js
-			'mobile-frontend-watchlist-cta-button-signup',
-			'mobile-frontend-watchlist-cta-button-login',
-			'mobile-frontend-drawer-cancel',
-
-			// newbie.js
-			'cancel',
-
-			// page.js
-			'mobile-frontend-talk-overlay-header',
-			// editor.js
-			'mobile-frontend-editor-disabled',
-			'mobile-frontend-editor-unavailable',
-			'mobile-frontend-editor-uploadenable',
-			'mobile-frontend-editor-blocked',
-			'mobile-frontend-editor-cta',
-			'mobile-frontend-editor-anon',
+			// editor.js, Page.js, Section.js
 			'mobile-frontend-editor-edit',
-			'mobile-frontend-editor-undo-unsupported',
-			// modules/editor/EditorOverlay.js
-			// modules/talk.js
-			// modules/uploads/PhotoUploadProgress.js
+			// EditorOverlayBase.js, TalkSectionAddOverlay, TalkSectionOverlay, PhotoUploadProgress
 			'mobile-frontend-editor-save',
-			// PageApi.js
-			'mobile-frontend-last-modified-with-user-date',
-			// mf-stop-mobile-redirect.js
-			'mobile-frontend-cookies-required',
-			// LeadPhotoUploaderButton.js
-			'mobile-frontend-photo-upload',
 		),
 	),
 
@@ -716,6 +757,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.contentOverlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
+		),
+		'messages' => array(
+			// PageActionOverlay.js
+			'cancel',
 		),
 		'scripts' => array(
 			'javascripts/modules/tutorials/ContentOverlay.js',

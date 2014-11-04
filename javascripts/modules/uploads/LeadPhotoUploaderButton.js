@@ -11,7 +11,7 @@
 	 * @extends PhotoUploaderButton
 	 */
 	LeadPhotoUploaderButton = PhotoUploaderButton.extend( {
-		template: M.template.get( 'modules/uploads/LeadPhotoUploaderButton.hogan' ),
+		template: mw.template.get( 'mobile.upload.ui', 'LeadButton.hogan' ),
 		className: uploadIcon.getClassName(),
 
 		defaults: {

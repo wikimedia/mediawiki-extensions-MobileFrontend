@@ -160,7 +160,7 @@
 					comment: mw.msg( options.editSummaryMessage ),
 					file: options.file,
 					token: token,
-					text: M.template.get( 'modules/uploads/commons-upload.hogan' ).
+					text: mw.template.get( 'mobile.upload.ui', 'template.hogan' ).
 						render( {
 							suffix: mw.config.get( 'wgMFPhotoUploadAppendToDesc' ),
 							text: options.description,
