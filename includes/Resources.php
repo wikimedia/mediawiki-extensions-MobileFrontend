@@ -24,8 +24,11 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-// An array of modules that should be loaded at the top of the page. These should not contain
-// any scripts or templates.
+/**
+ * An array of modules that should be loaded at the top of the page via addModuleStyles
+ * These modules should not contain any scripts or templates and care should be taken with
+ * these with respect to caching.
+**/
 $wgMinervaStyleModules = array(
 	'skins.minerva.chrome.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
@@ -79,7 +82,6 @@ $wgMinervaStyleModules = array(
 		'styles' => array(
 			'less/common-js.less',
 			'less/modules/watchstar.less',
-			'less/modules/tutorials.less',
 		),
 	),
 );
@@ -379,6 +381,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable',
 			'mobile.templates',
 			'mobile.editor.api',
+			'mobile.contentOverlays',
 		),
 		'scripts' => array(
 			'javascripts/modules/uploads/PhotoApi.js',
@@ -747,6 +750,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// PageActionOverlay.js
 			'cancel',
+		),
+		'styles' => array(
+			'less/modules/tutorials.less',
 		),
 		'scripts' => array(
 			'javascripts/modules/tutorials/ContentOverlay.js',
