@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_9bd8c2f5",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-04T18:42:53Z",
+      "side": 1,
+      "message": "It increases the binding between the DOM representation and the internal representation of the model.\n\nThis is quite a hard argument to make in the context of this section of code, so it ain\u0027t critical.",
+      "parentUuid": "6e936f18_a5631d09",
+      "revId": "ab1c80a82ac60f562771cf8f97a0ad8451f46e3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_c2e73f0c",
         "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
         "patchSetId": 1
