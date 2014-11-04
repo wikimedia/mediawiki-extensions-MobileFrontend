@@ -354,7 +354,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.editor.overlay' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.editor.overlay' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.editor.common',
 			'mobile.loggingSchemas',
@@ -363,8 +363,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/EditorOverlay.js',
 		),
 		'templates' => array(
-			'modules/editor/EditorOverlayHeader.hogan',
-			'modules/editor/EditorOverlay.hogan',
+			'header.hogan' => 'templates/modules/editor/EditorOverlayHeader.hogan',
+			'content.hogan' => 'templates/modules/editor/EditorOverlay.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-editor-viewing-source-page',

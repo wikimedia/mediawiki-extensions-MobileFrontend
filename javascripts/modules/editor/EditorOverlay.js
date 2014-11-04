@@ -22,8 +22,8 @@
 	EditorOverlay = EditorOverlayBase.extend( {
 		templatePartials: {
 			switcher: mw.template.get( 'mobile.editor.common', 'switcher.hogan' ),
-			header: M.template.get( 'modules/editor/EditorOverlayHeader.hogan' ),
-			content: M.template.get( 'modules/editor/EditorOverlay.hogan' )
+			header: mw.template.get( 'mobile.editor.overlay', 'header.hogan' ),
+			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' )
 		},
 		editor: 'SourceEditor',
 		sectionLine: '',
