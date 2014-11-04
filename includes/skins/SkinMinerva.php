@@ -769,6 +769,18 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Checks to see if the current page is editable.
+	 * FIXME: Kill function in favour of $wgRestrictionEdit
+	 * @return boolean
+	 */
+	protected function isCurrentPageEditable() {
+		$title = $this->getTitle();
+		$user = $this->getUser();
+		$userCanCreatePage = !$title->exists() && $title->quickUserCan( 'create', $user );
+		return $title->quickUserCan( 'edit', $user ) || $userCanCreatePage;
+	}
+
+	/**
 	 * Returns array of config variables that should be added only to this skin
 	 * for use in JavaScript.
 	 * @return array
@@ -785,7 +797,6 @@ class SkinMinerva extends SkinTemplate {
 
 		$title = $this->getTitle();
 		$user = $this->getUser();
-		$userCanCreatePage = !$title->exists() && $title->quickUserCan( 'create', $user );
 
 		$vars = array(
 			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
@@ -797,7 +808,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
 			// FIXME: Kill variable in favour of $wgRestrictionEdit
-			'wgIsPageEditable' => $title->quickUserCan( 'edit', $user ) || $userCanCreatePage,
+			'wgIsPageEditable' => $this->isCurrentPageEditable(),
 			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
 			'wgMFMode' => $this->getMode(),
 			'wgMFCollapseSectionsByDefault' => $wgMFCollapseSectionsByDefault,
@@ -819,6 +830,27 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		return $vars;
+	}
+
+	/**
+	 * Returns an array of modules related to the current context of the page.
+	 * @return array
+	 */
+	public function getContextSpecificModules() {
+		$modules = array();
+		$user = $this->getUser();
+		$req = $this->getRequest();
+		$action = $req->getVal( 'article_action' );
+		$campaign = $req->getVal( 'campaign' );
+
+		if ( $user->isLoggedIn() ) {
+			if ( $this->isCurrentPageEditable() ) {
+				if ( $action === 'signup-edit' || $campaign === 'leftNavSignup' ) {
+					$modules[] = 'mobile.newusers';
+				}
+			}
+		}
+		return $modules;
 	}
 
 	/**
@@ -851,7 +883,8 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$modules['editor'] = array( 'mobile.editor' );
 		}
-		$modules['newusers'] = array( 'mobile.newusers' );
+
+		$modules['context'] = $this->getContextSpecificModules();
 
 		if ( $this->isMobileMode ) {
 			$modules['toggling'] = array( 'mobile.toggling' );
