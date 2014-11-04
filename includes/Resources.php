@@ -752,6 +752,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-watchlist-add',
 			'mobile-frontend-watchlist-removed',
 			'mobile-frontend-watchlist-cta',
+			'mobile-frontend-watchlist-please-wait',
 		),
 	),
 
