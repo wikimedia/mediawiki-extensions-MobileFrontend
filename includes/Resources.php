@@ -25,17 +25,16 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
-	'mobile.templates' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'ext.mantle.hogan',
 		),
 		'scripts' => array(
 			'javascripts/template.js',
 		),
-		'targets' => array( 'mobile', 'desktop' ),
 	),
 
-	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.pagelist.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/pagelist.less',
 		),
@@ -54,7 +53,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'skins.minerva.tablet.styles' => $wgMFMobileResourceBoilerplate + array(
+	'skins.minerva.tablet.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/tablet/common.less',
 			'less/tablet/hacks.less',
@@ -84,13 +83,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'tablet.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.toc',
 		),
 	),
 
-	'skins.minerva.chrome.styles' => $wgMFMobileResourceBoilerplate + array(
+	'skins.minerva.chrome.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/reset.less',
 			'less/ui.less',
@@ -103,7 +102,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'skins.minerva.content.styles' => $wgMFMobileResourceBoilerplate + array(
+	'skins.minerva.content.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/content/main.less',
 			'less/content/thumbnails.less',
@@ -117,17 +116,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/content/tables.less',
 			'less/content/hacks.less',
 		),
-		'position' => 'top',
 	),
 
-	'skins.minerva.drawers.styles' => $wgMFMobileResourceBoilerplate + array(
+	'skins.minerva.drawers.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/drawer.less',
 		),
 		'position' => 'top',
 	),
 
-	'skins.minerva.icons.styles' => $wgMFMobileResourceBoilerplate + array(
+	'skins.minerva.icons.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/iconsNew.less',
 		),
@@ -135,7 +133,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	// Important: This module is loaded on both mobile and desktop skin
-	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.language',
 			'mediawiki.jqueryMsg',
@@ -201,7 +199,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'bottom',
 	),
 
-	'mobile.redlinks' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.redlinks' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
 			'mediawiki.user',
@@ -211,7 +209,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.user' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.user' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.user',
 			// Ensure M.define exists
@@ -222,7 +220,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.editor' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.editor' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable.common',
 			'mobile.overlays',
@@ -423,7 +421,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.beta.common' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.beta.common' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable.common',
 			'mobile.loggingSchemas',
@@ -431,7 +429,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.talk' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.talk' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta.common',
@@ -449,7 +447,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.beta' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta.common',
@@ -558,7 +556,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.beta',
 		),
@@ -567,7 +565,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.wikigrok' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.wikigrok' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.user',
@@ -578,14 +576,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.toast.styles' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.toast.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/toast.less',
 		),
 		'position' => 'top',
 	),
 
-	'mobile.stable.styles' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.stable.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/common-js.less',
 			'less/modules/watchstar.less',
@@ -703,7 +701,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.toggling' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.toggling' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 		),
@@ -728,7 +726,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.newusers' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.newusers' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
 			'mobile.editor',
@@ -746,7 +744,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.watchstar' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.watchstar' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.templates',
@@ -769,7 +767,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.stable' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.stable' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.user',
@@ -889,7 +887,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.notifications' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.notifications' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
 			'mediawiki.ui.anchor',
@@ -1017,7 +1015,7 @@ $wgMobileSpecialPageModules = array(
 			),
 	),
 
-	'mobile.special.nearby.styles' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.special.nearby.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/specials/nearby.less',
 		),
@@ -1027,7 +1025,7 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
-	'mobile.special.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.special.nearby.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.nearby',
 		),
@@ -1110,7 +1108,7 @@ $wgMobileSpecialPageModules = array(
 
 	// Note that this module is declared as a dependency in the Thanks extension (for the
 	// mobile diff thanks button code). Keep the module name there in sync with this one.
-	'mobile.special.mobilediff.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.special.mobilediff.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.loggingSchemas',
 			'mobile.stable.common',
