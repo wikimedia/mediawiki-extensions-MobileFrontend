@@ -43,7 +43,8 @@
 					dob: 'Born on',
 					dod: 'Died on',
 					nationalities: 'Home country',
-					occupations: 'Profession'
+					occupations: 'Profession',
+					schools: 'School'
 				};
 
 			$.each( suggestions, function ( type, data ) {
