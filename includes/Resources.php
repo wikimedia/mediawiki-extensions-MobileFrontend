@@ -1053,9 +1053,9 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 	'mobile.special.mobileeditor.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-			'scripts' => array(
-					'javascripts/specials/redirectmobileeditor.js',
-			),
+		'scripts' => array(
+				'javascripts/specials/redirectmobileeditor.js',
+		),
 	),
 
 	'mobile.special.nearby.styles' => $wgMFResourceFileModuleBoilerplate + array(
