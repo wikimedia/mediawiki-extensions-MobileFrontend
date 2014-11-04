@@ -99,6 +99,8 @@
 						self.$( '.spinner' ).hide();
 						self.show();
 					}
+				} ).fail(function () {
+					self.logError( 'no-impression-cannot-fetch-labels' );
 				} );
 			}
 		},
