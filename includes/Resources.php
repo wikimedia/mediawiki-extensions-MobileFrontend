@@ -788,23 +788,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mediaViewer/init.js',
 			'javascripts/modules/languages/languages.js',
 		),
-		'messages' => array(
-			// lastEdited.js
-			'mobile-frontend-last-modified-seconds',
-			'mobile-frontend-last-modified-hours',
-			'mobile-frontend-last-modified-minutes',
-			'mobile-frontend-last-modified-hours',
-			'mobile-frontend-last-modified-days',
-			'mobile-frontend-last-modified-months',
-			'mobile-frontend-last-modified-years',
-			'mobile-frontend-last-modified-just-now',
-
-			// leadphoto.js
-			'mobile-frontend-photo-upload-disabled',
-			'mobile-frontend-photo-upload-protected',
-			'mobile-frontend-photo-upload-anon',
-			'mobile-frontend-photo-upload-unavailable',
-		),
 	),
 
 	'mobile.languages' => $wgMFResourceFileModuleBoilerplate + array(
