@@ -7,7 +7,8 @@
 			"Tranletuhan",
 			"Withoutaname",
 			"පසිඳු කාවින්ද",
-			"Trần Nguyễn Minh Huy"
+			"Trần Nguyễn Minh Huy",
+			"Max20091"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -334,5 +335,7 @@
 	"tag-mobile_web_edit": "Sửa đổi từ trang di động",
 	"tag-mobile_web_edit-description": "Sửa đổi từ trang Web di động",
 	"mobile-frontend-pageaction-edit-tooltip": "Sửa đổi phần mở đầu của trang này.",
-	"mobile-frontend-pageaction-upload-tooltip": "Tải một hình lên phần mở đầu của trang này."
+	"mobile-frontend-pageaction-upload-tooltip": "Tải một hình lên phần mở đầu của trang này.",
+	"apihelp-mobileview-param-noimages": "Trở về HTML mà không có hình ảnh.",
+	"apihelp-parse-param-noimages": "Tắt hình ảnh trên di động."
 }
