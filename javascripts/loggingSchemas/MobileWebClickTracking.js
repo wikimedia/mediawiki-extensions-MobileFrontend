@@ -49,8 +49,8 @@
 	$( function () {
 		var $profileLink;
 		if ( !M.isApp() ) {
-			$profileLink = $( '#mw-mf-last-modified a' ).
-				filter( function () {
+			$profileLink = $( '#mw-mf-last-modified a' )
+				.filter( function () {
 					return $( this ).children().length === 0;
 				} );
 

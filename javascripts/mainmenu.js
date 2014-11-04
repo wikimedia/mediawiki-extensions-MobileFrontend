@@ -8,9 +8,9 @@
 	 * Closes all open navigation drawers
 	 */
 	function closeNavigationDrawers() {
-		$( 'body' ).removeClass( 'navigation-enabled' ).
-			removeClass( 'secondary-navigation-enabled' ).
-			removeClass( 'primary-navigation-enabled' );
+		$( 'body' ).removeClass( 'navigation-enabled' )
+			.removeClass( 'secondary-navigation-enabled' )
+			.removeClass( 'primary-navigation-enabled' );
 	}
 
 	/*
@@ -20,8 +20,8 @@
 		// close any existing ones first.
 		closeNavigationDrawers();
 		drawerType = drawerType || 'primary';
-		$( 'body' ).toggleClass( 'navigation-enabled' ).
-			toggleClass( drawerType + '-navigation-enabled' );
+		$( 'body' ).toggleClass( 'navigation-enabled' )
+			.toggleClass( drawerType + '-navigation-enabled' );
 	}
 
 	function initialize() {

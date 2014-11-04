@@ -52,10 +52,14 @@
 				}
 			} );
 
-			$link = new Icon( { tagName: 'a', name: 'cleanup', hasText: true,
-				label: labelText,
-				additionalClassNames: 'mw-mf-cleanup' } ).
-				$el.children().eq( 0 ).attr( 'href', '#/issues' );
+			$link = new Icon( {
+					tagName: 'a',
+					name: 'cleanup',
+					hasText: true,
+					label: labelText,
+					additionalClassNames: 'mw-mf-cleanup'
+				} )
+				.$el.children().eq( 0 ).attr( 'href', '#/issues' );
 
 			M.overlayManager.add( /^\/issues$/, function () {
 				return new CleanupOverlay( { issues: issues, headingText: headingText } );

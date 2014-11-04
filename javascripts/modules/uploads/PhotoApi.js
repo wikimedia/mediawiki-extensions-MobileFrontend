@@ -160,8 +160,8 @@
 					comment: mw.msg( options.editSummaryMessage ),
 					file: options.file,
 					token: token,
-					text: mw.template.get( 'mobile.upload.ui', 'template.hogan' ).
-						render( {
+					text: mw.template.get( 'mobile.upload.ui', 'template.hogan' )
+						.render( {
 							suffix: mw.config.get( 'wgMFPhotoUploadAppendToDesc' ),
 							text: options.description,
 							username: user.getName()
@@ -221,11 +221,11 @@
 
 					if ( self.editorApi && !isNewFile ) {
 						self.editorApi.setPrependText( '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n' );
-						self.editorApi.save( { summary: mw.msg( 'mobile-frontend-photo-upload-comment' ) } ).
-							done( function () {
+						self.editorApi.save( { summary: mw.msg( 'mobile-frontend-photo-upload-comment' ) } )
+							.done( function () {
 								result.resolve( options.fileName, descriptionUrl );
-							} ).
-							fail( function ( err ) {
+							} )
+							.fail( function ( err ) {
 								err.stage = 'edit';
 								result.reject( err );
 							} );

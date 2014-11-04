@@ -58,8 +58,8 @@
 	QUnit.test( '#save, error uploading, AbuseFilter', 2, function( assert ) {
 		var doneSpy = this.sandbox.spy(), failSpy = this.sandbox.spy();
 
-		photoApi.post.
-			returns( $.Deferred().resolve( {"error":{"code":"verification-error","info":"This file did not pass file verification","details":["abusefilter-warning","test",1]}} ) );
+		photoApi.post
+			.returns( $.Deferred().resolve( {"error":{"code":"verification-error","info":"This file did not pass file verification","details":["abusefilter-warning","test",1]}} ) );
 
 		photoApi.save( {
 			insertInPage: true,
@@ -86,8 +86,8 @@
 				url: "/w/index.php?title=Especial:Captcha/image&wpCaptchaId=1852528679"
 			};
 
-		editorApi.post.
-			returns( $.Deferred().resolve( { edit: { captcha: captcha, result: 'Failure' } } ) );
+		editorApi.post
+			.returns( $.Deferred().resolve( { edit: { captcha: captcha, result: 'Failure' } } ) );
 
 		photoApi.save( {
 			insertInPage: true,

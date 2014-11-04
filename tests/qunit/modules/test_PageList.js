@@ -10,8 +10,8 @@
 		setup: function() {
 			var resp = { query: { pages: { 30: { watched: "" }, 50: {} } } };
 
-			this.spy = this.sandbox.stub( WatchstarApi.prototype, 'get' ).
-				returns( $.Deferred().resolve( resp ) );
+			this.spy = this.sandbox.stub( WatchstarApi.prototype, 'get' )
+				.returns( $.Deferred().resolve( resp ) );
 			this.sandbox.stub( user, 'isAnon' ).returns( false );
 		}
 	} );

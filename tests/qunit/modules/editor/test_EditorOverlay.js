@@ -10,10 +10,10 @@
 
 			// prevent event logging requests
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
-			this.sandbox.stub( EditorApi.prototype, 'getContent' ).
-				returns( $.Deferred().resolve( 'section 0' ) );
-			this.sandbox.stub( EditorApi.prototype, 'getPreview' ).
-				returns( $.Deferred().resolve( 'previewtest' ) );
+			this.sandbox.stub( EditorApi.prototype, 'getContent' )
+				.returns( $.Deferred().resolve( 'section 0' ) );
+			this.sandbox.stub( EditorApi.prototype, 'getPreview' )
+				.returns( $.Deferred().resolve( 'previewtest' ) );
 		}
 	} );
 

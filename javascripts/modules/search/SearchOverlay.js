@@ -77,11 +77,11 @@
 			} );
 
 			// Initialize 'search within pages' functionality
-			this.$searchContent = this.$( '.search-content' ).
-				hide().
+			this.$searchContent = this.$( '.search-content' )
+				.hide()
 				// can't use $.proxy because it would pass ev to submit() which would
 				// be treated as alternative form data
-				on( 'click', function () {
+				.on( 'click', function () {
 					window.history.back();
 					// Add fulltext input to force fulltext search
 					$( '<input>' )
@@ -139,12 +139,12 @@
 							// check if we're getting the rights response in case of out of
 							// order responses (need to get the current value of the input)
 							if ( data.query === self.$input.val() ) {
-								self.$searchContent.
-									show().
-									find( 'p' ).
-									hide().
-									filter( data.results.length ? '.with-results' : '.without-results' ).
-									show();
+								self.$searchContent
+									.show()
+									.find( 'p' )
+									.hide()
+									.filter( data.results.length ? '.with-results' : '.without-results' )
+									.show();
 								self.$( '.spinner' ).hide();
 								pageList = new PageList( { pages: data.results, el: $results } );
 								pageList.renderPageImages();

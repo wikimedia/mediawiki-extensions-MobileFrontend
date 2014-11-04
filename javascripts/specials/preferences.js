@@ -30,9 +30,9 @@ jQuery( function ( $ ) {
 			$li = $( '<li>' ).appendTo( $tabHeadings ),
 			id = $this.attr( 'id' );
 
-		$( '<a class="button">' ).attr( 'href', '#' + id ).
-			data( 'tab', $this ).text( legend.text() ).
-			on( 'click', handler ).appendTo( $li );
+		$( '<a class="button">' ).attr( 'href', '#' + id )
+			.data( 'tab', $this ).text( legend.text() )
+			.on( 'click', handler ).appendTo( $li );
 	} );
 	$tabs.hide();
 
