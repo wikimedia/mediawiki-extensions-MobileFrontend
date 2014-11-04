@@ -724,18 +724,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.references' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.references' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.templates',
-			'mobile.startup',
-			'mobile.stable.common',
+			'mobile.drawers',
 		),
 		'styles' => array(
 			'less/modules/references.less',
 		),
 		'templates' => array(
 			// references.js
-			'modules/references/ReferencesDrawer.hogan',
+			'Drawer.hogan' => 'templates/modules/references/ReferencesDrawer.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/references/references.js',

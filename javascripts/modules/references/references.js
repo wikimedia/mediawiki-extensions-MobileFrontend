@@ -16,7 +16,7 @@
 			} ).toHtmlString()
 		},
 		className: 'drawer position-fixed text references',
-		template: M.template.get( 'modules/references/ReferencesDrawer.hogan' )
+		template: mw.template.get( 'mobile.references', 'Drawer.hogan' )
 	} );
 
 	function getReference( id ) {
