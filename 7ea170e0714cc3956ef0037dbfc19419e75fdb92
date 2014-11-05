@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_a63eb585",
+        "filename": "less/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-05T21:17:07Z",
+      "side": 1,
+      "message": "We shouldn\u0027t be applying css rules to the ::before pseudo element. We should be agnostic to how it is implemented. Explore changing margin on user-button for only \u0026.mw-ui-icon",
+      "revId": "7ea170e0714cc3956ef0037dbfc19419e75fdb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_6648ad32",
+        "filename": "less/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-05T21:17:07Z",
+      "side": 1,
+      "message": "Negative z-indexes are bad\n\nAlso see\n@z-indexBase: 0;\n@z-indexContent: 1;\n@z-indexMain: 3;\n@z-indexOverlay: 4;\n@z-indexOverOverlay: 5;\nin variables.less",
+      "revId": "7ea170e0714cc3956ef0037dbfc19419e75fdb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_86437914",
+        "filename": "less/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-05T21:17:07Z",
+      "side": 1,
+      "message": "Why are you changing this in stable?\nAlso it\u0027s not clear why this pushes the span to the right.\nSomething smells fishy about the container element.",
+      "revId": "7ea170e0714cc3956ef0037dbfc19419e75fdb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
