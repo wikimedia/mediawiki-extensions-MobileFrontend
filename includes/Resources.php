@@ -779,6 +779,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-tutorial-confirm',
 			'mobile-frontend-editor-tutorial-cancel',
 		),
+		'group' => 'user',
 	),
 
 	'mobile.watchstar' => $wgMFResourceFileModuleBoilerplate + array(

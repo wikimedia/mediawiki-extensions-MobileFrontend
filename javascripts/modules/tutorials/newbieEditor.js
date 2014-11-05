@@ -10,22 +10,18 @@ returning to the page, show a blue tutorial in 50% of cases prompting them to tr
 editing. You can replicate this by appending campaign=leftNavSignup to the URL of an
 editable page whilst logged in, although you must be in test group A to see the CTA.
 */
-
 ( function ( M, $ ) {
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
-		user = M.require( 'user' ),
 		escapeHash = M.escapeHash,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > -1,
 		hash = window.location.hash,
 		// Whether or not the user should see the leftNav guider
-		shouldShowLeftNavEditTutorial = !user.isAnon() &&
+		shouldShowLeftNavEditTutorial =
 			M.query.campaign === 'leftNavSignup' &&
 			mw.config.get( 'wgNamespaceNumber' ) === 0 &&
-			!inEditor &&
-			mw.config.get( 'wgIsPageEditable' ),
+			!inEditor,
 		// If the user came from an edit button signup, show guider.
-		shouldShowEditTutorial = M.query.article_action === 'signup-edit' && !inEditor &&
-			!user.isAnon() && mw.config.get( 'wgIsPageEditable' ),
+		shouldShowEditTutorial = M.query.article_action === 'signup-edit' && !inEditor,
 		showTutorial = shouldShowEditTutorial || shouldShowLeftNavEditTutorial,
 		editOverlay, target, $target, href;
 
