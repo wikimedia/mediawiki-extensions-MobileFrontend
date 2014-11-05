@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_8d3e3fb4",
+        "filename": "includes/Resources.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 726,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-05T01:06:33Z",
+      "side": 1,
+      "message": "The problem with this is this code is still loading on stable :-/ not quite sure how to fix this at current time.",
+      "revId": "de6674c9fe534f1f6e46b6b0e1f7592fc4407be3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_4d483760",
+        "filename": "includes/Resources.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 734,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-05T01:06:33Z",
+      "side": 1,
+      "message": "The problem with this is this code is still loading on stable :-/ not quite sure how to fix this at current time. Let\u0027s brainstorm this tomorrow.",
+      "revId": "de6674c9fe534f1f6e46b6b0e1f7592fc4407be3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_ad321bed",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-05T01:06:33Z",
+      "side": 1,
+      "message": "You can actually do defaults: $.extend( ReferencesDrawer.prototype.defaults, {} here",
+      "revId": "de6674c9fe534f1f6e46b6b0e1f7592fc4407be3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
