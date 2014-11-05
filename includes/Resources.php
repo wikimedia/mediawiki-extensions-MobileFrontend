@@ -81,7 +81,6 @@ $wgMinervaStyleModules = array(
 	'mobile.stable.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/common-js.less',
-			'less/modules/watchstar.less',
 		),
 	),
 );
@@ -792,6 +791,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/watchstar/WatchstarApi.js',
 			'javascripts/modules/watchstar/Watchstar.js',
 			'javascripts/modules/watchstar/init.js',
+		),
+		'styles' => array(
+			'less/modules/watchstar.less',
 		),
 		'messages' => array(
 			'watchthispage',
