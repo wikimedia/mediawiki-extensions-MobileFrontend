@@ -877,7 +877,8 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Returns the javascript modules to load.
+	 * Returns the javascript entry modules to load. Only modules that need to
+	 * be overriden or added conditionally should be placed here.
 	 * @return array
 	 */
 	public function getDefaultModules() {
@@ -886,19 +887,18 @@ class SkinMinerva extends SkinTemplate {
 		$modules['content'] = array();
 		$modules['legacy'] = array();
 
-		$modules['mobile'] = array(
-			'mobile.head',
-			'mobile.startup',
-			'mobile.site',
-			// FIXME: separate mobile.stable into more meaningful groupings
-			'mobile.stable',
-		);
+		// Add minerva specific modules
+		$modules['head'] = 'mobile.head';
+		// Define all the modules that should load on the mobile site and their dependencies.
+		// Do not add mobules here.
+		$modules['stable'] = 'mobile.stable';
 
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
+			// Prevent the desktop watchstar from ever leaking into mobile view.
+			// FIXME: Let's set this to a module so it's more explicit
 			$modules['watch'] = array();
 		}
-		$modules['search'] = array( 'mobile.search' );
-		$modules['issues'] = array( 'mobile.issues' );
+
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$modules['editor'] = array( 'mobile.editor' );
 		}
@@ -909,6 +909,7 @@ class SkinMinerva extends SkinTemplate {
 			$modules['toggling'] = array( 'mobile.toggling' );
 			$modules['eventlogging'] = array( 'mobile.loggingSchemas' );
 		}
+
 		// FIXME: Upstream?
 		wfRunHooks( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 		return $modules;
