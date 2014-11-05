@@ -229,6 +229,30 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Creates element relating to secondary button
+	 * @param string $title Title attribute value of secondary button
+	 * @param string $url of secondary button
+	 * @param string $spanLabel text of span associated with secondary button.
+	 * @param string $spanClass the class of the secondary button
+	 * @return string html relating to button
+	 */
+	protected function createSecondaryButton( $title, $url, $spanLabel, $spanClass ) {
+		return Html::openElement( 'a', array(
+				'title' => $title,
+				'href' => $url,
+				'class' => MobileUI::iconClass( 'notifications', 'element',
+					'user-button main-header-button icon-32px' ),
+				'id' => 'secondary-button',
+			) ) .
+			Html::element(
+				'span',
+				array( 'class' => $spanClass ),
+				$spanLabel
+			) .
+			Html::closeElement( 'a' );
+	}
+
+	/**
 	 * Prepares the user button.
 	 * @param QuickTemplate $tpl
 	 */
@@ -258,21 +282,13 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		if ( $notificationsTitle ) {
+			$spanClass = $isZero ? 'zero notification-count' : 'notification-count';
+
+			$url = $notificationsTitle->getLocalURL(
+				array( 'returnto' => $currentTitle->getPrefixedText() ) );
+
 			$tpl->set( 'secondaryButton',
-				Html::openElement( 'a', array(
-					'title' => $notificationsMsg,
-					'href' => $notificationsTitle->getLocalURL(
-						array( 'returnto' => $currentTitle->getPrefixedText() ) ),
-					'class' => MobileUI::iconClass( 'notifications', 'element',
-						'user-button main-header-button icon-32px' ),
-					'id' => 'secondary-button',
-				) ) .
-				Html::element(
-					'span',
-					array( 'class' => $isZero ? 'zero' : '' ),
-					$countLabel
-				) .
-				Html::closeElement( 'a' )
+				$this->createSecondaryButton( $notificationsMsg, $url, $countLabel, $spanClass )
 			);
 		}
 	}

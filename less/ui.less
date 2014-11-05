@@ -233,34 +233,34 @@ input.search {
 		&.loading span {
 			display: none;
 		}
+	}
+}
 
-		span {
-			text-indent: 0;
-			display: inline-block;
-			font-weight: bold;
-			color: #fff;
-			background: #c91f2c;
-			border-radius: 2px;
-			height: 1.2em;
-			line-height: 1.2em;
-			min-width: 1em;
-			margin: .6em .6em 0 0;
-			padding: 0 0.1em;
-			text-align: center;
+.notification-count {
+	text-indent: 0;
+	display: inline-block;
+	font-weight: bold;
+	color: #fff;
+	background: #c91f2c;
+	border-radius: 2px;
+	height: 1.2em;
+	line-height: 1.2em;
+	min-width: 1em;
+	margin: .6em .6em 0 0;
+	padding: 0 0.1em;
+	text-align: center;
 
-			&.zero {
-				display: none;
-			}
+	&.zero {
+		display: none;
+	}
 
-			// FIXME: There must be a better way of doing this
-			&.max {
-				right: .2em;
-				width: 2em;
-				height: 2em;
-				line-height: 2em;
-				font-size: 0.7em;
-			}
-		}
+	// FIXME: There must be a better way of doing this
+	&.max {
+		right: .2em;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
+		font-size: 0.7em;
 	}
 }
 
@@ -275,5 +275,13 @@ input.search {
 	// For talk and CTA drawer
 	.mw-ui-block {
 		width: auto;
+	}
+}
+
+.alpha {
+	.notification-count {
+		position: absolute;
+		right: .3em;
+		top: 0;
 	}
 }
