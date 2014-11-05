@@ -462,6 +462,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.preferredLanguages' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/modules/preferredLanguages/profiler.js',
+			'javascripts/modules/preferredLanguages/preferred.js',
+		),
+	),
+
 	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
@@ -469,9 +479,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 			'mobile.references.beta',
 			'mobile.wikigrok',
-		),
-		'scripts' => array(
-			'javascripts/modules/languages/preferred.js',
+			'mobile.preferredLanguages',
 		),
 		'position' => 'bottom',
 	),
@@ -575,9 +583,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.beta',
-		),
-		'scripts' => array(
-			'javascripts/modules/mf-translator.js',
 		),
 	),
 
