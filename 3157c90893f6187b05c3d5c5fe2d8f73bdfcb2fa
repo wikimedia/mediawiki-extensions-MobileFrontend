@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_9063b809",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 780,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-05T10:52:19Z",
+      "side": 1,
+      "message": "Since the || operator short-circuits you can avoid the call to Title#quickUserCan( \u0027edit\u0027, $user ) in the case that the page doesn\u0027t exist and the user can create it, i.e. when $userCanCreatePage is true. Alternatively, you could return early.\n\nIf this is a micro-optimisation, then please tell me. I took a look at Title#quickUserCan and found it hard to trace.",
+      "revId": "3157c90893f6187b05c3d5c5fe2d8f73bdfcb2fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
