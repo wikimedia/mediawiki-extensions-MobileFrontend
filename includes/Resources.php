@@ -169,6 +169,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	// FIXME: Split this module into different features.
 	'mobile.startup' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
