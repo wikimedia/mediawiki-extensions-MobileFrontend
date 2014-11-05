@@ -66,7 +66,7 @@
 					claims.entities = entityClaims;
 					description = data.entities[ id ];
 
-					if ( description ) {
+					if ( description && description.descriptions !== undefined ) {
 						if ( description.descriptions[ self.language ] ) {
 							claims.description = description.descriptions[ self.language ].value;
 						}
