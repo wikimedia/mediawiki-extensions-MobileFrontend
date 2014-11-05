@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_a60c75f1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-05T21:25:08Z",
+      "side": 1,
+      "message": "Too many indents!",
+      "revId": "beeccccded5c2d004d6ea05d88e44bded98d0e2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c60f41e3",
+        "filename": "javascripts/modules/references/references.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-05T21:25:08Z",
+      "side": 1,
+      "message": "It seems you don\u0027t need to do this when !M.isBetaGroupMember() I\u0027m not sure that matters though.",
+      "revId": "beeccccded5c2d004d6ea05d88e44bded98d0e2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
