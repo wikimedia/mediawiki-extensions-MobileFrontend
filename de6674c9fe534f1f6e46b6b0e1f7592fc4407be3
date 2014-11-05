@@ -50,6 +50,24 @@
       "revId": "de6674c9fe534f1f6e46b6b0e1f7592fc4407be3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_8d65dfdf",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-05T01:07:54Z",
+      "side": 1,
+      "message": "but the names are different",
+      "parentUuid": "6e936f18_ad321bed",
+      "revId": "de6674c9fe534f1f6e46b6b0e1f7592fc4407be3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
