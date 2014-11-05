@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_f0b31cfb",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-05T08:09:15Z",
+      "side": 1,
+      "message": "Hmm, it\u0027s not really \"near\" this page, but sounds much better as the actual wording. Maybe someone other has some other ideas, too :)",
+      "parentUuid": "6e936f18_ca0c2df3",
+      "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_595fafe8",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 3
@@ -65,6 +83,24 @@
       "side": 1,
       "message": "I see what you mean. I think this is badly named. I would suggest refactoring this to be called renderSecondaryActions and then make it call getSecondaryActions which returns an array of url label combinations.",
       "parentUuid": "6e936f18_595fafe8",
+      "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_50cd3087",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-05T08:09:15Z",
+      "side": 1,
+      "message": "Good idea :)",
+      "parentUuid": "6e936f18_ea5809ff",
       "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -118,6 +154,24 @@
       "side": 1,
       "message": "Erg the function is badly named huh see comment in other file :)\nPS. I think it would be cool to do categories in the same way as languages and we should work towards having a language button, nearby button and categories button..",
       "parentUuid": "6e936f18_99d3f704",
+      "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_10a7a8bb",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-05T08:09:15Z",
+      "side": 1,
+      "message": "You mean an overlay for categories? Sounds good! I will open a bug for it for further discussions :)\n-\u003e https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d73008",
+      "parentUuid": "6e936f18_ea41e90e",
       "revId": "174f1828660e53d5872af30b78d3e00ae4855e21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
