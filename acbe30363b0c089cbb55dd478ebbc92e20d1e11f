@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_bbf815e3",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 496,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-05T11:58:17Z",
+      "side": 1,
+      "message": "Missing wpProfileOut before this early return.",
+      "revId": "acbe30363b0c089cbb55dd478ebbc92e20d1e11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_3bc3a58d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-05T11:58:17Z",
+      "side": 1,
+      "message": "The behaviour of this function now depends on another configuration variable. Please document the new behaviour.",
+      "revId": "acbe30363b0c089cbb55dd478ebbc92e20d1e11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_7bc92dad",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-05T11:58:17Z",
+      "side": 1,
+      "message": "As I commented on the bug, why not just set $wgMFStopRedirectCookieHost?",
+      "revId": "acbe30363b0c089cbb55dd478ebbc92e20d1e11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_9bc43996",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 514,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-05T11:58:17Z",
+      "side": 1,
+      "message": "The wgMFCookie domain hasn\u0027t been added to MobileFrontend.php, nor has it been documented.",
+      "revId": "acbe30363b0c089cbb55dd478ebbc92e20d1e11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
