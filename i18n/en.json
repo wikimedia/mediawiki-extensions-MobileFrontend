@@ -238,6 +238,7 @@
 	"mobile-frontend-profile-userpage-link": "Visit {{GENDER:$1|user}} page.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|Talk to $1}}",
 	"mobile-frontend-random-button": "Random",
+	"mobile-frontend-references-citation": "Citation",
 	"mobile-frontend-regular-site": "Desktop view",
 	"mobile-frontend-requires-mobile": "This page is not available on desktop. Please click the mobile view link at the bottom of the page.",
 	"mobile-frontend-requires-optin": "This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.",

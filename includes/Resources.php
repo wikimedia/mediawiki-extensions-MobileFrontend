@@ -469,6 +469,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable',
 			'mobile.beta.common',
 			'mobile.overlays',
+			'mobile.references.beta',
 			'mobile.wikigrok',
 		),
 		'scripts' => array(
@@ -715,6 +716,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.references.beta' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.references',
+		),
+		'messages' => array(
+			'mobile-frontend-references-citation',
+		),
+		'templates' => array(
+			'DrawerBeta.hogan' => 'templates/modules/references/ReferencesDrawerBeta.hogan',
+		),
+		'scripts' => array(
+			'javascripts/modules/references/ReferencesDrawerBeta.js',
+		),
+	),
+
 	'mobile.references' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.drawers',
@@ -723,10 +739,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/references.less',
 		),
 		'templates' => array(
-			// references.js
 			'Drawer.hogan' => 'templates/modules/references/ReferencesDrawer.hogan',
 		),
 		'scripts' => array(
+			'javascripts/modules/references/ReferencesDrawer.js',
 			'javascripts/modules/references/references.js',
 		),
 	),

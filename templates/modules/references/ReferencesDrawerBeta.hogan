@@ -1,0 +1,6 @@
+<div class="cite">
+	{{{citation}}}
+	{{{cancelButton}}}
+</div>
+<sup>{{title}}</sup>
+{{{text}}}

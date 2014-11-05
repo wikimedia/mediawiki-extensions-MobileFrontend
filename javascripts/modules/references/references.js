@@ -1,23 +1,5 @@
 ( function ( M, $ ) {
-	var Drawer = M.require( 'Drawer' ),
-		Icon = M.require( 'Icon' ),
-		ReferencesDrawer, drawer;
-
-	/**
-	 * Drawer for references
-	 * @class ReferencesDrawer
-	 * @extends Drawer
-	 */
-	ReferencesDrawer = Drawer.extend( {
-		defaults: {
-			cancelButton: new Icon( {
-				name: 'cancel', additionalClassNames: 'cancel',
-				label: mw.msg( 'mobile-frontend-overlay-close' )
-			} ).toHtmlString()
-		},
-		className: 'drawer position-fixed text references',
-		template: mw.template.get( 'mobile.references', 'Drawer.hogan' )
-	} );
+	var drawer;
 
 	function getReference( id ) {
 		// Escape (almost) all CSS selector meta characters
@@ -45,13 +27,27 @@
 	}
 
 	function setup( page ) {
-		var $container = page ? page.$el : $( '#content' );
-		$container.find( 'sup a' ).off( 'click' ).on( 'click', showReference );
-		$container.find( '.mw-cite-backlink a' ).off( 'click' );
+		var $container = page ? page.$el : $( '#content' ),
+			module, view, ReferencesDrawer;
+
+		if ( M.isBetaGroupMember() ) {
+			module = 'mobile.references.beta';
+			view = 'modules/references/ReferencesDrawerBeta';
+		} else {
+			module = 'mobile.references';
+			view = 'modules/references/ReferencesDrawer';
+		}
+
+		mw.loader.using( module ).done( function () {
+			ReferencesDrawer = M.require( view );
+			drawer = new ReferencesDrawer();
+			$container.find( 'sup a' ).off( 'click' ).on( 'click', showReference );
+			$container.find( '.mw-cite-backlink a' ).off( 'click' );
+		} );
+
 	}
 
 	$( function () {
-		drawer = new ReferencesDrawer();
 		setup();
 	} );
 
