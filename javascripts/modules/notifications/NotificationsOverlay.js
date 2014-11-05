@@ -41,7 +41,8 @@
 						action: 'query',
 						meta: 'notifications',
 						notformat: 'flyout',
-						notprop: 'index|list|count'
+						notprop: 'index|list|count',
+						uselang: 'user'
 					} ).done( function ( result ) {
 						var notifications;
 						if ( result.query && result.query.notifications ) {
