@@ -5,11 +5,21 @@
 			"Robin0van0der0vliet"
 		]
 	},
-	"mobile-frontend-drawer-cancel": "Ofbrekke",
-	"mobile-frontend-editor-cancel": "Ofbrekke",
+	"mobile-frontend-drawer-cancel": "Annulearje",
+	"mobile-frontend-editor-cancel": "Annulearje",
 	"mobile-frontend-editor-continue": "Trochgean",
 	"mobile-frontend-editor-edit": "Bewurkje",
 	"mobile-frontend-editor-save": "Fêstlizze",
+	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Ja!",
 	"mobile-frontend-image-cancel-confirm": "Upload ôfbrekke?",
-	"mobile-frontend-missing-image": "Ôfbylding"
+	"mobile-frontend-language-heading": "<strong>Talen</strong>",
+	"mobile-frontend-languages-header": "Talen",
+	"mobile-frontend-languages-header-page": "$1 - Talen",
+	"mobile-frontend-missing-image": "Ôfbylding",
+	"mobile-frontend-page-menu-history": "Skiednis",
+	"mobile-frontend-password": "Wachtwurd:",
+	"mobile-frontend-password-placeholder": "Wachtwurd",
+	"mobile-frontend-placeholder": "{{SITENAME}} trochsykje",
+	"mobile-frontend-username": "Brûkersnamme:",
+	"mobile-frontend-username-placeholder": "Brûkersnamme"
 }

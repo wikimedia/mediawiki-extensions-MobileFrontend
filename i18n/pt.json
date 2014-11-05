@@ -328,5 +328,6 @@
 	"tag-mobile_web_edit": "Edição feita através do sítio móvel",
 	"tag-mobile_web_edit-description": "Edição feita através do sítio para telemóvel",
 	"mobile-frontend-pageaction-edit-tooltip": "Editar introdução desta página.",
-	"mobile-frontend-pageaction-upload-tooltip": "Carregar foto principal para esta página."
+	"mobile-frontend-pageaction-upload-tooltip": "Carregar foto principal para esta página.",
+	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel."
 }
