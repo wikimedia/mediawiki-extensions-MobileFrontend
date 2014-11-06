@@ -176,23 +176,39 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Render secondary page actions like language selector
+	 * Get page secondary actions
 	 */
-	protected function renderMetaSections() {
-		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
+	protected function getSecondaryActions() {
+		$result = array();
 
-		// If languages are available, render a languages link
+		// If languages are available, add a languages link
 		if ( $this->getLanguages() || $this->getLanguageVariants() ) {
 			$languageUrl = SpecialPage::getTitleFor(
 				'MobileLanguages',
 				$this->getSkin()->getTitle()
 			)->getLocalURL();
-			$languageLabel = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 
+			$result['language'] = array(
+				'class' => 'languageSelector',
+				'url' => $languageUrl,
+				'label' => wfMessage( 'mobile-frontend-language-article-heading' )->text()
+			);
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Render secondary page actions like language selector
+	 */
+	protected function renderSecondaryActions() {
+		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
+
+		foreach( $this->getSecondaryActions() as $el ) {
 			echo Html::element( 'a', array(
-				'class' => 'mw-ui-button mw-ui-progressive button languageSelector',
-				'href' => $languageUrl
-			), $languageLabel );
+				'class' => 'mw-ui-button mw-ui-progressive button ' . $el['class'],
+				'href' => $el['url']
+			), $el['label'] );
 		}
 
 		echo Html::closeElement( 'div' );
@@ -216,7 +232,7 @@ class MinervaTemplate extends BaseTemplate {
 					echo $data['subject-page'];
 				}
 				echo $data[ 'bodytext' ];
-				$this->renderMetaSections();
+				$this->renderSecondaryActions();
 				$this->renderHistoryLinkBottom( $data );
 			?>
 			</div>
