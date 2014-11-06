@@ -34,6 +34,24 @@
       "revId": "210081f0576129ecfd6b1ca547e4874c81b8f123",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_a1145652",
+        "filename": "templates/OverlayLinkListItems.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T23:49:01Z",
+      "side": 1,
+      "message": "I\u0027ll do that in a separate patchset. It makes it easier to follow the commit history and makes code review easier :)\n\nPut it in CategoryOverlay.hogan for the time being.",
+      "parentUuid": "6e936f18_8da71108",
+      "revId": "210081f0576129ecfd6b1ca547e4874c81b8f123",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
