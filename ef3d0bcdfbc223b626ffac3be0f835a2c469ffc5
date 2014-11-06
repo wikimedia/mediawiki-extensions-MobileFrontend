@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_bffeb864",
+        "filename": "javascripts/PageApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-06T10:14:21Z",
+      "side": 1,
+      "message": "categroeis \u003d\u003e categories.",
+      "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_3f4948d3",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-06T10:14:21Z",
+      "side": 1,
+      "message": "This method should be replaced with: mw.Title.newFromText(...).title.",
+      "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5ff5347e",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-06T10:14:21Z",
+      "side": 1,
+      "message": "Move this into its own template, e.g. CategoryListItem.hogan?",
+      "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_7ff0308e",
+        "filename": "javascripts/modules/categories/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-06T10:14:21Z",
+      "side": 1,
+      "message": "Debugging line.",
+      "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
