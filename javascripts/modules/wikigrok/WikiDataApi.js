@@ -73,11 +73,13 @@
 					}
 					return claims;
 				} else {
-					self.logError( 'no-impression-cannot-fetch-claims' );
+					// FIXME: logError does not exist
+					// self.logError( 'no-impression-cannot-fetch-claims' );
 					return false;
 				}
 			} ).fail( function () {
-				self.logError( 'no-impression-cannot-fetch-claims' );
+				// FIXME: logError does not exist
+				// self.logError( 'no-impression-cannot-fetch-claims' );
 			} );
 		},
 		/**
