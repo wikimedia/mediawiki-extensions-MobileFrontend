@@ -111,7 +111,7 @@
 				ggsnamespace: ns,
 				ggslimit: limit
 			};
-			$.extend( requestParams, params);
+			$.extend( requestParams, params );
 
 			this.get( requestParams, {
 				dataType: endpoint ? 'jsonp' : 'json',

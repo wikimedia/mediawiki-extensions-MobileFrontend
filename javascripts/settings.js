@@ -63,6 +63,6 @@
 			deleteUserSetting: deleteUserSetting,
 			cookiesEnabled: cookiesEnabled
 		};
-	}());
+	}() );
 
 }( mw.mobileFrontend, jQuery ) );

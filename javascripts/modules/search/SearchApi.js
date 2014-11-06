@@ -96,4 +96,4 @@
 
 	M.define( 'modules/search/SearchApi', SearchApi );
 
-}( mw.mobileFrontend, jQuery ));
+}( mw.mobileFrontend, jQuery ) );

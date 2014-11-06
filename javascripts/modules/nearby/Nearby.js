@@ -138,7 +138,7 @@
 				.done( pagesSuccess )
 				.fail( pagesError );
 			} else if ( options.pageTitle ) {
-				this.nearbyApi.getPagesAroundPage( options.pageTitle, this.range)
+				this.nearbyApi.getPagesAroundPage( options.pageTitle, this.range )
 				.done( pagesSuccess )
 				.fail( pagesError );
 			} else {
@@ -166,7 +166,7 @@
 			} ).on( 'click', function () {
 				window.location.hash = $( this ).attr( 'id' );
 				// name funnel for watchlists to catch subsequent uploads
-				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
+				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000 ) } );
 			} );
 
 			// Restore the offset

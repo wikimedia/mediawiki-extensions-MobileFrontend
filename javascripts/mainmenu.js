@@ -39,7 +39,7 @@
 		} );
 
 		// close navigation if content tapped
-		$( '#mw-mf-page-center' ).on( 'click', function (ev) {
+		$( '#mw-mf-page-center' ).on( 'click', function ( ev ) {
 			if ( isOpen() ) {
 				closeNavigationDrawers();
 				ev.preventDefault();
@@ -56,4 +56,4 @@
 
 	M.on( 'header-loaded', initialize );
 
-}( mw.mobileFrontend, jQuery ));
+}( mw.mobileFrontend, jQuery ) );

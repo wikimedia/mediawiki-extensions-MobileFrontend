@@ -312,7 +312,7 @@
 			sessionId = '';
 			while ( sessionId.length < 32 ) {
 				// http://stackoverflow.com/a/8084248/365238
-				sessionId += Math.random().toString(36).slice(2, 32 + 2 - sessionId.length);
+				sessionId += Math.random().toString( 36 ).slice( 2, 32 + 2 - sessionId.length );
 			}
 			localStorage.setItem( 'sessionId', sessionId );
 		}
