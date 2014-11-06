@@ -619,6 +619,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/moduleLoader.js',
 		),
 		'messages' => array(
+			'mobile-frontend-editor-save',
 			'mobile-frontend-overlay-close',
 			'mobile-frontend-overlay-continue',
 		),
@@ -721,11 +722,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toast',
 			'mobile.upload.ui',
 			'mobile.redirect',
-		),
-		// FIXME: Move these messages to a more appropriate place.
-		'messages' => array(
-			// EditorOverlayBase.js, TalkSectionAddOverlay, TalkSectionOverlay, PhotoUploadProgress
-			'mobile-frontend-editor-save',
 		),
 	),
 

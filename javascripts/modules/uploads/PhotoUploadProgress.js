@@ -11,10 +11,9 @@
 	 * @extends Overlay
 	 */
 	PhotoUploadProgress = Overlay.extend( {
-		defaults: {
-			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' ),
-			saveMsg: mw.msg( 'mobile-frontend-editor-save' )
-		},
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
+			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' )
+		} ),
 		template: mw.template.get( 'mobile.uploads', 'PhotoUploadProgress.hogan' ),
 		fullScreen: false,
 

@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 	var
 		Overlay = M.require( 'Overlay' ),
 		popup = M.require( 'toast' ),
@@ -17,13 +17,12 @@
 			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
 		},
-		defaults: {
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			title: undefined,
 			section: undefined,
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
-			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
-		},
+		} ),
 		/**
 		 * Fetches the talk topics of the page specified in options.title
 		 *   if options.section is not defined.
@@ -96,4 +95,4 @@
 	} );
 
 	M.define( 'modules/talk/TalkSectionOverlay', TalkSectionOverlay );
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

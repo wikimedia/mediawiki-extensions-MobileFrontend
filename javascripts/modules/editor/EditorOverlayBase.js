@@ -18,7 +18,6 @@
 			sourceButton: new Icon( { name: 'edit-source', additionalClassNames: 'icon-32px' } ).toHtmlString(),
 			veButton: new Icon( { name: 'edit-ve', additionalClassNames: 'icon-32px' } ).toHtmlString(),
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
-			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			closeMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
 			summaryRequestMsg: mw.msg( 'mobile-frontend-editor-summary-request' ),

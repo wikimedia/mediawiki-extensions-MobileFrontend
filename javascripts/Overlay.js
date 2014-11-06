@@ -47,6 +47,7 @@
 		},
 		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),
 		defaults: {
+			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			cancelButton: new Icon( { tagName: 'button',
 					name: 'cancel', additionalClassNames: 'cancel',
 					label: mw.msg( 'mobile-frontend-overlay-close' )

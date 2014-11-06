@@ -12,13 +12,12 @@
 	 * @extends Overlay
 	 */
 	TalkSectionAddOverlay = Overlay.extend( {
-		defaults: {
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
-			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
 			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' ),
 			editingMsg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
-		},
+		} ),
 		templatePartials: {
 			header: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/content.hogan' )

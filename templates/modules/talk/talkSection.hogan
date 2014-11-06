@@ -13,7 +13,7 @@
 				{{info}}
 				{{{licenseMsg}}}
 			</p>
-			<button class="mw-ui-button mw-ui-constructive mw-ui-block">{{confirmMsg}}</button>
+			<button class="mw-ui-button mw-ui-constructive mw-ui-block">{{saveMsg}}</button>
 		</div>
 	</div>
 </div>

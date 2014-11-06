@@ -5,5 +5,5 @@
 	<div class="overlay-title">
 		<h2>{{editingMsg}}</h2>
 	</div>
-	<div class="overlay-action"><button class="submit confirm-save">{{confirmMsg}}</button></div>
+	<div class="overlay-action"><button class="submit confirm-save">{{saveMsg}}</button></div>
 </div>
