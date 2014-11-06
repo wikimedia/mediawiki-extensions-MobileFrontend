@@ -16,6 +16,24 @@
       "revId": "210081f0576129ecfd6b1ca547e4874c81b8f123",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_8da71108",
+        "filename": "templates/OverlayLinkListItems.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-06T18:09:51Z",
+      "side": 1,
+      "message": "The template could be used in TalkOverlay (with some adjustments) :)",
+      "parentUuid": "6e936f18_2d2b5d79",
+      "revId": "210081f0576129ecfd6b1ca547e4874c81b8f123",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
