@@ -13,8 +13,7 @@
 		template: mw.template.get( 'mobile.startup', 'Section.hogan' ),
 		defaults: {
 			line: undefined,
-			text: '',
-			editLabel: mw.msg( 'mobile-frontend-editor-edit' )
+			text: ''
 		},
 		initialize: function ( options ) {
 			var self = this;
