@@ -357,6 +357,7 @@
 	"mobile-frontend-pageaction-edit-tooltip": "编辑此页面的序言章节。",
 	"mobile-frontend-pageaction-upload-tooltip": "上传自定义背景图片",
 	"apihelp-mobileview-param-noimages": "返回不带图片的HTML。",
+	"apihelp-mobileview-param-thumbnail": "'最大缩略图尺寸。",
 	"apihelp-mobileview-example-1": "获取有关[[Doom metal]]的第0章节的信息",
 	"apihelp-parse-param-noimages": "在移动输出中禁用图片。",
 	"apihelp-parse-param-mainpage": "应用移动首页转换。"

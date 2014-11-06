@@ -328,5 +328,9 @@
 	"tag-mobile_web_edit": "Modificare de pe webul mobil",
 	"tag-mobile_web_edit-description": "Modificare efectuată prin site-ul web mobil",
 	"mobile-frontend-pageaction-edit-tooltip": "Modifică secțiunea de început a acestei pagini.",
-	"mobile-frontend-pageaction-upload-tooltip": "Încarcă o fotografie principală în această pagină."
+	"mobile-frontend-pageaction-upload-tooltip": "Încarcă o fotografie principală în această pagină.",
+	"apihelp-mobileview-description": "Returnează datele necesare pentru vizualizările mobile.",
+	"apihelp-mobileview-param-page": "Titlul paginii de procesat.",
+	"apihelp-mobileview-param-noimages": "Returnează HTML fără imagini.",
+	"apihelp-mobileview-param-thumbnail": "Dimensiunile maxime pentru miniaturi."
 }

@@ -10,16 +10,19 @@
 	"mobile-frontend-editor-continue": "Trochgean",
 	"mobile-frontend-editor-edit": "Bewurkje",
 	"mobile-frontend-editor-save": "Fêstlizze",
+	"mobile-frontend-editor-visual-editor": "Bewurkje",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Ja!",
 	"mobile-frontend-image-cancel-confirm": "Upload ôfbrekke?",
 	"mobile-frontend-language-heading": "<strong>Talen</strong>",
 	"mobile-frontend-languages-header": "Talen",
 	"mobile-frontend-languages-header-page": "$1 - Talen",
+	"mobile-frontend-main-menu-settings-heading": "Ynstellings",
 	"mobile-frontend-missing-image": "Ôfbylding",
 	"mobile-frontend-page-menu-history": "Skiednis",
 	"mobile-frontend-password": "Wachtwurd:",
 	"mobile-frontend-password-placeholder": "Wachtwurd",
 	"mobile-frontend-placeholder": "{{SITENAME}} trochsykje",
 	"mobile-frontend-username": "Brûkersnamme:",
-	"mobile-frontend-username-placeholder": "Brûkersnamme"
+	"mobile-frontend-username-placeholder": "Brûkersnamme",
+	"mobile-frontend-watchlist-more": "mear"
 }
