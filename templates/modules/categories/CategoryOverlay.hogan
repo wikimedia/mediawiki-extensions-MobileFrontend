@@ -1,0 +1,12 @@
+<div class="category-list">
+	<p class="content-header">
+		{{subheading}}
+	</p>
+	<ul class="page-list">
+		{{#items}}
+			<li>
+				<a href="{{url}}">{{title}}</a>
+			</li>
+		{{/items}}
+	</ul>
+</div>

@@ -578,6 +578,26 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.categories' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mediawiki.Title',
+			'mobile.overlays',
+			'mobile.templates',
+		),
+		'scripts' => array(
+			'javascripts/modules/categories/CategoryOverlay.js',
+			'javascripts/modules/categories/init.js',
+		),
+		'templates' => array(
+			'CategoryOverlay.hogan' => 'templates/modules/categories/CategoryOverlay.hogan',
+		),
+		'messages' => array(
+			'mobile-frontend-categories-heading',
+			'mobile-frontend-categories-subheading',
+			'mobile-frontend-categories-nocat',
+		),
+	),
+
 	'mobile.wikigrok' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',

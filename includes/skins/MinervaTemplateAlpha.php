@@ -14,34 +14,6 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder-alpha';
 
 	/**
-	 * Show/Render categories as section in alpha mode
-	 */
-	protected function renderCategories() {
-		$skin = $this->getSkin();
-		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );
-		if ( $categories ) {
-		?>
-			<h2 id="collapsible-heading-categories">
-				<span><?php $this->msg( 'categories' ) ?></span>
-			</h2>
-			<div id="collapsible-block-categories">
-				<?php echo $categories ?>
-			</div>
-		<?php
-		}
-	}
-
-	/**
-	 * Render secondary page actions
-	 */
-	protected function renderSecondaryActions() {
-		// FIXME: This should be a button like language button (bug 73008)
-		$this->renderCategories();
-
-		parent::renderSecondaryActions();
-	}
-
-	/**
 	 * Get button information to link to Special:Nearby to find articles
 	 * (geographically) related to this
 	 */
@@ -68,6 +40,19 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 		$result = parent::getSecondaryActions();
 
 		$result += $this->getNearbyButton();
+
+		// add categories button
+		$skin = $this->getSkin();
+		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );
+		if ( $categories ) {
+			$result['categories'] = array(
+				'url' => '#/categories',
+				// add hidden class (the overlay works only, when JS is enabled (class will
+				// be removed in categories/init.js)
+				'class' => 'categoryButton hidden',
+				'label' => wfMessage( 'categories' )->text()
+			);
+		}
 
 		return $result;
 	}
