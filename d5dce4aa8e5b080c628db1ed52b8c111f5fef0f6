@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_6463c50a",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-06T05:38:20Z",
+      "side": 1,
+      "message": "\u003e PS. Why can\u0027t this go in the getSecondaryActions function?\n\nIt can. It should :)",
+      "parentUuid": "6e936f18_045f61e9",
+      "revId": "d5dce4aa8e5b080c628db1ed52b8c111f5fef0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_84ddb175",
         "filename": "javascripts/PageApi.js",
         "patchSetId": 3
