@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_2d2b5d79",
+        "filename": "templates/OverlayLinkListItems.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T18:02:48Z",
+      "side": 1,
+      "message": "What is the idea of this file? Why not put it in CategoryOverlay.hogan?\nIt also shouldn\u0027t be in the templates folder. It\u0027s not common (at least yet)",
+      "revId": "210081f0576129ecfd6b1ca547e4874c81b8f123",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
