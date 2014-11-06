@@ -409,13 +409,13 @@
 	QUnit.test( '#save, when token has expired', 2, function( assert ) {
 		var editorApi = new EditorApi( { title: 'MediaWiki:Test.css' } );
 
-		this.sandbox.stub( editorApi, 'post' ).
-			onFirstCall().returns( $.Deferred().reject( "badtoken" ) ).
-			onSecondCall().returns( $.Deferred().resolve( {"edit":{"result":"Success"}} ) );
+		this.sandbox.stub( editorApi, 'post' )
+			.onFirstCall().returns( $.Deferred().reject( "badtoken" ) )
+			.onSecondCall().returns( $.Deferred().resolve( {"edit":{"result":"Success"}} ) );
 
-		editorApi.getToken.
-			onFirstCall().returns( $.Deferred().resolve( 'cachedbadtoken' ) ).
-			onSecondCall().returns( $.Deferred().resolve( 'goodtoken' ) );
+		editorApi.getToken
+			.onFirstCall().returns( $.Deferred().resolve( 'cachedbadtoken' ) )
+			.onSecondCall().returns( $.Deferred().resolve( 'goodtoken' ) );
 
 		editorApi.getContent();
 		editorApi.setContent( 'section 1' );

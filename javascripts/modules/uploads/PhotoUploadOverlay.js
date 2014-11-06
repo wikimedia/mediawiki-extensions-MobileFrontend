@@ -156,17 +156,17 @@
 
 			Overlay.prototype.postRender.apply( this, arguments );
 
-			$submitButton = this.$( '.submit' ).
-				prop( 'disabled', true ).
-				on( 'click', function () {
+			$submitButton = this.$( '.submit' )
+				.prop( 'disabled', true )
+				.on( 'click', function () {
 					self.log( { action: 'previewSubmit' } );
 					self._submit();
 				} );
-			this.$description = this.$( 'textarea' ).
-				microAutosize().
+			this.$description = this.$( 'textarea' )
+				.microAutosize()
 				// use input event too, Firefox doesn't fire keyup on many devices:
 				// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
-				on( 'keyup input', function () {
+				.on( 'keyup input', function () {
 					$submitButton.prop( 'disabled', self.$description.val() === '' );
 				} );
 
@@ -224,10 +224,10 @@
 			this.$( '.help' ).on( 'click', function () {
 				self.log( { action: 'whatDoesThisMean' } );
 			} );
-			$( '<img>' ).
-				attr( 'src', url ).
-				appendTo( $preview ).
-				on( 'error', function () {
+			$( '<img>' )
+				.attr( 'src', url )
+				.appendTo( $preview )
+				.on( 'error', function () {
 					// When using a bad filetype close the overlay
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
 					self.hide( true );

@@ -6,8 +6,8 @@
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (1 - no results)', {
 		setup: function() {
-			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' ).
-				returns( $.Deferred().resolve( [
+			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' )
+				.returns( $.Deferred().resolve( [
 			] ) );
 		}
 	} );
@@ -27,10 +27,10 @@
 			// prevent hits to api due to watch status lookup
 			this.sandbox.stub( WatchstarApi.prototype, 'get' ).returns( $.Deferred().resolve( resp ) );
 
-			this.getLocation = this.sandbox.stub( Nearby.prototype, 'getCurrentPosition' ).
-				returns( $.Deferred().resolve( { latitude: 37.7, longitude: -122 } ) );
-			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' ).
-				returns( $.Deferred().resolve( [
+			this.getLocation = this.sandbox.stub( Nearby.prototype, 'getCurrentPosition' )
+				.returns( $.Deferred().resolve( { latitude: 37.7, longitude: -122 } ) );
+			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' )
+				.returns( $.Deferred().resolve( [
 					{ title: 'Sutro Tower', id: 2 },
 					{ title: 'Golden Gate bridge', id: 3 },
 					{ title: 'Golden Gate Park', id: 4 }
@@ -64,8 +64,8 @@
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (3 - server errors)', {
 		setup: function() {
-			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' ).
-				returns( $.Deferred().reject() );
+			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPages' )
+				.returns( $.Deferred().reject() );
 		}
 	} );
 
@@ -80,8 +80,8 @@
 
 	QUnit.module( 'MobileFrontend modules/nearby/Nearby (4 - Around page)', {
 		setup: function() {
-			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPagesAroundPage' ).
-				returns( $.Deferred().reject() );
+			this.spy = this.sandbox.stub( NearbyApi.prototype, 'getPagesAroundPage' )
+				.returns( $.Deferred().reject() );
 		}
 	} );
 

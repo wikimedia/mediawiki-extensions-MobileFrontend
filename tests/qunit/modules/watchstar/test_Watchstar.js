@@ -28,8 +28,8 @@ QUnit.test( 'Anonymous user opens drawer', 1, function( assert ) {
 
 QUnit.module( 'MobileFrontend: Watchstar.js', {
 	setup: function() {
-		this.spy = this.sandbox.stub( WatchstarApi.prototype, 'postWithToken' ).
-			returns( $.Deferred().resolve() );
+		this.spy = this.sandbox.stub( WatchstarApi.prototype, 'postWithToken' )
+			.returns( $.Deferred().resolve() );
 	},
 	teardown: function() {
 		// Hide any existing toasts

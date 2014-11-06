@@ -16,11 +16,11 @@
 		 * @param {String} className class to add to elemenet
 		 */
 		show: function ( content, className ) {
-			this.$el.
-				html( content ).
-				removeAttr( 'class' ).
-				addClass( this.className ).
-				addClass( className );
+			this.$el
+				.html( content )
+				.removeAttr( 'class' )
+				.addClass( this.className )
+				.addClass( className );
 			Drawer.prototype.show.apply( this, arguments );
 		}
 	} );

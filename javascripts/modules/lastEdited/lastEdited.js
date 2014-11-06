@@ -44,10 +44,10 @@
 					// I'll abuse of PLURAL support means we have to pass the relative URL rather than construct it from a wikilink
 					username ? mw.util.getUrl( 'Special:UserProfile/' + username ) : '' ] );
 
-			$( '<div>' ).attr( 'id', 'mw-mf-last-modified' ).
-				attr( 'class', $lastModified.attr( 'class' ) ).
-				html( mw.message.apply( this, args ).parse() ).
-				insertBefore( $lastModified );
+			$( '<div>' ).attr( 'id', 'mw-mf-last-modified' )
+				.attr( 'class', $lastModified.attr( 'class' ) )
+				.html( mw.message.apply( this, args ).parse() )
+				.insertBefore( $lastModified );
 			$lastModified.remove();
 		}
 	}

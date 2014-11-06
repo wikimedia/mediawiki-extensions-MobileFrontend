@@ -58,8 +58,8 @@
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 
 			this.$preview = this.$( '.preview' );
-			this.$content = this.$( '.wikitext-editor' ).
-				on( 'input', function () {
+			this.$content = this.$( '.wikitext-editor' )
+				.on( 'input', function () {
 					self.api.setContent( self.$content.val() );
 					self.$( '.continue, .submit' ).prop( 'disabled', false );
 				} );
@@ -177,15 +177,15 @@
 			this.$content.hide();
 			this.showSpinner();
 
-			this.api.getContent().
-				done( function ( content ) {
-					self.$content.
-						show().
-						val( content ).
-						microAutosize();
+			this.api.getContent()
+				.done( function ( content ) {
+					self.$content
+						.show()
+						.val( content )
+						.microAutosize();
 					self.clearSpinner();
-				} ).
-				fail( function ( error ) {
+				} )
+				.fail( function ( error ) {
 					self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), error );
 				} );
 		},
@@ -243,8 +243,8 @@
 
 			this._showHidden( '.saving-header' );
 
-			this.api.save( options ).
-				done( function () {
+			this.api.save( options )
+				.done( function () {
 					var title = self.options.title;
 					// Special case behaviour of main page
 					if ( mw.config.get( 'wgIsMainPage' ) ) {
@@ -253,8 +253,8 @@
 					}
 
 					self.onSave();
-				} ).
-				fail( function ( data, code, response ) {
+				} )
+				.fail( function ( data, code, response ) {
 					var msg;
 
 					if ( data.type === 'captcha' ) {

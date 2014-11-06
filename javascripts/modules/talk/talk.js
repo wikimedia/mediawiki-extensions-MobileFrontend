@@ -18,8 +18,8 @@
 	} );
 
 	function init() {
-		$( '#ca-talk a' ).
-			attr( 'href', '#/talk' );
+		$( '#ca-talk a' )
+			.attr( 'href', '#/talk' );
 	}
 
 	init();

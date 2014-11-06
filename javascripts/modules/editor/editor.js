@@ -35,10 +35,10 @@
 	}
 
 	function addEditButton( section, container ) {
-		return $( '<a class="edit-page">' ).
-			attr( 'href', '#/editor/' + section ).
-			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
-			prependTo( container );
+		return $( '<a class="edit-page">' )
+			.attr( 'href', '#/editor/' + section )
+			.text( mw.msg( 'mobile-frontend-editor-edit' ) )
+			.prependTo( container );
 	}
 
 	function makeCta( $el, section, allowAnonymous ) {
@@ -51,18 +51,18 @@
 			options.links = [ { label: mw.msg( 'mobile-frontend-editor-anon' ),
 				href: $el[0].href, selector: 'edit-anon mw-ui-progressive' } ];
 		}
-		$el.
-			on( 'click', function ( ev ) {
+		$el
+			.on( 'click', function ( ev ) {
 				ev.preventDefault();
 				// prevent folding section when clicking Edit
 				ev.stopPropagation();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
-				drawer.
-					render( options ).
-					toggle();
-			} ).
+				drawer
+					.render( options )
+					.toggle();
+			} )
 			// needed until we use tap everywhere to prevent the link from being followed
-			on( 'click', false );
+			.on( 'click', false );
 	}
 
 	/*

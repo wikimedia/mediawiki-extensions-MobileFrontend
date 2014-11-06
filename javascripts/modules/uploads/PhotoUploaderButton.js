@@ -59,8 +59,8 @@
 				M.router.navigate( '#/upload-preview/' + self.options.funnel );
 			}
 
-			$input.
-				on( 'change', function () {
+			$input
+				.on( 'change', function () {
 					handleFile( $input[0].files[0] );
 					// clear so that change event is fired again when user selects the same file
 					$input.val( '' );
