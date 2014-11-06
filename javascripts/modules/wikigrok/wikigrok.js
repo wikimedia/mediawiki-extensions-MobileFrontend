@@ -136,10 +136,12 @@
 			// See if there are potential occupation claims about this person so we can decide if
 			// it's appropriate to display the WikiGrok interface.
 			function init() {
-				var dialog = new WikiGrokDialog( { itemId: wikidataID,
-						title: mw.config.get( 'wgTitle' ),
-						userToken: getUserToken(),
-						testing: ( idOverride ) ? true : false } );
+				var dialog = new WikiGrokDialog( {
+					itemId: wikidataID,
+					title: mw.config.get( 'wgTitle' ),
+					userToken: getUserToken(),
+					testing: ( idOverride ) ? true : false
+				} );
 
 				if ( $( '.toc-mobile' ).length ) {
 					dialog.insertBefore( '.toc-mobile' );
