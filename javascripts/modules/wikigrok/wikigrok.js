@@ -1,10 +1,13 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
 ( function ( M, $ ) {
+	// Only run in alpha or beta mode
+	M.assertMode( [ 'beta', 'alpha' ] );
+
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
 		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !M.isWideScreen(),
 		idOverride,
-		versions = {
+		versionConfigs = {
 			A: {
 				module: 'mobile.wikigrok.dialog',
 				view: 'modules/wikigrok/WikiGrokDialog',
@@ -16,97 +19,52 @@
 				name: 'b'
 			}
 		},
-		version,
-		DEFAULT_VERSION = 'A';
+		versionConfig,
+		WikiGrokAbTest = M.require( 'WikiGrokAbTest' ),
+		wikiGrokUser = M.require( 'wikiGrokUser' );
 
 	/*
-	 * Gets the version of wikigrok to use.
-	 *
-	 * If logged in:
-	 *   * If Alpha, use B
-	 *   * Otherwise use A
-	 * If anonymous:
-	 *   * If it had any particular version assigned, use that one.
-	 *   * Else, assign randomly a wikigrok version to use.
+	 * Gets the configuration for the version of WikiGrok to use.
 	 *
 	 * The `wikigrokversion` query parameter can be used to override this logic,
 	 * `wikigrokversion=a` means that A will always be used. If the override
 	 * version doesn't exist, then the default version (currently A) will be used.
 	 *
-	 * @return {Object}
+	 * If the user is eligible to enter the WikiGrok AB test, then the test
+	 * determines which version to use.
+	 *
+	 * @return {Object|null}
 	 */
-	function getWikiGrokVersion() {
-		var cookieName = mw.config.get( 'wgCookiePrefix' ) + '-wikiGrokAnonymousVersion',
-			anonVersion = $.cookie( cookieName ),
-			versionOverride;
+	function getWikiGrokConfig() {
+		var versionOverride,
+			versionConfig = null,
+			wikiGrokAbTest = WikiGrokAbTest.newFromMwConfig();
 
+		// See if there is a query string override
 		if ( M.query.wikigrokversion ) {
 			versionOverride = M.query.wikigrokversion.toUpperCase();
 
-			if ( versions.hasOwnProperty( versionOverride ) ) {
-				return versions[versionOverride];
+			if ( versionConfigs.hasOwnProperty( versionOverride ) ) {
+				versionConfig = versionConfigs[versionOverride];
 			}
-
-			return versions[DEFAULT_VERSION];
+		// Otherwise, see if A/B test is running, and if so, choose a version.
+		} else if ( wikiGrokAbTest.isEnabled ) {
+			versionConfig = versionConfigs[wikiGrokAbTest.getVersion( wikiGrokUser )];
 		}
 
-		if ( !mw.user.isAnon() ) {
-			if ( M.isAlphaGroupMember() ) {
-				return versions.B;
-			} else {
-				return versions.A;
-			}
-		} else {
-			if ( anonVersion ) {
-				return versions[anonVersion];
-			} else {
-				anonVersion = Math.round( Math.random() ) ? 'A' : 'B';
-				$.cookie( cookieName, anonVersion, {
-					expires: 90, // (days)
-					path: '/'
-				} );
-				return versions[anonVersion];
-			}
-		}
+		return versionConfig;
 	}
 
-	/*
-	 * Gets the user's token from 'cookie prefix' + "-wikiGrokUserToken"
-	 * cookie. If the cookie isn't set, then a token is generated,
-	 * stored in the cookie for 90 days, and then returned.
-	 *
-	 * @return {string}
-	 */
-	function getUserToken() {
-		var cookieName = mw.config.get( 'wgCookiePrefix' ) + '-wikiGrokUserToken',
-			storedToken = $.cookie( cookieName ),
-			generatedToken;
-
-		if ( storedToken ) {
-			return storedToken;
-		}
-
-		generatedToken = mw.user.generateRandomSessionId();
-
-		$.cookie( cookieName, generatedToken, {
-			expires: 90, // (days)
-			path: '/'
-		} );
-
-		return generatedToken;
-	}
+	versionConfig = getWikiGrokConfig();
 
 	// Allow query string override for testing, for example, '?wikidataid=Q508703'
 	if ( !wikidataID ) {
-		idOverride = window.location.search.match( /wikidataid=([^&]*)/ );
+		idOverride = M.query.wikidataid;
 		if ( idOverride ) {
-			mw.config.set( 'wgWikibaseItemId', idOverride[1] );
-			wikidataID = idOverride[1];
+			mw.config.set( 'wgWikibaseItemId', idOverride );
+			wikidataID = idOverride;
 		}
 	}
-
-	// Only run in alpha mode
-	M.assertMode( [ 'beta', 'alpha' ] );
 
 	if (
 		// WikiGrok is enabled
@@ -120,20 +78,20 @@
 		// Wikibase is active and this page has an item ID
 		wikidataID &&
 		// We're in Main namespace,
-		mw.config.get( 'wgNamespaceNumber' ) === 0
+		mw.config.get( 'wgNamespaceNumber' ) === 0 &&
+		versionConfig
 	) {
 
 		// Load the required module and view based on the version for the user
-		version = getWikiGrokVersion();
-		mw.loader.using( version.module ).done( function () {
-			var WikiGrokDialog = M.require( version.view );
+		mw.loader.using( versionConfig.module ).done( function () {
+			var WikiGrokDialog = M.require( versionConfig.view );
 
 			// Initialize the dialog and insert it into the page (but don't display yet)
 			function init() {
 				var dialog = new WikiGrokDialog( {
 					itemId: wikidataID,
 					title: mw.config.get( 'wgTitle' ),
-					userToken: getUserToken(),
+					userToken: wikiGrokUser.getToken(),
 					testing: ( idOverride ) ? true : false
 				} );
 
@@ -148,10 +106,10 @@
 		} ).fail( function () {
 			var data = {
 				error: 'no-impression-cannot-load-interface',
-				taskType: 'version ' + version.name,
+				taskType: 'version ' + versionConfig.name,
 				taskToken: mw.user.generateRandomSessionId(),
-				userToken: getUserToken(),
-				isLoggedIn: !mw.user.isAnon()
+				userToken: wikiGrokUser.getToken(),
+				isLoggedIn: !wikiGrokUser.isAnon()
 			};
 			if ( idOverride ) {
 				data.testing = true;
