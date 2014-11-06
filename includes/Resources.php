@@ -206,10 +206,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.editor' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable.common',
-			'mobile.overlays',
+			'mobile.startup',
+			'mobile.drawers',
 			'mediawiki.ui.input',
 			'mobile.settings',
+			'mobile.toast',
+			// Let's ensure toggle styles have loaded before adding edit section links
+			'mobile.toggling',
 		),
 		'messages' => array(
 			// editor.js
@@ -321,7 +324,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable',
 			'mobile.templates',
 			'mobile.editor.common',
-			'mobile.stable.common',
+			'mobile.overlays',
 		),
 		'styles' => array(
 			'less/modules/editor/VisualEditorOverlay.less',
@@ -688,23 +691,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// Important: This module is loaded on both mobile and desktop skin
-	// FIXME: Do not add anything to this module and please remove it
-	'mobile.stable.common' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mediawiki.jqueryMsg',
-			'mediawiki.util',
-			'mobile.templates',
-			'mobile.overlays',
-			'jquery.cookie',
-			'mediawiki.ui.anchor',
-			'mobile.drawers',
-			'mobile.toast',
-			'mobile.redirect',
-		),
-	),
-
 	'mobile.references.beta' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.references',
@@ -793,8 +779,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.templates',
-			// Needs Drawer
-			'mobile.stable.common',
+			'mobile.drawers',
+			'mobile.ajax',
+			'mobile.toast',
 		),
 		'scripts' => array(
 			'javascripts/modules/watchstar/WatchstarApi.js',
@@ -861,7 +848,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.nearby' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.ajax',
-			'mobile.stable.common',
 			// @todo FIXME: Kill this dependency!
 			'mobile.special.nearby.styles',
 			'mediawiki.language',
@@ -1155,7 +1141,6 @@ $wgMobileSpecialPageModules = array(
 	'mobile.special.mobilediff.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.loggingSchemas',
-			'mobile.stable.common',
 		),
 		'scripts' => array(
 			'javascripts/specials/mobilediff.js',
@@ -1244,7 +1229,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile.loggingSchemas',
 			// FIXME: Review the modules that follow. Ensure they are in the correct module definition.
 			'mobile.user',
-			'mobile.stable.common',
 			'mediawiki.util',
 			'mobile.templates',
 			'mediawiki.language',
@@ -1257,6 +1241,9 @@ $wgMinervaBootstrapModules = array(
 			'mobile.issues',
 			'mobile.search',
 			'mobile.references',
+			'mobile.redirect',
+			// FIXME: only load when uploads enabled
+			'mobile.upload.ui',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
