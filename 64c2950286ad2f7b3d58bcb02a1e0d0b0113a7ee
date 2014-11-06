@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_9c68a1b9",
+        "filename": "less/modules/references.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T23:58:39Z",
+      "side": 1,
+      "message": "use ems",
+      "revId": "64c2950286ad2f7b3d58bcb02a1e0d0b0113a7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_bc6d5dc9",
+        "filename": "less/modules/references.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T23:58:39Z",
+      "side": 1,
+      "message": "eek. Why do you even need to set a font-size? If you do you should be using ems.",
+      "revId": "64c2950286ad2f7b3d58bcb02a1e0d0b0113a7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5c6699eb",
+        "filename": "less/modules/references.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T23:58:39Z",
+      "side": 1,
+      "message": "What\u0027s this for? Comments around this code should help.",
+      "revId": "64c2950286ad2f7b3d58bcb02a1e0d0b0113a7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_810fda39",
+        "filename": "less/modules/references.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T23:58:39Z",
+      "side": 1,
+      "message": "This rule shouldn\u0027t be needed when using mw-ui-icon-before / icon-text",
+      "revId": "64c2950286ad2f7b3d58bcb02a1e0d0b0113a7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_9c03c10f",
+        "filename": "less/modules/references.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T23:58:39Z",
+      "side": 1,
+      "message": "Please don\u0027t use a non-standard icon size.\nNo background size support in older browsers. Please consult icons.less and read the FIXME\u0027s on current icon sizes.",
+      "revId": "64c2950286ad2f7b3d58bcb02a1e0d0b0113a7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_7c6355d9",
+        "filename": "less/modules/references.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T23:58:39Z",
+      "side": 1,
+      "message": "Please don\u0027t use background-size outside icons.less",
+      "revId": "64c2950286ad2f7b3d58bcb02a1e0d0b0113a7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
