@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_045f61e9",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T01:12:50Z",
+      "side": 1,
+      "message": "The function name is confusing. It returns a button but sounds like it will return a list of the categories on the page.\n\nAlso document with @param and @return\n\nPS. Why can\u0027t this go in the getSecondaryActions function?",
+      "revId": "d5dce4aa8e5b080c628db1ed52b8c111f5fef0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_84ddb175",
+        "filename": "javascripts/PageApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T01:12:50Z",
+      "side": 1,
+      "message": "document!",
+      "revId": "d5dce4aa8e5b080c628db1ed52b8c111f5fef0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_e4d59548",
+        "filename": "javascripts/PageApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T01:12:50Z",
+      "side": 1,
+      "message": ".then to change the value.\n\nPersonally I don\u0027t see value of _getCategoriesInternal since it is not too long and I would suggest adding it here. If you want to keep it though make sure you document it!",
+      "revId": "d5dce4aa8e5b080c628db1ed52b8c111f5fef0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c4fbb9dc",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T01:12:50Z",
+      "side": 1,
+      "message": "document with @inheritdoc",
+      "revId": "d5dce4aa8e5b080c628db1ed52b8c111f5fef0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_64e2e52f",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T01:12:50Z",
+      "side": 1,
+      "message": "document with @inheritdoc",
+      "revId": "d5dce4aa8e5b080c628db1ed52b8c111f5fef0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
