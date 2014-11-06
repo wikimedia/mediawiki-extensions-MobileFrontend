@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_a949a691",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-06T00:18:18Z",
+      "side": 1,
+      "message": "this is wrong, the icon names are different",
+      "revId": "8a23ea8b19c29b558dc93b47963b86f5d83dccaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
