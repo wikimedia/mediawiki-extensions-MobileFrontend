@@ -16,6 +16,24 @@
       "revId": "68a19d97f24dd2c0a8c687e300c391aec3ace3c5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_f0930e59",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T19:50:38Z",
+      "side": 1,
+      "message": "Yes. This is how we should be using it. Both files (the entire module) are needed to be loaded at start up in beta.\n\npreferred.js does not work without profiler.js",
+      "parentUuid": "6e936f18_4964a2ae",
+      "revId": "68a19d97f24dd2c0a8c687e300c391aec3ace3c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
