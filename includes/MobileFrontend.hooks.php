@@ -1,7 +1,7 @@
 <?php
-/**
- * MobileFrontend.hooks.php
- */
+
+use Wikibase\Client\WikibaseClient;
+use Wikibase\DataModel\Entity\ItemId;
 
 /**
  * Hook handlers for MobileFrontend extension
@@ -930,9 +930,22 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
-		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
+		global $wgMFUseWikibaseDescription;
+
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() ) {
 			$outputPage->enableTOC( false );
 			$outputPage->setProperty( 'MinervaTOC', $po->getTOCHTML() !== '' );
+
+			if ( $wgMFUseWikibaseDescription && $context->isAlphaGroupMember() ) {
+				$item = $po->getProperty( 'wikibase_item' );
+				if ( $item ) {
+					$desc = self::getWikibaseDescription( $item );
+					if ( $desc ) {
+						$outputPage->addJsConfigVars( 'wgMFDescription', $desc );
+					}
+				}
+			}
 		}
 		return true;
 	}
@@ -953,5 +966,34 @@ class MobileFrontendHooks {
 	 */
 	public static function onLoginFormValidErrorMessages( &$messages ) {
 		$messages[] = 'mobile-frontend-donate-image-anon';
+	}
+
+	/**
+	 * Returns a short description of a page from Wikidata
+	 *
+	 * @param string $item Wikibase id of the page
+	 * @return string|null
+	 */
+	private static function getWikibaseDescription( $item ) {
+		global $wgContLang;
+
+		if ( !class_exists( 'Wikibase\\Client\\WikibaseClient' ) ) {
+			return null;
+		}
+
+		$profileSection = new ProfileSection( __METHOD__ );
+		try {
+			$entityLookup = WikibaseClient::getDefaultInstance()
+				->getStore()
+				->getEntityLookup();
+			$entity = $entityLookup->getEntity( new ItemId( $item ) );
+			if ( !$entity ) {
+				return null;
+			}
+			return $entity->getFingerprint()->getDescription( $wgContLang->getCode() )->getText();
+		} catch ( Exception $ex) {
+			// Do nothing, exception mostly due to description being unavailable in needed language
+		}
+		return null;
 	}
 }
