@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_d6db6a23",
+        "filename": "less/images/cite.svg",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T22:01:04Z",
+      "side": 1,
+      "message": "This should actually be in images/icons/iconsNew.less since it is an icon and it will make it easier for us to standardise later down the line.",
+      "revId": "5153d2e7ca4f0f371ffd4aa138a97c23249dfbbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_96aac267",
+        "filename": "less/modules/references.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T22:01:04Z",
+      "side": 1,
+      "message": "Why are the icons rules different?",
+      "revId": "5153d2e7ca4f0f371ffd4aa138a97c23249dfbbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_76c5b63f",
+        "filename": "less/modules/references.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T22:01:04Z",
+      "side": 1,
+      "message": "Should be using the Icon class",
+      "revId": "5153d2e7ca4f0f371ffd4aa138a97c23249dfbbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_56c8ba59",
+        "filename": "less/modules/references.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T22:01:04Z",
+      "side": 1,
+      "message": "Negative margins are bad especially when undocumented.",
+      "revId": "5153d2e7ca4f0f371ffd4aa138a97c23249dfbbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_36bbaebb",
+        "filename": "less/modules/references.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T22:01:04Z",
+      "side": 1,
+      "message": "Should be using the Icon class",
+      "revId": "5153d2e7ca4f0f371ffd4aa138a97c23249dfbbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_16beb2ab",
+        "filename": "less/modules/references.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-06T22:01:04Z",
+      "side": 1,
+      "message": "Should be using the Icon class",
+      "revId": "5153d2e7ca4f0f371ffd4aa138a97c23249dfbbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
