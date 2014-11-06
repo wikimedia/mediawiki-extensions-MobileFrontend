@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_3fddc8e1",
+        "filename": "javascripts/PageApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-06T11:01:26Z",
+      "side": 1,
+      "message": "obsolete",
+      "parentUuid": "6e936f18_bffeb864",
+      "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_3f4948d3",
         "filename": "javascripts/modules/categories/CategoryOverlay.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2014-11-06T10:14:21Z",
       "side": 1,
       "message": "This method should be replaced with: mw.Title.newFromText(...).title.",
+      "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_dfeb8475",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-06T11:01:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_3f4948d3",
       "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_1fe24c9c",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-06T11:01:26Z",
+      "side": 1,
+      "message": "Hmm, we already use this in TalkOverlay.js, so i think a more generic name would be awesome for reuse, maybe OverlayListItem.hogan.",
+      "parentUuid": "6e936f18_5ff5347e",
+      "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_7ff0308e",
         "filename": "javascripts/modules/categories/init.js",
         "patchSetId": 4
@@ -64,6 +118,24 @@
       "writtenOn": "2014-11-06T10:14:21Z",
       "side": 1,
       "message": "Debugging line.",
+      "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_bfd1d8d1",
+        "filename": "javascripts/modules/categories/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-06T11:01:26Z",
+      "side": 1,
+      "message": "oops",
+      "parentUuid": "6e936f18_7ff0308e",
       "revId": "ef3d0bcdfbc223b626ffac3be0f835a2c469ffc5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
