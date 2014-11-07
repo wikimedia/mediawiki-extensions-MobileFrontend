@@ -14,7 +14,7 @@
 	EditorOverlayBase = Overlay.extend( {
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			switcherButton: new Icon( { tagName: 'button',
-				name: 'edit-source', additionalClassNames: 'editor-switcher' } ).toHtmlString(),
+				name: 'edit-switch', additionalClassNames: 'editor-switcher' } ).toHtmlString(),
 			sourceButton: new Icon( { name: 'edit-source', additionalClassNames: 'icon-32px' } ).toHtmlString(),
 			veButton: new Icon( { name: 'edit-ve', additionalClassNames: 'icon-32px' } ).toHtmlString(),
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
