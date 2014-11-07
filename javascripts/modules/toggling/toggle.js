@@ -31,7 +31,7 @@
 	 */
 	function storeSectionToggleState( $heading ) {
 		var headline = $heading.find( 'span' ).attr( 'id' ),
-			isSectionOpen = $heading.hasClass( 'open-block'),
+			isSectionOpen = $heading.hasClass( 'open-block' ),
 			expandedSections = getExpandedSections();
 
 		if ( headline ) {
@@ -164,7 +164,7 @@
 		$container = $container || $( '#content' );
 
 		$( 'html' ).removeClass( 'stub' );
-		$firstHeading = $container.find( 'h1,h2,h3,h4,h5,h6' ).eq(0);
+		$firstHeading = $container.find( 'h1,h2,h3,h4,h5,h6' ).eq( 0 );
 		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
 		$container.find( tagName ).addClass( 'collapsible-heading ' + iconClass );
 
@@ -175,13 +175,14 @@
 			// Old default behavior if on cached output
 			collapseSectionsByDefault = true;
 		}
-		expandSections = !collapseSectionsByDefault || (M.isAlphaGroupMember() && M.settings.getUserSetting( 'expandSections', true ) === 'true');
+		expandSections = !collapseSectionsByDefault ||
+			( M.isAlphaGroupMember() && M.settings.getUserSetting( 'expandSections', true ) === 'true' );
 
 		$headings.each( function ( i ) {
 			var $elem = $( this ),
 				id = 'collapsible-block-' + i;
 
-			$elem.next( '.collapsible-block' ).eq(0)
+			$elem.next( '.collapsible-block' ).eq( 0 )
 				.attr( {
 					// We need to give each content block a unique id as that's
 					// the only way we can tell screen readers what element we're

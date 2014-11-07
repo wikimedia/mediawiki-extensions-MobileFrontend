@@ -14,7 +14,7 @@
 		var browserSupported = (
 			typeof FileReader !== 'undefined' &&
 			typeof FormData !== 'undefined' &&
-			($('<input type="file"/>').prop('type') === 'file') // Firefox OS 1.0 turns <input type="file"> into <input type="text">
+			( $( '<input type="file"/>' ).prop( 'type' ) === 'file' ) // Firefox OS 1.0 turns <input type="file"> into <input type="text">
 		);
 
 		return browserSupported && !mw.config.get( 'wgImagesDisabled', false );

@@ -163,4 +163,4 @@
 
 	M.define( 'modules/search/SearchOverlay', SearchOverlay );
 
-}( mw.mobileFrontend, jQuery ));
+}( mw.mobileFrontend, jQuery ) );

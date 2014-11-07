@@ -58,7 +58,7 @@
 				$el = self.$el;
 
 			// add tooltip to the div, not the <a> inside because that the <a> doesn't have dimensions
-			this.$el.attr('title', options.tooltip);
+			this.$el.attr( 'title', options.tooltip );
 
 			callback = function () {
 				if ( user.isAnon() ) {

@@ -83,4 +83,4 @@
 
 	M.define( 'modules/uploads/UploadTutorial', UploadTutorial );
 
-}( mw.mobileFrontend, jQuery ));
+}( mw.mobileFrontend, jQuery ) );

@@ -11,7 +11,7 @@
 	 */
 	AbuseFilterPanel = View.extend( {
 		defaults: {
-			readMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
+			readMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more' )
 		},
 		template: mw.template.get( 'mobile.abusefilter', 'Panel.hogan' ),
 		className: 'panel hidden',

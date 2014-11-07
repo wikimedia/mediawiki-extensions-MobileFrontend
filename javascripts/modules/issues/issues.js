@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var module = (function () {
+	var module = ( function () {
 		var
 			Icon = M.require( 'Icon' ),
 			inBeta = M.isBetaGroupMember(),
@@ -94,4 +94,4 @@
 
 	M.define( 'cleanuptemplates', module );
 
-}( mw.mobileFrontend, jQuery ));
+}( mw.mobileFrontend, jQuery ) );

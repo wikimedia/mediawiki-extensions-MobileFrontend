@@ -159,7 +159,7 @@
 						// FIXME: add support for DOB and DOD
 						if ( options.suggestion.name === 'occupations' ) {
 							// Hack for English prototype
-							if ( $.inArray( options.claimLabel.charAt(0), vowels ) === -1 ) {
+							if ( $.inArray( options.claimLabel.charAt( 0 ), vowels ) === -1 ) {
 								options.contentMsg = 'Was ' + options.name + ' a ' + options.claimLabel + '?';
 							} else {
 								options.contentMsg = 'Was ' + options.name + ' an ' + options.claimLabel + '?';
@@ -184,7 +184,7 @@
 					} else {
 						self.showError( options, 'There was an error retrieving tag labels.' );
 					}
-				} ).fail(function () {
+				} ).fail( function () {
 					self.logError( 'no-impression-cannot-fetch-labels' );
 				} );
 			}
@@ -219,7 +219,7 @@
 			this.apiWikiGrokResponse.recordClaims( [ claim ] ).done( function () {
 				options.claimRecorded = true;
 				self.thankUser( options, options.claimRecorded );
-			} ).fail(function () {
+			} ).fail( function () {
 				self.logError( 'no-response-cannot-record-user-input' );
 			} );
 		},
@@ -330,8 +330,8 @@
 			// Initialize all the buttons and links
 			// ...for final 'Thanks' step
 			if ( options.thankUser ) {
-				self.$('.wg-buttons' ).hide();
-				self.$('.wg-link' ).show();
+				self.$( '.wg-buttons' ).hide();
+				self.$( '.wg-link' ).show();
 				this.$( '.wg-link .tell-more' ).on( 'click', function () {
 					self.hide();
 					self.log( 'widget-click-moreinfo' );

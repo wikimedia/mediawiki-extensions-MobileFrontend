@@ -53,7 +53,7 @@
 				overlay.on( 'hide', function () {
 					mainmenu.closeNavigationDrawers();
 					$( '#mw-mf-page-center' ).off( '.secondary' );
-				});
+				} );
 
 				$( '#mw-mf-page-center' ).one( 'click.secondary', function () {
 					M.router.back();
