@@ -1,5 +1,6 @@
 ( function ( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
+		settings = M.require( 'settings' ),
 		VisualEditorOverlay;
 
 	/**
@@ -139,7 +140,7 @@
 			var self = this;
 			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the SourceEditor
-			M.settings.saveUserSetting( 'preferredEditor', 'SourceEditor', true );
+			settings.save( 'preferredEditor', 'SourceEditor', true );
 			this.showSpinner();
 			this.$( '.surface' ).hide();
 			// Load the SourceEditor and replace the VisualEditor overlay with it

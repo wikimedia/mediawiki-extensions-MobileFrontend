@@ -4,6 +4,7 @@
 		Icon = M.require( 'Icon' ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
+		settings = M.require( 'settings' ),
 		EditorOverlayBase;
 
 	/**
@@ -92,7 +93,7 @@
 			}
 			msg = mw.msg( msg );
 
-			M.settings.saveUserSetting( 'mobile-pending-toast', msg );
+			settings.save( 'mobile-pending-toast', msg );
 
 			// Ensure we don't lose this event when logging
 			this.log( 'success' ).always( function () {

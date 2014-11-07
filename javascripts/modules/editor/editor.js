@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var
+		settings = M.require( 'settings' ),
 		Icon = M.require( 'Icon' ),
 		disabledEditIcon = new Icon( { name: 'edit' } ),
 		enabledEditIcon = new Icon( { name: 'edit-enabled' } ),
@@ -19,7 +20,7 @@
 		isVisualEditorEnabled = M.isWideScreen() && veConfig,
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		toast = M.require( 'toast' ),
-		pendingToast = M.settings.getUserSetting( 'mobile-pending-toast' ),
+		pendingToast = settings.get( 'mobile-pending-toast' ),
 		drawer = new CtaDrawer( {
 			queryParams: {
 				campaign: 'mobile_editPageActionCta'
@@ -30,7 +31,7 @@
 
 	if ( pendingToast ) {
 		// delete the pending toast
-		M.settings.saveUserSetting( 'mobile-pending-toast', '' );
+		settings.save( 'mobile-pending-toast', '' );
 		toast.show( pendingToast );
 	}
 
@@ -72,7 +73,7 @@
 	 * @return {string} Either 'VisualEditor' or 'SourceEditor'
 	 */
 	function getPreferredEditor() {
-		var preferredEditor = M.settings.getUserSetting( 'preferredEditor', true );
+		var preferredEditor = settings.get( 'preferredEditor', true );
 		if ( preferredEditor === null ) {
 			// For now, we are going to ignore which editor is set as the default for the
 			// wiki and always default to the source editor. Once we decide to honor the

@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var currentPageTitle =  M.getCurrentPage().title,
+		settings = M.require( 'settings' ),
 		Icon = M.require( 'Icon' ),
 		iconUp = new Icon( { name: 'arrow-up', hasText: true } ),
 		iconDown = new Icon( { name: 'arrow-down', hasText: true, additionalClassNames: 'icon-15px' } ),
@@ -8,7 +9,7 @@
 
 	function getExpandedSections() {
 		var expandedSections = $.parseJSON(
-			M.settings.getUserSetting( 'expandedSections', false ) || '{}'
+			settings.get( 'expandedSections', false ) || '{}'
 		);
 		expandedSections[currentPageTitle] = expandedSections[currentPageTitle] || {};
 		return expandedSections;
@@ -18,7 +19,7 @@
 	 * Save expandedSections to localStorage
 	 */
 	function saveExpandedSections( expandedSections ) {
-		M.settings.saveUserSetting(
+		settings.save(
 			'expandedSections', JSON.stringify( expandedSections ), false
 		);
 	}
@@ -172,7 +173,7 @@
 			collapseSectionsByDefault = true;
 		}
 		expandSections = !collapseSectionsByDefault ||
-			( M.isAlphaGroupMember() && M.settings.getUserSetting( 'expandSections', true ) === 'true' );
+			( M.isAlphaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
 
 		$container.find( tagName ).each( function ( i ) {
 			var $heading = $( this ),

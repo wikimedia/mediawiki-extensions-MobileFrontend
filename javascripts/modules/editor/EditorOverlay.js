@@ -8,6 +8,7 @@
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
+		settings = M.require( 'settings' ),
 		EditorOverlay;
 
 	/**
@@ -194,7 +195,7 @@
 			var self = this;
 			this.log( 'switch' );
 			// Save a user setting indicating that this user prefers using the VisualEditor
-			M.settings.saveUserSetting( 'preferredEditor', 'VisualEditor', true );
+			settings.save( 'preferredEditor', 'VisualEditor', true );
 			// Load the VisualEditor and replace the SourceEditor overlay with it
 			this.showSpinner();
 			this.$content.hide();

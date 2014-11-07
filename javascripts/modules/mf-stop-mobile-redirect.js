@@ -4,7 +4,8 @@
 
 ( function ( M, $ ) {
 
-	var cookiesEnabled = M.settings.cookiesEnabled,
+	var settings = M.require( 'settings' ),
+		cookiesEnabled = settings.cookiesEnabled,
 		popup = M.require( 'toast' );
 
 	function desktopViewClick() {

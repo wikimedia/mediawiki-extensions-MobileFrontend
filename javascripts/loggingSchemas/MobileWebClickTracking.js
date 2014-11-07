@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var s = M.settings, name, href;
+	var s = M.require( 'settings' ), name, href;
 
 	function log( name, destination ) {
 		var
@@ -18,8 +18,8 @@
 		return M.log( 'MobileWebClickTracking', data );
 	}
 	function futureLog( name, href ) {
-		s.saveUserSetting( 'MobileWebClickTracking-name', name );
-		s.saveUserSetting( 'MobileWebClickTracking-href', href );
+		s.save( 'MobileWebClickTracking-name', name );
+		s.save( 'MobileWebClickTracking-href', href );
 	}
 
 	function hijackLink( selector, name ) {
@@ -29,12 +29,12 @@
 	}
 
 	// Deal with events requested on the preview page
-	name = s.getUserSetting( 'MobileWebClickTracking-name' );
-	href = s.getUserSetting( 'MobileWebClickTracking-href' );
+	name = s.get( 'MobileWebClickTracking-name' );
+	href = s.get( 'MobileWebClickTracking-href' );
 	// Make sure they do not log a second time...
 	if ( name && href ) {
-		s.saveUserSetting( 'MobileWebClickTracking-name', '' );
-		s.saveUserSetting( 'MobileWebClickTracking-href', '' );
+		s.save( 'MobileWebClickTracking-name', '' );
+		s.save( 'MobileWebClickTracking-href', '' );
 		// Since MobileWebEditing schema declares the dependencies to
 		// EventLogging and the schema we can be confident this will always log.
 		log( name, href );

@@ -914,6 +914,7 @@ class MobileFrontendHooks {
 		$wgResourceModules['mobile.loggingSchemas'] = $wgMFResourceFileModuleBoilerplate + array(
 			'dependencies' => array_merge( $additionalDependencies, array(
 				'mobile.startup',
+				'mobile.settings',
 			) ),
 			'scripts' => $scripts,
 		);

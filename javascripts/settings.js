@@ -6,7 +6,7 @@
  */
 ( function ( M, $ ) {
 
-	M.settings = ( function () {
+	var settings = ( function () {
 
 		function cookiesEnabled() {
 			// If session cookie already set, return true
@@ -27,7 +27,7 @@
 		 * @param {Boolean} useCookieFallback Optional: When set this will use cookies when local storage not available.
 		 * @returns {Boolean} Whether the save was successful or not
 		 */
-		function saveUserSetting( name, value, useCookieFallback ) {
+		function save( name, value, useCookieFallback ) {
 			return M.supportsLocalStorage ?
 				localStorage.setItem( name, value ) :
 					( useCookieFallback ? $.cookie( name, value, { expires: 1 } ) : false );
@@ -40,7 +40,7 @@
 		 * @param {Boolean} useCookieFallback Optional: When set this will use cookies when local storage not available.
 		 * @returns {String|Boolean} Returns the associated value or False if nothing is found
 		 */
-		function getUserSetting( name, useCookieFallback ) {
+		function get( name, useCookieFallback ) {
 			return M.supportsLocalStorage ? localStorage.getItem( name ) :
 				( useCookieFallback ? $.cookie( name ) : false );
 		}
@@ -52,17 +52,19 @@
 		 * @param {Boolean} useCookieFallback Optional: When set this will use cookies when local storage not available.
 		 * @returns {Boolean} Whether the delete was successful or not
 		 */
-		function deleteUserSetting( name, useCookieFallback ) {
+		function remove( name, useCookieFallback ) {
 			return M.supportsLocalStorage ? localStorage.removeItem( name ) :
 				( useCookieFallback ? $.removeCookie( name ) : false );
 		}
 
 		return {
-			getUserSetting: getUserSetting,
-			saveUserSetting: saveUserSetting,
-			deleteUserSetting: deleteUserSetting,
+			get: get,
+			save: save,
+			remove: remove,
 			cookiesEnabled: cookiesEnabled
 		};
 	}() );
+
+	M.define( 'settings', settings );
 
 }( mw.mobileFrontend, jQuery ) );

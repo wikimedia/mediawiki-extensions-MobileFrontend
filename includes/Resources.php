@@ -166,6 +166,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.settings' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.head',
+			'jquery.cookie',
+		),
+		'scripts' => array(
+			'javascripts/settings.js',
+		),
+	),
+
 	// FIXME: Split this module into different features.
 	'mobile.startup' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
@@ -173,7 +183,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 			'mobile.user',
 			'mediawiki.api',
-			'jquery.cookie',
 			'mobile.redlinks',
 			'ext.mantle.views',
 		),
@@ -192,7 +201,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/Section.js',
 			'javascripts/Page.js',
 			'javascripts/application.js',
-			'javascripts/settings.js',
 		),
 		'position' => 'bottom',
 	),
@@ -223,6 +231,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.common',
 			'mobile.overlays',
 			'mediawiki.ui.input',
+			'mobile.settings',
 		),
 		'messages' => array(
 			// editor.js
@@ -281,7 +290,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable',
 			'mobile.templates',
 			'mobile.editor.api',
-			'jquery.cookie',
+			'mobile.settings',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorOverlayBase.js',
@@ -452,6 +461,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.preferredLanguages' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.settings',
 		),
 		'scripts' => array(
 			'javascripts/modules/preferredLanguages/profiler.js',
@@ -697,6 +707,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.toast',
+			'mobile.settings',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-stop-mobile-redirect.js',
@@ -759,6 +770,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.toggling' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.settings',
 		),
 		'styles' => array(
 			'less/modules/toggle.less',
@@ -1045,6 +1057,7 @@ $wgMobileSpecialPageModules = array(
 		'position' => 'top',
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.settings',
 			'mobile.templates',
 		),
 		'scripts' => array(

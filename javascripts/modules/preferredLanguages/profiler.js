@@ -3,11 +3,12 @@
 ( function ( M ) {
 
 	var supported = M.supportsLocalStorage,
+		settings = M.require( 'settings' ),
 		langMap,
 		curLanguage = mw.config.get( 'wgContentLanguage' );
 
 	function loadLanguageMap() {
-		langMap = M.settings.getUserSetting( 'langMap' );
+		langMap = settings.get( 'langMap' );
 		langMap = langMap ? JSON.parse( langMap ) : {};
 	}
 
@@ -19,7 +20,7 @@
 			count += 1;
 			// cap at 100 as this is enough data to work on
 			langMap[ language ] = count > 100 ? 100 : count;
-			M.settings.saveUserSetting( 'langMap', JSON.stringify( langMap ) );
+			settings.save( 'langMap', JSON.stringify( langMap ) );
 		}
 	}
 

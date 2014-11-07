@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 var sectionHtml = mw.template.get( 'mobile.toggling.tests', 'section.hogan' ).render(),
+	settings = M.require( 'settings' ),
 	toggle = M.require( 'toggle' );
 
 /**
@@ -18,7 +19,7 @@ QUnit.module( 'MobileFrontend toggle.js: Mobile mode.', {
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		M.settings.deleteUserSetting( 'expandedSections', false );
+		settings.remove( 'expandedSections', false );
 	}
 });
 
@@ -106,7 +107,7 @@ QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		M.settings.deleteUserSetting( 'expandedSections', false );
+		settings.remove( 'expandedSections', false );
 	}
 } );
 
@@ -123,14 +124,14 @@ QUnit.test( 'Open by default', 1, function( assert ) {
 
 QUnit.module( 'MobileFrontend toggle.js: user setting', {
 	setup: function() {
-		M.settings.saveUserSetting('expandSections', 'true', true);
+		settings.save('expandSections', 'true', true);
 		this.$container = $( '<div>' ).html( sectionHtml );
 		toggle.enable( this.$container );
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		M.settings.saveUserSetting('expandSections', '', true);
-		M.settings.deleteUserSetting( 'expandedSections', false );
+		settings.save('expandSections', '', true);
+		settings.remove( 'expandedSections', false );
 	}
 } );
 
@@ -152,8 +153,8 @@ QUnit.module( 'MobileFrontend toggle.js: accessibility', {
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		M.settings.deleteUserSetting('expandSections', true);
-		M.settings.deleteUserSetting( 'expandedSections', false );
+		settings.remove('expandSections', true);
+		settings.remove( 'expandedSections', false );
 	}
 } );
 
@@ -200,8 +201,8 @@ QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		M.settings.deleteUserSetting( 'expandedSections', false );
-		M.settings.deleteUserSetting('expandSections', true);
+		settings.remove( 'expandedSections', false );
+		settings.remove('expandSections', true);
 	}
 } );
 
@@ -229,7 +230,7 @@ QUnit.test( 'Toggling a section stores its state.', 3, function( assert ) {
 
 QUnit.test( 'Check for and remove obsolete stored sections.', 2, function( assert ) {
 	this.expandedSections[this.pageTitle][this.headline] = ( new Date( 1990, 1, 1 ) ).getTime();
-	M.settings.saveUserSetting( 'expandedSections',
+	settings.save( 'expandedSections',
 		JSON.stringify( this.expandedSections )
 	);
 	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
@@ -299,8 +300,8 @@ QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
 	},
 	teardown: function() {
 		window.location.hash = "#";
-		M.settings.deleteUserSetting( 'expandedSections', false );
-		M.settings.deleteUserSetting('expandSections', true);
+		settings.remove( 'expandedSections', false );
+		settings.remove('expandSections', true);
 	}
 } );
 
@@ -314,7 +315,7 @@ QUnit.test( 'Expand stored sections.', 5, function( assert ) {
 
 	// save a toggle state manually
 	this.expandedSections[this.pageTitle][this.headline] = ( new Date() ).getTime();
-	M.settings.saveUserSetting( 'expandedSections', JSON.stringify( this.expandedSections ), false );
+	settings.save( 'expandedSections', JSON.stringify( this.expandedSections ), false );
 	this.expandedSections = toggle._getExpandedSections( this.pageTitle );
 	assert.strictEqual( typeof this.expandedSections[this.pageTitle][this.headline],
 		'number',
