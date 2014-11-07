@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_7c7a75b9",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:21:51Z",
+      "side": 1,
+      "message": "Spaces needed at end of each of the se lines.",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5c7d39af",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:21:51Z",
+      "side": 1,
+      "message": "If I read this correctly this says \u0027UTSysop\u0027 should see red links in beta.\nHow do I know if UTSysop is logged in or not?",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5c645911",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:21:51Z",
+      "side": 1,
+      "message": "Please group the beta ones separately from stable.\n\nMaybe add a comment saying that in beta  both $wgMFShowRedLinks and $wgMFShowRedLinksAnon, are ignored.\n\nIn this case how do I know if UTSysop is logged in or not? I suspect you need to stub isLoggedIn.",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_fc3c45e1",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:21:51Z",
+      "side": 1,
+      "message": "According to documentation $wgMFShowRedLinks and $wgMFShowRedLinksAnon have no effect in beta so I expect false as value. (Unless MobileFrontendTest is logged in - maybe make it clearer which users are logged in and which not...)",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_1c5a5153",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:21:51Z",
+      "side": 1,
+      "message": "According to documentation $wgMFShowRedLinks and $wgMFShowRedLinksAnon have no effect in beta so I expect false as value if MobileFrontendTest is anon.",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
