@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_27dff6dc",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T07:07:21Z",
+      "side": 1,
+      "message": "oops",
+      "parentUuid": "6e936f18_7c7a75b9",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_5c7d39af",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 10
@@ -30,6 +48,24 @@
       "writtenOn": "2014-11-07T01:21:51Z",
       "side": 1,
       "message": "If I read this correctly this says \u0027UTSysop\u0027 should see red links in beta.\nHow do I know if UTSysop is logged in or not?",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c7d092ce",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T07:07:21Z",
+      "side": 1,
+      "message": "UTSysop is a pre-generated testuser, which i set in testGetSkinConfigVariables to the Context user. So, the user is logged in (if i haven\u0027t missed something). I do the same with MobileFrontendTest, but this user doesn\u0027t exist, so he will be not logged in (anonymous).",
+      "parentUuid": "6e936f18_5c7d39af",
       "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_07f2fa6a",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T07:07:21Z",
+      "side": 1,
+      "message": "\u003e I suspect you need to stub isLoggedIn.\nHmm, not that i know. That\u0027s the reason to use a new created RequestContext. We can set the user and title object there and SkinMinerva will get these ones.",
+      "parentUuid": "6e936f18_5c645911",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_fc3c45e1",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 10
@@ -64,6 +118,24 @@
       "writtenOn": "2014-11-07T01:21:51Z",
       "side": 1,
       "message": "According to documentation $wgMFShowRedLinks and $wgMFShowRedLinksAnon have no effect in beta so I expect false as value. (Unless MobileFrontendTest is logged in - maybe make it clearer which users are logged in and which not...)",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_87d60ac6",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T07:07:21Z",
+      "side": 1,
+      "message": "In beta and Alpha redlinks should be visible all over the time (no matter, if the user is logged in or not), so i think true is the right value :)",
+      "parentUuid": "6e936f18_fc3c45e1",
       "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
