@@ -860,6 +860,13 @@ class SkinMinerva extends SkinTemplate {
 		$campaign = $req->getVal( 'campaign' );
 
 		if ( $user->isLoggedIn() ) {
+			// enable the user module
+			$modules[] = 'mobile.usermodule';
+
+			if ( $this->useEcho() ) {
+				$modules['notifications'] = array( 'mobile.notifications' );
+			}
+
 			if ( $this->isCurrentPageEditable() ) {
 				if ( $action === 'signup-edit' || $campaign === 'leftNavSignup' ) {
 					$modules[] = 'mobile.newusers';
@@ -883,14 +890,10 @@ class SkinMinerva extends SkinTemplate {
 			'mobile.head',
 			'mobile.startup',
 			'mobile.site',
-			'mobile.usermodule',
 			// FIXME: separate mobile.stable into more meaningful groupings
 			'mobile.stable',
 		);
 
-		if ( $this->useEcho() && $this->getUser()->isLoggedIn() ) {
-			$modules['notifications'] = array( 'mobile.notifications' );
-		}
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
 			$modules['watch'] = array();
 		}
