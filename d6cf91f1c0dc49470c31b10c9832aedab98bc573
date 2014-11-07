@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_6f64f011",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 969,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-07T20:52:36Z",
+      "side": 1,
+      "message": "If the description doesn\u0027t exist in the requested language, what happens? Does it fall back to English or does it return null?",
+      "revId": "d6cf91f1c0dc49470c31b10c9832aedab98bc573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
