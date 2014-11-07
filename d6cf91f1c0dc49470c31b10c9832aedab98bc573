@@ -16,6 +16,24 @@
       "revId": "d6cf91f1c0dc49470c31b10c9832aedab98bc573",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_054c2d79",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 969,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-11-07T21:47:39Z",
+      "side": 1,
+      "message": "Return null. Otherwise if you try to use fallbacks you will just piss of many people.",
+      "parentUuid": "6e936f18_6f64f011",
+      "revId": "d6cf91f1c0dc49470c31b10c9832aedab98bc573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
