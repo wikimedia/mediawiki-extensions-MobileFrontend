@@ -52,6 +52,24 @@
       "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_af0998e1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 581,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-11-07T20:36:30Z",
+      "side": 1,
+      "message": "Other options: mobile.wikigrok.bucketing, mobile.wikigrok.userBucket ?  abTest is fine IMO",
+      "parentUuid": "6e936f18_6fe39032",
+      "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
