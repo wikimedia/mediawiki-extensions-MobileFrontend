@@ -16,6 +16,24 @@
       "revId": "120d3d097d3127aadb798ad12741f368c024d17e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_87e04a25",
+        "filename": "less/drawer.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T01:55:46Z",
+      "side": 1,
+      "message": "I should have looked closer. It was a copy paste from another patch that I abandoned.",
+      "parentUuid": "6e936f18_8735aad8",
+      "revId": "120d3d097d3127aadb798ad12741f368c024d17e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
