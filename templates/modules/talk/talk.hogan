@@ -5,7 +5,7 @@
 	<ul class="page-list">
 		{{#headings}}
 			<li>
-				<a data-id="{{id}}">{{line}}</a>
+				<a data-id="{{id}}" href="#/talk/{{id}}">{{line}}</a>
 			</li>
 		{{/headings}}
 	</ul>

@@ -1,9 +1,10 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var
 		Overlay = M.require( 'Overlay' ),
 		popup = M.require( 'toast' ),
 		api = M.require( 'api' ),
 		user = M.require( 'user' ),
+		Page = M.require( 'Page' ),
 		TalkSectionOverlay;
 
 	/**
@@ -17,40 +18,42 @@
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
 		},
 		defaults: {
+			title: undefined,
+			section: undefined,
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		},
-		// FIXME: Use Router for TalkSectionOverlay
-		hide: function () {
-			if ( this.$board ) {
-				this.$board.show();
-			}
-			this.remove();
-		},
-		initialize: function ( options ) {
-			// If terms of use is enabled, include it in the licensing message
-			if ( $( '#footer-places-terms-use' ).length > 0 ) {
-				options.licenseMsg = mw.msg(
-					'mobile-frontend-editor-licensing-with-terms',
-					$( '#footer-places-terms-use' ).html(),
-					mw.config.get( 'wgMFLicenseLink' )
-				);
-			} else {
-				options.licenseMsg = mw.msg(
-					'mobile-frontend-editor-licensing',
-					mw.config.get( 'wgMFLicenseLink' )
-				);
-			}
-			this.$board = options.parent.$board;
-			Overlay.prototype.initialize.apply( this, arguments );
-		},
+		/**
+		 * Fetches the talk topics of the page specified in options.title
+		 *   if options.section is not defined.
+		 * @inheritdoc
+		 */
 		postRender: function ( options ) {
+			var self = this;
+
+			Overlay.prototype.postRender.apply( this, arguments );
+			if ( !options.section ) {
+				M.pageApi.getPage( options.title ).done( function ( pageData ) {
+					var page = new Page( pageData );
+					options.section = page.getSubSection( options.id );
+					self.render( options );
+				} );
+			} else {
+				this.$( '.loading' ).remove();
+				this._enableComments( options.title, options.id );
+			}
+		},
+		/**
+		 * Enables comments on the current rendered talk topic
+		 * @method
+		 * @param {String} title of the talk page with `Talk` prefix to post to
+		 * @param {Integer} id of the sub section to open
+		 */
+		_enableComments: function ( title, id ) {
 			var self = this, $comment = this.$( '.comment' ),
 				$textarea = $comment.find( 'textarea' );
-			Overlay.prototype.postRender.apply( this, arguments );
-			this.$( '.back' ).on( 'click', $.proxy( self, 'hide' ) );
-			this.$( '.loading' ).remove();
+
 			if ( user.isAnon() || !M.isAlphaGroupMember() ) {
 				$comment.remove();
 			} else {
@@ -67,8 +70,8 @@
 						api.getTokenWithEndpoint().done( function ( token ) {
 							api.post( {
 								action: 'edit',
-								title: options.title,
-								section: options.section.id,
+								title: title,
+								section: id,
 								token: token,
 								appendtext: val
 							} ).done( function ( data ) {
@@ -78,10 +81,9 @@
 									$textarea.addClass( 'error' );
 								} else {
 									self.hide();
-									options.parent.hide();
 									popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
 									// invalidate the cache
-									M.pageApi.invalidatePage( options.title );
+									M.pageApi.invalidatePage( title );
 								}
 							} );
 						} );
@@ -94,4 +96,4 @@
 	} );
 
 	M.define( 'modules/talk/TalkSectionOverlay', TalkSectionOverlay );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -4,7 +4,6 @@
 	var
 		Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
-		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
 		user = M.require( 'user' ),
 		/**
 		 * Overlay for talk page
@@ -46,9 +45,6 @@
 					this._loadContent( options );
 				}
 				this._setupAddDiscussionButton( options );
-				if ( this.page ) {
-					this._setupSectionLinks();
-				}
 				this._showHidden( '.initial-header' );
 			},
 
@@ -133,38 +129,6 @@
 				} else {
 					$add.remove();
 				}
-			},
-			/**
-			 * Setups the headings as links that when clicked open an overlay with the talk
-			 * page content.
-			 * FIXME: Make this a link in the template.
-			 * @method
-			 */
-			_setupSectionLinks: function () {
-				var childOverlay, self = this,
-					page = this.page;
-
-				// FIXME: Use Router instead for this
-				this.$( '.page-list a' ).on( 'click', function () {
-					var id = parseFloat( $( this ).data( 'id' ), 10 ),
-						section = page.getSubSection( id );
-
-					if ( section ) {
-						childOverlay = new TalkSectionOverlay( {
-							parent: self,
-							title: page.title,
-							section: section
-						} );
-						// Hide discussion list to disable scrolling - bug 70989
-						// FIXME: Kill when OverlayManager is used for TalkSections
-						self.$board.hide();
-						childOverlay.show();
-					}
-					// When closing this overlay, also close the child section overlay
-					self.on( 'hide', function () {
-						childOverlay.remove();
-					} );
-				} );
 			}
 		} );
 
