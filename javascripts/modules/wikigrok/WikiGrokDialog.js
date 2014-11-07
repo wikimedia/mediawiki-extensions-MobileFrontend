@@ -340,7 +340,7 @@
 			} else if ( options.beginQuestions ) {
 				this.$( '.wg-buttons .yes' ).on( 'click', function () {
 					self.log( 'widget-click-submit' );
-					options.claimIsCorrect = 1;
+					options.claimIsCorrect = true;
 					self.recordClaim( options );
 				} );
 				this.$( '.wg-buttons .not-sure' ).on( 'click', function () {
@@ -349,7 +349,7 @@
 				} );
 				this.$( '.wg-buttons .no' ).on( 'click', function () {
 					self.log( 'widget-click-submit' );
-					options.claimIsCorrect = 0;
+					options.claimIsCorrect = false;
 					self.recordClaim( options );
 				} );
 			// ...for initial 'Intro' step
