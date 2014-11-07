@@ -16,10 +16,10 @@
 		 * @uses TalkSectionAddOverlay
 		 */
 		TalkOverlay = Overlay.extend( {
-			templatePartials: {
+			templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
 				content: mw.template.get( 'mobile.talk.overlays', 'content.hogan' ),
 				footer: mw.template.get( 'mobile.overlays', 'OverlayFooterLink.hogan' )
-			},
+			} ),
 			defaults: {
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),

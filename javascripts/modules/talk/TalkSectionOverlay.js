@@ -12,10 +12,9 @@
 	 * @extends Overlay
 	 */
 	TalkSectionOverlay = Overlay.extend( {
-		// FIXME: This should use templatePartials
-		template: mw.template.get( 'mobile.talk.overlays', 'SectionOverlay.hogan' ),
 		templatePartials: {
-			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' )
+			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
+			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
 		},
 		defaults: {
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),

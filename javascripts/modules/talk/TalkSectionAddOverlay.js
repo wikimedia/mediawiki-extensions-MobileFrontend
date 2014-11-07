@@ -19,10 +19,9 @@
 			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' ),
 			editingMsg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
 		},
-		// FIXME: This should use templatePartials
-		template: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay.hogan' ),
 		templatePartials: {
-			header: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/header.hogan' )
+			header: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/header.hogan' ),
+			content: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/content.hogan' )
 		},
 		initialize: function ( options ) {
 			// If terms of use is enabled, include it in the licensing message
