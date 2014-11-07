@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_6cb5de2e",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T18:53:52Z",
+      "side": 1,
+      "message": "I think you need to do $user-\u003esetId( 5 ); as an id of 0 will mean the user is not logged in.",
+      "parentUuid": "6e936f18_c7d092ce",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_5c645911",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 10
@@ -107,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_ec880e78",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T18:53:52Z",
+      "side": 1,
+      "message": "Same as above. The user will have an id of 0 and thus be anon.",
+      "parentUuid": "6e936f18_07f2fa6a",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_fc3c45e1",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 10
@@ -136,6 +172,24 @@
       "side": 1,
       "message": "In beta and Alpha redlinks should be visible all over the time (no matter, if the user is logged in or not), so i think true is the right value :)",
       "parentUuid": "6e936f18_fc3c45e1",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cc83d255",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T18:53:52Z",
+      "side": 1,
+      "message": "not true - red links are not shown to anons ever and this user is anonymous.",
+      "parentUuid": "6e936f18_87d60ac6",
       "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
