@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_5ce3f931",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T00:03:38Z",
+      "side": 1,
+      "message": "Lol at this background size. Luckily this .icon code is on the way out :)",
+      "revId": "8f19ea90632beccf06a258a17a4a87029709a885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_3c8f0d7a",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T00:03:38Z",
+      "side": 1,
+      "message": "No...\nCreate an .mw-ui-icon-toggle class in iconsNew instead",
+      "revId": "8f19ea90632beccf06a258a17a4a87029709a885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_bcfa3dd8",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T00:03:38Z",
+      "side": 1,
+      "message": "The above 3 rules shouldn\u0027t be necessary.",
+      "revId": "8f19ea90632beccf06a258a17a4a87029709a885",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
