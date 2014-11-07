@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
+		Icon = M.require( 'Icon' ),
 		ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
 		ImageOverlay, api;
 
@@ -18,6 +19,11 @@
 		closeOnBack: true,
 
 		defaults: {
+			cancelButton: new Icon( { tagName: 'button',
+				// Uses a dark theme so swap out the icon
+				name: 'cancel-light', additionalClassNames: 'cancel',
+				label: mw.msg( 'mobile-frontend-overlay-close' )
+			} ).toHtmlString(),
 			detailsMsg: mw.msg( 'mobile-frontend-media-details' ),
 			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' )
 		},
