@@ -3,6 +3,11 @@
 		{{explanation}}
 	</p>
 	<ul class="page-list">
+		{{#headings}}
+			<li>
+				<a data-id="{{id}}">{{line}}</a>
+			</li>
+		{{/headings}}
 	</ul>
 </div>
 {{>spinner}}
