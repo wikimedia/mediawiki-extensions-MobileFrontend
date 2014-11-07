@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_673f3eb2",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:40:19Z",
+      "side": 1,
+      "message": "Don\u0027t introduce nasty icon sizes! The rule says to replace it. We are trying to standardise on icon sizes. Change the SVG instead!",
+      "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_873ccabc",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:40:19Z",
+      "side": 1,
+      "message": "Don\u0027t introduce nasty icon sizes! The rule says to replace it. We are trying to standardise on icon sizes. Change the SVG instead!",
+      "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2745b647",
+        "filename": "less/modules/references.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:40:19Z",
+      "side": 1,
+      "message": "...",
+      "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c7565209",
+        "filename": "less/modules/references.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:40:19Z",
+      "side": 1,
+      "message": "...",
+      "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
