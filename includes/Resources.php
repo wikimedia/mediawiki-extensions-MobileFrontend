@@ -518,9 +518,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// talk.js
 			'content.hogan' => 'templates/modules/talk/talk.hogan',
 			'SectionAddOverlay/header.hogan' => 'templates/modules/talk/talkSectionAddHeader.hogan',
-			'SectionAddOverlay.hogan' => 'templates/modules/talk/talkSectionAdd.hogan',
+			'SectionAddOverlay/content.hogan' => 'templates/modules/talk/talkSectionAdd.hogan',
 			'Section/header.hogan' => 'templates/modules/talk/talkSectionHeader.hogan',
-			'SectionOverlay.hogan' => 'templates/modules/talk/talkSection.hogan',
+			'Section/content.hogan' => 'templates/modules/talk/talkSection.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-talk-fullpage',
@@ -625,6 +625,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-overlay-continue',
 		),
 		'templates' => array(
+			'header.hogan' => 'templates/OverlayHeader.hogan',
 			'Overlay.hogan' => 'templates/Overlay.hogan',
 			'LoadingOverlay.hogan' => 'templates/LoadingOverlay.hogan',
 			'OverlayFooterLink.hogan' => 'templates/OverlayFooterLink.hogan',

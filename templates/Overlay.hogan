@@ -1,18 +1,6 @@
 <div class="overlay-header-container {{#fixedHeader}} position-fixed{{/fixedHeader}}">
 	<div class="overlay-header">
-		<ul>
-			<li>{{{cancelButton}}}</li>
-		</ul>
-		<div class="overlay-title">
-			<h2>{{{heading}}}</h2>
-		</div>
-		{{#headerButtons}}
-		<div class="{{headerButtonsListClassName}}">
-			{{#headerButtons}}
-			<button class="{{className}}">{{msg}}</button>
-			{{/headerButtons}}
-		</div>
-		{{/headerButtons}}
+		{{>header}}
 	</div>
 </div>
 <div class="overlay-content">

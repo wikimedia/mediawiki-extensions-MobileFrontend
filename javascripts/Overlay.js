@@ -42,6 +42,7 @@
 		 */
 		className: 'overlay',
 		templatePartials: {
+			header: mw.template.get( 'mobile.overlays', 'header.hogan' ),
 			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' )
 		},
 		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),

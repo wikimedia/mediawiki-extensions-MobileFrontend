@@ -1,0 +1,13 @@
+<ul>
+	<li>{{{cancelButton}}}</li>
+</ul>
+<div class="overlay-title">
+	<h2>{{{heading}}}</h2>
+</div>
+{{#headerButtons}}
+<div class="{{headerButtonsListClassName}}">
+	{{#headerButtons}}
+	<button class="{{className}}">{{msg}}</button>
+	{{/headerButtons}}
+</div>
+{{/headerButtons}}
