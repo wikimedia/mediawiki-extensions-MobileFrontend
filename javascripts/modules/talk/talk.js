@@ -3,16 +3,20 @@
 
 	M.assertMode( [ 'beta', 'alpha', 'app' ] );
 
-	M.overlayManager.add( /^\/talk$/, function () {
+	M.overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
 			talkOptions = {
 				title: talkPrefix + M.getCurrentPage().title
 			};
 
 		M.loadModule( 'mobile.talk.overlays' ).done( function () {
-			var TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
-
-			result.resolve( new TalkOverlay( talkOptions ) );
+			var Overlay;
+			if ( id === 'new' ) {
+				Overlay = M.require( 'modules/talk/TalkSectionAddOverlay' );
+			} else {
+				Overlay = M.require( 'modules/talk/TalkOverlay' );
+			}
+			result.resolve( new Overlay( talkOptions ) );
 		} );
 		return result;
 	} );

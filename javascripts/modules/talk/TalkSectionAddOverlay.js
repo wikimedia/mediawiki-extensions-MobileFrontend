@@ -46,7 +46,6 @@
 		postRender: function ( options ) {
 			var self = this;
 			Overlay.prototype.postRender.call( this, options );
-			this.$( '.back' ).on( 'click', $.proxy( self, 'hide' ) );
 			this.confirm = this.$( 'button.confirm-save' );
 			this.confirm.on( 'click', function () {
 				if ( !$( this ).prop( 'disabled' ) ) {
@@ -54,7 +53,7 @@
 						if ( status === 'ok' ) {
 							M.pageApi.invalidatePage( self.title );
 							toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
-							self.emit( 'talk-discussion-added' );
+							M.emit( 'talk-discussion-added' );
 							self.hide();
 						}
 					} ).fail( function ( error ) {

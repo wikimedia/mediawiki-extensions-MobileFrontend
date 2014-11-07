@@ -7,7 +7,9 @@
 {{#headerButtons}}
 <div class="{{headerButtonsListClassName}}">
 	{{#headerButtons}}
-	<button class="{{className}}">{{msg}}</button>
+	{{^href}}<button{{/href}}
+	{{#href}}<a href="{{href}}"{{/href}}
+		class="{{className}}">{{msg}}{{^href}}</button>{{/href}}{{#href}}</a>{{/href}}
 	{{/headerButtons}}
 </div>
 {{/headerButtons}}

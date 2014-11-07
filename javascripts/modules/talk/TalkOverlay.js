@@ -4,7 +4,6 @@
 	var
 		Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
-		TalkSectionAddOverlay = M.require( 'modules/talk/TalkSectionAddOverlay' ),
 		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
 		user = M.require( 'user' ),
 		/**
@@ -30,6 +29,7 @@
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
 				headerButtonsListClassName: 'overlay-action',
 				headerButtons: [ {
+					href: '#/talk/new',
 					className: 'add continue hidden',
 					msg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
 				} ],
@@ -123,38 +123,13 @@
 			/**
 			 * Shows the add topic button to logged in users.
 			 * Ensures the overlay refreshes when a discussion is added.
-			 * FIXME: Make this a link in the template.
 			 * @method
-			 * @param {Object} options for the overlay
 			 */
-			_setupAddDiscussionButton: function ( options ) {
-				var $add = this.$( 'button.add' ),
-					self = this;
-
+			_setupAddDiscussionButton: function () {
+				var $add = this.$( '.overlay-action .add' );
+				M.on( 'talk-discussion-added', $.proxy( this, '_loadContent', this.options ) );
 				if ( !user.isAnon() ) {
 					$add.removeClass( 'hidden' );
-					$add.click( function () {
-						var overlay = new TalkSectionAddOverlay( {
-							title: options.title
-						} );
-						// Hide discussion list to disable scrolling - bug 70989
-						// FIXME: Kill when OverlayManager is used for TalkSectionAdd
-						self.$board.hide();
-						overlay.on( 'talk-discussion-added', function () {
-							// reload the content
-							self._loadContent( options );
-						} ).on( 'hide', function () {
-							// re-enable TalkOverlay (it's closed by hide event (in Overlay)
-							// from TalkSectionAddOverlay)
-							self.show();
-							// FIXME: Kill when OverlayManager is used for TalkSectionAdd
-							self.$board.show();
-						} ).show();
-						// When closing this overlay, also close the child section overlay
-						self.on( 'hide', function () {
-							overlay.remove();
-						} );
-					} );
 				} else {
 					$add.remove();
 				}
