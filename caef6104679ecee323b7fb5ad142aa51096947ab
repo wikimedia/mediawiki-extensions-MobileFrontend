@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_478fa278",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T01:52:20Z",
+      "side": 1,
+      "message": "sometimes we need a bigger cancel button, sometimes smaller. How should I change the SVG?",
+      "parentUuid": "6e936f18_673f3eb2",
+      "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_873ccabc",
         "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
         "patchSetId": 6
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_e7efce19",
+        "filename": "less/modules/references.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T01:52:20Z",
+      "side": 1,
+      "message": "em?",
+      "parentUuid": "6e936f18_2745b647",
+      "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_c7565209",
         "filename": "less/modules/references.less",
         "patchSetId": 6
@@ -64,6 +100,24 @@
       "writtenOn": "2014-11-07T01:40:19Z",
       "side": 1,
       "message": "...",
+      "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_07f51aea",
+        "filename": "less/modules/references.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T01:52:20Z",
+      "side": 1,
+      "message": "how would you get rid of the extra 1em margin on both sides of the icon?",
+      "parentUuid": "6e936f18_c7565209",
       "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
