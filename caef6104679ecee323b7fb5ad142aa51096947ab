@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_ec032ec0",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T19:03:48Z",
+      "side": 1,
+      "message": "This was already defined in the icons.less. How should I change the icon size to smaller if it\u0027s already hardcoded to be 24px auto?",
+      "parentUuid": "6e936f18_873ccabc",
+      "revId": "caef6104679ecee323b7fb5ad142aa51096947ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_2745b647",
         "filename": "less/modules/references.less",
         "patchSetId": 6
