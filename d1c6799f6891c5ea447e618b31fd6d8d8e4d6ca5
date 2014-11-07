@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_cc4bd286",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T19:55:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_27dff6dc",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_5c7d39af",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 10
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "I think you need to do $user-\u003esetId( 5 ); as an id of 0 will mean the user is not logged in.",
       "parentUuid": "6e936f18_c7d092ce",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_8c286a96",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T19:55:52Z",
+      "side": 1,
+      "message": "Yeah, cool, thanks for this hint :) UTSysop is a user, but i missed to load the data (so ID will be 0 if loaded from name).",
+      "parentUuid": "6e936f18_6cb5de2e",
       "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -143,6 +179,42 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_ac144652",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T19:55:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_5c645911",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2c311601",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T19:55:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_ec880e78",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_fc3c45e1",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 10
@@ -196,6 +268,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_4c2ee2a1",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T19:55:52Z",
+      "side": 1,
+      "message": "Oha, then i have misunderstood this, thanks for clarify this and sorry for confusion :/",
+      "parentUuid": "6e936f18_cc83d255",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_1c5a5153",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 10
@@ -207,6 +297,24 @@
       "writtenOn": "2014-11-07T01:21:51Z",
       "side": 1,
       "message": "According to documentation $wgMFShowRedLinks and $wgMFShowRedLinksAnon have no effect in beta so I expect false as value if MobileFrontendTest is anon.",
+      "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_ec1ece74",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-07T19:55:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_1c5a5153",
       "revId": "d1c6799f6891c5ea447e618b31fd6d8d8e4d6ca5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
