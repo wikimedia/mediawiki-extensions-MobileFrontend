@@ -16,6 +16,24 @@
       "revId": "43a94b1e55cab2621ee354d7b5c1ed4295396c78",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_a7cc66c1",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T02:00:42Z",
+      "side": 1,
+      "message": "do you mean I should combine with the above or change the svg or both or neither or ...? ;)))",
+      "parentUuid": "6e936f18_1ce9f10f",
+      "revId": "43a94b1e55cab2621ee354d7b5c1ed4295396c78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
