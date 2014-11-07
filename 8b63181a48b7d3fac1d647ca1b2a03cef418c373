@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_05ed0d8a",
+        "filename": "less/iconsNew.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T23:40:21Z",
+      "side": 1,
+      "message": "These should also be single class names :-/\n\nThe ResourceLoaderImageModule will not support this kind of thing. https://gerrit.wikimedia.org/r/#/c/165922/\n\nLet me update this patch and clarify this myself.",
+      "revId": "8b63181a48b7d3fac1d647ca1b2a03cef418c373",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
