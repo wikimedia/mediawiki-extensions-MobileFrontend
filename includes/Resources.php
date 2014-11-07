@@ -436,19 +436,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.beta.common' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.stable.common',
-			'mobile.loggingSchemas',
-			'mobile.templates',
-		),
-	),
-
 	'mobile.talk' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable',
-			'mobile.beta.common',
-			'mobile.overlays',
+			'mobile.beta',
 		),
 		'styles' => array(
 			'less/modules/talk.less',
@@ -475,11 +465,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
-			'mobile.beta.common',
 			'mobile.overlays',
 			'mobile.references.beta',
 			'mobile.wikigrok',
 			'mobile.preferredLanguages',
+			'mobile.stable.common',
+			'mobile.loggingSchemas',
+			'mobile.templates',
 		),
 		'position' => 'bottom',
 	),
