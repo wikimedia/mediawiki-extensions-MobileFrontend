@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_8735aad8",
+        "filename": "less/drawer.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T01:36:41Z",
+      "side": 1,
+      "message": "As stated before we need to be agnostic about how the icons are built. Icons are still going through a process of standardisation and this kind of coupling will only cause us problems down the road.\n\nmw-ui-icon or :before should not appear anywhere other than iconsNew.less unless we are using it for caching reasons.\n\nIt looks like the margin-auto should be enough no?",
+      "revId": "120d3d097d3127aadb798ad12741f368c024d17e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
