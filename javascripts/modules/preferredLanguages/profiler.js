@@ -1,3 +1,5 @@
+// Watches users use of the language overlay and profiles the languages
+// that user clicks on. Stores this locally under the key langMap
 ( function ( M ) {
 
 	var supported = M.supportsLocalStorage,

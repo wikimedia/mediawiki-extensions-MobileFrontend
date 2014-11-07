@@ -1,3 +1,4 @@
+// When set orders LanguageOverlay list of languages by most frequently chosen
 ( function ( M,  $ ) {
 	var langMap = M.settings.getUserSetting( 'langMap' );
 	langMap = langMap ? $.parseJSON( langMap ) : {};
