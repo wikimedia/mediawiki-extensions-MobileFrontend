@@ -3,6 +3,7 @@
   "requireMultipleVarDecl": "onevar",
   "requireBlocksOnNewline": true,
   "disallowDanglingUnderscores": null,
+  "requireSpacesInsideParentheses": "all",
   "validateJSDoc": {
     "checkParamNames": true,
     "requireParamTypes": true,
