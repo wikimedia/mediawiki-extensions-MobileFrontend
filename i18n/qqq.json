@@ -269,7 +269,7 @@
 	"mobile-frontend-profile-userpage-link": "Label for a link to user page that shows on [[Special:UserProfile]].\n\nParameter:\n* $1 - username of user who talk page belongs to. Can be used for GENDER.",
 	"mobile-frontend-profile-usertalk": "Link label to user talk page.\n\nParameters:\n* $1 - username of user who talk page belongs to. Can be used for GENDER.",
 	"mobile-frontend-random-button": "This is the label of one of the buttons that appear if you click the wiki logo near the search box.\n\nThis buttons takes the user to a random page.\n{{Identical|Random}}",
-	"mobile-frontend-references-citation": "The title of the reference drawer that opens up when a reference link is clicked.",
+	"mobile-frontend-references-citation": "The title of the reference drawer that opens up when a reference link is clicked.\n{{Identical|Citation}}",
 	"mobile-frontend-regular-site": "When on the mobile site, this text links to the normal page for desktop computers",
 	"mobile-frontend-requires-mobile": "Message that shows when a special page does not have a desktop equivalent.\n\nPoints user to mobile view link at bottom of page to switch to mobile.\n\nThis should be consistent with {{msg-mw|Mobile-frontend-view}}.",
 	"mobile-frontend-requires-optin": "Message that shows when a page requires beta mode to work. Wikitext that links to [[Special:MobileOptions]] page.",

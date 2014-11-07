@@ -7,7 +7,7 @@
 	},
 	"mobile-frontend-drawer-cancel": "Annulearje",
 	"mobile-frontend-editor-cancel": "Annulearje",
-	"mobile-frontend-editor-continue": "Trochgean",
+	"mobile-frontend-editor-continue": "Folgjende",
 	"mobile-frontend-editor-edit": "Bewurkje",
 	"mobile-frontend-editor-save": "Fêstlizze",
 	"mobile-frontend-editor-visual-editor": "Bewurkje",
@@ -22,6 +22,7 @@
 	"mobile-frontend-password": "Wachtwurd:",
 	"mobile-frontend-password-placeholder": "Wachtwurd",
 	"mobile-frontend-placeholder": "{{SITENAME}} trochsykje",
+	"mobile-frontend-references-citation": "Sitaat",
 	"mobile-frontend-username": "Brûkersnamme:",
 	"mobile-frontend-username-placeholder": "Brûkersnamme",
 	"mobile-frontend-watchlist-more": "mear"

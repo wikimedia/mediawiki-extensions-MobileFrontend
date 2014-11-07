@@ -190,6 +190,7 @@
 	"mobile-frontend-nearby-requirements": "申し訳ありませんが、ご使用中のブラウザーは{{SITENAME}}の付近検索に対応していません。",
 	"mobile-frontend-nearby-requirements-guidance": "別のブラウザーを試すか、または JavaScript を無効にしている場合は有効にしてください。",
 	"mobile-frontend-nearby-title": "付近",
+	"mobile-frontend-nearby-sectiontext": "このページの近辺",
 	"mobile-frontend-news-items": "新着情報",
 	"mobile-frontend-opt-in-explain": "ベータテストへ参加すると、開発中の機能にアクセスできるようになりますがバグや問題に遭遇する危険性が伴います。",
 	"mobile-frontend-overlay-close": "閉じる",

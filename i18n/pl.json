@@ -81,7 +81,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Czy na pewno chcesz stworzyć}} nową stronę w {{SITENAME}}?",
 	"mobile-frontend-editor-newpage-prompt": "Ta strona nie istnieje. Czemu by jej nie utworzyć?",
 	"mobile-frontend-editor-placeholder": "Ta sekcja jest pusta. Zostań pierwszą osobą, która ją rozwinie!",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Tworzysz}} nową stronę w {{SITENAME}}!",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Tworzysz}} nową stronę w {{GRAMMAR:MS.lp|{{SITENAME}}}}!",
 	"mobile-frontend-editor-previewing-page": "<strong>Podgląd</strong><span> $1</span>",
 	"mobile-frontend-editor-redirect-title": "Przekierowanie do edytora...",
 	"mobile-frontend-editor-save": "Zapisz",
