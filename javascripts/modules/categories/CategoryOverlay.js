@@ -15,7 +15,7 @@
 		},
 		className: 'category-overlay overlay',
 		templatePartials: {
-			content: mw.template.get( 'mobile.categories', 'CategoryOverlay.hogan' ),
+			content: mw.template.get( 'mobile.categories', 'CategoryOverlay.hogan' )
 		},
 
 		/**
@@ -31,8 +31,8 @@
 				$.each( options.categories, function ( index, category ) {
 					var title = mw.Title.newFromText( category, 14 );
 					options.items.push( {
-						'url': title.getUrl(),
-						'title': title.getName(),
+						url: title.getUrl(),
+						title: title.getName()
 					} );
 				} );
 			}
