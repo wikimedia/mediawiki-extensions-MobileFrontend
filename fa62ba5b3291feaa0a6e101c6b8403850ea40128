@@ -33,6 +33,24 @@
       "revId": "fa62ba5b3291feaa0a6e101c6b8403850ea40128",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_e7d6ee53",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T01:58:07Z",
+      "side": 1,
+      "message": "edit the svg file or its css in iconsNew?",
+      "parentUuid": "6e936f18_4759e22b",
+      "revId": "fa62ba5b3291feaa0a6e101c6b8403850ea40128",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
