@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_4f2b3478",
+        "filename": "templates/modules/talk/talkSectionAdd.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T20:08:32Z",
+      "side": 0,
+      "message": "You should also do the same in talk/talkSection.hogan file",
+      "revId": "3038e4d922b2f09c91105c521d5c310052e41e72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

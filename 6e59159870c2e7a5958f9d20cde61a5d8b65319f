@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_cf08a42d",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 608,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-07T20:08:32Z",
+      "side": 1,
+      "message": "does it matter that \u0027header.hogan\u0027 is lowercase and the other 3 below are capfirst?",
+      "revId": "6e59159870c2e7a5958f9d20cde61a5d8b65319f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
