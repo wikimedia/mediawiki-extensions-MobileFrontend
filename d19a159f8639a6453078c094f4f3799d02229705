@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_ec4b2e61",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-07T18:46:53Z",
+      "side": 0,
+      "message": "You should be able to leave all these rules in tact. The problem doesn\u0027t effect stable. Anything inside .icon is just for caching purposes / backwards compatibility whilst we move over to mw-ui-icon",
+      "revId": "d19a159f8639a6453078c094f4f3799d02229705",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
