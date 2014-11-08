@@ -8,7 +8,8 @@
 			"Misibacsi",
 			"Tacsipacsi",
 			"Csega",
-			"ViDam"
+			"ViDam",
+			"Dorgan"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e.",
@@ -99,6 +100,7 @@
 	"mobile-frontend-watchlist-filter-other": "Egyéb",
 	"mobile-frontend-watchlist-filter-talk": "Vitalap",
 	"mobile-frontend-watchlist-removed": "$1 eltávolítva a figyelőlistádról",
+	"nearby": "A közeledben található lapok",
 	"tag-mobile_web_edit": "Mobil web szerkesztés",
 	"tag-mobile_web_edit-description": "Mobil weboldalról szerkesztve"
 }

@@ -13,6 +13,9 @@
 	"mobile-frontend-account-create-submit": "Регистрација",
 	"mobile-frontend-app-title": "Мобилен прилог",
 	"mobile-frontend-back-to-top-of-section": "Оди на претх. заглавие",
+	"mobile-frontend-categories-heading": "<strong>Категории</strong>",
+	"mobile-frontend-categories-subheading": "Страницата им припаѓа на следниве категории:",
+	"mobile-frontend-categories-nocat": "Страницава засега не припаѓа на ниедна категорија.",
 	"mobile-frontend-changeslist-ip": "Анонимен корисник",
 	"mobile-frontend-changeslist-nocomment": "нема опис на уредувањето",
 	"mobile-frontend-clear-search": "Исчисти",
@@ -185,6 +188,7 @@
 	"mobile-frontend-nearby-requirements": "Жалиме! Вашиот прелистувач не поддржува „Во близина“ на {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Користете друг прелистувач или вклучете JavaScript ако ви е исклучен.",
 	"mobile-frontend-nearby-title": "Во близина",
+	"mobile-frontend-nearby-sectiontext": "Во околина на страницава",
 	"mobile-frontend-news-items": "Вести",
 	"mobile-frontend-opt-in-explain": "Користејќи ја бета-верзијата добивате пристап до експериментални функции, но и можност да наидете на грешки и проблеми.",
 	"mobile-frontend-overlay-close": "Затвори",
@@ -237,6 +241,7 @@
 	"mobile-frontend-profile-userpage-link": "Посетете ја {{GENDER:$1|корисничката}} страница",
 	"mobile-frontend-profile-usertalk": "Разговарајте со {{GENDER:$1|$1}}",
 	"mobile-frontend-random-button": "Случајна",
+	"mobile-frontend-references-citation": "Наведување",
 	"mobile-frontend-regular-site": "Обичен изглед",
 	"mobile-frontend-requires-mobile": "Оваа страница не е достапна со обичен изглед. Сменете на мобилен изглед на дното од страницата.",
 	"mobile-frontend-requires-optin": "Страницава не е достапна доколку не изберете да ги користите бета-можностите. Ова можете да го направите во [[Special:MobileOptions|поставките]].",
@@ -328,5 +333,7 @@
 	"tag-mobile_web_edit-description": "Уредување напревено од мобилно мрежно место",
 	"skinname-minerva": "Минерва",
 	"mobile-frontend-pageaction-edit-tooltip": "Уредете го воведниот пасус на страницава",
-	"mobile-frontend-pageaction-upload-tooltip": "Подигнете воведна слика на страницава."
+	"mobile-frontend-pageaction-upload-tooltip": "Подигнете воведна слика на страницава.",
+	"apihelp-mobileview-description": "Дава податоци потребни за мобилен приказ.",
+	"apihelp-mobileview-param-page": "Наслов на страницата за обработка."
 }

@@ -28,7 +28,8 @@
 			"乌拉跨氪",
 			"LNDDYL",
 			"Duolaimi",
-			"Gaoxuewei"
+			"Gaoxuewei",
+			"御坂美琴"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -40,6 +41,9 @@
 	"mobile-frontend-account-create-submit": "注册",
 	"mobile-frontend-app-title": "移动应用程序",
 	"mobile-frontend-back-to-top-of-section": "返回段落顶部",
+	"mobile-frontend-categories-heading": "<strong>分类</strong>",
+	"mobile-frontend-categories-subheading": "此页面属于以下分类：",
+	"mobile-frontend-categories-nocat": "此页面不属于任何分类。",
 	"mobile-frontend-changeslist-ip": "匿名用户",
 	"mobile-frontend-changeslist-nocomment": "无编辑摘要",
 	"mobile-frontend-clear-search": "清除",
