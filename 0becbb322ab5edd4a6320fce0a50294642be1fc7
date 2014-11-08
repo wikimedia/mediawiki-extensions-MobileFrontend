@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_e574a1ce",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-08T00:01:38Z",
+      "side": 1,
+      "message": "Shouldn\u0027t be a comma at the end.",
+      "revId": "0becbb322ab5edd4a6320fce0a50294642be1fc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_857d9db2",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-08T00:01:38Z",
+      "side": 1,
+      "message": "key doesn\u0027t need to be quoted",
+      "revId": "0becbb322ab5edd4a6320fce0a50294642be1fc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_a57a19b6",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-08T00:01:38Z",
+      "side": 1,
+      "message": "key doesn\u0027t need to be quoted; shouldn\u0027t have a comma at the end.",
+      "revId": "0becbb322ab5edd4a6320fce0a50294642be1fc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
