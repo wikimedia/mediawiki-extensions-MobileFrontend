@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_a5fd3939",
+        "filename": "less/.DS_Store",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-08T00:07:53Z",
+      "side": 1,
+      "message": "attack of the mac!",
+      "revId": "de65c48826653ffe84d7c410ce337db0881efa6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
