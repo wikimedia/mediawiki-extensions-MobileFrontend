@@ -46,12 +46,6 @@
 						}
 					}
 				} );
-		},
-		getPossibleNationalities: function () {
-			return this.action( 'get_potential_nationality', 'nationality' );
-		},
-		getPossibleOccupations: function () {
-			return this.action( 'get_potential_occupations', 'occupations' );
 		}
 	} );
 
