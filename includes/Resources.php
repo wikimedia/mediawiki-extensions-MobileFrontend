@@ -951,6 +951,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/notifications/notifications.js',
 		),
+		'group' => 'user',
 	),
 
 	'mobile.notifications.overlay' => $wgMFResourceFileModuleBoilerplate + array(
