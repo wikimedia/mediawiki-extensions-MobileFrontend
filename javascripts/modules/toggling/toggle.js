@@ -157,7 +157,7 @@
 	}
 
 	function enable( $container ) {
-		var tagName, $headings, expandSections,
+		var tagName, expandSections,
 			$firstHeading,
 			iconClass = iconDown.getClassName(),
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
@@ -166,10 +166,6 @@
 		$( 'html' ).removeClass( 'stub' );
 		$firstHeading = $container.find( 'h1,h2,h3,h4,h5,h6' ).eq( 0 );
 		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
-		$container.find( tagName ).addClass( 'collapsible-heading ' + iconClass );
-
-		$headings = $container.find( '.collapsible-heading' );
-		$headings.next( 'div' ).addClass( 'collapsible-block' );
 
 		if ( collapseSectionsByDefault === undefined ) {
 			// Old default behavior if on cached output
@@ -178,35 +174,42 @@
 		expandSections = !collapseSectionsByDefault ||
 			( M.isAlphaGroupMember() && M.settings.getUserSetting( 'expandSections', true ) === 'true' );
 
-		$headings.each( function ( i ) {
-			var $elem = $( this ),
+		$container.find( tagName ).each( function ( i ) {
+			var $heading = $( this ),
 				id = 'collapsible-block-' + i;
+			// Be sure there is a div wrapping the section content.
+			// Otherwise, collapsible sections for this page is not enabled.
+			if ( $heading.next().is( 'div' ) ) {
+				$heading
+					.addClass( 'collapsible-heading ' + iconClass )
+					.attr( {
+						tabindex: 0,
+						'aria-haspopup': 'true',
+						'aria-controls': id
+					} )
+					.on( 'click', function ( ev ) {
+						// prevent taps/clicks on edit button after toggling (bug 56209)
+						ev.preventDefault();
+						toggle( $( this ) );
+					} );
+				$heading.next( 'div' )
+					.addClass( 'collapsible-block' )
+					.eq( 0 )
+					.attr( {
+						// We need to give each content block a unique id as that's
+						// the only way we can tell screen readers what element we're
+						// referring to (aria-controls)
+						id: id,
+						'aria-pressed': 'false',
+						'aria-expanded': 'false'
+					} );
 
-			$elem.next( '.collapsible-block' ).eq( 0 )
-				.attr( {
-					// We need to give each content block a unique id as that's
-					// the only way we can tell screen readers what element we're
-					// referring to (aria-controls)
-					id: id,
-					'aria-pressed': 'false',
-					'aria-expanded': 'false'
-				} );
+				enableKeyboardActions( $heading );
+				if ( M.isWideScreen() || expandSections ) {
+					// Expand sections by default on wide screen devices or if the expand sections setting is set (alpha only)
+					toggle( $heading );
+				}
 
-			$elem.attr( {
-				tabindex: 0,
-				'aria-haspopup': 'true',
-				'aria-controls': id
-			} )
-			.on( 'click', function ( ev ) {
-				// prevent taps/clicks on edit button after toggling (bug 56209)
-				ev.preventDefault();
-				toggle( $( this ) );
-			} );
-
-			enableKeyboardActions( $elem );
-			if ( M.isWideScreen() || expandSections ) {
-				// Expand sections by default on wide screen devices or if the expand sections setting is set (alpha only)
-				toggle( $elem );
 			}
 		} );
 
