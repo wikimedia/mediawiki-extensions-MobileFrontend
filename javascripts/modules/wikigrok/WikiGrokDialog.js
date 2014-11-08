@@ -170,6 +170,8 @@
 							} else {
 								options.contentMsg = 'Was ' + options.name + ' a citizen of the ' + options.claimLabel + '?';
 							}
+						} else if ( options.suggestion.name === 'schools' ) {
+							options.contentMsg = 'Did ' + options.name + ' attend ' + options.claimLabel + '?';
 						}
 
 						// Re-render with new content for 'Question' step
@@ -214,6 +216,8 @@
 				claim.prop = 'occupation';
 			} else if ( options.suggestion.name === 'nationality' ) {
 				claim.prop = 'nationality';
+			} else if ( options.suggestion.name === 'schools' ) {
+				claim.prop = 'alma mater';
 			}
 
 			this.apiWikiGrokResponse.recordClaims( [ claim ] ).done( function () {
@@ -396,6 +400,9 @@
 							}
 							if ( suggestions.nationalities && suggestions.nationalities.list.length ) {
 								options.suggestions.push( suggestions.nationalities );
+							}
+							if ( suggestions.schools && suggestions.schools.list.length ) {
+								options.suggestions.push( suggestions.schools );
 							}
 							if ( options.suggestions.length ) {
 								self.show();
