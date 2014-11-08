@@ -3,6 +3,7 @@
 		PageList = M.require( 'modules/PageList' );
 
 	/**
+	 * An extension of the PageList which preloads pages as all being watched.
 	 * @extends PageList
 	 * @class WatchList
 	 */

@@ -107,8 +107,9 @@
 		/**
 		 * Fetch suggestions from the server and show them to the user.
 		 * Also record claims when the user hits the save button.
+		 * FIXME: Please refactor
 		 * @method
-		 * @param {Object} options
+		 * @param {Object} options needed to render
 		 */
 		askWikidataQuestion: function ( options ) {
 			var self = this;

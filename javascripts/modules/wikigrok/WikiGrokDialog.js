@@ -72,7 +72,10 @@
 		/**
 		 * Log data to the schema
 		 * @method
-		 * @param {string} action
+		 * @param {string} action to log as described in schema
+		 *  See [Schema][1] for details on valid values.
+		 *
+		 * [1]: https://meta.wikimedia.org/wiki/Schema:MobileWebWikiGrok}
 		 */
 		log: function ( action ) {
 			var data = {
@@ -94,7 +97,10 @@
 		/**
 		 * Log data to the error schema
 		 * @method
-		 * @param {string} error
+		 * @param {string} error to log as described in schema
+		 *  See [Schema][1] for details on valid values.
+		 *
+		 * [1]: https://meta.wikimedia.org/wiki/Schema:MobileWebWikiGrok}
 		 */
 		logError: function ( error ) {
 			var data = {
@@ -139,6 +145,13 @@
 			return result;
 		},
 
+		/**
+		 * Creates a question with a yes, no and not sure answer
+		 * Makes API request to Wikidata to retrieve labels.
+		 * FIXME: No i18n
+		 * @method
+		 * @param {Object} options needed to render.
+		 */
 		askWikidataQuestion: function ( options ) {
 			var self = this,
 				vowels = [ 'a', 'e', 'i', 'o', 'u' ],
