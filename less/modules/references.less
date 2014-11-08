@@ -1,26 +1,28 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-.references {
-	h3 {
-		margin: 0;
-		padding-right: 4px;
-		display: inline;
-	}
+.stable {
+	.references {
+		h3 {
+			margin: 0;
+			padding-right: 4px;
+			display: inline;
+		}
 
-	.mw-cite-backlink {
-		display: none;
-	}
+		.mw-cite-backlink {
+			display: none;
+		}
 
-	// FIXME: Remove when mw-ui-icon in stable
-	.icon {
-		float: right;
-		margin-top: .7em;
-	}
+		// FIXME: Remove when mw-ui-icon in stable
+		.icon {
+			float: right;
+			margin-top: .7em;
+		}
 
-	.mw-ui-icon {
-		float: right;
-		line-height: normal;
+		.mw-ui-icon {
+			float: right;
+			line-height: normal;
+		}
 	}
 }
 
@@ -35,48 +37,31 @@
 			font-size: 1em;
 		}
 
+		a {
+			background-image: none;
+			color: #5880C0;
+		}
+
 		.cite {
-			clear: both;
 			padding-bottom: 20px;
 
-			.icon {
-				margin: 0;
-			}
-
-			.text {
-				.background-image('../images/cite.svg');
-				background-size: 24px 24px;
-				background-repeat: no-repeat;
-				color: @colorGray8;
-				cursor: default;
-				font-size: 0.75em;
-				float: left;
-				padding: 8px 0 0 24px;
-				text-transform: uppercase;
-				&.mw-ui-icon:before {
-					margin-right: 0;
-					width: 0;
-				}
-			}
-			.cancel {
-				background-size: 12px 12px;
-				float: right;
-				line-height: normal;
-				height: 12px;
-				width: 12px;
-				&.mw-ui-icon {
-					min-width: 12px;
-				}
-				&.mw-ui-icon:before {
-					background-size: 12px 12px;
-					margin: 0;
-					min-height: 12px;
-				}
-			}
 			&:after {
 				content: "";
 				display: table;
 				clear: both;
+			}
+
+			.text {
+				color: @colorGray8;
+				cursor: default;
+				letter-spacing: .2em;
+				float: left;
+				font-size: 0.75em;
+				text-transform: uppercase;
+			}
+			.cancel {
+				float: right;
+				line-height: normal;
 			}
 		}
 
@@ -85,7 +70,29 @@
 		}
 
 		.reference-text {
-			line-height: 1.2;
+			line-height: 1.4;
 		}
 	}
 }
+
+.alpha {
+	.drawer.references {
+		.cite {
+			.text {
+				line-height: 2.5em;
+				height: 2em;
+			}
+		}
+	}
+}
+
+.beta {
+	.drawer.references {
+		.cite {
+			.text {
+				padding: .75em 0 0 2.5em;
+			}
+		}
+	}
+}
+
