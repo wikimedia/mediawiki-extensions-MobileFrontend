@@ -362,6 +362,7 @@
 	"tag-mobile_web_edit-description": "来自手机版网站的编辑",
 	"mobile-frontend-pageaction-edit-tooltip": "编辑此页面的序言章节。",
 	"mobile-frontend-pageaction-upload-tooltip": "上传自定义背景图片",
+	"apihelp-mobileview-param-page": "要进行的页面标题。",
 	"apihelp-mobileview-param-noimages": "返回不带图片的HTML。",
 	"apihelp-mobileview-param-thumbnail": "'最大缩略图尺寸。",
 	"apihelp-mobileview-example-1": "获取有关[[Doom metal]]的第0章节的信息",

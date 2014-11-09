@@ -94,7 +94,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|آیا مطمئن هستید برای ایجاد}} یک صفحه جدید در {{SITENAME}}؟",
 	"mobile-frontend-editor-newpage-prompt": "این صفحه وجود ندارد. چرا جسور نباشید و ایجادش نکنید؟",
 	"mobile-frontend-editor-placeholder": "این بخش خالی است. اولین نفری باشید که آن را گسترش می‌دهد!",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|شما}}  {{GENDER:$1| در حال ایجاد}} یک صفحه جدید در {{SITENAME}}هستید!",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|شما}} {{GENDER:$1|در حال ایجاد}} یک صفحهٔ جدید در {{SITENAME}} هستید!",
 	"mobile-frontend-editor-previewing-page": "<strong>پیش‌نمایش</strong><span>$1</span>",
 	"mobile-frontend-editor-redirect-title": "در حال هدایت به ویرایشگر...",
 	"mobile-frontend-editor-save": "ذخیره",

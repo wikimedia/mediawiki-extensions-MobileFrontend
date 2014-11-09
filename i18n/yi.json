@@ -6,6 +6,8 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "צוריקשפרינגען אַן אָפטייל",
+	"mobile-frontend-categories-subheading": "דער בלאט געהערט צו די פאלגנדע קאטעגאריעס:",
+	"mobile-frontend-categories-nocat": "דער בלאט געהערט נאך נישט צו קיין קאטעגאריע.",
 	"mobile-frontend-clear-search": "רייניקן",
 	"mobile-frontend-copyright": "דער אינהאַלט איז פֿאַראַן אונטער $1 ווען נישט באוויזן אנדערש.",
 	"mobile-frontend-desc": "מאבייל אויסשטעלונג",
@@ -42,6 +44,7 @@
 	"mobile-frontend-meta-data-issues-talk": "וועגן דעם רעדן־בלאט",
 	"mobile-frontend-meta-data-issues-header": "פראגעס",
 	"mobile-frontend-meta-data-issues-header-talk": "וועגן דעם בלאט",
+	"mobile-frontend-nearby-sectiontext": "לעבן דעם בלאַט",
 	"mobile-frontend-news-items": "אין די נײַעס",
 	"mobile-frontend-overlay-close": "פארמאכן",
 	"mobile-frontend-overlay-continue": "פֿארזעצן",

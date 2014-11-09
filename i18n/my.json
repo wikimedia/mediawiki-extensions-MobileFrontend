@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Parabaik"
+			"Parabaik",
+			"Thanhtikesoe24"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "စိစစ်မှု ကုဒ်ထည့်သွင်းရန်",
@@ -12,9 +13,13 @@
 	"mobile-frontend-changeslist-ip": "အမည်မသိ အသုံးပြုသူ",
 	"mobile-frontend-clear-search": "ရှင်းလင်း",
 	"mobile-frontend-copyright": "စာသားများသည် <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike လိုင်စင်</a>အောက်တွင် ရရှိနိုင်ပါသည်။ အပိုသတ်မှတ်ချက်များ ရှိကောင်းရှိမည်ဖြစ်သည်။ အသေးစိတ်အတွက် <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>အသုံးပြုရာတွင် သတိပြုရမည့် အချက်များ</a>ကို ကြည့်ပါ။ ဝီကီပီးဒီးယားသည် အကျိုးအမြတ် မရယူသော <a href='http://www.wikimediafoundation.org/'>ဝီကီမီဒီယာဖောင်ဒေးရှင်း Inc.</a>၏ မှတ်ပုံတင်ထားသော ကုန်အမှတ်တံဆိပ် ဖြစ်သည်။",
+	"mobile-frontend-diffview-anonymous": "မှတ်ပံုမတင်ဘဲ ဝင်သံုးသူ",
 	"mobile-frontend-diffview-bytesnochange": "အရွယ်အစားများ ပြောင်းလဲမှု မရှိ",
 	"mobile-frontend-diffview-title": "အပြောင်းအလဲများ",
 	"mobile-frontend-disable-images": "မိုဘိုင်းဆိုက်တွင် ပုံရိပ်များ ဖျောက်ထားရန်",
+	"mobile-frontend-dismiss-notification": "သတိေပးချက်ကို အမှုမထား",
+	"mobile-frontend-donate-image-anon": "Uploads လုပ်ထားတာများ ကြည့်လိုပါက log in ဝင်ပါ",
+	"mobile-frontend-donate-image-heading": "မကြာသေးမီက ဝင် ရေးပေးထားတာများ",
 	"mobile-frontend-donate-image-title": "Upload တင်ရန်",
 	"mobile-frontend-donate-photo-first-upload-success": "အောင်မြင်ပါပြီ။ ပထမဆုံးပါဝင်ရေးသားမှုအတွက် ကျေးဇူးတင်ပါတယ်။",
 	"mobile-frontend-donate-photo-upload-success": "အောင်မြင်ပါပြီ။ ပုံများကို {{SITENAME}} တွင် စတင်အသုံးပြုနိုင်ပါပြီ။",

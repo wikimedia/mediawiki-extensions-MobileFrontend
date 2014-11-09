@@ -19,7 +19,8 @@
 			"User555",
 			"Wiki13",
 			"TheDJ",
-			"Romaine"
+			"Romaine",
+			"Robin0van0der0vliet"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -30,6 +31,7 @@
 	"mobile-frontend-account-create-submit": "Registreren",
 	"mobile-frontend-app-title": "Mobiele app",
 	"mobile-frontend-back-to-top-of-section": "Een kopje terugspringen",
+	"mobile-frontend-categories-heading": "<strong>Categorieën</strong>",
 	"mobile-frontend-changeslist-ip": "Anonieme gebruiker",
 	"mobile-frontend-changeslist-nocomment": "geen bewerkingssamenvatting",
 	"mobile-frontend-clear-search": "Wissen",
