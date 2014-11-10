@@ -35,15 +35,6 @@
 		},
 
 		/**
-		 * Determines if we are running mobile application
-		 * @method
-		 * @return {Boolean}
-		 */
-		isApp: function () {
-			return this.getMode() === 'app';
-		},
-
-		/**
 		 * Detect module being run outside allowed mode
 		 * @method
 		 * @param {Array} modes Array of allowed mode names
