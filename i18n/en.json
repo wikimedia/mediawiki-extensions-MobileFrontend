@@ -258,7 +258,6 @@
 	"mobile-frontend-settings-alpha": "Experimental mode",
 	"mobile-frontend-settings-alpha-description": "Enter dangerous and unexplored mobile territory. Get even more experimental features, but with more danger of bugs.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Customize your experience on your mobile device with these mobile specific site settings.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Languages",
 	"mobile-frontend-sign-in-error-heading": "Whoops",
