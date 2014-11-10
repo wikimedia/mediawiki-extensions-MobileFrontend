@@ -489,6 +489,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.pagelist.scripts',
 			'mobile.overlays',
 			'mobile.templates',
+			'mobile.loggingSchemas',
 		),
 		'styles' => array(
 			'less/modules/search/SearchOverlay.less',

@@ -4,6 +4,7 @@
  */
 ( function ( M, $ ) {
 	var Icon = M.require( 'Icon' ),
+		schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		mainmenu = M.require( 'mainmenu' ),
 		$btn = $( '#secondary-button.user-button' );
 
@@ -34,6 +35,7 @@
 	// than linking to Special:Notifications.
 	$( function () {
 		$btn.on( 'click', function () {
+			schema.log( 'notifications' );
 			M.router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay

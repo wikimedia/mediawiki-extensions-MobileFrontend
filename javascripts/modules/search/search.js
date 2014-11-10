@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
-	var SearchOverlay = M.require( 'modules/search/SearchOverlay' );
+	var SearchOverlay = M.require( 'modules/search/SearchOverlay' ),
+		schema = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
 	//
 	// don't use focus event (https://bugzilla.wikimedia.org/show_bug.cgi?id=47499)
@@ -9,6 +10,7 @@
 	// from user context event, so using it in route callback won't work
 	// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
 	$( '#searchInput' ).on( 'click', function () {
+		schema.log( 'search' );
 		new SearchOverlay( { searchTerm: $( this ).val() } ).show();
 		M.router.navigate( '/search' );
 	} );
