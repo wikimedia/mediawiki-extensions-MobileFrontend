@@ -122,6 +122,42 @@
       "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cfadfb99",
+        "filename": "javascripts/modules/wikigrok/wikigrokuser.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-10T11:18:13Z",
+      "side": 1,
+      "message": "Have you pulled mediawiki master recently? I made the mediawiki.cookie module usable in the mobile context only recently.\n\nI wrote mediawiki.cookie so that cookie reading/writing on the client-side looked and acted more like the server-side (WebRequest#getCookie and WebResponse#setcookie). You\u0027ll notice I don\u0027t have to worry about prefixing the cookie and passing cookie configuration variables as options, I just read and write the cookie.\n\nMaybe I could switch back to $.cookie and then create a card to convert all instances of $.cookie to mw.cookie in one fell swoop?",
+      "parentUuid": "6e936f18_0f1e8cc4",
+      "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_0f8f6330",
+        "filename": "javascripts/modules/wikigrok/wikigrokuser.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-10T11:18:13Z",
+      "side": 1,
+      "message": "I\u0027m not sure about localStorage. Using cookies gives us the ability to do some related logging on the server if we\u0027d like. That\u0027s a rather contrived example though…",
+      "parentUuid": "6e936f18_6042bf40",
+      "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
