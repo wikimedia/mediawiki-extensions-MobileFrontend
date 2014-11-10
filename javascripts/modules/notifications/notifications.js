@@ -3,7 +3,7 @@
  * with the Toast notifications defined by common/toast.js.
  */
 ( function ( M, $ ) {
-	var
+	var Icon = M.require( 'Icon' ),
 		mainmenu = M.require( 'mainmenu' ),
 		$btn = $( '#secondary-button.user-button' );
 
@@ -15,11 +15,16 @@
 	 * @returns {jQuery.Deferred}
 	*/
 	function loadModuleScript( moduleName ) {
-		var d = $.Deferred();
+		var d = $.Deferred(),
+			loadingIcon = new Icon( {
+				tagName: 'a',
+				additionalClassNames: 'loading'
+			} ).toHtmlString();
 
-		$btn.addClass( 'loading' );
+		$btn.hide().after( loadingIcon );
 		mw.loader.using( moduleName, function () {
-			$btn.removeClass( 'loading' );
+			$btn.next( '.loading' ).remove();
+			$btn.show();
 			d.resolve();
 		} );
 		return d;
