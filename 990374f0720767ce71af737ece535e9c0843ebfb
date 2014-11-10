@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_0462ea36",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 593,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-10T09:25:11Z",
+      "side": 1,
+      "message": "toggling has been moved up",
+      "revId": "990374f0720767ce71af737ece535e9c0843ebfb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_a45a1683",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1175,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-10T09:25:11Z",
+      "side": 1,
+      "message": "head is unchanged, just moved places",
+      "revId": "990374f0720767ce71af737ece535e9c0843ebfb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
