@@ -33,6 +33,24 @@
       "revId": "bfcb4273f6eb65646245a064b2a18b3f554b6de4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_6f6387a7",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 898,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-10T10:57:00Z",
+      "side": 0,
+      "message": "This knocks out the mediawiki.page.watch.ajax module, which shouldn\u0027t be loaded in this context, right?",
+      "parentUuid": "6e936f18_e437be48",
+      "revId": "bfcb4273f6eb65646245a064b2a18b3f554b6de4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
