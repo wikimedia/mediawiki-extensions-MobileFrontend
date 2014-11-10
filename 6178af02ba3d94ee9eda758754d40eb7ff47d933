@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_84803a8f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 867,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-10T10:00:20Z",
+      "side": 1,
+      "message": "I\u0027m not sure, if we should name the array here (it\u0027s the only one, which is named). It hasn\u0027t any functionality and the name of the module says, what it do :) I suggest to use:\n\n$modules[] \u003d \u0027mobile.notifications\u0027;\n\nLike all other modules here, too.",
+      "revId": "6178af02ba3d94ee9eda758754d40eb7ff47d933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
