@@ -1,11 +1,11 @@
-// Watches users use of the language overlay and profiles the languages
-// that user clicks on. Stores this locally under the key langMap
-( function ( M ) {
-
+// When set orders LanguageOverlay list of languages by most frequently chosen
+( function ( M,  $ ) {
 	var supported = M.supportsLocalStorage,
 		settings = M.require( 'settings' ),
-		langMap,
+		langMap = settings.get( 'langMap' ),
 		curLanguage = mw.config.get( 'wgContentLanguage' );
+
+	langMap = langMap ? $.parseJSON( langMap ) : {};
 
 	function loadLanguageMap() {
 		langMap = settings.get( 'langMap' );
@@ -31,7 +31,20 @@
 		}
 	}
 
+	M.on( 'language-overlay-initialize', function ( options ) {
+		options.languages = options.languages.sort( function ( a, b ) {
+			var x = langMap[ a.lang ] || 0,
+				y = langMap[ b.lang ] || 0;
+			if ( x > 0 ) {
+				a.preferred = true;
+			}
+			if ( y > 0 ) {
+				b.preferred = true;
+			}
+			return x < y;
+		} );
+	} );
 	M.on( 'language-select', profileLanguage );
 	initProfiler();
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

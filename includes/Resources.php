@@ -109,7 +109,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toggling',
 		),
 		'scripts' => array(
-			'javascripts/modules/toc/toc.js',
+			'javascripts/modules/toc/init.js',
 		),
 		'styles' => array(
 			'less/modules/toc/toc.less',
@@ -177,7 +177,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.user',
 		),
 		'scripts' => array(
-			'javascripts/modules/redlinks/redlinks.js',
+			'javascripts/modules/redlinks/init.js',
 		),
 	),
 
@@ -212,7 +212,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-edit',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/editor.js',
+			'javascripts/modules/editor/init.js',
 		),
 	),
 
@@ -430,8 +430,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.settings',
 		),
 		'scripts' => array(
-			'javascripts/modules/preferredLanguages/profiler.js',
-			'javascripts/modules/preferredLanguages/preferred.js',
+			'javascripts/modules/preferredLanguages/init.js',
 		),
 	),
 
@@ -449,7 +448,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/search/SearchApi.js',
 			'javascripts/modules/search/SearchOverlay.js',
-			'javascripts/modules/search/search.js',
+			'javascripts/modules/search/init.js',
 		),
 		'templates' => array(
 			'SearchOverlay.hogan' => 'templates/modules/search/SearchOverlay.hogan',
@@ -571,7 +570,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/modules/wikigrok/wikigrok.js',
+			'javascripts/modules/wikigrok/init.js',
 		),
 	),
 
@@ -721,7 +720,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/references/ReferencesDrawer.js',
-			'javascripts/modules/references/references.js',
+			'javascripts/modules/references/init.js',
 		),
 	),
 
@@ -734,7 +733,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/toggle.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/toggling/toggle.js',
+			'javascripts/modules/toggling/init.js',
 		),
 	),
 
@@ -766,7 +765,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/modules/tutorials/newbieEditor.js',
+			'javascripts/modules/tutorials/init.js',
 		),
 		'messages' => array(
 			// newbieEditor.js
@@ -835,7 +834,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/issues/CleanupOverlay.js',
-			'javascripts/modules/issues/issues.js',
+			'javascripts/modules/issues/init.js',
 		),
 		'messages' => array(
 			// issues.js
@@ -1177,7 +1176,7 @@ $wgMinervaBootstrapModules = array(
 			'javascripts/modes.js',
 			'javascripts/mainmenu.js',
 			'javascripts/modules/lastEdited/time.js',
-			'javascripts/modules/lastEdited/lastEdited.js',
+			'javascripts/modules/lastEdited/init.js',
 		),
 		'messages' => array(
 			// lastEdited.js
@@ -1218,7 +1217,7 @@ $wgMinervaBootstrapModules = array(
 			'javascripts/modules/uploads/init.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/mediaViewer/init.js',
-			'javascripts/modules/languages/languages.js',
+			'javascripts/modules/languages/init.js',
 		),
 	),
 	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
