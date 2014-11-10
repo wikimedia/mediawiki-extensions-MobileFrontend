@@ -109,6 +109,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toggling',
 		),
 		'scripts' => array(
+			'javascripts/modules/toc/TableOfContents.js',
 			'javascripts/modules/toc/init.js',
 		),
 		'styles' => array(
