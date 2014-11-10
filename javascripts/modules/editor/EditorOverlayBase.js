@@ -77,7 +77,7 @@
 		 * messages, and setting mobile edit cookie.
 		 */
 		onSave: function () {
-			var title = this.options.title,
+			var title = this.options.title, self = this,
 				msg;
 
 			// FIXME: use generic method for following 3 lines
@@ -96,6 +96,10 @@
 
 			// Ensure we don't lose this event when logging
 			this.log( 'success' ).always( function () {
+				if ( self.sectionLine ) {
+					title = title + '#' + self.sectionLine;
+				}
+
 				window.location = mw.util.getUrl( title );
 			} );
 
