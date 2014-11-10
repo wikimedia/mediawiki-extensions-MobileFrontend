@@ -209,4 +209,48 @@ Text 2
 			),
 		);
 	}
+
+	public function testRedirectToSpecialPageDoesntTriggerNotices() {
+		$props = array(
+			'lastmodified',
+			'lastmodifiedby',
+			'revision',
+			'id',
+			'languagecount',
+			'hasvariants',
+			'displaytitle'
+		);
+
+		$this->setMwGlobals( 'wgAPIModules', array( 'mobileview' => 'MockApiMobileView' ) );
+
+		$request = new FauxRequest( array(
+			'action' => 'mobileview',
+			'page' => 'Foo',
+			'sections' => '1-',
+			'noheadings' => '',
+			'text' => 'Lead
+== Section 1 ==
+Text 1
+== Section 2 ==
+Text 2
+',
+			'prop' => implode( '|', $props ),
+			'page' => 'Redirected',
+			'redirect' => 'yes',
+		) );
+		$context = new RequestContext();
+		$context->setRequest( $request );
+		$api = new MockApiMobileView( new ApiMain( $context ), 'mobileview' );
+
+		$api->execute();
+
+		$result = $api->getResultData();
+
+		foreach ( $props as $prop ) {
+			$this->assertFalse(
+				isset( $result[$prop] ),
+				"{$prop} isn't included in the response when it can't be fetched."
+			);
+		}
+	}
 }

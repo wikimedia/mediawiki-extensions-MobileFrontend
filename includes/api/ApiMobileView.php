@@ -87,29 +87,32 @@ class ApiMobileView extends ApiBase {
 			);
 		}
 		$data = $this->getData( $title, $params['noimages'] );
-		if ( isset( $prop['lastmodified'] ) ) {
+		// Bug 73109: #getData will return an empty array if the title redirects to
+		// a page in a virtual namespace (NS_SPECIAL, NS_MEDIA), so make sure that
+		// the requested data exists too.
+		if ( isset( $prop['lastmodified'] ) && isset( $data['lastmodified'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'lastmodified' => $data['lastmodified'] )
 			);
 		}
-		if ( isset( $prop['lastmodifiedby'] ) ) {
+		if ( isset( $prop['lastmodifiedby'] ) && isset( $data['lastmodifiedby'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array(
 					'lastmodifiedby' => $data['lastmodifiedby'],
 				)
 			);
 		}
-		if ( isset( $prop['revision'] ) ) {
+		if ( isset( $prop['revision'] ) && isset( $data['revision'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'revision' => $data['revision'] )
 			);
 		}
-		if ( isset( $prop['id'] ) ) {
+		if ( isset( $prop['id'] ) && isset( $data['id'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'id' => $data['id'] )
 			);
 		}
-		if ( isset( $prop['languagecount'] ) ) {
+		if ( isset( $prop['languagecount'] ) && isset( $data['languagecount'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'languagecount' => $data['languagecount'] )
 			);
@@ -119,14 +122,14 @@ class ApiMobileView extends ApiBase {
 				array( 'hasvariants' => $data['hasvariants'] )
 			);
 		}
-		if ( isset( $prop['displaytitle'] ) ) {
+		if ( isset( $prop['displaytitle'] ) && isset( $data['displaytitle'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'displaytitle' => $data['displaytitle'] )
 			);
 		}
 		if ( isset( $prop['pageprops'] ) ) {
 			$propNames = $params['pageprops'];
-			if ( $propNames == '*' ) {
+			if ( $propNames == '*' && isset( $data['pageprops'] ) ) {
 				$pageProps = $data['pageprops'];
 			} else {
 				$propNames = explode( '|', $propNames );
