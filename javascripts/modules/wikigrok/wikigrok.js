@@ -154,8 +154,6 @@
 		} ).fail( function () {
 			var data = {
 				error: 'no-impression-cannot-load-interface',
-				itemId: wikidataID,
-				title: mw.config.get( 'wgTitle' ),
 				taskType: 'version ' + version.name,
 				taskToken: mw.user.generateRandomSessionId(),
 				userToken: getUserToken(),
