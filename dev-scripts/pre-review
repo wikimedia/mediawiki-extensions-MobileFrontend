@@ -50,6 +50,28 @@ for change in changes:
     ):
         open_patches += 1
 
+'''
+Run jsduck and complain if there is an non zero exit code
+@returns string if there are warnings
+@returns false if no warnings
+'''
+def js_duck_warnings():
+    command = "make jsduck"
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+
+    #Launch the shell command:
+    output, error = process.communicate()
+    if error:
+        return error
+    else:
+        return False
+
+js_duck_warnings = js_duck_warnings()
+if js_duck_warnings:
+    print 'Please fix the jsduck warnings before submitting this for code review:'
+    print js_duck_warnings
+    sys.exit(1)
+
 if open_patches > MAX_OPEN_PATCHES:
     print 'Do some code review first! There are %s open unreviewed patches!' % open_patches
     print 'You can still send this review by running `git review --no-custom-script` but note this will generate bad karma.'

@@ -34,10 +34,11 @@ jsduck: gems				## Build the JavaScript documentation
 	mkdir -p docs
 	jsduck ${MW_INSTALL_PATH}/extensions/Mantle/javascripts/ javascripts/ \
 		--output docs/js/ \
+		--warnings-exit-nonzero \
 		--external=OO.EventEmitter,jQuery.Object,Hogan.Template,HandleBars.Template,jQuery.Deferred,jQuery.Event,mw.user \
 		--exclude=javascripts/external \
 		--ignore-global \
-		--warnings=nodoc,nodocmember
+		--warnings=nodoc
 
 phpdoc: nodecheck			## Build the PHP documentation
 	mkdir -p docs
