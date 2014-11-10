@@ -18,7 +18,7 @@
 	// Add route
 	function loadImageOverlay( title ) {
 		var result = $.Deferred();
-		mw.loader.using( 'mobile.mediaViewer', function () {
+		M.loadModule( 'mobile.mediaViewer' ).done( function () {
 			var caption = $( 'a[href*="' + title + '"]' ).siblings( '.thumbcaption' ).text(),
 				ImageOverlay = M.require( 'modules/mediaViewer/ImageOverlay' );
 
