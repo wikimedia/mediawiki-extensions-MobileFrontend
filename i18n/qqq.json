@@ -285,7 +285,6 @@
 	"mobile-frontend-settings-alpha": "<!--[[File:Mobile Contributions Quarterly Review 3 2013.pdf|page=32|thumb|The message in action]]-->\nHeading for alpha mode on settings page ([//commons.wikimedia.org/w/index.php?title=File%3AMobile_Contributions_Quarterly_Review_3_2013.pdf&page=32 screenshot]). This is a highly experimental mode where there might be bugs. Feel free to simply translate it with the equivalent of the word \"alpha\" when translating to other languages.\n\nPreviously, it was called \"Dragons Mode\".",
 	"mobile-frontend-settings-alpha-description": "Disclaimer about dangers and excitement that come with being in an alpha mode",
 	"mobile-frontend-settings-beta": "Text for beta on settings page.\n{{Identical|Beta}}",
-	"mobile-frontend-settings-description": "Text at top of the settings page explaining its purpose",
 	"mobile-frontend-settings-site-description": "Shown on [[Special:MobileOptions]]. Parameters:\n* $1 - the number of other language versions for this wiki",
 	"mobile-frontend-settings-site-header": "Heading for the Special:MobileOptions/Language page - only visible to non JavaScript users",
 	"mobile-frontend-sign-in-error-heading": "Heading for when an error occurred. You can translate \"Error\" instead.",

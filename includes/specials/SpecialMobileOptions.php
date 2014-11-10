@@ -94,7 +94,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$html = Html::openElement( 'form',
 			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
 		);
-		$aboutMessage = $this->msg( 'mobile-frontend-settings-description' )->parse();
 		$token = $user->isLoggedIn() ? Html::hidden( 'token', $user->getEditToken() ) : '';
 		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
 
@@ -140,11 +139,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		}
 
 		// @codingStandardsIgnoreStart Long line
-		$html .= <<<HTML
-		<p>
-			{$aboutMessage}
-		</p>
-HTML;
 		foreach( $options as $key => $data ) {
 			if ( isset( $data['type'] ) && $data['type'] === 'hidden' ) {
 				$html .= Html::element( 'input',
