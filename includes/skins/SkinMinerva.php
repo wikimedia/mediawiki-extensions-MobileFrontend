@@ -864,7 +864,7 @@ class SkinMinerva extends SkinTemplate {
 			$modules[] = 'mobile.usermodule';
 
 			if ( $this->useEcho() ) {
-				$modules['notifications'] = 'mobile.notifications';
+				$modules[] = 'mobile.notifications';
 			}
 
 			if ( $this->isCurrentPageEditable() ) {
