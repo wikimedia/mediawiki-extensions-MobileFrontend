@@ -37,14 +37,14 @@ QUnit.test( '#TalkOverlay (new page; anonymous)', 4, function( assert ) {
 	assert.strictEqual( page.getSubSections().length, 0, 'Discussions reloaded, still no sections' );
 
 	// check whether there is an Add discussion button
-	assert.strictEqual( overlay.$( 'button.add' ).length, 0, 'There is no "Add discussion" button' );
+	assert.strictEqual( overlay.$( '.add' ).length, 0, 'There is no "Add discussion" button' );
 } );
 
 QUnit.test( '#TalkOverlay (logged in)', 2, function( assert ) {
 	mw.config.set( 'wgUserName', 'FlorianSW' );
 	var overlay = new TalkOverlay( { title: 'Talk:No exist' } );
 
-	assert.ok( overlay.$( 'button.add' ).length > 0, 'There is an "Add discussion" button' );
+	assert.ok( overlay.$( '.add' ).length > 0, 'There is an "Add discussion" button' );
 	assert.strictEqual( $.trim( overlay.$( '.content-header' ).text() ),
 		mw.msg( 'mobile-frontend-talk-explained-empty' ),
 		'Check the header knows it is empty.' );
