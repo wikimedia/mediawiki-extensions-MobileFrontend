@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var talkPrefix = mw.config.get( 'wgFormattedNamespaces' )[ mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
+	var licenseLink = mw.config.get( 'wgMFLicenseLink' ),
+		talkPrefix = mw.config.get( 'wgFormattedNamespaces' )[ mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
 
 	M.assertMode( [ 'beta', 'alpha', 'app' ] );
 
@@ -9,10 +10,20 @@
 				title: talkPrefix + M.getCurrentPage().title
 			};
 
+		if ( $( '#footer-places-terms-use' ).length > 0 ) {
+			talkOptions.licenseMsg = mw.msg( 'mobile-frontend-editor-licensing-with-terms',
+				$( '#footer-places-terms-use' ).html(), licenseLink );
+		} else {
+			talkOptions.licenseMsg = mw.msg( 'mobile-frontend-editor-licensing', licenseLink );
+		}
+
 		M.loadModule( 'mobile.talk.overlays' ).done( function () {
 			var Overlay;
 			if ( id === 'new' ) {
 				Overlay = M.require( 'modules/talk/TalkSectionAddOverlay' );
+			} else if ( id ) {
+				talkOptions.id = id;
+				Overlay = M.require( 'modules/talk/TalkSectionOverlay' );
 			} else {
 				Overlay = M.require( 'modules/talk/TalkOverlay' );
 			}
