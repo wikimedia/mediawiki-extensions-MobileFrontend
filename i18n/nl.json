@@ -244,6 +244,7 @@
 	"mobile-frontend-profile-userpage-link": "{{GENDER:$1|Gebruiker}}spagina bekijken.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|Overleg met $1}}",
 	"mobile-frontend-random-button": "Willekeurig",
+	"mobile-frontend-references-citation": "Referentie",
 	"mobile-frontend-regular-site": "Standaardweergave",
 	"mobile-frontend-requires-mobile": "Deze pagina is niet beschikbaar in desktopweergave. Klik op de mobiele weergave onderaan de pagina.",
 	"mobile-frontend-requires-optin": "Deze pagina is niet beschikbaar tenzij u [[Special:MobileOptions|betamodus]] heeft ingeschakeld.",

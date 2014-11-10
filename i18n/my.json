@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Parabaik",
-			"Thanhtikesoe24"
+			"Thanhtikesoe24",
+			"Sanlinnaing"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "စိစစ်မှု ကုဒ်ထည့်သွင်းရန်",
@@ -10,6 +11,9 @@
 	"mobile-frontend-account-create-submit": "မှတ်ပုံတင်ရန်",
 	"mobile-frontend-app-title": "မိုဘိုင်း ဆော့ဖ်ဝဲ",
 	"mobile-frontend-back-to-top-of-section": "အပိုင်းတစ်ခု ခုန်ကျော်ရန်",
+	"mobile-frontend-categories-heading": "<strong>ခေါင်းစီးများ</strong>",
+	"mobile-frontend-categories-subheading": "ဒီစာမျက်နှာက အောက်ပါ ခေါင်းစီးတွေနဲ့ သက်ဆိုင်ပါတယ်။",
+	"mobile-frontend-categories-nocat": "ဒီစာမျက်နှာက ဘယ်ခေါင်းစီးနဲ့မှ အခုချိန်မှာ သက်ဆိုင်ခြင်းမရှိသေးပါ။",
 	"mobile-frontend-changeslist-ip": "အမည်မသိ အသုံးပြုသူ",
 	"mobile-frontend-clear-search": "ရှင်းလင်း",
 	"mobile-frontend-copyright": "စာသားများသည် <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike လိုင်စင်</a>အောက်တွင် ရရှိနိုင်ပါသည်။ အပိုသတ်မှတ်ချက်များ ရှိကောင်းရှိမည်ဖြစ်သည်။ အသေးစိတ်အတွက် <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>အသုံးပြုရာတွင် သတိပြုရမည့် အချက်များ</a>ကို ကြည့်ပါ။ ဝီကီပီးဒီးယားသည် အကျိုးအမြတ် မရယူသော <a href='http://www.wikimediafoundation.org/'>ဝီကီမီဒီယာဖောင်ဒေးရှင်း Inc.</a>၏ မှတ်ပုံတင်ထားသော ကုန်အမှတ်တံဆိပ် ဖြစ်သည်။",

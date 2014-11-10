@@ -10,13 +10,16 @@
 			"Kenrick95",
 			"Mahali syarifuddin",
 			"William Surya Permana",
-			"Ahdan"
+			"Ahdan",
+			"Marwan Mohamad"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kode konfirmasi",
 	"mobile-frontend-account-create-email-placeholder": "Alamat surel/email (dianjurkan untuk diisi)",
 	"mobile-frontend-account-create-submit": "Mendaftar",
 	"mobile-frontend-back-to-top-of-section": "Kembali ke bagian sebelumnya",
+	"mobile-frontend-categories-subheading": "Halaman termasuk kategori berikut",
+	"mobile-frontend-categories-nocat": "Halaman ini tidak masuk kategori apapun, belum",
 	"mobile-frontend-changeslist-ip": "Pengguna anonim",
 	"mobile-frontend-changeslist-nocomment": "tidak ada ringkasan suntingan",
 	"mobile-frontend-clear-search": "Kosongkan",
