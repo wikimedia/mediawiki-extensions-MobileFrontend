@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_ef1f975c",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-10T10:33:49Z",
+      "side": 0,
+      "message": "Moved rendering to the template +1",
+      "revId": "a2a54a909a562ac59504d759efb9fe45c0216794",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2f781f8a",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-10T10:33:49Z",
+      "side": 0,
+      "message": "What was this for?",
+      "revId": "a2a54a909a562ac59504d759efb9fe45c0216794",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
