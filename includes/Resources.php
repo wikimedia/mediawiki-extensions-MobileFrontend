@@ -177,11 +177,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.redlinks',
 			'ext.mantle.views',
 		),
-		'messages' => array(
-			'mobile-frontend-language-article-heading',
-			// Page.js and TalkOverlay.js
-			'mobile-frontend-talk-overlay-header',
-		),
 		'templates' => array(
 			'icon.hogan' => 'templates/icon.hogan',
 			'Section.hogan' => 'templates/Section.hogan',
@@ -238,6 +233,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-anon',
 			'mobile-frontend-editor-undo-unsupported',
+			// edit link
+			'mobile-frontend-editor-edit',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/editor.js',
@@ -523,6 +520,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'Section/content.hogan' => 'templates/modules/talk/talkSection.hogan',
 		),
 		'messages' => array(
+			'mobile-frontend-talk-overlay-header',
 			'mobile-frontend-talk-fullpage',
 			'mobile-frontend-talk-explained',
 			'mobile-frontend-talk-explained-empty',
@@ -726,8 +724,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		// FIXME: Move these messages to a more appropriate place.
 		'messages' => array(
-			// editor.js, Page.js, Section.js
-			'mobile-frontend-editor-edit',
 			// EditorOverlayBase.js, TalkSectionAddOverlay, TalkSectionOverlay, PhotoUploadProgress
 			'mobile-frontend-editor-save',
 		),
