@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_7dca5c72",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-10T22:49:15Z",
+      "side": 1,
+      "message": "This feels wrong.\nThe JavaScript should not have any knowledge of the class name, or the icon being used on this button. It would be better to replace it with a spinner icon..",
+      "revId": "4e39ad4c2132702f5ad95f266197e14ae1e15b1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
