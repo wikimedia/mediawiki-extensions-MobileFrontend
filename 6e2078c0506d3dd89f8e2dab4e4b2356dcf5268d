@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_8fca93a1",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-10T10:55:07Z",
+      "side": 0,
+      "message": "From what I understand back is handled by the Overlay parent view, right?",
+      "revId": "6e2078c0506d3dd89f8e2dab4e4b2356dcf5268d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
