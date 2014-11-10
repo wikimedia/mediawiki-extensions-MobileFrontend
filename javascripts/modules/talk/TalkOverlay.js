@@ -21,6 +21,11 @@
 				footer: mw.template.get( 'mobile.overlays', 'OverlayFooterLink.hogan' )
 			} ),
 			defaults: {
+				/**
+				 * A list of sections to render heading links for. If not set ajax request will be performed.
+				 * @type {Array}
+				 **/
+				headings: undefined,
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
 				headerButtonsListClassName: 'overlay-action',
@@ -37,7 +42,13 @@
 				this.$board = this.$( '.board' );
 				this.$( '.talk-fullpage' ).attr( 'href', mw.util.getUrl( options.title ) )
 					.removeClass( 'hidden' );
-				this._loadContent( options );
+				if ( !options.headings ) {
+					this._loadContent( options );
+				}
+				this._setupAddDiscussionButton( options );
+				if ( this.page ) {
+					this._setupSectionLinks();
+				}
 				this._showHidden( '.initial-header' );
 			},
 
@@ -90,41 +101,41 @@
 			},
 
 			/**
-			 * Adds the content received from _loadContent to the Overlay
+			 * Adds the content received from _loadContent to the Overlay and re-renders it.
 			 * @method
+			 * @param {Object} pageData As returned from PageApi#getPage
+			 * @param {Object} options for the overlay
 			 */
 			_addContent: function ( pageData, options ) {
-				var $add = this.$( 'button.add' ), page, sections, self = this;
-				// API request was successful so show the talk page content
-				page = new Page( pageData );
-				// FIXME: just for tests
+				var page = new Page( pageData ),
+					sections = page.getSubSections();
+
 				this.page = page;
 
-				sections = page.getSubSections();
+				options.explanation = sections.length > 0 ? mw.msg( 'mobile-frontend-talk-explained' ) :
+					mw.msg( 'mobile-frontend-talk-explained-empty' );
+				options.headings = sections;
 
-				// Add content header explanation
-				this.$( '.content-header' ).text(
-					sections.length > 0 ? mw.msg( 'mobile-frontend-talk-explained' ) :
-					mw.msg( 'mobile-frontend-talk-explained-empty' )
-				);
-
-				// Write down talk sections
-				$.each( sections, function ( id, el ) {
-					self.$( '.page-list' ).prepend(
-						'<li>' +
-							'<a data-id="' + el.id + '">' + el.line + '</a>' +
-						'</li>'
-					);
-				} );
-
-				// content is there, hide the spinner
+				// content is there so re-render and hide the spinner
+				this.render( options );
 				this.clearSpinner();
+			},
+			/**
+			 * Shows the add topic button to logged in users.
+			 * Ensures the overlay refreshes when a discussion is added.
+			 * FIXME: Make this a link in the template.
+			 * @method
+			 * @param {Object} options for the overlay
+			 */
+			_setupAddDiscussionButton: function ( options ) {
+				var $add = this.$( 'button.add' ),
+					self = this;
 
 				if ( !user.isAnon() ) {
 					$add.removeClass( 'hidden' );
 					$add.click( function () {
 						var overlay = new TalkSectionAddOverlay( {
-							title: page.title
+							title: options.title
 						} );
 						// Hide discussion list to disable scrolling - bug 70989
 						// FIXME: Kill when OverlayManager is used for TalkSectionAdd
@@ -147,25 +158,33 @@
 				} else {
 					$add.remove();
 				}
+			},
+			/**
+			 * Setups the headings as links that when clicked open an overlay with the talk
+			 * page content.
+			 * FIXME: Make this a link in the template.
+			 * @method
+			 */
+			_setupSectionLinks: function () {
+				var childOverlay, self = this,
+					page = this.page;
 
 				// FIXME: Use Router instead for this
 				this.$( '.page-list a' ).on( 'click', function () {
 					var id = parseFloat( $( this ).data( 'id' ), 10 ),
-						leadSection = {
-							content: page.lead,
-							id: 0,
-							heading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
-						},
-						section = id === 0 ? leadSection : page.getSubSection( id ),
+						section = page.getSubSection( id );
+
+					if ( section ) {
 						childOverlay = new TalkSectionOverlay( {
 							parent: self,
 							title: page.title,
 							section: section
 						} );
-					// Hide discussion list to disable scrolling - bug 70989
-					// FIXME: Kill when OverlayManager is used for TalkSections
-					self.$board.hide();
-					childOverlay.show();
+						// Hide discussion list to disable scrolling - bug 70989
+						// FIXME: Kill when OverlayManager is used for TalkSections
+						self.$board.hide();
+						childOverlay.show();
+					}
 					// When closing this overlay, also close the child section overlay
 					self.on( 'hide', function () {
 						childOverlay.remove();
