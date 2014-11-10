@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_ef8a37e3",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 581,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-10T11:45:17Z",
+      "side": 1,
+      "message": "You\u0027re right. Done.",
+      "parentUuid": "6e936f18_6fe39032",
+      "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_40454346",
         "filename": "javascripts/modules/wikigrok/wikigrokuser.js",
         "patchSetId": 4
@@ -84,6 +102,24 @@
       "writtenOn": "2014-11-08T00:21:45Z",
       "side": 1,
       "message": "You could elaborate here on why this might be different from mw.user ?",
+      "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cf85fbd4",
+        "filename": "javascripts/modules/wikigrok/wikigrokuser.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-10T11:45:17Z",
+      "side": 1,
+      "message": "Done. I added examples of what is appropriate to ask of which object.",
+      "parentUuid": "6e936f18_40454346",
       "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
