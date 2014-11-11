@@ -47,7 +47,7 @@
 		 * Enables comments on the current rendered talk topic
 		 * @method
 		 * @param {String} title of the talk page with `Talk` prefix to post to
-		 * @param {Integer} id of the sub section to open
+		 * @param {Number} id of the sub section to open
 		 */
 		_enableComments: function ( title, id ) {
 			var self = this, $comment = this.$( '.comment' ),
