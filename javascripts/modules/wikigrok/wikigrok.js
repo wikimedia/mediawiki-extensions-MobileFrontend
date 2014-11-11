@@ -133,8 +133,7 @@
 		mw.loader.using( version.module ).done( function () {
 			var WikiGrokDialog = M.require( version.view );
 
-			// See if there are potential occupation claims about this person so we can decide if
-			// it's appropriate to display the WikiGrok interface.
+			// Initialize the dialog and insert it into the page (but don't display yet)
 			function init() {
 				var dialog = new WikiGrokDialog( {
 					itemId: wikidataID,
