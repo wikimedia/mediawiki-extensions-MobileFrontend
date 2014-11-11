@@ -123,40 +123,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.toc',
-		),
-	),
-
-	// Important: This module is loaded on both mobile and desktop skin
-	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mediawiki.language',
-			'mediawiki.jqueryMsg',
-			'mobile.templates',
-			'ext.mantle.modules',
-			'ext.mantle.oo',
-		),
-		'scripts' => array(
-			'javascripts/modes.js',
-			'javascripts/mainmenu.js',
-			'javascripts/modules/lastEdited/time.js',
-			'javascripts/modules/lastEdited/lastEdited.js',
-		),
-		'messages' => array(
-			// lastEdited.js
-			'mobile-frontend-last-modified-with-user-seconds',
-			'mobile-frontend-last-modified-with-user-minutes',
-			'mobile-frontend-last-modified-with-user-hours',
-			'mobile-frontend-last-modified-with-user-days',
-			'mobile-frontend-last-modified-with-user-months',
-			'mobile-frontend-last-modified-with-user-years',
-			'mobile-frontend-last-modified-with-user-just-now',
-		),
-		'position' => 'top',
-	),
-
 	'mobile.ajax' => $wgMFResourceFileModuleBoilerplate + array(
 		'templates' => array(
 			'spinner.hogan' => 'templates/spinner.hogan',
@@ -469,20 +435,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.stable',
-			'mobile.overlays',
-			'mobile.references.beta',
-			'mobile.wikigrok',
-			'mobile.preferredLanguages',
-			'mobile.stable.common',
-			'mobile.loggingSchemas',
-			'mobile.templates',
-		),
-		'position' => 'bottom',
-	),
-
 	'mobile.search' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
@@ -578,12 +530,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// mediaViewer.js
 			'mobile-frontend-media-details',
 			'mobile-frontend-media-license-link',
-		),
-	),
-
-	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.beta',
 		),
 	),
 
@@ -846,28 +792,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.stable' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.user',
-			'mobile.stable.common',
-			'mediawiki.util',
-			'mobile.templates',
-			'mobile.references',
-			'mediawiki.language',
-			'mobile.loggingSchemas',
-			'mobile.watchstar',
-			'mobile.pagelist.scripts',
-		),
-		'scripts' => array(
-			'javascripts/externals/micro.autosize.js',
-			'javascripts/modules/uploads/init.js',
-			'javascripts/modules/mainmenutweaks.js',
-			'javascripts/modules/mediaViewer/init.js',
-			'javascripts/modules/languages/languages.js',
-		),
-	),
-
 	'mobile.languages' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
@@ -1001,6 +925,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	// See https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok
 	'mobile.wikigrok.dialog' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'mobile.overlays',
 			'mobile.alpha',
 		),
 		'templates' => array(
@@ -1224,9 +1149,96 @@ $wgMinervaSpecialPageModules = array(
 	),
 );
 
+// These modules are the gateways to all other modules and will ensure the other modules get loaded
+// on the page.
+$wgMinervaBootstrapModules = array(
+	// Important: This module is loaded on both mobile and desktop skin
+	// This JavaScript is loaded at the top of the page so be cautious what you put in it.
+	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mediawiki.language',
+			'mediawiki.jqueryMsg',
+			'mobile.templates',
+			'ext.mantle.modules',
+			'ext.mantle.oo',
+		),
+		'scripts' => array(
+			'javascripts/modes.js',
+			'javascripts/mainmenu.js',
+			'javascripts/modules/lastEdited/time.js',
+			'javascripts/modules/lastEdited/lastEdited.js',
+		),
+		'messages' => array(
+			// lastEdited.js
+			'mobile-frontend-last-modified-with-user-seconds',
+			'mobile-frontend-last-modified-with-user-minutes',
+			'mobile-frontend-last-modified-with-user-hours',
+			'mobile-frontend-last-modified-with-user-days',
+			'mobile-frontend-last-modified-with-user-months',
+			'mobile-frontend-last-modified-with-user-years',
+			'mobile-frontend-last-modified-with-user-just-now',
+		),
+		'position' => 'top',
+	),
+
+	// By mode.
+	'mobile.stable' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.loggingSchemas',
+			// FIXME: Review the modules that follow. Ensure they are in the correct module definition.
+			'mobile.user',
+			'mobile.stable.common',
+			'mediawiki.util',
+			'mobile.templates',
+			'mediawiki.language',
+			'mobile.pagelist.scripts',
+			// Feature modules that should be loaded in stable.
+			// These modules should only setup routes/events or
+			// load code under certain conditions.
+			'mobile.watchstar',
+			'mobile.site',
+			'mobile.issues',
+			'mobile.search',
+			'mobile.references',
+		),
+		'scripts' => array(
+			'javascripts/externals/micro.autosize.js',
+			'javascripts/modules/uploads/init.js',
+			'javascripts/modules/mainmenutweaks.js',
+			'javascripts/modules/mediaViewer/init.js',
+			'javascripts/modules/languages/languages.js',
+		),
+	),
+	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			// Feature modules that should be loaded in beta should be listed below here.
+			// These modules should only setup routes/events or
+			// load code under certain conditions.
+			'mobile.wikigrok',
+			'mobile.preferredLanguages',
+			'mobile.references.beta',
+		),
+	),
+	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.beta',
+			// Feature modules that should be loaded in alpha should be listed below here.
+		),
+	),
+	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			// Feature modules that should be loaded on tablets should be listed below here.
+			'mobile.toc',
+		),
+	),
+);
+
 $wgResourceModules = array_merge( $wgResourceModules, $wgMobileSpecialPageModules );
 $wgResourceModules = array_merge( $wgResourceModules, $wgMinervaSpecialPageModules );
 $wgResourceModules = array_merge( $wgResourceModules, $wgMinervaStyleModules );
+$wgResourceModules = array_merge( $wgResourceModules, $wgMinervaBootstrapModules );
 
 // Module customizations
 $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
