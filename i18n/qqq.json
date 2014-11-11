@@ -78,7 +78,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "A caption for the button allowing the user to read more about the problems with their edit.\n{{Identical|Read more}}",
 	"mobile-frontend-editor-abusefilter-warning": "A message telling the user that their edit triggered an AbuseFilter warning.",
 	"mobile-frontend-editor-anon": "Title for link to edit a page without logging in.",
-	"mobile-frontend-editor-anoneditwarning": "Warning message, when user want to edit without logging in.\nParameters:\n* $1 - A link to the login page\n* $2 - A link to the signup page",
+	"mobile-frontend-editor-anoneditwarning": "Warning message, when user want to edit without logging in.",
 	"mobile-frontend-editor-blocked": "Toast message that appears when a user is unable to edit a page due to being blocked and clicks edit icon.",
 	"mobile-frontend-editor-cancel": "Caption for cancel button on edit form.\n{{Identical|Cancel}}",
 	"mobile-frontend-editor-cancel-confirm": "Question asking user if they are positive about abandoning unsaved edit.",

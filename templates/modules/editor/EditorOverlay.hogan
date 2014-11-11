@@ -1,5 +1,9 @@
 <div lang="{{contentLang}}" dir="{{contentDir}}">
 	<textarea class="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
 	<div class="preview content"></div>
-	<div class="anonwarning content"></div>
+	{{#loginUrl}}
+	<div class="anonwarning content">
+		{{>anonWarning}}
+	</div>
+	{{/loginUrl}}
 </div>

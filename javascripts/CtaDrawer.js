@@ -32,15 +32,6 @@
 
 			options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
 			options.signupUrl = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
-		},
-
-		// redefine from Drawer to allow to close drawer after user clicks edit-anon link
-		postRender: function () {
-			var self = this;
-			if ( self.$( '.edit-anon' ) ) {
-				self.$( '.edit-anon' ).click( $.proxy( self, 'hide' ) );
-			}
-			Drawer.prototype.postRender.apply( self, arguments );
 		}
 	} );
 

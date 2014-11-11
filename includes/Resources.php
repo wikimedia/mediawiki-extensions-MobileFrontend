@@ -274,6 +274,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 			'mobile.editor.api',
 			'mobile.settings',
+			'mobile.drawers',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorOverlayBase.js',
@@ -284,6 +285,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'switcher.hogan' => 'templates/modules/editor/switcher.hogan',
 			'EditorOverlayBase.hogan' => 'templates/modules/editor/EditorOverlayBase.hogan',
+			'EditorOverlayAnonWarning.hogan' => 'templates/modules/editor/EditorOverlayAnonWarning.hogan',
 		),
 		'messages' => array(
 			// modules/editor/EditorOverlay.js
@@ -316,7 +318,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-visual-editor',
 			'mobile-frontend-editor-source-editor',
 			'mobile-frontend-editor-switch-editor',
-			'mobile-frontend-editor-anoneditwarning',
+			'mobile-frontend-editor-anoneditwarning' => array( 'parse' ),
 		),
 	),
 

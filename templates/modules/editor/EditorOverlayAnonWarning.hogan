@@ -1,0 +1,8 @@
+<div class="alert">
+	<p class="anonMsg alert warning">{{{anonMsg}}}</p>
+	<div class="actions">
+		<a class="mw-ui-button mw-ui-block mw-ui-progressive" href="{{loginUrl}}">{{loginCaption}}</a>
+		<a class="mw-ui-button mw-ui-block" href="{{signupUrl}}">{{signupCaption}}</a>
+		<a class="mw-ui-button mw-ui-block {{anonSelector}}">{{anonLabel}}</a>
+	</div>
+</div>
