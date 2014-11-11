@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_33f085fa",
+        "filename": "javascripts/loggingSchemas/mobileWebWikiGrok.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-11T01:50:21Z",
+      "side": 1,
+      "message": "The user edit count will often be zero, which is considered false in JS, but we want to record it anyway.",
+      "revId": "e0d90bd2946935aaad155cd55cf4a1f20af06cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
