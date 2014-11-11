@@ -52,20 +52,21 @@
 				return $( this ).children().length === 0;
 			} );
 
-			$( '#mw-mf-main-menu-button' ).on( 'click', function () {
-				log( 'hamburger' );
-			} );
+		$( '#mw-mf-main-menu-button' ).on( 'click', function () {
+			log( 'hamburger' );
+		} );
 
-			hijackLink( '#mw-mf-page-left .icon-home', 'hamburger-home' );
-			hijackLink( '#mw-mf-page-left .icon-random', 'hamburger-random' );
-			hijackLink( '#mw-mf-page-left .icon-nearby', 'hamburger-nearby' );
-			hijackLink( '#mw-mf-page-left .icon-watchlist', 'hamburger-watchlist' );
-			hijackLink( '#mw-mf-page-left .icon-settings', 'hamburger-settings' );
-			hijackLink( '#mw-mf-page-left .icon-uploads', 'hamburger-uploads' );
-			hijackLink( '#mw-mf-page-left .icon-profile', 'hamburger-profile' );
-			hijackLink( '#mw-mf-page-left .icon-anon', 'hamburger-login' );
-			hijackLink( '#mw-mf-page-left .icon-secondary-logout', 'hamburger-logout' );
-			hijackLink( $( '#mw-mf-last-modified a span' ).parent(), 'lastmodified-history' );
-			hijackLink( $profileLink, 'lastmodified-profile' );
+		hijackLink( '#mw-mf-page-left .icon-home', 'hamburger-home' );
+		hijackLink( '#mw-mf-page-left .icon-random', 'hamburger-random' );
+		hijackLink( '#mw-mf-page-left .icon-nearby', 'hamburger-nearby' );
+		hijackLink( '#mw-mf-page-left .icon-watchlist', 'hamburger-watchlist' );
+		hijackLink( '#mw-mf-page-left .icon-settings', 'hamburger-settings' );
+		hijackLink( '#mw-mf-page-left .icon-uploads', 'hamburger-uploads' );
+		hijackLink( '#mw-mf-page-left .icon-profile', 'hamburger-profile' );
+		hijackLink( '#mw-mf-page-left .icon-anon', 'hamburger-login' );
+		hijackLink( '#mw-mf-page-left .icon-secondary-logout', 'hamburger-logout' );
+		hijackLink( $( '#mw-mf-last-modified a span' ).parent(),
+			'lastmodified-history' );
+		hijackLink( $profileLink, 'lastmodified-profile' );
 	} );
 } )( mw.mobileFrontend, jQuery );
