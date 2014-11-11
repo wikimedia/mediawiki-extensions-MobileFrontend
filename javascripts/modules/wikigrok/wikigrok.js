@@ -102,8 +102,6 @@
 		if ( idOverride ) {
 			mw.config.set( 'wgWikibaseItemId', idOverride[1] );
 			wikidataID = idOverride[1];
-			// Reset opt out
-			localStorage.removeItem( 'mfHideWikiGrok' );
 		}
 	}
 
@@ -122,10 +120,7 @@
 		// Wikibase is active and this page has an item ID
 		wikidataID &&
 		// We're in Main namespace,
-		mw.config.get( 'wgNamespaceNumber' ) === 0 &&
-		// The user has not opted out of WikiGrok previously
-		M.supportsLocalStorage &&
-		!localStorage.getItem( 'mfHideWikiGrok' )
+		mw.config.get( 'wgNamespaceNumber' ) === 0
 	) {
 
 		// Load the required module and view based on the version for the user
