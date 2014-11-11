@@ -16,6 +16,41 @@
       "revId": "e1a49e07bf378f31df4b79f4a421a1e45fc9296a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_aec8a85a",
+        "filename": "javascripts/modules/wikigrok/WikiGrokAbTest.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-11T10:13:36Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6e936f18_3062c0a9",
+      "revId": "e1a49e07bf378f31df4b79f4a421a1e45fc9296a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cec5f441",
+        "filename": "javascripts/modules/wikigrok/WikiGrokAbTest.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-11T10:13:36Z",
+      "side": 1,
+      "message": "I documented the error here as well.",
+      "revId": "e1a49e07bf378f31df4b79f4a421a1e45fc9296a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
