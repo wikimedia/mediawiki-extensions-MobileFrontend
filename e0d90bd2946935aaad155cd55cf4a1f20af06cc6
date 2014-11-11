@@ -34,6 +34,24 @@
       "revId": "e0d90bd2946935aaad155cd55cf4a1f20af06cc6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_734fed39",
+        "filename": "javascripts/loggingSchemas/mobileWebWikiGrok.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-11T01:59:09Z",
+      "side": 1,
+      "message": "I think !isNaN(null) returns true",
+      "parentUuid": "6e936f18_f3cc5dc2",
+      "revId": "e0d90bd2946935aaad155cd55cf4a1f20af06cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
