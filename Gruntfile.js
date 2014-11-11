@@ -18,6 +18,7 @@ module.exports = function ( grunt ) {
 	grunt.initConfig( {
 		URL: process.env.URL || 'http://127.0.0.1:8080/w/index.php/',
 		QUNIT_FILTER: ( process.env.QUNIT_FILTER && '&filter=' + process.env.QUNIT_FILTER ) || '',
+		QUNIT_MODULE: ( process.env.QUNIT_MODULE && '&module=' + process.env.QUNIT_MODULE ) || '',
 		files: {
 			js: 'javascripts/**/*.js',
 			jsTests: 'tests/qunit/**/*.js'
@@ -42,7 +43,7 @@ module.exports = function ( grunt ) {
 		qunit: {
 			all: {
 				options: {
-					urls: [ '<%= URL %>Special:JavaScriptTest/qunit?useformat=mobile<%= QUNIT_FILTER %>' ]
+					urls: [ '<%= URL %>Special:JavaScriptTest/qunit?useformat=mobile<%= QUNIT_FILTER %><%= QUNIT_MODULE %>' ]
 				}
 			}
 		},
