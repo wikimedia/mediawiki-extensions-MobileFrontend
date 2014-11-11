@@ -268,7 +268,6 @@
 	"mobile-frontend-settings-alpha": "Experimenteller Modus",
 	"mobile-frontend-settings-alpha-description": "Steige in ein gefährliches und unentdecktes mobiles Territorium ein. Bekomme mehr experimentelle Funktionen, jedoch mit erhöhten Fehlerrisiken.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Passe dein mobiles Endgerät mit diesen Einstellungen an deine Bedürfnisse an.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} steht in {{PLURAL:$1|einer Sprache|$1 Sprachen}} zur Verfügung. Alle verfügbaren Sprachversionen sind unten aufgeführt.",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Sprachen",
 	"mobile-frontend-sign-in-error-heading": "Hoppla!",

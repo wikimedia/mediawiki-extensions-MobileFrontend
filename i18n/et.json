@@ -187,7 +187,6 @@
 	"mobile-frontend-settings-alpha": "Katserežiim",
 	"mobile-frontend-settings-alpha-description": "Sisene ohtlikule ja läbiuurimata mobiilimaale. Leiad sealt veelgi katsefunktsioone ja võimalik, et ka rohkem vigu.",
 	"mobile-frontend-settings-beta": "Beeta",
-	"mobile-frontend-settings-description": "Vali oma mobiiliseadme jaoks sobivad mobiilisaiti puudutavad eelistused.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} on saadaval {{PLURAL:$1|ühes keeles|$1 keeles}}. Kõik saadaolevad versioonid on loetletud allpool.",
 	"mobile-frontend-settings-site-header": "{{GRAMMAR:genitive|{{SITENAME}}}} keeled",
 	"mobile-frontend-sign-in-error-heading": "Ups!",

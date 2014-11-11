@@ -185,7 +185,6 @@
 	"mobile-frontend-settings-alpha": "Mode eksperimental",
 	"mobile-frontend-settings-alpha-description": "Masuk ke wilayah seluler yang berbahaya dan belum dieksplorasi. Dapatkan fitur yang lebih eksperimental, tapi dengan lebih banyak kemungkinan kesalahan.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Menyesuaikan pengalaman Anda di piranti mobil dengan pengaturan spesifik untuk situs mobil.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} tersedia dalam $1 {{PLURAL:$1|bahasa|bahasa}}. Semua versi yang tersedia disebutkan di bawah",
 	"mobile-frontend-settings-site-header": "Bahasa {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Ups!",

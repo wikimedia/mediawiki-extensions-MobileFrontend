@@ -258,7 +258,6 @@
 	"mobile-frontend-settings-alpha": "実験モード",
 	"mobile-frontend-settings-alpha-description": "携帯機器向けの危険で未探検の領域に入ります。よりいっそう実験的な機能が手に入りますが、バグの危険性もより大きくなります。",
 	"mobile-frontend-settings-beta": "ベータ",
-	"mobile-frontend-settings-description": "これらの携帯機器専用の設定によりあなたの携帯機器上での体験をカスタマイズします。",
 	"mobile-frontend-settings-site-description": "{{SITENAME}}は $1 {{PLURAL:$1|言語}}で利用できます。利用できるすべての言語版を以下に列挙します",
 	"mobile-frontend-settings-site-header": "{{SITENAME}}の言語",
 	"mobile-frontend-sign-in-error-heading": "エラー",

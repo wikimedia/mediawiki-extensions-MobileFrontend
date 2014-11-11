@@ -257,7 +257,6 @@
 	"mobile-frontend-settings-alpha": "Експериментален режим",
 	"mobile-frontend-settings-alpha-description": "Со ова влегувате во опасна и неистражена мобилна територија. Добивате уште повеќе експериментални функции, но со поголема опасност од бубачки и грешки.",
 	"mobile-frontend-settings-beta": "Бета",
-	"mobile-frontend-settings-description": "Прилагодете си ја околината на мобилниот уред со овие наменски поставки.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} се нуди на $1 {{PLURAL:$1|јазик|јазици}}. Сите расположиви верзии се наведени подолу",
 	"mobile-frontend-settings-site-header": "Јазици на {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Упс!",

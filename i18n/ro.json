@@ -260,7 +260,6 @@
 	"mobile-frontend-settings-alpha": "Mod experimental",
 	"mobile-frontend-settings-alpha-description": "Intrați pe teritoriul periculos și neexplorat al experienței mobile. Beneficiați de și mai multe caracteristici experimentale, însă cu un risc mai mare de erori.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Personalizați-vă experiența pe dispozitivele mobile cu aceste setări specifice site-ului mobil.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} este un proiect disponibil {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}. Toate versiunile disponibile sunt enumerate mai jos",
 	"mobile-frontend-settings-site-header": "Limbile pentru {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Hopa!",

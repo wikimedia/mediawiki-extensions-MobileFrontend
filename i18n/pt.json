@@ -263,7 +263,6 @@
 	"mobile-frontend-settings-alpha": "Modo experimental",
 	"mobile-frontend-settings-alpha-description": "Entre no perigoso e inexplorado território móvel. Obtenha recursos ainda mais experimentais, mas com mais perigo de ''bugs''.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Personalize o comportamento do seu dispositivo móvel com estas configurações específicas para o sítio móvel.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} está disponível em $1 {{PLURAL:$1|idioma|idiomas}}. Abaixo, estão listadas todas as versões disponíveis",
 	"mobile-frontend-settings-site-header": "Idiomas de {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Ops!",

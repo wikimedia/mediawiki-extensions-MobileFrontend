@@ -231,7 +231,6 @@
 	"mobile-frontend-settings-alpha": "Mode experimental",
 	"mobile-frontend-settings-alpha-description": "Entreu en territori mòbil perillós i inexplorat. Obtingueu funcionalitats encara més experimentals però amb un major risc d'errors.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Personalitzeu la vostra configuració al dispositiu mòbil amb aquests paràmetres específics.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} està disponible en $1 {{PLURAL:$1|idioma|idiomes}}. Totes les versions disponibles es llisten a continuació",
 	"mobile-frontend-settings-site-header": "Llengües de {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Renoi!",

@@ -286,7 +286,6 @@
 	"mobile-frontend-settings-alpha": "实验版",
 	"mobile-frontend-settings-alpha-description": "使用实验中的移动版。可以获得更多实验特性，但遇到漏洞的风险更高。",
 	"mobile-frontend-settings-beta": "测试",
-	"mobile-frontend-settings-description": "用这些移动版网站设置自定义你的移动设备体验。<br />[[Special:Preferences|桌面版设置]]",
 	"mobile-frontend-settings-site-description": "{{SITENAME}}有$1种语言版本。下面列出了所有语言版本",
 	"mobile-frontend-settings-site-header": "{{SITENAME}}语言",
 	"mobile-frontend-sign-in-error-heading": "糟糕",

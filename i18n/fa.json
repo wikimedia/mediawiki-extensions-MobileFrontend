@@ -277,7 +277,6 @@
 	"mobile-frontend-settings-alpha": "حالت آزمایشی",
 	"mobile-frontend-settings-alpha-description": "واردشدن به عرصهٔ خطرناک و ناشناختهٔ موبایل. ویژگی‌های آزمایشی بسیاری را در اختیار می‌گذارد ولی مشکلات و خطرات بیشتری نیز در کمین خواهند بود.",
 	"mobile-frontend-settings-beta": "بتا",
-	"mobile-frontend-settings-description": "تجربهٔ مرور این وب‌گاه بر روی تلفن همراه را با تنظیم کردن وب‌گاه تغییر دهید.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} در $1 {{PLURAL:$1|زبان|زبان}} موجود است. تمام نسخه‌ها در زیر فهرست شده‌اند.",
 	"mobile-frontend-settings-site-header": "زبان‌های {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "اوخ!",

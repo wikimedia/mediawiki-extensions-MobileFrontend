@@ -245,7 +245,6 @@
 	"mobile-frontend-settings-alpha": "Tryb eksperymentalny",
 	"mobile-frontend-settings-alpha-description": "Wkrocz do niebezpiecznego i niezbadanego terytorium mobilnego. Korzystaj z jeszcze bardziej eksperymentalnych funkcji, ale z wyższym ryzykiem wystąpienia błędów.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Dostosuj ustawienia dla urządzeń mobilnych.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} działa w $1 {{PLURAL:$1|języku|językach}}. Wszystkie dostępne wersje są wymienione poniżej.",
 	"mobile-frontend-settings-site-header": "Języki {{GRAMMAR:D.lp|{{SITENAME}}}}",
 	"mobile-frontend-sign-in-error-heading": "Ups",

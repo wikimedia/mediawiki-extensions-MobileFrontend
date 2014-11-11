@@ -260,7 +260,6 @@
 	"mobile-frontend-settings-alpha": "Chế độ thử nghiệm",
 	"mobile-frontend-settings-alpha-description": "Đi vào lãnh thổ nguy hiểm chưa quen. Chịu thêm tính năng di động thử nghiệm có thể có nhiều lỗi hơn.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Tùy biến giao diện trên thiết bị di động của bạn với các tùy chọn di động này.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} có sẵn trong $1 ngôn ngữ. Tất cả các phiên bản có sẵn ở dưới:",
 	"mobile-frontend-settings-site-header": "Ngôn ngữ {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Ôi",
