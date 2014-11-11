@@ -28,6 +28,9 @@
 				// Set suggestions to go to the second screen.
 				suggestions: suggestions
 			} );
+			// don't run eventLogging
+			this.stub( WikiGrokDialog.prototype, 'log' );
+			this.stub( WikiGrokDialog.prototype, 'logError' );
 		}
 	} );
 
