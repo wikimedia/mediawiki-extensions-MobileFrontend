@@ -12,6 +12,6 @@
 		}
 	} );
 
-	M.define( 'widgets/progress-bar', ProgressBar );
+	M.define( 'modules/uploads/ProgressBar', ProgressBar );
 
 }( mw.mobileFrontend ) );

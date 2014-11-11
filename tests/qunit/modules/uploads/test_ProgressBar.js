@@ -1,6 +1,6 @@
 ( function( M ) {
 
-	var ProgressBar = M.require( 'widgets/progress-bar' );
+	var ProgressBar = M.require( 'modules/uploads/ProgressBar' );
 
 	QUnit.module( 'MobileFrontend ProgressBar' );
 

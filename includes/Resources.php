@@ -637,7 +637,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'Button.hogan' => 'templates/modules/uploads/PhotoUploaderButton.hogan',
 		),
 		'scripts' => array(
-			'javascripts/widgets/progress-bar.js',
+			'javascripts/modules/uploads/ProgressBar.js',
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
 			'javascripts/modules/uploads/LeadPhotoUploaderButton.js',
 			// FIXME: this seems to be uploads only, code should be moved to uploads folder.

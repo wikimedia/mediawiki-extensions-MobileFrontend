@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
-		ProgressBar = M.require( 'widgets/progress-bar' ),
+		ProgressBar = M.require( 'modules/uploads/ProgressBar' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		PhotoUploadProgress;
 
