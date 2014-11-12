@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_e67570f5",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T18:25:01Z",
+      "side": 1,
+      "message": "The message contains HTML which will be plain in Template. But if we want to reuse warning or alert class, maybe we can handle this without HTML in message :)",
+      "parentUuid": "6e936f18_46aa246a",
+      "revId": "23c1df6d7ce214a3b67ff70dab99a4bc1117be15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_06c89c58",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_8666ec4c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T18:25:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_06c89c58",
+      "revId": "23c1df6d7ce214a3b67ff70dab99a4bc1117be15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_868d8c30",
         "filename": "less/modules/editor/editor.less",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2014-11-12T18:00:36Z",
       "side": 1,
       "message": "Can\u0027t we just make the .alert.warning class more generic (in ui.less)? (at moment it doesn\u0027t look like a warning)",
+      "revId": "23c1df6d7ce214a3b67ff70dab99a4bc1117be15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c64f14c0",
+        "filename": "less/modules/editor/editor.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T18:25:01Z",
+      "side": 1,
+      "message": "Let me try it :)",
+      "parentUuid": "6e936f18_868d8c30",
       "revId": "23c1df6d7ce214a3b67ff70dab99a4bc1117be15",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
