@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_f00d253a",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-12T21:17:28Z",
+      "side": 1,
+      "message": "Jenkins doesn\u0027t like the long line. Just add a linebreak.",
+      "revId": "46e26ff63426e837de96d17c520c9a2b79efc4e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
