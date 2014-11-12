@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_932dcb8e",
+        "filename": "less/icons.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T22:09:57Z",
+      "side": 1,
+      "message": "Watch star is now huge in stable :) Although it\u0027s slightly bigger in alpha, this is fine as this stuff is all a work in progress but we shouldn\u0027t impact stable.\n\nNo need to change this file. Leave it as if - this code is on the way out! :)",
+      "revId": "1a27a349a3c647edf868a9d03030f2b1bc36fd44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
