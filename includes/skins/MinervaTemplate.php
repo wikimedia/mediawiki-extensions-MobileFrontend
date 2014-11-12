@@ -206,7 +206,7 @@ class MinervaTemplate extends BaseTemplate {
 
 		foreach( $this->getSecondaryActions() as $el ) {
 			echo Html::element( 'a', array(
-				'class' => 'mw-ui-button mw-ui-progressive button ' . $el['class'],
+				'class' => 'mw-ui-button button ' . $el['class'],
 				'href' => $el['url']
 			), $el['label'] );
 		}
