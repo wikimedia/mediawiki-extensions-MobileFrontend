@@ -1,7 +1,17 @@
+/**
+ * Utility library for tracking clicks on certain elements
+ * @class MobileWebClickTracking
+ */
 ( function ( M, $ ) {
-	var name, href,
-		s = M.require( 'settings' );
+	var s = M.require( 'settings' );
 
+	/**
+	 * Track an event and record it
+	 *
+	 * @method
+	 * @param {string} name of click tracking event to log
+	 * @param {string} [destination] of the link that has been clicked if applicable.
+	 */
 	function log( name, destination ) {
 		var
 			user = M.require( 'user' ),
@@ -19,56 +29,55 @@
 		return M.log( 'MobileWebClickTracking', data );
 	}
 
+	/*
+	 * Using localStorage track an event but delay recording it on the
+	 * server until the next page load
+	 *
+	 * @method
+	 * @param {string} name of click tracking event to log
+	 * @param {string} href the link that has been clicked.
+	 */
 	function futureLog( name, href ) {
 		s.save( 'MobileWebClickTracking-name', name );
 		s.save( 'MobileWebClickTracking-href', href );
 	}
 
+	/**
+	 * Record a click to a link in the schema
+	 *
+	 * @method
+	 * @param {string} selector of element
+	 * @param {string} name unique to this click tracking event that will allow you to distinguish
+	 *  it from others.
+	 */
 	function hijackLink( selector, name ) {
 		$( selector ).on( 'click', function () {
 			futureLog( name, $( this ).attr( 'href' ) );
 		} );
 	}
 
-	// Deal with events requested on the preview page
-	name = s.get( 'MobileWebClickTracking-name' );
-	href = s.get( 'MobileWebClickTracking-href' );
-	// Make sure they do not log a second time...
-	if ( name && href ) {
-		s.save( 'MobileWebClickTracking-name', '' );
-		s.save( 'MobileWebClickTracking-href', '' );
-		// Since MobileWebEditing schema declares the dependencies to
-		// EventLogging and the schema we can be confident this will always log.
-		log( name, href );
+	/**
+	 * Log a past click tracking event to the server.
+	 *
+	 * @method
+	 */
+	function logPastEvent() {
+		var name = s.get( 'MobileWebClickTracking-name' ),
+			href = s.get( 'MobileWebClickTracking-href' );
+
+		// Make sure they do not log a second time...
+		if ( name && href ) {
+			s.remove( 'MobileWebClickTracking-name' );
+			s.remove( 'MobileWebClickTracking-href' );
+			// Since MobileWebEditing schema declares the dependencies to
+			// EventLogging and the schema we can be confident this will always log.
+			log( name, href );
+		}
 	}
 
 	M.define( 'loggingSchemas/MobileWebClickTracking', {
 		log: log,
+		logPastEvent: logPastEvent,
 		hijackLink: hijackLink
-	} );
-
-	// Add EventLogging to hamburger menu
-	$( function () {
-		var $profileLink = $( '#mw-mf-last-modified a' )
-			.filter( function () {
-				return $( this ).children().length === 0;
-			} );
-
-		$( '#mw-mf-main-menu-button' ).on( 'click', function () {
-			log( 'hamburger' );
-		} );
-
-		hijackLink( '#mw-mf-page-left .icon-home', 'hamburger-home' );
-		hijackLink( '#mw-mf-page-left .icon-random', 'hamburger-random' );
-		hijackLink( '#mw-mf-page-left .icon-nearby', 'hamburger-nearby' );
-		hijackLink( '#mw-mf-page-left .icon-watchlist', 'hamburger-watchlist' );
-		hijackLink( '#mw-mf-page-left .icon-settings', 'hamburger-settings' );
-		hijackLink( '#mw-mf-page-left .icon-uploads', 'hamburger-uploads' );
-		hijackLink( '#mw-mf-page-left .icon-profile', 'hamburger-profile' );
-		hijackLink( '#mw-mf-page-left .icon-anon', 'hamburger-login' );
-		hijackLink( '#mw-mf-page-left .icon-secondary-logout', 'hamburger-logout' );
-		hijackLink( $( '#mw-mf-last-modified a span' ).parent(),
-			'lastmodified-history' );
-		hijackLink( $profileLink, 'lastmodified-profile' );
 	} );
 } )( mw.mobileFrontend, jQuery );

@@ -910,6 +910,7 @@ class MobileFrontendHooks {
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
 			'javascripts/loggingSchemas/mobileWebWikiGrok.js',
 			'javascripts/loggingSchemas/mobileWebWikiGrokError.js',
+			'javascripts/loggingSchemas/init.js',
 		);
 
 		$wgResourceModules['mobile.loggingSchemas'] = $wgMFResourceFileModuleBoilerplate + array(
