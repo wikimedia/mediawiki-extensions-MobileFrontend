@@ -553,10 +553,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.wikigrok.abTest' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.user',
+			'jquery.cookie',
+		),
+		'scripts' => array(
+			'javascripts/modules/wikigrok/wikigrokuser.js',
+			'javascripts/modules/wikigrok/WikiGrokAbTest.js',
+		),
+	),
+
 	'mobile.wikigrok' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'mobile.user',
+			'mobile.wikigrok.abTest',
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
