@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_13469b80",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 660,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-11-12T23:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_b3748731",
+      "revId": "8aa4c2ca6393e034c148e2843cf3e85629a00939",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_1393fb52",
         "filename": "includes/Resources.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-11-12T22:58:50Z",
       "side": 1,
       "message": "Add \u0027groups\u0027 \u003d\u003e \u0027other\u0027\nand use getContextSpecificModules",
+      "revId": "8aa4c2ca6393e034c148e2843cf3e85629a00939",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_334b9789",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-11-12T23:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_1393fb52",
       "revId": "8aa4c2ca6393e034c148e2843cf3e85629a00939",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
