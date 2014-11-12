@@ -14,19 +14,19 @@
 	height: @watchThisArticleSize;
 }
 
+// FIXME: This shouldn't be needed. (but the icon looks smaller compared to beta, even though the SVG width is 24px)
+.alpha {
+	.page-list .watch-this-article {
+		font-size: 1.1em;
+	}
+}
+
 .animations {
-	.mw-ui-icon-watch {
-		.transition-transform( .5s );
-	}
-
-	.mw-ui-icon-watched {
-		.transform( rotate(72deg) );
-	}
-
-	// FIXME: Remove when mw-ui-icon in stable
+	.mw-ui-icon.watch-this-article,
 	.icon.watch-this-article {
 		.transition-transform( .5s );
 
+		&.mw-ui-icon-watched,
 		&.icon-watched {
 			.transform( rotate(72deg) );
 		}
