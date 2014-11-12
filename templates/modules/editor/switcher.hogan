@@ -2,7 +2,7 @@
 	{{{switcherButton}}}
 	<div class="switcher-drop-down">
 		<div class="mw-ui-button visual-editor {{#isVisualEditor}}selected{{/isVisualEditor}}">
-		{{{veButton}}}{{visualEditorMsg}}</div><!--
-		--><div class="mw-ui-button source-editor {{^isVisualEditor}}selected{{/isVisualEditor}}">{{{sourceButton}}}</span>{{sourceEditorMsg}}</div>
+		{{{veButton}}}</div><!--
+		--><div class="mw-ui-button source-editor {{^isVisualEditor}}selected{{/isVisualEditor}}">{{{sourceButton}}}</span></div>
 	</div>
 </div>
