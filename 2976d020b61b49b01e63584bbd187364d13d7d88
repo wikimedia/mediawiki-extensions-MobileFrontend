@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_506979f4",
+        "filename": "templates/modules/editor/EditorOverlayAnonWarning.hogan",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:57:59Z",
+      "side": 1,
+      "message": "anchor would need styling (like in CtaDrawer).",
+      "revId": "2976d020b61b49b01e63584bbd187364d13d7d88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
