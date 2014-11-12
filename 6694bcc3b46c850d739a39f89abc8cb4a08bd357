@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_5072d9ac",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T21:28:32Z",
+      "side": 1,
+      "message": "Whilst here can you add some documentation explaining what this function does?",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_b0d1ddfd",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T21:28:32Z",
+      "side": 1,
+      "message": "This should use defaults... don\u0027t reinvent the wheel.\n\nAlso some of these messages are in mobile.drawers module no?",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_905b8126",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T21:28:32Z",
+      "side": 1,
+      "message": "oops.. run `make jscs` !",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_30562d0a",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T21:28:32Z",
+      "side": 1,
+      "message": "Put this in the template itself :)\nThis line shouldn\u0027t exist!\nNo use of .html or .text or .addClass or .removeClass in Views :)",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_b058fd29",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T21:28:32Z",
+      "side": 1,
+      "message": "oops.. run `make jscs` !",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_1068d1b6",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T21:28:32Z",
+      "side": 1,
+      "message": "Can you add some documentation?\nAlso whilst here it would be good to make this camel case\n_showEditorAfterWarning",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_90baa11d",
+        "filename": "templates/modules/editor/EditorOverlayAnonWarning.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T21:28:32Z",
+      "side": 1,
+      "message": "mw-ui-neutral is not a class :)\nAlso to be consistent with CTA and login page this should be quiet and probably bellow edit anonymously since it is the most complicated step! :)",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_b08ebd7a",
+        "filename": "templates/modules/editor/EditorOverlayAnonWarning.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T21:28:32Z",
+      "side": 1,
+      "message": "No mw-ui-neutral :)",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
