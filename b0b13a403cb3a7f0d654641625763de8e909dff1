@@ -211,6 +211,24 @@
       "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_f3f20f96",
+        "filename": "javascripts/modules/wikigrok/wikigrokuser.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-12T23:04:56Z",
+      "side": 1,
+      "message": "My thinking was that since $.cookie was already present on the page, why load another module?",
+      "parentUuid": "6e936f18_cfadfb99",
+      "revId": "b0b13a403cb3a7f0d654641625763de8e909dff1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
