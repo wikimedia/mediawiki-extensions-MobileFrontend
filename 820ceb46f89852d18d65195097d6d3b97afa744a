@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_13853bd3",
+        "filename": "includes/Resources.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-12T23:15:58Z",
+      "side": 1,
+      "message": "\u0027mobile.toast\u0027 is missing",
+      "revId": "820ceb46f89852d18d65195097d6d3b97afa744a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
