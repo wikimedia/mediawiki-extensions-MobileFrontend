@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_b3d1e7fd",
+        "filename": "javascripts/modules/wikigrok/WikiGrokAbTest.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T23:03:28Z",
+      "side": 1,
+      "message": "Mm.. M.isBetaGroupMember() returns true in both these cases. Might be easier to just use that here?\n\nPS. On that subject is there any reason why you would need to pass mode as a parameter?",
+      "revId": "16e0ef90f9abc1d484067cdbed63f7ac20c9e2f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
