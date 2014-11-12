@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_264278b1",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:16:59Z",
+      "side": 0,
+      "message": "Use wikitext here. e.g. \u0027\u0027Warning\u0027\u0027\np.s. also \u003cb\u003e tag is not a valid HTML5 so if you did this you should have used \u003cstrong\u003e ;-)\n\nParsedMessageModule in Mantle is likely to be of interest.",
+      "revId": "d3f6ecb8b920c817c642a19b4ab0620a540ce816",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
