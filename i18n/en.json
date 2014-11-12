@@ -350,7 +350,7 @@
 	"apihelp-mobileview-param-onlyrequestedsections": "Return only requested sections even with $1prop=sections.",
 	"apihelp-mobileview-param-offset": "Pretend all text result is one string, and return the substring starting at this point.",
 	"apihelp-mobileview-param-maxlen": "Pretend all text result is one string, and limit result to this length.",
-	"apihelp-mobileview-param-thumbnail": "'Maximum thumbnail dimensions.",
+	"apihelp-mobileview-param-thumbnail": "Maximum thumbnail dimensions.",
 	"apihelp-mobileview-example-1": "Get information about section 0 of [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Get information about section 0 and sections containing references of [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Get information about sections 1 and later and sections containing references of [[Candlemass]]",
