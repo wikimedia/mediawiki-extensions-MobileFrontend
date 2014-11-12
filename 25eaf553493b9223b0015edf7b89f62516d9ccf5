@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_06641c10",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:32:18Z",
+      "side": 1,
+      "message": "I\u0027m not sure commented out code is ever useful. Code archeologists will uncover this 10 years from now and it probably won\u0027t work anymore :)\n\nWe have a debug mode (debug\u003dtrue) if you think this is useful it would be better to expose this when debug\u003dtrue",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_86502c38",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:32:18Z",
+      "side": 1,
+      "message": "use trigger",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_66b5e077",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:32:18Z",
+      "side": 1,
+      "message": "use trigger.\n\nAlso is there any reason you can\u0027t just stub this in setup?",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_267a78b8",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:32:18Z",
+      "side": 1,
+      "message": "Can you move above next to getToQuestion\n\nAlso is there any reason you can\u0027t just stub this in setup?",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c68cf4de",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:32:18Z",
+      "side": 1,
+      "message": "use trigger( \u0027click\u0027 )",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2684b8b3",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:32:18Z",
+      "side": 1,
+      "message": "use trigger( \u0027click\u0027 )",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_86934c03",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:32:18Z",
+      "side": 1,
+      "message": "Is this function really necessary since it\u0027s a one liner? and introduces more lines in its invocation? (proxy, call this etc)",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_4699c420",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-12T18:32:18Z",
+      "side": 1,
+      "message": "Would is(\u0027:visible\u0027) not be better here?",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
