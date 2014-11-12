@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_50c5f90b",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_5072d9ac",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_b0d1ddfd",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2014-11-12T21:28:32Z",
       "side": 1,
       "message": "This should use defaults... don\u0027t reinvent the wheel.\n\nAlso some of these messages are in mobile.drawers module no?",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_70ca751f",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_b0d1ddfd",
       "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_10cbf121",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_905b8126",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_30562d0a",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 7
@@ -64,6 +118,24 @@
       "writtenOn": "2014-11-12T21:28:32Z",
       "side": 1,
       "message": "Put this in the template itself :)\nThis line shouldn\u0027t exist!\nNo use of .html or .text or .addClass or .removeClass in Views :)",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_30d06dcb",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_30562d0a",
       "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_d0d829f6",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_b058fd29",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_1068d1b6",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 7
@@ -98,6 +188,24 @@
       "writtenOn": "2014-11-12T21:28:32Z",
       "side": 1,
       "message": "Can you add some documentation?\nAlso whilst here it would be good to make this camel case\n_showEditorAfterWarning",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_f0d525bb",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_1068d1b6",
       "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_d0ffc92f",
+        "filename": "templates/modules/editor/EditorOverlayAnonWarning.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:54:17Z",
+      "side": 1,
+      "message": "Hmm, really quiet? We had the discussion, that it is not clear, that quiet is a link/button to click, when used on mobile device (no hover).\n\nI must say, i\u0027m not really happy with \"just a link\" below the button (in CtaDrawer, too) :(",
+      "parentUuid": "6e936f18_90baa11d",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_b08ebd7a",
         "filename": "templates/modules/editor/EditorOverlayAnonWarning.hogan",
         "patchSetId": 7
@@ -132,6 +258,24 @@
       "writtenOn": "2014-11-12T21:28:32Z",
       "side": 1,
       "message": "No mw-ui-neutral :)",
+      "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_f0fc453d",
+        "filename": "templates/modules/editor/EditorOverlayAnonWarning.hogan",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T21:54:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_b08ebd7a",
       "revId": "6694bcc3b46c850d739a39f89abc8cb4a08bd357",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
