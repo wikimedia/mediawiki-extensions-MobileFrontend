@@ -77,18 +77,11 @@
 				border-radius: 0;
 				text-align: left;
 
-				&.mw-ui-icon {
-					padding-right: 4em;
-				}
-
 				// FIXME: Remove when mw-ui-icon in stable
 				.icon {
-					display: inline-block;
-					width: 3.35em;
-					height: 3.35em;
+					padding-left: 3.35em;
 					vertical-align: middle;
 				}
-
 
 				&.selected {
 					background: @selectedBackgroundColor;
@@ -100,8 +93,18 @@
 				}
 			}
 
-			> div:last-child {
-				border-right: none;
+			> div {
+				line-height: 3.35em;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+
+			// FIXME: Move to rule (> div) when mw-ui-icon in stable
+			.mw-ui-icon {
+				height: 3.35em;
+				padding-right: 3.35em;
 			}
 		}
 	}

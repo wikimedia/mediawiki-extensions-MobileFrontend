@@ -16,8 +16,14 @@
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			switcherButton: new Icon( { tagName: 'button',
 				name: 'edit-switch', additionalClassNames: 'editor-switcher' } ).toHtmlString(),
-			sourceButton: new Icon( { name: 'edit-source', additionalClassNames: 'icon-32px' } ).toHtmlString(),
-			veButton: new Icon( { name: 'edit-ve', additionalClassNames: 'icon-32px' } ).toHtmlString(),
+			sourceButton: new Icon( { name: 'edit-source', additionalClassNames: 'icon-32px editor-choice',
+				hasText: true,
+				label: mw.msg( 'mobile-frontend-editor-source-editor' )
+			} ).toHtmlString(),
+			veButton: new Icon( { name: 'edit-ve', additionalClassNames: 'icon-32px editor-choice',
+				hasText: true,
+				label: mw.msg( 'mobile-frontend-editor-visual-editor' )
+			} ).toHtmlString(),
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			closeMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
@@ -27,9 +33,7 @@
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
 			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
-			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
-			visualEditorMsg: mw.msg( 'mobile-frontend-editor-visual-editor' ),
-			sourceEditorMsg: mw.msg( 'mobile-frontend-editor-source-editor' )
+			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' )
 		} ),
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
 		className: 'overlay editor-overlay',
