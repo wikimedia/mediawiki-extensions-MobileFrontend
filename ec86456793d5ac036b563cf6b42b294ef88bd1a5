@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_73db5f7c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 847,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T22:24:51Z",
+      "side": 1,
+      "message": "sure :)",
+      "parentUuid": "6e936f18_b3b7a734",
+      "revId": "ec86456793d5ac036b563cf6b42b294ef88bd1a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_0c569a33",
         "filename": "tests/phpunit/skins/SkinMinervaTest.php",
         "patchSetId": 12
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "Wy are you setting it here when there\u0027s also a setMobileMode() call below?",
       "parentUuid": "6e936f18_0c569a33",
+      "revId": "ec86456793d5ac036b563cf6b42b294ef88bd1a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_b3e56734",
+        "filename": "tests/phpunit/skins/SkinMinervaTest.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-12T22:24:51Z",
+      "side": 1,
+      "message": "wgMFEnableBeta configure, if beta mode (or alpha) is possible (enabled to be used by an user), setMethod sets the mode itself :)",
+      "parentUuid": "6e936f18_f3b1af42",
       "revId": "ec86456793d5ac036b563cf6b42b294ef88bd1a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
