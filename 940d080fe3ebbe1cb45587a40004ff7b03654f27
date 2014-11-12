@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_85ba666b",
+        "filename": "javascripts/modules/wikigrok/WikiGrokAbTest.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-12T12:23:59Z",
+      "side": 1,
+      "message": "See comment in trello\nhttps://trello.com/c/joblWMWj\n\nAbout the anonymous version cookie stuff",
+      "revId": "940d080fe3ebbe1cb45587a40004ff7b03654f27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
