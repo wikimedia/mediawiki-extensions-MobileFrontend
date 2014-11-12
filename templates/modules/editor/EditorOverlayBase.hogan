@@ -36,6 +36,6 @@
 			</div>
 		</div>
 	</div>
-	{{>spinner}}
+	{{{spinner}}}
 	{{>content}}
 </div>

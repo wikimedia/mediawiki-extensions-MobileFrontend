@@ -10,7 +10,8 @@
 		currentUserName = user.getName(),
 		userName = pageParams[1] ? pageParams[1] : currentUserName,
 		IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).medium,
-		UserGalleryApi, PhotoItem, PhotoList;
+		UserGalleryApi, PhotoItem, PhotoList,
+		icons = M.require( 'icons' );
 
 	/**
 	 * API for retrieving gallery photos
@@ -85,8 +86,8 @@
 	 */
 	PhotoList = View.extend( {
 		template: mw.template.get( 'mobile.special.uploads.scripts', 'PhotoList.hogan' ),
-		templatePartials: {
-			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' )
+		defaults: {
+			spinner: icons.spinner().toHtmlString()
 		},
 		initialize: function () {
 			// how close a spinner needs to be to the viewport to trigger loading (px)

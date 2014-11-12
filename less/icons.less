@@ -22,8 +22,6 @@
 // <div class="icon icon-edit">edit</div>
 //
 // Styleguide 8.1.
-.loading,
-// FIXME: Make the ajax loader a View with the icon class
 .mw-ui-button.mw-ui-progressive.icon,
 .profile .icon-talk-blue,
 // FIXME: Kill above when mediawiki ui buttons does not use background declaration
@@ -106,8 +104,6 @@
 // <div class="icon icon-32px icon-edit" style="width:32px;height:32px;">edit</div>
 //
 // Styleguide 8.1.2.
-.icon.loading,
-// FIXME: Make the ajax loader a View with the icon-32px class
 .icon.mw-ui-button.mw-ui-progressive.icon-32px,
 // FIXME: Kill above when mediawiki ui buttons does not use background declaration
 .icon.icon-32px {
@@ -234,4 +230,8 @@
 
 .icon-citation {
 	.background-image-svg-quick( 'images/icons/cite' );
+}
+
+.icon-spinner {
+	.background-image('images/ajax-loader.gif')
 }

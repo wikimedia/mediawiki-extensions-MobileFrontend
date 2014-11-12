@@ -1,4 +1,4 @@
 <ul class="image-list content"></ul>
 <div class="end">
-	{{>spinner}}
+	{{{spinner}}}
 </div>

@@ -1,7 +1,8 @@
 ( function ( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		PageList = M.require( 'modules/PageList' ),
-		Nearby;
+		Nearby,
+		icons = M.require( 'icons' );
 
 	/**
 	 * List of nearby pages
@@ -34,10 +35,15 @@
 			}
 		},
 		templatePartials: {
-			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' ),
 			pageList: PageList.prototype.template
 		},
 		template: mw.template.get( 'mobile.nearby', 'Nearby.hogan' ),
+		defaults: {
+			spinner: icons.spinner( {
+				title: mw.msg( 'mobile-frontend-nearby-loading' )
+			} ).toHtmlString()
+		},
+
 		getCurrentPosition: function () {
 			var result = $.Deferred();
 			if ( M.supportsGeoLocation() ) {
@@ -69,8 +75,6 @@
 		initialize: function ( options ) {
 			var self = this,
 				_super = PageList.prototype.initialize;
-
-			options.loadingMessage = mw.msg( 'mobile-frontend-nearby-loading' );
 
 			this.range = options.range || mw.config.get( 'wgMFNearbyRange' ) || 1000;
 			this.source = options.source || 'nearby';

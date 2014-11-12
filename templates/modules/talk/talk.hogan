@@ -10,4 +10,4 @@
 		{{/headings}}
 	</ul>
 </div>
-{{>spinner}}
+{{{spinner}}}

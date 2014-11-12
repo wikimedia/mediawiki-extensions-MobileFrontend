@@ -1,8 +1,8 @@
 ( function ( M, $ ) {
 
-	var
-		View = M.require( 'View' ),
-		Section;
+	var View = M.require( 'View' ),
+		Section,
+		icons = M.require( 'icons' );
 
 	/**
 	 * Builds a section of a page
@@ -13,7 +13,8 @@
 		template: mw.template.get( 'mobile.startup', 'Section.hogan' ),
 		defaults: {
 			line: undefined,
-			text: ''
+			text: '',
+			spinner: icons.spinner().toHtmlString()
 		},
 		initialize: function ( options ) {
 			var self = this;
