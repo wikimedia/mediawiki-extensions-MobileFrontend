@@ -1,5 +1,4 @@
 class WatchlistPage < ArticlePage
-
   a(:feed_link, text: "Modified")
   a(:list_link, text: "List")
   ul(:page_list_diffs, class: "page-list side-list")
