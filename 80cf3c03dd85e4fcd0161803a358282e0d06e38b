@@ -88,6 +88,24 @@
       "revId": "80cf3c03dd85e4fcd0161803a358282e0d06e38b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_0e42eeb0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 455
+      },
+      "writtenOn": "2014-11-13T01:16:22Z",
+      "side": 1,
+      "message": "None of these are going to be perfect from the get-go – we need to see what happens in the A/B test + in user testing (AFAIK there weren\u0027t any usability red flags in the first round that Abbey \u0026 Daisy did last week, but I\u0027m not sure if they tested a version where none of the tags applied).\n\nBut yeah, let\u0027s just go with \"Select tags that best describe X\" for now :)",
+      "parentUuid": "6e936f18_4e3c762d",
+      "revId": "80cf3c03dd85e4fcd0161803a358282e0d06e38b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
