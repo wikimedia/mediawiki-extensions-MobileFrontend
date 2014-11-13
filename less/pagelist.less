@@ -179,3 +179,12 @@
 		text-transform: uppercase;
 	}
 }
+
+// FIXME: combine with a similar pattern in modules/NotificationsOverlay.less
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.overlay {
+		.page-list {
+			padding: @itemPaddingV @contentPaddingTablet;
+		}
+	}
+}
