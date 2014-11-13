@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_2e11e156",
+        "filename": "less/modules/watchstar.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-13T22:14:23Z",
+      "side": 0,
+      "message": "this was here because of this bug: https://trello.com/c/17ecaSKI/5-bug-73053-alpha-watchstar-icons-are-smaller-in-alpha-than-in-beta",
+      "revId": "e09135d594e36212ee95832a3e1d65661821af0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
