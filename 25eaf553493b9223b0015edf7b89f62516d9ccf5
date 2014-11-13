@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_64663350",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T10:59:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_06641c10",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_86502c38",
         "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-11-12T18:32:18Z",
       "side": 1,
       "message": "use trigger",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_04572f5c",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T10:59:54Z",
+      "side": 1,
+      "message": "Why is .click() bad? It is a readable shortcut for .trigger( \u0027click\u0027 ) right?\n\nDone",
+      "parentUuid": "6e936f18_86502c38",
       "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_04d64fc7",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T10:59:54Z",
+      "side": 1,
+      "message": "moved stubs to setup and removed the function",
+      "parentUuid": "6e936f18_66b5e077",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_267a78b8",
         "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2014-11-12T18:32:18Z",
       "side": 1,
       "message": "Can you move above next to getToQuestion\n\nAlso is there any reason you can\u0027t just stub this in setup?",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_e4ffa32f",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T10:59:54Z",
+      "side": 1,
+      "message": "I\u0027ve just inlined this in the tests, made no sense as a function once i moved the stub",
+      "parentUuid": "6e936f18_267a78b8",
       "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_a4f51b4f",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T10:59:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_c68cf4de",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_2684b8b3",
         "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
         "patchSetId": 2
@@ -98,6 +188,24 @@
       "writtenOn": "2014-11-12T18:32:18Z",
       "side": 1,
       "message": "use trigger( \u0027click\u0027 )",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_c4f2a764",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T10:59:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e936f18_2684b8b3",
       "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_64939304",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T10:59:54Z",
+      "side": 1,
+      "message": "Inlined it.\n\nThe proxy with the setTimeout are because the last invocation has asynchronous behavior so I can\u0027t check the dom immediately",
+      "parentUuid": "6e936f18_86934c03",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_4699c420",
         "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
         "patchSetId": 2
@@ -132,6 +258,24 @@
       "writtenOn": "2014-11-12T18:32:18Z",
       "side": 1,
       "message": "Would is(\u0027:visible\u0027) not be better here?",
+      "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_a48c3bdd",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T10:59:54Z",
+      "side": 1,
+      "message": "I thought so, but when I tried to implement it failed, because the dom element is appended/visible when the test is executing :S\n\nI was doing:\n\tassert.ok( this.$el.find( \u0027.wg-link\u0027 ).is( \u0027:visible\u0027 ) );",
+      "parentUuid": "6e936f18_4699c420",
       "revId": "25eaf553493b9223b0015edf7b89f62516d9ccf5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
