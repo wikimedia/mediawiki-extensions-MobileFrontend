@@ -876,6 +876,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.overlays',
 			'mediawiki.ui.anchor',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/modules/notifications/notifications.js',
