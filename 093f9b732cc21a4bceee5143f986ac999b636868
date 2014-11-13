@@ -16,6 +16,24 @@
       "revId": "093f9b732cc21a4bceee5143f986ac999b636868",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_88034d0f",
+        "filename": "javascripts/modules/references/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-13T20:12:51Z",
+      "side": 1,
+      "message": "I did. Although I was jumping between reference and page-reference... I\u0027m not sure which one makes more sense.",
+      "parentUuid": "6e936f18_a519948a",
+      "revId": "093f9b732cc21a4bceee5143f986ac999b636868",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
