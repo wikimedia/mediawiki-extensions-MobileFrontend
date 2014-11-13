@@ -76,10 +76,10 @@ phpunit:				## Run the PHPUnit test suite
 	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit --group=MobileFrontend
 
 qunit:					## Run the QUnit test suite
-	@dev-scripts/qunit.sh
+	@grunt qunit
 
 qunitdebug:				## Run the QUnit test suite in debug mode
-	@dev-scripts/qunit.sh 'MobileFrontend&debug=true'
+	@QUNIT_DEBUG=true grunt qunit
 
 tests: jshint phplint phpunit qunit	## Run the PHPUnit test suite and QUnit tests after linting them
 
