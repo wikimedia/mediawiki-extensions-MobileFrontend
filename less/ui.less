@@ -149,6 +149,26 @@ input.search {
 }
 
 .content {
+	// Correct icon sizes of edit icon when using mw-ui-icon.
+	h1 {
+		// FIXME: Make less specific when mw-ui-icon default.
+		.mw-ui-icon.edit-page {
+			font-size: 1 / @fontSizeH1;
+		}
+	}
+
+	h2 {
+		.mw-ui-icon.edit-page {
+			font-size: 1 / @fontSizeH2;
+		}
+	}
+
+	h3 {
+		.mw-ui-icon.edit-page {
+			font-size: 1 / @fontSizeH3;
+		}
+	}
+
 	.edit-page {
 		display: none;
 		position: absolute;

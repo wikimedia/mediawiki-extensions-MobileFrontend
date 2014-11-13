@@ -5,32 +5,12 @@
 
 // FIXME: BEGIN: Find svg versions of all of these and add to icons folder
 // UI set
-.mw-ui-icon-talk {
-	.m-background-image('images/pagemenu/talk.png');
-}
-
-.mw-ui-icon-watch {
-	.m-background-image-svg-quick('images/icons/watch');
-}
-
-.mw-ui-icon-edit {
-	.m-background-image('images/pagemenu/edit-locked.png');
-}
-
-.mw-ui-icon-edit-enabled {
-	.m-background-image('images/pagemenu/edit.png');
-}
-
 .mw-ui-icon-arrow-down {
 	.m-background-image('images/show.png');
 }
 
 .mw-ui-icon-arrow-up {
 	.m-background-image('images/hide.png');
-}
-
-.mw-ui-icon-watched {
-	.m-background-image-svg-quick('images/icons/watched');
 }
 
 // Menu set
@@ -87,14 +67,6 @@
 
 
 // Uploads set
-.mw-ui-icon-addimage {
-	.m-background-image('images/pagemenu/upload-locked.png');
-}
-
-.mw-ui-icon-addimage-enabled {
-	.m-background-image('images/pagemenu/upload.png');
-}
-
 .mw-ui-icon-photo {
 	.m-background-image('images/camera.png');
 }
@@ -175,6 +147,35 @@
 	.m-background-image('images/ajax-loader.gif');
 }
 
+// Page action set
+.mw-ui-icon-talk {
+	.m-background-image-svg-quick('images/icons/talk');
+}
+
+.mw-ui-icon-watch {
+	.m-background-image-svg-quick('images/icons/watch');
+}
+
+.mw-ui-icon-edit {
+	.m-background-image-svg-quick('images/icons/editLocked');
+}
+
+.mw-ui-icon-edit-enabled {
+	.m-background-image-svg-quick('images/icons/edit');
+}
+
+.mw-ui-icon-watched {
+	.m-background-image-svg-quick('images/icons/watched');
+}
+
+.mw-ui-icon-addimage {
+	.m-background-image-svg-quick('images/icons/uploadLocked');
+}
+
+.mw-ui-icon-addimage-enabled {
+	.m-background-image-svg-quick('images/icons/upload');
+}
+
 // FIXME: Find better workaround for this
 span.mw-ui-icon {
 	// a block inside an inline element is never a good idea - effects line height of mobile diff bytesadded class
@@ -183,6 +184,11 @@ span.mw-ui-icon {
 
 // FIXME: Upstream to mediawiki ui
 .mw-ui-icon {
+	// FIXME: Needed for page actions, ensures <a> tags can give icon height
+	* {
+		display: block;
+	}
+
 	&:before {
 		background-position: 50% 50%;
 		height: 100%;

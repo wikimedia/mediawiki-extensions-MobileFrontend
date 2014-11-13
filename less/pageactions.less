@@ -19,6 +19,13 @@
 	border-bottom: dotted 1px @colorGray12;
 }
 
+// FIXME: Make default when mw-ui-icon in stable
+.alpha {
+	#page-actions {
+		font-size: 1.2em;
+	}
+}
+
 #page-actions {
 	@verticalMargin: 8px;
 	// FIXME: Use a gray defined in variables e.g. @grayMediumLight
@@ -57,15 +64,6 @@
 			width: 40px;
 			background-position: 50% 0;
 			margin: 0 16px 0 0;
-		}
-
-		// FIXME: Remove this when these are all svgs
-		&.mw-ui-icon-edit,
-		&.mw-ui-icon-edit-enabled,
-		&.mw-ui-icon-addimage,
-		&.mw-ui-icon-talk,
-		&.mw-ui-icon-addimage-enabled {
-			font-size: 1.3em;
 		}
 	}
 }
