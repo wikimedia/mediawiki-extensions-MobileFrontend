@@ -136,10 +136,12 @@
 				} );
 
 				self.$( '.spinner' ).show();
-				self.apiWikiGrokResponse.recordClaims( answers ).done( function () {
+				self.apiWikiGrokResponse.recordClaims( answers ).always( function () {
 					self.$( '.tags, .footer' ).hide();
 					self.$( '.wg-content' ).text( 'You just made Wikipedia a little better, thanks!' );
 					self.$( '.wg-link' ).show();
+				} ).fail( function () {
+					self.logError( 'no-response-cannot-record-user-input' );
 				} );
 				self.log( 'widget-click-submit' );
 			} );
