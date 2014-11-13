@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_4ebb16de",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-13T00:38:02Z",
+      "side": 1,
+      "message": "Isn\u0027t the answer to this questions \u0027yes\u0027 or \u0027no\u0027. Shouldn\u0027t the user be instructed to select the ones that describe options.title?",
+      "revId": "80cf3c03dd85e4fcd0161803a358282e0d06e38b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
