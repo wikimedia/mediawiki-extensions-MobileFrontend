@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_c5baa06c",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-13T20:06:04Z",
+      "side": 1,
+      "message": "this has been fixed here: https://gerrit.wikimedia.org/r/#/c/172817/",
+      "revId": "ced40a39e1024f271b6b5a2efd13285a172edb71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_856fb8f8",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialogB.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-13T20:06:04Z",
+      "side": 1,
+      "message": "why not compare directly to \"true\"?",
+      "revId": "ced40a39e1024f271b6b5a2efd13285a172edb71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
