@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_e8c53165",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-13T20:43:56Z",
+      "side": 1,
+      "message": "shouldn\u0027t you just hide/show only in the view?",
+      "revId": "ac033806b7e1a6cecdb16b44ed6b5893fbc9e1a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_88b6edf4",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-13T20:43:56Z",
+      "side": 1,
+      "message": "hide?",
+      "revId": "ac033806b7e1a6cecdb16b44ed6b5893fbc9e1a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_681b6120",
+        "filename": "less/modules/infobox.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-13T20:43:56Z",
+      "side": 1,
+      "message": "why is padding-top 0? it doesn\u0027t look good.",
+      "revId": "ac033806b7e1a6cecdb16b44ed6b5893fbc9e1a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
