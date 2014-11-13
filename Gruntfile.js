@@ -21,7 +21,8 @@ module.exports = function ( grunt ) {
 		QUNIT_MODULE: ( process.env.QUNIT_MODULE && '&module=' + process.env.QUNIT_MODULE ) || '',
 		files: {
 			js: 'javascripts/**/*.js',
-			jsTests: 'tests/qunit/**/*.js'
+			jsTests: 'tests/qunit/**/*.js',
+			jsExternals: 'javascripts/externals/**/*.js'
 		},
 		svg2png: {
 			dist: {
@@ -32,13 +33,14 @@ module.exports = function ( grunt ) {
 			options: {
 				jshintrc: true
 			},
-			all: [
+			tests: '<%= files.jsTests %>',
+			sources: [
 				'<%= files.js %>',
-				'!javascripts/externals/**/*.js'
+				'!<%= files.jsExternals %>'
 			]
 		},
 		jscs: {
-			src: '<%= jshint.all %>'
+			sources: '<%= jshint.sources %>'
 		},
 		qunit: {
 			all: {

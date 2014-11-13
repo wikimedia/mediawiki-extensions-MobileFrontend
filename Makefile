@@ -64,10 +64,10 @@ jscs: nodecheck			## Check the JavaScript coding style
 	@node_modules/.bin/jscs javascripts/* --config .jscsrc
 
 jshinttests: nodecheck			## Lint the QUnit tests
-	@node_modules/.bin/jshint tests/qunit/* --config .jshintrc
+	@grunt jshint:tests
 
-jshint: nodecheck jshinttests		## Lint the JavaScript files
-	@node_modules/.bin/jshint javascripts/* --config .jshintrc
+jshint: nodecheck 	## Lint the JavaScript files
+	@grunt jshint
 
 dependencies: nodecheck kssnodecheck phpcheck remotes
 
