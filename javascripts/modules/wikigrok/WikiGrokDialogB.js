@@ -116,7 +116,7 @@
 
 			self.$( '.wg-notice' ).hide();
 			self.$( '.wg-buttons' ).html( '<div class="spinner loading"></div>' );
-			self.$( '.wg-content' ).text( 'Select any tags that correctly describe ' + options.title + '?' );
+			self.$( '.wg-content' ).text( 'Select any tags that correctly describe ' + options.title + ':' );
 			self.$( '.footer' ).show();
 
 			self._renderSuggestions( options.suggestions );
