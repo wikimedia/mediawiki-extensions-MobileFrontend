@@ -234,7 +234,6 @@
 	"mobile-frontend-settings-alpha": "Mod percubaan",
 	"mobile-frontend-settings-alpha-description": "Masuki wilayah mobil yang bahaya dan belum dijelajahi. Dapatkan lebih banyak ciri-ciri dalam percubaan tetapi awas, ada pepijat!",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Mudahkan penggunaan dengan tetapan yang khusus untuk kegunaan peranti mudah alih.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} terdapat dalam $1 bahasa. Berikut adalah semua versi yang ada",
 	"mobile-frontend-settings-site-header": "Bahasa-bahasa {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Alamak!",
@@ -301,5 +300,6 @@
 	"tag-mobile_edit": "Suntingan mudah alih",
 	"tag-mobile_edit-description": "Suntingan yang dibuat dari peranti mudah alih (melalui web atau aplikasi)",
 	"tag-mobile_web_edit": "Suntingan web mudah alih",
-	"tag-mobile_web_edit-description": "Suntingan dibuat melalui tapak web dari peranti mudah alih"
+	"tag-mobile_web_edit-description": "Suntingan dibuat melalui tapak web dari peranti mudah alih",
+	"apihelp-mobileview-param-thumbnail": "Maksimum dimensi thumbnail."
 }

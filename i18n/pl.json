@@ -308,5 +308,6 @@
 	"tag-mobile_edit-description": "Edycja z mobile web lub z aplikacji mobilnej",
 	"tag-mobile_web_edit": "edycja z mobile web",
 	"tag-mobile_web_edit-description": "Edycja z mobile web",
-	"skinname-minerva": "Minerwa"
+	"skinname-minerva": "Minerwa",
+	"apihelp-mobileview-param-thumbnail": "Maksymalne rozmiary miniaturki."
 }

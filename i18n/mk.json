@@ -348,7 +348,7 @@
 	"apihelp-mobileview-param-onlyrequestedsections": "Дај ги само побараните поднаслови дури и со $1prop=sections.",
 	"apihelp-mobileview-param-offset": "Преправај се дека сиот текстуален резултат е една низа и дај ја поднизата што почнува од ова место.",
 	"apihelp-mobileview-param-maxlen": "Преправај се дека сиот текстуален резултат е една низа и ограничи го резултатот на оваа должина.",
-	"apihelp-mobileview-param-thumbnail": "'Макс. димензии на минијатурата.",
+	"apihelp-mobileview-param-thumbnail": "Макс. димензии на минијатурата.",
 	"apihelp-mobileview-example-1": "Дај информации за поднасовот 0 на [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Дај информации за поднасловот 0 и поднасловите што го спомнуваат [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Дај информации за поднасловот 1 и понатамошните, како и поднасловите што го спомнуваат [[Candlemass]]",

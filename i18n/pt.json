@@ -15,7 +15,8 @@
 			"SandroHc",
 			"Vitorvicentevalente",
 			"Helder.wiki",
-			"He7d3r"
+			"He7d3r",
+			"Macofe"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o(a) utilizador(a) está ou não a editar através de interface móvel",
@@ -152,7 +153,7 @@
 	"mobile-frontend-last-modified-seconds": "Última modificação há {{PLURAL:$1|$1 segundo|$1 segundos}}",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Última {{GENDER:$1|modificação}} há {{PLURAL:$3|$3 dia|$3 dias}}] por {{PLURAL:$5|[$6 $2]|0=um utilizador anónimo}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Última {{GENDER:$1|modificação}} há {{PLURAL:$3|$3 hora|$3 horas}}] por {{PLURAL:$5|[$6 $2]|0=um utilizador anónimo}}",
-	"mobile-frontend-last-modified-with-user-just-now": "[$3 Última {{GENDER:$1|modificação}} feita agora por {{PLURAL:$4|[$5 $2]|0=um utilizador anónimo}}",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 Última {{GENDER:$1|modificação}}] feita agora por {{PLURAL:$4|[$5 $2]|0=um utilizador anónimo}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Última {{GENDER:$1|modificação}} há {{PLURAL:$3|$3 minuto|$3 minutos}}] por {{PLURAL:$5|[$6 $2]|0=um utilizador anónimo}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Última {{GENDER:$1|modificação}} há {{PLURAL:$3|$3 mês|$3 meses}}] por {{PLURAL:$5|[$6 $2]|0=um utilizador anónimo}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Última {{GENDER:$1|modificação}} há {{PLURAL:$3|$3 segundo|$3 segundos}}] por {{PLURAL:$5|[$6 $2]|0=um utilizador anónimo}}",
