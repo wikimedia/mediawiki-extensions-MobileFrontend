@@ -52,6 +52,24 @@
       "revId": "e0d90bd2946935aaad155cd55cf4a1f20af06cc6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_3f56f609",
+        "filename": "javascripts/loggingSchemas/mobileWebWikiGrok.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-13T12:18:30Z",
+      "side": 1,
+      "message": "Go home Javascript, you are drunk\n\nTo get exactly what you where talking about it would be something like this:\n\n    function isNumber(n) { return !isNaN(parseInt(n, 10)); }\n    \u003e undefined\n    isNumber(1)\n    \u003e true\n    isNumber(null)\n    \u003e false\n    isNumber(undefined)\n    \u003e false\n    isNumber(\u0027b\u0027)\n    \u003e false\n\nWhenever you use isNaN be sure to pass in the value from a function that can return NaN, like parseInt or parseFloat.\n\nAnd just for fun:\n\n    typeof NaN \u003d\u003d\u003d \u0027number\u0027\n    \u003e true\n    NaN \u003d\u003d\u003d NaN\n    \u003e false\n    NaN !\u003d\u003d NaN\n    \u003e true",
+      "parentUuid": "6e936f18_734fed39",
+      "revId": "e0d90bd2946935aaad155cd55cf4a1f20af06cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
