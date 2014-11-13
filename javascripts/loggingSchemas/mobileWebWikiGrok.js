@@ -8,7 +8,7 @@
 			isLoggedIn: !user.isAnon()
 		};
 		// If the user is logged in, record username and edit count
-		if ( !user.isAnon() ) {
+		if ( !user.isAnon() && typeof user.getEditCount() === 'number' ) {
 			options.userEditCount = user.getEditCount();
 		}
 		return M.log( 'MobileWebWikiGrok', $.extend( options, data ) );
