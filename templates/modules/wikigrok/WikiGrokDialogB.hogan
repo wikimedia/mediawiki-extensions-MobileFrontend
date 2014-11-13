@@ -10,10 +10,9 @@
 			<button class="{{classes}}">{{label}}</button>
 		{{/buttons}}
 	</p>
-
 	<p class="tags">
 	</p>
-
+	<div class="spinner loading"></div>
 	{{#noticeMsg}}
 	<p class="wg-notice">{{{noticeMsg}}}</p>
 	{{/noticeMsg}}
@@ -21,6 +20,5 @@
 	<div class="footer">
 		<span class="license">All submissions are <a href="#/wikigrok/about">released freely</a>.</span>
 		<button class="mw-ui-button mw-ui-constructive save">Next</button>
-		<div class="spinner loading"></div>
 	</div>
 </div>
