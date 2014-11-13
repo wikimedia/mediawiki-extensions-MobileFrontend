@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_ae03b1c0",
+        "filename": "Gruntfile.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-13T22:22:01Z",
+      "side": 1,
+      "message": "Previously we could configure this..\n\nI get this\nRunning \"qunit:all\" (qunit) task\nTesting http://127.0.0.1:8080/w/index.php/Special:JavaScriptTest/qunit?useformat\u003dmobile \n\n\n\n\u003e\u003e PhantomJS timed out, possibly due to a missing QUnit start() call.\nWarning: 1/1 assertions failed (0ms) Use --force to continue.\n\nAborted due to warnings.\nmake: *** [qunit] Error 6\n\n\nNot sure why....",
+      "revId": "558e6233834fd0633000313c92210fa231baca9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
