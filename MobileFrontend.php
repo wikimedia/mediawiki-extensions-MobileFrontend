@@ -559,3 +559,9 @@ $wgMFNamespacesWithoutCollapsibleSections = array(
 	// Just don't
 	NS_MEDIA,
 );
+
+/**
+ * If set to true and running alpha, will add Wikidata description to page JS as
+ * wgMFDescription variable
+ */
+$wgMFUseWikibaseDescription = false;
