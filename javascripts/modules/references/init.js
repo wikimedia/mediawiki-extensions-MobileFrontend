@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var drawer;
+	var drawer,
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
 	function getReference( id ) {
 		// Escape (almost) all CSS selector meta characters
@@ -11,10 +12,13 @@
 	}
 
 	function showReference( ev ) {
-		var $dest = $( this );
+		var $dest = $( this ),
+			href = $dest.attr( 'href' );
+
+		MobileWebClickTracking.log( 'reference', href );
 		drawer.render( {
 			title: $dest.text(),
-			text: getReference( $dest.attr( 'href' ) ).html()
+			text: getReference( href ).html()
 		} );
 		ev.preventDefault();
 		//don't hide drawer (stop propagation of click) if it is already shown (e.g. click another reference)

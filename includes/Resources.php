@@ -712,6 +712,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.references' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.drawers',
+			'mobile.loggingSchemas',
 		),
 		'styles' => array(
 			'less/modules/references.less',
