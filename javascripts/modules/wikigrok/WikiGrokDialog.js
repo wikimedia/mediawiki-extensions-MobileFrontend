@@ -233,17 +233,16 @@
 				claim.prop = 'alma mater';
 			}
 
-			this.apiWikiGrokResponse.recordClaims( [ claim ] ).done( function () {
-				options.claimRecorded = true;
-				self.thankUser( options, options.claimRecorded );
+			this.apiWikiGrokResponse.recordClaims( [ claim ] ).always( function () {
+				self.thankUser( options, true );
 			} ).fail( function () {
 				self.logError( 'no-response-cannot-record-user-input' );
 			} );
 		},
 
-		thankUser: function ( options, claimRecorded ) {
+		thankUser: function ( options, claimAttempted ) {
 			options.thankUser = true;
-			if ( claimRecorded ) {
+			if ( claimAttempted ) {
 				options.contentMsg = 'You just made Wikipedia a little better, thanks!';
 			} else {
 				options.contentMsg = 'That\'s OK, thanks for taking the time.';
