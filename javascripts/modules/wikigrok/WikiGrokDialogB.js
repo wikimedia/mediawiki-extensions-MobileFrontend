@@ -67,7 +67,6 @@
 			// Now work out the labels if we have some suggestions
 			if ( suggestionsList.length ) {
 				self.apiWikiData.getLabels( suggestionsList ).done( function ( labels ) {
-					self.$( '.wg-buttons' ).hide();
 					self.$( '.tags' ).show();
 					$.each( labels, function ( itemId, label ) {
 						var btnLabel, $tag,
@@ -115,7 +114,8 @@
 			var self = this;
 
 			self.$( '.wg-notice' ).hide();
-			self.$( '.wg-buttons' ).html( '<div class="spinner loading"></div>' );
+			self.$( '.wg-buttons' ).hide();
+			self.$( '.spinner' ).show();
 			self.$( '.wg-content' ).text( 'Select any tags that correctly describe ' + options.title + ':' );
 			self.$( '.footer' ).show();
 
@@ -135,6 +135,7 @@
 					} );
 				} );
 
+				self.$( '.tags' ).hide();
 				self.$( '.spinner' ).show();
 				self.apiWikiGrokResponse.recordClaims( answers ).done( function () {
 					self.$( '.tags, .footer' ).hide();
