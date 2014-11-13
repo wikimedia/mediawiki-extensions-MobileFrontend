@@ -139,6 +139,7 @@
 				self.$( '.spinner' ).show();
 				self.apiWikiGrokResponse.recordClaims( answers ).always( function () {
 					self.$( '.tags, .footer' ).hide();
+					self.$( '.spinner' ).hide();
 					self.$( '.wg-content' ).text( 'You just made Wikipedia a little better, thanks!' );
 					self.$( '.wg-link' ).show();
 				} ).fail( function () {
