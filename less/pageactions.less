@@ -30,6 +30,8 @@
 		// Needed for non-JavaScript users
 		position: relative;
 		cursor: pointer;
+		// Override .hlist rule.
+		margin-right: 0;
 
 		// FIXME: use .cloaked class
 		// file inputs are notoriously difficult to style
@@ -57,13 +59,13 @@
 			margin: 0 16px 0 0;
 		}
 
-		&.mw-ui-icon {
+		// FIXME: Remove this when these are all svgs
+		&.mw-ui-icon-edit,
+		&.mw-ui-icon-edit-enabled,
+		&.mw-ui-icon-addimage,
+		&.mw-ui-icon-talk,
+		&.mw-ui-icon-addimage-enabled {
 			font-size: 1.3em;
-			margin-right: 0;
-			// FIXME: remove this once other icons are also SVGs, they looks smaller because they are PNGs
-			&.watch-this-article {
-				font-size: 1.1em;
-			}
 		}
 	}
 }
