@@ -1,7 +1,9 @@
 ( function ( M, $ ) {
 	var Infobox,
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
-		View = M.require( 'View' );
+		View = M.require( 'View' ),
+		icons = M.require( 'icons' );
+
 	/**
 	 * A Wikidata generated infobox.
 	 * FIXME: This currently requires 2 hits to the Wikidata API on every page load.
@@ -13,7 +15,7 @@
 
 		className: 'wikidata-infobox',
 		defaults: {
-			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' ).render(),
+			spinner: icons.spinner().toHtmlString(),
 			description: mw.config.get( 'wgMFDescription' ) ||
 				'A Wikipedia page in need of a description.',
 			rows: []

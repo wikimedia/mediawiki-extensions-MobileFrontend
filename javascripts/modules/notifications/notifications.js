@@ -2,11 +2,11 @@
  * This code loads the necessary modules for the notifications overlay, not to be confused
  * with the Toast notifications defined by common/toast.js.
  */
-( function ( M, $ ) {
-	var Icon = M.require( 'Icon' ),
-		schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
+( function ( M, $, mw ) {
+	var schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		mainmenu = M.require( 'mainmenu' ),
-		$btn = $( '#secondary-button.user-button' );
+		$btn = $( '#secondary-button.user-button' ),
+		icons = M.require( 'icons' );
 
 	/*
 	 * Loads a ResourceLoader module script. Shows ajax loader whilst loading.
@@ -17,14 +17,13 @@
 	*/
 	function loadModuleScript( moduleName ) {
 		var d = $.Deferred(),
-			loadingIcon = new Icon( {
-				tagName: 'a',
-				additionalClassNames: 'loading'
-			} ).toHtmlString();
+			$spinner = $( icons.spinner().toHtmlString() );
 
-		$btn.hide().after( loadingIcon );
+		$btn.hide().after( $spinner );
 		mw.loader.using( moduleName, function () {
-			$btn.next( '.loading' ).remove();
+			// FIXME: Some code uses the loading class while other code uses the
+			// spinner class. Make all code consistent so it's easier to change.
+			$spinner.remove();
 			$btn.show();
 			d.resolve();
 		} );
@@ -68,4 +67,4 @@
 			} );
 		} );
 	} );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, jQuery, mw ) );

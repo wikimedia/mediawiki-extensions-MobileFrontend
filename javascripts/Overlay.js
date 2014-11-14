@@ -4,6 +4,7 @@
 	var
 		View = M.require( 'View' ),
 		Icon = M.require( 'Icon' ),
+		icons = M.require( 'icons' ),
 		$window = $( window ),
 		Overlay;
 
@@ -42,8 +43,7 @@
 		 */
 		className: 'overlay',
 		templatePartials: {
-			header: mw.template.get( 'mobile.overlays', 'header.hogan' ),
-			spinner: mw.template.get( 'mobile.ajax', 'spinner.hogan' )
+			header: mw.template.get( 'mobile.overlays', 'header.hogan' )
 		},
 		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),
 		defaults: {
@@ -57,7 +57,8 @@
 					label: mw.msg( 'mobile-frontend-overlay-close' )
 				} ).toHtmlString(),
 			headerButtonsListClassName: '',
-			fixedHeader: true
+			fixedHeader: true,
+			spinner: icons.spinner().toHtmlString()
 		},
 		/**
 		 * Flag overlay to close on content tap

@@ -1,5 +1,5 @@
 <div class="content">
-	{{>spinner}}
+	{{{spinner}}}
 	<div class="preview"></div>
 	<p>{{ownerStatement}} <a href="#/upload-tutorial" class="help inline">{{help}}</a></p>
 	<textarea name="description" placeholder="{{descriptionPlaceholder}}"></textarea>

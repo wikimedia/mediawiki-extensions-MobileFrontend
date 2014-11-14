@@ -125,9 +125,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.ajax' => $wgMFResourceFileModuleBoilerplate + array(
-		'templates' => array(
-			'spinner.hogan' => 'templates/spinner.hogan',
-		),
 		'styles' => array(
 			'less/spinner.less',
 		),
@@ -164,6 +161,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/api.js',
 			'javascripts/PageApi.js',
 			'javascripts/Icon.js',
+			'javascripts/icons.js',
 			'javascripts/Panel.js',
 			'javascripts/Section.js',
 			'javascripts/Page.js',

@@ -2,7 +2,7 @@
 	<div class="image-wrapper">
 		<div class="image-inner-wrapper">
 			<div class="image">
-				{{>spinner}}
+				{{{spinner}}}
 			</div>
 		</div>
 	</div>
