@@ -183,7 +183,12 @@
 					self.$content
 						.show()
 						.val( content )
-						.microAutosize();
+						.microAutosize()
+						.focus();
+					// Place the cursor at the beginning of the text
+					if ( 'setSelectionRange' in self.$content.get( 0 ) ) {
+						self.$content.get( 0 ).setSelectionRange( 0, 0 );
+					}
 					self.clearSpinner();
 				} )
 				.fail( function ( error ) {
