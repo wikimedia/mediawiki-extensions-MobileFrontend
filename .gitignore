@@ -11,3 +11,4 @@ docs/
 dev-scripts/remotes
 vendor/
 composer.phar
+.DS_Store
