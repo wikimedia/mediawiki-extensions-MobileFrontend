@@ -190,10 +190,18 @@
 			self.apiWikiData.getClaims().done( function ( claims ) {
 				if ( claims.isHuman ) {
 					self.apiWikiGrokSuggestion.getSuggestions().done( function ( suggestions ) {
-						if ( !$.isEmptyObject( suggestions ) ) {
+						if ( ( suggestions.occupations && suggestions.occupations.list.length ) ||
+							( suggestions.nationalities && suggestions.nationalities.list.length ) ||
+							( suggestions.schools && suggestions.schools.list.length )
+						) {
 							options.suggestions = suggestions;
 							self.show();
+						} else {
+							// FIXME: remove this before deploying to stable
+							self.logError( 'no-impression-not-enough-suggestions' );
 						}
+					} ).fail( function () {
+						self.logError( 'no-impression-cannot-fetch-suggestions' );
 					} );
 				}
 			} );
