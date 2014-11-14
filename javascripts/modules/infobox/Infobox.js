@@ -222,12 +222,12 @@
 		/**
 		 * @inheritdoc
 		 */
-		postRender: function( options ) {
+		postRender: function ( options ) {
 			var _loadRest = this._loadRest,
 				self = this;
 
 			this.$( '.spinner' ).hide();
-			this.$( '.more' ).on( 'click', function() {
+			this.$( '.more' ).on( 'click', function () {
 				$( this ).remove();
 				_loadRest.call( self, options );
 			} );
@@ -238,7 +238,7 @@
 		 * @private
 		 * @method
 		 */
-		_loadRest: function( options ) {
+		_loadRest: function ( options ) {
 			var self = this,
 				_super = View.prototype.render;
 
