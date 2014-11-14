@@ -1,6 +1,8 @@
 <em>{{description}}</em>
 {{^rows}}
-<button class="mw-ui-button mw-ui-quiet mw-ui-progressive more">expand…</button>
+<div>
+	<button class="mw-ui-button mw-ui-quiet mw-ui-progressive more">expand…</button>
+</div>
 {{/rows}}
 {{{spinner}}}
 {{#rows}}
