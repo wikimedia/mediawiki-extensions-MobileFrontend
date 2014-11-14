@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_6db5a677",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-14T23:09:38Z",
+      "side": 1,
+      "message": "I suppose suggestions.occupations.list is always present as long as suggestions.occupations is present?",
+      "revId": "075c8cb84c0051916a57585c3789112eebc061fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
