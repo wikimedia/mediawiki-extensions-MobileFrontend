@@ -57,16 +57,6 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	}
 
 	/**
-	 * initialize various variables and generate the template
-	 * @return QuickTemplate
-	 */
-	protected function prepareQuickTemplate() {
-		$tpl = parent::prepareQuickTemplate();
-		$this->prepareTalkLabel( $tpl );
-		return $tpl;
-	}
-
-	/**
 	 * Get various skin specific configuration.
 	 * @return array
 	 */
@@ -74,46 +64,5 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgMFAnonymousEditing'] = true;
 		return $vars;
-	}
-
-	/**
-	 * Add the talk page link for logged in alpha users to template
-	 * @param BaseTemplate $tpl an instance of BaseTemplate
-	 * @return QuickTemplate
-	 */
-	protected function prepareTalkLabel( BaseTemplate $tpl ) {
-		$title = $this->getTitle();
-		$isSpecialPage = $title->isSpecialPage();
-
-		// talk page link for logged in alpha users
-		if ( !$isSpecialPage && !$title->isTalkPage() ) {
-			$talkTitle = $title->getTalkPage();
-			if ( $talkTitle->getArticleID() ) {
-				$dbr = wfGetDB( DB_SLAVE );
-				$numTopics = (int)$dbr->selectField( 'page_props', 'pp_value',
-					array(
-						'pp_page' => $talkTitle->getArticleID(),
-						'pp_propname' => 'page_top_level_section_count'
-					),
-					__METHOD__
-				);
-			} else {
-				$numTopics = 0;
-			}
-			if ( $numTopics ) {
-				$talkLabel = $this->getLanguage()->formatNum( $numTopics );
-
-				$class = MobileUI::iconClass( 'talk', 'element', 'count' );
-			} else {
-				$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
-				$class = MobileUI::iconClass( 'talk', 'element' );
-			}
-			$menu = $tpl->data['page_actions'];
-			if ( isset( $menu['talk'] ) ) {
-				$menu['talk']['text'] = $talkLabel;
-				$menu['talk']['class'] = $class;
-			}
-			$tpl->set( 'page_actions', $menu );
-		}
 	}
 }
