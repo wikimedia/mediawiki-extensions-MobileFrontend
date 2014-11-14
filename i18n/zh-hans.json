@@ -262,7 +262,7 @@
 	"mobile-frontend-profile-footer-months": "加入于至少{{PLURAL:$2|$2月}}前，有[[Special:Contributions/$1|{{PLURAL:$3|$3个编辑}}]]和[[Special:Uploads/$1|{{PLURAL:$4|$4个上传|500=500+个上传}}]]。",
 	"mobile-frontend-profile-footer-years": "加入于至少{{PLURAL:$2|$2年}}前，有[[Special:Contributions/$1|{{PLURAL:$3|$3个编辑}}]]和[[Special:Uploads/$1|{{PLURAL:$4|$4个上传|500=500+个上传}}]]。",
 	"mobile-frontend-profile-last-edit": "在{{PLURAL:$2|昨天|$2天前|0=今天早些时候}}{{GENDER:$3|编辑}}页面[[:$1]]。",
-	"mobile-frontend-profile-last-thank": "{{GENDER:$2|已由}}[[Special:UserProfile/$1|$1]]感谢。",
+	"mobile-frontend-profile-last-thank": "已{{GENDER:$1|由}}[[Special:UserProfile/$1|$1]]{{GENDER:$2|感谢}}。",
 	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|上传}}于{{PLURAL:$1|昨天|$1天前|0=今天}}。",
 	"mobile-frontend-profile-noargs": "未提供用户名。请提供用户名以查看资料。",
 	"mobile-frontend-profile-nouser": "不存在用户名为此的用户。用户名区分大小写，请检查是否输入正确。",

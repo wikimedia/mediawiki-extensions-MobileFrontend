@@ -11,7 +11,8 @@
 			"Umherirrender",
 			"Wnme",
 			"ChrisiPK",
-			"Robby"
+			"Robby",
+			"Florian"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet",
@@ -342,5 +343,6 @@
 	"tag-mobile_web_edit": "Mobile Web-Bearbeitung",
 	"tag-mobile_web_edit-description": "Bearbeitet von der mobilen Website",
 	"mobile-frontend-pageaction-edit-tooltip": "Bearbeite den Einführungsabschnitt für diese Seite.",
-	"mobile-frontend-pageaction-upload-tooltip": "Lade ein Einführungsfoto für diese Seite hoch."
+	"mobile-frontend-pageaction-upload-tooltip": "Lade ein Einführungsfoto für diese Seite hoch.",
+	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren."
 }
