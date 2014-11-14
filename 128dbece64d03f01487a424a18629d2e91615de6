@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_f28e777b",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-14T21:31:08Z",
+      "side": 0,
+      "message": "You shouldn\u0027t remove this. It is different from stable. The reason it\u0027s different is that it is used to fix a bug with styling in alpha. Can\u0027t remember which bug though.",
+      "revId": "128dbece64d03f01487a424a18629d2e91615de6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
