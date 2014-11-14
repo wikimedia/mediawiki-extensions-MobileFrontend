@@ -935,26 +935,52 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.wikigrok.api' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/modules/wikigrok/WikiDataApi.js',
+			'javascripts/modules/wikigrok/WikiGrokSuggestionApi.js',
+			'javascripts/modules/wikigrok/WikiGrokResponseApi.js',
+		),
+	),
+
 	// See https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok
 	'mobile.wikigrok.dialog' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
 			'mobile.alpha',
+			'mobile.wikigrok.api',
 		),
 		'templates' => array(
 			'Dialog.hogan' => 'templates/modules/wikigrok/WikiGrokDialog.hogan',
 			'WikiGrokMoreInfo/content.hogan' => 'templates/modules/wikigrok/WikiGrokMoreInfo.hogan',
 		),
 		'scripts' => array(
-			'javascripts/modules/wikigrok/WikiDataApi.js',
-			'javascripts/modules/wikigrok/WikiGrokSuggestionApi.js',
-			'javascripts/modules/wikigrok/WikiGrokResponseApi.js',
 			'javascripts/modules/wikigrok/WikiGrokDialog.js',
 			'javascripts/modules/wikigrok/WikiGrokMoreInfo.js',
 		),
 		'styles' => array(
 			'less/modules/wikigrok/WikiGrokDialog.less',
 		),
+	),
+
+	'mobile.infobox' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.wikigrok.api',
+			'mobile.ajax',
+		),
+		'templates' => array(
+			'Infobox.hogan' => 'templates/modules/infobox/Infobox.hogan',
+		),
+		'scripts' => array(
+			'javascripts/modules/infobox/Infobox.js',
+		),
+		'styles' => array(
+			'less/modules/infobox.less',
+		),
+		'position' => 'top',
 	),
 
 	// Custom ResourceLoaderModule classes
@@ -1238,6 +1264,10 @@ $wgMinervaBootstrapModules = array(
 		'dependencies' => array(
 			'mobile.beta',
 			// Feature modules that should be loaded in alpha should be listed below here.
+			'mobile.infobox',
+		),
+		'scripts' => array(
+			'javascripts/modules/infobox/init.js',
 		),
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(

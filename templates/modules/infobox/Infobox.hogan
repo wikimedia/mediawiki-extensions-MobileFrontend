@@ -1,0 +1,14 @@
+<em>{{description}}</em>
+{{^rows}}
+<button class="mw-ui-button mw-ui-quiet mw-ui-progressive more">expand…</button>
+{{/rows}}
+{{{spinner}}}
+{{#rows}}
+<div>
+	{{^isEmpty}}{{#label}}<strong>{{label}}</strong>: {{/label}}{{/isEmpty}}
+	{{#values}}
+	{{#url}}<a href="{{url}}">{{value}}</a>{{/url}}
+	{{^url}}{{value}}{{/url}}
+	{{/values}}
+</div>
+{{/rows}}
