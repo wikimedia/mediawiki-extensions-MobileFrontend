@@ -36,7 +36,7 @@
 					gailimit: this.limit,
 					gaicontinue: this.endTimestamp,
 					prop: 'imageinfo',
-					origin: corsUrl ? M.getOrigin() : undefined,
+					origin: corsUrl ? this.getOrigin() : undefined,
 					// FIXME: [API] have to request timestamp since api returns an object
 					// rather than an array thus we need a way to sort
 					iiprop: 'url|timestamp',

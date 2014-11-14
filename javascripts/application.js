@@ -249,16 +249,6 @@
 	}
 
 	/**
-	 * Returns the current URL including protocol
-	 *
-	 * @method
-	 * @return {String}
-	 */
-	function getOrigin() {
-		return window.location.protocol + '//' + window.location.hostname;
-	}
-
-	/**
 	 * FIXME: sandbox from mf-application.js
 	 *
 	 * @method
@@ -389,7 +379,6 @@
 		escapeHash: escapeHash,
 		inNamespace: inNamespace,
 		getCurrentPage: getCurrentPage,
-		getOrigin: getOrigin,
 		getLeadSection: getLeadSection,
 		getSessionId: getSessionId,
 		isWideScreen: isWideScreen,

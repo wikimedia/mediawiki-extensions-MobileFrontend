@@ -133,10 +133,10 @@
 		 */
 		save: function ( options ) {
 			var isNewPage = mw.config.get( 'wgArticleId' ) === 0,
-			isNewFile = M.inNamespace( 'file' ) && isNewPage,
-			self = this,
-			result = $.Deferred(),
-			apiUrl = endpoint || this.apiUrl;
+				isNewFile = M.inNamespace( 'file' ) && isNewPage,
+				self = this,
+				result = $.Deferred(),
+				apiUrl = endpoint || this.apiUrl;
 
 			options.editSummaryMessage = options.insertInPage ?
 				'mobile-frontend-photo-article-edit-comment' :
@@ -170,7 +170,7 @@
 
 				// add origin only when doing CORS
 				if ( endpoint ) {
-					uploadUrl += '&origin=' + M.getOrigin();
+					uploadUrl += '&origin=' + self.getOrigin();
 					if ( caToken ) {
 						data.centralauthtoken = caToken;
 					}

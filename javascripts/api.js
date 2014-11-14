@@ -100,6 +100,16 @@
 		},
 
 		/**
+		 * Returns the current URL including protocol
+		 *
+		 * @method
+		 * @return {String}
+		 */
+		getOrigin: function () {
+			return window.location.protocol + '//' + window.location.hostname;
+		},
+
+		/**
 		 * Retrieves a token for a given endpoint
 		 * FIXME: consolidate with mw.Api.getToken
 		 * use postWithToken / getToken where possible
@@ -149,7 +159,7 @@
 					type: tokenType
 				};
 				if ( endpoint ) {
-					data.origin = M.getOrigin();
+					data.origin = this.getOrigin();
 					if ( caToken ) {
 						data.centralauthtoken = caToken;
 					}

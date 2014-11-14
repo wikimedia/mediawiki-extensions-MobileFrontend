@@ -83,7 +83,7 @@ QUnit.module( 'MobileFrontend api.getToken', {
 			xhrFields: { withCredentials: true }
 		};
 		corsData = { action: 'tokens', type: 'watch',
-			origin: M.getOrigin()
+			origin: this.api.getOrigin()
 		};
 		corsParams = {
 			url: 'http://commons.wikimedia.org/w/api.php',
