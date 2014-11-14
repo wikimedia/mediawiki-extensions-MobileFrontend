@@ -176,8 +176,6 @@
 		hide: function ( force ) {
 			var self = this;
 
-			// FIXME: allow zooming outside the overlay again
-			// M.unlockViewport();
 			// FIXME: remove when OverlayManager used everywhere
 			if ( this.parent ) {
 				this.parent.show();

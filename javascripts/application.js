@@ -106,15 +106,6 @@
 	}
 
 	/**
-	 * Unlocks viewport so that pinch zooming is enabled
-	 *
-	 * @method
-	 */
-	function unlockViewport() {
-		$viewportMeta.attr( 'content', viewport );
-	}
-
-	/**
 	 * Tests current window size and if suitable loads styles and scripts specific for larger devices
 	 * FIXME: Separate from application.js
 	 *
@@ -268,15 +259,6 @@
 	}
 
 	/**
-	 * Tidy up a page title
-	 * @method
-	 * @return {String}
-	 */
-	function prettyEncodeTitle( title ) {
-		return encodeURIComponent( title.replace( / /g, '_' ) ).replace( /%3A/g, ':' ).replace( /%2F/g, '/' );
-	}
-
-	/**
 	 * FIXME: sandbox from mf-application.js
 	 *
 	 * @method
@@ -319,7 +301,7 @@
 		return sessionId;
 	}
 
-	/**
+	/*
 	 * Takes a Query string and turns it into a JavaScript object mapping parameter names
 	 * to values. Does the opposite of $.param
 	 *
@@ -417,9 +399,7 @@
 		supportsPositionFixed: supportsPositionFixed,
 		isIos: isIos,
 		isIos8: isIos8,
-		prettyEncodeTitle: prettyEncodeTitle,
 		query: deParam( qs ),
-		unlockViewport: unlockViewport,
 		/**
 		 * Navigation router instance
 		 * @type {Router}
@@ -435,7 +415,6 @@
 		 * @type {PageApi}
 		 */
 		pageApi: pageApi,
-		deParam: deParam,
 		/**
 		 * User Bucketing for A/B testing
 		 ** (we want this to be the same everywhere)
