@@ -34,6 +34,24 @@
       "revId": "738e06d9c03bd371efdde2cc09acfdd09af406a4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_549960c5",
+        "filename": "less/pagelist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-14T00:46:30Z",
+      "side": 1,
+      "message": "I\u0027m not sure what 1.75em is in this context but if it\u0027s equating to 12px and it makes sense we should standardise with a generic class name in Overlay.less e.g. overlay-content-element as we are introducing similar code 3 times. At very least we should recognise this with a FIXME.",
+      "parentUuid": "6e936f18_747edc68",
+      "revId": "738e06d9c03bd371efdde2cc09acfdd09af406a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
