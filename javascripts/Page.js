@@ -23,7 +23,6 @@
 			 */
 			title: '',
 			displayTitle: '',
-			lead: '',
 			protection: {
 				edit: [ '*' ]
 			},
@@ -40,6 +39,15 @@
 			options.displayTitle = options.displayTitle || options.title;
 			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 			View.prototype.initialize.apply( this, arguments );
+		},
+
+		/**
+		 * Get the lead section of the page view.
+		 * @method
+		 * @return {jQuery.Object}
+		 */
+		getLeadSectionElement: function () {
+			return this.$( '> div' ).eq( 0 );
 		},
 
 		/**
@@ -144,7 +152,6 @@
 			this.sections = [];
 			this._sectionLookup = {};
 			this.title = options.title;
-			this.lead = options.lead;
 
 			$.each( options.sections, function () {
 				var section = new Section( this );

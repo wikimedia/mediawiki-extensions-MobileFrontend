@@ -87,7 +87,8 @@
 			var WikiGrokDialog = M.require( versionConfig.view );
 
 			// Initialize the dialog and insert it into the page (but don't display yet)
-			function init() {
+			// FIXME: why is this a function and not just inline code?
+			function init( page ) {
 				var dialog = new WikiGrokDialog( {
 					itemId: wikidataID,
 					title: mw.config.get( 'wgTitle' ),
@@ -95,14 +96,16 @@
 					testing: ( idOverride ) ? true : false
 				} );
 
+				// FIXME: If the table of contents code is not loaded the dialog will still
+				//   get added to the end of the lead section.
 				if ( $( '.toc-mobile' ).length ) {
 					dialog.insertBefore( '.toc-mobile' );
 				} else {
-					dialog.appendTo( M.getLeadSection() );
+					dialog.appendTo( page.getLeadSectionElement() );
 				}
 			}
 
-			init();
+			init( M.getCurrentPage() );
 		} ).fail( function () {
 			var data = {
 				error: 'no-impression-cannot-load-interface',

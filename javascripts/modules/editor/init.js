@@ -153,7 +153,7 @@
 		// Make sure we never create two edit links by accident
 		if ( $( '#ca-edit .edit-page' ).length === 0 ) {
 			// FIXME: unfortunately the main page is special cased.
-			if ( mw.config.get( 'wgIsMainPage' ) || isNewPage || M.getLeadSection().text() ) {
+			if ( mw.config.get( 'wgIsMainPage' ) || isNewPage || page.getLeadSectionElement().text() ) {
 				// if lead section is not empty, open editor with lead section
 				addEditButton( 0, '#ca-edit' );
 			} else {
