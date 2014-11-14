@@ -28,34 +28,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * initialize various variables and generate the template
-	 * @return QuickTemplate
-	 */
-	protected function prepareQuickTemplate() {
-		$tpl = parent::prepareQuickTemplate();
-		// Move last modified link to top as long as it is not the main page
-		$tpl->set( '_lastModifiedAbove', !$this->getTitle()->isMainPage() );
-		return $tpl;
-	}
-
-	/**
-	 * Get various skin specific configuration.
-	 * @return array
-	 */
-	public function getSkinConfigVariables() {
-		$vars = parent::getSkinConfigVariables();
-		// Kill this when we fix the functionality in PageApi.js
-		$user = $this->getUser();
-		if ( $user->isLoggedIn() ) {
-			$vars['wgMFUserGender'] = $this->getUser()->getOption( 'gender' );
-		} else {
-			$vars['wgMFUserGender'] = 'unknown';
-		}
-
-		return $vars;
-	}
-
-	/**
 	 * Returns the javascript modules to load.
 	 * @return array
 	 */
