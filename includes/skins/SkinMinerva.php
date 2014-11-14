@@ -837,8 +837,20 @@ class SkinMinerva extends SkinTemplate {
 			$vars['wgMFIsLoggedInUserBlocked'] = $user->isBlocked() && $user->isBlockedFrom( $title );
 		}
 
-		$vars['wgMFShowRedLinks'] = ( $this->mobileContext->isBetaGroupMember() && $wgMFShowRedLinks )
-			|| ( $wgMFShowRedLinksAnon && $user->isAnon() );
+		// init with false
+		$vars['wgMFShowRedLinks'] = false;
+
+		// in beta redlinks are visible for logged in users (no matter what config vars say)
+		if ( $this->mobileContext->isBetaGroupMember() ) {
+			if ( $user->isLoggedIn() ) {
+				$vars['wgMFShowRedLinks'] = true;
+			}
+		} elseif (
+			( $wgMFShowRedLinks && $user->isLoggedIn() ) // ...for logged in users
+			|| ( $wgMFShowRedLinksAnon && $user->isAnon() ) // ...for anonymous users
+		) {
+			$vars['wgMFShowRedLinks'] = true;
+		}
 
 		// Get variables that are only needed in mobile mode
 		if ( $this->isMobileMode ) {
