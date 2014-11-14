@@ -35,6 +35,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 
 	/**
 	 * Creates element relating to secondary button
+	 * Unlike method in stable adds span outside the link element.
 	 * @param string $title Title attribute value of secondary button
 	 * @param string $url of secondary button
 	 * @param string $spanLabel text of span associated with secondary button.
