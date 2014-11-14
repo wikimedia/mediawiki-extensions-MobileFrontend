@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_1cf77ad1",
+        "filename": "javascripts/icons.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-14T18:45:04Z",
+      "side": 1,
+      "message": "Is this comment necessary? This is what hasText does and in stable/beta it\u0027s not currently mw-ui-icon-element so it\u0027s confusing.",
+      "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_fcf96ec1",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-14T18:45:04Z",
+      "side": 1,
+      "message": "$spinner \u003d $( icons.spinner().toHtmlString() );\n$btn.hide().after( $spinner )",
+      "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_dcfcb2b4",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-14T18:45:04Z",
+      "side": 1,
+      "message": "$spinner.remove here",
+      "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_3c1b5621",
+        "filename": "less/iconsNew.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-14T18:45:04Z",
+      "side": 1,
+      "message": "If we can avoid these lines this would be cool. The CtaDrawer has the same problem of centering and uses margins on the parent class. Do this instead?",
+      "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
