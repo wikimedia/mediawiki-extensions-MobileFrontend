@@ -16,6 +16,24 @@
       "revId": "558e6233834fd0633000313c92210fa231baca9e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5e373a4a",
+        "filename": "Gruntfile.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-14T16:05:14Z",
+      "side": 1,
+      "message": "Now it is configurable the same way, it will use $URL if it is defined when invoking grunt.\n\nThat is so weird, the error...\n\nCan you run npm install and npm update?\n\nAre you sure you had the server up and running properly without errors? That error comes out when it can\u0027t access a valid testing html (which we have at that url, it works for me with the exact same url)\n\nMaybe try again?",
+      "parentUuid": "6e936f18_ae03b1c0",
+      "revId": "558e6233834fd0633000313c92210fa231baca9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
