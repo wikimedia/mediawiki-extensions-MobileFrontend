@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_dc4a72c8",
+        "filename": "javascripts/icons.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-14T20:09:55Z",
+      "side": 1,
+      "message": "You\u0027re right. Done.",
+      "parentUuid": "6e936f18_1cf77ad1",
+      "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_fcf96ec1",
         "filename": "javascripts/modules/notifications/notifications.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2014-11-14T18:45:04Z",
       "side": 1,
       "message": "$spinner \u003d $( icons.spinner().toHtmlString() );\n$btn.hide().after( $spinner )",
+      "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_9c186ad9",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-14T20:09:55Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6e936f18_fcf96ec1",
       "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_bc1d26c9",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-14T20:09:55Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6e936f18_dcfcb2b4",
+      "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_3c1b5621",
         "filename": "less/iconsNew.less",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2014-11-14T18:45:04Z",
       "side": 1,
       "message": "If we can avoid these lines this would be cool. The CtaDrawer has the same problem of centering and uses margins on the parent class. Do this instead?",
+      "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_dc59125f",
+        "filename": "less/iconsNew.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-11-14T20:09:55Z",
+      "side": 1,
+      "message": "Done. I\u0027ve added rules similar to those for the drawer close button to ui so they cover all uses of the spinner.",
+      "parentUuid": "6e936f18_3c1b5621",
       "revId": "1bdca8286ebedf77e31310074d7a7be365896060",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
