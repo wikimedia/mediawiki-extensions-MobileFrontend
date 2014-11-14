@@ -16,6 +16,24 @@
       "revId": "c418dad79895595a7e4bca67862105f5d0de8e82",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_946da8c9",
+        "filename": "less/Overlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-14T00:41:07Z",
+      "side": 1,
+      "message": "Yup. Don\u0027t do this :P\nWhatever works for button should work for a.\nIf something isn\u0027t you\u0027ll need to work out why it\u0027s not applying.\n\nPS. No camel case css selectors!",
+      "parentUuid": "6e936f18_bfa1a5f6",
+      "revId": "c418dad79895595a7e4bca67862105f5d0de8e82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
