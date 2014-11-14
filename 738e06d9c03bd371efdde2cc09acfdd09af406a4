@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_19055116",
+        "filename": "less/pagelist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-14T00:33:24Z",
+      "side": 1,
+      "message": "Merge these into one padding rule.\n\nAlso note we have:\n.overlay .panel { padding: 12px @contentPaddingTablet;\n.notifications-overlay .mw-echo-notification { padding: 1.75em @contentPaddingTablet;\n\nI\u0027m sensing a pattern and it would be good to get one rule for all 3 of these.",
+      "revId": "738e06d9c03bd371efdde2cc09acfdd09af406a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
