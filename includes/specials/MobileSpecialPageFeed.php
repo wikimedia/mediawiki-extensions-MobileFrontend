@@ -122,9 +122,9 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$formattedBytes = $lang->formatNum( $bytes );
 			if ( $bytes > 0 ) {
 				$formattedBytes = '+' . $formattedBytes;
-				$bytesClass = MobileUI::iconClass( 'bytesadded', 'before', 'icon-12px mw-mf-bytesadded' );
+				$bytesClass = 'mw-mf-bytesadded';
 			} else {
-				$bytesClass = MobileUI::iconClass( 'bytesremoved', 'before', 'icon-12px mw-mf-bytesremoved' );
+				$bytesClass = 'mw-mf-bytesremoved';
 			}
 			$html .= Html::element(
 				'p',
