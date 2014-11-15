@@ -49,7 +49,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 				'url' => '#/categories',
 				// add hidden class (the overlay works only, when JS is enabled (class will
 				// be removed in categories/init.js)
-				'class' => 'categoryButton hidden',
+				'class' => 'category-button hidden',
 				'label' => wfMessage( 'categories' )->text()
 			);
 		}

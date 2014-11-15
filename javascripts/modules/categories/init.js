@@ -19,7 +19,7 @@
 	 * Enable the categories button
 	 */
 	function initButton() {
-		$( '.categoryButton' ).removeClass( 'hidden' );
+		$( '.category-button' ).removeClass( 'hidden' );
 	}
 
 	$( initButton );
