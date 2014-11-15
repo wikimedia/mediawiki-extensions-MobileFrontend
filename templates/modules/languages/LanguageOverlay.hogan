@@ -3,7 +3,7 @@
 </div>
 {{#variantHeader}}
 <h3 class="list-header">{{{variantHeader}}}</h3>
-<ul class="page-list">
+<ul class="language-list">
 	{{#variants}}
 		<li>
 			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}">{{langname}}</a>
@@ -15,7 +15,7 @@
 {{#variantHeader}}
 <h3 class="list-header">{{{header}}}</h3>
 {{/variantHeader}}
-<ul class="page-list">
+<ul class="language-list">
 	{{#languages}}
 		<li {{#preferred}}class="preferred"{{/preferred}}>
 			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langname}}</span>{{#title}} | {{title}}{{/title}}</a>

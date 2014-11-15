@@ -77,7 +77,7 @@
 				this.showSpinner();
 
 				// clear actual content, if any
-				this.$( '.page-list' ).empty();
+				this.$( '.topic-title-list' ).empty();
 
 				// FIXME: use Page's mechanisms for retrieving page data instead
 				M.pageApi.getPage( options.title ).fail( function ( resp ) {

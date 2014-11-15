@@ -82,7 +82,10 @@
 // </ul>
 //
 // Styleguide 5.2.
-.page-list {
+// FIXME: This should be one generic class name only
+.page-list,
+.topic-title-list,
+.language-list {
 	// needed for rotated watchstars to avoid horizontal scrollbar
 	overflow: hidden;
 
@@ -182,9 +185,9 @@
 
 // FIXME: combine with a similar pattern in modules/NotificationsOverlay.less
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	.overlay {
-		.page-list {
-			padding: @itemPaddingV @contentPaddingTablet;
-		}
+	// FIXME: this should be one generic class name
+	.topic-title-list,
+	.language-list {
+		padding: @itemPaddingV @contentPaddingTablet;
 	}
 }

@@ -2,7 +2,7 @@
 	<p class="content-header">
 		{{explanation}}
 	</p>
-	<ul class="page-list">
+	<ul class="topic-title-list">
 		{{#headings}}
 			<li>
 				<a data-id="{{id}}" href="#/talk/{{id}}">{{line}}</a>

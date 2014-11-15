@@ -54,10 +54,10 @@ QUnit.test( '#TalkOverlay (logged in)', 2, function( assert ) {
 QUnit.test( '#TalkOverlay (existing page lists section headings)', 4, function( assert ) {
 	var overlay = new TalkOverlay( { title: 'Talk:Topic' } );
 
-	assert.ok( overlay.$( '.page-list li' ).length === 1, 'One topic heading is listed' );
-	assert.strictEqual( overlay.$( '.page-list li a' ).eq( 0 ).text(), 'Topic 1',
+	assert.ok( overlay.$( '.topic-title-list li' ).length === 1, 'One topic heading is listed' );
+	assert.strictEqual( overlay.$( '.topic-title-list li a' ).eq( 0 ).text(), 'Topic 1',
 		'The text of the second item is the section heading.' );
-	assert.strictEqual( overlay.$( '.page-list li a' ).data( 'id' ), 50,
+	assert.strictEqual( overlay.$( '.topic-title-list li a' ).data( 'id' ), 50,
 		'The data id is set.' );
 	assert.strictEqual( $.trim( overlay.$( '.content-header' ).text() ),
 		mw.msg( 'mobile-frontend-talk-explained' ),
