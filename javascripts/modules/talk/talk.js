@@ -1,13 +1,12 @@
 ( function ( M, $ ) {
-	var licenseLink = mw.config.get( 'wgMFLicenseLink' ),
-		talkPrefix = mw.config.get( 'wgFormattedNamespaces' )[ mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
+	var licenseLink = mw.config.get( 'wgMFLicenseLink' );
 
 	M.assertMode( [ 'beta', 'alpha', 'app' ] );
 
 	M.overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
 			talkOptions = {
-				title: talkPrefix + M.getCurrentPage().title
+				title: $( '#ca-talk a' ).data( 'title' )
 			};
 
 		if ( $( '#footer-places-terms-use' ).length > 0 ) {
