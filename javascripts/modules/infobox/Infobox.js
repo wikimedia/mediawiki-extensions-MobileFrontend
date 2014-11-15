@@ -7,10 +7,10 @@
 
 	/**
 	 * A Wikidata generated infobox.
+	 * Emits photo-loaded event when images in the infobox have loaded.
 	 * FIXME: This currently requires 2 hits to the Wikidata API on every page load.
 	 * @class Infobox
 	 * @extends View
-	 * @fires photo-loaded when all ajax requests have completed
 	 */
 	Infobox = View.extend( {
 		template: mw.template.get( 'mobile.infobox', 'Infobox.hogan' ),
@@ -114,6 +114,7 @@
 		/**
 		 * Given a title work out the url to the thumbnail for that image
 		 * FIXME: This should not make its way into stable.
+		 * @method
 		 * @param {String} title of file page without File: prefix
 		 * @return {String} url corresponding to thumbnail (size 160px)
 		 */
@@ -124,7 +125,7 @@
 			// uppercase first letter in file name
 			filename = title.charAt( 0 ).toUpperCase() + title.substr( 1 );
 			// replace spaces with underscores
-			filename = filename.replace(/ /g, '_');
+			filename = filename.replace( / /g, '_' );
 			md5 = md5fn( filename );
 			source = md5.charAt( 0 ) + '/' + md5.substr( 0, 2 ) + '/' + filename;
 			if ( filename.substr( filename.length - 3 ) !== 'svg' ) {
