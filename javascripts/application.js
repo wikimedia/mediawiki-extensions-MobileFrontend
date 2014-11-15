@@ -22,7 +22,10 @@
 		inWideScreenMode = false,
 		ua = window.navigator.userAgent,
 		isIos = /ipad|iphone/i.test( ua ),
-		isIos8 = isIos && /OS 8_/.test( ua ),
+		// Test UA for iOS8. Or for simulator look for Version 8
+		// In the iOS simulator the OS is the host machine OS version
+		// This makes testing in iOS8 simulator work as expected
+		isIos8 = isIos && /OS 8_/.test( ua ) || /Version\/8/.test( ua ),
 		isIPhone4 = isIos && /OS 4_/.test( ua ),
 		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua ),
 		isIPhone5 = isIos && /OS 5_/.test( ua ),
