@@ -16,6 +16,24 @@
       "revId": "1656cbd62429034e33aa274621369d4065fb79a2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_45320207",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-15T00:16:40Z",
+      "side": 1,
+      "message": "Yeh we technically support IE8 so we need to worry about this [1]\n\n[1] https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement.setSelectionRange",
+      "parentUuid": "6e936f18_6dafe678",
+      "revId": "1656cbd62429034e33aa274621369d4065fb79a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
