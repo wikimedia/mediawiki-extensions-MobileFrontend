@@ -32,7 +32,7 @@
 					var title = mw.Title.newFromText( category, 14 );
 					options.items.push( {
 						url: title.getUrl(),
-						title: title.getName()
+						title: title.getNameText()
 					} );
 				} );
 			}
