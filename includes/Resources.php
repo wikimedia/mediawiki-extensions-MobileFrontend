@@ -191,6 +191,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.leadPhotoUploader' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.user',
+			'mobile.upload.ui',
+		),
+		'scripts' => array(
+			'javascripts/modules/uploads/init.js',
+		),
+		// This is a logged in user feature only.
+		'group' => 'user',
+	),
+
 	'mobile.editor' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable.common',
@@ -1244,7 +1257,6 @@ $wgMinervaBootstrapModules = array(
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
-			'javascripts/modules/uploads/init.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/mediaViewer/init.js',
 			'javascripts/modules/languages/init.js',
