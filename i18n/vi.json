@@ -20,6 +20,9 @@
 	"mobile-frontend-account-create-submit": "Mở tài khoản",
 	"mobile-frontend-app-title": "Ứng dụng Di động",
 	"mobile-frontend-back-to-top-of-section": "Nhảy về đầu phần",
+	"mobile-frontend-categories-heading": "<strong>Thể loại</strong>",
+	"mobile-frontend-categories-subheading": "Trang được xếp vào các thể loại sau:",
+	"mobile-frontend-categories-nocat": "Trang này chưa được xếp vào thể loại nào.",
 	"mobile-frontend-changeslist-ip": "Người dùng vô danh",
 	"mobile-frontend-changeslist-nocomment": "không có tóm lược sửa đổi",
 	"mobile-frontend-clear-search": "Tẩy trống",
@@ -193,6 +196,7 @@
 	"mobile-frontend-nearby-requirements": "Rất tiếc, trình duyệt của bạn không hỗ trợ {{SITENAME}} Lân cận.",
 	"mobile-frontend-nearby-requirements-guidance": "Hãy thử một trình duyệt khác hoặc kích hoạt JavaScript nếu nó đã bị tắt.",
 	"mobile-frontend-nearby-title": "Lân cận",
+	"mobile-frontend-nearby-sectiontext": "Lân cận trang này",
 	"mobile-frontend-news-items": "Tin tức",
 	"mobile-frontend-opt-in-explain": "Với việc tham gia cuộc thử nghiệm, bạn có thể sử dụng các tính năng thử nghiệm nhưng cũng có thể gặp lỗi và vấn đề trục trặc.",
 	"mobile-frontend-overlay-close": "Đóng",
@@ -245,6 +249,7 @@
 	"mobile-frontend-profile-userpage-link": "Xem trang {{GENDER:$1}}thành viên.",
 	"mobile-frontend-profile-usertalk": "Thảo luận với $1",
 	"mobile-frontend-random-button": "Ngẫu nhiên",
+	"mobile-frontend-references-citation": "Trích dẫn",
 	"mobile-frontend-regular-site": "Bản dành cho máy tính để bàn",
 	"mobile-frontend-requires-mobile": "Trang này không có sẵn trên máy tính để bàn. Xin hãy nhấn chuột vào liên kết “Phiên bản di động” ở cuối trang.",
 	"mobile-frontend-requires-optin": "Để xem trang này, hãy quyết định kích hoạt chế độ beta. Mở [[Special:MobileOptions|trang tùy chọn]] để kích hoạt.",
@@ -336,5 +341,6 @@
 	"mobile-frontend-pageaction-edit-tooltip": "Sửa đổi phần mở đầu của trang này.",
 	"mobile-frontend-pageaction-upload-tooltip": "Tải một hình lên phần mở đầu của trang này.",
 	"apihelp-mobileview-param-noimages": "Cho ra mã HTML không có hình ảnh.",
+	"apihelp-mobileview-param-thumbnail": "Kích thước tối đa của hình nhỏ.",
 	"apihelp-parse-param-noimages": "Tắt hình ảnh trên di động."
 }

@@ -81,7 +81,7 @@
 	"mobile-frontend-editor-error-preview": "Fout. Er is iets onverwachts gebeurd tijdens het laden van de voorvertoning. Sluit dit venster en probeer het opnieuw.",
 	"mobile-frontend-editor-keep-editing": "Doorgaan met bewerken",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Weet u zeker}} dat u een nieuwe pagina wilt maken op {{SITENAME}}?",
-	"mobile-frontend-editor-newpage-prompt": "Deze pagina bestaat niet. Waarom maak je hem niet aan?",
+	"mobile-frontend-editor-newpage-prompt": "Deze pagina bestaat niet. Waarom maakt u hem niet aan?",
 	"mobile-frontend-editor-placeholder": "Deze paragraaf bevat geen tekst. U kunt de eerste zijn die hem schrijft!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|U}} maakt een nieuwe pagina aan op {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<strong>Voorvertoning van</strong><span> $1</span>",
