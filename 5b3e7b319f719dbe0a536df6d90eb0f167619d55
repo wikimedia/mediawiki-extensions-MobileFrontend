@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_d1f32fe1",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-17T09:50:58Z",
+      "side": 1,
+      "message": "I would add here:\n\n    // Method detection because of IE8\n\nThat way if we ever get rid of it, searching for ie8 to remove cruft added because of it would pop this up",
+      "revId": "5b3e7b319f719dbe0a536df6d90eb0f167619d55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
