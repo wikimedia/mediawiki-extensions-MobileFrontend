@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_196775b5",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-17T23:54:14Z",
+      "side": 1,
+      "message": "I don\u0027t really like this as it forces the code down a different code path than normal. Id rather stub the getClaims function to provide a better simulator of what actually happens.... what do you think?",
+      "revId": "fd8608ba15910dff06882e7b2debdb4b14283f3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
