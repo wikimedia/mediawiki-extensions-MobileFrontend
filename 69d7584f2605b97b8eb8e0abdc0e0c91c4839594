@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_51acff9c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 884,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-17T10:04:03Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be below `if ( $user-\u003eisLoggedIn() )` if it is only for logged in users?",
+      "revId": "69d7584f2605b97b8eb8e0abdc0e0c91c4839594",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
