@@ -10,7 +10,7 @@ module.exports = function ( grunt ) {
 
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
-	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
+	grunt.loadNpmTasks( 'grunt-qunit-istanbul' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-notify' );
 	grunt.loadNpmTasks( 'grunt-svg2png' );
@@ -45,7 +45,25 @@ module.exports = function ( grunt ) {
 		qunit: {
 			all: {
 				options: {
-					urls: [ '<%= URL %>Special:JavaScriptTest/qunit?useformat=mobile<%= QUNIT_FILTER %><%= QUNIT_MODULE %>' ]
+					urls: [
+						'<%= URL %>Special:JavaScriptTest/qunit?useformat=mobile' +
+						'<%= QUNIT_FILTER %><%= QUNIT_MODULE %>'
+					]
+				}
+			},
+			cov: {
+				options: {
+					urls: [
+						'<%= URL %>Special:JavaScriptTest/qunit?debug=true&useformat=mobile' +
+						'<%= QUNIT_FILTER %><%= QUNIT_MODULE %>'
+					],
+					coverage: {
+						prefixUrl: 'w/', // Prefix url on the server
+						baseUrl: '../../', // Path to assets from the server (extensions/Mobile...)
+						src: [ '<%= files.js %>', '!<%= files.jsExternals %>' ],
+						instrumentedFiles: 'tests/report/tmp',
+						htmlReport: 'tests/report'
+					}
 				}
 			}
 		},
