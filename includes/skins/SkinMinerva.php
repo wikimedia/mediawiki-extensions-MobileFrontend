@@ -873,6 +873,15 @@ class SkinMinerva extends SkinTemplate {
 		$req = $this->getRequest();
 		$action = $req->getVal( 'article_action' );
 		$campaign = $req->getVal( 'campaign' );
+		$title = $this->getTitle();
+
+		if (
+			$this->isAllowedPageAction( 'upload' )
+			&& !$title->isMainPage()
+			&& $this->mobileContext->userCanUpload()
+		) {
+			$modules[] = 'mobile.leadPhotoUploader';
+		}
 
 		if ( $user->isLoggedIn() ) {
 			// enable the user module
