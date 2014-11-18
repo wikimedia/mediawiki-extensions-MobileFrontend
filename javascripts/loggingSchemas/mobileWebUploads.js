@@ -1,7 +1,9 @@
 ( function ( M, $ ) {
 	var user = M.require( 'user' );
+
 	function getLog( funnel ) {
-		return function ( data ) {
+
+		function logger( data ) {
 			if ( mw.config.get( 'wgArticleId', -1 ) !== -1 ) {
 				data.pageId = mw.config.get( 'wgArticleId' );
 			}
@@ -13,7 +15,9 @@
 				isEditable: mw.config.get( 'wgIsPageEditable' ),
 				mobileMode: M.getMode()
 			}, data ) );
-		};
+		}
+
+		return logger;
 	}
 
 	M.define( 'loggingSchemas/mobileWebUploads', { getLog: getLog } );
