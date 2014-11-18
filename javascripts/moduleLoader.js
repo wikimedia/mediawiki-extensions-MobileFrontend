@@ -29,4 +29,4 @@
 		}
 	}, M );
 
-} ( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, jQuery ) );

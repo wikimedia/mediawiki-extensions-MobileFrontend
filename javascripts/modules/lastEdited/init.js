@@ -32,17 +32,19 @@
 				args = args.concat( [ 'mobile-frontend-last-modified-with-user-just-now', gender, username ] );
 			} else {
 				args = args.concat( [ keys[ delta.unit ], gender, username,
-						mw.language.convertNumber( delta.value ) ] );
+					mw.language.convertNumber( delta.value )
+				] );
 			}
 			if ( time.isRecent( delta ) ) {
 				$lastModified.addClass( 'active' );
 			}
 
 			args = args.concat( [ historyUrl,
-					// Abuse PLURAL support to determine if the user is anonymous or not
-					mw.language.convertNumber( username ? 1 : 0 ),
-					// I'll abuse of PLURAL support means we have to pass the relative URL rather than construct it from a wikilink
-					username ? mw.util.getUrl( 'Special:UserProfile/' + username ) : '' ] );
+				// Abuse PLURAL support to determine if the user is anonymous or not
+				mw.language.convertNumber( username ? 1 : 0 ),
+				// I'll abuse of PLURAL support means we have to pass the relative URL rather than construct it from a wikilink
+				username ? mw.util.getUrl( 'Special:UserProfile/' + username ) : ''
+			] );
 
 			$( '<div>' ).attr( 'id', 'mw-mf-last-modified' )
 				.attr( 'class', $lastModified.attr( 'class' ) )

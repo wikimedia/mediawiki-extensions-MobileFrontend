@@ -1,7 +1,8 @@
 ( function ( M ) {
 	var Overlay = M.require( 'Overlay' ),
-	Icon = M.require( 'Icon' ),
-	icon = new Icon( { name: 'cleanup-gray', additionalClassNames: 'issue-notice', hasText: true } ),
+		Icon = M.require( 'Icon' ),
+		icon = new Icon( { name: 'cleanup-gray', additionalClassNames: 'issue-notice', hasText: true } ),
+		CleanupOverlay;
 
 	/**
 	 * Overlay for displaying page issues

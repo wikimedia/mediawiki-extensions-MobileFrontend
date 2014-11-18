@@ -43,9 +43,9 @@
 		assertMode: function ( modes ) {
 			var mode = this.getMode();
 			if ( $.inArray( mode, modes ) === -1 ) {
-				throw new Error( 'Attempt to run module outside declared environment mode ' + mode  );
+				throw new Error( 'Attempt to run module outside declared environment mode ' + mode );
 			}
 		}
 	}, mw.mantle );
 
-} ( jQuery ) );
+}( jQuery ) );

@@ -231,7 +231,7 @@
 	} else if ( isNewFile ) {
 		// Is a new file page (enable upload image only) Bug 58311
 		showSorryToast( 'mobile-frontend-editor-uploadenable' );
-	} else	{
+	} else {
 		if ( user.isAnon() ) {
 			// Set edit button to launch login CTA
 			if ( mw.config.get( 'wgMFAnonymousEditing' ) ) {
