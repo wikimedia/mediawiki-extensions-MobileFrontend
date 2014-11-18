@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_9c21334d",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-18T01:03:53Z",
+      "side": 1,
+      "message": "I\u0027m not changing the existing behaviour. The purpose of futureLog is that it slows down clicks. If you click a link waiting for the event to be logged adds an unnecessary delay depending on your connection. It results in false positives - e.g. multiple clicks on the same link due to the low responsiveness and makes the UI in general feel less responsive.",
+      "parentUuid": "6e936f18_48a1c58f",
+      "revId": "b93a5535379f39552e708b3d202440fa1b67e336",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_08a73da5",
         "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2014-11-13T20:54:17Z",
       "side": 1,
       "message": "I\u0027m not sure why there is a need for this and futureLog functions?",
+      "revId": "b93a5535379f39552e708b3d202440fa1b67e336",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_bc242f5b",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-18T01:03:53Z",
+      "side": 1,
+      "message": "See above comment.\nWe added this a while ago after complaints about slowness.\n\nI\u0027m not adding this code. I\u0027m just refactoring it.",
+      "parentUuid": "6e936f18_08a73da5",
       "revId": "b93a5535379f39552e708b3d202440fa1b67e336",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
