@@ -43,6 +43,8 @@
 			this.searchCache = {};
 		},
 
+		// FIXME: remove filtering of redirects once the upstream bug has been fixed:
+		// https://bugzilla.wikimedia.org/show_bug.cgi?id=73673
 		search: function ( query ) {
 			if ( !this.searchCache[query] ) {
 				this.searchCache[query] = this.get( {
@@ -55,30 +57,57 @@
 					piprop: 'thumbnail',
 					pithumbsize: mw.config.get( 'wgMFThumbnailSizes' ).tiny,
 					pilimit: 15,
+					redirects: '',
 					list: 'prefixsearch',
 					pssearch: query,
 					pslimit: 15
 				} ).then( function ( data ) {
 					var results = [],
-						info = {};
+						pages = {},
+						redirects = {},
+						pageIds = [];
 
-					if ( data.query && data.query.pages && data.query.prefixsearch ) {
-						// We loop through the prefixsearch results (rather than the pages
-						// results) here in order to maintain the correct order.
-						$.each( data.query.prefixsearch, function ( i, page ) {
-							var title = page.title;
-							if ( page.pageid && data.query.pages[page.pageid] ) {
-								info = data.query.pages[page.pageid];
-							}
-							results.push( {
-								id: page.pageid,
-								heading: highlightSearchTerm( title, query ),
-								title: title,
-								url: mw.util.getUrl( title ),
-								thumbnail: info.thumbnail
+					if ( data.query ) {
+						// get redirects into an easily searchable shape
+						if ( data.query.redirects ) {
+							$.each( data.query.redirects, function ( i, redirect ) {
+								redirects[redirect.from] = redirect.to;
 							} );
-						} );
+						}
+						if ( data.query.pages && data.query.prefixsearch ) {
+							// get results into an easily searchable shape
+							$.each( data.query.pages, function ( i, result ) {
+								pages[result.title] = result;
+							} );
+
+							// We loop through the prefixsearch results (rather than the pages
+							// results) here in order to maintain the correct order.
+							$.each( data.query.prefixsearch, function ( i, page ) {
+								var info, title = page.title, id = page.pageid;
+
+								// Is this a redirect? If yes, get the target.
+								if ( redirects[title] ) {
+									id = pages[redirects[title]].pageid;
+								}
+
+								if ( id && data.query.pages[id] ) {
+									info = data.query.pages[id];
+								}
+
+								if ( info && $.inArray( id, pageIds ) === -1 ) {
+									pageIds.push ( id );
+									results.push( {
+										id: info.id,
+										heading: highlightSearchTerm( info.title, query ),
+										title: info.title,
+										url: mw.util.getUrl( info.title ),
+										thumbnail: info.thumbnail
+									} );
+								}
+							} );
+						}
 					}
+
 					return {
 						query: query,
 						results: results
