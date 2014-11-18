@@ -749,6 +749,11 @@ class SkinMinerva extends SkinTemplate {
 				$menu['talk'] = $namespaces[$talkId];
 			}
 
+			if ( $title->canTalk() ) {
+				$talkTitle = $title->getTalkPage();
+				$menu['talk']['data-title'] = $talkTitle->getFullText();
+			}
+
 			if ( isset( $menu['talk'] ) ) {
 				$menu['talk']['class'] = MobileUI::iconClass( 'talk', 'element', 'icon-32px' );
 				if ( isset( $tpl->data['_talkdata'] ) ) {
