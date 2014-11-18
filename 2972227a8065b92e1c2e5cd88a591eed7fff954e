@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_3cf9ffc0",
+        "filename": "javascripts/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-18T00:59:32Z",
+      "side": 1,
+      "message": "Nitpick: can you just add an inline comment above with a link to some page about this issue so we know this is specific to ios simulator?  Otherwise we will look at this in years to go and ask huh?",
+      "revId": "2972227a8065b92e1c2e5cd88a591eed7fff954e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
