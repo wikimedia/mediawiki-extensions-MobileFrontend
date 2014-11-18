@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_9ca853d9",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-18T00:45:10Z",
+      "side": 0,
+      "message": "Please leave the mw-mf-bytesadded and mw-mf-bytesremoved class which provide the colour. Let\u0027s just make sure the icon gets removed.",
+      "revId": "57d0d3383a7cf0e4a6c869cf1f4ffb73c95217ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
