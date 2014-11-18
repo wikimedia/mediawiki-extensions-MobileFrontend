@@ -1,10 +1,5 @@
 ( function ( M, $ ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
-		isVisualEditorEnabled = M.isWideScreen() &&
-			mw.config.get( 'wgVisualEditorConfig' ) &&
-			$.inArray( mw.config.get( 'wgNamespaceNumber' ), mw.config.get( 'wgVisualEditorConfig' ).namespaces ) > -1 &&
-			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
-			mw.config.get( 'wgPageContentModel' ) === 'wikitext',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
@@ -29,6 +24,19 @@
 		editor: 'SourceEditor',
 		sectionLine: '',
 
+		/*
+		 * Check whether VisualEditor is enabled or not.
+		 * @method
+		 * @return boolean
+		 */
+		isVisualEditorEnabled: function () {
+			return M.isWideScreen() &&
+				mw.config.get( 'wgVisualEditorConfig' ) &&
+				$.inArray( mw.config.get( 'wgNamespaceNumber' ), mw.config.get( 'wgVisualEditorConfig' ).namespaces ) > -1 &&
+				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
+				mw.config.get( 'wgPageContentModel' ) === 'wikitext';
+		},
+
 		initialize: function ( options ) {
 			this.api = new EditorApi( {
 				title: options.title,
@@ -37,7 +45,7 @@
 				isNewPage: options.isNewPage
 			} );
 			this.readOnly = options.oldId ? true : false; // If old revision, readOnly mode
-			if ( isVisualEditorEnabled ) {
+			if ( this.isVisualEditorEnabled() ) {
 				options.editSwitcher = true;
 			}
 			if ( this.readOnly ) {
@@ -49,7 +57,7 @@
 			// be explicit here. This may have been initialized from VE.
 			options.isVisualEditor = false;
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
-			if ( isVisualEditorEnabled ) {
+			if ( this.isVisualEditorEnabled() ) {
 				this.initializeSwitcher();
 			}
 		},
@@ -77,7 +85,7 @@
 
 			// If the user tries to switch to the VisualEditor, check if any changes have
 			// been made, and if so, tell the user they have to save first.
-			if ( isVisualEditorEnabled ) {
+			if ( this.isVisualEditorEnabled() ) {
 				this.$( '.visual-editor' ).on( 'click', function () {
 					if ( !self.api.hasChanged ) {
 						self._switchToVisualEditor( options );
