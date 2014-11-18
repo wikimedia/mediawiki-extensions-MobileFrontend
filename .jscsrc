@@ -3,6 +3,7 @@
   "requireMultipleVarDecl": "onevar",
   "requireBlocksOnNewline": true,
   "requireLineFeedAtFileEnd": true,
+  "requirePaddingNewLinesInObjects": true,
   "disallowDanglingUnderscores": null,
   "requireSpacesInsideParentheses": "all",
   "validateJSDoc": {
