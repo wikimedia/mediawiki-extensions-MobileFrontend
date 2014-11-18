@@ -117,16 +117,14 @@
 					mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) )
 				).parse()
 			).show();
-			this.$( '.continue' ).prop( 'disabled', false ).on( 'click', $.proxy( this, '_showEditorafterWarning' )
-			);
+			this.$( '.continue' ).prop( 'disabled', false ).on( 'click', $.proxy( this, '_showEditorafterWarning' ) );
 			this.clearSpinner();
 		},
 
 		_showEditorafterWarning: function () {
 			this.showSpinner();
 			this.$anonWarning.hide();
-			this.$( '.continue' ).prop( 'disabled', true ).on( 'click', $.proxy( this, '_prepareForSave' )
-			);
+			this.$( '.continue' ).prop( 'disabled', true ).on( 'click', $.proxy( this, '_prepareForSave' ) );
 			this._loadContent();
 		},
 

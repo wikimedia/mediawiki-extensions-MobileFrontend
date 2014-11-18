@@ -58,4 +58,4 @@
 
 	M.define( 'WikiGrokAbTest', WikiGrokAbTest );
 
-} ( mw.mobileFrontend, mw ) );
+}( mw.mobileFrontend, mw ) );

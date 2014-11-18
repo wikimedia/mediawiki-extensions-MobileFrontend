@@ -189,7 +189,7 @@
 		 *
 		 * @method
 		 * @param {Object} overlay The overlay to display
-		*/
+		 */
 		replaceCurrent: function ( overlay ) {
 			if ( this.stack.length === 0 ) {
 				throw new Error( 'Trying to replace OverlayManager\'s current overlay, but stack is empty' );

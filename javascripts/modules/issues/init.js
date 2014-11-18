@@ -41,7 +41,8 @@
 				if ( $this.find( selector ).length === 0 ) {
 					// FIXME: [templates] might be inconsistent
 					content = inBeta ? extractMessage( $this ) :
-							$this.find( '.mbox-text, .ambox-text' ).html();
+						$this.find( '.mbox-text, .ambox-text' ).html();
+
 					issue = {
 						// .ambox- is used e.g. on eswiki
 						text: content

@@ -5,7 +5,7 @@
 	 * Utility library for looking up details on the current user
 	 * @class user
 	 * @singleton
-	*/
+	 */
 	user = {
 		/* @see mediaWiki.user */
 		tokens: mw.user.tokens,

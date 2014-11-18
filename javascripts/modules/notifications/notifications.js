@@ -14,7 +14,7 @@
 	 * FIXME: Upstream to mw.mobileFrontend and reuse elsewhere
 	 * @param {string} moduleName: Name of a module to fetch
 	 * @returns {jQuery.Deferred}
-	*/
+	 */
 	function loadModuleScript( moduleName ) {
 		var d = $.Deferred(),
 			$spinner = $( icons.spinner().toHtmlString() );
