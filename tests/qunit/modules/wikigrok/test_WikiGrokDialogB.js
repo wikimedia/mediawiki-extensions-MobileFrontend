@@ -111,4 +111,43 @@
 		}, this ), 0 );
 	} );
 
+	QUnit.module( 'MobileFrontend: WikiGrokDialogB', {
+		setup: function () {
+			var noSuggestionResponse = $.Deferred().resolve( {
+				suggestions: {
+					occupations: {
+						id: 'P106', list: []
+					},
+					nationalities: {
+						id: 'P27', list: []
+					}
+				}
+			} );
+
+			this.$el = $( '<div id="test">' );
+			this.wk = new WikiGrokDialogB( {
+				el: this.$el,
+				itemId: '1234',
+				title: pageTitle,
+				userToken: 'token',
+				testing: false,
+				// Set suggestions to go to the second screen.
+				suggestions: suggestions
+			} );
+			// don't run eventLogging
+			this.sandbox.stub( WikiDataApi.prototype, 'getClaims' )
+				.returns( $.Deferred().resolve( { isHuman: true } ) );
+			this.logError = this.sandbox.stub( WikiGrokDialogB.prototype, 'logError' );
+			this.sandbox.stub( WikiGrokSuggestionApi.prototype, 'getSuggestions' )
+				.returns( noSuggestionResponse );
+		}
+	} );
+
+	QUnit.test( '#UI should not display when there are no suggestions', 2, function ( assert ) {
+		var spy = this.sandbox.stub( WikiGrokDialogB.prototype, 'show' );
+		this.wk.reveal( {} );
+		assert.ok( spy.notCalled, 'We do not call if the response provides no suggestions.' );
+		assert.ok( this.logError.called, 'Make sure we log an error.' );
+	} );
+
 }( jQuery, mw.mobileFrontend ) );
