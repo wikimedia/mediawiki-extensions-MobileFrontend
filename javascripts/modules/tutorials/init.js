@@ -15,15 +15,19 @@ editable page whilst logged in, although you must be in test group A to see the 
 		escapeHash = M.escapeHash,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > -1,
 		hash = window.location.hash,
-		// Whether or not the user should see the leftNav guider
-		shouldShowLeftNavEditTutorial =
-			M.query.campaign === 'leftNavSignup' &&
-			mw.config.get( 'wgNamespaceNumber' ) === 0 &&
-			!inEditor,
-		// If the user came from an edit button signup, show guider.
-		shouldShowEditTutorial = M.query.article_action === 'signup-edit' && !inEditor,
-		showTutorial = shouldShowEditTutorial || shouldShowLeftNavEditTutorial,
 		editOverlay, target, $target, href;
+
+	// Whether or not the user should see the leftNav guider
+	function shouldShowLeftNavEditTutorial() {
+		return M.query.campaign === 'leftNavSignup' &&
+			mw.config.get( 'wgNamespaceNumber' ) === 0 && !inEditor;
+	}
+
+	// If the user came from an edit button signup, show guider.
+	function shouldShowTutorial() {
+		var shouldShowEditTutorial = M.query.article_action === 'signup-edit' && !inEditor;
+		return shouldShowEditTutorial || shouldShowLeftNavEditTutorial();
+	}
 
 	if ( hash && hash.indexOf( '/' ) === -1 ) {
 		target = escapeHash( hash ) + ' ~ .edit-page';
@@ -32,9 +36,9 @@ editable page whilst logged in, although you must be in test group A to see the 
 	}
 
 	// Note the element might have a new ID if the wikitext was changed so check it exists
-	if ( $( target ).length > 0 && showTutorial ) {
+	if ( $( target ).length > 0 && shouldShowTutorial() ) {
 
-		if ( shouldShowLeftNavEditTutorial ) {
+		if ( shouldShowLeftNavEditTutorial() ) {
 			// Append the funnel name to the edit link's url
 			$target = $( target );
 			href = $target.attr( 'href' );
