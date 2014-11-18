@@ -33,7 +33,8 @@ class SkinMinervaBeta extends SkinMinerva {
 	 */
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
-		if ( $this->isAllowedPageAction( 'talk' ) ) {
+		$title = $this->getTitle();
+		if ( $this->isAllowedPageAction( 'talk' ) && !$title->isTalkPage() ) {
 			$modules['talk'] = array( 'mobile.talk' );
 		}
 		$modules['beta'] = array( 'mobile.beta' );
