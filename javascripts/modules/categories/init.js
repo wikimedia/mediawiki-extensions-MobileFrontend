@@ -8,9 +8,8 @@
 
 			loadingOverlay.hide();
 			result.resolve( new CategoryOverlay( {
-					categories: mw.config.get( 'wgCategories' )
-				} )
-			);
+				categories: mw.config.get( 'wgCategories' )
+			} ) );
 		} );
 		return result;
 	} );

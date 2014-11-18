@@ -208,10 +208,10 @@
 		 */
 		function supportsAnimations() {
 			var el = $( '<p>' )[0], $iframe = $( '<iframe>' ), has3d, t,
-			transforms = {
-				webkitTransform: '-webkit-transform',
-				transform: 'transform'
-			};
+				transforms = {
+					webkitTransform: '-webkit-transform',
+					transform: 'transform'
+				};
 
 			// don't trust Android 2.x, really
 			// animations cause textareas to misbehave on it
