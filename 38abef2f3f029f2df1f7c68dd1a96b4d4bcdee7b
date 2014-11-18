@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_bf709cd9",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-18T19:07:12Z",
+      "side": 1,
+      "message": "I think it\u0027s a good idea to add the explanation you wrote in patch 3 about why we need this function.",
+      "revId": "38abef2f3f029f2df1f7c68dd1a96b4d4bcdee7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
