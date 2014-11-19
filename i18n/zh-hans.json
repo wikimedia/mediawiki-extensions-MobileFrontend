@@ -361,6 +361,7 @@
 	"tag-mobile_web_edit-description": "来自手机版网站的编辑",
 	"mobile-frontend-pageaction-edit-tooltip": "编辑此页面的序言章节。",
 	"mobile-frontend-pageaction-upload-tooltip": "上传自定义背景图片",
+	"apihelp-mobileview-description": "返回移动浏览需要的数据。",
 	"apihelp-mobileview-param-page": "要进行的页面标题。",
 	"apihelp-mobileview-param-noimages": "返回不带图片的HTML。",
 	"apihelp-mobileview-param-thumbnail": "最大缩略图尺寸。",
