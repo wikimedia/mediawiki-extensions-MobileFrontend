@@ -1028,10 +1028,17 @@ class SkinMinerva extends SkinTemplate {
 
 		if ( isset( $wgMFCustomLogos['copyright'] ) ) {
 			$suffix = $wgMFTrademarkSitename ? ' ®' : '';
-			$sitename = Html::element( 'img', array(
+			$attributes =  array(
 				'src' => $wgMFCustomLogos['copyright'],
-				'alt' => $footerSitename . $suffix
-			) );
+				'alt' => $footerSitename . $suffix,
+			);
+			if ( isset( $wgMFCustomLogos['copyright-height'] ) ) {
+				$attributes['height'] = $wgMFCustomLogos['copyright-height'];
+			}
+			if ( isset( $wgMFCustomLogos['copyright-width'] ) ) {
+				$attributes['width'] = $wgMFCustomLogos['copyright-width'];
+			}
+			$sitename = Html::element( 'img', $attributes );
 		} else {
 			$suffix = $wgMFTrademarkSitename ? ' ™' : '';
 			$sitename = $footerSitename . $suffix;
