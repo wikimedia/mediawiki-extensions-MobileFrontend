@@ -92,23 +92,23 @@
 
 			if ( M.isIos && this.hasFixedHeader ) {
 				$overlayContent
-				.on( 'touchstart', function ( ev ) {
-					startY = ev.originalEvent.touches[0].pageY;
-				} )
-				.on( 'touchmove', function ( ev ) {
-					var
-						y = ev.originalEvent.touches[0].pageY,
-						contentLenght = $overlayContent.prop( 'scrollHeight' ) - $overlayContent.outerHeight();
+					.on( 'touchstart', function ( ev ) {
+						startY = ev.originalEvent.touches[0].pageY;
+					} )
+					.on( 'touchmove', function ( ev ) {
+						var
+							y = ev.originalEvent.touches[0].pageY,
+							contentLenght = $overlayContent.prop( 'scrollHeight' ) - $overlayContent.outerHeight();
 
-					ev.stopPropagation();
-					// prevent scrolling and bouncing outside of .overlay-content
-					if (
-						( $overlayContent.scrollTop() === 0 && startY < y ) ||
-						( $overlayContent.scrollTop() === contentLenght && startY > y )
-					) {
-						ev.preventDefault();
-					}
-				} );
+						ev.stopPropagation();
+						// prevent scrolling and bouncing outside of .overlay-content
+						if (
+							( $overlayContent.scrollTop() === 0 && startY < y ) ||
+							( $overlayContent.scrollTop() === contentLenght && startY > y )
+						) {
+							ev.preventDefault();
+						}
+					} );
 
 				// wait for things to render before doing any calculations
 				setTimeout( function () {
