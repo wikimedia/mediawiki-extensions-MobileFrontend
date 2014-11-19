@@ -28,7 +28,8 @@
 		 * @return {jQuery.Deferred}
 		 */
 		load: function ( ids, markAsAllWatched ) {
-			var result = new $.Deferred(), self = this;
+			var self = this,
+				result = $.Deferred();
 			if ( markAsAllWatched ) {
 				$.each( ids, function ( i, id ) {
 					self._cache[ id ] = true;

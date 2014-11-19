@@ -109,7 +109,7 @@
 	 * @return {jQuery.Deferred}
 	 */
 	Router.prototype.back = function () {
-		var deferredRequest = new $.Deferred;
+		var deferredRequest = $.Deferred();
 		this.once( 'popstate', function () {
 			deferredRequest.resolve();
 		} );
