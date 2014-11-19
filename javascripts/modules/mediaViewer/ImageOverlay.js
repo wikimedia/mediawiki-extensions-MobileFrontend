@@ -29,7 +29,9 @@
 		},
 
 		postRender: function ( options ) {
-			var self = this, $img;
+			var $img,
+				self = this;
+
 			Overlay.prototype.postRender.apply( this, arguments );
 
 			api.getThumb( options.title ).done( function ( data ) {

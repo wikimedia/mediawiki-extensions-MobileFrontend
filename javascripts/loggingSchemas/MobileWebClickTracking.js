@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var s = M.require( 'settings' ), name, href;
+	var name, href,
+		s = M.require( 'settings' );
 
 	function log( name, destination ) {
 		var

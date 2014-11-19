@@ -143,7 +143,8 @@
 		 * @return {Array} List of values matching that claim
 		 */
 		_getValues: function ( claims ) {
-			var values = [], self = this;
+			var values = [],
+				self = this;
 
 			$.each( claims, function ( i, claim ) {
 				var snak = claim.mainsnak,

@@ -3,7 +3,10 @@
 		toggle = M.require( 'toggle' );
 
 	function init( page ) {
-		var toc, sections = page.getSubSections(), enableToc = mw.config.get( 'wgTOC' );
+		var toc,
+			sections = page.getSubSections(),
+			enableToc = mw.config.get( 'wgTOC' );
+
 		if ( enableToc ||
 			// Fallback for old cached HTML, added 26 June, 2014
 			( enableToc === null && sections.length > 0 && !page.isMainPage() ) )

@@ -98,7 +98,9 @@
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		_search: function ( params, range, exclude ) {
-			var d = $.Deferred(), self = this, loc, requestParams;
+			var loc, requestParams,
+				d = $.Deferred(),
+				self = this;
 
 			requestParams = {
 				action: 'query',

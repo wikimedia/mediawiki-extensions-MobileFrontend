@@ -7,7 +7,9 @@
 	// Originally written by Brion for WikiLovesMonuments app
 	function trimUtf8String( str, allowedLength ) {
 		// Count UTF-8 bytes to see where we need to crop long names.
-		var bytes = 0, chars = 0, codeUnit, len, i;
+		var codeUnit, len, i,
+			bytes = 0,
+			chars = 0;
 
 		for ( i = 0; i < str.length; i++ ) {
 			// JavaScript strings are UTF-16.
@@ -104,7 +106,8 @@
 
 		// FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
 		_handleWarnings: function ( result, warnings ) {
-			var err = { stage: 'upload', type: 'warning' }, humanErrorMsg;
+			var humanErrorMsg,
+				err = { stage: 'upload', type: 'warning' };
 
 			warnings = $.map( warnings, function ( value, code ) {
 				return code + '/' + value;

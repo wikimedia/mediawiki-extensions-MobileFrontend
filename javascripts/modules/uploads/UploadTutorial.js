@@ -39,7 +39,8 @@
 		},
 
 		postRender: function ( options ) {
-			var self = this, $button = this.$( '.button' );
+			var self = this,
+				$button = this.$( '.button' );
 
 			if ( options.funnel ) {
 				new LeadPhotoUploaderButton( {

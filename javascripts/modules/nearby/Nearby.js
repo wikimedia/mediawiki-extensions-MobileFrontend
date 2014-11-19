@@ -114,8 +114,9 @@
 			_super.apply( this, arguments );
 		},
 		_find: function ( options ) {
-			var result = $.Deferred(), self = this,
-				pagesSuccess, pagesError;
+			var pagesSuccess, pagesError,
+				result = $.Deferred(),
+				self = this;
 
 			// Handler for successful query
 			pagesSuccess = function ( pages ) {

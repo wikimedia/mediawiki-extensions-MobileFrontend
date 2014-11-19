@@ -1,6 +1,7 @@
 ( function ( M ) {
 
-	var View = M.require( 'View' ), LeadPhoto;
+	var LeadPhoto,
+		View = M.require( 'View' );
 
 	/**
 	 * Class for showing lead photo

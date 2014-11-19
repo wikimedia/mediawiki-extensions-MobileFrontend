@@ -50,7 +50,8 @@
 		 * @param {Number} id of the sub section to open
 		 */
 		_enableComments: function ( title, id ) {
-			var self = this, $comment = this.$( '.comment' ),
+			var self = this,
+				$comment = this.$( '.comment' ),
 				$textarea = $comment.find( 'textarea' );
 
 			if ( user.isAnon() || !M.isAlphaGroupMember() ) {

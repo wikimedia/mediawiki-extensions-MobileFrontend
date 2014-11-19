@@ -1,5 +1,7 @@
 ( function ( M ) {
-	var Overlay = M.require( 'Overlay' ), AbuseFilterOverlay;
+	var AbuseFilterOverlay,
+		Overlay = M.require( 'Overlay' );
+
 	/**
 	 * Overlay that shows a message about abuse. This overlay is rendered when the error code from the API
 	 * is related to the abusefilter extension.

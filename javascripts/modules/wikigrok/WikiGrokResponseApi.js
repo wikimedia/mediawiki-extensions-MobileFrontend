@@ -1,6 +1,8 @@
 // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 ( function ( M ) {
-	var Api = M.require( 'api' ).Api, WikiGrokResponseApi;
+	var WikiGrokResponseApi,
+		Api = M.require( 'api' ).Api;
+
 	/**
 	 * Record claims to the WikiGrok api
 	 * @class WikiGrokApi

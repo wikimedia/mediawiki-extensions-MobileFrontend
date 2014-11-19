@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var View = M.require( 'View' ), Checkbox,
+	var Checkbox,
+		View = M.require( 'View' ),
 		settings = M.require( 'settings' );
 
 	/**
@@ -21,7 +22,9 @@
 	} );
 
 	function initLocalStorageCheckboxes() {
-		var saveLI = $( '#mw-mf-settings-save' ), cb;
+		var cb,
+			saveLI = $( '#mw-mf-settings-save' );
+
 		if ( M.isAlphaGroupMember() ) {
 			cb = new Checkbox( {
 				name: 'expandSections',

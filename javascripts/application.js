@@ -207,7 +207,9 @@
 		 * @returns {boolean}
 		 */
 		function supportsAnimations() {
-			var el = $( '<p>' )[0], $iframe = $( '<iframe>' ), has3d, t,
+			var  has3d, t,
+				el = $( '<p>' )[0],
+				$iframe = $( '<iframe>' ),
 				transforms = {
 					webkitTransform: '-webkit-transform',
 					transform: 'transform'

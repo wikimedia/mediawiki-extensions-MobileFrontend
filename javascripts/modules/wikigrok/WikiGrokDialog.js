@@ -123,8 +123,9 @@
 		 * @returns {Array}
 		 */
 		chooseRandomItemsFromArray: function ( array, count ) {
-			var result = [], arrayCopy, arrayLength = array.length,
-				i, randomIndex;
+			var arrayCopy, i, randomIndex,
+				result = [],
+				arrayLength = array.length;
 
 			if ( arrayLength >= 1 ) {
 				count = ( count > arrayLength ) ? arrayLength : count;

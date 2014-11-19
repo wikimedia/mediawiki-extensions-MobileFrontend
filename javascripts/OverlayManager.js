@@ -59,7 +59,8 @@
 		},
 
 		_processMatch: function ( match ) {
-			var self = this, factoryResult;
+			var factoryResult,
+				self = this;
 
 			if ( match ) {
 				if ( match.overlay ) {

@@ -1,5 +1,7 @@
 ( function ( M, $ ) {
-	var Api = M.require( 'api' ).Api, EditorApi;
+	var EditorApi,
+		Api = M.require( 'api' ).Api;
+
 	/**
 	 * API that helps save and retrieve page content
 	 * @class EditorApi
@@ -18,7 +20,9 @@
 		},
 
 		getContent: function () {
-			var self = this, result = $.Deferred(), options;
+			var options,
+				self = this,
+				result = $.Deferred();
 
 			if ( this.content !== undefined ) {
 				result.resolve( this.content );
@@ -96,7 +100,9 @@
 		 * of error, `details` can be any object (usually error message).
 		 */
 		save: function ( options ) {
-			var self = this, result = $.Deferred();
+			var self = this,
+				result = $.Deferred();
+
 			options = options || {};
 
 			if ( !this.hasChanged ) {
@@ -174,7 +180,9 @@
 		},
 
 		getPreview: function ( options ) {
-			var result = $.Deferred(), sectionLine = '', self = this;
+			var result = $.Deferred(),
+				sectionLine = '',
+				self = this;
 
 			$.extend( options, {
 				action: 'parse',

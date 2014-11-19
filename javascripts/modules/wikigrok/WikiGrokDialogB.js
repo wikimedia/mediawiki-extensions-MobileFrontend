@@ -36,7 +36,8 @@
 		_renderSuggestions: function ( suggestions ) {
 			var
 				self = this,
-				allSuggestions = [], suggestionsList = [],
+				allSuggestions = [],
+				suggestionsList = [],
 				// Maps item ids to a key in i18n file
 				lookupProp = {},
 				i18n = {

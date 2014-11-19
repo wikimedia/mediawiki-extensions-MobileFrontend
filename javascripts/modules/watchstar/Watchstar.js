@@ -1,6 +1,7 @@
 ( function ( M ) {
 
-	var View = M.require( 'View' ), Watchstar,
+	var Watchstar,
+		View = M.require( 'View' ),
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 		Icon = M.require( 'Icon' ),
 		watchIcon = new Icon( { name: 'watch', additionalClassNames: 'icon-32px watch-this-article' } ),
@@ -23,7 +24,8 @@
 		className: watchIcon.getClassName(),
 		template: mw.template.compile( '<a>{{tooltip}}</a>', 'hogan' ),
 		initialize: function ( options ) {
-			var self = this, _super = View.prototype.initialize,
+			var self = this,
+				_super = View.prototype.initialize,
 				page = options.page;
 
 			this.drawer = new CtaDrawer( {
@@ -50,10 +52,10 @@
 			options.tooltip = options.isWatched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
 		},
 		postRender: function ( options ) {
-			var self = this, callback,
+			var callback, checker,
+				self = this,
 				unwatchedClass = watchIcon.getGlyphClassName(),
 				watchedClass = watchedIcon.getGlyphClassName(),
-				checker,
 				page = options.page,
 				$el = self.$el;
 

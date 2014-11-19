@@ -51,7 +51,8 @@
 		className: photoIcon.getClassName(),
 
 		postRender: function () {
-			var self = this, $input = this.$( 'input' );
+			var self = this,
+				$input = this.$( 'input' );
 
 			function handleFile( file ) {
 				// FIXME: this is hacky but it would be hard to pass a file in a route

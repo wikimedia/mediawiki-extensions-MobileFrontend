@@ -116,7 +116,9 @@
 		 * @return {Number} namespace Number
 		 */
 		getNamespaceId: function () {
-			var args = this.options.title.split( ':' ), nsId;
+			var nsId,
+				args = this.options.title.split( ':' );
+
 			if ( args[1] ) {
 				nsId = mw.config.get( 'wgNamespaceIds' )[ args[0].toLowerCase().replace( ' ', '_' ) ] || 0;
 			} else {

@@ -82,8 +82,9 @@
 		 * messages, and setting mobile edit cookie.
 		 */
 		onSave: function () {
-			var title = this.options.title, self = this,
-				msg;
+			var msg,
+				title = this.options.title,
+				self = this;
 
 			// FIXME: use generic method for following 3 lines
 			M.pageApi.invalidatePage( title );
@@ -211,7 +212,8 @@
 			}
 		},
 		_showCaptcha: function ( url ) {
-			var self = this, $input = this.$( '.captcha-word' );
+			var self = this,
+				$input = this.$( '.captcha-word' );
 
 			if ( this.captchaShown ) {
 				$input.val( '' );

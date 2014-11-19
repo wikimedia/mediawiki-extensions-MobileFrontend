@@ -50,9 +50,9 @@
 	 * Expand sections that were previously expanded before leaving this page.
 	 */
 	function expandStoredSections( $container ) {
-		var $sectionHeading,
+		var $sectionHeading, $headline,
 			expandedSections = getExpandedSections(),
-			$headlines = $container.find( '.section-heading span' ), $headline;
+			$headlines = $container.find( '.section-heading span' );
 
 		$headlines.each( function () {
 			$headline = $( this );

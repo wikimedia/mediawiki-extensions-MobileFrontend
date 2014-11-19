@@ -1,5 +1,6 @@
 ( function ( M ) {
-	var Overlay = M.require( 'Overlay' ), LoadingOverlay;
+	var LoadingOverlay,
+		Overlay = M.require( 'Overlay' );
 
 	/**
 	 * Overlay that initially shows loading animation until

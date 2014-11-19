@@ -24,7 +24,9 @@
 			this.limit = 10;
 		},
 		getPhotos: function () {
-			var self = this, result = $.Deferred();
+			var self = this,
+				result = $.Deferred();
+
 			// FIXME: Don't simply use this.endTimestamp as initially this value is undefined
 			if ( this.endTimestamp !== false ) {
 				this.get( {
@@ -222,7 +224,8 @@
 
 			// FIXME: Please find a way to do this without a global event.
 			M.on( '_file-upload', function ( image ) {
-				var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount, msgKey;
+				var newCount, msgKey,
+					$counter = $container.find( 'h2' ).show().find( 'span' );
 
 				if ( userGallery.isEmpty() ) {
 					msgKey = 'mobile-frontend-donate-photo-first-upload-success';

@@ -124,7 +124,8 @@
 		 *   the token string, false if the user is anon or undefined where not available or a warning is set
 		 */
 		getTokenWithEndpoint: function ( tokenType, endpoint, caToken ) {
-			var token, data, d = $.Deferred(), isCacheable,
+			var token, data, isCacheable,
+				d = $.Deferred(),
 				// token types available from mw.user.tokens
 				easyTokens = [ 'edit', 'watch', 'patrol' ];
 

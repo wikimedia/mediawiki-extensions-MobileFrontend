@@ -34,7 +34,9 @@
 		},
 
 		initialize: function ( options ) {
-			var fileReader = new FileReader(), self = this;
+			var fileReader = new FileReader(),
+				self = this;
+
 			this.log = schema.getLog( options.funnel );
 			this.file = options.file;
 
@@ -152,7 +154,8 @@
 		},
 
 		postRender: function () {
-			var self = this, $submitButton;
+			var $submitButton,
+				self = this;
 
 			Overlay.prototype.postRender.apply( this, arguments );
 
@@ -217,7 +220,8 @@
 		},
 
 		setImageUrl: function ( url ) {
-			var self = this, $preview = this.$( '.preview' );
+			var self = this,
+				$preview = this.$( '.preview' );
 
 			this.imageUrl = url;
 			this.$( '.spinner' ).hide();

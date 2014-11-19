@@ -30,7 +30,8 @@
 		},
 
 		filterLists: function ( val ) {
-			var $items = this.$( '.page-list li' ), $subheaders = this.$( 'h3' );
+			var $items = this.$( '.page-list li' ),
+				$subheaders = this.$( 'h3' );
 
 			if ( val ) {
 				$subheaders.hide();

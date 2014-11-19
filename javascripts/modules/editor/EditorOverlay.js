@@ -137,7 +137,8 @@
 		},
 
 		_prepareForSave: function () {
-			var self = this, params = { text: this.$content.val() };
+			var self = this,
+				params = { text: this.$content.val() };
 
 			this._showHidden( '.save-header, .save-panel' );
 

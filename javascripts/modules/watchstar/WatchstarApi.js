@@ -30,6 +30,7 @@
 		load: function ( ids, markAsAllWatched ) {
 			var self = this,
 				result = $.Deferred();
+
 			if ( markAsAllWatched ) {
 				$.each( ids, function ( i, id ) {
 					self._cache[ id ] = true;
@@ -82,8 +83,10 @@
 		 * @return {jQuery.Deferred}
 		 */
 		toggleStatus: function ( page ) {
-			var self = this, data,
+			var data,
+				self = this,
 				id = page.getId();
+
 			data = {
 				action: 'watch'
 			};

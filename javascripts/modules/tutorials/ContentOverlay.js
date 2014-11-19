@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
-	var Overlay = M.require( 'Overlay' ), ContentOverlay;
+	var ContentOverlay,
+		Overlay = M.require( 'Overlay' );
 
 	/**
 	 * An {@link Overlay} that points at an element on the page.
@@ -25,7 +26,9 @@
 		 */
 		appendTo: '#mw-mf-page-center',
 		postRender: function ( options ) {
-			var self = this, $target;
+			var $target,
+				self = this;
+
 			Overlay.prototype.postRender.apply( this, arguments );
 			if ( options.target ) {
 				$target = $( options.target );

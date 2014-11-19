@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
-	var EventEmitter = M.require( 'eventemitter' ), key;
+	var key,
+		EventEmitter = M.require( 'eventemitter' );
 
 	// FIXME: remove when OverlayManager used everywhere
 	function matchRoute( hash, entry ) {

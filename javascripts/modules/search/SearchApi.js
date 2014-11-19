@@ -5,7 +5,8 @@
  */
 ( function ( M, $ ) {
 
-	var Api = M.require( 'api' ).Api, SearchApi;
+	var SearchApi,
+		Api = M.require( 'api' ).Api;
 
 	/**
 	 * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
@@ -58,7 +59,9 @@
 					pssearch: query,
 					pslimit: 15
 				} ).then( function ( data ) {
-					var results = [], info = {};
+					var results = [],
+						info = {};
+
 					if ( data.query && data.query.pages && data.query.prefixsearch ) {
 						// We loop through the prefixsearch results (rather than the pages
 						// results) here in order to maintain the correct order.

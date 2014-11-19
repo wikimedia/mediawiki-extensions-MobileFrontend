@@ -201,7 +201,9 @@
 
 				// Init all edit links (including lead section, if anonymous editing is enabled)
 				$( '.edit-page' ).each( function () {
-					var $a = $( this ), section = 0;
+					var $a = $( this ),
+						section = 0;
+
 					if ( $( this ).data( 'section' ) !== undefined ) {
 						section = $( this ).data( 'section' );
 					}

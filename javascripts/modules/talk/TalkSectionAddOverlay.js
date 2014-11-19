@@ -84,7 +84,9 @@
 			} );
 		},
 		hide: function () {
-			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' ), empty;
+			var empty,
+				confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
+
 			empty = ( !this.$( '.summary' ).val() && !this.$( '.wikitext-editor' ).val() );
 			if ( this._saveHit || empty || window.confirm( confirmMessage ) ) {
 				return Overlay.prototype.hide.apply( this, arguments );

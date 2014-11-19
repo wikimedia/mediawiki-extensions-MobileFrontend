@@ -2,7 +2,8 @@
 	function init( $el ) {
 		if ( !mw.config.get( 'wgImagesDisabled' ) ) {
 			$el.find( 'a.image, a.thumbimage' ).each( function () {
-				var $a = $( this ), match = $a.attr( 'href' ).match( /[^\/]+$/ );
+				var $a = $( this ),
+					match = $a.attr( 'href' ).match( /[^\/]+$/ );
 
 				if ( match ) {
 					$a.off();

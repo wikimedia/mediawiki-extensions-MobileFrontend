@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var Api = M.require( 'api' ).Api, PageApi,
+	var PageApi,
+		Api = M.require( 'api' ).Api,
 		sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' );
 
 	/*
@@ -100,7 +101,8 @@
 		 * @return {jQuery.Deferred} with parameter page data that can be passed to a Page view
 		 */
 		getPage: function ( title, endpoint, leadOnly ) {
-			var options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {}, page, timestamp,
+			var page, timestamp,
+				options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {},
 				protection = { edit:[ '*' ] };
 
 			if ( !this.cache[title] ) {
@@ -250,7 +252,8 @@
 		 * @return {jQuery.Deferred} which is called with an object containing langlinks and variant links
 		 */
 		getPageLanguages: function ( title ) {
-			var self = this, result = $.Deferred();
+			var self = this,
+				result = $.Deferred();
 
 			self.get( {
 					action: 'query',

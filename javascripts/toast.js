@@ -1,5 +1,6 @@
 ( function ( M ) {
-	var Drawer = M.require( 'Drawer' ), Toast;
+	var Toast,
+		Drawer = M.require( 'Drawer' );
 
 	/**
 	 * Auto-expiring notification.
