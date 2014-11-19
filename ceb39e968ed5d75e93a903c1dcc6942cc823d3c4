@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_3d71eb72",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-19T20:45:36Z",
+      "side": 1,
+      "message": "jdlrobson, I know you want the API to work better, but that\u0027s a long process, so why not fix the issue we have using this patch and then make a request to change the API? here is more info how redirects work: http://www.mediawiki.org/wiki/API:Query#Resolving_redirects",
+      "revId": "ceb39e968ed5d75e93a903c1dcc6942cc823d3c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
