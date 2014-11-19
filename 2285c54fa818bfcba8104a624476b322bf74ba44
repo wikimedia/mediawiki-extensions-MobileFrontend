@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_af3621ae",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-19T17:46:02Z",
+      "side": 1,
+      "message": "Note needed here.. isAllowedPageAction doesn\u0027t vary across pages. It\u0027s even on for all pages or not on.",
+      "revId": "2285c54fa818bfcba8104a624476b322bf74ba44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cf392da0",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 438,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-19T17:46:02Z",
+      "side": 1,
+      "message": "Not needed here.. mobile.abusefilter is loaded after initial page load.",
+      "revId": "2285c54fa818bfcba8104a624476b322bf74ba44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_4f451d17",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 567,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-19T17:46:02Z",
+      "side": 1,
+      "message": "Not needed here. In alpha categories is loaded across all pages.\nThis only helps people switching between stable and beta.\n\ninit.js should probably be moved to mobile.alpha module.",
+      "revId": "2285c54fa818bfcba8104a624476b322bf74ba44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
