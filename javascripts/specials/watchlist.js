@@ -3,8 +3,7 @@
 		WatchList = M.require( 'modules/watchlist/WatchList' ),
 		schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		canonicalName = mw.config.get( 'wgCanonicalSpecialPageName' ),
-		pageName = canonicalName === 'EditWatchlist' || canonicalName === 'Watchlist' ?
-			'watchlist' : 'diff',
+		pageName = canonicalName === 'EditWatchlist' || canonicalName === 'Watchlist' ? 'watchlist' : 'diff',
 		subPageName = M.query.watchlistview || 'a-z';
 
 	function init() {
