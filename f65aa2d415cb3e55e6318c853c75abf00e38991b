@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_83ae9e93",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1036,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-19T23:33:24Z",
+      "side": 1,
+      "message": "I think the problem is that we\u0027re using $wgMFCustomLogos[\u0027copyright\u0027] as both a URL path (line 1033) and a file path (line 1031), and depending on the environment it\u0027s being run in, it won\u0027t always work for both. We may have to have 2 different config vars.",
+      "revId": "f65aa2d415cb3e55e6318c853c75abf00e38991b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
