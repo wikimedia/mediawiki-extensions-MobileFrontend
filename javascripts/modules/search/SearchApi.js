@@ -83,7 +83,8 @@
 							// We loop through the prefixsearch results (rather than the pages
 							// results) here in order to maintain the correct order.
 							$.each( data.query.prefixsearch, function ( i, page ) {
-								var info, title = page.title, id = page.pageid;
+								var info, title = page.title,
+									id = page.pageid;
 
 								// Is this a redirect? If yes, get the target.
 								if ( redirects[title] ) {

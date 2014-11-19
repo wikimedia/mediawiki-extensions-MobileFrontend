@@ -1,6 +1,8 @@
 {
   "preset": "wikimedia",
   "requireMultipleVarDecl": "onevar",
+  "requireLineBreakAfterVariableAssignment": true,
+  "disallowOperatorBeforeLineBreak": ["."],
   "requireBlocksOnNewline": true,
   "requireLineFeedAtFileEnd": true,
   "requirePaddingNewLinesInObjects": true,
