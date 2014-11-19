@@ -434,6 +434,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for talk.js
 			'mobile-frontend-talk-overlay-header',
 		),
+		'group' => 'other'
 	),
 
 	'mobile.preferredLanguages' => $wgMFResourceFileModuleBoilerplate + array(

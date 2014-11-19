@@ -28,15 +28,25 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
+	 * Returns an array of modules related to the current context of the page.
+	 * @return array
+	 */
+	public function getContextSpecificModules() {
+		$modules = parent::getContextSpecificModules();
+		$title = $this->getTitle();
+		if ( $this->isAllowedPageAction( 'talk' ) && !$title->isTalkPage() && $title->canTalk() ) {
+			$modules['talk'] = array( 'mobile.talk' );
+		}
+
+		return $modules;
+	}
+
+	/**
 	 * Returns the javascript modules to load.
 	 * @return array
 	 */
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
-		$title = $this->getTitle();
-		if ( $this->isAllowedPageAction( 'talk' ) && !$title->isTalkPage() ) {
-			$modules['talk'] = array( 'mobile.talk' );
-		}
 		$modules['beta'] = array( 'mobile.beta' );
 		wfRunHooks( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 
