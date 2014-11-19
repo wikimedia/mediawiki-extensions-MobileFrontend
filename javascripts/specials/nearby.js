@@ -52,6 +52,7 @@
 			$icon.hide();
 			refresh( $.extend( {}, options, { pageTitle: pageTitle } ) );
 		} );
+
 		function refreshCurrentLocation() {
 			$icon.show();
 			refresh( $.extend( {}, options, { useCurrentLocation: true } ) );

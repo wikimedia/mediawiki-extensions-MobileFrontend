@@ -17,6 +17,7 @@
 		}
 		return M.log( 'MobileWebClickTracking', data );
 	}
+
 	function futureLog( name, href ) {
 		s.save( 'MobileWebClickTracking-name', name );
 		s.save( 'MobileWebClickTracking-href', href );
