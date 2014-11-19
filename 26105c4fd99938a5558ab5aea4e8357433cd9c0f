@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_4fdf5d6c",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-19T17:43:10Z",
+      "side": 1,
+      "message": "Please move this to getContextSpecificModules and update the resource to have the other group. This already breaks caching of JavaScript modules across pages in beta so you might as well fix it whilst here :)\n\nFor background this creates two URLs which are near identical\n1) load.php?module\u003dmobile.talk|mobile.beta{...}\n2)  load.php?module\u003dmobile.beta{...}\n\nIf we force it into the other group the same url will apply across pages.\nMight be good to update documentation to explain this better for future devs.",
+      "revId": "26105c4fd99938a5558ab5aea4e8357433cd9c0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
