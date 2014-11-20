@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e936f18_bc0734cc",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1029,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-20T20:42:41Z",
+      "side": 1,
+      "message": "Please document both of these keys in MobileFrontend.php where $wgMFCustomLogos is defined.",
+      "revId": "6e1d9b3f7cee90b960577ff98914c419251d451b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_5ccdd0ba",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 4
