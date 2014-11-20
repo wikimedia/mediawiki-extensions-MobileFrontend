@@ -2,6 +2,7 @@
   "preset": "wikimedia",
   "requireMultipleVarDecl": "onevar",
   "requireBlocksOnNewline": true,
+  "requireLineFeedAtFileEnd": true,
   "disallowDanglingUnderscores": null,
   "requireSpacesInsideParentheses": "all",
   "validateJSDoc": {
