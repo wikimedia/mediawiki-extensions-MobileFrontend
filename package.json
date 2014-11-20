@@ -18,6 +18,7 @@
 		"grunt-svg2png": "0.2.5",
 		"grunt-contrib-jshint": "0.10.0",
 		"grunt-jscs": "0.8.1",
+		"jscs-jsdoc": "^0.0.24",
 		"js-beautify": "^1.5.4",
 		"grunt-notify": "^0.3.1",
 		"grunt-contrib-watch": "0.6.1",

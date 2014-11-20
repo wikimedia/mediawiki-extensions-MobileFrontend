@@ -61,7 +61,10 @@ jsbeautify: nodecheck			## Check the JavaScript coding style
 	@find javascripts -type f -name "*.js" -not -path "**externals**" -exec node_modules/.bin/js-beautify -r {} \;
 
 jscs: nodecheck			## Check the JavaScript coding style
-	@grunt jscs
+	@grunt jscs:main
+
+jscsdoc: nodecheck			## Check the JavaScript coding style documentation
+	@grunt jscs:doc
 
 jshinttests: nodecheck			## Lint the QUnit tests
 	@grunt jshint:tests
