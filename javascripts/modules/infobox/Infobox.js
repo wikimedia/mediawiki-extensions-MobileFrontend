@@ -24,6 +24,50 @@
 		},
 		typeDefaults: {
 			// FIXME: In future this should be configurable by Wikipedia admins
+			city: {
+				rows: [
+					{
+						// image
+						id: 'P18'
+					},
+					{
+						label: 'Flag',
+						id: 'P41'
+					},
+					{
+						label: 'Coat of arms',
+						id: 'P94'
+					},
+					{
+						label: 'Coordinates',
+						id: 'P625'
+					},
+					{
+						label: 'State',
+						id: 'P131'
+					},
+					{
+						label: 'Country',
+						id: 'P17'
+					},
+					{
+						label: 'Founded',
+						id: 'P571'
+					},
+					{
+						label: 'Population',
+						id: 'P1082'
+					},
+					{
+						label: 'Timezone',
+						id: 'P421'
+					},
+					{
+						id: 'P856',
+						label: 'Official website'
+					}
+				]
+			},
 			human: {
 				rows: [
 					{
@@ -232,6 +276,8 @@
 		getDefaultsFromClaims: function ( claims ) {
 			if ( claims.isHuman ) {
 				return this.typeDefaults.human;
+			} else if ( claims.isCity ) {
+				return this.typeDefaults.city;
 			} else {
 				return this.typeDefaults.default;
 			}
