@@ -16,6 +16,24 @@
       "revId": "6e1d9b3f7cee90b960577ff98914c419251d451b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_fcbb7c07",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1037,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-11-20T20:31:43Z",
+      "side": 1,
+      "message": "No, becuase we are changing the width accordingly.",
+      "parentUuid": "6e936f18_5ccdd0ba",
+      "revId": "6e1d9b3f7cee90b960577ff98914c419251d451b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
