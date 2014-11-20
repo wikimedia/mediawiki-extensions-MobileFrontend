@@ -3,7 +3,7 @@
 	"description": "Node.js dependencies used in MobileFrontend",
 	"version": "0.0.1",
 	"scripts": {
-		"test": "grunt jenkins"
+		"test": "grunt test"
 	},
 	"dependencies": {
 		"grunt": "0.4.5",
