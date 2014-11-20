@@ -70,6 +70,7 @@ module.exports = function ( grunt ) {
 	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
 	// Jenkins automatically runs grunt test for us
 	grunt.registerTask( 'test', [ 'lint', 'qunit' ] );
+	grunt.registerTask( 'jenkins', [ 'test' ] );
 	grunt.registerTask( 'default', [ 'test' ] );
 	grunt.registerTask( 'build-icons', [ 'svg2png' ] );
 };

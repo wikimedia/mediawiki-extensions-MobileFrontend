@@ -2,6 +2,9 @@
 	"name": "MobileFrontend-dependencies",
 	"description": "Node.js dependencies used in MobileFrontend",
 	"version": "0.0.1",
+	"scripts": {
+		"test": "grunt jenkins"
+	},
 	"dependencies": {
 		"grunt": "0.4.5",
 		"grunt-phpdocumentor": "~0.4.1",
