@@ -327,6 +327,7 @@
 
 	/**
 	 * Determine if current page is in a specified namespace
+	 * FIXME: Move to method on Page
 	 * @method
 	 * @param {string} namespace Name of namespace
 	 * @return {Boolean}
@@ -337,7 +338,7 @@
 
 	/**
 	 * Get current page view object
-	 *
+	 * FIXME: Move to M.define( 'page' )
 	 * @method
 	 * @return {Page}
 	 */
@@ -349,27 +350,17 @@
 		}
 	}
 
-	/**
-	 * Return the first section of page content
-	 *
-	 * @method
-	 * @return {Object}
-	 */
-	function getLeadSection() {
-		return $( '#content > div' ).eq( 0 );
-	}
-
 	function loadCurrentPage() {
 		var permissions = mw.config.get( 'wgRestrictionEdit', [] );
 		if ( permissions.length === 0 ) {
 			permissions.push( '*' );
 		}
 		currentPage = new Page( {
+			el: '#content',
 			title: mw.config.get( 'wgPageName' ).replace( /_/g, ' ' ),
 			protection: {
 				edit: permissions
 			},
-			lead: getLeadSection().html(),
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
 			isWatched: $( '#ca-watch' ).hasClass( watchIcon.getGlyphClassName() ),
 			sections: pageApi.getSectionsFromHTML( $( '#content' ) ),
@@ -383,7 +374,6 @@
 		escapeHash: escapeHash,
 		inNamespace: inNamespace,
 		getCurrentPage: getCurrentPage,
-		getLeadSection: getLeadSection,
 		getSessionId: getSessionId,
 		isWideScreen: isWideScreen,
 		lockViewport: lockViewport,

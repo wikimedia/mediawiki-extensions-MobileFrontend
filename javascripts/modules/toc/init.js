@@ -15,7 +15,7 @@
 				sections: sections
 			} );
 			if ( mw.config.get( 'wgMFPageSections' ) ) {
-				toc.appendTo( M.getLeadSection() );
+				toc.appendTo( page.getLeadSectionElement() );
 			} else {
 				// don't show toc at end of page, when no sections there
 				toc.insertAfter( '#toc' );

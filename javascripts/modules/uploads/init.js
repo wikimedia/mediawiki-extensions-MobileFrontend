@@ -17,10 +17,9 @@
 	}
 
 	function initialize() {
-		// FIXME: make some general function for that (or a page object with a method)
 		var
-			// FIXME: not updated on dynamic page loads
-			isEditable = mw.config.get( 'wgIsPageEditable' ),
+			page = M.getCurrentPage(),
+			$lead = page.getLeadSectionElement(),
 			validNamespace = ( M.inNamespace( '' ) || M.inNamespace( 'user' ) || M.inNamespace( 'file' ) );
 
 		// Only show upload page action in File namespace if page doesn't already exist.
@@ -29,11 +28,11 @@
 				$( '#ca-upload' ).remove();
 			}
 		} else {
-			if ( !isEditable || !validNamespace ||
+			if ( !page.isEditable( user ) || !validNamespace ||
 					// FIXME: Anonymous users cannot upload but really this should also check rights of user via getRights
 					// (without triggering an additional HTTP request)
 					user.isAnon() ||
-					mw.util.getParamValue( 'action' ) || !needsPhoto( M.getLeadSection() ) || mw.config.get( 'wgIsMainPage' ) ) {
+					mw.util.getParamValue( 'action' ) || !needsPhoto( $lead ) || mw.config.get( 'wgIsMainPage' ) ) {
 				$( '#ca-upload' ).remove();
 			}
 		}

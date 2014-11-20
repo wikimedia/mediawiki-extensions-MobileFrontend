@@ -24,8 +24,13 @@
 			return $container.html();
 		}
 
+		/*
+		 * Render a banner in a containing element.
+		 * @param {jQuery.Object} $container to render the page issues banner inside.
+		 * @param {string} labelText what the label of the page issues banner should say
+		 * @param {string} headingText the heading of the overlay that is created when the page issues banner is clicked
+		 */
 		function createBanner( $container, labelText, headingText ) {
-			$container = $container || M.getLeadSection();
 			var selector = 'table.ambox, table.tmbox',
 				$metadata = $container.find( selector ),
 				issues = [],
@@ -85,7 +90,9 @@
 			}
 		}
 
-		initPageIssues();
+		// Setup the issues banner on the page
+		initPageIssues( M.getCurrentPage().getLeadSectionElement() );
+		// Show it in edit preview.
 		M.on( 'edit-preview', function ( overlay ) {
 			initPageIssues( overlay.$el );
 		} );
