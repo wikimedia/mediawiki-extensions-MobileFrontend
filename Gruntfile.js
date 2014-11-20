@@ -68,8 +68,12 @@ module.exports = function ( grunt ) {
 	} );
 
 	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
-	// Jenkins automatically runs grunt test for us
-	grunt.registerTask( 'test', [ 'lint', 'qunit' ] );
+
+	// grunt test will be run by npm test which will be run by Jenkins
+	// Do not execute qunit here, or other tasks that require full mediawiki
+	// running.
+	grunt.registerTask( 'test', [ 'lint' ] );
+
 	grunt.registerTask( 'default', [ 'test' ] );
 	grunt.registerTask( 'build-icons', [ 'svg2png' ] );
 };
