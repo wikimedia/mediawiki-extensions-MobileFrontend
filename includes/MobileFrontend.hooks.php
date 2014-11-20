@@ -783,6 +783,7 @@ class MobileFrontendHooks {
 					'MobileContextTest.php',
 					'MobileFormatterTest.php',
 					'skins/SkinMinervaTest.php',
+					'skins/SkinMinervaAlphaTest.php',
 					'specials/MobileSpecialPageTest.php',
 					'specials/SpecialMobileDiffTest.php',
 				)
