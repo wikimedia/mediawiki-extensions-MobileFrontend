@@ -12,7 +12,10 @@
 	 */
 	CtaDrawer = Drawer.extend( {
 		defaults: {
-			collapseButton: new Icon( { name: 'arrow-down', additionalClassNames: 'cancel' } ).toHtmlString(),
+			collapseButton: new Icon( {
+				name: 'arrow-down',
+				additionalClassNames: 'cancel'
+			} ).toHtmlString(),
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
 			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
 		},
@@ -20,10 +23,12 @@
 
 		preRender: function ( options ) {
 			var params = $.extend( {
-				// use wgPageName as this includes the namespace if outside Main
-				returnto: options.returnTo || mw.config.get( 'wgPageName' )
-			}, options.queryParams ),
-				signupParams = $.extend( { type: 'signup' }, options.signupQueryParams );
+					// use wgPageName as this includes the namespace if outside Main
+					returnto: options.returnTo || mw.config.get( 'wgPageName' )
+				}, options.queryParams ),
+				signupParams = $.extend( {
+					type: 'signup'
+				}, options.signupQueryParams );
 
 			options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
 			options.signupUrl = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );

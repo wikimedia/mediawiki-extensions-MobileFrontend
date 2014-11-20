@@ -4,8 +4,14 @@
 		View = M.require( 'View' ),
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 		Icon = M.require( 'Icon' ),
-		watchIcon = new Icon( { name: 'watch', additionalClassNames: 'icon-32px watch-this-article' } ),
-		watchedIcon = new Icon( { name: 'watched', additionalClassNames: 'icon-32px watch-this-article' } ),
+		watchIcon = new Icon( {
+			name: 'watch',
+			additionalClassNames: 'icon-32px watch-this-article'
+		} ),
+		watchedIcon = new Icon( {
+			name: 'watched',
+			additionalClassNames: 'icon-32px watch-this-article'
+		} ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		api = new WatchstarApi(),

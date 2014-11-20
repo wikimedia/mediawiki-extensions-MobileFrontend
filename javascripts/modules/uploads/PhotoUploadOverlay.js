@@ -22,9 +22,10 @@
 			ownerStatement: ownershipMessage,
 			heading: mw.msg( 'mobile-frontend-image-heading-describe' ),
 			headerButtonsListClassName: 'overlay-action',
-			headerButtons: [
-				{ className: 'submit', msg: mw.msg( 'mobile-frontend-photo-submit' ) }
-			]
+			headerButtons: [ {
+				className: 'submit',
+				msg: mw.msg( 'mobile-frontend-photo-submit' )
+			} ]
 		},
 
 		className: 'overlay photo-overlay',
@@ -46,14 +47,18 @@
 					var dataUri = fileReader.result;
 					// add mimetype if not present (some browsers need it, e.g. Android browser)
 					dataUri = dataUri.replace( /^data:base64/, 'data:image/jpeg;base64' );
-					self.log( { action: 'preview' } );
+					self.log( {
+						action: 'preview'
+					} );
 					self.setImageUrl( dataUri );
 				};
 			}
 
 			if ( options.insertInPage ) {
 				this.api = new PhotoApi( {
-					editorApi: new EditorApi( { title: options.pageTitle } )
+					editorApi: new EditorApi( {
+						title: options.pageTitle
+					} )
 				} );
 			} else {
 				this.api = new PhotoApi();
@@ -64,7 +69,9 @@
 
 			this.progressPopup = new PhotoUploadProgress().on( 'cancel', function () {
 				self.api.abort();
-				self.log( { action: 'cancel' } );
+				self.log( {
+					action: 'cancel'
+				} );
 			} ).on( 'submit', function () {
 				// handle resubmitting after abusefilter message
 				self._save();
@@ -99,7 +106,9 @@
 			this.api.save( saveOptions ).done( function ( fileName, descriptionUrl ) {
 				self.progressPopup.hide( true );
 
-				self.log( { action: 'success' } );
+				self.log( {
+					action: 'success'
+				} );
 				if ( self.options.insertInPage ) {
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
 
@@ -128,9 +137,9 @@
 						if ( typeof err.details === 'string' ) {
 							errMsg += '/' + err.details;
 						}
-					// Otherwise, record the stage as 'unknown' and record the type as the
-					// status message ("timeout", "error", "abort", etc. ) and include any
-					// HTTP error that was thrown.
+						// Otherwise, record the stage as 'unknown' and record the type as the
+						// status message ("timeout", "error", "abort", etc. ) and include any
+						// HTTP error that was thrown.
 					} else {
 						errMsg = 'unknown';
 						if ( statusMessage ) {
@@ -140,7 +149,10 @@
 							}
 						}
 					}
-					self.log( { action: 'error', errorText: errMsg } );
+					self.log( {
+						action: 'error',
+						errorText: errMsg
+					} );
 				}
 			} );
 		},
@@ -162,7 +174,9 @@
 			$submitButton = this.$( '.submit' )
 				.prop( 'disabled', true )
 				.on( 'click', function () {
-					self.log( { action: 'previewSubmit' } );
+					self.log( {
+						action: 'previewSubmit'
+					} );
 					self._submit();
 				} );
 			this.$description = this.$( 'textarea' )
@@ -191,9 +205,13 @@
 				EXIF.getData( this.file, function () {
 					if ( $.isEmptyObject( this.exifdata ) ) {
 						if ( window.confirm( mw.msg( 'mobile-frontend-photo-upload-copyvio' ) ) ) {
-							self.log( { action: 'copyvioOk' } );
+							self.log( {
+								action: 'copyvioOk'
+							} );
 						} else {
-							self.log( { action: 'copyvioCancel' } );
+							self.log( {
+								action: 'copyvioCancel'
+							} );
 							self.hide( true );
 						}
 					}
@@ -208,7 +226,9 @@
 				return _super.apply( this, arguments );
 			} else if ( window.confirm( mw.msg( 'mobile-frontend-image-cancel-confirm' ) ) ) {
 				this.emit( 'cancel' );
-				this.log( { action: 'previewCancel' } );
+				this.log( {
+					action: 'previewCancel'
+				} );
 				return _super.apply( this, arguments );
 			} else {
 				return false;
@@ -226,7 +246,9 @@
 			this.imageUrl = url;
 			this.$( '.spinner' ).hide();
 			this.$( '.help' ).on( 'click', function () {
-				self.log( { action: 'whatDoesThisMean' } );
+				self.log( {
+					action: 'whatDoesThisMean'
+				} );
 			} );
 			$( '<img>' )
 				.attr( 'src', url )

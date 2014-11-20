@@ -12,7 +12,10 @@
 
 		// FIXME: find more elegant way to not show watchlist stars on recent changes
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
-			watchlist = new WatchList( { el: $watchlist, enhance: true } );
+			watchlist = new WatchList( {
+				el: $watchlist,
+				enhance: true
+			} );
 			watchlist.on( 'unwatch', function () {
 				schema.log( actionNamePrefix + 'unwatch' );
 			} );

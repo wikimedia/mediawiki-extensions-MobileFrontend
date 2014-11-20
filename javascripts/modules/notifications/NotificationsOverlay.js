@@ -47,7 +47,10 @@
 					var notifications;
 					if ( result.query && result.query.notifications ) {
 						notifications = $.map( result.query.notifications.list, function ( a ) {
-							return { message: a['*'], timestamp: a.timestamp.mw };
+							return {
+								message: a['*'],
+								timestamp: a.timestamp.mw
+							};
 						} ).sort( function ( a, b ) {
 							return a.timestamp < b.timestamp ? 1 : -1;
 						} );

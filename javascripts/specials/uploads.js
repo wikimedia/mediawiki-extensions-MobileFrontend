@@ -45,7 +45,9 @@
 					iiurlwidth: IMAGE_WIDTH
 				}, {
 					url: corsUrl || this.apiUrl,
-					xhrFields: { withCredentials: true }
+					xhrFields: {
+						withCredentials: true
+					}
 				} ).done( function ( resp ) {
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array

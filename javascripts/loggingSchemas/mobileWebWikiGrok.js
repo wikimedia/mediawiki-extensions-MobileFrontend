@@ -14,6 +14,8 @@
 		return M.log( 'MobileWebWikiGrok', $.extend( options, data ) );
 	}
 
-	M.define( 'loggingSchemas/mobileWebWikiGrok', { log: log } );
+	M.define( 'loggingSchemas/mobileWebWikiGrok', {
+		log: log
+	} );
 
 } )( mw.mobileFrontend, jQuery );

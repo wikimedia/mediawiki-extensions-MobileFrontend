@@ -114,7 +114,9 @@
 				// use wgPageName as this includes the namespace if outside Main
 				returnto: options.returnTo || mw.config.get( 'wgPageName' )
 			}, options.queryParams ),
-			signupParams = $.extend( { type: 'signup' }, options.signupQueryParams );
+			signupParams = $.extend( {
+				type: 'signup'
+			}, options.signupQueryParams );
 
 			this.$content.hide();
 			this.showSpinner();
@@ -138,7 +140,9 @@
 
 		_prepareForSave: function () {
 			var self = this,
-				params = { text: this.$content.val() };
+				params = {
+					text: this.$content.val()
+				};
 
 			this._showHidden( '.save-header, .save-panel' );
 
@@ -240,7 +244,9 @@
 		 */
 		_save: function () {
 			var self = this,
-				options = { summary: this.$( '.summary' ).val() };
+				options = {
+					summary: this.$( '.summary' ).val()
+				};
 
 			if ( self.sectionLine !== '' ) {
 				options.summary = '/* ' + self.sectionLine + ' */' + options.summary;

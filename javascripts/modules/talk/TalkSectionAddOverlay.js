@@ -120,7 +120,10 @@
 				} ).done( function () {
 					result.resolve( 'ok' );
 				} ).fail( function ( msg ) {
-					result.reject( { type: 'error', details: msg } );
+					result.reject( {
+						type: 'error',
+						details: msg
+					} );
 				} );
 			} else {
 				if ( !text ) {
@@ -129,7 +132,10 @@
 				if ( !heading ) {
 					$subject.addClass( 'error' );
 				}
-				result.reject( { type: 'error', details: 'empty message or heading' } );
+				result.reject( {
+					type: 'error',
+					details: 'empty message or heading'
+				} );
 			}
 			return result;
 		}

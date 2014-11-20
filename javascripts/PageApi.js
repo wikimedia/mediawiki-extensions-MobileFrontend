@@ -102,8 +102,13 @@
 		 */
 		getPage: function ( title, endpoint, leadOnly ) {
 			var page, timestamp,
-				options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {},
-				protection = { edit:[ '*' ] };
+				options = endpoint ? {
+					url: endpoint,
+					dataType: 'jsonp'
+				} : {},
+				protection = {
+					edit: [ '*' ]
+				};
 
 			if ( !this.cache[title] ) {
 				page = this.cache[title] = $.Deferred();
@@ -124,7 +129,11 @@
 						page.reject( resp );
 					// FIXME: [LQT] remove when liquid threads is dead (see Bug 51586)
 					} else if ( resp.mobileview.hasOwnProperty( 'liquidthreads' ) ) {
-						page.reject( { error: { code: 'lqt' } } );
+						page.reject( {
+							error: {
+								code: 'lqt'
+							}
+						} );
 					} else {
 						mv = resp.mobileview;
 						sections = transformSections( mv.sections );
@@ -148,7 +157,9 @@
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
 							isMainPage: mv.hasOwnProperty( 'mainpage' ) ? true : false,
-							historyUrl: mw.util.getUrl( title, { action: 'history' } ),
+							historyUrl: mw.util.getUrl( title, {
+								action: 'history'
+							} ),
 							lastModifiedTimestamp: timestamp,
 							languageCount: mv.languagecount,
 							hasVariants: mv.hasOwnProperty( 'hasvariants' ),
@@ -236,7 +247,9 @@
 						.replace( '$1', title )
 						.replace( '$2', item.code );
 				} else {
-					variant.url = mw.util.getUrl( title, { variant: item.code } );
+					variant.url = mw.util.getUrl( title, {
+						variant: item.code
+					} );
 				}
 				variants.push( variant );
 			} );
@@ -282,7 +295,12 @@
 				var level = $( this )[0].tagName.substr( 1 ),
 					$span = $( this ).find( 'span' );
 
-				sections.push( { level: level, line: $span.html(), anchor: $span.attr( 'id' ) || '', text: '' } );
+				sections.push( {
+					level: level,
+					line: $span.html(),
+					anchor: $span.attr( 'id' ) || '',
+					text: ''
+				} );
 			} );
 			return sections;
 		},

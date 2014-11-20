@@ -2,8 +2,15 @@
 	var currentPageTitle =  M.getCurrentPage().title,
 		settings = M.require( 'settings' ),
 		Icon = M.require( 'Icon' ),
-		iconUp = new Icon( { name: 'arrow-up', hasText: true } ),
-		iconDown = new Icon( { name: 'arrow-down', hasText: true, additionalClassNames: 'icon-15px' } ),
+		iconUp = new Icon( {
+			name: 'arrow-up',
+			hasText: true
+		} ),
+		iconDown = new Icon( {
+			name: 'arrow-down',
+			hasText: true,
+			additionalClassNames: 'icon-15px'
+		} ),
 		classOpen = iconUp.getGlyphClassName(),
 		classClosed = iconDown.getGlyphClassName();
 

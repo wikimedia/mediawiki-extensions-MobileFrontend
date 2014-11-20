@@ -3,8 +3,12 @@
 	var
 		settings = M.require( 'settings' ),
 		Icon = M.require( 'Icon' ),
-		disabledEditIcon = new Icon( { name: 'edit' } ),
-		enabledEditIcon = new Icon( { name: 'edit-enabled' } ),
+		disabledEditIcon = new Icon( {
+			name: 'edit'
+		} ),
+		enabledEditIcon = new Icon( {
+			name: 'edit-enabled'
+		} ),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
 		user = M.require( 'user' ),
@@ -25,7 +29,9 @@
 			queryParams: {
 				campaign: 'mobile_editPageActionCta'
 			},
-			signupQueryParams: { returntoquery: 'article_action=signup-edit' },
+			signupQueryParams: {
+				returntoquery: 'article_action=signup-edit'
+			},
 			content: mw.msg( 'mobile-frontend-editor-cta' )
 		} );
 
@@ -43,14 +49,19 @@
 	}
 
 	function makeCta( $el, section, allowAnonymous ) {
-		var options = { queryParams: {
-			returnto: mw.config.get( 'wgPageName' ),
-			returntoquery: 'action=edit&section=' + section
-		} };
+		var options = {
+			queryParams: {
+				returnto: mw.config.get( 'wgPageName' ),
+				returntoquery: 'action=edit&section=' + section
+			}
+		};
 
 		if ( allowAnonymous ) {
-			options.links = [ { label: mw.msg( 'mobile-frontend-editor-anon' ),
-				href: $el[0].href, selector: 'edit-anon mw-ui-progressive' } ];
+			options.links = [ {
+				label: mw.msg( 'mobile-frontend-editor-anon' ),
+				href: $el[0].href,
+				selector: 'edit-anon mw-ui-progressive'
+			} ];
 		}
 		$el
 			.on( 'click', function ( ev ) {

@@ -35,7 +35,9 @@
 			var routeEv;
 
 			if ( self._enabled ) {
-				routeEv = $.Event( 'route', { path: self.getPath() } );
+				routeEv = $.Event( 'route', {
+					path: self.getPath()
+				} );
 				self.emit( 'route', routeEv );
 
 				if ( !routeEv.isDefaultPrevented() ) {

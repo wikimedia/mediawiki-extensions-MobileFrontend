@@ -13,7 +13,9 @@
 		var result = $.Deferred();
 		M.loadModule( 'mobile.uploads' ).done( function () {
 			var UploadTutorialNew = M.require( 'modules/uploads/UploadTutorial' );
-			result.resolve( new UploadTutorialNew( { funnel: funnel || null } ) );
+			result.resolve( new UploadTutorialNew( {
+				funnel: funnel || null
+			} ) );
 		} );
 		return result;
 	} );

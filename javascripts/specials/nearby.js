@@ -5,7 +5,9 @@
 	$( function () {
 		var
 			nearby,
-			options = { el: $( '#mw-mf-nearby' ) },
+			options = {
+				el: $( '#mw-mf-nearby' )
+			},
 			$btn = $( '#secondary-button' ),
 			icon, $icon;
 
@@ -15,7 +17,8 @@
 		}
 
 		// Create refresh button on the header
-		icon = new Icon( { name: 'refresh',
+		icon = new Icon( {
+			name: 'refresh',
 			id: 'secondary-button',
 			additionalClassNames: 'main-header-button',
 			tagName: 'a',
@@ -51,7 +54,9 @@
 		 */
 		M.router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
 			$icon.hide();
-			refresh( $.extend( {}, options, { pageTitle: pageTitle } ) );
+			refresh( $.extend( {}, options, {
+				pageTitle: pageTitle
+			} ) );
 		} );
 
 		/*
@@ -59,7 +64,9 @@
 		 */
 		function refreshCurrentLocation() {
 			$icon.show();
-			refresh( $.extend( {}, options, { useCurrentLocation: true } ) );
+			refresh( $.extend( {}, options, {
+				useCurrentLocation: true
+			} ) );
 		}
 
 		/*

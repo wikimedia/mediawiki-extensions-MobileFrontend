@@ -7,7 +7,10 @@
 		while ( i < limits.length && timestampDelta > limits[i + 1] ) {
 			++i;
 		}
-		return { value: Math.round( timestampDelta / limits[i] ), unit: units[i] };
+		return {
+			value: Math.round( timestampDelta / limits[i] ),
+			unit: units[i]
+		};
 	}
 
 	function getTimeAgoDelta( timestamp ) {

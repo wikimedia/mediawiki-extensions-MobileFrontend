@@ -17,10 +17,14 @@
 		className: 'overlay carousel tutorial content-overlay',
 
 		defaults: {
-			slideLeftButton: new Icon( { name: 'previous',
-				additionalClassNames: 'slider-button prev' } ).toHtmlString(),
-			slideRightButton: new Icon( { name: 'next',
-				additionalClassNames: 'slider-button next' } ).toHtmlString(),
+			slideLeftButton: new Icon( {
+				name: 'previous',
+				additionalClassNames: 'slider-button prev'
+			} ).toHtmlString(),
+			slideRightButton: new Icon( {
+				name: 'next',
+				additionalClassNames: 'slider-button next'
+			} ).toHtmlString(),
 			inBeta: M.isBetaGroupMember(),
 			pages: [
 				{

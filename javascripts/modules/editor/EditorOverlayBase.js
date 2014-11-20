@@ -14,13 +14,20 @@
 	 */
 	EditorOverlayBase = Overlay.extend( {
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
-			switcherButton: new Icon( { tagName: 'button',
-				name: 'edit-switch', additionalClassNames: 'editor-switcher' } ).toHtmlString(),
-			sourceButton: new Icon( { name: 'edit-source', additionalClassNames: 'icon-32px editor-choice',
+			switcherButton: new Icon( {
+				tagName: 'button',
+				name: 'edit-switch',
+				additionalClassNames: 'editor-switcher'
+			} ).toHtmlString(),
+			sourceButton: new Icon( {
+				name: 'edit-source',
+				additionalClassNames: 'icon-32px editor-choice',
 				hasText: true,
 				label: mw.msg( 'mobile-frontend-editor-source-editor' )
 			} ).toHtmlString(),
-			veButton: new Icon( { name: 'edit-ve', additionalClassNames: 'icon-32px editor-choice',
+			veButton: new Icon( {
+				name: 'edit-ve',
+				additionalClassNames: 'icon-32px editor-choice',
 				hasText: true,
 				label: mw.msg( 'mobile-frontend-editor-visual-editor' )
 			} ).toHtmlString(),
@@ -111,7 +118,9 @@
 
 			// Set a cookie for 30 days indicating that this user has edited from
 			// the mobile interface.
-			$.cookie( 'mobileEditor', 'true', { expires: 30 } );
+			$.cookie( 'mobileEditor', 'true', {
+				expires: 30
+			} );
 		},
 		initialize: function ( options ) {
 			if ( !options.previewingMsg ) {

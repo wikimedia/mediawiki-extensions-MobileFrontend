@@ -1,7 +1,11 @@
 ( function ( M ) {
 	var Overlay = M.require( 'Overlay' ),
 		Icon = M.require( 'Icon' ),
-		icon = new Icon( { name: 'cleanup-gray', additionalClassNames: 'issue-notice', hasText: true } ),
+		icon = new Icon( {
+			name: 'cleanup-gray',
+			additionalClassNames: 'issue-notice',
+			hasText: true
+		} ),
 		CleanupOverlay;
 
 	/**

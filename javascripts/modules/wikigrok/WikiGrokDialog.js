@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+ ( function ( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Panel = M.require( 'Panel' ),
@@ -34,8 +34,14 @@
 			// Play a game to help Wikipedia!
 			// Help add tags to this page!
 			buttons: [
-				{ classes: 'cancel inline mw-ui-button', label: 'No, thanks' },
-				{ classes: 'proceed inline mw-ui-button mw-ui-progressive', label: 'Okay!' }
+				{
+					classes: 'cancel inline mw-ui-button',
+					label: 'No, thanks'
+				},
+				{
+					classes: 'proceed inline mw-ui-button mw-ui-progressive',
+					label: 'Okay!'
+				}
 			],
 			noticeMsg: '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>'
 		},
@@ -58,7 +64,9 @@
 				userToken: options.userToken,
 				taskToken: this.defaults.taskToken
 			} );
-			this.apiWikiData = new WikiDataApi( { itemId: options.itemId } );
+			this.apiWikiData = new WikiDataApi( {
+				itemId: options.itemId
+			} );
 			Panel.prototype.initialize.apply( this, arguments );
 
 			// log page impression and widget impression when the widget is shown
@@ -191,9 +199,18 @@
 						// Re-render with new content for 'Question' step
 						options.beginQuestions = true;
 						options.buttons = [
-							{ classes: 'yes inline mw-ui-button mw-ui-progressive', label: 'Yes' },
-							{ classes: 'not-sure inline mw-ui-button', label: 'Not Sure' },
-							{ classes: 'no inline mw-ui-button mw-ui-progressive', label: 'No' }
+							{
+								classes: 'yes inline mw-ui-button mw-ui-progressive',
+								label: 'Yes'
+							},
+							{
+								classes: 'not-sure inline mw-ui-button',
+								label: 'Not Sure'
+							},
+							{
+								classes: 'no inline mw-ui-button mw-ui-progressive',
+								label: 'No'
+							}
 						];
 						options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
 						self.render( options );
@@ -209,7 +226,10 @@
 		showError: function ( options, errorMsg ) {
 			options.contentMsg = errorMsg;
 			options.buttons = [
-				{ classes: 'cancel inline mw-ui-button mw-ui-progressive', label: 'OK' }
+				{
+					classes: 'cancel inline mw-ui-button mw-ui-progressive',
+					label: 'OK'
+				}
 			];
 			this.render( options );
 		},

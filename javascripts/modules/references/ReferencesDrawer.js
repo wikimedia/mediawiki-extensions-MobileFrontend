@@ -11,7 +11,8 @@
 	ReferencesDrawer = Drawer.extend( {
 		defaults: {
 			cancelButton: new Icon( {
-				name: 'cancel', additionalClassNames: 'cancel',
+				name: 'cancel',
+				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString()
 		},

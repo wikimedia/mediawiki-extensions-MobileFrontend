@@ -112,7 +112,9 @@
 				self = this,
 				doc = this.target.surface.getModel().getDocument(),
 				summary = this.$( '.save-panel .summary' ).val(),
-				options = { summary: summary };
+				options = {
+					summary: summary
+				};
 
 			EditorOverlayBase.prototype._save.apply( this, arguments );
 			if ( this.confirmAborted ) {
@@ -158,7 +160,9 @@
 		onSurfaceReady: function () {
 			this.clearSpinner();
 			this.$( '.surface' ).show();
-			this.target.surface.getModel().getDocument().connect( this, { transact: 'onTransact' } );
+			this.target.surface.getModel().getDocument().connect( this, {
+				transact: 'onTransact'
+			} );
 			this.target.surface.$element.addClass( 'content' );
 
 			// we have to do it here because contenteditable elements still do not

@@ -167,7 +167,9 @@
 				}
 				this.ajax( data, {
 					url: endpoint || this.apiUrl,
-					xhrFields: { withCredentials: true }
+					xhrFields: {
+						withCredentials: true
+					}
 				} ).done( function ( tokenData ) {
 					if ( tokenData && tokenData.tokens && !tokenData.warnings ) {
 						token = tokenData.tokens[ tokenType + 'token' ];

@@ -50,10 +50,10 @@
 
 			$.each( suggestions, function ( type, data ) {
 				var prop = {
-						type: type,
-						name: data.name,
-						id: data.id
-					};
+					type: type,
+					name: data.name,
+					id: data.id
+				};
 
 				allSuggestions = allSuggestions.concat( data.list );
 				// Make sure it's easy to look up the property later.

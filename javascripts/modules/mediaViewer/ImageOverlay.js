@@ -19,9 +19,11 @@
 		closeOnBack: true,
 
 		defaults: {
-			cancelButton: new Icon( { tagName: 'button',
+			cancelButton: new Icon( {
+				tagName: 'button',
 				// Uses a dark theme so swap out the icon
-				name: 'cancel-light', additionalClassNames: 'cancel',
+				name: 'cancel-light',
+				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
 			detailsMsg: mw.msg( 'mobile-frontend-media-details' ),

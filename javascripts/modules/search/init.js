@@ -11,7 +11,9 @@
 	// http://stackoverflow.com/questions/6837543/show-virtual-keyboard-on-mobile-phones-in-javascript
 	$( '#searchInput' ).on( 'click', function () {
 		schema.log( 'search' );
-		new SearchOverlay( { searchTerm: $( this ).val() } ).show();
+		new SearchOverlay( {
+			searchTerm: $( this ).val()
+		} ).show();
 		M.router.navigate( '/search' );
 	} );
 

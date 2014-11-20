@@ -107,7 +107,10 @@
 		// FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
 		_handleWarnings: function ( result, warnings ) {
 			var humanErrorMsg,
-				err = { stage: 'upload', type: 'warning' };
+				err = {
+					stage: 'upload',
+					type: 'warning'
+				};
 
 			warnings = $.map( warnings, function ( value, code ) {
 				return code + '/' + value;
@@ -184,12 +187,17 @@
 					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
 					url: uploadUrl,
 					contentType: 'multipart/form-data',
-					xhrFields: { withCredentials: true },
+					xhrFields: {
+						withCredentials: true
+					},
 					cache: false
 				} ).done( function ( data ) {
 					var descriptionUrl = '',
 						warnings = data.upload ? data.upload.warnings : false,
-						err = { stage: 'upload', type: 'error' };
+						err = {
+							stage: 'upload',
+							type: 'error'
+						};
 
 					if ( !data || !data.upload ) {
 						// error uploading image
@@ -213,7 +221,11 @@
 						} else if ( warnings ) {
 							return self._handleWarnings( result, warnings );
 						} else {
-							return result.reject( { stage: 'upload', type: 'unknown', details: 'missing-filename' } );
+							return result.reject( {
+								stage: 'upload',
+								type: 'unknown',
+								details: 'missing-filename'
+							} );
 						}
 					}
 
@@ -224,7 +236,9 @@
 
 					if ( self.editorApi && !isNewFile ) {
 						self.editorApi.setPrependText( '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n' );
-						self.editorApi.save( { summary: mw.msg( 'mobile-frontend-photo-upload-comment' ) } )
+						self.editorApi.save( {
+								summary: mw.msg( 'mobile-frontend-photo-upload-comment' )
+						} )
 							.done( function () {
 								result.resolve( options.fileName, descriptionUrl );
 							} )
@@ -241,7 +255,11 @@
 				} ).fail( function () {
 					// error on the server side (abort happens when user cancels the upload)
 					if ( status !== 'abort' ) {
-						result.reject( { stage: 'upload', type: 'error', details: 'http' } );
+						result.reject( {
+							stage: 'upload',
+							type: 'error',
+							details: 'http'
+						} );
 					}
 				} );
 
@@ -254,7 +272,11 @@
 
 			function getToken() {
 				return self.getTokenWithEndpoint.apply( self, arguments )
-					.fail( $.proxy( result, 'reject', { stage: 'upload', type: 'error', details: 'token' } ) );
+					.fail( $.proxy( result, 'reject', {
+						stage: 'upload',
+						type: 'error',
+						details: 'token'
+					} ) );
 			}
 
 			if ( self.useCentralAuthToken && endpoint ) {

@@ -11,11 +11,13 @@
 	ReferencesDrawerBeta = ReferencesDrawer.extend( {
 		defaults: {
 			cancelButton: new Icon( {
-				name: 'cancel-light', additionalClassNames: 'cancel',
+				name: 'cancel-light',
+				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
 			citation: new Icon( {
-				name: 'citation', additionalClassNames: 'text icon-16px',
+				name: 'citation',
+				additionalClassNames: 'text icon-16px',
 				hasText: true,
 				label: mw.msg( 'mobile-frontend-references-citation' )
 			} ).toHtmlString()

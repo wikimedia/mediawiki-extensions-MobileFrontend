@@ -14,7 +14,9 @@
 				return true;
 			// Otherwise try to set mf_testcookie and return true if it was set
 			} else {
-				$.cookie( 'mf_testcookie', 'test_value', { path: '/' } );
+				$.cookie( 'mf_testcookie', 'test_value', {
+					path: '/'
+				} );
 				return $.cookie( 'mf_testcookie' ) === 'test_value';
 			}
 		}
@@ -28,9 +30,12 @@
 		 * @returns {Boolean} Whether the save was successful or not
 		 */
 		function save( name, value, useCookieFallback ) {
+			var cookieOptions = {
+				expires: 1
+			};
 			return M.supportsLocalStorage ?
 				localStorage.setItem( name, value ) :
-					( useCookieFallback ? $.cookie( name, value, { expires: 1 } ) : false );
+					( useCookieFallback ? $.cookie( name, value, cookieOptions ) : false );
 		}
 
 		/**

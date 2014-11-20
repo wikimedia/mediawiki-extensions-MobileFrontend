@@ -20,7 +20,11 @@
 		className: 'overlay search-overlay',
 		template: mw.template.get( 'mobile.search', 'SearchOverlay.hogan' ),
 		defaults: {
-			clearIcon: new Icon( { tagName: 'button', name: 'clear', additionalClassNames: 'clear' } ).toHtmlString(),
+			clearIcon: new Icon( {
+				tagName: 'button',
+				name: 'clear',
+				additionalClassNames: 'clear'
+			} ).toHtmlString(),
 			searchTerm: '',
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
 			clearMsg: mw.msg( 'mobile-frontend-clear-search' ),
@@ -85,7 +89,11 @@
 					window.history.back();
 					// Add fulltext input to force fulltext search
 					$( '<input>' )
-						.attr( { type: 'hidden', name: 'fulltext', value: 'search' } )
+						.attr( {
+							type: 'hidden',
+							name: 'fulltext',
+							value: 'search'
+						} )
 						.appendTo( $form );
 					$form.submit();
 				} );
@@ -146,7 +154,10 @@
 									.filter( data.results.length ? '.with-results' : '.without-results' )
 									.show();
 								self.$( '.spinner' ).hide();
-								pageList = new PageList( { pages: data.results, el: $results } );
+								pageList = new PageList( {
+									pages: data.results,
+									el: $results
+								} );
 								pageList.renderPageImages();
 								M.emit( 'search-results', self, data.results );
 							}

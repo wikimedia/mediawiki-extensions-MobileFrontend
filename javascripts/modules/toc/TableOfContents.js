@@ -14,8 +14,10 @@
 			tocHeading: mw.template.get( 'mobile.toc', 'heading.hogan' )
 		},
 		defaults: {
-			tocIcon: new Icon( { tagName: 'span',
-				name: 'toc', additionalClasses: 'icon-16px'
+			tocIcon: new Icon( {
+				tagName: 'span',
+				name: 'toc',
+				additionalClasses: 'icon-16px'
 			} ).toHtmlString(),
 			contentsMsg: mw.msg( 'toc' )
 		},

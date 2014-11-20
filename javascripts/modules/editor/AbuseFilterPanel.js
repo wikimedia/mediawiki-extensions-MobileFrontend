@@ -26,7 +26,9 @@
 
 			// OverlayManager will replace previous instance of the route if present
 			M.overlayManager.add( /^\/abusefilter$/, function () {
-				return new AbuseFilterOverlay( { message: message } );
+				return new AbuseFilterOverlay( {
+					message: message
+				} );
 			} );
 
 			if ( type === 'warning' ) {

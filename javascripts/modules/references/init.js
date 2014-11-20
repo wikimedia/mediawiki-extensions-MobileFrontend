@@ -55,6 +55,8 @@
 		setup();
 	} );
 
-	M.define( 'references', { setup: setup } );
+	M.define( 'references', {
+		setup: setup
+	} );
 
 }( mw.mobileFrontend, jQuery ) );

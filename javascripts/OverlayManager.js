@@ -176,7 +176,10 @@
 		 * which resolves to an overlay.
 		 */
 		add: function ( route, factory ) {
-			var entry = { route: route, factory: factory };
+			var entry = {
+				route: route,
+				factory: factory
+			};
 
 			this.entries[route] = entry;
 			// check if overlay should be shown for the current path

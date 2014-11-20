@@ -85,7 +85,10 @@
 					// talk page doesn't exist yet.
 					if ( resp === 'missingtitle' ) {
 						// Create an empty page for new pages
-						self._addContent( { title: options.title, sections: [] }, options );
+						self._addContent( {
+							title: options.title,
+							sections: []
+						}, options );
 					} else {
 						// If the API request fails for any other reason, load the talk
 						// page manually rather than leaving the spinner spinning.

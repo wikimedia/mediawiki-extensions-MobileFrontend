@@ -138,10 +138,16 @@
 						result.resolve();
 					} else if ( data && data.error ) {
 						// Edit API error
-						result.reject( { type: 'error', details: data.error.code } );
+						result.reject( {
+							type: 'error',
+							details: data.error.code
+						} );
 					} else if ( data && data.edit && data.edit.captcha ) {
 						// CAPTCHAs
-						result.reject( { type: 'captcha', details: data.edit.captcha } );
+						result.reject( {
+							type: 'captcha',
+							details: data.edit.captcha
+						} );
 					} else if ( data && data.edit && data.edit.code ) {
 						code = data.edit.code;
 						warning = data.edit.warning;
@@ -149,30 +155,48 @@
 						// FIXME: AbuseFilter should have more consistent API responses
 						if ( /^abusefilter-warning/.test( code ) ) {
 							// AbuseFilter warning
-							result.reject( { type: 'abusefilter', details: {
-								type: 'warning',
-								message: warning
-							} } );
+							result.reject( {
+								type: 'abusefilter',
+								details: {
+									type: 'warning',
+									message: warning
+								}
+							} );
 						} else if ( /^abusefilter-disallow/.test( code ) ) {
 							// AbuseFilter disallow
-							result.reject( { type: 'abusefilter', details: {
-								type: 'disallow',
-								message: warning
-							} } );
+							result.reject( {
+								type: 'abusefilter',
+								details: {
+									type: 'disallow',
+									message: warning
+								}
+							} );
 						} else if ( /^abusefilter/.test( code ) ) {
 							// AbuseFilter other
-							result.reject( { type: 'abusefilter', details: {
-								type: 'other',
-								message: warning
-							} } );
+							result.reject( {
+								type: 'abusefilter',
+								details: {
+									type: 'other',
+									message: warning
+								}
+							} );
 						} else {
 							// other errors
-							result.reject( { type: 'error', details: code } );
+							result.reject( {
+								type: 'error',
+								details: code
+							} );
 						}
 					} else {
-						result.reject( { type: 'error', details: 'unknown' } );
+						result.reject( {
+							type: 'error',
+							details: 'unknown'
+						} );
 					}
-				} ).fail( $.proxy( result, 'reject', { type: 'error', details: 'http' } ) );
+				} ).fail( $.proxy( result, 'reject', {
+					type: 'error',
+					details: 'http'
+				} ) );
 			}
 
 			saveContent();

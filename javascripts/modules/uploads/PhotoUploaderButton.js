@@ -1,8 +1,11 @@
 ( function ( M, $ ) {
 	var View = M.require( 'View' ),
 		Icon = M.require( 'Icon' ),
-		photoIcon = new Icon( { name: 'photo', hasText: true,
-			additionalClassNames: 'mw-ui-progressive mw-ui-button button' } ),
+		photoIcon = new Icon( {
+			name: 'photo',
+			hasText: true,
+			additionalClassNames: 'mw-ui-progressive mw-ui-button button'
+		} ),
 		PhotoUploaderButton;
 
 	function isSupported() {

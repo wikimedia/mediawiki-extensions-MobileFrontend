@@ -26,7 +26,9 @@
 			PageList.prototype.postRender.apply( this, arguments );
 			this.$el.find( 'a.title' ).on( 'mousedown', function () {
 				// name funnel for watchlists to catch subsequent uploads
-				$.cookie( 'mwUploadsFunnel', 'watchlist', { expires: new Date( new Date().getTime() + 60000 ) } );
+				$.cookie( 'mwUploadsFunnel', 'watchlist', {
+					expires: new Date( new Date().getTime() + 60000 )
+				} );
 			} );
 		}
 	} );

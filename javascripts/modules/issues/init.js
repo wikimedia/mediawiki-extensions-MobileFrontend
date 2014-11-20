@@ -63,7 +63,10 @@
 				.$el.children().eq( 0 ).attr( 'href', '#/issues' );
 
 			M.overlayManager.add( /^\/issues$/, function () {
-				return new CleanupOverlay( { issues: issues, headingText: headingText } );
+				return new CleanupOverlay( {
+					issues: issues,
+					headingText: headingText
+				} );
 			} );
 
 			$link.insertBefore( $metadata.eq( 0 ) );

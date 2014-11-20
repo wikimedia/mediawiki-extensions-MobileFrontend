@@ -48,7 +48,10 @@
 			var result = $.Deferred();
 			if ( M.supportsGeoLocation() ) {
 				navigator.geolocation.getCurrentPosition( function ( geo ) {
-						result.resolve( { latitude: geo.coords.latitude, longitude: geo.coords.longitude } );
+						result.resolve( {
+							latitude: geo.coords.latitude,
+							longitude: geo.coords.longitude
+						} );
 					},
 					function ( err ) {
 						// see https://developer.mozilla.org/en-US/docs/Web/API/PositionError
@@ -173,7 +176,9 @@
 			} ).on( 'click', function () {
 				window.location.hash = $( this ).attr( 'id' );
 				// name funnel for watchlists to catch subsequent uploads
-				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000 ) } );
+				$.cookie( 'mwUploadsFunnel', 'nearby', {
+					expires: new Date( new Date().getTime() + 60000 )
+				} );
 			} );
 
 			// Restore the offset

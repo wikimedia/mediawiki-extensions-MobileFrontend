@@ -38,7 +38,9 @@
 			}
 		}
 
-		new LeadPhotoUploaderButton( { funnel: funnel } );
+		new LeadPhotoUploaderButton( {
+			funnel: funnel
+		} );
 	}
 
 	if ( isSupported ) {

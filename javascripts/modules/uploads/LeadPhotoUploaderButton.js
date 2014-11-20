@@ -2,7 +2,10 @@
 	var
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		Icon = M.require( 'Icon' ),
-		uploadIcon = new Icon( { name: 'addimage-enabled', additionalClassNames: 'enabled' } ),
+		uploadIcon = new Icon( {
+			name: 'addimage-enabled',
+			additionalClassNames: 'enabled'
+		} ),
 		LeadPhotoUploaderButton;
 
 	/**

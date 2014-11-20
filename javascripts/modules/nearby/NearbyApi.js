@@ -86,7 +86,9 @@
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		getPagesAroundPage: function ( page, range ) {
-			return this._search( { ggspage: page }, range, page );
+			return this._search( {
+				ggspage: page
+			}, range, page );
 		},
 
 		/**
@@ -137,7 +139,10 @@
 				// If we have coordinates then set them so that the results are sorted by
 				// distance
 				if ( params.ggscoord ) {
-					loc = { latitude: params.ggscoord[0], longitude: params.ggscoord[1] };
+					loc = {
+						latitude: params.ggscoord[0],
+						longitude: params.ggscoord[1]
+					};
 				}
 				// If we have no coords (searching for a page's nearby), find the
 				// page in the results and get its coords.
@@ -167,7 +172,10 @@
 					page.url = mw.util.getUrl( page.title );
 					if ( page.coordinates && loc ) { // FIXME: protect against bug 47133 (remove when resolved)
 						coords = page.coordinates[0];
-						lngLat = { latitude: coords.lat, longitude: coords.lon };
+						lngLat = {
+							latitude: coords.lat,
+							longitude: coords.lon
+						};
 						page.dist = calculateDistance( loc, lngLat );
 						page.latitude = coords.lat;
 						page.longitude = coords.lon;

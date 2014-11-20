@@ -20,6 +20,8 @@
 		return logger;
 	}
 
-	M.define( 'loggingSchemas/mobileWebUploads', { getLog: getLog } );
+	M.define( 'loggingSchemas/mobileWebUploads', {
+		getLog: getLog
+	} );
 
 }( mw.mobileFrontend, jQuery ) );
