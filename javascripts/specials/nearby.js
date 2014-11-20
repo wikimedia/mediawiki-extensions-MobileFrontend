@@ -45,6 +45,7 @@
 				longitude: lon
 			} ) );
 		} );
+
 		/*
 		 * #/page/PageTitle
 		 */
@@ -53,10 +54,14 @@
 			refresh( $.extend( {}, options, { pageTitle: pageTitle } ) );
 		} );
 
+		/*
+		 * Refresh the current view using browser geolocation api
+		 */
 		function refreshCurrentLocation() {
 			$icon.show();
 			refresh( $.extend( {}, options, { useCurrentLocation: true } ) );
 		}
+
 		/*
 		 * Anything else search with current location
 		 * FIXME: The regex has to negate the rest of the routes because every time we
