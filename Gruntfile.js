@@ -7,6 +7,7 @@
 /*jshint node:true, strict:false*/
 /*global module*/
 module.exports = function ( grunt ) {
+	var MW_INSTALL_PATH = grunt.option('MW_INSTALL_PATH') || '../..';
 
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
@@ -14,6 +15,9 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-notify' );
 	grunt.loadNpmTasks( 'grunt-svg2png' );
+	grunt.loadNpmTasks( 'grunt-jsduck' );
+	grunt.loadNpmTasks( 'grunt-contrib-clean' );
+	grunt.loadNpmTasks( 'grunt-mkdir' );
 
 	grunt.initConfig( {
 		URL: process.env.URL || 'http://127.0.0.1:8080/w/index.php/',
@@ -22,7 +26,8 @@ module.exports = function ( grunt ) {
 		files: {
 			js: 'javascripts/**/*.js',
 			jsTests: 'tests/qunit/**/*.js',
-			jsExternals: 'javascripts/externals/**/*.js'
+			jsExternals: 'javascripts/externals/**/*.js',
+			mantleJs: MW_INSTALL_PATH + '/extensions/Mantle/javascripts/**/*.js'
 		},
 		svg2png: {
 			dist: {
@@ -90,10 +95,41 @@ module.exports = function ( grunt ) {
 					reload: true
 				}
 			}
+		},
+		mkdir: {
+			jsdocs: {
+				options: {
+					create: [ 'docs/js' ]
+				}
+			}
+		},
+		clean: {
+			jsdocs: [ 'docs/js' ]
+		},
+		jsduck: {
+			main: {
+				src: [ '<%= files.mantleJs %>', '<%= files.js %>', '!<%= files.jsExternals %>' ],
+				dest: 'docs/js',
+				options: {
+					'builtin-classes': true,
+					'external': [
+						'Hogan.Template',
+						'HandleBars.Template',
+						'jQuery.Deferred',
+						'jQuery.Event',
+						'jQuery.Object',
+						'mw.user',
+						'OO.EventEmitter'
+					],
+					'ignore-global': true,
+					'warnings': [ '-no_doc', '-dup_member', '-link_ambiguous' ]
+				}
+			}
 		}
 	} );
 
 	grunt.registerTask( 'lint', [ 'jshint', 'jscs:main' ] );
+	grunt.registerTask( 'docs', [ 'clean:jsdocs', 'mkdir:jsdocs', 'jsduck:main' ] );
 
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki

@@ -29,16 +29,8 @@ kss: kssnodecheck			## Build the styleguide
 	@node_modules/.bin/kss-node less/ docs/styleguide/ --css $(KSS_MF_RL_TMP) -t styleguide-template
 	@rm $(KSS_MF_RL_TMP)
 
-jsduck: gems				## Build the JavaScript documentation
-	rm -rf docs/js
-	mkdir -p docs
-	jsduck ${MW_INSTALL_PATH}/extensions/Mantle/javascripts/ javascripts/ \
-		--output docs/js/ \
-		--warnings-exit-nonzero \
-		--external=OO.EventEmitter,jQuery.Object,Hogan.Template,HandleBars.Template,jQuery.Deferred,jQuery.Event,mw.user \
-		--exclude=javascripts/external \
-		--ignore-global \
-		--warnings=nodoc
+jsduck: nodecheck				## Build the JavaScript documentation
+	@grunt docs --MW_INSTALL_PATH=${MW_INSTALL_PATH}
 
 phpdoc: nodecheck			## Build the PHP documentation
 	mkdir -p docs
