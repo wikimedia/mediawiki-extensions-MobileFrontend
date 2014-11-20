@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_2b9d1c5b",
+        "filename": "tests/phpunit/skins/SkinMinervaAlphaTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-20T16:59:58Z",
+      "side": 1,
+      "message": "Oha, i hate you notepad++! And this should have a documentation :)",
+      "revId": "ff5c6e15abf1d4b3cb34cf3ea675657e42003aa8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
