@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 
 	var View = M.require( 'View' ),
 		useMediaWikiUI = M.isAlphaGroupMember(),
@@ -24,7 +24,7 @@
 		 * @return {string}
 		 */
 		getClassName: function () {
-			return this.$el.children().attr( 'class' );
+			return this.$el.attr( 'class' );
 		},
 		/**
 		 * Return the class that relates to the icon glyph
@@ -40,12 +40,16 @@
 			}
 			View.prototype.initialize.call( this, options );
 		},
+		postRender: function () {
+			View.prototype.postRender.apply( this, arguments );
+			this.$el = this.$el.children( 0 );
+		},
 		toHtmlString: function () {
-			return this.$el.html();
+			return $( '<div>' ).append( this.$el ).html();
 		},
 		template: mw.template.get( 'mobile.startup', 'icon.hogan' )
 	} );
 
 	M.define( 'Icon', Icon );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );
