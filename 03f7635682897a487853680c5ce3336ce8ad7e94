@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_772546a8",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-20T23:40:33Z",
+      "side": 1,
+      "message": "200x15 -\u003e 200x30",
+      "revId": "03f7635682897a487853680c5ce3336ce8ad7e94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_170de238",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-20T23:40:33Z",
+      "side": 1,
+      "message": "\u0027/images/mysite_copyright_logo.png\u0027 is probably a better example.",
+      "revId": "03f7635682897a487853680c5ce3336ce8ad7e94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_b7450e49",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-11-20T23:40:33Z",
+      "side": 1,
+      "message": "extra space here.",
+      "revId": "03f7635682897a487853680c5ce3336ce8ad7e94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
