@@ -1277,10 +1277,6 @@ $wgMinervaBootstrapModules = array(
 		'dependencies' => array(
 			'mobile.beta',
 			// Feature modules that should be loaded in alpha should be listed below here.
-			'mobile.infobox',
-		),
-		'scripts' => array(
-			'javascripts/modules/infobox/init.js',
 		),
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
