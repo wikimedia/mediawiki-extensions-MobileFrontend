@@ -17,7 +17,7 @@
 			<h2>{{{waitMsg}}}</h2>
 		</div>
 		<ul>
-			<li><button class="loading icon">{{waitMsg}}</button></li>
+			<li>{{{waitIcon}}}</li>
 		</ul>
 	</div>
 </div>
