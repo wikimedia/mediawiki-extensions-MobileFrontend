@@ -1,4 +1,5 @@
-MW_INSTALL_PATH ?= ../..
+MW_INSTALL_PATH ?= /vagrant/mediawiki/
+MW_MF_INSTALL_PATH ?= /vagrant/mediawiki/extensions/MobileFrontend
 MEDIAWIKI_LOAD_URL ?= http://localhost:8080/w/load.php
 
 # From https://gist.github.com/prwhite/8168133
@@ -78,7 +79,7 @@ phplint: phpcheck			## Lint the PHP files
 	@dev-scripts/phplint.sh
 
 phpunit:				## Run the PHPUnit test suite
-	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --configuration ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit/mfe.suite.xml --group=MobileFrontend
+	cd ${MW_INSTALL_PATH}/tests/phpunit && php5 phpunit.php ${MW_MF_INSTALL_PATH}/tests/phpunit --group=MobileFrontend
 
 qunit:					## Run the QUnit test suite
 	@dev-scripts/qunit.sh
