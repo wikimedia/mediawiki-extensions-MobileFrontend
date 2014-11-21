@@ -556,6 +556,9 @@ class MobileContextTest extends MediaWikiTestCase {
 		);
 	}
 
+	/**
+	 * @group Broken
+	 */
 	public function testBug71329() {
 		SpecialPageFactory::resetList();
 		RequestContext::resetMain();
