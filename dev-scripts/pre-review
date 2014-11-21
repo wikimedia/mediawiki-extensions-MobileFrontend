@@ -5,7 +5,7 @@ import urllib2
 import subprocess
 import json
 
-MAX_OPEN_PATCHES = 5
+MAX_OPEN_PATCHES = 7
 PROJECT_NAME = "mediawiki/extensions/MobileFrontend"
 
 def get_last_commit():
