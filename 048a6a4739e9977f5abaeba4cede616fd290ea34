@@ -34,6 +34,24 @@
       "revId": "048a6a4739e9977f5abaeba4cede616fd290ea34",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_0b45b717",
+        "filename": "Gruntfile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-21T15:27:14Z",
+      "side": 1,
+      "message": "Ah, ok, thanks for explanation, that makes sense :) It\u0027s working so :)",
+      "parentUuid": "6e936f18_4babbfd3",
+      "revId": "048a6a4739e9977f5abaeba4cede616fd290ea34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
