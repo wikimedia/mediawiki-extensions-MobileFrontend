@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var m = M.require( 'specials/uploads' );
+	var m = M.require( 'specials/uploads/UserGalleryApi' );
 
 	QUnit.module( 'MobileFrontend uploads' );
 
@@ -18,7 +18,7 @@
 			];
 		QUnit.expect( tests.length );
 		$( tests ).each( function( i ) {
-			var val = m.getDescription( this[0] );
+			var val = m.prototype._getDescription( this[0] );
 			assert.strictEqual( val, this[1], 'test ' + i );
 		} );
 	} );

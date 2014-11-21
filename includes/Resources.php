@@ -1126,7 +1126,10 @@ $wgMobileSpecialPageModules = array(
 			'mobile-frontend-photo-upload-user-count',
 		),
 		'scripts' => array(
-			'javascripts/specials/uploads.js',
+			'javascripts/specials/uploads/UserGalleryApi.js',
+			'javascripts/specials/uploads/PhotoItem.js',
+			'javascripts/specials/uploads/PhotoList.js',
+			'javascripts/specials/uploads/init.js',
 		),
 		'position' => 'top',
 	),
