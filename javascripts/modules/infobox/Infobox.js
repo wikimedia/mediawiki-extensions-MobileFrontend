@@ -24,6 +24,69 @@
 		},
 		typeDefaults: {
 			// FIXME: In future this should be configurable by Wikipedia admins
+			movie: {
+				rows: [
+					{
+						// image
+						id: 'P18'
+					},
+					{
+						label: 'Director',
+						id: 'P57'
+					},
+					{
+						label: 'Produced by',
+						id: 'P162'
+					},
+					{
+						label: 'Story by',
+						id: 'P58'
+					},
+					{
+						label: 'Based on',
+						id: 'P144'
+					},
+					{
+						label: 'Starring',
+						id: 'P161'
+					},
+					{
+						label: 'Music by',
+						id: 'P86'
+					},
+					{
+						label: 'Cinematography',
+						id: 'P344'
+					},
+					{
+						label: 'Film editor',
+						id: 'P1040'
+					},
+					{
+						label: 'Production company',
+						id: 'P272'
+					},
+					{
+						label: 'Distributor',
+						id: 'P750'
+					},
+					{
+						label: 'Released',
+						id: 'P577'
+					},
+					// FIXME: running time is not available on Wikidata
+					{
+						label: 'Country of origin',
+						id: 'P495'
+					},
+					{
+						label: 'Original language',
+						id: 'P364'
+					}
+					// FIXME: budget is not available on Wikidata
+					// FIXME: box office is not available on Wikidata
+				]
+			},
 			taxon: {
 				rows: [
 					{
@@ -376,6 +439,8 @@
 				return this.typeDefaults.country;
 			} else if ( claims.isTaxon ) {
 				return this.typeDefaults.taxon;
+			} else if ( claims.isMovie ) {
+				return this.typeDefaults.movie;
 			} else {
 				return this.typeDefaults.default;
 			}
