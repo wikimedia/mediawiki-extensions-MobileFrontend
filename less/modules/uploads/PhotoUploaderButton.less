@@ -3,12 +3,18 @@
 @import "minerva.mixins";
 
 .ctaUploadPhoto {
+	// Ensure entire button is clickable
+	.button {
+		position: relative;
+	}
+
 	// FIXME: Remove when mw-ui-icon in stable
 	.icon-photo {
 		background-position: left 10px center !important;
 		padding-left: 44px;
 	}
 
+	// FIXME: Rename to generic .button when mw-ui-icon in stable
 	.mw-ui-icon-photo {
 		display: table;
 		position: relative;
