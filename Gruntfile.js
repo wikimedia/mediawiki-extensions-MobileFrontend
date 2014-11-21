@@ -40,7 +40,15 @@ module.exports = function ( grunt ) {
 			]
 		},
 		jscs: {
-			sources: '<%= jshint.sources %>'
+			main: ['<%= jshint.sources %>'],
+			doc: {
+				files: {
+					src: ['<%= jshint.sources %>']
+				},
+				options: {
+					config: ".jscs-jsdocrc"
+				}
+			}
 		},
 		qunit: {
 			all: {
@@ -85,7 +93,7 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
+	grunt.registerTask( 'lint', [ 'jshint', 'jscs:main' ] );
 
 	// grunt test will be run by npm test which will be run by Jenkins
 	// Do not execute qunit here, or other tasks that require full mediawiki
