@@ -10,10 +10,14 @@
 	"mobile-frontend-account-create-email-placeholder": "نشونی ايميل",
 	"mobile-frontend-account-create-submit": "ثوت نام كردن",
 	"mobile-frontend-app-title": "پیوندکار موبایل",
+	"mobile-frontend-back-to-top-of-section": "رئتن وه بهرجا دمایی",
+	"mobile-frontend-categories-heading": "<strong>دسه یا</strong>",
+	"mobile-frontend-categories-subheading": "بلگه مال دسه یا دماتریه:",
 	"mobile-frontend-categories-nocat": "ای بلگه تا ایسه مال هیچ دسه ای نئ.",
 	"mobile-frontend-changeslist-ip": "كارور ناشناس",
 	"mobile-frontend-changeslist-nocomment": "هیچ چکسه ای د ویرایشت نئ",
 	"mobile-frontend-clear-search": "پاك كردن",
+	"mobile-frontend-contribution-summary": "همه ویرایشتیا کار {{GENDER:$1|[[Special:پروفایل کاریار/$1|$1]]}}",
 	"mobile-frontend-diffview-404-title": "وانئری گن",
 	"mobile-frontend-diffview-anonymous": "كارور ناشناس",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte|bytes}} اضاف بیه",
@@ -63,6 +67,7 @@
 	"mobile-frontend-editor-tutorial-cancel": "نه منمون",
 	"mobile-frontend-editor-tutorial-confirm": "شرو د ویرایشت",
 	"mobile-frontend-editor-unavailable-header": "ویرایشتگر د دسرس نئ",
+	"mobile-frontend-editor-viewing-source-page": "<strong>د حال و بال دیئن سرچشمه</strong><span> $1</span>",
 	"mobile-frontend-editor-visual-editor": "ویرایشت",
 	"mobile-frontend-editor-wait": "د حال اماییه کردن ویرایشت، لطف آهره داری بکیت.",
 	"mobile-frontend-enable-images": "کنشتگر کردن عسگ د دیارگه موبایلی",
@@ -216,6 +221,7 @@
 	"mobile-frontend-watchlist-login-action": "اومائن سی ددیئن وه",
 	"mobile-frontend-watchlist-modified": "$1 آلشت بیه",
 	"mobile-frontend-watchlist-more": "بیشتر",
+	"mobile-frontend-watchlist-error": "د گاتی که شما سیل ای بلگه می کردیت یه گل مشگل پیش اوما. لطفا هنی تلاش بکیت.",
 	"mobile-frontend-watchlist-removed": "$1 د سیل برگتو ورداشته بیه",
 	"mobile-frontend-watchlist-signup-action": "سی اولین شرو د ایسه ثوت نام بکیت.",
 	"mobile-frontend-watchlist-view": "سیل برگ خوتونه بوینیت",
@@ -223,5 +229,6 @@
 	"right-mf-uploadbutton": "وه کار گرتن دکمه سوارکرد د بلگه یا موبایلی.",
 	"tag-mobile_edit": "ویرایشت موبایلی",
 	"tag-mobile_edit-description": "ویرایشت سی سیلجا هومدرونگ راس بیه",
-	"tag-mobile_web_edit": "ویرایشت تیارگه موبایلی"
+	"tag-mobile_web_edit": "ویرایشت تیارگه موبایلی",
+	"apihelp-mobileview-param-sectionprop": "چه دونسمنیایی دباره ای بهرجایا حاستنیه."
 }

@@ -11,6 +11,8 @@
 	"mobile-frontend-account-create-email-placeholder": "E-posti aadress (valikuline)",
 	"mobile-frontend-account-create-submit": "Registreeru",
 	"mobile-frontend-back-to-top-of-section": "Mine alaosa võrra tagasi",
+	"mobile-frontend-categories-heading": "<strong>Kategooriad</strong>",
+	"mobile-frontend-categories-subheading": "See lehekülg kuulub järgmistesse kategooriatesse:",
 	"mobile-frontend-changeslist-ip": "Anonüümne kasutaja",
 	"mobile-frontend-changeslist-nocomment": "resümee puudub",
 	"mobile-frontend-clear-search": "Tühjenda",
@@ -42,7 +44,7 @@
 	"mobile-frontend-edit-signup-action": "Registreeru, et redigeerida.",
 	"mobile-frontend-editor-cancel": "Loobu",
 	"mobile-frontend-editor-cancel-confirm": "Kas soovid tõesti oma muudatusest loobuda?",
-	"mobile-frontend-editor-continue": "Järgmine",
+	"mobile-frontend-editor-continue": "Jätka",
 	"mobile-frontend-editor-cta": "Aita seda lehekülge täiustada!",
 	"mobile-frontend-editor-disabled": "See lehekülg on kaitstud, et ennetada vandalismi.",
 	"mobile-frontend-editor-edit": "Redigeeri",
@@ -59,6 +61,7 @@
 	"mobile-frontend-editor-source-editor": "Redigeeri lähteteksti",
 	"mobile-frontend-editor-success": "Korras! Sinu muudatus salvestati.",
 	"mobile-frontend-editor-summary-placeholder": "Näiteks: Parandasin trükivea, lisasin sisu",
+	"mobile-frontend-editor-summary-request": "Kuidas lehekülge parandasid?",
 	"mobile-frontend-editor-switch-confirm": "Enne kui vahetad redigeerimisrežiimi, pead muudatused salvestama.",
 	"mobile-frontend-editor-tutorial-summary": "Proovi lehekülge $1 parandada. Ära karda kasutada märgistuskeelt.",
 	"mobile-frontend-editor-uploadenable": "Et redigeerida, laadi esmalt pilt üles.",
@@ -138,6 +141,7 @@
 	"mobile-frontend-overlay-close": "Sule",
 	"mobile-frontend-page-menu-contents": "sisu",
 	"mobile-frontend-page-menu-history": "Ajalugu",
+	"mobile-frontend-page-edit-summary": "<strong>Resümee</strong><span> $1</span>",
 	"mobile-frontend-password": "Parool:",
 	"mobile-frontend-password-confirm-placeholder": "Parooli kinnitus",
 	"mobile-frontend-password-placeholder": "Parool",
@@ -239,5 +243,6 @@
 	"tag-mobile_edit": "Mobiilimuudatus",
 	"tag-mobile_edit-description": "Mobiilisaidil tehtud muudatus (veebis või rakenduses)",
 	"tag-mobile_web_edit": "Mobiiliveebi kaudu",
-	"tag-mobile_web_edit-description": "Mobiili veebisaidi kaudu tehtud muudatus"
+	"tag-mobile_web_edit-description": "Mobiili veebisaidi kaudu tehtud muudatus",
+	"mobile-frontend-pageaction-edit-tooltip": "Redigeeri selle lehekülje sissejuhatavat alaosa."
 }

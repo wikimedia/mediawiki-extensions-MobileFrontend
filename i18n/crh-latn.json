@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Don Alessandro"
+		]
+	},
+	"mobile-frontend-copyright": "Başqası bildirilmese, malümat $1 litsenziyasınen berile.",
+	"mobile-frontend-history": "Bu saifeniñ deñiştirilme tarihını köster.",
+	"mobile-frontend-language-article-heading": "Başqa tilde oqu",
+	"mobile-frontend-language-header": "Bu saife $1 {{PLURAL:$1|tilde|tilde}} bar",
+	"mobile-frontend-language-site-choose": "Tilni qıdıruv",
+	"mobile-frontend-languages-header-page": "$1 — Tiller",
+	"mobile-frontend-languages-text": "$1 saifesi {{PLURAL:$2|tilde|tilde}} bar.",
+	"mobile-frontend-main-menu-login": "Kiriş",
+	"mobile-frontend-privacy-link-text": "Gizlilik",
+	"mobile-frontend-regular-site": "Tolu körüniş",
+	"mobile-frontend-terms-text": "Qullanuv şartları",
+	"mobile-frontend-view": "Mobil körüniş",
+	"mobile-frontend-view-desktop": "Tolu",
+	"mobile-frontend-view-mobile": "Mobil"
+}
