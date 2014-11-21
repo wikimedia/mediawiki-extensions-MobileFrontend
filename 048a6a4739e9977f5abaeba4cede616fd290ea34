@@ -16,6 +16,24 @@
       "revId": "048a6a4739e9977f5abaeba4cede616fd290ea34",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_4babbfd3",
+        "filename": "Gruntfile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-21T15:05:15Z",
+      "side": 1,
+      "message": "Hey florian, this is exactly that, using an environment variable if it exists, and else, using http://127.0.0.1:8080/w/index.p\nhp/\n\nprocess.env is the node way of getting environment variables, so the same goes for the lines below this one that use process.env.ENVIRONMENTVARIABLE\n\nFor using it, for example:\n\n    $ URL\u003dhttp://whatever/ grunt qunit\n\nor\n\n    $ export URL\u003d\"http://whatever/\"\n    $ grunt qunit\n\nboth should work! As they did before. If they don\u0027t please tell me so that I can fix it. For me it works fine:\n\n    MobileFrontend (master $\u003d) $ URL\u003dhttp://changing-the-url-works/ grunt qunit\n    Running \"qunit:all\" (qunit) task\n    Testing http://changing-the-url-works/Special:JavaScriptTest/qunit?useformat\u003dmobile\n    \u003e\u003e PhantomJS unable to load \"http://changing-the-url-works/Special:JavaScriptTest/qunit?useformat\u003dmobile\" URI.\n    Warning: 1/1 assertions failed (0ms) Use --force to continue.\n\n    Aborted due to warnings.\n\n\nIt is due that we document all this tool things, we\u0027ve got a card for it, so I\u0027ll get to it soon.",
+      "parentUuid": "6e936f18_8051a63c",
+      "revId": "048a6a4739e9977f5abaeba4cede616fd290ea34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
