@@ -143,6 +143,7 @@
 					self.$( '.spinner' ).hide();
 					self.$( '.wg-content' ).text( 'You just made Wikipedia a little better, thanks!' );
 					self.$( '.wg-link' ).show();
+					self.log( 'widget-impression-success' );
 				} ).fail( function () {
 					self.logError( 'no-response-cannot-record-user-input' );
 				} );
