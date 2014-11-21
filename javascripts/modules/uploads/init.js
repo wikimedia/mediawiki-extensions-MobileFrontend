@@ -44,6 +44,12 @@
 
 	if ( isSupported ) {
 		$( initialize );
+	} else {
+			// FIXME: We want to enable it to these users however we must first deal with what to show
+			// to users who haven't uploaded anything to make the page useful.
+		$( function () {
+			$( '#mw-mf-page-left li.icon-uploads' ).remove();
+		} );
 	}
 
 	M.define( 'modules/uploads/_leadphoto', {

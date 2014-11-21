@@ -644,11 +644,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// FIXME: Only load this when uploads are enabled
 	'mobile.upload.ui' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.ajax',
+			'mobile.overlays',
 		),
 		'templates' => array(
 			// FIXME: This should not be a hogan template. Use a txt template.
@@ -701,7 +701,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.ui.anchor',
 			'mobile.drawers',
 			'mobile.toast',
-			'mobile.upload.ui',
 			'mobile.redirect',
 		),
 	),
@@ -1110,7 +1109,9 @@ $wgMobileSpecialPageModules = array(
 
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable'
+			'mobile.upload.ui',
+			'mobile.startup',
+			'mobile.toast',
 		),
 		'templates' => array(
 			'PhotoItem.hogan' => 'templates/specials/photo.hogan',
