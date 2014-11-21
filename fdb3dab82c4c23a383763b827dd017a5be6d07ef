@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_c6402638",
+        "filename": "includes/Resources.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-21T17:19:35Z",
+      "side": 1,
+      "message": "Add dependency to mobile.drawer instead\nYou are currently adding these messages twice.",
+      "revId": "fdb3dab82c4c23a383763b827dd017a5be6d07ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
