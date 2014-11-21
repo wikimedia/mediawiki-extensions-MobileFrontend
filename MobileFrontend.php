@@ -21,7 +21,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 // Too many people are trying to use master MF with stable MediaWiki releases
-if ( version_compare( $wgVersion, '1.23c', '<' ) ) {
+if ( version_compare( $wgVersion, '1.25c', '<' ) ) {
 	echo "This version of MobileFrontend requires MediaWiki 1.23, you have $wgVersion.
 You can download a more appropriate version from
 https://www.mediawiki.org/wiki/Special:ExtensionDistributor/MobileFrontend\n";
