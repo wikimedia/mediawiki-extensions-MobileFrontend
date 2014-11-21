@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_8051a63c",
+        "filename": "Gruntfile.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-21T14:14:49Z",
+      "side": 1,
+      "message": "i\u0027m not really happy with this :/ I don\u0027t use this url for testing/developing and i\u0027m not able to change this for my environment only (if i\u0027m right?), like the way with an environment variable. So, i have to adjust Grundtfile.js every time i want to run make qunit (or make tests) and stash the change if i want to review another change or something else. Not really good for me :(",
+      "revId": "048a6a4739e9977f5abaeba4cede616fd290ea34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
