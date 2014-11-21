@@ -6,6 +6,11 @@
 		pageName = canonicalName === 'EditWatchlist' || canonicalName === 'Watchlist' ? 'watchlist' : 'diff',
 		subPageName = M.query.watchlistview || 'a-z';
 
+	/**
+	 * Initialises JavaScript on Special:Watchlist
+	 * @method
+	 * @ignore
+	 */
 	function init() {
 		var $watchlist = $( 'ul.page-list' ),
 			actionNamePrefix = pageName + '-' + subPageName + '-';

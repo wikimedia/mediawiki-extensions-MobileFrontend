@@ -199,6 +199,11 @@
 		btn.appendTo( $container );
 	}
 
+	/**
+	 * Initialises JavaScript on Special:Uploads
+	 * @method
+	 * @ignore
+	 */
 	function init() {
 		var $container, userGallery, $a;
 

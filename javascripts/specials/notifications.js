@@ -5,6 +5,11 @@
 		header = '',
 		processing = false;
 
+	/**
+	 * Initialises JavaScript on the mobile version of Special:Notifications
+	 * @method
+	 * @ignore
+	 */
 	function initialize() {
 		// Convert more link into a button and bind to loadMore function
 		$( '#mw-echo-more' )
