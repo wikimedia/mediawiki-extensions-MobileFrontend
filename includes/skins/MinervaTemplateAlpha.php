@@ -24,7 +24,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 
 		if ( $wgMFNearby && class_exists( 'GeoData' ) && GeoData::getPageCoordinates( $title ) ) {
 			$result['nearby'] = array(
-				'url' => SpecialPage::getTitleFor( 'Nearby' )->getFullUrl() . '#/page/' . $title->getText(),
+				'url' => SpecialPage::getTitleFor( 'Nearby' )->getLocalUrl() . '#/page/' . $title->getText(),
 				'class' => 'nearbyButton',
 				'label' => wfMessage( 'mobile-frontend-nearby-sectiontext' )->text()
 			);
