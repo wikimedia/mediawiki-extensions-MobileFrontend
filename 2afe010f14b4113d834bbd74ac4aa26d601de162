@@ -34,6 +34,24 @@
       "revId": "2afe010f14b4113d834bbd74ac4aa26d601de162",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_7649b069",
+        "filename": "less/Overlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-11-24T00:43:20Z",
+      "side": 1,
+      "message": "I made change myself. Let me know it\u0027s okay :) (this way diff is smaller)\n\nalso added \u0027.\u0027 in front of overlay-action",
+      "parentUuid": "6e936f18_f089737a",
+      "revId": "2afe010f14b4113d834bbd74ac4aa26d601de162",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
