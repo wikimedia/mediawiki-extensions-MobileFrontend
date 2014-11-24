@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_76d9b02b",
+        "filename": "javascripts/specials/uploads/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-24T10:16:08Z",
+      "side": 1,
+      "message": "What is this and the two lines below this one? (7-9)",
+      "revId": "e086bdb787ae407ea80a2f6710882dc9878144fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_16caac4a",
+        "filename": "tests/qunit/specials/uploads/test_UserGalleryApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-24T10:16:08Z",
+      "side": 1,
+      "message": "This variable needs to be UserGalleryApi imo",
+      "revId": "e086bdb787ae407ea80a2f6710882dc9878144fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
