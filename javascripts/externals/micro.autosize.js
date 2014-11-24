@@ -7,20 +7,14 @@
   var $window = $(window);
 
   function resize() {
-    var $el = $(this), scrollTop, maxHeight;
+    var $el = $(this), scrollTop;
 
     if ($el.prop('scrollHeight')) {
       scrollTop = $window.scrollTop();
-      height = $el.prop('scrollHeight');
-      maxHeight = $( window ).height() - 2 - $el.offset().top;
-      // prevent textarea growing bigger than the window.
-      if (height > maxHeight) {
-        height = maxHeight;
-      }
       $el.
         css('height', 'auto').
         // can't reuse prop('scrollHeight') because we need the current value
-        css('height', (height + 2) + 'px');
+        css('height', ($el.prop('scrollHeight') + 2) + 'px');
       $window.scrollTop(scrollTop);
     }
   }
