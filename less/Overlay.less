@@ -172,10 +172,23 @@
 	.overlay-action {
 		a,
 		button {
-			display: inline-block;
-			width: auto !important;
+			display: table-cell;
+			vertical-align: middle;
+			width: auto;
 			padding: 0 1.2em;
 			font-weight: bold;
+			// do not wrap button text
+			white-space: nowrap;
+			// links doesn't need an underline
+			text-decoration: none;
+			border-radius: 0;
+			height: @headerHeight;
+			cursor: pointer;
+			position: relative;
+
+			&:before {
+				top: 0;
+			}
 
 			&[disabled] {
 				opacity: .5;
@@ -230,15 +243,7 @@
 
 	.overlay-action a,
 	button {
-		width: @headerHeight;
-		border-radius: 0;
 		min-height: @headerHeight;
-		display: block;
-		cursor: pointer;
-		position: relative;
-		&:before {
-			top: 0;
-		}
 	}
 }
 
