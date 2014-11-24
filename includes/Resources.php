@@ -213,6 +213,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toast',
 			// Let's ensure toggle styles have loaded before adding edit section links
 			'mobile.toggling',
+			// Route needs moduleLoader
+			'mobile.overlays',
 		),
 		'messages' => array(
 			// editor.js
