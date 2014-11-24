@@ -3,7 +3,7 @@ Feature: Page actions menu when logged in
 
   Background:
     Given I am logged into the mobile website
-      And I am viewing an article
+      And I am at a random page
 
   Scenario: I can see the edit button
     Then I should see the edit icon

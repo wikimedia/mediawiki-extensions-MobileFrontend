@@ -3,7 +3,7 @@ Feature: Page actions menu when anonymous
 
   Background:
     Given I am using the mobile site
-      And I am viewing an article
+      And I am at a random page
 
   Scenario: Receive notification message - Edit Icon
     When I click the edit icon holder

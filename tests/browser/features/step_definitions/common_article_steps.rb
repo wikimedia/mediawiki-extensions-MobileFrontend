@@ -1,7 +1,3 @@
-Given(/^I am viewing an article$/) do
-  step "I am at a random page"
-end
-
 Given(/^I click continue$/) do
   on(ArticlePage).continue_button_element.when_present.click
 end
