@@ -485,7 +485,7 @@
 				options.description = claims.description;
 				rows = options.rows;
 				$.each( rows, function ( i, row ) {
-					if ( claims.entities[ row.id ] ) {
+					if ( claims.entities && claims.entities[ row.id ] ) {
 						row.values = self._getValues( claims.entities[ row.id ] );
 					} else {
 						row.values = [];
