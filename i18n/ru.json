@@ -36,6 +36,8 @@
 	"mobile-frontend-account-create-submit": "Зарегистрироваться",
 	"mobile-frontend-app-title": "Мобильное приложение",
 	"mobile-frontend-back-to-top-of-section": "Вернуться к предыдущему разделу",
+	"mobile-frontend-categories-heading": "<strong>Категории</strong>",
+	"mobile-frontend-categories-subheading": "Страница относится к следующим категориям:",
 	"mobile-frontend-changeslist-ip": "Анонимный участник",
 	"mobile-frontend-changeslist-nocomment": "Нет описания правки",
 	"mobile-frontend-clear-search": "Очистить",
@@ -260,6 +262,7 @@
 	"mobile-frontend-profile-userpage-link": "Посетить страницу {{GENDER:$1|участника|участницы}}.",
 	"mobile-frontend-profile-usertalk": "Написать {{GENDER:$1|участнику|участнице}} $1",
 	"mobile-frontend-random-button": "Случайная",
+	"mobile-frontend-references-citation": "Цитата",
 	"mobile-frontend-regular-site": "Обычная версия",
 	"mobile-frontend-requires-mobile": "Эта страница не доступна для просмотра с компьютера. Пожалуйста, нажмите на ссылку мобильного вида в нижней части страницы.",
 	"mobile-frontend-requires-optin": "Эта страница будет недоступна, пока вы не перейдёте в бета-режим. Зайдите для этого на страницу [[Special:MobileOptions|настроек]].",
@@ -347,5 +350,8 @@
 	"tag-mobile_web_edit": "Правка через мобильную версию сайта",
 	"tag-mobile_web_edit-description": "Правка, сделанная через мобильную версию сайта",
 	"mobile-frontend-pageaction-edit-tooltip": "Редактировать ведущий раздел страницы.",
-	"mobile-frontend-pageaction-upload-tooltip": "Загрузить основное фото на эту страницу."
+	"mobile-frontend-pageaction-upload-tooltip": "Загрузить основное фото на эту страницу.",
+	"apihelp-mobileview-param-page": "Заголовок страницы для обработки.",
+	"apihelp-mobileview-param-sectionprop": "Какую информацию о разделах получать.",
+	"apihelp-mobileview-param-thumbnail": "Максимальные размеры эскизов."
 }
