@@ -5,5 +5,5 @@ Feature: Create failure messages
 
   Scenario: Create account password mismatch message
     When I sign up with two different passwords
-    Then I see an error indicating they do not match
+    Then I should see an error indicating they do not match
       And I should still be on the sign-up page

@@ -7,7 +7,7 @@ When(/^I sign up with two different passwords$/) do
   end
 end
 
-Then(/^I see an error indicating they do not match$/) do
+Then(/^I should see an error indicating they do not match$/) do
   expect(on(SpecialUserLoginPage).feedback).to match("The passwords you entered do not match")
 end
 
