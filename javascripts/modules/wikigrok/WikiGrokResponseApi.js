@@ -14,7 +14,7 @@
 			this.subject = options.subject;
 			this.userToken = options.userToken;
 			this.taskToken = options.taskToken;
-			this.taskType = 'mobile ' + options.version;
+			this.taskType = 'version ' + options.version;
 			this.testing = false;  // FIXME: TBD on what qualifies as a test
 			Api.prototype.initialize.apply( this, arguments );
 		},
