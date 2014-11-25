@@ -21,4 +21,3 @@ Feature: Page diff
       And I open the latest diff
     Then I see "GHI" as added content
       And I see "DEF" as removed content
-

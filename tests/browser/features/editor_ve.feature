@@ -10,19 +10,16 @@ Feature: VisualEditor Mobile
     When I switch to editing the source
     Then I see the wikitext editor
 
-  Scenario: VisualEditor provides bold
+  Scenario: VisualEditor edit controls
     When I look at the VisualEditor toolbar
-    Then I see a bold button
-
-  Scenario: VisualEditor provides italicize
-    When I look at the VisualEditor toolbar
-    Then I see an italicize button
+    Then I should see a bold button
+      And I should see an italicize button
 
   Scenario: I can edit a page using VisualEditor
     When I edit the article using VisualEditor
-    Then I see the edit reflected in the article content
+    Then I should see the edit reflected in the article content
 
   Scenario: Going back from save screen in VisualEditor
     When I click the escape button
-    Then I see the article content
-      But I no longer see the VisualEditor
+    Then I should see the article content
+      And I should no longer see the VisualEditor

@@ -8,24 +8,7 @@ Given(/^I am editing a new article with VisualEditor$/) do
 end
 
 Given(/^VisualEditor has loaded$/) do
-  expect(on(ArticlePage).editor_ve_element.when_present(20)).to exist
-end
-
-When(/^I switch to editing the source$/) do
-  step "I click the editor mode switcher button"
-  step "I click the source editor button"
-end
-
-When(/^I look at the VisualEditor toolbar$/) do
-  expect(on(ArticlePage).overlay_ve_header_toolbar_element).to exist
-end
-
-Then(/^I see a bold button$/) do
-  expect(on(ArticlePage).overlay_ve_header_toolbar_bold_button_element).to exist
-end
-
-Then(/^I see an italicize button$/) do
-  expect(on(ArticlePage).overlay_ve_header_toolbar_italic_button_element).to exist
+  on(ArticlePage).editor_ve_element.when_present(20)
 end
 
 When(/^I edit the article using VisualEditor$/) do
@@ -43,16 +26,31 @@ When(/^I edit the article using VisualEditor$/) do
   end
 end
 
-Then(/^I see the edit reflected in the article content$/) do
-  on(ArticlePage) do |page|
-    expect(page.content).to include(@text_to_type)
-  end
+When(/^I look at the VisualEditor toolbar$/) do
+  on(ArticlePage).overlay_ve_header_toolbar_element.when_present
 end
 
-Then(/^I see the article content$/) do
-  expect(on(ArticlePage).content_element.when_present).to exist
+When(/^I switch to editing the source$/) do
+  step "I click the editor mode switcher button"
+  step "I click the source editor button"
 end
 
-Then(/^I no longer see the VisualEditor$/) do
-  expect(on(ArticlePage).editor_ve_element).to_not exist
+Then(/^I should see a bold button$/) do
+  expect(on(ArticlePage).overlay_ve_header_toolbar_bold_button_element).to be_visible
+end
+
+Then(/^I should see an italicize button$/) do
+  expect(on(ArticlePage).overlay_ve_header_toolbar_italic_button_element).to be_visible
+end
+
+Then(/^I should see the edit reflected in the article content$/) do
+  expect(on(ArticlePage).content).to match @text_to_type
+end
+
+Then(/^I should see the article content$/) do
+  expect(on(ArticlePage).content_element.when_present).to be_visible
+end
+
+Then(/^I should no longer see the VisualEditor$/) do
+  expect(on(ArticlePage).editor_ve_element).to_not be_visible
 end
