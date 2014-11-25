@@ -38,6 +38,12 @@
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
+			// icons.spinner can't be used, the spinner class changes to display:none in _prepareForSave
+			waitIcon: new Icon( {
+				tagName: 'button',
+				name: 'spinner',
+				additionalClassNames: 'savespinner loading'
+			} ).toHtmlString(),
 			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' )
