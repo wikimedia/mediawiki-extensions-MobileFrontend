@@ -34,9 +34,7 @@ Given(/^I am on the random page$/) do
 end
 
 Given(/^I am on the sign-up page$/) do
-  visit(SpecialUserLoginPage) do |page|
-    page.create_account_link_element.when_present.click
-  end
+  visit(SpecialUserLoginPage).create_account_link_element.when_present.click
 end
 
 Given(/^I am on the "(.+)" page$/) do |article|
