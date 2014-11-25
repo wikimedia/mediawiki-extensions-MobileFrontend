@@ -22,27 +22,22 @@ When(/^I click the wikitext editor overlay close button$/) do
   on(ArticlePage).editor_overlay_close_button_element.when_present.click
 end
 
+When(/^I do not see the wikitext editor overlay$/) do
+  on(ArticlePage).editor_overlay_element.when_not_visible
+end
+
 When(/^I type "(.+)" into the editor$/) do |text|
   on(ArticlePage).editor_textarea_element.when_present.send_keys(text)
 end
 
-Then(/^I should not see the wikitext editor overlay$/) do
-  on(ArticlePage) do |page|
-    page.wait_until { !page.editor_overlay_element.visible? }
-    page.editor_overlay_element.should_not be_visible
-  end
-end
-
 Then(/^I see the wikitext editor$/) do
-  on(ArticlePage).editor_textarea_element.when_present.should be_visible
+  expect(on(ArticlePage).editor_textarea_element.when_present).to be_visible
 end
 
 Then(/^I see the wikitext editor overlay$/) do
-  on(ArticlePage).editor_textarea_element.when_present.should be_visible
+  expect(on(ArticlePage).editor_textarea_element.when_present).to be_visible
 end
 
 Then(/^the edit button is enabled$/) do
-  on(ArticlePage).wait_until(5, "Edit button not enabled") do
-    on(ArticlePage).edit_button_holder_element.when_present.class_name.should match "enabled"
-  end
+  expect(on(ArticlePage).edit_button_holder_element.when_present.class_name).to match "enabled"
 end

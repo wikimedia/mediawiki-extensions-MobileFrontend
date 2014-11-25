@@ -10,13 +10,13 @@ Feature: Page diff
       And I type "ABC DEF" into the editor
       And I click continue
       And I click submit
-      And I should not see the wikitext editor overlay
+      And I do not see the wikitext editor overlay
       And I click the edit button
       And I clear the editor
       And I type "ABC GHI" into the editor
       And I click continue
       And I click submit
-      And I should not see the wikitext editor overlay
+      And I do not see the wikitext editor overlay
       And I click on the history link in the last modified bar
       And I open the latest diff
     Then I see "GHI" as added content

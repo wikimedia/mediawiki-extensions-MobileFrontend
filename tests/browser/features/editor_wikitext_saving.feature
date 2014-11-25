@@ -36,8 +36,8 @@ Feature: Wikitext Editor (Makes actual saves)
       And I click continue
       And I click submit
       And I say OK in the confirm dialog
-    Then I should not see the wikitext editor overlay
-      And the text of the first heading is "Selenium wikitext editor test"
+      And I do not see the wikitext editor overlay
+    Then the text of the first heading is "Selenium wikitext editor test"
 
   Scenario: Broken redirects
     Given I am on a page that does not exist
@@ -47,5 +47,5 @@ Feature: Wikitext Editor (Makes actual saves)
       And I click continue
       And I click submit
       And I say OK in the confirm dialog
-    Then I should not see the wikitext editor overlay
-      And there is a red link with text "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      And I do not see the wikitext editor overlay
+    Then there is a red link with text "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
