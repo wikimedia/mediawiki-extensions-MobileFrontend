@@ -1,0 +1,5 @@
+<div class="pane error">
+	<p>Uh oh!</p>
+	<p>There was a problem.</p>
+	<button class="close inline mw-ui-button mw-ui-progressive">Okay</button>
+</div>

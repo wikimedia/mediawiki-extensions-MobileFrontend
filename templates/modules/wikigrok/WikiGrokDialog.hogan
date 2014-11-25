@@ -12,3 +12,5 @@
 	<p class="wg-notice">{{{noticeMsg}}}</p>
 	{{/noticeMsg}}
 </div>
+
+{{>error}}

@@ -100,7 +100,7 @@
 						self.show();
 					}
 				} ).fail( function () {
-					self.logError( 'no-impression-cannot-fetch-labels' );
+					self.handleError( 'no-impression-cannot-fetch-labels' );
 				} );
 			}
 		},
@@ -145,7 +145,7 @@
 					self.$( '.wg-link' ).show();
 					self.log( 'widget-impression-success' );
 				} ).fail( function () {
-					self.logError( 'no-response-cannot-record-user-input' );
+					self.handleError( 'no-response-cannot-record-user-input' );
 				} );
 				self.log( 'widget-click-submit' );
 				self.rememberWikiGrokContribution();
@@ -180,6 +180,11 @@
 				// Log more info clicks
 				this.$( '.wg-notice-link' ).on( 'click', function () {
 					self.log( 'widget-click-moreinfo' );
+				} );
+
+				// hide wikigrok after an error has occurred
+				this.$( '.pane.error .close' ).on( 'click', function () {
+					self.hide();
 				} );
 
 				this.reveal( options );

@@ -22,3 +22,5 @@
 		<button class="mw-ui-button mw-ui-constructive save next">Next</button>
 	</div>
 </div>
+
+{{>error}}

@@ -954,6 +954,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.wikigrok.api',
 		),
 		'templates' => array(
+			'Error.hogan' => 'templates/modules/wikigrok/WikiGrokError.hogan',
 			'Dialog.hogan' => 'templates/modules/wikigrok/WikiGrokDialog.hogan',
 			'WikiGrokMoreInfo/content.hogan' => 'templates/modules/wikigrok/WikiGrokMoreInfo.hogan',
 		),

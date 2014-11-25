@@ -93,7 +93,6 @@
 			// The question is there
 			var tags = this.wk.$el.find( '.tags .ui-tag-button' ),
 				labels = tags.find( 'label' );
-			//console.log(JSON.stringify(tags));
 			assert.strictEqual( tags.length, 2, 'Correct number of tags' );
 			assert.strictEqual( labels.first().text(), 'Profession', 'Correct label text' );
 			QUnit.start();
@@ -127,23 +126,37 @@
 
 	QUnit.module( 'MobileFrontend: WikiGrokDialogB', {
 		setup: function () {
+			this.sandbox.stub( WikiGrokDialogB.prototype, 'log' );
+			this.logErrorSpy = this.sandbox.stub( WikiGrokDialogB.prototype, 'logError' );
+
+			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgWikiGrokCampaigns' )
+				.returns( campaigns );
+			this.sandbox.stub( WikiDataApi.prototype, 'getLabels' )
+				.returns( $.Deferred().reject() );
+			this.sandbox.stub( WikiGrokResponseApi.prototype, 'recordClaims' )
+				.returns( $.Deferred().reject() );
+
 			this.$el = $( '<div id="test">' );
 			this.wk = new WikiGrokDialogB( {
 				el: this.$el,
 				itemId: '1234',
 				title: pageTitle,
 				userToken: 'token',
-				testing: false,
-				// Set suggestions to go to the second screen.
-				suggestions: suggestions
+				testing: false
 			} );
 		}
 	} );
 
-	QUnit.test( '#UI should not display when there are no suggestions', 1, function ( assert ) {
-		var spy = this.sandbox.stub( WikiGrokDialogB.prototype, 'show' );
+	QUnit.asyncTest( '#Handle error', function ( assert ) {
+		QUnit.expect( 1 );
+		var spy = this.sandbox.stub( WikiGrokDialogB.prototype, 'handleError' );
 		this.wk.reveal( {} );
-		assert.ok( spy.notCalled, 'We do not call if the response provides no suggestions.' );
+		this.wk.$el.find( '.proceed' ).trigger( 'click' );
+		QUnit.start();
+		// After loading
+		setTimeout( $.proxy( function () {
+			assert.ok( spy.called, 'Error is handled.' );
+		}, this ), 0 );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );

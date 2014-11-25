@@ -99,4 +99,22 @@
 			min-height: 3em;
 		}
 	}
+
+	.pane.error {
+		background-repeat: no-repeat;
+		.background-size( auto, 3em );
+		background-position: center 1em;
+		.background-image-svg-quick('images/w');
+		display: none;
+		padding: 5em @contentMargin 1em;
+		margin: 0;
+		p {
+			font-size: 1em;
+			font-weight: bold;
+			margin: 0;
+		}
+		button {
+			margin-top: 1em;
+		}
+	}
 }

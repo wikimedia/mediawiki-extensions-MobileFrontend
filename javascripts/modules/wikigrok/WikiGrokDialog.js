@@ -46,6 +46,9 @@
 			noticeMsg: '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>'
 		},
 		template: mw.template.get( 'mobile.wikigrok.dialog', 'Dialog.hogan' ),
+		templatePartials: {
+			error: mw.template.get( 'mobile.wikigrok.dialog', 'Error.hogan' )
+		},
 
 		initialize: function ( options ) {
 			var self = this;
@@ -115,10 +118,21 @@
 				userToken: this.options.userToken,
 				isLoggedIn: !mw.user.isAnon()
 			};
+
 			if ( this.options.testing ) {
 				data.testing = true;
 			}
 			errorSchema.log( data );
+		},
+
+		/**
+		 * Display error message and log 'error'
+		 * @method
+		 * @param {String} error
+		 */
+		handleError: function ( error ) {
+			this.showError();
+			this.logError( error );
 		},
 
 		/**
@@ -200,22 +214,20 @@
 						'href="#/wikigrok/about">released freely</a>';
 					self.render( options );
 				} else {
-					self.showError( options, 'There was an error retrieving tag labels.' );
+					self.handleError( 'no-impression-cannot-fetch-labels' );
 				}
 			} ).fail( function () {
-				self.logError( 'no-impression-cannot-fetch-labels' );
+				self.handleError( 'no-impression-cannot-fetch-labels' );
 			} );
 		},
 
-		showError: function ( options, errorMsg ) {
-			options.contentMsg = errorMsg;
-			options.buttons = [
-				{
-					classes: 'cancel inline mw-ui-button mw-ui-progressive',
-					label: 'OK'
-				}
-			];
-			this.render( options );
+		/**
+		 * Show the error message
+		 */
+		showError: function () {
+			this.$( '.pane.content' ).hide();
+			this.$( '.pane.error' ).show();
+			this.show();
 		},
 
 		// Record answer in temporary database for analysis.
@@ -238,10 +250,10 @@
 				claim.prop = 'instance of';
 			}
 
-			this.apiWikiGrokResponse.recordClaims( [ claim ] ).always( function () {
+			this.apiWikiGrokResponse.recordClaims( [ claim ] ).done( function () {
 				self.thankUser( options, true );
 			} ).fail( function () {
-				self.logError( 'no-response-cannot-record-user-input' );
+				self.handleError( 'no-response-cannot-record-user-input' );
 			} );
 		},
 
@@ -403,6 +415,11 @@
 					self.log( 'widget-click-moreinfo' );
 				} );
 			}
+
+			// hide wikigrok after an error has occurred
+			this.$( '.pane.error .close' ).on( 'click', function () {
+				self.hide();
+			} );
 
 			// render() does a "deep copy" $.extend() on the template data, so we need
 			// to reset the buttons after each step (since some steps have fewer
