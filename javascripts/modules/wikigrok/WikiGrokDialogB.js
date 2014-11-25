@@ -68,6 +68,15 @@
 			// Now work out the labels if we have some suggestions
 			if ( suggestionsList.length ) {
 				self.apiWikiData.getLabels( suggestionsList ).done( function ( labels ) {
+					var $next = self.$( '.footer .next' ),
+						$none = self.$( '.footer .none' );
+
+					// Hard-code the "Next" button width to match the "None" button width.
+					// That way, when the buttons are switched, the width stays the same.
+					// This depends on the assumption that the "Next" button text is
+					// always shorter than the "None" button text.
+					$next.css( 'width', $none.outerWidth() );
+
 					self.$( '.tags' ).show();
 					$.each( labels, function ( itemId, label ) {
 						var $tag,
@@ -77,7 +86,17 @@
 						if ( label ) {
 							$tag = $( '<div class="ui-tag-button mw-ui-button">' )
 								.on( 'click', function () {
+									// Activate the tag
 									$( this ).toggleClass( 'mw-ui-progressive' );
+									// If there are any tags active, switch submit button from
+									// "None" to "Next".
+									if ( self.$( '.tags .ui-tag-button.mw-ui-progressive' ).length ) {
+										$none.hide();
+										$next.show();
+									} else {
+										$next.hide();
+										$none.show();
+									}
 								} ).appendTo( self.$( '.tags' ) );
 
 							// FIXME: Use a template for this magic.
@@ -90,6 +109,7 @@
 							// Add the property label
 							$( '<label>' )
 								.text( i18n[prop.type] ).appendTo( $tag );
+
 							// Add the value label
 							$( '<label>' )
 								.text( label ).appendTo( $tag );
@@ -119,12 +139,12 @@
 			self.$( '.wg-notice' ).hide();
 			self.$( '.wg-buttons' ).hide();
 			self.$( '.spinner' ).show();
-			self.$( '.wg-content' ).text( 'Select any tags that correctly describe ' + options.title + ':' );
+			self.$( '.wg-content' ).text( 'Select tags that correctly describe ' + options.title );
 			self.$( '.footer' ).show();
 
 			self._renderSuggestions( options.suggestions );
 
-			this.$save = this.$( '.mw-ui-constructive' );
+			this.$save = this.$( '.save' );
 			this.$save.on( 'click', function () {
 				var answers = [];
 				self.$( '.tags .ui-tag-button' ).each( function () {

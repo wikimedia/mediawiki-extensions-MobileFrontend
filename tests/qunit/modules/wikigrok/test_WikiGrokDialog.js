@@ -99,9 +99,8 @@
 	}
 	*/
 
-	QUnit.test( '#UI renders initial screen', 4, function ( assert ) {
-		// Lets check that we've got the header, info, buttons and 'Tell me more'
-		assert.strictEqual( this.$el.find( '.wg-header' ).length, 1 );
+	QUnit.test( '#UI renders initial screen', 3, function ( assert ) {
+		// Lets check that we've got the info, buttons and 'Tell me more'
 		assert.ok( this.$el.find( '.wg-content' ).text().length > 0 );
 		assert.strictEqual( this.$el.find( '.wg-buttons button' ).length, 2 );
 		assert.ok( this.$el.find( '.wg-notice>a' ).attr('href').length > 0 );

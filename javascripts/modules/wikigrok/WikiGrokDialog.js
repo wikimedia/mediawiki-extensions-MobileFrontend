@@ -28,7 +28,6 @@
 			taskToken: mw.user.generateRandomSessionId(),
 			thankUser: false,
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
-			headerMsg: 'Help Wikipedia',
 			contentMsg: 'Improve Wikipedia by tagging information on this page',
 			// Other ideas:
 			// Can you help improve Wikipedia?

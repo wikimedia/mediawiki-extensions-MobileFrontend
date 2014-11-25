@@ -1,6 +1,5 @@
 <!-- note English language only! -->
 <div class="pane content">
-	<p class="wg-header">{{headerMsg}}</p>
 	<p class="wg-content">{{contentMsg}}</p>
 	<p class="wg-link">
 		<a href="#/wikigrok/about" class="mw-ui-button mw-ui-progressive mw-ui-block tell-more">Tell me more</a>
@@ -18,7 +17,8 @@
 	{{/noticeMsg}}
 
 	<div class="footer">
-		<span class="license">All submissions are <a href="#/wikigrok/about">released freely</a>.</span>
-		<button class="mw-ui-button mw-ui-constructive save">Next</button>
+		<span class="license">Submissions are <a href="#/wikigrok/about">released freely</a>.</span>
+		<button class="mw-ui-button mw-ui-progressive save none">None of these</button>
+		<button class="mw-ui-button mw-ui-constructive save next">Next</button>
 	</div>
 </div>

@@ -23,24 +23,18 @@
 		right: 0;
 	}
 
-	.wg-header {
-		margin-top: 0;
-		color: @grayMedium;
-		font-size: 95%;
-		text-align: left;
-	}
-
 	@bottomMargin: .8em;
 	.wg-content {
 		font-size: 120%;
-		line-height: 1.2;
+		line-height: 1.5;
 		font-weight: bold;
-		margin-bottom: @bottomMargin;
+		margin-top: 0;
+		margin-bottom: .6em;
 		text-align: left;
 	}
 
     .wg-link {
-		@imageSize: 6em;
+		@imageSize: 5em;
 		padding-top: @imageSize;
 		margin-bottom: @bottomMargin;
 		background-repeat: no-repeat;
@@ -69,19 +63,19 @@
 		text-align: left;
 	}
 
-
 	.wg-notice {
-		font-size: 90%;
+		font-size: .8em;
 		margin-bottom: 0;
+		margin-top: 1em;
 		text-align: left;
 	}
 
 	.footer {
 		position: relative;
 		text-align: left;
-		padding: .6em 0;
+		padding: .2em 0;
+		margin-top: .8em;
 
-		.spinner,
 		.mw-ui-button {
 			top: 0;
 			right: 0;
@@ -89,14 +83,20 @@
 			bottom: 0;
 		}
 
-		.license {
-			display: inline-block;
-			margin-right: 4.5em;
+		.next {
+			display: none;
 		}
 
-		.spinner {
-			height: auto;
-			margin-right: .45em;
+		.license {
+			display: inline-block;
+			// Needs to be larger than "None of these" button
+			// FIXME: Redo footer layout so it isn't necessary to hard-code this.
+			margin-right: 11.5em;
+			font-size: 0.8em;
+			color: @grayMediumDark;
+			// Needs to be at least as tall as button since button is absolutely
+			// positioned. This generally won't matter on mobile, but will on tablet.
+			min-height: 3em;
 		}
 	}
 }
