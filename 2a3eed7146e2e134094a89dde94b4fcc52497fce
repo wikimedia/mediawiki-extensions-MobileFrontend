@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4ea06b5a_df2762b0",
+        "filename": "includes/Resources.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 976,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-11-26T20:37:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ea06b5a_09c27c88",
+      "revId": "2a3eed7146e2e134094a89dde94b4fcc52497fce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea06b5a_09303ce4",
         "filename": "javascripts/modules/bannerImage/BannerImage.js",
         "patchSetId": 5
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4ea06b5a_1f162a4e",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-11-26T20:37:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ea06b5a_09303ce4",
+      "revId": "2a3eed7146e2e134094a89dde94b4fcc52497fce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea06b5a_09511cdd",
         "filename": "javascripts/modules/bannerImage/init.js",
         "patchSetId": 5
@@ -47,6 +83,24 @@
       "writtenOn": "2014-11-26T18:18:12Z",
       "side": 1,
       "message": "why you don\u0027t use !M.isWideScreen()?",
+      "revId": "2a3eed7146e2e134094a89dde94b4fcc52497fce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_bf2296a0",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-11-26T20:37:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ea06b5a_09511cdd",
       "revId": "2a3eed7146e2e134094a89dde94b4fcc52497fce",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
