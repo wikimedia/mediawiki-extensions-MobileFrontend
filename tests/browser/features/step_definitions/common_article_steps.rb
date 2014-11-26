@@ -58,12 +58,12 @@ Then /^the watch star is selected$/ do
   on(ArticlePage).watch_link_element.parent.class_name.should match "watched"
 end
 
-Then(/^the text of the first heading is "(.*)"$/) do |title|
+Then(/^the text of the first heading should be "(.*)"$/) do |title|
   on(ArticlePage) do |page|
     page.wait_until do
       page.first_heading_element.when_present.text.include? title
     end
-    page.first_heading_element.when_present.text.should match title
+    expect(page.first_heading_element.when_present.text).to match title
   end
 end
 

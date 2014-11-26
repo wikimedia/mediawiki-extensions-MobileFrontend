@@ -12,7 +12,7 @@ Feature: Special:History (Note test may take a long time to run on first run)
 
   Scenario: Check components in diff summary
     When I click the link in the header bar
-    Then the text of the first heading is "Selenium diff test"
+    Then the text of the first heading should be "Selenium diff test"
 
   Scenario: Check components in diff summary
     Then I see a list of page contributions
