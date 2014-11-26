@@ -4,13 +4,25 @@
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		settings = M.require( 'settings'),
-		suggestions = [ {
-			"id": "P106",
-			"name": "occupations",
-			"list": [ "Q285759" ]
-		} ],
+		campaigns = {
+			album: {
+				property: "P31",
+				questions: {
+					Q208569: "studio album",
+					Q209939: "live album"
+				}
+			}
+		},
+		suggestions = {
+			album: {
+				id: 'P31',
+				list: ['Q208569', 'Q209939'],
+				name: 'album'
+			}
+		},
 		labels = {
-			Q285759: "insurance broker"
+			Q208569: 'studio album',
+			Q209939: 'live album'
 		},
 		pageTitle = M.getCurrentPage().title || 'Some guy';
 
@@ -26,6 +38,16 @@
 		},
 		setup: function () {
 			settings.remove( 'pagesWithWikiGrokContributions', false );
+
+			// don't run eventLogging
+			this.stub( WikiGrokDialog.prototype, 'log' );
+			this.stub( WikiGrokDialog.prototype, 'logError' );
+
+			this.sandbox.stub( mw.config, 'get').withArgs( 'wgWikiGrokCampaigns' )
+				.returns( campaigns );
+			this.sandbox.stub( WikiDataApi.prototype, 'getLabels' )
+				.returns( $.Deferred().resolve( labels ) );
+
 			this.$el = $( '<div id="test">' );
 			this.wk = new WikiGrokDialog( {
 				el: this.$el,
@@ -36,9 +58,6 @@
 				// Set suggestions to go to the second screen.
 				suggestions: suggestions
 			} );
-			// don't run eventLogging
-			this.stub( WikiGrokDialog.prototype, 'log' );
-			this.stub( WikiGrokDialog.prototype, 'logError' );
 		}
 	} );
 
@@ -112,17 +131,10 @@
 		assert.ok( spy.called );
 	} );
 
-	function getToQuestion() {
-		this.sandbox.stub( WikiDataApi.prototype, 'getLabels' )
-			.returns( $.Deferred().resolve( labels ) );
-
-		this.$el.find('.proceed').click();
-	}
-
 	QUnit.test( '#UI clicking OK, takes you to the question dialog', 1, function ( assert ) {
-		getToQuestion.apply(this);
-		// The name of the page is on the question
-		assert.ok( this.$el.text().indexOf(pageTitle) !== -1 );
+		this.$el.find( '.proceed' ).click();
+		// the question title is visible
+		assert.notEqual( this.$el.text().indexOf('Is this a'), -1, 'Question is visible' );
 	} );
 
 	function answerQuestion( sel ) {
@@ -132,7 +144,7 @@
 	}
 
 	QUnit.test( '#UI - Question - Click Yes', 4, function ( assert ) {
-		getToQuestion.apply( this );
+		this.$el.find( '.proceed' ).click();
 
 		assert.equal(
 			getPagesWithWikiGrokContributions()[pageTitle],
@@ -154,7 +166,7 @@
 	} );
 
 	QUnit.test( '#UI - Question - Click No', 4, function ( assert ) {
-		getToQuestion.apply( this );
+		this.$el.find( '.proceed' ).click();
 
 		assert.equal(
 			getPagesWithWikiGrokContributions()[pageTitle],
@@ -176,7 +188,7 @@
 	} );
 
 	QUnit.test( '#UI - Question - Click Not sure', 4, function ( assert ) {
-		getToQuestion.apply( this );
+		this.$el.find( '.proceed' ).click();
 
 		assert.equal(
 			getPagesWithWikiGrokContributions()[pageTitle],

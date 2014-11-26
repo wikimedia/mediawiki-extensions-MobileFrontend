@@ -3,9 +3,9 @@
 
 	var Panel = M.require( 'Panel' ),
 		settings = M.require( 'settings' ),
-		WikiGrokSuggestionApi = M.require( 'modules/wikigrok/WikiGrokSuggestionApi' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
+		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
 		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
 		WikiGrokDialog,
@@ -50,13 +50,10 @@
 		initialize: function ( options ) {
 			var self = this;
 
+			options.campaign = wikiGrokCampaigns.getRandomCampaign();
 			// Remove any disambiguation parentheticals from the title.
 			options.name = options.title.replace( / \(.+\)$/, '' );
-			this.apiWikiGrokSuggestion = new WikiGrokSuggestionApi( {
-				itemId: options.itemId,
-				subject: options.name,
-				version: this.version
-			} );
+
 			this.apiWikiGrokResponse = new WikiGrokResponseApi( {
 				itemId: options.itemId,
 				subject: options.name,
@@ -155,72 +152,59 @@
 		},
 
 		/**
-		 * Creates a question with a yes, no and not sure answer
-		 * Makes API request to Wikidata to retrieve labels.
+		 * Creates a question with a yes, no and not sure answer.
+		 * Makes API request to Wikidata to retrieve labels and uses campaigns for that.
 		 * FIXME: No i18n
 		 * @method
 		 * @param {Object} options needed to render.
 		 */
 		askWikidataQuestion: function ( options ) {
 			var self = this,
-				vowels = [ 'a', 'e', 'i', 'o', 'u' ],
-				theCountries = [ 'United States', 'United Kingdom', 'Philippines',
-					'Marshall Islands', 'Central African Republic' ];
+				vowels = [ 'a', 'e', 'i', 'o', 'u' ];
 
-			if ( options.suggestions.length ) {
-				// choose a suggestion category (dob, dod, occupation, or nationality) randomly
-				options.suggestion = this.chooseRandomItemsFromArray( options.suggestions, 1 )[0];
-				// pick a claim randomly
-				options.claimId = this.chooseRandomItemsFromArray( options.suggestion.list, 1 )[0];
+			options.claimId = options.campaign.randomClaimId;
 
-				// Get the name of the claim from Wikidata.
-				self.apiWikiData.getLabels( [ options.claimId ] ).done( function ( labels ) {
-					options.claimLabel = labels[ options.claimId ];
-					if ( options.claimLabel ) {
-						// ask if it is a correct occupation for the person.
-						// FIXME: add support for DOB and DOD
-						if ( options.suggestion.name === 'occupations' ) {
-							// Hack for English prototype
-							if ( $.inArray( options.claimLabel.charAt( 0 ), vowels ) === -1 ) {
-								options.contentMsg = 'Was ' + options.name + ' a ' + options.claimLabel + '?';
-							} else {
-								options.contentMsg = 'Was ' + options.name + ' an ' + options.claimLabel + '?';
-							}
-						} else if ( options.suggestion.name === 'nationality' ) {
-							if ( $.inArray( options.claimLabel, theCountries ) === -1 ) {
-								options.contentMsg = 'Was ' + options.name + ' a citizen of ' + options.claimLabel + '?';
-							} else {
-								options.contentMsg = 'Was ' + options.name + ' a citizen of the ' + options.claimLabel + '?';
-							}
-						} else if ( options.suggestion.name === 'schools' ) {
-							options.contentMsg = 'Did ' + options.name + ' attend ' + options.claimLabel + '?';
+			self.apiWikiData.getLabels( [ options.claimId ] ).done( function ( labels ) {
+				options.claimLabel = labels[ options.claimId ];
+				if ( options.claimLabel ) {
+					if ( options.campaign.name === 'author' ) {
+						// Hack for English prototype
+						if ( $.inArray( options.claimLabel.charAt( 0 ), vowels ) === -1 ) {
+							options.contentMsg = 'Is ' + options.name + ' a ' + options.claimLabel + '?';
+						} else {
+							options.contentMsg = 'Is ' + options.name + ' an ' + options.claimLabel + '?';
 						}
-
-						// Re-render with new content for 'Question' step
-						options.beginQuestions = true;
-						options.buttons = [
-							{
-								classes: 'yes inline mw-ui-button mw-ui-progressive',
-								label: 'Yes'
-							},
-							{
-								classes: 'not-sure inline mw-ui-button',
-								label: 'Not Sure'
-							},
-							{
-								classes: 'no inline mw-ui-button mw-ui-progressive',
-								label: 'No'
-							}
-						];
-						options.noticeMsg = 'All submissions are <a class="wg-notice-link" href="#/wikigrok/about">released freely</a>';
-						self.render( options );
-					} else {
-						self.showError( options, 'There was an error retrieving tag labels.' );
+					} else if ( options.campaign.name === 'actor' ) {
+						options.contentMsg = 'Is ' + options.name + ' a ' + options.claimLabel + '?';
+					} else if ( options.campaign.name === 'album' ) {
+						options.contentMsg = 'Is this a ' + options.claimLabel + '?';
 					}
-				} ).fail( function () {
-					self.logError( 'no-impression-cannot-fetch-labels' );
-				} );
-			}
+
+					// Re-render with new content for 'Question' step
+					options.beginQuestions = true;
+					options.buttons = [
+						{
+							classes: 'yes inline mw-ui-button mw-ui-progressive',
+							label: 'Yes'
+						},
+						{
+							classes: 'not-sure inline mw-ui-button',
+							label: 'Not Sure'
+						},
+						{
+							classes: 'no inline mw-ui-button mw-ui-progressive',
+							label: 'No'
+						}
+					];
+					options.noticeMsg = 'All submissions are <a class="wg-notice-link" ' +
+						'href="#/wikigrok/about">released freely</a>';
+					self.render( options );
+				} else {
+					self.showError( options, 'There was an error retrieving tag labels.' );
+				}
+			} ).fail( function () {
+				self.logError( 'no-impression-cannot-fetch-labels' );
+			} );
 		},
 
 		showError: function ( options, errorMsg ) {
@@ -242,16 +226,16 @@
 					valueid: options.claimId,
 					value: options.claimLabel,
 					correct: options.claimIsCorrect,
-					propid: options.suggestion.id
+					propid: options.campaign.property
 				};
 
-			// FIXME: add support for DOB and DOD
-			if ( options.suggestion.name === 'occupations' ) {
+			if (
+				options.campaign.name === 'author' ||
+				options.campaign.name === 'actor'
+			) {
 				claim.prop = 'occupation';
-			} else if ( options.suggestion.name === 'nationality' ) {
-				claim.prop = 'nationality';
-			} else if ( options.suggestion.name === 'schools' ) {
-				claim.prop = 'alma mater';
+			} else if ( options.campaign.name === 'album' ) {
+				claim.prop = 'instance of';
 			}
 
 			this.apiWikiGrokResponse.recordClaims( [ claim ] ).always( function () {
@@ -428,38 +412,13 @@
 			this.reveal( options );
 		},
 
+		/**
+		 * Show WikiGrok dialog
+		 * @param {Object} options
+		 */
 		reveal: function ( options ) {
-			var self = this;
-
-			// fetch suggestions only if we didn't try loading suggestions before
-			if ( options.suggestions ) {
-				self.show();
-			} else {
-				options.suggestions = [];
-				self.apiWikiData.getClaims().done( function ( claims ) {
-					if ( claims.isHuman ) {
-						self.apiWikiGrokSuggestion.getSuggestions().fail( function () {
-							self.logError( 'no-impression-cannot-fetch-suggestions' );
-						} ).done( function ( suggestions ) {
-							// FIXME: add support for DOB and DOD
-							if ( suggestions.occupations && suggestions.occupations.list.length ) {
-								options.suggestions.push( suggestions.occupations );
-							}
-							if ( suggestions.nationalities && suggestions.nationalities.list.length ) {
-								options.suggestions.push( suggestions.nationalities );
-							}
-							if ( suggestions.schools && suggestions.schools.list.length ) {
-								options.suggestions.push( suggestions.schools );
-							}
-							if ( options.suggestions.length ) {
-								self.show();
-							} else {
-								// FIXME: remove this before deploying to stable
-								self.logError( 'no-impression-not-enough-suggestions' );
-							}
-						} );
-					}
-				} );
+			if ( options.campaign ) {
+				this.show();
 			}
 		}
 	} );

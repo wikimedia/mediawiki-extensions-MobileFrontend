@@ -31,43 +31,22 @@
 		 * Renders a set of buttons to the panel
 		 * Shows panel to user when there are suggestions.
 		 * @method
-		 * @param {Array} suggestions as returned by WikiGrokApi.getSuggestions
 		 */
-		_renderSuggestions: function ( suggestions ) {
-			var
+		_renderSuggestions: function ( campaign ) {
+			var suggestions,
 				self = this,
-				allSuggestions = [],
-				suggestionsList = [],
-				// Maps item ids to a key in i18n file
-				lookupProp = {},
 				i18n = {
-					dob: 'Born on',
-					dod: 'Died on',
-					nationalities: 'Home country',
-					occupations: 'Profession',
-					schools: 'School'
+					actor: 'Profession',
+					author: 'Profession',
+					album: 'Album type'
 				};
-
-			$.each( suggestions, function ( type, data ) {
-				var prop = {
-					type: type,
-					name: data.name,
-					id: data.id
-				};
-
-				allSuggestions = allSuggestions.concat( data.list );
-				// Make sure it's easy to look up the property later.
-				$.each( data.list, function ( i, itemId ) {
-					lookupProp[itemId] = prop;
-				} );
-			} );
 
 			// randomly pick 4 suggestions
-			suggestionsList = self.chooseRandomItemsFromArray( allSuggestions, 4 );
+			suggestions = self.chooseRandomItemsFromArray( campaign.suggestions, 4 );
 
 			// Now work out the labels if we have some suggestions
-			if ( suggestionsList.length ) {
-				self.apiWikiData.getLabels( suggestionsList ).done( function ( labels ) {
+			if ( suggestions.length ) {
+				self.apiWikiData.getLabels( suggestions ).done( function ( labels ) {
 					var $next = self.$( '.footer .next' ),
 						$none = self.$( '.footer .none' );
 
@@ -80,7 +59,6 @@
 					self.$( '.tags' ).show();
 					$.each( labels, function ( itemId, label ) {
 						var $tag,
-							prop = lookupProp[itemId],
 							id = 'tag-' + itemId;
 
 						if ( label ) {
@@ -101,14 +79,14 @@
 
 							// FIXME: Use a template for this magic.
 							$tag.attr( 'id', id )
-								.data( 'propName', prop.name )
-								.data( 'propId', prop.id )
+								.data( 'propName', campaign.name )
+								.data( 'propId', campaign.property )
 								.data( 'itemId', itemId )
 								.data( 'readable', label );
 
 							// Add the property label
 							$( '<label>' )
-								.text( i18n[prop.type] ).appendTo( $tag );
+								.text( i18n[campaign.name] ).appendTo( $tag );
 
 							// Add the value label
 							$( '<label>' )
@@ -142,7 +120,7 @@
 			self.$( '.wg-content' ).text( 'Select tags that correctly describe ' + options.title );
 			self.$( '.footer' ).show();
 
-			self._renderSuggestions( options.suggestions );
+			self._renderSuggestions( options.campaign );
 
 			this.$save = this.$( '.save' );
 			this.$save.on( 'click', function () {
@@ -208,28 +186,13 @@
 			}
 		},
 
+		/**
+		 * @inheritdoc
+		 */
 		reveal: function ( options ) {
-			var self = this;
-
-			options.suggestions = {};
-			self.apiWikiData.getClaims().done( function ( claims ) {
-				if ( claims.isHuman ) {
-					self.apiWikiGrokSuggestion.getSuggestions().done( function ( suggestions ) {
-						if ( ( suggestions.occupations && suggestions.occupations.list.length ) ||
-							( suggestions.nationalities && suggestions.nationalities.list.length ) ||
-							( suggestions.schools && suggestions.schools.list.length )
-						) {
-							options.suggestions = suggestions;
-							self.show();
-						} else {
-							// FIXME: remove this before deploying to stable
-							self.logError( 'no-impression-not-enough-suggestions' );
-						}
-					} ).fail( function () {
-						self.logError( 'no-impression-cannot-fetch-suggestions' );
-					} );
-				}
-			} );
+			if ( options.campaign ) {
+				this.show();
+			}
 		}
 	} );
 
