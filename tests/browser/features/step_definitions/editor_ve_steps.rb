@@ -35,6 +35,10 @@ When(/^I switch to editing the source$/) do
   step "I click the source editor button"
 end
 
+Then(/^I should no longer see the VisualEditor$/) do
+  expect(on(ArticlePage).editor_ve_element).to_not be_visible
+end
+
 Then(/^I should see a bold button$/) do
   expect(on(ArticlePage).overlay_ve_header_toolbar_bold_button_element).to be_visible
 end
@@ -43,14 +47,10 @@ Then(/^I should see an italicize button$/) do
   expect(on(ArticlePage).overlay_ve_header_toolbar_italic_button_element).to be_visible
 end
 
-Then(/^I should see the edit reflected in the article content$/) do
-  expect(on(ArticlePage).content).to match @text_to_type
-end
-
 Then(/^I should see the article content$/) do
   expect(on(ArticlePage).content_element.when_present).to be_visible
 end
 
-Then(/^I should no longer see the VisualEditor$/) do
-  expect(on(ArticlePage).editor_ve_element).to_not be_visible
+Then(/^I should see the edit reflected in the article content$/) do
+  expect(on(ArticlePage).content).to match @text_to_type
 end

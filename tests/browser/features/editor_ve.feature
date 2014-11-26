@@ -8,7 +8,9 @@ Feature: VisualEditor Mobile
 
   Scenario: Switch from VisualEditor to source editor
     When I switch to editing the source
-    Then I see the wikitext editor
+      And I see the wikitext editor overlay
+      And I click the wikitext editor overlay close button
+    Then I should not see the wikitext editor overlay
 
   Scenario: VisualEditor edit controls
     When I look at the VisualEditor toolbar

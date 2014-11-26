@@ -26,18 +26,14 @@ When(/^I do not see the wikitext editor overlay$/) do
   on(ArticlePage).editor_overlay_element.when_not_visible
 end
 
+When(/^I see the wikitext editor overlay$/) do
+  on(ArticlePage).editor_textarea_element.when_present
+end
+
 When(/^I type "(.+)" into the editor$/) do |text|
   on(ArticlePage).editor_textarea_element.when_present.send_keys(text)
 end
 
-Then(/^I see the wikitext editor$/) do
-  expect(on(ArticlePage).editor_textarea_element.when_present).to be_visible
-end
-
-Then(/^I see the wikitext editor overlay$/) do
-  expect(on(ArticlePage).editor_textarea_element.when_present).to be_visible
-end
-
-Then(/^the edit button is enabled$/) do
-  expect(on(ArticlePage).edit_button_holder_element.when_present.class_name).to match "enabled"
+Then(/^I should not see the wikitext editor overlay$/) do
+  expect(on(ArticlePage).editor_overlay_element).not_to be_visible
 end

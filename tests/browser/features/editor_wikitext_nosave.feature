@@ -5,9 +5,7 @@ Feature: Wikitext Editor
     Given I am logged into the mobile website
       And I am on a page that does not exist
       And I click the edit button
-
-  Scenario: Opening editor
-    Then I see the wikitext editor overlay
+      And I see the wikitext editor overlay
 
   Scenario: Closing editor (overlay button)
     When I click the wikitext editor overlay close button
