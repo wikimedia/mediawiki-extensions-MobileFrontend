@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_786bcc82",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 976,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-26T05:30:17Z",
+      "side": 1,
+      "message": "This seems unrelated to this module?",
+      "revId": "add1b4f13ddfb7f99c00b382d0ee4194cab6fecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_18ff28a9",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-26T05:30:17Z",
+      "side": 1,
+      "message": "M.isWideScreen()",
+      "revId": "add1b4f13ddfb7f99c00b382d0ee4194cab6fecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
