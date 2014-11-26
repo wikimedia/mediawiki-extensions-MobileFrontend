@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_09303ce4",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-11-26T17:53:36Z",
+      "side": 1,
+      "message": "You are waiting for all promises to be fullfilled. Shouldn\u0027t it be enough to wait till the first image finished?\n\nInstead of promises Array[Promise] why not make imageSrc a promise that you resolve on `.load` of any image and then here do:\n\n    $.when(imageSrc).done(function() {\n       blabla\n    })",
+      "revId": "2a3eed7146e2e134094a89dde94b4fcc52497fce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
