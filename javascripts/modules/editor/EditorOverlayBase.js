@@ -139,18 +139,20 @@
 			if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
 				options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
 			}
-			// If terms of use is enabled, include it in the licensing message
-			if ( $( '#footer-places-terms-use' ).length > 0 ) {
-				options.licenseMsg = mw.msg(
-					'mobile-frontend-editor-licensing-with-terms',
-					$( '#footer-places-terms-use' ).html(),
-					mw.config.get( 'wgMFLicenseLink' )
-				);
-			} else {
-				options.licenseMsg = mw.msg(
-					'mobile-frontend-editor-licensing',
-					mw.config.get( 'wgMFLicenseLink' )
-				);
+			if ( mw.config.get( 'wgMFLicenseLink' ) ) {
+				// If terms of use is enabled, include it in the licensing message
+				if ( $( '#footer-places-terms-use' ).length > 0 ) {
+					options.licenseMsg = mw.msg(
+						'mobile-frontend-editor-licensing-with-terms',
+						$( '#footer-places-terms-use' ).html(),
+						mw.config.get( 'wgMFLicenseLink' )
+					);
+				} else {
+					options.licenseMsg = mw.msg(
+						'mobile-frontend-editor-licensing',
+						mw.config.get( 'wgMFLicenseLink' )
+					);
+				}
 			}
 			this.editCount = user.getEditCount();
 			this.isNewPage = options.isNewPage;
