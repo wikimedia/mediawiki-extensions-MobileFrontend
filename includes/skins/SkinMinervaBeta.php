@@ -33,8 +33,7 @@ class SkinMinervaBeta extends SkinMinerva {
 	 */
 	public function getContextSpecificModules() {
 		$modules = parent::getContextSpecificModules();
-		$title = $this->getTitle();
-		if ( $this->isAllowedPageAction( 'talk' ) && !$title->isTalkPage() && $title->canTalk() ) {
+		if ( $this->isTalkAllowed() ) {
 			$modules[] = 'mobile.talk';
 		}
 
