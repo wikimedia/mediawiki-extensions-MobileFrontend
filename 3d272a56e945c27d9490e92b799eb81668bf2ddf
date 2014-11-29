@@ -52,6 +52,24 @@
       "revId": "3d272a56e945c27d9490e92b799eb81668bf2ddf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_5619f67c",
+        "filename": "includes/modules/MobileUserModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-11-29T23:08:09Z",
+      "side": 1,
+      "message": "Right, sorry :)",
+      "parentUuid": "6e936f18_dbb20f92",
+      "revId": "3d272a56e945c27d9490e92b799eb81668bf2ddf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
