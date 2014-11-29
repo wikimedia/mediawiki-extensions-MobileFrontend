@@ -136,6 +136,7 @@
 	"mobile-frontend-nearby-refresh": "Värskenda asukohta",
 	"mobile-frontend-nearby-requirements": "Kahjuks ei toeta sinu võrgulehitseja {{GRAMMAR:genitive|{{SITENAME}}}} funktsiooni \"Lähikond\".",
 	"mobile-frontend-nearby-title": "Lähikond",
+	"mobile-frontend-nearby-sectiontext": "Selle nähtuse lähedal",
 	"mobile-frontend-news-items": "Päevakajaline",
 	"mobile-frontend-opt-in-explain": "Beetat proovides antakse sulle ligipääs katselistele funktsioonidele, mille järel võid kokku puutuda tarkvaravigade ja muude probleemidega.",
 	"mobile-frontend-overlay-close": "Sule",
