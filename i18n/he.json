@@ -131,7 +131,7 @@
 	"mobile-frontend-image-heading-describe": "נא '''לתאר''' את התמונה",
 	"mobile-frontend-image-uploading": "'''העלאת''' התמונה...",
 	"mobile-frontend-images-status": "להציג תמונות",
-	"mobile-frontend-language-article-heading": "לקריאה בשפה אחרת",
+	"mobile-frontend-language-article-heading": "לקרוא בשפה אחרת",
 	"mobile-frontend-language-header": "הדף הזה זמין {{PLURAL:$1|בשפה אחת|ב־$1 שפות}}",
 	"mobile-frontend-language-heading": "<strong>שפות</strong>",
 	"mobile-frontend-language-site-choose": "חיפוש שפה",
