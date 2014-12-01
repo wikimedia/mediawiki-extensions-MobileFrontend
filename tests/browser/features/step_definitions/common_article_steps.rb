@@ -29,16 +29,16 @@ When(/^I click on the history link in the last modified bar$/) do
   on(ArticlePage).last_modified_bar_history_link_element.when_present.click
 end
 
+When(/^I click on the page$/) do
+  on(ArticlePage).content_wrapper_element.click
+end
+
 When(/^I click the unwatch star$/) do
   on(ArticlePage).unwatch_link_element.when_present.click
 end
 
 When(/^I click the watch star$/) do
   on(ArticlePage).watch_link_element.when_present.click
-end
-
-Then(/^I click on the page$/) do
-  on(ArticlePage).content_wrapper_element.click
 end
 
 # Toast notifications
