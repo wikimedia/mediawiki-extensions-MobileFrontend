@@ -34,6 +34,24 @@
       "revId": "0f34bd7961f32dcbd2dc9660f7295dd70923ce4e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_78abb386",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-01T17:52:27Z",
+      "side": 1,
+      "message": "As long as we do it now, i don\u0027t mind if it is other commit. I\u0027ll +2 it then",
+      "parentUuid": "4ea06b5a_f8cfc380",
+      "revId": "0f34bd7961f32dcbd2dc9660f7295dd70923ce4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
