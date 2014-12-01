@@ -1,5 +1,7 @@
 ( function ( M, $ ) {
 
+	var MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+
 	M.overlayManager.add( /^\/categories$/, function () {
 		var result = $.Deferred();
 
@@ -19,6 +21,7 @@
 	 */
 	function initButton() {
 		$( '.category-button' ).removeClass( 'hidden' );
+		MobileWebClickTracking.hijackLink( '.category-button', 'category-button' );
 	}
 
 	$( initButton );
