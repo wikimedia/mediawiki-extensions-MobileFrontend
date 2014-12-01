@@ -4,25 +4,28 @@
 		Api = M.require( 'api' ).Api;
 
 	/**
-	 * Record claims to the WikiGrok api
+	 * Record claims to the WikiGrok API
 	 * @class WikiGrokApi
 	 */
 	WikiGrokResponseApi = Api.extend( {
-
+		/**
+		 * Initialize with default values
+		 * @method
+		 */
 		initialize: function ( options ) {
 			this.subjectId = options.itemId;
 			this.subject = options.subject;
 			this.userToken = options.userToken;
 			this.taskToken = options.taskToken;
 			this.taskType = 'version ' + options.version;
-			this.testing = false;  // FIXME: TBD on what qualifies as a test
+			this.testing = false;
 			Api.prototype.initialize.apply( this, arguments );
 		},
 		/**
-		 * Saves claims to the wikigrok api server
+		 * Saves claims to the wikigrok API server
 		 * @method
-		 * @param {Array} claims a list of claims. Each claim must have correct, prop, propid, value and valueid set
-		 * @return {jQuery.Deferred}
+		 * @param {Array} claims A list of claims. Each claim must have correct, prop, propid, value and valueid set
+		 * @return {jQuery.Deferred} Object returned by ajax call
 		 */
 		recordClaims: function ( claims ) {
 			return this.postWithToken( 'edit', {
