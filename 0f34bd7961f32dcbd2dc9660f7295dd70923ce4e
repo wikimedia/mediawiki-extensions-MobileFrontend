@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_ac3fc4d2",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-01T10:35:53Z",
+      "side": 1,
+      "message": "In order to debug easily wikigrok, can we have a flag that  bypasses this condition if we are debugging?, something like:\n \n\n    if (\n        // show WikiGrok if the user hasn\u0027t already contributed\nto it on this page before \n        (wikiGrokDebug || !hasUserAlreadyContributedToWikiGrok()) \u0026\u0026...\n\nAnd debug mode would be triggered by having either M.query.wikigrokversion or M.query.wikidataid defined?\n\nIf we don\u0027t do something like this it is going to be pretty difficult to debug wikigrok stuff. It may even be a good idea to use a wikiGrokDebug flag to ignore also the permittedOnThisDevice flag.",
+      "revId": "0f34bd7961f32dcbd2dc9660f7295dd70923ce4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
