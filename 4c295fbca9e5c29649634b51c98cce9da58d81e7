@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_4ca3a03f",
+        "filename": "Gruntfile.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-01T09:52:22Z",
+      "side": 1,
+      "message": "This is cool, didn\u0027t know about it. Does it look at the environment variable too?\n\nIt may be word changing all the environment variables to this (Qunit related ones).",
+      "revId": "4c295fbca9e5c29649634b51c98cce9da58d81e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
