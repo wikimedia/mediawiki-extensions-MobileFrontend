@@ -41,7 +41,6 @@ When(/^I click the watch star$/) do
   on(ArticlePage).watch_link_element.when_present.click
 end
 
-# Toast notifications
 Then(/^I see a toast notification$/) do
   on(ArticlePage).toast_element.when_present.should be_visible
 end
@@ -78,10 +77,6 @@ end
 # Watch star
 Then(/^I see the watch star$/) do
   on(ArticlePage).watch_link_element.should be_visible
-end
-
-Then /^I should see the edit icon$/ do
-  on(ArticlePage).edit_button_holder_element.when_present.should be_visible
 end
 
 Then(/^I should see the error box message "(.+)"$/) do |error_message|
