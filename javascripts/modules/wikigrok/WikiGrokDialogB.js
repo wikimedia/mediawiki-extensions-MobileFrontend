@@ -70,28 +70,30 @@
 				self.apiWikiData.getLabels( suggestionsList ).done( function ( labels ) {
 					self.$( '.tags' ).show();
 					$.each( labels, function ( itemId, label ) {
-						var btnLabel, $tag,
+						var $tag,
 							prop = lookupProp[itemId],
 							id = 'tag-' + itemId;
 
-						$tag = $( '<div class="ui-tag-button mw-ui-button">' )
-							.on( 'click', function () {
-								$( this ).toggleClass( 'mw-ui-progressive' );
-							} ).appendTo( self.$( '.tags' ) );
+						if ( label ) {
+							$tag = $( '<div class="ui-tag-button mw-ui-button">' )
+								.on( 'click', function () {
+									$( this ).toggleClass( 'mw-ui-progressive' );
+								} ).appendTo( self.$( '.tags' ) );
 
-						// FIXME: Use a template for this magic.
-						$tag.attr( 'id', id )
-							.data( 'propName', prop.name )
-							.data( 'propId', prop.id )
-							.data( 'itemId', itemId )
-							.data( 'readable', label );
+							// FIXME: Use a template for this magic.
+							$tag.attr( 'id', id )
+								.data( 'propName', prop.name )
+								.data( 'propId', prop.id )
+								.data( 'itemId', itemId )
+								.data( 'readable', label );
 
-						$( '<label>' )
-							.text( i18n[prop.type] ).appendTo( $tag );
-
-						$( '<label>' )
-							.text( label )
-							.html( btnLabel ).appendTo( $tag );
+							// Add the property label
+							$( '<label>' )
+								.text( i18n[prop.type] ).appendTo( $tag );
+							// Add the value label
+							$( '<label>' )
+								.text( label ).appendTo( $tag );
+						}
 					} );
 
 					// only show the panel when we have created at least one button
