@@ -966,22 +966,44 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.hexmd5' => $wgMFResourceFileModuleBoilerplate + array(
+		'scripts' => array(
+			// FIXME: This library shouldn't be needed. Wikidata api
+			// should return these thumbnail urls for us.
+			'javascripts/externals/md5.js',
+		),
+		'position' => 'top',
+	),
+
 	'mobile.infobox' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.wikigrok.api',
 			'mobile.ajax',
+			'mobile.hexmd5',
 		),
 		'templates' => array(
 			'Infobox.hogan' => 'templates/modules/infobox/Infobox.hogan',
 		),
 		'scripts' => array(
-			// FIXME: This library shouldn't be needed. Wikidata api
-			// should return these thumbnail urls for us.
-			'javascripts/externals/md5.js',
 			'javascripts/modules/infobox/Infobox.js',
 		),
 		'styles' => array(
 			'less/modules/infobox.less',
+		),
+		'position' => 'top',
+	),
+
+	'mobile.bannerImage' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.wikigrok.api',
+			'mobile.ajax',
+			'mobile.hexmd5',
+		),
+		'scripts' => array(
+			'javascripts/modules/bannerImage/BannerImage.js',
+		),
+		'styles' => array(
+			'less/modules/bannerImage.less',
 		),
 		'position' => 'top',
 	),
@@ -1273,9 +1295,11 @@ $wgMinervaBootstrapModules = array(
 			'mobile.beta',
 			// Feature modules that should be loaded in alpha should be listed below here.
 			'mobile.infobox',
+			'mobile.bannerImage',
 		),
 		'scripts' => array(
 			'javascripts/modules/infobox/init.js',
+			'javascripts/modules/bannerImage/init.js',
 		),
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
