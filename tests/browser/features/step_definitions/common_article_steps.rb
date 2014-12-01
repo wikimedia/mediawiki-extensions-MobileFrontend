@@ -45,10 +45,6 @@ Then(/^I should see a toast notification$/) do
   expect(on(ArticlePage).toast_element.when_present).to be_visible
 end
 
-Then(/^I see a toast with message "(.*)"$/) do |text|
-  on(ArticlePage).toast_element.when_present.text.should match text
-end
-
 Then(/^I see a toast error$/) do
   on(ArticlePage).toast_element.when_present.class_name.should match "error"
 end
