@@ -10,11 +10,11 @@ Given(/^I am viewing an unwatched page$/) do
   step 'I am on the "Selenium mobile watch test" page'
 end
 
-Then(/^I see a toast with message about watching the page$/) do
+Then(/^I should see a toast with message about watching the page$/) do
   expect(on(ArticlePage).toast_element.when_present.text).to match "Added Selenium mobile watch test to your watchlist"
 end
 
-Then(/^I see a toast with message about unwatching the page$/) do
+Then(/^I should see a toast with message about unwatching the page$/) do
   on(ArticlePage) do |page|
     page.wait_until do
       page.text.include? "Removed" #Chrome needs this, FF does not
