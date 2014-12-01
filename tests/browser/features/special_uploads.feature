@@ -25,7 +25,7 @@ Feature: Special:Uploads uploads
       And I click on "Uploads" in the main navigation menu
       And I can see the uploads interface
     When upload bogus file BADFILE.tgz
-    Then I see a toast error
+    Then I should see a toast error
 
   Scenario: Upload image file
     Given I am logged into the mobile website

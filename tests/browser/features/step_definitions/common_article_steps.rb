@@ -45,8 +45,8 @@ Then(/^I should see a toast notification$/) do
   expect(on(ArticlePage).toast_element.when_present).to be_visible
 end
 
-Then(/^I see a toast error$/) do
-  on(ArticlePage).toast_element.when_present.class_name.should match "error"
+Then(/^I should see a toast error$/) do
+  expect(on(ArticlePage).toast_element.when_present.class_name).to match "error"
 end
 
 Then /^the watch star is selected$/ do
