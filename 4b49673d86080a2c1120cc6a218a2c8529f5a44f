@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_23f0b061",
+        "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-01T02:33:16Z",
+      "side": 1,
+      "message": "We normally use:\n}( mw.mobileFrontend, jQuery ) );\n\nMapping mw to mw doesn\u0027t serve any purpose. We could map mediaWiki to mw, but we\u0027re already assuming it is mapped as such at the global level by using mw.mobileFrontend here.",
+      "revId": "4b49673d86080a2c1120cc6a218a2c8529f5a44f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
