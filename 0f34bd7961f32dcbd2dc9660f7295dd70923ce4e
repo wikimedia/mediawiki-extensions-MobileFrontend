@@ -52,6 +52,24 @@
       "revId": "0f34bd7961f32dcbd2dc9660f7295dd70923ce4e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_f896e34e",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-01T17:53:35Z",
+      "side": 1,
+      "message": "Cool, yes let\u0027s create a card for that feature. I agree it\u0027s needed.",
+      "parentUuid": "4ea06b5a_78abb386",
+      "revId": "0f34bd7961f32dcbd2dc9660f7295dd70923ce4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
