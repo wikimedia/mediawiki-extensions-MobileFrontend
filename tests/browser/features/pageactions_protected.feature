@@ -7,4 +7,4 @@ Feature: Page actions menu when anonymous
 
   Scenario: I cannot edit a protected page when anonymous
     When I click the edit icon holder
-    Then I see a toast notification
+    Then I should see a toast notification

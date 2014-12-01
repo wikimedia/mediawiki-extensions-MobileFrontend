@@ -11,7 +11,7 @@ Feature: Wikitext Editor (Makes actual saves)
       And I type "ABC GHI" into the editor
       And I click continue
       And I click submit
-    Then I see a toast notification
+    Then I should see a toast notification
       And the text of the first heading should be "Selenium no languages test page"
       And I should not see the read in another language button
 
@@ -22,7 +22,7 @@ Feature: Wikitext Editor (Makes actual saves)
       And I type "ABC GHI" into the editor
       And I click continue
       And I click submit
-    Then I see a toast notification
+    Then I should see a toast notification
       And I should see the read in another language button
 
   Scenario: Redirects

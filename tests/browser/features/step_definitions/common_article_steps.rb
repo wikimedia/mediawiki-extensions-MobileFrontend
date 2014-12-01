@@ -41,8 +41,8 @@ When(/^I click the watch star$/) do
   on(ArticlePage).watch_link_element.when_present.click
 end
 
-Then(/^I see a toast notification$/) do
-  on(ArticlePage).toast_element.when_present.should be_visible
+Then(/^I should see a toast notification$/) do
+  expect(on(ArticlePage).toast_element.when_present).to be_visible
 end
 
 Then(/^I see a toast with message "(.*)"$/) do |text|
