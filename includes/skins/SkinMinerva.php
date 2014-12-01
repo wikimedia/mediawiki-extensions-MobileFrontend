@@ -140,6 +140,20 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns true, if the page can have a talk page.
+	 * FIXME: Remove when talk feature in stable
+	 * @return boolean
+	 */
+	protected function isTalkAllowed() {
+		$ctx = MobileContext::singleton();
+		$title = $this->getTitle();
+		return $this->isAllowedPageAction( 'talk' ) &&
+			!$title->isTalkPage() &&
+			$title->canTalk() &&
+			$ctx->isBetaGroupMember();
+	}
+
+	/**
 	 * Overrides Skin::doEditSectionLink
 	 * @param Title $nt
 	 * @param string $section
@@ -741,7 +755,7 @@ class SkinMinerva extends SkinTemplate {
 			);
 		}
 
-		if ( $this->isAllowedPageAction( 'talk' ) ) {
+		if ( $this->isTalkAllowed() ) {
 			// FIXME [core]: This seems unnecessary..
 			$subjectId = $title->getNamespaceKey( '' );
 			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
@@ -749,10 +763,8 @@ class SkinMinerva extends SkinTemplate {
 				$menu['talk'] = $namespaces[$talkId];
 			}
 
-			if ( $title->canTalk() ) {
-				$talkTitle = $title->getTalkPage();
-				$menu['talk']['data-title'] = $talkTitle->getFullText();
-			}
+			$talkTitle = $title->getTalkPage();
+			$menu['talk']['data-title'] = $talkTitle->getFullText();
 
 			if ( isset( $menu['talk'] ) ) {
 				$menu['talk']['class'] = MobileUI::iconClass( 'talk', 'element', 'icon-32px' );
