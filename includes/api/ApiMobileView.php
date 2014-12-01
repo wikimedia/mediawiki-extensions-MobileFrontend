@@ -819,6 +819,7 @@ class ApiMobileView extends ApiBase {
 	}
 
 	/**
+	 * Returns usage examples for this module.
 	 * @see ApiBase::getExamplesMessages()
 	 */
 	protected function getExamplesMessages() {

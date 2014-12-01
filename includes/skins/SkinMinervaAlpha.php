@@ -12,6 +12,10 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	/** @var stringDescribes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'alpha';
 
+	/**
+	 * Get the needed styles for this skin
+	 * @return array
+	 */
 	protected function getSkinStyles() {
 		$styles = parent::getSkinStyles();
 		$styles[] = 'mediawiki.ui.icon';

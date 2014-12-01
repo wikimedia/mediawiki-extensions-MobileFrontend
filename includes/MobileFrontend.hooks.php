@@ -1,4 +1,7 @@
 <?php
+/**
+ * MobileFrontend.hooks.php
+ */
 
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\ItemId;
@@ -965,6 +968,8 @@ class MobileFrontendHooks {
 
 	/**
 	 * LoginFormValidErrorMessages hook handler to promote MF specific error message be valid.
+	 *
+	 * @param array $messages Array of already added messages
 	 */
 	public static function onLoginFormValidErrorMessages( &$messages ) {
 		$messages[] = 'mobile-frontend-donate-image-anon';

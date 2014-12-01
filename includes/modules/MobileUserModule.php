@@ -1,5 +1,9 @@
 <?php
 /**
+ * MobileUserModule.php
+ */
+
+/**
  * Extends ResourceLoaderUserModule (Module for user-specific site customizations).
  */
 class MobileUserModule extends ResourceLoaderUserModule {
