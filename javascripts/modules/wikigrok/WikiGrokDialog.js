@@ -2,6 +2,7 @@
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var Panel = M.require( 'Panel' ),
+		settings = M.require( 'settings' ),
 		WikiGrokSuggestionApi = M.require( 'modules/wikigrok/WikiGrokSuggestionApi' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
@@ -261,7 +262,21 @@
 			} );
 		},
 
+		/**
+		 * Save the page title in localStorage so that we don't show WikiGrok on this page
+		 * the next time the user sees the page.
+		 */
+		rememberWikiGrokContribution: function () {
+			var pages = $.parseJSON(
+					settings.get( 'pagesWithWikiGrokContributions', false ) || '{}'
+				);
+
+			pages[M.getCurrentPage().title] = true;
+			settings.save( 'pagesWithWikiGrokContributions', JSON.stringify( pages ), false );
+		},
+
 		thankUser: function ( options, claimAttempted ) {
+			this.rememberWikiGrokContribution();
 			options.thankUser = true;
 			if ( claimAttempted ) {
 				options.contentMsg = 'You just made Wikipedia a little better, thanks!';

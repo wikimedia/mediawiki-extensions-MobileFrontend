@@ -5,6 +5,7 @@
 
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
+		settings = M.require( 'settings' ),
 		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !M.isWideScreen(),
 		idOverride,
 		versionConfigs = {
@@ -22,6 +23,22 @@
 		versionConfig,
 		WikiGrokAbTest = M.require( 'WikiGrokAbTest' ),
 		wikiGrokUser = M.require( 'wikiGrokUser' );
+
+	/*
+	 * Checks whether the user has already seen and responded to a WikiGrok question
+	 * before on this article and device.
+	 */
+	function hasUserAlreadyContributedToWikiGrok() {
+		var pages = $.parseJSON(
+				settings.get( 'pagesWithWikiGrokContributions', false ) || '{}'
+			),
+			result = false;
+
+		if ( M.getCurrentPage().title in pages ) {
+			result = true;
+		}
+		return result;
+	}
 
 	/*
 	 * Gets the configuration for the version of WikiGrok to use.
@@ -67,6 +84,8 @@
 	}
 
 	if (
+		// show WikiGrok if the user hasn't already contributed to it on this page before
+		!hasUserAlreadyContributedToWikiGrok() &&
 		// WikiGrok is enabled
 		mw.config.get( 'wgMFEnableWikiGrok' ) &&
 		// We're not on the Main Page

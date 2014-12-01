@@ -148,6 +148,7 @@
 					self.logError( 'no-response-cannot-record-user-input' );
 				} );
 				self.log( 'widget-click-submit' );
+				self.rememberWikiGrokContribution();
 			} );
 
 			// hide this Dialog when the user reads more about Wikigrok

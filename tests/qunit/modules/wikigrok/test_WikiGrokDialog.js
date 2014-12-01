@@ -3,6 +3,7 @@
 	var WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
+		settings = M.require( 'settings'),
 		suggestions = [ {
 			"id": "P106",
 			"name": "occupations",
@@ -11,13 +12,20 @@
 		labels = {
 			Q285759: "insurance broker"
 		},
-		pageTitle = 'Some guy';
+		pageTitle = M.getCurrentPage().title || 'Some guy';
+
+	function getPagesWithWikiGrokContributions () {
+		return $.parseJSON(
+			settings.get( 'pagesWithWikiGrokContributions', false ) || '{}'
+		);
+	}
 
 	QUnit.module( 'MobileFrontend: WikiGrokDialog', {
 		teardown: function () {
 			this.wk.remove();
 		},
 		setup: function () {
+			settings.remove( 'pagesWithWikiGrokContributions', false );
 			this.$el = $( '<div id="test">' );
 			this.wk = new WikiGrokDialog( {
 				el: this.$el,
@@ -124,34 +132,69 @@
 		this.$el.find( sel ).click();
 	}
 
-	QUnit.test( '#UI - Question - Click Yes', 2, function ( assert ) {
+	QUnit.test( '#UI - Question - Click Yes', 4, function ( assert ) {
 		getToQuestion.apply( this );
+
+		assert.equal(
+			getPagesWithWikiGrokContributions()[pageTitle],
+			undefined,
+			"User's contribution to WikiGrok has not been saved locally yet."
+		);
 
 		answerQuestion.call( this, '.yes' );
 
 		// I'm in thanks page now!
 		assert.equal( this.$el.find( '.wg-link' ).length, 1 );
 		assert.equal( this.$el.find( '.wg-link>a' ).length, 1 );
+
+		assert.equal(
+			getPagesWithWikiGrokContributions()[pageTitle],
+			true,
+			"User's contribution to WikiGrok has been saved locally correctly."
+		);
 	} );
 
-	QUnit.test( '#UI - Question - Click No', 2, function ( assert ) {
+	QUnit.test( '#UI - Question - Click No', 4, function ( assert ) {
 		getToQuestion.apply( this );
+
+		assert.equal(
+			getPagesWithWikiGrokContributions()[pageTitle],
+			undefined,
+			"User's contribution to WikiGrok has not been saved locally yet."
+		);
 
 		answerQuestion.call( this, '.no' );
 
 		// I'm in thanks page now!
 		assert.equal( this.$el.find( '.wg-link' ).length, 1 );
 		assert.equal( this.$el.find( '.wg-link>a' ).length, 1 );
+
+		assert.equal(
+			getPagesWithWikiGrokContributions()[pageTitle],
+			true,
+			"User's contribution to WikiGrok has been saved locally correctly."
+		);
 	} );
 
-	QUnit.test( '#UI - Question - Click Not sure', 2, function ( assert ) {
+	QUnit.test( '#UI - Question - Click Not sure', 4, function ( assert ) {
 		getToQuestion.apply( this );
+
+		assert.equal(
+			getPagesWithWikiGrokContributions()[pageTitle],
+			undefined,
+			"User's contribution to WikiGrok has not been saved locally yet."
+		);
 
 		answerQuestion.call( this, '.not-sure' );
 
 		// I'm in thanks page now!
 		assert.equal( this.$el.find( '.wg-link' ).length, 1 );
 		assert.equal( this.$el.find( '.wg-link>a' ).length, 1 );
+		assert.equal(
+			getPagesWithWikiGrokContributions()[pageTitle],
+			true,
+			"User's contribution to WikiGrok has been saved locally correctly."
+		);
 	} );
 
 }( jQuery, mw.mobileFrontend ) );
