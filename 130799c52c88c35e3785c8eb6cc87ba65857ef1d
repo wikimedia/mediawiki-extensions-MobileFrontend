@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_bb8cd5dc",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-01T20:28:45Z",
+      "side": 1,
+      "message": "Please provide more detail: which error conditions are covered and what exactly is shown?",
+      "revId": "130799c52c88c35e3785c8eb6cc87ba65857ef1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_3b1c4579",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-01T20:28:45Z",
+      "side": 1,
+      "message": "This line shouldn\u0027t be here. This method does one thing: log errors with the error schema.\n\nI suggest creating a new method which displays the error message and logs the error, which could be called \"handleError\".",
+      "revId": "130799c52c88c35e3785c8eb6cc87ba65857ef1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_c636a8e4",
+        "filename": "templates/modules/wikigrok/WikiGrokError.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-01T20:28:45Z",
+      "side": 1,
+      "message": "This isn\u0027t an unordered list. Use headers and paragraphs.",
+      "revId": "130799c52c88c35e3785c8eb6cc87ba65857ef1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
