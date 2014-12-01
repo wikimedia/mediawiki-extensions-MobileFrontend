@@ -49,8 +49,8 @@ Then(/^I should see a toast error$/) do
   expect(on(ArticlePage).toast_element.when_present.class_name).to match "error"
 end
 
-Then /^the watch star is selected$/ do
-  on(ArticlePage).watch_link_element.parent.class_name.should match "watched"
+Then /^the watch star should be selected$/ do
+  expect(on(ArticlePage).watch_link_element.parent.class_name).to match "watched"
 end
 
 Then(/^the text of the first heading should be "(.*)"$/) do |title|
@@ -62,8 +62,8 @@ Then(/^the text of the first heading should be "(.*)"$/) do |title|
   end
 end
 
-Then /^the watch star is not selected$/ do
-  on(ArticlePage).watch_link_element.should exist
+Then /^the watch star should not be selected$/ do
+  expect(on(ArticlePage).watch_link_element).to be_visible
 end
 
 Then /^I see drawer with message "(.+)"$/ do |text|
