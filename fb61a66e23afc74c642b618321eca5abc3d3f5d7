@@ -33,6 +33,41 @@
       "revId": "fb61a66e23afc74c642b618321eca5abc3d3f5d7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_5cab4486",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-02T11:10:42Z",
+      "side": 1,
+      "message": "css cursor pointer works in firefox:\n\nhttp://jsbin.com/pupomemehi/1/",
+      "parentUuid": "4ea06b5a_f9e102fc",
+      "revId": "fb61a66e23afc74c642b618321eca5abc3d3f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_1cb5bce0",
+        "filename": "less/pageactions.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-02T11:10:42Z",
+      "side": 1,
+      "message": "Why is this this way? Cursor pointer works in firefox:\n\nhttp://jsbin.com/pupomemehi/1/",
+      "revId": "fb61a66e23afc74c642b618321eca5abc3d3f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
