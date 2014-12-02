@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_9ce8ec0c",
+        "filename": "templates/modules/wikigrok/WikiGrokError.hogan",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T10:52:41Z",
+      "side": 1,
+      "message": "Is this container really necessary?\n\nEdit: I think that this container should have the required CSS classes and the WikiGrokDialog/WikiGrokDialogB templates should just use\n\n    {{\u003eerror}}\n\nrather than\n\n    \u003cdiv class\u003d\"pane error\"\u003e{{\u003eerror}}\u003c/div\u003e\n\nThis\u0027d avoid the repetition.",
+      "revId": "f412e90506526f5e05f416b7df7456e0536f296a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
