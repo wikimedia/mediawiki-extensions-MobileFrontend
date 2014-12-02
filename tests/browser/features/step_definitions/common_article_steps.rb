@@ -9,14 +9,6 @@ Given(/^I click submit$/) do
   end
 end
 
-# FIXME: Consolidate with code in editor_steps.rb
-# Confusingly we have 2 touch areas when it comes to the edit button
-# This is one is needed to triggers the edit CTA and is needed for pageactions.feature
-# The one in editor_steps.rb triggers the actual editor
-Given(/^I click the edit icon holder$/) do
-  on(ArticlePage).edit_button_holder_element.when_present.click
-end
-
 Given(/^I click the escape button$/) do
   on(ArticlePage).escape_button_element.when_present.click
 end
