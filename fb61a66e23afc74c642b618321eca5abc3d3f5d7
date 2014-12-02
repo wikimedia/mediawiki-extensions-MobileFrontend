@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_19e70e11",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-02T05:40:43Z",
+      "side": 1,
+      "message": "Can you not only add className here, add a meaningful class and add the cursor via css?",
+      "revId": "fb61a66e23afc74c642b618321eca5abc3d3f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_f9e102fc",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-02T05:40:43Z",
+      "side": 1,
+      "message": "This looks really false, see other comments. Why is this needed for FF?",
+      "revId": "fb61a66e23afc74c642b618321eca5abc3d3f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
