@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_2f02bcbe",
+        "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T15:54:27Z",
+      "side": 1,
+      "message": "Missing documentation.\n\nIf this represents all WikiGrok campaigns for the article, then its name should be plural.",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_0f434018",
+        "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T15:54:27Z",
+      "side": 1,
+      "message": "This is a helper method and shouldn\u0027t be part of the public API.",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_0f110008",
+        "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T15:54:27Z",
+      "side": 1,
+      "message": "I think the separator character is |. I may be wrong though.",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_ef0b74d7",
+        "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T15:54:27Z",
+      "side": 1,
+      "message": "Does this need to be part of the public API?\n\nEdit: looking at the usage of this, getRandomCampaignName, and getRandomClaimId in WikiGrokDialog, why not have two methods: getRandomCampaign, which returns a name-property tuple, and getSuggestions as below.\n\nThe motivation for this is you want one class that knows how to manipulate the value of wgWikiGrokCampaigns to produce data for WikiGrokDialog and WikiGrokDialogB. At the moment you have one and a half (WikiGrokDialog does some work too).",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_4f6068a0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T15:54:27Z",
+      "side": 1,
+      "message": "What will this return if the campaign doesn\u0027t exist?",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_6f51a4dc",
+        "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T15:54:27Z",
+      "side": 1,
+      "message": "\"\u0027;\" at the end of this line.\n\nIt ain\u0027t a list, it\u0027s a map of campaign name to an object with unexplained properties.",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_2f295c36",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T15:54:27Z",
+      "side": 1,
+      "message": "This might help to explain my previous comment about wikiGrokCampaigns vs wikiGrokCampaign.",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_4f2e2840",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T15:54:27Z",
+      "side": 1,
+      "message": "Is this method necessary any more?",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
