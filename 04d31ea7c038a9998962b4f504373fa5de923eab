@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_deb2e491",
+        "filename": "tests/qunit/modules/wikigrok/test_WikiGrokDialog.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-02T23:00:24Z",
+      "side": 1,
+      "message": "This comment needs to be changed.",
+      "revId": "04d31ea7c038a9998962b4f504373fa5de923eab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
