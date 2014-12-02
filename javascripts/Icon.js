@@ -24,7 +24,7 @@
 		 * @return {string}
 		 */
 		getClassName: function () {
-			return this.$el.children( 0 ).attr( 'class' );
+			return this.$el.children().attr( 'class' );
 		},
 		/**
 		 * Return the class that relates to the icon glyph
