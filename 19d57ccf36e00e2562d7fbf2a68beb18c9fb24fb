@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_dc82f4a8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T13:49:05Z",
+      "side": 1,
+      "message": "… but Icon#toHtmlString still returns a div inside a div for BC?",
+      "revId": "19d57ccf36e00e2562d7fbf2a68beb18c9fb24fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_bc85a8b3",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-02T13:49:05Z",
+      "side": 1,
+      "message": "This also needs margin-left: .5em.",
+      "revId": "19d57ccf36e00e2562d7fbf2a68beb18c9fb24fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
