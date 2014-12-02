@@ -341,6 +341,7 @@ class SkinMinerva extends SkinTemplate {
 						'class' => MobileUI::iconClass( 'watchlist', 'before' ),
 					),
 				),
+				'class' => 'jsonly'
 			)
 		);
 		if ( $this->isMobileMode ) {
@@ -533,6 +534,7 @@ class SkinMinerva extends SkinTemplate {
 						'class' => MobileUI::iconClass( 'anonymous-white', 'before', 'icon-anon' ),
 					),
 				),
+				'class' => 'jsonly'
 			);
 		}
 
