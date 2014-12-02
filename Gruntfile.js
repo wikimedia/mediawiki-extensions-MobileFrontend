@@ -20,7 +20,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-mkdir' );
 
 	grunt.initConfig( {
-		URL: process.env.URL || 'http://127.0.0.1:8080/w/index.php/',
+		URL: process.env.MEDIAWIKI_URL || 'http://127.0.0.1:8080/w/index.php/',
 		QUNIT_DEBUG: ( process.env.QUNIT_DEBUG && '&debug=true' || '' ),
 		QUNIT_FILTER: ( process.env.QUNIT_FILTER && '&filter=' + process.env.QUNIT_FILTER ) || '',
 		QUNIT_MODULE: ( process.env.QUNIT_MODULE && '&module=' + process.env.QUNIT_MODULE ) || '',
