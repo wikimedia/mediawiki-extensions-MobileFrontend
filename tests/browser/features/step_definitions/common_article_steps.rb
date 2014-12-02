@@ -49,8 +49,16 @@ Then(/^I should see a toast error$/) do
   expect(on(ArticlePage).toast_element.when_present.class_name).to match "error"
 end
 
-Then /^the watch star should be selected$/ do
-  expect(on(ArticlePage).watch_link_element.parent.class_name).to match "watched"
+Then /^I should see a drawer with message "(.+)"$/ do |text|
+  expect(on(ArticlePage).drawer_element.when_present.text).to match text
+end
+
+Then(/^I should see the error box message "(.+)"$/) do |error_message|
+  expect(on(ArticlePage).error_message).to match (error_message)
+end
+
+Then(/^I should see the watch star$/) do
+  expect(on(ArticlePage).watch_link_element).to be_visible
 end
 
 Then(/^the text of the first heading should be "(.*)"$/) do |title|
@@ -62,18 +70,10 @@ Then(/^the text of the first heading should be "(.*)"$/) do |title|
   end
 end
 
+Then /^the watch star should be selected$/ do
+  expect(on(ArticlePage).watch_link_element.parent.class_name).to match "watched"
+end
+
 Then /^the watch star should not be selected$/ do
   expect(on(ArticlePage).watch_link_element).to be_visible
-end
-
-Then /^I should see a drawer with message "(.+)"$/ do |text|
-  expect(on(ArticlePage).drawer_element.when_present.text).to match text
-end
-
-Then(/^I should see the watch star$/) do
-  expect(on(ArticlePage).watch_link_element).to be_visible
-end
-
-Then(/^I should see the error box message "(.+)"$/) do |error_message|
-  expect(on(ArticlePage).error_message).to match (error_message)
 end
