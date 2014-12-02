@@ -2,28 +2,13 @@
 
 	var WikiGrokAbTest = M.require( 'WikiGrokAbTest' ),
 		wikiGrokUser = M.require( 'wikiGrokUser' ),
-		now = new Date().getTime() / 1000,
-		enabledTest = new WikiGrokAbTest( now - 86400, now + 86400 );
+		enabledTest = new WikiGrokAbTest( true );
 
-	QUnit.module( 'MobileFrontend: modules/wikigrok/WikiGrokAbTest', {
-	} );
+	QUnit.module( 'MobileFrontend: modules/wikigrok/WikiGrokAbTest' );
 
-	QUnit.test( 'isEnabled returns false when the experiment isn\'t enabled', 2, function ( assert ) {
-		var dataProvider = [
-				[now + 86400, now + 86401], // startDate is in the future
-				[now - 86400, now - 86401], // endDate in the past
-			],
-			test;
-
-		$.each( dataProvider, function ( i, data ) {
-			test = new WikiGrokAbTest( data[0], data[1] );
-
-			assert.strictEqual( test.isEnabled, false );
-		} );
-	} );
-
-	QUnit.test( 'isEnabled returns true when the test is active', 1, function ( assert ) {
-		assert.strictEqual( enabledTest.isEnabled, true );
+	QUnit.test( 'isEnabled simply exposes the isEnabled constructor parameter', 2, function ( assert ) {
+		assert.strictEqual( new WikiGrokAbTest( false ).isEnabled, false );
+		assert.strictEqual( new WikiGrokAbTest( true ).isEnabled, true );
 	} );
 
 	QUnit.test( 'getVersion()', 62, function ( assert ) {
