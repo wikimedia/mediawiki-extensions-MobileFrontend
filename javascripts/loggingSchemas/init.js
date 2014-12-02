@@ -2,6 +2,20 @@
 ( function ( M, $ ) {
 	var MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
+	/**
+	 * Get the icon selector for the given main menu element (depending on alpha/stable mode)
+	 * @param {String} name Name of the main menu element
+	 * @return {String} Complete selector
+	 */
+	function mainMenuIconSelector( name ) {
+		// FIXME: Remove when mw-ui-icon is in stable
+		if ( !M.isAlphaGroupMember() ) {
+			return '#mw-mf-page-left .icon-' + name;
+		} else {
+			return '#mw-mf-page-left .mw-ui-icon-' + name;
+		}
+	}
+
 	$( function () {
 		var $profileLink = $( '#mw-mf-last-modified a' )
 			.filter( function () {
@@ -14,21 +28,21 @@
 
 		MobileWebClickTracking.hijackLink( '.icon-home',
 			'hamburger-home' );
-		MobileWebClickTracking.hijackLink( '#mw-mf-page-left .icon-random',
+		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'random' ),
 			'hamburger-random' );
-		MobileWebClickTracking.hijackLink( '#mw-mf-page-left .icon-nearby',
+		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'nearby' ),
 			'hamburger-nearby' );
-		MobileWebClickTracking.hijackLink( '#mw-mf-page-left .icon-watchlist',
+		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'watchlist' ),
 			'hamburger-watchlist' );
-		MobileWebClickTracking.hijackLink( '#mw-mf-page-left .icon-settings',
+		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'settings' ),
 			'hamburger-settings' );
-		MobileWebClickTracking.hijackLink( '#mw-mf-page-left .icon-uploads',
+		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'uploads' ),
 			'hamburger-uploads' );
-		MobileWebClickTracking.hijackLink( '#mw-mf-page-left .icon-profile',
+		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'profile' ),
 			'hamburger-profile' );
-		MobileWebClickTracking.hijackLink( '#mw-mf-page-left .icon-anon',
+		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'anon' ),
 			'hamburger-login' );
-		MobileWebClickTracking.hijackLink( '#mw-mf-page-left .icon-secondary-logout',
+		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'secondary-logout' ),
 			'hamburger-logout' );
 		MobileWebClickTracking.hijackLink( $( '#mw-mf-last-modified a span' ).parent(),
 			'lastmodified-history' );
