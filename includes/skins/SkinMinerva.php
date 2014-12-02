@@ -826,8 +826,7 @@ class SkinMinerva extends SkinTemplate {
 			$wgMFAnonymousEditing,
 			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc,
 			$wgMFCollapseSectionsByDefault, $wgMFShowRedLinksAnon,
-			$wgMFShowRedLinks,
-			$wgMFWikiGrokAbTestStartDate, $wgMFWikiGrokAbTestEndDate;
+			$wgMFShowRedLinks;
 
 		$title = $this->getTitle();
 		$user = $this->getUser();
@@ -873,8 +872,6 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isMobileMode ) {
 			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
 			$vars['wgUserCanUpload'] = $this->mobileContext->userCanUpload();
-			$vars['wgMFWikiGrokAbTestStartDate'] = $wgMFWikiGrokAbTestStartDate;
-			$vars['wgMFWikiGrokAbTestEndDate'] = $wgMFWikiGrokAbTestEndDate;
 		}
 
 		return $vars;

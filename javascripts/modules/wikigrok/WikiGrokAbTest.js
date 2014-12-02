@@ -13,15 +13,10 @@
 			/**
 			 * Initialises a new instance of the WikiGrokAbTest class.
 			 *
-			 * @param {Number} startDate The date the test starts, specified as a Unix
-			 *  timestamp
-			 * @param {Number} endDate The date that the test ends, specified as a Unix
-			 *  timestamp
+			 * @param {Boolean} isEnabled Whether or not the A/B test is enabled
 			 */
-			initialize: function ( startDate, endDate ) {
-				var now = new Date().getTime() / 1000;
-
-				this.isEnabled = startDate && endDate && ( startDate <= now && now <= endDate );
+			initialize: function ( isEnabled ) {
+				this.isEnabled = isEnabled;
 			},
 
 			/**
@@ -38,22 +33,13 @@
 		} );
 
 	/**
-	 * Creates a new instance of the WikiGrokAbTest using
-	 * `wfMFWikiGrokAbTestStartDate` and `wgMFWikiGrokAbTestEndDate` as the `startDate`
-	 * and `endDate` parameters respectively.
+	 * Creates a new instance of the WikiGrokAbTest using `wgMFEnableWikiGrok` as
+	 * the `isEnabled` parameter.
 	 *
 	 * @return {WikiGrokAbTest}
 	 */
 	WikiGrokAbTest.newFromMwConfig = function () {
-		var config = mw.config.get( [
-			'wgMFWikiGrokAbTestStartDate',
-			'wgMFWikiGrokAbTestEndDate'
-		] );
-
-		return new WikiGrokAbTest(
-			config.wgMFWikiGrokAbTestStartDate,
-			config.wgMFWikiGrokAbTestEndDate
-		);
+		return new WikiGrokAbTest( mw.config.get( 'wgMFEnableWikiGrok' ) );
 	};
 
 	M.define( 'WikiGrokAbTest', WikiGrokAbTest );
