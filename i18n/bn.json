@@ -17,6 +17,8 @@
 	"mobile-frontend-app-title": "মোবাইল অ্যাপ",
 	"mobile-frontend-back-to-top-of-section": "অনুচ্ছেদে ফিরে যাও",
 	"mobile-frontend-categories-heading": "<strong>বিষয়শ্রেণীসমূহ</strong>",
+	"mobile-frontend-categories-subheading": "এই পাতাটি নিম্নোক্ত বিষয়শ্রেণীর অন্তর্গত:",
+	"mobile-frontend-categories-nocat": "এই পাতাটি এখনো কোন বিষয়শ্রেণীর অন্তর্গত নয়।",
 	"mobile-frontend-changeslist-ip": "বেনামী ব্যবহারকারী",
 	"mobile-frontend-changeslist-nocomment": "সম্পাদনা সারাংশ নেই",
 	"mobile-frontend-clear-search": "পরিস্কার",
