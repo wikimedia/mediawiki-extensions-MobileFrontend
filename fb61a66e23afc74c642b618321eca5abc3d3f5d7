@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "4ea06b5a_52f00b62",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-02T17:52:09Z",
+      "side": 1,
+      "message": "you\u0027re right. Firefox wouldn\u0027t work yesterday with class names. But I think that was a browser cache issue.",
+      "parentUuid": "4ea06b5a_5cab4486",
+      "revId": "fb61a66e23afc74c642b618321eca5abc3d3f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea06b5a_1cb5bce0",
         "filename": "less/pageactions.less",
         "patchSetId": 3
