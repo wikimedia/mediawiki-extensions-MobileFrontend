@@ -66,15 +66,14 @@ Then /^the watch star should not be selected$/ do
   expect(on(ArticlePage).watch_link_element).to be_visible
 end
 
-Then /^I see drawer with message "(.+)"$/ do |text|
-  on(ArticlePage).drawer_element.when_present.text.should match text
+Then /^I should see a drawer with message "(.+)"$/ do |text|
+  expect(on(ArticlePage).drawer_element.when_present.text).to match text
 end
 
-# Watch star
-Then(/^I see the watch star$/) do
-  on(ArticlePage).watch_link_element.should be_visible
+Then(/^I should see the watch star$/) do
+  expect(on(ArticlePage).watch_link_element).to be_visible
 end
 
 Then(/^I should see the error box message "(.+)"$/) do |error_message|
-  on(ArticlePage).error_message.should match (error_message)
+  expect(on(ArticlePage).error_message).to match (error_message)
 end
