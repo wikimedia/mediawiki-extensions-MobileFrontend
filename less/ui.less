@@ -124,9 +124,19 @@ body {
 /* Search */
 
 .client-nojs {
-	.header .search {
-		margin-right: -36px;
-		padding-right: 36px;
+	.header {
+		.search,
+		.fulltext-search {
+			display: block;
+			float: left;
+		}
+
+		.search {
+			// Assume the smallest possible screen size.
+			// We want people to be able to search we don't care if it looks pretty.
+			width: 80px;
+			margin-right: 8px;
+		}
 	}
 }
 
