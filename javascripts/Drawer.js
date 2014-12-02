@@ -11,6 +11,7 @@
 	Drawer = Panel.extend( {
 		className: 'drawer position-fixed',
 		appendToElement: '#notifications',
+		closeOnScroll: true,
 
 		postRender: function () {
 			var self = this;
@@ -18,7 +19,9 @@
 			this.on( 'show', function () {
 				setTimeout( function () {
 					$( 'body' ).one( 'click.drawer', $.proxy( self, 'hide' ) );
-					$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
+					if ( self.closeOnScroll ) {
+						$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
+					}
 					// can't use 'body' because the drawer will be closed when
 					// tapping on it and clicks will be prevented
 					$( '#mw-mf-page-center' ).one( 'click.drawer', $.proxy( self, 'hide' ) );

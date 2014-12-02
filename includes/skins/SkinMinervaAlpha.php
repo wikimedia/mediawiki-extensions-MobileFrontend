@@ -62,6 +62,26 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	}
 
 	/**
+	 * Prepare site links in footer
+	 * @param BaseTemplate $tpl
+	 */
+	protected function prepareSiteLinks( BaseTemplate $tpl ) {
+		parent::prepareSiteLinks( $tpl );
+		$urls = $tpl->get( 'site_urls' );
+		$msg = $this->msg( 'mobile-frontend-fontchanger-link' );
+		// Don't add elements, where the message does not exist
+		if ( !$msg->isDisabled() ) {
+			$urls[] = array(
+				'href' => '#',
+				'text'=> $msg->text(),
+				// hide the link, fontchanger works only with JS enabled (hidden will be removed with JS)
+				'class' => 'fontchanger link hidden'
+			);
+		}
+		$tpl->set( 'site_urls', $urls );
+	}
+
+	/**
 	 * Get various skin specific configuration.
 	 * @return array
 	 */
