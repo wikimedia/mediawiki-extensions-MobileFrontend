@@ -15,11 +15,15 @@ Please follow the coding conventions of MobileFrontend:
 https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions
 
 ==== Git hooks ====
-Git hooks are provided in the dev-scripts directory to assist with adhering
-to JavaScript code standards, optimizing PNG files, etc. Install like
-so:
+Git hooks are provided in the dev-scripts directory to assist with adhering to JavaScript
+code standards, optimizing PNG files, etc. Running these hooks requires node.js, NPM, and
+grunt.
 
+Install like so:
   make installhooks
+
+If you are not running Vagrant, be sure to set your MEDIAWIKI_URL env variable to your
+local index path, e.g. 'MEDIAWIKI_URL=http://localhost/index.php/'
 
 === Committing ===
 Commits are important as they give the reviewer more information to
