@@ -49,6 +49,10 @@ $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 	'MobileFrontendHooks' => 'MobileFrontend.hooks',
 
+	'IDeviceProperties' => 'DeviceDetection',
+	'IDeviceDetector' => 'DeviceDetection',
+	'DeviceProperties' => 'DeviceDetection',
+	'PredefinedDeviceProperties' => 'DeviceDetection',
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlDeviceProperties' => 'DeviceDetection',
 	'MobileContext' => 'MobileContext',
