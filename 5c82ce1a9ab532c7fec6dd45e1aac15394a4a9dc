@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_99447e4c",
+        "filename": "javascripts/Icon.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-12-02T03:43:24Z",
+      "side": 1,
+      "message": "This 0 does nothing. See Id013465f0093e067.",
+      "revId": "5c82ce1a9ab532c7fec6dd45e1aac15394a4a9dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
