@@ -7,22 +7,23 @@ When(/^I click on "(.*?)" in the main navigation menu$/) do |text|
   on(ArticlePage).navigation_element.link_element(text: text).when_visible.click
 end
 
-Then(/^I see a link to "(.*?)" in the main navigation menu$/) do |text|
-  on(ArticlePage).navigation_element.link_element(text: text).should be_visible
+Then(/^I should see a link to "(.*?)" in the main navigation menu$/) do |text|
+  expect(on(ArticlePage).navigation_element.link_element(text: text)).to be_visible
 end
 
-Then(/^I do not see a link to "(.*?)" in the main navigation menu$/) do |text|
-  on(ArticlePage).navigation_element.link_element(text: text).should_not be_visible
+Then(/^I should not see a link to "(.*?)" in the main navigation menu$/) do |text|
+  expect(on(ArticlePage).navigation_element.link_element(text: text)).not_to be_visible
 end
 
-Then(/^I see a link to the about page$/) do
-  on(ArticlePage).about_link_element.should be_visible
+Then(/^I should see a link to the about page$/) do
+  expect(on(ArticlePage).about_link_element).to be_visible
 end
 
-Then(/^I see a link to the disclaimer$/) do
-  on(ArticlePage).disclaimer_link_element.should be_visible
+Then(/^I should see a link to the disclaimer$/) do
+  expect(on(ArticlePage).disclaimer_link_element).to be_visible
 end
 
-Then(/^I see a link to my user profile page in the main navigation menu$/) do
-  on(ArticlePage).navigation_element.link_element(text: ENV["MEDIAWIKI_USER"]).should_not be_visible
+Then(/^I should see a link to my user profile page in the main navigation menu$/) do
+  user_link_text = ENV['MEDIAWIKI_USER'].gsub('_', ' ')
+  expect(on(ArticlePage).navigation_element.link_element(href: /UserProfile\/#{ENV['MEDIAWIKI_USER']}/, text: user_link_text)).to be_visible
 end

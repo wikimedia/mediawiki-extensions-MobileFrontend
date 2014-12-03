@@ -18,18 +18,18 @@ Feature: Basic site for legacy devices
   Scenario: Able to access left navigation in basic non-JavaScript site
     When I click on "Random" in the main navigation menu
       And I click on the main navigation button
-    Then I see a link to "Home" in the main navigation menu
-      And I see a link to "Random" in the main navigation menu
-      And I see a link to "Settings" in the main navigation menu
-      And I see a link to "Watchlist" in the main navigation menu
-      And I see a link to "Log in" in the main navigation menu
-      And I do not see a link to "Uploads" in the main navigation menu
+    Then I should see a link to "Home" in the main navigation menu
+      And I should see a link to "Random" in the main navigation menu
+      And I should see a link to "Settings" in the main navigation menu
+      And I should see a link to "Watchlist" in the main navigation menu
+      And I should see a link to "Log in" in the main navigation menu
+      And I should not see a link to "Uploads" in the main navigation menu
 
   @extension-geodata
   Scenario: Nearby link not present in main navigation menu
     When I click on "Random" in the main navigation menu
       And I click on the main navigation button
-    Then I do not see a link to "Nearby" in the main navigation menu
+    Then I should not see a link to "Nearby" in the main navigation menu
 
   Scenario: Search with JavaScript disabled
     Given the page "Selenium search test" exists
