@@ -23,5 +23,5 @@ Feature: Menus open correct page for anonymous users
 
   Scenario: Watchlist URL is set correctly
     When I click on "Watchlist" in the main navigation menu
-    Then I see the log in prompt message "A watchlist helps you bookmark pages and keep track of changes to them."
-      And I see the log in prompt message "Log in to see it."
+    Then I should see the log in prompt message "A watchlist helps you bookmark pages and keep track of changes to them."
+      And I should see the log in prompt message "Log in to see it."
