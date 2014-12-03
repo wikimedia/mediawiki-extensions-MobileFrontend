@@ -8,11 +8,11 @@ Feature: Manage Watchlist
   Scenario: Switching to Feed view
     When I switch to the modified view of the watchlist
       And I click the Pages tab
-    Then I see a list of diff summary links
-      And the modified button is selected
+    Then I should see a list of diff summary links
+      And the modified button should be selected
 
   Scenario: Switching to List view
     When I switch to the modified view of the watchlist
       And I switch to the list view of the watchlist
-    Then I see a list of pages I am watching
-      And the a to z button is selected
+    Then I should see a list of pages I am watching
+      And the a to z button should be selected
