@@ -362,7 +362,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
 		global $wgMFNearbyEndpoint, $wgMFContentNamespace, $wgMFEnableWikiGrok,
-			$wgMFEnableWikiGrokOnAllDevices;
+			$wgMFEnableWikiGrokForAnons, $wgMFEnableWikiGrokOnAllDevices;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
 		$vars['wgMFThumbnailSizes'] = array(
 			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
@@ -372,6 +372,7 @@ class MobileFrontendHooks {
 		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
 		// Requires WikiGrok extension
 		$vars['wgMFEnableWikiGrok'] = $wgMFEnableWikiGrok && class_exists( 'WikiGrok\Api\ApiResponse' );
+		$vars['wgMFEnableWikiGrokForAnons'] = $wgMFEnableWikiGrokForAnons;
 		$vars['wgMFEnableWikiGrokOnAllDevices'] = $wgMFEnableWikiGrokOnAllDevices;
 
 		// Set the licensing agreement that is displayed in the editor.

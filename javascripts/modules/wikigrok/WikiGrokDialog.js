@@ -1,6 +1,4 @@
  ( function ( M, $ ) {
-	M.assertMode( [ 'beta', 'alpha' ] );
-
 	var Panel = M.require( 'Panel' ),
 		settings = M.require( 'settings' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
