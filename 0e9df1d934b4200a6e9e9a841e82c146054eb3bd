@@ -16,6 +16,24 @@
       "revId": "0e9df1d934b4200a6e9e9a841e82c146054eb3bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_3bd3d031",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-03T21:14:24Z",
+      "side": 1,
+      "message": "What about Special:MobileMenu page? If the user lands on that page don\u0027t we need this?",
+      "parentUuid": "4ea06b5a_7bf878e2",
+      "revId": "0e9df1d934b4200a6e9e9a841e82c146054eb3bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
