@@ -7,7 +7,7 @@ When(/^I open the latest diff$/) do
 end
 
 Then(/^I should see a more button$/) do
-  on(SpecialHistoryPage).more_link_element.should exist
+  expect(on(SpecialHistoryPage).more_link_element).to be_visible
 end
 
 Then(/^the last contribution summary should not show the title of the page edited$/) do

@@ -46,6 +46,10 @@ Then(/^I should not see the search overlay$/) do
   expect(on(ArticlePage).search_overlay_element).not_to be_visible
 end
 
+Then(/^I should see a list of search results$/) do
+  expect(on(SearchPage).list_of_results_element.when_present).to be_visible
+end
+
 Then(/^I should see the search button$/) do
   expect(on(ArticlePage).search_button_element.when_present).to be_visible
 end

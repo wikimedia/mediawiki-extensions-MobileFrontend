@@ -23,10 +23,10 @@ Feature: Search
       And I see the search overlay
       And I type into search box "Test is used by Selenium web driver"
       And I click the search in pages button
-    Then I see a list of search results
+    Then I should see a list of search results
 
   Scenario: Search with enter key
       And I see the search overlay
       And I type into search box "Test is used by Selenium web driver"
       And I press the enter key
-    Then I see a list of search results
+    Then I should see a list of search results

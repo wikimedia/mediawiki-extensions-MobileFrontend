@@ -35,4 +35,4 @@ Feature: Basic site for legacy devices
     Given the page "Selenium search test" exists
     When I type into search box "Test is used by Selenium web driver"
       And I click the search button
-    Then I see a list of search results
+    Then I should see a list of search results
