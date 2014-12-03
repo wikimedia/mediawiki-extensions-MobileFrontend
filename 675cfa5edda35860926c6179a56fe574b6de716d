@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_dec2da5c",
+        "filename": "javascripts/modules/fontchanger/FontChanger.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-03T21:40:29Z",
+      "side": 1,
+      "message": "Please document all methods.\nwe want to make `make jscsdoc` the default as this goes in opposite direction :)",
+      "revId": "675cfa5edda35860926c6179a56fe574b6de716d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
