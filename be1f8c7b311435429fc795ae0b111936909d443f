@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "4ea06b5a_d2265bc9",
+        "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-03T00:52:51Z",
+      "side": 1,
+      "message": "It can be either according to https://github.com/senchalabs/jsduck/wiki/Type-Definitions\n\nI\u0027ll use \u0027|\u0027 here, and I think we should stick to it in the future.",
+      "parentUuid": "4ea06b5a_0f110008",
+      "revId": "be1f8c7b311435429fc795ae0b111936909d443f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea06b5a_ef0b74d7",
         "filename": "javascripts/modules/wikigrok/WikiGrokCampaign.js",
         "patchSetId": 4
