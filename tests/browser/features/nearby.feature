@@ -16,4 +16,4 @@ Feature: Nearby page (mobile interface)
       And I give permission for the page to access my location
       And I should see at least one result in the nearby items list
     When I click a nearby result
-    Then I see the page preview overlay
+    Then I should see the page preview overlay
