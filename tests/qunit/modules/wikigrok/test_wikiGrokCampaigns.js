@@ -59,8 +59,8 @@
 
 		campaign = wikiGrokCampaigns.getRandomCampaign();
 		assert.equal( typeof campaign.name, 'string', 'campaign name exists' );
-		assert.equal( typeof campaign.suggestions, 'object', 'suggestions exist' );
-		assert.equal( typeof campaign.randomClaimId, 'string', 'random claim id exist' );
+		assert.equal( typeof campaign.questions, 'object', 'questions exist' );
+		assert.equal( typeof campaign.randomClaimId, 'string', 'randomClaimId exist' );
 	} );
 
 }( jQuery, mw.mobileFrontend, mw ) );
