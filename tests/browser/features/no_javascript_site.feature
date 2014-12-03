@@ -11,7 +11,7 @@ Feature: Basic site for legacy devices
   Scenario: Able to search in basic non-JavaScript site
     When I click on "Random" in the main navigation menu
     Then I should see the watch star
-      And I see the search button
+      And I should see the search button
       # FIXME: Check that the edit button is invisible
       # FIXME: Check that the upload button is invisible
 

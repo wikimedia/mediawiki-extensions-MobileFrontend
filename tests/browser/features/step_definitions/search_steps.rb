@@ -27,6 +27,10 @@ When(/^I click the search overlay close button$/) do
   on(ArticlePage).search_overlay_close_button_element.click
 end
 
+When(/^I see the search overlay$/) do
+  on(ArticlePage).search_overlay_element.when_present
+end
+
 When(/^I type into search box "(.+)"$/) do |search_term|
   on(ArticlePage) do |page|
     if page.search_box2_element.exists?
@@ -38,23 +42,14 @@ When(/^I type into search box "(.+)"$/) do |search_term|
   end
 end
 
-# FIXME: Is there a way to merge this rule into "I type into search box"?
-When(/^I type into search placeholder box "(.+)"$/) do |search_term|
-  on(ArticlePage).search_box_placeholder=search_term
+Then(/^I should not see the search overlay$/) do
+  expect(on(ArticlePage).search_overlay_element).not_to be_visible
 end
 
-Then(/^I don't see the search overlay$/) do
-  on(ArticlePage).search_overlay_element.should_not be_visible
-end
-
-Then(/^I see the search button$/) do
-  on(ArticlePage).search_button_element.when_present.should be_visible
-end
-
-Then(/^I see the search overlay$/) do
-  on(ArticlePage).search_overlay_element.should be_visible
+Then(/^I should see the search button$/) do
+  expect(on(ArticlePage).search_button_element.when_present).to be_visible
 end
 
 Then(/^search results should contain "(.+)"$/) do |text|
-  on(ArticlePage).search_result_element.when_present.text.should == text
+  expect(on(ArticlePage).search_result_element.when_present.text).to eq text
 end
