@@ -33,6 +33,7 @@
 		MobileWebClickTracking.hijackLink( $( '#mw-mf-last-modified a span' ).parent(),
 			'lastmodified-history' );
 		MobileWebClickTracking.hijackLink( $profileLink, 'lastmodified-profile' );
+		MobileWebClickTracking.hijackLink( '.nearby-button', 'nearby-button' );
 	} );
 
 	MobileWebClickTracking.logPastEvent();
