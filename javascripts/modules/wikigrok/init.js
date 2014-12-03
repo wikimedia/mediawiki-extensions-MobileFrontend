@@ -84,8 +84,9 @@
 	}
 
 	if (
-		// show WikiGrok if the user hasn't already contributed to it on this page before
-		!hasUserAlreadyContributedToWikiGrok() &&
+		// Show WikiGrok if the user hasn't already contributed to it on this page before
+		// or they are testing WikiGrok (by using the query string override)
+		( !hasUserAlreadyContributedToWikiGrok() || idOverride ) &&
 		// WikiGrok is enabled and configured for this user
 		versionConfig &&
 		// We're not on the Main Page
