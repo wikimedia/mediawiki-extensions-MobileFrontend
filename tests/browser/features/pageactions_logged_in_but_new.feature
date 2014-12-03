@@ -7,4 +7,4 @@ Feature: Page actions menu when logged in as a new user
       And I am at a random page
 
   Scenario: I can not see the upload button
-    Then there is not an upload an image to this page button
+    Then I should not see an upload an image to this page button

@@ -10,7 +10,7 @@ Feature: Page actions menu when anonymous
     Then I should see a drawer with message "Help improve this page!"
 
   Scenario: Do not see - Upload Icon
-    Then there is not an upload an image to this page button
+    Then I should not see an upload an image to this page button
 
   Scenario: Receive notification message - Watchlist Icon
     When I click the watch star
