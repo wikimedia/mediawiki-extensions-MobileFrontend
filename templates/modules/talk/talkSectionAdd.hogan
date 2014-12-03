@@ -4,4 +4,6 @@
 <div class="panel">
 	<input type="text" class="summary" placeholder="{{topicTitlePlaceHolder}}">
 </div>
-<textarea class="wikitext-editor" cols="40" rows="10" placeholder="{{topicContentPlaceHolder}}"></textarea>
+<div class="panel">
+	<textarea class="wikitext-editor" cols="40" rows="10" placeholder="{{topicContentPlaceHolder}}"></textarea>
+</div>
