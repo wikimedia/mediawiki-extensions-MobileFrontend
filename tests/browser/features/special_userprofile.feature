@@ -6,9 +6,9 @@ Feature: Special:UserProfile
       And I visit my user profile page
 
   Scenario: Check components in profile page
-    Then I am on my user profile page
-      And I can see my last edit
-      And there is a link to my talk page
-      And there is a link to my contributions
-      And there is a link to my uploads
-      And there is a link to my user page
+    Then I should be on my user profile page
+      And I should see my last edit
+      And there should be a link to my talk page
+      And there should be a link to my contributions
+      And there should be a link to my uploads
+      And there should be a link to my user page

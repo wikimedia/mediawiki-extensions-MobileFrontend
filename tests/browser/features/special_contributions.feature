@@ -7,7 +7,7 @@ Feature: Special:Contributions
 
   Scenario: Check components in diff summary
     When I click the link in the header bar
-    Then I am on my user profile page
+    Then I should be on my user profile page
 
   Scenario: Check components in diff summary
     Then I should see a list of page contributions
