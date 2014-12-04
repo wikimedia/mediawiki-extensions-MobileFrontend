@@ -4,6 +4,7 @@
 
 	/**
 	 * Get the icon selector for the given main menu element (depending on alpha/stable mode)
+	 * @ignore
 	 * @param {String} name Name of the main menu element
 	 * @return {String} Complete selector
 	 */

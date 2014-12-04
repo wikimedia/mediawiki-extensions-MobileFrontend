@@ -9,6 +9,7 @@
 	/**
 	 * Gets a common width that is closest to the current screen width
 	 * Limits the amount of thumbnail images being generated on the server
+	 * @ignore
 	 *
 	 * @returns {Number} pixel width of the image
 	 */

@@ -5,6 +5,10 @@
 	"scripts": {
 		"test": "grunt test"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git://git.wikimedia.org/git/mediawiki/extensions/MobileFrontend.git"
+	},
 	"dependencies": {
 		"grunt": "0.4.5",
 		"grunt-phpdocumentor": "~0.4.1",

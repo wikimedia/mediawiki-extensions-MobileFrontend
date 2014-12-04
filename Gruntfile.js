@@ -125,7 +125,7 @@ module.exports = function ( grunt ) {
 						'OO.EventEmitter'
 					],
 					'ignore-global': true,
-					'warnings': [ '-no_doc', '-dup_member', '-link_ambiguous' ]
+					'warnings': [ '-nodoc(class,public)', '-dup_member', '-link_ambiguous' ]
 				}
 			}
 		}
