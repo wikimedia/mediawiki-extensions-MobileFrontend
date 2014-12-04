@@ -1,6 +1,6 @@
 <div class="content wg-moreinfo">
-	<p><strong>Wikidata Game</strong> is an easy way to contribute to Wikipedia on mobile devices. All of your entries get submitted to <a href="//www.wikidata.org/">Wikidata</a>, the free knowledge base that powers Wikipedia.</p>
-	<p>All submissions are released freely under the <a href="//creativecommons.org/publicdomain/zero/1.0/">Creative Commons Public Domain Dedication</a> (CC0).</p>
+	<p>Wikipedia needs your help assembling machine-readable information from its text corpus. By collecting responses from you and other readers, we can improve search on Wikipedia.</p>
+	<p>Entries are submitted to <a href="//www.wikidata.org/">Wikidata</a> and are freely licensed under the <a href="//creativecommons.org/publicdomain/zero/1.0/">Creative Commons Public Domain Dedication</a> (CC0).</p>
 	<p>
 		<button class="cancel inline mw-ui-button mw-ui-progressive">Got it!</button>
 	</p>
