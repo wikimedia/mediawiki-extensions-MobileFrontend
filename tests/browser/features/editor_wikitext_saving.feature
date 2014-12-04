@@ -46,4 +46,4 @@ Feature: Wikitext Editor (Makes actual saves)
       And I click submit
       And I say OK in the confirm dialog
       And I do not see the wikitext editor overlay
-    Then there is a red link with text "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    Then there should be a red link with text "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"

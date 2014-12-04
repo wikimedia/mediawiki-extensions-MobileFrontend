@@ -19,5 +19,5 @@ Feature: Page diff
       And I do not see the wikitext editor overlay
       And I click on the history link in the last modified bar
       And I open the latest diff
-    Then I see "GHI" as added content
-      And I see "DEF" as removed content
+    Then I should see "GHI" as added content
+      And I should see "DEF" as removed content
