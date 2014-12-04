@@ -11,13 +11,13 @@ Feature: Image uploads copyvio notice
   Scenario: Opening upload preview and confirming (image without EXIF)
     When upload file image.png
       And I say OK in the confirm dialog
-    Then I see the upload preview
+    Then I should see the upload preview
 
   Scenario: Opening upload preview and cancelling (image without EXIF)
     When upload file image.png
       And I say Cancel in the confirm dialog
-    Then I don't see the upload preview
+    Then I should not see the upload preview
 
   Scenario: Opening upload preview (image with EXIF)
     When I upload file "exif.jpg"
-    Then I see the upload preview
+    Then I should see the upload preview

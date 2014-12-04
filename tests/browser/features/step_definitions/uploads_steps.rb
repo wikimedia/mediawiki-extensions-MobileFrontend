@@ -10,6 +10,10 @@ When(/^I click Upload$/) do
   on(UploadPage).upload_button_element.when_present.click
 end
 
+When(/^I click the upload preview overlay close button$/) do
+  on(ArticlePage).photo_overlay_close_button_element.when_present.click
+end
+
 When(/^I go to uploads page$/) do
   visit(UploadPage)
 end
@@ -18,39 +22,35 @@ When(/^I type a description$/) do
   on(UploadPage).photo_description_element.when_present.send_keys("Describing with #{@random_string}")
 end
 
-Then(/^my image is on the Uploads page$/) do
+When(/^I upload file "(.*?)"$/) do |file_name|
+  on(UploadPage).select_file = File.join(Dir.pwd, "features", "support", file_name)
+end
+
+Then(/^I should be able to enter a description for my file upload$/) do
+  expect(on(ArticlePage).photo_description_element.when_present).to be_visible
+end
+
+Then(/^I should not see the upload preview$/) do
+  expect(on(ArticlePage).photo_overlay_element).not_to be_visible
+end
+
+Then(/^I should see an upload progress bar$/) do
+  expect(on(ArticlePage).progress_header_element).to be_visible
+end
+
+Then(/^I should see the upload preview$/) do
+  expect(on(ArticlePage).photo_overlay_element.when_present).to be_visible
+end
+
+Then(/^my image should be on the Uploads page$/) do
   on(UploadPage) do |page|
     page.wait_until(10) do
       page.text.include? "#{@random_string}" #Chrome needs this, FF does not
     end
-    page.uploaded_image_link_element.when_present.attribute( 'alt' ).should match "#{@random_string}"
+    expect(page.uploaded_image_link_element.when_present.attribute( 'alt' )).to match "#{@random_string}"
   end
 end
 
-Then(/^the Contribute an image button is visible$/) do
-  on(UploadPage).contribute_image_element.should be_visible
-end
-
-Then(/^I see the upload preview$/) do
-  on(ArticlePage).photo_overlay_element.when_present.should be_visible
-end
-
-Then(/^I can enter a description for my file upload$/) do
-  on(ArticlePage).photo_description_element.when_present.should exist
-end
-
-When(/^I click the upload preview overlay close button$/) do
-  on(ArticlePage).photo_overlay_close_button_element.when_present.click
-end
-
-Then(/^I don't see the upload preview$/) do
-  on(ArticlePage).photo_overlay_element.should_not be_visible
-end
-
-Then(/^I see an upload progress bar$/) do
-  on(ArticlePage).progress_header_element.should be_visible
-end
-
-When(/^I upload file "(.*?)"$/) do |file_name|
-  on(UploadPage).select_file = File.join(Dir.pwd, "features", "support", file_name)
+Then(/^the Contribute an image button should be visible$/) do
+  expect(on(UploadPage).contribute_image_element).to be_visible
 end

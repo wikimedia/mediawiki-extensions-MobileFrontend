@@ -9,15 +9,15 @@ Feature: Lead image uploads
       And I upload file "exif.jpg"
 
   Scenario: Opening upload preview
-    Then I see the upload preview
-      And I can enter a description for my file upload
+    Then I should see the upload preview
+      And I should be able to enter a description for my file upload
 
   Scenario: Closing upload preview (overlay button)
     When I click the upload preview overlay close button
       And I say OK in the confirm dialog
-    Then I don't see the upload preview
+    Then I should not see the upload preview
 
   Scenario: Closing upload preview (browser button)
     When I click the browser back button
       And I say OK in the confirm dialog
-    Then I don't see the upload preview
+    Then I should not see the upload preview
