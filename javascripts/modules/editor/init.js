@@ -15,7 +15,6 @@
 		popup = M.require( 'toast' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
-		allowAnonymous = false,
 		isEditingSupported = M.router.isSupported() && !blacklisted,
 		isNewPage = M.getCurrentPage().options.id === 0,
 		isNewFile = M.inNamespace( 'file' ) && isNewPage,
@@ -48,7 +47,7 @@
 			.prependTo( container );
 	}
 
-	function makeCta( $el, section, allowAnonymous ) {
+	function makeCta( $el, section ) {
 		var options = {
 			queryParams: {
 				returnto: mw.config.get( 'wgPageName' ),
@@ -56,13 +55,6 @@
 			}
 		};
 
-		if ( allowAnonymous ) {
-			options.links = [ {
-				label: mw.msg( 'mobile-frontend-editor-anon' ),
-				href: $el[0].href,
-				selector: 'edit-anon mw-ui-progressive'
-			} ];
-		}
 		$el
 			.on( 'click', function ( ev ) {
 				ev.preventDefault();
@@ -191,24 +183,14 @@
 
 	/*
 	 * Initialize the edit button so that it launches a login call-to-action when clicked.
-	 * @param {boolean} allowAnonymous Whether the drawer has to include an edit anonymously link
 	 */
-	function initCta( allowAnonymous ) {
-		// If anonymous editing is allowed, init the editor now to be useable for the "Edit w/o login" link in cta drawer
-		if ( allowAnonymous ) {
-			// init the editor
-			init( M.getCurrentPage() );
-		}
-
+	function initCta() {
 		// Initialize edit button links (to show Cta) only, if page is editable, otherwise show an error toast
 		M.getCurrentPage().isEditable( user ).done( function ( isEditable ) {
 			if ( isEditable ) {
 				$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
-				// Init #ca-edit only, if anonymous editing is disabled, if enabled, there is a link with .edit-page inside
-				if ( !allowAnonymous ) {
-					// Init lead section edit button
-					makeCta( $( '#ca-edit' ), 0, allowAnonymous );
-				}
+				// Init lead section edit button
+				makeCta( $( '#ca-edit' ), 0 );
 
 				// Init all edit links (including lead section, if anonymous editing is enabled)
 				$( '.edit-page' ).each( function () {
@@ -218,7 +200,7 @@
 					if ( $( this ).data( 'section' ) !== undefined ) {
 						section = $( this ).data( 'section' );
 					}
-					makeCta( $a, section, allowAnonymous );
+					makeCta( $a, section );
 				} );
 			} else {
 				showSorryToast( 'mobile-frontend-editor-disabled' );
@@ -246,11 +228,12 @@
 		showSorryToast( 'mobile-frontend-editor-uploadenable' );
 	} else {
 		if ( user.isAnon() ) {
-			// Set edit button to launch login CTA
+			// Cta's will be rendered in EditorOverlay, if anonymous editing is enabled.
 			if ( mw.config.get( 'wgMFAnonymousEditing' ) ) {
-				allowAnonymous = true;
+				init( M.getCurrentPage() );
+			} else {
+				initCta();
 			}
-			initCta( allowAnonymous );
 		} else {
 			if ( mw.config.get( 'wgMFIsLoggedInUserBlocked' ) ) {
 				// User is blocked. Both anonymous and logged in users can be blocked.

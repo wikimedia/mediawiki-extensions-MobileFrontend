@@ -19,8 +19,16 @@
 		templatePartials: {
 			switcher: mw.template.get( 'mobile.editor.common', 'switcher.hogan' ),
 			header: mw.template.get( 'mobile.editor.overlay', 'header.hogan' ),
-			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' )
+			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
+			anonWarning: mw.template.get( 'mobile.editor.common', 'EditorOverlayAnonWarning.hogan' )
 		},
+		defaults: $.extend( {}, EditorOverlayBase.prototype.defaults, {
+			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
+			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
+			anonLabel: mw.msg( 'mobile-frontend-editor-anon' ),
+			anonSelector: 'continue-edit',
+			anonMsg: mw.msg( 'mobile-frontend-editor-anoneditwarning' )
+		} ),
 		editor: 'SourceEditor',
 		sectionLine: '',
 
@@ -54,6 +62,10 @@
 			} else {
 				options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
 			}
+			if ( options.isAnon ) {
+				// add required data for anonymous editing warning
+				options = this._prepareAnonWarning( options );
+			}
 			// be explicit here. This may have been initialized from VE.
 			options.isVisualEditor = false;
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
@@ -74,7 +86,15 @@
 				} );
 			if ( options.isAnon ) {
 				this.$anonWarning = this.$( '.anonwarning' );
-				this._showAnonWarning( options );
+				this.$content.hide();
+				// the user has to click login, signup or edit without login, disable "Next" button on top right
+				this.$( '.continue' ).hide();
+				// handle the click on "Edit without logging in"
+				this.$( '.continue-edit' ).on( 'click', function () {
+					self._showEditorAfterWarning();
+					return false;
+				} );
+				this.clearSpinner();
 			} else {
 				this.$( '.continue' ).on( 'click', $.proxy( this, '_prepareForSave' ) );
 			}
@@ -109,32 +129,36 @@
 			}
 		},
 
-		_showAnonWarning: function ( options ) {
+		/**
+		 * Set's additional values used for anonymous editing warning.
+		 *
+		 * @var {array} options Array of options.
+		 * @return {array} Array with all options
+		 */
+		_prepareAnonWarning: function ( options ) {
 			var params = $.extend( {
 				// use wgPageName as this includes the namespace if outside Main
-				returnto: options.returnTo || mw.config.get( 'wgPageName' )
+				returnto: options.returnTo || mw.config.get( 'wgPageName' ),
+				returntoquery: 'action=edit&section=' + options.sectionId
 			}, options.queryParams ),
 			signupParams = $.extend( {
 				type: 'signup'
 			}, options.signupQueryParams );
 
-			this.$content.hide();
-			this.showSpinner();
-			this.$anonWarning.html(
-				mw.message(
-					'mobile-frontend-editor-anoneditwarning',
-					mw.util.getUrl( 'Special:UserLogin', params ),
-					mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) )
-				).parse()
-			).show();
-			this.$( '.continue' ).prop( 'disabled', false ).on( 'click', $.proxy( this, '_showEditorafterWarning' ) );
-			this.clearSpinner();
+			options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
+			options.signupUrl = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
+
+			return options;
 		},
 
-		_showEditorafterWarning: function () {
+		/**
+		 * Handles click on "Edit without login" in anonymous editing warning.
+		 */
+		_showEditorAfterWarning: function () {
 			this.showSpinner();
 			this.$anonWarning.hide();
-			this.$( '.continue' ).prop( 'disabled', true ).on( 'click', $.proxy( this, '_prepareForSave' ) );
+			// reenable "Next" button and handle click
+			this.$( '.continue' ).show().on( 'click', $.proxy( this, '_prepareForSave' ) );
 			this._loadContent();
 		},
 
