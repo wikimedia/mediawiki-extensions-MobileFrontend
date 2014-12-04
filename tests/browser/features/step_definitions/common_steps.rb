@@ -99,7 +99,7 @@ When(/^I visit the page "(.*?)" with hash "(.*?)"$/) do |article, hash|
   visit(ArticlePage, :using_params => {:article_name => article, :hash => hash })
 end
 
-Then(/^there is a red link with text "(.+)"$/) do |text|
+Then(/^there should be a red link with text "(.+)"$/) do |text|
   # FIXME: Switch to link_element when red links move to stable
   expect(on(ArticlePage).content_wrapper_element.span_element(text: text).when_present(10)).to be_visible
 end

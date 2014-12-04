@@ -54,6 +54,10 @@ Then(/^I should see the search button$/) do
   expect(on(ArticlePage).search_button_element.when_present).to be_visible
 end
 
+When(/^I should see the search overlay$/) do
+  expect(on(ArticlePage).search_overlay_element.when_present).to be_visible
+end
+
 Then(/^search results should contain "(.+)"$/) do |text|
   expect(on(ArticlePage).search_result_element.when_present.text).to eq text
 end
