@@ -8,13 +8,13 @@ Feature: Toggling sections
 
   Scenario: Respect the hash on sections
     When I visit the page "Selenium section test page" with hash "#Section_2A"
-    Then the heading element with id "Section_2A" is visible
+    Then the heading element with id "Section_2A" should be visible
 
   Scenario: Opening a section on mobile
     When I click on the first collapsible section heading
-    Then I see the content of the first section
+    Then I should see the content of the first section
 
   Scenario: Closing a section on mobile
     When I click on the first collapsible section heading
       And I click on the first collapsible section heading
-    Then I do not see the content of the first section
+    Then I should not see the content of the first section

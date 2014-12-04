@@ -8,4 +8,4 @@ Feature: Toggling sections
     Given I am viewing the site in tablet mode
       And I go to a page that has sections
     When I click on the first collapsible section heading
-    Then I do not see the content of the first section
+    Then I should not see the content of the first section
