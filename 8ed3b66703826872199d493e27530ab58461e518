@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_81751e95",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 562,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-04T22:13:18Z",
+      "side": 1,
+      "message": "typo in \u0027tring\u0027",
+      "revId": "8ed3b66703826872199d493e27530ab58461e518",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_c1432642",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-04T22:13:18Z",
+      "side": 1,
+      "message": "wrong comment",
+      "revId": "8ed3b66703826872199d493e27530ab58461e518",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
