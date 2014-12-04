@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_c4157442",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-04T23:45:46Z",
+      "side": 1,
+      "message": "This hook is being abused.\n\nThis should be in SkinMinerva::getSkinConfigVariables (as should most of the other variables)\n\nThe only variable that should be here is wgMFNearbyEndpoint and wgMFThumbnailSizes since Special:Nearby works on other skins and it uses both of these variables.\n\n\nIt\u0027s not needed on any skin other than Minerva so should only be tied to Minerva (this is currently loading all these variables on desktop skin too...",
+      "revId": "48165e6abfd503c8a67ccf14d4bc777300973cf0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
