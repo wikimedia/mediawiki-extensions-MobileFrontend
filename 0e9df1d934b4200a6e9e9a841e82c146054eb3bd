@@ -34,6 +34,41 @@
       "revId": "0e9df1d934b4200a6e9e9a841e82c146054eb3bd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_3163ef0b",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-04T00:10:33Z",
+      "side": 1,
+      "message": "Yeh you are right. Maybe we should rethink how this is all done as it\u0027s probably unnecessarily confusing. Would be good to serve this via a template in future and share the template between server/frontend",
+      "parentUuid": "4ea06b5a_3bd3d031",
+      "revId": "0e9df1d934b4200a6e9e9a841e82c146054eb3bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_94ad11ea",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-04T00:10:33Z",
+      "side": 1,
+      "message": "Could you just only add the margin-right when client-js rather than overriding it here ? I think that would be cleaner.",
+      "revId": "0e9df1d934b4200a6e9e9a841e82c146054eb3bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
