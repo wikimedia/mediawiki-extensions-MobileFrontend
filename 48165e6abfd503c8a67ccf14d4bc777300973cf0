@@ -16,6 +16,24 @@
       "revId": "48165e6abfd503c8a67ccf14d4bc777300973cf0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_647020a4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-12-04T23:54:05Z",
+      "side": 1,
+      "message": "Actually, this is the right behaviour, because RL variables are cahed for only 15 minutes, unlike page HTML. If this var gets cached in page HTML, we will not be able to quickly adjust what\u0027s going on.",
+      "parentUuid": "2e9df725_c4157442",
+      "revId": "48165e6abfd503c8a67ccf14d4bc777300973cf0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
