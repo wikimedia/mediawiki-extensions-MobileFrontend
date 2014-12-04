@@ -11,17 +11,17 @@ When(/^I switch to the modified view of the watchlist$/) do
 end
 
 Then(/^I should see a list of diff summary links$/) do
-  on(WatchlistPage).page_list_diffs_element.when_present.should be_visible
+  expect(on(WatchlistPage).page_list_diffs_element.when_present).to be_visible
 end
 
 Then(/^I should see a list of pages I am watching$/) do
-  on(WatchlistPage).page_list_a_to_z_element.when_present.should be_visible
+  expect(on(WatchlistPage).page_list_a_to_z_element.when_present).to be_visible
 end
 
 Then(/^the a to z button should be selected$/) do
-  on(WatchlistPage).list_link_element.parent.element().class_name.should match /active/
+  expect(on(WatchlistPage).list_link_element.parent.element().class_name).to match 'active'
 end
 
 Then(/^the modified button should be selected$/) do
-  on(WatchlistPage).feed_link_element.parent.element().class_name.should match /active/
+  expect(on(WatchlistPage).feed_link_element.parent.element().class_name).to match 'active'
 end
