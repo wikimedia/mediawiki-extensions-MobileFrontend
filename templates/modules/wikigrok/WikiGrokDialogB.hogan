@@ -18,7 +18,7 @@
 
 	<div class="footer">
 		<span class="license">Submissions are <a href="#/wikigrok/about">released freely</a>.</span>
-		<button class="mw-ui-button mw-ui-progressive save none">None of these</button>
+		<button class="mw-ui-button save none">None of these</button>
 		<button class="mw-ui-button mw-ui-constructive save next">Next</button>
 	</div>
 </div>
