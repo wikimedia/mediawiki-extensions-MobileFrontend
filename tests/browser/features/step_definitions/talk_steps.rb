@@ -2,10 +2,10 @@ When(/^I click the talk button$/) do
   on(ArticlePage).talk_element.when_present.click
 end
 
-Then(/^I see the talk overlay$/) do
-  on(ArticlePage).overlay_heading_element.when_present.text.should match "Talk"
+Then(/^I should see the talk overlay$/) do
+  expect(on(ArticlePage).overlay_heading_element.when_present.text).to match "Talk"
 end
 
-Then(/^there is no talk button$/) do
-  on(ArticlePage).talk_element.should_not be_visible
+Then(/^there should be no talk button$/) do
+  expect(on(ArticlePage).talk_element).not_to be_visible
 end
