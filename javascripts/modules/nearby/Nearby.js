@@ -38,6 +38,12 @@
 			pageList: PageList.prototype.template
 		},
 		template: mw.template.get( 'mobile.nearby', 'Nearby.hogan' ),
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.spinner HTML of the spinner icon with a tooltip that
+		 * tells the user that their location is being looked up
+		 */
 		defaults: {
 			spinner: icons.spinner( {
 				title: mw.msg( 'mobile-frontend-nearby-loading' )

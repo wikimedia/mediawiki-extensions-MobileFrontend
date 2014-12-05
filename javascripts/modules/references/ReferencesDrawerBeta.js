@@ -9,6 +9,12 @@
 	 * @extends ReferencesDrawer
 	 */
 	ReferencesDrawerBeta = ReferencesDrawer.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.
+		 * @cfg {String} defaults.citation HTML of the citation icon.
+		 */
 		defaults: {
 			cancelButton: new Icon( {
 				name: 'cancel-light',

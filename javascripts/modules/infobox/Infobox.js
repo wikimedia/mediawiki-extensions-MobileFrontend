@@ -16,6 +16,31 @@
 		template: mw.template.get( 'mobile.infobox', 'Infobox.hogan' ),
 
 		className: 'wikidata-infobox',
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.spinner HTML of the spinner icon.
+		 * @cfg {String} defaults.description WikiData description.
+		 * Defaults to 'A Wikipedia page in need of a description.'
+		 * @cfg {Array} defaults.rows Description of rows to show in Wikidata infobox
+		 * e.g. [
+		 * {
+		 *   id: "P18",
+		 *   isEmpty: false,
+		 *   values: [
+		 *     {
+		 *       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/" +
+		 *            "Anne_Dallas_Dudley_LOC.jpg/160px-Anne_Dallas_Dudley_LOC.jpg",
+		 *       url: "/wiki/File:Anne_Dallas_Dudley_LOC.jpg"
+		 *     }
+		 *   ]
+		 * },
+		 * {
+		 *   id: "P569",
+		 *   isEmpty: false,
+		 *   label: "Born"
+		 * }
+		 * ]
+		 */
 		defaults: {
 			spinner: icons.spinner().toHtmlString(),
 			description: mw.config.get( 'wgMFDescription' ) ||

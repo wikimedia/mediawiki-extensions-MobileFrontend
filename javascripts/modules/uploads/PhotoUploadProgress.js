@@ -11,6 +11,12 @@
 	 * @extends Overlay
 	 */
 	PhotoUploadProgress = Overlay.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash. Extends {Overlay} defaults.
+		 * @cfg {String} defaults.uploadingMsg A message telling the user that an image is being
+		 * uploaded.
+		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' )
 		} ),

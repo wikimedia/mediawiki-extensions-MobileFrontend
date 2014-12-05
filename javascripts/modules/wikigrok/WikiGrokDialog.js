@@ -21,6 +21,20 @@
 	WikiGrokDialog = Panel.extend( {
 		version: 'a',
 		className: 'wikigrok',
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Boolean} defaults.beginQuestions Whether to show questions.
+		 * @cfg {String} defaults.taskToken Task token used in schemas.
+		 * @cfg {Boolean} defaults.thankUser Whether to show the thanks message.
+		 * @cfg {String} defaults.closeMsg Text for the button in an overlay that, when clicked,
+		 * dismisses the overlay.
+		 * @cfg {String} defaults.contentMsg Message that tells what to do, it's the message
+		 * in the first pane of main dialog.
+		 * @cfg {Array} defaults.buttons Array of {Object}s that will be used as options to
+		 * create buttons. Defaults to 'No, thanks' and 'Okay!' buttons.
+		 * @cfg {String} defaults.noticeMsg A link that opens an overlay with more information about
+		 * WikiGrok.
+		 */
 		defaults: {
 			beginQuestions: false,
 			taskToken: mw.user.generateRandomSessionId(),

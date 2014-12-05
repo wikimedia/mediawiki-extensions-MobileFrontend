@@ -9,6 +9,11 @@
 	 */
 	PageActionOverlay = ContentOverlay.extend( {
 		template: mw.template.get( 'mobile.contentOverlays', 'PageActionOverlay.hogan' ),
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.cancelMsg Cancel message.
+		 */
 		defaults: {
 			cancelMsg: mw.msg( 'cancel' )
 		}

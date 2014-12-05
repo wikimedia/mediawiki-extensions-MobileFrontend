@@ -16,6 +16,20 @@
 	 * @extends Overlay
 	 */
 	PhotoUploadOverlay = Overlay.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.descriptionPlaceholder Placeholder text prompting user to add
+		 * a mandatory caption to an image.
+		 * @cfg {String} defaults.help A link that allows the user to open more information
+		 * about photo ownership.
+		 * @cfg {String} defaults.ownerStatement A statement saying the user created the image.
+		 * @cfg {String} defaults.heading A heading instructing the user to describe uploaded image.
+		 * @cfg {String} defaults.headerButtonsListClassName Class name of the wrapper of the
+		 * header buttons.
+		 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults to create
+		 * header buttons. Defaults to the 'submit' button.
+		 */
 		defaults: {
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),
 			help: mw.msg( 'mobile-frontend-photo-ownership-help' ),

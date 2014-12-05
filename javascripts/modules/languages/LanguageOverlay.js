@@ -9,6 +9,12 @@
 	 * @extends Overlay
 	 */
 	LanguageOverlay = Overlay.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.heading The title for the list of languages for a page.
+		 * @cfg {String} defaults.placeholder Placeholder text for the search input.
+		 */
 		defaults: {
 			heading: mw.msg( 'mobile-frontend-language-heading' ),
 			placeholder: mw.msg( 'mobile-frontend-language-site-choose' )

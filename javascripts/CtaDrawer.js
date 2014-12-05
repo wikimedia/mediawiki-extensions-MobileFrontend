@@ -11,6 +11,12 @@
 	 * @extends Drawer
 	 */
 	CtaDrawer = Drawer.extend( {
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.collapse HTML of the button that dismisses the CtaDrawer.
+		 * @cfg {String} defaults.login Caption for the login button.
+		 * @cfg {String} defaults.signup Caption for the signup button.
+		 */
 		defaults: {
 			collapseButton: new Icon( {
 				name: 'arrow-down',

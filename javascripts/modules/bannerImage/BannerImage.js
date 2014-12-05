@@ -39,6 +39,10 @@
 	 */
 	BannerImage = View.extend( {
 		className: 'wikidata-banner-image',
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.spinner HTML of the spinner icon.
+		 */
 		defaults: {
 			spinner: icons.spinner().toHtmlString()
 		},

@@ -10,6 +10,11 @@
 	 * @extends View
 	 */
 	AbuseFilterPanel = View.extend( {
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.readMoreMsg A caption for the button allowing the user to read
+		 * more about the problems with their edit.
+		 */
 		defaults: {
 			readMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more' )
 		},

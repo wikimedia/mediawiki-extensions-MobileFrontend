@@ -10,6 +10,17 @@
 	 * @extends View
 	 */
 	Icon = View.extend( {
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Boolean} defaults.hasText Whether the icon has text.
+		 * @cfg {String} defaults.tagName The name of the tag in which the icon is wrapped.
+		 * @cfg {String} defaults.base String used as a base for generating class names.
+		 * Defaults to 'mw-ui-icon' (alpha) or 'icon' (stable and beta).
+		 * @cfg {String} defaults.name Name of the icon.
+		 * @cfg {String} defaults.modifier Additional class name.
+		 * Defaults to 'mw-ui-icon-element' (alpha) or '' (stable and beta).
+		 * @cfg {String} defaults.title Tooltip text.
+		 */
 		defaults: {
 			hasText: false,
 			tagName: 'div',

@@ -9,6 +9,14 @@
 	 * @extends Overlay
 	 */
 	CategoryOverlay = Overlay.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.heading Title of the list of categories this page is
+		 * categorized in.
+		 * @cfg {String} defaults.subheading Introduction text for the list of categories,
+		 * the page belongs to.
+		 */
 		defaults: {
 			heading: mw.msg( 'mobile-frontend-categories-heading' ),
 			subheading: mw.msg( 'mobile-frontend-categories-subheading' )

@@ -9,6 +9,10 @@
 	 * @extends Drawer
 	 */
 	ReferencesDrawer = Drawer.extend( {
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.cancelButton HTML of the button that closes the drawer.
+		 */
 		defaults: {
 			cancelButton: new Icon( {
 				name: 'cancel',

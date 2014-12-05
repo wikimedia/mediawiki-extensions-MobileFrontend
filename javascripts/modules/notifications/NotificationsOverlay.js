@@ -15,6 +15,16 @@
 			content: mw.template.get( 'mobile.notifications.overlay', 'content.hogan' ),
 			footer: mw.template.get( 'mobile.overlays', 'OverlayFooterLink.hogan' )
 		},
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.heading Heading text.
+		 * @cfg {String} defaults.link Link to 'Special:Notifications'.
+		 * @cfg {String} defaults.linkMsg Label of the link element that is associated with
+		 * defaults.link.
+		 * @cfg {String} defaults.linkClass Class attribute value of the link element that is
+		 * associated with defaults.link.
+		 */
 		defaults: {
 			heading: mw.msg( 'notifications' ),
 			link: mw.util.getUrl( 'Special:Notifications' ),

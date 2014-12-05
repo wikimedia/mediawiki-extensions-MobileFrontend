@@ -17,6 +17,15 @@
 			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
 		},
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.title Title.
+		 * @cfg {Section} defaults.section that is currently being viewed in overlay.
+		 * @cfg {String} defaults.reply Reply heading.
+		 * @cfg {String} defaults.info Message that informs the user their talk reply will be
+		 * automatically signed.
+		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			title: undefined,
 			section: undefined,

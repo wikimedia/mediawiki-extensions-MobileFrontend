@@ -18,6 +18,14 @@
 		template: mw.template.get( 'mobile.mediaViewer', 'Overlay.hogan' ),
 		closeOnBack: true,
 
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.cancelButton HTML of the cancel button.
+		 * @cfg {String} defaults.detailsMsg Caption for a button leading to the details
+		 * of a media file (e.g. an image) in a preview.
+		 * @cfg {String} defaults.licenseLinkMsg Link to license information in media viewer.
+		 */
 		defaults: {
 			cancelButton: new Icon( {
 				tagName: 'button',

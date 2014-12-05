@@ -46,6 +46,16 @@
 			header: mw.template.get( 'mobile.overlays', 'header.hogan' )
 		},
 		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.saveMessage Caption for save button on edit form.
+		 * @cfg {String} defaults.cancelButton HTML of the cancel button.
+		 * @cfg {String} defaults.backButton HTML of the back button.
+		 * @cfg {String} defaults.headerButtonsListClassName A comma separated string of class
+		 * names of the wrapper of the header buttons.
+		 * @cfg {Boolean} defaults.fixedHeader Whether the header is fixed.
+		 * @cfg {String} defaults.spinner HTML of the spinner icon.
+		 */
 		defaults: {
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			cancelButton: new Icon( {
