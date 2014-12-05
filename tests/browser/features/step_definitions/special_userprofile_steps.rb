@@ -25,4 +25,3 @@ end
 Then(/^there should be a link to my user page$/) do
   expect(on(SpecialUserProfilePage).user_page_link_element).to be_visible
 end
-

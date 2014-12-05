@@ -22,4 +22,3 @@ Then(/^I should see a toast with message about unwatching the page$/) do
     expect(page.toast_element.when_present.text).to match "Removed Selenium mobile watch test from your watchlist"
   end
 end
-
