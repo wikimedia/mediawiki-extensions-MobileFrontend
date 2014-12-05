@@ -30,7 +30,7 @@ Section 3.
 end
 
 Given(/^I am on a page which has cleanup templates$/) do
-    wikitext = <<-END.gsub(/^ */, '')
+  wikitext = <<-END.gsub(/^ */, '')
       This page is used by Selenium to test MediaWiki functionality.
 
       <table class="metadata plainlinks ambox ambox-content ambox-Refimprove" role="presentation">
@@ -43,8 +43,8 @@ Given(/^I am on a page which has cleanup templates$/) do
       </table>
     END
 
-    api.create_page "Selenium page issues test page", wikitext
-    step 'I am on the "Selenium page issues test page" page'
+  api.create_page "Selenium page issues test page", wikitext
+  step 'I am on the "Selenium page issues test page" page'
 end
 
 Given(/^the page "(.*?)" exists$/) do |title|
