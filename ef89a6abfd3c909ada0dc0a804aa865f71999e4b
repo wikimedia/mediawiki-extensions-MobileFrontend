@@ -274,6 +274,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_f8fb68b8",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-05T22:33:35Z",
+      "side": 1,
+      "message": "parent doesn\u0027t have defaults",
+      "parentUuid": "2e9df725_3dfa2274",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_5dffee62",
         "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
         "patchSetId": 1
@@ -455,6 +473,24 @@
       "writtenOn": "2014-12-05T22:08:57Z",
       "side": 1,
       "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_38f230e0",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-05T22:33:35Z",
+      "side": 1,
+      "message": "the parent doesn\u0027t have defaults",
+      "parentUuid": "2e9df725_bd4cf2e5",
       "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
