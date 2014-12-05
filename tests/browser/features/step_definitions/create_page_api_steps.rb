@@ -78,7 +78,7 @@ Given(/^the page "(.*?)" exists and has at least "(\d+)" edits$/) do |title, min
   # Page must first exist before we can get edit count information
   step 'the page "' + title + '" exists'
   min_edit_count = min_edit_count.to_i
-  visit(ArticlePage, :using_params => { :article_name => title + '?action=info' })
+  visit(ArticlePage, using_params: { article_name: title + '?action=info' })
   on(ArticlePage) do |page|
     (page.edit_count.gsub(',', '').to_i + 1).upto(min_edit_count) do |n|
       on(APIPage).create title, "Test is used by Selenium web driver edit ##{n}"

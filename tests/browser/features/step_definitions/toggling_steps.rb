@@ -11,5 +11,5 @@ Then(/^I should see the content of the first section$/) do
 end
 
 Then(/^the heading element with id "(.*?)" should be visible$/) do |id|
-  expect(on(ArticlePage).span_element(:id => id).when_present(10)).to be_visible
+  expect(on(ArticlePage).span_element(id: id).when_present(10)).to be_visible
 end

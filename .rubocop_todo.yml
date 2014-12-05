@@ -48,12 +48,6 @@ Style/EmptyLines:
 Style/GlobalVars:
   Enabled: false
 
-# Offense count: 13
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/HashSyntax:
-  Enabled: false
-
 
 # Offense count: 1
 # Cop supports --auto-correct.
