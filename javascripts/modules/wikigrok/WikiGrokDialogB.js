@@ -1,6 +1,4 @@
 ( function ( M, $ ) {
-	M.assertMode( [ 'beta', 'alpha' ] );
-
 	var WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' ),
 		WikiGrokDialogB;
 

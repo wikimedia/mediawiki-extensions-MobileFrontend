@@ -1,8 +1,5 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
 ( function ( M, $ ) {
-	// Only run in alpha or beta mode
-	M.assertMode( [ 'beta', 'alpha' ] );
-
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
 		settings = M.require( 'settings' ),
@@ -84,8 +81,10 @@
 	}
 
 	if (
-		// Show WikiGrok if the user hasn't already contributed to it on this page before
-		// or they are testing WikiGrok (by using the query string override)
+		// User is not anonymous or we have enabled WikiGrok for anonymous users
+		( !mw.user.isAnon() || mw.config.get( 'wgMFEnableWikiGrokForAnons' ) ) &&
+		// User hasn't already contributed through WikiGrok on this page before or they
+		// are testing WikiGrok (by using the query string override)
 		( !hasUserAlreadyContributedToWikiGrok() || idOverride ) &&
 		// WikiGrok is enabled and configured for this user
 		versionConfig &&

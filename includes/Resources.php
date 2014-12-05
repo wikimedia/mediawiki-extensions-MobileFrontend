@@ -1272,6 +1272,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.search',
 			'mobile.references',
 			'mobile.redirect',
+			'mobile.wikigrok',
 			// FIXME: only load when uploads enabled
 			'mobile.upload.ui',
 		),
@@ -1288,7 +1289,6 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
-			'mobile.wikigrok',
 			'mobile.preferredLanguages',
 			'mobile.references.beta',
 		),

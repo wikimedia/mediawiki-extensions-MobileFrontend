@@ -549,7 +549,13 @@ $wgMFUploadMinEdits = 0;
 $wgMFEnableWikiGrok = false;
 
 /**
- * Controls whether the WikiGrok is permitted on all devices
+ * Controls whether WikiGrok is displayed to anonymous users
+ * (If $wgMFEnableWikiGrok is false, this setting is moot)
+ */
+$wgMFEnableWikiGrokForAnons = false;
+
+/**
+ * Controls whether WikiGrok is permitted on all devices
  */
 $wgMFEnableWikiGrokOnAllDevices = false;
 
