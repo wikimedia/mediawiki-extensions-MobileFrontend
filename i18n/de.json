@@ -62,7 +62,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Mehr lesen",
 	"mobile-frontend-editor-abusefilter-warning": "Warnung: Willst du diese Bearbeitung wirklich speichern? Mit dieser könnte es ein Problem geben.",
 	"mobile-frontend-editor-anon": "Ohne Anmeldung bearbeiten",
-	"mobile-frontend-editor-anoneditwarning": "<b>Warnung:</b> Du bist nicht angemeldet. Deine IP-Adresse wird öffentlich sichtbar, wenn du Bearbeitungen durchführst. Falls du dich <b>[$1 anmeldest]</b> oder <b>[$2 ein Benutzerkonto erstellst]</b>, werden deine Bearbeitungen zusammen mit anderen Beiträgen deinem Benutzernamen zugeordnet.",
+	"mobile-frontend-editor-anoneditwarning": "'''Warnung:''' Du bist nicht angemeldet. Deine IP-Adresse wird öffentlich sichtbar, wenn du Bearbeitungen durchführst. Falls du dich '''anmeldest''' oder '''ein Benutzerkonto erstellst''', werden deine Bearbeitungen zusammen mit anderen Beiträgen deinem Benutzernamen zugeordnet.",
 	"mobile-frontend-editor-blocked": "Dein Benutzerkonto ist für das Bearbeiten gesperrt.",
 	"mobile-frontend-editor-cancel": "Abbrechen",
 	"mobile-frontend-editor-cancel-confirm": "Willst du wirklich deine Bearbeitung verwerfen?",

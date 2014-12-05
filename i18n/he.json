@@ -61,7 +61,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "מידע נוסף",
 	"mobile-frontend-editor-abusefilter-warning": "אזהרה: האם ברצונך לשמור את העריכה הזאת? ייתכן שיש אתה בעיה.",
 	"mobile-frontend-editor-anon": "עריכה ללא כניסה לחשבון",
-	"mobile-frontend-editor-anoneditwarning": "<b>אזהרה:</b> לא נכנסת לחשבון. כתובת ה־IP שלך תוצג לציבור אם תעשה עריכות כלשהן. <b>[$1 כניסה]</b> או <b>[$2 יצירת חשבון]</b> יאפשרו ייחוס של העריכות שלך לשם המשתמש שלך ויתרונות נוספית.",
+	"mobile-frontend-editor-anoneditwarning": "'''אזהרה:''' לא נכנסת לחשבון. כתובת ה־IP שלך תוצג לציבור אם תעשה עריכות כלשהן. '''כניסה''' או '''יצירת חשבון''' יאפשרו ייחוס של העריכות שלך לשם המשתמש שלך ויתרונות נוספים.",
 	"mobile-frontend-editor-blocked": "החשבון שלך חסום מפני עריכה.",
 	"mobile-frontend-editor-cancel": "ביטול",
 	"mobile-frontend-editor-cancel-confirm": "האם באמת לנטוש את העריכה שלך?",

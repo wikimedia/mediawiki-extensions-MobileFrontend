@@ -69,6 +69,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "Zmiana nie może zostać zapisana, ponieważ wykryto problem.",
 	"mobile-frontend-editor-abusefilter-read-more": "Czytaj więcej",
 	"mobile-frontend-editor-anon": "Edytuj bez logowania",
+	"mobile-frontend-editor-anoneditwarning": "'''Uwaga''': Nie jesteś zalogowany. Twój adres IP będzie publicznie widoczny, jeśli zrobisz dowolną zmianę. Jeśli '''zalogujesz się''' lub ''utworzysz konto''', wówczas twoje zmiany zostaną przypisane do konta, wraz z innymi korzyściami.",
 	"mobile-frontend-editor-blocked": "Twoje konto ma zablokowaną możliwość edytowania.",
 	"mobile-frontend-editor-cancel": "Anuluj",
 	"mobile-frontend-editor-cancel-confirm": "Na pewno chcesz porzucić edycję?",

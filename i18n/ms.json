@@ -50,6 +50,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Baca lagi",
 	"mobile-frontend-editor-abusefilter-warning": "Amaran: Adakah anda pasti anda mahu menyimpan suntingan ini? Mungkin terdapat sebarang masalah.",
 	"mobile-frontend-editor-anon": "Sunting sebagai pengguna tanpa nama",
+	"mobile-frontend-editor-anoneditwarning": "'''Amaran''': Anda tidak log masuk. Alamat IP anda akan disiarkan kepada umum juka anda membuat sebarang suntingan. Jika anda '''log masuk''' atau '''membuka akaun''', maka suntingan anda akan diatribusikan kepada nama pengguna anda di samping manfaat-manfaat lain.",
 	"mobile-frontend-editor-blocked": "Akaun anda telah disekat daripada menyunting.",
 	"mobile-frontend-editor-cancel": "Batalkan",
 	"mobile-frontend-editor-cancel-confirm": "Adakah anda benar-benar mahu meninggalkan suntingan anda?",

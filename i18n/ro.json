@@ -54,7 +54,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Citiți mai mult",
 	"mobile-frontend-editor-abusefilter-warning": "Atenție: Sunteți sigur(ă) că doriți să salvați această modificare? Este posibil ca aceasta să prezinte probleme.",
 	"mobile-frontend-editor-anon": "Modificare fără autentificare",
-	"mobile-frontend-editor-anoneditwarning": "<strong>Atenție:</strong> Nu v-ați autentificat. Adresa dumneavoastră IP va fi vizibilă în mod public dacă efectuați modificări. Dacă vă <b>[$1 autentificați]</b> sau vă <b>[$2 creați un cont]</b>, modificările dumneavoastră vor fi asociate numelui de utilizator, pe lângă alte beneficii.",
+	"mobile-frontend-editor-anoneditwarning": "'''Atenție:''' Nu v-ați autentificat. Adresa dumneavoastră IP va fi vizibilă în mod public dacă efectuați modificări. Dacă vă '''autentificați''' sau vă '''creați un cont''', modificările dumneavoastră vor fi asociate numelui de utilizator, pe lângă alte beneficii.",
 	"mobile-frontend-editor-blocked": "Contul dumneavoastră este blocat de la modificare.",
 	"mobile-frontend-editor-cancel": "Revocare",
 	"mobile-frontend-editor-cancel-confirm": "Doriți, într-adevăr, să vă abandonați modificarea?",
