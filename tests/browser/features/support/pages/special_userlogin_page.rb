@@ -16,11 +16,11 @@ class SpecialUserLoginPage < ArticlePage
   button(:signup_submit, id: "wpCreateaccount")
   a(:create_account_link, text: "Create account")
   div(:message_box, class: "headmsg")
-  a(:password_reset, css:".mw-userlogin-help")
+  a(:password_reset, css: ".mw-userlogin-help")
 
   # signup specific
   text_field(:confirmation_field, id: "wpCaptchaWord")
-  div(:refresh_captcha, id:"mf-captcha-reload-container")
+  div(:refresh_captcha, id: "mf-captcha-reload-container")
 
   def login_with(username, password)
     # deal with autocomplete

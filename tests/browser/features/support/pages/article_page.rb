@@ -57,7 +57,7 @@ class ArticlePage
   p(:search_within_pages, css: ".without-results")
   text_field(:search_box_placeholder, name: "search", index: 0)
   text_field(:search_box2, name: "search", index: 1)
-  li(:search_results, css:".search-overlay .page-list li")
+  li(:search_results, css: ".search-overlay .page-list li")
   div(:search_overlay, class: "search-overlay")
   button(:search_overlay_close_button) do |page|
     page.search_overlay_element.button_element(class: "cancel")
@@ -76,11 +76,11 @@ class ArticlePage
   end
   h2(:progress_header, class: "uploading")
 
-  a(:image_link, class:"image")
+  a(:image_link, class: "image")
 
 
   # page-actions
-  ul(:page_actions, id:"page-actions")
+  ul(:page_actions, id: "page-actions")
   a(:talk, css: "#ca-talk a")
   a(:nearby_button, css: "#page-secondary-actions .nearby")
 
@@ -99,10 +99,10 @@ class ArticlePage
   button(:submit_button, class: "submit")
 
   # drawer
-  div(:drawer, class:"drawer position-fixed visible")
+  div(:drawer, class: "drawer position-fixed visible")
 
   # overlay
-  div(:overlay, css:".overlay")
+  div(:overlay, css: ".overlay")
   button(:overlay_close_button) do |page|
     page.overlay_element.button_element(class: "cancel")
   end
@@ -157,7 +157,7 @@ class ArticlePage
   h2(:third_section, css: ".collapsible-block", index: 2)
 
   # issues
-  a(:issues_stamp, css:".mw-mf-cleanup")
+  a(:issues_stamp, css: ".mw-mf-cleanup")
 
   # page info (action=info)
   td(:edit_count, css: "#mw-pageinfo-edits td", index: 1)
