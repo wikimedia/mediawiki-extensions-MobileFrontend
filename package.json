@@ -13,7 +13,7 @@
 		"grunt": "0.4.5",
 		"grunt-phpdocumentor": "~0.4.1",
 		"jshint": ">=1.1.0",
-		"jscs": ">=1.7.3",
+		"jscs": "git+https://github.com/jscs-dev/node-jscs.git#160c9dc",
 		"jsdoc": "<=3.3.0",
 		"kss": ">=0.3.6",
 		"svgo": ">=0.4.4"
@@ -23,7 +23,7 @@
 		"grunt-mkdir": "^0.1.2",
 		"grunt-svg2png": "0.2.5",
 		"grunt-contrib-jshint": "0.10.0",
-		"grunt-jscs": "0.8.1",
+		"grunt-jscs": "git+https://github.com/jdlrobson/grunt-jscs.git#mobilefrontend",
 		"jscs-jsdoc": "^0.0.24",
 		"grunt-jsduck": "^1.0.1",
 		"js-beautify": "^1.5.4",
