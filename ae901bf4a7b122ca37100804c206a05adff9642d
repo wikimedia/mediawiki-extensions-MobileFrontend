@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_d84c6ce7",
+        "filename": "dev-scripts/pre-commit",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-05T23:00:01Z",
+      "side": 1,
+      "message": "So I changed a javascript file and didn\u0027t add documentation, and ran this code from above: `git diff --cached --name-only | grep -i \".js\\$\"`\n\nI see \" Permission denied\" message",
+      "revId": "ae901bf4a7b122ca37100804c206a05adff9642d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
