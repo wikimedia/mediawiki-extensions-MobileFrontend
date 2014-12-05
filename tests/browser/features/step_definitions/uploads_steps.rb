@@ -47,7 +47,7 @@ Then(/^my image should be on the Uploads page$/) do
     page.wait_until(10) do
       page.text.include? "#{@random_string}" #Chrome needs this, FF does not
     end
-    expect(page.uploaded_image_link_element.when_present.attribute( 'alt' )).to match "#{@random_string}"
+    expect(page.uploaded_image_link_element.when_present.attribute('alt')).to match "#{@random_string}"
   end
 end
 

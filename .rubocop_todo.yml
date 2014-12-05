@@ -96,11 +96,6 @@ Style/SpaceAroundOperators:
 Style/SpaceInsideHashLiteralBraces:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/SpaceInsideParens:
-  Enabled: false
-
 # Offense count: 179
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
