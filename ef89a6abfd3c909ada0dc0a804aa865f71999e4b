@@ -104,6 +104,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_58b85ce2",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-05T22:45:39Z",
+      "side": 1,
+      "message": "removing this and the above causes qunit tests to fail. i think we should do it in a separate patch",
+      "parentUuid": "2e9df725_fdc59a42",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_bdbf12a7",
         "filename": "javascripts/modules/categories/CategoryOverlay.js",
         "patchSetId": 1
