@@ -78,7 +78,6 @@ class ArticlePage
 
   a(:image_link, class: "image")
 
-
   # page-actions
   ul(:page_actions, id: "page-actions")
   a(:talk, css: "#ca-talk a")
