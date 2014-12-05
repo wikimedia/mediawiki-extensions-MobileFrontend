@@ -180,6 +180,14 @@
 
 		// when rotating to landscape stop page zooming on ios
 		// allow disabling of transitions in android ics 4.0.2
+
+		/**
+		 * Locks viewport and enables position fixed for Android 2
+		 * Works around iPhone 4 and 5 bugs with the viewport.
+		 *
+		 * @method
+		 * @ignore
+		 */
 		function fixBrowserBugs() {
 			// see http://adactio.com/journal/4470/ (fixed in ios 6)
 			if ( $viewportMeta[0] && ( isIPhone4 || isIPhone5 ) ) {
@@ -295,11 +303,12 @@
 		return sessionId;
 	}
 
-	/*
+	/**
 	 * Takes a Query string and turns it into a JavaScript object mapping parameter names
 	 * to values. Does the opposite of $.param
 	 *
 	 * @method
+	 * @ignore
 	 * @param {String} qs A querystring excluding the ? prefix. e.g. foo=4&bar=5
 	 * @return {Object}
 	 */
@@ -350,6 +359,13 @@
 		}
 	}
 
+	/**
+	 * Constructs an incomplete Page object representing the currently loaded page.
+	 *
+	 * @method
+	 * @private
+	 * @ignore
+	 */
 	function loadCurrentPage() {
 		var permissions = mw.config.get( 'wgRestrictionEdit', [] );
 		if ( permissions.length === 0 ) {
