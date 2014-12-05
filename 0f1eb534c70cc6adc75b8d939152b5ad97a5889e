@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_b81ba0d3",
+        "filename": "less/specials/search.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:00:40Z",
+      "side": 1,
+      "message": ".mw-search-createlink should always be hidden. client-js should only apply to #search\n\nWe don\u0027t want to surface red links!\n\n(Same with tabs)",
+      "revId": "0f1eb534c70cc6adc75b8d939152b5ad97a5889e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
