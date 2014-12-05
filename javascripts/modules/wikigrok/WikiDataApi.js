@@ -109,6 +109,51 @@
 				} );
 				return map;
 			} );
+		},
+		/**
+		 * Expand item ids to find associated data such as labels and urls
+		 * for the wikidata entities for the current sitename.
+		 *
+		 * @param {Array} itemIds for items in Wikidata
+		 * @return {jQuery.Deferred} Object returned by ajax call
+		 */
+		getExpandedItemsData: function ( itemIds ) {
+			var lang = this.language,
+				wiki = mw.config.get( 'wgDBname' ) || 'enwiki';
+
+			return this.ajax( {
+				action: 'wbgetentities',
+				sites: wiki,
+				props: [ 'labels', 'sitelinks/urls' ],
+				languages: lang,
+				ids: itemIds
+			} ).then( function ( data ) {
+				var map = {};
+
+				$.each( itemIds, function ( i, itemId ) {
+					var item, sitelink;
+
+					if ( data.entities[ itemId ].labels &&
+						data.entities[ itemId ].labels[ lang ] !== undefined
+					) {
+						item = data.entities[ itemId ];
+						if ( item.sitelinks && item.sitelinks[wiki] ) {
+							sitelink = item.sitelinks[wiki];
+						}
+
+						map[ itemId ] = {
+							label: sitelink ? sitelink.title : item.labels[ lang ].value
+						};
+
+						if ( sitelink && sitelink.url ) {
+							map[ itemId ].url = sitelink.url;
+						}
+					} else {
+						map[ itemId ] = null;
+					}
+				} );
+				return map;
+			} );
 		}
 	} );
 
