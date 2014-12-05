@@ -189,8 +189,6 @@
 		 * @return {boolean}: Whether the overlay was successfully hidden or not
 		 */
 		hide: function ( force ) {
-			var self = this;
-
 			// FIXME: remove when OverlayManager used everywhere
 			if ( this.parent ) {
 				this.parent.show();
@@ -200,11 +198,7 @@
 				window.scrollTo( document.body.scrollLeft, this.scrollTop );
 			}
 
-			this.$el.removeClass( 'visible' );
-			// give time for animations to finish
-			setTimeout( function () {
-				self.$el.detach();
-			}, 1000 );
+			this.$el.detach();
 
 			if ( M.isIos ) {
 				$window.off( '.ios' );
