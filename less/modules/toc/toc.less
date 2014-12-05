@@ -7,7 +7,24 @@
 @paddingVertical: 1.4em;
 @fontSize: .8em;
 
+// FIXME:  Remove when new icons used in stable
+.icon-toc {
+	// @todo: switch to .background-image-svg() when bug 66091 is fixed
+	background-image: url('images/contents-ltr.png');
+	background-image: -webkit-linear-gradient(transparent, transparent), url('images/contents-ltr.svg');
+	background-image: linear-gradient(transparent, transparent), url('images/contents-ltr.svg');
+}
+
+.stable {
+	.toc-mobile {
+		.collapsible-heading {
+			line-height: 1.4;
+		}
+	}
+}
+
 .client-js .toc-mobile {
+	position: relative;
 	// FIXME: Use predefined colors?
 	background-color: @colorGray15;
 	border: solid 1px @grayLightest;
@@ -16,47 +33,33 @@
 	clear: left;
 	margin: 1em 0;
 
+	.toc-button {
+		float: left;
+		display: block;
+
+		// promote to parent class when in stable
+		&.mw-ui-icon {
+			font-size: @fontSize;
+		}
+	}
+
 	.collapsible-heading {
 		font-family: @fontFamily;
 		font-size: @fontSize;
-		line-height: ( @paddingVertical * 2 ) + @fontSize;
 		background-position: right center;
 		font-weight: bold;
-		padding: 0 @paddingHorizontal 0 (@paddingHorizontal + @iconSize + @iconHeadingGap);
+		padding: @paddingVertical / 2 0;
 		border-bottom: none;
 		&.icon {
 			// add right padding to the chevron without reducing tapable area
 			border-right: @paddingHorizontal solid transparent;
 		}
 
-		// FIXME:  Remove when new icons used in stable
-		.icon {
-			// @todo: switch to .background-image-svg() when bug 66091 is fixed
-			background-image: url('images/contents-ltr.png');
-			background-image: -webkit-linear-gradient(transparent, transparent), url('images/contents-ltr.svg');
-			background-image: linear-gradient(transparent, transparent), url('images/contents-ltr.svg');
-			width: @iconSize;
-			height: @iconSize;
-			display: block;
-			position: absolute;
-			left: 1em;
-			top: 1em;
-		}
-
 		// In table of contents the collapsing caret is on the right
-		&.mw-ui-icon {
-			&:before {
-				float: right;
-				// Note font size of .client-js .collapsible-heading:before is currently .4em
-				height: ( @paddingVertical * 2 ) / .4em;
-				margin-left: 1em;
-			}
-		}
-
-		.mw-ui-icon {
-			position: absolute;
-			left: 0;
-			top: 1em;
+		.indicator {
+			margin-top: .4em;
+			float: right;
+			margin-left: .5em;
 		}
 	}
 
@@ -82,6 +85,26 @@
 				// This ensures when a heading spills to a second line it can be distinguished from other headings
 				line-height: 1.2;
 			}
+		}
+	}
+}
+
+// FIXME: remove rule when mw-ui-icon in stable / beta
+.client-js {
+	.beta,
+	.stable {
+		.toc-mobile {
+			.collapsible-heading {
+				padding-left: .8em;
+				.indicator {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	.collapsible-heading {
+		.indicator {
+			margin-top: 0.2em;
 		}
 	}
 }

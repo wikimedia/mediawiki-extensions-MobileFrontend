@@ -15,9 +15,8 @@
 		},
 		defaults: {
 			tocIcon: new Icon( {
-				tagName: 'span',
 				name: 'toc',
-				additionalClasses: 'icon-16px'
+				additionalClassNames: 'toc-button'
 			} ).toHtmlString(),
 			contentsMsg: mw.msg( 'toc' )
 		},

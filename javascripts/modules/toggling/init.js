@@ -1,18 +1,15 @@
 ( function ( M, $ ) {
 	var currentPageTitle =  M.getCurrentPage().title,
 		settings = M.require( 'settings' ),
-		Icon = M.require( 'Icon' ),
-		iconUp = new Icon( {
+		arrowUpOptions = {
 			name: 'arrow-up',
-			hasText: true
-		} ),
-		iconDown = new Icon( {
+			additionalClassNames: 'icon-15px indicator'
+		},
+		arrowDownOptions = {
 			name: 'arrow-down',
-			hasText: true,
-			additionalClassNames: 'icon-15px'
-		} ),
-		classOpen = iconUp.getGlyphClassName(),
-		classClosed = iconDown.getGlyphClassName();
+			additionalClassNames: 'icon-15px indicator'
+		},
+		Icon = M.require( 'Icon' );
 
 	function getExpandedSections() {
 		var expandedSections = $.parseJSON(
@@ -101,14 +98,16 @@
 	 * @param {jQuery.Object} $heading A heading belonging to a section
 	 */
 	function toggle( $heading ) {
-		var isCollapsed = $heading.is( '.open-block' );
+		var isCollapsed = $heading.is( '.open-block' ),
+			options, indicator;
 
 		$heading.toggleClass( 'open-block' );
-		if ( $heading.hasClass( 'open-block' ) ) {
-			$heading.addClass( classOpen ).removeClass( classClosed );
-		} else {
-			$heading.removeClass( classOpen ).addClass( classClosed );
-		}
+		$heading.data( 'indicator' ).remove();
+
+		options = $heading.hasClass( 'open-block' ) ? arrowUpOptions : arrowDownOptions;
+		indicator = new Icon( options ).prependTo( $heading );
+		$heading.data( 'indicator', indicator );
+
 		$heading.next()
 			.toggleClass( 'open-block' )
 			.attr( {
@@ -165,9 +164,8 @@
 	}
 
 	function enable( $container ) {
-		var tagName, expandSections,
+		var tagName, expandSections, indicator,
 			$firstHeading,
-			iconClass = iconDown.getClassName(),
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 		$container = $container || $( '#content' );
 
@@ -189,7 +187,7 @@
 			// Otherwise, collapsible sections for this page is not enabled.
 			if ( $heading.next().is( 'div' ) ) {
 				$heading
-					.addClass( 'collapsible-heading ' + iconClass )
+					.addClass( 'collapsible-heading ' )
 					.attr( {
 						tabindex: 0,
 						'aria-haspopup': 'true',
@@ -200,6 +198,8 @@
 						ev.preventDefault();
 						toggle( $( this ) );
 					} );
+				indicator = new Icon( arrowDownOptions ).prependTo( $heading );
+				$heading.data( 'indicator', indicator );
 				$heading.next( 'div' )
 					.addClass( 'collapsible-block' )
 					.eq( 0 )

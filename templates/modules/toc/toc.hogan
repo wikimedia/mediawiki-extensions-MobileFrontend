@@ -1,4 +1,4 @@
-<h2>{{contentsMsg}} {{{tocIcon}}}</h2>
+<h2>{{{tocIcon}}}<span>{{contentsMsg}}</span></h2>
 <div>
 	<ul>
 	{{#sections}}
@@ -6,3 +6,6 @@
 	{{/sections}}
 	</ul>
 </div>
+
+
+
