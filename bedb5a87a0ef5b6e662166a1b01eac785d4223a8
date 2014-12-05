@@ -1,0 +1,259 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_3827900f",
+        "filename": "javascripts/Icon.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "It can be anything. There are no restrictions so this is a bit misleading as it can be overriden. Defaults to mw-ui-icon... would be more accurate",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_98b82476",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "Just FIXME? :)\nIt\u0027s a list of permissions as returned by api\nMaybe just give an example edit: [ \u0027*\u0027 ]",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_b8bde065",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "it\u0027s an array of Section objects. Nothing else needed to explain.",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_d8a54c45",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "As stated before this isn\u0027t used anywhere.\nRemove this line.\n\nI just removed the line this.line \u003d options.line; locally and nothing broke.",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_f8a2883a",
+        "filename": "javascripts/modules/PageList.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "I don\u0027t know... find out. :)",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_9867c422",
+        "filename": "javascripts/modules/PageList.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "When enabled, the template is disabled so that it is not rendered in the DOM. Use in conjunction with View::defaults.$el to associate the PageList with an existing already rendered element in the DOM.",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_b86c0007",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "Please FIXME now.",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_187bb4be",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "Label of a link element that is associated with defaults.link",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_3878f0be",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "Class attribute value of a link element that is associated with defaults.link",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_f8812893",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "? There i no className  in defaults",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_d8846ca6",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "? There i not template in defaults",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_984ee49a",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "? There i not template in defaults",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_b853a042",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "Please document now.",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_1862d406",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "Please document now",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_784d189b",
+        "filename": "javascripts/modules/uploads/LeadPhotoUploaderButton.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T23:55:10Z",
+      "side": 1,
+      "message": "Please document now",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
