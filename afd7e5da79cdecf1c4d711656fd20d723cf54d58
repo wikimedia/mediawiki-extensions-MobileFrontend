@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_67e9fd7a",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-05T18:40:10Z",
+      "side": 1,
+      "message": "why use regex? why not just use desiredImageWidth + \u0027px\u0027?",
+      "revId": "afd7e5da79cdecf1c4d711656fd20d723cf54d58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_a7ef0582",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-05T18:40:10Z",
+      "side": 1,
+      "message": "should use the ratio variable?",
+      "revId": "afd7e5da79cdecf1c4d711656fd20d723cf54d58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
