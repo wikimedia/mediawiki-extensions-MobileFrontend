@@ -85,11 +85,6 @@ Style/RedundantSelf:
 Style/SpaceAfterColon:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/SpaceAroundOperators:
-  Enabled: false
-
 # Offense count: 179
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.

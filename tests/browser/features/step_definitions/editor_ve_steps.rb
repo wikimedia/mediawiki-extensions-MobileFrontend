@@ -13,7 +13,7 @@ end
 
 When(/^I edit the article using VisualEditor$/) do
   on(ArticlePage) do |page|
-    @text_to_type = "text-#{rand(32 ** 8).to_s(32)}"
+    @text_to_type = "text-#{rand(32**8).to_s(32)}"
     page.editor_ve_element.when_present.send_keys(" ")
     page.editor_ve_element.send_keys(@text_to_type)
     page.wait_until { page.continue_button_element.enabled? }
