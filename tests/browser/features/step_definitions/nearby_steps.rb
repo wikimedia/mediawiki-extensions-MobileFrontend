@@ -1,5 +1,5 @@
 Given(/^I give permission for the page to access my location$/) do
-  if !ENV["NEARBY_FIREFOX"]
+  unless ENV["NEARBY_FIREFOX"]
     puts "NEARBY_FIREFOX environment variable is not defined. This test won't work without it!"
   end
 end
