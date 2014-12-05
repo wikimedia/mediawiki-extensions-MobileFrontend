@@ -60,11 +60,6 @@ Style/HashSyntax:
 Style/IndentationWidth:
   Enabled: false
 
-# Offense count: 8
-# Cop supports --auto-correct.
-Style/LeadingCommentSpace:
-  Enabled: false
-
 
 # Offense count: 1
 # Cop supports --auto-correct.

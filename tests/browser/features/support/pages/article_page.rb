@@ -128,7 +128,7 @@ class ArticlePage
   # toast
   div(:toast, class: "toast")
 
-  #loader
+  # loader
   div(:content_wrapper, id: 'content_wrapper')
   div(:content, id: 'content')
 
@@ -138,7 +138,7 @@ class ArticlePage
   # Can't use generic overlay class as this will match with the LoadingOverlay that shows before loading the language overlay
   div(:overlay_languages, css: ".language-overlay")
 
-  #footer
+  # footer
   a(:desktop_link, text: "Desktop")
   a(:terms_link, css: "#footer-places-terms-use")
   a(:license_link, css: "#footer-info-mobile-license a")

@@ -20,7 +20,7 @@ When(/^I edit the article using VisualEditor$/) do
     page.continue_button
     page.wait_until { page.submit_button_element.enabled? }
     page.confirm(true) { page.submit_button }
-    sleep 2 #this gets around a race condition bug in ChromeDriver where both the confirm and the toast are in the page at once, and Chrome reports either "stale element reference: element is not attached to the page document" or "Element does not exist in cache"
+    sleep 2 # this gets around a race condition bug in ChromeDriver where both the confirm and the toast are in the page at once, and Chrome reports either "stale element reference: element is not attached to the page document" or "Element does not exist in cache"
     page.wait_until { page.toast.include?("Your edit was saved") }
     page.wait_until { page.content_element.visible? }
   end

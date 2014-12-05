@@ -17,7 +17,7 @@ end
 Then(/^I should see a toast with message about unwatching the page$/) do
   on(ArticlePage) do |page|
     page.wait_until do
-      page.text.include? "Removed" #Chrome needs this, FF does not
+      page.text.include? "Removed" # Chrome needs this, FF does not
     end
     expect(page.toast_element.when_present.text).to match "Removed Selenium mobile watch test from your watchlist"
   end
