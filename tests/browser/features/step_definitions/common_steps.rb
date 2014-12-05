@@ -26,11 +26,11 @@ end
 
 Given(/^I am on a page that does not exist$/) do
   name = 'NewPage' + Time.now.to_i.to_s
-  visit(ArticlePage, :using_params => {:article_name => name})
+  visit(ArticlePage, :using_params => { :article_name => name })
 end
 
 Given(/^I am on the random page$/) do
-  visit(ArticlePage, :using_params => {:article_name => @random_string})
+  visit(ArticlePage, :using_params => { :article_name => @random_string })
 end
 
 Given(/^I am on the sign-up page$/) do
@@ -40,7 +40,7 @@ end
 Given(/^I am on the "(.+)" page$/) do |article|
   # Ensure we do not cause a redirect
   article = article.sub(/ /, '_')
-  visit(ArticlePage, :using_params => {:article_name => article})
+  visit(ArticlePage, :using_params => { :article_name => article })
 end
 
 Given(/^I am using the mobile site$/) do
@@ -54,7 +54,7 @@ end
 
 Given(/^I am using user agent "(.+)"$/) do |user_agent|
   @user_agent = user_agent
-  @browser = browser(test_name(@scenario), {user_agent: user_agent})
+  @browser = browser(test_name(@scenario), { user_agent: user_agent })
   @browser.window.resize_to(480, 800)
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end
@@ -96,7 +96,7 @@ end
 When(/^I visit the page "(.*?)" with hash "(.*?)"$/) do |article, hash|
   # Ensure we do not cause a redirect
   article = article.sub(/ /, '_')
-  visit(ArticlePage, :using_params => {:article_name => article, :hash => hash })
+  visit(ArticlePage, :using_params => { :article_name => article, :hash => hash })
 end
 
 Then(/^there should be a red link with text "(.+)"$/) do |text|

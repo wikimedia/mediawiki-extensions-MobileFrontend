@@ -90,12 +90,6 @@ Style/SpaceAfterColon:
 Style/SpaceAroundOperators:
   Enabled: false
 
-# Offense count: 11
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
-Style/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
 # Offense count: 179
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
