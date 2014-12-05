@@ -1,0 +1,378 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_7d8bca1b",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to be used any more so just remove.",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_5d9a8e67",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "You can remove this. I don\u0027t see it being used by Section or anything that uses it.",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_1d9c065f",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "Don\u0027t see this being used anywhere. Feel free to remove.",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_fd9efa58",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "Don\u0027t see this being used anywhere. Feel free to remove.",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_dda53e9c",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "Don\u0027t see this being used anywhere. Feel free to remove.",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_fdc59a42",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "Don\u0027t see any of the above being used anywhere. Feel free to remove.",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_bdbf12a7",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of Overlay.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_ddbc5eb4",
+        "filename": "javascripts/modules/editor/AbuseFilterOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of Overlay.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_9dded613",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of EditOverlayBase.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_3de302d6",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of Overlay.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_1dcac64a",
+        "filename": "javascripts/modules/issues/CleanupOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of Overlay.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_bdd632f5",
+        "filename": "javascripts/modules/languages/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of Overlay.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_ddd3fe03",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of Overlay.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_7d00aa6d",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of PageList.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_9d05767f",
+        "filename": "javascripts/modules/notifications/NotificationsOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of Overlay.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_3dfa2274",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of Drawer.defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_5dffee62",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_fdf35a9a",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_1df16692",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_bdedd2b6",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_ddea1e9c",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_9d349648",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:07:39Z",
+      "side": 1,
+      "message": "Please FIXME now :)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
