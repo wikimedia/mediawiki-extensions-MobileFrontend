@@ -373,6 +373,125 @@
       "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_3d10e2ac",
+        "filename": "javascripts/modules/tutorials/PageActionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:08:57Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_9d1b36d4",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:08:57Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_7d166aae",
+        "filename": "javascripts/modules/uploads/PhotoUploadProgress.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:08:57Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_dd49bed4",
+        "filename": "javascripts/modules/uploads/UploadTutorial.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:08:57Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_bd4cf2e5",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:08:57Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_fd427ab1",
+        "filename": "javascripts/modules/wikigrok/WikiGrokMoreInfo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:08:57Z",
+      "side": 1,
+      "message": "PS. We should rename this to WikiGrokMoreInfoOverlay in future",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_5d3e0e28",
+        "filename": "javascripts/modules/wikigrok/WikiGrokMoreInfo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-05T22:08:57Z",
+      "side": 1,
+      "message": "What about @inheritdoc - the documentation of parent defaults still applies! (All children inherit parents defaults)",
+      "revId": "ef89a6abfd3c909ada0dc0a804aa865f71999e4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
