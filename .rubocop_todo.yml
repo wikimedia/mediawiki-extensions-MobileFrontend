@@ -28,16 +28,10 @@ Metrics/ClassLength:
 Metrics/LineLength:
   Max: 428
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/BracesAroundHashParameters:
-  Enabled: false
 
 # Offense count: 13
 Style/Documentation:
   Enabled: false
-
 
 # Offense count: 1
 # Configuration parameters: AllowedVariables.
