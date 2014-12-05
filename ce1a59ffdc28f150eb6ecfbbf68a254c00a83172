@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e9df725_9a4edc71",
+        "filename": "i18n/en.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-05T19:23:37Z",
+      "side": 1,
+      "message": "Suggestion of Jared:\nIncrease or decrease the size of the text for readability",
+      "revId": "ce1a59ffdc28f150eb6ecfbbf68a254c00a83172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_c79331a5",
         "filename": "includes/Resources.php",
         "patchSetId": 7
@@ -13,6 +30,23 @@
       "writtenOn": "2014-12-05T17:35:57Z",
       "side": 1,
       "message": "unneded",
+      "revId": "ce1a59ffdc28f150eb6ecfbbf68a254c00a83172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_7a499069",
+        "filename": "less/modules/fontchanger/FontChanger.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-05T19:23:37Z",
+      "side": 1,
+      "message": "Jared suggested to move it more to the right side",
       "revId": "ce1a59ffdc28f150eb6ecfbbf68a254c00a83172",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
