@@ -13,10 +13,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Lint/UnusedBlockArgument:
-  Enabled: false
 
 # Offense count: 1
 # Configuration parameters: CountComments.
@@ -27,7 +23,6 @@ Metrics/ClassLength:
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
   Max: 428
-
 
 # Offense count: 13
 Style/Documentation:

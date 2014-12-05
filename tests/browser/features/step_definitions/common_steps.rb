@@ -12,7 +12,7 @@ Given /^I am logged in as a new user$/ do
   on(SpecialUserLoginPage).login_with("Selenium_newuser", ENV["MEDIAWIKI_PASSWORD"])
 end
 
-Given(/^I am logged in as a user with a > (\d+) edit count$/) do |arg1|
+Given(/^I am logged in as a user with a > (\d+) edit count$/) do
   step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
   # FIXME: Guarantee that MEDIAWIKI_USER has an edit count of > 0
