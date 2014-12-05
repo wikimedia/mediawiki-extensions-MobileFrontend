@@ -23,7 +23,7 @@ When(/^I type a description$/) do
 end
 
 When(/^I upload file "(.*?)"$/) do |file_name|
-  on(UploadPage).select_file = File.join(Dir.pwd, "features", "support", file_name)
+  on(UploadPage).select_file = File.join(Dir.pwd, 'features', 'support', file_name)
 end
 
 Then(/^I should be able to enter a description for my file upload$/) do

@@ -9,19 +9,19 @@ Given /^I am logged in as a new user$/ do
   step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
   # FIXME: Actually create a new user instead of using an existing one
-  on(SpecialUserLoginPage).login_with("Selenium_newuser", ENV["MEDIAWIKI_PASSWORD"])
+  on(SpecialUserLoginPage).login_with('Selenium_newuser', ENV['MEDIAWIKI_PASSWORD'])
 end
 
 Given(/^I am logged in as a user with a > (\d+) edit count$/) do
   step 'I am on the "Main Page" page'
   step 'I click on "Log in" in the main navigation menu'
   # FIXME: Guarantee that MEDIAWIKI_USER has an edit count of > 0
-  on(SpecialUserLoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
+  on(SpecialUserLoginPage).login_with(ENV['MEDIAWIKI_USER'], ENV['MEDIAWIKI_PASSWORD'])
 end
 
 Given(/^I am logged into the mobile website$/) do
-  step "I am using the mobile site"
-  visit(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"], false)
+  step 'I am using the mobile site'
+  visit(LoginPage).login_with(ENV['MEDIAWIKI_USER'], ENV['MEDIAWIKI_PASSWORD'], false)
 end
 
 Given(/^I am on a page that does not exist$/) do
@@ -77,7 +77,7 @@ Given(/^my browser doesn't support JavaScript$/) do
 end
 
 Given(/^the "(.*?)" page is protected\.$/) do |page|
-  on(APIPage).protect(page, "MobileFrontend Selenium test protected this page")
+  on(APIPage).protect(page, 'MobileFrontend Selenium test protected this page')
 end
 
 When(/^I click the browser back button$/) do

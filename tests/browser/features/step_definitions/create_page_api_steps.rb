@@ -10,7 +10,7 @@ Given(/^I go to a page that has references$/) do
 ==References==
 <references />"
 
-  on(APIPage).create "Selenium References test page", wikitext
+  on(APIPage).create 'Selenium References test page', wikitext
   step 'I am on the "Selenium References test page" page'
 end
 
@@ -25,7 +25,7 @@ Section 2A.
 Section 3.
 "
 
-  on(APIPage).create "Selenium section test page", wikitext
+  on(APIPage).create 'Selenium section test page', wikitext
   step 'I am on the "Selenium section test page" page'
 end
 
@@ -43,7 +43,7 @@ Given(/^I am on a page which has cleanup templates$/) do
       </table>
     END
 
-  api.create_page "Selenium page issues test page", wikitext
+  api.create_page 'Selenium page issues test page', wikitext
   step 'I am on the "Selenium page issues test page" page'
 end
 
@@ -53,7 +53,7 @@ Given(/^the page "(.*?)" exists$/) do |title|
 end
 
 Given(/^at least one article with geodata exists$/) do
-  on(APIPage).create "Selenium geo test page", <<-end
+  on(APIPage).create 'Selenium geo test page', <<-end
 This page is used by Selenium to test geo related features.
 
 {{#coordinates:43|-75|primary}}
@@ -65,13 +65,13 @@ Given(/^I go to a page that has languages$/) do
 
 [[es:Selenium language test page]]'
 
-  on(APIPage).create "Selenium language test page", wikitext
+  on(APIPage).create 'Selenium language test page', wikitext
   step 'I am on the "Selenium language test page" page'
 end
 
 Given(/^the wiki has a terms of use$/) do
-  on(APIPage).create "MediaWiki:mobile-frontend-terms-url", "Terms_of_use"
-  on(APIPage).create "MediaWiki:mobile-frontend-terms-text", "Terms of use"
+  on(APIPage).create 'MediaWiki:mobile-frontend-terms-url', 'Terms_of_use'
+  on(APIPage).create 'MediaWiki:mobile-frontend-terms-text', 'Terms of use'
 end
 
 Given(/^the page "(.*?)" exists and has at least "(\d+)" edits$/) do |title, min_edit_count|
@@ -87,7 +87,7 @@ Given(/^the page "(.*?)" exists and has at least "(\d+)" edits$/) do |title, min
 end
 
 Given(/^I visit a protected page$/) do
-  on(APIPage).create "Selenium protected test 2", "Test is used by Selenium web driver"
+  on(APIPage).create 'Selenium protected test 2', 'Test is used by Selenium web driver'
   step 'the "Selenium protected test 2" page is protected.'
   step 'I am on the "Selenium protected test 2" page'
 end

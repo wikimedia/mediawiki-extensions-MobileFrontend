@@ -13,7 +13,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
 
-
 # Offense count: 1
 # Configuration parameters: CountComments.
 Metrics/ClassLength:
@@ -36,11 +35,5 @@ Style/GlobalVars:
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/RedundantSelf:
-  Enabled: false
-
-# Offense count: 179
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/StringLiterals:
   Enabled: false
 

@@ -3,7 +3,7 @@ When(/^I click the talk button$/) do
 end
 
 Then(/^I should see the talk overlay$/) do
-  expect(on(ArticlePage).overlay_heading_element.when_present.text).to match "Talk"
+  expect(on(ArticlePage).overlay_heading_element.when_present.text).to match 'Talk'
 end
 
 Then(/^there should be no talk button$/) do
