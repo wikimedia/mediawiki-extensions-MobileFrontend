@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_f364ebb0",
+        "filename": "javascripts/Section.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-06T01:16:20Z",
+      "side": 1,
+      "message": "If I remove that line, qunit fails.",
+      "parentUuid": "2e9df725_d8a54c45",
+      "revId": "bedb5a87a0ef5b6e662166a1b01eac785d4223a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_f8a2883a",
         "filename": "javascripts/modules/PageList.js",
         "patchSetId": 3
