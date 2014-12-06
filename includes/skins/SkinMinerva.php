@@ -1034,10 +1034,10 @@ class SkinMinerva extends SkinTemplate {
 	 * Returns the site name for the footer, either as a text or <img> tag
 	 * @return string
 	 */
-	protected function getSitename() {
+	public static function getSitename() {
 		global $wgMFCustomLogos, $wgMFTrademarkSitename;
 
-		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
+		$footerSitename = wfMessage( 'mobile-frontend-footer-sitename' )->text();
 
 		if ( isset( $wgMFCustomLogos['copyright'] ) ) {
 			$suffix = $wgMFTrademarkSitename ? ' ®' : '';

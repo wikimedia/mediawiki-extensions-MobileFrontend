@@ -20,6 +20,27 @@ class MinervaTemplate extends BaseTemplate {
 	protected $isMainPage;
 
 	/**
+	 * Renders the header content for the top chrome.
+	 * @param array $data Data used to build the page
+	 */
+	protected function makeChromeHeaderContent( $data ) {
+		echo Html::openElement( 'form',
+				array(
+					'action' => $data['wgScript'],
+					'class' => 'search-box',
+				)
+			) .
+			$this->makeSearchInput( $this->getSearchAttributes() ) .
+			$this->makeSearchButton(
+				'fulltext',
+				array(
+					'class' => 'fulltext-search no-js-only icon icon-search',
+				)
+			) .
+			Html::closeElement( 'form' );
+	}
+
+	/**
 	 * Get elements for personal toolbar
 	 * @return array
 	 */
@@ -357,18 +378,7 @@ class MinervaTemplate extends BaseTemplate {
 				<div class="header">
 					<?php
 						$this->html( 'menuButton' );
-					?>
-							<form action="<?php echo $data['wgScript'] ?>" class="search-box">
-							<?php
-							echo $this->makeSearchInput( $this->getSearchAttributes() );
-							// FIXME: change this into a search icon instead of a text button
-							echo $this->makeSearchButton(
-								'fulltext',
-								array( 'class' => 'fulltext-search no-js-only icon icon-search' )
-							);
-							?>
-							</form>
-							<?php
+						$this->makeChromeHeaderContent( $data );
 						echo $data['secondaryButton'];
 					?>
 				</div>
