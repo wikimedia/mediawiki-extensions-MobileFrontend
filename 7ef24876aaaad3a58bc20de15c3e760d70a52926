@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_1c439fb7",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-08T16:32:36Z",
+      "side": 1,
+      "message": "\"string|boolean\" and \"false if there isn\u0027t another page to show\"",
+      "revId": "7ef24876aaaad3a58bc20de15c3e760d70a52926",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_dc4c57e7",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-08T16:32:36Z",
+      "side": 1,
+      "message": "If we still support PHP 5.3, then this syntax isn\u0027t valid. Dereferencing arrays returned by function calls was introduced in PHP 5.4.",
+      "revId": "7ef24876aaaad3a58bc20de15c3e760d70a52926",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
