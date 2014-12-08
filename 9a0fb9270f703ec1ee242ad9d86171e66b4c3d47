@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_e2a2cea3",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-08T19:39:22Z",
+      "side": 1,
+      "message": "I think it\u0027s a good idea and we should explore it.",
+      "parentUuid": "2e9df725_e723c0fe",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_074fccc1",
         "filename": "javascripts/modules/infobox/Infobox.js",
         "patchSetId": 5
