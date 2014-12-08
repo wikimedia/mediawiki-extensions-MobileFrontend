@@ -409,13 +409,14 @@
 			} );
 
 			// work out what they all mean
-			return this.api.getLabels( labelIds ).then( function ( labels ) {
+			return this.api.getExpandedItemsData( labelIds ).then( function ( labels ) {
 				// map the property id to the actual label.
 				$.each( rows, function ( i, row ) {
 					$.each( row.values, function ( j, value ) {
-						if ( labels[ value.id ] ) {
-							value.value = labels[ value.id ];
-							value.url = mw.util.getUrl( value.value );
+						var item = labels[ value.id ];
+						if ( item ) {
+							value.value = item.label;
+							value.url = item.url;
 						}
 					} );
 				} );
