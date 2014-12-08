@@ -33,6 +33,7 @@
 	"mobile-frontend-donate-image-signup-action": "سی بهرکرد وارسگرتو وا دنیا ثوت نام بکیت.",
 	"mobile-frontend-donate-image-title": "سوارکردیا",
 	"mobile-frontend-donate-photo-first-upload-success": "خو بی! سی اولین هومیاریتو منمونیم!",
+	"mobile-frontend-donate-photo-upload-success": "خوئه!عسگ شما می تونه د {{SITENAME}} وه کار گرته بوئه!",
 	"mobile-frontend-drawer-cancel": "انجومشیو کردن",
 	"mobile-frontend-edit-login": "سی بیتر کردن بلگه $1 هومیاری بیئت!",
 	"mobile-frontend-edit-login-action": "اومائن د سیستم سی ویرایشت",
@@ -238,5 +239,6 @@
 	"tag-mobile_edit": "ویرایشت موبایلی",
 	"tag-mobile_edit-description": "ویرایشت سی سیلجا هومدرونگ راس بیه",
 	"tag-mobile_web_edit": "ویرایشت تیارگه موبایلی",
+	"apihelp-mobileview-param-page": "داسون بلگه سی پردازشت کردن.",
 	"apihelp-mobileview-param-sectionprop": "چه دونسمنیایی دباره ای بهرجایا حاستنیه."
 }

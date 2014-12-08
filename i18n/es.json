@@ -71,7 +71,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Leer más",
 	"mobile-frontend-editor-abusefilter-warning": "Advertencia: ¿estás seguro que quieres guardar esta edición? Puede haber un problema con ella.",
 	"mobile-frontend-editor-anon": "Editar sin iniciar sesión",
-	"mobile-frontend-editor-anoneditwarning": "<strong>Advertencia:</strong> No has iniciado sesión. Tu dirección IP será visible públicamente si haces cualquier edición. Si <strong>[$1 inicias sesión]</strong> o <strong>[$2 creas una cuenta]</strong>, tus ediciones se atribuirán a tu nombre de usuario, junto con otros beneficios.",
+	"mobile-frontend-editor-anoneditwarning": "'''Advertencia''': no has iniciado sesión. Tu dirección IP será visible públicamente si haces cualquier edición. Si '''inicias sesión o '''creas una cuenta''', tus ediciones se atribuirán a tu nombre de usuario, junto con otros beneficios.",
 	"mobile-frontend-editor-blocked": "Tu cuenta está bloqueada y no puedes editar con ella.",
 	"mobile-frontend-editor-cancel": "Cancelar",
 	"mobile-frontend-editor-cancel-confirm": "¿Estás seguro de abandonar tu edición?",

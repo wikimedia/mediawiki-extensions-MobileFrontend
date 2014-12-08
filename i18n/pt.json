@@ -64,7 +64,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Ler mais",
 	"mobile-frontend-editor-abusefilter-warning": "Aviso: Tem a certeza que pretende gravar esta edição? Podem existir problemas nela por resolver.",
 	"mobile-frontend-editor-anon": "Editar sem iniciar sessão",
-	"mobile-frontend-editor-anoneditwarning": "<strong>Aviso</strong>: Não iniciou sessão. O seu endereço IP será registado no histórico de edições desta página. Se <strong>[$1 iniciar sessão]</strong> ou <strong>[$2 criar uma conta]</strong>, as suas edições serão registadas com o seu nome de utilizador(a), podendo ainda usufruir de outros benefícios.",
+	"mobile-frontend-editor-anoneditwarning": "'''Aviso''': Não iniciou sessão. O seu endereço IP será registado no histórico de edições desta página. Se '''iniciar sessão''' ou '''criar uma conta''', as suas edições serão registadas com o seu nome de utilizador(a), podendo ainda usufruir de outros benefícios.",
 	"mobile-frontend-editor-blocked": "A sua conta está bloqueada.",
 	"mobile-frontend-editor-cancel": "Cancelar",
 	"mobile-frontend-editor-cancel-confirm": "Tem a certeza de que pretende abandonar a sua edição?",

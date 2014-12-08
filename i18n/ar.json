@@ -14,7 +14,8 @@
 			"OsamaK",
 			"Samer",
 			"زكريا",
-			"مشعل الحربي"
+			"مشعل الحربي",
+			"أحمد المحمودي"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
@@ -57,6 +58,7 @@
 	"mobile-frontend-editor-abusefilter-disallow": "هذا التعديل لا يمكن حفظه لأننا اكتشفنا مشكلة.",
 	"mobile-frontend-editor-abusefilter-read-more": "اقرأ المزيد",
 	"mobile-frontend-editor-abusefilter-warning": "تحذير: هل أنت متأكد من أنك تريد حفظ هذا التعديل؟ هل تكون هناك مشكلة به.",
+	"mobile-frontend-editor-anoneditwarning": "'''تحذير:''' لم تقم بالدخول. سيكون عنوان الآيبي خاصتك مرئيا للعامة عند قيامك بأي تعديل.إذا '''سجلت دخولك''' أو أنشأت حساب في ويكيبيديا'''، تعديلاتك ستنسب لاسم المستخدم خاصتك ،مع المزيد من الميزات الأخرى.",
 	"mobile-frontend-editor-blocked": "حسابك ممنوع من التحرير",
 	"mobile-frontend-editor-cancel": "ألغِ",
 	"mobile-frontend-editor-cancel-confirm": "أتريد حقا أن تهجر تعديلاتك؟",
@@ -227,7 +229,6 @@
 	"mobile-frontend-settings-alpha": "الوضع التجريبي",
 	"mobile-frontend-settings-alpha-description": "وضع تجريبي غير مستقر وغير مأمون العواقب. احصل على المزيد من المزايا التجريبية ولكن مع المزيد من المشاكل.",
 	"mobile-frontend-settings-beta": "بيتا",
-	"mobile-frontend-settings-description": "خصّص تجربتك على جوالك عبر هذه الإعدادات المخصصة لموقع الجوال.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} متوفرة ب{{PLURAL:$1||لغة واحدة|لغتين|$1 لغات|$1 لغة}}. جميع النسخ الأخرى مسرودة أدناه.",
 	"mobile-frontend-settings-site-header": "لغات {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "آخ",

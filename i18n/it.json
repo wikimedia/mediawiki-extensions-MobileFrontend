@@ -9,7 +9,8 @@
 			"Raoli",
 			"Una giornata uggiosa '94",
 			"Ximo17",
-			"Elitre"
+			"Elitre",
+			"Macofe"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -56,7 +57,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Per saperne di più",
 	"mobile-frontend-editor-abusefilter-warning": "Attenzione: sei sicuro di voler salvare questa modifica? Potrebbe esserci un problema con essa.",
 	"mobile-frontend-editor-anon": "Modifica senza effettuare l'accesso",
-	"mobile-frontend-editor-anoneditwarning": "<b>Attenzione:</b> Accesso non effettuato. Se effettuerai delle modifiche il tuo indirizzo IP sarà visibile pubblicamente. Se <b>[$1 accedi]</b> o <b>[$2 crei un'utenza]</b>, le tue modifiche saranno attribuite al tuo nome utente, insieme ad altri benefici.",
+	"mobile-frontend-editor-anoneditwarning": "'''Attenzione''': Accesso non effettuato. Se effettuerai delle modifiche il tuo indirizzo IP sarà visibile pubblicamente. Se '''accedi''' o '''crei un'utenza''', le tue modifiche saranno attribuite al tuo nome utente, insieme ad altri benefici.",
 	"mobile-frontend-editor-blocked": "La tua utenza è bloccata alle modifiche.",
 	"mobile-frontend-editor-cancel": "Annulla",
 	"mobile-frontend-editor-cancel-confirm": "Vuoi davvero abbandonare la tua modifica?",
@@ -260,7 +261,6 @@
 	"mobile-frontend-settings-alpha": "Modalità sperimentale",
 	"mobile-frontend-settings-alpha-description": "Accedi ad un territorio mobile pericoloso ed inesplorato. Hai ancora più funzioni sperimentali, ma con un rischio maggiore di trovare bug.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Personalizza la tua esperienza sul dispositivo mobile con le impostazioni specifiche per questa versione.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} è disponibile in $1 {{PLURAL:$1|lingua|lingue}}. Tutte le versioni disponibili sono elencate di seguito",
 	"mobile-frontend-settings-site-header": "Lingue {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Oops!",

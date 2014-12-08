@@ -30,7 +30,8 @@
 			"Yann.fauche",
 			"عبد الحق فارح",
 			"Maxim21",
-			"Robby"
+			"Robby",
+			"Macofe"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -77,7 +78,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "En savoir plus",
 	"mobile-frontend-editor-abusefilter-warning": "Attention : Êtes-vous sûr de vouloir enregistrer cette modification ? Elle pourrait présenter un problème.",
 	"mobile-frontend-editor-anon": "Modifier sans se connecter",
-	"mobile-frontend-editor-anoneditwarning": "<b>Attention :</b> vous êtes déconnecté. Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous <b>[$1 vous connectez]</b> ou <b>[$2 créer un compte]</b>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
+	"mobile-frontend-editor-anoneditwarning": "'''Attention''' : vous êtes déconnecté. Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous '''vous connectez''' ou '''créer un compte''', vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
 	"mobile-frontend-editor-blocked": "Votre compte est bloqué en modification.",
 	"mobile-frontend-editor-cancel": "Annuler",
 	"mobile-frontend-editor-cancel-confirm": "Voulez-vous vraiment abandonner votre modification ?",
@@ -281,7 +282,6 @@
 	"mobile-frontend-settings-alpha": "Mode expérimental",
 	"mobile-frontend-settings-alpha-description": "Entrez dans un territoire mobile dangereux et inexploré. Obtenez des fonctionnalisés encore plus expérimentales, mais avec plus de dangers de bogues.",
 	"mobile-frontend-settings-beta": "Bêta",
-	"mobile-frontend-settings-description": "Personnalisez votre expérience sur votre mobile avec ces paramètres spécifiques.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} est disponible en $1 {{PLURAL:$1|langue|langues}}. Toutes les versions disponibles sont listées ci-dessous",
 	"mobile-frontend-settings-site-header": "Langues de {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Oups",
