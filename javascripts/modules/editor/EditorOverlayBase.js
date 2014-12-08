@@ -13,6 +13,31 @@
 	 * @class EditorOverlayBase
 	 */
 	EditorOverlayBase = Overlay.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.switcherButton HTML of the editor switcher button.
+		 * @cfg {String} defaults.sourceButton HTML of the button that shows the page source.
+		 * @cfg {String} defaults.veButton HTML of the button that opens the Visual Editor.
+		 * @cfg {String} defaults.continueMsg Caption for the next button on edit form which takes
+		 * you to the screen that shows a preview and license information.
+		 * @cfg {String} defaults.cancelMsg Caption for cancel button on edit form.
+		 * @cfg {String} defaults.closeMsg Caption for a button that takes you back to editing
+		 * from edit preview screen.
+		 * @cfg {String} defaults.summaryRequestMsg Header above edit summary input field asking
+		 * the user to summarize the changes they made to the page.
+		 * @cfg {String} defaults.summaryMsg A placeholder with examples for the summary input
+		 * field asking user what they changed.
+		 * @cfg {String} defaults.placeholder Placeholder text for empty sections.
+		 * @cfg {String} defaults.waitMsg Text that displays while a page edit is being saved.
+		 * @cfg {String} defaults.waitIcon HTML of the icon that displays while a page edit
+		 * is being saved.
+		 * @cfg {String} defaults.captchaMsg Placeholder for captcha input field.
+		 * @cfg {String} defaults.captchaTryAgainMsg A message shown when user enters wrong CAPTCHA
+		 * and a new one is displayed.
+		 * @cfg {String} defaults.switchMsg Label for button that allows the user to switch between
+		 * two different editing interfaces.
+		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			switcherButton: new Icon( {
 				tagName: 'button',

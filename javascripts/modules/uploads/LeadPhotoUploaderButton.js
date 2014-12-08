@@ -17,6 +17,15 @@
 		template: mw.template.get( 'mobile.upload.ui', 'LeadButton.hogan' ),
 		className: uploadIcon.getClassName(),
 
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.buttonCaption Caption that is a call to action to add the
+		 * first image.
+		 * @cfg {Boolean} defaults.insertInPage If the image should be prepended to the wikitext
+		 * of a page specified by options.pageTitle.
+		 * @cfg {String} defaults.el CSS selector of the element in which the
+		 * LeadPhotoUploaderButton is rendered.
+		 */
 		defaults: {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,

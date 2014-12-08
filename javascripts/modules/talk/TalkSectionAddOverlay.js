@@ -12,6 +12,16 @@
 	 * @extends Overlay
 	 */
 	TalkSectionAddOverlay = Overlay.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.cancelMsg Caption for cancel button on edit form.
+		 * @cfg {String} defaults.topicTitlePlaceHolder Placeholder text to prompt user to add
+		 * a talk page topic subject.
+		 * @cfg {String} defaults.topicContentPlaceHolder Placeholder text to prompt user to add
+		 * content to talk page content.
+		 * @cfg {String} defaults.editingMsg Label for button which submits a new talk page topic.
+		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),

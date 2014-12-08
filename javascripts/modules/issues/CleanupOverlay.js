@@ -17,6 +17,11 @@
 		templatePartials: {
 			content: mw.template.get( 'mobile.issues', 'OverlayContent.hogan' )
 		},
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.className Class name of the 'cleanup-gray' icon.
+		 */
 		defaults: {
 			className: icon.getClassName()
 		},

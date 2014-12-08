@@ -9,6 +9,12 @@
 	 * @extends Overlay
 	 */
 	AbuseFilterOverlay = Overlay.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.confirmMessage Friendly confirmation message expressing
+		 * understanding.
+		 */
 		defaults: {
 			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
 		},

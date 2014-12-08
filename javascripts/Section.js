@@ -11,6 +11,11 @@
 	 */
 	Section = View.extend( {
 		template: mw.template.get( 'mobile.startup', 'Section.hogan' ),
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.text Section text.
+		 * @cfg {String} defaults.spinner HTML of the spinner icon.
+		 */
 		defaults: {
 			line: undefined,
 			text: '',

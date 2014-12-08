@@ -19,6 +19,22 @@
 	SearchOverlay = Overlay.extend( {
 		className: 'overlay search-overlay',
 		template: mw.template.get( 'mobile.search', 'SearchOverlay.hogan' ),
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.clearIcon HTML of the button that clears the search text.
+		 * @cfg {String} defaults.searchTerm Search text.
+		 * @cfg {String} defaults.placeholderMsg Search input placeholder text.
+		 * @cfg {String} defaults.clearMsg Tooltip for clear button that appears when you type
+		 * into search box.
+		 * @cfg {String} defaults.searchContentMsg Caption for a button performing full text
+		 * search of a given search query.
+		 * @cfg {String} defaults.noResultsMsg Message informing user that no pages were found
+		 * for a given query.
+		 * @cfg {String} defaults.searchContentNoResultsMsg Used when no pages with matching
+		 * titles were found.
+		 * @cfg {String} defaults.action The value of wgScript
+		 */
 		defaults: {
 			clearIcon: new Icon( {
 				tagName: 'button',

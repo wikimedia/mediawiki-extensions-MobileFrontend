@@ -18,11 +18,24 @@
 				content: mw.template.get( 'mobile.talk.overlays', 'content.hogan' ),
 				footer: mw.template.get( 'mobile.overlays', 'OverlayFooterLink.hogan' )
 			} ),
+			/**
+			 * @inheritdoc
+			 * @cfg {Object} defaults Default options hash.
+			 * @cfg {Array} defaults.headings A list of {Section} objects to render heading links
+			 * for. If not set ajax request will be performed.
+			 * @cfg {String} defaults.heading Heading for talk overlay.
+			 * @cfg {String} defaults.leadHeading Heading for a discussion which has no heading
+			 * (lead section of talk page).
+			 * @cfg {String} defaults.headerButtonsListClassName Class name of the header buttons
+			 * list
+			 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
+			 * generating header buttons. Default list includes an 'add' button, which opens
+			 * a new talk overlay.
+			 * @cfg {String} defaults.linkMsg Used as label for link to the talk page
+			 * (Talk:ArticleName) in Talk Overlay.
+			 * @cfg {String} defaults.linkClass Class name of defaults.linkMsg.
+			 */
 			defaults: {
-				/**
-				 * A list of sections to render heading links for. If not set ajax request will be performed.
-				 * @type {Array}
-				 **/
 				headings: undefined,
 				heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),

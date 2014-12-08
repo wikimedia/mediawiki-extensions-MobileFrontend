@@ -16,6 +16,29 @@
 	 * @extends View
 	 */
 	PageList = View.extend( {
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Array} defaults.pages Array of page objects returned from the server.
+		 * E.g. [
+		 *   {
+		 *     heading: "<strong>C</strong>laude Monet",
+		 *     id: undefined,
+		 *     istThumbStyleAttribute: "background-image: url(http://127.0.0.1:8080/images/thumb/thumb.jpg)",
+		 *     pageimageClass: "list-thumb-y",
+		 *     title: "Claude Monet",
+		 *     url: "/wiki/Claude_Monet",
+		 *     thumbnail: {
+		 *       height: 62,
+		 *       source: "http://127.0.0.1:8080/images/thumb/thumb.jpg",
+		 *       width: 80
+		 *     }
+		 *   }
+		 * ]
+		 * @cfg {Boolean} defaults.enhance Whether to enhance views already in DOM.
+		 * When enabled, the template is disabled so that it is not rendered in the DOM.
+		 * Use in conjunction with View::defaults.$el to associate the PageList with an existing
+		 * already rendered element in the DOM.
+		 */
 		defaults: {
 			pages: [],
 			enhance: false

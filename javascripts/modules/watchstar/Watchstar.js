@@ -23,6 +23,10 @@
 	 * @extends View
 	 */
 	Watchstar = View.extend( {
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Page} defaults.page Current page.
+		 */
 		defaults: {
 			page: M.getCurrentPage()
 		},

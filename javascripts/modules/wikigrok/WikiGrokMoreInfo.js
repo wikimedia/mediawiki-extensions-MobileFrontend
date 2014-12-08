@@ -5,9 +5,15 @@
 	/**
 	 * Show more info about the wikigrok
 	 * @class WikiGrokMoreInfo
+	 * FIXME: rename this to WikiGrokMoreInfoOverlay
 	 * @extends Overlay
 	 */
 	WikiGrokMoreInfo = Overlay.extend( {
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.heading Heading of the overlay.
+		 */
 		defaults: {
 			heading: '<strong>About</strong>'
 		},

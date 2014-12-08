@@ -13,14 +13,22 @@
 	 * @extends View
 	 */
 	Page = View.extend( {
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Number} defaults.id Page ID. The default value of 0 represents a new page.
+		 * Be sure to override it to avoid side effects.
+		 * @cfg {String} defaults.title Title of the page. It includes prefix where needed and
+		 * is human readable, e.g. Talk:The man who lived.
+		 * @cfg {String} defaults.displayTitle Title of the page that's displayed. Falls back
+		 * to defaults.title if no value is provided.
+		 * @cfg {Object} defaults.protection List of permissions as returned by API,
+		 * e.g. [{ edit: ['*'] }]
+		 * @cfg {Array} defaults.sections Array of {Section} objects.
+		 * @cfg {Boolean} defaults.isMainPage Whether the page is the Main Page.
+		 * @cfg {Boolean} defaults.userCanUpload Whether the current user can upload.
+		 */
 		defaults: {
-			// id defaults to 0 which represents a new page. Be sure to override to avoid side effects.
 			id: 0,
-			/**
-			 * Includes prefix where needed and is human readable.
-			 * e.g. Talk:The man who lived
-			 * @type {string}
-			 */
 			title: '',
 			displayTitle: '',
 			protection: {

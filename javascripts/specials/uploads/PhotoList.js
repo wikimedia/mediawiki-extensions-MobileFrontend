@@ -14,6 +14,10 @@
 	 */
 	PhotoList = View.extend( {
 		template: mw.template.get( 'mobile.special.uploads.scripts', 'PhotoList.hogan' ),
+		/**
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} HTML of the spinner icon.
+		 */
 		defaults: {
 			spinner: icons.spinner().toHtmlString()
 		},

@@ -22,6 +22,16 @@
 			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
 			anonWarning: mw.template.get( 'mobile.editor.common', 'EditorOverlayAnonWarning.hogan' )
 		},
+		/**
+		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.loginCaption A link with label to login page.
+		 * @cfg {String} defaults.signupCaption A link with label to sign up page.
+		 * @cfg {String} defaults.anonLabel Title for link to edit a page without logging in.
+		 * @cfg {String} defaults.anonSelector CSS class name of the defaults.anonLabel wrapper.
+		 * @cfg {String} defaults.anonMsg Warning message, when user want to edit without
+		 * logging in.
+		 */
 		defaults: $.extend( {}, EditorOverlayBase.prototype.defaults, {
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
 			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
