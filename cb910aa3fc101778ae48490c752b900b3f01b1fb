@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_594374b6",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T22:37:49Z",
+      "side": 1,
+      "message": "Let\u0027s just load the first image to make this clear?\nThe first image is supposed to be preferred over the last one anyway...",
+      "parentUuid": "2e9df725_e1465054",
+      "revId": "cb910aa3fc101778ae48490c752b900b3f01b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_413384f3",
         "filename": "javascripts/modules/bannerImage/BannerImage.js",
         "patchSetId": 4
