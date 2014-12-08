@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_e1465054",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-08T11:42:32Z",
+      "side": 1,
+      "message": "Promises only resolve once (see https://promisesaplus.com/#promise_states). If there\u0027s more than one image to load, they\u0027ll all be loaded, but the first one to load will be the one chosen. Is this the intended behaviour?",
+      "revId": "cb910aa3fc101778ae48490c752b900b3f01b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_413384f3",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-08T11:42:32Z",
+      "side": 1,
+      "message": "s/this/self",
+      "revId": "cb910aa3fc101778ae48490c752b900b3f01b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
