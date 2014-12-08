@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_0c47ec51",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-12-08T23:03:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e9df725_f91b60d2",
+      "revId": "1b481a2d5302b34b7c4c12af6a89eeeec24b7994",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_b915d89e",
         "filename": "javascripts/modules/references/ReferencesDrawer.js",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_2c44284a",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-12-08T23:03:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e9df725_b915d89e",
+      "revId": "1b481a2d5302b34b7c4c12af6a89eeeec24b7994",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_19240c07",
         "filename": "javascripts/modules/references/ReferencesDrawer.js",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2014-12-08T22:40:08Z",
       "side": 1,
       "message": "Not sure about any of this timeout. A view shouldn\u0027t really effect anything outside it. This is why we created OverlayManager",
+      "revId": "1b481a2d5302b34b7c4c12af6a89eeeec24b7994",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_ec2720b0",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2014-12-08T23:03:35Z",
+      "side": 1,
+      "message": "IMO this whole special treatment of reference drawers is a hack.   How could we otherwise prevent something outside of the view?",
+      "parentUuid": "2e9df725_19240c07",
       "revId": "1b481a2d5302b34b7c4c12af6a89eeeec24b7994",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
