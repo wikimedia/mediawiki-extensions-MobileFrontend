@@ -11,6 +11,14 @@
 		},
 		Icon = M.require( 'Icon' );
 
+	/**
+	 * Using the settings module looks at what sections were previously expanded on
+	 * existing page.
+	 *
+	 * @method
+	 * @returns {Object} representing open sections
+	 * @ignore
+	 */
 	function getExpandedSections() {
 		var expandedSections = $.parseJSON(
 			settings.get( 'expandedSections', false ) || '{}'
@@ -19,7 +27,8 @@
 		return expandedSections;
 	}
 
-	/*
+	/**
+	 * @ignore
 	 * Save expandedSections to localStorage
 	 */
 	function saveExpandedSections( expandedSections ) {
@@ -28,11 +37,12 @@
 		);
 	}
 
-	/*
+	/**
 	 * Given an expanded heading, store it to localStorage.
 	 * If the heading is collapsed, remove it from localStorage.
 	 *
 	 * @param {jQuery.Object} $heading - A heading belonging to a section
+	 * @ignore
 	 */
 	function storeSectionToggleState( $heading ) {
 		var headline = $heading.find( 'span' ).attr( 'id' ),
@@ -50,8 +60,9 @@
 		}
 	}
 
-	/*
+	/**
 	 * Expand sections that were previously expanded before leaving this page.
+	 * @ignore
 	 */
 	function expandStoredSections( $container ) {
 		var $sectionHeading, $headline,
@@ -71,9 +82,10 @@
 		} );
 	}
 
-	/*
+	/**
 	 * Clean obsolete (saved more than a day ago) expanded sections from
 	 * localStorage.
+	 * @ignore
 	 */
 	function cleanObsoleteStoredSections() {
 		var now = ( new Date() ).getTime(),
@@ -92,10 +104,11 @@
 		saveExpandedSections( expandedSections );
 	}
 
-	/*
+	/**
 	 * Given a heading, toggle it and any of its children
 	 *
 	 * @param {jQuery.Object} $heading A heading belonging to a section
+	 * @ignore
 	 */
 	function toggle( $heading ) {
 		var isCollapsed = $heading.is( '.open-block' ),
@@ -120,9 +133,10 @@
 		}
 	}
 
-	/*
+	/**
 	 * Enables toggling via enter and space keys
 	 *
+	 * @ignore
 	 * @param {jQuery.Object} $heading
 	 */
 	function enableKeyboardActions( $heading ) {
@@ -136,9 +150,10 @@
 		} );
 	}
 
-	/*
+	/**
 	 * Reveals an element and its parent section as identified by it's id
 	 *
+	 * @ignore
 	 * @param {String} selector A css selector that identifies a single element
 	 * @param {Object} $container jQuery element to search in
 	 */
@@ -163,6 +178,14 @@
 		} catch ( e ) {}
 	}
 
+	/**
+	 * Enables section toggling in a given container when wgMFCollapseSectionsByDefault
+	 * is enabled.
+	 *
+	 * @method
+	 * @param {jQuery.object} $container to apply toggling to
+	 * @ignore
+	 */
 	function enable( $container ) {
 		var tagName, expandSections, indicator,
 			$firstHeading,
@@ -221,20 +244,45 @@
 			}
 		} );
 
+		/**
+		 * Checks the existing hash and toggles open any section that contains the fragment.
+		 *
+		 * @method
+		 * @ignore
+		 */
 		function checkHash() {
-			var internalRedirect = mw.config.get( 'wgInternalRedirectTargetUrl' ),
-				internalRedirectHash = internalRedirect ? internalRedirect.split( '#' )[1] : false,
-				hash = window.location.hash;
-
+			var hash = window.location.hash;
 			if ( hash.indexOf( '#' ) === 0 ) {
 				reveal( hash, $container );
-			} else if ( internalRedirectHash ) {
+			}
+		}
+
+		/**
+		 * Checks the value of wgInternalRedirectTargetUrl and reveals the collapsed
+		 * section that contains it if present
+		 *
+		 * @method
+		 * @ignore
+		 */
+		function checkInternalRedirectAndHash() {
+			var internalRedirect = mw.config.get( 'wgInternalRedirectTargetUrl' ),
+				internalRedirectHash = internalRedirect ? internalRedirect.split( '#' )[1] : false;
+
+			if ( internalRedirectHash ) {
 				window.location.hash = internalRedirectHash;
 				reveal( internalRedirectHash, $container );
 			}
 		}
+
+		checkInternalRedirectAndHash();
 		checkHash();
-		$( '#content_wrapper a' ).on( 'click', checkHash );
+		$( '#content_wrapper a' ).on( 'click', function () {
+			// the link might be an internal link with a hash.
+			// if it is check if we need to reveal any sections.
+			if ( $( this ).attr( 'href' ).indexOf ( '#' ) > -1 ) {
+				checkHash();
+			}
+		} );
 
 		if ( M.isBetaGroupMember() && !M.isWideScreen() ) {
 			expandStoredSections( $container );
@@ -242,6 +290,12 @@
 		}
 	}
 
+	/**
+	 * Initialises toggling code.
+	 *
+	 * @method
+	 * @ignore
+	 */
 	function init( $container ) {
 		// distinguish headings in content from other headings
 		$( '#content' ).find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
