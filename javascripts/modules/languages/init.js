@@ -27,7 +27,7 @@
 		$( '#page-secondary-actions .languageSelector' ).on( 'click', function ( ev ) {
 			ev.preventDefault();
 			M.router.navigate( '/languages' );
-			MobileWebClickTracking.log( 'languages' );
+			MobileWebClickTracking.log( 'UI', 'languages' );
 		} );
 	}
 

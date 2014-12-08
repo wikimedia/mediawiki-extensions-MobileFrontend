@@ -24,35 +24,35 @@
 			} );
 
 		$( '#mw-mf-main-menu-button' ).on( 'click', function () {
-			MobileWebClickTracking.log( 'hamburger' );
+			MobileWebClickTracking.log( 'UI', 'hamburger' );
 		} );
 
-		MobileWebClickTracking.hijackLink( '.icon-home',
-			'hamburger-home' );
-		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'random' ),
-			'hamburger-random' );
-		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'nearby' ),
-			'hamburger-nearby' );
-		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'watchlist' ),
-			'hamburger-watchlist' );
-		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'settings' ),
-			'hamburger-settings' );
-		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'uploads' ),
-			'hamburger-uploads' );
-		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'profile' ),
-			'hamburger-profile' );
-		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'anon' ),
-			'hamburger-login' );
-		MobileWebClickTracking.hijackLink( mainMenuIconSelector( 'secondary-logout' ),
-			'hamburger-logout' );
-		MobileWebClickTracking.hijackLink( $( '#mw-mf-last-modified a span' ).parent(),
+		MobileWebClickTracking.hijackLink( 'MainMenu', '.icon-home',
+			'home' );
+		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'random' ),
+			'random' );
+		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'nearby' ),
+			'nearby' );
+		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'watchlist' ),
+			'watchlist' );
+		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'settings' ),
+			'settings' );
+		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'uploads' ),
+			'uploads' );
+		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'profile' ),
+			'profile' );
+		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'anon' ),
+			'login' );
+		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'secondary-logout' ),
+			'logout' );
+		MobileWebClickTracking.hijackLink( 'UI', $( '#mw-mf-last-modified a span' ).parent(),
 			'lastmodified-history' );
-		MobileWebClickTracking.hijackLink( $profileLink, 'lastmodified-profile' );
-		MobileWebClickTracking.hijackLink( '.nearby-button', 'nearby-button' );
-		MobileWebClickTracking.hijackLink( '.fontchanger.link', 'fontchaner-menu' );
-		MobileWebClickTracking.hijackLink( '.fontchanger-size1', 'fontchanger-size1' );
-		MobileWebClickTracking.hijackLink( '.fontchanger-size2', 'fontchanger-size2' );
-		MobileWebClickTracking.hijackLink( '.fontchanger-size3', 'fontchanger-size3' );
+		MobileWebClickTracking.hijackLink( 'UI', $profileLink, 'lastmodified-profile' );
+		MobileWebClickTracking.hijackLink( 'UI', '.nearby-button', 'nearby-button' );
+		MobileWebClickTracking.hijackLink( 'UI', '.fontchanger.link', 'fontchanger-menu' );
+		MobileWebClickTracking.hijackLink( 'UI', '.fontchanger-size1', 'fontchanger-size1' );
+		MobileWebClickTracking.hijackLink( 'UI', '.fontchanger-size2', 'fontchanger-size2' );
+		MobileWebClickTracking.hijackLink( 'UI', '.fontchanger-size3', 'fontchanger-size3' );
 	} );
 
 	MobileWebClickTracking.logPastEvent();

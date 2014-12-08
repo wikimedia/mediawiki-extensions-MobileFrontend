@@ -21,7 +21,7 @@
 	 */
 	function initButton() {
 		$( '.category-button' ).removeClass( 'hidden' );
-		MobileWebClickTracking.hijackLink( '.category-button', 'category-button' );
+		MobileWebClickTracking.hijackLink( 'UI', '.category-button', 'category-button' );
 	}
 
 	$( initButton );

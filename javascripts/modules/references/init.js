@@ -15,7 +15,7 @@
 		var $dest = $( this ),
 			href = $dest.attr( 'href' );
 
-		MobileWebClickTracking.log( 'reference', href );
+		MobileWebClickTracking.log( 'UI', 'reference', href );
 		drawer.render( {
 			title: $dest.text(),
 			text: getReference( href ).html()

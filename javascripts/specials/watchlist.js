@@ -22,18 +22,18 @@
 				enhance: true
 			} );
 			watchlist.on( 'unwatch', function () {
-				schema.log( actionNamePrefix + 'unwatch' );
+				schema.log( 'Watchlist', actionNamePrefix + 'unwatch' );
 			} );
 			watchlist.on( 'watch', function () {
-				schema.log( actionNamePrefix + 'watch' );
+				schema.log( 'Watchlist', actionNamePrefix + 'watch' );
 			} );
 		}
 
 		// Register EventLogging events
-		schema.hijackLink( '.button-bar a', actionNamePrefix + 'switch' );
-		schema.hijackLink( '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
-		schema.hijackLink( '.page-list .title', actionNamePrefix + 'view' );
-		schema.hijackLink( '.more', actionNamePrefix + 'more' );
+		schema.hijackLink( 'Watchlist', '.button-bar a', actionNamePrefix + 'switch' );
+		schema.hijackLink( 'Watchlist', '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
+		schema.hijackLink( 'Watchlist', '.page-list .title', actionNamePrefix + 'view' );
+		schema.hijackLink( 'Watchlist', '.more', actionNamePrefix + 'more' );
 	}
 
 	$( function () {

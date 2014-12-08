@@ -34,7 +34,7 @@
 	// than linking to Special:Notifications.
 	$( function () {
 		$btn.on( 'click', function () {
-			schema.log( 'notifications' );
+			schema.log( 'UI', 'notifications' );
 			M.router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay

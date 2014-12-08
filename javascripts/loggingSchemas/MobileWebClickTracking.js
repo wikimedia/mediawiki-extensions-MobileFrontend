@@ -6,15 +6,40 @@
 	var s = M.require( 'settings' );
 
 	/**
-	 * Track an event and record it
+	 * Check whether 'schema' is one of the predefined schemas.
+	 * @param {string} [schema] name. Possible values are:
+	 *   * Watchlist
+	 *   * Diff
+	 *   * MainMenu
+	 *   * UI
+	 */
+	function assertSchema( schema ) {
+		var schemas = [ 'Watchlist', 'Diff', 'MainMenu', 'UI' ];
+
+		if ( $.inArray( schema, schemas ) === -1 ) {
+			throw new Error(
+				'Invalid schema "' + schema + '". ' +
+				'Possible values are: "' + schemas.join( '", "' ) + '".'
+			);
+		}
+	}
+
+	/**
+	 * Track an event and record it. Throw an error if schema is not
+	 * one of the predefined values.
 	 *
 	 * @method
+	 * @param {string} [schema] name. Possible values are:
+	 *   * Watchlist
+	 *   * Diff
+	 *   * MainMenu
+	 *   * UI
 	 * @param {string} name of click tracking event to log
 	 * @param {string} [destination] of the link that has been clicked if applicable.
 	 */
-	function log( name, destination ) {
-		var
-			user = M.require( 'user' ),
+	function log( schema, name, destination ) {
+		assertSchema( schema );
+		var user = M.require( 'user' ),
 			username = user.getName(),
 			data = {
 				name: name,
@@ -26,33 +51,48 @@
 			data.username = username;
 			data.userEditCount = mw.config.get( 'wgUserEditCount' );
 		}
-		return M.log( 'MobileWebClickTracking', data );
+		return M.log( 'MobileWeb' + schema + 'ClickTracking', data );
 	}
 
 	/*
 	 * Using localStorage track an event but delay recording it on the
-	 * server until the next page load
+	 * server until the next page load. Throw an error if schema is not
+	 * one of the predefined values.
 	 *
 	 * @method
+	 * @param {string} [schema] name. Possible values are:
+	 *   * Watchlist
+	 *   * Diff
+	 *   * MainMenu
+	 *   * UI
 	 * @param {string} name of click tracking event to log
 	 * @param {string} href the link that has been clicked.
 	 */
-	function futureLog( name, href ) {
+	function futureLog( schema, name, href ) {
+		assertSchema( schema );
+		s.save( 'MobileWebClickTracking-schema', schema );
 		s.save( 'MobileWebClickTracking-name', name );
 		s.save( 'MobileWebClickTracking-href', href );
 	}
 
 	/**
-	 * Record a click to a link in the schema
+	 * Record a click to a link in the schema. Throw an error if schema is not
+	 * one of the predefined values.
 	 *
 	 * @method
+	 * @param {string} [schema] name. Possible values are:
+	 *   * Watchlist
+	 *   * Diff
+	 *   * MainMenu
+	 *   * UI
 	 * @param {string} selector of element
-	 * @param {string} name unique to this click tracking event that will allow you to distinguish
-	 *  it from others.
+	 * @param {string} name unique to this click tracking event that will allow
+	 * you to distinguish it from others.
 	 */
-	function hijackLink( selector, name ) {
+	function hijackLink( schema, selector, name ) {
+		assertSchema( schema );
 		$( selector ).on( 'click', function () {
-			futureLog( name, $( this ).attr( 'href' ) );
+			futureLog( schema, name, $( this ).attr( 'href' ) );
 		} );
 	}
 
@@ -62,16 +102,18 @@
 	 * @method
 	 */
 	function logPastEvent() {
-		var name = s.get( 'MobileWebClickTracking-name' ),
+		var schema = s.get( 'MobileWebClickTracking-schema' ),
+			name = s.get( 'MobileWebClickTracking-name' ),
 			href = s.get( 'MobileWebClickTracking-href' );
 
 		// Make sure they do not log a second time...
-		if ( name && href ) {
+		if ( schema && name && href ) {
+			s.remove( 'MobileWebClickTracking-schema' );
 			s.remove( 'MobileWebClickTracking-name' );
 			s.remove( 'MobileWebClickTracking-href' );
 			// Since MobileWebEditing schema declares the dependencies to
 			// EventLogging and the schema we can be confident this will always log.
-			log( name, href );
+			log( schema, name, href );
 		}
 	}
 
