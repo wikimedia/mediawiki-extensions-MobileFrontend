@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_074a6cc8",
+        "filename": "javascripts/Icon.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "title attribute text would be clearer here.",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_c71b24d3",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "Whether the current user",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_4727140e",
+        "filename": "javascripts/modules/PageList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "array of objects describing a page\n(worried this will get confused with Page)",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_e723c0fe",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "This makes me think it would be cool if we could find a better way to do messages in templates, e.g. map all messages to a msg object.\n\ne.g. View.messages \u003d {};\nand then in template do something like {{msg.foo}}\n(but i guess this is getting into mixin territory)\n\ne.g. see message\nMaybe in future it would be better to just link to the message or simply document like so:\n @cfg {String} defaults.anonMsg message used by template",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_074fccc1",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "This is not very helpful documentation. Maybe since it\u0027s alpha just document as\n@cfg {Array} defaults.rows Description of rows to show in Wikidata infobox",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_87d2fcd3",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "Just say it\u0027s the value of wgScript",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_a7ea9871",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "No need to repeat {Section} here.\n * @cfg {Section} defaults.section that is currently being viewed in overlay",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_42194226",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "Not sure stating the default is useful here. Makybe just say message in first pane of main dialog?",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_e215eeea",
+        "filename": "javascripts/modules/wikigrok/WikiGrokMoreInfo.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-08T19:26:40Z",
+      "side": 1,
+      "message": "Put on newline",
+      "revId": "9a0fb9270f703ec1ee242ad9d86171e66b4c3d47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
