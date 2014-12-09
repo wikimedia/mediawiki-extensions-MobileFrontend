@@ -76,14 +76,22 @@
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' )
 		} ),
+		/** @inheritdoc **/
 		templatePartials: {
 			switcher: mw.template.get( 'mobile.editor.common', 'switcher.hogan' ),
 			editHeader: mw.template.get( 'mobile.editor.common', 'editHeader.hogan' ),
 			previewHeader: mw.template.get( 'mobile.editor.common', 'previewHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		},
+		/** @inheritdoc **/
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
+		/** @inheritdoc **/
 		className: 'overlay editor-overlay',
+		/**
+		 * Logs an event to  http://meta.wikimedia.org/wiki/Schema:MobileWebEditing
+		 * @param {String} action name in workflow.
+		 * @param {String} [errorText] error to report if applicable
+		 */
 		log: function ( action, errorText ) {
 			var
 				data = {
@@ -162,6 +170,7 @@
 				expires: 30
 			} );
 		},
+		/** @inheritdoc **/
 		initialize: function ( options ) {
 			if ( !options.previewingMsg ) {
 				options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
@@ -196,11 +205,23 @@
 
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
+		/**
+		 * Report errors back to the user. Silently record the error using EventLogging.
+		 * @param {String} msg key of message to display to user
+		 * @param {String} errorText to log to EventLogging
+		 */
 		reportError: function ( msg, errorText ) {
 			this.log( 'error', errorText );
 			toast.show( msg, 'toast error' );
 		},
+		/**
+		 * Prepares the penultimate screen before saving.
+		 * Expects to be overriden by child class.
+		 * FIXME: EditorOverlay and VisualEditorOverlay have common
+		 * @private
+		 */
 		_prepareForSave: function () {
+			this._showHidden( '.save-header, .save-panel' );
 			this.log( 'save' );
 			// Scroll to the top of the page, so that the summary input is visible
 			// (even if overlay was scrolled down when editing) and weird iOS header
@@ -208,6 +229,11 @@
 			// screen, instead staying lower until a subsequent scroll event).
 			window.scrollTo( 0, 1 );
 		},
+		/**
+		 * Executed when the editor clicks the save button. Expects to be overriden by child
+		 * class. Checks if the save needs to be confirmed.
+		 * @private
+		 */
 		_save: function () {
 			this.confirmAborted = false;
 			// Ask for confirmation in some cases
@@ -217,6 +243,7 @@
 			}
 			this.log( 'submit' );
 		},
+		/** @inheritdoc **/
 		postRender: function () {
 			var self = this;
 			this.$spinner = self.$( '.spinner' );
@@ -254,6 +281,10 @@
 				} );
 			} );
 		},
+		/**
+		 * Allow prompts user to confirm before closing and losing edit.
+		 * @inheritdoc
+		 */
 		hide: function ( force ) {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 			if ( force || !this._hasChanged() || window.confirm( confirmMessage ) ) {
@@ -262,6 +293,17 @@
 				return false;
 			}
 		},
+		/**
+		 * Checks whether the state of the thing being edited as changed. Expects to be
+		 * implemented by child class.
+		 * @private
+		 */
+		_hasChanged: $.noop(),
+		/**
+		 * Reveal the captcha in the View
+		 * @param {String} url a url to an image representing the current captcha.
+		 * @private
+		 */
 		_showCaptcha: function ( url ) {
 			var self = this,
 				$input = this.$( '.captcha-word' );
