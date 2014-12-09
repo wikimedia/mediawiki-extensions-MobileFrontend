@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_2013c906",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-09T11:46:15Z",
+      "side": 1,
+      "message": "… unless the schema parameter is invalid.",
+      "revId": "61e728d5cf45a826f469b8ac68bb740d372d381f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_40eb75db",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-09T11:46:15Z",
+      "side": 1,
+      "message": "Ignoring programmer error – most likely a typo – might not be the best strategy here. Throw an error instead?",
+      "revId": "61e728d5cf45a826f469b8ac68bb740d372d381f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
