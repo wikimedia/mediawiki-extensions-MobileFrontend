@@ -10,14 +10,15 @@
 				subject: 'title',
 				version: 'a',
 				userToken: 'token',
-				taskToken: 'taskToken'
+				taskToken: 'taskToken',
+				campaignName: 'testCampaign'
 			} );
 
 			this.spy = this.sandbox.stub( Api.prototype, 'postWithToken' );
 		}
 	} );
 
-	QUnit.test( 'recordClaims', 8, function ( assert ) {
+	QUnit.test( 'recordClaims', 9, function ( assert ) {
 		var callArgs,
 			claims = [ { a: 1 }, { b: 2 } ];
 		this.api.recordClaims( claims );
@@ -30,6 +31,7 @@
 		assert.strictEqual( callArgs[1].subject, 'title' );
 		assert.strictEqual( callArgs[1].user_token, 'token' );
 		assert.strictEqual( callArgs[1].task_token, 'taskToken' );
+		assert.strictEqual( callArgs[1].campaign_name, 'testCampaign' );
 	} );
 
 }( jQuery, mw.mobileFrontend ) );
