@@ -16,6 +16,24 @@
       "revId": "3575bf9cc25d253f938fe4480e7c9d34fdbda036",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_9f8237a8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1038,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-09T18:06:19Z",
+      "side": 1,
+      "message": "wfMessage creates a new Message object with the user language ($wgLang). $this-\u003emsg() is defined in ContextSource and will create a new Message object and set the Context (the actual one) as the context used by the Message object (the messages will be in the language set in Context (which is probably the uselang parameter or the user language, too).",
+      "parentUuid": "2e9df725_1f06278a",
+      "revId": "3575bf9cc25d253f938fe4480e7c9d34fdbda036",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
