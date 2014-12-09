@@ -29,6 +29,7 @@
 			options.editSwitcher = isVE;
 			options.isVisualEditor = isVE;
 		},
+		/** @inheritdoc **/
 		initialize: function ( options ) {
 			var self = this;
 			this.applyHeaderOptions( options, true );
@@ -39,6 +40,9 @@
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
 			this.initializeSwitcher();
 		},
+		/**
+		 * Destroy the existing VisualEditor target.
+		 */
 		destroyTarget: function () {
 			if ( this.target ) {
 				// keyboard stays open on iOS when we close the editor if we don't blur
@@ -48,6 +52,7 @@
 				this.docToSave = null;
 			}
 		},
+		/** @inheritdoc **/
 		show: function () {
 			EditorOverlayBase.prototype.show.apply( this, arguments );
 			if ( this.target === undefined ) {
@@ -82,6 +87,7 @@
 				} );
 			}
 		},
+		/** @inheritdoc **/
 		hide: function () {
 			var retval = EditorOverlayBase.prototype.hide.apply( this, arguments );
 			if ( retval ) {
@@ -89,6 +95,7 @@
 			}
 			return retval;
 		},
+		/** @inheritdoc **/
 		postRender: function ( options ) {
 			var self = this;
 			// Save button
@@ -108,18 +115,26 @@
 			this.$( '.surface' ).hide();
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 		},
+		/**
+		 * Reveal the editing interface.
+		 */
 		switchToEditor: function () {
 			this._showHidden( '.initial-header' );
 			this.$( '.surface' ).show();
 			this.docToSave = false;
 		},
+		/**
+		 * Disables the VE editor interface in preparation for saving.
+		 * @private
+		 * @inheritdoc
+		 */
 		_prepareForSave: function () {
 			// need to blur contenteditable to be sure that keyboard is properly closed
 			this.$( '[contenteditable]' ).blur();
 			this.$( '.surface' ).hide();
-			this._showHidden( '.save-header, .save-panel' );
 			EditorOverlayBase.prototype._prepareForSave.apply( this, arguments );
 		},
+		/** @inheritdoc **/
 		_save: function () {
 			var
 				self = this,
@@ -151,6 +166,11 @@
 				self.target.save( self.docToSave, options );
 			} );
 		},
+		/**
+		 * Loads an {EditorOverlay} and replaces the existing {VisualEditorOverlay}
+		 *
+		 * @param {Object} options to pass to new EditorOverlay
+		 */
 		switchToSourceEditor: function ( options ) {
 			var self = this;
 			this.log( 'switch' );
@@ -167,11 +187,15 @@
 				M.overlayManager.replaceCurrent( new EditorOverlay( options ) );
 			} );
 		},
+		/** @inheritdoc **/
 		onSave: function () {
 			EditorOverlayBase.prototype.onSave.apply( this, arguments );
 			this.clearSpinner();
 			this.destroyTarget();
 		},
+		/**
+		 * Event handler.
+		 */
 		onSurfaceReady: function () {
 			this.clearSpinner();
 			this.$( '.surface' ).show();
@@ -184,29 +208,51 @@
 			// exist when postRender is executed
 			this._fixIosHeader( '[contenteditable]' );
 		},
+		/**
+		 * Event handler.
+		 */
 		onTransact: function () {
 			this.hasChanged = true;
 			this.$continueBtn.prop( 'disabled', false );
 		},
+		/**
+		 * Event handler.
+		 */
 		onLoadError: function () {
 			this.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), 've-load-error' );
 		},
+		/**
+		 * Event handler.
+		 */
 		onSerializeError: function ( jqXHR, status ) {
 			this.reportError( mw.msg( 'visualeditor-serializeerror', status ), 've-serialize-error' );
 		},
+		/**
+		 * Event handler.
+		 */
 		onConflictError: function () {
 			this.reportError( mw.msg( 'mobile-frontend-editor-error-conflict' ), 've-conflict-error' );
 		},
+		/**
+		 * Event handler.
+		 */
 		onShowChangesError: function () {
 			this.reportError( mw.msg( 'visualeditor-differror' ), 've-show-changes-error' );
 		},
+		/**
+		 * Event handler.
+		 */
 		onSaveError: function () {
 			this.reportError( mw.msg( 'mobile-frontend-editor-error' ), 've-save-error' );
 		},
+		/**
+		 * Event handler.
+		 */
 		onSaveErrorCaptcha: function ( editApi ) {
 			this.captchaId = editApi.captcha.id;
 			this._showCaptcha( editApi.captcha.url );
 		},
+		/** @inheritdoc **/
 		_hasChanged: function () {
 			return this.hasChanged;
 		}
