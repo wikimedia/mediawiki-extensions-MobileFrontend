@@ -81,7 +81,7 @@
 
 	/**
 	 * Try to load image and resolve or fail when it loads / or not.
-	 * @returns {$.Deferred}
+	 * @returns {jQuery.Deferred}
 	 */
 	HeaderImage.prototype.load = function () {
 		var loaded = $.Deferred(),
