@@ -98,6 +98,8 @@
 	"mobile-frontend-enable-images": "Enable images on mobile site",
 	"mobile-frontend-expand-sections-description": "Always expand all sections when navigating to a new page.",
 	"mobile-frontend-expand-sections-status": "Expand all sections",
+	"mobile-frontend-fontchanger-link": "Font size",
+	"mobile-frontend-fontchanger-desc": "Increase or decrease the size of the text for readability.",
 	"mobile-frontend-featured-article": "Today's featured content",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Images on {{SITENAME}} come from Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Contribute your images. Help {{SITENAME}} come to life!",

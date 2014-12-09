@@ -49,6 +49,10 @@
 			'lastmodified-history' );
 		MobileWebClickTracking.hijackLink( $profileLink, 'lastmodified-profile' );
 		MobileWebClickTracking.hijackLink( '.nearby-button', 'nearby-button' );
+		MobileWebClickTracking.hijackLink( '.fontchanger.link', 'fontchaner-menu' );
+		MobileWebClickTracking.hijackLink( '.fontchanger-size1', 'fontchanger-size1' );
+		MobileWebClickTracking.hijackLink( '.fontchanger-size2', 'fontchanger-size2' );
+		MobileWebClickTracking.hijackLink( '.fontchanger-size3', 'fontchanger-size3' );
 	} );
 
 	MobileWebClickTracking.logPastEvent();

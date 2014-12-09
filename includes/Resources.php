@@ -1011,6 +1011,29 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	'mobile.fontchanger' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.settings',
+			'mobile.templates',
+			'mobile.drawers',
+		),
+		'scripts' => array(
+			'javascripts/modules/fontchanger/FontChanger.js',
+			'javascripts/modules/fontchanger/init.js',
+		),
+		'styles' => array(
+			'less/modules/fontchanger/FontChanger.less'
+		),
+		'templates' => array(
+			'FontChanger.hogan' => 'templates/modules/fontchanger/FontChanger.hogan',
+		),
+		'messages' => array(
+			'mobile-frontend-fontchanger-desc'
+		),
+		'position' => 'top',
+	),
+
 	// Custom ResourceLoaderModule classes
 	'mobile.site' => array(
 		'dependencies' => array( 'mobile.startup' ),
@@ -1299,6 +1322,7 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in alpha should be listed below here.
 			'mobile.infobox',
 			'mobile.bannerImage',
+			'mobile.fontchanger',
 		),
 		'scripts' => array(
 			'javascripts/modules/infobox/init.js',

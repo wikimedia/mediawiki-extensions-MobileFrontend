@@ -1,0 +1,8 @@
+{{{cancelButton}}}
+<p>{{descriptionMsg}}</p>
+<div class="mw-ui-button-group sizes">
+  <div class="mw-ui-button fontchanger-size1 {{size1}}" data-size="70">A</div>
+  <div class="mw-ui-button fontchanger-size2 {{size2}}" data-size="100">A</div>
+  <div class="mw-ui-button fontchanger-size3 {{size3}}" data-size="130">A</div>
+</div>
+<div style="clear:both"></div>
