@@ -33,6 +33,24 @@
       "revId": "61e728d5cf45a826f469b8ac68bb740d372d381f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_3f8523a0",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-09T18:01:11Z",
+      "side": 1,
+      "message": "Is throwing an error necessary? It would be equal to throwing an error for selecting a non-existing DOM element with jQuery. For example, in this code: schema.hijackLink( \u0027Diff\u0027, \u0027.mw-mf-user a\u0027, \u0027user\u0027 );, you are supposed to make sure that \u0027.mw-mf-user a\u0027 exists, jQuery doesn\u0027t thrown an error, right?",
+      "parentUuid": "2e9df725_40eb75db",
+      "revId": "61e728d5cf45a826f469b8ac68bb740d372d381f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
