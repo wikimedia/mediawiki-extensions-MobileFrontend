@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_e5b733d2",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-09T09:44:24Z",
+      "side": 1,
+      "message": "You are right phuedx, and yes, that is the intended behavior. From what i understand we are doing this in order to get an image as quickly as possible (since it may be the case that the image url reconstructed fails to load (because of the server maybe? not sure).\n\nI\u0027ve considered loading the images sequentially (if the first one fails, try the second one, etc), but I wasn\u0027t sure if that would cause a lot waiting in case of failed images. \n\nIn any case, I agree with Jon (first image is supposed to be the preferred one) so I\u0027ll change this to be *series* instead of *parallel*",
+      "parentUuid": "2e9df725_594374b6",
+      "revId": "cb910aa3fc101778ae48490c752b900b3f01b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_413384f3",
         "filename": "javascripts/modules/bannerImage/BannerImage.js",
         "patchSetId": 4
@@ -48,6 +66,24 @@
       "writtenOn": "2014-12-08T11:42:32Z",
       "side": 1,
       "message": "s/this/self",
+      "revId": "cb910aa3fc101778ae48490c752b900b3f01b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_65c3233e",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-09T09:44:24Z",
+      "side": 1,
+      "message": "Done, I need to investigate why this changed",
+      "parentUuid": "2e9df725_413384f3",
       "revId": "cb910aa3fc101778ae48490c752b900b3f01b1fb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
