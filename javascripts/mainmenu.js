@@ -35,12 +35,11 @@
 				openNavigationDrawer();
 			}
 			ev.preventDefault();
-			ev.stopPropagation();
 		} );
 
 		// close navigation if content tapped
 		$( '#mw-mf-page-center' ).on( 'click', function ( ev ) {
-			if ( isOpen() ) {
+			if ( ev.target.id !== 'mw-mf-main-menu-button' && isOpen() ) {
 				closeNavigationDrawers();
 				ev.preventDefault();
 			}
