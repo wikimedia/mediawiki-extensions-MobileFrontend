@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_02d81057",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1177,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T18:51:10Z",
+      "side": 1,
+      "message": "mobilediff.js doesn\u0027t use toast anywhere.\nWrong dependency me thinks!",
+      "revId": "5f246f9e4cb07491fa92a4c5e60045efbfb31801",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
