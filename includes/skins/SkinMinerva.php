@@ -68,12 +68,13 @@ class SkinMinerva extends SkinTemplate {
 		// example, on a special page)
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 
+		$tpl->set( 'site_urls', $this->getSiteLinks() );
+
 		// Construct various Minerva-specific interface elements
 		$this->preparePageContent( $tpl );
 		$this->prepareHeaderAndFooter( $tpl );
 		$this->prepareMenuButton( $tpl );
 		$this->prepareBanners( $tpl );
-		$this->prepareSiteLinks( $tpl );
 		$this->prepareWarnings( $tpl );
 		$this->preparePageActions( $tpl );
 		$this->prepareUserButton( $tpl );
@@ -682,10 +683,10 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Prepare site links in footer
-	 * @param BaseTemplate $tpl
+	 * Returns an array of sitelinks to add into the main menu footer.
+	 * @return Array array of site links
 	 */
-	protected function prepareSiteLinks( BaseTemplate $tpl ) {
+	protected function getSiteLinks() {
 		$siteLinks = array(
 			array(
 				'title' => 'aboutpage',
@@ -709,7 +710,8 @@ class SkinMinerva extends SkinTemplate {
 				);
 			}
 		}
-		$tpl->set( 'site_urls', $urls );
+
+		return $urls;
 	}
 
 	/**
