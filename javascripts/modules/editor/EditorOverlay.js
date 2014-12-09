@@ -78,6 +78,7 @@
 			}
 			// be explicit here. This may have been initialized from VE.
 			options.isVisualEditor = false;
+			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
 			if ( this.isVisualEditorEnabled() ) {
 				this.initializeSwitcher();
