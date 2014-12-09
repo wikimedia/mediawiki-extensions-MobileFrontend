@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_68bd33ad",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T21:03:05Z",
+      "side": 1,
+      "message": "This is hacky by the way. Would be better to refactor SkinMinerva to make this nicer.",
+      "revId": "5b311488f279092c32f2060083e034e3c894f5eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
