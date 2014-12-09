@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e9df725_2260ac9f",
+        "filename": "less/content/borders.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T18:39:20Z",
+      "side": 1,
+      "message": "Not sure about the border name. I think it might be better to distribute this in another way.",
+      "revId": "ce34dc7d2d3dee384680da3337480da38e84bd20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_826e6092",
+        "filename": "less/content/borders.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T18:39:20Z",
+      "side": 1,
+      "message": "Changing these properties in the global scope scares me. I\u0027d be extremely surprised if there are not unwanted side effects. At least consider restricting to #content",
+      "revId": "ce34dc7d2d3dee384680da3337480da38e84bd20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_425138dc",
         "filename": "less/content/borders.less",
         "patchSetId": 1
@@ -13,6 +47,23 @@
       "writtenOn": "2014-12-09T18:37:40Z",
       "side": 1,
       "message": "uhhh ohh red red reds",
+      "revId": "ce34dc7d2d3dee384680da3337480da38e84bd20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_42685884",
+        "filename": "less/content/borders.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T18:39:20Z",
+      "side": 1,
+      "message": "Do we really need important here?",
       "revId": "ce34dc7d2d3dee384680da3337480da38e84bd20",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
