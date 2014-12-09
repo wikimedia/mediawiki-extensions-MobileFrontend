@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_ca16c4ac",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-09T06:36:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e9df725_27f44883",
+      "revId": "58b2ed7c4ac2ca4138652b2872a88cca146f528b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_47f15491",
         "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-08T18:17:34Z",
       "side": 1,
       "message": "Why not use self.$( \u0027.details\u0027 ).is( \u0027:visible\u0027 ) ?",
+      "revId": "58b2ed7c4ac2ca4138652b2872a88cca146f528b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_ea1b80d2",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-09T06:36:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e9df725_47f15491",
       "revId": "58b2ed7c4ac2ca4138652b2872a88cca146f528b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
