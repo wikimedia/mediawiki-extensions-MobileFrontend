@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_a53e0b25",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-09T09:46:21Z",
+      "side": 1,
+      "message": "Totally true! Done",
+      "parentUuid": "2e9df725_67e9fd7a",
+      "revId": "afd7e5da79cdecf1c4d711656fd20d723cf54d58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_a7ef0582",
         "filename": "javascripts/modules/bannerImage/BannerImage.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-05T18:40:10Z",
       "side": 1,
       "message": "should use the ratio variable?",
+      "revId": "afd7e5da79cdecf1c4d711656fd20d723cf54d58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_654003a9",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-09T09:46:21Z",
+      "side": 1,
+      "message": "Done by Jon",
+      "parentUuid": "2e9df725_a7ef0582",
       "revId": "afd7e5da79cdecf1c4d711656fd20d723cf54d58",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
