@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_4e5e3f19",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-09T22:56:57Z",
+      "side": 1,
+      "message": "What do you mean by \u0027no space after than\u0027? Do you mean \"no purpose other than\"?",
+      "revId": "c4f9bc92d6ea90f370fc5c51cb05ce0333788f5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
