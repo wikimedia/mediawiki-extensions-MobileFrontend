@@ -84,6 +84,13 @@
 			} );
 
 			$( window ).on( 'resize', $.proxy( this, '_positionImage' ) );
+
+			this.$details = this.$( '.details' );
+
+			this.$( '.image-wrapper' ).on( 'click', function () {
+				self.$details.toggle();
+				self._positionImage();
+			} );
 		},
 
 		show: function () {
@@ -92,7 +99,8 @@
 		},
 
 		_positionImage: function () {
-			var detailsHeight = this.$( '.details' ).outerHeight(),
+			// with a hidden details box we have a little bit more space, we just need to use it
+			var detailsHeight = !this.$details.is( ':visible' ) ? 0 : this.$details.outerHeight(),
 				windowWidth = $( window ).width(),
 				windowHeight = $( window ).height() - detailsHeight,
 				windowRatio = windowWidth / windowHeight,
