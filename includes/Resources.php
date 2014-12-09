@@ -284,6 +284,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'switcher.hogan' => 'templates/modules/editor/switcher.hogan',
+			'editHeader.hogan' => 'templates/modules/editor/editHeader.hogan',
+			'previewHeader.hogan' => 'templates/modules/editor/previewHeader.hogan',
+			'saveHeader.hogan' => 'templates/modules/editor/saveHeader.hogan',
 			'EditorOverlayBase.hogan' => 'templates/modules/editor/EditorOverlayBase.hogan',
 			'EditorOverlayAnonWarning.hogan' => 'templates/modules/editor/EditorOverlayAnonWarning.hogan',
 		),
@@ -337,8 +340,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/VisualEditorOverlay.js',
 		),
 		'templates' => array(
-			'OverlayHeader.hogan' => 'templates/modules/editor/VisualEditorOverlayHeader.hogan',
-			'OverlayContent.hogan' => 'templates/modules/editor/VisualEditorOverlay.hogan',
+			'contentVE.hogan' => 'templates/modules/editor/contentVE.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-page-edit-summary',
@@ -355,8 +357,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/EditorOverlay.js',
 		),
 		'templates' => array(
-			'header.hogan' => 'templates/modules/editor/EditorOverlayHeader.hogan',
-			'content.hogan' => 'templates/modules/editor/EditorOverlay.hogan',
+			'content.hogan' => 'templates/modules/editor/content.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-editor-viewing-source-page',

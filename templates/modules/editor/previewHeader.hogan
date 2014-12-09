@@ -1,0 +1,9 @@
+<div class="overlay-header save-header hideable hidden">
+	<ul>
+		<li>{{{backButton}}}</li>
+	</ul>
+	<div class="overlay-title">
+		<h2>{{{previewingMsg}}}</h2>
+	</div>
+	<div class="overlay-action"><button class="submit">{{saveMsg}}</button></div>
+</div>
