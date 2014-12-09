@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_2c074821",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-09T01:11:54Z",
+      "side": 1,
+      "message": "not needed, not used anywhere.",
+      "revId": "de6f046b61566e484a0f81634524f133fd92f286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
