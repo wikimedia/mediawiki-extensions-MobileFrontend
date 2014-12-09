@@ -34,6 +34,24 @@
       "revId": "3575bf9cc25d253f938fe4480e7c9d34fdbda036",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_82c6604d",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1038,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T19:01:21Z",
+      "side": 1,
+      "message": "Yeh I use this because it is a static method and has no concept of context.\nIt confuses me most of the time but this is the general rule - use msg when you have a context, wfMessage when you don\u0027t.",
+      "parentUuid": "2e9df725_9f8237a8",
+      "revId": "3575bf9cc25d253f938fe4480e7c9d34fdbda036",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
