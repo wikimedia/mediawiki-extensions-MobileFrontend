@@ -87,6 +87,24 @@
       "revId": "cb910aa3fc101778ae48490c752b900b3f01b1fb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_452aa7d8",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-09T09:47:46Z",
+      "side": 1,
+      "message": "I\u0027m gonna revert this to patchset 3 version, no need to be recomputing the md5 stuff again all the time.\n\nMaybe there is a cleaner way of getting the url parametrized, I\u0027ll investigate.",
+      "parentUuid": "2e9df725_65c3233e",
+      "revId": "cb910aa3fc101778ae48490c752b900b3f01b1fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
