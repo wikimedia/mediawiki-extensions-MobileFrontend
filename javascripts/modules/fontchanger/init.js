@@ -2,10 +2,7 @@
 	var settings = M.require( 'settings' ),
 		mainmenu = M.require( 'mainmenu' ),
 		userFontSize = settings.get( 'userFontSize', true ),
-		FontChanger = M.require( 'modules/fontchanger/FontChanger' ),
-		size1,
-		size2,
-		size3;
+		FontChanger = M.require( 'modules/fontchanger/FontChanger' );
 
 	// set the user font size if needed
 	if ( userFontSize !== '100' ) {
@@ -17,11 +14,7 @@
 		.removeClass( 'hidden' )
 		.on( 'click', function () {
 			// the different sizes
-			var options = {
-				size1: size1,
-				size2: size2,
-				size3: size3
-			}, fcDrawer = new FontChanger( options );
+			var fcDrawer = new FontChanger( {} );
 
 			// close the main menu drawer
 			mainmenu.closeNavigationDrawers();
