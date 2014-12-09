@@ -565,6 +565,11 @@ $wgMFEnableWikiGrokOnAllDevices = false;
 $wgMFEnableBeta = false;
 
 /**
+ * Optional string to mobile friendly url for donation page.
+ */
+$wgMFDonationUrl = false;
+
+/**
  * In which namespaces sections shoudn't be collapsed
  */
 $wgMFNamespacesWithoutCollapsibleSections = array(

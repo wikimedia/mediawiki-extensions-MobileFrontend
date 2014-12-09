@@ -22,4 +22,20 @@ class MinervaTemplateBeta extends MinervaTemplate {
 			parent::renderPageActions( $data );
 		}
 	}
+
+	/**
+	 * Get page secondary actions
+	 */
+	protected function getSecondaryActions() {
+		global $wgMFDonationUrl;
+		$result = parent::getSecondaryActions();
+
+		if ( $wgMFDonationUrl ) {
+			$result['donation'] = array(
+				'url' => $wgMFDonationUrl,
+				'label' => wfMessage( 'mobile-frontend-donate-button-label' )->text()
+			);
+		}
+		return $result;
+	}
 }

@@ -358,5 +358,6 @@
 	"apihelp-mobileview-example-3": "Get information about sections 1 and later and sections containing references of [[Candlemass]]",
 	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
 	"apihelp-parse-param-noimages": "Disable images in mobile output.",
-	"apihelp-parse-param-mainpage": "Apply mobile main page transformations."
+	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",
+	"mobile-frontend-donate-button-label": "Donate"
 }
