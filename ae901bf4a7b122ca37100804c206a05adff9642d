@@ -16,6 +16,24 @@
       "revId": "ae901bf4a7b122ca37100804c206a05adff9642d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_ff649b47",
+        "filename": "dev-scripts/pre-commit",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-09T17:49:43Z",
+      "side": 1,
+      "message": "That is very weird, it works for me\n\n    $ vim javascripts/application.js\n    # Remove lots of documentation\n    $ git add javascripts/application.js\n    $ git diff --cached --name-only | grep -i \".js\\$\"\n    javascripts/application.js\n    $ g c -m \u0027removed documentation\u0027\n    Checking documentation coverage of files you have touched:\n    jsdoc definition required at javascripts/application.js :\n        35 | // https://github.com/Modernizr/Modernizr/issues/167\n        36 | // http://mobilehtml5.org/\n        37 | function supportsPositionFixed( userAgent ) {\n    ---------^\n        38 |  var support \u003d false;\n        39 |  $.each( [\n\n    jsdoc definition required at javascripts/application.js :\n        54 | }\n        55 |\n        56 | function supportsGeoLocation() {\n    ...\n\nWorks fine",
+      "parentUuid": "2e9df725_d84c6ce7",
+      "revId": "ae901bf4a7b122ca37100804c206a05adff9642d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
