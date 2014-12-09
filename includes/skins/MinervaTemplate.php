@@ -7,6 +7,9 @@
  * Extended Template class of BaseTemplate for mobile devices
  */
 class MinervaTemplate extends BaseTemplate {
+	/** @var boolean Temporary variable that decides whether
+	 * history link should be rendered before the content. */
+	protected $renderHistoryLinkBeforeContent = true;
 	/** @var string $searchPlaceHolderMsg Message used as placeholder in search input */
 	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder';
 
@@ -107,11 +110,11 @@ class MinervaTemplate extends BaseTemplate {
 		?>
 		<div id="footer">
 			<?php
-				foreach( $this->getFooterLinks() as $category => $links ):
+				foreach ( $this->getFooterLinks() as $category => $links ):
 			?>
 				<ul class="footer-<?php echo $category; ?>">
 					<?php
-						foreach( $links as $link ) {
+						foreach ( $links as $link ) {
 							if ( isset( $this->data[$link] ) && $this->data[$link] !== '' ) {
 								echo Html::openElement( 'li', array( 'id' => "footer-{$category}-{$link}" ) );
 								$this->html( $link );
@@ -135,7 +138,7 @@ class MinervaTemplate extends BaseTemplate {
 		$actions = $this->getPageActions();
 		if ( $actions ) {
 			?><ul id="page-actions" class="hlist"><?php
-			foreach( $actions as $key => $val ):
+			foreach ( $actions as $key => $val ):
 				echo $this->makeListItem( $key, $val );
 			endforeach;
 			?></ul><?php
@@ -204,7 +207,7 @@ class MinervaTemplate extends BaseTemplate {
 	protected function renderSecondaryActions() {
 		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
 
-		foreach( $this->getSecondaryActions() as $el ) {
+		foreach ( $this->getSecondaryActions() as $el ) {
 			echo Html::element( 'a', array(
 				'class' => 'mw-ui-button button ' . $el['class'],
 				'href' => $el['url']
@@ -274,7 +277,14 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderContentWrapper( $data ) {
-		$this->renderHistoryLinkTop( $data );
+		if ( $this->renderHistoryLinkBeforeContent ) {
+			$this->renderHistoryLinkTop( $data );
+		?>
+			<script>
+				if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'history-link-loaded' ); }
+			</script>
+		<?php
+		}
 		?>
 		<script>
 			if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'header-loaded' ); }
@@ -282,6 +292,14 @@ class MinervaTemplate extends BaseTemplate {
 		<?php
 			$this->renderPreContent( $data );
 			$this->renderContent( $data );
+			if ( !$this->renderHistoryLinkBeforeContent ) {
+				$this->renderHistoryLinkTop( $data );
+		?>
+				<script>
+					if ( window.mw && mw.mobileFrontend ) { mw.mobileFrontend.emit( 'history-link-loaded' ); }
+				</script>
+		<?php
+			}
 	}
 
 	/**
@@ -292,21 +310,21 @@ class MinervaTemplate extends BaseTemplate {
 		?>
 		<ul>
 		<?php
-		foreach( $this->getDiscoveryTools() as $key => $val ):
+		foreach ( $this->getDiscoveryTools() as $key => $val ):
 			echo $this->makeListItem( $key, $val );
 		endforeach;
 		?>
 		</ul>
 		<ul>
 		<?php
-		foreach( $this->getPersonalTools() as $key => $val ):
+		foreach ( $this->getPersonalTools() as $key => $val ):
 			echo $this->makeListItem( $key, $val );
 		endforeach;
 		?>
 		</ul>
 		<ul class="hlist">
 		<?php
-		foreach( $this->getSiteLinks() as $key => $val ):
+		foreach ( $this->getSiteLinks() as $key => $val ):
 			echo $this->makeListItem( $key, $val );
 		endforeach;
 		?>
@@ -332,7 +350,7 @@ class MinervaTemplate extends BaseTemplate {
 			</div>
 			<div id="mw-mf-page-center">
 				<?php
-					foreach( $this->data['banners'] as $banner ):
+					foreach ( $this->data['banners'] as $banner ):
 						echo $banner;
 					endforeach;
 				?>

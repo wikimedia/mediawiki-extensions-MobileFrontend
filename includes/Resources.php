@@ -77,6 +77,12 @@ $wgMinervaStyleModules = array(
 			'less/iconsNew.less',
 		),
 	),
+	'skins.minerva.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/content/links.alpha.less',
+			'less/footer.alpha.less',
+		),
+	),
 );
 
 $wgResourceModules = array_merge( $wgResourceModules, array(

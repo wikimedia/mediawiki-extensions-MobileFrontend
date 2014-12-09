@@ -8,6 +8,8 @@
  * experimental (alpha) mode via Special:MobileOptions
  */
 class MinervaTemplateAlpha extends MinervaTemplateBeta {
+	/** {@inheritdoc} */
+	protected $renderHistoryLinkBeforeContent = false;
 	/**
 	 * @var string $searchPlaceHolderMsg Message used as placeholder in search input
 	 */

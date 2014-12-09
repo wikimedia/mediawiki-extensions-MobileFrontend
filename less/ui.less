@@ -14,7 +14,9 @@ body {
 }
 
 #content_wrapper {
-	.top-bar {
+	// FIXME: remove .top-bar once cache clears, .last-modified-bar replaces it
+	.top-bar,
+	.last-modified-bar {
 		background-color: @colorGray14;
 		padding: 5px @contentMargin;
 		display: block;

@@ -9,7 +9,7 @@
 class SkinMinervaAlpha extends SkinMinervaBeta {
 	/** @var string Name of the template */
 	public $template = 'MinervaTemplateAlpha';
-	/** @var stringDescribes 'stability' of the skin - alpha, beta, stable */
+	/** @var string Describes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'alpha';
 
 	/**
@@ -20,6 +20,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		$styles = parent::getSkinStyles();
 		$styles[] = 'mediawiki.ui.icon';
 		$styles[] = 'skins.minerva.icons.styles';
+		$styles[] = 'skins.minerva.alpha.styles';
 		return $styles;
 	}
 

@@ -105,7 +105,7 @@ class SkinMinerva extends SkinTemplate {
 		// If it's a talk page, add a link to the main namespace page
 		if ( $title->isTalkPage() ) {
 			// if it's a talk page for which we have a special message, use it
-			switch( $title->getNamespace() ) {
+			switch ( $title->getNamespace() ) {
 				case 3: // User NS
 					$msg = 'mobile-frontend-talk-back-to-userpage';
 					break;
@@ -588,7 +588,7 @@ class SkinMinerva extends SkinTemplate {
 			}
 		}
 		if ( !$title->isMainPage() ) {
-			$link['class'] = 'top-bar truncated-text';
+			$link['class'] = 'last-modified-bar truncated-text';
 		}
 		$link['href'] = SpecialPage::getTitleFor( 'History', $title )->getLocalURL();
 		return $link;
