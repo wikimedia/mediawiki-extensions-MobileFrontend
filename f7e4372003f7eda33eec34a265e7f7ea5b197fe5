@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_82d740c4",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T19:16:00Z",
+      "side": 1,
+      "message": "We are trying to kill usage of icon-16px - Trevor wants us to standardise on 24px svg icon and 12px by 12px svg indicators (alpha icons do not have a concept of size)\n\nSo should this be an indicator if we want it to be smaller?\nI\u0027m not sure how Trevor defines an indictor.",
+      "revId": "f7e4372003f7eda33eec34a265e7f7ea5b197fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
