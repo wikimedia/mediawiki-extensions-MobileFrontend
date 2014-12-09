@@ -51,6 +51,24 @@
       "revId": "61e728d5cf45a826f469b8ac68bb740d372d381f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_e285e45b",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-09T18:29:44Z",
+      "side": 1,
+      "message": "A valid selector can match 0 elements by design. Also, jQuery\u0027s return value can be used to determine if the selector didn\u0027t match anything.\n\nInvalid selectors, i.e. syntactically incorrect selectors, cause jQuery to throw an error.\n\nA valid schema name causes log to log an event with a schema that is derived from the schema name.\n\nAn invalid schema name causes log to do nothing without so much as a warning.",
+      "parentUuid": "2e9df725_3f8523a0",
+      "revId": "61e728d5cf45a826f469b8ac68bb740d372d381f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
