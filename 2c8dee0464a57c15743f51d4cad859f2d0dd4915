@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_aa3ed824",
+        "filename": "less/content/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-09T06:28:24Z",
+      "side": 0,
+      "message": "This messes up lists in infoboxes.",
+      "revId": "2c8dee0464a57c15743f51d4cad859f2d0dd4915",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_4a4394b6",
+        "filename": "less/content/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-09T06:28:24Z",
+      "side": 0,
+      "message": "No longer needed since borders are no longer automatically applied to all table cells.",
+      "revId": "2c8dee0464a57c15743f51d4cad859f2d0dd4915",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_6a40d0a8",
+        "filename": "less/content/tables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-09T06:28:24Z",
+      "side": 0,
+      "message": "Table headers are automatically bold in all modern browsers, so this is unneeded.",
+      "revId": "2c8dee0464a57c15743f51d4cad859f2d0dd4915",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
