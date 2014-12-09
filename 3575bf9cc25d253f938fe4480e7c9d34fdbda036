@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_1f06278a",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1038,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-09T17:30:08Z",
+      "side": 1,
+      "message": "where does wfMessage come from? what\u0027s the difference with this-\u003emsg?",
+      "revId": "3575bf9cc25d253f938fe4480e7c9d34fdbda036",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
