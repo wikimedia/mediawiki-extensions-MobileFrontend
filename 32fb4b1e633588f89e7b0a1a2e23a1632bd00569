@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_62a6b4a9",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T19:13:27Z",
+      "side": 1,
+      "message": "The correct way to do something like this would be to emit an event e.g.\nthis.emit( \u0027show-reference\u0027 )\nand then make something outside subscribe to the event.\n\nOn a side note disabling scrolling altogether on body seems dangerous. Could we not achieve the same effect with a transparent div?",
+      "revId": "32fb4b1e633588f89e7b0a1a2e23a1632bd00569",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_6278f4ed",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T19:13:27Z",
+      "side": 1,
+      "message": "I\u0027m not sure I remember what the cloaked-element is doing but it\u0027s owned by mainmenu.js and it should probably be rethought if it is causing conflicts with the references dialog.",
+      "revId": "32fb4b1e633588f89e7b0a1a2e23a1632bd00569",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_42a93877",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-09T19:13:27Z",
+      "side": 1,
+      "message": "minor issue - we use \u0027ev\u0027 for event everywhere else and should probably be consistent.",
+      "revId": "32fb4b1e633588f89e7b0a1a2e23a1632bd00569",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
