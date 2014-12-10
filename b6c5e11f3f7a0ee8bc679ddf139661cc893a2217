@@ -19,6 +19,41 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_7299957f",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T21:29:27Z",
+      "side": 1,
+      "message": "ah, right...",
+      "parentUuid": "2e9df725_17da8378",
+      "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_0df35408",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T21:29:27Z",
+      "side": 1,
+      "message": "grr, that\u0027s really hacky, the standard restrictionlevel includes user groups, custom restrictionlevels only rights, so here i need to check both.",
+      "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_f7ed9723",
         "filename": "tests/qunit/test_Page.js",
         "patchSetId": 3
@@ -30,6 +65,24 @@
       "writtenOn": "2014-12-10T19:38:31Z",
       "side": 1,
       "message": "\u0027*\u0027 is not a valid right so this is confusing.\nHere are mine:\n[\"userrights\", \"noratelimit\", \"block\", \"createaccount\", \"delete\", \"bigdelete\", \"deletedhistory\", \"deletedtext\", \"undelete\", \"editinterface\", \"editusercss\", \"edituserjs\", \"import\", \"importupload\", \"move\", \"move-subpages\", \"move-rootuserpages\", \"move-categorypages\", \"patrol\", \"autopatrol\", \"protect\", \"editprotected\", \"proxyunbannable\", \"rollback\", \"upload\", \"reupload\", \"reupload-shared\", \"unwatchedpages\", \"autoconfirmed\", \"editsemiprotected\", \"ipblock-exempt\", \"blockemail\", \"markbotedits\", \"apihighlimits\", \"browsearchive\", \"movefile\", \"unblockself\", \"suppressredirect\", \"mergehistory\", \"skipcaptcha\", \"mf-uploadbutton\", \"read\", \"edit\", \"createpage\", \"createtalk\", \"writeapi\", \"editmyusercss\", \"editmyuserjs\", \"viewmywatchlist\", \"editmywatchlist\", \"viewmyprivateinfo\", \"editmyprivateinfo\", \"editmyoptions\", \"minoredit\", \"purge\", \"sendemail\"]",
+      "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_cdfc8cd8",
+        "filename": "tests/qunit/test_Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T21:29:27Z",
+      "side": 1,
+      "message": "will change it",
+      "parentUuid": "2e9df725_f7ed9723",
       "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -64,6 +117,24 @@
       "writtenOn": "2014-12-10T19:38:31Z",
       "side": 1,
       "message": "sysop is not a right but this is what it is being matched against..",
+      "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_adf7c0f1",
+        "filename": "tests/qunit/test_Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T21:29:27Z",
+      "side": 1,
+      "message": "that\u0027s correct, but sysop is a valid restrictionlevel (one of the three standards). Custom levels can only be rights.",
+      "parentUuid": "2e9df725_b7f70ff2",
       "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
