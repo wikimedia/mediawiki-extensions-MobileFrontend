@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_37a9bf78",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 722,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:52:29Z",
+      "side": 1,
+      "message": "This should be a one liner! :)\n$tpl-\u003eset( \u0027site_urls\u0027, $this-\u003egetSiteLinks() );",
+      "revId": "b4decba39687c11265e286987f732a2d22717e94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
