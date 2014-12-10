@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_be85ac5c",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T12:53:59Z",
+      "side": 1,
+      "message": "coding conventions",
+      "revId": "a1da261166641c18ccaac3f13488fd8f4d9768a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_fe8b3470",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T12:53:59Z",
+      "side": 1,
+      "message": "coding convention: spaces :)",
+      "revId": "a1da261166641c18ccaac3f13488fd8f4d9768a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_7ede4472",
+        "filename": "less/footer.alpha.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T12:53:59Z",
+      "side": 1,
+      "message": "unknown variable (you need to import minerva.variables)",
+      "revId": "a1da261166641c18ccaac3f13488fd8f4d9768a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
