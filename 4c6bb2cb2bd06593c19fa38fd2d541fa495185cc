@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_1cb868c2",
+        "filename": "less/content/borders.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T18:38:51Z",
+      "side": 1,
+      "message": "but is this overriding stable styles, inline styles or core styles?",
+      "revId": "4c6bb2cb2bd06593c19fa38fd2d541fa495185cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_fcb25ce3",
+        "filename": "less/content/borders.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T18:38:51Z",
+      "side": 1,
+      "message": "still more reds! eek! :D",
+      "revId": "4c6bb2cb2bd06593c19fa38fd2d541fa495185cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_bcacd485",
+        "filename": "less/content/borders.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T18:38:51Z",
+      "side": 1,
+      "message": "but is this overriding stable styles, inline styles or core styles?",
+      "revId": "4c6bb2cb2bd06593c19fa38fd2d541fa495185cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
