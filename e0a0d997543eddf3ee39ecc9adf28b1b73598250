@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_b9406ba9",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T00:49:15Z",
+      "side": 1,
+      "message": "Let\u0027s avoid this duplication of code. Refactor MinervaTemplate::renderContentWrapper to either render it at top or bottom depending on a property on the template and let\u0027s kill these horrible function names renderHistoryLinkTop and renderHistoryLinkBottom - there should just be renderHistoryLink\n\nOpportunity to fix some messy code here!",
+      "revId": "e0a0d997543eddf3ee39ecc9adf28b1b73598250",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_d910d7af",
+        "filename": "less/content/links.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T00:49:15Z",
+      "side": 1,
+      "message": "Please put this in a separate file / RL module. Let\u0027s not load this for our considerably larger audience of non-alpha users.",
+      "revId": "e0a0d997543eddf3ee39ecc9adf28b1b73598250",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_f915939d",
+        "filename": "less/content/links.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T00:49:15Z",
+      "side": 1,
+      "message": "Can we use the top-bar class instead?\n(we also might want to reconsider the name of that now :-))",
+      "revId": "e0a0d997543eddf3ee39ecc9adf28b1b73598250",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
