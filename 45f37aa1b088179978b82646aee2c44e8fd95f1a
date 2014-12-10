@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_b70b8fd8",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:46:44Z",
+      "side": 1,
+      "message": "huh? You can just change it in getSecondaryActions no?",
+      "revId": "45f37aa1b088179978b82646aee2c44e8fd95f1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_37ff7fa9",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:46:44Z",
+      "side": 1,
+      "message": "@inheritdoc\n(also note saying how it is different from beta/stable)",
+      "revId": "45f37aa1b088179978b82646aee2c44e8fd95f1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_57f24bce",
+        "filename": "less/modules/infobox.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:46:44Z",
+      "side": 1,
+      "message": "This should be visible in alpha and should only be loaded on alpha.\nhttps://trello.com/c/mvYxnIz6/9-3-alpha-page-styling-experiment-wikidata-description-is-shown-below-title-if-available seems to suggest this should still be visible",
+      "revId": "45f37aa1b088179978b82646aee2c44e8fd95f1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
