@@ -1,0 +1,35 @@
+@import "mediawiki.mixins.less";
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+
+form {
+	// FIXME: work out what to do with these
+	#mw-prefs-restoreprefs {
+		display: none;
+	}
+
+	fieldset {
+		font-size: .9em;
+
+		.htmlform-tip {
+			display: none;
+		}
+
+		.mw-label,
+		.mw-ui-checkbox {
+			font-style: italic;
+			font-size: .9em;
+		}
+
+		legend {
+			color: @grayMedium;
+			font-size: .8em;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		fieldset {
+			margin: 0 0 1em .3em;
+		}
+	}
+}

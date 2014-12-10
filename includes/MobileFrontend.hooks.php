@@ -398,6 +398,7 @@ class MobileFrontendHooks {
 			// Replace the standard watchlist view with our custom one
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
 			$list['EditWatchlist'] = 'SpecialMobileEditWatchlist';
+			$list['Preferences'] = 'SpecialMobilePreferences';
 
 			/* Special:MobileContributions redefines Special:History in
 			 * such a way that for Special:Contributions/Foo, Foo is a
