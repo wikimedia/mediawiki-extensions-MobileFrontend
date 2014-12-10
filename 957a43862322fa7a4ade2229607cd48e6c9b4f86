@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_712e7240",
+        "filename": "javascripts/modules/issues/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-10T23:23:49Z",
+      "side": 1,
+      "message": "missing return type",
+      "revId": "957a43862322fa7a4ade2229607cd48e6c9b4f86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_3128ea2e",
+        "filename": "javascripts/modules/issues/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-10T23:23:49Z",
+      "side": 1,
+      "message": "here too, missing return",
+      "revId": "957a43862322fa7a4ade2229607cd48e6c9b4f86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
