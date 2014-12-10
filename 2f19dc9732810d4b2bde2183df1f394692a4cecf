@@ -34,6 +34,24 @@
       "revId": "2f19dc9732810d4b2bde2183df1f394692a4cecf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_5952876b",
+        "filename": "less/images/icons/editVeNormal.png",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-10T00:56:48Z",
+      "side": 1,
+      "message": "Compared to other icons it\u0027s about 10 times larger. A user may have a good browser, but their connection may be slow and this definitely makes a difference. I think the svg needs editing.",
+      "parentUuid": "2e9df725_39b8dbc2",
+      "revId": "2f19dc9732810d4b2bde2183df1f394692a4cecf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
