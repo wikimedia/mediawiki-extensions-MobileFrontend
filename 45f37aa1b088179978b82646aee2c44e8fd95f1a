@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_d79adb65",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-10T19:51:23Z",
+      "side": 1,
+      "message": "Without these four lines attributes like \"data-title\" wouldn\u0027t be applied to the element. However, if url and label aren\u0027t unset they\u0027ll be added as attributes to the element too, which is annoying.\n\nI\u0027ll either try and make this cleaner or document the code properly or both (!)",
+      "parentUuid": "2e9df725_b70b8fd8",
+      "revId": "45f37aa1b088179978b82646aee2c44e8fd95f1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_37ff7fa9",
         "filename": "includes/skins/MinervaTemplateAlpha.php",
         "patchSetId": 1
