@@ -74,7 +74,8 @@
 				subject: options.name,
 				version: this.version,
 				userToken: options.userToken,
-				taskToken: this.defaults.taskToken
+				taskToken: this.defaults.taskToken,
+				campaignName: options.campaign.name
 			} );
 			this.apiWikiData = new WikiDataApi( {
 				itemId: options.itemId
