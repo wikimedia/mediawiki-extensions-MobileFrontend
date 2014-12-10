@@ -19,7 +19,8 @@
 	}
 
 	function init() {
-		var $container, userGallery, $a;
+		var userGallery, $a,
+			$container = $( '.ctaUploadPhoto' );
 
 		// Don't attempt to display the gallery if PHP displayed an error
 		if ( $( '.error' ).length ) {
@@ -28,11 +29,9 @@
 
 		userGallery = new PhotoList( {
 			username: userName
-		} ).appendTo( '#content_wrapper' );
+		} ).insertAfter( $container );
 
 		if ( PhotoUploaderButton.isSupported && currentUserName === userName ) {
-			$container = $( '.ctaUploadPhoto' );
-
 			if ( $container.length ) {
 				if ( user.getEditCount() === 0 ) {
 					$a = $( '<a class="button icon icon-photo icon-text mw-ui-button mw-ui-progressive">' )
