@@ -62,12 +62,11 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	}
 
 	/**
-	 * Prepare site links in footer
-	 * @param BaseTemplate $tpl
+	 * Returns an array of sitelinks to add into the main menu footer.
+	 * @return Array array of site links
 	 */
-	protected function prepareSiteLinks( BaseTemplate $tpl ) {
-		parent::prepareSiteLinks( $tpl );
-		$urls = $tpl->get( 'site_urls' );
+	protected function getSiteLinks() {
+		$urls = parent::getSiteLinks();
 		$msg = $this->msg( 'mobile-frontend-fontchanger-link' );
 		// Don't add elements, where the message does not exist
 		if ( !$msg->isDisabled() ) {
@@ -78,7 +77,8 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 				'class' => 'fontchanger link hidden'
 			);
 		}
-		$tpl->set( 'site_urls', $urls );
+
+		return $urls;
 	}
 
 	/**
