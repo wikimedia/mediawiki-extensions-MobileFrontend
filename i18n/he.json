@@ -108,6 +108,8 @@
 	"mobile-frontend-enable-images": "להפעיל תצוגת תמונות באתר למכשירים ניידים",
 	"mobile-frontend-expand-sections-description": "תמיד להרחיב את כל הפסקאות בעת מעבר לדף חדש.",
 	"mobile-frontend-expand-sections-status": "להרחיב את כל הפסקאות",
+	"mobile-frontend-fontchanger-link": "גודל גופן",
+	"mobile-frontend-fontchanger-desc": "הגדלה או הקטנה של טקסט לשם קריאות.",
 	"mobile-frontend-featured-article": "התוכן המומלץ של היום",
 	"mobile-frontend-first-upload-wizard-new-page-1": "תמונות באתר {{SITENAME}} מוויקישיתוף",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "תרומה של התמונות שלך תפיח יותר חיים באתר {{SITENAME}}!",
@@ -341,5 +343,6 @@
 	"tag-mobile_web_edit": "עריכה דרך האתר הנייד",
 	"tag-mobile_web_edit-description": "עריכה שנעשתה מהאתר הנייד",
 	"mobile-frontend-pageaction-edit-tooltip": "עריכת הפסקה הראשונה בדף.",
-	"mobile-frontend-pageaction-upload-tooltip": "העלאת תמונה לראש הדף."
+	"mobile-frontend-pageaction-upload-tooltip": "העלאת תמונה לראש הדף.",
+	"mobile-frontend-donate-button-label": "תרומה"
 }

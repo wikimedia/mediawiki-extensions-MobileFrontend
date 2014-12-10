@@ -98,6 +98,8 @@
 	"mobile-frontend-enable-images": "Овозможи слики во мобилниот изглед",
 	"mobile-frontend-expand-sections-description": "Секогаш расклопувај ги сите делови кога одам на нова страница.",
 	"mobile-frontend-expand-sections-status": "Расклопувај ги сите делови",
+	"mobile-frontend-fontchanger-link": "Големина на фонтот",
+	"mobile-frontend-fontchanger-desc": "Зголемување или намалување на големината на текстот, за читливост.",
 	"mobile-frontend-featured-article": "Содржина на денот",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Сликите на {{SITENAME}} доаѓаат од Ризницата",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Споделете ги вашите слики. Да ги оживееме статиите на {{SITENAME}}!",
@@ -354,5 +356,6 @@
 	"apihelp-mobileview-example-3": "Дај информации за поднасловот 1 и понатамошните, како и поднасловите што го спомнуваат [[Candlemass]]",
 	"apihelp-parse-param-mobileformat": "Дај расчленувачки извод во формат погоден за мобилни уреди.",
 	"apihelp-parse-param-noimages": "Оневозможи слики во мобилниот извод.",
-	"apihelp-parse-param-mainpage": "Примени преобразби на главната мобилна страница."
+	"apihelp-parse-param-mainpage": "Примени преобразби на главната мобилна страница.",
+	"mobile-frontend-donate-button-label": "Дарувајте"
 }

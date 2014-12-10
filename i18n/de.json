@@ -109,6 +109,8 @@
 	"mobile-frontend-enable-images": "Bilder in der mobilen Ansicht aktivieren",
 	"mobile-frontend-expand-sections-description": "Immer alle Abschnitte beim Navigieren auf eine neue Seite expandieren.",
 	"mobile-frontend-expand-sections-status": "Alle Abschnitte expandieren",
+	"mobile-frontend-fontchanger-link": "Schriftgröße",
+	"mobile-frontend-fontchanger-desc": "Vergrößert oder verkleinert die Textgröße zur besseren Lesbarkeit.",
 	"mobile-frontend-featured-article": "Inhalt des Tages",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Bilder auf {{SITENAME}} kommen von Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Teile deine Bilder. Erwecke {{SITENAME}} zum Leben!",
@@ -344,5 +346,6 @@
 	"tag-mobile_web_edit-description": "Bearbeitet von der mobilen Website",
 	"mobile-frontend-pageaction-edit-tooltip": "Bearbeite den Einführungsabschnitt für diese Seite.",
 	"mobile-frontend-pageaction-upload-tooltip": "Lade ein Einführungsfoto für diese Seite hoch.",
-	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren."
+	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren.",
+	"mobile-frontend-donate-button-label": "Spenden"
 }

@@ -110,6 +110,8 @@
 	"mobile-frontend-editor-wait": "Zapisywanie, proszę czekaj.",
 	"mobile-frontend-enable-images": "Włącz wyświetlanie grafik w wersji mobilnej",
 	"mobile-frontend-expand-sections-status": "Rozwiń wszystkie sekcje",
+	"mobile-frontend-fontchanger-link": "Rozmiar czcionki",
+	"mobile-frontend-fontchanger-desc": "Zmiana rozmiar tekstu w celu poprawy czytelności.",
 	"mobile-frontend-featured-article": "Artykuł na medal",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Obrazy w {{GRAMMAR:MS.lp|{{SITENAME}}}} pochodzą z Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Prześlij swoje grafiki. Niech dzięki twojej pomocy {{SITENAME}} nabierze życia!",
