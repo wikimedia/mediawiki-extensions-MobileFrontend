@@ -16,6 +16,24 @@
       "revId": "27f229da4e97250ce8c505abb2c6ea1907157388",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_cdb48ce7",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T22:04:46Z",
+      "side": 1,
+      "message": "No, it was the same \"problem\" before, too. Any time, a user tried to edit in alpha, he could go through the workflow, but should get an error message that the edit couldn\u0027t be saved.",
+      "parentUuid": "2e9df725_f72277a1",
+      "revId": "27f229da4e97250ce8c505abb2c6ea1907157388",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
