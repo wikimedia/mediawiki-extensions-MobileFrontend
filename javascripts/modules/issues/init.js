@@ -65,7 +65,7 @@
 					label: labelText,
 					additionalClassNames: 'mw-mf-cleanup'
 				} )
-				.$el.children().eq( 0 ).attr( 'href', '#/issues' );
+				.$el.attr( 'href', '#/issues' );
 
 			M.overlayManager.add( /^\/issues$/, function () {
 				return new CleanupOverlay( {
