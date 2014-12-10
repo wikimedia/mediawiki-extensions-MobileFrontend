@@ -16,6 +16,40 @@
       "revId": "c4f9bc92d6ea90f370fc5c51cb05ce0333788f5c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_ab3d708c",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T11:13:23Z",
+      "side": 1,
+      "message": "undefined var $data",
+      "revId": "c4f9bc92d6ea90f370fc5c51cb05ce0333788f5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_2bc2c088",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-10T11:13:23Z",
+      "side": 1,
+      "message": "makeChromeHeaderContent() doesn\u0027t have a return value, echo looks odd\n\n(I suggest to remove the echo from makeChromeHeaderContent and return the content, i associate \"make\" more with a return value as a direct output (like render)",
+      "revId": "c4f9bc92d6ea90f370fc5c51cb05ce0333788f5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
