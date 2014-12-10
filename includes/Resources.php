@@ -322,7 +322,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.editor.ve' => $wgMFResourceFileModuleBoilerplate + array(
+	'mobile.editor.ve' => $wgMFResourceBoilerplate + array(
 		'dependencies' => array(
 			'ext.visualEditor.mobileViewTarget',
 			'mobile.stable',
@@ -343,6 +343,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			'mobile-frontend-page-edit-summary',
 			'mobile-frontend-editor-editing',
+		),
+		'targets' => array(
+			'mobile',
 		),
 	),
 
