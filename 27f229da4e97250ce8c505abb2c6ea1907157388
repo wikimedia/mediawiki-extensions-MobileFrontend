@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_f72277a1",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:22:31Z",
+      "side": 1,
+      "message": "Florian is this because the editor now contains the cta itself?",
+      "revId": "27f229da4e97250ce8c505abb2c6ea1907157388",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
