@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_17da8378",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:38:31Z",
+      "side": 1,
+      "message": "This is not a valid default now.\nAlso in application.js we pass it the value of \nmw.config.get( \u0027wgRestrictionEdit\u0027, [] );\n\nthis will need to be rethought",
+      "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_f7ed9723",
+        "filename": "tests/qunit/test_Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:38:31Z",
+      "side": 1,
+      "message": "\u0027*\u0027 is not a valid right so this is confusing.\nHere are mine:\n[\"userrights\", \"noratelimit\", \"block\", \"createaccount\", \"delete\", \"bigdelete\", \"deletedhistory\", \"deletedtext\", \"undelete\", \"editinterface\", \"editusercss\", \"edituserjs\", \"import\", \"importupload\", \"move\", \"move-subpages\", \"move-rootuserpages\", \"move-categorypages\", \"patrol\", \"autopatrol\", \"protect\", \"editprotected\", \"proxyunbannable\", \"rollback\", \"upload\", \"reupload\", \"reupload-shared\", \"unwatchedpages\", \"autoconfirmed\", \"editsemiprotected\", \"ipblock-exempt\", \"blockemail\", \"markbotedits\", \"apihighlimits\", \"browsearchive\", \"movefile\", \"unblockself\", \"suppressredirect\", \"mergehistory\", \"skipcaptcha\", \"mf-uploadbutton\", \"read\", \"edit\", \"createpage\", \"createtalk\", \"writeapi\", \"editmyusercss\", \"editmyuserjs\", \"viewmywatchlist\", \"editmywatchlist\", \"viewmyprivateinfo\", \"editmyprivateinfo\", \"editmyoptions\", \"minoredit\", \"purge\", \"sendemail\"]",
+      "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_17f36308",
+        "filename": "tests/qunit/test_Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:38:31Z",
+      "side": 1,
+      "message": "\u0027user\u0027  is not a valid right so this is confusing.\nHere are mine:\n[\"userrights\", \"noratelimit\", \"block\", \"createaccount\", \"delete\", \"bigdelete\", \"deletedhistory\", \"deletedtext\", \"undelete\", \"editinterface\", \"editusercss\", \"edituserjs\", \"import\", \"importupload\", \"move\", \"move-subpages\", \"move-rootuserpages\", \"move-categorypages\", \"patrol\", \"autopatrol\", \"protect\", \"editprotected\", \"proxyunbannable\", \"rollback\", \"upload\", \"reupload\", \"reupload-shared\", \"unwatchedpages\", \"autoconfirmed\", \"editsemiprotected\", \"ipblock-exempt\", \"blockemail\", \"markbotedits\", \"apihighlimits\", \"browsearchive\", \"movefile\", \"unblockself\", \"suppressredirect\", \"mergehistory\", \"skipcaptcha\", \"mf-uploadbutton\", \"read\", \"edit\", \"createpage\", \"createtalk\", \"writeapi\", \"editmyusercss\", \"editmyuserjs\", \"viewmywatchlist\", \"editmywatchlist\", \"viewmyprivateinfo\", \"editmyprivateinfo\", \"editmyoptions\", \"minoredit\", \"purge\", \"sendemail\"]",
+      "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_b7f70ff2",
+        "filename": "tests/qunit/test_Page.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T19:38:31Z",
+      "side": 1,
+      "message": "sysop is not a right but this is what it is being matched against..",
+      "revId": "b6c5e11f3f7a0ee8bc679ddf139661cc893a2217",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
