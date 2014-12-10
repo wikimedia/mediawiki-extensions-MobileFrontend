@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_d7e89bb1",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T20:11:41Z",
+      "side": 1,
+      "message": "Rather than a parameter please make this a property on the Skin to make the code a little nicer.\n \nWe\u0027ll eventually make one of them the default and remove the parameter so let\u0027s only change the function signature when we have to.",
+      "revId": "e592ab31af93009bb1bca98627807832d47a42be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
