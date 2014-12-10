@@ -49,10 +49,6 @@ Then(/^I should see the error box message "(.+)"$/) do |error_message|
   expect(on(ArticlePage).error_message).to match (error_message)
 end
 
-Then(/^I should see the watch star$/) do
-  expect(on(ArticlePage).watch_link_element).to be_visible
-end
-
 Then(/^the text of the first heading should be "(.*)"$/) do |title|
   on(ArticlePage) do |page|
     page.wait_until do
