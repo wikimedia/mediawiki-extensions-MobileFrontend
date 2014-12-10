@@ -16,6 +16,24 @@
       "revId": "2f19dc9732810d4b2bde2183df1f394692a4cecf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_39b8dbc2",
+        "filename": "less/images/icons/editVeNormal.png",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-10T00:39:31Z",
+      "side": 1,
+      "message": "Define too large.. :)\nNote VE doesn\u0027t even support browsers without svg so this is a mute point.\nI\u0027d rather we made use of the grunt build-icons command so we get in the habit of doing graphics this way.",
+      "parentUuid": "2e9df725_79774336",
+      "revId": "2f19dc9732810d4b2bde2183df1f394692a4cecf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
