@@ -50,6 +50,24 @@
       "revId": "a1da261166641c18ccaac3f13488fd8f4d9768a1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_dc3e8026",
+        "filename": "less/footer.alpha.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-10T18:49:09Z",
+      "side": 1,
+      "message": "thanks Florianschmidtwelzow, that\u0027s why it wasn\u0027t working yesterday. ;)",
+      "parentUuid": "2e9df725_7ede4472",
+      "revId": "a1da261166641c18ccaac3f13488fd8f4d9768a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
