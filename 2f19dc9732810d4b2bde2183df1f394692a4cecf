@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_79774336",
+        "filename": "less/images/icons/editVeNormal.png",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-10T00:37:00Z",
+      "side": 1,
+      "message": "this file is too large: 11.52kb",
+      "revId": "2f19dc9732810d4b2bde2183df1f394692a4cecf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
