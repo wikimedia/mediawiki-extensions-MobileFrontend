@@ -18,6 +18,6 @@
 		bannerImage = new BannerImage( {
 			itemId: wikidataID
 		} );
-		bannerImage.insertBefore( '.pre-content' );
+		bannerImage.insertBefore( '#page-actions' );
 	}
 }( mw.mobileFrontend ) );

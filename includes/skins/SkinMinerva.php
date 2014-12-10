@@ -71,6 +71,7 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'site_urls', $this->getSiteLinks() );
 
 		// Construct various Minerva-specific interface elements
+		$this->prepareSecondaryActions( $tpl );
 		$this->preparePageContent( $tpl );
 		$this->prepareHeaderAndFooter( $tpl );
 		$this->prepareMenuButton( $tpl );
@@ -730,6 +731,34 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * @param BaseTemplate $tpl
+	 */
+	protected function prepareSecondaryActions( $tpl ) {
+		$buttons = array();
+
+		$title = $this->getTitle();
+		$namespaces = $tpl->data['content_navigation']['namespaces'];
+		if ( $this->isTalkAllowed() ) {
+			// FIXME [core]: This seems unnecessary..
+			$subjectId = $title->getNamespaceKey( '' );
+			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
+			if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
+				$talkButton = $namespaces[$talkId];
+			}
+
+			$talkTitle = $title->getTalkPage();
+			$buttons['talk'] = array(
+				'attributes' => array(
+					'class' =>  MobileUI::iconClass( 'talk', 'before', 'talk icon-32px' ),
+					'data-title' => $talkTitle->getFullText(),
+				),
+				'label' => $talkButton['text'],
+			);
+		}
+		$tpl->set( 'secondary_actions', $buttons );
+	}
+
+	/**
 	 * Prepare configured and available page actions
 	 * @param BaseTemplate $tpl
 	 */
@@ -737,7 +766,6 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		// Reuse template data variable from SkinTemplate to construct page menu
 		$menu = array();
-		$namespaces = $tpl->data['content_navigation']['namespaces'];
 		$actions = $tpl->data['content_navigation']['actions'];
 
 		// empty placeholder for edit and photos which both require js
@@ -757,29 +785,6 @@ class SkinMinerva extends SkinTemplate {
 				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-upload-tooltip' ),
 				'class' => MobileUI::iconClass( 'addimage', 'element', 'icon-32px' ),
 			);
-		}
-
-		if ( $this->isTalkAllowed() ) {
-			// FIXME [core]: This seems unnecessary..
-			$subjectId = $title->getNamespaceKey( '' );
-			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
-			if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
-				$menu['talk'] = $namespaces[$talkId];
-			}
-
-			$talkTitle = $title->getTalkPage();
-			$menu['talk']['data-title'] = $talkTitle->getFullText();
-
-			if ( isset( $menu['talk'] ) ) {
-				$menu['talk']['class'] = MobileUI::iconClass( 'talk', 'element', 'icon-32px' );
-				if ( isset( $tpl->data['_talkdata'] ) ) {
-					$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
-					$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
-				}
-			}
-			// sanitize to avoid invalid HTML5 markup being produced
-			unset( $menu['talk']['primary'] );
-			unset( $menu['talk']['context'] );
 		}
 
 		if ( $this->isAllowedPageAction( 'watch' ) ) {

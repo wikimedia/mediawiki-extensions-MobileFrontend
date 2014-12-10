@@ -1,12 +1,13 @@
 ( function ( M, $ ) {
-	var licenseLink = mw.config.get( 'wgMFLicenseLink' );
+	var licenseLink = mw.config.get( 'wgMFLicenseLink' ),
+		$talk = $( '.talk' );
 
 	M.assertMode( [ 'beta', 'alpha', 'app' ] );
 
 	M.overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
 			talkOptions = {
-				title: $( '#ca-talk a' ).data( 'title' )
+				title: $talk.data( 'title' )
 			};
 
 		if ( $( '#footer-places-terms-use' ).length > 0 ) {
@@ -32,8 +33,7 @@
 	} );
 
 	function init() {
-		$( '#ca-talk a' )
-			.attr( 'href', '#/talk' );
+		$talk.attr( 'href', '#/talk' );
 	}
 
 	init();

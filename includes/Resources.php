@@ -80,6 +80,7 @@ $wgMinervaStyleModules = array(
 	'skins.minerva.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/content/links.alpha.less',
+			'less/pageactions.alpha.less',
 			'less/footer.alpha.less',
 		),
 	),

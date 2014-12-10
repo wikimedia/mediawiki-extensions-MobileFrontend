@@ -203,7 +203,7 @@ class MinervaTemplate extends BaseTemplate {
 	 * Get page secondary actions
 	 */
 	protected function getSecondaryActions() {
-		$result = array();
+		$result = $this->data['secondary_actions'];
 
 		// If languages are available, add a languages link
 		if ( $this->getLanguages() || $this->getLanguageVariants() ) {

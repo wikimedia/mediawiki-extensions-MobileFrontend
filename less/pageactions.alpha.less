@@ -1,0 +1,53 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+
+@titleSectionSpacingTop: 20px;
+@titleSectionSpacingBottom: 25px;
+
+.alpha {
+	.pre-content {
+		padding-top: @titleSectionSpacingTop;
+		padding-bottom: @titleSectionSpacingBottom;
+	}
+
+	#section_0 {
+		padding-top: 0;
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	#page-actions {
+		// FIXME: Make default when mw-ui-icon in stable
+		font-size: 1.2em;
+
+		float: right;
+		padding-top: @titleSectionSpacingTop;
+		width: 3.4em;
+		border-bottom: none;
+		overflow: hidden;
+
+		li {
+			margin-bottom: 20px;
+
+			&:first-child {
+				margin-top: 3px;
+			}
+		}
+	}
+}
+
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.alpha {
+		.pre-content {
+			padding: 0 @contentMargin;
+		}
+
+		#page-actions {
+			width: auto;
+
+			li:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}

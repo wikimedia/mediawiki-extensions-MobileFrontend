@@ -101,4 +101,35 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 
 		return $result;
 	}
+
+	/**
+	 * Renders the list of page actions and then the title of the page in its
+	 * container to keep LESS changes to a minimum.
+	 *
+	 * @param array $data
+	 */
+	protected function renderPreContent( $data ) {
+		$internalBanner = $data[ 'internalBanner' ];
+		$isSpecialPage = $this->isSpecialPage;
+		$preBodyText = isset( $data['prebodytext'] ) ? $data['prebodytext'] : '';
+
+		if ( $internalBanner || $preBodyText ) {
+
+			if ( !$this->isSpecialPage ) {
+				$this->renderPageActions( $data );
+			}
+			?>
+			<div class="pre-content">
+				<?php
+				echo $preBodyText;
+				// FIXME: Temporary solution until we have design
+				if ( isset( $data['_old_revision_warning'] ) ) {
+					echo $data['_old_revision_warning'];
+				}
+				echo $internalBanner;
+				?>
+			</div>
+			<?php
+		}
+	}
 }
