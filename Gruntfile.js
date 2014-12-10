@@ -29,11 +29,6 @@ module.exports = function ( grunt ) {
 			jsExternals: 'javascripts/externals/**/*.js',
 			mantleJs: MW_INSTALL_PATH + '/extensions/Mantle/javascripts/**/*.js'
 		},
-		svg2png: {
-			dist: {
-				src: 'less/images/icons/*.svg'
-			}
-		},
 		jshint: {
 			options: {
 				jshintrc: true
@@ -135,7 +130,6 @@ module.exports = function ( grunt ) {
 	grunt.registerTask( 'test', [ 'lint' ] );
 
 	grunt.registerTask( 'default', [ 'test' ] );
-	grunt.registerTask( 'build-icons', [ 'svg2png' ] );
 };
 
 /**

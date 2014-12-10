@@ -92,6 +92,52 @@ $wgMinervaStyleModules = array(
 			'less/iconsNew.less',
 		),
 	),
+	'skins.minerva.icons.images' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderImageModule',
+		'prefix' => 'mw-ui',
+		'images' => array(
+			// FIXME: ':before' suffix should be configurable in image module.
+			'icon' => array(
+				// chrome
+				'notifications:before' => 'images/icons/bell.svg',
+				'mainmenu:before' => 'images/icons/hamburger.svg',
+				'search:before' => 'images/icons/magnifying-glass.svg',
+
+				// toggling
+				'arrow-down:before' => 'images/icons/arrow-down.svg',
+				'arrow-up:before' => 'images/icons/arrow-up.svg',
+
+				// page actions
+				'talk:before' => 'images/icons/talk.svg',
+				'watch:before' => 'images/icons/watch.svg',
+				'watched:before' => 'images/icons/watched.svg',
+				'edit:before' => 'images/icons/editLocked.svg',
+				'edit-enabled:before' => 'images/icons/edit.svg',
+				'addimage:before' => 'images/icons/uploadLocked.svg',
+				'addimage-enabled:before' => 'images/icons/upload.svg',
+
+				// Editor
+				'edit-source:before' => 'images/icons/editSourceNormal.svg',
+				'edit-ve:before' => 'images/icons/editVeNormal.svg',
+				'edit-switch:before' => 'images/icons/editToggle.svg',
+
+				// TOC
+				'toc:before' => 'images/icons/contents-ltr.svg',
+
+				// Issues
+				'cleanup:before' => 'images/icons/blue-triangle.svg',
+				// FIXME: make this a variant of cleanup
+				'cleanup-gray:before' => 'images/icons/gray-triangle.svg',
+
+				// User
+				'user:before' => 'images/icons/userNormal.svg',
+				'anonymous:before' => 'images/icons/userAnonymous.svg',
+
+				// cite
+				'citation:before' => 'images/icons/cite.svg',
+			),
+		),
+	),
 	'skins.minerva.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/content/links.alpha.less',
