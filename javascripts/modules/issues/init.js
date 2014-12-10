@@ -6,6 +6,13 @@
 			inBeta = M.isBetaGroupMember(),
 			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' );
 
+		/**
+		 * Extract a summary message from a cleanup template generated element that is
+		 * friendly for mobile display.
+		 * @param {Object} $box element to extract the message from
+		 * @ignore
+		 * @return {String} html of message.
+		 */
 		function extractMessage( $box ) {
 			var selector = '.mbox-text, .ambox-text',
 				$container = $( '<div>' );
@@ -24,11 +31,12 @@
 			return $container.html();
 		}
 
-		/*
+		/**
 		 * Render a banner in a containing element.
 		 * @param {jQuery.Object} $container to render the page issues banner inside.
 		 * @param {string} labelText what the label of the page issues banner should say
 		 * @param {string} headingText the heading of the overlay that is created when the page issues banner is clicked
+		 * @ignore
 		 */
 		function createBanner( $container, labelText, headingText ) {
 			var selector = 'table.ambox, table.tmbox',
@@ -78,6 +86,12 @@
 			$metadata.remove();
 		}
 
+		/**
+		 * Scan an element for any known cleanup templates and replace them with a button
+		 * that opens them in a mobile friendly overlay.
+		 * @param {Object} $container to clean up.
+		 * @ignore
+		 */
 		function initPageIssues( $container ) {
 			var ns = mw.config.get( 'wgNamespaceNumber' );
 			if ( ns === 0 ) {
