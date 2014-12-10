@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_597b67eb",
+        "filename": "javascripts/mainmenu.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-10T00:52:19Z",
+      "side": 1,
+      "message": "A better way is to check the target of the event and remove ev.stopPropagation() above. If ev.target is #mw-mf-main-menu-button then don\u0027t run the contents here.",
+      "revId": "ef69a2333082e622e0bea1acd951442b9d552c42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
