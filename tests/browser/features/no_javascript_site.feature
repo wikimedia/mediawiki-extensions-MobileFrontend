@@ -7,11 +7,9 @@ Feature: Basic site for legacy devices
       And I am on the "Main Page" page
 
   # FIXME: Add scenario to check search actually works
-  # FIXME: Add scenario to check watch star actually works
   Scenario: Able to search in basic non-JavaScript site
     When I click on "Random" in the main navigation menu
-    Then I should see the watch star
-      And I should see the search button
+    Then I should see the search button
       # FIXME: Check that the edit button is invisible
       # FIXME: Check that the upload button is invisible
 
@@ -21,8 +19,8 @@ Feature: Basic site for legacy devices
     Then I should see a link to "Home" in the main navigation menu
       And I should see a link to "Random" in the main navigation menu
       And I should see a link to "Settings" in the main navigation menu
-      And I should see a link to "Watchlist" in the main navigation menu
-      And I should see a link to "Log in" in the main navigation menu
+      And I should not see a link to "Watchlist" in the main navigation menu
+      And I should not see a link to "Log in" in the main navigation menu
       And I should not see a link to "Uploads" in the main navigation menu
 
   @extension-geodata
