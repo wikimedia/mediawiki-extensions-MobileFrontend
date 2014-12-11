@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_bd12cbff",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1323,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T18:09:19Z",
+      "side": 1,
+      "message": "Any reason why? Wouldn\u0027t it mean a flash of unstyled content?",
+      "parentUuid": "2e9df725_5736c601",
+      "revId": "6581bd4c15a1b0eb0e7e362762955cfc1ec1017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_773bc2e8",
         "filename": "includes/skins/MinervaTemplateAlpha.php",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-11T07:50:39Z",
       "side": 1,
       "message": "{@inheritdoc }",
+      "revId": "6581bd4c15a1b0eb0e7e362762955cfc1ec1017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7ddc334c",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T18:09:19Z",
+      "side": 1,
+      "message": "Sorry, can you clarify? Thanks.",
+      "parentUuid": "2e9df725_773bc2e8",
       "revId": "6581bd4c15a1b0eb0e7e362762955cfc1ec1017f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
