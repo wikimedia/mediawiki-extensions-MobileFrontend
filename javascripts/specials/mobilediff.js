@@ -3,12 +3,15 @@
 
 	// EventLogging events
 	// Clicking through to article
-	schema.hijackLink( 'h2 a', 'diff-view' );
+	schema.hijackLink( 'Diff', 'h2 a', 'view' );
 
 	// Clicking previous or next diff links
-	schema.hijackLink( '.revision-history-links a', 'diff-prev-or-next' );
+	schema.hijackLink( 'Diff', '.revision-history-links a', 'diff-prev-or-next' );
 
 	// user link
-	schema.hijackLink( '.mw-mf-user a', 'diff-user' );
+	schema.hijackLink( 'Diff', '.mw-mf-user a', 'user' );
+
+	// thank button
+	schema.hijackLink( 'Diff', '#mw-mf-userinfo > button', 'thank' );
 
 } )( jQuery, mw.mobileFrontend );

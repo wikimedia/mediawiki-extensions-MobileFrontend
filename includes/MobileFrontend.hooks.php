@@ -871,7 +871,10 @@ class MobileFrontendHooks {
 		$mobileEventLoggingSchemas = array(
 			'MobileWebUploads'       => 8209043,
 			'MobileWebEditing'       => 8599025,
-			'MobileWebClickTracking' => 5929948,
+			'MobileWebWatchlistClickTracking' => 10720361,
+			'MobileWebDiffClickTracking' => 10720373,
+			'MobileWebMainMenuClickTracking' => 10703095,
+			'MobileWebUIClickTracking' => 10733934,
 			'MobileWebWikiGrok'      => 10352247,
 			'MobileWebWikiGrokError' => 10353516,
 		);

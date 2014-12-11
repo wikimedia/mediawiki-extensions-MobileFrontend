@@ -33,10 +33,10 @@
 			View.prototype.postRender.apply( this, arguments );
 			// Click tracking for table of contents so we can see if people interact with it
 			this.$( 'h2' ).on( 'click', function () {
-				log( 'page-toc-toggle' );
+				log( 'UI', 'page-toc-toggle' );
 			} );
 			this.$( 'a' ).on( 'click', function () {
-				log( 'page-toc-link' );
+				log( 'UI', 'page-toc-link' );
 			} );
 		}
 	} );
