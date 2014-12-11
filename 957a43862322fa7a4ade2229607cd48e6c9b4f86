@@ -33,6 +33,24 @@
       "revId": "957a43862322fa7a4ade2229607cd48e6c9b4f86",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_54a6c4bf",
+        "filename": "javascripts/modules/issues/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-11T01:19:33Z",
+      "side": 1,
+      "message": "No return type here.",
+      "parentUuid": "2e9df725_3128ea2e",
+      "revId": "957a43862322fa7a4ade2229607cd48e6c9b4f86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
