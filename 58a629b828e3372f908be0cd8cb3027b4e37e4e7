@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_948f6cd1",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T01:59:39Z",
+      "side": 1,
+      "message": "sorry for nitpicking but string should be capitalized.",
+      "revId": "58a629b828e3372f908be0cd8cb3027b4e37e4e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
