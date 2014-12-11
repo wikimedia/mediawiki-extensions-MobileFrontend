@@ -40,7 +40,7 @@
 		editor: 'SourceEditor',
 		sectionLine: '',
 
-		/*
+		/**
 		 * Check whether VisualEditor is enabled or not.
 		 * @method
 		 * @return boolean
@@ -53,6 +53,7 @@
 				mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 		},
 
+		/** @inheritdoc **/
 		initialize: function ( options ) {
 			this.api = new EditorApi( {
 				title: options.title,
@@ -83,6 +84,7 @@
 			}
 		},
 
+		/** @inheritdoc **/
 		postRender: function ( options ) {
 			var self = this;
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
@@ -162,6 +164,7 @@
 
 		/**
 		 * Handles click on "Edit without login" in anonymous editing warning.
+		 * @private
 		 */
 		_showEditorAfterWarning: function () {
 			this.showSpinner();
@@ -171,13 +174,16 @@
 			this._loadContent();
 		},
 
+		/**
+		 * Prepares the preview interface and reveals the save screen of the overlay
+		 * @private
+		 * @inheritdoc
+		 */
 		_prepareForSave: function () {
 			var self = this,
 				params = {
 					text: this.$content.val()
 				};
-
-			this._showHidden( '.save-header, .save-panel' );
 
 			this.scrollTop = $( 'body' ).scrollTop();
 			this.$content.hide();
@@ -206,6 +212,10 @@
 			EditorOverlayBase.prototype._prepareForSave.apply( this, arguments );
 		},
 
+		/**
+		 * Hides the preview and reverts back to initial screen.
+		 * @private
+		 */
 		_hidePreview: function () {
 			this.api.abort();
 			this.clearSpinner();
@@ -216,6 +226,10 @@
 			this.abuseFilterPanel.hide();
 		},
 
+		/**
+		 * Requests content from the API and reveals it in UI.
+		 * @private
+		 */
 		_loadContent: function () {
 			var self = this;
 
@@ -235,6 +249,11 @@
 				} );
 		},
 
+		/**
+		 * Loads a {VisualEditorOverlay} and replaces the existing EditorOverlay with it
+		 * based on the current option values.
+		 * @private
+		 */
 		_switchToVisualEditor: function ( options ) {
 			var self = this;
 			this.log( 'switch' );
@@ -260,6 +279,10 @@
 			);
 		},
 
+		/**
+		 * Reveals an abuse filter panel inside the view.
+		 * @private
+		 */
 		_showAbuseFilter: function ( type, message ) {
 			this.abuseFilterPanel.show( type, message );
 			this._showHidden( '.save-header' );
@@ -270,6 +293,7 @@
 		/**
 		 * Executed when the editor clicks the save button. Handles logging and submitting
 		 * the save action to the editor API.
+		 * @inheritdoc
 		 */
 		_save: function () {
 			var self = this,
@@ -324,6 +348,14 @@
 					}
 				} );
 		},
+
+		/**
+		 * Checks whether the existing content has changed.
+		 * FIXME: Make method of EditorApi
+		 * @uses EditorApi
+		 * @private
+		 * @return {Boolean}
+		 */
 		_hasChanged: function () {
 			return this.api.hasChanged;
 		}
