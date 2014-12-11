@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_9468cc85",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T01:00:30Z",
+      "side": 1,
+      "message": "misaligned line",
+      "revId": "8976545744600d37f220e1b83b28a3fbb3c578e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_b465c8ac",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T01:00:30Z",
+      "side": 1,
+      "message": "misaligned line",
+      "revId": "8976545744600d37f220e1b83b28a3fbb3c578e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
