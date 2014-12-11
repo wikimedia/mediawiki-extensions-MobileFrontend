@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_5d012fb8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 856,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-11T17:54:47Z",
+      "side": 1,
+      "message": "Maybe we should consider to move this var to a ResourceLoaderConfigVar. SkinConfig vars are heavily cached, right? So a block isn\u0027t recognized immediately (or an unblock).",
+      "revId": "df80b70feccf07c226fd141a8155dfe1dc6a0a18",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
