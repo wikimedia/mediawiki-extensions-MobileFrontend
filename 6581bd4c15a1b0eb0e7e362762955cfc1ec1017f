@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_fdce0386",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1323,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-11T18:14:09Z",
+      "side": 1,
+      "message": "Why? No :) All module groups will be merged into one big $wgResourceModules. But it doesn\u0027t matter where the module is declared, the important point is, when the module get\u0027s load (which is here as style in SkinMinerva :)\n\nSo our different resource arrays are to organize our modules into much more understandable groups and this group (wgMinervaBootstrapModules) should only contain modules, which starts other modules :)",
+      "parentUuid": "0e6cb3ef_bd12cbff",
+      "revId": "6581bd4c15a1b0eb0e7e362762955cfc1ec1017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_773bc2e8",
         "filename": "includes/skins/MinervaTemplateAlpha.php",
         "patchSetId": 7
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Sorry, can you clarify? Thanks.",
       "parentUuid": "2e9df725_773bc2e8",
+      "revId": "6581bd4c15a1b0eb0e7e362762955cfc1ec1017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7daaf383",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-11T18:14:09Z",
+      "side": 1,
+      "message": "@inheritdoc is JavaScript, in phpDoc it\u0027s unknown. To inherit a doc from parent class in phpdoc you need the above syntax :) Otherwise it will throw an error (undocumented variable).",
+      "parentUuid": "0e6cb3ef_7ddc334c",
       "revId": "6581bd4c15a1b0eb0e7e362762955cfc1ec1017f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
