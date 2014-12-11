@@ -213,8 +213,10 @@ class MinervaTemplate extends BaseTemplate {
 			)->getLocalURL();
 
 			$result['language'] = array(
-				'class' => 'languageSelector',
-				'url' => $languageUrl,
+				'attributes' => array(
+					'class' => 'languageSelector',
+					'href' => $languageUrl,
+				),
 				'label' => wfMessage( 'mobile-frontend-language-article-heading' )->text()
 			);
 		}
@@ -226,14 +228,16 @@ class MinervaTemplate extends BaseTemplate {
 	 * Render secondary page actions like language selector
 	 */
 	protected function renderSecondaryActions() {
+		$baseClass = 'mw-ui-button button';
 		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
 
 		foreach ( $this->getSecondaryActions() as $el ) {
-			$additionalClass = ( isset( $el['class'] ) ? $el['class'] : '' );
-			echo Html::element( 'a', array(
-				'class' => 'mw-ui-button button ' . $additionalClass,
-				'href' => $el['url']
-			), $el['label'] );
+			if ( isset( $el['attributes']['class'] ) ) {
+				$el['attributes']['class'] .= ' ' . $baseClass;
+			} else {
+				$el['attributes']['class'] = $baseClass;
+			}
+			echo Html::element( 'a', $el['attributes'], $el['label'] );
 		}
 
 		echo Html::closeElement( 'div' );

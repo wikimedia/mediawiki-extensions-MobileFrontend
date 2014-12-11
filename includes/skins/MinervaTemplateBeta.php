@@ -32,7 +32,9 @@ class MinervaTemplateBeta extends MinervaTemplate {
 
 		if ( $wgMFDonationUrl && !$this->isSpecialPage ) {
 			$result['donation'] = array(
-				'url' => $wgMFDonationUrl,
+				'attributes' => array(
+					'href' => $wgMFDonationUrl,
+				),
 				'label' => wfMessage( 'mobile-frontend-donate-button-label' )->text()
 			);
 		}
