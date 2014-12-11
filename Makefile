@@ -29,7 +29,7 @@ kss: kssnodecheck			## Build the styleguide
 	@node_modules/.bin/kss-node less/ docs/styleguide/ --css $(KSS_MF_RL_TMP) -t styleguide-template
 	@rm $(KSS_MF_RL_TMP)
 
-jsduck: nodecheck				## Build the JavaScript documentation
+jsduck: nodecheck gems			## Build the JavaScript documentation
 	@grunt docs --MW_INSTALL_PATH=${MW_INSTALL_PATH}
 
 phpdoc: nodecheck			## Build the PHP documentation
