@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1de417a3",
+        "filename": "includes/specials/SpecialMobilePreferences.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T18:51:28Z",
+      "side": 1,
+      "message": "missing @return tag",
+      "revId": "3769deb3efffd5dd19abd5e307d2c901b2fb8028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_ddfd3f3a",
+        "filename": "includes/specials/SpecialMobilePreferences.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T18:51:28Z",
+      "side": 1,
+      "message": "calling a private function?",
+      "revId": "3769deb3efffd5dd19abd5e307d2c901b2fb8028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
