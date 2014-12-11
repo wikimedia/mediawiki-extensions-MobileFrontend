@@ -5,6 +5,7 @@
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
 		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
+		icons = M.require( 'icons' ),
 		WikiGrokDialog,
 		timer = null,
 		$window = $( window );
@@ -54,7 +55,9 @@
 					label: 'Okay!'
 				}
 			],
-			noticeMsg: '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>'
+			spinner: icons.spinner().toHtmlString(),
+			noticeMsg: '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>',
+			isDrawer: false
 		},
 		template: mw.template.get( 'mobile.wikigrok.dialog', 'Dialog.hogan' ),
 		templatePartials: {
@@ -458,6 +461,13 @@
 			if ( options.campaign ) {
 				this.show();
 			}
+		},
+		/**
+		 * Is this dialog a Drawer?
+		 * @returns {Boolean} Whether it's a drawer
+		 */
+		isDrawer: function () {
+			return this.options.isDrawer;
 		}
 	} );
 

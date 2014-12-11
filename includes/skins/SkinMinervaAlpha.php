@@ -106,4 +106,31 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
 		return $vars;
 	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	protected function getDiscoveryTools() {
+		global $wgMFEnableWikiGrok, $wgMFEnableWikiGrokInSidebar, $wgMFEnableWikiGrokForAnons;
+
+		$items = parent::getDiscoveryTools();
+		if (
+			$wgMFEnableWikiGrok &&
+			$wgMFEnableWikiGrokInSidebar &&
+			($this->getUser()->isLoggedIn() || $wgMFEnableWikiGrokForAnons)
+		) {
+			$items['wikigrok'] = array(
+				'links' => array(
+					array(
+						'text' => 'WikiGrok',
+						'href' => '#',
+						'class' => MobileUI::iconClass( 'wikigrok', 'before',
+							'wikigrok-roulette' ),
+					),
+				),
+				'class' => 'jsonly'
+			);
+		}
+		return $items;
+	}
 }
