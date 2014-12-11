@@ -53,6 +53,6 @@
 			$lastModified.remove();
 		}
 	}
-	M.on( 'header-loaded', init );
+	M.on( 'history-link-loaded', init );
 
 }( mw.mobileFrontend, jQuery ) );
