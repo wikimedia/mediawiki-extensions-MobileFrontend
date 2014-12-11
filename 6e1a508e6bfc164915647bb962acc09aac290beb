@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_34f7b0f4",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-11T23:07:22Z",
+      "side": 1,
+      "message": "This seems like it should be cleaned up but we can do that in a follow up...",
+      "revId": "6e1a508e6bfc164915647bb962acc09aac290beb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_343d708b",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-11T23:07:22Z",
+      "side": 1,
+      "message": "ergg.. I wouldn\u0027t if it would just be easier to not show the icon in the button for the time being?\nWhy is this even needed when we are only making our change in alpha?",
+      "revId": "6e1a508e6bfc164915647bb962acc09aac290beb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9438fc9c",
+        "filename": "less/pageactions.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-11T23:07:22Z",
+      "side": 1,
+      "message": "Should really put this in pageactions.alpha - shouldn\u0027t be loaded by stable users.",
+      "revId": "6e1a508e6bfc164915647bb962acc09aac290beb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
