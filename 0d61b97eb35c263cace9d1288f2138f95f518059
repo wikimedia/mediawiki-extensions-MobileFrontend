@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_6086c66c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-11T19:22:55Z",
+      "side": 1,
+      "message": "position is irrelevant, modules added with OutputPage::addModuleStyles() will be loaded via a link tag in head already.",
+      "revId": "0d61b97eb35c263cace9d1288f2138f95f518059",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
