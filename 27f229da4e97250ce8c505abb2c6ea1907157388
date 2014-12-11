@@ -52,6 +52,24 @@
       "revId": "27f229da4e97250ce8c505abb2c6ea1907157388",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1d80974a",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-11T17:35:13Z",
+      "side": 1,
+      "message": "No, there is no task, let me open one :)",
+      "parentUuid": "0e6cb3ef_5d228fa3",
+      "revId": "27f229da4e97250ce8c505abb2c6ea1907157388",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
