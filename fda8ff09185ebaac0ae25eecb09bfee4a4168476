@@ -52,6 +52,24 @@
       "revId": "fda8ff09185ebaac0ae25eecb09bfee4a4168476",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_b4d4e8ed",
+        "filename": "javascripts/modules/languages/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T01:35:25Z",
+      "side": 1,
+      "message": "* In the list of languages",
+      "parentUuid": "2e9df725_94c0cc30",
+      "revId": "fda8ff09185ebaac0ae25eecb09bfee4a4168476",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
