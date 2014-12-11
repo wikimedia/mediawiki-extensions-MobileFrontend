@@ -385,5 +385,5 @@
 	"apihelp-parse-param-mobileformat": "{{doc-apihelp-param|parse|mobileformat}}",
 	"apihelp-parse-param-noimages": "{{doc-apihelp-param|parse|noimages}}",
 	"apihelp-parse-param-mainpage": "{{doc-apihelp-param|parse|mainpage}}",
-	"mobile-frontend-donate-button-label": "Message for donation button in mobile interface at bottom of page."
+	"mobile-frontend-donate-button-label": "Message for donation button in mobile interface at bottom of page.\n{{Identical|Donate}}"
 }

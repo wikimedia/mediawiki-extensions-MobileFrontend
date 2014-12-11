@@ -87,6 +87,7 @@
 	"mobile-frontend-editor-wait": "Ännerung gëtt gespäichert, waart w.e.g..",
 	"mobile-frontend-enable-images": "Biller an der Mobiler Versioun aktivéieren",
 	"mobile-frontend-expand-sections-status": "All Abschnitter komplett weisen",
+	"mobile-frontend-fontchanger-link": "Schrëftgréisst",
 	"mobile-frontend-featured-article": "Den Inhalt vum Dag",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Biller op {{SITENAME}} komme vu Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Maacht mat mat Äre Biller. Hëlleft {{SITENAME}} méi lieweg ze maachen!",
@@ -279,5 +280,6 @@
 	"tag-mobile_edit": "Mobil Ännerung",
 	"tag-mobile_edit-description": "Ännerung déi vun engem mobile Site oder enger App gemaach gouf",
 	"tag-mobile_web_edit": "Mobil Web-Ännerung",
-	"tag-mobile_web_edit-description": "Ännerung vum mobile Site aus gemaach"
+	"tag-mobile_web_edit-description": "Ännerung vum mobile Site aus gemaach",
+	"mobile-frontend-donate-button-label": "Maacht en Don"
 }

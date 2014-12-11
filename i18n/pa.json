@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Babanwalia"
+			"Babanwalia",
+			"Satdeep gill"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "A ਸ਼ੈਕਸ਼ਨ ਉੱਤੇ ਵਾਪਸ ਜਾਉ",
 	"mobile-frontend-donate-image-anon": "ਚੜ੍ਹਾਈਆਂ ਦਾ ਸਫ਼ਾ ਵੇਖਣ ਵਾਸਤੇ ਦਾਖ਼ਲ ਹੋਵੋ ਜੀ।",
 	"mobile-frontend-editor-summary": "ਸਾਰ:",
+	"mobile-frontend-fontchanger-link": "ਦਾਨ ਕਰੋ",
 	"mobile-frontend-featured-article": "ਅੱਜ ਦੇ ਖਾਸ ਲੇਖ",
 	"mobile-frontend-home-button": "ਘਰ",
 	"mobile-frontend-meta-data-issues-talk": "ਇਸ ਗੱਲਬਾਤ ਸਫ਼ੇ ਬਾਬਤ",
@@ -21,5 +23,6 @@
 	"mobile-frontend-talk-topic-error-spam": "ਇਹ ਵਿਸ਼ਾ ਮਨਜ਼ੂਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਕਿਉਂਕਿ ਇਸ ਵਿੱਚ ਕੋਈ ਫ਼ਜ਼ੂਲ ਟੋਟਾ ਸੀ।",
 	"mobile-frontend-talk-topic-error-badtoken": "ਸਰਵਰ 'ਤੇ ਕੋਈ ਦੋਸ਼ ਆ ਗਿਆ ਸੀ। ਤੁਹਾਡੀ ਸੋਧ ਸਾਂਭੀ ਨਹੀਂ ਜਾ ਸਕਦੀ। ਇਸ ਸਫ਼ੇ ਨੂੰ ਮੁੜ ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
 	"mobile-frontend-pageaction-edit-tooltip": "ਇਸ ਸਫ਼ੇ ਦਾ ਅਗੇਤਰਾ ਹਿੱਸਾ ਸੋਧੋ।",
-	"mobile-frontend-pageaction-upload-tooltip": "ਇਸ ਸਫ਼ੇ 'ਤੇ ਕੋਈ ਆਗੂ ਤਸਵੀਰ ਚੜ੍ਹਾਉ।"
+	"mobile-frontend-pageaction-upload-tooltip": "ਇਸ ਸਫ਼ੇ 'ਤੇ ਕੋਈ ਆਗੂ ਤਸਵੀਰ ਚੜ੍ਹਾਉ।",
+	"mobile-frontend-donate-button-label": "ਦਾਨ"
 }

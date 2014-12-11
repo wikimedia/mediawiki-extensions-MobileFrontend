@@ -7,7 +7,8 @@
 			"ITshnik",
 			"Otogi",
 			"Tokoko",
-			"გიორგიმელა"
+			"გიორგიმელა",
+			"MIKHEIL"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "შეიყვანეთ დადასტურების კოდი",
@@ -70,6 +71,7 @@
 	"mobile-frontend-enable-images": "მობილურ საიტზე სურათების ჩართვა",
 	"mobile-frontend-expand-sections-description": "ყოველთვის აჩვენე ყველა სექცია ახალი გვერდის ნახვისას.",
 	"mobile-frontend-expand-sections-status": "აჩვენე ყველა სექცია",
+	"mobile-frontend-fontchanger-link": "შრიფტის ზომა",
 	"mobile-frontend-featured-article": "დღის რჩეული მასალა",
 	"mobile-frontend-first-upload-wizard-new-page-1": "სურათები {{SITENAME}}-ზე აღებულია ვიკისაწყობიდან",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "თავად შემოიტანე სურათები. დაეხმარე {{SITENAME}}",
@@ -237,5 +239,6 @@
 	"mobile-frontend-watchlist-view": "თქვენი კონტროლის სიის ხილვა",
 	"nearby": "გვერდები შენთან ახლოს",
 	"tag-mobile_edit": "რედაქტირება მობილურით",
-	"tag-mobile_edit-description": "რედაქტირება შესრულებულია საიტის მობილური ვერსიიდან"
+	"tag-mobile_edit-description": "რედაქტირება შესრულებულია საიტის მობილური ვერსიიდან",
+	"mobile-frontend-donate-button-label": "შეწირულობები"
 }

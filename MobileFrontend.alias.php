@@ -291,6 +291,11 @@ $specialPageAliases['nn'] = array(
 	'Nearby' => array( 'Nær_her' ),
 );
 
+/** Punjabi (ਪੰਜਾਬੀ) */
+$specialPageAliases['pa'] = array(
+	'History' => array( 'ਇਤਿਹਾਸ' ),
+);
+
 /** Polish (polski) */
 $specialPageAliases['pl'] = array(
 	'History' => array( 'Historia' ),

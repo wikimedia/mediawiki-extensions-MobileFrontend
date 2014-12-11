@@ -6,6 +6,8 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Hiverina any amina fizarana nialoha",
+	"mobile-frontend-fontchanger-link": "Haben-tarehin-tsoratra",
+	"mobile-frontend-fontchanger-desc": "Hanitatra na hamintina ny haben-tsoratra hahafahana mamaky.",
 	"mobile-frontend-featured-article": "Vontoatiny notsongaina androany",
 	"mobile-frontend-generic-404-desc": "Tsy hia ilay pejy notadiavinao.",
 	"mobile-frontend-generic-404-title": "Hadisoana - tsy hita ilay pejy",
@@ -13,5 +15,6 @@
 	"mobile-frontend-profile-footer-ancient": "Nanao [[Special:Contributions/$1|{{PLURAL:$3|fanovana tokana |fanovana $3}}]] ary [[Special:Uploads/$1|{{PLURAL:$4|fampidiran-drakitra tokana |fampidiran-drakitra $4|500=fampidiran-drakitra mahery ny 500 }}]].",
 	"mobile-frontend-random-button": "Takelaka kisendra",
 	"mobile-frontend-regular-site": "Hivoaka amin'ny versiona finday",
-	"mobile-frontend-search-submit": "Tsidiho"
+	"mobile-frontend-search-submit": "Tsidiho",
+	"mobile-frontend-donate-button-label": "Hanome"
 }

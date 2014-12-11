@@ -74,6 +74,8 @@
 	"mobile-frontend-editor-wait": "د حال اماییه کردن ویرایشت، لطف آهره داری بکیت.",
 	"mobile-frontend-enable-images": "کنشتگر کردن عسگ د دیارگه موبایلی",
 	"mobile-frontend-expand-sections-status": "وا کردن همه جابئریا",
+	"mobile-frontend-fontchanger-link": "انازه فونت",
+	"mobile-frontend-fontchanger-desc": "کم یا زیا کردن انازه نیسسه سی بیتر حننش.",
 	"mobile-frontend-first-upload-wizard-new-page-1": "عسگیایی که هان{{نوم دیارگه}} د  ویکی رسانه هومبئری گرته بیه",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "روئه دش؟",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "هری!",
@@ -202,6 +204,7 @@
 	"mobile-frontend-talk-overlay-lead-header": "گپ چنه بی نوم",
 	"mobile-frontend-talk-reply": "جؤاو ده ئن",
 	"mobile-frontend-talk-reply-success": "جواو شما وه خوئی د بلگه چک چنه اماییه بیه.",
+	"mobile-frontend-talk-topic-feedback": "یه گل سرغال هنی د بلگه چک چنه اضاف بیه.",
 	"mobile-frontend-terms-text": "کلیمه یا وه کار گرتنی",
 	"mobile-frontend-user-account": "حساو کاروری",
 	"mobile-frontend-user-button-tooltip": "نشو دئن وارسیاری یا مه",
@@ -240,5 +243,6 @@
 	"tag-mobile_edit-description": "ویرایشت سی سیلجا هومدرونگ راس بیه",
 	"tag-mobile_web_edit": "ویرایشت تیارگه موبایلی",
 	"apihelp-mobileview-param-page": "داسون بلگه سی پردازشت کردن.",
-	"apihelp-mobileview-param-sectionprop": "چه دونسمنیایی دباره ای بهرجایا حاستنیه."
+	"apihelp-mobileview-param-sectionprop": "چه دونسمنیایی دباره ای بهرجایا حاستنیه.",
+	"mobile-frontend-donate-button-label": "هومياری پيلی"
 }
