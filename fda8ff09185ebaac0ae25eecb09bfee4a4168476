@@ -34,6 +34,24 @@
       "revId": "fda8ff09185ebaac0ae25eecb09bfee4a4168476",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_94c0cc30",
+        "filename": "javascripts/modules/languages/LanguageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T01:34:23Z",
+      "side": 1,
+      "message": "In the list of pages I don\u0027t see spans I see a\u0027s. This is the HTML I have:\n\n\u003cul class\u003d\"language-list\"\u003e\n\t\t\t\u003cli\u003e\n\t\t\t\t\u003ca href\u003d\"/wiki/1?variant\u003duz\" hreflang\u003d\"uz\" lang\u003d\"uz\"\u003euz\u003c/a\u003e\n\t\t\t\u003c/li\u003e\n\t\t\u003cli\u003e\n\t\t\t\t\u003ca href\u003d\"/wiki/1?variant\u003duz-latn\" hreflang\u003d\"uz-latn\" lang\u003d\"uz-latn\"\u003elotincha\u003c/a\u003e\n\t\t\t\u003c/li\u003e\n\t\t\u003cli\u003e\n\t\t\t\t\u003ca href\u003d\"/wiki/1?variant\u003duz-cyrl\" hreflang\u003d\"uz-cyrl\" lang\u003d\"uz-cyrl\"\u003eкириллча\u003c/a\u003e\n\t\t\t\u003c/li\u003e\n\u003c/ul\u003e",
+      "parentUuid": "2e9df725_348c5837",
+      "revId": "fda8ff09185ebaac0ae25eecb09bfee4a4168476",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
