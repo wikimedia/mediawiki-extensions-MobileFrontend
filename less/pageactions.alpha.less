@@ -6,8 +6,17 @@
 
 .alpha {
 	.pre-content {
-		padding-top: @titleSectionSpacingTop;
-		padding-bottom: @titleSectionSpacingBottom;
+		padding: @titleSectionSpacingTop @contentMargin @titleSectionSpacingBottom;
+
+		.tagline {
+			color: @colorGray5;
+			font-size: 1.1em;
+			margin: 10px 0;
+
+			&:first-letter {
+				text-transform: capitalize;
+			}
+		}
 	}
 
 	#section_0 {

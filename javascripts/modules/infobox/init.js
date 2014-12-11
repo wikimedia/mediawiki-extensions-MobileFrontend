@@ -11,6 +11,6 @@
 		infobox = new Infobox( {
 			itemId: wikidataID
 		} );
-		infobox.insertBefore( '#content' );
+		infobox.insertAfter( '.pre-content' );
 	}
 }( mw.mobileFrontend ) );

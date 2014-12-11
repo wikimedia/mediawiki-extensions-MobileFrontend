@@ -12,6 +12,20 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	/** @var string Describes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'alpha';
 
+	/** @inheritdoc **/
+	protected function getHeaderHtml() {
+		$html = parent::getHeaderHtml();
+		$vars = $this->getSkinConfigVariables();
+		$description = $vars['wgMFDescription'];
+		if ( $description && !$this->getTitle()->isSpecialPage() ) {
+			$html .= Html::element( 'div',
+				array(
+					'class' => 'tagline',
+				), $description );
+		}
+		return $html;
+	}
+
 	/**
 	 * Get the needed styles for this skin
 	 * @return array
@@ -89,6 +103,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	public function getSkinConfigVariables() {
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgMFAnonymousEditing'] = true;
+		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
 		return $vars;
 	}
 }

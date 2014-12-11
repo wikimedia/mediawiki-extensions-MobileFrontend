@@ -952,7 +952,7 @@ class MobileFrontendHooks {
 				if ( $item ) {
 					$desc = self::getWikibaseDescription( $item );
 					if ( $desc ) {
-						$outputPage->addJsConfigVars( 'wgMFDescription', $desc );
+						$outputPage->setProperty( 'wgMFDescription', $desc );
 					}
 				}
 			}

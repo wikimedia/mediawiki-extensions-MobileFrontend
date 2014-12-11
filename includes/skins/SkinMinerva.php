@@ -596,6 +596,14 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns the HTML representing the header.
+	 * @returns {String} html for header
+	 */
+	protected function getHeaderHtml() {
+		return Html::rawElement( 'h1', array( 'id' => 'section_0' ),
+			$this->getOutput()->getPageTitle() );
+	}
+	/**
 	 * Create and prepare header and footer content
 	 * @param BaseTemplate $tpl
 	 */
@@ -619,9 +627,7 @@ class SkinMinerva extends SkinTemplate {
 				$tpl->set( 'historyLink', $this->getHistoryLink( $title ) );
 			}
 		}
-		$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ),
-			$this->getOutput()->getPageTitle() );
-		$tpl->set( 'prebodytext', $preBodyText );
+		$tpl->set( 'prebodytext', $this->getHeaderHtml() );
 
 		// set defaults
 		if ( !isset( $tpl->data['postbodytext'] ) ) {
