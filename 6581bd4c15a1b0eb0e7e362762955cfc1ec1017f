@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_5736c601",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1323,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-11T07:50:39Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this module be in $wgResourceModules?",
+      "revId": "6581bd4c15a1b0eb0e7e362762955cfc1ec1017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_773bc2e8",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-11T07:50:39Z",
+      "side": 1,
+      "message": "{@inheritdoc }",
+      "revId": "6581bd4c15a1b0eb0e7e362762955cfc1ec1017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
