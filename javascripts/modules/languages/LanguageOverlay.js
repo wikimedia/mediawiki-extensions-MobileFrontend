@@ -24,6 +24,7 @@
 			content: mw.template.get( 'mobile.languages', 'LanguageOverlay.hogan' )
 		},
 
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			if ( options.languages && options.languages.length ) {
 				options.header = mw.msg( 'mobile-frontend-language-header', options.languages.length );
@@ -35,6 +36,10 @@
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
 
+		/**
+		 * Filter the language list to only show languages that match the current search term.
+		 * @param {String} val of search term.
+		 */
 		filterLists: function ( val ) {
 			var $items = this.$( '.page-list li' ),
 				$subheaders = this.$( 'h3' );
@@ -55,6 +60,7 @@
 			}
 		},
 
+		/** @inheritdoc */
 		postRender: function () {
 			var self = this;
 			Overlay.prototype.postRender.apply( this, arguments );
@@ -68,6 +74,7 @@
 		}
 	} );
 
+	// FIXME: Naming inconsistency. modules/languages/LanguageOverlay or languages/LanguageOverlay ?
 	M.define( 'languages/LanguageOverlay', LanguageOverlay );
 
 }( mw.mobileFrontend, jQuery ) );
