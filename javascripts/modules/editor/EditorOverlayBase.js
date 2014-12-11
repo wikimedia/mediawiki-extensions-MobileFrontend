@@ -154,9 +154,6 @@
 			} );
 		},
 		initialize: function ( options ) {
-			if ( !options.previewingMsg ) {
-				options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
-			}
 			if ( options.isNewPage ) {
 				options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
 			}
