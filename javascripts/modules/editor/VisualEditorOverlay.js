@@ -9,16 +9,29 @@
 	 * @extends EditorOverlayBase
 	 */
 	VisualEditorOverlay = EditorOverlayBase.extend( {
-		templatePartials: {
-			switcher: mw.template.get( 'mobile.editor.common', 'switcher.hogan' ),
-			header: mw.template.get( 'mobile.editor.ve', 'OverlayHeader.hogan' ),
-			content: mw.template.get( 'mobile.editor.ve', 'OverlayContent.hogan' )
-		},
+		/** @inheritdoc **/
+		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
+			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )
+		} ),
 		className: 'overlay editor-overlay editor-overlay-ve',
 		editor: 'VisualEditor',
+		/**
+		 * Set options that apply specifically to VisualEditorOverlay but not
+		 * EditorOverlay so that an EditorOverlay instance can be created effortlessy.
+		 * FIXME: Must be smarter way to do this.
+		 * @param {Object} options
+		 * @param {Boolean} isVE whether the options are being generated for a VisualEditorOverlay
+		 *  or a EditorOverlay
+		 */
+		applyHeaderOptions: function ( options, isVE ) {
+			// Set things that are known to be true.
+			options.hasToolbar = isVE;
+			options.editSwitcher = isVE;
+			options.isVisualEditor = isVE;
+		},
 		initialize: function ( options ) {
 			var self = this;
-			options.isVisualEditor = true;
+			this.applyHeaderOptions( options, true );
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
@@ -148,7 +161,9 @@
 			// Load the SourceEditor and replace the VisualEditor overlay with it
 			mw.loader.using( 'mobile.editor.overlay', function () {
 				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+
 				self.clearSpinner();
+				self.applyHeaderOptions( options, false );
 				M.overlayManager.replaceCurrent( new EditorOverlay( options ) );
 			} );
 		},

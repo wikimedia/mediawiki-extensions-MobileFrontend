@@ -2,9 +2,12 @@
 	<ul>
 		<li>{{{backButton}}}</li>
 	</ul>
+	{{^hasToolbar}}
 	<div class="overlay-title">
 		<h2>{{{editingMsg}}}</h2>
 	</div>
+	{{/hasToolbar}}
+	{{#hasToolbar}}<div class="toolbar"></div>{{/hasToolbar}}
 	{{#editSwitcher}}
 	{{>switcher}}
 	{{/editSwitcher}}

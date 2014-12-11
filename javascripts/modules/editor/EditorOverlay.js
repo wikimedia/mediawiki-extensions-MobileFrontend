@@ -16,12 +16,10 @@
 	 * @extends EditorOverlayBase
 	 */
 	EditorOverlay = EditorOverlayBase.extend( {
-		templatePartials: {
-			switcher: mw.template.get( 'mobile.editor.common', 'switcher.hogan' ),
-			header: mw.template.get( 'mobile.editor.overlay', 'header.hogan' ),
+		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
 			anonWarning: mw.template.get( 'mobile.editor.common', 'EditorOverlayAnonWarning.hogan' )
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -249,6 +247,7 @@
 				'mobile.editor.ve',
 				function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
+
 					self.clearSpinner();
 					M.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
 				},

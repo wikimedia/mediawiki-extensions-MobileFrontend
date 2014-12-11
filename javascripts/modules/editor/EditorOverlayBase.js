@@ -16,6 +16,8 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
+		 *  disabled a header will be show instead.
 		 * @cfg {String} defaults.switcherButton HTML of the editor switcher button.
 		 * @cfg {String} defaults.sourceButton HTML of the button that shows the page source.
 		 * @cfg {String} defaults.veButton HTML of the button that opens the Visual Editor.
@@ -39,6 +41,7 @@
 		 * two different editing interfaces.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
+			hasToolbar: false,
 			switcherButton: new Icon( {
 				tagName: 'button',
 				name: 'edit-switch',
@@ -73,6 +76,12 @@
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' )
 		} ),
+		templatePartials: {
+			switcher: mw.template.get( 'mobile.editor.common', 'switcher.hogan' ),
+			editHeader: mw.template.get( 'mobile.editor.common', 'editHeader.hogan' ),
+			previewHeader: mw.template.get( 'mobile.editor.common', 'previewHeader.hogan' ),
+			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
+		},
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
 		className: 'overlay editor-overlay',
 		log: function ( action, errorText ) {

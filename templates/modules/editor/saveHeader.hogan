@@ -1,0 +1,11 @@
+<div class="overlay-header saving-header hideable hidden">
+	<ul>
+		<li>{{{cancelButton}}}</li>
+	</ul>
+	<div class="overlay-title">
+		<h2>{{{waitMsg}}}</h2>
+	</div>
+	<ul>
+		<li>{{{waitIcon}}}</li>
+	</ul>
+</div>
