@@ -7,6 +7,13 @@
 		user = M.require( 'user' ),
 		isSupported = PhotoUploaderButton.isSupported;
 
+	/**
+	 * Checks whether there is no suitable image in the container.
+	 * Judges this based on selector in wgMFLeadPhotoUploadCssSelector
+	 *
+	 * @return {Boolean}
+	 * @ignore
+	 */
 	function needsPhoto( $container ) {
 		return $container.find( mw.config.get( 'wgMFLeadPhotoUploadCssSelector' ) ).length === 0;
 	}
@@ -16,6 +23,11 @@
 		$.cookie( 'mwUploadsFunnel', null );
 	}
 
+	/**
+	 * Initialise interface would uploading an image to the top of the current page.
+	 *
+	 * @ignore
+	 */
 	function initialize() {
 		var
 			page = M.getCurrentPage(),

@@ -48,6 +48,7 @@
 			content: mw.template.get( 'mobile.uploads', 'PhotoUploadOverlay.hogan' )
 		},
 
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			var fileReader = new FileReader(),
 				self = this;
@@ -179,6 +180,7 @@
 			this._save();
 		},
 
+		/** @inheritdoc */
 		postRender: function () {
 			var $submitButton,
 				self = this;
@@ -210,6 +212,7 @@
 			}
 		},
 
+		/** @inheritdoc */
 		show: function () {
 			var self = this;
 
@@ -233,6 +236,7 @@
 			}
 		},
 
+		/** @inheritdoc */
 		hide: function ( force ) {
 			var _super = Overlay.prototype.hide;
 			// In the case of a missing file force close

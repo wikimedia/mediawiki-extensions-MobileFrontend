@@ -32,6 +32,7 @@
 			el: '#ca-upload'
 		},
 
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			options.pageTitle = mw.config.get( 'wgPageName' );
 			PhotoUploaderButton.prototype.initialize.apply( this, arguments );

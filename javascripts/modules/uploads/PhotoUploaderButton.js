@@ -53,6 +53,7 @@
 		template: mw.template.get( 'mobile.upload.ui', 'Button.hogan' ),
 		className: photoIcon.getClassName(),
 
+		/** @inheritdoc */
 		postRender: function () {
 			var self = this,
 				$input = this.$( 'input' );

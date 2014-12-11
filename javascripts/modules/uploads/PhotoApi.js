@@ -4,7 +4,14 @@
 		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 		PhotoApi;
 
-	// Originally written by Brion for WikiLovesMonuments app
+	/**
+	 * Originally written by Brion for WikiLovesMonuments app, trims a string
+	 * to a certain number of bytes
+	 *
+	 * @param {String} str
+	 * @param {Number} allowedLength in bytes
+	 * @ignore
+	 */
 	function trimUtf8String( str, allowedLength ) {
 		// Count UTF-8 bytes to see where we need to crop long names.
 		var codeUnit, len, i,
@@ -47,15 +54,16 @@
 		return str;
 	}
 
-	/*
+	/**
 	 * Generates a file name from a description and a date
 	 * Removes illegal characters
 	 * Respects maximum file name length (240 bytes)
 	 *
-	 * @param {String} description: Data to be preprocessed and added to options
-	 * @param {String} suffix: An optional file extension e.g. '.jpg' or '.gif'
-	 * @param {Date} date: An optional date (defaults to current date)
+	 * @param {String} description Data to be preprocessed and added to options
+	 * @param {String} fileSuffix An optional file extension e.g. '.jpg' or '.gif'
+	 * @param {Date} date An optional date (defaults to current date)
 	 * @return {String} a legal filename
+	 * @ignore
 	 */
 	function generateFileName( description, fileSuffix, date ) {
 		// 240 bytes maximum enforced by MediaWiki - allow 10bytes margin of error
@@ -148,6 +156,13 @@
 				'mobile-frontend-photo-article-edit-comment' :
 				'mobile-frontend-photo-article-donate-comment';
 
+			/**
+			 * Performs upload
+			 *
+			 * @param {String} token valid token for upload action
+			 * @param {String} caToken valid central auth token
+			 * @ignore
+			 */
 			function doUpload( token, caToken ) {
 				var
 					uploadUrl = apiUrl + '?useformat=mobile&r=' + Math.random(),
@@ -270,6 +285,11 @@
 				} );
 			}
 
+			/**
+			 * Loads a token and triggers fail message for result where necessary.
+			 *
+			 * @ignore
+			 */
 			function getToken() {
 				return self.getTokenWithEndpoint.apply( self, arguments )
 					.fail( $.proxy( result, 'reject', {

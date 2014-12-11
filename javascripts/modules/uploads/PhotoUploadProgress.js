@@ -23,11 +23,13 @@
 		template: mw.template.get( 'mobile.uploads', 'PhotoUploadProgress.hogan' ),
 		fullScreen: false,
 
+		/** @inheritdoc */
 		initialize: function () {
 			Overlay.prototype.initialize.apply( this, arguments );
 			this.progressBar = new ProgressBar();
 		},
 
+		/** @inheritdoc */
 		postRender: function () {
 			Overlay.prototype.postRender.apply( this, arguments );
 			this.$( '.submit' ).on( 'click', $.proxy( this, 'emit', 'submit' ) );
@@ -38,6 +40,7 @@
 			this._showHidden( '.save-header' );
 		},
 
+		/** @inheritdoc */
 		hide: function ( force ) {
 			var _super = Overlay.prototype.hide;
 			if ( force ) {

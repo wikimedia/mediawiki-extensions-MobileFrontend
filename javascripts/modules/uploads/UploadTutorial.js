@@ -55,6 +55,7 @@
 			]
 		},
 
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			var self = this,
 				$button = this.$( '.button' );
