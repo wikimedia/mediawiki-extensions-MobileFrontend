@@ -36,7 +36,7 @@
 		},
 
 		filterLists: function ( val ) {
-			var $items = this.$( '.page-list li' ),
+			var $items = this.$( '.language-list li' ),
 				$subheaders = this.$( 'h3' );
 
 			if ( val ) {
