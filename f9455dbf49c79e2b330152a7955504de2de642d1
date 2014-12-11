@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_94168cf5",
+        "filename": "javascripts/modules/languages/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-11T01:03:55Z",
+      "side": 1,
+      "message": "misaligned line",
+      "revId": "f9455dbf49c79e2b330152a7955504de2de642d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
