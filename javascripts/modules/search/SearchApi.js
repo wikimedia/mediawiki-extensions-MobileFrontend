@@ -98,7 +98,7 @@
 								if ( info && $.inArray( id, pageIds ) === -1 ) {
 									pageIds.push ( id );
 									results.push( {
-										id: info.id,
+										id: info.pageid,
 										heading: highlightSearchTerm( info.title, query ),
 										title: info.title,
 										url: mw.util.getUrl( info.title ),
