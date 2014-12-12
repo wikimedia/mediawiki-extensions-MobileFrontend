@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_81d75928",
+        "filename": "javascripts/loggingSchemas/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-12T06:09:07Z",
+      "side": 1,
+      "message": "Maybe i misunderstand the Schema, but this will result in, that all threee font change values will have the same name, right? If so, i would suggest to not do that. Ine of the purpose of this is, to test what and how often a font is used (to extend them to some more, if needed).",
+      "revId": "00d2a6832f02bedc010a1358a78f976e3ceb9020",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
