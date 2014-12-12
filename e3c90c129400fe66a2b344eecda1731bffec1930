@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f4d618c8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 856,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-12T00:21:53Z",
+      "side": 0,
+      "message": "This was restricted to logged in users due to caching reasons... :-/\nThis will be served in the HTML so if a user with blocked ID views a page and that page gets cache no editing will be possible :-(.",
+      "revId": "e3c90c129400fe66a2b344eecda1731bffec1930",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
