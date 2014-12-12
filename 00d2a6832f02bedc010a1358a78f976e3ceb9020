@@ -52,6 +52,24 @@
       "revId": "00d2a6832f02bedc010a1358a78f976e3ceb9020",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_4ba95adb",
+        "filename": "javascripts/loggingSchemas/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-12T19:52:29Z",
+      "side": 1,
+      "message": "Florianschmidtwelzow, just wanted to let you know that we\u0027re not going to record the font size for the time being. Here is a comment from Jdlrobson: \"To be honest in this case it\u0027s probably enough to just track a fonts change event - the data doesn\u0027t add any value for the current experiment which is just to see if it gets use.\"",
+      "parentUuid": "0e6cb3ef_b5ef3782",
+      "revId": "00d2a6832f02bedc010a1358a78f976e3ceb9020",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
