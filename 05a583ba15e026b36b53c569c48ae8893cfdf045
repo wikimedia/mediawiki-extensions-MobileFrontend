@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_219c4d5f",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-12T07:50:40Z",
+      "side": 1,
+      "message": "This looks unneded, if you overwrite $result in any case with a new array 2 lines below this :)",
+      "revId": "05a583ba15e026b36b53c569c48ae8893cfdf045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
