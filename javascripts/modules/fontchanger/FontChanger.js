@@ -70,7 +70,7 @@
 
 		/**
 		 * Set a new font size and change the drawer content
-		 * @param {JQuery} $el Clicked font size element
+		 * @param {jQuery.Object} $el Clicked font size element
 		 */
 		setNewSize: function ( $el ) {
 			var fontSize = $el.data( 'size' );

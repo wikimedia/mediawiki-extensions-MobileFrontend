@@ -12,6 +12,7 @@
 	 *   * Diff
 	 *   * MainMenu
 	 *   * UI
+	 * @ignore
 	 */
 	function assertSchema( schema ) {
 		var schemas = [ 'Watchlist', 'Diff', 'MainMenu', 'UI' ];
@@ -29,6 +30,7 @@
 	 * one of the predefined values.
 	 *
 	 * @method
+	 * @ignore
 	 * @param {string} [schema] name. Possible values are:
 	 *   * Watchlist
 	 *   * Diff
@@ -54,12 +56,13 @@
 		return M.log( 'MobileWeb' + schema + 'ClickTracking', data );
 	}
 
-	/*
+	/**
 	 * Using localStorage track an event but delay recording it on the
 	 * server until the next page load. Throw an error if schema is not
 	 * one of the predefined values.
 	 *
 	 * @method
+	 * @ignore
 	 * @param {string} [schema] name. Possible values are:
 	 *   * Watchlist
 	 *   * Diff
@@ -80,6 +83,7 @@
 	 * one of the predefined values.
 	 *
 	 * @method
+	 * @ignore
 	 * @param {string} [schema] name. Possible values are:
 	 *   * Watchlist
 	 *   * Diff
@@ -99,6 +103,7 @@
 	/**
 	 * Log a past click tracking event to the server.
 	 *
+	 * @ignore
 	 * @method
 	 */
 	function logPastEvent() {
