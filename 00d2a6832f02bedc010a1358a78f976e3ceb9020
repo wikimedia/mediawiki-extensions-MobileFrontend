@@ -16,6 +16,24 @@
       "revId": "00d2a6832f02bedc010a1358a78f976e3ceb9020",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7aa50eb1",
+        "filename": "javascripts/loggingSchemas/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-12T15:45:11Z",
+      "side": 1,
+      "message": "Florianschmidtwelzow, I think you understood it correctly. That\u0027s what I gathered from Jdlrobson\u0027s comments. He also suggested I pass the font-size value to the schema so we have that data too. Since this is a WIP, I\u0027m going to add that part of the code later today.",
+      "parentUuid": "0e6cb3ef_81d75928",
+      "revId": "00d2a6832f02bedc010a1358a78f976e3ceb9020",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
