@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_216e8d2b",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-12T10:03:13Z",
+      "side": 1,
+      "message": "Why are we doing this? If there is no campaign shouldn\u0027t we just exit and remove the view? Otherwise it may show wikigrok and when the user tries to send a response it will just result in a javascript error when trying to use this.apiWikigrokResponse",
+      "revId": "cd1a04b1a828e32a6c85ebfa8e690246fe4d5055",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
