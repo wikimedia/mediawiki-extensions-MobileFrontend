@@ -76,7 +76,7 @@ phpunit:				## Run the PHPUnit test suite
 	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit --group=MobileFrontend
 
 qunit:					## Run the QUnit test suite
-	@grunt qunit
+	@grunt qunit:all
 
 qunitdebug:				## Run the QUnit test suite in debug mode
 	@QUNIT_DEBUG=true grunt qunit
