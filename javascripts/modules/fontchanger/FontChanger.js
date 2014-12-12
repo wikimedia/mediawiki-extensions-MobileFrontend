@@ -2,7 +2,8 @@
 	var FontChanger,
 		Drawer = M.require( 'Drawer' ),
 		Icon = M.require( 'Icon' ),
-		settings = M.require( 'settings' );
+		settings = M.require( 'settings' ),
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
 	/**
 	 * FontChanger wrapper
@@ -61,6 +62,8 @@
 
 				$el.on( 'click', function () {
 					self.setNewSize( $el );
+
+					MobileWebClickTracking.log( 'UI', 'fontchanger-font-change' );
 				} );
 			} );
 		},

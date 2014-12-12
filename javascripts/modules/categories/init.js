@@ -20,8 +20,11 @@
 	 * Enable the categories button
 	 */
 	function initButton() {
-		$( '.category-button' ).removeClass( 'hidden' );
-		MobileWebClickTracking.hijackLink( 'UI', '.category-button', 'category-button' );
+		$( '.category-button' )
+			.removeClass( 'hidden' )
+			.on( 'click', function () {
+				MobileWebClickTracking.log( 'UI', 'category-button' );
+			} );
 	}
 
 	$( initButton );

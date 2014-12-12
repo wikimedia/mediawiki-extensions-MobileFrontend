@@ -6,12 +6,12 @@
 	schema.hijackLink( 'Diff', 'h2 a', 'view' );
 
 	// Clicking previous or next diff links
-	schema.hijackLink( 'Diff', '.revision-history-links a', 'diff-prev-or-next' );
+	schema.hijackLink( 'Diff', '.revision-history-links a', 'prev-or-next' );
 
 	// user link
 	schema.hijackLink( 'Diff', '.mw-mf-user a', 'user' );
 
-	// thank button
-	schema.hijackLink( 'Diff', '#mw-mf-userinfo > button', 'thank' );
+	// thank button is already logged tracked in the Thank extension
+	// If you update the schema related code, remember to update the Thank extension too
 
 } )( jQuery, mw.mobileFrontend );
