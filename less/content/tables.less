@@ -14,21 +14,37 @@
 		display: block;
 		width: 100% !important;
 
-		td,
-		th {
-			padding: 3px;
-			border: 1px @grayLight solid;
-		}
-
-		th {
-			font-weight: bold;
-			background-color: @colorGray14;
-			text-align: center;
-		}
-
 		caption {
 			display: block;
 			text-align: left;
+		}
+	}
+}
+
+// FIXME: Allow table styling design changes in beta
+.stable {
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+		vertical-align: baseline;
+		background: none;
+	}
+
+	.content {
+		table {
+			td,
+			th {
+				padding: 3px;
+				border: 1px @grayLight solid;
+			}
+
+			th {
+				font-weight: bold;
+				background-color: @colorGray14;
+				text-align: center;
+			}
 		}
 	}
 }

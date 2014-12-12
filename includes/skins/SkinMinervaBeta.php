@@ -58,6 +58,17 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
+	 * Get the needed styles for this skin
+	 * @return array
+	 */
+	protected function getSkinStyles() {
+		$styles = parent::getSkinStyles();
+		$styles[] = 'skins.minerva.content.styles.beta';
+		$styles[] = 'skins.minerva.tablet.styles.beta';
+		return $styles;
+	}
+
+	/**
 	 * Handles new pages to show error message and print message, that page does not exist.
 	 * @param OutputPage $out
 	 */
