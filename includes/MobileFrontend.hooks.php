@@ -874,7 +874,7 @@ class MobileFrontendHooks {
 			'MobileWebWatchlistClickTracking' => 10720361,
 			'MobileWebDiffClickTracking' => 10720373,
 			'MobileWebMainMenuClickTracking' => 10703095,
-			'MobileWebUIClickTracking' => 10733934,
+			'MobileWebUIClickTracking' => 10742159,
 			'MobileWebWikiGrok'      => 10352247,
 			'MobileWebWikiGrokError' => 10353516,
 		);

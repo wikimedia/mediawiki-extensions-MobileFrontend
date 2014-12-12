@@ -567,6 +567,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.Title',
 			'mobile.overlays',
 			'mobile.templates',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/modules/categories/CategoryOverlay.js',
@@ -1027,6 +1028,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.settings',
 			'mobile.templates',
 			'mobile.drawers',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/modules/fontchanger/FontChanger.js',
