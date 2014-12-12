@@ -28,7 +28,7 @@ class MobileFrontendHooks {
 			$parserOutput = $lu->getParserOutput();
 			$sections = $parserOutput->getSections();
 			$numTopics = 0;
-			foreach( $sections as $section ) {
+			foreach ( $sections as $section ) {
 				if ( $section['toclevel'] == 1 ) {
 					$numTopics += 1;
 				}
@@ -294,7 +294,7 @@ class MobileFrontendHooks {
 						// open the template directory
 						$templateHandle = opendir( $templateAbsoluteDir );
 						// read and process all files in this directory
-						while( $template = readdir( $templateHandle ) ) {
+						while ( $template = readdir( $templateHandle ) ) {
 							// only files can be loaded and every template should only be loaded once
 							if (
 								!is_file( $templateAbsoluteDir . '/' . $template ) ||
