@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_6b0a1e26",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-12-12T19:49:10Z",
+      "side": 1,
+      "message": "Beware of module bloat. Registering things as separate modules should only be done if you need them, today (not just in theory) to be loaded in different contexts, separately and independent.\n\nMaking stylesheets more maintainable and modular by putting them in separate *files* is absolutely great. But I don\u0027t think these should be registered as separate modules with ResourceLoader. The code in the startup module and general maintenance burden (filesystem is considered internal, module names are a public API representing certain behaviour or presentation that can be loaded by you and by other software, re-arranging it is a breaking change that also complicates caching of HTML).\n\nUntil and unless there are use cases for exposing individual parts of it as a public API (one you intend to maintain and support going forward), these should just be one or two modules.\n\nIf not in this case, take it into consideration in general for other modules.",
+      "revId": "eca7411248bc083258bc5b31616857eaa8ac9f21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
