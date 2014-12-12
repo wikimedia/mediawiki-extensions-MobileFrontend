@@ -3,7 +3,6 @@
 		settings = M.require( 'settings' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
-		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
 		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
 		WikiGrokDialog,
@@ -65,7 +64,6 @@
 		initialize: function ( options ) {
 			var self = this;
 
-			options.campaign = wikiGrokCampaigns.getRandomCampaign();
 			// Remove any disambiguation parentheticals from the title.
 			options.name = options.title.replace( / \(.+\)$/, '' );
 

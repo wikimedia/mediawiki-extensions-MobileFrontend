@@ -19,7 +19,9 @@
 		},
 		versionConfig,
 		WikiGrokAbTest = M.require( 'WikiGrokAbTest' ),
-		wikiGrokUser = M.require( 'wikiGrokUser' );
+		wikiGrokUser = M.require( 'wikiGrokUser' ),
+		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
+		campaign = wikiGrokCampaigns.getRandomCampaign();
 
 	/**
 	 * Checks whether the user has already seen and responded to a WikiGrok question
@@ -96,6 +98,8 @@
 		mw.config.get( 'wgAction' ) === 'view' &&
 		// Wikibase is active and this page has an item ID
 		wikidataID &&
+		// do we have a campaign?
+		campaign &&
 		// We're in Main namespace,
 		mw.config.get( 'wgNamespaceNumber' ) === 0
 	) {
@@ -106,6 +110,7 @@
 				page = M.getCurrentPage(),
 				// Initialize the dialog and insert it into the page (but don't display yet)
 				dialog = new WikiGrokDialog( {
+					campaign: campaign,
 					itemId: wikidataID,
 					title: mw.config.get( 'wgTitle' ),
 					userToken: wikiGrokUser.getToken(),

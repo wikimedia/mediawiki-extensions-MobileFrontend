@@ -3,6 +3,7 @@
 	var WikiGrokDialogB = M.require( 'modules/wikigrok/WikiGrokDialogB' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
+		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		campaigns = {
 			actor: {
 				property: "P106",
@@ -59,6 +60,7 @@
 			this.$el = $( '<div id="test">' );
 			this.wk = new WikiGrokDialogB( {
 				el: this.$el,
+				campaign: wikiGrokCampaigns.getRandomCampaign(),
 				itemId: '1234',
 				title: pageTitle,
 				userToken: 'token',
@@ -139,6 +141,7 @@
 			this.$el = $( '<div id="test">' );
 			this.wk = new WikiGrokDialogB( {
 				el: this.$el,
+				campaign: wikiGrokCampaigns.getRandomCampaign(),
 				itemId: '1234',
 				title: pageTitle,
 				userToken: 'token',

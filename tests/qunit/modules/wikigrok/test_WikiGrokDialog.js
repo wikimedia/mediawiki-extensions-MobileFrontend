@@ -3,6 +3,7 @@
 	var WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
+		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		settings = M.require( 'settings'),
 		campaigns = {
 			album: {
@@ -51,6 +52,7 @@
 			this.$el = $( '<div id="test">' );
 			this.wk = new WikiGrokDialog( {
 				el: this.$el,
+				campaign: wikiGrokCampaigns.getRandomCampaign(),
 				itemId: '1234',
 				title: pageTitle,
 				userToken: 'token',
