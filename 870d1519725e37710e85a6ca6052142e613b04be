@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_019fc956",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-12T08:09:31Z",
+      "side": 1,
+      "message": "Just an idea: Maybe we should organize alpha styles into a separate directory (less/alpha/)?",
+      "revId": "870d1519725e37710e85a6ca6052142e613b04be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_e1a5f59b",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-12T08:09:31Z",
+      "side": 1,
+      "message": "Maybe false, instead of \u0027\u0027?",
+      "revId": "870d1519725e37710e85a6ca6052142e613b04be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_81b2f9e2",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-12T08:09:31Z",
+      "side": 1,
+      "message": "{@inheritdoc} for phpdoc\n\nStrict standard: getPageActions does not match the signature of parent class (MinervaTemplate):\ngetPageActions()              \u003c-- MinervaTemplate\ngetPageActions( $data )    \u003c-- MinervaTemplateAlpha\n\nWarning: Missing argument 1 for MinervaTemplateBeta::getPageActions(), called in {..}/MobileFrontend/includes/skins/MinervaTemplate.php on line 138 and defined in {..}/MobileFrontend/includes/skins/MinervaTemplateBeta.php on line 47",
+      "revId": "870d1519725e37710e85a6ca6052142e613b04be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_c1bf91a6",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 736,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-12T08:09:31Z",
+      "side": 1,
+      "message": "This breaks talk feature, which refers to \"#ca-talk a\"",
+      "revId": "870d1519725e37710e85a6ca6052142e613b04be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_e1bc15b4",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-12T08:09:31Z",
+      "side": 1,
+      "message": "Talk link isn\u0027t in #ca-talk anymore",
+      "revId": "870d1519725e37710e85a6ca6052142e613b04be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
