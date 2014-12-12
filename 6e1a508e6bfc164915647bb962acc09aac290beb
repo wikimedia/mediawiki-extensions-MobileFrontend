@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_14e86cdc",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-12T00:07:50Z",
+      "side": 1,
+      "message": "I made a patch that precedes this one.",
+      "parentUuid": "0e6cb3ef_34f7b0f4",
+      "revId": "6e1a508e6bfc164915647bb962acc09aac290beb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_343d708b",
         "filename": "less/modules/talk.less",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_34e1f0fb",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-12T00:07:50Z",
+      "side": 1,
+      "message": "Oh wait ignore that comment. I\u0027m going to restrict this to beta only though.",
+      "parentUuid": "0e6cb3ef_343d708b",
+      "revId": "6e1a508e6bfc164915647bb962acc09aac290beb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_9438fc9c",
         "filename": "less/pageactions.less",
         "patchSetId": 4
@@ -47,6 +83,24 @@
       "writtenOn": "2014-12-11T23:07:22Z",
       "side": 1,
       "message": "Should really put this in pageactions.alpha - shouldn\u0027t be loaded by stable users.",
+      "revId": "6e1a508e6bfc164915647bb962acc09aac290beb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_54e6e414",
+        "filename": "less/pageactions.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-12T00:07:50Z",
+      "side": 1,
+      "message": "Resolved myself.",
+      "parentUuid": "0e6cb3ef_9438fc9c",
       "revId": "6e1a508e6bfc164915647bb962acc09aac290beb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
