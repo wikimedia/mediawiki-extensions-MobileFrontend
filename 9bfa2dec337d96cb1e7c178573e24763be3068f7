@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_a1c37d60",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-12T06:59:00Z",
+      "side": 1,
+      "message": "Is it really a good idea to throw an Error instead of, e.g., only a console.log()? I think, logging shouldn\u0027t break features, still when a false schema is provided.",
+      "revId": "9bfa2dec337d96cb1e7c178573e24763be3068f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
