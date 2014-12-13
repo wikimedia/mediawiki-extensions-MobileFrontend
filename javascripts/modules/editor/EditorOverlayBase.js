@@ -293,6 +293,7 @@
 		/**
 		 * Checks whether the state of the thing being edited as changed. Expects to be
 		 * implemented by child class.
+		 * @method
 		 * @private
 		 */
 		_hasChanged: $.noop(),

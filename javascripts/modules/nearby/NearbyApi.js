@@ -6,9 +6,16 @@
 		Api = M.require( 'api' ).Api,
 		NearbyApi;
 
-	// FIXME: Api should surely know this and return it in response to save us the hassle
-	// FIXME: Add some tests :)
-	// haversine formula ( https://en.wikipedia.org/wiki/Haversine_formula )
+	/**
+	 * FIXME: Api should surely know this and return it in response to save us the hassle
+	 * FIXME: Add some tests :)
+	 * Apply the haversine formula ( https://en.wikipedia.org/wiki/Haversine_formula ) and calculate the distance
+	 * between two points as the crow flies.
+	 * @param {Object} from with latitude and longitude keys
+	 * @param {Object} to with latitude and longitude keys
+	 * @return {Number} distance in kilometers
+	 * @ignore
+	 */
 	function calculateDistance( from, to ) {
 		var distance, a,
 			toRadians = Math.PI / 180,
@@ -40,6 +47,12 @@
 	 * @extends Api
 	 */
 	NearbyApi = Api.extend( {
+		/**
+		 * Returns a human readable string stating the distance in meters or kilometers depending on size.
+		 *
+		 * @param {Number} d The distance in meters.
+		 * @return {String} message stating how far the user is from the point of interest.
+		 */
 		_distanceMessage: function ( d ) {
 			var msg = 'mobile-frontend-nearby-distance';
 			if ( d < 1 ) {
