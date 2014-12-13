@@ -359,6 +359,19 @@ $specialPageAliases['vi'] = array(
 	'UserProfile' => array( 'Hồ_sơ_cá_nhân' ),
 );
 
+/** Chinese (中文) */
+$specialPageAliases['zh'] = array(
+	'History' => array( '历史', '歷史' ),
+	'MobileOptions' => array( '移动版选项', '手機版選項', '行動版選項' ),
+	'Uploads' => array( '上传', '上傳', '上載' ),
+	'MobileDiff' => array( '移动版差异', '手機版差異', '行動版差異' ),
+	'MobileEditor' => array( '移动版编辑器', '手機版編輯器', '行動版編輯器' ),
+	'MobileMenu' => array( '移动版菜单', '手機版菜單', '手機版選單', '行動版選單' ),
+	'MobileLanguages' => array( '移动版语言', '手機版語言', '行動版語言' ),
+	'Nearby' => array( '附近' ),
+	'UserProfile' => array( '用户资料', '用戶資料', '用戶資訊', '使用者資訊', '用戶設定檔', '使用者設定檔' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'History' => array( '历史' ),
@@ -377,10 +390,10 @@ $specialPageAliases['zh-hant'] = array(
 	'History' => array( '歷史' ),
 	'MobileOptions' => array( '行動版選項' ),
 	'Uploads' => array( '上載' ),
-	'MobileDiff' => array( '行動版差異' ),
-	'MobileEditor' => array( '行動版編輯器' ),
-	'MobileMenu' => array( '行動版選單' ),
-	'MobileLanguages' => array( '行動版語言' ),
+	'MobileDiff' => array( '手機版差異' ),
+	'MobileEditor' => array( '手機版編輯器' ),
+	'MobileMenu' => array( '手機版選單' ),
+	'MobileLanguages' => array( '手機版語言' ),
 	'Nearby' => array( '附近' ),
 	'UserProfile' => array( '使用者資訊' ),
 );

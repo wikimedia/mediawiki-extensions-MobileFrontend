@@ -4,7 +4,8 @@
 			"Aftab1995",
 			"Bellayet",
 			"Nasir8891",
-			"Tauhid16"
+			"Tauhid16",
+			"Aftabuzzaman"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না",
@@ -53,7 +54,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "আরও পড়ুন",
 	"mobile-frontend-editor-abusefilter-warning": "সতর্কবার্তা: আপনি কি এই সম্পাদনা সংরক্ষণ করার ব্যাপারে নিশ্চিত? এটিতে সম্ভবত কোন সমস্যা রয়েছে।",
 	"mobile-frontend-editor-anon": "প্রবেশ করা ছাড়াই সম্পাদনা করছেন",
-	"mobile-frontend-editor-anoneditwarning": "<b>সতর্কতা:</b> আপনি প্রবেশ করেননি। যদি আপনি সম্পাদনা করেন আপনার আইপি ঠিকানা সার্বজনীনভাবে দেখা যাবে। যদি আপনি <b>[$1 প্রবেশ করেন]</b> বা  <b>[$2 একটি অ্যাকাউন্ট তৈরি করেন]</b>, তাহলে আপনি আপনার আইপি ঠিকানা গোপন রাখতে পারবেন ও অন্যান্য অনেক কিছু সুবিধা পাবেন।",
+	"mobile-frontend-editor-anoneditwarning": "'''সতর্কতা:''' আপনি প্রবেশ করেননি। যদি আপনি সম্পাদনা করেন আপনার আইপি ঠিকানা সার্বজনীনভাবে দেখা যাবে। যদি আপনি '''প্রবেশ করেন''' বা  '''একটি অ্যাকাউন্ট তৈরি করেন''', তাহলে আপনি আপনার আইপি ঠিকানা গোপন রাখতে পারবেন ও অন্যান্য অনেক কিছু সুবিধা পাবেন।",
 	"mobile-frontend-editor-blocked": "আপনার অ্যাকাউন্ট সম্পাদনা করা থেকে অবরুদ্ধ করা হয়েছে।",
 	"mobile-frontend-editor-cancel": "বাতিল",
 	"mobile-frontend-editor-cancel-confirm": "আপনি কি সত্যিই আপনার সম্পাদনা পরিত্যাগ করতে চান?",
@@ -98,6 +99,7 @@
 	"mobile-frontend-enable-images": "মোবাইল সাইটে চিত্র সক্রিয়",
 	"mobile-frontend-expand-sections-description": "একটি নতুন পাতা দেখার সময় সর্বদা সকল অনুচ্ছেদ প্রসারিত করো।",
 	"mobile-frontend-expand-sections-status": "সব অনুচ্ছেদ বিস্তৃত করুন",
+	"mobile-frontend-fontchanger-link": "ফন্টের আকার",
 	"mobile-frontend-featured-article": "আজকের নির্বাচিত নিবন্ধ",
 	"mobile-frontend-first-upload-wizard-new-page-1": "{{SITENAME}}তে চিত্র উইকিমিডিয়া কমন্স থেকে এসেছে।",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "চিত্র আপলোডের দ্বারা অবদান রাখুন। {{SITENAME}}কে সমৃদ্ধ সাহায্য করুন!",
@@ -330,5 +332,6 @@
 	"tag-mobile_web_edit-description": "মোবাইল ওয়েব সাইট থেকে সম্পাদনা করা হয়েছে",
 	"skinname-minerva": "মিনের্ভা",
 	"mobile-frontend-pageaction-edit-tooltip": "এই পাতার শীর্ষ অনুচ্ছেদ সম্পাদনা করুন।",
-	"mobile-frontend-pageaction-upload-tooltip": "এই পাতায় একটি শীর্ষ ছবি আপলোড করুন।"
+	"mobile-frontend-pageaction-upload-tooltip": "এই পাতায় একটি শীর্ষ ছবি আপলোড করুন।",
+	"mobile-frontend-donate-button-label": "দান করুন"
 }
