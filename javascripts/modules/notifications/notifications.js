@@ -8,9 +8,10 @@
 		$btn = $( '#secondary-button.user-button' ),
 		icons = M.require( 'icons' );
 
-	/*
+	/**
 	 * Loads a ResourceLoader module script. Shows ajax loader whilst loading.
 	 *
+	 * @ignore
 	 * FIXME: Upstream to mw.mobileFrontend and reuse elsewhere
 	 * @param {string} moduleName: Name of a module to fetch
 	 * @returns {jQuery.Deferred}

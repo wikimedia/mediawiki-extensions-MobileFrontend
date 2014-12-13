@@ -10,6 +10,7 @@
 	 * @extends Api
 	 */
 	UserGalleryApi = Api.extend( {
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			Api.prototype.initialize.apply( this, arguments );
 			this.username = options.username;

@@ -165,6 +165,7 @@
 			}
 			return result;
 		},
+		/** @inheritdoc */
 		postRender: function () {
 			if ( !this._isLoading ) {
 				this.$( '.spinner' ).hide();

@@ -11,6 +11,7 @@
 		useJsonp: true,
 		language: mw.config.get( 'wgUserLanguage' ),
 
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			this.subjectId = options.itemId;
 			Api.prototype.initialize.apply( this, arguments );

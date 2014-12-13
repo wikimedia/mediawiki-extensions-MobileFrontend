@@ -13,6 +13,7 @@
 		save: function () {
 			settings.save( this.options.name, this.cb.prop( 'checked' ) ? 'true' : 'false', true );
 		},
+		/** @inheritdoc */
 		postRender: function () {
 			var cbview = this;
 			this.cb = this.$( 'input[type=checkbox]' );

@@ -21,6 +21,7 @@
 		defaults: {
 			spinner: icons.spinner().toHtmlString()
 		},
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			// how close a spinner needs to be to the viewport to trigger loading (px)
 			this.threshold = 1000;
@@ -30,6 +31,7 @@
 			} );
 			View.prototype.initialize.apply( this, arguments );
 		},
+		/** @inheritdoc */
 		postRender: function () {
 			this.$end = this.$( '.end' );
 			this.$list = this.$( 'ul' );

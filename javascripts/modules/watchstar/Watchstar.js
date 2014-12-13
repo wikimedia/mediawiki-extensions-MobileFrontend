@@ -33,6 +33,7 @@
 		tagName: 'div',
 		className: watchIcon.getClassName(),
 		template: mw.template.compile( '<a>{{tooltip}}</a>', 'hogan' ),
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			var self = this,
 				_super = View.prototype.initialize,
@@ -58,9 +59,11 @@
 				_super.call( self, options );
 			}
 		},
+		/** @inheritdoc */
 		preRender: function ( options ) {
 			options.tooltip = options.isWatched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
 		},
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			var callback, checker,
 				self = this,

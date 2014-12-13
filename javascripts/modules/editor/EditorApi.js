@@ -9,6 +9,7 @@
 	 */
 	EditorApi = Api.extend( {
 
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			Api.prototype.initialize.apply( this, arguments );
 			this.title = options.title;

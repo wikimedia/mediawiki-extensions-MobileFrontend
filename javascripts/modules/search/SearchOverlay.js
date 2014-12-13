@@ -51,6 +51,7 @@
 		},
 		closeOnBack: false,
 
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			var self = this;
 			Overlay.prototype.initialize.call( this, options );
@@ -64,6 +65,7 @@
 			} );
 		},
 
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			var
 				self = this,
@@ -130,6 +132,7 @@
 			} );
 		},
 
+		/** @inheritdoc */
 		show: function () {
 			var len = this.$input.val().length;
 			Overlay.prototype.show.apply( this, arguments );

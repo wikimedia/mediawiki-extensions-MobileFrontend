@@ -49,6 +49,7 @@
 				linkClass: 'talk-fullpage'
 			},
 
+			/** @inheritdoc */
 			postRender: function ( options ) {
 				Overlay.prototype.postRender.apply( this, arguments );
 				this.$board = this.$( '.board' );

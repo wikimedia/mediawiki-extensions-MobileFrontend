@@ -21,6 +21,7 @@
 			text: '',
 			spinner: icons.spinner().toHtmlString()
 		},
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			var self = this;
 			options.tag = 'h' + options.level;

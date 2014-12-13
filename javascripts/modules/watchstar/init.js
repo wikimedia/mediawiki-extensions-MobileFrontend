@@ -3,10 +3,11 @@
 	var Watchstar = M.require( 'modules/watchstar/Watchstar' ),
 		user = M.require( 'user' );
 
-	/*
+	/**
 	 * Toggle the watch status of a known page
 	 * @method
 	 * @param {Page} page
+	 * @ignore
 	 */
 	function init( page ) {
 		var $container = $( '#ca-watch' );

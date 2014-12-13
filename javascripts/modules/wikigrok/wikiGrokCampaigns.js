@@ -2,6 +2,7 @@
 	/**
 	 * Gets campaigns, claims, and labels from mw.config
 	 * @class wikiGrokCampaigns
+	 * @singleton
 	 */
 	var wikiGrokCampaigns = {
 		/**
@@ -34,17 +35,20 @@
 		}
 	};
 
-	/*
+	/**
 	 * Get WikiGrok campaigns that are present on the page
 	 * This is a method rather than a variable because we need it in tests
+	 *
+	 * @ignore
 	 * @returns {Object|null} campaigns
 	 */
 	function getCampaigns() {
 		return mw.config.get( 'wgWikiGrokCampaigns' );
 	}
 
-	/*
+	/**
 	 * Randomly pick a property
+	 * @ignore
 	 * @param {Object} object
 	 * @returns {String} object's property
 	 */

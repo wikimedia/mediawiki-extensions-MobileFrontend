@@ -2,13 +2,13 @@
 
 	var time = M.require( 'modules/lastEdited/time' );
 
-	/*
+	/**
 	 * Initialisation function for last modified module.
 	 *
 	 * Enhances #mw-mf-last-modified element
 	 * to show a human friendly date in seconds, minutes, hours, days
 	 * months or years
-	 *
+	 * @ignore
 	 */
 	function init() {
 		var $lastModified = $( '#mw-mf-last-modified' ),

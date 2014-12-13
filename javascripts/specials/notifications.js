@@ -30,9 +30,10 @@
 		} );
 	}
 
-	/*
+	/**
 	 * Load more notification records.
 	 * @method
+	 * @ignore
 	 */
 	function loadMore() {
 		var notifications, data, container, $li, unread = [];
@@ -88,9 +89,10 @@
 		} );
 	}
 
-	/*
+	/**
 	 * Mark notifications as read.
 	 * @method
+	 * @ignore
 	 */
 	function markAsRead( unread ) {
 		api.getTokenWithEndpoint( 'edit' ).done( function ( token ) {

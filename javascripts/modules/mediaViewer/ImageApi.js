@@ -3,8 +3,9 @@
 		ImageApi,
 		Api = M.require( 'api' ).Api;
 
-	/*
-	 * Gets the first size larger than or equal to the provided size.
+	/**
+	 * Gets the first size larger than or equal to the provided size
+	 * @ignore.
 	 */
 	function findSizeBucket( size ) {
 		var i = 0;
@@ -20,6 +21,7 @@
 	 * @extends Api
 	 */
 	ImageApi = Api.extend( {
+		/** @inheritdoc */
 		initialize: function () {
 			Api.prototype.initialize.apply( this, arguments );
 			this._cache = {};

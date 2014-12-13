@@ -32,6 +32,7 @@
 			header: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/content.hogan' )
 		},
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			// If terms of use is enabled, include it in the licensing message
 			if ( $( '#footer-places-terms-use' ).length > 0 ) {
@@ -52,6 +53,7 @@
 			// the user will be asked, if he want to abandon his changes before we close the Overlay, otherwise the Overlay will be closed without any question.
 			this._saveHit = false;
 		},
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			var self = this;
 			Overlay.prototype.postRender.call( this, options );
@@ -93,6 +95,7 @@
 				}
 			} );
 		},
+		/** @inheritdoc */
 		hide: function () {
 			var empty,
 				confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );

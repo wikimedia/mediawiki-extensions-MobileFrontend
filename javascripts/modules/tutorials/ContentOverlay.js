@@ -25,6 +25,7 @@
 		 * @type String
 		 */
 		appendTo: '#mw-mf-page-center',
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			var $target,
 				self = this;
