@@ -14,7 +14,7 @@
 		if ( !M.inNamespace( 'special' ) ) {
 			new Watchstar( {
 				el: $container,
-				isWatched: page.isWatched,
+				isWatched: page.isWatched(),
 				page: page,
 				isAnon: user.isAnon()
 			} );

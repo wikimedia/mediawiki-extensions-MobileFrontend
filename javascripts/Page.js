@@ -77,6 +77,15 @@
 		},
 
 		/**
+		 * Checks whether the current page is watched
+		 * @method
+		 * @return {Boolean}
+		 */
+		isWatched: function () {
+			return this.options.isWatched;
+		},
+
+		/**
 		 * Checks whether the given user can edit the page.
 		 * @method
 		 * @param {mw.user} user Object representing a user
