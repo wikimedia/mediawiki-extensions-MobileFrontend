@@ -19,9 +19,10 @@
 		return result;
 	} );
 
-	/*
+	/**
 	 * Hijack the Special:Languages link and replace it with a trigger to a LanguageOverlay
 	 * that displays the same data
+	 * @ignore
 	 */
 	function initButton() {
 		$( '#page-secondary-actions .languageSelector' ).on( 'click', function ( ev ) {

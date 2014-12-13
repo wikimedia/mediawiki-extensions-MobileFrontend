@@ -27,6 +27,7 @@
 		},
 		template: mw.template.get( 'mobile.drawers', 'Cta.hogan' ),
 
+		/** @inheritdoc */
 		preRender: function ( options ) {
 			var params = $.extend( {
 					// use wgPageName as this includes the namespace if outside Main

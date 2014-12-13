@@ -13,6 +13,7 @@
 		appendToElement: '#notifications',
 		closeOnScroll: true,
 
+		/** @inheritdoc */
 		postRender: function () {
 			var self = this;
 			Panel.prototype.postRender.apply( this, arguments );

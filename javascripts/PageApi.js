@@ -3,12 +3,13 @@
 		Api = M.require( 'api' ).Api,
 		sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' );
 
-	/*
+	/**
 	 * Add child to listOfSections if the level of child is the same as the last
 	 * child of listOfSections, otherwise add it to the children of the last
 	 * section of listOfSections. If listOfSections is empty, just add child to it.
 	 * @method
 	 * @private
+	 * @ignore
 	 * @param {Array} listOfSections - Array of section ids
 	 * @param {Object} child - Section to be added to listOfSections
 	 */
@@ -29,10 +30,11 @@
 		}
 	}
 
-	/*
+	/**
 	 * Order sections hierarchically
 	 * @method
 	 * @private
+	 * @ignore
 	 * @param {Array} sections Array of section objects created from response HTML
 	 * @returns {Array}
 	 */
@@ -86,6 +88,7 @@
 	 * @extends Api
 	 */
 	PageApi = Api.extend( {
+		/** @inheritdoc */
 		initialize: function () {
 			Api.prototype.initialize.apply( this, arguments );
 			this.cache = {};

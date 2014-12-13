@@ -25,6 +25,7 @@
 		defaults: {
 			className: icon.getClassName()
 		},
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			options.heading = '<strong>' + options.headingText + '</strong>';
 			Overlay.prototype.initialize.call( this, options );

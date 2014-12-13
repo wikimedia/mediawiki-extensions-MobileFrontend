@@ -69,10 +69,11 @@
 			.on( 'click', false );
 	}
 
-	/*
+	/**
 	 * Retrieve the user's preferred editor setting. If none is set, return the default
 	 * editor for this wiki.
 	 *
+	 * @ignore
 	 * @return {string} Either 'VisualEditor' or 'SourceEditor'
 	 */
 	function getPreferredEditor() {
@@ -89,10 +90,11 @@
 		}
 	}
 
-	/*
+	/**
 	 * Initialize the edit button so that it launches the editor interface when clicked.
 	 *
 	 * @param {Page} page The page to edit.
+	 * @ignore
 	 */
 	function setupEditor( page ) {
 		var isNewPage = page.options.id === 0;
@@ -181,8 +183,9 @@
 		} );
 	}
 
-	/*
+	/**
 	 * Initialize the edit button so that it launches a login call-to-action when clicked.
+	 * @ignore
 	 */
 	function initCta() {
 		// Initialize edit button links (to show Cta) only, if page is editable, otherwise show an error toast
@@ -208,10 +211,11 @@
 		} );
 	}
 
-	/*
+	/**
 	 * Show a toast message with sincere condolences.
 	 *
 	 * @param {string} msg Message key for sorry message
+	 * @ignore
 	 */
 	function showSorryToast( msg ) {
 		$( '#ca-edit, .edit-page' ).on( 'click', function ( ev ) {

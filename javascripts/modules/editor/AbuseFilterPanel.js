@@ -21,6 +21,7 @@
 		template: mw.template.get( 'mobile.abusefilter', 'Panel.hogan' ),
 		className: 'panel hidden',
 
+		/** @inheritdoc */
 		initialize: function () {
 			View.prototype.initialize.apply( this, arguments );
 			this.isDisallowed = false;

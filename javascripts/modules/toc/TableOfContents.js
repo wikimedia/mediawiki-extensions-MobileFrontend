@@ -28,6 +28,7 @@
 		tagName: 'div',
 		className: 'toc-mobile',
 		template: mw.template.get( 'mobile.toc', 'toc.hogan' ),
+		/** @inheritdoc */
 		postRender: function () {
 			var log = MobileWebClickTracking.log;
 			View.prototype.postRender.apply( this, arguments );

@@ -38,6 +38,7 @@
 			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' )
 		},
 
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			var $img,
 				self = this;
@@ -93,6 +94,7 @@
 			} );
 		},
 
+		/** @inheritdoc */
 		show: function () {
 			Overlay.prototype.show.apply( this, arguments );
 			this._positionImage();

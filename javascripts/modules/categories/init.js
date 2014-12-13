@@ -16,8 +16,9 @@
 		return result;
 	} );
 
-	/*
+	/**
 	 * Enable the categories button
+	 * @ignore
 	 */
 	function initButton() {
 		$( '.category-button' )

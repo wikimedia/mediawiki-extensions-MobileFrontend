@@ -23,6 +23,7 @@
 		},
 		className: 'overlay abusefilter-overlay',
 
+		/** @inheritdoc */
 		postRender: function () {
 			Overlay.prototype.postRender.apply( this, arguments );
 			// make links open in separate tabs

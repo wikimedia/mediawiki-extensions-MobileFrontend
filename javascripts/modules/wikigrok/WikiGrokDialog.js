@@ -62,6 +62,7 @@
 			error: mw.template.get( 'mobile.wikigrok.dialog', 'Error.hogan' )
 		},
 
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			var self = this;
 

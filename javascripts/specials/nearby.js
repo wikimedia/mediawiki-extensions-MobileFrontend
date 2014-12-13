@@ -59,8 +59,9 @@
 			} ) );
 		} );
 
-		/*
+		/**
 		 * Refresh the current view using browser geolocation api
+		 * @ignore
 		 */
 		function refreshCurrentLocation() {
 			$icon.show();

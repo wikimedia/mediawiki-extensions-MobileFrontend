@@ -15,6 +15,7 @@
 	 * @extends Class
 	 */
 	OverlayManager = Class.extend( {
+		/** @inheritdoc */
 		initialize: function ( router ) {
 			router.on( 'route', $.proxy( this, '_checkRoute' ) );
 			this.router = router;

@@ -38,6 +38,7 @@
 		markAsRead: function () {
 			this.$badge.find( 'span' ).remove();
 		},
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			var self = this;
 			Overlay.prototype.initialize.apply( this, options );
@@ -108,9 +109,11 @@
 				} );
 			} );
 		},
+		/** @inheritdoc */
 		preRender: function ( options ) {
 			options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
 		},
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			Overlay.prototype.postRender.apply( this, options );
 

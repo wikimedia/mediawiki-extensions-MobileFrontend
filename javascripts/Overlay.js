@@ -80,6 +80,7 @@
 		 */
 		closeOnContentTap: false,
 
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			var
 				self = this,

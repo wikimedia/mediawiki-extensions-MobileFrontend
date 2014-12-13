@@ -14,6 +14,7 @@
 		minHideDelay: 10,
 		appendToElement: '#content',
 
+		/** @inheritdoc */
 		postRender: function () {
 			var self = this;
 			this.$( '.cancel' ).click( function ( ev ) {

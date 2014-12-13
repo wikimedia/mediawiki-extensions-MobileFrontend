@@ -45,12 +45,14 @@
 		getGlyphClassName: function () {
 			return this.options.base + '-' + this.options.name;
 		},
+		/** @inheritdoc */
 		initialize: function ( options ) {
 			if ( options.hasText ) {
 				options.modifier = useMediaWikiUI ? 'mw-ui-icon-before' : 'icon-text';
 			}
 			View.prototype.initialize.call( this, options );
 		},
+		/** @inheritdoc */
 		postRender: function () {
 			View.prototype.postRender.apply( this, arguments );
 			this.$el = this.$el.children( 0 );
