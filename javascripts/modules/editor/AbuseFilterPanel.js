@@ -27,6 +27,7 @@
 			this.isDisallowed = false;
 		},
 
+		/** @inheritdoc */
 		show: function ( type, message ) {
 			var msg;
 
@@ -48,6 +49,7 @@
 			this.$el.removeClass( 'hidden' );
 		},
 
+		/** @inheritdoc */
 		hide: function () {
 			this.$el.addClass( 'hidden' );
 		}
