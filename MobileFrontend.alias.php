@@ -110,6 +110,7 @@ $specialPageAliases['eo'] = array(
 
 /** Spanish (español) */
 $specialPageAliases['es'] = array(
+	'MobileOptions' => array( 'OpcionesParaMóvil' ),
 	'Uploads' => array( 'Subidas' ),
 	'Nearby' => array( 'Cerca' ),
 	'UserProfile' => array( 'Perfil_de_usuario', 'Perfil_de_usuaria' ),

@@ -24,7 +24,7 @@
 	"mobile-frontend-diffview-404-title": "Vigane redaktsioon",
 	"mobile-frontend-diffview-anonymous": "Anonüümne kasutaja",
 	"mobile-frontend-diffview-bytesadded": "Lisatud $1 {{PLURAL:$1|bait|baiti}}",
-	"mobile-frontend-diffview-bytesnochange": "Suurust ei muudetud",
+	"mobile-frontend-diffview-bytesnochange": "Suurus jäi samaks",
 	"mobile-frontend-diffview-bytesremoved": "Eemaldatud $1 {{PLURAL:$1|bait|baiti}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|muudatus|muudatust}}",
 	"mobile-frontend-diffview-explained": "Lisati (+) ja eemaldati (-) järgmised read:",
