@@ -50,6 +50,13 @@
 			} ).toHtmlString()
 		},
 
+		/**
+		 * Obtain users current location and return a deferred object with the
+		 * longitude and latitude values
+		 * Resolve return object with 'incompatible' if browser doesn't support geo location
+		 *
+		 * @return {jQuery.Deferred}
+		 */
 		getCurrentPosition: function () {
 			var result = $.Deferred();
 			if ( M.supportsGeoLocation() ) {
@@ -122,27 +129,41 @@
 			this._isLoading = true;
 			_super.apply( this, arguments );
 		},
+		/**
+		 * Request pages from api based on provided options.
+		 * When options.longitude and options.latitude set getPages near that location.
+		 * If those are not present use options.title to find pages near that title.
+		 * If no valid options given resolve return object with error message.
+		 * @param {Object} options
+		 * @return {jQuery.Deferred}
+		 * @private
+		 */
 		_find: function ( options ) {
-			var pagesSuccess, pagesError,
-				result = $.Deferred(),
+			var result = $.Deferred(),
 				self = this;
 
-			// Handler for successful query
-			pagesSuccess = function ( pages ) {
+			/**
+			 * Handler for successful query
+			 * @ignore
+			 */
+			function pagesSuccess( pages ) {
 				options.pages = pages;
 				if ( pages && pages.length === 0 ) {
 					options.error = self.errorMessages.empty;
 				}
 				self._isLoading = false;
 				result.resolve( options );
-			};
+			}
 
-			// Handler for failed queries
-			pagesError = function () {
+			/**
+			 * Handler for failed query
+			 * @ignore
+			 */
+			function pagesError() {
 				self._isLoading = false;
 				options.error = self.errorMessages.server;
 				result.resolve( options );
-			};
+			}
 
 			if ( options.latitude && options.longitude ) {
 				this.nearbyApi.getPages( {
@@ -173,6 +194,13 @@
 			PageList.prototype.postRender.apply( this, arguments );
 			this._postRenderLinks();
 		},
+		/**
+		 * Hijack links to apply several customisations to them:
+		 * Ensure that when clicked they register an uploads funnel.
+		 * Ensure that when a user navigates back to the page their page position is restored using
+		 * fragment identifier trickery.
+		 * @private
+		 */
 		_postRenderLinks: function () {
 			var offset,
 				hash = window.location.hash;
