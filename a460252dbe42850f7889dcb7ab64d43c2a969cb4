@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b2a09f3f",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-15T12:51:48Z",
+      "side": 1,
+      "message": "missing @private",
+      "revId": "a460252dbe42850f7889dcb7ab64d43c2a969cb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
