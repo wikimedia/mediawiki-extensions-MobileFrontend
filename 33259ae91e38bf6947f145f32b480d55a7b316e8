@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_fea260a3",
+        "filename": "javascripts/modules/wikigrok/wikiGrokCampaigns.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-15T19:29:06Z",
+      "side": 1,
+      "message": "Why change from a more descriptive variable name to a less descriptive one?",
+      "revId": "33259ae91e38bf6947f145f32b480d55a7b316e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
