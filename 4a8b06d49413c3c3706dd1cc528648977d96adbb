@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d2b8b376",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-15T12:54:09Z",
+      "side": 1,
+      "message": "should have @private?",
+      "revId": "4a8b06d49413c3c3706dd1cc528648977d96adbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
