@@ -229,8 +229,9 @@ class MinervaTemplate extends BaseTemplate {
 		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
 
 		foreach ( $this->getSecondaryActions() as $el ) {
+			$additionalClass = ( isset( $el['class'] ) ? $el['class'] : '' );
 			echo Html::element( 'a', array(
-				'class' => 'mw-ui-button button ' . $el['class'],
+				'class' => 'mw-ui-button button ' . $additionalClass,
 				'href' => $el['url']
 			), $el['label'] );
 		}
