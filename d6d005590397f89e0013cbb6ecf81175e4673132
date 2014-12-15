@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_d9ef7681",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-15T22:08:43Z",
+      "side": 1,
+      "message": "please correct!",
+      "parentUuid": "0e6cb3ef_79cd0a34",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_99d25ed4",
         "filename": "MobileFrontend.php",
         "patchSetId": 5
@@ -30,6 +48,57 @@
       "writtenOn": "2014-12-15T22:02:21Z",
       "side": 1,
       "message": "here also",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_79e42aa4",
+        "filename": "javascripts/api.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-15T22:08:43Z",
+      "side": 1,
+      "message": "It would be better to put this in a variable editorConfig\nIt will make issues where this is not defined easier to debug.",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_19f5ee4c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-15T22:08:43Z",
+      "side": 1,
+      "message": "This is brittle.\nI\u0027d suggest instead doing this in the defaults.",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f9f7da54",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-15T22:08:43Z",
+      "side": 1,
+      "message": "The fact you are conditioning everything tells me you should refactor this. The if statement should ideally only apply to one line.",
       "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
