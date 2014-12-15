@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_79cd0a34",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-15T22:02:21Z",
+      "side": 1,
+      "message": "supressPreview is missplled",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_99d25ed4",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-15T22:02:21Z",
+      "side": 1,
+      "message": "here also",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
