@@ -30,7 +30,7 @@ class MinervaTemplateBeta extends MinervaTemplate {
 		global $wgMFDonationUrl;
 		$result = parent::getSecondaryActions();
 
-		if ( $wgMFDonationUrl ) {
+		if ( $wgMFDonationUrl && !$this->isSpecialPage ) {
 			$result['donation'] = array(
 				'url' => $wgMFDonationUrl,
 				'label' => wfMessage( 'mobile-frontend-donate-button-label' )->text()
