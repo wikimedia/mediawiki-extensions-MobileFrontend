@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	/**
 	 * Gets campaigns, claims, and labels from mw.config
 	 * @class wikiGrokCampaigns
@@ -11,7 +11,6 @@
 		 *     name: Name of the campaign chosen, e.g. 'album'
 		 *     property: Wikidata ID for the relevant property, e.g. 'P31'
 		 *     questions: object with item IDs and labels for claim suggestions
-		 *     suggestions: array of Wikidata item IDs corresponding to claim suggestions
 		 *     randomClaimId: Wikidata item ID of a randomly chosen suggestion
 		 */
 		getRandomCampaign: function () {
@@ -24,12 +23,6 @@
 				campaign = campaigns[campaignName];
 				campaign.name = campaignName;
 				campaign.randomClaimId = getRandomProperty( campaign.questions );
-
-				// make suggestions
-				// FIXME: Refactor dialog code to use questions param instead
-				campaign.suggestions =  $.map( campaign.questions, function ( value, key ) {
-					return key;
-				} );
 			}
 			return campaign;
 		}
@@ -69,4 +62,4 @@
 
 	M.define( 'modules/wikigrok/wikiGrokCampaigns', wikiGrokCampaigns );
 
-} ( mw.mobileFrontend, jQuery ) );
+} ( mw.mobileFrontend ) );

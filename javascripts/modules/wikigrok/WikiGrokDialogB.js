@@ -27,12 +27,15 @@
 			} );
 		},
 		/**
-		 * Renders a set of buttons to the panel
+		 * Renders a set of buttons to the panel.
+		 * Fetches suggestions' labels from the server.
 		 * Shows panel to user when there are suggestions.
 		 * @method
+		 * @private
 		 */
 		_renderSuggestions: function ( campaign ) {
 			var suggestions,
+				allSuggestions,
 				self = this,
 				i18n = {
 					actor: 'Profession',
@@ -40,8 +43,12 @@
 					album: 'Album type'
 				};
 
+			// campaign.questions keys are WikiData item IDs
+			allSuggestions =  $.map( campaign.questions, function ( value, key ) {
+				return key;
+			} );
 			// randomly pick 4 suggestions
-			suggestions = self.chooseRandomItemsFromArray( campaign.suggestions, 4 );
+			suggestions = self.chooseRandomItemsFromArray( allSuggestions, 4 );
 
 			// Now work out the labels if we have some suggestions
 			if ( suggestions.length ) {
@@ -104,7 +111,7 @@
 			}
 		},
 		/**
-		 * Fetch suggestions from the server and show them to the user.
+		 * Show suggestions to the user.
 		 * Also record claims when the user hits the save button.
 		 * FIXME: Please refactor
 		 * @method
