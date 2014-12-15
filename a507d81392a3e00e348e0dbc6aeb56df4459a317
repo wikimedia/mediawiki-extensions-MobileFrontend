@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1e7874ec",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-15T19:55:29Z",
+      "side": 1,
+      "message": "Are outermost parenthesis necessary?",
+      "revId": "a507d81392a3e00e348e0dbc6aeb56df4459a317",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
