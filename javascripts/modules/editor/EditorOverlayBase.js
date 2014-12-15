@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
+		browser = M.require( 'browser' ),
 		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
 		Icon = M.require( 'Icon' ),
 		toast = M.require( 'toast' ),
@@ -243,6 +244,10 @@
 		/** @inheritdoc **/
 		postRender: function () {
 			var self = this;
+			// Add a class so editor can make some Android 2 specific customisations.
+			if ( browser.isAndroid2() ) {
+				this.$el.addClass( 'android-2' );
+			}
 			this.$spinner = self.$( '.spinner' );
 			// log edit attempt
 			this.log( 'attempt' );
