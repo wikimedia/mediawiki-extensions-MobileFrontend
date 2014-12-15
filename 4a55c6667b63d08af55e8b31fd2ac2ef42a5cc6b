@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_5edeec71",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-15T19:06:45Z",
+      "side": 1,
+      "message": "This class is not needed. It is not used for styling or by JavaScript so it\u0027s existence is confusing.",
+      "revId": "4a55c6667b63d08af55e8b31fd2ac2ef42a5cc6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
