@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_142db38b",
+        "filename": "javascripts/modules/infobox/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-15T22:45:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_ba516667",
+      "revId": "fb4756a67bf9d7ef1e66388eb7789da0e0915fc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_3aac7684",
         "filename": "less/pageactions.alpha.less",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-12T16:35:49Z",
       "side": 1,
       "message": "We might need to follow up on this with hacks for various browsers that don\u0027t capitalise properly: https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform#Browser_compatibility",
+      "revId": "fb4756a67bf9d7ef1e66388eb7789da0e0915fc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_a8283933",
+        "filename": "less/pageactions.alpha.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-15T22:45:03Z",
+      "side": 1,
+      "message": "Let\u0027s do it live. I\u0027m expecting follow ups or discovery that the design just doesn\u0027t work :)",
+      "parentUuid": "0e6cb3ef_3aac7684",
       "revId": "fb4756a67bf9d7ef1e66388eb7789da0e0915fc7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
