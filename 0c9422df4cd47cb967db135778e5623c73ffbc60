@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b6ce4cb8",
+        "filename": "less/reset.beta.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-15T23:57:22Z",
+      "side": 1,
+      "message": "Let\u0027s not  copy this file. Instead let\u0027s just move the stuff we no longer want into less/common.less",
+      "revId": "0c9422df4cd47cb967db135778e5623c73ffbc60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
