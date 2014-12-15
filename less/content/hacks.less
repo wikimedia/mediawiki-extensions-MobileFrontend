@@ -34,6 +34,8 @@ FIXME: Review all of these hacks to see if they still apply.
 	}
 }
 
+// Hat notes take up too much room in mobile interface
+.hatnote,
 // FIXME: Remove when filetoc is stripped from file pages a la table of contents (toc)
 #filetoc,
 // FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
@@ -108,6 +110,12 @@ FIXME: Review all of these hacks to see if they still apply.
 
 // Hacks to render galleries better on mobile
 @media all and (max-width: @wgMFDeviceWidthTablet) {
+
+	// Show hatnotes when there is room.
+	.hatnote {
+		display: block;
+	}
+
 	// Center images that might be less than the screen width.
 	// Image will appear centered and caption will take up full screen.
 	.gallery {
