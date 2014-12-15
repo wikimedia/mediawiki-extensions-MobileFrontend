@@ -16,6 +16,24 @@
       "revId": "a507d81392a3e00e348e0dbc6aeb56df4459a317",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7e5e507d",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-15T19:58:21Z",
+      "side": 1,
+      "message": "not needed, but in my opinion it makes clearer, that the var is conditionally set :)",
+      "parentUuid": "0e6cb3ef_1e7874ec",
+      "revId": "a507d81392a3e00e348e0dbc6aeb56df4459a317",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
