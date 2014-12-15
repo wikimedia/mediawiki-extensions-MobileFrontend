@@ -18,3 +18,4 @@
 	{{/values}}
 </div>
 {{/rows}}
+<a href="https://m.wikidata.org/wiki/{{itemId}}">View on WikiData</a>
