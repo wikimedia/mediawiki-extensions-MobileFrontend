@@ -15,7 +15,8 @@
 			"Samer",
 			"زكريا",
 			"مشعل الحربي",
-			"أحمد المحمودي"
+			"أحمد المحمودي",
+			"Omda4wady"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
@@ -36,13 +37,14 @@
 	"mobile-frontend-diffview-404-title": "نسخة خاطئة",
 	"mobile-frontend-diffview-anonymous": "مستخدم مجهول",
 	"mobile-frontend-diffview-bytesadded": "تم إضافة {{PLURAL:$1|بايت|$1 بايت}}",
+	"mobile-frontend-diffview-bytesnochange": "لا تغيير في الحجم",
 	"mobile-frontend-diffview-bytesremoved": "تم إزالة {{PLURAL:$1|بايت|$1 بايت}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1||تعديل|تعديلان|$1 تعديلات|$1 تعديلا|$1 تعديل}}",
 	"mobile-frontend-diffview-explained": "السطور التالية أضيفت (+) وحذفت (-):",
 	"mobile-frontend-diffview-title": "تغييرات",
 	"mobile-frontend-disable-images": "عطل الصور على موقع الجوال",
 	"mobile-frontend-dismiss-notification": "أخفِ هذا الإخطار",
-	"mobile-frontend-donate-image-anon": "مطلوب $1 لعرض صفحة المرفوعات.",
+	"mobile-frontend-donate-image-anon": "يرجى تسجيل الدخول لرؤية صفحة رفع الملفات.",
 	"mobile-frontend-donate-image-heading": "مساهماتك الأخيرة",
 	"mobile-frontend-donate-image-login": "ملفات {{SITENAME}} ساهم بها أناس مثلك.",
 	"mobile-frontend-donate-image-login-action": "سجل دخولك لمشاركة ملفات الوسائط الخاصة بك.",
@@ -84,6 +86,7 @@
 	"mobile-frontend-editor-success-landmark-1": "تهانينا، أنت الآن محرر {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "تهانينا على إنشاء صفحة جديدة!",
 	"mobile-frontend-editor-summary-placeholder": "أخبرنا عن تعديلك (اختياري)",
+	"mobile-frontend-editor-summary": "الملخص:",
 	"mobile-frontend-editor-tutorial-cancel": "لا، شكرا",
 	"mobile-frontend-editor-tutorial-confirm": "ابدأ التعديل",
 	"mobile-frontend-editor-tutorial-summary": "لا تخشَ علامات الترميز.  حاول تحسين صفحة $1.",
@@ -175,12 +178,14 @@
 	"mobile-frontend-nearby-requirements": "نعتذر! متصفحك لا يدعم الصفحات القريبة في {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "جرّب متصفحا آخرًا أو مكّن جافاسكربت إذا كنت عطلتها.",
 	"mobile-frontend-nearby-title": "بالقرب من هنا",
+	"mobile-frontend-nearby-sectiontext": "قرب هذه الصفحة",
 	"mobile-frontend-news-items": "في الأخبار",
 	"mobile-frontend-opt-in-explain": "بانضمامك إلى نسخة بيتا ستصل إلى ميزات تجريبية وقد تصادف عللا ومشاكل.",
 	"mobile-frontend-overlay-close": "أغلق",
 	"mobile-frontend-overlay-continue": "استمر",
 	"mobile-frontend-page-menu-contents": "محتويات",
 	"mobile-frontend-page-menu-history": "التاريخ",
+	"mobile-frontend-page-edit-summary": "<strong>ملخص تعديل</strong><span> $1</span>",
 	"mobile-frontend-password": "كلمة السر:",
 	"mobile-frontend-password-confirm-placeholder": "أكد كلمة السر",
 	"mobile-frontend-password-placeholder": "كلمة السر",
@@ -285,5 +290,6 @@
 	"tag-mobile_edit": "تحرير من الجوال",
 	"tag-mobile_edit-description": "تحرير بواسطة موقع الجوال",
 	"tag-mobile_web_edit": "تعديل ويب جوال",
-	"tag-mobile_web_edit-description": "تعديل من موقع الويب في المحمول"
+	"tag-mobile_web_edit-description": "تعديل من موقع الويب في المحمول",
+	"mobile-frontend-donate-button-label": "تبرّع"
 }

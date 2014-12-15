@@ -107,6 +107,7 @@
 	"mobile-frontend-enable-images": "Afbeeldingen op de mobiele site inschakelen",
 	"mobile-frontend-expand-sections-description": "Altijd alle secties van een pagina uitklappen.",
 	"mobile-frontend-expand-sections-status": "Alle secties uitklappen",
+	"mobile-frontend-fontchanger-link": "Lettergrootte",
 	"mobile-frontend-featured-article": "Uitgelicht vandaag",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Afbeeldingen op {{SITENAME}} komen van Wikimedia Commons.",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Draag uw afbeeldingen bij. Help om {{SITENAME}} tot leven te laten komen!",
@@ -317,5 +318,6 @@
 	"tag-mobile_edit": "bewerking via mobiel",
 	"tag-mobile_edit-description": "bewerking gemaakt via mobiel (website of app)",
 	"tag-mobile_web_edit": "bewerking via mobiele website",
-	"tag-mobile_web_edit-description": "Bewerking gemaakt via de mobiele website"
+	"tag-mobile_web_edit-description": "Bewerking gemaakt via de mobiele website",
+	"mobile-frontend-donate-button-label": "Doneren"
 }
