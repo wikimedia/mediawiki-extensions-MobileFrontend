@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_94d223d4",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-15T23:25:55Z",
+      "side": 1,
+      "message": "Are you want -1 here? It seems to repeat the last item from the previous page.",
+      "revId": "2e52044cbd2e330a2f87178d1084bd08e3581847",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
