@@ -601,6 +601,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
+			'javascripts/modules/wikigrok/wikiGrokCampaigns.js',
 			'javascripts/modules/wikigrok/init.js',
 		),
 	),
@@ -954,7 +955,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/wikigrok/WikiDataApi.js',
 			'javascripts/modules/wikigrok/WikiGrokResponseApi.js',
-			'javascripts/modules/wikigrok/wikiGrokCampaigns.js',
 		),
 	),
 
