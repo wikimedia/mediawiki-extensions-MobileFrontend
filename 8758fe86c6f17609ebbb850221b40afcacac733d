@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_546b2b82",
+        "filename": "less/specials/forms.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-15T23:12:33Z",
+      "side": 1,
+      "message": "This is way too light for text. We normally use a much darker color for grey text. I would recommend either @grayMedium or @grayMediumLight.",
+      "revId": "8758fe86c6f17609ebbb850221b40afcacac733d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
