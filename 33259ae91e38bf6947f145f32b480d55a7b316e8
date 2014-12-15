@@ -16,6 +16,24 @@
       "revId": "33259ae91e38bf6947f145f32b480d55a7b316e8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9e8b2420",
+        "filename": "javascripts/modules/wikigrok/wikiGrokCampaigns.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-15T19:30:31Z",
+      "side": 1,
+      "message": "I think it\u0027s OK if this variable name doesn\u0027t match the name of the parameter is it ultimately mapped to. Having a more descriptive name makes it clear what we are mapping that parameter to.",
+      "parentUuid": "0e6cb3ef_fea260a3",
+      "revId": "33259ae91e38bf6947f145f32b480d55a7b316e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
