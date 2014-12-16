@@ -16,6 +16,24 @@
       "revId": "0c9422df4cd47cb967db135778e5623c73ffbc60",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1992cb57",
+        "filename": "less/reset.beta.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-16T01:53:38Z",
+      "side": 1,
+      "message": "I\u0027m not exactly sure what you\u0027re suggesting. Are you saying I should get rid of reset.less and reset.beta.less? If so, that would probably be better to do in a separate change (as this change isn\u0027t touching any of the regular LESS files, just creating new beta versions of some of them).",
+      "parentUuid": "0e6cb3ef_b6ce4cb8",
+      "revId": "0c9422df4cd47cb967db135778e5623c73ffbc60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
