@@ -87,15 +87,85 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	}
 
 	/**
+	 * Finds the offset of the page given in this->offsetTitle
+	 * If doesn't exist returns 0 to show from beginning of array of pages.
+	 *
+	 * @param array $pages
+	 * @return int where the index of the next page to be shown.
+	 */
+	private function getPageOffset( $pages ) {
+		// Deal with messiness of mediawiki
+		$pages = array_keys( $pages );
+
+		if ( $this->offsetTitle ) {
+			// PHP is stupid. strict test to avoid issues when page '0' is watched.
+			$offset = array_search( $this->offsetTitle, $pages, true );
+			// Deal with cases where invalid title given
+			if ( $offset === false ) {
+				$offset = 0;
+			}
+		} else {
+			$offset = 0;
+		}
+		return $offset;
+	}
+
+	/**
+	 * Create paginated view of entire watchlist
+	 *
+	 * @param array $pages
+	 * @return array of pages that should be displayed in current view
+	 */
+	private function getPagesToDisplay( $pages ) {
+		$offset = $this->getPageOffset( $pages );
+		// Get the slice we are going to display and display it
+		return array_slice( $pages, $offset, SpecialMobileWatchlist::LIMIT, true );
+	}
+
+	/**
+	 * Identify the next page to be shown
+	 *
+	 * @param array $pages
+	 * @return string|boolean representing title of next page to show or
+	 *  false if there isn't another page to show.
+	 */
+	private function getNextPage( $pages ) {
+		$total = count( $pages );
+		$offset = $this->getPageOffset( $pages );
+		$limit = SpecialMobileWatchlist::LIMIT;
+
+		// Work out if we need a more button and where to start from
+		if ( $total > $offset + $limit ) {
+			$pageKeys = array_keys( $pages );
+			$from = $pageKeys[$offset + $limit];
+		} else {
+			$from = false;
+		}
+		return $from;
+	}
+
+	/**
 	 * Renders the view/edit (normal) mode of the watchlist.
 	 */
 	protected function executeViewEditWatchlist() {
+		$ns = NS_MAIN;
 		$html = '';
 		$total = 0;
 		$images = array();
-		$limit = SpecialMobileWatchlist::LIMIT;
 
 		$watchlist = $this->getWatchlistInfo();
+
+		if ( isset( $watchlist[$ns] ) ) {
+			$allPages = $watchlist[$ns];
+			$from = $this->getNextPage( $allPages );
+			$allPages = $this->getPagesToDisplay( $allPages );
+		} else {
+			$allPages = array();
+			$from = false;
+		}
+
+		// Begin rendering of watchlist.
+		$watchlist = array( $ns => $allPages );
 		if ( !MobileContext::singleton()->imagesDisabled() ) {
 			wfRunHooks( 'SpecialMobileEditWatchlist::images', array(
 					$this->getContext(),
@@ -105,49 +175,22 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			);
 		}
 
-		foreach ( $watchlist as $ns => $pages ) {
-			if ( $ns === NS_MAIN ) {
-				$html .= '<ul class="watchlist page-list thumbs">';
-				$total = count( $pages );
-
-				// Make format more sensible. Sigh MediaWiki.
-				$pages = array_keys( $pages );
-
-				if ( $this->offsetTitle ) {
-					$offset = array_search( $this->offsetTitle, $pages );
-					// Deal with cases where invalid title given
-					if ( $offset === false ) {
-						$offset = 0;
-					}
-				} else {
-					$offset = 0;
-				}
-
-				// Work out if we need a more button and where to start from
-				if ( $total > $offset + $limit ) {
-					$from = $pages[$offset + $limit + 1];
-				} else {
-					$from = false;
-				}
-
-				// Get the slice we are going to display and display it
-				$pages = array_slice( $pages, $offset, $limit );
-				foreach ( $pages as $dbkey ) {
-					$title = Title::makeTitleSafe( $ns, $dbkey );
-					$thumb = '';
-					if ( isset( $images[$ns][$dbkey] ) ) {
-						$mobilePage = new MobilePage( $title, wfFindFile( $images[$ns][$dbkey] ) );
-						$thumb = $mobilePage->getSmallThumbnailHtml();
-					}
-					if ( !$thumb ) {
-						$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
-					}
-					$total += 1;
-					$html .= self::getLineHtml( $title, $title->getTouched(), $thumb );
-				}
-				$html .= '</ul>';
+		$pageKeys = array_keys( $watchlist[$ns] );
+		$html .= '<ul class="watchlist page-list thumbs">';
+		foreach ( $pageKeys as $key => $dbkey ) {
+			$title = Title::makeTitleSafe( $ns, $dbkey );
+			$thumb = '';
+			if ( isset( $images[$ns][$dbkey] ) ) {
+				$mobilePage = new MobilePage( $title, wfFindFile( $images[$ns][$dbkey] ) );
+				$thumb = $mobilePage->getSmallThumbnailHtml();
 			}
+			if ( !$thumb ) {
+				$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
+			}
+			$total += 1;
+			$html .= self::getLineHtml( $title, $title->getTouched(), $thumb );
 		}
+		$html .= '</ul>';
 
 		if ( $total === 0 ) {
 			$html .= SpecialMobileWatchlist::getEmptyListHtml( false, $this->getLanguage() );
