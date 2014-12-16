@@ -9,6 +9,7 @@
 		enabledEditIcon = new Icon( {
 			name: 'edit-enabled'
 		} ),
+		currentPage = M.getCurrentPage(),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
 		browser = M.require( 'browser' ),
@@ -17,7 +18,7 @@
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
-		isNewPage = M.getCurrentPage().options.id === 0,
+		isNewPage = currentPage.options.id === 0,
 		isNewFile = M.inNamespace( 'file' ) && isNewPage,
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
@@ -201,16 +202,13 @@
 	 * Setup the editor if the user can edit the page otherwise show a sorry toast.
 	 * @method
 	 * @ignore
-	 * @param {Page} page that's being edited
 	 */
-	function init( page ) {
-		page.isEditable( user ).done( function ( isEditable ) {
-			if ( isEditable ) {
-				setupEditor( page );
-			} else {
-				showSorryToast( 'mobile-frontend-editor-disabled' );
-			}
-		} );
+	function init() {
+		if ( currentPage.isEditable( user ) ) {
+			setupEditor( currentPage );
+		} else {
+			showSorryToast( 'mobile-frontend-editor-disabled' );
+		}
 	}
 
 	/**
@@ -221,28 +219,25 @@
 	function initCta() {
 		// Initialize edit button links (to show Cta) only, if page is editable,
 		// otherwise show an error toast
-		M.getCurrentPage().isEditable( user ).done( function ( isEditable ) {
-			if ( isEditable ) {
-				$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
-				// Init lead section edit button
-				makeCta( $( '#ca-edit' ), 0 );
+		if ( currentPage.isEditable( user ) ) {
+			$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
+			// Init lead section edit button
+			makeCta( $( '#ca-edit' ), 0 );
 
-				// Init all edit links (including lead section, if anonymous editing is enabled)
-				$( '.edit-page' ).each( function () {
-					var $a = $( this ),
-						section = 0;
+			// Init all edit links (including lead section, if anonymous editing is enabled)
+			$( '.edit-page' ).each( function () {
+				var $a = $( this ),
+					section = 0;
 
-					if ( $( this ).data( 'section' ) !== undefined ) {
-						section = $( this ).data( 'section' );
-					}
-					makeCta( $a, section );
-				} );
-			} else {
-				showSorryToast( 'mobile-frontend-editor-disabled' );
-			}
-		} );
+				if ( $( this ).data( 'section' ) !== undefined ) {
+					section = $( this ).data( 'section' );
+				}
+				makeCta( $a, section );
+			} );
+		} else {
+			showSorryToast( 'mobile-frontend-editor-disabled' );
+		}
 	}
-
 	/**
 	 * Show a toast message with sincere condolences.
 	 * @method
@@ -266,7 +261,7 @@
 		if ( user.isAnon() ) {
 			// Cta's will be rendered in EditorOverlay, if anonymous editing is enabled.
 			if ( mw.config.get( 'wgMFAnonymousEditing' ) ) {
-				init( M.getCurrentPage() );
+				init();
 			} else {
 				initCta();
 			}
@@ -275,7 +270,7 @@
 				// User is blocked. Both anonymous and logged in users can be blocked.
 				showSorryToast( 'mobile-frontend-editor-blocked' );
 			} else {
-				init( M.getCurrentPage() );
+				init();
 			}
 		}
 	}
