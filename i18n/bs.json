@@ -4,7 +4,8 @@
 			"CERminator",
 			"DzWiki",
 			"Edinwiki",
-			"KWiki"
+			"KWiki",
+			"Palapa"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "Adresa e-pošte (opcionalno)",
@@ -26,7 +27,7 @@
 	"mobile-frontend-drawer-cancel": "Otkaži",
 	"mobile-frontend-editor-abusefilter-read-more": "Pročitaj više",
 	"mobile-frontend-editor-cancel": "Otkaži",
-	"mobile-frontend-editor-continue": "Nastavi",
+	"mobile-frontend-editor-continue": "Slijedeće",
 	"mobile-frontend-editor-edit": "Uredi",
 	"mobile-frontend-editor-error": "Greška; izmjena nije sačuvana.",
 	"mobile-frontend-editor-keep-editing": "Nastavi uređivanjе",
@@ -89,12 +90,12 @@
 	"mobile-frontend-password-confirm-placeholder": "Potvrdite šifru/lozinku",
 	"mobile-frontend-password-placeholder": "Lozinka",
 	"mobile-frontend-photo-ownership-confirm": "Razumijem.",
-	"mobile-frontend-photo-submit": "Pošalji",
+	"mobile-frontend-photo-submit": "Slanje datoteke",
 	"mobile-frontend-photo-upload": "Dodajtе sliku na ovu stranicu",
 	"mobile-frontend-photo-upload-error": "Greška; pokušajte ponovо.",
 	"mobile-frontend-privacy-link-text": "Privatnost",
 	"mobile-frontend-profile-title": "Korisnički profil",
-	"mobile-frontend-profile-userpage-link": "Vidi korisničku stranicu.",
+	"mobile-frontend-profile-userpage-link": "Vidi {{GENDER:$1|user}} stranicu.",
 	"mobile-frontend-random-button": "Slučajni",
 	"mobile-frontend-regular-site": "Desktop prikaz",
 	"mobile-frontend-save-settings": "Sačuvaj",

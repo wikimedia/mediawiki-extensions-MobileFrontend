@@ -117,6 +117,8 @@
 	"mobile-frontend-editor-wait": "Guardando la edición, espera un momento.",
 	"mobile-frontend-enable-images": "Activar imágenes en la versión para móviles",
 	"mobile-frontend-expand-sections-status": "Expandir todas las secciones",
+	"mobile-frontend-fontchanger-link": "Tamaño del texto",
+	"mobile-frontend-fontchanger-desc": "Aumentar o disminuir el tamaño del texto para mejorar la legibilidad.",
 	"mobile-frontend-featured-article": "Contenido destacado de hoy",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Las imágenes de {{SITENAME}} provienen de Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "¿Entendido?",
@@ -326,5 +328,6 @@
 	"mobile-frontend-watchlist-view": "Ver tu lista de seguimiento",
 	"nearby": "Páginas cercanas",
 	"tag-mobile_edit": "Edición desde móvil",
-	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)"
+	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)",
+	"mobile-frontend-donate-button-label": "Dona"
 }
