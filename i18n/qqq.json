@@ -198,6 +198,7 @@
 	"mobile-frontend-media-details": "Caption for a button leading to the details of a media file (e.g. an image) in a preview.\n{{Identical|Detail}}",
 	"mobile-frontend-media-license-link": "Link to license information in media viewer.\n{{Identical|License information}}",
 	"mobile-frontend-meta-data-issues": "This should be several words and should explain that a page has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}",
+	"mobile-frontend-meta-data-issues-alpha": "A quiet button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}",
 	"mobile-frontend-meta-data-issues-talk": "Label for a clickable button that when clicked reveals the content of metadata described in elements which carry the mbox class.",
 	"mobile-frontend-meta-data-issues-header": "Heading for overlay listing all cleanup templates",
 	"mobile-frontend-meta-data-issues-header-talk": "Heading for overlay listing all information boxes on talk pages.",

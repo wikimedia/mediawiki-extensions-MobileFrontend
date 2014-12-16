@@ -4,7 +4,8 @@
 		var
 			Icon = M.require( 'Icon' ),
 			inBeta = M.isBetaGroupMember(),
-			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' );
+			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' ),
+			inAlpha = M.isAlphaGroupMember();
 
 		/**
 		 * Extract a summary message from a cleanup template generated element that is
@@ -29,6 +30,29 @@
 				}
 			} );
 			return $container.html();
+		}
+
+		/**
+		 * Create a link element that opens the issues overlay.
+		 *
+		 * @ignore
+		 *
+		 * @param {String} labelText The text value of the element
+		 * @return {jQuery}
+		 */
+		function createLinkElement( labelText ) {
+			if ( inAlpha ) {
+				return $( '<a class="cleanup mw-mf-cleanup"></a>' )
+					.text( labelText );
+			}
+
+			return new Icon( {
+					tagName: 'a',
+					name: 'cleanup',
+					hasText: true,
+					label: labelText,
+					additionalClassNames: 'mw-mf-cleanup'
+				} ).$el;
 		}
 
 		/**
@@ -66,14 +90,8 @@
 				}
 			} );
 
-			$link = new Icon( {
-					tagName: 'a',
-					name: 'cleanup',
-					hasText: true,
-					label: labelText,
-					additionalClassNames: 'mw-mf-cleanup'
-				} )
-				.$el.attr( 'href', '#/issues' );
+			$link = createLinkElement( labelText );
+			$link.attr( 'href', '#/issues' );
 
 			M.overlayManager.add( /^\/issues$/, function () {
 				return new CleanupOverlay( {
@@ -82,7 +100,12 @@
 				} );
 			} );
 
-			$link.insertBefore( $metadata.eq( 0 ) );
+			if ( inAlpha ) {
+				$( '.pre-content' ).append( $link );
+			} else {
+				$link.insertBefore( $metadata.eq( 0 ) );
+			}
+
 			$metadata.remove();
 		}
 
@@ -93,9 +116,15 @@
 		 * @ignore
 		 */
 		function initPageIssues( $container ) {
-			var ns = mw.config.get( 'wgNamespaceNumber' );
+			var ns = mw.config.get( 'wgNamespaceNumber' ),
+				labelMsgKey = 'mobile-frontend-meta-data-issues';
+
+			if ( inAlpha ) {
+				labelMsgKey += '-alpha';
+			}
+
 			if ( ns === 0 ) {
-				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues' ),
+				createBanner( $container, mw.msg( labelMsgKey ),
 					mw.msg( 'mobile-frontend-meta-data-issues-header' ) );
 			// Create a banner for talk pages (namespace 1) in beta mode to make them more readable.
 			} else if ( ns === 1 && inBeta ) {
