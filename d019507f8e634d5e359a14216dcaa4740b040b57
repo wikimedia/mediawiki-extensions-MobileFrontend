@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f9bef7d0",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-16T01:42:48Z",
+      "side": 1,
+      "message": "You can avoid having the hanging space in the output (and make the code slightly more readable) but changing to:\n\nif ( !isset( $el[\u0027attributes\u0027][\u0027class\u0027] ) ) {\n    $el[\u0027attributes\u0027][\u0027class\u0027] \u003d \u0027mw-ui-button button\u0027;\n} else {\n    $el[\u0027attributes\u0027][\u0027class\u0027] .\u003d \u0027 mw-ui-button button\u0027;\n}",
+      "revId": "d019507f8e634d5e359a14216dcaa4740b040b57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
