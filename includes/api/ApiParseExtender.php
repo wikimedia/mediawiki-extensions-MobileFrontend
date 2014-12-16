@@ -62,6 +62,8 @@ class ApiParseExtender {
 	 * @return bool
 	 */
 	public static function onAPIAfterExecute( ApiBase &$module ) {
+		global $wgMFSpecialCaseMainPage;
+
 		if ( $module->getModuleName() == 'parse' ) {
 			wfProfileIn( __METHOD__ );
 			$data = $module->getResultData();
@@ -75,7 +77,7 @@ class ApiParseExtender {
 				$html = MobileFormatter::wrapHTML( $data['parse']['text']['*'] );
 				$mf = new MobileFormatter( $html, $title );
 				$mf->setRemoveMedia( $params['noimages'] );
-				$mf->setIsMainPage( $params['mainpage'] );
+				$mf->setIsMainPage( $params['mainpage'] && $wgMFSpecialCaseMainPage );
 				$mf->enableExpandableSections( !$params['mainpage'] );
 				// HACK: need a nice way to request a TOC- and edit link-free HTML in the first place
 				$mf->remove( array( '.toc', 'mw-editsection' ) );

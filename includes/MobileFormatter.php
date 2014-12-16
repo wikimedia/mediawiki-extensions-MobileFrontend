@@ -65,10 +65,11 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return MobileFormatter
 	 */
 	public static function newFromContext( $context, $html ) {
+		global $wgMFSpecialCaseMainPage;
 		wfProfileIn( __METHOD__ );
 
 		$title = $context->getTitle();
-		$isMainPage = $title->isMainPage();
+		$isMainPage = $title->isMainPage() && $wgMFSpecialCaseMainPage;
 		$isFilePage = $title->inNamespace( NS_FILE );
 		$isSpecialPage = $title->isSpecialPage();
 
@@ -127,7 +128,7 @@ class MobileFormatter extends HtmlFormatter {
 	private function doRemoveImages() {
 		$doc = $this->getDoc();
 		$domElemsToReplace = array();
-		foreach( $doc->getElementsByTagName( 'img' ) as $element ) {
+		foreach ( $doc->getElementsByTagName( 'img' ) as $element ) {
 			$domElemsToReplace[] = $element;
 		}
 		/** @var $element DOMElement */
@@ -210,7 +211,7 @@ class MobileFormatter extends HtmlFormatter {
 				$id = $element->getAttribute( 'id' );
 				if ( !in_array( $id, $commonAttributes ) ) {
 					$sectionTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
-					if( $sectionTitle !== '' ) {
+					if ( $sectionTitle !== '' ) {
 						$element->removeAttribute( 'title' );
 						$h2UnknownMobileSection =
 							$mainPage->createElement( 'h2', htmlspecialchars( $sectionTitle ) );
@@ -260,7 +261,7 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	protected function findTopHeading( $html ) {
 		$tags = array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' );
-		foreach( $tags as $tag ) {
+		foreach ( $tags as $tag ) {
 			if ( strpos( $html, '<' . $tag ) !== false ) {
 				return $tag;
 			}

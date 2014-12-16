@@ -422,7 +422,8 @@ class ApiMobileView extends ApiBase {
 	 * @return array
 	 */
 	private function getData( Title $title, $noImages ) {
-		global $wgMemc, $wgUseTidy, $wgMFTidyMobileViewSections, $wgMFMinCachedPageSize;
+		global $wgMemc, $wgUseTidy, $wgMFTidyMobileViewSections, $wgMFMinCachedPageSize,
+			$wgMFSpecialCaseMainPage;
 
 		wfProfileIn( __METHOD__ );
 		$wp = $this->makeWikiPage( $title );
@@ -486,7 +487,7 @@ class ApiMobileView extends ApiBase {
 			$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $title );
 			$mf->setRemoveMedia( $noImages );
 			$mf->filterContent();
-			$mf->setIsMainPage( $this->mainPage );
+			$mf->setIsMainPage( $this->mainPage && $wgMFSpecialCaseMainPage );
 			$html = $mf->getText();
 		}
 		wfProfileOut( __METHOD__ . '-MobileFormatter' );
@@ -544,7 +545,7 @@ class ApiMobileView extends ApiBase {
 		// Page id
 		$data['id'] = $wp->getId();
 		$user = User::newFromId( $wp->getUser() );
-		if( !$user->isAnon() ) {
+		if ( !$user->isAnon() ) {
 			$data['lastmodifiedby'] = array(
 				'name' => $wp->getUserText(),
 				'gender' => $user->getOption( 'gender' ),

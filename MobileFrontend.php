@@ -589,3 +589,9 @@ $wgMFNamespacesWithoutCollapsibleSections = array(
  * wgMFDescription variable
  */
 $wgMFUseWikibaseDescription = false;
+
+/**
+ * If set to true, main page HTML will receive special massaging that removes everything
+ * but a few select pieces.
+ */
+$wgMFSpecialCaseMainPage = true;
