@@ -260,7 +260,7 @@
 	} else {
 		if ( user.isAnon() ) {
 			// Cta's will be rendered in EditorOverlay, if anonymous editing is enabled.
-			if ( mw.config.get( 'wgMFAnonymousEditing' ) ) {
+			if ( mw.config.get( 'wgMFEditorOptions' ).anonymousEditing ) {
 				init();
 			} else {
 				initCta();

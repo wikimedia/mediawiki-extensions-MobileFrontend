@@ -102,7 +102,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	 */
 	public function getSkinConfigVariables() {
 		$vars = parent::getSkinConfigVariables();
-		$vars['wgMFAnonymousEditing'] = true;
+		$vars['wgMFEditorOptions']['anonymousEditing'] = true;
 		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
 		return $vars;
 	}

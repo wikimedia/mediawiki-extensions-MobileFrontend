@@ -146,7 +146,8 @@
 			var token, data, isCacheable,
 				d = $.Deferred(),
 				// token types available from mw.user.tokens
-				easyTokens = [ 'edit', 'watch', 'patrol' ];
+				easyTokens = [ 'edit', 'watch', 'patrol' ],
+				editorConfig = mw.config.get( 'wgMFEditorOptions' );
 
 			tokenType = tokenType || 'edit';
 			isCacheable = tokenType !== 'centralauth';
@@ -159,7 +160,7 @@
 			// FIXME: Per the separation of concerns design principle, we should probably
 			// not be worrying about whether or not the user is anonymous within getToken.
 			// We'll need to check upstream usage though before removing this.
-			if ( user.isAnon() && !mw.config.get( 'wgMFAnonymousEditing' ) ) {
+			if ( user.isAnon() && !editorConfig.anonymousEditing ) {
 				return d.reject( 'Token requested when not logged in.' );
 			// If the token is cached, return it from cache.
 			} else if ( isCacheable && this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
@@ -167,7 +168,7 @@
 			// If the token is available from mw.user.tokens, get it from there.
 			} else if ( $.inArray( tokenType, easyTokens ) > -1 && !endpoint && !caToken ) {
 				token = user.tokens.get( tokenType + 'Token' );
-				if ( token && ( token !== '+\\' || mw.config.get( 'wgMFAnonymousEditing' ) ) ) {
+				if ( token && ( token !== '+\\' || editorConfig.anonymousEditing ) ) {
 					d.resolve( token );
 				} else {
 					d.reject( 'Anonymous token.' );
@@ -192,7 +193,7 @@
 				} ).done( function ( tokenData ) {
 					if ( tokenData && tokenData.tokens && !tokenData.warnings ) {
 						token = tokenData.tokens[ tokenType + 'token' ];
-						if ( token && ( token !== '+\\' || mw.config.get( 'wgMFAnonymousEditing' ) ) ) {
+						if ( token && ( token !== '+\\' || editorConfig.anonymousEditing ) ) {
 							d.resolve( token );
 						} else {
 							d.reject( 'Anonymous token.' );

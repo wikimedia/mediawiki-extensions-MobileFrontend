@@ -135,14 +135,15 @@ QUnit.test( '#getTokenWithEndpoint - default to edit', 1, function( assert ) {
 } );
 
 QUnit.test( '#getTokenWithEndpoint - get anon token (stable)', 1, function( assert ) {
-	mw.config.set( 'wgMFAnonymousEditing', false );
+	mw.config.set( 'wgMFEditorOptions', {
+		'anonymousEditing': false
+	} );
 	this.api.getTokenWithEndpoint( 'upload' ).fail( function( msg ) {
 		assert.strictEqual( msg, 'Anonymous token.', 'No token given - user must be anon' );
 	} );
 } );
 
 QUnit.test ( '#getTokenWithEndpoint - get anon token (alpha)', 1, function( assert ) {
-	mw.config.set( 'wgMFAnonymousEditing', true );
 	this.api.getTokenWithEndpoint( 'edit' ).done( function( token ) {
 		assert.strictEqual( token, '123', 'Got a token for anonymous editing' );
 	} );

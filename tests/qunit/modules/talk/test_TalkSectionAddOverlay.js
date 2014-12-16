@@ -5,14 +5,7 @@
 
 	QUnit.module( 'MobileFrontend TalkSectionAddOverlay', {
 		setup: function() {
-			// tokens for anonymous users only when anonymous editing is allowed
-			this.anonEditing = mw.config.get( 'wgMFAnonymousEditing' );
-			mw.config.set( 'wgMFAnonymousEditing', true );
 			this.sandbox.stub( api, 'postWithToken' ).returns( $.Deferred().resolve() );
-		},
-		teardown: function() {
-			// restore old value of wgMFAnonymousEditing
-			mw.config.set( 'wgMFAnonymousEditing', this.anonEditing );
 		}
 	} );
 
