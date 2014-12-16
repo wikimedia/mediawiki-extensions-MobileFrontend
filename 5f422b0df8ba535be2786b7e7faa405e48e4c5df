@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_20ee67b2",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T21:54:18Z",
+      "side": 1,
+      "message": "There is no reason for this function to exist any more.\nkill prepareDiscoveryTools and add in its place where it is called\n\n$tpl-\u003eset( \u0027discovery_urls\u0027, $this-\u003egetDiscoveryTools() );",
+      "revId": "5f422b0df8ba535be2786b7e7faa405e48e4c5df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_40eb5ba0",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T21:54:18Z",
+      "side": 1,
+      "message": "Don\u0027t use this global. It is for a beta feature and has nothing to do with Wikigrok roulette. It is used to enable a feature in BetaFeatures and we don\u0027t want to do that.\nCreate a new variable.",
+      "revId": "5f422b0df8ba535be2786b7e7faa405e48e4c5df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_00356342",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T21:54:18Z",
+      "side": 1,
+      "message": "Merge above two lines.",
+      "revId": "5f422b0df8ba535be2786b7e7faa405e48e4c5df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_6043ffb6",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogC.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T21:54:18Z",
+      "side": 1,
+      "message": "set className property on  WikiGrokDialogC and then there is no need to override this function.",
+      "revId": "5f422b0df8ba535be2786b7e7faa405e48e4c5df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_804093a9",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogC.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T21:54:18Z",
+      "side": 1,
+      "message": "Isn\u0027t this duplicating work in WikiGrokDialogB?",
+      "revId": "5f422b0df8ba535be2786b7e7faa405e48e4c5df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_e0162fac",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T21:54:18Z",
+      "side": 1,
+      "message": "Let\u0027s make this a single function now - this if statement is getting complex.",
+      "revId": "5f422b0df8ba535be2786b7e7faa405e48e4c5df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_a01037ae",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T21:54:18Z",
+      "side": 1,
+      "message": "versionConfig.isDrawer would make more sense.",
+      "revId": "5f422b0df8ba535be2786b7e7faa405e48e4c5df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
