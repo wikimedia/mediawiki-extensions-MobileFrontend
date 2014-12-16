@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d90a1324",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T00:54:10Z",
+      "side": 1,
+      "message": "Max points out that this triggers an API request whereas getGroups doesn\u0027t.\n\nWe should either\n1) Send the value of whether the user can edit or not from PHP (e.g. avoid all this code)\nOR\n2) avoid this API request by caching this in mw.config if there is some good reason for doing this in the client.",
+      "revId": "4d1ddc81e0c7b7e84a4ec1aa6362da835c764abb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
