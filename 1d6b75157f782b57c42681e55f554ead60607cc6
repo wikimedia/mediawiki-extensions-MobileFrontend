@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3060fc9f",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T18:01:45Z",
+      "side": 1,
+      "message": "What if someone sets wgMFEditorOptions to false in LocalSettings?",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1034d8a6",
+        "filename": "javascripts/api.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T18:01:45Z",
+      "side": 1,
+      "message": "What if someone sets wgMFEditorOptions to false in LocalSettings?",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3039dc9f",
+        "filename": "javascripts/api.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T18:01:45Z",
+      "side": 1,
+      "message": "What if someone sets wgMFEditorOptions to false in LocalSettings?\n(also cache this to a variable since you reuse it 2 other times)",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d03d008c",
+        "filename": "javascripts/api.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T18:01:45Z",
+      "side": 1,
+      "message": "What if someone sets wgMFEditorOptions to false in LocalSettings?",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f0428412",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T18:01:45Z",
+      "side": 1,
+      "message": "What if someone sets wgMFEditorOptions to false in LocalSettings?",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
