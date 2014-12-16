@@ -4,6 +4,7 @@
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		settings = M.require( 'settings' ),
+		browser = M.require( 'browser' ),
 		EditorOverlay;
 
 	/**
@@ -46,7 +47,7 @@
 		 * @return boolean
 		 */
 		isVisualEditorEnabled: function () {
-			return M.isWideScreen() &&
+			return browser.isWideScreen() &&
 				mw.config.get( 'wgVisualEditorConfig' ) &&
 				$.inArray( mw.config.get( 'wgNamespaceNumber' ), mw.config.get( 'wgVisualEditorConfig' ).namespaces ) > -1 &&
 				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&

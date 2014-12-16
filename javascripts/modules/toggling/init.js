@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var currentPageTitle =  M.getCurrentPage().title,
 		settings = M.require( 'settings' ),
+		browser = M.require( 'browser' ),
 		arrowUpOptions = {
 			name: 'arrow-up',
 			additionalClassNames: 'icon-15px indicator'
@@ -128,7 +129,7 @@
 				'aria-expanded': !isCollapsed
 			} );
 
-		if ( M.isBetaGroupMember() && !M.isWideScreen() ) {
+		if ( M.isBetaGroupMember() && !browser.isWideScreen() ) {
 			storeSectionToggleState( $heading );
 		}
 	}
@@ -236,7 +237,7 @@
 					} );
 
 				enableKeyboardActions( $heading );
-				if ( M.isWideScreen() || expandSections ) {
+				if ( browser.isWideScreen() || expandSections ) {
 					// Expand sections by default on wide screen devices or if the expand sections setting is set (alpha only)
 					toggle( $heading );
 				}
@@ -284,7 +285,7 @@
 			}
 		} );
 
-		if ( M.isBetaGroupMember() && !M.isWideScreen() ) {
+		if ( M.isBetaGroupMember() && !browser.isWideScreen() ) {
 			expandStoredSections( $container );
 			cleanObsoleteStoredSections();
 		}

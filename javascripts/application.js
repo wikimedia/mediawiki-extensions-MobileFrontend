@@ -7,6 +7,7 @@
  */
 ( function ( M, $ ) {
 	var Router = M.require( 'Router' ),
+		browser = M.require( 'browser' ),
 		OverlayManager = M.require( 'OverlayManager' ),
 		qs = window.location.search.split( '?' )[1],
 		PageApi = M.require( 'PageApi' ),
@@ -16,6 +17,7 @@
 		$viewportMeta, viewport,
 		currentPage,
 		inWideScreenMode = false,
+		// FIXME: Move all the variables below to Browser.js
 		ua = window.navigator.userAgent,
 		isIos = /ipad|iphone/i.test( ua ),
 		// Test UA for iOS8. Or for simulator look for Version 8
@@ -26,62 +28,6 @@
 		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua ),
 		isIPhone5 = isIos && /OS 5_/.test( ua ),
 		isAndroid2 = /Android 2/.test( ua );
-
-	// See if local storage is supported
-	try {
-		localStorage.setItem( 'localStorageTest', 'localStorageTest' );
-		localStorage.removeItem( 'localStorageTest' );
-		M.supportsLocalStorage = true;
-	} catch ( e ) {
-		M.supportsLocalStorage = false;
-	}
-
-	// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
-	// https://github.com/Modernizr/Modernizr/issues/167
-	// http://mobilehtml5.org/
-	/**
-	 * Detect if fixed position is supported in browser
-	 * @method
-	 * @param {String} userAgent User agent to test against.
-	 * @return {Boolean}
-	 */
-	function supportsPositionFixed( userAgent ) {
-		var support = false;
-		$.each( [
-			// Webkit 534+
-			/AppleWebKit\/(53[4-9]|5[4-9]\d|[6-9]\d\d|\d{4,})/,
-			// Android 2+ (we lockViewport for Android 2 meaning we can support it)
-			/Android [2-9]/,
-			// any Firefox
-			/Firefox/,
-			// Trident (IE 10+)
-			/Trident\/[6-9]|Trident\/1\d[\d\.]+/
-		], function ( index, item ) {
-			if ( item.test( userAgent ) ) {
-				support = true;
-			}
-		} );
-		return support;
-	}
-
-	/**
-	 * Detect if browser supports geolocation
-	 * @method
-	 * @return {Boolean}
-	 */
-	function supportsGeoLocation() {
-		return !!navigator.geolocation;
-	}
-
-	/**
-	 * Whether touchstart and other touch events are supported by the current browser.
-	 *
-	 * @method
-	 * @return {Boolean}
-	 */
-	function supportsTouchEvents() {
-		return 'ontouchstart' in window;
-	}
 
 	/**
 	 * Escape dots and colons in a hash, jQuery doesn't like them beause they
@@ -99,6 +45,7 @@
 
 	/**
 	 * Locks the viewport so that pinch zooming is disabled
+	 * FIXME: Move to Browser.js
 	 *
 	 * @method
 	 */
@@ -114,7 +61,7 @@
 	 */
 	function loadWideScreenModules() {
 		var modules = [];
-		if ( !inWideScreenMode && isWideScreen() &&
+		if ( !inWideScreenMode && browser.isWideScreen() &&
 			mw.config.get( 'skin' ) === 'minerva' ) {
 			// Adjust screen for tablets
 			if ( inNamespace( '' ) ) {
@@ -137,13 +84,16 @@
 			$doc = $( 'html' ),
 			$viewport = $( '#mw-mf-viewport' );
 
+		// FIXME: This shouldn't be necessary
 		$( '<div id="notifications">' ).appendTo( $viewport );
 
+		// FIXME: Move to Browser.js
 		if ( isIos ) {
 			$body.addClass( 'ios' );
 		}
 
-		if ( !supportsPositionFixed( navigator.userAgent ) ) {
+		// FIXME: Move to Browser.js
+		if ( !browser.supportsPositionFixed() ) {
 			$doc.addClass( 'no-position-fixed' );
 
 			$( window ).on( 'scroll', function () {
@@ -184,6 +134,7 @@
 		 * Locks viewport and enables position fixed for Android 2
 		 * Works around iPhone 4 and 5 bugs with the viewport.
 		 *
+		 * FIXME: Move to Browser.js
 		 * @method
 		 * @ignore
 		 */
@@ -206,54 +157,16 @@
 		}
 		fixBrowserBugs();
 
-		/**
-		 * Checks browser support for CSS transforms, transitions
-		 * and CSS animation.
-		 * Currently assumes support for the latter 2 in the case of the
-		 * former.
-		 * See http://stackoverflow.com/a/12621264/365238
-		 *
-		 * @returns {boolean}
-		 */
-		function supportsAnimations() {
-			var  has3d, t,
-				el = $( '<p>' )[0],
-				$iframe = $( '<iframe>' ),
-				transforms = {
-					webkitTransform: '-webkit-transform',
-					transform: 'transform'
-				};
-
-			// don't trust Android 2.x, really
-			// animations cause textareas to misbehave on it
-			// (http://stackoverflow.com/a/5734984/365238)
-			if ( isAndroid2 ) {
-				return false;
-			}
-
-			// Add it to the body to get the computed style
-			// Sandbox it inside an iframe to avoid Android Browser quirks
-			$iframe.appendTo( $body ).contents().find( 'body' ).append( el );
-
-			for ( t in transforms ) {
-				if ( el.style[t] !== undefined ) {
-					el.style[t] = 'translate3d(1px,1px,1px)';
-					has3d = window.getComputedStyle( el ).getPropertyValue( transforms[t] );
-				}
-			}
-
-			$iframe.remove();
-
-			return has3d !== undefined && has3d.length > 0 && has3d !== 'none';
-		}
-
-		if ( mw.config.get( 'wgMFEnableCssAnimations' ) && supportsAnimations() ) {
+		// FIXME: Move to Browser.js
+		if ( mw.config.get( 'wgMFEnableCssAnimations' ) && browser.supportsAnimations() ) {
 			$doc.addClass( 'animations' );
 		}
 
-		if ( supportsTouchEvents() ) {
+		// FIXME: Move to Browser.js
+		if ( browser.supportsTouchEvents() ) {
 			$doc.addClass( 'touch-events' );
 		}
+
 		$( loadWideScreenModules );
 		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
 		M.on( 'resize', loadWideScreenModules );
@@ -284,7 +197,7 @@
 	 */
 	function getSessionId() {
 		var sessionId;
-		if ( !M.supportsLocalStorage ) {
+		if ( !browser.supportsLocalStorage() ) {
 			return '';
 		}
 		sessionId = localStorage.getItem( 'sessionId' );
@@ -320,17 +233,6 @@
 			} );
 		}
 		return params;
-	}
-
-	/**
-	 * Determine if a device has a widescreen.
-	 * @method
-	 * @return {Boolean}
-	 */
-	function isWideScreen() {
-		var val = mw.config.get( 'wgMFDeviceWidthTablet' );
-		// Check portrait and landscape mode to be consistent
-		return window.innerWidth >= val || window.innerHeight >= val;
 	}
 
 	/**
@@ -390,12 +292,12 @@
 		inNamespace: inNamespace,
 		getCurrentPage: getCurrentPage,
 		getSessionId: getSessionId,
-		isWideScreen: isWideScreen,
+		// FIXME: Move to browser.js
 		lockViewport: lockViewport,
 		log: log,
-		supportsGeoLocation: supportsGeoLocation,
-		supportsPositionFixed: supportsPositionFixed,
+		// FIXME: Move to browser.js
 		isIos: isIos,
+		// FIXME: Move to browser.js
 		isIos8: isIos8,
 		query: deParam( qs ),
 		/**

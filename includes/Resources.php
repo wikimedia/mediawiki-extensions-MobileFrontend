@@ -1267,6 +1267,7 @@ $wgMinervaBootstrapModules = array(
 		),
 		'scripts' => array(
 			'javascripts/modes.js',
+			'javascripts/browser.js',
 			'javascripts/mainmenu.js',
 			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/lastEdited/init.js',
@@ -1310,7 +1311,6 @@ $wgMinervaBootstrapModules = array(
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
-			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/mediaViewer/init.js',
 			'javascripts/modules/languages/init.js',
 		),

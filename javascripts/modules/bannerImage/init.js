@@ -2,6 +2,7 @@
 	M.assertMode( [ 'alpha' ] );
 	var bannerImage,
 		page = M.getCurrentPage(),
+		browser = M.require( 'browser' ),
 		wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		BannerImage = M.require( 'modules/bannerImage/BannerImage' );
 
@@ -9,7 +10,7 @@
 	// On pages in the main space which are not main pages
 	if (
 		// MobileDevice
-		!M.isWideScreen() &&
+		!browser.isWideScreen() &&
 		// Set item id or specified in url with query param (wikidataid=Q937)
 		wikidataID &&
 		!page.isMainPage() &&
