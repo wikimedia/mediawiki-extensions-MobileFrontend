@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_56b3254c",
+        "filename": "less/iconsNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-16T23:31:05Z",
+      "side": 0,
+      "message": "Don\u0027t you have to remove this line too? And see if it works in page actions?",
+      "revId": "25d97192c480bd709c72c31c759540e4713939dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
