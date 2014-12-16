@@ -56,6 +56,10 @@
 				descriptionUrl: img.descriptionurl
 			};
 		},
+		/**
+		 * Request photos beginning with the current value of endTimestamp
+		 * @return {jQuery.Deferred} where parameter is a list of JavaScript objects describing an image.
+		 */
 		getPhotos: function () {
 			var self = this,
 				result = $.Deferred();
@@ -95,6 +99,7 @@
 						} else {
 							self.endTimestamp = false;
 						}
+						// FIXME: Should reply with a list of PhotoItem or Photo classes.
 						result.resolve( photos );
 					} else {
 						result.resolve( [] );

@@ -8,6 +8,11 @@
 		currentUserName = user.getName(),
 		userName = pageParams[1] ? pageParams[1] : currentUserName;
 
+	/**
+	 * Create a {PhotoUploaderButton} with an uploads funnel.
+	 * @param {jQuery.Object} $container to append new button to.
+	 * @ignore
+	 */
 	function createButton( $container ) {
 		var btn = new PhotoUploaderButton( {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
@@ -18,6 +23,10 @@
 		btn.appendTo( $container );
 	}
 
+	/**
+	 * Initialise a photo upload button at the top of the page.
+	 * @ignore
+	 */
 	function init() {
 		var userGallery, $a,
 			$container = $( '.ctaUploadPhoto' );

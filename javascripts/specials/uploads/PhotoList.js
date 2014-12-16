@@ -42,31 +42,66 @@
 			// e.g. http://benalman.com/projects/jquery-throttle-debounce-plugin/
 			$( window ).on( 'scroll', $.proxy( this, '_loadPhotos' ) );
 		},
+		/**
+		 * Check to see if the current view is an empty list.
+		 * @return {Boolean} whether no images have been rendered
+		 */
 		isEmpty: function () {
 			return this.$list.find( 'li' ).length === 0;
 		},
+		/**
+		 * Renders an empty message prior to the list.
+		 * FIXME: Should be handled in template, not a method.
+		 */
 		showEmptyMessage: function () {
 			$( '<p class="content empty">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) )
 				.insertBefore( this.$list );
 		},
+		/**
+		 * Hides the message saying the list is empty
+		 * FIXME: Should be handled in template, not a method.
+		 */
 		hideEmptyMessage: function () {
 			this.$( '.empty' ).remove();
 		},
+		/**
+		 * Prepend a photo to the view.
+		 * @param {Object} photoData Options describing a new {PhotoItem}
+		 * FIXME: Code duplication with PhotoList::appendPhoto
+		 */
 		prependPhoto: function ( photoData ) {
 			photoData.width = this.api.getWidth();
 			var photoItem = new PhotoItem( photoData ).prependTo( this.$list );
 			this.hideEmptyMessage();
 			M.emit( 'photo-loaded', photoItem.$el );
 		},
+		/**
+		 * Append a photo to the view.
+		 * @param {Object} photoData Options describing a new {PhotoItem}
+		 */
 		appendPhoto: function ( photoData ) {
 			var photoItem = new PhotoItem( photoData ).appendTo( this.$list );
 			this.hideEmptyMessage();
+			/**
+			 * @event photo-loaded
+			 * @param {jQuery.Object} element belonging to view
+			 * Fired when a new {PhotoItem} has been added to the current view.
+			 */
 			M.emit( 'photo-loaded', photoItem.$el );
 		},
+		/**
+		 * Check if the user has scrolled near the end of the list.
+		 * @private
+		 * @return {Boolean}
+		 */
 		_isEndNear: function () {
 			var scrollBottom = $( window ).scrollTop() + $( window ).height();
 			return scrollBottom + this.threshold > this.$end.offset().top;
 		},
+		/**
+		 * Load photos into the view using {{UserGalleryApi}} when the end is near
+		 *  and no current API requests are underway.
+		 */
 		_loadPhotos: function () {
 			var self = this;
 
