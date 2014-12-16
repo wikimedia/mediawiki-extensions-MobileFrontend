@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_bca94dde",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T07:14:08Z",
+      "side": 1,
+      "message": "what if Nearby isn\u0027t activated, GeoData not installed or the page doesn\u0027t have any coordinates? You return an undefined var...\n\n(see below)",
+      "revId": "74510caa7743f3fcaaff7df4f84fd2e353350e44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1ca5d900",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T07:14:08Z",
+      "side": 1,
+      "message": "$skin isn\u0027t defined here anymore.",
+      "revId": "74510caa7743f3fcaaff7df4f84fd2e353350e44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_dcae81e4",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T07:14:08Z",
+      "side": 1,
+      "message": "Same here, what if there isn\u0027t a category?",
+      "revId": "74510caa7743f3fcaaff7df4f84fd2e353350e44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_fc9fc5b7",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T07:14:08Z",
+      "side": 1,
+      "message": "Notice: Undefined index: nearby in /var/www/devwiki/extensions/MobileFrontend/includes/skins/MinervaTemplateAlpha.php on line 88\n\nYou want to add a new array (\u003d), not merge an existing with a new on (+\u003d).\n\n(see above)\n...but creates a new key in the array, which results in missing values (label and attributes) in MinervaTemplate.php.",
+      "revId": "74510caa7743f3fcaaff7df4f84fd2e353350e44",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
