@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_163b78e9",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-16T00:44:17Z",
+      "side": 1,
+      "message": "Also need to add \u0027autoblocked\u0027",
+      "revId": "86a1e3564cc9ee7b4a9310f30f343f038f4c65d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
