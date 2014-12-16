@@ -169,8 +169,8 @@
 		_showEditorAfterWarning: function () {
 			this.showSpinner();
 			this.$anonWarning.hide();
-			// reenable "Next" button and handle click
-			this.$( '.continue' ).show().on( 'click', $.proxy( this, 'onStageChanges' ) );
+			// reenable "Next" button
+			this.$( '.continue' ).show();
 			this._loadContent();
 		},
 

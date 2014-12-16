@@ -39,6 +39,10 @@
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
 			this._hasChanged = false;
+			// force editor preview step for VE
+			this.config = $.extend( this.config, {
+				skipPreview: false
+			} );
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
 			this.initializeSwitcher();
 		},

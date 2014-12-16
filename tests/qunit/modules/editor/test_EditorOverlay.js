@@ -32,6 +32,18 @@
 		assert.strictEqual( editorOverlay.$preview.text(), '\npreviewtest\n', 'preview loaded correctly' );
 	} );
 
+	QUnit.test( '#without-preview', 1, function( assert ) {
+		var editorOverlay;
+
+		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFEditorOptions' ).returns( {
+			skipPreview: true,
+			anonymousEditing: true
+		} );
+
+		editorOverlay = new EditorOverlay( { title: 'test', sectionId: 0 } );
+		assert.strictEqual( editorOverlay.$( '.continue' ).text(), 'Save', 'no preview loaded' );
+	} );
+
 	QUnit.test( '#initialize, without a section', 2, function( assert ) {
 		new EditorOverlay( { title: 'test.css' } );
 
