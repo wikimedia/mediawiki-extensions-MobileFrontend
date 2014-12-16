@@ -141,9 +141,10 @@
 		},
 
 		/**
-		 * Set's additional values used for anonymous editing warning.
+		 * Sets additional values used for anonymous editing warning.
 		 *
-		 * @var {array} options Array of options.
+		 * @private
+		 * @var {array} options Array of options
 		 * @return {array} Array with all options
 		 */
 		_prepareAnonWarning: function ( options ) {
@@ -253,6 +254,7 @@
 		 * Loads a {VisualEditorOverlay} and replaces the existing EditorOverlay with it
 		 * based on the current option values.
 		 * @private
+		 * @param {Object} options Object passed to the constructor
 		 */
 		_switchToVisualEditor: function ( options ) {
 			var self = this;
@@ -282,6 +284,8 @@
 		/**
 		 * Reveals an abuse filter panel inside the view.
 		 * @private
+		 * @param {String} type The type of alert, e.g. 'warning' or 'disallow'
+		 * @param {String} message Message to show in the AbuseFilter overlay
 		 */
 		_showAbuseFilter: function ( type, message ) {
 			this.abuseFilterPanel.show( type, message );
@@ -328,9 +332,9 @@
 				} )
 				.fail( function ( data, code, response ) {
 					var msg,
-						// whitelistedInfo: when save failed with one of these error codes, the returned message
-						// in response.error.info will be forwarded to the user.
-						// FIXME: This shouldn't be needed, when info texts are all localized.
+						// When save failed with one of these error codes, the returned
+						// message in response.error.info will be forwarded to the user.
+						// FIXME: This shouldn't be needed when info texts are all localized.
 						whitelistedErrorInfo = [
 							'readonly',
 							'blocked',
@@ -346,7 +350,8 @@
 						if ( data.details === 'editconflict' ) {
 							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
 						} else if (
-							response.error && $.inArray( response.error.code, whitelistedErrorInfo ) > -1
+							response.error &&
+							$.inArray( response.error.code, whitelistedErrorInfo ) > -1
 						) {
 							msg = response.error.info;
 						} else {
