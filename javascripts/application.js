@@ -14,19 +14,12 @@
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
 		router = new Router(),
-		$viewportMeta, viewport,
 		currentPage,
 		inWideScreenMode = false,
 		// FIXME: Move all the variables below to Browser.js
 		ua = window.navigator.userAgent,
 		isIos = browser.isIos(),
-		// Test UA for iOS8. Or for simulator look for Version 8
-		// In the iOS simulator the OS is the host machine OS version
-		// This makes testing in iOS8 simulator work as expected
-		isIos8 = isIos && /OS 8_/.test( ua ) || /Version\/8/.test( ua ),
-		isIPhone4 = isIos && /OS 4_/.test( ua ),
-		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua ),
-		isIPhone5 = isIos && /OS 5_/.test( ua );
+		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua );
 
 	/**
 	 * Escape dots and colons in a hash, jQuery doesn't like them beause they
@@ -113,30 +106,6 @@
 				}
 			} );
 		}
-
-		$viewportMeta = $( 'meta[name="viewport"]' );
-		viewport = $viewportMeta.attr( 'content' );
-
-		// when rotating to landscape stop page zooming on ios
-		// allow disabling of transitions in android ics 4.0.2
-
-		/**
-		 * Works around iPhone 4 and 5 bugs with the viewport.
-		 *
-		 * FIXME: Move to Browser.js
-		 * @method
-		 * @ignore
-		 */
-		function fixBrowserBugs() {
-			// see http://adactio.com/journal/4470/ (fixed in ios 6)
-			if ( $viewportMeta[0] && ( isIPhone4 || isIPhone5 ) ) {
-				browser.lockViewport();
-				document.addEventListener( 'gesturestart', function () {
-					browser.lockViewport();
-				}, false );
-			}
-		}
-		fixBrowserBugs();
 
 		$( loadWideScreenModules );
 		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
@@ -264,8 +233,6 @@
 		getCurrentPage: getCurrentPage,
 		getSessionId: getSessionId,
 		log: log,
-		// FIXME: Move to browser.js
-		isIos8: isIos8,
 		query: deParam( qs ),
 		/**
 		 * Navigation router instance

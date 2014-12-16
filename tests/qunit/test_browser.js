@@ -1,7 +1,24 @@
 ( function ( $, M ) {
-	var Browser = M.require( 'Browser' );
+	var Browser = M.require( 'Browser' ),
+		$html = $( 'html' );
 
 	QUnit.module( 'Browser.js' );
+
+	QUnit.test( 'isIos()', 8, function ( assert ) {
+		var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
+			browser4 = new Browser( 'Mozilla/5.0 (iPad; CPU OS 4_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
+			browser5 = new Browser( 'Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
+			browser2 = new Browser( 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/8.0 Mobile/11A465 Safari/9537.53', $html );
+
+		assert.strictEqual( browser.isIos(), true );
+		assert.strictEqual( browser.isIos( 8 ), false );
+		assert.strictEqual( browser.isIos( 4 ), false );
+		assert.strictEqual( browser.isIos( 5 ), false );
+		assert.strictEqual( browser2.isIos(), true );
+		assert.strictEqual( browser2.isIos( 8 ), true );
+		assert.strictEqual( browser4.isIos( 4 ), true );
+		assert.strictEqual( browser5.isIos( 5 ), true );
+	} );
 
 	QUnit.test( 'supportsPositionFixed()', function ( assert ) {
 		var userAgents, userAgentsFail;
@@ -38,11 +55,11 @@
 		QUnit.expect( userAgents.length + userAgentsFail.length );
 
 		$.each( userAgents, function ( i, ua ) {
-			var browser = new Browser( ua );
+			var browser = new Browser( ua, $html );
 			assert.strictEqual( browser.supportsPositionFixed(), true, 'Success test case ' + ua );
 		} );
 		$.each( userAgentsFail, function ( i, ua ) {
-			var browser = new Browser( ua );
+			var browser = new Browser( ua, $html );
 			assert.strictEqual( browser.supportsPositionFixed(), false, 'Failure test case ' + ua );
 		} );
 	} );
