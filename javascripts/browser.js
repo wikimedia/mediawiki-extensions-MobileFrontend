@@ -5,12 +5,28 @@
 	 * Representation of user's current browser
 	 * @class Browser
 	 * @param {String} ua the user agent of the current browser
+	 * @param {jQuery.Object} $container an element to associate with the Browser object
 	 */
-	function Browser( ua ) {
+	function Browser( ua, $container ) {
 		this.userAgent  = ua;
+		this.$el = $container;
+
+		if ( this.isAndroid2() ) {
+			// lock the viewport for this device - too problematic
+			this.lockViewport();
+		}
 	}
 
 	Browser.prototype = {
+		/**
+		 * Locks the viewport so that pinch zooming is disabled
+		 */
+		lockViewport: function () {
+			if ( this.$el ) {
+				this.$el.find( 'meta[name="viewport"]' )
+					.attr( 'content', 'initial-scale=1.0, maximum-scale=1.0, user-scalable=no' );
+			}
+		},
 		/**
 		 * Determine if a device is Android 2.
 		 * @method
@@ -131,7 +147,7 @@
 		}
 	};
 
-	browser = new Browser( window.navigator.userAgent );
+	browser = new Browser( window.navigator.userAgent, $( 'html' ) );
 	M.define( 'Browser', Browser );
 	M.define( 'browser', browser );
 }( mw.mobileFrontend, jQuery ) );
