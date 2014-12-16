@@ -7,6 +7,7 @@ help:					## Show this help message
 
 clean:					## Clean up build artefacts
 	rm -Rf dev-scripts/remotes
+	rm -Rf tests/report
 	rm -Rf docs
 
 remotes:
