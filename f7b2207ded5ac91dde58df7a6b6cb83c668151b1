@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_30f31c09",
+        "filename": "javascripts/modules/search/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T17:55:15Z",
+      "side": 1,
+      "message": "I would suggest removing the input element from the DOM and then adding a class to the body that is more specific than the client-js rule and reveals the search icon.",
+      "revId": "f7b2207ded5ac91dde58df7a6b6cb83c668151b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
