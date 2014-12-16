@@ -450,12 +450,6 @@ $wgMFAnonymousEditing = false;
 $wgMFLeadPhotoUploadCssSelector = 'img, .navbox';
 
 /**
- * Enable CSS animations in all browsers that support them
- * @var bool
- */
-$wgMFEnableCssAnimations = true;
-
-/**
  * DB key of the category which members will never display mobile view
  */
 $wgMFNoMobileCategory = false;

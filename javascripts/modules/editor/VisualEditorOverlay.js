@@ -63,7 +63,7 @@
 					// || undefined so that scrolling is not triggered for the lead (0) section
 					// (which has no header to scroll to)
 					section: this.options.sectionId || undefined,
-					isIos: M.isIos
+					isIos: this.isIos
 				} );
 				this.target.activating = true;
 				this.target.load();
