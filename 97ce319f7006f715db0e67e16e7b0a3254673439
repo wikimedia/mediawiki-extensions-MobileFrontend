@@ -50,6 +50,24 @@
       "revId": "97ce319f7006f715db0e67e16e7b0a3254673439",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_e56f24bf",
+        "filename": "javascripts/modules/wikigrok/wikiGrokRandom.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-16T15:31:44Z",
+      "side": 1,
+      "message": "In order to show the wikigrok menu item we need to check whether a random page exists. Otherwise we will be showing a menu item that does nothing. Maybe I should assume that there is always such a page?",
+      "parentUuid": "0e6cb3ef_7971870a",
+      "revId": "97ce319f7006f715db0e67e16e7b0a3254673439",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
