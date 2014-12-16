@@ -1221,12 +1221,7 @@ $wgMinervaSpecialPageModules = array(
 	'skins.minerva.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/common.less',
-		),
-	),
-
-	'skins.minerva.special.preferences.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'scripts' => array(
-			'javascripts/specials/preferences.js',
+			'less/specials/forms.less',
 		),
 	),
 
