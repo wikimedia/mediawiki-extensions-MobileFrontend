@@ -34,7 +34,8 @@
 				returntoquery: 'article_action=signup-edit'
 			},
 			content: mw.msg( 'mobile-frontend-editor-cta' )
-		} );
+		} ),
+		$caEdit = $( '#ca-edit' );
 
 	if ( pendingToast ) {
 		// delete the pending toast
@@ -177,11 +178,11 @@
 
 			return result;
 		} );
-		$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
+		$caEdit.addClass( enabledClass ).removeClass( disabledClass ).removeClass( 'hidden' );
 
 		// Make sure we never create two edit links by accident
 		// FIXME: split the selector and cache it
-		if ( $( '#ca-edit .edit-page' ).length === 0 ) {
+		if ( $caEdit.find( '.edit-page' ).length === 0 ) {
 			// FIXME: unfortunately the main page is special cased.
 			if ( mw.config.get( 'wgIsMainPage' ) || isNewPage || page.getLeadSectionElement().text() ) {
 				// if lead section is not empty, open editor with lead section
@@ -207,6 +208,7 @@
 		if ( currentPage.isEditable( user ) ) {
 			setupEditor( currentPage );
 		} else {
+			$caEdit.removeClass( 'hidden' );
 			showSorryToast( 'mobile-frontend-editor-disabled' );
 		}
 	}
@@ -220,9 +222,9 @@
 		// Initialize edit button links (to show Cta) only, if page is editable,
 		// otherwise show an error toast
 		if ( currentPage.isEditable( user ) ) {
-			$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
+			$caEdit.addClass( enabledClass ).removeClass( disabledClass ).removeClass( 'hidden' );
 			// Init lead section edit button
-			makeCta( $( '#ca-edit' ), 0 );
+			makeCta( $caEdit, 0 );
 
 			// Init all edit links (including lead section, if anonymous editing is enabled)
 			$( '.edit-page' ).each( function () {
@@ -235,6 +237,7 @@
 				makeCta( $a, section );
 			} );
 		} else {
+			$caEdit.removeClass( 'hidden' );
 			showSorryToast( 'mobile-frontend-editor-disabled' );
 		}
 	}
@@ -253,8 +256,10 @@
 
 	if ( !isEditingSupported ) {
 		// Editing is disabled (or browser is blacklisted)
+		$caEdit.removeClass( 'hidden' );
 		showSorryToast( 'mobile-frontend-editor-unavailable' );
 	} else if ( isNewFile ) {
+		$caEdit.removeClass( 'hidden' );
 		// Is a new file page (enable upload image only) Bug 58311
 		showSorryToast( 'mobile-frontend-editor-uploadenable' );
 	} else {
@@ -267,6 +272,7 @@
 			}
 		} else {
 			if ( mw.config.get( 'wgMFIsLoggedInUserBlocked' ) ) {
+				$caEdit.removeClass( 'hidden' );
 				// User is blocked. Both anonymous and logged in users can be blocked.
 				showSorryToast( 'mobile-frontend-editor-blocked' );
 			} else {
