@@ -327,7 +327,15 @@
 					self.onSave();
 				} )
 				.fail( function ( data, code, response ) {
-					var msg;
+					var msg,
+						// whitelistedInfo: when save failed with one of these error codes, the returned message
+						// in response.error.info will be forwarded to the user.
+						// FIXME: This shouldn't be needed, when info texts are all localized.
+						whitelistedErrorInfo = [
+							'readonly',
+							'blocked',
+							'autoblocked'
+						];
 
 					if ( data.type === 'captcha' ) {
 						self.captchaId = data.details.id;
@@ -337,7 +345,9 @@
 					} else {
 						if ( data.details === 'editconflict' ) {
 							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
-						} else if ( response.error && response.error.code === 'readonly' ) {
+						} else if (
+							response.error && $.inArray( response.error.code, whitelistedErrorInfo ) > -1
+						) {
 							msg = response.error.info;
 						} else {
 							msg = mw.msg( 'mobile-frontend-editor-error' );
