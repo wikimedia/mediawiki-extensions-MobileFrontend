@@ -16,6 +16,24 @@
       "revId": "4d1ddc81e0c7b7e84a4ec1aa6362da835c764abb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f0d284d4",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T18:49:04Z",
+      "side": 1,
+      "message": "The problem is, that the rights are user specific, so (if we think about to move forward with anonymous editing) the caching if a big problem. Maybe we could move the check, if the page is editable to EditorOverlay and extend EditorApi::getContent() to get user rights, too. After that we can check the user rights in EditorOverlay and add a warning message on top of the Overlay, that edits can not be saved (maybe set the editor to readonly, too). With this, all users can edit (which have the right to do so) and all others have \"view source\" editor.\n\nThat would be the desktop behavior, too (where all users can click edit and not allowed users see the source only). In a next step, it would be possible to check, if the user is logged in and if so, set the rights into the source code of the page (it can be a long list!) and use this isEditable function (which could use the js config var to get the rights), so that logged in users have the benefit to see, when they are allowed to edit and when not.\n\nI hope you understand, what i want to say :D",
+      "parentUuid": "0e6cb3ef_d90a1324",
+      "revId": "4d1ddc81e0c7b7e84a4ec1aa6362da835c764abb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
