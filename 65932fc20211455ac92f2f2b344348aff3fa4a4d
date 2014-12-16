@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7044344b",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T17:42:23Z",
+      "side": 1,
+      "message": "Why wouldn\u0027t a link have an href?\nIf it doesn\u0027t it shouldn\u0027t be a link.",
+      "revId": "65932fc20211455ac92f2f2b344348aff3fa4a4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
