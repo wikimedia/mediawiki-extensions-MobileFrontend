@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_1c4f1970",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T06:52:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_d9ef7681",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_99d25ed4",
         "filename": "MobileFrontend.php",
         "patchSetId": 5
@@ -48,6 +66,24 @@
       "writtenOn": "2014-12-15T22:02:21Z",
       "side": 1,
       "message": "here also",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_bc538d19",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T06:52:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_99d25ed4",
       "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -71,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_dc58c137",
+        "filename": "javascripts/api.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T06:52:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_79e42aa4",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_19f5ee4c",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 5
@@ -88,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_bc1ced6b",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T06:52:12Z",
+      "side": 1,
+      "message": "hmm, maybe i\u0027m not completly awake, but i don\u0027t know, how you mean this :/",
+      "parentUuid": "0e6cb3ef_19f5ee4c",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_f9f7da54",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 5
@@ -99,6 +171,24 @@
       "writtenOn": "2014-12-15T22:08:43Z",
       "side": 1,
       "message": "The fact you are conditioning everything tells me you should refactor this. The if statement should ideally only apply to one line.",
+      "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7c3df5b7",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T06:52:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_f9f7da54",
       "revId": "d6d005590397f89e0013cbb6ecf81175e4673132",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
