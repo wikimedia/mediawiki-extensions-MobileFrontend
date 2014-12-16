@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_dfb433e7",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T13:20:16Z",
+      "side": 1,
+      "message": "i wonder what you\u0027re doing here? $data[\u0027page_actions\u0027]; shouldn\u0027t contain a talk key (if i understand your changes in SkinMinerva.php correctly). Where does this comes from?",
+      "revId": "d9f9f644526a1e67e845ebc222290dc22b5286a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1fab8b87",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 754,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T13:20:16Z",
+      "side": 1,
+      "message": "i don\u0027t know, if it would be better to remove id and add a class (iirc we doesn\u0027t use ids as selectors) and isn\u0027t ca- reserved for content actions at the top of an article inside page actions div?",
+      "revId": "d9f9f644526a1e67e845ebc222290dc22b5286a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
