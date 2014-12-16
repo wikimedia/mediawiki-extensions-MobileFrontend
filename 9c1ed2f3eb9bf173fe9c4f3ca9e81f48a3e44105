@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_50681084",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T18:03:18Z",
+      "side": 1,
+      "message": "What if someone sets wgMFEditorOptions to false in LocalSettings?\nI think it would be good to have a getConfigValue method\n\ngetConfigValue( \u0027skipPreview\u0027 )\n\nAlso add some tests for getConfig",
+      "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
