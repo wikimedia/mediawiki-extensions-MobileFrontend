@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_592123f5",
+        "filename": "javascripts/modules/wikigrok/wikiGrokRandom.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T02:18:53Z",
+      "side": 1,
+      "message": "Cal this init.js to be consistent.",
+      "revId": "97ce319f7006f715db0e67e16e7b0a3254673439",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d98c5302",
+        "filename": "javascripts/modules/wikigrok/wikiGrokRandom.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T02:18:53Z",
+      "side": 1,
+      "message": "Use M\nand you can use M.assertMode( \u0027alpha\u0027 ) to do the same check (this also makes sure you don\u0027t load the code when you shouldn\u0027t do)",
+      "revId": "97ce319f7006f715db0e67e16e7b0a3254673439",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7971870a",
+        "filename": "javascripts/modules/wikigrok/wikiGrokRandom.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-16T02:18:53Z",
+      "side": 1,
+      "message": "this is unacceptable and should be avoidable. We can\u0027t do an api request on every page load even if this is in alpha.\n\nClicking the link should trigger the api request.\n\nalso use mw.api or \nM.require( \u0027api\u0027 )",
+      "revId": "97ce319f7006f715db0e67e16e7b0a3254673439",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
