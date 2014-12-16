@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_50a9f076",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T18:32:32Z",
+      "side": 1,
+      "message": "What do you think should be the correct behavior? Actual it will overwrite the false and set a new array with anonymousEditing \u003d true.",
+      "parentUuid": "0e6cb3ef_3060fc9f",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_1034d8a6",
         "filename": "javascripts/api.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_f03e0426",
+        "filename": "javascripts/api.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T18:32:32Z",
+      "side": 1,
+      "message": "the default is used: false",
+      "parentUuid": "0e6cb3ef_1034d8a6",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_3039dc9f",
         "filename": "javascripts/api.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2014-12-16T18:01:45Z",
       "side": 1,
       "message": "What if someone sets wgMFEditorOptions to false in LocalSettings?\n(also cache this to a variable since you reuse it 2 other times)",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_904308b6",
+        "filename": "javascripts/api.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T18:32:32Z",
+      "side": 1,
+      "message": "\u003e also cache this to a variable since you reuse it 2 other times\n??",
+      "parentUuid": "0e6cb3ef_3039dc9f",
       "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -81,6 +135,24 @@
       "writtenOn": "2014-12-16T18:01:45Z",
       "side": 1,
       "message": "What if someone sets wgMFEditorOptions to false in LocalSettings?",
+      "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_70ebd4a0",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-16T18:32:32Z",
+      "side": 1,
+      "message": "the default is used: false",
+      "parentUuid": "0e6cb3ef_f0428412",
       "revId": "1d6b75157f782b57c42681e55f554ead60607cc6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
