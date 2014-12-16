@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_997d7b1a",
+        "filename": "less/content/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-16T01:54:49Z",
+      "side": 1,
+      "message": "typo: to -\u003e too :)",
+      "revId": "a3c72d914168ebb3835b4e3dab8c2bc8a96a7b67",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
