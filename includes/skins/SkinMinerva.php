@@ -443,7 +443,7 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
-						'class' => MobileUI::iconClass( 'nearby', 'before' ),
+						'class' => MobileUI::iconClass( 'nearby', 'before', 'nearby' ),
 					),
 				),
 				'class' => 'jsonly',
