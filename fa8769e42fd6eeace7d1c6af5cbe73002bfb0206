@@ -16,6 +16,24 @@
       "revId": "fa8769e42fd6eeace7d1c6af5cbe73002bfb0206",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f1c36308",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-17T02:27:25Z",
+      "side": 1,
+      "message": "can you tell me how to do so?",
+      "parentUuid": "0e6cb3ef_d1bdffd2",
+      "revId": "fa8769e42fd6eeace7d1c6af5cbe73002bfb0206",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
