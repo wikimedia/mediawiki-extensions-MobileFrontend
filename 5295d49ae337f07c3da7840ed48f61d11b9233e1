@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cde1db2a",
+        "filename": "less/content/tables.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-17T20:04:29Z",
+      "side": 1,
+      "message": "Missing a bracket here.",
+      "revId": "5295d49ae337f07c3da7840ed48f61d11b9233e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
