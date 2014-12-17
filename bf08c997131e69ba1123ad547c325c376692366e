@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_51f24fce",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-17T01:25:47Z",
+      "side": 1,
+      "message": "FYI, we usually use singular they for unknown users (since we don\u0027t know their gender): \"... if they are blocked ...\"\nhttps://en.m.wikipedia.org/wiki/Singular_they",
+      "revId": "bf08c997131e69ba1123ad547c325c376692366e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_6010df5b",
         "filename": "javascripts/modules/editor/init.js",
         "patchSetId": 12
