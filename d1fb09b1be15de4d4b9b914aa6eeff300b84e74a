@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_338d5837",
+        "filename": "javascripts/modules/uploads/PhotoUploadProgress.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-17T23:28:38Z",
+      "side": 1,
+      "message": "because it\u0027s private and it\u0027s misleading to make that method private if it\u0027s going to be used outside the class",
+      "parentUuid": "0e6cb3ef_b3996882",
+      "revId": "d1fb09b1be15de4d4b9b914aa6eeff300b84e74a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_f3afe08f",
         "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
         "patchSetId": 1
