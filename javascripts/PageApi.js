@@ -36,7 +36,7 @@
 	 * @private
 	 * @ignore
 	 * @param {Array} sections Array of section objects created from response HTML
-	 * @returns {Array}
+	 * @returns {Array} Ordered array of sections
 	 */
 	function transformSections( sections ) {
 		var
@@ -187,7 +187,7 @@
 		 * Invalidate the internal cache for a given page
 		 *
 		 * @method
-		 * @param {string} title the title of the page who's cache you want to invalidate
+		 * @param {String} title the title of the page who's cache you want to invalidate
 		 */
 		invalidatePage: function ( title ) {
 			delete this.cache[title];
@@ -197,6 +197,7 @@
 		 * Gets language list for a page; helper function for getPageLanguages()
 		 *
 		 * @method
+		 * @private
 		 * @param  {Object} data Data from API
 		 * @return {Array} List of language objects
 		 */
@@ -226,7 +227,8 @@
 		 * Gets language variant list for a page; helper function for getPageLanguages()
 		 *
 		 * @method
-		 * @param  {string} title Name of the page to obtain variants for
+		 * @private
+		 * @param  {String} title Name of the page to obtain variants for
 		 * @param  {Object} data Data from API
 		 * @return {Array} List of language variant objects
 		 */
@@ -264,8 +266,9 @@
 		 * Retrieve available languages for a given title
 		 *
 		 * @method
-		 * @param {string} title the title of the page languages should be retrieved for
-		 * @return {jQuery.Deferred} which is called with an object containing langlinks and variant links
+		 * @param {String} title the title of the page languages should be retrieved for
+		 * @return {jQuery.Deferred} which is called with an object containing langlinks
+		 * and variant links
 		 */
 		getPageLanguages: function ( title ) {
 			var self = this,
@@ -289,7 +292,14 @@
 			return result;
 		},
 
-		// FIXME: Where's a better place for these two functions to live?
+		/**
+		 * Extract sections from headings in $el
+		 * @method
+		 * @private
+		 * @param {jQuery.Object} $el object from which sections are extracted
+		 * @returns {Array} Array of section objects created from headings in $el
+		 * FIXME: Where's a better place for these two functions to live?
+		 */
 		_getAPIResponseFromHTML: function ( $el ) {
 			var $headings = $el.find( 'h1,h2,h3,h4,h5,h6' ),
 				sections = [];
@@ -308,6 +318,12 @@
 			return sections;
 		},
 
+		/**
+		 * Order sections hierarchically
+		 * @method
+		 * @param {jQuery.Object} $el object from which sections are extracted
+		 * @returns {Array} Ordered array of sections
+		 */
 		getSectionsFromHTML: function ( $el ) {
 			return transformSections( this._getAPIResponseFromHTML( $el ) );
 		}

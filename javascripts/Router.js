@@ -3,7 +3,16 @@
 	var key,
 		EventEmitter = M.require( 'eventemitter' );
 
-	// FIXME: remove when OverlayManager used everywhere
+	/**
+	 * Does hash match entry.path?
+	 * @method
+	 * @private
+	 * @ignore
+	 * @param {String} hash String to match
+	 * @param {Object} entry Entry object
+	 * @returns {Boolean} Whether hash matches entry.path
+	 * FIXME: remove when OverlayManager used everywhere
+	 */
 	function matchRoute( hash, entry ) {
 		var match = hash.match( entry.path );
 		if ( match ) {
@@ -16,6 +25,7 @@
 	/**
 	 * Provides navigation routing and location information
 	 * @class Router
+	 * @uses EventEmitter
 	 */
 	function Router() {
 		EventEmitter.prototype.initialize.apply( this, arguments );
@@ -57,6 +67,7 @@
 	}
 
 	for ( key in EventEmitter.prototype ) {
+		// FIXME: check for hasOwnProperty
 		Router.prototype[ key ] = EventEmitter.prototype[ key ];
 	}
 
@@ -100,7 +111,7 @@
 	 * hash now.
 	 *
 	 * @method
-	 * @param {string} path String with a route (hash without #).
+	 * @param {String} path String with a route (hash without #).
 	 */
 	Router.prototype.navigate = function ( path ) {
 		window.location.hash = path;
@@ -133,7 +144,7 @@
 	 * Get current path (hash).
 	 *
 	 * @method
-	 * @return {string} Current path.
+	 * @return {String} Current path.
 	 */
 	Router.prototype.getPath = function () {
 		return window.location.hash.slice( 1 );

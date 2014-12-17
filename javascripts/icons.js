@@ -11,6 +11,7 @@
 	 *
 	 * @class icons
 	 * @singleton
+	 * @uses Icon
 	 */
 	M.define( 'icons', {
 

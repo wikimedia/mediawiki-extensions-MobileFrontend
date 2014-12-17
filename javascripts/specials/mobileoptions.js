@@ -10,6 +10,10 @@
 	 */
 	Checkbox = View.extend( {
 		template: mw.template.get( 'mobile.special.mobileoptions.scripts', 'Checkbox.hogan' ),
+		/**
+		 * Save the current state of the checkbox to the settings
+		 * @method
+		 */
 		save: function () {
 			settings.save( this.options.name, this.cb.prop( 'checked' ) ? 'true' : 'false', true );
 		},
@@ -22,6 +26,11 @@
 		}
 	} );
 
+	/**
+	 * Add a new 'expand sections' checkbox in alpha.
+	 * The checkbox is used for turning on/off expansion of all sections on page load.
+	 * @method
+	 */
 	function initLocalStorageCheckboxes() {
 		var cb,
 			saveLI = $( '#mw-mf-settings-save' );

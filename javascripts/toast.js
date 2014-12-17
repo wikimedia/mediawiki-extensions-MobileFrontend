@@ -14,7 +14,7 @@
 		 * Show the toast message with a given class and content
 		 * @method
 		 * @param {String} content Content to be placed in element
-		 * @param {String} className class to add to elemenet
+		 * @param {String} className class to add to element
 		 */
 		show: function ( content, className ) {
 			this.$el

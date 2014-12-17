@@ -13,6 +13,7 @@
 	 * Mobile modal window
 	 * @class Overlay
 	 * @extends View
+	 * @uses Icon
 	 */
 	Overlay = View.extend( {
 		/**
@@ -39,7 +40,7 @@
 		appendTo: '#mw-mf-viewport',
 
 		/**
-		 * Default classname
+		 * Default class name
 		 * @type {String}
 		 */
 		className: 'overlay',
@@ -141,7 +142,12 @@
 			}
 		},
 
-		// FIXME: remove when OverlayManager used everywhere
+		/**
+		 * Hide self when the route is visited
+		 * @method
+		 * @private
+		 * FIXME: remove when OverlayManager used everywhere
+		 */
 		_hideOnRoute: function () {
 			var self = this;
 			M.router.once( 'route', function ( ev ) {
@@ -153,7 +159,7 @@
 		},
 
 		/**
-		 * Attach overlay to current view
+		 * Attach overlay to current view and show it.
 		 * @method
 		 */
 		show: function () {
@@ -192,10 +198,10 @@
 		},
 		/**
 		 * Detach the overlay from the current view
-		 *
 		 * @method
-		 * @param {boolean} force Whether the overlay should be closed regardless of state (see PhotoUploadProgress)
-		 * @return {boolean}: Whether the overlay was successfully hidden or not
+		 * @param {Boolean} force Whether the overlay should be closed regardless of
+		 * state (see PhotoUploadProgress)
+		 * @return {Boolean} Whether the overlay was successfully hidden or not
 		 */
 		hide: function ( force ) {
 			// FIXME: remove when OverlayManager used everywhere
@@ -218,8 +224,19 @@
 			return true;
 		},
 
+		/**
+		 * Fit the overlay content height to the window taking overlay header and footer heights
+		 * into consideration.
+		 * @method
+		 * @private
+		 * @param {Number} windowHeight The height of the window
+		 */
 		_resizeContent: function ( windowHeight ) {
-			this.$overlayContent.height( windowHeight - this.$( '.overlay-header-container' ).outerHeight() - this.$( '.overlay-footer-container' ).outerHeight() );
+			this.$overlayContent.height(
+				windowHeight -
+				this.$( '.overlay-header-container' ).outerHeight() -
+				this.$( '.overlay-footer-container' ).outerHeight()
+			);
 		},
 
 		/**
@@ -233,7 +250,8 @@
 		 * is open).
 		 *
 		 * @method
-		 * @param {string} el CSS selector for elements that may trigger virtual
+		 * @private
+		 * @param {String} el CSS selector for elements that may trigger virtual
 		 * keyboard (usually inputs, textareas, contenteditables).
 		 */
 		_fixIosHeader: function ( el ) {
@@ -265,9 +283,16 @@
 			}
 		},
 
+		/**
+		 * Show elements that are selected by the className.
+		 * Also hide .hideable elements
+		 * Can't use jQuery's hide() and show() because show() sets display: block.
+		 * And we want display: table for headers.
+		 * @method
+		 * @private
+		 * @param {String} className CSS selector to show
+		 */
 		_showHidden: function ( className ) {
-			// can't use jQuery's hide() and show() beause show() sets display: block
-			// and we want display: table for headers
 			this.$( '.hideable' ).addClass( 'hidden' );
 			this.$( className ).removeClass( 'hidden' );
 		}
