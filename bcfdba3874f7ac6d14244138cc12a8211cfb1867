@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_5391ec48",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T23:28:21Z",
+      "side": 1,
+      "message": "Perform search and render results inside current view.\n@uses PageList ?",
+      "revId": "bcfdba3874f7ac6d14244138cc12a8211cfb1867",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_737af020",
+        "filename": "javascripts/modules/search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T23:28:21Z",
+      "side": 1,
+      "message": "Document emit of search-results using @event",
+      "revId": "bcfdba3874f7ac6d14244138cc12a8211cfb1867",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f3860018",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T23:28:21Z",
+      "side": 1,
+      "message": "not true. ooking t it the thing returned is result which is just a $.Deferred that either will be resolved with ok parameter or rejected with type error",
+      "revId": "bcfdba3874f7ac6d14244138cc12a8211cfb1867",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
