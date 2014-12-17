@@ -11,6 +11,8 @@
 	 * Overlay for displaying upload tutorial
 	 * @class UploadTutorial
 	 * @extends Overlay
+	 * @uses Icon
+	 * @uses LeadPhotoUploaderButton
 	 */
 	UploadTutorial = Overlay.extend( {
 		template: mw.template.get( 'mobile.uploads', 'UploadTutorial.hogan' ),
@@ -83,17 +85,30 @@
 			Overlay.prototype.postRender.apply( this, arguments );
 		},
 
+		/**
+		 * Show current page inside the upload tutorial
+		 * @method
+		 * @private
+		 */
 		_showCurrentPage: function () {
 			this.$( '.slide' ).removeClass( 'active' ).eq( this.page ).addClass( 'active' );
 			this.$( '.prev' ).toggle( this.page > 0 );
 			this.$( '.next' ).toggle( this.page < this.totalPages - 1 );
 		},
 
+		/**
+		 * Show next page of the tutorial
+		 * @method
+		 */
 		next: function () {
 			this.page += 1;
 			this._showCurrentPage();
 		},
 
+		/**
+		 * Show previous page of the tutorial
+		 * @method
+		 */
 		previous: function () {
 			this.page -= 1;
 			this._showCurrentPage();

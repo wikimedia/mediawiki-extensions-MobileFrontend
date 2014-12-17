@@ -8,6 +8,12 @@
 		} ),
 		PhotoUploaderButton;
 
+	/**
+	 * Check whether photo upload is supported
+	 * @method
+	 * @ignore
+	 * @returns {Boolean}
+	 */
 	function isSupported() {
 		// FIXME: create a module for browser detection stuff
 		// deal with known false positives which don't support file input (bug 47374)
@@ -26,6 +32,7 @@
 	/**
 	 * @class PhotoUploaderButton
 	 * @extends View
+	 * @uses Icon
 	 * PhotoUploaderButton is a component for uploading images to the wiki.
 	 *
 	 *     @example
@@ -41,13 +48,13 @@
 	 *     </code>
 	 *
 	 * @param {Object} options Uploader options.
-	 * @param {string} options.buttonCaption Caption for the upload button.
-	 * @param {boolean} options.insertInPage If the image should be prepended
+	 * @param {String} options.buttonCaption Caption for the upload button.
+	 * @param {Boolean} options.insertInPage If the image should be prepended
 	 * to the wikitext of a page specified by options.pageTitle.
-	 * @param {string} options.pageTitle Title of the page to which the image
+	 * @param {String} options.pageTitle Title of the page to which the image
 	 * belongs (image name will be based on this) and to which it should be
 	 * prepended (if options.insertInPage is true).
-	 * @param {string} options.funnel Funnel for EventLogging.
+	 * @param {String} options.funnel Funnel for EventLogging.
 	 */
 	PhotoUploaderButton = View.extend( {
 		template: mw.template.get( 'mobile.upload.ui', 'Button.hogan' ),

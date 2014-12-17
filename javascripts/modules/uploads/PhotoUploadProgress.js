@@ -9,6 +9,8 @@
 	 ** Appears at top of the page does not cover display.
 	 * @class PhotoUploadProgress
 	 * @extends Overlay
+	 * @uses ProgressBar
+	 * @uses AbuseFilterPanel
 	 */
 	PhotoUploadProgress = Overlay.extend( {
 		/**
@@ -35,8 +37,16 @@
 			this.$( '.submit' ).on( 'click', $.proxy( this, 'emit', 'submit' ) );
 		},
 
+		/**
+		 * Show abuse filter
+		 * @method
+		 * @param {String} type The type of alert, e.g. 'warning' or 'disallow'
+		 * @param {String} message Message to show in the AbuseFilter overlay
+		 */
 		showAbuseFilter: function ( type, message ) {
-			new AbuseFilterPanel().appendTo( this.$( '.overlay-header-container' ) ).show( type, message );
+			new AbuseFilterPanel().appendTo( this.$( '.overlay-header-container' ) )
+				.show( type, message );
+			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.save-header' );
 		},
 
@@ -53,6 +63,11 @@
 			}
 		},
 
+		/**
+		 * Set the value of the progress bar in percentages
+		 * @method
+		 * @param {Number} value of the progress bar
+		 */
 		setValue: function ( value ) {
 			var $uploading = this.$( '.uploading' );
 			// only add progress bar if we're getting progress events

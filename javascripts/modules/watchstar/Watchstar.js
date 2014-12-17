@@ -21,6 +21,10 @@
 	 * A clickable watchstar
 	 * @class Watchstar
 	 * @extends View
+	 * @uses CtaDrawer
+	 * @uses Icon
+	 * @uses WatchstarApi
+	 * @uses Toast
 	 */
 	Watchstar = View.extend( {
 		/**

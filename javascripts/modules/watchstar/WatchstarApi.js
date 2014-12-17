@@ -12,6 +12,12 @@
 	WatchstarApi = Api.extend( {
 		_cache: {},
 
+		/**
+		 * Cache API response
+		 * @method
+		 * @private
+		 * @param {Object} resp Response from the server
+		 */
 		_loadIntoCache: function ( resp ) {
 			var self = this;
 			if ( resp.query && resp.query.pages ) {
@@ -24,7 +30,7 @@
 		 * Loads the watch status for a given list of page ids in bulk
 		 * @method
 		 * @param {Array} ids A list of page ids
-		 * @param {boolean} markAsAllWatched When true will assume all given ids are watched without a lookup.
+		 * @param {Boolean} markAsAllWatched When true will assume all given ids are watched without a lookup.
 		 * @return {jQuery.Deferred}
 		 */
 		load: function ( ids, markAsAllWatched ) {
@@ -64,8 +70,8 @@
 		 * Check if a given page is watched
 		 * @method
 		 * @param {Page} page Page view object
-		 * @return {boolean}
-		 * @throws Error when the status of the page has not been loaded.
+		 * @return {Boolean}
+		 * @throws {Error} when the status of the page has not been loaded.
 		 */
 		isWatchedPage: function ( page ) {
 			var id = page.getId();
