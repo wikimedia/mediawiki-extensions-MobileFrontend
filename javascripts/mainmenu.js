@@ -60,7 +60,7 @@
 
 		$( '<div class="transparent-shield cloaked-element">' ).appendTo( '#mw-mf-page-center' );
 		if ( !browser.supportsGeoLocation() ) {
-			$( '#mw-mf-page-left li.icon-nearby' ).remove();
+			$( '#mw-mf-page-left .nearby' ).parent().remove();
 		}
 	}
 
