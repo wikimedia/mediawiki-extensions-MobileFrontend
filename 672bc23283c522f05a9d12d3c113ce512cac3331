@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1624cd06",
+        "filename": "javascripts/mainmenu.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T00:21:22Z",
+      "side": 1,
+      "message": "This code shouldn\u0027t be loaded in stable under any circumstances. Sandbox it to alpha.\n\nMove this to its own file e.g. wikiGrokRoulette/init.js and run this there\nOnly load it on alpha",
+      "revId": "672bc23283c522f05a9d12d3c113ce512cac3331",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_5671e509",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T00:21:22Z",
+      "side": 1,
+      "message": "We are trying to move away from this type of thing. The whole point of templates is to keep HTML and JS separately.",
+      "revId": "672bc23283c522f05a9d12d3c113ce512cac3331",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_167b6dec",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogC.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T00:21:22Z",
+      "side": 1,
+      "message": "Use a value in defaults",
+      "revId": "672bc23283c522f05a9d12d3c113ce512cac3331",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
