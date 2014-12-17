@@ -559,9 +559,9 @@ class SkinMinerva extends SkinTemplate {
 		$timestamp = Revision::getTimestampFromId( $this->getTitle(), $revId );
 		// Main pages tend to include transclusions (see bug 51924)
 		if ( $isMainPage ) {
-			$lastModified = wfMessage( 'mobile-frontend-history' )->plain();
+			$lastModified = $this->msg( 'mobile-frontend-history' )->plain();
 		} else {
-			$lastModified = wfMessage(
+			$lastModified = $this->msg(
 				'mobile-frontend-last-modified-date',
 				$this->getLanguage()->userDate( $timestamp, $user ),
 				$this->getLanguage()->userTime( $timestamp, $user )
