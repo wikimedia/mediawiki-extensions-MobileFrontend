@@ -110,6 +110,7 @@
 	"mobile-frontend-enable-images": "Activar imagens no sítio móvel",
 	"mobile-frontend-expand-sections-description": "Expandir sempre todas as secções quando navegar para uma nova página.",
 	"mobile-frontend-expand-sections-status": "Expandir todas as secções",
+	"mobile-frontend-fontchanger-link": "Tamanho da fonte",
 	"mobile-frontend-featured-article": "Artigo em destaque",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Imagens em {{SITENAME}} são provenientes do Wikimedia Commons.",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Contribua com as suas imagens. Ajude {{SITENAME}} a ganhar vida!",
@@ -335,5 +336,6 @@
 	"tag-mobile_web_edit-description": "Edição feita através do sítio para telemóvel",
 	"mobile-frontend-pageaction-edit-tooltip": "Editar introdução desta página.",
 	"mobile-frontend-pageaction-upload-tooltip": "Carregar foto principal para esta página.",
-	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel."
+	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel.",
+	"mobile-frontend-donate-button-label": "Fazer donativo"
 }
