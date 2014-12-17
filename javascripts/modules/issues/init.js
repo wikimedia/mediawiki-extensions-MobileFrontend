@@ -100,7 +100,7 @@
 				} );
 			} );
 
-			if ( inAlpha ) {
+			if ( inAlpha && $metadata.length ) {
 				$( '.pre-content' ).append( $link );
 			} else {
 				$link.insertBefore( $metadata.eq( 0 ) );
