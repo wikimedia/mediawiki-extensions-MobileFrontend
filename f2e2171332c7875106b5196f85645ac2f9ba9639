@@ -16,6 +16,24 @@
       "revId": "f2e2171332c7875106b5196f85645ac2f9ba9639",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_2a163daa",
+        "filename": "javascripts/modules/issues/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T19:26:41Z",
+      "side": 1,
+      "message": "Okay it seems to be because of https://gerrit.wikimedia.org/r/#/c/180209/ (see my comment)\n\nI feel calling createBanner is messy if no issues exist.\nMaybe we should rename the function.\n\nIn meantime I think easiest thing to do would be inAlpha \u0026\u0026 $metadata.eq( 0 )\n\nThen let\u0027s look to refactor this function.",
+      "parentUuid": "0e6cb3ef_8ac0a930",
+      "revId": "f2e2171332c7875106b5196f85645ac2f9ba9639",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
