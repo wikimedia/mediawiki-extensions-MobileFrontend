@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b3996882",
+        "filename": "javascripts/modules/uploads/PhotoUploadProgress.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T23:25:51Z",
+      "side": 1,
+      "message": "why not?",
+      "revId": "d1fb09b1be15de4d4b9b914aa6eeff300b84e74a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f3afe08f",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T23:25:51Z",
+      "side": 1,
+      "message": "capital B no?",
+      "revId": "d1fb09b1be15de4d4b9b914aa6eeff300b84e74a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_93c9c47d",
+        "filename": "javascripts/modules/uploads/UploadTutorial.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T23:25:51Z",
+      "side": 1,
+      "message": "current page inside the upload tutorial (it sounds too much like Page.js)",
+      "revId": "d1fb09b1be15de4d4b9b914aa6eeff300b84e74a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
