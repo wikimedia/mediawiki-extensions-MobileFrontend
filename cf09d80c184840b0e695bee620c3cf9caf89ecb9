@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_aa4a4dc6",
+        "filename": "javascripts/modules/issues/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T19:24:50Z",
+      "side": 1,
+      "message": "This inserts it unconditionally. \nIt seems previously we relied on $metadata.eq( 0 ) existing to add it to DOM. We should probably condition both of these on the existence of this element.",
+      "revId": "cf09d80c184840b0e695bee620c3cf9caf89ecb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
