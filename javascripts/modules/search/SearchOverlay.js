@@ -6,6 +6,7 @@
 		Icon = M.require( 'Icon' ),
 		PageList = M.require( 'modules/PageList' ),
 		SEARCH_DELAY = 300,
+		$html = $( 'html' ),
 		SearchOverlay;
 
 	/**
@@ -141,6 +142,24 @@
 			if ( this.$input[0].setSelectionRange ) {
 				this.$input[0].setSelectionRange( len, len );
 			}
+		},
+
+		/**
+		 * Fade out if the browser supports animations
+		 * @inheritdoc
+		 */
+		hide: function () {
+			var self = this;
+
+			if ( $html.hasClass( 'animations' ) ) {
+				self.$el.addClass( 'fade-out' );
+				setTimeout( function () {
+					Overlay.prototype.hide.apply( self, arguments );
+				}, 500 );
+			} else {
+				Overlay.prototype.hide.apply( self, arguments );
+			}
+			return true;
 		},
 
 		performSearch: function () {

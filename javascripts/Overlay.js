@@ -185,7 +185,7 @@
 		 * Detach the overlay from the current view
 		 *
 		 * @method
-		 * @param {boolean} force: Whether the overlay should be closed regardless of state (see PhotoUploadProgress)
+		 * @param {boolean} force Whether the overlay should be closed regardless of state (see PhotoUploadProgress)
 		 * @return {boolean}: Whether the overlay was successfully hidden or not
 		 */
 		hide: function ( force ) {
