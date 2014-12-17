@@ -8,13 +8,24 @@
 
 	langMap = langMap ? $.parseJSON( langMap ) : {};
 
+	/**
+	 * Update the langMap variable with the language map from the settings.
+	 * @method
+	 * @ignore
+	 */
 	function loadLanguageMap() {
 		langMap = settings.get( 'langMap' );
 		langMap = langMap ? JSON.parse( langMap ) : {};
 	}
 
+	/**
+	 * Update langMap and save it to settings.
+	 * If not supported, don't do anything.
+	 * @method
+	 * @ignore
+	 * @param {String} language
+	 */
 	function profileLanguage( language ) {
-		// if not supported, don't do anything
 		if ( supported && langMap ) {
 			var count;
 			count = langMap[ language ] || 0;
@@ -25,6 +36,11 @@
 		}
 	}
 
+	/**
+	 * Run loadLanguageMap and profileLanguage if browser supports localStorage.
+	 * @method
+	 * @ignore
+	 */
 	function initProfiler() {
 		if ( supported ) {
 			loadLanguageMap();

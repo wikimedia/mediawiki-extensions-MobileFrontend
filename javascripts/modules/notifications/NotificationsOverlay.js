@@ -7,6 +7,7 @@
 	 * Overlay for notifications
 	 * @class NotificationsOverlay
 	 * @extend Overlay
+	 * @uses Api
 	 */
 	NotificationsOverlay = Overlay.extend( {
 		active: false,
@@ -31,10 +32,17 @@
 			linkMsg: mw.msg( 'echo-overlay-link' ),
 			linkClass: 'notifications-archive-link'
 		},
+		/**
+		 * Fall back to notifications archive page.
+		 * @method
+		 */
 		onError: function () {
-			// Fall back to notifications archive page.
 			window.location.href = this.$badge.attr( 'href' );
 		},
+		/**
+		 * Mark as read. Change the UI only, no API request.
+		 * @method
+		 */
 		markAsRead: function () {
 			this.$badge.find( 'span' ).remove();
 		},
@@ -100,6 +108,10 @@
 				} );
 			}
 		},
+		/**
+		 * Mark notifications as read in the server. Make an API request.
+		 * @method
+		 */
 		markAllAsRead: function () {
 			api.getTokenWithEndpoint( 'edit' ).done( function ( token ) {
 				api.post( {

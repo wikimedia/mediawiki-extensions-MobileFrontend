@@ -10,10 +10,10 @@
 
 	/**
 	 * Loads a ResourceLoader module script. Shows ajax loader whilst loading.
-	 *
+	 * @method
 	 * @ignore
 	 * FIXME: Upstream to mw.mobileFrontend and reuse elsewhere
-	 * @param {string} moduleName: Name of a module to fetch
+	 * @param {String} moduleName Name of a module to fetch
 	 * @returns {jQuery.Deferred}
 	 */
 	function loadModuleScript( moduleName ) {
@@ -42,6 +42,14 @@
 			return false;
 		} );
 
+		/**
+		 * Load the notification overlay.
+		 * @method
+		 * @ignore
+		 * @private
+		 * @uses NotificationsOverlay
+		 * @returns {jQuery.Deferred} with an instance of NotificationsOverlay
+		 */
 		function loadNotificationOverlay() {
 			var result = $.Deferred();
 			loadModuleScript( 'mobile.notifications.overlay' ).done( function () {
