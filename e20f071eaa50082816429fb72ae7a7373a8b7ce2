@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_678551b1",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-17T12:45:02Z",
+      "side": 1,
+      "message": "Constructing an instance of this class shouldn\u0027t modify the DOM. We query this class for information about the browser.\n\nThere should be an init file, which is the primary client of this class, that modifies the DOM based on responses to queries.\n\n*Edit*\n\nWait, is this even necessary?",
+      "revId": "e20f071eaa50082816429fb72ae7a7373a8b7ce2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_8782e5a7",
+        "filename": "javascripts/modules/search/init.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-17T12:45:02Z",
+      "side": 1,
+      "message": "Give other developers a break and provide a link to the task.",
+      "revId": "e20f071eaa50082816429fb72ae7a7373a8b7ce2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_076d7501",
+        "filename": "javascripts/modules/search/init.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-17T12:45:02Z",
+      "side": 1,
+      "message": "As well as\n\n    $( \u0027#searchInput\u0027 ).prop( \u0027readonly\u0027, false );\n\nif we\u0027re not changing the main menu initialisation function.",
+      "revId": "e20f071eaa50082816429fb72ae7a7373a8b7ce2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
