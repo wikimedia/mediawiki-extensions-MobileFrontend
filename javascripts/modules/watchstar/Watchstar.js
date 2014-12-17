@@ -122,9 +122,9 @@
 
 			// Add watched class if necessary
 			if ( !user.isAnon() && api.isWatchedPage( page ) ) {
-				$el.addClass( watchedClass ).removeClass( unwatchedClass );
+				$el.addClass( watchedClass ).removeClass( unwatchedClass ).removeClass( 'hidden' );
 			} else {
-				$el.addClass( unwatchedClass ).removeClass( watchedClass );
+				$el.addClass( unwatchedClass ).removeClass( watchedClass ).removeClass( 'hidden' );
 			}
 		}
 	} );
