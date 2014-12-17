@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_33b318ea",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T23:32:40Z",
+      "side": 1,
+      "message": "Can you elaborate on what correct means?",
+      "revId": "9d57f6c0430ed5f779a750dcd0b1dac0a8856961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_93a6a4a6",
+        "filename": "javascripts/modules/mf-stop-mobile-redirect.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T23:32:40Z",
+      "side": 1,
+      "message": "Make it clearer this is an event handler for the toggle to desktop link.\nIf cookies are enabled it will redirect you to desktop site as described in the link href associated with the handler.",
+      "revId": "9d57f6c0430ed5f779a750dcd0b1dac0a8856961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
