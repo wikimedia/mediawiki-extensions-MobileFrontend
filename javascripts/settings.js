@@ -6,7 +6,9 @@
  */
 ( function ( M, $ ) {
 
-	var settings = ( function () {
+	var browser = M.require( 'browser' ),
+		supportsLocalStorage = browser.supportsLocalStorage(),
+		settings = ( function () {
 
 		function cookiesEnabled() {
 			// If session cookie already set, return true
@@ -33,7 +35,7 @@
 			var cookieOptions = {
 				expires: 1
 			};
-			return M.supportsLocalStorage ?
+			return supportsLocalStorage ?
 				localStorage.setItem( name, value ) :
 					( useCookieFallback ? $.cookie( name, value, cookieOptions ) : false );
 		}
@@ -46,7 +48,7 @@
 		 * @returns {String|Boolean} Returns the associated value or False if nothing is found
 		 */
 		function get( name, useCookieFallback ) {
-			return M.supportsLocalStorage ? localStorage.getItem( name ) :
+			return supportsLocalStorage ? localStorage.getItem( name ) :
 				( useCookieFallback ? $.cookie( name ) : false );
 		}
 
@@ -58,7 +60,7 @@
 		 * @returns {Boolean} Whether the delete was successful or not
 		 */
 		function remove( name, useCookieFallback ) {
-			return M.supportsLocalStorage ? localStorage.removeItem( name ) :
+			return supportsLocalStorage ? localStorage.removeItem( name ) :
 				( useCookieFallback ? $.removeCookie( name ) : false );
 		}
 

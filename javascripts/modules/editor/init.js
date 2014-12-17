@@ -11,6 +11,7 @@
 		} ),
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
+		browser = M.require( 'browser' ),
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
 		// FIXME: Disable on IE < 10 for time being
@@ -20,7 +21,7 @@
 		isNewFile = M.inNamespace( 'file' ) && isNewPage,
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
-		isVisualEditorEnabled = M.isWideScreen() && veConfig,
+		isVisualEditorEnabled = browser.isWideScreen() && veConfig,
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		toast = M.require( 'toast' ),
 		pendingToast = settings.get( 'mobile-pending-toast' ),

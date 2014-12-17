@@ -3,7 +3,8 @@
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
 		settings = M.require( 'settings' ),
-		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !M.isWideScreen(),
+		browser = M.require( 'browser' ),
+		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !browser.isWideScreen(),
 		idOverride,
 		versionConfigs = {
 			A: {

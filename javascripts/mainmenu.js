@@ -1,5 +1,11 @@
 ( function ( M, $ ) {
+	var browser = M.require( 'browser' );
 
+	/**
+	 * Check whether the navigation drawer is open
+	 * @ignore
+	 * @return {Boolean}
+	 */
 	function isOpen() {
 		return $( 'body' ).hasClass( 'navigation-enabled' );
 	}
@@ -26,9 +32,14 @@
 			.toggleClass( drawerType + '-navigation-enabled' );
 	}
 
+	/**
+	 * Initialise the main menu
+	 * @ignore
+	 */
 	function initialize() {
 		// make the input readonly to avoid accidental focusing when closing menu
 		// (when JS is on, this input should not be used for typing anyway)
+		// FIXME: Review the need for this, especially given latest alpha developments
 		$( '#searchInput' ).prop( 'readonly', true );
 		$( '#mw-mf-main-menu-button' ).on( 'click', function ( ev ) {
 			if ( isOpen() ) {
@@ -48,6 +59,9 @@
 		} );
 
 		$( '<div class="transparent-shield cloaked-element">' ).appendTo( '#mw-mf-page-center' );
+		if ( !browser.supportsGeoLocation() ) {
+			$( '#mw-mf-page-left li.icon-nearby' ).remove();
+		}
 	}
 
 	M.define( 'mainmenu', {

@@ -1,6 +1,7 @@
 // When set orders LanguageOverlay list of languages by most frequently chosen
 ( function ( M, $ ) {
-	var supported = M.supportsLocalStorage,
+	var browser = M.require( 'browser' ),
+		supported = browser.supportsLocalStorage(),
 		settings = M.require( 'settings' ),
 		langMap = settings.get( 'langMap' ),
 		curLanguage = mw.config.get( 'wgContentLanguage' );

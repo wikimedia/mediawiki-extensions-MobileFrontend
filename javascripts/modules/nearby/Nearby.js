@@ -2,6 +2,7 @@
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		PageList = M.require( 'modules/PageList' ),
 		Nearby,
+		browser = M.require( 'browser' ),
 		icons = M.require( 'icons' );
 
 	/**
@@ -59,7 +60,7 @@
 		 */
 		getCurrentPosition: function () {
 			var result = $.Deferred();
-			if ( M.supportsGeoLocation() ) {
+			if ( browser.supportsGeoLocation() ) {
 				navigator.geolocation.getCurrentPosition( function ( geo ) {
 						result.resolve( {
 							latitude: geo.coords.latitude,

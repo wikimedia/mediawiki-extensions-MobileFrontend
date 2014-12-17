@@ -2,6 +2,7 @@
 
 var sectionHtml = mw.template.get( 'mobile.toggling.tests', 'section.hogan' ).render(),
 	settings = M.require( 'settings' ),
+	browser = M.require( 'browser' ),
 	toggle = M.require( 'toggle' );
 
 /**
@@ -13,7 +14,7 @@ QUnit.module( 'MobileFrontend toggle.js: Mobile mode.', {
 	setup: function() {
 		this.$container = $( '<div>' ).html( sectionHtml );
 		this.$section0 = this.$container.find( 'h2' ).eq( 0 );
-		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
+		this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		toggle.enable( this.$container );
 		toggle.toggle( this.$section0 );
 	},
@@ -102,7 +103,7 @@ QUnit.test( 'Verify aria attributes', 9, function ( assert ) {
 QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	setup: function() {
 		this.$container = $( '<div>' ).html( sectionHtml );
-		this.sandbox.stub( M, 'isWideScreen' ).returns( true );
+		this.sandbox.stub( browser, 'isWideScreen' ).returns( true );
 		toggle.enable( this.$container );
 	},
 	teardown: function() {
@@ -148,7 +149,7 @@ QUnit.test( 'Open by default', 1, function( assert ) {
 QUnit.module( 'MobileFrontend toggle.js: accessibility', {
 	setup: function() {
 		this.$container = $( '<div>' ).html( sectionHtml );
-		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
+		this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		toggle.enable( this.$container );
 	},
 	teardown: function() {
@@ -191,7 +192,7 @@ QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
 	setup: function() {
 		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 		this.sandbox.stub( M, 'isBetaGroupMember' ).returns( true );
-		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
+		this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		this.$container = $( '<div>' ).html( sectionHtml );
 		toggle.enable( this.$container );
 		this.$section = this.$container.find( 'h2' );
@@ -289,7 +290,7 @@ QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
 	setup: function() {
 		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 		this.sandbox.stub( M, 'isBetaGroupMember' ).returns( true );
-		this.sandbox.stub( M, 'isWideScreen' ).returns( false );
+		this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		this.$container = $( '<div>' ).html( sectionHtml );
 		// Restore expanded sections only works on headings that are also section headings
 		this.$container.find( 'h2' ).addClass( 'section-heading' );

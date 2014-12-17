@@ -2,6 +2,7 @@
 
 	var View = M.require( 'View' ),
 		PageList,
+		browser = M.require( 'browser' ),
 		Watchstar = M.require( 'modules/watchstar/Watchstar' ),
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 		user = M.require( 'user' ),
@@ -53,7 +54,7 @@
 			var self = this,
 				pages = {},
 				$ul = this.$( '.page-list' ),
-				delay = M.isWideScreen() ? 0 : 1000;
+				delay = browser.isWideScreen() ? 0 : 1000;
 
 			if ( !mw.config.get( 'wgImagesDisabled' ) ) {
 				window.setTimeout( function () {
