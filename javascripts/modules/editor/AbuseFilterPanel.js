@@ -8,6 +8,8 @@
 	 * Panel that shows an error message related to the abusefilter extension.
 	 * @class AbuseFilterPanel
 	 * @extends View
+	 * @uses AbuseFilterOverlay
+	 * FIXME: should extend Panel not View. Or the name should be changed to something meaningful.
 	 */
 	AbuseFilterPanel = View.extend( {
 		/**
@@ -27,7 +29,12 @@
 			this.isDisallowed = false;
 		},
 
-		/** @inheritdoc */
+		/**
+		 * Show the panel. Create a route to show AbuseFilterOverlay with message.
+		 * @method
+		 * @param {String} type The type of alert, e.g. 'warning' or 'disallow'
+		 * @param {String} message Message to show in the AbuseFilter overlay
+		 */
 		show: function ( type, message ) {
 			var msg;
 
@@ -49,7 +56,10 @@
 			this.$el.removeClass( 'hidden' );
 		},
 
-		/** @inheritdoc */
+		/**
+		 * Hide the panel.
+		 * @method
+		 */
 		hide: function () {
 			this.$el.addClass( 'hidden' );
 		}

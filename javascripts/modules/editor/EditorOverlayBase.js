@@ -12,6 +12,8 @@
 	 * Base class for EditorOverlay
 	 * @extends Overlay
 	 * @class EditorOverlayBase
+	 * @uses Icon
+	 * @uses user
 	 */
 	EditorOverlayBase = Overlay.extend( {
 		/**
@@ -91,7 +93,7 @@
 		/**
 		 * Logs an event to  http://meta.wikimedia.org/wiki/Schema:MobileWebEditing
 		 * @param {String} action name in workflow.
-		 * @param {String} [errorText] error to report if applicable
+		 * @param {String} errorText error to report if applicable
 		 */
 		log: function ( action, errorText ) {
 			var
@@ -123,6 +125,7 @@
 
 		/**
 		 * If this is a new article, require confirmation before saving.
+		 * @method
 		 */
 		confirmSave: function () {
 			if ( this.isNewPage &&
@@ -136,6 +139,7 @@
 		/**
 		 * Executed when page save is complete. Handles reloading the page, showing toast
 		 * messages, and setting mobile edit cookie.
+		 * @method
 		 */
 		onSave: function () {
 			var msg,
@@ -182,6 +186,7 @@
 			}
 			if ( mw.config.get( 'wgMFLicenseLink' ) ) {
 				// If terms of use is enabled, include it in the licensing message
+				// FIXME: cache this selector, it's used at least twice
 				if ( $( '#footer-places-terms-use' ).length > 0 ) {
 					options.licenseMsg = mw.msg(
 						'mobile-frontend-editor-licensing-with-terms',
@@ -205,6 +210,7 @@
 		},
 		/**
 		 * Report errors back to the user. Silently record the error using EventLogging.
+		 * @method
 		 * @param {String} msg key of message to display to user
 		 * @param {String} errorText to log to EventLogging
 		 */
@@ -214,11 +220,13 @@
 		},
 		/**
 		 * Prepares the penultimate screen before saving.
-		 * Expects to be overriden by child class.
+		 * Expects to be overridden by child class.
 		 * FIXME: EditorOverlay and VisualEditorOverlay have common
+		 * @method
 		 * @private
 		 */
 		_prepareForSave: function () {
+			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.save-header, .save-panel' );
 			this.log( 'save' );
 			// Scroll to the top of the page, so that the summary input is visible
@@ -228,8 +236,9 @@
 			window.scrollTo( 0, 1 );
 		},
 		/**
-		 * Executed when the editor clicks the save button. Expects to be overriden by child
+		 * Executed when the editor clicks the save button. Expects to be overridden by child
 		 * class. Checks if the save needs to be confirmed.
+		 * @method
 		 * @private
 		 */
 		_save: function () {
@@ -258,11 +267,13 @@
 				self.log( 'cancel' );
 			} );
 			Overlay.prototype.postRender.apply( this, arguments );
+			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.initial-header' );
 		},
 		/**
 		 * Set up the editor switching interface
 		 * The actual behavior of the editor buttons is initialized in postRender()
+		 * @method
 		 */
 		initializeSwitcher: function () {
 			this.$( '.editor-switcher' ).on( 'click', function ( ev ) {
@@ -304,8 +315,9 @@
 		_hasChanged: $.noop(),
 		/**
 		 * Reveal the captcha in the View
-		 * @param {String} url a url to an image representing the current captcha.
+		 * @method
 		 * @private
+		 * @param {String} url a url to an image representing the current captcha.
 		 */
 		_showCaptcha: function ( url ) {
 			var self = this,
@@ -320,6 +332,7 @@
 			}
 
 			this.$( '.captcha-panel img' ).attr( 'src', url );
+			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.save-header, .captcha-panel' );
 
 			this.captchaShown = true;

@@ -41,6 +41,14 @@
 		toast.show( pendingToast );
 	}
 
+	/**
+	 * Prepend an edit page button to the container
+	 * @method
+	 * @ignore
+	 * @param {Number} section number
+	 * @param {String} container CSS selector of the container
+	 * @returns {jQuery.Object} newly created edit page button
+	 */
 	function addEditButton( section, container ) {
 		return $( '<a class="edit-page">' )
 			.attr( 'href', '#/editor/' + section )
@@ -48,6 +56,13 @@
 			.prependTo( container );
 	}
 
+	/**
+	 * Make an element render a CTA when clicked
+	 * @method
+	 * @ignore
+	 * @param {jQuery.Object} $el Element which will render a drawer on click
+	 * @param {Number} section number representing the section
+	 */
 	function makeCta( $el, section ) {
 		var options = {
 			queryParams: {
@@ -73,9 +88,9 @@
 	/**
 	 * Retrieve the user's preferred editor setting. If none is set, return the default
 	 * editor for this wiki.
-	 *
+	 * @method
 	 * @ignore
-	 * @return {string} Either 'VisualEditor' or 'SourceEditor'
+	 * @return {String} Either 'VisualEditor' or 'SourceEditor'
 	 */
 	function getPreferredEditor() {
 		var preferredEditor = settings.get( 'preferredEditor', true );
@@ -93,9 +108,9 @@
 
 	/**
 	 * Initialize the edit button so that it launches the editor interface when clicked.
-	 *
-	 * @param {Page} page The page to edit.
+	 * @method
 	 * @ignore
+	 * @param {Page} page The page to edit.
 	 */
 	function setupEditor( page ) {
 		var isNewPage = page.options.id === 0;
@@ -114,11 +129,18 @@
 					isNewEditor: user.getEditCount() === 0,
 					oldId: M.query.oldid,
 					funnel: funnel || 'article',
+					// FIXME: cache this selector, it's used more than once
 					contentLang: $( '#content' ).attr( 'lang' ),
 					contentDir: $( '#content' ).attr( 'dir' )
 				},
 				visualEditorNamespaces = veConfig && veConfig.namespaces;
 
+			/**
+			 * Load source editor
+			 * @private
+			 * @ignore
+			 * @method
+			 */
 			function loadSourceEditor() {
 				M.loadModule( 'mobile.editor.overlay' ).done( function () {
 					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
@@ -157,6 +179,7 @@
 		$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
 
 		// Make sure we never create two edit links by accident
+		// FIXME: split the selector and cache it
 		if ( $( '#ca-edit .edit-page' ).length === 0 ) {
 			// FIXME: unfortunately the main page is special cased.
 			if ( mw.config.get( 'wgIsMainPage' ) || isNewPage || page.getLeadSectionElement().text() ) {
@@ -174,6 +197,12 @@
 		} );
 	}
 
+	/**
+	 * Setup the editor if the user can edit the page otherwise show a sorry toast.
+	 * @method
+	 * @ignore
+	 * @param {Page} page that's being edited
+	 */
 	function init( page ) {
 		page.isEditable( user ).done( function ( isEditable ) {
 			if ( isEditable ) {
@@ -186,10 +215,12 @@
 
 	/**
 	 * Initialize the edit button so that it launches a login call-to-action when clicked.
+	 * @method
 	 * @ignore
 	 */
 	function initCta() {
-		// Initialize edit button links (to show Cta) only, if page is editable, otherwise show an error toast
+		// Initialize edit button links (to show Cta) only, if page is editable,
+		// otherwise show an error toast
 		M.getCurrentPage().isEditable( user ).done( function ( isEditable ) {
 			if ( isEditable ) {
 				$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
@@ -214,9 +245,9 @@
 
 	/**
 	 * Show a toast message with sincere condolences.
-	 *
-	 * @param {string} msg Message key for sorry message
+	 * @method
 	 * @ignore
+	 * @param {String} msg Message key for sorry message
 	 */
 	function showSorryToast( msg ) {
 		$( '#ca-edit, .edit-page' ).on( 'click', function ( ev ) {

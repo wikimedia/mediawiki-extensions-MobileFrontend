@@ -44,7 +44,7 @@
 		/**
 		 * Check whether VisualEditor is enabled or not.
 		 * @method
-		 * @return boolean
+		 * @return {Boolean}
 		 */
 		isVisualEditorEnabled: function () {
 			return browser.isWideScreen() &&
@@ -143,10 +143,10 @@
 
 		/**
 		 * Sets additional values used for anonymous editing warning.
-		 *
+		 * @method
 		 * @private
-		 * @var {array} options Array of options
-		 * @return {array} Array with all options
+		 * @param {Object} options object
+		 * @return {Object} Object with all options
 		 */
 		_prepareAnonWarning: function ( options ) {
 			var params = $.extend( {
@@ -166,6 +166,7 @@
 
 		/**
 		 * Handles click on "Edit without login" in anonymous editing warning.
+		 * @method
 		 * @private
 		 */
 		_showEditorAfterWarning: function () {
@@ -178,6 +179,7 @@
 
 		/**
 		 * Prepares the preview interface and reveals the save screen of the overlay
+		 * @method
 		 * @private
 		 * @inheritdoc
 		 */
@@ -216,6 +218,7 @@
 
 		/**
 		 * Hides the preview and reverts back to initial screen.
+		 * @method
 		 * @private
 		 */
 		_hidePreview: function () {
@@ -224,12 +227,14 @@
 			this.$preview.removeClass( 'error' ).hide();
 			this.$content.show();
 			window.scrollTo( 0, this.scrollTop );
+			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.initial-header' );
 			this.abuseFilterPanel.hide();
 		},
 
 		/**
 		 * Requests content from the API and reveals it in UI.
+		 * @method
 		 * @private
 		 */
 		_loadContent: function () {
@@ -254,6 +259,7 @@
 		/**
 		 * Loads a {VisualEditorOverlay} and replaces the existing EditorOverlay with it
 		 * based on the current option values.
+		 * @method
 		 * @private
 		 * @param {Object} options Object passed to the constructor
 		 */
@@ -284,6 +290,7 @@
 
 		/**
 		 * Reveals an abuse filter panel inside the view.
+		 * @method
 		 * @private
 		 * @param {String} type The type of alert, e.g. 'warning' or 'disallow'
 		 * @param {String} message Message to show in the AbuseFilter overlay
@@ -318,6 +325,7 @@
 				options.captchaWord = this.$( '.captcha-word' ).val();
 			}
 
+			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.saving-header' );
 
 			this.api.save( options )
@@ -344,6 +352,7 @@
 
 					if ( data.type === 'captcha' ) {
 						self.captchaId = data.details.id;
+						// FIXME: Don't call a private method that is outside the class.
 						self._showCaptcha( data.details.url );
 					} else if ( data.type === 'abusefilter' ) {
 						self._showAbuseFilter( data.details.type, data.details.message );
@@ -360,6 +369,7 @@
 						}
 
 						self.reportError( msg, data.details );
+						// FIXME: Don't call a private method that is outside the class.
 						self._showHidden( '.save-header, .save-panel' );
 					}
 				} );
@@ -368,7 +378,7 @@
 		/**
 		 * Checks whether the existing content has changed.
 		 * FIXME: Make method of EditorApi
-		 * @uses EditorApi
+		 * @method
 		 * @private
 		 * @return {Boolean}
 		 */
