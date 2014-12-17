@@ -138,8 +138,10 @@
 
 		&:hover {
 			background-color: @colorGray5;
-			border-left: solid @menuBorder #3366BB;
 			margin-left: -@menuBorder;
+			a {
+				border-left: solid @menuBorder #3366BB;
+			}
 		}
 
 		a {
@@ -147,13 +149,18 @@
 			display: block;
 			padding: 13px 10px 11px 0;
 
+			&.mw-ui-icon {
+				padding-left: 9px;
+			}
+
 			// FIXME: Remove when cache cleared
 			&.icon {
-				padding: 13px 10px 11px 34px;
+				// FIXME: Remove when mw-ui-icon in stable
+				background-position-x: 9px;
+				padding: 13px 10px 11px 43px;
 				line-height: 22px;
 			}
 
-			margin-left: 9px;
 			&:hover {
 				text-decoration: none;
 			}
