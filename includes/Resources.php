@@ -56,6 +56,14 @@ $wgMinervaStyleModules = array(
 			'less/content/hacks.less',
 		),
 	),
+	// FIXME: When moving this to core simply migrate content of less files into corresponding
+	// skins.minerva.content.styles files to avoid caching issues.
+	'skins.minerva.content.styles.beta' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/content/tables.beta.less',
+			'less/content/hacks.beta.less',
+		),
+	),
 	'skins.minerva.drawers.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/drawer.less',
@@ -70,6 +78,13 @@ $wgMinervaStyleModules = array(
 		'styles' => array(
 			'less/tablet/common.less',
 			'less/tablet/hacks.less',
+		),
+	),
+	// FIXME: When moving this to core simply migrate content of less files into corresponding
+	// skins.minerva.tablet.styles files to avoid caching issues.
+	'skins.minerva.tablet.styles.beta' => $wgMFResourceFileModuleBoilerplate + array(
+		'styles' => array(
+			'less/tablet/hacks.beta.less',
 		),
 	),
 	'skins.minerva.icons.styles' => $wgMFResourceFileModuleBoilerplate + array(

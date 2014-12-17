@@ -14,13 +14,16 @@ FIXME: Review all of these hacks to see if they still apply.
 
 /* Tablet specific styling */
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	.content {
-		// Revert to showing nav boxes on tablet/desktop
-		.navbox, .vertical-navbox {
-			display: inherit;
+	// FIXME: Remove when new table styles in stable.
+	.stable {
+		#content_wrapper {
+			table.infobox {
+				margin-left: @contentMargin !important;
+			}
 		}
 	}
 
+	// FIXME: review why we need content_wrapper
 	#content_wrapper {
 		// Float infoboxes to the right of the page
 		table.infobox {
@@ -30,7 +33,6 @@ FIXME: Review all of these hacks to see if they still apply.
 			// FIXME [Templates]: Inline styles force us to use !important
 			width: auto !important;
 			float: right !important;
-			margin-left: @contentMargin !important;
 			clear: right !important;
 		}
 

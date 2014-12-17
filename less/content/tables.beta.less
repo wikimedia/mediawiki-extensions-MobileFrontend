@@ -1,0 +1,32 @@
+// Tables
+@import "mediawiki.mixins.less";
+@import "minerva.variables.less";
+@import "minerva.mixins.less";
+
+.content {
+	table {
+		// For skinning normal data tables
+		&.wikitable {
+			background-color: transparent !important;
+			border: none !important;
+
+			tr {
+				border-bottom: 1px solid @grayLightest !important;
+			}
+
+			tr:last-child {
+				border-bottom: none !important;
+			}
+
+			th, td {
+				border-right: 1px solid @grayLightest !important;
+				padding: .2em;
+			}
+
+			td:last-child,
+			th:last-child {
+				border-right: none !important;
+			}
+		}
+	}
+}
