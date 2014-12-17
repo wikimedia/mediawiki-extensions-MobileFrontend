@@ -10,6 +10,8 @@
 	 * Displays images in full screen overlay
 	 * @class ImageOverlay
 	 * @extends Overlay
+	 * @uses Icon
+	 * @uses ImageApi
 	 */
 	ImageOverlay = Overlay.extend( {
 		// allow pinch zooming
@@ -100,6 +102,13 @@
 			this._positionImage();
 		},
 
+		/**
+		 * Fit the image into the window if its dimensions are bigger than the window dimensions.
+		 * Compare window width to height ratio to that of image width to height when setting
+		 * image width or height.
+		 * @method
+		 * @private
+		 */
 		_positionImage: function () {
 			// with a hidden details box we have a little bit more space, we just need to use it
 			var detailsHeight = !this.$details.is( ':visible' ) ? 0 : this.$details.outerHeight(),

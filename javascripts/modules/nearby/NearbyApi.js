@@ -9,12 +9,13 @@
 	/**
 	 * FIXME: Api should surely know this and return it in response to save us the hassle
 	 * FIXME: Add some tests :)
-	 * Apply the haversine formula ( https://en.wikipedia.org/wiki/Haversine_formula ) and calculate the distance
+	 * Apply the Haversine formula ( https://en.wikipedia.org/wiki/Haversine_formula ) and calculate the distance
 	 * between two points as the crow flies.
+	 * @method
+	 * @ignore
 	 * @param {Object} from with latitude and longitude keys
 	 * @param {Object} to with latitude and longitude keys
 	 * @return {Number} distance in kilometers
-	 * @ignore
 	 */
 	function calculateDistance( from, to ) {
 		var distance, a,
@@ -48,8 +49,10 @@
 	 */
 	NearbyApi = Api.extend( {
 		/**
-		 * Returns a human readable string stating the distance in meters or kilometers depending on size.
-		 *
+		 * Returns a human readable string stating the distance in meters or kilometers
+		 * depending on size.
+		 * @method
+		 * @private
 		 * @param {Number} d The distance in meters.
 		 * @return {String} message stating how far the user is from the point of interest.
 		 */
@@ -79,10 +82,10 @@
 		},
 		/**
 		 * Returns a list of pages around a given point
-		 *
-		 * @param {Object} coords: In form { latitude: 0, longitude: 2 }
-		 * @param {Number} range: Number of meters to perform a geosearch for
-		 * @param {String} exclude: Name of a title to exclude from the list of results
+		 * @method
+		 * @param {Object} coords In form { latitude: 0, longitude: 2 }
+		 * @param {Number} range Number of meters to perform a geosearch for
+		 * @param {String} exclude Name of a title to exclude from the list of results
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		getPages: function ( coords, range, exclude ) {
@@ -93,9 +96,9 @@
 
 		/**
 		 * Gets the pages around a page. It excludes itself from the search
-		 *
-		 * @param {String} page: Page title like "W_San_Francisco"
-		 * @param {Number} range: Number of meters to perform a geosearch for
+		 * @method
+		 * @param {String} page Page title like "W_San_Francisco"
+		 * @param {Number} range Number of meters to perform a geosearch for
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		getPagesAroundPage: function ( page, range ) {
@@ -106,10 +109,11 @@
 
 		/**
 		 * Searches for pages nearby
-		 *
-		 * @param {Object} params: Parameters to use for searching
-		 * @param {Number} range: Number of meters to perform a geosearch for
-		 * @param {String} exclude: Name of a title to exclude from the list of results
+		 * @method
+		 * @private
+		 * @param {Object} params Parameters to use for searching
+		 * @param {Number} range Number of meters to perform a geosearch for
+		 * @param {String} exclude Name of a title to exclude from the list of results
 		 * @return {jQuery.Deferred} Object taking list of pages as argument
 		 */
 		_search: function ( params, range, exclude ) {
