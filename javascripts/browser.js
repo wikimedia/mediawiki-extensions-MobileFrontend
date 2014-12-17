@@ -8,10 +8,17 @@
 	 */
 	function Browser( ua ) {
 		this.userAgent  = ua;
-		this.isAndroid2 = /Android 2/.test( ua );
 	}
 
 	Browser.prototype = {
+		/**
+		 * Determine if a device is Android 2.
+		 * @method
+		 * @return {Boolean}
+		 */
+		isAndroid2: function () {
+			return /Android 2/.test( this.userAgent );
+		},
 		/**
 		 * Determine if a device has a widescreen.
 		 * @method
@@ -43,7 +50,7 @@
 			// don't trust Android 2.x, really
 			// animations cause textareas to misbehave on it
 			// (http://stackoverflow.com/a/5734984/365238)
-			if ( this.isAndroid2 ) {
+			if ( this.isAndroid2() ) {
 				return false;
 			}
 

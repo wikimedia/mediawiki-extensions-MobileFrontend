@@ -39,8 +39,6 @@
 	function initialize() {
 		// make the input readonly to avoid accidental focusing when closing menu
 		// (when JS is on, this input should not be used for typing anyway)
-		// FIXME: Review the need for this, especially given latest alpha developments
-		$( '#searchInput' ).prop( 'readonly', true );
 		$( '#mw-mf-main-menu-button' ).on( 'click', function ( ev ) {
 			if ( isOpen() ) {
 				closeNavigationDrawers();
