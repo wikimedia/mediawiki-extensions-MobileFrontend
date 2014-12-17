@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_8a0ae927",
+        "filename": "javascripts/api.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-17T19:50:45Z",
+      "side": 1,
+      "message": "?",
+      "revId": "32dd2e9795746a926eb78120ba0fbfb5f553f0a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
