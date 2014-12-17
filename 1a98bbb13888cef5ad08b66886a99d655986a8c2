@@ -16,6 +16,23 @@
       "revId": "1a98bbb13888cef5ad08b66886a99d655986a8c2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_ccb484e7",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-17T06:45:55Z",
+      "side": 1,
+      "message": "This reintroduces a problem, which was fixed in: I4750412c943d89f37b7ad5e21df4e321191bf772\n\nTalkOverlay has a change between several Overlays (talk overview, discussion view and add view). So it should be configurable (e.g. a variable here in Overlay.js \"hasAnimations\" or something else) to control, if the Overlay has an animation when it starts/ends. With this we could control, that (in routes like Talk) only the first overlay has an animation.",
+      "revId": "1a98bbb13888cef5ad08b66886a99d655986a8c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
