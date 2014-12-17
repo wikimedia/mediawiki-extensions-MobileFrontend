@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cdb31b4b",
+        "filename": "javascripts/modules/issues/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-17T20:04:58Z",
+      "side": 1,
+      "message": "why add eq( 0 )?",
+      "revId": "5a42796ff43579b7ddbb60ae219f3fa3ad8e99fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
