@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_514ecf3d",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T01:06:00Z",
+      "side": 1,
+      "message": "Duplication here is messy. reuse parent::getSkinStyles and only add/remove what you need to so the code is more readable.",
+      "revId": "e47cefcb4bae5e4a4feb5e9864154de2560a3260",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1160579f",
+        "filename": "less/content/hacks.beta.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T01:06:00Z",
+      "side": 1,
+      "message": "Again there is lots of duplication with hacks.less\nIt\u0027s not clear what you\u0027ve changed here.\nmake life easier for the person who will eventually upstream this and only add what you need to add.",
+      "revId": "e47cefcb4bae5e4a4feb5e9864154de2560a3260",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d1597f02",
+        "filename": "less/content/hacks.beta.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T01:06:00Z",
+      "side": 1,
+      "message": "Did you review these? You are starting from scratch so you probably did?",
+      "revId": "e47cefcb4bae5e4a4feb5e9864154de2560a3260",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3168fb83",
+        "filename": "less/reset.stable.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T01:06:00Z",
+      "side": 1,
+      "message": "This logically should go in less/content/tables.less\n\nwrap in .stable {} if you only want them to apply to stable.",
+      "revId": "e47cefcb4bae5e4a4feb5e9864154de2560a3260",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_51656fa9",
+        "filename": "less/tablet/hacks.beta.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T01:06:00Z",
+      "side": 1,
+      "message": "This file looks identically to hacks.less please make clearer what you are changing.",
+      "revId": "e47cefcb4bae5e4a4feb5e9864154de2560a3260",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f10123ba",
+        "filename": "less/tablet/hacks.beta.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-17T01:06:00Z",
+      "side": 1,
+      "message": "This looks like the only line changed?",
+      "revId": "e47cefcb4bae5e4a4feb5e9864154de2560a3260",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
