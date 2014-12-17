@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_2ca3c0a9",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 867,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-17T06:49:04Z",
+      "side": 1,
+      "message": "IsLoggedInUserBlocked isn\u0027t really correct, because we check, if the user is blocked from editing this title. E.g. on the talk page of the user he can still edit (so it will be false), but the account can still be blocked. And IsLoggedInUserBlockedEditing is too long, i thought :)",
+      "parentUuid": "0e6cb3ef_e01cef7e",
+      "revId": "bf08c997131e69ba1123ad547c325c376692366e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_51f24fce",
         "filename": "javascripts/Page.js",
         "patchSetId": 12
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_ec8ce83c",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-17T06:49:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_51f24fce",
+      "revId": "bf08c997131e69ba1123ad547c325c376692366e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_6010df5b",
         "filename": "javascripts/modules/editor/init.js",
         "patchSetId": 12
@@ -47,6 +83,24 @@
       "writtenOn": "2014-12-16T22:17:20Z",
       "side": 1,
       "message": "Can you document this whilst here?",
+      "revId": "bf08c997131e69ba1123ad547c325c376692366e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_4ca0749a",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-17T06:49:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_6010df5b",
       "revId": "bf08c997131e69ba1123ad547c325c376692366e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
