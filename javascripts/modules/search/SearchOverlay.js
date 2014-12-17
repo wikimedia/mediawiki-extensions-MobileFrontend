@@ -162,6 +162,10 @@
 			return true;
 		},
 
+		/**
+		 * Perform search and render results inside current view.
+		 * @method
+		 */
 		performSearch: function () {
 			var
 				self = this,
@@ -197,6 +201,10 @@
 									el: $results
 								} );
 								pageList.renderPageImages();
+								/**
+								 * @event search-results
+								 * Fired when search API returns results
+								 */
 								M.emit( 'search-results', self, data.results );
 							}
 						} );

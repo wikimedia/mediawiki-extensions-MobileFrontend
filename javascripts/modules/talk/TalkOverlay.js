@@ -83,6 +83,7 @@
 			/**
 			 * Load content of the talk page via PageApi
 			 * @method
+			 * @private
 			 */
 			_loadContent: function ( options ) {
 				var self = this;
@@ -116,6 +117,7 @@
 			/**
 			 * Adds the content received from _loadContent to the Overlay and re-renders it.
 			 * @method
+			 * @private
 			 * @param {Object} pageData As returned from PageApi#getPage
 			 * @param {Object} options for the overlay
 			 */
@@ -137,6 +139,7 @@
 			 * Shows the add topic button to logged in users.
 			 * Ensures the overlay refreshes when a discussion is added.
 			 * @method
+			 * @private
 			 */
 			_setupAddDiscussionButton: function () {
 				var $add = this.$( '.overlay-action .add' );

@@ -8,6 +8,8 @@
 	 * View for table of contents
 	 * @class TableOfContents
 	 * @extends View
+	 * @uses Icon
+	 * @uses MobileWebClickTracking
 	 */
 	TableOfContents = View.extend( {
 		templatePartials: {

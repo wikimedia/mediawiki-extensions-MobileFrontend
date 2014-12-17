@@ -11,6 +11,9 @@
 	 * Overlay for showing talk page section
 	 * @class TalkSectionOverlay
 	 * @extends Overlay
+	 * @uses Api
+	 * @uses Page
+	 * @uses Toast
 	 */
 	TalkSectionOverlay = Overlay.extend( {
 		templatePartials: {
@@ -34,7 +37,7 @@
 		} ),
 		/**
 		 * Fetches the talk topics of the page specified in options.title
-		 *   if options.section is not defined.
+		 * if options.section is not defined.
 		 * @inheritdoc
 		 */
 		postRender: function ( options ) {
@@ -55,6 +58,7 @@
 		/**
 		 * Enables comments on the current rendered talk topic
 		 * @method
+		 * @private
 		 * @param {String} title of the talk page with `Talk` prefix to post to
 		 * @param {Number} id of the sub section to open
 		 */

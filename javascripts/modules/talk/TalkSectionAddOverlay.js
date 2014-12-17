@@ -10,6 +10,8 @@
 	 * Overlay for adding a talk section
 	 * @class TalkSectionAddOverlay
 	 * @extends Overlay
+	 * @uses Api
+	 * @uses Toast
 	 */
 	TalkSectionAddOverlay = Overlay.extend( {
 		/**
@@ -35,6 +37,7 @@
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			// If terms of use is enabled, include it in the licensing message
+			// FIXME cache this selector, it's used more than once.
 			if ( $( '#footer-places-terms-use' ).length > 0 ) {
 				options.licenseMsg = mw.msg(
 					'mobile-frontend-editor-licensing-with-terms',
@@ -107,6 +110,12 @@
 				return false;
 			}
 		},
+		/**
+		 * Save new talk section
+		 * @method
+		 * @return {jQuery.Deferred} Object that either will be resolved with ok parameter
+		 * or rejected with type error.
+		 */
 		save: function () {
 			var $subject = this.$( 'input' ),
 				$ta = this.$( 'textarea' ),

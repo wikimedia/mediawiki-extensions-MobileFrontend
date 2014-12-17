@@ -10,9 +10,10 @@
 
 	/**
 	 * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
-	 * @param {String} str a string
-	 * @return {String} a regular expression that can be used to search for that str
+	 * @method
 	 * @ignore
+	 * @param {String} str a string
+	 * @return {Object} a regular expression that can be used to search for that str
 	 */
 	function createSearchRegEx( str ) {
 		str = str.replace( /[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&' );
@@ -22,7 +23,7 @@
 	/**
 	 * Takes a label potentially beginning with term
 	 * and highlights term if it is present with strong
-	 *
+	 * @method
 	 * @private
 	 * @param {String} label a piece of text
 	 * @param {String} term a string to search for from the start
@@ -50,6 +51,7 @@
 		 * Perform a search for the given query.
 		 * FIXME: remove filtering of redirects once the upstream bug has been fixed:
 		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=73673
+		 * @method
 		 * @param {String} query to search for
 		 * @return {jQuery.Deferred}
 		 */
@@ -129,6 +131,7 @@
 
 		/**
 		 * Check if the search has already been performed in given session.
+		 * @method
 		 * @param {String} query
 		 * @return {Boolean}
 		 */

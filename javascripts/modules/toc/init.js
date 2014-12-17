@@ -2,6 +2,13 @@
 	var TableOfContents = M.require( 'modules/toc/TableOfContents' ),
 		toggle = M.require( 'toggle' );
 
+	/**
+	 * Create TableOfContents if the given Page has sections and is not the main page
+	 * and wgTOC config variable is enabled.
+	 * @method
+	 * @param {Page} page for which a TOC is generated
+	 * @ignore
+	 */
 	function init( page ) {
 		var toc,
 			sections = page.getSubSections(),
