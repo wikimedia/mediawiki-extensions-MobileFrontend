@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_876e6529",
+        "filename": "javascripts/mainmenu.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-17T12:01:31Z",
+      "side": 1,
+      "message": "It\u0027s worth noting that this doesn\u0027t work. However, this isn\u0027t the change to fix this in. I\u0027ve created a task to track this: https://phabricator.wikimedia.org/T78780",
+      "revId": "59a234ff40dd4cda437e935f18a49d72a42a5c14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_67f47184",
+        "filename": "javascripts/settings.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-17T12:01:31Z",
+      "side": 1,
+      "message": "A pattern emerges! I created a card to clean this up: https://trello.com/c/8QEvgwFF/128-extract-localstoragestore-and-cookiestore-from-settings-js",
+      "revId": "59a234ff40dd4cda437e935f18a49d72a42a5c14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
