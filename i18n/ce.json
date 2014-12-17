@@ -57,6 +57,7 @@
 	"mobile-frontend-enable-images": "Сайтан мобилан версехь гайта сурт",
 	"mobile-frontend-expand-sections-description": "Кхечу агӀона чу гӀочу хенахь гучу даха массо дакъанаш",
 	"mobile-frontend-expand-sections-status": "Гайта массо дакъанаш",
+	"mobile-frontend-fontchanger-link": "Шрифтан барам",
 	"mobile-frontend-featured-article": "Хаьржина яззам",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "Кхетий?",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "ХӀаъ!",
@@ -118,6 +119,7 @@
 	"mobile-frontend-main-menu-watchlist": "Тергаме могӀам",
 	"mobile-frontend-media-details": "Мадарра",
 	"mobile-frontend-media-license-link": "Лицензех лаьцна хаам",
+	"mobile-frontend-meta-data-issues-alpha": "АгӀонгахь хаатарш",
 	"mobile-frontend-meta-data-issues-talk": "ХӀокху дийцаре агӀонах лаьцна",
 	"mobile-frontend-meta-data-issues-header": "Хаттарш",
 	"mobile-frontend-meta-data-issues-header-talk": "ХӀокху агӀонах лаьцна",
@@ -212,5 +214,6 @@
 	"tag-mobile_edit": "Мобиль-ца. дийна нисдар",
 	"tag-mobile_edit-description": "Сайтан мобилан версеца дина нисдарш",
 	"tag-mobile_web_edit": "Сайтан мобилан версеца дина нисдарш",
-	"tag-mobile_web_edit-description": "Сайтан мобилан версеца дина нисдарш"
+	"tag-mobile_web_edit-description": "Сайтан мобилан версеца дина нисдарш",
+	"mobile-frontend-donate-button-label": "Проектна гӀо дар"
 }

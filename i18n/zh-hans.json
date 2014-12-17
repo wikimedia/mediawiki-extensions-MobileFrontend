@@ -29,7 +29,8 @@
 			"LNDDYL",
 			"Duolaimi",
 			"Gaoxuewei",
-			"御坂美琴"
+			"御坂美琴",
+			"JLeow00"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -198,6 +199,7 @@
 	"mobile-frontend-media-details": "详情",
 	"mobile-frontend-media-license-link": "许可协议信息",
 	"mobile-frontend-meta-data-issues": "本页面有一些问题",
+	"mobile-frontend-meta-data-issues-alpha": "页面问题",
 	"mobile-frontend-meta-data-issues-talk": "关于此讨论页",
 	"mobile-frontend-meta-data-issues-header": "问题",
 	"mobile-frontend-meta-data-issues-header-talk": "关于此页面",

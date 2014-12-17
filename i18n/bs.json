@@ -95,7 +95,7 @@
 	"mobile-frontend-photo-upload-error": "Greška; pokušajte ponovо.",
 	"mobile-frontend-privacy-link-text": "Privatnost",
 	"mobile-frontend-profile-title": "Korisnički profil",
-	"mobile-frontend-profile-userpage-link": "Vidi {{GENDER:$1|user}} stranicu.",
+	"mobile-frontend-profile-userpage-link": "Vidi {{GENDER:$1|korisničku}} stranicu.",
 	"mobile-frontend-random-button": "Slučajni",
 	"mobile-frontend-regular-site": "Desktop prikaz",
 	"mobile-frontend-save-settings": "Sačuvaj",
