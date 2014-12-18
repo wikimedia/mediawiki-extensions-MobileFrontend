@@ -27,7 +27,9 @@
 	/**
 	 * Checks whether the user has already seen and responded to a WikiGrok question
 	 * before on this article and device.
+	 * @method
 	 * @ignore
+	 * @returns {Boolean}
 	 */
 	function hasUserAlreadyContributedToWikiGrok() {
 		var pages = $.parseJSON(
@@ -50,8 +52,8 @@
 	 *
 	 * If the user is eligible to enter the WikiGrok AB test, then the test
 	 * determines which version to use.
+	 * @method
 	 * @ignore
-	 *
 	 * @return {Object|null}
 	 */
 	function getWikiGrokConfig() {

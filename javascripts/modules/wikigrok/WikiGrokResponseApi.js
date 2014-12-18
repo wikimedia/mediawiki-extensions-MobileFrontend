@@ -6,6 +6,7 @@
 	/**
 	 * Record claims to the WikiGrok API
 	 * @class WikiGrokApi
+	 * @extends Api
 	 */
 	WikiGrokResponseApi = Api.extend( {
 		/**

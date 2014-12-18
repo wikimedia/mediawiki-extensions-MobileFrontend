@@ -12,7 +12,7 @@
 
 			/**
 			 * Initialises a new instance of the WikiGrokAbTest class.
-			 *
+			 * @method
 			 * @param {Boolean} isEnabled Whether or not the A/B test is enabled
 			 */
 			initialize: function ( isEnabled ) {
@@ -21,7 +21,7 @@
 
 			/**
 			 * Gets the version of WikiGrok to show to the user.
-			 *
+			 * @method
 			 * @param {Object} wikiGrokUser The WikiGrok user
 			 * @return {String} `'A'` or `'B'`
 			 */
@@ -35,7 +35,7 @@
 	/**
 	 * Creates a new instance of the WikiGrokAbTest using `wgMFEnableWikiGrok` as
 	 * the `isEnabled` parameter.
-	 *
+	 * @method
 	 * @return {WikiGrokAbTest}
 	 */
 	WikiGrokAbTest.newFromMwConfig = function () {

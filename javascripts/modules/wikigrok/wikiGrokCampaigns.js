@@ -7,6 +7,7 @@
 	var wikiGrokCampaigns = {
 		/**
 		 * Randomly pick a campaign for the current page
+		 * @method
 		 * @returns {Object|null} Object with campaign data. Includes these properties:
 		 *     name: Name of the campaign chosen, e.g. 'album'
 		 *     property: Wikidata ID for the relevant property, e.g. 'P31'
@@ -31,7 +32,7 @@
 	/**
 	 * Get WikiGrok campaigns that are present on the page
 	 * This is a method rather than a variable because we need it in tests
-	 *
+	 * @method
 	 * @ignore
 	 * @returns {Object|null} campaigns
 	 */
@@ -41,6 +42,7 @@
 
 	/**
 	 * Randomly pick a property
+	 * @method
 	 * @ignore
 	 * @param {Object} object
 	 * @returns {String} object's property
