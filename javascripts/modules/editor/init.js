@@ -32,8 +32,7 @@
 				returntoquery: 'article_action=signup-edit'
 			},
 			content: mw.msg( 'mobile-frontend-editor-cta' )
-		} ),
-		$caEdit = $( '#ca-edit' );
+		} );
 
 	if ( pendingToast ) {
 		// delete the pending toast
@@ -154,10 +153,10 @@
 
 			return result;
 		} );
-		$caEdit.addClass( enabledClass ).removeClass( disabledClass ).removeClass( 'hidden' );
+		$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
 
 		// Make sure we never create two edit links by accident
-		if ( $caEdit.find( '.edit-page' ).length === 0 ) {
+		if ( $( '#ca-edit .edit-page' ).length === 0 ) {
 			// FIXME: unfortunately the main page is special cased.
 			if ( mw.config.get( 'wgIsMainPage' ) || isNewPage || page.getLeadSectionElement().text() ) {
 				// if lead section is not empty, open editor with lead section
@@ -192,10 +191,9 @@
 		// Initialize edit button links (to show Cta) only, if page is editable, otherwise show an error toast
 		M.getCurrentPage().isEditable( user ).done( function ( isEditable ) {
 			if ( isEditable ) {
-				$caEdit
-					.addClass( enabledClass ).removeClass( disabledClass ).removeClass( 'hidden' );
+				$( '#ca-edit' ).addClass( enabledClass ).removeClass( disabledClass );
 				// Init lead section edit button
-				makeCta( $caEdit, 0 );
+				makeCta( $( '#ca-edit' ), 0 );
 
 				// Init all edit links (including lead section, if anonymous editing is enabled)
 				$( '.edit-page' ).each( function () {

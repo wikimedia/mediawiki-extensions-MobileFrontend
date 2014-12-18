@@ -778,7 +778,7 @@ class SkinMinerva extends SkinTemplate {
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
 			$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '',
 				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-edit-tooltip' ),
-				'class' => MobileUI::iconClass( 'edit', 'element', 'icon-32px hidden' ),
+				'class' => MobileUI::iconClass( 'edit', 'element', 'icon-32px' ),
 			);
 		}
 
@@ -789,15 +789,14 @@ class SkinMinerva extends SkinTemplate {
 		) {
 			$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '',
 				'itemtitle' => $this->msg( 'mobile-frontend-pageaction-upload-tooltip' ),
-				'class' => MobileUI::iconClass( 'addimage', 'element', 'icon-32px hidden' ),
+				'class' => MobileUI::iconClass( 'addimage', 'element', 'icon-32px' ),
 			);
 		}
 
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
 			$watchTemplate = array(
 				'id' => 'ca-watch',
-				'class' => MobileUI::iconClass( 'watch', 'element',
-					'icon-32px watch-this-article hidden' ),
+				'class' => MobileUI::iconClass( 'watch', 'element', 'icon-32px watch-this-article' ),
 			);
 			// standardise watch article into one menu item
 			if ( isset( $actions['watch'] ) ) {

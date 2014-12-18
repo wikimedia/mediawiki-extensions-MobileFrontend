@@ -58,8 +58,6 @@
 			var self = this,
 				$input = this.$( 'input' );
 
-			self.$el.removeClass( 'hidden' );
-
 			function handleFile( file ) {
 				// FIXME: this is hacky but it would be hard to pass a file in a route
 				M.emit( '_upload-preview', file );
