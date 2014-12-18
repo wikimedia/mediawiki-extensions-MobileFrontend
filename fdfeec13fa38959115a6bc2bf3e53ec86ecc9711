@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1e437b18",
+        "filename": "javascripts/modules/editor/AbuseFilterPanel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T00:58:12Z",
+      "side": 1,
+      "message": "This is not what I meant. This is now no longer a hygiene patch. Did you test this out. I\u0027d be surprised if there weren\u0027t any css regressions... just add a FIXME for time being and do this in a follow up patch so it can be tested accordingly and reverted if it turns out it breaks stuff :)\n.",
+      "revId": "fdfeec13fa38959115a6bc2bf3e53ec86ecc9711",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_be47ef21",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T00:58:12Z",
+      "side": 1,
+      "message": "as discussed this is not very clear. I think a better comment for this kind of stuff would be\n// FIXME: Don\u0027t call a private method that is outside the class.\n\nThe solution might be to use events on to create a public class.",
+      "revId": "fdfeec13fa38959115a6bc2bf3e53ec86ecc9711",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_de198328",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T00:58:12Z",
+      "side": 1,
+      "message": "It\u0027s not a title nor a string it\u0027s a number representing the section",
+      "revId": "fdfeec13fa38959115a6bc2bf3e53ec86ecc9711",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
