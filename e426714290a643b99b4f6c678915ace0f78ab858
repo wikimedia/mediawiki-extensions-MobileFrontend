@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_c5bc446a",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T23:58:26Z",
+      "side": 1,
+      "message": "Also @ignore",
+      "revId": "e426714290a643b99b4f6c678915ace0f78ab858",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_85b64c84",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T23:58:26Z",
+      "side": 1,
+      "message": "Replace talk URL with appropriate route.",
+      "revId": "e426714290a643b99b4f6c678915ace0f78ab858",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_25ad002f",
+        "filename": "javascripts/modules/tutorials/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T23:58:26Z",
+      "side": 1,
+      "message": "Also @ignore",
+      "revId": "e426714290a643b99b4f6c678915ace0f78ab858",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_45a8341d",
+        "filename": "javascripts/modules/tutorials/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T23:58:26Z",
+      "side": 1,
+      "message": "Also @ignore",
+      "revId": "e426714290a643b99b4f6c678915ace0f78ab858",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_05a23c3b",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T23:58:26Z",
+      "side": 1,
+      "message": "Event handler for clicking on watch star. Make an API...",
+      "revId": "e426714290a643b99b4f6c678915ace0f78ab858",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_e5a62850",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T23:58:26Z",
+      "side": 1,
+      "message": "Also @ignore",
+      "revId": "e426714290a643b99b4f6c678915ace0f78ab858",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
