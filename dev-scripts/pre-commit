@@ -7,14 +7,6 @@ if [[ `git diff --cached --check` ]]; then
 	exit 1
 fi
 
-for file in `git diff --cached --name-only | grep -i ".js\$"`
-do
-	echo 'Checking documentation coverage of files you have touched:'
-	if [ -f $file ]; then
-		node_modules/jscs/bin/jscs --config .jscs-jsdocrc "$file" || exit 1
-	fi
-done
-
 make jshint || exit 1
 make jscs || exit 1
 

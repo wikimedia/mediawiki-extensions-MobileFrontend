@@ -5,9 +5,8 @@
  */
 
 /*jshint node:true, strict:false*/
-/*global module*/
 module.exports = function ( grunt ) {
-	var MW_INSTALL_PATH = grunt.option('MW_INSTALL_PATH') || '../..';
+	var MW_INSTALL_PATH = grunt.option( 'MW_INSTALL_PATH' ) || '../..';
 
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
@@ -46,15 +45,7 @@ module.exports = function ( grunt ) {
 			]
 		},
 		jscs: {
-			main: ['<%= jshint.sources %>'],
-			doc: {
-				files: {
-					src: ['<%= jshint.sources %>']
-				},
-				options: {
-					config: ".jscs-jsdocrc"
-				}
-			}
+			main: [ '<%= jshint.sources %>' ]
 		},
 		qunit: {
 			all: {
