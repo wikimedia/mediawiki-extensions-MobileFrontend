@@ -7,6 +7,7 @@
 	 * Drawer for references
 	 * @class ReferencesDrawer
 	 * @extends Drawer
+	 * @uses Icon
 	 */
 	ReferencesDrawer = Drawer.extend( {
 		/**

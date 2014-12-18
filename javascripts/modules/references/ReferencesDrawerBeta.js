@@ -5,6 +5,7 @@
 
 	/**
 	 * Drawer for references (beta)
+	 * @inheritdoc
 	 * @class ReferencesDrawerBeta
 	 * @extends ReferencesDrawer
 	 */

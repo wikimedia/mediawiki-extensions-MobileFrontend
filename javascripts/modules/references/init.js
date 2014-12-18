@@ -2,6 +2,13 @@
 	var drawer,
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
+	/**
+	 * Return the matched reference among the children of ol.references
+	 * @method
+	 * @ignore
+	 * @param {String} id CSS selector
+	 * @returns {jQuery.Object} reference that matches id
+	 */
 	function getReference( id ) {
 		// Escape (almost) all CSS selector meta characters
 		// see http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
@@ -11,6 +18,13 @@
 		return $( 'ol.references' ).find( id );
 	}
 
+	/**
+	 * Show reference
+	 * @method
+	 * @ignore
+	 * @param {jQuery.Event} ev Event object
+	 * @uses loggingSchemas/MobileWebClickTracking
+	 */
 	function showReference( ev ) {
 		var $dest = $( this ),
 			href = $dest.attr( 'href' );
@@ -30,6 +44,12 @@
 		}
 	}
 
+	/**
+	 * Make references clickable and show a drawer when clicked on.
+	 * @method
+	 * @ignore
+	 * @param {Page} page
+	 */
 	function setup( page ) {
 		var $container = page ? page.$el : $( '#content' ),
 			module, view, ReferencesDrawer;
