@@ -187,6 +187,32 @@
 			} catch ( e ) {
 				return false;
 			}
+		},
+		/**
+		 * Detect if we support file input uploads
+		 * @return {Boolean}
+		 */
+		supportsFileUploads: function () {
+			var browserSupported;
+			// If already calculated, just return it
+			if ( this._fileUploads !== undefined ) {
+				return this._fileUploads;
+			}
+
+			// deal with known false positives which don't support file input (bug 47374)
+			if ( this.userAgent.match( /Windows Phone (OS 7|8.0)/ ) ) {
+				this._fileUploads = false;
+			} else {
+				browserSupported = (
+					typeof FileReader !== 'undefined' &&
+					typeof FormData !== 'undefined' &&
+					// Firefox OS 1.0 turns <input type="file"> into <input type="text">
+					( $( '<input type="file"/>' ).prop( 'type' ) === 'file' )
+				);
+				this._fileUploads = browserSupported &&
+					!mw.config.get( 'wgImagesDisabled', false );
+			}
+			return this._fileUploads;
 		}
 	};
 
