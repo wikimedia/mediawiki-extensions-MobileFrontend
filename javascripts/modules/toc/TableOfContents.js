@@ -2,7 +2,8 @@
 	var TableOfContents,
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		View = M.require( 'View' ),
-		Icon = M.require( 'Icon' );
+		Icon = M.require( 'Icon' ),
+		log = MobileWebClickTracking.log;
 
 	/**
 	 * View for table of contents
@@ -30,17 +31,22 @@
 		tagName: 'div',
 		className: 'toc-mobile',
 		template: mw.template.get( 'mobile.toc', 'toc.hogan' ),
-		/** @inheritdoc */
-		postRender: function () {
-			var log = MobileWebClickTracking.log;
-			View.prototype.postRender.apply( this, arguments );
+		events: {
 			// Click tracking for table of contents so we can see if people interact with it
-			this.$( 'h2' ).on( 'click', function () {
-				log( 'UI', 'page-toc-toggle' );
-			} );
-			this.$( 'a' ).on( 'click', function () {
-				log( 'UI', 'page-toc-link' );
-			} );
+			'click h2': 'onTocToggle',
+			'click a': 'onLinkClick'
+		},
+		/**
+		 * Log toggling the header
+		 */
+		onTocToggle: function () {
+			log( 'UI', 'page-toc-toggle' );
+		},
+		/**
+		 * Log clicking a TOC link
+		 */
+		onLinkClick: function () {
+			log( 'UI', 'page-toc-link' );
 		}
 	} );
 
