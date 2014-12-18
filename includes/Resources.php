@@ -710,18 +710,40 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 			'mobile.templates',
 			'mobile.loggingSchemas',
+			'mobile.toast',
+			'mobile.search',
+			// needed for saveHeader.hogan
+			'mobile.editor.common',
+			'oojs-ui',
 		),
 		'scripts' => array(
+			'javascripts/modules/categories/CategoryApi.js',
+			'javascripts/modules/categories/CategoryLookupInputWidget.js',
 			'javascripts/modules/categories/CategoryOverlay.js',
+			'javascripts/modules/categories/CategoryAddOverlay.js',
 			'javascripts/modules/categories/init.js',
+		),
+		'styles' => array(
+			'less/modules/categories/categories.less',
 		),
 		'templates' => array(
 			'CategoryOverlay.hogan' => 'templates/modules/categories/CategoryOverlay.hogan',
+			'CategoryAddOverlay.hogan' => 'templates/modules/categories/CategoryAddOverlay.hogan',
+			'CategoryAddOverlayHeader.hogan' =>
+				'templates/modules/categories/CategoryAddOverlayHeader.hogan',
+			'CategoryButton.hogan' => 'templates/modules/categories/CategoryButton.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-categories-heading',
 			'mobile-frontend-categories-subheading',
 			'mobile-frontend-categories-nocat',
+			'mobile-frontend-categories-add',
+			'mobile-frontend-categories-nomatch',
+			'mobile-frontend-categories-search',
+			'mobile-frontend-categories-nodata',
+			'mobile-frontend-categories-summary',
+			'mobile-frontend-categories-add-heading',
+			'mobile-frontend-categories-add-wait',
 		),
 	),
 

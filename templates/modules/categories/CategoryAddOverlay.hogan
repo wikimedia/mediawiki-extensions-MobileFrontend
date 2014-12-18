@@ -1,0 +1,9 @@
+<div class="overlay-header-container position-fixed">
+	{{>header}}
+	{{>saveHeader}}
+</div>
+
+<div class="content-header panel add-panel">
+	<div class="category-add-input"></div>
+</div>
+<p class="category-suggestions panel"></p>

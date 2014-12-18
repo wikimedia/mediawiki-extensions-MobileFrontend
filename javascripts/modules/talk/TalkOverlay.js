@@ -69,7 +69,7 @@
 			 */
 			showSpinner: function () {
 				this.$board.hide();
-				this.$( '.spinner' ).show();
+				Overlay.prototype.showSpinner.apply( this, arguments );
 			},
 
 			/**
@@ -77,7 +77,7 @@
 			 * @method
 			 */
 			clearSpinner: function () {
-				this.$( '.spinner' ).hide();
+				Overlay.prototype.clearSpinner.apply( this, arguments );
 				this.$board.show();
 			},
 
