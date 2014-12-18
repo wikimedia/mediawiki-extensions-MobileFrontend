@@ -16,6 +16,24 @@
       "revId": "71a18550ca5d77a2f5991ac9e6b4ebe54444db56",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_0e5a66f6",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-18T10:54:36Z",
+      "side": 1,
+      "message": "Yep, i\u0027ve been investigating and infoboxes have arbitrary widths from inline styles, so this isn\u0027t going to cut it. I\u0027m going to remove this margin-right for now.",
+      "parentUuid": "0e6cb3ef_1e1cdb78",
+      "revId": "71a18550ca5d77a2f5991ac9e6b4ebe54444db56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
