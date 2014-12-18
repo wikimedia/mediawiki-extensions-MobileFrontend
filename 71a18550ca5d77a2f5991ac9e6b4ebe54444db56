@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1e1cdb78",
+        "filename": "less/modules/wikigrok/WikiGrokDialog.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-18T01:58:38Z",
+      "side": 1,
+      "message": "What is this based on? If it\u0027s based on the inline width styling for infoboxes, that isn\u0027t going to be dependable.",
+      "revId": "71a18550ca5d77a2f5991ac9e6b4ebe54444db56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
