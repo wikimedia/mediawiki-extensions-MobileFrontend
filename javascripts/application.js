@@ -19,7 +19,7 @@
 		inWideScreenMode = false,
 		// FIXME: Move all the variables below to Browser.js
 		ua = window.navigator.userAgent,
-		isIos = /ipad|iphone/i.test( ua ),
+		isIos = browser.isIos(),
 		// Test UA for iOS8. Or for simulator look for Version 8
 		// In the iOS simulator the OS is the host machine OS version
 		// This makes testing in iOS8 simulator work as expected
@@ -69,22 +69,23 @@
 	 */
 	function init() {
 		var
-			$body = $( 'body' ),
-			$doc = $( 'html' ),
 			$viewport = $( '#mw-mf-viewport' );
 
 		// FIXME: This shouldn't be necessary
 		$( '<div id="notifications">' ).appendTo( $viewport );
 
-		// FIXME: Move to Browser.js
-		if ( isIos ) {
-			$body.addClass( 'ios' );
+		if ( browser.supportsAnimations() ) {
+			$viewport.addClass( 'animations' );
+		}
+		if ( browser.supportsPositionFixed() ) {
+			$viewport.addClass( 'no-position-fixed' );
+		}
+		if ( browser.supportsTouchEvents() ) {
+			$viewport.addClass( 'touch-events' );
 		}
 
 		// FIXME: Move to Browser.js
 		if ( !browser.supportsPositionFixed() ) {
-			$doc.addClass( 'no-position-fixed' );
-
 			$( window ).on( 'scroll', function () {
 				var scrollTop = $( window ).scrollTop(),
 					windowHeight = $( window ).height(),
@@ -136,16 +137,6 @@
 			}
 		}
 		fixBrowserBugs();
-
-		// FIXME: Move to Browser.js
-		if ( mw.config.get( 'wgMFEnableCssAnimations' ) && browser.supportsAnimations() ) {
-			$doc.addClass( 'animations' );
-		}
-
-		// FIXME: Move to Browser.js
-		if ( browser.supportsTouchEvents() ) {
-			$doc.addClass( 'touch-events' );
-		}
 
 		$( loadWideScreenModules );
 		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
@@ -273,8 +264,6 @@
 		getCurrentPage: getCurrentPage,
 		getSessionId: getSessionId,
 		log: log,
-		// FIXME: Move to browser.js
-		isIos: isIos,
 		// FIXME: Move to browser.js
 		isIos8: isIos8,
 		query: deParam( qs ),

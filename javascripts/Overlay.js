@@ -5,6 +5,7 @@
 		View = M.require( 'View' ),
 		Icon = M.require( 'Icon' ),
 		icons = M.require( 'icons' ),
+		browser = M.require( 'browser' ),
 		$window = $( window ),
 		Overlay;
 
@@ -81,12 +82,20 @@
 		closeOnContentTap: false,
 
 		/** @inheritdoc */
+		initialize: function ( options ) {
+			this.isIos = browser.isIos();
+			View.prototype.initialize.apply( this, arguments );
+		},
+		/** @inheritdoc */
 		postRender: function ( options ) {
 			var
 				self = this,
 				$overlayContent = this.$overlayContent = this.$( '.overlay-content' ),
 				startY;
 
+			if ( this.isIos ) {
+				this.$el.addClass( 'overlay-ios' );
+			}
 			// Truncate any text inside in the overlay header.
 			this.$( '.overlay-header h2 span' ).addClass( 'truncated-text' );
 			// FIXME: Remove .initial-header selector when bug 71203 resolved.
@@ -105,7 +114,7 @@
 				ev.stopPropagation();
 			} );
 
-			if ( M.isIos && this.hasFixedHeader ) {
+			if ( this.isIos && this.hasFixedHeader ) {
 				$overlayContent
 					.on( 'touchstart', function ( ev ) {
 						startY = ev.originalEvent.touches[0].pageY;
@@ -169,7 +178,7 @@
 			}
 
 			// prevent scrolling and bouncing outside of .overlay-content
-			if ( M.isIos && this.hasFixedHeader ) {
+			if ( this.isIos && this.hasFixedHeader ) {
 				$window
 					.on( 'touchmove.ios', function ( ev ) {
 						ev.preventDefault();
@@ -200,7 +209,7 @@
 
 			this.$el.detach();
 
-			if ( M.isIos ) {
+			if ( this.isIos ) {
 				$window.off( '.ios' );
 			}
 
@@ -230,7 +239,7 @@
 		_fixIosHeader: function ( el ) {
 			var self = this;
 
-			if ( M.isIos ) {
+			if ( this.isIos ) {
 				this._resizeContent( $( window ).height() );
 				$( el )
 					.on( 'focus', function () {

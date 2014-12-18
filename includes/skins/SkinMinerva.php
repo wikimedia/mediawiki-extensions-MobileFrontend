@@ -852,7 +852,6 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,
 			'wgMFPhotoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
 			'wgMFLeadPhotoUploadCssSelector' => $wgMFLeadPhotoUploadCssSelector,
-			'wgMFEnableCssAnimations' => $wgMFEnableCssAnimations,
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
 			// FIXME: Kill variable in favour of $wgRestrictionEdit

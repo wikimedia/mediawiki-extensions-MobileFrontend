@@ -10,14 +10,20 @@
 	function Browser( ua, $container ) {
 		this.userAgent  = ua;
 		this.$el = $container;
-
 		if ( this.isAndroid2() ) {
-			// lock the viewport for this device - too problematic
 			this.lockViewport();
 		}
 	}
 
 	Browser.prototype = {
+		/**
+		 * Returns whether the current browser is an ios device.
+		 * FIXME: jquery.client does not support iPad detection so we cannot use it.
+		 * @return {Boolean}
+		 */
+		isIos: function () {
+			return /ipad|iphone|ipod/i.test( this.userAgent );
+		},
 		/**
 		 * Locks the viewport so that pinch zooming is disabled
 		 */
