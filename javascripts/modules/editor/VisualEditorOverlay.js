@@ -109,7 +109,7 @@
 					self.switchToSourceEditor( options );
 				} else {
 					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-						self.prepareForSave();
+						self._prepareForSave();
 					}
 				}
 			} );
