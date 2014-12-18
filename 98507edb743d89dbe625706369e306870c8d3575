@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_104a7f5f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 792,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T20:44:57Z",
+      "side": 1,
+      "message": "I wonder if we should just create all these buttons in JS now...\nIt\u0027s strange to have a class set in PHP and then manipulated in JS\n\nWill let @kaldari decide on merging this provided it fixes the issue.",
+      "revId": "98507edb743d89dbe625706369e306870c8d3575",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
