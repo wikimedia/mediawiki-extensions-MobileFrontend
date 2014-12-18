@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_557b09eb",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T20:28:51Z",
+      "side": 1,
+      "message": "could eventHandlers be a property on View ?\n\ne.g. View.eventHandlers: {\ndisableClick\n}\n\n\nI worry about mixing public methods and those that are events.",
+      "revId": "c709fce125ecc780f972dcf6a9c0f4546afaff59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
