@@ -57,6 +57,11 @@
 			View.prototype.postRender.apply( this, arguments );
 			this.$el = this.$el.children( 0 );
 		},
+		/**
+		 * Return the HTML representation of this view
+		 * @method
+		 * @return {String}
+		 */
 		toHtmlString: function () {
 			return $( '<div>' ).append( this.$el ).html();
 		},

@@ -1,6 +1,12 @@
 ( function ( M, $ ) {
 	var user = M.require( 'user' );
 
+	/**
+	 * FIXME: Use Class/inheritance for EventLogging.
+	 * @param {Object} data to extend the default options with
+	 * @ignore
+	 * @returns {jQuery.Deferred}
+	 */
 	function log( data ) {
 		var options = {
 			token: M.getSessionId(),

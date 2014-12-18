@@ -1,6 +1,5 @@
 /**
  * Utility library for tracking clicks on certain elements
- * @class MobileWebClickTracking
  */
 ( function ( M, $ ) {
 	var s = M.require( 'settings' );
@@ -13,6 +12,7 @@
 	 *   * MainMenu
 	 *   * UI
 	 * @ignore
+	 * @throws Error when bad schema name given.
 	 */
 	function assertSchema( schema ) {
 		var schemas = [ 'Watchlist', 'Diff', 'MainMenu', 'UI' ];
@@ -38,6 +38,7 @@
 	 *   * UI
 	 * @param {string} name of click tracking event to log
 	 * @param {string} [destination] of the link that has been clicked if applicable.
+	 * @returns {jQuery.Deferred}
 	 */
 	function log( schema, name, destination ) {
 		assertSchema( schema );

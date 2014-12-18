@@ -68,7 +68,13 @@
 				}
 			}
 
-			// FIXME: move to mw.Api (although no EventEmitter in core)?
+			/**
+			 * This setups support for upload progress events.
+			 * See https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html#make-upload-progress-notifications
+			 * FIXME: move to mw.Api (although no EventEmitter in core)?
+			 * @ignore
+			 * @returns {jqXHR}
+			 */
 			options.xhr = function () {
 				var xhr = $.ajaxSettings.xhr();
 				if ( xhr.upload && ( mw.config.get( 'wgMFAjaxUploadProgressSupport' ) ) ) {
@@ -76,6 +82,10 @@
 					// https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
 					xhr.upload.addEventListener( 'progress', function ( ev ) {
 						if ( ev.lengthComputable ) {
+							/**
+							 * @event progress
+							 * Fired when a pending XHR request fires a progress event.
+							 */
 							self.emit( 'progress', request, ev.loaded / ev.total );
 						}
 					} );
