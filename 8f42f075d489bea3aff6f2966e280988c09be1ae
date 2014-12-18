@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b385e8b3",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T00:00:38Z",
+      "side": 1,
+      "message": "what is image ratio?\nA constant? A property?",
+      "revId": "8f42f075d489bea3aff6f2966e280988c09be1ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_93f5444f",
+        "filename": "javascripts/modules/mf-stop-mobile-redirect.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T00:00:38Z",
+      "side": 1,
+      "message": "You threw away what happens when cookies are disabled..",
+      "revId": "8f42f075d489bea3aff6f2966e280988c09be1ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
