@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_30da2379",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 870,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T20:56:40Z",
+      "side": 1,
+      "message": "Still don\u0027t understand why the variable name change. Still only applies to logged in user...",
+      "revId": "867191ed472b8aa6f9ac8ed9b31058385ce0e69b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f0d34b5f",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T20:56:40Z",
+      "side": 1,
+      "message": "Can you point to some documentation about this config variable?",
+      "revId": "867191ed472b8aa6f9ac8ed9b31058385ce0e69b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
