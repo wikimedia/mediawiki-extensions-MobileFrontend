@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f3b28091",
+        "filename": "javascripts/modules/toc/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T00:03:12Z",
+      "side": 1,
+      "message": "Create TableOfContents if given Page has sections is not the main page\nand wgTOC config variable is enabled.",
+      "revId": "dea03c966ec840c778cde262408cd247e2acbfca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
