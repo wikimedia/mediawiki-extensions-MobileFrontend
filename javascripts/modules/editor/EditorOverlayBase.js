@@ -48,6 +48,8 @@
 			switcherButton: new Icon( {
 				tagName: 'button',
 				name: 'edit-switch',
+				// Label required to prevent height rendering bug
+				label: '\u00a0',
 				additionalClassNames: 'editor-switcher'
 			} ).toHtmlString(),
 			sourceButton: new Icon( {
