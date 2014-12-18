@@ -128,6 +128,7 @@
 	"mobile-frontend-expand-sections-description": "导航至新页面时总是展开所有部分。",
 	"mobile-frontend-expand-sections-status": "展开所有部分",
 	"mobile-frontend-fontchanger-link": "字体大小",
+	"mobile-frontend-fontchanger-desc": "为了可读性，增大或减小文本的大小。",
 	"mobile-frontend-featured-article": "特色内容",
 	"mobile-frontend-first-upload-wizard-new-page-1": "{{SITENAME}}上的图像来自维基共享资源",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "贡献你的图像。使{{SITENAME}}更生动！",

@@ -113,6 +113,7 @@
 	"mobile-frontend-expand-sections-description": "總是於瀏覽新頁面時展開所有章節。",
 	"mobile-frontend-expand-sections-status": "展開所有章節",
 	"mobile-frontend-fontchanger-link": "字型大小",
+	"mobile-frontend-fontchanger-desc": "為了可讀性，增大或減小文字之大小。",
 	"mobile-frontend-featured-article": "本日的特色內容",
 	"mobile-frontend-first-upload-wizard-new-page-1": "{{SITENAME}} 上的圖片來自維基共享資源",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "貢獻您的圖片。 協助讓 {{SITENAME}} 更生動！",

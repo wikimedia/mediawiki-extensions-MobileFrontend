@@ -20,7 +20,8 @@
 			"Wiki13",
 			"TheDJ",
 			"Romaine",
-			"Robin0van0der0vliet"
+			"Robin0van0der0vliet",
+			"Mirolith"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -179,6 +180,7 @@
 	"mobile-frontend-media-details": "Details",
 	"mobile-frontend-media-license-link": "Licentiegegevens",
 	"mobile-frontend-meta-data-issues": "Er zijn verbeterpunten voor deze pagina",
+	"mobile-frontend-meta-data-issues-alpha": "Paginaproblemen",
 	"mobile-frontend-meta-data-issues-talk": "Over deze overlegpagina",
 	"mobile-frontend-meta-data-issues-header": "Verbeterpunten",
 	"mobile-frontend-meta-data-issues-header-talk": "Over deze pagina",
