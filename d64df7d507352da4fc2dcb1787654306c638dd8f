@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_157ef1e1",
+        "filename": "javascripts/modules/toc/TableOfContents.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T20:27:49Z",
+      "side": 1,
+      "message": "Instead of extending EventsView I think we should just make this part of View since View already extends EventEmitter in Mantle extension.",
+      "revId": "d64df7d507352da4fc2dcb1787654306c638dd8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3583f5d2",
+        "filename": "javascripts/modules/toc/TableOfContents.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T20:27:49Z",
+      "side": 1,
+      "message": "I really like this.",
+      "revId": "d64df7d507352da4fc2dcb1787654306c638dd8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
