@@ -26,8 +26,7 @@
 		isIos8 = isIos && /OS 8_/.test( ua ) || /Version\/8/.test( ua ),
 		isIPhone4 = isIos && /OS 4_/.test( ua ),
 		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua ),
-		isIPhone5 = isIos && /OS 5_/.test( ua ),
-		isAndroid2 = /Android 2/.test( ua );
+		isIPhone5 = isIos && /OS 5_/.test( ua );
 
 	/**
 	 * Escape dots and colons in a hash, jQuery doesn't like them beause they
@@ -41,16 +40,6 @@
 	 */
 	function escapeHash( hash ) {
 		return hash.replace( /(:|\.)/g, '\\$1' );
-	}
-
-	/**
-	 * Locks the viewport so that pinch zooming is disabled
-	 * FIXME: Move to Browser.js
-	 *
-	 * @method
-	 */
-	function lockViewport() {
-		$viewportMeta.attr( 'content', 'initial-scale=1.0, maximum-scale=1.0, user-scalable=no' );
 	}
 
 	/**
@@ -131,7 +120,6 @@
 		// allow disabling of transitions in android ics 4.0.2
 
 		/**
-		 * Locks viewport and enables position fixed for Android 2
 		 * Works around iPhone 4 and 5 bugs with the viewport.
 		 *
 		 * FIXME: Move to Browser.js
@@ -141,18 +129,10 @@
 		function fixBrowserBugs() {
 			// see http://adactio.com/journal/4470/ (fixed in ios 6)
 			if ( $viewportMeta[0] && ( isIPhone4 || isIPhone5 ) ) {
-				lockViewport();
+				browser.lockViewport();
 				document.addEventListener( 'gesturestart', function () {
-					lockViewport();
+					browser.lockViewport();
 				}, false );
-			}
-
-			// FIXME: Android 2.x can act weird
-			// (remove if we drop support for some features on it)
-			if ( isAndroid2 ) {
-				$body.addClass( 'android2' );
-				// lock the viewport for this device - too problematic
-				lockViewport();
 			}
 		}
 		fixBrowserBugs();
@@ -292,8 +272,6 @@
 		inNamespace: inNamespace,
 		getCurrentPage: getCurrentPage,
 		getSessionId: getSessionId,
-		// FIXME: Move to browser.js
-		lockViewport: lockViewport,
 		log: log,
 		// FIXME: Move to browser.js
 		isIos: isIos,
