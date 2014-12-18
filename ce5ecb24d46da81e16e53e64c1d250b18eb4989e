@@ -51,6 +51,24 @@
       "revId": "ce5ecb24d46da81e16e53e64c1d250b18eb4989e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1f4ff298",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-18T18:10:00Z",
+      "side": 1,
+      "message": "jsduck complains that settings is not a class.",
+      "parentUuid": "0e6cb3ef_5fc24a89",
+      "revId": "ce5ecb24d46da81e16e53e64c1d250b18eb4989e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
