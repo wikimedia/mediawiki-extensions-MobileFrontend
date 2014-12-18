@@ -1,4 +1,10 @@
 ( function ( M, $ ) {
+	/**
+	 * Add routes to images and handle clicks
+	 * @method
+	 * @ignore
+	 * @param {jQuery.Object} $el Object within which to look for images
+	 */
 	function init( $el ) {
 		if ( !mw.config.get( 'wgImagesDisabled' ) ) {
 			$el.find( 'a.image, a.thumbimage' ).each( function () {
@@ -16,7 +22,14 @@
 		}
 	}
 
-	// Add route
+	/**
+	 * Load image overlay
+	 * @method
+	 * @ignore
+	 * @uses ImageOverlay
+	 * @param {String} title Url of image
+	 * @returns {jQuery.Deferred}
+	 */
 	function loadImageOverlay( title ) {
 		var result = $.Deferred();
 		M.loadModule( 'mobile.mediaViewer' ).done( function () {

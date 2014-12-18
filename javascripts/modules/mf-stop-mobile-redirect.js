@@ -8,8 +8,16 @@
 		cookiesEnabled = settings.cookiesEnabled,
 		popup = M.require( 'toast' );
 
+	/**
+	 * An event handler for the toggle to desktop link.
+	 * If cookies are enabled it will redirect you to desktop site as described in
+	 * the link href associated with the handler.
+	 * If cookies are not enabled, show a toast and die.
+	 * @method
+	 * @ignore
+	 * @returns {Boolean|undefined}
+	 */
 	function desktopViewClick() {
-		// If cookies are not enabled, show a toast and die
 		if ( !cookiesEnabled() ) {
 			popup.show(
 				mw.msg( 'mobile-frontend-cookies-required' ),
