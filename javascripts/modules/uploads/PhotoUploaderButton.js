@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 	var browser = M.require( 'browser' ),
 		View = M.require( 'View' ),
 		Icon = M.require( 'Icon' ),
@@ -39,33 +39,27 @@
 	PhotoUploaderButton = View.extend( {
 		template: mw.template.get( 'mobile.upload.ui', 'Button.hogan' ),
 		className: photoIcon.getClassName(),
+		events: {
+			'change input': 'onFileSelected'
+		},
 
-		/** @inheritdoc */
-		postRender: function () {
-			var self = this,
-				$input = this.$( 'input' );
-
-			/**
-			 * Hacky way to open a preview overlay with a certain image
-			 * FIXME: Ideally the upload-preview URI should feature a representation of the image
-			 * that can be used to create the upload overlay.
-			 * @ignore
-			 */
-			function handleFile( file ) {
-				/*
-				 * @event _upload-preview
-				 * Emitted when a user has selected a file of their local machine
-				 */
-				M.emit( '_upload-preview', file );
-				M.router.navigate( '#/upload-preview/' + self.options.funnel );
-			}
-
-			$input
-				.on( 'change', function () {
-					handleFile( $input[0].files[0] );
-					// clear so that change event is fired again when user selects the same file
-					$input.val( '' );
-				} );
+		/**
+		 * Event handler, called when a file is selected in the input
+		 */
+		onFileSelected: function ( ev ) {
+			var $input = $( ev.target );
+			this.handleFile( $input[0].files[0] );
+			// clear so that change event is fired again when user selects the same file
+			$input.val( '' );
+		},
+		/**
+		 * Handle a selected file for upload, emit event and route to the
+		 * appropiate url
+		 */
+		handleFile: function ( file ) {
+			// FIXME: this is hacky but it would be hard to pass a file in a route
+			M.emit( '_upload-preview', file );
+			M.router.navigate( '#/upload-preview/' + this.options.funnel );
 		}
 	} );
 
@@ -73,4 +67,4 @@
 
 	M.define( 'modules/uploads/PhotoUploaderButton', PhotoUploaderButton );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );
