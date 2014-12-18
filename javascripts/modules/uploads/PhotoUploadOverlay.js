@@ -13,6 +13,7 @@
 	/**
 	 * Overlay for photo upload
 	 * @class PhotoUploadOverlay
+	 * @uses PhotoApi
 	 * @extends Overlay
 	 */
 	PhotoUploadOverlay = Overlay.extend( {
@@ -58,6 +59,10 @@
 
 			if ( this.file ) {
 				fileReader.readAsDataURL( options.file );
+				/**
+				 * onload event for FileReader
+				 * @ignore
+				 */
 				fileReader.onload = function () {
 					var dataUri = fileReader.result;
 					// add mimetype if not present (some browsers need it, e.g. Android browser)
@@ -109,6 +114,13 @@
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
 
+		/**
+		 * Performs a file upload based on current state of PhotoUploadOverlay
+		 * When succeeds either reloads page or emits a global event _file-upload
+		 * If error occurs shows a toast
+		 * @uses PhotoApi
+		 * @private
+		 */
 		_save: function () {
 			var
 				self = this,
@@ -130,7 +142,11 @@
 					// reload the page
 					window.location.reload();
 				} else {
-					// FIXME: handle Special:Uploads case - find more generic way of doing this
+					/**
+					 * @event _file-upload
+					 * Emits global event _file-upload.
+					 * FIXME: handle Special:Uploads case - find more generic way of doing this
+					 */
 					M.emit( '_file-upload', {
 						fileName: fileName,
 						description: description,
@@ -172,6 +188,11 @@
 			} );
 		},
 
+		/**
+		 * Submits a photo for upload, reveals a progress bar and hides the overlay.
+		 * Invokes _save method.
+		 * @private
+		 */
 		_submit: function () {
 			this.hide( true );
 
@@ -253,10 +274,19 @@
 			}
 		},
 
+		/**
+		 * Gets the user inputted description
+		 * @returns {String} of current value of description according to view
+		 */
 		getDescription: function () {
 			return this.$description.val();
 		},
 
+		/**
+		 * Set the url of the image in the preview.
+		 * Throws toast if for some reason image cannot render e.g. bad file type.
+		 * @param {String} url usually a data uri
+		 */
 		setImageUrl: function ( url ) {
 			var self = this,
 				$preview = this.$( '.preview' );
