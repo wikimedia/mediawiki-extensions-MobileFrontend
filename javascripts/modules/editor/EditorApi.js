@@ -20,6 +20,11 @@
 			this.hasChanged = false;
 		},
 
+		/**
+		 * Get the content of a page.
+		 * @method
+		 * @returns {jQuery.Deferred}
+		 */
 		getContent: function () {
 			var options,
 				self = this,
@@ -68,8 +73,8 @@
 		/**
 		 * Mark content as modified and set changes to be submitted when #save
 		 * is invoked.
-		 *
-		 * @param {string} content New section content.
+		 * @method
+		 * @param {String} content New section content.
 		 */
 		setContent: function ( content ) {
 			this.content = content;
@@ -79,8 +84,8 @@
 		/**
 		 * Mark content as modified and set text that should be prepended to given
 		 * section when #save is invoked.
-		 *
-		 * @param {string} text Text to be prepended.
+		 * @method
+		 * @param {String} text Text to be prepended.
 		 */
 		setPrependText: function ( text ) {
 			this.prependtext = text;
@@ -89,14 +94,14 @@
 
 		/**
 		 * Save the new content of the section, previously set using #setContent.
-		 *
+		 * @method
 		 * @param {Object} options
 		 *      [options.summary] String Optional summary for the edit.
 		 *     [options.captchaId] String If CAPTCHA was requested, ID of the
 		 * captcha.
 		 *     [options.captchaWord] String If CAPTCHA was requested, term
 		 * displayed in the CAPTCHA.
-		 * @return jQuery.Deferred On failure callback is passed an object with
+		 * @return {jQuery.Deferred} On failure callback is passed an object with
 		 * `type` and `details` properties. `type` is a string describing the type
 		 * of error, `details` can be any object (usually error message).
 		 */
@@ -204,6 +209,12 @@
 			return result;
 		},
 
+		/**
+		 * Get page preview from the API
+		 * @method
+		 * @param {Object} options API query parameters
+		 * @returns {jQuery.Deferred}
+		 */
 		getPreview: function ( options ) {
 			var result = $.Deferred(),
 				sectionLine = '',

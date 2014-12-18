@@ -13,12 +13,14 @@
 		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )
 		} ),
+		/** @inheritdoc **/
 		className: 'overlay editor-overlay editor-overlay-ve',
 		editor: 'VisualEditor',
 		/**
 		 * Set options that apply specifically to VisualEditorOverlay but not
-		 * EditorOverlay so that an EditorOverlay instance can be created effortlessy.
+		 * EditorOverlay so that an EditorOverlay instance can be created effortlessly.
 		 * FIXME: Must be smarter way to do this.
+		 * @method
 		 * @param {Object} options
 		 * @param {Boolean} isVE whether the options are being generated for a VisualEditorOverlay
 		 *  or a EditorOverlay
@@ -42,6 +44,7 @@
 		},
 		/**
 		 * Destroy the existing VisualEditor target.
+		 * @method
 		 */
 		destroyTarget: function () {
 			if ( this.target ) {
@@ -118,15 +121,16 @@
 		},
 		/**
 		 * Reveal the editing interface.
+		 * @method
 		 */
 		switchToEditor: function () {
+			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.initial-header' );
 			this.$( '.surface' ).show();
 			this.docToSave = false;
 		},
 		/**
 		 * Disables the VE editor interface in preparation for saving.
-		 * @private
 		 * @inheritdoc
 		 */
 		_prepareForSave: function () {
@@ -149,6 +153,7 @@
 			if ( this.confirmAborted ) {
 				return;
 			}
+			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.saving-header' );
 			// Stop the confirmation message from being thrown when you hit save.
 			this.hasChanged = false;
@@ -169,7 +174,7 @@
 		},
 		/**
 		 * Loads an {EditorOverlay} and replaces the existing {VisualEditorOverlay}
-		 *
+		 * @method
 		 * @param {Object} options to pass to new EditorOverlay
 		 */
 		switchToSourceEditor: function ( options ) {
@@ -196,6 +201,7 @@
 		},
 		/**
 		 * Event handler.
+		 * @method
 		 */
 		onSurfaceReady: function () {
 			this.clearSpinner();
@@ -207,10 +213,12 @@
 
 			// we have to do it here because contenteditable elements still do not
 			// exist when postRender is executed
+			// FIXME: Don't call a private method that is outside the class.
 			this._fixIosHeader( '[contenteditable]' );
 		},
 		/**
 		 * Event handler.
+		 * @method
 		 */
 		onTransact: function () {
 			this.hasChanged = true;
@@ -218,39 +226,46 @@
 		},
 		/**
 		 * Event handler.
+		 * @method
 		 */
 		onLoadError: function () {
 			this.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ), 've-load-error' );
 		},
 		/**
 		 * Event handler.
+		 * @method
 		 */
 		onSerializeError: function ( jqXHR, status ) {
 			this.reportError( mw.msg( 'visualeditor-serializeerror', status ), 've-serialize-error' );
 		},
 		/**
 		 * Event handler.
+		 * @method
 		 */
 		onConflictError: function () {
 			this.reportError( mw.msg( 'mobile-frontend-editor-error-conflict' ), 've-conflict-error' );
 		},
 		/**
 		 * Event handler.
+		 * @method
 		 */
 		onShowChangesError: function () {
 			this.reportError( mw.msg( 'visualeditor-differror' ), 've-show-changes-error' );
 		},
 		/**
 		 * Event handler.
+		 * @method
 		 */
 		onSaveError: function () {
 			this.reportError( mw.msg( 'mobile-frontend-editor-error' ), 've-save-error' );
 		},
 		/**
 		 * Event handler.
+		 * @method
 		 */
 		onSaveErrorCaptcha: function ( editApi ) {
 			this.captchaId = editApi.captcha.id;
+			// FIXME: Don't call a private method that is outside the class.
 			this._showCaptcha( editApi.captcha.url );
 		},
 		/** @inheritdoc **/
