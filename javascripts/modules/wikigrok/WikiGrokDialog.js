@@ -92,10 +92,10 @@
 		/**
 		 * Log data to the schema
 		 * @method
-		 * @param {string} action to log as described in schema
+		 * @param {String} action to log as described in schema
 		 *  See [Schema][1] for details on valid values.
 		 *
-		 * [1]: https://meta.wikimedia.org/wiki/Schema:MobileWebWikiGrok}
+		 * [1]: https://meta.wikimedia.org/wiki/Schema:MobileWebWikiGrok
 		 */
 		log: function ( action ) {
 			var data = {
@@ -117,10 +117,10 @@
 		/**
 		 * Log data to the error schema
 		 * @method
-		 * @param {string} error to log as described in schema
+		 * @param {String} error to log as described in schema
 		 *  See [Schema][1] for details on valid values.
 		 *
-		 * [1]: https://meta.wikimedia.org/wiki/Schema:MobileWebWikiGrok}
+		 * [1]: https://meta.wikimedia.org/wiki/Schema:MobileWebWikiGrok
 		 */
 		logError: function ( error ) {
 			var data = {
@@ -148,10 +148,11 @@
 		},
 
 		/**
-		 * Return a new array from 'array' with 'count' randomly selected elements.
+		 * Randomly select 'count' elements from 'array'
+		 * @method
 		 * @param {Array} array Array from which random elements are selected
-		 * @param {number} count - Positive number of random elements to select
-		 * @returns {Array}
+		 * @param {Number} count - Positive number of random elements to select
+		 * @returns {Array} a new array from 'array' with 'count' randomly selected elements
 		 */
 		chooseRandomItemsFromArray: function ( array, count ) {
 			var arrayCopy, i, randomIndex,
@@ -235,6 +236,7 @@
 
 		/**
 		 * Show the error message
+		 * @method
 		 */
 		showError: function () {
 			this.$( '.pane.content' ).hide();
@@ -242,8 +244,13 @@
 			this.show();
 		},
 
-		// Record answer in temporary database for analysis.
-		// Eventually answers will be recorded directly to Wikidata.
+		/**
+		 * Record answer in temporary database for analysis.
+		 * Eventually answers will be recorded directly to WikiData.
+		 * Thank the user after recording claims. In case of fail show an error message.
+		 * @method
+		 * @param {Object} options
+		 */
 		recordClaim: function ( options ) {
 			var self = this,
 				claim = {
@@ -272,6 +279,7 @@
 		/**
 		 * Save the page title in localStorage so that we don't show WikiGrok on this page
 		 * the next time the user sees the page.
+		 * @method
 		 */
 		rememberWikiGrokContribution: function () {
 			var pages = $.parseJSON(
@@ -282,6 +290,13 @@
 			settings.save( 'pagesWithWikiGrokContributions', JSON.stringify( pages ), false );
 		},
 
+		/**
+		 * Show a thank you message to the user for their contribution.
+		 * @method
+		 * @param {Object} options
+		 * @param {Boolean} claimAttempted has the user attempted to answer or
+		 * just responded with 'not sure'?
+		 */
 		thankUser: function ( options, claimAttempted ) {
 			this.rememberWikiGrokContribution();
 			options.thankUser = true;
@@ -300,7 +315,7 @@
 		 * Check if at least half of the element's height and half of its width are in viewport
 		 * @method
 		 * @param {jQuery.Object} $el - element that's being tested
-		 * @return {boolean}
+		 * @return {Boolean}
 		 */
 		isElementInViewport: function ( $el ) {
 			var windowHeight = $window.height(),
@@ -320,6 +335,7 @@
 		/**
 		 * Log widget-impression if the widget is in viewport.
 		 * Stop listening to events that are namespaced with the taskToken.
+		 * @method
 		 * @param {jQuery.Object} $el WikiGrokDialog element
 		 */
 		logWidgetImpression: function ( $el ) {
@@ -443,6 +459,7 @@
 
 		/**
 		 * Show WikiGrok dialog
+		 * @method
 		 * @param {Object} options
 		 */
 		reveal: function ( options ) {

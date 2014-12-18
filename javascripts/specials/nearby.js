@@ -27,6 +27,12 @@
 		} );
 		$icon = $( icon.toHtmlString() ).on( 'click', refreshCurrentLocation ).appendTo( '.header' );
 
+		/**
+		 * Initialize or instantiate Nearby with options
+		 * @method
+		 * @ignore
+		 * @param {Object} options
+		 */
 		function refresh( options ) {
 			if ( nearby ) {
 				nearby.initialize( options );

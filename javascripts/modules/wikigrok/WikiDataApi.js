@@ -16,6 +16,11 @@
 			this.subjectId = options.itemId;
 			Api.prototype.initialize.apply( this, arguments );
 		},
+		/**
+		 * Get claims via the API
+		 * @method
+		 * @return {jQuery.Deferred}
+		 */
 		getClaims: function () {
 			var self = this,
 				id = this.subjectId;
@@ -86,7 +91,7 @@
 		/**
 		 * Get labels for an item from Wikidata
 		 * See: https://www.wikidata.org/wiki/Help:Label
-		 *
+		 * @method
 		 * @param {Array} itemIds for items in Wikidata
 		 * @return {jQuery.Deferred} Object returned by ajax call
 		 */
@@ -114,7 +119,7 @@
 		/**
 		 * Expand item ids to find associated data such as labels and urls
 		 * for the wikidata entities for the current sitename.
-		 *
+		 * @method
 		 * @param {Array} itemIds for items in Wikidata
 		 * @return {jQuery.Deferred} Object returned by ajax call
 		 */
