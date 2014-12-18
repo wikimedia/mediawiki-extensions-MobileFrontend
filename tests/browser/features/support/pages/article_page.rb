@@ -80,7 +80,7 @@ class ArticlePage
 
   # page-actions
   ul(:page_actions, id: 'page-actions')
-  a(:talk, css: '#ca-talk a')
+  a(:talk, css: '.icon-talk')
   a(:nearby_button, css: '#page-secondary-actions .nearby')
 
   # toc
