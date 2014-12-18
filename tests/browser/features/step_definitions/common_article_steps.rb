@@ -26,11 +26,11 @@ When(/^I click on the page$/) do
 end
 
 When(/^I click the unwatch star$/) do
-  on(ArticlePage).unwatch_link_element.when_present.click
+  on(ArticlePage).unwatch_star_element.when_present.click
 end
 
 When(/^I click the watch star$/) do
-  on(ArticlePage).watch_link_element.when_present.click
+  on(ArticlePage).watch_star_element.when_present.click
 end
 
 Then(/^I should see a toast notification$/) do
@@ -59,9 +59,9 @@ Then(/^the text of the first heading should be "(.*)"$/) do |title|
 end
 
 Then /^the watch star should be selected$/ do
-  expect(on(ArticlePage).watch_link_element.parent.class_name).to match 'watched'
+  expect(on(ArticlePage).unwatch_star_element).to be_visible
 end
 
 Then /^the watch star should not be selected$/ do
-  expect(on(ArticlePage).watch_link_element).to be_visible
+  expect(on(ArticlePage).watch_star_element).to be_visible
 end

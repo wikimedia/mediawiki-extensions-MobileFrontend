@@ -13,7 +13,6 @@ class ArticlePage
 
   # left nav
   div(:navigation, css: '#mw-mf-page-left')
-  a(:watchlist_link, css: '#mw-mf-page-left .icon-watchlist a')
   a(:about_link) { |page| page.navigation_element.link_element(text: /^About/) }
   a(:disclaimer_link) { |page| page.navigation_element.link_element(text: 'Disclaimers') }
 
@@ -48,8 +47,8 @@ class ArticlePage
   end
 
   ## watch star
-  a(:watch_link, css: '#ca-watch a')
-  a(:unwatch_link, css: '.watch-this-article.watched a')
+  span(:watch_star, text: 'Watch this page')
+  span(:unwatch_star, text: 'Stop watching')
   button(:watch_confirm, class: 'mw-htmlform-submit')
 
   # search
