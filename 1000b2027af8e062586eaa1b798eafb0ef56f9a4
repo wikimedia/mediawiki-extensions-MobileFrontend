@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_704e5b3e",
+        "filename": "javascripts/settings.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T21:00:19Z",
+      "side": 1,
+      "message": "FIXME: Move to Browser.js\n(i\u0027ll do this in a follow up)",
+      "revId": "1000b2027af8e062586eaa1b798eafb0ef56f9a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
