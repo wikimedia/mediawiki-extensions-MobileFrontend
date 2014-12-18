@@ -9,7 +9,7 @@
 		Page = M.require( 'Page' );
 
 	/**
-	 * Overlay that shows an editor
+	 * List of items page view
 	 * @class PageList
 	 * @uses Page
 	 * @uses WatchstarApi
