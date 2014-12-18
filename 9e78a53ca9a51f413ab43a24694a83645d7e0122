@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_02431244",
+        "filename": "javascripts/Icon.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-18T22:16:05Z",
+      "side": 1,
+      "message": "capitalize?",
+      "revId": "9e78a53ca9a51f413ab43a24694a83645d7e0122",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
