@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_05ea3c9c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 868,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-18T23:39:29Z",
+      "side": 1,
+      "message": "As long as we\u0027re bike-shedding on the var name, I would prefer either  wgMFIsLoggedInUserBlocked or wgMFIsLoggedInUserBlockedFromPage\n\nEnding the var name with a noun-less preposition is awkward.\n\nNot a real issue though, just a suggestion :)",
+      "revId": "909b84cac3dca793696bac52367b2faf221b1b8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_45c2743a",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-18T23:39:29Z",
+      "side": 1,
+      "message": "This is probably a rebase error related to my revert of the page action changes.",
+      "revId": "909b84cac3dca793696bac52367b2faf221b1b8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
