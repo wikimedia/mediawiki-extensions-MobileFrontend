@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_308303d3",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T21:36:45Z",
+      "side": 1,
+      "message": "We should actually do this in Icon as it is a sensible default.\n\nI\u0027ll do this in a follow up.",
+      "revId": "6f7117c9149e448dad9d05e9066de78f4132049e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
