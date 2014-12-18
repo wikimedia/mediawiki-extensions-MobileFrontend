@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_5f680a84",
+        "filename": "javascripts/Router.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-18T17:21:18Z",
+      "side": 1,
+      "message": "Yes, otherwise jsduck complains about global function.",
+      "parentUuid": "0e6cb3ef_ffd31e5f",
+      "revId": "ce5ecb24d46da81e16e53e64c1d250b18eb4989e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_5fc24a89",
         "filename": "javascripts/specials/mobileoptions.js",
         "patchSetId": 6
