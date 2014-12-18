@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d539593f",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-18T20:25:23Z",
+      "side": 1,
+      "message": "In alpha this is actually mw-icon-talk (and soon will change to that) so this is probably not the best selector.\nAlso it\u0027s a span now so should rename a..\nDoes span(:talk, css: \u0027#ca-talk span\u0027) work?",
+      "revId": "e742517f398139b849d6204b4826e7ee5d70b7fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
