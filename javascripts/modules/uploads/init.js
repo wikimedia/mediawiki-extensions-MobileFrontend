@@ -3,9 +3,8 @@
 	var
 		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/LeadPhotoUploaderButton' ),
-		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		user = M.require( 'user' ),
-		isSupported = PhotoUploaderButton.isSupported;
+		isSupported = LeadPhotoUploaderButton.isSupported;
 
 	/**
 	 * Checks whether there is no suitable image in the container.
