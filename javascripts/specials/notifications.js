@@ -104,6 +104,13 @@
 		} ).fail( onError );
 	}
 
+	/**
+	 * onSuccess callback
+	 * Sets processing to false. Also hides #mw-echo-more if notContinue is false.
+	 * @method
+	 * @ignore
+	 * @private
+	 */
 	function onSuccess() {
 		if ( !notContinue ) {
 			$( '#mw-echo-more' ).hide();
@@ -111,6 +118,14 @@
 		processing = false;
 	}
 
+	/**
+	 * Set #mw-echo-more text to the contents of echo-load-more-error message .
+	 * Also sets processing to false.
+	 * onError callback
+	 * @method
+	 * @ignore
+	 * @private
+	 */
 	function onError() {
 		// TODO: Show detail error message based on error code
 		$( '#mw-echo-more' ).text( mw.msg( 'echo-load-more-error' ) );

@@ -27,14 +27,25 @@
 			this.hideCurrent = true;
 		},
 
+		/**
+		 * Don't try to hide the active overlay on a route change event triggered
+		 * by hiding another overlay.
+		 * Called when hiding an overlay.
+		 * @method
+		 * @private
+		 */
 		_onHideOverlay: function () {
-			// don't try to hide the active overlay on a route change event triggered
-			// by hiding another overlay
 			this.hideCurrent = false;
 
 			this.router.back();
 		},
 
+		/**
+		 * Show the overlay and bind the 'hide' event to _onHideOverlay.
+		 * @method
+		 * @private
+		 * @param {Overlay} overlay to show
+		 */
 		_showOverlay: function ( overlay ) {
 			// if hidden using overlay (not hardware) button, update the state
 			overlay.once( 'hide', $.proxy( this, '_onHideOverlay' ) );
@@ -42,6 +53,13 @@
 			overlay.show();
 		},
 
+		/**
+		 * Hide overlay
+		 * @method
+		 * @private
+		 * @param {Overlay} overlay to hide
+		 * @returns {Boolean} Whether the overlay has been hidden
+		 */
 		_hideOverlay: function ( overlay ) {
 			var result;
 
@@ -59,6 +77,12 @@
 			return result;
 		},
 
+		/**
+		 * Show match's overlay if match is not null.
+		 * @method
+		 * @private
+		 * @param {Object|null} match Object with factory function's result. null if no match.
+		 */
 		_processMatch: function ( match ) {
 			var factoryResult,
 				self = this;
@@ -87,7 +111,8 @@
 
 		/**
 		 * A callback for Router's `route` event.
-		 *
+		 * @method
+		 * @private
 		 * @param {jQuery.Event} ev Event object.
 		 */
 		_checkRoute: function ( ev ) {
@@ -122,8 +147,9 @@
 
 		/**
 		 * Check if a given path matches one of the entries.
-		 *
-		 * @param {string} path Path (hash) to check.
+		 * @method
+		 * @private
+		 * @param {String} path Path (hash) to check.
 		 * @param {Object} entry Entry object created in OverlayManager#add.
 		 * @return {Object} Match object with factory function's result. Returns null if no match.
 		 * or null if no match.

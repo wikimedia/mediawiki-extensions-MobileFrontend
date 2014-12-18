@@ -44,6 +44,7 @@
 		},
 		/**
 		 * Check to see if the current view is an empty list.
+		 * @method
 		 * @return {Boolean} whether no images have been rendered
 		 */
 		isEmpty: function () {
@@ -52,6 +53,7 @@
 		/**
 		 * Renders an empty message prior to the list.
 		 * FIXME: Should be handled in template, not a method.
+		 * @method
 		 */
 		showEmptyMessage: function () {
 			$( '<p class="content empty">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) )
@@ -60,12 +62,14 @@
 		/**
 		 * Hides the message saying the list is empty
 		 * FIXME: Should be handled in template, not a method.
+		 * @method
 		 */
 		hideEmptyMessage: function () {
 			this.$( '.empty' ).remove();
 		},
 		/**
 		 * Prepend a photo to the view.
+		 * @method
 		 * @param {Object} photoData Options describing a new {PhotoItem}
 		 * FIXME: Code duplication with PhotoList::appendPhoto
 		 */
@@ -77,6 +81,7 @@
 		},
 		/**
 		 * Append a photo to the view.
+		 * @method
 		 * @param {Object} photoData Options describing a new {PhotoItem}
 		 */
 		appendPhoto: function ( photoData ) {
@@ -91,6 +96,7 @@
 		},
 		/**
 		 * Check if the user has scrolled near the end of the list.
+		 * @method
 		 * @private
 		 * @return {Boolean}
 		 */
@@ -100,7 +106,9 @@
 		},
 		/**
 		 * Load photos into the view using {{UserGalleryApi}} when the end is near
-		 *  and no current API requests are underway.
+		 * and no current API requests are underway.
+		 * @method
+		 * @private
 		 */
 		_loadPhotos: function () {
 			var self = this;
