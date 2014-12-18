@@ -8,7 +8,7 @@
  */
 class MobileSiteModule extends ResourceLoaderSiteModule {
 	/** @var array Saves the target for the module (e.g. desktop and mobile). */
-	protected $targets = array( 'mobile' );
+	protected $targets = array( 'mobile', 'desktop' );
 
 	/**
 	 * Gets list of pages used by this module.
