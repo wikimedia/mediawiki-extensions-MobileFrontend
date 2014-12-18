@@ -79,8 +79,14 @@
 		// https://commons.wikimedia.org/wiki/MediaWiki:Titleblacklist-custom-double-apostrophe
 		name = name.replace( /''/g, '\'_' );
 
-		function pad( Number ) {
-			return Number < 10 ? '0' + Number : Number;
+		/**
+		 * Pad single digit numbers with leading 0.
+		 * @param {Number} number
+		 * @ignore
+		 * @returns {Number|String} representing number with at least 2 digits
+		 */
+		function pad( number ) {
+			return number < 10 ? '0' + number : number;
 		}
 
 		suffix = ' ' + date.getUTCFullYear() + '-' +
@@ -112,7 +118,15 @@
 			this.editorApi = options.editorApi;
 		},
 
-		// FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
+		/**
+		 * Applies special handling for uploads which fail due to a lack of filename.
+		 * Scans the warnings and tries to construct a suitable error message.
+		 * FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
+		 * @private
+		 * @param {jQuery.Deferred} result from an upload api request.
+		 * @param {Object} warnings as found in the data.upload.warnings.
+		 *  FIXME: This is part of the result and thus is an unnecessary parameter.
+		 */
 		_handleWarnings: function ( result, warnings ) {
 			var humanErrorMsg,
 				err = {
@@ -231,6 +245,7 @@
 					options.fileName = data.upload.filename;
 
 					if ( !options.fileName ) {
+						// FIXME: Handle this case as an error in handleWarnings
 						if ( warnings && warnings.duplicate ) {
 							options.fileName = warnings.duplicate[ '0' ];
 						} else if ( warnings ) {
