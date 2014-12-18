@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_dfe17afc",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-18T17:29:42Z",
+      "side": 1,
+      "message": "Should have documented return value",
+      "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_5ff56ab4",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-18T17:29:42Z",
+      "side": 1,
+      "message": "if you do my last comment, you should add @uses here :)",
+      "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_ffe6be12",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-18T17:29:42Z",
+      "side": 1,
+      "message": "should be directly in the class, e.g. after className property",
+      "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
