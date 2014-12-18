@@ -27,6 +27,11 @@
 	 * @uses Toast
 	 */
 	Watchstar = View.extend( {
+		events: {
+			// Disable clicks on original link
+			'click a': 'onLinksClick',
+			click: 'onStatusToggle'
+		},
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Page} defaults.page Current page.
@@ -69,8 +74,7 @@
 		},
 		/** @inheritdoc */
 		postRender: function ( options ) {
-			var callback, checker,
-				self = this,
+			var self = this,
 				unwatchedClass = watchIcon.getGlyphClassName(),
 				watchedClass = watchedIcon.getGlyphClassName(),
 				page = options.page,
@@ -79,64 +83,64 @@
 			// add tooltip to the div, not the <a> inside because that the <a> doesn't have dimensions
 			this.$el.attr( 'title', options.tooltip );
 
-			/**
-			 * Event handler for clicking on watch star.
-			 * Make an API request if user is not anonymous.
-			 * @method
-			 * @ignore
-			 */
-			callback = function () {
-				if ( user.isAnon() ) {
-					self.drawer.show();
-				} else {
-					checker = setInterval( function () {
-						toast.show( mw.msg( 'mobile-frontend-watchlist-please-wait' ) );
-					}, 1000 );
-					api.toggleStatus( page ).always( function () {
-						clearInterval( checker );
-					} ).done( function () {
-						if ( api.isWatchedPage( page ) ) {
-							options.isWatched = true;
-							self.render( options );
-							/**
-							 * @event watch
-							 * Fired when the watch star is changed to watched status
-							 */
-							self.emit( 'watch' );
-							toast.show( mw.msg( 'mobile-frontend-watchlist-add', page.title ) );
-						} else {
-							options.isWatched = false;
-							/**
-							 * @event unwatch
-							 * Fired when the watch star is changed to unwatched status
-							 */
-							self.emit( 'unwatch' );
-							self.render( options );
-							toast.show( mw.msg( 'mobile-frontend-watchlist-removed', page.title ) );
-						}
-					} ).fail( function () {
-						toast.show( 'mobile-frontend-watchlist-error', 'error' );
-					} );
-				}
-			};
-
-			if ( !this._initialised ) {
-				this.$el.on( 'click', callback );
-				this._initialised = true;
-			}
-
-			// Disable clicks on original link
-			this.$( 'a' ).on( 'click', function ( ev ) {
-				ev.preventDefault();
-			} );
-
 			// Add watched class if necessary
 			if ( !user.isAnon() && api.isWatchedPage( page ) ) {
 				$el.addClass( watchedClass ).removeClass( unwatchedClass );
 			} else {
 				$el.addClass( unwatchedClass ).removeClass( watchedClass );
 			}
+		},
+
+		/**
+		 * Prevent default on incoming events
+		 */
+		onLinksClick: function ( ev ) {
+			ev.preventDefault();
+		},
+
+		/**
+		 * Event handler for clicking on watch star.
+		 * Make an API request if user is not anonymous.
+		 * @method
+		 */
+		onStatusToggle: function () {
+			var self = this,
+				page = this.options.page,
+				checker;
+			if ( user.isAnon() ) {
+				this.drawer.show();
+			} else {
+				checker = setInterval( function () {
+					toast.show( mw.msg( 'mobile-frontend-watchlist-please-wait' ) );
+				}, 1000 );
+				api.toggleStatus( page ).always( function () {
+					clearInterval( checker );
+				} ).done( function () {
+					if ( api.isWatchedPage( page ) ) {
+						self.options.isWatched = true;
+						self.render();
+						/**
+						 * @event watch
+						 * Fired when the watch star is changed to watched status
+						 */
+						self.emit( 'watch' );
+						toast.show( mw.msg( 'mobile-frontend-watchlist-add', page.title ) );
+					} else {
+						self.options.isWatched = false;
+						/**
+						 * @event unwatch
+						 * Fired when the watch star is changed to unwatched status
+						 */
+						self.emit( 'unwatch' );
+						self.render();
+						toast.show( mw.msg( 'mobile-frontend-watchlist-removed', page.title ) );
+					}
+				} ).fail( function () {
+					toast.show( 'mobile-frontend-watchlist-error', 'error' );
+				} );
+			}
 		}
+
 	} );
 
 	M.define( 'modules/watchstar/Watchstar', Watchstar );
