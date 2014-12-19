@@ -10,6 +10,7 @@
 				title: $talk.data( 'title' )
 			};
 
+		// FIXME: cache this selector, it's used more than once
 		if ( $( '#footer-places-terms-use' ).length > 0 ) {
 			talkOptions.licenseMsg = mw.msg( 'mobile-frontend-editor-licensing-with-terms',
 				$( '#footer-places-terms-use' ).html(), licenseLink );
@@ -32,6 +33,10 @@
 		return result;
 	} );
 
+	/**
+	 * Create route '#/talk'
+	 * @ignore
+	 */
 	function init() {
 		$talk.attr( 'href', '#/talk' );
 	}

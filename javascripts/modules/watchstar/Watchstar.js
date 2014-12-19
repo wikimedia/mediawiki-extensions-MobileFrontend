@@ -79,6 +79,12 @@
 			// add tooltip to the div, not the <a> inside because that the <a> doesn't have dimensions
 			this.$el.attr( 'title', options.tooltip );
 
+			/**
+			 * Event handler for clicking on watch star.
+			 * Make an API request if user is not anonymous.
+			 * @method
+			 * @ignore
+			 */
 			callback = function () {
 				if ( user.isAnon() ) {
 					self.drawer.show();

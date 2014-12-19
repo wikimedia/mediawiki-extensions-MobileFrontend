@@ -17,13 +17,21 @@ editable page whilst logged in, although you must be in test group A to see the 
 		hash = window.location.hash,
 		editOverlay, target, $target, href;
 
-	// Whether or not the user should see the leftNav guider
+	/**
+	 * Whether or not the user should see the leftNav guider
+	 * @ignore
+	 * @returns {Boolean}
+	 */
 	function shouldShowLeftNavEditTutorial() {
 		return M.query.campaign === 'leftNavSignup' &&
 			mw.config.get( 'wgNamespaceNumber' ) === 0 && !inEditor;
 	}
 
-	// If the user came from an edit button signup, show guider.
+	/**
+	 * If the user came from an edit button signup, show guider.
+	 * @ignore
+	 * @returns {Boolean}
+	 */
 	function shouldShowTutorial() {
 		var shouldShowEditTutorial = M.query.article_action === 'signup-edit' && !inEditor;
 		return shouldShowEditTutorial || shouldShowLeftNavEditTutorial();

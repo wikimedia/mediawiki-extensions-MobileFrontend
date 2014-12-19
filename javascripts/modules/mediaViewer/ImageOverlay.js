@@ -50,6 +50,11 @@
 			api.getThumb( options.title ).done( function ( data ) {
 				var author, url = data.descriptionurl + '#mw-jump-to-license';
 
+				/**
+				 * Hide the spinner
+				 * @method
+				 * @ignore
+				 */
 				function removeLoader() {
 					self.$( '.spinner' ).hide();
 				}
