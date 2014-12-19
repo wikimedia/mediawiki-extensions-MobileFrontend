@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_f694a08f",
+        "filename": "javascripts/modules/toc/TableOfContents.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-19T09:11:19Z",
+      "side": 1,
+      "message": "Yeah, I the idea as stated in the first commit is if this has traction and looks good to have it implemented on the base default view :D",
+      "parentUuid": "0e6cb3ef_157ef1e1",
+      "revId": "d64df7d507352da4fc2dcb1787654306c638dd8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_3583f5d2",
         "filename": "javascripts/modules/toc/TableOfContents.js",
         "patchSetId": 1
