@@ -1,8 +1,8 @@
-/**
- * Utility library for tracking clicks on certain elements
- */
+// Utility library for tracking clicks on certain elements
 ( function ( M, $ ) {
-	var s = M.require( 'settings' );
+
+	var s = M.require( 'settings' ),
+		MobileWebClickTracking;
 
 	/**
 	 * Check whether 'schema' is one of the predefined schemas.
@@ -123,9 +123,14 @@
 		}
 	}
 
-	M.define( 'loggingSchemas/MobileWebClickTracking', {
+	/**
+	 * @class MobileWebClickTracking
+	 * @singleton
+	 */
+	MobileWebClickTracking = {
 		log: log,
 		logPastEvent: logPastEvent,
 		hijackLink: hijackLink
-	} );
+	};
+	M.define( 'loggingSchemas/MobileWebClickTracking', MobileWebClickTracking );
 } )( mw.mobileFrontend, jQuery );
