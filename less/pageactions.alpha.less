@@ -28,9 +28,7 @@
 	#page-actions {
 		// FIXME: Make default when mw-ui-icon in stable
 		font-size: 1.2em;
-
 		float: right;
-		padding-top: @titleSectionSpacingTop;
 		width: 3.4em;
 		border-bottom: none;
 		overflow: hidden;
@@ -45,14 +43,19 @@
 	}
 }
 
+@media all and (max-width: @wgMFDeviceWidthTablet) {
+	.alpha {
+		#page-actions {
+			padding-top: 0;
+		}
+	}
+}
+
 @media all and (min-width: @wgMFDeviceWidthTablet) {
 	.alpha {
-		.pre-content {
-			padding: 0 @contentMargin;
-		}
-
 		#page-actions {
 			width: auto;
+			padding-right: 0;
 
 			li:first-child {
 				margin-top: 0;
