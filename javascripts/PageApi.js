@@ -230,7 +230,7 @@
 		 * @private
 		 * @param  {String} title Name of the page to obtain variants for
 		 * @param  {Object} data Data from API
-		 * @return {Array} List of language variant objects
+		 * @return {Array|Boolean} List of language variant objects or false if no variants exist
 		 */
 		_getLanguageVariantsFromApiResponse: function ( title, data ) {
 			var generalData = data.query.general,

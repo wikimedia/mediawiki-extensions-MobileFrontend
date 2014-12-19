@@ -151,7 +151,7 @@
 		 * @private
 		 * @param {String} path Path (hash) to check.
 		 * @param {Object} entry Entry object created in OverlayManager#add.
-		 * @return {Object} Match object with factory function's result. Returns null if no match.
+		 * @return {Object|null} Match object with factory function's result. Returns null if no match.
 		 * or null if no match.
 		 */
 		_matchRoute: function ( path, entry ) {

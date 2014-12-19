@@ -19,6 +19,7 @@
     "node_modules/jscs-jsdoc/lib/rules/*.js"
   ],
   "jsDoc": {
-    "enforceExistence": true
+    "enforceExistence": true,
+    "checkReturnTypes": true
   }
 }
