@@ -110,7 +110,6 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	 */
 	protected function renderPreContent( $data ) {
 		$internalBanner = $data[ 'internalBanner' ];
-		$isSpecialPage = $this->isSpecialPage;
 		$preBodyText = isset( $data['prebodytext'] ) ? $data['prebodytext'] : '';
 
 		if ( $internalBanner || $preBodyText ) {
