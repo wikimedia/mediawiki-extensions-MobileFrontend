@@ -5,10 +5,14 @@
 
 /**
  * Extends ResourceLoaderSiteModule (Module for site customizations).
+ * Mobile.[css|js] is a temporary drop in replacement for Common.css which predates Minerva
+ * and is not compatible.
  */
 class MobileSiteModule extends ResourceLoaderSiteModule {
-	/** @var array Saves the target for the module (e.g. desktop and mobile). */
-	protected $targets = array( 'mobile', 'desktop' );
+	/** @var array Saves the target for the module.
+	 * Should not be enabled on desktop which has ResourceLoaderSiteModule
+	 */
+	protected $targets = array( 'mobile' );
 
 	/**
 	 * Gets list of pages used by this module.

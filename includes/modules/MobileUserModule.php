@@ -5,10 +5,14 @@
 
 /**
  * Extends ResourceLoaderUserModule (Module for user-specific site customizations).
+ * This differs from the user module as we currently do not load User's
+ * common.js or user common.css as these predate Minerva and may be broken.
  */
 class MobileUserModule extends ResourceLoaderUserModule {
-	/** @var array Sets the target for the module (e.g. desktop and mobile). */
-	protected $targets = array( 'mobile', 'desktop' );
+	/** @var array Sets the target for the module (e.g. desktop and mobile).
+	 * Note this is mobile only as core already has an instance of ResourceLoaderUserModule
+	 */
+	protected $targets = array( 'mobile' );
 
 	/**
 	 * Gets list of pages used by this module.
