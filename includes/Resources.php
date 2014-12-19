@@ -1315,7 +1315,6 @@ $wgMinervaBootstrapModules = array(
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
 			'mobile.watchstar',
-			'mobile.site',
 			'mobile.issues',
 			'mobile.search',
 			'mobile.references',
