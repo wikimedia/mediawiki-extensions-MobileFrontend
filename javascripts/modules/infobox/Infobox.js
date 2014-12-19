@@ -53,10 +53,6 @@
 			movie: {
 				rows: [
 					{
-						// image
-						id: 'P18'
-					},
-					{
 						// Director
 						id: 'P57'
 					},
@@ -116,10 +112,6 @@
 			taxon: {
 				rows: [
 					{
-						// image
-						id: 'P18'
-					},
-					{
 						// Conservation status
 						id: 'P141'
 					},
@@ -139,10 +131,6 @@
 			},
 			country: {
 				rows: [
-					{
-						// image
-						id: 'P18'
-					},
 					{
 						// Flag
 						id: 'P41'
@@ -210,10 +198,6 @@
 			city: {
 				rows: [
 					{
-						// image
-						id: 'P18'
-					},
-					{
 						// Flag
 						id: 'P41'
 					},
@@ -253,10 +237,6 @@
 			},
 			human: {
 				rows: [
-					{
-						// Image
-						id: 'P18'
-					},
 					{
 						// Born
 						id: 'P569'
@@ -331,10 +311,6 @@
 			},
 			default: {
 				rows: [
-					{
-						// image
-						id: 'P18'
-					},
 					{
 						// Official website
 						id: 'P856'
