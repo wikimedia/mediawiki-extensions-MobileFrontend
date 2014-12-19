@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_91e76edf",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-19T15:23:03Z",
+      "side": 1,
+      "message": "Missing @singleton.",
+      "revId": "9e25a0746b2a3bfac7530d92bb721a612c352bbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
