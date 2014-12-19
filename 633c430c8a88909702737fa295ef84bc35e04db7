@@ -16,6 +16,24 @@
       "revId": "633c430c8a88909702737fa295ef84bc35e04db7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_089fb363",
+        "filename": "Gruntfile.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-19T00:29:48Z",
+      "side": 1,
+      "message": "what harm does it do? we should try cleaning up the code whenever possible, no? it\u0027s like adding a fixme when working on something totally different.",
+      "parentUuid": "0e6cb3ef_c8a9bb8e",
+      "revId": "633c430c8a88909702737fa295ef84bc35e04db7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
