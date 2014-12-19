@@ -191,6 +191,24 @@
       "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b6306854",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-19T12:19:11Z",
+      "side": 1,
+      "message": "It was (and I think it\u0027s ok) a static property on the class, not an instance (prototype) property.\nThanks for the comments! :D",
+      "parentUuid": "0e6cb3ef_ffe6be12",
+      "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
