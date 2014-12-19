@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_683aef34",
+        "filename": "i18n/en.json",
+        "patchSetId": 25
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-19T01:01:04Z",
+      "side": 1,
+      "message": "Use of grave accents here is weird. Regular quotation marks would be better. An even better solution would be to just bold the page name.",
+      "revId": "47e4259e43bc56fa13e70dcb705a0452bc9d08a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_881423a2",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 25
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-19T01:01:04Z",
+      "side": 1,
+      "message": "Need to document the $1 parameter, i.e. \"$1 is the name of the page.\"",
+      "revId": "47e4259e43bc56fa13e70dcb705a0452bc9d08a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
