@@ -14,5 +14,11 @@
     "checkRedundantParams": true
   },
   "validateIndentation": "\t",
-  "excludeFiles": ["javascripts/externals/**/*.js", "javascripts/README.md"]
+  "excludeFiles": ["javascripts/externals/**/*.js", "javascripts/README.md"],
+  "additionalRules": [
+    "node_modules/jscs-jsdoc/lib/rules/*.js"
+  ],
+  "jsDoc": {
+    "enforceExistence": true
+  }
 }
