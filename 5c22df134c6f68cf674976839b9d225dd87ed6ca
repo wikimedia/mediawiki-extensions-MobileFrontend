@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e6cb3ef_b1eb9276",
+        "filename": "javascripts/modules/wikiGrokRoulette/init.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-19T15:42:30Z",
+      "side": 1,
+      "message": "Could you include the current query parameters here as well. It\u0027d certainly make testing easier.",
+      "revId": "5c22df134c6f68cf674976839b9d225dd87ed6ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_76965044",
         "filename": "javascripts/modules/wikiGrokRoulette/init.js",
         "patchSetId": 20
