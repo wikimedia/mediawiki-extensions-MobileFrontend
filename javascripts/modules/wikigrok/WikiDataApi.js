@@ -34,34 +34,36 @@
 			} ).then( function ( data ) {
 				var description, instanceClaims, entityClaims, instanceOf,
 					claims = {};
-				// See if the page has any 'instance of' claims.
 				if (
 					data.entities !== undefined &&
-					data.entities[id].claims !== undefined &&
-					data.entities[id].claims.P31 !== undefined
+					data.entities[id].claims !== undefined
 				) {
 					entityClaims = data.entities[id].claims;
-					instanceClaims = entityClaims.P31;
 
-					// Examine claims closely
-					$.each( instanceClaims, function ( i, claim ) {
-						instanceOf = claim.mainsnak.datavalue.value['numeric-id'];
-						if ( instanceOf === 5 ) {
-							claims.isHuman = true;
-						} else if ( instanceOf === 515 ) {
-							claims.isCity = true;
-						} else if ( instanceOf === 6256 ) {
-							claims.isCountry = true;
-						} else if ( instanceOf === 16521 ) {
-							claims.isTaxon = true;
-						} else if ( instanceOf === 11424 ) {
-							claims.isMovie = true;
-						} else if ( instanceOf === 5398426 ) {
-							claims.isTVSeries = true;
-						}
-						// Note: bands are subclassed as rock band, punk band etc.. not sure how we want
-						// to include them here.
-					} );
+					// See if the page has any 'instance of' claims.
+					if ( data.entities[id].claims.P31 !== undefined ) {
+						instanceClaims = entityClaims.P31;
+
+						// Examine claims closely
+						$.each( instanceClaims, function ( i, claim ) {
+							instanceOf = claim.mainsnak.datavalue.value['numeric-id'];
+							if ( instanceOf === 5 ) {
+								claims.isHuman = true;
+							} else if ( instanceOf === 515 ) {
+								claims.isCity = true;
+							} else if ( instanceOf === 6256 ) {
+								claims.isCountry = true;
+							} else if ( instanceOf === 16521 ) {
+								claims.isTaxon = true;
+							} else if ( instanceOf === 11424 ) {
+								claims.isMovie = true;
+							} else if ( instanceOf === 5398426 ) {
+								claims.isTVSeries = true;
+							}
+							// Note: bands are subclassed as rock band, punk band etc.. not sure how we want
+							// to include them here.
+						} );
+					}
 
 					// set some claims
 					claims.hasOccupation = entityClaims.P106 ? true : false;
@@ -70,19 +72,15 @@
 					claims.hasDateOfDeath = entityClaims.P570 ? true : false;
 
 					claims.entities = entityClaims;
-					description = data.entities[ id ];
-
-					if ( description && description.descriptions !== undefined ) {
-						if ( description.descriptions[ self.language ] ) {
-							claims.description = description.descriptions[ self.language ].value;
-						}
-					}
-					return claims;
-				} else {
-					// FIXME: logError does not exist
-					// self.logError( 'no-impression-cannot-fetch-claims' );
-					return false;
 				}
+				description = data.entities[ id ];
+
+				if ( description && description.descriptions !== undefined ) {
+					if ( description.descriptions[ self.language ] ) {
+						claims.description = description.descriptions[ self.language ].value;
+					}
+				}
+				return claims;
 			} ).fail( function () {
 				// FIXME: logError does not exist
 				// self.logError( 'no-impression-cannot-fetch-claims' );
