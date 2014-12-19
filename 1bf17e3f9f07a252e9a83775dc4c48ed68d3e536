@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_48960b99",
+        "filename": "Gruntfile.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-12-19T00:14:09Z",
+      "side": 1,
+      "message": "This was not a documentation comment but a JSHint directive whitelisting the \u0027module\u0027 variable as a global. However that superfluous if `node:true` is present since that (among other things) whitelists various globals, such as \u0027module\u0027.",
+      "revId": "1bf17e3f9f07a252e9a83775dc4c48ed68d3e536",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
