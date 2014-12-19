@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3781b2fd",
+        "filename": ".jscsrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-19T18:33:07Z",
+      "side": 1,
+      "message": "why is it indented this way?",
+      "revId": "040d38619269a8ecf87b6fd0e94004e54b0f4be8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
