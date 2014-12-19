@@ -22,6 +22,7 @@
     "enforceExistence": true,
     "checkReturnTypes": true,
     "checkRedundantReturns": true,
-    "requireReturnTypes": true
+    "requireReturnTypes": true,
+    "checkTypes": true
   }
 }
