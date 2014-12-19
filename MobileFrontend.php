@@ -609,6 +609,8 @@ $wgWikiBasePropertyConfig = array(
 	'instanceOf' => 'P31',
 );
 
+require_once __DIR__ . "/includes/config/Wikidata.php";
+
 /**
  * If set to true, main page HTML will receive special massaging that removes everything
  * but a few select pieces.
