@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_37ec52f2",
+        "filename": "javascripts/modules/watchlist/WatchList.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-19T18:27:56Z",
+      "side": 1,
+      "message": "deferred needs to be capitalized",
+      "revId": "595dc45b07b919df18010ae55b482074278154d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
