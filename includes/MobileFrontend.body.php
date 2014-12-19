@@ -3,6 +3,9 @@
  * MobileFrontend.body.php
  */
 
+use Wikibase\Client\WikibaseClient;
+use Wikibase\DataModel\Entity\ItemId;
+
 /**
  * Implements additional functions to use in MobileFrontend
  */
@@ -65,5 +68,34 @@ class ExtMobileFrontend {
 
 		wfProfileOut( __METHOD__ );
 		return $contentHtml;
+	}
+
+	/**
+	 * Returns a short description of a page from Wikidata
+	 *
+	 * @param string $item Wikibase id of the page
+	 * @return string|null
+	 */
+	public static function getWikibaseDescription( $item ) {
+		global $wgContLang;
+
+		if ( !class_exists( 'Wikibase\\Client\\WikibaseClient' ) ) {
+			return null;
+		}
+
+		$profileSection = new ProfileSection( __METHOD__ );
+		try {
+			$entityLookup = WikibaseClient::getDefaultInstance()
+				->getStore()
+				->getEntityLookup();
+			$entity = $entityLookup->getEntity( new ItemId( $item ) );
+			if ( !$entity ) {
+				return null;
+			}
+			return $entity->getFingerprint()->getDescription( $wgContLang->getCode() )->getText();
+		} catch ( Exception $ex) {
+			// Do nothing, exception mostly due to description being unavailable in needed language
+		}
+		return null;
 	}
 }

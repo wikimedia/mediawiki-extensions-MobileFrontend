@@ -139,6 +139,16 @@ class ApiMobileView extends ApiBase {
 				array( 'pageprops' => $pageProps )
 			);
 		}
+		if ( isset( $prop['description'] ) && isset( $data['pageprops']['wikibase_item'] ) ) {
+			$desc = ExtMobileFrontend::getWikibaseDescription(
+				$data['pageprops']['wikibase_item']
+			);
+			if ( $desc ) {
+				$this->getResult()->addValue( null, $this->getModuleName(),
+					array( 'description' => $desc )
+				);
+			}
+		}
 		if ( $this->usePageImages ) {
 			$this->addPageImage( $data, $prop, $params['thumbsize'] );
 		}
@@ -693,6 +703,7 @@ class ApiMobileView extends ApiBase {
 					'hasvariants',
 					'displaytitle',
 					'pageprops',
+					'description',
 				)
 			),
 			'sectionprop' => array(
@@ -776,6 +787,7 @@ class ApiMobileView extends ApiBase {
 				' hasvariants     - whether or not the page is available in other language variants',
 				' displaytitle    - the rendered title of the page, with {{DISPLAYTITLE}} and such applied',
 				' pageprops       - page properties',
+				' description     - page description from Wikidata',
 			),
 			'sectionprop' => 'What information about sections to get',
 			'pageprops' => 'What page properties to return, a pipe (|) separated list or * for'
