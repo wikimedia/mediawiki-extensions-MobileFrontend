@@ -20,6 +20,7 @@
   ],
   "jsDoc": {
     "enforceExistence": true,
-    "checkReturnTypes": true
+    "checkReturnTypes": true,
+    "checkRedundantReturns": true
   }
 }

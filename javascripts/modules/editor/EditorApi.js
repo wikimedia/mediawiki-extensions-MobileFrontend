@@ -118,7 +118,6 @@
 			/**
 			 * Save content. Make an API request.
 			 * @ignore
-			 * @returns {jquery.Deferred}
 			 */
 			function saveContent() {
 				var apiOptions = {
