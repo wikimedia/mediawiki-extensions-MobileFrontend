@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_76b090f1",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-19T12:15:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_dfe17afc",
+      "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_3fc99629",
         "filename": "javascripts/browser.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-18T17:56:42Z",
       "side": 1,
       "message": "I was wondering about this, a lot of these methods would benefit from caching so maybe instead of doing this we should create a generic private function which does this instead rather than just doing this for this function?",
+      "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d6a95c8e",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-19T12:15:43Z",
+      "side": 1,
+      "message": "I\u0027ve been playing with `once` and `memoize` functions but I haven\u0027t gotten to anything stable. I\u0027ll consider adding that next.",
+      "parentUuid": "0e6cb3ef_3fc99629",
       "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_f6cca08e",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-19T12:15:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_ffd23ed4",
+      "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_5fe1ea95",
         "filename": "javascripts/browser.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2014-12-18T17:56:42Z",
       "side": 1,
       "message": "move var to top?\n(but as stated if jscs doesn\u0027t complain i can\u0027t expect you to do this :-))",
+      "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_16c83476",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-19T12:15:43Z",
+      "side": 1,
+      "message": "Hihiihi :P\n\nDone",
+      "parentUuid": "0e6cb3ef_5fe1ea95",
       "revId": "b2d89458a47fbcdafe0e881ebfd57296e27355ad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
