@@ -598,11 +598,13 @@ class ApiMobileView extends ApiBase {
 	private function getFilePage( Title $title ) {
 		//HACK: HACK: HACK:
 		wfProfileIn( __METHOD__ );
+		$context = new DerivativeContext( $this->getContext() );
+		$context->setTitle( $title );
+		$context->setOutput( new OutputPage( $context ) );
 		$page = new ImagePage( $title );
-		$page->setContext( $this->getContext() );
+		$page->setContext( $context );
 		$page->view();
-		global $wgOut;
-		$html = $wgOut->getHTML();
+		$html = $context->getOutput()->getHTML();
 		wfProfileOut( __METHOD__ );
 		return $html;
 	}
