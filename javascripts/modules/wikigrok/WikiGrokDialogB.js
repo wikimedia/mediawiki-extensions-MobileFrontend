@@ -85,8 +85,8 @@
 
 							// FIXME: Use a template for this magic.
 							$tag.attr( 'id', id )
-								.data( 'propName', campaign.name )
-								.data( 'propId', campaign.property )
+								.data( 'propName', campaign.propertyName )
+								.data( 'propId', campaign.propertyId )
 								.data( 'itemId', itemId )
 								.data( 'readable', label );
 
