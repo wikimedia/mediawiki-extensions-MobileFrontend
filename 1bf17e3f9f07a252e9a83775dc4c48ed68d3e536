@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_c8dbfb52",
+        "filename": "Gruntfile.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-12-19T00:25:07Z",
+      "side": 1,
+      "message": "\u003e However that superfluous if `node:true` is present since that (among other things) whitelists various globals, such as \u0027module\u0027.\n\nYou can remove this line entirely since it\u0027s redundant. Manually whitelisting a global is only needed if you use third-party libraries or non-standard globals. \u0027module\u0027 is normal global in node and covered by `/*jshint node:true .. */` already.",
+      "parentUuid": "0e6cb3ef_a85b27fc",
+      "revId": "1bf17e3f9f07a252e9a83775dc4c48ed68d3e536",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_c8d8db81",
         "filename": "Gruntfile.js",
         "patchSetId": 2
