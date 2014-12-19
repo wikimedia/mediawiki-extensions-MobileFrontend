@@ -817,15 +817,18 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Checks to see if the current page is editable.
-	 * FIXME: Kill function in favour of $wgRestrictionEdit
+	 * Checks to see if the current page is (probably) editable.
+	 *
+	 * This is the same check that sets wgIsProbablyEditable later in the page output
+	 * process.
+	 *
 	 * @return boolean
 	 */
 	protected function isCurrentPageEditable() {
 		$title = $this->getTitle();
 		$user = $this->getUser();
-		$userCanCreatePage = !$title->exists() && $title->quickUserCan( 'create', $user );
-		return $title->quickUserCan( 'edit', $user ) || $userCanCreatePage;
+		return $title->quickUserCan( 'edit', $user )
+			&& ( $title->exists() || $title->quickUserCan( 'create', $user ) );
 	}
 
 	/**
@@ -854,8 +857,6 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFLeadPhotoUploadCssSelector' => $wgMFLeadPhotoUploadCssSelector,
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
-			// FIXME: Kill variable in favour of $wgRestrictionEdit
-			'wgIsPageEditable' => $this->isCurrentPageEditable(),
 			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
 			'wgMFMode' => $this->getMode(),
 			'wgMFCollapseSectionsByDefault' => $wgMFCollapseSectionsByDefault,
@@ -864,7 +865,7 @@ class SkinMinerva extends SkinTemplate {
 		);
 
 		if ( $this->isAuthenticatedUser() ) {
-			$vars['wgMFIsLoggedInUserBlocked'] = $user->isBlocked() && $user->isBlockedFrom( $title );
+			$vars['wgMFIsLoggedInUserBlockedFromPage'] = $user->isBlockedFrom( $title );
 		}
 
 		// init with false

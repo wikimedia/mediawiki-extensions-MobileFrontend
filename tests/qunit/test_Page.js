@@ -27,37 +27,6 @@
 		} );
 	} );
 
-	QUnit.asyncTest( '#isEditable', function( assert ) {
-		QUnit.expect( 4 );
-		var p, p2, user, user2;
-		user = {
-			getGroups: function() {
-				return $.Deferred().resolve( ['*'] );
-			}
-		};
-		user2 = {
-			getGroups: function() {
-				return $.Deferred().resolve( [ '*', 'user', 'autoconfirmed', 'sysop' ] );
-			}
-		};
-		p = new Page( { title: 'Permission check', protection: { edit: ['sysop'] } } );
-		p2 = new Page( { title: 'Permission check' } );
-
-		p.isEditable( user ).done( function( status ) {
-			assert.strictEqual( status, false, 'anons cannot edit sysop protected pages' );
-		} );
-		p.isEditable( user2 ).done( function( status ) {
-			assert.strictEqual( status, true, 'sysops can edit sysop protected pages' );
-		} );
-		p2.isEditable( user ).done( function( status ) {
-			assert.strictEqual( status, true, 'when no protection level defined assumes anyone can edit' );
-		} );
-		p2.isEditable( user2 ).done( function( status ) {
-			assert.strictEqual( status, true, 'when no protection level defined assumes anyone can edit' );
-			QUnit.start();
-		} );
-	} );
-
 	QUnit.test( '#isTalkPage', 8, function( assert ) {
 		var testCases = [
 			[ 'Main Page', false ],

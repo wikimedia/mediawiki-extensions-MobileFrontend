@@ -89,23 +89,18 @@
 		 * Checks whether the given user can edit the page.
 		 * @method
 		 * @param {mw.user} user Object representing a user
-		 * @return {jQuery.Deferred} With parameter boolean
+		 * @return {boolean}
 		 */
 		isEditable: function ( user ) {
-			var editProtection = this.options.protection.edit,
-				resp = $.Deferred();
+			// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
+			var editable = mw.config.get( 'wgIsProbablyEditable' );
 
-			user.getGroups().done( function ( groups ) {
-				var editable = false;
-				$.each( groups, function ( i, group ) {
-					if ( $.inArray( group, editProtection ) > -1 ) {
-						editable = true;
-						return false;
-					}
-				} );
-				resp.resolve( editable );
-			} );
-			return resp;
+			// for logged in users check if they are blocked from editing this page
+			if ( editable && !user.isAnon() ) {
+				editable = !mw.config.get( 'wgMFIsLoggedInUserBlockedFromPage' );
+			}
+
+			return editable;
 		},
 
 		/**
