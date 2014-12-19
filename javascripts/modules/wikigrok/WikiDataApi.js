@@ -118,13 +118,6 @@
 							// to include them here.
 						} );
 					}
-
-					// set some claims
-					claims.hasOccupation = entityClaims.P106 ? true : false;
-					claims.hasCountryOfCitizenship = entityClaims.P27 ? true : false;
-					claims.hasDateOfBirth = entityClaims.P569 ? true : false;
-					claims.hasDateOfDeath = entityClaims.P570 ? true : false;
-
 					claims.entities = entityClaims;
 				}
 				description = data.entities[ id ];
