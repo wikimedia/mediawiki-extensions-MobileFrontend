@@ -56,9 +56,6 @@ jsbeautify: nodecheck			## Check the JavaScript coding style
 jscs: nodecheck			## Check the JavaScript coding style
 	@grunt jscs:main
 
-jscsdoc: nodecheck			## Check the JavaScript coding style documentation
-	@grunt jscs:doc
-
 jshinttests: nodecheck			## Lint the QUnit tests
 	@grunt jshint:tests
 
