@@ -88,7 +88,7 @@
 				props: [ 'descriptions', 'claims' ],
 				format: 'json'
 			} ).then( function ( data ) {
-				var description, instanceClaims, entityClaims, instanceOf,
+				var description, instanceClaims, entityClaims,
 					claims = {};
 				if (
 					data.entities !== undefined &&
@@ -102,22 +102,9 @@
 
 						// Examine claims closely
 						$.each( instanceClaims, function ( i, claim ) {
-							instanceOf = claim.mainsnak.datavalue.value['numeric-id'];
-							if ( instanceOf === 5 ) {
-								claims.isHuman = true;
-							} else if ( instanceOf === 515 ) {
-								claims.isCity = true;
-							} else if ( instanceOf === 6256 ) {
-								claims.isCountry = true;
-							} else if ( instanceOf === 16521 ) {
-								claims.isTaxon = true;
-							} else if ( instanceOf === 11424 ) {
-								claims.isMovie = true;
-							} else if ( instanceOf === 5398426 ) {
-								claims.isTVSeries = true;
+							if ( i === 0 ) {
+								claims.instanceOf = claim.mainsnak.datavalue.value['numeric-id'];
 							}
-							// Note: bands are subclassed as rock band, punk band etc.. not sure how we want
-							// to include them here.
 						} );
 					}
 					claims.entities = entityClaims;

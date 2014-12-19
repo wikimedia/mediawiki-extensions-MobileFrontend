@@ -50,7 +50,8 @@
 		},
 		typeDefaults: {
 			// FIXME: In future this should be configurable by Wikipedia admins
-			movie: {
+			// movie
+			11424: {
 				rows: [
 					{
 						// Director
@@ -109,7 +110,7 @@
 					// FIXME: box office is not available on Wikidata
 				]
 			},
-			taxon: {
+			16521: {
 				rows: [
 					{
 						// Conservation status
@@ -129,7 +130,8 @@
 					}
 				]
 			},
-			country: {
+			// country
+			6256: {
 				rows: [
 					{
 						// Flag
@@ -195,7 +197,8 @@
 					}
 				]
 			},
-			city: {
+			// city
+			515: {
 				rows: [
 					{
 						// Flag
@@ -235,7 +238,8 @@
 					}
 				]
 			},
-			human: {
+			// human
+			5: {
 				rows: [
 					{
 						// Born
@@ -440,19 +444,7 @@
 		 * @return {Object} default option values
 		 */
 		getDefaultsFromClaims: function ( claims ) {
-			if ( claims.isHuman ) {
-				return this.typeDefaults.human;
-			} else if ( claims.isCity ) {
-				return this.typeDefaults.city;
-			} else if ( claims.isCountry ) {
-				return this.typeDefaults.country;
-			} else if ( claims.isTaxon ) {
-				return this.typeDefaults.taxon;
-			} else if ( claims.isMovie ) {
-				return this.typeDefaults.movie;
-			} else {
-				return this.typeDefaults.default;
-			}
+			return this.typeDefaults[claims.instanceOf || 'default'];
 		},
 		/**
 		 * Get the deferred object associated with the infobox
