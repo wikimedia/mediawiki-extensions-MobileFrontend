@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_eb5cb950",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 20
+      },
+      "lineNbr": 822,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-12-19T08:02:32Z",
+      "side": 1,
+      "message": "wgIsProbablyEditable is a JavaScript variable, not PHP. The \u0027$\u0027 is confusing :)",
+      "revId": "59aba453096e26c37bbc4a740aca9ae50b07b789",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
