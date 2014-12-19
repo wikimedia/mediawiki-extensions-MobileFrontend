@@ -105,7 +105,7 @@
 		 *
 		 * @method
 		 * @param {Array} ids a list of page ids
-		 * @return jQuery.deferred
+		 * @return {jQuery.Deferred}
 		 */
 		getPages: function ( ids ) {
 			return this.api.load( ids );

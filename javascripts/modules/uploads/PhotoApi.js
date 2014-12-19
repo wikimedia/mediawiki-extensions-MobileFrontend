@@ -153,7 +153,7 @@
 		 * @param {Object} options
 		 *     options.file File A file object obtained from a file input.
 		 *     options.description String Image description.
-		 * @return jQuery.Deferred On failure callback is passed an object with
+		 * @return {jQuery.Deferred} On failure callback is passed an object with
 		 * `stage`, `type` and `details` properties. `stage` is either "upload"
 		 * or "edit" (inserting image in a page). `type` is a string describing
 		 * the type of error, `details` can be any object (usually a string
