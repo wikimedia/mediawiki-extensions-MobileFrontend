@@ -10,6 +10,7 @@
 
 	/**
 	 * Check whether photo upload is supported
+	 * FIXME: Move to Browser.js
 	 * @method
 	 * @ignore
 	 * @returns {Boolean}
@@ -65,8 +66,17 @@
 			var self = this,
 				$input = this.$( 'input' );
 
+			/**
+			 * Hacky way to open a preview overlay with a certain image
+			 * FIXME: Ideally the upload-preview URI should feature a representation of the image
+			 * that can be used to create the upload overlay.
+			 * @ignore
+			 */
 			function handleFile( file ) {
-				// FIXME: this is hacky but it would be hard to pass a file in a route
+				/*
+				 * @event _upload-preview
+				 * Emitted when a user has selected a file of their local machine
+				 */
 				M.emit( '_upload-preview', file );
 				M.router.navigate( '#/upload-preview/' + self.options.funnel );
 			}
