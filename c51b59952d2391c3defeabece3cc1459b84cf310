@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_a8300754",
+        "filename": "includes/modules/MobileUserModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-19T00:55:29Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be desktop enabled. It\u0027s a mobile only module.",
+      "revId": "c51b59952d2391c3defeabece3cc1459b84cf310",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
