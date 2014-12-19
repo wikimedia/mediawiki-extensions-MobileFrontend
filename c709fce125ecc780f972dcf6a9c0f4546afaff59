@@ -16,6 +16,24 @@
       "revId": "c709fce125ecc780f972dcf6a9c0f4546afaff59",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d6d87c81",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-19T09:55:49Z",
+      "side": 1,
+      "message": "I don\u0027t think that is a problem in most cases, and it makes the actions of events public methods making them reusable and more testable. For example, the handler for onClick here can (and will) be called toggleStatus, and then from other view that contains watchstars or from the tests you can actually call watchstar.toggleStatus() without having to fake clicks or stuff. We have to name the handlers with meaningful names, not like I did here. I\u0027ll change it now",
+      "parentUuid": "0e6cb3ef_557b09eb",
+      "revId": "c709fce125ecc780f972dcf6a9c0f4546afaff59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
