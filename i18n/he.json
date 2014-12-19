@@ -181,6 +181,7 @@
 	"mobile-frontend-media-details": "פרטים",
 	"mobile-frontend-media-license-link": "מידע על הרישיון",
 	"mobile-frontend-meta-data-issues": "בדף הזה יש בעיות",
+	"mobile-frontend-meta-data-issues-alpha": "בעיות בדף",
 	"mobile-frontend-meta-data-issues-talk": "אודות דף השיחה הזה",
 	"mobile-frontend-meta-data-issues-header": "בעיות",
 	"mobile-frontend-meta-data-issues-header-talk": "אודות הדף הזה",
@@ -344,5 +345,8 @@
 	"tag-mobile_web_edit-description": "עריכה שנעשתה מהאתר הנייד",
 	"mobile-frontend-pageaction-edit-tooltip": "עריכת הפסקה הראשונה בדף.",
 	"mobile-frontend-pageaction-upload-tooltip": "העלאת תמונה לראש הדף.",
+	"apihelp-mobileview-description": "מחזיר נתונים שנחוצים לתצוגות ניידות.",
+	"apihelp-mobileview-param-page": "כותרת הדף לעיבוד.",
+	"apihelp-mobileview-param-redirect": "האם לעקוב אחר הפניות.",
 	"mobile-frontend-donate-button-label": "תרומה"
 }
