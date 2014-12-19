@@ -34,6 +34,75 @@
       "revId": "1bf17e3f9f07a252e9a83775dc4c48ed68d3e536",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_08e7b33c",
+        "filename": "Gruntfile.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-19T00:17:27Z",
+      "side": 1,
+      "message": "Why is this change needed at all Baha? If this file is being picked up by jshint or jscs it shouldn\u0027t be.",
+      "parentUuid": "0e6cb3ef_c8f1bbff",
+      "revId": "1bf17e3f9f07a252e9a83775dc4c48ed68d3e536",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_c8d8db81",
+        "filename": "Gruntfile.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-19T00:17:27Z",
+      "side": 1,
+      "message": "don\u0027t do this.",
+      "revId": "1bf17e3f9f07a252e9a83775dc4c48ed68d3e536",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_68cf4fb6",
+        "filename": "Gruntfile.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-19T00:17:27Z",
+      "side": 1,
+      "message": "or this",
+      "revId": "1bf17e3f9f07a252e9a83775dc4c48ed68d3e536",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_683e6f89",
+        "filename": "dev-scripts/pre-commit",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-19T00:17:27Z",
+      "side": 1,
+      "message": "You can remove this Baha. It\u0027s covered by the jscs command in the Gruntfile which is already running on commits\n(see make jscs below)",
+      "revId": "1bf17e3f9f07a252e9a83775dc4c48ed68d3e536",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
