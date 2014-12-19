@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_a85b27fc",
+        "filename": "Gruntfile.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-19T00:18:17Z",
+      "side": 1,
+      "message": "It is being picked by jscs. I\u0027ll see if I can exclude it.",
+      "parentUuid": "0e6cb3ef_08e7b33c",
+      "revId": "1bf17e3f9f07a252e9a83775dc4c48ed68d3e536",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_c8d8db81",
         "filename": "Gruntfile.js",
         "patchSetId": 2
