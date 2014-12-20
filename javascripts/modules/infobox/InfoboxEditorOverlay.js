@@ -3,8 +3,10 @@
 		pageTitle = mw.config.get( 'wgTitle' ),
 		icons = M.require( 'icons' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
+		WikiDataItemLookupInputWidget = M.require( 'modules/infobox/WikiDataItemLookupInputWidget' ),
 		//WikiGrokApi = M.require( 'modules/wikigrok/WikiGrokApi' ),
 		Overlay = M.require( 'Overlay' );
+
 	/**
 	 * A Wikidata generated infobox editor
 	 * @class InfoboxEditorOverlay
@@ -20,6 +22,10 @@
 		defaults: {
 			title: pageTitle,
 			descriptionLabel: mw.msg( 'mobile-frontend-wikidata-editor-description-label', pageTitle )
+		},
+		/** @inheritdoc */
+		events: {
+			'click .submit': 'onSave'
 		},
 		/**
 		 * @inheritdoc
@@ -46,29 +52,94 @@
 			} );
 		},
 		/**
+		 * Enhances existing DOM elements in view with OOUI LookupInputWidgets
+		 */
+		setupLookupInputWidgets: function () {
+			var self = this;
+
+			this.$( '.editable-field' ).each( function () {
+				var widget, src,
+					$field = $( this ),
+					$answers = $( '<div class="answers">' ),
+					type = $field.parent().data( 'type' ),
+					label = $field.data( 'label' );
+
+				if ( type === 'wikibase-item' ) {
+					widget = new WikiDataItemLookupInputWidget( {
+						value: label,
+						appendToAnswer: $answers.insertBefore( this ),
+						claimId: $field.parent().data( 'id' ),
+						api: self.infobox.api
+					} );
+					$field.empty().append( widget.$element );
+				} else if ( type === 'commonsMedia' ) {
+					src = $field.data( 'src' );
+					if ( src ) {
+						$field.empty().append( $( '<img>' ).attr( 'src', src  ) );
+					}
+				} else {
+					$field.text( label );
+				}
+			} );
+		},
+		/**
+		 * Event handler that runs whenever a save has been fully executed.
+		 */
+		onSaveComplete: function () {
+			// clear the existing hash for the refresh
+			window.location.hash = '';
+			window.location.query = 'cachebust=' + Math.random();
+			// Give time for wikidata to update...
+			window.setTimeout( function () {
+				window.location.reload();
+			}, 300 );
+		},
+		/**
+		 * Event handler that runs when the user clicks save.
+		 */
+		onSave: function () {
+			var self = this,
+				$answers = this.$( '.answers' ).children(),
+				api = self.infobox.getApi(),
+				changesToStage = $answers.length,
+				queue = [],
+				loader = new LoadingOverlay(),
+				val = self.$( '.description' ).val();
+
+			loader.show();
+			/**
+			 * Executes save commands sequentially to avoid edit conflicts due to
+			 * use of centralauth tokens
+			 * @ignore
+			 */
+			function completeSaveEvent() {
+				var args;
+				if ( queue.length === 0 ) {
+					self.onSaveComplete.apply( self );
+				} else {
+					args = queue.pop();
+					api.saveClaim.apply( api, args ).always( completeSaveEvent );
+				}
+			}
+			$( this ).prop( 'disabled', true );
+			$answers.each( function () {
+				var $answer = $( this );
+				queue.push( [ $answer.data( 'id' ), $answer.data( 'value' ) ] );
+			} );
+			if ( this.initialDescriptionValue !== val ) {
+				changesToStage += 1;
+				api.saveDescription( val ).always( completeSaveEvent );
+			} else {
+				completeSaveEvent();
+			}
+		},
+		/**
 		 * @inheritdoc
 		 */
 		postRender: function () {
-			var loader,
-				self = this;
-
-			this.$( '.submit' ).on( 'click', function () {
-				var val = self.$( '.description' ).val();
-				$( this ).prop( 'disabled', true );
-				// reuse api so we can make use of caching in future
-				self.infobox.getApi().saveDescription( val ).done( function () {
-					// clear the existing hash for the refresh
-					loader = new LoadingOverlay();
-					loader.show();
-					window.location.hash = '';
-					window.location.query = 'cachebust=' + Math.random();
-					// Give time for wikidata to update...
-					window.setTimeout( function () {
-						window.location.reload();
-					}, 300 );
-				} );
-			} );
 			Overlay.prototype.postRender.apply( this, arguments );
+			this.initialDescriptionValue = $( '.description' ).val();
+			this.setupLookupInputWidgets();
 		}
 	} );
 

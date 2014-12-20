@@ -1126,6 +1126,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.ajax',
 			'mobile.hexmd5',
 			'mobile.overlays',
+			'oojs-ui',
 		),
 		'templates' => array(
 			'Infobox.hogan' => 'templates/modules/infobox/Infobox.hogan',
@@ -1137,6 +1138,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/infobox/Infobox.js',
+			'javascripts/modules/infobox/WikiDataItemLookupInputWidget.js',
 			'javascripts/modules/infobox/InfoboxEditorOverlay.js',
 		),
 		'styles' => array(

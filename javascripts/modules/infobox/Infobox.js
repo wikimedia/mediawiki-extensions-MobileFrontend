@@ -92,6 +92,7 @@
 					} );
 				} else if ( snak.datatype === 'commonsMedia' ) {
 					values.push( {
+						type: 'commonsMedia',
 						url: mw.util.getUrl( 'File:' + value.value ),
 						src: self.getImageUrl( value.value )
 					} );
@@ -106,6 +107,7 @@
 					} );
 				} else if ( value.type === 'wikibase-entityid' ) {
 					values.push( {
+						type: 'item',
 						id: 'Q' + value.value[ 'numeric-id' ],
 						isLink: true
 					} );
@@ -149,7 +151,14 @@
 			return this.api.getExpandedItemsData( labelIds ).then( function ( labels ) {
 				// map the property id to the actual label.
 				$.each( rows, function ( i, row ) {
-					row.label = labels[ row.id ].label;
+					var meta = labels[ row.id ];
+					if ( meta ) {
+						row.label = meta.label;
+						row.type = meta.type;
+					} else {
+						row.label = 'No label.';
+					}
+
 					$.each( row.values, function ( j, value ) {
 						var item = labels[ value.id ];
 						if ( item ) {
@@ -257,8 +266,9 @@
 					options.description = claims.description;
 				}
 				$.each( rows, function ( i, row ) {
+					var claimRow = claims.entities[ row.id ];
 					if ( claims.entities && claims.entities[ row.id ] ) {
-						row.values = self._getValues( claims.entities[ row.id ] );
+						row.values = self._getValues( claimRow );
 					} else {
 						row.values = [];
 					}
