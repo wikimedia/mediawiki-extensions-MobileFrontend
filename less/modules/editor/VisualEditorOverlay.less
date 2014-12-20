@@ -77,129 +77,41 @@
 	}
 
 	// Toolbar
+	@baseIconSize: 24px;
+	@targetIconSize: 32px;
 	.overlay-header-container {
-		.overlay-header {
-			> .toolbar {
-				border-left: 1px solid @grayLight;
-				// Expand the toolbar as wide as possible to limit the size of the
-				// overlay-action. (Both are displayed as table-cells.)
-				width: 100%;
-
-				.oo-ui-toolbar-bar {
-					position: static;
-					border: 0;
-
-					.oo-ui-toolGroup {
-						// FIXME: This resets oo-ui css and shouldn't be needed. Fix should be applied in oo-ui Agora skin
-						margin: 0;
-					}
-
-					.oo-ui-popupToolGroup {
-						&.oo-ui-iconElement {
-							height: @headerHeight;
-							margin: 0 0 0 1em;
-						}
-
-						.oo-ui-toolGroup-tools {
-							// Position the dropdown underneath the icon
-							top: @headerHeight;
-							// FIXME: This should probably be in oo-ui minerva skin
-							background-color: white;
-							border: 1px solid @grayLight;
-							box-shadow: 0 .1em .2em rgba(0, 0, 0, .2);
-						}
-
-						.oo-ui-widget-enabled > .oo-ui-tool-title {
-							color: @grayDark;
-						}
-
-						.oo-ui-tool-title {
-							font-size: .9em;
-						}
-					}
-
-					// FIXME: Move to oo-ui Agora skin
-					.oo-ui-popupToolGroup-handle {
-						.oo-ui-indicatorElement-indicator {
-							right: -.6em;
-							top: .7em;
-						}
-					}
-
-					// FIXME: Move to oo-ui Agora skin
-					.oo-ui-popupToolGroup-header {
-						font-size: .9em;
-						margin: 0 .8em;
-					}
+		.toolbar {
+			border-left: 1px solid @grayLight;
+			// Expand the toolbar as wide as possible to limit the size of the
+			// overlay-action. (Both are displayed as table-cells.)
+			width: 100%;
+			.oo-ui-toolbar {
+				// Everything is measured in ems so the easiest way to scale
+				// is to change the base font size.
+				font-size: unit( @targetIconSize / @baseIconSize, em );
+				.oo-ui-iconElement-icon {
+					/* We should be able to use 'contain' here, but some OOUI icon containers are oversized (T85139) */
+					.background-size( @targetIconSize, @targetIconSize );
 				}
 			}
-		}
-
-		.oo-ui-listToolGroup {
-			.oo-ui-tool {
-				display: block;
-				width: auto;
+			.oo-ui-tool-title,
+			.oo-ui-popupToolGroup-header {
+				// Undo font size increase for labels
+				font-size: unit( 0.9 / ( @targetIconSize / @baseIconSize ), em );
 			}
-			.oo-ui-tool-link {
-				display: block;
-				padding: 0 1em 0 .1em;
+			.oo-ui-toolbar-bar {
+				// Overlay toolbar has its own borders
+				border: 0;
 			}
-		}
-
-		.oo-ui-barToolGroup {
-			.oo-ui-tool {
-				display: block;
-				float: left;
-				position: relative;
-
-				&.oo-ui-iconElement {
-					height: @headerHeight;
-					margin: 0 0 0 1em;
-					min-width: 24px;
-				}
-
-				&.oo-ui-tool-active {
-					background-color: #EDF4FF;
-				}
+			// Convert 0.3em margin to padding to make clickable area larger
+			.oo-ui-toolGroup {
+				margin: 0;
 			}
-
-			.oo-ui-tool-link {
-				padding: 0; // reset
-
-				// Hide labels for buttons in the toolbar
-				.oo-ui-tool-title {
-					display: none;
-				}
+			.oo-ui-barToolGroup .oo-ui-tool-link {
+				padding: 0.25em + 0.3em;
+				// Remove once MF box-sizing is fixed
+				.box-sizing( content-box );
 			}
-		}
-
-		// We may want to move these to an oojs-ui theme at some point. The down-side is
-		// that we wouldn't be able to use the @headerHeight LESS variable.
-		.oo-ui-toolbar-tools {
-			.oo-ui-tool-link {
-				height: 100%;
-				.box-sizing( border-box );
-			}
-
-			// FIXME: Merge with icon and icon-32px classes
-			.oo-ui-iconElement-icon {
-				min-width: @headerHeight;
-				width: @headerHeight;
-				height: @headerHeight;
-				// FIXME: Somehow consolidate ooui classes with icon and icon-32px classes so this rule is unnecessary
-				.background-size( 32px, 32px );
-			}
-		}
-
-		// FIXME: Remove these resets once oo-ui supports skinning
-		.oo-ui-tool-active:not(.oo-ui-widget-disabled) {
-			box-shadow: none;
-			border: none;
-		}
-
-		// FIXME: Remove these resets once oo-ui supports skinning
-		.oo-ui-tool:hover:not(.oo-ui-widget-disabled) {
-			border: none;
 		}
 	}
 }
