@@ -24,6 +24,23 @@
 				campaign = campaigns[campaignName];
 				campaign.name = campaignName;
 				campaign.randomClaimId = getRandomProperty( campaign.questions );
+
+				// Support legacy WikiGrok data. Remove this code once all WikiGrok
+				// articles have the new propertyId and propertyName properties.
+				// See https://gerrit.wikimedia.org/r/#/c/181208/
+				if ( campaign.propertyId === undefined ) {
+					campaign.propertyId = campaign.property;
+				}
+				if ( campaign.propertyName === undefined ) {
+					if (
+						campaign.name === 'author' ||
+						campaign.name === 'actor'
+					) {
+						campaign.propertyName = 'occupation';
+					} else if ( campaign.name === 'album' ) {
+						campaign.propertyName = 'instance of';
+					}
+				}
 			}
 			return campaign;
 		}

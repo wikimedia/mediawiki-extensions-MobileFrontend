@@ -257,17 +257,9 @@
 					valueid: options.claimId,
 					value: options.claimLabel,
 					correct: options.claimIsCorrect,
-					propid: options.campaign.property
+					propid: options.campaign.propertyId,
+					prop: options.campaign.propertyName
 				};
-
-			if (
-				options.campaign.name === 'author' ||
-				options.campaign.name === 'actor'
-			) {
-				claim.prop = 'occupation';
-			} else if ( options.campaign.name === 'album' ) {
-				claim.prop = 'instance of';
-			}
 
 			this.apiWikiGrokResponse.recordClaims( [ claim ] ).done( function () {
 				self.thankUser( options, true );
