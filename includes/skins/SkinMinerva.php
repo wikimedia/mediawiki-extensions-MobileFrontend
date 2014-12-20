@@ -842,6 +842,7 @@ class SkinMinerva extends SkinTemplate {
 			$wgMFDeviceWidthTablet,
 			$wgMFAjaxUploadProgressSupport,
 			$wgMFAnonymousEditing,
+			$wgMFWikiDataEndpoint,
 			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc,
 			$wgMFCollapseSectionsByDefault, $wgMFShowRedLinksAnon,
 			$wgMFShowRedLinks;
@@ -850,6 +851,7 @@ class SkinMinerva extends SkinTemplate {
 		$user = $this->getUser();
 
 		$vars = array(
+			'wgMFWikiDataEndpoint' => $wgMFWikiDataEndpoint,
 			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
 			'wgMFAjaxUploadProgressSupport' => $wgMFAjaxUploadProgressSupport,
 			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,

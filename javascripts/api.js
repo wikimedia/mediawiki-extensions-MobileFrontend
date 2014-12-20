@@ -55,7 +55,9 @@
 			options = options || {};
 			if ( this.useJsonp ) {
 				options.url = this.apiUrl;
-				options.dataType = 'jsonp';
+				if ( data.action !== 'tokens' && data.meta !== 'tokens' ) {
+					options.dataType = 'jsonp';
+				}
 			}
 
 			if ( typeof data !== 'string' ) {
@@ -116,13 +118,20 @@
 		 * @return {String}
 		 */
 		getOrigin: function () {
-			return window.location.protocol + '//' + window.location.hostname;
+			var origin = window.location.protocol + '//' + window.location.hostname;
+			if ( window.location.port ) {
+				origin += ':' + window.location.port;
+			}
+			return origin;
 		},
 
 		/**
 		 * Retrieves a token for a given endpoint
 		 * FIXME: consolidate with mw.Api.getToken
 		 * use postWithToken / getToken where possible
+		 * FIXME: This should be made a method in a ForeignApi class.
+		 * FIXME: WikiDataApi code is more modern so that should be the basis for the ForeignApi class.
+		 * FIXME: Only uploads and WikiDataInfobox should be using this. Remove usage in other places.
 		 *
 		 * @method
 		 * @param {String} tokenType Name of the type of token needed e.g. edit, upload - defaults to edit

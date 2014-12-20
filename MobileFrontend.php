@@ -266,6 +266,14 @@ $wgMFPhotoUploadEndpoint = '';
 $wgMFNearbyEndpoint = '';
 
 /**
+ * API for querying Wikidata instance.
+ * e.g. https://en.m.wikipedia.org/w/api.php
+ *
+ * @var String
+ */
+$wgMFWikiDataEndpoint = 'https://m.wikidata.org/w/api.php';
+
+/**
  * The content namespace(s) that Special:Nearby and Special:Random should use.
  * Should be one or more of NS_* constants, pipe-separated.
  * @var int|string
