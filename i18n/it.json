@@ -104,6 +104,7 @@
 	"mobile-frontend-enable-images": "Abilita le immagini sul sito per dispositivi mobili",
 	"mobile-frontend-expand-sections-description": "Espandi sempre tutte le sezioni, quando si naviga in una nuova pagina.",
 	"mobile-frontend-expand-sections-status": "Espandi tutte le sezioni",
+	"mobile-frontend-fontchanger-link": "Dimensione carattere",
 	"mobile-frontend-featured-article": "Vetrina",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Le immagini su {{SITENAME}} provengono da Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Contribuisci con le tue immagini.\nAiuta a rendere viva {{SITENAME}}!",
@@ -175,6 +176,7 @@
 	"mobile-frontend-media-details": "Dettagli",
 	"mobile-frontend-media-license-link": "Informazioni sulla licenza",
 	"mobile-frontend-meta-data-issues": "Questa pagina ha alcuni problemi",
+	"mobile-frontend-meta-data-issues-alpha": "Problemi con la pagina",
 	"mobile-frontend-meta-data-issues-talk": "A proposito di questa pagina di discussione",
 	"mobile-frontend-meta-data-issues-header": "Anomalie",
 	"mobile-frontend-meta-data-issues-header-talk": "A proposito di questa pagina",
@@ -335,5 +337,6 @@
 	"tag-mobile_web_edit": "Modifica da web per mobile",
 	"tag-mobile_web_edit-description": "Modifica apportata dal sito web per dispositivi mobili",
 	"mobile-frontend-pageaction-edit-tooltip": "Modifica la sezione iniziale di questa pagina.",
-	"mobile-frontend-pageaction-upload-tooltip": "Carica una foto iniziale per questa pagina."
+	"mobile-frontend-pageaction-upload-tooltip": "Carica una foto iniziale per questa pagina.",
+	"mobile-frontend-donate-button-label": "Dona"
 }

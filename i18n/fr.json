@@ -125,6 +125,7 @@
 	"mobile-frontend-enable-images": "Activer les images sur le site mobile",
 	"mobile-frontend-expand-sections-description": "Toujours développer toutes les sections en navigant vers une nouvelle page.",
 	"mobile-frontend-expand-sections-status": "Développer toutes les sections",
+	"mobile-frontend-fontchanger-link": "Taille de police",
 	"mobile-frontend-featured-article": "Contenu recommandé du jour",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Les images sur {{SITENAME}} viennent de WikiMédia Communs.",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Contribuez par vos images. Aidez {{SITENAME}} à prendre vie !",
@@ -196,6 +197,7 @@
 	"mobile-frontend-media-details": "Détails",
 	"mobile-frontend-media-license-link": "Informations sur la licence",
 	"mobile-frontend-meta-data-issues": "Cette page a quelques problèmes",
+	"mobile-frontend-meta-data-issues-alpha": "Questions sur la page",
 	"mobile-frontend-meta-data-issues-talk": "À propos de cette page de discussion",
 	"mobile-frontend-meta-data-issues-header": "Problèmes",
 	"mobile-frontend-meta-data-issues-header-talk": "À propos de cette page",
@@ -353,5 +355,6 @@
 	"tag-mobile_web_edit": "Modification par le web mobile",
 	"tag-mobile_web_edit-description": "Modification effectuée depuis le site web mobile",
 	"mobile-frontend-pageaction-edit-tooltip": "Modifier la section fil directeur de cette page.",
-	"mobile-frontend-pageaction-upload-tooltip": "Télécharger une photo de fil conducteur pour cette page."
+	"mobile-frontend-pageaction-upload-tooltip": "Télécharger une photo de fil conducteur pour cette page.",
+	"mobile-frontend-donate-button-label": "Faire un don"
 }
