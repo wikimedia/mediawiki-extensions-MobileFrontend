@@ -48,8 +48,6 @@
 		 */
 		destroyTarget: function () {
 			if ( this.target ) {
-				// keyboard stays open on iOS when we close the editor if we don't blur
-				this.$( '[contenteditable]' ).blur();
 				this.target.destroy();
 				this.target = null;
 				this.docToSave = null;
@@ -206,10 +204,10 @@
 		onSurfaceReady: function () {
 			this.clearSpinner();
 			this.$( '.surface' ).show();
-			this.target.surface.getModel().getDocument().connect( this, {
+			this.target.getSurface().getModel().getDocument().connect( this, {
 				transact: 'onTransact'
 			} );
-			this.target.surface.$element.addClass( 'content' );
+			this.target.getSurface().$element.addClass( 'content' );
 
 			// we have to do it here because contenteditable elements still do not
 			// exist when postRender is executed
