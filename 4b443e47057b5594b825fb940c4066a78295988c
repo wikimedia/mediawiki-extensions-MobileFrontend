@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_c42bd476",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-22T22:55:34Z",
+      "side": 1,
+      "message": "Oops, the acceptance criteria for this card was written before we had wgMFEnableWikiGrokForAnons and I forgot to update it to take that into account. We want WikiGrok Roulette to also respect wgMFEnableWikiGrokForAnons. I have updated the card now. Sorry!",
+      "revId": "4b443e47057b5594b825fb940c4066a78295988c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_166026cb",
         "filename": "javascripts/modules/wikigrok/init.js",
         "patchSetId": 22
