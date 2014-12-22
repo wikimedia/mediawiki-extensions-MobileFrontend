@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_163906cb",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 22
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T19:24:39Z",
+      "side": 1,
+      "message": "What if JavaScript is not enabled?",
+      "revId": "4b443e47057b5594b825fb940c4066a78295988c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_56577e05",
+        "filename": "javascripts/modules/wikiGrokRoulette/init.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T19:24:39Z",
+      "side": 1,
+      "message": "Please document class and put in separate file.",
+      "revId": "4b443e47057b5594b825fb940c4066a78295988c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_166026cb",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T19:24:39Z",
+      "side": 1,
+      "message": "This probably should be a property on the dialog itself now I look at this code.\n\ndialog.isDrawer()",
+      "revId": "4b443e47057b5594b825fb940c4066a78295988c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_76a082f1",
+        "filename": "less/modules/wikiGrokRoulette.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T19:24:39Z",
+      "side": 1,
+      "message": "could this potentially be this useful for other things?\nSeems strange having a single rule in a css file.\n\nAlso it\u0027s not clear from less file name what this code applies to.\nIf ErrorDrawer it should probably be in drawers.less in some form",
+      "revId": "4b443e47057b5594b825fb940c4066a78295988c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
