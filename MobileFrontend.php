@@ -177,7 +177,7 @@ $wgGroupPermissions['sysop']['mf-uploadbutton'] = true;
 function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
 		$wgResourceLoaderLESSImportPaths,
-		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall;
+		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall, $wgResourceModules, $wgMobileVEModules;
 
 	// Depends on Mantle extension
 	if ( !class_exists( 'MantleHooks' ) ) {
@@ -203,6 +203,11 @@ function efMobileFrontend_Setup() {
 			'wgMFThumbnailMedium' => MobilePage::MEDIUM_IMAGE_WIDTH . 'px',
 		)
 	);
+
+	// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
+	if ( class_exists( 'VisualEditorHooks' ) ) {
+		$wgResourceModules = array_merge( $wgResourceModules, $wgMobileVEModules );
+	}
 }
 
 // ResourceLoader modules

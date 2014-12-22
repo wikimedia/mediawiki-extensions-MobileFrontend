@@ -347,32 +347,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.editor.ve' => $wgMFResourceBoilerplate + array(
-		'dependencies' => array(
-			'ext.visualEditor.mobileViewTarget',
-			'mobile.stable',
-			'mobile.templates',
-			'mobile.editor.common',
-			'mobile.overlays',
-		),
-		'styles' => array(
-			'less/modules/editor/VisualEditorOverlay.less',
-		),
-		'scripts' => array(
-			'javascripts/modules/editor/VisualEditorOverlay.js',
-		),
-		'templates' => array(
-			'contentVE.hogan' => 'templates/modules/editor/contentVE.hogan',
-		),
-		'messages' => array(
-			'mobile-frontend-page-edit-summary',
-			'mobile-frontend-editor-editing',
-		),
-		'targets' => array(
-			'mobile',
-		),
-	),
-
 	'mobile.editor.overlay' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.editor.common',
@@ -1103,6 +1077,37 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'class' => 'MobileUserModule',
 	),
 ) );
+
+/**
+ * Mobile VisualEditor related modules
+ */
+$wgMobileVEModules = array(
+	'mobile.editor.ve' => $wgMFResourceBoilerplate + array(
+		'dependencies' => array(
+			'ext.visualEditor.mobileViewTarget',
+			'mobile.stable',
+			'mobile.templates',
+			'mobile.editor.common',
+			'mobile.overlays',
+		),
+		'styles' => array(
+			'less/modules/editor/VisualEditorOverlay.less',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/VisualEditorOverlay.js',
+		),
+		'templates' => array(
+			'contentVE.hogan' => 'templates/modules/editor/contentVE.hogan',
+		),
+		'messages' => array(
+			'mobile-frontend-page-edit-summary',
+			'mobile-frontend-editor-editing',
+		),
+		'targets' => array(
+			'mobile',
+		),
+	),
+);
 
 /**
  * Special page modules
