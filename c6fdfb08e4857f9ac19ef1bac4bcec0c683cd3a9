@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9333e85e",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1381,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T18:24:24Z",
+      "side": 1,
+      "message": "This assumes that VisualEditor was included beforehand.\nHooks would be better approach.\n\nAlso I\u0027m not sure if class_exists( \u0027VisualEditorHooks\u0027 ) is the best way to test\n\nPulling in some VE folks who might know better.",
+      "revId": "c6fdfb08e4857f9ac19ef1bac4bcec0c683cd3a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
