@@ -57,56 +57,56 @@
 						id: 'P18'
 					},
 					{
-						label: 'Director',
+						// Director
 						id: 'P57'
 					},
 					{
-						label: 'Produced by',
+						// Produced by
 						id: 'P162'
 					},
 					{
-						label: 'Story by',
+						// Story by
 						id: 'P58'
 					},
 					{
-						label: 'Based on',
+						// Based on
 						id: 'P144'
 					},
 					{
-						label: 'Starring',
+						// Starring
 						id: 'P161'
 					},
 					{
-						label: 'Music by',
+						// Music by
 						id: 'P86'
 					},
 					{
-						label: 'Cinematography',
+						// Cinematography
 						id: 'P344'
 					},
 					{
-						label: 'Film editor',
+						// Film editor
 						id: 'P1040'
 					},
 					{
-						label: 'Production company',
+						// Production company
 						id: 'P272'
 					},
 					{
-						label: 'Distributor',
+						// Distributor
 						id: 'P750'
 					},
 					{
-						label: 'Released',
+						// Released'
 						id: 'P577'
 					},
 					// FIXME: running time is not available on Wikidata
 					{
-						label: 'Country of origin',
+						//Country of origin
 						id: 'P495'
 					},
 					{
-						label: 'Original language',
+						//Original language
 						id: 'P364'
 					}
 					// FIXME: budget is not available on Wikidata
@@ -120,19 +120,19 @@
 						id: 'P18'
 					},
 					{
-						label: 'Conservation status',
+						// Conservation status
 						id: 'P141'
 					},
 					{
-						label: 'Genus',
+						// Genus
 						id: 'P171'
 					},
 					{
-						label: 'Species',
+						// Species
 						id: 'P225'
 					},
 					{
-						label: 'Geographic distribution',
+						// Geographic distribution
 						id: 'P181'
 					}
 				]
@@ -144,65 +144,65 @@
 						id: 'P18'
 					},
 					{
-						label: 'Flag',
+						// Flag
 						id: 'P41'
 					},
 					{
-						label: 'Coat of arms',
+						// Coat of arms
 						id: 'P94'
 					},
 					// FIXME: add motto
 					{
-						label: 'Anthem',
+						// Anthem
 						id: 'P85'
 					},
 					{
-						label: 'Location',
+						// Location
 						id: 'P242'
 					},
 					{
-						label: 'Languages',
+						// Languages
 						id: 'P37'
 					},
 					{
-						label: 'Capital',
+						// Capital
 						id: 'P36'
 					},
 					// FIXME: Add ethnic groups
 					{
-						label: 'Basic form of government',
+						// Basic form of government
 						id: 'P122'
 					},
 					{
-						label: 'Legislature',
+						// Legislature
 						id: 'P194'
 					},
 					// FIXME: Add Area
 					{
-						label: 'Population',
+						// Population
 						id: 'P1082'
 					},
 					// GDP
 					{
-						label: 'Currency',
+						// Currency
 						id: 'P38'
 					},
 					{
-						label: 'Timezone',
+						// Timezone
 						id: 'P421'
 					},
 					// FIXME: add Date format
 					// FIXME: add Drives on the (left/right)
 					{
-						label: 'Country calling code',
+						// Country calling code
 						id: 'P474'
 					},
 					{
-						label: 'ISO 3166 code',
+						// ISO 3166 code
 						id: 'P297'
 					},
 					{
-						label: 'Internet TLD',
+						// Internet TLD
 						id: 'P78'
 					}
 				]
@@ -214,128 +214,130 @@
 						id: 'P18'
 					},
 					{
-						label: 'Flag',
+						// Flag
 						id: 'P41'
 					},
 					{
-						label: 'Coat of arms',
+						// Coat of arms
 						id: 'P94'
 					},
 					{
-						label: 'Coordinates',
+						// Coordinates
 						id: 'P625'
 					},
 					{
-						label: 'State',
+						// State
 						id: 'P131'
 					},
 					{
-						label: 'Country',
+						// Country
 						id: 'P17'
 					},
 					{
-						label: 'Founded',
+						// Founded
 						id: 'P571'
 					},
 					{
-						label: 'Population',
+						// Population
 						id: 'P1082'
 					},
 					{
-						label: 'Timezone',
+						// Timezone
 						id: 'P421'
 					},
 					{
-						id: 'P856',
-						label: 'Official website'
+						// Born
+						id: 'P569'
 					}
 				]
 			},
 			human: {
 				rows: [
 					{
+						// Image
 						id: 'P18'
 					},
 					{
-						id: 'P569',
-						label: 'Born'
+						// Born
+						id: 'P569'
 					},
 					{
-						id: 'P19',
-						label: 'Birthplace'
+						// Birthplace
+						id: 'P19'
 					},
 					{
-						id: 'P570',
-						label: 'Died'
+						// Died
+						id: 'P570'
 					},
 					{
-						id: 'P20',
-						label: 'Place of death'
+						// Place of death
+						id: 'P20'
 					},
 					{
-						id: 'P27',
-						label: 'Country of citizenship'
+						// Country of citizenship
+						id: 'P27'
 					},
 					// FIXME: Add political party
 					{
-						id: 'P26',
-						label: 'Spouse(s)'
+						// Spouse(s)
+						id: 'P26'
 					}, {
-						id: 'P25',
-						label: 'Mother(s)'
+						// Mother(s)
+						id: 'P25'
 					}, {
-						id: 'P22',
-						label: 'Father(s)'
+						// Father(s)
+						id: 'P22'
 					},
 					//FIXME: Add Stepfather(s) (P43) and step mothers?
 					{
-						id: 'P9',
-						label: 'Sister(s)'
+						// Sister(s)
+						id: 'P9'
 					},
 					{
-						id: 'P7',
-						label: 'Brother(s)'
+						// Brother(s)
+						id: 'P7'
 					},
 					{
-						id: 'P40',
-						label: 'Child(ren)'
+						// Child(ren)
+						id: 'P40'
 					},
 					// FIXME: add residence?
 					{
-						id: 'P69',
-						label: 'Alma mater'
+						// Alma mater
+						id: 'P69'
 					},
 					{
-						id: 'P106',
-						label: 'Occupation'
+						// Occupation
+						id: 'P106'
 					},
 					{
-						id: 'P108',
-						label: 'Employer(s)'
+						// Employer(s)
+						id: 'P108'
 					},
 					{
-						id: 'P140',
-						label: 'Religion'
+						// Religion
+						id: 'P140'
 					},
 					// FIXME: add awards?
 					{
-						id: 'P109',
-						label: 'Signature'
+						// Signature
+						id: 'P109'
 					},
 					{
-						id: 'P856',
-						label: 'Official website'
+						// Official website
+						id: 'P856'
 					}
 				]
 			},
 			default: {
 				rows: [
 					{
+						// image
 						id: 'P18'
 					},
 					{
-						id: 'P856',
-						label: 'Official website'
+						// Official website
+						id: 'P856'
 					}
 				]
 			}
@@ -429,6 +431,7 @@
 
 			// collect all the label ids
 			$.each( rows, function ( i, row ) {
+				labelIds.push( row.id );
 				$.each( row.values, function ( i, value ) {
 					if ( value.id ) {
 						labelIds.push( value.id );
@@ -440,6 +443,7 @@
 			return this.api.getExpandedItemsData( labelIds ).then( function ( labels ) {
 				// map the property id to the actual label.
 				$.each( rows, function ( i, row ) {
+					row.label = labels[ row.id ].label;
 					$.each( row.values, function ( j, value ) {
 						var item = labels[ value.id ];
 						if ( item ) {
