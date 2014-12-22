@@ -340,5 +340,6 @@
 	"apihelp-mobileview-param-page": "Titlul paginii de procesat.",
 	"apihelp-mobileview-param-noimages": "Returnează HTML fără imagini.",
 	"apihelp-mobileview-param-thumbnail": "Dimensiunile maxime pentru miniaturi.",
-	"mobile-frontend-donate-button-label": "Donații"
+	"mobile-frontend-donate-button-label": "Donații",
+	"mobile-frontend-wikidata-editor-description-label": "Descrieți ''$1'' într-o singură propoziție:"
 }

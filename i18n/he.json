@@ -348,5 +348,14 @@
 	"apihelp-mobileview-description": "מחזיר נתונים שנחוצים לתצוגות ניידות.",
 	"apihelp-mobileview-param-page": "כותרת הדף לעיבוד.",
 	"apihelp-mobileview-param-redirect": "האם לעקוב אחר הפניות.",
-	"mobile-frontend-donate-button-label": "תרומה"
+	"apihelp-mobileview-param-sections": "רשימה מופרדת במקלות (\"|\") של מספרי פסקאות שעבורם צריך להחזיר טקסט. \"all\" ייתן את כולן. טווחים בצורת \"1-4\" ייתנו את פסקאות 1,2,3,4. טווחים בלי המספר השני, למשל \"1-\" ייתנו את כל הפסקאות עד הסוף. אפשר להשתמש בערך \"references\" כדי לציין שיש לקבל את כל הפסקאות שמכילות הערות שוליים.",
+	"apihelp-mobileview-param-sectionprop": "איזה מידע לקבל על פסקאות.",
+	"apihelp-mobileview-param-pageprops": "אילו מאפייני דף לקבל, רשימה מופרדת במקל (\"|\") או \"*\" עבור כל המאפיינים.",
+	"apihelp-mobileview-param-variant": "להמיר תוכן להגוון השפה הזה.",
+	"apihelp-mobileview-param-noimages": "להחזיר HTML ללא תמונות.",
+	"apihelp-mobileview-param-noheadings": "לא לכלול כותרות בפלט.",
+	"apihelp-mobileview-param-notransform": "לא להמיר HTML לגרסה ייחודית לניידים.",
+	"apihelp-mobileview-param-onlyrequestedsections": "להחזיר רק את הפסקאות המבוקשות אפילו עם $1prop=sections.",
+	"mobile-frontend-donate-button-label": "תרומה",
+	"mobile-frontend-wikidata-editor-description-label": "נא לתאר את \"$1\" במשפט אחד:"
 }
