@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
-	var drawer,
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+	var drawer;
 
 	/**
 	 * Return the matched reference among the children of ol.references
@@ -23,13 +22,11 @@
 	 * @method
 	 * @ignore
 	 * @param {jQuery.Event} ev Event object
-	 * @uses loggingSchemas/MobileWebClickTracking
 	 */
 	function showReference( ev ) {
 		var $dest = $( this ),
 			href = $dest.attr( 'href' );
 
-		MobileWebClickTracking.log( 'UI', 'reference', href );
 		drawer.render( {
 			title: $dest.text(),
 			text: getReference( href ).html()

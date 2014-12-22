@@ -43,6 +43,8 @@
 			// don't run eventLogging
 			this.stub( WikiGrokDialog.prototype, 'log' );
 			this.stub( WikiGrokDialog.prototype, 'logError' );
+			// show method is async and not needed on tests and will interfere with them trigging a call to logPageImpression
+			this.stub( WikiGrokDialog.prototype, 'show' );
 
 			this.sandbox.stub( mw.config, 'get').withArgs( 'wgWikiGrokCampaigns' )
 				.returns( campaigns );

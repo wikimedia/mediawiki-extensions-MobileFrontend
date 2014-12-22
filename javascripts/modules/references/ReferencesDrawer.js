@@ -1,7 +1,8 @@
 ( function ( M ) {
-	var Drawer = M.require( 'Drawer' ),
+	var ReferencesDrawer,
+		Drawer = M.require( 'Drawer' ),
 		Icon = M.require( 'Icon' ),
-		ReferencesDrawer;
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
 
 	/**
 	 * Drawer for references
@@ -20,6 +21,11 @@
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString()
+		},
+		/** @inheritdoc */
+		show: function () {
+			MobileWebClickTracking.log( 'UI', 'reference' );
+			return Drawer.prototype.show.apply( this, arguments );
 		},
 		className: 'drawer position-fixed text references',
 		template: mw.template.get( 'mobile.references', 'Drawer.hogan' )
