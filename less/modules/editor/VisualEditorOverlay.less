@@ -1,16 +1,6 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-// These are set as !important since they have to override styles set in VisualEditor
-// FIXME: Remove protected node once VE is correctly identifying which nodes are
-// supported in mobile.
-.ve-ce-alienNode-phantom,
-.ve-ce-protectedNode-phantom {
-	box-shadow: none !important;
-	opacity: 0.5 !important;
-	background-color: white !important;
-}
-
 .editor-overlay-ve .content {
 	// VisualEditor doesn't have collapsible-heading class, so we need to apply
 	// heading styles to the header tags directly.
