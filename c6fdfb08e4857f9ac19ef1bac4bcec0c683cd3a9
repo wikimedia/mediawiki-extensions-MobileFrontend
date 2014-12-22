@@ -16,6 +16,24 @@
       "revId": "c6fdfb08e4857f9ac19ef1bac4bcec0c683cd3a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_136d982d",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1381,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-22T18:30:15Z",
+      "side": 1,
+      "message": "Argh, right :( But instead of a hook the MF extension function is maybe better?",
+      "parentUuid": "0e6cb3ef_9333e85e",
+      "revId": "c6fdfb08e4857f9ac19ef1bac4bcec0c683cd3a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
