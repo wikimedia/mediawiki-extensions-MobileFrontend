@@ -34,6 +34,24 @@
       "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f6c6d24d",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-22T20:09:59Z",
+      "side": 1,
+      "message": "Hmm, i want to follow your thoughts, really, but i don\u0027t know, what you mean :/ Let\u0027s say, we implement a getConfigValue (which is, in fact, a wrapper for mw.config.get()). What should it do? Check for undefined before return a value and instead return false? If skipPreview isn\u0027t set in LocalSettings, skipPreview will undefined here, which is interpreted as false, which is the default value?\n\nLooking forward for your answer :)",
+      "parentUuid": "0e6cb3ef_b6a93a7a",
+      "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
