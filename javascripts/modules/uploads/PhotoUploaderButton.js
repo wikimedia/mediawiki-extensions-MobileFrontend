@@ -1,5 +1,6 @@
-( function ( M, $ ) {
-	var View = M.require( 'View' ),
+( function ( M ) {
+	var browser = M.require( 'browser' ),
+		View = M.require( 'View' ),
 		Icon = M.require( 'Icon' ),
 		photoIcon = new Icon( {
 			name: 'photo',
@@ -7,28 +8,6 @@
 			additionalClassNames: 'mw-ui-progressive mw-ui-button button'
 		} ),
 		PhotoUploaderButton;
-
-	/**
-	 * Check whether photo upload is supported
-	 * FIXME: Move to Browser.js
-	 * @method
-	 * @ignore
-	 * @returns {Boolean}
-	 */
-	function isSupported() {
-		// FIXME: create a module for browser detection stuff
-		// deal with known false positives which don't support file input (bug 47374)
-		if ( navigator.userAgent.match( /Windows Phone (OS 7|8.0)/ ) ) {
-			return false;
-		}
-		var browserSupported = (
-			typeof FileReader !== 'undefined' &&
-			typeof FormData !== 'undefined' &&
-			( $( '<input type="file"/>' ).prop( 'type' ) === 'file' ) // Firefox OS 1.0 turns <input type="file"> into <input type="text">
-		);
-
-		return browserSupported && !mw.config.get( 'wgImagesDisabled', false );
-	}
 
 	/**
 	 * @class PhotoUploaderButton
@@ -90,8 +69,8 @@
 		}
 	} );
 
-	PhotoUploaderButton.isSupported = isSupported();
+	PhotoUploaderButton.isSupported = browser.supportsFileUploads();
 
 	M.define( 'modules/uploads/PhotoUploaderButton', PhotoUploaderButton );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
