@@ -371,9 +371,11 @@
 	"apihelp-mobileview-param-prop": "要获取的信息：\n;text:选定段落的HTML。\n;sections:有关页面上所有段落的信息。\n;normalizedtitle:标准化的页面标题。\n;lastmodified:页面最近修改时的 ISO 8601 时间戳，例如“2014-04-13T22:42:14Z”。\n;lastmodifiedby:有关最近修改页面的用户的信息。\n;revision:返回页面的当前修订版本ID。\n;protection:有关保护级别的信息。\n;editable:当前用户是否可以编辑此页面。这包括所有用于登录用户但不会封禁匿名用户的因素。\n;languagecount:此页面可用的语言数。\n;hasvariants:此页面在其他语言变体中是否可用。\n;displaytitle:页面的渲染标题，带&#123;&#123;DISPLAYTITLE&#125;&#125;和这样的代码。\n;pageprops:页面属性。",
 	"apihelp-mobileview-param-sectionprop": "要获取的有关操作的信息。",
 	"apihelp-mobileview-param-noimages": "返回不带图片的HTML。",
+	"apihelp-mobileview-param-noheadings": "输出时不包含标题。",
 	"apihelp-mobileview-param-thumbnail": "最大缩略图尺寸。",
 	"apihelp-mobileview-example-1": "获取有关[[Doom metal]]的第0章节的信息",
 	"apihelp-parse-param-noimages": "在移动输出中禁用图片。",
 	"apihelp-parse-param-mainpage": "应用移动首页转换。",
-	"mobile-frontend-donate-button-label": "捐赠"
+	"mobile-frontend-donate-button-label": "捐赠",
+	"mobile-frontend-wikidata-editor-description-label": "用一句话介绍“$1”："
 }

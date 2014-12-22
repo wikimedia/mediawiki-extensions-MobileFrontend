@@ -330,5 +330,6 @@
 	"nearby": "Páginas cercanas",
 	"tag-mobile_edit": "Edición desde móvil",
 	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)",
-	"mobile-frontend-donate-button-label": "Dona"
+	"mobile-frontend-donate-button-label": "Dona",
+	"mobile-frontend-wikidata-editor-description-label": "Describe ''$1'' en una sola oración:"
 }

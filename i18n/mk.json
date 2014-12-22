@@ -358,5 +358,6 @@
 	"apihelp-parse-param-mobileformat": "Дај расчленувачки извод во формат погоден за мобилни уреди.",
 	"apihelp-parse-param-noimages": "Оневозможи слики во мобилниот извод.",
 	"apihelp-parse-param-mainpage": "Примени преобразби на главната мобилна страница.",
-	"mobile-frontend-donate-button-label": "Дарувајте"
+	"mobile-frontend-donate-button-label": "Дарувајте",
+	"mobile-frontend-wikidata-editor-description-label": "Опишете ја ''$1'' во една реченица:"
 }

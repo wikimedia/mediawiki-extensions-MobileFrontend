@@ -338,5 +338,6 @@
 	"mobile-frontend-pageaction-edit-tooltip": "Editar introdução desta página.",
 	"mobile-frontend-pageaction-upload-tooltip": "Carregar foto principal para esta página.",
 	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel.",
-	"mobile-frontend-donate-button-label": "Fazer donativo"
+	"mobile-frontend-donate-button-label": "Fazer donativo",
+	"mobile-frontend-wikidata-editor-description-label": "Descreva ''$1'' numa única frase:"
 }
