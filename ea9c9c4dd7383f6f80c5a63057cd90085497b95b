@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d3f080c6",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-22T17:07:11Z",
+      "side": 1,
+      "message": "Why do we need cacheId? Can we just replace it with \nmemoized.cache \u003d {}? This way there won\u0027t be a need for \nvar cache \u003d this[ \u0027__cache\u0027 + memoized.cacheId ] ||\n    ( this[ \u0027__cache\u0027 + memoized.cacheId ] \u003d {} ) above.",
+      "revId": "ea9c9c4dd7383f6f80c5a63057cd90085497b95b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
