@@ -16,6 +16,24 @@
       "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b6a93a7a",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T19:59:53Z",
+      "side": 1,
+      "message": "skipPreview may not be set so my point here stands.\n\nLet\u0027s encapsulate this in some way...",
+      "parentUuid": "0e6cb3ef_50681084",
+      "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
