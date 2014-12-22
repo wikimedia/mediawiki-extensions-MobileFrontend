@@ -85,6 +85,7 @@
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			this.isIos = browser.isIos();
+			this.isIos8 = browser.isIos( 8 );
 			View.prototype.initialize.apply( this, arguments );
 		},
 		/** @inheritdoc */
@@ -265,7 +266,7 @@
 							var keyboardHeight = 0;
 
 							// detect virtual keyboard height
-							if ( !M.isIos8 ) {
+							if ( !this.isIos8 ) {
 								// this method does not work in iOS 8.02
 								$window.scrollTop( 999 );
 								keyboardHeight = $window.scrollTop();

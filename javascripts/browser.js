@@ -13,16 +13,53 @@
 		if ( this.isAndroid2() ) {
 			this.lockViewport();
 		}
+		this._fixIosLandscapeBug();
 	}
 
 	Browser.prototype = {
 		/**
+		 * When rotating to landscape stop page zooming on ios 4 and 5.
+		 * @private
+		 */
+		_fixIosLandscapeBug: function () {
+			var self = this,
+				viewport = this.$el.find( 'meta[name="viewport"]' )[0];
+
+			// see http://adactio.com/journal/4470/ (fixed in ios 6)
+			if ( viewport && ( this.isIos( 4 ) || this.isIos( 5 ) ) ) {
+				this.lockViewport();
+				document.addEventListener( 'gesturestart', function () {
+					self.lockViewport();
+				}, false );
+			}
+		},
+		/**
 		 * Returns whether the current browser is an ios device.
 		 * FIXME: jquery.client does not support iPad detection so we cannot use it.
+		 * @param {Number} [version] integer describing a specific version you want to test against.
 		 * @return {Boolean}
 		 */
-		isIos: function () {
-			return /ipad|iphone|ipod/i.test( this.userAgent );
+		isIos: function ( version ) {
+			var ua = this.userAgent,
+				ios = /ipad|iphone|ipod/i.test( ua );
+
+			if ( ios && version ) {
+				switch ( version ) {
+					case 8:
+						// Test UA for iOS8. Or for simulator look for Version 8
+						// In the iOS simulator the OS is the host machine OS version
+						// This makes testing in iOS8 simulator work as expected
+						return /OS 8_/.test( ua ) || /Version\/8/.test( ua );
+					case 4:
+						return /OS 4_/.test( ua );
+					case 5:
+						return /OS 5_/.test( ua );
+					default:
+						return false;
+				}
+			} else {
+				return ios;
+			}
 		},
 		/**
 		 * Locks the viewport so that pinch zooming is disabled
