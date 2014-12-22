@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d3764001",
+        "filename": "less/modules/editor/VisualEditorOverlay.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T18:31:04Z",
+      "side": 1,
+      "message": "Can you use a variable for 32 and use it on the 3 lines that use it to make it clearer where the numbers come from?",
+      "revId": "26d6905502b050d2926a991619eeef19655d2c8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
