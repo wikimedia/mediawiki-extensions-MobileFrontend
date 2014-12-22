@@ -16,6 +16,24 @@
       "revId": "ea9c9c4dd7383f6f80c5a63057cd90085497b95b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_531a307f",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T19:05:42Z",
+      "side": 1,
+      "message": "Having a global cache might be more readable?\ne.g. var cache \u003d {} at top of page.\n\nAlso can we add tests for this to show that it loads from cache the second time?",
+      "parentUuid": "0e6cb3ef_d3f080c6",
+      "revId": "ea9c9c4dd7383f6f80c5a63057cd90085497b95b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
