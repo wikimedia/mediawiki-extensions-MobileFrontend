@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_731734a9",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-22T18:27:04Z",
+      "side": 1,
+      "message": "Err.... Either we need to adjust the comment or this is going to break something.\n\nThis now happens after prepareQuickTemplate",
+      "revId": "7c9eaebd17b5bb98e9804cd237711dc3ac491e8a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
