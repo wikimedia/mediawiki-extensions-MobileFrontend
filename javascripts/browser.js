@@ -2,6 +2,31 @@
 	var browser;
 
 	/**
+	 * Memoize a class method. Caches the result of the method based on the
+	 * arguments. Instances do not share a cache.
+	 * @ignore
+	 * @param {Function} method Method to be memoized
+	 * @returns {Function}
+	 */
+	function memoize( method ) {
+		/**
+		 * Memoized version of the method
+		 * @ignore
+		 */
+		var memoized = function () {
+			var cache = this[ '__cache' + memoized.cacheId ] ||
+				( this[ '__cache' + memoized.cacheId ] = {} ),
+				key = [].join.call( arguments, '|' );
+			if ( cache.hasOwnProperty( key ) ) {
+				return cache[ key ];
+			}
+			return ( cache[ key ] = method.apply( this, arguments ) );
+		};
+		memoized.cacheId = '' + Date.now() + Math.random();
+		return memoized;
+	}
+
+	/**
 	 * Representation of user's current browser
 	 * @class Browser
 	 * @param {String} ua the user agent of the current browser
@@ -39,7 +64,7 @@
 		 * @param {Number} [version] integer describing a specific version you want to test against.
 		 * @return {Boolean}
 		 */
-		isIos: function ( version ) {
+		isIos: memoize( function ( version ) {
 			var ua = this.userAgent,
 				ios = /ipad|iphone|ipod/i.test( ua );
 
@@ -60,7 +85,7 @@
 			} else {
 				return ios;
 			}
-		},
+		} ),
 		/**
 		 * Locks the viewport so that pinch zooming is disabled
 		 */
@@ -75,9 +100,9 @@
 		 * @method
 		 * @return {Boolean}
 		 */
-		isAndroid2: function () {
+		isAndroid2: memoize( function () {
 			return /Android 2/.test( this.userAgent );
-		},
+		} ),
 		/**
 		 * Determine if a device has a widescreen.
 		 * @method
@@ -97,7 +122,7 @@
 		 *
 		 * @returns {boolean}
 		 */
-		supportsAnimations: function () {
+		supportsAnimations: memoize( function () {
 			var  has3d, t,
 				el = $( '<p>' )[0],
 				$iframe = $( '<iframe>' ),
@@ -127,7 +152,7 @@
 			$iframe.remove();
 
 			return has3d !== undefined && has3d.length > 0 && has3d !== 'none';
-		},
+		} ),
 		/**
 		 * Detect if fixed position is supported in browser
 		 * http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
@@ -136,7 +161,7 @@
 		 * @method
 		 * @return {Boolean}
 		 */
-		supportsPositionFixed: function () {
+		supportsPositionFixed: memoize( function () {
 			var support = false,
 				userAgent = this.userAgent;
 
@@ -155,30 +180,30 @@
 				}
 			} );
 			return support;
-		},
+		} ),
 		/**
 		 * Whether touchstart and other touch events are supported by the current browser.
 		 *
 		 * @method
 		 * @return {Boolean}
 		 */
-		supportsTouchEvents: function () {
+		supportsTouchEvents: memoize( function () {
 			return 'ontouchstart' in window;
-		},
+		} ),
 		/**
 		 * Detect if browser supports geolocation
 		 * @method
 		 * @return {Boolean}
 		 */
-		supportsGeoLocation: function () {
+		supportsGeoLocation: memoize( function () {
 			return !!navigator.geolocation;
-		},
+		} ),
 		/**
 		 * Detect if local storage
 		 * @method
 		 * @return {Boolean}
 		 */
-		supportsLocalStorage: function () {
+		supportsLocalStorage: memoize( function () {
 			// See if local storage is supported
 			try {
 				localStorage.setItem( 'localStorageTest', 'localStorageTest' );
@@ -187,12 +212,12 @@
 			} catch ( e ) {
 				return false;
 			}
-		},
+		} ),
 		/**
 		 * Detect if we support file input uploads
 		 * @return {Boolean}
 		 */
-		supportsFileUploads: function () {
+		supportsFileUploads: memoize( function () {
 			var browserSupported;
 			// If already calculated, just return it
 			if ( this._fileUploads !== undefined ) {
@@ -213,7 +238,7 @@
 					!mw.config.get( 'wgImagesDisabled', false );
 			}
 			return this._fileUploads;
-		}
+		} )
 	};
 
 	browser = new Browser( window.navigator.userAgent, $( 'html' ) );
