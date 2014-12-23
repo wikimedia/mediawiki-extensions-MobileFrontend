@@ -52,6 +52,24 @@
       "revId": "ea9c9c4dd7383f6f80c5a63057cd90085497b95b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9fc0c930",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-23T13:21:21Z",
+      "side": 1,
+      "message": "Now that i\u0027ve implemented the test, this:\n\n    console.log(b[\u0027__cache\u0027+b.isAndroid.cacheId])\n    // \u003e { undefined: false }\n\nIs actually this:\n\n    console.log(b[\u0027__cache\u0027+b.isAndroid.cacheId])\n    // \u003e { \u0027\u0027: false }\n\n:p",
+      "parentUuid": "0e6cb3ef_3fb3bdfe",
+      "revId": "ea9c9c4dd7383f6f80c5a63057cd90085497b95b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
