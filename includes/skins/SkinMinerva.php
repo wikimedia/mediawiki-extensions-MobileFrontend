@@ -69,6 +69,7 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 
 		$tpl->set( 'site_urls', $this->getSiteLinks() );
+		$tpl->set( 'discovery_urls', $this->getDiscoveryTools() );
 
 		// Construct various Minerva-specific interface elements
 		$this->prepareSecondaryActions( $tpl );
@@ -79,7 +80,6 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareWarnings( $tpl );
 		$this->preparePageActions( $tpl );
 		$this->prepareUserButton( $tpl );
-		$this->prepareDiscoveryTools( $tpl );
 		$this->preparePersonalTools( $tpl );
 		$this->prepareLanguages( $tpl );
 
@@ -411,9 +411,9 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Prepares a list of links that have the purpose of discovery in the main navigation menu
-	 * @param QuickTemplate $tpl
+	 * @return array
 	 */
-	protected function prepareDiscoveryTools( QuickTemplate $tpl ) {
+	protected function getDiscoveryTools() {
 		global $wgMFNearby, $wgMFNearbyEndpoint, $wgMFContentNamespace;
 
 		$items = array(
@@ -452,7 +452,7 @@ class SkinMinerva extends SkinTemplate {
 		if ( !$wgMFNearby || ( !$wgMFNearbyEndpoint && !class_exists( 'GeoData' ) ) ) {
 			unset( $items['nearby'] );
 		}
-		$tpl->set( 'discovery_urls', $items );
+		return $items;
 	}
 
 	/**

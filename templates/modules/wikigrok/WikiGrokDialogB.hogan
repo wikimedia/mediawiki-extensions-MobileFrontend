@@ -1,6 +1,7 @@
 <!-- note English language only! -->
 <div class="pane content">
 	<p class="wg-content">{{contentMsg}}</p>
+	<p class="wg-thanks-content hidden">{{thanksMsg}}</p>
 	<p class="wg-link">
 		<a href="#/wikigrok/about" class="mw-ui-button mw-ui-progressive mw-ui-block tell-more">Tell me more</a>
 	</p>
@@ -11,7 +12,7 @@
 	</p>
 	<p class="tags">
 	</p>
-	<div class="spinner loading"></div>
+	{{{spinner}}}
 	{{#noticeMsg}}
 	<p class="wg-notice">{{{noticeMsg}}}</p>
 	{{/noticeMsg}}

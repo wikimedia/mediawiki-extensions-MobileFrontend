@@ -949,6 +949,29 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.wikigrok.roulette' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+			'mobile.wikigrok.dialog.b',
+		),
+		'scripts' => array(
+			'javascripts/modules/wikiGrokRoulette/ErrorDrawer.js',
+			'javascripts/modules/wikiGrokRoulette/init.js',
+		),
+		'templates' => array(
+			'Error.hogan' => 'templates/modules/wikiGrokRoulette/error.hogan',
+		)
+	),
+
+	'mobile.wikigrok.dialog.c' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.wikigrok.dialog.b',
+		),
+		'scripts' => array(
+			'javascripts/modules/wikigrok/WikiGrokDialogC.js',
+		),
+	),
+
 	'mobile.wikigrok.dialog.b' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.wikigrok.dialog',
@@ -1353,11 +1376,12 @@ $wgMinervaBootstrapModules = array(
 			'mobile.infobox',
 			'mobile.bannerImage',
 			'mobile.fontchanger',
+			'mobile.wikigrok.roulette',
 		),
 		'scripts' => array(
 			'javascripts/modules/infobox/init.js',
 			'javascripts/modules/bannerImage/init.js',
-		),
+		)
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(

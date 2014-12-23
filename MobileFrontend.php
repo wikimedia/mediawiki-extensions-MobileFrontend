@@ -568,6 +568,11 @@ $wgMFEnableWikiGrokForAnons = false;
 $wgMFEnableWikiGrokOnAllDevices = false;
 
 /**
+ * Controls whether WikiGrok in Sidebar is enabled
+ */
+$wgMFEnableWikiGrokInSidebar = false;
+
+/**
  * Whether beta and alpha modes are enabled
  */
 $wgMFEnableBeta = false;
