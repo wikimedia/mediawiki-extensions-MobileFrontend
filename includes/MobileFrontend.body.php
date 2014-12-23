@@ -31,7 +31,6 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public static function DOMParse( OutputPage $out ) {
-		global $wgMFNamespacesWithoutCollapsibleSections;
 		wfProfileIn( __METHOD__ );
 
 		$html = $out->getHTML();
@@ -52,7 +51,10 @@ class ExtMobileFrontend {
 			$out->canUseWikiPage()
 			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
 			// And not in certain namespaces
-			&& array_search( $title->getNamespace(), $wgMFNamespacesWithoutCollapsibleSections ) === false
+			&& array_search(
+				$title->getNamespace(),
+				$context->getMFConfig()->get( 'MFNamespacesWithoutCollapsibleSections' )
+			) === false
 			// And not when what's shown is not actually article text
 			&& $context->getRequest()->getText( 'action', 'view' ) == 'view'
 		);

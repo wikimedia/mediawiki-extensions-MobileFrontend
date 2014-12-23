@@ -27,13 +27,14 @@ class MinervaTemplateBeta extends MinervaTemplate {
 	 * Get page secondary actions
 	 */
 	protected function getSecondaryActions() {
-		global $wgMFDonationUrl;
+		$donationUrl = $this->getSkin()->getMFConfig()->get( 'MFDonationUrl' );
+
 		$result = parent::getSecondaryActions();
 
-		if ( $wgMFDonationUrl && !$this->isSpecialPage ) {
+		if ( $donationUrl && !$this->isSpecialPage ) {
 			$result['donation'] = array(
 				'attributes' => array(
-					'href' => $wgMFDonationUrl,
+					'href' => $donationUrl,
 				),
 				'label' => wfMessage( 'mobile-frontend-donate-button-label' )->text()
 			);
