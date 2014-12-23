@@ -267,7 +267,7 @@
 			this._showCaptcha( editApi.captcha.url );
 		},
 		/** @inheritdoc **/
-		_hasChanged: function () {
+		hasChanged: function () {
 			return this.hasChanged;
 		}
 	} );

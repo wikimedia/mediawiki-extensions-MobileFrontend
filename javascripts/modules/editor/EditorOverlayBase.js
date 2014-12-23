@@ -302,7 +302,7 @@
 		 */
 		hide: function ( force ) {
 			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
-			if ( force || !this._hasChanged() || window.confirm( confirmMessage ) ) {
+			if ( force || !this.hasChanged() || window.confirm( confirmMessage ) ) {
 				return Overlay.prototype.hide.apply( this, arguments );
 			} else {
 				return false;
@@ -312,9 +312,8 @@
 		 * Checks whether the state of the thing being edited as changed. Expects to be
 		 * implemented by child class.
 		 * @method
-		 * @private
 		 */
-		_hasChanged: $.noop(),
+		hasChanged: $.noop(),
 		/**
 		 * Reveal the captcha in the View
 		 * @method
