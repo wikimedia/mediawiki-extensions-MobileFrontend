@@ -169,7 +169,7 @@ class SkinMinerva extends SkinTemplate {
 			$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
 			return Html::element( 'a', array(
 				'href' => '#/editor/' . $section,
-				'title' => wfMessage( 'editsectionhint', $tooltip )->inLanguage( $lang ),
+				'title' => wfMessage( 'editsectionhint', $tooltip )->inLanguage( $lang )->text(),
 				'data-section' => $section,
 				// Note visibility of the edit section link button is controlled by .edit-page in ui.less so
 				// we default to enabled even though this may not be true.
