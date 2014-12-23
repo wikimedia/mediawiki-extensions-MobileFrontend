@@ -70,7 +70,7 @@
 				this.target.activating = true;
 				this.target.load();
 				this.target.connect( this, {
-					save: 'onSave',
+					save: 'onSaveComplete',
 					saveAsyncBegin: 'showSpinner',
 					saveAsyncComplete: 'clearSpinner',
 					saveErrorEmpty: 'onSaveError',
@@ -192,8 +192,8 @@
 			} );
 		},
 		/** @inheritdoc **/
-		onSave: function () {
-			EditorOverlayBase.prototype.onSave.apply( this, arguments );
+		onSaveComplete: function () {
+			EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
 			this.clearSpinner();
 			this.destroyTarget();
 		},

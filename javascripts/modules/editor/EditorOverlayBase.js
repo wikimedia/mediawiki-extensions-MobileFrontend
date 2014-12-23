@@ -143,7 +143,7 @@
 		 * messages, and setting mobile edit cookie.
 		 * @method
 		 */
-		onSave: function () {
+		onSaveComplete: function () {
 			var msg,
 				title = this.options.title,
 				self = this;

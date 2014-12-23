@@ -337,7 +337,7 @@
 						return;
 					}
 
-					self.onSave();
+					self.onSaveComplete();
 				} )
 				.fail( function ( data, code, response ) {
 					var msg,
