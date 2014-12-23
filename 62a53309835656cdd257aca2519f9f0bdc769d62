@@ -16,6 +16,24 @@
       "revId": "62a53309835656cdd257aca2519f9f0bdc769d62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7f2055a8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-12-23T15:29:53Z",
+      "side": 1,
+      "message": "I realized that, when I saw the change in gerrit... but then again, I don\u0027t care enough",
+      "parentUuid": "0e6cb3ef_bf590d2f",
+      "revId": "62a53309835656cdd257aca2519f9f0bdc769d62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
