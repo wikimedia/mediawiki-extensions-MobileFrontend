@@ -34,6 +34,24 @@
       "revId": "044aa86510e297157a31c461d2afa8786d2c3140",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_daebac07",
+        "filename": "javascripts/modules/wikiGrokRoulette/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-23T23:16:01Z",
+      "side": 1,
+      "message": "Yeah, I think it would make sense to put...\nloadingOverlay.hide( false );\nmainMenu.closeNavigationDrawers();\n... in an .always() clause instead of here (but leave the error calls). The current version is actually slightly easier to read, IMO, but I\u0027m sure Jon wouldn\u0027t like the unneeded code duplication.",
+      "parentUuid": "0e6cb3ef_7a84e05e",
+      "revId": "044aa86510e297157a31c461d2afa8786d2c3140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
