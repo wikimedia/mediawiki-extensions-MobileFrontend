@@ -209,6 +209,9 @@ function efMobileFrontend_Setup() {
 	}
 }
 
+// Config instance
+$wgConfigRegistry['mobilefrontend'] = 'GlobalVarConfig::newInstance';
+
 // ResourceLoader modules
 
 /**

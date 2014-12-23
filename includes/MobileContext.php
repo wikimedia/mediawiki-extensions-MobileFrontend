@@ -78,6 +78,10 @@ class MobileContext extends ContextSource {
 	 * @var string What to switch the view to
 	 */
 	private $viewChange = '';
+	/**
+	 * @var Config MobileFrontend's config object
+	 */
+	private $configObj;
 
 	/**
 	 * Returns the actual MobileContext Instance or create a new if no exists
@@ -108,11 +112,22 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
+	 * Get MobileFrontend's config object.
+	 * @return Config
+	 */
+	public function getMFConfig() {
+		if ( !$this->configObj instanceof Config ) {
+			$this->configObj = ConfigFactory::getDefaultInstance()->makeConfig( 'mobilefrontend' );
+		}
+		return $this->configObj;
+	}
+
+	/**
 	 * Gets the current device description
 	 * @return IDeviceProperties
 	 */
 	public function getDevice() {
-		global $wgMFMobileHeader;
+		$mobileHeader = $this->getMFConfig()->get( 'MFMobileHeader' );
 
 		wfProfileIn( __METHOD__ );
 		if ( $this->device ) {
@@ -122,7 +137,7 @@ class MobileContext extends ContextSource {
 		$detector = DeviceDetection::factory();
 		$request = $this->getRequest();
 
-		if ( $wgMFMobileHeader && $this->getRequest()->getHeader( $wgMFMobileHeader ) !== false ) {
+		if ( $mobileHeader && $this->getRequest()->getHeader( $mobileHeader ) !== false ) {
 			$this->device = new HtmlDeviceProperties();
 		} else {
 			$userAgent = $request->getHeader( 'User-agent' );
@@ -152,20 +167,23 @@ class MobileContext extends ContextSource {
 	 * @return boolean
 	 */
 	public function userCanUpload() {
-		global $wgMFUploadMinEdits, $wgMFPhotoUploadEndpoint;
+		$config = $this->getMFConfig();
 		$user = $this->getUser();
 
 		// check if upload is enabled local or to remote location (to commons e.g.)
 		// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
 		$uploadEnabled = ( UploadBase::isEnabled() &&
 			UploadBase::isallowed( $user )
-		) || $wgMFPhotoUploadEndpoint;
+		) || $config->get( 'MFPhotoUploadEndpoint' );
 
 		if ( $uploadEnabled ) {
 			// Make sure the user is either in desktop mode or meets the special
 			// conditions necessary for uploading in mobile mode.
 			if ( !$this->shouldDisplayMobileView() ||
-				( $user->isAllowed( 'mf-uploadbutton' ) && $user->getEditCount() >= $wgMFUploadMinEdits )
+				(
+					$user->isAllowed( 'mf-uploadbutton' ) &&
+					$user->getEditCount() >= $config->get( 'MFUploadMinEdits' )
+				)
 			) {
 				return true;
 			}
@@ -178,9 +196,9 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function isMobileDevice() {
-		global $wgMFAutodetectMobileView, $wgMFShowMobileViewToTablets;
+		$config = $this->getMFConfig();
 
-		if ( !$wgMFAutodetectMobileView ) {
+		if ( !$config->get( 'MFAutodetectMobileView' ) ) {
 			return false;
 		}
 		if ( $this->getAMF() ) {
@@ -188,7 +206,7 @@ class MobileContext extends ContextSource {
 		}
 		$device = $this->getDevice();
 		return $device->isMobileDevice()
-			&& !( !$wgMFShowMobileViewToTablets && $device->isTablet() );
+			&& !( !$config->get( 'MFShowMobileViewToTablets' ) && $device->isTablet() );
 
 	}
 
@@ -203,10 +221,10 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function getAMF() {
-		global  $wgMFShowMobileViewToTablets;
+		$showMobileViewToTablets = $this->getMFConfig()->get( 'MFShowMobileViewToTablets' );
 
 		$amf = isset( $_SERVER['AMF_DEVICE_IS_MOBILE'] ) && $_SERVER['AMF_DEVICE_IS_MOBILE'] === 'true';
-		if ( !$wgMFShowMobileViewToTablets && $amf ) {
+		if ( !$showMobileViewToTablets && $amf ) {
 			$amf &= $_SERVER['AMF_DEVICE_IS_TABLET'] === 'false';
 		}
 		return $amf;
@@ -262,9 +280,9 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	protected function getMobileMode() {
-		global $wgMFEnableBeta;
+		$enableBeta = $this->getMFConfig()->get( 'MFEnableBeta' );
 
-		if ( !$wgMFEnableBeta ) {
+		if ( !$enableBeta ) {
 			return '';
 		}
 		if ( is_null( $this->mobileMode ) ) {
@@ -389,7 +407,8 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	private function shouldDisplayMobileViewInternal() {
-		global $wgMobileUrlTemplate, $wgMFMobileHeader;
+		$config = $this->getMFConfig();
+		$mobileHeader = $config->get( 'MFMobileHeader' );
 
 		// May be overridden programmatically
 		if ( $this->forceMobileView ) {
@@ -413,9 +432,9 @@ class MobileContext extends ContextSource {
 		 * version of the site (otherwise, the cache may get polluted). See
 		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=46473
 		 */
-		if ( $wgMobileUrlTemplate
-			&& $wgMFMobileHeader
-			&& $this->getRequest()->getHeader( $wgMFMobileHeader ) !== false )
+		if ( $config->get( 'MobileUrlTemplate' )
+			&& $mobileHeader
+			&& $this->getRequest()->getHeader( $mobileHeader ) !== false )
 		{
 			return true;
 		}
@@ -460,16 +479,19 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	private function isBlacklistedPageInternal() {
-		global $wgMFNoMobileCategory, $wgMFNoMobilePages;
+		$config = $this->getMFConfig();
+		$noMobilePages = $config->get( 'MFNoMobilePages' );
+		$noMobileCategory = $config->get( 'MFNoMobileCategory' );
+
 		// Check for blacklisted category membership
 		$title = $this->getTitle();
-		if ( $wgMFNoMobileCategory && $title ) {
+		if ( $noMobileCategory && $title ) {
 			$id = $title->getArticleID();
 			if ( $id ) {
 				$dbr = wfGetDB( DB_SLAVE );
 				if ( $dbr->selectField( 'categorylinks',
 					'cl_from',
-					array( 'cl_from' => $id, 'cl_to' => $wgMFNoMobileCategory ),
+					array( 'cl_from' => $id, 'cl_to' => $noMobileCategory ),
 					__METHOD__
 				) ) {
 					return true;
@@ -477,9 +499,9 @@ class MobileContext extends ContextSource {
 			}
 		}
 		// ...and individual page blacklisting
-		if ( $wgMFNoMobilePages && $title ) {
+		if ( $noMobilePages && $title ) {
 			$name = $title->getPrefixedText();
-			foreach ( $wgMFNoMobilePages as $page ) {
+			foreach ( $noMobilePages as $page ) {
 				if ( $page === $name ) {
 					return true;
 				}
@@ -587,9 +609,10 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	public function getBaseDomain() {
-		global $wgServer;
+		$server = $this->getConfig()->get( 'Server' );
+
 		wfProfileIn( __METHOD__ );
-		$parsedUrl = wfParseUrl( $wgServer );
+		$parsedUrl = wfParseUrl( $server );
 		$host = $parsedUrl['host'];
 		// Validates value as IP address
 		if ( !IP::isValid( $host ) ) {
@@ -688,9 +711,13 @@ class MobileContext extends ContextSource {
 	 * @return int The number of seconds for which the cookie should last.
 	 */
 	public function getUseFormatCookieDuration() {
-		global $wgMobileFrontendFormatCookieExpiry, $wgCookieExpiration;
-		$cookieDuration = ( abs( intval( $wgMobileFrontendFormatCookieExpiry ) ) > 0 ) ?
-			$wgMobileFrontendFormatCookieExpiry : $wgCookieExpiration;
+		$mobileFrontendFormatCookieExpiry =
+			$this->getMFConfig()->get( 'MobileFrontendFormatCookieExpiry' );
+
+		$cookieExpiration = $this->getConfig()->get( 'CookieExpiration' );
+
+		$cookieDuration = ( abs( intval( $mobileFrontendFormatCookieExpiry ) ) > 0 ) ?
+			$mobileFrontendFormatCookieExpiry : $cookieExpiration;
 		return $cookieDuration;
 	}
 
@@ -800,13 +827,14 @@ class MobileContext extends ContextSource {
 	 *		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlHost( &$parsedUrl ) {
-		global $wgServer;
+		$server = $this->getConfig()->get( 'Server' );
+
 		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 		if ( !strlen( $mobileUrlHostTemplate ) ) {
 			return;
 		}
 
-		$parsedWgServer = wfParseUrl( $wgServer );
+		$parsedWgServer = wfParseUrl( $server );
 		$parsedUrl['host'] = $parsedWgServer['host'];
 	}
 
@@ -835,7 +863,7 @@ class MobileContext extends ContextSource {
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlPath( &$parsedUrl ) {
-		global $wgScriptPath;
+		$scriptPath = $this->getConfig()->get( 'ScriptPath' );
 
 		$mobileUrlPathTemplate = $this->parseMobileUrlTemplate( 'path' );
 
@@ -847,14 +875,14 @@ class MobileContext extends ContextSource {
 		// find out if we already have a templated path
 		$templatePathOffset = strpos( $mobileUrlPathTemplate, '%p' );
 		$templatePathSansToken = substr( $mobileUrlPathTemplate, 0, $templatePathOffset );
-		if ( substr_compare( $parsedUrl[ 'path' ], $wgScriptPath . $templatePathSansToken, 0 ) > 0 ) {
+		if ( substr_compare( $parsedUrl[ 'path' ], $scriptPath . $templatePathSansToken, 0 ) > 0 ) {
 			return;
 		}
 
-		$scriptPathLength = strlen( $wgScriptPath );
+		$scriptPathLength = strlen( $scriptPath );
 		// the "+ 1" removes the preceding "/" from the path sans $wgScriptPath
 		$pathSansScriptPath = substr( $parsedUrl[ 'path' ], $scriptPathLength + 1 );
-		$parsedUrl[ 'path' ] = $wgScriptPath . $templatePathSansToken . $pathSansScriptPath;
+		$parsedUrl[ 'path' ] = $scriptPath . $templatePathSansToken . $pathSansScriptPath;
 	}
 
 	/**
@@ -865,9 +893,9 @@ class MobileContext extends ContextSource {
 	 * @return mixed
 	 */
 	public function parseMobileUrlTemplate( $part = null ) {
-		global $wgMobileUrlTemplate;
+		$mobileUrlTemplate = $this->getMFConfig()->get( 'MobileUrlTemplate' );
 
-		$pathStartPos = strpos( $wgMobileUrlTemplate, '/' );
+		$pathStartPos = strpos( $mobileUrlTemplate, '/' );
 
 		/**
 		 * This if/else block exists because of an annoying aspect of substr()
@@ -876,12 +904,12 @@ class MobileContext extends ContextSource {
 		 * http://www.stopgeek.com/wp-content/uploads/2007/07/sense.jpg
 		 */
 		if ( $pathStartPos === false ) {
-			$host = substr( $wgMobileUrlTemplate, 0 );
+			$host = substr( $mobileUrlTemplate, 0 );
 		} else {
-			$host = substr( $wgMobileUrlTemplate, 0,  $pathStartPos );
+			$host = substr( $mobileUrlTemplate, 0,  $pathStartPos );
 		}
 
-		$path = substr( $wgMobileUrlTemplate, $pathStartPos );
+		$path = substr( $mobileUrlTemplate, $pathStartPos );
 
 		if ( $part == 'host' ) {
 			return $host;
@@ -902,10 +930,8 @@ class MobileContext extends ContextSource {
 	 * @param string $view User requested particular view
 	 */
 	public function toggleView( $view ) {
-		global $wgMobileUrlTemplate;
-
 		$this->viewChange = $view;
-		if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
+		if ( !strlen( trim( $this->getMFConfig()->get( 'MobileUrlTemplate' ) ) ) ) {
 			$this->setUseFormat( $view );
 		}
 	}
@@ -914,7 +940,7 @@ class MobileContext extends ContextSource {
 	 * Performs view change as requested vy toggleView()
 	 */
 	public function doToggling() {
-		global $wgMobileUrlTemplate;
+		$mobileUrlTemplate = $this->getMFConfig()->get( 'MobileUrlTemplate' );
 
 		if ( !$this->viewChange ) {
 			return;
@@ -934,7 +960,7 @@ class MobileContext extends ContextSource {
 			$this->unsetStopMobileRedirectCookie();
 
 			// if no mobileurl template, set mobile cookie
-			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
+			if ( !strlen( trim( $mobileUrlTemplate ) ) ) {
 				$this->setUseFormatCookie();
 			} else {
 				// else redirect to mobile domain
@@ -949,7 +975,7 @@ class MobileContext extends ContextSource {
 				$this->unsetUseFormatCookie();
 			}
 
-			if ( strlen( trim( $wgMobileUrlTemplate ) ) ) {
+			if ( strlen( trim( $mobileUrlTemplate ) ) ) {
 				// if mobileurl template, redirect to desktop domain
 				$desktopUrl = $this->getDesktopUrl( $url );
 				$this->getOutput()->redirect( $desktopUrl, 301 );
@@ -978,10 +1004,9 @@ class MobileContext extends ContextSource {
 	 * @param string $url URL to check against
 	 * @return bool
 	 */
-	public static function isLocalUrl( $url ) {
-		global $wgServer;
+	public function isLocalUrl( $url ) {
 		$parsedTarget = wfParseUrl( $url );
-		$parsedServer = wfParseUrl( $wgServer );
+		$parsedServer = wfParseUrl( $this->getMFConfig()->get( 'Server' ) );
 		return $parsedTarget['host'] === $parsedServer['host'];
 	}
 
