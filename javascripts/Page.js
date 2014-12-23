@@ -196,7 +196,7 @@
 		 * FIXME: rename to getSections
 		 *
 		 * @method
-		 * @return Array
+		 * @return {Array}
 		 */
 		getSubSections: function () {
 			return this.sections;
