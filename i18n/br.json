@@ -44,6 +44,7 @@
 	"mobile-frontend-editor-visual-editor": "Aozañ",
 	"mobile-frontend-enable-images": "Gweredekaat ar skeudennoù war al lec'hienn hezoug",
 	"mobile-frontend-expand-sections-status": "Astenn an holl rannoù",
+	"mobile-frontend-fontchanger-link": "Ment ar font",
 	"mobile-frontend-featured-article": "Un tamm sell war...",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Ar skeudennoù war {{SITENAME}} a deu eus Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "Mat eo ?",
@@ -163,5 +164,6 @@
 	"mobile-frontend-watchlist-modified": "$1 kemmet",
 	"mobile-frontend-watchlist-more": "muioc'h",
 	"mobile-frontend-watchlist-view": "Gwelet ho roll evezhiañ",
-	"nearby": "Pajennoù tost deoc'h"
+	"nearby": "Pajennoù tost deoc'h",
+	"mobile-frontend-donate-button-label": "Ober un donezon"
 }

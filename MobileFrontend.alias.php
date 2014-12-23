@@ -69,8 +69,8 @@ $specialPageAliases['ca'] = array(
 $specialPageAliases['ce'] = array(
 	'MobileOptions' => array( 'Мобильни_верси_нисяр' ),
 	'Uploads' => array( 'Чуйохурш' ),
-	'MobileDiff' => array( 'Версеш_муха_ю_хьажар' ),
-	'MobileMenu' => array( 'Мобильни_меню' ),
+	'MobileDiff' => array( 'Версеш_юстар' ),
+	'MobileMenu' => array( 'Мобилан_меню' ),
 	'Nearby' => array( 'Гергахьо' ),
 );
 

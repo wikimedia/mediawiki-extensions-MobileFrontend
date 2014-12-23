@@ -59,7 +59,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Đọc tiếp",
 	"mobile-frontend-editor-abusefilter-warning": "Cảnh báo: Bạn có chắc chắn muốn lưu trang này? Các thay đổi này có thể có vấn đề.",
 	"mobile-frontend-editor-anon": "Sửa đổi ẩn danh (không đăng nhập)",
-	"mobile-frontend-editor-anoneditwarning": "<b>Cảnh báo:</b> Bạn chưa đăng nhập. Địa chỉ IP của bạn sẽ bị hiển thị công khai nếu bạn thực hiện bất kỳ sửa đổi nào. Nếu bạn <b>[$1 đăng nhập]</b> hoặc <b>[$2 mở tài khoản]</b>, sửa đổi của bạn sẽ được gán bởi tên đăng nhập của bạn, cùng nhiều lợi ích khác.",
+	"mobile-frontend-editor-anoneditwarning": "'''Cảnh báo:''' Bạn chưa đăng nhập. Địa chỉ IP của bạn sẽ bị hiển thị công khai nếu bạn thực hiện bất kỳ sửa đổi nào. Nếu bạn '''đăng nhập''' hoặc '''mở tài khoản''', sửa đổi của bạn sẽ được gán bởi tên đăng nhập của bạn, cùng nhiều lợi ích khác.",
 	"mobile-frontend-editor-blocked": "Tài khoản của bạn bị khóa không được sửa đổi.",
 	"mobile-frontend-editor-cancel": "Hủy bỏ",
 	"mobile-frontend-editor-cancel-confirm": "Bạn có thực sự muốn từ bỏ sửa đổi của bạn?",
@@ -106,6 +106,8 @@
 	"mobile-frontend-enable-images": "Hiện hình ảnh trên trang di động",
 	"mobile-frontend-expand-sections-description": "Luôn mở rộng tất cả các tiêu đề khi mở trang mới.",
 	"mobile-frontend-expand-sections-status": "Mở rộng tất cả các tiêu đề",
+	"mobile-frontend-fontchanger-link": "Kích thước chữ",
+	"mobile-frontend-fontchanger-desc": "Tăng hoặc giảm cỡ chữ để dễ đọc.",
 	"mobile-frontend-featured-article": "Nội dung chọn lọc",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Các hình ảnh trên {{SITENAME}} được cung cấp bởi Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Đóng góp hình ảnh của bạn để làm {{SITENAME}} sinh động hơn!",
@@ -177,6 +179,7 @@
 	"mobile-frontend-media-details": "Chi tiết",
 	"mobile-frontend-media-license-link": "Thông tin giấy phép",
 	"mobile-frontend-meta-data-issues": "Trang này có một số vấn đề",
+	"mobile-frontend-meta-data-issues-alpha": "Vấn đề trang",
 	"mobile-frontend-meta-data-issues-talk": "Giới thiệu về trang thảo luận này",
 	"mobile-frontend-meta-data-issues-header": "Các vấn đề",
 	"mobile-frontend-meta-data-issues-header-talk": "Giới thiệu về trang này",
@@ -342,5 +345,7 @@
 	"mobile-frontend-pageaction-upload-tooltip": "Tải một hình lên phần mở đầu của trang này.",
 	"apihelp-mobileview-param-noimages": "Cho ra mã HTML không có hình ảnh.",
 	"apihelp-mobileview-param-thumbnail": "Kích thước tối đa của hình nhỏ.",
-	"apihelp-parse-param-noimages": "Tắt hình ảnh trên di động."
+	"apihelp-parse-param-noimages": "Tắt hình ảnh trên di động.",
+	"mobile-frontend-donate-button-label": "Quyên góp",
+	"mobile-frontend-wikidata-editor-description-label": "Tóm lược ''$1'' bằng một câu:"
 }
