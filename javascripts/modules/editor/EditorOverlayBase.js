@@ -71,7 +71,7 @@
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
-			// icons.spinner can't be used, the spinner class changes to display:none in _prepareForSave
+			// icons.spinner can't be used, the spinner class changes to display:none in onStageChanges
 			waitIcon: new Icon( {
 				tagName: 'button',
 				name: 'spinner',
@@ -223,11 +223,9 @@
 		/**
 		 * Prepares the penultimate screen before saving.
 		 * Expects to be overridden by child class.
-		 * FIXME: EditorOverlay and VisualEditorOverlay have common
 		 * @method
-		 * @private
 		 */
-		_prepareForSave: function () {
+		onStageChanges: function () {
 			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.save-header, .save-panel' );
 			this.log( 'save' );
@@ -241,9 +239,8 @@
 		 * Executed when the editor clicks the save button. Expects to be overridden by child
 		 * class. Checks if the save needs to be confirmed.
 		 * @method
-		 * @private
 		 */
-		_save: function () {
+		onSaveBegin: function () {
 			this.confirmAborted = false;
 			// Ask for confirmation in some cases
 			if ( !this.confirmSave() ) {
@@ -271,6 +268,8 @@
 			Overlay.prototype.postRender.apply( this, arguments );
 			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.initial-header' );
+			this.$( '.submit' ).on( 'click', $.proxy( this, 'onSaveBegin' ) );
+			this.$( '.continue' ).on( 'click', $.proxy( this, 'onStageChanges' ) );
 		},
 		/**
 		 * Set up the editor switching interface

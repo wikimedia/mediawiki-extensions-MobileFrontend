@@ -28,7 +28,7 @@
 	QUnit.test( '#preview', 1, function( assert ) {
 		var editorOverlay = new EditorOverlay( { title: 'test', sectionId: 0 } );
 
-		editorOverlay._prepareForSave();
+		editorOverlay.onStageChanges();
 		assert.strictEqual( editorOverlay.$preview.text(), '\npreviewtest\n', 'preview loaded correctly' );
 	} );
 

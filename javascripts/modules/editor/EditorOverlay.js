@@ -107,11 +107,8 @@
 					return false;
 				} );
 				this.clearSpinner();
-			} else {
-				this.$( '.continue' ).on( 'click', $.proxy( this, '_prepareForSave' ) );
 			}
 			this.$( '.back' ).on( 'click', $.proxy( this, '_hidePreview' ) );
-			this.$( '.submit' ).on( 'click', $.proxy( this, '_save' ) );
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
 
@@ -123,7 +120,7 @@
 						self._switchToVisualEditor( options );
 					} else {
 						if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-							self._prepareForSave();
+							self.onStageChanges();
 						}
 					}
 				} );
@@ -173,17 +170,16 @@
 			this.showSpinner();
 			this.$anonWarning.hide();
 			// reenable "Next" button and handle click
-			this.$( '.continue' ).show().on( 'click', $.proxy( this, '_prepareForSave' ) );
+			this.$( '.continue' ).show().on( 'click', $.proxy( this, 'onStageChanges' ) );
 			this._loadContent();
 		},
 
 		/**
 		 * Prepares the preview interface and reveals the save screen of the overlay
 		 * @method
-		 * @private
 		 * @inheritdoc
 		 */
-		_prepareForSave: function () {
+		onStageChanges: function () {
 			var self = this,
 				params = {
 					text: this.$content.val()
@@ -213,7 +209,7 @@
 				self.$preview.show();
 			} );
 
-			EditorOverlayBase.prototype._prepareForSave.apply( this, arguments );
+			EditorOverlayBase.prototype.onStageChanges.apply( this, arguments );
 		},
 
 		/**
@@ -307,7 +303,7 @@
 		 * the save action to the editor API.
 		 * @inheritdoc
 		 */
-		_save: function () {
+		onSaveBegin: function () {
 			var self = this,
 				options = {
 					summary: this.$( '.summary' ).val()
@@ -316,7 +312,7 @@
 			if ( self.sectionLine !== '' ) {
 				options.summary = '/* ' + self.sectionLine + ' */' + options.summary;
 			}
-			EditorOverlayBase.prototype._save.apply( this, arguments );
+			EditorOverlayBase.prototype.onSaveBegin.apply( this, arguments );
 			if ( this.confirmAborted ) {
 				return;
 			}

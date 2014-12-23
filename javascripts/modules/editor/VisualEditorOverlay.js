@@ -100,9 +100,6 @@
 		/** @inheritdoc **/
 		postRender: function ( options ) {
 			var self = this;
-			// Save button
-			this.$( '.continue' ).on( 'click', $.proxy( this, '_prepareForSave' ) );
-			this.$( '.submit' ).on( 'click', $.proxy( this, '_save' ) );
 			this.$( '.back' ).on( 'click', $.proxy( this, 'switchToEditor' ) );
 			this.$( '.source-editor' ).on( 'click', function () {
 				// If changes have been made tell the user they have to save first
@@ -110,7 +107,7 @@
 					self.switchToSourceEditor( options );
 				} else {
 					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-						self._prepareForSave();
+						self.onStageChanges();
 					}
 				}
 			} );
@@ -131,14 +128,14 @@
 		 * Disables the VE editor interface in preparation for saving.
 		 * @inheritdoc
 		 */
-		_prepareForSave: function () {
+		onStageChanges: function () {
 			// need to blur contenteditable to be sure that keyboard is properly closed
 			this.$( '[contenteditable]' ).blur();
 			this.$( '.surface' ).hide();
-			EditorOverlayBase.prototype._prepareForSave.apply( this, arguments );
+			EditorOverlayBase.prototype.onStageChanges.apply( this, arguments );
 		},
 		/** @inheritdoc **/
-		_save: function () {
+		onSaveBegin: function () {
 			var
 				self = this,
 				doc = this.target.surface.getModel().getDocument(),
@@ -147,7 +144,7 @@
 					summary: summary
 				};
 
-			EditorOverlayBase.prototype._save.apply( this, arguments );
+			EditorOverlayBase.prototype.onSaveBegin.apply( this, arguments );
 			if ( this.confirmAborted ) {
 				return;
 			}
