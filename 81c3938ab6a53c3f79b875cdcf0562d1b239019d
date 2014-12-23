@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_85b636d6",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 27
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-23T19:28:51Z",
+      "side": 1,
+      "message": "The name of the message used in the template is thanksMsg, not thanksMessage.",
+      "revId": "81c3938ab6a53c3f79b875cdcf0562d1b239019d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
