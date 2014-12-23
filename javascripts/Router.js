@@ -1,3 +1,4 @@
+// FIXME: Merge this code with OverlayManager
 ( function ( M, $ ) {
 
 	var key,
@@ -11,7 +12,6 @@
 	 * @param {String} hash String to match
 	 * @param {Object} entry Entry object
 	 * @returns {Boolean} Whether hash matches entry.path
-	 * FIXME: remove when OverlayManager used everywhere
 	 */
 	function matchRoute( hash, entry ) {
 		var match = hash.match( entry.path );
@@ -71,7 +71,6 @@
 		Router.prototype[ key ] = EventEmitter.prototype[ key ];
 	}
 
-	// FIXME: remove when OverlayManager used everywhere
 	/**
 	 * Check the current route and run appropriate callback if it matches.
 	 * @method
@@ -86,7 +85,6 @@
 
 	/**
 	 * Bind a specific callback to a hash-based route, e.g.
-	 * FIXME: remove when OverlayManager used everywhere
 	 *
 	 *     @example
 	 *     route( 'alert', function () { alert( 'something' ); } );

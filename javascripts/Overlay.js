@@ -22,11 +22,6 @@
 		 */
 		hasFixedHeader: true,
 		/**
-		 * FIXME: remove when OverlayManager used everywhere
-		 * @type {Boolean}
-		 */
-		closeOnBack: false,
-		/**
 		 * Is overlay fullscreen
 		 * @type {Boolean}
 		 */
@@ -104,11 +99,7 @@
 			this.$( '.cancel, .confirm, .initial-header .back' ).on( 'click', function ( ev ) {
 				ev.preventDefault();
 				ev.stopPropagation();
-				if ( self.closeOnBack ) {
-					window.history.back();
-				} else {
-					self.hide();
-				}
+				window.history.back();
 			} );
 			// stop clicks in the overlay from propagating to the page
 			// (prevents non-fullscreen overlays from being closed when they're tapped)
@@ -144,33 +135,11 @@
 		},
 
 		/**
-		 * Hide self when the route is visited
-		 * @method
-		 * @private
-		 * FIXME: remove when OverlayManager used everywhere
-		 */
-		_hideOnRoute: function () {
-			var self = this;
-			M.router.once( 'route', function ( ev ) {
-				if ( !self.hide() ) {
-					ev.preventDefault();
-					self._hideOnRoute();
-				}
-			} );
-		},
-
-		/**
 		 * Attach overlay to current view and show it.
 		 * @method
 		 */
 		show: function () {
 			var self = this;
-
-			// FIXME: remove when OverlayManager used everywhere
-			if ( this.closeOnBack ) {
-				this._hideOnRoute();
-			}
-
 			this.$el.appendTo( this.appendTo );
 			this.scrollTop = document.body.scrollTop;
 

@@ -50,7 +50,22 @@
 			searchContentNoResultsMsg: mw.msg( 'mobile-frontend-search-content-no-results' ),
 			action: mw.config.get( 'wgScript' )
 		},
-		closeOnBack: false,
+
+		/**
+		 * Hide self when the route is visited
+		 * @method
+		 * @private
+		 * FIXME: Remove when search registers route with overlay manager
+		 */
+		_hideOnRoute: function () {
+			var self = this;
+			M.router.once( 'route', function ( ev ) {
+				if ( !self.hide() ) {
+					ev.preventDefault();
+					self._hideOnRoute();
+				}
+			} );
+		},
 
 		/** @inheritdoc */
 		initialize: function ( options ) {
@@ -58,10 +73,9 @@
 			Overlay.prototype.initialize.call( this, options );
 			this.api = new SearchApi();
 
-			// FIXME: horrible, remove when we get overlay manager
+			// FIXME: Remove when search registers route with overlay manager
 			// we need this because of the focus/delay hack in search.js
 			M.router.once( 'route', function () {
-				self.closeOnBack = true;
 				self._hideOnRoute();
 			} );
 		},

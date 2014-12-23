@@ -18,7 +18,6 @@
 		hasFixedHeader: false,
 		className: 'overlay media-viewer',
 		template: mw.template.get( 'mobile.mediaViewer', 'Overlay.hogan' ),
-		closeOnBack: true,
 
 		/**
 		 * @inheritdoc
