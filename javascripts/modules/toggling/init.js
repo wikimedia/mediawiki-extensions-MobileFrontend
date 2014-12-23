@@ -129,7 +129,7 @@
 				'aria-expanded': !isCollapsed
 			} );
 
-		if ( M.isBetaGroupMember() && !browser.isWideScreen() ) {
+		if ( !browser.isWideScreen() ) {
 			storeSectionToggleState( $heading );
 		}
 	}
@@ -285,7 +285,7 @@
 			}
 		} );
 
-		if ( M.isBetaGroupMember() && !browser.isWideScreen() ) {
+		if ( !browser.isWideScreen() ) {
 			expandStoredSections( $container );
 			cleanObsoleteStoredSections();
 		}
