@@ -70,6 +70,24 @@
       "revId": "044aa86510e297157a31c461d2afa8786d2c3140",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_da688c86",
+        "filename": "javascripts/modules/wikiGrokRoulette/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-23T23:25:26Z",
+      "side": 1,
+      "message": "Yeh use .always\nCode duplication never good no matter how small.",
+      "parentUuid": "0e6cb3ef_5a3ebc88",
+      "revId": "044aa86510e297157a31c461d2afa8786d2c3140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
