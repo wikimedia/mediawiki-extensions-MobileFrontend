@@ -38,13 +38,6 @@ class MobileFormatter extends HtmlFormatter {
 	protected $mainPage = false;
 
 	/**
-	 * Headings
-	 * @todo better summary for var
-	 * @var integer $headings
-	 */
-	protected $headings = 0;
-
-	/**
 	 * Constructor
 	 *
 	 * @param string $html Text to process
@@ -273,6 +266,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * Call headingTransform if needed
 	 *
 	 * @param string $html
+	 * @return string
 	 */
 	protected function onHtmlReady( $html ) {
 		wfProfileIn( __METHOD__ );
