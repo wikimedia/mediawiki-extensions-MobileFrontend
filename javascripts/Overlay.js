@@ -205,10 +205,7 @@
 		 * @return {Boolean} Whether the overlay was successfully hidden or not
 		 */
 		hide: function ( force ) {
-			// FIXME: remove when OverlayManager used everywhere
-			if ( this.parent ) {
-				this.parent.show();
-			} else if ( this.fullScreen ) {
+			if ( this.fullScreen ) {
 				$( 'html' ).removeClass( 'overlay-enabled' );
 				// return to last known scroll position
 				window.scrollTo( document.body.scrollLeft, this.scrollTop );
