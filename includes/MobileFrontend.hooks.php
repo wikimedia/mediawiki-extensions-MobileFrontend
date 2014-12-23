@@ -404,9 +404,6 @@ class MobileFrontendHooks {
 			 * Special:Contributions without the bells and whistles.
 			 */
 			$list['Contributions'] = 'SpecialMobileContributions';
-			if ( !$ctx->isAlphaGroupMember() ) {
-				$list['Userlogin'] = 'SpecialMobileUserlogin';
-			}
 
 			if ( class_exists( 'MWEchoNotifUser' ) ) {
 				$list['Notifications'] = 'SpecialMobileNotifications';
