@@ -52,6 +52,24 @@
       "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_57ce9532",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-23T21:50:03Z",
+      "side": 1,
+      "message": "Yeh you\u0027re probably right.\nOne thing I would suggest though is adding this to EditorOverlayBase so that it is clearer where the config lives and VE could make use of it:\n\nconfig: mw.config.get( \u0027wgMFEditorOptions\u0027 )\n\n\nthen this just becomes this.config.skipPreview",
+      "parentUuid": "0e6cb3ef_f6c6d24d",
+      "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
