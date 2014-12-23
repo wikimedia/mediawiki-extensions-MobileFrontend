@@ -34,6 +34,24 @@
       "revId": "ea9c9c4dd7383f6f80c5a63057cd90085497b95b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3fb3bdfe",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-23T12:42:27Z",
+      "side": 1,
+      "message": "I\u0027ve tried lots of things for this, the problem with memoizing a class method with your proposals is that (in both cases) all instances of the class share the same cache (in jons proposal) and method cache (in baha\u0027s).\n\nIn the first suggestion (which is how lodash for example does memoization) the returned method that goes into the prototype of the class has only one cache object, which is used for all instances.\n\nThis is a problem for example in the tests (thanks jon for testing) because we create several instances of Browser to test different behaviors. If they share a cache, then other instances return incorrect results for the call because they are getting the result from the cache of another instance. (if we have b1 and b2 and b1 isAndroid but b2 is not, if we call isAndroid first that result will be stored *class based* and then b2.isAndroid will give us an incorrect result).\n\nThe way this is done here creates the caches in the instance  `this` so the cache is instance based and it works fine. Also since the caches are in this and the methods have a cache id, retrieving and inspecting a methods cache for a particular instance is very simple:\n\n    var b \u003d new Browser(\u0027ua\u0027);\n\n    // This is how we can get the isAndroid cache for this instance\n    console.log(b[\u0027__cache\u0027+b.isAndroid.cacheId])\n    // \u003e Nothing\n\n    b.isAndroid();\n    // \u003e false\n\n    console.log(b[\u0027__cache\u0027+b.isAndroid.cacheId])\n    // \u003e { undefined: false }\n\nI\u0027ll add some tests for checking the cache behavior with something like the code above",
+      "parentUuid": "0e6cb3ef_531a307f",
+      "revId": "ea9c9c4dd7383f6f80c5a63057cd90085497b95b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
