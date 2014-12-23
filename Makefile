@@ -1,5 +1,7 @@
-MW_INSTALL_PATH ?= ../../
 MEDIAWIKI_LOAD_URL ?= http://localhost:8080/w/load.php
+ifndef MW_INSTALL_PATH
+$(error MW_INSTALL_PATH is not set. Please set it to your root mediawiki installation.)
+endif
 
 # From https://gist.github.com/prwhite/8168133
 help:					## Show this help message
