@@ -43,7 +43,6 @@
 		},
 		/**
 		 * Post with support for central auth tokens
-		 * @inheritdoc
 		 */
 		post: function ( data ) {
 			var self = this,
@@ -191,7 +190,6 @@
 		 * Get information about current wikidata entity
 		 *
 		 * FIXME: add error handling.
-		 * @inheritdoc
 		 */
 		getInfo: function () {
 			var id = this.subjectId;

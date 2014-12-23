@@ -7,7 +7,6 @@
 	 * WikiGrok that's fixed at the bottom of the page.
 	 * @class WikiGrokDialogC
 	 * @extends WikiGrokDialogB
-	 * @extends Drawer
 	 */
 	WikiGrokDialogC = WikiGrokDialogB.extend( {
 		appendToElement: Drawer.prototype.appendToElement,
