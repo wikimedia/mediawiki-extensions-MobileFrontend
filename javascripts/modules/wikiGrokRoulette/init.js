@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	M.assertMode( [ 'alpha' ] );
 	var $wikiGrokMenuItem =  $( '#mw-mf-page-left' ).find( '.wikigrok-roulette' ),
+		mainMenu = M.require( 'mainmenu' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		ErrorDrawer = M.require( 'modules/wikiGrokRoulette/ErrorDrawer' );
 
@@ -44,6 +45,8 @@
 			} ).fail( function () {
 				loadingOverlay.hide( false );
 				new ErrorDrawer();
+			} ).always( function () {
+				mainMenu.closeNavigationDrawers();
 			} );
 		} );
 	}
