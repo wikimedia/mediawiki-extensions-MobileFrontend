@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_bf590d2f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-12-23T10:25:04Z",
+      "side": 1,
+      "message": "The adjective is \"safe\". In games one saves to create saved games.",
+      "revId": "62a53309835656cdd257aca2519f9f0bdc769d62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
