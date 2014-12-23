@@ -853,7 +853,6 @@ class SkinMinerva extends SkinTemplate {
 		$vars = array(
 			'wgMFWikiDataEndpoint' => $wgMFWikiDataEndpoint,
 			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
-			'wgMFAjaxUploadProgressSupport' => $wgMFAjaxUploadProgressSupport,
 			'wgMFEditorOptions' => $wgMFEditorOptions,
 			'wgMFPhotoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
 			'wgMFLeadPhotoUploadCssSelector' => $wgMFLeadPhotoUploadCssSelector,
