@@ -52,6 +52,24 @@
       "revId": "044aa86510e297157a31c461d2afa8786d2c3140",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_5a3ebc88",
+        "filename": "javascripts/modules/wikiGrokRoulette/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-23T23:19:04Z",
+      "side": 1,
+      "message": "putting loadingOverlay.hide( false ); in always may not be a good idea because we want the overlay visible until the page refreshes. If we put it in always, then the overlay will disappear before the next page load.",
+      "parentUuid": "0e6cb3ef_daebac07",
+      "revId": "044aa86510e297157a31c461d2afa8786d2c3140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
