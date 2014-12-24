@@ -33,6 +33,24 @@
       "revId": "4783a1c80c67c257486d83e01d3727ebc1e2472a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_8bd5e449",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-24T18:58:25Z",
+      "side": 1,
+      "message": "skin or template? Both would be possible. but i think (in the context that i want to replace global variables in skin, too) that one method in skin should be enough and access it in templates like $this-\u003egetSkin()-\u003egetMFConfig()??\n\nAnd i think in this case it would be better to use ConfigFactory::getDefaultInstance()... instead of the way over MobileContext?",
+      "parentUuid": "0e6cb3ef_2baff8df",
+      "revId": "4783a1c80c67c257486d83e01d3727ebc1e2472a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
