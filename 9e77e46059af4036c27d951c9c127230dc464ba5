@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9a4f7497",
+        "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-24T01:06:11Z",
+      "side": 1,
+      "message": "I think you can combine the above two lines and remove the declaration of instanceOf above.",
+      "revId": "9e77e46059af4036c27d951c9c127230dc464ba5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
