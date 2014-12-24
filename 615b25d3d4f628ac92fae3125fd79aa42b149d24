@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cbee7cb1",
+        "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-24T21:38:56Z",
+      "side": 1,
+      "message": "Rather than doing this I think you want to set config in initialisation and then stub mw.config.get",
+      "revId": "615b25d3d4f628ac92fae3125fd79aa42b149d24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
