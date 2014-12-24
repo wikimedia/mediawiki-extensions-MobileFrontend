@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_abdb0853",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-24T19:38:57Z",
+      "side": 1,
+      "message": "Same comment as previous patchset (I think the on will help us use them appropriately)",
+      "revId": "061454d68b7a15356a91f0713359b841a951d461",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
