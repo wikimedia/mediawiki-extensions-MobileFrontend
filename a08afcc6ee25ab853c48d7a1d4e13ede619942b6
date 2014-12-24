@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cb167cf6",
+        "filename": "javascripts/modules/toc/TableOfContents.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-24T19:38:26Z",
+      "side": 1,
+      "message": "Same comment as previous patchset (I think the on will help us use them appropriately)",
+      "revId": "a08afcc6ee25ab853c48d7a1d4e13ede619942b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
