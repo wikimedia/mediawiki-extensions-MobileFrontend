@@ -837,7 +837,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @return array
 	 */
 	public function getSkinConfigVariables() {
-		global $wgMFLeadPhotoUploadCssSelector, $wgMFEnableCssAnimations,
+		global $wgMFLeadPhotoUploadCssSelector,
 			$wgMFUseCentralAuthToken,
 			$wgMFDeviceWidthTablet,
 			$wgMFAjaxUploadProgressSupport,
