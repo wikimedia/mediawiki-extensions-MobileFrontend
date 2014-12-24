@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var api = M.require( 'api' ),
 		Api = api.Api,
+		config = mw.config.get( 'wgWikiBasePropertyConfig' ),
 		WikiDataApi;
 	/**
 	 * Gets claims and labels from the WikiData API
@@ -8,6 +9,7 @@
 	 * @extends Api
 	 */
 	WikiDataApi = Api.extend( {
+		propertyIdInstanceOf: config.instanceOf,
 		apiUrl: mw.config.get( 'wgMFWikiDataEndpoint' ),
 		useJsonp: true,
 		language: mw.config.get( 'wgUserLanguage' ),
@@ -76,6 +78,7 @@
 		 */
 		getClaims: function () {
 			var self = this,
+				instanceOfId = this.propertyIdInstanceOf,
 				id = this.subjectId;
 
 			return this.ajax( {
@@ -94,8 +97,8 @@
 					entityClaims = data.entities[id].claims;
 
 					// See if the page has any 'instance of' claims.
-					if ( data.entities[id].claims.P31 !== undefined ) {
-						instanceClaims = entityClaims.P31;
+					if ( data.entities[id].claims[instanceOfId] !== undefined ) {
+						instanceClaims = entityClaims[instanceOfId];
 
 						// Examine claims closely
 						$.each( instanceClaims, function ( i, claim ) {

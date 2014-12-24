@@ -101,9 +101,13 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	 * @return array
 	 */
 	public function getSkinConfigVariables() {
+		global $wgWikiBasePropertyConfig;
+
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgMFEditorOptions']['anonymousEditing'] = true;
 		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
+		$vars['wgWikiBasePropertyConfig'] = $wgWikiBasePropertyConfig;
+
 		return $vars;
 	}
 

@@ -603,6 +603,13 @@ $wgMFNamespacesWithoutCollapsibleSections = array(
 $wgMFUseWikibaseDescription = false;
 
 /**
+ * Property to use for instance of claim.
+ */
+$wgWikiBasePropertyConfig = array(
+	'instanceOf' => 'P31',
+);
+
+/**
  * If set to true, main page HTML will receive special massaging that removes everything
  * but a few select pieces.
  */
