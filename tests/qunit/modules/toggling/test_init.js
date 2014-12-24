@@ -191,7 +191,6 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', 2, fu
 QUnit.module( 'MobileFrontend toggle.js: remember expanded sections', {
 	setup: function() {
 		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
-		this.sandbox.stub( M, 'isBetaGroupMember' ).returns( true );
 		this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		this.$container = $( '<div>' ).html( sectionHtml );
 		toggle.enable( this.$container );
@@ -289,7 +288,6 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', 5, functio
 QUnit.module( 'MobileFrontend toggle.js: restore expanded sections', {
 	setup: function() {
 		this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
-		this.sandbox.stub( M, 'isBetaGroupMember' ).returns( true );
 		this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		this.$container = $( '<div>' ).html( sectionHtml );
 		// Restore expanded sections only works on headings that are also section headings
