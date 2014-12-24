@@ -257,10 +257,11 @@ body.navigation-enabled {
 // animated version
 // FIXME: doesn't work in Firefox due to https://bugzilla.mozilla.org/show_bug.cgi?id=625289
 // do we want to work around it?
+@duration: .25s;
+@easing: ease-out;
 
+// FIXME: Cleanup animation css
 .animations {
-	@duration: .25s;
-	@easing: ease-out;
 
 	#mw-mf-page-center {
 		min-height: 100%;
@@ -279,6 +280,7 @@ body.navigation-enabled {
 		.transition(visibility 0s @duration);
 	}
 
+	// FIXME: Make animations a conditional class on the drawer itself
 	.notifications-overlay.navigation-drawer {
 		display: block;
 
@@ -290,15 +292,21 @@ body.navigation-enabled {
 			.transform(translate3d(0, 0, 0));
 		}
 	}
+}
 
-	.navigation-enabled {
+
+.navigation-enabled {
+
+	.animations {
 		.position-fixed,
 		#mw-mf-page-center {
 			.transition-transform(@duration @easing);
 		}
 	}
+}
 
-	.primary-navigation-enabled {
+.primary-navigation-enabled {
+	.animations {
 		.position-fixed,
 		#mw-mf-page-center {
 			// override non-animated version
@@ -313,8 +321,10 @@ body.navigation-enabled {
 			.transition(none);
 		}
 	}
+}
 
-	.secondary-navigation-enabled {
+.secondary-navigation-enabled {
+	.animations {
 		#mw-mf-page-center {
 			// override non-animated version
 			left: 0 !important;
@@ -322,25 +332,31 @@ body.navigation-enabled {
 			width: 100%;
 		}
 	}
+}
 
-	.rtl {
-		.notifications-overlay.navigation-drawer {
-			// +2% to accommodate for the border/box-shadow
-			.transform(translate3d(-102%, 0, 0));
+.rtl {
+	// FIXME: Make animations a conditional class on the drawer itself
+	.animations .notifications-overlay.navigation-drawer {
+		// +2% to accommodate for the border/box-shadow
+		.transform(translate3d(-102%, 0, 0));
 
-			&.visible {
-				.transform(translate3d(0, 0, 0));
-			}
+		&.visible {
+			.transform(translate3d(0, 0, 0));
 		}
+	}
 
-		&.primary-navigation-enabled {
+	&.primary-navigation-enabled {
+		.animations {
+
 			.position-fixed,
 			#mw-mf-page-center {
 				.transform(translate3d(-@menuWidth, 0, 0));
 			}
 		}
+	}
 
-		&.secondary-navigation-enabled {
+	&.secondary-navigation-enabled {
+		.animations {
 			#mw-mf-page-center {
 				.transform(translate3d(@rightDrawerWidth, 0, 0));
 			}
