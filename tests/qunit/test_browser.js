@@ -65,9 +65,11 @@
 	} );
 
 	QUnit.test( 'Methods are cached', 15, function ( assert ) {
+		/** @ignore */
 		function cache( obj, method ) {
 			return obj[ '__cache' + obj[ method ].cacheId ];
 		}
+		/** @ignore */
 		function keys( obj ) {
 			return $.map( obj, function ( key ) {
 				return key;
@@ -101,7 +103,6 @@
 
 		// Mess up the cache and see if the objects return the correct value when
 		// called again with the same arguments
-		console.log( JSON.stringify( cache( ipad, 'isAndroid2' ) ) );
 		cache( ipad, 'isAndroid2' )[ '' ] = 'for sure';
 		assert.strictEqual( ipad.isAndroid2(), 'for sure' );
 
