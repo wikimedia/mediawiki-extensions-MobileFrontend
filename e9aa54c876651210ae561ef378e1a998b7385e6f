@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_0b1d5414",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-24T19:37:53Z",
+      "side": 1,
+      "message": "I think we should start prefixing an events with \u0027on\u0027\ne.g. onDisableClick \nonToggleStatus\n\nwhat say you?",
+      "revId": "e9aa54c876651210ae561ef378e1a998b7385e6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
