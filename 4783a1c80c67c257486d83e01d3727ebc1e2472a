@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_ebb82027",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-24T18:53:56Z",
+      "side": 1,
+      "message": "See comment in MinervaTemplateBeta",
+      "revId": "4783a1c80c67c257486d83e01d3727ebc1e2472a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_2baff8df",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-24T18:53:56Z",
+      "side": 1,
+      "message": "Let\u0027s make this a convenience method on the skin itself.\nAlso not sure about recreating MobileContext::singleton() each time... maybe create once in the construct",
+      "revId": "4783a1c80c67c257486d83e01d3727ebc1e2472a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
