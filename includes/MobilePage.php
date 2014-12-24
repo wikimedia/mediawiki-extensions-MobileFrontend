@@ -45,6 +45,15 @@ class MobilePage {
 	}
 
 	/**
+	 * Get the title of the page
+	 *
+	 * @return Title
+	 */
+	public function getTitle() {
+		return $this->title;
+	}
+
+	/**
 	 * Get a placeholder div container for thumbnails
 	 * @param string $className
 	 * @param string $iconClassName controls size of thumbnail, defaults to icon-32px

@@ -175,34 +175,33 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			);
 		}
 
+		// create list of pages
+		$mobilePages = new MobileCollection();
 		$pageKeys = array_keys( $watchlist[$ns] );
-		$html .= '<ul class="watchlist page-list thumbs">';
-		foreach ( $pageKeys as $key => $dbkey ) {
-			$title = Title::makeTitleSafe( $ns, $dbkey );
-			$thumb = '';
+		foreach ( $pageKeys as $dbkey ) {
 			if ( isset( $images[$ns][$dbkey] ) ) {
-				$mobilePage = new MobilePage( $title, wfFindFile( $images[$ns][$dbkey] ) );
-				$thumb = $mobilePage->getSmallThumbnailHtml();
+				$mobilePages->add( new MobilePage(
+					Title::makeTitleSafe( $ns, $dbkey ),
+					wfFindFile( $images[$ns][$dbkey] )
+				));
 			}
-			if ( !$thumb ) {
-				$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
-			}
-			$total += 1;
-			$html .= self::getLineHtml( $title, $title->getTouched(), $thumb );
 		}
-		$html .= '</ul>';
 
-		if ( $total === 0 ) {
-			$html .= SpecialMobileWatchlist::getEmptyListHtml( false, $this->getLanguage() );
-		} elseif ( $from ) {
-			// show more link if there are more items to show
-			$qs = array( 'from' => $from );
-			$html .= Html::element( 'a',
-				array(
-					'class' => 'mw-ui-anchor mw-ui-progressive more',
-					'href' => SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL( $qs ),
-				),
-				$this->msg( 'mobile-frontend-watchlist-more' ) );
+		if ( count( $mobilePages ) === 0 ) {
+			$html = SpecialMobileWatchlist::getEmptyListHtml( false, $this->getLanguage() );
+
+			if ( $from ) {
+				// show more link if there are more items to show
+				$qs = array( 'from' => $from );
+				$html .= Html::element( 'a',
+					array(
+						'class' => 'mw-ui-anchor mw-ui-progressive more',
+						'href' => SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL( $qs ),
+					),
+					$this->msg( 'mobile-frontend-watchlist-more' ) );
+			}
+		} else {
+			$html = $this->getViewHtml( $mobilePages );
 		}
 		$out = $this->getOutput();
 		$out->addHtml( $html );
@@ -215,5 +214,24 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				'mobile.special.watchlist.styles'
 			)
 		);
+	}
+
+	/**
+	 * @param MobileCollection $collection
+	 * @return string html representation of collection in watchlist view
+	 */
+	protected function getViewHtml( MobileCollection $collection ) {
+		$html = '<ul class="watchlist page-list thumbs">';
+		foreach ( $collection as $mobilePage ) {
+			$mobilePage->getTitle();
+			$thumb = $mobilePage->getSmallThumbnailHtml();
+			if ( !$thumb ) {
+				$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
+			}
+			$title = $mobilePage->getTitle();
+			$html .= self::getLineHtml( $title, $title->getTouched(), $thumb );
+		}
+		$html .= '</ul>';
+		return $html;
 	}
 }
