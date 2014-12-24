@@ -280,7 +280,9 @@
 		$( '#content_wrapper a' ).on( 'click', function () {
 			// the link might be an internal link with a hash.
 			// if it is check if we need to reveal any sections.
-			if ( $( this ).attr( 'href' ).indexOf ( '#' ) > -1 ) {
+			if ( $( this ).attr( 'href' ) !== undefined &&
+				$( this ).attr( 'href' ).indexOf( '#' ) > -1
+			) {
 				checkHash();
 			}
 		} );
