@@ -70,6 +70,24 @@
       "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_0d86ccbe",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-24T12:31:33Z",
+      "side": 1,
+      "message": "ok :)",
+      "parentUuid": "0e6cb3ef_57ce9532",
+      "revId": "9c1ed2f3eb9bf173fe9c4f3ca9e81f48a3e44105",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
