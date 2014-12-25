@@ -1,0 +1,8 @@
+<div class="license-panel panel">
+	<p class="license">{{{licenseMsg}}}</p>
+</div>
+<div class="content">
+	{{{spinner}}}
+	<div class="instructions">{{{instructions}}}</div>
+	<textarea class="error-field mw-ui-input" cols="40" rows="8" placeholder="{{placeHolder}}"></textarea>
+</div>

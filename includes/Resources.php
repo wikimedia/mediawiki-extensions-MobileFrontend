@@ -855,6 +855,47 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.errorReport' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.overlays',
+		),
+		'scripts' => array(
+			'javascripts/modules/errorReport/init.js',
+		),
+		'messages' => array(
+			'mobile-frontend-errorreport-button-label',
+		),
+	),
+
+	'mobile.errorReport.overlay' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.templates',
+			'mobile.overlays',
+			'mobile.toast',
+		),
+		'scripts' => array(
+			'javascripts/modules/errorReport/ErrorReportOverlay.js',
+		),
+		'styles' => array(
+			'less/modules/errorReport/errorReportOverlay.less',
+		),
+		'messages' => array(
+			'mobile-frontend-editor-licensing',
+			'mobile-frontend-errorreport-error',
+			'mobile-frontend-errorreport-feedback',
+			'mobile-frontend-errorreport-heading',
+			'mobile-frontend-errorreport-instructions',
+			'mobile-frontend-errorreport-placeholder',
+			'mobile-frontend-errorreport-section-title',
+			'mobile-frontend-errorreport-submit',
+			'mobile-frontend-errorreport-summary',
+		),
+		'templates' => array(
+			'ErrorReportOverlay.hogan' => 'templates/modules/errorReport/ErrorReportOverlay.hogan',
+		),
+	),
+
 	'mobile.languages' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
@@ -1431,6 +1472,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.bannerImage',
 			'mobile.fontchanger',
 			'mobile.wikigrok.roulette',
+			'mobile.errorReport',
 		),
 		'scripts' => array(
 			'javascripts/modules/infobox/init.js',
