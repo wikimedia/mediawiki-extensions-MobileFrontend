@@ -257,10 +257,10 @@ class MinervaTemplate extends BaseTemplate {
 			) );
 			?>
 			<?php
+				echo $data[ 'bodytext' ];
 				if ( isset( $data['subject-page'] ) ) {
 					echo $data['subject-page'];
 				}
-				echo $data[ 'bodytext' ];
 				$this->renderSecondaryActions();
 				$this->renderHistoryLinkBottom( $data );
 			?>
