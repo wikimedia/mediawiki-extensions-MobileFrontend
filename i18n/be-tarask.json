@@ -5,10 +5,11 @@
 			"Jim-by",
 			"Renessaince",
 			"Wizardist",
-			"Zedlik"
+			"Zedlik",
+			"Red Winged Duck"
 		]
 	},
-	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код бясьпекі",
+	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацьверджаньня",
 	"mobile-frontend-account-create-email-placeholder": "Адрас e-mail (неабавязкова)",
 	"mobile-frontend-account-create-submit": "Зарэгістравацца",
 	"mobile-frontend-back-to-top-of-section": "Вярнуцца да папярэдняй сэкцыі",
@@ -113,7 +114,6 @@
 	"mobile-frontend-settings-alpha": "Экспэрымэнтальны рэжым",
 	"mobile-frontend-settings-alpha-description": "Завітайце ў небясьпечную й неразьведаную мабільную тэрыторыю. Напаткайце яшчэ больш экспэрымэнтальных магчымасьцяў, поўных хібаў.",
 	"mobile-frontend-settings-beta": "Бэта",
-	"mobile-frontend-settings-description": "Налады ніжэй дапамогуць вам дастасаваць выгляд мабільнага сайту для сябе.",
 	"mobile-frontend-settings-site-description": "Праект «{{SITENAME}}» даступны на $1 {{PLURAL:$1|1=мове|мовах}}. Ніжэй выкладзеныя ўсе даступныя вэрсіі.",
 	"mobile-frontend-settings-site-header": "Мовы {{GRAMMAR:родны|{{SITENAME}}}}",
 	"mobile-frontend-sign-in-error-heading": "Ой",
