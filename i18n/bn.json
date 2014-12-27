@@ -334,5 +334,6 @@
 	"skinname-minerva": "মিনের্ভা",
 	"mobile-frontend-pageaction-edit-tooltip": "এই পাতার শীর্ষ অনুচ্ছেদ সম্পাদনা করুন।",
 	"mobile-frontend-pageaction-upload-tooltip": "এই পাতায় একটি শীর্ষ ছবি আপলোড করুন।",
-	"mobile-frontend-donate-button-label": "দান করুন"
+	"mobile-frontend-donate-button-label": "দান করুন",
+	"mobile-frontend-wikidata-editor-description-label": "একটি বাক্যে ''$1'' বর্ননা করুন:"
 }

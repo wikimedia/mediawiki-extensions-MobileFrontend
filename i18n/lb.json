@@ -68,6 +68,7 @@
 	"mobile-frontend-editor-placeholder": "Dësen Abschnitt ass eidel. Sidd deen Éischte fir en ze erweideren!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Dir}} leet eng nei Säit op {{SITENAME}} un!",
 	"mobile-frontend-editor-previewing-page": "<span>$1</span> <strong>weisen ouni ze späicheren</strong>",
+	"mobile-frontend-editor-redirect-title": "Viruleeden op den Editeur...",
 	"mobile-frontend-editor-save": "Späicheren",
 	"mobile-frontend-editor-source-editor": "Quelltext änneren",
 	"mobile-frontend-editor-success": "Är Ännerung ass gespäichert!",
@@ -128,6 +129,7 @@
 	"mobile-frontend-last-modified-seconds": "Fir d'lescht geännert {{PLURAL:$1|virun 1 Sekonn|viru(n) $1 Sekonnen}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Fir d'lescht {{GENDER:$1|geännert}}] elo grad  {{PLURAL:$4|vum [$5 $2]|0= vun engem anonyme Benotzer}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Fir d'lescht {{GENDER:$1|geännert}}  {{PLURAL:$3|virun enger Minutt|viru(n) $3 Minutten}}] {{PLURAL:$5|vum [$6 $2]|0=vun engem anonyme Benotzer}}",
+	"mobile-frontend-last-modified-with-user-years": "[$4 Fir d'lescht {{GENDER:$1|geännert}} {{PLURAL:$3|virun engem Joer|viru(n) $3 Joren}}]  {{PLURAL:$5|[vum $6 $2]|0=vun engem anonyme Benotzer}}",
 	"mobile-frontend-last-modified-years": "Fir d'lescht geännert {{PLURAL:$1|virun 1 Joer|viru(n) $1 Joer}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Mam eroplueden ufänken",
 	"mobile-frontend-lead-image-tutorial-summary": "Vergewëssert iech datt Ärt Bild d'Säit illustréiert. Et soll e Bild sinn dat Dir selwer gemaach hutt an dat kee Copyright verletzt.",
@@ -234,7 +236,9 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Thema",
 	"mobile-frontend-talk-add-overlay-submit": "Diskussioun derbäisetzen",
 	"mobile-frontend-talk-back-to-page": "Zréck op d'Säit \"$1\".",
+	"mobile-frontend-talk-back-to-filepage": "Zréck op de Fichier \"$1\".",
 	"mobile-frontend-talk-edit-summary": "Neien Diskussiounsabschnitt: $1",
+	"mobile-frontend-talk-explained": "Dës Diskussioune sinn elo aktiv",
 	"mobile-frontend-talk-explained-empty": "Et gëtt keng Diskussiounen iwwer dës Säit.",
 	"mobile-frontend-talk-overlay-header": "Diskussioun",
 	"mobile-frontend-talk-overlay-lead-header": "Diskussioun ouni Numm",
@@ -281,6 +285,7 @@
 	"tag-mobile_edit-description": "Ännerung déi vun engem mobile Site oder enger App gemaach gouf",
 	"tag-mobile_web_edit": "Mobil Web-Ännerung",
 	"tag-mobile_web_edit-description": "Ännerung vum mobile Site aus gemaach",
+	"apihelp-mobileview-param-thumbnail": "Maximal Dimensioune vu Miniatur-Biller.",
 	"mobile-frontend-donate-button-label": "Maacht en Don",
 	"mobile-frontend-wikidata-editor-description-label": "Beschreift \"$1\" an engem eenzege Saz:"
 }
