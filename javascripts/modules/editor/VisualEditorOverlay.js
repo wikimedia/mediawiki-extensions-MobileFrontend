@@ -38,7 +38,7 @@
 			options.previewingMsg = mw.msg( 'mobile-frontend-page-edit-summary', options.title );
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing' );
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
-			this.hasChanged = false;
+			this._hasChanged = false;
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
 			this.initializeSwitcher();
 		},
@@ -103,7 +103,7 @@
 			this.$( '.back' ).on( 'click', $.proxy( this, 'switchToEditor' ) );
 			this.$( '.source-editor' ).on( 'click', function () {
 				// If changes have been made tell the user they have to save first
-				if ( !self.hasChanged ) {
+				if ( !self.hasChanged() ) {
 					self.switchToSourceEditor( options );
 				} else {
 					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
@@ -151,7 +151,7 @@
 			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.saving-header' );
 			// Stop the confirmation message from being thrown when you hit save.
-			this.hasChanged = false;
+			this._hasChanged = false;
 			this.$( '.surface, .summary-area' ).hide();
 			if ( this.captchaId ) {
 				// Intentional Lcase ve save api properties
@@ -216,7 +216,7 @@
 		 * @method
 		 */
 		onTransact: function () {
-			this.hasChanged = true;
+			this._hasChanged = true;
 			this.$continueBtn.prop( 'disabled', false );
 		},
 		/**
@@ -265,7 +265,7 @@
 		},
 		/** @inheritdoc **/
 		hasChanged: function () {
-			return this.hasChanged;
+			return this._hasChanged;
 		}
 	} );
 
