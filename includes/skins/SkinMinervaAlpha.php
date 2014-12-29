@@ -109,6 +109,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
 		$vars['wgWikiBasePropertyConfig'] = $wgWikiBasePropertyConfig;
 		$vars['wgMFInfoboxConfig'] = $wgMFInfoboxConfig;
+		$vars['wgMFShowRedLinks'] = true;
 
 		return $vars;
 	}

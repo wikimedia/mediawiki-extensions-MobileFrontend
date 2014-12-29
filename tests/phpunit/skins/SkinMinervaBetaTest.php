@@ -6,7 +6,7 @@ require_once __DIR__ . '/SkinTest.php';
  * @group MobileFrontend
  * @group Database
  */
-class SkinMinervaTest extends SkinTest
+class SkinMinervaBetaTest extends SkinTest
 {
 	public function providerShowRedLinks() {
 		return array(
@@ -23,10 +23,10 @@ class SkinMinervaTest extends SkinTest
 	}
 
 	protected function getSkin() {
-		return new SkinMinerva();
+		return new SkinMinervaBeta();
 	}
 
 	protected function getMode() {
-		return 'stable';
+		return 'beta';
 	}
 }

@@ -4,15 +4,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 /**
- * Specify whether to show redlinks (page doesn't exist) for logged in users using stable mode.
- * This hasn't any effect to beta and alpha mode!
- * This variable is temporary only.
+ * Specify whether to show red links (page doesn't exist) for logged in users
+ * using stable or beta mode. Red links are always shown in alpha mode.
  */
 $wgMFShowRedLinks = false;
 
 /**
- * Specify whether show redlinks (page doesn't exist) for anonymous users using stable mode.
- * This hasn't any effect to beta and alpha mode!
+ * Specify whether to show red links (page doesn't exist) for anonymous users
+ * using stable or beta mode. Red links are always shown in alpha mode.
  */
 $wgMFShowRedLinksAnon = false;
 
