@@ -87,21 +87,29 @@
 	@margin: 12px;
 
 	.alpha {
+		// reason for account creation is not so important on mobile - it should be obvious through the workflows
+		.mw-createacct-benefits-container {
+			display: none;
+		}
+
 		#userloginForm {
+			// tips are not useful
+			.prefsectiontip,
+			// hide help link
+			#mw-userlogin-help,
+			// benefits are obvious through the workflows
+			#wpReason,
+			// real name in account creation is not so important on mobile
+			#wpRealName,
 			// Hide keep me logged in checkbox on mobile.
 			// FIXME: this should be checked by default on mobile. Use JavaScript to check this?
 			.mw-ui-checkbox {
 				display: none;
 			}
-
-			.loginText {
-				border-bottom: 0;
-			}
 		}
 
 		// account creation
 		#userlogin2 {
-			#wpEmail,
 			.loginPassword {
 				border-bottom: 0;
 			}
@@ -109,6 +117,10 @@
 			.mw-ui-checkbox {
 				margin: @margin 0;
 			}
+		}
+
+		.mw-ui-vform-field {
+			text-align: center;
 		}
 
 		.mw-ui-vform {
@@ -143,6 +155,13 @@
 				// Make the inputs look connected in mobile mode
 				.mw-ui-input {
 					border: solid 1px @colorGrayLight;
+
+					#wpEmail,
+					&.loginPassword {
+						border-top-left-radius: 0;
+						border-top-right-radius: 0;
+						margin-top: -1px;
+					}
 				}
 			}
 		}
