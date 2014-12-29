@@ -16,6 +16,23 @@
       "revId": "98507edb743d89dbe625706369e306870c8d3575",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_93c19235",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-29T14:58:03Z",
+      "side": 1,
+      "message": "You want to perform the same action regardless of the condition, eh? I wonder where this piece of code could go… ;)",
+      "revId": "98507edb743d89dbe625706369e306870c8d3575",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
