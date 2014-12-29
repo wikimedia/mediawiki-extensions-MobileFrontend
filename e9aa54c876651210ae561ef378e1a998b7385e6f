@@ -16,6 +16,24 @@
       "revId": "e9aa54c876651210ae561ef378e1a998b7385e6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b88b55c3",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-29T10:31:40Z",
+      "side": 1,
+      "message": "We have two options, if it is a concrete event handler, I wholeheartedly agree. This can be onLinksClick.\n\nIf it is a function that will be reused through several selectors or called from other methods (imagine there where more selectors in this view for which we wanted to prevent the default) then I think a generic name like disableClick would be the way to go.\n\nIn any case, here it is only for one selector, so I shall rename it to onLinksClick (same for toggleStatus).",
+      "parentUuid": "0e6cb3ef_0b1d5414",
+      "revId": "e9aa54c876651210ae561ef378e1a998b7385e6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
