@@ -70,7 +70,7 @@
 		if ( browser.supportsAnimations() ) {
 			$viewport.addClass( 'animations' );
 		}
-		if ( browser.supportsPositionFixed() ) {
+		if ( !browser.supportsPositionFixed() ) {
 			$viewport.addClass( 'no-position-fixed' );
 		}
 		if ( browser.supportsTouchEvents() ) {
