@@ -259,10 +259,9 @@ body.navigation-enabled {
 }
 
 // animated version
-// FIXME: doesn't work in Firefox due to https://bugzilla.mozilla.org/show_bug.cgi?id=625289
-// do we want to work around it?
 @duration: .25s;
-@easing: ease-out;
+// Trying to mimic easeOutBack. More info: https://en.wikipedia.org/wiki/B%C3%A9zier_curve
+@easing: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 // FIXME: Cleanup animation css
 .animations {
