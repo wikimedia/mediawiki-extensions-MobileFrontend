@@ -51,6 +51,24 @@
       "revId": "98507edb743d89dbe625706369e306870c8d3575",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_fbe54407",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-29T23:12:45Z",
+      "side": 1,
+      "message": "I\u0027m going to put it below because we want to swap icons first and then unhide.",
+      "parentUuid": "0e6cb3ef_fb26a462",
+      "revId": "98507edb743d89dbe625706369e306870c8d3575",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
