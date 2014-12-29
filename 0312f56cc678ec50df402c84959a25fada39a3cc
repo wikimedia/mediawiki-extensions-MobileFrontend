@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3bdc1c4b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-29T23:15:54Z",
+      "side": 1,
+      "message": "Just call this categories.less",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_dbe2c0ff",
+        "filename": "javascripts/modules/categories/CategoryApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-29T23:15:54Z",
+      "side": 1,
+      "message": "This is very similar to SearchApi so try to extend SearchApi making SearchApi more generic if necessary to reduce the code needed here.",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3bc3bc62",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-29T23:15:54Z",
+      "side": 1,
+      "message": "Now TalkOverlay, EditorOverlayBase and this have these methods. Time to make it a method on Overlay.js I think!",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1bc03854",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-29T23:15:54Z",
+      "side": 1,
+      "message": "this is called clearSpinner in TalkOverlay and editor overlay",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_dbb960e7",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-29T23:15:54Z",
+      "side": 1,
+      "message": "Would be cool if you could make use of the new event code that Joaquin has just had added to validate it :-)",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9bd3e82f",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-29T23:15:54Z",
+      "side": 1,
+      "message": "We need to get out of this habit. Any HTML construction should be done in the template and a repeat call to render\n\nCheck out how infobox does this",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_bbceec84",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-29T23:15:54Z",
+      "side": 1,
+      "message": "This is alpha specific so not good. Add another class for this purpose.",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
