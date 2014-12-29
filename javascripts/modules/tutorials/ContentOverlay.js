@@ -11,17 +11,17 @@
 	ContentOverlay = Overlay.extend( {
 		className: 'overlay content-overlay',
 		/**
-		 * @inheritDoc
+		 * @inheritdoc
 		 * @type Boolean
 		 */
 		fullScreen: false,
 		/**
-		 * @inheritDoc
+		 * @inheritdoc
 		 * @type Boolean
 		 */
 		closeOnContentTap: true,
 		/**
-		 * @inheritDoc
+		 * @inheritdoc
 		 * @type String
 		 */
 		appendTo: '#mw-mf-page-center',
@@ -46,6 +46,7 @@
 		/**
 		 * Refreshes the pointer arrow.
 		 * @method
+		 * @param {string} target jQuery selector
 		 */
 		refreshPointerArrow: function ( target ) {
 			this.$pointer.remove();
@@ -63,8 +64,7 @@
 			this.$el.css( 'top', paOffset.top + h );
 		},
 		/**
-		 * Position overlay and add pointer arrow
-		 ** so that it points at specified element
+		 * Position overlay and add pointer arrow that points at specified element
 		 * @method
 		 * @param {jQuery.Object} $pa An element that should be pointed at by the overlay
 		 */

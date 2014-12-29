@@ -40,7 +40,7 @@
 		},
 
 		/**
-		 * @inheritDoc
+		 * @inheritdoc
 		 */
 		initialize: function ( options ) {
 			// Fallback if no displayTitle provided
@@ -159,7 +159,7 @@
 		},
 
 		/**
-		 * @inheritDoc
+		 * @inheritdoc
 		 */
 		preRender: function ( options ) {
 			var self = this;
@@ -186,6 +186,7 @@
 		 * FIXME: rename to getSection
 		 * FIXME: Change function signature to take the anchor of the heading
 		 * @method
+		 * @param {String} id of the section
 		 * @return {Section}
 		 */
 		getSubSection: function ( id ) {

@@ -224,6 +224,7 @@
 		 *
 		 * @private
 		 * @method
+		 * @param {Object} options for overlay
 		 */
 		_loadRest: function ( options ) {
 			var self = this,

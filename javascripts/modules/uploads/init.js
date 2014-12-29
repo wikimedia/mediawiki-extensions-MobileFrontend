@@ -10,6 +10,7 @@
 	 * Checks whether there is no suitable image in the container.
 	 * Judges this based on selector in wgMFLeadPhotoUploadCssSelector
 	 *
+	 * @param {jQuery.Object} $container
 	 * @return {Boolean}
 	 * @ignore
 	 */

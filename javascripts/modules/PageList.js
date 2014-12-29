@@ -85,7 +85,7 @@
 			}
 		},
 		/**
-		 * @inheritDoc
+		 * @inheritdoc
 		 */
 		initialize: function ( options ) {
 			// FIXME: Find more elegant standard way to allow enhancement of views already in DOM

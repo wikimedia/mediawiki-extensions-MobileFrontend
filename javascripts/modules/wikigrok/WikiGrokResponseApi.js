@@ -12,6 +12,7 @@
 		/**
 		 * Initialize with default values
 		 * @method
+		 * @inheritdoc
 		 */
 		initialize: function ( options ) {
 			this.subjectId = options.itemId;

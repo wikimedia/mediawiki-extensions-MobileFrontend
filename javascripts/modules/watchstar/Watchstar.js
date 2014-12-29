@@ -94,6 +94,7 @@
 
 		/**
 		 * Prevent default on incoming events
+		 * @param {jQuery.Event} ev
 		 */
 		onLinksClick: function ( ev ) {
 			ev.preventDefault();

@@ -6,6 +6,7 @@
 
 	/**
 	 * Reveal the search overlay
+	 * @param {jQuery.Event} ev
 	 * @ignore
 	 */
 	function openSearchOverlay( ev ) {

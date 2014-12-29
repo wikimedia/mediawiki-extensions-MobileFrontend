@@ -30,6 +30,7 @@
 
 	/**
 	 * @ignore
+	 * @param {Object} expandedSections
 	 * Save expandedSections to localStorage
 	 */
 	function saveExpandedSections( expandedSections ) {
@@ -63,6 +64,7 @@
 
 	/**
 	 * Expand sections that were previously expanded before leaving this page.
+	 * @param {jQuery.Object} $container
 	 * @ignore
 	 */
 	function expandStoredSections( $container ) {
@@ -297,6 +299,7 @@
 	 * Initialises toggling code.
 	 *
 	 * @method
+	 * @param {jQuery.Object} $container to enable toggling on
 	 * @ignore
 	 */
 	function init( $container ) {

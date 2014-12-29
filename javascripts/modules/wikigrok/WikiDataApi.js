@@ -45,6 +45,7 @@
 		},
 		/**
 		 * Post with support for central auth tokens
+		 * @param {Object} data to post
 		 */
 		post: function ( data ) {
 			var self = this,

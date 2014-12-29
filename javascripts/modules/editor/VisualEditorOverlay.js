@@ -229,6 +229,8 @@
 		/**
 		 * Event handler.
 		 * @method
+		 * @param {jqXHR} jqXHR
+		 * @param {string} status
 		 */
 		onSerializeError: function ( jqXHR, status ) {
 			this.reportError( mw.msg( 'visualeditor-serializeerror', status ), 've-serialize-error' );
@@ -257,6 +259,7 @@
 		/**
 		 * Event handler.
 		 * @method
+		 * @param {Object} editApi response from api
 		 */
 		onSaveErrorCaptcha: function ( editApi ) {
 			this.captchaId = editApi.captcha.id;

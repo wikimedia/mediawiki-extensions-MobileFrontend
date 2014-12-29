@@ -83,6 +83,7 @@
 			/**
 			 * Load content of the talk page via PageApi
 			 * @method
+			 * @param {Object} options for the overlay
 			 * @private
 			 */
 			_loadContent: function ( options ) {

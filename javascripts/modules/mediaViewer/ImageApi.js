@@ -5,6 +5,7 @@
 
 	/**
 	 * Gets the first size larger than or equal to the provided size
+	 * @param {Number} size
 	 * @ignore.
 	 */
 	function findSizeBucket( size ) {

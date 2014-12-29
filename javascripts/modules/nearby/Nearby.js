@@ -87,7 +87,7 @@
 		},
 		/**
 		 * Get pages within a nearby range of current location
-		 * @inheritDoc
+		 * @inheritdoc
 		 */
 		initialize: function ( options ) {
 			var self = this,
@@ -145,6 +145,7 @@
 
 			/**
 			 * Handler for successful query
+			 * @param {array} pages as passed by done callback of Nearby##getPages
 			 * @ignore
 			 */
 			function pagesSuccess( pages ) {

@@ -1,6 +1,6 @@
 /**
  * Helper library for managing user and device specific settings
- ** making use of localStorage and cookies as a fallback.
+ * that makes use of localStorage and cookies as a fallback.
  * @class mw.mobileFrontend.settings
  * @singleton
  */

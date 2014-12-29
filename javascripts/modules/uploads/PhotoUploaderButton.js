@@ -45,6 +45,7 @@
 
 		/**
 		 * Event handler, called when a file is selected in the input
+		 * @param {jQuery.Event} ev
 		 */
 		onFileSelected: function ( ev ) {
 			var $input = $( ev.target );
@@ -55,7 +56,8 @@
 
 		/**
 		 * Handle a selected file for upload, emit event and route to the
-		 * appropriate url
+		 * appropiate url
+		 * @param {FileObject} file associated with file upload input
 		 */
 		handleFile: function ( file ) {
 			// FIXME: this is hacky but it would be hard to pass a file in a route

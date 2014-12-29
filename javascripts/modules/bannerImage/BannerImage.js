@@ -11,6 +11,7 @@
 	 * Limits the amount of thumbnail images being generated on the server
 	 * It rounds to upper limit to try to avoid upscaling
 	 * @ignore
+	 * @param {Number} screenWidth to optimise for
 	 *
 	 * @returns {Number} pixel width of the image
 	 */
@@ -49,6 +50,7 @@
 	 * NOTE: Modified/Borrowed from from Infobox.js
 	 * @method
 	 * @param {String} title of file page without File: prefix
+	 * @param {Number|String} desiredWidth to load thumbnail for.
 	 * @return {String} url corresponding to thumbnail (size 160px)
 	 */
 	HeaderImage.prototype.getImageUrl = function ( title, desiredWidth ) {

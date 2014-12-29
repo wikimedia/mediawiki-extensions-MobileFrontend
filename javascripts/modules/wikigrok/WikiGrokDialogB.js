@@ -34,6 +34,7 @@
 		 * Fetches suggestions' labels from the server.
 		 * Shows panel to user when there are suggestions.
 		 * @method
+		 * @param {Object} campaign definition
 		 * @private
 		 */
 		_renderSuggestions: function ( campaign ) {

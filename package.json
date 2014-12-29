@@ -24,7 +24,7 @@
 		"grunt-svg2png": "0.2.5",
 		"grunt-contrib-jshint": "0.10.0",
 		"grunt-jscs": "git+https://github.com/jdlrobson/grunt-jscs.git#mobilefrontend",
-		"jscs-jsdoc": "^0.0.24",
+		"jscs-jsdoc": "git+https://github.com/jdlrobson/jscs-jsdoc.git#checkParamExistence",
 		"grunt-jsduck": "^1.0.1",
 		"js-beautify": "^1.5.4",
 		"grunt-notify": "^0.3.1",

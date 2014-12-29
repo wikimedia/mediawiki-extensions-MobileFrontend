@@ -116,6 +116,8 @@
 	 * FIXME: sandbox from mf-application.js
 	 *
 	 * @method
+	 * @param {String} schemaName
+	 * @param {Object} data
 	 * @return {jQuery.Deferred}
 	 */
 	function log( schemaName, data ) {
