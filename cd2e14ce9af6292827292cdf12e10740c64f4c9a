@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_5869d9f4",
+        "filename": "javascripts/Schema.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-29T16:53:11Z",
+      "side": 1,
+      "message": "Where\u0027s this set?",
+      "revId": "cd2e14ce9af6292827292cdf12e10740c64f4c9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_e554c103",
+        "filename": "javascripts/Schema.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-29T16:53:11Z",
+      "side": 1,
+      "message": "And where\u0027s this set?",
+      "revId": "cd2e14ce9af6292827292cdf12e10740c64f4c9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f85ead47",
+        "filename": "tests/qunit/test_Schema.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-29T16:53:11Z",
+      "side": 1,
+      "message": "Copy/pasta fail?",
+      "revId": "cd2e14ce9af6292827292cdf12e10740c64f4c9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
