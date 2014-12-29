@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_45a48d04",
+        "filename": "includes/MobileCollection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-29T17:54:22Z",
+      "side": 1,
+      "message": "Just extend the ArrayIterator class [0]. This\u0027ll allow iteration and you\u0027ll be able to add items to the collection as you would an array (because it implements ArrayAccess [1]).\n\n[0] http://php.net/manual/en/class.arrayiterator.php\n[1] http://php.net/manual/en/class.arrayaccess.php",
+      "revId": "9aff7236925cd4aebed8602e8a9d192e564f6c94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_e5aa81d0",
+        "filename": "includes/MobileCollection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-29T17:54:22Z",
+      "side": 1,
+      "message": "What\u0027s this for? Is this distinction necessary yet?",
+      "revId": "9aff7236925cd4aebed8602e8a9d192e564f6c94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_a5a0098e",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-12-29T17:54:22Z",
+      "side": 1,
+      "message": "With this use of MobileCollection – using it as an iterator rather than as a collection – why instantiate it here, rather than in the else block?",
+      "revId": "9aff7236925cd4aebed8602e8a9d192e564f6c94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
