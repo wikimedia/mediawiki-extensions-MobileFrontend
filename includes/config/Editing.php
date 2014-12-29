@@ -1,0 +1,31 @@
+<?php
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'Not an entry point.' );
+}
+
+/**
+ * Specify whether to show redlinks (page doesn't exist) for logged in users using stable mode.
+ * This hasn't any effect to beta and alpha mode!
+ * This variable is temporary only.
+ */
+$wgMFShowRedLinks = false;
+
+/**
+ * Specify whether show redlinks (page doesn't exist) for anonymous users using stable mode.
+ * This hasn't any effect to beta and alpha mode!
+ */
+$wgMFShowRedLinksAnon = false;
+
+/**
+ * Options to control several functions of the mobile editor.
+ * Possible values:
+ * - 'anonymousEditing':
+ *	Whether or not anonymous (not logged in) users should be able to edit.
+ *	Note this is highly experimental and comes without any warranty and may introduce bugs
+ *	until anonymous editing experience is addressed in this extension. Anonymous editing
+ *	on mobile is still a big unknown. See bug 53069.
+ *	Thoughts welcomed on https://www.mediawiki.org/wiki/Mobile_wikitext_editing#Anonymous_editing
+ */
+$wgMFEditorOptions = array(
+	'anonymousEditing' => false,
+);

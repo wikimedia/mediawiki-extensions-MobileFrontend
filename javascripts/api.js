@@ -79,7 +79,7 @@
 			 */
 			options.xhr = function () {
 				var xhr = $.ajaxSettings.xhr();
-				if ( xhr.upload && ( mw.config.get( 'wgMFAjaxUploadProgressSupport' ) ) ) {
+				if ( xhr.upload ) {
 					// need to bind this event before we open the connection (see note at
 					// https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
 					xhr.upload.addEventListener( 'progress', function ( ev ) {
