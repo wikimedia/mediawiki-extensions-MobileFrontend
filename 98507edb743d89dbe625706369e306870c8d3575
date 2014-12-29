@@ -33,6 +33,24 @@
       "revId": "98507edb743d89dbe625706369e306870c8d3575",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_fb26a462",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-29T23:09:42Z",
+      "side": 1,
+      "message": "actually yeh it would make much more sense if this was moved up $el.removeClass rather than have it done twice.",
+      "parentUuid": "0e6cb3ef_93c19235",
+      "revId": "98507edb743d89dbe625706369e306870c8d3575",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
