@@ -55,6 +55,7 @@
 			if ( options.error ) {
 				this.onError();
 			} else {
+				// FIXME: Move to NotificationApi class
 				api.get( {
 					action: 'query',
 					meta: 'notifications',
@@ -112,12 +113,10 @@
 		 * @method
 		 */
 		markAllAsRead: function () {
-			api.getTokenWithEndpoint( 'edit' ).done( function ( token ) {
-				api.post( {
-					action: 'echomarkread',
-					all: true,
-					token: token
-				} );
+			// FIXME: Move to NotificationApi class
+			api.postWithToken( 'edit', {
+				action: 'echomarkread',
+				all: true
 			} );
 		},
 		/** @inheritdoc */
