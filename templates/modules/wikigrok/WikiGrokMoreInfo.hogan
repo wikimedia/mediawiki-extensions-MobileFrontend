@@ -1,6 +1,13 @@
 <div class="content wg-moreinfo">
-	<p>Wikipedia needs your help assembling machine-readable information from its text corpus. By collecting responses from you and other readers, we can improve search on Wikipedia.</p>
-	<p>Entries are submitted to <a href="//www.wikidata.org/">Wikidata</a> and are freely licensed under the <a href="//creativecommons.org/publicdomain/zero/1.0/">Creative Commons Public Domain Dedication</a> (CC0).</p>
+	<p>
+		Wikipedia is experimenting with new ways for people to contribute. By collecting responses
+		from you and other readers, we can improve search on Wikipedia.
+	</p>
+	<p>
+		Entries are submitted to
+		<a href="//www.wikidata.org/">Wikidata</a> and are freely licensed under the
+		<a href="//creativecommons.org/publicdomain/zero/1.0/">Creative Commons Public Domain Dedication</a> (CC0) license.
+	</p>
 	<p>
 		<button class="cancel inline mw-ui-button mw-ui-progressive">Got it!</button>
 	</p>
