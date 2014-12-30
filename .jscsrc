@@ -8,6 +8,7 @@
   "requirePaddingNewLinesInObjects": true,
   "disallowDanglingUnderscores": null,
   "requireSpacesInsideParentheses": "all",
+  "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
   "validateJSDoc": {
     "checkParamNames": true,
     "requireParamTypes": true,

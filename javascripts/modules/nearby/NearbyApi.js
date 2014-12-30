@@ -66,7 +66,6 @@
 				} else {
 					msg = 'mobile-frontend-nearby-distance-meters';
 				}
-				d = d + '';
 			} else {
 				if ( d > 2 ) {
 					d *= 10;

@@ -22,7 +22,7 @@
 			}
 			return ( cache[ key ] = method.apply( this, arguments ) );
 		};
-		memoized.cacheId = '' + Date.now() + Math.random();
+		memoized.cacheId = Date.now().toString() + Math.random().toString();
 		return memoized;
 	}
 
@@ -196,7 +196,7 @@
 		 * @return {Boolean}
 		 */
 		supportsGeoLocation: memoize( function () {
-			return !!navigator.geolocation;
+			return 'geolocation' in navigator;
 		} ),
 		/**
 		 * Detect if local storage

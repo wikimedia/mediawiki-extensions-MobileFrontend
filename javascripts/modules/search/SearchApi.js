@@ -56,7 +56,7 @@
 		 * @return {jQuery.Deferred}
 		 */
 		search: function ( query ) {
-			if ( !this.searchCache[query] ) {
+			if ( !this.isCached( query ) ) {
 				this.searchCache[query] = this.get( {
 					action: 'query',
 					generator: 'prefixsearch',
@@ -136,7 +136,7 @@
 		 * @return {Boolean}
 		 */
 		isCached: function ( query ) {
-			return !!this.searchCache[query];
+			return Boolean( this.searchCache[ query ] );
 		}
 	} );
 
