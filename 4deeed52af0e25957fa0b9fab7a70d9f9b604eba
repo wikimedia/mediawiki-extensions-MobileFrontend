@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_5eec5e20",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogC.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T01:49:46Z",
+      "side": 1,
+      "message": "This should be in the template eventually.",
+      "revId": "4deeed52af0e25957fa0b9fab7a70d9f9b604eba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3ef2ca03",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogC.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T01:49:46Z",
+      "side": 1,
+      "message": "We really should separate the WikiGrok Roulette loading code from the MenuItem code, but I\u0027ll make a separate card for that.",
+      "revId": "4deeed52af0e25957fa0b9fab7a70d9f9b604eba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
