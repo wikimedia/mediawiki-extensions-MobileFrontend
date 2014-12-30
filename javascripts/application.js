@@ -50,9 +50,6 @@
 		var
 			$viewport = $( '#mw-mf-viewport' );
 
-		// FIXME: This shouldn't be necessary
-		$( '<div id="notifications">' ).appendTo( $viewport );
-
 		if ( browser.supportsAnimations() ) {
 			$viewport.addClass( 'animations' );
 		}

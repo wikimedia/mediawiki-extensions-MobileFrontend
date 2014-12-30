@@ -20,8 +20,8 @@ QUnit.test( 'Standard', 2, function( assert ) {
 		$el: $( '#mfe-test-references' )
 	} );
 	$("#mfe-test-references sup a").trigger("click");
-	assert.strictEqual( $( '#notifications .references h3' ).text(), '[1]' );
-	assert.strictEqual( $( '#notifications .references a' ).text(), 'test reference' );
+	assert.strictEqual( $( '.drawer.references h3' ).text(), '[1]' );
+	assert.strictEqual( $( '.drawer.references a' ).text(), 'test reference' );
 });
 
 } )( jQuery, mw.mobileFrontend );

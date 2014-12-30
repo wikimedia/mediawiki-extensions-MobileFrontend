@@ -10,7 +10,7 @@
 	 */
 	Drawer = Panel.extend( {
 		className: 'drawer position-fixed',
-		appendToElement: '#notifications',
+		appendToElement: '#mw-mf-viewport',
 		closeOnScroll: true,
 
 		/** @inheritdoc */
