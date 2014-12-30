@@ -26,6 +26,8 @@
 		M.loadModule( 'mobile.uploads' ).done( function () {
 			var PhotoUploadOverlay = M.require( 'modules/uploads/PhotoUploadOverlay' );
 			result.resolve( new PhotoUploadOverlay( {
+				page: M.getCurrentPage(),
+				// FIXME: Remove this and use page option instead
 				pageTitle: mw.config.get( 'wgTitle' ),
 				file: lastFile,
 				funnel: funnel,

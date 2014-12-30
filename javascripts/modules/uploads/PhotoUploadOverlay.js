@@ -20,6 +20,7 @@
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {Page} defaults.page the page being uploaded to
 		 * @cfg {String} defaults.descriptionPlaceholder Placeholder text prompting user to add
 		 * a mandatory caption to an image.
 		 * @cfg {String} defaults.help A link that allows the user to open more information
@@ -32,6 +33,7 @@
 		 * header buttons. Defaults to the 'submit' button.
 		 */
 		defaults: {
+			page: undefined,
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),
 			help: mw.msg( 'mobile-frontend-photo-ownership-help' ),
 			ownerStatement: ownershipMessage,
@@ -78,7 +80,9 @@
 
 			if ( options.insertInPage ) {
 				this.api = new PhotoApi( {
+					page: options.page,
 					editorApi: new EditorApi( {
+						// FIXME: Use options.page instead
 						title: options.pageTitle
 					} )
 				} );

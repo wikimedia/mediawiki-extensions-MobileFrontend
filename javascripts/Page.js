@@ -21,6 +21,7 @@
 		 * is human readable, e.g. Talk:The man who lived.
 		 * @cfg {String} defaults.displayTitle Title of the page that's displayed. Falls back
 		 * to defaults.title if no value is provided.
+		 * @cfg {Number} defaults.namespaceNumber the number of the namespace the page belongs to
 		 * @cfg {Object} defaults.protection List of permissions as returned by API,
 		 * e.g. [{ edit: ['*'] }]
 		 * @cfg {Array} defaults.sections Array of {Section} objects.
@@ -31,6 +32,7 @@
 			id: 0,
 			title: '',
 			displayTitle: '',
+			namespaceNumber: 0,
 			protection: {
 				edit: [ '*' ]
 			},
@@ -47,6 +49,16 @@
 			options.displayTitle = options.displayTitle || options.title;
 			options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 			View.prototype.initialize.apply( this, arguments );
+		},
+
+		/**
+		 * Determine if current page is in a specified namespace
+		 * @method
+		 * @param {String} namespace Name of namespace
+		 * @return {Boolean}
+		 */
+		inNamespace: function ( namespace ) {
+			return this.options.namespaceNumber === mw.config.get( 'wgNamespaceIds' )[namespace];
 		},
 
 		/**

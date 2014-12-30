@@ -32,10 +32,11 @@
 		var
 			page = M.getCurrentPage(),
 			$lead = page.getLeadSectionElement(),
-			validNamespace = ( M.inNamespace( '' ) || M.inNamespace( 'user' ) || M.inNamespace( 'file' ) );
+			inFileNamespace = page.inNamespace( 'file' ),
+			validNamespace = ( page.inNamespace( '' ) || page.inNamespace( 'user' ) || inFileNamespace );
 
 		// Only show upload page action in File namespace if page doesn't already exist.
-		if ( M.inNamespace( 'file' ) ) {
+		if ( inFileNamespace ) {
 			if ( mw.config.get( 'wgArticleId' ) ) {
 				$( '#ca-upload' ).remove();
 			}

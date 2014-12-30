@@ -11,7 +11,7 @@
 	 */
 	function init( page ) {
 		var $container = $( '#ca-watch' );
-		if ( !M.inNamespace( 'special' ) ) {
+		if ( !page.inNamespace( 'special' ) ) {
 			new Watchstar( {
 				el: $container,
 				isWatched: page.isWatched(),

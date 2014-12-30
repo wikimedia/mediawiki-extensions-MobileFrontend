@@ -19,7 +19,7 @@
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
 		isNewPage = currentPage.options.id === 0,
-		isNewFile = M.inNamespace( 'file' ) && isNewPage,
+		isNewFile = currentPage.inNamespace( 'file' ) && isNewPage,
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = browser.isWideScreen() && veConfig,

@@ -40,13 +40,14 @@
 	 * FIXME: Separate from application.js
 	 *
 	 * @method
+	 * @param {Page} page
 	 */
-	function loadWideScreenModules() {
+	function loadWideScreenModules( page ) {
 		var modules = [];
 		if ( !inWideScreenMode && browser.isWideScreen() &&
 			mw.config.get( 'skin' ) === 'minerva' ) {
 			// Adjust screen for tablets
-			if ( inNamespace( '' ) ) {
+			if ( page.inNamespace( '' ) ) {
 				modules.push( 'tablet.scripts' );
 			}
 			inWideScreenMode = true;
@@ -107,7 +108,7 @@
 			} );
 		}
 
-		$( loadWideScreenModules );
+		loadWideScreenModules( getCurrentPage() );
 		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
 		M.on( 'resize', loadWideScreenModules );
 	}
@@ -178,17 +179,6 @@
 	}
 
 	/**
-	 * Determine if current page is in a specified namespace
-	 * FIXME: Move to method on Page
-	 * @method
-	 * @param {String} namespace Name of namespace
-	 * @return {Boolean}
-	 */
-	function inNamespace( namespace ) {
-		return mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' )[namespace];
-	}
-
-	/**
 	 * Get current page view object
 	 * FIXME: Move to M.define( 'page' )
 	 * @method
@@ -231,7 +221,6 @@
 	$.extend( M, {
 		init: init,
 		escapeHash: escapeHash,
-		inNamespace: inNamespace,
 		getCurrentPage: getCurrentPage,
 		getSessionId: getSessionId,
 		log: log,

@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var currentPageTitle =  M.getCurrentPage().title,
+	var page = M.getCurrentPage(),
+		currentPageTitle =  page.title,
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
 		arrowUpOptions = {
@@ -310,7 +311,7 @@
 
 	// avoid this running on Watchlist
 	if (
-		!M.inNamespace( 'special' ) &&
+		!page.inNamespace( 'special' ) &&
 		!mw.config.get( 'wgIsMainPage' ) &&
 		mw.config.get( 'wgAction' ) === 'view'
 	) {

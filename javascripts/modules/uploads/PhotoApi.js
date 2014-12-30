@@ -110,11 +110,13 @@
 		 * @inheritdoc
 		 * @param {Object} options
 		 *     [options.editorApi] EditorApi An API instance that will be used
+		 *     [options.page] Page to upload to
 		 * for inserting images in a page.
 		 */
 		initialize: function ( options ) {
 			Api.prototype.initialize.apply( this, arguments );
 			options = options || {};
+			this.page = options.page;
 			this.editorApi = options.editorApi;
 		},
 
@@ -160,8 +162,10 @@
 		 * containing error message).
 		 */
 		save: function ( options ) {
-			var isNewPage = mw.config.get( 'wgArticleId' ) === 0,
-				isNewFile = M.inNamespace( 'file' ) && isNewPage,
+			var page = this.page,
+				// FIXME: Use page.getId()
+				isNewPage = mw.config.get( 'wgArticleId' ) === 0,
+				isNewFile = page.inNamespace( 'file' ) && isNewPage,
 				self = this,
 				result = $.Deferred(),
 				apiUrl = endpoint || this.apiUrl;
