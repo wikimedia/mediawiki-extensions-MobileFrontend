@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_8c7c09b6",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T22:50:02Z",
+      "side": 1,
+      "message": "This note about Firefox is outdated and should be removed. Not technically part of this change, but would be good to fix with this :)",
+      "revId": "b2418ef661b2b2484f07ffc4140d86fae2d06c52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
