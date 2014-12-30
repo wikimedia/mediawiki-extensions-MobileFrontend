@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_ac81cda5",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T22:38:14Z",
+      "side": 1,
+      "message": "Smells fishy..  This should be done on EditorOverlayBase.",
+      "revId": "e5787388f6c42fa63c089d84d0505dfea5f94e4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
