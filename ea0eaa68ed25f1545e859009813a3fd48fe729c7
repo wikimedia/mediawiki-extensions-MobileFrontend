@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_4fa4a604",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebUploads.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T18:25:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_1927e060",
+      "revId": "ea0eaa68ed25f1545e859009813a3fd48fe729c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_59c31861",
         "filename": "javascripts/modules/search/init.js",
         "patchSetId": 10
@@ -47,6 +65,24 @@
       "writtenOn": "2014-12-30T10:41:15Z",
       "side": 1,
       "message": "This var should probably be named SchemaMobileWebClickTracking for consistency with what we are doing in the other files",
+      "revId": "ea0eaa68ed25f1545e859009813a3fd48fe729c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cf3996cc",
+        "filename": "javascripts/modules/search/init.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T18:25:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_59c31861",
       "revId": "ea0eaa68ed25f1545e859009813a3fd48fe729c7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
