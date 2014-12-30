@@ -6,7 +6,7 @@
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
 		PhotoUploadProgress = M.require( 'modules/uploads/PhotoUploadProgress' ),
-		schema = M.require( 'loggingSchemas/mobileWebUploads' ),
+		SchemaMobileWebUploads = M.require( 'loggingSchemas/SchemaMobileWebUploads' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', user.getName(), user ),
 		PhotoUploadOverlay;
 
@@ -54,7 +54,9 @@
 			var fileReader = new FileReader(),
 				self = this;
 
-			this.log = schema.getLog( options.funnel );
+			this.schema = new SchemaMobileWebUploads( {
+				funnel: options.funnel
+			} );
 			this.file = options.file;
 
 			if ( this.file ) {
@@ -265,7 +267,7 @@
 				return _super.apply( this, arguments );
 			} else if ( window.confirm( mw.msg( 'mobile-frontend-image-cancel-confirm' ) ) ) {
 				this.emit( 'cancel' );
-				this.log( {
+				this.schema.log( {
 					action: 'previewCancel'
 				} );
 				return _super.apply( this, arguments );
