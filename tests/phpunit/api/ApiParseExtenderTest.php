@@ -30,7 +30,12 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 		$req = new FauxRequest( $params );
 		$api = new ApiMain( $req );
 		$api->execute();
-		$data = $api->getResultData();
+		if ( defined( 'ApiResult::META_CONTENT' ) ) {
+			$data = $api->getResult()->getResultData();
+			$data = ApiResult::transformForBC( $data );
+		} else {
+			$data = $api->getResultData();
+		}
 		$this->assertFalse( isset( $data['errors'] ) );
 		$text = preg_replace( "/[\r\n]/", '', trim( $data['parse']['text']['*'] ) );
 		$expected = preg_replace( "/[\r\n]/", '', trim( $expected ) );
