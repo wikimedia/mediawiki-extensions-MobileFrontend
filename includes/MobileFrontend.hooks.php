@@ -908,8 +908,8 @@ class MobileFrontendHooks {
 
 		$scripts = array(
 			'javascripts/loggingSchemas/SchemaMobileWebUploads.js',
-			'javascripts/loggingSchemas/mobileWebEditing.js',
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
+			'javascripts/loggingSchemas/SchemaMobileWebEditing.js',
 			'javascripts/loggingSchemas/SchemaMobileWebWikiGrok.js',
 			'javascripts/loggingSchemas/init.js',
 		);
