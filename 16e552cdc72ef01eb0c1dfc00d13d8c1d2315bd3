@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7e5a8223",
+        "filename": "javascripts/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T01:12:47Z",
+      "side": 1,
+      "message": "why not add it as a class variable and add documentation? :)",
+      "revId": "16e552cdc72ef01eb0c1dfc00d13d8c1d2315bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
