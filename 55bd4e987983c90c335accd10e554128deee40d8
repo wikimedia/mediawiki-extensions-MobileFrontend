@@ -194,6 +194,24 @@
       "revId": "55bd4e987983c90c335accd10e554128deee40d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_6f9f2763",
+        "filename": "javascripts/modules/errorReport/init.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T23:48:46Z",
+      "side": 1,
+      "message": "Since this button is completely useless without JavaScript, I would prefer to add it on the client-side.",
+      "parentUuid": "0e6cb3ef_dee2aeff",
+      "revId": "55bd4e987983c90c335accd10e554128deee40d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
