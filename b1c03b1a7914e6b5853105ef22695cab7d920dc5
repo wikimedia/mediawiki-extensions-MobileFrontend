@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3e75ea92",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T01:10:55Z",
+      "side": 1,
+      "message": "Note that these do different things - not sure if that is problematic though.\n\nThe first one casts them to a string and then concatenates\nThe second sums them then converts them to a string.\n\nIn theory this could be less random.. but Im not sure.",
+      "revId": "b1c03b1a7914e6b5853105ef22695cab7d920dc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9e6516e0",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T01:10:55Z",
+      "side": 1,
+      "message": "I think the brackets actually make this less readable but that\u0027s just me",
+      "revId": "b1c03b1a7914e6b5853105ef22695cab7d920dc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
