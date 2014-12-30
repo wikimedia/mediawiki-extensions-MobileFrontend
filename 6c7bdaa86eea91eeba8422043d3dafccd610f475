@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_8cade930",
+        "filename": "javascripts/OverlayManager.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T22:43:40Z",
+      "side": 1,
+      "message": "This is super confusing. Why do we need a property to hold an event name? Can\u0027t we just rename the event from \u0027hide\u0027 to \u0027hideOverlay\u0027 or \u0027_hide\u0027 everywhere it\u0027s used? If there\u0027s a reason we need to do it this way, please explain it in a comment.",
+      "revId": "6c7bdaa86eea91eeba8422043d3dafccd610f475",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cc7201e2",
+        "filename": "javascripts/OverlayManager.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T22:43:40Z",
+      "side": 1,
+      "message": "Shouldn\u0027t that be _overlay_manager_hide instead of _hide?",
+      "revId": "6c7bdaa86eea91eeba8422043d3dafccd610f475",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
