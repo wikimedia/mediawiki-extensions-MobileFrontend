@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_5e5f7e13",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T01:14:07Z",
+      "side": 1,
+      "message": "You\u0027re right. I should have casted them to strings separately.",
+      "parentUuid": "0e6cb3ef_3e75ea92",
+      "revId": "b1c03b1a7914e6b5853105ef22695cab7d920dc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_9e6516e0",
         "filename": "javascripts/modules/search/SearchApi.js",
         "patchSetId": 1
