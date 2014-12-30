@@ -6,41 +6,19 @@
  * @singleton
  */
 ( function ( M, $ ) {
-	var Router = M.require( 'Router' ),
+	var currentPage, skin,
+		Router = M.require( 'Router' ),
 		browser = M.require( 'browser' ),
 		OverlayManager = M.require( 'OverlayManager' ),
 		PageApi = M.require( 'PageApi' ),
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
 		router = new Router(),
-		currentPage,
-		inWideScreenMode = false,
+		Skin = M.require( 'Skin' ),
 		// FIXME: Move all the variables below to Browser.js
 		ua = window.navigator.userAgent,
 		isIos = browser.isIos(),
 		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua );
-
-	/**
-	 * Tests current window size and if suitable loads styles and scripts specific for larger devices
-	 * FIXME: Separate from application.js
-	 *
-	 * @method
-	 * @param {Page} page
-	 */
-	function loadWideScreenModules( page ) {
-		var modules = [];
-		if ( !inWideScreenMode && browser.isWideScreen() &&
-			mw.config.get( 'skin' ) === 'minerva' ) {
-			// Adjust screen for tablets
-			if ( page.inNamespace( '' ) ) {
-				modules.push( 'tablet.scripts' );
-			}
-			inWideScreenMode = true;
-			mw.loader.using( modules, function () {
-				M.emit( 'resize' );
-			} );
-		}
-	}
 
 	/**
 	 * Initialize viewport
@@ -90,9 +68,11 @@
 			} );
 		}
 
-		loadWideScreenModules( getCurrentPage() );
+		skin = new Skin( {
+			tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
+			page: getCurrentPage()
+		} );
 		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
-		M.on( 'resize', loadWideScreenModules );
 	}
 
 	/**
