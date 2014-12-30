@@ -16,6 +16,24 @@
       "revId": "16e552cdc72ef01eb0c1dfc00d13d8c1d2315bd3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_4cefd1ad",
+        "filename": "javascripts/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T22:11:33Z",
+      "side": 1,
+      "message": "It\u0027s private and not meant for modification... In fact it\u0027s better you don\u0027t know about it :-)",
+      "parentUuid": "0e6cb3ef_7e5a8223",
+      "revId": "16e552cdc72ef01eb0c1dfc00d13d8c1d2315bd3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
