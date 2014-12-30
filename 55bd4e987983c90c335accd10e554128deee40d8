@@ -126,6 +126,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_8f2cfe90",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T18:19:01Z",
+      "side": 1,
+      "message": "I\u0027m confused. I think I\u0027m already doing what you\u0027re suggesting. Can you clarify?",
+      "parentUuid": "0e6cb3ef_1eb4a6ce",
+      "revId": "55bd4e987983c90c335accd10e554128deee40d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_dee2aeff",
         "filename": "javascripts/modules/errorReport/init.js",
         "patchSetId": 8
