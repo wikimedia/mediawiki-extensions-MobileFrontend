@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_54c8bd24",
+        "filename": "includes/Resources.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T19:04:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_3bdc1c4b",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_dbe2c0ff",
         "filename": "javascripts/modules/categories/CategoryApi.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-29T23:15:54Z",
       "side": 1,
       "message": "This is very similar to SearchApi so try to extend SearchApi making SearchApi more generic if necessary to reduce the code needed here.",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_ef3a5a32",
+        "filename": "javascripts/modules/categories/CategoryApi.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T19:04:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_dbe2c0ff",
       "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_b4d839f5",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T19:04:16Z",
+      "side": 1,
+      "message": "Yeah! Done.",
+      "parentUuid": "0e6cb3ef_3bc3bc62",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_1bc03854",
         "filename": "javascripts/modules/categories/CategoryOverlay.js",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2014-12-29T23:15:54Z",
       "side": 1,
       "message": "this is called clearSpinner in TalkOverlay and editor overlay",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_94f41552",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T19:04:16Z",
+      "side": 1,
+      "message": "removed and merged into Overlay.js (as clearSpinner)",
+      "parentUuid": "0e6cb3ef_1bc03854",
       "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_94a2d539",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T19:04:16Z",
+      "side": 1,
+      "message": "Hey, cool, nice work of Joaquin, will use this :)",
+      "parentUuid": "0e6cb3ef_dbb960e7",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_9bd3e82f",
         "filename": "javascripts/modules/categories/CategoryOverlay.js",
         "patchSetId": 5
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_8fb95e2b",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T19:04:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_9bd3e82f",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_bbceec84",
         "filename": "javascripts/modules/categories/CategoryOverlay.js",
         "patchSetId": 5
@@ -115,6 +223,24 @@
       "writtenOn": "2014-12-29T23:15:54Z",
       "side": 1,
       "message": "This is alpha specific so not good. Add another class for this purpose.",
+      "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cfc43697",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T19:04:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_bbceec84",
       "revId": "0312f56cc678ec50df402c84959a25fada39a3cc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
