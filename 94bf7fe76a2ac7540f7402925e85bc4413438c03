@@ -16,6 +16,24 @@
       "revId": "94bf7fe76a2ac7540f7402925e85bc4413438c03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_0f354ba3",
+        "filename": "javascripts/Schema.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T23:40:03Z",
+      "side": 1,
+      "message": "static method so no.",
+      "parentUuid": "0e6cb3ef_cf819350",
+      "revId": "94bf7fe76a2ac7540f7402925e85bc4413438c03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
