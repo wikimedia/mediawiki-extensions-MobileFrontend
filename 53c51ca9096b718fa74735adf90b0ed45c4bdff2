@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_0ffd4b04",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T23:16:56Z",
+      "side": 1,
+      "message": "missing \u0027mobile-frontend-errorreport-error\u0027",
+      "revId": "53c51ca9096b718fa74735adf90b0ed45c4bdff2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cf067320",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T23:16:56Z",
+      "side": 1,
+      "message": "I think we should take care of cases where the user pastes text with the mouse (drag \u0026 drop or secondary click)",
+      "revId": "53c51ca9096b718fa74735adf90b0ed45c4bdff2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_4f1a6374",
+        "filename": "javascripts/modules/errorReport/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T23:16:56Z",
+      "side": 1,
+      "message": "Maybe we should use a template. On the other hand, it\u0027s just a button.",
+      "revId": "53c51ca9096b718fa74735adf90b0ed45c4bdff2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
