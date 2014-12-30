@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
 	var Schema,
-		browser = M.require( 'browser' ),
 		Class = M.require( 'Class' );
 
 	/**
@@ -51,36 +50,6 @@
 			}
 		}
 	} );
-
-	/**
-	 * Retrieve and, if not present, generate a random session ID
-	 * (32 alphanumeric characters).
-	 * FIXME: Use mw.user
-	 * FIXME: Fall back to using cookies if localStorage isn't supported
-	 *
-	 * @method
-	 * @static
-	 * @return {String}
-	 */
-	Schema.getSessionId = function () {
-		var sessionId;
-		if ( !browser.supportsLocalStorage() ) {
-			return '';
-		}
-		sessionId = localStorage.getItem( 'sessionId' );
-
-		if ( !sessionId ) {
-			// FIXME: use mw.user.generateRandomSessionId when we can,
-			// as of now mediawiki.user has no mobile target (yay, targets in RL!)
-			sessionId = '';
-			while ( sessionId.length < 32 ) {
-				// http://stackoverflow.com/a/8084248/365238
-				sessionId += Math.random().toString( 36 ).slice( 2, 32 + 2 - sessionId.length );
-			}
-			localStorage.setItem( 'sessionId', sessionId );
-		}
-		return sessionId;
-	};
 
 	M.define( 'Schema', Schema );
 
