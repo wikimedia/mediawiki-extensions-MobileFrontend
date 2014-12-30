@@ -10,7 +10,6 @@
 	 * @uses Api
 	 */
 	NotificationsOverlay = Overlay.extend( {
-		active: false,
 		className: 'overlay notifications-overlay navigation-drawer',
 		templatePartials: {
 			content: mw.template.get( 'mobile.notifications.overlay', 'content.hogan' ),
