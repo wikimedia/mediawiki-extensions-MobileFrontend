@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_d477edcd",
+        "filename": "javascripts/Schema.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T17:59:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_b99a7473",
+      "revId": "a9d21440f1ddc36cb9d66ed376e8183e591a564c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_19b4c0e3",
         "filename": "javascripts/Schema.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-30T10:49:20Z",
       "side": 1,
       "message": "I\u0027d rather not have a default `badname` name and at this point if we don\u0027t have a valid `this.name` just bail out throwing some exception.",
+      "revId": "a9d21440f1ddc36cb9d66ed376e8183e591a564c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_748621ae",
+        "filename": "javascripts/Schema.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T17:59:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_19b4c0e3",
       "revId": "a9d21440f1ddc36cb9d66ed376e8183e591a564c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
