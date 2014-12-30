@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e6cb3ef_de238e52",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T02:11:28Z",
+      "side": 1,
+      "message": "The submit button should be disabled for the time the save api call takes.",
+      "revId": "55bd4e987983c90c335accd10e554128deee40d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_7b4934d2",
         "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
         "patchSetId": 8
@@ -13,6 +30,41 @@
       "writtenOn": "2014-12-30T00:08:32Z",
       "side": 1,
       "message": "I think we should tell the user to add more text if the text length is less than 15 characters.",
+      "revId": "55bd4e987983c90c335accd10e554128deee40d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_fe269262",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T02:11:28Z",
+      "side": 1,
+      "message": "I think so, too. I had a spinner without any information and no success failure message, now i know, that a simple \"test\" is not enough :) Maybe just reenable the form like TalkSectionAddOverlay with red borders?",
+      "parentUuid": "0e6cb3ef_7b4934d2",
+      "revId": "55bd4e987983c90c335accd10e554128deee40d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_dee2aeff",
+        "filename": "javascripts/modules/errorReport/init.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-12-30T02:11:28Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it be better to add the button itself to SkinMinervaAlpha? Like CategoryOverlay do it.",
       "revId": "55bd4e987983c90c335accd10e554128deee40d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
