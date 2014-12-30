@@ -107,6 +107,8 @@ module.exports = function ( grunt ) {
 						'jQuery.Deferred',
 						'jQuery.Event',
 						'jQuery.Object',
+						'jqXHR',
+						'File',
 						'mw.user',
 						'OO.EventEmitter'
 					],

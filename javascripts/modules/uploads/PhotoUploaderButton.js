@@ -57,7 +57,7 @@
 		/**
 		 * Handle a selected file for upload, emit event and route to the
 		 * appropiate url
-		 * @param {FileObject} file associated with file upload input
+		 * @param {File} file associated with file upload input
 		 */
 		handleFile: function ( file ) {
 			// FIXME: this is hacky but it would be hard to pass a file in a route
