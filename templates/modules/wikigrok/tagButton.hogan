@@ -1,0 +1,6 @@
+<div class="ui-tag-button mw-ui-button" id="{{id}}"
+	data-itemid="{{itemId}}"
+	data-propname="{{propName}}" data-propid="{{propId}}" data-readable="{{readable}}">
+	<label>{{campaignText}}</label>
+	<label>{{tagText}}</label>
+</div>

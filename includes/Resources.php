@@ -956,6 +956,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'Dialog.hogan' => 'templates/modules/wikigrok/WikiGrokDialogB.hogan',
+			'tagButton.hogan' => 'templates/modules/wikigrok/tagButton.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/wikigrok/WikiGrokDialogB.js',
