@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cf819350",
+        "filename": "javascripts/Schema.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T23:33:07Z",
+      "side": 1,
+      "message": "should this not be Schema.prototype.isTestA?",
+      "revId": "94bf7fe76a2ac7540f7402925e85bc4413438c03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
