@@ -16,6 +16,24 @@
       "revId": "e988258633ed5b64c1c62b187ef271382bc65a89",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_afaf7fdd",
+        "filename": "javascripts/OverlayManager.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T23:27:27Z",
+      "side": 1,
+      "message": "In that case, the event should be named \u0027hideoverlay\u0027.",
+      "parentUuid": "0e6cb3ef_cf6bd3b3",
+      "revId": "e988258633ed5b64c1c62b187ef271382bc65a89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
