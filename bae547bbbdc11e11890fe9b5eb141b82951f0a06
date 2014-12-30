@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cac2e438",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T20:07:36Z",
+      "side": 1,
+      "message": "This should probably call the function, otherwise, there\u0027s no reason for the function to exist.",
+      "revId": "bae547bbbdc11e11890fe9b5eb141b82951f0a06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_2a8da02e",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T20:07:36Z",
+      "side": 1,
+      "message": "What about this one?",
+      "revId": "bae547bbbdc11e11890fe9b5eb141b82951f0a06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_ea87a812",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T20:07:36Z",
+      "side": 1,
+      "message": "What about this one?",
+      "revId": "bae547bbbdc11e11890fe9b5eb141b82951f0a06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
