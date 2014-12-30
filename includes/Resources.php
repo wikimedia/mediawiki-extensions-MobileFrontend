@@ -234,6 +234,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/Section.js',
 			'javascripts/Page.js',
 			'javascripts/Schema.js',
+			'javascripts/util.js',
 			'javascripts/application.js',
 		),
 		'position' => 'bottom',

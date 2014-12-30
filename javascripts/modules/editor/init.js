@@ -2,6 +2,8 @@
 
 	var
 		settings = M.require( 'settings' ),
+		util = M.require( 'util' ),
+		query = util.query,
 		Icon = M.require( 'Icon' ),
 		disabledEditIcon = new Icon( {
 			name: 'edit'
@@ -18,6 +20,7 @@
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
+		// FIXME: Use currentPage.getId()
 		isNewPage = currentPage.options.id === 0,
 		isNewFile = currentPage.inNamespace( 'file' ) && isNewPage,
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
@@ -116,7 +119,7 @@
 	 */
 	function setupEditor( page ) {
 		var isNewPage = page.options.id === 0;
-		if ( M.query.undo ) {
+		if ( query.undo ) {
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
@@ -129,7 +132,7 @@
 					isAnon: user.isAnon(),
 					isNewPage: isNewPage,
 					isNewEditor: user.getEditCount() === 0,
-					oldId: M.query.oldid,
+					oldId: query.oldid,
 					funnel: funnel || 'article',
 					// FIXME: cache this selector, it's used more than once
 					contentLang: $( '#content' ).attr( 'lang' ),

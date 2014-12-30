@@ -9,7 +9,6 @@
 	var Router = M.require( 'Router' ),
 		browser = M.require( 'browser' ),
 		OverlayManager = M.require( 'OverlayManager' ),
-		qs = window.location.search.split( '?' )[1],
 		PageApi = M.require( 'PageApi' ),
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
@@ -20,20 +19,6 @@
 		ua = window.navigator.userAgent,
 		isIos = browser.isIos(),
 		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua );
-
-	/**
-	 * Escape dots and colons in a hash, jQuery doesn't like them beause they
-	 * look like CSS classes and pseudoclasses. See
-	 * http://bugs.jquery.com/ticket/5241
-	 * http://stackoverflow.com/questions/350292/how-do-i-get-jquery-to-select-elements-with-a-period-in-their-id
-	 *
-	 * @method
-	 * @param {String} hash A hash to escape
-	 * @return {String}
-	 */
-	function escapeHash( hash ) {
-		return hash.replace( /(:|\.)/g, '\\$1' );
-	}
 
 	/**
 	 * Tests current window size and if suitable loads styles and scripts specific for larger devices
@@ -114,26 +99,6 @@
 	}
 
 	/**
-	 * Takes a Query string and turns it into a JavaScript object mapping parameter names
-	 * to values. Does the opposite of $.param
-	 *
-	 * @method
-	 * @ignore
-	 * @param {String} qs A querystring excluding the ? prefix. e.g. foo=4&bar=5
-	 * @return {Object}
-	 */
-	function deParam( qs ) {
-		var params = {};
-		if ( qs ) {
-			$.each( qs.split( '&' ), function ( index, p ) {
-				p = p.split( '=' );
-				params[ p[0] ] = p[1];
-			} );
-		}
-		return params;
-	}
-
-	/**
 	 * Get current page view object
 	 * FIXME: Move to M.define( 'page' )
 	 * @method
@@ -176,9 +141,7 @@
 
 	$.extend( M, {
 		init: init,
-		escapeHash: escapeHash,
 		getCurrentPage: getCurrentPage,
-		query: deParam( qs ),
 		/**
 		 * Navigation router instance
 		 * @type {Router}

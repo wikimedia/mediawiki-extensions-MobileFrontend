@@ -1,9 +1,11 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
 ( function ( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+		util = M.require( 'util' ),
 		Schema = M.require( 'Schema' ),
 		errorSchema = new Schema( {}, 'MobileWebWikiGrokError' ),
 		settings = M.require( 'settings' ),
+		query = util.query,
 		browser = M.require( 'browser' ),
 		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !browser.isWideScreen(),
 		idOverride,
@@ -27,7 +29,7 @@
 		versionConfig,
 		WikiGrokAbTest = M.require( 'WikiGrokAbTest' ),
 		wikiGrokUser = M.require( 'wikiGrokUser' ),
-		wikiGrokVersion = M.query.wikigrokversion,
+		wikiGrokVersion = query.wikigrokversion,
 		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		campaign = wikiGrokCampaigns.getRandomCampaign();
 
@@ -94,7 +96,7 @@
 
 	// Allow query string override for testing, for example, '?wikidataid=Q508703'
 	if ( !wikidataID ) {
-		idOverride = M.query.wikidataid;
+		idOverride = query.wikidataid;
 		if ( idOverride ) {
 			mw.config.set( 'wgWikibaseItemId', idOverride );
 			wikidataID = idOverride;
@@ -114,7 +116,7 @@
 			( !mw.user.isAnon() || mw.config.get( 'wgMFEnableWikiGrokForAnons' ) ) &&
 			// User hasn't already contributed through WikiGrok on this page before or they
 			// are testing WikiGrok (by using the query string overrides)
-			( !hasUserAlreadyContributedToWikiGrok() || M.query.wikidataid || wikiGrokVersion ) &&
+			( !hasUserAlreadyContributedToWikiGrok() || query.wikidataid || wikiGrokVersion ) &&
 			// We're not on the Main Page
 			!mw.config.get( 'wgIsMainPage' ) &&
 			// Permitted on this device

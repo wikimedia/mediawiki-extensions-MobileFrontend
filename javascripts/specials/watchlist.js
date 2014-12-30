@@ -5,7 +5,9 @@
 		wlSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebWatchlistClickTracking' ),
 		canonicalName = mw.config.get( 'wgCanonicalSpecialPageName' ),
 		pageName = canonicalName === 'EditWatchlist' || canonicalName === 'Watchlist' ? 'watchlist' : 'diff',
-		subPageName = M.query.watchlistview || 'a-z';
+		util = M.require( 'util' ),
+		query = util.query,
+		subPageName = query.watchlistview || 'a-z';
 
 	/**
 	 * Initialises JavaScript on Special:Watchlist

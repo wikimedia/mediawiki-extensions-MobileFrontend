@@ -12,7 +12,9 @@ editable page whilst logged in, although you must be in test group A to see the 
 */
 ( function ( M, $ ) {
 	var PageActionOverlay = M.require( 'modules/tutorials/PageActionOverlay' ),
-		escapeHash = M.escapeHash,
+		util = M.require( 'util' ),
+		escapeHash = util.escapeHash,
+		query = util.query,
 		inEditor = window.location.hash.indexOf( '#editor/' ) > -1,
 		hash = window.location.hash,
 		editOverlay, target, $target, href;
@@ -23,7 +25,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 	 * @returns {Boolean}
 	 */
 	function shouldShowLeftNavEditTutorial() {
-		return M.query.campaign === 'leftNavSignup' &&
+		return query.campaign === 'leftNavSignup' &&
 			mw.config.get( 'wgNamespaceNumber' ) === 0 && !inEditor;
 	}
 
@@ -33,7 +35,7 @@ editable page whilst logged in, although you must be in test group A to see the 
 	 * @returns {Boolean}
 	 */
 	function shouldShowTutorial() {
-		var shouldShowEditTutorial = M.query.article_action === 'signup-edit' && !inEditor;
+		var shouldShowEditTutorial = query.article_action === 'signup-edit' && !inEditor;
 		return shouldShowEditTutorial || shouldShowLeftNavEditTutorial();
 	}
 

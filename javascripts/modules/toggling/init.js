@@ -3,6 +3,7 @@
 		currentPageTitle =  page.title,
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
+		escapeHash = M.require( 'util' ).escapeHash,
 		arrowUpOptions = {
 			name: 'arrow-up',
 			additionalClassNames: 'icon-15px indicator'
@@ -166,7 +167,7 @@
 
 		// jQuery will throw for hashes containing certain characters which can break toggling
 		try {
-			$target = $container.find( M.escapeHash( selector ) );
+			$target = $container.find( escapeHash( selector ) );
 			$heading = $target.parents( '.collapsible-heading' );
 			// The heading is not a section heading, check if in a content block!
 			if ( !$heading.length ) {

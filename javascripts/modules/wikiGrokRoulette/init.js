@@ -3,13 +3,14 @@
 	var $wikiGrokMenuItem =  $( '#mw-mf-page-left' ).find( '.wikigrok-roulette' ),
 		mainMenu = M.require( 'mainmenu' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
+		util = M.require( 'util' ),
+		query = util.query,
 		ErrorDrawer = M.require( 'modules/wikiGrokRoulette/ErrorDrawer' );
 
 	// Handle Random WikiGrok menu item
 	if ( $wikiGrokMenuItem.length ) {
 		$wikiGrokMenuItem.on( 'click', function ( ev ) {
 			var api = M.require( 'api' ),
-				query = M.query,
 				loadingOverlay = new LoadingOverlay();
 
 			ev.preventDefault();
