@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_efad77e8",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T23:25:59Z",
+      "side": 1,
+      "message": "Please add more documentation here. What is the purpose of this file?",
+      "revId": "1fdc6599c554bcc33fad1e31943d91f2dc808bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_2fa4cf03",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T23:25:59Z",
+      "side": 1,
+      "message": "This should be a private method of the Skin object.",
+      "revId": "1fdc6599c554bcc33fad1e31943d91f2dc808bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
