@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_be96da95",
+        "filename": "includes/MobileCollection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T01:41:53Z",
+      "side": 1,
+      "message": "Not used yet but I wanted to make sure it was in here from the beginning. The watchlist is a private collection so it seemed good to start this way. The other thing I could do is have a setPrivacy method and invoke that in the watchlist itself. Thoughts?",
+      "parentUuid": "0e6cb3ef_e5aa81d0",
+      "revId": "9aff7236925cd4aebed8602e8a9d192e564f6c94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_a5a0098e",
         "filename": "includes/specials/SpecialMobileEditWatchlist.php",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2014-12-29T17:54:22Z",
       "side": 1,
       "message": "With this use of MobileCollection – using it as an iterator rather than as a collection – why instantiate it here, rather than in the else block?",
+      "revId": "9aff7236925cd4aebed8602e8a9d192e564f6c94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9e9bd6c0",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T01:41:53Z",
+      "side": 1,
+      "message": "it\u0027s a good question. I will change.",
+      "parentUuid": "0e6cb3ef_a5a0098e",
       "revId": "9aff7236925cd4aebed8602e8a9d192e564f6c94",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
