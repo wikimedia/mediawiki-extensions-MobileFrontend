@@ -73,7 +73,7 @@ phplint: phpcheck			## Lint the PHP files
 	@dev-scripts/phplint.sh
 
 phpunit:				## Run the PHPUnit test suite
-	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit --group=MobileFrontend
+	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --group MobileFrontend ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/phpunit
 
 qunit:					## Run the QUnit test suite
 	@grunt qunit:all
