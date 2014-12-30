@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_feb3f2fa",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-30T02:15:51Z",
+      "side": 1,
+      "message": "Normally I would agree with you, but I\u0027m not sure in this case. One of the biggest problems with the ArticleFeedback feature (https://www.mediawiki.org/wiki/Extension:ArticleFeedbackv5) was that people commonly used it to submit vandalism (e.g. \u0027you suck\u0027, \u0027Jake is a moron\u0027, etc.). If we tell them the text needs to be longer, they would probably just change it to \u0027You suckkkkkkkkk\u0027. So it might be better to let it fail silently. In the case of ArticleFeedback, vandalism was usually just a word or two, while legitimate feedback was at least a sentence long. I really can\u0027t think of any legitimate error report that would be less than 15 characters, so I don\u0027t think this would cause any good faith users to lose their report.",
+      "parentUuid": "0e6cb3ef_7b4934d2",
+      "revId": "55bd4e987983c90c335accd10e554128deee40d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_dee2aeff",
         "filename": "javascripts/modules/errorReport/init.js",
         "patchSetId": 8
