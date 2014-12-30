@@ -6,6 +6,8 @@
 /* Left menu */
 @menuBorder: 12px;
 @menuBorderColor: #252525;
+@menuLinkLineHeight: 22px;
+@menuItemFontSize: 1.2em;
 
 @pageLeftListDarkBorderColor: #3e3e3e;
 @pageLeftListMediumBorderColor: #5C5C5C;
@@ -71,14 +73,12 @@
 				}
 			}
 
-			.icon-profile {
-				margin-right: 40px;
+			.icon-profile,
+			.mw-ui-icon-profile {
+				// 1px for the logout icon border-left
+				margin-right: @menuLinkLineHeight * 2 + 1;
 			}
 
-			// FIXME: Why is logout button with mw-ui icon class larger?
-			.mw-ui-icon-profile {
-				margin-right: 48px;
-			}
 		}
 	}
 }
@@ -133,7 +133,7 @@
 
 	li {
 		position: relative; // ensure the logout link in beta can be position absolute
-		font-size: 1.2em;
+		font-size: @menuItemFontSize;
 		border-top: 1px solid @colorGray7;
 
 		&:hover {
@@ -147,18 +147,22 @@
 		a {
 			color: white;
 			display: block;
-			padding: 13px 10px 11px 0;
+			padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 0;
 
 			&.mw-ui-icon {
 				padding-left: 9px;
+
+				&.mw-ui-icon-element {
+					font-size: round( 1 / @menuItemFontSize, 1 )
+				}
 			}
 
 			// FIXME: Remove when cache cleared
 			&.icon {
 				// FIXME: Remove when mw-ui-icon in stable
 				background-position-x: 9px;
-				padding: 13px 10px 11px 43px;
-				line-height: 22px;
+				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 @menuLinkLineHeight * 2;
+				line-height: @menuLinkLineHeight;
 			}
 
 			&:hover {
