@@ -27,6 +27,9 @@
 	 * @uses Toast
 	 */
 	Watchstar = View.extend( {
+		/**
+		 * @inheritdoc
+		 */
 		events: {
 			// Disable clicks on original link
 			'click a': 'onLinksClick',
