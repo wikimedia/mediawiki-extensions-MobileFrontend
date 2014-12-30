@@ -1,16 +1,16 @@
 ( function ( M ) {
 	var TableOfContents,
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
+		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		View = M.require( 'View' ),
-		Icon = M.require( 'Icon' ),
-		log = MobileWebClickTracking.log;
+		Icon = M.require( 'Icon' );
 
 	/**
 	 * View for table of contents
 	 * @class TableOfContents
 	 * @extends View
 	 * @uses Icon
-	 * @uses MobileWebClickTracking
+	 * @uses SchemaMobileWebClickTracking
 	 */
 	TableOfContents = View.extend( {
 		templatePartials: {
@@ -40,13 +40,17 @@
 		 * Log toggling the header
 		 */
 		onTocToggle: function () {
-			log( 'UI', 'page-toc-toggle' );
+			uiSchema.log( {
+				name: 'page-toc-toggle'
+			} );
 		},
 		/**
 		 * Log clicking a TOC link
 		 */
 		onLinkClick: function () {
-			log( 'UI', 'page-toc-link' );
+			uiSchema.log( {
+				name: 'page-toc-link'
+			} );
 		}
 	} );
 

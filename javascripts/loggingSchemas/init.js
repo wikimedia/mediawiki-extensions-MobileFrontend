@@ -1,6 +1,8 @@
 // Add EventLogging to hamburger menu
 ( function ( M, $ ) {
-	var MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+	var SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		mainMenuSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebMainMenuClickTracking' ),
+		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	/**
 	 * Get the icon selector for the given main menu element (depending on alpha/stable mode)
@@ -24,32 +26,22 @@
 			} );
 
 		$( '#mw-mf-main-menu-button' ).on( 'click', function () {
-			MobileWebClickTracking.log( 'UI', 'hamburger' );
+			uiSchema.log( {
+				name: 'hamburger'
+			} );
 		} );
 
-		MobileWebClickTracking.hijackLink( 'MainMenu', '.icon-home',
-			'home' );
-		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'random' ),
-			'random' );
-		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'nearby' ),
-			'nearby' );
-		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'watchlist' ),
-			'watchlist' );
-		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'settings' ),
-			'settings' );
-		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'uploads' ),
-			'uploads' );
-		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'profile' ),
-			'profile' );
-		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'anon' ),
-			'login' );
-		MobileWebClickTracking.hijackLink( 'MainMenu', mainMenuIconSelector( 'secondary-logout' ),
-			'logout' );
-		MobileWebClickTracking.hijackLink( 'UI', $( '#mw-mf-last-modified a span' ).parent(),
-			'lastmodified-history' );
-		MobileWebClickTracking.hijackLink( 'UI', $profileLink, 'lastmodified-profile' );
-		MobileWebClickTracking.hijackLink( 'UI', '.nearby-button', 'nearby-button' );
+		mainMenuSchema.hijackLink( '.icon-home', 'home' );
+		mainMenuSchema.hijackLink( mainMenuIconSelector( 'random' ), 'random' );
+		mainMenuSchema.hijackLink( mainMenuIconSelector( 'nearby' ), 'nearby' );
+		mainMenuSchema.hijackLink( mainMenuIconSelector( 'watchlist' ), 'watchlist' );
+		mainMenuSchema.hijackLink( mainMenuIconSelector( 'settings' ), 'settings' );
+		mainMenuSchema.hijackLink( mainMenuIconSelector( 'uploads' ), 'uploads' );
+		mainMenuSchema.hijackLink( mainMenuIconSelector( 'profile' ), 'profile' );
+		mainMenuSchema.hijackLink( mainMenuIconSelector( 'anon' ), 'login' );
+		mainMenuSchema.hijackLink( mainMenuIconSelector( 'secondary-logout' ), 'logout' );
+		uiSchema.hijackLink( $( '#mw-mf-last-modified a span' ).parent(), 'lastmodified-history' );
+		uiSchema.hijackLink( $profileLink, 'lastmodified-profile' );
+		uiSchema.hijackLink( '.nearby-button', 'nearby-button' );
 	} );
-
-	MobileWebClickTracking.logPastEvent();
 } )( mw.mobileFrontend, jQuery );

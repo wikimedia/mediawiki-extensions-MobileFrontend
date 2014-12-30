@@ -3,7 +3,8 @@
 		mainmenu = M.require( 'mainmenu' ),
 		userFontSize = settings.get( 'userFontSize', true ),
 		FontChanger = M.require( 'modules/fontchanger/FontChanger' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	// set the user font size if needed
 	if ( userFontSize !== '100' ) {
@@ -22,6 +23,8 @@
 
 			// show the fontchanger drawer
 			fcDrawer.show();
-			MobileWebClickTracking.log( 'UI', 'fontchanger-menu' );
+			uiSchema.log( {
+				name: 'fontchanger-menu'
+			} );
 		} );
 }( mw.mobileFrontend, jQuery ) );

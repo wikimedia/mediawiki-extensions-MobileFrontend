@@ -2,7 +2,8 @@
 	var ReferencesDrawer,
 		Drawer = M.require( 'Drawer' ),
 		Icon = M.require( 'Icon' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	/**
 	 * Drawer for references
@@ -24,7 +25,9 @@
 		},
 		/** @inheritdoc */
 		show: function () {
-			MobileWebClickTracking.log( 'UI', 'reference' );
+			uiSchema.log( {
+				name: 'reference'
+			} );
 			return Drawer.prototype.show.apply( this, arguments );
 		},
 		className: 'drawer position-fixed text references',

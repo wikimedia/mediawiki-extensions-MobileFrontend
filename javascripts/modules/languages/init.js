@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
-	var MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+	var MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	M.overlayManager.add( /^\/languages$/, function () {
 		var result = $.Deferred();
@@ -28,7 +29,9 @@
 		$( '#page-secondary-actions .languageSelector' ).on( 'click', function ( ev ) {
 			ev.preventDefault();
 			M.router.navigate( '/languages' );
-			MobileWebClickTracking.log( 'UI', 'languages' );
+			uiSchema.log( {
+				name: 'languages'
+			} );
 		} );
 	}
 

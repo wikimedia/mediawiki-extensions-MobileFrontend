@@ -3,7 +3,8 @@
 		Drawer = M.require( 'Drawer' ),
 		Icon = M.require( 'Icon' ),
 		settings = M.require( 'settings' ),
-		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	/**
 	 * FontChanger wrapper
@@ -63,7 +64,9 @@
 				$el.on( 'click', function () {
 					self.setNewSize( $el );
 
-					MobileWebClickTracking.log( 'UI', 'fontchanger-font-change' );
+					uiSchema.log( {
+						name: 'fontchanger-font-change'
+					} );
 				} );
 			} );
 		},
