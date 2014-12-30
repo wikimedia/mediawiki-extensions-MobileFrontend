@@ -895,6 +895,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-meta-data-issues-talk',
 			'mobile-frontend-meta-data-issues-header',
 			'mobile-frontend-meta-data-issues-header-talk',
+			'mobile-frontend-meta-data-issues-categories',
 		),
 	),
 

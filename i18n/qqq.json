@@ -388,5 +388,6 @@
 	"apihelp-parse-param-noimages": "{{doc-apihelp-param|parse|noimages}}",
 	"apihelp-parse-param-mainpage": "{{doc-apihelp-param|parse|mainpage}}",
 	"mobile-frontend-donate-button-label": "Message for donation button in mobile interface at bottom of page.\n{{Identical|Donate}}",
-	"mobile-frontend-wikidata-editor-description-label": "Appears above an editable input field for wikidata description\n* $1 - Title of page for which description is being edited."
+	"mobile-frontend-wikidata-editor-description-label": "Appears above an editable input field for wikidata description\n* $1 - Title of page for which description is being edited.",
+	"mobile-frontend-meta-data-issues-categories": "Label to appear in button that opens issue overlay on categories."
 }

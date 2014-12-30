@@ -63,7 +63,7 @@
 		 * @ignore
 		 */
 		function createBanner( $container, labelText, headingText ) {
-			var selector = 'table.ambox, table.tmbox',
+			var selector = 'table.ambox, table.tmbox, table.cmbox',
 				$metadata = $container.find( selector ),
 				issues = [],
 				$link;
@@ -112,11 +112,11 @@
 		/**
 		 * Scan an element for any known cleanup templates and replace them with a button
 		 * that opens them in a mobile friendly overlay.
-		 * @param {Object} $container to clean up.
 		 * @ignore
 		 */
-		function initPageIssues( $container ) {
+		function initPageIssues() {
 			var ns = mw.config.get( 'wgNamespaceNumber' ),
+				$container = ns === 14 ? $( '#content' ) : M.getCurrentPage().getLeadSectionElement(),
 				labelMsgKey = 'mobile-frontend-meta-data-issues';
 
 			if ( inAlpha ) {
@@ -127,14 +127,17 @@
 				createBanner( $container, mw.msg( labelMsgKey ),
 					mw.msg( 'mobile-frontend-meta-data-issues-header' ) );
 			// Create a banner for talk pages (namespace 1) in beta mode to make them more readable.
-			} else if ( ns === 1 && inBeta ) {
+			} else if ( ns === 1 ) {
 				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues-talk' ),
+					mw.msg( 'mobile-frontend-meta-data-issues-header-talk' ) );
+			} else if ( ns === 14 && inBeta ) {
+				createBanner( $container, mw.msg( 'mobile-frontend-meta-data-issues-categories' ),
 					mw.msg( 'mobile-frontend-meta-data-issues-header-talk' ) );
 			}
 		}
 
 		// Setup the issues banner on the page
-		initPageIssues( M.getCurrentPage().getLeadSectionElement() );
+		initPageIssues();
 		// Show it in edit preview.
 		M.on( 'edit-preview', function ( overlay ) {
 			initPageIssues( overlay.$el );
