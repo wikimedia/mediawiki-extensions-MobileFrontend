@@ -145,7 +145,7 @@
 
 			/**
 			 * Handler for successful query
-			 * @param {array} pages as passed by done callback of Nearby##getPages
+			 * @param {Array} pages as passed by done callback of Nearby##getPages
 			 * @ignore
 			 */
 			function pagesSuccess( pages ) {

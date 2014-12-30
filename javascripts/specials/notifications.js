@@ -92,7 +92,7 @@
 	/**
 	 * Mark notifications as read.
 	 * @method
-	 * @param {array} unread id of unread ids to mark as read
+	 * @param {Array} unread id of unread ids to mark as read
 	 * @ignore
 	 */
 	function markAsRead( unread ) {

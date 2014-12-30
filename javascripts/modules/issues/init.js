@@ -58,8 +58,8 @@
 		/**
 		 * Render a banner in a containing element.
 		 * @param {jQuery.Object} $container to render the page issues banner inside.
-		 * @param {string} labelText what the label of the page issues banner should say
-		 * @param {string} headingText the heading of the overlay that is created when the page issues banner is clicked
+		 * @param {String} labelText what the label of the page issues banner should say
+		 * @param {String} headingText the heading of the overlay that is created when the page issues banner is clicked
 		 * @ignore
 		 */
 		function createBanner( $container, labelText, headingText ) {

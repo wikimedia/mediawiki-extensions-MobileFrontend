@@ -23,8 +23,8 @@
 		 * date suffix in format YYYY-MM-DD HH-MM
 		 * @method
 		 * @private
-		 * @param {string} title Title of file
-		 * @return {string} Description for file
+		 * @param {String} title Title of file
+		 * @return {String} Description for file
 		 */
 		_getDescription: function ( title ) {
 			title = title.replace( /\.[^\. ]+$/, '' ); // replace filename suffix

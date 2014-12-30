@@ -135,7 +135,7 @@
 	 * FIXME: Fall back to using cookies if localStorage isn't supported
 	 *
 	 * @method
-	 * @return {string}
+	 * @return {String}
 	 */
 	function getSessionId() {
 		var sessionId;
@@ -181,7 +181,7 @@
 	 * Determine if current page is in a specified namespace
 	 * FIXME: Move to method on Page
 	 * @method
-	 * @param {string} namespace Name of namespace
+	 * @param {String} namespace Name of namespace
 	 * @return {Boolean}
 	 */
 	function inNamespace( namespace ) {

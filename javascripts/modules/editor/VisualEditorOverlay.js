@@ -230,7 +230,7 @@
 		 * Event handler.
 		 * @method
 		 * @param {jqXHR} jqXHR
-		 * @param {string} status
+		 * @param {String} status
 		 */
 		onSerializeError: function ( jqXHR, status ) {
 			this.reportError( mw.msg( 'visualeditor-serializeerror', status ), 've-serialize-error' );

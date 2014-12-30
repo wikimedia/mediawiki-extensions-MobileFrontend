@@ -6,7 +6,7 @@
 
 	/**
 	 * Check whether 'schema' is one of the predefined schemas.
-	 * @param {string} [schema] name. Possible values are:
+	 * @param {String} [schema] name. Possible values are:
 	 *   * Watchlist
 	 *   * Diff
 	 *   * MainMenu
@@ -31,13 +31,13 @@
 	 *
 	 * @method
 	 * @ignore
-	 * @param {string} [schema] name. Possible values are:
+	 * @param {String} [schema] name. Possible values are:
 	 *   * Watchlist
 	 *   * Diff
 	 *   * MainMenu
 	 *   * UI
-	 * @param {string} name of click tracking event to log
-	 * @param {string} [destination] of the link that has been clicked if applicable.
+	 * @param {String} name of click tracking event to log
+	 * @param {String} [destination] of the link that has been clicked if applicable.
 	 * @returns {jQuery.Deferred}
 	 */
 	function log( schema, name, destination ) {
@@ -64,13 +64,13 @@
 	 *
 	 * @method
 	 * @ignore
-	 * @param {string} [schema] name. Possible values are:
+	 * @param {String} [schema] name. Possible values are:
 	 *   * Watchlist
 	 *   * Diff
 	 *   * MainMenu
 	 *   * UI
-	 * @param {string} name of click tracking event to log
-	 * @param {string} href the link that has been clicked.
+	 * @param {String} name of click tracking event to log
+	 * @param {String} href the link that has been clicked.
 	 */
 	function futureLog( schema, name, href ) {
 		assertSchema( schema );
@@ -85,13 +85,13 @@
 	 *
 	 * @method
 	 * @ignore
-	 * @param {string} [schema] name. Possible values are:
+	 * @param {String} [schema] name. Possible values are:
 	 *   * Watchlist
 	 *   * Diff
 	 *   * MainMenu
 	 *   * UI
-	 * @param {string} selector of element
-	 * @param {string} name unique to this click tracking event that will allow
+	 * @param {String} selector of element
+	 * @param {String} name unique to this click tracking event that will allow
 	 * you to distinguish it from others.
 	 */
 	function hijackLink( schema, selector, name ) {
