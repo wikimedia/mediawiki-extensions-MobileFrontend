@@ -120,7 +120,7 @@
 		 * former.
 		 * See http://stackoverflow.com/a/12621264/365238
 		 *
-		 * @returns {boolean}
+		 * @returns {Boolean}
 		 */
 		supportsAnimations: memoize( function () {
 			var  has3d, t,

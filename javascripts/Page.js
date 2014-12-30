@@ -101,7 +101,7 @@
 		 * Checks whether the given user can edit the page.
 		 * @method
 		 * @param {mw.user} user Object representing a user
-		 * @return {boolean}
+		 * @return {Boolean}
 		 */
 		isEditable: function ( user ) {
 			// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
@@ -127,7 +127,7 @@
 		/**
 		 * Return prefixed page title
 		 * @method
-		 * @return {string}
+		 * @return {String}
 		 */
 		getTitle: function () {
 			return this.options.title;

@@ -10,7 +10,7 @@
 		/**
 		 * Gets current mobile mode
 		 * @method
-		 * @returns {string} Name of mode
+		 * @returns {String} Name of mode
 		 */
 		getMode: function () {
 			return mw.config.get( 'wgMFMode' );

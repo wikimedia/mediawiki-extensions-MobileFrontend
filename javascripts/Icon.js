@@ -32,7 +32,7 @@
 		/**
 		 * Return the full class name that is required for the icon to render
 		 * @method
-		 * @return {string}
+		 * @return {String}
 		 */
 		getClassName: function () {
 			return this.$el.attr( 'class' );
@@ -40,7 +40,7 @@
 		/**
 		 * Return the class that relates to the icon glyph
 		 * @method
-		 * @return {string}
+		 * @return {String}
 		 */
 		getGlyphClassName: function () {
 			return this.options.base + '-' + this.options.name;

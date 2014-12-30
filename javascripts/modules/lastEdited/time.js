@@ -5,7 +5,7 @@
 	/**
 	 * Calculate the correct unit of timestamp
 	 * @param {Number} timestampDelta
-	 * @returns {{value: number, unit: string}}
+	 * @returns {{value: Number, unit: String}}
 	 * @ignore
 	 */
 	function timeAgo( timestampDelta ) {
@@ -22,7 +22,7 @@
 	/**
 	 * Calculate the correct unit of timestamp delta
 	 * @param {Number} timestamp
-	 * @returns {{value: number, unit: string}}
+	 * @returns {{value: Number, unit: String}}
 	 * @ignore
 	 */
 	function getTimeAgoDelta( timestamp ) {
@@ -33,8 +33,8 @@
 
 	/**
 	 * Whether timestamp delta is less than a day old
-	 * @param {{value: number, unit: string}} delta Object of timestamp and its label
-	 * @returns {boolean}
+	 * @param {{value: Number, unit: String}} delta Object of timestamp and its label
+	 * @returns {Boolean}
 	 * @ignore
 	 */
 	function isRecent( delta ) {
@@ -44,8 +44,8 @@
 
 	/**
 	 * Is delta less than 10 seconds?
-	 * @param {{value: number, unit: string}} delta Object of timestamp and its label
-	 * @returns {boolean}
+	 * @param {{value: Number, unit: String}} delta Object of timestamp and its label
+	 * @returns {Boolean}
 	 * @ignore
 	 */
 	function isNow( delta ) {

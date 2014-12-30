@@ -26,7 +26,7 @@
     "checkReturnTypes": true,
     "checkRedundantReturns": true,
     "requireReturnTypes": true,
-    "checkTypes": true,
+    "checkTypes": "capitalizedNativeCase",
     "checkParamExistence": true
   }
 }
