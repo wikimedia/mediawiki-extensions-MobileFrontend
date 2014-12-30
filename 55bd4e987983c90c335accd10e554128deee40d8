@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7b4934d2",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T00:08:32Z",
+      "side": 1,
+      "message": "I think we should tell the user to add more text if the text length is less than 15 characters.",
+      "revId": "55bd4e987983c90c335accd10e554128deee40d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
