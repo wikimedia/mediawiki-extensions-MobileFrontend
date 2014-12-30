@@ -38,6 +38,7 @@
 	function loadMore() {
 		var notifications, data, container, $li, unread = [];
 
+		// FIXME: Move to NotificationApi class
 		api.get( {
 			action: 'query',
 			meta: 'notifications',
@@ -95,13 +96,11 @@
 	 * @ignore
 	 */
 	function markAsRead( unread ) {
-		api.getTokenWithEndpoint( 'edit' ).done( function ( token ) {
-			api.post( {
-				action: 'echomarkread',
-				list: unread.join( '|' ),
-				token: token
-			} ).done( onSuccess ).fail( onError );
-		} ).fail( onError );
+		// FIXME: Move to NotificationApi class
+		api.postWithToken( 'edit', {
+			action: 'echomarkread',
+			list: unread.join( '|' )
+		} ).done( onSuccess ).fail( onError );
 	}
 
 	/**

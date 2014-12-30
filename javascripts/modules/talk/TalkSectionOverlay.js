@@ -80,25 +80,22 @@
 						self.$( '.loading' ).show();
 						// sign and add newline to front
 						val = '\n\n' + val + ' ~~~~';
-						api.getTokenWithEndpoint().done( function ( token ) {
-							api.post( {
-								action: 'edit',
-								title: title,
-								section: id,
-								token: token,
-								appendtext: val
-							} ).done( function ( data ) {
-								self.$( '.loading' ).hide();
-								$comment.show();
-								if ( data.error ) {
-									$textarea.addClass( 'error' );
-								} else {
-									self.hide();
-									popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
-									// invalidate the cache
-									M.pageApi.invalidatePage( title );
-								}
-							} );
+						api.postWithToken( 'edit', {
+							action: 'edit',
+							title: title,
+							section: id,
+							appendtext: val
+						} ).done( function ( data ) {
+							self.$( '.loading' ).hide();
+							$comment.show();
+							if ( data.error ) {
+								$textarea.addClass( 'error' );
+							} else {
+								self.hide();
+								popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
+								// invalidate the cache
+								M.pageApi.invalidatePage( title );
+							}
 						} );
 					} else {
 						$textarea.addClass( 'error' );

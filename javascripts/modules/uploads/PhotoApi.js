@@ -306,6 +306,7 @@
 			 * @ignore
 			 */
 			function getToken() {
+				// FIXME: Use same method as WikiDataApi
 				return self.getTokenWithEndpoint.apply( self, arguments )
 					.fail( $.proxy( result, 'reject', {
 						stage: 'upload',
