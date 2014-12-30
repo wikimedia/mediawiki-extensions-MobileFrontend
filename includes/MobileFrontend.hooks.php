@@ -910,8 +910,7 @@ class MobileFrontendHooks {
 			'javascripts/loggingSchemas/SchemaMobileWebUploads.js',
 			'javascripts/loggingSchemas/mobileWebEditing.js',
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
-			'javascripts/loggingSchemas/mobileWebWikiGrok.js',
-			'javascripts/loggingSchemas/mobileWebWikiGrokError.js',
+			'javascripts/loggingSchemas/SchemaMobileWebWikiGrok.js',
 			'javascripts/loggingSchemas/init.js',
 		);
 
