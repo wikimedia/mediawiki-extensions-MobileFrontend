@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_4c7cb1e2",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T22:20:30Z",
+      "side": 1,
+      "message": "because mw.language.convertNumber takes a number not a string",
+      "parentUuid": "0e6cb3ef_59c8f824",
+      "revId": "19d52bd9f19496e2c8613e02b989ffb2b2c6f9b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_f9e54ca0",
         "filename": "javascripts/modules/search/SearchApi.js",
         "patchSetId": 2
