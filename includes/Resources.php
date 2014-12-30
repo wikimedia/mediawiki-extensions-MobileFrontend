@@ -243,6 +243,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'bottom',
 	),
 
+	'mobile.foreignApi' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/modules/ForeignApi.js',
+		),
+	),
+
 	'mobile.redlinks' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
@@ -419,6 +428,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 			'mobile.editor.api',
 			'mobile.contentOverlays',
+			'mobile.foreignApi',
 		),
 		'scripts' => array(
 			'javascripts/modules/uploads/PhotoApi.js',
@@ -950,6 +960,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 			'mobile.loggingSchemas',
 			'mobile.pagelist.scripts',
+			'mobile.foreignApi',
 		),
 		'messages' => array(
 			// NearbyApi.js
@@ -1066,6 +1077,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.wikigrok.api' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.foreignApi',
 		),
 		'scripts' => array(
 			'javascripts/modules/wikigrok/WikiGrokResponseApi.js',
@@ -1311,6 +1323,7 @@ $wgMobileSpecialPageModules = array(
 			'mobile.upload.ui',
 			'mobile.startup',
 			'mobile.toast',
+			'mobile.foreignApi',
 		),
 		'templates' => array(
 			'PhotoItem.hogan' => 'templates/specials/photo.hogan',

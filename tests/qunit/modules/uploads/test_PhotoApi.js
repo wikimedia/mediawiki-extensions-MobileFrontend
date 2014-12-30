@@ -56,13 +56,11 @@
 			} );
 			// Saves to edits will use getToken
 			this.sandbox.stub( editorApi, 'getToken' ).returns( $.Deferred().resolve( 'foo' ) );
-			this.sandbox.stub( editorApi, 'getTokenWithEndpoint' ).returns( $.Deferred().resolve( 'foo' ) );
 			this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
 				edit: {
 					result: 'Success'
 				}
 			} ) );
-			this.sandbox.stub( photoApi, 'getTokenWithEndpoint' ).returns( $.Deferred().resolve( 'foo' ) );
 			this.sandbox.stub( photoApi, 'post' ).returns( $.Deferred().resolve( resp ) );
 		}
 	} );

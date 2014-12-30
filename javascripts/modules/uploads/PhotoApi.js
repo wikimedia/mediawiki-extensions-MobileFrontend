@@ -1,8 +1,13 @@
 ( function ( M, $ ) {
-	var Api = M.require( 'api' ).Api,
+	var Api, PhotoApi,
 		user = M.require( 'user' ),
-		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
-		PhotoApi;
+		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' );
+
+	if ( endpoint ) {
+		Api = M.require( 'modules/ForeignApi' );
+	} else {
+		Api = M.require( 'api' ).Api;
+	}
 
 	/**
 	 * Originally written by Brion for WikiLovesMonuments app, trims a string
@@ -104,7 +109,8 @@
 	 * @extends Api
 	 */
 	PhotoApi = Api.extend( {
-		useCentralAuthToken: mw.config.get( 'wgMFUseCentralAuthToken' ),
+		/** @inheritdoc */
+		apiUrl: endpoint || Api.prototype.apiUrl,
 
 		/**
 		 * @inheritdoc
@@ -167,8 +173,7 @@
 				isNewPage = mw.config.get( 'wgArticleId' ) === 0,
 				isNewFile = page.inNamespace( 'file' ) && isNewPage,
 				self = this,
-				result = $.Deferred(),
-				apiUrl = endpoint || this.apiUrl;
+				result = $.Deferred();
 
 			options.editSummaryMessage = options.insertInPage ?
 				'mobile-frontend-photo-article-edit-comment' :
@@ -177,13 +182,10 @@
 			/**
 			 * Performs upload
 			 *
-			 * @param {String} token valid token for upload action
-			 * @param {String} caToken valid central auth token
 			 * @ignore
 			 */
-			function doUpload( token, caToken ) {
+			function doUpload() {
 				var
-					uploadUrl = apiUrl + '?useformat=mobile&r=' + Math.random(),
 					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 ),
 					request, data;
 
@@ -198,7 +200,6 @@
 					filename: options.fileName,
 					comment: mw.msg( options.editSummaryMessage ),
 					file: options.file,
-					token: token,
 					text: mw.template.get( 'mobile.upload.ui', 'template.hogan' )
 						.render( {
 							suffix: mw.config.get( 'wgMFPhotoUploadAppendToDesc' ),
@@ -207,22 +208,8 @@
 						} )
 				};
 
-				// add origin only when doing CORS
-				if ( endpoint ) {
-					uploadUrl += '&origin=' + self.getOrigin();
-					if ( caToken ) {
-						data.centralauthtoken = caToken;
-					}
-				}
-
 				request = self.post( data, {
-					// iOS seems to ignore the cache parameter so sending r parameter
-					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
-					url: uploadUrl,
 					contentType: 'multipart/form-data',
-					xhrFields: {
-						withCredentials: true
-					},
 					cache: false
 				} ).done( function ( data ) {
 					var descriptionUrl = '',
@@ -303,36 +290,7 @@
 					}
 				} );
 			}
-
-			/**
-			 * Loads a token and triggers fail message for result where necessary.
-			 *
-			 * @ignore
-			 */
-			function getToken() {
-				// FIXME: Use same method as WikiDataApi
-				return self.getTokenWithEndpoint.apply( self, arguments )
-					.fail( $.proxy( result, 'reject', {
-						stage: 'upload',
-						type: 'error',
-						details: 'token'
-					} ) );
-			}
-
-			if ( self.useCentralAuthToken && endpoint ) {
-				// get caToken for obtaining the edit token from external wiki (the one we want to upload to)
-				getToken( 'centralauth' ).done( function ( caTokenForEditToken ) {
-					// request edit token using the caToken
-					getToken( 'edit', endpoint, caTokenForEditToken ).done( function ( token ) {
-						// tokens are only valid for one go so let's get another one for the upload itself
-						getToken( 'centralauth' ).done( function ( caTokenForUpload ) {
-							doUpload( token, caTokenForUpload );
-						} );
-					} );
-				} );
-			} else {
-				getToken( 'edit', endpoint ).done( doUpload );
-			}
+			doUpload();
 
 			return result;
 		}

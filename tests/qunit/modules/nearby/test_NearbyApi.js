@@ -6,7 +6,7 @@
 	QUnit.module( 'MobileFrontend NearbyApi', {
 		setup: function () {
 			m = new NearbyApi();
-			this.sandbox.stub( m, 'get', function () {
+			this.sandbox.stub( m, 'ajax', function () {
 				return $.Deferred().resolve( {
 					query: {
 						pages: {
