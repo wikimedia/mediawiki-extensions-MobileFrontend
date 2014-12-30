@@ -52,14 +52,20 @@
 			// clear so that change event is fired again when user selects the same file
 			$input.val( '' );
 		},
+
 		/**
 		 * Handle a selected file for upload, emit event and route to the
-		 * appropiate url
+		 * appropriate url
 		 */
 		handleFile: function ( file ) {
 			// FIXME: this is hacky but it would be hard to pass a file in a route
 			M.emit( '_upload-preview', file );
 			M.router.navigate( '#/upload-preview/' + this.options.funnel );
+		},
+
+		/** @inheritdoc */
+		postRender: function () {
+			this.$el.removeClass( 'hidden' );
 		}
 	} );
 

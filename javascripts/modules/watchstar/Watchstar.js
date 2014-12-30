@@ -89,6 +89,7 @@
 			} else {
 				$el.addClass( unwatchedClass ).removeClass( watchedClass );
 			}
+			$el.removeClass( 'hidden' );
 		},
 
 		/**
