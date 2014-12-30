@@ -68,11 +68,23 @@
 
 					self.$( '.tags' ).show();
 					$.each( labels, function ( itemId, label ) {
-						var $tag,
-							id = 'tag-' + itemId;
+						var $tag, tagHtml, templateData;
+
+						templateData = {
+							id: 'tag-' + itemId,
+							propName: campaign.propertyName,
+							propId: campaign.propertyId,
+							itemId: itemId,
+							readable: label,
+							campaignText: i18n[campaign.name],
+							tagText: label
+						};
 
 						if ( label ) {
-							$tag = $( '<div class="ui-tag-button mw-ui-button">' )
+							tagHtml = mw.template.get( 'mobile.wikigrok.dialog.b', 'tagButton.hogan' )
+								.render( templateData );
+
+							$tag = $( tagHtml )
 								.on( 'click', function () {
 									// Activate the tag
 									$( this ).toggleClass( 'mw-ui-progressive' );
@@ -86,21 +98,6 @@
 										$none.show();
 									}
 								} ).appendTo( self.$( '.tags' ) );
-
-							// FIXME: Use a template for this magic.
-							$tag.attr( 'id', id )
-								.data( 'propName', campaign.propertyName )
-								.data( 'propId', campaign.propertyId )
-								.data( 'itemId', itemId )
-								.data( 'readable', label );
-
-							// Add the property label
-							$( '<label>' )
-								.text( i18n[campaign.name] ).appendTo( $tag );
-
-							// Add the value label
-							$( '<label>' )
-								.text( label ).appendTo( $tag );
 						}
 					} );
 
@@ -151,10 +148,10 @@
 					var $this = $( this );
 					answers.push( {
 						correct: $this.is( '.mw-ui-progressive' ) ? true : null,
-						prop: $this.data( 'propName' ),
-						propid: $this.data( 'propId' ),
+						prop: $this.data( 'propname' ),
+						propid: $this.data( 'propid' ),
 						value: $this.data( 'readable' ),
-						valueid: $this.data( 'itemId' )
+						valueid: $this.data( 'itemid' )
 					} );
 				} );
 
