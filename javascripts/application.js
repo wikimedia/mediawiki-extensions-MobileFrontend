@@ -114,51 +114,6 @@
 	}
 
 	/**
-	 * FIXME: sandbox from mf-application.js
-	 *
-	 * @method
-	 * @param {String} schemaName
-	 * @param {Object} data
-	 * @return {jQuery.Deferred}
-	 */
-	function log( schemaName, data ) {
-		if ( mw.eventLog ) {
-			return mw.eventLog.logEvent( schemaName, data );
-		} else {
-			return $.Deferred().reject( 'EventLogging not installed.' );
-		}
-	}
-
-	/**
-	 * Retrieve and, if not present, generate a random session ID
-	 * (32 alphanumeric characters).
-	 * FIXME: Use mw.user
-	 * FIXME: Fall back to using cookies if localStorage isn't supported
-	 *
-	 * @method
-	 * @return {String}
-	 */
-	function getSessionId() {
-		var sessionId;
-		if ( !browser.supportsLocalStorage() ) {
-			return '';
-		}
-		sessionId = localStorage.getItem( 'sessionId' );
-
-		if ( !sessionId ) {
-			// FIXME: use mw.user.generateRandomSessionId when we can,
-			// as of now mediawiki.user has no mobile target (yay, targets in RL!)
-			sessionId = '';
-			while ( sessionId.length < 32 ) {
-				// http://stackoverflow.com/a/8084248/365238
-				sessionId += Math.random().toString( 36 ).slice( 2, 32 + 2 - sessionId.length );
-			}
-			localStorage.setItem( 'sessionId', sessionId );
-		}
-		return sessionId;
-	}
-
-	/**
 	 * Takes a Query string and turns it into a JavaScript object mapping parameter names
 	 * to values. Does the opposite of $.param
 	 *
@@ -222,8 +177,6 @@
 		init: init,
 		escapeHash: escapeHash,
 		getCurrentPage: getCurrentPage,
-		getSessionId: getSessionId,
-		log: log,
 		query: deParam( qs ),
 		/**
 		 * Navigation router instance

@@ -24,20 +24,4 @@
 		assert.strictEqual( M.require( 'testModule2' ), 'test module 2' );
 	} );
 
-	QUnit.module( 'MobileFrontend common functions' );
-
-	QUnit.test( '#getSessionId', 3, function ( assert ) {
-		var sessionId = M.getSessionId();
-		assert.strictEqual( typeof sessionId, 'string', 'session ID is a string' );
-		assert.strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
-		assert.strictEqual( M.getSessionId(), sessionId, 'session ID is not regenerated if present' );
-	} );
-
-	QUnit.test( '#getSessionId', 3, function ( assert ) {
-		var sessionId = M.getSessionId();
-		assert.strictEqual( typeof sessionId, 'string', 'session ID is a string' );
-		assert.strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
-		assert.strictEqual( M.getSessionId(), sessionId, 'session ID is not regenerated if present' );
-	} );
-
 }( jQuery, mw.mobileFrontend ) );
