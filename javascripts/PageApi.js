@@ -98,9 +98,9 @@
 		 * Retrieve a page from the api
 		 *
 		 * @method
-		 * @param {string} title the title of the page to be retrieved
-		 * @param {string} endpoint an alternative api url to retreive the page from
-		 * @param {boolean} leadOnly When set only the lead section content is returned
+		 * @param {String} title the title of the page to be retrieved
+		 * @param {String} endpoint an alternative api url to retreive the page from
+		 * @param {Boolean} leadOnly When set only the lead section content is returned
 		 * @return {jQuery.Deferred} with parameter page data that can be passed to a Page view
 		 */
 		getPage: function ( title, endpoint, leadOnly ) {

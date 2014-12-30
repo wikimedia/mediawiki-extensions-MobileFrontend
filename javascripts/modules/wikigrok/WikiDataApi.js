@@ -155,7 +155,7 @@
 		/**
 		 * Store description.
 		 *
-		 * @param {string} value of new description
+		 * @param {String} value of new description
 		 * @return {jQuery.Deferred} Object returned by ajax call
 		 */
 		saveDescription: function ( value ) {

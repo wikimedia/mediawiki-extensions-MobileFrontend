@@ -46,7 +46,7 @@
 		/**
 		 * Refreshes the pointer arrow.
 		 * @method
-		 * @param {string} target jQuery selector
+		 * @param {String} target jQuery selector
 		 */
 		refreshPointerArrow: function ( target ) {
 			this.$pointer.remove();
