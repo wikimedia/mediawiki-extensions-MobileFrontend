@@ -42,7 +42,7 @@
 		var
 			collapseLevel = Math.min.apply( this, $.map( sections, function ( s ) {
 				return s.level;
-			} ) ) + '',
+			} ) ).toString(),
 			lastSection,
 			result = [];
 
