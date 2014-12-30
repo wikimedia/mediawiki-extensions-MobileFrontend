@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cc11a1b2",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T22:17:57Z",
+      "side": 1,
+      "message": "Too much magic in here and prone to future error. Please use variables to show the maths.\n\nAlso doesn\u0027t work in alpha so will break as soon as icon standardisation gets completed (45.890625px by 46.1875px;)",
+      "revId": "098bc05242a6e93906c8044b2b3c5dc4076aa223",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_8c4409bf",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-30T22:17:57Z",
+      "side": 1,
+      "message": "never ever declare font sizes in pixels.",
+      "revId": "098bc05242a6e93906c8044b2b3c5dc4076aa223",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
