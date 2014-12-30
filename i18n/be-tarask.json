@@ -82,7 +82,7 @@
 	"mobile-frontend-nearby-lookup-ui-error-guidance": "Паспрабуйце знайсьці месца зь лепшым прыёмам сыгналу.",
 	"mobile-frontend-nearby-noresults": "Нешта ціха... Мы не знайшлі для вас старонак побач.",
 	"mobile-frontend-nearby-noresults-guidance": "Паспрабуйце стварыць новую старонку або дадаць каардынаты да існай",
-	"mobile-frontend-nearby-refresh": "Мы атрымалі вашае болей дакладнае становішча. Націсьніце тут, каб абнавіць сьпіс блізкіх старонак",
+	"mobile-frontend-nearby-refresh": "Абнавіць месцазнаходжаньне",
 	"mobile-frontend-nearby-requirements": "Даруйце! Ваш браўзэр не падтрымлівае функцыю {{SITENAME}} Побач.",
 	"mobile-frontend-nearby-requirements-guidance": "Паспрабуйце іншы браўзэр або ўключыце JavaScript, калі ён выключаны.",
 	"mobile-frontend-nearby-title": "Побач",

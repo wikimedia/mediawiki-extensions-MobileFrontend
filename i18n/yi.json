@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Imre",
-			"פוילישער"
+			"פוילישער",
+			"Har-wradim"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "צוריקשפרינגען אַן אָפטייל",
@@ -36,7 +37,7 @@
 	"mobile-frontend-login": "אַרײַנלאגירן",
 	"mobile-frontend-main-menu-featured": "רעקאמנדירט",
 	"mobile-frontend-main-menu-login": "אַרײַנלאָגירן",
-	"mobile-frontend-main-menu-logout": "אַרויסלאגירן",
+	"mobile-frontend-main-menu-logout": "אַרויסלאָגירן",
 	"mobile-frontend-main-menu-nearby": "דערבײַ",
 	"mobile-frontend-main-menu-settings": "איינשטעלונגען",
 	"mobile-frontend-main-menu-settings-heading": "איינשטעלונגען",
@@ -52,7 +53,7 @@
 	"mobile-frontend-page-menu-history": "היסטאריע",
 	"mobile-frontend-password": "פאסווארט:",
 	"mobile-frontend-photo-caption-placeholder": "באשרייבן דאס בילד (באדארפט)",
-	"mobile-frontend-photo-upload-error": "פֿעלער, פרובירט נאכאמאל.",
+	"mobile-frontend-photo-upload-error": "פֿעלער, פּרובירט נאָכאַמאָל.",
 	"mobile-frontend-placeholder": "זוכן {{SITENAME}}",
 	"mobile-frontend-placeholder-beta": " זוכן ביי {{SITENAME}} (בעטא)",
 	"mobile-frontend-privacy-link-text": "פריוואטקייט",
