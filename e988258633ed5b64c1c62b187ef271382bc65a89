@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cf6bd3b3",
+        "filename": "javascripts/OverlayManager.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T23:22:34Z",
+      "side": 1,
+      "message": "I think in general the function name should be descriptive (as it is now) and the event name should be the same as the function name. Fewer names makes it clearer to read the code imo.",
+      "revId": "e988258633ed5b64c1c62b187ef271382bc65a89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
