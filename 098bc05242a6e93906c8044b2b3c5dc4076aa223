@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_ccce8131",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T22:23:25Z",
+      "side": 1,
+      "message": "By this logic all icon sizes are broken, because they use the size of 3.35em, which converts to 53.6px at 16px per em. I think this solve the problem nicely, because both values above will be converted to 46px by the browser. If we want to fix such errors we should revise how icons are rendered.",
+      "parentUuid": "0e6cb3ef_cc11a1b2",
+      "revId": "098bc05242a6e93906c8044b2b3c5dc4076aa223",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_8c4409bf",
         "filename": "less/mainmenu.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-30T22:17:57Z",
       "side": 1,
       "message": "never ever declare font sizes in pixels.",
+      "revId": "098bc05242a6e93906c8044b2b3c5dc4076aa223",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_8c596992",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2014-12-30T22:23:25Z",
+      "side": 1,
+      "message": "why not? The base font size is in pixels. Why cannot I use it to fix the icon size?",
+      "parentUuid": "0e6cb3ef_8c4409bf",
       "revId": "098bc05242a6e93906c8044b2b3c5dc4076aa223",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
