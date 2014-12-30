@@ -34,6 +34,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 		$styles = parent::getSkinStyles();
 		$styles[] = 'mediawiki.ui.icon';
 		$styles[] = 'skins.minerva.icons.styles';
+		$styles[] = 'skins.minerva.icons.images';
 		$styles[] = 'skins.minerva.alpha.styles';
 		return $styles;
 	}

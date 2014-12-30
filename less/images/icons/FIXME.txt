@@ -1,1 +1,0 @@
-This folder should be generated from a canonical source and shared across all projects. PNGs should be generated from SVGs.
