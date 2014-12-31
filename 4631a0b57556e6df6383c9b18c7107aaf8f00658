@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_60065425",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1008,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-12-31T20:08:26Z",
+      "side": 1,
+      "message": "I\u0027m unsure about this part: passing a configuration setting here seems backwards and prone to user errors. So far, the code base relies heavily on MobileContext singleton, so nothing bad would happen if it\u0027s used here too.",
+      "revId": "4631a0b57556e6df6383c9b18c7107aaf8f00658",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
