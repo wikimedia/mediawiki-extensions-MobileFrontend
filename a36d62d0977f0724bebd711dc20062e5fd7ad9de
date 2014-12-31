@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b5959044",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-31T12:17:05Z",
+      "side": 0,
+      "message": "As in previous patches, this seems to have disappeared?",
+      "revId": "a36d62d0977f0724bebd711dc20062e5fd7ad9de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

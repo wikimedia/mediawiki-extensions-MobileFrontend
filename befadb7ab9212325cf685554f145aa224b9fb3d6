@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_759ff862",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebClickTracking.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-31T12:17:05Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we actually log here? I think it is missing\n\n    schema.log()\n\n?",
+      "revId": "befadb7ab9212325cf685554f145aa224b9fb3d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
