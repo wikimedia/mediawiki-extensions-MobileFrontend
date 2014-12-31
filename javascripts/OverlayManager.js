@@ -41,14 +41,14 @@
 		},
 
 		/**
-		 * Show the overlay and bind the 'hide' event to _onHideOverlay.
+		 * Show the overlay and bind the '_om_hide' event to _onHideOverlay.
 		 * @method
 		 * @private
 		 * @param {Overlay} overlay to show
 		 */
 		_showOverlay: function ( overlay ) {
 			// if hidden using overlay (not hardware) button, update the state
-			overlay.once( 'hide', $.proxy( this, '_onHideOverlay' ) );
+			overlay.once( '_om_hide', $.proxy( this, '_onHideOverlay' ) );
 
 			overlay.show();
 		},
@@ -65,13 +65,13 @@
 
 			// remove the callback for updating state when overlay closed using
 			// overlay close button
-			overlay.off( 'hide' );
+			overlay.off( '_om_hide' );
 
 			result = overlay.hide( this.stack.length > 1 );
 
 			// if closing prevented, reattach the callback
 			if ( !result ) {
-				overlay.once( 'hide', $.proxy( this, '_onHideOverlay' ) );
+				overlay.once( '_om_hide', $.proxy( this, '_onHideOverlay' ) );
 			}
 
 			return result;
@@ -87,6 +87,17 @@
 			var factoryResult,
 				self = this;
 
+			/**
+			 * Attach an event to the overlays hide event
+			 * @ignore
+			 * @param {Overlay} overlay
+			 */
+			function attachHideEvent( overlay ) {
+				overlay.on( 'hide', function () {
+					overlay.emit( '_om_hide' );
+				} );
+			}
+
 			if ( match ) {
 				if ( match.overlay ) {
 					// if the match is an overlay that was previously opened, reuse it
@@ -99,10 +110,12 @@
 					if ( $.isFunction( factoryResult.promise ) ) {
 						factoryResult.done( function ( overlay ) {
 							match.overlay = overlay;
+							attachHideEvent( overlay );
 							self._showOverlay( overlay );
 						} );
 					} else {
 						match.overlay = factoryResult;
+						attachHideEvent( match.overlay );
 						self._showOverlay( factoryResult );
 					}
 				}
