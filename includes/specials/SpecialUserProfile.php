@@ -8,7 +8,7 @@
  */
 class SpecialUserProfile extends MobileSpecialPage {
 	/** @var boolean $hasDesktopVersion Whether this special page has or has not a desktop version */
-	protected $hasDesktopVersion = false;
+	protected $hasDesktopVersion = true;
 
 	/**
 	 * Maximum number of characters to display as the user description
