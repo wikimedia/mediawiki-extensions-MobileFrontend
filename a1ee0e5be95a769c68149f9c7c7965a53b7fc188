@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b56a707c",
+        "filename": "javascripts/Schema.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-31T11:27:37Z",
+      "side": 1,
+      "message": "We are not saving schemaName when present now, it may be problematic, for example in the wikigrokerror case: https://gerrit.wikimedia.org/r/#/c/182202/2/javascripts/modules/wikigrok/WikiGrokDialog.js line 10",
+      "revId": "a1ee0e5be95a769c68149f9c7c7965a53b7fc188",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
