@@ -50,19 +50,14 @@
 			} ];
 			this.render( options );
 			this.$( '.instructions' ).hide();
-			this.$( '.error-field' ).show();
-			this.$( '.license-panel' ).show();
+			this.$( '.error-field, .license-panel' ).show();
 			this.$( 'button.submit' ).prop( 'disabled', true );
 
 			// Enable the submit button when the error report is at least 15 characters
 			this.$( '.error-field' ).on( 'keyup paste drop', function () {
 				// Force length check to be asynchronous in order to handle paste events
 				setTimeout( function () {
-					if ( self.$( '.error-field' ).val().length > 15 ) {
-						self.$( 'button.submit' ).prop( 'disabled', false );
-					} else {
-						self.$( 'button.submit' ).prop( 'disabled', true );
-					}
+					self.$( 'button.submit' ).prop( 'disabled', self.$( '.error-field' ).val().length <= 15 );
 				}, 0 );
 			} );
 
@@ -92,6 +87,7 @@
 		 * @param {String} title The title of the page to post the report to
 		 */
 		_postErrorReport: function ( text, title ) {
+			var self = this;
 			api.postWithToken( 'edit', {
 				action: 'edit',
 				section: 'new',
@@ -100,12 +96,10 @@
 				summary: mw.msg( 'mobile-frontend-errorreport-summary' ),
 				text: text + ' ~~~~'
 			} ).done( function () {
-				// Close overlay and show thanks message
-				window.history.back();
+				self.hide();
 				toast.show( mw.msg( 'mobile-frontend-errorreport-feedback' ), 'toast' );
 			} ).fail( function () {
-				// Close overlay and show error notification
-				window.history.back();
+				self.hide();
 				toast.show( mw.msg( 'mobile-frontend-errorreport-error' ), 'toast' );
 			} );
 		},
