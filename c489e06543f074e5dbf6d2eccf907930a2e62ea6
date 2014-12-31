@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_00baf86c",
+        "filename": "javascripts/modules/errorReport/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-31T18:42:33Z",
+      "side": 0,
+      "message": "Oops, didn\u0027t mean to leave this here :)",
+      "revId": "c489e06543f074e5dbf6d2eccf907930a2e62ea6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_802a888d",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-31T18:42:33Z",
+      "side": 1,
+      "message": "Ah, that\u0027s a lot nicer :) We should change this elsewhere as well.",
+      "revId": "bf5cb247044c15c5c79a8263659eab2999c15bd6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_a05eac46",
+        "filename": "javascripts/modules/errorReport/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-31T18:42:33Z",
+      "side": 1,
+      "message": "Might as well use M.inNamespace( 0 ) if you want to avoid mw.config. Personally, I\u0027m conflicted about using our mobile-specific interfaces for mw.config. On the one hand, it makes our code more abstracted and easier to read. On the other hand, it makes our code more siloed and harder for non-mobile folks to port or decipher. Maybe I\u0027ll work on adding some more abstraction to mw in core and see if it gets Krinkled :P",
+      "revId": "bf5cb247044c15c5c79a8263659eab2999c15bd6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
