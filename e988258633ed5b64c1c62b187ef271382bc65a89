@@ -34,6 +34,24 @@
       "revId": "e988258633ed5b64c1c62b187ef271382bc65a89",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_cf175355",
+        "filename": "javascripts/OverlayManager.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-31T00:18:45Z",
+      "side": 1,
+      "message": "It\u0027s an internal thing and not meant for public consumption. If you scan the rest of the code it is used by not only _showOverlay but _hideOverlay and attached in _processMatch. Naming it something similar would just cause confusion and it\u0027s purpose should be clear when you view the tests and rest of code.\n\nMy only criteria here is to use a name that is unlikely to be used by anything else and to avoid Overlays having to know about the existence of the manager.",
+      "parentUuid": "0e6cb3ef_afaf7fdd",
+      "revId": "e988258633ed5b64c1c62b187ef271382bc65a89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
