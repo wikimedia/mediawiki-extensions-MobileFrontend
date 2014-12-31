@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b5cef084",
+        "filename": "javascripts/loggingSchemas/mobileWebWikiGrok.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-31T11:57:21Z",
+      "side": 0,
+      "message": "this has dissapeared in the new schema?",
+      "revId": "5c4e77a62bfee5553b88bbcf68d9977fd7fdb7c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

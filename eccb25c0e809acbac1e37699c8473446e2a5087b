@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_75c85877",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebWikiGrok.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-31T11:57:21Z",
+      "side": 1,
+      "message": "I\u0027m getting \"Validation error against schema MobileWebWikiGrok: Missing property: pageId\"\n\nI would guess that because pageId has disappeared in the transition, but I\u0027m not sure.\n\nBTW where is that error coming from?",
+      "revId": "eccb25c0e809acbac1e37699c8473446e2a5087b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
