@@ -19,6 +19,58 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_db84f560",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-31T20:11:19Z",
+      "side": 1,
+      "message": "Agreed. I\u0027m not sure what the scope of this file is.",
+      "parentUuid": "0e6cb3ef_efad77e8",
+      "revId": "1fdc6599c554bcc33fad1e31943d91f2dc808bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7b9b69c1",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-31T20:11:19Z",
+      "side": 1,
+      "message": "Class name is wrong.",
+      "revId": "1fdc6599c554bcc33fad1e31943d91f2dc808bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_9b967d96",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-31T20:11:19Z",
+      "side": 1,
+      "message": "Not accurate.",
+      "revId": "1fdc6599c554bcc33fad1e31943d91f2dc808bf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_2fa4cf03",
         "filename": "javascripts/Skin.js",
         "patchSetId": 1
