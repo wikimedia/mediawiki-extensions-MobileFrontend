@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1ba4ad03",
+        "filename": "javascripts/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-31T19:57:53Z",
+      "side": 1,
+      "message": "Can we change to...\nreturn this.options.namespaceNumber \u003d\u003d\u003d mw.config.get( \u0027wgNamespaceIds\u0027 )[namespace.toLowerCase()];\n\nI can never remember if the actual namespace names are capitalized or not.",
+      "revId": "1c972a6098e0d127186bd75e782c4b893553f4cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
