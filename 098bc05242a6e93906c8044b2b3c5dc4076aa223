@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_a00c6c46",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-31T20:58:28Z",
+      "side": 1,
+      "message": "Fair enough. But some variables to explain the madness would make this more future proof.",
+      "parentUuid": "0e6cb3ef_ccce8131",
+      "revId": "098bc05242a6e93906c8044b2b3c5dc4076aa223",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_8c4409bf",
         "filename": "less/mainmenu.less",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "why not? The base font size is in pixels. Why cannot I use it to fix the icon size?",
       "parentUuid": "0e6cb3ef_8c4409bf",
+      "revId": "098bc05242a6e93906c8044b2b3c5dc4076aa223",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_400b102d",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2014-12-31T20:58:28Z",
+      "side": 1,
+      "message": "Not sure what you mean.... we don\u0027t or shouldn\u0027t use pixels anywhere as this breaks zooming. em\u0027s for the win etc..",
+      "parentUuid": "0e6cb3ef_8c596992",
       "revId": "098bc05242a6e93906c8044b2b3c5dc4076aa223",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
