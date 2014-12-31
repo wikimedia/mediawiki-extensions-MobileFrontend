@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_7b37e9e0",
+        "filename": "javascripts/Schema.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-12-31T19:45:53Z",
+      "side": 1,
+      "message": "This is a terrible class name. Can\u0027t we call it Logging or something more meaningful?",
+      "revId": "23583697fccc0c1b0642a47e578e3368b6dc5080",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
