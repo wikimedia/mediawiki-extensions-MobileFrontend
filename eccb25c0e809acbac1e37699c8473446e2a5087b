@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_35aae082",
+        "filename": "javascripts/loggingSchemas/mobileWebEditing.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2014-12-31T12:02:17Z",
+      "side": 0,
+      "message": "Why has this disappeared in the migration? Is it not important? \n\n(I think it is also missing from the previous wikigrokshema patch)",
+      "revId": "eccb25c0e809acbac1e37699c8473446e2a5087b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
