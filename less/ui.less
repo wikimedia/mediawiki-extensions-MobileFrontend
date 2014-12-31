@@ -105,17 +105,19 @@ body {
 }
 
 // Used for messages on login screen, page lists and uploads and when showing old revisions
+
+.warningbox,
+.alert.warning {
+	color: @colorWarningText;
+	background: @colorWarningBackground;
+}
+
 .alert {
 	padding: 1em @contentMargin;
 	margin: 0 0 1em;
 
 	&.successbox {
 		background: @colorSuccessBackground;
-	}
-
-	&.warning {
-		color: @colorWarningText;
-		background: @colorWarningBackground;
 	}
 
 	h2 {
