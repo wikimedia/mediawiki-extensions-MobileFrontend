@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_3b0bb12e",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-01T00:34:20Z",
+      "side": 1,
+      "message": "EditorOverlayBase should really have no knowledge of VisualEditor...\nGeneric method time?",
+      "revId": "06dbee931f2aa87803750244f0496d06a386aeb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
