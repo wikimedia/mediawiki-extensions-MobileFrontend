@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_66b98c28",
+        "filename": "javascripts/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-01T01:38:58Z",
+      "side": 0,
+      "message": "Nice rebase ;)",
+      "revId": "c358e1ee068cf8ef352d637bf3b52de7affd2919",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
