@@ -16,6 +16,24 @@
       "revId": "06dbee931f2aa87803750244f0496d06a386aeb7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_81ffea30",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-02T00:12:10Z",
+      "side": 1,
+      "message": "Or maybe a variable like \"forceStageChanges\" to enable VisualEditor to force the step?",
+      "parentUuid": "0e6cb3ef_3b0bb12e",
+      "revId": "06dbee931f2aa87803750244f0496d06a386aeb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
