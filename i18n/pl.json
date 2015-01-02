@@ -109,6 +109,7 @@
 	"mobile-frontend-editor-visual-editor": "Edytuj",
 	"mobile-frontend-editor-wait": "Zapisywanie, proszę czekaj.",
 	"mobile-frontend-enable-images": "Włącz wyświetlanie grafik w wersji mobilnej",
+	"mobile-frontend-errorreport-submit": "Wyślij",
 	"mobile-frontend-expand-sections-status": "Rozwiń wszystkie sekcje",
 	"mobile-frontend-fontchanger-link": "Rozmiar czcionki",
 	"mobile-frontend-fontchanger-desc": "Zmiana rozmiar tekstu w celu poprawy czytelności.",
@@ -317,5 +318,6 @@
 	"tag-mobile_web_edit": "edycja z mobile web",
 	"tag-mobile_web_edit-description": "Edycja z mobile web",
 	"skinname-minerva": "Minerwa",
-	"apihelp-mobileview-param-thumbnail": "Maksymalne rozmiary miniaturki."
+	"apihelp-mobileview-param-thumbnail": "Maksymalne rozmiary miniaturki.",
+	"mobile-frontend-meta-data-issues-categories": "O tej kategorii"
 }

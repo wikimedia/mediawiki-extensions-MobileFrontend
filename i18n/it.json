@@ -10,7 +10,8 @@
 			"Una giornata uggiosa '94",
 			"Ximo17",
 			"Elitre",
-			"Macofe"
+			"Macofe",
+			"Ricordisamoa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -102,6 +103,7 @@
 	"mobile-frontend-editor-visual-editor": "Modifica",
 	"mobile-frontend-editor-wait": "Stiamo salvando la tua modifica, attendi.",
 	"mobile-frontend-enable-images": "Abilita le immagini sul sito per dispositivi mobili",
+	"mobile-frontend-errorreport-heading": "Segnala un errore",
 	"mobile-frontend-expand-sections-description": "Espandi sempre tutte le sezioni, quando si naviga in una nuova pagina.",
 	"mobile-frontend-expand-sections-status": "Espandi tutte le sezioni",
 	"mobile-frontend-fontchanger-link": "Dimensione carattere",

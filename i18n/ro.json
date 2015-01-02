@@ -99,6 +99,15 @@
 	"mobile-frontend-editor-visual-editor": "Modificare",
 	"mobile-frontend-editor-wait": "Se salvează modificarea; vă rugăm să așteptați.",
 	"mobile-frontend-enable-images": "Activează imaginile pe site-ul mobil",
+	"mobile-frontend-errorreport-button-label": "Raportează o eroare",
+	"mobile-frontend-errorreport-error": "Eroare, nu s-au putut publica părerile",
+	"mobile-frontend-errorreport-feedback": "Vă mulțumim pentru părerea dumnevoastră!",
+	"mobile-frontend-errorreport-heading": "Raportare eroare",
+	"mobile-frontend-errorreport-instructions": "<p>Acest formular trebuie folosit doar pentru raportarea erorilor din articolele Wikipediei. Vă rugăm să nu raportați elemente care lipsesc.</p><p>Dacă ați descoperit o eroare, încercați s-o corectați chiar dumnevoastră modificând pagina. Dacă nu o puteți corecta, raportaţi-o folosind formularul de faţă.</p><p>Nu vă furnizați numărul de telefon sau adresa de e-mail.</p>",
+	"mobile-frontend-errorreport-placeholder": "Introduceți aici raportul despre eroare.",
+	"mobile-frontend-errorreport-section-title": "Corecție sugerată",
+	"mobile-frontend-errorreport-submit": "Trimite",
+	"mobile-frontend-errorreport-summary": "Raportat eroare",
 	"mobile-frontend-expand-sections-description": "Întotdeauna extinde toate secțiunile atunci când se navighează la o pagină nouă.",
 	"mobile-frontend-expand-sections-status": "Extinde toate secțiunile",
 	"mobile-frontend-fontchanger-link": "Dimensiunea fontului",
@@ -341,5 +350,6 @@
 	"apihelp-mobileview-param-noimages": "Returnează HTML fără imagini.",
 	"apihelp-mobileview-param-thumbnail": "Dimensiunile maxime pentru miniaturi.",
 	"mobile-frontend-donate-button-label": "Donații",
-	"mobile-frontend-wikidata-editor-description-label": "Descrieți ''$1'' într-o singură propoziție:"
+	"mobile-frontend-wikidata-editor-description-label": "Descrieți ''$1'' într-o singură propoziție:",
+	"mobile-frontend-meta-data-issues-categories": "Despre această categorie"
 }

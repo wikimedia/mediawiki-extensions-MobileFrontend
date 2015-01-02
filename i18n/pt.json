@@ -108,6 +108,15 @@
 	"mobile-frontend-editor-visual-editor": "Editar",
 	"mobile-frontend-editor-wait": "A gravar edição, aguarde por favor.",
 	"mobile-frontend-enable-images": "Activar imagens no sítio móvel",
+	"mobile-frontend-errorreport-button-label": "Comunicar erro",
+	"mobile-frontend-errorreport-error": "Erro, o seu comentário não pôde ser registado",
+	"mobile-frontend-errorreport-feedback": "Obrigado pelo seu comentário!",
+	"mobile-frontend-errorreport-heading": "Comunicar erro",
+	"mobile-frontend-errorreport-instructions": "<p>Este formulário é somente para comunicação de erros em artigos da Wikipédia. Por favor, não o utilize para relatar itens em falta.</p><p>Se encontrou um erro, por favor, tente corrigi-lo por si mesmo ao editar a página. Se não conseguir corrigir o erro. comunique-o utilizando o seguinte formulário.</p><p> Não forneça o seu número de telefone ou endereço de correio eletrónico.</p>",
+	"mobile-frontend-errorreport-placeholder": "Insira o comentário aqui.",
+	"mobile-frontend-errorreport-section-title": "Correção sugerida",
+	"mobile-frontend-errorreport-submit": "Enviar",
+	"mobile-frontend-errorreport-summary": "A comunicar um erro",
 	"mobile-frontend-expand-sections-description": "Expandir sempre todas as secções quando navegar para uma nova página.",
 	"mobile-frontend-expand-sections-status": "Expandir todas as secções",
 	"mobile-frontend-fontchanger-link": "Tamanho da fonte",
@@ -339,5 +348,6 @@
 	"mobile-frontend-pageaction-upload-tooltip": "Carregar foto principal para esta página.",
 	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel.",
 	"mobile-frontend-donate-button-label": "Fazer donativo",
-	"mobile-frontend-wikidata-editor-description-label": "Descreva ''$1'' numa única frase:"
+	"mobile-frontend-wikidata-editor-description-label": "Descreva ''$1'' numa única frase:",
+	"mobile-frontend-meta-data-issues-categories": "Sobre esta categoria"
 }

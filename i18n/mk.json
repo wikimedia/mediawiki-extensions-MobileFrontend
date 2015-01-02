@@ -96,6 +96,15 @@
 	"mobile-frontend-editor-visual-editor": "Уреди",
 	"mobile-frontend-editor-wait": "Го зачувувам уредувањето. Почекајте.",
 	"mobile-frontend-enable-images": "Овозможи слики во мобилниот изглед",
+	"mobile-frontend-errorreport-button-label": "Пријави техничка грешка",
+	"mobile-frontend-errorreport-error": "Грешка. Не можев да го објавам мислењето",
+	"mobile-frontend-errorreport-feedback": "Ви благодариме што го искажавте вашето мислење!",
+	"mobile-frontend-errorreport-heading": "Пријави техничка грешка",
+	"mobile-frontend-errorreport-instructions": "<p>Овој боразец служи само за пријавување на технички грешки во статии на Википедија. Не пријавувајте отсутни ставки.</p><p>Ако наидовте на техничка грешка, обидете се самите да ја поправите со уредување на страницата. Ако не можете да ја поправите, тогаш пријавете ја со следниов образец.</p><p>Не ставајте ваш телефонски број или е-пошта.</p>",
+	"mobile-frontend-errorreport-placeholder": "Тука внесете го текстот на пријавата за грешката.",
+	"mobile-frontend-errorreport-section-title": "Предложи исправка",
+	"mobile-frontend-errorreport-submit": "Поднеси",
+	"mobile-frontend-errorreport-summary": "Пријави техничка грешка",
 	"mobile-frontend-expand-sections-description": "Секогаш расклопувај ги сите делови кога одам на нова страница.",
 	"mobile-frontend-expand-sections-status": "Расклопувај ги сите делови",
 	"mobile-frontend-fontchanger-link": "Големина на фонтот",
@@ -359,5 +368,6 @@
 	"apihelp-parse-param-noimages": "Оневозможи слики во мобилниот извод.",
 	"apihelp-parse-param-mainpage": "Примени преобразби на главната мобилна страница.",
 	"mobile-frontend-donate-button-label": "Дарувајте",
-	"mobile-frontend-wikidata-editor-description-label": "Опишете ја ''$1'' во една реченица:"
+	"mobile-frontend-wikidata-editor-description-label": "Опишете ја ''$1'' во една реченица:",
+	"mobile-frontend-meta-data-issues-categories": "За категоријава"
 }

@@ -69,6 +69,13 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>გვერდის წყარო</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "მიმდინარეობს რედაქტირების შენახვა, გთხოვთ მოიცადოთ.",
 	"mobile-frontend-enable-images": "მობილურ საიტზე სურათების ჩართვა",
+	"mobile-frontend-errorreport-button-label": "განაცხადეთ შეცდომის შესახებ",
+	"mobile-frontend-errorreport-error": "შეცდომაა, უკუკავშირის დატოვება შეუძლებელია.",
+	"mobile-frontend-errorreport-feedback": "გმადლობთ უკუკავშირისათვის!",
+	"mobile-frontend-errorreport-heading": "განაცხადეთ შეცდომის შესახებ",
+	"mobile-frontend-errorreport-placeholder": "ჩაწერეთ შეცდომის რეპორტი აქ.",
+	"mobile-frontend-errorreport-section-title": "შეთავაზებული შესწორება",
+	"mobile-frontend-errorreport-submit": "მიღება",
 	"mobile-frontend-expand-sections-description": "ყოველთვის აჩვენე ყველა სექცია ახალი გვერდის ნახვისას.",
 	"mobile-frontend-expand-sections-status": "აჩვენე ყველა სექცია",
 	"mobile-frontend-fontchanger-link": "შრიფტის ზომა",
@@ -240,5 +247,6 @@
 	"nearby": "გვერდები შენთან ახლოს",
 	"tag-mobile_edit": "რედაქტირება მობილურით",
 	"tag-mobile_edit-description": "რედაქტირება შესრულებულია საიტის მობილური ვერსიიდან",
-	"mobile-frontend-donate-button-label": "შეწირულობები"
+	"mobile-frontend-donate-button-label": "შეწირულობები",
+	"mobile-frontend-meta-data-issues-categories": "ამ კატეგორიის შესახებ"
 }

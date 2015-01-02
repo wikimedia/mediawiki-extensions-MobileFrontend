@@ -87,6 +87,10 @@
 	"mobile-frontend-editor-visual-editor": "Änneren",
 	"mobile-frontend-editor-wait": "Ännerung gëtt gespäichert, waart w.e.g..",
 	"mobile-frontend-enable-images": "Biller an der Mobiler Versioun aktivéieren",
+	"mobile-frontend-errorreport-button-label": "E Feeler mellen",
+	"mobile-frontend-errorreport-feedback": "Merci fir Äre Feedback!",
+	"mobile-frontend-errorreport-heading": "E Feeler mellen",
+	"mobile-frontend-errorreport-placeholder": "Gitt Feelerrapporten hei an.",
 	"mobile-frontend-expand-sections-status": "All Abschnitter komplett weisen",
 	"mobile-frontend-fontchanger-link": "Schrëftgréisst",
 	"mobile-frontend-featured-article": "Den Inhalt vum Dag",
@@ -287,5 +291,6 @@
 	"tag-mobile_web_edit-description": "Ännerung vum mobile Site aus gemaach",
 	"apihelp-mobileview-param-thumbnail": "Maximal Dimensioune vu Miniatur-Biller.",
 	"mobile-frontend-donate-button-label": "Maacht en Don",
-	"mobile-frontend-wikidata-editor-description-label": "Beschreift \"$1\" an engem eenzege Saz:"
+	"mobile-frontend-wikidata-editor-description-label": "Beschreift \"$1\" an engem eenzege Saz:",
+	"mobile-frontend-meta-data-issues-categories": "Iwwer dës Kategorie"
 }
