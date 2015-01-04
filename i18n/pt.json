@@ -16,7 +16,8 @@
 			"Vitorvicentevalente",
 			"Helder.wiki",
 			"He7d3r",
-			"Macofe"
+			"Macofe",
+			"Ti4goc"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o(a) utilizador(a) está ou não a editar através de interface móvel",
@@ -113,7 +114,7 @@
 	"mobile-frontend-errorreport-feedback": "Obrigado pelo seu comentário!",
 	"mobile-frontend-errorreport-heading": "Comunicar erro",
 	"mobile-frontend-errorreport-instructions": "<p>Este formulário é somente para comunicação de erros em artigos da Wikipédia. Por favor, não o utilize para relatar itens em falta.</p><p>Se encontrou um erro, por favor, tente corrigi-lo por si mesmo ao editar a página. Se não conseguir corrigir o erro. comunique-o utilizando o seguinte formulário.</p><p> Não forneça o seu número de telefone ou endereço de correio eletrónico.</p>",
-	"mobile-frontend-errorreport-placeholder": "Insira o comentário aqui.",
+	"mobile-frontend-errorreport-placeholder": "Introduza o comentário aqui.",
 	"mobile-frontend-errorreport-section-title": "Correção sugerida",
 	"mobile-frontend-errorreport-submit": "Enviar",
 	"mobile-frontend-errorreport-summary": "A comunicar um erro",
@@ -347,7 +348,7 @@
 	"mobile-frontend-pageaction-edit-tooltip": "Editar introdução desta página.",
 	"mobile-frontend-pageaction-upload-tooltip": "Carregar foto principal para esta página.",
 	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel.",
-	"mobile-frontend-donate-button-label": "Fazer donativo",
+	"mobile-frontend-donate-button-label": "Doar",
 	"mobile-frontend-wikidata-editor-description-label": "Descreva ''$1'' numa única frase:",
 	"mobile-frontend-meta-data-issues-categories": "Sobre esta categoria"
 }

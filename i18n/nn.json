@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Njardarlogar",
-			"Ranveig"
+			"Ranveig",
+			"Gaute"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Skriv inn stadfestingskode",
@@ -36,6 +37,15 @@
 	"mobile-frontend-editor-success": "Det gjekk! Endringa di vart lagra.",
 	"mobile-frontend-editor-wait": "Lagrar endring, vent litt.",
 	"mobile-frontend-enable-images": "Slå på bilete på mobilsida",
+	"mobile-frontend-errorreport-button-label": "Rapporter ein feil",
+	"mobile-frontend-errorreport-error": "Det oppstod ein feil. Tilbakemeldinga kunne ikkje leggjast inn.",
+	"mobile-frontend-errorreport-feedback": "Takk for tilbakemeldinga!",
+	"mobile-frontend-errorreport-heading": "Rapporter ein feil",
+	"mobile-frontend-errorreport-instructions": "<p>Dette skjemaet skal utelukkande brukast for å rapportere om feil i Wikipedia-artiklar. Venlegst ikkje rapportér manglar i artikkelen.</p><p>Viss du ikkje kan løyse feilen sjølv, kan du rapportere den ved å bruke dette skjemaet.</p><p>Ikkje oppgje telefonnummeret ditt eller epostadressa di.</p>",
+	"mobile-frontend-errorreport-placeholder": "Skriv inn feilmeldinga her",
+	"mobile-frontend-errorreport-section-title": "Rettingsframlegg",
+	"mobile-frontend-errorreport-submit": "Send",
+	"mobile-frontend-errorreport-summary": "Rapporterar ein feil",
 	"mobile-frontend-featured-article": "Utvalt innhald i dag",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "Skjøner?",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Ja!",
@@ -122,7 +132,6 @@
 	"mobile-frontend-settings-alpha": "Eksperimentell modus",
 	"mobile-frontend-settings-alpha-description": "Stig inn i farleg og uutforska mobilterreng. Få endå meir eksperimentale funksjonar, men med større fare for programfeil.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Tilpass opplevinga di på den mobile eininga di med desse mobilspesifikke nettstadinnstillingane.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} er tilgjengeleg på {{PLURAL:$1|eitt språk|$1 språk}}. Alle tilgjengelege utgåver er lista opp nedanfor",
 	"mobile-frontend-settings-site-header": "{{SITENAME}}-språk",
 	"mobile-frontend-sign-in-error-heading": "Ops",
@@ -158,5 +167,6 @@
 	"tag-mobile_edit": "mobilendring",
 	"tag-mobile_edit-description": "Endring gjord frå mobil (nett eller småprogram)",
 	"tag-mobile_web_edit": "Mobil nettendring",
-	"tag-mobile_web_edit-description": "Endring gjord frå mobil nettstad"
+	"tag-mobile_web_edit-description": "Endring gjord frå mobil nettstad",
+	"mobile-frontend-meta-data-issues-categories": "Om denne kategorien"
 }
