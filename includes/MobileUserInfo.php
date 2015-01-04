@@ -44,19 +44,15 @@ class MobileUserInfo {
 		$constraints = array(
 			'LIMIT' => self::LIMIT + 1,
 		);
-		$innerSelect = $dbr->selectSQLText(
+
+		$result = $dbr->selectRowCount(
 			'recentchanges',
 			'rc_timestamp',
 			$where,
 			__METHOD__,
 			$constraints
 		);
-		$res = $dbr->query( "SELECT COUNT(*) FROM ($innerSelect) t", __METHOD__ );
-		$row = $res->fetchRow();
-		$result = 0;
-		if ( $row ) {
-			$result = $row[0];
-		}
+
 		wfProfileOut( __METHOD__ );
 		return $result;
 	}
@@ -90,13 +86,9 @@ class MobileUserInfo {
 		$constraints = array(
 			'LIMIT' => self::LIMIT + 1,
 		);
-		$innerSelect = $dbr->selectSQLText( 'image', 'img_timestamp', $where, __METHOD__, $constraints );
-		$res = $dbr->query( "SELECT COUNT(*) FROM ($innerSelect) t", __METHOD__ );
-		$row = $res->fetchRow();
-		$result = 0;
-		if ( $row ) {
-			$result = $row[0];
-		}
+
+		$result = $dbr->selectRowCount( 'image', 'img_timestamp', $where, __METHOD__, $constraints );
+
 		wfProfileOut( __METHOD__ );
 		return $result;
 	}
