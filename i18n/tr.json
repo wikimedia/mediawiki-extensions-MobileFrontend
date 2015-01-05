@@ -86,6 +86,11 @@
 	"mobile-frontend-editor-visual-editor": "Görsel düzenleyici",
 	"mobile-frontend-editor-wait": "Düzenleme kaydediliyor, lütfen bekleyin.",
 	"mobile-frontend-enable-images": "Mobil sitede resimleri etkinleştir",
+	"mobile-frontend-errorreport-button-label": "Hata bildir",
+	"mobile-frontend-errorreport-feedback": "Geri bildiriminiz için teşekkürler!",
+	"mobile-frontend-errorreport-heading": "Bir hata bildir",
+	"mobile-frontend-errorreport-submit": "Gönder",
+	"mobile-frontend-errorreport-summary": "Hata bildiriliyor",
 	"mobile-frontend-expand-sections-description": "Her zaman yeni bir sayfa ziyaret edildiğinde tüm başlıkları açık tut.",
 	"mobile-frontend-featured-article": "Bugünkü seçkin içerik",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Görüntüler {{SITENAME}} sitesine Wikimedia Commons'dan gelmektedir",
@@ -234,7 +239,6 @@
 	"mobile-frontend-settings-alpha": "Deneme modu",
 	"mobile-frontend-settings-alpha-description": "Tehlikeli ve keşfedilmemiş mobil topraklardasınız. Daha fazla deneme özelliği edinebilirsiniz ancak deneme modunda olduğunu unutmayın.",
 	"mobile-frontend-settings-beta": "Deneme",
-	"mobile-frontend-settings-description": "Bu ayarlar ile mobil cihazınızdaki deneyiminizi özelleştirin.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} $1 {{PLURAL:$1|dil|dil}}de mevcut. Mevcut bütün sürümler aşağıda listelenmektedir",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} Dilleri",
 	"mobile-frontend-sign-in-error-heading": "Hay Aksi!",
@@ -297,5 +301,6 @@
 	"tag-mobile_edit": "Mobil değişiklik",
 	"tag-mobile_edit-description": "Mobilden (web veya uygulama) yapılan düzenleme",
 	"tag-mobile_web_edit": "Mobil web değişikliği",
-	"tag-mobile_web_edit-description": "Mobil web sitesinden yapılan düzenleme"
+	"tag-mobile_web_edit-description": "Mobil web sitesinden yapılan düzenleme",
+	"mobile-frontend-meta-data-issues-categories": "Bu kategori hakkında"
 }

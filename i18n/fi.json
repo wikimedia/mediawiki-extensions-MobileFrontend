@@ -15,7 +15,8 @@
 			"VezonThunder",
 			"Syreeni",
 			"Pxos",
-			"Hartz"
+			"Hartz",
+			"MrTapsa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Muokkaako käyttäjä mobiilikäyttöliittymän kautta",
@@ -104,6 +105,15 @@
 	"mobile-frontend-editor-visual-editor": "Muokkaa",
 	"mobile-frontend-editor-wait": "Tallennetaan muokkausta. Odota.",
 	"mobile-frontend-enable-images": "Ota kuvat käyttöön mobiilisivustolla",
+	"mobile-frontend-errorreport-button-label": "Raportoi virhe",
+	"mobile-frontend-errorreport-error": "Virhe, palautetta ei voida lähettää",
+	"mobile-frontend-errorreport-feedback": "Kiitos palautteestasi!",
+	"mobile-frontend-errorreport-heading": "Raportoi virhe",
+	"mobile-frontend-errorreport-instructions": "<p>Tämä lomake on vain Wikipedia-artikkeleiden virheiden raportointia varten. Ole hyvä, äläkä raportoi puuttuvia kohteita.</p><p>Jos löydät virheen, yritä korjata se itse muokkaamalla sivua. Jos et voi korjata virhettä, raportoi se oheisella lomakkeella.</p><p>Älä jätä puhelinnumeroasi tai sähköpostiosoitettasi.</p>",
+	"mobile-frontend-errorreport-placeholder": "Kirjoita virheraportti tähän.",
+	"mobile-frontend-errorreport-section-title": "Ehdotettu korjaus",
+	"mobile-frontend-errorreport-submit": "Lähetä",
+	"mobile-frontend-errorreport-summary": "Virheen raportointi",
 	"mobile-frontend-expand-sections-description": "Laajenna aina kaikki kun siirrytään uudelle sivulle.",
 	"mobile-frontend-expand-sections-status": "Laajenna kaikki osiot",
 	"mobile-frontend-featured-article": "Päivän suositeltu sisältö",
@@ -260,7 +270,6 @@
 	"mobile-frontend-settings-alpha": "Kokeellinen tila",
 	"mobile-frontend-settings-alpha-description": "Lähde epävakaalle ja tutkimattomalle mobiilialueelle. Saat vielä enemmän kokeellisia toimintoja, mutta virheiden vaara on suurempi.",
 	"mobile-frontend-settings-beta": "Beeta",
-	"mobile-frontend-settings-description": "Mukauta mobiilisivuston asetuksia erityisillä mobiilisivuasetuksilla.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} on saatavilla {{PLURAL:$1|yhdellä|$1}} kielellä. Kaikki saatavilla olevat kieliversiot on listattu alla.",
 	"mobile-frontend-settings-site-header": "Sivuston {{SITENAME}} kielet",
 	"mobile-frontend-sign-in-error-heading": "Hups",
@@ -318,5 +327,6 @@
 	"tag-mobile_edit": "Mobiilimuokkaus",
 	"tag-mobile_edit-description": "Muokkaus, joka on tehty mobiilisivustolta",
 	"tag-mobile_web_edit": "mobiilisivusto-muokkaus",
-	"tag-mobile_web_edit-description": "Muokkaus, joka on tehty mobiiliverkkosivulta"
+	"tag-mobile_web_edit-description": "Muokkaus, joka on tehty mobiiliverkkosivulta",
+	"mobile-frontend-meta-data-issues-categories": "Tietoa tästä luokasta"
 }

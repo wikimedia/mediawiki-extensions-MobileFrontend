@@ -30,6 +30,12 @@
 	"mobile-frontend-donate-image-title": "පින්තූරයක් පරිත්‍යාග කරන්න",
 	"mobile-frontend-editor-anon": "නිර්නාමිකව සංස්කරණය කරන්න",
 	"mobile-frontend-enable-images": "ජංගම අඩවියෙහි පින්තුර සක්‍රීය කරන්න",
+	"mobile-frontend-errorreport-button-label": "දෝෂයක් වාර්තා කරන්න",
+	"mobile-frontend-errorreport-feedback": "ඔබේ අදහස් සඳහා ස්තූතියි!",
+	"mobile-frontend-errorreport-heading": "දෝෂයක් වාර්තා කරන්න",
+	"mobile-frontend-errorreport-section-title": "යෝජිත නිවැරදි කිරීම",
+	"mobile-frontend-errorreport-submit": "යොමන්න",
+	"mobile-frontend-errorreport-summary": "දෝෂය වාර්තා කරමින්",
 	"mobile-frontend-featured-article": "අද විශේෂාංග ලිපිය",
 	"mobile-frontend-footer-contact": "සම්බන්ධ කරන්න",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
@@ -99,5 +105,6 @@
 	"mobile-frontend-watchlist-removed": "$1 ඔබේ මුරලැයිස්තුවෙන් ඉවත් කරන ලදී",
 	"mobile-frontend-watchlist-view": "ඔබේ මුරලැයිස්තුව නරඹන්න",
 	"tag-mobile_edit": "ජංගම සංස්කරණය",
-	"tag-mobile_edit-description": "ජංගම අඩවියෙන් සංස්කරණය සිදු කරන ලදී"
+	"tag-mobile_edit-description": "ජංගම අඩවියෙන් සංස්කරණය සිදු කරන ලදී",
+	"mobile-frontend-meta-data-issues-categories": "මෙම ප්‍රවර්ගය ගැන"
 }

@@ -9,7 +9,8 @@
 			"QuimGil",
 			"Toniher",
 			"Vriullop",
-			"Fitoschido"
+			"Fitoschido",
+			"Adriabages"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Introduïu el codi de confirmació",
@@ -86,6 +87,11 @@
 	"mobile-frontend-editor-visual-editor": "Modifica",
 	"mobile-frontend-editor-wait": "Desant l'edició, espereu si us plau.",
 	"mobile-frontend-enable-images": "Habilita les imatges al lloc web mòbil",
+	"mobile-frontend-errorreport-button-label": "Informa d'un error",
+	"mobile-frontend-errorreport-feedback": "Gràcies pels comentaris!",
+	"mobile-frontend-errorreport-heading": "Informeu d'un error",
+	"mobile-frontend-errorreport-section-title": "Correcció suggerida",
+	"mobile-frontend-errorreport-submit": "Tramet",
 	"mobile-frontend-expand-sections-description": "Expandir sempre totes les seccions quan es navegui a una altra pàgina",
 	"mobile-frontend-expand-sections-status": "Expandir totes les seccions",
 	"mobile-frontend-featured-article": "Article destacat d'avui",
@@ -286,5 +292,6 @@
 	"tag-mobile_edit": "des de mòbil",
 	"tag-mobile_edit-description": "Modificació feta des de mòbil (web o app)",
 	"tag-mobile_web_edit": "via web per a mòbils",
-	"tag-mobile_web_edit-description": "Modificació feta des de lloc web per a mòbils"
+	"tag-mobile_web_edit-description": "Modificació feta des de lloc web per a mòbils",
+	"mobile-frontend-meta-data-issues-categories": "Sobre aquesta categoria"
 }

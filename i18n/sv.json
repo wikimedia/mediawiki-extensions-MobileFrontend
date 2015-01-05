@@ -106,6 +106,15 @@
 	"mobile-frontend-editor-visual-editor": "Redigera",
 	"mobile-frontend-editor-wait": "Sparar redigering, vänta.",
 	"mobile-frontend-enable-images": "Aktivera bilder på mobil webbplats",
+	"mobile-frontend-errorreport-button-label": "Rapportera ett fel",
+	"mobile-frontend-errorreport-error": "Fel: Återkopplingen kunde inte sändas",
+	"mobile-frontend-errorreport-feedback": "Tack för din återkoppling!",
+	"mobile-frontend-errorreport-heading": "Rapportera ett fel",
+	"mobile-frontend-errorreport-instructions": "<p>Detta formulär är endast till för att rapportera fel i Wikipediaartiklar. Rapportera inte saker som saknas.</p><p>Försök själv att åtgärda fel du hittar genom att redigera sidan. Om du inte kan åtgärda felet kan du rapportera det med detta formulär.</p><p>Ange inte ditt telefonnummer eller e-postadress.</p>",
+	"mobile-frontend-errorreport-placeholder": "Skriv felrapporten här.",
+	"mobile-frontend-errorreport-section-title": "Korrigeringsförslag",
+	"mobile-frontend-errorreport-submit": "Skicka",
+	"mobile-frontend-errorreport-summary": "Rapporterar ett fel",
 	"mobile-frontend-expand-sections-description": "Expandera alltid alla avsnitt när du navigerar till en ny sida.",
 	"mobile-frontend-expand-sections-status": "Expandera alla avsnitt",
 	"mobile-frontend-fontchanger-link": "Teckenstorlek",
@@ -365,5 +374,7 @@
 	"apihelp-parse-param-mobileformat": "Returnera tolk-utdata i ett format som passar mobila enheter.",
 	"apihelp-parse-param-noimages": "Inaktivera bilder i mobil utdata.",
 	"apihelp-parse-param-mainpage": "Applicera mobila transformationer av huvudsidan.",
-	"mobile-frontend-donate-button-label": "Donera"
+	"mobile-frontend-donate-button-label": "Donera",
+	"mobile-frontend-wikidata-editor-description-label": "Beskriv ''$1'' med en enda mening:",
+	"mobile-frontend-meta-data-issues-categories": "Om denna kategori"
 }

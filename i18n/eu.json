@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"An13sa",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Subi"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Atal Bat Atzera Joan",
 	"mobile-frontend-clear-search": "Garbitu",
 	"mobile-frontend-copyright": "Testua ondorengo lizentziapean dago <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Atribuzioa/Partekatu-Alike Lizentzia</a>. Informazio gehiagorako <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Erabilpen-baldintzak</a> ikusi. {{SITENAME}} <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, erakundearen irabazi-asmorik gabeko erregistratutako proiektua da.",
+	"mobile-frontend-errorreport-submit": "Bidali",
 	"mobile-frontend-featured-article": "Gaur Nabarmendutako Artikulua",
 	"mobile-frontend-footer-contact": "Kontaktatu",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
