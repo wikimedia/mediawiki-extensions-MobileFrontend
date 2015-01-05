@@ -26,8 +26,7 @@ module.exports = function ( grunt ) {
 		files: {
 			js: 'javascripts/**/*.js',
 			jsTests: 'tests/qunit/**/*.js',
-			jsExternals: 'javascripts/externals/**/*.js',
-			mantleJs: MW_INSTALL_PATH + '/extensions/Mantle/javascripts/**/*.js'
+			jsExternals: 'javascripts/externals/**/*.js'
 		},
 		jshint: {
 			options: {
@@ -100,7 +99,7 @@ module.exports = function ( grunt ) {
 		},
 		jsduck: {
 			main: {
-				src: [ '<%= files.mantleJs %>', '<%= files.js %>', '!<%= files.jsExternals %>' ],
+				src: [ '<%= files.js %>', '!<%= files.jsExternals %>' ],
 				dest: 'docs/js',
 				options: {
 					'builtin-classes': true,

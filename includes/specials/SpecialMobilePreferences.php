@@ -17,7 +17,7 @@ class SpecialMobilePreferences extends SpecialPreferences {
 	);
 
 	/**
-	 * @param {string} $key valid key as specified in validTabs
+	 * @param {String} $key valid key as specified in validTabs
 	 * @return {HtmlForm}
 	 */
 	public function getPreferencesForm( $key ) {

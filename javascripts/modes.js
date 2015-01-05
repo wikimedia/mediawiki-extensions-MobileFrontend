@@ -46,6 +46,6 @@
 				throw new Error( 'Attempt to run module outside declared environment mode ' + mode );
 			}
 		}
-	}, mw.mantle );
+	}, mw.mobileFrontend );
 
 }( jQuery ) );

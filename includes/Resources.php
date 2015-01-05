@@ -150,10 +150,11 @@ $wgMinervaStyleModules = array(
 $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'ext.mantle.hogan',
+			'mediawiki.template',
 		),
 		'scripts' => array(
-			'javascripts/template.js',
+			'javascripts/externals/hogan.js',
+			'javascripts/hogan.js',
 		),
 	),
 
@@ -216,13 +217,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.user',
 			'mediawiki.api',
 			'mobile.redlinks',
-			'ext.mantle.views',
 		),
 		'templates' => array(
 			'icon.hogan' => 'templates/icon.hogan',
 			'Section.hogan' => 'templates/Section.hogan',
 		),
 		'scripts' => array(
+			'javascripts/View.js',
 			'javascripts/Router.js',
 			'javascripts/OverlayManager.js',
 			// FIXME: Remove api code to mobile.ajax
@@ -1412,10 +1413,12 @@ $wgMinervaBootstrapModules = array(
 			'mediawiki.language',
 			'mediawiki.jqueryMsg',
 			'mobile.templates',
-			'ext.mantle.modules',
-			'ext.mantle.oo',
+			'oojs',
 		),
 		'scripts' => array(
+			'javascripts/modules.js',
+			'javascripts/Class.js',
+			'javascripts/eventemitter.js',
 			'javascripts/modes.js',
 			'javascripts/browser.js',
 			'javascripts/mainmenu.js',
