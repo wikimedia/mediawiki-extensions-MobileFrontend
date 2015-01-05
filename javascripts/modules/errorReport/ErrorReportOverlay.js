@@ -17,7 +17,7 @@
 		 * @cfg {String} defaults.placeHolder Placeholder text for error field
 		 * @cfg {String} defaults.instructions Instructions about how to use the form
 		 * @cfg {String} defaults.licenseMsg Licensing notice
-		 * @todo FIXME: move messages to i18n once copy is approved
+		 * FIXME: move messages to i18n once copy is approved
 		 */
 		defaults: {
 			heading: mw.msg( 'mobile-frontend-errorreport-heading' ),

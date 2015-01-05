@@ -14,8 +14,8 @@
 	Skin = View.extend( {
 		/**
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {Page} options.page page the skin is currently rendering
-		 * @cfg {Array} options.tabletModules modules to load when in tablet
+		 * @cfg {Page} defaults.page page the skin is currently rendering
+		 * @cfg {Array} defaults.tabletModules modules to load when in tablet
 		 */
 		defaults: {
 			page: undefined,
