@@ -1,7 +1,8 @@
 ( function ( M, $ ) {
 
 	var SearchOverlay = M.require( 'modules/search/SearchOverlay' ),
-		schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
+		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		browser = M.require( 'browser' );
 
 	/**
@@ -11,7 +12,9 @@
 	 */
 	function openSearchOverlay( ev ) {
 		ev.preventDefault();
-		schema.log( 'UI', 'search' );
+		uiSchema.log( {
+			name: 'search'
+		} );
 		new SearchOverlay( {
 			searchTerm: $( this ).val()
 		} ).show();

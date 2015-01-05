@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
-	var MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' );
+	var MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	M.overlayManager.add( /^\/categories$/, function () {
 		var result = $.Deferred();
@@ -24,7 +25,9 @@
 		$( '.category-button' )
 			.removeClass( 'hidden' )
 			.on( 'click', function () {
-				MobileWebClickTracking.log( 'UI', 'category-button' );
+				uiSchema.log( {
+					name: 'category-button'
+				} );
 			} );
 	}
 

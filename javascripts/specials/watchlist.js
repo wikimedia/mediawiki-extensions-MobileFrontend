@@ -1,7 +1,8 @@
 ( function ( M, $ ) {
 	var watchlist,
 		WatchList = M.require( 'modules/watchlist/WatchList' ),
-		schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
+		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		wlSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebWatchlistClickTracking' ),
 		canonicalName = mw.config.get( 'wgCanonicalSpecialPageName' ),
 		pageName = canonicalName === 'EditWatchlist' || canonicalName === 'Watchlist' ? 'watchlist' : 'diff',
 		subPageName = M.query.watchlistview || 'a-z';
@@ -22,18 +23,22 @@
 				enhance: true
 			} );
 			watchlist.on( 'unwatch', function () {
-				schema.log( 'Watchlist', actionNamePrefix + 'unwatch' );
+				wlSchema.log( {
+					name: actionNamePrefix + 'unwatch'
+				} );
 			} );
 			watchlist.on( 'watch', function () {
-				schema.log( 'Watchlist', actionNamePrefix + 'watch' );
+				wlSchema.log( {
+					name: actionNamePrefix + 'watch'
+				} );
 			} );
 		}
 
 		// Register EventLogging events
-		schema.hijackLink( 'Watchlist', '.button-bar a', actionNamePrefix + 'switch' );
-		schema.hijackLink( 'Watchlist', '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
-		schema.hijackLink( 'Watchlist', '.page-list .title', actionNamePrefix + 'view' );
-		schema.hijackLink( 'Watchlist', '.more', actionNamePrefix + 'more' );
+		wlSchema.hijackLink( '.button-bar a', actionNamePrefix + 'switch' );
+		wlSchema.hijackLink( '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
+		wlSchema.hijackLink( '.page-list .title', actionNamePrefix + 'view' );
+		wlSchema.hijackLink( '.more', actionNamePrefix + 'more' );
 	}
 
 	$( function () {
