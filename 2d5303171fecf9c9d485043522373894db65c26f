@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f1b467d1",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-05T22:28:55Z",
+      "side": 1,
+      "message": "Note: This could probably be made a lot nicer using events map but that can be down in a follow up patch.",
+      "revId": "2d5303171fecf9c9d485043522373894db65c26f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_d198436f",
+        "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-05T22:28:55Z",
+      "side": 1,
+      "message": "no quotes on the arguments please! :)",
+      "revId": "2d5303171fecf9c9d485043522373894db65c26f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
