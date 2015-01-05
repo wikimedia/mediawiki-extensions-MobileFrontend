@@ -16,6 +16,24 @@
       "revId": "86b101fb173cb275021a9f7ec7f13d95ba462594",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_719b7779",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-05T22:24:24Z",
+      "side": 1,
+      "message": "Arghhh, sorry, i forgot to remove the check for VE. I did a little other way, VEOverlay overwrites the skipPreview value of EditorOptions (this.config) to be false everytime :)",
+      "parentUuid": "0e6cb3ef_44d23202",
+      "revId": "86b101fb173cb275021a9f7ec7f13d95ba462594",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
