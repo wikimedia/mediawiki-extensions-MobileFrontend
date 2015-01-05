@@ -339,8 +339,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.editor.common' => $wgMFResourceFileModuleBoilerplate + array(
-		'class' => 'ResourceLoaderParsedMessageModule',
+	'mobile.editor.common' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
@@ -413,8 +412,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.uploads' => $wgMFResourceFileModuleBoilerplate + array(
-		'class' => 'ResourceLoaderParsedMessageModule',
+	'mobile.uploads' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
@@ -504,8 +502,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.search' => $wgMFResourceFileModuleBoilerplate + array(
-		'class' => 'ResourceLoaderParsedMessageModule',
+	'mobile.search' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.pagelist.scripts',
 			'mobile.overlays',
@@ -899,8 +896,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.languages' => $wgMFResourceFileModuleBoilerplate + array(
-		'class' => 'ResourceLoaderParsedMessageModule',
+	'mobile.languages' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
 			'mobile.templates',
@@ -1106,8 +1102,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'mobile.infobox' => $wgMFResourceFileModuleBoilerplate + array(
-		'class' => 'ResourceLoaderParsedMessageModule',
+	'mobile.infobox' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.wikidata.api',
 			'mobile.ajax',

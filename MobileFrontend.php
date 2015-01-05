@@ -94,6 +94,8 @@ $autoloadClasses = array (
 	'MinervaTemplateBeta' => 'skins/MinervaTemplateBeta',
 	'MinervaTemplateAlpha' => 'skins/MinervaTemplateAlpha',
 
+	'MFResourceLoaderParsedMessageModule' => 'modules/MFResourceLoaderParsedMessageModule',
+
 	'SkinMinerva' => 'skins/SkinMinerva',
 	'SkinMinervaBeta' => 'skins/SkinMinervaBeta',
 	'SkinMinervaAlpha' => 'skins/SkinMinervaAlpha',
@@ -241,6 +243,14 @@ $wgMFMobileSpecialPageResourceBoilerplate = $wgMFResourceBoilerplate + array(
 	'targets' => 'mobile',
 	'group' => 'other',
 );
+
+/**
+ * A mobile enabled ResourceLoaderFileModule template which supports parsed messages.
+ */
+$wgMFResourceParsedMessageModuleBoilerplate = $wgMFResourceBoilerplate + array(
+	'class' => 'MFResourceLoaderParsedMessageModule',
+);
+
 require_once __DIR__ . "/includes/Resources.php";
 
 /**

@@ -781,6 +781,7 @@ class MobileFrontendHooks {
 					'DeviceDetectionTest.php',
 					'MobileContextTest.php',
 					'MobileFormatterTest.php',
+					'modules/MFResourceLoaderParsedMessageModuleTest.php',
 					'skins/SkinMinervaTest.php',
 					'skins/SkinMinervaAlphaTest.php',
 					'skins/SkinMinervaBetaTest.php',
