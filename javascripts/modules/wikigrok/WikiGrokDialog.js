@@ -2,7 +2,6 @@
 	var Panel = M.require( 'Panel' ),
 		settings = M.require( 'settings' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
-		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		icons = M.require( 'icons' ),
 		Schema = M.require( 'Schema' ),
 		SchemaMobileWebWikiGrok = M.require( 'loggingSchemas/SchemaMobileWebWikiGrok' ),
@@ -80,9 +79,6 @@
 				userToken: options.userToken,
 				taskToken: this.defaults.taskToken,
 				campaignName: options.campaign.name
-			} );
-			this.apiWikiData = new WikiDataApi( {
-				itemId: options.itemId
 			} );
 			Panel.prototype.initialize.apply( this, arguments );
 
@@ -195,48 +191,40 @@
 				vowels = [ 'a', 'e', 'i', 'o', 'u' ];
 
 			options.claimId = options.campaign.randomClaimId;
+			options.claimLabel = options.campaign.questions[options.claimId];
 
-			self.apiWikiData.getLabels( [ options.claimId ] ).done( function ( labels ) {
-				options.claimLabel = labels[ options.claimId ];
-				if ( options.claimLabel ) {
-					if ( options.campaign.name === 'author' ) {
-						// Hack for English prototype
-						if ( $.inArray( options.claimLabel.charAt( 0 ), vowels ) === -1 ) {
-							options.contentMsg = 'Is ' + options.name + ' a ' + options.claimLabel + '?';
-						} else {
-							options.contentMsg = 'Is ' + options.name + ' an ' + options.claimLabel + '?';
-						}
-					} else if ( options.campaign.name === 'actor' ) {
-						options.contentMsg = 'Is ' + options.name + ' a ' + options.claimLabel + '?';
-					} else if ( options.campaign.name === 'album' ) {
-						options.contentMsg = 'Is this a ' + options.claimLabel + '?';
-					}
-
-					// Re-render with new content for 'Question' step
-					options.beginQuestions = true;
-					options.buttons = [
-						{
-							classes: 'yes inline mw-ui-button mw-ui-progressive',
-							label: 'Yes'
-						},
-						{
-							classes: 'not-sure inline mw-ui-button',
-							label: 'Not Sure'
-						},
-						{
-							classes: 'no inline mw-ui-button mw-ui-progressive',
-							label: 'No'
-						}
-					];
-					options.noticeMsg = 'All submissions are <a class="wg-notice-link" ' +
-						'href="#/wikigrok/about">released freely</a>';
-					self.render( options );
+			if ( options.campaign.name === 'author' ) {
+				// Hack for English prototype
+				if ( $.inArray( options.claimLabel.charAt( 0 ), vowels ) === -1 ) {
+					options.contentMsg = 'Is ' + options.name + ' a ' + options.claimLabel + '?';
 				} else {
-					self.handleError( 'no-impression-cannot-fetch-labels' );
+					options.contentMsg = 'Is ' + options.name + ' an ' + options.claimLabel + '?';
 				}
-			} ).fail( function () {
-				self.handleError( 'no-impression-cannot-fetch-labels' );
-			} );
+			} else if ( options.campaign.name === 'actor' ) {
+				options.contentMsg = 'Is ' + options.name + ' a ' + options.claimLabel + '?';
+			} else if ( options.campaign.name === 'album' ) {
+				options.contentMsg = 'Is this a ' + options.claimLabel + '?';
+			}
+
+			// Re-render with new content for 'Question' step
+			options.beginQuestions = true;
+			options.buttons = [
+				{
+					classes: 'yes inline mw-ui-button mw-ui-progressive',
+					label: 'Yes'
+				},
+				{
+					classes: 'not-sure inline mw-ui-button',
+					label: 'Not Sure'
+				},
+				{
+					classes: 'no inline mw-ui-button mw-ui-progressive',
+					label: 'No'
+				}
+			];
+			options.noticeMsg = 'All submissions are <a class="wg-notice-link" ' +
+				'href="#/wikigrok/about">released freely</a>';
+			self.render( options );
 		},
 
 		/**

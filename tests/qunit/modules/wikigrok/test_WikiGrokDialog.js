@@ -1,7 +1,6 @@
 ( function ( $, M ) {
 
 	var WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' ),
-		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		settings = M.require( 'settings'),
@@ -20,10 +19,6 @@
 				list: ['Q208569', 'Q209939'],
 				name: 'album'
 			}
-		},
-		labels = {
-			Q208569: 'studio album',
-			Q209939: 'live album'
 		},
 		pageTitle = M.getCurrentPage().title || 'Some guy';
 
@@ -48,8 +43,6 @@
 
 			this.sandbox.stub( mw.config, 'get').withArgs( 'wgWikiGrokCampaigns' )
 				.returns( campaigns );
-			this.sandbox.stub( WikiDataApi.prototype, 'getLabels' )
-				.returns( $.Deferred().resolve( labels ) );
 
 			this.$el = $( '<div id="test">' );
 			this.wk = new WikiGrokDialog( {

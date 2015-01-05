@@ -1,7 +1,6 @@
 ( function ( $, M ) {
 
 	var WikiGrokDialogB = M.require( 'modules/wikigrok/WikiGrokDialogB' ),
-		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		campaigns = {
@@ -10,7 +9,10 @@
 				questions: {
 					Q10798782: "television actor",
 					Q10800557: "film actor"
-				}
+				},
+				name: "actor",
+				propertyId: "P106",
+				propertyName: "occupation"
 			}
 		},
 		suggestions = {
@@ -19,11 +21,6 @@
 				list: ['Q10798782', 'Q10800557'],
 				name: 'actor'
 			}
-		},
-		labels = {
-			Q10798782: 'television actor',
-			Q10800557: 'film actor'
-
 		},
 		pageTitle = 'Some guy';
 
@@ -52,8 +49,6 @@
 
 			this.sandbox.stub( mw.config, 'get').withArgs( 'wgWikiGrokCampaigns' )
 				.returns( campaigns );
-			this.sandbox.stub( WikiDataApi.prototype, 'getLabels' )
-				.returns( $.Deferred().resolve( labels ) );
 			this.sandbox.stub( WikiGrokResponseApi.prototype, 'recordClaims' )
 				.returns( $.Deferred().resolve() );
 
@@ -96,7 +91,8 @@
 			var tags = this.wk.$el.find( '.tags .ui-tag-button' ),
 				labels = tags.find( 'label' );
 			assert.strictEqual( tags.length, 2, 'Correct number of tags' );
-			assert.strictEqual( labels.first().text(), 'Profession', 'Correct label text' );
+			assert.strictEqual( labels.first().text(),
+				campaigns.actor.propertyName, 'Correct label text' );
 			QUnit.start();
 		}, this ), 0 );
 	} );
@@ -133,8 +129,6 @@
 
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgWikiGrokCampaigns' )
 				.returns( campaigns );
-			this.sandbox.stub( WikiDataApi.prototype, 'getLabels' )
-				.returns( $.Deferred().reject() );
 			this.sandbox.stub( WikiGrokResponseApi.prototype, 'recordClaims' )
 				.returns( $.Deferred().reject() );
 
@@ -158,6 +152,8 @@
 		QUnit.start();
 		// After loading
 		setTimeout( $.proxy( function () {
+			// save should thrown an error because of recordClaims
+			this.wk.$el.find( '.save' ).trigger( 'click' );
 			assert.ok( spy.called, 'Error is handled.' );
 		}, this ), 0 );
 	} );
