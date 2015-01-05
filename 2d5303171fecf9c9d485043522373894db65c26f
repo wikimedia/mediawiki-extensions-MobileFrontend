@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0e6cb3ef_715a9786",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-05T22:45:43Z",
+      "side": 1,
+      "message": "let me add a fixme for that, just that we don\u0027t forget it :)",
+      "parentUuid": "0e6cb3ef_f1b467d1",
+      "revId": "2d5303171fecf9c9d485043522373894db65c26f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e6cb3ef_d198436f",
         "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
         "patchSetId": 21
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-05T22:28:55Z",
       "side": 1,
       "message": "no quotes on the arguments please! :)",
+      "revId": "2d5303171fecf9c9d485043522373894db65c26f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f118e7d9",
+        "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-05T22:45:43Z",
+      "side": 1,
+      "message": "oops :)",
+      "parentUuid": "0e6cb3ef_d198436f",
       "revId": "2d5303171fecf9c9d485043522373894db65c26f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
