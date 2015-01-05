@@ -52,6 +52,24 @@
       "revId": "06dbee931f2aa87803750244f0496d06a386aeb7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b99edb08",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-05T18:50:44Z",
+      "side": 1,
+      "message": "\u003e Maybe VisualEditor should extend the config to enable skipPreview always?\n\nThat sounds like the best way at the moment :)",
+      "parentUuid": "0e6cb3ef_399e4b67",
+      "revId": "06dbee931f2aa87803750244f0496d06a386aeb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
