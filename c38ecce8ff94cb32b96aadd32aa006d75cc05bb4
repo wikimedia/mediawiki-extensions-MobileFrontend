@@ -16,6 +16,23 @@
       "revId": "c38ecce8ff94cb32b96aadd32aa006d75cc05bb4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_be832156",
+        "filename": "javascripts/modules/nearby/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-05T16:35:00Z",
+      "side": 1,
+      "message": "the index/offset isn\u0027t optional, so the link on article pages doesn\u0027t work (e.g. a page \"Berlin\" uses hash #/nearby/page/Berlin -\u003e no offset, no route match).",
+      "revId": "c38ecce8ff94cb32b96aadd32aa006d75cc05bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
