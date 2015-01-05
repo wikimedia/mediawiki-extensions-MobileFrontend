@@ -1,7 +1,8 @@
 // Determine whether or not it is appropriate to load WikiGrok, and if so, load it.
 ( function ( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
-		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
+		Schema = M.require( 'Schema' ),
+		errorSchema = new Schema( {}, 'MobileWebWikiGrokError' ),
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
 		permittedOnThisDevice = mw.config.get( 'wgMFEnableWikiGrokOnAllDevices' ) || !browser.isWideScreen(),

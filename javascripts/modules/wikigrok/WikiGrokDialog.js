@@ -3,9 +3,11 @@
 		settings = M.require( 'settings' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
-		schema = M.require( 'loggingSchemas/mobileWebWikiGrok' ),
-		errorSchema = M.require( 'loggingSchemas/mobileWebWikiGrokError' ),
 		icons = M.require( 'icons' ),
+		Schema = M.require( 'Schema' ),
+		SchemaMobileWebWikiGrok = M.require( 'loggingSchemas/SchemaMobileWebWikiGrok' ),
+		schema = new SchemaMobileWebWikiGrok(),
+		errorSchema = new Schema( {}, 'MobileWebWikiGrokError' ),
 		WikiGrokDialog,
 		timer = null,
 		$window = $( window );
