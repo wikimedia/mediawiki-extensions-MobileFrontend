@@ -61,7 +61,7 @@
 	 *
 	 * @method
 	 * @static
-	 * @return {string}
+	 * @return {String}
 	 */
 	Schema.getSessionId = function () {
 		var sessionId;
