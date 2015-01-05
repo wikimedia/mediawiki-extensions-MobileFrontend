@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b0fd906b",
+        "filename": "javascripts/modules/nearby/NearbyOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-05T15:42:23Z",
+      "side": 1,
+      "message": "Is this necessary?",
+      "revId": "c38ecce8ff94cb32b96aadd32aa006d75cc05bb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
