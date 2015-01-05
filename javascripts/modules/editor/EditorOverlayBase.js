@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		browser = M.require( 'browser' ),
-		schema = M.require( 'loggingSchemas/mobileWebEditing' ),
+		SchemaMobileWebEditing = M.require( 'loggingSchemas/SchemaMobileWebEditing' ),
 		Icon = M.require( 'Icon' ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
@@ -108,7 +108,7 @@
 			if ( errorText ) {
 				data.errorText = errorText;
 			}
-			return schema.log( data );
+			return this.schema.log( data );
 		},
 		/**
 		 * Reveals a spinner at the top of the overlay.
@@ -207,6 +207,7 @@
 			this.isNewEditor = options.isNewEditor;
 			this.sectionId = options.sectionId;
 			this.funnel = options.funnel;
+			this.schema = new SchemaMobileWebEditing();
 
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
