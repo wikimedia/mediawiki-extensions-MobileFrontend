@@ -16,6 +16,24 @@
       "revId": "192935f375f2054985467a23f151291d57637ce1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f43535a4",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-05T23:45:24Z",
+      "side": 1,
+      "message": "Hmm, looks good, let me try it out :)",
+      "parentUuid": "0e6cb3ef_1f2247fc",
+      "revId": "192935f375f2054985467a23f151291d57637ce1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
