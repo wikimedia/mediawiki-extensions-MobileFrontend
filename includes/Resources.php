@@ -1054,12 +1054,20 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.wikidata.api' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/modules/wikigrok/WikiDataApi.js'
+		),
+	),
+
 	'mobile.wikigrok.api' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 		),
 		'scripts' => array(
-			'javascripts/modules/wikigrok/WikiDataApi.js',
 			'javascripts/modules/wikigrok/WikiGrokResponseApi.js',
 		),
 	),
@@ -1098,7 +1106,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.infobox' => $wgMFResourceFileModuleBoilerplate + array(
 		'class' => 'ResourceLoaderParsedMessageModule',
 		'dependencies' => array(
-			'mobile.wikigrok.api',
+			'mobile.wikidata.api',
 			'mobile.ajax',
 			'mobile.hexmd5',
 		),
@@ -1122,7 +1130,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.bannerImage' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.wikigrok.api',
+			'mobile.wikidata.api',
 			'mobile.ajax',
 			'mobile.hexmd5',
 		),

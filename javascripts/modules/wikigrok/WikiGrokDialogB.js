@@ -40,12 +40,10 @@
 		_renderSuggestions: function ( campaign ) {
 			var suggestions,
 				allSuggestions,
-				self = this,
-				i18n = {
-					actor: 'Profession',
-					author: 'Profession',
-					album: 'Album type'
-				};
+				$next,
+				$none,
+				labels,
+				self = this;
 
 			// campaign.questions keys are WikiData item IDs
 			allSuggestions =  $.map( campaign.questions, function ( value, key ) {
@@ -56,59 +54,59 @@
 
 			// Now work out the labels if we have some suggestions
 			if ( suggestions.length ) {
-				self.apiWikiData.getLabels( suggestions ).done( function ( labels ) {
-					var $next = self.$( '.footer .next' ),
-						$none = self.$( '.footer .none' );
-
-					// Hard-code the "Next" button width to match the "None" button width.
-					// That way, when the buttons are switched, the width stays the same.
-					// This depends on the assumption that the "Next" button text is
-					// always shorter than the "None" button text.
-					$next.css( 'width', $none.outerWidth() );
-
-					self.$( '.tags' ).show();
-					$.each( labels, function ( itemId, label ) {
-						var $tag, tagHtml, templateData;
-
-						templateData = {
-							id: 'tag-' + itemId,
-							propName: campaign.propertyName,
-							propId: campaign.propertyId,
-							itemId: itemId,
-							readable: label,
-							campaignText: i18n[campaign.name],
-							tagText: label
-						};
-
-						if ( label ) {
-							tagHtml = mw.template.get( 'mobile.wikigrok.dialog.b', 'tagButton.hogan' )
-								.render( templateData );
-
-							$tag = $( tagHtml )
-								.on( 'click', function () {
-									// Activate the tag
-									$( this ).toggleClass( 'mw-ui-progressive' );
-									// If there are any tags active, switch submit button from
-									// "None" to "Next".
-									if ( self.$( '.tags .ui-tag-button.mw-ui-progressive' ).length ) {
-										$none.hide();
-										$next.show();
-									} else {
-										$next.hide();
-										$none.show();
-									}
-								} ).appendTo( self.$( '.tags' ) );
-						}
-					} );
-
-					// only show the panel when we have created at least one button
-					if ( self.$( '.ui-tag-button' ).length ) {
-						self.$( '.spinner' ).hide();
-						self.show();
-					}
-				} ).fail( function () {
-					self.handleError( 'no-impression-cannot-fetch-labels' );
+				$next = self.$( '.footer .next' );
+				$none = self.$( '.footer .none' );
+				labels = $.map( suggestions, function ( suggestion ) {
+					return campaign.questions[suggestion];
 				} );
+
+				// Hard-code the "Next" button width to match the "None" button width.
+				// That way, when the buttons are switched, the width stays the same.
+				// This depends on the assumption that the "Next" button text is
+				// always shorter than the "None" button text.
+				$next.css( 'width', $none.outerWidth() );
+
+				self.$( '.tags' ).show();
+				$.each( labels, function ( itemId, label ) {
+					var $tag, tagHtml, templateData;
+
+					templateData = {
+						id: 'tag-' + itemId,
+						propName: campaign.propertyName,
+						propId: campaign.propertyId,
+						itemId: itemId,
+						readable: label,
+						// replace 'instance of' with 'type'
+						campaignText: ( campaign.propertyName === 'instance of' ) ? 'type' : campaign.propertyName,
+						tagText: label
+					};
+
+					if ( label ) {
+						tagHtml = mw.template.get( 'mobile.wikigrok.dialog.b', 'tagButton.hogan' )
+							.render( templateData );
+
+						$tag = $( tagHtml )
+							.on( 'click', function () {
+								// Activate the tag
+								$( this ).toggleClass( 'mw-ui-progressive' );
+								// If there are any tags active, switch submit button from
+								// "None" to "Next".
+								if ( self.$( '.tags .ui-tag-button.mw-ui-progressive' ).length ) {
+									$none.hide();
+									$next.show();
+								} else {
+									$next.hide();
+									$none.show();
+								}
+							} ).appendTo( self.$( '.tags' ) );
+					}
+				} );
+
+				// only show the panel when we have created at least one button
+				if ( self.$( '.ui-tag-button' ).length ) {
+					self.$( '.spinner' ).hide();
+					self.show();
+				}
 			}
 		},
 		/**
