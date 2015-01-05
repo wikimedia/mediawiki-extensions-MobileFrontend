@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var WikiGrokDialogB = M.require( 'modules/wikigrok/WikiGrokDialogB' ),
+		wikiGrokRoulette = M.require( 'modules/wikiGrokRoulette/wikiGrokRoulette' ),
 		Drawer = M.require( 'Drawer' ),
 		browser = M.require( 'browser' ),
 		WikiGrokDialogC;
@@ -25,7 +26,6 @@
 		 */
 		postRecordClaims: function () {
 			var self = this,
-				wikiGrokMenuItem = $( '#mw-mf-page-left' ).find( '.wikigrok-roulette' ),
 				badgeLevels = [ 1, 3, 5, 10, 20, 50, 100 ],
 				showNext = true,
 				responseText,
@@ -34,44 +34,40 @@
 			self.$( '.wg-content, .wg-thanks-content, .wg-link, .footer' ).hide();
 			self.$( '.spinner' ).show();
 
-			if ( wikiGrokMenuItem.length ) {
-				// Count responses if local storage supported
-				if ( browser.supportsLocalStorage ) {
-					responseCount = localStorage.getItem( 'wikiGrokResponseCount' );
-					// Increment claim response count, null if no responses
-					if ( responseCount !== null ) {
-						responseCount++;
-					} else {
-						responseCount = 1;
-					}
-					// Save response count
-					localStorage.setItem( 'wikiGrokResponseCount', responseCount );
+			// Count responses if local storage supported
+			if ( browser.supportsLocalStorage ) {
+				responseCount = localStorage.getItem( 'wikiGrokResponseCount' );
+				// Increment claim response count, null if no responses
+				if ( responseCount !== null ) {
+					responseCount++;
+				} else {
+					responseCount = 1;
+				}
+				// Save response count
+				localStorage.setItem( 'wikiGrokResponseCount', responseCount );
 
-					// Add badge if responseCount is at a badge level
-					if ( $.inArray( responseCount, badgeLevels ) !== -1 ) {
-						showNext = false;
-						responseText = 'Good going! <br> You just completed ' + responseCount + ' task';
-						if ( responseCount === 1 ) {
-							responseText += '.';
-						} else {
-							responseText += 's.';
-						}
-						self.$( '.spinner' ).hide();
-						self.$( '.wg-link' ).empty().addClass( 'wg-badge-' + responseCount ).show();
-						self.$( '.wg-content' )
-							.html( responseText )
-							.show();
-						// let the user enjoy the badge for 2 seconds
-						setTimeout( function () {
-							wikiGrokMenuItem.trigger( 'click' );
-						}, 2000 );
+				// Add badge if responseCount is at a badge level
+				if ( $.inArray( responseCount, badgeLevels ) !== -1 ) {
+					showNext = false;
+					responseText = 'Good going! <br> You just completed ' + responseCount + ' task';
+					if ( responseCount === 1 ) {
+						responseText += '.';
+					} else {
+						responseText += 's.';
 					}
+					self.$( '.spinner' ).hide();
+					self.$( '.wg-link' ).empty().addClass( 'wg-badge-' + responseCount ).show();
+					self.$( '.wg-content' )
+						.html( responseText )
+						.show();
+					// let the user enjoy the badge for 2 seconds
+					setTimeout( function () {
+						wikiGrokRoulette.navigateToNextPage();
+					}, 2000 );
 				}
-				if ( showNext ) {
-					wikiGrokMenuItem.trigger( 'click' );
-				}
-			} else {
-				WikiGrokDialogB.prototype.postRecordClaims.apply( this, arguments );
+			}
+			if ( showNext ) {
+				wikiGrokRoulette.navigateToNextPage();
 			}
 		},
 
@@ -88,6 +84,9 @@
 
 			self.askWikidataQuestion( options );
 			this.show();
+
+			// Silently fetch the next page
+			wikiGrokRoulette.getNextPage();
 		}
 	} );
 

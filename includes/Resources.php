@@ -1021,6 +1021,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/wikiGrokRoulette/ErrorDrawer.js',
+			'javascripts/modules/wikiGrokRoulette/wikiGrokRoulette.js',
 			'javascripts/modules/wikiGrokRoulette/init.js',
 		),
 		'templates' => array(
@@ -1030,6 +1031,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.wikigrok.dialog.c' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'mobile.wikigrok.roulette',
 			'mobile.wikigrok.dialog.b',
 		),
 		'scripts' => array(
