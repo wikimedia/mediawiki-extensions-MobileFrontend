@@ -55,6 +55,7 @@ $autoloadClasses = array (
 	'PredefinedDeviceProperties' => 'DeviceDetection',
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlDeviceProperties' => 'DeviceDetection',
+	'MobileCollection' => 'MobileCollection',
 	'MobileContext' => 'MobileContext',
 	'MobileFormatter' => 'MobileFormatter',
 	'MobilePage' => 'MobilePage',
