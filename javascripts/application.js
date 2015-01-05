@@ -213,7 +213,8 @@
 			isMainPage: mw.config.get( 'wgIsMainPage' ),
 			isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
 			sections: pageApi.getSectionsFromHTML( $( '#content' ) ),
-			id: mw.config.get( 'wgArticleId' )
+			id: mw.config.get( 'wgArticleId' ),
+			namespaceNumber: mw.config.get( 'wgNamespaceNumber' )
 		} );
 		return currentPage;
 	}
