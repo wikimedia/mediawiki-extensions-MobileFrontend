@@ -52,6 +52,24 @@
       "revId": "a9dffdf606e9f7c9ddd0cd6992f410aefd8b4d62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_b3a2f8a2",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-06T21:12:42Z",
+      "side": 1,
+      "message": "$skin \u003d $this-\u003egetSkin();\n$title \u003d $skin\u003egetTitle();\n...\n$skin-\u003egetMFConfig()-\u003eget( \u0027MFNearby\u0027 )",
+      "parentUuid": "ee703fc5_c2a2383b",
+      "revId": "a9dffdf606e9f7c9ddd0cd6992f410aefd8b4d62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
