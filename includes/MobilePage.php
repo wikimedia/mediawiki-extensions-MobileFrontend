@@ -75,15 +75,6 @@ class MobilePage {
 	}
 
 	/**
-	 * Set the content of an item of a pagelist
-	 *
-	 * @param string $html Content for pagelist item
-	 */
-	public function setPageListItemContent( $html ) {
-		$this->content = $html;
-	}
-
-	/**
 	 * Get a medium sized thumbnail in div container.
 	 *
 	 * @param boolean $useBackgroundImage Whether the thumbnail should have a background image
