@@ -1302,9 +1302,7 @@ $wgMobileSpecialPageModules = array(
 	),
 
 	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'less/specials/userprofile.less',
-		),
+		// This is NOT empty see $wgResourceModuleSkinStyles.
 	),
 
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
@@ -1505,4 +1503,7 @@ $wgResourceModules = array_merge( $wgResourceModules, $wgMinervaBootstrapModules
 // Module customizations
 $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
 	'mediawiki.skinning.content.parsoid' => array(),
+	'mobile.special.userprofile.styles' => array(
+		'less/specials/userprofile.less',
+	),
 );
