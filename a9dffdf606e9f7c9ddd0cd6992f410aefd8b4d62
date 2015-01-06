@@ -34,6 +34,24 @@
       "revId": "a9dffdf606e9f7c9ddd0cd6992f410aefd8b4d62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_c2a2383b",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-06T18:04:02Z",
+      "side": 1,
+      "message": "@Legoktm:\nBecause MinervaTemplate is used only from SkinMinerva (like a real Skin), data[\u0027skin\u0027] should always be an instance of SkinMinerva, so that should be ok. If there are things i missed, i\u0027m happy to create a new function here (getMFConfig) and check if getSkin() returns an instance of SkinMinerva before use it :)\n\n@Jdlrobson:\ncaching getSkin? It\u0027s just a wrapper for data[\u0027skin\u0027], so there should no disadvantage of using getSkin()? :)",
+      "parentUuid": "ee703fc5_6201ecb8",
+      "revId": "a9dffdf606e9f7c9ddd0cd6992f410aefd8b4d62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
