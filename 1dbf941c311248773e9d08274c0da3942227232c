@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f4c5350e",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-06T00:50:26Z",
+      "side": 1,
+      "message": "I think you should debounce or throttle the above two functions.",
+      "revId": "1dbf941c311248773e9d08274c0da3942227232c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
