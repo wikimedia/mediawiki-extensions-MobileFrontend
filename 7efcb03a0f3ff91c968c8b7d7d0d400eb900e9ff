@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_dc99c1c9",
+        "filename": "javascripts/modules/wikiGrokRoulette/WikiGrokRoulette.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-06T11:59:04Z",
+      "side": 1,
+      "message": "This condition should be in #getNextPage (if nextPage is set, then immediately resolve a promise with the nextPage object). Think of the nextPage object as an internal/hidden cache.",
+      "revId": "7efcb03a0f3ff91c968c8b7d7d0d400eb900e9ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_7cf2f504",
+        "filename": "javascripts/modules/wikiGrokRoulette/WikiGrokRoulette.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-06T11:59:04Z",
+      "side": 1,
+      "message": "Why doesn\u0027t the navigate function operate on page objects? That way, the navigate function would be the only function that tells the browser what to do – the M.getCurrentPage().title \u003d\u003d\u003d page.title condition should be moved into it.",
+      "revId": "7efcb03a0f3ff91c968c8b7d7d0d400eb900e9ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
