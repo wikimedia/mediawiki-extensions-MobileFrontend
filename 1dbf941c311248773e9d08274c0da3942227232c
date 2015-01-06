@@ -16,6 +16,23 @@
       "revId": "1dbf941c311248773e9d08274c0da3942227232c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_07df5941",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-01-06T07:04:25Z",
+      "side": 1,
+      "message": "I believe in \u003c IE9 the input event is not supported.  you could bind to \u0027input change\u0027.  Something to note for later if we port to desktop.",
+      "revId": "1dbf941c311248773e9d08274c0da3942227232c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
