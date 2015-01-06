@@ -114,12 +114,12 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 
 		if ( $internalBanner || $preBodyText ) {
 
-			if ( !$this->isSpecialPage ) {
-				$this->renderPageActions( $data );
-			}
 			?>
 			<div class="pre-content">
 				<?php
+				if ( !$this->isSpecialPage ) {
+					$this->renderPageActions( $data );
+				}
 				echo $preBodyText;
 				// FIXME: Temporary solution until we have design
 				if ( isset( $data['_old_revision_warning'] ) ) {
