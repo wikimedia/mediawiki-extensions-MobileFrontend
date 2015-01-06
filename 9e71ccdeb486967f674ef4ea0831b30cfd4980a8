@@ -34,6 +34,24 @@
       "revId": "9e71ccdeb486967f674ef4ea0831b30cfd4980a8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_225e947c",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 876,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-06T17:49:07Z",
+      "side": 1,
+      "message": "Thanks both. I misread the configuration documentation and blanket removed the elseif block without thinking.\n\nFlorianschmidtwelzow: see the follow-up commit, which is now redundant.",
+      "parentUuid": "ee703fc5_627d6ce4",
+      "revId": "9e71ccdeb486967f674ef4ea0831b30cfd4980a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
