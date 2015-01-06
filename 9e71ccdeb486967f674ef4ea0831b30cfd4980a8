@@ -16,6 +16,24 @@
       "revId": "9e71ccdeb486967f674ef4ea0831b30cfd4980a8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_627d6ce4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 876,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-06T17:45:21Z",
+      "side": 1,
+      "message": "Like Jon mentioned, this breaks the functionality for third parties to enable redlinks in stable mode, so i would be happy, if we keep this configuration variables here.\n\nFor the code itself: wgMFShowRedLinks and friends is only used here, so if you remove it here, you should remove it in includes/config/Editing.php, too, to not mess up the config files :)",
+      "parentUuid": "ee703fc5_02f11092",
+      "revId": "9e71ccdeb486967f674ef4ea0831b30cfd4980a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
