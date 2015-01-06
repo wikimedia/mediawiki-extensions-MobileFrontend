@@ -372,8 +372,9 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function testIsLocalUrl() {
 		global $wgServer;
-		$this->assertTrue( MobileContext::isLocalUrl( $wgServer ) );
-		$this->assertFalse( MobileContext::isLocalUrl( 'http://www.google.com' ) );
+		$context = $this->makeContext();
+		$this->assertTrue( $context->isLocalUrl( $wgServer ) );
+		$this->assertFalse( $context->isLocalUrl( 'http://www.google.com' ) );
 	}
 
 	/**
