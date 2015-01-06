@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_6201ecb8",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-01-06T16:51:12Z",
+      "side": 1,
+      "message": "This creates (or maybe it already exists?) an assumption that getSkin() will return an instance of SkinMinerva. Is that ok?",
+      "revId": "a9dffdf606e9f7c9ddd0cd6992f410aefd8b4d62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
