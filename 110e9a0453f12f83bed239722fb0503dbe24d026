@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_aeedabb6",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-06T21:59:02Z",
+      "side": 1,
+      "message": "i\u0027m a little bit confused :/ Should this special page \"Collections\" or \"MobileCollections\"? Here and in the alias file you use \"Collections\" (which would result in \"Special:Collections\", but in your Specialpage code you give it the name \"MobileCollections\", which results in \"Special:MobileCollections\" (and there will be no aliases available, which produced notice errors). So i suggest to use Collections _or_ MobileCollections :)",
+      "revId": "110e9a0453f12f83bed239722fb0503dbe24d026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_ceea5f9c",
+        "filename": "includes/specials/SpecialMobileCollections.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-06T21:59:02Z",
+      "side": 1,
+      "message": "$vars is not defined",
+      "revId": "110e9a0453f12f83bed239722fb0503dbe24d026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
