@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_e242dcb1",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-06T17:42:36Z",
+      "side": 1,
+      "message": "Actually wait. This shouldn\u0027t be like this.\nSkinMinervaBeta should be overriding isTalkAllowed\n\nSkinMinerva should never have to call isBetaGroupMember() or isAlphaGroupMember();",
+      "revId": "35e89529fe21e0d067916b71cd166861017dde0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
