@@ -33,6 +33,42 @@
       "revId": "1dbf941c311248773e9d08274c0da3942227232c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_c22f989b",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-06T18:11:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_f4c5350e",
+      "revId": "1dbf941c311248773e9d08274c0da3942227232c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_621c8c7d",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-06T18:11:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e6cb3ef_07df5941",
+      "revId": "1dbf941c311248773e9d08274c0da3942227232c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
