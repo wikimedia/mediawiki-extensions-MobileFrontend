@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var WikiGrokDialog = M.require( 'modules/wikigrok/WikiGrokDialog' ),
+		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		WikiGrokDialogB;
 
 	/**
@@ -34,21 +35,16 @@
 		 * Fetches suggestions' labels from the server.
 		 * Shows panel to user when there are suggestions.
 		 * @method
-		 * @param {Object} campaign definition
 		 * @private
 		 */
-		_renderSuggestions: function ( campaign ) {
+		_renderSuggestions: function () {
 			var suggestions,
 				allSuggestions,
 				$next,
 				$none,
-				labels,
 				self = this;
 
-			// campaign.questions keys are WikiData item IDs
-			allSuggestions =  $.map( campaign.questions, function ( value, key ) {
-				return key;
-			} );
+			allSuggestions = wikiGrokCampaigns.getAllSuggestions();
 			// randomly pick 4 suggestions
 			suggestions = self.chooseRandomItemsFromArray( allSuggestions, 4 );
 
@@ -56,9 +52,6 @@
 			if ( suggestions.length ) {
 				$next = self.$( '.footer .next' );
 				$none = self.$( '.footer .none' );
-				labels = $.map( suggestions, function ( suggestion ) {
-					return campaign.questions[suggestion];
-				} );
 
 				// Hard-code the "Next" button width to match the "None" button width.
 				// That way, when the buttons are switched, the width stays the same.
@@ -67,21 +60,22 @@
 				$next.css( 'width', $none.outerWidth() );
 
 				self.$( '.tags' ).show();
-				$.each( labels, function ( itemId, label ) {
+				$.each( suggestions, function ( i, suggestion ) {
 					var $tag, tagHtml, templateData;
 
 					templateData = {
-						id: 'tag-' + itemId,
-						propName: campaign.propertyName,
-						propId: campaign.propertyId,
-						itemId: itemId,
-						readable: label,
+						id: 'tag-' + suggestion.id,
+						propName: suggestion.campaign.propertyName,
+						propId: suggestion.campaign.propertyId,
+						itemId: suggestion.id,
+						readable: suggestion.label,
 						// replace 'instance of' with 'type'
-						campaignText: ( campaign.propertyName === 'instance of' ) ? 'type' : campaign.propertyName,
-						tagText: label
+						campaignText: ( suggestion.campaign.propertyName === 'instance of' ) ?
+							'type' : suggestion.campaign.propertyName,
+						tagText: suggestion.label
 					};
 
-					if ( label ) {
+					if ( suggestion.label ) {
 						tagHtml = mw.template.get( 'mobile.wikigrok.dialog.b', 'tagButton.hogan' )
 							.render( templateData );
 
