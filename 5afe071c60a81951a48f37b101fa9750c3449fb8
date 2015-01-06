@@ -16,6 +16,24 @@
       "revId": "5afe071c60a81951a48f37b101fa9750c3449fb8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_e22c1792",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-06T22:46:18Z",
+      "side": 1,
+      "message": "Shouldn\u0027t make any difference for animations and touch-events, but maybe PositionFixedEmulation. What do you think Jon? Move it to preRender?",
+      "parentUuid": "ee703fc5_ce06df23",
+      "revId": "5afe071c60a81951a48f37b101fa9750c3449fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
