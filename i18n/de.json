@@ -111,7 +111,7 @@
 	"mobile-frontend-errorreport-error": "Fehler: Die Rückmeldung konnte nicht gespeichert werden.",
 	"mobile-frontend-errorreport-feedback": "Danke für deine Rückmeldung!",
 	"mobile-frontend-errorreport-heading": "Einen Fehler berichten",
-	"mobile-frontend-errorreport-instructions": "<p>Dieses Formular ist nur für Fehlerberichte in Wikipedia-Artikeln gedacht. Bitte berichte keine fehlenden Objekte.</p><p>Falls du einen Fehler gefunden hast, versuche bitte, ihn durch das Bearbeiten der Seite selbst zu beheben. Falls du den Fehler nicht beheben kannst, berichte ihn durch das folgende Formular.</p><p>Hinterlasse keine Telefonnummern oder E-Mail-Adressen.</p>",
+	"mobile-frontend-errorreport-instructions": "<p>Dieses Formular ist nur für Fehlerberichte in Wikipedia-Artikeln gedacht. Bitte berichte keine fehlenden Informationen.</p><p>Falls du einen Fehler gefunden hast, versuche bitte, ihn durch das Bearbeiten der Seite selbst zu beheben. Falls du den Fehler nicht beheben kannst, berichte ihn durch das folgende Formular.</p><p>Hinterlasse keine Telefonnummern oder E-Mail-Adressen.</p>",
 	"mobile-frontend-errorreport-placeholder": "Fehlerbericht hier eingeben.",
 	"mobile-frontend-errorreport-section-title": "Vorgeschlagene Korrektur",
 	"mobile-frontend-errorreport-submit": "Übermitteln",

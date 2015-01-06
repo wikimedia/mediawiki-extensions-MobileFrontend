@@ -98,7 +98,7 @@
 	"mobile-frontend-photo-upload": "Дадаць выяву на гэтую старонку",
 	"mobile-frontend-photo-upload-anon": "Калі ласка, увайдзіце, каб дадаць выяву на гэтую старонку.",
 	"mobile-frontend-photo-upload-comment": "Дададзеная выява на старонку",
-	"mobile-frontend-photo-upload-error": "Пры запампоўцы выявы адбылася памылка. Паспрабуйце іншую.",
+	"mobile-frontend-photo-upload-error": "Памылка, паспрабуйце яшчэ раз.",
 	"mobile-frontend-photo-upload-generic": "Загрузіць выяву",
 	"mobile-frontend-photo-upload-unavailable": "Ваш браўзэр не падтрымлівае запампоўку выяваў.",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ загрузак",
