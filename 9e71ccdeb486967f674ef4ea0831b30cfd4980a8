@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_02f11092",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 876,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-06T17:40:19Z",
+      "side": 1,
+      "message": "Mmm.. SkinMinerva should never have to access isAlphaGroupMember(). SkinMinervaAlpha should be overriding this.\n\nAlso this will break meaning of $wgMFShowRedLinks and $wgMFShowRedLinksAnon - we should update the documentation of these variables but there should be a way for 3rd parties to override this setting.",
+      "revId": "9e71ccdeb486967f674ef4ea0831b30cfd4980a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
