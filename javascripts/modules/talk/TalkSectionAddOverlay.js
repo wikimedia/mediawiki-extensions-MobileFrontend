@@ -60,8 +60,17 @@
 		postRender: function ( options ) {
 			var self = this;
 			Overlay.prototype.postRender.call( this, options );
-			this.confirm = this.$( 'button.confirm-save' );
-			this.confirm.on( 'click', function () {
+			this.$confirm = this.$( 'button.confirm-save' );
+			// FIXME: All .on() actions should be moved to use the events map
+			this.$subject = this.$( 'input' );
+			this.$ta = this.$( 'textarea' );
+			this.$( 'input, textarea' ).on( 'input change', function () {
+				clearTimeout( self.timer );
+				self.timer = setTimeout( function () {
+					self._onInput();
+				}, 250 );
+			} );
+			this.$confirm.on( 'click', function () {
 				if ( !$( this ).prop( 'disabled' ) ) {
 					self.save().done( function ( status ) {
 						if ( status === 'ok' ) {
@@ -73,7 +82,7 @@
 					} ).fail( function ( error ) {
 						var editMsg = 'mobile-frontend-talk-topic-error';
 
-						self.confirm.prop( 'disabled', false );
+						self.$confirm.prop( 'disabled', false );
 						switch ( error.details ) {
 							case 'protectedpage':
 								editMsg = 'mobile-frontend-talk-topic-error-protected';
@@ -111,54 +120,54 @@
 			}
 		},
 		/**
+		 * Handles an input into a textarea and enables or disables the submit button
+		 * @method
+		 * @private
+		 */
+		_onInput: function () {
+			if ( !this.$ta.val() || !this.$subject.val() ) {
+				this.$confirm.prop( 'disabled', true );
+			} else {
+				this.$confirm.prop( 'disabled', false );
+			}
+		},
+		/**
 		 * Save new talk section
 		 * @method
 		 * @return {jQuery.Deferred} Object that either will be resolved with ok parameter
 		 * or rejected with type error.
 		 */
 		save: function () {
-			var $subject = this.$( 'input' ),
-				$ta = this.$( 'textarea' ),
-				heading = $subject.val(),
+			var heading = this.$subject.val(),
 				self = this,
-				text = $ta.val(),
+				text = this.$ta.val(),
 				result = $.Deferred();
-			$ta.removeClass( 'error' );
-			$subject.removeClass( 'error' );
-			if ( text && heading ) {
-				// propagate, that we save an edit and want to close the Overlay without any interruption (user questions e.g.)
-				this._saveHit = true;
+			this.$ta.removeClass( 'error' );
+			this.$subject.removeClass( 'error' );
 
-				this.confirm.prop( 'disabled', true );
-				this.$( '.content' ).empty().addClass( 'loading' );
-				this.$( '.buttonBar' ).hide();
-				api.postWithToken( 'edit', {
-					action: 'edit',
-					section: 'new',
-					sectiontitle: heading,
-					title: self.title,
-					summary: mw.msg( 'mobile-frontend-talk-edit-summary', heading ),
-					text: text + ' ~~~~'
-				} ).done( function () {
-					result.resolve( 'ok' );
-				} ).fail( function ( msg ) {
-					result.reject( {
-						type: 'error',
-						details: msg
-					} );
-				} );
-			} else {
-				if ( !text ) {
-					$ta.addClass( 'error' );
-				}
-				if ( !heading ) {
-					$subject.addClass( 'error' );
-				}
+			// propagate, that we save an edit and want to close the Overlay without any interruption (user questions e.g.)
+			this._saveHit = true;
+
+			this.$confirm.prop( 'disabled', true );
+			this.$( '.content' ).empty().addClass( 'loading' );
+			this.$( '.buttonBar' ).hide();
+			// FIXME: while saving: a spinner would be nice
+			api.postWithToken( 'edit', {
+				action: 'edit',
+				section: 'new',
+				sectiontitle: heading,
+				title: self.title,
+				summary: mw.msg( 'mobile-frontend-talk-edit-summary', heading ),
+				text: text + ' ~~~~'
+			} ).done( function () {
+				result.resolve( 'ok' );
+			} ).fail( function ( msg ) {
 				result.reject( {
 					type: 'error',
-					details: 'empty message or heading'
+					details: msg
 				} );
-			}
+			} );
+
 			return result;
 		}
 	} );
