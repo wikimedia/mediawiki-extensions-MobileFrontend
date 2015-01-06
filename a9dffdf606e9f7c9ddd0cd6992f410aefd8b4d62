@@ -16,6 +16,24 @@
       "revId": "a9dffdf606e9f7c9ddd0cd6992f410aefd8b4d62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_c2d31804",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-06T17:41:38Z",
+      "side": 1,
+      "message": "Cache $this-\u003egetSkin()\n\nI think the assumption already exists - MinervaTemplateAlpha should not be used outside SkinMinervaAlpha",
+      "parentUuid": "ee703fc5_6201ecb8",
+      "revId": "a9dffdf606e9f7c9ddd0cd6992f410aefd8b4d62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
