@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_b393d8a5",
+        "filename": "tests/phpunit/skins/RedLinksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-06T20:27:07Z",
+      "side": 1,
+      "message": "I don\u0027t know, if there everytime would be a fixme. The test is in this database because we use UTSysOp as a logged in user (which only exists, when the test is in the database group). I don\u0027t know, if a workaround would be to create the user itself here in the test.",
+      "revId": "65ce4959290ba8a0487c871d3c073f471b51b4d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
