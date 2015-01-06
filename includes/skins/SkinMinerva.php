@@ -69,6 +69,7 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 
 		$tpl->set( 'site_urls', $this->getSiteLinks() );
+		$tpl->set( 'personal_urls', $this->getPersonalTools() );
 		$tpl->set( 'discovery_urls', $this->getDiscoveryTools() );
 
 		// Construct various Minerva-specific interface elements
@@ -80,7 +81,6 @@ class SkinMinerva extends SkinTemplate {
 		$this->prepareWarnings( $tpl );
 		$this->preparePageActions( $tpl );
 		$this->prepareUserButton( $tpl );
-		$this->preparePersonalTools( $tpl );
 		$this->prepareLanguages( $tpl );
 
 		// Perform a few extra changes if we are in mobile mode
@@ -310,10 +310,24 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Prepares urls and links used by the page
-	 * @param QuickTemplate $tpl
+	 * Return a url to a resource or to a login screen that redirects to that resource.
+	 * @param Title $title
+	 * @param array $query representation of query string parameters
+	 * @return string url
 	 */
-	protected function preparePersonalTools( QuickTemplate $tpl ) {
+	protected function getPersonalUrl( Title $title, array $query = array() ) {
+		if ( $this->getUser()->isLoggedIn() ) {
+			return $title->getLocalUrl( $query );
+		} else {
+			return $this->getLoginUrl( array( 'returnto' => $title ) );
+		}
+	}
+
+	/**
+	 * Prepares and returns urls and links personal to the given user
+	 * @return array
+	 */
+	protected function getPersonalTools() {
 		$returnToTitle = $this->getTitle()->getPrefixedText();
 		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
 		$watchTitle = SpecialPage::getTitleFor( 'Watchlist' );
@@ -337,9 +351,7 @@ class SkinMinerva extends SkinTemplate {
 				'links' => array(
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
-						'href' => $this->getUser()->isLoggedIn() ?
-							$watchTitle->getLocalUrl( $watchlistQuery ) :
-							$this->getLoginUrl( array( 'returnto' => $watchTitle ) ),
+						'href' => $this->getPersonalUrl( $watchTitle, $watchlistQuery ),
 						'class' => MobileUI::iconClass( 'watchlist', 'before' ),
 					),
 				),
@@ -352,8 +364,7 @@ class SkinMinerva extends SkinTemplate {
 					'links' => array(
 						array(
 							'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
-							'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
-								$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
+							'href' => $this->getPersonalUrl( $donateTitle ),
 							'class' => MobileUI::iconClass( 'uploads', 'before' ),
 						),
 					),
@@ -371,22 +382,18 @@ class SkinMinerva extends SkinTemplate {
 				),
 			);
 		} else {
-			$prefUrl = SpecialPage::getTitleFor( 'Preferences' )->
-				getLocalUrl( array( 'returnto' => $returnToTitle ) );
 			$items['preferences'] = array(
 				'links' => array(
 					array(
 						'text' => wfMessage( 'preferences' )->escaped(),
-						'href' => $this->getUser()->isLoggedIn() ? $prefUrl :
-							$this->getLoginUrl( array( 'returnto' => $prefUrl ) ),
+						'href' => $this->getPersonalUrl( SpecialPage::getTitleFor( 'Preferences' ) ),
 						'class' => MobileUI::iconClass( 'settings', 'before' ),
 					),
 				),
 			);
 		}
 		$items['auth'] = $this->getLogInOutLink();
-
-		$tpl->set( 'personal_urls', $items );
+		return $items;
 	}
 
 	/**
