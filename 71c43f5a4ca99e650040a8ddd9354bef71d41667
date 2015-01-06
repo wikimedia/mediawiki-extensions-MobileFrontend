@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_cd2ca992",
+        "filename": "includes/specials/SpecialMobileCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-06T21:43:07Z",
+      "side": 1,
+      "message": "See comment below.",
+      "revId": "71c43f5a4ca99e650040a8ddd9354bef71d41667",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_ad2ff584",
+        "filename": "includes/specials/SpecialMobileCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-06T21:43:07Z",
+      "side": 1,
+      "message": "So we have MobileUI::iconClass to handle icons in php\n\nmw-ui-text doesn\u0027t exist to my knowledge. We do have mw-ui-anchor though.\n\nmw-ui-progressive is currently a modifier which needs the mw-ui-anchor\n\nWe might want to put something in MobileUI to abstract this to make it less easy to make mistakes and make it easier to move to OOJS UI",
+      "revId": "71c43f5a4ca99e650040a8ddd9354bef71d41667",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_6d223da4",
+        "filename": "includes/specials/SpecialMobileCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-06T21:43:07Z",
+      "side": 1,
+      "message": "So we have MobileUI::iconClass to handle icons in php",
+      "revId": "71c43f5a4ca99e650040a8ddd9354bef71d41667",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
