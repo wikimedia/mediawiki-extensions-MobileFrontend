@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_dcea21d7",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialogB.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-06T12:25:10Z",
+      "side": 1,
+      "message": "See my comment on wikiGrokCampaigns.js. This reads like \"all suggestions for the campaign\" to me.",
+      "revId": "8d5665cee1c75c5cbd57ef719d7723a925d8245e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_3c279d61",
+        "filename": "javascripts/modules/wikigrok/wikiGrokCampaigns.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-06T12:25:10Z",
+      "side": 1,
+      "message": "What would you expect the following to return?\n\n    wikiGrokCampaigns.getRandomCampaign().getSuggestions()\n\nI\u0027d expect it to return the suggestions for the random campaign.\n\nI suggest creating the wikiGrokCampaigns#getAllSuggestions method with the body of this method.",
+      "revId": "8d5665cee1c75c5cbd57ef719d7723a925d8245e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
