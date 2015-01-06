@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_ce06df23",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-06T22:28:39Z",
+      "side": 1,
+      "message": "I wonder whether this has to be prePrender. Attaching these classes after rendering may result in ugly transformations of page elements.",
+      "revId": "5afe071c60a81951a48f37b101fa9750c3449fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
