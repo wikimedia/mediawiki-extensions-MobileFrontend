@@ -33,6 +33,24 @@
       "revId": "8d5665cee1c75c5cbd57ef719d7723a925d8245e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_c249d8d4",
+        "filename": "javascripts/modules/wikigrok/wikiGrokCampaigns.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-06T17:43:20Z",
+      "side": 1,
+      "message": "Also add tests!",
+      "parentUuid": "ee703fc5_3c279d61",
+      "revId": "8d5665cee1c75c5cbd57ef719d7723a925d8245e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
