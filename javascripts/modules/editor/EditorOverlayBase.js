@@ -208,6 +208,7 @@
 			this.sectionId = options.sectionId;
 			this.funnel = options.funnel;
 			this.schema = new SchemaMobileWebEditing();
+			this.config = mw.config.get( 'wgMFEditorOptions' );
 
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
@@ -266,11 +267,21 @@
 				// log cancel attempt
 				self.log( 'cancel' );
 			} );
+			// decide what happens, when the user clicks the continue button
+			if ( this.config.skipPreview ) {
+				// skip the preview and save the changes
+				this.nextStep = 'onSaveBegin';
+				this.$( '.continue' ).text( this.defaults.saveMsg );
+			} else {
+				// default: show the preview step
+				this.nextStep = 'onStageChanges';
+			}
 			Overlay.prototype.postRender.apply( this, arguments );
 			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.initial-header' );
+			// FIXME: Events should be managed with the events array
 			this.$( '.submit' ).on( 'click', $.proxy( this, 'onSaveBegin' ) );
-			this.$( '.continue' ).on( 'click', $.proxy( this, 'onStageChanges' ) );
+			this.$( '.continue' ).on( 'click', $.proxy( this, this.nextStep ) );
 		},
 		/**
 		 * Set up the editor switching interface

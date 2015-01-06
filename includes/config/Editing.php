@@ -25,7 +25,10 @@ $wgMFShowRedLinksAnon = false;
  *	until anonymous editing experience is addressed in this extension. Anonymous editing
  *	on mobile is still a big unknown. See bug 53069.
  *	Thoughts welcomed on https://www.mediawiki.org/wiki/Mobile_wikitext_editing#Anonymous_editing
+ * - 'skipPreview': Should the mobile edit workflow contain an edit preview (before save) to give
+ *	the user the possibility to review the new text resulting of his changes or not.
  */
 $wgMFEditorOptions = array(
 	'anonymousEditing' => false,
+	'skipPreview' => false,
 );
