@@ -44,12 +44,11 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	 *   if the button can be displayed.
 	 */
 	public function getNearbyButton() {
-		global $wgMFNearby;
-
-		$title = $this->getSkin()->getTitle();
+		$skin = $this->getSkin();
+		$title = $skin->getTitle();
 
 		if (
-			!$wgMFNearby
+			!$skin->getMFConfig()->get( 'MFNearby' )
 			|| !class_exists( 'GeoData' )
 			|| !GeoData::getPageCoordinates( $title )
 		) {

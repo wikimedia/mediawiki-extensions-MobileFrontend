@@ -23,6 +23,15 @@ class SkinMinerva extends SkinTemplate {
 	protected $mobileContext;
 
 	/**
+	 * Wrapper for MobileContext::getMFConfig()
+	 * @see MobileContext::getMFConfig()
+	 * @return Config
+	 */
+	public function getMFConfig() {
+		return $this->mobileContext->getMFConfig();
+	}
+
+	/**
 	 * initialize various variables and generate the template
 	 * @return QuickTemplate
 	 */
