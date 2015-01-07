@@ -80,9 +80,9 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'site_urls', $this->getSiteLinks() );
 		$tpl->set( 'personal_urls', $this->getPersonalTools() );
 		$tpl->set( 'discovery_urls', $this->getDiscoveryTools() );
+		$tpl->set( 'secondary_actions', $this->getSecondaryActions( $tpl ) );
 
 		// Construct various Minerva-specific interface elements
-		$this->prepareSecondaryActions( $tpl );
 		$this->preparePageContent( $tpl );
 		$this->prepareHeaderAndFooter( $tpl );
 		$this->prepareMenuButton( $tpl );
@@ -148,20 +148,6 @@ class SkinMinerva extends SkinTemplate {
 		} else {
 			return false;
 		}
-	}
-
-	/**
-	 * Returns true, if the page can have a talk page.
-	 * FIXME: Remove when talk feature in stable
-	 * @return boolean
-	 */
-	protected function isTalkAllowed() {
-		$ctx = MobileContext::singleton();
-		$title = $this->getTitle();
-		return $this->isAllowedPageAction( 'talk' ) &&
-			!$title->isTalkPage() &&
-			$title->canTalk() &&
-			$ctx->isBetaGroupMember();
 	}
 
 	/**
@@ -753,31 +739,11 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns an array of links for page secondary actions
 	 * @param BaseTemplate $tpl
 	 */
-	protected function prepareSecondaryActions( $tpl ) {
-		$buttons = array();
-
-		$title = $this->getTitle();
-		$namespaces = $tpl->data['content_navigation']['namespaces'];
-		if ( $this->isTalkAllowed() ) {
-			// FIXME [core]: This seems unnecessary..
-			$subjectId = $title->getNamespaceKey( '' );
-			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
-			if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
-				$talkButton = $namespaces[$talkId];
-			}
-
-			$talkTitle = $title->getTalkPage();
-			$buttons['talk'] = array(
-				'attributes' => array(
-					'class' =>  MobileUI::iconClass( 'talk', 'before', 'talk icon-32px' ),
-					'data-title' => $talkTitle->getFullText(),
-				),
-				'label' => $talkButton['text'],
-			);
-		}
-		$tpl->set( 'secondary_actions', $buttons );
+	protected function getSecondaryActions( BaseTemplate $tpl ) {
+		return array();
 	}
 
 	/**

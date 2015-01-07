@@ -28,6 +28,17 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
+	 * Returns true, if the page can have a talk page.
+	 * @return boolean
+	 */
+	protected function isTalkAllowed() {
+		$title = $this->getTitle();
+		return $this->isAllowedPageAction( 'talk' ) &&
+			!$title->isTalkPage() &&
+			$title->canTalk();
+	}
+
+	/**
 	 * Returns an array of modules related to the current context of the page.
 	 * @return array
 	 */
@@ -55,6 +66,37 @@ class SkinMinervaBeta extends SkinMinerva {
 		}
 
 		return $modules;
+	}
+
+	/**
+	 * Returns an array of links for page secondary actions
+	 * @param BaseTemplate $tpl
+	 * @return Array
+	 */
+	protected function getSecondaryActions( BaseTemplate $tpl ) {
+		$buttons = parent::getSecondaryActions( $tpl );
+
+		$title = $this->getTitle();
+		$namespaces = $tpl->data['content_navigation']['namespaces'];
+		if ( $this->isTalkAllowed() ) {
+			// FIXME [core]: This seems unnecessary..
+			$subjectId = $title->getNamespaceKey( '' );
+			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
+			if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
+				$talkButton = $namespaces[$talkId];
+			}
+
+			$talkTitle = $title->getTalkPage();
+			$buttons['talk'] = array(
+				'attributes' => array(
+					'class' =>  MobileUI::iconClass( 'talk', 'before', 'talk icon-32px' ),
+					'data-title' => $talkTitle->getFullText(),
+				),
+				'label' => $talkButton['text'],
+			);
+		}
+
+		return $buttons;
 	}
 
 	/**
