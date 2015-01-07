@@ -139,8 +139,10 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 	 */
 	protected function getGuiderMessage() {
 		$req = $this->getRequestContext()->getRequest();
-		// omit UserLogin's own messages in this template to avoid duplicate messages - bug T73771
-		$this->data['message'] = '';
+		// omit UserLogin's own messages in this template to avoid duplicate messages - bug T73771, T86031
+		if ( $this->data['messagetype'] !== 'error' ) {
+			$this->data['message'] = '';
+		}
 
 		if ( $req->getVal( 'returnto' )
 			&& ( $title = Title::newFromText( $req->getVal( 'returnto' ) ) )
