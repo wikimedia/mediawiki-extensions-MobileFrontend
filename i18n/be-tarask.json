@@ -114,7 +114,7 @@
 	"mobile-frontend-settings-alpha": "Экспэрымэнтальны рэжым",
 	"mobile-frontend-settings-alpha-description": "Завітайце ў небясьпечную й неразьведаную мабільную тэрыторыю. Напаткайце яшчэ больш экспэрымэнтальных магчымасьцяў, поўных хібаў.",
 	"mobile-frontend-settings-beta": "Бэта",
-	"mobile-frontend-settings-site-description": "Праект «{{SITENAME}}» даступны на $1 {{PLURAL:$1|1=мове|мовах}}. Ніжэй выкладзеныя ўсе даступныя вэрсіі.",
+	"mobile-frontend-settings-site-description": "Праект «{{SITENAME}}» даступны на $1 {{PLURAL:$1|мове|мовах}}. Ніжэй пералічаныя ўсе даступныя вэрсіі.",
 	"mobile-frontend-settings-site-header": "Мовы {{GRAMMAR:родны|{{SITENAME}}}}",
 	"mobile-frontend-sign-in-error-heading": "Ой",
 	"mobile-frontend-sign-in-heading": "Увайсьці",

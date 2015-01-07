@@ -129,7 +129,7 @@
 	"mobile-frontend-errorreport-error": "出错，反馈不能发送",
 	"mobile-frontend-errorreport-feedback": "感谢您的反馈！",
 	"mobile-frontend-errorreport-heading": "报告错误",
-	"mobile-frontend-errorreport-instructions": "<p>此表格只用于汇报维基百科条目的错误。请不要汇报缺少的条目。</p><p>如果您发现了一个错误，请您试试通过编辑该页面自行参与修复。如果您不能修复该错误，您再使用下面的表格。</p><p>请不要留下您的电话号码或电子邮件地址。</p>",
+	"mobile-frontend-errorreport-instructions": "<p>此表格只用于汇报维基百科条目的错误。请不要汇报缺少的信息。</p><p>如果您发现了一个错误，请您尝试通过编辑该页面自行参与修复。如果您不能修复该错误，您再使用下面的表格。</p><p>请不要留下您的电话号码或电子邮件地址。</p>",
 	"mobile-frontend-errorreport-placeholder": "在此输入错误报告。",
 	"mobile-frontend-errorreport-section-title": "建议改正",
 	"mobile-frontend-errorreport-submit": "提交",

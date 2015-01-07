@@ -31,7 +31,8 @@
 			"عبد الحق فارح",
 			"Maxim21",
 			"Robby",
-			"Macofe"
+			"Macofe",
+			"0x010C"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -43,6 +44,9 @@
 	"mobile-frontend-account-create-submit": "Inscrivez-vous",
 	"mobile-frontend-app-title": "Application mobile",
 	"mobile-frontend-back-to-top-of-section": "Revenir d'une section",
+	"mobile-frontend-categories-heading": "<strong>Catégories</strong>",
+	"mobile-frontend-categories-subheading": "La page appartient aux catégories suivantes:",
+	"mobile-frontend-categories-nocat": "Cette page n'appartient à aucune catégorie pour l'instant.",
 	"mobile-frontend-changeslist-ip": "Utilisateur anonyme",
 	"mobile-frontend-changeslist-nocomment": "aucun résumé de modification",
 	"mobile-frontend-clear-search": "Effacer",
@@ -123,9 +127,13 @@
 	"mobile-frontend-editor-visual-editor": "Éditeur",
 	"mobile-frontend-editor-wait": "Enregistrement de la modification, veuillez patienter.",
 	"mobile-frontend-enable-images": "Activer les images sur le site mobile",
+	"mobile-frontend-errorreport-button-label": "Signaler une erreur",
+	"mobile-frontend-errorreport-heading": "Signaler une erreur",
+	"mobile-frontend-errorreport-submit": "Envoyer",
 	"mobile-frontend-expand-sections-description": "Toujours développer toutes les sections en navigant vers une nouvelle page.",
 	"mobile-frontend-expand-sections-status": "Développer toutes les sections",
 	"mobile-frontend-fontchanger-link": "Taille de police",
+	"mobile-frontend-fontchanger-desc": "Augmenter ou diminuer la taille du texte pour des raisons de lisibilité.",
 	"mobile-frontend-featured-article": "Contenu recommandé du jour",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Les images sur {{SITENAME}} viennent de WikiMédia Communs.",
 	"mobile-frontend-first-upload-wizard-new-page-1-header": "Contribuez par vos images. Aidez {{SITENAME}} à prendre vie !",
@@ -217,6 +225,7 @@
 	"mobile-frontend-nearby-requirements": "Désolé ! Votre navigateur web ne reconnaît pas {{SITENAME}} à proximité.",
 	"mobile-frontend-nearby-requirements-guidance": "Essayez un autre navigateur ou activez JavaScript si vous l'avez désactivé.",
 	"mobile-frontend-nearby-title": "À proximité",
+	"mobile-frontend-nearby-sectiontext": "Proche de cette page",
 	"mobile-frontend-news-items": "Actualités",
 	"mobile-frontend-opt-in-explain": "En adhérant au beta-test, vous aurez accès aux fonctionnalités expérimentales, au risque de rencontrer bogues et problèmes.",
 	"mobile-frontend-overlay-close": "Fermer",
@@ -295,6 +304,8 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Sujet de la rubrique",
 	"mobile-frontend-talk-add-overlay-submit": "Ajouter une discussion",
 	"mobile-frontend-talk-back-to-page": "Revenir à la page « $1 ».",
+	"mobile-frontend-talk-back-to-userpage": "Retour à la page utilisateur de \"{{GENDER:$1|$1}}\".",
+	"mobile-frontend-talk-back-to-filepage": "Retour au fichier \"$1\".",
 	"mobile-frontend-talk-edit-summary": "Nouvelle section de discussion : $1",
 	"mobile-frontend-talk-explained": "Les conversations suivantes sont actives en ce moment",
 	"mobile-frontend-talk-explained-empty": "Il n’y a pas de conversations sur cette page.",
@@ -356,5 +367,6 @@
 	"tag-mobile_web_edit-description": "Modification effectuée depuis le site web mobile",
 	"mobile-frontend-pageaction-edit-tooltip": "Modifier la section fil directeur de cette page.",
 	"mobile-frontend-pageaction-upload-tooltip": "Télécharger une photo de fil conducteur pour cette page.",
-	"mobile-frontend-donate-button-label": "Faire un don"
+	"mobile-frontend-donate-button-label": "Faire un don",
+	"mobile-frontend-meta-data-issues-categories": "À propos de cette catégorie"
 }
