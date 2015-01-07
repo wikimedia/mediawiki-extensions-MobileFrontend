@@ -8,71 +8,25 @@
 ( function ( M, $ ) {
 	var currentPage, skin,
 		Router = M.require( 'Router' ),
-		browser = M.require( 'browser' ),
 		OverlayManager = M.require( 'OverlayManager' ),
 		PageApi = M.require( 'PageApi' ),
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
 		router = new Router(),
-		Skin = M.require( 'Skin' ),
-		// FIXME: Move all the variables below to Browser.js
-		ua = window.navigator.userAgent,
-		isIos = browser.isIos(),
-		isOldIPhone = isIos && /OS [4]_[0-2]|OS [3]_/.test( ua );
+		Skin = M.require( 'Skin' );
 
 	/**
 	 * Initialize viewport
 	 * @method
 	 */
 	function init() {
-		var
-			$viewport = $( '#mw-mf-viewport' );
-
-		if ( browser.supportsAnimations() ) {
-			$viewport.addClass( 'animations' );
-		}
-		if ( !browser.supportsPositionFixed() ) {
-			$viewport.addClass( 'no-position-fixed' );
-		}
-		if ( browser.supportsTouchEvents() ) {
-			$viewport.addClass( 'touch-events' );
-		}
-
-		// FIXME: Move to Browser.js
-		if ( !browser.supportsPositionFixed() ) {
-			$( window ).on( 'scroll', function () {
-				var scrollTop = $( window ).scrollTop(),
-					windowHeight = $( window ).height(),
-					activeElement = document.activeElement,
-					scrollBottom = scrollTop + windowHeight;
-				if ( isOldIPhone ) {
-					if ( activeElement.tagName === 'TEXTAREA' || activeElement.tagName === 'INPUT' ) {
-						// add the height of the open soft keyboard
-						scrollBottom -= 120;
-					} else {
-						// add the height of the address bar
-						scrollBottom += 60;
-					}
-				}
-
-				if ( scrollTop === 0 ) {
-					// special case when we're at the beginning of the page and many
-					// browsers (e.g. Android 2.x) return wrong window height because
-					// of the URL bar
-					$viewport.add( '.overlay' ).height( '100%' );
-				} else {
-					// keep expanding the viewport until the end of the page reached
-					// #notification has bottom: 0 and sticks to the end of the viewport
-					$viewport.add( '.overlay' ).height( scrollBottom );
-				}
-			} );
-		}
-
 		skin = new Skin( {
+			el: '#mw-mf-viewport',
 			tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
 			page: getCurrentPage()
 		} );
 		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
+		$( window ).on( 'scroll', $.proxy( M, 'emit', 'scroll' ) );
 	}
 
 	/**
