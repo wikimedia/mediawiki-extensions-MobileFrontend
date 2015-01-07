@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_47b06c3e",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebClickTracking.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-07T22:07:32Z",
+      "side": 1,
+      "message": "Can you add an inline comment to explain why this cannot be null and why undefined is okay.\nThanks!",
+      "revId": "93308402f74debfec1f750a7565408d4aecec61d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
