@@ -16,6 +16,24 @@
       "revId": "f7e4372003f7eda33eec34a265e7f7ea5b197fe5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_ac6cce06",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-01-07T20:17:54Z",
+      "side": 1,
+      "message": "Ok.  I\u0027m happy to explore killing it.  I\u0027m not sure how one defined an indicator either.  Admittedly, I need to study up on the current state of Icons.  \n\nIMO if we are going to kill it lets have a task be to kill them all.\n\nWe are using it multiple file in the codebase:\nMobileSpecialPageFeed.php, SpecialMobileContributions.php, SpecialMobileDiff.php, SpecialMobileHistory.php and directly below in this file for citation icon.",
+      "parentUuid": "2e9df725_82d740c4",
+      "revId": "f7e4372003f7eda33eec34a265e7f7ea5b197fe5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
