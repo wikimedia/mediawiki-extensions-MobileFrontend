@@ -55,8 +55,11 @@
 		/** @inheritdoc **/
 		defaults: $.extend( {}, Schema.prototype.defaults, {
 			// FIXME: Introduce a SchemaWithUser class that has username and userEditCount
-			username: user.getName(),
-			userEditCount: user.getEditCount() || 0
+			// username or userEditCount cannot be null according to the schema.
+			// They are both optional though.
+			// Assigning undefined will make event logger omit them when sending the data to a server.
+			username: user.getName() || undefined,
+			userEditCount: typeof user.getEditCount() === 'number' ? user.getEditCount() : undefined
 		} ),
 		/**
 		 * Record a click to a link in the schema. Throw an error if schema is not
