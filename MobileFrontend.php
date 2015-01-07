@@ -55,10 +55,12 @@ $autoloadClasses = array (
 	'PredefinedDeviceProperties' => 'DeviceDetection',
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlDeviceProperties' => 'DeviceDetection',
-	'MobileCollection' => 'MobileCollection',
 	'MobileContext' => 'MobileContext',
 	'MobileFormatter' => 'MobileFormatter',
-	'MobilePage' => 'MobilePage',
+
+	'MobileCollection' => 'models/MobileCollection',
+	'MobilePage' => 'models/MobilePage',
+
 	'MobileUI' => 'MobileUI',
 	'MobileUserInfo' => 'MobileUserInfo',
 
