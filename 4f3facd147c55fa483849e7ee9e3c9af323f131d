@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "ee703fc5_16c62d4f",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-07T23:44:00Z",
+      "side": 1,
+      "message": "Should we use browser.supportsTouchEvents rather than binding them both.?",
+      "revId": "4f3facd147c55fa483849e7ee9e3c9af323f131d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_56e345d4",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-07T23:44:00Z",
+      "side": 1,
+      "message": "Use the events map for binding events (see modules/toc/TableOfContents.js",
+      "revId": "4f3facd147c55fa483849e7ee9e3c9af323f131d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_8c330ac0",
         "filename": "javascripts/modules/references/ReferencesDrawer.js",
         "patchSetId": 5
@@ -13,6 +47,40 @@
       "writtenOn": "2015-01-07T19:10:31Z",
       "side": 1,
       "message": "I think you can set the closeOnScroll property of the ReferenceDrawer object to false to achieve the same thing.",
+      "revId": "4f3facd147c55fa483849e7ee9e3c9af323f131d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_f6bcd9b3",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-07T23:44:00Z",
+      "side": 1,
+      "message": "This is not so nice.\nI got very confused by this line until I realised it was turned on in Drawer. Should probably become a method on Drawer.",
+      "revId": "4f3facd147c55fa483849e7ee9e3c9af323f131d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_b6de6113",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-07T23:44:00Z",
+      "side": 1,
+      "message": "Where is this turned on?",
       "revId": "4f3facd147c55fa483849e7ee9e3c9af323f131d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
