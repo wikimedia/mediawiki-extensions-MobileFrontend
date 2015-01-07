@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_7800b86d",
+        "filename": "javascripts/modules/wikiGrokRoulette/wikiGrokRoulette.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-07T10:54:10Z",
+      "side": 1,
+      "message": "Unless util.query is cloned, this will modify global state, i.e. if the user decides not to continue with WikiGrok Roulette, then util.query will be missing a title property.",
+      "revId": "b98ed76622dad941516eef4ba327c105ceec835e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
