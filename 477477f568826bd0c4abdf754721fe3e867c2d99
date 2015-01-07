@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_d8f46453",
+        "filename": "javascripts/modules/wikigrok/wikiGrokCampaigns.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-07T11:49:39Z",
+      "side": 1,
+      "message": "Consider moving the contents of this block into a helper function (getCampaignQuestions?). The code drifts right very, very quickly.",
+      "revId": "477477f568826bd0c4abdf754721fe3e867c2d99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_f8d608c8",
+        "filename": "tests/qunit/modules/wikigrok/test_wikiGrokCampaigns.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-07T11:49:39Z",
+      "side": 1,
+      "message": "I can make this test pass by returning by implementing getAllSuggestions as follows:\n\n    function getAllSuggestions() { return [1, 2, 3, 4, 5]; }",
+      "revId": "477477f568826bd0c4abdf754721fe3e867c2d99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
