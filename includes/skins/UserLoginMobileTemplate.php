@@ -102,7 +102,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::input( 'wpRemember', '1', 'hidden' ) .
 			Html::input( 'wpLoginAttempt', wfMessage( 'mobile-frontend-login' )->text(), 'submit',
 				array( 'id' => 'wpLoginAttempt',
-					'class' => 'mw-ui-button mw-ui-constructive',
+					'class' => $baseClass = MobileUI::buttonClass( 'constructive' ),
 					'tabindex' => '3' ) ) .
 			Html::input( 'wpLoginToken', $token, 'hidden' ) .
 			Html::input( 'watch', $watchArticle, 'hidden' ) .

@@ -190,7 +190,7 @@ HTML;
 			}
 			$attrs = array( 'href' => $url );
 			$count++;
-			if( $code == $wgLanguageCode ) {
+			if ( $code == $wgLanguageCode ) {
 				$attrs['class'] = 'selected';
 			}
 			$selector .= Html::openElement( 'li' );
