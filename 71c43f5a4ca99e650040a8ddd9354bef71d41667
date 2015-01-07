@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "ee703fc5_1b6176d0",
+        "filename": "includes/specials/SpecialMobileCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-07T12:26:32Z",
+      "side": 1,
+      "message": "I took it from the example in the style guide, http://tools.wmflabs.org/styleguide/desktop/section-6.html#section-6.1 , there it seems to work :s I\u0027ll see to add to MobileUI something similar to the iconClass for labels / anchors.\n\nIn any case, from what I can see even with mw-ui-anchor and progressive it is still not getting the color (it is getting it from the collections.less (handcoded)). Maybe I have to update core",
+      "parentUuid": "ee703fc5_ad2ff584",
+      "revId": "71c43f5a4ca99e650040a8ddd9354bef71d41667",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_6d223da4",
         "filename": "includes/specials/SpecialMobileCollections.php",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2015-01-06T21:43:07Z",
       "side": 1,
       "message": "So we have MobileUI::iconClass to handle icons in php",
+      "revId": "71c43f5a4ca99e650040a8ddd9354bef71d41667",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_3b6a3ab2",
+        "filename": "includes/specials/SpecialMobileCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-07T12:26:32Z",
+      "side": 1,
+      "message": "I see, cool!",
+      "parentUuid": "ee703fc5_6d223da4",
       "revId": "71c43f5a4ca99e650040a8ddd9354bef71d41667",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
