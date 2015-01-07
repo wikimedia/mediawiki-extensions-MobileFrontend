@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_8c330ac0",
+        "filename": "javascripts/modules/references/ReferencesDrawer.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-07T19:10:31Z",
+      "side": 1,
+      "message": "I think you can set the closeOnScroll property of the ReferenceDrawer object to false to achieve the same thing.",
+      "revId": "4f3facd147c55fa483849e7ee9e3c9af323f131d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
