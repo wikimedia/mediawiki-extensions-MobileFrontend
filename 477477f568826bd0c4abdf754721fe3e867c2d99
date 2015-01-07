@@ -139,6 +139,24 @@
       "revId": "477477f568826bd0c4abdf754721fe3e867c2d99",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_b1a42b06",
+        "filename": "tests/qunit/modules/wikigrok/test_wikiGrokCampaigns.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-07T18:03:47Z",
+      "side": 1,
+      "message": "As the comment above suggests it\u0027s testing the number of suggestions. ;)",
+      "parentUuid": "ee703fc5_d15d1f1c",
+      "revId": "477477f568826bd0c4abdf754721fe3e867c2d99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
