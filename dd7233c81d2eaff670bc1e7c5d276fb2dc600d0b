@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_670b30da",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2015-01-07T22:27:05Z",
+      "side": 1,
+      "message": "should $anchorType be $modifier? as $anchorType is undefined here.",
+      "revId": "dd7233c81d2eaff670bc1e7c5d276fb2dc600d0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
