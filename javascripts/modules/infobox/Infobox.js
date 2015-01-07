@@ -9,7 +9,6 @@
 	/**
 	 * A Wikidata generated infobox.
 	 * Emits photo-loaded event when images in the infobox have loaded.
-	 * FIXME: This currently requires 2 hits to the Wikidata API on every page load.
 	 * @class Infobox
 	 * @extends View
 	 */
