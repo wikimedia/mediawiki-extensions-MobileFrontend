@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_dbf45e53",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-07T14:27:45Z",
+      "side": 1,
+      "message": "see: http://php.net/manual/en/language.types.array.php#example-102\nReferencing an array returned by a function in this way only works for php 5.4+, to be compatible with php 5.3 and older versions, you should save the returned value of $api-\u003egetResult()-\u003egetData() into an temporary variable (e.g. $apiReturn) and save $data \u003d $apiReturn[\u0027query\u0027][\u0027pages\u0027];.",
+      "revId": "6891f0f9b1e71853afd0dd046c5a697181eaf573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
