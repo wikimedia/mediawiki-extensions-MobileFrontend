@@ -101,7 +101,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 */
 	protected function getNSConditions( $column ) {
 		$conds = array();
-		switch( $this->filter ) {
+		switch ( $this->filter ) {
 			case 'all':
 				// no-op
 				break;
@@ -132,13 +132,13 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
 		$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, 'all' );
 		if ( $view === 'feed' ) {
-			$attrsList[ 'class' ] = 'mw-ui-button';
+			$attrsList[ 'class' ] = MobileUI::buttonClass();
 			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
-			$attrsFeed[ 'class' ] = 'active mw-ui-progressive mw-ui-button';
+			$attrsFeed[ 'class' ] = MobileUI::buttonClass( 'progressive', 'active' );
 		} else {
-			$attrsFeed[ 'class' ] = 'mw-ui-button';
+			$attrsFeed[ 'class' ] = MobileUI::buttonClass();
 			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
-			$attrsList[ 'class' ] = 'active mw-ui-progressive mw-ui-button';
+			$attrsList[ 'class' ] = MobileUI::buttonClass( 'progressive', 'active' );
 		}
 
 		$html =
@@ -178,7 +178,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			Html::openElement( 'ul', array( 'class' => 'mw-mf-watchlist-selector page-header-bar' ) )
 		);
 
-		foreach( $filters as $filter => $msg ) {
+		foreach ( $filters as $filter => $msg ) {
 			$itemAttrs = array();
 			if ( $filter === $this->filter ) {
 				$itemAttrs['class'] = 'selected';
@@ -289,7 +289,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output = $this->getOutput();
 
 		if ( $feed ) {
-			foreach( $res as $row ) {
+			foreach ( $res as $row ) {
 				$this->showFeedResultRow( $row );
 			}
 		}

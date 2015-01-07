@@ -75,7 +75,7 @@ class SpecialMobilePreferences extends SpecialPreferences {
 		} else {
 			foreach ( $this->validTabs as $tabName ) {
 				$attrs = array(
-					'class' => 'mw-ui-button mw-ui-block',
+					'class' => $baseClass = MobileUI::buttonClass( 'block' ),
 					'href' => SpecialPage::getTitleFor( $this->getName(), $tabName )->getLocalUrl(),
 				);
 				$button = Html::element( 'a', $attrs, $this->msg( "prefs-$tabName" ) );

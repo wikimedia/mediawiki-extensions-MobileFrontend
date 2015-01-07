@@ -228,7 +228,7 @@ class MinervaTemplate extends BaseTemplate {
 	 * Render secondary page actions like language selector
 	 */
 	protected function renderSecondaryActions() {
-		$baseClass = 'mw-ui-button button';
+		$baseClass = MobileUI::buttonClass( '', 'button' );
 		echo Html::openElement( 'div', array( 'id' => 'page-secondary-actions' ) );
 
 		foreach ( $this->getSecondaryActions() as $el ) {
