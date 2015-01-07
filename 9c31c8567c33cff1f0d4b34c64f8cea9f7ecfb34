@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_07d4b4eb",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 873,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-01-07T23:12:36Z",
+      "side": 1,
+      "message": "Ooooooh so much nicer!",
+      "revId": "9c31c8567c33cff1f0d4b34c64f8cea9f7ecfb34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_e7d660f6",
+        "filename": "tests/phpunit/skins/SkinTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-01-07T23:12:36Z",
+      "side": 1,
+      "message": "newMainPage()",
+      "revId": "9c31c8567c33cff1f0d4b34c64f8cea9f7ecfb34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
