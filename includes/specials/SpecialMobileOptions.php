@@ -155,8 +155,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 					Html::closeElement( 'div' );
 			}
 		}
+		$className = MobileUI::buttonClass( 'constructive' );
 		$html .= <<<HTML
-		<input type="submit" class="mw-ui-constructive mw-ui-button" id="mw-mf-settings-save" value="{$saveSettings}">
+		<input type="submit" class="{$className}" id="mw-mf-settings-save" value="{$saveSettings}">
 		$token
 		$returnto
 	</form>

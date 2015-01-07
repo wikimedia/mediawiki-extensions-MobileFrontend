@@ -76,7 +76,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 				wfMessage( 'mobile-frontend-account-create-submit' )->text(),
 				'submit',
 				array( 'id' => 'wpCreateaccount',
-					'class' => MobileUI::buttonClass( 'mw-ui-constructive' ),
+					'class' => MobileUI::buttonClass( 'constructive' ),
 					'tabindex' => '6'
 				)
 			) .
