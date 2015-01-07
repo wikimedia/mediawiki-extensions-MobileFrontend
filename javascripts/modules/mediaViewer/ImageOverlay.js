@@ -44,6 +44,8 @@
 			var $img,
 				self = this;
 
+			this.$details = this.$( '.details' );
+
 			Overlay.prototype.postRender.apply( this, arguments );
 
 			api.getThumb( options.title ).done( function ( data ) {
@@ -91,8 +93,6 @@
 			} );
 
 			$( window ).on( 'resize', $.proxy( this, '_positionImage' ) );
-
-			this.$details = this.$( '.details' );
 
 			this.$( '.image-wrapper' ).on( 'click', function () {
 				self.$details.toggle();
