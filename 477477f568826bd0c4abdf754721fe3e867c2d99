@@ -19,6 +19,40 @@
     },
     {
       "key": {
+        "uuid": "ee703fc5_f15aa321",
+        "filename": "tests/qunit/modules/wikigrok/test_wikiGrokCampaigns.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-07T18:02:25Z",
+      "side": 1,
+      "message": "ps. and unrelated why is this here? commented out code should never be here.",
+      "revId": "477477f568826bd0c4abdf754721fe3e867c2d99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_716f73c1",
+        "filename": "tests/qunit/modules/wikigrok/test_wikiGrokCampaigns.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-07T18:02:25Z",
+      "side": 1,
+      "message": "this will also pass if allSuggestions is a {} - very possible.",
+      "revId": "477477f568826bd0c4abdf754721fe3e867c2d99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_f8d608c8",
         "filename": "tests/qunit/modules/wikigrok/test_wikiGrokCampaigns.js",
         "patchSetId": 3
@@ -84,6 +118,24 @@
       "side": 1,
       "message": "I think so. Do you mean if my tests cover edge cases? Could you please suggest what other tests would be useful here?",
       "parentUuid": "ee703fc5_36f1f192",
+      "revId": "477477f568826bd0c4abdf754721fe3e867c2d99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_d15d1f1c",
+        "filename": "tests/qunit/modules/wikigrok/test_wikiGrokCampaigns.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-07T18:02:25Z",
+      "side": 1,
+      "message": "What is this testing? It\u0027s not clear from getAllSuggestions why this needs to return a list of 5 elements. Should probably test the contents of them too.",
+      "parentUuid": "ee703fc5_113dd7b8",
       "revId": "477477f568826bd0c4abdf754721fe3e867c2d99",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
