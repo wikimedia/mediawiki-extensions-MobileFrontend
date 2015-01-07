@@ -180,11 +180,14 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$pageKeys = array_keys( $watchlist[$ns] );
 		foreach ( $pageKeys as $dbkey ) {
 			if ( isset( $images[$ns][$dbkey] ) ) {
-				$mobilePages->add( new MobilePage(
+				$page = new MobilePage(
 					Title::makeTitleSafe( $ns, $dbkey ),
 					wfFindFile( $images[$ns][$dbkey] )
-				));
+				);
+			} else {
+				$page = new MobilePage( Title::makeTitleSafe( $ns, $dbkey ) );
 			}
+			$mobilePages->add( $page );
 		}
 
 		if ( count( $mobilePages ) === 0 ) {
