@@ -26,73 +26,67 @@ QUnit.module( 'MobileFrontend toggle.js: Mobile mode.', {
 
 QUnit.test( 'Toggle section', 5, function( assert ) {
 	var $section = this.$section0,
-		$content = this.$container.find( '#collapsible-block-0' ),
-		strictEqual = assert.strictEqual;
+		$content = this.$container.find( '#collapsible-block-0' );
 
-	strictEqual( $section.hasClass( 'open-block' ), true, 'open-block class present' );
+	assert.strictEqual( $section.hasClass( 'open-block' ), true, 'open-block class present' );
 	toggle.toggle( $section );
-	strictEqual( $content.hasClass( 'open-block' ), false, 'check content gets closed on a toggle' );
-	strictEqual( $section.hasClass( 'open-block' ), false, 'check section is closed' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content gets closed on a toggle' );
+	assert.strictEqual( $section.hasClass( 'open-block' ), false, 'check section is closed' );
 
 	// Perform second toggle
 	toggle.toggle( $section );
-	strictEqual( $content.hasClass( 'open-block' ), true, 'check content reopened' );
-	strictEqual( $section.hasClass( 'open-block' ), true, 'check section has reopened' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content reopened' );
+	assert.strictEqual( $section.hasClass( 'open-block' ), true, 'check section has reopened' );
 } );
 
 QUnit.test( 'Clicking a hash link to reveal an already open section', 2, function( assert ) {
-	var strictEqual = assert.strictEqual;
-	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
+	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 	toggle.reveal( 'First_Section', this.$container );
-	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is still open' );
+	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is still open' );
 } );
 
 QUnit.test( 'Reveal element', 2, function( assert ) {
-	var strictEqual = assert.strictEqual;
 	toggle.reveal( 'First_Section' );
-	strictEqual( this.$container.find( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
-	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
+	assert.strictEqual( this.$container.find( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
+	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 } );
 
 QUnit.test( 'Clicking hash links', 2, function( assert ) {
-	var strictEqual = assert.strictEqual;
 	this.$container.find( '[href=#First_Section]' ).trigger( 'click' );
-	strictEqual( this.$container.find( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
-	strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
+	assert.strictEqual( this.$container.find( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
+	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 } );
 
 QUnit.test( 'Tap event toggles section', 2, function( assert ) {
-	var $content = this.$container.find( '#collapsible-block-1' ),
-		strictEqual = assert.strictEqual;
+	var $content = this.$container.find( '#collapsible-block-1' );
 
-	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
 	this.$container.find( '#section_1' ).trigger( 'click' );
 
-	strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown on a toggle' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown on a toggle' );
 } );
 
 QUnit.test( 'Verify aria attributes', 9, function ( assert ) {
 	var $section = this.$container.find( '#section_1' ),
-		$content = this.$container.find( '#collapsible-block-1' ),
-		strictEqual = assert.strictEqual;
+		$content = this.$container.find( '#collapsible-block-1' );
 
 	// Test the initial state produced by the init function
-	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
-	strictEqual( $content.attr( 'aria-pressed' ), 'false', 'check aria-pressed is false at start' );
-	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
+	assert.strictEqual( $content.attr( 'aria-pressed' ), 'false', 'check aria-pressed is false at start' );
+	assert.strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start' );
 
 	// Test what the toggle() function gives us when hiding the section
 	$section.trigger( 'click' );
-	strictEqual( $content.hasClass( 'open-block' ), true, 'check content is visible after toggling' );
-	strictEqual( $content.attr( 'aria-pressed' ), 'true', 'check aria-pressed is true after toggling' );
-	strictEqual( $content.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content is visible after toggling' );
+	assert.strictEqual( $content.attr( 'aria-pressed' ), 'true', 'check aria-pressed is true after toggling' );
+	assert.strictEqual( $content.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling' );
 
 	// Test what the toggle() function gives us when showing the section
 	$section.trigger( 'click' );
-	strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after toggling' );
-	strictEqual( $content.attr( 'aria-pressed' ), 'false', 'check aria-pressed is false after toggling' );
-	strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after toggling' );
+	assert.strictEqual( $content.attr( 'aria-pressed' ), 'false', 'check aria-pressed is false after toggling' );
+	assert.strictEqual( $content.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );
 } );
 
 /**
