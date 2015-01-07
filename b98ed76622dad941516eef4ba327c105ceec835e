@@ -16,6 +16,24 @@
       "revId": "b98ed76622dad941516eef4ba327c105ceec835e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_f8f3689a",
+        "filename": "javascripts/modules/wikiGrokRoulette/wikiGrokRoulette.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-07T10:54:42Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "ee703fc5_7800b86d",
+      "revId": "b98ed76622dad941516eef4ba327c105ceec835e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
