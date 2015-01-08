@@ -1,10 +1,11 @@
 ( function ( M, $ ) {
 
-	var TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
+	var pageApi = M.require( 'pageApi' ),
+		TalkOverlay = M.require( 'modules/talk/TalkOverlay' );
 
 	QUnit.module( 'MobileFrontend TalkOverlay', {
 		setup: function () {
-			this.sandbox.stub( M.pageApi, 'getPage' ).withArgs( 'Talk:No exist' ).returns(
+			this.sandbox.stub( pageApi, 'getPage' ).withArgs( 'Talk:No exist' ).returns(
 				$.Deferred().reject( 'missingtitle' )
 			).withArgs( 'Talk:Topic' ).returns(
 				$.Deferred().resolve( {

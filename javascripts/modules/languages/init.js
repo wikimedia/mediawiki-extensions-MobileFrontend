@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var loader = M.require( 'loader' ),
+		pageApi = M.require( 'pageApi' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
@@ -10,7 +11,7 @@
 		loader.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
 			var LanguageOverlay = M.require( 'languages/LanguageOverlay' );
 
-			M.pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
+			pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 				loadingOverlay.hide();
 				result.resolve( new LanguageOverlay( {
 					languages: data.languages,

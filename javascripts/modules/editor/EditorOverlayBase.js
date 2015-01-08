@@ -6,6 +6,7 @@
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
 		settings = M.require( 'settings' ),
+		pageApi = M.require( 'pageApi' ),
 		EditorOverlayBase;
 
 	/**
@@ -149,7 +150,7 @@
 				self = this;
 
 			// FIXME: use generic method for following 3 lines
-			M.pageApi.invalidatePage( title );
+			pageApi.invalidatePage( title );
 
 			if ( this.isNewPage ) {
 				msg = 'mobile-frontend-editor-success-new-page';

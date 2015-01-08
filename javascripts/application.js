@@ -85,13 +85,10 @@
 		 * OverlayManager instance
 		 * @property {OverlayManager}
 		 */
-		overlayManager: new OverlayManager( router ),
-		/**
-		 * PageApi instance
-		 * @property {PageApi}
-		 */
-		pageApi: pageApi
+		overlayManager: new OverlayManager( router )
 	} );
+
+	M.define( 'pageApi', pageApi );
 
 	// Initialize
 	$( init );
