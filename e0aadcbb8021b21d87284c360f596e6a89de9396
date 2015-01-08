@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_29e8a20a",
+        "filename": "javascripts/modules/categories/CategoryAddOverlay.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-08T23:19:11Z",
+      "side": 1,
+      "message": "remove this line and add two new lines for waitMsg and waitIcon",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_89ce8eb8",
+        "filename": "javascripts/modules/categories/CategoryAddOverlay.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-08T23:19:11Z",
+      "side": 1,
+      "message": "typo in this \u0027safeButton\u0027",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_a9d35260",
+        "filename": "javascripts/modules/categories/CategoryAddOverlay.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-08T23:19:11Z",
+      "side": 1,
+      "message": "same typo in two places",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_c9bec6d1",
+        "filename": "javascripts/modules/categories/CategoryApi.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-08T23:19:11Z",
+      "side": 1,
+      "message": "Why define this twice? I think you should move this before CategoryApi and merge.",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_e9914a53",
+        "filename": "less/modules/categories/categories.less",
+        "patchSetId": 14
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-08T23:19:11Z",
+      "side": 1,
+      "message": "Why do you have to use !important?",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
