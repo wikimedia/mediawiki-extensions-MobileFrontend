@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var
+	var context = M.require( 'context' ),
 		Overlay = M.require( 'Overlay' ),
 		Icon = M.require( 'Icon' ),
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
@@ -40,7 +40,7 @@
 				name: 'next',
 				additionalClassNames: 'slider-button next'
 			} ).toHtmlString(),
-			inBeta: M.isBetaGroupMember(),
+			inBeta: context.isBetaGroupMember(),
 			pages: [
 				{
 					caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1-header' ),

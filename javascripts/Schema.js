@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Schema,
 		Class = M.require( 'Class' ),
+		context = M.require( 'context' ),
 		user = M.require( 'user' );
 
 	/**
@@ -15,7 +16,7 @@
 		 * @cfg {String} defaults.mobileMode whether user is in stable beta or alpha
 		 */
 		defaults: {
-			mobileMode: M.getMode()
+			mobileMode: context.getMode()
 		},
 		/**
 		 * Whether or not the logging is sampled (i.e. not recorded at 100% frequency)

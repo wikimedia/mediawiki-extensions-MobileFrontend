@@ -6,6 +6,7 @@
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		pageApi = M.require( 'pageApi' ),
+		context = M.require( 'context' ),
 		TalkSectionOverlay;
 
 	/**
@@ -68,7 +69,7 @@
 				$comment = this.$( '.comment' ),
 				$textarea = $comment.find( 'textarea' );
 
-			if ( user.isAnon() || !M.isAlphaGroupMember() ) {
+			if ( user.isAnon() || !context.isAlphaGroupMember() ) {
 				$comment.remove();
 			} else {
 				$textarea.on( 'focus', function () {

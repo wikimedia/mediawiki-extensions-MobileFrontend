@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	// Run only in alpha mode
-	M.assertMode( [ 'alpha' ] );
+	M.require( 'context' ).assertMode( [ 'alpha' ] );
 
 	var user = M.require( 'user' ),
 		page = M.getCurrentPage(),

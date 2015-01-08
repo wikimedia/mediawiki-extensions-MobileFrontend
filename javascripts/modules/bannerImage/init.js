@@ -1,5 +1,5 @@
 ( function ( M ) {
-	M.assertMode( [ 'alpha' ] );
+	M.require( 'context' ).assertMode( [ 'alpha' ] );
 	var bannerImage,
 		page = M.getCurrentPage(),
 		browser = M.require( 'browser' ),

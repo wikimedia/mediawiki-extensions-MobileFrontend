@@ -1,12 +1,13 @@
-/**
- * Mobile mode helper class
- *
- * @class mw.mobileFrontend
- * @singleton
- */
-( function ( $ ) {
-	mw.mobileFrontend = $.extend( {
+( function ( M, $ ) {
+	var context;
 
+	/**
+	 * Mobile mode helper class
+	 *
+	 * @class context
+	 * @singleton
+	 */
+	context = {
 		/**
 		 * Gets current mobile mode
 		 * @method
@@ -46,6 +47,8 @@
 				throw new Error( 'Attempt to run module outside declared environment mode ' + mode );
 			}
 		}
-	}, mw.mobileFrontend );
+	};
 
-}( jQuery ) );
+	M.define( 'context', context );
+
+}( mw.mobileFrontend, jQuery ) );

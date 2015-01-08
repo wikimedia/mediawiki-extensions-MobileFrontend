@@ -1,5 +1,5 @@
 ( function ( M ) {
-	M.assertMode( [ 'alpha' ] );
+	M.require( 'context' ).assertMode( [ 'alpha' ] );
 	var infobox,
 		page = M.getCurrentPage(),
 		wikidataID = mw.config.get( 'wgWikibaseItemId' ),

@@ -1,6 +1,7 @@
 // Add EventLogging to hamburger menu
 ( function ( M, $ ) {
 	var SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+		context = M.require( 'context' ),
 		mainMenuSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebMainMenuClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
@@ -12,7 +13,7 @@
 	 */
 	function mainMenuIconSelector( name ) {
 		// FIXME: Remove when mw-ui-icon is in stable
-		if ( !M.isAlphaGroupMember() ) {
+		if ( !context.isAlphaGroupMember() ) {
 			return '#mw-mf-page-left .icon-' + name;
 		} else {
 			return '#mw-mf-page-left .mw-ui-icon-' + name;

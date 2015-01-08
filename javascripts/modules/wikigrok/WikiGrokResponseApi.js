@@ -1,6 +1,7 @@
 // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 ( function ( M ) {
 	var WikiGrokResponseApi,
+		context = M.require( 'context' ),
 		Api = M.require( 'api' ).Api;
 
 	/**
@@ -38,7 +39,7 @@
 				task_type: this.taskType,
 				subject_id: this.subjectId,
 				subject: this.subject,
-				mobile_mode: M.getMode(),
+				mobile_mode: context.getMode(),
 				testing: this.testing,
 				claims: JSON.stringify( claims )
 			} );

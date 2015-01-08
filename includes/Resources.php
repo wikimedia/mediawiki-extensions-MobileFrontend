@@ -177,7 +177,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.modules',
 		),
 		'scripts' => array(
-			'javascripts/modes.js',
+			'javascripts/context.js',
 		),
 	),
 	'mobile.browser' => $wgMFResourceFileModuleBoilerplate + array(

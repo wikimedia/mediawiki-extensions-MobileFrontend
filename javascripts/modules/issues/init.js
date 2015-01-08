@@ -1,11 +1,11 @@
 ( function ( M, $ ) {
 
 	var module = ( function () {
-		var
+		var context = M.require( 'context' ),
 			Icon = M.require( 'Icon' ),
-			inBeta = M.isBetaGroupMember(),
+			inBeta = context.isBetaGroupMember(),
 			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' ),
-			inAlpha = M.isAlphaGroupMember();
+			inAlpha = context.isAlphaGroupMember();
 
 		/**
 		 * Extract a summary message from a cleanup template generated element that is

@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Checkbox,
+		context = M.require( 'context' ),
 		View = M.require( 'View' ),
 		settings = M.require( 'settings' );
 
@@ -35,7 +36,7 @@
 		var cb,
 			saveLI = $( '#mw-mf-settings-save' );
 
-		if ( M.isAlphaGroupMember() ) {
+		if ( context.isAlphaGroupMember() ) {
 			cb = new Checkbox( {
 				name: 'expandSections',
 				enableMsg: mw.msg( 'mobile-frontend-expand-sections-status' ),

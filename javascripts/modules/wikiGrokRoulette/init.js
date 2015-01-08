@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	M.assertMode( [ 'alpha' ] );
+	M.require( 'context' ).assertMode( [ 'alpha' ] );
 	var $wikiGrokMenuItem =  $( '#mw-mf-page-left' ).find( '.wikigrok-roulette' ),
 		wikiGrokRoulette = M.require( 'modules/wikiGrokRoulette/wikiGrokRoulette' );
 

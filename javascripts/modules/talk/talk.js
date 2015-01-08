@@ -4,9 +4,10 @@
 		user = M.require( 'user' ),
 		licenseLink = mw.config.get( 'wgMFLicenseLink' ),
 		$talk = $( '.talk' ),
-		page = M.getCurrentPage();
+		page = M.getCurrentPage(),
+		context = M.require( 'context' );
 
-	M.assertMode( [ 'beta', 'alpha', 'app' ] );
+	context.assertMode( [ 'beta', 'alpha', 'app' ] );
 
 	M.overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
@@ -49,7 +50,7 @@
 
 	// add an "add discussion" button to talk pages (only for beta and logged in users)
 	if (
-		M.isBetaGroupMember() &&
+		context.isBetaGroupMember() &&
 		!user.isAnon() &&
 		( page.inNamespace( 'talk' ) || page.inNamespace( 'user_talk' ) )
 	) {

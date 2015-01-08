@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var drawer;
+	var drawer,
+		context = M.require( 'context' );
 
 	/**
 	 * Return the matched reference among the children of ol.references
@@ -51,7 +52,7 @@
 		var $container = page ? page.$el : $( '#content' ),
 			module, view, ReferencesDrawer;
 
-		if ( M.isBetaGroupMember() ) {
+		if ( context.isBetaGroupMember() ) {
 			module = 'mobile.references.beta';
 			view = 'modules/references/ReferencesDrawerBeta';
 		} else {

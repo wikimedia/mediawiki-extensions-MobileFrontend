@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var page = M.getCurrentPage(),
 		currentPageTitle =  page.title,
+		context = M.require( 'context' ),
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
 		escapeHash = M.require( 'util' ).escapeHash,
@@ -206,7 +207,7 @@
 			collapseSectionsByDefault = true;
 		}
 		expandSections = !collapseSectionsByDefault ||
-			( M.isAlphaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
+			( context.isAlphaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
 
 		$container.find( tagName ).each( function ( i ) {
 			var $heading = $( this ),
