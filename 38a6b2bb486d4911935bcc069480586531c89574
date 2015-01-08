@@ -16,6 +16,24 @@
       "revId": "38a6b2bb486d4911935bcc069480586531c89574",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_53c6e94f",
+        "filename": "tests/qunit/specials/uploads/test_UserGalleryApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-08T21:04:04Z",
+      "side": 1,
+      "message": "I couldn\u0027t find a way to do so. We can always create two separate .jscsrc files but that\u0027s not what we want.",
+      "parentUuid": "ee703fc5_739c4d60",
+      "revId": "38a6b2bb486d4911935bcc069480586531c89574",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
