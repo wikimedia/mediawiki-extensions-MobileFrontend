@@ -23,10 +23,8 @@
 
 	/**
 	 * Log a past click tracking event to the server.
-	 *
-	 * @class SchemaMobileWebClickTracking
 	 * @method
-	 * @static
+	 * @ignore
 	 */
 	function logPastEvent() {
 		var schema,
