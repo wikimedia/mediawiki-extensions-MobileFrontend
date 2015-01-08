@@ -43,6 +43,25 @@
 				}
 			}
 			return campaign;
+		},
+
+		/**
+		 * Return suggestions (questions) from all available campaigns
+		 * @returns {Array} suggestion objects with id, label, and campaign properties
+		 */
+		getAllSuggestions: function () {
+			var campaigns = getCampaigns(),
+				campaignName,
+				questions = [];
+
+			for ( campaignName in campaigns ) {
+				if ( campaigns.hasOwnProperty( campaignName ) ) {
+					// let's keep campaignName, it's used in tests, also maybe useful in other cases
+					campaigns[campaignName].name = campaignName;
+					questions = questions.concat( getCampaignQuestions( campaigns[campaignName] ) );
+				}
+			}
+			return questions;
 		}
 	};
 
@@ -55,6 +74,27 @@
 	 */
 	function getCampaigns() {
 		return mw.config.get( 'wgWikiGrokCampaigns' );
+	}
+
+	/**
+	 * Return campaign questions in the desirable format
+	 * @param {Object} campaign
+	 * @returns {Array} question objects with id, label, and campaign properties
+	 */
+	function getCampaignQuestions( campaign ) {
+		var questionId,
+			questions = [];
+
+		for ( questionId in campaign.questions ) {
+			if ( campaign.questions.hasOwnProperty( questionId ) ) {
+				questions.push( {
+					id: questionId,
+					label: campaign.questions[questionId],
+					campaign: campaign
+				} );
+			}
+		}
+		return questions;
 	}
 
 	/**
