@@ -143,9 +143,11 @@
 			$iframe.appendTo( 'body' ).contents().find( 'body' ).append( el );
 
 			for ( t in transforms ) {
-				if ( el.style[t] !== undefined ) {
-					el.style[t] = 'translate3d(1px,1px,1px)';
-					has3d = window.getComputedStyle( el ).getPropertyValue( transforms[t] );
+				if ( transforms.hasOwnProperty( t ) ) {
+					if ( el.style[t] !== undefined ) {
+						el.style[t] = 'translate3d(1px,1px,1px)';
+						has3d = window.getComputedStyle( el ).getPropertyValue( transforms[t] );
+					}
 				}
 			}
 

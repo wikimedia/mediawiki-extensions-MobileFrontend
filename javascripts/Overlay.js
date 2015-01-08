@@ -169,7 +169,7 @@
 		/**
 		 * Detach the overlay from the current view
 		 * @method
-		 * @param {Boolean} force Whether the overlay should be closed regardless of
+		 * @param {Boolean} [force] Whether the overlay should be closed regardless of
 		 * state (see PhotoUploadProgress)
 		 * @return {Boolean} Whether the overlay was successfully hidden or not
 		 */
@@ -236,7 +236,7 @@
 							var keyboardHeight = 0;
 
 							// detect virtual keyboard height
-							if ( !this.isIos8 ) {
+							if ( !self.isIos8 ) {
 								// this method does not work in iOS 8.02
 								$window.scrollTop( 999 );
 								keyboardHeight = $window.scrollTop();

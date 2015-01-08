@@ -62,10 +62,12 @@
 
 			if ( typeof data !== 'string' ) {
 				for ( key in data ) {
-					if ( data[key] === false ) {
-						delete data[key];
-					} else if ( $.isArray( data[key] ) ) {
-						data[key] = data[key].join( '|' );
+					if ( data.hasOwnProperty( key ) ) {
+						if ( data[key] === false ) {
+							delete data[key];
+						} else if ( $.isArray( data[key] ) ) {
+							data[key] = data[key].join( '|' );
+						}
 					}
 				}
 			}

@@ -21,7 +21,7 @@
 		 * The icon should be used to inform the user that the front-end is
 		 * communicating with the back-end.
 		 *
-		 * @param {Object} options See `Icon` for more details
+		 * @param {Object} [options] See `Icon` for more details
 		 * @return {Icon}
 		 */
 		spinner: function ( options ) {
