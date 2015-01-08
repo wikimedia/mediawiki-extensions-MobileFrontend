@@ -16,6 +16,40 @@
       "revId": "86ef03e1688ca73dd0a8a804f685ec96e8332633",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_2ac89da9",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-08T00:27:12Z",
+      "side": 1,
+      "message": "Since these are overriden should not be private...",
+      "revId": "86ef03e1688ca73dd0a8a804f685ec96e8332633",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_4ac5d18f",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-08T00:27:12Z",
+      "side": 1,
+      "message": "Since these are overriden should not be private...",
+      "revId": "86ef03e1688ca73dd0a8a804f685ec96e8332633",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
