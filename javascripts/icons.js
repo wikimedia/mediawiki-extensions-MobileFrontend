@@ -29,6 +29,7 @@
 
 			return new Icon( $.extend( options, {
 				name: 'spinner',
+				label: mw.msg( 'mobile-frontend-loading-message' ),
 				additionalClassNames: 'spinner loading'
 			} ) );
 		}

@@ -43,7 +43,7 @@
 		 * @method
 		 */
 		markAsRead: function () {
-			this.$badge.find( 'span' ).remove();
+			this.$badge.find( '.notification-count' ).remove();
 		},
 		/** @inheritdoc */
 		initialize: function ( options ) {

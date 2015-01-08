@@ -17,11 +17,22 @@
 	.background-image('images/ajax-loader.gif') !important;
 }
 
-.loading {
+// FIXME: This can be removed when mw-ui-icon in stable
+.beta .loading,
+.stable .loading {
 
 	&.spinner {
 		height: 54px;
 		text-align: center;
 		background-position: 50%;
+	}
+}
+
+// FIXME: Remove alpha class when mw-ui-icon class in stable
+.alpha {
+	.loading {
+		&.spinner {
+			margin: 8px auto;
+		}
 	}
 }

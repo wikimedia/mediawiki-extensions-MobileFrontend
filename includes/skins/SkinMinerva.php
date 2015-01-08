@@ -257,6 +257,11 @@ class SkinMinerva extends SkinTemplate {
 			) ) .
 			Html::element(
 				'span',
+				array( 'class' => 'label' ),
+				$title
+			) .
+			Html::element(
+				'span',
 				array( 'class' => $spanClass ),
 				$spanLabel
 			) .
@@ -660,11 +665,11 @@ class SkinMinerva extends SkinTemplate {
 		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl();
 		$tpl->set( 'menuButton',
 			Html::element( 'a', array(
-			'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' ),
-			'href' => $url,
-			'class' => MobileUI::iconClass( 'mainmenu' ),
-			'id'=> 'mw-mf-main-menu-button',
-			) )
+				'title' => $this->msg( 'mobile-frontend-main-menu-button-tooltip' ),
+				'href' => $url,
+				'class' => MobileUI::iconClass( 'mainmenu' ),
+				'id'=> 'mw-mf-main-menu-button',
+			), $this->msg( 'mobile-frontend-main-menu-button-tooltip' ) )
 		);
 	}
 

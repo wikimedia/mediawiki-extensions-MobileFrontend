@@ -54,30 +54,6 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	}
 
 	/**
-	 * Creates element relating to secondary button
-	 * Unlike method in stable adds span outside the link element.
-	 * @param string $title Title attribute value of secondary button
-	 * @param string $url of secondary button
-	 * @param string $spanLabel text of span associated with secondary button.
-	 * @param string $spanClass the class of the secondary button
-	 * @return string html relating to button
-	 */
-	protected function createSecondaryButton( $title, $url, $spanLabel, $spanClass ) {
-		return Html::element( 'a', array(
-				'title' => $title,
-				'href' => $url,
-				'class' => MobileUI::iconClass( 'notifications', 'element',
-					'user-button main-header-button icon-32px' ),
-				'id' => 'secondary-button',
-			) ) .
-			Html::element(
-				'span',
-				array( 'class' => $spanClass ),
-				$spanLabel
-			);
-	}
-
-	/**
 	 * Returns an array of sitelinks to add into the main menu footer.
 	 * @return Array array of site links
 	 */
