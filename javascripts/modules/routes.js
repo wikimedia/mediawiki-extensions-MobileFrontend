@@ -1,7 +1,7 @@
 /* Defines all possible routes in MobileFrontend and where to find the code to provide them. */
 ( function ( M, $ ) {
-	var
-		lastFile;
+	var lastFile,
+		loader = M.require( 'loader' );
 
 	// FIXME: this is hacky but it would be hard to pass a file in a route
 	M.on( '_upload-preview', function ( file ) {
@@ -11,7 +11,7 @@
 	// Upload Tutorial
 	M.overlayManager.add( /^\/upload-tutorial\/?(.*)$/, function ( funnel ) {
 		var result = $.Deferred();
-		M.loadModule( 'mobile.uploads' ).done( function () {
+		loader.loadModule( 'mobile.uploads' ).done( function () {
 			var UploadTutorialNew = M.require( 'modules/uploads/UploadTutorial' );
 			result.resolve( new UploadTutorialNew( {
 				funnel: funnel || null
@@ -23,7 +23,7 @@
 	// Upload Preview
 	M.overlayManager.add( /^\/upload-preview\/?(.*)$/, function ( funnel ) {
 		var result = $.Deferred();
-		M.loadModule( 'mobile.uploads' ).done( function () {
+		loader.loadModule( 'mobile.uploads' ).done( function () {
 			var PhotoUploadOverlay = M.require( 'modules/uploads/PhotoUploadOverlay' );
 			result.resolve( new PhotoUploadOverlay( {
 				page: M.getCurrentPage(),

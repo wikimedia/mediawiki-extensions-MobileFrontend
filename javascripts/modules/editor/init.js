@@ -3,6 +3,7 @@
 	var
 		settings = M.require( 'settings' ),
 		util = M.require( 'util' ),
+		loader = M.require( 'loader' ),
 		query = util.query,
 		Icon = M.require( 'Icon' ),
 		disabledEditIcon = new Icon( {
@@ -147,7 +148,7 @@
 			 * @method
 			 */
 			function loadSourceEditor() {
-				M.loadModule( 'mobile.editor.overlay' ).done( function () {
+				loader.loadModule( 'mobile.editor.overlay' ).done( function () {
 					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
 					result.resolve( new EditorOverlay( editorOptions ) );
 				} );
@@ -171,7 +172,7 @@
 				// the VisualEditor is the default editor for this wiki
 				preferredEditor === 'VisualEditor'
 			) {
-				M.loadModule( 'mobile.editor.ve' ).done( function () {
+				loader.loadModule( 'mobile.editor.ve' ).done( function () {
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 					result.resolve( new VisualEditorOverlay( editorOptions ) );
 				} ).fail( loadSourceEditor );

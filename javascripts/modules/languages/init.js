@@ -1,12 +1,13 @@
 ( function ( M, $ ) {
 
-	var MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+	var loader = M.require( 'loader' ),
+		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	M.overlayManager.add( /^\/languages$/, function () {
 		var result = $.Deferred();
 
-		M.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
+		loader.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
 			var LanguageOverlay = M.require( 'languages/LanguageOverlay' );
 
 			M.pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {

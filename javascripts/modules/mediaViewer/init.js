@@ -1,4 +1,5 @@
 ( function ( M, $ ) {
+	var loader = M.require( 'loader' );
 	/**
 	 * Add routes to images and handle clicks
 	 * @method
@@ -32,7 +33,7 @@
 	 */
 	function loadImageOverlay( title ) {
 		var result = $.Deferred();
-		M.loadModule( 'mobile.mediaViewer' ).done( function () {
+		loader.loadModule( 'mobile.mediaViewer' ).done( function () {
 			var caption = $( 'a[href*="' + title + '"]' ).siblings( '.thumbcaption' ).text(),
 				ImageOverlay = M.require( 'modules/mediaViewer/ImageOverlay' );
 
