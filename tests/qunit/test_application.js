@@ -1,3 +1,4 @@
+//jscs:disable jsDoc
 ( function ( $, M ) {
 	QUnit.module( 'MobileFrontend modules' );
 
@@ -8,7 +9,7 @@
 				M.define( 'testModule1', 'again' );
 			},
 			/already exists/,
-			"throws an error when module already exists"
+			'throws an error when module already exists'
 		);
 	} );
 
@@ -18,7 +19,7 @@
 				M.require( 'dummy' );
 			},
 			/not found/,
-			"throws an error when module doesn't exist"
+			'throws an error when module doesn\'t exist'
 		);
 		M.define( 'testModule2', 'test module 2' );
 		assert.strictEqual( M.require( 'testModule2' ), 'test module 2' );

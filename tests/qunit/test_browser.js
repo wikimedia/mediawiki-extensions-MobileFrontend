@@ -1,3 +1,4 @@
+//jscs:disable jsDoc
 ( function ( $, M ) {
 	var Browser = M.require( 'Browser' ),
 		$html = $( 'html' );
@@ -65,11 +66,9 @@
 	} );
 
 	QUnit.test( 'Methods are cached', 15, function ( assert ) {
-		/** @ignore */
 		function cache( obj, method ) {
 			return obj[ '__cache' + obj[ method ].cacheId ];
 		}
-		/** @ignore */
 		function keys( obj ) {
 			return $.map( obj, function ( key ) {
 				return key;
