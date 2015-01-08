@@ -1,3 +1,4 @@
+//jscs:disable jsDoc
 ( function ( M, $ ) {
 
 	var WikiGrokAbTest = M.require( 'WikiGrokAbTest' ),
@@ -15,20 +16,20 @@
 
 		// A map of expected version to last character of the user's token
 		var dataProvider = {
-			'A': '0123456789ABCDEFGHIJKLMNOPQRSTU'.split( '' ),
-			'B': 'VWXYZabcdefghijklmnopqrstuvwxyz'.split( '' )
+			A: '0123456789ABCDEFGHIJKLMNOPQRSTU'.split( '' ),
+			B: 'VWXYZabcdefghijklmnopqrstuvwxyz'.split( '' )
 		};
 
 		this.stub( wikiGrokUser, 'getToken' );
 
 		$.each( dataProvider, function ( expectedVersion, tokens ) {
 			$.each( tokens, function ( i, token ) {
-					wikiGrokUser.getToken.returns( token );
+				wikiGrokUser.getToken.returns( token );
 
-					assert.strictEqual( enabledTest.getVersion( wikiGrokUser ), expectedVersion );
+				assert.strictEqual( enabledTest.getVersion( wikiGrokUser ), expectedVersion );
 			} );
 		} );
 
 	} );
 
-} ( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, jQuery ) );

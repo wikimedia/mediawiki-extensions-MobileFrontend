@@ -1,3 +1,4 @@
+//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var WikiGrokDialogC = M.require( 'modules/wikigrok/WikiGrokDialogC' ),
@@ -5,20 +6,20 @@
 		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		campaigns = {
 			actor: {
-				property: "P106",
+				property: 'P106',
 				questions: {
-					Q10798782: "television actor",
-					Q10800557: "film actor"
+					Q10798782: 'television actor',
+					Q10800557: 'film actor'
 				},
-				name: "actor",
-				propertyId: "P106",
-				propertyName: "occupation"
+				name: 'actor',
+				propertyId: 'P106',
+				propertyName: 'occupation'
 			}
 		},
 		suggestions = {
 			actor: {
 				id: 'P106',
-				list: ['Q10798782', 'Q10800557'],
+				list: [ 'Q10798782', 'Q10800557' ],
 				name: 'actor'
 			}
 		},
@@ -33,7 +34,7 @@
 			this.sandbox.stub( WikiGrokDialogC.prototype, 'log' );
 			this.sandbox.stub( WikiGrokDialogC.prototype, 'logError' );
 
-			this.sandbox.stub( mw.config, 'get').withArgs( 'wgWikiGrokCampaigns' )
+			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgWikiGrokCampaigns' )
 				.returns( campaigns );
 			this.sandbox.stub( WikiGrokResponseApi.prototype, 'recordClaims' )
 				.returns( $.Deferred().resolve() );
@@ -56,7 +57,7 @@
 		var tags = this.wk.$el.find( '.tags .ui-tag-button' ),
 			labels = tags.find( 'label' );
 		// the initial screen buttons are hidden
-		assert.strictEqual( this.$el.find( '.wg-buttons' ).css( 'display' ), 'none');
+		assert.strictEqual( this.$el.find( '.wg-buttons' ).css( 'display' ), 'none' );
 		// The question is there
 		assert.strictEqual( tags.length, 2, 'Correct number of tags' );
 		assert.strictEqual( labels.first().text(),
