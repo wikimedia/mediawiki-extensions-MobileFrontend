@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_739c4d60",
+        "filename": "tests/qunit/specials/uploads/test_UserGalleryApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-08T21:01:20Z",
+      "side": 1,
+      "message": "Is there a way we can make this a global for all files?",
+      "revId": "38a6b2bb486d4911935bcc069480586531c89574",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
