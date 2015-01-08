@@ -40,7 +40,10 @@ module.exports = function ( grunt ) {
 			]
 		},
 		jscs: {
-			main: [ '<%= jshint.sources %>' ]
+			main: [
+				'<%= jshint.sources %>',
+				'<%= files.jsTests %>'
+			]
 		},
 		qunit: {
 			all: {
