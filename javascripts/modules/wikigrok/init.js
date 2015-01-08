@@ -112,6 +112,9 @@
 		return (
 			// WikiGrok is enabled and configured for this user
 			versionConfig &&
+			// Only show WikiGrok to 10 in every 62 users so that we don't overload
+			// EventLogging during tests. See mw.user.generateRandomSessionId().
+			wikiGrokUser.getToken().charAt( 0 ) < 'A' &&
 			// User is not anonymous or we have enabled WikiGrok for anonymous users
 			( !mw.user.isAnon() || mw.config.get( 'wgMFEnableWikiGrokForAnons' ) ) &&
 			// User hasn't already contributed through WikiGrok on this page before or they
