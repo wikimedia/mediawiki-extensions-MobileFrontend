@@ -5,7 +5,8 @@
 		"JsDiff": true,
 		"Hogan": true,
 		"QUnit": true,
-		"mw": true
+		"mw": true,
+		"OO": true
 	},
 
 	"browser": true,
