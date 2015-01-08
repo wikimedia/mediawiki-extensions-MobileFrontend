@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_e9270ab0",
+        "filename": "tests/phpunit/skins/SkinTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-01-08T22:27:49Z",
+      "side": 1,
+      "message": "newMainPage()",
+      "revId": "cb74775cbc06e5c9bbd7d02d2381a14f8404180d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
