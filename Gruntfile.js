@@ -40,9 +40,16 @@ module.exports = function ( grunt ) {
 		},
 		jscs: {
 			main: [
-				'<%= jshint.sources %>',
-				'<%= files.jsTests %>'
-			]
+				'<%= files.js %>'
+			],
+			test: {
+				options: {
+					config: '.jscsrctest.js',
+				},
+				files: {
+					src: '<%= files.jsTests %>'
+				}
+			}
 		},
 		qunit: {
 			all: {
@@ -125,7 +132,7 @@ module.exports = function ( grunt ) {
 		checkInstallPathNotFound( MW_INSTALL_PATH, grunt );
 	} );
 
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs:main' ] );
+	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
 	grunt.registerTask( 'docs', [ 'checkInstallPath', 'clean:jsdocs', 'mkdir:jsdocs', 'jsduck:main' ] );
 
 	// grunt test will be run by npm test which will be run by Jenkins
