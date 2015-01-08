@@ -195,23 +195,20 @@
 		},
 
 		/**
-		 * FIXME: rename to getSection
 		 * FIXME: Change function signature to take the anchor of the heading
 		 * @method
 		 * @param {String} id of the section
 		 * @return {Section}
 		 */
-		getSubSection: function ( id ) {
+		getSection: function ( id ) {
 			return this._sectionLookup[ id ];
 		},
 
 		/**
-		 * FIXME: rename to getSections
-		 *
 		 * @method
 		 * @return {Array}
 		 */
-		getSubSections: function () {
+		getSections: function () {
 			return this.sections;
 		}
 	} );

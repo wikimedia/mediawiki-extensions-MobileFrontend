@@ -47,7 +47,7 @@
 			if ( !options.section ) {
 				M.pageApi.getPage( options.title ).done( function ( pageData ) {
 					var page = new Page( pageData );
-					options.section = page.getSubSection( options.id );
+					options.section = page.getSection( options.id );
 					self.render( options );
 				} );
 			} else {

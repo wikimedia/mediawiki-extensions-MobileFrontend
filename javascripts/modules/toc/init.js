@@ -11,7 +11,7 @@
 	 */
 	function init( page ) {
 		var toc,
-			sections = page.getSubSections(),
+			sections = page.getSections(),
 			enableToc = mw.config.get( 'wgTOC' );
 
 		if ( enableToc ||

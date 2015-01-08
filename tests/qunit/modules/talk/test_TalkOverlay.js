@@ -30,11 +30,11 @@ QUnit.test( '#TalkOverlay (new page; anonymous)', 4, function( assert ) {
 		page = overlay.page;
 
 	assert.strictEqual( page.title, 'Talk:No exist', 'Title set' );
-	assert.strictEqual( page.getSubSections().length, 0, 'A page was setup with no sections' );
+	assert.strictEqual( page.getSections().length, 0, 'A page was setup with no sections' );
 
 	// reload discussion board via ajax
 	overlay._loadContent( options );
-	assert.strictEqual( page.getSubSections().length, 0, 'Discussions reloaded, still no sections' );
+	assert.strictEqual( page.getSections().length, 0, 'Discussions reloaded, still no sections' );
 
 	// check whether there is an Add discussion button
 	assert.strictEqual( overlay.$( '.add' ).length, 0, 'There is no "Add discussion" button' );

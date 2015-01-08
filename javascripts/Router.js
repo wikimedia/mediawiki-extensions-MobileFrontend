@@ -67,8 +67,9 @@
 	}
 
 	for ( key in EventEmitter.prototype ) {
-		// FIXME: check for hasOwnProperty
-		Router.prototype[ key ] = EventEmitter.prototype[ key ];
+		if ( EventEmitter.prototype.hasOwnProperty( key ) ) {
+			Router.prototype[ key ] = EventEmitter.prototype[ key ];
+		}
 	}
 
 	/**
