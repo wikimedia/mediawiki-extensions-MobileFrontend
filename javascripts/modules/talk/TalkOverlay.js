@@ -124,7 +124,7 @@
 			 */
 			_addContent: function ( pageData, options ) {
 				var page = new Page( pageData ),
-					sections = page.getSubSections();
+					sections = page.getSections();
 
 				this.page = page;
 
