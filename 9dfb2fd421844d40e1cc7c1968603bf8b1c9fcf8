@@ -16,6 +16,24 @@
       "revId": "9dfb2fd421844d40e1cc7c1968603bf8b1c9fcf8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_9bcfaf82",
+        "filename": "javascripts/moduleLoader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-09T18:09:33Z",
+      "side": 1,
+      "message": "yes lolz",
+      "parentUuid": "ee703fc5_2944224a",
+      "revId": "9dfb2fd421844d40e1cc7c1968603bf8b1c9fcf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
