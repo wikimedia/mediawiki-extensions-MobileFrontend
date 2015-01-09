@@ -90,7 +90,7 @@
 			content: 'Some content'
 		} );
 		assert.strictEqual( view.$el[ 0 ].tagName.toUpperCase(), 'DIV', 'wrap template in <div>' );
-		assert.strictEqual( view.$el.attr( 'class' ), 'my-class', 'set class for $el' );
+		assert.strictEqual( view.$el.hasClass( 'my-class' ), true, 'set class for $el' );
 		assert.strictEqual( view.title(), 'Test', 'fill template with data from options' );
 		assert.strictEqual( view.content(), 'Some content', 'fill template with data from options' );
 	} );
