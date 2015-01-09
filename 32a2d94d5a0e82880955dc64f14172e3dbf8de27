@@ -37,6 +37,41 @@
     },
     {
       "key": {
+        "uuid": "ee703fc5_fbd4ab4d",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-09T17:54:36Z",
+      "side": 1,
+      "message": "hide( true ) doesn\u0027t seem to do anything any more? \nI think all that code can be killed but I may be wrong?",
+      "parentUuid": "ee703fc5_78ebc1db",
+      "revId": "32a2d94d5a0e82880955dc64f14172e3dbf8de27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_1bdabf78",
+        "filename": "javascripts/browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-09T17:54:36Z",
+      "side": 1,
+      "message": "Can you explain in commit message why this is better and why you are avoiding it?",
+      "revId": "32a2d94d5a0e82880955dc64f14172e3dbf8de27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_35c6b54f",
         "filename": "javascripts/mainmenu.js",
         "patchSetId": 2
@@ -84,6 +119,24 @@
       "side": 1,
       "message": "I think this one explains it succinctly: http://learn.jquery.com/performance/optimize-selectors/#id-based-selectors",
       "parentUuid": "ee703fc5_38cc698c",
+      "revId": "32a2d94d5a0e82880955dc64f14172e3dbf8de27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_fb334bbe",
+        "filename": "javascripts/mainmenu.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-09T17:54:36Z",
+      "side": 1,
+      "message": "Yeh this needs some kind of comment in the commit message. All this is mute though as I think the main menu code needs a big rewrite and if we use a View that encourage this sort of behaviour using this.$.\n\nSee also: https://phabricator.wikimedia.org/T86238",
+      "parentUuid": "ee703fc5_f8d9112d",
       "revId": "32a2d94d5a0e82880955dc64f14172e3dbf8de27",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
