@@ -52,6 +52,24 @@
       "revId": "38a6b2bb486d4911935bcc069480586531c89574",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_b53de48c",
+        "filename": "tests/qunit/specials/uploads/test_UserGalleryApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-09T18:29:40Z",
+      "side": 1,
+      "message": "So here\u0027s one way of specifying a different configuration for a different set of files: https://gerrit.wikimedia.org/r/#/c/183854/",
+      "parentUuid": "ee703fc5_53c6e94f",
+      "revId": "38a6b2bb486d4911935bcc069480586531c89574",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
