@@ -16,6 +16,24 @@
       "revId": "feee3cdf5c1bdb30653a3c8c08be04bb70063150",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_9be80fdf",
+        "filename": "tests/qunit/test_modules.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-09T18:06:06Z",
+      "side": 1,
+      "message": "Sounds good!",
+      "parentUuid": "ee703fc5_292d028c",
+      "revId": "feee3cdf5c1bdb30653a3c8c08be04bb70063150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
