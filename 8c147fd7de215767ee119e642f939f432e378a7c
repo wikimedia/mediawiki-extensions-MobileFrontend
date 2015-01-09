@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_44f5b4b4",
+        "filename": "javascripts/modules.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-09T21:25:42Z",
+      "side": 1,
+      "message": "Could you explain what a module is here? Like \"A module in this context is essentially a Javascript class (not to be confused with ResourceLoader modules).\"",
+      "revId": "8c147fd7de215767ee119e642f939f432e378a7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
