@@ -34,6 +34,24 @@
       "revId": "38a6b2bb486d4911935bcc069480586531c89574",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_98d495c0",
+        "filename": "tests/qunit/specials/uploads/test_UserGalleryApi.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-09T17:27:54Z",
+      "side": 1,
+      "message": "Definitely worth exploring but I don\u0027t see why we can\u0027t merge as is for time being to keep this stuff moving.\nThanks for doing it! :)",
+      "parentUuid": "ee703fc5_53c6e94f",
+      "revId": "38a6b2bb486d4911935bcc069480586531c89574",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
