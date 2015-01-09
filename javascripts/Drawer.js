@@ -36,7 +36,8 @@
 				$( '#mw-mf-page-center' ).off( '.drawer' );
 			} );
 
-			// Allow the drawer itself to be clickable (e.g. for copying and pasting references / clicking links in reference)
+			// Allow the drawer itself to be clickable (e.g. for copying and pasting references /
+			// clicking links in reference)
 			this.$el.on( 'click', function ( ev ) {
 				ev.stopPropagation();
 			} );
