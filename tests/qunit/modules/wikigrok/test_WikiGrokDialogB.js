@@ -1,3 +1,4 @@
+//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var WikiGrokDialogB = M.require( 'modules/wikigrok/WikiGrokDialogB' ),
@@ -5,20 +6,20 @@
 		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
 		campaigns = {
 			actor: {
-				property: "P106",
+				property: 'P106',
 				questions: {
-					Q10798782: "television actor",
-					Q10800557: "film actor"
+					Q10798782: 'television actor',
+					Q10800557: 'film actor'
 				},
-				name: "actor",
-				propertyId: "P106",
-				propertyName: "occupation"
+				name: 'actor',
+				propertyId: 'P106',
+				propertyName: 'occupation'
 			}
 		},
 		suggestions = {
 			actor: {
 				id: 'P106',
-				list: ['Q10798782', 'Q10800557'],
+				list: [ 'Q10798782', 'Q10800557' ],
 				name: 'actor'
 			}
 		},
@@ -33,7 +34,8 @@
 			mw.mobileFrontend.query &&
 			Boolean( mw.mobileFrontend.query.debug ) === true
 		) {
-			this.wk.remove = function () {};
+			this.wk.remove = function () {
+			};
 			this.wk.prependTo( '#content' ).show();
 		}
 	}
@@ -47,7 +49,7 @@
 			this.sandbox.stub( WikiGrokDialogB.prototype, 'log' );
 			this.sandbox.stub( WikiGrokDialogB.prototype, 'logError' );
 
-			this.sandbox.stub( mw.config, 'get').withArgs( 'wgWikiGrokCampaigns' )
+			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgWikiGrokCampaigns' )
 				.returns( campaigns );
 			this.sandbox.stub( WikiGrokResponseApi.prototype, 'recordClaims' )
 				.returns( $.Deferred().resolve() );
