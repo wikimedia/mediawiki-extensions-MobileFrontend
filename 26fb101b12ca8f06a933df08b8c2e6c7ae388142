@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_efb4e1e6",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-09T23:50:04Z",
+      "side": 1,
+      "message": "Should we load WikiGrok version C if the user has already contributed to the page?",
+      "revId": "26fb101b12ca8f06a933df08b8c2e6c7ae388142",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
