@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee703fc5_84b8b5e3",
+        "filename": "javascripts/modules/categories/CategoryAddOverlay.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-09T00:44:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee703fc5_29e8a20a",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_89ce8eb8",
         "filename": "javascripts/modules/categories/CategoryAddOverlay.js",
         "patchSetId": 14
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-08T23:19:11Z",
       "side": 1,
       "message": "typo in this \u0027safeButton\u0027",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_44d29d2d",
+        "filename": "javascripts/modules/categories/CategoryAddOverlay.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-09T00:44:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee703fc5_89ce8eb8",
       "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ee703fc5_64cfa183",
+        "filename": "javascripts/modules/categories/CategoryAddOverlay.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-09T00:44:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee703fc5_a9d35260",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_c9bec6d1",
         "filename": "javascripts/modules/categories/CategoryApi.js",
         "patchSetId": 14
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "ee703fc5_24c9a97b",
+        "filename": "javascripts/modules/categories/CategoryApi.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-09T00:44:23Z",
+      "side": 1,
+      "message": "Yeah, don\u0027t know why i added it :)",
+      "parentUuid": "ee703fc5_c9bec6d1",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_e9914a53",
         "filename": "less/modules/categories/categories.less",
         "patchSetId": 14
@@ -81,6 +153,24 @@
       "writtenOn": "2015-01-08T23:19:11Z",
       "side": 1,
       "message": "Why do you have to use !important?",
+      "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_84e195fd",
+        "filename": "less/modules/categories/categories.less",
+        "patchSetId": 14
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-09T00:44:23Z",
+      "side": 1,
+      "message": "argh, i never updates the less file, i think the main part of this file is obsolete, and the rule for oo-ui-menuSelectWidget should be in Overlay.less. So i think i can remove it, let me look into it :)\n\nP.S.: the height of this element is set everywhere else (because in the first versions the loading class was used inline of the content), which results into an ugly UI. To overwrite it, is had to use important, unfortunately).",
+      "parentUuid": "ee703fc5_e9914a53",
       "revId": "e0aadcbb8021b21d87284c360f596e6a89de9396",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
