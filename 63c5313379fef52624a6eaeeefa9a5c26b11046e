@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_db15279e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-01-09T18:27:15Z",
+      "side": 1,
+      "message": "Remove this line break as otherwise Bug is a paragraph in the body instead of a line in the footer.",
+      "revId": "63c5313379fef52624a6eaeeefa9a5c26b11046e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
