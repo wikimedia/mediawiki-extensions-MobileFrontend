@@ -1,9 +1,12 @@
 <?php
 
+require_once __DIR__ . '/SkinTest.php';
+
 /**
  * @group MobileFrontend
+ * @group Database
  */
-class SkinMinervaAlphaTest extends MediaWikiTestCase {
+class SkinMinervaAlphaTest extends SkinTest {
 	/**
 	 * Check, if context modules aren't arrays. They will be added as an array with modules to
 	 * to load, which doesn't allow arrays as values.
@@ -26,7 +29,7 @@ class SkinMinervaAlphaTest extends MediaWikiTestCase {
 		$context->setTitle( Title::newFromText( 'UTPage' ) );
 		MobileContext::singleton()->setMobileMode( 'alpha' );
 
-		$skin = new SkinMinervaAlpha;
+		$skin = $this->getSkin();
 		$skin->setContext( $context );
 
 		$modules = $skin->getContextSpecificModules();
@@ -34,5 +37,27 @@ class SkinMinervaAlphaTest extends MediaWikiTestCase {
 		foreach ( $modules as $module ) {
 			$this->assertFalse( is_array( $module ), 'Context specific modules can\'t be a arrays.' );
 		}
+	}
+
+	public function providerShowRedLinks() {
+		return array(
+			// $wgShowRedLinks, $wgShowRedLinksAnon, $username, $expected
+			array( false, false, 'UTSysop', true ),
+			array( true, false, 'UTSysop', true ),
+			array( false, true, 'UTSysop', true ),
+			array( true, true, 'UTSysop', true ),
+			array( false, false, 'NotLoggedIn', true ),
+			array( true, false, 'NotLoggedIn', true ),
+			array( false, true, 'NotLoggedIn', true ),
+			array( true, true, 'NotLoggedIn', true ),
+		);
+	}
+
+	protected function getSkin() {
+		return new SkinMinervaAlpha();
+	}
+
+	protected function getMode() {
+		return 'alpha';
 	}
 }
