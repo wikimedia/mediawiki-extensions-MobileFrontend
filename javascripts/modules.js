@@ -1,11 +1,19 @@
-/**
- *
- * @class mw.mobileFrontend
- * @singleton
- */
 ( function () {
-	mw.mobileFrontend = {
-		_modules: {},
+	var loader;
+
+	/**
+	 * Class for managing modules
+	 * @class ModuleLoader
+	 */
+	function ModuleLoader() {
+		/**
+		 * @type {Object} register of defined modules
+		 * @private
+		 */
+		this._register = {};
+	}
+
+	ModuleLoader.prototype = {
 		/**
 		 * Require (import) a module previously defined using define().
 		 *
@@ -13,10 +21,10 @@
 		 * @return {Object} Required module, can be any JavaScript object.
 		 */
 		require: function ( id ) {
-			if ( !this._modules.hasOwnProperty( id ) ) {
+			if ( !this._register.hasOwnProperty( id ) ) {
 				throw new Error( 'Module not found: ' + id );
 			}
-			return this._modules[ id ];
+			return this._register[ id ];
 		},
 
 		/**
@@ -26,10 +34,38 @@
 		 * @param {Object} obj Defined module body, can be any JavaScript object.
 		 */
 		define: function ( id, obj ) {
-			if ( this._modules.hasOwnProperty( id ) ) {
+			if ( this._register.hasOwnProperty( id ) ) {
 				throw new Error( 'Module already exists: ' + id );
 			}
-			this._modules[ id ] = obj;
+			this._register[ id ] = obj;
 		}
 	};
+
+	loader = new ModuleLoader();
+
+	/**
+	 *
+	 * FIXME: In a wonderful world all this could run in a file called init.js,
+	 * all the above code would be core and everyone would be happy.
+	 * @class mw.mobileFrontend
+	 * @singleton
+	 */
+	mw.mobileFrontend = {
+		/**
+		 * @see ModuleLoader#define
+		 */
+		define: function () {
+			loader.define.apply( loader, arguments );
+		},
+		/**
+		 * @see ModuleLoader#require
+		 */
+		require: function () {
+			return loader.require.apply( loader, arguments );
+		}
+	};
+
+	// inception to support testing (!!)
+	mw.mobileFrontend.define( 'ModuleLoader', ModuleLoader );
+
 } () );
