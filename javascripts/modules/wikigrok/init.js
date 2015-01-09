@@ -104,35 +104,47 @@
 	}
 
 	/**
-	 * Check whether WikiGrok should be allowed on this page
+	 * Check whether WikiGrok interface should be loaded on this page
 	 * @ignore
 	 * @returns {Boolean}
 	 */
 	function isWikiGrokAllowed() {
-		return (
+		if (
+			// There is a campaign that applies to this page
+			campaign &&
 			// WikiGrok is enabled and configured for this user
 			versionConfig &&
-			// Only show WikiGrok to 10 in every 62 users so that we don't overload
-			// EventLogging during tests. See mw.user.generateRandomSessionId().
-			( wikiGrokUser.getToken().charAt( 0 ) < 'A' || query.wikidataid || wikiGrokVersion ) &&
 			// User is not anonymous or we have enabled WikiGrok for anonymous users
 			( !mw.user.isAnon() || mw.config.get( 'wgMFEnableWikiGrokForAnons' ) ) &&
-			// User hasn't already contributed through WikiGrok on this page before or they
-			// are testing WikiGrok (by using the query string overrides)
-			( !hasUserAlreadyContributedToWikiGrok() || query.wikidataid || wikiGrokVersion ) &&
 			// We're not on the Main Page
 			!mw.config.get( 'wgIsMainPage' ) &&
-			// Permitted on this device
-			permittedOnThisDevice &&
 			// We're in 'view' mode
 			mw.config.get( 'wgAction' ) === 'view' &&
+			// We're in Main namespace
+			mw.config.get( 'wgNamespaceNumber' ) === 0 &&
 			// Wikibase is active and this page has an item ID
-			wikidataID &&
-			// do we have a campaign?
-			campaign &&
-			// We're in Main namespace,
-			mw.config.get( 'wgNamespaceNumber' ) === 0
-		);
+			wikidataID
+		) {
+			// Bypass certain conditions when debugging or using WikiGrok Roulette
+			if ( query.wikidataid || query.wikigrokversion || versionConfigs.name === 'c' ) {
+				return true;
+			}
+			if (
+				// Only show WikiGrok to 10 in every 62 users so that we don't overload
+				// EventLogging during tests. See mw.user.generateRandomSessionId().
+				// FIXME: Remove this when A/B test is over and page-impression and
+				// widget-impression logging have been removed.
+				wikiGrokUser.getToken().charAt( 0 ) < 'A' &&
+				// Permitted on this device. WikiGrok Roulette is fine on tablet, but
+				// formatting is awkward for other WikiGrok versions on tablet.
+				permittedOnThisDevice &&
+				// User hasn't already contributed through WikiGrok on this page before
+				!hasUserAlreadyContributedToWikiGrok()
+			) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	if ( isWikiGrokAllowed() ) {
