@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_75950d35",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-09T12:13:00Z",
+      "side": 1,
+      "message": "Wait… is this parameter even used?",
+      "revId": "32a2d94d5a0e82880955dc64f14172e3dbf8de27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_35c6b54f",
+        "filename": "javascripts/mainmenu.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-09T12:13:00Z",
+      "side": 1,
+      "message": "Do you have any data that suggests this is more efficient than before?",
+      "revId": "32a2d94d5a0e82880955dc64f14172e3dbf8de27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
