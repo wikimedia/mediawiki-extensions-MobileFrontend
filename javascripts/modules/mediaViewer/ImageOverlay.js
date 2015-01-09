@@ -121,8 +121,6 @@
 				windowRatio = windowWidth / windowHeight,
 				$img = this.$( 'img' );
 
-			// display: table (which we use for vertical centering) makes the overlay
-			// expand so simply setting width/height to 100% doesn't work
 			if ( this.imgRatio > windowRatio ) {
 				if ( windowWidth < this.thumbWidth ) {
 					$img.css( {
