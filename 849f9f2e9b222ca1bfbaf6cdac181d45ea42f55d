@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_44a93477",
+        "filename": "javascripts/user.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-09T21:31:53Z",
+      "side": 1,
+      "message": "Need a semicolon;",
+      "revId": "849f9f2e9b222ca1bfbaf6cdac181d45ea42f55d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
