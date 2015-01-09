@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_c910fdaf",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-09T21:13:22Z",
+      "side": 1,
+      "message": "this is horrible. My browser cannot even handle writing this message given the size of this file.",
+      "revId": "2a9e538008c3f555735bd9dfb7def9b523f60bbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
