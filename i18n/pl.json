@@ -26,7 +26,8 @@
 			"Alan ffm",
 			"Pio387",
 			"Darellur",
-			"Py64"
+			"Py64",
+			"Devwebtel"
 		]
 	},
 	"beta-feature-minerva": "Udostępnij skórkę mobilną ({{int:skinname-minerva}}) na pulpicie",
@@ -111,7 +112,7 @@
 	"mobile-frontend-enable-images": "Włącz wyświetlanie grafik w wersji mobilnej",
 	"mobile-frontend-errorreport-button-label": "Zgłoś błąd",
 	"mobile-frontend-errorreport-section-title": "Sugerowana korekta",
-	"mobile-frontend-errorreport-submit": "Wyślij",
+	"mobile-frontend-errorreport-submit": "Zapisz",
 	"mobile-frontend-errorreport-summary": "Zgłaszanie błędu",
 	"mobile-frontend-expand-sections-status": "Rozwiń wszystkie sekcje",
 	"mobile-frontend-fontchanger-link": "Rozmiar czcionki",
