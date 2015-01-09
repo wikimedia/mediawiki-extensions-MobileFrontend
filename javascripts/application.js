@@ -71,7 +71,6 @@
 	}
 
 	$.extend( M, {
-		init: init,
 		getCurrentPage: getCurrentPage,
 		/**
 		 * Navigation router instance
