@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var licenseLink = mw.config.get( 'wgMFLicenseLink' ),
+	var loader = M.require( 'loader' ),
+		licenseLink = mw.config.get( 'wgMFLicenseLink' ),
 		$talk = $( '.talk' );
 
 	M.assertMode( [ 'beta', 'alpha', 'app' ] );
@@ -18,7 +19,7 @@
 			talkOptions.licenseMsg = mw.msg( 'mobile-frontend-editor-licensing', licenseLink );
 		}
 
-		M.loadModule( 'mobile.talk.overlays' ).done( function () {
+		loader.loadModule( 'mobile.talk.overlays' ).done( function () {
 			var Overlay;
 			if ( id === 'new' ) {
 				Overlay = M.require( 'modules/talk/TalkSectionAddOverlay' );

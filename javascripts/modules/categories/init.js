@@ -1,12 +1,13 @@
 ( function ( M, $ ) {
 
-	var MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
+	var loader = M.require( 'loader' ),
+		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
 	M.overlayManager.add( /^\/categories$/, function () {
 		var result = $.Deferred();
 
-		M.loadModule( 'mobile.categories', true ).done( function ( loadingOverlay ) {
+		loader.loadModule( 'mobile.categories', true ).done( function ( loadingOverlay ) {
 			var CategoryOverlay = M.require( 'categories/CategoryOverlay' );
 
 			loadingOverlay.hide();

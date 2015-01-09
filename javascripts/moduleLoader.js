@@ -1,14 +1,13 @@
-/**
- * Mobile mode helper class
- *
- * @class mw.mobileFrontend
- * @singleton
- */
-( function ( M, $ ) {
-	var LoadingOverlay = M.require( 'LoadingOverlay' );
+( function ( M ) {
+	var loader,
+		LoadingOverlay = M.require( 'LoadingOverlay' );
 
-	mw.mobileFrontend = $.extend( {
-
+	/**
+	 * Utility library for looking up details on the current user
+	 * @class loader
+	 * @singleton
+	 */
+	loader = {
 		/**
 		 * Loads a module via ResourceLoader, displays a full screen LoadingOverlay during load time.
 		 * @method
@@ -27,6 +26,7 @@
 				}
 			} );
 		}
-	}, M );
+	};
+	M.define( 'loader', loader );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
