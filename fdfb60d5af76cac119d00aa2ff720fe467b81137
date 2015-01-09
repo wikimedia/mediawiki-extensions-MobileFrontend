@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_5bf5974b",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-09T18:59:52Z",
+      "side": 1,
+      "message": "Let\u0027s remove this parameter in a separate patch.",
+      "revId": "fdfb60d5af76cac119d00aa2ff720fe467b81137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
