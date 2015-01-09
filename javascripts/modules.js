@@ -3,6 +3,10 @@
 
 	/**
 	 * Class for managing modules
+	 *
+	 * A module in this context is essentially a Javascript class (not to be confused with
+	 * ResourceLoader modules).
+	 *
 	 * @class ModuleLoader
 	 */
 	function ModuleLoader() {
