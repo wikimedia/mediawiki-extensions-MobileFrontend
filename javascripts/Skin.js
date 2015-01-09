@@ -10,6 +10,7 @@
 	 * @class Skin
 	 * @extends View
 	 * @uses Browser
+	 * @uses Page
 	 */
 	Skin = View.extend( {
 		/**
