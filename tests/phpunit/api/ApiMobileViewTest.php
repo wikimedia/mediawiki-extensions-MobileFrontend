@@ -14,7 +14,7 @@ class MockApiMobileView extends ApiMobileView {
 	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions ) {
 		$params = $this->extractRequestParams();
 		if ( !isset( $params['text'] ) ) {
-			throw new MWException( 'Must specify page text' );
+			throw new Exception( 'Must specify page text' );
 		}
 		$parser = new Parser();
 		$po = $parser->parse( $params['text'], $wp->getTitle(), $parserOptions );

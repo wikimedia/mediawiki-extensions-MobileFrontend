@@ -619,6 +619,6 @@ class MFFauxRequest extends FauxRequest {
 
 class BogusMobileContext {
 	public function __call( $who, $cares ) {
-		throw new MWException( "Don't touch me!" );
+		throw new Exception( "Don't touch me!" );
 	}
 }

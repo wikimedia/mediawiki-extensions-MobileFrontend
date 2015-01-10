@@ -133,7 +133,7 @@ class MFMockRevision extends Revision {
 
 	public function __construct( $revisionId ) {
 		if ( $revisionId > 200 ) {
-			throw new MWException( 'Unknown revision ID' );
+			throw new Exception( 'Unknown revision ID' );
 		}
 		$this->id = $revisionId;
 	}
