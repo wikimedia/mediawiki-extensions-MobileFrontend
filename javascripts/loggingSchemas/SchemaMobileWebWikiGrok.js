@@ -13,7 +13,7 @@
 		defaults: $.extend( {}, Schema.prototype.defaults, {
 			// FIXME: Introduce a SchemaWithUser class that has username and userEditCount
 			isLoggedIn: !user.isAnon(),
-			userEditCount: user.getEditCount() || 0,
+			userEditCount: typeof user.getEditCount() === 'number' ? user.getEditCount() : undefined,
 			pageId: mw.config.get( 'wgArticleId' )
 		} )
 	} );

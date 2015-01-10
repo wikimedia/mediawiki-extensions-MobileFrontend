@@ -16,7 +16,7 @@
 			token: Schema.getSessionId(),
 			funnel: 'unknown',
 			// FIXME: Introduce a SchemaWithUser class and rethink the data recorded that follows
-			username: user.getName(),
+			username: user.getName() || undefined,
 			isLoggedIn: !user.isAnon(),
 			isEditable: mw.config.get( 'wgIsPageEditable' )
 		} )

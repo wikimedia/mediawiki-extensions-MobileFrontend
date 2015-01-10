@@ -18,8 +18,8 @@
 			namespace: mw.config.get( 'wgNamespaceNumber' ),
 			isTestA: M.isTestA,
 			// FIXME: Introduce a SchemaWithUser class that has username and userEditCount
-			username: user.getName() || '',
-			userEditCount: user.getEditCount() || 0
+			username: user.getName() || undefined,
+			userEditCount: typeof user.getEditCount() === 'number' ? user.getEditCount() : undefined
 		} )
 	} );
 
