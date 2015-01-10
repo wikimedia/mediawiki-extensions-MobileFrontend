@@ -56,7 +56,6 @@
 
 			for ( campaignName in campaigns ) {
 				if ( campaigns.hasOwnProperty( campaignName ) ) {
-					// let's keep campaignName, it's used in tests, also maybe useful in other cases
 					campaigns[campaignName].name = campaignName;
 					questions = questions.concat( getCampaignQuestions( campaigns[campaignName] ) );
 				}

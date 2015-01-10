@@ -20,7 +20,6 @@
 			this.userToken = options.userToken;
 			this.taskToken = options.taskToken;
 			this.taskType = 'version ' + options.version;
-			this.campaignName = options.campaignName;
 			this.testing = false;
 			Api.prototype.initialize.apply( this, arguments );
 		},
@@ -40,7 +39,6 @@
 				subject_id: this.subjectId,
 				subject: this.subject,
 				mobile_mode: M.getMode(),
-				campaign_name: this.campaignName,
 				testing: this.testing,
 				claims: JSON.stringify( claims )
 			} );

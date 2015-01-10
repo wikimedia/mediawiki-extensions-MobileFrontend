@@ -77,8 +77,7 @@
 				subject: options.name,
 				version: this.version,
 				userToken: options.userToken,
-				taskToken: this.defaults.taskToken,
-				campaignName: options.campaign.name
+				taskToken: this.defaults.taskToken
 			} );
 			Panel.prototype.initialize.apply( this, arguments );
 
@@ -251,7 +250,8 @@
 					value: options.claimLabel,
 					correct: options.claimIsCorrect,
 					propid: options.campaign.propertyId,
-					prop: options.campaign.propertyName
+					prop: options.campaign.propertyName,
+					campaign: options.campaign.name
 				};
 
 			this.apiWikiGrokResponse.recordClaims( [ claim ] ).done( function () {
