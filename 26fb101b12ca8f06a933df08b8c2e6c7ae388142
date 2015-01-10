@@ -16,6 +16,24 @@
       "revId": "26fb101b12ca8f06a933df08b8c2e6c7ae388142",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_af4029a9",
+        "filename": "javascripts/modules/wikigrok/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-10T00:26:47Z",
+      "side": 1,
+      "message": "For now, yes. Otherwise, the user will think WikiGrok Roulette is broken. In the future we will be able to avoid sending users to pages where they\u0027ve already answered since we\u0027ll have all the responses recorded in the MediaWiki database (and the random API will be able to filter them appropriately).",
+      "parentUuid": "ee703fc5_efb4e1e6",
+      "revId": "26fb101b12ca8f06a933df08b8c2e6c7ae388142",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
