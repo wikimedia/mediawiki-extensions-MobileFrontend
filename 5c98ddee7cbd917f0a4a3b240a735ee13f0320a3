@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_52924858",
+        "filename": "tests/phpunit/modules/MFResourceLoaderParsedMessageModuleTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-12T22:44:17Z",
+      "side": 1,
+      "message": "Not in group Mantle any more.",
+      "revId": "5c98ddee7cbd917f0a4a3b240a735ee13f0320a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
