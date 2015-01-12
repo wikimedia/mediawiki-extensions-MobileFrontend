@@ -40,7 +40,7 @@
 			username: userName
 		} ).insertAfter( $container );
 
-		if ( PhotoUploaderButton.isSupported && currentUserName === userName ) {
+		if ( PhotoUploaderButton.isSupported && currentUserName === userName && mw.config.get( 'wgUserCanUpload' ) ) {
 			if ( $container.length ) {
 				if ( user.getEditCount() === 0 ) {
 					$a = $( '<a class="button icon icon-photo icon-text mw-ui-button mw-ui-progressive">' )

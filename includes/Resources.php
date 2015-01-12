@@ -1458,8 +1458,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile.references',
 			'mobile.redirect',
 			'mobile.wikigrok',
-			// FIXME: only load when uploads enabled
-			'mobile.upload.ui',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
