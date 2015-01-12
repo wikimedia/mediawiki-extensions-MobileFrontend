@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_f2059c14",
+        "filename": "javascripts/specials/uploads/PhotoList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-12T21:51:22Z",
+      "side": 1,
+      "message": "You can\u0027t just use `this` I believe.",
+      "revId": "ce63c55c583ecd61fe719f57192aef0e2a2a6078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
