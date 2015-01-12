@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_d7264ac9",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-12T23:20:13Z",
+      "side": 1,
+      "message": "Jon thought: Seems weird adding this if you can\u0027t upload...",
+      "revId": "741b2369c156c2284f52b051f46dcd2c7c865367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
