@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_12e930b3",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebEditing.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-12T22:48:30Z",
+      "side": 1,
+      "message": "This should be just user.inUserBucketA(), not mw.user.inUserBucketA().",
+      "revId": "fdac24eb23aa72592d8a5c519d188f0c5b7b618b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
