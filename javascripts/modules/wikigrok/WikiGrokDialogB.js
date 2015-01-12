@@ -69,6 +69,7 @@
 						propId: suggestion.campaign.propertyId,
 						itemId: suggestion.id,
 						readable: suggestion.label,
+						campaignName: suggestion.campaign.name,
 						// replace 'instance of' with 'type'
 						campaignText: ( suggestion.campaign.propertyName === 'instance of' ) ?
 							'type' : suggestion.campaign.propertyName,
@@ -143,7 +144,8 @@
 						prop: $this.data( 'propname' ),
 						propid: $this.data( 'propid' ),
 						value: $this.data( 'readable' ),
-						valueid: $this.data( 'itemid' )
+						valueid: $this.data( 'itemid' ),
+						campaign: $this.data( 'campaignname' )
 					} );
 				} );
 
