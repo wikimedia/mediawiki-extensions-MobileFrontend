@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_12a13042",
+        "filename": "less/reset.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-12T23:30:28Z",
+      "side": 1,
+      "message": "This star makes me nervous. Can we duplicate the element list above (at least until we know what effect this has in alpha)?",
+      "revId": "d54f6683d67e8238865abc92a87870689e7d50f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
