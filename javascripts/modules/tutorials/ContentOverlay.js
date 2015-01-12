@@ -12,17 +12,14 @@
 		className: 'overlay content-overlay',
 		/**
 		 * @inheritdoc
-		 * @type Boolean
 		 */
 		fullScreen: false,
 		/**
 		 * @inheritdoc
-		 * @type Boolean
 		 */
 		closeOnContentTap: true,
 		/**
 		 * @inheritdoc
-		 * @type String
 		 */
 		appendTo: '#mw-mf-page-center',
 		/** @inheritdoc */

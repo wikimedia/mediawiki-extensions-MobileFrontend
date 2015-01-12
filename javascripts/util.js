@@ -41,7 +41,7 @@
 		/**
 		 * Maps current query string parameters to their values.
 		 *
-		 * @type {Object} query
+		 * @property {Object} query
 		 */
 		query: {}
 	};

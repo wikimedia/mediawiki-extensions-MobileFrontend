@@ -50,12 +50,20 @@
 	 * @extends Schema
 	 */
 	SchemaMobileWebClickTracking = Schema.extend( {
-		/** @inheritdoc **/
+		/**
+		 * @inheritdoc
+		 *
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String|undefined} defaults.username Username if the user is logged in, otherwise -
+		 * undefined. Assigning undefined will make event logger omit this property when sending
+		 * the data to a server. According to the schema username is optional.
+		 * @cfg {Number|undefined} defaults.userEditCount The number of edits the user has made
+		 * if the user is logged in, otherwise - undefined. Assigning undefined will make event
+		 * logger omit this property when sending the data to a server. According to the schema
+		 * userEditCount is optional.
+		 */
 		defaults: $.extend( {}, Schema.prototype.defaults, {
 			// FIXME: Introduce a SchemaWithUser class that has username and userEditCount
-			// username or userEditCount cannot be null according to the schema.
-			// They are both optional though.
-			// Assigning undefined will make event logger omit them when sending the data to a server.
 			username: user.getName() || undefined,
 			userEditCount: typeof user.getEditCount() === 'number' ? user.getEditCount() : undefined
 		} ),

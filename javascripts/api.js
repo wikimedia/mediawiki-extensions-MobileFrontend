@@ -13,7 +13,7 @@
 		apiUrl: mw.util.wikiScript( 'api' ),
 		/**
 		 * Whether to use jsonp or not.
-		 * @type {Boolean}
+		 * @property {Boolean}
 		 */
 		useJsonp: false,
 

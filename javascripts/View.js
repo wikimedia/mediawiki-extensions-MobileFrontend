@@ -89,12 +89,12 @@
 	View = EventEmitter.extend( {
 		/**
 		 * Name of tag that contains the rendered template
-		 * @type String
+		 * @property String
 		 */
 		tagName: 'div',
 
 		/**
-		 * @type {Mixed}
+		 * @property {Mixed}
 		 * Specifies the template used in render(). Object|String|HoganTemplate
 		 */
 		template: undefined,
@@ -113,7 +113,7 @@
 		 *     templatePartials: { content: M.template.get( 'sub.hogan' ) }
 		 *     }
 		 *
-		 * @type {Object}
+		 * @property {Object}
 		 */
 		templatePartials: {},
 
