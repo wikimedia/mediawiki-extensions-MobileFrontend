@@ -3,6 +3,7 @@
 		icons = M.require( 'icons' ),
 		UserGalleryApi = M.require( 'specials/uploads/UserGalleryApi' ),
 		PhotoItem = M.require( 'specials/uploads/PhotoItem' ),
+		InfiniteScroll = M.require( 'InfiniteScroll' ),
 		View = M.require( 'View' );
 
 	/**
@@ -10,6 +11,7 @@
 	 * @class PhotoList
 	 * @uses UserGalleryApi
 	 * @uses PhotoItem
+	 * @uses InfiniteScroll
 	 * @extends View
 	 */
 	PhotoList = View.extend( {
@@ -23,13 +25,19 @@
 		},
 		/** @inheritdoc */
 		initialize: function ( options ) {
-			// how close a spinner needs to be to the viewport to trigger loading (px)
-			this.threshold = 1000;
-			this.shouldLoad = true;
 			this.api = new UserGalleryApi( {
 				username: options.username
 			} );
+			// Set up infinite scroll
+			this.infiniteScroll = new InfiniteScroll( 1000 );
+			this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
 			View.prototype.initialize.apply( this, arguments );
+		},
+		/** @inheritdoc */
+		preRender: function () {
+			// Disable until we've got the list rendered
+			this.infiniteScroll.setElement( this.$el );
+			this.infiniteScroll.disable();
 		},
 		/** @inheritdoc */
 		postRender: function () {
@@ -37,10 +45,6 @@
 			this.$list = this.$( 'ul' );
 
 			this._loadPhotos();
-			// FIXME: Consider using setInterval instead or some sort of dethrottling/debouncing to avoid performance
-			// degradation
-			// e.g. http://benalman.com/projects/jquery-throttle-debounce-plugin/
-			$( window ).on( 'scroll', $.proxy( this, '_loadPhotos' ) );
 		},
 		/**
 		 * Check to see if the current view is an empty list.
@@ -95,16 +99,6 @@
 			M.emit( 'photo-loaded', photoItem.$el );
 		},
 		/**
-		 * Check if the user has scrolled near the end of the list.
-		 * @method
-		 * @private
-		 * @return {Boolean}
-		 */
-		_isEndNear: function () {
-			var scrollBottom = $( window ).scrollTop() + $( window ).height();
-			return scrollBottom + this.threshold > this.$end.offset().top;
-		},
-		/**
 		 * Load photos into the view using {{UserGalleryApi}} when the end is near
 		 * and no current API requests are underway.
 		 * @method
@@ -113,29 +107,24 @@
 		_loadPhotos: function () {
 			var self = this;
 
-			if ( this.shouldLoad && this._isEndNear() ) {
-				// don't try to load more until current request is finished
-				this.shouldLoad = false;
-
-				this.api.getPhotos().done( function ( photos ) {
-					if ( photos.length ) {
-						$.each( photos, function () {
-							self.appendPhoto( this );
-						} );
-						// try loading more when end is near only if we got photos last time
-						self.shouldLoad = true;
-					} else {
-						self.$end.remove();
-						if ( self.isEmpty() ) {
-							self.emit( 'empty' );
-							self.showEmptyMessage();
-						}
+			this.api.getPhotos().done( function ( photos ) {
+				if ( photos.length ) {
+					$.each( photos, function ( i, photo ) {
+						self.appendPhoto( photo );
+					} );
+					// try loading more when end is near only if we got photos last time
+					self.infiniteScroll.enable();
+				} else {
+					self.$end.remove();
+					if ( self.isEmpty() ) {
+						self.emit( 'empty' );
+						self.showEmptyMessage();
 					}
-				} ).fail( function () {
-					// try loading again if request failed
-					self.shouldLoad = true;
-				} );
-			}
+				}
+			} ).fail( function () {
+				// try loading again if request failed
+				self.infiniteScroll.enable();
+			} );
 		}
 	} );
 

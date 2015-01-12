@@ -228,6 +228,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/OverlayManager.js',
 			// FIXME: Remove api code to mobile.ajax
 			'javascripts/api.js',
+			'javascripts/InfiniteScroll.js',
 			'javascripts/PageApi.js',
 			'javascripts/Icon.js',
 			'javascripts/icons.js',
