@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 	var Browser = M.require( 'Browser' ),
 		$html = $( 'html' );

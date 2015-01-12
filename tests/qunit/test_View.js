@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 
 	var View = M.require( 'View' );

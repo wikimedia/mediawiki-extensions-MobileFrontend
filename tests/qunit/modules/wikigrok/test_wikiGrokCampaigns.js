@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M, mw ) {
 
 	var wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),

@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var PageList = M.require( 'modules/PageList' ),

@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 
 	var sectionHtml = mw.template.get( 'mobile.toggling.tests', 'section.hogan' ).render(),

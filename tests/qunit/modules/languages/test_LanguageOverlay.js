@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( LanguageOverlay ) {
 	QUnit.module( 'MobileFrontend: LanguageOverlay' );
 

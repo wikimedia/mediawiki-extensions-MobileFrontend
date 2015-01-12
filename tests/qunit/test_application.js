@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 	QUnit.module( 'MobileFrontend modules' );
 

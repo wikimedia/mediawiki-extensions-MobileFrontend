@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var photo = M.require( 'modules/uploads/_leadphoto' ),

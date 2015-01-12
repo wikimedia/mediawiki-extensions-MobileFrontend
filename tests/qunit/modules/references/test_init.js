@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var R = mw.mobileFrontend.require( 'references' ),

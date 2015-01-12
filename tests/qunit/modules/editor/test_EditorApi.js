@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 
 	var EditorApi = M.require( 'modules/editor/EditorApi' );

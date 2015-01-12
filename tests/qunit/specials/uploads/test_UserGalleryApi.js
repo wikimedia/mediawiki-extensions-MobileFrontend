@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 
 	var m = M.require( 'specials/uploads/UserGalleryApi' );

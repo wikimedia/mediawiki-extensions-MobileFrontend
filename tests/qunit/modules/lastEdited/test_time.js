@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( m ) {
 	QUnit.module( 'MobileFrontend: mf-last-modified' );
 

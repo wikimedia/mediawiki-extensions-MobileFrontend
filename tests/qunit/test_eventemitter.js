@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M ) {
 
 	var EventEmitter = M.require( 'eventemitter' );

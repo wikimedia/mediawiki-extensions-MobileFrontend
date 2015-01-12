@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var WikiGrokDialogC = M.require( 'modules/wikigrok/WikiGrokDialogC' ),

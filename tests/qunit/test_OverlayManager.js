@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 	var
 		OverlayManager = M.require( 'OverlayManager' ),

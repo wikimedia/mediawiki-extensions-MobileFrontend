@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 	var PageApi = M.require( 'PageApi' ),
 		pageApi;

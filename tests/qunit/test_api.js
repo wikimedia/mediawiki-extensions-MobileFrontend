@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 	var Api = M.require( 'api' ).Api,
 		stub, tokens;

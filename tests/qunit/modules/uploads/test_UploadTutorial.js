@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M ) {
 
 	var UploadTutorial = M.require( 'modules/uploads/UploadTutorial' ),

@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 	var Router = M.require( 'Router' ),
 		hashQueue = [],

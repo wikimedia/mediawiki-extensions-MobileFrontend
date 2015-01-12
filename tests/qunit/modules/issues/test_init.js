@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 
 	var cleanuptemplates = M.require( 'cleanuptemplates' );

@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 
 	var TalkSectionAddOverlay = M.require( 'modules/talk/TalkSectionAddOverlay' ),

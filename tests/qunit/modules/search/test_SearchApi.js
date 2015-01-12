@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var SearchApi = M.require( 'modules/search/SearchApi' ),

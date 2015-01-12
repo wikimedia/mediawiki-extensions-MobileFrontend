@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),

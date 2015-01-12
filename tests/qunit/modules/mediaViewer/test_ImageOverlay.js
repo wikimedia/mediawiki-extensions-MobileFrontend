@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 	var ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
 		ImageOverlay = M.require( 'modules/mediaViewer/ImageOverlay' ),

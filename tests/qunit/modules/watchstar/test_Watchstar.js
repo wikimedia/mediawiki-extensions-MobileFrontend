@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var Watchstar = M.require( 'modules/watchstar/Watchstar' ),

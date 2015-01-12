@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M ) {
 	var findSizeBucket = M.require( 'modules/mediaViewer' )._findSizeBucket;
 

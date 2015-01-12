@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M, $ ) {
 
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),

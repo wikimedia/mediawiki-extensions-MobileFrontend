@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 
 	var WatchList = M.require( 'modules/watchlist/WatchList' ),

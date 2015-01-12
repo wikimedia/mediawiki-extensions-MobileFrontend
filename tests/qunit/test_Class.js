@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M ) {
 	var Class = M.require( 'Class' );
 

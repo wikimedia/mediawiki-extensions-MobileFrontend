@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( M ) {
 
 	var ProgressBar = M.require( 'modules/uploads/ProgressBar' );

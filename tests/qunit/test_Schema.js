@@ -1,4 +1,3 @@
-//jscs:disable jsDoc
 ( function ( $, M ) {
 	var Schema = M.require( 'Schema' );
 
