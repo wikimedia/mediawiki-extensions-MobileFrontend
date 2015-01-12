@@ -44,6 +44,7 @@
 		},
 		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),
 		/**
+		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.saveMessage Caption for save button on edit form.
 		 * @cfg {String} defaults.cancelButton HTML of the cancel button.

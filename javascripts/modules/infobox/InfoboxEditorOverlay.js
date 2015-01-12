@@ -13,6 +13,9 @@
 	InfoboxEditorOverlay = Overlay.extend( {
 		/**
 		 * @inheritdoc
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {String} defaults.title Page title
+		 * @cfg {String} defaults.descriptionLabel WikiData description of the page
 		 */
 		defaults: {
 			title: pageTitle,

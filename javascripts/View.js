@@ -120,7 +120,7 @@
 		/**
 		 * A set of default options that are merged with options passed into the initialize function.
 		 *
-		 * @type {Object}
+		 * @cfg {Object}
 		 */
 		defaults: {},
 
