@@ -4,8 +4,8 @@
 		<label for="{{name}}-toggle">
 			{{enableMsg}}
 		</label>
-		<div class="option-description">
-			{{descriptionMsg}}
-		</div>
+	</div>
+	<div class="option-description">
+		{{descriptionMsg}}
 	</div>
 </div>
