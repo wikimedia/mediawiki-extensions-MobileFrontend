@@ -54,11 +54,10 @@ class SpecialUploads extends MobileSpecialPage {
 	 */
 	public function getUserUploadsPageHtml( User $user ) {
 		$uploadCount = $this->getUserUploadCount( $user->getName() );
-		$mobileContext = MobileContext::singleton();
 
 		$html = '';
 		$attrs = array();
-		if ( $uploadCount !== false && $mobileContext->userCanUpload() ) {
+		if ( $uploadCount !== false ) {
 			$threshold = $this->getUploadCountThreshold();
 			$html .= '<div class="ctaUploadPhoto content">';
 			if ( $uploadCount > $threshold ) {

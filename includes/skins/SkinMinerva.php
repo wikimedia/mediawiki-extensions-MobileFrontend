@@ -899,6 +899,10 @@ class SkinMinerva extends SkinTemplate {
 				}
 			}
 		}
+
+		if ( $this->mobileContext->userCanUpload() ) {
+			$modules[] = 'mobile.upload.ui';
+		}
 		return $modules;
 	}
 
