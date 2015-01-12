@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_976532ad",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-12T21:24:50Z",
+      "side": 1,
+      "message": "Why is this not getting added using MobileSpecialPage::addModules ?",
+      "revId": "e9ebb4902b7c1a536e98b521f99b822276879648",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
