@@ -11,7 +11,7 @@
 	 */
 	function ModuleLoader() {
 		/**
-		 * @type {Object} register of defined modules
+		 * @property {Object} register of defined modules
 		 * @private
 		 */
 		this._register = {};

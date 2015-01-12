@@ -11,7 +11,6 @@
 		/**
 		 * A set of defaults to log to the schema
 		 *
-		 * @type {Object}
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.mobileMode whether user is in stable beta or alpha
 		 */
@@ -20,7 +19,7 @@
 		},
 		/**
 		 * Name of Schema to log to
-		 * @type {String}
+		 * @property {String}
 		 */
 		name: undefined,
 		/**

@@ -18,25 +18,25 @@
 	Overlay = View.extend( {
 		/**
 		 * Identify whether the element contains position fixed elements
-		 * @type {Boolean}
+		 * @property {Boolean}
 		 */
 		hasFixedHeader: true,
 		/**
 		 * Is overlay fullscreen
-		 * @type {Boolean}
+		 * @property {Boolean}
 		 */
 		fullScreen: true,
 
 		/**
 		 * use '#mw-mf-viewport' rather than 'body' - for some reasons this has
 		 * odd consequences on Opera Mobile (see bug 52361)
-		 * @type {String|jQuery.Object}
+		 * @property {String|jQuery.Object}
 		 */
 		appendTo: '#mw-mf-viewport',
 
 		/**
 		 * Default class name
-		 * @type {String}
+		 * @property {String}
 		 */
 		className: 'overlay',
 		templatePartials: {
@@ -74,7 +74,7 @@
 		},
 		/**
 		 * Flag overlay to close on content tap
-		 * @type {Boolean}
+		 * @property {Boolean}
 		 */
 		closeOnContentTap: false,
 

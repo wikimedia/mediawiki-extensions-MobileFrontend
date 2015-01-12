@@ -74,23 +74,23 @@
 		getCurrentPage: getCurrentPage,
 		/**
 		 * Navigation router instance
-		 * @type {Router}
+		 * @property {Router}
 		 */
 		router: router,
 		/**
 		 * OverlayManager instance
-		 * @type {OverlayManager}
+		 * @property {OverlayManager}
 		 */
 		overlayManager: new OverlayManager( router ),
 		/**
 		 * PageApi instance
-		 * @type {PageApi}
+		 * @property {PageApi}
 		 */
 		pageApi: pageApi,
 		/**
 		 * User Bucketing for A/B testing
 		 ** (we want this to be the same everywhere)
-		 * @type {Boolean}
+		 * @property {Boolean}
 		 */
 		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0
 	} );
