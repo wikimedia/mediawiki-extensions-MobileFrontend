@@ -6,14 +6,6 @@
 {{/error}}
 <ul class="page-list thumbs actionable">
 	{{#pages}}
-	<li title="{{title}}" data-id="{{id}}" class="page-summary">
-		<a href="{{url}}" class="title" name="{{anchor}}" data-latlng="{{latitude}},{{longitude}}" data-title="{{title}}">
-			<div class="list-thumb {{pageimageClass}}" style="{{listThumbStyleAttribute}}"></div>
-			<h3>{{{heading}}}</h3>
-			{{#proximity}}
-			<div class="info proximity">{{proximity}}</div>
-			{{/proximity}}
-		</a>
-	</li>
+		{{>item}}
 	{{/pages}}
 </ul>

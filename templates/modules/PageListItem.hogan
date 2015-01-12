@@ -1,0 +1,15 @@
+<li title="{{title}}" data-id="{{id}}" class="page-summary">
+  <a href="{{url}}" class="title{{^lastModified}} new{{/lastModified}}"
+    {{#anchor}}name="{{anchor}}"{{/anchor}}
+    {{#latitude}}data-latlng="{{latitude}},{{longitude}}"{{/latitude}}
+    data-title="{{title}}">
+    <div class="list-thumb {{pageimageClass}}" style="{{listThumbStyleAttribute}}"></div>
+    <h3>{{{heading}}}</h3>
+    {{#lastModified}}
+    <div class="info">{{lastModifiedMsg 'hi'}} {{lastModified}}</div>
+    {{/lastModified}}
+    {{#proximity}}
+    <div class="info proximity">{{proximity}}</div>
+    {{/proximity}}
+  </a>
+</li>

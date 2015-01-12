@@ -24,7 +24,7 @@
 		 *   {
 		 *     heading: "<strong>C</strong>laude Monet",
 		 *     id: undefined,
-		 *     istThumbStyleAttribute: "background-image: url(http://127.0.0.1:8080/images/thumb/thumb.jpg)",
+		 *     listThumbStyleAttribute: "background-image: url(http://127.0.0.1:8080/images/thumb/thumb.jpg)",
 		 *     pageimageClass: "list-thumb-y",
 		 *     title: "Claude Monet",
 		 *     url: "/wiki/Claude_Monet",
@@ -100,6 +100,9 @@
 		 * @inheritdoc
 		 */
 		template: mw.template.get( 'mobile.pagelist.scripts', 'PageList.hogan' ),
+		templatePartials: {
+			item: mw.template.get( 'mobile.pagelist.scripts', 'PageListItem.hogan' )
+		},
 		/**
 		 * Retrieve pages
 		 *
@@ -121,7 +124,9 @@
 				api = this.api;
 
 			View.prototype.postRender.apply( this, arguments );
-			$li = this.$( 'li' );
+
+			// Get the items that haven't been initialized
+			$li = this.$( 'li:not(.with-watchstar)' );
 
 			// Check what we have in the page list
 			$li.each( function () {
@@ -146,6 +151,9 @@
 							page: page,
 							el: $( '<div>' ).appendTo( this )
 						} );
+
+						$( this ).addClass( 'with-watchstar' );
+
 						/**
 						 * @event watch
 						 * Fired when an article in the PageList is watched.

@@ -386,5 +386,8 @@
 	"mobile-frontend-time-precision-BCE-millennium": "$1 thousand years BCE",
 	"mobile-frontend-time-precision-BCE-century": "$1 hundred years BCE",
 	"mobile-frontend-time-precision-BCE-10annum": "$1s BCE",
-	"mobile-frontend-time-precision-BCE-0annum": "$1 BCE"
+	"mobile-frontend-time-precision-BCE-0annum": "$1 BCE",
+	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|day|days}} ago",
+	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|month|months}} ago",
+	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|year|years}} ago"
 }

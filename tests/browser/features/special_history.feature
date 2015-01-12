@@ -7,9 +7,6 @@ Feature: Special:History (Note test may take a long time to run on first run)
       And I am on the "Selenium diff test" page
     When I click on the history link in the last modified bar
 
-  Scenario: Check more button exists
-    Then I should see a more button
-
   Scenario: Check components in diff summary
     When I click the link in the header bar
     Then the text of the first heading should be "Selenium diff test"

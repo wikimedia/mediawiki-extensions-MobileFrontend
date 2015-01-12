@@ -231,10 +231,33 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.watchstar',
 		),
 		'templates' => array(
+			'PageListItem.hogan' => 'templates/modules/PageListItem.hogan',
 			'PageList.hogan' => 'templates/modules/PageList.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/PageList.js',
+		),
+		'messages' => array(
+			'mobile-frontend-watchlist-modified'
+		)
+	),
+
+	'mobile.watchlist' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.pagelist.scripts',
+		),
+		'scripts' => array(
+			'javascripts/modules/watchlist/WatchListApi.js',
+			'javascripts/modules/watchlist/WatchList.js',
+		),
+		'messages' => array(
+			'mobile-frontend-watchlist-modified',
+			'minutes-ago',
+			'seconds-ago',
+			'hours-ago',
+			'mobile-frontend-months-ago',
+			'mobile-frontend-days-ago',
+			'mobile-frontend-years-ago',
 		),
 	),
 
@@ -1496,10 +1519,9 @@ $wgMinervaSpecialPageModules = array(
 		'dependencies' => array(
 			'mobile.loggingSchemas',
 			'mobile.startup',
-			'mobile.pagelist.scripts',
+			'mobile.watchlist',
 		),
 		'scripts' => array(
-			'javascripts/modules/watchlist/WatchList.js',
 			'javascripts/specials/watchlist.js',
 		),
 	),

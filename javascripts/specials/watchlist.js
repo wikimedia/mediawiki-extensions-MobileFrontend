@@ -35,12 +35,13 @@
 				} );
 			} );
 		}
+		// not needed now we have JS view which has infinite scrolling
+		$( '.more' ).remove();
 
 		// Register EventLogging events
 		wlSchema.hijackLink( '.button-bar a', actionNamePrefix + 'switch' );
 		wlSchema.hijackLink( '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
 		wlSchema.hijackLink( '.page-list .title', actionNamePrefix + 'view' );
-		wlSchema.hijackLink( '.more', actionNamePrefix + 'more' );
 	}
 
 	$( function () {
