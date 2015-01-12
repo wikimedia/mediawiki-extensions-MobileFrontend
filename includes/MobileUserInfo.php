@@ -19,11 +19,11 @@ class MobileUserInfo {
 	 * Construct the class
 	 *
 	 * @param User $user A User object
-	 * @throws MWException when used on anonymous user.
+	 * @throws Exception when used on anonymous user.
 	 */
 	public function __construct( User $user ) {
 		if ( $user->isAnon() ) {
-			throw new MWException( __CLASS__ . ' is intended for logged in users only' );
+			throw new Exception( __CLASS__ . ' is intended for logged in users only' );
 		}
 		$this->user = $user;
 	}

@@ -128,13 +128,13 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * Reimplements getDiffBodyCacheKey from DifferenceEngine
 	 * Returns the cache key for diff body text or content.
 	 *
-	 * @throws MWException when no mOldid and mNewid is set
+	 * @throws Exception when no mOldid and mNewid is set
 	 * @see DifferenceEngine:getDiffBodyCacheKey
 	 * @return string
 	 */
 	protected function getDiffBodyCacheKey() {
 		if ( !$this->mOldid || !$this->mNewid ) {
-			throw new MWException( 'mOldid and mNewid must be set to get diff cache key.' );
+			throw new Exception( 'mOldid and mNewid must be set to get diff cache key.' );
 		}
 
 		return wfMemcKey( 'diff', 'inline', MW_DIFF_VERSION,

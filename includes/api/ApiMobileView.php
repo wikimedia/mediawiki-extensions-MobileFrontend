@@ -400,7 +400,7 @@ class ApiMobileView extends ApiBase {
 		if ( !$parserOutput ) {
 			wfDebugLog( 'mobile', "Empty parser output on '{$wp->getTitle()->getPrefixedText()}'" .
 				": rev {$wp->getId()}, time $time" );
-			throw new MWException( __METHOD__ . ": PoolCounter didn't return parser output" );
+			throw new Exception( __METHOD__ . ": PoolCounter didn't return parser output" );
 		}
 		$parserOutput->setTOCEnabled( false );
 		wfProfileOut( __METHOD__ );

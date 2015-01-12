@@ -213,10 +213,10 @@ class DeviceProperties implements IDeviceProperties {
  */
 abstract class PredefinedDeviceProperties implements IDeviceProperties {
 	/**
-	 * Overrides isTablet function to create MWException.
+	 * Overrides isTablet function to create Exception.
 	 */
 	function isTablet() {
-		throw new MWException( __METHOD__ . '() called!' );
+		throw new Exception( __METHOD__ . '() called!' );
 	}
 }
 
