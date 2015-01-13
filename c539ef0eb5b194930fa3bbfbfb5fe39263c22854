@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_9be1d42b",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-13T19:25:08Z",
+      "side": 1,
+      "message": "which event/events? Hrrm. Maybe it\u0027d be a good practice to document the events that are logged by a function (unless it\u0027s super-obvious).",
+      "revId": "c539ef0eb5b194930fa3bbfbfb5fe39263c22854",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
