@@ -33,6 +33,7 @@ class SpecialUploads extends MobileSpecialPage {
 			$user = User::newFromName( $par );
 			if ( !$user || $user->isAnon() ) {
 				// User provided, but is invalid or not registered
+				// FIXME: Use Html class?
 				$html = '<div class="alert error">'
 					. $this->msg( 'mobile-frontend-photo-upload-invalid-user', $par )->parse()
 					. '</div>';
@@ -54,12 +55,17 @@ class SpecialUploads extends MobileSpecialPage {
 	 */
 	public function getUserUploadsPageHtml( User $user ) {
 		$uploadCount = $this->getUserUploadCount( $user->getName() );
+		$mobileContext = MobileContext::singleton();
 
 		$html = '';
 		$attrs = array();
 		if ( $uploadCount !== false ) {
 			$threshold = $this->getUploadCountThreshold();
-			$html .= '<div class="ctaUploadPhoto content">';
+			// FIXME: Use Html class?
+			$html .= '<div class="content">';
+			if ( $mobileContext->userCanUpload() ) {
+				$html .= '<div class="ctaUploadPhoto"></div>';
+			}
 			if ( $uploadCount > $threshold ) {
 				$msg = $this->msg(
 					'mobile-frontend-photo-upload-user-count-over-limit'

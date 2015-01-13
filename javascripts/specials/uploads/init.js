@@ -29,7 +29,8 @@
 	 */
 	function init() {
 		var userGallery, $a,
-			$container = $( '.ctaUploadPhoto' );
+			$btnContainer = $( '.ctaUploadPhoto' ),
+			$content = $( '.content' );
 
 		// Don't attempt to display the gallery if PHP displayed an error
 		if ( $( '.error' ).length ) {
@@ -38,25 +39,25 @@
 
 		userGallery = new PhotoList( {
 			username: userName
-		} ).insertAfter( $container );
+		} ).appendTo( $content );
 
 		if ( PhotoUploaderButton.isSupported && currentUserName === userName && mw.config.get( 'wgUserCanUpload' ) ) {
-			if ( $container.length ) {
+			if ( $btnContainer.length ) {
 				if ( user.getEditCount() === 0 ) {
 					$a = $( '<a class="button icon icon-photo icon-text mw-ui-button mw-ui-progressive">' )
 						.text( mw.msg( 'mobile-frontend-photo-upload-generic' ) )
-						.attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $container );
+						.attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $btnContainer );
 					// FIXME: This is needed so the camera shows. Eww.
 					$( '<div class="icon icon icon-24px">' ).appendTo( $a );
 				} else {
-					createButton( $container );
+					createButton( $btnContainer );
 				}
 			}
 
 			// FIXME: Please find a way to do this without a global event.
 			M.on( '_file-upload', function ( image ) {
 				var newCount, msgKey,
-					$counter = $container.find( 'h2' ).show().find( 'span' );
+					$counter = $btnContainer.find( 'h2' ).show().find( 'span' );
 
 				if ( userGallery.isEmpty() ) {
 					msgKey = 'mobile-frontend-donate-photo-first-upload-success';
