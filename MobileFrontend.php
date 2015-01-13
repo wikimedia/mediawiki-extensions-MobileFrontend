@@ -183,12 +183,6 @@ function efMobileFrontend_Setup() {
 		$wgResourceLoaderLESSImportPaths,
 		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall, $wgResourceModules, $wgMobileVEModules;
 
-	// Depends on Mantle extension
-	if ( !class_exists( 'MantleHooks' ) ) {
-		echo "Please install the Mantle MediaWiki extension.\n";
-		die( -1 );
-	}
-
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
 		$wgSpecialPageGroups['Nearby'] = 'pages';
