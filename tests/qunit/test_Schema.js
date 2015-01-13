@@ -3,13 +3,6 @@
 
 	QUnit.module( 'Schema' );
 
-	QUnit.test( '#getSessionId', 3, function ( assert ) {
-		var sessionId = Schema.getSessionId();
-		assert.strictEqual( typeof sessionId, 'string', 'session ID is a string' );
-		assert.strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
-		assert.strictEqual( Schema.getSessionId(), sessionId, 'session ID is not regenerated if present' );
-	} );
-
 	QUnit.test( '#initialize', 3, function ( assert ) {
 		var s1, s2, s3, SubSchema;
 		// Creating a schema without name throws

@@ -86,13 +86,7 @@
 		 * PageApi instance
 		 * @property {PageApi}
 		 */
-		pageApi: pageApi,
-		/**
-		 * User Bucketing for A/B testing
-		 ** (we want this to be the same everywhere)
-		 * @property {Boolean}
-		 */
-		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0
+		pageApi: pageApi
 	} );
 
 	// Initialize

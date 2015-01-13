@@ -15,7 +15,7 @@
 		 *
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Number} defaults.pageId The value of the wgArticleId config variable
-		 * @cfg {String} defaults.token The value of Schema.getSessionId()
+		 * @cfg {String} defaults.token Unique session ID for the user
 		 * @cfg {Number} defaults.revId The value of the wgRevisionId config variable
 		 * @cfg {Number} defaults.namespace The value of the wgNamespaceNumber config variable
 		 * @cfg {Boolean} defaults.isTestA Whether this is the A test in A/B test
@@ -29,10 +29,10 @@
 		 */
 		defaults: $.extend( {}, Schema.prototype.defaults, {
 			pageId: mw.config.get( 'wgArticleId' ),
-			token: Schema.getSessionId(),
+			token: user.getSessionId(),
 			revId: mw.config.get( 'wgRevisionId' ),
 			namespace: mw.config.get( 'wgNamespaceNumber' ),
-			isTestA: M.isTestA,
+			isTestA: user.inUserBucketA(),
 			// FIXME: Introduce a SchemaWithUser class that has username and userEditCount
 			username: user.getName() || undefined,
 			userEditCount: typeof user.getEditCount() === 'number' ? user.getEditCount() : undefined

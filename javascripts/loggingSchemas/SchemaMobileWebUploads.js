@@ -15,7 +15,7 @@
 		 *
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Number} defaults.pageId The value of the wgArticleId config variable
-		 * @cfg {String} defaults.token The value of Schema.getSessionId()
+		 * @cfg {String} defaults.token Unique session ID for the user
 		 * @cfg {String} defaults.funnel Identifier for the upload funnel
 		 * @cfg {String|undefined} defaults.username Username if the user is logged in, otherwise -
 		 * undefined. Assigning undefined will make event logger omit this property when sending
@@ -25,7 +25,7 @@
 		 */
 		defaults: $.extend( {}, Schema.prototype.defaults, {
 			pageId: mw.config.get( 'wgArticleId' ),
-			token: Schema.getSessionId(),
+			token: user.getSessionId(),
 			funnel: 'unknown',
 			// FIXME: Introduce a SchemaWithUser class and rethink the data recorded that follows
 			username: user.getName() || undefined,

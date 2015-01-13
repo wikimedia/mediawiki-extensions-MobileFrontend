@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
-	var user;
+	var user,
+		browser = M.require( 'browser' );
 
 	/**
 	 * Utility library for looking up details on the current user
@@ -29,7 +30,40 @@
 		 */
 		getGroups: function () {
 			return $.Deferred().resolve( mw.config.get( 'wgUserGroups' ) );
+		},
+		/**
+		* Retrieve and, if not present, generate a random session ID
+		* (32 alphanumeric characters).
+		* FIXME: use settings module
+		*
+		* @method
+		* @static
+		* @return {String}
+		*/
+		getSessionId: function () {
+			var sessionId;
+			if ( !browser.supportsLocalStorage() ) {
+				return '';
+			}
+			sessionId = localStorage.getItem( 'sessionId' );
+
+			if ( !sessionId ) {
+				sessionId = mw.user.generateRandomSessionId();
+				localStorage.setItem( 'sessionId', sessionId );
+			}
+			return sessionId;
+		},
+
+		/**
+		* User Bucketing for A/B testing
+		* (we want this to be the same everywhere)
+		* @static
+		* @return {Boolean}
+		*/
+		inUserBucketA: function () {
+			return mw.config.get( 'wgUserId' ) % 2 === 0;
 		}
+
 	};
 	M.define( 'user', user );
 
