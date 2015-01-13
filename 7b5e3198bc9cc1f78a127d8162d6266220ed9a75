@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_bd993582",
+        "filename": "javascripts/application.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-13T00:21:11Z",
+      "side": 1,
+      "message": "I think we should be consistent and define it in the PageApi.js file. Similar to api.js. Possibly rename PageApi.js to pageApi.js.",
+      "revId": "7b5e3198bc9cc1f78a127d8162d6266220ed9a75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
