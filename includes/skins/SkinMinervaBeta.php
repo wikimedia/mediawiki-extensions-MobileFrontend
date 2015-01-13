@@ -89,6 +89,7 @@ class SkinMinervaBeta extends SkinMinerva {
 			$talkTitle = $title->getTalkPage();
 			$buttons['talk'] = array(
 				'attributes' => array(
+					'href' => $talkTitle->getLinkURL(),
 					'class' =>  MobileUI::iconClass( 'talk', 'before', 'talk icon-32px' ),
 					'data-title' => $talkTitle->getFullText(),
 				),
