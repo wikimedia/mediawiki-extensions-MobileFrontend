@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_1de70111",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebEditing.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-13T00:18:05Z",
+      "side": 1,
+      "message": "You need to update documentation above too;",
+      "revId": "6ea545fcd62c1baef3f14870173ffc37118f5e07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_dde8a9df",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebUploads.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-13T00:18:05Z",
+      "side": 1,
+      "message": "here also, updated documentation.",
+      "revId": "6ea545fcd62c1baef3f14870173ffc37118f5e07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
