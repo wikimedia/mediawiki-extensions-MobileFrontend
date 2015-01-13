@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_d13ded8b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-13T19:48:23Z",
+      "side": 1,
+      "message": "I wonder if it maybe a better idea to make InfiniteScroll it\u0027s own module and load only when needed.",
+      "revId": "7f9f16c4d9edaed27fb7cfe694065c58b8806e21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
