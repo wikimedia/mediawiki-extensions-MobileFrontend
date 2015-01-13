@@ -35,7 +35,6 @@ class MobileUserInfo {
 	 * @return int the amount of edits
 	 */
 	public function countRecentEdits( $fromDate ) {
-		wfProfileIn( __METHOD__ );
 		$dbr = wfGetDB( DB_SLAVE );
 		$where = array(
 			'rc_user_text' => $this->user->getName(),
@@ -53,7 +52,6 @@ class MobileUserInfo {
 			$constraints
 		);
 
-		wfProfileOut( __METHOD__ );
 		return $result;
 	}
 
@@ -67,7 +65,6 @@ class MobileUserInfo {
 	public function countRecentUploads( $fromDate ) {
 		global $wgMFPhotoUploadWiki, $wgConf;
 
-		wfProfileIn( __METHOD__ );
 		if ( !$wgMFPhotoUploadWiki ) {
 			$dbr = wfGetDB( DB_SLAVE );
 		} elseif (
@@ -75,7 +72,6 @@ class MobileUserInfo {
 			!in_array( $wgMFPhotoUploadWiki, $wgConf->getLocalDatabases() )
 		) {
 			// early return if the database is invalid
-			wfProfileOut( __METHOD__ );
 			return false;
 		} else {
 			$dbr = wfGetDB( DB_SLAVE, array(), $wgMFPhotoUploadWiki );
@@ -89,7 +85,6 @@ class MobileUserInfo {
 
 		$result = $dbr->selectRowCount( 'image', 'img_timestamp', $where, __METHOD__, $constraints );
 
-		wfProfileOut( __METHOD__ );
 		return $result;
 	}
 
@@ -101,7 +96,6 @@ class MobileUserInfo {
 	public function getLastUpload() {
 		global $wgMFPhotoUploadWiki, $wgConf;
 
-		wfProfileIn( __METHOD__ );
 		if ( !$wgMFPhotoUploadWiki ) {
 			$dbr = wfGetDB( DB_SLAVE );
 		} elseif (
@@ -109,7 +103,6 @@ class MobileUserInfo {
 			!in_array( $wgMFPhotoUploadWiki, $wgConf->getLocalDatabases() )
 		) {
 			// early return if the database is invalid
-			wfProfileOut( __METHOD__ );
 			return false;
 		} else {
 			$dbr = wfGetDB( DB_SLAVE, array(), $wgMFPhotoUploadWiki );
@@ -119,7 +112,7 @@ class MobileUserInfo {
 		$constraints = array( 'ORDER BY' => 'img_timestamp DESC' );
 		$name = $dbr->selectField( 'image', 'img_name', $where, __METHOD__, $constraints );
 		$file = $name === false ? null : wfFindFile( $name );
-		wfProfileOut( __METHOD__ );
+
 		return $file;
 	}
 
@@ -129,7 +122,6 @@ class MobileUserInfo {
 	 * @return Revision|false
 	 */
 	public function getLastEdit() {
-		wfProfileIn( __METHOD__ );
 		$conds = array(
 			'rev_user' => $this->user->getId(),
 		);
@@ -146,7 +138,7 @@ class MobileUserInfo {
 		} else {
 			$rev = false;
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $rev;
 	}
 
@@ -156,7 +148,6 @@ class MobileUserInfo {
 	 * @return array|null
 	 */
 	public function getLastThanking() {
-		wfProfileIn( __METHOD__ );
 		$thank = false;
 		// Check that the Thank Extension and Echo extension are both installed
 		// before doing this (bug 56825).
@@ -174,7 +165,7 @@ class MobileUserInfo {
 				}
 			}
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $thank;
 	}
 }

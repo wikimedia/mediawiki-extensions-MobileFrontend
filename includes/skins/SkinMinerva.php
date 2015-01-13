@@ -37,7 +37,7 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function prepareQuickTemplate() {
 		global $wgAppleTouchIcon, $wgMFNoindexPages;
-		wfProfileIn( __METHOD__ );
+
 		$out = $this->getOutput();
 		// add head items
 		if ( $wgAppleTouchIcon !== false ) {
@@ -100,7 +100,6 @@ class SkinMinerva extends SkinTemplate {
 			$this->prepareMobileFooterLinks( $tpl );
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $tpl;
 	}
 
@@ -484,7 +483,7 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function getLogInOutLink() {
 		global $wgSecureLogin;
-		wfProfileIn( __METHOD__ );
+
 		$query = array();
 		if ( !$this->getRequest()->wasPosted() ) {
 			$returntoquery = $this->getRequest()->getValues();
@@ -542,7 +541,6 @@ class SkinMinerva extends SkinTemplate {
 			);
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $loginLogoutLink;
 	}
 
@@ -994,8 +992,6 @@ class SkinMinerva extends SkinTemplate {
 	 * @param OutputPage $out optional parameter: The OutputPage Obj.
 	 */
 	public function outputPage( OutputPage $out = null ) {
-		wfProfileIn( __METHOD__ );
-
 		// This might seem weird but now the meaning of 'mobile' is morphing to mean 'minerva skin'
 		// FIXME: Explore disabling this via a user preference and see what explodes
 		// Important: This must run before outputPage which generates script and style tags
@@ -1010,7 +1006,6 @@ class SkinMinerva extends SkinTemplate {
 			wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
 		}
 		parent::outputPage();
-		wfProfileOut( __METHOD__ );
 	}
 
 	//

@@ -59,7 +59,6 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	public static function newFromContext( $context, $html ) {
 		global $wgMFSpecialCaseMainPage;
-		wfProfileIn( __METHOD__ );
 
 		$title = $context->getTitle();
 		$isMainPage = $title->isMainPage() && $wgMFSpecialCaseMainPage;
@@ -75,7 +74,6 @@ class MobileFormatter extends HtmlFormatter {
 			$formatter->setRemoveMedia( $context->imagesDisabled() );
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $formatter;
 	}
 
@@ -146,12 +144,11 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return string Processed HTML
 	 */
 	public function getText( $element = null ) {
-		wfProfileIn( __METHOD__ );
 		if ( $this->mainPage ) {
 			$element = $this->parseMainPage( $this->getDoc() );
 		}
 		$html = parent::getText( $element );
-		wfProfileOut( __METHOD__ );
+
 		return $html;
 	}
 
@@ -170,8 +167,6 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return DOMElement|null
 	 */
 	protected function parseMainPage( DOMDocument $mainPage ) {
-		wfProfileIn( __METHOD__ );
-
 		$featuredArticle = $mainPage->getElementById( 'mp-tfa' );
 		$newsItems = $mainPage->getElementById( 'mp-itn' );
 
@@ -221,7 +216,6 @@ class MobileFormatter extends HtmlFormatter {
 			$content = null;
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $content;
 	}
 
@@ -233,7 +227,6 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return string
 	 */
 	protected function headingTransform( $s, $tagName = 'h2' ) {
-		wfProfileIn( __METHOD__ );
 		$tagRegEx = '<' . $tagName . '.*</' . $tagName . '>';
 		$s = $this->pageTransformStart .
 			preg_replace(
@@ -241,7 +234,7 @@ class MobileFormatter extends HtmlFormatter {
 				$s
 			) .
 			$this->pageTransformEnd;
-		wfProfileOut( __METHOD__ );
+
 		return $s;
 	}
 
@@ -269,12 +262,11 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return string
 	 */
 	protected function onHtmlReady( $html ) {
-		wfProfileIn( __METHOD__ );
 		if ( $this->expandableSections ) {
 			$tagName = $this->findTopHeading( $html );
 			$html = $this->headingTransform( $html, $tagName );
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $html;
 	}
 }

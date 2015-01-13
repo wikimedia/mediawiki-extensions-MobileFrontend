@@ -129,9 +129,7 @@ class MobileContext extends ContextSource {
 	public function getDevice() {
 		$mobileHeader = $this->getMFConfig()->get( 'MFMobileHeader' );
 
-		wfProfileIn( __METHOD__ );
 		if ( $this->device ) {
-			wfProfileOut( __METHOD__ );
 			return $this->device;
 		}
 		$detector = DeviceDetection::factory();
@@ -146,7 +144,6 @@ class MobileContext extends ContextSource {
 			$this->device = $detector->detectDeviceProperties( $userAgent, $acceptHeader );
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $this->device;
 	}
 
@@ -302,7 +299,6 @@ class MobileContext extends ContextSource {
 	 * @param string $mode Mode to set
 	 */
 	public function setMobileMode( $mode ) {
-		wfProfileIn( __METHOD__ );
 		if ( $mode !== 'alpha' && $mode !== 'beta' ) {
 			$mode = '';
 		}
@@ -330,7 +326,6 @@ class MobileContext extends ContextSource {
 		$this->getRequest()->response()->setcookie( 'optin', $mode, 0,
 			array( 'prefix' => '', 'domain' => $host )
 		);
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -366,7 +361,6 @@ class MobileContext extends ContextSource {
 		if ( !is_null( $this->mobileView ) ) {
 			return $this->mobileView;
 		}
-		wfProfileIn( __METHOD__ );
 		// check if we need to toggle between mobile/desktop view
 		$this->checkToggleView();
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
@@ -374,7 +368,6 @@ class MobileContext extends ContextSource {
 			$this->redirectMobileEnabledPages();
 			wfRunHooks( 'EnterMobileMode', array( $this ) );
 		}
-		wfProfileOut( __METHOD__ );
 		return $this->mobileView;
 	}
 
@@ -462,14 +455,9 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function isBlacklistedPage() {
-
-		wfProfileIn( __METHOD__ );
-
 		if ( is_null( $this->blacklistedPage ) ) {
 			$this->blacklistedPage = $this->isBlacklistedPageInternal();
 		}
-
-		wfProfileOut( __METHOD__ );
 
 		return $this->blacklistedPage;
 	}
@@ -611,7 +599,6 @@ class MobileContext extends ContextSource {
 	public function getBaseDomain() {
 		$server = $this->getConfig()->get( 'Server' );
 
-		wfProfileIn( __METHOD__ );
 		$parsedUrl = wfParseUrl( $server );
 		$host = $parsedUrl['host'];
 		// Validates value as IP address
@@ -622,7 +609,7 @@ class MobileContext extends ContextSource {
 			// » RFC 2109 requires it to be included.
 			$host = count( $domainParts ) >= 2 ? '.' . $domainParts[1] . '.' . $domainParts[0] : $host;
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $host;
 	}
 
@@ -730,10 +717,7 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	public function getMobileHostToken( $mobileUrlHostTemplate ) {
-		wfProfileIn( __METHOD__ );
-		$mobileToken = preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
-		wfProfileOut( __METHOD__ );
-		return $mobileToken;
+		return preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
 	}
 
 	/**

@@ -20,8 +20,6 @@ class SpecialMobileEditor extends MobileSpecialPage {
 	 * @param string $subpage The name of the page to edit
 	 */
 	public function executeWhenAvailable( $subpage ) {
-		wfProfileIn( __METHOD__ );
-
 		$title = Title::newFromText( $subpage );
 
 		if ( is_null( $title )) {
@@ -69,7 +67,5 @@ class SpecialMobileEditor extends MobileSpecialPage {
 			Html::closeElement( 'div' ); // #mw-mf-editorunavailable
 
 		$output->addHTML( $html );
-
-		wfProfileOut( __METHOD__ );
 	}
 }

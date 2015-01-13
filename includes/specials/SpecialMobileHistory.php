@@ -91,8 +91,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @param string $par parameter as subpage of specialpage
 	 */
 	public function executeWhenAvailable( $par = '' ) {
-		wfProfileIn( __METHOD__ );
-
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'history' ) );
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
@@ -103,13 +101,11 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				$this->renderHeaderBar( $this->title );
 				$res = $this->doQuery();
 				$this->showHistory( $res );
-				wfProfileOut( __METHOD__ );
 				return;
 			}
 		}
 
 		$this->showPageNotFound();
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -118,7 +114,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @return ResultWrapper
 	 */
 	protected function doQuery() {
-		wfProfileIn( __METHOD__ );
 		$dbr = wfGetDB( DB_SLAVE, self::DB_REVISIONS_TABLE );
 		$conds = $this->getQueryConditions();
 		$options = array(
@@ -130,11 +125,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$tables = array( self::DB_REVISIONS_TABLE );
 		$fields = array( '*' );
 
-		wfProfileIn( __METHOD__ . '-query' );
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options );
-		wfProfileOut( __METHOD__ . '-query' );
 
-		wfProfileOut( __METHOD__ );
 		return $res;
 	}
 
@@ -148,7 +140,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @param Revision|null $prev Revision id of previous Revision to display the difference
 	 */
 	protected function showRow( Revision $rev, $prev ) {
-		wfProfileIn( __METHOD__ );
 		$user = $this->getUser();
 		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
 		if ( $userId === 0 ) {
@@ -198,8 +189,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$isMinor = $rev->isMinor();
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
 			$isMinor );
-
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**

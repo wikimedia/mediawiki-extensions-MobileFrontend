@@ -44,11 +44,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 * @return String HTML string representing the last upload by the user
 	 */
 	protected function getLastUploadHtml() {
-		wfProfileIn( __METHOD__ );
-
 		$file = $this->userInfo->getLastUpload();
 		if ( !$file ) {
-			wfProfileOut( __METHOD__ );
 			return '';
 		}
 
@@ -70,7 +67,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 			Html::closeElement( 'div' ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'div' );
-		wfProfileOut( __METHOD__ );
+
 		return $img;
 	}
 
@@ -80,7 +77,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 * @return String HTML string representing the last thank by the user
 	 */
 	protected function getLastThanksHtml() {
-		wfProfileIn( __METHOD__ );
 		$html = '';
 		$thank = $this->userInfo->getLastThanking();
 		if ( $thank ) {
@@ -97,7 +93,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				. '</div>'
 				. '</div>';
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $html;
 	}
 
@@ -107,7 +103,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 * @return String HTML string representing the last edit by the user
 	 */
 	protected function getLastEditHtml() {
-		wfProfileIn( __METHOD__ );
 		$rev = $this->userInfo->getLastEdit();
 		if ( $rev ) {
 			$daysAgo = $this->getDaysAgo( new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) ) );
@@ -133,7 +128,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$html = '';
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $html;
 	}
 
@@ -220,7 +214,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 * @param string $par The username of the user to display
 	 */
 	public function executeWhenAvailable( $par ) {
-		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		$this->setHeaders();
 		$out->addJsConfigVars( array( 'wgMFMaxDescriptionChars' => self::MAX_DESCRIPTION_CHARS ) );
@@ -257,7 +250,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 			wfHttpError( 404, $this->msg( 'mobile-frontend-profile-error' )->text(),
 				$this->msg( 'mobile-frontend-profile-noargs' )->text() );
 		}
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**

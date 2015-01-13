@@ -17,7 +17,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	 * @param OutputPage $out optional parameter: The OutputPage Obj.
 	 */
 	public function outputPage( OutputPage $out = null ) {
-		wfProfileIn( __METHOD__ );
 		if ( !$out ) {
 			$out = $this->getOutput();
 		}

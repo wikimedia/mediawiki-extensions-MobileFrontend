@@ -95,8 +95,6 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 * @param string[] $closing New content to compare with
 	 */
 	function changed( $orig, $closing ) {
-		wfProfileIn( __METHOD__ );
-
 		echo '<div class="mw-diff-inline-changed">';
 		$diff = new WordLevelDiff( $orig, $closing );
 		$edits = $this->inlineWordDiff( $diff );
@@ -105,7 +103,6 @@ class InlineDiffFormatter extends TableDiffFormatter {
 		echo implode( '', $edits );
 
 		echo "</div>\n";
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -114,7 +111,6 @@ class InlineDiffFormatter extends TableDiffFormatter {
 	 * @return array Array of changed lines
 	 */
 	private function inlineWordDiff( $diff ) {
-		wfProfileIn( __METHOD__ );
 		$inline = new HWLDFWordAccumulator;
 		$inline->insClass = $inline->delClass = '';
 
@@ -131,7 +127,6 @@ class InlineDiffFormatter extends TableDiffFormatter {
 			}
 		}
 		$lines = $inline->getLines();
-		wfProfileOut( __METHOD__ );
 
 		return $lines;
 	}
