@@ -16,6 +16,24 @@
       "revId": "d54f6683d67e8238865abc92a87870689e7d50f5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_56247307",
+        "filename": "less/reset.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-13T19:07:56Z",
+      "side": 1,
+      "message": "I guess it shouldn\u0027t make much difference, but it still makes me nervous :P",
+      "parentUuid": "ee703fc5_12a13042",
+      "revId": "d54f6683d67e8238865abc92a87870689e7d50f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
