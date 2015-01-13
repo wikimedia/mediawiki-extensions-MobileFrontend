@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_b88063fa",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-13T01:54:23Z",
+      "side": 1,
+      "message": "Err.. opera mini doesn\u0027t run any JavaScript it\u0027s blacklisted. This code will not work ever without significant investment.",
+      "revId": "d3e5c591b1491a9155bc49f789eb9fc891cde4e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
