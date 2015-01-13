@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_e7514ede",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-13T23:13:17Z",
+      "side": 1,
+      "message": "In most cases there is no need for the full, absolute URL, so i suggest to use getLinkURL and let mediawiki show its magic ;)",
+      "revId": "5ca34aa07500b0373a0457daf45f4dcf623fcc65",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
