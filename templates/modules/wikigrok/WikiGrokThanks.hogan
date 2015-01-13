@@ -1,0 +1,6 @@
+<div class="pane content">
+	<p class="wg-content">{{contentMsg}}</p>
+	<p class="wg-link">
+		<a href="#/wikigrok/about" class="mw-ui-button mw-ui-progressive mw-ui-block tell-more">{{tellMoreMsg}}</a>
+	</p>
+</div>

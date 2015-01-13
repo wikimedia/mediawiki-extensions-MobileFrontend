@@ -26,7 +26,6 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Boolean} defaults.beginQuestions Whether to show questions.
 		 * @cfg {String} defaults.taskToken Task token used in schemas.
-		 * @cfg {Boolean} defaults.thankUser Whether to show the thanks message.
 		 * @cfg {String} defaults.closeMsg Text for the button in an overlay that, when clicked,
 		 * dismisses the overlay.
 		 * @cfg {String} defaults.contentMsg Message that tells what to do, it's the message
@@ -39,9 +38,9 @@
 		defaults: {
 			beginQuestions: false,
 			taskToken: mw.user.generateRandomSessionId(),
-			thankUser: false,
 			closeMsg: mw.msg( 'mobile-frontend-overlay-close' ),
 			contentMsg: 'Improve Wikipedia by tagging information on this page',
+			tellMoreMsg: 'Tell me more',
 			// Other ideas:
 			// Can you help improve Wikipedia?
 			// Play a game to help Wikipedia!
@@ -57,6 +56,8 @@
 				}
 			],
 			spinner: icons.spinner().toHtmlString(),
+			// FIXME: Split first 2 steps into separate templates so that we don't have to
+			// include HTML in the notice messages.
 			noticeMsg: '<a class="wg-notice-link" href="#/wikigrok/about">Tell me more</a>',
 			isDrawer: false
 		},
@@ -255,7 +256,7 @@
 				};
 
 			this.apiWikiGrokResponse.recordClaims( [ claim ] ).done( function () {
-				self.thankUser( options, true );
+				self.postRecordClaims( options, true );
 			} ).fail( function () {
 				self.handleError( 'no-response-cannot-record-user-input' );
 			} );
@@ -276,23 +277,33 @@
 		},
 
 		/**
-		 * Show a thank you message to the user for their contribution.
+		 * Show a thank you message to the user for their contribution. Also log event.
 		 * @method
 		 * @param {Object} options
-		 * @param {Boolean} claimAttempted has the user attempted to answer or
+		 * @param {Boolean} answerAttempted has the user attempted to answer or
 		 * just responded with 'not sure'?
 		 */
-		thankUser: function ( options, claimAttempted ) {
+		postRecordClaims: function ( options, answerAttempted ) {
+			var self = this;
+
+			// Remember that the user completed WikiGrok for this page so that we don't
+			// show it again later.
 			this.rememberWikiGrokContribution();
-			options.thankUser = true;
-			if ( claimAttempted ) {
+			// Choose an appropriate thanks message.
+			if ( answerAttempted ) {
 				options.contentMsg = 'You just made Wikipedia a little better, thanks!';
 			} else {
 				options.contentMsg = 'That\'s OK, thanks for taking the time.';
 			}
-			// Re-render with new content for 'Thanks' step
+			// Re-render with new content for 'Thanks' step.
+			this.template = mw.template.get( 'mobile.wikigrok.dialog', 'Thanks.hogan' );
 			this.render( options );
-			this.$( '.wg-notice' ).hide();
+			// Hide thanks dialog when the user reads more about WikiGrok.
+			this.$( '.wg-link .tell-more' ).on( 'click', function () {
+				self.hide();
+				self.log( 'widget-click-moreinfo' );
+			} );
+			// Log the successful completion of WikiGrok task
 			this.log( 'widget-impression-success' );
 		},
 
@@ -383,21 +394,11 @@
 		postRender: function ( options ) {
 			var self = this;
 
-			self.$( '.wg-link' ).hide();
-
 			// If you're wondering where the DOM insertion happens, look in wikigrokeval.js.
 
 			// Initialize all the buttons and links
-			// ...for final 'Thanks' step
-			if ( options.thankUser ) {
-				self.$( '.wg-buttons' ).hide();
-				self.$( '.wg-link' ).show();
-				this.$( '.wg-link .tell-more' ).on( 'click', function () {
-					self.hide();
-					self.log( 'widget-click-moreinfo' );
-				} );
 			// ...for intermediate 'Question' step
-			} else if ( options.beginQuestions ) {
+			if ( options.beginQuestions ) {
 				this.$( '.wg-buttons .yes' ).on( 'click', function () {
 					self.log( 'widget-click-submit' );
 					options.claimIsCorrect = true;
@@ -405,7 +406,7 @@
 				} );
 				this.$( '.wg-buttons .not-sure' ).on( 'click', function () {
 					self.log( 'widget-click-submit' );
-					self.thankUser( options, false );
+					self.postRecordClaims( options, false );
 				} );
 				this.$( '.wg-buttons .no' ).on( 'click', function () {
 					self.log( 'widget-click-submit' );

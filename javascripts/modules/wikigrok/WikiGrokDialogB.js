@@ -14,9 +14,7 @@
 	WikiGrokDialogB = WikiGrokDialog.extend( {
 		version: 'b',
 		template: mw.template.get( 'mobile.wikigrok.dialog.b', 'Dialog.hogan' ),
-		defaults: $.extend( WikiGrokDialog.prototype.defaults, {
-			thanksMsg: 'You just made Wikipedia a little better, thanks!'
-		} ),
+
 		/** @inheritdoc */
 		initialize: function () {
 			var self = this;
@@ -105,18 +103,6 @@
 			}
 		},
 		/**
-		 * Thank the user for their contribution. Also log this event.
-		 * @method
-		 */
-		postRecordClaims: function () {
-			var self = this;
-
-			self.$( '.wg-content, .tags, .footer, .spinner' ).hide();
-			self.$( '.wg-thanks-content' ).removeClass( 'hidden' );
-			self.$( '.wg-link' ).show();
-			self.log( 'widget-impression-success' );
-		},
-		/**
 		 * Show suggestions to the user.
 		 * Also record claims when the user hits the save button.
 		 * FIXME: Please refactor
@@ -151,19 +137,12 @@
 
 				self.$( '.tags' ).hide();
 				self.$( '.spinner' ).show();
-				self.apiWikiGrokResponse.recordClaims( answers ).always( function () {
-					self.postRecordClaims();
+				self.apiWikiGrokResponse.recordClaims( answers ).done( function () {
+					self.postRecordClaims( options, true );
 				} ).fail( function () {
 					self.handleError( 'no-response-cannot-record-user-input' );
 				} );
 				self.log( 'widget-click-submit' );
-				self.rememberWikiGrokContribution();
-			} );
-
-			// hide this Dialog when the user reads more about Wikigrok
-			this.$( '.tell-more' ).on( 'click', function () {
-				self.hide();
-				self.log( 'widget-click-moreinfo' );
 			} );
 		},
 		/**
@@ -172,7 +151,7 @@
 		postRender: function ( options ) {
 			var self = this;
 
-			self.$( '.tags, .wg-link, .footer, .spinner' ).hide();
+			self.$( '.tags, .footer, .spinner' ).hide();
 
 			// show the welcome screen once
 			if ( !options.beginQuestions ) {

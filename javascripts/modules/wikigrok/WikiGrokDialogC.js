@@ -31,7 +31,7 @@
 				responseText,
 				responseCount;
 
-			self.$( '.wg-content, .wg-thanks-content, .wg-link, .footer' ).hide();
+			self.$( '.wg-content, .footer' ).hide();
 			self.$( '.spinner' ).show();
 
 			// Count responses if local storage supported
