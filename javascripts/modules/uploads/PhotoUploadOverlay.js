@@ -71,7 +71,7 @@
 					var dataUri = fileReader.result;
 					// add mimetype if not present (some browsers need it, e.g. Android browser)
 					dataUri = dataUri.replace( /^data:base64/, 'data:image/jpeg;base64' );
-					self.log( {
+					self.schema.log( {
 						action: 'preview'
 					} );
 					self.setImageUrl( dataUri );
@@ -87,7 +87,9 @@
 					} )
 				} );
 			} else {
-				this.api = new PhotoApi();
+				this.api = new PhotoApi( {
+					page: options.page
+				} );
 			}
 			this.api.on( 'uploadProgress', function ( value ) {
 				self.progressPopup.setValue( value );
@@ -95,7 +97,7 @@
 
 			this.progressPopup = new PhotoUploadProgress().on( 'cancel', function () {
 				self.api.abort();
-				self.log( {
+				self.schema.log( {
 					action: 'cancel'
 				} );
 			} ).on( 'submit', function () {
@@ -139,7 +141,7 @@
 			this.api.save( saveOptions ).done( function ( fileName, descriptionUrl ) {
 				self.progressPopup.hide( true );
 
-				self.log( {
+				self.schema.log( {
 					action: 'success'
 				} );
 				if ( self.options.insertInPage ) {
@@ -186,7 +188,7 @@
 							}
 						}
 					}
-					self.log( {
+					self.schema.log( {
 						action: 'error',
 						errorText: errMsg
 					} );
@@ -217,7 +219,7 @@
 			$submitButton = this.$( '.submit' )
 				.prop( 'disabled', true )
 				.on( 'click', function () {
-					self.log( {
+					self.schema.log( {
 						action: 'previewSubmit'
 					} );
 					self._submit();
@@ -249,11 +251,11 @@
 				EXIF.getData( this.file, function () {
 					if ( $.isEmptyObject( this.exifdata ) ) {
 						if ( window.confirm( mw.msg( 'mobile-frontend-photo-upload-copyvio' ) ) ) {
-							self.log( {
+							self.schema.log( {
 								action: 'copyvioOk'
 							} );
 						} else {
-							self.log( {
+							self.schema.log( {
 								action: 'copyvioCancel'
 							} );
 							self.hide( true );
@@ -300,7 +302,7 @@
 			this.imageUrl = url;
 			this.$( '.spinner' ).hide();
 			this.$( '.help' ).on( 'click', function () {
-				self.log( {
+				self.schema.log( {
 					action: 'whatDoesThisMean'
 				} );
 			} );
