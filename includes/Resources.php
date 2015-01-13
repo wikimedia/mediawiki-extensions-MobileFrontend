@@ -1083,6 +1083,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'Error.hogan' => 'templates/modules/wikigrok/WikiGrokError.hogan',
 			'Dialog.hogan' => 'templates/modules/wikigrok/WikiGrokDialog.hogan',
 			'WikiGrokMoreInfo/content.hogan' => 'templates/modules/wikigrok/WikiGrokMoreInfo.hogan',
+			'Thanks.hogan' => 'templates/modules/wikigrok/WikiGrokThanks.hogan',
 		),
 		'scripts' => array(
 			'javascripts/modules/wikigrok/WikiGrokDialog.js',
