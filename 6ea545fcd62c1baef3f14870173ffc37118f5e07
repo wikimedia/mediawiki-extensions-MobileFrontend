@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "ee703fc5_9dbd51b0",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebEditing.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-13T00:24:47Z",
+      "side": 1,
+      "message": "This should be a more generic description, something like \"Unique session ID for the user\"",
+      "revId": "6ea545fcd62c1baef3f14870173ffc37118f5e07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_1de70111",
         "filename": "javascripts/loggingSchemas/SchemaMobileWebEditing.js",
         "patchSetId": 13
