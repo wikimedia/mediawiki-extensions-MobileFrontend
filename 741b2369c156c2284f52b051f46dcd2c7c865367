@@ -16,6 +16,23 @@
       "revId": "741b2369c156c2284f52b051f46dcd2c7c865367",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_7144214b",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-13T19:35:53Z",
+      "side": 1,
+      "message": "The whole name seems to be incorrect, because the PhotoList is inserted using the .ctaUploadPhoto selector.",
+      "revId": "741b2369c156c2284f52b051f46dcd2c7c865367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
