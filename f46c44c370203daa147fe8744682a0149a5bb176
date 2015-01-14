@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee703fc5_56f1cad8",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T16:36:20Z",
+      "side": 1,
+      "message": "yeh this is was me being hacky. let me fix that up now.",
+      "parentUuid": "ee703fc5_50d312d7",
+      "revId": "f46c44c370203daa147fe8744682a0149a5bb176",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_10f4ba4f",
         "filename": "templates/modules/infobox/EditorOverlayContent.hogan",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-14T11:36:33Z",
       "side": 1,
       "message": "double space",
+      "revId": "f46c44c370203daa147fe8744682a0149a5bb176",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_960f62e4",
+        "filename": "templates/modules/infobox/EditorOverlayContent.hogan",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T16:36:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee703fc5_10f4ba4f",
       "revId": "f46c44c370203daa147fe8744682a0149a5bb176",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
