@@ -35,6 +35,7 @@
 
 	QUnit.module( 'MobileFrontend: Watchstar.js', {
 		setup: function () {
+			this.sandbox.stub( user, 'isAnon' ).returns( false );
 			this.spy = this.sandbox.stub( WatchstarApi.prototype, 'postWithToken' )
 				.returns( $.Deferred().resolve() );
 		},
