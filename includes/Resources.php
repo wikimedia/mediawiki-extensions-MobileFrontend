@@ -222,6 +222,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'icon.hogan' => 'templates/icon.hogan',
 			'Section.hogan' => 'templates/Section.hogan',
 		),
+		'messages' => array(
+			// icons.js
+			'mobile-frontend-loading-message',
+		),
 		'scripts' => array(
 			'javascripts/View.js',
 			'javascripts/Router.js',

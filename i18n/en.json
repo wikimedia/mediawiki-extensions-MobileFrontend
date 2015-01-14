@@ -371,5 +371,6 @@
 	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",
 	"mobile-frontend-donate-button-label": "Donate",
 	"mobile-frontend-wikidata-editor-description-label": "Describe ''$1'' in a single sentence:",
-	"mobile-frontend-meta-data-issues-categories": "About this category"
+	"mobile-frontend-meta-data-issues-categories": "About this category",
+	"mobile-frontend-loading-message": "Loading…"
 }

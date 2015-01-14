@@ -74,6 +74,7 @@ body {
 	> form,
 	// Spinner
 	> div {
+		vertical-align: middle;
 		display: table-cell;
 	}
 
@@ -269,6 +270,11 @@ input.search {
 		// Make sure count is positioned correctly in relation to bell icon
 		position: relative;
 
+		// can't use display:none class as icons must have a label to retain height
+		.label {
+			visibility: hidden;
+		}
+
 		// FIXME: Remove when cache is cleared.
 		&.icon {
 			width: @headerHeight;
@@ -340,8 +346,8 @@ input.search {
 .alpha {
 	.notification-count {
 		position: absolute;
-		right: .3em;
-		top: 0;
+		right: 0;
+		top: -.1em;
 	}
 
 	.spinner {
