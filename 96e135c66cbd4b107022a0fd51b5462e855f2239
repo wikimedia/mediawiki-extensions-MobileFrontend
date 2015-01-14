@@ -70,6 +70,24 @@
       "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_7d1bcfd4",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T23:55:37Z",
+      "side": 0,
+      "message": "Ahh.. We have a history-link-loaded event now. This is what was confusing me.\n\nBut yes there is a problem with this. Load a page whilst throttled and click the main menu icon, you get taken to Special:MobileMenu. We want to minimise click throughs to here as it is a crappy experience. The MainMenu should be initialised sooner (on header-loaded event. It should then be passed to the Skin in the initialisation function.",
+      "parentUuid": "ae6ac7d6_dd421bb2",
+      "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
