@@ -1113,6 +1113,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.wikidata.api',
 			'mobile.ajax',
 			'mobile.hexmd5',
+			'mobile.overlays',
 		),
 		'templates' => array(
 			'Infobox.hogan' => 'templates/modules/infobox/Infobox.hogan',
