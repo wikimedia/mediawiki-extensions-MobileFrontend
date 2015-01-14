@@ -16,6 +16,24 @@
       "revId": "7b5e3198bc9cc1f78a127d8162d6266220ed9a75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_f73f001f",
+        "filename": "javascripts/application.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T20:53:59Z",
+      "side": 1,
+      "message": "I actually think api.js is the one in the wrong here and should be renamed to Api.js and \u0027api\u0027 should be defined in application.js",
+      "parentUuid": "ee703fc5_bd993582",
+      "revId": "7b5e3198bc9cc1f78a127d8162d6266220ed9a75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
