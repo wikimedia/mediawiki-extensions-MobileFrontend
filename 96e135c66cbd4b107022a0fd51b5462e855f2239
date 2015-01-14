@@ -52,6 +52,24 @@
       "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_dd421bb2",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-14T23:49:41Z",
+      "side": 0,
+      "message": "What do you mean by \u0027make the header initialize asap\u0027? Apart from listening to some clicks and removing a menu item, the initialize function appended \u0027transparent-shield\u0027 to the page. Am I missing something?",
+      "parentUuid": "ae6ac7d6_ddf3fb9a",
+      "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
