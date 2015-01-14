@@ -34,6 +34,24 @@
       "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_ddf3fb9a",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T23:44:40Z",
+      "side": 0,
+      "message": "It was used in ./javascripts/mainmenu.js which you deleted. \nIt was supposed to make the header initialise asap.\n\nM.on( \u0027header-loaded\u0027, initialize );\n\nWould be good to test this on a large page. I suspect you\u0027ll see a flash of unstyled content.",
+      "parentUuid": "ae6ac7d6_57d90c2b",
+      "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
