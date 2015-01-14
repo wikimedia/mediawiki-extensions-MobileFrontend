@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_57282c32",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T20:47:14Z",
+      "side": 0,
+      "message": "I\u0027m a bit confused by this.\nTwo issues with this\n\nSkin.js to my knowledge is being loaded at the bottom of the page so this will result in a flash of unstyled content in stable on long articles no?",
+      "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

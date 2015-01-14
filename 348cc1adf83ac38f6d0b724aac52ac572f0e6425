@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_1722b450",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T20:47:14Z",
+      "side": 1,
+      "message": "Should be in a separate file MainMenu.js",
+      "revId": "348cc1adf83ac38f6d0b724aac52ac572f0e6425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_17af1493",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T20:47:14Z",
+      "side": 1,
+      "message": "I don\u0027t see why this should be private. It isn\u0027t anywhere else.",
+      "revId": "348cc1adf83ac38f6d0b724aac52ac572f0e6425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_77aa1084",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T20:47:14Z",
+      "side": 1,
+      "message": "I don\u0027t see why this should be private. It isn\u0027t anywhere else.",
+      "revId": "348cc1adf83ac38f6d0b724aac52ac572f0e6425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_d77f5c10",
+        "filename": "javascripts/application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T20:47:14Z",
+      "side": 1,
+      "message": "What if this code runs before #mw-mf-viewport exists e.g. Special:Nearby where it gets pulled in at top of page?",
+      "revId": "348cc1adf83ac38f6d0b724aac52ac572f0e6425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
