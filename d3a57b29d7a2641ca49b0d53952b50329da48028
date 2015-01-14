@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_fd26ff10",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-14T23:59:48Z",
+      "side": 1,
+      "message": "Here\u0027s a solution that should satisfy both of your concerns (and is more readable):\nif ( endpoint ) {\n\tApi \u003d M.require( \u0027modules/ForeignApi\u0027 );\n} else {\n\tApi \u003d M.require( \u0027api\u0027 ).Api;\n}",
+      "parentUuid": "ae6ac7d6_b7d3c804",
+      "revId": "d3a57b29d7a2641ca49b0d53952b50329da48028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_378b3822",
         "filename": "javascripts/modules/uploads/PhotoApi.js",
         "patchSetId": 9
