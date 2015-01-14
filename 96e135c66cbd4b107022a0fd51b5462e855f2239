@@ -16,6 +16,24 @@
       "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_57d90c2b",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-14T20:52:02Z",
+      "side": 0,
+      "message": "I\u0027m not sure. It doesn\u0027t look like anything is listening to \u0027header-loaded\u0027 anymore.",
+      "parentUuid": "ae6ac7d6_57282c32",
+      "revId": "96e135c66cbd4b107022a0fd51b5462e855f2239",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

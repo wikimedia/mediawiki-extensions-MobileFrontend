@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_57002c6d",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-14T20:52:02Z",
+      "side": 1,
+      "message": "I agree, the bug description says otherwise though.",
+      "parentUuid": "ae6ac7d6_1722b450",
+      "revId": "348cc1adf83ac38f6d0b724aac52ac572f0e6425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_17af1493",
         "filename": "javascripts/Skin.js",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_17fab473",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-14T20:52:02Z",
+      "side": 1,
+      "message": "This is private because I didn\u0027t want this method to be called on instances of Skin. It should be used internally only.",
+      "parentUuid": "ae6ac7d6_17af1493",
+      "revId": "348cc1adf83ac38f6d0b724aac52ac572f0e6425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_77aa1084",
         "filename": "javascripts/Skin.js",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2015-01-14T20:47:14Z",
       "side": 1,
       "message": "I don\u0027t see why this should be private. It isn\u0027t anywhere else.",
+      "revId": "348cc1adf83ac38f6d0b724aac52ac572f0e6425",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_d7f3dc9a",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-14T20:52:02Z",
+      "side": 1,
+      "message": "This is private because I didn\u0027t want this method to be called on instances of Skin. It should be used internally only.",
+      "parentUuid": "ae6ac7d6_77aa1084",
       "revId": "348cc1adf83ac38f6d0b724aac52ac572f0e6425",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
