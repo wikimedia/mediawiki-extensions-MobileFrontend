@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_0d5fbc14",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-01-14T19:21:22Z",
+      "side": 1,
+      "message": "Only one \u0027this\u0027 needed after https://gerrit.wikimedia.org/r/#/c/184828/",
+      "range": {
+        "startLine": 12,
+        "startChar": 32,
+        "endLine": 12,
+        "endChar": 42
+      },
+      "revId": "52724b6cf21b923b32d5b6abcb3228e15e6ec30e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
