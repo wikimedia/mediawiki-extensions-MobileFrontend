@@ -16,6 +16,24 @@
       "revId": "1bc6c565d29beb985b5e184d8eca49d6808a407e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_376fb8c2",
+        "filename": "javascripts/InfiniteScroll.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-14T20:26:46Z",
+      "side": 1,
+      "message": "no, here it should be supported, the example tag needs 4 spaces, too :)",
+      "parentUuid": "ae6ac7d6_b72c2891",
+      "revId": "1bc6c565d29beb985b5e184d8eca49d6808a407e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
