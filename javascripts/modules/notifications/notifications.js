@@ -5,7 +5,7 @@
 ( function ( M, $, mw ) {
 	var MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
-		mainmenu = M.require( 'mainmenu' ),
+		mainMenu = M.require( 'skin' ).getMainMenu(),
 		$btn = $( '#secondary-button.user-button' ),
 		icons = M.require( 'icons' );
 
@@ -70,9 +70,9 @@
 
 		M.overlayManager.add( /^\/notifications$/, function () {
 			return loadNotificationOverlay().done( function ( overlay ) {
-				mainmenu.openNavigationDrawer( 'secondary' );
+				mainMenu.openNavigationDrawer( 'secondary' );
 				overlay.on( 'hide', function () {
-					mainmenu.closeNavigationDrawers();
+					mainMenu.closeNavigationDrawers();
 					$( '#mw-mf-page-center' ).off( '.secondary' );
 				} );
 

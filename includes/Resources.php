@@ -227,7 +227,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-loading-message',
 		),
 		'scripts' => array(
-			'javascripts/View.js',
 			'javascripts/Router.js',
 			'javascripts/OverlayManager.js',
 			// FIXME: Remove api code to mobile.ajax
@@ -1421,9 +1420,11 @@ $wgMinervaBootstrapModules = array(
 			'javascripts/modules.js',
 			'javascripts/Class.js',
 			'javascripts/eventemitter.js',
+			'javascripts/View.js',
 			'javascripts/modes.js',
 			'javascripts/browser.js',
-			'javascripts/mainmenu.js',
+			'javascripts/modules/mainMenu/MainMenu.js',
+			'javascripts/modules/mainMenu/init.js',
 			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/lastEdited/init.js',
 		),

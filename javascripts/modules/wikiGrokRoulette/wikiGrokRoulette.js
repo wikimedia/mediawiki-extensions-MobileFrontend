@@ -2,7 +2,6 @@
 	var api = M.require( 'api' ),
 		util = M.require( 'util' ),
 		query = $.extend( {}, util.query ),
-		mainMenu = M.require( 'mainmenu' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		ErrorDrawer = M.require( 'modules/wikiGrokRoulette/ErrorDrawer' ),
 		nextPage,
@@ -80,6 +79,8 @@
 				loadingOverlay.hide( false );
 				new ErrorDrawer();
 			} ).always( function () {
+				// FIXME: this module should not care about mainMenu. move this to init.js
+				var mainMenu = M.require( 'skin' ).getMainMenu();
 				mainMenu.closeNavigationDrawers();
 			} );
 		}
