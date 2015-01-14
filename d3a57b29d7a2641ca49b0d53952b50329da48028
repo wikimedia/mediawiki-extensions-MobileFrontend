@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_b7d3c804",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T20:50:13Z",
+      "side": 1,
+      "message": "my rationale was I\u0027d rather it threw an exception on the line ForeignApi \u003d M.require( \u0027modules/ForeignApi\u0027 ) when you haven\u0027t got your dependencies right rather than the line below\n\nIt\u0027s just a lookup after all so no performance issues and code is already loaded.",
+      "parentUuid": "ae6ac7d6_f795c043",
+      "revId": "d3a57b29d7a2641ca49b0d53952b50329da48028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_378b3822",
         "filename": "javascripts/modules/uploads/PhotoApi.js",
         "patchSetId": 9
