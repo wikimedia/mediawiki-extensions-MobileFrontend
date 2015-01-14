@@ -21,7 +21,8 @@
 	 *     to not trigger multiple times. After you have loaded, manually
 	 *     re-enable it.
 	 *
-	 * @example
+	 * Example:
+	 *     @example
 	 *     <code>
 	 *     var InfiniteScroll = M.require( 'InfiniteScroll' ),
 	 *       PhotoList;

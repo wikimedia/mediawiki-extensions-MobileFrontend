@@ -37,7 +37,6 @@
 		* FIXME: use settings module
 		*
 		* @method
-		* @static
 		* @return {String}
 		*/
 		getSessionId: function () {
@@ -57,7 +56,6 @@
 		/**
 		* User Bucketing for A/B testing
 		* (we want this to be the same everywhere)
-		* @static
 		* @return {Boolean}
 		*/
 		inUserBucketA: function () {
