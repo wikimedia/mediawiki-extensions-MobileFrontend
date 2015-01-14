@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_cad52a49",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-14T18:10:22Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure this won\u0027t work (I\u0027m pretty sure the order of date/month/year changes in certain languages and sometimes might need to be prefixed)\n\nWe have this sort of thing all over the place in other codebases so it would be good to look at how those dates are constructed / how Wikidata does it.",
+      "revId": "a49bbd798718c013e2eb851f5a6b56ed8da33a1c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
