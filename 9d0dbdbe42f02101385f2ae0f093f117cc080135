@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_aa923bfe",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-01-14T02:09:22Z",
+      "side": 1,
+      "message": "Needs to be changed to `OO.ui.LookupInputWidget.call( this, config );`, we made a breaking change in OOUI to make this saner. https://gerrit.wikimedia.org/r/184828",
+      "range": {
+        "startLine": 12,
+        "startChar": 32,
+        "endLine": 12,
+        "endChar": 44
+      },
+      "revId": "9d0dbdbe42f02101385f2ae0f093f117cc080135",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
