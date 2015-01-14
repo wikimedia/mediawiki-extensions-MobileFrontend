@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_50d312d7",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2015-01-14T11:36:33Z",
+      "side": 1,
+      "message": "Are item.label and description plaintext or html. If they are plain text you should use .text() or createTextNode.",
+      "revId": "f46c44c370203daa147fe8744682a0149a5bb176",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_10f4ba4f",
+        "filename": "templates/modules/infobox/EditorOverlayContent.hogan",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2015-01-14T11:36:33Z",
+      "side": 1,
+      "message": "double space",
+      "revId": "f46c44c370203daa147fe8744682a0149a5bb176",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
