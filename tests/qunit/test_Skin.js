@@ -5,7 +5,8 @@
 		setup: function () {
 			this.$el = $( '<div>' );
 			this.skin = new Skin( {
-				el: this.$el
+				el: this.$el,
+				page: M.getCurrentPage()
 			} );
 		}
 	} );
