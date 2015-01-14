@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_b72c2891",
+        "filename": "javascripts/InfiniteScroll.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-14T20:18:03Z",
+      "side": 1,
+      "message": "If @example is unsupported, should we remove it?",
+      "revId": "1bc6c565d29beb985b5e184d8eca49d6808a407e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
