@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_a3bdc565",
+        "filename": "javascripts/loggingSchemas/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-15T21:18:56Z",
+      "side": 1,
+      "message": "The only change here is the addition of the if statement. Not sure why gerrit thinks the rest of the code was changed as well.",
+      "revId": "fa4ec7120de5be3fdba720de5aefea4b84b4c46f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
