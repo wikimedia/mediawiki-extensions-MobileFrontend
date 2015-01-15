@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_4685dc59",
+        "filename": "javascripts/modules/ForeignApi.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-15T11:34:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae6ac7d6_b7c8a878",
+      "revId": "d3a57b29d7a2641ca49b0d53952b50329da48028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_f795c043",
         "filename": "javascripts/modules/nearby/NearbyApi.js",
         "patchSetId": 9
@@ -90,6 +108,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_e69990c9",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-15T11:34:10Z",
+      "side": 1,
+      "message": "I\u0027ve used kaldari\u0027s version in all places where this happens.",
+      "parentUuid": "ae6ac7d6_3d63173d",
+      "revId": "d3a57b29d7a2641ca49b0d53952b50329da48028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_378b3822",
         "filename": "javascripts/modules/uploads/PhotoApi.js",
         "patchSetId": 9
@@ -101,6 +137,24 @@
       "writtenOn": "2015-01-14T20:47:55Z",
       "side": 1,
       "message": "Here also, only the required module should be loaded.",
+      "revId": "d3a57b29d7a2641ca49b0d53952b50329da48028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_0697e494",
+        "filename": "javascripts/modules/uploads/PhotoApi.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-15T11:34:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae6ac7d6_378b3822",
       "revId": "d3a57b29d7a2641ca49b0d53952b50329da48028",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
