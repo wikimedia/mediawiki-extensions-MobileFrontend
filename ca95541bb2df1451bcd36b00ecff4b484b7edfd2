@@ -16,6 +16,24 @@
       "revId": "ca95541bb2df1451bcd36b00ecff4b484b7edfd2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_cb90159b",
+        "filename": "javascripts/application.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-15T08:24:53Z",
+      "side": 0,
+      "message": "arfg, it\u0027s a rebase error and i forgot to fix it :)",
+      "parentUuid": "ae6ac7d6_1d9bb31c",
+      "revId": "ca95541bb2df1451bcd36b00ecff4b484b7edfd2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

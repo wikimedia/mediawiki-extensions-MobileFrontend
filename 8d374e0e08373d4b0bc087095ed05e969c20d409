@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_6bed4922",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-15T08:24:53Z",
+      "side": 1,
+      "message": "that\u0027s a good question, i see no reason for this anymore :/",
+      "parentUuid": "ae6ac7d6_9d8ee3d4",
+      "revId": "8d374e0e08373d4b0bc087095ed05e969c20d409",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_7dbd0f63",
         "filename": "javascripts/modules/talk/talk.js",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-15T00:23:08Z",
       "side": 1,
       "message": "Note to self: We should do something similar to icons and make it easier to create buttons.",
+      "revId": "8d374e0e08373d4b0bc087095ed05e969c20d409",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_4bfc05d6",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-15T08:24:53Z",
+      "side": 1,
+      "message": "added as a FIXME, so we don\u0027t forget this :)",
+      "parentUuid": "ae6ac7d6_7dbd0f63",
       "revId": "8d374e0e08373d4b0bc087095ed05e969c20d409",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
