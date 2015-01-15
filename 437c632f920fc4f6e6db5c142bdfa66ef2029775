@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_c0ed4fb6",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-15T19:08:24Z",
+      "side": 1,
+      "message": "Why were these not put in mobile.router / mobile.overlaymanager / mobile.schema since you did this elsewhere??",
+      "revId": "437c632f920fc4f6e6db5c142bdfa66ef2029775",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
