@@ -33,6 +33,24 @@
       "revId": "5291855036c52321a40472b7fb95684fb67cabba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_b9097236",
+        "filename": "javascripts/head.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-15T23:41:12Z",
+      "side": 1,
+      "message": "So the problem is that the menu button that opens the menu is in the head section but the right menu contents is in the body of the page. At the time \u0027header-loaded\u0027 event is fired, the menu button will have loaded, but the menu itself is not available.",
+      "parentUuid": "ae6ac7d6_3653311c",
+      "revId": "5291855036c52321a40472b7fb95684fb67cabba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
