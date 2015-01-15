@@ -34,6 +34,24 @@
       "revId": "a49bbd798718c013e2eb851f5a6b56ed8da33a1c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_e0f418ce",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-15T01:29:52Z",
+      "side": 1,
+      "message": "@bmansurov: In some languages \u002714 March\u0027 would be awkward. For example, in Spanish you would say \u002714 de marzo\u0027, never \u002714 marzo\u0027. Unfortunately, you can\u0027t use Language::getDateFormatString() on the client-side, but you can use the date messages. For example, \"mw.msg( \u0027january-date\u0027 )\" instead of \"mw.msg( \u0027january\u0027 )\". Then just add \", year\". It\u0027s not perfect, but it will be slightly better in many cases.",
+      "parentUuid": "ee703fc5_aab316fc",
+      "revId": "a49bbd798718c013e2eb851f5a6b56ed8da33a1c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
