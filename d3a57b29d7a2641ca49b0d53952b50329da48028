@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_3d63173d",
+        "filename": "javascripts/modules/nearby/NearbyApi.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-15T00:10:21Z",
+      "side": 1,
+      "message": "I think that Jon\u0027s original version is also OK, as there isn\u0027t any real performance concern, just a lookup.",
+      "parentUuid": "ae6ac7d6_fd26ff10",
+      "revId": "d3a57b29d7a2641ca49b0d53952b50329da48028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_378b3822",
         "filename": "javascripts/modules/uploads/PhotoApi.js",
         "patchSetId": 9
