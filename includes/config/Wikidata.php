@@ -136,6 +136,56 @@ $wgMFInfoboxConfig = array(
 				array( 'id' => 'P78' ),
 		),
 	),
+	// university
+	3918 => array(
+		'rows' => array(
+			// logo
+			array( 'id' => 'P154' ),
+			// motto
+			array( 'id' => 'P1451' ),
+			// inception
+			array( 'id' => 'P571' ),
+			// location
+			array( 'id' => 'P276' ),
+			// coords
+			array( 'id' => 'P625' ),
+			// staff
+			array( 'id' => 'P1128' ),
+			// affliations
+			array( 'id' => 'P1416' ),
+			// coat of arms
+			array( 'id' => 'P94' ),
+		),
+	),
+	// television
+	5398426 => array(
+		'rows' => array(
+			// genre
+			array( 'id' => 'P136' ),
+			// creator
+			array( 'id' => 'P170' ),
+			// writer
+			array( 'id' => 'P58' ),
+			// director
+			array( 'id' => 'P57' ),
+			// cast members
+			array( 'id' => 'P1' ),
+			// music
+			array( 'id' => 'P86' ),
+			// origin
+			array( 'id' => 'P495' ),
+			// original language
+			array( 'id' => 'P364' ),
+			// location
+			array( 'id' => 'P276' ),
+			// production
+			array( 'id' => 'P272' ),
+			// distributor
+			array( 'id' => 'P750' ),
+			// time of publication
+			array( 'id' => 'P577' ),
+		),
+	),
 	// city
 	515 => array(
 		'rows' => array(
