@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_798bda1b",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-15T22:47:44Z",
+      "side": 1,
+      "message": "Need tab instead of spaces.",
+      "revId": "09670967beefee76079bb61f0bc02fa122505166",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_599a9667",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-15T22:47:44Z",
+      "side": 1,
+      "message": "These probably don\u0027t need to be specific to wikibase.",
+      "revId": "09670967beefee76079bb61f0bc02fa122505166",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_79d99a2b",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-15T22:47:44Z",
+      "side": 1,
+      "message": "I\u0027m not familiar with this \u0027.\u0027 notation. It might be better to use \"$1 thousand years CE\" and \"$1 hundred years CE\" since we don\u0027t have access to proper ordinal numbers via the cldr extension on the client-side.",
+      "revId": "09670967beefee76079bb61f0bc02fa122505166",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_d976a639",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 403,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-15T22:47:44Z",
+      "side": 1,
+      "message": "Need tab instead of spaces.",
+      "revId": "09670967beefee76079bb61f0bc02fa122505166",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
