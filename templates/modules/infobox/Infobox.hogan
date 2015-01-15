@@ -10,20 +10,36 @@
 </div>
 
 {{{spinner}}}
-{{#rows}}
-<div class="{{className}}">
-	{{^isEmpty}}{{#label}}<strong>{{label}}</strong>: {{/label}}{{/isEmpty}}
-	{{#values}}
-	{{#url}}<a href="{{url}}" data-wikidata-id={{id}}
-		{{#src}}class="image"{{/src}}
-		>{{/url}}
-	{{#src}}<img src="{{src}}" width="160px">{{/src}}
-	{{value}}
-	{{#url}}</a>{{/url}}
-	{{/values}}
+{{#rows.length}}
+<div class="wikidata-infobox-content">
+	{{#rows}}
+	{{^isEmpty}}
+	<div class="{{className}} wikidata-infobox-row">
+		{{#label}}
+		<label>{{label}}</label>
+		{{/label}}
+		<div class='wikidata-infobox-values'>
+			{{#values}}
+			<span>
+			{{#url}}<a href="{{url}}" data-wikidata-id={{id}}
+				{{#src}}class="image"{{/src}}
+				>{{/url}}
+			{{#src}}<img src="{{src}}" width="160px">{{/src}}
+			{{value}}
+			{{#url}}</a>{{/url}}
+			</span>
+			{{/values}}
+		</div>
+	</div>
+	{{/isEmpty}}
+	{{/rows}}
 </div>
-{{/rows}}
 <ul class="hlist">
-	<li><a href="https://m.wikidata.org/wiki/{{itemId}}" class="hidden">View on WikiData</a></li>
-	<li><a href='#/infobox/editor' class="hidden edit">Edit this information</a></li>
+	<li>
+		<a href="https://m.wikidata.org/wiki/{{itemId}}"
+			class="hidden mw-ui-anchor mw-ui-progressive">View on WikiData</a>
+	</li>
+	<li><a href='#/infobox/editor'
+		class="hidden edit mw-ui-button mw-ui-progressive">Edit this information</a></li>
 </ul>
+{{/rows.length}}
