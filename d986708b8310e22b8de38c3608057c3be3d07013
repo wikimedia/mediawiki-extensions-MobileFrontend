@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_79919afa",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-15T23:27:01Z",
+      "side": 1,
+      "message": "I was wrong about this. This isn\u0027t the point of the loop. Here we\u0027re looping over the instance types to find the most specific type that we can handle.",
+      "parentUuid": "ae6ac7d6_11b07c3d",
+      "revId": "d986708b8310e22b8de38c3608057c3be3d07013",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_51fcb4d5",
         "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
         "patchSetId": 1
