@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_11b07c3d",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-15T15:05:39Z",
+      "side": 1,
+      "message": "return false here to break out of the loop early.\n\nBetter yet, this loop could be replaced with:\n\n    // Assuming that instanceTypes is returned in priority order.\n    instanceType \u003d claims.instanceTypes[0];\n    defaults \u003d self.typeDefaults[instanceType];",
+      "revId": "d986708b8310e22b8de38c3608057c3be3d07013",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_51fcb4d5",
+        "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-15T15:05:39Z",
+      "side": 1,
+      "message": "I think the following might be little clearer:\n\n    claims.instanceTypes \u003d instanceClaims.map( function ( claim ) {\n        return claim.mainsnak.datavalue.value[\u0027numeric-id\u0027];\n    } );\n    claims.instanceOf \u003d claims.instanceTypes[0];",
+      "revId": "d986708b8310e22b8de38c3608057c3be3d07013",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
