@@ -356,5 +356,6 @@
 	"mobile-frontend-pageaction-edit-tooltip": "編輯此頁面的導言章節。",
 	"mobile-frontend-pageaction-upload-tooltip": "上傳圖片到此頁的引子章節。",
 	"apihelp-mobileview-param-noimages": "回傳不含圖片的 HTML。",
-	"mobile-frontend-donate-button-label": "捐助"
+	"mobile-frontend-donate-button-label": "捐助",
+	"mobile-frontend-loading-message": "正在載入…"
 }

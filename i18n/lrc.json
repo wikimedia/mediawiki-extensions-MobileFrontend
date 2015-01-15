@@ -73,6 +73,12 @@
 	"mobile-frontend-editor-visual-editor": "ویرایشت",
 	"mobile-frontend-editor-wait": "د حال اماییه کردن ویرایشت، لطف آهره داری بکیت.",
 	"mobile-frontend-enable-images": "کنشتگر کردن عسگ د دیارگه موبایلی",
+	"mobile-frontend-errorreport-button-label": "گزارشت یه گل خطا",
+	"mobile-frontend-errorreport-feedback": "سی",
+	"mobile-frontend-errorreport-heading": "گزارشت یه گل خطا",
+	"mobile-frontend-errorreport-placeholder": "ایچه گرازشت خطا نه وارد بکیت.",
+	"mobile-frontend-errorreport-submit": "دئن",
+	"mobile-frontend-errorreport-summary": "د حال و بار گزارشت یه گل خطا",
 	"mobile-frontend-expand-sections-status": "وا کردن همه جابئریا",
 	"mobile-frontend-fontchanger-link": "انازه فونت",
 	"mobile-frontend-fontchanger-desc": "کم یا زیا کردن انازه نیسسه سی بیتر حننش.",
@@ -243,7 +249,12 @@
 	"tag-mobile_edit-description": "ویرایشت سی سیلجا هومدرونگ راس بیه",
 	"tag-mobile_web_edit": "ویرایشت تیارگه موبایلی",
 	"tag-mobile_web_edit-description": "ویرایشت انجوم دئه بیه د یه گل دیارگه موبایلیه",
+	"mobile-frontend-pageaction-edit-tooltip": "ویرایشت سر بهرجا ای بلگه.",
+	"mobile-frontend-pageaction-upload-tooltip": "سوارکرد یه گل سرعسگ سی ای بلگه.",
 	"apihelp-mobileview-param-page": "داسون بلگه سی پردازشت کردن.",
+	"apihelp-mobileview-param-redirect": "جایی که واگردونیا واس نهاداری بان.",
 	"apihelp-mobileview-param-sectionprop": "چه دونسمنیایی دباره ای بهرجایا حاستنیه.",
-	"mobile-frontend-donate-button-label": "هومياری پيلی"
+	"mobile-frontend-donate-button-label": "هومياری پيلی",
+	"mobile-frontend-meta-data-issues-categories": "دباره ای دسه",
+	"mobile-frontend-loading-message": "د حال و بال سوار كرد"
 }

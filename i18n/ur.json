@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Noor2020",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"عثمان خان شاہ"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "ایک قطعہ پیچھے جاؤ",
@@ -30,5 +31,6 @@
 	"mobile-frontend-username": "صارف کا نام:",
 	"mobile-frontend-view": "موبائل دیکھیں",
 	"mobile-frontend-view-desktop": "ڈیسک ٹاپ",
-	"mobile-frontend-view-mobile": "موبائل"
+	"mobile-frontend-view-mobile": "موبائل",
+	"mobile-frontend-loading-message": "لوڈ ہو رہا ہے۔۔۔"
 }
