@@ -1,10 +1,15 @@
 ( function ( M, $ ) {
-	var
+
+	var Api, NearbyApi,
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		limit = 50,
-		ns = mw.config.get( 'wgMFContentNamespace' ),
-		Api = M.require( 'api' ).Api,
-		NearbyApi;
+		ns = mw.config.get( 'wgMFContentNamespace' );
+
+	if ( endpoint ) {
+		Api = M.require( 'modules/ForeignApi' );
+	} else {
+		Api = M.require( 'api' ).Api;
+	}
 
 	/**
 	 * FIXME: Api should surely know this and return it in response to save us the hassle
@@ -48,6 +53,7 @@
 	 * @extends Api
 	 */
 	NearbyApi = Api.extend( {
+		apiUrl: endpoint || Api.prototype.apiUrl,
 		/**
 		 * Returns a human readable string stating the distance in meters or kilometers
 		 * depending on size.
@@ -133,10 +139,7 @@
 			};
 			$.extend( requestParams, params );
 
-			this.get( requestParams, {
-				dataType: endpoint ? 'jsonp' : 'json',
-				url: endpoint || this.apiUrl
-			} ).then( function ( resp ) {
+			this.ajax( requestParams ).then( function ( resp ) {
 				var pages;
 				// FIXME: API bug 48512
 				if ( !resp || resp.error ) {

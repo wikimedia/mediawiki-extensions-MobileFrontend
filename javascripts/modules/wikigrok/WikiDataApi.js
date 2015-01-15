@@ -1,76 +1,23 @@
 ( function ( M, $ ) {
-	var api = M.require( 'api' ),
-		Api = api.Api,
+
+	var WikiDataApi,
+		ForeignApi = M.require( 'modules/ForeignApi' ),
 		config = mw.config.get( 'wgWikiBasePropertyConfig' ),
-		WikiDataApi;
+		endpoint = mw.config.get( 'wgMFWikiDataEndpoint' );
+
 	/**
 	 * Gets claims and labels from the WikiData API
 	 * @class WikiDataApi
-	 * @extends Api
+	 * @extends ForeignApi
 	 */
-	WikiDataApi = Api.extend( {
+	WikiDataApi = ForeignApi.extend( {
 		propertyIdInstanceOf: config.instanceOf,
-		apiUrl: mw.config.get( 'wgMFWikiDataEndpoint' ),
-		useJsonp: true,
+		apiUrl: endpoint,
 		language: mw.config.get( 'wgUserLanguage' ),
-		/**
-		 * Get a central auth token from the current host for use on the foreign api.
-		 * @return {jQuery.Deferred}
-		 */
-		getCentralAuthToken: function () {
-			var data = {
-				action: 'centralauthtoken'
-			};
-			return api.get( data ).then( function ( resp ) {
-				return resp.centralauthtoken.centralauthtoken;
-			} );
-		},
-		/**
-		 * Get a token from a foreign API
-		 * @param {String} type of token you want to retrieve
-		 * @param {String} centralAuthToken to help get it
-		 * @return {jQuery.Deferred}
-		 */
-		getToken: function ( type, centralAuthToken ) {
-			var data = {
-				action: 'query',
-				meta: 'tokens',
-				origin: this.getOrigin(),
-				centralauthtoken: centralAuthToken,
-				type: type
-			};
-			return this.get( data ).then( function ( resp ) {
-				return resp.query.tokens[type + 'token'];
-			} );
-		},
-		/**
-		 * Post with support for central auth tokens
-		 * @param {Object} data to post
-		 */
-		post: function ( data ) {
-			var self = this,
-				d = $.Deferred();
-
-			// first let's sort out the token
-			self.getCentralAuthToken().done( function ( centralAuthTokenOne ) {
-				self.getToken( 'csrf', centralAuthTokenOne ).done( function ( editToken ) {
-					self.getCentralAuthToken().done( function ( centralAuthTokenTwo ) {
-						data.format = 'json';
-						data.centralauthtoken = centralAuthTokenTwo;
-						data.token = editToken;
-						data.origin = self.getOrigin();
-						$.post( self.apiUrl, data ).done( function ( resp ) {
-							d.resolve( resp );
-						} );
-					} );
-				} );
-			} );
-			return d;
-		},
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			this.subjectId = options.itemId;
-			Api.prototype.initialize.apply( this, arguments );
+			ForeignApi.prototype.initialize.apply( this, arguments );
 		},
 		/**
 		 * Get claims via the API

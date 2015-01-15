@@ -1,8 +1,7 @@
 ( function ( M, $ ) {
 
-	var EventEmitter = M.require( 'eventemitter' ),
-		user = M.require( 'user' ),
-		Api, api;
+	var Api, api,
+		EventEmitter = M.require( 'eventemitter' );
 
 	/**
 	 * JavaScript wrapper for a horrible API. Use to retrieve things.
@@ -11,11 +10,6 @@
 	 */
 	Api = EventEmitter.extend( mw.Api.prototype ).extend( {
 		apiUrl: mw.util.wikiScript( 'api' ),
-		/**
-		 * Whether to use jsonp or not.
-		 * @property {Boolean}
-		 */
-		useJsonp: false,
 
 		/**
 		 * @inheritdoc
@@ -53,12 +47,6 @@
 			var key, request, self = this;
 
 			options = options || {};
-			if ( this.useJsonp ) {
-				options.url = this.apiUrl;
-				if ( data.action !== 'tokens' && data.meta !== 'tokens' ) {
-					options.dataType = 'jsonp';
-				}
-			}
 
 			if ( typeof data !== 'string' ) {
 				for ( key in data ) {
@@ -125,91 +113,6 @@
 				origin += ':' + window.location.port;
 			}
 			return origin;
-		},
-
-		/**
-		 * Retrieves a token for a given endpoint
-		 * FIXME: consolidate with mw.Api.getToken
-		 * use postWithToken / getToken where possible
-		 * FIXME: This should be made a method in a ForeignApi class.
-		 * FIXME: WikiDataApi code is more modern so that should be the basis for the ForeignApi class.
-		 * FIXME: Only uploads and WikiDataInfobox should be using this. Remove usage in other places.
-		 *
-		 * @method
-		 * @param {String} tokenType Name of the type of token needed e.g. edit, upload - defaults to edit
-		 * @param {String} endpoint Optional alternative host to query via CORS
-		 * @param {String} caToken Optional additional CentralAuth token to be
-		 * sent with the request. This is needed for requests to external wikis
-		 * where the user is not logged in. caToken is for single use only.
-		 * @return {jQuery.Deferred} Object returned by $.ajax(), callback will be passed
-		 *   the token string, false if the user is anon or undefined where not available or a warning is set
-		 */
-		getTokenWithEndpoint: function ( tokenType, endpoint, caToken ) {
-			var token, data, isCacheable,
-				d = $.Deferred(),
-				// token types available from mw.user.tokens
-				easyTokens = [ 'edit', 'watch', 'patrol' ],
-				editorConfig = mw.config.get( 'wgMFEditorOptions' );
-
-			tokenType = tokenType || 'edit';
-			isCacheable = tokenType !== 'centralauth';
-
-			if ( !this.tokenCache[ endpoint ] ) {
-				this.tokenCache[ endpoint ] = {};
-			}
-
-			// If the user is anonymous and anonymous editing is disabled, reject the request.
-			// FIXME: Per the separation of concerns design principle, we should probably
-			// not be worrying about whether or not the user is anonymous within getToken.
-			// We'll need to check upstream usage though before removing this.
-			if ( user.isAnon() && !editorConfig.anonymousEditing ) {
-				return d.reject( 'Token requested when not logged in.' );
-			// If the token is cached, return it from cache.
-			} else if ( isCacheable && this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
-				return this.tokenCache[ endpoint ][ tokenType ];
-			// If the token is available from mw.user.tokens, get it from there.
-			} else if ( $.inArray( tokenType, easyTokens ) > -1 && !endpoint && !caToken ) {
-				token = user.tokens.get( tokenType + 'Token' );
-				if ( token && ( token !== '+\\' || editorConfig.anonymousEditing ) ) {
-					d.resolve( token );
-				} else {
-					d.reject( 'Anonymous token.' );
-				}
-			// Otherwise, make an API request for the token.
-			} else {
-				data = {
-					action: 'tokens',
-					type: tokenType
-				};
-				if ( endpoint ) {
-					data.origin = this.getOrigin();
-					if ( caToken ) {
-						data.centralauthtoken = caToken;
-					}
-				}
-				this.ajax( data, {
-					url: endpoint || this.apiUrl,
-					xhrFields: {
-						withCredentials: true
-					}
-				} ).done( function ( tokenData ) {
-					if ( tokenData && tokenData.tokens && !tokenData.warnings ) {
-						token = tokenData.tokens[ tokenType + 'token' ];
-						if ( token && ( token !== '+\\' || editorConfig.anonymousEditing ) ) {
-							d.resolve( token );
-						} else {
-							d.reject( 'Anonymous token.' );
-						}
-					} else {
-						d.reject( 'Bad token name.' );
-					}
-				} ).fail( function () {
-					d.reject( 'Failed to retrieve token.' );
-				} );
-			}
-			// Cache the token
-			this.tokenCache[ endpoint ][ tokenType ] = d;
-			return d;
 		}
 	} );
 

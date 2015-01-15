@@ -1,8 +1,14 @@
 ( function ( M, $ ) {
-	var UserGalleryApi,
+
+	var UserGalleryApi, Api,
 		IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).medium,
-		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
+		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' );
+
+	if ( corsUrl ) {
+		Api = M.require( 'modules/ForeignApi' );
+	} else {
 		Api = M.require( 'api' ).Api;
+	}
 
 	/**
 	 * API for retrieving gallery photos
@@ -10,6 +16,7 @@
 	 * @extends Api
 	 */
 	UserGalleryApi = Api.extend( {
+		apiUrl: corsUrl || Api.prototype.apiUrl,
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			Api.prototype.initialize.apply( this, arguments );
@@ -66,7 +73,7 @@
 
 			// FIXME: Don't simply use this.endTimestamp as initially this value is undefined
 			if ( this.endTimestamp !== false ) {
-				this.get( {
+				this.ajax( {
 					action: 'query',
 					generator: 'allimages',
 					gaisort: 'timestamp',
@@ -75,16 +82,10 @@
 					gailimit: this.limit,
 					gaicontinue: this.endTimestamp,
 					prop: 'imageinfo',
-					origin: corsUrl ? this.getOrigin() : undefined,
 					// FIXME: [API] have to request timestamp since api returns an object
 					// rather than an array thus we need a way to sort
 					iiprop: 'url|timestamp',
 					iiurlwidth: IMAGE_WIDTH
-				}, {
-					url: corsUrl || this.apiUrl,
-					xhrFields: {
-						withCredentials: true
-					}
 				} ).done( function ( resp ) {
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
