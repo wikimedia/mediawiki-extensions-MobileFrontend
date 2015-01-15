@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_9d8ee3d4",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-15T00:23:08Z",
+      "side": 1,
+      "message": "Not sure why you broke this out?\nPlease explain in commit message (I think it was clearer before)",
+      "revId": "8d374e0e08373d4b0bc087095ed05e969c20d409",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_7dbd0f63",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-15T00:23:08Z",
+      "side": 1,
+      "message": "Note to self: We should do something similar to icons and make it easier to create buttons.",
+      "revId": "8d374e0e08373d4b0bc087095ed05e969c20d409",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
