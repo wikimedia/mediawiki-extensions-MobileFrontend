@@ -744,6 +744,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-categories-summary',
 			'mobile-frontend-categories-add-heading',
 			'mobile-frontend-categories-add-wait',
+			'mobile-frontend-categories-normal',
+			'mobile-frontend-categories-hidden',
 		),
 	),
 

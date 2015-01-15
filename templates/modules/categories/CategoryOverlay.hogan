@@ -2,11 +2,26 @@
 	<p class="content-header">
 		{{subheading}}
 	</p>
-	<ul class="topic-title-list">
+	<ul class="category-header">
+		<li class="selected">
+			<a href="#" class="catlink">{{normalcatlink}}</a>
+		</li><li>
+			<a href="#" class="catlink">{{hiddencatlink}}</a>
+		</li>
+	</ul>
+	<ul class="topic-title-list normal-catlist">
 		{{#items}}
 			<li>
 				<a href="{{url}}">{{title}}</a>
 			</li>
 		{{/items}}
 	</ul>
+	<ul class="topic-title-list hidden hidden-catlist">
+		{{#hiddenitems}}
+			<li>
+				<a href="{{url}}">{{title}}</a>
+			</li>
+		{{/hiddenitems}}
+	</ul>
 </div>
+{{{spinner}}}

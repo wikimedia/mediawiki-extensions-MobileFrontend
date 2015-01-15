@@ -21,6 +21,8 @@
 	"mobile-frontend-categories-summary": "Added categories",
 	"mobile-frontend-categories-add-heading": "<strong>Add new categories to</strong><span> $1</span>",
 	"mobile-frontend-categories-add-wait": "Saving categories, please wait.",
+	"mobile-frontend-categories-normal": "Content based",
+	"mobile-frontend-categories-hidden": "Organizational",
 	"mobile-frontend-changeslist-ip": "Anonymous user",
 	"mobile-frontend-changeslist-nocomment": "no edit summary",
 	"mobile-frontend-clear-search": "Clear",
