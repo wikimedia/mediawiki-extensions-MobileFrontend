@@ -68,6 +68,10 @@
 			userEditCount: typeof user.getEditCount() === 'number' ? user.getEditCount() : undefined
 		} ),
 		/**
+		 * @inheritdoc
+		 */
+		isSampled: true,
+		/**
 		 * Record a click to a link in the schema. Throw an error if schema is not
 		 * one of the predefined values.
 		 *

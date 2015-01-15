@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Schema,
-		Class = M.require( 'Class' );
+		Class = M.require( 'Class' ),
+		user = M.require( 'user' );
 
 	/**
 	 * @class Schema
@@ -16,6 +17,11 @@
 		defaults: {
 			mobileMode: M.getMode()
 		},
+		/**
+		 * Whether or not the logging is sampled (i.e. not recorded at 100% frequency)
+		 * @property {Boolean}
+		 */
+		isSampled: false,
 		/**
 		 * Name of Schema to log to
 		 * @property {String}
@@ -37,14 +43,22 @@
 			Class.prototype.initialize.apply( this, arguments );
 		},
 		/**
-		 *
+		 * Actually log event via EventLogging
 		 * @method
 		 * @param {Object} data to log
 		 * @return {jQuery.Deferred}
 		 */
 		log: function ( data ) {
 			if ( mw.eventLog ) {
-				return mw.eventLog.logEvent( this.name, $.extend( this.defaults, data ) );
+				// Log event if logging schema is not sampled or if user falls into
+				// sampling bucket (currently 50% of all users).
+				// FIXME: Figure out if we need a more flexible sampling system, and if
+				// so, how to implement it with the session ID.
+				if ( !this.isSampled || user.getSessionId().charAt( 0 ) < 'V' ) {
+					return mw.eventLog.logEvent( this.name, $.extend( this.defaults, data ) );
+				} else {
+					return $.Deferred().reject( 'User not in event sampling bucket.' );
+				}
 			} else {
 				return $.Deferred().reject( 'EventLogging not installed.' );
 			}
