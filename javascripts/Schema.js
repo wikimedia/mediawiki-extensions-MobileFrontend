@@ -42,10 +42,13 @@
 		 *
 		 * @method
 		 * @param {Object} data to log
+		 * @return {jQuery.Deferred}
 		 */
 		log: function ( data ) {
 			if ( mw.eventLog ) {
-				mw.eventLog.logEvent( this.name, $.extend( this.defaults, data ) );
+				return mw.eventLog.logEvent( this.name, $.extend( this.defaults, data ) );
+			} else {
+				return $.Deferred().reject( 'EventLogging not installed.' );
 			}
 		}
 	} );
