@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_03c831a9",
+        "filename": "templates/modules/categories/CategoryOverlay.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-15T20:14:48Z",
+      "side": 1,
+      "message": "there is one problem:\nAll tabs, spaces and so on will be in the html output, too, which results in problems with \"width: 50%\", so that both li elements are not side by side, but each other :/\n\nAny ideas?",
+      "revId": "454bd225f6a73602861cd0bc3c17ff142234ffe3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
