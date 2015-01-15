@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_86f21402",
+        "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-15T11:36:49Z",
+      "side": 1,
+      "message": "@jdlrobson why do we extend ForeignApi instead of Api? If it is always a ForeignApi why are we importing Api and using it around?",
+      "revId": "da7592cf92d291d91646f05909f14cf14464f4b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
