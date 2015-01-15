@@ -16,6 +16,24 @@
       "revId": "fa4ec7120de5be3fdba720de5aefea4b84b4c46f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_791c3a7d",
+        "filename": "javascripts/loggingSchemas/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-15T23:39:47Z",
+      "side": 1,
+      "message": "Please do this in SchemaMobileWebClickTracking in the log function\nif ( sessionId.charAt( 0 ) \u003c \u0027V\u0027 ) { // normal behaviour\nelse // noop",
+      "parentUuid": "ae6ac7d6_a3bdc565",
+      "revId": "fa4ec7120de5be3fdba720de5aefea4b84b4c46f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
