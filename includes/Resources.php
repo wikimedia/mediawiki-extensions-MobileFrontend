@@ -493,6 +493,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// for talk.js
 			'mobile-frontend-talk-overlay-header',
+			'mobile-frontend-talk-add-overlay-submit',
 		),
 		'group' => 'other'
 	),
@@ -562,7 +563,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-add-overlay-subject-placeholder',
 			'mobile-frontend-talk-add-overlay-content-placeholder',
 			'mobile-frontend-talk-edit-summary',
-			'mobile-frontend-talk-add-overlay-submit',
 			'mobile-frontend-talk-reply-success',
 			'mobile-frontend-talk-reply',
 			'mobile-frontend-talk-reply-info',
