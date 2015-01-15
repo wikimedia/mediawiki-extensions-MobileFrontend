@@ -110,5 +110,6 @@
 	"mobile-frontend-watchlist-modified": "Cangiate $1",
 	"mobile-frontend-watchlist-more": "de cchiù",
 	"mobile-frontend-watchlist-removed": "Luate $1 da l'elenghe de le pàggene condrollate",
-	"mobile-frontend-watchlist-view": "'Ndruche le pàggene condrollate tune"
+	"mobile-frontend-watchlist-view": "'Ndruche le pàggene condrollate tune",
+	"mobile-frontend-loading-message": "Stoche a careche..."
 }

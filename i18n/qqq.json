@@ -399,5 +399,5 @@
 	"mobile-frontend-donate-button-label": "Message for donation button in mobile interface at bottom of page.\n{{Identical|Donate}}",
 	"mobile-frontend-wikidata-editor-description-label": "Appears above an editable input field for wikidata description\n* $1 - Title of page for which description is being edited.",
 	"mobile-frontend-meta-data-issues-categories": "Label to appear in button that opens issue overlay on categories.",
-	"mobile-frontend-loading-message": "Hidden text existing for accessibility reasons for intermediate loaders."
+	"mobile-frontend-loading-message": "Hidden text existing for accessibility reasons for intermediate loaders.\n{{Identical|Loading}}"
 }
