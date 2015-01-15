@@ -3,6 +3,7 @@
 	var WikiGrokDialogC = M.require( 'modules/wikigrok/WikiGrokDialogC' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		wikiGrokCampaigns = M.require( 'modules/wikigrok/wikiGrokCampaigns' ),
+		api = M.require( 'api' ),
 		campaigns = {
 			actor: {
 				property: 'P106',
@@ -29,7 +30,11 @@
 			this.wk.remove();
 		},
 		setup: function () {
+			var data = {
+				query: {}
+			};
 			// don't run eventLogging
+			this.sandbox.stub( api, 'ajax' ).returns( $.Deferred().resolve( data ) );
 			this.sandbox.stub( WikiGrokDialogC.prototype, 'log' );
 			this.sandbox.stub( WikiGrokDialogC.prototype, 'logError' );
 
