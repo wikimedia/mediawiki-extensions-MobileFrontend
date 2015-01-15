@@ -170,7 +170,21 @@
 		 * @return {Object} default option values
 		 */
 		getDefaultsFromClaims: function ( claims ) {
-			return this.typeDefaults[claims.instanceOf || 'default'];
+			var defaults,
+				self = this,
+				fallback = this.typeDefaults['default'] ||
+					{
+						rows: []
+					};
+
+			// Iterate through instances assuming priority order
+			$.each( claims.instanceTypes, function () {
+				// Pick the first match
+				if ( !defaults ) {
+					defaults = self.typeDefaults[this];
+				}
+			} );
+			return defaults || fallback;
 		},
 		/**
 		 * Get the deferred object associated with the infobox
@@ -231,7 +245,7 @@
 
 			this.$( '.spinner' ).show();
 			this.api.getClaims().done( function ( claims ) {
-				var rows;
+				var rows, isEmptyInfobox = true;
 				options = $.extend( options, self.getDefaultsFromClaims( claims ) );
 				if ( options.rows ) {
 					rows = options.rows;
@@ -248,11 +262,17 @@
 					} else {
 						row.values = [];
 					}
-					row.isEmpty = !( row.values && row.values.length );
+					if ( row.values && row.values.length ) {
+						isEmptyInfobox = false;
+					} else {
+						row.isEmpty = true;
+					}
 				} );
 
+				options.isEmptyInfobox = isEmptyInfobox;
 				self._mapLabels( rows ).done( function ( rows ) {
 					options.rows = rows;
+
 					self.options = options;
 					self.$deferred.resolve();
 					_super.call( self, options );

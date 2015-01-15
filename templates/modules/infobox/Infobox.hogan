@@ -1,8 +1,14 @@
-{{^rows}}
 <div>
+	{{^rows}}
+	{{^isEmptyInfobox}}
 	<button class="mw-ui-button mw-ui-quiet mw-ui-progressive more">More information…</button>
+	{{/isEmptyInfobox}}
+	{{/rows}}
+	{{#isEmptyInfobox}}
+	No further information is available.
+	{{/isEmptyInfobox}}
 </div>
-{{/rows}}
+
 {{{spinner}}}
 {{#rows}}
 <div class="{{className}}">

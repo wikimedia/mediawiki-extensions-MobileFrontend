@@ -49,11 +49,12 @@
 						instanceClaims = entityClaims[instanceOfId];
 
 						// Examine claims closely
-						$.each( instanceClaims, function ( i, claim ) {
-							if ( i === 0 ) {
-								claims.instanceOf = claim.mainsnak.datavalue.value['numeric-id'];
-							}
+						claims.instanceTypes = $.map( instanceClaims, function ( claim ) {
+							return claim.mainsnak.datavalue.value[ 'numeric-id' ];
 						} );
+						if ( claims.instanceTypes.length > 0 ) {
+							claims.instanceOf = claims.instanceTypes[ 0 ];
+						}
 					}
 					claims.entities = entityClaims;
 				}
