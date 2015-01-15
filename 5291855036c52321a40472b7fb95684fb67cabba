@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_d62c3592",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1429,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-15T21:34:02Z",
+      "side": 1,
+      "message": "Mmm.. can we have a more meaningful name?",
+      "revId": "5291855036c52321a40472b7fb95684fb67cabba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_3653311c",
+        "filename": "javascripts/head.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-15T21:34:02Z",
+      "side": 1,
+      "message": "This is even worse.. So now we\u0027ve rendered the main menu unusable until JS has loaded. Think of the 2G connections!!\n\nWhen this event runs it seems the left menu will have already rendered, so you can actually initialise MainMenu at this point in time.",
+      "revId": "5291855036c52321a40472b7fb95684fb67cabba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
