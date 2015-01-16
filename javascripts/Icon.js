@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 
 	var View = M.require( 'View' ),
-		useMediaWikiUI = M.isAlphaGroupMember(),
+		useMediaWikiUI = M.isBetaGroupMember(),
 		Icon;
 
 	/**
