@@ -192,19 +192,18 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 
 		if ( count( $mobilePages ) === 0 ) {
 			$html = SpecialMobileWatchlist::getEmptyListHtml( false, $this->getLanguage() );
-
-			if ( $from ) {
-				// show more link if there are more items to show
-				$qs = array( 'from' => $from );
-				$html .= Html::element( 'a',
-					array(
-						'class' => MobileUI::anchorClass( 'progressive', 'more' ),
-						'href' => SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL( $qs ),
-					),
-					$this->msg( 'mobile-frontend-watchlist-more' ) );
-			}
 		} else {
 			$html = $this->getViewHtml( $mobilePages );
+		}
+		if ( $from ) {
+			// show more link if there are more items to show
+			$qs = array( 'from' => $from );
+			$html .= Html::element( 'a',
+				array(
+					'class' => MobileUI::anchorClass( 'progressive', 'more' ),
+					'href' => SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL( $qs ),
+				),
+				$this->msg( 'mobile-frontend-watchlist-more' ) );
 		}
 		$out = $this->getOutput();
 		$out->addHtml( $html );
