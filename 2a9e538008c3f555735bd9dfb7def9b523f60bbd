@@ -33,6 +33,24 @@
       "revId": "2a9e538008c3f555735bd9dfb7def9b523f60bbd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_cff7b855",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-01-16T05:35:46Z",
+      "side": 1,
+      "message": "Yup, the conversion script is too buggy, that\u0027s why no extension has been converted yet.",
+      "parentUuid": "ae6ac7d6_0ffe1036",
+      "revId": "2a9e538008c3f555735bd9dfb7def9b523f60bbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
