@@ -18,32 +18,28 @@
 			display: block;
 			text-align: left;
 		}
-	}
-}
 
-// FIXME: Allow table styling design changes in beta
-.stable {
-	table, caption, tbody, tfoot, thead, tr, th, td {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font: inherit;
-		vertical-align: baseline;
-		background: none;
-	}
+		// For skinning normal data tables
+		&.wikitable {
+			background-color: transparent !important;
+			border: none !important;
 
-	.content {
-		table {
-			td,
-			th {
-				padding: 3px;
-				border: 1px @grayLight solid;
+			tr {
+				border-bottom: 1px solid @grayLightest !important;
 			}
 
-			th {
-				font-weight: bold;
-				background-color: @colorGray14;
-				text-align: center;
+			tr:last-child {
+				border-bottom: none !important;
+			}
+
+			th, td {
+				border-right: 1px solid @grayLightest !important;
+				padding: .2em;
+			}
+
+			td:last-child,
+			th:last-child {
+				border-right: none !important;
 			}
 		}
 	}
