@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_54e49da3",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T01:40:25Z",
+      "side": 1,
+      "message": "Cool. Previously this didn\u0027t seem to be working but looks like this is fixed now.",
+      "parentUuid": "ae6ac7d6_146e2594",
+      "revId": "43150e3ab894ef590f5a4ff81204f1ced897fe19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_b40659d0",
         "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
         "patchSetId": 16
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-16T00:22:12Z",
       "side": 1,
       "message": "1. Options is usually called config\n2. It\u0027s optional, so you have to add \"config \u003d config || {}\u0027\" to the beginning of any constructor that uses it - accessing a property of undefined will cause problems\n3. We usually put all properties after parent and mixin constructors are called",
+      "revId": "43150e3ab894ef590f5a4ff81204f1ced897fe19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_74e9a17a",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T01:40:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae6ac7d6_b40659d0",
       "revId": "43150e3ab894ef590f5a4ff81204f1ced897fe19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -98,6 +134,24 @@
       "writtenOn": "2015-01-16T00:22:12Z",
       "side": 1,
       "message": "This is supposedly fixed in the latest version of OOjs UI, please double check you still need this.",
+      "revId": "43150e3ab894ef590f5a4ff81204f1ced897fe19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_5416dd5b",
+        "filename": "less/modules/infobox.less",
+        "patchSetId": 16
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T01:40:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae6ac7d6_34cfa984",
       "revId": "43150e3ab894ef590f5a4ff81204f1ced897fe19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
