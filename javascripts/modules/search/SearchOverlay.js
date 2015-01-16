@@ -40,11 +40,11 @@
 			clearIcon: new Icon( {
 				tagName: 'button',
 				name: 'clear',
+				label: mw.msg( 'mobile-frontend-clear-search' ),
 				additionalClassNames: 'clear'
 			} ).toHtmlString(),
 			searchTerm: '',
 			placeholderMsg: $( '#searchInput' ).attr( 'placeholder' ),
-			clearMsg: mw.msg( 'mobile-frontend-clear-search' ),
 			searchContentMsg: mw.msg( 'mobile-frontend-search-content' ),
 			noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
 			searchContentNoResultsMsg: mw.msg( 'mobile-frontend-search-content-no-results' ),
