@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_0cf5b94c",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T19:00:32Z",
+      "side": 1,
+      "message": "Rather than uses I\u0027d suggest this as a possible configuration option in defaults",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_4cfbb144",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T19:00:32Z",
+      "side": 1,
+      "message": "Still not sure why private.",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_2cfe7d36",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T19:00:32Z",
+      "side": 1,
+      "message": "don\u0027t use M for this. Pass this in as an option or create a new MainMenu",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_2cac3d32",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T19:00:32Z",
+      "side": 1,
+      "message": "Use this.$ - make this testable by allowing the button to be passed in as an option (maybe defaults to #mw-mf-main-menu-button)",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_8c76a9d4",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T19:00:32Z",
+      "side": 1,
+      "message": "Add a FIXME here. We should be moving away from applying classes to the body.",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_cc534142",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T19:00:32Z",
+      "side": 1,
+      "message": "Add a FIXME here. We should be moving away from applying classes to the body.",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_6c48f58c",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T19:00:32Z",
+      "side": 1,
+      "message": "Add a FIXME here. We should be moving away from applying classes to the body.",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_0c3059fb",
+        "filename": "javascripts/modules/mainMenu/init.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T19:00:32Z",
+      "side": 1,
+      "message": "You might as well create this outside this closer. The code is already loaded after all.",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
