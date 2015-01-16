@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_af491f6c",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-16T19:20:50Z",
+      "side": 1,
+      "message": "I think of it this way: Do I want this function be called on instances of Skin? If no, then it\u0027s private.",
+      "parentUuid": "ae6ac7d6_4cfbb144",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_2cfe7d36",
         "filename": "javascripts/Skin.js",
         "patchSetId": 8
@@ -64,6 +82,24 @@
       "writtenOn": "2015-01-16T19:00:32Z",
       "side": 1,
       "message": "Use this.$ - make this testable by allowing the button to be passed in as an option (maybe defaults to #mw-mf-main-menu-button)",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_2fb3cf4d",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-16T19:20:50Z",
+      "side": 1,
+      "message": "this.$ won\u0027t work because \u0027#mw-mf-main-menu-button\u0027 is outside this.$el.",
+      "parentUuid": "ae6ac7d6_2cac3d32",
       "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -132,6 +168,24 @@
       "writtenOn": "2015-01-16T19:00:32Z",
       "side": 1,
       "message": "You might as well create this outside this closer. The code is already loaded after all.",
+      "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_efeab704",
+        "filename": "javascripts/modules/mainMenu/init.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-16T19:20:50Z",
+      "side": 1,
+      "message": "Didn\u0027t you say it was best to create it on demand in your earlier comment?",
+      "parentUuid": "ae6ac7d6_0c3059fb",
       "revId": "885ec3df163ae67356cbd3e3a3623b697b0493da",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
