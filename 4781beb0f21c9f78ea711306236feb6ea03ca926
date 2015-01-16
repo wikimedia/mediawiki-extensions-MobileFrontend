@@ -16,6 +16,24 @@
       "revId": "4781beb0f21c9f78ea711306236feb6ea03ca926",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_d20678d1",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebClickTracking.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-16T20:29:12Z",
+      "side": 1,
+      "message": "I\u0027m still waiting to hear back from JonKatz and Maryana on how our sampling should actually work. This is just a temporary fix to keep EventLogging from exploding. Personally, I think passing it to the initialization will probably be the best solution, but I don\u0027t want to make the code more complicated until I know that that\u0027s actually the solution we will need.",
+      "parentUuid": "ae6ac7d6_0cde19df",
+      "revId": "4781beb0f21c9f78ea711306236feb6ea03ca926",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
