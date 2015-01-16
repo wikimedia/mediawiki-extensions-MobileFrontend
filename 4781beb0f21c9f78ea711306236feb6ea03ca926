@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_0cde19df",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWebClickTracking.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-16T18:52:32Z",
+      "side": 1,
+      "message": "Do we want to sample all events or just sample the /SchemaMobileWebUIClickTracking.js - the other schemas do not seem to be generating as much events.\n\nMaybe this should be an option passed to initialize...?",
+      "revId": "4781beb0f21c9f78ea711306236feb6ea03ca926",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
