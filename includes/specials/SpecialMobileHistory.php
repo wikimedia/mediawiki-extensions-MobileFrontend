@@ -7,6 +7,8 @@
  * Mobile formatted history of of a page
  */
 class SpecialMobileHistory extends MobileSpecialPageFeed {
+	/** @var boolean $hasDesktopVersion Whether the mobile special page has a desktop special page */
+	protected $hasDesktopVersion = true;
 	const LIMIT = 50;
 	const DB_REVISIONS_TABLE = 'revision';
 	/** @var string|null $offset timestamp to offset results from */
@@ -100,6 +102,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
+				$this->addModules();
 				$this->renderHeaderBar( $this->title );
 				$res = $this->doQuery();
 				$this->showHistory( $res );
