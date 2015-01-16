@@ -8,7 +8,8 @@
 			"බිඟුවා",
 			"ශ්වෙත",
 			"Indunil Chamara",
-			"Susith Chandira Gts"
+			"Susith Chandira Gts",
+			"Thirsty"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ආරක්ෂක පාඨය ඇතුළු කරන්න",
@@ -106,5 +107,6 @@
 	"mobile-frontend-watchlist-view": "ඔබේ මුරලැයිස්තුව නරඹන්න",
 	"tag-mobile_edit": "ජංගම සංස්කරණය",
 	"tag-mobile_edit-description": "ජංගම අඩවියෙන් සංස්කරණය සිදු කරන ලදී",
-	"mobile-frontend-meta-data-issues-categories": "මෙම ප්‍රවර්ගය ගැන"
+	"mobile-frontend-meta-data-issues-categories": "මෙම ප්‍රවර්ගය ගැන",
+	"mobile-frontend-loading-message": "ප්‍රවේශනය වෙමින්..."
 }
