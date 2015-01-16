@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_74ae81e6",
+        "filename": "javascripts/modules/categories/CategoryLookupInputWidget.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-01-16T00:03:11Z",
+      "side": 1,
+      "message": "Needs just one \u0027this\u0027. Insidiously, this works, it just discards the \u0027options\u0027.",
+      "revId": "9511b89c20013c5404650bd612f506ad54b280c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
