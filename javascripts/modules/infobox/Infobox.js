@@ -4,7 +4,21 @@
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		View = M.require( 'View' ),
 		user = M.require( 'user' ),
-		icons = M.require( 'icons' );
+		icons = M.require( 'icons' ),
+		months = [
+			'january-date',
+			'february-date',
+			'march-date',
+			'april-date',
+			'may-date',
+			'june-date',
+			'july-date',
+			'august-date',
+			'september-date',
+			'october-date',
+			'november-date',
+			'december-date'
+		];
 
 	/**
 	 * A Wikidata generated infobox.
@@ -101,8 +115,7 @@
 					} );
 				} else if ( value.type === 'time' ) {
 					values.push( {
-						// FIXME: This should be more readable. Usually time is not important.
-						value: new Date( value.value.time.substr( 8 ) )
+						value: self._getFormattedTime( value.value )
 					} );
 				} else if ( value.type === 'wikibase-entityid' ) {
 					values.push( {
@@ -123,6 +136,85 @@
 				}
 			} );
 			return values;
+		},
+		/**
+		 * Return a user friendly version of time.
+		 * @param {Object} time
+		 * Example:
+		 * {
+		 *     after: 0,
+		 *     before: 0,
+		 *     calendarmodel: "http://www.wikidata.org/entity/Q1985727",
+		 *     precision: 9,
+		 *     time: "-00000000550-01-01T00:00:00Z",
+		 *     timezone: 0
+		 * }
+		 * @returns {String} Formatted time
+		 * Example: '550 BCE'
+		 * @private
+		 * FIXME: timezone is assumed to be UTC. Explore using http://momentjs.com/timezone/
+		 */
+		_getFormattedTime: function ( time ) {
+			var formattedTime,
+				date = new Date( time.time.substr( 8 ) ),
+				year = date.getUTCFullYear().toString(),
+				isBCE = time.time.charAt( 0 ) === '-',
+				eraMessage = 'mobile-frontend-time-precision-' +
+					( isBCE ? 'BCE-' : '' );
+			// Precision Values:
+			// 0 - billion years
+			// 1 - hundred million years
+			// 2...
+			// 6 - millennium
+			// 7 - century
+			// 8 - decade
+			// 9 - year
+			// 10 - month
+			// 11 - day
+			// 12 - hour
+			// 13 - minute
+			// 14 - second
+			switch ( time.precision ) {
+				case 0:
+					formattedTime = mw.msg( eraMessage + 'Gannum', year );
+					break;
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+					formattedTime = mw.msg( eraMessage + 'Mannum', year );
+					break;
+				case 5:
+					formattedTime = mw.msg( eraMessage + 'annum', year );
+					break;
+				case 6:
+					formattedTime = mw.msg( eraMessage + 'millennium', year );
+					break;
+				case 7:
+					formattedTime = mw.msg( eraMessage + 'century', year );
+					break;
+				case 8:
+					formattedTime = mw.msg( eraMessage + '10annum', year );
+					break;
+				default:
+					formattedTime = mw.msg( eraMessage + '0annum', year );
+					break;
+			}
+			// month
+			if ( time.precision === 10 ) {
+				formattedTime = $.trim( mw.msg(
+					months[date.getUTCMonth()],
+					''
+				) ) + ' ' + formattedTime;
+				// date
+			} else if ( time.precision > 10 ) {
+				formattedTime = mw.msg(
+					months[ date.getUTCMonth() ],
+					date.getUTCDate().toString()
+				) + ' ' + formattedTime;
+			}
+			// ignore time
+			return formattedTime;
 		},
 		/**
 		 * Translates IDs in the current row value to human readable text

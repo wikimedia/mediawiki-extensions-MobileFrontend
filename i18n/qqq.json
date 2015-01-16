@@ -399,5 +399,19 @@
 	"mobile-frontend-donate-button-label": "Message for donation button in mobile interface at bottom of page.\n{{Identical|Donate}}",
 	"mobile-frontend-wikidata-editor-description-label": "Appears above an editable input field for wikidata description\n* $1 - Title of page for which description is being edited.",
 	"mobile-frontend-meta-data-issues-categories": "Label to appear in button that opens issue overlay on categories.",
-	"mobile-frontend-loading-message": "Hidden text existing for accessibility reasons for intermediate loaders.\n{{Identical|Loading}}"
+	"mobile-frontend-loading-message": "Hidden text existing for accessibility reasons for intermediate loaders.\n{{Identical|Loading}}",
+	"mobile-frontend-time-precision-Gannum": "Used to present a point in time with the precision of 1 billion of years",
+	"mobile-frontend-time-precision-Mannum": "Used to present a point in time with the precision of 1 million of years",
+	"mobile-frontend-time-precision-annum": "Used to present a point in time with the precision of 10000 years to 100000 years",
+	"mobile-frontend-time-precision-millennium": "Used to present a point in time with the precision of 1000 years",
+	"mobile-frontend-time-precision-century": "Used to present a point in time with the precision of 100 years",
+	"mobile-frontend-time-precision-10annum": "Used to present a point in time with the precision of 10 years",
+	"mobile-frontend-time-precision-0annum": "Used to present a point in time with the precision of a year",
+	"mobile-frontend-time-precision-BCE-Gannum": "Used to present a point in time BCE (before current era) with the precision of 1 billion of years",
+	"mobile-frontend-time-precision-BCE-Mannum": "Used to present a point in time BCE (before current era) with the precision of 1 million of years",
+	"mobile-frontend-time-precision-BCE-annum": "Used to present a point in time BCE (before current era) with the precision of 10000 years to 100000 years",
+	"mobile-frontend-time-precision-BCE-millennium": "Used to present a point in time BCE (before current era) with the precision of 1000 years",
+	"mobile-frontend-time-precision-BCE-century": "Used to present a point in time BCE (before current era) with the precision of 100 years",
+	"mobile-frontend-time-precision-BCE-10annum": "Used to present a point in time BCE (before current era) with the precision of 10 years",
+	"mobile-frontend-time-precision-BCE-0annum": "Used to present a point in time BCE (before current era) with the precision of a year"
 }
