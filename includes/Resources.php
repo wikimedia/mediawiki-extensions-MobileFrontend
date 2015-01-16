@@ -148,6 +148,74 @@ $wgMinervaStyleModules = array(
 );
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
+	'mobile.modules' => $wgMFResourceFileModuleBoilerplate + array(
+		'scripts' => array(
+			'javascripts/modules.js',
+		),
+	),
+	'mobile.oo' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.modules',
+			'oojs',
+		),
+		'scripts' => array(
+			'javascripts/Class.js',
+			'javascripts/eventemitter.js',
+		),
+	),
+	'mobile.view' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.oo',
+			'mobile.templates',
+		),
+		'scripts' => array(
+			'javascripts/View.js',
+		),
+	),
+	'mobile.context' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.modules',
+		),
+		'scripts' => array(
+			'javascripts/modes.js',
+		),
+	),
+	'mobile.browser' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.view',
+		),
+		'scripts' => array(
+			'javascripts/browser.js',
+		),
+	),
+	'mobile.mainMenu' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.view',
+		),
+		'scripts' => array(
+			'javascripts/modules/mainMenu/MainMenu.js',
+		),
+	),
+	'mobile.modifiedBar' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.modules',
+			'mediawiki.language',
+			'mediawiki.jqueryMsg',
+		),
+		'scripts' => array(
+			'javascripts/modules/lastEdited/time.js',
+		),
+		'messages' => array(
+			// lastEdited.js
+			'mobile-frontend-last-modified-with-user-seconds',
+			'mobile-frontend-last-modified-with-user-minutes',
+			'mobile-frontend-last-modified-with-user-hours',
+			'mobile-frontend-last-modified-with-user-days',
+			'mobile-frontend-last-modified-with-user-months',
+			'mobile-frontend-last-modified-with-user-years',
+			'mobile-frontend-last-modified-with-user-just-now',
+		),
+	),
 	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.template',
@@ -1411,21 +1479,14 @@ $wgMinervaBootstrapModules = array(
 	// This JavaScript is loaded at the top of the page so be cautious what you put in it.
 	'mobile.head' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mediawiki.language',
-			'mediawiki.jqueryMsg',
-			'mobile.templates',
-			'oojs',
+			'mobile.modifiedBar',
+			'mobile.mainMenu',
+			'mobile.browser',
+			'mobile.modules',
+			'mobile.context',
 		),
 		'scripts' => array(
-			'javascripts/modules.js',
-			'javascripts/Class.js',
-			'javascripts/eventemitter.js',
-			'javascripts/View.js',
-			'javascripts/modes.js',
-			'javascripts/browser.js',
-			'javascripts/modules/mainMenu/MainMenu.js',
 			'javascripts/modules/mainMenu/init.js',
-			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/lastEdited/init.js',
 		),
 		'messages' => array(
