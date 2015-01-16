@@ -13,6 +13,7 @@
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
 		router = new Router(),
+		MainMenu = M.require( 'MainMenu' ),
 		Skin = M.require( 'Skin' );
 
 	/**
@@ -23,8 +24,11 @@
 		skin = new Skin( {
 			el: '#mw-mf-viewport',
 			tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
-			page: getCurrentPage()
+			page: getCurrentPage(),
+			mainMenu: M.mainMenu || new MainMenu()
 		} );
+		M.define( 'skin', skin );
+
 		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
 		$( window ).on( 'scroll', $.proxy( M, 'emit', 'scroll' ) );
 	}

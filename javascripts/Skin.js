@@ -18,10 +18,31 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Page} defaults.page page the skin is currently rendering
 		 * @cfg {Array} defaults.tabletModules modules to load when in tablet
+		 * @cfg {MainMenu} defaults.mainMenu instance of the mainMenu
 		 */
 		defaults: {
 			page: undefined,
-			tabletModules: []
+			tabletModules: [],
+			mainMenu: undefined
+		},
+
+		/**
+		 * @inheritdoc
+		 */
+		events: {
+			'click #mw-mf-page-center': '_onPageCenterClick'
+		},
+
+		/**
+		 * Close navigation if content tapped
+		 * @param {jQuery.Event} ev
+		 * @private
+		 */
+		_onPageCenterClick: function ( ev ) {
+			if ( ev.target.id !== 'mw-mf-main-menu-button' && this.mainMenu.isOpen() ) {
+				this.mainMenu.closeNavigationDrawers();
+				ev.preventDefault();
+			}
 		},
 
 		/**
@@ -71,6 +92,7 @@
 			this.page = options.page;
 			this.name = options.name;
 			this.tabletModules = options.tabletModules;
+			this.mainMenu = options.mainMenu;
 			View.prototype.initialize.apply( this, arguments );
 
 			/**
@@ -107,6 +129,15 @@
 			if ( browser.supportsTouchEvents() ) {
 				$el.addClass( 'touch-events' );
 			}
+			$( '<div class="transparent-shield cloaked-element">' ).appendTo( '#mw-mf-page-center' );
+		},
+
+		/**
+		 * Return the instance of MainMenu
+		 * @returns {MainMenu}
+		 */
+		getMainMenu: function () {
+			return this.mainMenu;
 		}
 	} );
 

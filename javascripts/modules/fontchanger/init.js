@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var settings = M.require( 'settings' ),
-		mainmenu = M.require( 'mainmenu' ),
+		mainMenu = M.require( 'skin' ).getMainMenu(),
 		userFontSize = settings.get( 'userFontSize', true ),
 		FontChanger = M.require( 'modules/fontchanger/FontChanger' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
@@ -19,7 +19,7 @@
 			var fcDrawer = new FontChanger( {} );
 
 			// close the main menu drawer
-			mainmenu.closeNavigationDrawers();
+			mainMenu.closeNavigationDrawers();
 
 			// show the fontchanger drawer
 			fcDrawer.show();
