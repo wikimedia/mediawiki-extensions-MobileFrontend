@@ -208,7 +208,7 @@
 						} )
 				};
 
-				request = self.post( data, {
+				request = self.postWithToken( 'edit', data, {
 					contentType: 'multipart/form-data',
 					cache: false
 				} ).done( function ( data ) {

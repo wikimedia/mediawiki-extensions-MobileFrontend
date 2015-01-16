@@ -47,8 +47,10 @@
 		/**
 		 * Post with support for central auth tokens
 		 * @inheritdoc
+		 *
+		 * @param {String} tokenType Ignored. `'csrf'` is always used
 		 */
-		post: function ( data, options ) {
+		postWithToken: function ( tokenType, data, options ) {
 			var self = this,
 				d = $.Deferred();
 

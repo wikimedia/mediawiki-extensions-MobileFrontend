@@ -61,7 +61,7 @@
 					result: 'Success'
 				}
 			} ) );
-			this.sandbox.stub( photoApi, 'post' ).returns( $.Deferred().resolve( resp ) );
+			this.sandbox.stub( photoApi, 'postWithToken' ).returns( $.Deferred().resolve( resp ) );
 		}
 	} );
 
@@ -78,7 +78,7 @@
 			},
 			spy = this.sandbox.spy();
 
-		photoApi.post.returns( $.Deferred().resolve( resp ) );
+		photoApi.postWithToken.returns( $.Deferred().resolve( resp ) );
 
 		photoApi.save( {
 			file: {
@@ -113,8 +113,7 @@
 		var doneSpy = this.sandbox.spy(),
 			failSpy = this.sandbox.spy();
 
-		photoApi.post
-			.returns( $.Deferred().resolve( {
+		photoApi.postWithToken.returns( $.Deferred().resolve( {
 				error: {
 					code: 'verification-error',
 					info: 'This file did not pass file verification',

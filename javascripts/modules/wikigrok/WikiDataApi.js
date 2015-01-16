@@ -111,7 +111,7 @@
 				d = $.Deferred();
 
 			this.getInfo().done( function ( info ) {
-				self.post( {
+				self.postWithToken( 'csrf', {
 						action: 'wbsetdescription',
 						id: self.subjectId,
 						value: value,
