@@ -16,6 +16,24 @@
       "revId": "fc0a1615fa3bd1bd34031ecf6afaf7b9a2f0af3f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_b875e394",
+        "filename": "jsduckCustomTags.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-17T00:44:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee703fc5_8c5c4550",
+      "revId": "fc0a1615fa3bd1bd34031ecf6afaf7b9a2f0af3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
