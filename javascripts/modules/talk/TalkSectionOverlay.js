@@ -5,6 +5,7 @@
 		api = M.require( 'api' ),
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
+		pageApi = M.require( 'pageApi' ),
 		TalkSectionOverlay;
 
 	/**
@@ -45,7 +46,7 @@
 
 			Overlay.prototype.postRender.apply( this, arguments );
 			if ( !options.section ) {
-				M.pageApi.getPage( options.title ).done( function ( pageData ) {
+				pageApi.getPage( options.title ).done( function ( pageData ) {
 					var page = new Page( pageData );
 					options.section = page.getSection( options.id );
 					self.render( options );
@@ -94,7 +95,7 @@
 								self.hide();
 								popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
 								// invalidate the cache
-								M.pageApi.invalidatePage( title );
+								pageApi.invalidatePage( title );
 							}
 						} );
 					} else {

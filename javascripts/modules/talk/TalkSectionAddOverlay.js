@@ -3,6 +3,7 @@
 	var
 		Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
+		pageApi = M.require( 'pageApi' ),
 		toast = M.require( 'toast' ),
 		TalkSectionAddOverlay;
 
@@ -76,7 +77,7 @@
 						if ( status === 'ok' ) {
 							// Check if the user was previously on the talk overlay
 							if ( options.title !== mw.config.get( 'wgPageName' ) ) {
-								M.pageApi.invalidatePage( self.title );
+								pageApi.invalidatePage( self.title );
 								toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
 								M.emit( 'talk-discussion-added' );
 								self.hide();

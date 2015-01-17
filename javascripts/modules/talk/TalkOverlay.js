@@ -4,6 +4,7 @@
 	var
 		Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
+		pageApi = M.require( 'pageApi' ),
 		user = M.require( 'user' ),
 		/**
 		 * Overlay for talk page
@@ -96,7 +97,7 @@
 				this.$( '.topic-title-list' ).empty();
 
 				// FIXME: use Page's mechanisms for retrieving page data instead
-				M.pageApi.getPage( options.title ).fail( function ( resp ) {
+				pageApi.getPage( options.title ).fail( function ( resp ) {
 					// If the API returns the error code 'missingtitle', that means the
 					// talk page doesn't exist yet.
 					if ( resp === 'missingtitle' ) {
