@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_b8c3a360",
+        "filename": "javascripts/modules/infobox/InfoboxEditorOverlay.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-17T01:44:21Z",
+      "side": 1,
+      "message": "Needs an @inheritdoc",
+      "revId": "479facf29ff0c2da44c9c88f8df6779df0d35d27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_5886071a",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-17T01:44:21Z",
+      "side": 1,
+      "message": "This could use a description.",
+      "revId": "479facf29ff0c2da44c9c88f8df6779df0d35d27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
