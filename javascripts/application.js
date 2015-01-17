@@ -92,4 +92,9 @@
 
 	// Initialize
 	$( init );
+	// Recruit volunteers through the console (note console.log may not be a function so check via apply)
+	if ( window.console && window.console.log && window.console.log.apply &&
+			mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {
+		console.log( mw.msg( 'mobile-frontend-console-recruit' ) );
+	}
 }( mw.mobileFrontend, jQuery ) );

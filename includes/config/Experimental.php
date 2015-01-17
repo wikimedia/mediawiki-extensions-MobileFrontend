@@ -8,3 +8,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * Controls whether the "Minerva as a desktop skin" beta feature is enabled
  */
 $wgMFEnableMinervaBetaFeature = false;
+
+/**
+ * Controls whether a message should be logged to the console to attempt to recruit volunteers.
+ */
+$wgMFEnableJSConsoleRecruitment = false;

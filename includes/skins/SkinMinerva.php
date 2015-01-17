@@ -828,6 +828,7 @@ class SkinMinerva extends SkinTemplate {
 		global $wgMFLeadPhotoUploadCssSelector,
 			$wgMFUseCentralAuthToken,
 			$wgMFDeviceWidthTablet,
+			$wgMFEnableJSConsoleRecruitment,
 			$wgMFAjaxUploadProgressSupport,
 			$wgMFEditorOptions,
 			$wgMFWikiDataEndpoint,
@@ -839,6 +840,7 @@ class SkinMinerva extends SkinTemplate {
 		$user = $this->getUser();
 
 		$vars = array(
+			'wgMFEnableJSConsoleRecruitment' => $wgMFEnableJSConsoleRecruitment,
 			'wgMFWikiDataEndpoint' => $wgMFWikiDataEndpoint,
 			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
 			'wgMFEditorOptions' => $wgMFEditorOptions,
