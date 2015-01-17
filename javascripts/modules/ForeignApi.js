@@ -47,8 +47,6 @@
 		/**
 		 * Post with support for central auth tokens
 		 * @inheritdoc
-		 *
-		 * @param {String} tokenType Ignored. `'csrf'` is always used
 		 */
 		postWithToken: function ( tokenType, data, options ) {
 			var self = this,
@@ -57,11 +55,11 @@
 			options = options || {};
 			// first let's sort out the token
 			self.getCentralAuthToken().done( function ( centralAuthTokenOne ) {
-				self.getToken( 'csrf', centralAuthTokenOne ).done( function ( editToken ) {
+				self.getToken( tokenType, centralAuthTokenOne ).done( function ( token ) {
 					self.getCentralAuthToken().done( function ( centralAuthTokenTwo ) {
 						data.format = 'json';
 						data.centralauthtoken = centralAuthTokenTwo;
-						data.token = editToken;
+						data.token = token;
 						data.origin = self.getOrigin();
 
 						options.xhrFields = {
