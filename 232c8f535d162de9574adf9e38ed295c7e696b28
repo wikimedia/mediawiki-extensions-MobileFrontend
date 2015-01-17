@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_bd3ab5e2",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-17T00:31:20Z",
+      "side": 1,
+      "message": "Can you change \\n\\n to just \\n? I need all the console real estate I can get.",
+      "revId": "232c8f535d162de9574adf9e38ed295c7e696b28",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_bd2155ae",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 417,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-17T00:31:20Z",
+      "side": 1,
+      "message": "You might want to add \"The first few characters are an emoticon and don\u0027t need to be translated.\" just in case it\u0027s confusing to translators.",
+      "revId": "232c8f535d162de9574adf9e38ed295c7e696b28",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
