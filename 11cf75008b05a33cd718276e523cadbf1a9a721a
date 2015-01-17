@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_58cda733",
+        "filename": "javascripts/application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-01-17T02:11:34Z",
+      "side": 1,
+      "message": "Let\u0027s only show this on the cluster wikis so that it doesn\u0027t clutter up our local consoles or beta labs. You could check....\n$( \u0027#footer-places-terms-use a\u0027 ).attr( \u0027href\u0027 ).indexOf( \u0027wikimediafoundation\u0027 ) \u003e -1\nYes, it\u0027s hacky, but it\u0027s the best I can think of at the moment.",
+      "revId": "11cf75008b05a33cd718276e523cadbf1a9a721a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
