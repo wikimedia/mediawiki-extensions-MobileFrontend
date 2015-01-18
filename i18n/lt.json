@@ -47,5 +47,6 @@
 	"mobile-frontend-view": "Mobili peržiūra",
 	"mobile-frontend-view-desktop": "Darbalaukis",
 	"mobile-frontend-view-mobile": "Mobilus",
-	"tag-mobile_edit": "Keitimas mob. telefonu"
+	"tag-mobile_edit": "Keitimas mob. telefonu",
+	"mobile-frontend-loading-message": "Kraunasi..."
 }

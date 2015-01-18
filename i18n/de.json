@@ -360,5 +360,20 @@
 	"mobile-frontend-donate-button-label": "Spenden",
 	"mobile-frontend-wikidata-editor-description-label": "Beschreibe ''$1'' in einem einzigen Satz:",
 	"mobile-frontend-meta-data-issues-categories": "Über diese Kategorie",
-	"mobile-frontend-loading-message": "Lade …"
+	"mobile-frontend-loading-message": "Lade …",
+	"mobile-frontend-time-precision-Gannum": "$1 Milliarden Jahre n. Chr.",
+	"mobile-frontend-time-precision-Mannum": "$1 Millionen Jahre n. Chr.",
+	"mobile-frontend-time-precision-annum": "$1 Jahre n. Chr.",
+	"mobile-frontend-time-precision-millennium": "$1 Tausend Jahre n. Chr.",
+	"mobile-frontend-time-precision-century": "$1 Hundert Jahre n. Chr.",
+	"mobile-frontend-time-precision-BCE-Gannum": "$1 Milliarden Jahre v. Chr.",
+	"mobile-frontend-time-precision-BCE-Mannum": "$1 Millionen Jahre v. Chr.",
+	"mobile-frontend-time-precision-BCE-annum": "$1 Jahre v. Chr.",
+	"mobile-frontend-time-precision-BCE-millennium": "$1 Tausend Jahre v. Chr.",
+	"mobile-frontend-time-precision-BCE-century": "$1 Hundert Jahre v. Chr.",
+	"mobile-frontend-time-precision-BCE-10annum": "$1er v. Chr.",
+	"mobile-frontend-time-precision-BCE-0annum": "$1 v. Chr.",
+	"mobile-frontend-days-ago": "vor {{PLURAL:$1|einem Tag|$1 Tagen}}",
+	"mobile-frontend-months-ago": "vor {{PLURAL:$1|einem Monat|$1 Monaten}}",
+	"mobile-frontend-years-ago": "vor {{PLURAL:$1|einem Jahr|$1 Jahren}}"
 }

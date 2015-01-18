@@ -347,6 +347,11 @@ $specialPageAliases['uk'] = array(
 	'UserProfile' => array( 'Профіль_користувача' ),
 );
 
+/** Urdu (اردو) */
+$specialPageAliases['ur'] = array(
+	'History' => array( 'تاریخ' ),
+);
+
 /** Vietnamese (Tiếng Việt) */
 $specialPageAliases['vi'] = array(
 	'History' => array( 'Lịch_sử' ),

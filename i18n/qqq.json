@@ -414,7 +414,7 @@
 	"mobile-frontend-time-precision-BCE-century": "Used to present a point in time BCE (before current era) with the precision of 100 years",
 	"mobile-frontend-time-precision-BCE-10annum": "Used to present a point in time BCE (before current era) with the precision of 10 years",
 	"mobile-frontend-time-precision-BCE-0annum": "Used to present a point in time BCE (before current era) with the precision of a year",
-	"mobile-frontend-days-ago": "Expression of duration of time passed in days.\nParameter:\n * $1 - number of days that have passed.",
+	"mobile-frontend-days-ago": "Expression of duration of time passed in days.\nParameter:\n* $1 - number of days that have passed.",
 	"mobile-frontend-months-ago": "Expression of duration of time passed in months.\nParameter:\n * $1 - number of months that have passed.",
 	"mobile-frontend-years-ago": "Expression of duration of time passed in years.\nParameter:\n * $1 - number of years that have passed."
 }

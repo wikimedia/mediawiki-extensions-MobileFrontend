@@ -293,5 +293,11 @@
 	"apihelp-mobileview-param-thumbnail": "Maximal Dimensioune vu Miniatur-Biller.",
 	"mobile-frontend-donate-button-label": "Maacht en Don",
 	"mobile-frontend-wikidata-editor-description-label": "Beschreift \"$1\" an engem eenzege Saz:",
-	"mobile-frontend-meta-data-issues-categories": "Iwwer dës Kategorie"
+	"mobile-frontend-meta-data-issues-categories": "Iwwer dës Kategorie",
+	"mobile-frontend-loading-message": "Lueden...",
+	"mobile-frontend-time-precision-annum": "$1 Joer no Christus",
+	"mobile-frontend-time-precision-century": "$1 Honnert Joer no Christus",
+	"mobile-frontend-days-ago": "{{PLURAL:$1|virun engem Dag| viru(n) $1 Deeg}}",
+	"mobile-frontend-months-ago": "{{PLURAL:$1|virun engem Mount| viru(n) $1 Méint}}",
+	"mobile-frontend-years-ago": "{{PLURAL:$1|virun|viru(n)}} $1 Joer"
 }

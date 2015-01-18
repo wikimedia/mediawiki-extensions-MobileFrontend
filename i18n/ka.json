@@ -249,5 +249,11 @@
 	"tag-mobile_edit": "რედაქტირება მობილურით",
 	"tag-mobile_edit-description": "რედაქტირება შესრულებულია საიტის მობილური ვერსიიდან",
 	"mobile-frontend-donate-button-label": "შეწირულობები",
-	"mobile-frontend-meta-data-issues-categories": "ამ კატეგორიის შესახებ"
+	"mobile-frontend-meta-data-issues-categories": "ამ კატეგორიის შესახებ",
+	"mobile-frontend-loading-message": "იტვირთება...",
+	"mobile-frontend-time-precision-Mannum": "ახ. წ. $1 მილიონი წელი",
+	"mobile-frontend-time-precision-annum": "ახ. წ. $1 წელი",
+	"mobile-frontend-time-precision-BCE-Mannum": "$1 მილიონი წელი ჩვენს წელთაღრიცხვამდე",
+	"mobile-frontend-time-precision-BCE-annum": "$1 წელი ჩვენს წელთაღრიცხვამდე",
+	"mobile-frontend-time-precision-BCE-0annum": "ძვ. წ. $1"
 }

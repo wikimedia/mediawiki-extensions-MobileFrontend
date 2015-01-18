@@ -11,7 +11,8 @@
 			"Reaperman",
 			"Utar",
 			"Vks",
-			"Matěj Suchánek"
+			"Matěj Suchánek",
+			"Jkjk"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Zda uživatel edituje prostřednictvím mobilního rozhraní",
@@ -247,7 +248,6 @@
 	"mobile-frontend-settings-alpha": "Experimentální režim",
 	"mobile-frontend-settings-alpha-description": "Vstupte do nebezpečného a neprozkoumaného mobilního území. Zkuste ještě experimentálnější funkce, ale s vyšším rizikem chyb.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Pomocí těchto nastavení specifických pro mobilní verzi si můžete web přizpůsobit svému mobilnímu zařízení.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} existuje v $1 {{PLURAL:$1|jazyce|jazycích}}. Níže jsou uvedeny všechny dostupné verze",
 	"mobile-frontend-settings-site-header": "Jazyky {{grammar:2sg|{{SITENAME}}}}",
 	"mobile-frontend-sign-in-error-heading": "Chyba",
@@ -307,5 +307,6 @@
 	"tag-mobile_edit": "editace z mobilu",
 	"tag-mobile_edit-description": "Editace provedená z mobilu (web nebo aplikace)",
 	"tag-mobile_web_edit": "editace z mobilního webu",
-	"tag-mobile_web_edit-description": "Editace provedená z webových stránek pro mobily"
+	"tag-mobile_web_edit-description": "Editace provedená z webových stránek pro mobily",
+	"mobile-frontend-years-ago": "před $1 {{PLURAL:$1|rokem|roky|lety}}"
 }

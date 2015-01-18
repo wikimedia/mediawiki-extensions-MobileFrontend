@@ -68,6 +68,14 @@
 	"mobile-frontend-editor-visual-editor": "Redigeeri",
 	"mobile-frontend-editor-wait": "Muudatuse salvestamine, palun oota.",
 	"mobile-frontend-enable-images": "Luba mobiilivaates pildid",
+	"mobile-frontend-errorreport-button-label": "Teata veast",
+	"mobile-frontend-errorreport-error": "Tõrge: Tagasisidet ei õnnestunud postitada.",
+	"mobile-frontend-errorreport-feedback": "Aitäh tagasiside eest!",
+	"mobile-frontend-errorreport-heading": "Veast teatamine",
+	"mobile-frontend-errorreport-instructions": "<p>See vorm on ainult selleks, et anda teada vigadest Vikipeedia artiklites. Palun ära teata materjalist, mida pole veel lisatud.</p><p>Kui leidsid vea, redigeeri palun lehekülge ja püüa ise viga parandada. Kui sa ei saa viga parandada, kasuta järgnevat vormi, et veast teatada.</p><p>Ära kirjuta siia oma telefoninumbrit ega e-posti aadressi.</p>",
+	"mobile-frontend-errorreport-placeholder": "Sisesta siia vea kirjeldus.",
+	"mobile-frontend-errorreport-section-title": "Parandusettepanek",
+	"mobile-frontend-errorreport-submit": "Saada",
 	"mobile-frontend-expand-sections-description": "Ava alati kõik alaosad, kui liigud uuele leheküljele.",
 	"mobile-frontend-expand-sections-status": "Ava kõik alaosad",
 	"mobile-frontend-fontchanger-link": "Kirjasuurus",
@@ -128,6 +136,7 @@
 	"mobile-frontend-media-details": "Üksikasjad",
 	"mobile-frontend-media-license-link": "Litsentsiteave",
 	"mobile-frontend-meta-data-issues": "Selle leheküljega on probleeme",
+	"mobile-frontend-meta-data-issues-alpha": "Lehekülje probleemid",
 	"mobile-frontend-meta-data-issues-header": "Probleemid",
 	"mobile-frontend-missing-image": "Pilt",
 	"mobile-frontend-nearby-loading": "Laaditakse sinu lähiümbrusega seotud teemasid.",
@@ -142,6 +151,7 @@
 	"mobile-frontend-news-items": "Päevakajaline",
 	"mobile-frontend-opt-in-explain": "Beetat proovides antakse sulle ligipääs katselistele funktsioonidele, mille järel võid kokku puutuda tarkvaravigade ja muude probleemidega.",
 	"mobile-frontend-overlay-close": "Sule",
+	"mobile-frontend-overlay-continue": "Jätka",
 	"mobile-frontend-page-menu-contents": "sisu",
 	"mobile-frontend-page-menu-history": "Ajalugu",
 	"mobile-frontend-page-edit-summary": "<strong>Resümee</strong><span> $1</span>",
@@ -250,5 +260,6 @@
 	"tag-mobile_edit-description": "Mobiilisaidil tehtud muudatus (veebis või rakenduses)",
 	"tag-mobile_web_edit": "Mobiiliveebi kaudu",
 	"tag-mobile_web_edit-description": "Mobiili veebisaidi kaudu tehtud muudatus",
-	"mobile-frontend-pageaction-edit-tooltip": "Redigeeri selle lehekülje sissejuhatavat alaosa."
+	"mobile-frontend-pageaction-edit-tooltip": "Redigeeri selle lehekülje sissejuhatavat alaosa.",
+	"mobile-frontend-wikidata-editor-description-label": "Kirjelda teemat \"$1\" ühe lausega:"
 }
