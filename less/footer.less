@@ -41,6 +41,13 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 			padding: 0 8px;
 			border-right: 1px solid @colorGray10;
 
+			// A hack to avoid connecting letters in cursive scripts such as Arabic.
+			// See https://phabricator.wikimedia.org/T86281
+			&:after {
+				content: ' ';
+				font-size: 0;
+			}
+
 			&:last-child {
 				border: none;
 			}
