@@ -33,6 +33,24 @@
       "revId": "11cf75008b05a33cd718276e523cadbf1a9a721a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_15ccd58b",
+        "filename": "javascripts/application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-18T15:44:36Z",
+      "side": 1,
+      "message": "Hmm, maybe a config option would be much better?\n\n(in this case, the check should be in PHP and this in his own module which is loaded only on wikimedia wikis).",
+      "parentUuid": "ae6ac7d6_58cda733",
+      "revId": "11cf75008b05a33cd718276e523cadbf1a9a721a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
