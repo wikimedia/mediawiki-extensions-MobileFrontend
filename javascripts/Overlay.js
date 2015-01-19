@@ -78,6 +78,22 @@
 		 */
 		closeOnContentTap: false,
 
+		/**
+		 * Shows the spinner right to the input field.
+		 * @method
+		 */
+		showSpinner: function () {
+			this.$spinner.removeClass( 'hidden' );
+		},
+
+		/**
+		 * Hide the spinner near to the input field.
+		 * @method
+		 */
+		clearSpinner: function () {
+			this.$spinner.addClass( 'hidden' );
+		},
+
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			this.isIos = browser.isIos();
@@ -91,6 +107,7 @@
 				$overlayContent = this.$overlayContent = this.$( '.overlay-content' ),
 				startY;
 
+			this.$spinner = this.$( '.spinner' );
 			if ( this.isIos ) {
 				this.$el.addClass( 'overlay-ios' );
 			}

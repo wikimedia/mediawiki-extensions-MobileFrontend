@@ -111,20 +111,6 @@
 			}
 			return this.schema.log( data );
 		},
-		/**
-		 * Reveals a spinner at the top of the overlay.
-		 * @method
-		 */
-		showSpinner: function () {
-			this.$spinner.show();
-		},
-		/**
-		 * Hides a spinner at the top of the overlay.
-		 * @method
-		 */
-		clearSpinner: function () {
-			this.$spinner.hide();
-		},
 
 		/**
 		 * If this is a new article, require confirmation before saving.
@@ -259,7 +245,6 @@
 			if ( browser.isAndroid2() ) {
 				this.$el.addClass( 'android-2' );
 			}
-			this.$spinner = self.$( '.spinner' );
 			// log edit attempt
 			this.log( 'attempt' );
 

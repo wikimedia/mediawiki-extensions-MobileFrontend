@@ -16,12 +16,26 @@
 		 * categorized in.
 		 * @cfg {String} defaults.subheading Introduction text for the list of categories,
 		 * the page belongs to.
+		 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
+		 * generating header buttons.
 		 */
 		defaults: {
 			heading: mw.msg( 'mobile-frontend-categories-heading' ),
-			subheading: mw.msg( 'mobile-frontend-categories-subheading' )
+			subheading: mw.msg( 'mobile-frontend-categories-subheading' ),
+			headerButtonsListClassName: 'overlay-action',
+			headerButtons: [ {
+				href: '#/categories/add',
+				className: 'add continue hidden',
+				msg: mw.msg( 'mobile-frontend-categories-add' )
+			} ]
 		},
+		/**
+		 * @inheritdoc
+		 */
 		className: 'category-overlay overlay',
+		/**
+		 * @inheritdoc
+		 */
 		templatePartials: {
 			content: mw.template.get( 'mobile.categories', 'CategoryOverlay.hogan' )
 		},
@@ -45,6 +59,17 @@
 				} );
 			}
 			Overlay.prototype.initialize.apply( this, arguments );
+		},
+
+		/**
+		 * @inheritdoc
+		 */
+		postRender: function ( options ) {
+			Overlay.prototype.postRender.apply( this, arguments );
+
+			if ( !options.isAnon ) {
+				this.$( '.add' ).removeClass( 'hidden' );
+			}
 		}
 	} );
 

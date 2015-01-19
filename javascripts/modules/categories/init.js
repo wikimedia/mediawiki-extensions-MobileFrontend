@@ -2,8 +2,10 @@
 
 	var loader = M.require( 'loader' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
-		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
+		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
+		user = M.require( 'user' );
 
+	// categories overlay
 	M.overlayManager.add( /^\/categories$/, function () {
 		var result = $.Deferred();
 
@@ -12,7 +14,26 @@
 
 			loadingOverlay.hide();
 			result.resolve( new CategoryOverlay( {
-				categories: mw.config.get( 'wgCategories' )
+				categories: mw.config.get( 'wgCategories' ),
+				isAnon: user.isAnon(),
+				title: M.getCurrentPage().title
+			} ) );
+		} );
+		return result;
+	} );
+
+	// add categories overlay
+	M.overlayManager.add( /^\/categories\/add$/, function () {
+		var result = $.Deferred();
+
+		loader.loadModule( 'mobile.categories', true ).done( function ( loadingOverlay ) {
+			var CategoryAddOverlay = M.require( 'categories/CategoryAddOverlay' );
+
+			loadingOverlay.hide();
+			result.resolve( new CategoryAddOverlay( {
+				categories: mw.config.get( 'wgCategories' ),
+				isAnon: user.isAnon(),
+				title: M.getCurrentPage().title
 			} ) );
 		} );
 		return result;
