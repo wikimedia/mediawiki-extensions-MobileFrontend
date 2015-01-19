@@ -1074,11 +1074,10 @@ class SkinMinerva extends SkinTemplate {
 		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
 		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
 
-		// &zwnj; is needed for correct ligatures in some scripts (e.g. Arabic)
 		$switcherHtml = <<<HTML
 <h2>{$this->getSitename()}</h2>
 <ul>
-	<li>{$mobile}&zwnj;</li><li><a id="mw-mf-display-toggle" href="{$url}">{$desktop}</a></li>
+	<li>{$mobile}</li><li><a id="mw-mf-display-toggle" href="{$url}">{$desktop}</a></li>
 </ul>
 HTML;
 
