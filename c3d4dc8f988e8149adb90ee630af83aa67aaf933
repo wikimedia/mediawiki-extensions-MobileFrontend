@@ -16,6 +16,24 @@
       "revId": "c3d4dc8f988e8149adb90ee630af83aa67aaf933",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_f7bcc11c",
+        "filename": "templates/modules/categories/CategoryOverlay.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T20:23:57Z",
+      "side": 1,
+      "message": "Move the li up. e.g. \n\u003c/li\u003e\u003cli\u003e\nthis will remove the non-breaking space no?",
+      "parentUuid": "ae6ac7d6_7c16565c",
+      "revId": "c3d4dc8f988e8149adb90ee630af83aa67aaf933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
