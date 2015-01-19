@@ -34,6 +34,24 @@
       "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_5c9cb25f",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-19T18:35:33Z",
+      "side": 1,
+      "message": "That\u0027s a good point, ok :)\n\nBut remember: MediaWiki third-parties are \"update lazy\" ;)",
+      "parentUuid": "ae6ac7d6_7c95f634",
+      "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
