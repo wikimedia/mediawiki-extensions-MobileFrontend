@@ -122,6 +122,7 @@ module.exports = function ( grunt ) {
 						'OO.EventEmitter'
 					],
 					'ignore-global': true,
+					'tags': './.docs/jsduckCustomTags.rb',
 					'warnings': [ '-nodoc(class,public)', '-dup_member', '-link_ambiguous' ]
 				}
 			}
