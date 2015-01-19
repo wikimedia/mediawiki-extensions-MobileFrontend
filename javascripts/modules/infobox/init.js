@@ -3,6 +3,7 @@
 	var infobox,
 		page = M.getCurrentPage(),
 		wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+		overlayManager = M.require( 'overlayManager' ),
 		InfoboxEditorOverlay = M.require( 'modules/wikigrok/InfoboxEditorOverlay' ),
 		Infobox = M.require( 'modules/wikigrok/Infobox' );
 
@@ -14,7 +15,7 @@
 		} );
 		infobox.insertAfter( '.pre-content' );
 
-		M.overlayManager.add( /\/infobox\/editor/, function () {
+		overlayManager.add( /\/infobox\/editor/, function () {
 			return new InfoboxEditorOverlay( {
 				infobox: infobox
 			} );

@@ -2,6 +2,7 @@
 ( function ( M, $ ) {
 	var wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		util = M.require( 'util' ),
+		overlayManager = M.require( 'overlayManager' ),
 		Schema = M.require( 'Schema' ),
 		errorSchema = new Schema( {}, 'MobileWebWikiGrokError' ),
 		settings = M.require( 'settings' ),
@@ -185,7 +186,7 @@
 		} );
 
 		// Make OverlayManager handle '#/wikigrok/about' links.
-		M.overlayManager.add( /^\/wikigrok\/about$/, function () {
+		overlayManager.add( /^\/wikigrok\/about$/, function () {
 			var d = $.Deferred();
 			mw.loader.using( 'mobile.wikigrok.dialog' ).done( function () {
 				var WikiGrokMoreInfo = M.require( 'modules/wikigrok/WikiGrokMoreInfo' );

@@ -1,5 +1,7 @@
 ( function ( M, $ ) {
-	var loader = M.require( 'loader' );
+	var loader = M.require( 'loader' ),
+		router = M.require( 'router' ),
+		overlayManager = M.require( 'overlayManager' );
 	/**
 	 * Add routes to images and handle clicks
 	 * @method
@@ -16,7 +18,7 @@
 					$a.off();
 					$a.on( 'click', function ( ev ) {
 						ev.preventDefault();
-						M.router.navigate( '#/image/' + match[0] );
+						router.navigate( '#/image/' + match[0] );
 					} );
 				}
 			} );
@@ -46,7 +48,7 @@
 		} );
 		return result;
 	}
-	M.overlayManager.add( /^\/image\/(.+)$/, loadImageOverlay );
+	overlayManager.add( /^\/image\/(.+)$/, loadImageOverlay );
 
 	init( $( '#content_wrapper' ) );
 	// for Special:Uploads

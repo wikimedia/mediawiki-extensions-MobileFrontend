@@ -7,6 +7,7 @@
 		PageList = M.require( 'modules/PageList' ),
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
+		router = M.require( 'router' ),
 		SearchOverlay;
 
 	/**
@@ -59,7 +60,7 @@
 		 */
 		_hideOnRoute: function () {
 			var self = this;
-			M.router.once( 'route', function ( ev ) {
+			router.once( 'route', function ( ev ) {
 				if ( !self.hide() ) {
 					ev.preventDefault();
 					self._hideOnRoute();
@@ -75,7 +76,7 @@
 
 			// FIXME: Remove when search registers route with overlay manager
 			// we need this because of the focus/delay hack in search.js
-			M.router.once( 'route', function () {
+			router.once( 'route', function () {
 				self._hideOnRoute();
 			} );
 		},

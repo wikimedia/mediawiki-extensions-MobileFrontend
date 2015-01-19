@@ -3,6 +3,8 @@
 	var
 		settings = M.require( 'settings' ),
 		util = M.require( 'util' ),
+		router = M.require( 'router' ),
+		overlayManager = M.require( 'overlayManager' ),
 		loader = M.require( 'loader' ),
 		query = util.query,
 		Icon = M.require( 'Icon' ),
@@ -20,7 +22,7 @@
 		popup = M.require( 'toast' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
-		isEditingSupported = M.router.isSupported() && !blacklisted,
+		isEditingSupported = router.isSupported() && !blacklisted,
 		// FIXME: Use currentPage.getId()
 		isNewPage = currentPage.options.id === 0,
 		isNewFile = currentPage.inNamespace( 'file' ) && isNewPage,
@@ -124,7 +126,7 @@
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
-		M.overlayManager.add( /^\/editor\/(\d+)\/?([^\/]*)$/, function ( sectionId, funnel ) {
+		overlayManager.add( /^\/editor\/(\d+)\/?([^\/]*)$/, function ( sectionId, funnel ) {
 			var
 				result = $.Deferred(),
 				preferredEditor = getPreferredEditor(),

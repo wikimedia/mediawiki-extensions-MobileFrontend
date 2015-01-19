@@ -2,6 +2,7 @@
 ( function ( M, $ ) {
 	var popup = M.require( 'toast' ),
 		user = M.require( 'user' ),
+		router = M.require( 'router' ),
 		Overlay = M.require( 'Overlay' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
@@ -237,7 +238,7 @@
 
 			// Deal with case where user refreshes the page
 			if ( !self.file ) {
-				M.router.navigate( '#' );
+				router.navigate( '#' );
 			}
 		},
 

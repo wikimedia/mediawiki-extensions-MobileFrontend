@@ -7,12 +7,9 @@
  */
 ( function ( M, $ ) {
 	var currentPage, skin,
-		Router = M.require( 'Router' ),
-		OverlayManager = M.require( 'OverlayManager' ),
 		PageApi = M.require( 'PageApi' ),
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
-		router = new Router(),
 		MainMenu = M.require( 'MainMenu' ),
 		Skin = M.require( 'Skin' );
 
@@ -75,17 +72,7 @@
 	}
 
 	$.extend( M, {
-		getCurrentPage: getCurrentPage,
-		/**
-		 * Navigation router instance
-		 * @property {Router}
-		 */
-		router: router,
-		/**
-		 * OverlayManager instance
-		 * @property {OverlayManager}
-		 */
-		overlayManager: new OverlayManager( router )
+		getCurrentPage: getCurrentPage
 	} );
 
 	M.define( 'pageApi', pageApi );

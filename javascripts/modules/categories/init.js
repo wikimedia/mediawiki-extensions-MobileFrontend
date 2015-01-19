@@ -1,12 +1,13 @@
 ( function ( M, $ ) {
 
 	var loader = M.require( 'loader' ),
+		overlayManager = M.require( 'overlayManager' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		user = M.require( 'user' );
 
 	// categories overlay
-	M.overlayManager.add( /^\/categories$/, function () {
+	overlayManager.add( /^\/categories$/, function () {
 		var result = $.Deferred();
 
 		loader.loadModule( 'mobile.categories', true ).done( function ( loadingOverlay ) {
@@ -22,7 +23,7 @@
 	} );
 
 	// add categories overlay
-	M.overlayManager.add( /^\/categories\/add$/, function () {
+	overlayManager.add( /^\/categories\/add$/, function () {
 		var result = $.Deferred();
 
 		loader.loadModule( 'mobile.categories', true ).done( function ( loadingOverlay ) {

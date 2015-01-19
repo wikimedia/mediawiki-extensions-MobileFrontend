@@ -4,6 +4,7 @@
 		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		context = M.require( 'context' ),
+		router = M.require( 'router' ),
 		browser = M.require( 'browser' );
 
 	/**
@@ -19,7 +20,7 @@
 		new SearchOverlay( {
 			searchTerm: $( this ).val()
 		} ).show();
-		M.router.navigate( '/search' );
+		router.navigate( '/search' );
 	}
 
 	// See https://phabricator.wikimedia.org/T76882 for why we disable search on Android 2
@@ -44,7 +45,7 @@
 		M.on( 'search-results', function ( overlay ) {
 			overlay.$( '.results a' ).on( 'click', function () {
 				var href = $( this ).attr( 'href' );
-				M.router.back().done( function () {
+				router.back().done( function () {
 					window.location.href = href;
 				} );
 				// Prevent the link from working and prevent the closing of the overlay

@@ -3,6 +3,7 @@
 	var module = ( function () {
 		var context = M.require( 'context' ),
 			Icon = M.require( 'Icon' ),
+			overlayManager = M.require( 'overlayManager' ),
 			inBeta = context.isBetaGroupMember(),
 			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' ),
 			inAlpha = context.isAlphaGroupMember();
@@ -93,7 +94,7 @@
 			$link = createLinkElement( labelText );
 			$link.attr( 'href', '#/issues' );
 
-			M.overlayManager.add( /^\/issues$/, function () {
+			overlayManager.add( /^\/issues$/, function () {
 				return new CleanupOverlay( {
 					issues: issues,
 					headingText: headingText

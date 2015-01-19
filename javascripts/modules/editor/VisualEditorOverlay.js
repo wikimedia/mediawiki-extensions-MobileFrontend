@@ -1,6 +1,7 @@
 ( function ( M, $, ve ) {
 	var EditorOverlayBase = M.require( 'modules/editor/EditorOverlayBase' ),
 		settings = M.require( 'settings' ),
+		overlayManager = M.require( 'overlayManager' ),
 		VisualEditorOverlay;
 
 	/**
@@ -189,7 +190,7 @@
 
 				self.clearSpinner();
 				self.applyHeaderOptions( options, false );
-				M.overlayManager.replaceCurrent( new EditorOverlay( options ) );
+				overlayManager.replaceCurrent( new EditorOverlay( options ) );
 			} );
 		},
 		/** @inheritdoc **/

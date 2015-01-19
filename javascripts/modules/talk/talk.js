@@ -5,11 +5,12 @@
 		licenseLink = mw.config.get( 'wgMFLicenseLink' ),
 		$talk = $( '.talk' ),
 		page = M.getCurrentPage(),
+		overlayManager = M.require( 'overlayManager' ),
 		context = M.require( 'context' );
 
 	context.assertMode( [ 'beta', 'alpha', 'app' ] );
 
-	M.overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
+	overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
 			talkOptions = {
 				title: $talk.data( 'title' ) || mw.config.get( 'wgPageName' )

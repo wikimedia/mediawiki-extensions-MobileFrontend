@@ -2,10 +2,12 @@
 
 	var loader = M.require( 'loader' ),
 		pageApi = M.require( 'pageApi' ),
+		router = M.require( 'router' ),
+		overlayManager = M.require( 'overlayManager' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' );
 
-	M.overlayManager.add( /^\/languages$/, function () {
+	overlayManager.add( /^\/languages$/, function () {
 		var result = $.Deferred();
 
 		loader.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
@@ -30,7 +32,7 @@
 	function initButton() {
 		$( '#page-secondary-actions .languageSelector' ).on( 'click', function ( ev ) {
 			ev.preventDefault();
-			M.router.navigate( '/languages' );
+			router.navigate( '/languages' );
 			uiSchema.log( {
 				name: 'languages'
 			} );
