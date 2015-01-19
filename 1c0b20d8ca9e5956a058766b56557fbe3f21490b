@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_1cbddaad",
+        "filename": "less/Overlay.less",
+        "patchSetId": 19
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T18:44:56Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be needed anymore.",
+      "revId": "1c0b20d8ca9e5956a058766b56557fbe3f21490b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
