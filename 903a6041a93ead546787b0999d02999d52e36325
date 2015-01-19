@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_613313f4",
+        "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-19T13:35:59Z",
+      "side": 1,
+      "message": "wow, that\u0027s a lot of new data :/ I haven\u0027t checked it yet, but maybe (if we keep in mind, that we\u0027re on mobile, and most of users have a limited data plan and maybe doesn\u0027t have much bandwidth) we should load this module, if the user want to start inline editing (which is probably not on every page view), instead on every pageview? :)",
+      "revId": "903a6041a93ead546787b0999d02999d52e36325",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
