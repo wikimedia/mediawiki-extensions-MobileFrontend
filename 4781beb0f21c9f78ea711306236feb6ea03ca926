@@ -16,6 +16,24 @@
       "revId": "4781beb0f21c9f78ea711306236feb6ea03ca926",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_9c8b2a20",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T18:30:34Z",
+      "side": 0,
+      "message": "Deleting the function is probably way forward.\nWe are likely to reintroduce it later but that\u0027s no loss.\nI prefer killing unused code. It helps with readability - leaving it here could be confusing since it does nothing.",
+      "parentUuid": "ae6ac7d6_9c100a06",
+      "revId": "4781beb0f21c9f78ea711306236feb6ea03ca926",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

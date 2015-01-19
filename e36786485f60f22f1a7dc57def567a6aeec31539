@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_7c86561a",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T18:30:34Z",
+      "side": 1,
+      "message": "You can just remove these. This is completely safe.\nhttp://localhost:8080/w/load.php?modules\u003dmobile.styles2\u0026only\u003dstyles\nfor a missing module will create a stylesheet with a comment saying:\n\"Problematic modules: {\"mobile.styles2\":\"missing\"}\"",
+      "revId": "e36786485f60f22f1a7dc57def567a6aeec31539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
