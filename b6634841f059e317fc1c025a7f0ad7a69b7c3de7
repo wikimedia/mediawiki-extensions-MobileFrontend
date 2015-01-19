@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_bc5aaef7",
+        "filename": "javascripts/modules/ForeignApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T18:10:18Z",
+      "side": 0,
+      "message": "So this is kinda weird. Api extends mw.api which does have this method. We should explore if there is a way to pull in documentation from core...",
+      "revId": "b6634841f059e317fc1c025a7f0ad7a69b7c3de7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
