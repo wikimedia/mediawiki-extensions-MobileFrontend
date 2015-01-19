@@ -20,7 +20,7 @@ class MobileUI {
 	 */
 	public static function iconClass( $iconName, $iconType = 'element', $additionalClassNames = '' ) {
 		$ctx = MobileContext::singleton();
-		if ( $ctx->isAlphaGroupMember() ) {
+		if ( $ctx->isBetaGroupMember() ) {
 			$base = 'mw-ui-icon';
 			$modifiers = 'mw-ui-icon-' . $iconType;
 			$modifiers .= ' mw-ui-icon-' . $iconName;
