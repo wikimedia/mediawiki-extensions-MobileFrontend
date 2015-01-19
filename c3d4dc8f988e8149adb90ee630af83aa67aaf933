@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_7c16565c",
+        "filename": "templates/modules/categories/CategoryOverlay.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-19T20:09:49Z",
+      "side": 1,
+      "message": "I mentioned this in another patchset, too, but haven\u0027t found a solution for it atm. If you remove the line breaks from this template, then both tabs are side by side :(",
+      "revId": "c3d4dc8f988e8149adb90ee630af83aa67aaf933",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
