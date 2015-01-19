@@ -51,6 +51,24 @@
       "revId": "11cf75008b05a33cd718276e523cadbf1a9a721a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_fc46e653",
+        "filename": "javascripts/application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T17:43:52Z",
+      "side": 1,
+      "message": "console.log is not a standard. It\u0027s possible console.log might have other meanings so I\u0027m being cautious.\n\nFlorian\u0027s suggestion of a config variable seems the way forward. Although I want it to default to true. The more exposure we give it the better.",
+      "parentUuid": "ae6ac7d6_78a0ab3e",
+      "revId": "11cf75008b05a33cd718276e523cadbf1a9a721a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
