@@ -16,6 +16,24 @@
       "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_7c95f634",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T18:33:48Z",
+      "side": 1,
+      "message": "I think we want to put this on as many installs as possible so that we reach out the largest number of devs.\n\nIf we\u0027re not doing that what\u0027s the point :-)\n\nIf we find we don\u0027t get any new devs in the next month we\u0027re likely to kill it anyway  so I\u0027d rather hit as many wikis as possible.",
+      "parentUuid": "ae6ac7d6_fc79062b",
+      "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
