@@ -34,6 +34,24 @@
       "revId": "903a6041a93ead546787b0999d02999d52e36325",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_a16febbf",
+        "filename": "javascripts/modules/wikigrok/WikiDataApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-19T13:52:07Z",
+      "side": 1,
+      "message": "No need to apologize, i should read the whole code to see, that this seems to be only temporary :)",
+      "parentUuid": "ae6ac7d6_212d1b8c",
+      "revId": "903a6041a93ead546787b0999d02999d52e36325",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
