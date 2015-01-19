@@ -30,4 +30,4 @@
 		assert.strictEqual( overlay.$( 'ul li:visible' ).length, 1, 'Only one of the results should be visible.' );
 		overlay.hide();
 	} );
-} )( mw.mobileFrontend.require( 'languages/LanguageOverlay' ) );
+} )( mw.mobileFrontend.require( 'modules/languages/LanguageOverlay' ) );

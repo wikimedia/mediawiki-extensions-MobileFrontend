@@ -74,7 +74,6 @@
 		}
 	} );
 
-	// FIXME: Naming inconsistency. modules/languages/LanguageOverlay or languages/LanguageOverlay ?
-	M.define( 'languages/LanguageOverlay', LanguageOverlay );
+	M.define( 'modules/languages/LanguageOverlay', LanguageOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -9,7 +9,7 @@
 		var result = $.Deferred();
 
 		loader.loadModule( 'mobile.languages', true ).done( function ( loadingOverlay ) {
-			var LanguageOverlay = M.require( 'languages/LanguageOverlay' );
+			var LanguageOverlay = M.require( 'modules/languages/LanguageOverlay' );
 
 			pageApi.getPageLanguages( mw.config.get( 'wgPageName' ) ).done( function ( data ) {
 				loadingOverlay.hide();
