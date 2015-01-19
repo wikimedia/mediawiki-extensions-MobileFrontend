@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_9c100a06",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-19T18:14:06Z",
+      "side": 0,
+      "message": "Maybe you should not remove this function. If you really want to, then you may also want to remove those two modules from Resources.php because they are empty.",
+      "revId": "4781beb0f21c9f78ea711306236feb6ea03ca926",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
