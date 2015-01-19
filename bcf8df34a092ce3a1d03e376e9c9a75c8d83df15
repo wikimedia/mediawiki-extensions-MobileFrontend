@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_f37db4e5",
+        "filename": "javascripts/modules/uploads/UploadTutorial.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-19T22:27:50Z",
+      "side": 1,
+      "message": "Functions should be named consistently.",
+      "revId": "bcf8df34a092ce3a1d03e376e9c9a75c8d83df15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
