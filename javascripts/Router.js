@@ -1,7 +1,7 @@
 // FIXME: Merge this code with OverlayManager
 ( function ( M, $ ) {
 
-	var key,
+	var key, router,
 		EventEmitter = M.require( 'eventemitter' );
 
 	/**
@@ -158,6 +158,9 @@
 		return 'onhashchange' in window;
 	};
 
+	router = new Router();
+
+	M.define( 'router', router );
 	M.define( 'Router', Router );
 
 }( mw.mobileFrontend, jQuery ) );

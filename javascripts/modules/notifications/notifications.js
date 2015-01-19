@@ -7,6 +7,8 @@
 		uiSchema = new MobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
 		mainMenu = M.require( 'skin' ).getMainMenu(),
 		$btn = $( '#secondary-button.user-button' ),
+		router = M.require( 'router' ),
+		overlayManager = M.require( 'overlayManager' ),
 		icons = M.require( 'icons' );
 
 	/**
@@ -39,7 +41,7 @@
 			uiSchema.log( {
 				name: 'notifications'
 			} );
-			M.router.navigate( '#/notifications' );
+			router.navigate( '#/notifications' );
 			// Important that we also prevent propagation to avoid interference with events that may be
 			// binded on #mw-mf-page-center that close overlay
 			return false;
@@ -68,7 +70,7 @@
 			return result;
 		}
 
-		M.overlayManager.add( /^\/notifications$/, function () {
+		overlayManager.add( /^\/notifications$/, function () {
 			return loadNotificationOverlay().done( function ( overlay ) {
 				mainMenu.openNavigationDrawer( 'secondary' );
 				overlay.on( 'hide', function () {
@@ -77,7 +79,7 @@
 				} );
 
 				$( '#mw-mf-page-center' ).one( 'click.secondary', function () {
-					M.router.back();
+					router.back();
 				} );
 			} );
 		} );

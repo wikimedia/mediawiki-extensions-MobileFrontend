@@ -7,6 +7,7 @@
 			hasText: true,
 			additionalClassNames: 'mw-ui-progressive mw-ui-button button'
 		} ),
+		router = M.require( 'router' ),
 		PhotoUploaderButton;
 
 	/**
@@ -62,7 +63,7 @@
 		handleFile: function ( file ) {
 			// FIXME: this is hacky but it would be hard to pass a file in a route
 			M.emit( '_upload-preview', file );
-			M.router.navigate( '#/upload-preview/' + this.options.funnel );
+			router.navigate( '#/upload-preview/' + this.options.funnel );
 		},
 
 		/** @inheritdoc */

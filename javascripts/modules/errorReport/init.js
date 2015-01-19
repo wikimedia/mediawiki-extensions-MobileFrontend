@@ -5,6 +5,7 @@
 	var user = M.require( 'user' ),
 		page = M.getCurrentPage(),
 		loader = M.require( 'loader' ),
+		overlayManager = M.require( 'overlayManager' ),
 		editorConfig = mw.config.get( 'wgMFEditorOptions' );
 
 	// Make sure we are not on the Main Page, are in main namespace, and either the user
@@ -16,7 +17,7 @@
 	) {
 
 		// Make overlayManager handle URL for 'Report an error' button
-		M.overlayManager.add( /^\/error-report$/, function () {
+		overlayManager.add( /^\/error-report$/, function () {
 			var result = $.Deferred();
 			loader.loadModule( 'mobile.errorReport.overlay', true )
 				.done( function ( loadingOverlay ) {

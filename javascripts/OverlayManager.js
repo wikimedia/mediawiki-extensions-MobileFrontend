@@ -2,7 +2,8 @@
 
 	var
 		Class = M.require( 'Class' ),
-		OverlayManager;
+		router = M.require( 'router' ),
+		OverlayManager, overlayManager;
 
 	/**
 	 * Manages opening and closing overlays when the URL hash changes to one
@@ -244,6 +245,9 @@
 		}
 	} );
 
+	overlayManager = new OverlayManager( router );
+
+	M.define( 'overlayManager', overlayManager );
 	M.define( 'OverlayManager', OverlayManager );
 
 }( mw.mobileFrontend, jQuery ) );

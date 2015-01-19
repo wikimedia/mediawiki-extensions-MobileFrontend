@@ -5,6 +5,7 @@
 		AbuseFilterPanel = M.require( 'modules/editor/AbuseFilterPanel' ),
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
+		overlayManager = M.require( 'overlayManager' ),
 		EditorOverlay;
 
 	/**
@@ -273,7 +274,7 @@
 					var VisualEditorOverlay = M.require( 'modules/editor/VisualEditorOverlay' );
 
 					self.clearSpinner();
-					M.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
+					overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
 				},
 				function () {
 					self.clearSpinner();

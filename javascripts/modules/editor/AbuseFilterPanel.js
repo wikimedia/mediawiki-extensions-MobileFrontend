@@ -2,6 +2,7 @@
 	var
 		View = M.require( 'View' ),
 		AbuseFilterOverlay = M.require( 'modules/editor/AbuseFilterOverlay' ),
+		overlayManager = M.require( 'overlayManager' ),
 		AbuseFilterPanel;
 
 	/**
@@ -39,7 +40,7 @@
 			var msg;
 
 			// OverlayManager will replace previous instance of the route if present
-			M.overlayManager.add( /^\/abusefilter$/, function () {
+			overlayManager.add( /^\/abusefilter$/, function () {
 				return new AbuseFilterOverlay( {
 					message: message
 				} );

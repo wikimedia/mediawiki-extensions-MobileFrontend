@@ -1,5 +1,6 @@
 ( function ( M, $ ) {
 	var Icon = M.require( 'Icon' ),
+		router = M.require( 'router' ),
 		Nearby = M.require( 'modules/nearby/Nearby' );
 
 	$( function () {
@@ -46,7 +47,7 @@
 		/*
 		 * #/coords/lat,long
 		 */
-		M.router.route( /^\/coord\/(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/, function ( lat, lon ) {
+		router.route( /^\/coord\/(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/, function ( lat, lon ) {
 			$icon.hide();
 			// Search with coordinates
 			refresh( $.extend( {}, options, {
@@ -58,7 +59,7 @@
 		/*
 		 * #/page/PageTitle
 		 */
-		M.router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
+		router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
 			$icon.hide();
 			refresh( $.extend( {}, options, {
 				pageTitle: pageTitle
@@ -82,7 +83,7 @@
 		 * define a route with router.route that route gets matched against the
 		 * current hash.
 		 */
-		M.router.route( /^(?!.coord|.page).*$/, refreshCurrentLocation );
+		router.route( /^(?!.coord|.page).*$/, refreshCurrentLocation );
 
 	} );
 
