@@ -1173,6 +1173,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.commonsCategory' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.gallery',
+		),
+		'scripts' => array(
+			'javascripts/modules/commonsCategory/CommonsCategoryOverlay.js',
+		),
+	),
+
 	'mobile.wikigrok.dialog.b' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.wikigrok.dialog',
@@ -1651,6 +1660,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.otherProjects',
 		),
 		'scripts' => array(
+			'javascripts/modules/commonsCategory/init.js',
 			'javascripts/modules/infobox/init.js',
 			'javascripts/modules/bannerImage/init.js',
 			'javascripts/modules/projects/init.js',

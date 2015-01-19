@@ -21,6 +21,7 @@
 		initialize: function ( options ) {
 			Api.prototype.initialize.apply( this, arguments );
 			this.username = options.username;
+			this.category = options.category;
 			this.limit = 10;
 		},
 		/**
@@ -75,14 +76,29 @@
 				// FIXME: [API] have to request timestamp since api returns an object
 				// rather than an array thus we need a way to sort
 				iiprop: 'url|timestamp',
-				iiurlwidth: IMAGE_WIDTH,
-				generator: 'allimages',
-				gaiuser: this.username,
-				gaisort: 'timestamp',
-				gaidir: 'descending',
-				gailimit: this.limit,
-				gaicontinue: this.endTimestamp
+				iiurlwidth: IMAGE_WIDTH
 			};
+
+			if ( this.username ) {
+				$.extend( query, {
+					generator: 'allimages',
+					gaiuser: this.username,
+					gaisort: 'timestamp',
+					gaidir: 'descending',
+					gailimit: this.limit,
+					gaicontinue: this.endTimestamp
+				} );
+			} else if ( this.category ) {
+				$.extend( query, {
+					generator: 'categorymembers',
+					gcmtitle: 'Category:' + this.category,
+					gcmtype: 'file',
+					// FIXME [API] a lot of duplication follows due to the silly way generators work
+					gcmdir: 'descending',
+					gcmlimit: this.limit,
+					gcmcontinue: this.endTimestamp
+				} );
+			}
 			return query;
 		},
 		/**
@@ -105,7 +121,12 @@
 							} );
 
 						if ( resp['query-continue'] ) {
-							self.endTimestamp = resp['query-continue'].allimages.gaicontinue;
+							// FIXME: API I hate you.
+							if ( self.category ) {
+								self.endTimestamp = resp['query-continue'].categorymembers.gcmcontinue;
+							} else {
+								self.endTimestamp = resp['query-continue'].allimages.gaicontinue;
+							}
 						} else {
 							self.endTimestamp = false;
 						}

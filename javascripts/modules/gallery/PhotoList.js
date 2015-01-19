@@ -31,6 +31,10 @@
 				apiOptions = {
 					username: options.username
 				};
+			} else if ( options.category ) {
+				apiOptions = {
+					category: options.category
+				};
 			} else {
 				apiOptions = {};
 			}
