@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_5c96f250",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-19T18:28:58Z",
+      "side": 1,
+      "message": "maybe a fixme for missing i18n?\n\nShouldn\u0027t this be a template?",
+      "revId": "b9e34c1f579be24b426c7c3e3b1dc6922c45b1dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_5ccfd282",
+        "filename": "templates/modules/infobox/EditorOverlayContent.hogan",
+        "patchSetId": 21
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-19T18:28:58Z",
+      "side": 1,
+      "message": "Maybe this should be a TextInputWidget in OOJs UI, so it has the same style as the other input boxes (and has the same width) :)",
+      "revId": "b9e34c1f579be24b426c7c3e3b1dc6922c45b1dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
