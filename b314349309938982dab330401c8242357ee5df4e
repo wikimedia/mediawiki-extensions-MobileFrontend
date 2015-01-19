@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_5cf272e0",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T18:19:28Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be done via a click event. What would be better is calling the function directly (this could in future have side effects such as triggering a click tracking event)",
+      "revId": "b314349309938982dab330401c8242357ee5df4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_bc286e33",
+        "filename": "less/pagefeed.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T18:19:28Z",
+      "side": 1,
+      "message": "This rename is bad. For something to be in the less folder it means (or should mean) it is loaded by default and available to all modules. This is not the case here.\n\nRather than try rewrite the watchlist css, I suggest you just introduce these just for the category css. We can try and generalise the css rules later.",
+      "revId": "b314349309938982dab330401c8242357ee5df4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_3c1c5e18",
+        "filename": "templates/modules/categories/CategoryOverlay.hogan",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-19T18:19:28Z",
+      "side": 1,
+      "message": "Using the mw-mf-watchlist-selector is bad here. You\u0027re using what is currently a rule specific to watchlist outside it\u0027s context.\n\nAs stated in other comment, make the generic css rule in a follow up and rename the class in the process.",
+      "revId": "b314349309938982dab330401c8242357ee5df4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
