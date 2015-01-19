@@ -36,7 +36,7 @@
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
 			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
 			anonLabel: mw.msg( 'mobile-frontend-editor-anon' ),
-			anonSelector: 'continue-edit',
+			anonSelector: 'continue',
 			anonMsg: mw.msg( 'mobile-frontend-editor-anonwarning' )
 		} ),
 		editor: 'SourceEditor',
@@ -85,47 +85,66 @@
 				this.initializeSwitcher();
 			}
 		},
-
+		events: $.extend( {}, EditorOverlayBase.prototype.events, {
+			'click .visual-editor': 'onClickVisualEditor',
+			'input .wikitext-editor': 'onInputWikitextEditor'
+		} ),
+		/**
+		 * Wikitext Editor input handler
+		 */
+		onInputWikitextEditor: function () {
+			this.api.setContent( this.$( '.wikitext-editor' ).val() );
+			this.$( '.continue, .submit' ).prop( 'disabled', false );
+		},
+		/**
+		 * @inheritdoc
+		 */
+		onClickContinue: function () {
+			// handle the click on "Edit without logging in"
+			if ( this.options.isAnon ) {
+				this._showEditorAfterWarning();
+				return false;
+			}
+			EditorOverlayBase.prototype.onClickContinue.apply( this, arguments );
+		},
+		/**
+		 * @inheritdoc
+		 */
+		onClickBack: function () {
+			EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
+			this._hidePreview();
+		},
+		/**
+		 * Visual editor click handler
+		 */
+		onClickVisualEditor: function () {
+			// If the user tries to switch to the VisualEditor, check if any changes have
+			// been made, and if so, tell the user they have to save first.
+			if ( this.isVisualEditorEnabled() ) {
+				if ( !this.api.hasChanged ) {
+					this._switchToVisualEditor( this.options );
+				} else {
+					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
+						this.onStageChanges();
+					}
+				}
+			}
+		},
 		/** @inheritdoc **/
 		postRender: function ( options ) {
-			var self = this;
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 
 			this.$preview = this.$( '.preview' );
-			this.$content = this.$( '.wikitext-editor' )
-				.on( 'input', function () {
-					self.api.setContent( self.$content.val() );
-					self.$( '.continue, .submit' ).prop( 'disabled', false );
-				} );
+			this.$content = this.$( '.wikitext-editor' );
 			if ( options.isAnon ) {
 				this.$anonWarning = this.$( '.anonwarning' );
 				this.$content.hide();
 				// the user has to click login, signup or edit without login, disable "Next" button on top right
 				this.$( '.continue' ).hide();
-				// handle the click on "Edit without logging in"
-				this.$( '.continue-edit' ).on( 'click', function () {
-					self._showEditorAfterWarning();
-					return false;
-				} );
 				this.clearSpinner();
 			}
-			this.$( '.back' ).on( 'click', $.proxy( this, '_hidePreview' ) );
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
-
-			// If the user tries to switch to the VisualEditor, check if any changes have
-			// been made, and if so, tell the user they have to save first.
-			if ( this.isVisualEditorEnabled() ) {
-				this.$( '.visual-editor' ).on( 'click', function () {
-					if ( !self.api.hasChanged ) {
-						self._switchToVisualEditor( options );
-					} else {
-						if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-							self.onStageChanges();
-						}
-					}
-				} );
-			}
 
 			this.abuseFilterPanel = new AbuseFilterPanel().appendTo( this.$( '.panels' ) );
 

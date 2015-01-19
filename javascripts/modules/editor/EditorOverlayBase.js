@@ -93,6 +93,12 @@
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
 		/** @inheritdoc **/
 		className: 'overlay editor-overlay',
+		events: {
+			// FIXME: This should be .close (see bug 71203)
+			'click .back': 'onClickBack',
+			'click .continue': 'onClickContinue',
+			'click .submit': 'onClickSubmit'
+		},
 		/**
 		 * Logs an event to  http://meta.wikimedia.org/wiki/Schema:MobileWebEditing
 		 * @param {String} action name in workflow.
@@ -240,7 +246,6 @@
 		},
 		/** @inheritdoc **/
 		postRender: function () {
-			var self = this;
 			// Add a class so editor can make some Android 2 specific customisations.
 			if ( browser.isAndroid2() ) {
 				this.$el.addClass( 'android-2' );
@@ -248,11 +253,6 @@
 			// log edit attempt
 			this.log( 'attempt' );
 
-			// FIXME: This should be .close (see bug 71203)
-			this.$( '.back' ).eq( 0 ).on( 'click', function () {
-				// log cancel attempt
-				self.log( 'cancel' );
-			} );
 			// decide what happens, when the user clicks the continue button
 			if ( this.config.skipPreview ) {
 				// skip the preview and save the changes
@@ -265,9 +265,25 @@
 			Overlay.prototype.postRender.apply( this, arguments );
 			// FIXME: Don't call a private method that is outside the class.
 			this._showHidden( '.initial-header' );
-			// FIXME: Events should be managed with the events array
-			this.$( '.submit' ).on( 'click', $.proxy( this, 'onSaveBegin' ) );
-			this.$( '.continue' ).on( 'click', $.proxy( this, this.nextStep ) );
+		},
+		/**
+		 * Back button click handler
+		 */
+		onClickBack: function () {
+			// log cancel attempt
+			this.log( 'cancel' );
+		},
+		/**
+		 * Submit button click handler
+		 */
+		onClickSubmit: function () {
+			this.onSaveBegin();
+		},
+		/**
+		 * Continue button click handler
+		 */
+		onClickContinue: function () {
+			this[this.nextStep]();
 		},
 		/**
 		 * Set up the editor switching interface
