@@ -3,7 +3,7 @@
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
-		PhotoList = M.require( 'specials/uploads/PhotoList' ),
+		PhotoList = M.require( 'modules/gallery/PhotoList' ),
 		pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 		currentUserName = user.getName(),
 		userName = pageParams[1] ? pageParams[1] : currentUserName;

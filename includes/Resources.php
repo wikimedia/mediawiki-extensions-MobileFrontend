@@ -1151,6 +1151,28 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.gallery' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.toast',
+			'mobile.foreignApi',
+		),
+		'templates' => array(
+			'PhotoItem.hogan' => 'templates/modules/gallery/PhotoItem.hogan',
+			'PhotoList.hogan' => 'templates/modules/gallery/PhotoList.hogan',
+		),
+		'messages' => array(
+			'mobile-frontend-donate-image-nouploads',
+		),
+		'styles' => array(
+			'less/modules/gallery.less',
+		),
+		'scripts' => array(
+			'javascripts/modules/gallery/PhotoListApi.js',
+			'javascripts/modules/gallery/PhotoItem.js',
+			'javascripts/modules/gallery/PhotoList.js',
+		),
+	),
+
 	'mobile.wikigrok.dialog.b' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.wikigrok.dialog',
@@ -1469,28 +1491,17 @@ $wgMobileSpecialPageModules = array(
 
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'mobile.gallery',
 			'mobile.upload.ui',
-			'mobile.startup',
-			'mobile.toast',
-			'mobile.foreignApi',
-		),
-		'templates' => array(
-			'PhotoItem.hogan' => 'templates/specials/photo.hogan',
-			'PhotoList.hogan' => 'templates/specials/userGallery.hogan',
 		),
 		'messages' => array(
-			'mobile-frontend-donate-image-nouploads',
 			'mobile-frontend-photo-upload-generic',
 			'mobile-frontend-donate-photo-upload-success',
 			'mobile-frontend-donate-photo-first-upload-success',
-			'mobile-frontend-listed-image-no-description',
 			'mobile-frontend-photo-upload-user-count',
 		),
 		'scripts' => array(
-			'javascripts/specials/uploads/UserGalleryApi.js',
-			'javascripts/specials/uploads/PhotoItem.js',
-			'javascripts/specials/uploads/PhotoList.js',
-			'javascripts/specials/uploads/init.js',
+			'javascripts/specials/uploads.js',
 		),
 		'position' => 'top',
 	),

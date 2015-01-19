@@ -1,21 +1,6 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-.image-list {
-	margin: 20px @contentMargin 0;
-
-	li {
-		list-style: none outside none;
-		text-align: center;
-		padding-bottom: 20px;
-
-		p { // description
-			color: @colorGray5;
-			line-height: 1.2;
-		}
-	}
-}
-
 .ctaUploadPhoto {
 	text-align: center;
 	padding: .5em;
@@ -27,10 +12,6 @@
 }
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	.image-list {
-		margin: auto;
-	}
-
 	.ctaUploadPhoto {
 		border-bottom: none;
 		background: none;
