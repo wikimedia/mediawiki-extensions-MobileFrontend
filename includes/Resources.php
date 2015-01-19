@@ -1190,6 +1190,23 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.otherProjects' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.wikidata.api',
+			'mobile.overlays',
+		),
+		'messages' => array(
+			'mobile-frontend-other-projects-overlay-heading',
+			'mobile-frontend-other-project-label',
+		),
+		'scripts' => array(
+			'javascripts/modules/projects/OtherProjectsOverlay.js',
+		),
+		'templates' => array(
+			'content.hogan' => 'templates/modules/projects/content.hogan',
+		),
+	),
+
 	'mobile.wikigrok.api' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -1630,10 +1647,12 @@ $wgMinervaBootstrapModules = array(
 			'mobile.fontchanger',
 			'mobile.wikigrok.roulette',
 			'mobile.errorReport',
+			'mobile.otherProjects',
 		),
 		'scripts' => array(
 			'javascripts/modules/infobox/init.js',
 			'javascripts/modules/bannerImage/init.js',
+			'javascripts/modules/projects/init.js',
 		)
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
