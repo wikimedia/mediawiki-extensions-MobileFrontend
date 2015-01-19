@@ -39,6 +39,21 @@
 				appendtext: categories,
 				summary: mw.msg( 'mobile-frontend-categories-summary' )
 			} );
+		},
+
+		/**
+		 * Returns the categories the title belongs to.
+		 * @param {String} title Title of the current page (to add the categories to)
+		 * @returns {jquery.Deferred}
+		 */
+		getCategories: function ( title ) {
+			return this.get( {
+				action: 'query',
+				prop: 'categories',
+				titles: title,
+				clprop: 'hidden',
+				cllimit: 50 // FIXME: Replace with InfiniteScroll
+			} );
 		}
 	} );
 

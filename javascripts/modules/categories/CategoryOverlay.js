@@ -1,12 +1,14 @@
 ( function ( M, $ ) {
 
 	var CategoryOverlay,
-		Overlay = M.require( 'Overlay' );
+		Overlay = M.require( 'Overlay' ),
+		CategoryApi = M.require( 'modules/categories/CategoryApi' );
 
 	/**
 	 * Displays the list of categories for a page
 	 * @class CategoryOverlay
 	 * @extends Overlay
+	 * @uses CategoryApi
 	 */
 	CategoryOverlay = Overlay.extend( {
 		/**
@@ -27,7 +29,9 @@
 				href: '#/categories/add',
 				className: 'add continue hidden',
 				msg: mw.msg( 'mobile-frontend-categories-add' )
-			} ]
+			} ],
+			normalcatlink: mw.msg( 'mobile-frontend-categories-normal' ),
+			hiddencatlink: mw.msg( 'mobile-frontend-categories-hidden' )
 		},
 		/**
 		 * @inheritdoc
@@ -39,26 +43,8 @@
 		templatePartials: {
 			content: mw.template.get( 'mobile.categories', 'CategoryOverlay.hogan' )
 		},
-
-		/**
-		 * @inheritdoc
-		 */
-		initialize: function ( options ) {
-			if ( options.categories.length === 0 ) {
-				options.subheading = mw.msg( 'mobile-frontend-categories-nocat' );
-			} else {
-				options.items = [];
-
-				// add categories to overlay
-				$.each( options.categories, function ( index, category ) {
-					var title = mw.Title.newFromText( category, 14 );
-					options.items.push( {
-						url: title.getUrl(),
-						title: title.getNameText()
-					} );
-				} );
-			}
-			Overlay.prototype.initialize.apply( this, arguments );
+		events: {
+			'click .catlink': 'onCatlinkClick'
 		},
 
 		/**
@@ -70,6 +56,80 @@
 			if ( !options.isAnon ) {
 				this.$( '.add' ).removeClass( 'hidden' );
 			}
+			if ( !options.items ) {
+				this._loadCategories( options );
+			}
+			if ( options.showHidden ) {
+				this._changeView();
+			}
+		},
+
+		/**
+		 * Get a list of categories the page belongs to and re-renders the overlay content
+		 * @param {Object} options Object passed to the constructor.
+		 */
+		_loadCategories: function ( options ) {
+			var api = new CategoryApi(),
+				self = this;
+
+			this.showSpinner();
+			api.getCategories( options.title ).done( function ( data ) {
+				if ( data.query && data.query.pages ) {
+					options.items = [];
+					options.hiddenitems = [];
+
+					// add categories to overlay
+					$.each( data.query.pages, function ( index, page ) {
+						if ( page.categories ) {
+							$.each( page.categories, function ( index, category ) {
+								var title = mw.Title.newFromText( category.title, category.ns );
+
+								if ( category.hidden !== undefined ) {
+									options.hiddenitems.push( {
+										url: title.getUrl(),
+										title: title.getNameText()
+									} );
+								} else {
+									options.items.push( {
+										url: title.getUrl(),
+										title: title.getNameText()
+									} );
+								}
+							} );
+						}
+					} );
+
+					if ( options.items.length === 0 && options.hiddenitems.length === 0 ) {
+						options.subheading = mw.msg( 'mobile-frontend-categories-nocat' );
+					} else if ( options.items.length === 0 && options.hiddenitems.length > 0 ) {
+						options.showHidden = true;
+					}
+				} else {
+					options.subheading = mw.msg( 'mobile-frontend-categories-nocat' );
+				}
+				self.render( options );
+				self.clearSpinner();
+			} );
+		},
+
+		/**
+		 * Handles a click on one of the tabs to change the viewable categories
+		 * @param {jQuery.Event} ev The Event object triggered this handler
+		 */
+		onCatlinkClick: function ( ev ) {
+			ev.preventDefault();
+			// change view only, if the user clicked another view
+			if ( !$( ev.target ).parent().hasClass( 'selected' ) ) {
+				this._changeView();
+			}
+		},
+
+		/**
+		 * Changes the view from hidden categories to content-based categories and vice-versa
+		 */
+		_changeView: function () {
+			this.$( '.category-header li' ).toggleClass( 'selected' );
+			this.$( '.topic-title-list' ).toggleClass( 'hidden' );
 		}
 	} );
 

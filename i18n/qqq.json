@@ -48,6 +48,8 @@
 	"mobile-frontend-categories-summary": "Summary text used when new categories get saved.",
 	"mobile-frontend-categories-add-heading": "A heading saying for what page categories can be added. All text should be wrapped in a STRONG tag except the page title itself.\n\nParameters:\n* $1 - page title",
 	"mobile-frontend-categories-add-wait": "Text that displays while categories are saved.\nSee also {{mw-msg|obile-frontend-editor-wait}}",
+	"mobile-frontend-categories-normal": "Link message to switch to non-hidden categories.\nSee also {{mw-msg|mobile-frontend-categories-hidden}}",
+	"mobile-frontend-categories-hidden": "Link message to switch to hidden categories.\nSee also {{mw-msg|mobile-frontend-categories-normal}}",
 	"mobile-frontend-changeslist-ip": "Label used in mobile watchlist/history/recentchanges overview for IP (non-logged-in) edits.\n{{Identical|Anonymous user}}",
 	"mobile-frontend-changeslist-nocomment": "Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.",
 	"mobile-frontend-clear-search": "Tooltip for clear button that appears when you type into search box.\n{{Identical|Clear}}",

@@ -14,7 +14,6 @@
 
 			loadingOverlay.hide();
 			result.resolve( new CategoryOverlay( {
-				categories: mw.config.get( 'wgCategories' ),
 				isAnon: user.isAnon(),
 				title: M.getCurrentPage().title
 			} ) );
