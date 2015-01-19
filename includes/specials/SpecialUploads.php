@@ -7,6 +7,8 @@
  * Provides a special page with a list of uploaded items/images of a User
  */
 class SpecialUploads extends MobileSpecialPage {
+	/** @var boolean $hasDesktopVersion Whether the mobile special page has a desktop special page */
+	protected $hasDesktopVersion = true;
 	/**
 	 * Construct function
 	 */

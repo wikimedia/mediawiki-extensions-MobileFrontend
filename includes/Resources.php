@@ -1434,9 +1434,9 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
-	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		// This is NOT empty see $wgResourceModuleSkinStyles.
-	),
+	// These are NOT empty see $wgResourceModuleSkinStyles.
+	'mobile.special.history.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(),
+	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(),
 
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
@@ -1469,7 +1469,6 @@ $wgMobileSpecialPageModules = array(
 	'mobile.special.uploads.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/uploads.less',
-			'less/modules/uploads/PhotoUploaderButton.less',
 		),
 	),
 
@@ -1629,9 +1628,23 @@ $wgResourceModules = array_merge( $wgResourceModules, $wgMinervaStyleModules );
 $wgResourceModules = array_merge( $wgResourceModules, $wgMinervaBootstrapModules );
 
 // Module customizations
+$wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
+	'mobile.special.uploads.styles' => array(
+		'less/specials/uploadsDefault.less',
+	),
+	'mobile.special.history.styles' => array(
+		'less/pagelist.less',
+		'less/specials/historyDefault.less',
+	),
+);
+
 $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
 	'mediawiki.skinning.content.parsoid' => array(),
 	'mobile.special.userprofile.styles' => array(
 		'less/specials/userprofile.less',
 	),
+	'mobile.special.uploads.styles' => array(
+		'less/modules/uploads/PhotoUploaderButton.less',
+	),
+	'mobile.special.history.styles' => array(),
 );
