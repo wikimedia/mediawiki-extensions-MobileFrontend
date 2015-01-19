@@ -45,6 +45,7 @@ $wgMFUseWikibaseDescription = false;
  */
 $wgWikiBasePropertyConfig = array(
 	'instanceOf' => 'P31',
+	'bannerImage' => 'P18',
 );
 
 /**

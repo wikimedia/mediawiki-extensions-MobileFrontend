@@ -3,6 +3,7 @@
 		md5fn = M.require( 'hex_md5' ),
 		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		View = M.require( 'View' ),
+		config = mw.config.get( 'wgWikiBasePropertyConfig' ),
 		icons = M.require( 'icons' ),
 		ratio = 16 / 9;
 
@@ -181,25 +182,22 @@
 			var self = this;
 
 			this.api.getClaims().done( function ( claims ) {
+				var imgId = config.bannerImage;
 
-				// Check the claims for P18 (Image)
-				if (
-					claims.entities &&
-					claims.entities.hasOwnProperty( 'P18' ) &&
-					claims.entities.P18.length
-				) {
+				if ( claims.entities ) {
+					if ( claims.entities.hasOwnProperty( imgId ) &&
+						claims.entities[imgId].length ) {
+						// Parse data from the API into Image objects.
+						$.each( claims.entities[imgId], function ( index, image ) {
+							if ( image.mainsnak.datatype === 'commonsMedia' ) {
+								self.addImage( image.mainsnak.datavalue.value );
+							}
+						} );
 
-					// Parse data from the API into Image objects.
-					$.each( claims.entities.P18, function ( index, image ) {
-						if ( image.mainsnak.datatype === 'commonsMedia' ) {
-							self.addImage( image.mainsnak.datavalue.value );
-						}
-					} );
-
-					// Start trying to load images sequentially from most important to
-					// least.
-					self.loadImage( 0 );
-
+						// Start trying to load images sequentially from most important to
+						// least.
+						self.loadImage( 0 );
+					}
 				}
 			} );
 		},
