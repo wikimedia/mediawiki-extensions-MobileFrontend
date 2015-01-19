@@ -89,7 +89,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * @param string $par Revision IDs separated by three points (e.g. 123...124)
 	 */
 	function executeWhenAvailable( $par ) {
-		wfProfileIn( __METHOD__ );
 		$ctx = MobileContext::singleton();
 		$this->setHeaders();
 		$output = $this->getOutput();
@@ -101,7 +100,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		if ( is_null( $rev ) ) {
 			$this->executeBadQuery();
-			wfProfileOut( __METHOD__ );
 			return false;
 		}
 		$this->revId = $rev->getId();
@@ -130,7 +128,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$this->showFooter();
 
 		$output->addHtml( '</div>' );
-		wfProfileOut( __METHOD__ );
+
 		return true;
 	}
 

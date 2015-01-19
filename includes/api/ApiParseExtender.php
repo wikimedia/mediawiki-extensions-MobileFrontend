@@ -65,11 +65,9 @@ class ApiParseExtender {
 		global $wgMFSpecialCaseMainPage;
 
 		if ( $module->getModuleName() == 'parse' ) {
-			wfProfileIn( __METHOD__ );
 			$data = $module->getResultData();
 			$params = $module->extractRequestParams();
 			if ( isset( $data['parse']['text'] ) && $params['mobileformat'] ) {
-				wfProfileIn( __METHOD__ . '-mobiletransform' );
 				$result = $module->getResult();
 				$result->reset();
 
@@ -88,9 +86,7 @@ class ApiParseExtender {
 				$data['parse']['text'] = $arr;
 
 				$result->addValue( null, $module->getModuleName(), $data['parse'] );
-				wfProfileOut( __METHOD__ . '-mobiletransform' );
 			}
-			wfProfileOut( __METHOD__ );
 		}
 		return true;
 	}

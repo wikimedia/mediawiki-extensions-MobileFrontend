@@ -173,7 +173,6 @@ HTML;
 	private function getSiteSelector() {
 		global $wgLanguageCode;
 
-		wfProfileIn( __METHOD__ );
 		$selector = '';
 		$count = 0;
 		$language = $this->getLanguage();
@@ -207,7 +206,7 @@ HTML;
 			</ul>
 HTML;
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $selector;
 	}
 

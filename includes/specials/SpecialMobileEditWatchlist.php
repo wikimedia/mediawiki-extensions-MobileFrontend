@@ -37,7 +37,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * @return string
 	 */
 	public static function getLineHtml( Title $title, $ts, $thumb ) {
-		wfProfileIn( __METHOD__ );
 		$titleText = $title->getPrefixedText();
 		if ( $ts ) {
 			$ts = new MWTimestamp( $ts );
@@ -65,7 +64,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' );
 
-		wfProfileOut( __METHOD__ );
 		return $html;
 	}
 

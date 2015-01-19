@@ -117,13 +117,11 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 * @param string $pagename The name of the page
 	 */
 	public function executeWhenAvailable( $pagename ) {
-		wfProfileIn( __METHOD__ );
-
 		if ( $pagename === '' ) {
 			wfHttpError( 404, $this->msg( 'mobile-frontend-languages-404-title' )->text(),
 				$this->msg( 'mobile-frontend-languages-404-desc' )->text()
 			);
-			wfProfileOut( __METHOD__ );
+
 			return;
 		}
 
@@ -194,6 +192,5 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 
 		$output->setPageTitle( $pageTitle );
 		$output->addHTML( $html );
-		wfProfileOut( __METHOD__ );
 	}
 }

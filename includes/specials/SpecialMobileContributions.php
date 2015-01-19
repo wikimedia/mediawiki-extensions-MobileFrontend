@@ -45,7 +45,6 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 * @param string $par The username
 	 */
 	public function executeWhenAvailable( $par = '' ) {
-		wfProfileIn( __METHOD__ );
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
 		if ( $par ) {
 			// enter article history view
@@ -66,12 +65,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				}
 				$res = $this->doQuery();
 				$this->showContributions( $res );
-				wfProfileOut( __METHOD__ );
 				return;
 			}
 		}
 		$this->showPageNotFound();
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -116,7 +113,6 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 * @param Revision $rev
 	 */
 	protected function showContributionsRow( Revision $rev ) {
-		wfProfileIn( __METHOD__ );
 		$user = $this->getUser();
 		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
 		if ( $userId === 0 ) {
@@ -158,8 +154,6 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment,
 			$rev->getTitle(), $isAnon, $bytes, $isMinor
 		);
-
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**

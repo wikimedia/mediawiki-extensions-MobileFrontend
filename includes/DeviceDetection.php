@@ -116,8 +116,6 @@ class DeviceProperties implements IDeviceProperties {
 	 * @return bool
 	 */
 	private function detectMobileDevice() {
-		wfProfileIn( __METHOD__ );
-
 		$patterns = array(
 			'mobi',
 			'240x240',
@@ -178,7 +176,6 @@ class DeviceProperties implements IDeviceProperties {
 		$regex = '/^(' . implode( '|', $patternsStart ) . ')|(' . implode( '|', $patterns ) . ')/i';
 		$isMobile = (bool)preg_match( $regex, $this->userAgent );
 
-		wfProfileOut( __METHOD__ );
 		return $isMobile;
 	}
 
@@ -187,8 +184,6 @@ class DeviceProperties implements IDeviceProperties {
 	 * @return bool
 	 */
 	private function detectTablet() {
-		wfProfileIn( __METHOD__ );
-
 		// The only way to distinguish Android browsers on tablet from Android browsers on
 		// mobile is that Android browsers on tablet usually don't include the word
 		// "mobile". We look for "mobi" instead of "mobile" due to Opera Mobile. Note that
@@ -202,7 +197,6 @@ class DeviceProperties implements IDeviceProperties {
 			$isTablet = (bool)preg_match( $pattern, $this->userAgent );
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $isTablet;
 	}
 }

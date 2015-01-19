@@ -56,7 +56,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		// Anons don't get a watchlist
 		$this->requireLogin( 'watchlistanontext' );
 
-		wfProfileIn( __METHOD__ );
 		$ctx = MobileContext::singleton();
 		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
 
@@ -89,8 +88,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		} else {
 			$output->redirect( SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL() );
 		}
-
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -211,8 +208,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * @see doPageImages()
 	 */
 	protected function doFeedQuery() {
-		wfProfileIn( __METHOD__ );
-
 		$user = $this->getUser();
 		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
 
@@ -257,11 +252,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			array( &$conds, &$tables, &$join_conds, &$fields, &$values )
 		);
 
-		wfProfileIn( __METHOD__ . '-query' );
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $join_conds );
-		wfProfileOut( __METHOD__ . '-query' );
 
-		wfProfileOut( __METHOD__ );
 		return $res;
 	}
 
@@ -284,8 +276,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * are available to keep consistent with nearby view
 	 */
 	protected function showResults( ResultWrapper $res, $feed ) {
-		wfProfileIn( __METHOD__ );
-
 		$output = $this->getOutput();
 
 		if ( $feed ) {
@@ -295,8 +285,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		}
 
 		$output->addHtml( '</ul>' );
-
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -346,10 +334,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * @param object $row a row of db result
 	 */
 	protected function showFeedResultRow( $row ) {
-		wfProfileIn( __METHOD__ );
-
 		if ( $row->rc_deleted ) {
-			wfProfileOut( __METHOD__ );
 			return;
 		}
 
@@ -380,7 +365,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
 			$isMinor );
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**

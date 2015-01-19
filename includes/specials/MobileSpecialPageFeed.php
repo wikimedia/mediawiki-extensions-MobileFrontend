@@ -80,7 +80,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	protected function renderFeedItemHtml( $ts, $diffLink = '', $username = '', $comment = '',
 		$title = null, $isAnon = false, $bytes = 0, $isMinor = false ) {
 
-		wfProfileIn( __METHOD__ );
 		$output = $this->getOutput();
 		$user = $this->getUser();
 		$lang = $this->getLanguage();
@@ -146,6 +145,5 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$html .= Html::closeElement( 'li' );
 
 		$output->addHtml( $html );
-		wfProfileOut( __METHOD__ );
 	}
 }

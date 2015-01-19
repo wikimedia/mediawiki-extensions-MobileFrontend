@@ -101,14 +101,10 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	function generateTextDiffBody( $otext, $ntext ) {
 		global $wgContLang;
 
-		wfProfileIn( __METHOD__ );
 		# First try wikidiff2
 		if ( function_exists( 'wikidiff2_inline_diff' ) ) {
-			wfProfileIn( 'wikidiff2_inline_diff' );
 			$text = wikidiff2_inline_diff( $otext, $ntext, 2 );
 			$text .= $this->debug( 'wikidiff2-inline' );
-			wfProfileOut( 'wikidiff2_inline_diff' );
-			wfProfileOut( __METHOD__ );
 
 			return $text;
 		}
@@ -118,8 +114,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		$nta = explode( "\n", $wgContLang->segmentForDiff( $ntext ) );
 		$diffs = new Diff( $ota, $nta );
 		$formatter = new InlineDiffFormatter();
-		$difftext = $wgContLang->unsegmentForDiff( $formatter->format( $diffs ) ) .
-		wfProfileOut( __METHOD__ );
+		$difftext = $wgContLang->unsegmentForDiff( $formatter->format( $diffs ) );
 
 		return $difftext;
 	}

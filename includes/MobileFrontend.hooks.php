@@ -149,8 +149,6 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( &$skin, &$tpl ) {
-		wfProfileIn( __METHOD__ );
-
 		$title = $skin->getTitle();
 		$context = MobileContext::singleton();
 
@@ -173,7 +171,7 @@ class MobileFrontendHooks {
 			$footerlinks['places'][] = 'mobileview';
 			$tpl->set( 'footerlinks', $footerlinks );
 		}
-		wfProfileOut( __METHOD__ );
+
 		return true;
 	}
 
@@ -188,12 +186,9 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageRedirect( $out, &$redirect, &$code ) {
-		wfProfileIn( __METHOD__ );
-
 		$context = MobileContext::singleton();
 		$shouldDisplayMobileView = $context->shouldDisplayMobileView();
 		if ( !$shouldDisplayMobileView ) {
-			wfProfileOut( __METHOD__ );
 			return true;
 		}
 
@@ -204,7 +199,6 @@ class MobileFrontendHooks {
 			$redirect = $context->getMobileUrl( $redirect );
 		}
 
-		wfProfileOut( __METHOD__ );
 		return true;
 	}
 
@@ -575,12 +569,11 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUserLoginForm( &$template ) {
-		wfProfileIn( __METHOD__ );
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() && !$context->isAlphaGroupMember() ) {
 			$template = new UserLoginMobileTemplate( $template );
 		}
-		wfProfileOut( __METHOD__ );
+
 		return true;
 	}
 
@@ -592,12 +585,11 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUserCreateForm( &$template ) {
-		wfProfileIn( __METHOD__ );
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() && !$context->isAlphaGroupMember() ) {
 			$template = new UserAccountCreateMobileTemplate( $template );
 		}
-		wfProfileOut( __METHOD__ );
+
 		return true;
 	}
 
@@ -611,7 +603,6 @@ class MobileFrontendHooks {
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
 		global $wgMFEnableXAnalyticsLogging, $wgMFAppPackageId, $wgMFAppScheme;
-		wfProfileIn( __METHOD__ );
 
 		$context = MobileContext::singleton();
 
@@ -640,7 +631,6 @@ class MobileFrontendHooks {
 		}
 
 		if ( !$context->shouldDisplayMobileView() ) {
-			wfProfileOut( __METHOD__);
 			return true;
 		}
 
@@ -655,7 +645,6 @@ class MobileFrontendHooks {
 
 		$out->addVaryHeader( 'Cookie' );
 
-		wfProfileOut( __METHOD__ );
 		return true;
 	}
 

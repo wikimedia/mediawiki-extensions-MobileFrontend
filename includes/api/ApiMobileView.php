@@ -47,8 +47,6 @@ class ApiMobileView extends ApiBase {
 	 * @todo: Write some unit tests for API results
 	 */
 	public function execute() {
-		wfProfileIn( __METHOD__ );
-
 		// Logged-in users' parser options depend on preferences
 		$this->getMain()->setCacheMode( 'anon-public-user-private' );
 
@@ -248,8 +246,6 @@ class ApiMobileView extends ApiBase {
 				array( 'continue-offset' => $params['offset'] + $params['maxlen'] )
 			);
 		}
-
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -393,7 +389,6 @@ class ApiMobileView extends ApiBase {
 	 * @return ParserOutput
 	 */
 	protected function getParserOutput( WikiPage $wp, ParserOptions $parserOptions ) {
-		wfProfileIn( __METHOD__ );
 		$time = microtime( true );
 		$parserOutput = $wp->getParserOutput( $parserOptions );
 		$time = microtime( true ) - $time;
@@ -403,7 +398,7 @@ class ApiMobileView extends ApiBase {
 			throw new Exception( __METHOD__ . ": PoolCounter didn't return parser output" );
 		}
 		$parserOutput->setTOCEnabled( false );
-		wfProfileOut( __METHOD__ );
+
 		return $parserOutput;
 	}
 
@@ -435,7 +430,6 @@ class ApiMobileView extends ApiBase {
 		global $wgMemc, $wgUseTidy, $wgMFTidyMobileViewSections, $wgMFMinCachedPageSize,
 			$wgMFSpecialCaseMainPage;
 
-		wfProfileIn( __METHOD__ );
 		$wp = $this->makeWikiPage( $title );
 		if ( $this->followRedirects && $wp->isRedirect() ) {
 			$newTitle = $wp->getRedirectTarget();
@@ -448,7 +442,6 @@ class ApiMobileView extends ApiBase {
 					$this->getResult()->addValue( null, $this->getModuleName(),
 						array( 'viewable' => 'no' )
 					);
-					wfProfileOut( __METHOD__ );
 					return array();
 				}
 				$wp = $this->makeWikiPage( $title );
@@ -480,7 +473,6 @@ class ApiMobileView extends ApiBase {
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
 			wfIncrStats( 'mobile.view.cache-hit' );
-			wfProfileOut( __METHOD__ );
 			return $data;
 		}
 		wfIncrStats( 'mobile.view.cache-miss' );
@@ -492,7 +484,6 @@ class ApiMobileView extends ApiBase {
 			$cacheExpiry = $parserOutput->getCacheExpiry();
 		}
 
-		wfProfileIn( __METHOD__ . '-MobileFormatter' );
 		if ( !$this->noTransform ) {
 			$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $title );
 			$mf->setRemoveMedia( $noImages );
@@ -500,7 +491,6 @@ class ApiMobileView extends ApiBase {
 			$mf->setIsMainPage( $this->mainPage && $wgMFSpecialCaseMainPage );
 			$html = $mf->getText();
 		}
-		wfProfileOut( __METHOD__ . '-MobileFormatter' );
 
 		if ( $this->mainPage || $this->file ) {
 			$data = array(
@@ -509,7 +499,6 @@ class ApiMobileView extends ApiBase {
 				'refsections' => array(),
 			);
 		} else {
-			wfProfileIn( __METHOD__ . '-sections' );
 			$data = array();
 			$data['sections'] = $parserOutput->getSections();
 			$sectionCount = count( $data['sections'] );
@@ -532,9 +521,7 @@ class ApiMobileView extends ApiBase {
 					$chunk = "<h$chunk";
 				}
 				if ( $wgUseTidy && $wgMFTidyMobileViewSections && count( $chunks ) > 1 ) {
-					wfProfileIn( __METHOD__ . '-tidy' );
 					$chunk = MWTidy::tidy( $chunk );
-					wfProfileOut( __METHOD__ . '-tidy' );
 				}
 				if ( preg_match( '/<ol\b[^>]*?class="references"/', $chunk ) ) {
 					$data['refsections'][count( $data['text'] )] = true;
@@ -547,7 +534,6 @@ class ApiMobileView extends ApiBase {
 					$data['image'] = $image->getTitle()->getText();
 				}
 			}
-			wfProfileOut( __METHOD__ . '-sections' );
 		}
 
 		$data['lastmodified'] = wfTimestamp( TS_ISO_8601, $wp->getTimestamp() );
@@ -586,7 +572,7 @@ class ApiMobileView extends ApiBase {
 			// store for the same time as original parser output
 			$wgMemc->set( $key, $data, $cacheExpiry );
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $data;
 	}
 
@@ -597,7 +583,6 @@ class ApiMobileView extends ApiBase {
 	 */
 	private function getFilePage( Title $title ) {
 		//HACK: HACK: HACK:
-		wfProfileIn( __METHOD__ );
 		$context = new DerivativeContext( $this->getContext() );
 		$context->setTitle( $title );
 		$context->setOutput( new OutputPage( $context ) );
@@ -605,7 +590,7 @@ class ApiMobileView extends ApiBase {
 		$page->setContext( $context );
 		$page->view();
 		$html = $context->getOutput()->getHTML();
-		wfProfileOut( __METHOD__ );
+
 		return $html;
 	}
 
