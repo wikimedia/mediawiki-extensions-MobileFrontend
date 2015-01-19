@@ -17,7 +17,8 @@
 			"Helder.wiki",
 			"He7d3r",
 			"Macofe",
-			"Ti4goc"
+			"Ti4goc",
+			"Imperadeiro90"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o(a) utilizador(a) está ou não a editar através de interface móvel",
@@ -350,5 +351,8 @@
 	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel.",
 	"mobile-frontend-donate-button-label": "Doar",
 	"mobile-frontend-wikidata-editor-description-label": "Descreva ''$1'' numa única frase:",
-	"mobile-frontend-meta-data-issues-categories": "Sobre esta categoria"
+	"mobile-frontend-meta-data-issues-categories": "Sobre esta categoria",
+	"mobile-frontend-loading-message": "A carregar...",
+	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|mês|meses}} atrás",
+	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|ano|anos}} atrás"
 }
