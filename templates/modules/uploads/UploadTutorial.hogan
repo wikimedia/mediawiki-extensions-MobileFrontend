@@ -1,4 +1,6 @@
-{{{slideLeftButton}}}
+<div class="prev slider-button">
+	{{{slideLeftButton}}}
+</div>
 <ul>
 	{{#pages}}
 	<li class="slide slide-image">
@@ -6,13 +8,15 @@
 		<p>{{text}}</p>
 		{{#button}}
 		{{#funnel}}
-		<div class="button"></div>
+		<div class="mw-ui-button button"></div>
 		{{/funnel}}
 		{{^funnel}}
-		<button class="cancel button">{{button}}</button>
+		<button class="cancel button mw-ui-button">{{button}}</button>
 		{{/funnel}}
 		{{/button}}
 	</li>
 	{{/pages}}
 </ul>
+<div class="next slider-button">
 {{{slideRightButton}}}
+</div>
