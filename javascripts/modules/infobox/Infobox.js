@@ -29,7 +29,7 @@
 	Infobox = View.extend( {
 		template: mw.template.get( 'mobile.infobox', 'Infobox.hogan' ),
 
-		className: 'wikidata-infobox pre-content',
+		className: 'wikidata-infobox',
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.spinner HTML of the spinner icon.

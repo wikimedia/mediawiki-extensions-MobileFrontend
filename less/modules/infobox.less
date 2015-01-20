@@ -2,15 +2,50 @@
 @import "minerva.mixins";
 
 .wikidata-infobox {
+	overflow: hidden;
+	clear: both;
 	position: relative;
-	padding: 0 1em 2em;
-	margin: 2em 0 0;
+	margin: 0;
 	border: solid 1px @grayLight;
 	border-top: none;
 	background-color: @grayLightest;
 
 	img {
 		max-width: 100px;
+	}
+
+	.wikidata-infobox-content {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		.wikidata-infobox-row {
+			display: table-row;
+			label, .wikidata-infobox-values {
+				display: table-cell;
+			}
+			label {
+				text-align: right;
+				width: 35%;
+				text-transform: capitalize;
+				padding: 0.5em 1em;
+				border-top: solid 1px @grayLight;
+			}
+			.wikidata-infobox-values {
+				background-color: white;
+				width: 65%;
+				border-top: solid 1px @grayLightest;
+				span {
+					display: block;
+					padding: 0.5em 1em;
+				}
+			}
+		}
+	}
+
+	ul {
+		border-top: solid 1px @grayLight;
+		padding: 0.5em 1em;
+		text-align: center;
 	}
 }
 
