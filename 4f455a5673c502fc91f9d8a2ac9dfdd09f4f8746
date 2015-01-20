@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_b33f3cd3",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-20T18:03:26Z",
+      "side": 1,
+      "message": "This should extend EditorOverlayBase.prototype.events otherwise events will be lost.",
+      "revId": "4f455a5673c502fc91f9d8a2ac9dfdd09f4f8746",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_7329a499",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-20T18:03:26Z",
+      "side": 1,
+      "message": "Reuse onClickContinue method in EditorOverlayBase",
+      "revId": "4f455a5673c502fc91f9d8a2ac9dfdd09f4f8746",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_b3165c59",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-20T18:03:26Z",
+      "side": 1,
+      "message": "duplicated event",
+      "revId": "4f455a5673c502fc91f9d8a2ac9dfdd09f4f8746",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_33332c0c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-20T18:03:26Z",
+      "side": 1,
+      "message": "Not clear why this needs to be different from base method.",
+      "revId": "4f455a5673c502fc91f9d8a2ac9dfdd09f4f8746",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_533020fc",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-20T18:03:26Z",
+      "side": 1,
+      "message": "This should extend EditorOverlayBase.prototype.events otherwise events will be lost.",
+      "revId": "4f455a5673c502fc91f9d8a2ac9dfdd09f4f8746",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
