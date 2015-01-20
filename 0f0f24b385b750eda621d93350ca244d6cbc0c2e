@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_564ece3d",
+        "filename": "javascripts/modules/projects/OtherProjectsOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-20T00:45:52Z",
+      "side": 1,
+      "message": "list of projects?\nalso, wrong class name",
+      "revId": "0f0f24b385b750eda621d93350ca244d6cbc0c2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_f65a82f8",
+        "filename": "javascripts/modules/projects/OtherProjectsOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-20T00:45:52Z",
+      "side": 1,
+      "message": "defaults.placeholder doesn\u0027t exist.\ndefaults.heading description is wrong",
+      "revId": "0f0f24b385b750eda621d93350ca244d6cbc0c2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_b6540acb",
+        "filename": "templates/modules/projects/content.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-20T00:45:52Z",
+      "side": 1,
+      "message": "project-list?",
+      "revId": "0f0f24b385b750eda621d93350ca244d6cbc0c2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
