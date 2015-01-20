@@ -106,8 +106,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	 */
 	protected function getSkinStyles() {
 		$styles = parent::getSkinStyles();
-		$styles[] = 'skins.minerva.content.styles.beta';
-		$styles[] = 'skins.minerva.tablet.styles.beta';
 		$styles[] = 'mediawiki.ui.icon';
 		$styles[] = 'skins.minerva.icons.styles';
 		$styles[] = 'skins.minerva.icons.images';
