@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aneeskaka"
+		]
+	},
+	"mobile-frontend-categories-add": "ٿاڱو شامل ڪريو",
+	"mobile-frontend-categories-search": "ڳولا جا ٿاڱا",
+	"mobile-frontend-categories-nomatch": "هن گهرج جي ڪابه شاخ نه ملي سگهي. توهان کي ٻي لاءِ ڪوشش ڪرڻ گهرجي",
+	"mobile-frontend-categories-nodata": "هتي خامي آهي ڇا توهان ڪجهه ٿاڱا محفوظ ڪيا هئا؟",
+	"mobile-frontend-categories-summary": "شامل ٿاڱا",
+	"mobile-frontend-categories-add-heading": "نون ٿاڱن کي محفوظ ڪرڻ",
+	"mobile-frontend-categories-add-wait": "ٿاڱو شامل ڀي رهيو آهي، مهرباني ڪري انتظار ڪريو"
+}

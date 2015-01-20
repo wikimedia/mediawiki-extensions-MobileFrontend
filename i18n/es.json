@@ -21,7 +21,8 @@
 			"Themasterriot",
 			"Amitie 10g",
 			"Jdlrobson",
-			"Joaquin Oltra"
+			"Joaquin Oltra",
+			"MadriCR"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -36,6 +37,13 @@
 	"mobile-frontend-categories-heading": "<strong>Categorías</strong>",
 	"mobile-frontend-categories-subheading": "La página pertenece a las siguientes categorías:",
 	"mobile-frontend-categories-nocat": "Esta página no pertenece a ninguna categoría, aún.",
+	"mobile-frontend-categories-add": "Agregar categoría",
+	"mobile-frontend-categories-search": "Buscar categorías",
+	"mobile-frontend-categories-nomatch": "No se encontró categoría alguna para su búsqueda. Debería probar con otra.",
+	"mobile-frontend-categories-nodata": "Se ha producido un error. ¿Ha añadido algunas categorías para guardar?",
+	"mobile-frontend-categories-summary": "Categorías agregadas",
+	"mobile-frontend-categories-add-heading": "<strong>Agregar nuevas categorías a</strong><span> $1</span>",
+	"mobile-frontend-categories-add-wait": "Guardando categorías, por favor espere.",
 	"mobile-frontend-changeslist-ip": "Usuario anónimo",
 	"mobile-frontend-changeslist-nocomment": "sin resumen de edición",
 	"mobile-frontend-clear-search": "Limpiar",
