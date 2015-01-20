@@ -121,14 +121,56 @@
 						bot: 1
 				} ).done( function ( resp ) {
 					d.resolve( resp );
-				} );
+				} ).fail( $.proxy( d, 'reject' ) );
 			} );
 			return d;
 		},
+
 		/**
-		 * Get information about current wikidata entity
-		 *
-		 * FIXME: add error handling.
+		 * Save a claim to the current item associated with the api.
+		 * @param {String} property id of the property claim you want to update
+		 * @param {String} value of claim you want to save including the Q prefix e.g. Q1
+		 * @returns {jQuery.Deferred}
+		 */
+		saveClaim: function ( property, value ) {
+			var self = this,
+				d = $.Deferred();
+
+			self.postWithToken( 'csrf', {
+					action: 'wbcreateclaim',
+					entity: self.subjectId,
+					snaktype: 'value',
+					property: property,
+					value: JSON.stringify( {
+						'entity-type': 'item',
+						// FIXME: yuk.
+						'numeric-id': value.replace( 'Q', '' )
+					} ),
+					summary: 'MobileFrontend Infobox alpha edit'
+			} ).done( function ( resp ) {
+				d.resolve( resp );
+			} ).fail( $.proxy( d, 'reject' ) );
+			return d;
+		},
+
+		/**
+		 * Search for a wikidata item that matches the current term
+		 * @param {String} term
+		 * @returns {jQuery.Deferred}
+		 */
+		searchForItem: function ( term ) {
+			return this.get( {
+				action: 'wbsearchentities',
+				search: term,
+				language: this.language,
+				type: 'item'
+			} ).then( function ( data ) {
+				return data.search;
+			} );
+		},
+
+		/**
+		 * Get information about current wikidata entity.
 		 */
 		getInfo: function () {
 			var id = this.subjectId;
@@ -154,7 +196,7 @@
 			return this.ajax( {
 				action: 'wbgetentities',
 				sites: wiki,
-				props: [ 'labels', 'sitelinks/urls' ],
+				props: [ 'labels', 'sitelinks/urls', 'datatype' ],
 				languages: lang,
 				ids: itemIds
 			} ).then( function ( data ) {
@@ -172,6 +214,8 @@
 						}
 
 						map[ itemId ] = {
+							id: itemId,
+							type: item.datatype,
 							label: sitelink ? sitelink.title : item.labels[ lang ].value
 						};
 
