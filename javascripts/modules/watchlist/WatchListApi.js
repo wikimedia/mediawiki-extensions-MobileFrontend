@@ -134,6 +134,7 @@
 				if ( msgId ) {
 					data.lastModified = mw.msg( 'mobile-frontend-watchlist-modified',
 						mw.msg( msgId, delta.value ) );
+					data.additionalClasses = 'new';
 				}
 				return data;
 			} );
