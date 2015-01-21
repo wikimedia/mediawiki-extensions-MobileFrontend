@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_08da6f21",
+        "filename": "less/modules/uploads/UploadTutorial.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-21T01:04:29Z",
+      "side": 1,
+      "message": "I think you should subtract half of the icon height from the 50% to position the icon exactly in the center.",
+      "revId": "a67bb77722e54940eebf03ff7d148aad29338e5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
