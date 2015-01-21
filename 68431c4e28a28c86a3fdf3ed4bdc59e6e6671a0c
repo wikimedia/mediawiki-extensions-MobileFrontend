@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_e8761bd5",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-21T01:46:17Z",
+      "side": 0,
+      "message": "You should remove the same key in qqq.json",
+      "revId": "68431c4e28a28c86a3fdf3ed4bdc59e6e6671a0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
