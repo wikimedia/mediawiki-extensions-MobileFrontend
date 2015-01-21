@@ -18,6 +18,12 @@
 		template: mw.template.get( 'mobile.uploads', 'UploadTutorial.hogan' ),
 		className: 'overlay carousel tutorial content-overlay',
 
+		/** @inheritdoc */
+		events: {
+			'click .prev': 'onPreviousClick',
+			'click .next': 'onNextClick',
+			'click .button': 'onClickUploadButton'
+		},
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -59,8 +65,7 @@
 
 		/** @inheritdoc */
 		postRender: function ( options ) {
-			var self = this,
-				$button = this.$( '.button' );
+			var $button = this.$( '.button' );
 
 			if ( options.funnel ) {
 				new LeadPhotoUploaderButton( {
@@ -68,20 +73,11 @@
 					buttonCaption: buttonMsg,
 					funnel: options.funnel
 				} );
-				$button.on( 'click', function () {
-					// need timeout for the file dialog to open
-					setTimeout( $.proxy( self, 'hide' ), 0 );
-					setTimeout( $.proxy( self, 'emit', 'hide' ), 0 );
-				} );
 			}
 
 			this.page = 0;
 			this.totalPages = options.pages.length;
-			this.$( '.prev' ).on( 'click', $.proxy( this, 'previous' ) );
-			this.$( '.next' ).on( 'click', $.proxy( this, 'next' ) );
-
 			this._showCurrentPage();
-
 			Overlay.prototype.postRender.apply( this, arguments );
 		},
 
@@ -97,10 +93,20 @@
 		},
 
 		/**
+		 * Event that is fired when clicking the final button at the end of the tutorial.
+		 * @method
+		 */
+		onClickUploadButton: function () {
+			// need timeout for the file dialog to open
+			setTimeout( $.proxy( this, 'hide' ), 0 );
+			setTimeout( $.proxy( this, 'emit', 'hide' ), 0 );
+		},
+
+		/**
 		 * Show next page of the tutorial
 		 * @method
 		 */
-		next: function () {
+		onNextClick: function () {
 			this.page += 1;
 			this._showCurrentPage();
 		},
@@ -109,7 +115,7 @@
 		 * Show previous page of the tutorial
 		 * @method
 		 */
-		previous: function () {
+		onPreviousClick: function () {
 			this.page -= 1;
 			this._showCurrentPage();
 		}

@@ -22,16 +22,16 @@
 		assert.ok( !uploadTutorial.$( '.cancel' ).length, 'Has no cancel button' );
 	} );
 
-	QUnit.test( '#next', 3, function ( assert ) {
+	QUnit.test( '#onNextClick', 3, function ( assert ) {
 		assert.ok( uploadTutorial.$( '.slide' ).eq( 0 ).hasClass( 'active' ), 'Initialises to page 0' );
-		uploadTutorial.next();
+		uploadTutorial.onNextClick();
 		assert.ok( !uploadTutorial.$( '.slide' ).eq( 0 ).hasClass( 'active' ), 'Deactivates page 0' );
 		assert.ok( uploadTutorial.$( '.slide' ).eq( 1 ).hasClass( 'active' ), 'Progresses to page 1' );
 	} );
 
-	QUnit.test( '#previous', 2, function ( assert ) {
-		uploadTutorial.next();
-		uploadTutorial.previous();
+	QUnit.test( '#onPreviousClick', 2, function ( assert ) {
+		uploadTutorial.onNextClick();
+		uploadTutorial.onPreviousClick();
 		assert.ok( !uploadTutorial.$( '.slide' ).eq( 1 ).hasClass( 'active' ), 'Deactivates page 1' );
 		assert.ok( uploadTutorial.$( '.slide' ).eq( 0 ).hasClass( 'active' ), 'Back to page 1' );
 	} );
