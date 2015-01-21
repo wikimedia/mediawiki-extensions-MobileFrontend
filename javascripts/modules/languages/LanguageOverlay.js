@@ -41,7 +41,7 @@
 		 * @param {String} val of search term.
 		 */
 		filterLists: function ( val ) {
-			var $items = this.$( '.language-list li' ),
+			var $items = this.$( '.site-link-list li' ),
 				$subheaders = this.$( 'h3' );
 
 			if ( val ) {
