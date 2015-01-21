@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_bcb144de",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-21T06:44:32Z",
+      "side": 1,
+      "message": "Argh... what, if extrafields doesn\u0027t exist? (notice: undefined index...)",
+      "revId": "3beed105d044b00cf9ef77b7e54b7c3e4c8d3703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
