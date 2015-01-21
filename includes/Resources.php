@@ -1171,6 +1171,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.wikidata.api' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.foreignApi',
 		),
 		'scripts' => array(
 			'javascripts/modules/wikigrok/WikiDataApi.js'
