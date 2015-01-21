@@ -31,7 +31,12 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		$stickHTTPS = ( $this->doStickHTTPS() ) ? Html::input( 'wpStickHTTPS', 'true', 'hidden' ) : '';
 		$username = ( strlen( $this->data['name'] ) ) ? $this->data['name'] : null;
 		// handle captcha
-		$captcha = $this->handleCaptcha( $this->data['header'] );
+		$captchaHtml = '';
+		if ( isset( $this->data['header'] ) ) {
+			$captchaHtml .= $this->data['header'];
+		}
+		$captchaHtml .= $this->data['extrafields'];
+		$captcha = $this->handleCaptcha( $captchaHtml );
 
 		$form =
 			Html::openElement( 'form',
