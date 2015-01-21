@@ -35,7 +35,9 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		if ( isset( $this->data['header'] ) ) {
 			$captchaHtml .= $this->data['header'];
 		}
-		$captchaHtml .= $this->data['extrafields'];
+		if ( isset( $this->data['extrafields'] ) ) {
+			$captchaHtml .= $this->data['extrafields'];
+		}
 		$captcha = $this->handleCaptcha( $captchaHtml );
 
 		$form =
