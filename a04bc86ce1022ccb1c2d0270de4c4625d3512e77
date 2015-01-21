@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_1c471052",
+        "filename": "javascripts/specials/userlogin.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-21T02:07:34Z",
+      "side": 1,
+      "message": "This checkbox is hidden on non-wide screens. Not sure if we want to check this checkbox off without showing it to the user.",
+      "revId": "a04bc86ce1022ccb1c2d0270de4c4625d3512e77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
