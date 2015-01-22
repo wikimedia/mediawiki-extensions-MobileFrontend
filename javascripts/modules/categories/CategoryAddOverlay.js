@@ -126,8 +126,8 @@
 			} else {
 				// save the new categories
 				this.api.save( this.title, newCategories ).done( function () {
+					M.emit( 'category-added' );
 					window.location.hash = '#/categories';
-					window.location.reload();
 				} ).fail( function () {
 					// FIXME: Don't call a private method that is outside the class.
 					self._showHidden( '.initial-header' );
