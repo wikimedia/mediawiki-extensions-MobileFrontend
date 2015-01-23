@@ -8,6 +8,7 @@ Feature: Language selection
     When I click the language button
       And I see the language overlay
 
+  @smoke
   Scenario: Closing language overlay (overlay button)
     When I click the language overlay close button
     Then I should not see the languages overlay

@@ -4,6 +4,7 @@ Feature: Wikitext Editor (Makes actual saves)
   Background:
     Given I am logged into the mobile website
 
+  @smoke
   Scenario: Successful edit on page without languages shows no language button [bug 63675]
     Given the page "Selenium no languages test page" exists
     When I click the edit button

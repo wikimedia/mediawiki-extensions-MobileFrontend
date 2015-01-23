@@ -5,6 +5,7 @@ Feature: Manage Watchlist
     Given I am logged into the mobile website
       And I am on the "Special:Watchlist" page
 
+  @smoke
   Scenario: Switching to Feed view
     When I switch to the modified view of the watchlist
       And I click the Pages tab
