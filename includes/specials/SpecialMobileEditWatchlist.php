@@ -165,7 +165,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		// Begin rendering of watchlist.
 		$watchlist = array( $ns => $allPages );
 		if ( !MobileContext::singleton()->imagesDisabled() ) {
-			wfRunHooks( 'SpecialMobileEditWatchlist::images', array(
+			Hooks::run( 'SpecialMobileEditWatchlist::images', array(
 					$this->getContext(),
 					&$watchlist,
 					&$images

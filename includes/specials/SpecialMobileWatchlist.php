@@ -247,7 +247,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		// object (which implements array-like interface ArrayAccess).
 		// Let's keep using an array and hope any new extensions are compatible with both styles...
 		$values = array();
-		wfRunHooks(
+		Hooks::run(
 			'SpecialWatchlistQuery',
 			array( &$conds, &$tables, &$join_conds, &$fields, &$values )
 		);

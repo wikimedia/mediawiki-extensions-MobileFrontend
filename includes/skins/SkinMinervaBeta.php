@@ -58,7 +58,7 @@ class SkinMinervaBeta extends SkinMinerva {
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['beta'] = array( 'mobile.beta' );
-		wfRunHooks( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
+		Hooks::run( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 
 		// Disable CentralNotice modules in beta
 		if ( array_key_exists( 'centralnotice', $modules ) ) {

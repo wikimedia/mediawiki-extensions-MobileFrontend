@@ -54,7 +54,7 @@ class MinervaTemplate extends BaseTemplate {
 	public function execute() {
 		$this->isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		$this->isMainPage = $this->getSkin()->getTitle()->isMainPage();
-		wfRunHooks( 'MinervaPreRender', array( $this ) );
+		Hooks::run( 'MinervaPreRender', array( $this ) );
 		$this->render( $this->data );
 	}
 

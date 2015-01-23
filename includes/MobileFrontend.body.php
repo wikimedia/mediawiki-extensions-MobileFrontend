@@ -37,7 +37,7 @@ class ExtMobileFrontend {
 
 		$formatter = MobileFormatter::newFromContext( $context, $html );
 
-		wfRunHooks( 'MobileFrontendBeforeDOM', array( $context, $formatter ) );
+		Hooks::run( 'MobileFrontendBeforeDOM', array( $context, $formatter ) );
 
 		$title = $out->getTitle();
 		$isSpecialPage = $title->isSpecialPage();
