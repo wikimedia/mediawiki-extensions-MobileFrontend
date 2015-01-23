@@ -30,7 +30,7 @@
 	 *     PhotoList = View.extend( {
 	 *       //...
 	 *       initialize: function ( options ) {
-	 *         this.api = new UserGalleryApi( {
+	 *         this.api = new PhotoListApi( {
 	 *           username: options.username
 	 *         } );
 	 *         // 1. Set up infinite scroll helper and listen to events

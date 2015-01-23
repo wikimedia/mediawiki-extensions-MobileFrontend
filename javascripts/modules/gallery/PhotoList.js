@@ -1,21 +1,21 @@
 ( function ( M, $ ) {
 	var PhotoList,
 		icons = M.require( 'icons' ),
-		UserGalleryApi = M.require( 'specials/uploads/UserGalleryApi' ),
-		PhotoItem = M.require( 'specials/uploads/PhotoItem' ),
+		PhotoListApi = M.require( 'modules/gallery/PhotoListApi' ),
+		PhotoItem = M.require( 'modules/gallery/PhotoItem' ),
 		InfiniteScroll = M.require( 'InfiniteScroll' ),
 		View = M.require( 'View' );
 
 	/**
 	 * Creates a list of photo items
 	 * @class PhotoList
-	 * @uses UserGalleryApi
+	 * @uses PhotoListApi
 	 * @uses PhotoItem
 	 * @uses InfiniteScroll
 	 * @extends View
 	 */
 	PhotoList = View.extend( {
-		template: mw.template.get( 'mobile.special.uploads.scripts', 'PhotoList.hogan' ),
+		template: mw.template.get( 'mobile.gallery', 'PhotoList.hogan' ),
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} HTML of the spinner icon.
@@ -25,9 +25,16 @@
 		},
 		/** @inheritdoc */
 		initialize: function ( options ) {
-			this.api = new UserGalleryApi( {
-				username: options.username
-			} );
+			var apiOptions;
+
+			if ( options.username ) {
+				apiOptions = {
+					username: options.username
+				};
+			} else {
+				apiOptions = {};
+			}
+			this.api = new PhotoListApi( apiOptions );
 			// Set up infinite scroll
 			this.infiniteScroll = new InfiniteScroll( 1000 );
 			this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
@@ -99,7 +106,7 @@
 			M.emit( 'photo-loaded', photoItem.$el );
 		},
 		/**
-		 * Load photos into the view using {{UserGalleryApi}} when the end is near
+		 * Load photos into the view using {{PhotoListApi}} when the end is near
 		 * and no current API requests are underway.
 		 * @method
 		 * @private
@@ -128,5 +135,5 @@
 		}
 	} );
 
-	M.define( 'specials/uploads/PhotoList', PhotoList );
+	M.define( 'modules/gallery/PhotoList', PhotoList );
 }( mw.mobileFrontend, jQuery ) );

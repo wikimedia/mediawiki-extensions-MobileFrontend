@@ -1,10 +1,10 @@
 ( function ( M, $ ) {
 
-	var m = M.require( 'specials/uploads/UserGalleryApi' );
+	var m = M.require( 'modules/gallery/PhotoListApi' );
 
-	QUnit.module( 'MobileFrontend uploads' );
+	QUnit.module( 'MobileFrontend PhotoListApi' );
 
-	QUnit.test( 'getDescription', function ( assert ) {
+	QUnit.test( '#getDescription', function ( assert ) {
 		var tests = [
 			[ 'File:Pirates in SF 2013-04-03 15-44.png', 'Pirates in SF' ],
 			[ 'File:Unpadded 9 pirates in SF 2013-04-03 15-9.png', 'Unpadded 9 pirates in SF' ],

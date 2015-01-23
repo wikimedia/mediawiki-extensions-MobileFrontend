@@ -8,8 +8,8 @@
 	 * @extends View
 	 */
 	PhotoItem = View.extend( {
-		template: mw.template.get( 'mobile.special.uploads.scripts', 'PhotoItem.hogan' ),
+		template: mw.template.get( 'mobile.gallery', 'PhotoItem.hogan' ),
 		tagName: 'li'
 	} );
-	M.define( 'specials/uploads/PhotoItem', PhotoItem );
+	M.define( 'modules/gallery/PhotoItem', PhotoItem );
 }( mw.mobileFrontend ) );

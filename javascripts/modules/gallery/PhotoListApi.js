@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-	var UserGalleryApi, Api,
+	var PhotoListApi, Api,
 		IMAGE_WIDTH = mw.config.get( 'wgMFThumbnailSizes' ).medium,
 		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' );
 
@@ -12,10 +12,10 @@
 
 	/**
 	 * API for retrieving gallery photos
-	 * @class UserGalleryApi
+	 * @class PhotoListApi
 	 * @extends Api
 	 */
-	UserGalleryApi = Api.extend( {
+	PhotoListApi = Api.extend( {
 		apiUrl: corsUrl || Api.prototype.apiUrl,
 		/** @inheritdoc */
 		initialize: function ( options ) {
@@ -64,6 +64,28 @@
 			};
 		},
 		/**
+		 * Get the associated query needed to retrieve images from API based
+		 * on currently configured options.
+		 * @return {Object}
+		 */
+		getQuery: function () {
+			var query = {
+				action: 'query',
+				prop: 'imageinfo',
+				// FIXME: [API] have to request timestamp since api returns an object
+				// rather than an array thus we need a way to sort
+				iiprop: 'url|timestamp',
+				iiurlwidth: IMAGE_WIDTH,
+				generator: 'allimages',
+				gaiuser: this.username,
+				gaisort: 'timestamp',
+				gaidir: 'descending',
+				gailimit: this.limit,
+				gaicontinue: this.endTimestamp
+			};
+			return query;
+		},
+		/**
 		 * Request photos beginning with the current value of endTimestamp
 		 * @return {jQuery.Deferred} where parameter is a list of JavaScript objects describing an image.
 		 */
@@ -73,20 +95,7 @@
 
 			// FIXME: Don't simply use this.endTimestamp as initially this value is undefined
 			if ( this.endTimestamp !== false ) {
-				this.ajax( {
-					action: 'query',
-					generator: 'allimages',
-					gaisort: 'timestamp',
-					gaidir: 'descending',
-					gaiuser: this.username,
-					gailimit: this.limit,
-					gaicontinue: this.endTimestamp,
-					prop: 'imageinfo',
-					// FIXME: [API] have to request timestamp since api returns an object
-					// rather than an array thus we need a way to sort
-					iiprop: 'url|timestamp',
-					iiurlwidth: IMAGE_WIDTH
-				} ).done( function ( resp ) {
+				this.ajax( this.getQuery() ).done( function ( resp ) {
 					if ( resp.query && resp.query.pages ) {
 						// FIXME: [API] in an ideal world imageData would be a sorted array
 						var photos = $.map( resp.query.pages, function ( page ) {
@@ -114,5 +123,5 @@
 		}
 	} );
 
-	M.define( 'specials/uploads/UserGalleryApi', UserGalleryApi );
+	M.define( 'modules/gallery/PhotoListApi', PhotoListApi );
 }( mw.mobileFrontend, jQuery ) );
