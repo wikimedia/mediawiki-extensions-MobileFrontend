@@ -92,7 +92,7 @@ class ArticlePage
 
   # editor
   textarea(:editor_textarea, class: 'wikitext-editor')
-  button(:escape_button, class: 'icon-back')
+  button(:escape_button, class: 'mw-ui-icon-back')
   button(:continue_button, class: 'continue')
   button(:submit_button, class: 'submit')
 
