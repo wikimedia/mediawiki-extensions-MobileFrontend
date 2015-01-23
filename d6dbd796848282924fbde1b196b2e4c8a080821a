@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_656d4c01",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-23T19:33:04Z",
+      "side": 1,
+      "message": "This makes multiple requests to the API. You need to use \u0027off\u0027 first to remove previous hooks.",
+      "revId": "d6dbd796848282924fbde1b196b2e4c8a080821a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
