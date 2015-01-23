@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_686d2101",
+        "filename": "javascripts/modules/gallery/PhotoList.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-23T20:41:55Z",
+      "side": 1,
+      "message": "Unnecessary word \u0027User\u0027 in {{UserPhotoListApi}}",
+      "revId": "275e7ebfbe4511a8a6fc1db7ef90a9f7de469ec5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
