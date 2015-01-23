@@ -215,6 +215,7 @@
 	"mobile-frontend-opt-in-explain": "Al probar la versión beta, obtendrá acceso a características experimentales, con el riesgo de encontrarse con errores y problemas.",
 	"mobile-frontend-overlay-close": "Cerrar",
 	"mobile-frontend-overlay-continue": "Continuar",
+	"mobile-frontend-other-projects-overlay-heading": "Otros proyectos",
 	"mobile-frontend-page-menu-contents": "contenido",
 	"mobile-frontend-page-menu-history": "Historial",
 	"mobile-frontend-page-edit-summary": "<strong>Resumen de edición</strong><span> $1</span>",
@@ -339,5 +340,8 @@
 	"tag-mobile_edit": "Edición desde móvil",
 	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)",
 	"mobile-frontend-donate-button-label": "Dona",
-	"mobile-frontend-wikidata-editor-description-label": "Describe ''$1'' en una sola oración:"
+	"mobile-frontend-wikidata-editor-description-label": "Describe ''$1'' en una sola oración:",
+	"mobile-frontend-loading-message": "Cargando…",
+	"mobile-frontend-months-ago": "hace $1 {{PLURAL:$1|mes|meses}}",
+	"mobile-frontend-years-ago": "hace $1 {{PLURAL:$1|año|años}}"
 }

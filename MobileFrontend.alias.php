@@ -60,6 +60,15 @@ $specialPageAliases['ast'] = array(
 	'Nearby' => array( 'Cercano' ),
 );
 
+/** Avaric (авар) */
+$specialPageAliases['av'] = array(
+	'MobileOptions' => array( 'Настройки_мобильной_версии' ),
+	'Uploads' => array( 'Загрузки' ),
+	'MobileDiff' => array( 'Сравнение_версий' ),
+	'MobileMenu' => array( 'Мобильное_меню' ),
+	'Nearby' => array( 'Поблизости' ),
+);
+
 /** Catalan (català) */
 $specialPageAliases['ca'] = array(
 	'Nearby' => array( 'A_prop' ),
