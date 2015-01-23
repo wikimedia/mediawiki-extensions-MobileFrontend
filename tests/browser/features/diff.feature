@@ -1,6 +1,7 @@
 @chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
 Feature: Page diff
 
+  @smoke
   Scenario: Added and removed content
     Given I am logged into the mobile website
       And the page "Selenium diff test" exists

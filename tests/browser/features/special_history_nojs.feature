@@ -8,5 +8,6 @@ Feature: Basic history page for legacy devices
       And I am on the "Selenium diff test" page
     When I click on the history link in the last modified bar
 
+  @smoke
   Scenario: Check more button exists
     Then I should see a more button

@@ -4,6 +4,7 @@ Feature: Table of contents
   Background:
     Given I am using the mobile site
 
+  @smoke
   Scenario: Don't show table of contents on mobile
     Given I am viewing the site in mobile mode
     When I go to a page that has sections
