@@ -16,6 +16,24 @@
       "revId": "d6dbd796848282924fbde1b196b2e4c8a080821a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_65546c2b",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-23T19:35:28Z",
+      "side": 1,
+      "message": "Argh, or better: set it up in initialize :) (That was my plan, but then something went wrong :)).",
+      "parentUuid": "ae6ac7d6_656d4c01",
+      "revId": "d6dbd796848282924fbde1b196b2e4c8a080821a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
