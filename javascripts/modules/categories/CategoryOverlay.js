@@ -62,6 +62,7 @@
 			if ( options.showHidden ) {
 				this._changeView();
 			}
+			M.off( 'category-added' ).on( 'category-added', $.proxy( this, '_loadCategories', this.options ) );
 		},
 
 		/**
@@ -72,6 +73,7 @@
 			var api = new CategoryApi(),
 				self = this;
 
+			this.$( '.topic-title-list' ).empty();
 			this.showSpinner();
 			api.getCategories( options.title ).done( function ( data ) {
 				if ( data.query && data.query.pages ) {
