@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "ae6ac7d6_948c4cdd",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-01-24T00:53:29Z",
+      "side": 1,
+      "message": "Mmmm, dipping people head-first into bug tracker sounds wrong, maybe some kind of welcome page for new contributors?",
+      "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_fc79062b",
         "filename": "includes/config/Experimental.php",
         "patchSetId": 4
@@ -49,6 +66,24 @@
       "side": 1,
       "message": "That\u0027s a good point, ok :)\n\nBut remember: MediaWiki third-parties are \"update lazy\" ;)",
       "parentUuid": "ae6ac7d6_7c95f634",
+      "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_b47b90bc",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-01-24T00:53:29Z",
+      "side": 1,
+      "message": "Because the message is unclear as to who is this calling for help - us or the local, potentially non-WMF wiki, potentially even outright contradictory to our values like Metapedia, I feel extremely dubious about this default.",
+      "parentUuid": "ae6ac7d6_5c9cb25f",
       "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
