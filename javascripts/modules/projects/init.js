@@ -1,10 +1,11 @@
 ( function ( M, $ ) {
 
 	var loader = M.require( 'loader' ),
+		overlayManager = M.require( 'overlayManager' ),
 		wbId = mw.config.get( 'wgWikibaseItemId' );
 
 	if ( wbId ) {
-		M.overlayManager.add( /^\/other-projects$/, function () {
+		overlayManager.add( /^\/other-projects$/, function () {
 			var result = $.Deferred();
 
 			loader.loadModule( 'mobile.otherProjects', true ).done( function ( loadingOverlay ) {
