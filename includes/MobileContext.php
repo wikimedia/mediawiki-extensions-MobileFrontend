@@ -366,7 +366,7 @@ class MobileContext extends ContextSource {
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
 			$this->redirectMobileEnabledPages();
-			wfRunHooks( 'EnterMobileMode', array( $this ) );
+			Hooks::run( 'EnterMobileMode', array( $this ) );
 		}
 		return $this->mobileView;
 	}
@@ -730,7 +730,7 @@ class MobileContext extends ContextSource {
 
 		if ( $this->shouldDisplayMobileView() ) {
 			$subdomainTokenReplacement = null;
-			if ( wfRunHooks( 'GetMobileUrl', array( &$subdomainTokenReplacement, $this ) ) ) {
+			if ( Hooks::run( 'GetMobileUrl', array( &$subdomainTokenReplacement, $this ) ) ) {
 				if ( !empty( $subdomainTokenReplacement ) ) {
 					global $wgMobileUrlTemplate;
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );

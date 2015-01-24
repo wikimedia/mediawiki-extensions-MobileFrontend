@@ -945,7 +945,7 @@ class SkinMinerva extends SkinTemplate {
 		$modules['site'] = 'mobile.site';
 
 		// FIXME: Upstream?
-		wfRunHooks( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
+		Hooks::run( 'SkinMinervaDefaultModules', array( $this, &$modules ) );
 		return $modules;
 	}
 
@@ -1007,8 +1007,8 @@ class SkinMinerva extends SkinTemplate {
 			// FIXME: Merge these hooks?
 			// EnableMobileModules is deprecated; Use ResourceLoader instead,
 			// see https://www.mediawiki.org/wiki/ResourceLoader#Mobile
-			wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
-			wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) );
+			Hooks::run( 'EnableMobileModules', array( $out, $this->getMode() ) );
+			Hooks::run( 'BeforePageDisplayMobile', array( &$out ) );
 		}
 		parent::outputPage();
 	}
@@ -1086,7 +1086,7 @@ HTML;
 		}
 
 		// Enable extensions to add links to footer in Mobile view, too - bug 66350
-		wfRunHooks( 'SkinMinervaOutputPageBeforeExec', array( &$this, &$tpl ) );
+		Hooks::run( 'SkinMinervaOutputPageBeforeExec', array( &$this, &$tpl ) );
 
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'mobile-license', $licenseText );
@@ -1141,7 +1141,7 @@ HTML;
 		}
 
 		// Allow other extensions (for example, WikimediaMessages) to override
-		wfRunHooks( 'MobileLicenseLink', array( &$link, $context, $attribs ) );
+		Hooks::run( 'MobileLicenseLink', array( &$link, $context, $attribs ) );
 
 		return $link;
 	}

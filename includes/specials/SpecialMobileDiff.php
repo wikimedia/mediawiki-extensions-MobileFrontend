@@ -117,7 +117,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$output->addModuleStyles( 'mobile.special.pagefeed.styles' );
 
 		// Allow other extensions to load more stuff here
-		wfRunHooks( 'BeforeSpecialMobileDiffDisplay', array( &$output, $ctx, $revisions ) );
+		Hooks::run( 'BeforeSpecialMobileDiffDisplay', array( &$output, $ctx, $revisions ) );
 
 		$output->addHtml( '<div id="mw-mf-diffview"><div id="mw-mf-diffarea">' );
 
