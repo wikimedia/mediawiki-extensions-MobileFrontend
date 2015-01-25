@@ -198,7 +198,6 @@
 	"mobile-frontend-last-modified-years": "Text displayed on page to show how long ago the page was updated. Parameters:\n* $1 - number of years\n{{Related|Mobile-frontend-last-modified}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Call to action that when clicked starts uploading an image to a page from tutorial.",
 	"mobile-frontend-lead-image-tutorial-summary": "Briefly summarise that a lead image should illustrate the page whilst not violating copyright. Shown to new users after logging in",
-	"mobile-frontend-listed-image-no-description": "What to show when no description available.\n{{Identical|No description}}",
 	"mobile-frontend-logged-in-homepage-notification": "Heading at top of homepage telling user they are logged in. Parameters:\n* $1 - username",
 	"mobile-frontend-logged-in-toast-notification": "Message telling user that they are logged in. Shows as a notification at bottom of page\n*$1 - username",
 	"mobile-frontend-logged-out": "Message telling user they are not logged in on settings page.\n{{Identical|Not logged in}}",

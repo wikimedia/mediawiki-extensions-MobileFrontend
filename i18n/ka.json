@@ -122,7 +122,6 @@
 	"mobile-frontend-last-modified-seconds": "ბოლოს შეიცვალა {{PLURAL:$1|$1 წამის|$1 წამის}} წინ",
 	"mobile-frontend-last-modified-years": "ბოლოს შეიცვალა {{PLURAL:$1|$1 წლის|$1 წლის}} წინ",
 	"mobile-frontend-lead-image-tutorial-confirm": "დაიწყეთ ატვირთვა",
-	"mobile-frontend-listed-image-no-description": "არ არის აღწერა",
 	"mobile-frontend-logged-in-homepage-notification": "მოგესალმებით, $1!",
 	"mobile-frontend-logged-in-toast-notification": "შესული ხართ როგორც $1.",
 	"mobile-frontend-logged-out": "შესვლა არ განხორციელდა",

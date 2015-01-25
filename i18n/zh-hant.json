@@ -14,7 +14,8 @@
 			"Waihorace",
 			"Xiaomingyan",
 			"Yfdyh000",
-			"LNDDYL"
+			"LNDDYL",
+			"Citizen01"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
@@ -30,6 +31,8 @@
 	"mobile-frontend-categories-subheading": "以頁面屬於以下分類：",
 	"mobile-frontend-categories-nocat": "此頁面不屬於任何分類。",
 	"mobile-frontend-categories-add": "增加分類",
+	"mobile-frontend-categories-search": "搜尋分類",
+	"mobile-frontend-categories-summary": "已添加分類",
 	"mobile-frontend-changeslist-ip": "匿名使用者",
 	"mobile-frontend-changeslist-nocomment": "無編輯摘要",
 	"mobile-frontend-clear-search": "清除",
@@ -176,7 +179,6 @@
 	"mobile-frontend-last-modified-years": "最後修改於 $1 年前",
 	"mobile-frontend-lead-image-tutorial-confirm": "開始上傳",
 	"mobile-frontend-lead-image-tutorial-summary": "請確保您的圖片可以協助說明頁面。圖片應該要是屬於您且不侵犯版權的。",
-	"mobile-frontend-listed-image-no-description": "無說明",
 	"mobile-frontend-logged-in-homepage-notification": "歡迎，$1！",
 	"mobile-frontend-logged-in-toast-notification": "使用 $1 登入。",
 	"mobile-frontend-logged-out": "未登入",
@@ -220,6 +222,7 @@
 	"mobile-frontend-opt-in-explain": "參加測試，您將可以使用實驗功能，但可能有不少錯誤和問題。",
 	"mobile-frontend-overlay-close": "關閉",
 	"mobile-frontend-overlay-continue": "繼續",
+	"mobile-frontend-other-projects-overlay-heading": "其他專案",
 	"mobile-frontend-page-menu-contents": "目錄",
 	"mobile-frontend-page-menu-history": "歷史",
 	"mobile-frontend-page-menu-language-current": "{{#language:{{CONTENTLANG}}}}",

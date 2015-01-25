@@ -48,7 +48,6 @@
 	"mobile-frontend-last-modified-months": "Urteme cangiamende {{PLURAL:$1|$1 mese|$1 mise}} fà",
 	"mobile-frontend-last-modified-seconds": "Urteme cangiamende {{PLURAL:$1|$1 seconde}} fà",
 	"mobile-frontend-last-modified-years": "Urteme cangiamende {{PLURAL:$1|$1 anne}} fà",
-	"mobile-frontend-listed-image-no-description": "Nisciuna descrizione",
 	"mobile-frontend-logged-in-homepage-notification": "Bovègne, $1!",
 	"mobile-frontend-logged-in-toast-notification": "E' trasute cumme $1",
 	"mobile-frontend-logged-out": "Non ge sì collegate",

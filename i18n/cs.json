@@ -149,7 +149,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "Stránku [$4 naposledy {{GENDER:$1|upravil|upravila}}] {{PLURAL:$5|[$6 $2]|0=anonymní uživatel}} před $3 {{PLURAL:$3|sekundou|sekundami}}",
 	"mobile-frontend-last-modified-with-user-years": "Stránku [$4 naposledy {{GENDER:$1|upravil|upravila}}] {{PLURAL:$5|[$6 $2]|0=anonymní uživatel}} před $3 {{PLURAL:$3|rokem|lety}}",
 	"mobile-frontend-last-modified-years": "Naposledy změněno před {{PLURAL:$1|$1 rokem|$1 lety}}",
-	"mobile-frontend-listed-image-no-description": "Bez popisu",
 	"mobile-frontend-logged-in-homepage-notification": "Vítejte, uživateli $1!",
 	"mobile-frontend-logged-in-toast-notification": "{{GENDER:$1|Přihlášen|Přihlášena}} jako $1",
 	"mobile-frontend-logged-out": "Nepřihlášen(a)",

@@ -181,7 +181,6 @@
 	"mobile-frontend-last-modified-years": "Última modificação há {{PLURAL:$1|$1 ano|$1 anos}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Iniciar carregamento",
 	"mobile-frontend-lead-image-tutorial-summary": "Certifique-se de que sua imagem pode ajudar a ilustrar a página. Deve ser uma imagem que tenha criado e que não viole direitos de autor.",
-	"mobile-frontend-listed-image-no-description": "Sem descrição",
 	"mobile-frontend-logged-in-homepage-notification": "{{Gender:$1|Bem-vindo|Bem-vinda|Bem-vindo(a)}}, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Autenticado como $1.",
 	"mobile-frontend-logged-out": "Não autenticado",

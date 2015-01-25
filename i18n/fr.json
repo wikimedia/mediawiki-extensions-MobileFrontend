@@ -32,7 +32,9 @@
 			"Maxim21",
 			"Robby",
 			"Macofe",
-			"0x010C"
+			"0x010C",
+			"Benjozork",
+			"Orikrin1998"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -47,6 +49,15 @@
 	"mobile-frontend-categories-heading": "<strong>Catégories</strong>",
 	"mobile-frontend-categories-subheading": "La page appartient aux catégories suivantes:",
 	"mobile-frontend-categories-nocat": "Cette page n'appartient à aucune catégorie pour l'instant.",
+	"mobile-frontend-categories-add": "Ajouter une catégorie",
+	"mobile-frontend-categories-search": "Chercher des catégories",
+	"mobile-frontend-categories-nomatch": "Pas de catégorie trouvée pour votre requête. Vous devriez essayer une autre.",
+	"mobile-frontend-categories-nodata": "Il y a une erreur. Avez-vous ajouté des catégories pour enregistrer?",
+	"mobile-frontend-categories-summary": "Catégorie(s) ajoutée(s)",
+	"mobile-frontend-categories-add-heading": "<strong>Ajouter de nouvelles catégories pour</strong><span> $1</span>",
+	"mobile-frontend-categories-add-wait": "Enrigistrement des catégories, veuillez patienter.",
+	"mobile-frontend-categories-normal": "Basé sur le contenu",
+	"mobile-frontend-categories-hidden": "Organisationnel",
 	"mobile-frontend-changeslist-ip": "Utilisateur anonyme",
 	"mobile-frontend-changeslist-nocomment": "aucun résumé de modification",
 	"mobile-frontend-clear-search": "Effacer",
@@ -186,7 +197,6 @@
 	"mobile-frontend-last-modified-years": "Dernière modification il y a {{PLURAL:$1|$1 an|$1 ans}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Démarrer le téléchargement",
 	"mobile-frontend-lead-image-tutorial-summary": "Assurez-vous que votre image peut aider à illustrer cette page. Elle doit être une image que vous avez créée et qui ne viole pas de droit d’auteur.",
-	"mobile-frontend-listed-image-no-description": "Aucune description",
 	"mobile-frontend-logged-in-homepage-notification": "Bienvenue, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Connecté en tant que $1.",
 	"mobile-frontend-logged-out": "Non connecté(e)",
@@ -230,6 +240,8 @@
 	"mobile-frontend-opt-in-explain": "En adhérant au beta-test, vous aurez accès aux fonctionnalités expérimentales, au risque de rencontrer bogues et problèmes.",
 	"mobile-frontend-overlay-close": "Fermer",
 	"mobile-frontend-overlay-continue": "Continuer",
+	"mobile-frontend-other-projects-overlay-heading": "Autres projets",
+	"mobile-frontend-other-project-label": "Lire dans un autre projet",
 	"mobile-frontend-page-menu-contents": "contenus",
 	"mobile-frontend-page-menu-history": "Historique",
 	"mobile-frontend-page-edit-summary": "<strong>Modifier le résumé</strong><span> de $1</span>",
@@ -368,5 +380,6 @@
 	"mobile-frontend-pageaction-edit-tooltip": "Modifier la section fil directeur de cette page.",
 	"mobile-frontend-pageaction-upload-tooltip": "Télécharger une photo de fil conducteur pour cette page.",
 	"mobile-frontend-donate-button-label": "Faire un don",
-	"mobile-frontend-meta-data-issues-categories": "À propos de cette catégorie"
+	"mobile-frontend-meta-data-issues-categories": "À propos de cette catégorie",
+	"mobile-frontend-loading-message": "Chargement…"
 }
