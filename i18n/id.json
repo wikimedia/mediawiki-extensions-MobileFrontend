@@ -11,7 +11,8 @@
 			"Mahali syarifuddin",
 			"William Surya Permana",
 			"Ahdan",
-			"Marwan Mohamad"
+			"Marwan Mohamad",
+			"BaconSenpai"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Menentukan apakah pengguna menyunting melalui antarmuka seluler atau tidak",
@@ -107,7 +108,6 @@
 	"mobile-frontend-last-modified-years": "Terakhir diubah pada {{PLURAL:$1|$1 tahun}} yang lalu",
 	"mobile-frontend-lead-image-tutorial-confirm": "Mulai mengunggah",
 	"mobile-frontend-lead-image-tutorial-summary": "Pastikan bahwa gambar Anda dapat membantu mengilustrasikan halaman. Gambar tersebut harus gambar yang Anda buat sendiri, yang tidak melanggar hak cipta.",
-	"mobile-frontend-listed-image-no-description": "Tidak ada keterangan",
 	"mobile-frontend-logged-in-homepage-notification": "Selamat datang, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Masuk log sebagai $1",
 	"mobile-frontend-logged-out": "Belum masuk log",
@@ -144,6 +144,8 @@
 	"mobile-frontend-nearby-title": "Dekat",
 	"mobile-frontend-news-items": "Peristiwa terkini",
 	"mobile-frontend-opt-in-explain": "Dengan bergabung dengan beta, Anda akan mendapatkan akses ke fitur-fitur eksperimental, namun dengan risiko menjumpai bug dan masalah.",
+	"mobile-frontend-other-projects-overlay-heading": "Proyek lain",
+	"mobile-frontend-other-project-label": "Baca dalam proyek lain",
 	"mobile-frontend-page-menu-contents": "isi",
 	"mobile-frontend-page-menu-history": "Versi terdahulu",
 	"mobile-frontend-password": "Kata sandi:",

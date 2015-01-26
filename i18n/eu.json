@@ -7,6 +7,10 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Atal Bat Atzera Joan",
+	"mobile-frontend-categories-add": "Kategoria gehitu",
+	"mobile-frontend-categories-search": "Kategoriak bilatu",
+	"mobile-frontend-categories-summary": "Kategoriak gehitu dira",
+	"mobile-frontend-categories-add-wait": "Kategoriak gordetzen. Itxaron, mesedez.",
 	"mobile-frontend-clear-search": "Garbitu",
 	"mobile-frontend-copyright": "Testua ondorengo lizentziapean dago <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Atribuzioa/Partekatu-Alike Lizentzia</a>. Informazio gehiagorako <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Erabilpen-baldintzak</a> ikusi. {{SITENAME}} <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, erakundearen irabazi-asmorik gabeko erregistratutako proiektua da.",
 	"mobile-frontend-errorreport-submit": "Bidali",
@@ -22,6 +26,7 @@
 	"mobile-frontend-main-menu-nearby": "Gertukoak",
 	"mobile-frontend-main-menu-settings": "Ezarpenak",
 	"mobile-frontend-news-items": "Albisteak",
+	"mobile-frontend-other-projects-overlay-heading": "Beste proiektuak",
 	"mobile-frontend-page-menu-contents": "Edukiak",
 	"mobile-frontend-page-menu-history": "Historia",
 	"mobile-frontend-password": "Pasahitza",
@@ -37,5 +42,6 @@
 	"mobile-frontend-view": "Mugikorreko bista",
 	"mobile-frontend-view-desktop": "Idazmahaia",
 	"mobile-frontend-view-mobile": "Mugikorra",
-	"mobile-frontend-loading-message": "Kargatzen..."
+	"mobile-frontend-loading-message": "Kargatzen...",
+	"mobile-frontend-years-ago": "Duela {{PLURAL:$1|urte bat|$1 urte}}"
 }
