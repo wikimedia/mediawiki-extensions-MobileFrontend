@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_585c9e4e",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-26T23:07:49Z",
+      "side": 1,
+      "message": "Why cant this use the event click .continue on the base class?",
+      "revId": "57010983491f66540f3fe1bb9033c0f2c7dce6a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_7859625c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-26T23:07:49Z",
+      "side": 1,
+      "message": "Same question",
+      "revId": "57010983491f66540f3fe1bb9033c0f2c7dce6a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_18362601",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-26T23:07:49Z",
+      "side": 1,
+      "message": "Why isn\u0027t this a definition in the base class?",
+      "revId": "57010983491f66540f3fe1bb9033c0f2c7dce6a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
