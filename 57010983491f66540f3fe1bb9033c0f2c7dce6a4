@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_13d5a947",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-26T23:35:20Z",
+      "side": 1,
+      "message": "These kinds of questions are outside of the goal of this patch. The patch is trying to solve one problem now. I think we should create a follow up patch after this patch is merged.",
+      "parentUuid": "ae6ac7d6_585c9e4e",
+      "revId": "57010983491f66540f3fe1bb9033c0f2c7dce6a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_7859625c",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "ae6ac7d6_33da2d79",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-26T23:35:20Z",
+      "side": 1,
+      "message": "same answer",
+      "parentUuid": "ae6ac7d6_7859625c",
+      "revId": "57010983491f66540f3fe1bb9033c0f2c7dce6a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_18362601",
         "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2015-01-26T23:07:49Z",
       "side": 1,
       "message": "Why isn\u0027t this a definition in the base class?",
+      "revId": "57010983491f66540f3fe1bb9033c0f2c7dce6a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_73e8a50b",
+        "filename": "javascripts/modules/editor/VisualEditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-26T23:35:20Z",
+      "side": 1,
+      "message": "These kinds of questions are outside of the goal of this patch. The patch is trying to solve one problem now. I think we should create a follow up patch after this patch is merged.",
+      "parentUuid": "ae6ac7d6_18362601",
       "revId": "57010983491f66540f3fe1bb9033c0f2c7dce6a4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
