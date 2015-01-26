@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var SchemaMobileWebUploads,
 		user = M.require( 'user' ),
+		page = M.getCurrentPage(),
 		Schema = M.require( 'Schema' );
 
 	/**
@@ -21,7 +22,7 @@
 		 * undefined. Assigning undefined will make event logger omit this property when sending
 		 * the data to a server. According to the schema username is optional.
 		 * @cfg {Boolean} defaults.isLoggedIn Whether the user is logged in
-		 * @cfg {Boolean} defaults.isEditable The value of the wgIsPageEditable config variable
+		 * @cfg {Boolean} defaults.isEditable True, if the user is able to edit the current page, false otherwise
 		 */
 		defaults: $.extend( {}, Schema.prototype.defaults, {
 			pageId: mw.config.get( 'wgArticleId' ),
@@ -29,7 +30,7 @@
 			funnel: 'unknown',
 			// FIXME: Introduce a SchemaWithUser class and rethink the data recorded that follows
 			username: user.getName() || undefined,
-			isEditable: mw.config.get( 'wgIsPageProbablyEditable' )
+			isEditable: page.isEditable( user )
 		} )
 	} );
 
