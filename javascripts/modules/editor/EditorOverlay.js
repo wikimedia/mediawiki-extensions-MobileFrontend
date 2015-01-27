@@ -37,7 +37,7 @@
 			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
 			anonLabel: mw.msg( 'mobile-frontend-editor-anon' ),
 			anonSelector: 'continue-edit',
-			anonMsg: mw.msg( 'mobile-frontend-editor-anoneditwarning' )
+			anonMsg: mw.msg( 'mobile-frontend-editor-anonwarning' )
 		} ),
 		editor: 'SourceEditor',
 		sectionLine: '',
