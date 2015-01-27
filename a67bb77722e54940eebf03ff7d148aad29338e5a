@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e7fc396_36e9f87b",
+        "filename": "less/modules/uploads/UploadTutorial.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-27T19:50:50Z",
+      "side": 1,
+      "message": "Or margin-top: -50% etc. Vertical centring is fun!",
+      "parentUuid": "ae6ac7d6_08da6f21",
+      "revId": "a67bb77722e54940eebf03ff7d148aad29338e5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e7fc396_f6d380d5",
         "filename": "templates/modules/uploads/UploadTutorial.hogan",
         "patchSetId": 3
