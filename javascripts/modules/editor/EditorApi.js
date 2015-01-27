@@ -8,8 +8,14 @@
 	 * @extends Api
 	 */
 	EditorApi = Api.extend( {
-
-		/** @inheritdoc */
+		/**
+		 * @inheritdoc
+		 * @param {Object} options
+		 * @param {String} options.title the title to edit
+		 * @param {Number} options.sectionId the id of the section to operate edits on.
+		 * @param {Number} [options.oldId] revision to operate on. If absent defaults to latest.
+		 * @param {Boolean} [options.isNewPage] whether the page being created is new
+		 */
 		initialize: function ( options ) {
 			Api.prototype.initialize.apply( this, arguments );
 			this.title = options.title;
