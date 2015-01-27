@@ -6,7 +6,7 @@
 	/**
 	 * Api for CategoryOverlay
 	 * @class CategoryApi
-	 * @extends Api
+	 * @extends SearchApi
 	 */
 	CategoryApi = SearchApi.extend( {
 		/**
@@ -30,7 +30,7 @@
 		 * Saves the categories passed to this function to the page
 		 * @param {String} title Title of the current page (to add the categories to)
 		 * @param {String} categories List of Categories to add
-		 * @returns {jquery.Deferred}
+		 * @returns {jQuery.Deferred}
 		 */
 		save: function ( title, categories ) {
 			return this.postWithToken( 'edit', {
@@ -44,7 +44,7 @@
 		/**
 		 * Returns the categories the title belongs to.
 		 * @param {String} title Title of the current page (to add the categories to)
-		 * @returns {jquery.Deferred}
+		 * @returns {jQuery.Deferred}
 		 */
 		getCategories: function ( title ) {
 			return this.get( {

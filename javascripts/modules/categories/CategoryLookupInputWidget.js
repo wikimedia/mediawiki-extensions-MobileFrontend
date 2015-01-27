@@ -58,7 +58,7 @@
 	/**
 	 * Get a list of menu item widgets from the data stored by the lookup request's done handler.
 	 * @param {Mixed} data Cached result data, usually an array
-	 * @return {OO.ui.MenuOptionWidget[]}
+	 * @return {Array} Array of OO.ui.MenuOptionWidget
 	 */
 	CategoryLookupInputWidget.prototype.getLookupMenuOptionsFromData = function ( data ) {
 		var result = [],
