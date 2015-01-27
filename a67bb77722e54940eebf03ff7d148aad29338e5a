@@ -16,6 +16,23 @@
       "revId": "a67bb77722e54940eebf03ff7d148aad29338e5a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e7fc396_f6d380d5",
+        "filename": "templates/modules/uploads/UploadTutorial.hogan",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-27T19:49:02Z",
+      "side": 1,
+      "message": "While we\u0027re here, this button appears broken in both alpha and beta. It needs mw-ui-button added je think.",
+      "revId": "a67bb77722e54940eebf03ff7d148aad29338e5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
