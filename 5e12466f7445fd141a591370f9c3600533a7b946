@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e7fc396_5c8cd53a",
+        "filename": "i18n/en.json",
+        "patchSetId": 17
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2015-01-27T22:13:33Z",
+      "side": 1,
+      "message": "There are multiple issues here:\n* Don\u0027t use wiki markup, but use \u003cstrong\u003e instead.\n* Parameters were removed, that are still present in existing translations. The key should have been changes. This breaks all locales that are not updated. This requirement is documented at https://www.mediawiki.org/wiki/I18n#Changing_existing_messages.\n\nI think this change needs a follow-up.",
+      "revId": "5e12466f7445fd141a591370f9c3600533a7b946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
