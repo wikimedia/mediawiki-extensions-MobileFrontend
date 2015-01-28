@@ -16,6 +16,24 @@
       "revId": "67d23dcf143568aa68f8870d372c7674bd28f7ad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e7fc396_10e87cdc",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-01-28T17:06:37Z",
+      "side": 1,
+      "message": "Done. Added \"the title\".",
+      "parentUuid": "8e7fc396_7c9671f5",
+      "revId": "67d23dcf143568aa68f8870d372c7674bd28f7ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
