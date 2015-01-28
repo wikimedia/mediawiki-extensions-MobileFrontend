@@ -43,5 +43,6 @@
 	"mobile-frontend-view-desktop": "Idazmahaia",
 	"mobile-frontend-view-mobile": "Mugikorra",
 	"mobile-frontend-loading-message": "Kargatzen...",
+	"mobile-frontend-days-ago": "Duela {{PLURAL:$1|egun bat|$1 egun}}",
 	"mobile-frontend-years-ago": "Duela {{PLURAL:$1|urte bat|$1 urte}}"
 }
