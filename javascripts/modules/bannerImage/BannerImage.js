@@ -182,7 +182,9 @@
 			var self = this;
 
 			this.api.getClaims().done( function ( claims ) {
-				var imgId = config.bannerImage;
+				var claim,
+					imgId = config.bannerImage,
+					commonsCategory = config.commonsCategory;
 
 				if ( claims.entities ) {
 					if ( claims.entities.hasOwnProperty( imgId ) &&
@@ -197,6 +199,11 @@
 						// Start trying to load images sequentially from most important to
 						// least.
 						self.loadImage( 0 );
+					}
+					if ( claims.entities.hasOwnProperty( commonsCategory ) ) {
+						claim = claims.entities[commonsCategory][0];
+						$( '<a>' ).attr( 'href', '#/commons-category/' +  claim.mainsnak.datavalue.value )
+							.text( 'View on Commons' ).appendTo( self.$el );
 					}
 				}
 			} );
