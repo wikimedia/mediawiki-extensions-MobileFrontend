@@ -16,6 +16,24 @@
       "revId": "a04bc86ce1022ccb1c2d0270de4c4625d3512e77",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e7fc396_73677723",
+        "filename": "javascripts/specials/userlogin.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-28T22:36:04Z",
+      "side": 1,
+      "message": "Correct. I am mimicking the existing behaviour in stable (note that in stable we add a hidden field which does the same thing)",
+      "parentUuid": "ae6ac7d6_1c471052",
+      "revId": "a04bc86ce1022ccb1c2d0270de4c4625d3512e77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
