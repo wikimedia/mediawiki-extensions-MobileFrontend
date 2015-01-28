@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e7fc396_608b1b21",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-28T21:39:36Z",
+      "side": 1,
+      "message": "WIP. It\u0027s an experimental. I don\u0027t expect to be right first time round.\n\n I\u0027m not sure what the correct url is yet but right now I\u0027m just keen if people find it. Plus not a bug. It\u0027s a project.",
+      "parentUuid": "ae6ac7d6_948c4cdd",
+      "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae6ac7d6_fc79062b",
         "filename": "includes/config/Experimental.php",
         "patchSetId": 4
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "Because the message is unclear as to who is this calling for help - us or the local, potentially non-WMF wiki, potentially even outright contradictory to our values like Metapedia, I feel extremely dubious about this default.",
       "parentUuid": "ae6ac7d6_5c9cb25f",
+      "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e7fc396_207d2318",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-28T21:39:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae6ac7d6_b47b90bc",
       "revId": "1d421f5d3682663ca5f1e14165f27790c877f315",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
