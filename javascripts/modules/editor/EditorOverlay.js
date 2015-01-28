@@ -81,12 +81,8 @@
 			options.isVisualEditor = false;
 			options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 			EditorOverlayBase.prototype.initialize.apply( this, arguments );
-			if ( this.isVisualEditorEnabled() ) {
-				this.initializeSwitcher();
-			}
 		},
 		events: $.extend( {}, EditorOverlayBase.prototype.events, {
-			'click .visual-editor': 'onClickVisualEditor',
 			'input .wikitext-editor': 'onInputWikitextEditor'
 		} ),
 		/**
@@ -114,24 +110,29 @@
 			EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
 			this._hidePreview();
 		},
-		/**
-		 * Visual editor click handler
-		 */
-		onClickVisualEditor: function () {
-			// If the user tries to switch to the VisualEditor, check if any changes have
-			// been made, and if so, tell the user they have to save first.
-			if ( this.isVisualEditorEnabled() ) {
-				if ( !this.api.hasChanged ) {
-					this._switchToVisualEditor( this.options );
-				} else {
-					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-						this.onStageChanges();
-					}
-				}
-			}
-		},
 		/** @inheritdoc **/
 		postRender: function ( options ) {
+			var self = this;
+
+			if ( this.isVisualEditorEnabled() ) {
+				this.initializeSwitcher();
+				this.switcherToolbar.tools.editSource.setActive( true );
+				/**
+				 * 'Edit' button handler
+				 */
+				this.switcherToolbar.tools.editVe.onSelect = function () {
+					// If the user tries to switch to the VisualEditor, check if any changes have
+					// been made, and if so, tell the user they have to save first.
+					if ( !self.api.hasChanged ) {
+						self._switchToVisualEditor( self.options );
+					} else {
+						if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
+							self.onStageChanges();
+						}
+					}
+				};
+			}
+
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 
 			this.$preview = this.$( '.preview' );
