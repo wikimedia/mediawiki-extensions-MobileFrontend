@@ -42,6 +42,7 @@ $wgExtensionCredits['other'][] = array(
 		'Sam Smith' ),
 	'descriptionmsg' => 'mobile-frontend-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:MobileFrontend',
+	'license-name' => 'GPL-2.0+',
 );
 
 $wgMessagesDirs['MobileFrontend'] = __DIR__ . '/i18n';
