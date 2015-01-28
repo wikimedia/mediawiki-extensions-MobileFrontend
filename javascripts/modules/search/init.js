@@ -3,6 +3,8 @@
 	var SearchOverlay = M.require( 'modules/search/SearchOverlay' ),
 		SchemaMobileWebClickTracking = M.require( 'loggingSchemas/SchemaMobileWebClickTracking' ),
 		uiSchema = new SchemaMobileWebClickTracking( {}, 'MobileWebUIClickTracking' ),
+		util = M.require( 'util' ),
+		query = util.query,
 		context = M.require( 'context' ),
 		router = M.require( 'router' ),
 		browser = M.require( 'browser' );
@@ -13,12 +15,15 @@
 	 * @ignore
 	 */
 	function openSearchOverlay( ev ) {
+		// in alpha we are dealing with an 'a', not an 'input'
+		var searchTerm = ( context.isAlphaGroupMember() ) ? query.search : $( this ).val();
+
 		ev.preventDefault();
 		uiSchema.log( {
 			name: 'search'
 		} );
 		new SearchOverlay( {
-			searchTerm: $( this ).val()
+			searchTerm: searchTerm
 		} ).show();
 		router.navigate( '/search' );
 	}
