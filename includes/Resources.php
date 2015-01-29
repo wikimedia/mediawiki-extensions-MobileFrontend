@@ -1684,10 +1684,12 @@ $wgMinervaBootstrapModules = array(
 	),
 );
 
-$wgResourceModules = array_merge( $wgResourceModules, $wgMobileSpecialPageModules );
-$wgResourceModules = array_merge( $wgResourceModules, $wgMinervaSpecialPageModules );
-$wgResourceModules = array_merge( $wgResourceModules, $wgMinervaStyleModules );
-$wgResourceModules = array_merge( $wgResourceModules, $wgMinervaBootstrapModules );
+$wgResourceModules = array_merge( $wgResourceModules,
+	$wgMobileSpecialPageModules,
+	$wgMinervaSpecialPageModules,
+	$wgMinervaStyleModules,
+	$wgMinervaBootstrapModules
+);
 
 // Module customizations
 $wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
