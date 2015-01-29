@@ -106,7 +106,7 @@
 	"mobile-frontend-editor-wait": "Saving edit, please wait.",
 	"mobile-frontend-enable-images": "Enable images on mobile site",
 	"mobile-frontend-errorreport-button-label": "Report an error",
-	"mobile-frontend-errorreport-error": "Error, feedback could not be posted",
+	"mobile-frontend-errorreport-error": "Error, feedback could not be posted.",
 	"mobile-frontend-errorreport-feedback": "Thanks for your feedback!",
 	"mobile-frontend-errorreport-heading": "Report an error",
 	"mobile-frontend-errorreport-instructions": "<p>This form is only for reporting errors in Wikipedia articles. Please do not report missing information.</p><p>If you found an error, please try to fix it yourself by editing the page. If you cannot fix the error, then report it using the following form.</p><p>Do not leave your phone number or email address.</p>",
