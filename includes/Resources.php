@@ -301,6 +301,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// icons.js
 			'mobile-frontend-loading-message',
+			'mobile-frontend-console-recruit',
 		),
 		'scripts' => array(
 			'javascripts/Router.js',
