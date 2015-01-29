@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e7fc396_bef2ab01",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 403,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-29T23:53:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e7fc396_0deb77a1",
+      "revId": "ae502f3f59ee24ddaf1260c868c0f971159598b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e7fc396_731bec82",
         "filename": "includes/specials/SpecialCollections.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8e7fc396_1ee15f29",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-29T23:53:21Z",
+      "side": 1,
+      "message": "This is dealt with in the next commit , sorry",
+      "parentUuid": "8e7fc396_731bec82",
+      "revId": "ae502f3f59ee24ddaf1260c868c0f971159598b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e7fc396_533fd0d3",
         "filename": "includes/views/MobileCollectionView.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-01-29T23:43:57Z",
       "side": 1,
       "message": "Collections should be changed to MobileWatchlistCollection",
+      "revId": "ae502f3f59ee24ddaf1260c868c0f971159598b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e7fc396_3ede9b71",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-01-29T23:53:21Z",
+      "side": 1,
+      "message": "Fixed on the next commit, sorry",
+      "parentUuid": "8e7fc396_533fd0d3",
       "revId": "ae502f3f59ee24ddaf1260c868c0f971159598b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
