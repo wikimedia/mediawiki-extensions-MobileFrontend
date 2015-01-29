@@ -19,7 +19,8 @@
 		// Linker.php
 		.thumbinner {
 			margin: 0 auto;
-			max-width: 100%;
+			// !important is needed because of Bug T87198 for example
+			max-width: 100% !important;
 
 			> div {
 				float: none !important;
