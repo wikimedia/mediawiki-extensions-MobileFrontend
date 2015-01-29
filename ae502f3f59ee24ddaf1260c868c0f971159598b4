@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e7fc396_0deb77a1",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 403,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-29T21:53:54Z",
+      "side": 1,
+      "message": "It will be better if you put this message with other main-menu messages above.",
+      "revId": "ae502f3f59ee24ddaf1260c868c0f971159598b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
