@@ -1460,6 +1460,16 @@ $wgMobileSpecialPageModules = array(
 		),
 	),
 
+	'mobile.special.userlogin.scripts' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.head',
+		),
+		'scripts' => array(
+			'javascripts/specials/userlogin.js',
+		),
+		'position' => 'top',
+	),
+
 	'mobile.special.nearby.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.nearby',

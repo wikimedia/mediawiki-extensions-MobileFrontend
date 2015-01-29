@@ -510,6 +510,7 @@ class MobileFrontendHooks {
 				$out->addModuleStyles( 'skins.minerva.special.search.styles' );
 			} elseif ( $name === 'Userlogin' ) {
 				$out->addModuleStyles( 'skins.minerva.special.userlogin.styles' );
+				$out->addModules( 'mobile.special.userlogin.scripts' );
 				// make sure we're on https if we're supposed to be and currently aren't.
 				// most of this is lifted from https redirect code in SpecialUserlogin::execute()
 				// also, checking for 'https' in $wgServer is a little funky, but this is what

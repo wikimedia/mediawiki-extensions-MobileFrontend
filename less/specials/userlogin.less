@@ -68,16 +68,34 @@
 #mw-mf-login .headmsg,
 // Styles for new login form.
 .alpha .warningbox {
+	padding: 0.5em 1em;
+	margin: 1em 0;
+}
+
+#mw-mf-accountcreate .headmsg,
+#mw-mf-login .headmsg {
 	background-color: @colorGray14;
 	border: 1px solid @colorGray12;
 	color: @grayDark;
-	padding: 0.5em 1em;
-	margin: 1em 0;
 }
 
 .alpha {
 	.mw-ui-vform {
 		margin: auto;
+	}
+
+	.mw-form-related-link-container {
+		a {
+			padding-bottom: 12px;
+			display: block;
+		}
+	}
+}
+
+.alpha {
+	// reason for account creation is not so important on mobile - it should be obvious through the workflows
+	.mw-createacct-benefits-container {
+		display: none;
 	}
 }
 
@@ -87,11 +105,6 @@
 	@margin: 12px;
 
 	.alpha {
-		// reason for account creation is not so important on mobile - it should be obvious through the workflows
-		.mw-createacct-benefits-container {
-			display: none;
-		}
-
 		#userloginForm {
 			// tips are not useful
 			.prefsectiontip,
