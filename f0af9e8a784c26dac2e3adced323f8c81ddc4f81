@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e7fc396_e7bf3aa6",
+        "filename": "tests/browser/features/support/pages/article_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-29T18:44:26Z",
+      "side": 1,
+      "message": "They are both Special:History - could we just use that selector? It seems more future proof than maintaining 2 separate link elements?",
+      "revId": "f0af9e8a784c26dac2e3adced323f8c81ddc4f81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
