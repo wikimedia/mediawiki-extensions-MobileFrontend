@@ -16,6 +16,40 @@
       "revId": "ae502f3f59ee24ddaf1260c868c0f971159598b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e7fc396_731bec82",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-29T23:43:57Z",
+      "side": 1,
+      "message": "Add a FIXME here?",
+      "revId": "ae502f3f59ee24ddaf1260c868c0f971159598b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e7fc396_533fd0d3",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-01-29T23:43:57Z",
+      "side": 1,
+      "message": "Collections should be changed to MobileWatchlistCollection",
+      "revId": "ae502f3f59ee24ddaf1260c868c0f971159598b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
