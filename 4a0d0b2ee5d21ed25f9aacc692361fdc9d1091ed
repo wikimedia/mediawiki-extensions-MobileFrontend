@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e7fc396_b32744b1",
+        "filename": "javascripts/modules/ForeignApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-29T22:23:09Z",
+      "side": 1,
+      "message": "You\u0027ll need to add this to Gruntfile - it\u0027s an unknown type\nAlso please note that this inherits from mw.api.postWithToken",
+      "revId": "4a0d0b2ee5d21ed25f9aacc692361fdc9d1091ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
