@@ -407,10 +407,11 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ListDefinedTags hook handler
+	 * ListDefinedTags and ChangeTagsListActive hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
-	 * @param array $tags
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ChangeTagsListActive
 	 *
+	 * @param array $tags
 	 * @return bool
 	 */
 	public static function onListDefinedTags( &$tags ) {
@@ -422,8 +423,8 @@ class MobileFrontendHooks {
 	/**
 	 * RecentChange_save hook handler that tags mobile changes
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
-	 * @param RecentChange $rc
 	 *
+	 * @param RecentChange $rc
 	 * @return bool
 	 */
 	public static function onRecentChange_save( RecentChange $rc ) {
