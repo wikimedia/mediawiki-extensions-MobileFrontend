@@ -17,7 +17,7 @@ class ArticlePage
   a(:disclaimer_link) { |page| page.navigation_element.link_element(text: 'Disclaimers') }
 
   # last modified bar
-  a(:last_modified_bar_history_link, css: '#mw-mf-last-modified')
+  a(:last_modified_bar_history_link, href: /Special:History/)
   # page actions
   ## edit
   li(:edit_button_holder, id: 'ca-edit')
