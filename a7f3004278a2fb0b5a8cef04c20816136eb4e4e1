@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e7fc396_a7aaa580",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-01-29T06:26:00Z",
+      "side": 1,
+      "message": "sidenote: maybe we should change this link target into a \"Welcome\" or \"Get involved\" oage/section on mediawiki.org (or somewhere else) to explain more detailed, what we do and what we\u0027re looking for.",
+      "revId": "a7f3004278a2fb0b5a8cef04c20816136eb4e4e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
