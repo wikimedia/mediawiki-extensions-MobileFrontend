@@ -17,6 +17,9 @@
 		/** @inheritdoc **/
 		className: 'overlay editor-overlay editor-overlay-ve',
 		editor: 'VisualEditor',
+		events: $.extend( {}, EditorOverlayBase.prototype.events, {
+			'click .source-editor': 'onClickSourceEditor'
+		} ),
 		/**
 		 * Set options that apply specifically to VisualEditorOverlay but not
 		 * EditorOverlay so that an EditorOverlay instance can be created effortlessly.
@@ -103,21 +106,29 @@
 			return retval;
 		},
 		/** @inheritdoc **/
-		postRender: function ( options ) {
-			var self = this;
-			this.$( '.back' ).on( 'click', $.proxy( this, 'switchToEditor' ) );
-			this.$( '.source-editor' ).on( 'click', function () {
-				// If changes have been made tell the user they have to save first
-				if ( !self.hasChanged() ) {
-					self.switchToSourceEditor( options );
-				} else {
-					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-						self.onStageChanges();
-					}
-				}
-			} );
+		postRender: function () {
 			this.$( '.surface' ).hide();
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
+		},
+		/**
+		 * @inheritdoc
+		 */
+		onClickBack: function () {
+			EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
+			this.switchToEditor();
+		},
+		/**
+		 * Source Editor click handler
+		 */
+		onClickSourceEditor: function () {
+			// If changes have been made tell the user they have to save first
+			if ( !this.hasChanged() ) {
+				this.switchToSourceEditor( this.options );
+			} else {
+				if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
+					this.onStageChanges();
+				}
+			}
 		},
 		/**
 		 * Reveal the editing interface.
