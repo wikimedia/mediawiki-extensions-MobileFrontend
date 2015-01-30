@@ -45,8 +45,11 @@
 			} );
 		},
 		/**
-		 * Post with support for central auth tokens
-		 * @inheritdoc
+		 * Post to API with support for central auth tokens
+		 * @param {String} tokenType Ignored. `'csrf'` is always used
+		 * @param {Object} data Data to be preprocessed and added to options
+		 * @param {Object} options Parameters passed to $.ajax()
+		 * @return {jQuery.Deferred}
 		 */
 		postWithToken: function ( tokenType, data, options ) {
 			var self = this,
