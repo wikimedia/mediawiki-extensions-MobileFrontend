@@ -134,6 +134,7 @@ $wgHooks['GetCacheVaryCookies'][] = 'MobileFrontendHooks::onGetCacheVaryCookies'
 $wgHooks['ResourceLoaderGetConfigVars'][] = 'MobileFrontendHooks::onResourceLoaderGetConfigVars';
 $wgHooks['SpecialPage_initList'][] = 'MobileFrontendHooks::onSpecialPage_initList';
 $wgHooks['ListDefinedTags'][] = 'MobileFrontendHooks::onListDefinedTags';
+$wgHooks['ChangeTagsListActive'][] = 'MobileFrontendHooks::onListDefinedTags';
 $wgHooks['RecentChange_save'][] = 'MobileFrontendHooks::onRecentChange_save';
 $wgHooks['AbuseFilter-generateUserVars'][] = 'MobileFrontendHooks::onAbuseFilterGenerateUserVars';
 $wgHooks['AbuseFilter-builder'][] = 'MobileFrontendHooks::onAbuseFilterBuilder';
