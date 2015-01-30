@@ -33,6 +33,7 @@
 	"mobile-frontend-editor-edit": "Рэдагаваць",
 	"mobile-frontend-editor-save": "Захаваць",
 	"mobile-frontend-enable-images": "Дазволіць выявы на сайце для мабільных тэлефонаў",
+	"mobile-frontend-errorreport-error": "Памылка, зваротная сувязь ня можа быць апублікаваная.",
 	"mobile-frontend-featured-article": "Сёньняшні абраны артыкул",
 	"mobile-frontend-first-upload-wizard-new-page-2": "Пазьбягайце матэрыялаў з інтэрнэту, што ахоўваюцца аўтарскім правам, як то выявы постэраў, вокладак кніг і т. п.",
 	"mobile-frontend-first-upload-wizard-new-page-2-header": "Вашыя выявы дапамагаюць вучыць людзей па ўсім сьвеце",
@@ -54,7 +55,6 @@
 	"mobile-frontend-last-modified-months": "Апошнія зьмены {{PLURAL:$1|$1 месяц|$1 месяц|$1 месяцаў}} таму",
 	"mobile-frontend-last-modified-seconds": "Апошнія зьмены {{PLURAL:$1|$1 сэкунду|$1 сэкунды|$1 сэкундаў}} таму",
 	"mobile-frontend-last-modified-years": "Апошнія зьмены {{PLURAL:$1|$1 год|$1 гады|$1 гадоў}} таму",
-	"mobile-frontend-listed-image-no-description": "Без апісаньня",
 	"mobile-frontend-logged-in-homepage-notification": "Вітаем, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Увайшлі як $1",
 	"mobile-frontend-logged-out": "Вы не ўвайшлі ў сыстэму",
@@ -143,5 +143,6 @@
 	"mobile-frontend-watchlist-removed": "$1 выдалена са сьпісу назіраньня",
 	"mobile-frontend-watchlist-view": "Праглядзець сьпіс назіраньня",
 	"nearby": "Старонкі побач з вамі",
-	"tag-mobile_edit": "Праўка з тэлефона"
+	"tag-mobile_edit": "Праўка з тэлефона",
+	"mobile-frontend-console-recruit": "\\o/ Гэй! Гэта праграмнае забесьпячэньне з адкрытым кодам і нам патрэбныя добраахвотнікі, каб дапамагчы нам яго ўдасканаліць, зрабіць яго лепш і выправіць любыя памылкі, якія вы можаце бачыць у гэтай кансолі JavaScript!\n\nВы можаце знайсці наш спьс «што зрабіць» @ https://phabricator.wikimedia.org/project/view/67/"
 }

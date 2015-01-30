@@ -16,7 +16,8 @@
 			"زكريا",
 			"مشعل الحربي",
 			"أحمد المحمودي",
-			"Omda4wady"
+			"Omda4wady",
+			"Fatz"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "إذا كان المستخدم يعدل عبر واجهة الجوال",
@@ -66,7 +67,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "اقرأ المزيد",
 	"mobile-frontend-editor-abusefilter-warning": "تحذير: هل أنت متأكد من أنك تريد حفظ هذا التعديل؟ هل تكون هناك مشكلة به.",
 	"mobile-frontend-editor-anon": "حرر بلا تسجيل الدخول",
-	"mobile-frontend-editor-anoneditwarning": "'''تحذير:''' لم تقم بالدخول. سيكون عنوان الآيبي خاصتك مرئيا للعامة عند قيامك بأي تعديل.إذا '''سجلت دخولك''' أو أنشأت حساب في ويكيبيديا'''، تعديلاتك ستنسب لاسم المستخدم خاصتك ،مع المزيد من الميزات الأخرى.",
+	"mobile-frontend-editor-anonwarning": "'''تحذير:''' لم تقم بالدخول. سيكون عنوان الآيبي خاصتك مرئيا للعامة عند قيامك بأي تعديل.إذا '''سجلت دخولك''' أو أنشأت حساب في ويكيبيديا'''، تعديلاتك ستنسب لاسم المستخدم خاصتك ،مع المزيد من الميزات الأخرى.",
 	"mobile-frontend-editor-blocked": "حسابك ممنوع من التحرير",
 	"mobile-frontend-editor-cancel": "ألغِ",
 	"mobile-frontend-editor-cancel-confirm": "أتريد حقا أن تهجر تعديلاتك؟",
@@ -112,7 +113,7 @@
 	"mobile-frontend-editor-wait": "يحفظ التعديل، انتظر رجاءً.",
 	"mobile-frontend-enable-images": "مكّن الصور على موقع الجوال",
 	"mobile-frontend-errorreport-button-label": "أبلغ عن خطأ",
-	"mobile-frontend-errorreport-error": "خطأ، لم يمكن إرسال التلقيم الراجع",
+	"mobile-frontend-errorreport-error": "خطأ، ليس من الممكن نشر الرد",
 	"mobile-frontend-errorreport-feedback": "شكراً على ملاحظاتك!",
 	"mobile-frontend-errorreport-heading": "أبلغ عن خطأ",
 	"mobile-frontend-errorreport-placeholder": "أدخل التقرير عن الخطأ هنا.",
@@ -175,7 +176,6 @@
 	"mobile-frontend-last-modified-years": "آخر تعديل  منذ {{PLURAL:$1|أقل من سنة واحدة|سنة واحدة|سنتين|$1 سنوات|$1 سنة}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "ابدأ الرفع",
 	"mobile-frontend-lead-image-tutorial-summary": "تأكد أن صفحتك تساعد في توضيح الصفحة. يجب أن تكون صورة أنشأتها وألا تخرق حقوق النشر.",
-	"mobile-frontend-listed-image-no-description": "لا يوجد وصف",
 	"mobile-frontend-logged-in-homepage-notification": "أهلاً بك يا $1!",
 	"mobile-frontend-logged-in-toast-notification": "مسجل الدخول بحساب $1.",
 	"mobile-frontend-logged-out": "غير مسجل الدخول",

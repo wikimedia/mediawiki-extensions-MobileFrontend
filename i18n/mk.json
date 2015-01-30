@@ -106,7 +106,7 @@
 	"mobile-frontend-editor-wait": "Го зачувувам уредувањето. Почекајте.",
 	"mobile-frontend-enable-images": "Овозможи слики во мобилниот изглед",
 	"mobile-frontend-errorreport-button-label": "Пријави техничка грешка",
-	"mobile-frontend-errorreport-error": "Грешка. Не можев да го објавам мислењето",
+	"mobile-frontend-errorreport-error": "Грешка. Не можев да го објавам мислењето.",
 	"mobile-frontend-errorreport-feedback": "Ви благодариме што го искажавте вашето мислење!",
 	"mobile-frontend-errorreport-heading": "Пријави техничка грешка",
 	"mobile-frontend-errorreport-instructions": "<p>Овој боразец служи само за пријавување на технички грешки во статии на Википедија. Не пријавувајте отсутни информации.</p><p>Ако наидовте на техничка грешка, обидете се самите да ја поправите со уредување на страницата. Ако не можете да ја поправите, тогаш пријавете ја со следниов образец.</p><p>Не ставајте ваш телефонски број или е-пошта.</p>",
@@ -395,5 +395,6 @@
 	"mobile-frontend-time-precision-BCE-0annum": "$1 п.н.е.",
 	"mobile-frontend-days-ago": "пред {{PLURAL:$1|еден ден|$1 дена}}",
 	"mobile-frontend-months-ago": "пред $1 {{PLURAL:$1|месец|месеци}}",
-	"mobile-frontend-years-ago": "пред $1 {{PLURAL:$1|година|години}}"
+	"mobile-frontend-years-ago": "пред $1 {{PLURAL:$1|година|години}}",
+	"mobile-frontend-console-recruit": "\\o/ Еј! Ова е програм со отворен код и ни требаат доброволци за да ни помогнат да го разработиме, да го подобриме и да ги поправиме грешките на кои можете да наидете во оваа конзола со JavaScript!\n\nСпсиокот на потребни доработки и исправки ќе го најдете на https://phabricator.wikimedia.org/project/view/67/"
 }
