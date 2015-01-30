@@ -758,28 +758,8 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUnitTestsList( &$files ) {
-		$dir = dirname( dirname( __FILE__ ) ) . '/tests/phpunit';
+		$files[] = dirname( dirname( __FILE__ ) ) . '/tests/phpunit';
 
-		$callback = function( $file ) use ( $dir ) {
-			return "$dir/$file";
-		};
-		$files = array_merge( $files,
-			array_map( $callback,
-				array(
-					'api/ApiMobileViewTest.php',
-					'api/ApiParseExtenderTest.php',
-					'DeviceDetectionTest.php',
-					'MobileContextTest.php',
-					'MobileFormatterTest.php',
-					'modules/MFResourceLoaderParsedMessageModuleTest.php',
-					'skins/SkinMinervaTest.php',
-					'skins/SkinMinervaAlphaTest.php',
-					'skins/SkinMinervaBetaTest.php',
-					'specials/MobileSpecialPageTest.php',
-					'specials/SpecialMobileDiffTest.php',
-				)
-			)
-		);
 		return true;
 	}
 
