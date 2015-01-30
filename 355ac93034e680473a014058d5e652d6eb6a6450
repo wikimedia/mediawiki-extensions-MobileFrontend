@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_95a244a3",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T18:16:05Z",
+      "side": 1,
+      "message": "I\u0027d like to see this split out into a new patchset before this one.",
+      "revId": "355ac93034e680473a014058d5e652d6eb6a6450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f595b843",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T18:16:05Z",
+      "side": 1,
+      "message": "dead code\nlet\u0027s just remove the if statement if this is not currently being used.",
+      "revId": "355ac93034e680473a014058d5e652d6eb6a6450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
