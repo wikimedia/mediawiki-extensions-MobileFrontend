@@ -1,6 +1,6 @@
 <?php
 /**
- * Extension MobileFrontend — Mobile Frontend
+ * Extension MobileFrontend
  *
  * @file
  * @ingroup Extensions
