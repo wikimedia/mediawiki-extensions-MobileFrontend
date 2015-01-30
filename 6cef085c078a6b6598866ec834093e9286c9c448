@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_35bd70d2",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T18:14:58Z",
+      "side": 1,
+      "message": "All the methods need documentation.",
+      "revId": "6cef085c078a6b6598866ec834093e9286c9c448",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f5ce1886",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T18:14:58Z",
+      "side": 1,
+      "message": "Can we add the load function later in a patch that uses extracts? It\u0027s a little confusing to test it in this patchset.",
+      "revId": "6cef085c078a6b6598866ec834093e9286c9c448",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_35b490e4",
+        "filename": "includes/models/MobileWatchlistCollection.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T18:14:58Z",
+      "side": 1,
+      "message": "This abstraction is probably premature and unnecessary at the this point.\nFor SpecialEditWatchlist we can just use setters on MobileCollection",
+      "revId": "6cef085c078a6b6598866ec834093e9286c9c448",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b5c8a078",
+        "filename": "includes/models/MobileWatchlistCollection.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T18:14:58Z",
+      "side": 1,
+      "message": "i18n needed here",
+      "revId": "6cef085c078a6b6598866ec834093e9286c9c448",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_55a58cb0",
+        "filename": "includes/models/MobileWatchlistCollection.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T18:14:58Z",
+      "side": 1,
+      "message": "and i18n needed here\nAlso this entire abstraction looks unnecessary right now (SpecialMobileEditWatchlist is currently hitting the database twice)\n\nDatabase queries also shouldn\u0027t happen as part of construct (testing etc)",
+      "revId": "6cef085c078a6b6598866ec834093e9286c9c448",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
