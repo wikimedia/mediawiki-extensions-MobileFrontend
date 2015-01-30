@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7591a851",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T19:47:39Z",
+      "side": 1,
+      "message": "Document methods/properties",
+      "revId": "77ae6fa86ef92d083a66cb74cad228610316780c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1595d435",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T19:47:39Z",
+      "side": 1,
+      "message": "document",
+      "revId": "77ae6fa86ef92d083a66cb74cad228610316780c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7590c846",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T19:47:39Z",
+      "side": 1,
+      "message": "document",
+      "revId": "77ae6fa86ef92d083a66cb74cad228610316780c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_558b4c1b",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T19:47:39Z",
+      "side": 1,
+      "message": "document",
+      "revId": "77ae6fa86ef92d083a66cb74cad228610316780c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
