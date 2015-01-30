@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d8d1d128",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "Let\u0027s not add this model.",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b8c89578",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "document all the things",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_98cb5975",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "this is premature. let\u0027s remove this function.",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_58a5c1b0",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "document all the things",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d898f17e",
+        "filename": "includes/models/MobileWatchlistCollection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "I say this file/abstraction is unnecessary in this patchset",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_38b485e4",
+        "filename": "includes/models/MobileWatchlistCollection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "we should set this in special collections itself.",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d89eb159",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "documentation needed!",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_98a83976",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "i18n",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f89b6d66",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-01-30T20:09:42Z",
+      "side": 1,
+      "message": "i18n",
+      "revId": "2d0d12851e6354d2915f6d5ac666be9ad598c240",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
