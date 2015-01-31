@@ -145,6 +145,8 @@
 				this.$el = $( '<' + this.tagName + '>' );
 			}
 			this.$el.addClass( this.className );
+			// FIXME: If this becomes a default should become part of className property.
+			this.$el.addClass( 'view-border-box' );
 
 			// TODO: if template compilation is too slow, don't compile them on a
 			// per object basis, but don't worry about it now (maybe add cache to

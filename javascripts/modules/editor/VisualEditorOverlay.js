@@ -49,6 +49,8 @@
 			} );
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
 			this.initializeSwitcher();
+			// FIXME: This should be done by manipulating className
+			this.$el.removeClass( 'view-border-box' );
 		},
 		/**
 		 * Destroy the existing VisualEditor target.
