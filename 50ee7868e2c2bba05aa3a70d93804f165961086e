@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4153851a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 824,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-02-01T04:08:39Z",
+      "side": 1,
+      "message": "I don\u0027t think this is a good idea. This hook can be called multiple times per requests (and it will be during tests). I\u0027d rather see a dedicated hook for this being added to ResourceLoader::getLessCompiler().",
+      "revId": "50ee7868e2c2bba05aa3a70d93804f165961086e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
