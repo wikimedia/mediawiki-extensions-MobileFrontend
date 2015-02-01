@@ -16,6 +16,24 @@
       "revId": "87b613ec4b9de2f5b1376789477938f32ed09dc9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e158915b",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-01T21:32:24Z",
+      "side": 1,
+      "message": "right, ok, will change it :)",
+      "parentUuid": "6e7c4fa4_a1a4d905",
+      "revId": "87b613ec4b9de2f5b1376789477938f32ed09dc9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
