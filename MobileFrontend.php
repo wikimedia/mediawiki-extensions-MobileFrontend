@@ -192,11 +192,6 @@ function efMobileFrontend_Setup() {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
 		$wgSpecialPageGroups['Nearby'] = 'pages';
 	}
-	// Set LESS global variables
-	$localBasePath = dirname( __DIR__ );
-	$wgResourceLoaderLESSImportPaths = array_merge( $wgResourceLoaderLESSImportPaths, array(
-		"$localBasePath/MobileFrontend/less/minerva.less/",
-	) );
 	$wgResourceLoaderLESSVars = array_merge( $wgResourceLoaderLESSVars,
 		array(
 			'wgMFDeviceWidthTablet' => "{$wgMFDeviceWidthTablet}px",
@@ -210,6 +205,9 @@ function efMobileFrontend_Setup() {
 
 // Config instance
 $wgConfigRegistry['mobilefrontend'] = 'GlobalVarConfig::newInstance';
+
+// Set LESS importpath
+$wgResourceLoaderLESSImportPaths[] = __DIR__ . "/less/minerva.less/";
 
 // ResourceLoader modules
 
