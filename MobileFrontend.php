@@ -1,6 +1,6 @@
 <?php
 /**
- * Extension MobileFrontend — Mobile Frontend
+ * Extension MobileFrontend
  *
  * @file
  * @ingroup Extensions
@@ -134,6 +134,7 @@ $wgHooks['GetCacheVaryCookies'][] = 'MobileFrontendHooks::onGetCacheVaryCookies'
 $wgHooks['ResourceLoaderGetConfigVars'][] = 'MobileFrontendHooks::onResourceLoaderGetConfigVars';
 $wgHooks['SpecialPage_initList'][] = 'MobileFrontendHooks::onSpecialPage_initList';
 $wgHooks['ListDefinedTags'][] = 'MobileFrontendHooks::onListDefinedTags';
+$wgHooks['ChangeTagsListActive'][] = 'MobileFrontendHooks::onListDefinedTags';
 $wgHooks['RecentChange_save'][] = 'MobileFrontendHooks::onRecentChange_save';
 $wgHooks['AbuseFilter-generateUserVars'][] = 'MobileFrontendHooks::onAbuseFilterGenerateUserVars';
 $wgHooks['AbuseFilter-builder'][] = 'MobileFrontendHooks::onAbuseFilterBuilder';
@@ -185,7 +186,7 @@ $wgGroupPermissions['sysop']['mf-uploadbutton'] = true;
 function efMobileFrontend_Setup() {
 	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
 		$wgResourceLoaderLESSImportPaths,
-		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall, $wgResourceModules, $wgMobileVEModules;
+		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall, $wgMobileVEModules;
 
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
@@ -205,11 +206,6 @@ function efMobileFrontend_Setup() {
 			'wgMFThumbnailMedium' => MobilePage::MEDIUM_IMAGE_WIDTH . 'px',
 		)
 	);
-
-	// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
-	if ( class_exists( 'VisualEditorHooks' ) ) {
-		$wgResourceModules = array_merge( $wgResourceModules, $wgMobileVEModules );
-	}
 }
 
 // Config instance

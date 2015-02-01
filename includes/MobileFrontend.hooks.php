@@ -407,10 +407,11 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ListDefinedTags hook handler
+	 * ListDefinedTags and ChangeTagsListActive hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
-	 * @param array $tags
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ChangeTagsListActive
 	 *
+	 * @param array $tags
 	 * @return bool
 	 */
 	public static function onListDefinedTags( &$tags ) {
@@ -422,8 +423,8 @@ class MobileFrontendHooks {
 	/**
 	 * RecentChange_save hook handler that tags mobile changes
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
-	 * @param RecentChange $rc
 	 *
+	 * @param RecentChange $rc
 	 * @return bool
 	 */
 	public static function onRecentChange_save( RecentChange $rc ) {
@@ -758,28 +759,8 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUnitTestsList( &$files ) {
-		$dir = dirname( dirname( __FILE__ ) ) . '/tests/phpunit';
+		$files[] = dirname( dirname( __FILE__ ) ) . '/tests/phpunit';
 
-		$callback = function( $file ) use ( $dir ) {
-			return "$dir/$file";
-		};
-		$files = array_merge( $files,
-			array_map( $callback,
-				array(
-					'api/ApiMobileViewTest.php',
-					'api/ApiParseExtenderTest.php',
-					'DeviceDetectionTest.php',
-					'MobileContextTest.php',
-					'MobileFormatterTest.php',
-					'modules/MFResourceLoaderParsedMessageModuleTest.php',
-					'skins/SkinMinervaTest.php',
-					'skins/SkinMinervaAlphaTest.php',
-					'skins/SkinMinervaBetaTest.php',
-					'specials/MobileSpecialPageTest.php',
-					'specials/SpecialMobileDiffTest.php',
-				)
-			)
-		);
 		return true;
 	}
 
@@ -836,6 +817,13 @@ class MobileFrontendHooks {
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
 		self::registerMobileLoggingSchemasModule();
+
+		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
+		if ( class_exists( 'VisualEditorHooks' ) ) {
+			$mobileVisualEditorRLmodule =
+				MobileContext::singleton()->getMFConfig()->get( 'MobileVEModules' );
+			$resourceLoader->register( $mobileVisualEditorRLmodule );
+		}
 
 		return true;
 	}

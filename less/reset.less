@@ -21,16 +21,25 @@ audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	background: none;
-	.box-sizing(border-box);
 }
 table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
-	.box-sizing(border-box);
 }
+
+// box-sizing rules (currently in flux)
+// FIXME: Make default or delete based on outcome of T86366
+.beta,
+.stable {
+	* {
+		.box-sizing(border-box);
+	}
+}
+
 // CentralNotice banners use regular box-sizing
 div#centralNotice {
 	.box-sizing(content-box);
 }
+
 button {
 	border: none;
 	background-color: transparent;
