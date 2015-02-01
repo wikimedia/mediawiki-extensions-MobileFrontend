@@ -158,6 +158,7 @@ $wgHooks['EventLoggingRegisterSchemas'][] =
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
 $wgHooks['HTMLFileCache::useFileCache'][] = 'MobileFrontendHooks::onHTMLFileCache_useFileCache';
 $wgHooks['LoginFormValidErrorMessages'][] = 'MobileFrontendHooks::onLoginFormValidErrorMessages';
+$wgHooks['ResourceLoaderGetLessVars'][] = 'MobileFrontendHooks::onResourceLoaderGetLessVars';
 
 // use array_merge to ensure we do not override existing values set by core
 $wgSpecialPages = array_merge( $wgSpecialPages, array(
@@ -184,23 +185,14 @@ $wgGroupPermissions['sysop']['mf-uploadbutton'] = true;
  * Setup MobileFrontend, load global components
  */
 function efMobileFrontend_Setup() {
-	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
+	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups,
 		$wgResourceLoaderLESSImportPaths,
-		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall, $wgMobileVEModules;
+		$wgMobileVEModules;
 
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
 		$wgSpecialPageGroups['Nearby'] = 'pages';
 	}
-	$wgResourceLoaderLESSVars = array_merge( $wgResourceLoaderLESSVars,
-		array(
-			'wgMFDeviceWidthTablet' => "{$wgMFDeviceWidthTablet}px",
-			'wgMFDeviceWidthMobileSmall' => "{$wgMFDeviceWidthMobileSmall}px",
-			'wgMFThumbnailTiny' =>  MobilePage::TINY_IMAGE_WIDTH . 'px',
-			'wgMFThumbnailSmall' =>  MobilePage::SMALL_IMAGE_WIDTH . 'px',
-			'wgMFThumbnailMedium' => MobilePage::MEDIUM_IMAGE_WIDTH . 'px',
-		)
-	);
 }
 
 // Config instance
