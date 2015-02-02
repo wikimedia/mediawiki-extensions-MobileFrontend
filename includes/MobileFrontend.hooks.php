@@ -759,7 +759,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onUnitTestsList( &$files ) {
-		$files[] = dirname( dirname( __FILE__ ) ) . '/tests/phpunit';
+		$files[] = __DIR__ . '/../tests/phpunit';
 
 		return true;
 	}
