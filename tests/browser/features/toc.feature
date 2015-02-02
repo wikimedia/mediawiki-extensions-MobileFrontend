@@ -1,8 +1,9 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
+@en.m.wikipedia.beta.wmflabs.org @firefox @login @test2.m.wikipedia.org @vagrant
 Feature: Table of contents
 
   Background:
     Given I am using the mobile site
+      #And in Firefox see bug T88288
 
   @smoke
   Scenario: Don't show table of contents on mobile
