@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ed9f2061",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 761,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-02T16:44:41Z",
+      "side": 1,
+      "message": "The file location of hooks is well known in this file itself? So maybe we can use ../ directly instead of two function calls?",
+      "revId": "d839612ed282b63395bde13bfbee780d029b637d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
