@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f7c5b342",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-02T08:42:00Z",
+      "side": 1,
+      "message": "bad idea :)\n\n.continue will be hidden in postRender to hide the \"Next\" button at the top right cornor, so the class here must be different from the \"normal\" continue ones. Maybe a short comment as a warning would be great here :)",
+      "revId": "cb16306c4e059ecac1bd62151b7800c7e5122ab1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
