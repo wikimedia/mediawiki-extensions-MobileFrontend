@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_32fb3946",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-02T15:12:52Z",
+      "side": 1,
+      "message": "ws issue",
+      "revId": "8c93a111a60ae64206ad7ba4d68fe0ff4784802f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d2f76555",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-02T15:12:52Z",
+      "side": 1,
+      "message": "documentation needed in this file.",
+      "revId": "8c93a111a60ae64206ad7ba4d68fe0ff4784802f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f2f4e152",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-02T15:12:52Z",
+      "side": 1,
+      "message": "I think all these functions are premature. Let\u0027s add them later.",
+      "revId": "8c93a111a60ae64206ad7ba4d68fe0ff4784802f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9291edfd",
+        "filename": "includes/models/MobileWatchlistCollection.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-02T15:12:52Z",
+      "side": 1,
+      "message": "Don\u0027t think this is needed yet.",
+      "revId": "8c93a111a60ae64206ad7ba4d68fe0ff4784802f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b29669f2",
+        "filename": "includes/stores/WatchlistStore.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-02T15:12:52Z",
+      "side": 1,
+      "message": "premature?",
+      "revId": "8c93a111a60ae64206ad7ba4d68fe0ff4784802f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_72a0d13e",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-02T15:12:52Z",
+      "side": 1,
+      "message": "docs needed on class.",
+      "revId": "8c93a111a60ae64206ad7ba4d68fe0ff4784802f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_529b551b",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-02T15:12:52Z",
+      "side": 1,
+      "message": "docs needed on this function",
+      "revId": "8c93a111a60ae64206ad7ba4d68fe0ff4784802f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
