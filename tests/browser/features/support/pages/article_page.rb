@@ -97,7 +97,7 @@ class ArticlePage
   button(:submit_button, class: 'submit')
 
   # drawer
-  div(:drawer, class: 'drawer position-fixed visible')
+  div(:drawer, css: '.drawer.visible')
 
   # overlay
   div(:overlay, css: '.overlay')
@@ -150,7 +150,7 @@ class ArticlePage
   a(:reference_drawer, css: '.drawer.references')
 
   # sections
-  h2(:first_section, css: '.collapsible-heading', index: 0)
+  h2(:first_section, css: '.section-heading', index: 0)
   div(:first_section_content, id: 'collapsible-block-0')
   h2(:third_section, css: '.collapsible-block', index: 2)
 
