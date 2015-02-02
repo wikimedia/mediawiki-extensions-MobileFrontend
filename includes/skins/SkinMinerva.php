@@ -626,7 +626,7 @@ class SkinMinerva extends SkinTemplate {
 			$out->setPageTitle( $pageTitle );
 		}
 
-		if ( $out->isArticle() ) {
+		if ( $this->canUseWikiPage() ) {
 			// If it's a page that exists, add last edited timestamp
 			if ( $this->getWikiPage()->exists() ) {
 				$tpl->set( 'historyLink', $this->getHistoryLink( $title ) );

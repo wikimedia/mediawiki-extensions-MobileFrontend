@@ -216,8 +216,10 @@ class MobileFrontendHooks {
 	public static function onDiffViewHeader( $diff, $oldRev, $newRev ) {
 		$context = MobileContext::singleton();
 
-		// Only do redirects to MobileDiff if user is in mobile view
-		if ( $context->shouldDisplayMobileView() ) {
+		// Only do redirects to MobileDiff if user is in mobile view and it's not a special page
+		if ( $context->shouldDisplayMobileView()
+			&& !$diff->getContext()->getTitle()->isSpecialPage()
+		) {
 			$output = $context->getOutput();
 			$newRevId = $newRev->getId();
 
