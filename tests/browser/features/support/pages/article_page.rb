@@ -97,7 +97,7 @@ class ArticlePage
   button(:submit_button, class: 'submit')
 
   # drawer
-  div(:drawer, class: 'drawer position-fixed visible')
+  div(:drawer, css: '.drawer.visible')
 
   # overlay
   div(:overlay, css: '.overlay')
