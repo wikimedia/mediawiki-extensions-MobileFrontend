@@ -16,6 +16,24 @@
       "revId": "fb650442e510dd3501d193b4db7c5a39e20ccdb5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ed6400b1",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-02T16:13:58Z",
+      "side": 1,
+      "message": "No :) The purpose of this change is, that the top right button has a different class to the edit without login button :)\n\nBut what i know see is, that .continue-edit (edit without login) is only present in EditorOverlay, so a click on the button should be handeld only there, so i will split up the onClickContinue function into two functions :)",
+      "parentUuid": "6e7c4fa4_ed4de040",
+      "revId": "fb650442e510dd3501d193b4db7c5a39e20ccdb5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
