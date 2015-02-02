@@ -140,7 +140,7 @@
 				this.$anonWarning = this.$( '.anonwarning' );
 				this.$content.hide();
 				// the user has to click login, signup or edit without login, disable "Next" button on top right
-				this.$( '.overlay-header .continue' ).hide();
+				this.$anonHiddenButtons = this.$( '.overlay-header .continue, .editor-switcher' ).hide();
 				this.clearSpinner();
 			}
 			// make license links open in separate tabs
@@ -190,7 +190,7 @@
 			this.showSpinner();
 			this.$anonWarning.hide();
 			// reenable "Next" button
-			this.$( '.continue' ).show();
+			this.$anonHiddenButtons.show();
 			this._loadContent();
 		},
 
