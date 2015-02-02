@@ -18,7 +18,7 @@
 					$a.off();
 					$a.on( 'click', function ( ev ) {
 						ev.preventDefault();
-						router.navigate( '#/image/' + match[0] );
+						router.navigate( '#/media/' + match[0] );
 					} );
 				}
 			} );
@@ -48,7 +48,7 @@
 		} );
 		return result;
 	}
-	overlayManager.add( /^\/image\/(.+)$/, loadImageOverlay );
+	overlayManager.add( /^\/media\/(.+)$/, loadImageOverlay );
 
 	init( $( '#content_wrapper' ) );
 	// for Special:Uploads
