@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ed4de040",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-02T16:10:32Z",
+      "side": 1,
+      "message": "Can we just update the class name in VisualEditorOverlay from .continue to continue-edit and generalise on continue-edit means the top right button?",
+      "revId": "fb650442e510dd3501d193b4db7c5a39e20ccdb5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
