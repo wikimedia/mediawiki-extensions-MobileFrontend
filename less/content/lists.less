@@ -12,6 +12,12 @@
 	}
 	ul {
 		list-style: square inside;
+		&>li>ul {
+			list-style-type: disc;
+			&>li>ul {
+				list-style-type: circle;
+			}
+		}
 	}
 
 	ol {
