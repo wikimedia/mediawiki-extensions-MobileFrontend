@@ -135,7 +135,7 @@
 	"mobile-frontend-editor-wait": "正在保存编辑，请稍候。",
 	"mobile-frontend-enable-images": "启用手机版网站的图像",
 	"mobile-frontend-errorreport-button-label": "报告错误",
-	"mobile-frontend-errorreport-error": "出错，反馈不能发送",
+	"mobile-frontend-errorreport-error": "出错，不能发送反馈。",
 	"mobile-frontend-errorreport-feedback": "感谢您的反馈！",
 	"mobile-frontend-errorreport-heading": "报告错误",
 	"mobile-frontend-errorreport-instructions": "<p>此表格只用于汇报维基百科条目的错误。请不要汇报缺少的信息。</p><p>如果您发现了一个错误，请您尝试通过编辑该页面自行参与修复。如果您不能修复该错误，您再使用下面的表格。</p><p>请不要留下您的电话号码或电子邮件地址。</p>",
@@ -397,6 +397,8 @@
 	"apihelp-mobileview-param-noheadings": "输出时不包含标题。",
 	"apihelp-mobileview-param-notransform": "不要改变HTML至移动适配版。",
 	"apihelp-mobileview-param-onlyrequestedsections": "只返回请求的与$1prop=sections一样的段落。",
+	"apihelp-mobileview-param-offset": "假装所有文本结果是一个字符串，并返回此点位开始的子字符串。",
+	"apihelp-mobileview-param-maxlen": "假装所有文本结果是一个字符串，并限制结果至此长度。",
 	"apihelp-mobileview-param-thumbnail": "最大缩略图尺寸。",
 	"apihelp-mobileview-example-1": "获取有关[[Doom metal]]的第0章节的信息",
 	"apihelp-parse-param-mobileformat": "以适配移动设备的格式返回解析输出。",
@@ -420,5 +422,6 @@
 	"mobile-frontend-time-precision-BCE-0annum": "公元前$1",
 	"mobile-frontend-days-ago": "$1天前",
 	"mobile-frontend-months-ago": "$1月前",
-	"mobile-frontend-years-ago": "$1年前"
+	"mobile-frontend-years-ago": "$1年前",
+	"mobile-frontend-console-recruit": "\\o/ 嘿！这是一个开源软件，并且我们需要志愿者来帮助我们打造它、使其更好和修复 Bug，比如您这样查阅 JavaScript 控制台的人。\n\n您可以找到我们的积压问题 @ https://phabricator.wikimedia.org/project/view/67/"
 }

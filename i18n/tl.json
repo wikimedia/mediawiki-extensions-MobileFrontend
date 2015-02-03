@@ -3,7 +3,8 @@
 		"authors": [
 			"AnakngAraw",
 			"Jojit fb",
-			"Sky Harbor"
+			"Sky Harbor",
+			"Leeheonjin"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Ipasok ang tekstong panseguridad",
@@ -16,6 +17,7 @@
 	"mobile-frontend-disable-images": "Huwag paganahin ang mga larawan sa sityong pantelepono",
 	"mobile-frontend-dismiss-notification": "iwaksi ang pagpapabatid na ito",
 	"mobile-frontend-enable-images": "Paganahin ang mga larawan sa sityong pantelepono",
+	"mobile-frontend-errorreport-error": "Kamalian, ang katugunan ay hindi maipo-post.",
 	"mobile-frontend-featured-article": "Napiling nilalaman ngayon",
 	"mobile-frontend-footer-contact": "Makipag-ugnayan",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
@@ -55,7 +57,6 @@
 	"mobile-frontend-save-settings": "Itala ang mga kagustuhan",
 	"mobile-frontend-search-submit": "Ipadala",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Ipasadya ang iyong mobile device sa pamamagitan ng sumusunod na pang-mobile na kagustuhan.",
 	"mobile-frontend-settings-site-description": "Makukuha ang {{SITENAME}} sa $1 {{PLURAL:$1|wika|mga wika}}. Ang lahat ng mga bersiyon ay nakalista sa ibaba",
 	"mobile-frontend-settings-site-header": "Mga Wika sa {{SITENAME}}",
 	"mobile-frontend-sign-in-heading": "Lumagda",

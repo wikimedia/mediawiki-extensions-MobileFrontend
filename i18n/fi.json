@@ -16,7 +16,8 @@
 			"Syreeni",
 			"Pxos",
 			"Hartz",
-			"MrTapsa"
+			"MrTapsa",
+			"McSalama"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Muokkaako käyttäjä mobiilikäyttöliittymän kautta",
@@ -106,7 +107,7 @@
 	"mobile-frontend-editor-wait": "Tallennetaan muokkausta. Odota.",
 	"mobile-frontend-enable-images": "Ota kuvat käyttöön mobiilisivustolla",
 	"mobile-frontend-errorreport-button-label": "Raportoi virhe",
-	"mobile-frontend-errorreport-error": "Virhe, palautetta ei voida lähettää",
+	"mobile-frontend-errorreport-error": "Virhe, palautetta ei voida lähettää.",
 	"mobile-frontend-errorreport-feedback": "Kiitos palautteestasi!",
 	"mobile-frontend-errorreport-heading": "Raportoi virhe",
 	"mobile-frontend-errorreport-instructions": "<p>Tämä lomake on vain Wikipedia-artikkeleiden virheiden raportointia varten. Ole hyvä, äläkä raportoi puuttuvia kohteita.</p><p>Jos löydät virheen, yritä korjata se itse muokkaamalla sivua. Jos et voi korjata virhettä, raportoi se oheisella lomakkeella.</p><p>Älä jätä puhelinnumeroasi tai sähköpostiosoitettasi.</p>",
@@ -168,7 +169,6 @@
 	"mobile-frontend-last-modified-years": "Sivua on viimeksi muokattu {{PLURAL:$1|vuosi|$1 vuotta}} sitten",
 	"mobile-frontend-lead-image-tutorial-confirm": "Tallenna tiedosto",
 	"mobile-frontend-lead-image-tutorial-summary": "Kuvan aiheen tulisi liittyä sivuun, eikä se saa rikkoa tekijänoikeuksia.",
-	"mobile-frontend-listed-image-no-description": "Ei kuvausta",
 	"mobile-frontend-logged-in-homepage-notification": "Tervetuloa $1!",
 	"mobile-frontend-logged-in-toast-notification": "Olet kirjautunut käyttäjänä $1.",
 	"mobile-frontend-logged-out": "Et ole kirjautunut sisään",
