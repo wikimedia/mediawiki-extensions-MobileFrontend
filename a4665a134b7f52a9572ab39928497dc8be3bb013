@@ -16,6 +16,24 @@
       "revId": "a4665a134b7f52a9572ab39928497dc8be3bb013",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_028fbdd2",
+        "filename": "less/specials/collections.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-03T18:49:25Z",
+      "side": 1,
+      "message": "Done, and i\u0027m going to ping moyz on this on the trello card",
+      "parentUuid": "6e7c4fa4_0cf85445",
+      "revId": "a4665a134b7f52a9572ab39928497dc8be3bb013",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
