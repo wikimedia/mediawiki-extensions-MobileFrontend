@@ -50,6 +50,24 @@
       "revId": "4696ce4ca3879d552adc59a94fab7de78589258f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cc281c35",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-03T13:25:11Z",
+      "side": 1,
+      "message": "I just saw jon added this on the previous patch, and commented there about clarifying. Feel free to ignore, sorry.",
+      "parentUuid": "6e7c4fa4_981ca37e",
+      "revId": "4696ce4ca3879d552adc59a94fab7de78589258f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
