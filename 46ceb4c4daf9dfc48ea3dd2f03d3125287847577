@@ -16,6 +16,24 @@
       "revId": "46ceb4c4daf9dfc48ea3dd2f03d3125287847577",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a08b611f",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-03T21:01:08Z",
+      "side": 1,
+      "message": "Sorry, this is not supposed to be here, but bascially, el needs to be passed as defaults, otherwise it won\u0027t work. https://gerrit.wikimedia.org/r/#/c/188407/",
+      "parentUuid": "6e7c4fa4_60cf8983",
+      "revId": "46ceb4c4daf9dfc48ea3dd2f03d3125287847577",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
