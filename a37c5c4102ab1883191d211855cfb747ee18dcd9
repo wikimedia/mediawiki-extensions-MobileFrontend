@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_40cdad61",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-03T21:19:11Z",
+      "side": 1,
+      "message": "I\u0027d rather we just did nothing for now.",
+      "revId": "a37c5c4102ab1883191d211855cfb747ee18dcd9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a0e841b0",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-03T21:19:11Z",
+      "side": 1,
+      "message": "This fixme seems unnecessary. The code is pretty easy to read.",
+      "revId": "a37c5c4102ab1883191d211855cfb747ee18dcd9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
