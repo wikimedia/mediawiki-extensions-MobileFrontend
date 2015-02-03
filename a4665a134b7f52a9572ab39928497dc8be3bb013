@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0cf85445",
+        "filename": "less/specials/collections.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-03T14:47:06Z",
+      "side": 1,
+      "message": "FYI it might be worth pushing back at Moiz here. We use #777 for every heading in a special page so this creates inconsistency.\n\nThis should probably be inherit and black should be on collection-item-title with a FIXME: Why is this inconsistent with other headings.",
+      "revId": "a4665a134b7f52a9572ab39928497dc8be3bb013",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
