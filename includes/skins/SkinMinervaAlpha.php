@@ -102,7 +102,7 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 			$items['wikigrok'] = array(
 				'links' => array(
 					array(
-						'text' => 'WikiGrok',
+						'text' => $this->msg( 'mobile-frontend-main-menu-wikigrok-roulette' ),
 						'href' => '#',
 						'class' => MobileUI::iconClass( 'wikigrok', 'before',
 							'wikigrok-roulette' ),

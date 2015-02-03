@@ -1,0 +1,38 @@
+@import "minerva.variables";
+@import "minerva.mixins";
+@import "mediawiki.mixins";
+
+.wikigrok-roulette-info-overlay {
+	.overlay-header-container {
+		.mainmenu {
+			cursor: pointer;
+		}
+		.title {
+			font-weight: bold;
+			height: 3.35em;
+			text-align: center;
+
+			span {
+				margin-left: -3.4em; // mainmenu icon width, so that the text appears in the center
+			}
+		}
+	}
+	.overlay-content {
+		@imageSize: 5em;
+		margin-top: 2em;
+		padding-top: @imageSize;
+		background-repeat: no-repeat;
+		.background-size( auto, @imageSize );
+		background-position: center top;
+		.background-image-svg-quick('images/wikigrok');
+
+		p,
+		.buttons {
+			padding: 1em;
+		}
+
+		.buttons {
+			text-align: center;
+		}
+	}
+}
