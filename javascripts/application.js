@@ -13,22 +13,16 @@
 		MainMenu = M.require( 'MainMenu' ),
 		Skin = M.require( 'Skin' );
 
-	/**
-	 * Initialize viewport
-	 * @method
-	 */
-	function init() {
-		skin = new Skin( {
-			el: '#mw-mf-viewport',
-			tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
-			page: getCurrentPage(),
-			mainMenu: M.mainMenu || new MainMenu()
-		} );
-		M.define( 'skin', skin );
+	skin = new Skin( {
+		el: '#mw-mf-viewport',
+		tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
+		page: getCurrentPage(),
+		mainMenu: M.mainMenu || new MainMenu()
+	} );
+	M.define( 'skin', skin );
 
-		$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
-		$( window ).on( 'scroll', $.proxy( M, 'emit', 'scroll' ) );
-	}
+	$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
+	$( window ).on( 'scroll', $.proxy( M, 'emit', 'scroll' ) );
 
 	/**
 	 * Get current page view object
@@ -77,8 +71,6 @@
 
 	M.define( 'pageApi', pageApi );
 
-	// Initialize
-	$( init );
 	// Recruit volunteers through the console (note console.log may not be a function so check via apply)
 	if ( window.console && window.console.log && window.console.log.apply &&
 			mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {
