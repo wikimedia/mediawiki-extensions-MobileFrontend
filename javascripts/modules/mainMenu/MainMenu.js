@@ -10,14 +10,13 @@
 	 * @extends View
 	 */
 	MainMenu = View.extend( {
-		el: '#mw-mf-page-left',
-
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash
 		 * @cfg {String} defaults.mainMenuButton Selector for the main menu button
 		 */
 		defaults: {
+			el: '#mw-mf-page-left',
 			mainMenuButton: '#mw-mf-main-menu-button'
 		},
 
