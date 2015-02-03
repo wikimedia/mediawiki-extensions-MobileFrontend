@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Shirayuki",
-			"Captaindogfish"
+			"Captaindogfish",
+			"Chase me ladies, I'm the Cavalry"
 		]
 	},
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
@@ -13,5 +14,5 @@
 	"mobile-frontend-nearby-refresh": "Refresh location",
 	"mobile-frontend-photo-licensing": "By uploading this image, you agree to release your image under the $1 licence.",
 	"mobile-frontend-photo-licensing-with-terms": "By uploading this image, you agree to the $1 and agree to release your image under the $2 licence.",
-	"mobile-frontend-settings-description": "Customise your experience on your mobile device with these mobile specific site settings."
+	"mobile-frontend-console-recruit": "Maybe you can help! This is open source software and we need volunteers to help us build it, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/view/67/"
 }

@@ -6,7 +6,8 @@
 			"MetalBrasil",
 			"Toliño",
 			"Vivaelcelta",
-			"Breogan2008"
+			"Breogan2008",
+			"Beninho"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un usuario está ou non está editando a través da interface móbil",
@@ -15,6 +16,7 @@
 	"mobile-frontend-account-create-submit": "Crear a conta",
 	"mobile-frontend-app-title": "Aplicación móbil",
 	"mobile-frontend-back-to-top-of-section": "Volver ao comezo da sección",
+	"mobile-frontend-categories-add": "Engadir unha categoría",
 	"mobile-frontend-changeslist-ip": "Usuario anónimo",
 	"mobile-frontend-changeslist-nocomment": "sen resumo de edición",
 	"mobile-frontend-clear-search": "Limpar",
@@ -153,6 +155,7 @@
 	"mobile-frontend-opt-in-explain": "Ao entrar nas probas da versión móbil terá acceso ás características experimentais, correndo o risco de atopar erros e problemas.",
 	"mobile-frontend-overlay-close": "Pechar",
 	"mobile-frontend-overlay-continue": "Continuar",
+	"mobile-frontend-other-projects-overlay-heading": "Outros proxectos",
 	"mobile-frontend-page-menu-contents": "contidos",
 	"mobile-frontend-page-menu-history": "Historial",
 	"mobile-frontend-password": "Contrasinal:",
