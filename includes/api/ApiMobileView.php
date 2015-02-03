@@ -148,7 +148,7 @@ class ApiMobileView extends ApiBase {
 			}
 		}
 		if ( $this->usePageImages ) {
-			$this->addPageImage( $data, $prop, $params['thumbsize'] );
+			$this->addPageImage( $data, $params, $prop );
 		}
 		$result = array();
 		$missingSections = array();
@@ -259,12 +259,33 @@ class ApiMobileView extends ApiBase {
 			$this->dieUsageMsg( array( 'invalidtitle', $name ) );
 		}
 		if ( $title->inNamespace( NS_FILE ) ) {
-			$this->file = wfFindFile( $title );
+			$this->file = $this->findFile( $title );
 		}
 		if ( !$title->exists() && !$this->file ) {
 			$this->dieUsageMsg( array( 'notanarticle', $name ) );
 		}
 		return $title;
+	}
+
+	/**
+	 * Wrapper that returns a page image for a given title
+	 *
+	 * @param Title $title
+	 * @return bool|File
+	 */
+	protected function getPageImage( Title $title ) {
+		return PageImages::getPageImage( $title );
+	}
+
+	/**
+	 * Wrapper for wfFindFile
+	 *
+	 * @param Title|string $title
+	 * @param array $options
+	 * @return bool|File
+	 */
+	protected function findFile( $title, $options = array() ) {
+		return wfFindFile( $title, $options );
 	}
 
 	/**
@@ -529,7 +550,7 @@ class ApiMobileView extends ApiBase {
 				$data['text'][] = $chunk;
 			}
 			if ( $this->usePageImages ) {
-				$image = PageImages::getPageImage( $title );
+				$image = $this->getPageImage( $title );
 				if ( $image ) {
 					$data['image'] = $image->getTitle()->getText();
 				}
@@ -597,17 +618,26 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Adds Image information to Api result.
 	 * @param array $data whatever getData() returned
+	 * @param array $params parameters to this API module
 	 * @param array $prop prop parameter value
-	 * @param int $size thumbnail size
 	 */
-	private function addPageImage( array $data, array $prop, $size ) {
+	private function addPageImage( array $data, array $params, array $prop ) {
 		if ( !isset( $prop['image'] ) && !isset( $prop['thumb'] ) ) {
 			return;
 		}
 		if ( !isset( $data['image'] ) ) {
 			return;
 		}
-		$file = wfFindFile( $data['image'] );
+		if ( isset( $params['thumbsize'] )
+			&& ( isset( $params['thumbwidth'] ) || isset( $params['thumbheight'] ) )
+		) {
+			$this->dieUsage(
+				"`thumbsize' is mutually exclusive with `thumbwidth' and `thumbheight'",
+				'toomanysizeparams'
+			);
+		}
+
+		$file = $this->findFile( $data['image'] );
 		if ( !$file ) {
 			return;
 		}
@@ -624,7 +654,26 @@ class ApiMobileView extends ApiBase {
 			);
 		}
 		if ( isset( $prop['thumb'] ) ) {
-			$thumb = $file->transform( array( 'width' => $size, 'height' => $size ) );
+			$resize = array();
+			if ( isset( $params['thumbsize'] ) ) {
+				$resize['width'] = $resize['height'] = $params['thumbsize'];
+			}
+			if ( isset( $params['thumbwidth'] ) ) {
+				$resize['width'] = $params['thumbwidth'];
+			}
+			if ( isset( $params['thumbheight'] ) ) {
+				$resize['height'] = $params['thumbheight'];
+			}
+			if ( isset( $resize['width'] ) && !isset( $resize['height'] ) ) {
+				$resize['height'] = $file->getHeight(); // Limit by width
+			}
+			if ( !isset( $resize['width'] ) && isset( $resize['height'] ) ) {
+				$resize['width'] = $file->getWidth(); // Limit by width
+			}
+			if ( !$resize ) {
+				$resize['width'] = $resize['height'] = 50; // Default
+			}
+			$thumb = $file->transform( $resize );
 			if ( !$thumb ) {
 				return;
 			}
@@ -732,10 +781,9 @@ class ApiMobileView extends ApiBase {
 		if ( $this->usePageImages ) {
 			$res['prop'][ApiBase::PARAM_TYPE][] = 'image';
 			$res['prop'][ApiBase::PARAM_TYPE][] = 'thumb';
-			$res['thumbsize'] = array(
+			$res['thumbsize'] = $res['thumbwidth'] = $res['thumbheight'] = array(
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
-				ApiBase::PARAM_DFLT => 50,
 			);
 		}
 		return $res;
@@ -791,7 +839,9 @@ class ApiMobileView extends ApiBase {
 		if ( $this->usePageImages ) {
 			$res['prop'][] = ' image           - information about an image associated with this page';
 			$res['prop'][] = ' thumb           - thumbnail of an image associated with this page';
-			$res['thumbsize'] = 'Maximum thumbnail dimensions';
+			$res['thumbsize'] = 'Maximum thumbnail dimensions (either width or height)';
+			$res['thumbwidth'] = 'Maximum thumbnail width';
+			$res['thumbheight'] = 'Maximum thumbnail height';
 		}
 		return $res;
 	}

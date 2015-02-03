@@ -1,6 +1,9 @@
 <?php
 
 class MockApiMobileView extends ApiMobileView {
+	/** @var PHPUnit_Framework_MockObject_MockObject */
+	public $mockFile;
+
 	protected function makeTitle( $name ) {
 		$t = Title::newFromText( $name );
 		$row = new stdClass();
@@ -34,6 +37,14 @@ class MockApiMobileView extends ApiMobileView {
 
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), array( 'text' => null ) );
+	}
+
+	protected function findFile( $title, $options = array() ) {
+		return $this->mockFile;
+	}
+
+	protected function getPageImage( Title $title ) {
+		return $this->findFile( $title );
 	}
 }
 
@@ -107,7 +118,24 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 		$request = new FauxRequest( $input );
 		$context = new RequestContext();
 		$context->setRequest( $request );
+		if ( !defined( 'PAGE_IMAGES_INSTALLED' ) ) {
+			define( 'PAGE_IMAGES_INSTALLED', true );
+		}
 		$api = new MockApiMobileView( new ApiMain( $context ), 'mobileview' );
+
+		/* FIXME: commented out because WMF CI uses a stone age version of PHPUnit
+		$api->mockFile = $this->getMock( 'MockFSFile',
+			array( 'getWidth', 'getHeight', 'getTitle', 'transform' ),
+			array(), '', false
+		);
+		$api->mockFile->method( 'getWidth' )->will( $this->returnValue( 640 ) );
+		$api->mockFile->method( 'getHeight' )->will( $this->returnValue( 480 ) );
+		$api->mockFile->method( 'getTitle' )
+			->will( $this->returnValue( Title::newFromText( 'File:Foo.jpg' ) ) );
+		$api->mockFile->method( 'transform' )
+			->will( $this->returnCallback( array( $this, 'mockTransform' ) ) );
+		*/
+
 		$api->execute();
 		$result = $api->getResultData();
 		$this->assertTrue(
@@ -115,6 +143,15 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 			'API output should be encloded in mobileview element'
 		);
 		$this->assertArrayEquals( $expected, $result['mobileview'], false, true );
+	}
+
+	public function mockTransform( array $params ) {
+		$thumb = $this->getMock( 'MediaTransformOutput' );
+		$thumb->method( 'getUrl' )->will( $this->returnValue( 'http://dummy' ) );
+		$thumb->method( 'getWidth' )->will( $this->returnValue( $params['width'] ) );
+		$thumb->method( 'getHeight' )->will( $this->returnValue( $params['height'] ) );
+
+		return $thumb;
 	}
 
 	public function provideView() {
@@ -207,6 +244,73 @@ Text 2
 					'pageprops' => array( 'notoc' => '' ),
 				),
 			),
+			// Page image tests. Note that the dimensions are values passed to transform(),
+			// not actual thumbnail dimensions.
+			/* FIXME: commented out because WMF CI uses a stone age version of PHPUnit
+			array(
+				array(
+					'page' => 'Foo',
+					'text' => '',
+					'prop' => 'thumb',
+				),
+				array(
+					'sections' => array(),
+					'thumb' => array(
+						'url' => 'http://dummy',
+						'width' => 50,
+						'height' => 50,
+					)
+				),
+			),
+			array(
+				array(
+					'page' => 'Foo',
+					'text' => '',
+					'prop' => 'thumb',
+					'thumbsize' => 55,
+				),
+				array(
+					'sections' => array(),
+					'thumb' => array(
+						'url' => 'http://dummy',
+						'width' => 55,
+						'height' => 55,
+					)
+				),
+			),
+			array(
+				array(
+					'page' => 'Foo',
+					'text' => '',
+					'prop' => 'thumb',
+					'thumbwidth' => 100,
+				),
+				array(
+					'sections' => array(),
+					'thumb' => array(
+						'url' => 'http://dummy',
+						'width' => 100,
+						'height' => 480,
+					)
+				),
+			),
+			array(
+				array(
+					'page' => 'Foo',
+					'text' => '',
+					'prop' => 'thumb',
+					'thumbheight' => 200,
+				),
+				array(
+					'sections' => array(),
+					'thumb' => array(
+						'url' => 'http://dummy',
+						'width' => 640,
+						'height' => 200,
+					)
+				),
+			),
+			*/
 		);
 	}
 
