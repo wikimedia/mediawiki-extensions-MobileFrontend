@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6cd468bf",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-03T14:43:11Z",
+      "side": 1,
+      "message": "Should be :before to work with mw-ui-icon styles",
+      "revId": "a360da17c6d26513b95b5f5c83ef55fc6a2f4940",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4cd72cc5",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-03T14:43:11Z",
+      "side": 1,
+      "message": "\"after\" is not a valid modifier. It has to be before or element. better to create a separate standalone element after the link, even though that may seem nasty...",
+      "revId": "a360da17c6d26513b95b5f5c83ef55fc6a2f4940",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
