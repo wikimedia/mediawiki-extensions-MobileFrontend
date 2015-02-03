@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_983583f6",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-03T12:24:04Z",
+      "side": 1,
+      "message": "I don\u0027t think php docs have brackets.\n\nAlso $user has type User",
+      "revId": "4696ce4ca3879d552adc59a94fab7de78589258f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1829739a",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-03T12:24:04Z",
+      "side": 1,
+      "message": "[number] should be int",
+      "revId": "4696ce4ca3879d552adc59a94fab7de78589258f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_981ca37e",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-03T12:24:04Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we take into account if the watchlist has already been saved into a collection store? Or is the loading and saving to update the watchlist collection page every time it\u0027s visited?\n\nCan we have some comments explaining the logic of this lines (62 to 65)?",
+      "revId": "4696ce4ca3879d552adc59a94fab7de78589258f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
