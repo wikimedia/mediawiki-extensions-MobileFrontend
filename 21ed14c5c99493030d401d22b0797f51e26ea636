@@ -1,0 +1,293 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e215d89d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Docs?",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_027ed4e1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Unused variable.",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_02657441",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Unused variable.",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e2d2b8d4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "\"*\" or \"+\"?",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_82d744c4",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "\"*\" or \"+\"?",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2fb6043",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Docs / make it a const.",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_42f84c46",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Docs / what does this default mean?",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_62f5484c",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Docs / not localised.",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_62dea8e0",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "* Docs.\n* Lowercase false.\n* Boolean parameters are considered harmful. For example, in the context of this function\u0027s name it\u0027s unobvous what it\u0027s dong when reading an invocation of it.",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_02925400",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "* $owner us a User object, better not rely on implicit conversion to string.\n* All strings that don\u0027t rely on $vars expansion should use single quotes.",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c29bfc19",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "\"/{$this-\u003eid}.json\"",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e2a07840",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Docs?",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_828504b4",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Lowercase true.",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_428fecd1",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Should it use its own content model to facilitate a proper content handler?",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a28280a7",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Not localised.",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_628c68dc",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "Docs?",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2a92023",
+        "filename": "includes/specials/SpecialMobileEditWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T20:04:37Z",
+      "side": 1,
+      "message": "...so comment them out?",
+      "revId": "21ed14c5c99493030d401d22b0797f51e26ea636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
