@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_487b8beb",
+        "filename": "less/Overlay.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-04T22:42:00Z",
+      "side": 1,
+      "message": "the slider button covers the close button. (see patchset 5)",
+      "revId": "4d18e88d4c1666c199d21740dce5e848f1e454e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
