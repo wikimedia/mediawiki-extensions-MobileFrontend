@@ -17,12 +17,12 @@
 		el: '#mw-mf-viewport',
 		tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
 		page: getCurrentPage(),
-		mainMenu: M.mainMenu || new MainMenu()
+		mainMenu: new MainMenu()
 	} );
 	M.define( 'skin', skin );
 
-	$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) );
-	$( window ).on( 'scroll', $.proxy( M, 'emit', 'scroll' ) );
+	$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) )
+		.on( 'scroll', $.proxy( M, 'emit', 'scroll' ) );
 
 	/**
 	 * Get current page view object
