@@ -62,6 +62,10 @@
 			rows: []
 		},
 		typeDefaults: mw.config.get( 'wgMFInfoboxConfig' ),
+		/** @inheritdoc */
+		events: {
+			'click .more': 'onExpandInfobox'
+		},
 		/**
 		 * Given a title work out the url to the thumbnail for that image
 		 * FIXME: This should not make its way into stable.
@@ -318,20 +322,20 @@
 		/**
 		 * @inheritdoc
 		 */
-		postRender: function ( options ) {
-			var _postRender = this.postRender,
-				_emit = this.emit,
-				self = this;
-
+		postRender: function () {
 			if ( user.isAnon() ) {
 				this.$( '.edit' ).remove();
 			}
 			this.$( '.spinner' ).hide();
-			this.$( '.more' ).on( 'click', function () {
-				$( this ).remove();
-				_emit.call( self, 'load' );
-				_postRender.call( self, options );
-			} );
+		},
+		/**
+		 * Event handler that runs when the more button is clicked.
+		 * @param {jQuery.Event} ev
+		 */
+		onExpandInfobox: function ( ev ) {
+			$( ev.target ).remove();
+			this.emit( 'load' );
+			this.postRender( this.options );
 		},
 		/**
 		 * Decides based on the type of item what infobox to render
