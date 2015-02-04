@@ -1,26 +1,31 @@
 ( function ( M, $ ) {
 	var loader = M.require( 'loader' ),
 		router = M.require( 'router' ),
-		overlayManager = M.require( 'overlayManager' );
+		context = M.require( 'context' ),
+		useNewMediaViewer = context.isAlphaGroupMember(),
+		overlayManager = M.require( 'overlayManager' ),
+		page = M.getCurrentPage(),
+		thumbs = page.getThumbnails();
+
+	/**
+	 * Event handler for clicking on an image thumbnail
+	 * @param {jQuery.Event} ev
+	 * @ignore
+	 */
+	function onClickImage( ev ) {
+		ev.preventDefault();
+		router.navigate( '#/media/' + $( this ).data( 'thumb' ).getFileName() );
+	}
+
 	/**
 	 * Add routes to images and handle clicks
 	 * @method
 	 * @ignore
-	 * @param {jQuery.Object} $el Object within which to look for images
 	 */
-	function init( $el ) {
+	function init() {
 		if ( !mw.config.get( 'wgImagesDisabled' ) ) {
-			$el.find( 'a.image, a.thumbimage' ).each( function () {
-				var $a = $( this ),
-					match = $a.attr( 'href' ).match( /[^\/]+$/ );
-
-				if ( match ) {
-					$a.off();
-					$a.on( 'click', function ( ev ) {
-						ev.preventDefault();
-						router.navigate( '#/media/' + match[0] );
-					} );
-				}
+			$.each( thumbs, function ( i, thumb ) {
+				thumb.$el.off().data( 'thumb', thumb ).on( 'click', onClickImage );
 			} );
 		}
 	}
@@ -34,23 +39,26 @@
 	 * @returns {jQuery.Deferred}
 	 */
 	function loadImageOverlay( title ) {
-		var result = $.Deferred();
-		loader.loadModule( 'mobile.mediaViewer' ).done( function () {
-			var caption = $( 'a[href*="' + title + '"]' ).siblings( '.thumbcaption' ).text(),
-				ImageOverlay = M.require( 'modules/mediaViewer/ImageOverlay' );
+		var result = $.Deferred(),
+			rlModuleName = useNewMediaViewer ? 'mobile.mediaViewer.beta' : 'mobile.mediaViewer',
+			moduleName = useNewMediaViewer ? 'ImageOverlayNew' : 'ImageOverlay';
+
+		loader.loadModule( rlModuleName ).done( function () {
+			var ImageOverlay = M.require( 'modules/mediaViewer/' + moduleName );
 
 			result.resolve(
 				new ImageOverlay( {
-					title: decodeURIComponent( title ),
-					caption: caption
+					thumbnails: thumbs,
+					title: decodeURIComponent( title )
 				} )
 			);
 		} );
 		return result;
 	}
+
 	overlayManager.add( /^\/media\/(.+)$/, loadImageOverlay );
 
-	init( $( '#content_wrapper' ) );
+	init();
 	// for Special:Uploads
 	M.on( 'photo-loaded', init );
 

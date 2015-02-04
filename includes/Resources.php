@@ -327,6 +327,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/icons.js',
 			'javascripts/Panel.js',
 			'javascripts/Section.js',
+			'javascripts/Thumbnail.js',
 			'javascripts/Page.js',
 			'javascripts/Skin.js',
 			'javascripts/Schema.js',
@@ -703,6 +704,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// mediaViewer.js
 			'mobile-frontend-media-details',
 			'mobile-frontend-media-license-link',
+		),
+	),
+
+	'mobile.mediaViewer.beta' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.mediaViewer',
+		),
+		'templates' => array(
+			'Overlay.hogan' => 'templates/modules/mediaViewer/ImageOverlayNew.hogan',
+		),
+		'scripts' => array(
+			'javascripts/modules/mediaViewer/ImageOverlayNew.js',
 		),
 	),
 
