@@ -274,6 +274,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_6d13f905",
+        "filename": "includes/stores/CollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T21:01:06Z",
+      "side": 1,
+      "message": "Why?",
+      "parentUuid": "6e7c4fa4_0236d400",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_a2c5a092",
         "filename": "includes/stores/CollectionStore.php",
         "patchSetId": 10
@@ -308,6 +326,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_4d163df8",
+        "filename": "includes/stores/CollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T21:01:06Z",
+      "side": 1,
+      "message": "Why?",
+      "parentUuid": "6e7c4fa4_a25fe043",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_42336c0a",
         "filename": "includes/stores/WatchlistCollectionStore.php",
         "patchSetId": 10
@@ -336,6 +372,24 @@
       "writtenOn": "2015-02-04T20:26:44Z",
       "side": 1,
       "message": "\"Initialize\"",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0dd84557",
+        "filename": "includes/stores/WatchlistCollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T21:01:06Z",
+      "side": 1,
+      "message": "US/UK.",
+      "parentUuid": "6e7c4fa4_021d7478",
       "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -540,6 +594,24 @@
       "writtenOn": "2015-02-04T20:26:44Z",
       "side": 1,
       "message": "@private",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2ddd0148",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T21:01:06Z",
+      "side": 1,
+      "message": "Why?",
+      "parentUuid": "6e7c4fa4_ad3a71be",
       "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
