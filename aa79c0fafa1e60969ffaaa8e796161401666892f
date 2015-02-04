@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c8879bdb",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T22:39:23Z",
+      "side": 1,
+      "message": "have you tested this? I haven\u0027t, but it looks like that this does will not work :/",
+      "revId": "aa79c0fafa1e60969ffaaa8e796161401666892f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e815b79d",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T22:39:23Z",
+      "side": 1,
+      "message": "you can combine these classes into one line:\n\u0027click .cancel, .confirm, .initial-header .back\u0027: \u0027onClickBack\u0027\n\n(and you should, this isn\u0027t the actual behavior, because .back class should only trigger the event, if it is inside an initial-header class element, your change will trigger onClickBack on _every_ element with class back) :)",
+      "revId": "aa79c0fafa1e60969ffaaa8e796161401666892f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6821a7f5",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T22:39:23Z",
+      "side": 1,
+      "message": "ev.preventDefault and stopPropagation should be called here, too. The function will have the event object passed as the first parameter, so you can just use it here, too :)",
+      "revId": "aa79c0fafa1e60969ffaaa8e796161401666892f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2883afd2",
+        "filename": "javascripts/Panel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T22:39:23Z",
+      "side": 1,
+      "message": "same as in Overlay.js, please don\u0027t omit the event function calls :)",
+      "revId": "aa79c0fafa1e60969ffaaa8e796161401666892f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
