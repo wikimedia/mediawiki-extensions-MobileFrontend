@@ -1,0 +1,463 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_42d7ecf2",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Captain Obvious?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2ca8048",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "$user",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2206708a",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Undeclared properties.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_82f42485",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Empty line between desc and parameters.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2de006f",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "lowercase array",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2f12094",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Empty line between desc and parameters.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_42eb6c09",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Just remove this line.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_22351043",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Maybe, add a safeguard against double-loading?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_22daf078",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "No error checking.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_02d57447",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "User\u0027s is missing an apostrophe.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2c5a092",
+        "filename": "includes/stores/CollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Make it an interface?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_023494a6",
+        "filename": "includes/stores/WatchlistCollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "DB_SLAVE",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2260b09f",
+        "filename": "includes/stores/WatchlistCollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Do LinkBatch instead to also load ids/existence?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_82f504ca",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Undeclared property.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_22dd1048",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Captain Obvious?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c2221c50",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Undeclared property.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c2b8dce4",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Needs an empty line between description and parameters.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_22abd087",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "CAPS?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c2af7c90",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "CAPS?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_42a36ca8",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "CAPS?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e2b4f8e6",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "\"messagesinclude\"?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a29cc060",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Double-escaping, the default message output format is \u0027parse\u0027.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_42a92c77",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Double-escaping, the default message output format is \u0027parse\u0027.",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_028d7436",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "CAPS?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_62a0e89a",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "CAPS?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_42c04c2f",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "Parameter doc/annotation?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a297e092",
+        "filename": "includes/views/MobileView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-04T19:45:47Z",
+      "side": 1,
+      "message": "If it gets called by render(), does it need to be public in the first place?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
