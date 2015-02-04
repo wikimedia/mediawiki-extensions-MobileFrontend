@@ -42,6 +42,11 @@
 		},
 
 		/** @inheritdoc */
+		events: {
+			'click .image-wrapper': 'onToggleDetails'
+		},
+
+		/** @inheritdoc */
 		preRender: function ( options ) {
 			var self = this;
 			$.each( options.thumbnails, function ( i, thumbnail ) {
@@ -106,11 +111,14 @@
 			} );
 
 			$( window ).on( 'resize', $.proxy( this, '_positionImage' ) );
+		},
 
-			this.$( '.image-wrapper' ).on( 'click', function () {
-				self.$details.toggle();
-				self._positionImage();
-			} );
+		/**
+		 * Event handler that toggles the details bar.
+		 */
+		onToggleDetails: function () {
+			this.$details.toggle();
+			this._positionImage();
 		},
 
 		/** @inheritdoc */
