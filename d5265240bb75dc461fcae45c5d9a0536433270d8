@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_22be7061",
+        "filename": "i18n/en.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "the three points looks ugly/false, why? Compare with L352",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_82ac2434",
+        "filename": "includes/Resources.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 1563,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "unrelated and unneded :)",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_42d7ecf2",
         "filename": "includes/models/MobileCollection.php",
         "patchSetId": 10
@@ -30,6 +64,23 @@
       "writtenOn": "2015-02-04T19:45:47Z",
       "side": 1,
       "message": "$user",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_62822899",
+        "filename": "includes/models/MobileCollection.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "use Type hinting for user object",
       "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -138,6 +189,23 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_c248dc8e",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "needs doc",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_22daf078",
         "filename": "includes/specials/SpecialCollections.php",
         "patchSetId": 10
@@ -172,6 +240,40 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_e24dd89c",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "$this-\u003emsg instead of wfMessage",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0236d400",
+        "filename": "includes/stores/CollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "@abstract",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_a2c5a092",
         "filename": "includes/stores/CollectionStore.php",
         "patchSetId": 10
@@ -183,6 +285,91 @@
       "writtenOn": "2015-02-04T19:45:47Z",
       "side": 1,
       "message": "Make it an interface?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a25fe043",
+        "filename": "includes/stores/CollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "@abstract",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_42336c0a",
+        "filename": "includes/stores/WatchlistCollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "i\u0027m pretty sure, that this doesn\u0027t work, see http://phpdoc.org/docs/latest/guides/inheritance.html",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_021d7478",
+        "filename": "includes/stores/WatchlistCollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "\"Initialize\"",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8210a45c",
+        "filename": "includes/stores/WatchlistCollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "there is a missing \"User\", should be:\n@param User $user User to lookup watchlist members for\n\n(sounds strange :P)",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c2169c5a",
+        "filename": "includes/stores/WatchlistCollectionStore.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "use type hinting",
       "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -240,6 +427,23 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_420a8c2a",
+        "filename": "includes/views/MobileCollectionItemCardView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "see comment in WatchlistCollectionStore.php",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_22dd1048",
         "filename": "includes/views/MobileCollectionView.php",
         "patchSetId": 10
@@ -251,6 +455,23 @@
       "writtenOn": "2015-02-04T19:45:47Z",
       "side": 1,
       "message": "Captain Obvious?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8d0f7533",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "use type hinting",
       "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -308,6 +529,91 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_ad3a71be",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "@private",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ad0cb13e",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "use type hinting",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6d16994f",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "This looks odd :)",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cd1c8d6d",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "You don\u0027t reuse description really, maybe you can use $collection-\u003egetDescription() directly where it is needed? Same for $owner?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ed21499b",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "parameter doc?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_c2af7c90",
         "filename": "includes/views/MobileCollectionView.php",
         "patchSetId": 10
@@ -319,6 +625,23 @@
       "writtenOn": "2015-02-04T19:45:47Z",
       "side": 1,
       "message": "CAPS?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4d307de5",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "Type hinting (especially because you try to access an object (of which type?).",
       "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -438,6 +761,57 @@
       "writtenOn": "2015-02-04T19:45:47Z",
       "side": 1,
       "message": "Parameter doc/annotation?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0d4a855f",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "type hinting?",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2d4f4170",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "@inheritdoc doesn\u0027t work in phpdoc iirc",
+      "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8d3d35bb",
+        "filename": "includes/views/MobileCollectionView.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T20:26:44Z",
+      "side": 1,
+      "message": "i haven\u0027t checked it, but isn\u0027t it possible to count the number of pages in the load process and save it as a class variable and access it via MobileCollection::getCount() or something else, instead of count it here (and every time again, when you need the count of the elements later)?",
       "revId": "d5265240bb75dc461fcae45c5d9a0536433270d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
