@@ -12,30 +12,6 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	/** @var string Describes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'alpha';
 
-	/** @inheritdoc **/
-	protected function getHeaderHtml() {
-		$html = parent::getHeaderHtml();
-		$vars = $this->getSkinConfigVariables();
-		$description = $vars['wgMFDescription'];
-		if ( $description && !$this->getTitle()->isSpecialPage() ) {
-			$html .= Html::element( 'div',
-				array(
-					'class' => 'tagline',
-				), $description );
-		}
-		return $html;
-	}
-
-	/**
-	 * Get the needed styles for this skin
-	 * @return array
-	 */
-	protected function getSkinStyles() {
-		$styles = parent::getSkinStyles();
-		$styles[] = 'skins.minerva.alpha.styles';
-		return $styles;
-	}
-
 	/**
 	 * Returns the javascript modules to load.
 	 * @return array
@@ -79,7 +55,6 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgMFEditorOptions']['anonymousEditing'] = true;
-		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
 		$vars['wgWikiBasePropertyConfig'] = $config->get( 'WikiBasePropertyConfig' );
 		$vars['wgMFInfoboxConfig'] = $config->get( 'MFInfoboxConfig' );
 		$vars['wgMFShowRedLinks'] = true;

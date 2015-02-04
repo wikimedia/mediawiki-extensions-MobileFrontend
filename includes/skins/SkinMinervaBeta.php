@@ -12,6 +12,27 @@ class SkinMinervaBeta extends SkinMinerva {
 	/** @var string $mode Describes 'stability' of the skin - alpha, beta, stable */
 	protected $mode = 'beta';
 
+	/** @inheritdoc **/
+	protected function getHeaderHtml() {
+		$html = parent::getHeaderHtml();
+		$vars = $this->getSkinConfigVariables();
+		$description = $vars['wgMFDescription'];
+		if ( $description && !$this->getTitle()->isSpecialPage() ) {
+			$html .= Html::element( 'div',
+				array(
+					'class' => 'tagline',
+				), $description );
+		}
+		return $html;
+	}
+
+	public function getSkinConfigVariables() {
+		$vars = parent::getSkinConfigVariables();
+		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
+
+		return $vars;
+	}
+
 	/**
 	 * initialize various variables and generate the template
 	 * @param OutputPage $out optional parameter: The OutputPage Obj.
@@ -109,6 +130,9 @@ class SkinMinervaBeta extends SkinMinerva {
 		$styles[] = 'mediawiki.ui.icon';
 		$styles[] = 'skins.minerva.icons.styles';
 		$styles[] = 'skins.minerva.icons.images';
+		$styles[] = 'skins.minerva.beta.styles';
+		$styles[] = 'skins.minerva.beta.images';
+
 		return $styles;
 	}
 
