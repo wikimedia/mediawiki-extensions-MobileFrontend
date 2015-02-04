@@ -82,11 +82,14 @@
 			} );
 			Panel.prototype.initialize.apply( this, arguments );
 
-			// log page impression and widget impression when the widget is shown
-			this.once( 'show', function () {
-				self.logPageImpression();
-				self.initializeWidgetImpressionLogging();
+			// log page impression
+			// Only turn this on for bucketed tests with a relatively small number of
+			// users, e.g. 10% of readers.
+			//self.logPageImpression();
 
+			// log widget impression when the widget is shown
+			this.once( 'show', function () {
+				self.initializeWidgetImpressionLogging();
 			} );
 		},
 
