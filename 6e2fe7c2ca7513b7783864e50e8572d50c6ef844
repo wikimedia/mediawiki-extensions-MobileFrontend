@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3ca3f9a9",
+        "filename": "javascripts/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-04T15:28:03Z",
+      "side": 1,
+      "message": "We need to ween ourselves off using M for anything other than require, define, on and off.\nI\u0027ll remove this in a follow up patchset. Caching this seems like a microoptimisation.",
+      "revId": "6e2fe7c2ca7513b7783864e50e8572d50c6ef844",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_dce68513",
+        "filename": "javascripts/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-04T15:28:03Z",
+      "side": 1,
+      "message": "FYI these can be chained. Would be good to fix this in a follow up or as part of this commit.",
+      "revId": "6e2fe7c2ca7513b7783864e50e8572d50c6ef844",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
