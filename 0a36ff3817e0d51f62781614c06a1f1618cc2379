@@ -34,6 +34,24 @@
       "revId": "0a36ff3817e0d51f62781614c06a1f1618cc2379",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8871a30d",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T22:40:39Z",
+      "side": 1,
+      "message": "i think it\u0027s just a personal thing, the change from 1...2...3....4 to 0.4515616166541456...0.7846541651641561...0.2648+945259468 and so on :)",
+      "parentUuid": "6e7c4fa4_484dcbdf",
+      "revId": "0a36ff3817e0d51f62781614c06a1f1618cc2379",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
