@@ -36,13 +36,13 @@ class SkinMinerva extends SkinTemplate {
 	 * @return QuickTemplate
 	 */
 	protected function prepareQuickTemplate() {
-		global $wgAppleTouchIcon, $wgMFNoindexPages;
+		$appleTouchIcon = $this->getConfig()->get( 'AppleTouchIcon' );
 
 		$out = $this->getOutput();
 		// add head items
-		if ( $wgAppleTouchIcon !== false ) {
+		if ( $appleTouchIcon !== false ) {
 			$out->addHeadItem( 'touchicon',
-				Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $wgAppleTouchIcon ) )
+				Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $appleTouchIcon ) )
 			);
 		}
 		$out->addHeadItem( 'viewport',
@@ -54,7 +54,7 @@ class SkinMinerva extends SkinTemplate {
 				)
 			)
 		);
-		if ( $wgMFNoindexPages ) {
+		if ( $this->getMFConfig()->get( 'MFNoindexPages' ) ) {
 			$out->setRobotPolicy( 'noindex,nofollow' );
 		}
 
@@ -141,8 +141,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @return boolean
 	 */
 	protected function isAllowedPageAction( $action ) {
-		global $wgMFPageActions;
-		if ( in_array( $action, $wgMFPageActions ) ) {
+		if ( in_array( $action, $this->getMFConfig()->get( 'MFPageActions' ) ) ) {
 			return true;
 		} else {
 			return false;
@@ -420,7 +419,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @return array
 	 */
 	protected function getDiscoveryTools() {
-		global $wgMFNearby, $wgMFNearbyEndpoint, $wgMFContentNamespace;
+		$config = $this->getMFConfig();
 
 		$items = array(
 			'home' => array(
@@ -437,7 +436,7 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'Randompage',
-							MWNamespace::getCanonicalName( $wgMFContentNamespace ) )->getLocalUrl() .
+							MWNamespace::getCanonicalName( $config->get( 'MFContentNamespace' ) ) )->getLocalUrl() .
 								'#/random',
 						'class' => MobileUI::iconClass( 'random', 'before' ),
 						'id' => 'randomButton',
@@ -455,7 +454,10 @@ class SkinMinerva extends SkinTemplate {
 				'class' => 'jsonly',
 			),
 		);
-		if ( !$wgMFNearby || ( !$wgMFNearbyEndpoint && !class_exists( 'GeoData' ) ) ) {
+		if (
+			!$config->get( 'MFNearby' ) ||
+			( !$config->get( 'MFNearbyEndpoint' ) && !class_exists( 'GeoData' ) )
+		) {
 			unset( $items['nearby'] );
 		}
 		return $items;
@@ -470,11 +472,11 @@ class SkinMinerva extends SkinTemplate {
 	public function getLoginUrl( $query ) {
 		if ( $this->isMobileMode ) {
 			// FIXME: Does mobile really need special casing here?
-			global $wgSecureLogin;
+			$secureLogin = $this->getConfig()->get( 'SecureLogin' );
 
-			if ( WebRequest::detectProtocol() != 'https' && $wgSecureLogin ) {
+			if ( WebRequest::detectProtocol() != 'https' && $secureLogin ) {
 				$loginUrl = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
-				return $this->mobileContext->getMobileUrl( $loginUrl, $wgSecureLogin );
+				return $this->mobileContext->getMobileUrl( $loginUrl, $secureLogin );
 			}
 			return SpecialPage::getTitleFor( 'Userlogin' )->getLocalURL( $query );
 		} else {
@@ -487,8 +489,6 @@ class SkinMinerva extends SkinTemplate {
 	 * @return array Representation of button with text and href keys
 	 */
 	protected function getLogInOutLink() {
-		global $wgSecureLogin;
-
 		$query = array();
 		if ( !$this->getRequest()->wasPosted() ) {
 			$returntoquery = $this->getRequest()->getValues();
@@ -508,7 +508,7 @@ class SkinMinerva extends SkinTemplate {
 				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			}
 			$url = SpecialPage::getTitleFor( 'Userlogout' )->getFullURL( $query );
-			$url = $this->mobileContext->getMobileUrl( $url, $wgSecureLogin );
+			$url = $this->mobileContext->getMobileUrl( $url, $this->getConfig()->get( 'SecureLogin' ) );
 			$username = $user->getName();
 
 			$loginLogoutLink = array(
@@ -678,11 +678,9 @@ class SkinMinerva extends SkinTemplate {
 	 * @param BaseTemplate $tpl
 	 */
 	protected function prepareBanners( BaseTemplate $tpl ) {
-		global $wgMFEnableSiteNotice;
-
 		// Make sure Zero banner are always on top
 		$banners = array( '<div id="siteNotice"></div>' );
-		if ( $wgMFEnableSiteNotice ) {
+		if ( $this->getMFConfig( 'MFEnableSiteNotice' ) ) {
 			$siteNotice = $this->getSiteNotice();
 			if ( $siteNotice ) {
 				$banners[] = $siteNotice;
@@ -823,32 +821,23 @@ class SkinMinerva extends SkinTemplate {
 	 * @return array
 	 */
 	public function getSkinConfigVariables() {
-		global $wgMFLeadPhotoUploadCssSelector,
-			$wgMFUseCentralAuthToken,
-			$wgMFDeviceWidthTablet,
-			$wgMFEnableJSConsoleRecruitment,
-			$wgMFAjaxUploadProgressSupport,
-			$wgMFEditorOptions,
-			$wgMFWikiDataEndpoint,
-			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc,
-			$wgMFCollapseSectionsByDefault, $wgMFShowRedLinksAnon,
-			$wgMFShowRedLinks;
-
 		$title = $this->getTitle();
 		$user = $this->getUser();
+		$config = $this->getMFConfig();
 
 		$vars = array(
-			'wgMFEnableJSConsoleRecruitment' => $wgMFEnableJSConsoleRecruitment,
-			'wgMFWikiDataEndpoint' => $wgMFWikiDataEndpoint,
-			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
-			'wgMFEditorOptions' => $wgMFEditorOptions,
-			'wgMFPhotoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
-			'wgMFLeadPhotoUploadCssSelector' => $wgMFLeadPhotoUploadCssSelector,
-			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
+			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
+			'wgMFWikiDataEndpoint' => $config->get( 'MFWikiDataEndpoint' ),
+			'wgMFUseCentralAuthToken' => $config->get( 'MFUseCentralAuthToken' ),
+			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
+			'wgMFPhotoUploadAppendToDesc' => $config->get( 'MFPhotoUploadAppendToDesc' ),
+			'wgMFLeadPhotoUploadCssSelector' => $config->get( 'MFLeadPhotoUploadCssSelector' ),
+			'wgMFPhotoUploadEndpoint' =>
+				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
-			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
+			'wgMFDeviceWidthTablet' => $config->get( 'MFDeviceWidthTablet' ),
 			'wgMFMode' => $this->getMode(),
-			'wgMFCollapseSectionsByDefault' => $wgMFCollapseSectionsByDefault,
+			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 			'wgTOC' => $this->getOutput()->getProperty( 'MinervaTOC' ),
 			'wgMFPageSections' => $this->isMobileMode
 		);
@@ -858,8 +847,8 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		$vars['wgMFShowRedLinks'] = $user->isLoggedIn()
-			? $wgMFShowRedLinks
-			: $wgMFShowRedLinksAnon;
+			? $config->get( 'MFShowRedLinks' )
+			: $config->get( 'MFShowRedLinksAnon' );
 
 		// Get variables that are only needed in mobile mode
 		if ( $this->isMobileMode ) {
@@ -1026,25 +1015,27 @@ class SkinMinerva extends SkinTemplate {
 	 * @return string
 	 */
 	public static function getSitename() {
-		global $wgMFCustomLogos, $wgMFTrademarkSitename;
+		$config = MobileContext::singleton()->getMFConfig();
+		$customLogos = $config->get( 'MFCustomLogos' );
+		$trademarkSitename = $config->get( 'MFTrademarkSitename' );
 
 		$footerSitename = wfMessage( 'mobile-frontend-footer-sitename' )->text();
 
-		if ( isset( $wgMFCustomLogos['copyright'] ) ) {
-			$suffix = $wgMFTrademarkSitename ? ' ®' : '';
+		if ( isset( $customLogos['copyright'] ) ) {
+			$suffix = $trademarkSitename ? ' ®' : '';
 			$attributes =  array(
-				'src' => $wgMFCustomLogos['copyright'],
+				'src' => $customLogos['copyright'],
 				'alt' => $footerSitename . $suffix,
 			);
-			if ( isset( $wgMFCustomLogos['copyright-height'] ) ) {
-				$attributes['height'] = $wgMFCustomLogos['copyright-height'];
+			if ( isset( $customLogos['copyright-height'] ) ) {
+				$attributes['height'] = $customLogos['copyright-height'];
 			}
-			if ( isset( $wgMFCustomLogos['copyright-width'] ) ) {
-				$attributes['width'] = $wgMFCustomLogos['copyright-width'];
+			if ( isset( $customLogos['copyright-width'] ) ) {
+				$attributes['width'] = $customLogos['copyright-width'];
 			}
 			$sitename = Html::element( 'img', $attributes );
 		} else {
-			$suffix = $wgMFTrademarkSitename ? ' ™' : '';
+			$suffix = $trademarkSitename ? ' ™' : '';
 			$sitename = $footerSitename . $suffix;
 		}
 
@@ -1107,12 +1098,13 @@ HTML;
 	 * @return string
 	 */
 	public static function getLicenseLink( $context, $attribs = array() ) {
-		global $wgRightsPage, $wgRightsUrl, $wgRightsText;
+		$config = MobileContext::singleton()->getConfig();
+		$rightsPage = $config->get( 'RightsPage' );
+		$rightsUrl = $config->get( 'RightsUrl' );
+		$rightsText = $config->get( 'RightsText' );
 
 		// Construct the link to the licensing terms
-		if ( $wgRightsText ) {
-			// Switch to a local variable so we don't overwrite the global
-			$rightsText = $wgRightsText;
+		if ( $rightsText ) {
 			// Use shorter text for some common licensing strings. See Installer.i18n.php
 			// for the currently offered strings. Unfortunately, there is no good way to
 			// comprehensively support localized licensing strings since the license (as
@@ -1130,11 +1122,11 @@ HTML;
 			if ( isset( $commonLicenses[$rightsText] ) ) {
 				$rightsText = $commonLicenses[$rightsText];
 			}
-			if ( $wgRightsPage ) {
-				$title = Title::newFromText( $wgRightsPage );
+			if ( $rightsPage ) {
+				$title = Title::newFromText( $rightsPage );
 				$link = Linker::linkKnown( $title, $rightsText, $attribs );
-			} elseif ( $wgRightsUrl ) {
-				$link = Linker::makeExternalLink( $wgRightsUrl, $rightsText, true, '', $attribs );
+			} elseif ( $rightsUrl ) {
+				$link = Linker::makeExternalLink( $rightsUrl, $rightsText, true, '', $attribs );
 			} else {
 				$link = $rightsText;
 			}
