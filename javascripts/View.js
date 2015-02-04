@@ -120,7 +120,8 @@
 		/**
 		 * A set of default options that are merged with options passed into the initialize function.
 		 *
-		 * @cfg {Object}
+		 * @cfg {Object} defaults Default options hash.
+		 * @cfg {jQuery.Object|String} [defaults.el] jQuery selector to use for rendering.
 		 */
 		defaults: {},
 
