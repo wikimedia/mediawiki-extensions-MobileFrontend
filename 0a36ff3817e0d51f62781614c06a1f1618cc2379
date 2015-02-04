@@ -16,6 +16,24 @@
       "revId": "0a36ff3817e0d51f62781614c06a1f1618cc2379",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_484dcbdf",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-04T22:36:45Z",
+      "side": 1,
+      "message": "Why does it look very strange? I don\u0027t see anything wrong with that.",
+      "parentUuid": "6e7c4fa4_c8e31bd3",
+      "revId": "0a36ff3817e0d51f62781614c06a1f1618cc2379",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
