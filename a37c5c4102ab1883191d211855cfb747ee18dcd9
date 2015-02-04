@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_bc3dc98c",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-04T14:26:49Z",
+      "side": 1,
+      "message": "We should check here if we are going to render collection 0, and then check if the $user is the same as $this-\u003egetUser. That will in the future be the check to see if a collection is private or not, but for the moment that should do it.",
+      "revId": "a37c5c4102ab1883191d211855cfb747ee18dcd9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_40cdad61",
         "filename": "includes/specials/SpecialCollections.php",
         "patchSetId": 3
@@ -13,6 +30,24 @@
       "writtenOn": "2015-02-03T21:19:11Z",
       "side": 1,
       "message": "I\u0027d rather we just did nothing for now.",
+      "revId": "a37c5c4102ab1883191d211855cfb747ee18dcd9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5cbfd5f6",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-04T14:26:49Z",
+      "side": 1,
+      "message": "Considering there is no menu item, we can just do nothing, and to test it we can go to /user/0",
+      "parentUuid": "6e7c4fa4_40cdad61",
       "revId": "a37c5c4102ab1883191d211855cfb747ee18dcd9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
