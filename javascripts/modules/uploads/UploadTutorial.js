@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var context = M.require( 'context' ),
 		Overlay = M.require( 'Overlay' ),
@@ -39,12 +39,10 @@
 		 */
 		defaults: {
 			slideLeftButton: new Icon( {
-				name: 'previous',
-				additionalClassNames: 'slider-button prev'
+				name: 'previous'
 			} ).toHtmlString(),
 			slideRightButton: new Icon( {
-				name: 'next',
-				additionalClassNames: 'slider-button next'
+				name: 'next'
 			} ).toHtmlString(),
 			inBeta: context.isBetaGroupMember(),
 			pages: [
@@ -65,10 +63,11 @@
 
 		/** @inheritdoc */
 		postRender: function ( options ) {
-			var $button = this.$( '.button' );
+			var $button = this.$( '.button' ),
+				photoUploaderButton;
 
 			if ( options.funnel ) {
-				new LeadPhotoUploaderButton( {
+				photoUploaderButton = new LeadPhotoUploaderButton( {
 					el: $button,
 					buttonCaption: buttonMsg,
 					funnel: options.funnel
@@ -97,9 +96,10 @@
 		 * @method
 		 */
 		onClickUploadButton: function () {
-			// need timeout for the file dialog to open
-			setTimeout( $.proxy( this, 'hide' ), 0 );
-			setTimeout( $.proxy( this, 'emit', 'hide' ), 0 );
+			this.emit( 'hide' );
+			// FIXME: this is a hack. Not sure why this is needed but without it
+			// when escaping the upload interface you will still see it.
+			this.$el.hide();
 		},
 
 		/**
@@ -123,4 +123,4 @@
 
 	M.define( 'modules/uploads/UploadTutorial', UploadTutorial );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
