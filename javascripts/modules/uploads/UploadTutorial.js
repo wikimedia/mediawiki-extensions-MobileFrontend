@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 
 	var context = M.require( 'context' ),
 		Overlay = M.require( 'Overlay' ),
@@ -19,11 +19,11 @@
 		className: 'overlay carousel tutorial content-overlay',
 
 		/** @inheritdoc */
-		events: {
+		events: $.extend( {}, Overlay.prototype.events, {
 			'click .prev': 'onPreviousClick',
 			'click .next': 'onNextClick',
 			'click .button': 'onClickUploadButton'
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
@@ -123,4 +123,4 @@
 
 	M.define( 'modules/uploads/UploadTutorial', UploadTutorial );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

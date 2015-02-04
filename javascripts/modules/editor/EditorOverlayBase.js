@@ -71,12 +71,13 @@
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
 		/** @inheritdoc **/
 		className: 'overlay editor-overlay',
-		events: {
+		events: $.extend( {}, Overlay.prototype.events, {
 			// FIXME: This should be .close (see bug 71203)
 			'click .back': 'onClickBack',
 			'click .continue': 'onClickContinue',
 			'click .submit': 'onClickSubmit'
-		},
+		} ),
+
 		/**
 		 * Logs an event to  http://meta.wikimedia.org/wiki/Schema:MobileWebEditing
 		 * @param {String} action name in workflow.
@@ -95,7 +96,6 @@
 			}
 			return this.schema.log( data );
 		},
-
 		/**
 		 * If this is a new article, require confirmation before saving.
 		 * @method

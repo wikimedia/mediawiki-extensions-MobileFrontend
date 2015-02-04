@@ -72,6 +72,11 @@
 			fixedHeader: true,
 			spinner: icons.spinner().toHtmlString()
 		},
+		events: {
+			// FIXME: Remove .initial-header selector when bug 71203 resolved.
+			'click .cancel, .confirm, .initial-header .back': 'onExit',
+			click: 'stopPropagation'
+		},
 		/**
 		 * Flag overlay to close on content tap
 		 * @property {Boolean}
@@ -102,56 +107,67 @@
 		},
 		/** @inheritdoc */
 		postRender: function ( options ) {
-			var
-				self = this,
-				$overlayContent = this.$overlayContent = this.$( '.overlay-content' ),
-				startY;
+			var self = this;
 
+			this.$overlayContent = this.$( '.overlay-content' );
 			this.$spinner = this.$( '.spinner' );
 			if ( this.isIos ) {
 				this.$el.addClass( 'overlay-ios' );
 			}
 			// Truncate any text inside in the overlay header.
 			this.$( '.overlay-header h2 span' ).addClass( 'truncated-text' );
-			// FIXME: Remove .initial-header selector when bug 71203 resolved.
-			this.$( '.cancel, .confirm, .initial-header .back' ).on( 'click', function ( ev ) {
-				ev.preventDefault();
-				ev.stopPropagation();
-				window.history.back();
-			} );
-			// stop clicks in the overlay from propagating to the page
-			// (prevents non-fullscreen overlays from being closed when they're tapped)
-			this.$el.on( 'click', function ( ev ) {
-				ev.stopPropagation();
-			} );
 
 			if ( this.isIos && this.hasFixedHeader ) {
-				$overlayContent
-					.on( 'touchstart', function ( ev ) {
-						startY = ev.originalEvent.touches[0].pageY;
-					} )
-					.on( 'touchmove', function ( ev ) {
-						var
-							y = ev.originalEvent.touches[0].pageY,
-							contentLenght = $overlayContent.prop( 'scrollHeight' ) - $overlayContent.outerHeight();
-
-						ev.stopPropagation();
-						// prevent scrolling and bouncing outside of .overlay-content
-						if (
-							( $overlayContent.scrollTop() === 0 && startY < y ) ||
-							( $overlayContent.scrollTop() === contentLenght && startY > y )
-						) {
-							ev.preventDefault();
-						}
-					} );
-
+				this.$( '.overlay-content' ).on( 'touchstart', $.proxy( this, 'onTouchStart' ) );
+				this.$( '.overlay-content' ).on( 'touchmove', $.proxy( this, 'onTouchMove' ) );
 				// wait for things to render before doing any calculations
 				setTimeout( function () {
 					self._fixIosHeader( 'textarea, input' );
 				}, 0 );
 			}
 		},
+		/**
+		 * ClickBack event handler
+		 * @param {Object} ev event object
+		 */
+		onExit: function ( ev ) {
+			ev.preventDefault();
+			ev.stopPropagation();
+			window.history.back();
+		},
+		/**
+		* Event handler for touchstart, for IOS
+		* @param {Object} ev Event Object
+		*/
+		onTouchStart: function ( ev ) {
+			this.startY = ev.originalEvent.touches[0].pageY;
+		},
+		/**
+		* Event handler for touch move, for IOS
+		* @param {Object} ev Event Object
+		*/
+		onTouchMove: function ( ev ) {
+			var
+				y = ev.originalEvent.touches[0].pageY,
+				contentLenght = $( ev.target ).prop( 'scrollHeight' ) - $( ev.target ).outerHeight();
 
+			ev.stopPropagation();
+			// prevent scrolling and bouncing outside of .overlay-content
+			if (
+				( $( ev.target ).scrollTop() === 0 && this.startY < y ) ||
+				( $( ev.target ).scrollTop() === contentLenght && this.startY > y )
+			) {
+				ev.preventDefault();
+			}
+		},
+		/**
+		 * Stop clicks in the overlay from propagating to the page
+		 * (prevents non-fullscreen overlays from being closed when they're tapped)
+		 * @param {Object} ev Event Object
+		 */
+		stopPropagation: function ( ev ) {
+			ev.stopPropagation();
+		},
 		/**
 		 * Attach overlay to current view and show it.
 		 * @method
