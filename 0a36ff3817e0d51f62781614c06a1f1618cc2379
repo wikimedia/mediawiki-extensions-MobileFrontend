@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c8e31bd3",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-04T22:35:01Z",
+      "side": 1,
+      "message": "i don\u0027t feel comfortable with this, it looks very strange:\ncollapsible-block-0.39298827829770744\n:/ Is there no better solution? E.g. this construct (haven\u0027t tested and haven\u0027t tought about it very well, but maybe it helps :P):\n\nvar offset \u003d 0;\n$container.find( tagName ).each( function ( i ) {\n\tvar $heading \u003d $( this ),\n\t\tid,\n\t\tcounter \u003d parseInt( i ) + parseInt( offset );\n\twhile ( $( \u0027#collapsible-block-\u0027 + counter ).length !\u003d\u003d 0 ) {\n\t\toffset++;\n\t\tcounter \u003d parseInt( i ) + parseInt( offset )\n\t}\n\tid \u003d \u0027collapsible-block-\u0027 + counter;\n} );",
+      "revId": "0a36ff3817e0d51f62781614c06a1f1618cc2379",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
