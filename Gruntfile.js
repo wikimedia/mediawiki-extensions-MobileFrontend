@@ -119,6 +119,7 @@ module.exports = function ( grunt ) {
 						'jqXHR',
 						'File',
 						'mw.user',
+						'OO.ui.LookupElement',
 						'OO.EventEmitter'
 					],
 					'ignore-global': true,

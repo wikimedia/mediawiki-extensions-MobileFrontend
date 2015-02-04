@@ -24,35 +24,33 @@
 	 * Example:
 	 *     @example
 	 *     <code>
-	 *     var InfiniteScroll = M.require( 'InfiniteScroll' ),
-	 *       PhotoList;
-	 *
-	 *     PhotoList = View.extend( {
-	 *       //...
-	 *       initialize: function ( options ) {
-	 *         this.api = new PhotoListApi( {
-	 *           username: options.username
-	 *         } );
-	 *         // 1. Set up infinite scroll helper and listen to events
-	 *         this.infiniteScroll = new InfiniteScroll( 1000 );
-	 *         this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
-	 *
-	 *         View.prototype.initialize.apply( this, arguments );
-	 *       },
-	 *       preRender: function () {
-	 *         // 2. Disable until we've got the list rendered and set DOM el
-	 *         this.infiniteScroll.setElement( this.$el );
-	 *         this.infiniteScroll.disable();
-	 *       },
-	 *       _loadPhotos: function () {
-	 *         var self = this;
-	 *         this.api.getPhotos().done( function ( photos ) {
-	 *           // load photos into the DOM ...
-	 *           // 3. and (re-)enable infinite scrolling
-	 *           self.infiniteScroll.enable();
-	 *         } );
-	 *       }
-	 *     } );
+	 *       var InfiniteScroll = M.require( 'InfiniteScroll' ),
+	 *         PhotoList;
+	 *       PhotoList = View.extend( {
+	 *         //...
+	 *         initialize: function ( options ) {
+	 *           this.api = new PhotoListApi( {
+	 *             username: options.username
+	 *           } );
+	 *           // 1. Set up infinite scroll helper and listen to events
+	 *           this.infiniteScroll = new InfiniteScroll( 1000 );
+	 *           this.infiniteScroll.on( 'load', $.proxy( this, '_loadPhotos' ) );
+	 *           View.prototype.initialize.apply( this, arguments );
+	 *         },
+	 *         preRender: function () {
+	 *           // 2. Disable until we've got the list rendered and set DOM el
+	 *           this.infiniteScroll.setElement( this.$el );
+	 *           this.infiniteScroll.disable();
+	 *         },
+	 *         _loadPhotos: function () {
+	 *           var self = this;
+	 *           this.api.getPhotos().done( function ( photos ) {
+	 *             // load photos into the DOM ...
+	 *             // 3. and (re-)enable infinite scrolling
+	 *             self.infiniteScroll.enable();
+	 *           } );
+	 *         }
+	 *       } );
 	 *     </code>
 	 */
 	InfiniteScroll = EventEmitter.extend( {

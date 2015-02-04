@@ -10,7 +10,7 @@
 	 */
 	Api = EventEmitter.extend( mw.Api.prototype ).extend( {
 		/**
-		 * @property {String} apiURL
+		 * @property {String} apiUrl
 		 * URL to the api endpoint (api.php)
 		 */
 		apiUrl: mw.util.wikiScript( 'api' ),
