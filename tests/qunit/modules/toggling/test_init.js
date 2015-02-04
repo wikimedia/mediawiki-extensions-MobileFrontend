@@ -26,7 +26,7 @@
 
 	QUnit.test( 'Toggle section', 5, function ( assert ) {
 		var $section = this.$section0,
-			$content = this.$container.find( '#collapsible-block-0' );
+			$content = this.$container.find( '.collapsible-block' ).eq( 0 );
 
 		assert.strictEqual( $section.hasClass( 'open-block' ), true, 'open-block class present' );
 		toggle.toggle( $section );
@@ -47,18 +47,18 @@
 
 	QUnit.test( 'Reveal element', 2, function ( assert ) {
 		toggle.reveal( 'First_Section' );
-		assert.strictEqual( this.$container.find( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
+		assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 0 ).hasClass( 'open-block' ), true, 'check content is visible' );
 		assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 	} );
 
 	QUnit.test( 'Clicking hash links', 2, function ( assert ) {
 		this.$container.find( '[href=#First_Section]' ).trigger( 'click' );
-		assert.strictEqual( this.$container.find( '#collapsible-block-0' ).hasClass( 'open-block' ), true, 'check content is visible' );
+		assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 0 ).hasClass( 'open-block' ), true, 'check content is visible' );
 		assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 	} );
 
 	QUnit.test( 'Tap event toggles section', 2, function ( assert ) {
-		var $content = this.$container.find( '#collapsible-block-1' );
+		var $content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
 		assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
@@ -69,7 +69,7 @@
 
 	QUnit.test( 'Verify aria attributes', 9, function ( assert ) {
 		var $section = this.$container.find( '#section_1' ),
-			$content = this.$container.find( '#collapsible-block-1' );
+			$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
 		// Test the initial state produced by the init function
 		assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
@@ -107,7 +107,7 @@
 	} );
 
 	QUnit.test( 'Open by default', 1, function ( assert ) {
-		assert.strictEqual( this.$container.find( '#collapsible-block-1' ).hasClass( 'open-block' ),
+		assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 1 ).hasClass( 'open-block' ),
 			true, 'check section is visible at start' );
 	} );
 
@@ -131,7 +131,7 @@
 	} );
 
 	QUnit.test( 'Open by default', 1, function ( assert ) {
-		assert.strictEqual( this.$container.find( '#collapsible-block-1' ).hasClass( 'open-block' ), true, 'check section is visible at start' );
+		assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 1 ).hasClass( 'open-block' ), true, 'check section is visible at start' );
 	} );
 
 	/**
@@ -155,7 +155,7 @@
 
 	QUnit.test( 'Pressing space/ enter toggles a heading', 3, function ( assert ) {
 		var $section = this.$container.find( '#section_1' ),
-			$content = this.$container.find( '#collapsible-block-1' ),
+			$content = this.$container.find( '.collapsible-block' ).eq( 1 ),
 			ev = jQuery.Event( 'keypress' );
 
 		assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
@@ -173,7 +173,7 @@
 
 	QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', 2, function ( assert ) {
 		var $section = $( '#section_1' ),
-			$content = $( '#collapsible-block-1' );
+			$content = $( '.collapsible-block' ).eq( 1 );
 
 		assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 

@@ -209,9 +209,9 @@
 		expandSections = !collapseSectionsByDefault ||
 			( context.isAlphaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
 
-		$container.find( tagName ).each( function ( i ) {
+		$container.find( tagName ).each( function () {
 			var $heading = $( this ),
-				id = 'collapsible-block-' + i;
+				id = 'collapsible-block-' + Math.random().toString();
 			// Be sure there is a div wrapping the section content.
 			// Otherwise, collapsible sections for this page is not enabled.
 			if ( $heading.next().is( 'div' ) ) {
