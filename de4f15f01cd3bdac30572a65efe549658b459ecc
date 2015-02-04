@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_edfce9d7",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-02-04T20:40:35Z",
+      "side": 1,
+      "message": "I haven\u0027t tested this, but, is it on purpose that title changed from \"profile-error\" to \"profile-title\", but showHtmlNoUser() still uses \"profile-error\" for the \u003ch2\u003e?",
+      "revId": "de4f15f01cd3bdac30572a65efe549658b459ecc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
