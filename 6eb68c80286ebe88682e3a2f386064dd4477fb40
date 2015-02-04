@@ -16,6 +16,24 @@
       "revId": "6eb68c80286ebe88682e3a2f386064dd4477fb40",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3c94598d",
+        "filename": "less/specials/collections.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-04T14:17:05Z",
+      "side": 1,
+      "message": "Ok, any suggestions? I don\u0027t know how to fix the icon size without targeting the pseudoelement.\n\nI\u0027ll add an extra class for the read more marker so that i can target it independently of the icon system used.",
+      "parentUuid": "6e7c4fa4_20bd11ae",
+      "revId": "6eb68c80286ebe88682e3a2f386064dd4477fb40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
