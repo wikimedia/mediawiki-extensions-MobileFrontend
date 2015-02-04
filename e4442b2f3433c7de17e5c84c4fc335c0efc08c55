@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_99e81fdf",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-04T11:34:21Z",
+      "side": 1,
+      "message": "$pattern and $manifest are unused.",
+      "revId": "e4442b2f3433c7de17e5c84c4fc335c0efc08c55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_79ebc3db",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-04T11:34:21Z",
+      "side": 1,
+      "message": "You don\u0027t necessarily have to get the preg out here:\n\n    $parts \u003d explode( \u0027/\u0027, $titleText ); // e.g. [ \u0027Phuedx\u0027, \u0027MobileWebCollections.json\u0027 ]\n\n    if ( $parts[1] !\u003d\u003d \u0027MobileWebCollections.json\u0027 ) {\n        return true; // Not interested.\n    }\n\n    if ( $parts[0] !\u003d\u003d $user-\u003egetName() ) {\n        $result \u003d false;\n        return false; // Access denied!\n    }\n\n    return true;",
+      "revId": "e4442b2f3433c7de17e5c84c4fc335c0efc08c55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_397a2b20",
+        "filename": "includes/api/ApiMobileCollection.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-04T11:34:21Z",
+      "side": 1,
+      "message": "The key part of this method name is \"store\". You should be interacting with the UserPageCollectionStore here.\n\nIn fact, I think you can move #getStorageTitle, #storeData, #getManifest, #updateManifest, #getCollection, and #storeManifest to the UserPageCollectionStore class.",
+      "revId": "e4442b2f3433c7de17e5c84c4fc335c0efc08c55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_19c40f68",
+        "filename": "includes/specials/SpecialCollections.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-04T11:34:21Z",
+      "side": 1,
+      "message": "So this is disabled, right?",
+      "revId": "e4442b2f3433c7de17e5c84c4fc335c0efc08c55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_19abaf87",
+        "filename": "includes/stores/UserPageCollectionStore.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-04T11:34:21Z",
+      "side": 1,
+      "message": "This logic should be moved into the method that loads a collection. Constructors, generally speaking, shouldn\u0027t do a whole lot.",
+      "revId": "e4442b2f3433c7de17e5c84c4fc335c0efc08c55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b9b87be3",
+        "filename": "javascripts/specials/collections.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-04T11:34:21Z",
+      "side": 1,
+      "message": "Are you deliberately trying to exercise the race condition here (two incident edits to the same user page)?",
+      "revId": "e4442b2f3433c7de17e5c84c4fc335c0efc08c55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_99cfbf82",
+        "filename": "tests/phpunit/MobileFrontendHooksTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-04T11:34:21Z",
+      "side": 1,
+      "message": "Are these data representative of the inputs that the function receives? AFAICT you\u0027re not storing individual collections in sub-pages.",
+      "revId": "e4442b2f3433c7de17e5c84c4fc335c0efc08c55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
