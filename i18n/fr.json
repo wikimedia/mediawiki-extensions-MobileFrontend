@@ -34,7 +34,8 @@
 			"Macofe",
 			"0x010C",
 			"Benjozork",
-			"Orikrin1998"
+			"Orikrin1998",
+			"Element303"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -139,6 +140,7 @@
 	"mobile-frontend-editor-wait": "Enregistrement de la modification, veuillez patienter.",
 	"mobile-frontend-enable-images": "Activer les images sur le site mobile",
 	"mobile-frontend-errorreport-button-label": "Signaler une erreur",
+	"mobile-frontend-errorreport-error": "Erreur, le retour d'information n'a pas pu être envoyé.",
 	"mobile-frontend-errorreport-heading": "Signaler une erreur",
 	"mobile-frontend-errorreport-submit": "Envoyer",
 	"mobile-frontend-expand-sections-description": "Toujours développer toutes les sections en navigant vers une nouvelle page.",
@@ -381,5 +383,6 @@
 	"mobile-frontend-pageaction-upload-tooltip": "Télécharger une photo de fil conducteur pour cette page.",
 	"mobile-frontend-donate-button-label": "Faire un don",
 	"mobile-frontend-meta-data-issues-categories": "À propos de cette catégorie",
-	"mobile-frontend-loading-message": "Chargement…"
+	"mobile-frontend-loading-message": "Chargement…",
+	"mobile-frontend-console-recruit": "\\o/ Hey! C'est un logiciel open source et nous avons besoin de volontaires pour nous aider à construire cette chose, le rendre meilleur et résoudre les éventuels bugs que vous pourriez voir dans cette console JavaScript!\n\nVous pouvez trouver notre carnet de commandes @ https://phabricator.wikimedia.org/project/view/67/"
 }
