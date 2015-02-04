@@ -151,15 +151,22 @@ class SpecialUserProfile extends MobileSpecialPage {
 	}
 
 	/**
-	 * Get Html to show, that the user does not exist, or no user provided
+	 * Show error page, that the user does not exist, or no user provided
+	 * @param string $msgKey Message key to use as error message body
 	 * @return string
 	 */
-	protected function getHtmlNoUser() {
+	protected function displayNoUserError( $msgKey ) {
+		$out = $this->getOutput();
+
+		// generate a user friendly error with a meaningful message
 		$html = Html::openElement( 'div', array( 'class' => 'alert error' ) );
 		$html .= Html::element( 'h2', array(), $this->msg( 'mobile-frontend-profile-error' ) );
-		$html .= Html::element( 'p', array(), $this->msg( 'mobile-frontend-profile-nouser' ) );
+		$html .= Html::element( 'p', array(), $this->msg( $msgKey ) );
 		$html .= Html::closeElement( 'div' );
-		return $html;
+
+		// return page with status code 404, instead of 200 and output the error page
+		$out->setStatusCode( 404 );
+		$out->addHtml( $html );
 	}
 
 	/**
@@ -242,13 +249,13 @@ class SpecialUserProfile extends MobileSpecialPage {
 				$html .= $this->getUserFooterHtml()
 					. Html::closeElement( 'div' );
 
+				$out->addHtml( $html );
 			} else {
-				$html = $this->getHtmlNoUser();
+				$this->displayNoUserError( 'mobile-frontend-profile-nouser' );
 			}
-			$out->addHtml( $html );
 		} else {
-			wfHttpError( 404, $this->msg( 'mobile-frontend-profile-error' )->text(),
-				$this->msg( 'mobile-frontend-profile-noargs' )->text() );
+			$out->setPageTitle( $this->msg( 'mobile-frontend-profile-title' ) );
+			$this->displayNoUserError( 'mobile-frontend-profile-noargs' );
 		}
 	}
 
