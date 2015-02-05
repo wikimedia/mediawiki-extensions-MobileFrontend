@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_53c0202f",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-05T00:38:28Z",
+      "side": 1,
+      "message": "This is not right\n this.$el.on( \u0027click\u0027, function ( ev ) {\nis the event you need to change\n\nThe events map only works for /jQuery/ events\nnot EventEmitter events.\nTake a look at EventEmitter.js to understand the difference\n\nReally want you want is something like:\n\u0027click\u0027: \u0027showDrawer\u0027\n\njoaquin - can the events map be used on self?",
+      "parentUuid": "6e7c4fa4_c8879bdb",
+      "revId": "aa79c0fafa1e60969ffaaa8e796161401666892f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_e815b79d",
         "filename": "javascripts/Overlay.js",
         "patchSetId": 3
