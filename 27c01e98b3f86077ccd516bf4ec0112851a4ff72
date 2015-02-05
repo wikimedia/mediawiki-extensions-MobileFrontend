@@ -16,6 +16,24 @@
       "revId": "27c01e98b3f86077ccd516bf4ec0112851a4ff72",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6710ed5b",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-05T23:39:08Z",
+      "side": 1,
+      "message": "yes! thanks for spotting",
+      "parentUuid": "6e7c4fa4_a7160559",
+      "revId": "27c01e98b3f86077ccd516bf4ec0112851a4ff72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
