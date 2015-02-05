@@ -30,10 +30,26 @@
 			instructions: mw.msg( 'mobile-frontend-errorreport-instructions' ),
 			licenseMsg: mw.msg( 'mobile-frontend-editor-licensing', mw.config.get( 'wgMFLicenseLink' ) )
 		},
+		/**
+		 * @inheritdoc
+		 */
 		templatePartials: {
 			content: mw.template.get( 'mobile.errorReport.overlay', 'ErrorReportOverlay.hogan' )
 		},
+		/**
+		 * @inheritdoc
+		 */
 		className: 'error-reporting-overlay overlay',
+		/**
+		 * @inheritdoc
+		 */
+		events: {
+			'click button.continue': 'onContinueClick',
+			'click button.submit': 'onSubmitClick',
+			'keyup .error-field': 'onErrorFieldChange',
+			'paste .error-field': 'onErrorFieldChange',
+			'drop .error-field': 'onErrorFieldChange'
+		},
 
 		/**
 		 * Show the actual error reporting form
@@ -42,8 +58,6 @@
 		 * @param {Object} options The options for the overlay
 		 */
 		_showForm: function ( options ) {
-			var self = this;
-
 			options.headerButtons = [ {
 				className: 'submit',
 				msg: mw.msg( 'mobile-frontend-errorreport-submit' )
@@ -52,31 +66,6 @@
 			this.$( '.instructions' ).hide();
 			this.$( '.error-field, .license-panel' ).show();
 			this.$( 'button.submit' ).prop( 'disabled', true );
-
-			// Enable the submit button when the error report is at least 15 characters
-			this.$( '.error-field' ).on( 'keyup paste drop', function () {
-				// Force length check to be asynchronous in order to handle paste events
-				setTimeout( function () {
-					self.$( 'button.submit' ).prop( 'disabled', self.$( '.error-field' ).val().length <= 15 );
-				}, 0 );
-			} );
-
-			// Initialize the submit button
-			this.$( 'button.submit' ).on( 'click', function () {
-				var text = self.$( '.error-field' ).val(),
-					$talk = $( '.talk' );
-
-				if ( text.length > 15 && $talk !== undefined ) {
-					// Hide the textarea, show a spinner, and post the report
-					self.$( '.error-field' ).hide();
-					self.$( '.spinner' ).show();
-					self._postErrorReport( text, $talk.data( 'title' ) );
-				} else {
-					// Close overlay and show error notification
-					window.history.back();
-					toast.show( mw.msg( 'mobile-frontend-errorreport-error' ), 'toast' );
-				}
-			} );
 		},
 
 		/**
@@ -105,15 +94,40 @@
 		},
 
 		/**
-		 * @inheritdoc
+		 * Continue button click handler
 		 */
-		postRender: function ( options ) {
+		onContinueClick: function () {
+			this._showForm( this.options );
+		},
+		/**
+		 * Submit button click handler
+		 */
+		onSubmitClick: function () {
+			var text = this.$( '.error-field' ).val(),
+				$talk = $( '.talk' );
+
+			if ( text.length > 15 && $talk !== undefined ) {
+				// Hide the textarea, show a spinner, and post the report
+				this.$( '.error-field' ).hide();
+				this.$( '.spinner' ).show();
+				this._postErrorReport( text, $talk.data( 'title' ) );
+			} else {
+				// Close overlay and show error notification
+				window.history.back();
+				toast.show( mw.msg( 'mobile-frontend-errorreport-error' ), 'toast' );
+			}
+		},
+		/**
+		 * Error field change handler
+		 * Enable the submit button when the error report is at least 15 characters
+		 */
+		onErrorFieldChange: function () {
 			var self = this;
 
-			Overlay.prototype.postRender.apply( this, arguments );
-			this.$( 'button.continue' ).on( 'click', function () {
-				self._showForm( options );
-			} );
+			// Force length check to be asynchronous in order to handle paste events
+			setTimeout( function () {
+				self.$( 'button.submit' ).prop( 'disabled', self.$( '.error-field' ).val().length <= 15 );
+			}, 0 );
 		}
 	} );
 
