@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f6ea7572",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-05T18:35:34Z",
+      "side": 1,
+      "message": "why remove \u0027change\u0027?",
+      "revId": "c2727fa997e98ec0656feb78e9ffeed0f7b14c24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d6d2d9d4",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-05T18:35:34Z",
+      "side": 1,
+      "message": "Instead of assigning options values to this, can\u0027t you just use options below?",
+      "revId": "c2727fa997e98ec0656feb78e9ffeed0f7b14c24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
