@@ -159,7 +159,7 @@
 		show: function () {
 			var self = this;
 			this.$el.appendTo( this.appendTo );
-			this.scrollTop = document.body.scrollTop;
+			this.scrollTop = $( document ).scrollTop();
 
 			if ( this.fullScreen ) {
 				$( 'html' ).addClass( 'overlay-enabled' );
