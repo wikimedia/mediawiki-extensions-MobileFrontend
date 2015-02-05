@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bbe9467d",
+        "filename": "images/icons/beta/edit.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-05T15:44:55Z",
+      "side": 1,
+      "message": "Windows for the win :P I think you should convert the sol to \\n :)",
+      "revId": "8f351732e97b3eef3111174176cb35cf0ca4c349",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
