@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3133170c",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-05T20:24:31Z",
+      "side": 1,
+      "message": "we should try to use meaningful namens for functions, and this functions are event handlers, so in general we use the \"on\" prefix, e.g. \"onShowDrawer\", so we can see, that a function is a handler for a special event :)",
+      "revId": "e8363b2fc087b6df140b97bad70f883d11b76244",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6c0f7234",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-05T20:24:31Z",
+      "side": 1,
+      "message": "no, please not :) See my comments below, you don\u0027t need to set this var here :)",
+      "revId": "e8363b2fc087b6df140b97bad70f883d11b76244",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0c283e80",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-05T20:24:31Z",
+      "side": 1,
+      "message": "just use this.startY :)",
+      "revId": "e8363b2fc087b6df140b97bad70f883d11b76244",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2c309ae4",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-05T20:24:31Z",
+      "side": 1,
+      "message": "use this.startY",
+      "revId": "e8363b2fc087b6df140b97bad70f883d11b76244",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
