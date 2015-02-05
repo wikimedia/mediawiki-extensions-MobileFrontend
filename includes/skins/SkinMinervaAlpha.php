@@ -75,13 +75,13 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	 * @return array
 	 */
 	public function getSkinConfigVariables() {
-		global $wgWikiBasePropertyConfig, $wgMFInfoboxConfig;
+		$config = $this->getMFConfig();
 
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgMFEditorOptions']['anonymousEditing'] = true;
 		$vars['wgMFDescription'] = $this->getOutput()->getProperty( 'wgMFDescription' );
-		$vars['wgWikiBasePropertyConfig'] = $wgWikiBasePropertyConfig;
-		$vars['wgMFInfoboxConfig'] = $wgMFInfoboxConfig;
+		$vars['wgWikiBasePropertyConfig'] = $config->get( 'WikiBasePropertyConfig' );
+		$vars['wgMFInfoboxConfig'] = $config->get( 'MFInfoboxConfig' );
 		$vars['wgMFShowRedLinks'] = true;
 
 		return $vars;
@@ -91,13 +91,13 @@ class SkinMinervaAlpha extends SkinMinervaBeta {
 	 * {@inheritdoc}
 	 */
 	protected function getDiscoveryTools() {
-		global $wgMFEnableWikiGrok, $wgMFEnableWikiGrokInSidebar, $wgMFEnableWikiGrokForAnons;
+		$config = $this->getMFConfig();
 
 		$items = parent::getDiscoveryTools();
 		if (
-			$wgMFEnableWikiGrok &&
-			$wgMFEnableWikiGrokInSidebar &&
-			($this->getUser()->isLoggedIn() || $wgMFEnableWikiGrokForAnons)
+			$config->get( 'MFEnableWikiGrok' ) &&
+			$config->get( 'MFEnableWikiGrokInSidebar' ) &&
+			( $this->getUser()->isLoggedIn() || $config->get( 'MFEnableWikiGrokForAnons' ) )
 		) {
 			$items['wikigrok'] = array(
 				'links' => array(
