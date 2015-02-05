@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a7160559",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-05T23:38:22Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be in the events map, too?",
+      "revId": "27c01e98b3f86077ccd516bf4ec0112851a4ff72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
