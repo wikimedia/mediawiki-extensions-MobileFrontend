@@ -8,6 +8,9 @@
 	 * @extends Drawer
 	 */
 	ErrorDrawer = Drawer.extend( {
+		/**
+		 * @inheritdoc
+		 */
 		template: mw.template.get( 'mobile.wikigrok.roulette', 'Error.hogan' ),
 		/**
 		 * @inheritdoc

@@ -63,7 +63,7 @@
 			loadingOverlay.show();
 
 			this.getNextPage().done( function ( page ) {
-				if ( page.url && page.title ) {
+				if ( page && page.url && page.title ) {
 					// navigated to the url
 					window.location.href = page.url;
 					// FIXME: expose wikigrok/init.js so that we can just show wikigrok without reloading in such cases

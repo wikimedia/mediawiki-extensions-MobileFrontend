@@ -1135,10 +1135,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/wikiGrokRoulette/ErrorDrawer.js',
 			'javascripts/modules/wikiGrokRoulette/wikiGrokRoulette.js',
+			'javascripts/modules/wikiGrokRoulette/InfoOverlay.js',
 			'javascripts/modules/wikiGrokRoulette/init.js',
 		),
 		'templates' => array(
 			'Error.hogan' => 'templates/modules/wikiGrokRoulette/error.hogan',
+			'InfoOverlay.hogan' => 'templates/modules/wikiGrokRoulette/InfoOverlay.hogan',
+		),
+		'messages' => array(
+			'mobile-frontend-main-menu-button-tooltip',
+			'mobile-frontend-wikigrok-roulette-info-overlay-title',
+			'mobile-frontend-wikigrok-roulette-info-overlay-content',
+			'mobile-frontend-wikigrok-roulette-info-overlay-start-button-label',
+		),
+		'styles' => array(
+			'less/modules/wikiGrokRoulette/InfoOverlay.less',
 		)
 	),
 
