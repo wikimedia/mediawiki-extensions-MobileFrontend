@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6d83ebd1",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-06T13:51:13Z",
+      "side": 1,
+      "message": "This isn\u0027t -1 worthy, but AFAICT these @inheritdoc tags shouldn\u0027t be necessary: https://github.com/jsdoc3/jsdoc3.github.com/commit/bbe713ff66e00457e3d9bb82e7eac476284e3935#diff-bec736f97d3d32a7f682401467492a57R14",
+      "revId": "7559ce03db18c621d745c43ebeacbe91a7df87bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
