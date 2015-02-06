@@ -14,8 +14,6 @@ body {
 }
 
 #content_wrapper {
-	// FIXME: remove .top-bar once cache clears, .last-modified-bar replaces it
-	.top-bar,
 	.last-modified-bar {
 		background-color: @colorGray14;
 		padding: 5px @contentMargin;
@@ -35,24 +33,6 @@ body {
 			a {
 				color: #fff;
 			}
-		}
-	}
-}
-
-// FIXME: Id's for styling are bad m'kay?
-#mw-mf-main-menu-button {
-	// FIXME: Remove when cache clears.
-	&.icon {
-		background-position: 50% 50%;
-		.background-image-svg( 'images/menu/hamburger.svg', 'images/menu/hamburger.png' );
-	}
-}
-
-// FIXME: remove when mw-ui-icon in stable
-.stable {
-	.header {
-		> a {
-			vertical-align: middle;
 		}
 	}
 }
@@ -198,12 +178,6 @@ input.search {
 		top: 0;
 		bottom: 0;
 		right: 0;
-
-		// FIXME: remove when cache clears
-		&.icon {
-			background-position: 100% @headingMargin;
-			width: @sectionIconWidth + 5px;
-		}
 	}
 
 	.open-block {
@@ -255,14 +229,6 @@ input.search {
 .overlay,
 .header {
 
-	.user-button {
-		// FIXME: Remove when cache clears
-		&.icon {
-			height: @headerHeight;
-			background-position: 50% 50%;
-		}
-	}
-
 	// need to specify id or else other rules are more important
 	// FIXME: simplify when .icon class from Overlay used instead
 	#secondary-button.user-button,
@@ -283,6 +249,8 @@ input.search {
 			// Fixes positioning in Firefox
 			display: inline-block;
 			float: right;
+			// FIXME: This shouldn't be needed
+			height: @headerHeight;
 		}
 
 		&.loading span {
