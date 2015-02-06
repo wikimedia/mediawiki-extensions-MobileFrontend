@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f0b03440",
+        "filename": "javascripts/modules/languages/LanguageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-06T14:37:42Z",
+      "side": 1,
+      "message": "Neither of these handlers will work as `this` isn\u0027t bound to the element but the instance of the View.",
+      "revId": "9a3d27f21fc6b9e1e18acea30d317e16fcef829b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
