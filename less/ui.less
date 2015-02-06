@@ -105,8 +105,13 @@ body {
 	}
 }
 
-// Used for messages on login screen, page lists and uploads and when showing old revisions
+// Add border between notices and header
+#localNotice,
+.mw-dismissable-notice {
+	border-bottom: 1px solid @grayLight;
+}
 
+// Used for messages on login screen, page lists and uploads and when showing old revisions
 .warningbox,
 .alert.warning {
 	color: @colorWarningText;
