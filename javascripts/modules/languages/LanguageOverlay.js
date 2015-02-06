@@ -19,9 +19,22 @@
 			heading: mw.msg( 'mobile-frontend-language-heading' ),
 			placeholder: mw.msg( 'mobile-frontend-language-site-choose' )
 		},
+		/**
+		 * @inheritdoc
+		 */
 		className: 'language-overlay overlay',
+		/**
+		 * @inheritdoc
+		 */
 		templatePartials: {
 			content: mw.template.get( 'mobile.languages', 'LanguageOverlay.hogan' )
+		},
+		/**
+		 * @inheritdoc
+		 */
+		events: {
+			'click ul a': 'onLinkClick',
+			'input .search': 'onSearchInput'
 		},
 
 		/** @inheritdoc */
@@ -60,17 +73,20 @@
 			}
 		},
 
-		/** @inheritdoc */
-		postRender: function () {
-			var self = this;
-			Overlay.prototype.postRender.apply( this, arguments );
+		/**
+		 * Language link click handler
+		 * @param {jQuery.Event} ev Event object.
+		 */
+		onLinkClick: function ( ev ) {
+			M.emit( 'language-select', $( ev.currentTarget ).attr( 'lang' ) );
+		},
 
-			this.$( 'ul' ).find( 'a' ).on( 'click', function () {
-				M.emit( 'language-select', $( this ).attr( 'lang' ) );
-			} );
-			this.$( '.search' ).on( 'input', function () {
-				self.filterLists( $( this ).val().toLowerCase() );
-			} );
+		/**
+		 * Search input handler
+		 * @param {jQuery.Event} ev Event object.
+		 */
+		onSearchInput: function ( ev ) {
+			this.filterLists( $( ev.target ).val().toLowerCase() );
 		}
 	} );
 
