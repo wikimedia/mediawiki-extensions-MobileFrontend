@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_2dfdf3d1",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-06T09:57:47Z",
+      "side": 1,
+      "message": "hmm, it seems i misunderstood bahas comment, sorry!\n\nOk, will rework this to use the change event, thought, that _all_ events are valid :)",
+      "parentUuid": "6e7c4fa4_0d81174f",
+      "revId": "c2727fa997e98ec0656feb78e9ffeed0f7b14c24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_d6d2d9d4",
         "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
         "patchSetId": 1
