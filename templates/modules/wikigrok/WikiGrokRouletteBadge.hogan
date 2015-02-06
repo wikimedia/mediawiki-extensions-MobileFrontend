@@ -1,0 +1,13 @@
+<div class="pane content">
+	<p class="wg-content">
+		{{encouragementText}}
+		<br>
+		You just completed {{tasks}}.
+	</p>
+	<p class="wg-link wg-badge wg-badge-{{responseCount}}">
+		<button class="mw-ui-button mw-ui-progressive mw-ui-block next">
+			<span class="text">Yay, let's do more...</span>
+			{{{spinner}}}
+		</button>
+	</p>
+</div>

@@ -1161,6 +1161,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/wikigrok/WikiGrokDialogC.js',
 		),
+		'templates' => array(
+			'Badge.hogan' => 'templates/modules/wikigrok/WikiGrokRouletteBadge.hogan',
+		),
 	),
 
 	'mobile.gallery' => $wgMFResourceFileModuleBoilerplate + array(
@@ -1668,6 +1671,7 @@ $wgMinervaBootstrapModules = array(
 			// load code under certain conditions.
 			'mobile.preferredLanguages',
 			'mobile.references.beta',
+			'mobile.wikigrok.roulette',
 		),
 	),
 	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
@@ -1677,7 +1681,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile.infobox',
 			'mobile.bannerImage',
 			'mobile.fontchanger',
-			'mobile.wikigrok.roulette',
 			'mobile.errorReport',
 			'mobile.otherProjects',
 		),

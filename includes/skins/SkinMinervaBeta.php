@@ -152,4 +152,30 @@ class SkinMinervaBeta extends SkinMinerva {
 				Html::closeElement( 'div' ) );
 		}
 	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	protected function getDiscoveryTools() {
+		$config = $this->getMFConfig();
+
+		$items = parent::getDiscoveryTools();
+		if (
+			$config->get( 'MFEnableWikiGrok' ) &&
+			$config->get( 'MFEnableWikiGrokInSidebar' )
+		) {
+			$items['wikigrok'] = array(
+				'links' => array(
+					array(
+						'text' => $this->msg( 'mobile-frontend-main-menu-wikigrok-roulette' ),
+						'href' => '#',
+						'class' => MobileUI::iconClass( 'wikigrok', 'before',
+							'wikigrok-roulette' ),
+					),
+				),
+				'class' => 'jsonly'
+			);
+		}
+		return $items;
+	}
 }

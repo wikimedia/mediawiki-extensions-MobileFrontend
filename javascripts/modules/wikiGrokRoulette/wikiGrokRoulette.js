@@ -56,11 +56,16 @@
 
 		/**
 		 * Navigate to the next page
+		 * @param {Boolean} [hideLoadingOverlay] Whether to hide the loading overlay.
+		 *     Defaults to false.
 		 */
-		navigateToNextPage: function () {
+		navigateToNextPage: function ( hideLoadingOverlay ) {
 			var loadingOverlay = new LoadingOverlay();
 
-			loadingOverlay.show();
+			hideLoadingOverlay = hideLoadingOverlay || false;
+			if ( !hideLoadingOverlay ) {
+				loadingOverlay.show();
+			}
 
 			this.getNextPage().done( function ( page ) {
 				if ( page && page.url && page.title ) {
@@ -72,11 +77,15 @@
 						window.location.reload();
 					}
 				} else {
-					loadingOverlay.hide( false );
+					if ( !hideLoadingOverlay ) {
+						loadingOverlay.hide( false );
+					}
 					new ErrorDrawer();
 				}
 			} ).fail( function () {
-				loadingOverlay.hide( false );
+				if ( !hideLoadingOverlay ) {
+					loadingOverlay.hide( false );
+				}
 				new ErrorDrawer();
 			} ).always( function () {
 				// FIXME: this module should not care about mainMenu. move this to init.js

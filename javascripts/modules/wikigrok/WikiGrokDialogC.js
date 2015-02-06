@@ -3,6 +3,7 @@
 		wikiGrokRoulette = M.require( 'modules/wikiGrokRoulette/wikiGrokRoulette' ),
 		Drawer = M.require( 'Drawer' ),
 		browser = M.require( 'browser' ),
+		icons = M.require( 'icons' ),
 		WikiGrokDialogC;
 
 	/**
@@ -18,27 +19,28 @@
 			thanksMsg: 'You just made Wikipedia a little better, thanks! But wait, there is more.',
 			isDrawer: true
 		} ),
+		events: {
+			'click .wg-badge .next': 'onClickNext'
+		},
 		/**
 		 * Load the next page if available.
 		 * Show badge when the user reaches a milestone.
 		 * @inheritdoc
 		 * @method
 		 */
-		postRecordClaims: function () {
+		postRecordClaims: function ( options ) {
 			var self = this,
 				badgeLevels = [ 1, 3, 5, 10, 20, 50, 100 ],
 				showNext = true,
-				responseText,
 				responseCount;
 
-			self.$( '.wg-content, .footer' ).hide();
 			self.$( '.spinner' ).show();
 
 			// Count responses if local storage supported
 			if ( browser.supportsLocalStorage ) {
-				responseCount = localStorage.getItem( 'wikiGrokResponseCount' );
-				// Increment claim response count, null if no responses
-				if ( responseCount !== null ) {
+				responseCount = parseInt( localStorage.getItem( 'wikiGrokResponseCount' ) );
+				// Increment claim response count
+				if ( !isNaN( responseCount ) ) {
 					responseCount++;
 				} else {
 					responseCount = 1;
@@ -49,26 +51,40 @@
 				// Add badge if responseCount is at a badge level
 				if ( $.inArray( responseCount, badgeLevels ) !== -1 ) {
 					showNext = false;
-					responseText = 'Good going! <br> You just completed ' + responseCount + ' task';
 					if ( responseCount === 1 ) {
-						responseText += '.';
+						options.tasks = responseCount + ' task';
 					} else {
-						responseText += 's.';
+						options.tasks = responseCount + ' tasks';
 					}
-					self.$( '.spinner' ).hide();
-					self.$( '.wg-link' ).empty().addClass( 'wg-badge-' + responseCount ).show();
-					self.$( '.wg-content' )
-						.html( responseText )
-						.show();
-					// let the user enjoy the badge for 2 seconds
-					setTimeout( function () {
-						wikiGrokRoulette.navigateToNextPage();
-					}, 2000 );
+					options.responseCount = responseCount;
+					if ( responseCount < 25 ) {
+						options.encouragementText = 'Good going!';
+					} else if ( responseCount < 100 ) {
+						options.encouragementText = 'Whooa, hold up!';
+					} else {
+						options.encouragementText = 'Nice!';
+					}
+					options.spinner = icons.spinner( {
+						tagName: 'span'
+					} ).toHtmlString();
+					this.template = mw.template.get( 'mobile.wikigrok.dialog.c', 'Badge.hogan' );
+					this.render( options );
 				}
 			}
 			if ( showNext ) {
 				wikiGrokRoulette.navigateToNextPage();
 			}
+		},
+
+		/**
+		 * Load the next WikiGrok page
+		 */
+		onClickNext: function () {
+			this.$el.find( '.next ' ).prop( 'disabled', true )
+				.find( '.text' ).hide()
+				.end()
+				.find( '.spinner' ).css( 'visibility', 'visible' );
+			wikiGrokRoulette.navigateToNextPage( true );
 		},
 
 		/**
@@ -79,14 +95,17 @@
 
 			Drawer.prototype.postRender.apply( this, arguments );
 
-			options.beginQuestions = true;
-			WikiGrokDialogB.prototype.postRender.apply( this, arguments );
+			// Don't run this when rendering the Badge template
+			if ( !options.beginQuestions ) {
+				options.beginQuestions = true;
+				WikiGrokDialogB.prototype.postRender.apply( this, arguments );
 
-			self.askWikidataQuestion( options );
+				self.askWikidataQuestion( options );
+
+				// Silently fetch the next page
+				wikiGrokRoulette.getNextPage();
+			}
 			this.show();
-
-			// Silently fetch the next page
-			wikiGrokRoulette.getNextPage();
 		}
 	} );
 
