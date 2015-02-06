@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_1b439118",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-06T17:42:26Z",
+      "side": 1,
+      "message": "Wooo, input exists! https://developer.mozilla.org/en-US/docs/Web/Events/input\n\nThanks florian, and sorry for the -1",
+      "parentUuid": "6e7c4fa4_2dfdf3d1",
+      "revId": "c2727fa997e98ec0656feb78e9ffeed0f7b14c24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_d6d2d9d4",
         "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
         "patchSetId": 1
