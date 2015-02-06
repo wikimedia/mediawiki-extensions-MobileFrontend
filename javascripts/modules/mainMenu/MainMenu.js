@@ -36,7 +36,7 @@
 				if ( self.isOpen() ) {
 					self.closeNavigationDrawers();
 				} else {
-					self.openNavigationDrawer( '' );
+					self.openNavigationDrawer();
 				}
 				ev.preventDefault();
 			} );
@@ -63,8 +63,8 @@
 
 		/**
 		 * Toggle open navigation drawer
-		 * @param {String} [drawerType] A name that identifies the navigation drawer that should be
-		 * toggled open
+		 * @param {String} [drawerType] A name that identifies the navigation drawer that
+		 *     should be toggled open. Defaults to 'primary'.
 		 */
 		openNavigationDrawer: function ( drawerType ) {
 			// close any existing ones first.
