@@ -1,5 +1,6 @@
  ( function ( M, $ ) {
 	var Panel = M.require( 'Panel' ),
+		skin = M.require( 'skin' ),
 		settings = M.require( 'settings' ),
 		WikiGrokResponseApi = M.require( 'modules/wikigrok/WikiGrokResponseApi' ),
 		icons = M.require( 'icons' ),
@@ -64,6 +65,9 @@
 		template: mw.template.get( 'mobile.wikigrok.dialog', 'Dialog.hogan' ),
 		templatePartials: {
 			error: mw.template.get( 'mobile.wikigrok.dialog', 'Error.hogan' )
+		},
+		events: {
+			'click .wg-link .tell-more': 'onClickTellMore'
 		},
 
 		/** @inheritdoc */
@@ -287,27 +291,46 @@
 		 * just responded with 'not sure'?
 		 */
 		postRecordClaims: function ( options, answerAttempted ) {
-			var self = this;
-
 			// Remember that the user completed WikiGrok for this page so that we don't
 			// show it again later.
 			this.rememberWikiGrokContribution();
 			// Choose an appropriate thanks message.
 			if ( answerAttempted ) {
-				options.contentMsg = 'You just made Wikipedia a little better, thanks!';
+				options.contentMsg = 'You just contributed to Wikipedia, thanks!';
+				// change tellMoreMsg because we want to show the WikiGrokRoulette menu
+				// item to the user
+				if ( skin.getMainMenu().$el.find( '.wikigrok-roulette' ).length === 1 ) {
+					options.tellMoreMsg = 'I want to contribute more!';
+				}
 			} else {
 				options.contentMsg = 'That\'s OK, thanks for taking the time.';
 			}
 			// Re-render with new content for 'Thanks' step.
 			this.template = mw.template.get( 'mobile.wikigrok.dialog', 'Thanks.hogan' );
 			this.render( options );
-			// Hide thanks dialog when the user reads more about WikiGrok.
-			this.$( '.wg-link .tell-more' ).on( 'click', function () {
-				self.hide();
-				self.log( 'widget-click-moreinfo' );
-			} );
 			// Log the successful completion of WikiGrok task
 			this.log( 'widget-impression-success' );
+		},
+
+		/**
+		 * Open the main navigation drawer and highlight the Contribute menu item.
+		 * If WikiGrok is not enabled in Sidebar, then just show the about dialog.
+		 * @param {jQuery.Event} ev Event object
+		 */
+		onClickTellMore: function ( ev ) {
+			var $wikiGrokRoulette = skin.getMainMenu().$el.find( '.wikigrok-roulette' );
+
+			this.hide();
+			this.log( 'widget-click-moreinfo' );
+
+			if ( $wikiGrokRoulette.length === 1 ) {
+				$wikiGrokRoulette.append( '<span>new!</span>' );
+				skin.getMainMenu().openNavigationDrawer();
+				// do not load the about dialog
+				ev.preventDefault();
+				// stop propagation so that the skin doesn't close the nav drawer
+				ev.stopPropagation();
+			}
 		},
 
 		/**

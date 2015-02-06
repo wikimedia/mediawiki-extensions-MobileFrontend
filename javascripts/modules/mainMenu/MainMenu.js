@@ -63,7 +63,7 @@
 
 		/**
 		 * Toggle open navigation drawer
-		 * @param {String} drawerType A name that identifies the navigation drawer that should be
+		 * @param {String} [drawerType] A name that identifies the navigation drawer that should be
 		 * toggled open
 		 */
 		openNavigationDrawer: function ( drawerType ) {
