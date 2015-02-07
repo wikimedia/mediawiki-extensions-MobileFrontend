@@ -128,8 +128,24 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				$removeImages,
 			),
 			array(
+				'<div id="foo">test</div>',
+				'<div id="foo">test</div>',
+				$mainPage,
+			),
+			array(
 				'<div id="mf-foo" title="A &amp; B">test</div>',
 				'<div id="mainpage"><h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all"></div>',
+				$mainPage,
+			),
+			array(
+				'<div id="foo">test</div><div id="central-auth-images">images</div>',
+				'<div id="foo">test</div><div id="central-auth-images">images</div>',
+				$mainPage,
+			),
+			array(
+				'<div id="mf-foo" title="A &amp; B">test</div><div id="central-auth-images">images</div>',
+				'<div id="mainpage"><h2>A &amp; B</h2><div id="mf-foo">test</div><br clear="all">'
+					. '<div id="central-auth-images">images</div></div>',
 				$mainPage,
 			),
 		);
