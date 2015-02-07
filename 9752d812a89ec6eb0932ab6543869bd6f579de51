@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_bc29339c",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-02-07T01:52:52Z",
+      "side": 1,
+      "message": "Move this into an else if clause below.",
+      "revId": "9752d812a89ec6eb0932ab6543869bd6f579de51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_5c3b3fe8",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 2
