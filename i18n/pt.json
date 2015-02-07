@@ -18,7 +18,8 @@
 			"He7d3r",
 			"Macofe",
 			"Ti4goc",
-			"Imperadeiro90"
+			"Imperadeiro90",
+			"Fernandofelippe"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o(a) utilizador(a) está ou não a editar através de interface móvel",
@@ -349,6 +350,7 @@
 	"mobile-frontend-watchlist-removed": "$1 foi removida da sua lista de vigiados",
 	"mobile-frontend-watchlist-signup-action": "Criar conta para começar uma agora.",
 	"mobile-frontend-watchlist-view": "Ver a sua lista de vigiados",
+	"mobile-frontend-wikigrok-roulette-info-overlay-start-button-label": "Vamos lá!",
 	"nearby": "Páginas próximas de si",
 	"tag-mobile_edit": "Edição via telefone móvel",
 	"tag-mobile_edit-description": "Edição feita através de dispositivo móvel (sítio ou aplicação)",
