@@ -59,7 +59,18 @@
 
 				self.$( '.tags' ).show();
 				$.each( suggestions, function ( i, suggestion ) {
-					var $tag, tagHtml, templateData;
+					var $tag, tagHtml, templateData, propertyName;
+
+					// Replace some property names
+					// FIXME: These are not internationalizable and will probably have to
+					// die once WikiGrok is deployed outside of English Wikipedia
+					if ( suggestion.campaign.propertyName === 'instance of' ) {
+						propertyName = 'type';
+					} else if ( suggestion.campaign.propertyName === 'original language of work' ) {
+						propertyName = 'original language';
+					} else {
+						propertyName = suggestion.campaign.propertyName;
+					}
 
 					templateData = {
 						id: 'tag-' + suggestion.id,
@@ -68,9 +79,7 @@
 						itemId: suggestion.id,
 						readable: suggestion.label,
 						campaignName: suggestion.campaign.name,
-						// replace 'instance of' with 'type'
-						campaignText: ( suggestion.campaign.propertyName === 'instance of' ) ?
-							'type' : suggestion.campaign.propertyName,
+						campaignText: propertyName,
 						tagText: suggestion.label
 					};
 
