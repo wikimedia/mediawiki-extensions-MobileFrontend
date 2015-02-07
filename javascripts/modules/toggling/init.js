@@ -199,7 +199,7 @@
 		$container = $container || $( '#content' );
 
 		$( 'html' ).removeClass( 'stub' );
-		$firstHeading = $container.find( 'h1,h2,h3,h4,h5,h6' ).eq( 0 );
+		$firstHeading = $container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).eq( 0 );
 		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
 
 		if ( collapseSectionsByDefault === undefined ) {
