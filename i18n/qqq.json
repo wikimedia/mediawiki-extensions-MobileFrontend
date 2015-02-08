@@ -375,7 +375,7 @@
 	"mobile-frontend-watchlist-removed": "Notification message when you remove a age from your watchlist\n*$1 - the title of the article",
 	"mobile-frontend-watchlist-signup-action": "Call to action that follows {{msg-mw|mobile-frontend-watchlist-purpose}} asking them to signup.",
 	"mobile-frontend-watchlist-view": "Link to your watchlist.\n{{Identical|View your watchlist}}",
-	"mobile-frontend-wikigrok-roulette-info-overlay-title": "Title of the WikiGrok Roulette Info Overlay.",
+	"mobile-frontend-wikigrok-roulette-info-overlay-title": "Title of the WikiGrok Roulette Info Overlay.\n{{Identical|Contribute}}",
 	"mobile-frontend-wikigrok-roulette-info-overlay-content": "Content of the WikiGrok Roulette Info Overlay.",
 	"mobile-frontend-wikigrok-roulette-info-overlay-start-button-label": "Label of the start button of the WikiGrok Roulette Info Overlay.",
 	"mobile.css": "{{optional}}\nSee also:\n* {{msg-mw|Mobile.js}} (Optional message)",

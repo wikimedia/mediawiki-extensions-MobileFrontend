@@ -9,6 +9,8 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Bir bölüm geriyə dön",
+	"mobile-frontend-changeslist-ip": "Anonim istifadəçi",
+	"mobile-frontend-changeslist-nocomment": "Nəzərə çarpan dəyişiklik yoxdur.",
 	"mobile-frontend-clear-search": "Təmizlə",
 	"mobile-frontend-copyright": "Mətn <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.az\">Creative Commons Attribution/Share-Alike lisenziyası</a> üzrə icazəlidir, xüsusi hallarda digər şərtlər də əlavə ola bilər. Daha ətraflı bax: <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/az'>İstifadə şərtləri</a>. «{{SITENAME}}» — «<a href='http://www.wikimediafoundation.org/'>Vikimediya Fondu</a>» qeyri-kommersiya təşkilatının qeydə alınmış ticarət markasıdır.",
 	"mobile-frontend-edit-login-action": "Redaktə üçün daxil ol",

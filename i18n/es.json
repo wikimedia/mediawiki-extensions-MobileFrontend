@@ -22,7 +22,8 @@
 			"Amitie 10g",
 			"Jdlrobson",
 			"Joaquin Oltra",
-			"MadriCR"
+			"MadriCR",
+			"JasterTDC"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -190,6 +191,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Configuración",
 	"mobile-frontend-main-menu-upload": "Subidas",
 	"mobile-frontend-main-menu-watchlist": "Lista de seguimiento",
+	"mobile-frontend-main-menu-wikigrok-roulette": "Contribuit",
 	"mobile-frontend-media-details": "Detalles",
 	"mobile-frontend-media-license-link": "Información de la licencia",
 	"mobile-frontend-meta-data-issues": "Esta página tiene algunas incidencias",
@@ -335,6 +337,8 @@
 	"mobile-frontend-watchlist-removed": "Se ha eliminado el artículo $1 de tu lista de seguimiento",
 	"mobile-frontend-watchlist-signup-action": "Regístrese para comenzar uno ahora.",
 	"mobile-frontend-watchlist-view": "Ver tu lista de seguimiento",
+	"mobile-frontend-wikigrok-roulette-info-overlay-title": "Contribuir",
+	"mobile-frontend-wikigrok-roulette-info-overlay-start-button-label": "¡ Avancemos !",
 	"nearby": "Páginas cercanas",
 	"tag-mobile_edit": "Edición desde móvil",
 	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)",
