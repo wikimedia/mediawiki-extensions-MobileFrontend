@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5dfb3377",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-09T10:16:39Z",
+      "side": 1,
+      "message": "no need to copy it, that will leave place for errors, if we change the function namens or extend them in Overlay. You can use jQuery to do this work for you, use my posted cde snippet to extend the events from Overlay.js here:\n\nevents: $.extend( {}, Overlay.prototype.events, {\n  // FIXME: This should be .close (see bug 71203)\n  \u0027click .back\u0027: \u0027onClickBack\u0027,\n  \u0027click .continue\u0027: \u0027onClickContinue\u0027,\n  \u0027click .submit\u0027: \u0027onClickSubmit\u0027\n} ),\n\nevents: $.extend( {}, Overlay.prototype.events, {\nThis line will take the events map of Overlay and the new map and merge them to one new :) See http://api.jquery.com/jquery.extend/",
+      "revId": "9c504537a02bb640367147f88f9c93009d3c1497",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
