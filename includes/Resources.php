@@ -1352,11 +1352,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.bannerImage' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.wikidata.api',
 			'mobile.ajax',
-			'mobile.hexmd5',
 		),
 		'scripts' => array(
+			'javascripts/modules/bannerImage/Image.js',
+			'javascripts/modules/bannerImage/PageImagesBannerImageRepository.js',
 			'javascripts/modules/bannerImage/BannerImage.js',
 		),
 		'styles' => array(
