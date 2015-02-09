@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_9dda2b20",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T10:05:46Z",
+      "side": 1,
+      "message": "I\u0027m good with that. I know that we have to support ie8 up to some point (windows phones), not sure if we are serving it javascript, but better safe than sorry.",
+      "parentUuid": "6e7c4fa4_5dad737f",
+      "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_1dd37b31",
         "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
         "patchSetId": 2
