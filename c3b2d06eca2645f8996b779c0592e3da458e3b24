@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_ddd743f1",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-09T10:13:40Z",
+      "side": 1,
+      "message": "+1, will upload a new patchset later :)",
+      "parentUuid": "6e7c4fa4_9dda2b20",
+      "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_1dd37b31",
         "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
         "patchSetId": 2
