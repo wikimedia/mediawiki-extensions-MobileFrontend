@@ -16,6 +16,24 @@
       "revId": "cb16306c4e059ecac1bd62151b7800c7e5122ab1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d24dea76",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-09T23:02:05Z",
+      "side": 1,
+      "message": "Florian, I\u0027m not quite sure what you mean. Could you please upload a follow up patch? Thanks",
+      "parentUuid": "6e7c4fa4_f7c5b342",
+      "revId": "cb16306c4e059ecac1bd62151b7800c7e5122ab1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
