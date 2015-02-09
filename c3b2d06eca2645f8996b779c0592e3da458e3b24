@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5db9f3e4",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T09:57:40Z",
+      "side": 1,
+      "message": "I\u0027ve been investigating and I\u0027m a bit worried that we are going to break this for old browsers, see this compatibility table:\nhttps://developer.mozilla.org/en-US/docs/Web/Events/input#AutoCompatibilityTable\n\nIn the previous code we were binding both input and change events, the equivalent thing to do here would be to have another line like:\n\n    \u0027change .wikitext-editor, .summary\u0027: \u0027onTextInput\u0027,\n\nBinding the change event also, as before.\n\nOr maybe we can replace both with just using change? I\u0027m not sure.",
+      "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1dd37b31",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T09:57:40Z",
+      "side": 1,
+      "message": "We can remove `button` and just leave .confirm-save. That way this selector is less tied to the DOM",
+      "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1d813bfd",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T09:57:40Z",
+      "side": 1,
+      "message": "Nitpick but please use camelCase? $commentBox",
+      "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
