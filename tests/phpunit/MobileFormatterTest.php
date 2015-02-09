@@ -78,7 +78,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. '<h3><span>h3</span></h3>'
 					. '<div>'
 					. $longLine
-					. '<h4><span>h4</span></h4>'
+					. '<h4 class="in-block"><span>h4</span></h4>'
 					. 'h4 text.'
 					. '</div>',
 				$enableSections

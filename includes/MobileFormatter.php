@@ -237,13 +237,33 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Makes sections expandable
+	 * Transforms heading for toggling and editing
+	 *
+	 * - Add css classes to all h-tags (h1-h6) _inside_ a section
+	 *   to enable editing of these sections. Doesn't add this class to the first
+	 *   heading ($tagName)
+	 * - Wraps section-content inside a div to enable toggling
 	 *
 	 * @param string $s
 	 * @param string $tagName
 	 * @return string
 	 */
 	protected function headingTransform( $s, $tagName = 'h2' ) {
+		// add in-block class to all headings included in this section (except the first one)
+		$s = preg_replace_callback(
+			'/<(h[1-6])>/si',
+			function ( $match ) use ( $tagName ) {
+				$tag = $match[1];
+				$cssClass = '';
+				if ( $tag !== $tagName ) {
+					$cssClass = ' class="in-block"';
+				}
+				return '<' . $tag . $cssClass . '>';
+			},
+			$s
+		);
+
+		// Makes sections expandable
 		$tagRegEx = '<' . $tagName . '.*</' . $tagName . '>';
 		$s = $this->pageTransformStart .
 			preg_replace(

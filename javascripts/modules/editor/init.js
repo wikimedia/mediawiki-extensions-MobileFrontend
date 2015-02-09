@@ -199,7 +199,7 @@
 			}
 		}
 
-		$( '.edit-page' ).on( 'click', function ( ev ) {
+		$( '.edit-page' ).show().on( 'click', function ( ev ) {
 			// prevent folding section when clicking Edit
 			ev.stopPropagation();
 		} );
