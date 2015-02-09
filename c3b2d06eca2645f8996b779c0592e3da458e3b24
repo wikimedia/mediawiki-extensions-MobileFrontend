@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_5dad737f",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-09T10:03:41Z",
+      "side": 1,
+      "message": "Hmm, we need only the basic support and all browsers support it (except damn IE \u003c 9), i\u0027m not sure what browsers we want to support, but at this specific case i have no problem with using change, for what we want do here, both events suits (that\u0027s why i removed one, theres no need to listen for both). So i\u0027m unsure but think, that we should use change instead of input?",
+      "parentUuid": "6e7c4fa4_5db9f3e4",
+      "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_1dd37b31",
         "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_7db06fd8",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-09T10:03:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_1dd37b31",
+      "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_1d813bfd",
         "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-02-09T09:57:40Z",
       "side": 1,
       "message": "Nitpick but please use camelCase? $commentBox",
+      "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1dc7fb4b",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-09T10:03:41Z",
+      "side": 1,
+      "message": "Sure :]",
+      "parentUuid": "6e7c4fa4_1d813bfd",
       "revId": "c3b2d06eca2645f8996b779c0592e3da458e3b24",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
