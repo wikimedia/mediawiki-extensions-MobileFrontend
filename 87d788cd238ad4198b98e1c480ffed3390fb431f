@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c32682b5",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "Panel has events map, you should use $.extend here as you did on EditorOverlayBase so that Drawer inherits Panel events too.\n\nAlso, for classes extending Drawer, we need to see if they have events map, and extend from the parent events if that is the case. \nhttps://gist.github.com/joakin/7c650acaa10c887c5732",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_43435215",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "If you don\u0027t define postrender, the parent one will be called, so just remove the method, since we are not doing anything on it.",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e3c29e87",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "Since we are adding events to Overlay, we now need to find the components that extend it, and make sure that if they define their own events map, they extend from the Overlay events too, as you did with EditorOverlayBase before. The list is a bit long:\n\nhttps://gist.github.com/joakin/fdb3472f42c320b030d5\n\nIf the subclass is not using events map, then it is fine.\n\n(yes, that is a lot of stuff :( but it is a simple fix :) )",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_83572a05",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "Can you move the comment just above the selector instead of above the events map please?",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e347fe4e",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "Instead of onBack I think this could be called onExit since it groups all the selectors that exit the overlay (cancel, confirm, and back). Also, the back selector is supposed to be removed at some point, so a more generic name would fit it better. What do you think?",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_63544e02",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "this.$overlayContent is used later in `_resizeContent`, so here we need to keep `this.$overlayContent \u003d this.$( \u0027.overlay-content\u0027 )`.\n\nThis view is really messy, we have to be careful",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c38a026e",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "For the touchstart and touchmove event I think it is a good idea to bind them inline here inside the if, because they are event handlers for fixing iOS hacks (boooo).\n\nI would keep the methods you have extracted below, and remove the iOS hacks events from the events map (so that android, and the rest of devices don\u0027t get this event bound for nothing) and put them here like this:\n\n    this.$( \u0027.overlay-content\u0027 ).on( \u0027touchstart\u0027, $.proxy( this, this.onTouchStart ) );\n    this.$( \u0027.overlay-content\u0027 ).on( \u0027touchmove\u0027, $.proxy( this, this.onTouchMove ) );",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a37106a9",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "As before, this is not a clickback, it is clicking on any of a group of elements that make the overlay exit or close. We can name this better.",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_43dd9272",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "If we do what I suggested on the comment above, here and in onTouchStart remove the if ios checks, and please on the method comment explain that this methods are for fixing iOS behavior.",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c3a3e2fb",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "This line is redundant. We have the explanation below, so we can remove it.\n\nAlso caps on the first Stop in line 166",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_433272f0",
+        "filename": "javascripts/Panel.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-02-09T15:08:07Z",
+      "side": 1,
+      "message": "Since the events are now in the events map, we should look to all Panel subclasses and if they define their own events map we have to $.extend it with the parent one (as you did with EditorOverlayBase).\n\nThat I can find, also javascripts/modules/wikigrok/WikiGrokDialog.js is extending panel, so that one should be in this patch too :D",
+      "revId": "87d788cd238ad4198b98e1c480ffed3390fb431f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
