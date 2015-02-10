@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_dc909c50",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T07:31:45Z",
+      "side": 1,
+      "message": "Argh! :(",
+      "parentUuid": "6e7c4fa4_a6c4b412",
+      "revId": "42ad0278dbdcfc1c5f52c1834ccd01d0ca8429c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_6688dcec",
         "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-02-09T18:25:12Z",
       "side": 1,
       "message": "Shouldn\u0027t self.title be self.options.title?",
+      "revId": "42ad0278dbdcfc1c5f52c1834ccd01d0ca8429c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bc8da038",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T07:31:45Z",
+      "side": 1,
+      "message": "yep :/",
+      "parentUuid": "6e7c4fa4_6688dcec",
       "revId": "42ad0278dbdcfc1c5f52c1834ccd01d0ca8429c6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
