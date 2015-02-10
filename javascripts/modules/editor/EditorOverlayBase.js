@@ -291,23 +291,71 @@
 		 * @method
 		 */
 		initializeSwitcher: function () {
-			this.$( '.editor-switcher' ).on( 'click', function ( ev ) {
-				var $self = $( this );
-				ev.preventDefault();
-				// Prevent double toggling
-				ev.stopPropagation();
-				// Exit early if switcher is disabled
-				if ( $self.hasClass( 'disabled' ) ) {
-					return false;
+			var toolFactory = new OO.ui.ToolFactory(),
+				toolGroupFactory = new OO.ui.ToolGroupFactory(),
+				toolbar;
+
+			/**
+			 * 'Edit' button
+			 * @param {OO.ui.ToolGroup} toolGroup
+			 * @param {Object} config
+			 * @constructor
+			 */
+			function EditVeTool( toolGroup, config ) {
+				EditVeTool.super.call( this, toolGroup, config );
+			}
+			OO.inheritClass( EditVeTool, OO.ui.Tool );
+
+			EditVeTool.static.name = 'editVe';
+			EditVeTool.static.icon = 'edit-ve';
+			EditVeTool.static.group = 'editorSwitcher';
+			EditVeTool.static.title = mw.msg( 'mobile-frontend-editor-visual-editor' );
+			/**
+			 * click handler
+			 */
+			EditVeTool.prototype.onSelect = function () {
+				// will be overridden later
+			};
+
+			/**
+			 * 'Edit source' button
+			 * @param {OO.ui.ToolGroup} toolGroup
+			 * @param {Object} config
+			 * @constructor
+			 */
+			function EditSourceTool( toolGroup, config ) {
+				EditSourceTool.super.call( this, toolGroup, config );
+			}
+
+			OO.inheritClass( EditSourceTool, OO.ui.Tool );
+
+			EditSourceTool.static.name = 'editSource';
+			EditSourceTool.static.icon = 'edit-source';
+			EditSourceTool.static.group = 'editorSwitcher';
+			EditSourceTool.static.title = mw.msg( 'mobile-frontend-editor-source-editor' );
+			/**
+			 * click handler
+			 */
+			EditSourceTool.prototype.onSelect = function () {
+				// will be overridden later
+			};
+
+			toolbar = new OO.ui.Toolbar( toolFactory, toolGroupFactory );
+			toolFactory.register( EditVeTool );
+			toolFactory.register( EditSourceTool );
+
+			toolbar.setup( [
+				{
+					icon: 'editor-switcher',
+					type: 'list',
+					include: [ {
+						group: 'editorSwitcher'
+					} ]
 				}
-				$self.toggleClass( 'selected' );
-				$( '.switcher-drop-down' ).toggle();
-				// If you click outside the drop-down, hide the drop-down
-				$( document ).one( 'click', function () {
-					$( '.switcher-drop-down' ).hide();
-					$self.removeClass( 'selected' );
-				} );
-			} );
+			] );
+
+			this.$el.find( '.switcher-container' ).html( toolbar.$element );
+			this.switcherToolbar = toolbar;
 		},
 		/**
 		 * Allow prompts user to confirm before closing and losing edit.

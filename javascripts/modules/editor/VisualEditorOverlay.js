@@ -17,9 +17,6 @@
 		/** @inheritdoc **/
 		className: 'overlay editor-overlay editor-overlay-ve',
 		editor: 'VisualEditor',
-		events: $.extend( {}, EditorOverlayBase.prototype.events, {
-			'click .source-editor': 'onClickSourceEditor'
-		} ),
 		/**
 		 * Set options that apply specifically to VisualEditorOverlay but not
 		 * EditorOverlay so that an EditorOverlay instance can be created effortlessly.
@@ -48,7 +45,6 @@
 				skipPreview: false
 			} );
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
-			this.initializeSwitcher();
 			// FIXME: This should be done by manipulating className
 			this.$el.removeClass( 'view-border-box' );
 		},
@@ -109,6 +105,24 @@
 		},
 		/** @inheritdoc **/
 		postRender: function () {
+			var self = this;
+
+			this.initializeSwitcher();
+			this.switcherToolbar.tools.editVe.setActive( true );
+			/**
+			 * 'Edit source' button handler
+			 */
+			this.switcherToolbar.tools.editSource.onSelect = function () {
+				// If changes have been made tell the user they have to save first
+				if ( !self.hasChanged() ) {
+					self.switchToSourceEditor( self.options );
+				} else {
+					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
+						self.onStageChanges();
+					}
+				}
+			};
+
 			this.$( '.surface' ).hide();
 			EditorOverlayBase.prototype.postRender.apply( this, arguments );
 		},
@@ -118,19 +132,6 @@
 		onClickBack: function () {
 			EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
 			this.switchToEditor();
-		},
-		/**
-		 * Source Editor click handler
-		 */
-		onClickSourceEditor: function () {
-			// If changes have been made tell the user they have to save first
-			if ( !this.hasChanged() ) {
-				this.switchToSourceEditor( this.options );
-			} else {
-				if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-					this.onStageChanges();
-				}
-			}
 		},
 		/**
 		 * Reveal the editing interface.

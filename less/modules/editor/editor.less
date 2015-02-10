@@ -45,71 +45,17 @@
 	}
 
 	.overlay-header {
-		.switcher-container {
-			// Have to set an explicit width since we're using display:table-cell
-			width: @headerHeight;
-			vertical-align: middle;
-			position: relative;
+		.oo-ui-toolbar-bar {
+			border-bottom: none;
 		}
-
-		.icon.editor-switcher {
-			margin: 0;
+		.oo-ui-icon-editor-switcher {
 			.background-image( 'images/editToggle.svg' );
-			background-size: 44px 32px;
-			margin-right: 1em;
 		}
-
-		.icon.editor-switcher:focus {
-			outline: none;
+		.oo-ui-icon-edit-source {
+			.background-image( 'images/editSourceNormal.svg' );
 		}
-
-		.switcher-drop-down {
-			display: none;
-			position: absolute;
-			top: @headerHeight;
-			right: -1px;
-			// Needs to float above any elements in the toolbar
-			z-index: @z-indexContent;
-			box-shadow: 0 .1em .2em rgba(0, 0, 0, .2);
-			border: 1px solid @grayLight;
-			white-space: nowrap;
-
-			// FIXME: change class when mediawiki.ui has proper tabs/toggle buttons
-			> .mw-ui-button {
-				display: block;
-				border: none;
-				border-radius: 0;
-				text-align: left;
-
-				// FIXME: Remove when mw-ui-icon in stable
-				.icon {
-					padding-left: 3.35em;
-					vertical-align: middle;
-				}
-
-				&.selected {
-					background: @selectedBackgroundColor;
-				}
-
-				// FIXME: Remove when mw-ui-icon in stable
-				&:not(.mw-ui-icon) {
-					padding: 0 1.5em 0 .5em;
-				}
-			}
-
-			> div {
-				line-height: 3.35em;
-
-				&:last-child {
-					border-right: none;
-				}
-			}
-
-			// FIXME: Move to rule (> div) when mw-ui-icon in stable
-			.mw-ui-icon {
-				height: 3.35em;
-				padding-right: 3.35em;
-			}
+		.oo-ui-icon-edit-ve {
+			.background-image( 'images/editVeNormal.svg' );
 		}
 	}
 }
