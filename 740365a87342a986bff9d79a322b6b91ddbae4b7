@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_da4f3c96",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 621,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-10T14:29:35Z",
+      "side": 1,
+      "message": "Typo in p[arameters.",
+      "revId": "740365a87342a986bff9d79a322b6b91ddbae4b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
