@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d295eae7",
+        "filename": "javascripts/modules/wikiGrokRoulette/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-02-10T00:03:26Z",
+      "side": 1,
+      "message": "It would be good to have an M.require( \u0027context\u0027 ).assertMode( [ \u0027beta\u0027 ] ); here.\n\nI know it seems redundant, but we have had cases in the past of modules accidentally getting loading in the wrong mode due to ResourceLoader dependencies. It\u0027s good to double-check in the init file.",
+      "revId": "758fdf031afcb5e97eec7a868289a269ac3697aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_32ad3e2f",
+        "filename": "javascripts/modules/wikiGrokRoulette/wikiGrokRoulette.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-02-10T00:03:26Z",
+      "side": 1,
+      "message": "Please indent with 4 spaces here so it\u0027s clear that it\u0027s part of the param description and not the general function docs.",
+      "revId": "758fdf031afcb5e97eec7a868289a269ac3697aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
