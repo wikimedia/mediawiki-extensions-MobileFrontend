@@ -42,8 +42,19 @@
 		background-position: center top;
 		.background-image-svg-quick('images/wikigrok');
 
-		a {
+		a,
+		.next {
 			margin-top: 1em;
+		}
+
+		&.wg-badge {
+			.next {
+				.spinner {
+					height: auto;
+					vertical-align: middle;
+					visibility: hidden;
+				}
+			}
 		}
 
 		&.wg-badge-1 {
