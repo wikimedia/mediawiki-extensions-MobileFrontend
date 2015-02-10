@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cbda0c21",
+        "filename": "javascripts/modules/bannerImage/PageImagesBannerImageRepository.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-10T19:25:03Z",
+      "side": 1,
+      "message": "Add documentation?",
+      "revId": "78a93d28755e1a52386868714b4a444a041d4e8b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cb01ac72",
+        "filename": "javascripts/modules/bannerImage/PageImagesBannerImageRepository.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-10T19:25:03Z",
+      "side": 1,
+      "message": "Do we really want to limit the size at 768? I think it should be bigger or smaller depending on the screen size.",
+      "revId": "78a93d28755e1a52386868714b4a444a041d4e8b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
