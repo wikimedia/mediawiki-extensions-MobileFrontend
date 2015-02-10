@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_0b17a4f3",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-10T19:03:44Z",
+      "side": 1,
+      "message": "For testability - tests need to override this.",
+      "parentUuid": "6e7c4fa4_354d2340",
+      "revId": "740365a87342a986bff9d79a322b6b91ddbae4b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_da4f3c96",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 7
@@ -30,6 +48,24 @@
       "writtenOn": "2015-02-10T14:29:35Z",
       "side": 1,
       "message": "Typo in p[arameters.",
+      "revId": "740365a87342a986bff9d79a322b6b91ddbae4b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2b12a001",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 621,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-10T19:03:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_da4f3c96",
       "revId": "740365a87342a986bff9d79a322b6b91ddbae4b7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
