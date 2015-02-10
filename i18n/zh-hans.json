@@ -405,6 +405,8 @@
 	"apihelp-mobileview-param-maxlen": "假装所有文本结果是一个字符串，并限制结果至此长度。",
 	"apihelp-mobileview-param-thumbnail": "最大缩略图尺寸。",
 	"apihelp-mobileview-example-1": "获取有关[[Doom metal]]的第0章节的信息",
+	"apihelp-mobileview-example-2": "获得有关第0节和包含[[Candlemass]]的参考资料的段落的信息",
+	"apihelp-mobileview-example-3": "获得有关第1节及以后，和包含[[Candlemass]]的参考资料的段落的信息",
 	"apihelp-parse-param-mobileformat": "以适配移动设备的格式返回解析输出。",
 	"apihelp-parse-param-noimages": "在移动输出中禁用图片。",
 	"apihelp-parse-param-mainpage": "应用移动首页转换。",
