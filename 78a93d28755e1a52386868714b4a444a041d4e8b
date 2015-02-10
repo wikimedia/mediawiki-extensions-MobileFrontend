@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_4b2a7c90",
+        "filename": "javascripts/modules/bannerImage/PageImagesBannerImageRepository.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-10T20:04:39Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6e7c4fa4_cbda0c21",
+      "revId": "78a93d28755e1a52386868714b4a444a041d4e8b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_cb01ac72",
         "filename": "javascripts/modules/bannerImage/PageImagesBannerImageRepository.js",
         "patchSetId": 5
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "Yowza. Good catch. This number should be passed in at construction time. Thanks!",
       "parentUuid": "6e7c4fa4_cb01ac72",
+      "revId": "78a93d28755e1a52386868714b4a444a041d4e8b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6b25f8bb",
+        "filename": "javascripts/modules/bannerImage/PageImagesBannerImageRepository.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-10T20:04:39Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6e7c4fa4_eb33485d",
       "revId": "78a93d28755e1a52386868714b4a444a041d4e8b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
