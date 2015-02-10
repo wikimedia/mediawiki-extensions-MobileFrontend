@@ -123,11 +123,24 @@ $wgMinervaStyleModules = array(
 			),
 		),
 	),
-	'skins.minerva.alpha.styles' => $wgMFResourceFileModuleBoilerplate + array(
+	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
-			'less/content/links.alpha.less',
-			'less/pageactions.alpha.less',
-			'less/footer.alpha.less',
+			'less/content/links.beta.less',
+			'less/pageactions.beta.less',
+			'less/footer.beta.less',
+		),
+	),
+	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
+		'class' => 'ResourceLoaderImageModule',
+		'prefix' => 'mw-ui',
+		'images' => array(
+			'icon' => array(
+				// page actions
+				'watch:before' => 'images/icons/beta/watch.svg',
+				'watched:before' => 'images/icons/beta/watched.svg',
+				'edit:before' => 'images/icons/beta/editLocked.svg',
+				'edit-enabled:before' => 'images/icons/beta/edit.svg',
+			),
 		),
 	),
 );
@@ -1048,7 +1061,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// issues.js
 			'mobile-frontend-meta-data-issues',
-			'mobile-frontend-meta-data-issues-alpha',
+			'mobile-frontend-meta-data-issues-beta',
 			'mobile-frontend-meta-data-issues-talk',
 			'mobile-frontend-meta-data-issues-header',
 			'mobile-frontend-meta-data-issues-header-talk',

@@ -5,8 +5,7 @@
 			Icon = M.require( 'Icon' ),
 			overlayManager = M.require( 'overlayManager' ),
 			inBeta = context.isBetaGroupMember(),
-			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' ),
-			inAlpha = context.isAlphaGroupMember();
+			CleanupOverlay = M.require( 'modules/issues/CleanupOverlay' );
 
 		/**
 		 * Extract a summary message from a cleanup template generated element that is
@@ -42,7 +41,7 @@
 		 * @return {jQuery}
 		 */
 		function createLinkElement( labelText ) {
-			if ( inAlpha ) {
+			if ( inBeta ) {
 				return $( '<a class="cleanup mw-mf-cleanup"></a>' )
 					.text( labelText );
 			}
@@ -101,7 +100,7 @@
 				} );
 			} );
 
-			if ( inAlpha && $metadata.length ) {
+			if ( inBeta && $metadata.length ) {
 				$( '.pre-content' ).append( $link );
 			} else {
 				$link.insertBefore( $metadata.eq( 0 ) );
@@ -120,8 +119,8 @@
 				$container = ns === 14 ? $( '#content' ) : M.getCurrentPage().getLeadSectionElement(),
 				labelMsgKey = 'mobile-frontend-meta-data-issues';
 
-			if ( inAlpha ) {
-				labelMsgKey += '-alpha';
+			if ( inBeta ) {
+				labelMsgKey += '-beta';
 			}
 
 			if ( ns === 0 ) {

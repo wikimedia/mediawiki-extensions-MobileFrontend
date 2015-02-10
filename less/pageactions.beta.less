@@ -4,13 +4,14 @@
 @titleSectionSpacingTop: 20px;
 @titleSectionSpacingBottom: 25px;
 
-.alpha {
+.alpha,
+.beta {
 	.pre-content {
 		padding: @titleSectionSpacingTop @contentMargin @titleSectionSpacingBottom;
 
 		.tagline {
 			color: @colorGray5;
-			font-size: 1.1em;
+			font-size: 1.05em;
 			margin: 10px 0;
 
 			&:first-letter {
@@ -27,7 +28,7 @@
 
 	#page-actions {
 		// FIXME: Make default when mw-ui-icon in stable
-		font-size: 1.2em;
+		font-size: 1.1em; // Icons are 24px square.
 		float: right;
 		width: 3.4em;
 		border-bottom: none;
@@ -44,7 +45,8 @@
 }
 
 @media all and (max-width: @wgMFDeviceWidthTablet) {
-	.alpha {
+	.alpha,
+	.beta {
 		#page-actions {
 			padding-top: 0;
 		}
@@ -52,7 +54,8 @@
 }
 
 @media all and (min-width: @wgMFDeviceWidthTablet) {
-	.alpha {
+	.alpha,
+	.beta {
 		#page-actions {
 			width: auto;
 			padding-right: 0;

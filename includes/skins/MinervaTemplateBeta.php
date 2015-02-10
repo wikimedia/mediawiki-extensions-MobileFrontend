@@ -8,6 +8,8 @@
  * beta mode via Special:MobileOptions
  */
 class MinervaTemplateBeta extends MinervaTemplate {
+	/** {@inheritdoc} */
+	protected $renderHistoryLinkBeforeContent = false;
 	/**
 	 * @var string $searchPlaceHolderMsg Message used as placeholder in search input
 	 */
@@ -40,5 +42,35 @@ class MinervaTemplateBeta extends MinervaTemplate {
 			);
 		}
 		return $result;
+	}
+
+	/**
+	 * Renders the list of page actions and then the title of the page in its
+	 * container to keep LESS changes to a minimum.
+	 *
+	 * @param array $data
+	 */
+	protected function renderPreContent( $data ) {
+		$internalBanner = $data[ 'internalBanner' ];
+		$preBodyText = isset( $data['prebodytext'] ) ? $data['prebodytext'] : '';
+
+		if ( $internalBanner || $preBodyText ) {
+
+			?>
+			<div class="pre-content">
+				<?php
+				if ( !$this->isSpecialPage ) {
+					$this->renderPageActions( $data );
+				}
+				echo $preBodyText;
+				// FIXME: Temporary solution until we have design
+				if ( isset( $data['_old_revision_warning'] ) ) {
+					echo $data['_old_revision_warning'];
+				}
+				echo $internalBanner;
+				?>
+			</div>
+			<?php
+		}
 	}
 }
