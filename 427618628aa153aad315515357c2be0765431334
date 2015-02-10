@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_50e22d2f",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-10T17:31:58Z",
+      "side": 1,
+      "message": "How? Take the time to clarify what this function does (as much as we all like evaluating preg_replace_callback in our heads). Maybe even include an example…",
+      "revId": "427618628aa153aad315515357c2be0765431334",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
