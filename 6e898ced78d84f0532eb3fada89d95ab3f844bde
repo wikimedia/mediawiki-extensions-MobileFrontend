@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9af8e4e3",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-10T13:30:09Z",
+      "side": 1,
+      "message": "Given that this handler is only installed if VE is enabled (L117), is this check necessary?",
+      "revId": "6e898ced78d84f0532eb3fada89d95ab3f844bde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
