@@ -9,7 +9,8 @@
 	{{/hasToolbar}}
 	{{#hasToolbar}}<div class="toolbar"></div>{{/hasToolbar}}
 	{{#editSwitcher}}
-	{{>switcher}}
+		<div class="switcher-container">
+		</div>
 	{{/editSwitcher}}
 	{{^readOnly}}
 	<div class="overlay-action"><button class="continue" disabled>{{continueMsg}}</button></div>

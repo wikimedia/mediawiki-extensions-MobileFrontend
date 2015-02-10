@@ -22,9 +22,6 @@
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Boolean} defaults.hasToolbar Whether the editor has a toolbar or not. When
 		 *  disabled a header will be show instead.
-		 * @cfg {String} defaults.switcherButton HTML of the editor switcher button.
-		 * @cfg {String} defaults.sourceButton HTML of the button that shows the page source.
-		 * @cfg {String} defaults.veButton HTML of the button that opens the Visual Editor.
 		 * @cfg {String} defaults.continueMsg Caption for the next button on edit form which takes
 		 * you to the screen that shows a preview and license information.
 		 * @cfg {String} defaults.cancelMsg Caption for cancel button on edit form.
@@ -46,25 +43,6 @@
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			hasToolbar: false,
-			switcherButton: new Icon( {
-				tagName: 'button',
-				name: 'edit-switch',
-				// Label required to prevent height rendering bug
-				label: '\u00a0',
-				additionalClassNames: 'editor-switcher'
-			} ).toHtmlString(),
-			sourceButton: new Icon( {
-				name: 'edit-source',
-				additionalClassNames: 'icon-32px editor-choice',
-				hasText: true,
-				label: mw.msg( 'mobile-frontend-editor-source-editor' )
-			} ).toHtmlString(),
-			veButton: new Icon( {
-				name: 'edit-ve',
-				additionalClassNames: 'icon-32px editor-choice',
-				hasText: true,
-				label: mw.msg( 'mobile-frontend-editor-visual-editor' )
-			} ).toHtmlString(),
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			closeMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
@@ -84,7 +62,6 @@
 		} ),
 		/** @inheritdoc **/
 		templatePartials: {
-			switcher: mw.template.get( 'mobile.editor.common', 'switcher.hogan' ),
 			editHeader: mw.template.get( 'mobile.editor.common', 'editHeader.hogan' ),
 			previewHeader: mw.template.get( 'mobile.editor.common', 'previewHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
@@ -302,6 +279,8 @@
 			 * @constructor
 			 */
 			function EditVeTool( toolGroup, config ) {
+				config = config || {};
+				config.classes = [ 'visual-editor' ];
 				EditVeTool.super.call( this, toolGroup, config );
 			}
 			OO.inheritClass( EditVeTool, OO.ui.Tool );
@@ -324,6 +303,8 @@
 			 * @constructor
 			 */
 			function EditSourceTool( toolGroup, config ) {
+				config = config || {};
+				config.classes = [ 'source-editor' ];
 				EditSourceTool.super.call( this, toolGroup, config );
 			}
 
@@ -340,7 +321,9 @@
 				// will be overridden later
 			};
 
-			toolbar = new OO.ui.Toolbar( toolFactory, toolGroupFactory );
+			toolbar = new OO.ui.Toolbar( toolFactory, toolGroupFactory, {
+				classes: [ 'editor-switcher' ]
+			} );
 			toolFactory.register( EditVeTool );
 			toolFactory.register( EditSourceTool );
 

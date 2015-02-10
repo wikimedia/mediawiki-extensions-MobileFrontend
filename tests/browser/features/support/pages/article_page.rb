@@ -86,9 +86,9 @@ class ArticlePage
   div(:toc, css: '.toc-mobile')
 
   # editor (common)
-  button(:overlay_editor_mode_switcher, css: '.editor-switcher')
-  div(:source_editor_button, css: '.source-editor')
-  div(:visual_editor_button, css: '.visual-editor')
+  span(:overlay_editor_mode_switcher, css: '.editor-switcher .oo-ui-indicatorElement-indicator')
+  span(:source_editor_button, css: '.source-editor .oo-ui-icon-edit-source')
+  span(:visual_editor_button, css: '.visual-editor .oo-ui-icon-edit-ve')
 
   # editor
   textarea(:editor_textarea, class: 'wikitext-editor')
