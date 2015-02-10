@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_707729d0",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_507c6db4",
+        "filename": "javascripts/modules/categories/CategoryAddOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b075c1ca",
+        "filename": "javascripts/modules/categories/CategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f06b39ec",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_10a7d54d",
+        "filename": "javascripts/modules/errorReport/ErrorReportOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_70a8891d",
+        "filename": "javascripts/modules/infobox/InfoboxEditorOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_50ad4d2d",
+        "filename": "javascripts/modules/languages/LanguageOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "if i see this right, there are some spaces, right? Please remove them :)",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1086f5ac",
+        "filename": "javascripts/modules/uploads/UploadTutorial.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3081b192",
+        "filename": "javascripts/modules/wikiGrokRoulette/InfoOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f052593e",
+        "filename": "javascripts/modules/wikigrok/WikiGrokDialog.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-10T18:20:30Z",
+      "side": 1,
+      "message": "unrelated spaces",
+      "revId": "ca9b28b9a118435b6d19b6f1850146c06c241fb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
