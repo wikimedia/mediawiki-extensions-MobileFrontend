@@ -4,7 +4,7 @@
 
 	/**
 	 * Create TableOfContents if the given Page has sections and is not the main page
-	 * and wgTOC config variable is enabled.
+	 * and wgMFTocEnabled config variable is set to true.
 	 * @method
 	 * @param {Page} page for which a TOC is generated
 	 * @ignore
@@ -12,7 +12,8 @@
 	function init( page ) {
 		var toc,
 			sections = page.getSections(),
-			enableToc = mw.config.get( 'wgTOC' );
+			// TODO: remove wgTOC when caches with old HTML expire
+			enableToc = mw.config.get( 'wgMFTocEnabled' ) || mw.config.get( 'wgTOC' );
 
 		if ( enableToc ||
 			// Fallback for old cached HTML, added 26 June, 2014

@@ -838,7 +838,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFDeviceWidthTablet' => $config->get( 'MFDeviceWidthTablet' ),
 			'wgMFMode' => $this->getMode(),
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
-			'wgTOC' => $this->getOutput()->getProperty( 'MinervaTOC' ),
+			'wgMFTocEnabled' => $this->getOutput()->getProperty( 'MinervaTOC' ),
 			'wgMFPageSections' => $this->isMobileMode
 		);
 
