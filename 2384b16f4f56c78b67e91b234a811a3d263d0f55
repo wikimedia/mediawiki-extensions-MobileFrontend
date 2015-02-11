@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_dfd2c52b",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-02-11T09:07:52Z",
+      "side": 1,
+      "message": "This line looks broken. What is \u0027this.$\u0027 supposed to refer to? This is a local function, called directly a few lines below.\n\nFor back-compat reasons, this defaults to the global window object in ES5 (though it becomes null in strict mode). So I guess this works, but I\u0027m not sure it\u0027s supposed to do that.",
+      "revId": "2384b16f4f56c78b67e91b234a811a3d263d0f55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bfc7c966",
+        "filename": "javascripts/modules/toc/toc.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-02-11T09:07:52Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be running a search query on the DOM. The element is literally created a few lines up with a reference to it already.",
+      "revId": "2384b16f4f56c78b67e91b234a811a3d263d0f55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
