@@ -119,13 +119,16 @@ FIXME: Review all of these hacks to see if they still apply.
 	width: auto !important;
 }
 
-// Hacks to render galleries better on mobile
-@media all and (max-width: @wgMFDeviceWidthTablet) {
+@media all and (min-width: @wgMFDeviceWidthTablet) {
 
 	// Show hatnotes when there is room.
 	.hatnote {
 		display: block;
 	}
+}
+
+// Hacks to render galleries better on mobile
+@media all and (max-width: @wgMFDeviceWidthTablet) {
 
 	// Center images that might be less than the screen width.
 	// Image will appear centered and caption will take up full screen.
