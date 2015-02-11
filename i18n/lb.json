@@ -297,7 +297,7 @@
 	"tag-mobile_edit-description": "Ännerung déi vun engem mobile Site oder enger App gemaach gouf",
 	"tag-mobile_web_edit": "Mobil Web-Ännerung",
 	"tag-mobile_web_edit-description": "Ännerung vum mobile Site aus gemaach",
-	"apihelp-mobileview-param-thumbnail": "Maximal Dimensioune vu Miniatur-Biller.",
+	"apihelp-mobileview-param-thumbsize": "Maximal Dimensioune vu Miniatur-Biller.",
 	"mobile-frontend-donate-button-label": "Maacht en Don",
 	"mobile-frontend-wikidata-editor-description-label": "Beschreift \"$1\" an engem eenzege Saz:",
 	"mobile-frontend-meta-data-issues-categories": "Iwwer dës Kategorie",
