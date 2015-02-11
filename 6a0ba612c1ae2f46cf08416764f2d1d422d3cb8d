@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_94b98f7a",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 841,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-11T18:50:15Z",
+      "side": 1,
+      "message": "hmm, maybe wgMFTocEnabled is much better? The var doesn\u0027t contain the ToC itself?",
+      "revId": "6a0ba612c1ae2f46cf08416764f2d1d422d3cb8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
