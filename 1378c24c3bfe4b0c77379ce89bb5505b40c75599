@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b4684b1a",
+        "filename": "javascripts/modules/bannerImage/PageImagesBannerImageRepository.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-11T18:45:36Z",
+      "side": 1,
+      "message": "Should \u0027array of URLS\u0027 be changed to \u0027array of {Image}s\u0027?",
+      "revId": "1378c24c3bfe4b0c77379ce89bb5505b40c75599",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_94c42f13",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-11T18:45:36Z",
+      "side": 1,
+      "message": "Do you also think $( window ).width() is not a good measure for hi-dpi images? Maybe take dpi into consideration?",
+      "revId": "1378c24c3bfe4b0c77379ce89bb5505b40c75599",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
