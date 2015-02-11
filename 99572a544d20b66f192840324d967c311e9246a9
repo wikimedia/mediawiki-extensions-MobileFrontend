@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_57177956",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-11T21:05:15Z",
+      "side": 1,
+      "message": "Not sure how these passed the jscs checks, but please remove quotes around keys.\n\nAlso, \u0027show\u0027 and \u0027hide\u0027 won\u0027t work because they are bound to this.$el, not this.",
+      "revId": "99572a544d20b66f192840324d967c311e9246a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
