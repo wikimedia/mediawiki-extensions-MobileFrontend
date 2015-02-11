@@ -69,6 +69,7 @@ class MockWikiPage extends WikiPage {
  * @group MobileFrontend
  */
 class ApiMobileViewTest extends MediaWikiTestCase {
+
 	/**
 	 * @dataProvider provideSections
 	 */
@@ -109,21 +110,55 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 		);
 	}
 
+	public function setUp() {
+		parent::setUp();
+
+		$this->setMwGlobals( 'wgAPIModules', array( 'mobileview' => 'MockApiMobileView' ) );
+	}
+
+	private function getMobileViewApi( $input ) {
+		$request = new FauxRequest( $input );
+		$context = new RequestContext();
+		$context->setRequest( $request );
+
+		if ( !defined( 'PAGE_IMAGES_INSTALLED' ) ) {
+			define( 'PAGE_IMAGES_INSTALLED', true );
+		}
+
+		return new MockApiMobileView( new ApiMain( $context ), 'mobileview' );
+	}
+
+	private function executeMobileViewApi( $api, $expected ) {
+		$api->execute();
+		$result = $api->getResultData();
+		$this->assertTrue(
+			isset( $result['mobileview'] ),
+			'API output should be encloded in mobileview element'
+		);
+		$this->assertArrayEquals( $expected, $result['mobileview'], false, true );
+	}
+
 	/**
 	 * @dataProvider provideView
 	 */
 	public function testView( array $input, array $expected ) {
-		$this->setMwGlobals( 'wgAPIModules', array( 'mobileview' => 'MockApiMobileView' ) );
+		$api = $this->getMobileViewApi( $input );
+		$this->executeMobileViewApi( $api, $expected );
+	}
 
-		$request = new FauxRequest( $input );
-		$context = new RequestContext();
-		$context->setRequest( $request );
-		if ( !defined( 'PAGE_IMAGES_INSTALLED' ) ) {
-			define( 'PAGE_IMAGES_INSTALLED', true );
+	/**
+	 * @dataProvider provideViewWithTransforms
+	 */
+	public function testViewWithTransforms( array $input, array $expected ) {
+		if ( version_compare(
+			PHPUnit_Runner_Version::id(),
+			'4.0.0',
+			'<'
+		) ) {
+			$this->markTestSkipped( 'testViewWithTransforms requires PHPUnit 4.0.0 or greater.' );
 		}
-		$api = new MockApiMobileView( new ApiMain( $context ), 'mobileview' );
 
-		/* FIXME: commented out because WMF CI uses a stone age version of PHPUnit
+		$api = $this->getMobileViewApi( $input );
 		$api->mockFile = $this->getMock( 'MockFSFile',
 			array( 'getWidth', 'getHeight', 'getTitle', 'transform' ),
 			array(), '', false
@@ -134,15 +169,8 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 			->will( $this->returnValue( Title::newFromText( 'File:Foo.jpg' ) ) );
 		$api->mockFile->method( 'transform' )
 			->will( $this->returnCallback( array( $this, 'mockTransform' ) ) );
-		*/
 
-		$api->execute();
-		$result = $api->getResultData();
-		$this->assertTrue(
-			isset( $result['mobileview'] ),
-			'API output should be encloded in mobileview element'
-		);
-		$this->assertArrayEquals( $expected, $result['mobileview'], false, true );
+		$this->executeMobileViewApi( $api, $expected );
 	}
 
 	public function mockTransform( array $params ) {
@@ -244,9 +272,14 @@ Text 2
 					'pageprops' => array( 'notoc' => '' ),
 				),
 			),
-			// Page image tests. Note that the dimensions are values passed to transform(),
-			// not actual thumbnail dimensions.
-			/* FIXME: commented out because WMF CI uses a stone age version of PHPUnit
+		);
+	}
+
+	public function provideViewWithTransforms() {
+
+		// Note that the dimensions are values passed to #transform, not actual
+		// thumbnail dimensions.
+		return array(
 			array(
 				array(
 					'page' => 'Foo',
@@ -310,7 +343,6 @@ Text 2
 					)
 				),
 			),
-			*/
 		);
 	}
 
