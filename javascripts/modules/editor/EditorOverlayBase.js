@@ -58,7 +58,8 @@
 			} ).toHtmlString(),
 			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
-			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' )
+			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
+			confirmMsg: mw.msg( 'mobile-frontend-editor-cancel-confirm' )
 		} ),
 		/** @inheritdoc **/
 		templatePartials: {
@@ -179,6 +180,7 @@
 			this.funnel = options.funnel;
 			this.schema = new SchemaMobileWebEditing();
 			this.config = mw.config.get( 'wgMFEditorOptions' );
+			$( window ).on( 'beforeunload.mfeditorwarning', $.proxy( this, 'onBeforeUnload' ) );
 
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
@@ -263,6 +265,15 @@
 			this[this.nextStep]();
 		},
 		/**
+		 * beforeunload event handler
+		 */
+		onBeforeUnload: function () {
+			if ( this.shouldConfirmLeave( false ) ) {
+				return this.defaults.confirmMsg;
+			}
+			return false;
+		},
+		/**
 		 * Set up the editor switching interface
 		 * The actual behavior of the editor buttons is initialized in postRender()
 		 * @method
@@ -345,12 +356,26 @@
 		 * @inheritdoc
 		 */
 		hide: function ( force ) {
-			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
-			if ( force || !this.hasChanged() || window.confirm( confirmMessage ) ) {
+			if ( !this.shouldConfirmLeave( force ) || window.confirm( this.defaults.confirmMsg ) ) {
+				// turn off beforeunload event handler
+				$( window ).off( 'beforeunload.mfeditorwarning' );
 				return Overlay.prototype.hide.apply( this, arguments );
 			} else {
 				return false;
 			}
+		},
+		/**
+		 * Check, if the user should be asked if they really want to leave the page.
+		 * Returns false, if he hasn't made changes, otherwise true.
+		 * @param {Boolean} [force] Whether this function should always return false
+		 * @return {Boolean}
+		 */
+		shouldConfirmLeave: function ( force ) {
+			if ( force || !this.hasChanged() ) {
+				return false;
+			}
+			return true;
+
 		},
 		/**
 		 * Checks whether the state of the thing being edited as changed. Expects to be
