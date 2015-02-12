@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_87a7164c",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-12T19:04:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_87a4f6b0",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_478ede34",
         "filename": "javascripts/modules/editor/EditorOverlayBase.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-02-12T18:31:55Z",
       "side": 1,
       "message": "please capitalize u in unload",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e7a84a1f",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-12T19:04:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_478ede34",
       "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_c7ad0e30",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-12T19:04:35Z",
+      "side": 1,
+      "message": "I used the code from core:\nhttps://github.com/wikimedia/mediawiki/blob/6efe05c57fa44f046cdcd75a3a47a15e9283a34e/resources/src/mediawiki/mediawiki.confirmCloseWindow.js#L43-L47\n\nit\u0027s how they remove the event handler from onbeforeunload, but it seems false here in MF, you\u0027re right :)",
+      "parentUuid": "6e7c4fa4_877b9622",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_e7e7ea0b",
         "filename": "javascripts/modules/editor/EditorOverlayBase.js",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_079d460e",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 389,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-12T19:04:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_e7e7ea0b",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_278ba221",
         "filename": "javascripts/modules/editor/EditorOverlayBase.js",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2015-02-12T18:31:55Z",
       "side": 1,
       "message": "I think it will be clearer if this function just returned a Boolean. Imagine a case where in some language mw.msg( \u0027mobile-frontend-editor-cancel-confirm\u0027 ) is an empty string (because of translation bug), then the whole unload thing will fail.",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_67967af5",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-12T19:04:35Z",
+      "side": 1,
+      "message": "a message is _never_ empty, it will always be a string, and if the message doesn\u0027t exist, it is the message key wrapped into \u003c and \u003e, so i see no problem here? Do you still think, that this needs a rewrite (then i will do it, it\u0027s not a big deal) :D",
+      "parentUuid": "6e7c4fa4_278ba221",
       "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
