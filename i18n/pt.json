@@ -361,6 +361,8 @@
 	"tag-mobile_web_edit-description": "Edição feita através do sítio para telemóvel",
 	"mobile-frontend-pageaction-edit-tooltip": "Editar introdução desta página.",
 	"mobile-frontend-pageaction-upload-tooltip": "Carregar foto principal para esta página.",
+	"apihelp-mobileview-param-thumbwidth": "Largura máxima da miniatura.",
+	"apihelp-mobileview-param-thumbheight": "Altura máxima da miniatura.",
 	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel.",
 	"mobile-frontend-donate-button-label": "Doar",
 	"mobile-frontend-wikidata-editor-description-label": "Descreva ''$1'' numa única frase:",
