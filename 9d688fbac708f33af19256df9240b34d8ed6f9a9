@@ -16,6 +16,24 @@
       "revId": "9d688fbac708f33af19256df9240b34d8ed6f9a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_907bce22",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-12T21:53:44Z",
+      "side": 1,
+      "message": "I guess this is a NOP, but I should\u0027ve caught this. I\u0027ll fix it before I merge.",
+      "parentUuid": "6e7c4fa4_d5105855",
+      "revId": "9d688fbac708f33af19256df9240b34d8ed6f9a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
