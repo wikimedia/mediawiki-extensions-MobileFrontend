@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9b520fe1",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T22:53:04Z",
+      "side": 1,
+      "message": "The bottom part of the function should be in the else clause. Or you need to return after rejecting deferred.",
+      "revId": "77e88a21ef8a21166ae0744af020c8103fdb7171",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_fbe7830b",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T22:53:04Z",
+      "side": 1,
+      "message": "I wonder if we should not insert bannerImage into DOM if there are no images?",
+      "revId": "77e88a21ef8a21166ae0744af020c8103fdb7171",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5bc0f754",
+        "filename": "less/modules/bannerImage.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T22:53:04Z",
+      "side": 1,
+      "message": "here also \u0027.banner-image\u0027",
+      "revId": "77e88a21ef8a21166ae0744af020c8103fdb7171",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
