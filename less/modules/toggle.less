@@ -14,9 +14,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	.collapsible-heading {
 		cursor: pointer;
 		position: relative;
-		.icon {
-			margin-right: 12px;
-		}
 
 		border-bottom: solid 1px @sectionBorderColor;
 
@@ -29,11 +26,17 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 		}
 	}
 
-	.section-heading {
-		&.open-block {
-			padding-right: @sectionIconWidth + 15px;
-			margin-bottom: @headingMargin;
+	.section-heading,
+	.in-block {
+		padding-right: @sectionIconWidth + 15px;
+
+		.icon {
+			margin-right: 12px;
 		}
+	}
+
+	.section-heading {
+		margin-bottom: @headingMargin;
 	}
 
 	.collapsible-block {
