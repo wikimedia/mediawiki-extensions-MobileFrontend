@@ -391,6 +391,10 @@ class SkinMinerva extends SkinTemplate {
 			);
 		}
 		$items['auth'] = $this->getLogInOutLink();
+
+		// Allow other extensions to add or override tools
+		Hooks::run( 'MobilePersonalTools', array( &$items ) );
+
 		return $items;
 	}
 
