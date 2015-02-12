@@ -119,6 +119,8 @@
 				} else {
 					if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
 						self.onStageChanges();
+					} else {
+						self.switcherToolbar.tools.editSource.setActive( false );
 					}
 				}
 			};
