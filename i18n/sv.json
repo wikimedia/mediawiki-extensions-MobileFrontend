@@ -11,7 +11,8 @@
 			"McDutchie",
 			"Skalman",
 			"WikiPhoenix",
-			"Hangsna"
+			"Hangsna",
+			"Jenniesarina"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
@@ -112,7 +113,7 @@
 	"mobile-frontend-editor-wait": "Sparar redigering, vänta.",
 	"mobile-frontend-enable-images": "Aktivera bilder på mobil webbplats",
 	"mobile-frontend-errorreport-button-label": "Rapportera ett fel",
-	"mobile-frontend-errorreport-error": "Fel: Återkopplingen kunde inte sändas",
+	"mobile-frontend-errorreport-error": "Fel: återkopplingen kunde inte sändas.",
 	"mobile-frontend-errorreport-feedback": "Tack för din återkoppling!",
 	"mobile-frontend-errorreport-heading": "Rapportera ett fel",
 	"mobile-frontend-errorreport-instructions": "<p>Detta formulär är endast till för att rapportera fel i Wikipediaartiklar. Rapportera inte information som saknas.</p><p>Försök själv att åtgärda fel du hittar genom att redigera sidan. Om du inte kan åtgärda felet kan du rapportera det med detta formulär.</p><p>Ange inte ditt telefonnummer eller e-postadress.</p>",
@@ -191,10 +192,11 @@
 	"mobile-frontend-main-menu-settings-heading": "Inställningar",
 	"mobile-frontend-main-menu-upload": "Uppladdningar",
 	"mobile-frontend-main-menu-watchlist": "Bevakningslista",
+	"mobile-frontend-main-menu-wikigrok-roulette": "Bidra",
 	"mobile-frontend-media-details": "Detaljer",
 	"mobile-frontend-media-license-link": "Licensinformation",
 	"mobile-frontend-meta-data-issues": "Denna sida har några problem",
-	"mobile-frontend-meta-data-issues-alpha": "Sidproblem",
+	"mobile-frontend-meta-data-issues-beta": "Sidproblem",
 	"mobile-frontend-meta-data-issues-talk": "Om denna diskussionssida",
 	"mobile-frontend-meta-data-issues-header": "Problem",
 	"mobile-frontend-meta-data-issues-header-talk": "Om denna sida",
@@ -350,6 +352,9 @@
 	"mobile-frontend-watchlist-removed": "Tog bort $1 från din bevakningslista",
 	"mobile-frontend-watchlist-signup-action": "Registrera dig för att starta en nu.",
 	"mobile-frontend-watchlist-view": "Visa din bevakningslista",
+	"mobile-frontend-wikigrok-roulette-info-overlay-title": "Bidra",
+	"mobile-frontend-wikigrok-roulette-info-overlay-content": "Wikipedia experimenterar med nya sätt för människor att bidra. Genom att samla svar från dig och andra läsare kan vi förbättra Wikipedias sökfunktion.",
+	"mobile-frontend-wikigrok-roulette-info-overlay-start-button-label": "Nu kör vi!",
 	"nearby": "Sidor nära dig",
 	"right-mf-uploadbutton": "Använd ladda upp-knappen på mobila sidor",
 	"tag-mobile_edit": "Mobilredigering",
@@ -373,7 +378,7 @@
 	"apihelp-mobileview-param-onlyrequestedsections": "Returnera endast begärda avsnitt även med $1prop=sections.",
 	"apihelp-mobileview-param-offset": "Låtsas att alla textresultat är en sträng, och returnera understrängen som startar vid detta värde.",
 	"apihelp-mobileview-param-maxlen": "Låtsas att alla textresultat är en sträng, och begränsa resultatet till denna längd.",
-	"apihelp-mobileview-param-thumbnail": "Maximala dimensioner för miniatyr.",
+	"apihelp-mobileview-param-thumbsize": "Maximala dimensioner för miniatyr.",
 	"apihelp-mobileview-example-1": "Hämta information om avsnitt 0 i [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Hämta information om avsnitt 0 och stycken innehållande referenser i [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Hämta information om avsnitt 1 och senare samt avsnitt innehållande referenser i [[Candlemass]]",
@@ -386,5 +391,6 @@
 	"mobile-frontend-loading-message": "Läser in...",
 	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|dag|dagar}} sedan",
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|månad|månader}} sedan",
-	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|år}} sedan"
+	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|år}} sedan",
+	"mobile-frontend-console-recruit": "\\o/ Hej! Det här är en öppen programvara för källkod och vi behöver frivilliga som hjälper oss att bygga, förbättra och vara med och fixa fel som du hittar i JavaScript-konsollen!\n\nHär hittar du vår backlog @ https://phabricator.wikimedia.org/project/view/67/"
 }
