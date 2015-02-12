@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_87a4f6b0",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T18:31:55Z",
+      "side": 1,
+      "message": "You should turn off this event once the editor is destroyed.",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_478ede34",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T18:31:55Z",
+      "side": 1,
+      "message": "please capitalize u in unload",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_877b9622",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T18:31:55Z",
+      "side": 1,
+      "message": "Can you explain why you\u0027re doing this? thanks",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e7e7ea0b",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 389,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T18:31:55Z",
+      "side": 1,
+      "message": "\u0027the\u0027 in \u0027the really\u0027 should be \u0027they\u0027.",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_278ba221",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T18:31:55Z",
+      "side": 1,
+      "message": "I think it will be clearer if this function just returned a Boolean. Imagine a case where in some language mw.msg( \u0027mobile-frontend-editor-cancel-confirm\u0027 ) is an empty string (because of translation bug), then the whole unload thing will fail.",
+      "revId": "f1772fcf81cf4143099b69e3abe35586a2b215ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
