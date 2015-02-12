@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_27ff2264",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-12T18:50:00Z",
+      "side": 1,
+      "message": "I don\u0027t think we should apply margin-right to the edit button, but it\u0027s a story for another patch.",
+      "revId": "929167820032b1c4e1094e332e4be65f6cab8bc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
