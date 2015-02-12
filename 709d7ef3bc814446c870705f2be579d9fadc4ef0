@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_47249ead",
+        "filename": "javascripts/modules/wikigrok/WikiGrokResponseApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-12T17:48:06Z",
+      "side": 1,
+      "message": "Sorry, the card had a typo - assert, not asset :(",
+      "revId": "709d7ef3bc814446c870705f2be579d9fadc4ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
