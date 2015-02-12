@@ -459,7 +459,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/editor/editor.less',
 		),
 		'templates' => array(
-			'switcher.hogan' => 'templates/modules/editor/switcher.hogan',
 			'editHeader.hogan' => 'templates/modules/editor/editHeader.hogan',
 			'previewHeader.hogan' => 'templates/modules/editor/previewHeader.hogan',
 			'saveHeader.hogan' => 'templates/modules/editor/saveHeader.hogan',
