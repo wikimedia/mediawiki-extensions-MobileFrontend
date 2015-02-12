@@ -76,7 +76,6 @@ class ExtMobileFrontend {
 			return null;
 		}
 
-		$profileSection = new ProfileSection( __METHOD__ );
 		try {
 			$entityLookup = WikibaseClient::getDefaultInstance()
 				->getStore()
