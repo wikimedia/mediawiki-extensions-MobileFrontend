@@ -405,6 +405,10 @@ class MobileFrontendHooks {
 				$list['Notifications'] = 'SpecialMobileNotifications';
 			}
 		}
+		// add Special:Nearby only, if Nearby is activated
+		if ( $ctx->getMFConfig()->get( 'MFNearby' ) ) {
+			$list['Nearby'] = 'SpecialNearby';
+		}
 		return true;
 	}
 
