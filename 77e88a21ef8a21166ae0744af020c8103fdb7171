@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_7e7b5c23",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-13T18:56:06Z",
+      "side": 1,
+      "message": "I was thinking maybe we should add a helper method to BannerImage that tells whether any image has resolved. If yes than we will insert it, otherwise remove it.",
+      "parentUuid": "6e7c4fa4_008c47fe",
+      "revId": "77e88a21ef8a21166ae0744af020c8103fdb7171",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_5bc0f754",
         "filename": "less/modules/bannerImage.less",
         "patchSetId": 11
