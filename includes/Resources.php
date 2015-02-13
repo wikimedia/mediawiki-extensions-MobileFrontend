@@ -613,6 +613,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 			'mobile.templates',
 			'mobile.loggingSchemas',
+			'mediawiki.Title',
 		),
 		'styles' => array(
 			'less/modules/search/SearchOverlay.less',

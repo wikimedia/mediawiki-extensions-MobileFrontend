@@ -144,10 +144,12 @@
 										} else {
 											mwTitle = mw.Title.newFromText( page.title, self._searchNamespace );
 
-											// just add a minimum of data (title and displayname)
 											results.push( {
+												id: page.pageid,
+												heading: highlightSearchTerm( page.title, query ),
 												title: page.title,
-												displayname: mwTitle.getNameText()
+												displayname: mwTitle.getNameText(),
+												url: mwTitle.getUrl()
 											} );
 										}
 									}
