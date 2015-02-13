@@ -113,8 +113,6 @@ foreach ( $autoloadClasses as $className => $classFilename ) {
 	$wgAutoloadClasses[$className] = __DIR__ . "/includes/$classFilename.php";
 }
 
-$wgExtensionFunctions[] = 'efMobileFrontend_Setup';
-
 $wgAPIModules['mobileview'] = 'ApiMobileView';
 
 $wgHooks['APIGetAllowedParams'][] = 'ApiParseExtender::onAPIGetAllowedParams';
@@ -171,6 +169,7 @@ $wgSpecialPages = array_merge( $wgSpecialPages, array(
 	'Uploads' => 'SpecialUploads',
 	'UserProfile' => 'SpecialUserProfile',
 ) );
+$wgSpecialPageGroups['Nearby'] = 'pages';
 
 // Register Minerva as a valid skin
 $wgValidSkinNames['minerva'] = "Minerva";
@@ -180,20 +179,6 @@ $wgAvailableRights[] = 'mf-uploadbutton';
 $wgGroupPermissions['*']['mf-uploadbutton'] = false;
 $wgGroupPermissions['autoconfirmed']['mf-uploadbutton'] = true;
 $wgGroupPermissions['sysop']['mf-uploadbutton'] = true;
-
-/**
- * Setup MobileFrontend, load global components
- */
-function efMobileFrontend_Setup() {
-	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups,
-		$wgResourceLoaderLESSImportPaths,
-		$wgMobileVEModules;
-
-	if ( $wgMFNearby ) {
-		$wgSpecialPages['Nearby'] = 'SpecialNearby';
-		$wgSpecialPageGroups['Nearby'] = 'pages';
-	}
-}
 
 // Config instance
 $wgConfigRegistry['mobilefrontend'] = 'GlobalVarConfig::newInstance';
