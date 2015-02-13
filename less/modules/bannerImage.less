@@ -7,7 +7,7 @@
 	height: 360px;
 	max-height: 360px;
 	display: none;
-	background-position-x: center;
+	background-position: 50% 20%;
 	background-repeat: no-repeat;
 	.background-size( e(''), cover);
 	position: relative;
@@ -19,5 +19,11 @@
 		background-color: white;
 		opacity: .8;
 		padding: 0 8px;
+	}
+}
+@media all and (min-width: @wgMFDeviceWidthTablet) {
+	.wikidata-banner-image {
+		max-width: @wgMFDeviceWidthTablet;
+		margin: 0 auto;
 	}
 }

@@ -5,7 +5,8 @@
 		View = M.require( 'View' ),
 		config = mw.config.get( 'wgWikiBasePropertyConfig' ),
 		icons = M.require( 'icons' ),
-		ratio = 16 / 9;
+		browser = M.require( 'browser' ),
+		ratio = ( browser.isWideScreen() ) ? 21 / 9 : 16 / 9;
 
 	/**
 	 * Gets a width that is close to the current screen width
@@ -84,6 +85,7 @@
 
 	/**
 	 * Try to load image and resolve or fail when it loads / or not.
+	 * On tablets don't resolve images that are less than 768px wide.
 	 * @returns {jQuery.Deferred}
 	 */
 	HeaderImage.prototype.load = function () {
@@ -96,9 +98,13 @@
 		$( '<img>' )
 			.attr( 'src', this.src )
 			.load( function () {
-				self.setDimensions( $( this ).width(), $( this ).height() );
+				if ( browser.isWideScreen() && $( this ).width() < 768 ) {
+					loaded.reject();
+				} else {
+					self.setDimensions( $( this ).width(), $( this ).height() );
+					loaded.resolve( self );
+				}
 				$( this ).remove();
-				loaded.resolve( self );
 			} )
 			.error( function () {
 				$( this ).remove();
@@ -280,7 +286,7 @@
 		resizeImage: function () {
 			this.$el
 				.css( {
-					// Maintain 16:9 ratio
+					// Maintain 21:9 (on tablet or bigger) or 16:9 ratio
 					// Max height is enforced with CSS
 					height: this.$el.width() * ( 1 / ratio )
 				} );
