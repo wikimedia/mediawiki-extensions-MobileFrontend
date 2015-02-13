@@ -1,183 +1,70 @@
 ( function ( M, $ ) {
 	var BannerImage,
-		md5fn = M.require( 'hex_md5' ),
-		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
 		View = M.require( 'View' ),
-		config = mw.config.get( 'wgWikiBasePropertyConfig' ),
-		icons = M.require( 'icons' ),
 		browser = M.require( 'browser' ),
 		ratio = ( browser.isWideScreen() ) ? 21 / 9 : 16 / 9;
 
 	/**
-	 * Gets a width that is close to the current screen width
-	 * Limits the amount of thumbnail images being generated on the server
-	 * It rounds to upper limit to try to avoid upscaling
-	 * @ignore
-	 * @param {Number} screenWidth to optimise for
+	 * Tries to load one image from a list of images.
 	 *
-	 * @returns {Number} pixel width of the image
+	 * The first image from the list is loaded. If it loads, then it is returned, otherwise the next
+	 * image in the list is loaded. If the list of images is exhausted then the loading has
+	 * completely failed and nothing is returned.
+	 *
+	 * @param {Array} images A list of images
+	 * @returns {jQuery.Promise}
 	 */
-	function getImageWidth( screenWidth ) {
-		var i = 0,
-			// Thumbnail widths
-			widths = [ 320, 360, 380, 400, 420, 460, 480, 640, 680, 720, 736, 768 ],
-			width;
+	function loadOneImage( images ) {
 
-		for ( i; i < widths.length; i++ ) {
-			width = widths[ i ];
-			if ( screenWidth <= width ) {
-				break;
+		/**
+		 * @ignore
+		 *
+		 * @param {Array} images
+		 * @param {Number} index
+		 * @param {jQuery.Deferred} deferred
+		 */
+		function loadOneImageAcc( images, index, deferred ) {
+			var image;
+
+			if ( index >= images.length ) {
+				deferred.reject();
+
+				return;
 			}
+
+			image = images[ index ];
+			image.load()
+				.done( function () {
+					deferred.resolve( image );
+				} )
+				.fail( function () {
+					loadOneImageAcc( images, ++index, deferred );
+				} );
 		}
-		return width;
+
+		var deferred = $.Deferred();
+
+		loadOneImageAcc( images, 0, deferred );
+
+		return deferred.promise();
 	}
 
 	/**
-	 * @class HeaderImage
-	 * Class in charge of a Header image. It fills up the source url, can try
-	 * to load it, adjust its width/height depending on ratio, and modify the
-	 * source url for use on the BannerImage class.
-	 */
-	function HeaderImage( title, desiredWidth ) {
-		desiredWidth = getImageWidth( desiredWidth || $( window ).width() );
-		this.title = title;
-		this.width = desiredWidth;
-		this.height = this.width / ratio;
-		this.src = this.getImageUrl( title, desiredWidth );
-	}
-
-	/**
-	 * Given a title work out the url to the thumbnail for that image
-	 * FIXME: This should not make its way into stable.
-	 * NOTE: Modified/Borrowed from from Infobox.js
-	 * @method
-	 * @param {String} title of file page without File: prefix
-	 * @param {Number|String} desiredWidth to load thumbnail for.
-	 * @return {String} url corresponding to thumbnail (size 160px)
-	 */
-	HeaderImage.prototype.getImageUrl = function ( title, desiredWidth ) {
-		var md5, filename, source,
-			path = 'https://upload.wikimedia.org/wikipedia/commons/';
-		// uppercase first letter in file name
-		filename = title.charAt( 0 ).toUpperCase() + title.substr( 1 );
-		// replace spaces with underscores
-		filename = filename.replace( / /g, '_' );
-		md5 = md5fn( filename );
-		source = md5.charAt( 0 ) + '/' + md5.substr( 0, 2 ) + '/' + filename;
-		if ( filename.substr( filename.length - 3 ) !== 'svg' ) {
-			return path + 'thumb/' + source + '/' + desiredWidth + 'px-' + filename;
-		} else {
-			return path + source;
-		}
-	};
-
-	/**
-	 * Change width of the image (and update src url)
-	 *
-	 * @method
-	 * @param {Number} newWidth New width in px
-	 */
-	HeaderImage.prototype.updateWidthAndSrc = function ( newWidth ) {
-		newWidth = getImageWidth( newWidth );
-		this.src = this.src.replace( this.width + 'px', newWidth + 'px' );
-		this.width = newWidth;
-	};
-
-	/**
-	 * Try to load image and resolve or fail when it loads / or not.
-	 * On tablets don't resolve images that are less than 768px wide.
-	 * @returns {jQuery.Deferred}
-	 */
-	HeaderImage.prototype.load = function () {
-		var loaded = $.Deferred(),
-			self = this;
-		// Try to load it
-		// There is an issue with reliably knowing if the
-		// original image is wider than the thumbnail.
-		// If so, that image will fail to load.
-		$( '<img>' )
-			.attr( 'src', this.src )
-			.load( function () {
-				if ( browser.isWideScreen() && $( this ).width() < 768 ) {
-					loaded.reject();
-				} else {
-					self.setDimensions( $( this ).width(), $( this ).height() );
-					loaded.resolve( self );
-				}
-				$( this ).remove();
-			} )
-			.error( function () {
-				$( this ).remove();
-				loaded.reject();
-			} )
-			.appendTo( $( 'body' ) )
-			.hide();
-		return loaded;
-	};
-
-	/**
-	 * Set dimensions and ratio of the real (loaded) image
-	 * @method
-	 * @param {Number} width Width in pixels of the loaded image
-	 * @param {Number} height Height in pixels of the loaded image
-	 */
-	HeaderImage.prototype.setDimensions = function ( width, height ) {
-		this.dimensions = {
-			width: width,
-			height: height
-		};
-		this.imageRatio = width / height;
-	};
-
-	/**
-	 * Returns true if dimensions are wider than ratio
-	 *
-	 * @returns {Boolean} If is wider than the desired ratio or not
-	 */
-	HeaderImage.prototype.widerThanRatio = function () {
-		if ( this.dimensions.width / this.dimensions.height > ratio ) {
-			return true;
-		}
-		return false;
-	};
-
-	/**
-	 * Looking into the real image dimensions adjust width and height of the
-	 * image to fit the ratio and avoid upscaling if image is wider than desired
-	 * ratio
-	 */
-	HeaderImage.prototype.adjustSize = function () {
-		// If the image is wider than the ratio we want, there will be
-		// upscaling. Change width to a bigger image.
-		if ( this.widerThanRatio() ) {
-			// Width of this image we need is the height we want by the real ratio of
-			// the image (to fill the height for the device width)
-			this.updateWidthAndSrc( this.height * this.imageRatio );
-		}
-	};
-
-	/**
-	 * A WikiData banner image at the head of the page
+	 * A banner image at the head of the page
 	 * @class BannerImage
 	 * @extends View
 	 */
 	BannerImage = View.extend( {
-		className: 'wikidata-banner-image',
-		/**
-		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.spinner HTML of the spinner icon.
-		 */
-		defaults: {
-			spinner: icons.spinner().toHtmlString()
-		},
+		className: 'banner-image',
+
 		/**
 		 * @inheritdoc
+		 *
+		 * @param {Object} options
+		 * @param {Object} options.repository The repository from which to load images
 		 */
 		initialize: function ( options ) {
-			this.api = new WikiDataApi( {
-				itemId: options.itemId
-			} );
-			this.images = [];
+			this.repository = options.repository;
 
 			View.prototype.initialize.apply( this, options );
 		},
@@ -185,105 +72,65 @@
 		 * @inheritdoc
 		 */
 		postRender: function () {
-			var self = this;
-
-			this.api.getClaims().done( function ( claims ) {
-				var claim,
-					imgId = config.bannerImage,
-					commonsCategory = config.commonsCategory;
-
-				if ( claims.entities ) {
-					if ( claims.entities.hasOwnProperty( imgId ) &&
-						claims.entities[imgId].length ) {
-						// Parse data from the API into Image objects.
-						$.each( claims.entities[imgId], function ( index, image ) {
-							if ( image.mainsnak.datatype === 'commonsMedia' ) {
-								self.addImage( image.mainsnak.datavalue.value );
-							}
-						} );
-
-						// Start trying to load images sequentially from most important to
-						// least.
-						self.loadImage( 0 );
-					}
-					if ( claims.entities.hasOwnProperty( commonsCategory ) ) {
-						claim = claims.entities[commonsCategory][0];
-						$( '<a>' ).attr( 'href', '#/commons-category/' +  claim.mainsnak.datavalue.value )
-							.text( 'View on Commons' ).appendTo( self.$el );
-					}
-				}
-			} );
+			this.loadImage();
 		},
+
 		/**
-		 * Add an image to the `images` list.
-		 * @param {String} title Title of the image
-		 */
-		addImage: function ( title ) {
-			this.images.push( new HeaderImage( title ) );
-		},
-		/**
-		 * Async series image loading loop.
+		 * Tries to load an image.
 		 *
-		 * Start trying to get images in series from `this.images`. When we get
-		 * a valid one, don't load more and go to `this.imageLoaded` to set it as
-		 * the banner
-		 * @param {Number} index Image index to try and load
+		 * If an image is successfully loaded, then the image is displayed, otherwise the view
+		 * element is removed from the DOM.
+		 *
+		 * @method
 		 */
-		loadImage: function ( index ) {
+		loadImage: function () {
+			var self = this,
+				targetWidth = $( window ).width();
 
-			// If we have gone through all images, and nothing got done, then
-			// self-destruct!
-			if ( index >= this.images.length ) {
-				this.remove();
-				return;
-			}
-
-			// Try to load the current image
-			var image = this.images[ index ],
-				loading = image.load(),
-				self = this;
-
-			// If the image loaded, we are done, leave to this.imageLoaded
-			loading.done( function () {
-				self.imageLoaded( image );
-			} );
-
-			// If the image didn't load, then try with the next one
-			loading.fail( function () {
-				self.loadImage( ++index );
-			} );
+			self.repository.getImages( targetWidth )
+				.then( function ( images ) {
+					loadOneImage( images )
+						.done( function ( image ) {
+							self.onImageLoaded( image );
+						} )
+						.fail( function () {
+							self.remove();
+						} );
+				} );
 		},
+
 		/**
 		 * When we have a valid image, set it as background, bind resize events.
 		 * @method
-		 * @param {HeaderImage} image Image object that loaded
+		 * @param {Image} image Image object that loaded
 		 */
-		imageLoaded: function ( image ) {
+		onImageLoaded: function ( image ) {
 			var self = this;
 
-			// Adjust image src size in case it is too wide.
-			image.adjustSize();
-
-			// Set image in header
-			this.$el
+			self.$el
 				.css( {
 					'background-image': 'url("' + image.src + '")'
 				} )
 				.show();
-			this.resizeImage();
 
-			// Set resize events once
-			if ( !this.resizeEventsSet ) {
-				this.resizeEventsSet = true;
+			self.resizeFrame();
+
+			if ( !self.hasLoadedOnce ) {
+				self.hasLoadedOnce = true;
 				M.on( 'resize', function () {
-					self.resizeImage();
+					// Don't wait until the image that best fits the width of the window has loaded
+					// to resize the container.
+					self.resizeFrame();
+
+					self.loadImage();
 				} );
 			}
 		},
+
 		/**
-		 * Resize image to maintain aspect ratio
+		 * Resize the frame to maintain aspect a 16:9 aspect ratio.
 		 */
-		resizeImage: function () {
+		resizeFrame: function () {
 			this.$el
 				.css( {
 					// Maintain 21:9 (on tablet or bigger) or 16:9 ratio

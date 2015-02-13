@@ -1,20 +1,20 @@
 ( function ( M ) {
 	M.require( 'context' ).assertMode( [ 'alpha' ] );
-	var bannerImage,
-		page = M.getCurrentPage(),
-		wikidataID = mw.config.get( 'wgWikibaseItemId' ),
-		BannerImage = M.require( 'modules/bannerImage/BannerImage' );
 
-	// Load banner images on mobile devices
-	// On pages in the main space which are not main pages
+	var PageImagesBannerImageRepository = M.require( 'modules/bannerImage/PageImagesBannerImageRepository' ),
+		BannerImage = M.require( 'modules/bannerImage/BannerImage' ),
+		page = M.getCurrentPage(),
+		repository,
+		bannerImage;
+
+	// Load banner images on mobile devices for pages that are in mainspace but aren't Main_Page.
 	if (
-		// Set item id or specified in url with query param (wikidataid=Q937)
-		wikidataID &&
 		!page.isMainPage() &&
 		page.getNamespaceId() === 0
 	) {
+		repository = new PageImagesBannerImageRepository( new mw.Api(), page.title );
 		bannerImage = new BannerImage( {
-			itemId: wikidataID
+			repository: repository
 		} );
 		bannerImage.insertBefore( '.pre-content' );
 	}
