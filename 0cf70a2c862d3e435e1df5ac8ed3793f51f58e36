@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d943aa13",
+        "filename": "javascripts/modules/search/SearchApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-13T20:39:33Z",
+      "side": 1,
+      "message": "Krenair pointed me to the point, that we don\u0027t have mw.Title as a dependency for the search module, maybe the real problem is this? Can you check this locally (and have you found out how to reproduce the problem)? :)",
+      "revId": "0cf70a2c862d3e435e1df5ac8ed3793f51f58e36",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
