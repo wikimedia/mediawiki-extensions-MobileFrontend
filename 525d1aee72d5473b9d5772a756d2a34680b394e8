@@ -16,6 +16,24 @@
       "revId": "525d1aee72d5473b9d5772a756d2a34680b394e8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2a6922f6",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-13T07:45:10Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "6e7c4fa4_7075d291",
+      "revId": "525d1aee72d5473b9d5772a756d2a34680b394e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
