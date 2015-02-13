@@ -381,6 +381,8 @@
 	"tag-mobile_web_edit-description": "Modification effectuée depuis le site web mobile",
 	"mobile-frontend-pageaction-edit-tooltip": "Modifier la section fil directeur de cette page.",
 	"mobile-frontend-pageaction-upload-tooltip": "Télécharger une photo de fil conducteur pour cette page.",
+	"apihelp-mobileview-param-thumbwidth": "Largeur maximum de la vignette.",
+	"apihelp-mobileview-param-thumbheight": "Hauteur maximale de la vignette.",
 	"mobile-frontend-donate-button-label": "Faire un don",
 	"mobile-frontend-meta-data-issues-categories": "À propos de cette catégorie",
 	"mobile-frontend-loading-message": "Chargement…",
