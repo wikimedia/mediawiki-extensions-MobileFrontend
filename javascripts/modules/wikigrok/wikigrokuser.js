@@ -14,14 +14,14 @@
 		wikiGrokUser = $.extend( {
 
 			/**
-			 * Gets the user's token from the "-wikiGrokUserToken" cookie. If the cookie
+			 * Gets the user's token from the "WikiGrokUserToken" cookie. If the cookie
 			 * isn't set, then a token is generated and then stored in the cookie for 90
 			 * days, and then returned.
 			 * @method
 			 * @return {String}
 			 */
 			getToken: function () {
-				var cookieName = mw.config.get( 'wgCookiePrefix' ) + '-wikiGrokUserToken',
+				var cookieName = mw.config.get( 'wgCookiePrefix' ) + 'WikiGrokUserToken',
 					storedToken = $.cookie( cookieName ),
 					generatedToken;
 

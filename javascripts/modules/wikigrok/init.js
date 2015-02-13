@@ -131,11 +131,11 @@
 				return true;
 			}
 			if (
-				// Only show WikiGrok to 10 in every 62 users so that we don't overload
+				// Only show WikiGrok to 2 in every 16 users so that we don't overload
 				// EventLogging during tests. See mw.user.generateRandomSessionId().
 				// FIXME: Remove this when A/B test is over and page-impression and
 				// widget-impression logging have been removed.
-				wikiGrokUser.getToken().charAt( 0 ) < 'A' &&
+				wikiGrokUser.getToken().charAt( 0 ) < '2' &&
 				// Permitted on this device. WikiGrok Roulette is fine on tablet, but
 				// formatting is awkward for other WikiGrok versions on tablet.
 				permittedOnThisDevice &&
