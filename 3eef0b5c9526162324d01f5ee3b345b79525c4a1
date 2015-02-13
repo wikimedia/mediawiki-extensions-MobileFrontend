@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_aaad3230",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-13T07:43:29Z",
+      "side": 1,
+      "message": "yes, beforeunload is an event of window, and it\u0027s possible that other JavaScripts add handlers to it, too, which we would remove with .off( \u0027beforeunload\u0027 ), so i think we should use a unique namespace here to just remove our handler :)",
+      "parentUuid": "6e7c4fa4_4ad9fe81",
+      "revId": "3eef0b5c9526162324d01f5ee3b345b79525c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_2ad60255",
         "filename": "javascripts/modules/editor/EditorOverlayBase.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-02-13T02:13:31Z",
       "side": 1,
       "message": "Having this return either a boolean or a string is confusing, IMO. Can we change it to just return a boolean and call it \u0027shouldConfirmLeave()\u0027? (This will also require restoring var confirmMessage \u003d mw.msg( \u0027mobile-frontend-editor-cancel-confirm\u0027 ); to the hide function.)",
+      "revId": "3eef0b5c9526162324d01f5ee3b345b79525c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_eab32a94",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-13T07:43:29Z",
+      "side": 1,
+      "message": "Ok, i will do it :D\n\n\u003e This will also require restoring var confirmMessage \u003d mw.msg( \u0027mobile-frontend-editor-cancel-confirm\u0027 ); to the hide function.\nI would suggest to move it elsewhere (maybe defaults or options?). Background: The same message is used in hide() and onBeforeUnload :)",
+      "parentUuid": "6e7c4fa4_2ad60255",
       "revId": "3eef0b5c9526162324d01f5ee3b345b79525c4a1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
