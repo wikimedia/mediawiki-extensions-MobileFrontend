@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_be72540e",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-13T19:19:22Z",
+      "side": 1,
+      "message": "By the way, you need to extend parent events. Although Overlay doesn\u0027t have events now, it may in the future.",
+      "revId": "1dfb30e704ac5377f3167eab680f15eb3d9e516c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
