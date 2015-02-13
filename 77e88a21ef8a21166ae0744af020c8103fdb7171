@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_201863d7",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-13T15:26:59Z",
+      "side": 1,
+      "message": "Gah! Good spot.",
+      "parentUuid": "6e7c4fa4_9b520fe1",
+      "revId": "77e88a21ef8a21166ae0744af020c8103fdb7171",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_fbe7830b",
         "filename": "javascripts/modules/bannerImage/init.js",
         "patchSetId": 11
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_008c47fe",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-13T15:26:59Z",
+      "side": 1,
+      "message": "I wonder what that would look like. A promise that resolves when the banner image has been loaded into the frame?",
+      "parentUuid": "6e7c4fa4_fbe7830b",
+      "revId": "77e88a21ef8a21166ae0744af020c8103fdb7171",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_5bc0f754",
         "filename": "less/modules/bannerImage.less",
         "patchSetId": 11
@@ -47,6 +83,24 @@
       "writtenOn": "2015-02-12T22:53:04Z",
       "side": 1,
       "message": "here also \u0027.banner-image\u0027",
+      "revId": "77e88a21ef8a21166ae0744af020c8103fdb7171",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c0264f11",
+        "filename": "less/modules/bannerImage.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-13T15:26:59Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6e7c4fa4_5bc0f754",
       "revId": "77e88a21ef8a21166ae0744af020c8103fdb7171",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
