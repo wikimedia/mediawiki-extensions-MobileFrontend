@@ -299,6 +299,7 @@
 				function () {
 					self.clearSpinner();
 					self.$content.show();
+					self.switcherToolbar.tools.editVe.setActive( false );
 					// FIXME: We should show an error notification, but right now toast
 					// notifications are not dismissible when shown within the editor.
 				}
