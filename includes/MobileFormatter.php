@@ -250,18 +250,21 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	protected function headingTransform( $s, $tagName = 'h2' ) {
 		// add in-block class to all headings included in this section (except the first one)
-		$s = preg_replace_callback(
-			'/<(h[1-6])>/si',
-			function ( $match ) use ( $tagName ) {
-				$tag = $match[1];
-				$cssClass = '';
-				if ( $tag !== $tagName ) {
-					$cssClass = ' class="in-block"';
-				}
-				return '<' . $tag . $cssClass . '>';
-			},
-			$s
-		);
+		// don't do this for the main page, it breaks things - Bug 190662
+		if ( !$this->mainPage ) {
+			$s = preg_replace_callback(
+				'/<(h[1-6])>/si',
+				function ( $match ) use ( $tagName ) {
+					$tag = $match[1];
+					$cssClass = '';
+					if ( $tag !== $tagName ) {
+						$cssClass = ' class="in-block"';
+					}
+					return '<' . $tag . $cssClass . '>';
+				},
+				$s
+			);
+		}
 
 		// Makes sections expandable
 		$tagRegEx = '<' . $tagName . '.*</' . $tagName . '>';
