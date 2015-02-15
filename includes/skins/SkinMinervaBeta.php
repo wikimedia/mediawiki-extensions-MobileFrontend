@@ -48,22 +48,17 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * Returns true, if the page can have a talk page.
-	 * @return boolean
+	 * Returns an array with details for a talk button.
+	 * @param Title $talkTitle Title object of the talk page
+	 * @param array $talkButton Array with data of desktop talk button
+	 * @return array
 	 */
-	protected function isTalkAllowed() {
-		$title = $this->getTitle();
-		return $this->isAllowedPageAction( 'talk' ) &&
-			!$title->isTalkPage() &&
-			$title->canTalk();
-	}
+	protected function getTalkButton( $talkTitle, $talkButton ) {
+		$button = parent::getTalkButton( $talkTitle, $talkButton );
+		// use a button with icon in beta
+		$button['attributes']['class'] = MobileUI::iconClass( 'talk', 'before', 'talk icon-32px' );
 
-	/**
-	 * Returns true, if the talk page of this page is wikitext-based.
-	 * @return boolean
-	 */
-	protected function isWikiTextTalkPage() {
-		return $this->getTitle()->getTalkPage()->getContentModel() === CONTENT_MODEL_WIKITEXT;
+		return $button;
 	}
 
 	/**
@@ -72,14 +67,6 @@ class SkinMinervaBeta extends SkinMinerva {
 	 */
 	public function getContextSpecificModules() {
 		$modules = parent::getContextSpecificModules();
-		$title = $this->getTitle();
-		if (
-			( $this->isTalkAllowed() || $title->isTalkPage() ) &&
-			$this->isWikiTextTalkPage()
-		) {
-			$modules[] = 'mobile.talk';
-		}
-
 		if ( $this->getCategoryLinks( false ) ) {
 			$modules[] = 'mobile.categories';
 		}
@@ -188,5 +175,13 @@ class SkinMinervaBeta extends SkinMinerva {
 		if ( !$title ) {
 			return;
 		}
+	}
+
+	/**
+	 * If the user is in beta/alpha mode, we assume, he is an experienced
+	 * user (he/she found the "beta/alpha" switch ;))
+	 */
+	protected function isExperiencedUser() {
+		return true;
 	}
 }

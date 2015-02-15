@@ -692,6 +692,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-add-overlay-submit',
 			'mobile-frontend-editor-licensing',
 			'mobile-frontend-editor-licensing-with-terms',
+			// FIXME: Remove after cache is cleared
+			'talk',
 		),
 		'group' => 'other'
 	),

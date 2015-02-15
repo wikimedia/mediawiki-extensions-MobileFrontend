@@ -80,7 +80,7 @@ class ArticlePage
 
   # page-actions
   ul(:page_actions, id: 'page-actions')
-  a(:talk, css: '.mw-ui-icon-talk')
+  a(:talk, css: '.talk')
   a(:nearby_button, css: '#page-secondary-actions .nearby')
 
   # toc
@@ -164,4 +164,7 @@ class ArticlePage
   # error and warning boxes
   div(:warning_box, css: '.warning')
   div(:error_message, css: '.error')
+
+  # talk overlay
+  a(:talkadd, css: '.add.continue')
 end

@@ -4,17 +4,15 @@
 		user = M.require( 'user' ),
 		Button = M.require( 'Button' ),
 		$talk = $( '.talk' ),
+		title = $talk.data( 'title' ) || mw.config.get( 'wgPageName' ),
 		page = M.getCurrentPage(),
 		overlayManager = M.require( 'overlayManager' ),
-		context = M.require( 'context' ),
 		skin = M.require( 'skin' );
-
-	context.assertMode( [ 'beta', 'alpha', 'app' ] );
 
 	overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
 			talkOptions = {
-				title: $talk.data( 'title' ) || mw.config.get( 'wgPageName' ),
+				title: title,
 				licenseMsg: skin.getLicenseMsg()
 			};
 
@@ -38,14 +36,33 @@
 	 * @ignore
 	 */
 	function init() {
-		$talk.attr( 'href', '#/talk' );
+		var talkTitle;
+
+		// FIXME: Remove this after cache is cleared
+		if ( !$talk.length && page.inNamespace( '' ) ) {
+			// talk page title
+			talkTitle = new mw.Title( mw.config.get( 'wgTitle' ), 1 );
+			$( '#page-secondary-actions' ).prepend(
+				'<a href="' +
+				talkTitle.getUrl() +
+				'" data-title="' +
+				talkTitle.getPrefixedText() +
+				'" class="mw-ui-icon mw-ui-icon-before mw-ui-icon-talk talk icon-32px mw-ui-button button">' +
+				mw.msg( 'talk' ) +
+				'</a>'
+			);
+			title = talkTitle.getPrefixedText();
+		}
+		$talk.on( 'click', function () {
+			window.location.hash = '#/talk';
+			return false;
+		} );
 	}
 
 	init();
 
 	// add an "add discussion" button to talk pages (only for beta and logged in users)
 	if (
-		context.isBetaGroupMember() &&
 		!user.isAnon() &&
 		( page.inNamespace( 'talk' ) || page.inNamespace( 'user_talk' ) )
 	) {

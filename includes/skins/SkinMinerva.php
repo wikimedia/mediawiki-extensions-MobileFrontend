@@ -869,11 +869,46 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Returns an array with details for a talk button.
+	 * @param Title $talkTitle Title object of the talk page
+	 * @param array $talkButton Array with data of desktop talk button
+	 * @return array
+	 */
+	protected function getTalkButton( $talkTitle, $talkButton ) {
+		return array(
+			'attributes' => array(
+				'href' => $talkTitle->getLinkURL(),
+				'data-title' => $talkTitle->getFullText(),
+				'class' => 'talk',
+			),
+			'label' => $talkButton['text'],
+		);
+	}
+
+	/**
 	 * Returns an array of links for page secondary actions
 	 * @param BaseTemplate $tpl
 	 */
 	protected function getSecondaryActions( BaseTemplate $tpl ) {
-		return array();
+		$buttons = array();
+
+		// always add a button to link to the talk page
+		// in beta it will be the entry point for the talk overlay feature,
+		// in stable it will link to the wikitext talk page
+		$title = $this->getTitle();
+		$namespaces = $tpl->data['content_navigation']['namespaces'];
+		if ( $this->isTalkAllowed() ) {
+			// FIXME [core]: This seems unnecessary..
+			$subjectId = $title->getNamespaceKey( '' );
+			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
+			if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
+				$talkButton = $namespaces[$talkId];
+			}
+
+			$talkTitle = $title->getTalkPage();
+			$buttons['talk'] = $this->getTalkButton( $talkTitle, $talkButton );
+		}
+		return $buttons;
 	}
 
 	/**
@@ -995,6 +1030,38 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Checks, if you're an experienced user (beta/alpha group member, or
+	 * an edit count > 5.
+	 */
+	protected function isExperiencedUser() {
+		return $this->getUser()->getEditCount() > 5;
+	}
+
+	/**
+	 * Returns true, if the page can have a talk page.
+	 * @return boolean
+	 */
+	protected function isTalkAllowed() {
+		$title = $this->getTitle();
+		return $this->isAllowedPageAction( 'talk' ) &&
+			!$title->isTalkPage() &&
+			$title->canTalk() &&
+			$this->isExperiencedUser();
+	}
+
+	/*
+	 * Returns true, if the talk page of this page is wikitext-based.
+	 * @return boolean
+	 */
+	protected function isWikiTextTalkPage() {
+		$title = $this->getTitle();
+		if ( !$title->isTalkPage() ) {
+			$title = $title->getTalkPage();
+		}
+		return $title->getContentModel() === CONTENT_MODEL_WIKITEXT;
+	}
+
+	/**
 	 * Returns an array of modules related to the current context of the page.
 	 * @return array
 	 */
@@ -1025,6 +1092,14 @@ class SkinMinerva extends SkinTemplate {
 			if ( count( $mfExperiments ) > 0 ) {
 				$modules[] = 'mobile.experiments';
 			}
+		}
+
+		// TalkOverlay feature
+		if (
+			( $this->isTalkAllowed() || $title->isTalkPage() ) &&
+			$this->isWikiTextTalkPage()
+		) {
+			$modules[] = 'mobile.talk';
 		}
 
 		return $modules;

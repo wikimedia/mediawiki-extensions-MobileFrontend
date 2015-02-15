@@ -1,6 +1,4 @@
 ( function ( M, $ ) {
-	M.require( 'context' ).assertMode( [ 'beta', 'alpha' ] );
-
 	var
 		Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
