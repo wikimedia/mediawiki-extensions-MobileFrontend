@@ -42,20 +42,6 @@
 		} ),
 		/** @inheritdoc */
 		initialize: function ( options ) {
-			// If terms of use is enabled, include it in the licensing message
-			// FIXME cache this selector, it's used more than once.
-			if ( $( '#footer-places-terms-use' ).length > 0 ) {
-				options.licenseMsg = mw.msg(
-					'mobile-frontend-editor-licensing-with-terms',
-					$( '#footer-places-terms-use' ).html(),
-					mw.config.get( 'wgMFLicenseLink' )
-				);
-			} else {
-				options.licenseMsg = mw.msg(
-					'mobile-frontend-editor-licensing',
-					mw.config.get( 'wgMFLicenseLink' )
-				);
-			}
 			Overlay.prototype.initialize.apply( this, arguments );
 			this.title = options.title;
 			// Variable to indicate, if the overlay will be closed by the save function or by the user. If this is false and there is content in the input fields,
