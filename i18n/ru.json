@@ -24,7 +24,8 @@
 			"Logins",
 			"Sunpriat",
 			"Nirovulf",
-			"Striking Blue"
+			"Striking Blue",
+			"Batumski brodyaga"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -352,5 +353,7 @@
 	"mobile-frontend-pageaction-upload-tooltip": "Загрузить основное фото на эту страницу.",
 	"apihelp-mobileview-param-page": "Заголовок страницы для обработки.",
 	"apihelp-mobileview-param-sectionprop": "Какую информацию о разделах получать.",
-	"apihelp-mobileview-param-thumbnail": "Максимальные размеры эскизов."
+	"apihelp-mobileview-param-thumbsize": "Максимальные размеры эскизов.",
+	"apihelp-mobileview-param-thumbwidth": "Максимальная ширина миниатюры",
+	"apihelp-mobileview-param-thumbheight": "Максимальная высота миниатюры"
 }
