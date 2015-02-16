@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0e21c8ab",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-16T18:31:18Z",
+      "side": 1,
+      "message": "This sentence needs to be updated.",
+      "revId": "366974bdf36ff786ba5a62cf5d8709f107cdc6e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ce1af07d",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-16T18:31:18Z",
+      "side": 1,
+      "message": "This function does not close the overlay so the documentation needs an update.",
+      "revId": "366974bdf36ff786ba5a62cf5d8709f107cdc6e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
