@@ -23,14 +23,12 @@ class SpecialNearby extends MobileSpecialPage {
 	 * @param string $par Parameter submitted as subpage
 	 */
 	public function executeWhenAvailable( $par = '' ) {
-		global $wgMFNearbyRange;
-
 		$this->setHeaders();
 
 		$output = $this->getOutput();
 
 		// set config
-		$output->addJsConfigVars( 'wgMFNearbyRange', $wgMFNearbyRange );
+		$output->addJsConfigVars( 'wgMFNearbyRange', $this->getMFConfig()->get( 'MFNearbyRange' ) );
 		// Only the Minerva skin loads this module so make sure we load it for desktop
 		$output->addModuleStyles( 'mobile.pagelist.styles' );
 

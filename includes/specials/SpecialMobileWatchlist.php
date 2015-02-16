@@ -303,10 +303,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * @return string
 	 */
 	public static function getEmptyListHtml( $feed, $lang ) {
-		global $wgExtensionAssetsPath;
 		$dir = $lang->isRTL() ? 'rtl' : 'ltr';
 
-		$imgUrl = $wgExtensionAssetsPath . "/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
+		$imgUrl = MobileContext::singleton()->getConfig()->get( 'ExtensionAssetsPath' ) .
+			"/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
 
 		if ( $feed ) {
 			$msg = Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-feed-empty' )->plain() );

@@ -24,11 +24,12 @@ class SpecialUploads extends MobileSpecialPage {
 		// Anons don't get to see this page
 		$this->requireLogin( 'mobile-frontend-donate-image-anon' );
 
-		global $wgMFPhotoUploadEndpoint;
-
 		$this->setHeaders();
 		$output = $this->getOutput();
-		$output->addJsConfigVars( 'wgMFPhotoUploadEndpoint',  $wgMFPhotoUploadEndpoint );
+		$output->addJsConfigVars(
+			'wgMFPhotoUploadEndpoint',
+			$this->getMFConfig()->get( 'MFPhotoUploadEndpoint' )
+		);
 		$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
 		if ( $par !== '' && $par !== null ) {
@@ -98,18 +99,19 @@ class SpecialUploads extends MobileSpecialPage {
 	 *		or will return false if there are database errors.
 	 */
 	private function getUserUploadCount( $username ) {
-		global $wgMFPhotoUploadWiki, $wgConf;
+		global $wgConf;
 
-		if ( !$wgMFPhotoUploadWiki ) {
+		$mfPhotoUploadWiki = $this->getMFConfig()->get( 'MFPhotoUploadWiki' );
+		if ( !$mfPhotoUploadWiki ) {
 			$dbr = wfGetDB( DB_SLAVE );
 		} elseif (
-				$wgMFPhotoUploadWiki &&
-				!in_array( $wgMFPhotoUploadWiki, $wgConf->getLocalDatabases() )
+				$mfPhotoUploadWiki &&
+				!in_array( $mfPhotoUploadWiki, $wgConf->getLocalDatabases() )
 			) {
 			// early return if the database is invalid
 			return false;
 		} else {
-			$dbr = wfGetDB( DB_SLAVE, array(), $wgMFPhotoUploadWiki );
+			$dbr = wfGetDB( DB_SLAVE, array(), $mfPhotoUploadWiki );
 		}
 
 		$limit = $this->getUploadCountThreshold() + 1;
