@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0e96a8f3",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-16T18:21:09Z",
+      "side": 1,
+      "message": "This breaks WikiGrokDialogC, because it runs postRender of class Drawer without inherit it, so you can not reference a function inside Drawer class here. See irc, bmansurov and me will discuss this :D",
+      "revId": "3f7de42be4923f81c4aacb892ccee8fb50248c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2e25a403",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-16T18:21:09Z",
+      "side": 1,
+      "message": "move this \"white line\" above \"this.$overlayContent \u003d ...\"",
+      "revId": "3f7de42be4923f81c4aacb892ccee8fb50248c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ae88d4ec",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-16T18:21:09Z",
+      "side": 1,
+      "message": "??\n$.proxy( this, \u0027onTouchStart\u0027 ) should work :) Same for onTouchMove",
+      "revId": "3f7de42be4923f81c4aacb892ccee8fb50248c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8e6dd82f",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-16T18:21:09Z",
+      "side": 1,
+      "message": "not needed, if you don\u0027t use the events map.",
+      "revId": "3f7de42be4923f81c4aacb892ccee8fb50248c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2e7cc4e1",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-16T18:21:09Z",
+      "side": 1,
+      "message": "not needed if you don\u0027t use the events map :)",
+      "revId": "3f7de42be4923f81c4aacb892ccee8fb50248c49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
