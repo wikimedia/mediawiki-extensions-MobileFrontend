@@ -121,7 +121,8 @@
 	 * @param {Page} page The page to edit.
 	 */
 	function setupEditor( page ) {
-		var isNewPage = page.options.id === 0;
+		var isNewPage = page.options.id === 0,
+			$editPencils = $( '.edit-page' );
 		if ( query.undo ) {
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
@@ -199,7 +200,13 @@
 			}
 		}
 
-		$( '.edit-page' ).show().on( 'click', function ( ev ) {
+		// enable all edit pencils on the page (not only toggleable sections) except for the main
+		// page, the pencils are unstyled there, see bug T89559
+		// FIXME: Merge this with the line under it after main page special handling is killed
+		if ( !mw.config.get( 'wgIsMainPage' ) ) {
+			$editPencils.show();
+		}
+		$editPencils.on( 'click', function ( ev ) {
 			// prevent folding section when clicking Edit
 			ev.stopPropagation();
 		} );
