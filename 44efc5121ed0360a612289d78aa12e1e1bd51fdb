@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1127adb2",
+        "filename": "less/footer.beta.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-16T18:33:10Z",
+      "side": 1,
+      "message": "Since #page-secondary-actions is not in the footer, it makes sense to add this rule to ui.less and not here.",
+      "revId": "44efc5121ed0360a612289d78aa12e1e1bd51fdb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
