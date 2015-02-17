@@ -10,7 +10,8 @@
 			"Toniher",
 			"Vriullop",
 			"Fitoschido",
-			"Adriabages"
+			"Adriabages",
+			"Macofe"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Introduïu el codi de confirmació",
@@ -146,7 +147,6 @@
 	"mobile-frontend-last-modified-years": "Darrera modificació fa {{PLURAL:$1|$1 any|$1 anys}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Inicia la càrrega",
 	"mobile-frontend-lead-image-tutorial-summary": "Assegureu-vos que la vostra imatge pot ajudar a il·lustrar la pàgina. Ha de ser una imatge que hagueu creat i que no infringeixi els drets d'autor.",
-	"mobile-frontend-listed-image-no-description": "Sense descripció",
 	"mobile-frontend-logged-in-homepage-notification": "Benvingut, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Heu iniciat una sessió com a $1",
 	"mobile-frontend-logged-out": "No heu iniciat la sessió",
@@ -162,6 +162,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Configuració",
 	"mobile-frontend-main-menu-upload": "Càrregues",
 	"mobile-frontend-main-menu-watchlist": "Llista de seguiment",
+	"mobile-frontend-main-menu-wikigrok-roulette": "Contribueix",
 	"mobile-frontend-media-details": "Detalls",
 	"mobile-frontend-media-license-link": "Informació sobre la llicència",
 	"mobile-frontend-meta-data-issues": "Aquesta pàgina té algunes incidències",
@@ -288,6 +289,7 @@
 	"mobile-frontend-watchlist-removed": "S'ha eliminat $1 de la vostra llista de seguiment",
 	"mobile-frontend-watchlist-signup-action": "Registreu-vos per crear-ne una.",
 	"mobile-frontend-watchlist-view": "Mostra la llista de seguiment",
+	"mobile-frontend-wikigrok-roulette-info-overlay-title": "Contribueix",
 	"nearby": "Pàgines a prop teu",
 	"tag-mobile_edit": "des de mòbil",
 	"tag-mobile_edit-description": "Modificació feta des de mòbil (web o app)",

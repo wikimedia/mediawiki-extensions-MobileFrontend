@@ -298,6 +298,8 @@
 	"tag-mobile_web_edit": "Mobil Web-Ännerung",
 	"tag-mobile_web_edit-description": "Ännerung vum mobile Site aus gemaach",
 	"apihelp-mobileview-param-thumbsize": "Maximal Dimensioune vu Miniatur-Biller.",
+	"apihelp-mobileview-param-thumbwidth": "Maximal Breet vun der Miniatur.",
+	"apihelp-mobileview-param-thumbheight": "Maximal Héicht vun der Miniatur.",
 	"mobile-frontend-donate-button-label": "Maacht en Don",
 	"mobile-frontend-wikidata-editor-description-label": "Beschreift \"$1\" an engem eenzege Saz:",
 	"mobile-frontend-meta-data-issues-categories": "Iwwer dës Kategorie",
