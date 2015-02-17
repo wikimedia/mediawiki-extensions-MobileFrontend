@@ -1,7 +1,7 @@
 ( function ( M, $ ) {
 	var Infobox,
 		md5fn = M.require( 'hex_md5' ),
-		WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
+		WikiDataApi = M.require( 'modules/WikiDataApi' ),
 		View = M.require( 'View' ),
 		user = M.require( 'user' ),
 		icons = M.require( 'icons' ),
@@ -392,6 +392,6 @@
 		}
 	} );
 
-	M.define( 'modules/wikigrok/Infobox', Infobox );
+	M.define( 'modules/Infobox', Infobox );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -10,7 +10,7 @@
 
 			loader.loadModule( 'mobile.otherProjects', true ).done( function ( loadingOverlay ) {
 				var OtherProjectsOverlay = M.require( 'modules/projects/OtherProjectsOverlay' ),
-					WikiDataApi = M.require( 'modules/wikigrok/WikiDataApi' ),
+					WikiDataApi = M.require( 'modules/WikiDataApi' ),
 					api = new WikiDataApi( {
 						itemId: wbId
 					} );

@@ -1,5 +1,5 @@
 ( function ( M ) {
-	var Infobox = M.require( 'modules/wikigrok/Infobox' );
+	var Infobox = M.require( 'modules/Infobox' );
 
 	QUnit.module( 'Infobox', {
 		setup: function () {

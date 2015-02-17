@@ -749,29 +749,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.wikigrok.abTest' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.user',
-			'jquery.cookie',
-		),
-		'scripts' => array(
-			'javascripts/modules/wikigrok/wikigrokuser.js',
-			'javascripts/modules/wikigrok/WikiGrokAbTest.js',
-		),
-	),
-
-	'mobile.wikigrok' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.wikigrok.abTest',
-			'mobile.loggingSchemas',
-		),
-		'scripts' => array(
-			'javascripts/modules/wikigrok/wikiGrokCampaigns.js',
-			'javascripts/modules/wikigrok/init.js',
-		),
-	),
-
 	'mobile.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.templates',
@@ -1141,45 +1118,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.wikigrok.roulette' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-			'mobile.wikigrok.dialog.b',
-		),
-		'scripts' => array(
-			'javascripts/modules/wikiGrokRoulette/ErrorDrawer.js',
-			'javascripts/modules/wikiGrokRoulette/wikiGrokRoulette.js',
-			'javascripts/modules/wikiGrokRoulette/InfoOverlay.js',
-			'javascripts/modules/wikiGrokRoulette/init.js',
-		),
-		'templates' => array(
-			'Error.hogan' => 'templates/modules/wikiGrokRoulette/error.hogan',
-			'InfoOverlay.hogan' => 'templates/modules/wikiGrokRoulette/InfoOverlay.hogan',
-		),
-		'messages' => array(
-			'mobile-frontend-main-menu-button-tooltip',
-			'mobile-frontend-wikigrok-roulette-info-overlay-title',
-			'mobile-frontend-wikigrok-roulette-info-overlay-content',
-			'mobile-frontend-wikigrok-roulette-info-overlay-start-button-label',
-		),
-		'styles' => array(
-			'less/modules/wikiGrokRoulette/InfoOverlay.less',
-		)
-	),
-
-	'mobile.wikigrok.dialog.c' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.wikigrok.roulette',
-			'mobile.wikigrok.dialog.b',
-		),
-		'scripts' => array(
-			'javascripts/modules/wikigrok/WikiGrokDialogC.js',
-		),
-		'templates' => array(
-			'Badge.hogan' => 'templates/modules/wikigrok/WikiGrokRouletteBadge.hogan',
-		),
-	),
-
 	'mobile.gallery' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.toast',
@@ -1211,30 +1149,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.wikigrok.dialog.b' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.wikigrok.dialog',
-			'mediawiki.ui.checkbox',
-		),
-		'styles' => array(
-			'less/modules/wikigrok/tagButton.less',
-		),
-		'templates' => array(
-			'Dialog.hogan' => 'templates/modules/wikigrok/WikiGrokDialogB.hogan',
-			'tagButton.hogan' => 'templates/modules/wikigrok/tagButton.hogan',
-		),
-		'scripts' => array(
-			'javascripts/modules/wikigrok/WikiGrokDialogB.js',
-		),
-	),
-
 	'mobile.wikidata.api' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.foreignApi',
 		),
 		'scripts' => array(
-			'javascripts/modules/wikigrok/WikiDataApi.js'
+			'javascripts/modules/WikiDataApi.js'
 		),
 	),
 
@@ -1252,39 +1173,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'content.hogan' => 'templates/modules/projects/content.hogan',
-		),
-	),
-
-	'mobile.wikigrok.api' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.foreignApi',
-		),
-		'scripts' => array(
-			'javascripts/modules/wikigrok/WikiGrokResponseApi.js',
-		),
-	),
-
-	// See https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok
-	'mobile.wikigrok.dialog' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.overlays',
-			'mobile.loggingSchemas',
-			'mobile.wikigrok.api',
-		),
-		'templates' => array(
-			'Error.hogan' => 'templates/modules/wikigrok/WikiGrokError.hogan',
-			'Dialog.hogan' => 'templates/modules/wikigrok/WikiGrokDialog.hogan',
-			'WikiGrokMoreInfo/content.hogan' => 'templates/modules/wikigrok/WikiGrokMoreInfo.hogan',
-			'Thanks.hogan' => 'templates/modules/wikigrok/WikiGrokThanks.hogan',
-		),
-		'scripts' => array(
-			'javascripts/modules/wikigrok/WikiGrokDialog.js',
-			'javascripts/modules/wikigrok/WikiGrokMoreInfo.js',
-		),
-		'styles' => array(
-			'less/modules/wikigrok/WikiGrokDialog.less',
 		),
 	),
 
@@ -1669,7 +1557,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile.search',
 			'mobile.references',
 			'mobile.redirect',
-			'mobile.wikigrok',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.autosize.js',
@@ -1685,7 +1572,6 @@ $wgMinervaBootstrapModules = array(
 			// load code under certain conditions.
 			'mobile.preferredLanguages',
 			'mobile.references.beta',
-			'mobile.wikigrok.roulette',
 			'mobile.bannerImage',
 		),
 		'scripts' => array(

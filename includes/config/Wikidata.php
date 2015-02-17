@@ -14,27 +14,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgMFWikiDataEndpoint = 'https://m.wikidata.org/w/api.php';
 
 /**
- * Controls whether the WikiGrok feature is enabled
- */
-$wgMFEnableWikiGrok = false;
-
-/**
- * Controls whether WikiGrok is displayed to anonymous users
- * (If $wgMFEnableWikiGrok is false, this setting is moot)
- */
-$wgMFEnableWikiGrokForAnons = false;
-
-/**
- * Controls whether WikiGrok is permitted on all devices
- */
-$wgMFEnableWikiGrokOnAllDevices = false;
-
-/**
- * Controls whether WikiGrok in Sidebar is enabled
- */
-$wgMFEnableWikiGrokInSidebar = false;
-
-/**
  * If set to true and running alpha, will add Wikidata description to page JS as
  * wgMFDescription variable
  */
