@@ -32,15 +32,7 @@
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		toast = M.require( 'toast' ),
 		pendingToast = settings.get( 'mobile-pending-toast' ),
-		drawer = new CtaDrawer( {
-			queryParams: {
-				campaign: 'mobile_editPageActionCta'
-			},
-			signupQueryParams: {
-				returntoquery: 'article_action=signup-edit'
-			},
-			content: mw.msg( 'mobile-frontend-editor-cta' )
-		} ),
+		drawer,
 		$caEdit = $( '#ca-edit' );
 
 	if ( pendingToast ) {
@@ -85,6 +77,17 @@
 				// prevent folding section when clicking Edit
 				ev.stopPropagation();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
+				if ( !drawer ) {
+					drawer = new CtaDrawer( {
+						queryParams: {
+							campaign: 'mobile_editPageActionCta'
+						},
+						signupQueryParams: {
+							returntoquery: 'article_action=signup-edit'
+						},
+						content: mw.msg( 'mobile-frontend-editor-cta' )
+					} );
+				}
 				drawer
 					.render( options )
 					.toggle();

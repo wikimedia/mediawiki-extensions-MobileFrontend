@@ -51,14 +51,6 @@
 				_super = View.prototype.initialize,
 				page = options.page;
 
-			this.drawer = new CtaDrawer( {
-				content: mw.msg( 'mobile-frontend-watchlist-cta' ),
-				queryParams: {
-					campaign: 'mobile_watchPageActionCta',
-					returntoquery: 'article_action=watch'
-				}
-			} );
-
 			if ( user.isAnon() ) {
 				_super.call( self, options );
 			} else if ( options.isWatched === undefined ) {
@@ -113,6 +105,16 @@
 				page = this.options.page,
 				checker;
 			if ( user.isAnon() ) {
+				if ( !this.drawer ) {
+					this.drawer = new CtaDrawer( {
+						content: mw.msg( 'mobile-frontend-watchlist-cta' ),
+						queryParams: {
+							campaign: 'mobile_watchPageActionCta',
+							returntoquery: 'article_action=watch'
+						}
+					} );
+
+				}
 				this.drawer.show();
 			} else {
 				checker = setInterval( function () {

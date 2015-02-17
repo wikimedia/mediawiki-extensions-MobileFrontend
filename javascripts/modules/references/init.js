@@ -1,5 +1,5 @@
 ( function ( M, $ ) {
-	var drawer,
+	var ReferencesDrawer, drawer,
 		context = M.require( 'context' );
 
 	/**
@@ -28,6 +28,9 @@
 		var $dest = $( this ),
 			href = $dest.attr( 'href' );
 
+		if ( !drawer ) {
+			drawer = new ReferencesDrawer();
+		}
 		drawer.render( {
 			title: $dest.text(),
 			text: getReference( href ).html()
@@ -46,11 +49,11 @@
 	 * Make references clickable and show a drawer when clicked on.
 	 * @method
 	 * @ignore
-	 * @param {Page} page
+	 * @param {Page} [page] Defaults to $( '#content' )
 	 */
 	function setup( page ) {
 		var $container = page ? page.$el : $( '#content' ),
-			module, view, ReferencesDrawer;
+			module, view;
 
 		if ( context.isBetaGroupMember() ) {
 			module = 'mobile.references.beta';
@@ -62,7 +65,6 @@
 
 		mw.loader.using( module ).done( function () {
 			ReferencesDrawer = M.require( view );
-			drawer = new ReferencesDrawer();
 			$container.find( 'sup a' ).off( 'click' ).on( 'click', showReference );
 			$container.find( '.mw-cite-backlink a' ).off( 'click' );
 		} );
