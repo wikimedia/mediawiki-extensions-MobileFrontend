@@ -1686,6 +1686,10 @@ $wgMinervaBootstrapModules = array(
 			'mobile.preferredLanguages',
 			'mobile.references.beta',
 			'mobile.wikigrok.roulette',
+			'mobile.bannerImage',
+		),
+		'scripts' => array(
+			'javascripts/modules/bannerImage/init.js',
 		),
 	),
 	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
@@ -1693,7 +1697,6 @@ $wgMinervaBootstrapModules = array(
 			'mobile.beta',
 			// Feature modules that should be loaded in alpha should be listed below here.
 			'mobile.infobox',
-			'mobile.bannerImage',
 			'mobile.fontchanger',
 			'mobile.errorReport',
 			'mobile.otherProjects',
@@ -1701,7 +1704,6 @@ $wgMinervaBootstrapModules = array(
 		'scripts' => array(
 			'javascripts/modules/commonsCategory/init.js',
 			'javascripts/modules/infobox/init.js',
-			'javascripts/modules/bannerImage/init.js',
 			'javascripts/modules/projects/init.js',
 		)
 	),

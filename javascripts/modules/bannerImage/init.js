@@ -1,5 +1,5 @@
 ( function ( M ) {
-	M.require( 'context' ).assertMode( [ 'alpha' ] );
+	M.require( 'context' ).assertMode( [ 'alpha', 'beta' ] );
 
 	var PageImagesBannerImageRepository = M.require( 'modules/bannerImage/PageImagesBannerImageRepository' ),
 		BannerImage = M.require( 'modules/bannerImage/BannerImage' ),
