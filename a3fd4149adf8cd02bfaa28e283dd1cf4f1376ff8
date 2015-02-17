@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_483fafb1",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-17T12:36:05Z",
+      "side": 1,
+      "message": "Given config\u0027s initial value, this should be Config|null.",
+      "revId": "a3fd4149adf8cd02bfaa28e283dd1cf4f1376ff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_88514713",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-17T12:36:05Z",
+      "side": 1,
+      "message": "Typo in MobileContext::singleton.",
+      "revId": "a3fd4149adf8cd02bfaa28e283dd1cf4f1376ff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a8568307",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-17T12:36:05Z",
+      "side": 1,
+      "message": "This should be mfPhotoUploadWiki.",
+      "revId": "a3fd4149adf8cd02bfaa28e283dd1cf4f1376ff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
