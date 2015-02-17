@@ -139,6 +139,7 @@
 					title = title + '#' + self.sectionLine;
 				}
 
+				$( window ).off( 'beforeunload.mfeditorwarning' );
 				window.location = mw.util.getUrl( title );
 			} );
 
