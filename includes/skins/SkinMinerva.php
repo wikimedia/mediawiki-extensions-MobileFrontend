@@ -464,6 +464,10 @@ class SkinMinerva extends SkinTemplate {
 		) {
 			unset( $items['nearby'] );
 		}
+
+		// Allow other extensions to add or override discovery tools
+		Hooks::run( 'MinervaDiscoveryTools', array( &$items ) );
+
 		return $items;
 	}
 
