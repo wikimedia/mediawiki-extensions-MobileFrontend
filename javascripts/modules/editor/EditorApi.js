@@ -67,6 +67,8 @@
 					} )[0].revisions[0];
 
 					self.content = revision['*'];
+					// save content a second time to be able to check for changes
+					self.originalContent = self.content;
 					self.timestamp = revision.timestamp;
 
 					result.resolve( self.content );
@@ -83,8 +85,12 @@
 		 * @param {String} content New section content.
 		 */
 		setContent: function ( content ) {
+			if ( this.originalContent !== content ) {
+				this.hasChanged = true;
+			} else {
+				this.hasChanged = false;
+			}
 			this.content = content;
-			this.hasChanged = true;
 		},
 
 		/**
