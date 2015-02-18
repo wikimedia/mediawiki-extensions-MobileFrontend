@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_53a4379e",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-18T19:33:38Z",
+      "side": 1,
+      "message": "Can we use originalContent? looks nicer, eh?",
+      "revId": "304cb2b62b0058abce5f28790f39f56b1387ae2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
