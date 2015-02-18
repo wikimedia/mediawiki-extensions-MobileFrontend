@@ -37,6 +37,7 @@
 	"mobile-frontend-main-menu-nearby": "Kalapit",
 	"mobile-frontend-main-menu-settings": "Mga katakdaan",
 	"mobile-frontend-main-menu-settings-heading": "Mga kagustuhan",
+	"mobile-frontend-main-menu-wikigrok-roulette": "Mag-ambag",
 	"mobile-frontend-missing-image": "Larawan",
 	"mobile-frontend-nearby-loading": "Ikinakarga ang mga paksang malapit sa inyong kasalukuyang lokasyon",
 	"mobile-frontend-nearby-lookup-ui-error-guidance": "Mangyaring subukan ang isang bukas na lugar na may mas mabuting senyales",
@@ -68,5 +69,6 @@
 	"mobile-frontend-username-placeholder": "Pangalan ng tagagamit",
 	"mobile-frontend-view": "Bersiyong pantelepono",
 	"mobile-frontend-view-desktop": "Desktop",
-	"mobile-frontend-view-mobile": "Telepono"
+	"mobile-frontend-view-mobile": "Telepono",
+	"mobile-frontend-wikigrok-roulette-info-overlay-start-button-label": "Tara na!"
 }

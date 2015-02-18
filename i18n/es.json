@@ -24,7 +24,8 @@
 			"Joaquin Oltra",
 			"MadriCR",
 			"JasterTDC",
-			"Awesomecat5"
+			"Awesomecat5",
+			"Kroji"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -344,6 +345,8 @@
 	"nearby": "Páginas cercanas",
 	"tag-mobile_edit": "Edición desde móvil",
 	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)",
+	"tag-mobile_web_edit": "Edición vía versión móvil",
+	"mobile-frontend-pageaction-edit-tooltip": "Editar la sección introductoria de esta página.",
 	"apihelp-mobileview-param-thumbwidth": "Ancho máximo de miniaturas.",
 	"apihelp-mobileview-param-thumbheight": "Ancho máximo de miniaturas.",
 	"mobile-frontend-donate-button-label": "Dona",

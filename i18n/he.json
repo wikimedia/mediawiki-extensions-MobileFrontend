@@ -197,6 +197,7 @@
 	"mobile-frontend-main-menu-settings-heading": "הגדרות",
 	"mobile-frontend-main-menu-upload": "העלאות",
 	"mobile-frontend-main-menu-watchlist": "רשימת מעקב",
+	"mobile-frontend-main-menu-wikigrok-roulette": "תרומה",
 	"mobile-frontend-media-details": "פרטים",
 	"mobile-frontend-media-license-link": "מידע על הרישיון",
 	"mobile-frontend-meta-data-issues": "בדף הזה יש בעיות",
@@ -356,6 +357,8 @@
 	"mobile-frontend-watchlist-removed": "הדף $1 הוסר מרשימת המעקב שלך",
 	"mobile-frontend-watchlist-signup-action": "יש להירשם כדי להתחיל אחת.",
 	"mobile-frontend-watchlist-view": "הצגת רשימת המעקב שלך",
+	"mobile-frontend-wikigrok-roulette-info-overlay-title": "תרומה",
+	"mobile-frontend-wikigrok-roulette-info-overlay-content": "ויקיפדיה מנסה דרכים חדשות לאפשר לאנשים לתרום. באמצעות איסוף תשובות ממך ומקוראים אחרים אנחנו משפרים את החיפוש בוויקיפדיה.",
 	"mobile-frontend-wikigrok-roulette-info-overlay-start-button-label": "קדימה לדרך!",
 	"mobile.css": "/* הסגנונות הנכתבים כאן ישפיעו על הגולשים באתר למכשירים ניידים בלבד */",
 	"mobile.js": "/* כל סקריפט JavaScript שנכתב כאן ירוץ עבור הגולשים באתר למכשירים ניידים בלבד */",
@@ -405,5 +408,6 @@
 	"mobile-frontend-time-precision-BCE-0annum": "$1 לפני הספירה",
 	"mobile-frontend-days-ago": "לפני {{PLURAL:$1|יום|יומיים|$1 יום|$1 ימים}}",
 	"mobile-frontend-months-ago": "לפני {{PLURAL:$1|חודש|חודשיים|$1 חודשים}}",
-	"mobile-frontend-years-ago": "לפני {{PLURAL:$1|שנה|שנתיים|$1 שנים}}"
+	"mobile-frontend-years-ago": "לפני {{PLURAL:$1|שנה|שנתיים|$1 שנים}}",
+	"mobile-frontend-console-recruit": "אהלן! /ס\\ זוהי תכנה בקוד פתוח ואנחנו מחפשים מתנדבים שיעזרו לבנות אותה, לשפר אותה ולמצוא באגים שאולי מוצגים במסוף ג'אווה־סקריפט! אפשר למצוא את הבאגים שלנו בדף\n\nhttps://phabricator.wikimedia.org/project/view/67/"
 }
