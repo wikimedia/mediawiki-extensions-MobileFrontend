@@ -272,7 +272,6 @@
 			if ( this.shouldConfirmLeave( false ) ) {
 				return this.defaults.confirmMsg;
 			}
-			return false;
 		},
 		/**
 		 * Set up the editor switching interface
