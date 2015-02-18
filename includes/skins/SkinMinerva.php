@@ -54,9 +54,6 @@ class SkinMinerva extends SkinTemplate {
 				)
 			)
 		);
-		if ( $this->getMFConfig()->get( 'MFNoindexPages' ) ) {
-			$out->setRobotPolicy( 'noindex,nofollow' );
-		}
 
 		if ( $this->isMobileMode ) {
 			// Customize page content for mobile view, e.g. add togglable sections, filter
