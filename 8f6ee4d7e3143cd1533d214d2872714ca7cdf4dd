@@ -70,6 +70,24 @@
       "revId": "8f6ee4d7e3143cd1533d214d2872714ca7cdf4dd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_fda752b8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 470,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-18T16:06:45Z",
+      "side": 1,
+      "message": "good point, thanks",
+      "parentUuid": "6e7c4fa4_e2132fb7",
+      "revId": "8f6ee4d7e3143cd1533d214d2872714ca7cdf4dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
