@@ -4,7 +4,6 @@
 		icons = M.require( 'icons' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		WikiDataItemLookupInputWidget = M.require( 'modules/infobox/WikiDataItemLookupInputWidget' ),
-		//WikiGrokApi = M.require( 'modules/wikigrok/WikiGrokApi' ),
 		Overlay = M.require( 'Overlay' );
 
 	/**
@@ -143,6 +142,6 @@
 		}
 	} );
 
-	M.define( 'modules/wikigrok/InfoboxEditorOverlay', InfoboxEditorOverlay );
+	M.define( 'modules/InfoboxEditorOverlay', InfoboxEditorOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

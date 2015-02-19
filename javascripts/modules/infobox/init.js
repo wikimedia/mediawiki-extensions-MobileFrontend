@@ -4,8 +4,8 @@
 		page = M.getCurrentPage(),
 		wikidataID = mw.config.get( 'wgWikibaseItemId' ),
 		overlayManager = M.require( 'overlayManager' ),
-		InfoboxEditorOverlay = M.require( 'modules/wikigrok/InfoboxEditorOverlay' ),
-		Infobox = M.require( 'modules/wikigrok/Infobox' );
+		InfoboxEditorOverlay = M.require( 'modules/InfoboxEditorOverlay' ),
+		Infobox = M.require( 'modules/Infobox' );
 
 	// Load infoboxes on pages in the main space which are not main pages
 	if ( wikidataID && !page.isMainPage() && page.getNamespaceId() === 0 ) {

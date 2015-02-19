@@ -354,8 +354,7 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgMFNearbyEndpoint, $wgMFContentNamespace, $wgMFEnableWikiGrok,
-			$wgMFEnableWikiGrokForAnons, $wgMFEnableWikiGrokOnAllDevices;
+		global $wgMFNearbyEndpoint, $wgMFContentNamespace;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
 		$vars['wgMFThumbnailSizes'] = array(
 			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
@@ -363,10 +362,6 @@ class MobileFrontendHooks {
 			'medium' => MobilePage::MEDIUM_IMAGE_WIDTH
 		);
 		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
-		// Requires WikiGrok extension
-		$vars['wgMFEnableWikiGrok'] = $wgMFEnableWikiGrok && class_exists( 'WikiGrok\Api\ApiResponse' );
-		$vars['wgMFEnableWikiGrokForAnons'] = $wgMFEnableWikiGrokForAnons;
-		$vars['wgMFEnableWikiGrokOnAllDevices'] = $wgMFEnableWikiGrokOnAllDevices;
 
 		// Set the licensing agreement that is displayed in the editor.
 		$wgMFLicenseLink = SkinMinerva::getLicenseLink( 'editor' );
@@ -877,8 +872,6 @@ class MobileFrontendHooks {
 			'MobileWebDiffClickTracking' => 10720373,
 			'MobileWebMainMenuClickTracking' => 10703095,
 			'MobileWebUIClickTracking' => 10742159,
-			'MobileWebWikiGrok'      => 10352247,
-			'MobileWebWikiGrokError' => 10353516,
 		);
 
 		$schemas += $mobileEventLoggingSchemas;
@@ -917,7 +910,6 @@ class MobileFrontendHooks {
 			'javascripts/loggingSchemas/SchemaMobileWebUploads.js',
 			'javascripts/loggingSchemas/SchemaMobileWebClickTracking.js',
 			'javascripts/loggingSchemas/SchemaMobileWebEditing.js',
-			'javascripts/loggingSchemas/SchemaMobileWebWikiGrok.js',
 			'javascripts/loggingSchemas/init.js',
 		);
 

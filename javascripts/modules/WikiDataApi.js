@@ -258,6 +258,6 @@
 		}
 	} );
 
-	M.define( 'modules/wikigrok/WikiDataApi', WikiDataApi );
+	M.define( 'modules/WikiDataApi', WikiDataApi );
 
 }( mw.mobileFrontend, jQuery ) );
