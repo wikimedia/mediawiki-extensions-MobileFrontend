@@ -36,15 +36,21 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		);
 
 		$api->execute();
-		$data = $api->getResult()->getData();
-
-		// Paranoia
-		if ( !isset( $data['query']['pages'] ) ) {
-			return array();
+		if ( defined( 'ApiResult::META_CONTENT' ) ) {
+			$data = ApiResult::removeMetadata(
+				(array)$api->getResult()->getResultData( array( 'query', 'pages' ) )
+			);
+		} else {
+			$data = $api->getResult()->getData();
+			// Paranoia
+			if ( !isset( $data['query']['pages'] ) ) {
+				return array();
+			}
+			$data = $data['query']['pages'];
 		}
 
 		// Silly strict php
-		$pages = array_values( $data['query']['pages'] );
+		$pages = array_values( $data );
 		$page = array_shift( $pages );
 
 		if ( isset( $page['langlinks'] ) ) {

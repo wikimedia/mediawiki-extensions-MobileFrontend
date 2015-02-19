@@ -65,14 +65,30 @@ class ApiParseExtender {
 		global $wgMFSpecialCaseMainPage;
 
 		if ( $module->getModuleName() == 'parse' ) {
-			$data = $module->getResultData();
+			if ( defined( 'ApiResult::META_CONTENT' ) ) {
+				$data = $module->getResult()->getResultData();
+			} else {
+				$data = $module->getResultData();
+			}
 			$params = $module->extractRequestParams();
 			if ( isset( $data['parse']['text'] ) && $params['mobileformat'] ) {
 				$result = $module->getResult();
 				$result->reset();
 
 				$title = Title::newFromText( $data['parse']['title'] );
-				$html = MobileFormatter::wrapHTML( $data['parse']['text']['*'] );
+				$text = $data['parse']['text'];
+				if ( is_array( $text ) ) {
+					if ( defined( 'ApiResult::META_CONTENT' ) &&
+						isset( $text[ApiResult::META_CONTENT] )
+					) {
+						$contentKey = $text[ApiResult::META_CONTENT];
+					} else {
+						$contentKey = '*';
+					}
+					$html = MobileFormatter::wrapHTML( $text[$contentKey] );
+				} else {
+					$html = MobileFormatter::wrapHTML( $text );
+				}
 				$mf = new MobileFormatter( $html, $title );
 				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] && $wgMFSpecialCaseMainPage );
@@ -81,9 +97,12 @@ class ApiParseExtender {
 				$mf->remove( array( '.toc', 'mw-editsection' ) );
 				$mf->filterContent();
 
-				$arr = array();
-				ApiResult::setContent( $arr, $mf->getText() );
-				$data['parse']['text'] = $arr;
+				if ( is_array( $text ) ) {
+					$text[$contentKey] = $mf->getText();
+				} else {
+					$text = $mf->getText();
+				}
+				$data['parse']['text'] = $text;
 
 				$result->addValue( null, $module->getModuleName(), $data['parse'] );
 			}
