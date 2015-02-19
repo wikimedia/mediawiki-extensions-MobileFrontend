@@ -1734,6 +1734,9 @@ $wgResourceModuleSkinStyles['default'] = $wgMFResourceBoilerplate + array(
 );
 
 $wgResourceModuleSkinStyles['minerva'] = $wgMFResourceBoilerplate + array(
+	'mediawiki.sectionAnchor' => array(
+		'less/content/sectionAnchor.less',
+	),
 	'mediawiki.skinning.content.parsoid' => array(),
 	'mobile.special.userprofile.styles' => array(
 		'less/specials/userprofile.less',
