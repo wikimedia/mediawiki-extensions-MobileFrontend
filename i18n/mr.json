@@ -10,7 +10,8 @@
 			"Shantanoo",
 			"Skomal",
 			"V.narsikar",
-			"संतोष दहिवळ"
+			"संतोष दहिवळ",
+			"BPositive"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "विपत्रपत्ता (ई-मेल) (ऐच्छिक)",
@@ -101,6 +102,7 @@
 	"mobile-frontend-logged-out": "प्रवेशाची नोंदणी झालेली नाही!",
 	"mobile-frontend-login": "प्रवेश करा",
 	"mobile-frontend-main-menu-account-create": "खाते बनवा",
+	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोला",
 	"mobile-frontend-main-menu-login": "सनोंद-प्रवेश करा",
 	"mobile-frontend-main-menu-logout": "सनोंद-निर्गम",
 	"mobile-frontend-main-menu-nearby": "जवळपास",
@@ -157,7 +159,6 @@
 	"mobile-frontend-settings-alpha": "चाचणी स्थिती",
 	"mobile-frontend-settings-alpha-description": "धोकादायक आणि असमन्वेषित मोबाईल क्षेत्रात प्रवेश. आणखी जास्त प्रायोगिक सुविधा, पण   धोकादायक गणकदोषांची  तेवढीच शक्यता.",
 	"mobile-frontend-settings-beta": "बीटा",
-	"mobile-frontend-settings-description": "ही मोबाईल आवृत्ती तुमच्या मोबाईल उपकरणावर अनुभवण्यासाठी अनुकूल मांडणी करा.",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} भाषा",
 	"mobile-frontend-sign-in-error-heading": "अरेच्चा",
 	"mobile-frontend-sign-in-heading": "प्रवेश नोंदवा",

@@ -24,6 +24,7 @@
 	"mobile-frontend-changeslist-nocomment": "هیچ چکسه ای د ویرایشت نئ",
 	"mobile-frontend-clear-search": "پاك كردن",
 	"mobile-frontend-contribution-summary": "همه ویرایشتیا کار {{GENDER:$1|[[Special:پروفایل کاریار/$1|$1]]}}",
+	"mobile-frontend-copyright": "مینونه د دسرس هئ سی $1 مر وه شلک هنی نوشته بوئه",
 	"mobile-frontend-diffview-404-title": "وانئری گن",
 	"mobile-frontend-diffview-anonymous": "كارور ناشناس",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte|bytes}} اضاف بیه",

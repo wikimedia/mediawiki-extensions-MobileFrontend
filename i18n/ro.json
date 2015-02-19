@@ -259,7 +259,7 @@
 	"mobile-frontend-profile-footer-months": "S-a alăturat cu mai mult de {{PLURAL:$2|o lună|$2 luni|$2 de luni}} în urmă, având [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.",
 	"mobile-frontend-profile-footer-years": "S-a alăturat cu mai mult de {{PLURAL:$2|un an|$2 ani|$2 de ani}} în urmă, având [[Special:Contributions/$1|{{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}]] și [[Special:Uploads/$1|{{PLURAL:$4|o încărcare|$4 încărcări|500=500+ încărcări}}]] la activ.",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|A modificat}} pagina [[:$1]] {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=în cursul zilei de astăzi}}.",
-	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Mulțumit}} {{GENDER:$1|de către}} [[Special:UserProfile/$1|$1]]",
+	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Mulțumit}} ultima dată {{GENDER:$1|de către}} [[Special:UserProfile/$1|$1]].",
 	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Încărcată}} {{PLURAL:$1|ieri|acum $1 zile|acum $1 de zile|0=astăzi}}.",
 	"mobile-frontend-profile-noargs": "Nu s-a specificat niciun nume de utilizator. Furnizați un nume de utilizator pentru a vizualiza un profil.",
 	"mobile-frontend-profile-nouser": "Nu există niciun utilizator cu acest nume. Numele de utilizator sunt sensibile la majuscule, drept pentru care verificați dacă ați tastat corect.",
