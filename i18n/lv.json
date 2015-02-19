@@ -106,6 +106,7 @@
 	"mobile-frontend-talk-overlay-header": "Diskusija",
 	"mobile-frontend-talk-overlay-lead-header": "Nenosaukta diskusija",
 	"mobile-frontend-talk-reply": "Atbilde",
+	"mobile-frontend-terms-text": "Lietošanas noteikumi",
 	"mobile-frontend-user-account": "lietotāja konts",
 	"mobile-frontend-username": "Lietotājvārds:",
 	"mobile-frontend-username-placeholder": "Lietotājvārds",
@@ -125,5 +126,6 @@
 	"mobile-frontend-watchlist-removed": "$1 tika izņemts no jūsu uzraugāmo lapu saraksta",
 	"nearby": "Lapas jūsu tuvumā",
 	"tag-mobile_edit": "Labojums no mobilās versijas",
-	"tag-mobile_edit-description": "Labojums veikts no lapas mobilās versijas"
+	"tag-mobile_edit-description": "Labojums veikts no lapas mobilās versijas",
+	"mobile-frontend-pageaction-edit-tooltip": "Labot šīs lapas ievadsadaļu."
 }

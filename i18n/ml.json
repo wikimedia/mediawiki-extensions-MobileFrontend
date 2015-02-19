@@ -56,7 +56,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "കൂടുതൽ വായിക്കുക",
 	"mobile-frontend-editor-abusefilter-warning": "മുന്നറിയിപ്പ്: ഈ തിരുത്ത് സേവ് ചെയ്യണമെന്നുറപ്പാണോ? അതിൽ ഒരു പ്രശ്നമുണ്ടെന്ന് തോന്നുന്നു.",
 	"mobile-frontend-editor-anon": "പ്രവേശിക്കാതെ തിരുത്തുക",
-	"mobile-frontend-editor-anoneditwarning": "<b>മുന്നറിയിപ്പ്:</b> താങ്കൾ ലോഗിൻ ചെയ്തിട്ടില്ല. താങ്കൾ തിരുത്തുകളെന്തെങ്കിലും ചെയ്യുകയാണെങ്കിൽ താങ്കളുടെ ഐ.പി. വിലാസം എല്ലാവർക്കും ലഭ്യമായിരിക്കും. താങ്കൾ <b>[$1 ലോഗിൻ ചെയ്യുകയോ]</b>  <b>[$2 അംഗത്വമെടുക്കുകയോ]</b> ചെയ്യുന്നതുവഴി മറ്റ് ഗുണങ്ങളോടൊപ്പം താങ്കളുടെ തിരുത്തുകൾ ഉപയോക്തൃനാമത്തിലാവും അറിയപ്പെടുക.",
+	"mobile-frontend-editor-anonwarning": "<b>മുന്നറിയിപ്പ്:</b> താങ്കൾ ലോഗിൻ ചെയ്തിട്ടില്ല. താങ്കൾ തിരുത്തുകളെന്തെങ്കിലും ചെയ്യുകയാണെങ്കിൽ താങ്കളുടെ ഐ.പി. വിലാസം എല്ലാവർക്കും ലഭ്യമായിരിക്കും. താങ്കൾ <b>[$1 ലോഗിൻ ചെയ്യുകയോ]</b>  <b>[$2 അംഗത്വമെടുക്കുകയോ]</b> ചെയ്യുന്നതുവഴി മറ്റ് ഗുണങ്ങളോടൊപ്പം താങ്കളുടെ തിരുത്തുകൾ ഉപയോക്തൃനാമത്തിലാവും അറിയപ്പെടുക.",
 	"mobile-frontend-editor-blocked": "താങ്കളുടെ അംഗത്വത്തെ തിരുത്തുന്നതിൽ നിന്നും തടഞ്ഞിരിക്കുന്നു.",
 	"mobile-frontend-editor-cancel": "റദ്ദാക്കുക",
 	"mobile-frontend-editor-cancel-confirm": "താങ്കളുടെ തിരുത്ത് ഉപേക്ഷിക്കണം എന്നുറപ്പാണോ?",
@@ -155,7 +155,6 @@
 	"mobile-frontend-last-modified-years": "{{PLURAL:$1|ഒരു വർഷം|$1 വർഷം}} മുമ്പാണ് അവസാനം പുതുക്കിയത്",
 	"mobile-frontend-lead-image-tutorial-confirm": "അപ്‌ലോഡ് തുടങ്ങുക",
 	"mobile-frontend-lead-image-tutorial-summary": "താളിനു വ്യക്തത നൽകാൻ താങ്കളുടെ ചിത്രത്തിന് കഴിയുമെന്ന് ഉറപ്പാക്കുക. ചിത്രം താങ്കൾ തന്നെ സൃഷ്ടിച്ചതും പകർപ്പവകാശം ലംഘിക്കാത്തതുമാവണം.",
-	"mobile-frontend-listed-image-no-description": "വിവരണമൊന്നുമില്ല",
 	"mobile-frontend-logged-in-homepage-notification": "സ്വാഗതം, $1!",
 	"mobile-frontend-logged-in-toast-notification": "$1 ആയി പ്രവേശിച്ചിരിക്കുന്നു.",
 	"mobile-frontend-logged-out": "പ്രവേശിച്ചിട്ടില്ല",
@@ -325,5 +324,6 @@
 	"tag-mobile_edit": "മൊബൈൽ സൈറ്റ്",
 	"tag-mobile_edit-description": "മൊബൈൽ വഴി ചെയ്ത തിരുത്ത് (വെബ് അല്ലെങ്കിൽ ആപ്)",
 	"tag-mobile_web_edit": "മൊബൈൽ വെബിലെ തിരുത്ത്",
-	"tag-mobile_web_edit-description": "മൊബൈൽ വെബ് സൈറ്റ് വഴി ചെയ്ത തിരുത്ത്"
+	"tag-mobile_web_edit-description": "മൊബൈൽ വെബ് സൈറ്റ് വഴി ചെയ്ത തിരുത്ത്",
+	"mobile-frontend-pageaction-edit-tooltip": "ഈ താളിന്റെ പ്രധാന ഭാഗം തിരുത്തുക"
 }

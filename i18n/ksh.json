@@ -9,7 +9,7 @@
 	"mobile-frontend-back-to-top-of-section": "Jangk ene Afschnett zerök",
 	"mobile-frontend-changeslist-nocomment": "kein Zosammefaßong",
 	"mobile-frontend-clear-search": "Läddesch maache",
-	"mobile-frontend-copyright": "Dä Täx shtäjt unger dä <a href=\"http://de.wikipedia.org/wiki/{{SITENAME}}:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported\"><span lang=\"de\">Creative Commons Attribution/Share-Alike</span> Lizänz</a>; un et künnt noch mieh Bestemmunge doför jävve. Loor op de <a href=\"http://wikimediafoundation.org/wiki/Nutzungsbedingungen\">Sigg met de Bedengunge</a> noh der Einzelheite. {{SITENAME}} es e ennjedraare Waarezeiche vun de <a href=\"http://www.wikimediafoundation.org/\">Wikimedia Shtefftung</a>, en Ojanisazuhn, di kei Jeld verdeent.",
+	"mobile-frontend-copyright": "Dä Täx schtäjt unger dä $1 sulang nix söns jesaaat es.",
 	"mobile-frontend-desc": "Der Zohjang för Mobiljerääte",
 	"mobile-frontend-diffview-anonymous": "Nameloose Metmaacher",
 	"mobile-frontend-diffview-title": "Op \"$1\" ändere",
@@ -34,6 +34,7 @@
 	"mobile-frontend-logged-out": "Nit enjelogg",
 	"mobile-frontend-login": "Enlogge",
 	"mobile-frontend-main-menu-account-create": "Ene neue Zohjang aanlääje",
+	"mobile-frontend-main-menu-button-tooltip": "Donn et Houpmenü opmaache",
 	"mobile-frontend-main-menu-featured": "Äxzälänt",
 	"mobile-frontend-main-menu-login": "Enlogge",
 	"mobile-frontend-main-menu-logout": "Ußlogge",
@@ -75,5 +76,7 @@
 	"mobile-frontend-watchlist-filter-articles": "Atikele",
 	"mobile.css": "/* Dat CSS heh aan dä Schtäll wirrek bloß op de mobile ẞööver ẞait */",
 	"mobile.js": "/* Dat JavaSkrep heh aan dä Schtäll wirrek bloß op de Mobile ẞööver ẞait */",
+	"tag-mobile_edit": "Mobihl beärbeidt",
+	"tag-mobile_web_edit": "Mobihl övver et Wäb beärbeidt",
 	"mobile-frontend-pageaction-edit-tooltip": "Donn dä eezte Affschnedd en heh dä Sigg ändere - vör dä eezte Ongerövverschreff."
 }

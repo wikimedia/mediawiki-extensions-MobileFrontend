@@ -47,6 +47,7 @@
 	"mobile-frontend-featured-article": "A nap kiemelt tartalma",
 	"mobile-frontend-footer-contact": "Kapcsolatfelvétel",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "A(z) {{SITENAME}}-t hozzád hasonló emberek készítik.",
 	"mobile-frontend-home-button": "Kezdőlap",
 	"mobile-frontend-images-status": "Képek",
 	"mobile-frontend-language-article-heading": "Olvasd el más nyelven",

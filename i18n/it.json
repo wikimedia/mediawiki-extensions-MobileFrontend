@@ -11,7 +11,8 @@
 			"Ximo17",
 			"Elitre",
 			"Macofe",
-			"Ricordisamoa"
+			"Ricordisamoa",
+			"FRacco"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -303,7 +304,7 @@
 	"mobile-frontend-username-placeholder": "Nome utente",
 	"mobile-frontend-view": "Versione mobile",
 	"mobile-frontend-view-desktop": "Desktop",
-	"mobile-frontend-view-mobile": "Cellulare",
+	"mobile-frontend-view-mobile": "Mobile",
 	"mobile-frontend-view-source": "Visualizza wikitesto",
 	"mobile-frontend-watch-login": "Aggiungi $1 ai tuoi osservati speciali.",
 	"mobile-frontend-watchlist-a-z": "Elenco",

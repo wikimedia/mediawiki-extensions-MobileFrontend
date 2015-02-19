@@ -14,7 +14,8 @@
 			"Helder.wiki",
 			"Guilhermemau",
 			"Jefersonmoraes",
-			"He7d3r"
+			"He7d3r",
+			"Fasouzafreitas"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se um usuário está ou não editando através da interface móvel",
@@ -84,6 +85,7 @@
 	"mobile-frontend-footer-contact": "Contato",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-login": "{{SITENAME}} é feito por pessoas como você.",
+	"mobile-frontend-generic-login-action": "Autentique-se para contribuir.",
 	"mobile-frontend-history": "Ver o histórico de edição desta página",
 	"mobile-frontend-history-no-results": "Nenhum histórico combina com o filtro.",
 	"mobile-frontend-home-button": "Início",
@@ -112,7 +114,6 @@
 	"mobile-frontend-last-modified-years": "Atualizado {{PLURAL:$1|$1 ano|$1 anos}} atrás",
 	"mobile-frontend-lead-image-tutorial-confirm": "Iniciar envio",
 	"mobile-frontend-lead-image-tutorial-summary": "Certifique-se que sua imagem pode ajudar a ilustrar páginas. Deve ser uma imagem sua que não viole direitos autorais.",
-	"mobile-frontend-listed-image-no-description": "Sem descrição",
 	"mobile-frontend-logged-in-homepage-notification": "Bem-vindo, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Acessando como $1.",
 	"mobile-frontend-logged-out": "Não está logado",
@@ -204,7 +205,6 @@
 	"mobile-frontend-settings-alpha": "Modo experimental",
 	"mobile-frontend-settings-alpha-description": "Entre em perigoso e inexplorado território mobile. Tenha acesso a mais funcionalidades experimentais, mas com mais risco de bugs.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Personalize sua experiência em seu dispositivo móvel com essas configurações específicas.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} está disponível em $1 {{PLURAL:$1|idioma|idiomas}}. Todas as versões disponíveis estão listadas abaixo.",
 	"mobile-frontend-settings-site-header": "idiomas da {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Falha",
@@ -260,5 +260,7 @@
 	"nearby": "Páginas próximas a você",
 	"tag-mobile_edit": "Edição móvel",
 	"tag-mobile_edit-description": "Edição feita através de dispositivo móvel (site ou aplicativo)",
-	"tag-mobile_web_edit-description": "Edição feita através do sítio para celulares"
+	"tag-mobile_web_edit": "Edição feita através do sítio móvel",
+	"tag-mobile_web_edit-description": "Edição feita através do sítio para celulares",
+	"mobile-frontend-pageaction-edit-tooltip": "Editar introdução desta página."
 }
