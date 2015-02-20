@@ -178,16 +178,15 @@ input.search {
 
 	.edit-page {
 		display: none;
-		position: absolute;
 		top: 0;
 		bottom: 0;
 		right: 0;
 	}
 
-	.open-block {
-		// Restrict to child so that child section edit links do not get revealed.
-		> .edit-page {
-			display: block;
+	// edit pencils for section headings (collapsible)
+	.collapsible-heading {
+		.edit-page {
+			position: absolute;
 		}
 	}
 
@@ -197,6 +196,16 @@ input.search {
 
 		> .edit-page {
 			display: none;
+			// edit pencils for inline/sub-section headings - bug T90245
+			position: relative;
+			float: right;
+		}
+	}
+
+	.open-block {
+		// Restrict to child so that child section edit links do not get revealed.
+		> .edit-page {
+			display: block;
 		}
 	}
 }
