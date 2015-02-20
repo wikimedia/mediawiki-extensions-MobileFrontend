@@ -103,9 +103,8 @@ class SkinMinervaBeta extends SkinMinerva {
 			// FIXME [core]: This seems unnecessary..
 			$subjectId = $title->getNamespaceKey( '' );
 			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
-			if ( isset( $namespaces[$talkId] ) && !$title->isTalkPage() ) {
-				$talkButton = $namespaces[$talkId];
-			}
+			$talkButton = isset( $namespaces[$talkId] ) && !$title->isTalkPage() ?
+				$namespaces[$talkId]['text'] : '';
 
 			$talkTitle = $title->getTalkPage();
 			$buttons['talk'] = array(
@@ -114,7 +113,7 @@ class SkinMinervaBeta extends SkinMinerva {
 					'class' =>  MobileUI::iconClass( 'talk', 'before', 'talk icon-32px' ),
 					'data-title' => $talkTitle->getFullText(),
 				),
-				'label' => $talkButton['text'],
+				'label' => $talkButton,
 			);
 		}
 
