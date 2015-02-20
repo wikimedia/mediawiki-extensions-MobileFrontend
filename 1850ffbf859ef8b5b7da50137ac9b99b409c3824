@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b2825296",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-20T18:18:01Z",
+      "side": 1,
+      "message": "use $.proxy(), this breaks the close on scroll and click for the drawer :)",
+      "revId": "1850ffbf859ef8b5b7da50137ac9b99b409c3824",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
