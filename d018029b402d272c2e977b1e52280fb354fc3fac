@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0f1bdd20",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 643,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-20T14:53:41Z",
+      "side": 1,
+      "message": "This else is implied by the return on the line above. No need to move to the right if you don\u0027t need to ;) Does our style guide have anything to say about this?",
+      "revId": "d018029b402d272c2e977b1e52280fb354fc3fac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
