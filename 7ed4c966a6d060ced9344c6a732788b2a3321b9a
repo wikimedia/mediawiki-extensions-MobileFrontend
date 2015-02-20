@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7d7fabdd",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-20T19:26:41Z",
+      "side": 1,
+      "message": "It\u0027s not an array anymore :)",
+      "revId": "7ed4c966a6d060ced9344c6a732788b2a3321b9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
