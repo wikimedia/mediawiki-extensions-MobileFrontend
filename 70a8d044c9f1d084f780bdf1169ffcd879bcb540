@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3d37f34b",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-20T19:23:46Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be $namespaces[$talkId][\u0027text\u0027], and in L116 only $talkButton? Otherwise there would be a php notice.",
+      "revId": "70a8d044c9f1d084f780bdf1169ffcd879bcb540",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
