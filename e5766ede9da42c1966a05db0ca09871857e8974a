@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_751d7fc6",
+        "filename": "templates/modules/editor/EditorOverlayBase.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-21T20:32:25Z",
+      "side": 1,
+      "message": "should have \"pointer\" and: what, if the text isn\u0027t truncated?",
+      "revId": "e5766ede9da42c1966a05db0ca09871857e8974a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b54797be",
+        "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-21T20:32:25Z",
+      "side": 1,
+      "message": "how useful is this test now?",
+      "revId": "e5766ede9da42c1966a05db0ca09871857e8974a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
