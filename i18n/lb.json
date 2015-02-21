@@ -294,6 +294,7 @@
 	"tag-mobile_edit-description": "Ännerung déi vun engem mobile Site oder enger App gemaach gouf",
 	"tag-mobile_web_edit": "Mobil Web-Ännerung",
 	"tag-mobile_web_edit-description": "Ännerung vum mobile Site aus gemaach",
+	"mobile-frontend-pageaction-edit-tooltip": "Ännert den Aleedungs-Abschnitt vun dëser Säit.",
 	"apihelp-mobileview-param-thumbsize": "Maximal Dimensioune vu Miniatur-Biller.",
 	"apihelp-mobileview-param-thumbwidth": "Maximal Breet vun der Miniatur.",
 	"apihelp-mobileview-param-thumbheight": "Maximal Héicht vun der Miniatur.",

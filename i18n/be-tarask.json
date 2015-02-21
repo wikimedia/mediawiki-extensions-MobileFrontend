@@ -121,6 +121,7 @@
 	"mobile-frontend-sign-in-why": "Калі ў вас ёсьць рахунак у {{GRAMMAR:месны|{{SITENAME}}}}, можаце прадставіцца ніжэй.",
 	"mobile-frontend-sign-up-heading": "Зарэгістравацца",
 	"mobile-frontend-talk-overlay-header": "Абмеркаваньне",
+	"mobile-frontend-terms-text": "Умовы выкарыстаньня",
 	"mobile-frontend-user-account": "рахунак удзельніка",
 	"mobile-frontend-user-button-tooltip": "Паказаць мае абвесткі",
 	"mobile-frontend-user-cta": "Увайдзіце або зарэгіструйцеся, каб пабачыць вашыя абвесткі.",

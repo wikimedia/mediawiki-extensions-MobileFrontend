@@ -4,7 +4,8 @@
 			"Anakmalaysia",
 			"Aurora",
 			"Pizza1016",
-			"Aviator"
+			"Aviator",
+			"SNN95"
 		]
 	},
 	"action-mf-uploadbutton": "menggunakan butang muat naik pada laman mudah alih",
@@ -303,6 +304,7 @@
 	"tag-mobile_edit-description": "Suntingan yang dibuat dari peranti mudah alih (melalui web atau aplikasi)",
 	"tag-mobile_web_edit": "Suntingan web mudah alih",
 	"tag-mobile_web_edit-description": "Suntingan dibuat melalui tapak web dari peranti mudah alih",
+	"mobile-frontend-pageaction-edit-tooltip": "Sunting bahagian utama halaman ini.",
 	"apihelp-mobileview-param-thumbsize": "Maksimum dimensi thumbnail.",
 	"apihelp-mobileview-param-thumbwidth": "Lebar thumbnail maksimum.",
 	"apihelp-mobileview-param-thumbheight": "Tinggi thumbnail maksimum.",

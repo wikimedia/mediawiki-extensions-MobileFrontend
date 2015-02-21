@@ -27,7 +27,8 @@
 			"Pio387",
 			"Darellur",
 			"Py64",
-			"Devwebtel"
+			"Devwebtel",
+			"VerMa"
 		]
 	},
 	"beta-feature-minerva": "Udostępnij skórkę mobilną ({{int:skinname-minerva}}) na pulpicie",
@@ -134,6 +135,7 @@
 	"mobile-frontend-generic-404-desc": "Nie można odnaleźć strony, której szukasz.",
 	"mobile-frontend-generic-404-title": "Błąd - nie znaleziono strony",
 	"mobile-frontend-generic-login": "{{grammar:B.lp|{{SITENAME}}}} tworzą ludzie tacy jak Ty.",
+	"mobile-frontend-generic-login-action": "Zaloguj się, by edytować.",
 	"mobile-frontend-history": "Zobacz historię zmian tej strony.",
 	"mobile-frontend-history-404-desc": "Nie można zobaczyć historii strony, która nie istnieje. Może została usunięta bądź wybrano błędny link.",
 	"mobile-frontend-history-404-title": "Nie ma takiej strony",
@@ -328,6 +330,7 @@
 	"tag-mobile_web_edit": "edycja z mobile web",
 	"tag-mobile_web_edit-description": "Edycja z mobile web",
 	"skinname-minerva": "Minerwa",
+	"mobile-frontend-pageaction-edit-tooltip": "Edytuj sekcję główną tej strony.",
 	"apihelp-mobileview-param-thumbsize": "Maksymalne rozmiary miniaturki.",
 	"apihelp-mobileview-param-thumbwidth": "Maksymalna szerokość miniatury.",
 	"apihelp-mobileview-param-thumbheight": "Maksymalna wysokość miniatury.",
