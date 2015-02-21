@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_abe5f433",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-21T23:22:35Z",
+      "side": 1,
+      "message": "i thought about this, too. In desktop mode we haven\u0027t such a notice, too (but all relevant notifications has autoHide: true, so i don\u0027t know, if users know, that they can hide the notifications by clicking on it :/ But i\u0027m really unsure, what the best way is, so i\u0027m open for all input, no matter what we do at the end :)",
+      "parentUuid": "6e7c4fa4_8816fe4c",
+      "revId": "3e5ac72d6cfa1d3d5b3e766822d7891350ba635a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_c8107655",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 2
