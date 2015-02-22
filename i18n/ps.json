@@ -14,6 +14,7 @@
 	"mobile-frontend-enable-images": "په موبايل وېبځي انځورونه چارنول",
 	"mobile-frontend-featured-article": "د نن غوره شوی مطلب",
 	"mobile-frontend-footer-contact": "اړيکه",
+	"mobile-frontend-generic-login": "{{SITENAME}} ستا په شان خلکو جوړ کړی.",
 	"mobile-frontend-generic-login-action": "د ونډې لپاره ورننوځئ.",
 	"mobile-frontend-home-button": "کور",
 	"mobile-frontend-images-status": "انځورونه",

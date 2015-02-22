@@ -256,6 +256,8 @@
 	"nearby": "Páxinas preto de vostede",
 	"tag-mobile_edit": "Edición desde un dispositivo móbil",
 	"tag-mobile_edit-description": "Edición feita desde o móbil (web ou aplicación)",
+	"tag-mobile_web_edit": "Edición feita a través do sitio móbil",
+	"tag-mobile_web_edit-description": "Edición feita a través do sitio web móbil",
 	"mobile-frontend-pageaction-edit-tooltip": "Editar a introdución desta páxina.",
 	"apihelp-mobileview-param-thumbwidth": "Largura máxima da miniatura.",
 	"apihelp-mobileview-param-thumbheight": "Altura máxima da miniatura.",

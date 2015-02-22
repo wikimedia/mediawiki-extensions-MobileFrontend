@@ -140,7 +140,6 @@
 	"mobile-frontend-last-modified-years": "Ùltima modìfica {{PLURAL:$1|$1 ann|$1 agn}} fà",
 	"mobile-frontend-lead-image-tutorial-confirm": "Anandiesse a carié",
 	"mobile-frontend-lead-image-tutorial-summary": "Ch'as sigura che soa plancia a peul giuté a ilustré sa pàgina. A dev esse na plancia ch'a l'ha creà chiel e ch'a viòla gnun drit d'autor.",
-	"mobile-frontend-listed-image-no-description": "Gnun-a descrission",
 	"mobile-frontend-logged-in-homepage-notification": "Bin ëvnù, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Intrà ant ël sistema com $1.",
 	"mobile-frontend-logged-out": "Nen rintrà ant ël sistema",
@@ -234,7 +233,6 @@
 	"mobile-frontend-settings-alpha": "Manera sperimental",
 	"mobile-frontend-settings-alpha-description": "Ch'a intra ant un teritòri mòbil pericolos e nen esplorà. Ch'a oten-a ëdcò dle funsion pi sperimentaj ma con pi 'd pericol ëd bigat.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Ch'a përsonalisa soa esperiensa dzora a sò utiss sacociàbil con coste regolassion spessìfiche dël sit pr'ij sacociàbij.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} a l'é disponìbil an $1 {{PLURAL:$1|lenga|lenghe}}. Tute le version disponìbij a son listà sì-sota",
 	"mobile-frontend-settings-site-header": "Lenghe ëd {{SITENAME}}",
 	"mobile-frontend-sign-in-error-heading": "Contacc",
@@ -289,5 +287,7 @@
 	"mobile-frontend-watchlist-view": "Vëdde la lista ëd lòn ch'as ten sot-euj",
 	"nearby": "Pàgine davzin-e a chiel",
 	"tag-mobile_edit": "Modìfica për sacociàbil",
-	"tag-mobile_edit-description": "Modìfica fàita da un sit për sacociàbil"
+	"tag-mobile_edit-description": "Modìfica fàita da un sit për sacociàbil",
+	"tag-mobile_web_edit": "Modificassion an sl'Aragnà dij sacociàbij",
+	"mobile-frontend-pageaction-edit-tooltip": "Modifiché la session ëd trama ëd sa pàgina."
 }
