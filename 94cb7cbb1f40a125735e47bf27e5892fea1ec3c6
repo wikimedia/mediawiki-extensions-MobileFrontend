@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3a9ccbb7",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-23T14:59:46Z",
+      "side": 1,
+      "message": "I think this comment needs to be updated.",
+      "revId": "94cb7cbb1f40a125735e47bf27e5892fea1ec3c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
