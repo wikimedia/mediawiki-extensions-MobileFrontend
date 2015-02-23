@@ -983,10 +983,20 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.buttonWithSpinner' => $wgMFResourceFileModuleBoilerplate + array(
+			'dependencies' => array(
+				'oojs-ui',
+			),
+			'scripts' => array(
+				'javascripts/ButtonWithSpinner.js',
+			),
+		),
+
 	'mobile.errorReport' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.overlays',
+			'mobile.buttonWithSpinner',
 		),
 		'scripts' => array(
 			'javascripts/modules/errorReport/init.js',

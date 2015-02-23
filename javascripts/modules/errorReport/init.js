@@ -3,10 +3,13 @@
 	M.require( 'context' ).assertMode( [ 'alpha' ] );
 
 	var user = M.require( 'user' ),
+		router = M.require( 'router' ),
 		page = M.getCurrentPage(),
 		loader = M.require( 'loader' ),
 		overlayManager = M.require( 'overlayManager' ),
-		editorConfig = mw.config.get( 'wgMFEditorOptions' );
+		editorConfig = mw.config.get( 'wgMFEditorOptions' ),
+		ButtonWithSpinner = M.require( 'ButtonWithSpinner' ),
+		errorButton;
 
 	// Make sure we are not on the Main Page, are in main namespace, and either the user
 	// is logged in or anonymous editing is allowed.
@@ -19,11 +22,11 @@
 		// Make overlayManager handle URL for 'Report an error' button
 		overlayManager.add( /^\/error-report$/, function () {
 			var result = $.Deferred();
-			loader.loadModule( 'mobile.errorReport.overlay', true )
-				.done( function ( loadingOverlay ) {
+			loader.loadModule( 'mobile.errorReport.overlay', true, false )
+				.done( function () {
 					var ErrorReportOverlay = M.require( 'errorReport/ErrorReportOverlay' );
-					loadingOverlay.hide();
 					result.resolve( new ErrorReportOverlay() );
+					errorButton.hideSpinner();
 				} );
 				// FIXME: Use event logging on fail event
 			return result;
@@ -31,10 +34,14 @@
 
 		// Add 'Report an error' button into page
 		$( function () {
-			var $errorButton = $( '<a class="mw-ui-button button reportError">' )
-				.text( mw.msg( 'mobile-frontend-errorreport-button-label' ) )
-				.attr( 'href', '#/error-report' );
-			$errorButton.appendTo( $( '#page-secondary-actions' ) );
+			errorButton = new ButtonWithSpinner( {
+				label: mw.msg( 'mobile-frontend-errorreport-button-label' )
+			} );
+			errorButton.on( 'click', function () {
+				errorButton.showSpinner();
+				router.navigate( '#/error-report' );
+			} );
+			$( '#page-secondary-actions' ).append( errorButton.$element );
 		} );
 	}
 }( mw.mobileFrontend, jQuery ) );
