@@ -15,6 +15,16 @@ class MobileSpecialPage extends SpecialPage {
 	protected $listed = false;
 	/** @var boolean Whether the special page's content should be wrapped in div.content */
 	protected $unstyledContent = true;
+	/** @var Config MobileFrontend's config object */
+	protected $config = null;
+
+	/**
+	 * Wrapper for MobileContext::getMFConfig
+	 * @return Config|null
+	 */
+	protected function getMFConfig() {
+		return $this->config;
+	}
 
 	/**
 	 * Executes the page when available in the current $mode
@@ -29,6 +39,7 @@ class MobileSpecialPage extends SpecialPage {
 	 */
 	public function execute( $subPage ) {
 		$ctx = MobileContext::singleton();
+		$this->config = $ctx->getMFConfig();
 		$this->getOutput()->setProperty( 'desktopUrl', $this->getDesktopUrl( $subPage ) );
 		if ( !$ctx->shouldDisplayMobileView() && !$this->hasDesktopVersion ) {
 			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' ) );

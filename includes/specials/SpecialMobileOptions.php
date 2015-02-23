@@ -64,8 +64,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 * Render the settings form (with actual set settings) to display to user
 	 */
 	private function getSettingsForm() {
-		global $wgMFEnableBeta;
-
 		$out = $this->getOutput();
 		$context = MobileContext::singleton();
 		$user = $this->getUser();
@@ -114,7 +112,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		);
 
 		// beta settings
-		if ( $wgMFEnableBeta ) {
+		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
 			$options['beta'] = array(
 				'checked' => $imagesBeta,
 				'label' => $betaEnableMsg,
@@ -171,8 +169,6 @@ HTML;
 	 * @return string parsed Html
 	 */
 	private function getSiteSelector() {
-		global $wgLanguageCode;
-
 		$selector = '';
 		$count = 0;
 		$language = $this->getLanguage();
@@ -190,7 +186,7 @@ HTML;
 			}
 			$attrs = array( 'href' => $url );
 			$count++;
-			if ( $code == $wgLanguageCode ) {
+			if ( $code == $this->getConfig()->get( 'LanguageCode' ) ) {
 				$attrs['class'] = 'selected';
 			}
 			$selector .= Html::openElement( 'li' );
