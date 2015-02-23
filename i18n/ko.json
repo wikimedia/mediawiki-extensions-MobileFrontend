@@ -64,7 +64,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "더 읽어보기",
 	"mobile-frontend-editor-abusefilter-warning": "경고: 정말로 편집을 저장하겠습니까? 편집에 문제가 있을 수 있습니다.",
 	"mobile-frontend-editor-anon": "로그인 없이 편집",
-	"mobile-frontend-editor-anoneditwarning": "<b>경고:</b> 로그인하고 있지 않습니다. 편집하면 당신의 IP 주소가 공개적으로 보여집니다. <b>[$1 로그인]</b>하거나 <b>[$2 계정을 만들면]</b>, 당신의 편집에 다른 이익과 함께, 사용자 이름이 표시됩니다.",
+	"mobile-frontend-editor-anonwarning": "<b>경고:</b> 로그인하고 있지 않습니다. 편집하면 당신의 IP 주소가 공개적으로 보여집니다. <b>[$1 로그인]</b>하거나 <b>[$2 계정을 만들면]</b>, 당신의 편집에 다른 이익과 함께, 사용자 이름이 표시됩니다.",
 	"mobile-frontend-editor-blocked": "당신의 계정이 편집에서 차단되어 있습니다.",
 	"mobile-frontend-editor-cancel": "취소",
 	"mobile-frontend-editor-cancel-confirm": "편집을 포기하겠습니까?",
@@ -327,5 +327,6 @@
 	"tag-mobile_edit": "모바일 편집",
 	"tag-mobile_edit-description": "모바일 (앱 혹은 웹)에서 편집",
 	"tag-mobile_web_edit": "모바일 웹 편집",
-	"tag-mobile_web_edit-description": "모바일 웹 사이트에서 편집"
+	"tag-mobile_web_edit-description": "모바일 웹 사이트에서 편집",
+	"mobile-frontend-pageaction-edit-tooltip": "이 문서의 선두 문단을 편집합니다."
 }

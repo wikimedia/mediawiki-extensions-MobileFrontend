@@ -163,7 +163,7 @@
 	"mobile-frontend-languages-nonexistent-title": "Halaman \"$1\" tidak ada.",
 	"mobile-frontend-languages-text": "$1 tersedia dalam $2 {{PLURAL:$2|bahasa}}.",
 	"mobile-frontend-languages-variant-header": "varian {{#language:{{CONTENTLANG}}}}",
-	"mobile-frontend-last-modified-date": "Terakhir diubah pada $1, di $2",
+	"mobile-frontend-last-modified-date": "Terakhir diubah pada $1, pukul $2",
 	"mobile-frontend-last-modified-days": "Terakhir diubah {{PLURAL:$1|$1 hari}} yang lalu",
 	"mobile-frontend-last-modified-hours": "Terakhir diubah {{PLURAL:$1|$1 jam}} yang lalu",
 	"mobile-frontend-last-modified-just-now": "Terakhir diubah baru saja",

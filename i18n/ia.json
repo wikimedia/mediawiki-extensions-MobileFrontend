@@ -132,7 +132,6 @@
 	"mobile-frontend-last-modified-years": "Ultime modification {{PLURAL:$1|$1 anno|$1 annos}} retro",
 	"mobile-frontend-lead-image-tutorial-confirm": "Comenciar a incargar",
 	"mobile-frontend-lead-image-tutorial-summary": "Assecura te que le imagine pote adjutar a illustrar le pagina. Illo debe esser un imagine que tu ha create e que non viola alcun derecto de autor.",
-	"mobile-frontend-listed-image-no-description": "Nulle description",
 	"mobile-frontend-logged-in-homepage-notification": "Benvenite, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Authenticate como $1.",
 	"mobile-frontend-logged-out": "Non identificate",
@@ -151,7 +150,7 @@
 	"mobile-frontend-media-details": "Detalios",
 	"mobile-frontend-media-license-link": "Information de licentia",
 	"mobile-frontend-meta-data-issues": "Iste pagina ha alicun problemas",
-	"mobile-frontend-meta-data-issues-alpha": "Problemas de pagina",
+	"mobile-frontend-meta-data-issues-beta": "Problemas de pagina",
 	"mobile-frontend-meta-data-issues-header": "Problemas",
 	"mobile-frontend-missing-image": "Imagine",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
@@ -281,5 +280,7 @@
 	"mobile-frontend-watchlist-view": "Vider tu observatorio",
 	"nearby": "Paginas a presso de te",
 	"tag-mobile_edit": "Modification per mobile",
-	"tag-mobile_edit-description": "Modification facite con sito mobile"
+	"tag-mobile_edit-description": "Modification facite con sito mobile",
+	"tag-mobile_web_edit": "Modification per web mobile",
+	"mobile-frontend-pageaction-edit-tooltip": "Modificar le section introductori de iste pagina."
 }
