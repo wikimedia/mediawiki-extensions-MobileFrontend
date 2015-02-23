@@ -636,6 +636,9 @@ class MobileFrontendHooks {
 		if ( !$context->shouldDisplayMobileView() ) {
 			return true;
 		}
+		if ( $context->getMFConfig()->get( 'MFNoindexPages' ) ) {
+			$out->setRobotPolicy( 'noindex,nofollow' );
+		}
 
 		// Set X-Analytics HTTP response header if necessary
 		if ( $wgMFEnableXAnalyticsLogging ) {
