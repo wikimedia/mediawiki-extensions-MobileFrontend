@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"عثمان خان شاہ"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "د يوې برخې نه پرشا ټوپ وهل",
@@ -20,6 +21,7 @@
 	"mobile-frontend-images-status": "انځورونه",
 	"mobile-frontend-language-article-heading": "په بلې ژبې کې لوستل",
 	"mobile-frontend-language-site-choose": "ژبه پلټل",
+	"mobile-frontend-last-modified-date": "ټولو نه وروسته $1 سم شوي و۔په $2",
 	"mobile-frontend-login": "ننوتل",
 	"mobile-frontend-main-menu-account-create": "گڼون جوړول",
 	"mobile-frontend-main-menu-button-tooltip": "آرنۍ غورنۍ پرانيستل",
@@ -49,5 +51,6 @@
 	"mobile-frontend-watchlist-more": "نور",
 	"nearby": "تاسې ته نژدې مخونه",
 	"tag-mobile_edit": "د موبايل سمون",
-	"tag-mobile_web_edit": "د موبايل گورت سمون"
+	"tag-mobile_web_edit": "د موبايل گورت سمون",
+	"mobile-frontend-pageaction-edit-tooltip": "د دې مخ سرمخ سمول"
 }

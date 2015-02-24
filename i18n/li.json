@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ooswesthoesbes"
+			"Ooswesthoesbes",
+			"Robin0van0der0vliet"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Ein köpke tröksjpringe",
@@ -10,6 +11,7 @@
 	"mobile-frontend-desc": "Mobiel Frontend",
 	"mobile-frontend-disable-images": "Zèt aafbeildinge óppe mobiel site oet",
 	"mobile-frontend-dismiss-notification": "verberg de notificatie",
+	"mobile-frontend-editor-edit": "Bewirk",
 	"mobile-frontend-enable-images": "Zèt aafbeildinge óppe mobiel site aan",
 	"mobile-frontend-featured-article": "Sjterartikel",
 	"mobile-frontend-footer-contact": "Kóntak",
@@ -21,14 +23,17 @@
 	"mobile-frontend-logged-out": "Neet aangemèld",
 	"mobile-frontend-login": "Mèlj aan",
 	"mobile-frontend-main-menu-featured": "Oetgelich",
+	"mobile-frontend-main-menu-login": "Aanmèlde",
 	"mobile-frontend-main-menu-nearby": "Kórtbie",
 	"mobile-frontend-main-menu-settings": "Insjtèllinge",
 	"mobile-frontend-main-menu-settings-heading": "Mobiel veurkäöre",
+	"mobile-frontend-main-menu-watchlist": "Volglies",
 	"mobile-frontend-news-items": "In 't nuujs",
 	"mobile-frontend-opt-in-explain": "Door ane bèta mit te doon kriegs se toegank aan experimenteel kinmirke en kums se meugelik bugs en anger ómstenj taenge.",
 	"mobile-frontend-page-menu-contents": "inhawd",
 	"mobile-frontend-page-menu-history": "Gesjiechte",
 	"mobile-frontend-password": "Wachwaord:",
+	"mobile-frontend-password-placeholder": "Wachwaord",
 	"mobile-frontend-placeholder": "Doorzeuk {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Prajvesie",
 	"mobile-frontend-random-button": "Willekäörig",
@@ -36,10 +41,11 @@
 	"mobile-frontend-save-settings": "Slaon instèllinge op",
 	"mobile-frontend-search-submit": "Gank",
 	"mobile-frontend-settings-beta": "Bèta",
-	"mobile-frontend-settings-description": "Pas dien gebroekerservaring óp diene mobiel aan via dees instèllinge.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} is besjikbaar in {{PLURAL:$1|ein spraok|$1 spräök}}. Al besjikbaar versies staon hieónger",
 	"mobile-frontend-settings-site-header": "Spräök veur {{SITENAME}}",
+	"mobile-frontend-terms-text": "Algemein veurwaarde",
 	"mobile-frontend-username": "Gebroekersnaam:",
+	"mobile-frontend-username-placeholder": "Gebroekersnaam",
 	"mobile-frontend-view": "Mobiele weergave",
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-view-mobile": "Mobiel"
