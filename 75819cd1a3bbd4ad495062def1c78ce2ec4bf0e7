@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0df189fe",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-24T21:52:34Z",
+      "side": 1,
+      "message": "I would change 90% to auto;",
+      "revId": "75819cd1a3bbd4ad495062def1c78ce2ec4bf0e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cdf631f6",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-24T21:52:34Z",
+      "side": 1,
+      "message": "And add the following lines here:\n\n\t\t\t\ta {\n\t\t\t\t\twhite-space: pre-wrap;\n\t\t\t\t}",
+      "revId": "75819cd1a3bbd4ad495062def1c78ce2ec4bf0e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
