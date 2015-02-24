@@ -23,7 +23,7 @@ class MobileUserModule extends ResourceLoaderUserModule {
 		$pages = parent::getPages( $context );
 		// Remove $userpage/common.js and $userpage/common.css since those are typically
 		// intended for non-mobile interfaces.
-		foreach ( $pages as $key => $value ) {
+		foreach ( array_keys( $pages ) as $key ) {
 			if ( preg_match( '/common\.(js|css)/', $key ) ) {
 				unset( $pages[$key] );
 			}
