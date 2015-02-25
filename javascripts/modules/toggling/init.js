@@ -190,9 +190,10 @@
 	 *
 	 * @method
 	 * @param {jQuery.object} $container to apply toggling to
+	 * @param {String} prefix a prefix to use for the id.
 	 * @ignore
 	 */
-	function enable( $container ) {
+	function enable( $container, prefix ) {
 		var tagName, expandSections, indicator,
 			$firstHeading,
 			collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
@@ -209,9 +210,9 @@
 		expandSections = !collapseSectionsByDefault ||
 			( context.isAlphaGroupMember() && settings.get( 'expandSections', true ) === 'true' );
 
-		$container.find( tagName ).each( function () {
+		$container.find( tagName ).each( function ( i ) {
 			var $heading = $( this ),
-				id = 'collapsible-block-' + Math.random().toString();
+				id = prefix + 'collapsible-block-' + i;
 			// Be sure there is a div wrapping the section content.
 			// Otherwise, collapsible sections for this page is not enabled.
 			if ( $heading.next().is( 'div' ) ) {
@@ -303,12 +304,13 @@
 	 *
 	 * @method
 	 * @param {jQuery.Object} $container to enable toggling on
+	 * @param {String} prefix a prefix to use for the id.
 	 * @ignore
 	 */
-	function init( $container ) {
+	function init( $container, prefix ) {
 		// distinguish headings in content from other headings
-		$( '#content' ).find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
-		enable( $container );
+		$container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' );
+		enable( $container, prefix );
 	}
 
 	// avoid this running on Watchlist
@@ -318,7 +320,7 @@
 		mw.config.get( 'wgAction' ) === 'view'
 	) {
 		if ( mw.config.get( 'wgMFPageSections' ) ) {
-			init();
+			init( $( '#content' ), 'content-' );
 		}
 	}
 

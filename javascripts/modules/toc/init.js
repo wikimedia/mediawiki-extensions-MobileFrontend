@@ -32,7 +32,7 @@
 				// prevent to float text right of toc
 				this.$( '.toc-mobile' ).after( '<div style="clear:both;"></div>' );
 			}
-			toggle.enable( toc.$el );
+			toggle.enable( toc.$el, 'toc-' );
 		}
 	}
 
