@@ -66,7 +66,7 @@
 		margin-left: @paddingHorizontal + @iconSize + @iconHeadingGap;
 		margin-right: @paddingHorizontal;
 		font-size: (7 * @fontSize) / 8;
-
+		width: auto;
 		> ul {
 			padding-bottom: @fontSize + @headingMargin;
 		}
@@ -80,6 +80,9 @@
 			li {
 				padding-top: @fontSize;
 				// This ensures when a heading spills to a second line it can be distinguished from other headings
+				a {
+					white-space: pre-wrap;
+				}
 				line-height: 1.2;
 			}
 		}
