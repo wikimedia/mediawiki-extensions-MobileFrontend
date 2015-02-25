@@ -52,6 +52,40 @@
       "revId": "d584e918830243e72549fd05ba4804a6526b7fe6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d90d8e3a",
+        "filename": "javascripts/modules/bannerImage/MobileViewBannerImageRepository.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-25T22:10:23Z",
+      "side": 1,
+      "message": "Should this be renamed to getImage?",
+      "revId": "d584e918830243e72549fd05ba4804a6526b7fe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d934aedc",
+        "filename": "javascripts/modules/bannerImage/PageImagesBannerImageRepository.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-02-25T22:10:23Z",
+      "side": 1,
+      "message": "Here also, should be singular.",
+      "revId": "d584e918830243e72549fd05ba4804a6526b7fe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
