@@ -16,6 +16,24 @@
       "revId": "d584e918830243e72549fd05ba4804a6526b7fe6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c1983ac5",
+        "filename": "javascripts/modules/bannerImage/MobileViewBannerImageRepository.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-25T14:34:15Z",
+      "side": 1,
+      "message": "I\u0027m about to get rid of the PageImagesBannerImageRepository ;)",
+      "parentUuid": "6e7c4fa4_f6897eef",
+      "revId": "d584e918830243e72549fd05ba4804a6526b7fe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
