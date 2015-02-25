@@ -39,8 +39,8 @@
 		if ( context.isAlphaGroupMember() ) {
 			cb = new Checkbox( {
 				name: 'expandSections',
-				enableMsg: mw.msg( 'mobile-frontend-expand-sections-status' ),
-				descriptionMsg: mw.msg( 'mobile-frontend-expand-sections-description' )
+				label: mw.msg( 'mobile-frontend-expand-sections-status' ),
+				description: mw.msg( 'mobile-frontend-expand-sections-description' )
 			} );
 			cb.insertBefore( saveLI );
 		}

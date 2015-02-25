@@ -136,6 +136,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			}
 		}
 
+		$templateParser = new TemplateParser( __DIR__ .'/../../templates/specials' );
 		// @codingStandardsIgnoreStart Long line
 		foreach( $options as $key => $data ) {
 			if ( isset( $data['type'] ) && $data['type'] === 'hidden' ) {
@@ -147,10 +148,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 					)
 				);
 			} else {
-				$html .= Html::openElement( 'div', array( 'class' => 'mobileoption' ) ) .
-					Xml::checkLabel( $data['label'], $data['name'], $data['id'], $data['checked'] ) .
-					Html::element( 'div', array( 'class' => 'option-description' ), $data['description'] ) .
-					Html::closeElement( 'div' );
+				$html .= $templateParser->processTemplate( 'checkbox', $data );
 			}
 		}
 		$className = MobileUI::buttonClass( 'constructive' );

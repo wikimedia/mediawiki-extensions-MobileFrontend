@@ -1354,7 +1354,7 @@ $wgMobileSpecialPageModules = array(
 			'javascripts/specials/mobileoptions.js',
 		),
 		'templates' => array(
-			'Checkbox.hogan' => 'templates/specials/checkbox.hogan',
+			'Checkbox.hogan' => 'templates/specials/checkbox.mustache',
 		),
 		'messages' => array(
 			'mobile-frontend-expand-sections-description',
