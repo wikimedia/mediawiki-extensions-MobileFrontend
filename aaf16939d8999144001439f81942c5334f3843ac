@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2af3c26",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-25T21:21:52Z",
+      "side": 1,
+      "message": "php style :D",
+      "revId": "aaf16939d8999144001439f81942c5334f3843ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
