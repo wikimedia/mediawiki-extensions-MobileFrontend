@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f6897eef",
+        "filename": "javascripts/modules/bannerImage/MobileViewBannerImageRepository.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-25T12:08:13Z",
+      "side": 1,
+      "message": "maybe a good point to inherit from a base class? Initialize do the same thing for MobileViewBannerImageRepository and PageImagesBannerImageRepository :)",
+      "revId": "d584e918830243e72549fd05ba4804a6526b7fe6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
