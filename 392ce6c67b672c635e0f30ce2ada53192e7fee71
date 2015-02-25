@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8c13525c",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-25T23:09:08Z",
+      "side": 1,
+      "message": "Mmm.. string stitching never looks good. I wonder if there is a better way to do this?\n\nReally you want to do something like this..\n\nmsg:\n* The dollar 1 is a link: [$1 label]\n* (perform substitution)\n* (wikify)\n\n\nPretty sure this should be possible?\n(FYI the old version was also bad :-) - let\u0027s correct this whilst here)",
+      "revId": "392ce6c67b672c635e0f30ce2ada53192e7fee71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ec1be670",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-25T23:09:08Z",
+      "side": 1,
+      "message": "See other comment.",
+      "revId": "392ce6c67b672c635e0f30ce2ada53192e7fee71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
