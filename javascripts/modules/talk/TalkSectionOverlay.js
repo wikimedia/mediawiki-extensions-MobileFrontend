@@ -37,6 +37,10 @@
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		} ),
+		events: $.extend( {}, Overlay.prototype.events, {
+			'focus textarea': 'onFocusTextarea',
+			'click .save-button': 'onSaveClick'
+		} ),
 		/**
 		 * Fetches the talk topics of the page specified in options.title
 		 * if options.section is not defined.
@@ -54,55 +58,59 @@
 				} );
 			} else {
 				this.$( '.loading' ).remove();
-				this._enableComments( options.title, options.id );
+				this._enableComments();
 			}
 		},
 		/**
 		 * Enables comments on the current rendered talk topic
 		 * @method
 		 * @private
-		 * @param {String} title of the talk page with `Talk` prefix to post to
-		 * @param {Number} id of the sub section to open
 		 */
-		_enableComments: function ( title, id ) {
-			var self = this,
-				$comment = this.$( '.comment' ),
-				$textarea = $comment.find( 'textarea' );
-
+		_enableComments: function () {
+			this.$commentBox = this.$( '.comment' );
 			if ( user.isAnon() || !context.isAlphaGroupMember() ) {
-				$comment.remove();
+				this.$commentBox.remove();
 			} else {
-				$textarea.on( 'focus', function () {
-					$textarea.removeClass( 'error' );
-				} );
-				$comment.find( 'button' ).on( 'click', function () {
-					var val = $textarea.val();
-					if ( val ) {
-						$comment.hide();
-						self.$( '.loading' ).show();
-						// sign and add newline to front
-						val = '\n\n' + val + ' ~~~~';
-						api.postWithToken( 'edit', {
-							action: 'edit',
-							title: title,
-							section: id,
-							appendtext: val
-						} ).done( function ( data ) {
-							self.$( '.loading' ).hide();
-							$comment.show();
-							if ( data.error ) {
-								$textarea.addClass( 'error' );
-							} else {
-								self.hide();
-								popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
-								// invalidate the cache
-								pageApi.invalidatePage( title );
-							}
-						} );
+				this.$textarea = this.$commentBox.find( 'textarea' );
+			}
+		},
+		/**
+		 * Handler for focus of textarea
+		 */
+		onFocusTextarea: function () {
+			this.$textarea.removeClass( 'error' );
+		},
+		/**
+		 * Handle a click on the save button
+		 */
+		onSaveClick: function () {
+			var val = this.$textarea.val(),
+				self = this;
+
+			if ( val ) {
+				this.$commentBox.hide();
+				this.$( '.loading' ).show();
+				// sign and add newline to front
+				val = '\n\n' + val + ' ~~~~';
+				api.postWithToken( 'edit', {
+					action: 'edit',
+					title: this.options.title,
+					section: this.options.id,
+					appendtext: val
+				} ).done( function ( data ) {
+					self.$( '.loading' ).hide();
+					self.$commentBox.show();
+					if ( data.error ) {
+						self.$textarea.addClass( 'error' );
 					} else {
-						$textarea.addClass( 'error' );
+						self.hide();
+						popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
+						// invalidate the cache
+						pageApi.invalidatePage( self.options.title );
 					}
 				} );
+			} else {
+				this.$textarea.addClass( 'error' );
 			}
 		}
 	} );

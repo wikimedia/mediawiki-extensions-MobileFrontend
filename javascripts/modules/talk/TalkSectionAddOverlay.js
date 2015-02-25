@@ -35,6 +35,11 @@
 			header: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/content.hogan' )
 		},
+		events: $.extend( {}, Overlay.prototype.events, {
+			'input .wikitext-editor, .summary': 'onTextInput',
+			'change .wikitext-editor, .summary': 'onTextInput',
+			'click .confirm-save': 'onSaveClick'
+		} ),
 		/** @inheritdoc */
 		initialize: function ( options ) {
 			// If terms of use is enabled, include it in the licensing message
@@ -59,66 +64,17 @@
 		},
 		/** @inheritdoc */
 		postRender: function ( options ) {
-			var self = this;
 			Overlay.prototype.postRender.call( this, options );
 			this.$confirm = this.$( 'button.confirm-save' );
-			// FIXME: All .on() actions should be moved to use the events map
-			this.$subject = this.$( 'input' );
-			this.$ta = this.$( 'textarea' );
-			this.$( 'input, textarea' ).on( 'input change', function () {
-				clearTimeout( self.timer );
-				self.timer = setTimeout( function () {
-					self._onInput();
-				}, 250 );
-			} );
-			this.$confirm.on( 'click', function () {
-				if ( !$( this ).prop( 'disabled' ) ) {
-					self.save().done( function ( status ) {
-						if ( status === 'ok' ) {
-							// Check if the user was previously on the talk overlay
-							if ( options.title !== mw.config.get( 'wgPageName' ) ) {
-								pageApi.invalidatePage( self.title );
-								toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
-								M.emit( 'talk-discussion-added' );
-								self.hide();
-							} else {
-								M.emit( 'talk-added-wo-overlay' );
-							}
-						}
-					} ).fail( function ( error ) {
-						var editMsg = 'mobile-frontend-talk-topic-error';
-
-						self.$confirm.prop( 'disabled', false );
-						switch ( error.details ) {
-							case 'protectedpage':
-								editMsg = 'mobile-frontend-talk-topic-error-protected';
-								break;
-							case 'noedit':
-							case 'blocked':
-								editMsg = 'mobile-frontend-talk-topic-error-permission';
-								break;
-							case 'spamdetected':
-								editMsg = 'mobile-frontend-talk-topic-error-spam';
-								break;
-							case 'badtoken':
-								editMsg = 'mobile-frontend-talk-topic-error-badtoken';
-								break;
-							default:
-								editMsg = 'mobile-frontend-talk-topic-error';
-								break;
-						}
-
-						toast.show( mw.msg( editMsg ), 'toast error' );
-					} );
-				}
-			} );
+			this.$subject = this.$( '.summary' );
+			this.$ta = this.$( '.wikitext-editor' );
 		},
 		/** @inheritdoc */
 		hide: function () {
 			var empty,
 				confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 
-			empty = ( !this.$( '.summary' ).val() && !this.$( '.wikitext-editor' ).val() );
+			empty = ( !this.$subject.val() && !this.$ta.val() );
 			if ( this._saveHit || empty || window.confirm( confirmMessage ) ) {
 				return Overlay.prototype.hide.apply( this, arguments );
 			} else {
@@ -127,14 +83,63 @@
 		},
 		/**
 		 * Handles an input into a textarea and enables or disables the submit button
-		 * @method
-		 * @private
 		 */
-		_onInput: function () {
-			if ( !this.$ta.val() || !this.$subject.val() ) {
-				this.$confirm.prop( 'disabled', true );
-			} else {
-				this.$confirm.prop( 'disabled', false );
+		onTextInput: function () {
+			var self = this;
+
+			clearTimeout( this.timer );
+			this.timer = setTimeout( function () {
+				if ( !self.$ta.val() || !self.$subject.val() ) {
+					self.$confirm.prop( 'disabled', true );
+				} else {
+					self.$confirm.prop( 'disabled', false );
+				}
+			}, 250 );
+		},
+		/**
+		 * Handles a click on the save button
+		 */
+		onSaveClick: function () {
+			var self = this;
+
+			if ( !$( this ).prop( 'disabled' ) ) {
+				this.save().done( function ( status ) {
+					if ( status === 'ok' ) {
+						// Check if the user was previously on the talk overlay
+						if ( self.title !== mw.config.get( 'wgPageName' ) ) {
+							pageApi.invalidatePage( self.title );
+							toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
+							M.emit( 'talk-discussion-added' );
+							self.hide();
+						} else {
+							M.emit( 'talk-added-wo-overlay' );
+						}
+					}
+				} ).fail( function ( error ) {
+					var editMsg = 'mobile-frontend-talk-topic-error';
+
+					self.$confirm.prop( 'disabled', false );
+					switch ( error.details ) {
+						case 'protectedpage':
+							editMsg = 'mobile-frontend-talk-topic-error-protected';
+							break;
+						case 'noedit':
+						case 'blocked':
+							editMsg = 'mobile-frontend-talk-topic-error-permission';
+							break;
+						case 'spamdetected':
+							editMsg = 'mobile-frontend-talk-topic-error-spam';
+							break;
+						case 'badtoken':
+							editMsg = 'mobile-frontend-talk-topic-error-badtoken';
+							break;
+						default:
+							editMsg = 'mobile-frontend-talk-topic-error';
+							break;
+					}
+
+					toast.show( mw.msg( editMsg ), 'toast error' );
+				} );
 			}
 		},
 		/**
