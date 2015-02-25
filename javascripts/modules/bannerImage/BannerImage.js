@@ -5,51 +5,6 @@
 		ratio = ( browser.isWideScreen() ) ? 21 / 9 : 16 / 9;
 
 	/**
-	 * Tries to load one image from a list of images.
-	 *
-	 * The first image from the list is loaded. If it loads, then it is returned, otherwise the next
-	 * image in the list is loaded. If the list of images is exhausted then the loading has
-	 * completely failed and nothing is returned.
-	 *
-	 * @param {Array} images A list of images
-	 * @returns {jQuery.Promise}
-	 */
-	function loadOneImage( images ) {
-
-		/**
-		 * @ignore
-		 *
-		 * @param {Array} images
-		 * @param {Number} index
-		 * @param {jQuery.Deferred} deferred
-		 */
-		function loadOneImageAcc( images, index, deferred ) {
-			var image;
-
-			if ( index >= images.length ) {
-				deferred.reject();
-
-				return;
-			}
-
-			image = images[ index ];
-			image.load()
-				.done( function () {
-					deferred.resolve( image );
-				} )
-				.fail( function () {
-					loadOneImageAcc( images, ++index, deferred );
-				} );
-		}
-
-		var deferred = $.Deferred();
-
-		loadOneImageAcc( images, 0, deferred );
-
-		return deferred.promise();
-	}
-
-	/**
 	 * A banner image at the head of the page
 	 * @class BannerImage
 	 * @extends View
@@ -87,15 +42,12 @@
 			var self = this,
 				targetWidth = $( window ).width();
 
-			self.repository.getImages( targetWidth )
-				.then( function ( images ) {
-					loadOneImage( images )
-						.done( function ( image ) {
-							self.onImageLoaded( image );
-						} )
-						.fail( function () {
-							self.remove();
-						} );
+			self.repository.getImage( targetWidth )
+				.then( function ( image ) {
+					self.onImageLoaded( image );
+				} )
+				.fail( function () {
+					self.remove();
 				} );
 		},
 

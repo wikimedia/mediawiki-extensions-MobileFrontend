@@ -1289,7 +1289,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/bannerImage/Image.js',
-			'javascripts/modules/bannerImage/PageImagesBannerImageRepository.js',
+			'javascripts/modules/bannerImage/MobileViewBannerImageRepository.js',
 			'javascripts/modules/bannerImage/BannerImage.js',
 		),
 		'styles' => array(

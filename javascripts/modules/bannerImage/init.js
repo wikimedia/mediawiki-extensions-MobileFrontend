@@ -1,7 +1,7 @@
 ( function ( M ) {
 	M.require( 'context' ).assertMode( [ 'alpha', 'beta' ] );
 
-	var PageImagesBannerImageRepository = M.require( 'modules/bannerImage/PageImagesBannerImageRepository' ),
+	var MobileViewBannerImageRepository = M.require( 'modules/bannerImage/MobileViewBannerImageRepository' ),
 		BannerImage = M.require( 'modules/bannerImage/BannerImage' ),
 		page = M.getCurrentPage(),
 		repository,
@@ -12,7 +12,7 @@
 		!page.isMainPage() &&
 		page.getNamespaceId() === 0
 	) {
-		repository = new PageImagesBannerImageRepository( new mw.Api(), page.title );
+		repository = new MobileViewBannerImageRepository( new mw.Api(), page.title );
 		bannerImage = new BannerImage( {
 			repository: repository
 		} );
