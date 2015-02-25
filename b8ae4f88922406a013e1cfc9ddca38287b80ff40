@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_073c022c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-25T19:25:35Z",
+      "side": 1,
+      "message": "Not sure what this means. That\u0027s not promoting it to stable :)",
+      "revId": "b8ae4f88922406a013e1cfc9ddca38287b80ff40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a7466ec4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-25T19:25:35Z",
+      "side": 1,
+      "message": "I worry about this user experience. I\u0027d be less reluctant to do this if it was limited to logged in users.\n\nI worry about the experience for new users. Since it looks like a normal page it might not be clear enough without some guidelines.\n\nThe risk we run is a new user will click the talk button, get confused and never click it again. I\u0027d rather we perfected that first user experience.",
+      "revId": "b8ae4f88922406a013e1cfc9ddca38287b80ff40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
