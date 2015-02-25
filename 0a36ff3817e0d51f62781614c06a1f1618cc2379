@@ -88,6 +88,24 @@
       "revId": "0a36ff3817e0d51f62781614c06a1f1618cc2379",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_dccd81bd",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-25T17:32:33Z",
+      "side": 1,
+      "message": "It shouldn\u0027t be done this way. I agree with Florian. \"This attribute assigns a name to an element. This name must be unique in a document.\" The name although random is not guaranteed to be unique (huge edge case sure) and it\u0027s not meaningful semantically for bots/users.\n\nPlease see https://phabricator.wikimedia.org/T90737",
+      "parentUuid": "6e7c4fa4_08c4b310",
+      "revId": "0a36ff3817e0d51f62781614c06a1f1618cc2379",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
