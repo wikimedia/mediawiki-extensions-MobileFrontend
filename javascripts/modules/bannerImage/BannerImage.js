@@ -1,8 +1,29 @@
 ( function ( M, $ ) {
 	var BannerImage,
 		View = M.require( 'View' ),
-		browser = M.require( 'browser' ),
-		ratio = ( browser.isWideScreen() ) ? 21 / 9 : 16 / 9;
+		browser = M.require( 'browser' );
+
+	/**
+	 * Gets the aspect ratio of the banner image.
+	 *
+	 * On a tablet device or larger, maintain a 21:9 ratio, otherwise 16:9.
+	 *
+	 * @ignore
+	 *
+	 * @return {Number}
+	 */
+	function getAspectRatio() {
+		if (
+			browser.isWideScreen() ||
+
+			// TODO: Shouldn't this be Device.isLandscape?
+			( window.innerHeight < window.innerWidth ) // Landscape?
+		) {
+			return 21 / 9;
+		}
+
+		return 16 / 9;
+	}
 
 	/**
 	 * A banner image at the head of the page
@@ -80,14 +101,13 @@
 		},
 
 		/**
-		 * Resize the frame to maintain aspect a 16:9 aspect ratio.
+		 * Resize the frame to maintain the aspect ratio.
 		 */
 		resizeFrame: function () {
 			this.$el
 				.css( {
-					// Maintain 21:9 (on tablet or bigger) or 16:9 ratio
 					// Max height is enforced with CSS
-					height: this.$el.width() * ( 1 / ratio )
+					height: this.$el.width() * ( 1 / getAspectRatio() )
 				} );
 		}
 	} );
