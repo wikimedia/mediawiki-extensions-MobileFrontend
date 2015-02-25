@@ -349,5 +349,6 @@
 	"tag-mobile_edit": "ویرایش موبایل",
 	"tag-mobile_edit-description": "ویرایش انجام‌شده از گوشی همراه (وب یا برنامه)",
 	"tag-mobile_web_edit": "ویرایش وبی گوشی همراه",
-	"tag-mobile_web_edit-description": "ویرایش انجام‌شده از وبگاه موبایل"
+	"tag-mobile_web_edit-description": "ویرایش انجام‌شده از وبگاه موبایل",
+	"mobile-frontend-pageaction-edit-tooltip": "ویرایش بخش آغازین این صفحه."
 }
