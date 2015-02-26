@@ -23,9 +23,9 @@
 			descriptionLabel: mw.msg( 'mobile-frontend-wikidata-editor-description-label', pageTitle )
 		},
 		/** @inheritdoc */
-		events: {
+		events: $.extend( {}, Overlay.prototype.events, {
 			'click .submit': 'onSave'
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 */

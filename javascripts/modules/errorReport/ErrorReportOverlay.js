@@ -43,13 +43,13 @@
 		/**
 		 * @inheritdoc
 		 */
-		events: {
+		events: $.extend( {}, Overlay.prototype.events, {
 			'click button.continue': 'onContinueClick',
 			'click button.submit': 'onSubmitClick',
 			'keyup .error-field': 'onErrorFieldChange',
 			'paste .error-field': 'onErrorFieldChange',
 			'drop .error-field': 'onErrorFieldChange'
-		},
+		} ),
 
 		/**
 		 * Show the actual error reporting form

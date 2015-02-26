@@ -32,10 +32,10 @@
 		/**
 		 * @inheritdoc
 		 */
-		events: {
+		events: $.extend( {}, Overlay.prototype.events, {
 			'click ul a': 'onLinkClick',
 			'input .search': 'onSearchInput'
-		},
+		} ),
 
 		/** @inheritdoc */
 		initialize: function ( options ) {

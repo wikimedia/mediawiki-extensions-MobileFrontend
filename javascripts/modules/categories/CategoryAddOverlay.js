@@ -31,10 +31,10 @@
 		/**
 		 * @inheritdoc
 		 */
-		events: {
+		events: $.extend( {}, Overlay.prototype.events, {
 			'click .save': 'onSaveClick',
 			'click .suggestion': 'onCategoryClick'
-		},
+		} ),
 		/**
 		 * @inheritdoc
 		 */

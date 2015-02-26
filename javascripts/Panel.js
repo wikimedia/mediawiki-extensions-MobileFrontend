@@ -13,19 +13,26 @@
 		// in milliseconds
 		minHideDelay: 10,
 		appendToElement: '#content',
-
+		events: {
+			'click .cancel': 'onCancel'
+		},
 		/** @inheritdoc */
 		postRender: function () {
 			var self = this;
-			this.$( '.cancel' ).click( function ( ev ) {
-				ev.preventDefault();
-				self.hide();
-			} );
 			// This module might be loaded at the top of the page e.g. Special:Uploads
 			// Thus ensure we wait for the DOM to be loaded
 			$( function () {
 				self.appendTo( self.appendToElement );
 			} );
+		},
+
+		/**
+		* Cancel event handler
+		* @param {Object} ev Event Object
+		*/
+		onCancel: function ( ev ) {
+			ev.preventDefault();
+			this.hide();
 		},
 
 		/**
