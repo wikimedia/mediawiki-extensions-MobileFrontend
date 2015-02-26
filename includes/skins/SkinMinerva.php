@@ -849,6 +849,7 @@ class SkinMinerva extends SkinTemplate {
 
 		if ( $this->isAuthenticatedUser() ) {
 			$vars['wgMFIsLoggedInUserBlockedFromPage'] = $user->isBlockedFrom( $title );
+			$vars['wgMFExperiments'] = $config->get( 'MFExperiments' );
 		}
 
 		$vars['wgMFShowRedLinks'] = $user->isLoggedIn()
@@ -896,6 +897,12 @@ class SkinMinerva extends SkinTemplate {
 				if ( $action === 'signup-edit' || $campaign === 'leftNavSignup' ) {
 					$modules[] = 'mobile.newusers';
 				}
+			}
+
+			$mfExperiments = $this->getMFConfig()->get( 'MFExperiments' );
+
+			if ( count( $mfExperiments ) > 0 ) {
+				$modules[] = 'mobile.experiments';
 			}
 		}
 
