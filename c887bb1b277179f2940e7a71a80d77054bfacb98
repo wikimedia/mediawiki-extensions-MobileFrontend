@@ -16,6 +16,23 @@
       "revId": "c887bb1b277179f2940e7a71a80d77054bfacb98",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7b2789c5",
+        "filename": "javascripts/modules/bannerImage/PageImagesBannerImageRepository.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-26T18:23:30Z",
+      "side": 1,
+      "message": "seems like duplicate code should they share a base class?",
+      "revId": "c887bb1b277179f2940e7a71a80d77054bfacb98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
