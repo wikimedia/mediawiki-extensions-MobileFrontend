@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_65a6090f",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-26T06:26:17Z",
+      "side": 1,
+      "message": "coding conventions, there should be a whitespace before and after a point :)",
+      "revId": "f81510dedcdbd80728f749a57d3a8fbf4ff94c41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
