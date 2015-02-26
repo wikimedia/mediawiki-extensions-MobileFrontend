@@ -39,39 +39,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 	}
 
 	/**
-	 * Returns HTML to show the last upload or an empty string when there has been no last upload
-	 *
-	 * @return String HTML string representing the last upload by the user
-	 */
-	protected function getLastUploadHtml() {
-		$file = $this->userInfo->getLastUpload();
-		if ( !$file ) {
-			return '';
-		}
-
-		$title = $file->getTitle();
-		$ts = new MWTimestamp( $file->getTimestamp() );
-		$daysAgo = $this->getDaysAgo( $ts );
-		$page = new MobilePage( $title, $file );
-		$img = Html::openElement( 'div', array( 'class' => 'card' ) ) .
-			Html::openElement( 'a', array(
-				'class' => 'container image',
-				'href' => $title->getLocalUrl() )
-			) .
-			$page->getMediumThumbnailHtml() .
-			Html::openElement( 'div', array( 'class' => 'caption' ) ) .
-			$this->msg( 'mobile-frontend-profile-last-upload-caption' )
-				->numParams( $daysAgo ) // $1
-				->params( $this->targetUser->getName() ) // $2
-				->parse() .
-			Html::closeElement( 'div' ) .
-			Html::closeElement( 'a' ) .
-			Html::closeElement( 'div' );
-
-		return $img;
-	}
-
-	/**
 	 * Returns HTML to show the last thanking or an empty string if the user has never been thanked
 	 *
 	 * @return String HTML string representing the last thank by the user
@@ -83,7 +50,6 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$user = $thank['user'];
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container' ) )
-				. MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-thanks' )
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-thank',
 					$user,
@@ -106,15 +72,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$rev = $this->userInfo->getLastEdit();
 		if ( $rev ) {
 			$daysAgo = $this->getDaysAgo( new MWTimestamp( wfTimestamp( TS_UNIX, $rev->getTimestamp() ) ) );
-			$page = new MobilePage( $rev->getTitle() );
-			if ( $page->hasThumbnail() ) {
-				$thumbnail = $page->getMediumThumbnailHtml();
-			} else {
-				$thumbnail = $page->getPlaceHolderThumbnailHtml( 'list-thumb-edit' );
-			}
 			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
 				. Html::openElement( 'div', array( 'class' => 'container image' ) )
-				. $thumbnail
 				. Html::openElement( 'div', array( 'class' => 'caption' ) )
 				. $this->msg( 'mobile-frontend-profile-last-edit',
 					$rev->getTitle(),
@@ -234,8 +193,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 
 				// Prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
-				$activityHtml = $this->getLastEditHtml() . $this->getLastUploadHtml()
-					. $this->getLastThanksHtml();
+				$activityHtml = $this->getLastEditHtml() . $this->getLastThanksHtml();
 
 				$html = Html::openElement( 'div', array( 'class' => 'profile content' ) );
 

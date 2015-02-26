@@ -9,7 +9,6 @@
  * @todo FIXME: Rename when this class when its purpose becomes clearer
  */
 class MobilePage {
-	const MEDIUM_IMAGE_WIDTH = 300;
 	const SMALL_IMAGE_WIDTH = 150;
 	const TINY_IMAGE_WIDTH = 80;
 
@@ -72,16 +71,6 @@ class MobilePage {
 	 */
 	public function hasThumbnail() {
 		return $this->file ? true : false;
-	}
-
-	/**
-	 * Get a medium sized thumbnail in div container.
-	 *
-	 * @param boolean $useBackgroundImage Whether the thumbnail should have a background image
-	 * @return string
-	 */
-	public function getMediumThumbnailHtml( $useBackgroundImage = false ) {
-		return $this->getPageImageHtml( self::MEDIUM_IMAGE_WIDTH, $useBackgroundImage );
 	}
 
 	/**

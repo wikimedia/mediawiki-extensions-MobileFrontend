@@ -359,7 +359,6 @@ class MobileFrontendHooks {
 		$vars['wgMFThumbnailSizes'] = array(
 			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
 			'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
-			'medium' => MobilePage::MEDIUM_IMAGE_WIDTH
 		);
 		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
 
@@ -880,8 +879,7 @@ class MobileFrontendHooks {
 				'wgMFDeviceWidthTablet' => "{$config->get( 'MFDeviceWidthTablet' )}px",
 				'wgMFDeviceWidthMobileSmall' => "{$config->get( 'MFDeviceWidthMobileSmall' )}px",
 				'wgMFThumbnailTiny' =>  MobilePage::TINY_IMAGE_WIDTH . 'px',
-				'wgMFThumbnailSmall' =>  MobilePage::SMALL_IMAGE_WIDTH . 'px',
-				'wgMFThumbnailMedium' => MobilePage::MEDIUM_IMAGE_WIDTH . 'px',
+				'wgMFThumbnailSmall' =>  MobilePage::SMALL_IMAGE_WIDTH . 'px'
 			)
 		);
 	}

@@ -89,34 +89,6 @@ class MobileUserInfo {
 	}
 
 	/**
-	 * Returns last file uploaded by user
-	 *
-	 * @return File|null
-	 */
-	public function getLastUpload() {
-		global $wgMFPhotoUploadWiki, $wgConf;
-
-		if ( !$wgMFPhotoUploadWiki ) {
-			$dbr = wfGetDB( DB_SLAVE );
-		} elseif (
-			$wgMFPhotoUploadWiki &&
-			!in_array( $wgMFPhotoUploadWiki, $wgConf->getLocalDatabases() )
-		) {
-			// early return if the database is invalid
-			return false;
-		} else {
-			$dbr = wfGetDB( DB_SLAVE, array(), $wgMFPhotoUploadWiki );
-		}
-
-		$where = array( 'img_user_text' => $this->user->getName() );
-		$constraints = array( 'ORDER BY' => 'img_timestamp DESC' );
-		$name = $dbr->selectField( 'image', 'img_name', $where, __METHOD__, $constraints );
-		$file = $name === false ? null : wfFindFile( $name );
-
-		return $file;
-	}
-
-	/**
 	 * Returns the last edit of the user
 	 *
 	 * @return Revision|false
