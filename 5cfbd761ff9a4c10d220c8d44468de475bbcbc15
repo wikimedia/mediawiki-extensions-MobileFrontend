@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_4fcbe3a6",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-26T22:39:51Z",
+      "side": 0,
+      "message": "Should probably be kept for completeness since there is getSmall and getLarge?\n\nOtherwise MEDIUM_IMAGE_WIDTH and wgMFThumbnailMedium should also be removed.",
+      "revId": "5cfbd761ff9a4c10d220c8d44468de475bbcbc15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_e438d6ed",
         "filename": "includes/specials/SpecialUserProfile.php",
         "patchSetId": 1
