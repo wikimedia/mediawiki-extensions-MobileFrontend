@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1b5bf557",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-26T18:21:21Z",
+      "side": 1,
+      "message": "Loading overlay should only be used as an intermediate loader when the view is not rendered. It\u0027s better to use the spinner icon inside the view for internal loading (doesn\u0027t interfere with back behaviour - LoadingOverlay cannot be escaped).",
+      "revId": "d1c9707ef817692d31b85d8cb0f41a1049762020",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
