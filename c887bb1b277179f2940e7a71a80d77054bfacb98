@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9b3e25d6",
+        "filename": "javascripts/modules/bannerImage/MobileViewBannerImageRepository.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-26T18:22:51Z",
+      "side": 1,
+      "message": "documentation is wrong?",
+      "revId": "c887bb1b277179f2940e7a71a80d77054bfacb98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
