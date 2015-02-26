@@ -9,6 +9,8 @@
 	 * @extends Overlay
 	 */
 	ContentOverlay = Overlay.extend( {
+		/** @inheritdoc */
+		templatePartials: {},
 		className: 'overlay content-overlay',
 		/**
 		 * @inheritdoc
