@@ -135,6 +135,7 @@
 
 			// Create watch stars for each entry in list
 			if ( !user.isAnon() && pages.length > 0 ) {
+				// FIXME: This should be moved out of here so other extensions can override this behaviour.
 				self.getPages( pages ).done( function () {
 					$li.each( function () {
 						var watchstar,

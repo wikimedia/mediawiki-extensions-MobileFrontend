@@ -945,6 +945,26 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/watchstar/WatchstarApi.js',
 			'javascripts/modules/watchstar/Watchstar.js',
+		),
+		'styles' => array(
+			'less/modules/watchstar.less',
+		),
+		'messages' => array(
+			'watchthispage',
+			'unwatchthispage',
+			// mf-watchstar.js
+			'mobile-frontend-watchlist-add',
+			'mobile-frontend-watchlist-removed',
+			'mobile-frontend-watchlist-cta',
+			'mobile-frontend-watchlist-please-wait',
+		),
+	),
+
+	'mobile.watchstar.init' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.watchstar',
+		),
+		'scripts' => array(
 			'javascripts/modules/watchstar/init.js',
 		),
 		'styles' => array(
@@ -1552,7 +1572,6 @@ $wgMinervaBootstrapModules = array(
 			// Feature modules that should be loaded in stable.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
-			'mobile.watchstar',
 			'mobile.issues',
 			'mobile.search',
 			'mobile.references',
