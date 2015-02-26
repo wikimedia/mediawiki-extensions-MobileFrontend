@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e438d6ed",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-26T22:03:40Z",
+      "side": 0,
+      "message": "This function is now unused.",
+      "revId": "5cfbd761ff9a4c10d220c8d44468de475bbcbc15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8456c25d",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-26T22:03:40Z",
+      "side": 0,
+      "message": "This message is now unused.",
+      "revId": "5cfbd761ff9a4c10d220c8d44468de475bbcbc15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a45dfe7f",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-26T22:03:40Z",
+      "side": 0,
+      "message": "This variable is now unused.",
+      "revId": "5cfbd761ff9a4c10d220c8d44468de475bbcbc15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c4cfda2a",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-26T22:03:40Z",
+      "side": 0,
+      "message": "This function is now unused.",
+      "revId": "5cfbd761ff9a4c10d220c8d44468de475bbcbc15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_64da86ee",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-26T22:03:40Z",
+      "side": 0,
+      "message": "This class is now unused.",
+      "revId": "5cfbd761ff9a4c10d220c8d44468de475bbcbc15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
