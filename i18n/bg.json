@@ -9,7 +9,8 @@
 			"Vladimir Penov",
 			"පසිඳු කාවින්ද",
 			"Gazimagomedov",
-			"StanProg"
+			"StanProg",
+			"Dicto23456"
 		]
 	},
 	"mobile-frontend-account-create-submit": "Регистриране",
@@ -45,6 +46,7 @@
 	"mobile-frontend-main-menu-page-title": "Навигация на сайта",
 	"mobile-frontend-main-menu-settings": "Настройки",
 	"mobile-frontend-main-menu-settings-heading": "Настройки за мобилен сайт",
+	"mobile-frontend-main-menu-watchlist": "Списък за наблюдение",
 	"mobile-frontend-missing-image": "Изображение",
 	"mobile-frontend-news-items": "В новините",
 	"mobile-frontend-page-menu-contents": "съдържание",

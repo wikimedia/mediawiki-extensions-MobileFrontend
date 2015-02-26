@@ -70,6 +70,7 @@
 	"mobile-frontend-featured-article": "Επιλεγμένο περιεχόμενο της ημέρας",
 	"mobile-frontend-footer-contact": "Επικοινωνία",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "Η {{SITENAME}} δημιουργείται από ανθρώπους όπως εσύ.",
 	"mobile-frontend-generic-login-action": "Συνδεθείτε για να συνεισφέρετε.",
 	"mobile-frontend-history": "Προβολή ιστορικού επεξεργασιών αυτή της σελίδας",
 	"mobile-frontend-history-404-title": "Δεν υπάρχει τέτοια σελίδα",
@@ -189,5 +190,8 @@
 	"mobile-frontend-watchlist-removed": "Αφαιρέθηκε $1 από τη λίστα παρακολούθησής σας",
 	"mobile-frontend-watchlist-view": "Προβολή της λίστας παρακολούθησής σας",
 	"nearby": "Σελίδες κοντά σας",
-	"tag-mobile_edit-description": "Επεξεργασία από ιστοσελίδα κινητού"
+	"tag-mobile_edit": "Επεξεργασία κινητού",
+	"tag-mobile_edit-description": "Επεξεργασία από ιστοσελίδα κινητού",
+	"tag-mobile_web_edit": "Επεξεργασία διαδικτύου από κινητό",
+	"mobile-frontend-pageaction-edit-tooltip": "Επεξεργαστείτε το εισαγωγικό τμήμα αυτής της σελίδας."
 }
