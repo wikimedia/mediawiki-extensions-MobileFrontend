@@ -213,7 +213,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 				$this->msg( 'mobile-frontend-profile-userpage-link', $username )->escaped()
 			)
 			. Html::closeElement( 'div' )
-			. $this->getTalkLink();
+			. $this->getTalkLink()
+			. Html::closeElement( 'div' );
 	}
 
 	/**
