@@ -47,17 +47,12 @@
 		 * @inheritdoc
 		 */
 		postRender: function ( options ) {
-			var self = this;
-
 			Overlay.prototype.postRender.apply( this, arguments );
+			this.$saveButton = $( '.save-button' );
 			if ( !options.section ) {
-				pageApi.getPage( options.title ).done( function ( pageData ) {
-					var page = new Page( pageData );
-					options.section = page.getSection( options.id );
-					self.render( options );
-				} );
+				this.renderFromApi( options );
 			} else {
-				this.$( '.loading' ).remove();
+				this.clearSpinner();
 				this._enableComments();
 			}
 		},
@@ -75,6 +70,20 @@
 			}
 		},
 		/**
+		 * Loads the discussion from api and add it to the Overlay
+		 * @param {Object} options Render options
+		 */
+		renderFromApi: function ( options ) {
+			var self = this;
+
+			pageApi.getPage( options.title ).done( function ( pageData ) {
+				var page = new Page( pageData );
+				options.section = page.getSection( options.id );
+				self.render( options );
+				self.clearSpinner();
+			} );
+		},
+		/**
 		 * Handler for focus of textarea
 		 */
 		onFocusTextarea: function () {
@@ -88,8 +97,9 @@
 				self = this;
 
 			if ( val ) {
-				this.$commentBox.hide();
-				this.$( '.loading' ).show();
+				// show a spinner
+				this.showSpinner();
+				this.$saveButton.prop( 'disabled', true );
 				// sign and add newline to front
 				val = '\n\n' + val + ' ~~~~';
 				api.postWithToken( 'edit', {
@@ -97,17 +107,37 @@
 					title: this.options.title,
 					section: this.options.id,
 					appendtext: val
-				} ).done( function ( data ) {
-					self.$( '.loading' ).hide();
-					self.$commentBox.show();
-					if ( data.error ) {
-						self.$textarea.addClass( 'error' );
+				} ).done( function () {
+					popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
+					// invalidate the cache
+					pageApi.invalidatePage( self.options.title );
+
+					self.renderFromApi( self.options );
+				} ).fail( function ( data, response ) {
+					// FIXME: Code sharing with EditorOverlay?
+					var msg,
+						// When save failed with one of these error codes, the returned
+						// message in response.error.info will be forwarded to the user.
+						// FIXME: This shouldn't be needed when info texts are all localized.
+						whitelistedErrorInfo = [
+							'readonly',
+							'blocked',
+							'autoblocked'
+						];
+
+					if (
+						response.error &&
+						$.inArray( response.error.code, whitelistedErrorInfo ) > -1
+					) {
+						msg = response.error.info;
 					} else {
-						self.hide();
-						popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
-						// invalidate the cache
-						pageApi.invalidatePage( self.options.title );
+						msg = mw.msg( 'mobile-frontend-editor-error' );
 					}
+
+					self.clearSpinner();
+					popup.show( msg, 'toast error' );
+				} ).always( function () {
+					self.$saveButton.prop( 'disabled', false );
 				} );
 			} else {
 				this.$textarea.addClass( 'error' );
