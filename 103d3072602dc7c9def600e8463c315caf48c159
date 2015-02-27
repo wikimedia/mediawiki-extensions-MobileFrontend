@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b5fc4a6e",
+        "filename": "javascripts/Skin.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-27T06:51:55Z",
+      "side": 1,
+      "message": "why only stable mode users? You can be in beta and anonymous, too?",
+      "revId": "103d3072602dc7c9def600e8463c315caf48c159",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
