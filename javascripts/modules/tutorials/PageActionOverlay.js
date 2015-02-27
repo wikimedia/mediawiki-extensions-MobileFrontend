@@ -16,6 +16,12 @@
 		 */
 		defaults: {
 			cancelMsg: mw.msg( 'cancel' )
+		},
+		/**
+		 * @inheritdoc
+		 */
+		events: {
+			'click .cancel': 'hide'
 		}
 	} );
 
