@@ -101,6 +101,23 @@
       "revId": "5cfbd761ff9a4c10d220c8d44468de475bbcbc15",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ea065d88",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-27T00:37:37Z",
+      "side": 0,
+      "message": "It sounds like we don\u0027t want to remove this caption. It should still be possible to get to the last upload.\n\nOnly the image needs to be removed not the text.",
+      "revId": "5cfbd761ff9a4c10d220c8d44468de475bbcbc15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
