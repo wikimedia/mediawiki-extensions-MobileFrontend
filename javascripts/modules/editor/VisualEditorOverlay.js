@@ -140,8 +140,7 @@
 		 * @method
 		 */
 		switchToEditor: function () {
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.initial-header' );
+			this.showHidden( '.initial-header' );
 			this.$( '.surface' ).show();
 			this.docToSave = false;
 		},
@@ -169,8 +168,7 @@
 			if ( this.confirmAborted ) {
 				return;
 			}
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.saving-header' );
+			this.showHidden( '.saving-header' );
 			// Stop the confirmation message from being thrown when you hit save.
 			this._hasChanged = false;
 			this.$( '.surface, .summary-area' ).hide();

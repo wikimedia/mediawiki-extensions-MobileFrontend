@@ -294,10 +294,10 @@
 		 * Can't use jQuery's hide() and show() because show() sets display: block.
 		 * And we want display: table for headers.
 		 * @method
-		 * @private
+		 * @protected
 		 * @param {String} className CSS selector to show
 		 */
-		_showHidden: function ( className ) {
+		showHidden: function ( className ) {
 			this.$( '.hideable' ).addClass( 'hidden' );
 			this.$( className ).removeClass( 'hidden' );
 		}

@@ -5,6 +5,7 @@
 		api = M.require( 'api' ),
 		pageApi = M.require( 'pageApi' ),
 		toast = M.require( 'toast' ),
+		Icon = M.require( 'Icon' ),
 		TalkSectionAddOverlay;
 
 	/**
@@ -29,11 +30,19 @@
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
 			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' ),
-			editingMsg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
+			editingMsg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
+			waitMsg: mw.msg( 'mobile-frontend-talk-topic-wait' ),
+			// icons.spinner can't be used, .loading has a fixed height, which breaks overlay-header
+			waitIcon: new Icon( {
+				tagName: 'button',
+				name: 'spinner',
+				additionalClassNames: 'savespinner loading'
+			} ).toHtmlString()
 		} ),
+		template: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay.hogan' ),
 		templatePartials: {
-			header: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/header.hogan' ),
-			content: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/content.hogan' )
+			contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
+			saveHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/saveHeader.hogan' )
 		},
 		events: $.extend( {}, Overlay.prototype.events, {
 			'input .wikitext-editor, .summary': 'onTextInput',
@@ -65,6 +74,7 @@
 		/** @inheritdoc */
 		postRender: function ( options ) {
 			Overlay.prototype.postRender.call( this, options );
+			this.showHidden( '.initial-header' );
 			this.$confirm = this.$( 'button.confirm-save' );
 			this.$subject = this.$( '.summary' );
 			this.$ta = this.$( '.wikitext-editor' );
@@ -102,45 +112,45 @@
 		onSaveClick: function () {
 			var self = this;
 
-			if ( !$( this ).prop( 'disabled' ) ) {
-				this.save().done( function ( status ) {
-					if ( status === 'ok' ) {
-						// Check if the user was previously on the talk overlay
-						if ( self.title !== mw.config.get( 'wgPageName' ) ) {
-							pageApi.invalidatePage( self.title );
-							toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
-							M.emit( 'talk-discussion-added' );
-							self.hide();
-						} else {
-							M.emit( 'talk-added-wo-overlay' );
-						}
+			this.showHidden( '.saving-header' );
+			this.save().done( function ( status ) {
+				if ( status === 'ok' ) {
+					// Check if the user was previously on the talk overlay
+					if ( self.title !== mw.config.get( 'wgPageName' ) ) {
+						pageApi.invalidatePage( self.title );
+						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ), 'toast' );
+						M.emit( 'talk-discussion-added' );
+						window.history.back();
+					} else {
+						M.emit( 'talk-added-wo-overlay' );
 					}
-				} ).fail( function ( error ) {
-					var editMsg = 'mobile-frontend-talk-topic-error';
+				}
+			} ).fail( function ( error ) {
+				var editMsg = 'mobile-frontend-talk-topic-error';
 
-					self.$confirm.prop( 'disabled', false );
-					switch ( error.details ) {
-						case 'protectedpage':
-							editMsg = 'mobile-frontend-talk-topic-error-protected';
-							break;
-						case 'noedit':
-						case 'blocked':
-							editMsg = 'mobile-frontend-talk-topic-error-permission';
-							break;
-						case 'spamdetected':
-							editMsg = 'mobile-frontend-talk-topic-error-spam';
-							break;
-						case 'badtoken':
-							editMsg = 'mobile-frontend-talk-topic-error-badtoken';
-							break;
-						default:
-							editMsg = 'mobile-frontend-talk-topic-error';
-							break;
-					}
+				self.$confirm.prop( 'disabled', false );
+				switch ( error.details ) {
+					case 'protectedpage':
+						editMsg = 'mobile-frontend-talk-topic-error-protected';
+						break;
+					case 'noedit':
+					case 'blocked':
+						editMsg = 'mobile-frontend-talk-topic-error-permission';
+						break;
+					case 'spamdetected':
+						editMsg = 'mobile-frontend-talk-topic-error-spam';
+						break;
+					case 'badtoken':
+						editMsg = 'mobile-frontend-talk-topic-error-badtoken';
+						break;
+					default:
+						editMsg = 'mobile-frontend-talk-topic-error';
+						break;
+				}
 
-					toast.show( mw.msg( editMsg ), 'toast error' );
-				} );
-			}
+				toast.show( mw.msg( editMsg ), 'toast error' );
+				self.showHidden( '.save-header, .save-panel' );
+			} );
 		},
 		/**
 		 * Save new talk section
@@ -159,9 +169,7 @@
 			// propagate, that we save an edit and want to close the Overlay without any interruption (user questions e.g.)
 			this._saveHit = true;
 
-			this.$confirm.prop( 'disabled', true );
 			this.$( '.content' ).empty().addClass( 'loading' );
-			this.$( '.buttonBar' ).hide();
 			// FIXME: while saving: a spinner would be nice
 			api.postWithToken( 'edit', {
 				action: 'edit',

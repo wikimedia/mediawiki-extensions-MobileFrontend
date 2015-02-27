@@ -46,8 +46,7 @@
 		showAbuseFilter: function ( type, message ) {
 			new AbuseFilterPanel().appendTo( this.$( '.overlay-header-container' ) )
 				.show( type, message );
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.save-header' );
+			this.showHidden( '.save-header' );
 		},
 
 		/** @inheritdoc */

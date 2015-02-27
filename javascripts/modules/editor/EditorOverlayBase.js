@@ -201,8 +201,7 @@
 		 * @method
 		 */
 		onStageChanges: function () {
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.save-header, .save-panel' );
+			this.showHidden( '.save-header, .save-panel' );
 			this.log( 'save' );
 			// Scroll to the top of the page, so that the summary input is visible
 			// (even if overlay was scrolled down when editing) and weird iOS header
@@ -243,8 +242,7 @@
 				this.nextStep = 'onStageChanges';
 			}
 			Overlay.prototype.postRender.apply( this, arguments );
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.initial-header' );
+			this.showHidden( '.initial-header' );
 		},
 		/**
 		 * Back button click handler
@@ -402,8 +400,7 @@
 			}
 
 			this.$( '.captcha-panel img' ).attr( 'src', url );
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.save-header, .captcha-panel' );
+			this.showHidden( '.save-header, .captcha-panel' );
 
 			this.captchaShown = true;
 		}

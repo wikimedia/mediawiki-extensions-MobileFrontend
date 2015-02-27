@@ -336,6 +336,7 @@
 	"mobile-frontend-talk-topic-error-permission": "Error message, when the topic wasn't added to the talk page, because of a permission problem (no edit permission e.g.).",
 	"mobile-frontend-talk-topic-error-spam": "Error message explain, that the topic was rejected, because it's identified as spam.",
 	"mobile-frontend-talk-topic-error-badtoken": "This error message explains, that there was an error with the server (bad edit token), so the topic can't be saved to the talk page. The user should try to reload the page in his browser.",
+	"mobile-frontend-talk-topic-wait": "Text that displays while a new topic on a talk page is being saved.",
 	"mobile-frontend-terms-text": "\"Terms of use\" link text at the bottom of every page.\n{{Identical|Terms of use}}",
 	"mobile-frontend-terms-url": "Terms of use URL. Do not localise",
 	"mobile-frontend-thanked-notice": "{{doc-singularthey}}\nPop-up message that is displayed after a user has thanked another user for their edit.\n\nParameters:\n* $1 - the username of the user that was thanked\n* $2 - the gender of the user that was thanked",

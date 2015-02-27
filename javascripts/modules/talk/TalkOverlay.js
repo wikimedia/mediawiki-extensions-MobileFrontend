@@ -60,7 +60,7 @@
 					this._loadContent( options );
 				}
 				this._setupAddDiscussionButton( options );
-				this._showHidden( '.initial-header' );
+				this.showHidden( '.initial-header' );
 			},
 
 			/**

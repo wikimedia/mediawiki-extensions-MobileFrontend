@@ -246,8 +246,7 @@
 			this.$preview.removeClass( 'error' ).hide();
 			this.$content.show();
 			window.scrollTo( 0, this.scrollTop );
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.initial-header' );
+			this.showHidden( '.initial-header' );
 			this.abuseFilterPanel.hide();
 		},
 
@@ -317,7 +316,7 @@
 		 */
 		_showAbuseFilter: function ( type, message ) {
 			this.abuseFilterPanel.show( type, message );
-			this._showHidden( '.save-header' );
+			this.showHidden( '.save-header' );
 			// disable continue and save buttons, reenabled when user changes content
 			this.$( '.continue, .submit' ).prop( 'disabled', this.abuseFilterPanel.isDisallowed );
 		},
@@ -345,8 +344,7 @@
 				options.captchaWord = this.$( '.captcha-word' ).val();
 			}
 
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.saving-header' );
+			this.showHidden( '.saving-header' );
 
 			this.api.save( options )
 				.done( function () {
@@ -389,8 +387,7 @@
 						}
 
 						self.reportError( msg, data.details );
-						// FIXME: Don't call a private method that is outside the class.
-						self._showHidden( '.save-header, .save-panel' );
+						self.showHidden( '.save-header, .save-panel' );
 					}
 				} );
 		},

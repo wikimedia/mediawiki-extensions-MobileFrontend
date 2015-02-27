@@ -649,8 +649,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			// talk.js
 			'content.hogan' => 'templates/modules/talk/talk.hogan',
-			'SectionAddOverlay/header.hogan' => 'templates/modules/talk/talkSectionAddHeader.hogan',
-			'SectionAddOverlay/content.hogan' => 'templates/modules/talk/talkSectionAdd.hogan',
+			'SectionAddOverlay/contentHeader.hogan' =>
+				'templates/modules/talk/talkSectionAddContentHeader.hogan',
+			'SectionAddOverlay/saveHeader.hogan' => 'templates/modules/editor/saveHeader.hogan',
+			'SectionAddOverlay.hogan' => 'templates/modules/talk/talkSectionAdd.hogan',
 			'Section/header.hogan' => 'templates/modules/talk/talkSectionHeader.hogan',
 			'Section/content.hogan' => 'templates/modules/talk/talkSection.hogan',
 		),
@@ -672,6 +674,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-topic-error-permission',
 			'mobile-frontend-talk-topic-error-spam',
 			'mobile-frontend-talk-topic-error-badtoken',
+			'mobile-frontend-talk-topic-wait',
 			// @todo FIXME: Gets loaded twice if editor and talk both loaded.
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-cancel-confirm',
