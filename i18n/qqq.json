@@ -202,6 +202,8 @@
 	"mobile-frontend-logged-in-toast-notification": "Message telling user that they are logged in. Shows as a notification at bottom of page\n*$1 - username",
 	"mobile-frontend-logged-out": "Message telling user they are not logged in on settings page.\n{{Identical|Not logged in}}",
 	"mobile-frontend-login": "Button text for login in Wikimedia mobile user interface.\n{{Identical|Sign in}}",
+	"mobile-frontend-main-menu": "Message that is displayed as a tooltip for the main menu icon in the header",
+	"mobile-frontend-main-menu-back": "Message that is displayed as a tooltip for the back button in the header of the Special:MobileMenu page",
 	"mobile-frontend-main-menu-account-create": "Account creation link in main menu.\n{{Identical|Create account}}",
 	"mobile-frontend-main-menu-button-tooltip": "Tooltip for menu button",
 	"mobile-frontend-main-menu-featured": "Featured link text in main menu\n{{Identical|Featured}}",

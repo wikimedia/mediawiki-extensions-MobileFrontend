@@ -16,6 +16,9 @@ class MinervaTemplate extends BaseTemplate {
 	/** @var boolean Specify whether the page is a special page */
 	protected $isSpecialPage;
 
+	/** @var boolean Whether or not the user is on the Special:MobileMenu page */
+	protected $isSpecialMobileMenuPage;
+
 	/** @var boolean Specify whether the page is main page */
 	protected $isMainPage;
 
@@ -24,7 +27,17 @@ class MinervaTemplate extends BaseTemplate {
 	 * @param array $data Data used to build the page
 	 */
 	protected function makeChromeHeaderContent( $data ) {
-		echo Html::openElement( 'form',
+		echo $this->makeSearchForm( $data );
+	}
+
+	/**
+	 * Generates the HTML required to render the search form.
+	 *
+	 * @param array $data The data used to render the page
+	 * @return string
+	 */
+	protected function makeSearchForm( $data ) {
+		return Html::openElement( 'form',
 				array(
 					'action' => $data['wgScript'],
 					'class' => 'search-box',
@@ -52,8 +65,11 @@ class MinervaTemplate extends BaseTemplate {
 	 * Start render the page in template
 	 */
 	public function execute() {
-		$this->isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
-		$this->isMainPage = $this->getSkin()->getTitle()->isMainPage();
+		$title = $this->getSkin()->getTitle();
+		$this->isSpecialPage = $title->isSpecialPage();
+		$this->isSpecialMobileMenuPage = $this->isSpecialPage &&
+			$title->equals( SpecialPage::getTitleFor( 'MobileMenu' ) );
+		$this->isMainPage = $title->isMainPage();
 		Hooks::run( 'MinervaPreRender', array( $this ) );
 		$this->render( $this->data );
 	}
@@ -329,33 +345,57 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Render side menu as lists
+	 * Renders the main menu.
+	 *
 	 * @param array $data Data used to build the page
 	 */
 	protected function renderMainMenu( $data ) {
 		?>
+		<nav id="mw-mf-page-left" class="navigation-drawer">
+		<?php
+		$this->renderMainMenuItems();
+		?>
+		</nav>
+		<?php
+	}
+
+	/**
+	 * Renders the contents of the main menu.
+	 */
+	protected function renderMainMenuItems() {
+		?>
 		<ul>
+			<?php
+				foreach ( $this->getDiscoveryTools() as $key => $val ):
+					echo $this->makeListItem( $key, $val );
+				endforeach;
+			?>
+			</ul>
+			<ul>
+			<?php
+				foreach ( $this->getPersonalTools() as $key => $val ):
+					echo $this->makeListItem( $key, $val );
+				endforeach;
+			?>
+			</ul>
+			<ul class="hlist">
+			<?php
+				foreach ( $this->getSiteLinks() as $key => $val ):
+					echo $this->makeListItem( $key, $val );
+				endforeach;
+			?>
+			</ul>
 		<?php
-		foreach ( $this->getDiscoveryTools() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		?>
-		</ul>
-		<ul>
-		<?php
-		foreach ( $this->getPersonalTools() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		?>
-		</ul>
-		<ul class="hlist">
-		<?php
-		foreach ( $this->getSiteLinks() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		?>
-		</ul>
-		<?php
+	}
+
+	/**
+	 * Render Header elements
+	 * @param array $data Data used to build the header
+	 */
+	protected function renderHeader( $data ) {
+		$this->html( 'menuButton' );
+		$this->makeChromeHeaderContent( $data );
+		echo $data['secondaryButton'];
 	}
 
 	/**
@@ -369,11 +409,7 @@ class MinervaTemplate extends BaseTemplate {
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
-			<nav id="mw-mf-page-left" class="navigation-drawer">
-				<?php
-					$this->renderMainMenu( $data );
-				?>
-			</nav>
+			<?php $this->renderMainMenu( $data ); ?>
 			<div id="mw-mf-page-center">
 				<?php
 					foreach ( $this->data['banners'] as $banner ):
@@ -382,9 +418,7 @@ class MinervaTemplate extends BaseTemplate {
 				?>
 				<div class="header">
 					<?php
-						$this->html( 'menuButton' );
-						$this->makeChromeHeaderContent( $data );
-						echo $data['secondaryButton'];
+						$this->renderHeader( $data );
 					?>
 				</div>
 				<div id="content_wrapper">
