@@ -922,10 +922,11 @@ class SkinMinerva extends SkinTemplate {
 		// Do not add mobules here.
 		$modules['stable'] = 'mobile.stable';
 
+		// Doing this unconditionally, prevents the desktop watchstar from ever leaking into mobile view.
+		$modules['watch'] = array();
 		if ( $this->isAllowedPageAction( 'watch' ) ) {
-			// Prevent the desktop watchstar from ever leaking into mobile view.
-			// FIXME: Let's set this to a module so it's more explicit
-			$modules['watch'] = array();
+			// Explicitly add the mobile watchstar code.
+			$modules['watch'] = array( 'mobile.watchstar.init' );
 		}
 
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
