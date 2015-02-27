@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_676283a4",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-02-27T18:16:49Z",
+      "side": 1,
+      "message": "I don\u0027t think you even need the check context.isBetaGroupMember()\n\ntalk is only loaded in beta anywhere -this should just be user.isAnon",
+      "revId": "802856b0982f1b2ae7e1226be190a18207efb0f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
