@@ -6,7 +6,6 @@
 		user = M.require( 'user' ),
 		Page = M.require( 'Page' ),
 		pageApi = M.require( 'pageApi' ),
-		context = M.require( 'context' ),
 		TalkSectionOverlay;
 
 	/**
@@ -68,7 +67,7 @@
 		 */
 		_enableComments: function () {
 			this.$commentBox = this.$( '.comment' );
-			if ( user.isAnon() || !context.isAlphaGroupMember() ) {
+			if ( user.isAnon() ) {
 				this.$commentBox.remove();
 			} else {
 				this.$textarea = this.$commentBox.find( 'textarea' );
