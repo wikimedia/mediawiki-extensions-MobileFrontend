@@ -3,7 +3,8 @@
 		"authors": [
 			"Autokrator",
 			"Fitoschido",
-			"UV"
+			"UV",
+			"Lesgles"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Recensionem plenone an mobili pagina utens factam esse indicat",
@@ -92,7 +93,6 @@
 	"mobile-frontend-last-modified-years": "Postremo ante {{PLURAL:$1|$1 annum|$1 annos}} mutatum",
 	"mobile-frontend-lead-image-tutorial-confirm": "Incipere imponere",
 	"mobile-frontend-lead-image-tutorial-summary": "Certum habeto hanc imaginem commentationem emendare neque ullam licentiam violare posse.",
-	"mobile-frontend-listed-image-no-description": "Nulla descriptio",
 	"mobile-frontend-logged-in-homepage-notification": "Salve, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Apud {{grammar:accusative|{{SITENAME}}}} agnosceris nomine $1.",
 	"mobile-frontend-logged-out": "Conventum non apertum",
@@ -107,7 +107,7 @@
 	"mobile-frontend-main-menu-settings": "Praeferentiae",
 	"mobile-frontend-main-menu-settings-heading": "Praeferentiae",
 	"mobile-frontend-main-menu-upload": "Fasciculi impositi",
-	"mobile-frontend-main-menu-watchlist": "Paginae custoditae",
+	"mobile-frontend-main-menu-watchlist": "Paginae observatae",
 	"mobile-frontend-media-details": "Indicia",
 	"mobile-frontend-media-license-link": "De permissione",
 	"mobile-frontend-meta-data-issues": "Haec pagina quaedam vitia continet",
@@ -172,7 +172,6 @@
 	"mobile-frontend-settings-alpha": "Alpha",
 	"mobile-frontend-settings-alpha-description": "Ista est editio immatura. Cum adhuc rudis sit periculum mendorum experiendorum imminet.",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Accomoda paginas mobiles his praeferentiis utens",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} $1 {{PLURAL:$1|alia lingua|aliis linguis}} exstat. Omnes editiones infra enumerantur",
 	"mobile-frontend-settings-site-header": "Linguae",
 	"mobile-frontend-sign-in-error-heading": "Error",

@@ -3,5 +3,30 @@
 		"authors": [
 			"Manuae"
 		]
-	}
+	},
+	"mobile-frontend-changeslist-nocomment": "kä Zsommefassung vunde Ännarunge",
+	"mobile-frontend-editor-edit": "Schaffe",
+	"mobile-frontend-generic-login-action": "Meldisch oa fas Schaffe",
+	"mobile-frontend-home-button": "D'hääm",
+	"mobile-frontend-language-article-heading": "Inna oannare Schbroch lese",
+	"mobile-frontend-last-modified-date": "Zuledschd gännad oam $1 um $2",
+	"mobile-frontend-login": "Oamelde",
+	"mobile-frontend-main-menu-account-create": "Kondo oaleesche",
+	"mobile-frontend-main-menu-button-tooltip": "Haubdmenie effne",
+	"mobile-frontend-main-menu-login": "Oilogge",
+	"mobile-frontend-main-menu-nearby": "Noh",
+	"mobile-frontend-main-menu-settings": "Oischdellunge",
+	"mobile-frontend-main-menu-watchlist": "Beowachdungslischd",
+	"mobile-frontend-news-items": "Inde Nochrischde",
+	"mobile-frontend-password-placeholder": "Kennwoad",
+	"mobile-frontend-placeholder": "Gugg uff {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Daadeschudz",
+	"mobile-frontend-random-button": "Zufellisch",
+	"mobile-frontend-terms-text": "Nudzungsb'schdimmunge",
+	"mobile-frontend-username-placeholder": "Middawaidanoame",
+	"mobile-frontend-view": "Mobili Oasischd",
+	"mobile-frontend-view-desktop": "Glassischi Oasischd",
+	"mobile-frontend-view-mobile": "Mobil",
+	"tag-mobile_edit": "Mobili B'awaidung",
+	"tag-mobile_web_edit": "Mobili Web-B'awaidung"
 }

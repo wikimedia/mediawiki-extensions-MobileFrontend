@@ -6,6 +6,7 @@
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "د يوې برخې نه پرشا ټوپ وهل",
+	"mobile-frontend-changeslist-nocomment": "د سمون لنډيز پرته",
 	"mobile-frontend-clear-search": "سپينول",
 	"mobile-frontend-copyright": "دا مېنځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې وييل شوی وي.",
 	"mobile-frontend-disable-images": "په موبايل وېبځي انځورونه ناچارنول",
@@ -21,7 +22,7 @@
 	"mobile-frontend-images-status": "انځورونه",
 	"mobile-frontend-language-article-heading": "په بلې ژبې کې لوستل",
 	"mobile-frontend-language-site-choose": "ژبه پلټل",
-	"mobile-frontend-last-modified-date": "ټولو نه وروسته $1 سم شوي و۔په $2",
+	"mobile-frontend-last-modified-date": "تېر ځل په $1 نېټه او په $2 بجو بدل شوی",
 	"mobile-frontend-login": "ننوتل",
 	"mobile-frontend-main-menu-account-create": "گڼون جوړول",
 	"mobile-frontend-main-menu-button-tooltip": "آرنۍ غورنۍ پرانيستل",
@@ -52,5 +53,5 @@
 	"nearby": "تاسې ته نژدې مخونه",
 	"tag-mobile_edit": "د موبايل سمون",
 	"tag-mobile_web_edit": "د موبايل گورت سمون",
-	"mobile-frontend-pageaction-edit-tooltip": "د دې مخ سرمخ سمول"
+	"mobile-frontend-pageaction-edit-tooltip": "د دې مخ د پيل برخه سمول."
 }
