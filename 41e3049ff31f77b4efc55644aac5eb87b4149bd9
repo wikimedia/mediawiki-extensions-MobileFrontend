@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c9f926e6",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-02-28T17:22:08Z",
+      "side": 1,
+      "message": "yeah, cool, forgot TalkOverlay :P",
+      "revId": "41e3049ff31f77b4efc55644aac5eb87b4149bd9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
