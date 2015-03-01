@@ -5,6 +5,7 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "kä Zsommefassung vunde Ännarunge",
+	"mobile-frontend-copyright": "Was do drin schded isch unna $1 vafieschba, wonn nedd onnaschda vameagd.",
 	"mobile-frontend-editor-edit": "Schaffe",
 	"mobile-frontend-generic-login-action": "Meldisch oa fas Schaffe",
 	"mobile-frontend-home-button": "D'hääm",
@@ -28,5 +29,6 @@
 	"mobile-frontend-view-desktop": "Glassischi Oasischd",
 	"mobile-frontend-view-mobile": "Mobil",
 	"tag-mobile_edit": "Mobili B'awaidung",
-	"tag-mobile_web_edit": "Mobili Web-B'awaidung"
+	"tag-mobile_web_edit": "Mobili Web-B'awaidung",
+	"mobile-frontend-pageaction-edit-tooltip": "Schaff oande Oifiahrung vunde Said."
 }
