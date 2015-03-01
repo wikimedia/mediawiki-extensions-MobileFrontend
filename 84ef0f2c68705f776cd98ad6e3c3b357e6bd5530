@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b7a8c48a",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 654,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-01T23:03:18Z",
+      "side": 1,
+      "message": "maybe the saveHeader.hogan shouldn\u0027t live in editor/?",
+      "revId": "84ef0f2c68705f776cd98ad6e3c3b357e6bd5530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
