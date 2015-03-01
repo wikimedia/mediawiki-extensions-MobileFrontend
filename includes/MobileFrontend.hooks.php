@@ -633,11 +633,44 @@ class MobileFrontendHooks {
 			$out->addLink( array( 'rel' => 'alternate', 'href' => $hreflink ) );
 		}
 
+		$config = $context->getMFConfig();
+		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
+		$mfMobileUrlTemplate = $config->get( 'MobileUrlTemplate' );
+		$tabletSize = $config->get( 'MFDeviceWidthTablet' );
+		// an alternate link is only useful, if the mobile and desktop URL are different
+		// and $wgMFNoindexPages needs to be true
+		// add alternate link to desktop sites - bug T91183
+		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
+			$desktopUrl = $context->getTitle()->getFullUrl();
+			$out->addHeadItem(
+				'mobilelink',
+				Html::element(
+					'link',
+					array(
+						'rel' => 'alternate',
+						'media' => 'only screen and (max-width: ' . $tabletSize . 'px)',
+						'href' => $context->getMobileUrl( $desktopUrl ),
+					)
+				)
+			);
+		}
 		if ( !$context->shouldDisplayMobileView() ) {
 			return true;
 		}
-		if ( $context->getMFConfig()->get( 'MFNoindexPages' ) ) {
-			$out->setRobotPolicy( 'noindex,nofollow' );
+		// an canonical link is only useful, if the mobile and desktop URL are different
+		// and $wgMFNoindexPages needs to be true
+		// add canonical link to mobile pages, instead of noindex - bug T91183
+		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
+			$out->addHeadItem(
+				'desktoplink',
+				Html::element(
+					'link',
+					array(
+						'rel' => 'canonical',
+						'href' => $context->getTitle()->getFullUrl(),
+					)
+				)
+			);
 		}
 
 		// Set X-Analytics HTTP response header if necessary
