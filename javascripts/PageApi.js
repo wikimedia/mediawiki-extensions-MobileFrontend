@@ -1,6 +1,14 @@
 ( function( M, $ ) {
-	var Api = M.require( 'api' ).Api, PageApi;
+	var Api = M.require( 'api' ).Api, PageApi,
+		sectionTemplate = M.template.get( 'sectionHeading.hogan' );
 
+	/**
+	 * Add child to listOfSections if the level of child is the same as the last
+	 * child of listOfSections, otherwise add it to the children of the last
+	 * section of listOfSections. If listOfSections is empty, just add child to it.
+	 * @param {Array} listOfSections
+	 * @param {Object} child - Section to be added to listOfSections
+	 */
 	function assignToParent( listOfSections, child ) {
 		var section;
 		if ( listOfSections.length === 0 ) {
@@ -18,28 +26,47 @@
 		}
 	}
 
+	/**
+	 * Order sections hierarchically
+	 * @param {Array} sections
+	 * @returns {Array}
+	 */
 	function transformSections( sections ) {
 		var
 			collapseLevel = Math.min.apply( this, $.map( sections, function( s ) { return s.level; } ) ) + '',
 			lastSection,
-			result = [], $tmpContainer = $( '<div>' );
+			result = [];
 
+		// if the first section level is not equal to collapseLevel, this first
+		// section will not have a parent and will be appended to the result.
 		$.each( sections, function( i, section ) {
 			if ( section.line !== undefined ) {
 				section.line = section.line.replace( /<\/?a\b[^>]*>/g, '' );
 			}
 			section.children = [];
-			if ( !section.level || section.level === collapseLevel ) {
+
+			if (
+				!lastSection ||
+				(
+					!section.level ||
+					section.level === collapseLevel
+				) ||
+				// make sure lastSections first child's level is bigger than section.level
+				(
+					lastSection.children.length &&
+					lastSection.children[0].level > section.level
+				) ||
+				// also make sure section.level is not bigger than the lastSection.level
+				(
+					lastSection.level &&
+					lastSection.level >= section.level
+				)
+			) {
 				result.push( section );
 				lastSection = section;
 			} else {
-				// FIXME: ugly, maintain structure returned by API and use templates instead
-				$tmpContainer.html( section.text );
-				$tmpContainer.prepend(
-					$( '<h' + section.level + '>' ).attr( 'id', section.anchor ).html( section.line )
-				);
 				assignToParent( lastSection.children, section );
-				lastSection.text += $tmpContainer.html();
+				lastSection.text += sectionTemplate.render( section );
 			}
 		} );
 

@@ -156,6 +156,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'page.hogan',
 			'section.hogan',
+			'sectionHeading.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-language-article-heading',
