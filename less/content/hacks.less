@@ -63,8 +63,6 @@ FIXME: Review all of these hacks to see if they still apply.
 	}
 }
 
-// Hat notes take up too much room in mobile interface
-.hatnote,
 // FIXME: Remove when filetoc is stripped from file pages a la table of contents (toc)
 #filetoc,
 // FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
@@ -103,6 +101,7 @@ FIXME: Review all of these hacks to see if they still apply.
 	background-color: #ddeeff;
 }
 
+.hatnote,
 .dablink,
 .rellink {
 	// Use bottom padding instead of bottom margin so that it doesn't affect the
@@ -117,14 +116,6 @@ FIXME: Review all of these hacks to see if they still apply.
 .quotebox {
 	margin: 0 0 0.8em !important;
 	width: auto !important;
-}
-
-@media all and (min-width: @wgMFDeviceWidthTablet) {
-
-	// Show hatnotes when there is room.
-	.hatnote {
-		display: block;
-	}
 }
 
 // Hacks to render galleries better on mobile
