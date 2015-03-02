@@ -58,7 +58,7 @@
 	"mobile-frontend-profile-last-thank": "Zoläz ene Dangk krääje {{GENDER:$2|vum|vum|vumm Metmaacher|vun dä|vum}} [[Special:UserProfile/$1|$1]].",
 	"mobile-frontend-random-button": "Zohfallsigg",
 	"mobile-frontend-regular-site": "jangk op de nomaale Belscherrem",
-	"mobile-frontend-save-settings": "Enschtällonge faßhallde",
+	"mobile-frontend-save-settings": "Faßhallde",
 	"mobile-frontend-search-submit": "Lohß Jonn!",
 	"mobile-frontend-settings-beta": "Betta",
 	"mobile-frontend-settings-site-description": "{{ucfirst:{{GRAMMAR:Nomminatif|{{ucfirst:{{SITENAME}}}}}}}} jiidd_et en {{PLURAL:$1|jenou eine Schprohch|$1 Schprohche|jaakein Schprohche}}. {{PLURAL:$1|Di Schprohch|Di Schprohche|Nix es dröm}} heh noh opjelėß.",

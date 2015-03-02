@@ -1,10 +1,21 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Kandar"
+		]
+	},
 	"mobile-frontend-back-to-top-of-section": "Balik ka Bagian Saméméhna",
-	"mobile-frontend-copyright": "Tulisan ditangtayungan ku <a href='http://id.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisénsi Creative Commons Atribusi-PembagianSerupa</a>; sarta bisa aya katangtuan émbohna. Pikeun lengkepna, mangga baca <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Katangtuan Maké</a>. Wikipédia mangrupakeun mérek dagang ti organisasi nirlaba <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>.",
+	"mobile-frontend-copyright": "Eusina ditangtayungan ku $1 iwal lamun disebutkeun béda.",
+	"mobile-frontend-editor-edit": "Édit",
 	"mobile-frontend-featured-article": "Artikel Petingan Poé Ieu",
 	"mobile-frontend-home-button": "Tepas",
+	"mobile-frontend-language-article-heading": "Baca dina séjén basa",
+	"mobile-frontend-main-menu-login": "Asup log",
+	"mobile-frontend-main-menu-settings": "Séting",
+	"mobile-frontend-placeholder": "Sungsi di {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Privasi",
 	"mobile-frontend-random-button": "Acak",
 	"mobile-frontend-regular-site": "Pidangkeun ieu kaca dina Wikipédia biasa",
-	"mobile-frontend-search-submit": "Jung"
+	"mobile-frontend-search-submit": "Jung",
+	"mobile-frontend-terms-text": "Katangtuan Pamakéan"
 }
