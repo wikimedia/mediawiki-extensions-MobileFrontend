@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_730d57ea",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-02T23:16:14Z",
+      "side": 1,
+      "message": "No. Put this in wikigrok. We can\u0027t have soft dependencies like this. They never work. Use a hook.",
+      "revId": "9357a51f76dd93b28a77c60b3e40a9d38f948458",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
