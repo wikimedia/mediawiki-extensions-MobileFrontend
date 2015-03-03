@@ -16,6 +16,24 @@
       "revId": "9357a51f76dd93b28a77c60b3e40a9d38f948458",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1301833c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-03T00:06:12Z",
+      "side": 1,
+      "message": "I don\u0027t quite understand what you mean. Can you tell me how I would use a hook in this case? Thanks",
+      "parentUuid": "6e7c4fa4_730d57ea",
+      "revId": "9357a51f76dd93b28a77c60b3e40a9d38f948458",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
