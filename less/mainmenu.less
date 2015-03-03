@@ -25,11 +25,7 @@
 }
 
 #mw-mf-page-left {
-	font-size: 90%;
 	float: left;
-	min-height: 100%;
-	background: @mainMenuBackgroundColor;
-	border-left: solid @menuBorder @menuBorderColor;
 }
 
 // Transparent shield hidden by default
@@ -50,135 +46,139 @@
 	box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.3);
 }
 
-.client-js {
-	#mw-mf-page-left ul {
-		li {
-			.icon-secondary {
-				border: none;
-				position: absolute;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				padding-right: 0;
-				border-left: 1px solid @colorGray7;
+// FIXME: Remove this once the nav element is delivered to everyone and cached.
+#mw-mf-page-left,
+nav {
+	font-size: 90%;
+	min-height: 100%;
+	background: @mainMenuBackgroundColor;
+	border-left: solid @menuBorder @menuBorderColor;
 
-				// FIXME: Remove when cache cleared and using mw-ui-icon
-				&.icon {
-					width: 0;
-				}
-			}
 
-			.icon-profile,
-			.mw-ui-icon-profile {
-				// 1px for the logout icon border-left
-				margin-right: @menuLinkLineHeight * 2 + 1;
-			}
-		}
-	}
-}
+	.client-js & {
+		.icon-secondary {
+			border: none;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			padding-right: 0;
+			border-left: 1px solid @colorGray7;
 
-#mw-mf-page-left ul {
-	background-color: @mainMenuBackgroundColor;
-
-	&:first-child {
-		border-bottom: @menuBorder solid @menuBorderColor;
-
-		li:first-child {
-			border-top: none;
-		}
-	}
-
-	.icon-home {
-		.background-image('images/menu/home.png');
-	}
-
-	.icon-random {
-		.background-image('images/menu/random.png');
-	}
-
-	.icon-watchlist {
-		.background-image('images/menu/watchlist.png');
-	}
-
-	.icon-uploads {
-		.background-image('images/menu/uploads.png');
-	}
-
-	.icon-nearby {
-		.background-image('images/menu/nearby.png');
-	}
-
-	.icon-settings {
-		.background-image('images/menu/settings.png');
-	}
-
-	.icon-secondary-logout {
-		.background-image('images/menu/loginout.png');
-	}
-
-	.icon-profile {
-		.background-image('images/menu/user.png');
-	}
-
-	// FIXME: Remove when mw-ui-icon in stable
-	.icon.icon-anon {
-		.background-image('images/menu/anon.png');
-	}
-
-	li {
-		position: relative; // ensure the logout link in beta can be position absolute
-		font-size: @menuItemFontSize;
-		border-top: 1px solid @colorGray7;
-
-		&:hover {
-			background-color: @colorGray5;
-			margin-left: -@menuBorder;
-			a {
-				border-left: solid @menuBorder #3366BB;
-			}
-		}
-		&:last-child {
-			border-bottom: 1px solid @colorGray7;
-		}
-
-		a {
-			color: white;
-			display: block;
-			padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 0;
-
-			&.mw-ui-icon {
-				padding-left: 9px;
-
-				&.mw-ui-icon-element {
-					font-size: round( 1 / @menuItemFontSize, 1 )
-				}
-			}
-
-			// FIXME: Remove when cache cleared
+			// FIXME: Remove when cache cleared and using mw-ui-icon
 			&.icon {
-				// FIXME: Remove when mw-ui-icon in stable
-				background-position: 9px center;
-				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 @menuLinkLineHeight * 2;
-				line-height: @menuLinkLineHeight;
+				width: 0;
 			}
+		}
+
+		.icon-profile,
+		.mw-ui-icon-profile {
+			// 1px for the logout icon border-left
+			margin-right: @menuLinkLineHeight * 2 + 1;
+		}
+	}
+
+	ul {
+		&:first-child {
+			border-bottom: @menuBorder solid @menuBorderColor;
+
+			li:first-child {
+				border-top: none;
+			}
+		}
+
+		.icon-home {
+			.background-image('images/menu/home.png');
+		}
+
+		.icon-random {
+			.background-image('images/menu/random.png');
+		}
+
+		.icon-watchlist {
+			.background-image('images/menu/watchlist.png');
+		}
+
+		.icon-uploads {
+			.background-image('images/menu/uploads.png');
+		}
+
+		.icon-nearby {
+			.background-image('images/menu/nearby.png');
+		}
+
+		.icon-settings {
+			.background-image('images/menu/settings.png');
+		}
+
+		.icon-secondary-logout {
+			.background-image('images/menu/loginout.png');
+		}
+
+		.icon-profile {
+			.background-image('images/menu/user.png');
+		}
+
+		// FIXME: Remove when mw-ui-icon in stable
+		.icon.icon-anon {
+			.background-image('images/menu/anon.png');
+		}
+
+		li {
+			position: relative; // ensure the logout link in beta can be position absolute
+			font-size: @menuItemFontSize;
+			border-top: 1px solid @colorGray7;
 
 			&:hover {
-				text-decoration: none;
+				background-color: @colorGray5;
+				margin-left: -@menuBorder;
+				a {
+					border-left: solid @menuBorder #3366BB;
+				}
 			}
-		}
-	}
-
-	&.hlist {
-		li {
-			font-size: 0.8em;
-			margin: 0;
-			border: none;
+			&:last-child {
+				border-bottom: 1px solid @colorGray7;
+			}
 
 			a {
-				color: @colorGray12;
+				color: white;
+				display: block;
+				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 0;
+
+				&.mw-ui-icon {
+					padding-left: 9px;
+
+					&.mw-ui-icon-element {
+						font-size: round(1 / @menuItemFontSize, 1)
+					}
+				}
+
+				// FIXME: Remove when cache cleared
+				&.icon {
+					// FIXME: Remove when mw-ui-icon in stable
+					background-position: 9px center;
+					padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 @menuLinkLineHeight * 2;
+					line-height: @menuLinkLineHeight;
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		&.hlist {
+			li {
+				font-size: 0.8em;
+				margin: 0;
 				border: none;
-				padding: .7em 12px;
-				margin-left: 0;
+
+				a {
+					color: @colorGray12;
+					border: none;
+					padding: .7em 12px;
+					margin-left: 0;
+				}
 			}
 		}
 	}
