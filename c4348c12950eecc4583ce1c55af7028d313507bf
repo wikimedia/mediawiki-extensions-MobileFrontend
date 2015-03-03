@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_0e56362d",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-03T02:40:29Z",
+      "side": 1,
+      "message": "I agree, but this is to override the corresponding font-size rule for mw-ui-icon in toggle.less:\n.collapsible-heading {\n    .indicator {\n        \u0026.mw-ui-icon {\n            font-size: .4em;\n        }\n    }\n}\nI\u0027ll add a comment explaining this.",
+      "parentUuid": "6e7c4fa4_aea2a2f7",
+      "revId": "c4348c12950eecc4583ce1c55af7028d313507bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_0e587627",
         "filename": "less/modules/toc/toc.less",
         "patchSetId": 1
