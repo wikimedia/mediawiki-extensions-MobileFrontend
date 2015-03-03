@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_aea2a2f7",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-03T00:31:58Z",
+      "side": 1,
+      "message": "We should be agnostic to mw-ui-icon\nWhat if we switch to oo js ui?\n\nUse a neutral class or reset the parent font size.",
+      "revId": "c4348c12950eecc4583ce1c55af7028d313507bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0e587627",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-03T00:31:58Z",
+      "side": 1,
+      "message": "merge these into one margin rule please whilst here.",
+      "revId": "c4348c12950eecc4583ce1c55af7028d313507bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cea59e01",
+        "filename": "less/modules/toc/toc.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-03T00:31:58Z",
+      "side": 1,
+      "message": "please merge into one margin rule.",
+      "revId": "c4348c12950eecc4583ce1c55af7028d313507bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
