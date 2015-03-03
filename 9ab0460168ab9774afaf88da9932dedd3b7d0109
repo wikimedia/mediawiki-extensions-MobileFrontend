@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ae2299f9",
+        "filename": "i18n/en.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-03T23:07:43Z",
+      "side": 1,
+      "message": "Should be indented with a tab instead of spaces. Are you running the pre-commit hooks?",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ce1d95c2",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-03T23:07:43Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2e5d297e",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-03T23:07:43Z",
+      "side": 1,
+      "message": "Format for param docs is:\n@param type varname description\n\nAt least the type (array) needs to be specified (although I know it\u0027s a WIP)",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4e18a584",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-03T23:07:43Z",
+      "side": 1,
+      "message": "This won\u0027t work if the MobileMenu special page is given a foreign language alias and we are using that language (since $title-\u003egetText() will return the local alias).",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ce2cb5a9",
+        "filename": "includes/specials/SpecialMobileMenu.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-03T23:07:43Z",
+      "side": 1,
+      "message": "Would be good to have a comment here explaining what these classes do.",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
