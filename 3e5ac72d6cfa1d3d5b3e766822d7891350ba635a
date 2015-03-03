@@ -63,6 +63,24 @@
       "revId": "3e5ac72d6cfa1d3d5b3e766822d7891350ba635a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bf35ee43",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-03T12:34:45Z",
+      "side": 1,
+      "message": "The problem is, that the user has no way to prevent the notice from being hide (like on desktop, if you wait with the cursor over it) :( Maybe, if we keep this notice and the one in the preview, it\u0027s ok? @mobile-web team? :)",
+      "parentUuid": "6e7c4fa4_c8107655",
+      "revId": "3e5ac72d6cfa1d3d5b3e766822d7891350ba635a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
