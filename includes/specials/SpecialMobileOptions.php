@@ -95,9 +95,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$token = $user->isLoggedIn() ? Html::hidden( 'token', $user->getEditToken() ) : '';
 		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
 
-		$alphaEnableMsg = wfMessage( 'mobile-frontend-settings-alpha' )->parse();
+		$alphaEnableMsg = $this->msg( 'mobile-frontend-settings-alpha' )->parse();
 		$alphaChecked = $alphaEnabled ? 'checked' : '';
-		$alphaDescriptionMsg = wfMessage( 'mobile-frontend-settings-alpha-description' )->text();
+		$alphaDescriptionMsg = $this->msg( 'mobile-frontend-settings-alpha-description' )->text();
 
 		// array to save the data of options, which should be displayed here
 		$options = array();
