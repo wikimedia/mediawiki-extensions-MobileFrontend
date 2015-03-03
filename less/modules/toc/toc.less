@@ -52,11 +52,12 @@
 			border-right: @paddingHorizontal solid transparent;
 		}
 
+		// Override rules for section toggler
 		// In table of contents the collapsing caret is on the right
 		.indicator {
-			margin-top: .4em;
+			margin: .2em .4em 0 0;
 			float: right;
-			margin-left: .5em;
+			font-size: .6em;
 		}
 	}
 
@@ -89,22 +90,16 @@
 	}
 }
 
-// FIXME: remove rule when mw-ui-icon in stable / beta
+// FIXME: remove rule when mw-ui-icon in stable
 .client-js {
-	.beta,
 	.stable {
 		.toc-mobile {
 			.collapsible-heading {
 				padding-left: .8em;
 				.indicator {
-					margin-top: 0;
+					margin: 0 0 0 .5em;
 				}
 			}
-		}
-	}
-	.collapsible-heading {
-		.indicator {
-			margin-top: 0.2em;
 		}
 	}
 }
