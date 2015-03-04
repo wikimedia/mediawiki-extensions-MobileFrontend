@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_818c4b8a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T16:33:55Z",
+      "side": 1,
+      "message": "Could you elaborate on the \"use the same design as in editor\" part of this, which is the majority of the change.",
+      "revId": "84ef0f2c68705f776cd98ad6e3c3b357e6bd5530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_b7a8c48a",
         "filename": "includes/Resources.php",
         "patchSetId": 1
@@ -13,6 +30,23 @@
       "writtenOn": "2015-03-01T23:03:18Z",
       "side": 1,
       "message": "maybe the saveHeader.hogan shouldn\u0027t live in editor/?",
+      "revId": "84ef0f2c68705f776cd98ad6e3c3b357e6bd5530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1e865ae0",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T16:33:55Z",
+      "side": 1,
+      "message": "This change could include making this a \"protected\" (public but not used outside of Overlay or its sub-classes) method.",
       "revId": "84ef0f2c68705f776cd98ad6e3c3b357e6bd5530",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
