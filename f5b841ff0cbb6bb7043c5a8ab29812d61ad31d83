@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_fc192627",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-04T18:41:54Z",
+      "side": 1,
+      "message": "I don\u0027t think it should be a dependency here. Not every page or module needs it.",
+      "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bcf88ebd",
+        "filename": "javascripts/experiments.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-04T18:41:54Z",
+      "side": 1,
+      "message": "I don\u0027t think there is a need to translate them. They are meant for developers, no?",
+      "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
