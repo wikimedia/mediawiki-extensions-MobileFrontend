@@ -1,9 +1,9 @@
 ( function ( M, $ ) {
 
-	var
+	var Page,
 		View = M.require( 'View' ),
 		Section = M.require( 'Section' ),
-		Page;
+		Thumbnail = M.require( 'Thumbnail' );
 
 	/**
 	 * Mobile page view object
@@ -192,6 +192,33 @@
 		 */
 		getReferenceSection: function () {
 			return this._referenceLookup;
+		},
+
+		/**
+		 * Return all the thumbnails in the article
+		 * @method
+		 * @return {Thumbnail[]}
+		 */
+		getThumbnails: function () {
+			var thumbs = [];
+
+			if ( !this._thumbs ) {
+				this.$el.find( 'a.image, a.thumbimage' ).each( function () {
+					var $a = $( this ),
+						match = $a.attr( 'href' ).match( /[^\/]+$/ );
+
+					if ( match ) {
+						thumbs.push(
+							new Thumbnail( {
+								el: $a,
+								filename: decodeURIComponent( match[0] )
+							} )
+						);
+					}
+				} );
+				this._thumbs = thumbs;
+			}
+			return this._thumbs;
 		},
 
 		/**

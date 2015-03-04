@@ -26,6 +26,7 @@
 		 * @cfg {String} defaults.detailsMsg Caption for a button leading to the details
 		 * of a media file (e.g. an image) in a preview.
 		 * @cfg {String} defaults.licenseLinkMsg Link to license information in media viewer.
+		 * @cfg {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 		 */
 		defaults: {
 			cancelButton: new Icon( {
@@ -36,7 +37,19 @@
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
 			detailsMsg: mw.msg( 'mobile-frontend-media-details' ),
-			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' )
+			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' ),
+			thumbnails: []
+		},
+
+		/** @inheritdoc */
+		preRender: function ( options ) {
+			var self = this;
+			$.each( options.thumbnails, function ( i, thumbnail ) {
+				if ( thumbnail.getFileName() === options.title ) {
+					options.caption = thumbnail.getDescription();
+					self.galleryOffset = i;
+				}
+			} );
 		},
 
 		/** @inheritdoc */
