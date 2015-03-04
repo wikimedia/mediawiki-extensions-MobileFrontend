@@ -84,6 +84,24 @@
       "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_fccfe67f",
+        "filename": "javascripts/experiments.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-04T18:46:16Z",
+      "side": 1,
+      "message": "Yeh no need to translate this.",
+      "parentUuid": "6e7c4fa4_bcf88ebd",
+      "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
