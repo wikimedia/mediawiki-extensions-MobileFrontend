@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_fc44c61d",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlayNew.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-04T18:36:38Z",
+      "side": 1,
+      "message": "this breaks the \"close\" button :)",
+      "revId": "8bfcd0ca438ef937f0b5e430b2ec8d3efb0cf4fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_dc70ea70",
+        "filename": "templates/modules/mediaViewer/ImageOverlayNew.hogan",
+        "patchSetId": 16
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-04T18:36:38Z",
+      "side": 1,
+      "message": "this div will overlap the close button, so if you click \"close\" you see the next picture. Not so good :)",
+      "revId": "8bfcd0ca438ef937f0b5e430b2ec8d3efb0cf4fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
