@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_abd5a6ea",
+        "filename": "i18n/en.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:28:37Z",
+      "side": 1,
+      "message": "Done. Huh. I thought my editor (PHPStorm) caught this – it does with PHP files – but obviously not.\n\nI\u0027m now running the pre-commit hooks.",
+      "parentUuid": "6e7c4fa4_ae2299f9",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_ce1d95c2",
         "filename": "i18n/qqq.json",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2015-03-03T23:07:43Z",
       "side": 1,
       "message": "Same here.",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6b19ceda",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:28:37Z",
+      "side": 1,
+      "message": "Yeeeaaah.",
+      "parentUuid": "6e7c4fa4_ce1d95c2",
       "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_ab2286f9",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:28:37Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6e7c4fa4_2e5d297e",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_4e18a584",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 9
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_4b60922d",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:28:37Z",
+      "side": 1,
+      "message": "Done. I think. SpecialPage::getTitleFor appears to deal with mapping local aliases to canonical special page names.",
+      "parentUuid": "6e7c4fa4_4e18a584",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_ce2cb5a9",
         "filename": "includes/specials/SpecialMobileMenu.php",
         "patchSetId": 9
@@ -81,6 +153,24 @@
       "writtenOn": "2015-03-03T23:07:43Z",
       "side": 1,
       "message": "Would be good to have a comment here explaining what these classes do.",
+      "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cbda62e9",
+        "filename": "includes/specials/SpecialMobileMenu.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:28:37Z",
+      "side": 1,
+      "message": "Really? I think they\u0027re well named. Do you mean you\u0027d like a comment explaining why they\u0027re only being applied in stable?",
+      "parentUuid": "6e7c4fa4_ce2cb5a9",
       "revId": "9ab0460168ab9774afaf88da9932dedd3b7d0109",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
