@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f70dc141",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-04T21:37:19Z",
+      "side": 1,
+      "message": "I don\u0027t think all spinners stay hidden in onStageChanges, just this.$spinner does. So why not create a new spinner here:\nwaitIcon: icons.spinner().toHtmlString()?",
+      "revId": "87908bdc810ea7ad5135a8ecb3a5caa3e44050cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
