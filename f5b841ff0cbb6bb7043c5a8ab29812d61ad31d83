@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_7cdf5610",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:06:08Z",
+      "side": 1,
+      "message": "Done. This is MF-specific and should only be delivered to logged-in users for now. SkinMinerva#getSkinConfigVars it is!",
+      "parentUuid": "6e7c4fa4_9cfd92b0",
+      "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_fc192627",
         "filename": "includes/Resources.php",
         "patchSetId": 2
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_1ce2e2cf",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:06:08Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6e7c4fa4_5c2b7a2e",
+      "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_1c21824a",
         "filename": "includes/Resources.php",
         "patchSetId": 2
@@ -64,6 +100,24 @@
       "writtenOn": "2015-03-04T18:45:37Z",
       "side": 1,
       "message": "consider using other group if you decide to only load it based on whether an experiment is running.",
+      "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9ca112a1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1604,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:06:08Z",
+      "side": 1,
+      "message": "Sorry, I don\u0027t quite understand. \"other group\"?",
+      "parentUuid": "6e7c4fa4_1c21824a",
       "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -99,6 +153,24 @@
       "side": 1,
       "message": "Yeh no need to translate this.",
       "parentUuid": "6e7c4fa4_bcf88ebd",
+      "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5c8ffa2e",
+        "filename": "javascripts/experiments.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-04T19:06:08Z",
+      "side": 1,
+      "message": "Cool. Ta.",
+      "parentUuid": "6e7c4fa4_fccfe67f",
       "revId": "f5b841ff0cbb6bb7043c5a8ab29812d61ad31d83",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
