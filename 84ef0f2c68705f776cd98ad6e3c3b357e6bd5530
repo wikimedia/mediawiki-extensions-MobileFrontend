@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_01f35be3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-04T17:09:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_818c4b8a",
+      "revId": "84ef0f2c68705f776cd98ad6e3c3b357e6bd5530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_b7a8c48a",
         "filename": "includes/Resources.php",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2015-03-04T16:33:55Z",
       "side": 1,
       "message": "This change could include making this a \"protected\" (public but not used outside of Overlay or its sub-classes) method.",
+      "revId": "84ef0f2c68705f776cd98ad6e3c3b357e6bd5530",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a14f0738",
+        "filename": "javascripts/modules/talk/TalkSectionAddOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-04T17:09:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_1e865ae0",
       "revId": "84ef0f2c68705f776cd98ad6e3c3b357e6bd5530",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
