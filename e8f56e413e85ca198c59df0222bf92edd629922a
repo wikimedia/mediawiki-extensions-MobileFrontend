@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_61bb2f71",
+        "filename": "tests/browser/features/talk.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-04T17:59:34Z",
+      "side": 1,
+      "message": "ahh, damn tabs :)",
+      "revId": "e8f56e413e85ca198c59df0222bf92edd629922a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
