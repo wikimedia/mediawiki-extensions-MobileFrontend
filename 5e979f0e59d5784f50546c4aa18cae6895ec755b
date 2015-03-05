@@ -34,6 +34,24 @@
       "revId": "5e979f0e59d5784f50546c4aa18cae6895ec755b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_445878fd",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-05T19:50:09Z",
+      "side": 1,
+      "message": "ok :)",
+      "parentUuid": "6e7c4fa4_691b0d86",
+      "revId": "5e979f0e59d5784f50546c4aa18cae6895ec755b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
