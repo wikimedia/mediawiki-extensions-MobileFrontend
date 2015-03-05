@@ -29,6 +29,10 @@
 				label: mw.msg( 'mobile-frontend-references-citation' )
 			} ).toHtmlString()
 		},
+		/**
+		 * @inheritdoc
+		 */
+		closeOnScroll: false,
 		template: mw.template.get( 'mobile.references.beta', 'DrawerBeta.hogan' )
 	} );
 
