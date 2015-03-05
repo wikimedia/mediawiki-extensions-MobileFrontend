@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ea45cb1a",
+        "filename": "javascripts/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-05T21:42:04Z",
+      "side": 1,
+      "message": "How will overrides work?",
+      "revId": "327a64c7044fdc9eff4caff32e7977afa535d2f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
