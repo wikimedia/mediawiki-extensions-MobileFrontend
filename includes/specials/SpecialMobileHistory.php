@@ -146,7 +146,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$user = $this->getUser();
 		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
 		if ( $userId === 0 ) {
-			$username = IP::prettifyIP( $rev->getRawUserText() );
+			$username = IP::prettifyIP( $rev->getUserText( Revision::RAW ) );
 			$isAnon = true;
 		} else {
 			$username = $rev->getUserText( Revision::FOR_THIS_USER, $user );
