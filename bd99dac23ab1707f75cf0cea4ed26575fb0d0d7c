@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5eada4e6",
+        "filename": "templates/header.mustache",
+        "patchSetId": 11
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-05T22:51:24Z",
+      "side": 1,
+      "message": "siteName needs to have triple brackets in case it is an image instead of text:\n{{{siteName}}}",
+      "revId": "bd99dac23ab1707f75cf0cea4ed26575fb0d0d7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
