@@ -140,7 +140,7 @@ $wgHooks['ResourceLoaderRegisterModules'][] =
 $wgHooks['EventLoggingRegisterSchemas'][] =
 	'MobileFrontendHooks::onEventLoggingRegisterSchemas';
 $wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
-$wgHooks['HTMLFileCache::useFileCache'][] = 'onHTMLFileCache_useFileCache';
+$wgHooks['HTMLFileCache::useFileCache'][] = 'MobileFrontendHooks::onHTMLFileCache_useFileCache';
 
 // use array_merge to ensure we do not override existing values set by core
 $wgSpecialPages = array_merge( $wgSpecialPages, array(
