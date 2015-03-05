@@ -290,7 +290,7 @@
 	"mobile-frontend-profile-nouser": "Message shown when the username requested is non-existent or invalid.\n\nIf the user is logged in, this message is followed by:\n* {{msg-mw|Mobile-frontend-profile-yours}}",
 	"mobile-frontend-profile-title": "Title of the [[Special:UserProfile]] page.\n{{Identical|User profile}}",
 	"mobile-frontend-profile-userpage-link": "Label for a link to user page that shows on [[Special:UserProfile]].\n\nParameter:\n* $1 - username of user who talk page belongs to. Can be used for GENDER.",
-	"mobile-frontend-profile-usertalk": "Link label to user talk page.\n\nParameters:\n* $1 - username of user who talk page belongs to. Can be used for GENDER.",
+	"mobile-frontend-profile-usertalk": "Link label to user talk page.\n\nParameters:\n* $1 - username of user whom the talk page belongs to. Can be used for GENDER.",
 	"mobile-frontend-random-button": "This is the label of one of the buttons that appear if you click the wiki logo near the search box.\n\nThis buttons takes the user to a random page.\n{{Identical|Random}}",
 	"mobile-frontend-references-citation": "The title of the reference drawer that opens up when a reference link is clicked.\n{{Identical|Citation}}",
 	"mobile-frontend-regular-site": "When on the mobile site, this text links to the normal page for desktop computers",
