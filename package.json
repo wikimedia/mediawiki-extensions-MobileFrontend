@@ -13,7 +13,7 @@
 		"grunt": "0.4.5",
 		"grunt-phpdocumentor": "~0.4.1",
 		"jshint": ">=1.1.0",
-		"jscs": "git+https://github.com/jscs-dev/node-jscs.git#160c9dc",
+		"jscs": ">=1.11.3",
 		"jsdoc": "<=3.3.0",
 		"kss": ">=0.3.6",
 		"svgo": ">=0.4.4"
