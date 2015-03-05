@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_44b398fd",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-05T20:25:33Z",
+      "side": 0,
+      "message": "If this code is removed, there will be no licensing message in the interface for replying to a thread.",
+      "revId": "d2a10df1f6f090ee3a1ae8efc253587b50452377",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
