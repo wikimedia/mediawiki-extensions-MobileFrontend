@@ -158,8 +158,7 @@ $wgHooks['HTMLFileCache::useFileCache'][] = 'MobileFrontendHooks::onHTMLFileCach
 $wgHooks['LoginFormValidErrorMessages'][] = 'MobileFrontendHooks::onLoginFormValidErrorMessages';
 $wgHooks['ResourceLoaderGetLessVars'][] = 'MobileFrontendHooks::onResourceLoaderGetLessVars';
 
-// use array_merge to ensure we do not override existing values set by core
-$wgSpecialPages = array_merge( $wgSpecialPages, array(
+$wgSpecialPages += array(
 	'History' => 'SpecialMobileHistory',
 	'MobileDiff' => 'SpecialMobileDiff',
 	'MobileEditor' => 'SpecialMobileEditor',
@@ -168,7 +167,7 @@ $wgSpecialPages = array_merge( $wgSpecialPages, array(
 	'MobileLanguages' => 'SpecialMobileLanguages',
 	'Uploads' => 'SpecialUploads',
 	'UserProfile' => 'SpecialUserProfile',
-) );
+);
 $wgSpecialPageGroups['Nearby'] = 'pages';
 
 // Register Minerva as a valid skin
