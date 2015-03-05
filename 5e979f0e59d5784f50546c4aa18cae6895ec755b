@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_298675e1",
+        "filename": "javascripts/modules/bannerImage/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-05T18:58:13Z",
+      "side": 1,
+      "message": "is it needed to save this in a variable?",
+      "revId": "5e979f0e59d5784f50546c4aa18cae6895ec755b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
