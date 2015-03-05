@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b5bbc0b9",
+        "filename": "MobileFrontend.alias.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-05T07:33:17Z",
+      "side": 0,
+      "message": "as long as the special page exists (and is displayed in one condition, here: Bad title error), you shouldn\u0027t remove the alias to prevent php notices :)",
+      "revId": "1b357ccc0690b5c8fc5dc714374562c0f421fdb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
