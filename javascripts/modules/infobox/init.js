@@ -2,7 +2,7 @@
 	M.require( 'context' ).assertMode( [ 'alpha' ] );
 	var infobox,
 		page = M.getCurrentPage(),
-		wikidataID = mw.config.get( 'wgWikibaseItemId' ),
+		wikidataID = M.require( 'util' ).getWikiBaseItemId(),
 		overlayManager = M.require( 'overlayManager' ),
 		InfoboxEditorOverlay = M.require( 'modules/InfoboxEditorOverlay' ),
 		Infobox = M.require( 'modules/Infobox' );

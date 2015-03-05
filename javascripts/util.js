@@ -43,7 +43,24 @@
 		 *
 		 * @property {Object} query
 		 */
-		query: {}
+		query: {},
+		/**
+		 * Return wgWikiBaseItemID config variable or 'wikidataid' query parameter if exits
+		 * @returns {null|String}
+		 */
+		getWikiBaseItemId: function () {
+			var id = mw.config.get( 'wgWikibaseItemId' ),
+				idOverride;
+
+			if ( !id ) {
+				idOverride = this.query.wikidataid;
+				if ( idOverride ) {
+					mw.config.set( 'wgWikibaseItemId', idOverride );
+					id = idOverride;
+				}
+			}
+			return id;
+		}
 	};
 
 	util.query = util.deParam( window.location.search.split( '?' )[1] );
