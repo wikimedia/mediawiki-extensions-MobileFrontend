@@ -18,7 +18,10 @@
 	"mobile-frontend-footer-contact": "Cuntatti",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-home-button": "Pàggina principali",
+	"mobile-frontend-language-article-heading": "Leggi nti n'àutra lingua",
+	"mobile-frontend-last-modified-date": "ÎUrtimu canciu lu $1 ê $2",
 	"mobile-frontend-login": "Trasi",
+	"mobile-frontend-main-menu-button-tooltip": "Rapi lu menu principali",
 	"mobile-frontend-main-menu-login": "Trasi",
 	"mobile-frontend-main-menu-logout": "Nesci",
 	"mobile-frontend-main-menu-nearby": "Ntê vicinanzi",
@@ -32,9 +35,12 @@
 	"mobile-frontend-random-button": "Na pàggina a muzzu",
 	"mobile-frontend-regular-site": "Disattivari la virsioni mòbbili",
 	"mobile-frontend-search-submit": "Và trova",
+	"mobile-frontend-terms-text": "Cunnizzioni d'usu",
 	"mobile-frontend-username": "Utenti:",
 	"mobile-frontend-view": "Virsioni mòbbili",
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-view-mobile": "Mòbbili",
-	"tag-mobile_web_edit": "Canciu di lu web pi apparecchiu mòbbili"
+	"tag-mobile_edit": "Canciu di apparecchiu mòbbili",
+	"tag-mobile_web_edit": "Canciu di lu web pi apparecchiu mòbbili",
+	"mobile-frontend-pageaction-edit-tooltip": "Cancia la sizzioni inizziali di sta pàggina."
 }
