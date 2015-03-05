@@ -13,15 +13,21 @@
 		 * @method
 		 * @param {String} name ResourceLoader module name to load asynchronously.
 		 * @param {Boolean} delegateHide if true the caller is responsible for hiding the intermediate loader.
+		 * @param {Boolean} [showLoadingOverlay] if false a loading overlay will be hidden while
+		 *  loading the module. Defaults to true.
 		 * @return {jQuery.Deferred}
 		 */
-		loadModule: function ( name, delegateHide ) {
+		loadModule: function ( name, delegateHide, showLoadingOverlay ) {
 			var loadingOverlay = new LoadingOverlay();
-			loadingOverlay.show();
+
+			showLoadingOverlay = ( showLoadingOverlay !== undefined ) ? showLoadingOverlay : true;
+			if ( showLoadingOverlay ) {
+				loadingOverlay.show();
+			}
 			return mw.loader.using( name ).then( function () {
 				return loadingOverlay;
 			} ).always( function () {
-				if ( !delegateHide ) {
+				if ( !delegateHide && showLoadingOverlay ) {
 					loadingOverlay.hide();
 				}
 			} );
