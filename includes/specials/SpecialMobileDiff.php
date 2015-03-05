@@ -299,11 +299,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $user->getOption( 'gender' ),
 			);
-			$userLink = SpecialPage::getTitleFor( 'UserProfile', $user->getName() );
 			$output->addHtml(
 				Html::openElement( 'div', $attrs ) .
 				Linker::link(
-					$userLink,
+					$user->getUserPage(),
 					htmlspecialchars( $user->getName() ),
 					array( 'class' => 'mw-mf-user-link' )
 				) .

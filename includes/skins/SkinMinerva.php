@@ -22,6 +22,8 @@ class SkinMinerva extends SkinTemplate {
 	protected $mode = 'stable';
 	/** @var MobileContext $mobileContext Safes an instance of MobileContext */
 	protected $mobileContext;
+	/** @var bool whether the page is the user's page, i.e. User:Username */
+	public $isUserPage = false;
 
 	/**
 	 * Wrapper for MobileContext::getMFConfig()
@@ -190,6 +192,14 @@ class SkinMinerva extends SkinTemplate {
 	public function __construct() {
 		$this->mobileContext = MobileContext::singleton();
 		$this->isMobileMode = $this->mobileContext->shouldDisplayMobileView();
+		$title = $this->getTitle();
+		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() ) {
+			$pageUserId = User::idFromName( $title->getText() );
+			if ( $pageUserId ) {
+				$this->pageUser = User::newFromId( $pageUserId );
+				$this->isUserPage = true;
+			}
+		}
 	}
 
 	/**
@@ -511,7 +521,7 @@ class SkinMinerva extends SkinTemplate {
 			$menu->insert( 'auth' )
 				->addComponent(
 					$username,
-					SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
+					Title::newFromText( $username, NS_USER )->getLocalUrl(),
 					MobileUI::iconClass( 'profile', 'before', 'truncated-text primary-action' ),
 					array( 'data-event-name' => 'profile' )
 				)
@@ -580,11 +590,26 @@ class SkinMinerva extends SkinTemplate {
 	 * @returns {String} html for header
 	 */
 	protected function getHeaderHtml() {
-		$title = $this->getOutput()->getPageTitle();
-		if ( $title ) {
-			return Html::rawElement( 'h1', array( 'id' => 'section_0' ), $title );
+		$html = '';
+		if ( $this->isUserPage ) {
+			// The heading is just the username without namespace
+			$html = Html::rawElement( 'h1', array( 'id' => 'section_0' ),
+				$this->pageUser->getName() );
+			$fromDate = $this->pageUser->getRegistration();
+			if ( is_string( $fromDate ) ) {
+				$fromDateTs = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
+				$html .= Html::element( 'div', array( 'class' => 'tagline', ),
+					$this->msg( 'mobile-frontend-user-page-member-since',
+						$fromDateTs->format( 'F, Y' ) )
+				);
+			}
+		} else {
+			$title = $this->getOutput()->getPageTitle();
+			if ( $title ) {
+				$html = Html::rawElement( 'h1', array( 'id' => 'section_0' ), $title );
+			}
 		}
-		return '';
+		return $html;
 	}
 	/**
 	 * Create and prepare header and footer content
@@ -594,7 +619,26 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$out = $this->getOutput();
-		if ( $title->isMainPage() ) {
+		if ( $this->isUserPage ) {
+			$talkPage = $this->pageUser->getTalkPage();
+			$data = array(
+				'talkPageTitle' => $talkPage->getPrefixedURL(),
+				'talkPageLink' => $talkPage->getLocalUrl(),
+				'talkPageLinkTitle' => $this->msg(
+					'mobile-frontend-user-page-talk' )->escaped(),
+				'contributionsPageLink' => SpecialPage::getTitleFor(
+					'Contributions', $this->pageUser )->getLocalURL(),
+				'contributionsPageTitle' => $this->msg(
+					'mobile-frontend-user-page-contributions' )->escaped(),
+				'uploadsPageLink' => SpecialPage::getTitleFor(
+					'Uploads', $this->pageUser )->getLocalURL(),
+				'uploadsPageTitle' => $this->msg(
+					'mobile-frontend-user-page-uploads' )->escaped(),
+			);
+			$templateParser = new TemplateParser( __DIR__ );
+			$tpl->set( 'postheadinghtml',
+				$templateParser->processTemplate( 'user_page_links', $data ) );
+		} elseif ( $title->isMainPage() ) {
 			if ( $user->isLoggedIn() ) {
 				$pageTitle = wfMessage(
 					'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text();
@@ -733,7 +777,7 @@ class SkinMinerva extends SkinTemplate {
 		// in stable it will link to the wikitext talk page
 		$title = $this->getTitle();
 		$namespaces = $tpl->data['content_navigation']['namespaces'];
-		if ( $this->isTalkAllowed() ) {
+		if ( !$this->isUserPage && $this->isTalkAllowed() ) {
 			// FIXME [core]: This seems unnecessary..
 			$subjectId = $title->getNamespaceKey( '' );
 			$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
@@ -756,6 +800,13 @@ class SkinMinerva extends SkinTemplate {
 		// Reuse template data variable from SkinTemplate to construct page menu
 		$menu = array();
 		$actions = $tpl->data['content_navigation']['actions'];
+
+		if ( $this->isUserPage ) {
+			if ( !$this->getTitle()->exists() ) {
+				$tpl->set( 'page_actions', $menu );
+				return;
+			}
+		}
 
 		// empty placeholder for edit and photos which both require js
 		if ( $this->isAllowedPageAction( 'edit' ) ) {
@@ -912,6 +963,7 @@ class SkinMinerva extends SkinTemplate {
 
 		// TalkOverlay feature
 		if (
+			$this->isUserPage ||
 			( $this->isTalkAllowed() || $title->isTalkPage() ) &&
 			$this->isWikiTextTalkPage()
 		) {
@@ -989,8 +1041,9 @@ class SkinMinerva extends SkinTemplate {
 		);
 		if ( $title->isMainPage() ) {
 			$styles[] = 'skins.minerva.mainPage.styles';
-		}
-		if ( $title->isSpecialPage() ) {
+		} elseif ( $this->isUserPage ) {
+			$styles[] = 'skins.minerva.userpage.styles';
+		} elseif ( $title->isSpecialPage() ) {
 			$styles[] = 'mobile.messageBox';
 			$styles['special'] = 'skins.minerva.special.styles';
 		}

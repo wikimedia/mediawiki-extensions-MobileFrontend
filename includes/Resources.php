@@ -99,9 +99,9 @@ $wgMinervaStyleModules = array(
 		),
 	),
 
-	'skins.minerva.beta.userpage.styles' => $wgMFResourceFileModuleBoilerplate + array(
+	'skins.minerva.userpage.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
-			'resources/skins.minerva.beta.userpage.styles/userpage.less',
+			'resources/skins.minerva.userpage.styles/userpage.less',
 		)
 	),
 );
@@ -1305,12 +1305,6 @@ $wgMobileSpecialPageModules = array(
 	// These are NOT empty see $wgResourceModuleSkinStyles.
 	'mobile.special.history.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'position' => 'top',
-	),
-	'mobile.special.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'position' => 'top',
-		'skinStyles' => array(
-			'minerva' => 'resources/mobile.special.userprofile.styles/minerva.less',
-		),
 	),
 
 	'mobile.special.uploads.scripts' => $wgMFResourceFileModuleBoilerplate + array(
