@@ -16,6 +16,24 @@
       "revId": "08f77b3a145fa7172c7bd6dc904d163fad7824de",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ed42c03e",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-06T14:39:49Z",
+      "side": 1,
+      "message": "No, we\u0027re changing the behavior in beta only.",
+      "parentUuid": "6e7c4fa4_97c23f5c",
+      "revId": "08f77b3a145fa7172c7bd6dc904d163fad7824de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
