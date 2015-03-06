@@ -34,6 +34,24 @@
       "revId": "08f77b3a145fa7172c7bd6dc904d163fad7824de",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_681a1e80",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-06T18:19:11Z",
+      "side": 1,
+      "message": "ah ok, was wondering, why you change it here and in stable it still will close on scroll :D",
+      "parentUuid": "6e7c4fa4_ed42c03e",
+      "revId": "08f77b3a145fa7172c7bd6dc904d163fad7824de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
