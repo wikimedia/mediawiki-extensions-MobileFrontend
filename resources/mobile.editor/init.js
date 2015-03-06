@@ -144,8 +144,16 @@
 			 * @method
 			 */
 			function loadSourceEditor() {
-				loader.loadModule( 'mobile.editor.overlay' ).done( function () {
-					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+				var rlModuleName, moduleName;
+				if ( !user.inUserBucketA() && context.isBetaGroupMember() ) {
+					moduleName = 'modules/editor/EditorOverlayWithToolbar';
+					rlModuleName = 'mobile.editor.overlay.withtoolbar';
+				} else {
+					moduleName = 'modules/editor/EditorOverlay';
+					rlModuleName = 'mobile.editor.overlay';
+				}
+				loader.loadModule( rlModuleName ).done( function () {
+					var EditorOverlay = M.require( moduleName );
 					result.resolve( new EditorOverlay( editorOptions ) );
 				} );
 			}

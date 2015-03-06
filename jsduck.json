@@ -17,6 +17,7 @@
 		"mw.user",
 		"mw.Api",
 		"OO.ui.ToolGroup",
+		"OO.ui.Tool",
 		"OO.ui.LookupElement",
 		"OO.EventEmitter",
 		"ve.init.mw.MobileArticleTarget"
