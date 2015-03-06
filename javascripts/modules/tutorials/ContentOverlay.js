@@ -26,20 +26,29 @@
 		appendTo: '#mw-mf-page-center',
 		/** @inheritdoc */
 		postRender: function ( options ) {
-			var $target,
-				self = this;
+			var self = this,
+				$target,
+				targetOffset,
+				intervalID;
 
 			Overlay.prototype.postRender.apply( this, arguments );
 			if ( options.target ) {
 				$target = $( options.target );
-				// Ensure we position the overlay correctly but do not show the arrow
+				targetOffset = $target.offset();
 				self._position( $target );
-				// Ensure that any reflows due to tablet styles have happened before showing
-				// the arrow.
-				setTimeout( function () {
-					self.addPointerArrow( $target );
-					M.on( 'resize', $.proxy( self, 'refreshPointerArrow', options.target ) );
-				}, 0 );
+				self.addPointerArrow( $target );
+				// Listen to changes of the position of 'target' and reposition the overlay accordingly
+				intervalID = setInterval( function () {
+					var newOffset = $target.offset();
+					if ( targetOffset.left !== newOffset.left || targetOffset.top !== newOffset.top ) {
+						self._position( $target );
+						self.refreshPointerArrow( options.target );
+					}
+				}, 1000 );
+				// stop listening
+				self.on( 'hide', function () {
+					clearInterval( intervalID );
+				} );
 			}
 		},
 		/**
