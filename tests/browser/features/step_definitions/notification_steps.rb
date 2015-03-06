@@ -1,4 +1,5 @@
 When /^I click on the notification icon$/ do
+  sleep 1
   on(ArticlePage).notifications_button_element.when_present.click
 end
 
