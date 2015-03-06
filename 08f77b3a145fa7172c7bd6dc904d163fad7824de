@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_97c23f5c",
+        "filename": "javascripts/modules/references/ReferencesDrawerBeta.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-06T06:48:58Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be in ReferencesDrawer.js?",
+      "revId": "08f77b3a145fa7172c7bd6dc904d163fad7824de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
