@@ -34,6 +34,24 @@
       "revId": "9357a51f76dd93b28a77c60b3e40a9d38f948458",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b3544f2b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-06T18:28:04Z",
+      "side": 1,
+      "message": "Basically this is dormant code that is confusing to people who don\u0027t have Wikigrok installed. If Wikigrok needs it you need to find a way to get this code in Wikigrok.\n\nThis is the price we pay for working in multiple extensions.. no workarounds like this :-).",
+      "parentUuid": "6e7c4fa4_1301833c",
+      "revId": "9357a51f76dd93b28a77c60b3e40a9d38f948458",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
