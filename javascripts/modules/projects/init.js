@@ -2,7 +2,7 @@
 
 	var loader = M.require( 'loader' ),
 		overlayManager = M.require( 'overlayManager' ),
-		wbId = mw.config.get( 'wgWikibaseItemId' );
+		wbId = M.require( 'util' ).getWikiBaseItemId();
 
 	if ( wbId ) {
 		overlayManager.add( /^\/other-projects$/, function () {
