@@ -122,20 +122,28 @@
 	 * @return {jQuery.Deferred}
 	 */
 	Router.prototype.back = function () {
-		var deferredRequest = $.Deferred();
+		var deferredRequest = $.Deferred(),
+			self = this,
+			timeoutID;
+
 		this.once( 'popstate', function () {
+			clearTimeout( timeoutID );
 			deferredRequest.resolve();
 		} );
 
-		// Check for onpopstate for older browser compatibility (ie8/9)
-		// Otherwise, deferred request is resolved in onpopstate
-		if ( !( 'onpopstate' in window ) ) {
-			// give browser a few ms to update its history
-			setTimeout( function () {
-				deferredRequest.resolve();
-			}, 50 );
-		}
 		window.history.back();
+
+		// If for some reason (old browser, bug in IE/windows 8.1, etc) popstate doesn't fire,
+		// resolve manually. Since we don't know for sure which browsers besides IE10/11 have
+		// this problem, it's better to fall back this way rather than singling out browsers
+		// and resolving the deferred request for them individually.
+		// See https://connect.microsoft.com/IE/feedback/details/793618/history-back-popstate-not-working-as-expected-in-webview-control
+		// Give browser a few ms to update its history.
+		timeoutID = setTimeout( function () {
+			self.off( 'popstate' );
+			deferredRequest.resolve();
+		}, 50 );
+
 		return deferredRequest;
 	};
 
