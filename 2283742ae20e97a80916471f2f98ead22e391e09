@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a93277ba",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 966,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-07T00:52:26Z",
+      "side": 1,
+      "message": "This isn\u0027t really what I meant.. you are still creating a module that isn\u0027t used by anything else.\n\nIn a years time I guaranteed I will grep MobileFrontend not find any references to mobile.header, not know which extensions are using this, delete it and then cause some breakage.\n\nLet\u0027s chat sometime next week about what you are trying to achieve. Once I have mutual understanding we can find the right approach but I guarantee this is not it.\n\nYou probably want to be interacting with the Skin / a SpecialPage and getting the template and then cutting your own module with that template.",
+      "revId": "2283742ae20e97a80916471f2f98ead22e391e09",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
