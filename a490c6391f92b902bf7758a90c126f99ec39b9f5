@@ -16,6 +16,24 @@
       "revId": "a490c6391f92b902bf7758a90c126f99ec39b9f5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a90037b6",
+        "filename": "javascripts/Router.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-07T00:56:00Z",
+      "side": 1,
+      "message": "Yes and also for browsers that don\u0027t fire popstate when history changes.",
+      "parentUuid": "6e7c4fa4_e9662fb8",
+      "revId": "a490c6391f92b902bf7758a90c126f99ec39b9f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
