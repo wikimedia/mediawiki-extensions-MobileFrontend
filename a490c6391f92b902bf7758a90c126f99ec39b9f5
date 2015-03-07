@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e9662fb8",
+        "filename": "javascripts/Router.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-07T00:54:43Z",
+      "side": 1,
+      "message": "Is this for browsers that don\u0027t support popstate ?\nIf so we should use feature detection.",
+      "revId": "a490c6391f92b902bf7758a90c126f99ec39b9f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
