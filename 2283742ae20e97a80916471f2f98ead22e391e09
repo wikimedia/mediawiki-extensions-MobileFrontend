@@ -16,6 +16,24 @@
       "revId": "2283742ae20e97a80916471f2f98ead22e391e09",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_296d0797",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 966,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-07T00:54:36Z",
+      "side": 1,
+      "message": "My goal is to use an overlay with the MF header in WikiGrok. I don\u0027t know how we can share this template so that I can use it in my overlay.",
+      "parentUuid": "6e7c4fa4_a93277ba",
+      "revId": "2283742ae20e97a80916471f2f98ead22e391e09",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
