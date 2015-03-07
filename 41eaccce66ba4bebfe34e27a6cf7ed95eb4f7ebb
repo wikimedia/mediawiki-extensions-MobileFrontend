@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_29c50742",
+        "filename": "i18n/en.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-07T01:17:05Z",
+      "side": 1,
+      "message": "Not all phones support tapping... (pedantic but true)",
+      "revId": "41eaccce66ba4bebfe34e27a6cf7ed95eb4f7ebb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
