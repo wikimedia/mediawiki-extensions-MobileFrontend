@@ -5,8 +5,10 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "kä Zsommefassung vunde Ännarunge",
-	"mobile-frontend-copyright": "Was do drin schded isch unna $1 vafieschba, wonn nedd onnaschda vameagd.",
+	"mobile-frontend-copyright": "Was do drin schded isch unna $1 vafieschba, wonn nedd onnaschda uffgschriwwe.",
 	"mobile-frontend-editor-edit": "Schaffe",
+	"mobile-frontend-featured-article": "Haidisch Inhald",
+	"mobile-frontend-generic-login": "{{SITENAME}} wead vun Laid wie dia gmachd.",
 	"mobile-frontend-generic-login-action": "Meldisch oa fas Schaffe",
 	"mobile-frontend-home-button": "D'hääm",
 	"mobile-frontend-language-article-heading": "Inna oannare Schbroch lese",

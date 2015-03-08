@@ -326,5 +326,6 @@
 	"tag-mobile_edit": "モバイル編集",
 	"tag-mobile_edit-description": "モバイルから行われた編集（ウェブまたはアプリ）",
 	"tag-mobile_web_edit": "モバイルウェブ編集",
-	"tag-mobile_web_edit-description": "携帯機器版ウェブサイトから行われた編集"
+	"tag-mobile_web_edit-description": "携帯機器版ウェブサイトから行われた編集",
+	"mobile-frontend-pageaction-edit-tooltip": "このページの導入部を編集する。"
 }

@@ -33,7 +33,7 @@
 	"mobile-frontend-donate-image-title": "Отпремања",
 	"mobile-frontend-drawer-cancel": "Откажи",
 	"mobile-frontend-editor-abusefilter-read-more": "Прочитајте више",
-	"mobile-frontend-editor-anoneditwarning": "'''Упозорење:''' нисте пријављени. Ваша ИП адреса ће бити јавно видљива у историји ове странице ако начините било какву измену. Ако се '''пријавите''' или '''отворите налог''' ваше измене ће бити приписане вашем корисничком имену.",
+	"mobile-frontend-editor-anonwarning": "'''Упозорење:''' нисте пријављени. Ваша ИП адреса ће бити јавно видљива у историји ове странице ако начините било какву измену. Ако се '''пријавите''' или '''отворите налог''' ваше измене ће бити приписане вашем корисничком имену.",
 	"mobile-frontend-editor-blocked": "Ваш налог је блокиран, не можете уређивати.",
 	"mobile-frontend-editor-cancel": "Откажи",
 	"mobile-frontend-editor-cancel-confirm": "Да ли заиста желите да напустите страницу, ваше измене нису сачуване?",
@@ -73,7 +73,7 @@
 	"mobile-frontend-generic-login": "{{SITENAME}} је направљен од стране људи као што сте ви.",
 	"mobile-frontend-generic-login-action": "Пријавите се да би доприносили.",
 	"mobile-frontend-generic-signup-action": "Региструјте се да би доприносили.",
-	"mobile-frontend-history": "Види историју измена ове странице.",
+	"mobile-frontend-history": "Историја измена ове странице.",
 	"mobile-frontend-history-404-desc": "Не можете видети историју непостојеће странице. Вероватно је обрисана или сте кликнули на лошу везу.",
 	"mobile-frontend-history-404-title": "Нема такве странице",
 	"mobile-frontend-home-button": "Почетак",
@@ -98,7 +98,6 @@
 	"mobile-frontend-last-modified-seconds": "Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 секунда|$1 секунди}}",
 	"mobile-frontend-last-modified-years": "Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 године|$1 година}}",
 	"mobile-frontend-lead-image-tutorial-confirm": "Започните отпремање",
-	"mobile-frontend-listed-image-no-description": "Нема описа",
 	"mobile-frontend-logged-in-homepage-notification": "Добро дошли, $1!",
 	"mobile-frontend-logged-in-toast-notification": "Пријављен сте као $1.",
 	"mobile-frontend-logged-out": "Нисте пријављени",
@@ -165,6 +164,7 @@
 	"mobile-frontend-search-content": "Тражи у страницама",
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' да би видели да ли се фраза појављује било где.",
 	"mobile-frontend-search-submit": "Иди",
+	"mobile-frontend-settings-images-explain": "Приказује све слике које се налазе на страници.",
 	"mobile-frontend-settings-alpha": "Експериментално",
 	"mobile-frontend-settings-alpha-description": "Још више експерименталних могућности, још већа опасност од нерешених проблема.",
 	"mobile-frontend-settings-beta": "Бета",
@@ -210,5 +210,6 @@
 	"mobile-frontend-watchlist-removed": "Страница $1 је уклоњена са вашег списка надгледања",
 	"mobile-frontend-watchlist-view": "Види списак надгледања",
 	"tag-mobile_edit-description": "Измена начињена са мобилног уређаја",
-	"tag-mobile_web_edit-description": "Измена начињена са мобилне верзије сајта"
+	"tag-mobile_web_edit-description": "Измена начињена са мобилне верзије сајта",
+	"mobile-frontend-pageaction-edit-tooltip": "Уреди први одељак ове странице."
 }

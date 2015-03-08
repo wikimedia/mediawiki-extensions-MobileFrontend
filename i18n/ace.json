@@ -1,16 +1,34 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rachmat.Wahidi"
+			"Rachmat.Wahidi",
+			"Si Gam Acèh"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Riwang u bagian sigoh nyoe",
 	"mobile-frontend-copyright": "Teks na di yup <ahref='http://ace.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisensi Creative Commons Atribusi-PembagianSerupa</a>; syarat teunamah kadang na. Eu <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Cara Nguy</a> keu leubeh rinci. {{SITENAME}} nakeuh saboh cap meukat teudapeuta nibak <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, saboh teunuboh hana mita laba.",
+	"mobile-frontend-editor-edit": "Andam",
 	"mobile-frontend-featured-article": "Teunuleh Peunileh Uroe Nyoe",
 	"mobile-frontend-home-button": "Keue",
+	"mobile-frontend-language-article-heading": "Beuët lam bahsa la'én",
+	"mobile-frontend-last-modified-date": "Geuubah seuneulheuëh bak $1, poh $2",
+	"mobile-frontend-main-menu-button-tooltip": "Peuhah menu utama",
+	"mobile-frontend-main-menu-login": "Tamöng",
+	"mobile-frontend-main-menu-nearby": "Silingka",
+	"mobile-frontend-main-menu-settings": "Neuatô",
+	"mobile-frontend-main-menu-watchlist": "Dapeuta keunalön",
+	"mobile-frontend-placeholder": "Mita {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Rahsia",
 	"mobile-frontend-profile-last-upload-caption": "Peutamöng {{PLURAL:$1|baro|$1 uroe nyang ka leupah|0=uroe nyoe}}.",
 	"mobile-frontend-profile-usertalk": "Marit ngön $1",
 	"mobile-frontend-random-button": "Beurangkari",
 	"mobile-frontend-regular-site": "Eu on nyoe bak {{SITENAME}} biyasa",
-	"mobile-frontend-search-submit": "Jak u"
+	"mobile-frontend-search-submit": "Jak u",
+	"mobile-frontend-terms-text": "Kri Ngui",
+	"mobile-frontend-view": "Seuneudeuh seluler",
+	"mobile-frontend-view-desktop": "Komputer",
+	"mobile-frontend-view-mobile": "Seluler",
+	"tag-mobile_edit": "Neuandam seluler",
+	"tag-mobile_web_edit": "Neuandam web seluler",
+	"mobile-frontend-pageaction-edit-tooltip": "Andam bagian ateuëh laman nyoë"
 }

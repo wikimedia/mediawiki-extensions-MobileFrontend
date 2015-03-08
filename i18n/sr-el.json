@@ -69,7 +69,7 @@
 	"mobile-frontend-generic-login": "{{SITENAME}} je napravljen od strane ljudi kao što ste vi.",
 	"mobile-frontend-generic-login-action": "Prijavite se da bi doprinosili.",
 	"mobile-frontend-generic-signup-action": "Registrujte se da bi doprinosili.",
-	"mobile-frontend-history": "Vidi istoriju izmena ove stranice.",
+	"mobile-frontend-history": "Istorija izmena ove stranice.",
 	"mobile-frontend-history-404-desc": "Ne možete videti istoriju nepostojeće stranice. Verovatno je obrisana ili ste kliknuli na lošu vezu.",
 	"mobile-frontend-history-404-title": "Nema takve stranice",
 	"mobile-frontend-home-button": "Početak",

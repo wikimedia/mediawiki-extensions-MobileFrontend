@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"John Reid"
+			"John Reid",
+			"Caliburn"
 		]
 	},
 	"beta-feature-minerva": "Enable mobile skin ({{int:skinname-minerva}}) oan the desktap",
 	"beta-feature-minerva-description": "Mak the skin uised on mobile devices ae selectable desktop skin unner the \"{{int:prefs-rendering}}\" preferances tab.",
 	"mobile-frontend-app-title": "Mobile App",
+	"mobile-frontend-editor-edit": "Eedit",
 	"mobile-frontend-editor-licensing": "Bi hainin chynges, ye agree tae release yer contreebution unner the $1 license.",
 	"mobile-frontend-editor-licensing-with-terms": "Bi hainin chynges, ye agree til the $1 n agree tae release yer contreebution unner the $2 license.",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye sair ye want tae cræft}} ae new page oan {{SITENAME}}?",

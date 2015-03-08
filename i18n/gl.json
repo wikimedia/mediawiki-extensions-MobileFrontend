@@ -185,7 +185,7 @@
 	"mobile-frontend-placeholder-beta": "Procurar en {{SITENAME}} (beta)",
 	"mobile-frontend-privacy-link-text": "Protección de datos",
 	"mobile-frontend-profile-activity-heading": "Actividade recente",
-	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Agradecido}} {{GENDER:$1|por}} [[Special:UserProfile/$1|$1]].",
+	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Agradecido}} por última vez {{GENDER:$1|por}} [[Special:UserProfile/$1|$1]].",
 	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Subido}} {{PLURAL:$1|onte|hai $1 días|0=hoxe}}.",
 	"mobile-frontend-profile-noargs": "Non se indicou ningún nome de usuario. Indique un nome de usuario para ollar un perfil.",
 	"mobile-frontend-profile-nouser": "Non existe ningún usuario con ese nome. Verifique se está escrito correctamente, xa que os nomes de usuario distinguen maiúsculas de minúsculas.",

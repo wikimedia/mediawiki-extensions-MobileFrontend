@@ -26,7 +26,8 @@
 			"Alirezaaa",
 			"Bersam",
 			"Hosseinblue",
-			"Mehran"
+			"Mehran",
+			"Mardetanha"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
@@ -250,7 +251,7 @@
 	"mobile-frontend-placeholder-alpha": "جستجو {{SITENAME}} (تجربی)",
 	"mobile-frontend-placeholder-app": "جستجوی {{SITENAME}} (برنامهٔ وبی)",
 	"mobile-frontend-placeholder-beta": "جستجو {{SITENAME}} (بتا)",
-	"mobile-frontend-privacy-link-text": "حریم خصوصی",
+	"mobile-frontend-privacy-link-text": "حریم شخصی",
 	"mobile-frontend-profile-activity-heading": "فعالیت اخیر",
 	"mobile-frontend-profile-error": "اوه نه!",
 	"mobile-frontend-profile-footer-ancient": "ساخته شده [[Special:Contributions/$1|{{PLURAL:$3|1 ویرایش|$3 ویرایش‌ها}}]] و [[Special:Uploads/$1|{{PLURAL:$4|1 انتقال|$4 انتقال‌ها|500=500+ uploads}}]].",

@@ -323,6 +323,7 @@
 	"mobile-frontend-watchlist-more": "więcej",
 	"mobile-frontend-watchlist-removed": "Usunięto „$1” z twojej listy obserwowanych",
 	"mobile-frontend-watchlist-view": "Zobacz swoją listę obserwowanych",
+	"mobile.js": "/* Umieszczony tutaj kod JavaScript zostanie załadowany przez użytkowników korzystających z wersji mobilnej */",
 	"nearby": "W pobliżu ciebie",
 	"right-mf-uploadbutton": "Użyj przycisku Prześlij na stronach mobilnych",
 	"tag-mobile_edit": "Z internetu mobilnego",
