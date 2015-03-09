@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0f7a86e7",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-09T13:06:01Z",
+      "side": 1,
+      "message": "i wonder if this should be binded to an event so that a user can right click and switch to the non-overlay mode (same we do for image viewer) what do you think?",
+      "revId": "a2733ebb5889d1e3117d03aead34551907e5299b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
