@@ -54,7 +54,7 @@
 					options.rvsection = this.sectionId;
 				}
 				this.get( options ).done( function ( resp ) {
-					var revision;
+					var revision, pageObj;
 
 					if ( resp.error ) {
 						result.reject( resp.error.code );
@@ -62,14 +62,21 @@
 					}
 
 					// FIXME: MediaWiki API, seriously?
-					revision = $.map( resp.query.pages, function ( page ) {
+					pageObj = $.map( resp.query.pages, function ( page ) {
 						return page;
-					} )[0].revisions[0];
+					} )[0];
 
-					self.content = revision['*'];
+					// page might not exist and caller might not have known.
+					// FIXME: API - missing is set to empty string (face palm)
+					if ( pageObj.missing !== undefined ) {
+						self.content = '';
+					} else {
+						revision = pageObj.revisions[0];
+						self.content = revision['*'];
+						self.timestamp = revision.timestamp;
+					}
 					// save content a second time to be able to check for changes
 					self.originalContent = self.content;
-					self.timestamp = revision.timestamp;
 
 					result.resolve( self.content );
 				} );
