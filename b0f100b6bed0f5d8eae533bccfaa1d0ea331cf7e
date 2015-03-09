@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_82e0adf8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 867,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-09T15:31:57Z",
+      "side": 1,
+      "message": "This should be wgMFBannerImages because, right now, this is MobileFrontend-specific.",
+      "revId": "b0f100b6bed0f5d8eae533bccfaa1d0ea331cf7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2b369fc",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 876,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-09T15:31:57Z",
+      "side": 1,
+      "message": "Explain the structure of the array.",
+      "revId": "b0f100b6bed0f5d8eae533bccfaa1d0ea331cf7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_82b74df2",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 885,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-09T15:31:57Z",
+      "side": 1,
+      "message": "Could you put a comment here explaining that `$limit` is an array of the form `[$width, $height]`?",
+      "revId": "b0f100b6bed0f5d8eae533bccfaa1d0ea331cf7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_02a25da4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 906,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-09T15:31:57Z",
+      "side": 1,
+      "message": "The contents of this method should be moved to an entirely separate class. The method itself should be kept around for convenience, but the number of responsibilities that SkinMinerva has should decrease over time.",
+      "revId": "b0f100b6bed0f5d8eae533bccfaa1d0ea331cf7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_82850d0e",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-09T15:31:57Z",
+      "side": 1,
+      "message": "This call to `#load` isn\u0027t necessary. In fact, that method should be removed.",
+      "revId": "b0f100b6bed0f5d8eae533bccfaa1d0ea331cf7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_427ff511",
+        "filename": "javascripts/modules/bannerImage/MobileViewBannerImageRepository.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-09T15:31:57Z",
+      "side": 1,
+      "message": "This class no longer uses the mobileview API so it should be renamed and have its documentation updated.",
+      "revId": "b0f100b6bed0f5d8eae533bccfaa1d0ea331cf7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0279fd29",
+        "filename": "javascripts/modules/bannerImage/MobileViewBannerImageRepository.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-09T15:31:57Z",
+      "side": 1,
+      "message": "This should have a single space in front of it to denote that it\u0027s a continuation of the sentence above.",
+      "revId": "b0f100b6bed0f5d8eae533bccfaa1d0ea331cf7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
