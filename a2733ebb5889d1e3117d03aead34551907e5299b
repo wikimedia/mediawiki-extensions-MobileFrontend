@@ -16,6 +16,24 @@
       "revId": "a2733ebb5889d1e3117d03aead34551907e5299b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4ffdde37",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-09T13:23:35Z",
+      "side": 1,
+      "message": "Sounds like an reasonable feature :) +1!",
+      "parentUuid": "6e7c4fa4_0f7a86e7",
+      "revId": "a2733ebb5889d1e3117d03aead34551907e5299b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
