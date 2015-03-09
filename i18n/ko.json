@@ -244,7 +244,6 @@
 	"mobile-frontend-profile-footer-years": "{{PLURAL:$2|1년|$2년}} 전에 가입해 [[Special:Contributions/$1|{{PLURAL:$3|편집 1번|편집 $3번}}]]과 [[Special:Uploads/$1|{{PLURAL:$4|파일 올리기 1번|파일 올리기 $4번|500=파일 올리기 500+번}}]]을 했습니다.",
 	"mobile-frontend-profile-last-edit": "[[:$1]] 문서를 {{PLURAL:$2|어제|$2일 전에|0=오늘}} {{GENDER:$3|편집했습니다}}.",
 	"mobile-frontend-profile-last-thank": "[[Special:UserProfile/$1|$1]]님{{GENDER:$1|이}} {{GENDER:$2|감사를 표했습니다}}.",
-	"mobile-frontend-profile-last-upload-caption": "{{PLURAL:$1|어제|$1일 전에|0=오늘}} {{GENDER:$2|올렸습니다}}.",
 	"mobile-frontend-profile-noargs": "사용자 이름이 주어지지 않았습니다. 프로필을 보려면 사용자 이름을 제공하세요.",
 	"mobile-frontend-profile-nouser": "이 이름으로 된 사용자가 존재하지 않습니다. 사용자 이름은 대소문자를 구분하므로 올바르게 입력했는지 확인해주세요.",
 	"mobile-frontend-profile-title": "사용자 프로필",

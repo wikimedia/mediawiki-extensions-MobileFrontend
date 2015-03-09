@@ -4,5 +4,18 @@
 			"Malafaya"
 		]
 	},
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Jafol}} padi nulik su {{SITENAME}}!"
+	"mobile-frontend-editor-edit": "Redakön",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Jafol}} padi nulik su {{SITENAME}}!",
+	"mobile-frontend-home-button": "Prim",
+	"mobile-frontend-language-article-heading": "Reidön in pük votik",
+	"mobile-frontend-main-menu-account-create": "Jafön kali",
+	"mobile-frontend-main-menu-login": "Nunädön oki",
+	"mobile-frontend-main-menu-nearby": "Nilo",
+	"mobile-frontend-main-menu-settings": "Paramets",
+	"mobile-frontend-main-menu-watchlist": "Galädalised",
+	"mobile-frontend-password-placeholder": "Letavöd",
+	"mobile-frontend-placeholder": "Sukön in {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "Privat",
+	"mobile-frontend-random-button": "Fädik",
+	"mobile-frontend-username-placeholder": "Gebananem"
 }

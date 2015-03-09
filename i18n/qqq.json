@@ -285,7 +285,6 @@
 	"mobile-frontend-profile-footer-years": "Generates the informative footer on [[Special:UserProfile]]. Parameters:\n* $1 - username of user (used for link generation and can be used for GENDER)\n* $2 - number of years the user has been a member for.\n* $3 - number of edits\n* $4 - number of uploads, capped to 500\n{{Related|Mobile-frontend-profile-footer}}",
 	"mobile-frontend-profile-last-edit": "Identifies the last page edited by the user. Parameters:\n* $1 - name of the page that was edited\n* $2 - how many days ago it was edited\n* $3 - the username, for GENDER",
 	"mobile-frontend-profile-last-thank": "Informs about person who last thanked a user on [[Special:UserProfile]].\n\nParameters:\n* $1 - name of user who thanked, can be used for GENDER\n* $2 - (optional) name of user who was thanked, for GENDER support",
-	"mobile-frontend-profile-last-upload-caption": "Details when an image was uploaded.\n\tParameters:\n* $1 - the amount of days ago the image was uploaded\n* $2 - the user name for GENDER",
 	"mobile-frontend-profile-noargs": "Message shown when no user profile URL is specified.\n\nIf the user is logged in, this message is followed by:\n* {{msg-mw|Mobile-frontend-profile-yours}}",
 	"mobile-frontend-profile-nouser": "Message shown when the username requested is non-existent or invalid.\n\nIf the user is logged in, this message is followed by:\n* {{msg-mw|Mobile-frontend-profile-yours}}",
 	"mobile-frontend-profile-title": "Title of the [[Special:UserProfile]] page.\n{{Identical|User profile}}",

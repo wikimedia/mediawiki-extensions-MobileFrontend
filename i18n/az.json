@@ -5,7 +5,8 @@
 			"Interfase",
 			"Vugar 1981",
 			"Dağlı95",
-			"Wertuose"
+			"Wertuose",
+			"PPerviz"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Bir bölüm geriyə dön",
@@ -16,6 +17,7 @@
 	"mobile-frontend-edit-login-action": "Redaktə üçün daxil ol",
 	"mobile-frontend-edit-signup-action": "Redaktə üçün qeydiyyatdan keç",
 	"mobile-frontend-editor-cancel": "Bağla",
+	"mobile-frontend-editor-edit": "Redaktə",
 	"mobile-frontend-editor-keep-editing": "Redaktəni davam etdir",
 	"mobile-frontend-editor-save": "Yadda saxla",
 	"mobile-frontend-featured-article": "Günün seçilmiş məqaləsi",

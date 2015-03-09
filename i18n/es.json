@@ -255,7 +255,6 @@
 	"mobile-frontend-profile-footer-years": "Se unió hace más de {{PLURAL:$2|1 año|$2 años}} con [[Special:Contributions/$1|{{PLURAL:$3|1 edición|$3 ediciones}}]] y [[Special:Uploads/$1|{{PLURAL:$4|1 subida|$4 subidas|500=500+ subidas}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|Editó}} la página [[:$1]], {{PLURAL:$2|ayer|hace $2 días|0=hoy}}.",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Agradecido}} por última vez {{GENDER:$1|por}} [[Special:UserProfile/$1|$1]].",
-	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Subido}} {{PLURAL:$1|ayer|hace $1 días|0=hoy}}.",
 	"mobile-frontend-profile-noargs": "No se proporcionó un nombre de usuario. Proporciona un nombre de usuario para ver el perfil.",
 	"mobile-frontend-profile-nouser": "No existe ningún usuario con ese nombre. Los nombres de usuario distinguen mayúsculas de minúsculas, así que por favor verifique si ha sido escrito correctamente.",
 	"mobile-frontend-profile-title": "Perfil de usuario",

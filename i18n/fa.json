@@ -260,7 +260,6 @@
 	"mobile-frontend-profile-footer-years": "عضو شد {{PLURAL:$2|۱ سال|$2 سال}} پیش با  [[Special:Contributions/$1|{{PLURAL:$3|ویرایش|$3 ویرایش}}]] و [[Special:Uploads/$1|{{PLURAL:$4|۱ بارگذاری|$4 بارگذاری|500=500+ بارگذاری}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|ویرایش کرد}} صفحهٔ [[:$1]], {{PLURAL:$2|دیروز|$2 روز پیش |0=صبح امروز}}.",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|تشکر شده}} {{GENDER:$1|توسط}} [[Special:UserProfile/$1|$1]]",
-	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|بارگذاری}}  {{PLURAL:$1| دیروز| $1  روز پیش|0 امروز =}}.",
 	"mobile-frontend-profile-noargs": "هیچ نام کاربری داده نشده است. لطفاً یک نام کاربری برای نمایش مشخصات بدهید.",
 	"mobile-frontend-profile-nouser": "هیچ کاربری با این نام وجود ندارد. نام‌‌کاربری به بزرگی و کوچکی حروف حساس است پس لطفاً بررسی کنید که آیا درست تایپ شده است.",
 	"mobile-frontend-profile-title": "مشخصات کاربر",

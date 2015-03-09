@@ -255,7 +255,6 @@
 	"mobile-frontend-profile-footer-years": "{{GENDER:$1|Připojil|Připojila}} se před více než $2 {{PLURAL:$2|rokem|lety}} a má na kontě [[Special:Contributions/$1|$3 {{PLURAL:$3|editaci|editace|editací}}]] a [[Special:Uploads/$1|{{PLURAL:$4|1 načtený soubor|$4 načtené soubory|$4 načtených souborů|500=více než 500 načtených souborů}}]].",
 	"mobile-frontend-profile-last-edit": "{{PLURAL:$2|Včera|Před $2 dny|0=Dnes}} {{GENDER:$3|upravil|upravila}} stránku [[:$1]].",
 	"mobile-frontend-profile-last-thank": "Poslední poděkování {{GENDER:$2|obdržel|obdržela}} od  {{GENDER:$1|uživatele|uživatelky}} [[Special:UserProfile/$1|$1]].",
-	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Načetl|Načetla}} {{PLURAL:$1|včera|před $1 dny|0=dnes}}.",
 	"mobile-frontend-profile-noargs": "Nebylo uvedeno uživatelské jméno. Pokud si chcete prohlédnout profil, musíte zadat uživatelské jméno.",
 	"mobile-frontend-profile-nouser": "Neexistuje žádný uživatel s tímto jménem. Uživatelská jména rozlišují velikost písmen, tak prosím zkontrolujte, jestli bylo zadáno správně.",
 	"mobile-frontend-profile-title": "Uživatelský profil",
