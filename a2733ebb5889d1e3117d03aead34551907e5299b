@@ -34,6 +34,23 @@
       "revId": "a2733ebb5889d1e3117d03aead34551907e5299b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c559cf05",
+        "filename": "tests/browser/features/talk.feature",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-09T16:30:11Z",
+      "side": 1,
+      "message": "The page \u003d\u003e \u0027the page\u0027\n\nYou can implement step definitions for undefined steps with these snippets:\n\nGiven(/^The page \"(.*?)\" exists$/) do |arg1|\n  pending # express the regexp above with the code you wish you had\nend",
+      "revId": "a2733ebb5889d1e3117d03aead34551907e5299b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
