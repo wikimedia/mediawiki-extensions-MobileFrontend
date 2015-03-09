@@ -13,5 +13,4 @@ vendor/
 composer.phar
 .DS_Store
 composer.lock
-Gemfile.lock
 tests/report
