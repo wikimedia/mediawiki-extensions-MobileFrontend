@@ -87,6 +87,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_f1660db8",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-09T22:39:47Z",
+      "side": 1,
+      "message": "I think it is necessary otherwise we will be calculating the image dimensions without loading it, which will result in wrong banner image height in resizeFrame.",
+      "parentUuid": "6e7c4fa4_82850d0e",
+      "revId": "b0f100b6bed0f5d8eae533bccfaa1d0ea331cf7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_427ff511",
         "filename": "javascripts/modules/bannerImage/MobileViewBannerImageRepository.js",
         "patchSetId": 1
