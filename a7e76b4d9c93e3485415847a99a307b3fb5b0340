@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_dbff6264",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-10T23:57:02Z",
+      "side": 1,
+      "message": "This is confusing. The naming convention is suppose to show where a module lives. This makes it look like it lives in core.\n\nAlso it\u0027s hogan not hogen",
+      "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1beddab4",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1396,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-10T23:57:02Z",
+      "side": 1,
+      "message": "This will break in the world you are trying to create. It\u0027s not this simple.",
+      "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
