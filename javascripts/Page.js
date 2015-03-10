@@ -27,6 +27,7 @@
 		 * @cfg {Array} defaults.sections Array of {Section} objects.
 		 * @cfg {Boolean} defaults.isMainPage Whether the page is the Main Page.
 		 * @cfg {Boolean} defaults.userCanUpload Whether the current user can upload.
+		 * @cfg {String} defaults.hash Window location hash.
 		 */
 		defaults: {
 			id: 0,
@@ -38,7 +39,8 @@
 			},
 			sections: [],
 			isMainPage: false,
-			userCanUpload: mw.config.get( 'wgUserCanUpload' )
+			userCanUpload: mw.config.get( 'wgUserCanUpload' ),
+			hash: window.location.hash
 		},
 
 		/**
@@ -184,6 +186,21 @@
 				self.sections.push( section );
 				self._sectionLookup[section.id] = section;
 			} );
+		},
+
+		/**
+		 * @inheritdoc
+		 */
+		postRender: function () {
+			var self = this;
+			// Restore anchor position after everything on page has been loaded.
+			// Otherwise, images that load after a while will push the anchor
+			// from the top of the viewport.
+			if ( this.options.hash ) {
+				$( window ).on( 'load', function () {
+					window.location.hash = self.options.hash;
+				} );
+			}
 		},
 
 		/**
