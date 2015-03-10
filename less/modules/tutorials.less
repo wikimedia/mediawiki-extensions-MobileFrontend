@@ -7,11 +7,16 @@
 		.button {
 			// FIXME: without this the cloaked input seems to interfere making cancel button start upload
 			position: relative;
+			padding: 12px;
+			font-weight: bold;
+		}
+	}
+
+	.tutorial-overlay {
+		.button {
 			// use background to override gradient in other buttons
 			background: #fff;
 			color: @colorTutorial;
-			padding: 12px;
-			font-weight: bold;
 		}
 	}
 }
@@ -24,7 +29,6 @@
 	padding: 1em @contentMargin;
 	line-height: 1.4;
 	font-size: .9em;
-	color: #fff;
 	text-align: center;
 	box-shadow: 0 1px 5px 0 rgba(117, 117, 117, .8);
 
@@ -33,12 +37,13 @@
 		margin: 0 0 1em;
 	}
 
-	.cancel.inline {
-		background: none;
-		color: #fff;
-	}
-
-	&.content-overlay {
+	&.tutorial-overlay {
 		background: @colorTutorial;
+		color: #fff;
+
+		.cancel.inline {
+			background: none;
+			color: #fff;
+		}
 	}
 }
