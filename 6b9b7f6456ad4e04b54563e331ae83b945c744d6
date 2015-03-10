@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1cbddd63",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-10T00:30:41Z",
+      "side": 1,
+      "message": "Should Mobile here and below be lowercase?",
+      "revId": "6b9b7f6456ad4e04b54563e331ae83b945c744d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
