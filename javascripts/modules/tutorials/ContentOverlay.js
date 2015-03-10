@@ -23,7 +23,7 @@
 		/**
 		 * @inheritdoc
 		 */
-		appendTo: '#mw-mf-page-center',
+		appendToElement: '#mw-mf-page-center',
 		/** @inheritdoc */
 		postRender: function ( options ) {
 			var self = this,

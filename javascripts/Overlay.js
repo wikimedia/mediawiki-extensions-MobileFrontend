@@ -32,7 +32,7 @@
 		 * odd consequences on Opera Mobile (see bug 52361)
 		 * @property {String|jQuery.Object}
 		 */
-		appendTo: '#mw-mf-viewport',
+		appendToElement: '#mw-mf-viewport',
 
 		/**
 		 * Default class name
@@ -174,7 +174,7 @@
 		 */
 		show: function () {
 			var self = this;
-			this.$el.appendTo( this.appendTo );
+			this.$el.appendTo( this.appendToElement );
 			this.scrollTop = $( document ).scrollTop();
 
 			if ( this.fullScreen ) {
