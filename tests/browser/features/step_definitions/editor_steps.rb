@@ -3,6 +3,7 @@ When(/^I clear the editor$/) do
 end
 
 When(/^I click the edit button$/) do
+  sleep 1
   on(ArticlePage).edit_link_element.when_present.click
 end
 
