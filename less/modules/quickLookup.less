@@ -1,0 +1,32 @@
+@quickLookupDrawerPadding: 20px;
+
+@extraPadding: 1em;
+.alpha {
+	&.drawer-enabled {
+		overflow: hidden;
+	}
+	.drawer.quick-lookup {
+		max-height: 400px; // or half of window height, whichever is smaller (see QuickLookupDrawer.js)
+		overflow-y: auto;
+		padding: @quickLookupDrawerPadding;
+
+		.watch-this-article,
+		.cancel {
+			cursor: pointer;
+			padding: @extraPadding 0;
+			position: absolute;
+			top: @quickLookupDrawerPadding;
+		}
+		.watch-this-article {
+			left: @quickLookupDrawerPadding;
+			margin: -@extraPadding 0 -@extraPadding -@extraPadding;
+		}
+
+		// FIXME: combine this rule with a similar rule in references.less into a shared rule
+		.cancel {
+			font-size: 0.8em;  // we want a smaller icon
+			margin: -@extraPadding -@extraPadding -@extraPadding 0;
+			right: @quickLookupDrawerPadding;
+		}
+	}
+}
