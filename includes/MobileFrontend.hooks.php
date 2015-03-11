@@ -372,6 +372,11 @@ class MobileFrontendHooks {
 			'wgMFUploadLicenseLink' => SkinMinerva::getLicenseLink( 'upload' ),
 		);
 
+		// add CodeMirror specific things, if it is installed (for CodeMirror editor)
+		if ( class_exists( 'CodeMirrorHooks' ) ) {
+			$vars += CodeMirrorHooks::getGlobalVariables( MobileContext::singleton() );
+			$vars['wgMFCodeMirror'] = true;
+		}
 		return true;
 	}
 
@@ -857,12 +862,15 @@ class MobileFrontendHooks {
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
 		self::registerMobileLoggingSchemasModule();
+		$config = MobileContext::singleton()->getMFConfig();
 
 		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
 		if ( class_exists( 'VisualEditorHooks' ) ) {
-			$mobileVisualEditorRLmodule =
-				MobileContext::singleton()->getMFConfig()->get( 'MobileVEModules' );
-			$resourceLoader->register( $mobileVisualEditorRLmodule );
+			$resourceLoader->register( $config->get( 'MobileVEModules' ) );
+		}
+
+		if ( class_exists( 'CodeMirrorHooks' ) ) {
+			$resourceLoader->register( $config->get( 'MobileCodeMirrorModules' ) );
 		}
 
 		return true;

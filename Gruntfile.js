@@ -119,6 +119,7 @@ module.exports = function ( grunt ) {
 						'jqXHR',
 						'File',
 						'mw.user',
+						'CodeMirror',
 						'OO.ui.LookupElement',
 						'OO.EventEmitter'
 					],
