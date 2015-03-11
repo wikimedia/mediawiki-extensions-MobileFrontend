@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_3b49b6d3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-03-11T00:02:15Z",
+      "side": 1,
+      "message": "hogAn",
+      "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_dbff6264",
         "filename": "includes/Resources.php",
         "patchSetId": 1
@@ -13,6 +30,23 @@
       "writtenOn": "2015-03-10T23:57:02Z",
       "side": 1,
       "message": "This is confusing. The naming convention is suppose to show where a module lives. This makes it look like it lives in core.\n\nAlso it\u0027s hogan not hogen",
+      "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bb62a635",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-03-11T00:02:15Z",
+      "side": 1,
+      "message": "* Introducing this module name in an extension is bizzarre\n* I\u0027m tempted to say that this naming structure suggests that MW might have more than one templating system in MW proper, which contradicts the whole point of this template work people were doing: we want to standardise across teams, not create the situation where each team uses its own system, blessing it with MW support.",
       "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
