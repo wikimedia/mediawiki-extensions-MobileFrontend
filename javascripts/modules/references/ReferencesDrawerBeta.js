@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 	var ReferencesDrawer = M.require( 'modules/references/ReferencesDrawer' ),
 		Icon = M.require( 'Icon' ),
 		ReferencesDrawerBeta;
@@ -18,6 +18,7 @@
 		 */
 		defaults: {
 			cancelButton: new Icon( {
+				tagName: 'a',
 				name: 'cancel-light',
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
@@ -33,8 +34,36 @@
 		 * @inheritdoc
 		 */
 		closeOnScroll: false,
-		template: mw.template.get( 'mobile.references.beta', 'DrawerBeta.hogan' )
+		template: mw.template.get( 'mobile.references.beta', 'DrawerBeta.hogan' ),
+		/**
+		 * @inheritdoc
+		 */
+		postRender: function () {
+			var windowHeight = $( window ).height();
+
+			ReferencesDrawer.prototype.postRender.apply( this, arguments );
+
+			// make sure the drawer doesn't take up more than 50% of the viewport height
+			if ( windowHeight / 2 < 400 ) {
+				this.$el.css( 'max-height', windowHeight / 2 );
+			}
+
+			this.on( 'show', $.proxy( this, 'onShow' ) );
+			this.on( 'hide', $.proxy( this, 'onHide' ) );
+		},
+		/**
+		 * Make body not scrollable
+		 */
+		onShow: function () {
+			$( 'body' ).addClass( 'drawer-enabled' );
+		},
+		/**
+		 * Restore body scroll
+		 */
+		onHide: function () {
+			$( 'body' ).removeClass( 'drawer-enabled' );
+		}
 	} );
 
 	M.define( 'modules/references/ReferencesDrawerBeta', ReferencesDrawerBeta );
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

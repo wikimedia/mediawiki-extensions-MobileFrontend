@@ -1,6 +1,8 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
+@betaDrawerPadding: 20px;
+
 .drawer.references {
 	max-height: 10em;
 	overflow-y: auto;
@@ -33,10 +35,17 @@
 
 .alpha,
 .beta {
+	// prevent body from scrolling
+	// won't work on firefox for android because of this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=886969
+	&.drawer-enabled {
+		overflow: hidden;
+	}
+
 	.drawer.references {
 		background-color: @colorGray1;
 		color: @colorGray12;
-		padding: 20px;
+		max-height: 400px;  // or half of window height, whichever is smaller (see ReferencesDrawerBeta.js)
+		padding: @betaDrawerPadding;
 		&.text {
 			font-size: 1em;
 		}
@@ -61,11 +70,15 @@
 				letter-spacing: .2em;
 				float: left;
 				font-size: 0.75em;
+				padding-top: .25em;
 				text-transform: uppercase;
 			}
 			.cancel {
-				float: right;
-				line-height: normal;
+				cursor: pointer;
+				font-size: 0.8em;  // we want a smaller icon
+				right: @betaDrawerPadding;
+				position: absolute;
+				top: @betaDrawerPadding;
 			}
 		}
 
@@ -78,25 +91,3 @@
 		}
 	}
 }
-
-.alpha {
-	.drawer.references {
-		.cite {
-			.text {
-				line-height: 2.5em;
-				height: 2em;
-			}
-		}
-	}
-}
-
-.beta {
-	.drawer.references {
-		.cite {
-			.text {
-				padding: .75em 0 0 2.5em;
-			}
-		}
-	}
-}
-
