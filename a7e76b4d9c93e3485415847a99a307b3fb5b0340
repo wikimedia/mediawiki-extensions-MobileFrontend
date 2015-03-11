@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_11effb83",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-11T11:08:38Z",
+      "side": 1,
+      "message": "if you do this, you need to ad mobile target, too.",
+      "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_1beddab4",
         "filename": "includes/Resources.php",
         "patchSetId": 1
