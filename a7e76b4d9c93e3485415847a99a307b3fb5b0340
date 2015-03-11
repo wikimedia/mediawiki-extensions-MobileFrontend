@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_47813191",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-03-11T16:29:50Z",
+      "side": 1,
+      "message": "It\u0027s either a standard module name or a registry (e.g. $wgTemplateCompilerModules). I think a standard module name is sufficient and naturally enforces uniqueness. But a registry works, too.",
+      "parentUuid": "6e7c4fa4_bb62a635",
+      "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_11effb83",
         "filename": "includes/Resources.php",
         "patchSetId": 1
