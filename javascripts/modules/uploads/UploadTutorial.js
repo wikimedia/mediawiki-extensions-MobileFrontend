@@ -16,7 +16,7 @@
 	 */
 	UploadTutorial = Overlay.extend( {
 		template: mw.template.get( 'mobile.uploads', 'UploadTutorial.hogan' ),
-		className: 'overlay carousel tutorial content-overlay',
+		className: 'overlay carousel tutorial content-overlay tutorial-overlay',
 
 		/** @inheritdoc */
 		events: $.extend( {}, Overlay.prototype.events, {

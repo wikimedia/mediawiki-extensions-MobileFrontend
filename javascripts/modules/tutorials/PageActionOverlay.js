@@ -8,6 +8,7 @@
 	 * @extends ContentOverlay
 	 */
 	PageActionOverlay = ContentOverlay.extend( {
+		className: 'overlay content-overlay tutorial-overlay',
 		template: mw.template.get( 'mobile.contentOverlays', 'PageActionOverlay.hogan' ),
 		/**
 		 * @inheritdoc
