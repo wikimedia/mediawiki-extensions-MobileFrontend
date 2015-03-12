@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_10760bd6",
+        "filename": "includes/BannerImage/BannerImagesService.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-12T13:59:22Z",
+      "side": 1,
+      "message": "This configuration should be passed to the constructor.",
+      "revId": "0d20288792767d1e65a869082d4d68aa2e57df42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3370f1a2",
+        "filename": "javascripts/modules/bannerImage/BannerImageRepository.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-12T13:59:22Z",
+      "side": 1,
+      "message": "Extra tab before the `{`.",
+      "revId": "0d20288792767d1e65a869082d4d68aa2e57df42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
