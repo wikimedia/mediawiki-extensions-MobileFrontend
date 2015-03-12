@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e0f7f454",
+        "filename": "less/ui.less",
+        "patchSetId": 17
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-12T22:39:57Z",
+      "side": 1,
+      "message": "we need position relative here, otherwise .header-title will cover the whole vertical space. See https://gerrit.wikimedia.org/r/#/c/193294/ for example",
+      "revId": "4d53f9bd6344c417f5e60bbafe7056fc0b887a65",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
