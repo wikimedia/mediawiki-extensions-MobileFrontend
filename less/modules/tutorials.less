@@ -1,26 +1,6 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-.stable {
-	.content-overlay {
-
-		.button {
-			// FIXME: without this the cloaked input seems to interfere making cancel button start upload
-			position: relative;
-			padding: 12px;
-			font-weight: bold;
-		}
-	}
-
-	.tutorial-overlay {
-		.button {
-			// use background to override gradient in other buttons
-			background: #fff;
-			color: @colorTutorial;
-		}
-	}
-}
-
 .content-overlay {
 	position: absolute;
 	top: 0;
@@ -37,13 +17,37 @@
 		margin: 0 0 1em;
 	}
 
+	.button {
+		// FIXME: without this the cloaked input seems to interfere making cancel button start upload
+		position: relative;
+		padding: 12px;
+		font-weight: bold;
+	}
+
 	&.tutorial-overlay {
 		background: @colorTutorial;
+		box-shadow: none;
 		color: #fff;
+
+		p {
+			text-align: left;
+		}
+
+		.button {
+			// use background to override gradient in other buttons
+			background: #fff;
+			border-radius: 2px;
+			color: @colorTutorial;
+			padding: 6px;
+		}
 
 		.cancel.inline {
 			background: none;
 			color: #fff;
+		}
+
+		.button-bar {
+			text-align: right;
 		}
 	}
 }

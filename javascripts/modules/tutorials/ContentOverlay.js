@@ -83,7 +83,7 @@
 
 			this._position( $pa );
 			this.$pointer = $( '<div>' ).css( {
-				'border-bottom': 'solid 10px #006398',
+				'border-bottom': 'solid 10px #2E76FF',
 				'border-right': tb,
 				'border-left': tb,
 				position: 'absolute',
