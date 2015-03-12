@@ -263,7 +263,6 @@
 	"mobile-frontend-profile-footer-years": "Gick med för över {{PLURAL:$2|1 år|$2 år}} sedan med [[Special:Contributions/$1|{{PLURAL:$3|1 redigering|$3 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$4|1 uppladdning|$4 uppladdningar|500=500+ uppladdningar}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|Redigerade}} sidan [[:$1]], {{PLURAL:$2|igår|$2 dagar sedan|0=tidigare idag}}.",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Tackades}} senast {{GENDER:$1|av}} [[Special:UserProfile/$1|$1]].",
-	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Laddades upp}} {{PLURAL:$1|igår|$1 dagar sedan|0=idag}}.",
 	"mobile-frontend-profile-noargs": "Inget användarnamn angavs. Var god ange ett användarnamn för att visa en profil.",
 	"mobile-frontend-profile-nouser": "Det finns ingen användare med detta namn. Användarnamn är skiftlägeskänsliga, så kontrollera om det har skrivits korrekt.",
 	"mobile-frontend-profile-title": "Användarprofil",
