@@ -33,6 +33,40 @@
       "revId": "0d20288792767d1e65a869082d4d68aa2e57df42",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d3265d11",
+        "filename": "tests/qunit/modules/bannerImage/test_MobileViewBannerImageRepository.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-12T14:09:08Z",
+      "side": 1,
+      "message": "Rename the file to match that of the Code Under Test.",
+      "revId": "0d20288792767d1e65a869082d4d68aa2e57df42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7323c900",
+        "filename": "tests/qunit/modules/bannerImage/test_MobileViewBannerImageRepository.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-12T14:09:08Z",
+      "side": 1,
+      "message": "I imagine most of these tests are going to fail now…",
+      "revId": "0d20288792767d1e65a869082d4d68aa2e57df42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
