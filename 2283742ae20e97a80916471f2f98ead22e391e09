@@ -34,6 +34,24 @@
       "revId": "2283742ae20e97a80916471f2f98ead22e391e09",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2043acb7",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 966,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-12T23:07:42Z",
+      "side": 1,
+      "message": "Is there a less fragile way to share a template between extensions? Accessing it directly would also be fragile (if the template moved or was renamed). I\u0027m not sure I follow your suggestion about interacting with the Skin. What did you have in mind?",
+      "parentUuid": "6e7c4fa4_a93277ba",
+      "revId": "2283742ae20e97a80916471f2f98ead22e391e09",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
