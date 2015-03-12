@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ffad58e8",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-12T18:22:58Z",
+      "side": 1,
+      "message": "I wonder if we should use a template?",
+      "revId": "0de88a245fb5d4638e95356472d58a8320a0765f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9f99c4ca",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-12T18:22:58Z",
+      "side": 1,
+      "message": "use a template here too?",
+      "revId": "0de88a245fb5d4638e95356472d58a8320a0765f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
