@@ -85,4 +85,18 @@
 		QUnit.start();
 	} );
 
+	QUnit.test( 'on back without popstate', 2, function ( assert ) {
+		var historyStub = this.sandbox.stub( window.history, 'back' );  // do not emit popstate
+
+		router.on( 'popstate', function () {
+			assert.ok( false, 'this assertion is not supposed to get called' );
+		} );
+
+		router.back().done( function () {
+			assert.ok( historyStub.called, 'history back has been called' );
+			assert.ok( true, 'back without popstate complete' );
+			QUnit.start();
+		} );
+	} );
+
 }( mw.mobileFrontend, jQuery ) );
