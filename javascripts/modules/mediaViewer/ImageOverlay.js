@@ -28,7 +28,7 @@
 		 * @cfg {String} defaults.licenseLinkMsg Link to license information in media viewer.
 		 * @cfg {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 		 */
-		defaults: {
+		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			cancelButton: new Icon( {
 				tagName: 'button',
 				// Uses a dark theme so swap out the icon
@@ -39,12 +39,12 @@
 			detailsMsg: mw.msg( 'mobile-frontend-media-details' ),
 			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' ),
 			thumbnails: []
-		},
+		} ),
 
 		/** @inheritdoc */
-		events: {
+		events: $.extend( {}, Overlay.prototype.events, {
 			'click .image-wrapper': 'onToggleDetails'
-		},
+		} ),
 
 		/** @inheritdoc */
 		preRender: function ( options ) {
