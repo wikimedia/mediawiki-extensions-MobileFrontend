@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_866ad3af",
+        "filename": "includes/specials/SpecialMobileMenu.php",
+        "patchSetId": 18
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-13T17:41:08Z",
+      "side": 1,
+      "message": "!isBetaGroupMember()???\n\ngetMobileAction is a wrapper aroung getRequest()-\u003e-\u003egetText( \u0027mobileaction\u0027 );\nwithout a default value, so no mobileaction parameter will be null :)",
+      "revId": "757c9ec8b5351f3b9f69755b6ee7762d7ea78cb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
