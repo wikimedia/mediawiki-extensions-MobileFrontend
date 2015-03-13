@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a989e028",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 654,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-13T20:10:47Z",
+      "side": 1,
+      "message": "I\u0027m not sure if using a template from another module here is a good idea. Maybe make that module a dependency and then call it\u0027s template? Or maybe copy over the header here",
+      "revId": "d9e48543a88082db6d9eee6e6586ae8229751732",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
