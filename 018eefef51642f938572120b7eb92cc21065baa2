@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b73380bf",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-13T13:48:23Z",
+      "side": 1,
+      "message": "whooho, is there no better way to get the information you need?",
+      "revId": "018eefef51642f938572120b7eb92cc21065baa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f7c1f883",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-13T13:48:23Z",
+      "side": 1,
+      "message": "you can use one var to declare all variables :)",
+      "revId": "018eefef51642f938572120b7eb92cc21065baa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
