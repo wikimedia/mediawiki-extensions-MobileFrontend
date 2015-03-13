@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0c75872c",
+        "filename": "javascripts/modules/tutorials/ContentOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-13T11:42:33Z",
+      "side": 1,
+      "message": "These styles could be in a stylesheet. This could be a follow-on hygiene patch though.",
+      "revId": "665428c019719751ac261a0a40dafa3d39c23c9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ac8b331a",
+        "filename": "less/modules/tutorials.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-13T11:42:33Z",
+      "side": 1,
+      "message": "This is no longer centred.",
+      "revId": "665428c019719751ac261a0a40dafa3d39c23c9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
