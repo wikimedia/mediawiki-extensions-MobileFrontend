@@ -31,7 +31,7 @@ class SpecialMobileMenu extends MobileSpecialPage {
 		$out = $this->getOutput();
 		$out->setPageTitle( wfMessage( 'mobile-frontend-main-menu-page-title' )->text() );
 
-		if ( !MobileContext::singleton()->isBetaGroupMember() ) {
+		if ( !MobileContext::singleton()->isAlphaGroupMember() ) {
 			$out->setProperty( 'bodyClassName', 'navigation-enabled navigation-full-screen' );
 		}
 	}
