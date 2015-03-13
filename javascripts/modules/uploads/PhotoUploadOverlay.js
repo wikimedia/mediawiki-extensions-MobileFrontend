@@ -45,6 +45,14 @@
 				msg: mw.msg( 'mobile-frontend-photo-submit' )
 			} ]
 		},
+		/** @inheritdoc */
+		events: $.extend( {}, Overlay.prototype.events, {
+			'click .submit': 'onSubmit',
+			'keyup textarea': 'onDescriptionChange',
+			// use input event too, Firefox doesn't fire keyup on many devices:
+			// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
+			'input textarea': 'onDescriptionChange'
+		} ),
 
 		className: 'overlay photo-overlay',
 
@@ -218,20 +226,9 @@
 			Overlay.prototype.postRender.apply( this, arguments );
 
 			$submitButton = this.$( '.submit' )
-				.prop( 'disabled', true )
-				.on( 'click', function () {
-					self.schema.log( {
-						action: 'previewSubmit'
-					} );
-					self._submit();
-				} );
+				.prop( 'disabled', true );
 			this.$description = this.$( 'textarea' )
-				.microAutosize()
-				// use input event too, Firefox doesn't fire keyup on many devices:
-				// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
-				.on( 'keyup input', function () {
-					$submitButton.prop( 'disabled', self.$description.val() === '' );
-				} );
+				.microAutosize();
 
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
@@ -315,6 +312,23 @@
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
 					self.hide( true );
 				} );
+		},
+
+		/**
+		 * event handler to submit
+		 */
+		onSubmit: function () {
+			this.schema.log( {
+				action: 'previewSubmit'
+			} );
+			this._submit();
+		},
+
+		/**
+		 * event handler for changing description of property
+		 */
+		onDescriptionChange: function () {
+			this.$( '.submit' ).prop( 'disabled', this.$( 'textarea' ).val() === '' );
 		}
 	} );
 
