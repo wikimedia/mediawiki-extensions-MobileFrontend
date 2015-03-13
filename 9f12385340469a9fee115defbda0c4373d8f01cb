@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_46f59bc6",
+        "filename": "javascripts/modules/uploads/PhotoUploadOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-13T18:02:22Z",
+      "side": 1,
+      "message": "Since this also runs on the input event (copy and paste) this should probably be renamed to something more generic such as \"onDescriptionChange\u0027",
+      "revId": "9f12385340469a9fee115defbda0c4373d8f01cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
