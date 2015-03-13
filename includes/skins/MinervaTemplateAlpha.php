@@ -14,28 +14,6 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 	protected $searchPlaceHolderMsg = 'mobile-frontend-placeholder-alpha';
 
 	/**
-	 * @inheritdoc
-	 * Renders a search link and branding.
-	 */
-	protected function makeChromeHeaderContent( $data ) {
-		echo Html::element( 'a',
-				array(
-					'id' => 'searchInput',
-					'class' => MobileUI::iconClass( 'search' ),
-					'href' => Title::newFromText( 'Special:Search' )->getLocalUrl(),
-				),
-				'Search'
-			) .
-			Html::openElement( 'div',
-				array(
-					'class' => 'header-title',
-				)
-			) .
-			SkinMinerva::getSitename() .
-			Html::closeElement( 'div' );
-	}
-
-	/**
 	 * Get button information to link to Special:Nearby to find articles
 	 * (geographically) related to this
 	 * @return array A map of the button's friendly name, "nearby", to its spec
