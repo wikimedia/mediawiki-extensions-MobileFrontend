@@ -2,7 +2,6 @@
 	var loader = M.require( 'loader' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		user = M.require( 'user' ),
-		licenseLink = mw.config.get( 'wgMFLicenseLink' ),
 		$talk = $( '.talk' ),
 		page = M.getCurrentPage(),
 		overlayManager = M.require( 'overlayManager' ),
@@ -16,14 +15,22 @@
 				title: $talk.data( 'title' ) || mw.config.get( 'wgPageName' )
 			};
 
-		// FIXME: cache this selector, it's used more than once
+		// If terms of use is enabled, include it in the licensing message
 		if ( $( '#footer-places-terms-use' ).length > 0 ) {
-			talkOptions.licenseMsg = mw.msg( 'mobile-frontend-editor-licensing-with-terms',
-				$( '#footer-places-terms-use' ).html(), licenseLink );
+			talkOptions.licenseMsg = mw.msg(
+					'mobile-frontend-editor-licensing-with-terms',
+					mw.message(
+						'mobile-frontend-editor-terms-link',
+						$( '#footer-places-terms-use a' ).attr( 'href' )
+					).parse(),
+					mw.config.get( 'wgMFLicenseLink' )
+				);
 		} else {
-			talkOptions.licenseMsg = mw.msg( 'mobile-frontend-editor-licensing', licenseLink );
+			talkOptions.licenseMsg = mw.msg(
+				'mobile-frontend-editor-licensing',
+				mw.config.get( 'wgMFLicenseLink' )
+			);
 		}
-
 		loader.loadModule( 'mobile.talk.overlays' ).done( function () {
 			var Overlay;
 			if (  id === 'new' ) {

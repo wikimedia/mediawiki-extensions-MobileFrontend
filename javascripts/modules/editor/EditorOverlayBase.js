@@ -164,7 +164,10 @@
 				if ( $( '#footer-places-terms-use' ).length > 0 ) {
 					options.licenseMsg = mw.msg(
 						'mobile-frontend-editor-licensing-with-terms',
-						$( '#footer-places-terms-use' ).html(),
+						mw.message(
+							'mobile-frontend-editor-terms-link',
+							$( '#footer-places-terms-use a' ).attr( 'href' )
+						).parse(),
 						mw.config.get( 'wgMFLicenseLink' )
 					);
 				} else {
