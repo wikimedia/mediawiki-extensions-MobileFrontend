@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e651473b",
+        "filename": "i18n/en.json",
+        "patchSetId": 19
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-13T19:06:22Z",
+      "side": 1,
+      "message": "wouldn\u0027t it be better to add this mesage under \"-main-menu\"? Just to have them all at one place :)",
+      "revId": "94bf2df01cb9469c392aa2a1da1e4367682f0242",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a64b4f87",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-13T19:06:22Z",
+      "side": 1,
+      "message": "where are the docs for mobile-frontend-main-menu? :O",
+      "revId": "94bf2df01cb9469c392aa2a1da1e4367682f0242",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
