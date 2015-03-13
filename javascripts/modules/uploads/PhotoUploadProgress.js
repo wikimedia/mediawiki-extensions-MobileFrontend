@@ -22,6 +22,10 @@
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			uploadingMsg: mw.msg( 'mobile-frontend-image-uploading' )
 		} ),
+		/** @inheritdoc */
+		events: $.extend( {}, Overlay.prototype.events, {
+			'click .submit': 'onSubmit'
+		} ),
 		template: mw.template.get( 'mobile.uploads', 'PhotoUploadProgress.hogan' ),
 		fullScreen: false,
 
@@ -34,7 +38,6 @@
 		/** @inheritdoc */
 		postRender: function () {
 			Overlay.prototype.postRender.apply( this, arguments );
-			this.$( '.submit' ).on( 'click', $.proxy( this, 'emit', 'submit' ) );
 		},
 
 		/**
@@ -77,6 +80,13 @@
 				this.$( '.right' ).remove();
 			}
 			this.progressBar.setValue( value );
+		},
+
+		/**
+		 * event handler to submit
+		 */
+		onSubmit: function () {
+			this.emit( 'submit' );
 		}
 	} );
 
