@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_775408ca",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2015-03-13T14:13:56Z",
+      "side": 1,
+      "message": "the above is being done, to get only the immediate content in the \u0027p\u0027 tag, which is the description, and not the link following it. Link was kept intact and visible. I\u0027ll look if there\u0027s a better way",
+      "parentUuid": "6e7c4fa4_b73380bf",
+      "revId": "018eefef51642f938572120b7eb92cc21065baa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_f7c1f883",
         "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
         "patchSetId": 1
