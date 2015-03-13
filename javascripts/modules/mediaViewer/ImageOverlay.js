@@ -108,6 +108,7 @@
 						self.$( '.license' ).prepend( author + ' &bull; ' );
 					}
 				}
+				self.adjustDetails();
 			} );
 
 			$( window ).on( 'resize', $.proxy( this, '_positionImage' ) );
@@ -135,6 +136,7 @@
 		 * @private
 		 */
 		_positionImage: function () {
+			this.adjustDetails();
 			// with a hidden details box we have a little bit more space, we just need to use it
 			var detailsHeight = !this.$details.is( ':visible' ) ? 0 : this.$details.outerHeight(),
 				windowWidth = $( window ).width(),
@@ -158,6 +160,17 @@
 				}
 			}
 			$( '.image-wrapper' ).css( 'bottom', detailsHeight );
+		},
+
+		/**
+		 * Function to adjust the height of details section to not more than 50% of window height.
+		 * @method
+		 */
+		adjustDetails: function () {
+			var windowHeight = $( window ).height();
+			if ( this.$( '.details' ).height() > windowHeight * 0.50 ) {
+				this.$( '.details' ).css( 'max-height', windowHeight * 0.50 );
+			}
 		}
 	} );
 	M.define( 'modules/mediaViewer/ImageOverlay', ImageOverlay );
