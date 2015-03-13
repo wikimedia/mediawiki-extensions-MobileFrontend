@@ -12,7 +12,8 @@
 			"Elitre",
 			"Macofe",
 			"Ricordisamoa",
-			"FRacco"
+			"FRacco",
+			"LACLARETTA"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -164,6 +165,8 @@
 	"mobile-frontend-logged-in-toast-notification": "Accesso effettuato come $1.",
 	"mobile-frontend-logged-out": "Accesso non effettuato",
 	"mobile-frontend-login": "Accedi",
+	"mobile-frontend-main-menu": "Menu Principale",
+	"mobile-frontend-main-menu-back": "torna indietro",
 	"mobile-frontend-main-menu-account-create": "Registrati",
 	"mobile-frontend-main-menu-button-tooltip": "Apri il menu principale",
 	"mobile-frontend-main-menu-featured": "In primo piano",
@@ -243,7 +246,6 @@
 	"mobile-frontend-profile-footer-years": "Registrato più di {{PLURAL:$2|1 anno|$2 anni}} fa con [[Special:Contributions/$1|{{PLURAL:$3|1 modifica|$3 modifiche}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 caricamento|$4 caricamenti|500=più di 500 caricamenti}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|Ha modificato}} la pagina [[:$1]], {{PLURAL:$2|ieri|$2 giorni fa|0=oggi}}.",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Ringraziato|Ringraziata|Ringraziato/a}} {{GENDER:$1|da}} [[Special:UserProfile/$1|$1]]",
-	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Caricato}} {{PLURAL:$1|ieri|$1 giorni fa|0=oggi}}.",
 	"mobile-frontend-profile-noargs": "Non è stato indicato alcun nome utente. Inserisci un nome utente per vedere un profilo.",
 	"mobile-frontend-profile-nouser": "Non esiste alcun utente con questo nome. I nomi utente tengono conto delle maiuscole\\minuscole, controlla se è stato digitato correttamente.",
 	"mobile-frontend-profile-title": "Profilo utente",
