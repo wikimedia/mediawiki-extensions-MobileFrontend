@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_721096ad",
+        "filename": "javascripts/modules/tutorials/ContentOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-13T17:01:02Z",
+      "side": 1,
+      "message": "Yes, you\u0027re right. I wanted to get the problem at hand fixed first.",
+      "parentUuid": "6e7c4fa4_0c75872c",
+      "revId": "665428c019719751ac261a0a40dafa3d39c23c9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_ac8b331a",
         "filename": "less/modules/tutorials.less",
         "patchSetId": 1
