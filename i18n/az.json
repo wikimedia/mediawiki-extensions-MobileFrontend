@@ -21,6 +21,8 @@
 	"mobile-frontend-editor-keep-editing": "Redaktəni davam etdir",
 	"mobile-frontend-editor-save": "Yadda saxla",
 	"mobile-frontend-featured-article": "Günün seçilmiş məqaləsi",
+	"mobile-frontend-generic-login": "{{SITENAME}} sizin kimi insanlar tərəfindən yaradılır.",
+	"mobile-frontend-generic-login-action": "Öz töhfənizi vermək üçün daxil olun.",
 	"mobile-frontend-history": "Bu səhifənin dəyişikliklər tarixinə bax",
 	"mobile-frontend-home-button": "Ana səhifə",
 	"mobile-frontend-language-article-heading": "Başqa dillərdə oxuyun",
@@ -33,12 +35,14 @@
 	"mobile-frontend-last-modified-seconds": "Bu səhifə sonuncu dəfə $1 saniyə əvvəl redaktə edilib.",
 	"mobile-frontend-last-modified-years": "Bu səhifə sonuncu dəfə $1 il əvvəl redaktə edilib.",
 	"mobile-frontend-login": "Daxil ol",
+	"mobile-frontend-main-menu-account-create": "Hesab yarat",
 	"mobile-frontend-main-menu-login": "Daxil ol",
 	"mobile-frontend-main-menu-logout": "Çıxış",
 	"mobile-frontend-main-menu-settings": "Nizamlamalar",
 	"mobile-frontend-main-menu-upload": "Yükləmələr",
 	"mobile-frontend-main-menu-watchlist": "İzlədiyim səhifələr",
 	"mobile-frontend-missing-image": "Şəkil",
+	"mobile-frontend-news-items": "Xəbərlərdə",
 	"mobile-frontend-password": "Parol:",
 	"mobile-frontend-password-placeholder": "Parol",
 	"mobile-frontend-placeholder": "{{SITENAME}} saytında axtarış",
@@ -56,5 +60,7 @@
 	"mobile-frontend-watchlist-filter-articles": "Səhifələr",
 	"mobile-frontend-watchlist-filter-other": "Digər",
 	"mobile-frontend-watchlist-filter-talk": "Müzakirə",
-	"mobile-frontend-watchlist-modified": "Dəyişdirilib $1"
+	"mobile-frontend-watchlist-modified": "Dəyişdirilib $1",
+	"tag-mobile_edit": "Mobil redaktə",
+	"tag-mobile_web_edit": "Mobil veb redaktə"
 }
