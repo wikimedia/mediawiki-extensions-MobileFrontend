@@ -346,9 +346,9 @@
 	"mobile-frontend-watchlist-view": "مشاهدۀ فهرست پیگیری‌های شما",
 	"nearby": "صفحه‌های نزدیک شما",
 	"right-mf-uploadbutton": "استفاده از دکمهٔ برگذاری در صفحه‌های گوشی همراه",
-	"tag-mobile_edit": "ویرایش موبایل",
+	"tag-mobile_edit": "ویرایش با تلفن همراه",
 	"tag-mobile_edit-description": "ویرایش انجام‌شده از گوشی همراه (وب یا برنامه)",
-	"tag-mobile_web_edit": "ویرایش وبی گوشی همراه",
+	"tag-mobile_web_edit": "ویرایش با مرورگر تلفن همراه",
 	"tag-mobile_web_edit-description": "ویرایش انجام‌شده از وبگاه موبایل",
 	"mobile-frontend-pageaction-edit-tooltip": "ویرایش بخش آغازین این صفحه."
 }

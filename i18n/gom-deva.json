@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Darshan kandolkar",
+			"Santhosh.thottingal"
+		]
+	},
+	"mobile-frontend-editor-edit": "संस्करण",
+	"mobile-frontend-home-button": "मुखपृष्ठ",
+	"mobile-frontend-language-article-heading": "हेर भाशेन वाचात",
+	"mobile-frontend-login": "सत्रारंभ करात",
+	"mobile-frontend-main-menu-account-create": "खातें तयार करात",
+	"mobile-frontend-main-menu-button-tooltip": "मुखेल मेनू उघडात",
+	"mobile-frontend-main-menu-login": "सत्रारंभ करात",
+	"mobile-frontend-main-menu-nearby": "लागींच",
+	"mobile-frontend-main-menu-settings": "मांडावळ",
+	"mobile-frontend-main-menu-watchlist": "लक्ष वळेरी",
+	"mobile-frontend-password-placeholder": "खास उतर",
+	"mobile-frontend-placeholder": "सोदात {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "गुप्तताय",
+	"mobile-frontend-random-button": "अविशिष्ट",
+	"mobile-frontend-terms-text": "वापराच्यो अटी",
+	"mobile-frontend-username-placeholder": "वापरप्याचे नांव",
+	"mobile-frontend-view": "मोबाईल-दृश्य",
+	"mobile-frontend-view-desktop": "डेस्कटॉप",
+	"mobile-frontend-view-mobile": "मोबाइल",
+	"tag-mobile_edit": "मोबाईल संस्करण",
+	"tag-mobile_web_edit": "मोबाईल जाळें संस्करण"
+}

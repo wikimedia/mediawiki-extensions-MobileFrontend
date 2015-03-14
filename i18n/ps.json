@@ -53,6 +53,8 @@
 	"mobile-frontend-watchlist-more": "نور",
 	"nearby": "تاسې ته نژدې مخونه",
 	"tag-mobile_edit": "د موبايل سمون",
+	"tag-mobile_edit-description": "سمون د موبايل له لارې (جال يا کاريال)",
 	"tag-mobile_web_edit": "د موبايل گورت سمون",
+	"tag-mobile_web_edit-description": "سمون د موبايل گورت له لارې",
 	"mobile-frontend-pageaction-edit-tooltip": "د دې مخ د پيل برخه سمول."
 }

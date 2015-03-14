@@ -3,7 +3,8 @@
 		"authors": [
 			"An13sa",
 			"පසිඳු කාවින්ද",
-			"Subi"
+			"Subi",
+			"Sator"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "Helbide elektronikoa (aukerakoa)",
@@ -32,7 +33,9 @@
 	"mobile-frontend-languages-header-page": "$1 - Hizkuntzak",
 	"mobile-frontend-logged-out": "Saioa hasi gabe",
 	"mobile-frontend-login": "Saioa hasi",
+	"mobile-frontend-main-menu-account-create": "Kontua sortu",
 	"mobile-frontend-main-menu-featured": "Nabarmendua",
+	"mobile-frontend-main-menu-login": "Saioa hasi",
 	"mobile-frontend-main-menu-nearby": "Gertukoak",
 	"mobile-frontend-main-menu-settings": "Ezarpenak",
 	"mobile-frontend-media-details": "Xehetasunak",

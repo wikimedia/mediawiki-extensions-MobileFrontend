@@ -138,7 +138,7 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-404-desc": "No se encontró la página que estás buscando.",
 	"mobile-frontend-generic-404-title": "Error: no se encontró la página",
-	"mobile-frontend-generic-login": "{{SITENAME}} es hecha por gente como tú.",
+	"mobile-frontend-generic-login": "Personas como tú son las que construyen {{SITENAME}}.",
 	"mobile-frontend-generic-login-action": "Inicia sesión para contribuir.",
 	"mobile-frontend-generic-signup-action": "Regístrate para colaborar.",
 	"mobile-frontend-history": "Ver el historial de ediciones de esta página.",
