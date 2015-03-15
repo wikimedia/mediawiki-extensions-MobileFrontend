@@ -42,6 +42,7 @@
 	"mobile-frontend-footer-contact": "Кантакты",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-login": "{{SITENAME}} ствараецца такімі ж людзьмі, як вы.",
+	"mobile-frontend-generic-login-action": "Увайдзіце, каб зрабіць унёсак.",
 	"mobile-frontend-history": "Праглядзець гісторыю зьменаў гэтай старонкі.",
 	"mobile-frontend-home-button": "Хатняя",
 	"mobile-frontend-images-status": "Выявы",

@@ -35,7 +35,8 @@
 			"0x010C",
 			"Benjozork",
 			"Orikrin1998",
-			"Element303"
+			"Element303",
+			"Thibaut120094"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -203,6 +204,7 @@
 	"mobile-frontend-logged-in-toast-notification": "Connecté en tant que $1.",
 	"mobile-frontend-logged-out": "Non connecté(e)",
 	"mobile-frontend-login": "Se connecter",
+	"mobile-frontend-main-menu": "Menu principal",
 	"mobile-frontend-main-menu-account-create": "Créer un compte",
 	"mobile-frontend-main-menu-button-tooltip": "Ouvrir le menu principal",
 	"mobile-frontend-main-menu-featured": "En vedette",
@@ -285,7 +287,6 @@
 	"mobile-frontend-profile-footer-years": "Rejoint il y a plus {{PLURAL:$2|d’un an|de $2 ans}} avec [[Special:Contributions/$1|{{PLURAL:$3|1 modification|$3 modifications}}]] et [[Special:Uploads/$1|{{PLURAL:$4|1 téléchargement|$4 téléchargements}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|A modifié}} la page [[:$1]], {{PLURAL:$2|hier|il y a $2 jours|0=plus tôt dans la journée}}.",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Remercié}} {{GENDER:$1|par}} [[Special:UserProfile/$1|$1]]",
-	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Téléchargé}} {{PLURAL:$1|hier|il y a $1 jours|0=aujourd’hui}}.",
 	"mobile-frontend-profile-noargs": "Aucun utilisateur n’a été indiqué. Veuillez indiquer un nom d’utilisateur pour afficher un profil.",
 	"mobile-frontend-profile-nouser": "Il n’existe pas d’utilisateur avec ce nom. Les noms d’utilisateur sont sensibles à la casse, veuillez donc vérifier si vous l’avez bien tapé.",
 	"mobile-frontend-profile-title": "Profil utilisateur",

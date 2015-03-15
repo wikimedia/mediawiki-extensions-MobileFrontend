@@ -2,12 +2,19 @@
 	"@metadata": {
 		"authors": [
 			"Darshan kandolkar",
-			"Santhosh.thottingal"
+			"Santhosh.thottingal",
+			"Konknni mogi 24",
+			"Supriya kankumbikar"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "संपादन आपरोस ना",
+	"mobile-frontend-copyright": "हातूंतलो मजकूर $1च्या अंतर्गत उपलब्ध आसा जे मेरेन हेर नोंदी करूक नात.",
 	"mobile-frontend-editor-edit": "संस्करण",
+	"mobile-frontend-generic-login": "{{SITENAME}}तुमच्या सारक्या लोकांनी केल्लो",
+	"mobile-frontend-generic-login-action": "योगदान दिवपाक सत्रारंभ करात",
 	"mobile-frontend-home-button": "मुखपृष्ठ",
 	"mobile-frontend-language-article-heading": "हेर भाशेन वाचात",
+	"mobile-frontend-last-modified-date": "$1 आनी $2चेर केल्लो फाटलो बदल",
 	"mobile-frontend-login": "सत्रारंभ करात",
 	"mobile-frontend-main-menu-account-create": "खातें तयार करात",
 	"mobile-frontend-main-menu-button-tooltip": "मुखेल मेनू उघडात",
@@ -15,6 +22,7 @@
 	"mobile-frontend-main-menu-nearby": "लागींच",
 	"mobile-frontend-main-menu-settings": "मांडावळ",
 	"mobile-frontend-main-menu-watchlist": "लक्ष वळेरी",
+	"mobile-frontend-news-items": "खबरांनी",
 	"mobile-frontend-password-placeholder": "खास उतर",
 	"mobile-frontend-placeholder": "सोदात {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "गुप्तताय",

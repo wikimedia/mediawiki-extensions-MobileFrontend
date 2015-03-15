@@ -9,7 +9,8 @@
 			"Siddhartha Ghai",
 			"Venky2834",
 			"Smtchahal",
-			"संजीव कुमार"
+			"संजीव कुमार",
+			"Ayushimrigen"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "पिछला अनुभाग",
@@ -26,6 +27,7 @@
 	"mobile-frontend-editor-cta": "इस पृष्ठ को बेहतर बनाने में मदद करें!",
 	"mobile-frontend-editor-edit": "संपादित करें",
 	"mobile-frontend-editor-keep-editing": "संपादन चालू रखें",
+	"mobile-frontend-editor-terms-link": "[$१ इस्तेमाल करने की शर्तें]",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|आप}} {{SITENAME}} पर नया पृष्ठ बना रहे हैं!",
 	"mobile-frontend-editor-save": "सहेजें",
 	"mobile-frontend-editor-source-editor": "स्रोत संपादक",
@@ -67,6 +69,7 @@
 	"mobile-frontend-logged-in-homepage-notification": "आपका स्वागत है, $1!",
 	"mobile-frontend-logged-out": "लॉग इन नहीं किया है",
 	"mobile-frontend-login": "लॉग इन",
+	"mobile-frontend-main-menu-back": "वापस जांए",
 	"mobile-frontend-main-menu-account-create": "खाता बनाएँ",
 	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलें",
 	"mobile-frontend-main-menu-featured": "विशेष",
