@@ -102,6 +102,24 @@
       "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_60d98e2b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1396,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-03-16T18:20:38Z",
+      "side": 1,
+      "message": "No it doesn\u0027t. I added aliasing per your comment on the core patchset. Thanks, that made a lot of sense and is what it should\u0027ve been in the first place. The idea was to make it match FileModule::getTemplates() but I forgot about the aliasing part. Should be fine now.",
+      "parentUuid": "6e7c4fa4_1beddab4",
+      "revId": "a7e76b4d9c93e3485415847a99a307b3fb5b0340",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
