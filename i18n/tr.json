@@ -16,7 +16,8 @@
 			"Sucsuzz",
 			"Sayginer",
 			"Violetanka",
-			"Mavrikant"
+			"Mavrikant",
+			"Gokalpselamet"
 		]
 	},
 	"action-mf-uploadbutton": "mobil sayfalarda yükle düğmesini kullan.",
@@ -149,6 +150,7 @@
 	"mobile-frontend-logged-in-toast-notification": "$1 olarak oturum açıldı.",
 	"mobile-frontend-logged-out": "Oturum açık değil",
 	"mobile-frontend-login": "Oturum aç",
+	"mobile-frontend-main-menu": "Ana Menü",
 	"mobile-frontend-main-menu-account-create": "Hesap aç",
 	"mobile-frontend-main-menu-button-tooltip": "Ana menüyü aç",
 	"mobile-frontend-main-menu-featured": "Seçkin",
@@ -221,7 +223,6 @@
 	"mobile-frontend-profile-footer-years": "[[Special:Contributions/$1|{{PLURAL:$3|1 düzenleme|$3 düzenleme}}]] ve [[Special:Uploads/$1|{{PLURAL:$4|1 yükleme|$4 yükleme|500=+500 yükleme}}]] ile {{PLURAL:$2|1 yıldan|$2 yıldan}} fazla süre önce katıldı.",
 	"mobile-frontend-profile-last-edit": "[[:$1]] sayfası, {{PLURAL:$2|dün|$2 gün önce|0=bugün erken saatlerde}} düzenlendi.",
 	"mobile-frontend-profile-last-thank": "[[Special:UserProfile/$1|$1]] {{GENDER:$1|tarafından}} {{GENDER:$2|teşekkür}} edildi.",
-	"mobile-frontend-profile-last-upload-caption": "{{PLURAL:$1|Dün|$1 gün önce|0=Bugün}} {{GENDER:$2|yüklendi}}.",
 	"mobile-frontend-profile-noargs": "Lütfen bilgi görüntülemek için bir kullanıcı adı sağlayın.",
 	"mobile-frontend-profile-nouser": "Bu isimde bir kullanıcı yok. Kullanıcı adları büyük küçük harf duyarlı olduğundan lütfen yazımınızı kontrol edin.",
 	"mobile-frontend-profile-title": "Kullanıcı bilgileri",

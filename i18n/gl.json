@@ -8,7 +8,8 @@
 			"Vivaelcelta",
 			"Breogan2008",
 			"Beninho",
-			"Fisterraeomar"
+			"Fisterraeomar",
+			"Banjo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un usuario está ou non está editando a través da interface móbil",
@@ -18,6 +19,7 @@
 	"mobile-frontend-app-title": "Aplicación móbil",
 	"mobile-frontend-back-to-top-of-section": "Volver ao comezo da sección",
 	"mobile-frontend-categories-add": "Engadir unha categoría",
+	"mobile-frontend-categories-search": "Procurar categorías",
 	"mobile-frontend-changeslist-ip": "Usuario anónimo",
 	"mobile-frontend-changeslist-nocomment": "sen resumo de edición",
 	"mobile-frontend-clear-search": "Limpar",
@@ -63,6 +65,7 @@
 	"mobile-frontend-editor-newpage-prompt": "Esta páxina non existe. Sexa valente e empece a escribila!",
 	"mobile-frontend-editor-placeholder": "Esta sección está baleira. Sexa o primeiro en expandila!",
 	"mobile-frontend-editor-save": "Gardar",
+	"mobile-frontend-editor-source-editor": "Editar a fonte",
 	"mobile-frontend-editor-success": "Correcto! Gardouse a súa edición.",
 	"mobile-frontend-editor-success-landmark-1": "Parabéns, xa é editor de {{SITENAME}}!",
 	"mobile-frontend-editor-summary-placeholder": "Exemplos: \"corrixín un erro ortográfico\", \"engadín contido\"",
@@ -71,6 +74,7 @@
 	"mobile-frontend-editor-tutorial-summary": "Intente mellorar a páxina \"$1\". Non lle teña medo á sintaxe do wiki.",
 	"mobile-frontend-editor-unavailable": "A edición a través do móbil non está dispoñible no seu navegador. Probe cun navegador diferente.",
 	"mobile-frontend-editor-undo-unsupported": "A función de desfacer non está soportada actualmente nos dispositivos móbiles.",
+	"mobile-frontend-editor-visual-editor": "Editar",
 	"mobile-frontend-editor-wait": "Gardando a edición, agarde.",
 	"mobile-frontend-enable-images": "Activar as imaxes na versión móbil",
 	"mobile-frontend-errorreport-error": "Erro, o seu comentario non pode ser rexistrado",
@@ -121,6 +125,8 @@
 	"mobile-frontend-logged-in-toast-notification": "Accedeu ao sistema como $1.",
 	"mobile-frontend-logged-out": "Non accedeu ao sistema",
 	"mobile-frontend-login": "Rexistro",
+	"mobile-frontend-main-menu": "Menú principal",
+	"mobile-frontend-main-menu-back": "Volver",
 	"mobile-frontend-main-menu-account-create": "Crear unha conta",
 	"mobile-frontend-main-menu-button-tooltip": "Abrir o menú principal",
 	"mobile-frontend-main-menu-featured": "Destacado",
@@ -194,6 +200,7 @@
 	"mobile-frontend-random-button": "Ao chou",
 	"mobile-frontend-regular-site": "Vista normal",
 	"mobile-frontend-requires-optin": "Esta páxina non está dispoñible a menos que active o noso modo beta. Visite a [[Special:MobileOptions|páxina de configuración]] para activalo.",
+	"mobile-frontend-requires-title": "Páxina non dispoñible",
 	"mobile-frontend-save-error": "Erro ao gardar a configuración. Asegúrese de ter as cookies activadas.",
 	"mobile-frontend-save-settings": "Gardar",
 	"mobile-frontend-saving-exit-page": "A súa achega está gardándose. Se marcha, as súas contribucións hanse perder. Está seguro de querer saír?",
@@ -260,5 +267,7 @@
 	"mobile-frontend-pageaction-edit-tooltip": "Editar a introdución desta páxina.",
 	"apihelp-mobileview-param-thumbwidth": "Largura máxima da miniatura.",
 	"apihelp-mobileview-param-thumbheight": "Altura máxima da miniatura.",
+	"mobile-frontend-donate-button-label": "Doar",
+	"mobile-frontend-loading-message": "Cargando…",
 	"mobile-frontend-console-recruit": "\\o/ Ola! Isto é software de código aberto e necesitamos voluntarios que nos boten unha man para construílo, melloralo e reparar os fallos que se cadra atopas nesta consola de JavaScript."
 }

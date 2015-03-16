@@ -21,7 +21,8 @@
 			"TheDJ",
 			"Romaine",
 			"Robin0van0der0vliet",
-			"Mirolith"
+			"Mirolith",
+			"JensRiskin"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -84,6 +85,7 @@
 	"mobile-frontend-editor-error-loading": "Er is een fout opgetreden. De paragraaf kan niet geladen worden.",
 	"mobile-frontend-editor-error-preview": "Fout. Er is iets onverwachts gebeurd tijdens het laden van de voorvertoning. Sluit dit venster en probeer het opnieuw.",
 	"mobile-frontend-editor-keep-editing": "Doorgaan met bewerken",
+	"mobile-frontend-editor-terms-link": "[$1 Gebruiksvoorwaarden]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Weet u zeker}} dat u een nieuwe pagina wilt maken op {{SITENAME}}?",
 	"mobile-frontend-editor-newpage-prompt": "Deze pagina bestaat niet. Waarom maakt u hem niet aan?",
 	"mobile-frontend-editor-placeholder": "Deze paragraaf bevat geen tekst. U kunt de eerste zijn die hem schrijft!",
@@ -168,6 +170,8 @@
 	"mobile-frontend-logged-in-toast-notification": "Aangemeld als $1.",
 	"mobile-frontend-logged-out": "Niet aangemeld",
 	"mobile-frontend-login": "Aanmelden",
+	"mobile-frontend-main-menu": "Hoofdmenu",
+	"mobile-frontend-main-menu-back": "Ga terug",
 	"mobile-frontend-main-menu-account-create": "Registreren",
 	"mobile-frontend-main-menu-button-tooltip": "Hoofdmenu openen",
 	"mobile-frontend-main-menu-featured": "Uitgelicht",
@@ -245,7 +249,6 @@
 	"mobile-frontend-profile-footer-years": "Meer dan {{PLURAL:$2|één jaar|$2 jaar}} geleden lid geworden met [[Special:Contributions/$1|{{PLURAL:$3|1 bewerking|$3 bewerkingen}}]] en [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].",
 	"mobile-frontend-profile-last-edit": "Heeft {{PLURAL:$2|gisteren|$2 dagen geleden|0=eerder vandaag|2=eergisteren}} de pagina [[:$1]] {{GENDER:$3|bewerkt}}.",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Bedankt}} {{GENDER:$1|door}} [[Special:UserProfile/$1|$1]].",
-	"mobile-frontend-profile-last-upload-caption": "{{PLURAL:$1|Gisteren|$1 dagen geleden|0=Vandaag|2=Eergisteren}} {{GENDER:$2|geüpload}}.",
 	"mobile-frontend-profile-noargs": "Er is geen gebruikersnaam opgegeven. Geef een gebruikernaam op om een profiel te bekijken.",
 	"mobile-frontend-profile-nouser": "Er bestaat geen gebruiker met deze naam. Gebruikersnamen zijn hoofdlettergevoelig. Controleer uw invoer.",
 	"mobile-frontend-profile-title": "Gebruikersprofiel",

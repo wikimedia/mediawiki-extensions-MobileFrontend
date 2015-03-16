@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bachounda"
+			"Bachounda",
+			"Oldstoneage"
 		]
 	},
 	"mobile-frontend-copyright": "المحتاوا راه تحت النسخة $1 تاع الليسانس، غير يلا كان حاجه اخرة.",
@@ -9,6 +10,8 @@
 	"mobile-frontend-home-button": "اللوله",
 	"mobile-frontend-language-article-heading": "اقرا بلوغه وحدخره",
 	"mobile-frontend-last-modified-date": "التبديله التاليه في تاريخ $1، $2",
+	"mobile-frontend-main-menu": "القايمة اللولانيّة",
+	"mobile-frontend-main-menu-back": "ارجع لل لور",
 	"mobile-frontend-main-menu-button-tooltip": "حل القايمه اللوله",
 	"mobile-frontend-main-menu-login": "كونيكتي",
 	"mobile-frontend-main-menu-nearby": "قريب منهنا",
