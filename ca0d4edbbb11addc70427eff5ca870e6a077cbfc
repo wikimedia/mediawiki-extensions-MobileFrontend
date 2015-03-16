@@ -16,6 +16,41 @@
       "revId": "ca0d4edbbb11addc70427eff5ca870e6a077cbfc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b7736dae",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-16T20:43:34Z",
+      "side": 1,
+      "message": "Probably better to set this as a template value explicitly outside rows",
+      "parentUuid": "6e7c4fa4_b4736bae",
+      "revId": "ca0d4edbbb11addc70427eff5ca870e6a077cbfc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b7a28df7",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-16T20:43:34Z",
+      "side": 1,
+      "message": "I\u0027m confused.. wgTitle? This should be the value returned by the API no?\nSee https://gerrit.wikimedia.org/r/#/c/185942/6/javascripts/modules/bannerImage/BannerImage.js",
+      "revId": "ca0d4edbbb11addc70427eff5ca870e6a077cbfc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
