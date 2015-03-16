@@ -34,6 +34,24 @@
       "revId": "d9e48543a88082db6d9eee6e6586ae8229751732",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0d580e8b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 654,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-16T22:27:50Z",
+      "side": 1,
+      "message": "Can we create a module with just one file, the template file? And use it in two different places?",
+      "parentUuid": "6e7c4fa4_fc323805",
+      "revId": "d9e48543a88082db6d9eee6e6586ae8229751732",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
