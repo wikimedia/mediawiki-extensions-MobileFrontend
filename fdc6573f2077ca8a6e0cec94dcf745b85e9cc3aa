@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_f9c55442",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-17T13:42:04Z",
+      "side": 1,
+      "message": "hmm? What would be a possible exception? That looks not really good, like we don\u0027t know, how to call a function without a possible exception :)",
+      "revId": "fdc6573f2077ca8a6e0cec94dcf745b85e9cc3aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_793384c0",
         "filename": "javascripts/modules/bannerImage/BannerImageRepository.js",
         "patchSetId": 5
