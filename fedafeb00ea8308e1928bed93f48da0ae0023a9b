@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_839f0fb9",
+        "filename": "javascripts/modules/quickLookup/QuickLookupDrawer.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-17T01:02:17Z",
+      "side": 1,
+      "message": "Needs a better description",
+      "revId": "fedafeb00ea8308e1928bed93f48da0ae0023a9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4380174b",
+        "filename": "less/modules/quickLookup.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-17T01:02:17Z",
+      "side": 1,
+      "message": "It seems like this will have the same problem as https://gerrit.wikimedia.org/r/#/c/197214/1/less/modules/references.less\n\nCould we add a FIXME here to combine these into a shared ruleset (maybe in drawer.less)?",
+      "revId": "fedafeb00ea8308e1928bed93f48da0ae0023a9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
