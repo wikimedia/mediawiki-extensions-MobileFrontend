@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6ab63fd9",
+        "filename": "includes/Resources.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1064,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-17T19:22:34Z",
+      "side": 1,
+      "message": "just remove messages if you don\u0027t use any :)",
+      "revId": "6fb73a254ceb30937a36a52a69eea0e1eb1ece11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8ac07b30",
+        "filename": "javascripts/modules/quickLookup/QuickLookupDrawer.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-17T19:22:34Z",
+      "side": 1,
+      "message": "doc?",
+      "revId": "6fb73a254ceb30937a36a52a69eea0e1eb1ece11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_caf43386",
+        "filename": "javascripts/modules/quickLookup/QuickLookupDrawer.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-17T19:22:34Z",
+      "side": 1,
+      "message": "shouldn\u0027t watchstarapi and watchstar only be loaded, if the modules are really needed (mw.loader.using, e.g.)?",
+      "revId": "6fb73a254ceb30937a36a52a69eea0e1eb1ece11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
