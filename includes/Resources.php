@@ -1049,6 +1049,24 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.quickLookup' => $wgMFResourceParsedMessageModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.drawers',
+			'mobile.toast',
+		),
+		'scripts' => array(
+			'javascripts/modules/quickLookup/QuickLookupDrawer.js',
+			'javascripts/modules/quickLookup/init.js',
+		),
+		'templates' => array(
+			'Drawer.hogan' => 'templates/modules/quickLookup/Drawer.hogan',
+		),
+		'styles' => array(
+			'less/modules/quickLookup.less',
+		),
+	),
+
 	'mobile.languages' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
@@ -1632,6 +1650,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.fontchanger',
 			'mobile.errorReport',
 			'mobile.otherProjects',
+			'mobile.quickLookup',
 		),
 		'scripts' => array(
 			'javascripts/modules/commonsCategory/init.js',
