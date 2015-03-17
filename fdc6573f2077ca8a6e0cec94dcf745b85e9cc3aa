@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_e4428810",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-17T16:15:12Z",
+      "side": 1,
+      "message": "I don\u0027t recall the exact message, but the API was giving some error. It may be related to my local installation. I just wanted to make sure that this function returns something even if the API request fails.",
+      "parentUuid": "6e7c4fa4_f9c55442",
+      "revId": "fdc6573f2077ca8a6e0cec94dcf745b85e9cc3aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_793384c0",
         "filename": "javascripts/modules/bannerImage/BannerImageRepository.js",
         "patchSetId": 5
