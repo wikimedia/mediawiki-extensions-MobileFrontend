@@ -848,7 +848,7 @@ class SkinMinerva extends SkinTemplate {
 		);
 
 		if ( $this->isAuthenticatedUser() ) {
-			$vars['wgMFIsLoggedInUserBlockedFromPage'] = $user->isBlockedFrom( $title );
+			$vars['wgMFIsLoggedInUserBlockedFromPage'] = $user->isBlockedFrom( $title, true );
 			$vars['wgMFExperiments'] = $config->get( 'MFExperiments' );
 		}
 
