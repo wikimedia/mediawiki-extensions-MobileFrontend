@@ -74,10 +74,18 @@
 				text-transform: uppercase;
 			}
 			.cancel {
+				@extraPadding: 1em;
 				cursor: pointer;
 				font-size: 0.8em;  // we want a smaller icon
-				right: @betaDrawerPadding;
+				// Compensate for the padding.
+				// Top and bottom margins are for the padding we're adding below.
+				// The right margin is for the 1em margin of icon:before
+				margin: -@extraPadding -@extraPadding -@extraPadding 0;
+				// Make the tappable area bigger. No need to add left and right paddings because
+				// the icon:before already has 1em margin on both sides
+				padding: @extraPadding 0;
 				position: absolute;
+				right: @betaDrawerPadding;
 				top: @betaDrawerPadding;
 			}
 		}
