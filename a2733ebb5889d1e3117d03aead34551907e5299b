@@ -51,6 +51,24 @@
       "revId": "a2733ebb5889d1e3117d03aead34551907e5299b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_aa4d37c9",
+        "filename": "tests/browser/features/talk.feature",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-17T19:36:30Z",
+      "side": 1,
+      "message": "the second one i don\u0027t understand, maybe i should re-read it in a quiet minute :/",
+      "parentUuid": "6e7c4fa4_c559cf05",
+      "revId": "a2733ebb5889d1e3117d03aead34551907e5299b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
