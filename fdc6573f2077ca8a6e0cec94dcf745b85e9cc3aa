@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_59d1e856",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-17T12:37:59Z",
+      "side": 1,
+      "message": "You could replace this with\n\n    $config \u003d $this-\u003egetMFConfig();",
+      "revId": "fdc6573f2077ca8a6e0cec94dcf745b85e9cc3aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_39ce6cba",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-17T12:37:59Z",
+      "side": 1,
+      "message": "No logging?",
+      "revId": "fdc6573f2077ca8a6e0cec94dcf745b85e9cc3aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_793384c0",
+        "filename": "javascripts/modules/bannerImage/BannerImageRepository.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-17T12:37:59Z",
+      "side": 1,
+      "message": "The original *Repository classes (MobileViewBannerImageRepository and PageImagesBannerImageRepository) implemented an interface – sorta, this is JavaScript after all – and as such, could be swapped out for each other. This class also follows the same interface and so could be swapped out for one of those interfaces.\n\nHowever, this class has three responsibilities, two of which it shouldn\u0027t: the #getImage function codifies the decision about which /strategy/ to use; and the #getImageFromAPI and #getImageFromConfigVariable methods are those strategies, i.e. they are both implementations of the Repository interface, which is highlighted by their names.\n\nNow, if you were to extract the #getImageFromAPI and #getImageFromConfigVariable methods into their own classes, e.g. APIBannerImageRepository and ConfigBannerImageRepository respectively then this class will be short and super sweet (easy to test).",
+      "revId": "fdc6573f2077ca8a6e0cec94dcf745b85e9cc3aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_acbed3cf",
+        "filename": "tests/qunit/modules/bannerImage/test_BannerImageRepository.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-17T12:37:59Z",
+      "side": 1,
+      "message": "What about when it\u0027s true?",
+      "revId": "fdc6573f2077ca8a6e0cec94dcf745b85e9cc3aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
