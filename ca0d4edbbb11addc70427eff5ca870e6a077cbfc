@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_2a14c79f",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-17T19:24:34Z",
+      "side": 1,
+      "message": "+1 (Like a link in the line of \"View Wikidata\" and \"Edit this information\" or as a single row? :))",
+      "parentUuid": "6e7c4fa4_b7736dae",
+      "revId": "ca0d4edbbb11addc70427eff5ca870e6a077cbfc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_b7a28df7",
         "filename": "javascripts/modules/infobox/Infobox.js",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2015-03-16T20:43:34Z",
       "side": 1,
       "message": "I\u0027m confused.. wgTitle? This should be the value returned by the API no?\nSee https://gerrit.wikimedia.org/r/#/c/185942/6/javascripts/modules/bannerImage/BannerImage.js",
+      "revId": "ca0d4edbbb11addc70427eff5ca870e6a077cbfc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6a815fc7",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-17T19:24:34Z",
+      "side": 1,
+      "message": "Oops, forgot to change this, was just for testing (my test pagename was the same as the commons category :P). I will change this with the next patchset :)",
+      "parentUuid": "6e7c4fa4_b7a28df7",
       "revId": "ca0d4edbbb11addc70427eff5ca870e6a077cbfc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
