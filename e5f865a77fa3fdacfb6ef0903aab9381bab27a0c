@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b5802ea1",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-18T22:48:10Z",
+      "side": 1,
+      "message": "Sorry, i just see it know: this seems to be pretty useless. I can name a link like i want, it hasn\u0027t have to do anything with the links target :/ instead of using the linktext i suggest to change it to use the target (href) and don\u0027t do an api request if the redlink class is set :)",
+      "revId": "e5f865a77fa3fdacfb6ef0903aab9381bab27a0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
