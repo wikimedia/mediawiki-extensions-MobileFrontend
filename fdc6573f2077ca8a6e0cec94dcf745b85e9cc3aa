@@ -124,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_3468a5f1",
+        "filename": "javascripts/modules/bannerImage/BannerImageRepository.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-18T18:02:25Z",
+      "side": 1,
+      "message": "How about I get rid of this class and create APIBannerImageRepository and ConfigBannerImageRepository instead?",
+      "parentUuid": "6e7c4fa4_793384c0",
+      "revId": "fdc6573f2077ca8a6e0cec94dcf745b85e9cc3aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_acbed3cf",
         "filename": "tests/qunit/modules/bannerImage/test_BannerImageRepository.js",
         "patchSetId": 5
