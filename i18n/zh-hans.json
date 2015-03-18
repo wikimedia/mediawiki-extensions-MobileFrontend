@@ -30,7 +30,8 @@
 			"Duolaimi",
 			"Gaoxuewei",
 			"御坂美琴",
-			"JLeow00"
+			"JLeow00",
+			"Hudafu"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -58,7 +59,7 @@
 	"mobile-frontend-changeslist-nocomment": "无编辑摘要",
 	"mobile-frontend-clear-search": "清除",
 	"mobile-frontend-contribution-summary": "{{GENDER:$1|[[Special:UserProfile/$1|$1]]}}的所有编辑",
-	"mobile-frontend-cookies-required": "Cookies需要切换成查阅模式。请启用后重试。",
+	"mobile-frontend-cookies-required": "需要Cookie以切换视图模式。请启用它们后重试。",
 	"mobile-frontend-copyright": "除非另有声明，本网站内容采用$1授权。",
 	"mobile-frontend-desc": "移动版前端",
 	"mobile-frontend-diffview-404-desc": "你请求的版本ID不存在。",
@@ -126,7 +127,7 @@
 	"mobile-frontend-editor-switch-editor": "转换编辑器",
 	"mobile-frontend-editor-tutorial-cancel": "不，谢谢",
 	"mobile-frontend-editor-tutorial-confirm": "开始编辑",
-	"mobile-frontend-editor-tutorial-summary": "尝试改进$1页面。不要害怕标记。",
+	"mobile-frontend-editor-tutorial-summary": "尝试改进$1页面。<br />不要害怕标记。",
 	"mobile-frontend-editor-unavailable": "移动版编辑目前不能在你的浏览器上使用。请尝试使用其他浏览器。",
 	"mobile-frontend-editor-unavailable-header": "编辑器不可用",
 	"mobile-frontend-editor-undo-unsupported": "撤销编辑操作尚不支持移动设备。",

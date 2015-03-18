@@ -1,10 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80"
+			"Amire80",
+			"Nepaboy"
 		]
 	},
+	"mobile-frontend-editor-edit": "सम्पादन",
 	"mobile-frontend-home-button": "घर",
+	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलीं",
+	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-sign-in-heading": "खाता मे प्रवेश करीं",
-	"mobile-frontend-sign-up-heading": "खाता खोलीं"
+	"mobile-frontend-sign-up-heading": "खाता खोलीं",
+	"mobile-frontend-view": "मोबाइल अवलोकन"
 }

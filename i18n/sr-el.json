@@ -23,7 +23,7 @@
 	"mobile-frontend-diffview-title": "Izmene",
 	"mobile-frontend-disable-images": "Onemogući slike na mobilnim stranicama",
 	"mobile-frontend-dismiss-notification": "skloni ovo obaveštenje",
-	"mobile-frontend-donate-image-anon": "$1 je potreban da bi ste videli ovu stranicu",
+	"mobile-frontend-donate-image-anon": "Prijavite se da bi ste videli ovu stranicu.",
 	"mobile-frontend-donate-image-heading": "Vaši skorašnji doprinosi",
 	"mobile-frontend-donate-image-login": "Slike na projektu {{SITENAME}} su donirane od strane ljudi poput vas.",
 	"mobile-frontend-donate-image-title": "Otpremanja",
