@@ -16,6 +16,24 @@
       "revId": "e5f865a77fa3fdacfb6ef0903aab9381bab27a0c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_154fa298",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-18T22:51:42Z",
+      "side": 1,
+      "message": "What about non-red links? How would I make an API request if I don\u0027t look at their titles? Or, are you just suggesting not to make a request only if we are dealing with red links?",
+      "parentUuid": "6e7c4fa4_b5802ea1",
+      "revId": "e5f865a77fa3fdacfb6ef0903aab9381bab27a0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
