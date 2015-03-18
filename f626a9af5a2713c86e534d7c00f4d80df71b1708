@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d995ea8b",
+        "filename": "tests/qunit/modules/editor/test_EditorApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 449,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-18T16:23:24Z",
+      "side": 0,
+      "message": "Would it be better to not delete this test but change it so that it behaves the same as when saved with changes?",
+      "revId": "f626a9af5a2713c86e534d7c00f4d80df71b1708",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
