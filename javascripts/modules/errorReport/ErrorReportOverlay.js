@@ -3,7 +3,8 @@
 	var ErrorReportOverlay,
 		Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
-		toast = M.require( 'toast' );
+		toast = M.require( 'toast' ),
+		skin = M.require( 'skin' );
 
 	/**
 	 * @class ErrorReportOverlay
@@ -28,7 +29,7 @@
 			} ],
 			placeHolder: mw.msg( 'mobile-frontend-errorreport-placeholder' ),
 			instructions: mw.msg( 'mobile-frontend-errorreport-instructions' ),
-			licenseMsg: mw.msg( 'mobile-frontend-editor-licensing', mw.config.get( 'wgMFLicenseLink' ) )
+			licenseMsg: skin.getLicenseMsg()
 		},
 		/**
 		 * @inheritdoc

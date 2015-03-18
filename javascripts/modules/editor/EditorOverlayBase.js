@@ -7,6 +7,7 @@
 		user = M.require( 'user' ),
 		settings = M.require( 'settings' ),
 		pageApi = M.require( 'pageApi' ),
+		skin = M.require( 'skin' ),
 		EditorOverlayBase;
 
 	/**
@@ -40,6 +41,8 @@
 		 * and a new one is displayed.
 		 * @cfg {String} defaults.switchMsg Label for button that allows the user to switch between
 		 * two different editing interfaces.
+		 * @cfg {String} defaults.licenseMsg Text and link of the license, under which this contribution will be
+		 * released to inform the user.
 		 */
 		defaults: $.extend( {}, Overlay.prototype.defaults, {
 			hasToolbar: false,
@@ -58,7 +61,8 @@
 			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
-			confirmMsg: mw.msg( 'mobile-frontend-editor-cancel-confirm' )
+			confirmMsg: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
+			licenseMsg: skin.getLicenseMsg()
 		} ),
 		/** @inheritdoc **/
 		templatePartials: {
@@ -156,25 +160,6 @@
 			// change the message to request a summary when not in article namespace
 			if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
 				options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
-			}
-			if ( mw.config.get( 'wgMFLicenseLink' ) ) {
-				// If terms of use is enabled, include it in the licensing message
-				// FIXME: cache this selector, it's used at least twice
-				if ( $( '#footer-places-terms-use' ).length > 0 ) {
-					options.licenseMsg = mw.msg(
-						'mobile-frontend-editor-licensing-with-terms',
-						mw.message(
-							'mobile-frontend-editor-terms-link',
-							$( '#footer-places-terms-use a' ).attr( 'href' )
-						).parse(),
-						mw.config.get( 'wgMFLicenseLink' )
-					);
-				} else {
-					options.licenseMsg = mw.msg(
-						'mobile-frontend-editor-licensing',
-						mw.config.get( 'wgMFLicenseLink' )
-					);
-				}
 			}
 			this.editCount = user.getEditCount();
 			this.isNewPage = options.isNewPage;

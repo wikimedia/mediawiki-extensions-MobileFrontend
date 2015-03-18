@@ -5,32 +5,18 @@
 		$talk = $( '.talk' ),
 		page = M.getCurrentPage(),
 		overlayManager = M.require( 'overlayManager' ),
-		context = M.require( 'context' );
+		context = M.require( 'context' ),
+		skin = M.require( 'skin' );
 
 	context.assertMode( [ 'beta', 'alpha', 'app' ] );
 
 	overlayManager.add( /^\/talk\/?(.*)$/, function ( id ) {
 		var result = $.Deferred(),
 			talkOptions = {
-				title: $talk.data( 'title' ) || mw.config.get( 'wgPageName' )
+				title: $talk.data( 'title' ) || mw.config.get( 'wgPageName' ),
+				licenseMsg: skin.getLicenseMsg()
 			};
 
-		// If terms of use is enabled, include it in the licensing message
-		if ( $( '#footer-places-terms-use' ).length > 0 ) {
-			talkOptions.licenseMsg = mw.msg(
-					'mobile-frontend-editor-licensing-with-terms',
-					mw.message(
-						'mobile-frontend-editor-terms-link',
-						$( '#footer-places-terms-use a' ).attr( 'href' )
-					).parse(),
-					mw.config.get( 'wgMFLicenseLink' )
-				);
-		} else {
-			talkOptions.licenseMsg = mw.msg(
-				'mobile-frontend-editor-licensing',
-				mw.config.get( 'wgMFLicenseLink' )
-			);
-		}
 		loader.loadModule( 'mobile.talk.overlays' ).done( function () {
 			var Overlay;
 			if ( id === 'new' ) {

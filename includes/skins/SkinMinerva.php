@@ -1097,9 +1097,9 @@ HTML;
 
 		// Generate the licensing text displayed in the footer of each page.
 		// See Skin::getCopyright for desktop equivalent.
-		$link = self::getLicenseLink( 'footer' );
-		if ( $link ) {
-			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $link )->text();
+		$license = self::getLicense( 'footer' );
+		if ( $license ) {
+			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $license['link'] )->text();
 		} else {
 			$licenseText = '';
 		}
@@ -1123,7 +1123,7 @@ HTML;
 	 * @param array $attribs An associative array of extra HTML attributes to add to the link
 	 * @return string
 	 */
-	public static function getLicenseLink( $context, $attribs = array() ) {
+	public static function getLicense( $context, $attribs = array() ) {
 		$config = MobileContext::singleton()->getConfig();
 		$rightsPage = $config->get( 'RightsPage' );
 		$rightsUrl = $config->get( 'RightsUrl' );
@@ -1145,6 +1145,7 @@ HTML;
 				'Creative Commons Zero (Public Domain)' => 'CC0 (Public Domain)',
 				'GNU Free Documentation License 1.3 or later' => 'GFDL 1.3 or later',
 			);
+
 			if ( isset( $commonLicenses[$rightsText] ) ) {
 				$rightsText = $commonLicenses[$rightsText];
 			}
@@ -1163,7 +1164,15 @@ HTML;
 		// Allow other extensions (for example, WikimediaMessages) to override
 		Hooks::run( 'MobileLicenseLink', array( &$link, $context, $attribs ) );
 
-		return $link;
+		// for plural support we need the info, if there is one or more licenses used in the license text
+		// this check if very simple and works on the base, that more than one license will
+		// use "and" as a connective
+		$isPlural = ( strpos( $rightsText, wfMessage( 'and' )->text() ) === false ? 1 : 2 );
+
+		return array(
+			'link' => $link,
+			'plural' => $isPlural
+		);
 	}
 
 	/**

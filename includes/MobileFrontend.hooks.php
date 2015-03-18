@@ -357,6 +357,8 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 
+		// Get the licensing agreement that is displayed in the uploading interface.
+		$wgMFUploadLicense = SkinMinerva::getLicense( 'upload' );
 		$vars += array(
 			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
 			'wgMFThumbnailSizes' => array(
@@ -365,11 +367,8 @@ class MobileFrontendHooks {
 			),
 			'wgMFContentNamespace' => $config->get( 'MFContentNamespace' ),
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
-
-			// Set the licensing agreement that is displayed in the editor.
-			'wgMFLicenseLink' => SkinMinerva::getLicenseLink( 'editor' ),
-			// Set the licensing agreement that is displayed in the uploading interface.
-			'wgMFUploadLicenseLink' => SkinMinerva::getLicenseLink( 'upload' ),
+			'wgMFLicense' => SkinMinerva::getLicense( 'editor' ),
+			'wgMFUploadLicenseLink' => $wgMFUploadLicense['link'],
 		);
 
 		// add CodeMirror specific things, if it is installed (for CodeMirror editor)
@@ -377,6 +376,7 @@ class MobileFrontendHooks {
 			$vars += CodeMirrorHooks::getGlobalVariables( MobileContext::singleton() );
 			$vars['wgMFCodeMirror'] = true;
 		}
+
 		return true;
 	}
 

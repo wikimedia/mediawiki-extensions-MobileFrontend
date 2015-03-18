@@ -615,9 +615,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/talk.js',
 		),
 		'messages' => array(
-			// for talk.js
 			'mobile-frontend-talk-overlay-header',
 			'mobile-frontend-talk-add-overlay-submit',
+			'mobile-frontend-editor-licensing',
+			'mobile-frontend-editor-licensing-with-terms',
 		),
 		'group' => 'other'
 	),
@@ -701,8 +702,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// @todo FIXME: Gets loaded twice if editor and talk both loaded.
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-cancel-confirm',
-			'mobile-frontend-editor-licensing',
-			'mobile-frontend-editor-licensing-with-terms',
 			'mobile-frontend-editor-error',
 			'mobile-frontend-editor-error-conflict',
 			'mobile-frontend-editor-terms-link',
