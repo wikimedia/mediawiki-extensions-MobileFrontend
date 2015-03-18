@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_9475f92e",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-18T17:46:10Z",
+      "side": 1,
+      "message": "OK. Cool. Do you think the service should handle that case or the client?",
+      "parentUuid": "6e7c4fa4_148a491c",
+      "revId": "fdc6573f2077ca8a6e0cec94dcf745b85e9cc3aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_793384c0",
         "filename": "javascripts/modules/bannerImage/BannerImageRepository.js",
         "patchSetId": 5
