@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_eea56cb2",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-19T17:23:05Z",
+      "side": 1,
+      "message": "Any reason why you chose 35%? 50% seems in line with what the design team wanted for the reference drawer.",
+      "revId": "8fca06d1bd6828f5e144db5922caddaa77f04fdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4ec7c067",
+        "filename": "less/modules/mediaViewer.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-19T17:23:05Z",
+      "side": 1,
+      "message": "Do you think it would be better if you changed \u0027scroll\u0027 to \u0027auto\u0027? That way the user won\u0027t see the scrollbar when the text is not long.",
+      "revId": "8fca06d1bd6828f5e144db5922caddaa77f04fdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
