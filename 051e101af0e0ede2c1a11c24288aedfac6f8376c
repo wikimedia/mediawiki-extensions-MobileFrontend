@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_2c24cc06",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 759,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-19T20:09:22Z",
+      "side": 1,
+      "message": "fu**, you\u0027re right :O thanks!",
+      "parentUuid": "6e7c4fa4_d1fa95d9",
+      "revId": "051e101af0e0ede2c1a11c24288aedfac6f8376c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_d1d13559",
         "filename": "javascripts/modules/talk/talk.js",
         "patchSetId": 7
