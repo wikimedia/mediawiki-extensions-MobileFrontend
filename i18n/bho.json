@@ -11,5 +11,7 @@
 	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-sign-in-heading": "खाता मे प्रवेश करीं",
 	"mobile-frontend-sign-up-heading": "खाता खोलीं",
-	"mobile-frontend-view": "मोबाइल अवलोकन"
+	"mobile-frontend-view": "मोबाइल अवलोकन",
+	"mobile-frontend-view-desktop": "डेस्कटॉप",
+	"mobile-frontend-view-mobile": "मोबाइल"
 }

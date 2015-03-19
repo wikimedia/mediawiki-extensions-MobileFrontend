@@ -4,5 +4,21 @@
 			"VASANTH S.N."
 		]
 	},
-	"mobile-frontend-editor-edit": "ಸಂಪಾದನೆ ಮಲ್ಪುಲೆ"
+	"mobile-frontend-editor-edit": "ಸಂಪಾದನೆ ಮಲ್ಪುಲೆ",
+	"mobile-frontend-home-button": "ನಿಲೆ",
+	"mobile-frontend-language-article-heading": "ನನೊಂಜಿ ಭಾಷೆಡ್ ಓದುಲೆ",
+	"mobile-frontend-main-menu-button-tooltip": "ಮುಖ್ಯ ಮೆನು ತೋಜಾಲೆ",
+	"mobile-frontend-main-menu-login": "ಲಾಗಿನ್ ಆಲೆ",
+	"mobile-frontend-main-menu-nearby": "ಕೈತಲ್‍ದ",
+	"mobile-frontend-main-menu-settings": "ವ್ಯವಸ್ಥೆಲು",
+	"mobile-frontend-main-menu-watchlist": "ವೀಕ್ಷಣಾಪಟ್ಟಿ",
+	"mobile-frontend-placeholder": "{{SITENAME}}ನ್ ನಾಡ್’ಲೆ",
+	"mobile-frontend-privacy-link-text": "ಗೋಪ್ಯತೆ",
+	"mobile-frontend-random-button": "ಇಂಚನೆ ಒಂಜಿ ಪುಟ",
+	"mobile-frontend-terms-text": "ಉಪಯೋಗದ ನಿಬಂಧನೆಲು",
+	"mobile-frontend-view": "ಮೊಬೈಲ್ ತೂಪಿನ",
+	"mobile-frontend-view-desktop": "ಡೆಸ್ಕ್‌ಟಾಪ್",
+	"mobile-frontend-view-mobile": "ಮೊಬೈಲ್",
+	"tag-mobile_edit": "ಮೊಬೈಲ್ ಸಂಪಾದನೆ",
+	"tag-mobile_web_edit": "ಮೊಬೈಲ್ ವೆಬ್ ಸಂಪಾದನೆ"
 }
