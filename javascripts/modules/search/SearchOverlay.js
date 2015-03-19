@@ -107,8 +107,12 @@
 				$clear.toggle( self.$input.val() !== '' );
 			} );
 
+			// Hide the clear button if the search input is empty
+			if ( self.$input.val() === '' ) {
+				$clear.hide();
+			}
 			// initialize the button that clears the search field
-			$clear.hide().on( 'click', function () {
+			$clear.on( 'click', function () {
 				self.$input.val( '' ).focus();
 				self.performSearch();
 				$clear.hide();
