@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d1fa95d9",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 759,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-19T18:09:53Z",
+      "side": 1,
+      "message": "shouldn\u0027t you add \u0027talk\u0027 class here? Possibly other mw button classes too?",
+      "revId": "051e101af0e0ede2c1a11c24288aedfac6f8376c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d1d13559",
+        "filename": "javascripts/modules/talk/talk.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-19T18:09:53Z",
+      "side": 1,
+      "message": "This code is creating a redundant talk button in stable. See my comment in SkinMinerva.php",
+      "revId": "051e101af0e0ede2c1a11c24288aedfac6f8376c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
