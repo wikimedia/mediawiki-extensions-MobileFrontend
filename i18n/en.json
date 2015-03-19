@@ -310,6 +310,7 @@
 	"mobile-frontend-talk-topic-error-permission": "The topic can't be added. You don't have the permission to edit pages.",
 	"mobile-frontend-talk-topic-error-spam": "The topic was refused because it contained a spam fragment.",
 	"mobile-frontend-talk-topic-error-badtoken": "There was an error on the server. Your edit can't be saved. Try reloading this page.",
+	"mobile-frontend-talk-topic-wait": "Saving your new topic, please wait.",
 	"mobile-frontend-terms-text": "Terms of Use",
 	"mobile-frontend-terms-url": "",
 	"mobile-frontend-thanked-notice": "$1 was told that you liked {{GENDER:$2|his|her|their}} edit.",

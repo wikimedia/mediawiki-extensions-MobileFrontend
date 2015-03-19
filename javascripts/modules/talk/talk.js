@@ -33,7 +33,7 @@
 		}
 		loader.loadModule( 'mobile.talk.overlays' ).done( function () {
 			var Overlay;
-			if (  id === 'new' ) {
+			if ( id === 'new' ) {
 				Overlay = M.require( 'modules/talk/TalkSectionAddOverlay' );
 			} else if ( id ) {
 				talkOptions.id = id;

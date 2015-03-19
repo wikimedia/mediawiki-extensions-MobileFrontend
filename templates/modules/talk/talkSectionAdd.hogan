@@ -1,9 +1,16 @@
-<div class="save-panel panel">
-	<p class="license">{{{licenseMsg}}}</p>
+<div class="overlay-header-container position-fixed">
+	{{>contentHeader}}
+	{{>saveHeader}}
 </div>
-<div class="panel">
-	<input type="text" class="summary" placeholder="{{topicTitlePlaceHolder}}">
-</div>
-<div class="panel">
-	<textarea class="wikitext-editor" cols="40" rows="10" placeholder="{{topicContentPlaceHolder}}"></textarea>
+
+<div class="overlay-content">
+	<div class="save-panel panel">
+		<p class="license">{{{licenseMsg}}}</p>
+	</div>
+	<div class="panel">
+		<input type="text" class="summary" placeholder="{{topicTitlePlaceHolder}}">
+	</div>
+	<div class="panel">
+		<textarea class="wikitext-editor" cols="40" rows="10" placeholder="{{topicContentPlaceHolder}}"></textarea>
+	</div>
 </div>

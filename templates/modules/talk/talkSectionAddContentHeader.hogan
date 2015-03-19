@@ -1,4 +1,4 @@
-<div class="overlay-header initial-header hideable">
+<div class="overlay-header initial-header save-header hideable">
 	<ul>
 		<li>{{{backButton}}}</li>
 	</ul>

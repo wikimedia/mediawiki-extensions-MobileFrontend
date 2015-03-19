@@ -107,8 +107,7 @@
 				self = this;
 
 			// show the loading spinner and disable the safe button
-			// FIXME: Don't call a private method that is outside the class.
-			this._showHidden( '.saving-header' );
+			this.showHidden( '.saving-header' );
 
 			// add wikitext to add to the page
 			$.each( $( '.mw-ui-progressive' ), function () {
@@ -129,8 +128,7 @@
 					M.emit( 'category-added' );
 					window.location.hash = '#/categories';
 				} ).fail( function () {
-					// FIXME: Don't call a private method that is outside the class.
-					self._showHidden( '.initial-header' );
+					self.showHidden( '.initial-header' );
 					self.$safeButton.prop( 'disabled', false );
 					// FIXME: Should be a better error message
 					toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), 'toast error' );
