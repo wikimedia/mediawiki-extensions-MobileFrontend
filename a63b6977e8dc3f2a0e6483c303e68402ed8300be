@@ -16,6 +16,23 @@
       "revId": "a63b6977e8dc3f2a0e6483c303e68402ed8300be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8ec3988c",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-19T17:10:42Z",
+      "side": 1,
+      "message": "Further to Bmansurov\u0027s comment about generalisation, how about this:\n\n$( \u0027body\u0027 ).on( \u0027click\u0027, \u0027[data-event-name]\u0027, function ( ev ) {\n    eventName \u003d $( ev.target ).data( \u0027event-name\u0027 );\n    schema.futureLog( /* ... */ );\n} );\n\nThis would mean that elements generated on the server and in the browser would automatically be handled. Whaddya think?",
+      "revId": "a63b6977e8dc3f2a0e6483c303e68402ed8300be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
