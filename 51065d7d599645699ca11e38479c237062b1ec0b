@@ -16,6 +16,24 @@
       "revId": "51065d7d599645699ca11e38479c237062b1ec0b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0e330860",
+        "filename": "javascripts/modules/tutorials/ContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-19T17:36:29Z",
+      "side": 1,
+      "message": "I agree this was not the best solution, but once the user closes the tutorial, the code stops running too. Any ideas how we can make it better?",
+      "parentUuid": "6e7c4fa4_eed9ec2c",
+      "revId": "51065d7d599645699ca11e38479c237062b1ec0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
