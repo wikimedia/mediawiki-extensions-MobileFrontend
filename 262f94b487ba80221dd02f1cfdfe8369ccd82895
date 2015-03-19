@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f1647147",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-19T18:42:57Z",
+      "side": 1,
+      "message": "So apparently, the api.getThumb function above alters the .details div height after this code is run (because it takes time to get the thumbnail). Thus at the time your code runs, the height of \u0027.details\u0027 is 0. I would suggest creating a helper function whose body is your code and running that function inside api.getThumb and also inside _positionImage. I also think you\u0027ll have to run your function before calculating the detailsHeight in _positionImage (detailsHeight \u003d !this.$details.is( \u0027:visible\u0027 ) ? 0 : this.$details.oute\nrHeight(),)",
+      "revId": "262f94b487ba80221dd02f1cfdfe8369ccd82895",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
