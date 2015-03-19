@@ -130,10 +130,6 @@
 
 			options = options || {};
 
-			if ( !this.hasChanged ) {
-				throw new Error( 'No changes to save' );
-			}
-
 			/**
 			 * Save content. Make an API request.
 			 * @ignore

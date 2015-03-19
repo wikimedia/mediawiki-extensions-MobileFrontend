@@ -80,7 +80,7 @@
 		assert.ok( !doneSpy.called, 'don\'t call done' );
 	} );
 
-	QUnit.test( '#save, success', 2, function ( assert ) {
+	QUnit.test( '#save, success', 3, function ( assert ) {
 		var editorApi = new EditorApi( {
 			title: 'test',
 			sectionId: 1
@@ -96,6 +96,7 @@
 
 		editorApi.getContent();
 		editorApi.setContent( 'section 1' );
+		assert.strictEqual( editorApi.hasChanged, true, 'hasChanged is true' );
 		editorApi.save( {
 			summary: 'summary'
 		} ).done( function () {
@@ -452,14 +453,33 @@
 			sectionId: 1
 		} );
 
-		assert.throws(
-			function () {
-				editorApi.save();
-			},
-			/no changes/i,
-			'throw an error'
-		);
-		assert.ok( !editorApi.getToken.called, 'don\'t get the token' );
+		this.sandbox.stub( editorApi, 'post' ).returns( $.Deferred().resolve(
+			{
+				edit: {
+					result: 'Success'
+				}
+			}
+		) );
+
+		editorApi.getContent();
+		editorApi.setContent( 'section' );
+		assert.strictEqual( editorApi.hasChanged, false, 'hasChanged is false' );
+		editorApi.save( {
+			summary: 'summary'
+		} ).done( function () {
+			assert.ok( editorApi.post.calledWith( {
+				action: 'edit',
+				title: 'test',
+				section: 1,
+				text: 'section',
+				summary: 'summary',
+				captchaid: undefined,
+				captchaword: undefined,
+				token: 'fake token',
+				basetimestamp: '2013-05-15T00:30:26Z',
+				starttimestamp: '2013-05-15T00:30:26Z'
+			} ), 'save first section' );
+		} );
 	} );
 
 	QUnit.test( '#getPreview', 2, function ( assert ) {
