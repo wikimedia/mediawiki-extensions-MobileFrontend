@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_eed9ec2c",
+        "filename": "javascripts/modules/tutorials/ContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-19T17:34:36Z",
+      "side": 1,
+      "message": "This is super wasteful. We shouldn\u0027t be running this code every second.",
+      "revId": "51065d7d599645699ca11e38479c237062b1ec0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
