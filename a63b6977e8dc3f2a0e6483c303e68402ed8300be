@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3b7ac81f",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-03-19T16:14:43Z",
+      "side": 1,
+      "message": "This could be \u0027#mw-mf-page-left [data-event-name]\u0027. That way you don\u0027t need the if statement.",
+      "revId": "a63b6977e8dc3f2a0e6483c303e68402ed8300be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
