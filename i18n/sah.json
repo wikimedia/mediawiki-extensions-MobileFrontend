@@ -42,5 +42,6 @@
 	"mobile-frontend-view-desktop": "Остуол көмпүүтэрэ",
 	"mobile-frontend-view-mobile": "Мобиил",
 	"tag-mobile_edit": "Мобиилаттан уларытыы",
-	"tag-mobile_web_edit": "Мобиил барылын нөҥүө уларытыы"
+	"tag-mobile_web_edit": "Мобиил барылын нөҥүө уларытыы",
+	"mobile-frontend-pageaction-edit-tooltip": "Сирэй сүрүн салаатын уларытыы."
 }
