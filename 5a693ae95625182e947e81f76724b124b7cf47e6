@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_b16a79af",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-19T18:00:02Z",
+      "side": 1,
+      "message": "hmm, damn :D",
+      "parentUuid": "6e7c4fa4_7bd7e0c4",
+      "revId": "5a693ae95625182e947e81f76724b124b7cf47e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_bb9b381a",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2015-03-19T16:30:40Z",
       "side": 1,
       "message": "I prefer boolean variables to be phrased like \"isPlural\". What do you think?",
+      "revId": "5a693ae95625182e947e81f76724b124b7cf47e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_31474952",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1136,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-19T18:00:02Z",
+      "side": 1,
+      "message": "i was unsure, if $plural is the right name for this var, so i\u0027m happy with any alternative :D And iirc, booleans are already prefixed with is in MF-repo, so +1 and Done :)",
+      "parentUuid": "6e7c4fa4_bb9b381a",
       "revId": "5a693ae95625182e947e81f76724b124b7cf47e6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
