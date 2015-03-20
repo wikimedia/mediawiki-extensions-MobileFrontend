@@ -350,7 +350,10 @@
 
 			this.$( '.spinner' ).show();
 			this.api.getClaims().done( function ( claims ) {
-				var rows, isEmptyInfobox = true;
+				var rows,
+					isEmptyInfobox = true,
+					commonsCategory = mw.config.get( 'wgWikiBasePropertyConfig' ).commonsCategory;
+
 				options = $.extend( options, self.getDefaultsFromClaims( claims ) );
 				if ( options.rows ) {
 					rows = options.rows;
@@ -374,6 +377,11 @@
 						row.isEmpty = true;
 					}
 				} );
+
+				// check, if the wikidata item has a commons category and add the link to it
+				if ( claims.entities.hasOwnProperty( commonsCategory ) ) {
+					options.commonsLink = '#/commons-category/' + claims.entities[commonsCategory][0].mainsnak.datavalue.value;
+				}
 
 				options.isEmptyInfobox = isEmptyInfobox;
 				self._mapLabels( rows ).done( function ( rows ) {
