@@ -97,7 +97,7 @@
 	"mobile-frontend-editor-switch-editor": "Switch editor",
 	"mobile-frontend-editor-tutorial-cancel": "No, thanks",
 	"mobile-frontend-editor-tutorial-confirm": "Start editing",
-	"mobile-frontend-editor-tutorial-summary": "Try improving the $1 page.<br/>Don't be scared of markup.",
+	"mobile-frontend-editor-tutorial-summary": "Try improving the $1 page.<br />Don't be scared of markup.",
 	"mobile-frontend-editor-unavailable": "Mobile editing is not currently available on your browser. Please try a different browser.",
 	"mobile-frontend-editor-unavailable-header": "Editor unavailable",
 	"mobile-frontend-editor-undo-unsupported": "Undo is not currently supported on mobile devices.",
