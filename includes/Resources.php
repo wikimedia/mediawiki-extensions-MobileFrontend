@@ -1593,7 +1593,12 @@ $wgMinervaBootstrapModules = array(
 			'mobile.modifiedBar',
 			'mobile.mainMenu',
 			'mobile.browser',
-			'mobile.modules',
+			// 'mobile.oo' rather than 'mobile.modules' is need because lastEdited/init.js listens
+			// to an event, thus needs eventemitter.js to be loaded before it. Feel free to swap
+			// 'mobile.oo' below with 'mobile.modules' once none of the script files below need
+			// to use eventemitter.js, for example when the last edited bar is moved to the bottom
+			// of the page.
+			'mobile.oo',
 			'mobile.context',
 		),
 		'scripts' => array(
