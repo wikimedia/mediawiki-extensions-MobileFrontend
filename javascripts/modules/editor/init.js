@@ -2,11 +2,9 @@
 
 	var
 		settings = M.require( 'settings' ),
-		util = M.require( 'util' ),
 		router = M.require( 'router' ),
 		overlayManager = M.require( 'overlayManager' ),
 		loader = M.require( 'loader' ),
-		query = util.query,
 		Icon = M.require( 'Icon' ),
 		disabledEditIcon = new Icon( {
 			name: 'edit'
@@ -126,7 +124,7 @@
 	function setupEditor( page ) {
 		var isNewPage = page.options.id === 0;
 
-		if ( query.undo ) {
+		if ( mw.util.getParamValue( 'undo' ) ) {
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
 
@@ -139,7 +137,7 @@
 					isAnon: user.isAnon(),
 					isNewPage: isNewPage,
 					isNewEditor: user.getEditCount() === 0,
-					oldId: query.oldid,
+					oldId: mw.util.getParamValue( 'oldid' ),
 					funnel: funnel || 'article',
 					// FIXME: cache this selector, it's used more than once
 					contentLang: $( '#content' ).attr( 'lang' ),
