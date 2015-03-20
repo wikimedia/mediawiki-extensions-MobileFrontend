@@ -46,7 +46,7 @@
 	"mobile-frontend-categories-search": "Placeholder text for 'add category' function.\n{{Identical|Search category}}",
 	"mobile-frontend-categories-nomatch": "Messages used to inform the user, that no categories were found for the search query.",
 	"mobile-frontend-categories-nodata": "Error message to show, that there aren't categories marked for save with the suggestion to add one.",
-	"mobile-frontend-categories-summary": "Summary text used when new categories get saved.",
+	"mobile-frontend-categories-summary": "Summary text used when new categories get saved.\n{{Identical|Add category}}",
 	"mobile-frontend-categories-add-heading": "A heading saying for what page categories can be added. All text should be wrapped in a STRONG tag except the page title itself.\n\nParameters:\n* $1 - page title",
 	"mobile-frontend-categories-add-wait": "Text that displays while categories are saved.\nSee also {{msg-mw|mobile-frontend-editor-wait}}",
 	"mobile-frontend-categories-normal": "Link message to switch to non-hidden categories.\nSee also {{msg-mw|mobile-frontend-categories-hidden}}",

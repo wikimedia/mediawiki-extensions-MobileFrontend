@@ -340,6 +340,7 @@
 	"mobile-frontend-talk-topic-error-permission": "主题不能添加。您没有权限编辑讨论页。",
 	"mobile-frontend-talk-topic-error-spam": "此主题被拒绝，因为它包含破坏性片段内容。",
 	"mobile-frontend-talk-topic-error-badtoken": "服务器出现一个错误，您的编辑未能保存。请尝试重新加载此页面。",
+	"mobile-frontend-talk-topic-wait": "正在保存您的话题，请等待。",
 	"mobile-frontend-terms-text": "使用条款",
 	"mobile-frontend-thanked-notice": "$1已被告知你喜欢{{GENDER:$2|他|她|他们}}的编辑。",
 	"mobile-frontend-user-account": "用户账户",

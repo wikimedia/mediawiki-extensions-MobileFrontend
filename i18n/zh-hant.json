@@ -24,16 +24,16 @@
 	"beta-feature-minerva": "開啟手機版外觀 ({{int:skinname-minerva}}) 於電腦版",
 	"beta-feature-minerva-description": "使手機裝置外觀可於電腦版偏好設定 \"{{int:prefs-rendering}}\" 的外觀做選擇。",
 	"mobile-frontend-account-create-captcha-placeholder": "輸入確認碼",
-	"mobile-frontend-account-create-email-placeholder": "電子郵件位址 (選填)",
+	"mobile-frontend-account-create-email-placeholder": "電子郵件地址 (選填)",
 	"mobile-frontend-account-create-submit": "註冊",
 	"mobile-frontend-app-title": "手機應用程式",
 	"mobile-frontend-back-to-top-of-section": "返回前一章節",
 	"mobile-frontend-categories-heading": "<strong>分類</strong>",
 	"mobile-frontend-categories-subheading": "以頁面屬於以下分類：",
 	"mobile-frontend-categories-nocat": "此頁面不屬於任何分類。",
-	"mobile-frontend-categories-add": "增加分類",
+	"mobile-frontend-categories-add": "新增分類",
 	"mobile-frontend-categories-search": "搜尋分類",
-	"mobile-frontend-categories-summary": "已添加分類",
+	"mobile-frontend-categories-summary": "已新增分類",
 	"mobile-frontend-changeslist-ip": "匿名使用者",
 	"mobile-frontend-changeslist-nocomment": "無編輯摘要",
 	"mobile-frontend-clear-search": "清除",
@@ -377,5 +377,5 @@
 	"apihelp-parse-param-mainpage": "套用手機首頁轉換。",
 	"mobile-frontend-donate-button-label": "捐助",
 	"mobile-frontend-meta-data-issues-categories": "關於此分類",
-	"mobile-frontend-loading-message": "正在載入…"
+	"mobile-frontend-loading-message": "讀取中…"
 }

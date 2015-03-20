@@ -6,7 +6,8 @@
 			"Reedy",
 			"Robotukas11",
 			"Vogone",
-			"Hugo.arg"
+			"Hugo.arg",
+			"Pofka"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Peršokti atgal sekcija",
@@ -31,6 +32,8 @@
 	"mobile-frontend-last-modified-date": "Paskutinį sykį keistas $1 $2",
 	"mobile-frontend-logged-out": "Neprisijungta",
 	"mobile-frontend-login": "Prisijungti",
+	"mobile-frontend-main-menu": "Pagrindinis meniu",
+	"mobile-frontend-main-menu-back": "Grįžti atgal",
 	"mobile-frontend-main-menu-account-create": "Sukurti paskyrą",
 	"mobile-frontend-main-menu-button-tooltip": "Atverti pagrindinį meniu",
 	"mobile-frontend-main-menu-login": "Prisijungti",

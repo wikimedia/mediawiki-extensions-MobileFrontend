@@ -2,20 +2,29 @@
 	"@metadata": {
 		"authors": [
 			"Ilnur efende",
-			"Ильнар"
+			"Ильнар",
+			"Derslek"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "Бер бүлеккә артка",
 	"mobile-frontend-copyright": "Текст <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензиясе шартларында ачык, махсус очракларда өстәмә шартлар кулланыла ала. Күбрәк <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Условия использования</a> кара. «{{SITENAME}}» — <a href='http://www.wikimediafoundation.org/'>«Викимедиа фонды»</a> табышсыз оешманың теркәлгән сәүдә маркасы.",
 	"mobile-frontend-desc": "Мобиль интерфейс",
+	"mobile-frontend-editor-edit": "Үзгәртү",
 	"mobile-frontend-featured-article": "Көннең сайланган мәкаләсе",
 	"mobile-frontend-home-button": "Өйгә",
 	"mobile-frontend-login": "Керү",
+	"mobile-frontend-main-menu-button-tooltip": "Баш меню ачарга",
 	"mobile-frontend-main-menu-logout": "Чыгу",
+	"mobile-frontend-main-menu-nearby": "Якында",
+	"mobile-frontend-main-menu-settings": "Көйләнмәләр",
+	"mobile-frontend-main-menu-watchlist": "Күзәтү исемлегеv",
+	"mobile-frontend-privacy-link-text": "Приватлык",
 	"mobile-frontend-random-button": "Очраклы",
 	"mobile-frontend-regular-site": "Сәхифәне гади {{SITENAME}} сәхифәсендә карау",
 	"mobile-frontend-search-submit": "Күчү",
 	"mobile-frontend-sign-in-heading": "Керү",
+	"mobile-frontend-terms-text": "Куллану шартлары",
 	"mobile-frontend-view": "Мобиль юрама",
+	"mobile-frontend-view-mobile": "Мобиль",
 	"mobile-frontend-watchlist-cta-button-login": "Керү"
 }

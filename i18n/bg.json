@@ -32,10 +32,13 @@
 	"mobile-frontend-featured-article": "Избрана статия на деня",
 	"mobile-frontend-footer-contact": "Контакт",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "{{SITENAME}} се създава от хора като вас.",
+	"mobile-frontend-generic-login-action": "Влезте за да допринесете.",
 	"mobile-frontend-home-button": "Начало",
 	"mobile-frontend-images-status": "Изображения",
 	"mobile-frontend-language-article-heading": "Прочитане на друг език",
 	"mobile-frontend-language-site-choose": "Избиране на език:",
+	"mobile-frontend-last-modified-date": "Последна промяна на страницата: в $2, на $1",
 	"mobile-frontend-login": "Влизане",
 	"mobile-frontend-main-menu-account-create": "Създаване на сметка",
 	"mobile-frontend-main-menu-button-tooltip": "Отвори главното меню",
@@ -67,9 +70,12 @@
 	"mobile-frontend-username": "Потребителско име:",
 	"mobile-frontend-username-placeholder": "Потребителско име",
 	"mobile-frontend-view": "Мобилен изглед",
+	"mobile-frontend-view-desktop": "Настолна",
+	"mobile-frontend-view-mobile": "Мобилна",
 	"mobile-frontend-watchlist-cta-button-login": "Влизане",
 	"mobile-frontend-watchlist-cta-button-signup": "Регистриране",
 	"mobile-frontend-watchlist-filter-all": "Всички",
 	"mobile-frontend-watchlist-filter-other": "Други",
-	"mobile-frontend-watchlist-filter-talk": "Беседа"
+	"mobile-frontend-watchlist-filter-talk": "Беседа",
+	"tag-mobile_edit": "Редакция чрез мобилно устройство"
 }
