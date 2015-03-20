@@ -4,15 +4,7 @@
  *
  * @file
  * @ingroup Extensions
- * @author Arthur Richards
- * @author Jon Robson
- * @author Juliusz Gonera
- * @author Max Semenik
- * @author Patrick Reilly
- * @author Ryan Kaldari
- * @author Florian Schmidt
- * @author Rob Moen
- * @author Sam Smith
+ * @author See CREDITS.mediawiki
  * @licence GNU General Public Licence 2.0 or later
  */
 
@@ -37,6 +29,7 @@ define( 'MOBILEFRONTEND', 'MobileFrontend' );
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'MobileFrontend',
+	'version' => '1.0.0',
 	'author' => array( 'Patrick Reilly', 'Max Semenik', 'Jon Robson', 'Arthur Richards',
 		'Brion Vibber', 'Juliusz Gonera', 'Ryan Kaldari', 'Florian Schmidt', 'Rob Moen',
 		'Sam Smith' ),
