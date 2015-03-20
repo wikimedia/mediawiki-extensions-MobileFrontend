@@ -640,7 +640,7 @@ class MobileFrontendHooks {
 		// and $wgMFNoindexPages needs to be true
 		// add alternate link to desktop sites - bug T91183
 		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
-			$desktopUrl = $context->getTitle()->getFullUrl();
+			$desktopUrl = $title->getFullUrl();
 			$out->addHeadItem(
 				'mobilelink',
 				Html::element(
@@ -666,7 +666,7 @@ class MobileFrontendHooks {
 					'link',
 					array(
 						'rel' => 'canonical',
-						'href' => $context->getTitle()->getFullUrl(),
+						'href' => $title->getFullUrl(),
 					)
 				)
 			);
