@@ -214,7 +214,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-with-user-just-now',
 		),
 	),
-	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
+	'mediawiki.template.hogan' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.template',
 		),
@@ -224,6 +224,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	// Back-compat alias
+	// FIXME: Remove when templates in core.
+	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mediawiki.template.hogan',
+		),
+	),
 	'mobile.pagelist.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.watchstar',
