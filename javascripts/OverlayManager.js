@@ -217,14 +217,18 @@
 		 * which resolves to an overlay.
 		 */
 		add: function ( route, factory ) {
-			var entry = {
-				route: route,
-				factory: factory
-			};
+			var self = this,
+				entry = {
+					route: route,
+					factory: factory
+				};
 
 			this.entries[route] = entry;
-			// check if overlay should be shown for the current path
-			this._processMatch( this._matchRoute( this.router.getPath(), entry ) );
+			// Check if overlay should be shown for the current path.
+			// The DOM must fully load before we can show the overlay because Overlay relies on it.
+			$( function () {
+				self._processMatch( self._matchRoute( self.router.getPath(), entry ) );
+			} );
 		},
 
 		/**
