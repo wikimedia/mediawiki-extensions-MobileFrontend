@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_fddaf21f",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-21T19:13:41Z",
+      "side": 1,
+      "message": "self.adjustDetails();",
+      "revId": "8bb2d71f86f6e896045716b95ac7683294add00b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
