@@ -104,7 +104,7 @@
 	"mobile-frontend-editor-switch-editor": "Přepnout editor",
 	"mobile-frontend-editor-tutorial-cancel": "Ne, děkuji",
 	"mobile-frontend-editor-tutorial-confirm": "Začněte editovat",
-	"mobile-frontend-editor-tutorial-summary": "Zkuste vylepšit stránku $1. Nebojte se formátovacích značek.",
+	"mobile-frontend-editor-tutorial-summary": "Zkuste vylepšit stránku $1.<br />Nebojte se formátovacích značek.",
 	"mobile-frontend-editor-unavailable": "Mobilní editování není na vašem prohlížeči momentálně dostupné. Zkuste jiný prohlížeč.",
 	"mobile-frontend-editor-unavailable-header": "Editor není dostupný",
 	"mobile-frontend-editor-undo-unsupported": "Vracení zpět není na mobilních zařízeních momentálně podporováno.",
