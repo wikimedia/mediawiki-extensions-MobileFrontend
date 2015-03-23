@@ -25,6 +25,16 @@
 			var thumbnail = $( ev.target ).closest( '.slider-button' ).data( 'thumbnail' );
 			window.location.hash = '#/media/' + thumbnail.getFileName();
 		},
+		/**
+		 * Unlike Overlay class resets hash to avoid navigating back to
+		 * the previously opened image.
+		 * @inheritdoc
+		 */
+		onExit: function ( ev ) {
+			ev.preventDefault();
+			ev.stopPropagation();
+			window.location.hash = '';
+		},
 		defaults: $.extend( {}, ImageOverlay.prototype.defaults, {
 			slideLeftButton: new Icon( {
 				name: 'previous'
