@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0bb2f6f8",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlayNew.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-23T22:33:13Z",
+      "side": 1,
+      "message": "It should be made clearer how this differs from Overlay.js",
+      "revId": "a7644b8b4d22a7f11be6df6caf486caff980d9ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
