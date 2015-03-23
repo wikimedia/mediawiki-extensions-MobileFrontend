@@ -142,7 +142,6 @@
 						action: 'wbsetdescription',
 						id: self.subjectId,
 						value: value,
-						summary: 'MobileFrontend Infobox alpha edit',
 						language: self.language,
 						baserevid: info.lastrevid,
 						bot: 1
