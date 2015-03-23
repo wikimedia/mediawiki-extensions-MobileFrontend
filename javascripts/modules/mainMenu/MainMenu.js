@@ -19,7 +19,20 @@
 			el: '#mw-mf-page-left',
 			mainMenuButton: '#mw-mf-main-menu-button'
 		},
-
+		/**
+		 * Turn on event logging on the existing main menu by reading `event-name` data
+		 * attributes on elements.
+		 * @param {SchemaMobileWebClickTracking} schema to use
+		 */
+		enableLogging: function ( schema ) {
+			this.$( 'a' ).each( function () {
+				var $link = $( this ),
+					eventName = $link.data( 'event-name' );
+				if ( eventName ) {
+					schema.hijackLink( $link, eventName );
+				}
+			} );
+		},
 		/**
 		 * @inheritdoc
 		 * Remove the nearby menu entry if the browser doesn't support geo location

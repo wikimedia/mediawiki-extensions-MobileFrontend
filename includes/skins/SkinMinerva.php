@@ -348,6 +348,7 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
 						'href' => $this->getPersonalUrl( $watchTitle, $watchlistQuery ),
 						'class' => MobileUI::iconClass( 'watchlist', 'before' ),
+						'data-event-name' => 'watchlist',
 					),
 				),
 				'class' => 'jsonly'
@@ -361,6 +362,7 @@ class SkinMinerva extends SkinTemplate {
 							'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
 							'href' => $this->getPersonalUrl( $donateTitle ),
 							'class' => MobileUI::iconClass( 'uploads', 'before' ),
+							'data-event-name' => 'uploads',
 						),
 					),
 					'class' => 'jsonly',
@@ -373,6 +375,7 @@ class SkinMinerva extends SkinTemplate {
 						'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
 							getLocalUrl( array( 'returnto' => $returnToTitle ) ),
 						'class' => MobileUI::iconClass( 'settings', 'before' ),
+						'data-event-name' => 'settings',
 					),
 				),
 			);
@@ -383,6 +386,7 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'preferences' )->escaped(),
 						'href' => $this->getPersonalUrl( SpecialPage::getTitleFor( 'Preferences' ) ),
 						'class' => MobileUI::iconClass( 'settings', 'before' ),
+						'data-event-name' => 'preferences',
 					),
 				),
 			);
@@ -429,6 +433,7 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
 						'href' => Title::newMainPage()->getLocalUrl(),
 						'class' => MobileUI::iconClass( 'home', 'before' ),
+						'data-event-name' => 'home',
 					),
 				),
 			),
@@ -441,6 +446,7 @@ class SkinMinerva extends SkinTemplate {
 								'#/random',
 						'class' => MobileUI::iconClass( 'random', 'before' ),
 						'id' => 'randomButton',
+						'data-event-name' => 'random',
 					),
 				),
 			),
@@ -450,6 +456,7 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
 						'class' => MobileUI::iconClass( 'nearby', 'before', 'nearby' ),
+						'data-event-name' => 'nearby',
 					),
 				),
 				'class' => 'jsonly',
@@ -522,12 +529,14 @@ class SkinMinerva extends SkinTemplate {
 						'text' => $username,
 						'href' => SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
 						'class' => MobileUI::iconClass( 'profile', 'before', 'truncated-text' ),
+						'data-event-name' => 'profile',
 					),
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
 						'href' => $url,
 						'class' => MobileUI::iconClass(
 							'secondary-logout', 'element', 'icon-24px icon-secondary truncated-text' ),
+						'data-event-name' => 'logout',
 					),
 				),
 			);
@@ -545,6 +554,7 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
 						'href' => $url,
 						'class' => MobileUI::iconClass( 'anonymous-white', 'before', 'icon-anon' ),
+						'data-event-name' => 'login',
 					),
 				),
 				'class' => 'jsonly'
