@@ -43,7 +43,7 @@
 	{{/commonsLink}}
 	<li>
 		<a href="https://m.wikidata.org/wiki/{{itemId}}"
-			class="hidden mw-ui-anchor mw-ui-progressive">View on WikiData</a>
+			class="hidden mw-ui-anchor mw-ui-progressive">View on Wikidata</a>
 	</li>
 	<li><a href='#/infobox/editor'
 		class="hidden edit mw-ui-button mw-ui-progressive">Edit this information</a></li>
