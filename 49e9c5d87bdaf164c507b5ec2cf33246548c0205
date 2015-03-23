@@ -51,6 +51,23 @@
       "revId": "49e9c5d87bdaf164c507b5ec2cf33246548c0205",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4bca2e1f",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1139,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-23T22:51:36Z",
+      "side": 1,
+      "message": "You can just shorten this to:\n$isPlural \u003d strpos( $rightsText, wfMessage( \u0027and\u0027 )-\u003etext() ) !\u003d\u003d false;",
+      "revId": "49e9c5d87bdaf164c507b5ec2cf33246548c0205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
