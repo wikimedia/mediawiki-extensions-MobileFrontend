@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6d13875d",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlayNew.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-23T18:20:28Z",
+      "side": 1,
+      "message": "It would be good for this to be a mixin - a bit like how InfiniteScroll works. I know various places want to use swiping (and I\u0027ve seen Baha do some similar experiments) so let\u0027s make this generic.",
+      "revId": "16922a85c8c5c69be917f693f165cdaf8ced1ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
