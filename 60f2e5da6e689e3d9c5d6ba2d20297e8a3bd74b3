@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c6c4f546",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-23T23:27:04Z",
+      "side": 1,
+      "message": "This needs its own description, especially since it seems otherwise out of place in MF.",
+      "revId": "60f2e5da6e689e3d9c5d6ba2d20297e8a3bd74b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a6c77949",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-03-23T23:27:04Z",
+      "side": 1,
+      "message": "A comment here would be good, like \"Inserting Gather button as 2nd to last item\" or something like that.",
+      "revId": "60f2e5da6e689e3d9c5d6ba2d20297e8a3bd74b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
