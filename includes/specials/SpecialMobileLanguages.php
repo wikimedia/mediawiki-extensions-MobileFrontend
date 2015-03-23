@@ -138,9 +138,9 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		$html = Html::openElement( 'div', array( 'class' => 'content' ) );
 
 		if ( $this->title && $this->title->exists() ) {
-			$pageTitle = $this->msg( 'mobile-frontend-languages-header-page',
-				$this->title->getText() )->text();
 			$titlename = $this->title->getPrefixedText();
+			$pageTitle = $this->msg( 'mobile-frontend-languages-header-page',
+				$titlename )->text();
 			$languages = $this->getLanguages();
 			$variants = $this->getLanguageVariants();
 			$languagesCount = count( $languages );
