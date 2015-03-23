@@ -1,5 +1,11 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"TheChampionMan1234"
+		]
+	},
+	"mobile-frontend-editor-edit": "Модификаре",
 	"mobile-frontend-random-button": "Аляториу",
-	"mobile-frontend-search-submit": "Ду-те"
+	"mobile-frontend-search-submit": "Ду-те",
+	"mobile-frontend-view": "Версюне мобилэ"
 }

@@ -96,7 +96,7 @@
 	"mobile-frontend-editor-switch-editor": "Cambia editor",
 	"mobile-frontend-editor-tutorial-cancel": "No, grazie",
 	"mobile-frontend-editor-tutorial-confirm": "Inizia a modificare",
-	"mobile-frontend-editor-tutorial-summary": "Prova a migliorare la pagina su $1. Non aver paura del markup.",
+	"mobile-frontend-editor-tutorial-summary": "Prova a migliorare la pagina su $1.<br />Non aver paura del markup.",
 	"mobile-frontend-editor-unavailable": "La modifica attraverso dispositivo mobile non è attualmente disponibile sul tuo browser. Prova un browser diverso.",
 	"mobile-frontend-editor-unavailable-header": "Editor non disponibile",
 	"mobile-frontend-editor-undo-unsupported": "L'annullamento non è attualmente supportato sui dispositivi mobili.",

@@ -131,7 +131,7 @@
 	"mobile-frontend-editor-switch-editor": "Changer d'éditeur",
 	"mobile-frontend-editor-tutorial-cancel": "Non merci",
 	"mobile-frontend-editor-tutorial-confirm": "Commencer à modifier",
-	"mobile-frontend-editor-tutorial-summary": "Essayez d’améliorer la page $1. N’ayez pas peur du balisage.",
+	"mobile-frontend-editor-tutorial-summary": "Essayez d’améliorer la page $1.<br />N’ayez pas peur du balisage.",
 	"mobile-frontend-editor-unavailable": "La modification via mobile n’est actuellement pas disponible sur votre navigateur. Veuillez essayer un autre navigateur.",
 	"mobile-frontend-editor-unavailable-header": "Éditeur indisponible",
 	"mobile-frontend-editor-undo-unsupported": "L’annulation n’est pour le moment pas supportée sur les terminaux mobiles.",

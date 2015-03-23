@@ -15,7 +15,8 @@
 			"Guilhermemau",
 			"Jefersonmoraes",
 			"He7d3r",
-			"Fasouzafreitas"
+			"Fasouzafreitas",
+			"Macofe"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se um usuário está ou não editando através da interface móvel",
@@ -70,7 +71,7 @@
 	"mobile-frontend-editor-success-landmark-1": "Parabéns, agora você é um editor da {{SITENAME}}!",
 	"mobile-frontend-editor-summary-placeholder": "Nos diga o que você mudou (opicional)",
 	"mobile-frontend-editor-tutorial-confirm": "Começar a editar",
-	"mobile-frontend-editor-tutorial-summary": "Tente melhorar a página $1. Não fique com medo de editar.",
+	"mobile-frontend-editor-tutorial-summary": "Tente melhorar a página $1.<br />Não fique com medo de editar.",
 	"mobile-frontend-editor-unavailable": "Edições mobile não estão disponíveis para seu navegador. Por favor tente com outro navegador.",
 	"mobile-frontend-editor-undo-unsupported": "Desfazer não está disponível para dispositivos móveis.",
 	"mobile-frontend-editor-wait": "Salvando edição, por favor aguarde.",
@@ -185,7 +186,6 @@
 	"mobile-frontend-profile-footer-years": "Registrou-se {{PLURAL:$2|1 anos|$2 anos}} atrás com [[Special:Contributions/$1|{{PLURAL:$3|1 edição|$3 edições}}]] e [[Special:Uploads/$1|{{PLURAL:$4|1 envio|$4 envios|500=500+ envios}}]].",
 	"mobile-frontend-profile-last-edit": "{{GENDER:$3|Editou}} a página [[:$1]], {{PLURAL:$2|ontem|$2 dias atrás|0=hoje mais cedo}}.",
 	"mobile-frontend-profile-last-thank": "[[Special:UserProfile/$1|$1]] {{GENDER:$3|agradeceu-lhe}} {{GENDER:$1|pela}} sua edição em [[$2]].",
-	"mobile-frontend-profile-last-upload-caption": "{{GENDER:$2|Enviada}} {{PLURAL:$1|ontem|$1 dias atrás|0=hoje}}.",
 	"mobile-frontend-profile-noargs": "Por favor informe um nome de usuário para ver o perfil.",
 	"mobile-frontend-profile-nouser": "Nome de usuário inexistente. Nomes de usuário diferenciam minúsculas e maiúsculas, por favor confira se digitou corretamente.",
 	"mobile-frontend-profile-title": "Perfil de usuário",

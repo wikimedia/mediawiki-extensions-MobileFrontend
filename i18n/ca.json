@@ -82,7 +82,7 @@
 	"mobile-frontend-editor-switch-editor": "Canvia d'editor",
 	"mobile-frontend-editor-tutorial-cancel": "No, gràcies",
 	"mobile-frontend-editor-tutorial-confirm": "Comença a editar",
-	"mobile-frontend-editor-tutorial-summary": "Ajudeu a millorar la pàgina $1. No tingueu por de la sintaxi wiki.",
+	"mobile-frontend-editor-tutorial-summary": "Ajudeu a millorar la pàgina $1.<br />No tingueu por de la sintaxi wiki.",
 	"mobile-frontend-editor-unavailable": "L'edició mòbil no està disponible actualment en el teu navegador. Si us plau prova amb un navegador diferent.",
 	"mobile-frontend-editor-unavailable-header": "Editor no disponible",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Codi font de</strong><span> $1</span>",

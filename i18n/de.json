@@ -376,7 +376,7 @@
 	"apihelp-mobileview-param-thumbsize": "Maximale Abmessungen des Vorschaubildes.",
 	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren.",
 	"mobile-frontend-donate-button-label": "Spenden",
-	"mobile-frontend-wikidata-editor-description-label": "Beschreibe ''$1'' in einem einzigen Satz:",
+	"mobile-frontend-wikidata-editor-description-label": "Gib eine kurze Beschreibung von ''$1'' an:",
 	"mobile-frontend-meta-data-issues-categories": "Über diese Kategorie",
 	"mobile-frontend-loading-message": "Lade …",
 	"mobile-frontend-time-precision-Gannum": "$1 Milliarden Jahre n. Chr.",

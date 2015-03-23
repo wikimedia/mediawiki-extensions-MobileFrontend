@@ -1,15 +1,39 @@
 {
 	"@metadata": {
 		"authors": [
-			"RajeshPandey"
+			"RajeshPandey",
+			"बिप्लब आनन्द"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "एक खण्ड पछाडि जाने",
-	"mobile-frontend-copyright": "यी पाठहरु <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>;मा उपलब्ध छन् । थप सर्तहरु लागुहुन सक्छन् । थपजानकारीको लागि <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> मा हेर्नुहोस् । {{SITENAME}}  <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc. एक नाफा रहित संस्था , को एक दर्ता गरिएको ब्यापार संकेत हो </a>.",
-	"mobile-frontend-featured-article": "आजको जोडदिएको लेख",
+	"mobile-frontend-copyright": "सामाग्री $1 अनुसार उपलब्ध छ, खुलाइएको अवस्था बाहेकको हकमा ।",
+	"mobile-frontend-editor-edit": "सम्पादन",
+	"mobile-frontend-featured-article": "आजको विशेष सामग्री",
+	"mobile-frontend-generic-login": "{{SITENAME}} तपाईँ जस्तै मानिसहरूद्वारा सिर्जना गरिएको हो ।",
+	"mobile-frontend-generic-login-action": "योगदान गर्न लगईन गर्नुस।",
 	"mobile-frontend-home-button": "गृह",
+	"mobile-frontend-language-article-heading": "अन्य भाषाहरूमा पढ्ने",
+	"mobile-frontend-last-modified-date": "अन्तिम पल्ट संसोधन $1, $2 मा",
+	"mobile-frontend-login": "प्रवेश गर्ने",
+	"mobile-frontend-main-menu-account-create": "खाता खोल्नुहोस्",
+	"mobile-frontend-main-menu-button-tooltip": "प्रमुख मेनु खोल्ने",
+	"mobile-frontend-main-menu-login": "प्रवेश (लग ईन)",
+	"mobile-frontend-main-menu-nearby": "नजिकै",
+	"mobile-frontend-main-menu-settings": "सेटिङ्गहरू",
+	"mobile-frontend-main-menu-watchlist": "अवलोकनसूची",
+	"mobile-frontend-news-items": "समाचारमा",
+	"mobile-frontend-password-placeholder": "पासवर्ड",
+	"mobile-frontend-placeholder": "{{SITENAME}} मा खोज्नुहोस्",
+	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-random-button": "कुनै पनि एक",
 	"mobile-frontend-regular-site": "यो पृष्ठलाई नियमित {{SITENAME}}मा हेर्ने",
 	"mobile-frontend-search-submit": "जाउ",
-	"mobile-frontend-username": "प्रयोगकर्ता नाम:"
+	"mobile-frontend-terms-text": "प्रयोगका सर्तहरू",
+	"mobile-frontend-username": "प्रयोगकर्ता नाम:",
+	"mobile-frontend-username-placeholder": "प्रयोगकर्ता नाम",
+	"mobile-frontend-view": "मोबाइल दृश्य",
+	"mobile-frontend-view-desktop": "डेस्कटप",
+	"mobile-frontend-view-mobile": "मोबाइल",
+	"tag-mobile_edit": "मोबाइल सम्पादन",
+	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन"
 }

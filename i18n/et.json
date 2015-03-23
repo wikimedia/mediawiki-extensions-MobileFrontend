@@ -73,7 +73,7 @@
 	"mobile-frontend-editor-summary-request": "Kuidas lehekülge parandasid?",
 	"mobile-frontend-editor-summary": "Resümee:",
 	"mobile-frontend-editor-switch-confirm": "Enne kui vahetad redigeerimisrežiimi, pead muudatused salvestama.",
-	"mobile-frontend-editor-tutorial-summary": "Proovi lehekülge $1 parandada. Ära karda kasutada märgistuskeelt.",
+	"mobile-frontend-editor-tutorial-summary": "Proovi lehekülge \"$1\" parandada.<br />Ära karda kasutada märgistuskeelt.",
 	"mobile-frontend-editor-uploadenable": "Et redigeerida, laadi esmalt pilt üles.",
 	"mobile-frontend-editor-visual-editor": "Redigeeri",
 	"mobile-frontend-editor-wait": "Muudatuse salvestamine, palun oota.",
@@ -272,5 +272,5 @@
 	"tag-mobile_web_edit": "Mobiiliveebi kaudu",
 	"tag-mobile_web_edit-description": "Mobiili veebisaidi kaudu tehtud muudatus",
 	"mobile-frontend-pageaction-edit-tooltip": "Redigeeri selle lehekülje sissejuhatavat alaosa.",
-	"mobile-frontend-wikidata-editor-description-label": "Kirjelda teemat \"$1\" ühe lausega:"
+	"mobile-frontend-wikidata-editor-description-label": "Kirjelda lühidalt teemat \"$1\":"
 }
