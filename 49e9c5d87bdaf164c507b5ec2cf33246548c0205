@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a2aa0e14",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 365,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-23T18:12:42Z",
+      "side": 1,
+      "message": "Shouldn\u0027t \u0027getLicenseLink\u0027 be \u0027getLicense\u0027?",
+      "revId": "49e9c5d87bdaf164c507b5ec2cf33246548c0205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c26e2afd",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1113,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-23T18:12:42Z",
+      "side": 1,
+      "message": "Maybe you should rename the function to \u0027getLicense\u0027 since it returns an array now.",
+      "revId": "49e9c5d87bdaf164c507b5ec2cf33246548c0205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
