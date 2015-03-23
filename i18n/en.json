@@ -385,7 +385,7 @@
 	"apihelp-parse-param-noimages": "Disable images in mobile output.",
 	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",
 	"mobile-frontend-donate-button-label": "Donate",
-	"mobile-frontend-wikidata-editor-description-label": "Describe ''$1'' in a single sentence:",
+	"mobile-frontend-wikidata-editor-description-label": "Provide a short description of ''$1'':",
 	"mobile-frontend-meta-data-issues-categories": "About this category",
 	"mobile-frontend-loading-message": "Loading…",
 	"mobile-frontend-time-precision-Gannum": "$1 billion years CE",
