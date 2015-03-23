@@ -4,6 +4,7 @@
 		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
 		LeadPhotoUploaderButton = M.require( 'modules/uploads/LeadPhotoUploaderButton' ),
 		user = M.require( 'user' ),
+		skin = M.require( 'skin' ),
 		isSupported = LeadPhotoUploaderButton.isSupported;
 
 	/**
@@ -53,6 +54,7 @@
 		new LeadPhotoUploaderButton( {
 			funnel: funnel
 		} );
+		skin.emit( 'changed' );
 	}
 
 	if ( isSupported ) {

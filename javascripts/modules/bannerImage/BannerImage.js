@@ -87,7 +87,11 @@
 				.show();
 
 			self.resizeFrame();
-
+			/**
+			 * @event loaded
+			 * Fired when image has loaded and been rendered in page.
+			 */
+			self.emit( 'loaded' );
 			if ( !self.hasLoadedOnce ) {
 				self.hasLoadedOnce = true;
 				M.on( 'resize', function () {

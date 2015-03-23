@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var ContentOverlay,
+		skin = M.require( 'skin' ),
 		Overlay = M.require( 'Overlay' );
 
 	/**
@@ -34,12 +35,7 @@
 				$target = $( options.target );
 				// Ensure we position the overlay correctly but do not show the arrow
 				self._position( $target );
-				// Ensure that any reflows due to tablet styles have happened before showing
-				// the arrow.
-				setTimeout( function () {
-					self.addPointerArrow( $target );
-					M.on( 'resize', $.proxy( self, 'refreshPointerArrow', options.target ) );
-				}, 0 );
+				this.addPointerArrow( $target );
 			}
 		},
 		/**
@@ -82,6 +78,8 @@
 				// remove the left offset of the overlay as margin auto may be applied to it
 				left: paOffset.left + 10 - overlayOffset.left
 			} ).appendTo( this.$el );
+			skin.on( 'changed', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
+			M.on( 'resize', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
 		}
 	} );
 	M.define( 'modules/tutorials/ContentOverlay', ContentOverlay );
