@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2f833909",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-24T06:56:57Z",
+      "side": 1,
+      "message": "you should unset $languages[$code]; otherwise you\u0027ll get an undefined on line 120 ($langObject[\u0027langname\u0027]).",
+      "revId": "0cf05c919d727ccea8194943e0d4f60be8d9f93a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
