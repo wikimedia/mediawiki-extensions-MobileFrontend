@@ -354,20 +354,24 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgMFNearbyEndpoint, $wgMFContentNamespace;
-		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
-		$vars['wgMFThumbnailSizes'] = array(
-			'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
-			'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
-		);
-		$vars['wgMFContentNamespace'] = $wgMFContentNamespace;
+		$context = MobileContext::singleton();
+		$config = $context->getMFConfig();
 
-		// Set the licensing agreement that is displayed in the editor.
-		$wgMFLicenseLink = SkinMinerva::getLicenseLink( 'editor' );
-		$vars['wgMFLicenseLink'] = $wgMFLicenseLink;
-		// Set the licensing agreement that is displayed in the uploading interface.
-		$wgMFUploadLicenseLink = SkinMinerva::getLicenseLink( 'upload' );
-		$vars['wgMFUploadLicenseLink'] = $wgMFUploadLicenseLink;
+		$vars += array(
+			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
+			'wgMFThumbnailSizes' => array(
+				'tiny' =>  MobilePage::TINY_IMAGE_WIDTH,
+				'small' =>  MobilePage::SMALL_IMAGE_WIDTH,
+			),
+			'wgMFContentNamespace' => $config->get( 'MFContentNamespace' ),
+			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
+
+			// Set the licensing agreement that is displayed in the editor.
+			'wgMFLicenseLink' => SkinMinerva::getLicenseLink( 'editor' ),
+			// Set the licensing agreement that is displayed in the uploading interface.
+			'wgMFUploadLicenseLink' => SkinMinerva::getLicenseLink( 'upload' ),
+		);
+
 		return true;
 	}
 

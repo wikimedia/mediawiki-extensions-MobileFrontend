@@ -844,7 +844,6 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			'wgMFWikiDataEndpoint' => $config->get( 'MFWikiDataEndpoint' ),
 			'wgMFUseCentralAuthToken' => $config->get( 'MFUseCentralAuthToken' ),
-			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			'wgMFPhotoUploadAppendToDesc' => $config->get( 'MFPhotoUploadAppendToDesc' ),
 			'wgMFLeadPhotoUploadCssSelector' => $config->get( 'MFLeadPhotoUploadCssSelector' ),
 			'wgMFPhotoUploadEndpoint' =>
