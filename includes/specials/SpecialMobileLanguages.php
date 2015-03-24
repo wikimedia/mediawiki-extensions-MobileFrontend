@@ -57,9 +57,15 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 			// Set the name of each lanugage based on the system list of language names
 			$languageMap = Language::fetchLanguageNames();
 			$languages = $page['langlinks'];
-			foreach ( $languages as &$langObject ) {
+			foreach ( $page['langlinks'] as $code => $langObject ) {
+				if ( !isset( $languageMap[$langObject['lang']] ) ) {
+					// Bug T93500: DB might still have preantiquated rows with bogus languages
+					unset( $languages[$code] );
+					continue;
+				}
 				$langObject['langname'] = $languageMap[$langObject['lang']];
 				$langObject['url'] = MobileContext::singleton()->getMobileUrl( $langObject['url'] );
+				$languages[$code] = $langObject;
 			}
 			return $languages;
 		} else {
