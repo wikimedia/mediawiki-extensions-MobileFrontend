@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c11a9f1b",
+        "filename": "javascripts/modules/uploads/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-24T00:40:17Z",
+      "side": 1,
+      "message": "This function also makes a DOM change.",
+      "revId": "8855e1cf975726fc35acac6a01bfcc4a4bdeb9b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a148c332",
+        "filename": "javascripts/modules/watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-24T00:40:17Z",
+      "side": 1,
+      "message": "I\u0027m not sure if we need this kind of general emit. This patch should only be interested in the watchstar that is inside page actions. However, this will fire everywhere - search results, watchlist, etc.",
+      "revId": "8855e1cf975726fc35acac6a01bfcc4a4bdeb9b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
