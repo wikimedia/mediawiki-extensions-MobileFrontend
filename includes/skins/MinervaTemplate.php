@@ -147,7 +147,7 @@ class MinervaTemplate extends BaseTemplate {
 		?>
 		<div id="footer">
 			<?php
-				foreach ( $this->getFooterLinks() as $category => $links ):
+				foreach ( $this->getFooterLinks() as $category => $links ) {
 			?>
 				<ul class="footer-<?php echo $category; ?>">
 					<?php
@@ -161,7 +161,7 @@ class MinervaTemplate extends BaseTemplate {
 					?>
 				</ul>
 			<?php
-				endforeach;
+				}
 			?>
 		</div>
 		<?php
@@ -175,9 +175,9 @@ class MinervaTemplate extends BaseTemplate {
 		$actions = $this->getPageActions();
 		if ( $actions ) {
 			?><ul id="page-actions" class="hlist"><?php
-			foreach ( $actions as $key => $val ):
+			foreach ( $actions as $key => $val ) {
 				echo $this->makeListItem( $key, $val );
-			endforeach;
+			}
 			?></ul><?php
 		}
 	}
@@ -366,23 +366,23 @@ class MinervaTemplate extends BaseTemplate {
 		?>
 		<ul>
 			<?php
-				foreach ( $this->getDiscoveryTools() as $key => $val ):
+				foreach ( $this->getDiscoveryTools() as $key => $val ) {
 					echo $this->makeListItem( $key, $val );
-				endforeach;
+				}
 			?>
 			</ul>
 			<ul>
 			<?php
-				foreach ( $this->getPersonalTools() as $key => $val ):
+				foreach ( $this->getPersonalTools() as $key => $val ){
 					echo $this->makeListItem( $key, $val );
-				endforeach;
+				}
 			?>
 			</ul>
 			<ul class="hlist">
 			<?php
-				foreach ( $this->getSiteLinks() as $key => $val ):
+				foreach ( $this->getSiteLinks() as $key => $val ) {
 					echo $this->makeListItem( $key, $val );
-				endforeach;
+				}
 			?>
 			</ul>
 		<?php
@@ -412,9 +412,9 @@ class MinervaTemplate extends BaseTemplate {
 			<?php $this->renderMainMenu( $data ); ?>
 			<div id="mw-mf-page-center">
 				<?php
-					foreach ( $this->data['banners'] as $banner ):
+					foreach ( $this->data['banners'] as $banner ){
 						echo $banner;
-					endforeach;
+					}
 				?>
 				<div class="header">
 					<?php

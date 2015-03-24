@@ -153,9 +153,9 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 			<?php $this->renderMainMenu( $data ); ?>
 			<div id="mw-mf-page-center">
 				<?php
-		foreach ( $this->data['banners'] as $banner ):
+		foreach ( $this->data['banners'] as $banner ) {
 			echo $banner;
-		endforeach;
+		}
 		?>
 				<div id="content_wrapper">
 					<?php $this->renderContentWrapper( $data ); ?>
