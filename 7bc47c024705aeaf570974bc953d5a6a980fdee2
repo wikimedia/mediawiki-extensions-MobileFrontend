@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_26a91b74",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 417,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-24T22:31:58Z",
+      "side": 1,
+      "message": "shouldn\u0027t we drop the semicolon too?",
+      "revId": "7bc47c024705aeaf570974bc953d5a6a980fdee2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
