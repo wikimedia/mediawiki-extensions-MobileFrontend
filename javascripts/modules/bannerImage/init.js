@@ -1,9 +1,10 @@
-( function ( M ) {
+( function ( M, $ ) {
 	M.require( 'context' ).assertMode( [ 'alpha', 'beta' ] );
 
 	var MobileViewBannerImageRepository = M.require( 'modules/bannerImage/MobileViewBannerImageRepository' ),
 		BannerImage = M.require( 'modules/bannerImage/BannerImage' ),
 		page = M.getCurrentPage(),
+		skin = M.require( 'skin' ),
 		repository,
 		bannerImage;
 
@@ -16,6 +17,7 @@
 		bannerImage = new BannerImage( {
 			repository: repository
 		} );
+		bannerImage.on( 'loaded', $.proxy( skin, 'emit', 'changed' ) );
 		bannerImage.insertBefore( '.pre-content' );
 	}
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

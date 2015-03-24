@@ -136,6 +136,11 @@
 				$el.addClass( 'touch-events' );
 			}
 			$( '<div class="transparent-shield cloaked-element">' ).appendTo( '#mw-mf-page-center' );
+			/**
+			 * @event changed
+			 * Fired when appearance of skin changes.
+			 */
+			this.emit( 'changed' );
 		},
 
 		/**

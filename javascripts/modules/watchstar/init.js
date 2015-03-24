@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var Watchstar = M.require( 'modules/watchstar/Watchstar' ),
+		skin = M.require( 'skin' ),
 		user = M.require( 'user' );
 
 	/**
@@ -18,6 +19,7 @@
 				page: page,
 				isAnon: user.isAnon()
 			} );
+			skin.emit( 'changed' );
 		}
 	}
 	init( M.getCurrentPage() );
