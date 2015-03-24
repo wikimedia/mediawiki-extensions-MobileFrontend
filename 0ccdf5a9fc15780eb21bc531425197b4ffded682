@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8f1ccdcc",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-24T07:16:33Z",
+      "side": 1,
+      "message": "no need for count, empty arrays are interpreted as false in php.",
+      "revId": "0ccdf5a9fc15780eb21bc531425197b4ffded682",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0f28bddb",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-24T07:16:33Z",
+      "side": 1,
+      "message": "Just in case, that other functions will use this, too, wouldn\u0027t it be a good idea to cache the result in a class variable?",
+      "revId": "0ccdf5a9fc15780eb21bc531425197b4ffded682",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
