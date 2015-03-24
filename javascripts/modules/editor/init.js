@@ -16,6 +16,7 @@
 		enabledClass = enabledEditIcon.getGlyphClassName(),
 		disabledClass = disabledEditIcon.getGlyphClassName(),
 		browser = M.require( 'browser' ),
+		context = M.require( 'context' ),
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
 		// FIXME: Disable on IE < 10 for time being
@@ -279,7 +280,7 @@
 	} else {
 		if ( user.isAnon() ) {
 			// Cta's will be rendered in EditorOverlay, if anonymous editing is enabled.
-			if ( mw.config.get( 'wgMFEditorOptions' ).anonymousEditing ) {
+			if ( mw.config.get( 'wgMFEditorOptions' ).anonymousEditing || context.isAlphaGroupMember() ) {
 				init();
 			} else {
 				initCta();
