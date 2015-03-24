@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_e3da3ae9",
+        "filename": "javascripts/modules/uploads/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-24T16:45:52Z",
+      "side": 1,
+      "message": "You\u0027re right. My bad.",
+      "parentUuid": "6e7c4fa4_217fd3de",
+      "revId": "8855e1cf975726fc35acac6a01bfcc4a4bdeb9b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_a148c332",
         "filename": "javascripts/modules/watchstar/Watchstar.js",
         "patchSetId": 2
