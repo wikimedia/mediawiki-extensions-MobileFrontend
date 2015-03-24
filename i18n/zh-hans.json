@@ -413,7 +413,7 @@
 	"apihelp-parse-param-noimages": "在移动输出中禁用图片。",
 	"apihelp-parse-param-mainpage": "应用移动首页转换。",
 	"mobile-frontend-donate-button-label": "捐赠",
-	"mobile-frontend-wikidata-editor-description-label": "用一句话介绍“$1”：",
+	"mobile-frontend-wikidata-editor-description-label": "提供“$1”的简短描述：",
 	"mobile-frontend-meta-data-issues-categories": "关于此分类",
 	"mobile-frontend-loading-message": "载入中……",
 	"mobile-frontend-time-precision-Gannum": "公元$1十亿年",

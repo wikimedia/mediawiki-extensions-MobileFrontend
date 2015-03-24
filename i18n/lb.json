@@ -301,7 +301,7 @@
 	"apihelp-mobileview-param-thumbwidth": "Maximal Breet vun der Miniatur.",
 	"apihelp-mobileview-param-thumbheight": "Maximal Héicht vun der Miniatur.",
 	"mobile-frontend-donate-button-label": "Maacht en Don",
-	"mobile-frontend-wikidata-editor-description-label": "Beschreift \"$1\" an engem eenzege Saz:",
+	"mobile-frontend-wikidata-editor-description-label": "Gitt eng kuerz Beschreiwung vu(n) \"$1\":",
 	"mobile-frontend-meta-data-issues-categories": "Iwwer dës Kategorie",
 	"mobile-frontend-loading-message": "Lueden...",
 	"mobile-frontend-time-precision-annum": "$1 Joer no Christus",

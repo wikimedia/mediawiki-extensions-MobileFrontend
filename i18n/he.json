@@ -392,7 +392,7 @@
 	"apihelp-parse-param-noimages": "נטרול תמונות בפלט לנייד.",
 	"apihelp-parse-param-mainpage": "החלת התאמות של העמוד הראשי לנייד.",
 	"mobile-frontend-donate-button-label": "תרומה",
-	"mobile-frontend-wikidata-editor-description-label": "נא לתאר את \"$1\" במשפט אחד:",
+	"mobile-frontend-wikidata-editor-description-label": "נא לתאר בקצרה את \"$1\":",
 	"mobile-frontend-meta-data-issues-categories": "על הקטגוריה הזאת",
 	"mobile-frontend-loading-message": "טעינה...",
 	"mobile-frontend-time-precision-Gannum": "{{PLURAL:$1|מיליארד|$1 מיליארד}} שנים לספירה",

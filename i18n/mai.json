@@ -1,34 +1,36 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tulsi Bhagat"
+			"Tulsi Bhagat",
+			"बिप्लब आनन्द"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "कुनो सम्पादन सारांश",
 	"mobile-frontend-copyright": "$1 कऽ अंतर्गत विषय सूची उपलब्ध अछि ‌‌‍‍‍‌।",
 	"mobile-frontend-editor-edit": "सम्पादन",
 	"mobile-frontend-featured-article": "आइ कऽ निर्वाचित लेख",
+	"mobile-frontend-generic-login-action": "योगदान करै के लेल सम्प्रवेश करी।",
 	"mobile-frontend-home-button": "घर",
 	"mobile-frontend-language-article-heading": "कुनो दोसर भाषा में पढु",
 	"mobile-frontend-last-modified-date": "$1 पर , $2 पर अंतिम बेर संशोधित",
 	"mobile-frontend-login": "सम्प्रवेश करु",
-	"mobile-frontend-main-menu-account-create": "खाता खोलू",
+	"mobile-frontend-main-menu-account-create": "खाता खोलल जाए",
 	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलु",
-	"mobile-frontend-main-menu-login": "सम्प्रवेश करु",
+	"mobile-frontend-main-menu-login": "सम्प्रवेश करी",
 	"mobile-frontend-main-menu-nearby": "नजदिक सऽ",
 	"mobile-frontend-main-menu-settings": "सेटिंग्स",
 	"mobile-frontend-main-menu-watchlist": "साकांक्ष-सूची",
 	"mobile-frontend-news-items": "समाचार मऽ",
 	"mobile-frontend-password-placeholder": "कूटशब्द",
-	"mobile-frontend-placeholder": "ताकू {{SITENAME}}",
+	"mobile-frontend-placeholder": "{{SITENAME}} में खोजी",
 	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-random-button": "बेतरतीब",
 	"mobile-frontend-terms-text": "उपयोग कऽ शर्त सभ",
 	"mobile-frontend-username-placeholder": "प्रयोक्ता नाम",
 	"mobile-frontend-view": "मोबाइल दृष्टि",
-	"mobile-frontend-view-desktop": "डेस्कटॉप",
+	"mobile-frontend-view-desktop": "डेस्कटप",
 	"mobile-frontend-view-mobile": "मोबाइल",
 	"tag-mobile_edit": "मोबाइल संपादन",
 	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
-	"mobile-frontend-pageaction-edit-tooltip": "यी पन्नाके नेतृत्व अनुभागके संपादित करु ।"
+	"mobile-frontend-pageaction-edit-tooltip": "यी पन्नाके नेतृत्व अनुभागके संपादित करी।"
 }
