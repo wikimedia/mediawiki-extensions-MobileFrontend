@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_2198251d",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-25T00:21:43Z",
+      "side": 1,
+      "message": "thanks",
+      "parentUuid": "6e7c4fa4_8f1ccdcc",
+      "revId": "0ccdf5a9fc15780eb21bc531425197b4ffded682",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_0f28bddb",
         "filename": "includes/skins/SkinMinervaAlpha.php",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2015-03-24T07:16:33Z",
       "side": 1,
       "message": "Just in case, that other functions will use this, too, wouldn\u0027t it be a good idea to cache the result in a class variable?",
+      "revId": "0ccdf5a9fc15780eb21bc531425197b4ffded682",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_61929d01",
+        "filename": "includes/skins/SkinMinervaAlpha.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-25T00:21:43Z",
+      "side": 1,
+      "message": "Do you think we can do it when we introduce a function that uses this? Or do you think we should do it now? IMO, it\u0027s OK to leave it just as for now.",
+      "parentUuid": "6e7c4fa4_0f28bddb",
       "revId": "0ccdf5a9fc15780eb21bc531425197b4ffded682",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
