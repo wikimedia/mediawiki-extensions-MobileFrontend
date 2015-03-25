@@ -1159,41 +1159,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.notifications' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-			'mediawiki.ui.anchor',
-			'mobile.loggingSchemas',
-		),
-		'scripts' => array(
-			'javascripts/modules/notifications/notifications.js',
-		),
-		'group' => 'user',
-	),
-
-	'mobile.notifications.overlay' => $wgMFResourceFileModuleBoilerplate + array(
-		'dependencies' => array(
-			'mobile.overlays',
-			'ext.echo.base',
-		),
-		'scripts' => array(
-			'javascripts/modules/notifications/NotificationsOverlay.js',
-		),
-		'styles' => array(
-			'less/modules/NotificationsOverlay.less',
-		),
-		'templates' => array(
-			'content.hogan' => 'templates/modules/notifications/NotificationsOverlayContent.hogan',
-		),
-		'messages' => array(
-			// defined in Echo
-			'echo-none',
-			'notifications',
-			'echo-overlay-link',
-			'echo-notification-count',
-		),
-	),
-
 	'mobile.gallery' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.toast',
@@ -1382,6 +1347,45 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 ) );
 
+/**
+ * Extension:Echo related modules
+ */
+$wgMobileEchoModules = array(
+	'mobile.notifications' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+			'mediawiki.ui.anchor',
+			'mobile.loggingSchemas',
+		),
+		'scripts' => array(
+			'javascripts/modules/notifications/notifications.js',
+		),
+		'group' => 'user',
+	),
+
+	'mobile.notifications.overlay' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.overlays',
+			'ext.echo.base',
+		),
+		'scripts' => array(
+			'javascripts/modules/notifications/NotificationsOverlay.js',
+		),
+		'styles' => array(
+			'less/modules/NotificationsOverlay.less',
+		),
+		'templates' => array(
+			'content.hogan' => 'templates/modules/notifications/NotificationsOverlayContent.hogan',
+		),
+		'messages' => array(
+			// defined in Echo
+			'echo-none',
+			'notifications',
+			'echo-overlay-link',
+			'echo-notification-count',
+		),
+	),
+);
 /**
  * Mobile VisualEditor related modules
  */
