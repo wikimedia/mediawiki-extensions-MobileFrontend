@@ -66,7 +66,8 @@
 		addPointerArrow: function ( $pa ) {
 			var tb = 'solid 10px transparent',
 				paOffset = $pa.offset(),
-				overlayOffset = this.$el.offset();
+				overlayOffset = this.$el.offset(),
+				center = $pa.width() / 2;
 
 			this._position( $pa );
 			this.$pointer = $( '<div>' ).css( {
@@ -75,8 +76,9 @@
 				'border-left': tb,
 				position: 'absolute',
 				top: -10,
+				// Add half of the element width and subtract 10px for half of the arrow
 				// remove the left offset of the overlay as margin auto may be applied to it
-				left: paOffset.left + 10 - overlayOffset.left
+				left: paOffset.left + center - 10 - overlayOffset.left
 			} ).appendTo( this.$el );
 			skin.on( 'changed', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
 			M.on( 'resize', $.proxy( this, 'refreshPointerArrow', this.options.target ) );
