@@ -22,7 +22,8 @@
 			"Romaine",
 			"Robin0van0der0vliet",
 			"Mirolith",
-			"JensRiskin"
+			"JensRiskin",
+			"MedShot"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -103,7 +104,7 @@
 	"mobile-frontend-editor-switch-editor": "Tekstverwerker omschakelen",
 	"mobile-frontend-editor-tutorial-cancel": "Nee, bedankt",
 	"mobile-frontend-editor-tutorial-confirm": "Begin met bewerken",
-	"mobile-frontend-editor-tutorial-summary": "Probeer de pagina $1 beter te maken. Wikitekst bijt niet.",
+	"mobile-frontend-editor-tutorial-summary": "Probeer de pagina $1 te verbeteren.<br />Wees niet bang voor de opmaak.",
 	"mobile-frontend-editor-unavailable": "Mobiel bewerken is op dit moment niet beschikbaar met uw browser. Probeer een andere browser.",
 	"mobile-frontend-editor-unavailable-header": "Tekstverwerker niet beschikbaar",
 	"mobile-frontend-editor-undo-unsupported": "Ongedaan maken is op het moment niet mogelijk op mobiele apparaten.",
@@ -289,6 +290,7 @@
 	"mobile-frontend-talk-reply-info": "Uw antwoord wordt automatisch ondertekend met uw gebruikersnaam.",
 	"mobile-frontend-talk-reply-success": "Uw antwoord is opgeslagen op de overlegpagina.",
 	"mobile-frontend-talk-topic-feedback": "Nieuw onderwerp aan de overlegpagina toegevoegd!",
+	"mobile-frontend-talk-topic-wait": "Nieuwe onderwerp wordt opgeslagen, even wachten aub.",
 	"mobile-frontend-terms-text": "Gebruiksvoorwaarden",
 	"mobile-frontend-thanked-notice": "$1 heeft een bericht ontvangen dat u {{GENDER:$2|hem|haar|hem/haar}} heeft bedankt voor {{GENDER:$2|zijn|haar|zijn/haar}} bewerking.",
 	"mobile-frontend-user-account": "gebruiker",
@@ -330,6 +332,7 @@
 	"tag-mobile_web_edit-description": "Bewerking gemaakt via de mobiele website",
 	"mobile-frontend-pageaction-edit-tooltip": "Bewerk de inleidende sectie van deze pagina.",
 	"mobile-frontend-donate-button-label": "Doneren",
+	"mobile-frontend-wikidata-editor-description-label": "Geef een korte beschrijving van \"$1\":",
 	"mobile-frontend-loading-message": "Bezig met laden…",
 	"mobile-frontend-time-precision-Gannum": "$1 miljoen jaar g.j.",
 	"mobile-frontend-time-precision-Mannum": "$1 miljoen jaar g.j.",

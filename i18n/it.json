@@ -13,7 +13,8 @@
 			"Macofe",
 			"Ricordisamoa",
 			"FRacco",
-			"LACLARETTA"
+			"LACLARETTA",
+			"Giuseppe Forte"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -295,6 +296,7 @@
 	"mobile-frontend-talk-topic-error-permission": "L'argomento non può essere aggiunto. Non hai il permesso di modificare le pagine.",
 	"mobile-frontend-talk-topic-error-spam": "L'argomento è stato rifiutato perché contiene spam.",
 	"mobile-frontend-talk-topic-error-badtoken": "Si è verificato un errore sul server. La modifica non può essere salvata. Prova a ricaricare questa pagina.",
+	"mobile-frontend-talk-topic-wait": "Salvataggio di un nuovo argomento, si prega di attendere.",
 	"mobile-frontend-terms-text": "Condizioni d'uso",
 	"mobile-frontend-thanked-notice": "Hai detto a $1 che ti piace {{GENDER:$2|la sua}} modifica.",
 	"mobile-frontend-user-account": "utenza",
@@ -342,5 +344,6 @@
 	"tag-mobile_web_edit-description": "Modifica apportata dal sito web per dispositivi mobili",
 	"mobile-frontend-pageaction-edit-tooltip": "Modifica la sezione iniziale di questa pagina.",
 	"mobile-frontend-pageaction-upload-tooltip": "Carica una foto iniziale per questa pagina.",
-	"mobile-frontend-donate-button-label": "Dona"
+	"mobile-frontend-donate-button-label": "Dona",
+	"mobile-frontend-wikidata-editor-description-label": "Fornisci una breve descrizione di \"$1\":"
 }

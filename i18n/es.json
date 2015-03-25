@@ -349,7 +349,7 @@
 	"apihelp-mobileview-param-thumbwidth": "Ancho máximo de miniaturas.",
 	"apihelp-mobileview-param-thumbheight": "Ancho máximo de miniaturas.",
 	"mobile-frontend-donate-button-label": "Dona",
-	"mobile-frontend-wikidata-editor-description-label": "Describe ''$1'' en una sola oración:",
+	"mobile-frontend-wikidata-editor-description-label": "Proporciona una breve descripción de ''$1'':",
 	"mobile-frontend-loading-message": "Cargando…",
 	"mobile-frontend-months-ago": "hace $1 {{PLURAL:$1|mes|meses}}",
 	"mobile-frontend-years-ago": "hace $1 {{PLURAL:$1|año|años}}"

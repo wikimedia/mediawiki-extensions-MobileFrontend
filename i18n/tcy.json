@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"VASANTH S.N."
+			"VASANTH S.N.",
+			"Vishwanatha Badikana"
 		]
 	},
+	"mobile-frontend-copyright": "ಗಮನೊ ಇದ್ಯಾಂಡ $1 ಅಡಿಟ್ ವಿಷಯೊ ಲಭ್ಯೊ ಉಂಡು.",
 	"mobile-frontend-editor-edit": "ಸಂಪಾದನೆ ಮಲ್ಪುಲೆ",
 	"mobile-frontend-home-button": "ನಿಲೆ",
 	"mobile-frontend-language-article-heading": "ನನೊಂಜಿ ಭಾಷೆಡ್ ಓದುಲೆ",
+	"mobile-frontend-last-modified-date": "ಕಡೆತ ಬದಲಾವಣೆ ಮಾಲ್ತ್‌ನೆ \n$1ಆನಿ, $2ಗ್ ಅಕೇರಿದ ಬದಲಾವಣೆ ಮಲ್ತ್‌ದಾತ್ಂಡ್ ಬದಲಾಯಿಸಲಾಗಿತ್ತು",
 	"mobile-frontend-main-menu-button-tooltip": "ಮುಖ್ಯ ಮೆನು ತೋಜಾಲೆ",
 	"mobile-frontend-main-menu-login": "ಲಾಗಿನ್ ಆಲೆ",
 	"mobile-frontend-main-menu-nearby": "ಕೈತಲ್‍ದ",
@@ -20,5 +23,6 @@
 	"mobile-frontend-view-desktop": "ಡೆಸ್ಕ್‌ಟಾಪ್",
 	"mobile-frontend-view-mobile": "ಮೊಬೈಲ್",
 	"tag-mobile_edit": "ಮೊಬೈಲ್ ಸಂಪಾದನೆ",
-	"tag-mobile_web_edit": "ಮೊಬೈಲ್ ವೆಬ್ ಸಂಪಾದನೆ"
+	"tag-mobile_web_edit": "ಮೊಬೈಲ್ ವೆಬ್ ಸಂಪಾದನೆ",
+	"mobile-frontend-pageaction-edit-tooltip": "ಈ ಪುಟೊದ ಪ್ರಮುಕೊ ವಿಭಾಗೊನು ಸಂಪಾದಿಸಲೆ."
 }

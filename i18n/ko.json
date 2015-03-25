@@ -14,7 +14,8 @@
 			"관인생략",
 			"아라",
 			"Keysuck",
-			"Revi"
+			"Revi",
+			"SeoJeongHo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -99,7 +100,7 @@
 	"mobile-frontend-editor-switch-editor": "편집기 전환",
 	"mobile-frontend-editor-tutorial-cancel": "괜찮습니다",
 	"mobile-frontend-editor-tutorial-confirm": "편집 시작",
-	"mobile-frontend-editor-tutorial-summary": "$1 문서를 개선해보세요. 문법에 무서워하지 마세요.",
+	"mobile-frontend-editor-tutorial-summary": "$1 문서를 개선해보세요.<br /> 문법에 무서워하지 마세요.",
 	"mobile-frontend-editor-unavailable": "모바일 편집은 현재 사용 중인 브라우저에서 사용할 수 없습니다. 다른 브라우저로 다시 시도하세요.",
 	"mobile-frontend-editor-unavailable-header": "편집기를 사용할 수 없음",
 	"mobile-frontend-editor-undo-unsupported": "되돌리기는 현재 모바일 장치에서 지원하지 않습니다.",
@@ -283,6 +284,7 @@
 	"mobile-frontend-talk-reply-info": "답글은 당신의 사용자 이름으로 자동으로 서명됨을 참고하세요.",
 	"mobile-frontend-talk-reply-success": "답글이 성공적으로 토론 문서에 저장되었습니다.",
 	"mobile-frontend-talk-topic-feedback": "새 주제가 토론 문서에 추가되었습니다!",
+	"mobile-frontend-talk-topic-wait": "새 항목을 저장중입니다. 기다려 주세요.",
 	"mobile-frontend-terms-text": "이용 약관",
 	"mobile-frontend-thanked-notice": "$1님이 당신이 {{GENDER:$2|그|그녀|그들}}의 편집에 감사했다는 것을 들었습니다.",
 	"mobile-frontend-user-account": "사용자 계정",
@@ -327,5 +329,6 @@
 	"tag-mobile_edit-description": "모바일 (앱 혹은 웹)에서 편집",
 	"tag-mobile_web_edit": "모바일 웹 편집",
 	"tag-mobile_web_edit-description": "모바일 웹 사이트에서 편집",
-	"mobile-frontend-pageaction-edit-tooltip": "이 문서의 선두 문단을 편집합니다."
+	"mobile-frontend-pageaction-edit-tooltip": "이 문서의 선두 문단을 편집합니다.",
+	"mobile-frontend-wikidata-editor-description-label": "\"$1\"의 간단한 설명을 제공합니다."
 }
