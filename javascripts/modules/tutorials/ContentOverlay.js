@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var ContentOverlay,
+		context = M.require( 'context' ),
 		skin = M.require( 'skin' ),
 		Overlay = M.require( 'Overlay' );
 
@@ -54,9 +55,15 @@
 		 */
 		_position: function ( $pa ) {
 			var paOffset = $pa.offset(),
-				h = $pa.outerHeight( true );
+				h = $pa.outerHeight( true ),
+				y = paOffset.top;
 
-			this.$el.css( 'top', paOffset.top + h );
+			// We only care about this in a border-box world which is disabled in alpha.
+			if ( !context.isAlphaGroupMember() ) {
+				y += h;
+			}
+
+			this.$el.css( 'top', y );
 		},
 		/**
 		 * Position overlay and add pointer arrow that points at specified element

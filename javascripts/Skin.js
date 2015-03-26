@@ -109,6 +109,7 @@
 					if ( self.page.inNamespace( '' ) ) {
 						mw.loader.using( self.tabletModules ).always( function () {
 							self.off( '_resize' );
+							self.emit.call( self, 'changed' );
 						} );
 					}
 				}
@@ -118,6 +119,7 @@
 			// FIXME: Remove when cache has cleared.
 			if ( user.isAnon() && !context.isBetaGroupMember() ) {
 				mw.loader.using( 'mobile.watchstar.init' );
+				self.emit.call( self, 'changed' );
 			}
 			this.emit( '_resize' );
 		},
