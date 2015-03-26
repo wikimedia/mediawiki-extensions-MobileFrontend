@@ -20,26 +20,18 @@
 		}
 
 		// For skinning normal data tables
+		// Compare with mediawiki.legacy/shared.css
 		&.wikitable {
-			background-color: transparent !important;
-			border: none !important;
+			border: 1px solid @grayLightest;
 
-			tr {
-				border-bottom: 1px solid @grayLightest !important;
-			}
-
-			tr:last-child {
-				border-bottom: none !important;
-			}
-
-			th, td {
-				border-right: 1px solid @grayLightest !important;
+			// We only style cells that are direct children of the wikitable table since
+			// table tags may be used for non-table purposes within the cells.
+			> tr > th,
+			> tr > th,
+			> * > tr > th,
+			> * > tr > td {
+				border: 1px solid @grayLightest;
 				padding: .2em;
-			}
-
-			td:last-child,
-			th:last-child {
-				border-right: none !important;
 			}
 		}
 	}
