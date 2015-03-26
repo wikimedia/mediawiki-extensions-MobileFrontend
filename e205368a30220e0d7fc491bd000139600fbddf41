@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cf206af5",
+        "filename": "less/content/tables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-26T15:47:14Z",
+      "side": 1,
+      "message": "Just a note, we should really add FIXME\u0027s when using !important to explain what we are overriding. !important is a last resort and it\u0027s never clear what we are overriding - whether it be wikitext inline styles or rules in core/MediaWiki:Common.css can you please document these whilst here?",
+      "revId": "e205368a30220e0d7fc491bd000139600fbddf41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ef1d26c2",
+        "filename": "less/content/tables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-26T15:47:14Z",
+      "side": 1,
+      "message": "consider moving these into the block above.\n\nth,\ntd {\n\u0026:first-child {\n}",
+      "revId": "e205368a30220e0d7fc491bd000139600fbddf41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
