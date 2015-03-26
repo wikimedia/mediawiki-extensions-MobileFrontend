@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2f9d5e5b",
+        "filename": "less/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-26T15:21:11Z",
+      "side": 1,
+      "message": "This should be in content/lists.less\nAn id inside an id should also not be necessary. If it is that needs a FIXME. Otherwise use #content_wrapper or move it to its own block.",
+      "revId": "eb54ae1e7db6c39e90aa9e4e1bbc5fd4f2295189",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
