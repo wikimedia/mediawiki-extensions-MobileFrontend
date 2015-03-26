@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_25dfbf6d",
+        "filename": "less/content/tables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-26T18:08:23Z",
+      "side": 1,
+      "message": "Doesn\u0027t FIXME mean we want to change something later? \n\nHere I don\u0027t want us to change the code later, I\u0027m already fixing the issue at hand. Also !important overrides both inline styling and default styling. I think I\u0027ll just add that we want a custom table border style in Mobile, but I thought it was clear from the code.",
+      "parentUuid": "6e7c4fa4_cf206af5",
+      "revId": "e205368a30220e0d7fc491bd000139600fbddf41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_ef1d26c2",
         "filename": "less/content/tables.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-03-26T15:47:14Z",
       "side": 1,
       "message": "consider moving these into the block above.\n\nth,\ntd {\n\u0026:first-child {\n}",
+      "revId": "e205368a30220e0d7fc491bd000139600fbddf41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c5e7eb3a",
+        "filename": "less/content/tables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-26T18:08:23Z",
+      "side": 1,
+      "message": "Thanks, I\u0027ll do that.",
+      "parentUuid": "6e7c4fa4_ef1d26c2",
       "revId": "e205368a30220e0d7fc491bd000139600fbddf41",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
