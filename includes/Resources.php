@@ -313,6 +313,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.user',
 			'mediawiki.api',
 			'mobile.redlinks',
+			'jquery.throttle-debounce',
 		),
 		'templates' => array(
 			'icon.hogan' => 'templates/icon.hogan',
