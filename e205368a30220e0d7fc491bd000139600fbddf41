@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_534f2439",
+        "filename": "less/content/tables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-26T21:40:25Z",
+      "side": 1,
+      "message": "Well we should.... !important changes are evil.\nWe should look to kill all of these.\nThey lead to specificity wars.",
+      "parentUuid": "6e7c4fa4_25dfbf6d",
+      "revId": "e205368a30220e0d7fc491bd000139600fbddf41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_ef1d26c2",
         "filename": "less/content/tables.less",
         "patchSetId": 1
