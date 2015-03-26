@@ -600,6 +600,7 @@ class SkinMinerva extends SkinTemplate {
 			$userId = $rev->getUser();
 			if ( $userId ) {
 				$revUser = User::newFromId( $userId );
+				$revUser->load( User::READ_NORMAL );
 				$link += array(
 					'data-user-name' => $revUser->getName(),
 					'data-user-gender' => $revUser->getOption( 'gender' ),
