@@ -21,8 +21,7 @@
 	} );
 	M.define( 'skin', skin );
 
-	$( window ).on( 'resize', $.proxy( M, 'emit', 'resize' ) )
-		.on( 'scroll', $.proxy( M, 'emit', 'scroll' ) );
+	$( window ).on( 'resize', $.debounce( 100, $.proxy( M, 'emit', 'resize' ) ) );
 
 	/**
 	 * Get current page view object
