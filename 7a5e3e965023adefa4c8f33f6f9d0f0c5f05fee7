@@ -16,6 +16,24 @@
       "revId": "7a5e3e965023adefa4c8f33f6f9d0f0c5f05fee7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_16a2faf9",
+        "filename": "less/content/hacks.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-26T22:25:54Z",
+      "side": 1,
+      "message": "It\u0027s already added above.",
+      "parentUuid": "6e7c4fa4_5645d245",
+      "revId": "7a5e3e965023adefa4c8f33f6f9d0f0c5f05fee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
