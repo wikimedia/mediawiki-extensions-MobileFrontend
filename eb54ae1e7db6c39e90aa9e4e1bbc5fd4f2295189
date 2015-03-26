@@ -16,6 +16,24 @@
       "revId": "eb54ae1e7db6c39e90aa9e4e1bbc5fd4f2295189",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_05f643d4",
+        "filename": "less/ui.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-26T18:12:14Z",
+      "side": 1,
+      "message": "thanks!",
+      "parentUuid": "6e7c4fa4_2f9d5e5b",
+      "revId": "eb54ae1e7db6c39e90aa9e4e1bbc5fd4f2295189",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
