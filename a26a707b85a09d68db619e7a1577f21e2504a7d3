@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cf494ad5",
+        "filename": "HISTORY.mediawiki",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-26T15:43:12Z",
+      "side": 1,
+      "message": "Should probably be renamed RELEASE-NOTES-\u003cversion\u003e to be consistent with core.\n\nAlso please update Makefile with instructions how to generate this and how often to (as discussed on mailing list we should use a script to do this), and guidance on how to use version numbers.\nA link to a mediawiki.org page in Makefile itself or README would be sufficient.",
+      "revId": "a26a707b85a09d68db619e7a1577f21e2504a7d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
