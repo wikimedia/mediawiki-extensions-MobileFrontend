@@ -205,7 +205,7 @@
 		onStageChanges: function () {
 			var self = this,
 				params = {
-					text: this.$content.val()
+					text: this.getContent()
 				};
 
 			this.scrollTop = $( 'body' ).scrollTop();
@@ -251,6 +251,25 @@
 		},
 
 		/**
+		 * Set content to the user input field.
+		 * @param {String} content The content to set.
+		 */
+		setContent: function ( content ) {
+			this.$content
+				.show()
+				.val( content )
+				.microAutosize();
+		},
+
+		/**
+		 * Returns the content of the user input field.
+		 * @return {String}
+		 */
+		getContent: function () {
+			return this.$content.val();
+		},
+
+		/**
 		 * Requests content from the API and reveals it in UI.
 		 * @method
 		 * @private
@@ -263,10 +282,7 @@
 
 			this.api.getContent()
 				.done( function ( content ) {
-					self.$content
-						.show()
-						.val( content )
-						.microAutosize();
+					self.setContent( content );
 					self.clearSpinner();
 				} )
 				.fail( function ( error ) {

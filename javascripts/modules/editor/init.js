@@ -153,8 +153,16 @@
 			 * @method
 			 */
 			function loadSourceEditor() {
-				loader.loadModule( 'mobile.editor.overlay' ).done( function () {
-					var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+				var rlModuleName, moduleName;
+				if ( mw.config.get( 'wgMFCodeMirror' ) && context.isAlphaGroupMember() ) {
+					moduleName = 'modules/editor/EditorOverlayCodeMirror';
+					rlModuleName = 'mobile.editor.overlay.codemirror';
+				} else {
+					moduleName = 'modules/editor/EditorOverlay';
+					rlModuleName = 'mobile.editor.overlay';
+				}
+				loader.loadModule( rlModuleName ).done( function () {
+					var EditorOverlay = M.require( moduleName );
 					result.resolve( new EditorOverlay( editorOptions ) );
 				} );
 			}
