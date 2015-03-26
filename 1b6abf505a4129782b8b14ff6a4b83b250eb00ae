@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_60f7ed8a",
+        "filename": "less/content/headings.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-26T00:06:32Z",
+      "side": 1,
+      "message": "So.. I\u0027m not the biggest fan of vendor prefixes...\nFirstly if we do this  we should add some notes about support.\n\nThis seems to be an experimental technology and doesn\u0027t have the widest support - none in chrome or android for example (2 of our biggest browsers)\nhttp://caniuse.com/#feat\u003dcss-hyphens\n\nIs hyphen support coming to Chrome / android any time soon in any form - what\u0027s the roadmap?",
+      "revId": "1b6abf505a4129782b8b14ff6a4b83b250eb00ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
