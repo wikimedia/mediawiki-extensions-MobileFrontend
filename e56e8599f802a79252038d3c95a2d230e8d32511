@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6df11d5f",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-26T20:08:56Z",
+      "side": 1,
+      "message": "Is \u0027else if\u0027 intentional? What about diagonal swipes? Will they emit only \u0027swipe-right\u0027 and \u0027swipe-left\u0027? I think they should emit \u0027swipe-up\u0027 or \u0027swipe-down\u0027 too.",
+      "revId": "e56e8599f802a79252038d3c95a2d230e8d32511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4d8d41d7",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-26T20:08:56Z",
+      "side": 1,
+      "message": "Would it be better to merge this with initialize? This way there won\u0027t be a need for a separate function. Otherwise, it looks like you want developers to use the same Swipe instance for multiple elements.\n\nAn alternative will be to make \u0027swipe\u0027 a property of Skin and use it with various elements.",
+      "revId": "e56e8599f802a79252038d3c95a2d230e8d32511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
