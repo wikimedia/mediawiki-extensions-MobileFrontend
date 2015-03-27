@@ -1,6 +1,5 @@
 ( function ( M, $ ) {
 	var InfiniteScroll = M.require( 'InfiniteScroll' ),
-		WatchListApi = M.require( 'modules/watchlist/WatchListApi' ),
 		response = {
 			'query-continue': {
 				pageimages: {
@@ -21,12 +20,17 @@
 					}
 				}
 			}
-		};
+		},
+		WatchListApi;
 
 	QUnit.module( 'MobileFrontend InfiniteScroll', {
 		setup: function () {
-			this.sandbox.stub( WatchListApi.prototype, 'get' )
-				.returns( $.Deferred().resolve( response ) );
+			var self = this;
+			mw.loader.using( 'mobile.watchlist' ).done( function () {
+				WatchListApi = M.require( 'modules/watchlist/WatchListApi' );
+				self.sandbox.stub( WatchListApi.prototype, 'get' )
+					.returns( $.Deferred().resolve( response ) );
+			} );
 		},
 		teardown: function () {
 			// Remove all scroll events after each test
