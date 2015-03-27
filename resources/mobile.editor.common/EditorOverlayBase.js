@@ -154,6 +154,8 @@
 		},
 		/** @inheritdoc **/
 		initialize: function ( options ) {
+			var self = this;
+
 			if ( options.isNewPage ) {
 				options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mw.user );
 			}
@@ -168,7 +170,18 @@
 			this.funnel = options.funnel;
 			this.schema = new SchemaMobileWebEditing();
 			this.config = mw.config.get( 'wgMFEditorOptions' );
-			$( window ).on( 'beforeunload.mfeditorwarning', $.proxy( this, 'onBeforeUnload' ) );
+			this.allowCloseWindow = mw.confirmCloseWindow( {
+				/** Returns true, if content has changed, otherwise false */
+				test: function () {
+					// Check if content has changed
+					return self.hasChanged();
+				},
+
+				/** Message to show the user, if content has changed */
+				message: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
+				/** Event namespace */
+				namespace: 'editwarning'
+			} );
 
 			Overlay.prototype.initialize.apply( this, arguments );
 		},
@@ -251,14 +264,6 @@
 			this[this.nextStep]();
 		},
 		/**
-		 * beforeunload event handler
-		 */
-		onBeforeUnload: function () {
-			if ( this.shouldConfirmLeave( false ) ) {
-				return this.defaults.confirmMsg;
-			}
-		},
-		/**
 		 * Set up the editor switching interface
 		 * The actual behavior of the editor buttons is initialized in postRender()
 		 * @method
@@ -337,17 +342,15 @@
 			this.switcherToolbar = toolbar;
 		},
 		/**
-		 * Allow prompts user to confirm before closing and losing edit.
 		 * @inheritdoc
 		 */
-		hide: function ( force ) {
-			if ( !this.shouldConfirmLeave( force ) || window.confirm( this.defaults.confirmMsg ) ) {
-				// turn off beforeunload event handler
-				$( window ).off( 'beforeunload.mfeditorwarning' );
-				return Overlay.prototype.hide.apply( this, arguments );
-			} else {
-				return false;
+		hide: function () {
+			// trigger the customEvent for mw.confirmCloseWindow
+			if ( !this.allowCloseWindow.trigger() ) {
+				return;
 			}
+			this.allowCloseWindow.release();
+			return Overlay.prototype.hide.apply( this, arguments );
 		},
 		/**
 		 * Check, if the user should be asked if they really want to leave the page.
