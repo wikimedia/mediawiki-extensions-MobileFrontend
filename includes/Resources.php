@@ -84,45 +84,43 @@ $wgMinervaStyleModules = array(
 		// Not used yet, see FIXME below
 		'selectorWithVariant' => '.mw-ui-icon-{name}-{variant}:before',
 		'images' => array(
-			'icon' => array(
-				// chrome
-				'notifications' => 'images/icons/bell.svg',
-				'mainmenu' => 'images/icons/hamburger.svg',
-				'search' => 'images/icons/magnifying-glass.svg',
+			// chrome
+			'notifications' => 'images/icons/bell.svg',
+			'mainmenu' => 'images/icons/hamburger.svg',
+			'search' => 'images/icons/magnifying-glass.svg',
 
-				// toggling
-				'arrow-down' => 'images/icons/arrow-down.svg',
-				'arrow-up' => 'images/icons/arrow-up.svg',
+			// toggling
+			'arrow-down' => 'images/icons/arrow-down.svg',
+			'arrow-up' => 'images/icons/arrow-up.svg',
 
-				// page actions
-				'talk' => 'images/icons/talk.svg',
-				'watch' => 'images/icons/watch.svg',
-				'watched' => 'images/icons/watched.svg',
-				'edit' => 'images/icons/editLocked.svg',
-				'edit-enabled' => 'images/icons/edit.svg',
-				'addimage' => 'images/icons/uploadLocked.svg',
-				'addimage-enabled' => 'images/icons/upload.svg',
+			// page actions
+			'talk' => 'images/icons/talk.svg',
+			'watch' => 'images/icons/watch.svg',
+			'watched' => 'images/icons/watched.svg',
+			'edit' => 'images/icons/editLocked.svg',
+			'edit-enabled' => 'images/icons/edit.svg',
+			'addimage' => 'images/icons/uploadLocked.svg',
+			'addimage-enabled' => 'images/icons/upload.svg',
 
-				// Editor
-				'edit-source' => 'images/icons/editSourceNormal.svg',
-				'edit-ve' => 'images/icons/editVeNormal.svg',
-				'edit-switch' => 'images/icons/editToggle.svg',
+			// Editor
+			'edit-source' => 'images/icons/editSourceNormal.svg',
+			'edit-ve' => 'images/icons/editVeNormal.svg',
+			'edit-switch' => 'images/icons/editToggle.svg',
 
-				// TOC
-				'toc' => 'images/icons/contents-ltr.svg',
+			// TOC
+			'toc' => 'images/icons/contents-ltr.svg',
 
-				// Issues
-				'cleanup' => 'images/icons/blue-triangle.svg',
-				// FIXME: make this a variant of cleanup
-				'cleanup-gray' => 'images/icons/gray-triangle.svg',
+			// Issues
+			'cleanup' => 'images/icons/blue-triangle.svg',
+			// FIXME: make this a variant of cleanup
+			'cleanup-gray' => 'images/icons/gray-triangle.svg',
 
-				// User
-				'user' => 'images/icons/userNormal.svg',
-				'anonymous' => 'images/icons/userAnonymous.svg',
+			// User
+			'user' => 'images/icons/userNormal.svg',
+			'anonymous' => 'images/icons/userAnonymous.svg',
 
-				// cite
-				'citation' => 'images/icons/cite.svg',
-			),
+			// cite
+			'citation' => 'images/icons/cite.svg',
 		),
 	),
 	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
@@ -136,13 +134,11 @@ $wgMinervaStyleModules = array(
 		'class' => 'ResourceLoaderImageModule',
 		'selector' => '.mw-ui-icon-{name}:before',
 		'images' => array(
-			'icon' => array(
-				// page actions
-				'watch' => 'images/icons/beta/watch.svg',
-				'watched' => 'images/icons/beta/watched.svg',
-				'edit' => 'images/icons/beta/editLocked.svg',
-				'edit-enabled' => 'images/icons/beta/edit.svg',
-			),
+			// page actions
+			'watch' => 'images/icons/beta/watch.svg',
+			'watched' => 'images/icons/beta/watched.svg',
+			'edit' => 'images/icons/beta/editLocked.svg',
+			'edit-enabled' => 'images/icons/beta/edit.svg',
 		),
 	),
 );
