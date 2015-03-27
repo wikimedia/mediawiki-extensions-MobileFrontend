@@ -122,6 +122,17 @@
 			this._positionImage();
 		},
 
+		/**
+		 * Close the overlay and prevent going back in browser's history
+		 * See T94188 & T94363.
+		 * @param {Object} ev Event Object
+		 */
+		onExit: function ( ev ) {
+			ev.preventDefault();
+			ev.stopPropagation();
+			window.location.hash = '';
+		},
+
 		/** @inheritdoc */
 		show: function () {
 			Overlay.prototype.show.apply( this, arguments );
