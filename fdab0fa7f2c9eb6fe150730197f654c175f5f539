@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2c8f9e30",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-27T19:12:56Z",
+      "side": 1,
+      "message": "no need to have this event, Overlay.events already covers cancel with onExit :)",
+      "revId": "fdab0fa7f2c9eb6fe150730197f654c175f5f539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4c921a58",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-27T19:12:56Z",
+      "side": 1,
+      "message": "@inheritdoc :)",
+      "revId": "fdab0fa7f2c9eb6fe150730197f654c175f5f539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6ca1169e",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-27T19:12:56Z",
+      "side": 1,
+      "message": "that doesn\u0027t work, maybe because Overlay.hide() triggers a hide event (i actually don\u0027t know, what is using it).\n\nWhy not jsut reuse the onExit method of ImageOverlayNew.js (maybe move it here and remove it in ImageOverlayNew.js, so it will be inherited).",
+      "revId": "fdab0fa7f2c9eb6fe150730197f654c175f5f539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
