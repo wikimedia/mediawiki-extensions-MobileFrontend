@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_41bbbc09",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-29T20:50:56Z",
+      "side": 1,
+      "message": "Hmm, we should explain shortly, why we do this (maybe in 2 or 3 months we revisit this and don\u0027t know anymore, why we did it and remove it maybe :)).\n\nWhat about:\nClose the overlay to prevent to go back in browser\u0027s history, see T94188 \u0026 T94363.",
+      "revId": "c1e36579387b8782b22e1c09bda89e54295e29fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
