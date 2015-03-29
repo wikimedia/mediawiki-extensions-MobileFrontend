@@ -68,6 +68,24 @@
       "revId": "fdab0fa7f2c9eb6fe150730197f654c175f5f539",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_41409c35",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-29T18:47:14Z",
+      "side": 1,
+      "message": "it shouldn\u0027t be needed to hide the overlay manually. If you change the hash, OverlayManager should close the actual overlay and opens a new one (if the new hash matches an overlayManager hash).",
+      "parentUuid": "6e7c4fa4_0128647f",
+      "revId": "fdab0fa7f2c9eb6fe150730197f654c175f5f539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
