@@ -50,6 +50,24 @@
       "revId": "fdab0fa7f2c9eb6fe150730197f654c175f5f539",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0128647f",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 2174
+      },
+      "writtenOn": "2015-03-29T18:12:38Z",
+      "side": 1,
+      "message": "onExit from ImageOverlayNew.js could be ported here, but to close the overlay this.hide() would be required. Is there an alternative to it?",
+      "parentUuid": "6e7c4fa4_6ca1169e",
+      "revId": "fdab0fa7f2c9eb6fe150730197f654c175f5f539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
