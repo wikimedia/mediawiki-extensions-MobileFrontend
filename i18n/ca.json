@@ -12,7 +12,8 @@
 			"Fitoschido",
 			"Adriabages",
 			"Macofe",
-			"Joan manel"
+			"Joan manel",
+			"Ssola"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Introduïu el codi de confirmació",
@@ -234,6 +235,7 @@
 	"mobile-frontend-search-content-no-results": "'''{{int:mobile-frontend-search-content}}''' per veure si aquesta frase apareix a algun lloc.",
 	"mobile-frontend-search-no-results": "No hi ha cap pàgina amb aquest títol.",
 	"mobile-frontend-search-submit": "Vés-hi",
+	"mobile-frontend-settings-images-explain": "Carrega totes les imatges que apareguin en una pàgina.",
 	"mobile-frontend-settings-alpha": "Mode experimental",
 	"mobile-frontend-settings-alpha-description": "Entreu en territori mòbil perillós i inexplorat. Obtingueu funcionalitats encara més experimentals però amb un major risc d'errors.",
 	"mobile-frontend-settings-beta": "Beta",
@@ -247,6 +249,9 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Tema",
 	"mobile-frontend-talk-add-overlay-submit": "Crea una discussió",
 	"mobile-frontend-talk-back-to-page": "Torna a l'article \"$1\".",
+	"mobile-frontend-talk-back-to-userpage": "Torna a la pàgina d'usuari \"{{GENDER:$1|$1}}\".",
+	"mobile-frontend-talk-back-to-projectpage": "Torna a la pàgina de projecte \"$1\".",
+	"mobile-frontend-talk-back-to-filepage": "Torna al fitxer \"$1\".",
 	"mobile-frontend-talk-edit-summary": "Nova secció de la discussió:$1",
 	"mobile-frontend-talk-explained": "Les següents converses són actives actualment",
 	"mobile-frontend-talk-explained-empty": "No hi ha converses sobre aquesta pàgina.",

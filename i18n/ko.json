@@ -15,7 +15,8 @@
 			"아라",
 			"Keysuck",
 			"Revi",
-			"SeoJeongHo"
+			"SeoJeongHo",
+			"Bluemersen"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -262,6 +263,7 @@
 	"mobile-frontend-search-content-no-results": "이 어구가 어디에 나타나는지 보려면 '''{{int:mobile-frontend-search-content}}'''하세요.",
 	"mobile-frontend-search-no-results": "이 제목으로 된 문서가 없습니다.",
 	"mobile-frontend-search-submit": "보기",
+	"mobile-frontend-settings-images-explain": "한 페이지 안의 모든 이미지 파일을 불러옵니다.",
 	"mobile-frontend-settings-alpha": "실험 모드",
 	"mobile-frontend-settings-alpha-description": "위험하고 미개척한 모바일 영역에 들어갑니다. 더 많은 실험 중인 기능을 사용할 수 있지만 더 많은 버그 위험이 따릅니다.",
 	"mobile-frontend-settings-beta": "베타",
@@ -275,6 +277,7 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "주제 제목",
 	"mobile-frontend-talk-add-overlay-submit": "토론 추가",
 	"mobile-frontend-talk-back-to-page": "\"$1\" 문서로 돌아갑니다.",
+	"mobile-frontend-talk-back-to-userpage": "\"{{GENDER:$1|$1}}\"의 사용자 문서로 돌아갑니다.",
 	"mobile-frontend-talk-edit-summary": "새 토론 문단: $1",
 	"mobile-frontend-talk-explained": "다음 토론은 현재 활동하고 있습니다",
 	"mobile-frontend-talk-explained-empty": "이 문서에 대한 토론이 없습니다.",

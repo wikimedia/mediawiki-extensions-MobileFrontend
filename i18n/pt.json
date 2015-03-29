@@ -364,7 +364,7 @@
 	"apihelp-mobileview-param-thumbheight": "Altura máxima da miniatura.",
 	"apihelp-parse-param-noimages": "Desactiva imagens no sítio móvel.",
 	"mobile-frontend-donate-button-label": "Doar",
-	"mobile-frontend-wikidata-editor-description-label": "Descreva ''$1'' numa única frase:",
+	"mobile-frontend-wikidata-editor-description-label": "Forneça uma pequena descrição para ''$1'':",
 	"mobile-frontend-meta-data-issues-categories": "Sobre esta categoria",
 	"mobile-frontend-loading-message": "A carregar...",
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|mês|meses}} atrás",

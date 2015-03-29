@@ -35,7 +35,7 @@
 	"beta-feature-minerva": "فعال‌سازی پوسته موبایل ({{int:skinname-minerva}}) بر روی میزکار",
 	"beta-feature-minerva-description": "ساختن پوستهٔ مورد استفاده در دستگاه‌های تلفن همراه پوستهٔ دسکتاپ قابل انتخاب تحت تب ظاهری \"{{int:prefs-rendering}}\" ترجیحات.",
 	"mobile-frontend-account-create-captcha-placeholder": "کد امنیتی را وارد کنید",
-	"mobile-frontend-account-create-email-placeholder": "نشانی رایانامه (اختیاری)",
+	"mobile-frontend-account-create-email-placeholder": "آدرس ایمیل (اختیاری)",
 	"mobile-frontend-account-create-submit": "ثبت نام",
 	"mobile-frontend-app-title": "نرم‌افزار گوشی همراه",
 	"mobile-frontend-back-to-top-of-section": "بازگشت به بخش قبلی",

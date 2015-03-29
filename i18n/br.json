@@ -54,6 +54,7 @@
 	"mobile-frontend-generic-404-desc": "N'eus ket bet gallet kavout ar bajenn emaoc'h o klask.",
 	"mobile-frontend-generic-404-title": "Fazi - N'eo ket bet kavet ar bajenn",
 	"mobile-frontend-generic-login": "{{SITENAME}} zo graet gant tud eveldoc'h.",
+	"mobile-frontend-generic-login-action": "Kevreit evit kemer perzh.",
 	"mobile-frontend-history-404-title": "N'eus ket eus un hevelep pajenn",
 	"mobile-frontend-home-button": "Degemer",
 	"mobile-frontend-image-heading-describe": "'''Deskrivañ''' ar skeudenn",
@@ -75,7 +76,6 @@
 	"mobile-frontend-last-modified-minutes": "Kemm diwezhañ {{PLURAL:$1|$1 vunutenn|$1 munut}} zo",
 	"mobile-frontend-last-modified-months": "Kemm diwezhañ {{PLURAL:$1|$1 miz}} zo",
 	"mobile-frontend-last-modified-seconds": "Kemm diwezhañ {{PLURAL:$1|$1 eilenn}} zo",
-	"mobile-frontend-listed-image-no-description": "Deskrivadur ebet",
 	"mobile-frontend-logged-in-homepage-notification": "Degemer mat, $1 !",
 	"mobile-frontend-logged-in-toast-notification": "Kevreet evel $1.",
 	"mobile-frontend-logged-out": "N'oc'h ket kevreet",
@@ -165,5 +165,6 @@
 	"mobile-frontend-watchlist-more": "muioc'h",
 	"mobile-frontend-watchlist-view": "Gwelet ho roll evezhiañ",
 	"nearby": "Pajennoù tost deoc'h",
+	"tag-mobile_edit": "Kemmañ gant an hezoug",
 	"mobile-frontend-donate-button-label": "Ober un donezon"
 }

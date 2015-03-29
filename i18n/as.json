@@ -3,7 +3,8 @@
 		"authors": [
 			"Bishnu Saikia",
 			"Gitartha.bordoloi",
-			"Nilamdyuti"
+			"Nilamdyuti",
+			"IKHazarika"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ওপৰত লিখা পাঠ্য লিখক",
@@ -13,6 +14,7 @@
 	"mobile-frontend-changeslist-ip": "বেনামী ব্যৱহাৰকাৰী",
 	"mobile-frontend-changeslist-nocomment": "সম্পাদনা সাৰংশ নাই",
 	"mobile-frontend-clear-search": "পৰিস্কাৰ",
+	"mobile-frontend-copyright": "আন একো উল্লেখ নাথাকিলে এই বিষয়বস্তু $1 ৰ আওতাত উপলব্ধ।",
 	"mobile-frontend-desc": "মোবাইল ফ্ৰ'ণ্টএণ্ড",
 	"mobile-frontend-diffview-anonymous": "বেনামী ব্যৱহাৰকাৰী",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|বাইট}} যোগ দিয়া হ’ল",
@@ -26,12 +28,14 @@
 	"mobile-frontend-featured-article": "আজিৰ নিৰ্বাচিত সমল",
 	"mobile-frontend-footer-contact": "যোগাযোগ",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "আপোনাৰ দৰে মানুহেই {{SITENAME}} তৈয়াৰ কৰিছে",
 	"mobile-frontend-generic-login-action": "অৱদান দিবলৈ প্ৰথমে প্ৰৱেশ কৰক।",
 	"mobile-frontend-home-button": "বেটুপাত",
 	"mobile-frontend-images-status": "চিত্ৰসমূহ",
 	"mobile-frontend-language-article-heading": "অন্য ভাষাত পঢ়ক",
 	"mobile-frontend-language-header": "এই পৃষ্ঠাটো $1 {{PLURAL:$1|ভাষাত|টা ভাষাত}} উপলব্ধ",
 	"mobile-frontend-language-site-choose": "ভাষা অনুসন্ধান:",
+	"mobile-frontend-last-modified-date": "শেহতীয়া পৰিবৰ্তন কৰা হৈছিল $2 ত, $1 তাৰিখা",
 	"mobile-frontend-logged-in-homepage-notification": "আদৰিছোঁ, $1!",
 	"mobile-frontend-logged-in-toast-notification": "$1 নামেৰে প্ৰৱেশ কৰিলে",
 	"mobile-frontend-logged-out": "প্ৰৱেশ কৰা নাই",
@@ -80,6 +84,7 @@
 	"mobile-frontend-sign-in-heading": "প্ৰৱেশ কৰক",
 	"mobile-frontend-sign-in-why": "আপোনাৰ যদি এটা {{SITENAME}} একাউণ্ট আছে, তেনে আপুনি তলত সদস্যভূক্তি হ’ব পাৰিব।",
 	"mobile-frontend-sign-up-heading": "পঞ্জীয়ন কৰক",
+	"mobile-frontend-terms-text": "ব্যৱহাৰৰ নিয়মাৱলী",
 	"mobile-frontend-username": "সদস্যনাম:",
 	"mobile-frontend-username-placeholder": "সদস্যনাম",
 	"mobile-frontend-view": "মোবাইল সংস্কৰণ",
@@ -93,5 +98,7 @@
 	"mobile-frontend-watchlist-removed": "$1 আপোনাৰ লক্ষ্য তালিকাৰ পৰা বিলোপ কৰা হ’ল",
 	"mobile-frontend-watchlist-view": "আপোনাৰ লক্ষ্য তালিকা চাওক",
 	"nearby": "আপোনাৰ নিকট পৃষ্ঠাসমূহ",
-	"tag-mobile_edit": "ম'বাইল সম্পাদনা"
+	"tag-mobile_edit": "ম'বাইল সম্পাদনা",
+	"tag-mobile_web_edit": "ভ্ৰাম্যমান (ম'বাইল) ৱেব সম্পাদনা",
+	"mobile-frontend-pageaction-edit-tooltip": "এই পৃষ্ঠাৰ শীৰ্ষ অনুচ্ছেদ সম্পাদনা কৰক।"
 }
