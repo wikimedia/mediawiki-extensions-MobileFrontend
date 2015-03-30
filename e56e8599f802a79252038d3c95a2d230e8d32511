@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_30f848bc",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-30T16:50:58Z",
+      "side": 1,
+      "message": "Sure, but why did you think the user wanted a \u0027swipe-right\u0027 or \u0027swipe-left\u0027 event by making a diagonal swipe? Maybe they wanted \u0027swipe-up\u0027 or \u0027swipe-down\u0027? If you think it\u0027s good enough, then fine, but I think any event that passes your distance test should be fired.",
+      "parentUuid": "6e7c4fa4_7efbf743",
+      "revId": "e56e8599f802a79252038d3c95a2d230e8d32511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_4d8d41d7",
         "filename": "javascripts/Swipe.js",
         "patchSetId": 5
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "In theory you could use the same swipe module for different elements, yes. Is it a bad idea to do this? In this case i would rename this function to something similar with \"enable\" and set the element in initialize :)",
       "parentUuid": "6e7c4fa4_4d8d41d7",
+      "revId": "e56e8599f802a79252038d3c95a2d230e8d32511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d02a342a",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-30T16:50:58Z",
+      "side": 1,
+      "message": "I think it\u0027s fine, no need to rename.",
+      "parentUuid": "6e7c4fa4_de932b02",
       "revId": "e56e8599f802a79252038d3c95a2d230e8d32511",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
