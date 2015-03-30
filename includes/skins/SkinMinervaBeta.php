@@ -59,7 +59,7 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
-	 * Returns true, if the talk page of this page contains a flow discussion board.
+	 * Returns true, if the talk page of this page is wikitext-based.
 	 * @return boolean
 	 */
 	protected function isWikiTextTalkPage() {
