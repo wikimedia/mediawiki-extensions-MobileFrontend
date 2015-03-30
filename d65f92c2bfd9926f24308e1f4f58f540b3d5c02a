@@ -34,6 +34,24 @@
       "revId": "d65f92c2bfd9926f24308e1f4f58f540b3d5c02a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_04f06df9",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-30T17:54:22Z",
+      "side": 1,
+      "message": "You\u0027re partially right, for example usermodule below. Personally, I think we should use caps.",
+      "parentUuid": "6e7c4fa4_e406911e",
+      "revId": "d65f92c2bfd9926f24308e1f4f58f540b3d5c02a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
