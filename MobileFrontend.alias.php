@@ -69,6 +69,13 @@ $specialPageAliases['av'] = array(
 	'Nearby' => array( 'Поблизости' ),
 );
 
+/** Azerbaijani (azərbaycanca) */
+$specialPageAliases['az'] = array(
+	'History' => array( 'Tarixçə' ),
+	'MobileMenu' => array( 'MobilMenyu' ),
+	'MobileLanguages' => array( 'MobilDillər' ),
+);
+
 /** Catalan (català) */
 $specialPageAliases['ca'] = array(
 	'Nearby' => array( 'A_prop' ),
