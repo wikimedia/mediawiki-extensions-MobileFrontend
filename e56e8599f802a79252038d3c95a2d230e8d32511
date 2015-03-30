@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_3073684a",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-30T16:59:04Z",
+      "side": 1,
+      "message": "hmm, i haven\u0027t thought about that, you\u0027re right :/ I will change it to this :)",
+      "parentUuid": "6e7c4fa4_30f848bc",
+      "revId": "e56e8599f802a79252038d3c95a2d230e8d32511",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_4d8d41d7",
         "filename": "javascripts/Swipe.js",
         "patchSetId": 5
