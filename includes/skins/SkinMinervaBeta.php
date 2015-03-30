@@ -59,13 +59,24 @@ class SkinMinervaBeta extends SkinMinerva {
 	}
 
 	/**
+	 * Returns true, if the talk page of this page contains a flow discussion board.
+	 * @return boolean
+	 */
+	protected function isWikiTextTalkPage() {
+		return $this->getTitle()->getTalkPage()->getContentModel() === CONTENT_MODEL_WIKITEXT;
+	}
+
+	/**
 	 * Returns an array of modules related to the current context of the page.
 	 * @return array
 	 */
 	public function getContextSpecificModules() {
 		$modules = parent::getContextSpecificModules();
 		$title = $this->getTitle();
-		if ( $this->isTalkAllowed() || $title->isTalkPage() ) {
+		if (
+			( $this->isTalkAllowed() || $title->isTalkPage() ) &&
+			$this->isWikiTextTalkPage()
+		) {
 			$modules[] = 'mobile.talk';
 		}
 
