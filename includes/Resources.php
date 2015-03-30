@@ -247,6 +247,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.watchlist' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
+			'mobile.infiniteScroll',
 			'mobile.pagelist.scripts',
 		),
 		'scripts' => array(
@@ -327,7 +328,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/OverlayManager.js',
 			// FIXME: Remove api code to mobile.ajax
 			'javascripts/api.js',
-			'javascripts/InfiniteScroll.js',
 			'javascripts/PageApi.js',
 			'javascripts/Icon.js',
 			'javascripts/icons.js',
@@ -1196,6 +1196,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.toast',
 			'mobile.foreignApi',
+			'mobile.infiniteScroll',
 		),
 		'templates' => array(
 			'PhotoItem.hogan' => 'templates/modules/gallery/PhotoItem.hogan',
@@ -1349,6 +1350,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-fontchanger-desc'
 		),
 		'position' => 'top',
+	),
+	'mobile.infiniteScroll' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.oo',
+		),
+		'scripts' => array(
+			'javascripts/InfiniteScroll.js',
+		),
 	),
 
 	// Custom ResourceLoaderModule classes
