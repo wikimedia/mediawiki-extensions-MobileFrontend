@@ -36,7 +36,8 @@
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
 			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
 			anonLabel: mw.msg( 'mobile-frontend-editor-anon' ),
-			anonSelector: 'continue',
+			// the "edit without logging in" link needs a second class to distinguish it with the "Next" button
+			anonSelector: 'continue anonymous',
 			anonMsg: mw.msg( 'mobile-frontend-editor-anonwarning' )
 		} ),
 		editor: 'SourceEditor',
@@ -95,9 +96,9 @@
 		/**
 		 * @inheritdoc
 		 */
-		onClickContinue: function () {
+		onClickContinue: function ( ev ) {
 			// handle the click on "Edit without logging in"
-			if ( this.options.isAnon ) {
+			if ( this.options.isAnon && $( ev.target ).hasClass( 'anonymous' ) ) {
 				this._showEditorAfterWarning();
 				return false;
 			}

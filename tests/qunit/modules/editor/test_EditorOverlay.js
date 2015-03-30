@@ -72,12 +72,13 @@
 		} ), 'initialize EditorApi without a section' );
 	} );
 
-	QUnit.test( '#initialize, as anonymous', 1, function ( assert ) {
+	QUnit.test( '#initialize, as anonymous', 2, function ( assert ) {
 		var editorOverlay = new EditorOverlay( {
 			title: 'Main_page',
 			isAnon: true
 		} );
 
 		assert.ok( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
+		assert.ok( editorOverlay.$( '.anonymous' ).length > 0, 'Continue login has a second class.' );
 	} );
 }( mw.mobileFrontend, jQuery ) );
