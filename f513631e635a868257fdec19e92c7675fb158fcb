@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a4197928",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1358,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-30T18:17:45Z",
+      "side": 1,
+      "message": "Maybe change this to \u0027mobile.oo\u0027? The only requirement in the Swipe.js file is \u0027eventemitter\u0027.",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_24dd6947",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-30T18:17:45Z",
+      "side": 1,
+      "message": "Remove two tabs and a \u0027*\u0027? Maybe add a line above? Also, explain what the disable does. Something you wrote below: \"unbind events from the element\".",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_04c14d58",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-30T18:17:45Z",
+      "side": 1,
+      "message": "It would be good to add the unit of distance here.",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_84823d00",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlayNew.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-30T18:17:45Z",
+      "side": 1,
+      "message": "Rather than instantiating a Swipe here and disabling it in postRender, maybe it is better to initialize it only when need in the else clause postRender?",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_84a1dd92",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-03-30T18:17:45Z",
+      "side": 1,
+      "message": "How about creating one function above and using it as both \u0027swipe-right\u0027 and \u0027swipe-left\u0027 callbacks?",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
