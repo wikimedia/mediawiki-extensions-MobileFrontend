@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9454a601",
+        "filename": "README.mediawiki",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-31T16:53:45Z",
+      "side": 1,
+      "message": "Can we guarantee this happens every 2 weeks...? :)",
+      "revId": "203cbe1c993f547ded73e2503b147952a85dabcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_543a8ec0",
+        "filename": "README.mediawiki",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-03-31T16:53:45Z",
+      "side": 1,
+      "message": "Can we automate this so that only make releasenotes needs to be run?\nI worry this could be error prone if left to us humble humans.",
+      "revId": "203cbe1c993f547ded73e2503b147952a85dabcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
