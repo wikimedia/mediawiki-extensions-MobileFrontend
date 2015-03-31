@@ -121,6 +121,7 @@
 	"mobile-frontend-requires-title": "Nedostupna stranica",
 	"mobile-frontend-save-settings": "Sačuvaj",
 	"mobile-frontend-search-submit": "Idi",
+	"mobile-frontend-settings-images-explain": "Prikazuje sve slike koje se nalaze na stranici.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-back-to-userpage": "Nazad na stranicu {{GENDER:$1|korisnika|korisnice}} „$1“.",
 	"mobile-frontend-talk-back-to-projectpage": "Nazad na stranicu projekta „$1“.",

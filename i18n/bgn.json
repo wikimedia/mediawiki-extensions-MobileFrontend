@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Baloch Afghanistan"
+			"Baloch Afghanistan",
+			"Ibrahim khashrowdi"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "بئ شه ایڈیٹ ئی خلاصه ئا",
@@ -31,5 +32,6 @@
 	"mobile-frontend-view-desktop": "دیسکتاپ",
 	"mobile-frontend-view-mobile": "موبایل",
 	"tag-mobile_edit": "موبایل ئی ایڈیٹ",
-	"tag-mobile_web_edit": "موبایل ئی ویب ایڈیٹ کورتین"
+	"tag-mobile_web_edit": "موبایل ئی ویب ایڈیٹ کورتین",
+	"mobile-frontend-pageaction-edit-tooltip": "ای دیمی شروئین بخشی دستکاری کورتین."
 }
