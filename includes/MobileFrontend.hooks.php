@@ -956,7 +956,6 @@ class MobileFrontendHooks {
 			'javascripts/loggingSchemas/SchemaMobileWebUploads.js',
 			'javascripts/loggingSchemas/SchemaMobileWebClickTracking.js',
 			'javascripts/loggingSchemas/SchemaMobileWebEditing.js',
-			'javascripts/loggingSchemas/init.js',
 		);
 
 		$wgResourceModules['mobile.loggingSchemas'] = $wgMFResourceFileModuleBoilerplate + array(
@@ -966,6 +965,8 @@ class MobileFrontendHooks {
 			) ),
 			'scripts' => $scripts,
 		);
+
+		$wgResourceModules['skins.minerva.scripts']['scripts'][] = 'javascripts/loggingSchemas/init.js';
 	}
 
 	/**
