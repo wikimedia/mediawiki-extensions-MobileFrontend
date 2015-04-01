@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_890c80f0",
+        "filename": "README.mediawiki",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-01T16:59:02Z",
+      "side": 1,
+      "message": "great",
+      "parentUuid": "6e7c4fa4_d0f5414e",
+      "revId": "203cbe1c993f547ded73e2503b147952a85dabcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_543a8ec0",
         "filename": "README.mediawiki",
         "patchSetId": 4
@@ -101,6 +119,24 @@
       "writtenOn": "2015-04-01T11:44:30Z",
       "side": 1,
       "message": "Let\u0027s don\u0027t use commit hashes, the script should support branch namens, too. And if we release MF every two weeks, e.g. Wednesday, we can use the newly created branch (e.g. make releasenotes from\u003dorigin/wmf/1.25wmf22 to origin/wmf/1.25wmf24). That would make the releaseprocess much easier (and less error prone) as handling commit hashes :)",
+      "revId": "203cbe1c993f547ded73e2503b147952a85dabcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6909e4de",
+        "filename": "README.mediawiki",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-01T16:59:02Z",
+      "side": 1,
+      "message": "good idea!",
+      "parentUuid": "6e7c4fa4_b0c8c525",
       "revId": "203cbe1c993f547ded73e2503b147952a85dabcb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
