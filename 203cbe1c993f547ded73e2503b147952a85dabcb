@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_d0f5414e",
+        "filename": "README.mediawiki",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-01T11:44:30Z",
+      "side": 1,
+      "message": "Maybe we can \"reuse\" wikitech\u0027s deployment calender compared with https://wikitech.wikimedia.org/wiki/Jouncebot ?",
+      "parentUuid": "6e7c4fa4_d738e09c",
+      "revId": "203cbe1c993f547ded73e2503b147952a85dabcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_543a8ec0",
         "filename": "README.mediawiki",
         "patchSetId": 4
@@ -66,6 +84,23 @@
       "side": 1,
       "message": "I think that there should be a balance between automation and manual work and this may be one of those cases. Also, this script should be part of the process not almost the whole process of releasing the software. If need be, some commit messages should be deleted and others should be modified in the release notes. Maybe I should add these things here to this file. What do you think?",
       "parentUuid": "6e7c4fa4_543a8ec0",
+      "revId": "203cbe1c993f547ded73e2503b147952a85dabcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b0c8c525",
+        "filename": "README.mediawiki",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-01T11:44:30Z",
+      "side": 1,
+      "message": "Let\u0027s don\u0027t use commit hashes, the script should support branch namens, too. And if we release MF every two weeks, e.g. Wednesday, we can use the newly created branch (e.g. make releasenotes from\u003dorigin/wmf/1.25wmf22 to origin/wmf/1.25wmf24). That would make the releaseprocess much easier (and less error prone) as handling commit hashes :)",
       "revId": "203cbe1c993f547ded73e2503b147952a85dabcb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
