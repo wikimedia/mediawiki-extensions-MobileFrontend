@@ -113,7 +113,7 @@ $specialPageAliases['diq'] = array(
 	'MobileMenu' => array( 'MıobilMenu' ),
 	'MobileLanguages' => array( 'MobilZıwani' ),
 	'Nearby' => array( 'Nezdıra' ),
-	'UserProfile' => array( 'ProfilaKarberi' ),
+	'UserProfile' => array( 'ProfilêKarberi' ),
 );
 
 /** Esperanto (Esperanto) */

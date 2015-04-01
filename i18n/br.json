@@ -3,7 +3,8 @@
 		"authors": [
 			"Fohanno",
 			"Fulup",
-			"Y-M D"
+			"Y-M D",
+			"Gwenn-Ael"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Skrivit ar c'hod kadarnaat",
@@ -13,8 +14,9 @@
 	"mobile-frontend-back-to-top-of-section": "Lammat ur rann war-gil",
 	"mobile-frontend-categories-heading": "<strong>Rummadoù</strong>",
 	"mobile-frontend-changeslist-ip": "Implijer dizanv",
+	"mobile-frontend-changeslist-nocomment": "Diverradenn ebet eus ar c'hemm",
 	"mobile-frontend-clear-search": "Riñsañ",
-	"mobile-frontend-copyright": "Gallout a reer ober gant an destenn-mañ zo diouzh an <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Aotre Creative Commons/Aotre Rannañ Heñvel</a>; diferadurioù ouzhpenn a c'hall talvezout ivez. Gwelet <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>an doare implijout</a> evit gouzout hiroc'h. Ur merk marilhet gant <a href='http://www.wikimediafoundation.org/'>Diazezadur Wikimedia, Inc.</a>, anezhañ un aozadur hep pal arc'hant, eo {{SITENAME}}.",
+	"mobile-frontend-copyright": "Danvez a c'haller implijout dindan $1 nemet ha notet e vefe ar c'hontrol.",
 	"mobile-frontend-desc": "Talbenn evit an hezougoù",
 	"mobile-frontend-diffview-anonymous": "Implijer dizanv",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|okted}} ouzhpennet",
@@ -45,7 +47,7 @@
 	"mobile-frontend-enable-images": "Gweredekaat ar skeudennoù war al lec'hienn hezoug",
 	"mobile-frontend-expand-sections-status": "Astenn an holl rannoù",
 	"mobile-frontend-fontchanger-link": "Ment ar font",
-	"mobile-frontend-featured-article": "Un tamm sell war...",
+	"mobile-frontend-featured-article": "Endalc'had erbedet hiziv",
 	"mobile-frontend-first-upload-wizard-new-page-1": "Ar skeudennoù war {{SITENAME}} a deu eus Wikimedia Commons",
 	"mobile-frontend-first-upload-wizard-new-page-3-header": "Mat eo ?",
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Ya !",
@@ -166,5 +168,6 @@
 	"mobile-frontend-watchlist-view": "Gwelet ho roll evezhiañ",
 	"nearby": "Pajennoù tost deoc'h",
 	"tag-mobile_edit": "Kemmañ gant an hezoug",
+	"tag-mobile_web_edit": "Kemmañ dre ar web hezoug",
 	"mobile-frontend-donate-button-label": "Ober un donezon"
 }
