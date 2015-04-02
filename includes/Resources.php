@@ -162,7 +162,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.view' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.oo',
-			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/View.js',
@@ -222,8 +221,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	// Back-compat alias
-	// FIXME: Remove when templates in core.
+	// Backwards compability for Zero and other extensions that may still use this
+	// FIXME: Remove when https://phabricator.wikimedia.org/T94462 resolved.
 	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.template.hogan',
@@ -268,7 +267,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.toc' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'mobile.templates',
 			'mobile.loggingSchemas',
 			'mobile.toggling',
 		),
@@ -308,7 +306,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.startup' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
-			'mobile.templates',
 			'mobile.user',
 			'mediawiki.api',
 			'mobile.redlinks',
@@ -419,7 +416,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.overlays',
 			'mobile.startup',
-			'mobile.templates',
 		),
 		'templates' => array(
 			'Overlay.hogan' => 'templates/modules/editor/AbuseFilterOverlay.hogan',
@@ -453,7 +449,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'oojs-ui',
 			'mobile.stable',
-			'mobile.templates',
 			'mobile.editor.api',
 			'mobile.settings',
 			'mobile.drawers',
@@ -526,7 +521,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.uploads' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
-			'mobile.templates',
 			'mobile.editor.api',
 			'mobile.contentOverlays',
 			'mobile.foreignApi',
@@ -619,7 +613,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.pagelist.scripts',
 			'mobile.overlays',
-			'mobile.templates',
 			'mobile.loggingSchemas',
 			'mediawiki.Title',
 		),
@@ -646,7 +639,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.talk.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.talk',
-			'mobile.templates',
 			'mediawiki.ui.anchor',
 		),
 		'scripts' => array(
@@ -699,7 +691,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.overlays',
 			// for Api.js
 			'mobile.startup',
-			'mobile.templates',
 		),
 		'styles' => array(
 			'less/modules/mediaViewer.less',
@@ -734,7 +725,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mediawiki.Title',
 			'mobile.overlays',
-			'mobile.templates',
 			'mobile.loggingSchemas',
 			'mobile.toast',
 			'mobile.search',
@@ -777,7 +767,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.overlays' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.templates',
 			'mobile.startup',
 			'mobile.ajax',
 		),
@@ -943,7 +932,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.newusers' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.templates',
 			'mobile.editor',
 			'mobile.contentOverlays',
 			'mobile.loggingSchemas',
@@ -963,7 +951,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.watchstar' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'mobile.templates',
 			'mobile.drawers',
 			'mobile.ajax',
 			'mobile.toast',
@@ -1032,7 +1019,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.errorReport.overlay' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.templates',
 			'mobile.overlays',
 			'mobile.toast',
 		),
@@ -1079,7 +1065,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.languages' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.overlays',
-			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/modules/languages/LanguageOverlay.js',
@@ -1126,7 +1111,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// @todo FIXME: Kill this dependency!
 			'mobile.special.nearby.styles',
 			'mediawiki.language',
-			'mobile.templates',
 			'mobile.loggingSchemas',
 			'mobile.pagelist.scripts',
 			'mobile.foreignApi',
@@ -1332,7 +1316,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.settings',
-			'mobile.templates',
 			'mobile.drawers',
 			'mobile.loggingSchemas',
 		),
@@ -1379,7 +1362,6 @@ $wgMobileVEModules = array(
 		'dependencies' => array(
 			'ext.visualEditor.mobileViewTarget',
 			'mobile.stable',
-			'mobile.templates',
 			'mobile.editor.common',
 			'mobile.overlays',
 		),
@@ -1446,7 +1428,6 @@ $wgMobileSpecialPageModules = array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.settings',
-			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/specials/mobileoptions.js',
@@ -1649,7 +1630,6 @@ $wgMinervaBootstrapModules = array(
 			// FIXME: Review the modules that follow. Ensure they are in the correct module definition.
 			'mobile.user',
 			'mediawiki.util',
-			'mobile.templates',
 			'mediawiki.language',
 			'mobile.pagelist.scripts',
 			// Feature modules that should be loaded in stable.
