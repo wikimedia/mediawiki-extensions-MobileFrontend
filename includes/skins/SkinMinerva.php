@@ -937,7 +937,7 @@ class SkinMinerva extends SkinTemplate {
 		$modules['head'] = 'mobile.head';
 		// Define all the modules that should load on the mobile site and their dependencies.
 		// Do not add mobules here.
-		$modules['stable'] = 'mobile.stable';
+		$modules['stable'] = 'skins.minerva.scripts';
 
 		// Doing this unconditionally, prevents the desktop watchstar from ever leaking into mobile view.
 		$modules['watch'] = array();

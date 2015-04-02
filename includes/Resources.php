@@ -211,6 +211,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-with-user-just-now',
 		),
 	),
+
+	'mobile.microAutoSize' => $wgMFResourceFileModuleBoilerplate + array(
+		'scripts' => array(
+			'javascripts/externals/micro.autosize.js',
+		),
+	),
+
 	'mediawiki.template.hogan' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mediawiki.template',
@@ -437,7 +444,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.editor.api' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable',
+			// Api
+			'mobile.startup',
 			'mobile.abusefilter',
 		),
 		'scripts' => array(
@@ -447,8 +455,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.editor.common' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
+			'mobile.loggingSchemas',
 			'oojs-ui',
-			'mobile.stable',
+			'mobile.overlays',
 			'mobile.editor.api',
 			'mobile.settings',
 			'mobile.drawers',
@@ -505,7 +514,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.editor.overlay' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.editor.common',
-			'mobile.loggingSchemas',
+			'mobile.microAutoSize',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorOverlay.js',
@@ -520,10 +529,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.uploads' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable',
+			'mobile.startup',
 			'mobile.editor.api',
 			'mobile.contentOverlays',
 			'mobile.foreignApi',
+			'mobile.microAutoSize',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/modules/uploads/PhotoApi.js',
@@ -1155,7 +1166,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.notifications.overlay' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable',
+			'mobile.overlays',
 			'ext.echo.base',
 		),
 		'scripts' => array(
@@ -1361,7 +1372,6 @@ $wgMobileVEModules = array(
 	'mobile.editor.ve' => $wgMFResourceBoilerplate + array(
 		'dependencies' => array(
 			'ext.visualEditor.mobileViewTarget',
-			'mobile.stable',
 			'mobile.editor.common',
 			'mobile.overlays',
 		),
@@ -1489,7 +1499,7 @@ $wgMobileSpecialPageModules = array(
 
 	'mobile.special.notifications.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable'
+			'mobile.startup',
 		),
 		'scripts' => array(
 			'javascripts/specials/notifications.js',
@@ -1622,16 +1632,11 @@ $wgMinervaBootstrapModules = array(
 		'position' => 'top',
 	),
 
-	// By mode.
-	'mobile.stable' => $wgMFResourceFileModuleBoilerplate + array(
+	// By mode. This should only ever be loaded in Minerva skin.
+	'skins.minerva.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.loggingSchemas',
-			// FIXME: Review the modules that follow. Ensure they are in the correct module definition.
-			'mobile.user',
-			'mediawiki.util',
-			'mediawiki.language',
-			'mobile.pagelist.scripts',
 			// Feature modules that should be loaded in stable.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
@@ -1641,14 +1646,14 @@ $wgMinervaBootstrapModules = array(
 			'mobile.redirect',
 		),
 		'scripts' => array(
-			'javascripts/externals/micro.autosize.js',
 			'javascripts/modules/mediaViewer/init.js',
 			'javascripts/modules/languages/init.js',
 		),
 	),
-	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
+	// By mode. This should only ever be loaded in Minerva skin.
+	'skins.minerva.beta.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable',
+			'skins.minerva.scripts',
 			// Feature modules that should be loaded in beta should be listed below here.
 			// These modules should only setup routes/events or
 			// load code under certain conditions.
@@ -1660,9 +1665,10 @@ $wgMinervaBootstrapModules = array(
 			'javascripts/modules/bannerImage/init.js',
 		),
 	),
-	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
+	// By mode. This should only ever be loaded in Minerva skin.
+	'skins.minerva.alpha.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
-			'mobile.beta',
+			'skins.minerva.beta.scripts',
 			// Feature modules that should be loaded in alpha should be listed below here.
 			'mobile.infobox',
 			'mobile.fontchanger',
@@ -1675,6 +1681,18 @@ $wgMinervaBootstrapModules = array(
 			'javascripts/modules/infobox/init.js',
 			'javascripts/modules/projects/init.js',
 		)
+	),
+	// FIXME: Alias. Remove when cache cleared.
+	'mobile.stable' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array( 'skins.minerva.scripts' ),
+	),
+	// FIXME: Alias.Remove when cache cleared.
+	'mobile.beta' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array( 'skins.minerva.beta.scripts' ),
+	),
+	// FIXME: Alias. Remove when cache cleared.
+	'mobile.alpha' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array( 'skins.minerva.alpha.scripts' ),
 	),
 	'tablet.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
