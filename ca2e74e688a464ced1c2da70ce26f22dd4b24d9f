@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_f4e2a42c",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-02T17:35:51Z",
+      "side": 1,
+      "message": ".header is needed because the code in ui.less has it and we need it to override without !important. I didn\u0027t want to remove it from ui.less because it may cause other problems that I\u0027m not aware of in non alpha modes.",
+      "parentUuid": "6e7c4fa4_13441a1b",
+      "revId": "ca2e74e688a464ced1c2da70ce26f22dd4b24d9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_f3487e33",
         "filename": "less/specials/mobilemenu.less",
         "patchSetId": 2
