@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1e465a80",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 517,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-04-02T22:38:28Z",
+      "side": 1,
+      "message": "This was added to mobile.editor.common above. Doesn\u0027t need to be listed in both.",
+      "revId": "442a2005f129276be55e0134c6a71126f2121792",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
