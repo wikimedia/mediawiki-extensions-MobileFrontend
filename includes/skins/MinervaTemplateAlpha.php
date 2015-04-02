@@ -110,9 +110,31 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 
 	protected function getSearchAttributes() {
 		$searchAttributes = parent::getSearchAttributes();
-		$searchAttributes['class'] = MobileUI::iconClass( 'search', 'before', 'search' );
+		$searchAttributes['class'] =  MobileUI::semanticClass( 'mw-ui-input', '', 'search' );
 
 		return $searchAttributes;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	protected function makeSearchForm( $data ) {
+		return Html::openElement( 'form',
+				array(
+					'action' => $data['wgScript'],
+					'class' => 'search-box',
+				)
+			) .
+			$this->makeSearchButton(
+				'fulltext',
+				array(
+					'class' => 'fulltext-search no-js-only icon icon-search-white',
+					)
+			) .
+			Html::openElement( 'span' ) .
+			$this->makeSearchInput( $this->getSearchAttributes() ) .
+			Html::closeElement( 'span' ) .
+			Html::closeElement( 'form' );
 	}
 
 	/**

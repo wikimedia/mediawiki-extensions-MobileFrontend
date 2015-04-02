@@ -13,6 +13,33 @@ body.navigation-full-screen {
 	}
 }
 
+.client-js {
+	.alpha {
+		.search-box {
+			.search {
+				border: none;
+				box-shadow: none;
+				padding: 0;
+
+				// Overwrite mw-ui-input style
+				// Placeholder text styling must be set individually for each browser @winter
+				&::-webkit-input-placeholder { // webkit
+					font-style: normal;
+				}
+				&::-moz-placeholder { // FF 4-18
+					font-style: normal;
+				}
+				&:-moz-placeholder { // FF >= 19
+					font-style: normal;
+				}
+				&:-ms-input-placeholder { // IE >= 10
+					font-style: normal;
+				}
+			}
+		}
+	}
+}
+
 .client-nojs {
 	#mw-mf-page-left {
 		.icon,
@@ -22,6 +49,31 @@ body.navigation-full-screen {
 		}
 		.icon-secondary {
 			display: none;
+		}
+	}
+
+	.alpha {
+		.header {
+			.search-box {
+				span {
+					display: block;
+					float: none;
+					overflow: hidden;
+					padding-right: 10px;
+					min-width: 80px;
+
+					.search {
+						width: 100%;
+					}
+				}
+
+			}
+			.fulltext-search {
+				border-radius: .2em;
+				float: right;
+				margin: 0;
+				padding: 1.05em 1.5em;
+			}
 		}
 	}
 }
