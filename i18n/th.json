@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Horus",
-			"Nullzero"
+			"Nullzero",
+			"Octahedron80"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "ที่อยู่อีเมล (เลือกได้)",
@@ -16,6 +17,7 @@
 	"mobile-frontend-featured-article": "เนื้อหาคัดสรรวันนี้",
 	"mobile-frontend-footer-contact": "ติดต่อ",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "{{SITENAME}}สร้างจากคนเช่นคุณ",
 	"mobile-frontend-generic-login-action": "ล็อกอินเพื่อเข้ามีส่วนร่วม",
 	"mobile-frontend-home-button": "หน้าหลัก",
 	"mobile-frontend-language-article-heading": "อ่านในภาษาอื่น",
