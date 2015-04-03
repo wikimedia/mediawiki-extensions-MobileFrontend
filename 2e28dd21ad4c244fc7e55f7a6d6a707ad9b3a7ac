@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_e944fd1f",
+        "filename": "javascripts/ButtonWithSpinner.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-03T23:28:25Z",
+      "side": 1,
+      "message": "I think there is a rule somewhere that we follow, which is to add a blank line after var.",
+      "revId": "2e28dd21ad4c244fc7e55f7a6d6a707ad9b3a7ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_7e518539",
         "filename": "javascripts/ButtonWithSpinner.js",
         "patchSetId": 2
