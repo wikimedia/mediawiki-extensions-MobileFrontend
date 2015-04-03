@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_deca194b",
+        "filename": "javascripts/ButtonWithSpinner.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-03T21:58:38Z",
+      "side": 1,
+      "message": "why not just put the label in a span and use visibility: hidden ?",
+      "revId": "11e7248c81ca958af040d5d12f5731f33afc5f56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_7edc251c",
         "filename": "javascripts/ButtonWithSpinner.js",
         "patchSetId": 1
