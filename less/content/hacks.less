@@ -118,7 +118,7 @@ FIXME: Review all of these hacks to see if they still apply.
 	width: auto !important;
 }
 
-// Hacks to render galleries better on mobile
+// Hacks to render galleries and multicol tables better on mobile
 @media all and (max-width: @wgMFDeviceWidthTablet) {
 
 	// Center images that might be less than the screen width.
@@ -128,6 +128,19 @@ FIXME: Review all of these hacks to see if they still apply.
 			width: 100% !important;
 			div {
 				width: 100% !important;
+			}
+		}
+	}
+
+	.content {
+		table {
+			// Make {{col-beg}}, {{col-break}}, and {{col-end}} templates display single column tables
+			&.multicol {
+				> tbody > tr > td,
+				> tr > td {
+					display: block !important;
+					width: auto !important;
+				}
 			}
 		}
 	}
