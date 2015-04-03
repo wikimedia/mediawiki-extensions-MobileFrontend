@@ -248,6 +248,19 @@ $specialPageAliases['lb'] = array(
 	'UserProfile' => array( 'Benotzerprofil' ),
 );
 
+/** لوری (لوری) */
+$specialPageAliases['lrc'] = array(
+	'History' => array( 'ویرگار' ),
+	'MobileOptions' => array( 'خصوصیات_موبایلی' ),
+	'Uploads' => array( 'سوارکردیا' ),
+	'MobileDiff' => array( 'فرخ_موبایلی' ),
+	'MobileEditor' => array( 'ویرایشتکار_موبایلی' ),
+	'MobileMenu' => array( 'منو_موبایلی' ),
+	'MobileLanguages' => array( 'زونا_موبایل' ),
+	'Nearby' => array( 'نزیک_وه' ),
+	'UserProfile' => array( 'جانیاگه_کاریار' ),
+);
+
 /** Literary Chinese (文言) */
 $specialPageAliases['lzh'] = array(
 	'Nearby' => array( '近郊' ),
