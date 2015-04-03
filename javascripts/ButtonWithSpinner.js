@@ -15,7 +15,11 @@
 	 * Show the spinner and hide the label (and save the label for future use)
 	 */
 	ButtonWithSpinner.prototype.showSpinner = function () {
+		var originalWidth = this.$button.width();
+
 		this.defaultLabel = this.getLabel();
+		// Don't let the button width change
+		this.$button.width( originalWidth );
 		this
 			.setIndicator( 'spinner' )
 			.setLabel( '' )
