@@ -34,6 +34,24 @@
       "revId": "2e28dd21ad4c244fc7e55f7a6d6a707ad9b3a7ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_090a9922",
+        "filename": "javascripts/ButtonWithSpinner.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-04-03T22:54:50Z",
+      "side": 1,
+      "message": "jQuery .width() sets the width in CSS (so that is no longer using width:auto). Once it is set, it will keep that CSS width assignment until something else changes it, so the width will stay the same regardless of changes to the contents (assuming the contents don\u0027t exceed that width and force it to be larger).",
+      "parentUuid": "6e7c4fa4_7e518539",
+      "revId": "2e28dd21ad4c244fc7e55f7a6d6a707ad9b3a7ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
