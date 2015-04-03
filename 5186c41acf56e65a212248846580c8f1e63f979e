@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bb2defa5",
+        "filename": "less/modules/watchstar.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-03T20:50:29Z",
+      "side": 1,
+      "message": "There is still some space above the icon. Replacing the code in this block with the following code and removing the below code should fix the problem in stable. You need to add more code for alpha and beta:\n\n\theight: 100%;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\twidth: @watchThisArticleSize;",
+      "revId": "5186c41acf56e65a212248846580c8f1e63f979e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
