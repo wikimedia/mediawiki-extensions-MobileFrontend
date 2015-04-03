@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_b8e895a4",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1358,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-03T19:38:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_a4197928",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_24dd6947",
         "filename": "javascripts/Swipe.js",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2015-03-30T18:17:45Z",
       "side": 1,
       "message": "Remove two tabs and a \u0027*\u0027? Maybe add a line above? Also, explain what the disable does. Something you wrote below: \"unbind events from the element\".",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d827910d",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-03T19:38:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_24dd6947",
       "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_982119fa",
+        "filename": "javascripts/Swipe.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-03T19:38:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_04c14d58",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_84823d00",
         "filename": "javascripts/modules/mediaViewer/ImageOverlayNew.js",
         "patchSetId": 6
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_d8d471c2",
+        "filename": "javascripts/modules/mediaViewer/ImageOverlayNew.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-03T19:38:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_84823d00",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_84a1dd92",
         "filename": "javascripts/modules/quickLookup/init.js",
         "patchSetId": 6
@@ -81,6 +153,24 @@
       "writtenOn": "2015-03-30T18:17:45Z",
       "side": 1,
       "message": "How about creating one function above and using it as both \u0027swipe-right\u0027 and \u0027swipe-left\u0027 callbacks?",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_38e7a5a9",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-03T19:38:07Z",
+      "side": 1,
+      "message": "?\nDo you mean\n.on( \u0027swipe-left swipe-right\u0027, $.proxy( this, \u0027showDrawer\u0027, ev ) );\n\n?? EventEmitter.on seems to doesn\u0027t understand multiple events in one on-call :/",
+      "parentUuid": "6e7c4fa4_84a1dd92",
       "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
