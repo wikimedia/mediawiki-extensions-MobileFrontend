@@ -192,6 +192,24 @@
       "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4a571fce",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-05T12:39:09Z",
+      "side": 1,
+      "message": "*facepalm* now i know, what you mean :D",
+      "parentUuid": "6e7c4fa4_be139d5c",
+      "revId": "f513631e635a868257fdec19e92c7675fb158fcb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
