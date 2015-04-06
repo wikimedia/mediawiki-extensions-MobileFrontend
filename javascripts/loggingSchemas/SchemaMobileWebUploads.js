@@ -2,13 +2,13 @@
 	var SchemaMobileWebUploads,
 		user = M.require( 'user' ),
 		page = M.getCurrentPage(),
-		Schema = M.require( 'Schema' );
+		SchemaMobileWeb = M.require( 'loggingSchemas/SchemaMobileWeb' );
 
 	/**
 	 * @class SchemaMobileWebUploads
 	 * @extends Schema
 	 */
-	SchemaMobileWebUploads = Schema.extend( {
+	SchemaMobileWebUploads = SchemaMobileWeb.extend( {
 		/** @inheritdoc **/
 		name: 'MobileWebUploads',
 		/**
@@ -24,7 +24,7 @@
 		 * @cfg {Boolean} defaults.isLoggedIn Whether the user is logged in
 		 * @cfg {Boolean} defaults.isEditable True, if the user is able to edit the current page, false otherwise
 		 */
-		defaults: $.extend( {}, Schema.prototype.defaults, {
+		defaults: $.extend( {}, SchemaMobileWeb.prototype.defaults, {
 			pageId: mw.config.get( 'wgArticleId' ),
 			token: user.getSessionId(),
 			funnel: 'unknown',

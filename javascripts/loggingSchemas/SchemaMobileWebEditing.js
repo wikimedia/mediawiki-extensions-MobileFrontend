@@ -1,13 +1,13 @@
 ( function ( M, $ ) {
 	var SchemaMobileWebEditing,
 		user = M.require( 'user' ),
-		Schema = M.require( 'Schema' );
+		SchemaMobileWeb = M.require( 'loggingSchemas/SchemaMobileWeb' );
 
 	/**
 	 * @class SchemaMobileWebEditing
 	 * @extends Schema
 	 */
-	SchemaMobileWebEditing = Schema.extend( {
+	SchemaMobileWebEditing = SchemaMobileWeb.extend( {
 		/** @inheritdoc **/
 		name: 'MobileWebEditing',
 		/**
@@ -27,7 +27,7 @@
 		 * logger omit this property when sending the data to a server. According to the schema
 		 * userEditCount is optional.
 		 */
-		defaults: $.extend( {}, Schema.prototype.defaults, {
+		defaults: $.extend( {}, SchemaMobileWeb.prototype.defaults, {
 			pageId: mw.config.get( 'wgArticleId' ),
 			token: user.getSessionId(),
 			revId: mw.config.get( 'wgRevisionId' ),
