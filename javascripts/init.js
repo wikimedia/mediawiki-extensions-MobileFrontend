@@ -7,6 +7,7 @@
  */
 ( function ( M, $ ) {
 	var currentPage, skin,
+		$cachedIcons = $( '#page-actions' ).find( '.icon' ),
 		PageApi = M.require( 'PageApi' ),
 		pageApi = new PageApi(),
 		Page = M.require( 'Page' ),
@@ -76,5 +77,13 @@
 	if ( window.console && window.console.log && window.console.log.apply &&
 			mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {
 		console.log( mw.msg( 'mobile-frontend-console-recruit' ) );
+	}
+
+	// FIXME: Remove when old icon classes are no longer in page html.
+	if ( $cachedIcons.length ) {
+		// load the missing modules...
+		mw.loader.load( [ 'mediawiki.ui.icon', 'skins.minerva.icons.images' ] );
+		$cachedIcons.addClass( 'mw-ui-icon mw-ui-icon-element' ).removeClass( 'icon' );
+		$cachedIcons.filter( '.icon-text' ).addClass( 'mw-ui-icon-before' ).removeClass( 'icon-text mw-ui-icon-element' );
 	}
 }( mw.mobileFrontend, jQuery ) );

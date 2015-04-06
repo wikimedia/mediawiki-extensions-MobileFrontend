@@ -1,4 +1,9 @@
-// FIXME: Standardise on all our icon sizes
+/**
+ * FIXME: Remove this entire file when cache has cleared (this is needed for non-js users)
+ * Note that with JS disabled only hamburger and search icon are visible in stable on an article page.
+ * JS fixes the other issues with the icon class being used in page html.
+ * Remember HTML for special pages is not cached.
+ */
 @import "minerva.variables";
 @import "minerva.mixins";
 @import "mediawiki.mixins";
@@ -7,24 +12,7 @@
 	min-height: @size;
 	min-width: @size;
 }
-// Icons
-//
-// Styleguide 8.
 
-
-// Icon
-//
-// Use the icon class whenever you are using an icon - whether it be in
-// a button, link or other input field. All icons should be 24px width and
-// centered by default and will hide any text in the element.
-//
-// Markup:
-// <div class="icon icon-edit">edit</div>
-//
-// Styleguide 8.1.
-.mw-ui-button.mw-ui-progressive.icon,
-.profile .icon-talk-blue,
-// FIXME: Kill above when mediawiki ui buttons does not use background declaration
 .icon {
 	background-repeat: no-repeat;
 	.background-size( 24px, auto );
@@ -39,198 +27,11 @@
 	}
 }
 
-// Icon (text)
-//
-// When used in conjunction with the icon class, this will
-// show any text within the icon element. Note currently the caller
-// must also specify left padding to avoid overlay with the text.
-//
-// Markup:
-// <div class="icon icon-text icon-edit" style="padding-left: 30px;">edit</div>
-//
-// Styleguide 8.2.
-.stable #page-secondary-actions .mw-ui-button.mw-ui-progressive.icon,
-// FIXME: Kill above rule when mediawiki ui stops using background property and cache is clear
-.profile .icon-talk-blue,
-.mw-ui-button.mw-ui-progressive.icon.icon-text,
-// FIXME: Kill above 2 rules when mediawiki ui buttons stops using background property
-.icon-text {
-	text-indent: 0;
-	background-position: left center;
-}
-
-// FIXME: Replace all instances of icon-12px with icon-16px
-.icon-12px {
-	.background-size( auto, 12px );
-	.default-icon-size( 12px );
-}
-
-// FIXME: Replace all instances of icon-15px with icon-16px
-.icon-15px {
-	.background-size( 15px, auto );
-}
-
-// Icon (16px)
-//
-// When used in conjunction with the icon class, this will
-// shrink the icon to 16px
-//
-// Markup:
-// <div class="icon icon-16px icon-edit">edit</div>
-//
-// Styleguide 8.1.1
-.icon.icon-16px {
-	.default-icon-size( 16px );
-	.background-size( 16px, auto );
-}
-
-// FIXME: Replace all instances of icon-18px with icon-16px
-.icon.icon-18px {
-	.background-size( 18px, 18px );
-}
-
-// FIXME: Replace all instances of these icons with icon-16px or icon-24px
-.icon.icon-20px {
-	.background-size( auto, 20px );
-}
-
-
-// Icon (32px)
-//
-// When used in conjunction with the icon class, this will
-// increase the icon size to 32px
-//
-// Markup:
-// <div class="icon icon-32px icon-edit" style="width:32px;height:32px;">edit</div>
-//
-// Styleguide 8.1.2.
-.icon.mw-ui-button.mw-ui-progressive.icon-32px,
-// FIXME: Kill above when mediawiki ui buttons does not use background declaration
-.icon.icon-32px {
-	.background-size( 32px, auto );
-	.default-icon-size( 32px );
-}
-
-
-// Icon (edit)
-//
-// Renders a locked edit icon
-//
-// Markup:
-// <div class="icon icon-edit">edit</div>
-//
-// Styleguide 8.3.1.
-.icon-edit {
-	.background-image('images/pagemenu/edit-locked.png');
-}
-
-// Icon (enabled edit)
-//
-// Renders an enabled edit icon
-//
-// Markup:
-// <div class="icon icon-edit-enabled">edit</div>
-//
-// Styleguide 8.3.2.
-.icon-edit-enabled {
-	.background-image('images/pagemenu/edit.png');
-}
-
-// Icon (talk)
-//
-// Renders a talk icon
-//
-// Markup:
-// <div class="icon icon-talk">talk</div>
-//
-// Styleguide 8.3.3.
-.icon-talk {
-	.background-image('images/pagemenu/talk.png');
-}
-
-// Icon (watch)
-//
-// Renders a watch icon where the page is not watched.
-//
-// Markup:
-// <div class="icon watch-this-article">watch</div>
-//
-// Styleguide 8.3.4.
-// FIXME: Remove when mw-ui-icon in stable
-.icon.watch-this-article {
-	.background-image('images/watch.png');
-
-	// Icon (watched)
-	//
-	// Renders a watch icon where the page is watched.
-	//
-	// Markup:
-	// <div class="icon watch-this-article watched">watch</div>
-	//
-	// Styleguide 8.3.4.
-	&.icon-watched {
-		.background-image('images/watched.png');
-	}
-}
-
-// Icon (search)
-//
-// Renders a search icon.
-//
-// Markup:
-// <div class="icon icon-search">search</div>
-//
-// Styleguide 8.3.5.
 .icon-search {
-	// FIXME: This 2 rules should probably be part of .icon
 	width: 24px;
 	height: 24px;
 	background-color: #FFF;
 	.background-image-svg-quick('images/magnifying-glass');
-}
-
-// Icon (cancel)
-//
-// Renders a cancel icon to escape a Drawer or Overlay
-//
-// Markup:
-// <div class="icon icon-cancel">cancel</div>
-//
-// Styleguide 8.3.6.
-.icon-cancel {
-	.background-image('images/cancel.png');
-}
-
-.icon-cancel-light {
-	.background-image-svg( 'images/cancel-light.svg', 'images/cancel-light.png' );
-}
-
-.icon-photo {
-	.background-image('images/camera.png') !important;
-}
-
-.icon-clear {
-	.background-image('images/clear.png');
-}
-
-.icon-back {
-	.background-image('images/back-ltr.png');
-}
-
-.icon-arrow-down {
-	.background-image('images/show.png');
-}
-
-.icon-arrow-up {
-	.background-image('images/hide.png');
-}
-
-.icon-citation {
-	.background-image-svg-quick( 'images/cite' );
-}
-
-.icon-spinner {
-	.background-image('images/ajax-loader.gif')
 }
 
 .icon-mainmenu {

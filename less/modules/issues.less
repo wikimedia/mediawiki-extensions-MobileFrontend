@@ -21,25 +21,6 @@
 	}
 }
 
-// FIXME: remove when mw-ui-icon in stable
-.stable {
-	.mw-mf-cleanup {
-		.background-image-svg-quick( 'images/issues/blue-triangle' );
-		background-position: 10px center left;
-	}
-
-	.overlay {
-		.cleanup {
-			li {
-				.issue-notice {
-					.background-image-svg-quick( 'images/issues/gray-triangle' );
-					background-position: center @smallIconSize;
-				}
-			}
-		}
-	}
-}
-
 // overlay styles
 .overlay {
 	.cleanup {
@@ -67,12 +48,8 @@
 				.issue-notice {
 					padding: 2em 1em 2em (@largeIconSize + 10px);
 					margin: 0 1em 0 @headerHeight;
-					// FIXME: Remove when mw-ui-icon in stable
-					&.icon {
-						.background-size( @largeIconSize, @largeIconSize );
-						 background-position: left center;
-					}
 
+					// FIXME: Please remove this. It should not care about how icons are rendered.
 					&:before {
 						top: 0;
 						left: 0;

@@ -19,16 +19,9 @@ class MobileUI {
 	 * @return string class name for use with HTML element
 	 */
 	public static function iconClass( $iconName, $iconType = 'element', $additionalClassNames = '' ) {
-		$ctx = MobileContext::singleton();
-		if ( $ctx->isBetaGroupMember() ) {
-			$base = 'mw-ui-icon';
-			$modifiers = 'mw-ui-icon-' . $iconType;
-			$modifiers .= ' mw-ui-icon-' . $iconName;
-		} else {
-			$base = 'icon';
-			$modifiers = $iconType === 'before' ? 'icon-text' : '';
-			$modifiers .= ' icon-' . $iconName;
-		}
+		$base = 'mw-ui-icon';
+		$modifiers = 'mw-ui-icon-' . $iconType;
+		$modifiers .= ' mw-ui-icon-' . $iconName;
 		return $base . ' ' . $modifiers . ' ' . $additionalClassNames;
 	}
 

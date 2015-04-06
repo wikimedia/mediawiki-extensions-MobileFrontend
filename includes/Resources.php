@@ -37,7 +37,9 @@ $wgMinervaStyleModules = array(
 			'less/pageactions.less',
 			'less/footer.less',
 			'less/common.less',
+			// FIXME: Remove and rename iconsNew when the cache has cleared
 			'less/icons.less',
+			'less/iconsNew.less',
 			'less/mainpage.less',
 		),
 	),
@@ -70,11 +72,6 @@ $wgMinervaStyleModules = array(
 		'styles' => array(
 			'less/tablet/common.less',
 			'less/tablet/hacks.less',
-		),
-	),
-	'skins.minerva.icons.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/iconsNew.less',
 		),
 	),
 	'skins.minerva.icons.images' => $wgMFResourceFileModuleBoilerplate + array(

@@ -7,18 +7,6 @@
 @paddingVertical: 1.4em;
 @fontSize: .8em;
 
-// FIXME:  Remove when new icons used in stable
-.icon-toc {
-	.background-image-svg-quick('images/contents-ltr');
-}
-
-.stable {
-	.toc-mobile {
-		.collapsible-heading {
-			line-height: 1.4;
-		}
-	}
-}
 
 .client-js .toc-mobile {
 	position: relative;
@@ -33,11 +21,7 @@
 	.toc-button {
 		float: left;
 		display: block;
-
-		// promote to parent class when in stable
-		&.mw-ui-icon {
-			font-size: @fontSize;
-		}
+		font-size: @fontSize;
 	}
 
 	.collapsible-heading {
@@ -47,10 +31,6 @@
 		font-weight: bold;
 		padding: @paddingVertical / 2 0;
 		border-bottom: none;
-		&.icon {
-			// add right padding to the chevron without reducing tapable area
-			border-right: @paddingHorizontal solid transparent;
-		}
 
 		// Override rules for section toggler
 		// In table of contents the collapsing caret is on the right
@@ -85,20 +65,6 @@
 					white-space: pre-wrap;
 				}
 				line-height: 1.2;
-			}
-		}
-	}
-}
-
-// FIXME: remove rule when mw-ui-icon in stable
-.client-js {
-	.stable {
-		.toc-mobile {
-			.collapsible-heading {
-				padding-left: .8em;
-				.indicator {
-					margin: 0 0 0 .5em;
-				}
 			}
 		}
 	}

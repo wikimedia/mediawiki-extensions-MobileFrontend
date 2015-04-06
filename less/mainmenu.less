@@ -85,43 +85,6 @@ nav {
 			}
 		}
 
-		.icon-home {
-			.background-image('images/menu/home.png');
-		}
-
-		.icon-random {
-			.background-image('images/menu/random.png');
-		}
-
-		.icon-watchlist {
-			.background-image('images/menu/watchlist.png');
-		}
-
-		.icon-uploads {
-			.background-image('images/menu/uploads.png');
-		}
-
-		.icon-nearby {
-			.background-image('images/menu/nearby.png');
-		}
-
-		.icon-settings {
-			.background-image('images/menu/settings.png');
-		}
-
-		.icon-secondary-logout {
-			.background-image('images/menu/loginout.png');
-		}
-
-		.icon-profile {
-			.background-image('images/menu/user.png');
-		}
-
-		// FIXME: Remove when mw-ui-icon in stable
-		.icon.icon-anon {
-			.background-image('images/menu/anon.png');
-		}
-
 		li {
 			position: relative; // ensure the logout link in beta can be position absolute
 			font-size: @menuItemFontSize;
@@ -141,23 +104,8 @@ nav {
 			a {
 				color: white;
 				display: block;
-				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 0;
-
-				&.mw-ui-icon {
-					padding-left: 9px;
-
-					&.mw-ui-icon-element {
-						font-size: round(1 / @menuItemFontSize, 1)
-					}
-				}
-
-				// FIXME: Remove when cache cleared
-				&.icon {
-					// FIXME: Remove when mw-ui-icon in stable
-					background-position: 9px center;
-					padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 @menuLinkLineHeight * 2;
-					line-height: @menuLinkLineHeight;
-				}
+				padding: @menuLinkLineHeight / 2 10px @menuLinkLineHeight / 2 9px;
+				font-size: round(1 / @menuItemFontSize, 1)
 
 				&:hover {
 					text-decoration: none;

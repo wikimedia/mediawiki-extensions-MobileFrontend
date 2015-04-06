@@ -158,20 +158,19 @@ input.search {
 .content {
 	// Correct icon sizes of edit icon when using mw-ui-icon.
 	h1 {
-		// FIXME: Make less specific when mw-ui-icon default.
-		.mw-ui-icon.edit-page {
+		.edit-page {
 			font-size: 1 / @fontSizeH1;
 		}
 	}
 
 	h2 {
-		.mw-ui-icon.edit-page {
+		.edit-page {
 			font-size: 1 / @fontSizeH2;
 		}
 	}
 
 	h3 {
-		.mw-ui-icon.edit-page {
+		.edit-page {
 			font-size: 1 / @fontSizeH3;
 		}
 	}
@@ -263,18 +262,6 @@ input.search {
 			visibility: hidden;
 		}
 
-		// FIXME: Remove when cache is cleared.
-		&.icon {
-			width: @headerHeight;
-			text-align: right;
-			.background-image-svg-quick( 'images/bell' );
-			// Fixes positioning in Firefox
-			display: inline-block;
-			float: right;
-			// FIXME: This shouldn't be needed
-			height: @headerHeight;
-		}
-
 		&.loading span {
 			display: none;
 		}
@@ -320,15 +307,6 @@ input.search {
 	// For talk and CTA drawer
 	.mw-ui-block {
 		width: auto;
-	}
-}
-
-// Move to a separate file if beta styling gets considerably large
-.beta {
-	// FIXME: Remove when mw-ui-icon is in beta
-	.mw-ui-button.icon-talk {
-		background-position: left 10px center;
-		padding-left: 50px;
 	}
 }
 

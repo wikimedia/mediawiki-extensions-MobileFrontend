@@ -53,6 +53,18 @@
 				}
 				ev.preventDefault();
 			} );
+
+			// FIXME: Remove all of the below when cache cleared and mw-ui-icon used everywhere.
+			this.$( '.icon-text' ).addClass( 'mw-ui-icon-before' ).removeClass( 'icon-text mw-ui-icon-before' );
+			this.$( '.icon' ).addClass( 'mw-ui-icon mw-ui-icon-before' ).removeClass( 'icon' )
+				.each( function () {
+					// replace the glyph
+					var $link = $( this ),
+						classes = ( $link.attr( 'class' ) || '' ).split( /\s+/ );
+					$link.attr( 'class', $.map( classes, function ( c ) {
+						return c.replace( /^icon-(.*)$/, 'mw-ui-icon-$1' );
+					} ).join( ' ' ) );
+				} );
 		},
 
 		/**

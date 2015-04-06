@@ -1,7 +1,8 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-@itemPaddingV: 12px;
+@itemPaddingV: .8em;
+@titleMarginV: .5em;
 @thumbGap: 15px;
 @thumbWidth: 70px;
 @thumbSpace: @thumbWidth + @thumbGap;
@@ -102,6 +103,15 @@
 		margin: -1px 0 0;
 		line-height: 1;
 
+		// FIXME: use more generic class here to apply to any icon in a page list
+		.watch-this-article {
+			position: absolute;
+			right: 0;
+			top: @itemPaddingV;
+			// undo thumbnail damage
+			margin-top: 1px;
+		}
+
 		> a {
 			display: block;
 			color: @colorGray6;
@@ -135,7 +145,7 @@
 		.mw-mf-user,
 		.component,
 		.info {
-			margin: .5em 0;
+			margin: @titleMarginV 0;
 		}
 	}
 

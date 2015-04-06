@@ -988,6 +988,8 @@ class SkinMinerva extends SkinTemplate {
 			'skins.minerva.content.styles',
 			'skins.minerva.drawers.styles',
 			'skins.minerva.tablet.styles',
+			'mediawiki.ui.icon',
+			'skins.minerva.icons.images',
 			// FIXME: This module should be loaded by any special page that needs it, not here
 			'mobile.pagelist.styles',
 		);
