@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f444d11f",
+        "filename": "javascripts/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-06T13:11:23Z",
+      "side": 0,
+      "message": "Did you mean to lose the \u0027scroll\u0027 event emitting too? It\u0027s not mentioned at all in the commit summary.",
+      "revId": "bee446b9731637a582a2c68e815b2b2e5afe50c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
