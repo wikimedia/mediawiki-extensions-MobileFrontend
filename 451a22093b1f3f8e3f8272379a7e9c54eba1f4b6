@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_63bb21df",
+        "filename": "javascripts/modules.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-06T20:44:25Z",
+      "side": 1,
+      "message": "Looks like there is no need for this text. Here is what I see:\n\n\"Use of \"browser\" is deprecated. Module browser is depreacted. Use Browser instead.\"",
+      "revId": "451a22093b1f3f8e3f8272379a7e9c54eba1f4b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
