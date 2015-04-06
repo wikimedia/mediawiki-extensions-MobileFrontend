@@ -991,9 +991,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/watchstar/init.js',
 		),
-		'styles' => array(
-			'less/modules/watchstar.less',
-		),
 		'messages' => array(
 			'watchthispage',
 			'unwatchthispage',
