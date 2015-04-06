@@ -71,24 +71,31 @@
 	 */
 	function showDrawer( ev ) {
 		var link = ev.currentTarget,
-			title = $( link ).text();
+			linkTitle = link.title,
+			linkHostname = link.hostname;
 
 		toast.hide();
 		if ( drawer ) {
 			drawer.hide();
 		}
 
-		if ( link.hostname === hostname ) {
-			toast.show( 'Looking for <b>' + title + '</b>...', 'toast quick-lookup' );
-			lookup( title ).done( function ( page ) {
+		if ( linkHostname === hostname && linkTitle ) {
+			toast.show( mw.msg( 'mobile-frontend-quick-lookup-looking', linkTitle ), 'toast quick-lookup' );
+			lookup( linkTitle ).done( function ( page ) {
 				toast.hide();
 				drawer = new QuickLookupDrawer( page );
 				drawer.show();
 			} ).fail( function () {
-				toast.show( 'Couldn\'t find anything matching <b>' + title + '</b>.', 'toast quick-lookup' );
+				toast.show(
+					mw.msg( 'mobile-frontend-quick-lookup-no-results', linkTitle ),
+					'toast quick-lookup'
+				);
 			} );
 		} else {
-			toast.show( 'Sorry, only internal links are searchable.', 'toast quick-lookup' );
+			toast.show(
+				mw.msg( 'mobile-frontend-quick-lookup-not-internal', mw.config.get( 'wgSiteName' ) ),
+				'toast quick-lookup'
+			);
 		}
 	}
 
