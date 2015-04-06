@@ -1322,6 +1322,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	// FIXME: disable font changer, until there is a better place - see task T95198
 	'mobile.fontchanger' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
@@ -1679,7 +1680,6 @@ $wgMinervaBootstrapModules = array(
 			'skins.minerva.beta.scripts',
 			// Feature modules that should be loaded in alpha should be listed below here.
 			'mobile.infobox',
-			'mobile.fontchanger',
 			'mobile.errorReport',
 			'mobile.otherProjects',
 			'mobile.quickLookup',
