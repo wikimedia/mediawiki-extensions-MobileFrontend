@@ -62,38 +62,46 @@
 		/** @inheritdoc **/
 		show: function () {
 			EditorOverlayBase.prototype.show.apply( this, arguments );
-			if ( this.target === undefined ) {
-				// FIXME: we have to initialize MobileViewTarget after this.$el
-				// is attached to DOM, maybe we should attach it earlier and hide
-				// overlays in a different way?
-				this.target = new ve.init.mw.MobileViewTarget( {
-					// || undefined so that scrolling is not triggered for the lead (0) section
-					// (which has no header to scroll to)
-					section: this.options.sectionId || undefined,
-					isIos: this.isIos
-				} );
-				this.$( '.surface' ).append( this.target.$element );
-				this.target.activating = true;
-				this.target.load();
-				this.target.connect( this, {
-					save: 'onSaveComplete',
-					saveAsyncBegin: 'showSpinner',
-					saveAsyncComplete: 'clearSpinner',
-					saveErrorEmpty: 'onSaveError',
-					// FIXME: Expand on save errors by having a method for each
-					saveErrorSpamBlacklist: 'onSaveError',
-					saveErrorAbuseFilter: 'onSaveError',
-					saveErrorBlocked: 'onSaveError',
-					saveErrorNewUser: 'onSaveError',
-					saveErrorCaptcha: 'onSaveErrorCaptcha',
-					saveErrorUnknown: 'onSaveError',
-					surfaceReady: 'onSurfaceReady',
-					loadError: 'onLoadError',
-					conflictError: 'onConflictError',
-					showChangesError: 'onShowChangesError',
-					serializeError: 'onSerializeError'
-				} );
+			var overlay = this;
+			if ( this.target !== undefined ) {
+				return;
 			}
+			// FIXME: we have to initialize MobileViewTarget after this.$el
+			// is attached to DOM, maybe we should attach it earlier and hide
+			// overlays in a different way?
+			mw.loader.using( 'ext.visualEditor.targetLoader' )
+				.then( mw.libs.ve.targetLoader.loadModules() )
+				.then( function () {
+					overlay.target = new ve.init.mw.MobileViewTarget( {
+						// || undefined so that scrolling is not triggered for the lead (0) section
+						// (which has no header to scroll to)
+						section: overlay.options.sectionId || undefined,
+						isIos: overlay.isIos
+					} );
+					overlay.$( '.surface' ).append( overlay.target.$element );
+					overlay.target.activating = true;
+					overlay.target.load();
+					overlay.target.connect( overlay, {
+						save: 'onSaveComplete',
+						saveAsyncBegin: 'showSpinner',
+						saveAsyncComplete: 'clearSpinner',
+						saveErrorEmpty: 'onSaveError',
+						// FIXME: Expand on save errors by having a method for each
+						saveErrorSpamBlacklist: 'onSaveError',
+						saveErrorAbuseFilter: 'onSaveError',
+						saveErrorBlocked: 'onSaveError',
+						saveErrorNewUser: 'onSaveError',
+						saveErrorCaptcha: 'onSaveErrorCaptcha',
+						saveErrorUnknown: 'onSaveError',
+						surfaceReady: 'onSurfaceReady',
+						loadError: 'onLoadError',
+						conflictError: 'onConflictError',
+						showChangesError: 'onShowChangesError',
+						serializeError: 'onSerializeError'
+					} );
+				}, function ( e ) {
+					mw.log.warn( 'VisualEditor failed to load: ' + e );
+				} );
 		},
 		/** @inheritdoc **/
 		hide: function () {
