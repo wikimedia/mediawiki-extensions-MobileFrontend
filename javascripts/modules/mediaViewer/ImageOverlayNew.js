@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var ImageOverlayNew,
 		Icon = M.require( 'Icon' ),
+		Swipe = M.require( 'Swipe' ),
 		ImageOverlay = M.require( 'modules/mediaViewer/ImageOverlay' );
 
 	/**
@@ -22,7 +23,15 @@
 		 * @param {jQuery.Event} ev
 		 */
 		onSlide: function ( ev ) {
-			var thumbnail = $( ev.target ).closest( '.slider-button' ).data( 'thumbnail' );
+			this.setNewImage(
+				$( ev.target ).closest( '.slider-button' ).data( 'thumbnail' )
+			);
+		},
+		/**
+		 * Replace the current image with a new one
+		 * @param {Thumbnail} thumbnail
+		 */
+		setNewImage: function ( thumbnail ) {
 			window.location.hash = '#/media/' + thumbnail.getFileName();
 		},
 		defaults: $.extend( {}, ImageOverlay.prototype.defaults, {
@@ -35,13 +44,24 @@
 		} ),
 		/** @inheritdoc */
 		postRender: function ( options ) {
-			var lastThumb, nextThumb,
+			var self = this,
+				lastThumb, nextThumb,
 				offset = this.galleryOffset,
-				thumbs = options.thumbnails || [];
+				thumbs = options.thumbnails || [],
+				swipe = new Swipe();
 
 			if ( thumbs.length < 2 ) {
 				this.$( '.prev, .next' ).remove();
+				swipe.disable();
 			} else {
+				swipe
+					.on( 'swipe-right', function () {
+						self.setNewImage( $( '.slider-button.prev' ).data( 'thumbnail' ) );
+					} )
+					.on( 'swipe-left', function () {
+						self.setNewImage( $( '.slider-button.next' ).data( 'thumbnail' ) );
+					} )
+					.setElement( this.$el );
 				// identify last thumbnail
 				lastThumb = offset === 0 ? thumbs[thumbs.length - 1] : thumbs[offset - 1];
 				nextThumb = offset === thumbs.length - 1 ? thumbs[0] : thumbs[offset + 1];

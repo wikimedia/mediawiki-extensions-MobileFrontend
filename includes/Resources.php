@@ -723,6 +723,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.mediaViewer.beta' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.mediaViewer',
+			'mobile.swipe',
 		),
 		'templates' => array(
 			'Overlay.hogan' => 'templates/modules/mediaViewer/ImageOverlayNew.hogan',
@@ -1060,6 +1061,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 			'mobile.drawers',
 			'mobile.toast',
+			'mobile.swipe',
 		),
 		'scripts' => array(
 			'javascripts/modules/quickLookup/QuickLookupDrawer.js',
@@ -1351,6 +1353,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/InfiniteScroll.js',
+		),
+	),
+
+	'mobile.swipe' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.oo',
+		),
+		'scripts' => array(
+			'javascripts/Swipe.js',
 		),
 	),
 

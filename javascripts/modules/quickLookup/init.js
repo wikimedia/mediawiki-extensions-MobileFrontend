@@ -3,12 +3,12 @@
 
 	var api = M.require( 'api' ),
 		toast = M.require( 'toast' ),
+		Swipe = M.require( 'Swipe' ),
+		swipe,
 		QuickLookupDrawer = M.require( 'modules/quickLookup/QuickLookupDrawer' ),
 		hostname = window.location.hostname,
 		cache = {},
-		drawer,
-		startTouch,
-		endTouch;
+		drawer;
 
 	/**
 	 * Search API for a brief intro about a page.
@@ -67,10 +67,11 @@
 	 * Show a QuickLookupDrawer with information about {link}
 	 * Link must have the same hostname as the site, i.e. it must be an internal link.
 	 * Show a toast before searching and a drawer with page info after the search is successful.
-	 * @param {DOM.Object} link DOM element in which we are interested
+	 * @param {jQuery.Event} ev Event object of the swipe gesture
 	 */
-	function showDrawer( link ) {
-		var title = $( link ).text();
+	function showDrawer( ev ) {
+		var link = ev.currentTarget,
+			title = $( link ).text();
 
 		toast.hide();
 		if ( drawer ) {
@@ -92,15 +93,13 @@
 	}
 
 	$( function () {
-		// Detect if the user is making a long horizontal swipe (which starts at the link) over a link
-		$( 'a' ).on( 'touchstart', function ( ev ) {
-			startTouch = ev.originalEvent.changedTouches[0];
-		} ).on( 'touchend', function ( ev ) {
-			endTouch = ev.originalEvent.changedTouches[0];
-			// we want a long horizontal swipe
-			if ( Math.abs( startTouch.pageX - endTouch.pageX ) > 200 ) {
-				showDrawer( ev.currentTarget );
-			}
-		} );
+		// initialize swipe module
+		swipe = new Swipe();
+		// listen on our wanted swipe directions
+		swipe
+			.on( 'swipe-right', $.proxy( showDrawer ) )
+			.on( 'swipe-left', $.proxy( showDrawer ) );
+		// listen on all links
+		swipe.setElement( $( 'a' ) );
 	} );
 }( mw.mobileFrontend, jQuery ) );
