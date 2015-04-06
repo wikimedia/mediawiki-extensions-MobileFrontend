@@ -52,7 +52,6 @@
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
 			// icons.spinner can't be used, the spinner class changes to display:none in onStageChanges
 			waitIcon: new Icon( {
-				tagName: 'button',
 				name: 'spinner',
 				additionalClassNames: 'savespinner loading'
 			} ).toHtmlString(),
