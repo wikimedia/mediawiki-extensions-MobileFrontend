@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f28e217c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-06T18:00:21Z",
+      "side": 1,
+      "message": "depreacted -\u003e deprecated\non eis -\u003e one is",
+      "revId": "e7b0258c610ec8a92c3614025300d1575c480901",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_92eb2d0f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-06T18:00:21Z",
+      "side": 1,
+      "message": "depreacte -\u003e deprecate\ndepreaction -\u003e deprecation",
+      "revId": "e7b0258c610ec8a92c3614025300d1575c480901",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b2f0a9fb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-06T18:00:21Z",
+      "side": 1,
+      "message": "no need for \u0027and\u0027 or change \u0027replacing\u0027 to \u0027replace\u0027",
+      "revId": "e7b0258c610ec8a92c3614025300d1575c480901",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_32aed9e3",
+        "filename": "javascripts/modules.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-06T18:00:21Z",
+      "side": 1,
+      "message": "an -\u003e a",
+      "revId": "e7b0258c610ec8a92c3614025300d1575c480901",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7283f157",
+        "filename": "javascripts/modules.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-06T18:00:21Z",
+      "side": 1,
+      "message": "both \u0027deprecated\u0027 and \u0027replacement\u0027 should be in a pair of square brackets to indicated that they are optional.",
+      "revId": "e7b0258c610ec8a92c3614025300d1575c480901",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
