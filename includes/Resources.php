@@ -121,6 +121,9 @@ $wgMinervaStyleModules = array(
 
 			// cite
 			'citation' => 'images/icons/cite.svg',
+
+			// Drawers
+			'cancel-light' => 'images/icons/cancel-light.svg',
 		),
 	),
 	'skins.minerva.beta.styles' => $wgMFResourceFileModuleBoilerplate + array(
