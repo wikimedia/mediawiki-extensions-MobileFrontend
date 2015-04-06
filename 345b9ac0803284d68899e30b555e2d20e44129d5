@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a8f036fb",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-06T19:54:19Z",
+      "side": 1,
+      "message": "uhhh, that leaves much space for errors, right? Can\u0027t you use ev.currentTarget.title? It should contain the page title of the target (not the display title), except if the page doesn\u0027t exist, but than we don\u0027t need it anyway :)\n\nE.g.:\nmw.Title.newFromText( $( ev.currentTarget ).attr(\"title\") );",
+      "revId": "345b9ac0803284d68899e30b555e2d20e44129d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
