@@ -34,6 +34,24 @@
       "revId": "345b9ac0803284d68899e30b555e2d20e44129d5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e31091fa",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-06T20:41:07Z",
+      "side": 1,
+      "message": "If it\u0027s a known title, it\u0027s always the prefixed text[1][2] and mw.Title should handle this properly :)\n\n[1] https://github.com/wikimedia/mediawiki/blob/master/includes/Linker.php#L347\n[2] https://doc.wikimedia.org/mediawiki-core/master/php/html/classTitle.html#af5b1a7940de056155682dc7fd82a2ef1",
+      "parentUuid": "6e7c4fa4_e313b15b",
+      "revId": "345b9ac0803284d68899e30b555e2d20e44129d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
