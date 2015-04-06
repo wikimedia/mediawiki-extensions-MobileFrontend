@@ -795,6 +795,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/Overlay.js',
+			'javascripts/ContentOverlay.js',
 			'javascripts/LoadingOverlay.js',
 			'javascripts/moduleLoader.js',
 		),
@@ -945,7 +946,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/tutorials.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/tutorials/ContentOverlay.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 		),
 		'templates' => array(
