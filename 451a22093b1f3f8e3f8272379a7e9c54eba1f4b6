@@ -16,6 +16,24 @@
       "revId": "451a22093b1f3f8e3f8272379a7e9c54eba1f4b6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_838afd1d",
+        "filename": "javascripts/modules.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-06T20:45:44Z",
+      "side": 1,
+      "message": "ahh, right, thats looks strange :D",
+      "parentUuid": "6e7c4fa4_63bb21df",
+      "revId": "451a22093b1f3f8e3f8272379a7e9c54eba1f4b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
