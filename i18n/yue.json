@@ -2,11 +2,40 @@
 	"@metadata": {
 		"authors": [
 			"Waihorace",
-			"LNDDYL"
+			"LNDDYL",
+			"Yueman"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "番去上一章",
+	"mobile-frontend-changeslist-nocomment": "無編輯摘要",
+	"mobile-frontend-copyright": "除非另外講明，響呢版度嘅內容係根據$1嘅條款發佈。",
 	"mobile-frontend-disable-images": "喺手機版唔睇圖",
+	"mobile-frontend-editor-edit": "改",
+	"mobile-frontend-featured-article": "是日正嘢",
+	"mobile-frontend-generic-login": "{{SITENAME}}係由你同其他人貢獻。",
+	"mobile-frontend-generic-login-action": "簽到後就可以貢獻。",
+	"mobile-frontend-home-button": "頭版",
+	"mobile-frontend-language-article-heading": "用其他文去睇",
+	"mobile-frontend-last-modified-date": "最近修改時間係$1 $2",
+	"mobile-frontend-login": "簽到",
+	"mobile-frontend-main-menu-account-create": "開戶口",
+	"mobile-frontend-main-menu-button-tooltip": "開主選單",
+	"mobile-frontend-main-menu-login": "簽到",
+	"mobile-frontend-main-menu-nearby": "左近",
+	"mobile-frontend-main-menu-settings": "設定",
+	"mobile-frontend-main-menu-watchlist": "監視清單",
+	"mobile-frontend-news-items": "時人時事",
+	"mobile-frontend-password-placeholder": "密碼",
+	"mobile-frontend-placeholder": "搵{{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "私隱",
+	"mobile-frontend-random-button": "是但",
 	"mobile-frontend-regular-site": "電腦版",
-	"mobile-frontend-view": "流動版"
+	"mobile-frontend-terms-text": "使用條款",
+	"mobile-frontend-username-placeholder": "用戶名",
+	"mobile-frontend-view": "流動版",
+	"mobile-frontend-view-desktop": "桌面版",
+	"mobile-frontend-view-mobile": "流動版",
+	"tag-mobile_edit": "流動修改",
+	"tag-mobile_web_edit": "流動網上修改",
+	"mobile-frontend-pageaction-edit-tooltip": "改呢頁嘅頭一段。"
 }

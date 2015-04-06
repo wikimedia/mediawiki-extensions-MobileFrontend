@@ -383,7 +383,7 @@
 	"apihelp-parse-param-noimages": "Оневозможи слики во мобилниот извод.",
 	"apihelp-parse-param-mainpage": "Примени преобразби на главната мобилна страница.",
 	"mobile-frontend-donate-button-label": "Дарувајте",
-	"mobile-frontend-wikidata-editor-description-label": "Опишете ја ''$1'' во една реченица:",
+	"mobile-frontend-wikidata-editor-description-label": "Напишете краток опис на ''$1'':",
 	"mobile-frontend-meta-data-issues-categories": "За категоријава",
 	"mobile-frontend-loading-message": "Вчитувам...",
 	"mobile-frontend-time-precision-Gannum": "$1 милијарди години н.е.",

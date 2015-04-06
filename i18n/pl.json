@@ -255,6 +255,7 @@
 	"mobile-frontend-profile-userpage-link": "Odwiedź stronę {{GENDER:$1|użytkownika|użytkowniczki}}.",
 	"mobile-frontend-profile-usertalk": "Skontaktuj się z {{GENDER:$1|użytkownikiem|użytkowniczką}} $1",
 	"mobile-frontend-random-button": "Losuj",
+	"mobile-frontend-references-citation": "Przypisy",
 	"mobile-frontend-regular-site": "Wersja dla urządzeń stacjonarnych",
 	"mobile-frontend-requires-title": "Strona niedostępna",
 	"mobile-frontend-save-error": "Wystąpił błąd podczas zapisywania ustawień. Upewnij się, że masz włączoną obsługę plików cookie.",

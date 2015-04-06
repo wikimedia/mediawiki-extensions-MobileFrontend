@@ -88,6 +88,7 @@
 	"mobile-frontend-editor-keep-editing": "繼續編輯",
 	"mobile-frontend-editor-licensing": "儲存變更，代表您同意以 $1 授權條款發佈您的貢獻。",
 	"mobile-frontend-editor-licensing-with-terms": "儲存變更，代表您同意 $1 以 $2 授權條款發佈您的貢獻。",
+	"mobile-frontend-editor-terms-link": "[$1 使用條款]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您想要}}於 {{SITENAME}} 上建立新頁面嗎？",
 	"mobile-frontend-editor-newpage-prompt": "此頁面並不存在，為何不勇敢地建立呢？",
 	"mobile-frontend-editor-placeholder": "此章節尚是空的。成為第一個編輯它的人吧！",

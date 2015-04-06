@@ -13,7 +13,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e.",
-	"beta-feature-minerva": "Mobil felület (Minerva) engedélyezése asztali verzióban",
+	"beta-feature-minerva": "Mobil felület ({{int:skinname-minerva}}) engedélyezése asztali verzióban",
 	"mobile-frontend-account-create-captcha-placeholder": "Írd be a megerősítő kódot",
 	"mobile-frontend-account-create-email-placeholder": "E-mail cím (opcionáis)",
 	"mobile-frontend-account-create-submit": "Regisztráció",

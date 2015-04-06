@@ -2,16 +2,20 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"Nepaboy"
+			"Nepaboy",
+			"Ganesh"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "सम्पादन सारांश रहित",
 	"mobile-frontend-editor-edit": "सम्पादन",
 	"mobile-frontend-home-button": "घर",
 	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलीं",
+	"mobile-frontend-main-menu-settings": "सेटिंग कुल",
 	"mobile-frontend-privacy-link-text": "गोपनीयता",
+	"mobile-frontend-random-button": "एने-ओने से",
 	"mobile-frontend-sign-in-heading": "खाता मे प्रवेश करीं",
 	"mobile-frontend-sign-up-heading": "खाता खोलीं",
+	"mobile-frontend-terms-text": "उपयोग के शर्त कुल",
 	"mobile-frontend-view": "मोबाइल अवलोकन",
 	"mobile-frontend-view-desktop": "डेस्कटॉप",
 	"mobile-frontend-view-mobile": "मोबाइल"
