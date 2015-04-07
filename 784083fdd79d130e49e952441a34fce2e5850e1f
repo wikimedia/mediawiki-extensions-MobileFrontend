@@ -69,6 +69,24 @@
       "revId": "784083fdd79d130e49e952441a34fce2e5850e1f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_60254904",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-07T20:34:27Z",
+      "side": 0,
+      "message": "I think you\u0027re confusing this with the search input which uses semanticClass because the input does not have an icon.",
+      "parentUuid": "6e7c4fa4_0514a7ec",
+      "revId": "784083fdd79d130e49e952441a34fce2e5850e1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
