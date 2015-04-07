@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_05c0277e",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-07T20:14:54Z",
+      "side": 1,
+      "message": "Not true.\nskins.minerva.chrome.styles is already available in the head of the document.\n\nIn an ideal world I would have just removed less/icons.less but I keep it around as it has some necessary fallbacks.",
+      "parentUuid": "6e7c4fa4_acd5a521",
+      "revId": "9ef5635b4e60b09c8caad1e370f806a87f79f309",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_6cdf8d40",
         "filename": "javascripts/application.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-07T05:48:56Z",
       "side": 1,
       "message": "mw.loader.load()?",
+      "revId": "9ef5635b4e60b09c8caad1e370f806a87f79f309",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4545bf18",
+        "filename": "javascripts/application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-07T20:14:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_6cdf8d40",
       "revId": "9ef5635b4e60b09c8caad1e370f806a87f79f309",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
