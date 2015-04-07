@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_32949046",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-07T11:17:59Z",
+      "side": 1,
+      "message": "Tabs not spaces. Tabs not spaces. Tabs not spaces.",
+      "revId": "580f32799345320128ec646c5bb6b28c6cdeaf92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_32c81051",
+        "filename": "i18n/en.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-07T11:17:59Z",
+      "side": 1,
+      "message": "Well. Y\u0027see. I /is/ a valid link, it\u0027s just one we can\u0027t get a summary for. If it\u0027s not a valid link, why does it look like one?",
+      "revId": "580f32799345320128ec646c5bb6b28c6cdeaf92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_32c1f034",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-07T11:17:59Z",
+      "side": 1,
+      "message": "Tabs not spaces. Tabs not spaces. Tabs not spaces.",
+      "revId": "580f32799345320128ec646c5bb6b28c6cdeaf92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
