@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_ccda6150",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-07T05:48:56Z",
+      "side": 0,
+      "message": "...but this should be. SkinMinervaBeta want to load this module (the html is cached), but the ResourceLosder doesn\u0027t know about it anymore, right? So i suggest to hold this module for at least 30 days as a stub:\n\n\u0027skins.minerva.icons.styles\u0027 \u003d\u003e $wgMFResourceFileModuleBoilerplate + array(\n  \u0027dependencies\u0027 \u003d\u003e array(\n    \u0027skins.minerva.chrome.styles\u0027,\n  ),\n),",
+      "revId": "784083fdd79d130e49e952441a34fce2e5850e1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_8661aa34",
         "filename": "includes/skins/MinervaTemplateAlpha.php",
         "patchSetId": 4

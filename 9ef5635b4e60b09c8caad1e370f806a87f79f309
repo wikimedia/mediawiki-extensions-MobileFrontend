@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_acd5a521",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-07T05:48:56Z",
+      "side": 1,
+      "message": "this shouldn\u0027t be cache related...",
+      "revId": "9ef5635b4e60b09c8caad1e370f806a87f79f309",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6cdf8d40",
+        "filename": "javascripts/application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-07T05:48:56Z",
+      "side": 1,
+      "message": "mw.loader.load()?",
+      "revId": "9ef5635b4e60b09c8caad1e370f806a87f79f309",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
