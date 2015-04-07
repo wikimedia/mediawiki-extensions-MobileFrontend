@@ -1070,6 +1070,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'less/modules/quickLookup.less',
 		),
+		'messages' => array(
+			"mobile-frontend-quick-lookup-looking",
+			"mobile-frontend-quick-lookup-no-results",
+			"mobile-frontend-quick-lookup-not-internal",
+		),
 	),
 
 	'mobile.languages' => $wgMFResourceParsedMessageModuleBoilerplate + array(
