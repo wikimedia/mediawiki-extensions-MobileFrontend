@@ -216,6 +216,7 @@
 									.show();
 								self.$( '.spinner' ).hide();
 								pageList = new PageList( {
+									funnel: 'search',
 									pages: data.results,
 									el: $results
 								} );

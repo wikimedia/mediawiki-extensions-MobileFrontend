@@ -7,7 +7,8 @@
 		var
 			nearby,
 			options = {
-				el: $( '#mw-mf-nearby' )
+				el: $( '#mw-mf-nearby' ),
+				funnel: 'nearby'
 			},
 			$btn = $( '#secondary-button' ),
 			icon, $icon;

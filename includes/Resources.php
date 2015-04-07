@@ -978,6 +978,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.drawers',
 			'mobile.ajax',
 			'mobile.toast',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/modules/watchstar/WatchstarApi.js',

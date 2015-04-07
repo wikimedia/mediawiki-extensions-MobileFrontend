@@ -17,6 +17,7 @@
 				el: $container,
 				isWatched: page.isWatched(),
 				page: page,
+				funnel: 'page',
 				isAnon: user.isAnon()
 			} );
 			skin.emit( 'changed' );

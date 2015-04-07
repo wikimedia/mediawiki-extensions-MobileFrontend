@@ -20,6 +20,7 @@
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
 			watchlist = new WatchList( {
 				el: $watchlist,
+				funnel: 'watchlist',
 				enhance: true
 			} );
 			watchlist.on( 'unwatch', function () {
