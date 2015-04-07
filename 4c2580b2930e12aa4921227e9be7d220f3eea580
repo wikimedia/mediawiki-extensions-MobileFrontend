@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_06c7da68",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-07T00:03:07Z",
+      "side": 1,
+      "message": "Please i18n this. It\u0027s cheap even when we experiment and helps us develop things quicker. At least then if you use mw.msg there is a reason for using HTML5 deprecated \u003cb\u003e tags... :P",
+      "revId": "4c2580b2930e12aa4921227e9be7d220f3eea580",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c6a8028c",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-07T00:03:07Z",
+      "side": 1,
+      "message": "likewise",
+      "revId": "4c2580b2930e12aa4921227e9be7d220f3eea580",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a6a386ad",
+        "filename": "javascripts/modules/quickLookup/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-07T00:03:07Z",
+      "side": 1,
+      "message": "likewise",
+      "revId": "4c2580b2930e12aa4921227e9be7d220f3eea580",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
