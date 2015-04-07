@@ -88,6 +88,7 @@ $wgMinervaStyleModules = array(
 			'notifications' => 'images/icons/bell.svg',
 			'mainmenu' => 'images/icons/hamburger.svg',
 			'search' => 'images/icons/magnifying-glass.svg',
+			'search-white' => 'images/icons/search-white.svg',
 
 			// toggling
 			'arrow-down' => 'images/icons/arrow-down.svg',

@@ -1,4 +1,5 @@
-@import "mediawiki.mixins";
+@import "minerva.variables";
+@import "minerva.mixins";
 
 body.navigation-full-screen {
 	#mw-mf-page-left {
@@ -73,11 +74,23 @@ body.navigation-full-screen {
 				}
 
 			}
+
+			form {
+				padding: 0;
+			}
+
 			.fulltext-search {
 				border-radius: .2em;
 				float: right;
 				margin: 0;
-				padding: 1.05em 1.5em;
+				padding: .35em 0;
+				background-color: @colorProgressive;
+				cursor: pointer;
+
+				input {
+					opacity: 0;
+					display: block;
+				}
 			}
 		}
 	}

@@ -125,12 +125,12 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 					'class' => 'search-box',
 				)
 			) .
-			$this->makeSearchButton(
-				'fulltext',
-				array(
-					'class' => 'fulltext-search no-js-only icon icon-search-white',
-					)
-			) .
+			Html::openElement( 'div', array(
+				'class' => MobileUI::iconClass( 'search-white', 'element',
+					'fulltext-search no-js-only' ),
+			) ) .
+			$this->makeSearchButton( 'fulltext' ) .
+			Html::closeElement( 'div' ) .
 			Html::openElement( 'span' ) .
 			$this->makeSearchInput( $this->getSearchAttributes() ) .
 			Html::closeElement( 'span' ) .
