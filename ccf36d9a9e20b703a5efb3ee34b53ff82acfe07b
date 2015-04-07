@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6fd21ad5",
+        "filename": "javascripts/loggingSchemas/SchemaMobileWeb.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-07T18:29:50Z",
+      "side": 1,
+      "message": "Documentation needs an update. No need to add documentation for classes that extends this class. This should only contain documentation for \u0027mobileMode\u0027.",
+      "revId": "ccf36d9a9e20b703a5efb3ee34b53ff82acfe07b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
