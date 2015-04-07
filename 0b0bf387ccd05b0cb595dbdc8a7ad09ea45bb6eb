@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c04c5da5",
+        "filename": "less/icons.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-07T20:52:00Z",
+      "side": 1,
+      "message": "this should not be in this file. it\u0027s also non-js and alpha only.",
+      "revId": "0b0bf387ccd05b0cb595dbdc8a7ad09ea45bb6eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e01f196f",
+        "filename": "less/icons.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-07T20:52:00Z",
+      "side": 1,
+      "message": "Instead of setting the height you could change the padding in specials/mobilemenu.less.",
+      "revId": "0b0bf387ccd05b0cb595dbdc8a7ad09ea45bb6eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
