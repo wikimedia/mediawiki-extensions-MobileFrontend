@@ -34,7 +34,6 @@
 			waitMsg: mw.msg( 'mobile-frontend-talk-topic-wait' ),
 			// icons.spinner can't be used, .loading has a fixed height, which breaks overlay-header
 			waitIcon: new Icon( {
-				tagName: 'button',
 				name: 'spinner',
 				additionalClassNames: 'savespinner loading'
 			} ).toHtmlString()
