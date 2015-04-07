@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2cbd10fe",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1349,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-07T16:30:14Z",
+      "side": 1,
+      "message": "mobile.stable should never be a dependency. Never!\nAlso this module is now an alias\n\nSee https://gerrit.wikimedia.org/r/#/c/201364/",
+      "revId": "b6498772bfe9529bf918e3d5e71913673c9314ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
