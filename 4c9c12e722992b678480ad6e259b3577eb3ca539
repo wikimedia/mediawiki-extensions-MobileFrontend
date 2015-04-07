@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_32cd708a",
+        "filename": "javascripts/ContentOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-07T11:00:52Z",
+      "side": 1,
+      "message": "\"within the content\" is no longer true. It\u0027s added after the content now.",
+      "revId": "4c9c12e722992b678480ad6e259b3577eb3ca539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d2c99c7d",
+        "filename": "javascripts/ContentOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-07T11:00:52Z",
+      "side": 1,
+      "message": "This sentence should be broken up into a few clear statements about the overlay.",
+      "revId": "4c9c12e722992b678480ad6e259b3577eb3ca539",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
