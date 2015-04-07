@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8661aa34",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-07T00:31:10Z",
+      "side": 0,
+      "message": "this breaks the search icon from T94459",
+      "revId": "784083fdd79d130e49e952441a34fce2e5850e1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
