@@ -50,6 +50,23 @@
       "revId": "580f32799345320128ec646c5bb6b28c6cdeaf92",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_326c9031",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1080,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-07T11:31:35Z",
+      "side": 1,
+      "message": "end with a \",\" :)",
+      "revId": "580f32799345320128ec646c5bb6b28c6cdeaf92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
