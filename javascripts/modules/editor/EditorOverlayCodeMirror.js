@@ -27,7 +27,7 @@
 				mwextTags: mw.config.get( 'extCodeMirrorTags' ),
 				mwextDoubleUnderscore: mw.config.get( 'extCodeMirrorDoubleUnderscore' ),
 				mwextUrlProtocols: mw.config.get( 'extCodeMirrorUrlProtocols' ),
-				mwextMode: mw.config.get( 'extCodeMirrorExtMode' ),
+				mwextModes: mw.config.get( 'extCodeMirrorExtModes' ),
 				styleActiveLine: true,
 				lineWrapping: true,
 				mode: 'text/mediawiki'
