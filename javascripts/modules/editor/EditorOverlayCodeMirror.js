@@ -30,15 +30,19 @@
 				mwextModes: mw.config.get( 'extCodeMirrorExtModes' ),
 				styleActiveLine: true,
 				lineWrapping: true,
+				readOnly: this.$content[0].readOnly, // doesn't allow to edit read-only pages
+				viewportMargin: Infinity, // lets automatically resize to fit its content
+				scrollbarStyle: 'null', // never needed but sometimes displayed
 				mode: 'text/mediawiki'
 			} );
+			this.$codeMirror = this.$( '.CodeMirror' );
 			// IE specific code goes here
 			if ( window.navigator.userAgent.indexOf( 'Trident/' ) > -1 ) {
-				$( '.CodeMirror' ).addClass( 'CodeMirrorIE' );
+				this.$codeMirror.addClass( 'CodeMirrorIE' );
 			}
-			this.codeMirror.setSize( null, this.$content.height() );
+			this.$codeMirror.height( 'auto' ); // lets automatically resize to fit its content
+			// @see http://codemirror.net/doc/manual.html#event_change
 			this.codeMirror.on( 'change', $.proxy( this, 'onInputWikitextEditor' ) );
-			this.$codeMirror = $( '.CodeMirror' );
 		},
 
 		/** @inheritdoc **/
