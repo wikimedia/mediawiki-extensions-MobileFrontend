@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7168bdb8",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-08T00:08:16Z",
+      "side": 1,
+      "message": "Why is it a button? Is it supposed to be clicked?\nPlease see https://gerrit.wikimedia.org/r/#/c/202288/",
+      "revId": "b9b076933d934fc8330172a0af8f9222ae1d62d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
