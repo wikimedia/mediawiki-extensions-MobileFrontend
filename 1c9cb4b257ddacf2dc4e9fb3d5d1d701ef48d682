@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1c2cfd44",
+        "filename": "javascripts/modules/editor/EditorOverlayCodeMirror.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-08T06:18:38Z",
+      "side": 1,
+      "message": "seems like a useless variable here, if you want to use $codeMirror in the class, too. I suggest to just use this.$codeMirror here :)",
+      "revId": "1c9cb4b257ddacf2dc4e9fb3d5d1d701ef48d682",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
