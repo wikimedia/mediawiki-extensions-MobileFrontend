@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_7c6c119b",
+        "filename": "javascripts/modules/editor/EditorOverlayCodeMirror.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-08T06:18:30Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "6e7c4fa4_8faa1668",
+      "revId": "f08c5d9cdea29571dc0bdc7724da3a58171efbed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_afafd277",
         "filename": "javascripts/modules/editor/EditorOverlayCodeMirror.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-07T18:16:12Z",
       "side": 1,
       "message": "use events map -\n\n\u0027change .CodeMirror\u0027: \u0027onInputWikitextEditor\u0027",
+      "revId": "f08c5d9cdea29571dc0bdc7724da3a58171efbed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1c05ddc4",
+        "filename": "javascripts/modules/editor/EditorOverlayCodeMirror.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-08T06:18:30Z",
+      "side": 1,
+      "message": "this needs testing, but it should work :)",
+      "parentUuid": "6e7c4fa4_afafd277",
       "revId": "f08c5d9cdea29571dc0bdc7724da3a58171efbed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
