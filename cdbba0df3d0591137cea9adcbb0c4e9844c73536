@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3f50cb60",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 877,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-08T11:05:40Z",
+      "side": 1,
+      "message": "I couldn\u0027t help thinking that this was a typo.",
+      "revId": "cdbba0df3d0591137cea9adcbb0c4e9844c73536",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
