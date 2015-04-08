@@ -76,6 +76,19 @@ $specialPageAliases['az'] = array(
 	'MobileLanguages' => array( 'MobilDillər' ),
 );
 
+/** Western Balochi (بلوچی رخشانی) */
+$specialPageAliases['bgn'] = array(
+	'History' => array( 'تاریخچه_گ' ),
+	'MobileOptions' => array( 'موبایل_ئی_تنزیمان' ),
+	'Uploads' => array( 'بُرز_بوته_ئینان' ),
+	'MobileDiff' => array( 'موبایل_ئی_پرک' ),
+	'MobileEditor' => array( 'موبایل_ئی_دستکار' ),
+	'MobileMenu' => array( 'موبایل_ئی_مینو' ),
+	'MobileLanguages' => array( 'موبایل_ئی_زبانان' ),
+	'Nearby' => array( 'بئ_نزینکی_ئا' ),
+	'UserProfile' => array( 'کار_مرزوکی_دروست_بوتین_نامه' ),
+);
+
 /** Catalan (català) */
 $specialPageAliases['ca'] = array(
 	'Nearby' => array( 'A_prop' ),

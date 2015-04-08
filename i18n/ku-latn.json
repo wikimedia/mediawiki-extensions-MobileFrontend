@@ -3,13 +3,15 @@
 		"authors": [
 			"George Animal",
 			"Ghybu",
-			"Gomada"
+			"Gomada",
+			"Bikarhêner"
 		]
 	},
 	"mobile-frontend-editor-edit": "Biguherîne",
 	"mobile-frontend-editor-success": "Serkeftî! Guhertina te hate tomarkirin.",
 	"mobile-frontend-footer-contact": "Têkilî",
 	"mobile-frontend-home-button": "Mal",
+	"mobile-frontend-main-menu-back": "Vegere",
 	"mobile-frontend-main-menu-account-create": "Hesabekî çêke",
 	"mobile-frontend-main-menu-login": "Têkeve",
 	"mobile-frontend-main-menu-logout": "Derkeve",
@@ -22,5 +24,7 @@
 	"mobile-frontend-username": "Navê bikarhêner:",
 	"mobile-frontend-username-placeholder": "Navê bikarhêner",
 	"mobile-frontend-view": "Xuyakirina mobîl",
-	"mobile-frontend-watchlist-cta-button-login": "Têkeve"
+	"mobile-frontend-watchlist-cta-button-login": "Têkeve",
+	"mobile-frontend-quick-lookup-looking": "Binere \"$1\"",
+	"mobile-frontend-quick-lookup-not-internal": "Bibore, ev lînka $1ê nîne."
 }
