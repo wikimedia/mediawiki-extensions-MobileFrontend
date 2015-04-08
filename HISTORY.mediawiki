@@ -1,0 +1,3018 @@
+=MobileFrontend Release History=
+
+== MobileFrontend 1.0.0 / 2015-04-07 ==
+
+* (T93423) Re-start versioning the extension
+* Hygiene: Move cancel-light icon into skins.minerva.icons.images module
+* Alpha: better parsing for a link title for quickLookup
+* (T95198) Disable mobile.fontchanger after it is useful again
+* (T95206) Alpha, Beta: Wikidata description/issues to 0.8em
+* (T91796) fix mwextModes property of CodeMirror editor
+* (T94881) Alpha, beta: Fix page save spinner
+* Hygiene: Don't add watchstar styles twice
+* (T94923) Bring back the scroll event
+* Add Swipe module and use it in ImageOverlayNew
+* Make width of buttons not change when label is replaced with spinner
+* (T95044) VisualEditorOverlay: Call TargetLoader
+* (T94459) Alpha: Improved search form for non-js users
+* (T94504) Do not load Minerva modules outside Minerva
+* Hygiene: Remove dependency on mobile.templates where hogan is used
+* (T93500) Fix notices on bogus language codes
+* (T94593) Limit hiding of sideboxes to sister sites
+* Hygiene: Fix false comment
+* Hygiene: Don't load InfiniteScroll on _all_ pages
+* (T93501) Don't load mobile.talk on pages with no wikitext talk page
+* (T94419) Fix Next button for anonymous users
+* (T94073) Get rid of 'type' stuff in ResourceLoaderImageModule
+* (T78215) Use ResourceLoaderImageModule's CSS selector templates
+* (T94188) MediaViewer cancel button made to close viewer
+* (T92913) Fix wikitable table borders
+* (T92357) Avoid needless master queries on page views
+* (T93786) Ignore multicolumn layouts on small devices
+* (T93826) Hyphenate page titles
+* (T93784) Make list items easy to read by adding margin-bottom
+* (T91047) Fixes to the page action tutorial
+* (T93988) Debounce resize events
+* (T91047) Center ContentOverlay arrow alignment on element
+* (T91796) Add CodeMirror for alpha users to better understand wikitext
+* Hygiene: Alternative syntax such as "X" should not be used
+* (T88499) Re-add clear:both to beta page-secondary-actions
+* (T91047) Make page action overlay pointer position correctly.
+* (T93210) Move wgMFEditorOptions to ResourceLoaderGetConfigVars hook
+* Fix close button in ImageOverlayNew
+* (T92855) Hygiene: Generalise EventLogging for main menu
+* Use new schema for main menu click tracking
+* (T93569) Hygiene: Don't check sessionid length
+* Remove "short sentence" from wikidata description i18n message
+* "View on WikiData" => "View on Wikidata", not camel case
+* Don't say "MobileFrontend Infobox alpha edit" for Wikidata description edits
+* Show namespace in the Special:MobileLanguages header
+* word-break: normal in page headings
+* (T92053) MediaViewer image description trimmed
+* Hygiene: Stub all Api calls in qunit test
+* (T93495) Add background-repeat: no-repeat for SpecialHistory on the desktop
+* user: Update sessionId test to match updated length in MediaWiki core
+* (T89310) Load Mobile event emitter in the head
+* In phpunit, mobile frontend crashes
+* Introduce mediawiki.template.hogan in preparation for templates in core
+* Hygiene: Remove util.query and use core functions
+* Add a space in a <br/> tag in a message
+* (T88631) Don't hide the clear button when the search input is not empty
+* (T88295) Show Overlays only after the DOM is ready
+* Revert "Correct the arrow position of the editor tutorial"
+* (T93029) Allow null edits on mobile (same as desktop)
+* (T92687) Infobox: Add link to commons category overlay
+* Alpha: Quickly lookup a brief info about a wiki page
+* (T92357) Avoid master queries on page view for block checks
+* (T92700) Make the tappable area of the reference drawer close button bigger
+* Hygiene: Use ResourceLoader::isModuleRegistered()
+* Limit the new header to alpha only
+* New-ish Special:MobileMenu page
+* (T91139) Hygiene: Use same saving indication in TalkSectionAdd like in EditorOverlay
+* (T91141) Fix styling regression in new editor tutorial
+* (T88568) PhotoUploadOverlay and Progress use View##event
+* (T92346) Fix closing the media viewer
+* Alpha, Beta: Make reference dialog scrollable
+* Hygiene: appendToElement standardisation
+* Hygiene: Use more sensible defaults for content overlay
+* (T91882) Restore anchor position
+* (T91421) Resolve router deferred on back
+* QA: recent versions of Chrome don't wait for event listeners
+* (T91858) Tweak to EditorApi to support editing of pages that do not exist
+* (T90801) Remove all images and recent uploads from UserProfile
+* Revert "Hygiene: Don't commit Gemfile.lock"
+* (T91281) Break word added to main heading
+* TWN: Use own message for terms of use link in license warning (editor and talk)
+* Hygiene: Don't commit Gemfile.lock
+* QA: add a sleep to make Chrome happy. I don't like it.
+* QA: update ruby gems
+* (T90943) Add composer test entry point for phplint and phpcs
+* (T90920) Correctly align user icon on Special:Contributions
+* (T87050) Beta: Don't close ReferencesDrawer on scroll
+* (T90777) Make WikiBase ID easily retrievable
+* Tweak banner image aspect ratio
+* Add the MobileViewBannerImageRepository
+* (T91047) Correct the arrow position of the editor tutorial
+* Avoid array_merge during initialization
+* Hygiene: Revision::getRawUserText() was depreacted
+* (T91083) Update jscs version
+* (T88566) Hygiene: ImageOverlay should use View##events
+* Four minute abs
+* (T85643) Alpha: Allow browsing of images in a page on mobile.
+* Add ButtonWithSpinner and re-create 'Report an error' button using it
+* Hygiene: Put the main menu in a nav element
+* Highlight matching parts of search results
+* Hygiene: Use SpecialPage's msg() function for proper context
+* (T90791) Fixing Table of Contents formatting on mobile
+* VE: Apply overflow fix on header
+* (T91183) Hygiene: Correctly show relationship between desktop and mobile page
+* Promote talk answer feature to beta
+* (T91160) Bring back hatnotes
+* Improvements for answer feature in TalkSectionOverlay
+* (T91048) Fix "No thanks" in EditorTutorial
+* Hygiene: Correctly enable watchstar
+* Hygiene: ContentOverlay shouldn't have header
+* Hygiene: Refactor Watchstar for Extension:Gather
+* (T90611) Fix unclosed div in MobileFrontend's Special:UserProfile
+* Hygiene: Follow coding conventions
+* QA: slight change to id value for section content
+* Remove capitalization.
+* Mark checkboxes checked
+* Hygiene: Use server side templating for checkbox generation
+* (T87192) Overlay, Panel, Drawer made to use View##events
+* (T90737) Don't use random ids for toggleable sections
+* (T89367) TOC: horizontal scrolling added for long words
+* (T90411) Don't modify an array while iterating over it
+* (T88564) Hygiene: Use events map in talk feature
+* Hygiene: Follow up "Show edit pencils on all headings"
+* Always define $talkButton in SkinMinvervaBeta
+* Implement design review for beta styles
+* (T90245) Hygiene: Edit pencil images shouldn't overlap floated images.
+* Hygiene: Don't set robots policy for a skin
+* (T87614) Hygiene: Use Config object in SpecialPages
+* Hide MediaWiki's clickable link for section headers
+* Remove WikiGrok related stuff
+* Don't ask for leave, if the content hasn't changed
+* Allow other extensions to add or override discovery tools
+* Editor: Don't ask for confirm leave, if nothing changed
+* Update ApiResult handling for mediawiki/core change I7b37295e
+* (T89436) Fix padding left of the menu items in stable
+* Promote the BannerImage module to beta
+* Hygiene: Render drawers only when needed
+* Don't warn about losing input after save
+* TWN: mf-profile-last-thanked should really say "last thanked by"
+* (T88949) Ask the user if he want to leave the editor
+* (T88499) Add clear:both before the page-secondary-actions
+* (T89506) Don't add height to watchstar button
+* Hygiene: Fix false composer phpunit dependency
+* (T89559) Don't show edit pencils on main page
+* Update WikiGrok user token handling for change I71b5ccc588
+* (T89483) Prevent search from throwing error for redirects to non-existant articles
+* Revert some style changes from I7cad9546ca9c932b071b920ba85e0f560f5d7eb2
+* (T89462) Reset clicked state of VE editor switcher when loading fails
+* Refactor the BannerImage module
+* Restyle banner image and page title on tablet
+* Remove unused style file
+* Do not highlight editor switcher buttons
+* Remove obvious function-level profiling
+* Hygiene: Move SpecialNearby registration out of extension function
+* Send WikiGrok responses to wikidata.org
+* Fix overlapping (sub-) section heading edit links
+* More sign off comments for I00ee00
+* Add personal tools hook
+* (T89220) Rename wgTOC JS variable to a less generic name
+* Always run the mobileview API image tranform tests
+* Sign off comments for I00ee00
+* Unbreak browser tests
+* Hygiene: Move wgResourceLoaderLESSVars out of extension function
+* QA: update ruby gems
+* Promote alpha page styles to beta
+* Add new thumbnailing parameters to mobileview
+* (T88885) Fix toggling when level 0 sections are used
+* (T87051) Create the editor switcher buttons using oojs-ui
+* (T87644) Show edit pencil on all headings
+* Promote WikiGrok Roulette to beta
+* (T87290) Making MobileFormatter preserve the CentralAuth 1x1 images
+* Removing duplicate border on dismissable sitenotices
+* Change 'original language of work' to 'original language' in WikiGrok
+* Hygiene: Cleaning up ui.less
+* Add border between notices and header in mobile
+* (T88563) Hygiene: Use View events in LanguageOverlay
+* List default value for MainMenu::openNavigationDrawer() in docs
+* Show the WikiGrokRoulette menu item to the user
+* (T88562) Hygiene: Use View events in ErrorReportOverlay
+* QA: update gems for latest mediawiki_selenium
+* Hygiene: Weaken special page selector
+* Turning off page-impression logging for now
+* (T87156) Restore document scroll position after closing the overlay
+* (T88473) Make section IDs unique
+* (T86007) SpecialUserProfile: Return Status code 404 when no user found
+* (T87614) Hygiene: Convert SkinMinerva* files to use Config object
+* Fix UploadTutorial
+* (T88565) Hygiene: Make Infobox use View##events
+* Hygiene: Don't bind mainMenu to mw.mobileFrontend
+* Hygiene: Minor documentation changes - fix jsduck warnings
+* Add WikiGrok Roulette info overlay
+* Define the 'skin' module outside DOM ready.
+* Fix mainMenu selector
+* (T88029) Fix redirect loop in diffs on wikidata
+* Improve lists styles for nested lists
+* Hygiene: Use __DIR__ directly
+* (T88032) Hide all actions in editor cta
+* (T87769) Switch to canonical '/media' prefix
+* (T88264) Don't hide "edit without login" button on editor cta
+* (T87342) QA: Stop running certain tests on Chrome
+* (T87343) QA: Use section-heading class to identify first section heading
+* (T88289) Use more future proof selector
+* Hygiene: Move LessImportpath registration out of Extension function
+* (T88227) Hygiene: Move magic mobile VE module registration out of extension function
+* Register the PHPUnit test directory
+* (T85068, T86366) Turn off universal box-sizing in alpha
+* Hygiene: Replacing @inheritdoc with local documentation
+* Remove unnecessary clarification
+* (T87198) Correctly render thumbnail images
+* (T87193) Hygiene: Use events map in overlay files
+* (T87456) QA: update Special:History link for js and non-js tests
+* (T87438) Autofill the search input in alpha
+* Implement ChangeTagsListActive hook
+* Adding missing period to error message per Siebrand
+* Hygiene: Clean up repeated copies and re-assignments in Resources.php
+* (T87257) Alpha login form tweaks
+* Add 'license-name' matching SPDX conventions
+* Recruit volunteers via the JavaScript console
+* QA: Enforce requirement of cite extension for references test
+* Hygiene: Documentation for EditorApi
+* Hygiene: Fix i18n problems with EditorCta for anonymous users
+* (T87293) Hygiene: Pass correct value for isEditable in Uploads schema
+* (T87508) Move "Edit without login" to the first position
+* Hygiene: Fix some jsduck warnings
+* Regression: Fix alpha
+* Alpha: Introduce commons gallery overlay
+* Hygiene: Generalize photo list / gallery code for use elsewhere
+* QA: Tag @smoke tests for a separate smaller Jenkins build
+* (T87456) QA: update locator for history bar in non-JavaScript mode.
+* (T87453) QA: update locator for back icon
+* (T87341) QA: update locator for talk link
+* Don't reload page after categories added
+* Remove deprecated wfRunHooks
+* Adding Sam and Rob to MobileFrontend credits
+* QA: Run create account test on mobile site not desktop.
+* Regression: Fix Special:Watchlist width of page-header
+* (T87260) Fix PHP Notice error in UserCreateLoginTemplate
+* (T87272) Fix wikidata api dependency
+* Hygiene: UploadTutorial should use events map
+* Promoting new table styles from beta to stable
+* (T87260) Regression: Restore captcha in stable
+* Improve wikidata infobox style and template
+* (T87252) Add css classes explicitly
+* Infobox item editing using oojs-ui
+* Allow other token types with foreign api
+* Alpha: Read in another project overlay button
+* Hygiene: Make banner image configurable
+* (T86246) Define router and overlayManager outside M
+* Hygiene: Address LanguageOverlay FIXME
+* (T86496) Group categories to content based and administrational ones
+* Hygiene: Kill obsolete profiling
+* (T1160) Add border bottom to the last menu item
+* Add Possibility to add categories to a page using oojs-ui
+* (T85572) Move modes.js into context.js
+* (T86281) Replace zwnj in the footer with a nicer CSS solution
+* Hygiene: add @see tag to jsduck
+* Hygiene: Retrieve pageApi instance using module loader
+* Infinite scrolling on Special:EditWatchlist
+* Use mw-ui-icon in beta
+* (T87047) Fix misaligned search clear icon
+* (T66101) Use data uris everywhere
+* Hygiene: Split up mobile.head module into submodules
+* (T86238) Represent main menu as a View incorporated in Skin
+* (T66986) Surface mobile special pages on desktop
+* (T87006) Rename ForeignApi#post to #postWithToken
+* (T86800) Vertically align the image
+* Fix errors in MobileWebUploads schema class
+* (T1159, T1165) Avoid SearchOverlay input drift
+* Sample MobileWebClickTracking events at 50% (to reduce load on EventLogging)
+* (T85960) User friendly dates for wikidata infobox
+* Fix rendering issues with infoboxes
+* Hygiene: Introduce ForeignApi
+* Regression: Show more link again on watchlist
+* (70614) Add "add discussion" button to talk pages
+* (T86941) Revert "Don't return a value from Schema.log"
+* New alpha infobox types
+* Don't do API requests in QUnit tests.
+* Fix some jsduck errors
+* Update to Watchstar tests to ensure user is spoofed as authenticated
+* Make sure InfoboxEditorOverlay has Overlay dependency loaded
+* Fix Skin qunit tests
+* (T86041) Fix icons
+* Hygiene: Don't add missleading class to SpecialUploads
+* (T69819) Add Talk button url
+* Implement infinite scroll independently from PhotoList
+* (T86613) Make WikiGrok A and B use same code for Thanks step
+* Hygiene: Move isTestA to mw.user
+* (T85890) Remove Mantle dependency from MobileFrontend
+* Hygiene: Move ResourceLoaderParsedMessageModule to MobileFrontend
+* Regression: Fix broken upload workflow
+* Hygiene: Make mobileoption DOM consistant between cleint-side and server-side
+* Hygiene: Update deprecated jsduck tag and add missing documentation
+* Hygiene: Remove duplicate test
+* (T86400) Don't break Special:Uploads when uploads not enabled for the user
+* (T86565) Fix jsduck warnings
+* Hygiene: Remove jscs comments
+* (T85876) Update how jscs runs on the test files
+* Pass campaign name as part of each claim
+* Don't return a value from Schema.log
+* MWException -> Exception
+* Fixing EventLogging classes so they don't fail schema validation
+* Revising WikiGrok loading conditions
+* Adding documentation to try to explain what an MF module is
+* Hygiene: move loadModule to its own module
+* (T46264) Add tests for define and require methods
+* Hygiene: Move JavaScript from Mantle to MobileFrontend
+* (T85876) Hygiene: Enable jscs for test files
+* (T76620) Fix pinch zoom on images
+* (T85876) Hygiene: Apply jscs rules to search, talk, references tests
+* Hygiene: optional arguments, jQuery selectors, hasOwnProperty and other fixes
+* (T85876) Hygiene" Apply jscs to specials test file
+* (T85876) Hygiene: Apply jscs rules to wikigrok,lists,watchstar tests
+* (T85876) Hygiene: Apply jscs to toggling and uploads tests
+* (T85876) Hygiene: Apply jscs to mediaViewer,nearby,preferred languages tests
+* (T85876) Hygiene: Apply jscs to editor, issues, language, lastEdited
+* (T85876) Hygiene: Apply jscs to first level test files
+* Fix FIXMEs
+* Documentation updates
+* Allow query string overrides even when user isn't in sample
+* Throttling WikiGrok to 16% of users for upcoming reader test
+* Hygiene: Remove unnecessary init function
+* Hygiene: Make OO a JSHint global
+* Regression: MobileUI follow up
+* Always enable red links in alpha
+* (T85636) Fix mobile image viewer and back button behaviour
+* (T86031) Hygiene: Only omit warning messages on LoginForm
+* Hygiene: Remove misleading FIXME
+* Hygiene: Add helper methods to MobileUI
+* (T85963) Conform to schema
+* Hygiene: Create models folder
+* Make WikiGrok v B support multiple campaigns at the same time
+* Refactor: Move position fixed emulation / viewport classes to skin
+* (T86030) Fix mobile watchlist rendering when SpecialMobileEditWatchlist::images hook fails
+* (T85637) Hygiene: Don't use images/ in less code
+* Hygiene: Move Talk-related stuff to SkinMinervaBeta
+* Hygiene: Use Config object for global variables in MinervaTemplate
+* Don't cache strictEqual and deepEqual - causing errors with QUnit
+* Make WikiGrok Roulette preload the next page
+* (T85637) Hygiene: Load icons from correct place
+* (T78707) Fix for header covering edit pencil in alpha
+* (T73771) Don't show duplicate messages in LoginForm
+* Hygiene: Disable Save button on TalkSectionAddOverlay while no content
+* (T78504) Provide a possibility to skip preview in mobile frontend
+* Hygiene: Remove unused method.
+* Hygiene: Make it possible for alpha to reimplement personal urls
+* (T1163) Change navigation easing function
+* Make WikiGrok not depend on WikiData API
+* (T74323) Enable user profile on desktop.
+* Changing 'items' to 'information' per aharoni suggestion
+* Hygiene: prep work for collections work
+* Documentation: Fix typos and remove an unsupported tag.
+* Refactor: Introduce and use Skin for loading wide screen modules
+* Hygiene: Remove Skin.js erroneously added
+* Hygiene: Remove need for #notifications element
+* Hygiene: Introduce util module
+* Make use of DatabaseBase::selectRowCount in MobileUserInfo
+* Hygiene: Add namespaceNumber for getCurrentPage()
+* (T1164) Polish: make log out button on boundary square
+* (T1162) Remove outline on overlay buttons
+* (T78586) Hygiene: Remove mw-ui-block modifier from anchor links in ctaDrawer
+* Hygiene: Use Config object for global configuration vars
+* Hygiene: Enforce capitalizedNativeCase for types in jscs
+* Hygiene: Remove log method from mw.mobileFrontend object
+* Hygiene: Introduce MobileWebClickTracking
+* Hygiene: Introduce SchemaMobileWebEditing for editing EventLogging
+* Hygiene: Use Schema for wikigrok event logging
+* Hygiene: Make inNamespace a method of Page
+* Hygiene: Nit picks to ErrorReportOverlay
+* Error reporting interface for alpha
+* Run 'this page has issues' on category pages
+* Hygiene: Introduce SchemaMobileWebUploads
+* Hygiene: Introduce Schema class
+* (T85292) Fix notification overlay back behaviour
+* (T85480) Fix naming issue to restore ability to switch between editors
+* (T76620) Fix image pinch zoom
+* Update WikiGrok about text
+* Hygiene: Add missing doc for Watchstar.events
+* Hygiene: Fix jsdoc errors
+* Hygiene: Remove unused active property
+* Standarize jsdoc param types
+* Hygiene: Move tagButton code into a template
+* (T85494) Add jscsc rule "disallowImplicitTypeConversion" and fix existing errors
+* Hygiene: Enforce documentation of function parameters
+* Login form tweaks
+* Hygiene: Remove unnecessary uses of getTokenWithEndpoint
+* Remove unused test
+* Hygiene: Use group as a parameter to phpunit
+* (T74851) Load correct page actions images
+* Use ResourceLoaderImage module in MobileFrontend
+* Refactor Watchstar view to use events map with View
+* PhotoUploaderButton uses events map
+* TableOfContents uses events map
+* (T85258) Hygiene: Fix add of no-position-fixed
+* (T73919) Hygiene: Move "Return to $1 page" to footer
+* (T85190) Hygiene: Remove dead code
+* Add WikiGrok response badges for wg-sidebar
+* Hygiene: Organise our long list of globals
+* Make infobox experiment configurable.
+* Tweaks to login and sign up form in alpha
+* Hygiene: Generalise instance of field for infobox generation to allow configuration
+* Hygiene: Prevent JS error - anchors don't necessarily have an HREF
+* (T85025) Redo VE toolbar styling
+* Remove console.log and fixed a couple of jsduck errors
+* Remove unused variable
+* (T85253) Restore main menu animations
+* Close main menu before showing wikigrok roulette error
+* (T71351) Promote auto toggle to stable.
+* Hygiene: Kill closeOnBack property and OverlayManager FIXMEs
+* Hygiene: Remove unnecessary overlay code / address FIXME
+* Hygiene: Rename _save to onSaveBegin and _prepareForSave to onStageChanges
+* (T85251) Fix footer on special pages where there is no last modified bar
+* (T85007) Don't add VisualEditor related modules if VE isn't installed
+* Hygiene: Rename misleading onSave name
+* Hygiene: Make _hasChanged public
+* Fix jsduck warnings on WikiDataApi (inheritdoc)
+* (T85125) Require MW_INSTALL_PATH in both makefile and gruntfile
+* Hygiene: Make instance of property id configurable
+* Hygiene: phpdoc comments, unused variables
+* Alpha: WikiGrok in sidebar
+* Memoize results of the browser.js methods.
+* Don't (implicitly) parse the "editsectionhint" message
+* (T84922) Prevent asynchronous event logging events in qunit tests
+* Hygiene: check types are valid in jsdocs
+* Minor updates to VE integration code
+* Hygiene: Move anonymousEditing config to EditorOptions
+* Hygiene: check return types
+* (T74972) Fixes to neglected Mobile upload interface (for 3rd parties)
+* Hygiene: Move file upload support detection to browser.js
+* Hygiene: Remove redundant returns
+* Hygiene: Kill dead code
+* Remove images from infoboxes
+* i18n/Hygiene: Use Wikibase for infobox labels
+* Infobox description editing
+* Making WikiGrok pull property ID and name from new campaign data
+* (T85025) VisualEditorOverlay: Update for Idc299e23 in OOUI
+* Remove old b/c code not needed since late summer
+* (T78003) Ensure file page mobile views have the proper title in context
+* Move M.isIos to browser.js
+* Hygiene: jscs should check return types
+* Correct RL targets for site module and user module
+* (T78708) Remove unnecessary rule to fix issues overlay rendering
+* Fix MW_INSTALL_PATH to default to local installation
+* Fix MobileWebClickTracking documentation errors
+* Add missing word to parameter description
+* Remove jscsdoc objective
+* (T74877) Let PHP check, if the user can edit a page or not
+* Combine two seperate .jscsrc files into one.
+* Hygiene: Document PhotoUploaderButton.js
+* Hygiene: Update editor, mediaviewer, talk, tutorials, and watchstar
+* Hygiene: Complete documentation for logging schemas, Api and Icon
+* Hygiene: Add documentation for PhotoApi
+* Hygiene: Photo upload overlay documentation
+* Hygiene: Update WikiGrok and specials/nearby documentation
+* Expose Wikidata descriptions via mobileview
+* Give editor an empty label to prevent rendering bug
+* Hygiene: Update search, talk, and TOC documentation
+* Hygiene: Update uploads and watchstar documentation
+* Hygiene: Update editor documentation
+* QA: update locator for talk button
+* QA: watchlist icon is no longer a link but a span
+* Hygiene: Update notifications, preferred languages, and references documentation
+* Rename caller of '_prepareToSave'
+* Hygiene: Update mediaviewer, mobile redirect, and nearby documentation
+* Hygiene: Update documentation
+* Hygiene: Remove redundant include in uploads
+* Hygiene: Fix incorrect documentation in PageList
+* Fix structure suite
+* (T78710) Followup Ia6bf604c, I431a9025: Update way VE target is constructed
+* Revert "Load correct page actions images"
+* Serve description even if the wiki data item has no instance of claims
+* Hygiene: Update lastEdited documentation
+* Avoid GlobalTitleFail in SkinMinerva::getHistoryLink()
+* (T78800) Don't show page issues link, when no page issues on the page
+* (T1158) Polish: Fade in and out the search overlay
+* Redoing how mobile handles tables
+* Hygiene: Move class name generation to browser.js
+* Hygiene: Move lockViewport to Browser.js
+* (T76882) Don't enable search enhancement on Android 2
+* (T1161) Fix borders in main menu hover
+* (T78780) Hide the Nearby main menu button correctly
+* Flag to disable main page transformations
+* Hygiene: Introduce Browser.js
+* (T74851) Load correct page actions images
+* Restyle/reposition page issues in alpha
+* Clean qunit coverage reports in `make clean` method in Makefile
+* Hygiene: Adding documentation and prettifying some code in EditorOverlay
+* (T78478) Fix unneeded Watched api call
+* Put description below title
+* (T78315) Give a better error message for blocked users trying to edit
+* Restyle/reposition page actions
+* Hygiene: Refactor secondary actions generation
+* Hide hat notes on mobile
+* Minerva friendly version of Special:Preferences
+* Hygiene: Document methods in uploads folder
+* Make sure page images get shown on next page of watchlist
+* (T66105) Remove waiting when close Overlay
+* (T78480) Fix php notice
+* Infoboxes: Expose images and wikidata urls
+* Hygiene: Refactor wikiGrokCampaigns code
+* Alpha experiment: Replace search bar with branding and icon
+* Do not show donate button when enabled on special pages
+* Hygiene: inheritdoc for AbuseFilterPanel methods
+* useFileCache hook must be prefixed with the correct class
+* Hygiene: Documentation for nearby code
+* Don't generate qunit test coverage on every commit
+* Hygiene: Documentation fixups - inherited methods and ignored methods
+* Hygiene: Document VisualEditorOverlay
+* Hygiene: Fix up documentation
+* (T78340) Make sure a campaign exists before rendering WikiGrokDialog
+* (T78359) Fix Schema errors
+* Fix undefined index warning
+* Hygiene: Fix phpcs complaints in hooks
+* Hygiene: Some upload documentation
+* Alpha: move lastmodified to bottom of article
+* Hygiene: Document EditorOverlay and EditorOverlayBase
+* Hygiene: Refactor EditorOverlay's templates
+* Documentation for SearchApi
+* Regression: Fix search in language overlay
+* Hygiene: Document issues JavaScript
+* Documentation and QUnit coverage for LanguageOverlay
+* Use correct API parameter to avoid search JS exceptions
+* Fixing query string override for loading WikiGrok on en.wiki
+* Hygiene: Fix JSDuck warnings
+* Hygiene: Update `make jsduck` dependencies
+* Regression: Restore this page has issues
+* QA: no_javascript view no longer has watchlist  or Log inavailable
+* Hygiene: Use a better way to add Main menu sitelinks
+* (T76624) Fix the preview header when switching from VE to wikitext
+* Hygiene: Make uploads page agnostic about current skin
+* EventLogging: break up MobileWebClickTracking
+* Don't stop click propagation when clicked on hamburger
+* (T76435) Don't load mobile.editor.ve module in desktop target
+* WikiGrok: Pass campaign_name to ApiResponse
+* Hygiene: Remove unneeded vars
+* (T50946) Alpha: Add possibility to change font size of the content
+* For ios8 detection check for version 8
+* Add support for donation button in beta
+* Improve [Alpha page styling experiment] Image at top
+* (T70504) Hide Details box when user taps the image
+* Document defaults in Views
+* Hygiene: Complete jsdoc for application.js
+* Restore styling to search page
+* Improve search interaction experience for low end devices
+* (T76316) Tweak toggle behaviour
+* Pre-commit hook: Check jsdoc coverage of any touched files
+* Stop npm install downloading phantomjs every time
+* QA: prefer single quotes to double quotes
+* QA: remove unused argument for do block
+* QA: fix unnecessary braces for hash
+* QA: fix unneeded empty line
+* QA: use modern hash syntax
+* QA: indentation width fixes
+* QA: missing space after comment # character
+* QA: unnecessary parentheses
+* QA: favor unless over if-not
+* QA: space after colon
+* QA: space around operators
+* QA: rubocop
+* QA: update for spaces inside parens
+* QA: updating rubocop offenses
+* QA: update .rubocop_todo file for latest rubocop version
+* Update jscs
+* Infoboxes: Use correct urls in infoboxes.
+* Hygiene: Fix issues preventing pre-review script from running
+* Rewriting WikiGrok more info copy and changing None button to neutral
+* Hide some links from nonjs users
+* QA: cleanup, adding "should" to Then steps
+* QA: more RSpec
+* QA: update upload tests
+* (72852) Merge CtaDrawer with EditorOverlay Anonwarning for anonymous editors
+* QA: update ui_links test for RSpec3
+* QA: update toggling tests for RSpec3
+* QA: update toc test for RSpec3
+* QA update talk test for RSpec3
+* Show WikiGrok error
+* QA: finish watchlist update
+* QA: update watchlist test for RSpec3 syntax
+* Promoting WikiGrok to stable and disabling for anons (with flag)
+* Hygiene: Refactor WikiGrok code
+* QA: update userprofile tests for RSpec3
+* QA: update login steps for RSpec3, etc.
+* QA: update for RSpec3 syntax
+* (T75115) Make toggle icon standalone
+* (T75159) Hygiene: Update MobileWebClickTracking to cover alpha links
+* QA: update for RSpec3
+* QA: update special_history and special_contributions tests
+* QA: update search test for RSpec
+* QA: interim check to sort steps alphabetically
+* QA: refactor pageactions_steps for RSpec3
+* QA: refactor notifications test for RSpec3 syntax
+* QA: refactor nearby test for RSpec3 syntax
+* (T76436) Hygiene: Add missing Autoloadclasses entries
+* QA: refactor mainmenu_steps.rb file for Rspec etc
+* Fixing case of wikiGrokCampaigns.js
+* Making sure we can always test load WikiGrok
+* WikiGrok: use local WikiGrok campaign suggestions
+* QA: remove unused code
+* QA: update one assertion for RSpec3 syntax
+* Enable WikiGrok A/B test using wgMFEnableWikiGrok
+* (T75804) Make the upload button cursor a pointer
+* QA: remove a FIXME by moving the step to the proper file
+* QA: alphabetize common_article_steps.rb
+* (T74969) Indent editor in TalkSectionAddOverlay
+* redlinks: Move contents instead of serialising/reparsing html
+* Icon: Remove confusing '0' argument to '.children()'
+* New WikiGrok campaigns UI (version B)
+* Fix grunt.initConfig so it uses MEDIAWIKI_URL
+* QA: finish common_article_steps.rb refactor
+* QA: update watchstar test
+* (T76404) Make sure tags aren't created with null labels in WikiGrok B
+* QA: update pointless test for RSpec3
+* QA: remove unused step
+* QA: update for RSpec3 syntax
+* QA: update diff test for rspec
+* Hygiene: Just some comment fixes and additions to WikiGrokResponseApi
+* QA: remove pageactions_logged_in.feature and unique steps
+* QA: refactor references test for RSpec3
+* Tools: Run make qunit (and qunitdebug) with grunt
+* Log Nearby and Category button in alpha
+* Add header wikidata image in alpha
+* (T76190) Show talk button only, if page can have a talk page
+* Show license text in EditorOverlay only, if there is a license
+* Hygiene: Fix phpdoc errors
+* QA: remove language_logged_in.feature
+* QA: untangle steps in language test
+* QA: refactor issues test
+* QA: untangle editor test steps
+* QA: WIP: update the VE edit test
+* QA: sort steps properly
+* Don't show WikiGrok twice on the same article after a user has answered once
+* QA: alphabetize editor_steps.rb
+* Hygiene: Separate init code path for events
+* Consistently name taskType in WikiGrok
+* (72718) Run jsduck through grunt
+* QA: refactor create_account_failure test
+* QA: alphabetize common_steps.rb
+* Fix race condition preventing edit button from being clickable
+* QA: remove redundant step
+* QA: alphabetize common_article_steps.rb
+* QA: remove unused steps and page files
+* Hygiene: Refactor special uploads code
+* Optimise non-js experience for Opera Mini
+* Infobox: Check if entities isn't undefined
+* (73243) Style links in Overlay header like buttons
+* Correct error message when checking version number
+* (73622) Hygiene: Use icons.spinner to create loading icon in EditorOverlay
+* (73255, 69092) Reverting change I10c2cbfdfa5c6d74b98d7c45e1c060911a7f20b4
+* Switching from php5 to php and removing unneeded variable in Makefile
+* Infobox: movies
+* Hygiene: Goodbye mobile.stable.common
+* Hygiene: Removing our custom phpunit config file
+* Fix tappable area of upload button
+* Nearby link should be local url
+* Stop lead photo uploader button code loading when disabled.
+* Documentation for special page initialisation functions
+* Bump required MW version
+* Log widget-impression-success event in WikiGrok version B
+* (73532) Show redirect targets in search results.
+* Add config options for correctly displaying the copyright logo
+* Changing MAX_OPEN_PATCHES from 5 to 7
+* Add jscs jsdoc extension
+* jscs: Enforce requirePaddingNewLinesInObjects
+* Hygiene: Apply requirePaddingNewLinesInObjects rule
+* Again: Context modules can't be arrays
+* Hygiene: Satisfy require-line-break-after-variable-assignment jscs condition
+* Tools: Do not run mediawiki dependent tasks on grunt test
+* Hygiene: Extend load talk module only if needed
+* Remove jenkins specific tasks
+* Hygiene: Remove M.getLeadSection
+* Set up npm tasks linked to grunt (for Jenkins)
+* (73633) Fixing dependency for mobile.wikigrok.dialog
+* Hygiene: Use topic-title-list for CategoryOverlay
+* Revert "Focus editor textarea"
+* (73448) Don't indent all page-lists
+* Hygiene: Simple whitespace and js documentation fix to nearby
+* Hygiene: Move variable declaration on to single line
+* Hygiene: Require line feed at end of file
+* (73633) Disabling mobile infobox experiment for now - throwing JS error
+* Revert "Add footer logo dimensions"
+* Use Istanbul for code coverage
+* Hygiene: Add new lines before function keyword
+* Hygiene: Use correct indentation level
+* Don't use 'new' with jQuery.Deferred
+* (58886) Add footer logo dimensions
+* (73422) Remove bytes{added|removed} image from MobileSpecialPageFeed
+* Hygiene: Refactor complicate variables into functions
+* Hygiene: Indentation fixes
+* (7343) 7
+* Add tests to WikiGrokDialogB
+* Species infoboxes
+* Wikidata Infoboxes on countries
+* Alpha: Add wikidatainfoboxes to cities
+* CategoryOverlay: use more human readable title name
+* Don't commit composer.lock
+* Pass composer validate
+* (73339) Hygiene: Change categoryButton to be hyphenated
+* (73476) Get talk page name from title object
+* (72799) Don't load talk overlay code on talk pages
+* (73449) Only load uploads code when it's turned on
+* (73255) Focus editor textarea
+* Hygiene: Goodbye jscs/jsduck errors
+* Turn page action icons in alpha into SVGS
+* Hygiene: Remove dead code paths
+* Hygiene: Move getOrigin method from mw.mobileFrontend to Api
+* (73437) Make sure we don't show WikiGrok in version B unless there are suggestions
+* Hygiene: Add DS_Store to git ignore
+* Hygiene: Remove unused method don't expose methods we are not using.
+* Infobox styling tweaks
+* Don't load infobox on main page / non-main namespace articles
+* Hygiene: Resolve JSCS problems
+* (73251) Hygiene: Use Icon to render the spinner
+* Scrolling on reference drawers in every mode
+* (73346) Indent list of languages on tablet
+* Remove code powering talk count
+* Removing spinner from Thanks interface in WikiGrok v B
+* Fix grep errors on pre-commit (dev-scripts/pre-commit)
+* Make make jscs use grunt jscs
+* Disable CentralNotice on beta
+* Hygiene: Cleanup mw-ui-icon specific code
+* Hygiene: Make sure icon styles only run on older icons
+* Click track clicks to references
+* (73050, 73053) Update watchstar icons
+* Tools: Run make jshint with grunt
+* Fix wgMFShowRedLinks
+* (73249) Fix WikiGrokDialogB button spinner
+* Wikidata infoboxes: Reveal images
+* Creative MaxSem friendly destruction: Wikidata Infoboxes in alpha
+* Hygiene: Fix rubocop warnings
+* (73343) Making sure that user is thanked regardless of EventLogging success
+* ? -> :
+* Changing WikiGrok v B copy per discussion with Dario, Maryana, and Moiz
+* Hygiene: Put TableOfContents in own file
+* Hygiene: Clearly identify when/how things get initialised.
+* Make sure notifications has loaded click tracking code
+* i18n: Remove unnecessary quotation mark
+* WikiGrok A/B test dry run
+* Hygiene: MobileWebCta
+* Add wikidata descriptions
+* Add QUNIT_MODULE filter for grunt qunit command
+* (73057) Fix editor switcher
+* QA: update beta checkbox locater and Gemfile
+* Conform to the MobileWebWikiGrok schema
+* Fix jscs errors on MobileWebClickTracking
+* (73247) Move progress-bar.js to modules/uploads/ProgressBar.js
+* Instrument search, hamburger and notification clicks
+* Docs: Correcting WikiGrok init function description
+* Separate the entry point modules
+* Hygiene: Kill unnecessary folder/readme
+* Hygiene: Correct documentation
+* Add max height and scroll to reference drawer
+* (73106) Don't run eventLogging in QUnit tests
+* Hygiene: Move settings into standalone module
+* (73058) Alpha: Hide notifications bell icon when spinner is shown
+* (73158) Kill M.isApp method and less/app directory
+* Remove page description from Special:MobileOptions
+* Remove old opt-out code
+* (73162) Fix MobileWebWikiGrokError event logging
+* Change "Read in another language" button to neutral button
+* Hygiene: Add save message by default to Overlay.js
+* (73109) Fix "Undefined index" notices in ApiMobileView
+* Hygiene: Complete JS documentation
+* (73198) Be consistent in "modules-to-load" declaration
+* (73149, 73198) Ensure notifications overlay code runs
+* Redirect to Section, if possible, after edit
+* Revert "Revert "Respect existing X-Analytics header, if set""
+* Hygiene: Remove unused template variables in Page and Section
+* (73098) Lolz CamelCase
+* (71075) Enable routing on TalkSectionOverlay
+* (71076) Hygiene: Make add talk discussion a route.
+* (73063) Only assume sections are collapsible if they are wrapped in a div
+* Tools: Run `make jsduck` on git review
+* Adding alma mater to WikiGrok version A
+* Show intermediate loader when loading image overlay
+* Update reference drawer styling
+* Hygiene: Fix jscs errors
+* (73057) Fix broken switcher icons in alpha for VE
+* Hygiene: Refactor talk overlay
+* Tests: Talk overlay
+* Hygiene: Address template FIXME, introduce overlay header partial
+* claim.correct must be boolean for WikiGrok version A
+* (73008) Add CategoryOverlay to show categories of a page
+* (73059) Center the CTA drawer icon
+* (73054) Set collapsible-heading cursor to pointer
+* Hygiene: Kill unnecessary mobile.beta.common
+* Hygiene: Fix the language sorter mess
+* (73052) Fix close icon in image overlay (alpha)
+* Only load notifications and user module where necessary
+* Hygiene: Code format
+* WikiGrokDialog UI tests
+* Fix nonexisting methods in WikiDataApi
+* Hygiene: Enforce requireSpacesInsideParentheses
+* Tools: Complain about spaces missing inside parentheses
+* Test WikiGrokResponseApi.js
+* Fix WikiGrokDialogB answer recording
+* Hygiene: Fix method chaining code style
+* (73056) Code wars: the empire strikes tap
+* (72979, 72977) Fix the notifications icon in alpha
+* (72864) Link to Special:Nearby out of the article
+* Improve reference display for better readability (beta and alpha)
+* (71961) Restore the more button to the watchlist
+* (72986) Set user language in api request so notifications are localized
+* (72955) Fix all drawers not hiding after clicking the page
+* Revert "Respect existing X-Analytics header, if set"
+* Hygiene: Add another FIXME for the future.
+* Hygiene: Make sure description.descriptions is defined so we don't error
+* (72799) Conditionally load mobile.newuser code
+* Hygiene: Remove mobile.stable.styles
+* Make it possible to visually unwatch an article
+* Hygiene: Move watchstar styles to appropriate location
+* Hygiene: Move tutorial styling into the appropriate module
+* Hygiene: Create array of style modules
+* Hygiene: Fix indent
+* (72839) Complete deprecation of mw.mantle.template
+* Hygiene: Checkboxes on Special:MobileOptions (alpha) -> mw.template
+* Hygiene: Wikigrok B should use mw.template
+* Hygiene: ImageOverlay and TalkOverlays should use mw.template
+* Hygiene: Editor overlay using mw.template
+* Hygiene: Notifications using mw.template
+* Hygiene: Rewrite references to use mw.template
+* Hygiene: Move PageList to core template mechanism
+* Hygiene: Componentise mobile.stable.common
+* Hygiene: Kill a bunch of unused messages
+* Respect existing X-Analytics header, if set
+* Hygiene: Change source to task_type for consistency
+* Only left align tag buttons
+* (72980) Style Login error messages in stable, too
+* Log an error when WikiGrok is unable to load labels
+* Record all answers (+ & -) in wikigrok b
+* i18n: Add missing "please wait" message to watchstar
+* Hygiene: Don't use ResourceLoaderTemplateModule when you don't have to
+* Hygiene: Kill the overlay template related warnings
+* Hygiene: Migrate mobile.contentOverlay to new template mechanism
+* Hygiene: mobile.special.uploads.scripts should use core templates
+* Hygiene: Move tests over to core templating mechanism
+* Hygiene: mobile.ajax should use core template mechanism
+* Hygiene: Nearby should use core templating mechanism
+* Fix OverlayFooterLink template
+* Hygiene: Page issues use core template mechanism
+* Hygiene: Move over VE to new template mechanism
+* Add alma_mater (schools) to WikiGrok Dialog b
+* i18n: Correct positioning for the issues icon in RTL wikis
+* Hygiene: Add mobile mode getter
+* (72405) VE: Don't set @grayDark colour for tool titles in disabled widgets
+* (72820) Enable meta viewport width=device-width
+* (72853) Really Activate $wgUserMediaWikiUIEverywhere everywhere
+* Hygiene: AbuseFilter overlay and panel should use core templates
+* Hygiene: Use core template method in mobile.startup
+* (71769) Use Hook to add valid error messages
+* Hygiene: Stop compile deprecation warnings
+* (72839) Hygiene: Migrate modules using 'parse' message command to ResourceLoaderParsedMessageModule
+* Ensure event logging works with wikigrok
+* Hygiene: Use core templates for table of contents
+* Implement WikiGrok response API
+* (72728) Show logout link on Special:MobileMenu when JS is disabled
+* (72828) Fix: Really truncate long usernames
+* (72711) Deprecate usage of `one`. Use `once`
+* Log WikiGrok errors
+* Only load LanguageOverlay when needed, use M.loadModule
+* Create generic intermediate loader function
+* Fix WikiGrok B license link styling
+* (72795) WikiGrok B: Advance without selecting a tag
+* Add query parameter to force WikiGrok version
+* Support other instance types
+* Wikidata API enhancements
+* Correctly identify humans
+* Fixing some random WikiGrok issues and regressions
+* (72566, 72645) Tap code be gone!
+* Show similar experience for both WikiGrok versions A and B.
+* Hygiene: Fix jscs errors so I can merge again
+* Introduce WatchList class
+* (72723) Remove login icon from Special:MobileMenu for non-JS users
+* Allowing UserJS and UserCSS within the Minerva skin
+* Hygiene: Fix documentation
+* (72637) Fix search input and search button missalignment (js disabled)
+* Change WikiGrok tags elements to buttons
+* (72656) Close search overlay when clicking on the overlay background
+* Add i18n for API module help
+* (72657) Hygiene: Add missing WikiGrok documentation
+* (72612) Save summary in VisualEditor
+* (72692) Don't add a ToC on page actions
+* Hygiene: Fix PHPDoc warnings
+* (72486) Restore the place on Nearby for back button
+* (72580) Fix no-redirecting Cta in Edit-workflow
+* Update and add missing documentation
+* Show WikiGrok to readers in alpha/beta
+* Tools: Use gruntfile to generate pngs
+* Hygiene: Correct the icon documentation
+* Add missing documentation
+* (72639) Convert string to integer
+* Add missing documentation
+* Tools: Add notifications to grunt
+* Tools: Add lint task for grunt
+* Hygiene: Grunt file code style
+* Hygiene: Rename articleList->PageList for consistency
+* Hygiene: Fix jscs errors
+* (72341) Add missing documentation
+* (72631) Fix nationalities label in WikiGrok v B
+* Add persistent anonymized WikiGrok user token
+* Gruntfile cleanup
+* (72521) EditorApi: Check for sections
+* Hygiene: Fix typo in CtaDrawer
+* Disable beautify on pre-commit hook for now.
+* Fix make task
+* Add qunit and file watching support with grunt
+* (68371) Remove role 'button'
+* Tools: JS beautify code
+* Hygiene: Document when classes use things
+* Add test for EditorOverlay preview
+* Adding Florian to the MobileFrontend author list
+* (49413) Load nearby by url coordinates and load by page title
+* Setup Gruntfile to run jshint and jscs
+* Support different types of claims in WikiGrok version A.
+* (64101, 71181) Use mw-ui-icon in alpha
+* Generate WikiGrok prefix correctly
+* Fix useless <h> tag in editor preview
+* Remove deprecated call of SkinTemplate::outputPage()
+* (72522) Fix missing edit preview
+* (72506) Fix failing tests
+* (72484) Fix edit section icon regression
+* (49033) Add handling of code tags in content
+* (72474) Add workaround for missing "block" display
+* (72482) Use login page design in beta
+* (72463) Remove special styling of captcha input field in EditorOverlay
+* (72395) Fix transforming sections
+* (72463) Fix summary field in mobile editor
+* Record whether a WikiGrok response is a test
+* (69092) Don't let textarea grow bigger than the current window
+* Hygiene: coding style spacing
+* Hygiene: Add JSDuck validation
+* Hygiene: Code styling fixes
+* Update WikiGrok logging according to the new schema changes
+* Hygiene: Refactor pageImage.js to be a method on PageList
+* Hygiene: Cleanup the toggling test code
+* Hygiene: Add jscs pre commit hook
+* Hygiene: Array padding
+* Hygiene: Curly braces
+* Hygiene: Add spaces after keywords
+* HYGIENE: Don't run jscs on README.md file
+* Hygiene: Line breaks and indents
+* Hygiene: var declarations at top
+* Hygiene: Remove unnecessary quotes
+* Hygiene: Use single quotes
+* Hygiene: Remove trailing commas
+* Hygiene: Remove Illegal space after key
+* Hygiene: Operator stickiness coding style
+* Hygiene: Missing newline after opening curly brace
+* Hygiene: Avoid camel case complaints
+* Hygiene: jscs fix indents
+* Hygiene: function( -> function (
+* Hygiene: Remove unnecessary spaces after key names
+* Introduce jscs tool to the repository for code style checking.
+* Hygiene: Use icon in cleanup overlay
+* Create new SVG icons library
+* Hygiene: Remove unused files
+* Create nearby refresh icon with Icon
+* Limit the number of tag suggestions displayed in the WikiGrok panel to 6
+* Hygiene: Surface warnings for missing documentation in jsduck command
+* Documentation: Document all the classes
+* Hygiene: Documentation cleanup
+* Hygiene: More icon abstraction
+* (72321) Fix history browser tests
+* WikiGrok B shouldn't depend on user having an occupation.
+* (72313) Move wgMFThumbnailSizes to js hooks as its used outside Minerva
+* Use :8080 in Makefile and tasks as default url
+* Adding error handling to askWikidataQuestion for WikiGrok version A
+* Hygiene: Removing version parameter from WikiGrokApi::recordClaims()
+* (72322) Toggle expanded sections only if they are not already expanded.
+* Fix undefined index 'lastmodifiedby' notices
+* Typo fix
+* (72286) Add margin to WikiGrok spinner for even padding around
+* (67423, 72320) Fix regression and use the svg version in beta for issues icon
+* (68758, 71771, 69724) Use desktop login/account creation form in alpha
+* (72223) Don't use a too light gray for top-bar
+* (69245) Prepare repository for running RuboCop after every push to Gerrit
+* Fix i18n
+* (72272) Give spinner same margins as search result text
+* Make sure, loading circle is really visible
+* (61113) Use special message for some namespaces for "return" link
+* (71920) Fix undefined var in mf-translator.js
+* Fix gap between focus highlight and rounded border on login page
+* (72142) Toggle sections only in article view
+* Tools: make qunit output cleaner
+* Show nationality and occupation suggestions
+* Wikigrok UX changes
+* Make opting into beta/alpha work on localhost
+* (69351) Remember expanded sections on page reload or when going back to the previous page. Add QUnit tests.
+* Hygiene: Introduce Icon.js abstraction
+* Make wikigrok show multiple occupation suggestions when available
+* (72049) Make abuse filter button progressive
+* Hygiene: Avoid string concatenation
+* Fix switching back from alpha to beta
+* Hygiene: Merge wikigrokeval and wikigrok
+* WikiGrok version b UX changes
+* Hygiene: Make notification code more readable
+* (72143) Fix false new notification and remove double format
+* Feature flag to permit wikiGrok on all devices
+* (72069) Fix WikiGrokB saving
+* Standardise ajax loading method
+* Hygiene: WikiGrok api documentation typo
+* Fix undefined variable: $parserOutput in ApiMobileView::getData
+* Hygiene: Cleanup drawer markup
+* Hygiene: Use Generic Overlay-footer template for links
+* Documentation: Editor files and Toast
+* Hygiene: Introduce generic switcher
+* (71714) Hygiene: Refactor tests / jshintrc to not use globals
+* Push previous and next buttons on mobile diff to stable
+* (64635) Never hit the API when running QUnit tests
+* (46012) Push microtap to stable.
+* Hygiene: Page list thumbnails are not icons
+* (45299) Remove all the ajax related things.
+* (71938) Fix file permissions
+* (71570) Revert "Show talk button only when JS enabled or talk page not empty"
+* (68369) Show user talk pages in watchlist talk tab
+* Hygiene: Cleanup PHP generation of icons for skins and special pages
+* Ensure nomobile always gets applied
+* (71892) Document the commands in the Makefile
+* (71711) Make watchstar tooltip visible
+* Hygiene: Split out text specific less
+* Hygiene: Split out table specific less
+* Hygiene: Split out list specific less
+* Hygiene: Split out blockquote specific less
+* Hygiene: Split out heading specific less
+* Hygiene: Split out link specific less
+* Hygiene: Split out gallery specific less
+* Hygiene: Split out full image specific less
+* Hygiene: Split out thumbnail content less
+* Set initial keyboard height
+* (71715) Regression: Fix upload overlay
+* Hygiene: Remove unnecessary template
+* Hygiene: Remove obsolete hidden class from common-js.less
+* (71523) Rearrange templates folder so that is is consistent with javascripts and less
+* Tools: Ignore WIP patches in `make gerrit` command
+* Remove oo-ui toolbar border
+* (71570) Revert partially: "Show talk button only when JS enabled or talk page not empty"
+* (71577) Yet another wikigrok footer tweak
+* (71725) Fix overlay height in iOS 8
+* Hygiene: Fix typo in param comment for onEventLoggingRegisterSchemas
+* (70009) SECURITY: Don't add POST data to footer links
+* Hygiene: Run jsduck on Mantle documentation
+* Hygiene: Remove dead View.js
+* Hygiene: Toggle classes
+* (58285) Use standard image sizes on nearby, search and watchlist
+* (70078) Allow watching of missing pages
+* (71613) QA: Make browser tests pass again
+* (71206) Redirect to login
+* (71627) Get down to 15 shades of gray
+* Hygiene: Cleaning up getSkinConfigVariables and improving documentation
+* (68579) Remove borders from tables within infoboxes
+* Making notification archive link use anchor styles rather than button styles
+* (60917) Remove apple web app capable mode from skin
+* (71252) Fix username for anonymous editing in MobileWebEditing
+* (66055) Register EventLogging schemas the cool new way
+* Prevent var undefined error in WikiGrok version B
+* (58285) Use 300px standard image size for uploads
+* (71577) Wikigrok B improvements
+* (63454) Standardize on jQuery.each vs forEach
+* Regression: Remove '>' from VE editor header
+* (65676) Wait for back history before going to search page
+* (69559) Remove ajax refresh from editing workflow
+* (50705) i18n the nearby refresh icon
+* (71573) Don't add #undefined as redirectHash
+* Use mw-ui for "All notifications" link
+* Improve tests isolation
+* (65381) Standardize grey colors
+* (71608) Use less function to embed editor images
+* Hygiene: Add back button partial
+* (50705) Add tooltips to all standalone icons
+* (67514) Indicate read-only error in EditorOverlay
+* (71572) Prevent button stacking in wikigrok
+* Fix toast error message image
+* (50396) Remove lead section in talk Overlay
+* Wikigrok B
+* Hygiene: Remove obsolete files from less/
+* (71524) Move JavaScripts from javascripts/common
+* (71524) Move less/common/ to less/
+* (71046) Make sure, issues only added once
+* (48996) Remove link removal on filepages
+* (70797) Check for Nearby-Requirements first
+* (71071) Stop user profile talk button from being special
+* Prevent explosions due to jquery.json removal
+* Hygiene: Add chooseRandomItemFromArray method
+* (71335) Using same API data for wikigrokeval and askWikidataQuestion
+* (71307) Fix false 'already logged in' message.
+* Hygiene: Hide API yukiness
+* Hygiene: Rename getOccupations to something more appropriate
+* Hygiene: Abstract more of the nastiness of the wikidata api
+* Hygiene: Add JSONP support to API classes
+* Hygiene: Move DOM handling out of postRender
+* (69020) Support internal redirects
+* Hygiene: WikiDataApi::getClaims
+* Adding mobile.startup to wikigrok dependencies for debug=true
+* (71329) Fix fatals due to core changes
+* Hygiene: Gitting rid of skins.minerva.chrome.styles.beta and uiNew.less
+* (68990) Add padding to mobile talk icon text in RTL
+* Hygiene: Add recordOccupation method to WikiGrokApi
+* Ensure mw.user is available to WikiGrok
+* (69721) Add notification cap
+* QA: workaround for ChromeDriver bug with confirm dialog
+* (71252) Adjust mobileWebEditing to fit anon editing
+* (64707) Hygiene: Manage z-index with less variables
+* Don't rely on global title state for url generation
+* Detect retina displays and load the image in the correct size.
+* Hygiene: Introduce WikiGrokApi
+* Hygiene: Create WikiDataApi
+* Hygiene: Remove unused talk-Template
+* Use inline-block rather than floating
+* (69111) Add 'truncated-text' class to image description
+* (70684) Optimise galleries on mobile and tablets
+* (70963) Switch to using $.inArray instead of indexOf for arrays
+* Hygiene: Move logic for rendering WikiGrokPanel out of Panel itself
+* Hygiene: Make more info dialog reusable
+* Hygiene: Use tabs instead of spaces in en.json
+* Hygiene: Use core mediawiki ui colors where possible
+* (71158) Make sure WikiGrok more info overlay doesn't interfere with search
+* (69587) Profile page content alignment fix
+* Better message to explain Images on Special:MobileOptions
+* Ensure we log success events
+* i18n: Consistency tweak
+* (70989, 71028) Fixes for Talk feature
+* Wikigrok: Make query string override reset the opt out
+* Hygiene: Remove unused icon files and rules
+* QA: straightforward id for new beta label element
+* (69487) Use mwui Checkboxes on Special:MobileOptions
+* Hygiene: Remove the last instance of _super
+* Hygiene: Use partial for cancel button
+* Adjust button sizes in WikiGrok
+* Revert "Making sure mediawiki.ui buttons use regular box-sizing"
+* Making sure mediawiki.ui buttons use regular box-sizing
+* Use Special:EditWatchlist for A-Z View
+* Hygiene: Rename to mode
+* Fix button spacing in WikiGrok for iOS
+* Kill super
+* (67107) Use Mantle version of Class, eventemitter and View
+* Fixing loading of loggingSchemas for mobile
+* Add some more tests to TalkOverlay
+* (65907) Remove Language and Nearby Beta features
+* (69763) Improvements to add discussion on talk page
+* Move load content out of initialize
+* Adding clicktracking to WikiGrok version A
+* Push wikigrok a to beta
+* QA: Don't assume the main page has a language button
+* QA: refactor VE editing
+* (70921) Escape all CSS metacharacters for ref drawer
+* (64265) Hygiene: Remove unused mainpage CTA messages
+* Fix iPhone style regression
+* Disable WikiGrok on tablets for now
+* (69163) Pre-fill search bar in SearchOverlay with previous contents
+* Hygiene: Using #/ for MoreInfo overlay per mobile coding conventions
+* (69414) Restrict iOS fixed header code to overlays with fixed headers
+* Refactoring InlineDialog and Drawer using new abstract Panel class
+* Adding user_id to data recorded by WikiGrok per analytics request
+* (70904) Hygiene: Change editor URL to use leading /
+* Register TalkOverlay to #/talk
+* Improvements to Wikigrok A interface
+* (69488) Use summary message on non Main namespace pages
+* Make sure we're in 'view' mode before loading WikiGrok
+* (68106) Disable file caching for mobile pageviews
+* QA: update Ruby gems
+* Remove direct echo db access from mobilefrontend
+* (60134) Insert section name in edit summary
+* (69763) Hide discussion button whilst it is broken
+* (70757) Fix contributions query for anons
+* (70144) Fix RTL flipping for back arrows
+* Hygiene: Move CleanupOverlay into its own file.
+* More documentation for OverlayManager
+* Beta: Apply this page has issues to talk pages
+* Show anoneditwarning when $wgMFAnonymousEditing = true
+* Update OOjs UI class names
+* Don't collapse sections on file pages and categories
+* (70151) PictureShower: link directly to licensing information
+* Add more comments and rename some variables in OverlayManager
+* Fixing Javascript error when adding talk page reply in alpha on mobile
+* Add a testing mode to WikiGrok
+* QA: update for new element locator names in VE
+* Fix "Last just now by an anonymous user" appearing on actions other than view
+* WikiGrok interface for mobile
+* Preserve order of search results
+* (70047) Show sorry toast when logged out, too
+* Fix pre-review hook once and for all
+* Fix "edit without login" link message
+* QA: remove uploads tests from the Jenkins builds
+* QA: uploads removed from MobileFrontend
+* QA: Tagged additional features known to work under MWV
+* (69465) Specify lang and dir for the content in editors
+* QA: Fixed order of givens in no_javascript_site feature
+* Revert "Use summary message on non Main namespace pages"
+* Setup A/B test for editing / performance
+* (69793) Add a configuration setting to disable beta and alpha
+* QA: update for API auth token change
+* QA: Fixed "Upload image file" scenario
+* Revert "Remove direct echo db access from mobilefrontend"
+* Remove delay when recalculating viewport height on iOS
+* Simplify redirect cookie system
+* QA: uploads tutorial test is no longer valid
+* Add 'overflow: hidden;' to blockquote styles to prevent overlapping
+* Add gender support to 'Mobile-frontend-profile-userpage-link'
+* (68832) Don't trigger focus event on contenteditable in VE
+* Revert "QA: Corrected page elements for create_account_failure_messages.feature"
+* (59937) Add intermediate screen for anonymous editors
+* (69656) Adding attribution information to mobile media viewer
+* Remove direct echo db access from mobilefrontend
+* QA: Corrected page elements for create_account_failure_messages.feature
+* (49116) Display footer copyright notice in user language on mobile
+* (69813) Fix "confirm on new page creation" can not be cancelled
+* (69820, 54284) Disabling lazy-loading in alpha mode
+* Revert enabling of anonymous editing in alpha
+* (64105) Improve Talk Overlay
+* Hygiene: Remove last non-test related use of writeCokkie/readCookie
+* (59937) Enable anonymous editing in alpha mode
+* Hygiene: Fixing formatting of Special:Uploads
+* Hygiene: Avoid loading absent module.
+* (61489) Redirect to mobile diff page
+* QA: update login error test
+* (63428) Force mobile friendly mediawiki ui interfaces where possible.
+* Remove useless htmlspecialchars
+* (56834) Enable View of "new messages on talk page" without Echo
+* QA: Fix login tests
+* (62598, 68375) Check userCanUpload when wgMFPhotoUploadEndpoint is set
+* QA: Fix browser tests for issues (cleanup templates)
+* QA: Ensure that we wait for editor close button to appear
+* QA: Workaround for cookie domain bug in chrome webdriver
+* (68775) Show IP's contributions on SpecialMobileContributions, too
+* QA: Extension dependencies for geodata-related scenarios
+* QA: Extension dependencies for VE and notification features
+* QA: Refactoring browser tests
+* (69488) Use summary message on non Main namespace pages
+* (69141) Make sure that images are aligned correctly on wide screens
+* (67005) Make thumbnail caption color darker
+* Fix typo
+* LSG: Allow running make kss without npm installed, if kss is
+* (68880) Remove forced hardware acceleration in overlays on iOS
+* Proper parsing of x-analytics items
+* Add Deprecation note to EnableMobileModules
+* Hygiene: Remove reference to non-existing 'mobile.styles.page' module
+* Remove two old modules kept for HTML backwards-compatibility
+* Fixing mobile.editor.ve module definition
+* Push mobile VisualEditor to stable
+* (68832) Delay calculating available area height when keyboard opens
+* (68775) Replace IP userpage link by IP contribution page
+* QA: update VE editor test to use API
+* Explicitly name template languages
+* (67819) Show talk button only when JS enabled or talk page not empty
+* Let VE know if we are running on iOS
+* (67390) Improve fixed header in overlays on iOS
+* Make LeftNavEditTutorial no longer an A/B test
+* Only trigger 'mark as read' API if unread notification is not 0
+* (68347) Fix stopMobileRedirect cookie being HTTPS-only
+* (68756) Fixing fatal error on Special:Uploads for mobile
+* Fixing height of image in mobile media viewer
+* (68704) Move Mantle dependency check into efMobileFrontend_Setup
+* Use $wgResourceModuleSkinStyles for Minerva's core style overrides
+* (62598, 68375) Add Uploadrestriction using edit count
+* Move bottom border to page actions
+* [Reapply] Add template dependency to Mantle extension
+* Revert "Add template dependency to Mantle extension"
+* Explicitly identify the template language to use for Watchstar
+* Add template dependency to Mantle extension
+* Make Minerva's skin name translatable
+* modules.js: Remove backwards-compatibility mw.loader call
+* (68414) Making sure that upload rights are enforced on lazy-loaded pages
+* Don't render page actions when none exist
+* Triple-equal according to coding conventions
+* Clarify the "no bytes changed" message
+* (67140) Making sure that clicking on search doesn't trigger history.back()
+* Remove unneeded isArticleRelated
+* (68249) Use canUseWikiPage before getWikiPage
+* Fix and clean up pre git-review hook script
+* Removing random and keep going experimental features from mobile
+* QA: Don't try to create references with external links
+* QA: use API to protect page
+* (6650, 66506) 6
+* Hygiene: Some clean-up of mobile Resources.php
+* (68009) Adding mobile.loggingSchemas dependency to mobile.special.uploads.scripts
+* For now, always default to source editor on mobile
+* Don't add classes to the context
+* (67471) Change pagelist placeholder image
+* (66506) Redirect directly to a match in search
+* QA make sure watchlist shows correct tab
+* Improving save workflow for mobile editing
+* Improvements for viewing mobile site on very small screens (<=280px)
+* QA: Deleted empty page file
+* QA: Fixed TypeError when MEDIAWIKI_USER variable is not set
+* Syncing mobile blues and greens with official design palette
+* Promoting MediaViewer to stable
+* (67085) Only collapse sections on wikitext pages
+* (66678) If error occurs while loading VE, load source editor instead
+* (67352) Add right- and action- lang key for permission
+* Hygiene: Adding some documentation to the mobile web app code
+* (66350) Enable customization of footer links
+* Making SVG compression smarter in pre-commit hook
+* QA: Remove test for dynamic page loading
+* QA: Don't test for Uploads in menu for anon users
+* Hygiene: Cleaning up pageaction icon CSS
+* Hygiene: Removing a bunch of old icon CSS that is no longer needed
+* QA: Fix tests for search on special pages
+* (67171) Revert "Give anons tokens too"
+* (67675) Add continue message to KeepGoing
+* Rewrite prepareSiteLinks and add check for "-"
+* (64616) Show No bytes changed on mobile diff
+* Consistent use of ellipsis
+* (67105) Minerva Desktop: Remove toggling sections
+* (62598) Show Uploadbutton only when user has the permission
+* QA: Remove keep going browser tests
+* QA: Fix Special:Uploads test
+* QA: Remove protected page step from stable page loading
+* (62598) Hide Uploads button unless user has adequate permissions
+* Changing TOC icon to be SVG instead of PNG
+* Fix crash in tests when array elem missing
+* (67101) Minerva Desktop: fix TOC
+* 18n: native digits on 'pager-older-n'
+* Fix editing message in source editor...
+* Changing labels in editor switcher
+* QA: Fix TOC browser test
+* (66579) Fix jsduck
+* Move border-bottom out of .overlay-header-container
+* Separate the back arrow from the toolbar in mobile VisualEditor
+* (66591) Add Article Title to PageTitle
+* (65676) Fix double tap/click bug in search overlay
+* Fix fixed header and keyboard behavior in VE on iOS Safari
+* Add article title and an editing indication in VE
+* Tweak VE overlay to support mobile context
+* Don't nest .overlay-header and .overlay-head-container
+* Change editor switcher to cog icon and move to right side
+* (67164) Fix fatal in mobileview
+* Use TOC only when page is supposed to have it
+* Hygiene: Some clean-up of the Minerva skin code
+* Change the X to a back icon in editing workflow
+* QA: element locators changed
+* Add text to next & save buttons in mobile editors
+* Fix VE browser tests to switch to VE from source editor
+* Hygiene: Move message tool out of repository
+* ToC: float left should also clear other left floats
+* Remove a workaround for position: fixed button bars
+* QA: More test pages being created in the live wikipedia
+* (66888) Fix stopMobileRedirect cookie being set twice with different prefixes
+* (66892) Allow more zooming
+* Fix VE browser tests
+* Fix page actions browser tests
+* Regression: Fix logging of left nav clicks
+* Track "Read in another language" button clicks
+* (66656) Add page title to Special:Contributions
+* QA: Fix special history browser test
+* (66771) Flip TOC icon in RTL
+* Restoring override param to SkinMinerva::getTermsLink()
+* (66294) Follow redirect for Main Page check if enabled
+* Hide page actions on main page
+* Revert CentralNotice banner box-sizing to content-box on mobile
+* (66534) Move redlink logic to PHP
+* (65631) Ensure edit protection is declared when only move permissions exist on page
+* (66169) Use UTC time when generate Filename
+* QA: element locator change
+* (65201) Tablet styling tweaks
+* (65640) Add "wgMFShowRedLinks" and "wgMFShowRedLinksAnon" config
+* (65816) Simplify toggling / dynamic page loading code
+* (66590) Fix variant links on Special:MobileLanguages
+* QA: element locator changed
+* Fix default branch in .gitreview
+* QA: don't create pages in production!
+* Hide the edit links unless they belong to a collapsible section
+* Make settings submit button mw-ui-constructive
+* Promote mediawiki-ui buttons to stable in mobile
+* Hygiene: Icon cleanup
+* Tag mobile web edits more explicitly
+* Use phpdoc.xml for configuration of phpdoc
+* (66086) Update doc for special pages
+* (60478, 60479) Collapse on the highest available heading level
+* QA: update Ruby gems to pick up new mediawiki-selenium
+* Regression: fix margin between thumbnail and its caption
+* Documentation: Add note to `make qunit`
+* Hygiene: Fix some FIXMEs
+* QA: Update main page upload tests
+* (66500) Only show upload page action in File namespace if page doesn't already exist
+* Don't show photo upload icon when no action is possible
+* Hygiene: Remove dead code path
+* (64638) mobileview: return page_props
+* (65599) Don't show spinner whilst watching a page
+* Hygiene: Kill OverlayNew and LoadingOverlayNew
+* Fixing styling of full-size (non-thumbnail) images in mobile
+* Migrate float and clear styles from parsoid styles to mobile
+* QA: Updating mobile VisualEditor browser test - alpha->beta
+* (66164) Respect Upload Settings on Special:Uploads
+* (66086) Update file summary for phpdoc
+* QA: Fix failing builds
+* Show mobile view to tablets by default
+* Throw a couple more Android UAs at tests
+* (64004) Hygiene: Kill dead variable
+* (63019) Make `make message` work again.
+* Slight tweak to quotebox template
+* Ignore tests directory when running `make phpdocs`
+* Documentation: Add summary blocks to files in api directory
+* (65643) Avoid JavaScript deprecation warnings in user module
+* (66282) Make sure images are properly aligned in Mobile VisualEditor
+* (66086) Hygiene: Update/Create doc for php in diff and modules
+* (66086) Update docs for skin and Api Files
+* Hack around yet another template problem.
+* MobileOptions: Log authentication status for users getting token errors
+* (65506) Show loader when switching between editors
+* Hygiene: remove old b/c code that was there since October
+* Move notifications drawer to stable
+* Promoting mobile VisualEditor from alpha to beta
+* QA: confirm logout succeeds for protect page
+* Fix MobileWebEditing code
+* (66086) Update doc for files in includes/
+* Make sure we detect Android tablets correctly
+* QA: Random stab in dark to get chrome tests to pass
+* Make search icon render okay on stable
+* (65327) Alpha: Avoid multiple title parameters when rewriting url
+* Notification bell tweaks
+* Make Special:Uploads render nicely on tablet devices
+* Correct sort algorithm on nearby
+* Tweak formatting of citation drop down
+* (66103) Allow text-alignment for thumbnail captions to be inherited
+* QA: Updated Ruby gems
+* (65457) Allow blocked users to edit their own user talk page
+* Only show upload icon to autoconfirmed users.
+* Hygiene: Moved prepare Search to Template
+* (63460) Check first if PasswordChange is available
+* Ensure developers can use `make phplint`
+* (64398) Generate PHPDoc via Makefile
+* (65997) Revert "Fixing thumbnail sizing in search overlay"
+* QA: Make page loading test run again
+* Update editor switcher icons and fix CSS
+* Hygiene: Put test in right place
+* updateMobileUrlHost bugfix in case pattern doesn't match
+* (63458) Allow customization of page action buttons
+* (65395) Hide enabling of site notices behind flag
+* (65838) Declare toggling toc dependency
+* Open sections by default on tablets (beta to stable)
+* Push table of contents to stable
+* Promoting mobile typography changes from beta to stable
+* Distinguish between VisualEditor and SourceEditor in event logging
+* (65884) Regression: Fix MobileWebEditing schema - add funnel
+* Enable expanding of section headings via space and enter keys in stable
+* (65676) Avoid bugs in Chrome with clicking links in search overlay
+* Fix position of pop-up indicator for cite button in mobile VE
+* (64679) Make this page has issues inline block
+* (65587) Use same options for VisualEditor and Editor overlays
+* (65347) Fixing thumbnail sizing in search overlay
+* (65749) Fix fatal when using Minerva directly, outside of mobile view
+* Add clicktracking to table of contents
+* Rewrite Nearby as a PageList
+* Reduce page_props usage
+* dev-scripts: Fix makegerrit command
+* Regression: fix trimmed cancel icon in drawers
+* Promoting mobile typography changes from beta to stable: Part 1
+* (65708) Prevent hide drawer when click (again) on (another) reference
+* Hygiene: Some CSS clean-up. Removing old cruft and consolidating.
+* (65613) Add top border to page list on Nearby page
+* Syncing mobile header fonts with new Vector skin stack
+* Embed the external link image
+* Move more content styles out of common.less
+* Hygiene: rename scripts directory to dev-scripts
+* (65503) Loading toggling css with JavaScript
+* Regression: Restore external links icons
+* (63553) Don't stretch the image in the media viewer
+* QA: Fix broken browser tests
+* (58311) Implement upload via "Add image" on New file pages
+* Split content styles into separate modules
+* Move styles related to content to typography*.less
+* Fix broken QUnit test for EditorApi
+* Fix NearbyApi test
+* QA: Add browser tests for Special:Uploads edge cases
+* Fix position: fixed support detection for Webkit
+* QA: only add a # character for the test and page that needs it
+* QA: Add non JavaScript site tests for search
+* (65378) Stop EventLogging errors when switching from VisualEditor to Editor
+* Hygiene: Remove unused schema
+* Hygiene: Updating name of feature test (watchstar.feature)
+* Follow up to Ie1a853b634fe3ecc7e71e54a967e4b4795126f85
+* Hygiene: Sensible defaults for textarea elements
+* QA regression: Fix breaking Firefox test
+* Hygiene: Make border-box the default
+* Hygiene: Cleanup browser test steps which are not sentence case
+* Hygiene: move API tests to subdirectory
+* (64918) Respect the hash with sub headings
+* Removing header margin and associated hacks
+* (65094) Fix username handling on Special:Uploads
+* QA: Don't run protected pages tests on test2wiki.
+* (65529) Fix edit link when VisualEditor is not available
+* Fix trailing whitespace check in pre-commit
+* (63456) Add check for permission to create a new account
+* (64633) Fix margins in page list and search
+* Regression: Fix styling of page lists
+* (65358) mobileview: fix handling of shared file pages
+* (64968) Hygiene: Cleanup edit switcher css
+* (63701) Style search button as icon for non-JS users
+* Hygiene: Browser test cleanup
+* (64719) Fix VE performance by cleaning up ui.less now universal header
+* (64305) mobileview: handle pages redirecting to special/media
+* (65393) Revert "Prevent horizontal scrollbar after menu closing animation"
+* Formatting for citation drop-down in mobile VisualEditor
+* Hygiene: Use truncated text class in overlay headers
+* Hygiene: Introduce .page-summary class
+* (65042) Fix XSS in section handling
+* (65266) Fix SpecialMobileContributions continuation
+* (65118) Cleanup and improve supportsPositionFixed
+* QA Progress bar does not appear for Firefox, only Chrome
+* (64669) Add iOS hover bug fix
+* QA Duplicate images have empty href tag, check alt instead
+* Prevent horizontal scrollbar after menu closing animation
+* Avoid unnecessary scrollbar in NotificationsOverlay
+* (64867) Fix the mess with previous revisions in contributions
+* mobileview: return editable status
+* (64924) Use hash for random link
+* (64543) Repurpose wgMFNearbyNamespace as wgMFContentNamespace
+* Regression: Fix Special:MobileWebApp
+* Remove unused image
+* (46745) Fix watchlist query to work with PostgreSQL
+* Ignore $wgMobileUrlTemplate when host is an IP address
+* QA: Update the browser test article page for continue link
+* Regression: Don't show talk link on talk pages
+* Hide uploads and nearby to non-JS users
+* (65035) Fix mobileview parameter description
+* Fix entity escaping on main pages
+* Fix desktop link for MobileContributions
+* (64416) Deal better with expired edit tokens
+* (64681) Only create editor switcher from wikitext editor if VE is usable
+* QA tests that create a page via API should not run on prod
+* Hygiene: Remove blockquote css repetition
+* Hygiene: Standardise on our icon usage
+* Hygiene: Use the reset for the left menu
+* (64643) Show toast when a page is protected
+* Hygiene: Remove unused template for languages
+* Revert "Don't use this use self to avoid selfies"
+* Don't use this use self to avoid selfies
+* (56057) QA: Remove dependency on Barack Obama article
+* Hygiene: Kill the confusingly named KeepGoingDrawer
+* QA: Update keepgoing test to reflect default state of editor
+* QA: Update test to ensure photo gets uploaded with exif data
+* QA: Fix the browser test for toggling
+* (64629) Fix the reference close button
+* QA: Give VE more time to load in browser tests
+* (64932) Don't hit the API when creating a PageList
+* (64270) Close drawers/toasts on a click event
+* Regression: Always prevent default behaviour of main menu click event
+* QA: Fix lead photo uploads tests
+* QA: Add browser tests for presence of more link on history page
+* Tools: Add check for trailing whitespace to pre-commit hook
+* QA: Fix the failing watchstar tests
+* Rewrite Search using a PageList
+* Hygiene: Refactor main menu code
+* (64682) Fix overlay panel padding on tablets
+* i18n: Set bytes-added/removed to explicit LTR
+* (64663) API: respect onlyrequested sections on main page in mobileview
+* (64857) Fix the position of the talk link on Special:UserProfile
+* i18n: Remove closing bracket on language list
+* Reorganise test directories
+* Hygiene: doc, unused vars, duplicate array element
+* Promoting copyvio EXIF confirm message to stable
+* Hygiene: Making our use of local storage more robust
+* Hygiene: Remove redundant code in getDefaultModules
+* Watchstar refactor - now with tests!
+* QA: Follow up to  I7dc9b2a9610042479fc3d3d5e3d0b9f36b8eb599
+* (64681) Make sure mobile VisualEditor is only loaded when appropriate
+* (64318) Preserve URL parameters when toggling view
+* QA: Use less specific selector for VE tests
+* (64462) Link to profile page from diff
+* (64108) Hide footer on diff pages
+* (64302) Don't misuse comma-separator message
+* Hygiene: PhpDoc, unused variables, etc
+* Hygiene: Remove code from February that no longer applicable
+* Hygiene: Introduce border-box class
+* QA: Stop copyvio test running in Chrome
+* Hygiene: Merge Overlay and OverlayNew
+* (64269, 64271) Rewrite MediaViewer as OverlayNew
+* Hygiene: Rewrite things as Overlaynew
+* Revert "QA: Fix failing photo copyvio browser test"
+* QA: Fix failing photo copyvio browser test
+* (64213) Improve error reporting for image uploads
+* Hygiene: remove unused parameter
+* (64268) Fix talk overlay for new pages
+* Hygiene: Cleanup blockquote rules
+* Hygiene: JSDuck cleanup
+* QA: Fix the diff test
+* QA: comment is obsolete, bug is fixed, tag is added
+* Hygiene: remove deadbeef, fix returns
+* Story 1904: Filters to reduce copyvios on mobile
+* Hygiene: Fix tests isolation
+* (64317) Stop special-casing history views in shouldDisplayMobileView()
+* (64257) Pass undo message to JavaScript
+* Fix check for empty title
+* Fix fatal in Special:MobileLanguages
+* Hygiene: Introduce cloaked-element class
+* Fix style guide
+* QA: Restore correct Gemfile
+* CSS Regression: Restore blue tutorial button in beta/alpha Special:Uploads
+* Regression: Push history back to stable
+* (63999) Improve diff detection
+* Hygiene: Clean up profile page dead code
+* (64112) Special-case history and diff desktop links
+* Hygiene: Ensure bridge css never makes it on to Minerva skin
+* Switch to JsDuck for documentation
+* (64202) Push new page feed style tweaks to stable for history and watchlist
+* Wrapped URL as a mobile link in SpecialMobileLanguages
+* QA: test needs a Given that visits a page
+* EventLog profile and history link clicks
+* Followup db0dd687: fix JS error on save
+* (64106) Fixing icons in editor switcher
+* Add user icon to left of contributions title
+* Story 1922: Promote last modified at top to stable
+* LanguageOverlay: Only display title if available
+* (64189) Suppress username on contributions page
+* Story 1921: Push user profile to stable
+* (63414) Hygiene: Don't create li tag if message is blank (disabled)
+* (63968) Fix more link on history page
+* Hygiene: Y U NO USE PhpStorm, jdlrobson? :P
+* Story 1925: Push user contributions to stable
+* Story 1891: Push history to stable
+* Push search bar on special pages to stable
+* Replace parentheses with pipe in the language list
+* Story 1891: Push new Watchlist feed to stable
+* (64081) Fix css regression (watchlist margins)
+* Consolidate how overlays are hidden
+* (64032) Also destroy target when exiting without saving changes
+* (64094) Fix infinite scroll on uploads page
+* Make browser tests for watchlist and history pass again
+* (57629) Base api module on mw.Api
+* Give anons tokens too
+* Hygiene: Cleanup PHPDocs
+* Story 1920: Show minor edit tags on watchlist and history pages
+* (64037) Fix "Call to undefined method ProofreadPageDifferenceEngine::getWarningMessageText()"
+* Compress nearby beta features svg
+* (64032, 64034) Destroy the VE target after saving
+* (58622) Fix "Nearby" Beta Feature icon to be consistent with the others
+* QA: don't run tests on prod that use the API
+* (63017) Ensure headings are HTML when needed
+* (62614) Use core token handling
+* QA 1807: Provide tests for full text search
+* Story 1880: Make editor choice sticky
+* Story 1924: Tweaks to contributions page
+* Fix JS error in redlinks.js due to missing dependency
+* Temporarily suspend Nearby pages beta feature
+* QA: Ensure wiki is setup with terms of use link
+* Card 1816: Change the notifications icon in beta
+* QA: Correct css selector for license link
+* Flatten red links in JavaScript
+* (63658, 63689) Make sure VisualEditor is installed before trying to use it
+* QA: Tests that create pages should not run in prod
+* Card 1757: Add EventLogging to Special:MobileOptions
+* QA: Identify the license link better
+* QA: Begin removing dependency on Barack Obama article
+* (56057) QA: Remove dependency on "Foo bar" article
+* (62241) Avoid file names with double spaces
+* (56057) QA: Remove dependency on diff test page
+* (56057) QA: Remove dependency on Duel Masters article
+* Hygiene: Move wgSiteName requirement into other LocalSettings changes
+* (56057) QA: Make the test environment agnostic of existing pages #2
+* QA: Fix 'Nearby button visible' test in Chrome
+* (56057) QA: Remove dependency on San Francisco article
+* QA: Updated Ruby gems
+* Support the enabling of Flow on mobile
+* QA: Login before opting into beta
+* Story 1538: History page
+* Card 1905: Make content transparent when drawer open
+* Card 1815: Add animations to right drawer
+* (63675) Don't show language button after edit when no languages
+* Fix a stylesheet FIXME
+* (63748) QA: APIPage can create pages via API
+* (63610) Fix line height for edit summary on watchlist
+* QA: Browser tests for this page has issues
+* Hygiene: don't confuse Jenkins
+* QA: Deal with failing cloudbees test
+* (63774) Fix page preview
+* Remove zh-[sg|hk] in favour of zh-han[s|t]
+* Story 1790: Mobile watchlist changes
+* Opt into alpha after login
+* QA 1809: Add browser tests for section toggling \o/
+* QA Card 1808: Add browser tests for references!!
+* (63714) QA: update upload steps to shared descriptions
+* (63736) Revert "Only offer VisualEditor if installed and enabled"
+* Fix setcookie() call
+* (62030) happening again
+* QA: Create pages for Watchlist tests at runtime with API
+* Add punctuation to "mobile-frontend-profile-last-thank"
+* QA: updated mediawiki_selenium to make uploads work
+* (63658) Only offer VisualEditor if installed and enabled
+* Fix pre-review on Linux
+* Regression: Clicking hamburger 2nd time closes menu
+* (63461) Fix outdated $wgMFCustomLogos comment
+* (63317) Search: Prevent unneeded API request when there aren't any titles
+* (63246) Fix styling of "No page with this title" in search
+* (63313) Set main menu width in pixels
+* Use predefined sizes for images in media viewer
+* Hygiene: Use a single route for wikitext editor and VE
+* Make check less work again
+* Hygiene: Cleanup gitignore
+* Hygiene: Move main menu rule out of typography
+* (63212) Show LoadingOverlay when loading VE
+* Card 1814 (Story 1747): Notification drawer
+* Make search slightly faster
+* Fix phpcs-related scripts
+* (63457) Refactor site notice handling
+* (63248) Don't request page images separately for search results
+* SpecialMobileWebApp: Get the startup module caching
+* (61400) Ensure checkToggleView() fires at appropriate time
+* Hygiene: Remove old search overlay CSS
+* Hygiene: Remove polyfills
+* Avoid flash of styles when loading tablets
+* (62706) Make "Search in pages" perform a fulltext search
+* (63427) Fix Special:MobileDiff fatal
+* Show the correct emptywatchlist image
+* (63140) Fix watchlist tabs. Protect from future changes with browser tests.
+* Hygiene: Kill mobile.styles
+* (62983) Update schema for MobileWebUploads
+* Hygiene: Clean up main menu css
+* (63248) Don't request pageimages for 0 pages
+* Fix MW version
+* Hygiene: Consolidate beta thumb styles in one place
+* Hygiene: Consolidate the overlay-header h2 rules
+* Hygiene: Clean up formatting of search overlay
+* Better log failed token checks
+* QA: Avoid issues for Chrome diff browser test
+* Hygiene: Prevent warning when Echo is not installed
+* Change capitalization to "In the news"
+* (62813) Regression: Fix fixed header emulation on iOS
+* (62652) Show headings in preview
+* QA: make wikitext editor test pass in Chrome
+* Package issues template with issues module
+* (61868) mobileview: handle requested sections outside of range
+* (62706) Make search overlay transparent again
+* (63144) Fix the watchlist header
+* Hygiene: Handle fatal errors when loading talk page
+* Story 1732: Make licensing agreement customizable
+* Hygiene: Remove unused step.
+* QA: Remove tests against URLS
+* RTL icons for beta features
+* (62175) Proper edit handling in case of redirects where page does not exist
+* Ignore WIP patches when evaluating
+* Enable Special:MobileMenu for Vector skin
+* Hygiene: Remove unused local variables
+* (61293) Delay EventLogging click track until next page load
+* (62932) Avoid redirects when visiting URLS in browser tests
+* SpecialMobileWebApp: Make styles and startup scripts cache
+* (62907) Fix OverlayManager#replaceCurrent
+* MobileFrontend and UploadWizard share upload steps.
+* (62906) Fixing double warning regression
+* Fix close button behavior for editors after switching
+* Story 1521: Allow switching from VisualEditor to Wikitext editor
+* QA: wait for Chrome to finish redirecting on beta labs
+* QA: this test now works for both FF and Chrome
+* QA: Re-enable password reset test
+* QA: last scenario in login test has been being skipped
+* (62553) Explain deleted Revisions
+* (62846) Added per-browser Cucumber tags
+* Hygiene: Fix remaining php code sniffer errors
+* Tools: Run PHP code sniffer in the make phplint command
+* Hygiene: Fix all CodeSniffer errors and warnings
+* Special:MobileWebApp and Special:Manifests
+* Hygiene: Remove stray WAP messages
+* Tool: Make messages easier to create
+* Tools: Relax pre-review hook
+* QA: Fix Chrome builds for language browser tests
+* QA: explicit navigation to Main Page
+* (62512) QA: Using the new way of starting a custom browser
+* Migrate to JSON i18n
+* Use __DIR__ instead of dirname( __FILE__ )
+* Set a sane default for $wgMFNearbyEndpoint
+* Add a pre-review hook to enforce better code review practices
+* Hygiene: Add missing QQQ codes
+* Fix TOC display in alpha on mobile
+* QA Two tests mistakenly pointed to production environment
+* QA Needs a when_present for slow browsers
+* Hygiene: Remove undefined test and unused rule
+* Revert "Ensure checkToggleView() fires at appropriate time" - infinite recursion again
+* (62630) Finish cleanup of new dynamic languages
+* Hygiene: Kill RandomPage in favour of ArticlePage
+* (62434) Ensure the languages button is present after an edit
+* Surface talk page on desktop version of skin
+* (62010) Update last modified time when a template or file changes in MFResourceLoaderModule
+* QA: Don't run this test on test2
+* QA: Don't run the nearby pages on test2
+* QA: Remove dot from Cucumber feature name
+* (62460) Don't squash images
+* Hygiene: Make language browser tests more generic
+* (61171) Add password reset link from desktop on mobile
+* (62294) Fix nearby pages
+* Docs: Update the README file
+* Hygiene: Group together main menu navigation tests
+* Remove unnecessary surface padding in VE
+* Remove display: none for link inspector in VE
+* Hygiene: Move I click the watch star to appropriate home
+* QA: Avoid VisualEditor timeout test failures on beta labs
+* Hygiene: Lift and shift editor code to correct step files
+* QA: Actually run KeepGoing tests
+* i18n: Make linkification advice less newbie-error-prone
+* Remove CSS for oojs-ui that is no longer needed
+* (36636) Make sure Minerva is registered as a valid skin
+* QA: Stop no JS site test running on Cloudbees
+* Hygiene: Kill that 'I am on the User login page' rule in QA
+* QA: Rewrite now missing rule
+* Story 1714: Revert back to using VisualEditors toolbar buttons
+* Update attribution
+* Wrap long text of action=mobileview sections
+* Hygiene: Remove mysterious @custom-browser tag
+* QA: Fix VisualEditor tests
+* (62389) Making 'Contents' in TOC localizable in mobile
+* QA: Assure login step visits the Main Page
+* QA: Fixed Selenium tests that fail at Cloudbees
+* Simplify a message
+* (62350) QA: Fixed Selenium tests that fail during login at Cloudbees
+* (61245) Include revId in MobileWebEditing schema
+* Hygiene: Remove unused function in QA tests
+* (62347) Don't load mediawiki.ui.button by default in Minerva
+* QA: Rewrite tests for main menu navigation and footer links
+* QA: Fix breaking tests
+* Hygiene: Updating getLeadSection() in application.js
+* Hygiene: Correct wording of URL check in QA tests
+* Hygiene: Consolidate steps for visiting pages
+* Hygiene: Wrap QA arguments in quotes to match other test coding conventions
+* Hygiene: Kill pointless external link test
+* QA: Kill Image resolves test
+* (61901) i18n: Tweaks
+* Hygiene: More selenium set-up instructions
+* Hygiene: Lint the cucumber tests
+* Fixing height of tool link
+* (62152) QA: Updated Ruby version from 2.1.0 to 2.1.1
+* Hygiene: Add a FIXME note to migrate to mw-ui-button
+* Kill WAP and dance on its grave
+* QA: Simplify article page
+* QA: Update tests for basic version of mobile site.
+* Hygiene: Remove redundant test
+* Hygiene: Make left navigation item selection more generic
+* Hygiene: Use inherited ArticlePage properties for search elements
+* Hygiene: Kill meaningless create_article.feature browser test
+* Hygiene: Rename QA file to use underscores
+* Hygiene: Remove need in QA tests for LogoutPage
+* QA: Actually ensure we test the watch star feature
+* (62120) Use fixed header emulation only on iPad, not iPhone
+* Fix internal domain handling to ensure various cookies get properly set
+* Hygiene: Consolidate page actions in QA tests
+* Hygiene: Use toast terminology
+* QA: Refactor tests involving drawer
+* Hygiene: Clarify purpose of page actions tests
+* (58566) Make special pages always have a route from desktop to mobile
+* (62034) Ensure a toast shows when uploading an invalid file
+* Hygiene: Some preliminary clean-up for new licensing messages
+* (61400) Ensure checkToggleView() fires at appropriate time
+* (61258) Display content in its intended directionality
+* (62069) Fix linking on Special:History
+* QA: Read in another language is a link not a button
+* Revert "Ensure checkToggleView() fires at appropriate time"
+* Be more specific in dependencies on mobile.newusers
+* (40678) Card 703: Promote lazy languages to stable
+* (62030) Regression: Make upload progress visible again
+* Regression: remove edit section links from action=parse&mobileformat output
+* Hygiene: Merge identical $wgMFEnableMinervaBetaFeature and $wgMFDesktopMinerva
+* (60537) Adds a deep link to a mobile app if so configured
+* Story 1685: Improve red links support in Beta
+* Hygiene: README for browser tests
+* Story 1629: AbuseFilter support in lead photo uploads
+* Story 1641: QA tests for diffs in stable
+* Fix redlink functionality (regression)
+* Story 1643: Final tweak on talk page styling
+* (61458) Using @custom-browser Cucumber tag instead of @user_agent
+* Make sure highlighted VE tools don't overlap bottom border
+* Update setUseFormatCookie() to use WebResponse::setcookie()
+* (61050) Change header message when saving in VE
+* Hygiene: Adding an explanation to MobileSpecialPageFeed abstract class
+* Improve saving in VE
+* Create a reusable AbuseFilterPanel
+* Use EditorApi in PhotoApi to add image to page
+* Refactor PhotoApi tests and error handling
+* (61240) Fix overlay header shifting on iOS in VE
+* Story 1628: Fix some of the mobile VE toolbar styles
+* Hygiene: Cleanup naming convention for special page RL modules
+* Add EditorApi#prependText
+* (61778) QA: Cloudbees Jenkins jobs are now created using Jenkins Job Builder
+* (61291) Fixing font size in beta
+* (60841) Remove height: auto !important styles for .content img
+* (61462) Ensure SkinAfterBottomScripts hook gets called
+* Adding missing bracket.
+* Finish comment
+* (61447) Add $wgMFCollapseSectionsByDefault config var to allow disabling auto section collapse
+* Re-enable browser tests on enwiki for search-specialpages.feature
+* (61400) Ensure checkToggleView() fires at appropriate time
+* (61559) Making back button flippable in RTL languages
+* Hygiene: Remove this.canHide from editor overlays
+* Fixing formatting of language button in stable
+* (61504) for description
+* (61232) Fix missing overlay header in RTL languages on Android 2.3
+* QA: Mark KeepGoing tests as WIP
+* Prevent search-specialpages.feature tests from running on enwiki
+* (61112) Handle situation when user registration is unknown
+* Remove unused variables
+* Hygiene: Use accept attribute in uploads file input tag
+* Hygiene: Remove a FIXME from PhotoUploaderButton
+* Prevent race condition in applying CSS styles for content
+* Clean up SkinMinerva to pass mwcodesniffer
+* (60916) Add zero-width non-joiner to fix Arabic ligature issue affecting Firefox users
+* Update QUnit tests to use sinon.js from core
+* Story 1643: Improve typography for overlays
+* Regression: Fix font size for search input
+* Fixing thumbnail styles on alpha and beta
+* Remove incorrect leading text mentioning Semantic...
+* (60923) Fix the header buttons on watchlist
+* (60851) Restore time bar
+* Story 1626: VE section editing scrolls to section
+* Story 1589: Use the same chrome on special pages as article pages
+* Put the Minerva-on-desktop Beta Feature under a feature flag
+* (60820) QA: Renamed mediawiki-selenium Ruby gem to mediawiki_selenium
+* At Greg's request, hide Minerva on desktop behind a feature flag
+* Story 1628: Put toolbar in header of VE overlay
+* QA: Tests for story 1628
+* Add unique route for VisualEditor
+* (60387) Deal with long words
+* (60993) Limit blocked test to logged in users.
+* Regression: Style nearby/language button correctly in alpha
+* QA: Fix page loading tests
+* Hygiene: Make 'make clean' clean up all existing documentation
+* QA: Maintenance and robustification
+* Hygiene: Wrap parameters in quotes
+* Fix button bar in alpha - stop it looking like a link
+* Hygiene: Rename editor-ve
+* Return languages link when only variants are available in beta
+* (60440) Fix variant URLs in beta JS language list
+* QA: Make the visit page rule more generic
+* Hygiene: Distinguish between wikitext and VE editor in browser tests
+* (60104) Make edit button permissions work on alpha lazy loaded pages
+* QA: Add browser tests for ajax pages
+* (60357) Make pointer arrow responsive
+* QA: Use long random string for a safe password
+* Use MediaWiki UI buttons in alpha
+* Making sure proper header styles are applied to talk page overlay
+* (60450) Sort notification list correctly.
+* (60251) Use DISPLAYTITLE when rendering pages
+* Story 1621: Fixing VE content area typography/design for mobile
+* (60186) Fixing mobile menu so that it displays correctly in no-JS and RTL
+* Update required MW version
+* (59932) Make KeepGoing/toast confirmation run when editing using VE
+* Story 1625: Drop the preview screen
+* update for pwd
+* (59827) Load Tablet styles if portrait or landscape meets threshold
+* QA: Do not create bogus pages like Selenium_Edit_Test in prod
+* (5993) 2
+* QA: KeepGoing browser tests
+* (60662) Fix VE error with latest VE master
+* (56085) Hygiene: cucumber.yml is no longer needed
+* (60567) Document $wgMFAnonymousEditing
+* QA: Allow browser tests in alpha mode
+* Story 1610: Promote already logged in message to stable
+* QA: Add browser tests for story 1610
+* Hygiene: Remove #mw-mf-page-left from menu link
+* Make search input font size consistent
+* Hygiene: Don't use content_wrapper
+* (36636) Beta Feature: Register mobile skin, offer users the ability to change it
+* QA: Add a short pause for notification to disappear
+* Story 1609: Push captcha refresh to stable
+* QA: Add tests for Story 1609 captcha refresh
+* QA: Properly wait for notifications elements
+* QA: test2wiki redirects to https from http, causing failure
+* (59624) Bump action=mobileview's cache version since last update
+* Make sure previous.overlay is defined before using it
+* slight change to messages
+* Maintenance for new messages
+* (60426) Renamed "login" to "log in" where it is used as a verb
+* Hygiene: Link JSDoc and StyleGuide in README / styleguide.MD
+* Hygiene: Share onSave code between VE and wikitext editors
+* Hygiene: Make KSS output to docs directory
+* (60065) Make header title in issues and talk overlays bold
+* Hygiene: Move Section to its own file.
+* Tools: Use CSS parameter to include generated CSS
+* Hygiene: Change how we manage importing LESS files
+* Hygiene: Add proper error reporting in lead image uploads
+* QA: Fix tests breaking due to I am on the home page step
+* QA: Make image clicking tests more generic
+* QA: Merge user_login and login pages
+* QA: Remove superfluous test
+* QA: Update README
+* Make sure font size in inputs is 16px
+* More typography updates from Moiz and Kaity (beta only)
+* (2) : Promote LeftNav Signup A/B test to Stable
+* (1) : Update leftNav Signup A/B test for new schema
+* Tools: Add SVGO, an SVG optimizer to pre-commit hook
+* Story 1462: Move new page header to stable
+* Story 1462: Move new notifications overlay to stable
+* Story 1462: Move new issues overlay to stable
+* Story 1462: Move new search overlay to stable
+* Story 1462: Move new languages overlay to stable
+* Story 1462: Move new uploads overlay to stable
+* Story 1462: Move new overlay code and new editor to stable
+* Remove production target for this test
+* Promote new diff to stable
+* (60351) Don't use formatted display titles to generate URIs
+* QA: Add tests for lead photo and uploads workflows
+* Minerva: Make preferences on Minerva consistent with desktop
+* (60136) Show localized/aliased namespace in edit header
+* Hygiene: Deprecate view (lowercase) module
+* (60066) Remove superfluous line on the main page when anonymous.
+* Regression: Don't load button and mainmenu styles twice in beta
+* (60171) Make sure table of contents re-initialises
+* Limit Table of Contents to beta/alpha and not on main page
+* Revert "Tools: Add SVGO, an SVG optimizer to pre-commit hook"
+* Story 1565: Tweak infobox styling for tablet
+* Removing CSS reset for border-spacing. Making table headers bold.
+* Add COPYING
+* (60048) Fix broken messages on account creation / login for watchlist
+* Adding revisions to BeforeSpecialMobileDiffDisplay hook params
+* Tools: Add SVGO, an SVG optimizer to pre-commit hook
+* Tools: Make sure compressed PNGs are readded to the commit
+* Tools: Make pre-commit fail if QUnit fails
+* Story 1522: Table of contents
+* (59873) Show 404 when accessing Special:MobileEditor directly
+* Beta: Move Nearby button on Nearby Pages
+* Hygiene: Fix dependencies on mw.user
+* Regression: fix hamburger and left menu icon alignment
+* Fix Nearby Pages in Desktop beta
+* Adding the Hamberger SVG file
+* Disable fixed header when keyboard is open in new overlays (iOS)
+* Regression: Fix editor preview
+* Adding SVG support for hamburger icon
+* Remove text extracts
+* Regression: fix notifications header in stable
+* Hi-res external link icons
+* A couple follow-up changes for the typography update.
+* Hygiene: Don't load View.js twice
+* Hygiene: Reshuffle content / page action overlays
+* Hygiene: Remove console.log statement from tests
+* Hygiene: Document defaults, template and templatePartials in View.js
+* Story 1581: Remove user intent from profiles
+* Story 1563: Typography updates for Tablet
+* Hygiene: Use RL generated CSS
+* Make sections aware of their subsections
+* Load the current page on startup
+* QA make tests for Create user error to run
+* Regression: Fix notifications overlay header
+* Regression: allow text wrapping outside .overlay-header-container
+* (45951) Add an "always expand all sections" option
+* Enable keyboard section toggling
+* (59836) Correctly identify lead section
+* (59810) Close overlay when invalid image selected
+* QA: Add a test that does not run in the build yet.
+* (57559) Add short-circuit in api.getTokens for tokens available in user.tokens
+* (56818) Remove page from last thanked
+* Story 1581: Design tweaks to user profile
+* [QA] WIP New version of Nearby test
+* (59848) Fixed broken concatenation causing diff breakage in mobile
+* (59878) Making lazy-loaded page DOM match the server rendered page DOM.
+* (51482) Add styling for fancycaptcha refresh link
+* Hygiene: Prevent random campaign interfering with A/B test
+* (59624) Hide languages link if no languages available
+* Story 1516: New A/B test for Sign-up Edit Guider
+* (59747) Fix KeepGoing Overlay - step 1
+* (44127) Generate JSDoc from Common folder
+* (59734) Fix header buttons with new header style [beta]
+* (51277) Warn user when attempting to switch modes without cookies
+* Reove obsolete getVersion() functions
+* (56083, 57597) QA: Updated Ruby, RubyGems and Firefox
+* Hygiene: Cleanup Special:MobileOptions markup
+* (59240) Add protection information to mobileview
+* Hide empty message after first upload
+* (59602) Restore the upload button to Special:Upload in stable
+* (56391) Fix main menu animation glitches
+* Make title in new header bold and centered
+* Hygiene: Break out ajax pages RL
+* (59009) Revert "Add short-curcuit in api.getTokens for tokens availble in user.tokens"
+* Story 882: Upload overlay back behaviour
+* Add browser back support to new languages overlay
+* Remove the header in LoadingOverlayNew
+* (58218) Remove spinner in media viewer only after the image is fully loaded
+* (57435, 58218) Fix image preview for tablets
+* (5917) 4
+* (58979) Don't rely (solely) on templates for geonotahack
+* Script: Add make mygerrit command
+* Regression: Fix add discussion button in talk overlay
+* Hygiene: Give feedback when topic added to talk page
+* Update wgPageName on refresh
+* Move GerritCommandLine to a new home
+* (59143) Ensure that EnableMobileModules hook always gets an OutputPage
+* (58945) Prevent preview and editor being shown at the same time
+* Fix refresh icon on nearby
+* Hygiene: Update LESS variable names
+* Update Talk overlay to use new overlays
+* Truncate title if too long in page preview overlay
+* (59140) Remove unnecessary confirm dialogs in stable editor
+* (57559) Add short-curcuit in api.getTokens for tokens availble in user.tokens
+* Add variable to disable WAP
+* (58988) Add support for language variants in LanguageOverlay
+* Hygiene: Making sure people don't confuse the two notification systems.
+* Update page previews and geonotahack to use new overlays
+* Hygiene: Kill SkinMobile
+* (56359) Show "already logged-in" notice at Special:UserLogin
+* Story 1512: Update the chrome header
+* i18n: Add message output format
+* i18n: consistency tweaks
+* i18n: consistency tweaks
+* (57329) Fix section hash url lost after reloading page in alpha
+* Hygiene: LESS file reorg (killing enwp.less)
+* Hygiene: Gerrit tool
+* Tablet detection support
+* Hygiene: Replace usage of SpecialPage::getTitle with getPageTitle
+* (58595) Use main page mode when appropriate for previews
+* (58978) Remove tap highlight on section headings
+* (40678) Use Special:MobileLanguages in beta/alpha
+* (40678) Add Special:MobileLanguages
+* Tool: Blow Kaldari's code review mind
+* Hygiene: Fix use of deprecated function
+* (52058) Redo the logic for initializing the editor button
+* Hygiene: use the same base HTML in normal editor and VE
+* Experiment: Disabling per-section tidy
+* Remove focus outlines on touch devices
+* Hygiene: clean up overlay header related code
+* (56209) Prevent accidental editor button clicks on toggling
+* Hygiene: remove unused check for jQuery
+* Hygiene: remove fallback for no header-loaded event
+* Story 1457: Promote micro.tap to beta
+* Regression: bring back the CC-BY-SA logo in overlays
+* (58359) Make sure we error out if token retrieval fails on save
+* (58927) Restore error messages on account creation page
+* Adding support for mobile flag in EchoInteraction logging schema
+* Docs: Document overlays with KSS
+* Hygiene: Cleanup cookie usage in MobileFrontend
+* Introduce OverlayManager
+* (58420) Improve mobileview tests isolation
+* Story 1465: Add a call to action on main pages
+* Regression: bring back fixed headers in overlays
+* KeepGoing tweaks
+* (56850) Don't display mobile view links on blacklisted pages
+* (54484) View source of old revisions
+* use send_keys instead of = to avoid corrupting file path
+* Regression: make editor work in beta and alpha
+* Hygiene: Fix VisualEditorOverlay and ZeroOverlay
+* Make Special:Preferences work on Minerva
+* Hygiene: kill applyCustomisations and template variable tweaking
+* Hygiene: Correct the hook parameter
+* Hygiene: Remove hookOptions
+* Hygiene: Fixing default table styling
+* (54475) Add intermediate Special:MobileEditor to catch users without JavaScript
+* Add editing and preview messages to header area
+* Rv accidental graffiti
+* Fix fatal for non-existent users on SpecialMobileContributions
+* Hygiene: Remove dependency between mobile.newusers and mobile.toggling
+* Hygiene: Separate toggling code into own module
+* Reset the issues array before we populate it
+* Add additional instructions for new editor overlay messages
+* Remove terrible FORCE INDEX that causes query timeouts
+* Regression: Don't attempt to load EditorOverlayBase in stable
+* load the page into cache before trying to use it
+* Introduce EditorOverlayBase
+* Watchlist no longer has special login/signin link
+* Messages changed for watchlist
+* Messages for uploads changed
+* Updates to notification messages
+* Fixing editor preview header
+* Fixing broken editor header
+* Don't remove .toc
+* (57597) QA: Replacing single quotes with double quotes
+* (56544) Hard refresh the main page on an edit.
+* (57333) QA: New browser test for "Nearby" page
+* (58304) Avoid using router for Issues overlay when we are in Editing overlay
+* Remove useless $out parameter from SkinTemplate::prepareQuickTemplate()
+* Startup message fix per MaxSem
+* (54795, 56437) Story 1405: Update messages
+* Override padding-top for overlay-bottom
+* (58246) Fix various annoyances in new search overlay
+* i18n: Using localized message on overlay header
+* Minor spacing fixes
+* (57979) i18n: RTL beta icon for nearby
+* i18n: add colon before page title
+* Hygiene: Document less files with kss, generate style guide
+* Hygiene: Introduce isAlphaGroupMember
+* Story 1483: Make overlay headers fixed
+* Story 1348: Inline diffs
+* Enable status bar for standalone apps
+* Allow to force stable with useformat=stable
+* Story 1448: New KeepGoing workflow for adding links
+* (58239) Prefix notifications with '/'
+* Regression: Ensure jQuery selector doesn't happen on hashes containing / symbol
+* (58050) Make sure Echo notifications appear in correct order
+* Hygiene: Make use of mw.user
+* (58219) Allow right clicking on images to avoid previews
+* Hygiene: Remove button.cancel in overlay header
+* (57155) Don't handle new pages for files
+* (57994) Add PageImages to action=mobileview
+* Return 404s on MobileHistory without a title
+* Hygiene: Add alias for Special:History
+* (57415) Only show geonotahack beta feature if nearby is enabled
+* (57710) Increase the gap between username and roles in diff
+* Kill some php notices when $wgDevelopmentWarnings = true;
+* Fix logout link code to use Userlogout instead of alias
+* new test for uploading an image
+* hygiene and appearance
+* Hygiene: Make use of M.isBetaGroupMember
+* (58102, 57091, 57094) Override language_urls template data to avoid hook abuse
+* Beta: Override Special:Contributions and Special:RecentChanges with mobile equivalents
+* Story 1402: A/B test showing edit guider after user creates an account
+* HYGIENE: Deprecating @baseFontSize
+* HYGIENE: Removing FIXME that has been fixed.
+* Add general errorHandling to VisualEditorOverlay
+* Prefetch wikitext on summary screen
+* Regression: Fix file uploads
+* VE editing on tablets in alpha
+* (57931) Don't create empty user descriptions for User Profile
+* More robust permission checking for User Profile
+* (57841, 56089) Moved information on how to run Selenium tests to a separate README file
+* Story 1401: Language Selector Overlay UI Redesign
+* Update styling in user profiles
+* (56837) Ensure title arg isn't set twice when creating 'mobile view' link
+* (57440) Introduce new mobileview parameter, onlyrequestedsections
+* (56089) Adding a readme file in /tests/browser
+* Rename Special:History to Special:MobileHistory
+* (57597) QA: prefer double-quoted strings in Ruby code
+* i18n: Add missing explicit GENDER parameter
+* Avoid HTTP redirects in links
+* Add margins when floating thumbnails in mobile view
+* Remove infobox experiment from MobileFrontend
+* Conditionally hack mw.Api
+* (57120) Add all logic for edit profile pages in JavaScript
+* Hack: Add hack so modules that use mw.Api can work on mobile in limited form
+* (57444) Don't show the existing page in list of results of nearby pages
+* i18n: Revert watchlist damage caused by two word tab name
+* (57402) Always remove headings if requested
+* (51482) Add refresh functionality on fancycaptcha for mobile
+* Story 1408: Resolve Edit Tutorial A/B Test
+* Limit pagelist overlay styles to search in stable
+* Hygiene: Basic mobileview test
+* (57087) Style errors on profile better
+* (56862) Make last modified bar green until page is >= 24 hours
+* Stop flash of last modified bar
+* (57089) Fix media viewer for images with unicode characters
+* Hygiene: Remove title exists check on Special:History
+* Only display right button list when needed in OverlayNew
+* BF: Hide nearby button on VE mode
+* Hygiene: Uncomment and fix upload progress event test for Api
+* (57377) Don't ask about abandoning edit if no changes present
+* (57434) Fix markup in PhotoUploadProgress.html
+* (57556) Don't set defaults using $.ajaxSetup()
+* (57446) Desktop: Add Vector specific Special:Nearby tweaks
+* Beta Feature: Remove mobile styling from mobile on desktop
+* Redirect action=history links to mobile view
+* password for Selenium_newuser is the same as for Selenium_user
+* update locator for tutorial overlay
+* Beta Feature: Switch from + to * in regex
+* (49959) Adding default styling for tables
+* (57404) Some fixes to the new overlay
+* Hygiene: Fix references
+* Fix fatal
+* Hygiene: Remove console.log statement
+* (57094) Hack around Wikibase extension bug
+* i18n: Tweak language of Nearby pages beta feature
+* article -> page
+* Story 1346: Edit overlay UI overhaul
+* (57192) Strengthen .tutorial selector
+* Story 1360: Add paging to Special:History and enable link
+* Story 1345: Redesign notifications overlay
+* Story 1347 2/2: Update this page has issues in beta
+* Hygiene: Cleanup enwp.less prepare to destroy it
+* Story 1347 1/2: Use new overlay for this page has issues
+* Cleanup this page has issues initialisation
+* Disable MobileWebInfobox's attemptLogEvent
+* (57257) Fix regression in HTML markup
+* Story 1099: Better search UX
+* (57208) Stop SHOUTING in special page headers
+* (57119) Use prefixed title in Special:History banner
+* (56861) Last modified bar tweaks
+* Separate stable and beta search JS code
+* i18n: Fix double-space
+* Whitespace cleanup
+* (51046) Added tags to all feature files
+* (56973) Don't run Router#checkRoutes externally
+* Set up GENDER for two messages
+* Don't load beta features code on mobile
+* Make child overlay hide the parent forcefully
+* Hygiene: Merge @contentMarginLeft/Right into @contentMargin
+* (57091) Hack: Hack around ULS issue
+* Hygiene: Remove unused code
+* Hygiene: Add make phplint to Makefile and pre commit hook
+* Hygiene: Remove unused LESS variables
+* Regression: Fix upload button on Special:Uploads
+* Hygiene: The big skin cleanup
+* QA: Attempt to get around bogus failure to type password
+* (56024) Center heading on Special:Userlogin and friends
+* Nearby pages: Don't change the background when open
+* Beta desktop feature: Nearby pages
+* (56390) i18n: Fix menu in RTL mode
+* Story 1218: Allow users to modify their UserProfile intro
+* (56825) Check Thank extension exists before rendering section on profile
+* Make collapsible sections accessible to screen reader users
+* Hygiene: Address toggle fix me
+* Hygiene: Remove userprofile.js
+* Story 1312 Card 1312: Style UserProfile page
+* Modernize the toggle tests
+* Fix mode for qunit tests on non-english wikis
+* Hygiene: Cleanup diff css
+* Hygiene: Remove autoless from Node.js dependencies
+* (56822) Don't throw fatals for non-existant usernames
+* Hygiene: Separate overlay code from mobile.stable.common
+* Avoid fatals in Special:History without parameter
+* Add a note for SpecialWatchlistQuery hook usage for Iec4aab87 in core
+* Added GENDER support to mobile-frontend-profile-last-edit
+* (56831) Unbreak token fetching for anonymous users
+* Hygiene: Make hook code readable
+* Update progressive action button in new overlays
+* Fix confirmation on upload cancel [beta]
+* Hygiene: Address todo in SkinMobileBeta
+* Make textarea in photo uploads autoresize
+* Story 1289: Promote image viewer overlay to beta
+* Regression: Revert Special:Search and friends styling to not show footer/header
+* text and target for 'Terms of use' link changed
+* Hygiene: Use getUrl rather than wikiGetlink
+* Upstream: Mobile skin code to Minerva skin code
+* Hygiene: Remove unused template variable in SkinMobile
+* Hygiene: Fix upstream skin mobile to skin minerva fail...
+* (56153) Make debug=true work again
+* (56704) : Allow mobileview api to handle section ranges
+* fix notification  overlay automation test
+* [Card 1366] Add page image to last edited information
+* Hygiene: Give more meaningful function names and add documentation
+* Card 1362: Show last edit on Special:UserProfile
+* Make Special:UserProfile look like an article page
+* Change SpecialMobileUserlogin::executeWhenAvailable() back to execute()
+* Enable photo upload progress bar 2/2
+* Enable photo upload progress bar 1/2
+* Begin Special:UserProfile overhaul
+* Story 1280 (2/2): Overhaul of image uploading overlay design
+* Story 1301: Measure infobox view time
+* Hygiene: Eliminate api fixmes from PageApi
+* Remove uploads blue pointer tutorial
+* Remove uploads CTA
+* Story 1280 (1/2): Overhaul of image uploading overlay design
+* Set wgArticleId correctly after a page is dynamically loaded
+* Regression: Error styling
+* Separate stable and beta upload overlay code
+* Introduce OverlayNew
+* (53902) Don't force WMF terms of use upon everyone
+* Make $wgMFDeviceWidthTablet and $wgMFDeviceWidthMobileSmall configurable
+* Hygiene: Button style cleanup on diff view
+* Hygiene: Remove unused LESS mixin
+* [Card 1328] Promote creation/red links to beta
+* Fix section level in README
+* Moved Selenium tests from tests/acceptance to tests/browser folder
+* Updated Ruby gems
+* (56262) Style main page last modified link correctly
+* Ensure that links are displayed
+* Hygiene: Remove unused LESS mixin
+* Hygiene: Address FIXME in PagePreviewOverlay
+* Hygiene: Consolidate ajax loading code
+* (56348) Fix page previews on nearby
+* Hygiene: Kill navigation.less
+* (56076) Hygiene: Throw JS exception on bad template file rather than PHP exception.
+* Removed unused gem from Gemfile
+* Make sure header is rendered before binding events to it
+* Design tweak: Fix horizontal padding for top bar (last edited)
+* Moving mobile notifications overlay to stable
+* Golden toast wins
+* Update mobile specialpages to use executeWhenAvailable()
+* Beta: Add Special:History
+* Don't change address bar in QUnit in Chrome
+* Add the phantom schema MobileWebCta
+* QA: Moving some common test steps into a 'common' file.
+* Docs: Updating some Selenium documentation for MobileFrontend
+* Collect mobileview API memcache hit statistics
+* Story 1283: Add infinite scroll to Special:Uploads in stable
+* (56154) Define wgMFMode as stable for desktop Nearby
+* Regression: Adjust thumbnail size in uploads overlay
+* Add template partials support to View
+* Regression: Fix Geonotahack
+* Deprecate $wgMFForceSecureLogin in favor of core setting
+* Hygiene: Address wgMFMode FIXME
+* Show loader whilst lazy loading geonotahack
+* Upstream: Use core's facilities for disabling TOC
+* Hygiene: Clean up overlays.less and pagelist.less
+* Hygiene: Standardise docs
+* i18n: Native digits on Minerva skin notification count
+* Load notifications overlay dynamically
+* Renamed tests/acceptance folder to tests/browser
+* Regression: Ensure last modified link renders consistently when dynamically loaded
+* (56027) Making last modified text darker so that it is readable.
+* Regression: Fix login logo
+* Update editing schema to support A/B test
+* Define EventLogging schemas in MobileFrontend
+* Regression: Fix "Start uploading" button on lead uploads tutorial
+* Add a warning about mobileformat changes
+* Set a 30 days cookie when someone edits on mobile
+* (53579) Moving shared code to mediawiki-selenium Ruby gem
+* (55539) Fix scripts/cucumber.sh
+* (55594) Ensure namespace is passed when history code loaded
+* Hygiene: Deprecate polyfills.js
+* Hygiene: Remove LESS comment
+* QA#1211 External links and images test
+* (55982) Fix incorrect value being passed in second argument of MobileContext::getMobileUrl()
+* Hygiene: Cleanup handling of stylesheets in skins
+* (54079) Add topics to the correct namespace
+* Make View's defaults inheritable and extendable
+* Alpha: Make hamburger menu slide in/out when opened
+* i18n: Remove dead message
+* (55586) Make sure auto expanded sections have contents
+* Story 1258: Move last modified to top of page
+* Story 1262: Adding user to last modified
+* Alpha: Turn random into a campaign
+* Story 1281: Promote section level editing tutorial A/B test to stable
+* Hide drawers underneath overlays
+* Regression: Fix images on uploads page
+* Fix image width in user profiles
+* (55903) Add missing module dependency
+* (53297) Pass query string parameters to mobile view url
+* Hygiene: factor out common code
+* i18n: Change "security text" to "confirmation code"
+* (53732) Make watchlist user icons consistent with rest of UI
+* Make sure KeepGoingDrawer gets set correctly
+* Fix wrong variable in a template
+* Hygiene: Clean up editor.js
+* Updated Ruby gems
+* Regression: Fix watchlist a-z
+* (55815) SpecialMobileWatchlist ignores rc_deleted
+* Regression: Fix the editor guider message for first time users
+* (54607) Make mobileformat not change the output structure
+* story 1264 (2/2): Add click tracking to nearby page and geo(nota)hack overlay
+* (52049) Story 1269: AbuseFilter support
+* Story 1264: Promote Geo(not a)Hack to beta
+* (50125) Don't let headings be HTML
+* Remove dead search button code
+* Hygiene: Add namespace helper function
+* Hygiene: Merge side bar menu in SkinMobile into SkinMinerva
+* Profile Tidy usage in mobileview
+* Fix bad PHP
+* Story 1030: Clean up CSS
+* Regression: Fix empty watchlist message styling
+* Hygiene: Remove dead code
+* Regression: talk icon in user profile
+* Hygiene: Address FIXME for title building in MobileWatchlist
+* Hygiene: Cleanup the progress bar FIXME
+* (55601) Fixing UserProfile for invalid usernames
+* Hygiene: Remove hardcoded removals from ExtractFormatter
+* Hygiene: Remove obsolete comment and todo
+* Story 1072: KeepGoing CTA
+* Add back button support to nearby overlay and preview overlays (geonotahack)
+* Adding a selenium test for the notifications overlay
+* (55537) Separate activity and thanks section when no uploaded image
+* (55596) Fixing Thank button styling
+* (55379) Don't try to watch special pages after a successful CTA
+* Make version compare to work with all deployment branches etc.
+* (55353) Tweak caption styling (yet another table hack)
+* Revert "Fail gracefully if people are using older MW"
+* Standardise (again) on MEDIAWIKI_URL
+* QA-Added option to keep browser option for debugging to match the browsertests project
+* i18n: Add GENDER to message to make things clearer for translators
+* Hygiene: Minor Resource Loader modules hygiene fix
+* Add support for back button in nested overlays
+* Hygiene: Separate out NearbyOverlay.js
+* (55490) Fix watchlist scripts dependency
+* Fail gracefully if people are using older MW
+* (53382) Rename watch event to watched
+* Update notifications icon
+* Story 1205: last thanked info on UserProfile
+* Updating Selenium instructions in ReadMe file
+* readding Gemfile.lock
+* Hygiene: Standardise on MEDIAWIKI_URL
+* (54851) Allow editors to know that undo is unsupported
+* Stop people from checking in the locked Gemfile
+* Tweak markup of edits and uploads text
+* Hygiene: Remove unused function, add annotations
+* Add convertNumber to localize last-modified digits
+* Story 1164: Promote animations to stable
+* Remove .no-margins body class
+* Hygiene: Fix commented out test in MFResourceLoaderModuleTest.php
+* (53048) Fix position fixed handling is iOS <= 4_2
+* Beta: Open sections by default in tablet view
+* (54900) Track anonymous clicks as well
+* (54857) Add global LESS variables shared with JavaScript to define resolutions
+* Hygiene: Allow MFResourceLoaderModule to handle templates and files
+* Fix file name in validatehtml.sh
+* Regression: Fix section toggling when URL contains a hash
+* Hygiene: Remove unused .show class from #content_wrapper
+* Hygiene: Remove main page special casing from alpha
+* (54608) Make lazy loaded pages containing h1s collapse on h1s
+* Revert "Regression: Hide the bullet points in the page list on nearby"
+* Removing bogus file from mobile.beta
+* QA#1286 Changed the assertion to from looking at the url to verifying that the mobileview link exists..tested on all environments and works correctly
+* QA#1286 using an article that is on beta, test2 and en.m so changing from San Francisco to Barack Obama
+* (54896) Fix EventLogging for profile and logout clicks
+* Hygiene: Remove history less file
+* Various improvements to mobile notifications...
+* Regression: Hide the bullet points in the page list on nearby
+* Factor out DB work out of UserProfile to separate UI from backend
+* Hygiene: Remove dead spinner CSS
+* Hygiene: Cleanup gallery css
+* (54895) Fix infobox styling on larger resolutions
+* Use .less files directly in MobileFrontend
+* Optimize count queries
+* Remove selectors now hidden in CSS or otherwise unneeded
+* Story 1030: Clean up toggle.less
+* Story 1030: Clean up footer.less
+* Story 1030: Clean up typography.less
+* Story 1030: Clean up common.less
+* Avoid using DB avoidErrors() method
+* Regression: Banners above chrome make hamburger and echo disappear
+* Hygiene: Fix Qunit test
+* Removing redundant div.magnify CSS selector
+* Stylistic changes to profile page
+* (54580) Ajax Page Loads: Don't drop the query string
+* Moving some content hiding from server-side to CSS
+* Story 1263: Add previous and next buttons to diff
+* Story 1263: Add click tracking to last modified link in beta
+* Add Profiling to Special:UserProfile
+* Regression: Don't close drawers when tapping on them
+* Only show smiley face in beta
+* Hygiene: Run make less
+* number of languages varies in each test env
+* Using language aware comma and native digits on MobileDiff
+* Add context to GetMobileUrl hook
+* Get rid of MobileContext::singleton() in skins
+* Migrating Mobile thanks into Thanks extension
+* Story 475: Add EventLogging to profile clicks
+* (54613) Add convertNumber to localize the distance
+* Story 1030: Clean up ui.less
+* Fix typo.
+* Story 475: Link user profile from left menu in beta
+* Don't display file name with underscores
+* Regression: Fix previews
+* (54243) Use mobile-friendly HTML for previews
+* (53378) Check latest revision in mobileview
+* QA#1251 Create a first time user to make sure that the tutorial displays for uploads
+* link text is not consistent, check for target instead, see comment
+* Add comments about localization of licensing strings.
+* Profile: Get correct file for profile page
+* Bug: Check user exists before trying to render it.
+* Regression: Don't enable toggling on main page
+* Fix fatals
+* (54414) Make language variant selection possible on all pages
+* Regression: Exit talk after a successful save of a new topic
+* Regression: Ensure cancel button label loads for talk overlay
+* Regression: Fix echo overlay for Echo in beta
+* Regression: Remove Echo button from Nearby page / anon page views
+* QA-id changed for Notification to secondary-button from user-button
+* Generate links for about and disclaimer correctly.
+* Profiles: Stop the heading from being a link
+* Beta: Link diff page to user profile
+* Use shorter text for some common licensing strings in the footer
+* Debug logging for latest PoolCounter weirdness
+* Alpha: Update title of page on a lazy load
+* (54238) Stop refreshing page on a hash change
+* Clean up login/create account form and captcha CSS
+* (52047) Story 1163: Mobile Captcha support for editing
+* (52857) Collapse on h1s when present
+* Update templates to contain new mobile edit links
+* (49440) Leave width of image rendering of infoboxes up to the template
+* (53342) Improve nearby error handling
+* Story 475: UserProfile special page (first pass)
+* (51586) Redirect to talk page when liquid threads enabled
+* QA: Add QA tests for I3f49cd50ed0c1778f8914b45cbc492fcc1775ca6
+* (54386) Regression:Restore the First time user uploads tutorial
+* Show proper button bar in editor on errors
+* Prevent overlay header from covering button bars
+* More HtmlFormatter removal fixes
+* Regression: Fix extraction of section heading in preview
+* Hide toasts and drawers when tapping in overlays
+* Regression: Ensure clicking main edit button opens lead section
+* Hygiene: Refactor page.js
+* Fixes for moving HtmlFormatter class to core
+* (54066) Un-hardcoding About and Disclaimer links
+* Remove b/c cookie code
+* Using our own copyright i18n message for mobile
+* (48730) Hygiene: Simplify formatter HTML
+* (53179) Redirect &action=edit&section=X to mobile editor
+* Cleanup after cookie name change
+* Remove tables from alpha
+* (48718) Load photo uploader dynamically
+* Fix the license URL
+* (48718) Load talk overlay dynamically
+* (53782, 48718) Load editor dynamically
+* Update cookie name in QA tests
+* These headers are now set by Zero.
+* Re-adding mobile-frontend-footer-license i18n message
+* Update coding conventions in README
+* QA#1214 content license changes mean I need to change the tests to look at a different license as part of the footer tests
+* Wrap README at 72 characters
+* split MobileTemplateWML into its own class
+* Fix: Make section edit A/B test work
+* (53595) Un-hardcode footer license message
+* (54172) Regression: Show human readable nearby error message
+* Ensure sections in stubs really look like open sections
+* (53944) Fix blockquote styling
+* Regression: Make sure all edit buttons are styled as edit buttons
+* Update README
+* Regression: Fix edit button in page actions
+* Restore logging, now on steroids
+* (54036) Regression: make image viewer full screen again
+* Migrating all use of M.pageApi.getPageUrl to mw.util.wikiGetlink
+* Override Skin::doEditSectionLink
+* Hygiene: Cleanup navigation.js
+* Reverting change I6deb26c1 since the core change hadn't been merged
+* Assert mobile mode in media viewer
+* Migrating all use of M.pageApi.getPageUrl to mw.util.wikiGetlink
+* Replace logging with a simple throw
+* Move fancy image removal from HtmlFormatter to MobileFormatter
+* Alpha: Enable page creation
+* Alpha: Temporarily remove Firefox from supported browser for history api
+* Final normalisation of WAP detection
+* Hygiene: Improve HTML output to avoid validation errors
+* Hygiene: Change image viewer route
+* Regression: Fix PageApi for non-existent pages
+* (53182) : Don't show new pages editor for newly created pages
+* Move red link removal to MobileFormatter
+* Bug: Fix stupid edit section cta bug
+* (53511) Introduce header-loaded event
+* (53511) Make navigation.js load at the top
+* Hygiene: Remove obsolete code from mf-toggle-dynamic.js
+* Hygiene: Don't add styles in two places
+* Hygiene: Remove unused code
+* Alpha: Remove inline style scrubbing
+* (53437) Hide nav boxes on small displays
+* (49647) : Take away History.js dependency
+* Hygiene: Use our own custom reset file
+* (53261) Don't show newbie tutorials after logging out
+* Hygiene: Add comma.. been bugging me for some time
+* Hygiene: Complete merging of special nearby code with nearby pages code
+* Story 1096: Beta section editing tutorial a/b test
+* Always output license footer in content language
+* Update pre-commit hook to use optipng+advdef not pngcrush
+* Remove unused ID whitelists
+* (53692) Do a PST during preview
+* Add media viewer [alpha]
+* (51586) Provide information about LQT status of a page
+* (53785) No need for raw resources now
+* Hide NagOverlay after checkboxes are checked
+* Fix loading spinner page actions buttons
+* Improve logging
+* Add M.tapEvent (temporarily)
+* Fix fatal in MobileNotifications
+* Add modified comment
+* Save stats on MobileOptions usage/fails
+* (53406) MobileFrontend Jenkins job template is deleted
+* (53579) Updated test configuration to the latest version
+* Fix license name "CC BY-SA"
+* If there is a primary link, make the entire notification clickable
+* use random page not main page for checks
+* (53086) Fix spaces after references
+* QA:#1136 en betalabs has the edit icon unlocked and en wiki has the edit icon locked. Changed betalabs to match and then fixed the automation scripts
+* Remove obsolete comment
+* put all the changes in one branch
+* Remove errant remove call that appears to be causing PHP warnings in prod
+* Support real position fixed on Android 2.
+* (53421) : Lock viewport on Android 2.*
+* Some tweaks to the notifications overlay
+* Giving people deserved credits
+* Story 1073: Enable campaigns on mobile
+* Story 834: Adding new notifications overlay
+* Hygiene: merge SpecialNearby with Nearby
+* Hygiene: Continue merging of Special:Nearby into generic component
+* Nearby bug fixes
+* (49033) Style pre and code tags properly
+* (53138) : Remove Liquid threads notification message from watchlist view
+* Introduce PageApi
+* Uncomment token check in Special:MobileOptions
+* Regression: Stop edit cta showing for things that are not editable
+* Log thank events from diff view
+* (52361, 53282) Don't use document.body
+* (53160) Desktop: Load pagelist styles on nearby
+* Regression: Don't add edit link cta to footer for anonymous users
+* (53103) : Apply RTL styling for upload button
+* (53102) : Simple fix for text indent in older browsers on cancel button
+* Story 1092: Show section-level edit login/signup CTA
+* Refactor removals configuration
+* Story 964: Move Echo to stable
+* (49029) Don't redirect everything with oldid to MobileDiff
+* Add an extra paranoid check to blacklisting of WAP devices from HTTPS
+* (53059) : Attach the message to the page
+* Rm header logging, several days worth of data should be enough
+* Fixes a bug with the display of the fixed userinfo panel
+* (53104) : Avoid showing last modified timestamp on non-existant pages
+* (53078) : Underscore characters in watchlist confirmation toast message
+* (51639) : Rephrase from 'All' to 'List'
+* Fix various Qunit tests
+* Hygiene: Kill FIXME
+* (50967) Fix MobileContext::getDesktopUrl()
+* Blacklist WAP phones from HTTPS
+* Fix doxygen
+* Add user_mobile AbuseFilter variable, to allow debugging mobile edits.
+* Regression: make section edit buttons work in alpha
+* Ensure uploads from user namespace go to correct page
+* Make toasts centered on Android browser
+* Hygiene: get rid of M.getApiUrl()
+* Make page heading markup uniform
+* Log Accept headers in conjunction with User-agent
+* (50952) : Show a link on talk page back to subject page
+* (51977) : Hide the talk icon when refreshing talk pages
+* Hygiene: Drop mf- prefix from less files
+* (52511) : Make editor load correct page for ajax loaded pages
+* (52361) : Fix reference weirdness in Opera Mobile
+* (53059) : Clarify editing message when unavailable
+* Fix tap event fallback
+* Don't render categories on special pages or if none
+* Hygiene: Use HTTPS links rather than HTTP ones in comments
+* (52515) : Correct reply message
+* Alpha talk: Stop blank replying
+* (22660) Render the list of categories as a normal subheading for logged in mobile users.
+* Story 986: Log watchlist interactions
+* (51924) : Special case main page history link
+* Story 920: Force upload CTA on beta
+* Improving styling of button on following pages:
+* Allow showing of other users uploads
+* Story 921: Adding editing tutorial
+* Hygiene: Start enforcing modules
+* (52207) : Support reCaptcha
+* (52856) : Fix the thank button
+* Change settings page heading
+* Regression: slightly wrong styling in uploads nag overlay
+* Make tapping more responsive
+* (51647) : Allow right clicking on nearby
+* Remove echo specific css to reflect html changes
+* (51697) : Support all types of talk
+* Removing related links hatnotes from preview output
+* change content_0 element to content to fix tests
+* Replace "article" with generic wording for content pages
+* Adding new lastmodified param to MobileView API
+* Don't pollute global scope
+* Enforcing consistent closure format ( M, $ )
+* Rm old hack that disables site and user JS
+* Fixing incorrect API param in M.history.retrievePage()
+* Kill use of MobileFormatter on special pages
+* (49948) Make Nearby listed on Special:SpecialPages
+* Send proper X-Vary-Options
+* Hygiene: Rewrite notification.js
+* Hygiene: Rewrite references
+* Hygiene: Make PhotoUploadProgress a Drawer
+* Adding 'thank' link to MobileDiff view
+* Make left nav menu slightly wider
+* Show last line of text in editor when guider present
+* (52047, 52049) Show error message on CAPTCHAs and extension errors
+* Simplify opt-in cookies
+* Revert "Fix: Tag mobile edits"
+* Re-enable mobile edit tagging
+* Get rid of $wgExtMobileFrontend
+* Hygiene: Make it clearer where mobilediff code runs
+* Headers refactoring
+* Forgot to tell the test to visit a page, Jenkins builds need this
+* (46893) QA: Remove page-object gem deprecation warnings
+* Regression: After refresh make sure sections can be refreshed
+* Fix: Tag mobile edits
+* Obey the schema
+* (5107) 8
+* (51994) Increasing timestamp font size on MobileDiff page
+* Disable file input during upload
+* Blacklist editing on older phones
+* Regression: Fix nearby refresh button
+* (51789) Fix CentralAuth logins
+* Story 920: Make upload tutorial screen have an upload and cancel button
+* (51894) Licensing fix per Erik
+* (51840) : removeChild() on a non-object in HtmlFormatter line 256
+* (51414) Enable login for older phones
+* (51735) Fix variants in language overlay
+* Hygiene: Rename mf-cleanuptemplates to issues
+* Hygiene: Package up language modules
+* Hygiene: Package up search modules into directory
+* Hygiene: Rename css to be consistent with uploads directory
+* Hygiene: Drop mf- prefix on all common JavaScript
+* Hygiene: Rename mf-view.js to View.js
+* Hygiene: Remove dead css
+* Hygiene: Remove dead test
+* Hygiene: Remove another unnecessary closure
+* Minor cleanup: unused vars, annotations
+* Hygiene: Remove M.prefix
+* Remove unnecessary closure
+* Hygiene: Break the handshake
+* Add event binding in initialize for PhotoUploaderPageActionButton
+* SkinMobile shouldn't call itself Minerva
+* (51414) Hide upload and edit for non JavaScript users
+* (51597) Do not leave a gap on stub pages
+* Enable anonymous photo upload cta by default
+* Stories 902, 903: Promoting pageactions (including editing) to stable
+* (51579) Hide the user button on the login screen
+* Hygiene: Remove dead css
+* Regression: Center login button in drawer
+* (51061) Update to latest schema
+* Editing: Make sure lists are styled in preview
+* Rename the horrible overlay class to something more meaningful
+* (51627, 51627) : Fix return to link in Cta drawers to include namespace
+* (51480, 51480) : Add placeholder text to textarea
+* Apply page blacklisting only when choosing a skin
+* Story 920: Show uploads tutorial after following anon cta
+* Fix position-fixed workaround for older devices in overlays
+* Reuse jQuery vars
+* A hack for the editor on Android 2.x
+* (51377) Sigh.
+* Remove some removals
+* (51458, 51458) : Allow watching outside main namespace
+* Fix license image alignment in editor and uploads
+* Disable animations on Android 2.x
+* Add returnToQuery to editor cta
+* Scope animations-related workaround inside .animations
+* (48917) : Fix extracts
+* Remove unnecessary RTL CSS rule
+* Story 980: Use pencil icon for section editing
+* QA: Correct the acceptance tests for main page
+* Make editor button work on Android 2.x
+* Simplify WAPness detection
+* (51261) Story 805: Move Left Nav grouping to Stable
+* (51261) Stop double escaping wiki name
+* Avoid adding duplicate styles on watchlist and nearby
+* Story 931: Editing guider text
+* (51052, 51052) : Show non-existent pages in watchlist
+* Cleanup .loading (spinner) CSS
+* (51209) Retain editor position when going back from the preview
+* Updated Cucumber Ruby gem
+* (50136) : Allow editing of things other than wikitext
+* Remove dead code in editor overlay
+* Hygiene: Use consistent upload module naming
+* Reorg: Rearrange upload code
+* Updated Ruby and Ruby gems
+* (50145) Give EventLogging total control of whether to include itself on mobile
+* Fixed path to file specifying Ruby version
+* (46581) Fix regexp error in prop=extracts
+* (51067) Fix jumping bottom bar in editor on Android
+* (50699) : Remove the logged in toast notification
+* (51069) Cleaning up some old bogus CSS
+* Rm special casing for Zero on main page
+* Show special edit messages on significant landmark events.
+* QA: Update README
+* Expose DOM to zero.
+* Fix QUnit tests in Firefox
+* Regression: Deal with cleanup template inconsistencies
+* (50701) : Add cursor pointer
+* Makefile: Add make cucumber command
+* Prevent cutting off license image
+* Make photo upload overlay look consistent with the editor
+* Remove redundant CSS rules
+* Story 839: Add preview header (follow-up)
+* (51078) : Correct anonymous watchlist url
+* Remove CSS rules for #mw-mf-header
+* Provide a higher resolution AJAX spinner
+* Add educational prefix to all less files
+* Remove device specific stylesheets
+* Quick hack to remove now useless device modules
+* Small fixes to page actions
+* Fix JS errors reported by jshint 2.1.4
+* Regression: Correct styling of the talk button
+* Inform users why certain functions are not enabled
+* Fix talk overlay button
+* Fix text being cut off at the bottom of inline buttons
+* Make editor license links open in separate tabs
+* Style all the inputs and textareas in the same way
+* Story 839: Save from preview in editor
+* Story 832: Show icons when not available / add new assets
+* name scenarios
+* Output unchanged main page instead of nothing if no special cased ids
+* Remove deleted messages from Resources.php
+* Automation tests for Mingle Stories#976 and #977 - Must be logged in to use Watchlist and Uploads
+* (50680, 50680) : Use mouseup rather than keyup to open search overlay
+* Regression: Correctly use extend
+* Set padding on header, to avoid collision with collapse control
+* Tweaks to cleanup templates
+* Fix jumping watchstar spinner
+* (50761) Fix nearby desktop view
+* Drop iphone device stylesheet support
+* Remove -o-box-sizing from .box-sizing LESS mixin
+* Remove kindle stylesheet
+* Remove .border-radius LESS mixin and use border-radius
+* Remove blackberry stylesheet
+* Device cleanup
+* Show notifications (toasts) when overlay is open
+* Only allow h2's to have an edit link
+* (43271) : Always enable section collapsing html
+* (50681, 50681) : Don't duplicate the watchlist message when empty
+* Hygiene: Cleanup the html for the cleanup templates
+* Simplify .animation LESS mixin
+* (46581) Adding the page to the debugging output
+* Remove -ms-linear-gradient from .vertical-gradient LESS mixin
+* Blindly remove simple, opera mini and opera mobile stylesheets
+* Remove -moz-background-size from .background-size LESS mixin
+* Remove .boxshadow LESS mixin
+* Fix delay property of notification transition (CSS)
+* Prevent table of contents leaking into mobile
+* (50703) Add missing i18n message for user notificaitons tooltip
+* (50618) Fixing double escaping of searchbox placeholders.
+* Regression: fix background glitch in left nav
+* (50621) Fixes to animations (transitions) and notifications
+* Alpha: Allow commenting on talk topics
+* (50410) Regression: re-enable new page creation
+* Bug alpha: Ensure heading is correct on nearby overlay
+* Allow editing on special cased main page
+* (50397) Fixing link to login page so that it returns users to upload page
+* Remove superfluous GetMobileNotice call.
+* Add missing / in filenames
+* Regression: fix a JS error on upload with a nag
+* (50571) : Make plural work for mobile-frontend-diffview-editcount
+* (50212) : Enable talk on project pages
+* (50255) : Talk page shows a talk button
+* Card 856: Allow to disable mobile view on some pages
+* fixed partial search test
+* Remove global fixtures
+* Ensure the toast lasts for at least a second
+* Fix qunit tests
+* Regression: Fix special pages on alpha
+* Alpha Regression: Fix the main page
+* Alpha: Surface nearby articles
+* Introduce NearbyApi to make nearby code more generic and reusable
+* Remove #mw-mf-page-left id
+* Minor tweaks to PHP ResourceLoader modules
+* (49455) Story 831: Improve left nav
+* Restore edit section links after a successful save
+* (50301) Story 883: Remove previous and next buttons from editor
+* Revert "Card 856: Allow to disable mobile view on some pages"
+* Allow running of qunit in debug mode
+* (50205) : Avoid flashing of section content
+* (50201) Evict demons from uploads tutorial on iOS
+* Alpha Regression: Fix search
+* Story 867: Update assets to reflect new article action bar (2/2)
+* Remove unused .full-screen-search CSS rules
+* Remove useless HTML comments
+* Remove support for api.php?action=parse&mobileformat=wml
+* Sandbox alpha and beta skins from stable
+* Story 836: Promote language search to stable
+* Correct left padding on headers and footers in 'list' overlays
+* Rewrite language overlay
+* (49208) : Make sure the edit link chooses the correct section
+* Story 884: Add CTA for edit icon
+* Introduce Class
+* Story 867: Update copy for empty watchlist (1/2)
+* Card 856: Allow to disable mobile view on some pages
+* Enable animations in nag overlay in stable
+* Tweak variable description
+* Regression: show uploads tutorial for users with no uploads
+* Register sinon as a true global make qunit work without debug=true
+* Update CSS file
+* (50133) : Allow Nearby to be configured to different namespaces
+* Reduce blurry text effect when animations are enabled on Chrome
+* (49209) Hide a drawer when another drawer is shown
+* (49771) : Prevent zooming on iOS
+* Make info boxes float to the right on a tablet display
+* Accept Linux font alternatives when Helvetica not available
+* Reinstate WML support for Wikipedia Zero.
+* Don't register module called "mobile.device."
+* Prevent uploading of anything other than images
+* (49215) Open first section in editor when lead section empty
+* (49544, 49544) : Allow margin of error in filename generation
+* Don't allow consecutive apostrophes
+* When receive bad file name errors print filename in error response
+* Don't try to scroll the page after loading to hide URL bar
+* Story 837: Promote copyvio nag to stable
+* Bug: Hijack all links on the first load
+* Update javascript template to reflect changes in PHP
+* Story 434: Add infinite scroll to uploads dashboard
+* (49780) : Remove edit from read another language
+* Hygiene: Remove unnecessary suggestions-result class
+* Story 488: Add pageimages to search results (beta)
+* Don't register device modules if not needed
+* Revert "Force index to avoid filesort in feed query"
+* Feature: Setting User Agents
+* Updated Ruby gems
+* Hygiene: Rm unused vars
+* Hygiene: Remove unused data parameter
+* Separate page-actions from #content
+* Refactor template code
+* Don't load Hogan twice
+* Rewrite parts of the uploads dashboard code
+* Clean up uploads dashboard code
+* Fix navigate to link in Android
+* Regression: hide button bar in editor when keyboard visible
+* Regression: Don't attempt to hijack links in special pages
+* Regression: Make diff user info box position fixed again
+* Make editing work on pages other than main namespace
+* Merge SkinMobileBase into SkinMobile
+* Fixed link to mobile homepage
+* (49279, 49279) : Style upload button correctly in Opera and Firefox
+* Remove Zero banner cruft
+* Make editor disappear after a successful save
+* Spike 820: Reduce API errors related to anonymous tokens (hopefully)
+* Center left and right arrows on uploads first time user tutorial
+* Uploads page: remove out the progress indicator
+* New assets for first time user upload tutorial
+* Only add Uploads page in mobile mode
+* Big photo reorganisation
+* Remove scrollTo call
+* Ability to get partial result from the API
+* (49557) : Fix talk topic add overlay
+* Revert "New hook, MobileSkinCreated"
+* Use 'agora' styling for button on settings page
+* Uploads tutorial CSS fixes
+* Story 774: Allow people to navigate to nearby places
+* Split MobileFormatter to separate classes for HTML and WML
+* (49276) : Disable accidental clicking of links in preview
+* Code cleanup: Merge mixins, use vertical-gradient
+* Story 692: Support for closing overlays with back button
+* Enable page creation and editing in all namespaces (with proper perms)
+* (49462) : Position fixed cleanup
+* (49277) : Make wgIsPageEditable more accurate
+* EventEmitter tweaks
+* New hook, MobileSkinCreated
+* (49218) : Hide errors in preview output
+* Fix spacing
+* Allow other projects to define their own mobile skin
+* (49539) : Don't load stable modules on nearby page
+* (48793) : CSS issue on watchlist feed view
+* Minor cleanup to use ->inNamespace()
+* (48917) : Fix extracts" - breaks tests
+* Completely remove the $wgMFCustomLogos['logo'] stuff
+* Story 790: Standardise use of words
+* (48917, 48917) : Fix extracts
+* Remove custom caching headers
+* (48760) : Remove br tags from diffs
+* Move some code out of ExtMobileFrontend
+* (49534) : Call to a member function saveXML() on a non-object
+* Warn about exlimit being adjusted down
+* (48792) : Left align edits text for large numbers
+* Remove unused css/ module
+* Add FIXME to barely used piece of CSS
+* Replace MakeGlobalVariablesScript hook with skin code
+* Move language selector specific css to separate file
+* (49463) : "Mobile view" link should be protocol-relative
+* Beta: Make panels of uploads tutorial slide in and out
+* Remove #mw-mf-sq css rules
+* Story 789: First time user upload tutorial revamp
+* Move overlay css to overlays.less
+* Move talk add button to talk.less
+* Standardise on 'plumbing'
+* Cleanup mf-common.less
+* Add javascript specific stylesheet
+* Allow configuration of range in Special:Nearby
+* (42660) Link history page for displayed article, not title from URL.
+* Remove unnecessary typography rule
+* Nag overlay fixes
+* Remove M.message()
+* Fix QUnit.asyncTest() and remove unused test code
+* Commits before (b5ac34155163a8aafcb577252e033121002b841c) when versioning stopped

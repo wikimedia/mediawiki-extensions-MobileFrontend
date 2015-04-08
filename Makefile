@@ -98,3 +98,6 @@ installhooks:				## Install the pre-commit and pre-review Git hooks
 # user must create W3CValidationTest wiki page with text 'Hello world' for this to work
 validatehtml:				## Validates the HTML output of the specified page with the W3C validator. Usage: make validatehtml <title>
 	@dev-scripts/validatehtml.sh
+
+releasenotes:
+	@dev-scripts/release_notes $(from) $(to)

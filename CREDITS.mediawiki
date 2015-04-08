@@ -1,0 +1,15 @@
+=Credits=
+
+== Developers (alphabetically) ==
+* Arthur Richards
+* Florian Schmidt
+* Jon Robson
+* Juliusz Gonera
+* Max Semenik
+* Patrick Reilly
+* Rob Moen
+* Ryan Kaldari
+* Sam Smith
+
+== Translators ==
+* [https://translatewiki.net/wiki/Translating:MediaWiki/Credits Translators on translatewiki.net and others]

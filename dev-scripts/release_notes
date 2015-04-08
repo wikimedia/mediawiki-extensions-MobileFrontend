@@ -1,0 +1,179 @@
+#!/usr/bin/env php
+<?php
+// Taken from https://github.com/wikimedia/mediawiki-tools-release
+/**
+ * Class ExecException
+ */
+class ExecException extends Exception {}
+
+/**
+ * Validation on the command line arguments
+ * @param array $argv
+ * @return array
+ */
+function get_args( $argv ) {
+	if ( count( $argv ) == 3 ) {
+		return array( $argv[1], $argv[2] );
+	} else {
+		print "usage: $argv[0] oldbranch newbranch\n";
+		print "  example: $argv[0] gerrit/wmf/1.20wmf2 gerrit/wmf/1.20wmf3\n";
+		exit(1);
+	}
+}
+
+/**
+ * Wrapper around exec to throw more useful exception when
+ * things go sideways
+ * @param string $command
+ * @throws ExecException
+ * @return array
+ */
+function capture_output( $command ) {
+	$cwd = getcwd();
+	$output = array();
+	exec( $command, $output, $status );
+	if( $status != 0 ) {
+		throw new ExecException( "Error in command: $command\nDirectory: $cwd\nStatus: $status\nOutput: "
+			. print_r( $output) . "\n"
+		);
+	}
+	return $output;
+}
+
+/**
+ * Fetch an array of the change's subject for a given path, along with a bug number.
+ * @param string $oldRev
+ * @param string $newRev
+ * @throws Exception
+ * @return array
+ */
+function useful_git_log( $oldRev, $newRev ) {
+	$gitDir = getcwd();
+	$myDir = $gitDir;
+
+	if( !is_dir( $myDir ) ) {
+		return "";
+	}
+	chdir( $myDir );
+	$retval = full_git_log_as_array( $oldRev, $newRev );
+	$gitLog = array();
+	foreach( $retval as $commit ) {
+		$lines = array_filter( explode( "\n", $commit['message'] ) );
+		$first = true;
+		$subject = '';
+		$bugs = array();
+		foreach( $lines as $line ) {
+			if( $first ) {
+				$first = false;
+				if( preg_match( "/\(?(Bug|RT)\s*(T?\d+)\)?\s*(.+)/i", $line, $issueRes ) ) {
+					$bugs[] = $issueRes[2];
+					$subject = $issueRes[3];
+				} else {
+					$subject = $line;
+				}
+			} elseif( preg_match( "/(Bug|RT):\s*(T?\d+)/i", $line, $issueRes ) ) {
+				$bugs[] = $issueRes[2];
+			}
+		}
+		// Trim down to the first bit
+		$subject = trim( ltrim( trim( $subject ), '-' ) );
+		$subject = preg_replace( "/    .+$/i", '', $subject );
+		$gitLog[] = array(
+			'hash' => substr( $commit['hash'], 1, 8 ),
+			'subject' => $subject,
+			'bugs' => $bugs,
+		);
+	}
+	chdir( $gitDir );
+	return $gitLog;
+}
+
+/**
+ * @param string $oldRev
+ * @param string $newRev
+ * @return array
+ * @throws Exception
+ */
+function full_git_log_as_array( $oldRev, $newRev ) {
+	$command = "git log --format=medium --cherry-pick --right-only --no-merges $oldRev..$newRev";
+	try {
+		$output = capture_output( $command );
+	} catch( ExecException $e ) {
+		throw new Exception( "Problem with command: $command\n"
+			. "******** LIKELY CAUSE: you need to run 'git fetch --all' in a sub directory"
+		);
+	}
+	$history = array();
+	foreach( $output as $line ) {
+		if( strpos( $line, 'commit ' ) === 0 ) {
+			if( !empty( $commit ) ) {
+				array_push( $history, $commit );
+				unset( $commit );
+			}
+			$commit['hash']   = substr( $line, strlen( 'commit' ) );
+			continue;
+		} elseif( strpos( $line, 'Author' ) === 0 || strpos( $line, 'Date' ) === 0 ) {
+			continue;
+		} else {
+			if( isset( $commit['message'] ) ) {
+				$commit['message'] .= "\n" . $line;
+			} else {
+				$commit['message'] = $line;
+			}
+			continue;
+		}
+	}
+	return $history;
+}
+
+/**
+ * filter_git_output - perform any extra functions needed prior to posting to
+ *  a wiki page (sanitization, making obvious removals, linking bugs, etc)
+ * @param array $logoutput
+ * @return string
+ */
+function filter_git_output( $logoutput ) {
+	$retval = '';
+	if ( !$logoutput ) {
+		return $retval;
+	}
+
+	$skipLines = array(
+		'Localisation updates from',
+		'COMMITMSG', // Fix for escaping fail leaving a commit summary of $COMMITMSG
+		'Add (\.gitreview and )?\.gitignore',
+		'Creating new WMF',
+		'Commit of various live hacks', // Our catchall patch for live hacky stuff
+		'Applied patches to new WMF',
+		'Bump .*? for deployment',
+	);
+	foreach ( $logoutput as $record ) {
+		foreach( $skipLines as $skip ) {
+			if ( preg_match( '/' . $skip . '/i', $record['subject'] ) ) {
+				continue 2;
+			}
+		}
+
+		$retval .= '* ';
+		if ( $record['bugs'] ) {
+			$retval .= '(' . implode( ', ', $record['bugs'] ) . ') ';
+		}
+		$retval .= $record['subject'];
+//		$retval .= " {{git|{$record['hash']}}}";
+		$retval .= "\n";
+	}
+	return $retval;
+}
+
+/**
+ * Main program flow
+ * Get changes for mobile frontend
+ * @param array $argv
+ */
+function main( $argv ) {
+	list( $oldbranch, $newbranch ) = get_args( $argv );
+	print filter_git_output( useful_git_log( $oldbranch, $newbranch ) );
+}
+
+main( $argv );
+
