@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_bfccdbc1",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-08T08:55:48Z",
+      "side": 1,
+      "message": "you\u0027re right, would be better :)",
+      "parentUuid": "6e7c4fa4_9faebfe1",
+      "revId": "c81ae95d686ac8e57416d0fef9194ad9d8e093c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_3f920ba3",
         "filename": "javascripts/modules/editor/EditorOverlayBase.js",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-08T08:42:39Z",
       "side": 1,
       "message": "Alternatively, you can adapt confirmCloseWindow, to listen for an additional \u0027regular close\u0027 event and present the confirm dialog for you. I\u0027m not against that, because I suspect that this logic might be something we would see more often in the future.",
+      "revId": "c81ae95d686ac8e57416d0fef9194ad9d8e093c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3fc0cb7e",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-08T08:55:48Z",
+      "side": 1,
+      "message": "you mean in core directly, yes? Sounds like a good idea :)",
+      "parentUuid": "6e7c4fa4_3f920ba3",
       "revId": "c81ae95d686ac8e57416d0fef9194ad9d8e093c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
