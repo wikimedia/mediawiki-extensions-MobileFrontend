@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d18f512d",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-08T00:28:09Z",
+      "side": 1,
+      "message": "this means that .35em from top and bottom are not clickable",
+      "revId": "466ff7af4cb2d87896f2a95fe501716ece4f78f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_119e2967",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-08T00:28:09Z",
+      "side": 1,
+      "message": "add \u0027display: block\u0027 too, otherwise the button is not clickable.",
+      "revId": "466ff7af4cb2d87896f2a95fe501716ece4f78f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
