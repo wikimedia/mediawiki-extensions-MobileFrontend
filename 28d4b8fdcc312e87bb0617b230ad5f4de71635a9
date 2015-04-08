@@ -16,6 +16,23 @@
       "revId": "28d4b8fdcc312e87bb0617b230ad5f4de71635a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_316fa529",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1009,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-08T00:42:04Z",
+      "side": 1,
+      "message": "Also, maybe change the module name to mobile.oouiwidgets.buttonWithSpinner?",
+      "revId": "28d4b8fdcc312e87bb0617b230ad5f4de71635a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
