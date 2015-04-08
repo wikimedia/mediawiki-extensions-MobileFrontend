@@ -31,7 +31,7 @@
 	 * @extends View
 	 */
 	BannerImage = View.extend( {
-		className: 'banner-image',
+		className: 'banner-image-container',
 
 		/**
 		 * @inheritdoc
@@ -42,12 +42,15 @@
 		initialize: function ( options ) {
 			this.repository = options.repository;
 
-			View.prototype.initialize.apply( this, options );
+			View.prototype.initialize.apply( this, arguments );
 		},
 		/**
 		 * @inheritdoc
 		 */
 		postRender: function () {
+			this.$imageEl = $( '<div class="banner-image"></div>' );
+			this.$el.append( this.$imageEl );
+
 			this.loadImage();
 		},
 
@@ -80,24 +83,26 @@
 		onImageLoaded: function ( image ) {
 			var self = this;
 
-			self.$el
+			self.$imageEl
 				.css( {
 					'background-image': 'url("' + image.src + '")'
 				} )
 				.show();
 
-			self.resizeFrame();
+			self.resizeContainer();
+
 			/**
 			 * @event loaded
 			 * Fired when image has loaded and been rendered in page.
 			 */
 			self.emit( 'loaded' );
+
 			if ( !self.hasLoadedOnce ) {
 				self.hasLoadedOnce = true;
 				M.on( 'resize', function () {
 					// Don't wait until the image that best fits the width of the window has loaded
 					// to resize the container.
-					self.resizeFrame();
+					self.resizeContainer();
 
 					self.loadImage();
 				} );
@@ -105,9 +110,9 @@
 		},
 
 		/**
-		 * Resize the frame to maintain the aspect ratio.
+		 * Resize the container to maintain the aspect ratio.
 		 */
-		resizeFrame: function () {
+		resizeContainer: function () {
 			this.$el
 				.css( {
 					// Max height is enforced with CSS
