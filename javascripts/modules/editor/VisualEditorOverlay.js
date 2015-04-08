@@ -11,6 +11,8 @@
 	 */
 	VisualEditorOverlay = EditorOverlayBase.extend( {
 		/** @inheritdoc **/
+		isBorderBox: false,
+		/** @inheritdoc **/
 		templatePartials: $.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )
 		} ),
@@ -45,8 +47,6 @@
 				skipPreview: false
 			} );
 			this.$continueBtn = self.$( '.continue' ).prop( 'disabled', true );
-			// FIXME: This should be done by manipulating className
-			this.$el.removeClass( 'view-border-box' );
 		},
 		/**
 		 * Destroy the existing VisualEditor target.
