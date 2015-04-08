@@ -16,6 +16,24 @@
       "revId": "b9b076933d934fc8330172a0af8f9222ae1d62d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bc6869b9",
+        "filename": "javascripts/modules/editor/EditorOverlayBase.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-08T05:34:45Z",
+      "side": 1,
+      "message": "seems to be a rebase problem, i can\u0027t remember adding this (and there is no reason why i should do that) :)",
+      "parentUuid": "6e7c4fa4_7168bdb8",
+      "revId": "b9b076933d934fc8330172a0af8f9222ae1d62d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
