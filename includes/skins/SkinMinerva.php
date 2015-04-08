@@ -361,7 +361,7 @@ class SkinMinerva extends SkinTemplate {
 						array(
 							'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
 							'href' => $this->getPersonalUrl( $donateTitle ),
-							'class' => MobileUI::iconClass( 'uploads', 'before' ),
+							'class' => MobileUI::iconClass( 'uploads', 'before', 'menu-item-upload' ),
 							'data-event-name' => 'uploads',
 						),
 					),
