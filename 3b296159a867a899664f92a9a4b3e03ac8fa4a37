@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b1d5f521",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-04-08T00:21:48Z",
+      "side": 1,
+      "message": "Let\u0027s keep all the unconditional var setting in the $vars +\u003d array() block above, otherwise it is confusing why some are there and some aren\u0027t. You can move the $wgMFUploadLicense line above it.",
+      "revId": "3b296159a867a899664f92a9a4b3e03ac8fa4a37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
