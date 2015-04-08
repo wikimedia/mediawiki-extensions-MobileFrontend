@@ -69,6 +69,24 @@
       "revId": "f08c5d9cdea29571dc0bdc7724da3a58171efbed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c203fc0e",
+        "filename": "javascripts/modules/editor/EditorOverlayCodeMirror.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-08T11:15:06Z",
+      "side": 1,
+      "message": "No, this doesn\u0027t work, the change event is a custom event fired from the codeMirror instance: http://codemirror.net/doc/manual.html#event_change",
+      "parentUuid": "6e7c4fa4_1c05ddc4",
+      "revId": "f08c5d9cdea29571dc0bdc7724da3a58171efbed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
