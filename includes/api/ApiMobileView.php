@@ -73,6 +73,7 @@ class ApiMobileView extends ApiBase {
 		}
 
 		$title = $this->makeTitle( $params['page'] );
+		$this->addXAnalyticsItem( 'ns', (string)$title->getNamespace() );
 		// See whether the actual page (or if enabled, the redirect target) is the main page
 		$this->mainPage = $this->isMainPage( $title );
 		if ( $this->mainPage && $this->noHeadings ) {
@@ -109,6 +110,7 @@ class ApiMobileView extends ApiBase {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'id' => $data['id'] )
 			);
+			$this->addXAnalyticsItem( 'page_id', (string)$data['id'] );
 		}
 		if ( isset( $prop['languagecount'] ) && isset( $data['languagecount'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
@@ -245,6 +247,19 @@ class ApiMobileView extends ApiBase {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'continue-offset' => $params['offset'] + $params['maxlen'] )
 			);
+		}
+	}
+
+	/**
+	 * Small wrapper around XAnalytics extension
+	 *
+	 * @see XAnalytics::addItem
+	 * @param string $name
+	 * @param string $value
+	 */
+	private function addXAnalyticsItem( $name, $value ) {
+		if ( is_callable( 'XAnalytics::addItem' ) ) {
+			XAnalytics::addItem( $name, $value );
 		}
 	}
 
