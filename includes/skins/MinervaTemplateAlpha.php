@@ -91,7 +91,7 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 
 		if ( $this->isSpecialMobileMenuPage ) {
 			$args += array(
-				'mobileMenuClass' => 'js-only back ' . MobileUI::iconClass( 'back' ),
+				'mobileMenuClass' => 'js-only back ' . MobileUI::iconClass( 'back-mobilemenu' ),
 				'mobileMenuLink' => '#back',
 				'mobileMenuTitle' => wfMessage( 'mobile-frontend-main-menu-back' )->parse(),
 				'searchForm' => $this->makeSearchForm( $data ),

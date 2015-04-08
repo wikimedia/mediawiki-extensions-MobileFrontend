@@ -1,3 +1,5 @@
+@import "mediawiki.mixins";
+
 body.navigation-full-screen {
 	#mw-mf-page-left {
 		// !important needed to override media query rules set in mainmenu.less
@@ -19,7 +21,10 @@ body.navigation-full-screen {
 			.search {
 				border: none;
 				box-shadow: none;
-				padding: 0;
+				padding: 0 0 0 25px;
+				.background-image-svg( 'images/magnifying-glass-gray.svg', '' );
+				background-repeat: no-repeat;
+				height: 22px;
 
 				// Overwrite mw-ui-input style
 				// Placeholder text styling must be set individually for each browser @winter

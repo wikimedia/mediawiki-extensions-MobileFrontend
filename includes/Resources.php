@@ -144,6 +144,14 @@ $wgMinervaStyleModules = array(
 			'edit-enabled' => 'images/icons/beta/edit.svg',
 		),
 	),
+	'skins.minerva.alpha.images' => $wgMFResourceFileModuleBoilerplate + array(
+			'class' => 'ResourceLoaderImageModule',
+			'selector' => '.mw-ui-icon-{name}:before',
+			'images' => array(
+				// Special:MobileMenu-specific back icon
+				'back-mobilemenu' => 'images/icons/alpha/back-ltr.svg',
+			),
+		),
 );
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
