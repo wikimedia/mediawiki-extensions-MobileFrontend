@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_eed05fce",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 1098,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-04-08T18:43:29Z",
+      "side": 1,
+      "message": "$link needs to be changed to $license here.",
+      "revId": "acb59e2e1faf83271f092c5b593cd5bd247964b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
