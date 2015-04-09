@@ -16,6 +16,24 @@
       "revId": "7d65f0fd2e9168a0dbef25f4f8d5674b09d83cc3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4134b8f7",
+        "filename": "less/icons.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-09T21:12:46Z",
+      "side": 1,
+      "message": "I see what you mean, however that\u0027s one of the reasons why I suggested you to split that patch up. You\u0027re not only making your life harder, you\u0027re making the reviewing difficult too.",
+      "parentUuid": "6e7c4fa4_41b7d884",
+      "revId": "7d65f0fd2e9168a0dbef25f4f8d5674b09d83cc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
