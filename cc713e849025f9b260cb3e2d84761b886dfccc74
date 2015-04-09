@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1b3dd129",
+        "filename": "javascripts/context.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-09T18:11:50Z",
+      "side": 1,
+      "message": "that\u0027s a _really_ bad idea :D",
+      "revId": "cc713e849025f9b260cb3e2d84761b886dfccc74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
