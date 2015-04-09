@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d07e5815",
+        "filename": "javascripts/modules.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-09T17:30:50Z",
+      "side": 1,
+      "message": "typo!",
+      "revId": "84e7ece15524d6fa87b8e6abbd9e6189dd686458",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
