@@ -15,7 +15,7 @@
 		Skin = M.require( 'Skin' );
 
 	skin = new Skin( {
-		el: '#mw-mf-viewport',
+		el: 'body',
 		tabletModules: mw.config.get( 'skin' ) === 'minerva' ? [ 'tablet.scripts' ] : [],
 		page: getCurrentPage(),
 		mainMenu: new MainMenu()

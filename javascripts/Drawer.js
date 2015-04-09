@@ -14,7 +14,7 @@
 		 * Defines an element that the Drawer should automatically be appended to.
 		 * @property {String}
 		 */
-		appendToElement: '#mw-mf-viewport',
+		appendToElement: 'body',
 		closeOnScroll: true,
 		events: $.extend( {}, Panel.prototype.events, {
 			click: 'stopPropagation'
