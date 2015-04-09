@@ -1,7 +1,6 @@
 ( function ( M, $ ) {
 	var Schema,
 		Class = M.require( 'Class' ),
-		context = M.require( 'context' ),
 		user = M.require( 'user' );
 
 	/**
@@ -13,11 +12,8 @@
 		 * A set of defaults to log to the schema
 		 *
 		 * @cfg {Object} defaults Default options hash.
-		 * @cfg {String} defaults.mobileMode whether user is in stable beta or alpha
 		 */
-		defaults: {
-			mobileMode: context.getMode()
-		},
+		defaults: {},
 		/**
 		 * Whether or not the logging is sampled (i.e. not recorded at 100% frequency)
 		 * @property {Boolean}

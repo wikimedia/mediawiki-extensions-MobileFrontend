@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var SchemaMobileWebClickTracking,
-		Schema = M.require( 'Schema' ),
+		SchemaMobileWeb = M.require( 'loggingSchemas/SchemaMobileWeb' ),
 		user = M.require( 'user' ),
 		s = M.require( 'settings' );
 
@@ -49,7 +49,7 @@
 	 * @class SchemaMobileWebClickTracking
 	 * @extends Schema
 	 */
-	SchemaMobileWebClickTracking = Schema.extend( {
+	SchemaMobileWebClickTracking = SchemaMobileWeb.extend( {
 		/**
 		 * @inheritdoc
 		 *
@@ -62,7 +62,7 @@
 		 * logger omit this property when sending the data to a server. According to the schema
 		 * userEditCount is optional.
 		 */
-		defaults: $.extend( {}, Schema.prototype.defaults, {
+		defaults: $.extend( {}, SchemaMobileWeb.prototype.defaults, {
 			// FIXME: Introduce a SchemaWithUser class that has username and userEditCount
 			username: user.getName() || undefined,
 			userEditCount: typeof user.getEditCount() === 'number' ? user.getEditCount() : undefined
