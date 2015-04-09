@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
-		PageList = M.require( 'modules/PageList' ),
+		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
 		Nearby,
 		browser = M.require( 'browser' ),
 		icons = M.require( 'icons' );
@@ -10,9 +10,9 @@
 
 	 * @class Nearby
 	 * @uses NearbyApi
-	 * @extends PageList
+	 * @extends WatchstarPageList
 	 */
-	Nearby = PageList.extend( {
+	Nearby = WatchstarPageList.extend( {
 		errorMessages: {
 			empty: {
 				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
@@ -36,7 +36,7 @@
 			}
 		},
 		templatePartials: {
-			pageList: PageList.prototype.template
+			pageList: WatchstarPageList.prototype.template
 		},
 		template: mw.template.get( 'mobile.nearby', 'Nearby.hogan' ),
 		/**
@@ -91,7 +91,7 @@
 		 */
 		initialize: function ( options ) {
 			var self = this,
-				_super = PageList.prototype.initialize;
+				_super = WatchstarPageList.prototype.initialize;
 
 			this.range = options.range || mw.config.get( 'wgMFNearbyRange' ) || 1000;
 			this.source = options.source || 'nearby';
@@ -193,7 +193,7 @@
 			if ( !this._isLoading ) {
 				this.$( '.spinner' ).hide();
 			}
-			PageList.prototype.postRender.apply( this, arguments );
+			WatchstarPageList.prototype.postRender.apply( this, arguments );
 			this._postRenderLinks();
 		},
 		/**

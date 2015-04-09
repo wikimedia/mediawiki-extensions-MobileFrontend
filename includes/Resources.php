@@ -237,6 +237,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.pagelist' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.view',
+		),
+		'scripts' => array(
+			'javascripts/PageList.js',
+		),
+		'templates' => array(
+			'PageListItem.hogan' => 'templates/PageListItem.hogan',
+			'PageList.hogan' => 'templates/PageList.hogan',
+		),
+	),
+
 	// Backwards compability for Zero and other extensions that may still use this
 	// FIXME: Remove when https://phabricator.wikimedia.org/T94462 resolved.
 	'mobile.templates' => $wgMFResourceFileModuleBoilerplate + array(
@@ -247,13 +260,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.pagelist.scripts' => $wgMFResourceFileModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.watchstar',
-		),
-		'templates' => array(
-			'PageListItem.hogan' => 'templates/modules/PageListItem.hogan',
-			'PageList.hogan' => 'templates/modules/PageList.hogan',
+			'mobile.pagelist',
 		),
 		'scripts' => array(
-			'javascripts/modules/PageList.js',
+			'javascripts/modules/WatchstarPageList.js',
 		),
 		'messages' => array(
 			'mobile-frontend-watchlist-modified'

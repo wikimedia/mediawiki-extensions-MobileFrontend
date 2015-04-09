@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 	var WatchList,
-		PageList = M.require( 'modules/PageList' ),
+		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
 		InfiniteScroll = M.require( 'InfiniteScroll' ),
 		WatchListApi = M.require( 'modules/watchlist/WatchListApi' );
 
@@ -10,7 +10,7 @@
 	 * @class WatchList
 	 * @uses InfiniteScroll
 	 */
-	WatchList = PageList.extend( {
+	WatchList = WatchstarPageList.extend( {
 		events: {
 			'mousedown a.title': 'onTitleClick'
 		},
@@ -28,7 +28,7 @@
 			// `api` is used in the parent...
 			this.watchlistApi = new WatchListApi( lastTitle );
 
-			PageList.prototype.initialize.apply( this, arguments );
+			WatchstarPageList.prototype.initialize.apply( this, arguments );
 		},
 		/** @inheritdoc */
 		preRender: function () {
@@ -50,7 +50,7 @@
 		 * @inheritdoc
 		 */
 		postRender: function () {
-			PageList.prototype.postRender.apply( this, arguments );
+			WatchstarPageList.prototype.postRender.apply( this, arguments );
 			this.infiniteScroll.enable();
 		},
 		/**
