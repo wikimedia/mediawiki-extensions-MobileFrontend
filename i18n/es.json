@@ -25,7 +25,8 @@
 			"MadriCR",
 			"JasterTDC",
 			"Awesomecat5",
-			"Kroji"
+			"Kroji",
+			"Tusca"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -341,6 +342,9 @@
 	"mobile-frontend-watchlist-removed": "Se ha eliminado el artículo $1 de tu lista de seguimiento",
 	"mobile-frontend-watchlist-signup-action": "Regístrese para comenzar uno ahora.",
 	"mobile-frontend-watchlist-view": "Ver tu lista de seguimiento",
+	"mobile-frontend-quick-lookup-looking": "Examinado como $1",
+	"mobile-frontend-quick-lookup-no-results": "No existe coincidencia en la nube $1",
+	"mobile-frontend-quick-lookup-not-internal": "Disculpe, este no es el link $1.",
 	"nearby": "Páginas cercanas",
 	"tag-mobile_edit": "Edición desde móvil",
 	"tag-mobile_edit-description": "Edición realizada desde móvil (web o aplicación)",
