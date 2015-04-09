@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_41b7d884",
+        "filename": "less/icons.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-09T21:03:24Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be in icons.less it should be in a file called buttonSpinner.less and packaged with ButtonWithSpinner.js\nIt should not be loaded here.\n\nI\u0027m getting super frustrated with all these icon changes - they are making me have to continually rebase and recheck https://gerrit.wikimedia.org/r/202089 whilst it remains unmerged and if we\u0027re not carefully we are going to end up with two libraries loading at the same time in stable that do exactly the same thing.",
+      "revId": "7d65f0fd2e9168a0dbef25f4f8d5674b09d83cc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
