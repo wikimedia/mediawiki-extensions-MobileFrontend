@@ -621,8 +621,11 @@ class SkinMinerva extends SkinTemplate {
 	 * @returns {String} html for header
 	 */
 	protected function getHeaderHtml() {
-		return Html::rawElement( 'h1', array( 'id' => 'section_0' ),
-			$this->getOutput()->getPageTitle() );
+		$title = $this->getOutput()->getPageTitle();
+		if ( $title ) {
+			return Html::rawElement( 'h1', array( 'id' => 'section_0' ), $title );
+		}
+		return '';
 	}
 	/**
 	 * Create and prepare header and footer content
