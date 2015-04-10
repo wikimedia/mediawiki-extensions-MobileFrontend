@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1a0062b4",
+        "filename": "javascripts/modules.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-10T20:39:15Z",
+      "side": 1,
+      "message": "It would be nice if you can elaborate on the return object.",
+      "revId": "c7aa0b01b481d5efdf0e58500b2d143c4eed4185",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9af312e4",
+        "filename": "javascripts/modules.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-10T20:39:15Z",
+      "side": 1,
+      "message": "Here also.",
+      "revId": "c7aa0b01b481d5efdf0e58500b2d143c4eed4185",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
