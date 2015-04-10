@@ -25,7 +25,7 @@
 			} ).toHtmlString(),
 			citation: new Icon( {
 				name: 'citation',
-				additionalClassNames: 'text icon-16px',
+				additionalClassNames: 'text',
 				hasText: true,
 				label: mw.msg( 'mobile-frontend-references-citation' )
 			} ).toHtmlString()

@@ -7,11 +7,11 @@
 		escapeHash = M.require( 'util' ).escapeHash,
 		arrowUpOptions = {
 			name: 'arrow-up',
-			additionalClassNames: 'icon-15px indicator'
+			additionalClassNames: 'indicator'
 		},
 		arrowDownOptions = {
 			name: 'arrow-down',
-			additionalClassNames: 'icon-15px indicator'
+			additionalClassNames: 'indicator'
 		},
 		Icon = M.require( 'Icon' );
 

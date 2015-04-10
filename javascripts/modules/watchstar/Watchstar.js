@@ -7,11 +7,11 @@
 		Icon = M.require( 'Icon' ),
 		watchIcon = new Icon( {
 			name: 'watch',
-			additionalClassNames: 'icon-32px watch-this-article'
+			additionalClassNames: 'watch-this-article'
 		} ),
 		watchedIcon = new Icon( {
 			name: 'watched',
-			additionalClassNames: 'icon-32px watch-this-article watched'
+			additionalClassNames: 'watch-this-article watched'
 		} ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),

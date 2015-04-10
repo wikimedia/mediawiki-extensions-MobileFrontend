@@ -121,7 +121,7 @@ class SkinMinervaBeta extends SkinMinerva {
 			$buttons['talk'] = array(
 				'attributes' => array(
 					'href' => $talkTitle->getLinkURL(),
-					'class' =>  MobileUI::iconClass( 'talk', 'before', 'talk icon-32px' ),
+					'class' =>  MobileUI::iconClass( 'talk', 'before', 'talk' ),
 					'data-title' => $talkTitle->getFullText(),
 				),
 				'label' => $talkButton,

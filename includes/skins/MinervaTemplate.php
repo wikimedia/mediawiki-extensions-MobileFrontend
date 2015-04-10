@@ -47,7 +47,7 @@ class MinervaTemplate extends BaseTemplate {
 			$this->makeSearchButton(
 				'fulltext',
 				array(
-					'class' => 'fulltext-search no-js-only icon icon-search',
+					'class' => 'fulltext-search no-js-only',
 				)
 			) .
 			Html::closeElement( 'form' );
