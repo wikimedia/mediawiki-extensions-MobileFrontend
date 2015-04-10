@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5a4fba39",
+        "filename": "less/iconsNew.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-10T20:30:49Z",
+      "side": 1,
+      "message": "I can\u0027t find this image, I see one at specials/images/refresh.png though.",
+      "revId": "93a6ec41206081221cee4d494abff64ce7827471",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
