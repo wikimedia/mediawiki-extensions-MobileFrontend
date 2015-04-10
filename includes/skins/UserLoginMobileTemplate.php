@@ -17,6 +17,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 	protected $pageMessages = array(
 		'Uploads' => 'mobile-frontend-donate-image-login-action',
 		'Watchlist' => 'mobile-frontend-watchlist-login-action',
+		'Gather' => 'gather-anon-view-lists',
 	);
 
 	/**

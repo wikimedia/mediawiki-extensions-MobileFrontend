@@ -15,6 +15,7 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 	protected $pageMessageHeaders = array(
 		'Uploads' => 'mobile-frontend-donate-image-login',
 		'Watchlist' => 'mobile-frontend-watchlist-purpose',
+		'Gather' => 'gather-loginpage-desc',
 	);
 	/** @var array $actionMessages Message keys for site links */
 	protected $pageMessages = array();
