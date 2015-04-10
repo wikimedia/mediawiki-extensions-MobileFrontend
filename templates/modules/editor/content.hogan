@@ -1,4 +1,4 @@
-<div lang="{{contentLang}}" dir="{{contentDir}}">
+<div lang="{{contentLang}}" dir="{{contentDir}}" class="wikitext-editor-container">
 	<textarea class="wikitext-editor" id="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
 	<div class="preview content"></div>
 	{{#loginUrl}}
