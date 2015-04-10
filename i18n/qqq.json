@@ -120,7 +120,7 @@
 	"mobile-frontend-editor-success-new-page": "Text that displays when a new page has been successfully saved.\n\nUsed as \"toast\" message.",
 	"mobile-frontend-editor-summary-placeholder": "A placeholder with examples for the summary input field asking user what they changed (the field is optional).",
 	"mobile-frontend-editor-summary-request": "Header above edit summary input field asking the user to summarize the changes they made to the page.",
-	"mobile-frontend-editor-summary": "The Summary text, in plain text, beside the edit summary field.\nPlain text version of [[mw-msg:summary]]\n{{Identical|Summary}}",
+	"mobile-frontend-editor-summary": "The Summary text, in plain text, beside the edit summary field.\nPlain text version of {{msg-mw|summary}}\n{{Identical|Summary}}",
 	"mobile-frontend-editor-switch-confirm": "Warning message telling the user they must save their changes before switching to a different editing interface.",
 	"mobile-frontend-editor-switch-editor": "Label for button that allows the user to switch between two different editing interfaces",
 	"mobile-frontend-editor-tutorial-cancel": "Label for button that user can click if they do not want to edit.\n{{Identical|No thanks}}",

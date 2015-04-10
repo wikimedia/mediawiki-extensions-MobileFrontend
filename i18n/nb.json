@@ -10,7 +10,8 @@
 			"Nghtwlkr",
 			"Njardarlogar",
 			"Nsaa",
-			"Laaknor"
+			"Laaknor",
+			"Kingu"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",
@@ -355,6 +356,8 @@
 	"mobile-frontend-watchlist-removed": "$1 er fjernet fra din overvåkningsliste",
 	"mobile-frontend-watchlist-signup-action": "Registrer deg for å starte en nå.",
 	"mobile-frontend-watchlist-view": "Vis din overvåkningsliste",
+	"mobile-frontend-quick-lookup-looking": "Ser etter \"$1\"",
+	"mobile-frontend-quick-lookup-not-internal": "Beklager, dette er ikke en $1 lenke.",
 	"nearby": "Sider nær deg",
 	"right-mf-uploadbutton": "Bruke opplastingsknappen på mobilsider",
 	"tag-mobile_edit": "Mobilredigering",

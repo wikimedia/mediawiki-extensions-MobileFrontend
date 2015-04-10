@@ -9,7 +9,8 @@
 			"ශ්වෙත",
 			"Indunil Chamara",
 			"Susith Chandira Gts",
-			"Thirsty"
+			"Thirsty",
+			"Roonyh"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ආරක්ෂක පාඨය ඇතුළු කරන්න",
@@ -30,6 +31,7 @@
 	"mobile-frontend-donate-image-heading": "ඔබේ මෑත දායකත්වයන්",
 	"mobile-frontend-donate-image-title": "පින්තූරයක් පරිත්‍යාග කරන්න",
 	"mobile-frontend-editor-anon": "නිර්නාමිකව සංස්කරණය කරන්න",
+	"mobile-frontend-editor-edit": "සංස්කරණය",
 	"mobile-frontend-enable-images": "ජංගම අඩවියෙහි පින්තුර සක්‍රීය කරන්න",
 	"mobile-frontend-errorreport-button-label": "දෝෂයක් වාර්තා කරන්න",
 	"mobile-frontend-errorreport-feedback": "ඔබේ අදහස් සඳහා ස්තූතියි!",
@@ -37,9 +39,10 @@
 	"mobile-frontend-errorreport-section-title": "යෝජිත නිවැරදි කිරීම",
 	"mobile-frontend-errorreport-submit": "යොමන්න",
 	"mobile-frontend-errorreport-summary": "දෝෂය වාර්තා කරමින්",
-	"mobile-frontend-featured-article": "අද විශේෂාංග ලිපිය",
+	"mobile-frontend-featured-article": "අද විශේෂාංගය",
 	"mobile-frontend-footer-contact": "සම්බන්ධ කරන්න",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login-action": "දායකවීම සඳහා පිවිසෙන්න.",
 	"mobile-frontend-history-no-results": "සපයන ලද දත්ත වෙන් කිරීමට අදාළ පෙර සටහන් නැත.",
 	"mobile-frontend-home-button": "මුල් පිටුව",
 	"mobile-frontend-images-status": "පිංතූර",
@@ -91,6 +94,7 @@
 	"mobile-frontend-sign-in-heading": "පිවිසෙන්න",
 	"mobile-frontend-sign-in-why": "ඔබ සතුව {{SITENAME}} ගිණුමක් ඇත, ඔබ පහතින් පිවිසිය යුතු වේ.",
 	"mobile-frontend-sign-up-heading": "ලියාපදිංචි වන්න",
+	"mobile-frontend-terms-text": "භාවිතයේ කොන්දේසි",
 	"mobile-frontend-username": "පරිශීලක නාමය:",
 	"mobile-frontend-username-placeholder": "පරිශීලක නාමය",
 	"mobile-frontend-view": "ජංගම දසුන",
