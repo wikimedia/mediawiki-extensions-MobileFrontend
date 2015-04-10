@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6978b626",
+        "filename": "includes/Resources.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-10T16:00:18Z",
+      "side": 1,
+      "message": "Could we tag these FIXMEs with either an issue number or a known string, e.g. [CACHE]?",
+      "revId": "5f1c2acb38ffaccaff9e16aad3a3dee11822641f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_49813ac7",
+        "filename": "less/mainmenu.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-10T16:00:18Z",
+      "side": 1,
+      "message": "I agree with this change in principle. However, I\u0027d argue that changing it to:\n\n    .secondary-action.mw-ui-icon\n\nmakes it clear to other developers that we\u0027re tweaking an element with an icon. What do you think?",
+      "revId": "5f1c2acb38ffaccaff9e16aad3a3dee11822641f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e95cc684",
+        "filename": "less/modules/issues.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-10T16:00:18Z",
+      "side": 1,
+      "message": "Generally it should be abstracted away from the author in most cases, but there will always be exceptions.\n\nHow about an .mw-ui-icon-style mixin simply wraps the passed styles in a :before/:after pseudo-element?",
+      "revId": "5f1c2acb38ffaccaff9e16aad3a3dee11822641f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
