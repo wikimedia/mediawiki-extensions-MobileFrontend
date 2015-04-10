@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_735c291f",
+        "filename": "less/modules/toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-10T05:58:35Z",
+      "side": 1,
+      "message": "add a FIXME to remove when mw-ui-icon is used in stable? :)",
+      "revId": "f582b60fab2d7560e912744292c9df6fbbd94ea1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
