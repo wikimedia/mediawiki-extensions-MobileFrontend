@@ -95,9 +95,11 @@
 		}
 		input {
 			display: block;
+			// this rule has to be here (and not combined with the webkit rule below) for it to work on firefox
+			cursor: pointer;
 		}
 		// webkit-file-upload-button for pointer cursor in chrome.
-		input, ::-webkit-file-upload-button {
+		::-webkit-file-upload-button {
 			cursor: pointer;
 		}
 	}
