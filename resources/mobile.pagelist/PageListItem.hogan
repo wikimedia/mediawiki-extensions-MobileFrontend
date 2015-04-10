@@ -3,8 +3,12 @@
     {{#anchor}}name="{{anchor}}"{{/anchor}}
     {{#latitude}}data-latlng="{{latitude}},{{longitude}}"{{/latitude}}
     data-title="{{title}}">
-    <div class="list-thumb {{pageimageClass}}" style="{{listThumbStyleAttribute}}"></div>
-    <h3>{{{heading}}}</h3>
+    <div class="list-thumb
+      {{^thumbnail}}list-thumb-none list-thumb-x{{/thumbnail}}
+      {{#thumbnail.isLandscape}}list-thumb-y{{/thumbnail.isLandscape}}
+      {{^thumbnail.isLandscape}}list-thumb-x{{/thumbnail.isLandscape}}"
+      {{#thumbnail}}data-style="background-image: url( {{thumbnail.source}} )"{{/thumbnail}}></div>
+    <h3>{{{displayTitle}}}</h3>
     {{#lastModified}}
     <div class="info">{{lastModifiedMsg 'hi'}} {{lastModified}}</div>
     {{/lastModified}}

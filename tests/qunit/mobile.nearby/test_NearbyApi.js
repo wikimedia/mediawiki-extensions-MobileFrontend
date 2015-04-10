@@ -94,9 +94,9 @@
 		} ).done( function ( pages ) {
 			assert.strictEqual( pages.length, 3 );
 			assert.strictEqual( pages[ 0 ].title, 'The Montgomery (San Francisco)' );
-			assert.strictEqual( pages[ 0 ].pageimageClass, 'list-thumb-x' );
+			assert.ok( !pages[ 0 ].thumbnail.isLandscape );
 			assert.strictEqual( pages[ 2 ].title, 'W San Francisco' );
-			assert.strictEqual( pages[ 2 ].pageimageClass, 'list-thumb-none list-thumb-x' );
+			assert.strictEqual( pages[ 2 ].thumbnail, undefined );
 			assert.strictEqual( pages[ 2 ].dist.toPrecision( 6 ), '23.3769' );
 		} );
 	} );
@@ -105,7 +105,7 @@
 		m.getPagesAroundPage( 'The Montgomery (San Francisco)' ).done( function ( pages ) {
 			assert.strictEqual( pages.length, 2 );
 			assert.strictEqual( pages[ 1 ].title, 'W San Francisco' );
-			assert.strictEqual( pages[ 1 ].pageimageClass, 'list-thumb-none list-thumb-x' );
+			assert.strictEqual( pages[ 1 ].thumbnail, undefined );
 			assert.strictEqual( pages[ 1 ].dist.toPrecision( 6 ), '22.2639' );
 		} );
 	} );
