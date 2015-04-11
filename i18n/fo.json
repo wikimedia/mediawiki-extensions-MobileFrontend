@@ -9,6 +9,7 @@
 	"mobile-frontend-account-create-submit": "Skráset teg",
 	"mobile-frontend-back-to-top-of-section": "Far eina seksjón aftur",
 	"mobile-frontend-changeslist-ip": "Dulnevndur brúkari",
+	"mobile-frontend-changeslist-nocomment": "ongin frágreiðing um rættingina",
 	"mobile-frontend-clear-search": "Rudda",
 	"mobile-frontend-diffview-404-desc": "ID fyri versjónina ið tú bað um er ikki til.",
 	"mobile-frontend-diffview-404-title": "Ring versjón",
@@ -156,5 +157,6 @@
 	"mobile-frontend-watchlist-view": "Síggj tín eftirlitslista",
 	"nearby": "Síður í tíni námind",
 	"tag-mobile_edit": "Mobilskriving",
-	"tag-mobile_edit-description": "Rætting gjørd frá mobilsíðuni"
+	"tag-mobile_edit-description": "Rætting gjørd frá mobilsíðuni",
+	"mobile-frontend-pageaction-edit-tooltip": "Rætta inngangin til hesa síðuna."
 }

@@ -16,7 +16,8 @@
 			"Jefersonmoraes",
 			"He7d3r",
 			"Fasouzafreitas",
-			"Macofe"
+			"Macofe",
+			"TheEduGobi"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se um usuário está ou não editando através da interface móvel",
@@ -53,7 +54,7 @@
 	"mobile-frontend-editor-cancel": "Cancelar",
 	"mobile-frontend-editor-cancel-confirm": "Você realmente deseja abandonar sua edição?",
 	"mobile-frontend-editor-captcha-try-again": "Código errado, tente denovo.",
-	"mobile-frontend-editor-continue": "Continuar",
+	"mobile-frontend-editor-continue": "Próximo",
 	"mobile-frontend-editor-cta": "Você deve estar logado para editar páginas com dispositivos móveis.",
 	"mobile-frontend-editor-disabled": "Esta página está protegida para prevenir vandalismos.",
 	"mobile-frontend-editor-edit": "Editar",
@@ -163,7 +164,7 @@
 	"mobile-frontend-photo-ownership": "Eu, $1, criei esta imagem.",
 	"mobile-frontend-photo-ownership-confirm": "Entendi!",
 	"mobile-frontend-photo-ownership-help": "O que isso significa?",
-	"mobile-frontend-photo-submit": "Enviar",
+	"mobile-frontend-photo-submit": "Carregar",
 	"mobile-frontend-photo-upload": "Adicione uma imagem a esta página",
 	"mobile-frontend-photo-upload-anon": "Por favor autentifique-se para adicionar uma imagem a essa página.",
 	"mobile-frontend-photo-upload-comment": "Adicionar imagem à página",

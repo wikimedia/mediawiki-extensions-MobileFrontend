@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ansumang",
-			"Shubha"
+			"Shubha",
+			"NehalDaveND"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "पृष्ठतः अध्यायं प्रति गम्यताम्",
@@ -17,7 +18,9 @@
 	"mobile-frontend-home-button": "गृहम्",
 	"mobile-frontend-images-status": "चित्राणि",
 	"mobile-frontend-language-header": "अयं लेखः $1 {{PLURAL:$1|lभाषा|भाषाः}} इत्यत्र उपलभ्यते",
+	"mobile-frontend-language-heading": "<strong>भाषाः</strong>",
 	"mobile-frontend-language-site-choose": "भाषायाः अन्वेषणम्",
+	"mobile-frontend-languages-header": "भाषाः",
 	"mobile-frontend-logged-out": "न सम्प्रविष्टम्",
 	"mobile-frontend-login": "सम्प्रवेशः",
 	"mobile-frontend-main-menu-featured": "प्रमुखम्",
@@ -36,7 +39,6 @@
 	"mobile-frontend-save-settings": "नियोजनं रक्ष्यताम्",
 	"mobile-frontend-search-submit": "गम्यताम्",
 	"mobile-frontend-settings-beta": "उपान्त्यम्",
-	"mobile-frontend-settings-description": "भवतः अनुभवान् जङ्गमोपकरणे अधोनिर्दिष्टैः क्षेत्रलक्षणैः व्यवस्थापयतु ।",
 	"mobile-frontend-settings-site-description": "$1 {{PLURAL:$1|भाषायां|भाषासु}} {{SITENAME}} उपलभ्यते । लभ्यमानाः आवृत्तयः अधः सूचिताः ।",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} भाषाः",
 	"mobile-frontend-username": "योजकनाम:",

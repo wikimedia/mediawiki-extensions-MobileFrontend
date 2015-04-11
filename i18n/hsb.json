@@ -105,7 +105,6 @@
 	"mobile-frontend-last-modified-seconds": "Před {{PLURAL:$1|$1 sekundu|$1 sekundomaj|$1 sekundami}} posledni raz změnjeny",
 	"mobile-frontend-last-modified-years": "Před {{PLURAL:$1|$1 lětom|$1 lětomaj|$1 lětami}} posledni raz změnjeny",
 	"mobile-frontend-lead-image-tutorial-confirm": "Nahraće startować",
-	"mobile-frontend-listed-image-no-description": "Žane wopisanje",
 	"mobile-frontend-logged-in-homepage-notification": "Witaj, $1",
 	"mobile-frontend-logged-in-toast-notification": "Přizjewjeny jako $1.",
 	"mobile-frontend-logged-out": "Njepřizjewjeny",
@@ -169,7 +168,6 @@
 	"mobile-frontend-profile-activity-heading": "Najnowša aktiwita",
 	"mobile-frontend-profile-error": "Ow ně!",
 	"mobile-frontend-profile-last-thank": "{{GENDER:$2|Dźak}} {{GENDER:$1|wot}} [[Special:UserProfile/$1|$1]]",
-	"mobile-frontend-profile-last-upload-caption": "{{PLURAL:$1|Wčera|Před $1 dnjomaj|Před $1 dnjemi|0=Dźensa}} {{GENDER:$2|nahraty}}.",
 	"mobile-frontend-profile-noargs": "Njeje so žane wužiwarske mjeno podało. Prošu podaj wužiwarske mjeno, zo by sej profil wobhladał.",
 	"mobile-frontend-profile-title": "Wužiwarski profil",
 	"mobile-frontend-profile-userpage-link": "Wužiwarsku stronu wopytać.",
@@ -185,7 +183,6 @@
 	"mobile-frontend-search-submit": "Pytać",
 	"mobile-frontend-settings-alpha": "Eksperimentalny modus",
 	"mobile-frontend-settings-beta": "Beta",
-	"mobile-frontend-settings-description": "Přiměr swój mobilny grat z tutymi mobilnymi specifiskimi nastajenjemi.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} steji w $1 {{PLURAL:$1|rěči|rěči|rěčach|rěčach}} k dispoziciji. Wšě k dispoziciji stejace wersije su deleka nalistowane:",
 	"mobile-frontend-settings-site-header": "Rěče {{GRAMMAR:genitiw|{{SITENAME}}}}",
 	"mobile-frontend-sign-in-error-heading": "Hopla",
@@ -235,5 +232,7 @@
 	"mobile-frontend-watchlist-view": "Sej wobkedźbowanki wobhladać",
 	"nearby": "Strony w twojej bliskosći",
 	"tag-mobile_edit": "Mobilna změna",
-	"tag-mobile_edit-description": "Z mobilneho grata wobdźěłać (web abo nałoženje)"
+	"tag-mobile_edit-description": "Z mobilneho grata wobdźěłać (web abo nałoženje)",
+	"tag-mobile_web_edit": "Mobilne webdźěłowanje",
+	"mobile-frontend-pageaction-edit-tooltip": "Wobdźěłaj zawodny wotrězk tuteje strony."
 }
