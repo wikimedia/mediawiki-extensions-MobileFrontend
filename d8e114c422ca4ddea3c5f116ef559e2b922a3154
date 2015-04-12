@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5199dc6d",
+        "filename": "javascripts/modules/editor/VisualEditorProcessDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-04-12T11:16:14Z",
+      "side": 1,
+      "message": "Ouch, you do not want to do this. The object in .static.actions is not copied; this is a reference to the same object as the one for MinervaProcessDialog. So you\u0027re adding the \u0027save\u0027 action to MinervaProcessDialog, too. I know from experience that this causes very hard to debug issues.\n\nYou\u0027ll want to do a manual deep copy first, like this: https://github.com/wikimedia/VisualEditor/blob/master/src/ui/windowmanagers/ve.ui.ToolbarDialogWindowManager.js#L28-L34",
+      "revId": "d8e114c422ca4ddea3c5f116ef559e2b922a3154",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d1dbac22",
+        "filename": "javascripts/modules/editor/VisualEditorProcessDialog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-04-12T11:16:14Z",
+      "side": 1,
+      "message": "Seems like you\u0027re not using this. MinervaProcessDialog already creates a window manager.",
+      "revId": "d8e114c422ca4ddea3c5f116ef559e2b922a3154",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
