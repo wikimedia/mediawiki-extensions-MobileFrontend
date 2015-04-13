@@ -34,6 +34,24 @@
       "revId": "4624047862f90632ee48b600f4a5507785c7a5ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_fa8eb831",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-13T20:24:35Z",
+      "side": 1,
+      "message": "Ah, right, i haven\u0027t thought about to add it in the DOM directly :D",
+      "parentUuid": "6e7c4fa4_dad65c2c",
+      "revId": "4624047862f90632ee48b600f4a5507785c7a5ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
