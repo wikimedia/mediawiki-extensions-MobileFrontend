@@ -200,7 +200,9 @@
 		$container = $container || $( '#content' );
 
 		$( 'html' ).removeClass( 'stub' );
-		$firstHeading = $container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).eq( 0 );
+		// Also allow .section-heading if some extensions like Wikibase
+		// want to toggle other headlines than direct descendants of $container.
+		$firstHeading = $container.find( '> h1,> h2,> h3,> h4,> h5,> h6,.section-heading' ).eq( 0 );
 		tagName = $firstHeading.prop( 'tagName' ) || 'H1';
 
 		if ( collapseSectionsByDefault === undefined ) {
