@@ -370,6 +370,7 @@
 	"tag-mobile_edit-description": "העריכה נעשתה ממכשיר נייד (דרך אתר או יישום)",
 	"tag-mobile_web_edit": "עריכה דרך האתר הנייד",
 	"tag-mobile_web_edit-description": "עריכה שנעשתה מהאתר הנייד",
+	"skinname-minerva": "מינרווה",
 	"mobile-frontend-pageaction-edit-tooltip": "עריכת הפסקה הראשונה בדף.",
 	"mobile-frontend-pageaction-upload-tooltip": "העלאת תמונה לראש הדף.",
 	"apihelp-mobileview-description": "מחזיר נתונים שנחוצים לתצוגות ניידות.",
