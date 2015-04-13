@@ -16,6 +16,24 @@
       "revId": "4624047862f90632ee48b600f4a5507785c7a5ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_dad65c2c",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 549
+      },
+      "writtenOn": "2015-04-13T20:12:01Z",
+      "side": 1,
+      "message": "The point is that the selector `\u003e h1,\u003e h2,\u003e h3,\u003e h4,\u003e h5,\u003e h6` only accepts direct descendants while on wikidata our \u003ch2\u003e elements are wrapped in a \u003cdiv\u003e. If we add the .section-heading class there, this code also works for this headings although they are no direct children of #content.",
+      "parentUuid": "6e7c4fa4_ba3fe081",
+      "revId": "4624047862f90632ee48b600f4a5507785c7a5ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
