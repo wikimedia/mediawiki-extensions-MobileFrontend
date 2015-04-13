@@ -15,7 +15,6 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 	protected $pageMessageHeaders = array(
 		'Uploads' => 'mobile-frontend-donate-image-login',
 		'Watchlist' => 'mobile-frontend-watchlist-purpose',
-		'Gather' => 'gather-loginpage-desc',
 	);
 	/** @var array $actionMessages Message keys for site links */
 	protected $pageMessages = array();
@@ -164,8 +163,9 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 		$heading = '';
 		$content = '';
 
-		if ( isset( $this->pageMessageHeaders[$returnto] ) ) {
-			$heading = wfMessage( $this->pageMessageHeaders[$returnto] )->parse();
+		$pageMessageHeaders = $this->getPageMessageHeaders();
+		if ( isset( $pageMessageHeaders[$returnto] ) ) {
+			$heading = wfMessage( $pageMessageHeaders[$returnto] )->parse();
 			if ( isset( $this->pageMessages[$returnto] ) ) {
 				$content = wfMessage( $this->pageMessages[$returnto] )->parse();
 			}
@@ -176,6 +176,26 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 			}
 		}
 		return array( $heading, $content );
+	}
+
+	/**
+	 * Returns an array of all valid login info messages.
+	 *
+	 * @return array
+	 */
+	protected function getPageMessageHeaders() {
+		static $messages = null;
+		if ( !$messages ) {
+			// default MobileFrontend messages
+			$messages = $this->pageMessageHeaders;
+			// reuse core hook to allow extensions to add their own messages
+			// currently extensions needs to add two messages for full mobile support, one
+			// withput a key and one with the returnto target as the key, example from Gather:
+			// $messages['Gather'] = 'gather-loginpage-desc'; -> for mobile custom login page
+			// $messages[] = 'gather-anon-view-lists'; -> // for core login page (and mobile alpha)
+			Hooks::run( 'LoginFormValidErrorMessages', array( &$messages ) );
+		}
+		return $messages;
 	}
 
 	/**
