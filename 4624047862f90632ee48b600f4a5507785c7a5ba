@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ba3fe081",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-13T19:42:16Z",
+      "side": 1,
+      "message": "have you tested this? .section-heading is added with the same logic:\nhttps://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/216e9361f63d356af3895e3655a46dff3f5abce4/javascripts/modules/toggling/init.js#L312\n\nMaybe i oversee something :/",
+      "revId": "4624047862f90632ee48b600f4a5507785c7a5ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
