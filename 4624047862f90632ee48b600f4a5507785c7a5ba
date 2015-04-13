@@ -52,6 +52,24 @@
       "revId": "4624047862f90632ee48b600f4a5507785c7a5ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b5b133f6",
+        "filename": "javascripts/modules/toggling/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-13T21:03:44Z",
+      "side": 1,
+      "message": "Can we add a comment above this Florian to make this clearer that some parsers e.g. wikidata might do this? We\u0027ll forget why this is here in future.",
+      "parentUuid": "6e7c4fa4_fa8eb831",
+      "revId": "4624047862f90632ee48b600f4a5507785c7a5ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
