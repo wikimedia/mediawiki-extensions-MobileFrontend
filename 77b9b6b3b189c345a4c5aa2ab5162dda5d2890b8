@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3f466227",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-13T17:53:18Z",
+      "side": 1,
+      "message": "What\u0027s preventing us from fixing this now?",
+      "revId": "77b9b6b3b189c345a4c5aa2ab5162dda5d2890b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
