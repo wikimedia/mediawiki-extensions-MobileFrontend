@@ -321,9 +321,7 @@
 		!mw.config.get( 'wgIsMainPage' ) &&
 		mw.config.get( 'wgAction' ) === 'view'
 	) {
-		if ( mw.config.get( 'wgMFPageSections' ) ) {
-			init( $( '#content' ), 'content-' );
-		}
+		init( $( '#content' ), 'content-' );
 	}
 
 	M.define( 'toggle', {
