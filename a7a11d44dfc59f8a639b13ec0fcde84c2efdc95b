@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_75371bd8",
+        "filename": "less/modules/bannerImage.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-13T20:40:04Z",
+      "side": 0,
+      "message": "Not sure why you removed this. Isn\u0027t it being used by the infobox?",
+      "revId": "a7a11d44dfc59f8a639b13ec0fcde84c2efdc95b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
