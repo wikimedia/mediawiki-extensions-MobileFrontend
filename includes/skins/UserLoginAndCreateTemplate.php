@@ -10,7 +10,7 @@
  * by copying their properties to this new template, and exposing some
  * special mobile-specific magic.
  */
-abstract class UserLoginAndCreateTemplate extends QuickTemplate {
+abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 	/** @var array $actionMessagesHeaders Message keys for site links */
 	protected $pageMessageHeaders = array(
 		'Uploads' => 'mobile-frontend-donate-image-login',
@@ -40,7 +40,7 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 	 * Does not call the parent's constructor to prevent overwriting
 	 * $this->data and $this->translatorobject since we're essentially
 	 * just hijacking the existing template and its data here.
-	 * @param QuickTemplate $template The original template object to overwrite
+	 * @param BaseTemplate $template The original template object to overwrite
 	 */
 	public function __construct( $template ) {
 		$this->copyObjectProperties( $template );
@@ -85,7 +85,7 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 
 	/**
 	 * Copy public properties of one object to this one
-	 * @param QuickTemplate $tpl The object whose properties should be copied
+	 * @param BaseTemplate $tpl The object whose properties should be copied
 	 */
 	protected function copyObjectProperties( $tpl ) {
 		foreach ( get_object_vars( $tpl ) as $prop => $value ) {
