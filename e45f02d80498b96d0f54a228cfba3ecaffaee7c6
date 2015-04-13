@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ab3f9081",
+        "filename": "javascripts/ButtonWithSpinner.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-13T23:31:40Z",
+      "side": 1,
+      "message": "no need for the semicolon.",
+      "revId": "e45f02d80498b96d0f54a228cfba3ecaffaee7c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
