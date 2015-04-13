@@ -2,6 +2,7 @@
 
 	var Watchstar,
 		View = M.require( 'View' ),
+		SchemaMobileWebWatching = M.require( 'loggingSchemas/SchemaMobileWebWatching' ),
 		WatchstarApi = M.require( 'modules/watchstar/WatchstarApi' ),
 		Icon = M.require( 'Icon' ),
 		watchIcon = new Icon( {
@@ -38,9 +39,11 @@
 		/**
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {Page} defaults.page Current page.
+		 * @cfg {String} defaults.funnel to log events with
 		 */
 		defaults: {
-			page: M.getCurrentPage()
+			page: M.getCurrentPage(),
+			funnel: 'unknown'
 		},
 		/**
 		 * @property {Object} ctaDrawerOptions Default options hash for the anonymous CtaDrawer.
@@ -72,6 +75,9 @@
 				api.setWatchedPage( options.page, options.isWatched );
 				_super.call( self, options );
 			}
+			this.schema = new SchemaMobileWebWatching( {
+				funnel: options.funnel
+			} );
 		},
 		/** @inheritdoc */
 		preRender: function ( options ) {
@@ -129,6 +135,9 @@
 			checker = setInterval( function () {
 				toast.show( mw.msg( 'mobile-frontend-watchlist-please-wait' ) );
 			}, 1000 );
+			this.schema.log( {
+				isWatched: self.options.isWatched
+			} );
 			api.toggleStatus( page ).always( function () {
 				clearInterval( checker );
 			} ).done( function () {

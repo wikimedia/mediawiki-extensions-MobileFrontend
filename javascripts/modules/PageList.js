@@ -117,7 +117,7 @@
 		 * @inheritdoc
 		 * Loads watch stars for each page.
 		 */
-		postRender: function () {
+		postRender: function ( options ) {
 			var $li,
 				self = this,
 				pages = [],
@@ -147,6 +147,7 @@
 							} );
 
 						watchstar = new Watchstar( {
+							funnel: options.funnel,
 							isAnon: false,
 							isWatched: api.isWatchedPage( page ),
 							page: page,
