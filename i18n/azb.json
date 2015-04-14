@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Amir a57",
-			"Mousa"
+			"Mousa",
+			"Koroğlu"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "بیر بؤلوم گئرییه دؤن",
@@ -24,7 +25,7 @@
 	"mobile-frontend-generic-login-action": "شیرکت ائتمک اوچون داخیل اولون.",
 	"mobile-frontend-home-button": "ائو",
 	"mobile-frontend-images-status": "شکیل‌لر",
-	"mobile-frontend-language-article-heading": "آیری دیللرده اوخویون.",
+	"mobile-frontend-language-article-heading": "آیری دیل‌لرده اوخویون.",
 	"mobile-frontend-language-site-choose": "دیل آختاریشی",
 	"mobile-frontend-last-modified-date": "$1 سون دَییشیک،$2 ده.",
 	"mobile-frontend-logged-out": "داخیل اولمامیسینیز",
@@ -36,9 +37,9 @@
 	"mobile-frontend-main-menu-logout": "چیخیش",
 	"mobile-frontend-main-menu-nearby": "یاخیندا",
 	"mobile-frontend-main-menu-page-title": "سایت‌دا دولانماق",
-	"mobile-frontend-main-menu-settings": "تنظیملر",
+	"mobile-frontend-main-menu-settings": "تنظیم‌لر",
 	"mobile-frontend-main-menu-settings-heading": "موبایل سایت ترجیحلری",
-	"mobile-frontend-main-menu-watchlist": "ایزلمه سیاهینیزداکی",
+	"mobile-frontend-main-menu-watchlist": "ایزلمه لیستی",
 	"mobile-frontend-meta-data-issues": "بو صحیفه‌نین بیر نئچه ایشکالی وار",
 	"mobile-frontend-meta-data-issues-header": "مقاله نی گوزلشدیرمک",
 	"mobile-frontend-missing-image": "شکیل",
@@ -64,10 +65,10 @@
 	"mobile-frontend-settings-site-description": "{{SITENAME}}، {{PLURAL:$1|بیر|$1}} دیل‌ده ال‌ده‌دیر. بوتون ال‌ده اولان نوسخه‌لر آشاغیدا لیست اولونوبلار",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} دیل‌لری",
 	"mobile-frontend-sign-in-heading": "گیریش",
-	"mobile-frontend-terms-text": "ایشلتمک شرطلری",
+	"mobile-frontend-terms-text": "ایشلتمک شرط‌لری",
 	"mobile-frontend-username": "ایستیفاده‌چی آدی:",
 	"mobile-frontend-username-placeholder": "ایستیفاده‌چی آدی",
-	"mobile-frontend-view": "موبایل گؤرونتو",
+	"mobile-frontend-view": "موبایل گؤرونومو",
 	"mobile-frontend-view-desktop": "دسکتاپ",
 	"mobile-frontend-view-mobile": "موبایل",
 	"mobile-frontend-watchlist-add": "$1 سیزین ایزله‌دیکلرینیزه آرتیریلدی",
