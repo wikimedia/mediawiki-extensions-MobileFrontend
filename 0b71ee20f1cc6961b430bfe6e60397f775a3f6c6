@@ -52,6 +52,24 @@
       "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f4d00825",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-14T16:08:26Z",
+      "side": 0,
+      "message": "Looking again at these rules - theyare bad and I don\u0027t know why they are here. Why do we do this? Do you remember why? Why do we want to hide the icon for the user profile?\n\nThe second one is very clear - hide the logout button for non-js users\n\nNote: this is an edge case you can\u0027t get to this state easily without JS - you have to manually go to the login page and then this page.",
+      "parentUuid": "6e7c4fa4_94d9945d",
+      "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
