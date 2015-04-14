@@ -56,7 +56,9 @@ nav {
 
 
 	.client-js & {
-		.icon-secondary {
+		// FIXME: Remove when cache cleared.
+		.icon-secondary,
+		.secondary-action {
 			border: none;
 			position: absolute;
 			right: 0;
@@ -64,15 +66,11 @@ nav {
 			bottom: 0;
 			padding-right: 0;
 			border-left: 1px solid @colorGray7;
-
-			// FIXME: Remove when cache cleared and using mw-ui-icon
-			&.icon {
-				width: 0;
-			}
 		}
 
+		// FIXME: Remove when cache cleared.
 		.icon-profile,
-		.mw-ui-icon-profile {
+		.primary-action {
 			// 1px for the logout icon border-left
 			margin-right: @menuLinkLineHeight * 2 + 1;
 		}

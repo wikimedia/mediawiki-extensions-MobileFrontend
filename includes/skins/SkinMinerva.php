@@ -528,14 +528,14 @@ class SkinMinerva extends SkinTemplate {
 					array(
 						'text' => $username,
 						'href' => SpecialPage::getTitleFor( 'UserProfile', $username )->getLocalUrl(),
-						'class' => MobileUI::iconClass( 'profile', 'before', 'truncated-text' ),
+						'class' => MobileUI::iconClass( 'profile', 'before', 'truncated-text primary-action' ),
 						'data-event-name' => 'profile',
 					),
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
 						'href' => $url,
 						'class' => MobileUI::iconClass(
-							'secondary-logout', 'element', 'icon-24px icon-secondary truncated-text' ),
+							'secondary-logout', 'element', 'secondary-action truncated-text' ),
 						'data-event-name' => 'logout',
 					),
 				),
