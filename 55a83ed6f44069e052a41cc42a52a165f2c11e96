@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cbb76c83",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 556,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-14T00:46:30Z",
+      "side": 1,
+      "message": "Don\u0027t you need to change \u0027icon-anon\u0027 too?",
+      "revId": "55a83ed6f44069e052a41cc42a52a165f2c11e96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_cb668c26",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-14T00:46:30Z",
+      "side": 0,
+      "message": "Why are you removing the style for the icon that\u0027s not removed in the skin?",
+      "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
