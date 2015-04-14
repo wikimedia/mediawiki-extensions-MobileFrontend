@@ -151,6 +151,37 @@
 		 */
 		getMainMenu: function () {
 			return this.mainMenu;
+		},
+
+		/**
+		 * Returns the appropriate license message including links/name to
+		 * terms of use (if any) and license page
+		 */
+		getLicenseMsg: function () {
+			var licenseMsg,
+				mfLicense = mw.config.get( 'wgMFLicense' ),
+				licensePlural = mw.language.convertNumber( mfLicense.plural );
+
+			if ( mfLicense.link ) {
+				if ( $( '#footer-places-terms-use' ).length > 0 ) {
+					licenseMsg = mw.msg(
+						'mobile-frontend-editor-licensing-with-terms',
+						mw.message(
+							'mobile-frontend-editor-terms-link',
+							$( '#footer-places-terms-use a' ).attr( 'href' )
+						).parse(),
+						mfLicense.link,
+						licensePlural
+					);
+				} else {
+					licenseMsg = mw.msg(
+						'mobile-frontend-editor-licensing',
+						mfLicense.link,
+						licensePlural
+					);
+				}
+			}
+			return licenseMsg;
 		}
 	} );
 
