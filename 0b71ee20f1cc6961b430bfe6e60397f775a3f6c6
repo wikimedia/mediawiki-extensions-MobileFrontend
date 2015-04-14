@@ -88,6 +88,24 @@
       "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_34944039",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-14T16:28:47Z",
+      "side": 0,
+      "message": "This all becomes mute when we push mw-ui-icon to stable since these rules get deleted... but anyway.. I\u0027ve rewritten this using ul li a rules and now see no change in appearance between before and after for this view so I hope that is satisfactory.",
+      "parentUuid": "6e7c4fa4_948e7431",
+      "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
