@@ -34,6 +34,24 @@
       "revId": "a7a11d44dfc59f8a639b13ec0fcde84c2efdc95b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f156da5f",
+        "filename": "less/modules/bannerImage.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-14T14:47:33Z",
+      "side": 0,
+      "message": "Yes, it looks like we got rid of the commons category link from banner images at some point.",
+      "parentUuid": "6e7c4fa4_0ed1f1cd",
+      "revId": "a7a11d44dfc59f8a639b13ec0fcde84c2efdc95b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

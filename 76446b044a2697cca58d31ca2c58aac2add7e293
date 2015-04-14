@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_91c5260f",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-14T14:47:33Z",
+      "side": 1,
+      "message": "Since we\u0027re not fixing the IE bug anymore, do we still need this extra element? Note, I\u0027m going to use the img tag as part of the banner image html on page load, so either way, it will be removed ;) 194777",
+      "revId": "76446b044a2697cca58d31ca2c58aac2add7e293",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
