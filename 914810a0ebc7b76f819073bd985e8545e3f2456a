@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_9403d4c0",
+        "filename": "includes/MobileUI.php",
+        "patchSetId": 18
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-14T16:24:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_ceee99e8",
+      "revId": "914810a0ebc7b76f819073bd985e8545e3f2456a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_ee97d54a",
         "filename": "javascripts/modules/mainMenu/MainMenu.js",
         "patchSetId": 18
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_b4be10aa",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-14T16:24:03Z",
+      "side": 1,
+      "message": "It\u0027s only a short term measure and at this point due to the rules above, icon-glyph-name should be the only remaining class (the other ones - icon-text and icon get removed in the 2 lines above)\n\nCould probably check for a space before or the beginning of the string to double check.\n\nAlternatively could manually change these lines since there is a finite amount of them... what\u0027s best?",
+      "parentUuid": "6e7c4fa4_ee97d54a",
+      "revId": "914810a0ebc7b76f819073bd985e8545e3f2456a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_8edbc123",
         "filename": "less/modules/watchstar.less",
         "patchSetId": 18
@@ -47,6 +83,24 @@
       "writtenOn": "2015-04-14T10:55:34Z",
       "side": 1,
       "message": "Seems like now the star is always rotated, so we need \u0026.mw-ui-icon-watched to make it rotate only when toggled to watched/unwatched",
+      "revId": "914810a0ebc7b76f819073bd985e8545e3f2456a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f4f328e2",
+        "filename": "less/modules/watchstar.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-14T16:24:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_8edbc123",
       "revId": "914810a0ebc7b76f819073bd985e8545e3f2456a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -81,6 +135,24 @@
       "writtenOn": "2015-04-14T10:55:34Z",
       "side": 1,
       "message": "Can\u0027t test this because userprofile.less is not being loaded, not sure why. See https://phabricator.wikimedia.org/T96011\n\nSeems like it would work fine looking at the html :)",
+      "revId": "914810a0ebc7b76f819073bd985e8545e3f2456a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_74271863",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 18
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-14T16:24:03Z",
+      "side": 1,
+      "message": "exploring...",
+      "parentUuid": "6e7c4fa4_0e6b311b",
       "revId": "914810a0ebc7b76f819073bd985e8545e3f2456a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
