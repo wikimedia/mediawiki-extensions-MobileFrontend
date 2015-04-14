@@ -70,6 +70,24 @@
       "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_948e7431",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-14T16:13:44Z",
+      "side": 0,
+      "message": "You\u0027re right, it\u0027s not clear. Maybe we should not have these rules at all. However, deleting them as part of an unrelated patch is not a good idea imo. Moreover, the rules are not being removed at all, their selector is just being changed. I suggest we leave a FIXME here and deal with it in a different patch.",
+      "parentUuid": "6e7c4fa4_f4d00825",
+      "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
