@@ -16,6 +16,24 @@
       "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f445681a",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-14T15:51:27Z",
+      "side": 0,
+      "message": "I don\u0027t understand.\nThe patch is about not using icon classes for this kind of styling.\nThis patch doesn\u0027t remove icon classes.\nIn Special:MobileMenu and all special pages there are no caching issues to worry about so this can be done.",
+      "parentUuid": "6e7c4fa4_cb668c26",
+      "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

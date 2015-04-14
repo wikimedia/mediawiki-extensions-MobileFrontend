@@ -16,6 +16,24 @@
       "revId": "55a83ed6f44069e052a41cc42a52a165f2c11e96",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3453e0e3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 556,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-14T15:51:27Z",
+      "side": 1,
+      "message": "No. Next patch. .icon-anon is not being used for anything other than icon styling.",
+      "parentUuid": "6e7c4fa4_cbb76c83",
+      "revId": "55a83ed6f44069e052a41cc42a52a165f2c11e96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
