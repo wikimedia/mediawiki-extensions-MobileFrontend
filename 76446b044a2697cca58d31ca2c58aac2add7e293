@@ -16,6 +16,24 @@
       "revId": "76446b044a2697cca58d31ca2c58aac2add7e293",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_51e6aeac",
+        "filename": "javascripts/modules/bannerImage/BannerImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-14T14:56:17Z",
+      "side": 1,
+      "message": "background-clip has known bugs in iOS Safari when used with background-size: border [0]. I\u0027d say we keep it. What say you?\n\n[0] http://caniuse.com/#search\u003dbackground-clip",
+      "parentUuid": "6e7c4fa4_91c5260f",
+      "revId": "76446b044a2697cca58d31ca2c58aac2add7e293",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
