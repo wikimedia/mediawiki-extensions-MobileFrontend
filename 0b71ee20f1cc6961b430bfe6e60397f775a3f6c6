@@ -34,6 +34,24 @@
       "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_94d9945d",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-14T16:04:57Z",
+      "side": 0,
+      "message": "Since .icon.icon-anon relies on the fact that its background image is none and its padding-left is 0, by changing the icon class aren\u0027t you changing the styling of the element that has the .icon.icon-anon too? Now, whatever element has the .icon.icon-anon class won\u0027t have these rules applied to it.",
+      "parentUuid": "6e7c4fa4_f445681a",
+      "revId": "0b71ee20f1cc6961b430bfe6e60397f775a3f6c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
