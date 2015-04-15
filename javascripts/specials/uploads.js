@@ -3,6 +3,7 @@
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
+		Icon = M.require( 'Icon' ),
 		PhotoList = M.require( 'modules/gallery/PhotoList' ),
 		pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 		currentUserName = user.getName(),
@@ -28,7 +29,7 @@
 	 * @ignore
 	 */
 	function init() {
-		var userGallery, $a,
+		var userGallery,
 			$btnContainer = $( '.ctaUploadPhoto' ),
 			$content = $( '.content' );
 
@@ -44,11 +45,15 @@
 		if ( PhotoUploaderButton.isSupported && currentUserName === userName && mw.config.get( 'wgUserCanUpload' ) ) {
 			if ( $btnContainer.length ) {
 				if ( user.getEditCount() === 0 ) {
-					$a = $( '<a class="button icon icon-photo icon-text mw-ui-button mw-ui-progressive">' )
+					$( '<a class="button mw-ui-button mw-ui-progressive">' )
+						.addClass(
+							new Icon( {
+								name: 'photo',
+								hasText: true
+							} ).getClassName()
+						)
 						.text( mw.msg( 'mobile-frontend-photo-upload-generic' ) )
 						.attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $btnContainer );
-					// FIXME: This is needed so the camera shows. Eww.
-					$( '<div class="icon icon icon-24px">' ).appendTo( $a );
 				} else {
 					createButton( $btnContainer );
 				}
