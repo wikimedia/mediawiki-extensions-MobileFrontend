@@ -11,9 +11,9 @@
 	 */
 	ImageOverlayNew = ImageOverlay.extend( {
 		template: mw.template.get( 'mobile.mediaViewer.beta', 'Overlay.hogan' ),
-		templatePartials: {
+		templatePartials: $.extend( {}, ImageOverlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.mediaViewer', 'Overlay.hogan' )
-		},
+		} ),
 		events: $.extend( {}, ImageOverlay.prototype.events, {
 			// Click tracking for table of contents so we can see if people interact with it
 			'click .slider-button': 'onSlide'

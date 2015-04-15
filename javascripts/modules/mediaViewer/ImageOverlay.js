@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		Icon = M.require( 'Icon' ),
+		Button = M.require( 'Button' ),
 		ImageApi = M.require( 'modules/mediaViewer/ImageApi' ),
 		ImageOverlay, api;
 
@@ -23,8 +24,7 @@
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.cancelButton HTML of the cancel button.
-		 * @cfg {String} defaults.detailsMsg Caption for a button leading to the details
-		 * of a media file (e.g. an image) in a preview.
+		 * @cfg {Object} defaults.detailsButton options for details button
 		 * @cfg {String} defaults.licenseLinkMsg Link to license information in media viewer.
 		 * @cfg {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 		 */
@@ -36,7 +36,11 @@
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-overlay-close' )
 			} ).toHtmlString(),
-			detailsMsg: mw.msg( 'mobile-frontend-media-details' ),
+			detailsButton: new Button( {
+				label: mw.msg( 'mobile-frontend-media-details' ),
+				additionalClassNames: 'button',
+				progressive: true
+			} ).options,
 			licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' ),
 			thumbnails: []
 		} ),

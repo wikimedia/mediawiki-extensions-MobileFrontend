@@ -6,7 +6,9 @@
 	</div>
 	{{{cancelButton}}}
 	<div class="details">
-		<a class="mw-ui-button mw-ui-progressive button" href="#">{{detailsMsg}}</a>
+		{{#detailsButton}}
+			{{>button}}
+		{{/detailsButton}}
 		<p class="truncated-text">{{caption}}</p>
 		<p class="license"><a href="#">{{licenseLinkMsg}}</a></p>
 	</div>

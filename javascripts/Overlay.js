@@ -4,6 +4,7 @@
 	var
 		View = M.require( 'View' ),
 		Icon = M.require( 'Icon' ),
+		Button = M.require( 'Button' ),
 		icons = M.require( 'icons' ),
 		browser = M.require( 'browser' ),
 		$window = $( window ),
@@ -40,7 +41,8 @@
 		 */
 		className: 'overlay',
 		templatePartials: {
-			header: mw.template.get( 'mobile.overlays', 'header.hogan' )
+			header: mw.template.get( 'mobile.overlays', 'header.hogan' ),
+			button: Button.prototype.template
 		},
 		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),
 		/**
