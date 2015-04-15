@@ -189,7 +189,8 @@
 		 * @param {Object} data Template data.
 		 */
 		render: function ( data ) {
-			data = $.extend( true, {}, this.options, data );
+			this.options = $.extend( this.options, data );
+			data = this.options;
 			this.preRender( data );
 			if ( this.template ) {
 				this.$el.html( this.template.render( data, this.templatePartials ) );
