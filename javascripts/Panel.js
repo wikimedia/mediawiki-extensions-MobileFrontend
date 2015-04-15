@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var View = M.require( 'View' ),
 		Panel;
@@ -12,18 +12,8 @@
 		className: 'panel',
 		// in milliseconds
 		minHideDelay: 10,
-		appendToElement: '#content',
 		events: {
 			'click .cancel': 'onCancel'
-		},
-		/** @inheritdoc */
-		postRender: function () {
-			var self = this;
-			// This module might be loaded at the top of the page e.g. Special:Uploads
-			// Thus ensure we wait for the DOM to be loaded
-			$( function () {
-				self.appendTo( self.appendToElement );
-			} );
 		},
 
 		/**
@@ -90,4 +80,4 @@
 
 	M.define( 'Panel', Panel );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
