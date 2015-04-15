@@ -2,6 +2,7 @@
 	var loader = M.require( 'loader' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		user = M.require( 'user' ),
+		Button = M.require( 'Button' ),
 		$talk = $( '.talk' ),
 		page = M.getCurrentPage(),
 		overlayManager = M.require( 'overlayManager' ),
@@ -48,11 +49,11 @@
 		!user.isAnon() &&
 		( page.inNamespace( 'talk' ) || page.inNamespace( 'user_talk' ) )
 	) {
-		// FIXME: Like icons.js, it should be possible to easily create a button, instead of this
-		$( '<a class="mw-ui-button mw-ui-progressive">' )
-			.text( mw.msg( 'mobile-frontend-talk-add-overlay-submit' ) )
-			.attr( 'href', '#/talk/new' )
-			.prependTo( '#content' );
+		new Button( {
+			label: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
+			href: '#/talk/new',
+			progressive: true
+		} ).prependTo( '#content' );
 
 		// reload the page after the new discussion was added
 		M.on( 'talk-added-wo-overlay', function () {

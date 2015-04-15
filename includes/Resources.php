@@ -330,6 +330,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'icon.hogan' => 'templates/icon.hogan',
 			'Section.hogan' => 'templates/Section.hogan',
+			'button.hogan' => 'templates/button.hogan',
 		),
 		'messages' => array(
 			// icons.js
@@ -342,6 +343,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// FIXME: Remove api code to mobile.ajax
 			'javascripts/api.js',
 			'javascripts/PageApi.js',
+			'javascripts/Button.js',
 			'javascripts/Icon.js',
 			'javascripts/icons.js',
 			'javascripts/Panel.js',

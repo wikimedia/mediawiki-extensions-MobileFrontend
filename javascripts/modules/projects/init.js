@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 
 	var loader = M.require( 'loader' ),
+		Button = M.require( 'Button' ),
 		overlayManager = M.require( 'overlayManager' ),
 		wbId = M.require( 'util' ).getWikiBaseItemId();
 
@@ -26,10 +27,10 @@
 		} );
 
 		// Add the button
-		$( '<a class="mw-ui-button">' )
-			.attr( 'href', '#/other-projects' )
-			.text( mw.msg( 'mobile-frontend-other-project-label' ) )
-			.appendTo( '#page-secondary-actions' );
+		new Button( {
+			label: mw.msg( 'mobile-frontend-other-project-label' ),
+			href: '#/other-projects'
+		} ).appendTo( '#page-secondary-actions' );
 	}
 
 }( mw.mobileFrontend, jQuery ) );
