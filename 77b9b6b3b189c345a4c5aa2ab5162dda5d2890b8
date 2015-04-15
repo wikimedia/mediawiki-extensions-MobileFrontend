@@ -16,6 +16,24 @@
       "revId": "77b9b6b3b189c345a4c5aa2ab5162dda5d2890b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_19685084",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-15T21:29:54Z",
+      "side": 1,
+      "message": "Lack of core support. Tracked in https://phabricator.wikimedia.org/T96191",
+      "parentUuid": "6e7c4fa4_3f466227",
+      "revId": "77b9b6b3b189c345a4c5aa2ab5162dda5d2890b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
