@@ -1,29 +1,23 @@
 @import "minerva.variables";
-@import "minerva.mixins";
 @import "mediawiki.mixins";
 
-.banner-image {
+.banner-image-container {
 	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
 	height: 360px;
 	max-height: 360px;
-	display: none;
+}
+
+.banner-image {
+	height: 100%;
 	background-position: 50% 20%;
 	background-repeat: no-repeat;
 	.background-size( e(''), cover);
-	position: relative;
-
-	a {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		background-color: white;
-		opacity: .8;
-		padding: 0 8px;
-	}
 }
+
 @media all and (min-width: @wgMFDeviceWidthTablet) {
 	.banner-image {
-		max-width: @wgMFDeviceWidthTablet;
-		margin: 0 auto;
+		margin: 0 @contentPaddingTablet;
 	}
 }
