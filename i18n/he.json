@@ -13,7 +13,8 @@
 			"ערן",
 			"איתן96",
 			"Danny-w",
-			"YaronSh"
+			"YaronSh",
+			"LaG roiL"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
@@ -88,8 +89,8 @@
 	"mobile-frontend-editor-error-loading": "שגיאה, לא ניתן לטעון את הפסקה.",
 	"mobile-frontend-editor-error-preview": "שגיאה, קרה משהו בלתי־צפוי בעת ניסיון לטעון את התצוגה המקדימה. נא לסגור ולנסות שוב.",
 	"mobile-frontend-editor-keep-editing": "המשך עריכה",
-	"mobile-frontend-editor-licensing": "שמירת השינויים מהווה את הסכמתך לפרסום התרומה שלך לפי תנאי רישיון $1.",
-	"mobile-frontend-editor-licensing-with-terms": "שמירת השינויים מהווה את הסכמתך ל$1 ולפרסום התרומה שלך לפי תנאי רישיון $2.",
+	"mobile-frontend-editor-licensing": "שמירת השינויים מהווה את הסכמתך לפרסום התרומה שלך לפי תנאי {{PLURAL:$2|רישיון|רישיונות}} $1.",
+	"mobile-frontend-editor-licensing-with-terms": "שמירת השינויים מהווה את הסכמתך ל$1 ולפרסום התרומה שלך לפי תנאי {{PLURAL:$3|רישיון|רישיונות}} $2.",
 	"mobile-frontend-editor-terms-link": "[$1 תנאי שימוש]",
 	"mobile-frontend-editor-new-page-confirm": "האם {{GENDER:$1|אתה|את}} רוצה ליצור דף חדש ב{{GRAMMAR:תחילית|{{SITENAME}}}}?",
 	"mobile-frontend-editor-newpage-prompt": "הדף הזה אינו קיים. למה לא לאזור אומץ וליצור אותו?",
