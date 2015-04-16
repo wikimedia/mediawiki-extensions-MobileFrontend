@@ -94,7 +94,7 @@
 	"mobile-frontend-editor-error-preview": "Ошибка! Что-то неожиданное произошло после загрузки предпросмотра. Закройте и повторите попытку.",
 	"mobile-frontend-editor-keep-editing": "Продолжить редактирование",
 	"mobile-frontend-editor-licensing": "Сохраняя изменения, вы соглашаетесь разместить ваш вклад под лицензией $1 {{PLURAL:$2|license|licenses}}.",
-	"mobile-frontend-editor-licensing-with-terms": "Сохраняя изменения, вы соглашаетесь с $1 и с тем, что размещаете ваш вклад под лицензией $2.",
+	"mobile-frontend-editor-licensing-with-terms": "Сохраняя изменения, вы соглашаетесь с $1 и с тем, что размещаете ваш вклад под лицензией $2 {{PLURAL:$3|license|licenses}}.",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Вы действительно хотите создать}} новую страницу на сайте {{SITENAME}}?",
 	"mobile-frontend-editor-newpage-prompt": "Эта страница не существует. Почему бы не набраться смелости и создать её?",
 	"mobile-frontend-editor-placeholder": "Этот раздел пуст. Будьте первым, кто заполнит его!",

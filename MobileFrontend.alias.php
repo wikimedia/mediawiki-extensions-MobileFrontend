@@ -193,7 +193,12 @@ $specialPageAliases['he'] = array(
 
 /** Hindi (हिन्दी) */
 $specialPageAliases['hi'] = array(
+	'History' => array( 'इतिहास' ),
 	'MobileOptions' => array( 'मोबाइल_विकल्प' ),
+	'MobileEditor' => array( 'मोबाइल_सम्पादक' ),
+	'MobileLanguages' => array( 'मोबाइल_भाषा' ),
+	'Nearby' => array( 'आस-पास' ),
+	'UserProfile' => array( 'सदस्य_प्रोफाइल' ),
 );
 
 /** Upper Sorbian (hornjoserbsce) */
