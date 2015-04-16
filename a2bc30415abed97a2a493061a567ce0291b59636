@@ -16,6 +16,24 @@
       "revId": "a2bc30415abed97a2a493061a567ce0291b59636",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e76d7c5_d398d47e",
+        "filename": "javascripts/View.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 2027
+      },
+      "writtenOn": "2015-04-16T16:33:38Z",
+      "side": 1,
+      "message": "lol phuedx, i did the commit, thought i had done git review, did a git reset, saw that i hadn\u0027t sent it, and redid the commit with this mistake.\n\nFixin\u0027",
+      "parentUuid": "2e76d7c5_d3d1b428",
+      "revId": "a2bc30415abed97a2a493061a567ce0291b59636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
