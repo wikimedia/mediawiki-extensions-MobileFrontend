@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e76d7c5_161cfa69",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-16T17:22:26Z",
+      "side": 1,
+      "message": "Do we care about backwards compatibility? (i\u0027m not sure)",
+      "revId": "575bd7d5e31ffc759bb92f0c72767eaf971b7b30",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
