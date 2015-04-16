@@ -277,6 +277,7 @@ class MinervaTemplate extends BaseTemplate {
 				if ( isset( $data['subject-page'] ) ) {
 					echo $data['subject-page'];
 				}
+				$this->renderPostContent( $data );
 				$this->renderSecondaryActions();
 				$this->renderHistoryLinkBottom( $data );
 			?>
@@ -312,6 +313,14 @@ class MinervaTemplate extends BaseTemplate {
 		</div>
 		<?php
 		}
+	}
+
+	/**
+	 * Renders any content after the main content and before the secondary actions.
+	 *
+	 * @param array $data The data used to build the page
+	 */
+	protected function renderPostContent( $data ) {
 	}
 
 	/**

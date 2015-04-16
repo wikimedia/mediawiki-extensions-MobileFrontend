@@ -73,4 +73,37 @@ class MinervaTemplateBeta extends MinervaTemplate {
 			<?php
 		}
 	}
+
+	/** @inheritdoc */
+	protected function renderPostContent( $data ) {
+		echo $this->renderBrowseTags( $data );
+	}
+
+	/**
+	 * Renders the tags assigned to the page as part of the Browse experiment.
+	 *
+	 * @param $data The data used to build the page
+	 * @return string The HTML representing the tags section
+	 */
+	protected function renderBrowseTags( $data ) {
+		if ( !isset( $data['browse_tags'] ) || !$data['browse_tags'] ) {
+			return '';
+		}
+
+		// TODO: Create tag entity and view.
+		$tags = array_map( function ( $rawTag ) {
+			return array(
+				'msg' => $rawTag,
+			);
+
+		}, $data['browse_tags'] );
+
+		// FIXME: This should be in MinervaTemplate#getTemplateParser.
+		$templateParser = new TemplateParser( __DIR__ . '/../../templates' );
+
+		return $templateParser->processTemplate( 'browse/tags', array(
+			'headerMsg' => wfMessage( 'mobile-frontend-browse-tags-header' )->text(),
+			'tags' => $tags,
+		) );
+	}
 }

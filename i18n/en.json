@@ -408,5 +408,6 @@
 	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|day|days}} ago",
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|month|months}} ago",
 	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|year|years}} ago",
-	"mobile-frontend-console-recruit": "\\o/ Hey! This is open source software and we need volunteers to help us build this thing, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/view/67/"
+	"mobile-frontend-console-recruit": "\\o/ Hey! This is open source software and we need volunteers to help us build this thing, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-browse-tags-header": "Tags"
 }

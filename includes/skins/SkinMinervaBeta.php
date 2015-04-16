@@ -3,6 +3,9 @@
  * SkinMinervaBeta.php
  */
 
+use MobileFrontend\Browse\TagService;
+use MobileFrontend\Browse\NullTagService;
+
 /**
  * Beta-Implementation of stable class SkinMinerva
  */
@@ -182,5 +185,46 @@ class SkinMinervaBeta extends SkinMinerva {
 				$subtitle .
 				Html::closeElement( 'div' ) );
 		}
+	}
+
+	protected function preparePageContent( QuickTemplate $tpl ) {
+		parent::preparePageContent( $tpl );
+
+		$title = $this->getTitle();
+
+		if ( !$title ) {
+			return;
+		}
+
+		$browseTags = $this->getBrowseTags( $title );
+		$tpl->set( 'browse_tags', $browseTags );
+	}
+
+	/**
+	 * Gets the tags assigned to the page.
+	 *
+	 * @param Title $title
+	 * @return array
+	 */
+	private function getBrowseTags( Title $title ) {
+		return $this->getBrowseTagService()
+			->getTags( $title );
+	}
+
+	// FIXME: This could be moved to the MobileFrontend\Browse\TagServiceFactory class.
+	/**
+	 * Gets the service that gets tags assigned to the page.
+	 *
+	 * @return MobileFrontend\Browse\TagService
+	 */
+	private function getBrowseTagService() {
+		$mfConfig = $this->getMFConfig();
+		$tags = $mfConfig->get( 'MFBrowseTags' );
+
+		if ( !$mfConfig->get( 'MFIsBrowseEnabled' ) ) {
+			return new NullTagService( $tags );
+		}
+
+		return new TagService( $tags );
 	}
 }

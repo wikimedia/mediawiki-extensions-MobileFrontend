@@ -436,5 +436,6 @@
 	"mobile-frontend-days-ago": "Expression of duration of time passed in days.\nParameter:\n* $1 - number of days that have passed.",
 	"mobile-frontend-months-ago": "Expression of duration of time passed in months.\nParameter:\n * $1 - number of months that have passed.",
 	"mobile-frontend-years-ago": "Expression of duration of time passed in years.\nParameter:\n * $1 - number of years that have passed.",
-	"mobile-frontend-console-recruit": "Message that is displayed in the JavaScript console aimed at developers in an attempt to recruit volunteers. The \\o/ emoticon is a man with his arms in the air with the purpose of drawing attention to the message. If this doesn't translate into the destination language feel free to omit it or use something more applicable."
+	"mobile-frontend-console-recruit": "Message that is displayed in the JavaScript console aimed at developers in an attempt to recruit volunteers. The \\o/ emoticon is a man with his arms in the air with the purpose of drawing attention to the message. If this doesn't translate into the destination language feel free to omit it or use something more applicable.",
+	"mobile-frontend-browse-tags-header": "The header of the \"tags\" section of the page, which is part of the Browse experiment."
 }

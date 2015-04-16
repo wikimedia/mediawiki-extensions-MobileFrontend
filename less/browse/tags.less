@@ -1,0 +1,31 @@
+@import "minerva.variables";
+
+.browse-tags {
+	list-style: none;
+
+	.browse-tag {
+		display: inline-block;
+		margin-right: 1em;
+		background-color: @grayLightest;
+		color: @grayMediumDark;
+		padding: 0 .75em;
+		border-radius: .2em;
+
+		&:first-letter {
+			text-transform: lowercase;
+		}
+
+		a,
+		a:visited {
+			color: @grayMediumDark;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+aside {
+	clear: both;
+}
