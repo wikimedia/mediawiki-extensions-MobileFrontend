@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2e76d7c5_c7bc8eb4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-16T22:41:49Z",
+      "side": 1,
+      "message": "I see what you mean. It\u0027s been removed here: Ida0a26e59a6eef10855e9df83b635e104760f2ac",
+      "parentUuid": "2e76d7c5_bc15e542",
+      "revId": "469669cf66bf9c32715801f80025f553ffc5d723",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e76d7c5_3627b661",
         "filename": "javascripts/Drawer.js",
         "patchSetId": 2
