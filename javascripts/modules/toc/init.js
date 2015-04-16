@@ -1,4 +1,4 @@
-( function ( M ) {
+( function ( M, $ ) {
 	var TableOfContents = M.require( 'modules/toc/TableOfContents' ),
 		toggle = M.require( 'toggle' );
 
@@ -28,9 +28,7 @@
 				// don't show toc at end of page, when no sections there
 				toc.insertAfter( '#toc' );
 				// remove the original parser toc
-				this.$( '#toc' ).remove();
-				// prevent to float text right of toc
-				this.$( '.toc-mobile' ).after( '<div style="clear:both;"></div>' );
+				$( '#toc' ).remove();
 			} else {
 				// otherwise append it to the lead section
 				toc.appendTo( page.getLeadSectionElement() );
@@ -44,4 +42,4 @@
 		init( M.getCurrentPage() );
 	}
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );
