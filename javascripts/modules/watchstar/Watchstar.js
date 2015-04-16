@@ -11,7 +11,7 @@
 		} ),
 		watchedIcon = new Icon( {
 			name: 'watched',
-			additionalClassNames: 'icon-32px watch-this-article'
+			additionalClassNames: 'icon-32px watch-this-article watched'
 		} ),
 		toast = M.require( 'toast' ),
 		user = M.require( 'user' ),
@@ -87,7 +87,7 @@
 		postRender: function ( options ) {
 			var self = this,
 				unwatchedClass = watchIcon.getGlyphClassName(),
-				watchedClass = watchedIcon.getGlyphClassName(),
+				watchedClass = watchedIcon.getGlyphClassName() + ' watched',
 				page = options.page,
 				$el = self.$el;
 

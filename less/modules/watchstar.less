@@ -1,24 +1,10 @@
 @import "minerva.variables";
 @import "minerva.mixins";
 
-@watchThisArticleSize: 48px;
-
-// watchlist and search results
-.page-list .watch-this-article {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	margin-top: -(@watchThisArticleSize / 2);
-	width: @watchThisArticleSize;
-}
-
 .animations {
-	.mw-ui-icon.watch-this-article,
-	.icon.watch-this-article {
+	.watch-this-article {
 		.transition-transform( .5s );
-
-		&.mw-ui-icon-watched,
-		&.icon-watched {
+		&.watched {
 			.transform( rotate(72deg) );
 		}
 	}
