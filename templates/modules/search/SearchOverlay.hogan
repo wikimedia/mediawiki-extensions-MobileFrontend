@@ -1,9 +1,12 @@
 <div class="overlay-header-container position-fixed">
 	<div class="overlay-header">
 		{{{cancelButton}}}
-		<form method="get" action="{{action}}" class="search-box">
-			<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" value="{{searchTerm}}">
-		</form>
+		<form action="/index.php" id="searchform">
+<div id="simpleSearch">
+<input type="search" name="search" placeholder="Search Box Widget" title="Search this MediaWiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="on">
+<input type="hidden" value="Special:Search" name="title">
+<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />
+                </form>
 		{{{clearIcon}}}
 	</div>
 </div>
