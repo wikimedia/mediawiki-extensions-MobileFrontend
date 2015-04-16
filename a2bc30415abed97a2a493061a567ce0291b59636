@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e76d7c5_d3d1b428",
+        "filename": "javascripts/View.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-16T16:30:29Z",
+      "side": 1,
+      "message": "From the commit message: \"$.extend( target, src, ... ) Already mutates target. No need to reassign to this.options\"\n\nthis.options is being reassigned.",
+      "revId": "a2bc30415abed97a2a493061a567ce0291b59636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
