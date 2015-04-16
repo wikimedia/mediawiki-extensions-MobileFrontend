@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e76d7c5_bc15e542",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-16T20:10:26Z",
+      "side": 1,
+      "message": "WikiGrokDialog should extend Drawer or extend Panel. Currently it extends Panel but has defaults.option.isDrawer - this is confusing. Maybe that should be renamed? :)",
+      "parentUuid": "2e76d7c5_16395a3e",
+      "revId": "469669cf66bf9c32715801f80025f553ffc5d723",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e76d7c5_3627b661",
         "filename": "javascripts/Drawer.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-16T18:14:10Z",
       "side": 1,
       "message": "Panel -\u003e Drawer",
+      "revId": "469669cf66bf9c32715801f80025f553ffc5d723",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e76d7c5_bc2c0591",
+        "filename": "javascripts/Drawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-16T20:10:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e76d7c5_3627b661",
       "revId": "469669cf66bf9c32715801f80025f553ffc5d723",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
