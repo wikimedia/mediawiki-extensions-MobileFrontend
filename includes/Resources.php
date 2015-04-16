@@ -354,7 +354,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/Skin.js',
 			'javascripts/Schema.js',
 			'javascripts/util.js',
-			'javascripts/application.js',
+			'javascripts/init.js',
 		),
 		'position' => 'bottom',
 	),
@@ -612,7 +612,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/talk.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/talk/talk.js',
+			'javascripts/modules/talk/init.js',
 		),
 		'messages' => array(
 			'mobile-frontend-talk-overlay-header',
@@ -864,8 +864,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/uploads/ProgressBar.js',
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
 			'javascripts/modules/uploads/LeadPhotoUploaderButton.js',
-			// FIXME: this seems to be uploads only, code should be moved to uploads folder.
-			'javascripts/modules/routes.js',
+			'javascripts/modules/uploads/routes.js',
 		),
 		'messages' => array(
 			// LeadPhotoUploaderButton.js
