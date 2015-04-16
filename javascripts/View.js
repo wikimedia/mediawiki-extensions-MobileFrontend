@@ -193,16 +193,16 @@
 		 * Fill this.$el with template rendered using data if template is set.
 		 *
 		 * @method
-		 * @param {Object} data Template data.
+		 * @param {Object} data Template data. Will be merged into the view's
+		 * options
 		 */
 		render: function ( data ) {
-			this.options = $.extend( this.options, data );
-			data = this.options;
-			this.preRender( data );
+			var options = $.extend( this.options, data );
+			this.preRender( options );
 			if ( this.template ) {
-				this.$el.html( this.template.render( data, this.templatePartials ) );
+				this.$el.html( this.template.render( options, this.templatePartials ) );
 			}
-			this.postRender( data );
+			this.postRender( options );
 
 			return this;
 		},
