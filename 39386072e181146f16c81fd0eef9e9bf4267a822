@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e76d7c5_338ca8ff",
+        "filename": "less/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-16T16:54:42Z",
+      "side": 1,
+      "message": "So… MobileFrontend and MediaWiki are missing a clearfix class?",
+      "revId": "39386072e181146f16c81fd0eef9e9bf4267a822",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
