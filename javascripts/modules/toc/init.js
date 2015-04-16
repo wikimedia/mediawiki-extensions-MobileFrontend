@@ -12,6 +12,7 @@
 	function init( page ) {
 		var toc,
 			sections = page.getSections(),
+			$toc = $( '#toc' ),
 			// TODO: remove wgTOC when caches with old HTML expire
 			enableToc = mw.config.get( 'wgMFTocEnabled' ) || mw.config.get( 'wgTOC' );
 
@@ -24,11 +25,9 @@
 			} );
 
 			// if there is a toc already, replace it
-			if ( this.$( '#toc' ).length > 0 ) {
+			if ( $toc.length > 0 ) {
 				// don't show toc at end of page, when no sections there
-				toc.insertAfter( '#toc' );
-				// remove the original parser toc
-				$( '#toc' ).remove();
+				$toc.replaceWith( toc.$el );
 			} else {
 				// otherwise append it to the lead section
 				toc.appendTo( page.getLeadSectionElement() );
