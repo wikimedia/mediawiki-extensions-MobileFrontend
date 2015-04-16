@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5070d6a2",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-16T12:31:54Z",
+      "side": 1,
+      "message": "Debugging change.",
+      "revId": "4360b80c72fda7aa2cd64d10b1754bb1ab473dda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
