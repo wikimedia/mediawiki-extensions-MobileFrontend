@@ -5,6 +5,7 @@
 		View = M.require( 'View' ),
 		Icon = M.require( 'Icon' ),
 		Button = M.require( 'Button' ),
+		Anchor = M.require( 'Anchor' ),
 		icons = M.require( 'icons' ),
 		browser = M.require( 'browser' ),
 		$window = $( window ),
@@ -42,6 +43,7 @@
 		className: 'overlay',
 		templatePartials: {
 			header: mw.template.get( 'mobile.overlays', 'header.hogan' ),
+			anchor: Anchor.prototype.template,
 			button: Button.prototype.template
 		},
 		template: mw.template.get( 'mobile.overlays', 'Overlay.hogan' ),
@@ -55,6 +57,7 @@
 		 * names of the wrapper of the header buttons.
 		 * @cfg {Boolean} defaults.fixedHeader Whether the header is fixed.
 		 * @cfg {String} defaults.spinner HTML of the spinner icon.
+		 * @cfg [{Object}] defaults.footerAnchor options for an optional Anchor that can appear in the footer
 		 */
 		defaults: {
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),

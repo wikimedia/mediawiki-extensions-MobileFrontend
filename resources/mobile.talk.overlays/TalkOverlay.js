@@ -4,6 +4,7 @@
 	var
 		Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'Page' ),
+		Anchor = M.require( 'Anchor' ),
 		pageApi = M.require( 'pageApi' ),
 		user = M.require( 'user' ),
 		/**
@@ -16,8 +17,7 @@
 		 */
 		TalkOverlay = Overlay.extend( {
 			templatePartials: $.extend( {}, Overlay.prototype.templatePartials, {
-				content: mw.template.get( 'mobile.talk.overlays', 'content.hogan' ),
-				footer: mw.template.get( 'mobile.overlays', 'OverlayFooterLink.hogan' )
+				content: mw.template.get( 'mobile.talk.overlays', 'content.hogan' )
 			} ),
 			/**
 			 * @inheritdoc
@@ -32,9 +32,6 @@
 			 * @cfg {Array} defaults.headerButtons Objects that will be used as defaults for
 			 * generating header buttons. Default list includes an 'add' button, which opens
 			 * a new talk overlay.
-			 * @cfg {String} defaults.linkMsg Used as label for link to the talk page
-			 * (Talk:ArticleName) in Talk Overlay.
-			 * @cfg {String} defaults.linkClass Class name of defaults.linkMsg.
 			 */
 			defaults: {
 				headings: undefined,
@@ -46,8 +43,11 @@
 					className: 'add continue hidden',
 					msg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
 				} ],
-				linkMsg: mw.msg( 'mobile-frontend-talk-fullpage' ),
-				linkClass: 'talk-fullpage'
+				footerAnchor: new Anchor( {
+					progressive: true,
+					additionalClassNames: 'footer-link talk-fullpage',
+					label: mw.msg( 'mobile-frontend-talk-fullpage' )
+				} ).options
 			},
 
 			/** @inheritdoc */

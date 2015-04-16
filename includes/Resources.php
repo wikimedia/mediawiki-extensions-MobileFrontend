@@ -334,6 +334,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'jquery.throttle-debounce',
 		),
 		'templates' => array(
+			'anchor.hogan' => 'resources/mobile.startup/anchor.hogan',
 			'icon.hogan' => 'resources/mobile.startup/icon.hogan',
 			'Section.hogan' => 'resources/mobile.startup/Section.hogan',
 			'button.hogan' => 'resources/mobile.startup/button.hogan',
@@ -349,6 +350,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// FIXME: Remove api code to mobile.ajax
 			'resources/mobile.startup/api.js',
 			'resources/mobile.startup/PageApi.js',
+			'resources/mobile.startup/Anchor.js',
 			'resources/mobile.startup/Button.js',
 			'resources/mobile.startup/Icon.js',
 			'resources/mobile.startup/icons.js',
@@ -818,7 +820,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'header.hogan' => 'templates/OverlayHeader.hogan',
 			'Overlay.hogan' => 'templates/Overlay.hogan',
 			'LoadingOverlay.hogan' => 'templates/LoadingOverlay.hogan',
-			'OverlayFooterLink.hogan' => 'templates/OverlayFooterLink.hogan',
 		),
 		'styles' => array(
 			'less/Overlay.less',

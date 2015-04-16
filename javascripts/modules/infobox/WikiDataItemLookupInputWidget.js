@@ -1,4 +1,5 @@
 ( function ( M, $ ) {
+	var Anchor = M.require( 'Anchor' );
 	/**
 	 * Provides a generic widget for looking up items in WikiBase instances.
 	 * @cfg {Object} config Default configuration
@@ -25,14 +26,19 @@
 	 * @ignore
 	 */
 	WikiDataItemLookupInputWidget.prototype.onLookupMenuItemChoose = function ( data ) {
-		var $answer = $( '<div>' ).data( 'id', this.claimId )
+		var anchor,
+			$answer = $( '<div>' ).data( 'id', this.claimId )
 			.text( data.data.label ).data( 'value', data.data.id );
 
-		// FIXME: Build in similar way to Icon class using anchor abstraction
 		// FIXME: i18n
-		$( '<button class="mw-ui-anchor mw-ui-destructive">' ).text( 'Remove' ).on( 'click', function () {
-				$( this ).parent().remove();
-			} ).appendTo( $answer );
+		anchor = new Anchor( {
+			label: 'Remove',
+			destructive: true
+		} ).appendTo( $answer );
+		// bug T97077
+		anchor.$el.on( 'click', function () {
+			$( this ).parent().remove();
+		} );
 		$( this.appendToAnswer ).append( $answer );
 		this.$element.find( 'input' ).val( '' );
 	};

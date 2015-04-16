@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
+		Anchor = M.require( 'Anchor' ),
 		NotificationsOverlay;
 
 	/**
@@ -12,24 +13,21 @@
 	NotificationsOverlay = Overlay.extend( {
 		className: 'overlay notifications-overlay navigation-drawer',
 		templatePartials: {
-			content: mw.template.get( 'mobile.notifications.overlay', 'content.hogan' ),
-			footer: mw.template.get( 'mobile.overlays', 'OverlayFooterLink.hogan' )
+			content: mw.template.get( 'mobile.notifications.overlay', 'content.hogan' )
 		},
 		/**
 		 * @inheritdoc
 		 * @cfg {Object} defaults Default options hash.
 		 * @cfg {String} defaults.heading Heading text.
-		 * @cfg {String} defaults.link Link to 'Special:Notifications'.
-		 * @cfg {String} defaults.linkMsg Label of the link element that is associated with
-		 * defaults.link.
-		 * @cfg {String} defaults.linkClass Class attribute value of the link element that is
-		 * associated with defaults.link.
 		 */
 		defaults: {
 			heading: mw.msg( 'notifications' ),
-			link: mw.util.getUrl( 'Special:Notifications' ),
-			linkMsg: mw.msg( 'echo-overlay-link' ),
-			linkClass: 'notifications-archive-link'
+			footerAnchor: new Anchor( {
+				href: mw.util.getUrl( 'Special:Notifications' ),
+				progressive: true,
+				additionalClassNames: 'footer-link notifications-archive-link',
+				label: mw.msg( 'echo-overlay-link' )
+			} ).options
 		},
 		/**
 		 * Fall back to notifications archive page.

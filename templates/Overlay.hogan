@@ -6,6 +6,4 @@
 <div class="overlay-content">
 	{{>content}}
 </div>
-<div class="overlay-footer-container position-fixed">
-	{{>footer}}
-</div>
+<div class="overlay-footer-container position-fixed">{{#footerAnchor}}{{>anchor}}{{/footerAnchor}}</div>

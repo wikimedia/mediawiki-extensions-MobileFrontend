@@ -4,6 +4,7 @@
 		WikiDataApi = M.require( 'modules/WikiDataApi' ),
 		View = M.require( 'View' ),
 		user = M.require( 'user' ),
+		Anchor = M.require( 'Anchor' ),
 		icons = M.require( 'icons' ),
 		months = [
 			'january-date',
@@ -27,6 +28,9 @@
 	 * @extends View
 	 */
 	Infobox = View.extend( {
+		templatePartials: {
+			anchor: Anchor.prototype.template
+		},
 		template: mw.template.get( 'mobile.infobox', 'Infobox.hogan' ),
 
 		className: 'wikidata-infobox',
@@ -56,6 +60,12 @@
 		 * ]
 		 */
 		defaults: {
+			viewLink: new Anchor( {
+				additionalClassNames: 'hidden',
+				progressive: true,
+				// FIXME: i18n
+				label: 'View on Wikidata'
+			} ).options,
 			spinner: icons.spinner().toHtmlString(),
 			description: mw.config.get( 'wgMFDescription' ) ||
 				'A Wikipedia page in need of a description.',
@@ -308,8 +318,9 @@
 				itemId: options.itemId
 			} );
 
-			View.prototype.initialize.apply( this, arguments );
-			this.on( 'load', $.proxy( this, '_loadRest', options ) );
+			View.prototype.initialize.call( this, options );
+			this.options.viewLink.href = 'https://m.wikidata.org/wiki/' + this.options.itemId;
+			this.on( 'load', $.proxy( this, '_loadRest', this.options ) );
 		},
 		/**
 		 * Get an instance of the wikidata api
@@ -380,7 +391,13 @@
 
 				// check, if the wikidata item has a commons category and add the link to it
 				if ( claims.entities.hasOwnProperty( commonsCategory ) ) {
-					options.commonsLink = '#/commons-category/' + claims.entities[commonsCategory][0].mainsnak.datavalue.value;
+					options.commonsLink = new Anchor( {
+						progressive: true,
+						href: '#/commons-category/' + claims.entities[commonsCategory][0].mainsnak.datavalue.value,
+						additionalClassNames: 'hidden',
+						// FIXME: i18n
+						label: 'View on Commons'
+					} ).options;
 				}
 
 				options.isEmptyInfobox = isEmptyInfobox;

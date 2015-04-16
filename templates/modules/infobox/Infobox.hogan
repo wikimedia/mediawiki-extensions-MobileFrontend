@@ -35,16 +35,8 @@
 	{{/rows}}
 </div>
 <ul class="hlist">
-	{{#commonsLink}}
-	<li>
-		<a href="{{commonsLink}}"
-			class="hidden mw-ui-anchor mw-ui-progressive">View on Commons</a>
-	</li>
-	{{/commonsLink}}
-	<li>
-		<a href="https://m.wikidata.org/wiki/{{itemId}}"
-			class="hidden mw-ui-anchor mw-ui-progressive">View on Wikidata</a>
-	</li>
+	{{#commonsLink}}<li>{{>anchor}}</li>{{/commonsLink}}
+	{{#viewLink}}<li>{{>anchor}}</li>{{/viewLink}}
 	<li><a href='#/infobox/editor'
 		class="hidden edit mw-ui-button mw-ui-progressive">Edit this information</a></li>
 </ul>

@@ -1,6 +1,7 @@
 ( function ( M, $ ) {
 	var Drawer = M.require( 'Drawer' ),
 		Icon = M.require( 'Icon' ),
+		Anchor = M.require( 'Anchor' ),
 		CtaDrawer;
 
 	/**
@@ -18,12 +19,18 @@
 		 * @cfg {String} defaults.signup Caption for the signup button.
 		 */
 		defaults: {
+			signupAnchor: new Anchor( {
+				progressive: true,
+				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+			} ).options,
 			collapseButton: new Icon( {
 				name: 'arrow-down',
 				additionalClassNames: 'cancel'
 			} ).toHtmlString(),
-			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
-			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+		},
+		templatePartials: {
+			anchor: Anchor.prototype.template
 		},
 		template: mw.template.get( 'mobile.drawers', 'Cta.hogan' ),
 
@@ -38,7 +45,7 @@
 				}, options.signupQueryParams );
 
 			options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
-			options.signupUrl = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
+			options.signupAnchor.href = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
 		}
 	} );
 
