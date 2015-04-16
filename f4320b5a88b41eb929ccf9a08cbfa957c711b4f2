@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e76d7c5_7638ce9b",
+        "filename": "javascripts/Button.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-16T17:47:33Z",
+      "side": 1,
+      "message": "Wrong documentation",
+      "revId": "f4320b5a88b41eb929ccf9a08cbfa957c711b4f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e76d7c5_d6468226",
+        "filename": "javascripts/Button.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-16T17:47:33Z",
+      "side": 1,
+      "message": "icon -\u003e button",
+      "revId": "f4320b5a88b41eb929ccf9a08cbfa957c711b4f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e76d7c5_160b9ada",
+        "filename": "javascripts/Button.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-16T17:47:33Z",
+      "side": 1,
+      "message": "Since it\u0027s an abstraction, we may as well want to add \u0027quiet\u0027, \u0027block\u0027,  and \u0027big\u0027 options too. http://tools.wmflabs.org/styleguide/desktop/section-2.html If we choose not to do so, we\u0027ll have to hard-code those classes which defeats the purpose.",
+      "revId": "f4320b5a88b41eb929ccf9a08cbfa957c711b4f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
