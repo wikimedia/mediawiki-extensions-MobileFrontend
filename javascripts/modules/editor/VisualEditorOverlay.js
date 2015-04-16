@@ -70,7 +70,7 @@
 			// is attached to DOM, maybe we should attach it earlier and hide
 			// overlays in a different way?
 			mw.loader.using( 'ext.visualEditor.targetLoader' )
-				.then( mw.libs.ve.targetLoader.loadModules() )
+				.then( mw.libs.ve.targetLoader.loadModules )
 				.then( function () {
 					overlay.target = new ve.init.mw.MobileViewTarget( {
 						// || undefined so that scrolling is not triggered for the lead (0) section
