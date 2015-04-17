@@ -15,6 +15,9 @@
 								}
 							]
 						}
+					},
+					userinfo: {
+						id: 0
 					}
 				}
 			} ) );
@@ -32,7 +35,9 @@
 			action: 'query',
 			prop: 'revisions',
 			rvprop: [ 'content', 'timestamp' ],
-			titles: 'MediaWiki:Test.css'
+			titles: 'MediaWiki:Test.css',
+			meta: 'userinfo',
+			uiprop: 'blockinfo'
 		} ), 'rvsection not passed to api request' );
 	} );
 

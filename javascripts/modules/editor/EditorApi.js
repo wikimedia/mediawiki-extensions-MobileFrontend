@@ -43,7 +43,10 @@
 					action: 'query',
 					prop: 'revisions',
 					rvprop: [ 'content', 'timestamp' ],
-					titles: this.title
+					titles: this.title,
+					// get block information for this user
+					meta: 'userinfo',
+					uiprop: 'blockinfo'
 				};
 				// Load text of old revision if desired
 				if ( this.oldId ) {
@@ -78,7 +81,7 @@
 					// save content a second time to be able to check for changes
 					self.originalContent = self.content;
 
-					result.resolve( self.content );
+					result.resolve( self.content, resp.query.userinfo );
 				} );
 			}
 

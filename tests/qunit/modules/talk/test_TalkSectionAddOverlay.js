@@ -20,13 +20,10 @@
 		assert.strictEqual( overlay.$( 'input' ).val(), 'Testtitle', 'Testtitle set' );
 		assert.strictEqual( overlay.$( 'textarea' ).val(), 'Testcontent', 'Testcontent set' );
 		// Test the save of the new dicsussion
-		QUnit.stop();
 		overlay.save().done( function ( status ) {
 			assert.strictEqual( status, 'ok', 'The new discussion was saved' );
-			QUnit.start();
 		} ).fail( function ( error ) {
 			assert.strictEqual( error, 'ok', 'The new discussion was saved' );
-			QUnit.start();
 		} );
 		// check, if the save was recognized (so the overlay can hide without confirmation of the user)
 		assert.strictEqual( overlay._saveHit, true, 'The save was recognized' );

@@ -423,6 +423,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toggling',
 			// Route needs moduleLoader
 			'mobile.overlays',
+			'mediawiki.jqueryMsg',
 		),
 		'messages' => array(
 			// editor.js
@@ -431,6 +432,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-uploadenable',
 			'mobile-frontend-editor-blocked',
 			'mobile-frontend-editor-blocked-info-loggedin' => array( 'parse' ),
+			'mobile-frontend-editor-blocked-info',
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-anon',
 			'mobile-frontend-editor-undo-unsupported',

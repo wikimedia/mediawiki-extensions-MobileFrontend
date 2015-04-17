@@ -91,6 +91,7 @@
 	"mobile-frontend-editor-anonwarning": "Warning message, when user want to edit without logging in.",
 	"mobile-frontend-editor-blocked": "Toast message that appears when a user is unable to edit a page due to being blocked and clicks edit icon.",
 	"mobile-frontend-editor-blocked-info-loggedin": "Toast message for logged in users that appears (before the user see the editor) when a user tries to edit a page, but is blocked from editing with reason and blocked by information.\n\nParameters:\n* $1 - blocked by information (Username of the user who crated this block)\n* $2 - Reason for this block, if any",
+	"mobile-frontend-editor-blocked-info": "Toast message that appears when a user tries to edit a page, but is blocked from editing with reason and blocked by information.\n\nParameters:\n* $1 - blocked by information (Username of the user who created this block)\n* $2 - Reason for this block, if any",
 	"mobile-frontend-editor-cancel": "Caption for cancel button on edit form.\n{{Identical|Cancel}}",
 	"mobile-frontend-editor-cancel-confirm": "Question asking user if they are positive about abandoning unsaved edit.",
 	"mobile-frontend-editor-captcha-try-again": "A message shown when user enters wrong CAPTCHA and a new one is displayed.",

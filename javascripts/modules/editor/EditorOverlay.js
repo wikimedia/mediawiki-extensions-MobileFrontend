@@ -6,6 +6,7 @@
 		settings = M.require( 'settings' ),
 		browser = M.require( 'browser' ),
 		overlayManager = M.require( 'overlayManager' ),
+		toast = M.require( 'toast' ),
 		EditorOverlay;
 
 	/**
@@ -284,8 +285,25 @@
 			this.showSpinner();
 
 			this.api.getContent()
-				.done( function ( content ) {
+				.done( function ( content, userinfo ) {
+					var parser, ast, parsedBlockReason;
+
 					self.setContent( content );
+					// check if user is blocked
+					if ( userinfo.hasOwnProperty( 'blockid' ) ) {
+						// Workaround to parse a message parameter for mw.message, see T96885
+						parser = new mw.jqueryMsg.parser();
+						ast = parser.wikiTextToAst( userinfo.blockreason );
+						parsedBlockReason = parser.emitter.emit( ast );
+						toast.show(
+							mw.message(
+								'mobile-frontend-editor-blocked-info',
+								userinfo.blockedby,
+								parsedBlockReason
+							).parse()
+						);
+						history.back();
+					}
 					self.clearSpinner();
 				} )
 				.fail( function ( error ) {

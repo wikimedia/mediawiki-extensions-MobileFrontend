@@ -6,15 +6,37 @@
 
 	QUnit.module( 'MobileFrontend modules/editor/EditorOverlay', {
 		setup: function () {
+			var getContentStub;
+
 			apiSpy = this.sandbox.spy( EditorApi.prototype, 'initialize' );
 
 			// prevent event logging requests
 			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
-			this.sandbox.stub( EditorApi.prototype, 'getContent' )
-				.returns( $.Deferred().resolve( 'section 0' ) );
+			getContentStub = this.sandbox.stub( EditorApi.prototype, 'getContent' );
+			// the first call returns a getContent deferred for a blocked user.
+			getContentStub.onCall( 0 ).returns( $.Deferred().resolve( 'section 0', {
+					blockid: 1,
+					blockedby: 'Test',
+					blockreason: 'Testreason'
+				} ) );
+			// all other calls returns a deferred for unblocked users.
+			getContentStub.returns( $.Deferred().resolve( 'section 0', {} ) );
 			this.sandbox.stub( EditorApi.prototype, 'getPreview' )
 				.returns( $.Deferred().resolve( 'previewtest' ) );
 		}
+	} );
+
+	// has to be the first test here! See comment in setup stub.
+	QUnit.test( '#initialize, blocked user', 1, function ( assert ) {
+		new EditorOverlay( {
+			title: 'test.css'
+		} );
+
+		assert.strictEqual(
+			$( '.toast' ).text(),
+			'Your IP address is blocked from editing. The block was made by Test for the following reason: Testreason.',
+			'There is a toast notice, that i am blocked from editing'
+		);
 	} );
 
 	QUnit.test( '#initialize, with given page and section', 3, function ( assert ) {
