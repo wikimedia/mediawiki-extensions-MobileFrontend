@@ -10,6 +10,10 @@
 	 */
 	Drawer = Panel.extend( {
 		className: 'drawer position-fixed',
+		/**
+		 * Defines an element that the Drawer should automatically be appended to.
+		 * @property {String}
+		 */
 		appendToElement: '#mw-mf-viewport',
 		closeOnScroll: true,
 		events: $.extend( {}, Panel.prototype.events, {
@@ -18,7 +22,12 @@
 
 		/** @inheritdoc */
 		postRender: function () {
-			Panel.prototype.postRender.apply( this, arguments );
+			var self = this;
+			// This module might be loaded at the top of the page e.g. Special:Uploads
+			// Thus ensure we wait for the DOM to be loaded
+			$( function () {
+				self.appendTo( self.appendToElement );
+			} );
 			this.on( 'show', $.proxy( this, 'onShowDrawer' ) );
 			this.on( 'hide', $.proxy( this, 'onHideDrawer' ) );
 		},
