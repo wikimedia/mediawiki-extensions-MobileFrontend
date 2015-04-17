@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e76d7c5_75351bf3",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-17T17:25:58Z",
+      "side": 1,
+      "message": "Nope. That\u0027ll be done as part of T94742.",
+      "parentUuid": "2e76d7c5_9646ca53",
+      "revId": "575bd7d5e31ffc759bb92f0c72767eaf971b7b30",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e76d7c5_161cfa69",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2e76d7c5_f5284b98",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-17T17:25:58Z",
+      "side": 1,
+      "message": "Sorry, I don\u0027t understand. Backwards compatibility for what?",
+      "parentUuid": "2e76d7c5_161cfa69",
+      "revId": "575bd7d5e31ffc759bb92f0c72767eaf971b7b30",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e76d7c5_f6393ecc",
         "filename": "less/browse/tags.less",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-04-16T17:25:03Z",
       "side": 1,
       "message": "any reason you don\u0027t nest this above?",
+      "revId": "575bd7d5e31ffc759bb92f0c72767eaf971b7b30",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e76d7c5_b532d304",
+        "filename": "less/browse/tags.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-17T17:25:58Z",
+      "side": 1,
+      "message": "Nope. None. I just didn\u0027t think to.",
+      "parentUuid": "2e76d7c5_f6393ecc",
       "revId": "575bd7d5e31ffc759bb92f0c72767eaf971b7b30",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
