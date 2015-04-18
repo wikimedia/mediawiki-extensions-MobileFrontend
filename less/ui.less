@@ -87,20 +87,27 @@ body {
 	border-bottom: 1px solid @grayLight;
 }
 
-// Used for messages on login screen, page lists and uploads and when showing old revisions
-.warningbox,
+// Used for messages on page lists and uploads and when showing old revisions
 .alert.warning {
 	color: @colorWarningText;
 	background: @colorWarningBackground;
 }
 
+// Used for messages on login screen (They're more informational than actual warnings.)
+.warningbox {
+	border: 1px solid @colorGray12;
+	background-color: @colorGray14;
+	color: @grayDark;
+}
+
+.successbox {
+	color: @colorSuccessText;
+	background: @colorSuccessBackground;
+}
+
 .alert {
 	padding: 1em @contentMargin;
 	margin: 0 0 1em;
-
-	&.successbox {
-		background: @colorSuccessBackground;
-	}
 
 	h2 {
 		font: bold 100% @fontFamily;

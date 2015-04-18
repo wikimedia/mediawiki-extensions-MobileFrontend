@@ -63,13 +63,6 @@
 	 * @param {Number} section number representing the section
 	 */
 	function makeCta( $el, section ) {
-		var options = {
-			queryParams: {
-				returnto: mw.config.get( 'wgPageName' ),
-				returntoquery: 'action=edit&section=' + section
-			}
-		};
-
 		$el
 			.on( 'click', function ( ev ) {
 				ev.preventDefault();
@@ -79,16 +72,19 @@
 				if ( !drawer ) {
 					drawer = new CtaDrawer( {
 						queryParams: {
+							returnto: mw.config.get( 'wgPageName' ),
+							returntoquery: 'action=edit&section=' + section,
+							warning: 'mobile-frontend-edit-login-action',
 							campaign: 'mobile_editPageActionCta'
 						},
 						signupQueryParams: {
-							returntoquery: 'article_action=signup-edit'
+							returntoquery: 'article_action=signup-edit',
+							warning: 'mobile-frontend-edit-signup-action'
 						},
 						content: mw.msg( 'mobile-frontend-editor-cta' )
 					} );
 				}
 				drawer
-					.render( options )
 					.toggle();
 			} )
 			// needed until we use tap everywhere to prevent the link from being followed

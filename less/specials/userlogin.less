@@ -6,6 +6,16 @@
 	display: none;
 }
 
+// In theory, these 2 rules should be consolidated into a single semantic class like
+// 'alert', but we want to keep the CSS sharable between stable, beta, and alpha modes,
+// and alpha mode uses the core login page which doesn't have such a shared class.
+.errorbox,
+.successbox,
+.warningbox {
+	padding: .5em 1em;
+	margin: 1em 0;
+}
+
 .stable, .beta {
 	#mw-mf-login,
 	#mw-mf-accountcreate {
@@ -61,22 +71,6 @@
 			padding: 4px 0px 4px 26px;
 		}
 	}
-}
-
-// Styles apply to alpha version of login form.
-#mw-mf-accountcreate .headmsg,
-#mw-mf-login .headmsg,
-// Styles for new login form.
-.alpha .warningbox {
-	padding: 0.5em 1em;
-	margin: 1em 0;
-}
-
-#mw-mf-accountcreate .headmsg,
-#mw-mf-login .headmsg {
-	background-color: @colorGray14;
-	border: 1px solid @colorGray12;
-	color: @grayDark;
 }
 
 .alpha {
@@ -138,13 +132,6 @@
 
 		.mw-ui-vform {
 			margin: auto;
-
-			.errorbox,
-			.successbox,
-			.warningbox {
-				padding: 1em @contentMargin;
-				margin: 0 0 1em;
-			}
 
 			.mw-ui-input {
 				padding: .8em .5em;

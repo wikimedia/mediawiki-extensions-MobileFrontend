@@ -307,14 +307,22 @@ class SkinMinerva extends SkinTemplate {
 	/**
 	 * Return a url to a resource or to a login screen that redirects to that resource.
 	 * @param Title $title
-	 * @param array $query representation of query string parameters
+	 * @param string $warning Key of message to display on login page (optional)
+	 * @param array $query representation of query string parameters (optional)
 	 * @return string url
 	 */
-	protected function getPersonalUrl( Title $title, array $query = array() ) {
+	protected function getPersonalUrl( Title $title, $warning, array $query = array() ) {
 		if ( $this->getUser()->isLoggedIn() ) {
 			return $title->getLocalUrl( $query );
 		} else {
-			return $this->getLoginUrl( array( 'returnto' => $title ) );
+			$loginQueryParams['returnto'] = $title;
+			if ( $query ) {
+				$loginQueryParams['returntoquery'] = wfArrayToCgi( $query );
+			}
+			if ( $warning ) {
+				$loginQueryParams['warning'] = $warning;
+			}
+			return $this->getLoginUrl( $loginQueryParams );
 		}
 	}
 
@@ -346,7 +354,11 @@ class SkinMinerva extends SkinTemplate {
 				'links' => array(
 					array(
 						'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
-						'href' => $this->getPersonalUrl( $watchTitle, $watchlistQuery ),
+						'href' => $this->getPersonalUrl(
+							$watchTitle,
+							'mobile-frontend-watchlist-purpose',
+							$watchlistQuery
+						),
 						'class' => MobileUI::iconClass( 'watchlist', 'before' ),
 						'data-event-name' => 'watchlist',
 					),
@@ -360,7 +372,10 @@ class SkinMinerva extends SkinTemplate {
 					'links' => array(
 						array(
 							'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
-							'href' => $this->getPersonalUrl( $donateTitle ),
+							'href' => $this->getPersonalUrl(
+								$donateTitle,
+								'mobile-frontend-donate-image-anon'
+							),
 							'class' => MobileUI::iconClass( 'uploads', 'before', 'menu-item-upload' ),
 							'data-event-name' => 'uploads',
 						),
@@ -384,7 +399,10 @@ class SkinMinerva extends SkinTemplate {
 				'links' => array(
 					array(
 						'text' => wfMessage( 'preferences' )->escaped(),
-						'href' => $this->getPersonalUrl( SpecialPage::getTitleFor( 'Preferences' ) ),
+						'href' => $this->getPersonalUrl(
+							SpecialPage::getTitleFor( 'Preferences' ),
+							'prefsnologintext2'
+						),
 						'class' => MobileUI::iconClass( 'settings', 'before' ),
 						'data-event-name' => 'preferences',
 					),

@@ -173,10 +173,12 @@
 			var params = $.extend( {
 				// use wgPageName as this includes the namespace if outside Main
 				returnto: options.returnTo || mw.config.get( 'wgPageName' ),
-				returntoquery: 'action=edit&section=' + options.sectionId
+				returntoquery: 'action=edit&section=' + options.sectionId,
+				warning: 'mobile-frontend-edit-login-action'
 			}, options.queryParams ),
 			signupParams = $.extend( {
-				type: 'signup'
+				type: 'signup',
+				warning: 'mobile-frontend-edit-signup-action'
 			}, options.signupQueryParams );
 
 			options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );

@@ -11,27 +11,6 @@
  * special mobile-specific magic.
  */
 abstract class UserLoginAndCreateTemplate extends BaseTemplate {
-	/** @var array $actionMessagesHeaders Message keys for site links */
-	protected $pageMessageHeaders = array(
-		'Uploads' => 'mobile-frontend-donate-image-login',
-		'Watchlist' => 'mobile-frontend-watchlist-purpose',
-	);
-	/** @var array $actionMessages Message keys for site links */
-	protected $pageMessages = array();
-
-	/** @var array $actionMessagesHeaders Message keys for page actions */
-	protected $actionMessageHeaders = array(
-		'watch' => 'mobile-frontend-watchlist-purpose',
-		'edit' => 'mobile-frontend-edit-login',
-		'signup-edit' => 'mobile-frontend-edit-login',
-		'' => 'mobile-frontend-generic-login',
-	);
-
-	/**
-	 * Message keys for page actions
-	 * @var array $actionMessages
-	 */
-	protected $actionMessages = array();
 
 	/**
 	 * Overload the parent constructor
@@ -48,35 +27,35 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 	/**
 	 * Render message box with system messages, e.g. errors or already logged-in notices
 	 *
+	 * @param string $action The type of action the page is used for ('login' or 'signup')
 	 * @param bool $register Whether the user can register an account
 	 */
-	protected function renderMessageHtml( $register = false ) {
+	protected function renderMessageHtml( $action, $register = false ) {
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
-
-		// Render logged-in notice (beta/alpha)
-		if ( $this->data['loggedin'] ) {
-			$msg = ( $register ) ? 'mobile-frontend-userlogin-loggedin-register' : 'userlogin-loggedin';
-			$msgBox .= Html::element( 'div', array( 'class' => 'alert warning' ),
-				wfMessage( $msg )->params(
-					$this->data['loggedinuser'] )->parse() );
-		}
-
-		// Render login errors
 		$message = $this->data['message'];
 		$messageType = $this->data['messagetype'];
-		if ( $message ) {
-			$heading = '';
-			$class = 'alert';
-			if ( $messageType == 'error' ) {
-				$heading = wfMessage( 'mobile-frontend-sign-in-error-heading' )->text();
-				$class .= ' error';
-			}
 
-			$msgBox .= Html::openElement( 'div', array( 'class' => $class ) );
-			$msgBox .= ( $heading ) ? Html::rawElement( 'h2', array(), $heading ) : '';
+		// FIXME: Migrate this to a server-side Mustache template
+		// If there is a system message (error, warning, or success) display that
+		if ( $message && $messageType ) {
+			$msgBox .= Html::openElement( 'div', array( 'class' => $messageType . 'box' ) );
 			$msgBox .= $message;
 			$msgBox .= Html::closeElement( 'div' );
+		// Render already logged-in notice
+		} elseif ( $this->data['loggedin'] ) {
+			$msg = ( $register ) ? 'mobile-frontend-userlogin-loggedin-register' : 'userlogin-loggedin';
+			$msgBox .= Html::openElement( 'div', array( 'class' => 'warningbox' ) );
+			$msgBox .= wfMessage( $msg )->params( $this->data['loggedinuser'] )->parse();
+			$msgBox .= Html::closeElement( 'div' );
+		// Show default welcome message
 		} else {
+			// The warningbox class is used more for informational purposes than actual warnings.
+			$msgBox .= Html::openElement( 'div', array( 'class' => 'warningbox' ) );
+			$headerMsg = wfMessage( 'mobile-frontend-generic-login' )->parse();
+			$msgBox .= Html::element( 'strong', array(), $headerMsg );
+			$msgBox .= Html::element( 'br' );
+			$msgBox .= wfMessage( "mobile-frontend-generic-{$action}-action" )->plain();
+			$msgBox .= Html::closeElement( 'div' );
 			$msgBox .= $this->getLogoHtml();
 		}
 		echo $msgBox;
@@ -130,90 +109,6 @@ abstract class UserLoginAndCreateTemplate extends BaseTemplate {
 			return true;
 		}
 		return false;
-	}
-
-	/**
-	 * Gets the message that should guide a user who is creating an account or
-	 * logging in to an account.
-	 * @return array First element is header of message and second is the content.
-	 */
-	protected function getGuiderMessage() {
-		$req = $this->getRequestContext()->getRequest();
-		// omit UserLogin's own messages in this template to avoid duplicate messages - bug T73771, T86031
-		if ( $this->data['messagetype'] !== 'error' ) {
-			$this->data['message'] = '';
-		}
-
-		if ( $req->getVal( 'returnto' )
-			&& ( $title = Title::newFromText( $req->getVal( 'returnto' ) ) )
-		) {
-			list( $returnto, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
-			$title = $title->getText();
-		} else {
-			$returnto = '';
-			$title = '';
-		}
-		$returnToQuery = wfCgiToArray( $req->getVal( 'returntoquery' ) );
-		if ( isset( $returnToQuery['article_action'] ) ) {
-			$action = $returnToQuery['article_action'];
-		} else {
-			$action = '';
-		}
-
-		$heading = '';
-		$content = '';
-
-		$pageMessageHeaders = $this->getPageMessageHeaders();
-		if ( isset( $pageMessageHeaders[$returnto] ) ) {
-			$heading = wfMessage( $pageMessageHeaders[$returnto] )->parse();
-			if ( isset( $this->pageMessages[$returnto] ) ) {
-				$content = wfMessage( $this->pageMessages[$returnto] )->parse();
-			}
-		} elseif ( isset( $this->actionMessageHeaders[$action] ) ) {
-			$heading = wfMessage( $this->actionMessageHeaders[$action], $title )->parse();
-			if ( isset( $this->actionMessages[$action] ) ) {
-				$content = wfMessage( $this->actionMessages[$action], $title )->parse();
-			}
-		}
-		return array( $heading, $content );
-	}
-
-	/**
-	 * Returns an array of all valid login info messages.
-	 *
-	 * @return array
-	 */
-	protected function getPageMessageHeaders() {
-		static $messages = null;
-		if ( !$messages ) {
-			// default MobileFrontend messages
-			$messages = $this->pageMessageHeaders;
-			// reuse core hook to allow extensions to add their own messages
-			// currently extensions needs to add two messages for full mobile support, one
-			// withput a key and one with the returnto target as the key, example from Gather:
-			// $messages['Gather'] = 'gather-loginpage-desc'; -> for mobile custom login page
-			// $messages[] = 'gather-anon-view-lists'; -> // for core login page (and mobile alpha)
-			Hooks::run( 'LoginFormValidErrorMessages', array( &$messages ) );
-		}
-		return $messages;
-	}
-
-	/**
-	 * Renders a prompt above the login or upload screen
-	 *
-	 */
-	protected function renderGuiderMessage() {
-		if ( !$this->data['loggedin'] ) {
-			$msgs = $this->getGuiderMessage();
-			if ( $msgs[0] ) {
-				echo Html::openElement( 'div', array( 'class' => 'headmsg' ) );
-				echo Html::element( 'strong', array(), $msgs[0] );
-				if ( $msgs[1] ) {
-					echo Html::element( 'div', array(), $msgs[1] );
-				}
-				echo Html::closeElement( 'div' );
-			}
-		}
 	}
 
 	/**

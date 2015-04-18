@@ -75,7 +75,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 */
 	public function execute( $mode ) {
 		// Anons don't get a watchlist edit
-		$this->requireLogin( 'watchlistanontext' );
+		$this->requireLogin( 'mobile-frontend-watchlist-purpose' );
 
 		$out = $this->getOutput();
 		// turn off #content element
