@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Krol111"
+			"Krol111",
+			"Gaj777"
 		]
 	},
 	"mobile-frontend-copyright": "Tekst je udostympńany na licencyji $1, eli inakszyj ńy podano.",
-	"mobile-frontend-editor-edit": "Sprowjej",
+	"mobile-frontend-editor-edit": "Sprowiyj",
 	"mobile-frontend-home-button": "Přodńo zajta",
 	"mobile-frontend-language-article-heading": "Czytej we inkszyj godce",
 	"mobile-frontend-last-modified-date": "Uostatńo půmjyńano $1, uo $2",
@@ -17,7 +18,7 @@
 	"mobile-frontend-placeholder": "Sznupej we serwiśe {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Politika prywatnůśći",
 	"mobile-frontend-terms-text": "Regle użytkowańo",
-	"mobile-frontend-view": "Wersyjo lo mobilńokůw",
+	"mobile-frontend-view": "Wersyjo lo mobilniokōw",
 	"mobile-frontend-view-desktop": "Klasyczno",
 	"mobile-frontend-view-mobile": "Mobilno",
 	"tag-mobile_edit": "Mobilne sprowjańy",

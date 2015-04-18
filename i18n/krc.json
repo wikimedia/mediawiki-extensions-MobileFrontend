@@ -77,5 +77,6 @@
 	"mobile-frontend-watchlist-removed": "«$1» бетни кёзде тургъан тизменгден кетер",
 	"mobile-frontend-watchlist-view": "Кёзде тургъан тизменге кёч",
 	"tag-mobile_edit": "Мобил адыр бла тюрлендириу",
-	"tag-mobile_web_edit": "Сайтны мобил версиясындан тюрлендириу"
+	"tag-mobile_web_edit": "Сайтны мобил версиясындан тюрлендириу",
+	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|ай}} алгъа"
 }
