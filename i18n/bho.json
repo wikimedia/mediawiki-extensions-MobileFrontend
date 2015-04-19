@@ -8,9 +8,13 @@
 	},
 	"mobile-frontend-changeslist-nocomment": "सम्पादन सारांश रहित",
 	"mobile-frontend-editor-edit": "सम्पादन",
+	"mobile-frontend-featured-article": "आज के चुनल गइल लेख",
 	"mobile-frontend-home-button": "घर",
+	"mobile-frontend-language-article-heading": "दूसर भाषा में पढ़ीं",
+	"mobile-frontend-last-modified-date": "अंतिम बार $1 में $2 बजे बदलाव करल गइल",
 	"mobile-frontend-main-menu-button-tooltip": "मुख्य मेनू खोलीं",
 	"mobile-frontend-main-menu-settings": "सेटिंग कुल",
+	"mobile-frontend-news-items": "समाचार में",
 	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-random-button": "एने-ओने से",
 	"mobile-frontend-sign-in-heading": "खाता मे प्रवेश करीं",
@@ -18,5 +22,8 @@
 	"mobile-frontend-terms-text": "उपयोग के शर्त कुल",
 	"mobile-frontend-view": "मोबाइल अवलोकन",
 	"mobile-frontend-view-desktop": "डेस्कटॉप",
-	"mobile-frontend-view-mobile": "मोबाइल"
+	"mobile-frontend-view-mobile": "मोबाइल",
+	"tag-mobile_edit": "मोबाइल संपादन",
+	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
+	"mobile-frontend-pageaction-edit-tooltip": "इ पन्ना के मुख्य अनुभाग के सम्पादन करीं"
 }
