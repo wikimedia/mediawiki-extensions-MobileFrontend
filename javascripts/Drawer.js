@@ -45,15 +45,13 @@
 		 * ShowDrawer event handler
 		 */
 		onShowDrawer: function () {
-			var self = this;
+			var self = this,
+				$window = $( window );
 			setTimeout( function () {
-				$( 'body' ).one( 'click.drawer', $.proxy( self, 'hide' ) );
+				$window.one( 'click.drawer', $.proxy( self, 'hide' ) );
 				if ( self.closeOnScroll ) {
-					$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
+					$window.one( 'scroll.drawer', $.proxy( self, 'hide' ) );
 				}
-				// can't use 'body' because the drawer will be closed when
-				// tapping on it and clicks will be prevented
-				$( '#mw-mf-page-center' ).one( 'click.drawer', $.proxy( self, 'hide' ) );
 			}, self.minHideDelay );
 		},
 
@@ -64,7 +62,6 @@
 			// .one() registers one callback for scroll and click independently
 			// if one fired, get rid of the other one
 			$( window ).off( '.drawer' );
-			$( '#mw-mf-page-center' ).off( '.drawer' );
 		}
 	} );
 
