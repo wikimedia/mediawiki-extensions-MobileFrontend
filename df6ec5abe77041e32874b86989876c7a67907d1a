@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_2958b38b",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-20T23:52:47Z",
+      "side": 1,
+      "message": "Use wikitext or \u003cem\u003e tag for this.. don\u0027t use HTML 4 tags where we don\u0027t have to.",
+      "revId": "df6ec5abe77041e32874b86989876c7a67907d1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
