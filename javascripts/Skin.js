@@ -2,8 +2,6 @@
 
 	var Skin,
 		browser = M.require( 'browser' ),
-		user = M.require( 'user' ),
-		context = M.require( 'context' ),
 		View = M.require( 'View' );
 
 	/**
@@ -116,11 +114,6 @@
 			}
 			M.on( 'resize', $.proxy( this, 'emit', '_resize' ) );
 			this.on( '_resize', loadWideScreenModules );
-			// FIXME: Remove when cache has cleared.
-			if ( user.isAnon() && !context.isBetaGroupMember() ) {
-				mw.loader.using( 'mobile.watchstar.init' );
-				self.emit.call( self, 'changed' );
-			}
 			this.emit( '_resize' );
 		},
 		/**
