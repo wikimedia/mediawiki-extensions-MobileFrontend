@@ -37,9 +37,8 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 
 		$api->execute();
 		if ( defined( 'ApiResult::META_CONTENT' ) ) {
-			$data = ApiResult::removeMetadata(
-				(array)$api->getResult()->getResultData( array( 'query', 'pages' ) )
-			);
+			$data = (array)$api->getResult()->getResultData( array( 'query', 'pages' ),
+				array( 'Strip' => 'all' ) );
 		} else {
 			$data = $api->getResult()->getData();
 			// Paranoia
