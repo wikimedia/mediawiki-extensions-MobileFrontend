@@ -17,10 +17,12 @@
 	"mobile-frontend-main-menu-watchlist": "Pozůrlista",
 	"mobile-frontend-placeholder": "Sznupej we serwiśe {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Politika prywatnůśći",
+	"mobile-frontend-random-button": "Cufal",
 	"mobile-frontend-terms-text": "Regle użytkowańo",
 	"mobile-frontend-view": "Wersyjo lo mobilniokōw",
 	"mobile-frontend-view-desktop": "Klasyczno",
 	"mobile-frontend-view-mobile": "Mobilno",
 	"tag-mobile_edit": "Mobilne sprowjańy",
-	"tag-mobile_web_edit": "sprowjańy ze mobile web"
+	"tag-mobile_web_edit": "sprowjańy ze mobile web",
+	"mobile-frontend-pageaction-edit-tooltip": "Sprowjej przodńo sekcyjo tyj zajty"
 }
