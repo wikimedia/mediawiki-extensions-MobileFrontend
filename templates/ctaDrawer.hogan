@@ -1,6 +1,6 @@
 {{{collapseButton}}}
 <p>{{content}}</p>
-<a class="mw-ui-button mw-ui-block mw-ui-progressive" href="{{loginUrl}}">{{loginCaption}}</a>
+<a class="mw-ui-button mw-ui-progressive" href="{{loginUrl}}">{{loginCaption}}</a>
 <div>
 	<a class="mw-ui-progressive mw-ui-anchor" href="{{signupUrl}}">{{signupCaption}}</a>
 </div>
