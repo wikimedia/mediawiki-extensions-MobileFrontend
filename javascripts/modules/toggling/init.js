@@ -327,7 +327,7 @@
 	M.define( 'toggle', {
 		reveal: reveal,
 		toggle: toggle,
-		enable: init,
+		enable: enable,
 		// for tests
 		_currentPageTitle: currentPageTitle,
 		_getExpandedSections: getExpandedSections,
