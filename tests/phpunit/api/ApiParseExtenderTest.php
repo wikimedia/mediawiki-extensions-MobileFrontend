@@ -31,8 +31,10 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 		$api = new ApiMain( $req );
 		$api->execute();
 		if ( defined( 'ApiResult::META_CONTENT' ) ) {
-			$data = $api->getResult()->getResultData();
-			$data = ApiResult::transformForBC( $data );
+			$data = $api->getResult()->getResultData( null, array(
+				'BC' => array(),
+				'Types' => array(),
+			) );
 		} else {
 			$data = $api->getResultData();
 		}

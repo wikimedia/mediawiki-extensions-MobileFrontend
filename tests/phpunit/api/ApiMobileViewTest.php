@@ -131,10 +131,11 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	private function executeMobileViewApi( $api, $expected ) {
 		$api->execute();
 		if ( defined( 'ApiResult::META_CONTENT' ) ) {
-			$result = $api->getResult()->getResultData();
-			$result = ApiResult::transformForBC( $result );
-			$result = ApiResult::transformForTypes( $result, array( 'BC' => true ) );
-			$result = ApiResult::removeMetadata( $result );
+			$result = $api->getResult()->getResultData( null, array(
+				'BC' => array(),
+				'Types' => array(),
+				'Strip' => 'all',
+			) );
 		} else {
 			$result = $api->getResultData();
 		}
