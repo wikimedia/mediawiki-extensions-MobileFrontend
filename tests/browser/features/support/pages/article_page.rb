@@ -12,7 +12,7 @@ class ArticlePage
   a(:edit_history_link, id: 'mw-mf-last-modified')
 
   # left nav
-  div(:navigation, css: '#mw-mf-page-left')
+  nav(:navigation, css: '#mw-mf-page-left')
   a(:about_link) { |page| page.navigation_element.link_element(text: /^About/) }
   a(:disclaimer_link) { |page| page.navigation_element.link_element(text: 'Disclaimers') }
 
