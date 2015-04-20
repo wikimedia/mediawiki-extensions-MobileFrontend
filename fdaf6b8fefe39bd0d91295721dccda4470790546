@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_23b0d53d",
+        "filename": "i18n/en.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-20T17:38:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_4895f834",
+      "revId": "fdaf6b8fefe39bd0d91295721dccda4470790546",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_485e587d",
         "filename": "javascripts/modules/editor/EditorApi.js",
         "patchSetId": 6
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_8370a1a4",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-20T17:38:45Z",
+      "side": 1,
+      "message": "because hasOwnProperty doesn\u0027t work for null values, but i see, i forgot to remove the if statement in L84. The idea i had was to return always resp.query.userinfo, without check, if the user is blocked.",
+      "parentUuid": "0ed113e2_485e587d",
+      "revId": "fdaf6b8fefe39bd0d91295721dccda4470790546",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_6321fd99",
         "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
         "patchSetId": 6
@@ -47,6 +83,24 @@
       "writtenOn": "2015-04-20T17:34:07Z",
       "side": 1,
       "message": "Could you make an assertion about its message here?",
+      "revId": "fdaf6b8fefe39bd0d91295721dccda4470790546",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a3a4c505",
+        "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-20T17:38:45Z",
+      "side": 1,
+      "message": "sure :)",
+      "parentUuid": "0ed113e2_6321fd99",
       "revId": "fdaf6b8fefe39bd0d91295721dccda4470790546",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
