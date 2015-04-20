@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_4895f834",
+        "filename": "i18n/en.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-20T17:34:07Z",
+      "side": 1,
+      "message": "The block was made by \u003ci\u003e$1\u003c/i\u003e for the following reason: \u003ci\u003e$2\u003c/i\u003e.\n\nNote the $1 and $2 switcharoo (see your docs in qqq.json).",
+      "revId": "fdaf6b8fefe39bd0d91295721dccda4470790546",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_485e587d",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-20T17:34:07Z",
+      "side": 1,
+      "message": "Any reason for this default value? We tend to use null across the codebase.",
+      "revId": "fdaf6b8fefe39bd0d91295721dccda4470790546",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_6321fd99",
+        "filename": "tests/qunit/modules/editor/test_EditorOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-20T17:34:07Z",
+      "side": 1,
+      "message": "Could you make an assertion about its message here?",
+      "revId": "fdaf6b8fefe39bd0d91295721dccda4470790546",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
