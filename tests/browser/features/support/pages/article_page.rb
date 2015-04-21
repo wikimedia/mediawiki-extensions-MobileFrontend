@@ -27,6 +27,7 @@ class ArticlePage
   li(:upload_page_action, id: 'ca-upload')
 
   a(:edit_link, text: 'Edit')
+  p(:anon_editor_warning, css: '.anonMsg')
   div(:editor_overlay, class: 'editor-overlay')
   button(:editor_overlay_close_button) do |page|
     page.editor_overlay_element.button_element(css: '.back')

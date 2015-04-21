@@ -7,7 +7,7 @@ Feature: Page actions menu when anonymous
 
   Scenario: Receive notification message - Edit Icon
     When I click the edit icon holder
-    Then I should see a drawer with message "Help improve this page!"
+    Then I see the anonymous editor warning
 
   Scenario: Do not see - Upload Icon
     Then I should not see an upload an image to this page button
