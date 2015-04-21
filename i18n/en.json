@@ -62,6 +62,7 @@
 	"mobile-frontend-editor-anon": "Edit without logging in",
 	"mobile-frontend-editor-anonwarning": "<strong>Warning</strong>: You are not logged in. Your IP address will be publicly visible if you make any edits. If you <strong>log in</strong> or <strong>create an account</strong>, your edits will be attributed to your username, along with other benefits.",
 	"mobile-frontend-editor-blocked": "Your account is blocked from editing.",
+	"mobile-frontend-editor-blocked-info-loggedin": "Your account is blocked from editing. The block was made by {{GENDER:$2|$2}} for the following reason: $1",
 	"mobile-frontend-editor-cancel": "Cancel",
 	"mobile-frontend-editor-cancel-confirm": "Do you really want to abandon your edit?",
 	"mobile-frontend-editor-captcha-try-again": "Wrong code, try again.",

@@ -843,6 +843,7 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$config = $this->getMFConfig();
+		$out = $this->getOutput();
 
 		$vars = array(
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
@@ -860,7 +861,18 @@ class SkinMinerva extends SkinTemplate {
 		);
 
 		if ( $this->isAuthenticatedUser() ) {
-			$vars['wgMFIsLoggedInUserBlockedFromPage'] = $user->isBlockedFrom( $title, true );
+			$blockInfo = false;
+			if ( $user->isBlockedFrom( $title, true ) ) {
+				$block = $user->getBlock();
+				$blockReason = $block->mReason ?
+					$out->parseinline( $block->mReason ) : $this->msg( 'blockednoreason' )->text();
+				$blockInfo = array(
+					'blockedBy' => $block->getByName(),
+					// check, if a reason for this block is saved, otherwise use "no reason given" msg
+					'blockReason' => $blockReason,
+				);
+			}
+			$vars['wgMFUserBlockInfo'] = $blockInfo;
 			$vars['wgMFExperiments'] = $config->get( 'MFExperiments' );
 		}
 

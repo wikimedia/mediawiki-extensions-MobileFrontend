@@ -111,7 +111,7 @@
 
 			// for logged in users check if they are blocked from editing this page
 			if ( editable && !user.isAnon() ) {
-				editable = !mw.config.get( 'wgMFIsLoggedInUserBlockedFromPage' );
+				editable = !mw.config.get( 'wgMFUserBlockInfo' );
 			}
 
 			return editable;

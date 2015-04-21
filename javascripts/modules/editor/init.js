@@ -228,11 +228,31 @@
 	 * @ignore
 	 */
 	function init() {
+		var blockInfo;
+
 		if ( currentPage.isEditable( user ) ) {
 			setupEditor( currentPage );
 		} else {
-			$caEdit.removeClass( 'hidden' );
-			showSorryToast( 'mobile-frontend-editor-disabled' );
+			if ( user.isBlocked() ) {
+				blockInfo = user.getBlockInfo();
+
+				$caEdit.removeClass( 'hidden' );
+				$( '#ca-edit' ).on( 'click', function ( ev ) {
+					popup.show(
+						mw.msg(
+							'mobile-frontend-editor-blocked-info-loggedin',
+							blockInfo.blockReason,
+							blockInfo.blockedBy
+						),
+						'toast'
+					);
+					ev.preventDefault();
+				} );
+				$( '.edit-page' ).detach();
+			} else {
+				$caEdit.removeClass( 'hidden' );
+				showSorryToast( 'mobile-frontend-editor-disabled' );
+			}
 		}
 	}
 

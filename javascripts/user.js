@@ -54,6 +54,27 @@
 		},
 
 		/**
+		 * Returns false, if the user isn't logged in or is blocked,
+		 * otherwise true.
+		 * @return {Boolean}
+		 */
+		isBlocked: function () {
+			return this.getBlockInfo() !== false;
+		},
+
+		/**
+		 * Returns information about the block of this user, otherwise false.
+		 * Always returns false for not-logged-in users!
+		 * @return {Boolean|Object}
+		 */
+		getBlockInfo: function () {
+			if ( mw.user.isAnon() || !mw.config.get( 'wgMFUserBlockInfo' ) ) {
+				return false;
+			}
+			return mw.config.get( 'wgMFUserBlockInfo' );
+		},
+
+		/**
 		* User Bucketing for A/B testing
 		* (we want this to be the same everywhere)
 		* @return {Boolean}

@@ -401,7 +401,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'group' => 'user',
 	),
 
-	'mobile.editor' => $wgMFResourceFileModuleBoilerplate + array(
+	'mobile.editor' => $wgMFResourceParsedMessageModuleBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.drawers',
@@ -419,6 +419,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-unavailable',
 			'mobile-frontend-editor-uploadenable',
 			'mobile-frontend-editor-blocked',
+			'mobile-frontend-editor-blocked-info-loggedin' => array( 'parse' ),
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-anon',
 			'mobile-frontend-editor-undo-unsupported',
