@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_34332af5",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-21T00:27:18Z",
+      "side": 1,
+      "message": "Are we using TODO or FIXME these days?",
+      "revId": "b7b4949b577db7cfb01be33e031920aeb0261522",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_9449b66c",
+        "filename": "includes/config/Experimental.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-21T00:27:18Z",
+      "side": 1,
+      "message": "Not sure if this is a sensible default.... :)\nI think it should be false.",
+      "revId": "b7b4949b577db7cfb01be33e031920aeb0261522",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
