@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_bbbe22d0",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-21T21:16:41Z",
+      "side": 1,
+      "message": "any idea why links in blockreason aren\u0027t parsed? :/",
+      "revId": "045fad4f5ebe7e2ef99d4b0f10698f6ac64838b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
