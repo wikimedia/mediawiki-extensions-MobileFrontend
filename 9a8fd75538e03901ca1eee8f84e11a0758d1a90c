@@ -203,6 +203,23 @@
       "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_7578bbbf",
+        "filename": "less/browse/tags.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-04-22T23:06:54Z",
+      "side": 1,
+      "message": "The mock-up calls for the header to be sans serif. If we want to match that we\u0027ll need to override the font for the h4.",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
