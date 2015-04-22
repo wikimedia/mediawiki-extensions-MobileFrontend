@@ -12,11 +12,6 @@ Feature: VisualEditor Mobile
       And I click the wikitext editor overlay close button
     Then I should not see the wikitext editor overlay
 
-  Scenario: VisualEditor edit controls
-    When I look at the VisualEditor toolbar
-    Then I should see a bold button
-      And I should see an italicize button
-
   Scenario: I can edit a page using VisualEditor
     When I edit the article using VisualEditor
     Then I should see the edit reflected in the article content
