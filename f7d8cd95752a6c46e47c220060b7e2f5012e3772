@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_4e772f36",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2015-04-22T09:48:27Z",
+      "side": 1,
+      "message": "* I don\u0027t think the italics are needed. Please remove.\n* You need GENDER support for $2.",
+      "revId": "f7d8cd95752a6c46e47c220060b7e2f5012e3772",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
