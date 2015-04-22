@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed113e2_ae957b37",
+        "filename": "i18n/en.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2015-04-22T09:50:33Z",
+      "side": 1,
+      "message": "* I don\u0027t think the italics are needed. Please remove.\n* This needs GENDER support for $1.",
+      "revId": "045fad4f5ebe7e2ef99d4b0f10698f6ac64838b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_ce9a3f66",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2015-04-22T09:50:33Z",
+      "side": 1,
+      "message": "Typo: crated -\u003e created.",
+      "revId": "045fad4f5ebe7e2ef99d4b0f10698f6ac64838b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_bbbe22d0",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 8
