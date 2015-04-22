@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_35fc73b1",
+        "filename": "javascripts/Anchor.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-22T22:32:44Z",
+      "side": 1,
+      "message": "icon -\u003e anchor twice",
+      "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_9522ff4e",
+        "filename": "javascripts/Anchor.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-22T22:32:44Z",
+      "side": 1,
+      "message": "wrong doc, button and icon should be changed to anchor",
+      "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_15f5afb5",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-22T22:32:44Z",
+      "side": 1,
+      "message": "I think you should move this line to javascripts/modules/talk/TalkOverlay.js where you are defining this option. If this is optional, you should also wrap defaults.footerAnchor above in a pair of square brackets",
+      "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_d5a5e7b2",
+        "filename": "templates/anchor.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-22T22:32:44Z",
+      "side": 1,
+      "message": "Shouldn\u0027t the tagName always be an \u0027a\u0027?",
+      "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
