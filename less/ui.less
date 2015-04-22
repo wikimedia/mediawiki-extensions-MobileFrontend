@@ -69,9 +69,6 @@ body {
 		vertical-align: middle;
 	}
 
-	.fulltext-search {
-		margin: 0 3px 0 9px;
-	}
 }
 
 // Make search input more visible for users on small screens.
@@ -124,7 +121,6 @@ body {
 	.header {
 		.search,
 		.fulltext-search {
-			display: block;
 			float: left;
 		}
 
@@ -355,6 +351,20 @@ input.search {
 			content: "";
 			display: block;
 			clear: both;
+		}
+	}
+}
+
+.client-nojs {
+	// alpha uses a magnifying glass as the search button so it doesn't need this styling
+	.stable,
+	.beta {
+		.header {
+			.search {
+				// FIXME: padding values should be variables
+				// vertically align the search input
+				padding: 0.5em 1em; // same as the search button (mw-ui-button) padding
+			}
 		}
 	}
 }
