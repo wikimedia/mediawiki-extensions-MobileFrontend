@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_d8a51eb3",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-22T23:59:18Z",
+      "side": 1,
+      "message": "options won\u0027t have extended defaults at this stage, so you need to move it after the parent initialize call below. also, I think you need to use this.options here.",
+      "revId": "311aa07eaaccd3c6941adceae799d1cdd22681a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b88b7a1f",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-22T23:59:18Z",
+      "side": 1,
+      "message": "here also self.options",
+      "revId": "311aa07eaaccd3c6941adceae799d1cdd22681a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
