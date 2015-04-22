@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_d5b2c7e3",
+        "filename": "javascripts/Anchor.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-22T22:55:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_35fc73b1",
+      "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_9522ff4e",
         "filename": "javascripts/Anchor.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-22T22:32:44Z",
       "side": 1,
       "message": "wrong doc, button and icon should be changed to anchor",
+      "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b5b143de",
+        "filename": "javascripts/Anchor.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-22T22:55:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_9522ff4e",
       "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_15a92f78",
+        "filename": "javascripts/Overlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-22T22:55:33Z",
+      "side": 1,
+      "message": "It\u0027s here because NotificationOverlay uses it as well (it\u0027s part of the Overlay.hogan file). I will make it optional though. We can always revisit this later.",
+      "parentUuid": "0ed113e2_15f5afb5",
+      "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_d5a5e7b2",
         "filename": "templates/anchor.hogan",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2015-04-22T22:32:44Z",
       "side": 1,
       "message": "Shouldn\u0027t the tagName always be an \u0027a\u0027?",
+      "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_559fb755",
+        "filename": "templates/anchor.hogan",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-22T22:55:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_d5a5e7b2",
       "revId": "6a85cbb3410b158f32fe729949c0e1cfc0dbfeef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
