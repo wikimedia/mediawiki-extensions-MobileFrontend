@@ -246,42 +246,35 @@ body.navigation-enabled {
 }
 
 
-.navigation-enabled {
-
-	.animations {
-		.position-fixed,
-		#mw-mf-page-center {
-			.transition-transform(@duration @easing);
-		}
+.navigation-enabled.animations {
+	.position-fixed,
+	#mw-mf-page-center {
+		.transition-transform(@duration @easing);
 	}
 }
 
-.primary-navigation-enabled {
-	.animations {
-		.position-fixed,
-		#mw-mf-page-center {
-			// override non-animated version
-			left: 0 !important;
-			.transform(translate3d(@menuWidth, 0, 0));
-		}
+.primary-navigation-enabled.animations {
+	.position-fixed,
+	#mw-mf-page-center {
+		// override non-animated version
+		left: 0 !important;
+		.transform(translate3d(@menuWidth, 0, 0));
+	}
 
-		#mw-mf-page-left {
-			// make menu scrollable when open (on small screens)
-			position: static;
+	#mw-mf-page-left {
+		// make menu scrollable when open (on small screens)
+		position: static;
 
-			.transition(none);
-		}
+		.transition(none);
 	}
 }
 
-.secondary-navigation-enabled {
-	.animations {
-		#mw-mf-page-center {
-			// override non-animated version
-			left: 0 !important;
-			.transform(translate3d(-@rightDrawerWidth, 0, 0));
-			width: 100%;
-		}
+.secondary-navigation-enabled.animations {
+	#mw-mf-page-center {
+		// override non-animated version
+		left: 0 !important;
+		.transform(translate3d(-@rightDrawerWidth, 0, 0));
+		width: 100%;
 	}
 }
 
@@ -296,21 +289,16 @@ body.navigation-enabled {
 		}
 	}
 
-	&.primary-navigation-enabled {
-		.animations {
-
-			.position-fixed,
-			#mw-mf-page-center {
-				.transform(translate3d(-@menuWidth, 0, 0));
-			}
+	&.primary-navigation-enabled.animations {
+		.position-fixed,
+		#mw-mf-page-center {
+			.transform(translate3d(-@menuWidth, 0, 0));
 		}
 	}
 
-	&.secondary-navigation-enabled {
-		.animations {
-			#mw-mf-page-center {
-				.transform(translate3d(@rightDrawerWidth, 0, 0));
-			}
+	&.secondary-navigation-enabled.animations {
+		#mw-mf-page-center {
+			.transform(translate3d(@rightDrawerWidth, 0, 0));
 		}
 	}
 }
