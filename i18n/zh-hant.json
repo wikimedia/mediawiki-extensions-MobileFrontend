@@ -112,7 +112,7 @@
 	"mobile-frontend-editor-unavailable-header": "尚無法使用編輯器",
 	"mobile-frontend-editor-undo-unsupported": "手機裝置目前尚未支援還原。",
 	"mobile-frontend-editor-uploadenable": "請先上傳一張照片然後編輯。",
-	"mobile-frontend-editor-viewing-source-page": "<strong>檢視 <span>$1</span> 的原始碼</strong>",
+	"mobile-frontend-editor-viewing-source-page": "<strong>檢視</strong> <span>$1</span> <strong>的原始碼</strong>",
 	"mobile-frontend-editor-visual-editor": "編輯",
 	"mobile-frontend-editor-wait": "正在儲存編輯，請稍候。",
 	"mobile-frontend-enable-images": "開啟手機版網頁上的圖片",
