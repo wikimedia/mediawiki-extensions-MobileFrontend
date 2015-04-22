@@ -1,6 +1,8 @@
 <{{tagName}}
 	{{#href}}href="{{href}}"{{/href}}
 	class="mw-ui-button {{#progressive}}mw-ui-progressive{{/progressive}}
+		{{#block}}mw-ui-block{{/block}}
+		{{#quiet}}mw-ui-quiet{{/quiet}}
 		{{#constructive}}mw-ui-constructive{{/constructive}}
 		{{#destructive}}mw-ui-destructive{{/destructive}} {{additionalClassNames}}
 	">{{label}}</{{tagName}}>

@@ -13,7 +13,7 @@
 				{{info}}
 				{{{licenseMsg}}}
 			</p>
-			<button class="mw-ui-button mw-ui-constructive mw-ui-block save-button">{{saveMsg}}</button>
+			{{#saveButton}}{{>button}}{{/saveButton}}
 		</div>
 	</div>
 </div>

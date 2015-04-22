@@ -3,6 +3,7 @@
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		user = M.require( 'user' ),
 		popup = M.require( 'toast' ),
+		Button = M.require( 'Button' ),
 		Icon = M.require( 'Icon' ),
 		PhotoList = M.require( 'modules/gallery/PhotoList' ),
 		pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
@@ -45,15 +46,16 @@
 		if ( PhotoUploaderButton.isSupported && currentUserName === userName && mw.config.get( 'wgUserCanUpload' ) ) {
 			if ( $btnContainer.length ) {
 				if ( user.getEditCount() === 0 ) {
-					$( '<a class="button mw-ui-button mw-ui-progressive">' )
-						.addClass(
-							new Icon( {
-								name: 'photo',
-								hasText: true
-							} ).getClassName()
-						)
-						.text( mw.msg( 'mobile-frontend-photo-upload-generic' ) )
-						.attr( 'href', '#/upload-tutorial/uploads' ).appendTo( $btnContainer );
+					new Button( {
+						href: '#/upload-tutorial/uploads',
+						progressive: true,
+						label: mw.msg( 'mobile-frontend-photo-upload-generic' ),
+						additionalClassNames: new Icon( {
+							name: 'photo',
+							additionalClassNames: 'button',
+							hasText: true
+						} ).getClassName()
+					} ).appendTo( $btnContainer );
 				} else {
 					createButton( $btnContainer );
 				}

@@ -1,7 +1,7 @@
 <div>
 	{{^rows}}
 	{{^isEmptyInfobox}}
-	<button class="mw-ui-button mw-ui-quiet mw-ui-progressive more">More information…</button>
+	{{#moreButton}}{{>button}}{{/moreButton}}
 	{{/isEmptyInfobox}}
 	{{/rows}}
 	{{#isEmptyInfobox}}
@@ -37,7 +37,6 @@
 <ul class="hlist">
 	{{#commonsLink}}<li>{{>anchor}}</li>{{/commonsLink}}
 	{{#viewLink}}<li>{{>anchor}}</li>{{/viewLink}}
-	<li><a href='#/infobox/editor'
-		class="hidden edit mw-ui-button mw-ui-progressive">Edit this information</a></li>
+	<li>{{#editButton}}{{>button}}{{/editButton}}</li>
 </ul>
 {{/rows.length}}
