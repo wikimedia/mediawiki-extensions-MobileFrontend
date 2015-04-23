@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_1caf13e2",
+        "filename": "i18n/en.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-23T20:50:51Z",
+      "side": 1,
+      "message": "either use wikitext here (and style tweak the resulting paragraphs or use strong tags - not sure which is better for translation purposes but don\u0027t unnecessarily use \u003cb\u003e tags.",
+      "revId": "7a967073fa06ee6bb416db3d0faa956190323093",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
