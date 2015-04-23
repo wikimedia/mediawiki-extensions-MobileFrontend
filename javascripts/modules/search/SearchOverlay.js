@@ -51,6 +51,18 @@
 			searchContentNoResultsMsg: mw.msg( 'mobile-frontend-search-content-no-results' ),
 			action: mw.config.get( 'wgScript' )
 		},
+		/**
+		 * @inheritdoc
+		 */
+		events: $.extend( {}, Overlay.prototype.events, {
+			'input input': 'onInputInput',
+			'click .clear': 'onClickClear',
+			'click .search-content': 'onClickSearchContent',
+			'click .overlay-content': 'onClickOverlayContent',
+			'click .overlay-content > div': 'onClickOverlayContentDiv',
+			'touchstart .results': 'hideKeyboardOnScroll',
+			'mousedown .results': 'hideKeyboardOnScroll'
+		} ),
 
 		/**
 		 * Hide self when the route is visited
@@ -81,12 +93,72 @@
 			} );
 		},
 
+		/**
+		 * Make sure search header is docked to the top of the screen when the
+		 * user begins typing so that there is adequate space for search results
+		 * above the keyboard. (This is only a potential issue when sitenotices
+		 * are displayed.)
+		 */
+		onInputInput: function () {
+			this.$( '.overlay-header-container' ).css( 'top', 0 );
+			this.performSearch();
+			this.$clear.toggle( this.$input.val() !== '' );
+		},
+
+		/**
+		 * Initialize the button that clears the search field
+		 */
+		onClickClear: function () {
+			this.$input.val( '' ).focus();
+			this.performSearch();
+			this.$clear.hide();
+		},
+
+		/**
+		 * Initialize 'search within pages' functionality
+		 */
+		onClickSearchContent: function () {
+			var $form = this.$( 'form' );
+
+			window.history.back();
+
+			// Add fulltext input to force fulltext search
+			$( '<input>' )
+				.attr( {
+					type: 'hidden',
+					name: 'fulltext',
+					value: 'search'
+				} )
+				.appendTo( $form );
+			$form.submit();
+		},
+
+		/**
+		 * Tapping on background only should hide the overlay
+		 */
+		onClickOverlayContent: function () {
+			this.$( '.cancel' ).trigger( 'click' );
+		},
+
+		/**
+		 * Stop propagation
+		 * @param {jQuery.Event} ev
+		 */
+		onClickOverlayContentDiv: function ( ev ) {
+			ev.stopPropagation();
+		},
+
+		/**
+		 * Hide the keyboard when scrolling starts (avoid weird situation when
+		 * user taps on an item, the keyboard hides and wrong item is clicked).
+		 */
+		hideKeyboardOnScroll: function () {
+			this.$input.blur();
+		},
+
 		/** @inheritdoc */
 		postRender: function ( options ) {
-			var
-				self = this,
-				$clear = this.$( '.clear' ),
-				$form = this.$( 'form' );
+			var self = this;
 
 			// Make sure search overlay lines up with search header when the overlay is
 			// rendered. This is necessary to prevent bug 67140 while sitenotices are
@@ -97,59 +169,14 @@
 
 			Overlay.prototype.postRender.call( this, options );
 
-			this.$input = this.$( 'input' ).on( 'input', function () {
-				// Make sure search header is docked to the top of the screen when the
-				// user begins typing so that there is adequate space for search results
-				// above the keyboard. (This is only a potential issue when sitenotices
-				// are displayed.)
-				self.$( '.overlay-header-container' ).css( 'top', 0 );
-				self.performSearch();
-				$clear.toggle( self.$input.val() !== '' );
-			} );
+			this.$input = this.$( 'input' );
+			this.$clear = this.$( '.clear' );
+			this.$searchContent = this.$( '.search-content' ).hide();
 
 			// Hide the clear button if the search input is empty
 			if ( self.$input.val() === '' ) {
-				$clear.hide();
+				this.$clear.hide();
 			}
-			// initialize the button that clears the search field
-			$clear.on( 'click', function () {
-				self.$input.val( '' ).focus();
-				self.performSearch();
-				$clear.hide();
-			} );
-
-			// Initialize 'search within pages' functionality
-			this.$searchContent = this.$( '.search-content' )
-				.hide()
-				// can't use $.proxy because it would pass ev to submit() which would
-				// be treated as alternative form data
-				.on( 'click', function () {
-					window.history.back();
-					// Add fulltext input to force fulltext search
-					$( '<input>' )
-						.attr( {
-							type: 'hidden',
-							name: 'fulltext',
-							value: 'search'
-						} )
-						.appendTo( $form );
-					$form.submit();
-				} );
-
-			// tapping on background only should hide the overlay
-			this.$overlayContent
-				.on( 'click', function () {
-					self.$( '.cancel' ).trigger( 'click' );
-				} )
-				.find( '> div' ).on( 'click', function ( ev ) {
-					ev.stopPropagation();
-				} );
-
-			// hide the keyboard when scrolling starts (avoid weird situation when
-			// user taps on an item, the keyboard hides and wrong item is clicked)
-			this.$( '.results' ).on( 'touchstart mousedown', function () {
-				self.$input.blur();
-			} );
 		},
 
 		/** @inheritdoc */
