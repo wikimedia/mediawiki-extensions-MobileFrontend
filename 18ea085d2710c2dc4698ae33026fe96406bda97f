@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_1f7b88ec",
+        "filename": "less/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-04-23T18:03:36Z",
+      "side": 1,
+      "message": "May wanna make this conditional on .client-js so that it\u0027s not hidden when js fails or in older browsers.\n\nclient-js is added before the first rendering, so there\u0027s no flash from that.",
+      "revId": "18ea085d2710c2dc4698ae33026fe96406bda97f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
