@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed113e2_896e6629",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 875,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T13:49:36Z",
+      "side": 1,
+      "message": "Consider the name of this variable. It implies that its value is boolean. Perhaps you should rename it to wgMFUserBlockInformation.",
+      "revId": "57d1b0646ad645d8c4ad96da75a4d566865eb929",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_a9e32ad3",
         "filename": "javascripts/modules/editor/init.js",
         "patchSetId": 5
