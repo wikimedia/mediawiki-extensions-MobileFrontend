@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_e4b2b7e3",
+        "filename": "javascripts/user.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T15:38:14Z",
+      "side": 1,
+      "message": "This could be made a little simpler:\n\n    return this.getBlockInfo() !\u003d\u003d false;",
+      "revId": "277a2f1a6b5e1a81dd933377c2aee7f29243fde1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
