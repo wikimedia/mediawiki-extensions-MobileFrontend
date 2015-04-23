@@ -1,4 +1,4 @@
 <div class="content">
 	{{{message}}}
-	<button class="cancel mw-ui-button mw-ui-progressive">{{confirmMessage}}</button>
+	{{#confirmButton}}{{>button}}{{/confirmButton}}
 </div>
