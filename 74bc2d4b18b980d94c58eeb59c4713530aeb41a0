@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_c9854e5c",
+        "filename": "includes/browse/NullTagService.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T12:35:48Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_e949326b",
+      "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_094fd66f",
         "filename": "includes/browse/TagService.php",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-23T12:20:56Z",
       "side": 1,
       "message": "mainspace? o.O Wouldn\u0027t be main namespace better? :)",
+      "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_49915e9b",
+        "filename": "includes/browse/TagService.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T12:35:48Z",
+      "side": 1,
+      "message": "I thought mainspace was acceptable. Done.",
+      "parentUuid": "0ed113e2_094fd66f",
       "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_098cb688",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T12:35:48Z",
+      "side": 1,
+      "message": "No. Moreover, as the implementation of #getBrowseTags and TagService#getTags change, I\u0027d expect them to do their own caching.",
+      "parentUuid": "0ed113e2_0976f69f",
+      "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_696462e2",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 9
@@ -64,6 +118,24 @@
       "writtenOn": "2015-04-23T12:20:56Z",
       "side": 1,
       "message": "Can you flip the order of getBrowseTags and getBrowseTagService? I would assume, that functions, that are referenced by other functions, are ordered before these functions (you understand? :)).",
+      "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a9800a4c",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T12:35:48Z",
+      "side": 1,
+      "message": "I understand the request but I\u0027m not sure why… Is this -1 worthy?",
+      "parentUuid": "0ed113e2_696462e2",
       "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
