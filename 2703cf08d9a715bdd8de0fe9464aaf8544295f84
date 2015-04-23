@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_e5b06e40",
+        "filename": "less/common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-23T23:12:51Z",
+      "side": 1,
+      "message": "Bartosz had some good ideas around this.",
+      "revId": "2703cf08d9a715bdd8de0fe9464aaf8544295f84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
