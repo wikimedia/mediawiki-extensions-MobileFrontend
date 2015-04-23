@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_e949326b",
+        "filename": "includes/browse/NullTagService.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-23T12:20:56Z",
+      "side": 1,
+      "message": "doc",
+      "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_094fd66f",
+        "filename": "includes/browse/TagService.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-23T12:20:56Z",
+      "side": 1,
+      "message": "mainspace? o.O Wouldn\u0027t be main namespace better? :)",
+      "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_0976f69f",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-23T12:20:56Z",
+      "side": 1,
+      "message": "is there a need to cache this in a variable?",
+      "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_696462e2",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-23T12:20:56Z",
+      "side": 1,
+      "message": "Can you flip the order of getBrowseTags and getBrowseTagService? I would assume, that functions, that are referenced by other functions, are ordered before these functions (you understand? :)).",
+      "revId": "74bc2d4b18b980d94c58eeb59c4713530aeb41a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
