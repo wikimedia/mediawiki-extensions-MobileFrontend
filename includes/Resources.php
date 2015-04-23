@@ -771,7 +771,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'CategoryAddOverlay.hogan' => 'templates/modules/categories/CategoryAddOverlay.hogan',
 			'CategoryAddOverlayHeader.hogan' =>
 				'templates/modules/categories/CategoryAddOverlayHeader.hogan',
-			'CategoryButton.hogan' => 'templates/modules/categories/CategoryButton.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-categories-heading',

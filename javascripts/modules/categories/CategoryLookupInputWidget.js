@@ -1,4 +1,7 @@
 ( function ( M, $, OO ) {
+	var Button = M.require( 'Button' ),
+		Icon = M.require( 'Icon' );
+
 	/**
 	 * @class CategoryLookupInputWidget
 	 * @extends OO.ui.LookupElement
@@ -21,12 +24,16 @@
 	 * @param {Object} data Data of the clicked element
 	 */
 	CategoryLookupInputWidget.prototype.onLookupMenuItemChoose = function ( data ) {
-		this.$suggestions.append(
-			mw.template.get( 'mobile.categories', 'CategoryButton.hogan' ).render( {
-				title: data.data,
-				displayname: data.label
-			} )
-		);
+		var button = new Button( {
+			progressive: true,
+			additionalClassNames: new Icon( {
+				name: 'ok',
+				hasText: true,
+				additionalClassNames: 'suggestion suggested'
+			} ).getClassName(),
+			label: data.label
+		} ).appendTo( this.$suggestions );
+		button.$el.data( 'title', data.data );
 		this.$saveButton.prop( 'disabled', false );
 	};
 

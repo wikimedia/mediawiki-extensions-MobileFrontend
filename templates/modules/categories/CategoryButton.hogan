@@ -1,3 +1,0 @@
-<button class="mw-ui-button mw-ui-progressive mw-ui-icon mw-ui-icon-before mw-ui-icon-ok suggestion suggested" data-title="{{title}}">
-	{{displayname}}
-</button>
