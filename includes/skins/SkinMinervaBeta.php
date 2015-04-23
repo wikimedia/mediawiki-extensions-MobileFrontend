@@ -83,6 +83,10 @@ class SkinMinervaBeta extends SkinMinerva {
 			$modules[] = 'mobile.talk';
 		}
 
+		if ( $this->getCategoryLinks( false ) ) {
+			$modules[] = 'mobile.categories';
+		}
+
 		return $modules;
 	}
 

@@ -42,37 +42,10 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 		);
 	}
 
-	/**
-	 * Get category button if categories are present
-	 * @return array A map of the button's friendly name, "categories" to its
-	 *   spec if the button can be displayed.
-	 */
-	public function getCategoryButton() {
-		$skin = $this->getSkin();
-		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );
-
-		if ( !$categories ) {
-			return array();
-		}
-
-		return array(
-			'categories' => array(
-				'attributes' => array(
-					'href' => '#/categories',
-					// add hidden class (the overlay works only, when JS is enabled (class will
-					// be removed in categories/init.js)
-					'class' => 'category-button hidden',
-				),
-				'label' => wfMessage( 'categories' )->text()
-			),
-		);
-	}
-
 	/** @inheritdoc */
 	protected function getSecondaryActions() {
 		$result = parent::getSecondaryActions();
 		$result += $this->getNearbyButton();
-		$result += $this->getCategoryButton();
 
 		return $result;
 	}
