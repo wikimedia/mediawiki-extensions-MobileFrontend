@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_e4edd723",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 875,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-23T15:07:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_896e6629",
+      "revId": "57d1b0646ad645d8c4ad96da75a4d566865eb929",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_a9e32ad3",
         "filename": "javascripts/modules/editor/init.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-23T13:35:18Z",
       "side": 1,
       "message": "This\u0027d read nicer if there were a method like User#isBlocked.\n\nAlso, User#getBlock is a little on the generic side. How about User#getBlockInfo?",
+      "revId": "57d1b0646ad645d8c4ad96da75a4d566865eb929",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_64e1e728",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-23T15:07:00Z",
+      "side": 1,
+      "message": "hmm, yeah, you\u0027re right, getBlock is way too generic :)",
+      "parentUuid": "0ed113e2_a9e32ad3",
       "revId": "57d1b0646ad645d8c4ad96da75a4d566865eb929",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
