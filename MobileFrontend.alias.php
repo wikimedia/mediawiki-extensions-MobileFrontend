@@ -240,6 +240,12 @@ $specialPageAliases['ja'] = array(
 	'UserProfile' => array( '利用者プロフィール' ),
 );
 
+/** Georgian (ქართული) */
+$specialPageAliases['ka'] = array(
+	'History' => array( 'ისტორია' ),
+	'Uploads' => array( 'ატვირთვები' ),
+);
+
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
 	'History' => array( '역사' ),
