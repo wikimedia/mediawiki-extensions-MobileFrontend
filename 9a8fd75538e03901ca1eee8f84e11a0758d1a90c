@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_0e527c6a",
+        "filename": "includes/browse/NullTagService.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_75cf5b83",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_f5910b53",
         "filename": "includes/browse/TagService.php",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-22T22:49:03Z",
       "side": 1,
       "message": "Per coding conventions, all new member variables should include documentation. I know it\u0027s redundant with the @param documentation below, but it should be provided in both places.",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_aed250d3",
+        "filename": "includes/browse/TagService.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_f5910b53",
       "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_8ecd0c37",
+        "filename": "includes/browse/TagService.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Maybe not always. But then I\u0027d expect the developer that makes the change to update the documentation accordingly.",
+      "parentUuid": "0ed113e2_757d1b17",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_35779337",
         "filename": "includes/skins/MinervaTemplateBeta.php",
         "patchSetId": 8
@@ -64,6 +118,24 @@
       "writtenOn": "2015-04-22T22:49:03Z",
       "side": 1,
       "message": "Should have @inherit for the docs",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_2ede60df",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "I believe that the inheritdoc directive is implied. However, since we do this for all other overridden methods, I\u0027ll continue house style.",
+      "parentUuid": "0ed113e2_35779337",
       "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_ceea3473",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_b59aa364",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_f5902b48",
         "filename": "includes/skins/MinervaTemplateBeta.php",
         "patchSetId": 8
@@ -98,6 +188,24 @@
       "writtenOn": "2015-04-22T22:49:03Z",
       "side": 1,
       "message": "What does it actually return? HTML for the tags section?",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_ce91d4fc",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_f5902b48",
       "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_ee9618f3",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_d58ba719",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_f534ab48",
         "filename": "includes/skins/SkinMinervaBeta.php",
         "patchSetId": 8
@@ -132,6 +258,24 @@
       "writtenOn": "2015-04-22T22:49:03Z",
       "side": 1,
       "message": "getTitle() can theoretically return null, so you might want to check it first.",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_0e8fdcd2",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_f534ab48",
       "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_aea0103f",
+        "filename": "includes/skins/SkinMinervaBeta.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_95ac3f86",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_554337b6",
         "filename": "less/browse/tags.less",
         "patchSetId": 8
@@ -172,6 +334,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_2e8c20db",
+        "filename": "less/browse/tags.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_554337b6",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_7540bba8",
         "filename": "less/browse/tags.less",
         "patchSetId": 8
@@ -183,6 +363,24 @@
       "writtenOn": "2015-04-22T22:49:03Z",
       "side": 1,
       "message": "Same here.",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_ceb8f476",
+        "filename": "less/browse/tags.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ed113e2_7540bba8",
       "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -217,6 +415,42 @@
       "writtenOn": "2015-04-22T23:06:54Z",
       "side": 1,
       "message": "The mock-up calls for the header to be sans serif. If we want to match that we\u0027ll need to override the font for the h4.",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_eebdb864",
+        "filename": "less/browse/tags.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "Done. We really don\u0027t have a clearfix class do we?",
+      "parentUuid": "0ed113e2_b5b70381",
+      "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_8eb2ec90",
+        "filename": "less/browse/tags.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-23T10:43:03Z",
+      "side": 1,
+      "message": "I\u0027ll bring this up with Kaity at design review. I\u0027m not sure that overriding established header styles is a good idea.",
+      "parentUuid": "0ed113e2_7578bbbf",
       "revId": "9a8fd75538e03901ca1eee8f84e11a0758d1a90c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
