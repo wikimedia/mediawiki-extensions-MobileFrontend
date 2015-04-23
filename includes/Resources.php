@@ -129,6 +129,7 @@ $wgMinervaStyleModules = array(
 			'less/pageactions.beta.less',
 			'less/footer.beta.less',
 			'less/content/main.beta.less',
+			'less/browse/tags.less',
 		),
 	),
 	'skins.minerva.beta.images' => $wgMFResourceFileModuleBoilerplate + array(
