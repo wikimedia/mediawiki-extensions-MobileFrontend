@@ -28,6 +28,6 @@ $wgMFShowRedLinksAnon = false;
  *	the user the possibility to review the new text resulting of his changes or not.
  */
 $wgMFEditorOptions = array(
-	'anonymousEditing' => false,
+	'anonymousEditing' => true,
 	'skipPreview' => false,
 );
