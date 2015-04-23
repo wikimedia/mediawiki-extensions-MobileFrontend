@@ -1180,7 +1180,13 @@ HTML;
 		// for plural support we need the info, if there is one or more licenses used in the license text
 		// this check if very simple and works on the base, that more than one license will
 		// use "and" as a connective
-		$isPlural = ( strpos( $rightsText, wfMessage( 'and' )->text() ) === false ? 1 : 2 );
+		// 1 - no plural
+		// 2 - plural
+		$delimiterMsg = wfMessage( 'and' );
+		// check, if "and" isn't disabled and exists in site language
+		$isPlural = (
+			!$delimiterMsg->isDisabled() && strpos( $rightsText, $delimiterMsg->text() ) === false ? 1 : 2
+		);
 
 		return array(
 			'link' => $link,
