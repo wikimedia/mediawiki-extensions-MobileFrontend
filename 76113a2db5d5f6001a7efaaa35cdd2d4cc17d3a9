@@ -16,6 +16,24 @@
       "revId": "76113a2db5d5f6001a7efaaa35cdd2d4cc17d3a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e93372be",
+        "filename": "i18n/en.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-23T12:47:21Z",
+      "side": 1,
+      "message": "Oops, jap, thanks! :)",
+      "parentUuid": "0ed113e2_e9d4d24d",
+      "revId": "76113a2db5d5f6001a7efaaa35cdd2d4cc17d3a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
