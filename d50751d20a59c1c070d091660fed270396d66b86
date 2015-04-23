@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7ac3c23d",
+        "filename": "includes/skins/MinervaTemplateBeta.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-23T19:56:54Z",
+      "side": 1,
+      "message": "missing type before $data",
+      "revId": "d50751d20a59c1c070d091660fed270396d66b86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_fa05727d",
+        "filename": "less/browse/tags.less",
+        "patchSetId": 10
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-23T19:56:54Z",
+      "side": 1,
+      "message": "Abbreviations will look weirdly.",
+      "revId": "d50751d20a59c1c070d091660fed270396d66b86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
