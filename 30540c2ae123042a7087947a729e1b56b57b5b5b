@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_a3c81bab",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-24T20:14:24Z",
+      "side": 1,
+      "message": "Contrary to the original code, the commonsLink will show even without a href.",
+      "revId": "30540c2ae123042a7087947a729e1b56b57b5b5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e3b863e4",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-24T20:14:24Z",
+      "side": 1,
+      "message": "This won\u0027t work for the same reason as the one pointed out in T97077",
+      "revId": "30540c2ae123042a7087947a729e1b56b57b5b5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
