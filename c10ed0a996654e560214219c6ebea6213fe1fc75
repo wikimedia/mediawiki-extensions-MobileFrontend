@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_11e7f410",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-24T18:40:01Z",
+      "side": 1,
+      "message": "Whoops good catch. Had assumed it was in Overlay I\u0027ll update base template",
+      "parentUuid": "0ed113e2_d0964a4f",
+      "revId": "c10ed0a996654e560214219c6ebea6213fe1fc75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_308d5637",
         "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-24T05:45:15Z",
       "side": 1,
       "message": "button: Button.prototype.template",
+      "revId": "c10ed0a996654e560214219c6ebea6213fe1fc75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_31bf98cf",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-24T18:40:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_308d5637",
       "revId": "c10ed0a996654e560214219c6ebea6213fe1fc75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
