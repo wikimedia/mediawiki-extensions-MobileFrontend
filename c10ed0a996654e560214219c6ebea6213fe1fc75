@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_d0964a4f",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-24T05:45:15Z",
+      "side": 1,
+      "message": "You need to add the button template: button: Button.prototype.template",
+      "revId": "c10ed0a996654e560214219c6ebea6213fe1fc75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_308d5637",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-24T05:45:15Z",
+      "side": 1,
+      "message": "button: Button.prototype.template",
+      "revId": "c10ed0a996654e560214219c6ebea6213fe1fc75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
