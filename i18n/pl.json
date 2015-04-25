@@ -342,5 +342,6 @@
 	"mobile-frontend-time-precision-BCE-0annum": "$1 p.n.e.",
 	"mobile-frontend-days-ago": "{{PLURAL:$1|wczoraj|$1 dni temu}}",
 	"mobile-frontend-months-ago": "{{PLURAL:$1|miesiąc|$1 miesiące|$1 miesięcy}} temu",
-	"mobile-frontend-years-ago": "{{PLURAL:$1|rok|$1 lata|$1 lat}} temu"
+	"mobile-frontend-years-ago": "{{PLURAL:$1|rok|$1 lata|$1 lat}} temu",
+	"mobile-frontend-browse-tags-header": "Znaczniki"
 }

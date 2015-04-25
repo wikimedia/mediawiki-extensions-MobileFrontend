@@ -417,5 +417,6 @@
 	"mobile-frontend-days-ago": "לפני {{PLURAL:$1|יום|יומיים|$1 יום|$1 ימים}}",
 	"mobile-frontend-months-ago": "לפני {{PLURAL:$1|חודש|חודשיים|$1 חודשים}}",
 	"mobile-frontend-years-ago": "לפני {{PLURAL:$1|שנה|שנתיים|$1 שנים}}",
-	"mobile-frontend-console-recruit": "אהלן! /ס\\ זוהי תכנה בקוד פתוח ואנחנו מחפשים מתנדבים שיעזרו לבנות אותה, לשפר אותה ולמצוא באגים שאולי מוצגים במסוף ג'אווה־סקריפט! אפשר למצוא את הבאגים שלנו בדף\n\nhttps://phabricator.wikimedia.org/project/view/67/"
+	"mobile-frontend-console-recruit": "אהלן! /ס\\ זוהי תכנה בקוד פתוח ואנחנו מחפשים מתנדבים שיעזרו לבנות אותה, לשפר אותה ולמצוא באגים שאולי מוצגים במסוף ג'אווה־סקריפט! אפשר למצוא את הבאגים שלנו בדף\n\nhttps://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-browse-tags-header": "תגיות"
 }

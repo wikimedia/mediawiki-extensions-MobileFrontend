@@ -73,6 +73,7 @@
 	"mobile-frontend-editor-anon": "Ohne Anmeldung bearbeiten",
 	"mobile-frontend-editor-anonwarning": "<strong>Warnung:</strong> Du bist nicht angemeldet. Deine IP-Adresse wird öffentlich sichtbar, wenn du Bearbeitungen durchführst. Falls du dich <strong>anmeldest</strong> oder <strong>ein Benutzerkonto erstellst</strong>, werden deine Bearbeitungen zusammen mit anderen Beiträgen deinem Benutzernamen zugeordnet.",
 	"mobile-frontend-editor-blocked": "Dein Benutzerkonto ist für das Bearbeiten gesperrt.",
+	"mobile-frontend-editor-blocked-info-loggedin": "Dein Benutzerkonto ist für das Bearbeiten gesperrt. Die Sperre wurde von {{GENDER:$2|$2}} aus dem folgenden Grund durchgeführt: $1",
 	"mobile-frontend-editor-cancel": "Abbrechen",
 	"mobile-frontend-editor-cancel-confirm": "Willst du wirklich deine Bearbeitung verwerfen?",
 	"mobile-frontend-editor-captcha-try-again": "Falscher Code. Versuche es erneut.",
@@ -397,5 +398,6 @@
 	"mobile-frontend-days-ago": "vor {{PLURAL:$1|einem Tag|$1 Tagen}}",
 	"mobile-frontend-months-ago": "vor {{PLURAL:$1|einem Monat|$1 Monaten}}",
 	"mobile-frontend-years-ago": "vor {{PLURAL:$1|einem Jahr|$1 Jahren}}",
-	"mobile-frontend-console-recruit": "\\o/ Hey! Dies ist Open-Source-Software und wir brauchen Freiwillige, um uns beim Erstellen dieser Sache zu unterstützen, sie besser zu machen und Fehler zu beheben, die du vielleicht in dieser JavaScript-Konsole gesehen hast!\n\nDu findest unser Backlog unter https://phabricator.wikimedia.org/project/view/67/"
+	"mobile-frontend-console-recruit": "\\o/ Hey! Dies ist Open-Source-Software und wir brauchen Freiwillige, um uns beim Erstellen dieser Sache zu unterstützen, sie besser zu machen und Fehler zu beheben, die du vielleicht in dieser JavaScript-Konsole gesehen hast!\n\nDu findest unser Backlog unter https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-browse-tags-header": "Markierungen"
 }

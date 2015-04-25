@@ -92,6 +92,7 @@
 	"mobile-frontend-editor-anon": "未登录编辑",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您没有登录。您的IP地址在您作出任何编辑后将公开可见。如果您<strong>登录</strong>或<strong>注册一个账户</strong>，您的编辑将归属于您的用户名，以及有其他的好处。",
 	"mobile-frontend-editor-blocked": "您的账户被封禁编辑。",
+	"mobile-frontend-editor-blocked-info-loggedin": "您的账户被封禁，不能编辑。封禁是由{{GENDER:$2|$2}}做出的，原因是：$1",
 	"mobile-frontend-editor-cancel": "取消",
 	"mobile-frontend-editor-cancel-confirm": "你真的想要放弃你的编辑？",
 	"mobile-frontend-editor-captcha-try-again": "错误代码，请重试。",
@@ -434,5 +435,6 @@
 	"mobile-frontend-days-ago": "$1天前",
 	"mobile-frontend-months-ago": "$1月前",
 	"mobile-frontend-years-ago": "$1年前",
-	"mobile-frontend-console-recruit": "\\o/ 嘿！这是一个开源软件，并且我们需要志愿者来帮助我们打造它、使其更好和修复 Bug，比如您这样查阅 JavaScript 控制台的人。\n\n您可以找到我们的积压问题 @ https://phabricator.wikimedia.org/project/view/67/"
+	"mobile-frontend-console-recruit": "\\o/ 嘿！这是一个开源软件，并且我们需要志愿者来帮助我们打造它、使其更好和修复 Bug，比如您这样查阅 JavaScript 控制台的人。\n\n您可以找到我们的积压问题 @ https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-browse-tags-header": "标签"
 }

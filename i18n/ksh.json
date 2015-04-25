@@ -74,7 +74,7 @@
 	"mobile-frontend-editor-error-loading": "Fähler. Mer künne dä Affschnett nit lahde.",
 	"mobile-frontend-editor-error-preview": "Fähler. Jäd onäwahds es passeht beim Lahde vun dä Aanseesch.\nBes esu johd un maach zoh un versöhg et norr_ens.",
 	"mobile-frontend-editor-keep-editing": "Blihv derbei",
-	"mobile-frontend-editor-licensing": "Mem Afschpeischere deihß Dinge Beijdraach onger de {{PLURAL:$2|Lezänz $1 |Lezänze $1 |kein Lezänz}} schtälle.",
+	"mobile-frontend-editor-licensing": "Mem Afschpeischere deihß Dinge Beijdrahch onger de {{PLURAL:$2|Lezänz $1|Lezänze $1|kein Lezänz}} schtälle.",
 	"mobile-frontend-editor-licensing-with-terms": "Mem Afschpeischere deihß dä $1 zohschtemme un Dinge Beijdraach onger de {{PLURAL:$3|Lezänz $2|Lezänze $2|kein Lezänz}} schtälle.",
 	"mobile-frontend-editor-terms-link": "[$1 Bedengonge för der Jebruch]",
 	"mobile-frontend-editor-new-page-confirm": "Wells De verhaftejj en neu Sigg {{GRAMMAR:em|{{ucfirst:{{SITENAME}}}}}} aanlähje?{{GENDER:$1|}}",
@@ -319,5 +319,6 @@
 	"mobile-frontend-days-ago": "vör {{PLURAL:$1|einem Daach|$1 Dähsch|keinem Daach}}",
 	"mobile-frontend-months-ago": "vör {{PLURAL:$1|einem Mohnd|$1 Mohnde|keinem Mohnd}}",
 	"mobile-frontend-years-ago": "vör {{PLURAL:$1|einem Johr|$1 Johre|keinem Johr}}",
-	"mobile-frontend-console-recruit": "Heh dat sen Projramme med offe Quältäx, un mer bruche Lück, di hällfe, dat bäßer ze mahche un de Fähler ze reparehre, di mer heh em JahvaSkrepp süht.\n\nDo kanns onser onjedonn Saache fenge @ https://phabricator.wikimedia.org/project/view/67/"
+	"mobile-frontend-console-recruit": "Heh dat sen Projramme med offe Quältäx, un mer bruche Lück, di hällfe, dat bäßer ze mahche un de Fähler ze reparehre, di mer heh em JahvaSkrepp süht.\n\nDo kanns onser onjedonn Saache fenge @ https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-browse-tags-header": "Makeeronge"
 }

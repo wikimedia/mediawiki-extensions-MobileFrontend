@@ -56,6 +56,7 @@
 	"mobile-frontend-editor-abusefilter-warning": "Opgepasst: Sidd Dir sécher datt Dir dës Ännerung späichere wëllt? Et kéint sinn datt et domat e Problem gëtt.",
 	"mobile-frontend-editor-anon": "Änneren ouni anzeloggen",
 	"mobile-frontend-editor-blocked": "Äre Benotzerkont ass gespaart fir z'änneren.",
+	"mobile-frontend-editor-blocked-info-loggedin": "Äre Benotzerkont ass gespaart fir z'änneren. D'Spär gouf vum {{GENDER:$2|$2}} aus dësem Grond gemaach: $1",
 	"mobile-frontend-editor-cancel": "Ofbriechen",
 	"mobile-frontend-editor-cancel-confirm": "Wëllt dir Är Ännerung wierklech opginn?",
 	"mobile-frontend-editor-captcha-try-again": "Falsche Code, probéiert nach eng Kéier.",
