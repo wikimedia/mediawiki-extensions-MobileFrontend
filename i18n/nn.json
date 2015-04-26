@@ -13,7 +13,7 @@
 	"mobile-frontend-changeslist-ip": "Anonyme brukarar",
 	"mobile-frontend-changeslist-nocomment": "inkje endringssamandrag",
 	"mobile-frontend-clear-search": "Tøm",
-	"mobile-frontend-copyright": "Teksten er tilgjengeleg under <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike-lisensen</a>, med eventuelle tillegg. Sjå <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>vilkåra</a> for detaljar. {{SITENAME}} er eit registrert varemerke som tilhøyrer <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, som er ein ideell organisasjon.",
+	"mobile-frontend-copyright": "Teksten er tilgjengeleg under $1 om ikkje anna er oppgjeve.",
 	"mobile-frontend-desc": "Mobilgrensesnitt",
 	"mobile-frontend-diffview-404-desc": "ID-en for versjon du bad om finst ikkje.",
 	"mobile-frontend-diffview-404-title": "Ugild versjon",
@@ -51,6 +51,7 @@
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Ja!",
 	"mobile-frontend-footer-contact": "Kontakt",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "{{SITENAME}} vert laga av folk som deg.",
 	"mobile-frontend-generic-login-action": "Logg inn for å bidra.",
 	"mobile-frontend-history": "Sjå endringshistorikken til sida.",
 	"mobile-frontend-home-button": "Heim",
@@ -168,5 +169,6 @@
 	"tag-mobile_edit-description": "Endring gjord frå mobil (nett eller småprogram)",
 	"tag-mobile_web_edit": "Mobil nettendring",
 	"tag-mobile_web_edit-description": "Endring gjord frå mobil nettstad",
+	"mobile-frontend-pageaction-edit-tooltip": "Endre innleiinga til denne sida.",
 	"mobile-frontend-meta-data-issues-categories": "Om denne kategorien"
 }

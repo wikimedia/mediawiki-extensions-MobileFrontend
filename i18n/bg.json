@@ -16,6 +16,7 @@
 	"mobile-frontend-account-create-submit": "Регистриране",
 	"mobile-frontend-back-to-top-of-section": "Един раздел назад",
 	"mobile-frontend-changeslist-ip": "Анонимен потребител",
+	"mobile-frontend-changeslist-nocomment": "редакция без резюме",
 	"mobile-frontend-clear-search": "Изчистване",
 	"mobile-frontend-copyright": "Този текст е лицензиран под условията на договора <a href='http://creativecommons.org/licenses/by-sa/3.0/deed.bg'> Криейтив Комънс Признание-Споделяне на споделеното 3.0 Нелокализиран</a>; към който могат да са в сила и допълнителни условия. Вижте <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/bg'>Условия за ползване</a> за подробности. Уикипедия е запазена марка на <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, организация с нестопанска цел.",
 	"mobile-frontend-diffview-anonymous": "Анонимен потребител",
@@ -77,5 +78,7 @@
 	"mobile-frontend-watchlist-filter-all": "Всички",
 	"mobile-frontend-watchlist-filter-other": "Други",
 	"mobile-frontend-watchlist-filter-talk": "Беседа",
-	"tag-mobile_edit": "Редакция чрез мобилно устройство"
+	"tag-mobile_edit": "Редакция чрез мобилно устройство",
+	"tag-mobile_web_edit": "Редакция чрез мобилно приложение",
+	"mobile-frontend-pageaction-edit-tooltip": "Редактиране на водещия раздел на страницата."
 }

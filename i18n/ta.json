@@ -21,7 +21,7 @@
 	"mobile-frontend-changeslist-ip": "அடையாளம் காட்டாத பயனர்",
 	"mobile-frontend-changeslist-nocomment": "தொகுப்பு சுருக்கம் இல்லை",
 	"mobile-frontend-clear-search": "வெறுமையாக்கு",
-	"mobile-frontend-copyright": "இத்திட்ட உரை இங்கு கிடைக்கும் <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; கூடுதல் நிபந்தனைகளுக்கு உட்பட்டது. விவரங்களுக்கு பார்க்க <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>பொறுப்புத் துறப்புகள்</a>. வீக்கிப்பீடியா ஒரு இலாபநோக்கற்ற <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>  நிறுவனத்தின் பதிவு பெற்ற வர்த்தகச் சின்னமாகும்.",
+	"mobile-frontend-copyright": "வேறுவகையாகக் குறிப்பிடப்பட்டிருந்தாலன்றி இவ்வுள்ளடக்கம் $1 இல் கீழ் கிடைக்கும்.",
 	"mobile-frontend-desc": "கைபேசி முகப்பு",
 	"mobile-frontend-diffview-anonymous": "அடையாளம் காட்டாத பயனர்",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|பைட்டு|பைட்டுகள்}} சேர்க்கப்பட்டது",
@@ -42,7 +42,7 @@
 	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}}இல் ஒரு புதிய பக்கத்தை {{GENDER:$1|நீங்கள் உருவாக்குகிறீர்கள்}}!",
 	"mobile-frontend-editor-save": "சேமி",
 	"mobile-frontend-enable-images": "கைபேசித் தளத்தில் படிமங்களைச் செயற்படுத்துக",
-	"mobile-frontend-featured-article": "முதற்பக்கக் கட்டுரைகள்",
+	"mobile-frontend-featured-article": "இன்றைய சிறப்பு உள்ளடக்கம்",
 	"mobile-frontend-footer-contact": "தொடர்புக்கு",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-home-button": "முகப்பு",
@@ -51,7 +51,7 @@
 	"mobile-frontend-language-header": "இப்பக்கம் $1 {{PLURAL:$1|மொழியில்|மொழிகளில்}} உள்ளது",
 	"mobile-frontend-language-site-choose": "மொழியை தேடு",
 	"mobile-frontend-languages-header": "மொழிகள்",
-	"mobile-frontend-listed-image-no-description": "விவரனை இல்லை",
+	"mobile-frontend-last-modified-date": "கடைசியாக $2, $1இல் திருத்தப்பட்டது",
 	"mobile-frontend-logged-in-homepage-notification": "வருக $1",
 	"mobile-frontend-logged-in-toast-notification": "$1 என்ற பெயரிலான புகுபதிகை",
 	"mobile-frontend-logged-out": "புகுபதிகை செய்யப்படவில்லை",
@@ -98,6 +98,7 @@
 	"mobile-frontend-sign-in-heading": "புகுபதிகை",
 	"mobile-frontend-sign-up-heading": "பதிவுசெய்",
 	"mobile-frontend-talk-overlay-header": "பேச்சு",
+	"mobile-frontend-terms-text": "பயன்பாட்டு விதிகள்",
 	"mobile-frontend-username": "பயனர் பெயர்:",
 	"mobile-frontend-username-placeholder": "பயனர் பெயர்",
 	"mobile-frontend-view": "கைபேசிப் பார்வை",
@@ -117,5 +118,7 @@
 	"mobile-frontend-watchlist-filter-talk": "உரையாடல்",
 	"mobile-frontend-watchlist-more": "மேலும்",
 	"mobile-frontend-watchlist-removed": "$1 உங்களது கவனிப்புப் பட்டியலிலிருந்து நீக்கப்பட்டது",
-	"mobile-frontend-watchlist-view": "உங்களது கவனிப்புப் பட்டியலைக் காண்க"
+	"mobile-frontend-watchlist-view": "உங்களது கவனிப்புப் பட்டியலைக் காண்க",
+	"tag-mobile_edit": "கைபேசியில் செய்யப்பட்டத் தொகுப்பு",
+	"tag-mobile_web_edit": "கைபேசி வலைத்தளத்தில் செய்யப்பட்டத் தொகுப்பு"
 }

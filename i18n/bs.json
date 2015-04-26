@@ -5,13 +5,15 @@
 			"DzWiki",
 			"Edinwiki",
 			"KWiki",
-			"Palapa"
+			"Palapa",
+			"Semso98"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "Adresa e-pošte (opcionalno)",
 	"mobile-frontend-account-create-submit": "Napravi korisnički račun",
 	"mobile-frontend-back-to-top-of-section": "Skoči nazad za jednu sekciju",
 	"mobile-frontend-changeslist-ip": "Anonimni korisnik",
+	"mobile-frontend-changeslist-nocomment": "nema sažetka uređivanja",
 	"mobile-frontend-clear-search": "Očisti",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod $1 osim ako je drugačije navedeno.",
 	"mobile-frontend-desc": "Korisnički interfejs za mobilne uređaje",
@@ -26,6 +28,7 @@
 	"mobile-frontend-donate-image-heading": "Vaši nedavni doprinosi",
 	"mobile-frontend-drawer-cancel": "Otkaži",
 	"mobile-frontend-editor-abusefilter-read-more": "Pročitaj više",
+	"mobile-frontend-editor-blocked-info-loggedin": "Vaš račun je blokiran za uređivanje. Blokadu je napravio {{GENDER:$2|$2}} iz sljedećih razloga: $1",
 	"mobile-frontend-editor-cancel": "Otkaži",
 	"mobile-frontend-editor-continue": "Slijedeće",
 	"mobile-frontend-editor-edit": "Uredi",
@@ -43,6 +46,7 @@
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Da!",
 	"mobile-frontend-footer-contact": "Kontakt",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "{{SITENAME}} su napravili ljudi poput vas.",
 	"mobile-frontend-generic-login-action": "Prijavite se da bi doprinosili.",
 	"mobile-frontend-generic-signup-action": "Registrujte se dа bi doprinosili.",
 	"mobile-frontend-home-button": "Početna",
@@ -93,6 +97,7 @@
 	"mobile-frontend-photo-submit": "Slanje datoteke",
 	"mobile-frontend-photo-upload": "Dodajtе sliku na ovu stranicu",
 	"mobile-frontend-photo-upload-error": "Greška; pokušajte ponovо.",
+	"mobile-frontend-placeholder": "Pretraži {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "Privatnost",
 	"mobile-frontend-profile-title": "Korisnički profil",
 	"mobile-frontend-profile-userpage-link": "Vidi {{GENDER:$1|korisničku}} stranicu.",
@@ -111,6 +116,7 @@
 	"mobile-frontend-username": "Korisničko ime:",
 	"mobile-frontend-username-placeholder": "Korisničko ime",
 	"mobile-frontend-view": "Mobilni prikaz",
+	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-view-mobile": "Mobilni",
 	"mobile-frontend-view-source": "Prikaži izvor",
 	"mobile-frontend-watchlist-a-z": "Spisak",
@@ -124,5 +130,8 @@
 	"mobile-frontend-watchlist-filter-talk": "Razgovor",
 	"mobile-frontend-watchlist-more": "više",
 	"mobile-frontend-watchlist-view": "Pogledaj svoj spisak praćenih stranica",
-	"tag-mobile_web_edit": "Web izmjena mobilnim uređajem"
+	"tag-mobile_edit": "Mobilno uređivanje",
+	"tag-mobile_web_edit": "Web izmjena mobilnim uređajem",
+	"mobile-frontend-pageaction-edit-tooltip": "Uredi uvodni odlomak ove stranice",
+	"mobile-frontend-browse-tags-header": "Oznake"
 }

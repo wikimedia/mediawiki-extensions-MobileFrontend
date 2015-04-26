@@ -7,7 +7,8 @@
 			"Sushant savla",
 			"Tekina",
 			"Mitulverma13",
-			"Vyom"
+			"Vyom",
+			"Arbhatt"
 		]
 	},
 	"action-mf-uploadbutton": "મોબાઇલ પેગ પરનો અપલોડ બટન વાપરો",
@@ -67,6 +68,7 @@
 	"mobile-frontend-first-upload-wizard-new-page-2": "ઇન્ટરનેટ પરથી મળી કૉપિરાઇટ સામગ્રી તેમજ પોસ્ટરો છબીઓ, પુસ્તક રન, વગેરેનો ઉપ્યોગ ટાળો.",
 	"mobile-frontend-footer-contact": "સંપર્ક",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "જાળસ્થળ {{SITENAME}} તમારા જેવા લોકોએ બનાવેલ છે.",
 	"mobile-frontend-generic-login-action": "યોગદાન કરવા માટે પ્રવેશ કરો.",
 	"mobile-frontend-home-button": "ઘર",
 	"mobile-frontend-images-status": "ચિત્રો",
@@ -76,6 +78,7 @@
 	"mobile-frontend-logged-out": "પ્રવેશ કરેલ નથી",
 	"mobile-frontend-login": "પ્રવેશ કરો",
 	"mobile-frontend-main-menu-account-create": "ખાતું બનાવો",
+	"mobile-frontend-main-menu-button-tooltip": "મુખ્ય મેનું ખોલો",
 	"mobile-frontend-main-menu-featured": "રુપક",
 	"mobile-frontend-main-menu-login": "પ્રવેશ કરો",
 	"mobile-frontend-main-menu-nearby": "નજીકમાં",
@@ -90,7 +93,7 @@
 	"mobile-frontend-password": "પાસવર્ડ:",
 	"mobile-frontend-password-placeholder": "પાસવર્ડ",
 	"mobile-frontend-placeholder": "{{SITENAME}} શોધો",
-	"mobile-frontend-privacy-link-text": "ખાનગીપણું",
+	"mobile-frontend-privacy-link-text": "ગોપનીયતા",
 	"mobile-frontend-random-button": "ગમે તે",
 	"mobile-frontend-regular-site": "ડેસ્કટોપ દેખાવ",
 	"mobile-frontend-save-settings": "સાચવો",
@@ -106,5 +109,6 @@
 	"mobile-frontend-view-mobile": "મોબાઇલ",
 	"mobile-frontend-watchlist-filter-articles": "પાનાં",
 	"tag-mobile_edit": "મોબાઈલ દ્વારા ફેરફાર",
+	"tag-mobile_web_edit": "મોબાઇલ જાળસ્થળ સંપાદન",
 	"mobile-frontend-pageaction-edit-tooltip": "પૃષ્ઠના શરૂઆતના વિભાગમાં ફેરફાર કરો."
 }

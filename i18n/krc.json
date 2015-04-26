@@ -6,6 +6,7 @@
 	},
 	"mobile-frontend-back-to-top-of-section": "Бир бёлюмге артха атла",
 	"mobile-frontend-changeslist-ip": "Аноним",
+	"mobile-frontend-changeslist-nocomment": "Тюрлендириуню ачыкълауу джокъду",
 	"mobile-frontend-clear-search": "Кетер",
 	"mobile-frontend-copyright": "Ичиндегиси,  $1 лицензиягъа кёре бериледи (башха белгиленмеген эсе).",
 	"mobile-frontend-desc": "Мобил интерфейс",
@@ -78,5 +79,6 @@
 	"mobile-frontend-watchlist-view": "Кёзде тургъан тизменге кёч",
 	"tag-mobile_edit": "Мобил адыр бла тюрлендириу",
 	"tag-mobile_web_edit": "Сайтны мобил версиясындан тюрлендириу",
+	"mobile-frontend-pageaction-edit-tooltip": "Бетни алчы бёлюмюн тюрлендир.",
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|ай}} алгъа"
 }

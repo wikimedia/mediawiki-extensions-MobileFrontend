@@ -3,7 +3,8 @@
 		"authors": [
 			"Noor2020",
 			"පසිඳු කාවින්ද",
-			"عثمان خان شاہ"
+			"عثمان خان شاہ",
+			"عرفان ارشد"
 		]
 	},
 	"mobile-frontend-back-to-top-of-section": "ایک قطعہ پیچھے جاؤ",
@@ -15,10 +16,11 @@
 	"mobile-frontend-featured-article": "آج کا منتخب مقالہ",
 	"mobile-frontend-footer-contact": "سے رابطہ کریں",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "{{SITENAME}} آپ جیسے لوگوں کی طرف سے بنایا گیا ہے ۔",
 	"mobile-frontend-generic-login-action": "شرکت کرنے کیلئے داخل ہوجائیے",
 	"mobile-frontend-home-button": "سرورق",
 	"mobile-frontend-images-status": "تصویر",
-	"mobile-frontend-language-article-heading": "دوسرے زبان میں مطالعہ کریں",
+	"mobile-frontend-language-article-heading": "دوسری زبان میں مطالعہ کریں",
 	"mobile-frontend-last-modified-date": "آخری بار مرتب $1 پر ہوا،بہ $2",
 	"mobile-frontend-logged-out": "لاگ ان نہیں",
 	"mobile-frontend-login": "میں لاگ ان کریں",
@@ -32,6 +34,7 @@
 	"mobile-frontend-news-items": "خبروں میں",
 	"mobile-frontend-page-menu-history": "تاریخچہ",
 	"mobile-frontend-password": "پاس ورڈ:",
+	"mobile-frontend-password-placeholder": "کلمۂ شناخت",
 	"mobile-frontend-placeholder": "تلاش {{SITENAME}}",
 	"mobile-frontend-privacy-link-text": "پرائیویسی",
 	"mobile-frontend-random-button": "بےترتیب",
@@ -40,6 +43,7 @@
 	"mobile-frontend-search-submit": "چلو",
 	"mobile-frontend-terms-text": "استعمالات کے شرائط",
 	"mobile-frontend-username": "صارف کا نام:",
+	"mobile-frontend-username-placeholder": "صارف نام",
 	"mobile-frontend-view": "موبائل دیکھیں",
 	"mobile-frontend-view-desktop": "ڈیسک ٹاپ",
 	"mobile-frontend-view-mobile": "موبائل",

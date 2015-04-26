@@ -8,7 +8,8 @@
 			"Vadgt",
 			"Xelgen",
 			"Arman musikyan",
-			"GrigorGB"
+			"GrigorGB",
+			"Դավիթ Սարոյան"
 		]
 	},
 	"beta-feature-minerva": "Միացնել բջջային տեսքը (Մինեվրա) համակարգչի համար",
@@ -60,5 +61,7 @@
 	"mobile-frontend-watchlist-filter-articles": "Հոդվածների էջեր",
 	"mobile-frontend-watchlist-more": "Ավելին",
 	"nearby": "Էջեր մոտակա օբյեկտների մասին։",
+	"tag-mobile_edit": "Խմբագրում բջջային սարքով",
+	"tag-mobile_web_edit": "Խմբագրում կայքի բջջային տարբերակից",
 	"mobile-frontend-pageaction-edit-tooltip": "Խմբագրել էջի ներածական մասը։"
 }

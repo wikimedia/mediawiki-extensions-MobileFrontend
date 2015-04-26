@@ -11,7 +11,8 @@
 			"Skomal",
 			"V.narsikar",
 			"संतोष दहिवळ",
-			"BPositive"
+			"BPositive",
+			"अभय नातू"
 		]
 	},
 	"mobile-frontend-account-create-email-placeholder": "विपत्रपत्ता (ई-मेल) (ऐच्छिक)",
@@ -68,6 +69,7 @@
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
 	"mobile-frontend-generic-404-desc": "तुम्ही शोधू पाहात असलेले पान सापडले नाही.",
 	"mobile-frontend-generic-404-title": "त्रूटी - पान सापडले नाही",
+	"mobile-frontend-generic-login": "{{SITENAME}} तुमच्यासारख्या लोकांनीच घडवलेला आहे.",
 	"mobile-frontend-generic-login-action": "योगदान करण्यास सनोंद प्रवेशित व्हा.",
 	"mobile-frontend-history": "या पानाचा संपादन इतिहास बघा.",
 	"mobile-frontend-history-404-title": "असे पान नाही",
@@ -146,7 +148,6 @@
 	"mobile-frontend-profile-footer-years": "{{PLURAL:$2|1 वर्ष|$2 वर्षां}}पूर्वी सामील - [[Special:Contributions/$1|{{PLURAL:$3|1 संपादन|$3 संपादने}}]] आणि [[Special:Uploads/$1|{{PLURAL:$4|1 चित्र|$4 चित्रे|500=500+ uploads}}]].",
 	"mobile-frontend-profile-last-edit": " [[:$1]], पानाचे {{GENDER:$3|संपादन}} केले {{PLURAL:$2|काल|$2 दिवसांपूर्वी|0=आजच}}.",
 	"mobile-frontend-profile-last-thank": "[[Special:UserProfile/$1|$1]] {{GENDER:$1|द्वारा }} {{GENDER:$2|धन्यवाद दिल्या गेले}}",
-	"mobile-frontend-profile-last-upload-caption": "{{PLURAL:$1|काल|$1 दिवसांपूर्वी|0=आज}} {{GENDER:$2|चित्र चढवले}}.",
 	"mobile-frontend-profile-title": "सदस्य व्यक्तिरेखा",
 	"mobile-frontend-profile-userpage-link": "सदस्य पान पाहा.",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|$1शी चर्चा करा}}",

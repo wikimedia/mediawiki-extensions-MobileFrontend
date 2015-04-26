@@ -1,3 +1,14 @@
 {
-	"@metadata": []
+	"@metadata": {
+		"authors": [
+			"Silovan"
+		]
+	},
+	"mobile-frontend-language-article-heading": "შხვა ნინაშა კითხირი",
+	"mobile-frontend-main-menu-login": "მიშულა",
+	"mobile-frontend-main-menu-nearby": "გოხოლუას",
+	"mobile-frontend-main-menu-settings": "პარამეტრეფი",
+	"mobile-frontend-main-menu-watchlist": "კონტროლიშ ერკებული",
+	"mobile-frontend-terms-text": "გიმორინაფაშ პირობეფი",
+	"tag-mobile_edit": "რედაქტირაფა მობილურით"
 }

@@ -120,7 +120,7 @@
 	"mobile-frontend-errorreport-error": "錯誤，不能發佈回饋",
 	"mobile-frontend-errorreport-feedback": "感謝您的回饋！",
 	"mobile-frontend-errorreport-heading": "報告一個錯誤",
-	"mobile-frontend-errorreport-instructions": "<p>此表單僅用作報告維基百科條目的錯誤。請勿報告缺少的資訊。</p><p>如果您發現了一個錯誤，請您嘗試透過編輯此頁面自行參與修復。如果您不能修復此錯誤，您再使用下面的表單。</p><p>請勿留下您的電話號碼或E-mail位址。</p>",
+	"mobile-frontend-errorreport-instructions": "<p>此表單僅用作報告維基百科條目的錯誤。請勿報告缺少的資訊。</p><p>如果您發現了一個錯誤，請您嘗試透過編輯此頁面自行參與修復。如果您不能修復此錯誤，您再使用下面的表單。</p><p>請勿留下您的電話號碼或E-mail地址。</p>",
 	"mobile-frontend-errorreport-placeholder": "在此輸入錯誤報告。",
 	"mobile-frontend-errorreport-section-title": "建議修正",
 	"mobile-frontend-errorreport-submit": "送出",

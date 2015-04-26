@@ -127,7 +127,6 @@
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 жыл|$3 жыл}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-years": "Соңғы рет {{PLURAL:$1|$1 жыл|$1 жыл}} бұрын өзгертілді",
 	"mobile-frontend-lead-image-tutorial-confirm": "Жүктеуді бастау",
-	"mobile-frontend-listed-image-no-description": "Сипаттамасы жоқ",
 	"mobile-frontend-logged-in-homepage-notification": "Қош келдіңіз, $1!",
 	"mobile-frontend-logged-in-toast-notification": "$1 ретінде кірдіңіз.",
 	"mobile-frontend-logged-out": "Кірмегенсіз",
@@ -190,7 +189,6 @@
 	"mobile-frontend-profile-footer-years": " {{PLURAL:$2|1 жыл|$2 жыл}} бұрын тіркеліп  [[Special:Contributions/$1|{{PLURAL:$3|1 өңдеме жасаған|$3 өңдеме жасаған}}]] және [[Special:Uploads/$1|{{PLURAL:$4|1 сурет жүктеген|$4 сурет жүктеген|500=500+ сурет жүктеген}}]].",
 	"mobile-frontend-profile-last-edit": "[[:$1]] беті {{PLURAL:$2|кеше|$2 күн бұрын|0=бүгін}} {{GENDER:$3|өңделген}}.",
 	"mobile-frontend-profile-last-thank": "[[Special:UserProfile/$1|$1]] {{GENDER:$2|рахметін білдірді}}.",
-	"mobile-frontend-profile-last-upload-caption": "{{PLURAL:$1|Кеше|$1 күн бұрын|0=Бүгін}} {{GENDER:$2|жүктелген}}.",
 	"mobile-frontend-profile-title": "Қатысушы жеке деректері",
 	"mobile-frontend-profile-userpage-link": "Қатысушы бетінне барып шығу",
 	"mobile-frontend-profile-usertalk": "{{GENDER:$1|$1}} дегенді талқылау",
@@ -205,7 +203,6 @@
 	"mobile-frontend-settings-alpha": "Тәжірибелік режим",
 	"mobile-frontend-settings-alpha-description": "Қауіпті және зерттелмеген мобилдік аумағындасыз. Тағыда көбірек тәжірибелік мүмкіндіктерді алыңыз, бірақ көптеген қауіпті қателерге кездесуіңіз мүмкін.",
 	"mobile-frontend-settings-beta": "Бета",
-	"mobile-frontend-settings-description": "Мобилдік құрылғыңызды бұл сайттың мобилдік нұсқасының арнайы баптаулары арқылы өзіңізге ыңғайлы етіп баптауыңызға болады.",
 	"mobile-frontend-settings-site-description": "{{SITENAME}} $1 {{PLURAL:$1|тілде|тілде}} қол жетімді. Барлық қол жетімді нұсқалары төменде көрсетілген.",
 	"mobile-frontend-settings-site-header": "{{SITENAME}} тілдері",
 	"mobile-frontend-sign-in-error-heading": "Қате",
@@ -259,5 +256,6 @@
 	"tag-mobile_edit": "<span style=\"background-color:#FF4500\"><span style=\"color:white\">Мобилдік өңдеме</span></span>",
 	"tag-mobile_edit-description": "Мобайлдан жасалған өңдеме (уеб не қосымша)",
 	"tag-mobile_web_edit": "Мобайл уеб өңдеме",
-	"tag-mobile_web_edit-description": "Мобайл уеб сайттан жасалған өңдеме"
+	"tag-mobile_web_edit-description": "Мобайл уеб сайттан жасалған өңдеме",
+	"mobile-frontend-pageaction-edit-tooltip": "Бұл беттің кіріспе бөлімін өңдеу."
 }

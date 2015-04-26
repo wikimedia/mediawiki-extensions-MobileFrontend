@@ -17,7 +17,8 @@
 			"Sayginer",
 			"Violetanka",
 			"Mavrikant",
-			"Gokalpselamet"
+			"Gokalpselamet",
+			"Watermelon juice"
 		]
 	},
 	"action-mf-uploadbutton": "mobil sayfalarda yükle düğmesini kullan.",
@@ -37,7 +38,7 @@
 	"mobile-frontend-categories-nodata": "Bir hata oluştu. Eklediğiniz kategoriler kaydedilsin mi?",
 	"mobile-frontend-categories-summary": "Kategoriler eklendi",
 	"mobile-frontend-categories-add-heading": "<span> $1</span> <strong>sayfasına yeni kategoriler ekle</strong>",
-	"mobile-frontend-categories-add-wait": "Kategoriler kaydediliyor, lütfen bekleyiniz.",
+	"mobile-frontend-categories-add-wait": "Kategoriler kaydediliyor, lütfen bekleyin.",
 	"mobile-frontend-categories-normal": "İçerik tabanlı",
 	"mobile-frontend-categories-hidden": "Kurumsal",
 	"mobile-frontend-changeslist-ip": "Anonim kullanıcı",
@@ -70,7 +71,7 @@
 	"mobile-frontend-drawer-cancel": "İptal",
 	"mobile-frontend-edit-login": "$1 sayfasını geliştirmeye yardımcı olun.",
 	"mobile-frontend-edit-login-action": "Düzenlemek için giriş yapın.",
-	"mobile-frontend-edit-signup-action": "Düzenlemek için kayıt olun.",
+	"mobile-frontend-edit-signup-action": "Düzenlemek için kaydolun.",
 	"mobile-frontend-editor-abusefilter-disallow": "Bu düzenleme kaydedilemiyor çünkü bir sorun saptadık.",
 	"mobile-frontend-editor-abusefilter-read-more": "Devamını oku",
 	"mobile-frontend-editor-abusefilter-warning": "Uyarı: Bu düzenlemeyi kaydetmek istediğinizden emin misiniz? Bu bir sorun olabilir.",
@@ -122,7 +123,7 @@
 	"mobile-frontend-editor-wait": "Düzenleme kaydediliyor, lütfen bekleyin.",
 	"mobile-frontend-enable-images": "Mobil sitede resimleri etkinleştir",
 	"mobile-frontend-errorreport-button-label": "Hata bildir",
-	"mobile-frontend-errorreport-error": "Hata, geri bildirim yayınlanmadı.",
+	"mobile-frontend-errorreport-error": "Hata, geri bildirim yayınlanamadı.",
 	"mobile-frontend-errorreport-feedback": "Geri bildiriminiz için teşekkürler!",
 	"mobile-frontend-errorreport-heading": "Bir hata bildir",
 	"mobile-frontend-errorreport-instructions": "<p>Bu form yalnızca sitedeki makale hatalarını bildirmek içindir. Lütfen bilgileri eksik bildirmeyiniz.</p><p>Eğer sayfada bir hata bulduysanız, sayfayı kendiniz düzenlemeyi denemelisiniz. Hatayı düzeltemiyorsanız, aşağıdaki formu kullanarak bunu raporlayın.</p><p>Telefon numarası ve e-posta adresi alanlarını boş bırakmayın.</p>",
@@ -387,5 +388,6 @@
 	"mobile-frontend-days-ago": "$1 {{PLURAL:$1|gün|gün}} önce",
 	"mobile-frontend-months-ago": "$1 {{PLURAL:$1|ay|ay}} önce",
 	"mobile-frontend-years-ago": "$1 {{PLURAL:$1|yıl|yıl}} önce",
-	"mobile-frontend-console-recruit": "\\o/ Hey! Bu açık kaynak kodlu bir yazılım ve bizim oluşturmak, daha iyi yapmak, JavaScript konsolunda görünebilecek olası hataları düzeltmek amacıyla yardımcı olacak gönüllülere ihtiyacımız var! \n\nBekleme listemizi şurada bulabilirsiniz @ https://phabricator.wikimedia.org/project/view/67/"
+	"mobile-frontend-console-recruit": "\\o/ Hey! Bu açık kaynak kodlu bir yazılım ve bizim oluşturmak, daha iyi yapmak, JavaScript konsolunda görünebilecek olası hataları düzeltmek amacıyla yardımcı olacak gönüllülere ihtiyacımız var! \n\nBekleme listemizi şurada bulabilirsiniz @ https://phabricator.wikimedia.org/project/view/67/",
+	"mobile-frontend-browse-tags-header": "Etiketler"
 }
