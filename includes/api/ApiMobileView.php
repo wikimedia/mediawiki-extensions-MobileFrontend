@@ -65,6 +65,8 @@ class ApiMobileView extends ApiBase {
 		$onlyRequestedSections = $params['onlyrequestedsections'];
 		$this->offset = $params['offset'];
 		$this->maxlen = $params['maxlen'];
+		$resultObj = $this->getResult();
+		$moduleName = $this->getModuleName();
 
 		if ( $this->offset === 0 && $this->maxlen === 0 ) {
 			$this->offset = -1; // Disable text splitting
@@ -81,56 +83,25 @@ class ApiMobileView extends ApiBase {
 			$this->setWarning( "``noheadings'' makes no sense on the main page, ignoring" );
 		}
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
+			$resultObj->addValue( null, $moduleName,
 				array( 'normalizedtitle' => $title->getPageLanguage()->convert( $title->getPrefixedText() ) )
 			);
 		}
 		$data = $this->getData( $title, $params['noimages'] );
-		// Bug 73109: #getData will return an empty array if the title redirects to
-		// a page in a virtual namespace (NS_SPECIAL, NS_MEDIA), so make sure that
-		// the requested data exists too.
-		if ( isset( $prop['lastmodified'] ) && isset( $data['lastmodified'] ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'lastmodified' => $data['lastmodified'] )
-			);
+		$plainData = array( 'lastmodified', 'lastmodifiedby', 'revision',
+			'languagecount', 'hasvariants', 'displaytitle', 'id', 'contentmodel' );
+		foreach ( $plainData as $name ) {
+			// Bug 73109: #getData will return an empty array if the title redirects to
+			// a page in a virtual namespace (NS_SPECIAL, NS_MEDIA), so make sure that
+			// the requested data exists too.
+			if ( isset( $prop[$name] ) && isset( $data[$name] ) ) {
+				$resultObj->addValue( null, $moduleName,
+					array( $name => $data[$name] )
+				);
+			}
 		}
-		if ( isset( $prop['lastmodifiedby'] ) && isset( $data['lastmodifiedby'] ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
-				array(
-					'lastmodifiedby' => $data['lastmodifiedby'],
-				)
-			);
-		}
-		if ( isset( $prop['revision'] ) && isset( $data['revision'] ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'revision' => $data['revision'] )
-			);
-		}
-		if ( isset( $prop['id'] ) && isset( $data['id'] ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'id' => $data['id'] )
-			);
+		if ( isset( $data['id'] ) ) {
 			$this->addXAnalyticsItem( 'page_id', (string)$data['id'] );
-		}
-		if ( isset( $prop['languagecount'] ) && isset( $data['languagecount'] ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'languagecount' => $data['languagecount'] )
-			);
-		}
-		if ( isset( $prop['hasvariants'] ) && isset( $data['hasvariants'] ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'hasvariants' => $data['hasvariants'] )
-			);
-		}
-		if ( isset( $prop['displaytitle'] ) && isset( $data['displaytitle'] ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'displaytitle' => $data['displaytitle'] )
-			);
-		}
-		if ( isset( $prop['contentmodel'] ) && isset( $data['contentmodel'] ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'contentmodel' => $data['contentmodel'] )
-			);
 		}
 		if ( isset( $prop['pageprops'] ) ) {
 			$propNames = $params['pageprops'];
@@ -140,7 +111,7 @@ class ApiMobileView extends ApiBase {
 				$propNames = explode( '|', $propNames );
 				$pageProps = array_intersect_key( $data['pageprops'], array_flip( $propNames ) );
 			}
-			$this->getResult()->addValue( null, $this->getModuleName(),
+			$resultObj->addValue( null, $moduleName,
 				array( 'pageprops' => $pageProps )
 			);
 		}
@@ -149,7 +120,7 @@ class ApiMobileView extends ApiBase {
 				$data['pageprops']['wikibase_item']
 			);
 			if ( $desc ) {
-				$this->getResult()->addValue( null, $this->getModuleName(),
+				$resultObj->addValue( null, $moduleName,
 					array( 'description' => $desc )
 				);
 			}
@@ -166,7 +137,7 @@ class ApiMobileView extends ApiBase {
 			} else {
 				$requestedSections = array( 0 );
 			}
-			$this->getResult()->addValue( null, $this->getModuleName(),
+			$resultObj->addValue( null, $moduleName,
 				array( 'mainpage' => '' )
 			);
 		} elseif ( isset( $params['sections'] ) ) {
@@ -211,8 +182,8 @@ class ApiMobileView extends ApiBase {
 					$result[] = $section;
 				}
 			}
-			$this->getResult()->setIndexedTagName( $result, 'section' );
-			$this->getResult()->addValue( null, $this->getModuleName(), array( 'sections' => $result ) );
+			$resultObj->setIndexedTagName( $result, 'section' );
+			$resultObj->addValue( null, $moduleName, array( 'sections' => $result ) );
 		}
 
 		if ( isset( $prop['protection'] ) ) {
@@ -232,7 +203,7 @@ class ApiMobileView extends ApiBase {
 			if ( $isXml ) {
 				$editable = intval( $editable );
 			}
-			$this->getResult()->addValue( null, $this->getModuleName(),
+			$resultObj->addValue( null, $moduleName,
 				array( 'editable' => $editable )
 			);
 		}
@@ -240,7 +211,7 @@ class ApiMobileView extends ApiBase {
 		// Inform ppl if the page is infested with LiquidThreads but that's the
 		// only thing we support about it.
 		if ( class_exists( 'LqtDispatch' ) && LqtDispatch::isLqtPage( $title ) ) {
-			$this->getResult()->addValue( null, $this->getModuleName(),
+			$resultObj->addValue( null, $moduleName,
 				array( 'liquidthreads' => '' )
 			);
 		}
@@ -249,7 +220,7 @@ class ApiMobileView extends ApiBase {
 		}
 		if ( $this->maxlen < 0 ) {
 			// There is more data available
-			$this->getResult()->addValue( null, $this->getModuleName(),
+			$resultObj->addValue( null, $moduleName,
 				array( 'continue-offset' => $params['offset'] + $params['maxlen'] )
 			);
 		}
@@ -471,16 +442,17 @@ class ApiMobileView extends ApiBase {
 		global $wgMemc, $wgUseTidy, $wgMFTidyMobileViewSections, $wgMFMinCachedPageSize,
 			$wgMFSpecialCaseMainPage;
 
+		$result = $this->getResult();
 		$wp = $this->makeWikiPage( $title );
 		if ( $this->followRedirects && $wp->isRedirect() ) {
 			$newTitle = $wp->getRedirectTarget();
 			if ( $newTitle ) {
 				$title = $newTitle;
-				$this->getResult()->addValue( null, $this->getModuleName(),
+				$result->addValue( null, $this->getModuleName(),
 					array( 'redirected' => $title->getPrefixedText() )
 				);
 				if ( $title->getNamespace() < 0 ) {
-					$this->getResult()->addValue( null, $this->getModuleName(),
+					$result->addValue( null, $this->getModuleName(),
 						array( 'viewable' => 'no' )
 					);
 					return array();
