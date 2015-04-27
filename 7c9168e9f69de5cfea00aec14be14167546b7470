@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_5949178f",
+        "filename": "javascripts/modules/editor/AddReferenceOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T21:07:56Z",
+      "side": 1,
+      "message": "You mean this one as an separate editor to see, how many people uses this overlay? :)",
+      "parentUuid": "0ed113e2_f9f32b67",
+      "revId": "7c9168e9f69de5cfea00aec14be14167546b7470",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_59e5979e",
         "filename": "javascripts/modules/editor/EditorOverlayBasic.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-27T20:50:24Z",
       "side": 1,
       "message": "Naming is hard, but it\u0027s not really clear how this differs. Maybe EditorOverlayWithToolbar ?",
+      "revId": "7c9168e9f69de5cfea00aec14be14167546b7470",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_794c1ba0",
+        "filename": "javascripts/modules/editor/EditorOverlayBasic.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T21:07:56Z",
+      "side": 1,
+      "message": "Yeah, i used Basic just because it\u0027s the first thing i thought about, but EditorOverlayWithToolbar sounds way better :)",
+      "parentUuid": "0ed113e2_59e5979e",
       "revId": "7c9168e9f69de5cfea00aec14be14167546b7470",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_395e9349",
+        "filename": "javascripts/modules/editor/init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T21:07:56Z",
+      "side": 1,
+      "message": "Oops, nope, it should be in beta only, my fault! Sorry.",
+      "parentUuid": "0ed113e2_b9ee0385",
+      "revId": "7c9168e9f69de5cfea00aec14be14167546b7470",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_59cef732",
         "filename": "less/Overlay.less",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2015-04-27T20:50:24Z",
       "side": 1,
       "message": "This should be in a separate less file. Overlay.less is pulled on every page load so we should only load this along with the editor.",
+      "revId": "7c9168e9f69de5cfea00aec14be14167546b7470",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_f957ab27",
+        "filename": "less/Overlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T21:07:56Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "0ed113e2_59cef732",
       "revId": "7c9168e9f69de5cfea00aec14be14167546b7470",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
