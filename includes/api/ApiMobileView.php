@@ -127,6 +127,11 @@ class ApiMobileView extends ApiBase {
 				array( 'displaytitle' => $data['displaytitle'] )
 			);
 		}
+		if ( isset( $prop['contentmodel'] ) && isset( $data['contentmodel'] ) ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'contentmodel' => $data['contentmodel'] )
+			);
+		}
 		if ( isset( $prop['pageprops'] ) ) {
 			$propNames = $params['pageprops'];
 			if ( $propNames == '*' && isset( $data['pageprops'] ) ) {
@@ -599,6 +604,8 @@ class ApiMobileView extends ApiBase {
 			$data['pageprops'] = array();
 		}
 
+		$data['contentmodel'] = $title->getContentModel();
+
 		if ( $title->getPageLanguage()->hasVariants() ) {
 			$data['hasvariants'] = true;
 		}
@@ -755,6 +762,7 @@ class ApiMobileView extends ApiBase {
 					'displaytitle',
 					'pageprops',
 					'description',
+					'contentmodel',
 				)
 			),
 			'sectionprop' => array(
@@ -838,6 +846,7 @@ class ApiMobileView extends ApiBase {
 				' displaytitle    - the rendered title of the page, with {{DISPLAYTITLE}} and such applied',
 				' pageprops       - page properties',
 				' description     - page description from Wikidata',
+				'contentmodel     - page contentmodel'
 			),
 			'sectionprop' => 'What information about sections to get',
 			'pageprops' => 'What page properties to return, a pipe (|) separated list or * for'
