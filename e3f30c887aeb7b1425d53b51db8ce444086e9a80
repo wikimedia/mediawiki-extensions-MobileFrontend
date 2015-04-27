@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_90fc340a",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T15:32:34Z",
+      "side": 1,
+      "message": "$result will be used as an array later :)",
+      "parentUuid": "0ed113e2_8dc41d13",
+      "revId": "e3f30c887aeb7b1425d53b51db8ce444086e9a80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_cde1c598",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-27T15:09:33Z",
       "side": 1,
       "message": "No need for the `$key \u003d\u003e` part.",
+      "revId": "e3f30c887aeb7b1425d53b51db8ce444086e9a80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_5006cc21",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T15:32:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_cde1c598",
       "revId": "e3f30c887aeb7b1425d53b51db8ce444086e9a80",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_7009902e",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T15:32:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_4dce3533",
+      "revId": "e3f30c887aeb7b1425d53b51db8ce444086e9a80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_6dd1b9cf",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2015-04-27T15:09:33Z",
       "side": 1,
       "message": "What\u0027s different about contentmodel? I don\u0027t see it.",
+      "revId": "e3f30c887aeb7b1425d53b51db8ce444086e9a80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_10104452",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T15:32:34Z",
+      "side": 1,
+      "message": "no, it\u0027s a rebase error, haven\u0027t seen, that this change is merged already :)",
+      "parentUuid": "0ed113e2_6dd1b9cf",
       "revId": "e3f30c887aeb7b1425d53b51db8ce444086e9a80",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
