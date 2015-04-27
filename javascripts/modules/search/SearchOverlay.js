@@ -4,7 +4,7 @@
 		Overlay = M.require( 'Overlay' ),
 		SearchApi = M.require( 'modules/search/SearchApi' ),
 		Icon = M.require( 'Icon' ),
-		PageList = M.require( 'modules/PageList' ),
+		WatchstarPageList = M.require( 'modules/WatchstarPageList' ),
 		SEARCH_DELAY = 300,
 		$html = $( 'html' ),
 		router = M.require( 'router' ),
@@ -14,7 +14,7 @@
 	 * Overlay displaying search results
 	 * @class SearchOverlay
 	 * @extends Overlay
-	 * @uses PageList
+	 * @uses WatchstarPageList
 	 * @uses SearchApi
 	 * @uses Icon
 	 */
@@ -242,12 +242,11 @@
 									.filter( data.results.length ? '.with-results' : '.without-results' )
 									.show();
 								self.$( '.spinner' ).hide();
-								pageList = new PageList( {
+								pageList = new WatchstarPageList( {
 									funnel: 'search',
 									pages: data.results,
 									el: $results
 								} );
-								pageList.renderPageImages();
 								/**
 								 * @event search-results
 								 * Fired when search API returns results
