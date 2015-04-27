@@ -1024,6 +1024,15 @@ class MobileFrontendHooks {
 	 * @param array $messages Array of already added messages
 	 */
 	public static function onLoginFormValidErrorMessages( &$messages ) {
-		$messages[] = 'mobile-frontend-donate-image-anon';
+		$messages = array_merge( $messages,
+			array(
+				'mobile-frontend-watchlist-signup-action', // watchstart sign up CTA
+				'mobile-frontend-watchlist-purpose', // Watchlist and watchstar sign in CTA
+				'mobile-frontend-donate-image-anon', // Uploads link
+				'mobile-frontend-edit-login-action', // Edit button sign in CTA
+				'mobile-frontend-edit-signup-action', // Edit button sign-up CTA
+				'mobile-frontend-donate-image-login-action',
+			)
+		);
 	}
 }

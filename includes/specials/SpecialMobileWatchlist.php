@@ -54,7 +54,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 */
 	function executeWhenAvailable( $par ) {
 		// Anons don't get a watchlist
-		$this->requireLogin( 'watchlistanontext' );
+		$this->requireLogin( 'mobile-frontend-watchlist-purpose' );
 
 		$ctx = MobileContext::singleton();
 		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );

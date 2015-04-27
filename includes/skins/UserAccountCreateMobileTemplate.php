@@ -7,18 +7,6 @@
  * Provides a custom account creation form for mobile devices
  */
 class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
-	/** @var array $actionMessages Message keys for page actions */
-	protected $actionMessages = array(
-		'watch' => 'mobile-frontend-watchlist-signup-action',
-		'edit' => 'mobile-frontend-edit-signup-action',
-		'signup-edit' => 'mobile-frontend-edit-signup-action',
-		'' => 'mobile-frontend-generic-signup-action',
-	);
-	/** @var array $actionMessages Message keys for site links */
-	protected $pageMessages = array(
-		'Uploads' => 'mobile-frontend-donate-image-signup-action',
-		'Watchlist' => 'mobile-frontend-watchlist-signup-action',
-	);
 
 	/**
 	 * Render Login/Create specific template
@@ -93,8 +81,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 			$stickHTTPS .
 			Html::closeElement( 'form' );
 		echo Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate', 'class' => 'content' ) );
-		$this->renderGuiderMessage();
-		$this->renderMessageHtml( true );
+		$this->renderMessageHtml( 'signup', true );
 		echo $form;
 		echo Html::closeElement( 'div' );
 	}

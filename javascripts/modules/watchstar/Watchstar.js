@@ -51,8 +51,12 @@
 		ctaDrawerOptions: {
 			content: mw.msg( 'mobile-frontend-watchlist-cta' ),
 			queryParams: {
+				warning: 'mobile-frontend-watchlist-purpose',
 				campaign: 'mobile_watchPageActionCta',
 				returntoquery: 'article_action=watch'
+			},
+			signupQueryParams: {
+				warning: 'mobile-frontend-watchlist-signup-action'
 			}
 		},
 		tagName: 'div',

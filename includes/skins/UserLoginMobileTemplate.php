@@ -7,18 +7,6 @@
  * Provides a custom login form for mobile devices
  */
 class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
-	/** @var array $actionMessages Message keys for page actions */
-	protected $actionMessages = array(
-		'watch' => 'mobile-frontend-watchlist-login-action',
-		'edit' => 'mobile-frontend-edit-login-action',
-		'' => 'mobile-frontend-generic-login-action',
-	);
-	/** @var array $actionMessages Message keys for site links */
-	protected $pageMessages = array(
-		'Uploads' => 'mobile-frontend-donate-image-login-action',
-		'Watchlist' => 'mobile-frontend-watchlist-login-action',
-		'Gather' => 'gather-anon-view-lists',
-	);
 
 	/**
 	 * Build the login page
@@ -113,8 +101,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			$signupLink .
 			Html::closeElement( 'div' );
 		echo $login;
-		$this->renderGuiderMessage();
-		$this->renderMessageHtml();
+		$this->renderMessageHtml( 'login' );
 		echo $form;
 		echo Html::closeElement( 'div' );
 	}
