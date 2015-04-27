@@ -11,6 +11,7 @@
 	"mobile-frontend-changeslist-ip": "Dulnevndur brúkari",
 	"mobile-frontend-changeslist-nocomment": "ongin frágreiðing um rættingina",
 	"mobile-frontend-clear-search": "Rudda",
+	"mobile-frontend-copyright": "Innihaldið er tøkt undir $1 um ikki annað verður viðmerkt.",
 	"mobile-frontend-diffview-404-desc": "ID fyri versjónina ið tú bað um er ikki til.",
 	"mobile-frontend-diffview-404-title": "Ring versjón",
 	"mobile-frontend-diffview-anonymous": "Dulnevndur brúkari",
@@ -22,7 +23,6 @@
 	"mobile-frontend-dismiss-notification": "tak hesi boðini burtur",
 	"mobile-frontend-donate-image-anon": "Ein $1 verður kravd fyri at síggja útleggingarsíðuna.",
 	"mobile-frontend-donate-image-heading": "Tíni seinastu íkøst",
-	"mobile-frontend-donate-image-login": "Tú mást vera innritað/ur fyri at síggja tínar útleggingar.",
 	"mobile-frontend-donate-image-title": "Útleggingar",
 	"mobile-frontend-donate-photo-first-upload-success": "Tað eydnaðist! Takk fyri títt fyrsta íkast!",
 	"mobile-frontend-donate-photo-upload-success": "Tað eydnaðist! Tín mynd kann nú verða brúkt á {{SITENAME}}!",
@@ -52,6 +52,8 @@
 	"mobile-frontend-first-upload-wizard-new-page-3-ok": "Ja!",
 	"mobile-frontend-footer-contact": "Samband",
 	"mobile-frontend-footer-sitename": "{{SITENAME}}",
+	"mobile-frontend-generic-login": "{{SITENAME}} er gjørt av fólki sum tær.",
+	"mobile-frontend-generic-login-action": "Rita inn fyri at luttaka.",
 	"mobile-frontend-home-button": "Heim",
 	"mobile-frontend-images-status": "Myndir",
 	"mobile-frontend-language-article-heading": "Les á øðrum máli",
@@ -158,5 +160,6 @@
 	"nearby": "Síður í tíni námind",
 	"tag-mobile_edit": "Mobilskriving",
 	"tag-mobile_edit-description": "Rætting gjørd frá mobilsíðuni",
+	"tag-mobile_web_edit": "Mobil alnótrætting",
 	"mobile-frontend-pageaction-edit-tooltip": "Rætta inngangin til hesa síðuna."
 }

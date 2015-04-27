@@ -4,9 +4,14 @@
 			"AlimanRuna"
 		]
 	},
+	"mobile-frontend-editor-edit": "Llamk'apuy",
+	"mobile-frontend-generic-login": "{{SITENAME}}taqa qam hina runakunam ruran.",
 	"mobile-frontend-main-menu-login": "Yaykuy",
+	"mobile-frontend-password-placeholder": "Yaykuna rima",
+	"mobile-frontend-privacy-link-text": "Akuna kay",
 	"mobile-frontend-sign-in-heading": "Yaykuy",
 	"mobile-frontend-user-button-tooltip": "Ñuqpaq willaykunata rikuchiway",
+	"mobile-frontend-username-placeholder": "Ruraqpa sutin",
 	"mobile-frontend-view": "Kuyuylla karu rimanapaq rikuriy",
 	"mobile-frontend-watchlist-cta-button-login": "Yaykuy"
 }

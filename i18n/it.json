@@ -14,7 +14,8 @@
 			"Ricordisamoa",
 			"FRacco",
 			"LACLARETTA",
-			"Giuseppe Forte"
+			"Giuseppe Forte",
+			"Fringio"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -46,7 +47,6 @@
 	"mobile-frontend-dismiss-notification": "ignora questa notifica",
 	"mobile-frontend-donate-image-anon": "Effettua l'accesso per visualizzare la pagina di caricamento.",
 	"mobile-frontend-donate-image-heading": "I tuoi contributi recenti",
-	"mobile-frontend-donate-image-login": "I file su {{SITENAME}} sono donati da persone come te.",
 	"mobile-frontend-donate-image-login-action": "Accedi per condividere i file multimediali.",
 	"mobile-frontend-donate-image-nouploads": "Nessun caricamento.",
 	"mobile-frontend-donate-image-signup-action": "Registrati per condividere file multimediali con il mondo.",
@@ -54,9 +54,8 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Fatto! Grazie per il tuo primo contributo!",
 	"mobile-frontend-donate-photo-upload-success": "Finito! La tua immagine ora può essere usata su {{SITENAME}}!",
 	"mobile-frontend-drawer-cancel": "Annulla",
-	"mobile-frontend-edit-login": "Aiuta a migliorare la pagina $1.",
-	"mobile-frontend-edit-login-action": "Accedi per modificare.",
-	"mobile-frontend-edit-signup-action": "Registrati per modificare.",
+	"mobile-frontend-edit-login-action": "<strong>Aiuta a migliorare {{SITENAME}}.</strong><br />Accedi per modificare.",
+	"mobile-frontend-edit-signup-action": "<strong>Aiuta a migliorare {{SITENAME}}.</strong><br />Iscriviti per modificare.",
 	"mobile-frontend-editor-abusefilter-disallow": "Questa modifica non può essere salvata perché è stato rilevato un problema.",
 	"mobile-frontend-editor-abusefilter-read-more": "Per saperne di più",
 	"mobile-frontend-editor-abusefilter-warning": "Attenzione: sei sicuro di voler salvare questa modifica? Potrebbe esserci un problema con essa.",
@@ -332,7 +331,7 @@
 	"mobile-frontend-watchlist-error": "Si è verificato un problema nell'inserimento di questa pagina fra gli osservati speciali. Riprova.",
 	"mobile-frontend-watchlist-purpose": "Gli osservati speciali ti consentono di salvare le pagine e di tenere traccia dei loro cambiamenti.",
 	"mobile-frontend-watchlist-removed": "Rimosso $1 dai tuoi osservati speciali",
-	"mobile-frontend-watchlist-signup-action": "Registrati per iniziarne uno ora.",
+	"mobile-frontend-watchlist-signup-action": "<strong>Una lista di controllo consente di salvare le pagine e tenere traccia delle modifiche.</strong>Iscriviti per iniziare ora.",
 	"mobile-frontend-watchlist-view": "Vedi i tuoi osservati speciali",
 	"mobile.css": "/* Gli stili CSS inseriti qui si applicano agli utenti che usano il sito per dispositivi mobili */",
 	"mobile.js": "/* Il codice JavaScript inserito qui viene caricato dagli utenti che usano il sito per dispositivi mobili */",

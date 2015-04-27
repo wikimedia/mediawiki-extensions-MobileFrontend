@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mikalai Udodau"
+			"Mikalai Udodau",
+			"Чаховіч Уладзіслаў"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацверджання",
@@ -25,8 +26,10 @@
 	"mobile-frontend-editor-source-editor": "Правіць зыходнік",
 	"mobile-frontend-editor-tutorial-cancel": "Не, дзякуй",
 	"mobile-frontend-editor-visual-editor": "Правіць",
+	"mobile-frontend-featured-article": "Выбраны матэрыял дня",
 	"mobile-frontend-generic-404-title": "Памылка: старонка не знойдзена",
 	"mobile-frontend-generic-login": "{{SITENAME}} ствараецца такімі ж людзьмі, як вы.",
+	"mobile-frontend-generic-login-action": "Увайдзіце, каб зрабіць унёсак.",
 	"mobile-frontend-history": "Глядзець гісторыю правак гэтай старонкі.",
 	"mobile-frontend-home-button": "Дадому",
 	"mobile-frontend-language-article-heading": "Чытаць на іншай мове",
@@ -36,8 +39,8 @@
 	"mobile-frontend-languages-header": "Мовы",
 	"mobile-frontend-languages-header-page": "$1 - Мовы",
 	"mobile-frontend-last-modified-date": "Апошнія змены $1 а $2",
-	"mobile-frontend-listed-image-no-description": "Няма апісання",
 	"mobile-frontend-logged-in-homepage-notification": "Вітаем, $1!",
+	"mobile-frontend-login": "Увайсці",
 	"mobile-frontend-main-menu-account-create": "Стварыць уліковы запіс",
 	"mobile-frontend-main-menu-button-tooltip": "Адкрыць галоўнае меню",
 	"mobile-frontend-main-menu-login": "Увайсці",
@@ -49,6 +52,7 @@
 	"mobile-frontend-main-menu-watchlist": "Спіс назірання",
 	"mobile-frontend-missing-image": "Відарыс",
 	"mobile-frontend-nearby-title": "Паблізу",
+	"mobile-frontend-news-items": "Навіны",
 	"mobile-frontend-overlay-close": "Закрыць",
 	"mobile-frontend-overlay-continue": "Працягнуць",
 	"mobile-frontend-page-menu-history": "Гісторыя",
@@ -67,6 +71,10 @@
 	"mobile-frontend-talk-reply": "Адказаць",
 	"mobile-frontend-terms-text": "Умовы карыстання",
 	"mobile-frontend-user-button-tooltip": "Паказаць мае паведамленні",
+	"mobile-frontend-username-placeholder": "Імя ўдзельніка",
+	"mobile-frontend-view": "Мабільная версія",
+	"mobile-frontend-view-desktop": "Стацыянарны",
+	"mobile-frontend-view-mobile": "Мабільны",
 	"mobile-frontend-watchlist-a-z": "Спіс",
 	"mobile-frontend-watchlist-feed": "Змяненні",
 	"mobile-frontend-watchlist-feed-empty": "Няма старонак з нядаўнімі зменамі.",
@@ -76,5 +84,8 @@
 	"mobile-frontend-watchlist-filter-talk": "Размовы",
 	"mobile-frontend-watchlist-modified": "Зменена $1",
 	"mobile-frontend-watchlist-more": "яшчэ",
-	"nearby": "Старонкі побач з вамі"
+	"nearby": "Старонкі побач з вамі",
+	"tag-mobile_edit": "Праўка з маб. прылады",
+	"tag-mobile_web_edit": "Праўка праз мабільную версію сайта",
+	"mobile-frontend-pageaction-edit-tooltip": "Правіць вядучы раздзел старонкі."
 }

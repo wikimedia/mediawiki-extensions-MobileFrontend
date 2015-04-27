@@ -2,11 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Tulsi Bhagat",
-			"बिप्लब आनन्द"
+			"बिप्लब आनन्द",
+			"Bijay chaurasia"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "कुनो सम्पादन सारांश",
 	"mobile-frontend-copyright": "$1 कऽ अंतर्गत विषय सूची उपलब्ध अछि ‌‌‍‍‍‌।",
+	"mobile-frontend-editor-blocked-info-loggedin": "आहाँ के खाता सम्पादन से अवरुद्ध अछि. ई अबरुद्ध {{GENDER:$2|$2}} करल ग्याल अछि सो कारण स: $1",
 	"mobile-frontend-editor-edit": "सम्पादन",
 	"mobile-frontend-featured-article": "आइ कऽ निर्वाचित लेख",
 	"mobile-frontend-generic-login-action": "योगदान करै के लेल सम्प्रवेश करी।",
@@ -32,5 +34,6 @@
 	"mobile-frontend-view-mobile": "मोबाइल",
 	"tag-mobile_edit": "मोबाइल संपादन",
 	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
-	"mobile-frontend-pageaction-edit-tooltip": "यी पन्नाके नेतृत्व अनुभागके संपादित करी।"
+	"mobile-frontend-pageaction-edit-tooltip": "यी पन्नाके नेतृत्व अनुभागके संपादित करी।",
+	"mobile-frontend-browse-tags-header": "चेन्ह सभ"
 }

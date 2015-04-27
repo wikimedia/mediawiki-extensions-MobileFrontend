@@ -4,11 +4,25 @@
 			"Silovan"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "ვარე რედაქტირაფაშ რეზიუმე",
+	"mobile-frontend-copyright": "დინორე წჷმორინაფილი რე $1 პირობეფით (შხვა ვარე მეწურაფილჷ-და).",
+	"mobile-frontend-editor-edit": "რედაქტირაფა",
+	"mobile-frontend-home-button": "დუდხასჷლაშა",
 	"mobile-frontend-language-article-heading": "შხვა ნინაშა კითხირი",
+	"mobile-frontend-last-modified-date": "ეკონია თირუაშ ბორჯი $1-შ, $2-ს",
+	"mobile-frontend-main-menu-button-tooltip": "თარ მენიუშა მიშულა",
 	"mobile-frontend-main-menu-login": "მიშულა",
 	"mobile-frontend-main-menu-nearby": "გოხოლუას",
 	"mobile-frontend-main-menu-settings": "პარამეტრეფი",
 	"mobile-frontend-main-menu-watchlist": "კონტროლიშ ერკებული",
+	"mobile-frontend-news-items": "ახალ ამბეეფს",
+	"mobile-frontend-placeholder": "გორუა {{SITENAME}}",
+	"mobile-frontend-privacy-link-text": "კონფიდენციალურობა",
+	"mobile-frontend-random-button": "ნამდგარენ",
 	"mobile-frontend-terms-text": "გიმორინაფაშ პირობეფი",
-	"tag-mobile_edit": "რედაქტირაფა მობილურით"
+	"mobile-frontend-view": "მობილური ვერსია",
+	"mobile-frontend-view-desktop": "დესკტოპი",
+	"mobile-frontend-view-mobile": "მობილური",
+	"tag-mobile_edit": "რედაქტირაფა მობილურით",
+	"tag-mobile_web_edit": "რედაქტირაფა საიტიშ მობილური ვერსიათ"
 }
