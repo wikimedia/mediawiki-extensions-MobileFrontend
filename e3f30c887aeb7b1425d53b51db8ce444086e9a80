@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_303228f0",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-27T15:36:17Z",
+      "side": 1,
+      "message": "Could you rename that instance of $result to $sections or something?",
+      "parentUuid": "0ed113e2_90fc340a",
+      "revId": "e3f30c887aeb7b1425d53b51db8ce444086e9a80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_cde1c598",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 3
