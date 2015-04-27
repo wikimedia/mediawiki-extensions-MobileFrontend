@@ -69,6 +69,24 @@
       "revId": "1a4a69bcd94c91d86b0003c81558ba8dd4b394f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_aaa9c78e",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-27T10:27:41Z",
+      "side": 1,
+      "message": "Interestingly though, the XAnalyticsItem thing won\u0027t be added if ID wasn\u0027t a request property :/ Bug?",
+      "parentUuid": "0ed113e2_0ad33331",
+      "revId": "1a4a69bcd94c91d86b0003c81558ba8dd4b394f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
