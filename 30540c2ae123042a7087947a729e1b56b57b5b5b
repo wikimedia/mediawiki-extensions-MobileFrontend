@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_f976cb00",
+        "filename": "javascripts/modules/infobox/Infobox.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-27T20:41:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_b0bcd868",
+      "revId": "30540c2ae123042a7087947a729e1b56b57b5b5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_e3b863e4",
         "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
         "patchSetId": 10
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Thanks for the catch!",
       "parentUuid": "0ed113e2_e3b863e4",
+      "revId": "30540c2ae123042a7087947a729e1b56b57b5b5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_d97bc7e9",
+        "filename": "javascripts/modules/infobox/WikiDataItemLookupInputWidget.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-27T20:41:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_90b9947a",
       "revId": "30540c2ae123042a7087947a729e1b56b57b5b5b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
