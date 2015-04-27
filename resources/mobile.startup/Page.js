@@ -175,13 +175,13 @@
 		/**
 		 * @inheritdoc
 		 */
-		preRender: function ( options ) {
+		preRender: function () {
 			var self = this;
 			this.sections = [];
 			this._sectionLookup = {};
-			this.title = options.title;
+			this.title = this.options.title;
 
-			$.each( options.sections, function () {
+			$.each( this.options.sections, function () {
 				var section = new Section( this );
 				self.sections.push( section );
 				self._sectionLookup[section.id] = section;

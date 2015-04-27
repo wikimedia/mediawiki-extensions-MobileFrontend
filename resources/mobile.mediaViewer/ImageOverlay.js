@@ -51,26 +51,26 @@
 		} ),
 
 		/** @inheritdoc */
-		preRender: function ( options ) {
+		preRender: function () {
 			var self = this;
-			$.each( options.thumbnails, function ( i, thumbnail ) {
-				if ( thumbnail.getFileName() === options.title ) {
-					options.caption = thumbnail.getDescription();
+			$.each( this.options.thumbnails, function ( i, thumbnail ) {
+				if ( thumbnail.getFileName() === self.options.title ) {
+					self.options.caption = thumbnail.getDescription();
 					self.galleryOffset = i;
 				}
 			} );
 		},
 
 		/** @inheritdoc */
-		postRender: function ( options ) {
+		postRender: function () {
 			var $img,
 				self = this;
 
 			this.$details = this.$( '.details' );
 
-			Overlay.prototype.postRender.apply( this, arguments );
+			Overlay.prototype.postRender.apply( this );
 
-			api.getThumb( options.title ).done( function ( data ) {
+			api.getThumb( self.options.title ).done( function ( data ) {
 				var author, url = data.descriptionurl + '#mw-jump-to-license';
 
 				/**
@@ -85,7 +85,7 @@
 				self.thumbWidth = data.thumbwidth;
 				self.thumbHeight = data.thumbheight;
 				self.imgRatio = data.thumbwidth / data.thumbheight;
-				$img = $( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', options.caption );
+				$img = $( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
 				self.$( '.image' ).append( $img );
 
 				if ( $img.prop( 'complete' ) ) {

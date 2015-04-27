@@ -92,7 +92,6 @@
 		 * @inheritdoc
 		 */
 		postRender: function () {
-			View.prototype.postRender.apply( this, arguments );
 			this.renderPageImages();
 		},
 		template: mw.template.get( 'mobile.pagelist', 'PageList.hogan' ),

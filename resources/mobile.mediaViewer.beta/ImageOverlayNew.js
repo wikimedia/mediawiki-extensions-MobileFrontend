@@ -43,11 +43,11 @@
 			} ).toHtmlString()
 		} ),
 		/** @inheritdoc */
-		postRender: function ( options ) {
+		postRender: function () {
 			var self = this,
 				lastThumb, nextThumb,
 				offset = this.galleryOffset,
-				thumbs = options.thumbnails || [],
+				thumbs = this.options.thumbnails || [],
 				swipe = new Swipe();
 
 			if ( thumbs.length < 2 ) {
@@ -68,7 +68,7 @@
 				this.$( '.prev' ).data( 'thumbnail', lastThumb );
 				this.$( '.next' ).data( 'thumbnail', nextThumb );
 			}
-			ImageOverlay.prototype.postRender.call( this, options );
+			ImageOverlay.prototype.postRender.call( this );
 		}
 	} );
 	M.define( 'modules/mediaViewer/ImageOverlayNew', ImageOverlayNew );

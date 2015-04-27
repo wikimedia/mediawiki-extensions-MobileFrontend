@@ -35,17 +35,17 @@
 		template: mw.template.get( 'mobile.drawers', 'Cta.hogan' ),
 
 		/** @inheritdoc */
-		preRender: function ( options ) {
+		preRender: function () {
 			var params = $.extend( {
 					// use wgPageName as this includes the namespace if outside Main
-					returnto: options.returnTo || mw.config.get( 'wgPageName' )
-				}, options.queryParams ),
+					returnto: this.options.returnTo || mw.config.get( 'wgPageName' )
+				}, this.options.queryParams ),
 				signupParams = $.extend( {
 					type: 'signup'
-				}, options.signupQueryParams );
+				}, this.options.signupQueryParams );
 
-			options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
-			options.signupAnchor.href = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
+			this.options.loginUrl = mw.util.getUrl( 'Special:UserLogin', params );
+			this.options.signupAnchor.href = mw.util.getUrl( 'Special:UserLogin', $.extend( params, signupParams ) );
 		}
 	} );
 

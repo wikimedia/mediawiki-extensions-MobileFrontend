@@ -84,19 +84,19 @@
 			} );
 		},
 		/** @inheritdoc */
-		preRender: function ( options ) {
-			options.tooltip = options.isWatched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
+		preRender: function () {
+			this.options.tooltip = this.options.isWatched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
 		},
 		/** @inheritdoc */
-		postRender: function ( options ) {
+		postRender: function () {
 			var self = this,
 				unwatchedClass = watchIcon.getGlyphClassName(),
 				watchedClass = watchedIcon.getGlyphClassName() + ' watched',
-				page = options.page,
+				page = self.options.page,
 				$el = self.$el;
 
 			// add tooltip to the div, not the <a> inside because that the <a> doesn't have dimensions
-			this.$el.attr( 'title', options.tooltip );
+			this.$el.attr( 'title', self.options.tooltip );
 
 			// Add watched class if necessary
 			if ( !user.isAnon() && api.isWatchedPage( page ) ) {

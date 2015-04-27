@@ -111,7 +111,7 @@
 			View.prototype.initialize.apply( this, arguments );
 		},
 		/** @inheritdoc */
-		postRender: function ( options ) {
+		postRender: function () {
 			var self = this;
 
 			this.$overlayContent = this.$( '.overlay-content' );

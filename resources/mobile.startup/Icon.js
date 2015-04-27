@@ -53,7 +53,6 @@
 		},
 		/** @inheritdoc */
 		postRender: function () {
-			View.prototype.postRender.apply( this, arguments );
 			this.$el = this.$el.children( 0 );
 		},
 		/**

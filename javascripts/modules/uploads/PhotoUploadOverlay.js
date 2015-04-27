@@ -223,7 +223,7 @@
 			var $submitButton,
 				self = this;
 
-			Overlay.prototype.postRender.apply( this, arguments );
+			Overlay.prototype.postRender.apply( this );
 
 			$submitButton = this.$( '.submit' )
 				.prop( 'disabled', true );

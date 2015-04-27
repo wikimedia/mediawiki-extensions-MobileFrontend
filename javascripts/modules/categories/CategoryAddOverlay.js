@@ -62,15 +62,15 @@
 		/**
 		 * @inheritdoc
 		 */
-		postRender: function ( options ) {
+		postRender: function () {
 			var input;
 
-			Overlay.prototype.postRender.apply( this, arguments );
+			Overlay.prototype.postRender.apply( this );
 
 			this.$suggestions = this.$( '.category-suggestions' );
 			this.$saveButton = this.$( '.save' );
-			this.wgCategories = options.categories;
-			this.title = options.title;
+			this.wgCategories = this.options.categories;
+			this.title = this.options.title;
 
 			this.api = new CategoryApi();
 			input = new CategoryLookupInputWidget( {

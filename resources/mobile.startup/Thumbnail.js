@@ -19,8 +19,8 @@
 			filename: undefined
 		},
 		/** @inheritdoc */
-		postRender: function ( options ) {
-			options.description = this.$el.siblings( '.thumbcaption' ).text();
+		postRender: function () {
+			this.options.description = this.$el.siblings( '.thumbcaption' ).text();
 		},
 		/**
 		 * Obtain description for thumbnail

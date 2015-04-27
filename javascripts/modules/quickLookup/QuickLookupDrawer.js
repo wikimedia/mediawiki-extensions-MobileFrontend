@@ -48,11 +48,11 @@
 		/**
 		 * @inheritdoc
 		 */
-		postRender: function ( options ) {
+		postRender: function () {
 			var self = this,
 				windowHeight = $( window ).height();
 
-			Drawer.prototype.postRender.apply( this, arguments );
+			Drawer.prototype.postRender.apply( this );
 
 			// make sure the drawer doesn't take up more than 50% of the viewport height
 			if ( windowHeight / 2 < 400 ) {
@@ -71,11 +71,11 @@
 						page;
 
 					watchstarApi = new WatchstarApi();
-					watchstarApi.load( [ options.id ], false ).done( function () {
+					watchstarApi.load( [ self.options.id ], false ).done( function () {
 						page = new Page( {
 							sections: [],  // Set sections so we don't hit the api (hacky)
-							title: options.title,
-							id: options.id
+							title: self.options.title,
+							id: self.options.id
 						} );
 
 						new Watchstar( {

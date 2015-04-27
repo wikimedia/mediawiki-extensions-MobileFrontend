@@ -228,7 +228,7 @@
 				// default: show the preview step
 				this.nextStep = 'onStageChanges';
 			}
-			Overlay.prototype.postRender.apply( this, arguments );
+			Overlay.prototype.postRender.apply( this );
 			this.showHidden( '.initial-header' );
 		},
 		/**

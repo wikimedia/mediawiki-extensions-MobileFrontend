@@ -346,7 +346,7 @@
 		onExpandInfobox: function ( ev ) {
 			$( ev.target ).remove();
 			this.emit( 'load' );
-			this.postRender( this.options );
+			this.postRender();
 		},
 		/**
 		 * Decides based on the type of item what infobox to render

@@ -49,16 +49,16 @@
 		/**
 		 * @inheritdoc
 		 */
-		postRender: function ( options ) {
-			Overlay.prototype.postRender.apply( this, arguments );
+		postRender: function () {
+			Overlay.prototype.postRender.apply( this );
 
-			if ( !options.isAnon ) {
+			if ( !this.options.isAnon ) {
 				this.$( '.add' ).removeClass( 'hidden' );
 			}
-			if ( !options.items ) {
-				this._loadCategories( options );
+			if ( !this.options.items ) {
+				this._loadCategories( this.options );
 			}
-			if ( options.showHidden ) {
+			if ( this.options.showHidden ) {
 				this._changeView();
 			}
 			M.off( 'category-added' ).on( 'category-added', $.proxy( this, '_loadCategories', this.options ) );

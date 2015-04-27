@@ -41,7 +41,7 @@
 		postRender: function () {
 			var windowHeight = $( window ).height();
 
-			ReferencesDrawer.prototype.postRender.apply( this, arguments );
+			ReferencesDrawer.prototype.postRender.apply( this );
 
 			// make sure the drawer doesn't take up more than 50% of the viewport height
 			if ( windowHeight / 2 < 400 ) {

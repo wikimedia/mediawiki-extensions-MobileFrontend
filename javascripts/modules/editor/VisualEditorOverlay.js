@@ -134,7 +134,7 @@
 			};
 
 			this.$( '.surface' ).hide();
-			EditorOverlayBase.prototype.postRender.apply( this, arguments );
+			EditorOverlayBase.prototype.postRender.apply( this );
 		},
 		/**
 		 * @inheritdoc

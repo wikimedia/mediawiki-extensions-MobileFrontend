@@ -118,14 +118,14 @@
 			} );
 		},
 		/** @inheritdoc */
-		preRender: function ( options ) {
-			options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
+		preRender: function () {
+			this.options.heading = '<strong>' + mw.msg( 'notifications' ) + '</strong>';
 		},
 		/** @inheritdoc */
-		postRender: function ( options ) {
-			Overlay.prototype.postRender.apply( this, options );
+		postRender: function () {
+			Overlay.prototype.postRender.apply( this );
 
-			if ( options.notifications || options.errorMessage ) {
+			if ( this.options.notifications || this.options.errorMessage ) {
 				this.$( '.loading' ).remove();
 				// Reset the badge
 				this.markAsRead();

@@ -113,7 +113,7 @@
 			this._hidePreview();
 		},
 		/** @inheritdoc **/
-		postRender: function ( options ) {
+		postRender: function () {
 			var self = this;
 
 			if ( this.isVisualEditorEnabled() ) {
@@ -137,11 +137,11 @@
 				};
 			}
 
-			EditorOverlayBase.prototype.postRender.apply( this, arguments );
+			EditorOverlayBase.prototype.postRender.apply( this );
 
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( '.wikitext-editor' );
-			if ( options.isAnon ) {
+			if ( self.options.isAnon ) {
 				this.$anonWarning = this.$( '.anonwarning' );
 				this.$content.hide();
 				// the user has to click login, signup or edit without login, disable "Next" button on top right
@@ -158,7 +158,7 @@
 				this.$content.prop( 'readonly', true );
 			}
 
-			if ( !options.isAnon ) {
+			if ( !self.options.isAnon ) {
 				this._loadContent();
 			}
 		},
