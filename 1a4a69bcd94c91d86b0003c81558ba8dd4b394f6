@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_6a267f65",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-27T10:02:30Z",
+      "side": 1,
+      "message": "This comment needs to be kept next to the if statement.",
+      "revId": "1a4a69bcd94c91d86b0003c81558ba8dd4b394f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_8abf23cd",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-27T10:02:30Z",
+      "side": 1,
+      "message": "If you put this inside a function (a private helper method), then you wouldn\u0027t have to include a test for a special key in a fairly generic loop:\n\n    $result \u003d $this-\u003egetResult();\n\n    foreach ( $plainDataKeys as $key ) {{ // Note: you don\u0027t need the $key \u003d\u003e bit here\n        $this-\u003edoTheThing( $data, $prop, $key, $result );\n    }\n\n    $this-\u003eaddXAnalyticsItem( \u0027page_id\u0027, (string)$data[\u0027id\u0027] );",
+      "revId": "1a4a69bcd94c91d86b0003c81558ba8dd4b394f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
