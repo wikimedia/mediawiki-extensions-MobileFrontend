@@ -87,6 +87,24 @@
       "revId": "1a4a69bcd94c91d86b0003c81558ba8dd4b394f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_caa3eba6",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T10:41:56Z",
+      "side": 1,
+      "message": "Correct, that\u0027s the behavior of the module now :/ I don\u0027t know anything about XAnalytics, but should it be added for every request? If so, i could add it, if it is in $data (without a check for $prop). That would make it easier for the foreach loop, too :)",
+      "parentUuid": "0ed113e2_aaa9c78e",
+      "revId": "1a4a69bcd94c91d86b0003c81558ba8dd4b394f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
