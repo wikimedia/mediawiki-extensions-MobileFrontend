@@ -835,11 +835,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 		),
 		'templates' => array(
-			'Cta.hogan' => 'templates/ctaDrawer.hogan',
+			'Cta.hogan' => 'resources/mobile.drawers/CtaDrawer.hogan',
 		),
 		'scripts' => array(
-			'javascripts/Drawer.js',
-			'javascripts/CtaDrawer.js',
+			'resources/mobile.drawers/Drawer.js',
+			'resources/mobile.drawers/CtaDrawer.js',
 		),
 		'messages' => array(
 			// CtaDrawer.js
