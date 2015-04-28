@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_9b476950",
+        "filename": "resources/mobile.mainMenu/MainMenu.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-28T22:55:02Z",
+      "side": 0,
+      "message": "It\u0027s just used in one place below.",
+      "parentUuid": "0ed113e2_1b061921",
+      "revId": "3f87436f1d47a0cb243d7364eef58a4a9a3db48b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_f80b1b2c",
         "filename": "resources/mobile.startup/Skin.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-28T22:49:02Z",
       "side": 0,
       "message": "why would this here before?\nNot clear why you are removing it from the commit message and that you have checked the consequences..",
+      "revId": "3f87436f1d47a0cb243d7364eef58a4a9a3db48b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_7b740597",
+        "filename": "resources/mobile.startup/Skin.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-28T22:55:02Z",
+      "side": 0,
+      "message": "I\u0027ll update the commit message. I actually have a comment in MainMenu.js that reads \"// Stop propagation, otherwise the Skin will close the open menus on page center click \". Since there is no hamburger in alpha, this solution is not general enough any more.",
+      "parentUuid": "0ed113e2_f80b1b2c",
       "revId": "3f87436f1d47a0cb243d7364eef58a4a9a3db48b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

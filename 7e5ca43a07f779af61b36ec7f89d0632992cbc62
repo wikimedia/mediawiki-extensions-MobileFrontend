@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_7b4de574",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-28T22:55:02Z",
+      "side": 1,
+      "message": "The task you linked depends on another task that you\u0027re working on. I guess I\u0027ll have to wait until those tasks are done and then come back to this task.",
+      "parentUuid": "0ed113e2_d810975d",
+      "revId": "7e5ca43a07f779af61b36ec7f89d0632992cbc62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_9833ef09",
         "filename": "javascripts/modules/mainMenu/init.js",
         "patchSetId": 4
@@ -64,6 +82,24 @@
       "writtenOn": "2015-04-28T22:49:02Z",
       "side": 1,
       "message": "Don\u0027t load in stable.\nSandbox into its own less file that only is loaded in alpha.",
+      "revId": "7e5ca43a07f779af61b36ec7f89d0632992cbc62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_3b575d07",
+        "filename": "less/ui.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-28T22:55:02Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "0ed113e2_db0f3132",
       "revId": "7e5ca43a07f779af61b36ec7f89d0632992cbc62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
