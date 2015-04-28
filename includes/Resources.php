@@ -620,10 +620,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta',
 		),
 		'styles' => array(
-			'less/modules/talk.less',
+			'resources/mobile.talk/talk.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/talk/init.js',
+			'resources/mobile.talk/init.js',
 		),
 		'messages' => array(
 			'mobile-frontend-talk-overlay-header',
@@ -677,19 +677,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.ui.anchor',
 		),
 		'scripts' => array(
-			'javascripts/modules/talk/TalkSectionOverlay.js',
-			'javascripts/modules/talk/TalkSectionAddOverlay.js',
-			'javascripts/modules/talk/TalkOverlay.js',
+			'resources/mobile.talk.overlays/TalkSectionOverlay.js',
+			'resources/mobile.talk.overlays/TalkSectionAddOverlay.js',
+			'resources/mobile.talk.overlays/TalkOverlay.js',
 		),
 		'templates' => array(
 			// talk.js
-			'content.hogan' => 'templates/modules/talk/talk.hogan',
+			'content.hogan' => 'resources/mobile.talk.overlays/content.hogan',
 			'SectionAddOverlay/contentHeader.hogan' =>
-				'templates/modules/talk/talkSectionAddContentHeader.hogan',
+				'resources/mobile.talk.overlays/talkSectionAddContentHeader.hogan',
 			'SectionAddOverlay/saveHeader.hogan' => 'templates/modules/editor/saveHeader.hogan',
-			'SectionAddOverlay.hogan' => 'templates/modules/talk/talkSectionAdd.hogan',
-			'Section/header.hogan' => 'templates/modules/talk/talkSectionHeader.hogan',
-			'Section/content.hogan' => 'templates/modules/talk/talkSection.hogan',
+			'SectionAddOverlay.hogan' => 'resources/mobile.talk.overlays/talkSectionAdd.hogan',
+			'Section/header.hogan' => 'resources/mobile.talk.overlays/talkSectionHeader.hogan',
+			'Section/content.hogan' => 'resources/mobile.talk.overlays/talkSection.hogan',
 		),
 		'messages' => array(
 			'mobile-frontend-talk-overlay-header',
