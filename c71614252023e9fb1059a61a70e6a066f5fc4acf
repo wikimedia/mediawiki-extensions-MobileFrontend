@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_54a8f91c",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-28T13:12:17Z",
+      "side": 1,
+      "message": "Just a general comment, nothing -1 worthy: if you\u0027d switch the conditional to\n\n    if ( !$this-\u003eisSpecialMobileMenuPage )\n\nthen you do an early return and not have the main body of the function drift to the right.",
+      "revId": "c71614252023e9fb1059a61a70e6a066f5fc4acf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b44fe596",
+        "filename": "javascripts/modules/mainMenu/MainMenu.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-04-28T13:12:17Z",
+      "side": 1,
+      "message": "At the cost of a little specificity, you could make it clear that the second and third selectors are for alpha by including `.alpha`.",
+      "revId": "c71614252023e9fb1059a61a70e6a066f5fc4acf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
