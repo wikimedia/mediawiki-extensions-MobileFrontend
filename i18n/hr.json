@@ -3,7 +3,8 @@
 		"authors": [
 			"MaGa",
 			"Roberta F.",
-			"SpeedyGonsales"
+			"SpeedyGonsales",
+			"Fraxinus"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite \"captcha\" tekst",
@@ -18,7 +19,7 @@
 	"mobile-frontend-clear-search": "Očisti",
 	"mobile-frontend-contribution-summary": "Sva uređivanja {{GENDER:$1|napravio je [[Special:UserProfile/$1]]|napravila je [[Special:UserProfile/$1|$1]]}}",
 	"mobile-frontend-cookies-required": "Kolačići su nužni za mijenjanje načina pregleda. Molimo, omogućite ih i pokušajte opet.",
-	"mobile-frontend-copyright": "Tekst je dostupan pod licencijom <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Imenovanje/Dijeli pod istim uvjetima</a>; dodatni uvjeti mogu se primijenjivati. Pogledajte <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Uvjete uporabe</a> za detalje. Wikipedija je registrirani zaštitni znak <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, neprofitne organizacije.",
+	"mobile-frontend-copyright": "Sadržaji se koriste u skladu s $1.",
 	"mobile-frontend-desc": "Sučelje za mobilne uređaje",
 	"mobile-frontend-diffview-404-desc": "ID zahtijevane izmjene ne postoji.",
 	"mobile-frontend-diffview-404-title": "Kriva izmjena.",
@@ -39,7 +40,6 @@
 	"mobile-frontend-donate-photo-first-upload-success": "Uspješno! Hvala na Vašem prvom doprinosu.",
 	"mobile-frontend-donate-photo-upload-success": "Uspješno! Vaša se prva slika sada može koristiti na projektu {{SITENAME}}.",
 	"mobile-frontend-drawer-cancel": "Odustani",
-	"mobile-frontend-edit-login": "Pomozite poboljšati stranicu $1.",
 	"mobile-frontend-edit-login-action": "Prijavite se da biste uređivali.",
 	"mobile-frontend-edit-signup-action": "Stvorite suradnički račun da biste uređivali.",
 	"mobile-frontend-editor-abusefilter-disallow": "Uređivanje ne može biti spremljeno zbog problema.",
@@ -287,6 +287,7 @@
 	"mobile-frontend-watchlist-view": "Pregled popisa praćenih stranica",
 	"tag-mobile_edit": "uređivanje s mobilnog uređaja",
 	"tag-mobile_edit-description": "Uređivanje napravljeno na inačici wikipedije za mobilne uređaje",
+	"tag-mobile_web_edit": "Mobilni internet uredi",
 	"mobile-frontend-pageaction-edit-tooltip": "Uredi prvi odlomak ove stranice",
 	"mobile-frontend-pageaction-upload-tooltip": "Postavi glavnu sliku na ovu stranicu.",
 	"mobile-frontend-wikidata-editor-description-label": "Opišite ''$1'' u jednoj rečenici:",

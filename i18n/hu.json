@@ -112,5 +112,6 @@
 	"tag-mobile_web_edit": "Mobil web szerkesztés",
 	"tag-mobile_web_edit-description": "Mobil weboldalról szerkesztve",
 	"mobile-frontend-pageaction-edit-tooltip": "A lap első szakaszának szerkesztése.",
-	"mobile-frontend-donate-button-label": "Adományozás"
+	"mobile-frontend-donate-button-label": "Adományozás",
+	"mobile-frontend-browse-tags-header": "Címkék"
 }

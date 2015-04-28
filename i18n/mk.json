@@ -61,6 +61,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Предупредување:</strong> Не сте најавени. Вашата IP-адреса ќе биде јавно видлива ако уредувате. Ако <strong>се најавите</strong> или <strong>направите сметка</strong>, тогаш уредувањата ќе се припишуваат на вашето корисничко име, покрај другите погодности.",
 	"mobile-frontend-editor-blocked": "Сметката ви е заклучена за уредување.",
 	"mobile-frontend-editor-blocked-info-loggedin": "Вашата сметка има забрана за уредување. Забраната ја даде {{GENDER:$2|$2}} од следнава причина: $1",
+	"mobile-frontend-editor-blocked-info": "Вашата IP-адреса има забрана за уредување. Забраната ја даде {{GENDER:$1|$1}} од следнава причина: $2.",
 	"mobile-frontend-editor-cancel": "Откажи",
 	"mobile-frontend-editor-cancel-confirm": "Навистина сакате да го напуштите уредувањето?",
 	"mobile-frontend-editor-captcha-try-again": "Погрешен код. Обидете се повторно.",

@@ -26,7 +26,8 @@
 			"JasterTDC",
 			"Awesomecat5",
 			"Kroji",
-			"Tusca"
+			"Tusca",
+			"Larjona"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -83,6 +84,7 @@
 	"mobile-frontend-editor-anon": "Editar sin iniciar sesión",
 	"mobile-frontend-editor-anonwarning": "<strong>Advertencia</strong>: no has iniciado sesión. Tu dirección IP será visible públicamente si haces cualquier edición. Si <strong>inicias sesión</strong> o <strong>creas una cuenta</strong>, tus ediciones se atribuirán a tu nombre de usuario, junto con otros beneficios.",
 	"mobile-frontend-editor-blocked": "Tu cuenta está bloqueada y no puedes editar con ella.",
+	"mobile-frontend-editor-blocked-info": "Tu dirección IP está bloqueada para editar. El bloqueo lo realizó {{GENDER:$1|$1}} por la siguiente razón: $2.",
 	"mobile-frontend-editor-cancel": "Cancelar",
 	"mobile-frontend-editor-cancel-confirm": "¿Estás seguro de abandonar tu edición?",
 	"mobile-frontend-editor-captcha-try-again": "Código incorrecto, inténtalo de nuevo.",
@@ -338,7 +340,7 @@
 	"mobile-frontend-watchlist-please-wait": "Espera, la acción está tomando más tiempo del esperado.",
 	"mobile-frontend-watchlist-error": "Ocurrió un problema al añadir esta página a la lista de seguimiento. Inténtalo de nuevo.",
 	"mobile-frontend-watchlist-removed": "Se ha eliminado el artículo $1 de tu lista de seguimiento",
-	"mobile-frontend-watchlist-signup-action": "Regístrese para comenzar uno ahora.",
+	"mobile-frontend-watchlist-signup-action": "<strong>Una lista de observación ayuda a marcar páginas y llevar el seguimiento de los cambios.</strong>Regístrese para comenzar uno ahora.",
 	"mobile-frontend-watchlist-view": "Ver tu lista de seguimiento",
 	"mobile-frontend-quick-lookup-looking": "Búsqueda de «$1».",
 	"mobile-frontend-quick-lookup-no-results": "No se encontró nada que coincida con «$1».",
