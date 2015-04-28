@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_a5d1edd1",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-04-28T17:48:19Z",
+      "side": 0,
+      "message": "This function is used in alpha",
+      "revId": "3f87436f1d47a0cb243d7364eef58a4a9a3db48b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
