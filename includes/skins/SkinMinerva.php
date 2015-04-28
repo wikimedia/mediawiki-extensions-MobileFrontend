@@ -389,7 +389,7 @@ class SkinMinerva extends SkinTemplate {
 						'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
 						'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
 							getLocalUrl( array( 'returnto' => $returnToTitle ) ),
-						'class' => MobileUI::iconClass( 'settings', 'before' ),
+						'class' => MobileUI::iconClass( 'mobileoptions', 'before' ),
 						'data-event-name' => 'settings',
 					),
 				),
