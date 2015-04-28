@@ -726,14 +726,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.startup',
 		),
 		'styles' => array(
-			'less/modules/mediaViewer.less',
+			'resources/mobile.mediaViewer/mediaViewer.less',
 		),
 		'scripts' => array(
-			'javascripts/modules/mediaViewer/ImageApi.js',
-			'javascripts/modules/mediaViewer/ImageOverlay.js',
+			'resources/mobile.mediaViewer/ImageApi.js',
+			'resources/mobile.mediaViewer/ImageOverlay.js',
 		),
 		'templates' => array(
-			'Overlay.hogan' => 'templates/modules/mediaViewer/ImageOverlay.hogan',
+			'Overlay.hogan' => 'resources/mobile.mediaViewer/ImageOverlay.hogan',
 		),
 		'messages' => array(
 			// mediaViewer.js
@@ -748,10 +748,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.swipe',
 		),
 		'templates' => array(
-			'Overlay.hogan' => 'templates/modules/mediaViewer/ImageOverlayNew.hogan',
+			'Overlay.hogan' => 'resources/mobile.mediaViewer.beta/ImageOverlayNew.hogan',
 		),
 		'scripts' => array(
-			'javascripts/modules/mediaViewer/ImageOverlayNew.js',
+			'resources/mobile.mediaViewer.beta/ImageOverlayNew.js',
 		),
 	),
 
@@ -1693,7 +1693,7 @@ $wgMinervaBootstrapModules = array(
 			'mobile.redirect',
 		),
 		'scripts' => array(
-			'javascripts/modules/mediaViewer/init.js',
+			'resources/mobile.mediaViewer/init.js',
 			'javascripts/modules/languages/init.js',
 		),
 	),
