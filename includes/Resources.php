@@ -58,11 +58,6 @@ $wgMinervaStyleModules = array(
 			'less/content/hacks.less',
 		),
 	),
-	'skins.minerva.drawers.styles' => $wgMFResourceFileModuleBoilerplate + array(
-		'styles' => array(
-			'less/drawer.less',
-		),
-	),
 	'mobile.pagelist.styles' => $wgMFResourceFileModuleBoilerplate + array(
 		'styles' => array(
 			'less/pagelist.less',
@@ -836,6 +831,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'templates' => array(
 			'Cta.hogan' => 'resources/mobile.drawers/CtaDrawer.hogan',
+		),
+		'styles' => array(
+			'resources/mobile.drawers/drawer.less',
 		),
 		'scripts' => array(
 			'resources/mobile.drawers/Drawer.js',
