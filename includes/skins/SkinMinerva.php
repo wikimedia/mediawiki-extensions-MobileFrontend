@@ -1016,7 +1016,6 @@ class SkinMinerva extends SkinTemplate {
 		$styles = array(
 			'skins.minerva.chrome.styles',
 			'skins.minerva.content.styles',
-			'skins.minerva.drawers.styles',
 			'skins.minerva.tablet.styles',
 			'mediawiki.ui.icon',
 			'skins.minerva.icons.images',
