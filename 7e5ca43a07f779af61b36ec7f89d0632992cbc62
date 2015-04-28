@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_d810975d",
+        "filename": "includes/skins/MinervaTemplateAlpha.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-28T22:49:02Z",
+      "side": 1,
+      "message": "I really would recommend trying to solve https://phabricator.wikimedia.org/T95332 first\nThis is going to create more work for us on the long term....\nReally this content shouldn\u0027t be served in HTML.",
+      "revId": "7e5ca43a07f779af61b36ec7f89d0632992cbc62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_9833ef09",
+        "filename": "javascripts/modules/mainMenu/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-28T22:49:02Z",
+      "side": 1,
+      "message": "This is really messy... and no FIXME to explain when it\u0027s going to be nicer.",
+      "revId": "7e5ca43a07f779af61b36ec7f89d0632992cbc62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_78208ba8",
+        "filename": "javascripts/modules/mainMenu/init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-28T22:49:02Z",
+      "side": 1,
+      "message": "separate bug?",
+      "revId": "7e5ca43a07f779af61b36ec7f89d0632992cbc62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_db0f3132",
+        "filename": "less/ui.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-28T22:49:02Z",
+      "side": 1,
+      "message": "Don\u0027t load in stable.\nSandbox into its own less file that only is loaded in alpha.",
+      "revId": "7e5ca43a07f779af61b36ec7f89d0632992cbc62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_7bff25fd",
+        "filename": "resources/mobile.mainMenu/MainMenu.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-04-28T22:49:02Z",
+      "side": 1,
+      "message": "messy selector with no FIXME",
+      "revId": "7e5ca43a07f779af61b36ec7f89d0632992cbc62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
