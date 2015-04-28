@@ -198,7 +198,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.view',
 		),
 		'scripts' => array(
-			'javascripts/modules/mainMenu/MainMenu.js',
+			'resources/mobile.mainMenu/MainMenu.js',
 		),
 	),
 	'mobile.modifiedBar' => $wgMFResourceFileModuleBoilerplate + array(
