@@ -16,6 +16,24 @@
       "revId": "d9cc0d817db3dc8a81806d4a684f3bc1720e40b9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_16583158",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1696,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-28T20:55:33Z",
+      "side": 1,
+      "message": "Yap, i think our first goal should be to move all to resources in it\u0027s current structure :)",
+      "parentUuid": "0ed113e2_566d592c",
+      "revId": "d9cc0d817db3dc8a81806d4a684f3bc1720e40b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
