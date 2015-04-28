@@ -354,47 +354,33 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Renders the main menu.
-	 *
-	 * @param array $data Data used to build the page
+	 * temporary function that flattens old style menu definitions to template compatible definition.
+	 * This can be safely removed once we have fully transitioned to menus that use templates.
 	 */
-	protected function renderMainMenu( $data ) {
-		?>
-		<nav id="mw-mf-page-left" class="navigation-drawer">
-		<?php
-		$this->renderMainMenuItems();
-		?>
-		</nav>
-		<?php
+	private function flattenLinkArray( $array ) {
+		$menu = array();
+		foreach ( $array as $name => $info ) {
+			$base = isset( $info['links'][0] ) ? $info['links'][0] : $info;
+			$menu[] = array_merge( $base, array( 'name' => $name ) );
+		}
+		return $menu;
 	}
 
 	/**
-	 * Renders the contents of the main menu.
+	 * Renders the main menu.
+	 * @param array [$data] Data used to build the page
 	 */
-	protected function renderMainMenuItems() {
-		?>
-		<ul>
-			<?php
-				foreach ( $this->getDiscoveryTools() as $key => $val ) {
-					echo $this->makeListItem( $key, $val );
-				}
-			?>
-			</ul>
-			<ul>
-			<?php
-				foreach ( $this->getPersonalTools() as $key => $val ){
-					echo $this->makeListItem( $key, $val );
-				}
-			?>
-			</ul>
-			<ul class="hlist">
-			<?php
-				foreach ( $this->getSiteLinks() as $key => $val ) {
-					echo $this->makeListItem( $key, $val );
-				}
-			?>
-			</ul>
-		<?php
+	protected function renderMainMenu( $data = array() ) {
+		$templateParser = new TemplateParser(
+			__DIR__ . '/../../resources/mobile.mainMenu/' );
+
+		$templateData = array(
+			'id' => 'mw-mf-page-left',
+			'discovery' => $this->flattenLinkArray( $this->getDiscoveryTools() ),
+			'personal' => $this->flattenLinkArray($this->getPersonalTools() ),
+			'sitelinks' => $this->flattenLinkArray( $this->getSiteLinks() ),
+		);
+		echo $templateParser->processTemplate( 'menu', $templateData );
 	}
 
 	/**
@@ -418,7 +404,7 @@ class MinervaTemplate extends BaseTemplate {
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
-			<?php $this->renderMainMenu( $data ); ?>
+			<?php $this->renderMainMenu(); ?>
 			<div id="mw-mf-page-center">
 				<?php
 					foreach ( $this->data['banners'] as $banner ){

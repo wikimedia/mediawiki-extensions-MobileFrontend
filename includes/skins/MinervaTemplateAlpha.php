@@ -146,16 +146,49 @@ class MinervaTemplateAlpha extends MinervaTemplateBeta {
 		echo $data['secondaryButton'];
 	}
 
+	/**
+	 * Renders the main menu.
+	 *
+	 * @param array $data Data used to build the page
+	 */
 	protected function renderMainMenu( $data ) {
-		$class = $this->isSpecialMobileMenuPage ? '' : ' hidden';
-
+		$className = $this->isSpecialMobileMenuPage ? '' : ' hidden';
 		?>
-		<nav class="<?php echo $class; ?>">
-			<?php
-			$this->renderMainMenuItems();
-			?>
+		<nav class="<?php echo $className; ?>">
+		<?php
+		$this->renderMainMenuItems();
+		?>
 		</nav>
-	<?php
+		<?php
+	}
+
+	/**
+	 * Renders the contents of the main menu.
+	 */
+	protected function renderMainMenuItems() {
+		?>
+		<ul>
+			<?php
+				foreach ( $this->getDiscoveryTools() as $key => $val ) {
+					echo $this->makeListItem( $key, $val );
+				}
+			?>
+			</ul>
+			<ul>
+			<?php
+				foreach ( $this->getPersonalTools() as $key => $val ){
+					echo $this->makeListItem( $key, $val );
+				}
+			?>
+			</ul>
+			<ul class="hlist">
+			<?php
+				foreach ( $this->getSiteLinks() as $key => $val ) {
+					echo $this->makeListItem( $key, $val );
+				}
+			?>
+			</ul>
+		<?php
 	}
 
 	/**
