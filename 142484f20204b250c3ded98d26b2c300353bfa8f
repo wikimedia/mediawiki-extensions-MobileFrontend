@@ -16,6 +16,24 @@
       "revId": "142484f20204b250c3ded98d26b2c300353bfa8f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_58149ca0",
+        "filename": "tests/phpunit/skins/SkinTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-04-29T21:52:15Z",
+      "side": 1,
+      "message": "Duh! Good idea :)",
+      "parentUuid": "0ed113e2_4c5b85fd",
+      "revId": "142484f20204b250c3ded98d26b2c300353bfa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
