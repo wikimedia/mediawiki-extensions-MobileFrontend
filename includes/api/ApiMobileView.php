@@ -206,7 +206,7 @@ class ApiMobileView extends ApiBase {
 			$resultObj->addValue( null, $moduleName,
 				array(
 					'editable' => $editable,
-					ApiResult::META_BC_BOOLS => array(' editable' ),
+					ApiResult::META_BC_BOOLS => array( 'editable' ),
 				)
 			);
 		}
