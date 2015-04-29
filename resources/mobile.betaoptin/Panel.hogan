@@ -1,0 +1,6 @@
+<form class="message content" action="{{postUrl}}" method="POST">
+	<p>{{text}}</p>
+	<input type="hidden" name="enableBeta" value="true">
+	<input type="hidden" name="token" value="{{editToken}}">
+	{{#buttons}}{{>button}}{{/buttons}}
+</form>

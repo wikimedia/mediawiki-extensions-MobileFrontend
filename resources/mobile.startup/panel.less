@@ -1,0 +1,15 @@
+@import "minerva.mixins";
+@import "minerva.variables";
+
+// FIXME: Wikigrok uses the same styling for the .wikigrok class. Let's consolidate.
+.panel {
+	clear: both;
+	margin-top: 1em;
+	text-align: center;
+	background-color: @grayLightest;
+
+	.content {
+		padding: 1em @contentMargin;
+		margin: 0;
+	}
+}

@@ -364,6 +364,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-loading-message',
 			'mobile-frontend-console-recruit',
 		),
+		'styles' => array(
+			'resources/mobile.startup/panel.less',
+		),
 		'scripts' => array(
 			'resources/mobile.startup/Router.js',
 			'resources/mobile.startup/OverlayManager.js',
@@ -1266,6 +1269,28 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.betaoptin' => $wgMFResourceFileModuleBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+			'mobile.context',
+			'jquery.cookie',
+		),
+		'messages' => array(
+			'mobile-frontend-panel-betaoptin-msg',
+			'mobile-frontend-panel-ok',
+			'mobile-frontend-panel-cancel',
+		),
+		'templates' => array(
+			'Panel.hogan' => 'resources/mobile.betaoptin/Panel.hogan',
+		),
+		'styles' => array(
+			'resources/mobile.betaoptin/panel.less',
+		),
+		'scripts' => array(
+			'resources/mobile.betaoptin/BetaOptinPanel.js',
+		),
+	),
+
 	'mobile.hexmd5' => $wgMFResourceFileModuleBoilerplate + array(
 		'scripts' => array(
 			// FIXME: This library shouldn't be needed. Wikidata api
@@ -1713,10 +1738,12 @@ $wgMinervaBootstrapModules = array(
 			'mobile.search',
 			'mobile.references',
 			'mobile.redirect',
+			'mobile.betaoptin',
 		),
 		'scripts' => array(
 			'resources/mobile.mediaViewer/init.js',
 			'javascripts/modules/languages/init.js',
+			'resources/mobile.betaoptin/init.js',
 		),
 	),
 	// By mode. This should only ever be loaded in Minerva skin.
