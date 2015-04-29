@@ -1068,17 +1068,33 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Returns the site name for the footer, either as a text or <img> tag
+	 * @param boolean $withPossibleTrademark If true and a trademark symbol is specified
+	 *     by $wgMFTrademarkSitename, append that trademark symbol to the sitename/logo.
+	 *     This param exists so that the trademark symbol can be appended in some
+	 *     contexts, for example, the footer, but not in others. See bug T95007.
 	 * @return string
 	 */
-	public static function getSitename() {
+	public static function getSitename( $withPossibleTrademark = false ) {
 		$config = MobileContext::singleton()->getMFConfig();
 		$customLogos = $config->get( 'MFCustomLogos' );
-		$trademarkSitename = $config->get( 'MFTrademarkSitename' );
+		$trademarkSymbol = $config->get( 'MFTrademarkSitename' );
+		$suffix = '';
 
 		$footerSitename = wfMessage( 'mobile-frontend-footer-sitename' )->text();
 
+		// Add a trademark symbol if needed
+		if ( $withPossibleTrademark ) {
+			// Registered trademark
+			if ( $trademarkSymbol === 'registered' ) {
+				$suffix = Html::element( 'sup', array(), '®' );
+			// Unregistered (or unspecified) trademark
+			} elseif ( $trademarkSymbol ) {
+				$suffix = Html::element( 'sup', array(), '™' );
+			}
+		}
+
+		// If there's a custom site logo, use that instead of text
 		if ( isset( $customLogos['copyright'] ) ) {
-			$suffix = $trademarkSitename ? ' ®' : '';
 			$attributes =  array(
 				'src' => $customLogos['copyright'],
 				'alt' => $footerSitename . $suffix,
@@ -1091,11 +1107,10 @@ class SkinMinerva extends SkinTemplate {
 			}
 			$sitename = Html::element( 'img', $attributes );
 		} else {
-			$suffix = $trademarkSitename ? ' ™' : '';
-			$sitename = $footerSitename . $suffix;
+			$sitename = $footerSitename;
 		}
 
-		return $sitename;
+		return $sitename . $suffix;
 	}
 
 	/**
@@ -1119,7 +1134,7 @@ class SkinMinerva extends SkinTemplate {
 		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
 
 		$switcherHtml = <<<HTML
-<h2>{$this->getSitename()}</h2>
+<h2>{$this->getSitename( true )}</h2>
 <ul>
 	<li>{$mobile}</li><li><a id="mw-mf-display-toggle" href="{$url}">{$desktop}</a></li>
 </ul>
