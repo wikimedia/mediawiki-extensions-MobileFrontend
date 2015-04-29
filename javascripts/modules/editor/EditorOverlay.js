@@ -290,7 +290,7 @@
 
 					self.setContent( content );
 					// check if user is blocked
-					if ( userinfo.hasOwnProperty( 'blockid' ) ) {
+					if ( userinfo && userinfo.hasOwnProperty( 'blockid' ) ) {
 						// Workaround to parse a message parameter for mw.message, see T96885
 						parser = new mw.jqueryMsg.parser();
 						ast = parser.wikiTextToAst( userinfo.blockreason );
