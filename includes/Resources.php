@@ -160,8 +160,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'oojs',
 		),
 		'scripts' => array(
-			'javascripts/Class.js',
-			'javascripts/eventemitter.js',
+			'resources/mobile.oo/Class.js',
+			'resources/mobile.oo/eventemitter.js',
 		),
 	),
 	'mobile.view' => $wgMFResourceFileModuleBoilerplate + array(
@@ -169,7 +169,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.oo',
 		),
 		'scripts' => array(
-			'javascripts/View.js',
+			'resources/mobile.view/View.js',
 		),
 	),
 	'mobile.context' => $wgMFResourceFileModuleBoilerplate + array(
